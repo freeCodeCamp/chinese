@@ -1,332 +1,331 @@
 > -  原文地址：[The Software Architecture Handbook](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![The Software Architecture Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/pexels----3172740.jpg)
 
-Hi everyone! In this article we're going to talk about a very interesting, vast, and complex topic: software architecture.
+大家好！在本文中，我们将讨论一个非常有趣、广泛且复杂的主题：软件架构。
 
-This is something that used to confuse me quite a bit when I was starting to code. So in this article I'll try to give you a simple, surface-level, easy to understand introduction to it.
+我刚开始写代码时就被这个主题困扰过，在这篇文章中，我将尝试为你提供简单的、表面的、易于理解的介绍。
 
-We'll talk about what architecture is within the software world, some of the main concepts to know about it, and the most popular architecture patterns out there nowadays.
+我们将讨论软件领域中的架构是什么、一些主要概念以及当今最流行的架构模式。
 
-For each topic I'll give a brief and superficial theoretical introduction and code/pseudo-code examples so you can have a clear idea of how each thing works. Let's do it!
+对于每个主题，我都会给出一个简单、初级的理论介绍和代码或者伪代码示例，你可以从中了解每个概念是如何运作的。让我们开始吧！
 
-## Table of Contents
+## 目录
 
--   [What is software architecture](#what-is-software-architecture)?
--   [Important software architecture concepts to know](#important-software-architecture-concepts-to-know)
-    -   [What's the Client-Server model](#whats-the-client-server-model)?
-    -   [What are APIs](#what-are-apis)?
-    -   [What is Modularity](#what-is-modularity)?
--   [What's your infrastructure like?](#what-s-your-infrastructure-like)
-    -   [Monolithic Architecture](#monolithic-architecture)
-    -   [Microservices Architecture](#microservices-architecture)
-    -   [What is back end for front-end (BFF)](#what-is-back-end-for-front-end-bff-)?
-    -   [How to use load balancers and horizontal scaling](#how-to-use-load-balancers-and-horizontal-scaling)
--   [Where your infrastructure lives](#where-your-infrastructure-lives)
-    -   [On premise hosting](#on-premise-hosting)
-    -   [Traditional server providers](#traditional-server-providers)
-    -   [Hosting on the Cloud](#hosting-on-the-cloud)
-        -   [Traditional](#traditional)
-        -   [Elastic](#elastic)
-        -   [Serverless](#serverless)
-        -   [Lots of other services](#lots-of-other-services)
--   [Different folder structures to know](#different-folder-structures-to-know)
-    -   [All in one place folder structure](#all-in-one-place-folder-structure)
-    -   [Layers folder structure](#layers-folder-structure)
-    -   [MVC folder structure](#mvc-folder-structure)
--   [Conclusion](#conclusion)
+-   [什么是软件架构](#what-is-software-architecture)?
+-   [重要的软件架构概念](#important-software-architecture-concepts-to-know)
+    -   [什么是客户端——服务器模型](#whats-the-client-server-model)?
+    -   [什么是API](#what-are-apis)?
+    -   [什么是模块化](#what-is-modularity)?
+-   [你的基础架构是什么样的?](#what-s-your-infrastructure-like)
+    -   [单体式架构](#monolithic-architecture)
+    -   [微服务架构](#microservices-architecture)
+    -   [服务于前端的后端是什么(BFF)](#what-is-back-end-for-front-end-bff-)?
+    -   [如何使用负载均衡器和水平扩展](#how-to-use-load-balancers-and-horizontal-scaling)
+-   [你的基础架构所在的位置](#where-your-infrastructure-lives)
+    -   [本地托管](#on-premise-hosting)
+    -   [传统服务器供应商](#traditional-server-providers)
+    -   [云托管](#hosting-on-the-cloud)
+        -   [传统的](#traditional)
+        -   [弹性的](#elastic)
+        -   [无服务的](#serverless)
+        -   [更多其他服务](#lots-of-other-services)
+-   [不同的文件夹结构](#different-folder-structures-to-know)
+    -   [全在一个文件夹中的结构](#all-in-one-place-folder-structure)
+    -   [分层文件夹结构](#layers-folder-structure)
+    -   [MVC文件夹结构](#mvc-folder-structure)
+-   [总结](#conclusion)
 
-# What is software architecture?
+<h1 id="what-is-software-architecture">什么是软件架构</h1>
 
-According to [this source](https://www.sei.cmu.edu/our-work/software-architecture/):
+[卡耐基·梅隆大学软件工程学院给的定义](https://www.sei.cmu.edu/our-work/software-architecture/):
 
-> The software architecture of a system represents the design decisions related to overall system structure and behavior.
+> 系统的软件架构代表与整个系统结构和行为相关的设计决策。
 
-That's quite generic, right? Absolutely. And that's exactly what used to confuse me so much when researching about software architecture. It's a topic that encompasses a lot and the term is used to talk about many different things.
+这个说法笼统，对吧？当然！这正是在研究软件架构时让我非常困惑的地方。软件架构包含很多内容，这个术语可以指代不同的事物。
 
-The simplest way I can put it is, software architecture refers to how you organize stuff in the process of creating software. And "stuff" here can refer to:
+我用简单的话来概括就是：软件架构是指你在创建软件的过程中如何组织内容。而这里的“内容”可以指：
 
--   **Implementation details** (that is, the folder structure of your repo)
--   **Implementation** **design** decisions (Do you use server side or client side rendering? Relational or non-relational databases?)
--   The **technologies** you choose (Do you use REST or GraphQl for your API? Python with Django or Node with Express for your back end?)
--   **System** **design** decisions (like is your system a monolith or is it divided into microservices?)
--   **Infrastructure** decisions (Do you host your software on premise or on a cloud provider?)
+-   **实现细节** (即你仓库的文件夹结构)
+-   **实现** **设计** 决策 (你是使用服务端还是客户端渲染？使用关系型还是非关系性数据库)
+-   你选择的**技术** (你是使用REST还是GraphQl API? 后端使用Python/Django还是Nod/Express技术栈？)
+-   **系统** **设计** 决策(你的系统是采用单体式架构还是微服务架构?)
+-   **基础设施**决策 (你是在本地还是在云提供商上托管软件?)
 
-That's a lot of different choices and possibilities. And what complicates this a tiny bit more, is that within these 5 divisions, different patterns can be combined. Meaning, I can have a monolith API that uses REST or GraphQL, a microservices-based app hosted on-premise or on the cloud, and so on.
+以上概括了非常多的选择和可能性。让情况变得更复杂的是，在这个五个类别中，不同的模式可以结合。比方说，我可以采用一个单体式的REST或者GraphQL的API，或者一个微服务架构的应用托管在云供应商或者本地。
 
-To better explain this mess, first we're going to explain some basic generic concepts. And then we're going to go through some of these divisions, explaining the most common architecture patterns or choices used nowadays to build apps.
+为了更好地解释这些混沌的概念，首先我们将讨论一些基础的概念，然后再逐条讲解这些分类，并解释时下搭建应用最常用的架构模式和选择。
 
-# Important Software Architecture Concepts to Know
+<h1 id="#important-software-architecture-concepts-to-know">重要的软件结构概念</h1>
 
-## What's the Client-server Model?
+<h2 id="whats-the-client-server-model">什么是客户端-服务器模型?</h2>
 
-**Client-server** is a model that structures the tasks or workloads of an application between a resource or service **provider** (server) and a service or resource requester (client).
+**客户端-服务器**是一种构建应用程序任务或者工作负载结构的模型，连接资源或服务**提供者**（服务器）和服务或资源请求者（客户端）。
 
-Put simply, the client is the application that requests some kind of information or performs actions, and the server is the program that sends information or performs actions according to what the client does.
+简言之，客户端就是请求信息或者行为的应用程序；服务器就是根据客户端的请求，发送信息或者执行行为的程序。
 
-Clients are normally represented by front-end applications that run either on the web or mobile apps (although other platforms exist too and back-end applications can act as clients as well). Servers are usually back-end applications.
+客户端通常是前端应用，可以在web或者手机应用上运行（虽然也可以通过其他平台使用以及后端应用也可以被当作客户端）；服务器通常是后端应用。
 
-To illustrate this with an example, imagine you're entering your favorite social network. When you enter the URL on your browser and hit enter, your browser is acting as the client app and **sending a request** to the social network server, which **responds** by sending you the content of the website.
+举个例子，想象你在浏览你最喜欢的社交网络，当你在浏览器输入URL并点击回车之后，你的浏览器就像客户端应用一样，向社交网络服务器**发送请求**，社交网络服务器**响应**请求，并向你发送网站内容。
 
-Most applications nowadays use a client-server model. The most important concept to remember about it is that **clients request resources or services** that **the server performs**.
+时下大部分应用都采用客户端-服务器模型，最重要的概念是**客户端请求资源和服务**，**服务器实现**。
 
-Another important concept to know is that clients and servers are part of the same system, but each is an application/program on its own. Meaning they can be developed, hosted, and executed separately.
+另一个重要的概念是，虽然客户端和服务器隶属于同一个系统，但是两者各自都拥有自己的应用或者程序。也就是说你可以分别开发、托管和执行两者。
 
-If you're not familiar with the difference between front and back ends, [here's a cool article that explains it](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/). And here's [another article](https://www.freecodecamp.org/news/how-the-web-works-part-ii-client-server-model-the-structure-of-a-web-application-735b4b6d76e3/) that expands upon the concept of client-server.
+如果你不熟悉前端和后端的区别，[这里有一篇写得不错的文章，供你参考](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/)。这里还有[另一篇文章](https://www.freecodecamp.org/news/how-the-web-works-part-ii-client-server-model-the-structure-of-a-web-application-735b4b6d76e3/)介绍了客户端-服务器的概念。
 
-## What are APIs?
+<h2 id="what-are-apis">什么是API</h2>
 
-We just mentioned that clients and servers are entities that communicate with each other to request things and respond to things. The way in which these two parts usually communicate is through an API (application programming interface).
+我们刚刚讲解了客户端和服务器是两个相互通信的实体，前端发送请求，后端响应请求。两者相互通信通常是通过API（应用程序接口）。
 
-An API is nothing more than a set of defined rules that establishes how an application can communicate with another. It's like a contract between the two parts that says "If you send A, I'll always respond B. If you send C, I'll always respond D..." and so on.
+API只不过是一系列确定应用间如何通信的规则，就像两方之间的协议：“如果你发送A，我就响应B；如果你发送C，我就响应D……”。
 
-Having this set of rules, the client knows exactly what it has to require in order to complete a certain task, and the server knows exactly what the client will require when a certain action has to be performed.
+有了这一系列规则，客户端就知道完成特定任务需要发送什么请求；而服务器也知道客户端特定行为意味着什么需求。
 
-There're different ways in which an API can be implemented. The most commonly used are REST, SOAP and GraphQl.
+API的实现方式多种多样，时下最常用的是REST、SOAP和GraphQL。
 
-Regarding how APIs communicate, most often the HTTP protocol is used and the content is exchanged in JSON or XML format. But other protocols and content formats are perfectly possible.
+在API通信中，HTTP协议是最常使用的，内容通常采用JSON或者XML格式。不过也存在其他的协议和内容格式。
 
-If you'd like to expand upon this topic, [here's a nice article](https://www.freecodecamp.org/news/http-request-methods-explained/) for you to read.
+如果你想要进一步了解这个话题， 推荐你阅读[这篇文章](https://www.freecodecamp.org/news/http-request-methods-explained/) 。
 
-## What is Modularity?
+<h2 id="#what-is-modularity">什么是模块化</h2>
 
-When we talk about "modularity" in software architecture, we refer to the practice of dividing big things into smaller pieces. This practice of breaking things down is performed to simplify big applications or codebases.
+当我们在软件工程中讨论“模块化”，我们指的是将大事化小的行为。拆解的目的是为了简化庞大的应用或者代码库。
 
-Modularity has the following advantages:
+模块化具备以下优势：
 
--   It's good for dividing concerns and features, which helps with the visualization, understanding, and organization of a project.
--   The project tends to be easier to maintain and less prone to errors and bugs when it's clearly organized and subdivided.
--   If your project is subdivided into many different pieces, each can be worked on and modified separately and independently, which is often very useful.
+-   这有利于将关注点和功能分离，有助于项目的可视化、理解和组织。
+-   当项目被清晰地构建和细分之后，就更容易维护也更不容易出错。
+-   如果项目被细分为许多不同的部分，每个部分可以单独进行处理和修改，这样更利于软件开发。
 
-I know this sounds a bit generic, but modularity or the practice of subdividing things is a very big part of what software architecture is all about. So just keep this concept in the back of your mind – it'll become more clear and apparent as we go through some examples. ;)
+这听上去有些笼统，但是模块化或者说将项目细分是软件架构中非常重要的一部分。所以只要记住这个概念，通过一些例子，你对它的理解会更加清晰。 ;)
 
-If you'd like a bit more info about this topic, I recently wrote [an article about the use of modules in JS](https://www.freecodecamp.org/news/modules-in-javascript/) that you might find useful.
+如果你想要阅读更多该话题相关内容，我最近写了一篇 [关于在JS中使用模块的文章](https://www.freecodecamp.org/news/modules-in-javascript/) ，希望对你有帮助。
 
-# What's Your Infrastructure Like?
+<h1 id="what-s-your-infrastructure-like">你的基础架构是什么样的？</h1>
 
-Ok, let's get to the good stuff now. We'll start talking about the many different ways in which you can organize a software application, starting with how can you organize the infrastructure behind your project.
+好的，我们进入文章的精华部分了。我们将讨论构建软件应用程序的不同方式，从项目的基础架构开始。
 
-To make all this less abstract, we'll use an hypothetical app we'll call Notflix.🤔🤫🥸
+为了让概念不那么抽象，我将创建一个虚构的应用，叫做Notflix。🤔🤫🥸
 
-Side comment: keep in mind this example might not be the most realistic one and that I'll be assuming/forcing situations in order to present certain concepts. The idea here is to help you understand core architecture concepts through an example, not to perform a real world analysis.
+注意：请记住这个例子可能不太现实，我仅以此作为讲解概念的例子。这里只是为了帮助你通过例子来了解架构的核心概念，而不是分析现实例子。
 
-## Monolithic Architecture
+<h2 id="monolithic-architecture">单体式架构</h2>
 
-So Notflix will be a typical video streaming application, in which the user will be able to watch movies, series, documentaries and so on. The user will be able to use the app in web browsers, in a mobile app, and on a TV app, too.
+Notflix将是一视频流媒体应用，用户可以使用它观看电影、剧集、纪录片等。用户可以在web浏览器、手机和TV应用上使用它。
 
-The main services included in our app will be **authentication** (so people can create accounts, login, and so on), **payments** (so people can subscribe and access the content... cause you didn't think this was all for free, right? 😑) and **streaming** of course (so people can actually watch what they're paying for).
+这个应用的主要服务包括： **验证** (用户可以创建账户、登陆等)、 **支付** (用户可以订阅并获取内容，你不希望服务完全免费，对吧？ 😑) 和**流媒体**(用户可以观看付费内容)。
 
-A quick sketch of our architecture might look like this:
+基础的架构如图：
 
 ![Untitled-Diagram.drawio-3](https://www.freecodecamp.org/news/content/images/2022/07/Untitled-Diagram.drawio-3.png)
 
-A classic monolithic architecture
+经典的单体式架构
 
-At the left we have our three different front-end apps that will act as clients in this system. They might be developed with React and React-native, for example.
+左手边是三种不同的前端应用，将作为系统中的客户端。它们可以通过React和React-native开发。
 
-We have a single server that will receive requests from all three client apps, communicate with the database when necessary, and respond to each front-end accordingly. The back-end could be developed with Node and Express, let's say.
+一个服务器接受三个客户端应用的请求，并在必要的时候和数据库通信，并返回给对应的前端。后端可以由Node和Express开发。
 
-This kind of architecture is called a **monolith** because there's a single server application that is responsible for all the features of the system. In our case, if a user wants to authenticate, pay us, or watch one of our movies, all the requests are going to be sent to the same server application.
+这种形式的架构就被称为**单体式**，因为仅有一个服务器应用来负责系统的所有功能。在我们的例子中，如果用户需要注册、支付或者观看任意一部影片，所有的请求都发送到同一个服务器应用。
 
-The main benefit of a monolithic design is its simplicity. The functioning of it and the set up required is simple and easy to follow, and this is why most applications start out in this way.
+单体式的优势在于设计简单。这种架构的功能和设置简单易操作，这也是为什么大多数应用采用这种架构的原因。
 
-## Microservices Architecture
+<h2 id="microservices-architecture">微服务架构</h2>
 
-So turns out Notflix is totally rocking it. We just released the latest season of "Stranger thugs", which is an awesome science fiction series about teenage rappers, and our movie "Agent 404" (about a secret agent that infiltrates in a company simulating being a senior programmer but actually doesn't know a thing about code) is breaking all records...
+结果Noflix表现相当不错。我们刚刚发布了最新一季的《怪奇物语》，这是一部关于青少年说唱歌手的科幻片，以及电影《特工404》（是关于一个潜入公司假扮资深程序员的特工，其实这个特工完全不懂编程），创造了新的收视纪录。
 
-We're getting tens of thousands of new users every month from all over the world, which is great for our business but not so much for our monolithic app.
+每个月来自世界各地成千上万的新用户注册Noflix，这对于我们的经营状况来说是好事，但对于单体式的应用来说可不妙。
 
-Lately we've been experiencing delays in server response times, and even though we've **vertically scaled** the server (put more RAM and GPU into it) the poor thing just doesn't seem to be able to bear the load it's taking.
+最近我们一直在经历服务器响应时间延迟，尽管我们已经**垂直扩展**了服务器（增加了RAM和GPU），但是服务器还是超负载了。
 
-Moreover, we've kept developing new features into our system (such as a recommendation tool that reads the user's preferences and recommends movies that suit the user profile) and **our codebase is starting to look huge and very complex** to work with.
+此外，我们也在系统中开发新的功能（如根据用户喜好推荐电影的推荐工具），**代码库变得臃肿且复杂**。
 
-Analyzing this problem in depth, we've found the feature that takes the most resources is streaming, while other services such as authentication and payments don't represent a very big load.
+深入分析问题之后，我们发现是流媒体占用了大量的资源，其他服务如认证和支付资源占比不大。
 
-To solve this problem, we'll implement a **microservices architecture** that will look something like this:
+为了解决这个问题，我们决定实现**微服务架构** ，如图所示：
 
 ![Untitled-Diagram.drawio--1-](https://www.freecodecamp.org/news/content/images/2022/07/Untitled-Diagram.drawio--1-.png)
 
-Our first microservices implementation
+我们的首个微服务架构
 
-So if you're new to all this you might be thinking "what on earth is a microservice", right? Well, we could define it as the concept of dividing server side features into many small servers that are responsible for only one or a few specific features.
+如果你刚接触这个概念，你可能会问“微服务到底是个什么玩意儿？”，其实就是把服务器细分成不同的小服务器，负责一个或者几个功能。
 
-Following our example, before we only had a single server responsible for all features (a monolithic architecture). After implementing microservices we'll have a server responsible for authentication, another responsible for payments, another for streaming, and the last one for recommendations.
+在我们例子中，起初我们仅有一个服务器来响应所有功能（单体式架构），实现微服务架构后，我们就有一个服务器负责认证，另一个负责支付，还有一个负责流媒体，最后一个负责推荐。
 
-The client-side apps will communicate with the authentication server when a user wants to login, with the payments server when the user wants to pay, and with the streaming server when the user wants to watch something.
+当需要登陆的时候，客户端应用与认证服务通信，用户需要支付时，向支付服务器通信，需要观看视频时向流媒体服务器通信。
 
-All **this communication happens through APIs** just like with a regular monolithic server (or through other communication systems like [Kafka](https://kafka.apache.org/) or [RabbitMQ](https://www.rabbitmq.com/)). The only difference is that now we have different servers responsible for different actions instead of a single one that does it all.
+所有 **通信都通过API实现**，这和单体式架构一样 (或者通过如 [Kafka](https://kafka.apache.org/) 或[RabbitMQ](https://www.rabbitmq.com/)等通信系统)。 唯一的区别是，现在我们使用不同的服务器负责不同的行为，而不是采用一个服务器解决所有问题。
 
-This sounds a bit more complex, and it is, but microservices offer us the following benefits:
+听上去有一点点复杂，确实如此，微服务的优势在于：
 
--   You can **scale particular services as needed**, instead of scaling the whole back end at once. Following our example, when we started to experience performance issues we vertically scaled our whole server – but actually the feature that requested the more resources was only the streaming. Now that we have the streaming feature separated into a single server, we can scale only that one and leave the rest alone as long as they keep working right.
--   Features will be more **loosely coupled**, which means we'll be able to develop and deploy them independently.
--   The **codebase** for each server will be much smaller and **simpler**. Which is nice for the dev folks that have been working with us from the start, and also easier and quicker for new developers to understand.
+-   你可以**根据需要扩展特定服务**，而不是扩展整个后端。 在我们的示例中，当碰到体验问题时，我们垂直扩展了整个服务器，但实际上需要更多资源的仅为流媒体部分。把流媒体功能分离到单个服务器，我们就可以扩展这一个服务器，继续其他部分的正常工作。
+-   功能将 **松散耦合**， 意味着我们可以独立开发和部署这些功能。
+-   每一个服务器的**代码库**更加**短小精悍**，这对于一开始就一起工作的开发者来说是一件好事，对新加入的开发者快速融入也是好事。
 
-Microservices is an architecture that is more complex to set up and manage, which is why it makes sense only for very big projects. Most projects will start out as monoliths and migrate to microservices only when needed for performance reasons.
+微服务是一个设置和管理更为复杂的架构，这也是为什么仅有一些非常大的项目才使用这种架构。大部分项目一开始使用的是单体式架构，仅在性能需要时迁移到微服务架构。
 
-If you'd like to know more about microservices, [here's a very nice explanation](https://www.youtube.com/watch?v=CdBtNQZH8a4).
+如果你想了解更多微服务相关的知识，[这里有一个很好的解释视频](https://www.youtube.com/watch?v=CdBtNQZH8a4)。
 
-### What is back-end for front-end (BFF)?
+<h3 id="what-is-back-end-for-front-end-bff-">服务于前端的后端是什么？（BFF）</h3>
 
-One problem that comes up when implementing microservices is that the communication with front-end apps gets more complex. Now we have many servers responsible for different things, which means front-end apps would need to keep track of that info to know who to make requests to.
+实现微服务的一个问题是与前端的通信变得复杂。在我们示例中，多个服务器负责不同的行为也就意味着前端应用需要记录是谁发起的请求。
 
-Normally this problem gets solved by implementing an intermediary layer between the front-end apps and the microservices. This layer will receive all the front-end requests, redirect them to the corresponding microservice, receive the microservice response, and then redirect the response to the corresponding front-end app.
+通常解决这个问题的方式是在前端应用和微服务之间增加一个中间层。这个中间层将接受所有前端的请求，重定向到对应的微服务，接受微服务的回应，然后重定向到对应的前端应用。
 
-The benefit of the BFF pattern is that we get the benefits of the microservices architecture, without over complicating the communication with front-end apps.
+BFF模式的好处在于我们在使用了微服务架构的同时，没有复杂化前端应用的通信。
 
 ![Untitled-Diagram.drawio--2-](https://www.freecodecamp.org/news/content/images/2022/07/Untitled-Diagram.drawio--2-.png)
 
-Our BFF implementation
+BFF实现
 
-Here's a [video explaining the BFF pattern](https://www.youtube.com/watch?v=SSo-z16wEnc) if you'd like to know more about it.
+如果你想了解更多相关内容，这里有一期[解释BFF模式的视频](https://www.youtube.com/watch?v=SSo-z16wEnc)。
 
-### How to use load balancers and horizontal scaling
+<h3 id="how-to-use-load-balancers-and-horizontal-scaling">如何使用负载均衡器和水平扩展</h3>
 
-So our streaming app keeps growing and growing at an exponential rate. We have millions of users around the world watching our movies 24/7, and sooner than we expected we start experiencing performance issues again.
+我们的流媒体应用正在呈指数型增长，来自世界各地百万量级的用户全天候使用Noflix观看电影，马上我们又要面临新的性能问题。
 
-Once again we've found that the streaming service is the one under most stress, and we've **vertically scaled** that server all we could. Further subdividing that service into more microservices doesn't make sense, so we've decided to **horizontally scale** that service.
+我们再一次发现是流媒体服务承受最大的压力，我们已经尽我们所能**垂直扩展**了这个服务器，进一步细分这个服务成更多微服务没有意义。所以我们决定**水平扩展**服务器。
 
-Before we mentioned that **vertically scaling** means adding more resources (RAM, disk space, GPU, and so on) to a single server/computer. **Horizontally scaling** on the other hand, means setting up more servers to perform the same task.
+在前文中我们提到 **垂直扩展** 就是给单个服务器或者计算机增加更多资源(RAM、磁盘空间、GPU等)；**水平扩展** 就是设置更多的服务器来处理同一个任务。
 
-Instead of having a single server responsible for streaming we'll now have three. Then the requests performed by the clients will be balanced between those three servers so that all handle an acceptable load.
+我们不再只使用一个服务器来负责所有流媒体工作，而是使用三个。这样来自客户端的请求将被平均分配到这三个服务器处理，每一个服务器的负载就被控制在可承受范围内。
 
-This distribution of requests is normally performed by a thing called a **load balancer**. Load balancers act as **[reverse proxys](https://www.strongdm.com/blog/difference-between-proxy-and-reverse-proxy#:~:text=A%20traditional%20forward%20proxy%20server,on%20behalf%20of%20multiple%20servers.)** to our servers, intercepting client requests before they get to the server and redirecting that request to the corresponding server.
+请求的分配通常由**负载均衡器**来实现。 负载均衡器如同服务器的**[反向代理](https://www.strongdm.com/blog/difference-between-proxy-and-reverse-proxy#:~:text=A%20traditional%20forward%20proxy%20server,on%20behalf%20of%20multiple%20servers.)**，拦截请求并重定向到对应的服务器。
 
-While a typical client-server connection might look like this:
+一个典型的客户端-服务器连接如图：
 
 ![1234](https://www.freecodecamp.org/news/content/images/2022/07/1234.png)
 
-This is what we had before
+这是我们之前的形式
 
-Using a load balancer we can distribute client requests across multiple servers:
+使用负载均衡器在多个服务器间分发客户端请求如图：
 
 ![4312.drawio-1](https://www.freecodecamp.org/news/content/images/2022/07/4312.drawio-1.png)
 
-This is what we want now
+这是我们想要的形式
 
-You should know that horizontal scaling is also possible with databases as it's possible with servers. One way of implementing this is with a source-replica model, in which one particular source DB will receive all write queries and replicate it's data along one or more replica DBs. Replica DBs will receive and respond to all read queries.
+水平扩展可以在服务器实现就可以在代码库实现。其中一个实现办法是通过源-副本模型（source-replica model)，一个特定的源DB将接受所有写入的请求然后复制这些数据到更多的副本DB，副本DB将接受和响应所有读取的请求。
 
-The advantages of DB replication are:
+DB副本的优势在于：
 
--   Better performance: This model improves performance allows more queries to be processed in parallel.
--   Reliability and availability: If one of your database servers is destroyed or inaccessible for any reason, data is still preserved in other DBs.
+-   更优的性能：这一模型使得更多个请求可以并行。
+-   可靠性和可用性：如果一个数据库服务器因为任何原因被破坏或者无法访问，其他DB仍保有数据。
 
-So after implementing a load balancer, horizontal scaling and DB replication, our architecture might look like this:
+实现了负载均衡器、水平扩展和DB副本之后，我们的架构如图：
 
 ![Untitled-Diagram.drawio--3--2](https://www.freecodecamp.org/news/content/images/2022/07/Untitled-Diagram.drawio--3--2.png)
 
-Our horizontally scaled architecture
+水平扩展架构
 
-Here's [an awesome video explanation of load balancers](https://www.youtube.com/watch?v=sCR3SAVdyCc) if you're interested in knowing more.
+如果你想要了解更多内容，这里有[一个介绍负载均衡器的视频](https://www.youtube.com/watch?v=sCR3SAVdyCc)。
 
-Side comment: when we talk about microservices, load balancers, and scaling we're likely always talking about back-end apps. For front-end apps, they're mostly always developed as monoliths, though there's also a weird interesting thing called [micro-frontends](https://www.youtube.com/watch?v=w58aZjACETQ) as well.🧐
+注意：当我们在讨论微服务、负载均衡器和水平扩展的时候，我们讨论的是后端应用。对于前端应用来说，我们通常是以单体式架构开发的，当然也有一个有趣的概念叫做 [微前端](https://www.youtube.com/watch?v=w58aZjACETQ) 。🧐
 
-# Where Your Infrastructure Lives
+<h1 id="where-your-infrastructure-lives">你的基础架构所在的位置</h1>
 
-Now that we have a basic idea of how an application infrastructure might be organized, the next thing to think about is where we're going to put all this stuff.
+现在我们对应用的基础架构是如何组织的有了一定了解，现在让我们来看看我们把基础架构放在哪里。
 
-As we're going to see, there're mainly three options when deciding where and how to host an application: on premise, on traditional server providers, or on the cloud.
+主要有三种托管应用程序的方式：本地、传统服务器供应商和云。
 
-## On-Premise Hosting
+<h2 id="on-premise-hosting">本地托管</h2>
 
-On premise means you own the hardware in which your app is running. In the past this used to be the most traditional way of hosting applications. Companies used to have dedicated rooms for servers to be in and teams dedicated to the set up and maintenance of the hardware.
+本地托管意味着你拥有运行应用软件的硬件。这曾是最传统的托管方式。软件公司为服务器专门提供房间，并且有专业的团队致力于设置和维护硬件。
 
-The good thing about this option is that the company gets total control over the hardware. The bad thing is it requires space, time, and money.
+这样做的好处是公司全权掌握硬件，坏处是这样耗费空间、时间和金钱。
 
-Imagine if you wanted to horizontally scale a certain server, that would mean buying more equipment, setting it up, supervising it constantly, repairing whatever gets broken... And if you later on need to scale down that server, well, normally you're not able to return these things after buying them.🥲
+假设你需要水平扩展一个服务器，你需要购买更多的设备，设置好，并且持续监控，一旦出现问题就要维修……如果之后你需要缩小服务器，你通常也没办法退换你购买的设备。🥲
 
-For most companies, having on premise servers means dedicating lots of resources to a task not directly related to the company's goals.
+对于公司来说，采用本地托管意味着将资源何经理分配到非公司目标上。
 
 ![image-221](https://www.freecodecamp.org/news/content/images/2022/07/image-221.png)
 
-How we imagined our server room at Notflix
+我们想象中的Notflix服务器机房
 
 ![image-222](https://www.freecodecamp.org/news/content/images/2022/07/image-222.png)
 
-How it ended up
+实际的画面
 
-One situation in which on premise servers still make sense is when dealing with very delicate or private information. Think about the software that runs a power plant, or private banking information, for example. Many of these organizations decide to have on premise servers as a way to have complete control over their software and hardware.
+当需要处理精密或者私人信息的时候，本地托管还是能派上用场的。假设这个软件需要处理一个发电厂或者私人的银行信息，软件公司会决定使用本地托管服务器来全权控制软件和硬件。
 
-## Traditional Server Providers
+<h2 id="traditional-server-providers">传统服务器供应商</h2>
 
-A more comfortable option for most companies are traditional server providers. These are companies that have servers of their own and they just rent them. You decide what kind of hardware you'll need for your project and pay a monthly fee for it (or some amount based on other conditions).
+对于大多数公司来说一个更舒适的选择是传统服务器供应商。供应商有自己的服务器，并且提供租赁。你决定为你的项目使用什么样的硬件，并且提交月费（或者根据其他条件确定的费用）。
 
-What's great about this option is that you don't need to worry about anything hardware-related anymore. The provider takes care of it, and as a software company you only worry about your main goal, the software.
+使用服务器供应商的好处是你不需要担心硬件相关的问题，供应商会处理好。软件公司只需要关注自己的主要目标，软件本身。
 
-Another cool thing is that scaling up or down is easy and risk free. If you need more hardware, you pay for it. And if you don't need it anymore, you just stop paying.
+另一个好处是，扩展或者缩小变得更加方便自由。如果需要更多硬件，你就购买；如果不需要了，就停止付费。
 
-An example of a well known server provider is [hostinger](https://www.hostinger.com).
+一个知名供应商的例子是[hostinger](https://www.hostinger.com)。
 
-## Hosting on the Cloud
+<h2 id="hosting-on-the-cloud">云托管</h2>
 
-If you've been around technology for a little while you've probably heard the word "cloud" more than once. At first it sounds as something abstract and kind of magical, but actually what's behind it is nothing more than huge data centers owned by companies like Amazon, Google, and Microsoft.
+如果你在科技圈呆过一阵子，你可能已经听说过不止一次”云“。咋一听，这好像是某种抽象的魔术，实际上云只不过是由Amazon、Google和Microsoft这样的大公司拥有的超大数据中心。
 
-At some point these companies found out they had huuuuuuuuge computing power they weren't using all of the time. And as all this hardware still represents a cost whether you're using it or not, the clever thing to do is to commercialize that computing power to others.
+这些大公司拥有巨大的算力，这些算力并不是时时被利用。与其让这些硬件白白浪费钱，更聪明的做法是将这些算力商业化。
 
-And that's what cloud computing is. Using different services like **AWS** (Amazon web services), **Google Cloud**, or Microsoft **Azure**, we're able to host our applications in these companies' data centers and take advantage of all that computing power.
-
+这就是云计算。数据中心可以利用这些算力，使用 **AWS** (Amazon的web服务)、 **Google Cloud**或 Microsoft的 **Azure**。
 ![image-219](https://www.freecodecamp.org/news/content/images/2022/07/image-219.png)
 
-What a "cloud" might actually look like
+“云”实际的样子
 
-When getting to know cloud services, it's important to notice that there are many different ways in which you can use them:
+提到云服务，一个很重要的知识点是存在不同的使用方式：
 
-### Traditional
+<h3 id="traditional">传统的</h3>
 
-The first way is to use them in a similar way you'd use a traditional server provider. You select the kind of hardware you want and pay exactly for that on a monthly basis.
+第一种方法与使用传统服务器提供商类似。您可以选择所需的硬件类型并按月支付费用。
 
-### Elastic
+<h3 id="elastic">弹性的</h3>
 
-The second way is to take advantage of the "elastic" computing offered by most providers. "Elastic" means that the hardware capacity of your application will automatically grow or shrink depending on the usage your app has.
+第二种方法利用了大多数供应商提供的“弹性”算力。“弹性”意味着你的应用使用的硬件大小会根据使用情况，自动放大或缩小。
 
-For example, you could start out with a server that has 8gb of RAM and 500gb of disk space. If your server starts getting more and more request and these capacities are no longer enough to provide good performance, the system can automatically perform vertical or horizontal scaling.
+例如，你开始使用的是8gb内存和500gb磁盘空间的服务器。如果服务器收到越来越多的请求并且这些容量不再足以提供良好的性能，系统可以自动执行垂直或水平扩展。
 
-The awesome thing about this is you can configure all this beforehand and not have to worry about it again. As the servers scale up and down automatically, you pay only for the resources you consume.
+这样做的好处是，你预先配置服务器后，就没有必再担心它的变化。服务器自动扩展和缩减，你只需为使用的资源付费。
 
-### Serverless
+<h3 id="serverless">无服务的</h3>
 
-Another way in which you can use cloud computing is with a serverless architecture.
+使用云计算的另一种方式是使用无服务架构。
 
-Following this pattern, you wont have a server that receives all requests and responds to them. Instead you'll have individual functions mapped to an access point (similar to an API endpoint).
+在这个模式中，没有接受所有请求并响应的服务器，而是独立的函数映射到访问点（类似于API端点）。
 
-These functions will execute each time they receive a request and perform whatever action you programmed them for (connecting to a database, performing CRUD operations or whatever else a you could do in a regular server).
+每当接受到一个请求，这些函数就会执行你编写的程序（链接数据库、执行CRUD等普通服务器会做的事情）。
 
-What's very nice about serverless architecture is that you forget all about server maintenance and scaling. You just have functions that get executed when you need them, and each function is scaled up and down automatically as needed.
+无服务架构的好处是可以免去服务器维护和扩展。如果需要使用，你只需要编写执行的函数，函数会自动根据需要扩展或者缩小。
 
-As a costumer, you pay only for the amount of times the function gets executed and the amount of processing time each execution lasts.
+作为消费者，你只需要支付函数执行的次数以及函数执行持续时长的费用。
 
-If you'd like to learn more, here's an [explanation of the serverless pattern.](https://www.youtube.com/watch?v=vxJobGtqKVM)
+如果你想了解更多这方面的内容，[这里有一个介绍无服务架构的视频](https://www.youtube.com/watch?v=vxJobGtqKVM)。
 
-### Lots of other services
+<h3 id="lots-of-other-services">更多其他服务</h3>
 
-You can probably see how elastic and serverless services offer a very simple and convenient alternative for setting up software infrastructure.
+你很容易发现无服务和弹性云计算提供的简单便捷的设置软件架构的方式。
 
-And besides server-related services, cloud providers offer tons of other solutions such as relational and non-relational databases, file storage services, caching services, authentication services, machine learning and data processing services, monitoring and performance analysis, and more. With everything hosted in the cloud.
+除了提供服务器相关服务，云供应商还提供许多其他的解决方案，如：关系型和非关系型数据库、文件存储服务、缓存服务、认证服务、机器学习和数据处理服务、监控和性能分析等。这些服务都托管在云。
 
-Through tools like [Terraform](https://www.terraform.io/) or AWS [Cloud formation](https://aws.amazon.com/es/cloudformation/) we can even set up our infrastructure as code. Meaning we can write a script that sets up a server, database, and whatever else we might need on the cloud just in a matter of minutes.
+通过如[Terraform](https://www.terraform.io/)或AWS的[Cloud formation](https://aws.amazon.com/es/cloudformation/)这样的工具，我们甚至可以通过编写代码来设置基础架构，也就是说我们可以花几分钟编写脚本来设置服务器、数据库等在云上的内容。
 
-This is mind-blowing from an engineering point of view, and really convenient for us as developers. Cloud computing nowadays offers a very complete set of solutions that can easily adapt from tiny small projects to the biggest digital products on earth. This is why more and more software projects nowadays choose to host their infrastructure in the cloud.
+对于软件工程来说这是颠覆想象的举措，这也给开发者提供了巨大的便利。云计算提供了丰富的解决方法应对小微项目，也可以处理好非常大的数字产品。这也是为什么越来越多的软件工程项目选择在云上搭建基础架构。
 
-As previously mentioned, the most used and well known cloud providers are [AWS](https://aws.amazon.com/), [Google Cloud](https://cloud.google.com/) and [Azure](https://azure.microsoft.com/). Though there are other options too like [IBM](https://www.ibm.com/cloud), [DigitalOcean](https://www.digitalocean.com/), and [Oracle](https://www.oracle.com/cloud/).
+如前文所诉，时下最知名且最常用的云有[AWS](https://aws.amazon.com/)、[Google Cloud](https://cloud.google.com/)和[Azure](https://azure.microsoft.com/)。 当然还有其他的选择如[IBM](https://www.ibm.com/cloud)、[DigitalOcean](https://www.digitalocean.com/)和[Oracle](https://www.oracle.com/cloud/)。
 
-Most of these providers offer the same kind of services, though they might have different names. For example, serverless functions are called "lambdas" on AWS and "cloud functions" on Google cloud.
+大部分云供应商都提供同样的服务，虽然服务的命名不相同。同样是无服务功能，在AWS被叫做"lambdas"，在Google Cloud被叫做"cloud functions“。
 
-# Different Folder Structures to Know
+<h1 id="different-folder-structures-to-know">不同的文件夹结构</h1>
 
-Ok, so far we've seen how architecture can refer to infrastructure organization and hosting. Now let's see some code and how architecture can refer to folder structures and code modularity.
+目前我们讨论的架构指的是基础架构的组织和托管，现在让我们看看一些代码，以及架构在文件结构和代码模块化方面的作用。
 
-## All in One Place Folder Structure
+<h2 id="all-in-one-place-folder-structure">全在一个文件夹中的结构</h2>
 
-To illustrate why folder structures are important, let's build a dummy example API. We'll have a mock database of rabbits 🐰🐰 and the API will perform [CRUD](https://www.freecodecamp.org/news/crud-operations-explained/) actions on it. We'll build this with Node and Express.
+为了演示为什么文件夹结构很重要，我们一起来搭建一个简单的示例API。我们将使用一个模拟的数据库，名为兔子🐰🐰，这个API会执行[CRUD](https://www.freecodecamp.org/news/crud-operations-explained/) 操作，我们将使用Node和Express来搭建。
 
-Here's our first approach, with no folder structure at all. Our repo will be composed of the `node modules` folder, and the `app.js`, `package-lock.json` and `package.json` files.
+下图是我们的第一步，没有任何文件夹结构，我们的仓库包含`node modules`文件夹，`app.js`、 `package-lock.json` 和 `package.json` 文件。
 
 ![image-227](https://www.freecodecamp.org/news/content/images/2022/07/image-227.png)
 
-Within our app.js file we'll have our tiny server, our mock DB, and two endpoints:
+在`app.js`文件包含一个小服务器，虚拟DB(数据库）和两个端点：
 
 ```javascript
 // App.js
@@ -335,7 +334,7 @@ const express = require('express');
 const app = express()
 const port = 7070
 
-// Mock DB
+// 虚拟DB
 const db = [
     { id: 1, name: 'John' },
     { id: 2, name: 'Jane' },
@@ -349,7 +348,7 @@ const db = [
     { id: 10, name: 'Jasmine' },
 ]
 
-/* Routes */
+/* 路由 */
 app.get('/rabbits', (req, res) => {
     res.json(db)
 })
@@ -361,7 +360,7 @@ app.get('/rabbits/:idx', (req, res) => {
 app.listen(port, () => console.log(`⚡️[server]: Server is running at http://localhost:${port}`))
 ```
 
-If we test the endpoints we'll see they work perfectly fine:
+测试两个端点，发现它们运行正常：
 
 ```
 http://localhost:7070/rabbits
@@ -392,51 +391,51 @@ http://localhost:7070/rabbits/1
 # }
 ```
 
-So what's the problem with this? Nothing, actually, it works just fine. The problem will only arise when the codebase gets bigger and more complex, and we start adding new features to our API.
+这有什么问题吗？其实没有，一切运行良好。但当代码库变得更大更复杂，我们在API中添加新的功能后，问题就会浮现。
 
-Similarly to what we talked about before when explaining monolithic architectures, having everything in a single place is nice and easy at first. But when things start getting bigger and more complex, this is a confusing and hard to follow approach.
+这和我们讨论单体式架构的问题一样，一开始把所有内容放在一个地方很方便，但是随着内容变得更大更复杂，这个方式就会让人困惑。
 
-Following the modularity principle, a better idea is to have different folders and files for the different responsibilities and actions we need to perform.
+根据模块化原则，更好的处理方法是使用不同的文件夹和文件来执行不同的责任和行为。
 
-To better illustrate this, let's add new features to our API and see how we can take a modular approach with the help of a layers architecture.
+为了更好地演示，让我们给API添加新的功能，看看我们怎么使用模块的方法来给文件夹结构添加不同层级。
 
-## Layers Folder Structure
+<h2 id="layers-folder-structure">分层文件夹结构</h2>
 
-Layers architecture is about dividing concerns and responsibilities into different folders and files, and allowing direct communication only between certain folders and files.
+分层文件夹结构是将关注点和责任分配到不同的文件夹和文件中，仅允许在特定的文件夹和文件中进行直接通信。
 
-The matter of how many layers should your project have, what names should each layer have, and what actions should it handle is all a matter of discussion. So let's see what I think is a good approach for our example.
+一个项目应该有几个层级，每个层级如何命名，应该处理什么行为都是需要讨论的问题。让我们一起来看看我的例子：
 
-Our application will have five different layers, which will be ordered in this way:
+我们的应用程序将有五个层级，并以下面的顺序排列：
 
 ![layers](https://www.freecodecamp.org/news/content/images/2022/07/layers.png)
 
-Application layers
+应用程序分层
 
--   The application layer will have the basic setup of our server and the connection to our routes (the next layer).
--   The routes layer will have the definition of all of our routes and the connection to the controllers (the next layer).
--   The controllers layer will have the actual logic we want to perform in each of our endpoints and the connection to the model layer (the next layer, you get the idea...)
--   The model layer will hold the logic for interacting with our mock database.
--   Finally, the persistence layer is where our database will be.
+-   应用层（application layer)将处理服务器的基本设置，并且连接到路由（下一层）。
+-   路由层(routes layer)将定义所有路由以及连接到控制器层（下一层）。
+-   控制器层(controllers layer)是每个端点的实现具体逻辑，并且连接到模型层（下一层，你已经知道这是怎么一回事了……）。
+-   模型层(model layer)是与虚拟数据库的交互逻辑。
+-   最终持久层(persistence layer)存储了所有数据。
 
-You can see this approach is much more structured and has a clear division of concerns. This may sound like lots of boilerplate. But after setting it up, this architecture will allow us to clearly know where each thing is and which folders and files are responsible for each action our application executes.
+采用这样的方法就更有结构感，关注点也实现了分离。这个方法看上去比较像样板，但设置以后，这样的结构能够帮助我们清晰地了解文件夹和文件具体负责应用程序的哪个行为。
 
-An important thing to keep in mind is that in these kind of architectures **there's a defined communication flow** between the layers that has to be followed for it to make sense.
+需要注意的是，在这样的结构中层级间的**通信流是确定的**，这样这个结构才成立。
 
-This means that a request first has to go through the first layer, then the second, then the third and so on. No request should skip layers because that would mess with the logic of the architecture and the benefits of organization and modularity it gives us.
+也就是说一个请求必须先通过第一层，然后是第二层，然后第三层，以此类推。请求不能够跳过层级，因为这样会使得结构的逻辑混乱，就借助不了组织和模块化带来的好处。
 
 ![layers--1--1](https://www.freecodecamp.org/news/content/images/2022/07/layers--1--1.png)
 
-Another way to picture our architecture
+结构的另一种表现形式
 
-Let's see some code now. Using the layers architecture, our folder structure might look like this:
+让我们看一些代码，以上面的分层结构为基础，我们的文件夹结构如下：
 
 ![image-229](https://www.freecodecamp.org/news/content/images/2022/07/image-229.png)
 
--   We have a new folder called `db` that will hold our database file.
--   And another folder called `rabbits` that will hold the routes, controllers and models related to that entity.
--   `app.js` sets up our server and connects to the routes.
+-   一个名为 `db`的新文件夹保存所有数据文件
+-   另一个名为`rabbits`的文件夹包含所有路由、控制器和模型
+-   `app.js`设置服务器，并与路由连接
 
-```
+```javascript
 // App.js
 const express = require('express');
 
@@ -445,15 +444,15 @@ const rabbitRoutes = require('./rabbits/routes/rabbits.routes')
 const app = express()
 const port = 7070
 
-/* Routes */
+/* 路由 */
 app.use('/rabbits', rabbitRoutes)
 
 app.listen(port, () => console.log(`⚡️[server]: Server is running at http://localhost:${port}`))
 ```
 
--   `rabbits.routes.js` holds each of the endpoints related to this entity and links them to the corresponding controller (the function we want to execute when the request hits that endpoint).
+-   `rabbits.routes.js` 连接实体的端点和对应控制器的路由（执行请求到达端点的函数）。
 
-```
+```javascript
 // rabbits.routes.js
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -477,9 +476,9 @@ router.delete('/:id', deleteRabbit)
 module.exports = router
 ```
 
--   `rabbits.controllers.js` holds the logic corresponding to each endpoint. Here is where we program what the function should take as input, what process should it perform and what should it return. 😉 Moreover, each controller links to the corresponding model function (which will perform database related operations).
+-   `rabbits.controllers.js`处理每个端点的逻辑。在这里函数接受输入，然后处理输出和返回。 😉 另外，每一个控制器都连接到对应的模型函数（处理数据相关的操作）。
 
-```
+```javascript
 // rabbits.controllers.js
 const { getAllItems, getItem, editItem, addItem, deleteItem } = require('../models/rabbits.models')
 
@@ -534,9 +533,9 @@ const deleteRabbit = (req, res) => {
 module.exports = { listRabbits, getRabbit, editRabbit, addRabbit, deleteRabbit }
 ```
 
--   `rabbits.models.js` is where we define the functions that will perform CRUD actions on our database. Each function represents a different type of action (reading one, reading all, editing, deleting, and so on). This file is the one that connects to our DB.
+-   `rabbits.models.js` 定义了使用CRUD处理数据库的函数。每一个函数都代表了一种行为（读取一个数据、读取所有数据、编辑数据、删除数据等），这个文件与DB连接。
 
-```
+```javascript
 // rabbits.models.js
 const db = require('../../db/db')
 
@@ -589,9 +588,9 @@ const deleteItem = id => {
 module.exports = { getAllItems, getItem, editItem, addItem, deleteItem }
 ```
 
--   Finally, `db.js` hosts our mock database. In a real project, this is where your actual database connection might be.
+-   最后，`db.js`托管了我们的模拟数据库。在真实的项目中，这里是连接真实数据库的地方。
 
-```
+```javascript
 // db.js
 const db = [
     { id: 1, name: 'John' },
@@ -609,50 +608,50 @@ const db = [
 module.exports = db
 ```
 
-As we can see, there're a lot more folders and files under this architecture. But as a consequence, our codebase is much more structured and clearly organized. Everything has its own place and the communication between different files is clearly defined.
+如你所见，现在就有更多的文件夹和文件。但是最为回报，我们的代码库变得结构感更加明显，并且组织更加清晰。每一个代码都呆在应该在的地方，文件之间的通信也被清晰地定义了。
 
-This kind of organization greatly facilitates the addition of new features, code modifications, and bug fixing.
+这样的组织形式能够极大地方便添加新的功能、修改代码和改bug。
 
-Once you become familiar with the folder structure and know where to find each thing, you'll see it's very convenient to work with this shorter and smaller files instead of having to scroll through one or two huge files where everything is put together.
+一旦你熟悉了这样的文件夹结构，知道去哪儿找你想要的内容。你就会发现在更短更小的文件中工作，比在一到两个巨大的文件中滑动寻找想要的内容要方便得多。
 
-I'm also a supporter of having a folder for each of the main entities in your application (rabbits in our case). This allows to even more clearly understand what each file relates to.
+我也支持为应用的每一个实体（在我的例子中是兔子）创建一个文件夹。这样我们就能够更清晰地知道每一个文件和什么内容相关。
 
-Say we now want to add new features to add/edit/delete cats and dogs too. We would create new folders for each of them, and each with their own routes, controllers, and model files. The idea is to separate concerns and have each thing in its own place.👌👌
+假设我们需要添加新的功能去添加、修改、删除猫咪或者小狗，我们就为这些新的动物创建文件夹，每一个文件夹里包含各自的路由、控制器和模型文件。这一方法就是将关注点分离。👌👌
 
-## MVC Folder Structure
+<h2 id="mvc-folder-structure">MVC文件夹结构</h2>
 
-MVC is an architecture pattern that stands for **Model View Controller**. We could say the MVC architecture is like a simplification of the layers architecture, incorporating the front-end side (UI) of the application as well.
+MVC的全称是**Model View Controller（模型视图控制器）**。 我们可以说 MVC结构就像是分层结构的简化版，并包含了应用程序的前端 (UI)。
 
-Under this architecture, we'll have only three main layers:
+在这个结构中只有三层：
 
--   The view layer will be responsible for rendering the UI.
--   The controllers layer will be responsible for defining routes and the logic for each of them.
--   The model layer will be responsible for interacting with our database.
+-   视图层负责渲染UI.
+-   控制层负责定义路由和路由背后的逻辑
+-   模型层负责和数据库的交互
 
 ![mvc--2-](https://www.freecodecamp.org/news/content/images/2022/07/mvc--2-.png)
 
-Same as before, each layer will interact only with next one so we have a clearly defined communication flow.
+和之前的一样，每一个层级只和下一个层级交互，所以必须是清晰定义的通信流。
 
 ![mvc](https://www.freecodecamp.org/news/content/images/2022/07/mvc.png)
 
-Another way of picturing our architecture
+另一种展现层级的方式
 
-There're many frameworks that allow you to implement MVC architecture out of the box (like [Django](https://www.djangoproject.com/) or [Ruby on Rails](https://rubyonrails.org/) for example). To do this with Node and Express we'll need a template engine like [EJS](https://ejs.co/).
+有许多实现MVC结构的框架 (如[Django](https://www.djangoproject.com/) 或 [Ruby on Rails](https://rubyonrails.org/) )。如果要在Node和Express中使用这个结构，我们需要借助模版引擎，如[EJS](https://ejs.co/)。
 
-If you're not familiar with template engines, they are just a way to easily render HTML while taking advantage of programmatic features such as variables, loops, conditionals, and so on (very similar to what we'd do with JSX in React).
+如果你对模版引擎这个概念不是太熟悉的话，可以把它理解成更容易渲染的HTML，它利用了如变量、循环和条件句这些编程特性使得渲染更加容易（和React中的JSX很像）。
 
-As we're going to see in a sec, we'll create EJS files for each kind of page we'd like to render, and from each controller we're going to render those files as our response, passing them the corresponding response as variables.
+在下面的例子中，我们会使用EJS文件来创建每一个页面，并且由控制器来处理响应，传入到对应的响应变量。
 
-Our folder structure will look like this:
+文件夹结构如下：
 
 ![image-230](https://www.freecodecamp.org/news/content/images/2022/07/image-230.png)
 
--   See that we got rid of most of some of the folders we had before and kept the `db`, `controllers` and `models` folders.
--   We added a `views` folders that corresponds with each of the pages/responses we'd like to render.
--   `db.js` and `models.js` files stay exactly the same.
--   Our `app.js` would look like this:
+-   我们删掉了大部分文件夹，但保留了`db`、`controllers`和 `models`。
+-   我们添加了`views`文件夹保存我们需要渲染的页面或响应。
+-   `db.js`和`models.js`保持不变。
+-   `app.js`如下：
 
-```
+```javascript
 // App.js
 const express = require("express");
 var path = require('path');
@@ -662,19 +661,19 @@ const rabbitControllers = require("./rabbits/controllers/rabbits.controllers")
 const app = express()
 const port = 7070
 
-// Ejs config
+// Ejs 设置
 app.set("view engine", "ejs")
 app.set('views', path.join(__dirname, './rabbits/views'))
 
-/* Controllers */
+/* 控制器 */
 app.use("/rabbits", rabbitControllers)
 
 app.listen(port, () => console.log(`⚡️[server]: Server is running at http://localhost:${port}`))
 ```
 
--   `rabbits.controllers.js` changes to define the routes, connect to the corresponding model function, and render the corresponding view for each request. See that in the render method we're passing the request response as a parameter to the view. 😉
+-   `rabbits.controllers.js`用来定义路由、连接对应的模型函数以及渲染每一个请求对应的视图。可以看到在每一个渲染方法中我们传入了请求响应作为参数。 😉
 
-```
+```javascript
 // rabbits.controllers.js
 const express = require('express')
 const bodyParser = require('body-parser')
@@ -738,9 +737,9 @@ router.delete('/:id', (req, res) => {
 module.exports = router
 ```
 
--   Finally, in the view files we take the variable received as parameter and render it as HTML.
+-   最后，在视图文件中，我们将变量作为参数并且渲染为HTML。
 
-```
+```html
 <!-- Rabbits view -->
 <!DOCTYPE html>
 <html lang="en">
@@ -760,7 +759,7 @@ module.exports = router
 </html>
 ```
 
-```
+```html
 <!-- Rabbit view -->
 <!DOCTYPE html>
 <html lang="en">
@@ -776,32 +775,32 @@ module.exports = router
 </html>
 ```
 
-Now we can go to our browser, hit [`http://localhost:7070/rabbits`](http://localhost:7070/rabbits) and get:
+打开浏览器，登陆[`http://localhost:7070/rabbits`](http://localhost:7070/rabbits)，会得到：
 
 ![image-232](https://www.freecodecamp.org/news/content/images/2022/07/image-232.png)
 
-Or `[http://localhost:7070/rabbits](http://localhost:7070/rabbits)/2` and get:
+或者`[http://localhost:7070/rabbits](http://localhost:7070/rabbits)/2` 会得到：
 
 ![image-233](https://www.freecodecamp.org/news/content/images/2022/07/image-233.png)
 
-And that's MVC!
+这就是MVC!
 
 ![bugs-bunny-looney-tunes](https://www.freecodecamp.org/news/content/images/2022/07/bugs-bunny-looney-tunes.gif)
 
-# Conclusion
+<h1 id="conclusion">总结</h1>
 
-I hope all these examples helped you wrap your head around what are we talking about when we mention "architecture" within the software world.
+希望这些示例能够帮助你理解软件工程世界里的“架构”。
 
-As I said in the beginning, it's a vast and complex topic that often encompasses a lot of different things.
+如我在文章开头中所说，架构是一个非常巨大且复杂的概念，包含了非常多的内容。
 
-Here, we've introduced infrastructure patterns and systems, hosting options and cloud providers, and lastly some common and useful folder structures you can use in your projects.
+在这篇文章中，我们介绍了架构模式和系统、托管的选择以及云供应商，以及一些通用的文件夹结构。
 
-We've learned about vertical and horizontal scaling, monolithic applications and microservices, elastic and serverless cloud computing...lots of things. But this is only the tip of the iceberg! So keep learning and doing research on your own. 💪💪
+我们还学习了垂直和水平扩展、单体式应用和微服务、弹性和无服务云计算……非常多的内容。但这些只是冰山一角！请再接再厉，探索更多内容。 💪💪
 
-As always, I hope you enjoyed the article and learned something new. If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman).  
+希望你喜欢这篇文章，并且有所收获，你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)或[Twitter](https://twitter.com/CoccaGerman)上关注我。 
   
-And [here's a little goodbye song](https://www.youtube.com/watch?v=PDilu87kQCk) for you, cause... why not? 🤷‍♂️
+这是一首[告别曲](https://www.youtube.com/watch?v=PDilu87kQCk)， 哈哈...调皮一下！ 🤷‍♂️
 
 ![7zSe](https://www.freecodecamp.org/news/content/images/2022/07/7zSe.gif)
 
-Cheers and see you in the next one! ✌️
+干杯！下篇文章见！ ✌️

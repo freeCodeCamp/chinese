@@ -15,101 +15,101 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/SudokuSolver.gif)
 
-## Prerequisites
+## 准备
 
--   Install the latest LTS version of Node.JS from [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
--   Install the Angular CLI from [https://cli.angular.io/](https://cli.angular.io/)
--   An Azure subscription account. You can create a free Azure account at [https://azure.microsoft.com/en-in/free/](https://azure.microsoft.com/en-in/free/)
--   Install the .NET Core 5.0 SDK from [https://dotnet.microsoft.com/download/dotnet/5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
--   Install the latest version of Visual Studio 2019 from [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/)
+-   从 [https://nodejs.org/zh-cn/download/](https://nodejs.org/zh-cn/download/) 下载并安装最新的 LTS 版本的 Node.js
+-   从 [https://cli.angular.io/](https://cli.angular.io/) 下载并安装 Angular CLI
+-   一个 Azure 订阅账号。你可以在 [https://azure.microsoft.com/zh-cn/free/](https://azure.microsoft.com/zh-cn/free/) 创建一个免费的 Azure 账号
+-   从 [https://dotnet.microsoft.com/download/dotnet/5.0](https://dotnet.microsoft.com/download/dotnet/5.0) 下载并安装 .NET Core 5.0 SDK
+-   从 [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/) 下载并安装最新版本的 Visual Studio 2022
 
-## Source Code
+## 源代码
 
-You can get the source code from [GitHub](https://github.com/AnkitSharma-007/Azure-AI-Sudoku-solver).
+你可以在 [GitHub](https://github.com/AnkitSharma-007/Azure-AI-Sudoku-solver) 上获取源代码。
 
-## What is Azure Form Recognizer Cognitive Service?
+## 什么是 Azure 表单识别器认知服务？
 
-The [Azure Form Recognizer](https://azure.microsoft.com/en-in/services/cognitive-services/form-recognizer/) cognitive service allows us to build automated data processing software using machine learning technology. It lets us extract text, key/value pairs, selection marks, tables, and structure from our documents.
+得益于 [Azure 表单识别器](https://azure.microsoft.com/zh-cn/services/form-recognizer/)认知服务，我们可以使用机器学习技术构建自动数据处理软件。它能从文档中提取文本、键-值对、选择标记、表格和结构。
 
-We can easily invoke the Form Recognizer models with the help of a REST API or client library SDKs.
+在 REST API 或客户端库 SDK 的帮助下，我们可以轻松地调用表单识别器模型。
 
-The Form Recognizer cognitive service provides the following features:
+表格识别器认知服务提供了以下功能：
 
--   **Prebuilt models**: We can use the prebuilt models to extract data from the unique document type such as invoices, receipts, IDs, and business cards.
--   **Custom models**: we can extract text, key/value pairs, selection marks, and table data from forms using the custom models. However, we need to train the custom models using our data so that it suits our custom needs.
--   **Layout API**: It allows us to extract text, selection marks, and table structures from the documents.
+-   **预构建模型**：我们可以使用预先建立的模型，从独特的文件类型中提取数据，比如发票、收据、身份证和名片。
+-   **自定义模型**：我们可以使用自定义模型从表单中提取文本、键-值对、选择标记和表格数据。然而，我们需要使用自己的数据来训练自定义模型，使其适合我们的自定义需求。
+-   **布局 API**：它允许我们从文件中提取文本、选择标记和表格结构。
 
-In this article, we are going to use the layout API to extract content from the image of the sudoku table that the user uploads.
+在这篇文章中，我们将使用布局 API 从用户上传的数独表的图片中提取内容。
 
-## How to Create the Azure Form Recognizer Cognitive Service Resource
+## 如何创建 Azure 表单识别器认知服务资源
 
-Login to the Azure portal and search for the cognitive services in the search bar and click on the result. On the next screen, click on the Create button. It will open the cognitive services marketplace page. Search for the Form Recognizer in the search bar and click on the “Form Recognizer” card from the search result.
+登录 Azure 门户，在搜索栏中搜索“认知服务”并点击结果。在下一个屏幕上，点击“创建”按钮。这将打开认知服务市场的页面。在搜索栏中搜索“表单识别器”，并点击搜索结果中的“表单识别器”选项。
 
-This will open the Form Recognizer API page. Click on the Create button to create a new Form Recognizer resource. Refer to the image shown below.
+这将打开表单识别器 API 页面。点击“创建”按钮，新建一个表单识别器资源。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateFR.png)
 
-On the Create Form Recognizer page, fill in the details as indicated below.
+在创建表格识别器的页面中，按照下面的指示填写详细信息。
 
--   **Subscription**: Select the subscription type from the dropdown.
--   **Resource group**: Select an existing resource group or create a new one.
--   **Region**: Choose the region which is right for you.
--   **Name**: Give a unique name to your resource.
--   **Pricing tier**: Select the pricing tier you want.
+-   **订阅 / Subscription**：从下拉菜单中选择订阅类型。
+-   **资源组 / Resource group**：选择一个现有的资源组或新建一个资源组。
+-   **地区 / Region**：选择你所在的地区。
+-   **名称 / Name**：为你的资源起一个独特的名字。
+-   **定价 / Pricing tier**：选择你想要的定价级别。
 
-Click on the “Review +Create” button. Refer to the image shown below.
+点击“检查并创建”按钮。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/ConfigureFR.png)
 
-On the next page, check the terms of use, verify the information which you have provided, and then click on the “Create” button.
+在下一个页面，勾选确认使用条款，核实你提供的信息，然后点击“创建”按钮。
 
-After your resource is successfully deployed, click on the “Go to resource” button. Click on the “Keys and the endpoint” link on the menu on the left. Refer to the image shown below.
+在你的资源被成功部署后，点击“转到资源”按钮。点击左边菜单上的“密钥和端点”链接。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/FRKeys.png)
 
-Make a note of the endpoint and any one of the keys provided. We will be using these in the latter part of this article to invoke the Layout API of the Form recognizer service from the .NET code.
+记下端点和页面上提供的任意一个密钥。我们将在本文的后半部分使用这些来从 .NET 代码中调用表单识别器服务的布局 API。
 
-## How to Create the ASP.NET Core Application
+## 如何创建 ASP.NET Core 应用程序
 
-Open Visual Studio 2019 and click on “Create a new Project”. A “Create a new Project” dialog will open. Select “ASP.NET Core with Angular” and click on Next. Refer to the image shown below.
+打开 Visual Studio 2022，点击“创建一个新项目”，这将打开一个“创建新项目”对话框。选择“ASP.NET Core with Angular”并点击“下一步”。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj.png)
 
-Now you will be at the “Configure your new project” screen. Provide the name for your application as `ngSudokuSolver`, and click on Next. Refer to the image shown below.
+现在你将进入“配置你的新项目”界面。为该应用程序设置一个名称，比如 `ngSudokuSolver`，并点击“下一步”。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj_1.png)
 
-On the additional information page, select the target framework as .NET 5.0 and set the authentication type to none as shown in the image below.
+在附加信息页面，选择目标框架为 .NET 5.0，并将认证类型设置为无，如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj_2.png)
 
-This will create our project. The folder structure of the application looks like this:
+现在，我们创建了一个工程。这个程序的文件夹结构与下图类似：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/Sol_Exp.png)
 
-The `ClientApp` folder contains the Angular code for our application. The Controllers folders will contain our API controllers. The angular components are present inside the `ClientApp\src\app` folder.
+`ClientApp` 文件夹中包含我们程序的 Angular 代码。Controllers 文件夹将包含 API 控制器。Angular 组件存在于 `ClientApp/src/app` 文件夹中。
 
-The default template contains few Angular components. These components will not affect our application, but for the sake of simplicity, we will delete `fetchdata` and `counter` folders from `ClientApp/src/app` folder. Also, remove the reference for these two components from the `app.module.ts` file.
+默认模板包含一些 Angular 组件。这些组件不会影响我们的应用程序，但为了简单起见，我们将从 `ClientApp/src/app` 文件夹中删除 `fetchdata` 和 `counter` 文件夹。同时，从 `app.module.ts` 文件中删除对这两个组件的引用。
 
-## How to Install the Required NuGet Packages
+## 如何安装所需的 NuGet 包
 
-To install the package, navigate to Tools >> NuGet Package Manager >> Package Manager Console. It will open the Package Manager Console inside Visual Studio.
+要安装 NuGet 包，请导航到工具 >> NuGet 包管理器 >> 包管理器控制台。它将在 Visual Studio 内打开包管理器控制台。
 
-Run the following command to install the [Polly library](https://www.nuget.org/packages/Polly). This library allows you to express resilience and transient fault handling policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
+运行以下命令来安装 [Polly](https://www.nuget.org/packages/Polly)。这个库能让你以流畅和线程安全的方式表达弹性和瞬时故障处理策略，如重试、断路、超时、隔板隔离和回退。
 
 `Install-Package Polly -Version 7.2.1`
 
-Run the following command to install the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) package.
+运行以下命令来安装 [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)。
 
 `Install-Package Newtonsoft.Json -Version 13.0.1`
 
-## How to Create the RetryMessage Handler
+## 如何创建 RetryMessage Handler
 
-Right-click on the `ngSudokuSolver` project and select Add >> New Folder. Name the folder Models.
+右键单击 `ngSudokuSolver` 项目，选择添加 >> 新文件夹。将该文件夹命名为 Models。
 
-Again, right-click on the Models folder and select Add >> Class to add a new class file. Put the name of your class as `HttpRetryMessageHandler.cs` and click "Add".
+接下来，右键单击 Models 文件夹并选择添加 >> 类来添加一个新的类文件。把这个类的名字定为 `HttpRetryMessageHandler.cs`，然后点击“添加”。
 
-Put the following code inside this class.
+在这个类里面输入以下代码。
 
 ```C#
 
@@ -153,7 +153,7 @@ namespace ngSudokuSolver.Models
 
 ```
 
-We will use the RetryMessageHandler to retry the `sendAsync` call. We will retry the HTTP call if the status of the HttpResponseMessage is “running”.
+我们将使用 RetryMessageHandler 来重试 `sendAsync` 调用。如果 HttpResponseMessage 的状态是“运行中”，我们将重试 HTTP 调用。
 
 The maximum retry attempts is set to 7. On each retry, we will increase the duration of wait time by a power of 2. If the maximum number of retries has been exhausted and the HttpResponseMessage is not successful yet, we will return false.
 

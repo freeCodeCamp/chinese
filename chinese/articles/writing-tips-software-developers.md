@@ -1,126 +1,126 @@
 > -  原文地址：[Writing Tips for Software Developers – How to Become a Better Tech Writer](https://www.freecodecamp.org/news/writing-tips-software-developers/)
 > -  原文作者：[Karl Hughes](https://www.freecodecamp.org/news/author/karl/)
-> -  译者：
+> -  译者：HeZean
 > -  校对者：
 
 ![Writing Tips for Software Developers – How to Become a Better Tech Writer](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/writing-tips.png)
 
-You might think that software development is all about writing code, but that's not true. A huge part of the job is communicating with others. And as we all move towards more remote work, [written communication is becoming increasingly important](https://stackoverflow.blog/2021/08/09/how-writing-can-advance-your-career-as-a-developer/).
+你或许以为软件开发全是围绕写代码进行的，但事实并非如此。这项工作中很大一部分内容是与他人沟通。随着越来越多的工作转向远程办公的形式，[书面交流变得越来越重要](https://stackoverflow.blog/2021/08/09/how-writing-can-advance-your-career-as-a-developer/)。
 
-> “In their ﬁrst few years on the job, engineers spend roughly 30% of their workday writing, while engineers in middle management write for 50% to 70% of their day; those in senior management reportedly spend over 70% and as much as 95% of their day writing.” - Jon Leydens
+> “在一个工程师开始工作的最初几年里，他大概会花 30% 的时间在写作上，而中层管理工程师每天花费 50% 至 70% 的时间写作；高级管理人员花在写作上的时间占到了每天的 70% 以上，甚至 95%。” —— Jon Leydens
 
-Last year, I left my career as a software engineering manager and CTO to start writing full-time. After a decade in engineering I was ready for a career change, so with six months of savings in the bank, I decided to take the plunge.
+我在去年离开了我作为软件工程经理和首席技术官的职位，成为了一名全职写作者。在软件行业工作了十年后，我拿着银行里六个月的存款，决定冒险改变我的职业。
 
-I'm happy to say that it's gone really well, and my company was recently [featured on TechCrunch for our technical writing work](https://techcrunch.com/2021/07/29/draft-dev-ceo-karl-hughes-on-the-importance-of-using-experts-in-developer-marketing/).
+很高兴地说，新职业的一切到现在为止都非常顺利，我的公司最近也[因我们的技术文书工作而被 TechCrunch 报道](https://techcrunch.com/2021/07/29/draft-dev-ceo-karl-hughes-on-the-importance-of-using-experts-in-developer-marketing/)。
 
-I had written blog posts and tutorials on the side for years before starting Draft.dev, so I was pretty confident in my writing skills. But I've learned a lot since going out on my own. I've also met a number of excellent mentors and peers who gave me their advice for writing along the way.
+在创办 Draft.dev 之前，我已经在外面写了很多年的博客和教程，所以我对自己的写作能力相当自信。但在公司创立后，我依然学到了很多。我也遇到了许多优秀的导师和同行，他们一路走来给我提供了写作方面的建议。
 
 ![Person writing in a notebook](https://www.freecodecamp.org/news/content/images/2021/08/brad-neathery-XrSzacdYbtQ-unsplash.jpg)
 
-Photo by [Brad Neathery](https://unsplash.com/@bradneathery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/write?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+照片由 [Brad Neathery](https://unsplash.com/@bradneathery?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 发布在 [Unsplash](https://unsplash.com/s/photos/write?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-In this post, I want to share a few of the writing tips I regularly share with other software developers. These will help you get over [_the resistance_](https://en.wikipedia.org/wiki/Resistance_(creativity)) that all new writers face and hopefully give you the confidence to start writing sooner rather than later.
+在这篇文章中，我想分享一些我经常与其他软件开发者分享的写作技巧。他们将帮助你克服所有新写作者会面临的[_阻力_](https://en.wikipedia.org/wiki/Resistance_(creativity))，希望能给你带来尽早开始写作的信心。
 
-## 1\. Start by Writing About What You Know
+## 1\. 从你知道的东西开始写起
 
-> “No one started off as a great writer. Start writing about the things you currently know and share them with the community. You'll be surprised how many lives you'll impact.” - Eze Sunday, Software Developer and Technical Writer
+> “没有人生来就是伟大的作家。从你目前所知道的东西开始写起，并与社区分享它们。你会惊讶于你能影响多少人的生活。” —— Eze Sunday（软件开发人员、技术作家）
 
-In order to become a better writer, you have to do it more often. This is true of any skill, but it can be especially hard with writing because you can't just string random words together on a page. You have to write about _something_.
+要想成为一个比现在更好的写作者，你必须比以往更频繁地写作。任何技能都是如此，但对于写作来说，这可能更难，因为你不能只是在一张纸上随意堆砌一些词藻。你必须有写作的 _主题_。
 
-The most common piece of advice for overcoming this barrier is to **start writing about things you already know**.
+克服这一障碍的最常见的建议是，**开始写你已经知道的事情**。
 
-Daniel Phiri, who does Developer Relations at [Strapi](https://strapi.io/), told me, "Start with a problem you just solved no matter how trivial you think it is."
+在 [Strapi](https://strapi.io/) 从事开发者关系的 Daniel Phiri 告诉我：“从你刚解决的问题开始，不管你认为它有多微不足道。”
 
-He went on to point out that even if the topic has been written about extensively already, your piece can be different. "Writing is about perspective and as unique as we all are as humans, so are our perspectives."
+他也指出，即使一个话题已经被广泛地写过了，你的作品也可以与众不同。“写作是关于视角的，我们每个人的视角就像我们个体本身一样独特。”
 
-Eze Sunday reiterated this idea: "Yes, there are a lot of articles. But, there are not a lot of good articles that will explain things the way you would love it to be explained to you if you were just starting out."
+Eze Sunday 重申了这个观点：“世上的确有很多文章，但是，在你刚开始的时候，你会发现没有多少好文章会以你喜欢的方式来解释事情。”
 
-## 2\. Focus on a Few, High-Quality Pieces
+## 2\. 专注于少数高质量的作品
 
-"Quality trumps quantity," James Hickey told me. "Focus on writing high-quality articles vs. a bunch of _ok_ articles...No one will be impressed when your content is just _ok_."
+“质量胜过数量”，James Hickey 如是跟我说。“专注于写高质量的文章，而不是写一堆 _一般_ 的文章……如果你的内容质量只是 _一般_，没有人会对它留下深刻印象。”
 
-James is a senior .NET Developer, Microsoft MVP, author, and speaker with eight young children at home, so finding time to write is always a challenge. His solution is to be very selective about the writing he takes on, but when he gets into a topic, he goes deep.
+James 是一位资深的 .NET 开发人员、微软 MVP、作家和演讲者，家里有八个小孩，所以对他而言，找出时间写作总是一个挑战。他的解决办法是谨慎选择他要写的内容，一旦他定好主题，他就会深入研究。
 
-You can see this in his work, like [this one on e-commerce data models](https://resources.fabric.inc/blog/ecommerce-data-model) that hit the front page of Hacker News.
+这种做事风格在他的作品中可见一斑，比如这篇登上了 Hacker News 头版的[关于电子商务数据模型的文章](https://resources.fabric.inc/blog/ecommerce-data-model)。
 
 ![More-complex-orders-data-model](https://www.freecodecamp.org/news/content/images/2021/08/More-complex-orders-data-model.png)
 
-Diagrams from James Hickey's post on e-commerce data models
+图表来自 James Hickey 关于电子商务数据模型的文章
 
-I've similarly found that some of my most popular blog posts are the ones that went really deep into a topic.
+我同样发现，我最受欢迎的一些博文正是那些真正深入到某个主题的文章。
 
-For example, one of the most popular pieces on my personal blog is [this 4,500-word guide to API development](https://www.karllhughes.com/posts/api-development). I'll admit, I write a lot of shorter pieces, but there's something to be said for being thorough.
+举个例子，我个人博客上最受欢迎的文章之一是这份 [4500 字的 API 开发指南](https://www.karllhughes.com/posts/api-development)。我承认我写了许多比这短的文章，但要把一件事讲透彻，有些话总是要说的。
 
-## 3\. Perfect is the Enemy of Good Enough
+## 3\. “完美”是“足够好”的敌人
 
-On the flip side, don't let your drive to produce the best content possible stop you from hitting the "publish" button.
+从另一方面来讲，不要让推动你写出最好内容的动力阻止你按下“发布”键。
 
-Dan Moore, who runs [Letters to a New Developer](https://letterstoanewdeveloper.com/) and Developer Relations at FusionAuth, offered up this suggestion:
+在 FusionAuth 负责[给新开发者的信](https://letterstoanewdeveloper.com/)和开发者关系的 Dan Moore 提出了这个建议：
 
-> "Perfect is the enemy of the good enough. To combat that, I like to timebox and then publish even if the piece isn't perfect...Maybe your post won't hit the front page of Hacker News, but I guarantee that if you don't publish it, no one will read it."
+> “‘完美’是‘足够好’的敌人。为了解决这个问题，我喜欢为自己的写作限时，即使当时间限制到了的时候文章还不完美，我也会发布它……或许你的文章不能登上 Hacker News 的头版，但我能保证，如果你不发表，没有人会读它。”
 
-Many new writers get too caught up in the mechanics rather than the structure and organization of their ideas. To be honest, readers are more likely to forgive spelling and grammar errors as long as they can follow your logic.
+许多新手作家过份地在意文章的细节，而不是他们想法的结构与组织。说实话，如果读者能跟上你的逻辑，他们很有可能并不会在意那些拼写和语法错误。
 
-Keanan Koppenhaver, CTO at Alpha Particle, told me that being overly reliant on perfect grammar might even hurt your work by making it sound too robotic:
+Alpha Particle 公司的首席技术官 Keanan Koppenhaver 告诉我，过度在意完美的语法，可能会使你的作品看上去太过于机械化而毁掉它：
 
-> “It's easy to get caught up in trying to make your writing the best it can possibly be: with perfect grammar, great sentence structure, etc. I've used tools like [Hemingway Editor](https://hemingwayapp.com/) to make my writing 'technically correct' and when I re-read my work, it comes out sounding stale and like it was produced by AI.”
+> “我们常常容易陷入试图使你的作品达到最好的状态：完美的语法、伟大的句子结构等等。我曾使用[海明威编辑器](https://hemingwayapp.com/)等工具来使我的写作‘技术上正确’，但当我重新阅读我的作品时，它看起来很陈旧，就像由人工智能创作的一样。”
 
 ![Robot photo](https://www.freecodecamp.org/news/content/images/2021/08/rock-n-roll-monkey-R4WCbazrD1g-unsplash.jpg)
 
-Photo by [Rock'n Roll Monkey](https://unsplash.com/@rocknrollmonkey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/robot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+图片由 [Rock'n Roll Monkey](https://unsplash.com/@rocknrollmonkey?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) 发布在 [Unsplash](https://unsplash.com/s/photos/robot?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
 
-## 4\. Set Aside Time to Write Regularly
+## 4\. 留出时间定期写作
 
-> “You’ll want to treat \[writing\] like any habit and set aside time. One thing I’ve found useful is to write first thing in the morning, maybe even get up a little earlier. I was not a “morning person,” but still found this to be when I had the most writing energy. Nothing else at that point has taken my mental energy.” - Adam DuVander, Founder of EveryDeveloper
+> “你要像对待任何习惯一样对待\[写作\]，并给它留出时间。我发现有件事很有帮助，那就是在早上做的第一件事就是写作，你甚至可以早一点起床。我不是一个习惯早起的人，但我仍然觉得这是我最有精力去写作的时候。在这个时刻，没有其它事情会占用我的精神。” —— Adam DuVander（EveryDeveloper 的创始人）
 
-I've said this before, but I'll continue to reiterate the point: **in order to become a better writer, you have to do it more regularly**. This looks different for everyone though.
+虽然前面说过，但我要再次重申这一点：**要想成为一名更好的作家，你必须更经常地写作**。不过，这对每个人来说都是不同的。
 
-Personally, [I block writing time on my calendar every week](https://draft.dev/learn/technical-content). I found that I do my best work when I'm focused on writing for 4-8 hours rather than trying to cram it into little breaks throughout my day.
+就我个人而言，[我每周都会在日历上定好写作时间](https://draft.dev/learn/technical-content)。我发现，当我专注于写作 4-8 个小时时，我会达到最佳的工作效果，而不是在试图把写作塞进一天中零碎的休息时间。
 
 ![y1V3iiX](https://www.freecodecamp.org/news/content/images/2021/08/y1V3iiX.png)
 
-Of course, not everyone works the same way. [Stephanie Morillo](https://www.stephaniemorillo.co/), a Technical Communications Specialist, makes writing fit into shorter windows.
+当然，并不是所有人都像我这样。[Stephanie Morillo](https://www.stephaniemorillo.co/) 是一位技术交流专家，她就适合在更短的时间段里写作。
 
-> "I use timeboxes: if I know I have to write a talk or a blog post, I'll set aside multiple 30-minute blocks throughout the course of a day or a few days and will sit down and write."
+> “我用时间块（timeboxes）来管理写作：如果我计划写一份讲稿或一篇博文，我会在一天或几天内留出几个 30 分钟的时间段，坐下来写。”
 
-She pointed out that these smaller chunks of time are more realistic for her schedule and it allows her to make progress and increase her output: "If you write 10 words or 100 words or 1,000 words in a day, you're still making progress toward your goal."
+她指出，这些较小的时间块对她的日程安排来说更现实，它使她能够取得进展并增加产出：“无论你在一天内写 10 个字、100 个字还是 1000 个字，你仍然在朝着你的目标取得进展。”
 
-Another strategy is to make writing a daily habit. Alex Lakatos, who runs the Developer Avocados newsletter, did a daily writing challenge for part of last year:
+另一种策略是让写作成为一种日常习惯。经营 Developer Avocados 通讯的 Alex Lakatos 在去年的部分时间里完成了一个每日写作挑战：
 
-> 💡On average, it takes 66 days to form a new habit. There's 65 left until 2021, so how about we start early on those New Year Resolutions?  
+> 💡 平均下来，形成一个新的习惯需要 66 天。现在离 2021年还剩 65 天，我们何不早点开始进行我们的新年计划呢？  
 >   
-> I'll start: I'm trying to publish content consistently, so I'll try to write a minimum of 100 words a day for the remainder of the year. [pic.twitter.com/M0dHrJ36ef](https://t.co/M0dHrJ36ef)
+> 以我的计划为例：我正在努力持续地发布内容，所以在今年剩下的时间里，我将尝试每天至少写 100 字。 [pic.twitter.com/M0dHrJ36ef](https://t.co/M0dHrJ36ef)
 > 
-> — Alex Lakatos 👨‍💻🥑 (@lakatos88) [October 28, 2020](https://twitter.com/lakatos88/status/1321423080095469568?ref_src=twsrc%5Etfw)
+> — Alex Lakatos 👨‍💻🥑 (@lakatos88) [2020 年 10 月 28 日](https://twitter.com/lakatos88/status/1321423080095469568?ref_src=twsrc%5Etfw)
 
-The point is that every person is different and there's no one-size-fits-all approach to setting aside writing time. "The biggest thing is finding a time where your brain can focus and has the creativity to actually get your thoughts down in a coherent way," Keanan Koppenhaver told me.
+关键在于，每个人都是不同的，没有一个足够普适的方法来规划预留给写作的时间。Keanan Koppenhaver 跟我说：“最主要的事情是要找到一个时间，让你的大脑能够集中精力、有创造力，真正把你的想法以连贯的方式记录下来。”
 
-## 5\. Manage Your Expectations
+## 5\. 管理你的期望值
 
-> "It is, of course, nice to have your writing read by others, but there's tremendous value in writing for yourself, and you're guaranteed an audience. So, write for yourself first and foremost." - Dan Moore
+> “诚然，让别人读你的文章是很好的，但为自己而写作也是非常有价值的，而且你能保证绝对会有人读它。因此，首先也是最重要的事就是为自己写作。” —— Dan Moore
 
-It's hard not to get caught up in the thrill of having something you write go viral. I've published hundreds of blog posts in the past 10 years and just [five of them have hit the front page of Hacker News](https://hackernoon.com/how-i-hit-the-front-page-of-hacker-news-5-times-x81n3uyp). This is not an impressive hit rate.
+看到自己写的文章如病毒般传播所带来的快感是非常难以自拔的。在过去十年中，我发表了数百篇博客文章，但只有其中[五篇登上了 Hacker News 的头版](https://hackernoon.com/how-i-hit-the-front-page-of-hacker-news-5-times-x81n3uyp)。这并不算什么令人印象深刻的点击率。
 
-This is why you should primarily be writing for yourself. You don't even need to publish things publicly as Stephanie Morillo pointed out to me:
+这就是为什么你应该主要是为自己而写作。你甚至不需要像 Stephanie Morillo 所说的那样公开发表东西：
 
-> “Keep a journal and write notes about work, your day, your life, your emotions. Journaling gives you the opportunity to write without being self-conscious because you're not writing with an audience in mind; you're doing it for yourself.”
+> “坚持写日记，写下关于工作、你的一天、你的生活、你的情绪的笔记。写日记让你有机会在没有自我意识的情况下写作，因为你在写作时不需要考虑听众；你只是为自己而写。”
 
-Finally, it's important to keep your goals in mind when you start writing. Are you simply writing to record your own learnings? Are you trying to promote a book or course or product? Do you need to get paid to write or is it just for fun?
+最后，当你开始写作时，必须牢记你的目标。你是否只是为了记录自己的学习成果而写作？你是想推广一本书、课程或产品吗？你要通过写作获得报酬，还是只是为了好玩？
 
-Adam DuVander pointed out that being honest with yourself about these expectations is critical. "Decide whether it’s a side thing or a main thing," he told me. "You can make either work, but you’ll want to set your expectations appropriately...There are a lot of ways to use writing in an engineering career."
+Adam DuVander 指出，对自己的这些期望保持诚实是至关重要的。他告诉我：“决定写作是作为副业还是主业，这两种选择都是可以的，但你应该设好你的期望值……在工程职位上有许多地方要用到写作。”
 
-## Conclusion
+## 结论
 
-> Your first 100 blogs, videos, posts, Tweets, lives, podcasts, creations will probably all be rubbish  
+> 你的前100篇博客、视频、帖子、推特、生活、播客、创作可能都是垃圾  
 >   
-> Get over that and get to it, get past that first 100  
+> 克服心里的障碍，去做吧！先过了这 100 关再说  
 >   
-> Hardly anyone will see it anyways, it’s practice for when they do  
+> 反正几乎没有人会看到它，就把这当作是练习吧  
 >   
-> That’s the price you pay for creating
+> 这就是你为创作而付出的代价
 > 
-> — The BKH 🤳🏾 (@thebkh) [December 12, 2020](https://twitter.com/thebkh/status/1337781548918190082?ref_src=twsrc%5Etfw)
+> — The BKH 🤳🏾 (@thebkh) [2020 年 12 月 12 日](https://twitter.com/thebkh/status/1337781548918190082?ref_src=twsrc%5Etfw)
 
-As Brian Kofi Hollingsworth says above, you won't get better at something unless you start doing it. Whether you want to use writing to advance your career, make side income, or help others in the community, you have to start doing it more if you want to get better.
+正如 Brian Kofi Hollingsworth 在上文所说的，只有当你开始做一件事，你才可能变得更好。无论你是想利用写作来使你的事业更进一步、赚取副业收入、还是帮助社会上的其他人，如果你想变得更好，你就必须开始多做。
 
-What tips do you have for software developers who are looking to become better writers? I'd love to [hear from you on Twitter](https://twitter.com/KarlLHughes) if you've got something to add!
+你对那些希望成为更好的作家的软件开发者有什么好建议？如果你有什么要补充的，我很乐意[在推特上听到你的声音](https://twitter.com/KarlLHughes)！

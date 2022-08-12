@@ -1,6 +1,6 @@
 > -  原文地址：[The PHP Handbook – Learn PHP for Beginners](https://www.freecodecamp.org/news/the-php-handbook/)
 > -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
+> -  译者：pengan95
 > -  校对者：
 
 ![The PHP Handbook – Learn PHP for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Group-13--2-.png)

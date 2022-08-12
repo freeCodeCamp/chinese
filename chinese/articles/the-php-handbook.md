@@ -7,55 +7,55 @@
 
 PHP 是一种非常流行的编程语言。
 
-统计数据显示，互联网上 80% 的网站都是由 PHP 开发。 WordPress 这个最受欢迎的网站内容管理系统就是由 PHP 编写。
+统计数据显示，互联网上 80% 的网站都是用 PHP 开发。WordPress 这个最受欢迎的网站内容管理系统就是由 PHP 开发的。
 
-基于 PHP 还有很多优秀的框架，让 Web 开发变得更容易；比如 Laravel，它可能是让初学者学习 PHP 最主要的原因之一。
+基于 PHP 还有很多优秀的框架，让 Web 开发变得更容易；比如 Laravel，它可能是现如今让初学者学习 PHP 最主要的原因之一。
 
 ## 为什么要学习 PHP ？
 
-PHP 是一个备受争议的语言，有人喜欢也有人讨厌。如果我们摒弃情感偏见只是把语言视为一种工具，那么 PHP 是可以为我们创造很多东西的。
+PHP 是一个备受争议的语言，有人喜欢也有人讨厌。如果我们摒弃情感偏见只是把语言视为一种工具，那么我们也可以利用 PHP 去实现很多想法。
 
 诚然它并不完美，但我可以确切的告诉你 -- 没有任何一种语言是完美的。
 
-在本手册中，我将帮助你去学习 PHP。
+在本手册中，我将帮助你去学习它。
 
-This book is a perfect introduction if you’re new to the language. It’s also perfect if you’ve done “some PHP” in the past and you want to get back to it.
+如果你是一个新手，那么这份手册就是完美的新手指南。如果你过去已经做过“一些 PHP”的东西，那么你通过这份手册去温习它那也是极好的。
 
-I’ll explain modern PHP, version 8+.
+我会基于最新版本的 PHP （version 8+）讲解；
 
-PHP has evolved a lot in the last few years. So if the last time you tried it was PHP 5 or even PHP 4, you’ll be surprised at all the good things that PHP now offers.
+PHP 在过去的几年里进步了很多；如果你上次使用还是 PHP 5 或者 PHP 4 ， 那么你会惊讶新版的 PHP 有这么多的好东西。
 
-Let’s go!
+接下来让我们开始吧！
 
-Here's what we'll cover in this handbook:
+以下是我们将会在手册中介绍的内容：
 
-1.  [Introduction to PHP](#introduction-to-php)
-2.  [What Kind of Language is PHP?](#what-kind-of-language-is-php)
-3.  [How to Setup PHP](#how-to-setup-php)
-4.  [How to Code Your First PHP Program](#how-to-code-your-first-php-program)
-5.  [PHP Language Basics](#php-language-basics)
-6.  [How to Work with Strings in PHP](#how-to-work-with-strings-in-php)
-7.  [How to Use Built-in Functions for Numbers in PHP](#how-to-use-built-in-functions-for-numbers-in-php)
-8.  [How Arrays Work in PHP](#how-arrays-work-in-php)
-9.  [How Conditionals Work in PHP](#how-conditionals-work-in-php)
-10.  [How Loops Work in PHP](#how-loops-work-in-php)
-11.  [How Functions Work in PHP](#how-functions-work-in-php)
-12.  [How to Loop Through Arrays with `map()`, `filter()`, and `reduce()` in PHP](#id="how-to-loop-through-arrays-with-map-filter-and-reduce-in-php)
-13.  [Object Oriented Programming in PHP](#object-oriented-programming-in-php)
-14.  [How to Include Other PHP Files](#how-to-include-other-php-files)
-15.  [Useful Constants, Functions and Variables for Filesystem in PHP](#useful-constants-functions-and-variables-for-filesystem-in-php)
-16.  [How to Handle Errors in PHP](#how-to-handle-errors-in-php)
-17.  [How to Handle Exceptions in PHP](#how-to-handle-exceptions-in-php)
-18.  [How to Work with Dates in PHP](#how-to-work-with-dates-in-php)
-19.  [How to Use Constants and Enums in PHP](#how-to-use-constants-and-enums-in-php)
-20.  [How to Use PHP as a Web App Development Platform](#how-to-use-php-as-a-web-app-development-platform)
-21.  [How to Use Composer and Packagist](#how-to-use-composer-and-packagist)
-22.  [How to Deploy a PHP Application](#how-to-deploy-a-php-application)
-23.  [Conclusion](#conclusion)
+1.  [PHP 简介](#introduction-to-php)
+2.  [PHP 是一种什么样的语言？](#what-kind-of-language-is-php)
+3.  [如何安装 PHP](#how-to-setup-php)
+4.  [如何编写你的第一个 PHP 程序](#how-to-code-your-first-php-program)
+5.  [PHP 语言基础](#php-language-basics)
+6.  [如何在 PHP 中使用字符串](#how-to-work-with-strings-in-php)
+7.  [如何在 PHP 中使用处理数字的内置函数](#how-to-use-built-in-functions-for-numbers-in-php)
+8.  [如何在 PHP 中使用数组](#how-arrays-work-in-php)
+9.  [如何在 PHP 中实现条件判断](#how-conditionals-work-in-php)
+10.  [如何在 PHP 中实现循环](#how-loops-work-in-php)
+11.  [如何在 PHP 中使用函数](#how-functions-work-in-php)
+12.  [如何在 PHP 中使用 `map()`，`filter()` 和 `reduce()` 循环遍历数组](#id="how-to-loop-through-arrays-with-map-filter-and-reduce-in-php)
+13.  [PHP中的面向对象编程](#object-oriented-programming-in-php)
+14.  [如何引入其他的 PHP 文件](#how-to-include-other-php-files)
+15.  [PHP 文件操作中常用的常量，函数和变量](#useful-constants-functions-and-variables-for-filesystem-in-php)
+16.  [如何处理 PHP 中的错误（Errors）](#how-to-handle-errors-in-php)
+17.  [如何处理 PHP 中的异常（Exceptions）](#how-to-handle-exceptions-in-php)
+18.  [如何在 PHP 中处理日期时间](#how-to-work-with-dates-in-php)
+19.  [如何在 PHP 中使用常量和枚举](#how-to-use-constants-and-enums-in-php)
+20.  [如何使用 PHP 开发网络应用程序](#how-to-use-php-as-a-web-app-development-platform)
+21.  [如何使用 Composer 和 Packagist](#how-to-use-composer-and-packagist)
+22.  [如何部署 PHP 应用程序](#how-to-deploy-a-php-application)
+23.  [结论](#conclusion)
 
-Note that you can get a [PDF, ePub, or Mobi](https://thevalleyofcode.com/download/php/) version of this handbook for easier reference, or for reading on your Kindle or tablet.
+提示： 你可以获得本手册的 [PDF、ePub 或 Mobi](https://thevalleyofcode.com/download/php/) 英文版本，以便于在你的 Kindle 和平板电脑上阅读。
 
-## Introduction to PHP
+<h2 id="PHP 简介">PHP 简介</h2> 
 
 PHP is a programming language that many devs use to create Web Applications, among other things.
 

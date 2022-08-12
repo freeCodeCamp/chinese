@@ -3,21 +3,21 @@
 > -  译者：pengan95
 > -  校对者：
 
-![The PHP Handbook – Learn PHP for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Group-13--2-.png)
+![PHP 手册 -- 小白入门教程](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/Group-13--2-.png)
 
-PHP is an incredibly popular programming language.
+PHP 是一种非常流行的编程语言。
 
-Statistics say it’s used by 80% of all websites. It’s the language that powers WordPress, the widely used content management system for websites.
+统计数据显示，互联网上 80% 的网站都是由 PHP 开发。 WordPress 这个最受欢迎的网站内容管理系统就是由 PHP 编写。
 
-And it also powers a lot of different frameworks that make Web Development easier, like Laravel. Speaking of Laravel, it may be one of the most compelling reasons to learn PHP these days.
+基于 PHP 还有很多优秀的框架，让 Web 开发变得更容易；比如 Laravel，它可能是让初学者学习 PHP 最主要的原因之一。
 
-## Why Learn PHP?
+## 为什么要学习 PHP ？
 
-PHP is quite a polarizing language. Some people love it, and some people hate it. If we move a step above the emotions and look at the language as a tool, PHP has a lot to offer.
+PHP 是一个备受争议的语言，有人喜欢也有人讨厌。如果我们摒弃情感偏见只是把语言视为一种工具，那么 PHP 是可以为我们创造很多东西的。
 
-Sure it’s not perfect. But let me tell you – no language is.
+诚然它并不完美，但我可以确切的告诉你 -- 没有任何一种语言是完美的。
 
-In this handbook, I’m going to help you learn PHP.
+在本手册中，我将帮助你去学习 PHP。
 
 This book is a perfect introduction if you’re new to the language. It’s also perfect if you’ve done “some PHP” in the past and you want to get back to it.
 

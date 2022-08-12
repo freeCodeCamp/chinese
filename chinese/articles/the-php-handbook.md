@@ -57,9 +57,11 @@ PHP 在过去的几年里进步了很多；如果你上次使用还是 PHP 5 或
 
 <h2 id="PHP 简介">PHP 简介</h2> 
 
-PHP is a programming language that many devs use to create Web Applications, among other things.
+PHP 是许多开发人员用来创建 Web 应用程序及其他的编程语言。
 
-As a language, it had a humble beginning. It was first created in 1994 by Rasmus Lerdorf to build his personal website. He didn’t know at the time it would eventually become one of the most popular programming languages in the world. It became popular later on, in 1997/8, and exploded in the 2000s when PHP 4 landed.
+作为一种编程语言，它有一个卑微的开始。Rasmus Lerdorf 在 1994 年为了建立他的个人网站而创建了它。他当时并不知道它最终会成为世界上最流行的编程语言之一。后来在 1997/8 年是它流行起来，并在千禧年 PHP 4 发布时爆发。
+
+你可以使用 PHP 向 HTML 页面增加一些交互性。
 
 You can use PHP to add a little interactivity to an HTML page.
 

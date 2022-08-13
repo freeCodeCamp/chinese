@@ -1,9 +1,9 @@
 > -  原文地址：[How to Build Better APIs in Express with OpenAPI](https://www.freecodecamp.org/news/how-to-build-explicit-apis-with-openapi/)
 > -  原文作者：[Alain PerkazAlain Perkaz](https://www.freecodecamp.org/news/author/aperkaz/)
-> -  译者：
+> -  译者：HeZean
 > -  校对者：
 
-![How to Build Better APIs in Express with OpenAPI](https://images.unsplash.com/photo-1546411649-8c3bb42e6008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDh8fGJ1aWxkfGVufDB8fHx8MTYxNzM5NDY2MQ&ixlib=rb-1.2.1&q=80&w=2000)
+![如何用 OpenAPI 在 Express 中构建更好的 API](https://images.unsplash.com/photo-1546411649-8c3bb42e6008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDh8fGJ1aWxkfGVufDB8fHx8MTYxNzM5NDY2MQ&ixlib=rb-1.2.1&q=80&w=2000)
 
 In this article, I will share how to build robust REST APIs in Express. First, I will present some of the challenges of building REST APIs and then propose a solution using open standards.
 

@@ -38,9 +38,9 @@ Enjoy!
 -   [Python元组](#tuples-in-python)
 -   [Python字典](#dictionaries-in-python)
 -   [Python集合](#sets-in-python)
--   [Functions in Python](#functionsinpython)
--   [Objects in Python](#objectsinpython)
--   [Loops in Python](#loopsinpython)
+-   [Python函数](#functions-in-python)
+-   [Pytho对象](#objects-in-python)
+-   [Python循环](#loops-in-python)
 -   [Classes in Python](#classesinpython)
 -   [Modules in Python](#modulesinpython)
 -   [The Python Standard Library](#thepythonstandardlibrary)
@@ -1560,7 +1560,7 @@ list(names)  # ['Syd', 'Roger']
 print("Roger" in names)  # True
 ```
 
-## Functions in Python
+<h2 id="functions-in-python">Python函数</h2>
 
 A function lets us create a set of instructions that we can run when needed.
 
@@ -1676,7 +1676,7 @@ def hello(name):
 
 In this case calling `hello('Syd')` the return value is a tuple containing those 3 values: `('Syd', 'Roger', 8)`.
 
-## Objects in Python
+<h2 id="objects-in-python">Python对象</h2>
 
 Everything in Python is an object.
 
@@ -1765,7 +1765,7 @@ age += 1
 
 and you check with `id(age)`, you will find that `age` points to a different memory location. The original value has not mutated, we just switched to another value.
 
-## Loops in Python
+<h2 id="loops-in-python">Python循环</h2>
 
 Loops are one essential part of programming.
 

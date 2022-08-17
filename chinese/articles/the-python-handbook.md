@@ -1907,7 +1907,7 @@ roger = Dog()
 print(type(roger))
 ```
 
-您会看的到`<class '__main__.Dog'>`
+您会看到`<class '__main__.Dog'>`
 
 当我们从类中创建新对象时，我们使用一种被称为构造函数的特殊方法`__init__()`来初始化一个或多个属性：
 

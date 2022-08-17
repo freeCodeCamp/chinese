@@ -7,11 +7,11 @@
 
 这篇文章将带你使用 Azure 表单识别器创建一个数独解题器，Azure 表单识别器是一个由 AI 驱动的文档提取服务。
 
-我们的程序将允许用户上传一张数独表的图片。我们将从图像中提取数据，然后基于此数据运行数独解题算法。
+我们的程序将首先让用户上传一张数独表的图片，接下来我们将从图像中提取数据，然后基于此数据实现数独解题算法。
 
-我们将在后端使用 .NET，在前端使用 Angular，并使用 Angular material 来设计程序的 UI 风格。
+我们将在后端使用 .NET，在前端使用 Angular，并用 Angular material 来设计程序的 UI 风格。
 
-下面是关于该软件的一个演示。
+下面是此软件的一个演示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/SudokuSolver.gif)
 
@@ -21,7 +21,7 @@
 -   从 [https://cli.angular.io/](https://cli.angular.io/) 下载并安装 Angular CLI
 -   一个 Azure 订阅账号。你可以在 [https://azure.microsoft.com/zh-cn/free/](https://azure.microsoft.com/zh-cn/free/) 创建一个免费的 Azure 账号
 -   从 [https://dotnet.microsoft.com/zh-cn/download/dotnet/5.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/5.0) 下载并安装 .NET Core 5.0 SDK
--   从 [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/) 下载并安装最新版本的 Visual Studio 2022
+-   从 [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/) 下载并安装最新版本的 Visual Studio 2019（译者注：已推出了更新版本的 Visual Studio 2022）
 
 ## 源代码
 
@@ -33,23 +33,23 @@
 
 在 REST API 或客户端库 SDK 的帮助下，我们可以轻松地调用表单识别器模型。
 
-表格识别器认知服务提供了以下功能：
+表单识别器认知服务提供了以下功能：
 
 -   **预构建模型**：我们可以使用预先建立的模型，从独特的文件类型中提取数据，比如发票、收据、身份证和名片。
 -   **自定义模型**：我们可以使用自定义模型从表单中提取文本、键-值对、选择标记和表格数据。但我们需要使用自己的数据来训练自定义模型，使其适合我们的自定义需求。
 -   **布局 API**：它允许我们从文件中提取文本、选择标记和表格结构。
 
-在这篇文章中，我们将使用布局 API 从用户上传的数独表的图片中提取内容。
+在这篇文章中，我们将使用布局 API 从用户上传的数独表图片中提取内容。
 
 ## 如何创建 Azure 表单识别器认知服务资源
 
 登录 Azure 门户，在搜索栏中搜索“认知服务”并点击结果。在下一个屏幕上，点击“创建”按钮。这将打开认知服务市场的页面。在搜索栏中搜索“表单识别器”，并点击搜索结果中的“表单识别器”选项。
 
-这将打开表单识别器 API 页面。点击“创建”按钮，新建一个表单识别器资源。如下图所示。
+这将打开表单识别器 API 页面。点击“创建”按钮来新建一个表单识别器资源。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateFR.png)
 
-在创建表格识别器的页面中，按照下面的指示填写详细信息。
+在创建表格识别器的页面中，按照下面的指引填写详细信息。
 
 -   **订阅 / Subscription**：从下拉菜单中选择订阅类型。
 -   **资源组 / Resource group**：选择一个现有的资源组或新建一个资源组。
@@ -61,7 +61,7 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/ConfigureFR.png)
 
-在下一个页面，勾选确认使用条款，核实你提供的信息，然后点击“创建”按钮。
+在下一个页面，勾选确认使用条款，检查核对你所提供的信息，然后点击“创建”按钮。
 
 在你的资源被成功部署后，点击“转到资源”按钮。点击左边菜单上的“密钥和端点”链接。如下图所示。
 
@@ -69,13 +69,13 @@
 
 记下端点和页面上提供的任意一个密钥。我们将在本文的后半部分使用这些来从 .NET 代码中调用表单识别器服务的布局 API。
 
-## 如何创建 ASP.NET Core 应用程序
+## 如何创建 ASP.NET Core 程序
 
-打开 Visual Studio 2022，点击“创建一个新项目”，这将打开一个“创建新项目”对话框。选择“ASP.NET Core with Angular”并点击“下一步”。如下图所示。
+打开 Visual Studio 2019（或更新版本），点击“创建一个新项目”，这将打开一个“创建新项目”对话框。选择“ASP.NET Core with Angular”并点击“下一步”。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj.png)
 
-现在你将进入“配置你的新项目”界面。为该应用程序设置一个名称，比如 `ngSudokuSolver`，并点击“下一步”。如下图所示。
+现在你将进入“配置新项目”界面。为该应用程序设置一个名称，比如 `ngSudokuSolver`，并点击“下一步”。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj_1.png)
 
@@ -89,11 +89,11 @@
 
 `ClientApp` 文件夹中包含我们程序的 Angular 代码。`Controllers` 文件夹将包含 API 控制器。Angular 组件则位于 `ClientApp/src/app` 文件夹中。
 
-默认模板包含一些 Angular 组件。这些组件不会影响我们的应用程序，但为了简单起见，我们将从 `ClientApp/src/app` 文件夹中删除 `fetchdata` 和 `counter` 文件夹。同时，从 `app.module.ts` 文件中删除对这两个组件的引用。
+默认模板包含了一些 Angular 组件。这些组件不会影响我们的应用程序，但为了简单起见，我们将从 `ClientApp/src/app` 文件夹中删除 `fetchdata` 和 `counter` 文件夹。同时，从 `app.module.ts` 文件中删除对这两个组件的引用。
 
 ## 如何安装所需的 NuGet 包
 
-要安装 NuGet 包，请找到 工具 >> NuGet 包管理器 >> 包管理器控制台 并点击。这将在 Visual Studio 内打开包管理器控制台。
+要安装 NuGet 包，请打开 工具 >> NuGet 包管理器 >> 包管理器控制台。这将在 Visual Studio 内打开包管理器控制台。
 
 运行以下命令来安装 [Polly](https://www.nuget.org/packages/Polly)。这个库能让你以流畅和线程安全的方式表达弹性和瞬时故障处理策略，如重试、断路、超时、隔板隔离和回退。
 
@@ -149,10 +149,9 @@ namespace ngSudokuSolver.Models
                 .ExecuteAsync(() => base.SendAsync(request, cancellationToken));
     }
 }
-
 ```
 
-我们将使用 RetryMessageHandler 来重试 `sendAsync` 调用。如果 HttpResponseMessage 的状态是“运行中”，我们将重试 HTTP 调用。
+我们将使用 RetryMessageHandler 来重试对 `sendAsync` 的调用。如果 HttpResponseMessage 的状态是“运行中”，我们将重试 HTTP 调用。
 
 我们把最大重试次数设置为 7 次。每次重试时，都会增加等待时间，将其翻倍。如果所有重试次数已经用完，而 HttpResponseMessage 还没有成功，我们将返回 false。
 
@@ -305,7 +304,7 @@ namespace ngSudokuSolver.Controllers
 
 在 FormRecognizerController 类的构造函数中，我们初始化了表单识别器 API 的密钥和端点 URL。
 
-上面的 Post 方法将接收请求体中的图像数据，并将其视作文件集合，返回一个二维数组。我们将把图像数据转换为字节数组并调用 `GetSudokuBoardLayout` 方法。如果我们得到一个成功的响应并且 JSON 结果非空，我们将调用 `GetSudokuBoardItems` 方法。
+上面的 Post 方法将接收请求体中作为文件集合的图像数据，并返回一个二维数组。我们将把图像数据转换为字节数组并调用 `GetSudokuBoardLayout` 方法。如果我们得到一个成功的响应并且 JSON 结果非空，我们将调用 `GetSudokuBoardItems` 方法。
 
 在 `GetSudokuBoardLayout` 方法中，我们将实例化一个新的 HttpClient。我们会在请求头中传递订阅密钥。
 
@@ -313,9 +312,9 @@ namespace ngSudokuSolver.Controllers
 
 响应包括一个“Operation-Location”首部。“Operation-Location”字段里的数据就我们将用来获取表单识别结果的 URL，这个 URL 会在 48 小时后过期。
 
-在获取表单识别结果前需要等待一段时间，等待时间的长短取决于文本的长度。
+在获取表单识别结果前需要等待一段时间，等待时间的长短与文本的长度相关。
 
-这里就用到了我们前面设置的 RetryMessageHandler。我们将从“Operation-Location”首部获取 URL，并调用 `GetJSON` 方法来获取 JSON 结果。
+这里就要用到了我们前面配置的 RetryMessageHandler。我们将从“Operation-Location”首部获取 URL，并调用 `GetJSON` 方法来获取 JSON 结果。
 
 在 `GetJSON` 方法中，我们创建了一个 HttpClient，并用自定义的 `HttpRetryMessageHandler` 来初始化它。这个方法将以字符串的形式返回 JSON 响应。
 
@@ -325,7 +324,7 @@ namespace ngSudokuSolver.Controllers
 
 客户端的代码位于 ClientApp 文件夹中。我们将使用 Angular CLI 来处理客户端的代码。
 
-> Angular CLI 并非你的唯一选择。本文中使用 Angular CLI 是因为它对用户友好且直观。如果你不想使用 CLI，你可以手动创建组件和服务的文件。
+> Angular CLI 并非你的唯一选择。本文中使用 Angular CLI 是因为它对用户友好且直接。如果你不想使用 CLI，你可以手动创建组件和服务的文件。
 
 进入 `ngSudokuSolver/ClientApp` 文件夹并在此打开一个命令窗口。我们将在这个窗口中执行我们所有的 Angular CLI 命令。
 
@@ -337,9 +336,9 @@ namespace ngSudokuSolver.Controllers
 
 该命令将为你的项目安装 Angular Material，它会询问以下问题，以确定要包括哪些功能：
 
--   Choose a prebuilt theme name, or "custom" for a custom theme: 请选择 Indigo/Pink 主题
--   Set up global Angular Material typography styles? (Y/n): Y
--   Set up browser animations for Angular Material? (Y/n): Y
+-   Choose a prebuilt theme name, or "custom" for a custom theme: **请选择 Indigo/Pink 主题**
+-   Set up global Angular Material typography styles? (Y/n): **Y**
+-   Set up browser animations for Angular Material? (Y/n): **Y**
 
 如下图所示：
 
@@ -422,10 +421,10 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
 
 这个命令将创建一个名为 services 的文件夹，然后在里面创建以下两个文件：
 
-- form-recognizer.service.ts  -  服务类文件
-- form-recognizer.service.spec.ts  -  服务的单元测试文件
+- form-recognizer.service.ts - 服务类文件
+- form-recognizer.service.spec.ts - 服务的单元测试文件
 
-打开 `form-recognizer.service.ts` 并把以下代码放进去。
+将下面的代码放入 `form-recognizer.service.ts` 文件中。
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -447,7 +446,7 @@ export class FormRecognizerService {
 }
 ```
 
-我们定义了一个变量 baseURL，它将保存 API 的端点 URL。我们会在构造函数中初始化 baseURL，并将其赋值为 `FormRecognizerController` 的端点。
+我们定义了一个存有 API 的端点 URL 的变量 baseURL。我们会在构造器中初始化 baseURL，并将其赋值为 `FormRecognizerController` 的端点。
 
 `getSudokuTableFromImage` 方法将向 `FormRecognizerController` 发送一个 Post 请求并提供 FormData 类型的参数。它将获取一个表示数独表的二维数组。
 
@@ -457,7 +456,7 @@ export class FormRecognizerService {
 
 ```html
 <div class="container">
-  <h1 class="display-4">Solve Sudoku using Azure AI</h1>
+  <h1 class="display-4"> 用 Azure AI 解决数独问题 </h1>
   <mat-divider></mat-divider>
   <div class="row mt-3">
     <div class="col-md-6">
@@ -472,7 +471,7 @@ export class FormRecognizerService {
           </table>
         </mat-card-content>
         <mat-card-actions>
-          <button type="button" mat-raised-button color="primary" (click)="SolveSudoku()"> Solve Sudoku </button>
+          <button type="button" mat-raised-button color="primary" (click)="SolveSudoku()"> 解数独 </button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -483,16 +482,16 @@ export class FormRecognizerService {
       <input type="file" (change)="uploadImage($event)" />
       <hr />
       <button mat-raised-button color="accent" (click)="GetSudokuTable()">
-        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Extract Sudoku Table
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> 提取数独表
       </button>
     </div>
   </div>
 </div>
 ```
 
-我们创建了一个 9x9 的数独表格。我们定义了一个文件上传控件，它将允许我们上传一张图片。上传图片后，我们将使用 `<img>` 元素显示图片的预览。
+我们创建了一个 9x9 的数独表格。我们定义了一个支持上传图片的文件上传控件。上传图片后，`<img>` 元素中将显示图片的预览。
 
-点击“提取数独表”按钮将从图像中获取数独的内容，并将其部分地填入表格中。点击“解决数独”将解决数独，并将结果更新到表格中。
+点击“提取数独表”按钮将从图像中获取数独的内容，并将这些数字填入表格中。点击“解数独”将解决数独，并将结果更新到表格中。
 
 把以下代码放入 `home.component.ts` 中。
 
@@ -521,7 +520,7 @@ export class HomeComponent implements OnDestroy {
   private unsubscribe$ = new Subject();
 
   constructor(private formRecognizerService: FormRecognizerService) {
-    this.DefaultStatus = 'Maximum size allowed for the image is 4 MB';
+    this.DefaultStatus = '允许上传的最大图像大小为 4 MB';
     this.status = this.DefaultStatus;
     this.maxFileSize = 4 * 1024 * 1024; // 4MB
 
@@ -533,10 +532,10 @@ export class HomeComponent implements OnDestroy {
   uploadImage(event) {
     this.imageFile = event.target.files[0];
     if (this.imageFile.size > this.maxFileSize) {
-      this.status = `The file size is ${this.imageFile.size} bytes, this is more than the allowed limit of ${this.maxFileSize} bytes.`;
+      this.status = `文件大小为 ${this.imageFile.size} 比特，超出所允许的大小上限 ${this.maxFileSize} 比特。`;
       this.isValidFile = false;
     } else if (this.imageFile.type.indexOf('image') == -1) {
-      this.status = 'Please upload a valid image file';
+      this.status = '请上传有效的图片文件';
       this.isValidFile = false;
     } else {
       const reader = new FileReader();
@@ -613,7 +612,7 @@ export class HomeComponent implements OnDestroy {
 }
 ```
 
-我们在 `HomeComponent` 的构造函数中注入 formRecognizerService，并设置一条信息和允许的最大图像的尺寸。我们还将初始化一个二维数组来保存数独的值。
+我们在 `HomeComponent` 的构造器中注入 formRecognizerService，并设置提示信息和允许的图像的最大尺寸。我们还将初始化一个二维数组来保存数独的值。
 
 上传图片时将调用 `uploadImage` 方法。我们将检查上传的文件是否是一个有效的图像，并且在允许的大小限制之内。我们将使用一个 FileReader 对象来处理图像数据。readAsDataURL 方法将读取上传文件的内容。
 
@@ -621,7 +620,7 @@ export class HomeComponent implements OnDestroy {
 
 在 `GetSudokuTable` 方法中，我们将把图像文件附加到一个 FormData 类型的变量中。我们将调用服务的 `getSudokuTableFromImage`，并将结果绑定到游戏数组中。
 
-`sudokuSolver` 方法将接受数独表作为一个参数。然后我们将在回溯算法的帮助下解决数独棋盘。
+`sudokuSolver` 方法将接受数独表作为入参。然后我们使用回溯算法来解出这道数独。
 
 ## 运行演示程序
 
@@ -635,7 +634,7 @@ export class HomeComponent implements OnDestroy {
 
 ## **总结**
 
-我们用 Angular 和 Azure 表单识别器服务创建了一个数独解算器。这个程序可以从用户上传的数独表的图片中提取数据。我们接着用回溯法解决数独问题。另外，我们使用了 Angular material 来设计程序的 UI 风格。
+我们用 Angular 和 Azure 表单识别器服务创建了一个数独解题器。这个程序可以从用户上传的数独表的图片中提取数据。我们接着用回溯法解决数独问题。另外，我们使用了 Angular material 来设计程序的 UI 风格。
 
 你可以从 [GitHub](https://github.com/AnkitSharma-007/Azure-AI-Sudoku-solver) 上获取源代码，随便看看或把玩一下以加深你的理解。
 

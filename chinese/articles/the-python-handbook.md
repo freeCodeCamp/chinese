@@ -1562,68 +1562,68 @@ print("Roger" in names)  # True
 
 <h2 id="functions-in-python">Python函数</h2>
 
-A function lets us create a set of instructions that we can run when needed.
+函数可以创建一组指令，我们在需要时运行这些指令。
 
-Functions are essential in Python and in many other programming languages. They help us create meaningful programs, because they allow us to decompose a program into manageable parts, and they promote readability and code reuse.
+函数在Python和其它许多编程语言中是必不可少的。它帮助我们创建有意义的程序，因为我们可以使用函数将程序分解为可管理的部分，并且促进了代码的可读性和重用性。
 
-Here is an example function called `hello` that prints "Hello!":
+这是一个名为`hello`的函数示例，它打印"Hello!"：
 
 ```python
 def hello():
     print('Hello!')
 ```
 
-This is the function **definition**. Thereis a name (`hello`) and a body, the set of instructions, which is the part that follows the colon. It's indented one level on the right.
+函数**定义**：有一个名称（`hello`）和一个由一组指令组成的主体（即冒号后面的部分），主体在右侧缩进一级。
 
-To run this function, we must call it. This is the syntax to call the function:
+要运行这个函数，我们必须调用它。这是调用函数的语法：
 
 ```python
 hello()
 ```
 
-We can execute this function once, or multiple times.
+我们可以调用这个函数一次或多次。
 
-The name of the function, `hello`, is very important. It should be descriptive, so anyone calling it can imagine what the function does.
+函数名`hello`非常重要，它应该是描述性的，这样任何调用该函数的人都可以理解它的作用。
 
-A function can accept one or more parameters:
+一个函数可以接受一个或多个参数：
 
 ```python
 def hello(name):
     print('Hello ' + name + '!')
 ```
 
-In this case we call the function by passing the argument
+这种情况下，我们通过传递参数来调用函数
 
 ```python
 hello('Roger')
 ```
 
-> We call _parameters_ the values accepted by the function inside the function definition, and _arguments_ the values we pass to the function when we call it. It's common to get confused about this distinction.
+> 我们称_parameters_为函数定义中函数所接受的值（形参），称_arguments_为我们调用函数时所传递给函数的值（实参）。对这种区别感到困惑是很正常的。
 
-An argument can have a default value that's applied if the argument is not specified:
+如果（调用函数时）未指定参数，则参数可以具有默认值：
 
 ```python
 def hello(name='my friend'):
     print('Hello ' + name + '!')
 
 hello()
-#Hello my friend!
+# Hello my friend!
 ```
 
-Here's how we can accept multiple parameters:
+以下是如何接受多个参数：
 
 ```python
 def hello(name, age):
     print('Hello ' + name + ', you are ' + str(age) + ' years old!')
 ```
 
-In this case we call the function passing a set of arguments:
+在这种情况下，我们调用函数并传递一组参数：
 
 ```python
 hello('Roger', 8)
 ```
 
-Parameters are passed by reference. All types in Python are objects, but some of them are immutable, including integers, booleans, floats, strings, and tuples. This means that if you pass them as parameters and you modify their value inside the function, the new value is not reflected outside of the function:
+形参通过引用传递。Python中的所有内容都是对象，但其中一些是不可变的，包括整数、布尔值、浮点数、字符串和元组。这意味着如果您将它们作为参数传递给函数，并在函数内部修改它们的值，则新值不会反映在函数外部：
 
 ```python
 def change(value):
@@ -1632,12 +1632,12 @@ def change(value):
 val = 1
 change(val)
 
-print(val) #1
+print(val)  # 1
 ```
 
-If you pass an object that's not immutable, and you change one of its properties, the change will be reflected outside.
+如果您传递一个可变的对象，并且（在函数内部）更改了它的一个属性，则该更改将反映在外部。
 
-A function can return a value, using the `return` statement. For example in this case we return the `name` parameter name:
+函数可以使用`return`语句返回一个值。例如我们返回 `name` 参数：
 
 ```python
 def hello(name):
@@ -1645,9 +1645,9 @@ def hello(name):
     return name
 ```
 
-When the function meets the `return` statement, the function ends.
+当函数执行到`return`语句时，该函数结束。
 
-We can omit the value:
+我们可以省略该返回值：
 
 ```python
 def hello(name):
@@ -1655,7 +1655,7 @@ def hello(name):
     return
 ```
 
-We can have the return statement inside a conditional, which is a common way to end a function if a starting condition is not met:
+我们可以在条件中包含return语句，这是在不满足起始条件时结束函数的常用方法：
 
 ```python
 def hello(name):
@@ -1664,9 +1664,9 @@ def hello(name):
     print('Hello ' + name + '!')
 ```
 
-If we call the function passing a value that evaluates to `False`, like an empty string, the function is terminated before reaching the `print()` statement.
+如果我们调用该函数并传递一个计算结果为`False`的表达式，比如一个空字符串，函数在到达`print()`语句之前终止。
 
-You can return multiple values by using comma separated values:
+您可以使用逗号分隔来返回多个值：
 
 ```python
 def hello(name):
@@ -1674,36 +1674,36 @@ def hello(name):
     return name, 'Roger', 8
 ```
 
-In this case calling `hello('Syd')` the return value is a tuple containing those 3 values: `('Syd', 'Roger', 8)`.
+在这种情况下，调用 `hello('Syd')` 返回值是一个包含这 3 个值的元组：`('Syd', 'Roger', 8)`。
 
 <h2 id="objects-in-python">Python对象</h2>
 
-Everything in Python is an object.
+Python中的一切都是对象。
 
-Even values of basic primitive types (integer, string, float..) are objects. Lists are objects, as are tuples, dictionaries, everything.
+原始类型（整数、字符串、浮点数……）的值也是对象。 同时列表、元组、字典和一切也都是对象。
 
-Objects have **attributes** and **methods** that can be accessed using the dot syntax.
+对象具有可以使用点语法访问的**属性**和**方法**。
 
-For example, try defining a new variable of type `int`:
+例如，尝试定义一个`int`类型的新变量：
 
 ```python
 age = 8
 ```
 
-`age` now has access to the properties and methods defined for all `int` objects.
+`age`现在可以访问为`int`对象定义的属性和方法。
 
-This includes, for example, access to the real and imaginary part of that number:
+这包括访问该数字的实部和虚部，例如：
 
 ```python
-print(age.real) # 8
-print(age.imag) # 0
+print(age.real)  # 8
+print(age.imag)  # 0
 
-print(age.bit_length()) #4
+print(age.bit_length())  # 4
 
-# the bit_length() method returns the number of bits necessary to represent this number in binary notation
+# bit_length()方法返回该数字的二进制表示法所需的位数
 ```
 
-A variable holding a list value has access to a different set of methods:
+列表类型的变量可以使用一组方法：
 
 ```python
 items = [1, 2]
@@ -1711,69 +1711,69 @@ items.append(3)
 items.pop()
 ```
 
-The methods depend on the type of value.
+这些（可使用的）方法取决于变量的数据类型。
 
-The `id()` global function provided by Python lets you inspect the location in memory for a particular object.
+Python提供的全局函数`id()`可让您检查特定对象在内存中的位置。
 
 ```python
-id(age) # 140170065725376
+id(age)  # 140170065725376
 ```
 
-> Your memory value will change - I am only showing it as an example.
+> 您（电脑上查看的age）的内存地址值会不一样——这里只是作为一个例子来展示。
 
-If you assign a different value to the variable, its address will change, because the content of the variable has been replaced with another value stored in another location in memory:
+如果给变量赋不同的值，它的地址会改变，因为变量已经指向存储在内存中另一个位置的另一个值：
 
 ```python
 age = 8
 
-print(id(age)) # 140535918671808
+print(id(age))  # 140535918671808
 
 age = 9
 
-print(id(age)) # 140535918671840
+print(id(age))  # 140535918671840
 ```
 
-But if you modify the object using its methods, the address stays the same:
+但是，如果您使用对象的方法修改该对象，其内存地址将保持不变：
 
 ```python
 items = [1, 2]
 
-print(id(items)) # 140093713593920
+print(id(items))  # 140093713593920
 
 items.append(3)
 
-print(items) # [1, 2, 3]
-print(id(items)) # 140093713593920
+print(items)  # [1, 2, 3]
+print(id(items))  # 140093713593920
 ```
 
-The address only changes if you reassign a variable to another value.
+仅当您将变量重新赋一个值时，地址才会更改。
 
-Some objects are _mutable_, while others are _immutable_. This depends on the object itself.
+一些类型的对象是_可变的_，而另一些是_不可变的_。这取决于对象本身。
 
-If the object provides methods to change its content, then it's mutable. Otherwise it's immutable.
+如果对象提供改变其内容的方法，那么它是可变的。否则它是不可变的。
 
-Most types defined by Python are immutable. For example an `int` is immutable. There are no methods to change its value. If you increment the value using
+Python定义的大多数类型都是不可变的， 例如`int` ，没有任何方法可以改变它的值。 如果您增加它的值
 
 ```python
 age = 8
 age = age + 1
 
-#or
+# 或者
 
 age += 1
 ```
 
-and you check with `id(age)`, you will find that `age` points to a different memory location. The original value has not mutated, we just switched to another value.
+然后您使用`id(age)`检查，您会发现`age`前后指向不同的内存位置。 原来的值并没有发生变异，age只是指向另一个值。
 
 <h2 id="loops-in-python">Python循环</h2>
 
-Loops are one essential part of programming.
+循环是编程的重要组成部分。
 
-In Python we have 2 kinds of loops: **while loops** and **for loops**.
+在 Python 中，我们有2种循环：**while循环**和**for循环**。
 
-### `while` loops in Python
+###  Python中的`while`循环
 
-`while` loops are defined using the `while` keyword, and they repeat their block until the condition is evaluated as `False`:
+`while`循环是使用`while`关键字定义的，它重复执行自己的块，直到判断条件为`False`：
 
 ```python
 condition = True
@@ -1781,9 +1781,9 @@ while condition == True:
     print("The condition is True")
 ```
 
-This is an **infinite loop**. It never ends.
+这是一个永远不会停下来的**无限循环**。
 
-Let's halt the loop right after the first iteration:
+让我们在第一次迭代后立即停止循环：
 
 ```python
 condition = True
@@ -1794,9 +1794,9 @@ while condition == True:
 print("After the loop")
 ```
 
-In this case, the first iteration is run, as the condition test is evaluated to `True`. At the second iteration, the condition test evaluates to `False`, so the control goes to the next instruction after the loop.
+在这种情况下，将执行第一次迭代，因为此时判断条件为`True`。在第二次迭代时，判断条件为`False`，因此执行循环外的下一条指令。
 
-It's common to have a counter to stop the iteration after some number of cycles:
+通常有一个计数器用于在一些周期后停止迭代：
 
 ```python
 count = 0
@@ -1807,11 +1807,11 @@ while count < 10:
 print("After the loop")
 ```
 
-### `for` loops in Python
+### Python中的`for`循环
 
-Using `for` loops we can tell Python to execute a block for a pre-determined amount of times, up front, and without the need of a separate variable and conditional to check its value.
+使用`for`循环，我们可以让Python执行一个预先确定循环次数的代码块，并且不需要单独的变量和条件来检查它的值。
 
-For example we can iterate the items in a list:
+例如，我们可以迭代列表中的元素：
 
 ```python
 items = [1, 2, 3, 4]
@@ -1819,16 +1819,16 @@ for item in items:
     print(item)
 ```
 
-Or, you can iterate a specific amount of times using the `range()` function:
+或者，您可以使用`range()`函数迭代特定次数：
 
 ```python
 for item in range(04):
     print(item)
 ```
 
-`range(4)` creates a sequence that starts from 0 and contains 4 items: `[0, 1, 2, 3]`.
+`range(4)`创建一个从0开始并包含4个元素的序列：`[0, 1, 2, 3]`。
 
-To get the index, you should wrap the sequence into the `enumerate()` function:
+如果要获取索引，您应该将序列包装到`enumerate()`函数中：
 
 ```python
 items = [1, 2, 3, 4]
@@ -1836,15 +1836,15 @@ for index, item in enumerate(items):
     print(index, item)
 ```
 
-### Break and continue in Python
+### Python中的`Break`和`continue` 
 
-Both `while` and `for` loops can be interrupted inside the block, using two special keywords: `break` and `continue`.
+`while`和 `for`循环都可以在代码块内被中断，这需要使用两个特殊关键字：`break`和`continue`。
 
-`continue` stops the current iteration and tells Python to execute the next one.
+`continue`停止当前迭代并告诉Python执行下一个迭代。
 
-`break` stops the loop altogether, and goes on with the next instruction after the loop ends.
+`break`完全停止循环，并继续执行循环外的下一条指令。
 
-The first example here prints `1, 3, 4`. The second example prints `1`:
+这里第一个示例打印 `1, 3, 4`。第二个示例打印 `1`：
 
 ```python
 items = [1, 2, 3, 4]

@@ -20,7 +20,7 @@
 -   从 [https://nodejs.org/zh-cn/download/](https://nodejs.org/zh-cn/download/) 下载并安装最新的 LTS 版本的 Node.js
 -   从 [https://cli.angular.io/](https://cli.angular.io/) 下载并安装 Angular CLI
 -   一个 Azure 订阅账号。你可以在 [https://azure.microsoft.com/zh-cn/free/](https://azure.microsoft.com/zh-cn/free/) 创建一个免费的 Azure 账号
--   从 [https://dotnet.microsoft.com/download/dotnet/5.0](https://dotnet.microsoft.com/download/dotnet/5.0) 下载并安装 .NET Core 5.0 SDK
+-   从 [https://dotnet.microsoft.com/zh-cn/download/dotnet/5.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/5.0) 下载并安装 .NET Core 5.0 SDK
 -   从 [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/) 下载并安装最新版本的 Visual Studio 2022
 
 ## 源代码
@@ -490,13 +490,11 @@ export class FormRecognizerService {
 </div>
 ```
 
-We have created a 9x9 table that denotes a sudoku board. We have defined a file upload control that will allow us to upload an image. After uploading the image, the preview of the image will be displayed using an `<img>` element.
+我们创建了一个 9x9 的数独表格。我们定义了一个文件上传控件，它将允许我们上传一张图片。上传图片后，我们将使用 `<img>` 元素显示图片的预览。
 
+点击“提取数独表”按钮将从图像中获取数独的内容，并将其部分地填入表格中。点击“解决数独”将解决数独，并将结果更新到表格中。
 
-
-Clicking on the “Extract Sudoku Table” button will fetch the content of the sudoku from the image and partially fill the table. Clicking on “Solve Sudoku” will solve the sudoku and update the table with the result.
-
-Open the `home.component.ts` file and put the following code inside it.
+把以下代码放入 `home.component.ts` 中。
 
 ```typescript
 import { Component, OnDestroy, OnInit } from '@angular/core';
@@ -615,15 +613,15 @@ export class HomeComponent implements OnDestroy {
 }
 ```
 
-We will inject the formRecognizerService in the constructor of the `HomeComponent` and set a message and the value for the max image size allowed inside the constructor. We will also initialize the two-dimensional array to hold the value of the sudoku.
+我们在 `HomeComponent` 的构造函数中注入 formRecognizerService，并设置一条信息和允许的最大图像的尺寸。我们还将初始化一个二维数组来保存数独的值。
 
-The `uploadImage` method will be invoked upon uploading an image. We will check if the uploaded file is a valid image and is within the allowed size limit. We will process the image data using a FileReader object. The readAsDataURL method will read the contents of the uploaded file.
+上传图片时将调用 `uploadImage` 方法。我们将检查上传的文件是否是一个有效的图像，并且在允许的大小限制之内。我们将使用一个 FileReader 对象来处理图像数据。readAsDataURL 方法将读取上传文件的内容。
 
-When the read operation completes successfully, the reader.onload event will be triggered. The value of imagePreview will be set to the result returned by the fileReader object, which is of type ArrayBuffer.
+当读取操作成功完成后，reader.onload 事件将会被触发。imagePreview 的值将被设置为 fileReader 对象的 ArrayBuffer 类型的返回值。
 
-Inside the `GetSudokuTable` method, we will append the image file to a variable for type FormData. We will invoke the `getSudokuTableFromImage` of the service and bind the result to the game array.
+在 `GetSudokuTable` 方法中，我们将把图像文件附加到一个 FormData 类型的变量中。我们将调用服务的 `getSudokuTableFromImage`，并将结果绑定到游戏数组中。
 
-The `sudokuSolver` method will accept the Sudoku board as a parameter. We will then solve the sudoku board with the help of the backtracking algorithm.
+`sudokuSolver` 方法将接受数独表作为一个参数。然后我们将在回溯算法的帮助下解决数独棋盘。
 
 ## 运行演示程序
 

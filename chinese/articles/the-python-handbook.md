@@ -41,8 +41,8 @@ Enjoy!
 -   [Python函数](#functions-in-python)
 -   [Pytho对象](#objects-in-python)
 -   [Python循环](#loops-in-python)
--   [Classes in Python](#classesinpython)
--   [Modules in Python](#modulesinpython)
+-   [Python类](#classes-in-python)
+-   [Python模块](#modules-in-python)
 -   [The Python Standard Library](#thepythonstandardlibrary)
 -   [The PEP8 Python Style Guide](#thepep8pythonstyleguide)
 -   [Debugging in Python](#debugginginpython)
@@ -1862,54 +1862,54 @@ for item in items:
     print(item)
 ```
 
-## Classes in Python
+<h2 id="classes-in-python">Python类</h2>
 
-In addition to using the Python-provided types, we can declare our own classes, and from classes we can instantiate objects.
+除了使用Python提供的数据类型之外，我们还可以声明自定义的类，并使用类实例化对象。
 
-An object is an instance of a class. A class is the type of an object.
+对象是类的实例。类是对象的类型。
 
-We can define a class in this way:
+我们可以这样定义一个类：
 
 ```python
 class <class_name>:
-    # my class
+    # 自定义的类
 ```
 
-For example let's define a Dog class
+例如，让我们定义一个Dog类
 
 ```python
 class Dog:
-    # the Dog class
+    # Dog类
 ```
 
-A class can define methods:
+一个类里面可以定义方法：
 
 ```python
 class Dog:
-    # the Dog class
+    # Dog类
     def bark(self):
         print('WOF!')
 ```
 
-> `self` as the argument of the method points to the current object instance, and must be specified when defining a method.
+> `self`作为方法的参数，指向当前实例对象，定义类的方法时必须指定`self`。（译者：大多数情况下如此，有些特殊的方法不用指定）
 
-We create an instance of a class, an **object**, using this syntax:
+我们使用以下语法创建一个类的实例对象，即创建一个**object**：
 
 ```python
 roger = Dog()
 ```
 
-Now `roger` is a new object of type Dog.
+现在`roger`是Dog类型的对象。
 
-If you run
+如果运行
 
 ```python
 print(type(roger))
 ```
 
-You will get `<class '__main__.Dog'>`
+您会看的到`<class '__main__.Dog'>`
 
-A special type of method, `__init__()` is called constructor, and we can use it to initialize one or more properties when we create a new object from that class:
+当我们从类中创建新对象时，我们使用一种被称为构造函数的特殊方法`__init__()`来初始化一个或多个属性：
 
 ```python
 class Dog:
@@ -1922,19 +1922,19 @@ class Dog:
         print('WOF!')
 ```
 
-We use it in this way:
+我们这样使用它：
 
 ```python
 roger = Dog('Roger', 8)
-print(roger.name) # 'Roger'
+print(roger.name)  # 'Roger'
 print(roger.age)  # 8
 
-roger.bark() # 'WOF!'
+roger.bark()  # 'WOF!'
 ```
 
-One important feature of classes is inheritance.
+类的一个重要特性是继承。
 
-We can create an Animal class with a method `walk()`:
+我们创建一个可以使用`walk()`方法的Animal 类：
 
 ```python
 class Animal:
@@ -1942,7 +1942,7 @@ class Animal:
         print('Walking..')
 ```
 
-and the Dog class can inherit from Animal:
+然后Dog类继承Animal类：
 
 ```python
 class Dog(Animal):
@@ -1950,30 +1950,30 @@ class Dog(Animal):
         print('WOF!')
 ```
 
-Now creating a new object of class `Dog` will have the `walk()` method as that's inherited from `Animal`:
+现在创建`Dog`类的新对象，它将具有`walk()`方法，因为`Dog`类继承自`Animal`类：
 
 ```python
 roger = Dog()
-roger.walk() # 'Walking..'
-roger.bark() # 'WOF!'
+roger.walk()  # 'Walking..'
+roger.bark()  # 'WOF!'
 ```
 
-## Modules in Python
+<h2 id="modules-in-python">Python模块</h2>
 
-Every Python file is a module.
+每个Python文件都是一个模块。
 
-You can import a module from other files, and that's the base of any program of moderate complexity, as it promotes a sensible organization and code reuse.
+您可以从其它文件导入模块，这是任何具有一定复杂性的程序的基础，因为它促进了合理的组织结构和代码重用。
 
-In the typical Python program, one file acts as the entry point. The other files are modules and expose functions that we can call from other files.
+在典型的Python程序中，一个文件作为入口点，那么其它文件是模块，并公开可以从模块中调用的函数。（译者：不只是可以公开函数，类、常量等等都行）
 
-The file `dog.py` contains this code:
+文件`dog.py`包含以下代码：
 
 ```python
 def bark():
     print('WOF!')
 ```
 
-We can import this function from another file using `import`. And once we do, we can reference the function using the dot notation, `dog.bark()`:
+我们可以使用`import`从另一个文件中导入这个模块。一旦我们这样做了，我们就可以使用`dog.bark()`来引用该函数：
 
 ```python
 import dog
@@ -1981,7 +1981,7 @@ import dog
 dog.bark()
 ```
 
-Or, we can use the `from .. import` syntax and call the function directly:
+或者，我们可以使用`from .. import`语法直接导入函数：
 
 ```python
 from dog import bark
@@ -1989,17 +1989,17 @@ from dog import bark
 bark()
 ```
 
-The first strategy allows us to load everything defined in a file.
+第一个策略导入文件中定义的所有内容。
 
-The second strategy lets us pick the things we need.
+第二个策略只选择导入我们需要的东西。
 
-Those modules are specific to your program, and importing depends on the location of the file in the filesystem.
+这些模块（的形式）取决于您的程序，导入（方法）取决于所导入模块（即文件）在文件系统中的位置。
 
-Suppose you put `dog.py` in a `lib` subfolder.
+假设您将`dog.py`文件放在`lib`文件夹中。
 
-In that folder, you need to create an empty file named `__init__.py`. This tells Python the folder contains modules.
+在该文件夹中，您需要创建一个名为`__init__.py`的空文件来告诉Python该文件夹包含模块。
 
-Now you can choose - you can import `dog` from `lib`:
+现在您可以选择从`lib`中导入`dog`：
 
 ```py
 from lib import dog
@@ -2007,7 +2007,7 @@ from lib import dog
 dog.bark()
 ```
 
-or you can reference the `dog` module specific function importing from `lib.dog`:
+或者您可以从`lib.dog`导入特定`dog`模块函数：
 
 ```py
 from lib.dog import bark

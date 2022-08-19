@@ -1,6 +1,6 @@
 > -  原文地址：[HTTP vs HTTPS – What's the Difference?](https://www.freecodecamp.org/news/http-vs-https/)
 > -  原文作者：[Annoh Karlgusta](https://www.freecodecamp.org/news/author/annoh/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![HTTP vs HTTPS – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/HTTP-VS-HTTPS.png)

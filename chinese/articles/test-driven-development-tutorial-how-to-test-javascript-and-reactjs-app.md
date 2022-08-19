@@ -482,15 +482,15 @@ TDD是了解你的程序是否如预期工作的的一个基准。它给予你�
 
 <h2 id="what-is-an-integration-test-in-test-driven-development">测试驱动开发中的集成测试是什么？</h2>
 
-An **integration test** assesses the functionality of a dependent piece of program. In other words, an integration test checks if a program—which depends on other code—is working as intended.
+**集成测试**评估依赖程序的功能。也就是说，集成测试检查一个程序（依赖其他代码）是不是按照要求工作。
 
-The test we wrote for step 13's `additionalCalculator` program is an excellent example of an integration test.
+我们为 `additionalCalculator`程序编写的第13步的测试就是一个很好的例子。
 
-Step 13's `additionalCalculator()`'s test is an integration test because the program is a dependent function that depends on JavaScript's [reduce()](https://codesweetly.com/javascript-reduce-method) method.
+第13步的`additionalCalculator()`的测试一个例子是因为这个程序是一个依赖函数，依赖了JavaScirpt的[reduce()](https://codesweetly.com/javascript-reduce-method)方法。
 
-In other words, we used the prewritten test case to assess the integration of `additionalCalculator()` and `reduce()`.
+也就是说，我们使用事先编写好的测试案例来集成 `additionalCalculator()`和`reduce()`。
 
-Therefore, suppose JavaScript makes `reduce()` an obsolete method. In such a case, `additionalCalculator` will fail its test because of the `reduce()` method.
+因此，如果JavaScript把 `reduce()`规定为一个过时的方法，那么在这个案例中，`additionalCalculator`会因为`reduce()`方法而无法通过测试。
 
 ## What is an End-to-End Test in Test-Driven Development?
 

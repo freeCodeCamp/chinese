@@ -5,223 +5,223 @@
 
 ![HTTP vs HTTPS – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/HTTP-VS-HTTPS.png)
 
-We interact with HTTP and HTTPS a lot in our day-to-day lives, but many people don't know the difference.
+我们每天都和HTTP还有HTTPS打交道，但是很多人都不知道这两者之间的区别是什么。
 
-Most computer users just see that the browser is telling them their application is not safe and that a hacker might want to steal their important information. This leads to users running away faster than Usain Bolt's current record.
+大多数计算机用户看到浏览器告知他们这个应用不安全，很有可能有黑客想要获取他们重要的信息的时候。用户可能跑得比博尔特还要快。
 
-But this is avoidable. That is where HTTPS comes in and replaces HTTP. And we are going to discuss that today. :)
+但这个安全风险是可以避免的，这就是为什么HTTPS引入并取代HTTP。今天我们就来讨论这个话题。 :)
 
-## Here's What We'll Cover:
+## 我们将讨论：
 
-1.  What is HTTP?
-2.  How HTTP works
-3.  Features of HTTP
-4.  How to know if a site is not secure
-5.  Are all HTTP websites insecure?
-6.  What is HTTPS?
-7.  How HTTPS works
-8.  Features of HTTPS
-9.  How encryption works
-10.  How to know if a site is secure
-11.  What is an SSL certificate?
-12.  How does SSL work?
-13.  How can I get SSL for my website?
-14.  Where can I get an SSL certificate?
-15.  Can I get an SSL certificate for free?
-16.  The main differences between HTTPS and HTTP
-17.  Conclusion
+1.  什么是HTTP?
+2.  HTTP如何工作
+3.  HTTP的功能
+4.  如何知道一个网站不安全
+5.  所有的HTTP网站都不安全吗？
+6.  什么是HTTPS?
+7.  HTTPS如何工作
+8.  HTTPS的功能
+9.  加密的工作原理
+10.  如何知道一个网站是安全的？
+11.  SSL证书是什么？
+12.  SSL是如何工作的？
+13.  如何给我的网站申请SSL?
+14.  在哪里申请SSL证书?
+15.  可以免费获取SSL证书吗?
+16.  HTTPS和HTTP的主要区别
+17.  总结
 
-## What is HTTP?
+## 什么是HTTP?
 
-Hyper Text Transfer Protocol, or HTTP, is a communication method between your browser and the site you want to visit (web server).
+超文本传输协议（HTTP）是浏览器和你想要访问的网站（web服务器）之间的一种沟通方法。
 
-This allows you to get the information that you need from the server on your browser.
+协议允许你通过浏览器从服务器获取你想要的信息。
 
-A good way to understand HTTP and HTTPS is by using an analogy. We know that browsers and servers communicate using HTTP. HTTP is usually in plain text. Many people around the world speak English. If a hacker who knows English hacks into your computer, they can easily see any password you input.
+通过类比来了解HTTP和HTTPS是一个很好的办法。我们都知道浏览器和服务器是通过HTTP来进行通信的。HTTP通常是纯文本。就好比世界上大多数人都说英语，如果一个黑客知道怎么说英语，并且黑进了你的电脑，这样他就可以很轻易地获取你的密码。
 
-Here in Kenya, in my mother tongue, we speak Turkana. If you don't speak the language and you come to Kenya and find two Turkanas speaking, you may not understand what they are saying.
+但是在肯尼亚，我们的母语是图尔卡纳语。如果你不了解这门语言，并且在肯尼亚发现两个图尔卡纳人在对话，你就会听不懂他们在说什么。
 
-That's the beauty of HTTPS. It is encrypted so that the hacker hopefully doesn't understand the communication between the browser and the server.
+这就是HTTPS的精华所在。它做了加密处理，理论上黑客不知道浏览器和服务器之间发生了什么通信。
 
 ![Client to server](https://user-images.githubusercontent.com/33565767/178446926-d904cc04-57cd-4427-bdcc-e76c35f8b51b.png "client/browser communicating with server")
 
-If I was to go to [http://www.google.com](http://www.google.com), I would expect to see Google's default page.
+如果我登陆了[http://www.google.com](http://www.google.com)，我会看到谷歌的默认页面。
 
 ![Googles default page](https://user-images.githubusercontent.com/33565767/178450768-e1fed4a5-993d-4d49-a47f-83cce6473085.png "Google's default page")
 
-The client, which in most cases is the web browser, sends a message which in computer terms is a request. Then the server will give back an answer, which is the response.
+客户端（大多数情况下是浏览器）发送一个信息，在计算机术语中叫做请求（request）。然后服务器应答，通常被称为响应（response）。
 
-HTTP is very useful in sending HTML documents as well as images and videos to the web browser for the user to see. It is also used to send data to the server in HTML forms.
+HTTP可以有效地发送HTML文档、图片和视频到web浏览器，方便用户观看。HTTP同样也使用HTML格式将数据传输到服务器。
 
 ![Where HTTP Protocol sits](https://user-images.githubusercontent.com/33565767/178460366-d0568e2d-d107-4afe-a778-0ce1d224b176.png "HTTP Protocol is between the web browser(client) and the web server, which is in constant communication with the server side script and the database.")
 
-## How HTTP Works
+## HTTP如何运作
 
-HTTP sends data through plain text. For example, if you were to access your bank's web page and they are using HTTP, a hacker may be able to access it and read any information that you send.
+HTTP通过纯文本传输数据。举个例子，如果你在访问你的银行网页，这个网页使用的是HTTP，那么黑客就可以访问这个页面，并且读取任何你发送的信息。
 
-This is where HTTPS comes in. Many companies have implemented HTTPS to be able to allow their users to send data securely. We'll discuss this further below.
+此时HTTPS就派上用场了。许多公司都应用了HTTPS，确保用户安全地发送信息。我们会在后文章讨论。
 
-## Features of HTTP
+## HTTP的特征
 
--   Plain text. Initially when HTTP was developed, developers had one thing in mind: to serve only text documents. Now, HTTP is used in more ways than it was initially intended.
+-   纯文本。在HTTP创建之初，开发者们只想解决一个问题：仅服务于文本文件。现在，HTTP已经被运用于文本以外更多地方。
     
--   Layer 7 protocol. HTTP is a layer 7 protocol in the OSI Model of networking. Layer 7 is the application layer. This layer is the top-most layer in the OSI model. The other layers include the physical, data link, network, transport, session, and presentation layer. To learn more about the OSI model, you can check out this free video on freeCodeCamp's YouTube channel by Brian Ferrill about how the internet works. There are more cookies in the jar other than the OSI model. [Computer Networking Course - Network Engineering \[CompTIA Network+ Exam Prep\]](https://www.youtube.com/watch?v=qiQR5rTSshw&t=27s&ab_channel=freeCodeCamp.org)
+-   七层协议。HTTP是网络通信OSI模型的第七层协议。第七层是应用层，也是OSI模型的最外层。 其他的层级包括物理层、数据链路层、网络层、传输层、会话层和表示层。想要了解更多OSI模型的信息，可以参考freeCodeCamp的Youtube频道里由Brain Ferrill讲解的网络工作的视频。视频中包含除了OSI以外更多精彩内容。 [Computer Networking Course - Network Engineering \[CompTIA Network+ Exam Prep\]](https://www.youtube.com/watch?v=qiQR5rTSshw&t=27s&ab_channel=freeCodeCamp.org)
     
--   Insecure. When you send HTTP requests they are sent through plain text. Also, when you get a response, you get it through plain text. This means that anyone who can access the requests and the responses can read them.  
+-   不安全。当你通过纯文本发送HTTP请求的时候，你同样也收到纯文本响应。也就是说任何可以访问这些请求和响应的人都可以读取这些信息。 
     ![Insecure connection](https://user-images.githubusercontent.com/33565767/179723161-3ec27c27-df79-4749-b810-974583cf1687.png "Insecure connection during a normal HTTP connection by the user")
     
--   Light weight. The advantage of HTTP is that it is very lightweight. It is therefore very fast since it doesn't do the encryption stuff to secure the data, like HTTPS does.
+-   轻量。HTTP的优势在与轻量。因为没有像HTTPS一样，通过加密来保护数据，所以HTTP传输速度非常快。
     
--   HTTP usually listens on port 80.
+-   HTTP通常在端口80监听。
     
 
-## How to Know if a Site is Not Secure
+## 如何知道一个网站不安全
 
-When a site is not secure, Chrome will usually send a warning that says `Your connection is not private`.  
+当网站不安全的时候，Chrome通常会发出一个警告： `Your connection is not private`（你的连接不是私人的）。  
 ![HTTP Not secure](https://user-images.githubusercontent.com/33565767/182329336-d405d5b4-f5bb-45df-b936-aa1d04b9dffd.png "Your connection is not secure when going to a site that is not secure")
 
-On Chrome, the URL bar will usually show `Not Secure` in red if a site is not secure.  
+在Chrome的URL输入框内通常会显示红色的`Not Secure`（不安全）。
 ![Not secure URL image](https://user-images.githubusercontent.com/33565767/182329466-d2db68a8-7033-4f64-bb66-0665e8fc0c62.png "URL of an insecure website")
 
-## Are All HTTP Websites Insecure?
+## 所有的HTTP网站都不安全吗？
 
-Well, let's look at an example. Imagine you are browsing a meme website, laughing at each one as you scroll by. If it is using HTTP, then you are off the hook. It's not a big deal.
+假设你正在浏览一个meme网站，一边滚动图片一边哈哈大笑。如果网站使用的是HTTP协议，这没什么大不了。
 
-You get bored and decide to go to your bank's site to access your account on your browser. If the site is not using HTTPS, you might as well be serving your account details to a hacker on a silver plate.
+这时你觉得有些无聊了，打算登陆你的银行的网站，网站没有使用HTTPS协议，此时你就向黑客双手奉上了你的账户信息。
 
-So the bottom line is, if you're browsing inconsequential information, HTTP is ok. But if you are dealing with insecure information, HTTP isn't enough.
+所以安全的底线是你浏览的信息是否无关紧要。如果不重要，HTTP是安全的，但是如果是需要保密的信息，HTTP就不够用。
 
-## What is HTTPS?
+## 什么是HTTPS?
 
-Hyper Text Transfer Protocol Secure, or HTTPS, is a way that communication can happen SECURELY between your browser and the site you want to visit (web server).
+超文本传输安全协议，即HTTPS是浏览器和你登陆的网站（服务器）之间安全的通信。
 
-## How HTTPS Works
+## HTTPS如何运作
 
-HTTPS makes a secure connection by using a secure protocol that encrypts your data.
+HTTPS通过加密数据这样的安全协议来确保通信的安全。
 
-For most websites, the best way to have HTTPS is by getting an SSL (Secure Sockets Layer) Certificate or a TLS (Transport Layer Security) certificate.
+对于大多数网站来说，拥有HTTPS的方式是获取一个SSL (Secure Sockets Layer安全套接层)或者TLS (Transport Layer Security传输层安全协议)证书。
 
-At the moment, SSL has become advanced enough that it supports TLS. So you don't need to get a TLS certificate.
+现在，SSL已经兼容TLS，所以你没有必要获取一个TLS证书。
 
-## Features of HTTPS
+## HTTPS的特证
 
--   Encrypts data. Data encryption happens through the TLS/SSL protocol.
--   It is a layer 4 (Transport layer) protocol.
--   Key exchanges of public and private keys happen in HTTPS to encypt and decrypt data.
--   Compared to HTTP, is it heavier. When encrpytion and decryption happens in HTTPS, it becomes heavier.
--   HTTP listens on port 443.
+-   加密数据。通过TLS/SSL协议来加密数据。
+-   是第四层(传输层)协议。
+-   公钥和私钥的密钥交换发生在HTTPS中以加密和解密数据。
+-   不如HTTP轻量。当HTTPS发生加密和解密的时候，就变得笨重。
+-   HTTPS在端口443监听。
 
-## How Encryption Works
+## 加密的工作原理
 
 ![How encryption works](https://user-images.githubusercontent.com/33565767/180215739-5e731309-eda1-4993-927c-c9daa400c3c5.png "I am a dev from the client text passing through an encyption")
 
-Let's say I type "I am a dev". This text gets encrypted when I click send, and then it gets decrypted on the server side.
+假设我输入“I am a dev（我是一个开发者）。”当我点击发送的时候，这段文字会被加密，然后在服务器端被解密。
 
-The same is also true from the server side. If I get a response from the server, it will first get encrypted, then it will get decrypted on the client side.
+服务器端也是同样的道理。从服务器发送的响应，会先被加密处理然后再到客户端被解密。
 
-## How to Know if a Site is Secure
+## 如何知道一个网站是安全的？
 
-To know that a site is secure, you usually look at the URL bar where you can see a lock. If there is a lock, the connection from the client to the server is secure.
+检查一个网站是否是安全的，你通常可以查看URL信息栏是否有一把锁。如果有一把锁，则服务器和客户端之间的通信就是安全的。
 
 ![Showing that the site is secure](https://user-images.githubusercontent.com/33565767/178449484-738fb908-901d-4a61-9f8f-fa5a39029012.png "A padlock that shows the site is secure on the URL")
 
-When you click on the lock icon, it tells you more about the secure connection.
+当你点击这个锁的图标，就会看到安全连接的更多信息。
 
 ![Shows site is secure](https://user-images.githubusercontent.com/33565767/180213859-21460cfa-6a8c-484e-81e5-5dba4fc31f2a.png "The URL section with more details of a secure site")
 
-## What is an SSL Certificate?
+## SSL证书是什么？
 
-An SSL certificate is a little file that tells browsers that your website –for example, freecodecamp.org – is who it says it is, and that it is reliable.
+SSL证书是一个小文件，告诉你的浏览器，比方说，freecodecamp.org是它所声称的网站，并且是可靠的。
 
-In order to authenticate, the certificate is able to confirm to the client (user) that the server they are connecting to is the one that manages that domain. All this is to keep the user safe from security issues such as domain spoofing.
+证书的认证即是向客户（用户）确认他们所连接的服务器是管理该域（domain）的服务器。认证是为了使用户免受如域名欺骗这样的安全问题的影响。
 
-It contains a public key and tells you who the onwer of the website is that you are trying to connect to. If a website doesn't have an SSL certificate, it cannot be encrypted with TLS.
+证书包含一个公钥，并告诉您正在尝试连接的网站的所有者是谁。如果网站没有SSL证书，则无法使用TLS加密。
 
-You can personally create your own SSL certificate (also known as a self-signed certificate), if you are the website owner. The problem with this approach is that browsers like Chrome don't trust these certificates. They prefer trusting certificates that are issued by a certificate authority.
+如果你是网站所有者，你可以创建自己的SSL证书（也称为自签名证书）。但这种方法的问题在于Chrome等浏览器不信任这些证书。它们倾向于信任由证书颁发机构颁发的证书。
 
-## How Does SSL Encryption Work?
+## SSL是如何运作的？
 
-There are two types of SSL encryption, asymmetric and symmetric. The combination of asymmetric and symmetric is what makes SSL Encryption work. Let's look at them below to learn more.
+SSL加密有两种类型，非对称和对称。SSL加密结合了这两种加密方式。下文会做详细介绍：
 
-### What is asymmetric encryption?
+### 什么是非对称加密？
 
-In Asymmetric encryption, you have two keys. These are:
+在非对称加密中，你拥有两把密钥：
 
-1.  Public key.
-2.  Private key.
+1.  公钥
+2.  私钥
 
 ![Asymmetric encryption](https://user-images.githubusercontent.com/33565767/181718454-847858dc-0df5-4bc5-bfaf-b6210c571d8f.png "Asymmetric (Public key) encryption")
 
-The client/user/browser gives the public key to the server with which they are communicating. Then, the encyption happens with the help of the public key, and the decryption happens with the help of the server's private key.
+客户端/用户/浏览器在通信的时候给服务器提供公钥，然后通过公钥进行加密，服务器通过私钥进行解密。
 
-The private key can only be found on that particular server. No one else has it. This shows you why asymmetric encryption is stronger and tougher to hack, because it has two different keys, the private and public key. The two keys work together to make sure the data is more secure.
+私钥只能在该特定服务器上找到，其他任何人都没有。这就是为什么非对称加密更强大且更难破解，因为它有两个不同的密钥，私钥和公钥。这两个密钥协同工作以确保数据更安全。
 
-This also tells you why the size of this encryption is 1024/2048 bits.
+这也是为什么这种加密的长度是1024/2048位。
 
-### What is symmetric encryption?
+### 什么是对称加密？
 
-In symmetric encryption, it's very simple. You have one key, and that's it. The client uses one key for encryption, and the server uses the same key for decrypting the data.
+对称加密就简单很多。你只有一把密钥。客户端使用一个密钥进行加密，服务器使用相同的密钥解密数据。
 
-Symmetric encryption is very light weight. The size is 128/256 bits. But it is a bit easier to hack into as compared to asymmetric. This doesn't mean it is not useful. When we use SSL, we combine Asymmetric and Symmetric to be able to make the communication safer and more secure.
+对称加密更轻量。长度为128/256位。但与非对称相比，它更容易被入侵，这并不意味着它没有用。当我们使用SSL时，我们将非对称和对称结合起来，能够使通信更安全、更私密。
 
 ![Symmetric encryption](https://user-images.githubusercontent.com/33565767/181720497-326e0dd9-5e0b-4bfb-b01a-2effec5ab9e0.png "How symmetric encryption works by using one key on the client side to encrypt and the same key on the server side to decrypt")
 
-### How asymmetric + symmetric encryption work
+### 非对称 + 对称加密的工作原理
 
-The combination of both asymmetric and symmetric is now the double-sided wall.  
+非对称和对称的组合形成双层防护墙
 ![Asymmetric and Symmetric](https://user-images.githubusercontent.com/33565767/182565306-224f199a-da88-4a68-be81-707636cc1069.png "How asymmetric and symmetric encryption work by client first sending a Hello to the server. The server then sends to the client, its public key and certificate in response. The client on step 3, sends a session key that is encrypted using the public key. On step 4, the server will decrypt the session key using the server's private key. Finally, step 5, the connection is established between the client and the server.")
 
-In the first step, the server will send to the broswer the asymmetric public key. As we now know, the asymmetric key has both the public key and the private key. Therefore, the browser will receive the public key.
+在第一步中，服务器向浏览器发送非对称的公钥。如我们所知，非对成密匙包含一个公钥和一个私钥，因此浏览器收到公钥。
 
-After this, the browser generates a session key.
+之后，浏览器生成一个会话密钥。
 
-Symmetric encryption uses only one single key for both the client and the server. So what will happen is, the browser will generate a local session key. This is a symmetric encryption session key. It will then encrypt it, with the use of the public key which is asymmetric, given in the first step. The locally generated session key will then be combined with the public key, and sent to the server.
+对称加密中客户端和服务器都只使用一个密钥。所以接下来，浏览器将生成一个本地会话密钥，是一个对称加密会话密钥。然后它将使用第一步中的非对称公钥对其进行加密。本地生成的会话密钥与公钥组合，发送到服务器。
 
-The server will then use a private key to decrypt the encrypted session key it has received. In this particular step, the server will use asymmetric private key to decrypt the session key it has received.
+然后，服务器将使用私钥解密它收到的加密会话密钥。在这个特定步骤中，服务器将使用非对称私钥来解密它收到的会话密钥。
 
-Now, once the decryption has happened, the server and the browser will use the session key for communication. The session key will only be used for that specific session.
+现在，一旦解密发生，服务器和浏览器将使用会话密钥进行通信。会话密钥将仅用于这次特定会话。
 
-Let's say you close your browser, and maybe sign in the next day – everything starts all over again. Session keys get created again.
+假设你关闭了浏览器，并在第二天登录 —— 一切重新开始，会话密钥会再次被创建。
 
-## How Can I Get SSL for My Website?
+## 如何给我的网站申请SSL?
 
-If you are a website owner, you can acquire an SSL certificate from a certificate issuing authority.
+如果您是网站所有者，您可以从证书颁发机构获取SSL证书。
 
-You will then need to install the certificate on you web server where your website is hosted. Most of the time, the hosting company where you host your website handles this process for you.
+然后在托管网站的Web服务器上安装证书。大多数情况下，托管网站的托管公司会为您处理此过程。
 
-## Where Can I Get an SSL Certificate?
+## 在哪里申请SSL证书?
 
-There are organizations that issue security certificates. These organizations are called certificate authorities. Some of these certificate authorities include: DigiCert, Comodo, and many others.
+有些组织颁发安全证书，这些组织称为证书颁发机构。其中一些证书颁发机构包括：DigiCert、Comodo等。
 
-Many developers get certificates from these organizations. Since they are the most widely used certificate issuers, browsers usually trust certificates from these organizations.
+许多开发人员从这些组织获得证书。由于这些组织办法的证书是使用最广泛，浏览器通常信任来自这些组织的证书。
 
-## Can I Get an SSL Certificate for Free?
+## 可以免费获取SSL证书吗?
 
-Cloudflare offers SSL certificates for free. It is one of the first internet security companies to do so.
+Cloudflare免费提供SSL证书。它是最早采取这一行动的互联网安全公司之一。
 
-If you want to get one, you can [check it out here](https://www.cloudflare.com/ssl/).
+如果你想申请一个，[可以点击这里](https://www.cloudflare.com/ssl/)。
 
-## What is HTTPS Used For?
+## HTTPS的用途
 
-HTTPS helps a lot with security. Without it, passing sensitive information becomes a big challenge especially if your business requires a secure way of communication.
+HTTPS在安全性方面起到了很大的作用。没有它，传递敏感信息将成为一个巨大的挑战，尤其是当你的企业需要一种安全的通信方式时。
 
-Sites that accept online payments like ecommerce sites typically require HTTPS. This is to avoid information such as credit card details and login information from being stolen (Source: [Tony Messer](https://www.entrepreneur.com/article/281633)).
+接受在线支付的网站（如电子商务网站）通常需要HTTPS。这是为了避免信用卡详细信息和登录信息等被盗 (引用: [Tony Messer](https://www.entrepreneur.com/article/281633))。
 
-## The Main Differences between HTTPS and HTTP
+## HTTPS和HTTP的主要区别
 
--   The encryption layer is enabled in HTTPS while there is no encryption layer in HTTP.
--   Your data is protected in HTTPS while in HTTP it is not.
--   Your ranking is boosted in Google when you use HTTPS while with HTTP, you don't get any ranking boost.
--   You are protected against phishing when you use HTTPS while there is not protection when using HTTP.
--   You are compliant with the regulations of the payment industry when you use HTTPS while HTTP is non-compliant.
--   Loading HTTPS in the first few seconds may be slower than loading HTTP.
--   Getting SSL certificates can cost money while there is no certification costs with HTTP.
--   While using HTTPS, you become buddies with Google Chrome. Google Chrome doesn't like HTTP and therefore you will always be getting unsecured site notifications.
+-   HTTPS中启用了加密层，而HTTP中没有加密层。
+-   数据在HTTPS中受到保护，而在HTTP中则不受保护。
+-   当使用HTTPS时，网站在Google中的排名会提高，而使用HTTP时，不会获得任何排名提升。
+-   使用HTTPS可以防止网络钓鱼，而使用HTTP没有保护。
+-   使用HTTPS符合支付行业规定，但是HTTP不合规。
+-   在最初几秒钟内加载HTTPS可能比加载HTTP慢。
+-   获得SSL证书可能需要花钱，而HTTP没有认证成本。
+-   在chrome上使用HTTPS网站更方便，使用HTTP网站会经常收到不安全提示。
 
-## Conclusion
+## 总结
 
-HTTP and HTTPS are very important in our day to day lives as developers. The communication between the browser and the server is what fuels much the work we do.
+HTTP和HTTPS在开发者的日常生活中扮演了重要的角色，浏览器和服务器之间的通信是我们工作的动力。
 
-By protecting your users' data as much as you're able so their information doesn't get stolen, you'll gain their trust and provide a better user experience.
+尽可能地保护用户的数据，以防止他们的信息被盗，将获得用户的信任并提供更好的用户体验。
 
-See you soon.
+下篇文章见。

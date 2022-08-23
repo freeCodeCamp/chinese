@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/how-to-use-flux-in-react-example/)
 > -  原文作者：[Sharvin Shah](https://www.freecodecamp.org/news/author/sharvin/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Use Flux to Manage State in ReactJS - Explained with an Example](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/Flux-4.png)

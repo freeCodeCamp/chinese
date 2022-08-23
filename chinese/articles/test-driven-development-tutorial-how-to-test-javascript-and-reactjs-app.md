@@ -1,65 +1,65 @@
 > -  原文地址：[Test-Driven Development Tutorial – How to Test Your JavaScript and ReactJS Applications](https://www.freecodecamp.org/news/test-driven-development-tutorial-how-to-test-javascript-and-reactjs-app/)
 > -  原文作者：[Oluwatobi Sofela](https://www.freecodecamp.org/news/author/oluwatobiss/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Test-Driven Development Tutorial – How to Test Your JavaScript and ReactJS Applications](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/test-driven-development-tutorial-how-to-test-javascript-and-reactjs-app-codesweetly-battlecreek-coffee-roasters-i22gbC3gFm4-unsplash.jpg)
 
-Understanding test-driven development is an essential part of being a prolific software developer. Testing provides a solid platform for building reliable programs.
+想要成为高产的软件开发工程师，了解测试驱动的开发必不可少。测试是创建可靠程序的基石。
 
-This tutorial will show you all you need to implement test-driven development in your JavaScript and React applications.
+这篇教程会帮助你在JavaScript和React应用中实现测试驱动的开发。 
 
-## Table of Contents
+## 目录
 
-1.  [What Is Test-Driven Development?](#what-is-test-driven-development)
-2.  [JavaScript Example of a Test-Driven Development Workflow](#javascript-example-of-a-test-driven-development-workflow)
-3.  [How to Use Jest as a Test Implementation Tool](#how-to-use-jest-as-a-test-implementation-tool)
-4.  [Important Stuff to Know about Using ES6 Modules with Jest](#important-stuff-to-know-about-using-es6-modules-with-jest)
-5.  [What Are the Advantages of Test-Driven Development?](#what-are-the-advantages-of-test-driven-development)
-6.  [What is a Unit Test in Test-Driven Development](#what-is-a-unit-test-in-test-driven-development)?
-7.  [What is an Integration Test in Test-Driven Development](#what-is-an-integration-test-in-test-driven-development)?
-8.  [What is an End-to-End Test in Test-Driven Development](#what-is-an-end-to-end-test-in-test-driven-development)?
-9.  [What are Test Doubles in Test-Driven Development](#what-are-test-doubles-in-test-driven-development)?
-10.  [Quick Overview of Test-Driven Development So Far](#quick-overview-of-test-driven-development-so-far)
-11.  [How to Test React Components](#how-to-test-react-components)
-12.  [Test Runner vs. React Component Testing Tool: What's the Difference?](#test-runner-vs-react-component-testing-tool-what-s-the-difference)
-13.  [Project: How React Testing Works](#project-how-react-testing-works)
-14.  [Overview](#overview)
+1.  [什么是测试驱动开发](#what-is-test-driven-development)
+2.  [测试驱动开发工作流的JavaScript示例](#javascript-example-of-a-test-driven-development-workflow)
+3.  [如何使用Jest来测试执行](#how-to-use-jest-as-a-test-implementation-tool)
+4.  [在Jest中使用es6模块须知](#important-stuff-to-know-about-using-es6-modules-with-jest)
+5.  [测试驱动的开发有什么好处？](#what-are-the-advantages-of-test-driven-development)
+6.  [测试驱动开发中的单元测试是什么？](#what-is-a-unit-test-in-test-driven-development)?
+7.  [测试驱动开发中的集成测试是什么？](#what-is-an-integration-test-in-test-driven-development)?
+8.  [测试驱动开发中的端到端测试是什么？](#what-is-an-end-to-end-test-in-test-driven-development)?
+9.  [测试驱动开发中的测试替身是什么？](#what-are-test-doubles-in-test-driven-development)?
+10.  [阶段性总结测试驱动开发](#quick-overview-of-test-driven-development-so-far)
+11.  [如何测试React组件](#how-to-test-react-components)
+12.  [测试运行工具vsReact组件测试工具：区别是什么？](#test-runner-vs-react-component-testing-tool-what-s-the-difference)
+13.  [项目：React测试如何运行](#project-how-react-testing-works)
+14.  [总结](#overview)
 
-So, without any further ado, let's get started by discussing what test-driven development means.
+话不多说，让我们开始从了解什么是测试驱动开发开始吧！
 
-## What Is Test-Driven Development?
+<h2 id="what-is-test-driven-development">什么是测试驱动开发</h2>
 
-**Test-driven development (TDD)** is a coding practice where you write the result you want your program to produce before creating the program.
+**测试驱动开发(TDD)** 是一种编程实践，你先写出你预期的程序会产生的结果，再编写程序。
 
-In other words, TDD requires you to pre-specify the output your intended program must produce to pass the test of functioning the way you envisioned.
+也就是说，TDD需要你预先构思好程序的输出，来通过你展望想实现的功能的测试。
 
-So, in an effective test-driven development practice, you would first write tests that express the result you expect from your intended program.
+所以，一种高效实践TDD的方法是你首先编写测试你预期结果的程序。
 
-Afterward, you would develop the program to pass the prewritten test.
+然后，你创建可以通过测试的程序。
 
-For instance, suppose you wish to create an addition calculator. In such a case, the TDD approach will be like so:
+举个例子，假设你想要创建一个加法计算器，TDD方法如图：
 
 ![Test-driven development workflow diagram](https://www.freecodecamp.org/news/content/images/2022/07/test-driven-development-tdd-workflow-diagram-codesweetly.png)
 
-Test-driven development workflow diagram
+测试驱动开发工作流示意图
 
-1.  Write a test specifying the result you expect the calculator to produce to pass the test of being the program you had in mind.
-2.  Develop the calculator to pass the prewritten test.
-3.  Run the test to check whether the calculator passes or fails the test.
-4.  Refactor your test code (if necessary).
-5.  Refactor your program (if necessary).
-6.  Continue the cycle until the calculator matches your vision.
+1.  编写一个测试。指定你希望计算器产生的结果。
+2.  开发计算器，然后通过预先写好的测试。
+3.  执行测试，检查计算器是否通过。
+4.  重构测试代码 (如有必要)。
+5.  重构程序(如有必要)。
+6.  重复循环，直至计算器符合你的预期。
 
-Let's now see a JavaScript example of a TDD workflow.
+让我们来看一个用JavaScript实现的例子
 
-## JavaScript Example of a Test-Driven Development Workflow
+<h2 id="javascript-example-of-a-test-driven-development-workflow">测试驱动开发工作流的JavaScript示例</h2>
 
-The steps below will use a simple JavaScript program to show you how to approach TDD.
+让我们用一个简单的JavaScript程序，来分步骤实现测试驱动编程的工作流：
 
-### 1\. Write your test
+### 1\. 编写测试
 
-Write a test that specifies the result you expect your calculator program to produce:
+编写一个测试，指定计算器的输出：
 
 ```js
 function additionCalculatorTester() {
@@ -71,9 +71,9 @@ function additionCalculatorTester() {
 }
 ```
 
-### 2\. Develop your program
+### 2\. 开发程序
 
-Develop the calculator program to pass the prewritten test:
+编写一个计算器程序以通过编写好的测试
 
 ```js
 function additionCalculator(a, b) {
@@ -81,21 +81,21 @@ function additionCalculator(a, b) {
 }
 ```
 
-### 3\. Run the test
+### 3\. 执行测试
 
-Run the test to check whether the calculator passes or fails the test:
+执行测试，查看程序是否通过测试
 
 ```js
 additionCalculatorTester();
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/js-ciui1u?devToolsHeight=33&file=index.js)
+[**在StackBlitz查看示例**](https://stackblitz.com/edit/js-ciui1u?devToolsHeight=33&file=index.js)
 
-### 4\. Refactor the test
+### 4\. 重构测试
 
-After you've confirmed that your program passed the prewritten test, it's time to check if there's any need to refactor it.
+在确认程序通过测试之后，可以检查是否需要重构测试代码。
 
-For instance, you could refactor `additionCalculatorTester()` to use a [conditional operator](https://codesweetly.com/javascript-statement/#what-is-a-conditional-ternary-operator-in-javascript) like so:
+例如，你可以使用[三元运算符](https://codesweetly.com/javascript-statement/#what-is-a-conditional-ternary-operator-in-javascript)来重构`additionCalculatorTester()` ：
 
 ```js
 function additionCalculatorTester() {
@@ -105,89 +105,89 @@ function additionCalculatorTester() {
 }
 ```
 
-### 5\. Refactor the program
+### 5\. 重构程序
 
-Let's also refactor the program's code to use an [arrow function](https://codesweetly.com/javascript-function-object#arrow-function-expression-in-javascript).
+让我们使用[箭头函数](https://codesweetly.com/javascript-function-object#arrow-function-expression-in-javascript)来重构程序：
 
 ```js
 const additionCalculator = (a, b) => a + b;
 ```
 
-### 6\. Run the test
+### 6\. 执行测试
 
-Rerun the test to ensure your program still works as intended.
+重新执行测试，确保程序仍然能够通过测试
 
 ```js
 additionCalculatorTester();
 ```
 
-[**Try it on StackBlitz**](https://stackblitz.com/edit/js-xp732h?devToolsHeight=33&file=index.js)
+[**在StackBlitz查看示例**](https://stackblitz.com/edit/js-xp732h?devToolsHeight=33&file=index.js)
 
-Notice that in the examples above, we implemented TDD without using any libraries.
+注意在以上例子中，我们没有使用任何第三方库。
 
-But you can also use powerful test-running tools like [Jasmine](https://jasmine.github.io/), [Mocha](https://mochajs.org/), [Tape](https://github.com/substack/tape), and [Jest](https://jestjs.io/), to make your test implementation faster, simpler, and more fun.
+其实你可以使用强大的第三方库来执行测试，如：[Jasmine](https://jasmine.github.io/)、 [Mocha](https://mochajs.org/)、 [Tape](https://github.com/substack/tape)和[Jest](https://jestjs.io/)，这些库可以使你的测试运行得更加快速、简洁并充满乐趣。
 
-Let's see how to use Jest, for example.
+让我们一起看看如何使用Jest。
 
-## How to Use Jest as a Test Implementation Tool
+<h2 id="#how-to-use-jest-as-a-test-implementation-tool">如何使用Jest来测试执行</h2>
 
-Here are the steps you'll need to follow to get started using Jest as your test implementation tool:
+在使用Jest工具之前，你需要执行以下步骤：
 
-### Step 1: Get the right Node and NPM version
+### 第一步：使用正确的Node和NPM版本
 
-Make sure you have Node 10.16 (or greater) and NPM 5.6 (or greater) installed on your system.
+确保你的系统上装有Node 10.16 (或者更高版本) 和 NPM 5.6 (或者更高版本)。
 
-You can get both by installing the latest LTS from the [Node.js](https://nodejs.org/en/) website.
+你可以在[Node.js](https://nodejs.org/en/)官网下载最新的LTS。
 
-If you prefer to use Yarn, ensure you have [Yarn 0.25 (or greater)](https://yarnpkg.com/).
+如果你更倾向于使用Yarn，确保你使用[Yarn 0.25 (或者更高版本)](https://yarnpkg.com/)。
 
-### Step 2: Create a project directory
+### 第二步： 创建一个项目目录
 
-Create a new folder for your project.
+为你的项目创建一个目录
 
 ```bash
 mkdir addition-calculator-jest-project
 ```
 
-### Step 3: Navigate to your project folder
+### 第三步：导航到你的项目文件夹
 
-Using the command line, navigate to your project directory.
+使用命令行导航到你的项目文件夹
 
 ```bash
 cd path/to/addition-calculator-jest-project
 ```
 
-### Step 4: Create a `package.json` file
+### 第四步：创建一个`package.json`文件
 
-Initialize a `package.json` file for your project.
+在项目中初始化 `package.json` 文件
 
 ```bash
 npm init -y
 ```
 
-Or, if your [package manager](https://codesweetly.com/package-manager-explained) is Yarn, run:
+如果你的[包管理器](https://codesweetly.com/package-manager-explained)是Yarn，执行：
 
 ```bash
 yarn init -y
 ```
 
-### Step 5: Install Jest
+### 第五步：安装Jest
 
-Install Jest as a development dependency package like so:
+把Jest作为开发依赖包安装
 
 ```bash
 npm install jest --save-dev
 ```
 
-Alternatively, if your package manager is Yarn, run:
+如果你使用的是Yarn，执行：
 
 ```bash
 yarn add jest --dev
 ```
 
-### Step 6: Make Jest your project's test runner tool
+### 第六步：设置Jest为项目测试运行工具
 
-Open your `package.json` file and add Jest to the `test` field.
+打开`package.json`文件，并把Jest添加到`test`区域。
 
 ```json
 {
@@ -197,29 +197,29 @@ Open your `package.json` file and add Jest to the `test` field.
 }
 ```
 
-### Step 7: Create your project file
+### 第七步：创建项目文件
 
-Create a file that you will use to develop your program.
+创建一个文件，在这个文件里编写开发代码
 
 ```bash
 touch additionCalculator.js
 ```
 
-### Step 8: Create your test file
+### 第八步：创建测试文件
 
-Create a file that you will use to write your test cases.
+创建一个编写测试案例的文件
 
 ```bash
 touch additionCalculator.test.js
 ```
 
-**Note:** Your test file's name must end with `.test.js`—so that Jest can recognize it as the file containing your test code.
+**注意：** 测试文件的结尾必须是 `.test.js`，这样Jest才能够分辨出来这个文件是测试文件。
 
-### Step 9: Write your test case
+### 第九步：编写测试案例
 
-Open your test file and write some test code that specifies the result you expect your program to produce.
+打开测试文件，编写你希望程序产出的指定结果。
 
-**Here's an example:**
+**例子:**
 
 ```js
 // additionCalculator.test.js
@@ -231,27 +231,27 @@ test("addition of 4 and 6 to equal 10", () => {
 });
 ```
 
-Here's what we did in the snippet above:
+在上述代码块中：
 
-1.  We imported the `additionCalculator.js` project file into the `additionCalculator.test.js` test file.
-2.  We wrote a test case specifying that we expect the `additionCalculator()` program to output `10` whenever users provide `4` and `6` as its [argument](https://codesweetly.com/javascript-arguments).
+1.  我们将`additionCalculator.js`项目文件导入到 `additionCalculator.test.js`测试文件。
+2.  我们编写了一个测试案例，希望当用户提供的[参数](https://codesweetly.com/javascript-arguments)是`4`和`6`的时候，`additionCalculator()`程序的输出是 `10`。
 
-**Note:**
+**注意:**
 
--   [`test()`](https://jestjs.io/docs/api#testname-fn-timeout) is one of Jest's global methods. It accepts three arguments:
-    1.  The name of the test (`"addition of 4 and 6 to equal 10"`).
-    2.  A function containing the expectations you wish to test.
-    3.  An optional timeout argument.
--   [`expect()`](https://jestjs.io/docs/expect#expectvalue) is a Jest method that lets you test the output of your code.
--   [`toBe()`](https://jestjs.io/docs/expect#tobevalue) is a [Jest matcher](https://jestjs.io/docs/using-matchers) function that enables you to compare `expect()`'s argument to primitive values.
+-   [`test()`](https://jestjs.io/docs/api#testname-fn-timeout)是Jest的全局方法，接受三个参数：
+    1.  测试名 (`"addition of 4 and 6 to equal 10"`)
+    2.  一个包含你期望测试结果的函数
+    3.  一个可选的timeout参数
+-   [`expect()`](https://jestjs.io/docs/expect#expectvalue)是一个测试代码输出的Jest方法。
+-   [`toBe()`](https://jestjs.io/docs/expect#tobevalue) 是一个[Jest匹配器](https://jestjs.io/docs/using-matchers)函数，可以对比 `expect()`参数和原始值。
 
-Suppose you run the test code now. The test would fail because you've not developed the program for which you created the test. So, let's do that now.
+假设你现在执行这个测试，测试将不会通过，因为你还没有编写程序，让我们现在开始吧！
 
-### Step 10: Develop your program
+### 第十步：开发程序
 
-Open your project file and develop a program to pass the prewritten test.
+打开项目文件，开发可以通过测试的程序。
 
-**Here's an example:**
+**这里是例子:**
 
 ```js
 // additionCalculator.js
@@ -263,35 +263,35 @@ function additionCalculator(a, b) {
 module.exports = additionCalculator;
 ```
 
-The snippet above created an `additionCalculator()` program and exported it with the `module.exports` statement.
+上面的代码块创建了一个`additionCalculator()`程序，并且使用`module.exports`方法将程序导出。
 
-### Step 11: Run the test
+### 第十一步：执行测试
 
-Run the prewritten test to check if your program passed or failed.
+执行测试，查看程序是否通过：
 
 ```bash
 npm run test
 ```
 
-Alternatively, you can use Yarn like so:
+也可以使用Yarn：
 
 ```bash
 yarn test
 ```
 
-Suppose your project contains multiple test files, and you wish to run a specific one. In such a case, specify the test file as follow:
+假设你的项目有多个测试文件，你想执行其中一个，你可以通过以下代码实现：
 
 ```bash
 npm run test additionCalculator.test.js
 ```
 
-Alternatively, you can use Yarn like this:
+如果使用Yarn的话是这样：
 
 ```bash
 yarn test additionCalculator.test.js
 ```
 
-Once you've initiated the test, Jest will print a pass or fail message on your editor's console. The message will look similar to this:
+一旦你启动了测试，Jest会在你的编辑器控制台打印出通过或者不通过的消息，消息如下：
 
 ```bash
 $ jest
@@ -306,9 +306,9 @@ Ran all test suites.
 Done in 7.80s.
 ```
 
-If you prefer Jest to run your test automatically, add the `--watchAll` option to your `package.json`'s `test` field.
+如果你希望Jest自动执行测试，可以在`package.json`的`test`区域添加 `--watchAll` 选项。
 
-**Here's an example:**
+**例子:**
 
 ```json
 {
@@ -318,15 +318,15 @@ If you prefer Jest to run your test automatically, add the `--watchAll` option t
 }
 ```
 
-After adding `--watchAll`, re-execute the `npm run test` (or `yarn test`) command to make Jest automatically begin rerunning your test whenever you save changes.
+添加`--watchAll`后，重新执行`npm run test` (或 `yarn test`)命令，Jest会在每次保存后重新执行测试。
 
-**Note:** You can quit the watch mode by pressing the **Q** key on your keyboard.
+**注意:** 你可以使用键盘上的**Q**键退出监视（watch）模式。
 
-### Step 12: Refactor the test code
+### 第十二步：重构测试代码
 
-So, now that you've confirmed that your program is working as intended, it's time to check if there's any need to refactor the test code.
+我们已经确认了程序可以如预期执行，是时候来检查是否需要重构测试代码了。
 
-For instance, suppose you realized that the `additionalCalculator` should allow users to add any number of digits. In that case, you can refactor your test code like so:
+例如，假设你想要`additionalCalculator`允许用户输入任意数量的数字。你可以这样重构你的代码：
 
 ```js
 // additionCalculator.test.js
@@ -352,16 +352,16 @@ describe("additionCalculator's test cases", () => {
 });
 ```
 
-Note that the [describe()](https://jestjs.io/docs/api#describename-fn) method we used in the snippet above is optional code—it helps organize related test cases into groups.
+注意上面的代码块中的[describe()](https://jestjs.io/docs/api#describename-fn)方法，是可选的。这个方法可以帮助将同类型的测试分门别类在一起。
 
-`describe()` accepts two arguments:
+`describe()`接受两个参数：
 
-1.  A name you wish to call the test case group—for instance, `"additionCalculator's test cases"`.
-2.  A function containing your test cases.
+1.  你希望的测试案例组的名字，如： `"additionCalculator's test cases"`.
+2.  包含测试案例的函数
 
-### Step 13: Refactor the program
+### 第十三步：重构程序
 
-So, now that you've refactored your test code, let's do the same for the `additionalCalculator` program.
+在重构了测试代码之后，让我们重构一下`additionalCalculator`程序。
 
 ```js
 // additionCalculator.js
@@ -373,299 +373,299 @@ function additionCalculator(...numbers) {
 module.exports = additionCalculator;
 ```
 
-Here's what we did in the snippet above:
+在代码块中我们做了这些事情：
 
-1.  The `...numbers` code used JavaScript's [rest operator](https://codesweetly.com/javascript-rest-operator) (`...`) to put the function's arguments into an array.
-2.  The `numbers.reduce((sum, item) => sum + item, 0)` code used JavaScript's [reduce()](https://codesweetly.com/javascript-reduce-method) method to sum up all the items in the `numbers` array.
+1.  `...numbers`代码使用了JavaScript中的[展开操作符](https://codesweetly.com/javascript-rest-operator) (`...`) ，将函数的参数转化为一个数组。
+2.  `numbers.reduce((sum, item) => sum + item, 0)`代码使用JavaScript的[reduce()](https://codesweetly.com/javascript-reduce-method)方法，求和了`numbers`数组中的所有元素。
 
-### Step 14: Rerun the test
+### 第十四步：重新执行测试
 
-Once you've finished refactoring your code, rerun the test to confirm that your program still works as expected.
+重构程序之后，可以重新执行测试，查看是否通过。
 
-### And that's it!
+### 结束
 
-Congratulations! You've successfully used Jest to develop an addition calculator program using a test-driven development approach! 🎉
+恭喜你！你成功的使用Jest，并借助测试驱动开发的方法创建了一个计算器程序。 🎉
 
-## Important Stuff to Know about Using ES6 Modules with Jest
+<h2 id="important-stuff-to-know-about-using-es6-modules-with-jest">在Jest中使用es6模块须知</h2>
 
-Jest does not currently recognize ES6 modules.
+目前，Jest不能识别ES6模块。
 
-However, suppose you prefer to use ES6's import/export statements. In that case, do the following:
+假设，你习惯使用ES6的import/export声明，你必须采取以下步骤：
 
-### 1\. Install Babel as a development dependency
+### 1\. 安装Babel作为依赖包
 
 ```bash
 npm install @babel/preset-env --save-dev
 ```
 
-Or, you can use Yarn:
+或者使用Yarn：
 
 ```bash
 yarn add @babel/preset-env --dev
 ```
 
-### 2\. Create a `.babelrc` file in your project's root
+### 2\. 在项目的root创建 `.babelrc`文件：
 
 ```bash
 touch .babelrc
 ```
 
-### 3\. Open the `.babelrc` file and replicate the code below
+### 3\. 打开 `.babelrc` 文件，并且复制以下代码：
 
 ```json
 { "presets": ["@babel/preset-env"] }
 ```
 
-The configuration above will now allow you to change step 9's `require()` statement from this:
+这样设置之后，上一章节第九步的 `require()`声明，可以从
 
 ```js
 const additionCalculator = require("./additionCalculator");
 ```
 
-...to this:
+...变成：
 
 ```js
 import additionCalculator from "./additionCalculator";
 ```
 
-Likewise, you can now also substitute step 10's `export` statement from this:
+同样的，你也可以替换掉第十步的`export`声明，从
 
 ```js
 module.exports = additionCalculator;
 ```
 
-...to this:
+到：
 
 ```js
 export default additionCalculator;
 ```
 
-**Note:** Jest also specified similar instructions in their [using Babel](https://jestjs.io/docs/getting-started#using-babel) documentation.
+**注意：** Jest在[使用Babel](https://jestjs.io/docs/getting-started#using-babel)文档中，指定了类似说明。
 
-### 4\. Rerun the test
+### 4\. 重新执行测试
 
-You can now rerun the test to confirm that your program still works!
+你可以重新执行测试，确保程序仍然通过测试。
 
-So, now that we know what test-driven development is, we can discuss its advantages.
+现在你已经知道测试驱动的开发是什么，让我们来看看这一方法有什么好处。
 
-## What Are the Advantages of Test-Driven Development?
+<h2 id="what-are-the-advantages-of-test-driven-development">测试驱动的开发有什么好处？</h2>
 
-Below are two main advantages of adopting test-driven development (TDD) in your programming workflow.
+在你的开发工作流中引入测试驱动开发（TDD）有以下两大好处：
 
-### 1\. Understand your program's purpose
+### 1\. 理解程序的目的
 
-Test-driven development helps you understand the purposes of your program.
+测试驱动的开发可以帮助你理解程序的目的。
 
-In other words, since you write your test before the actual program, TDD makes you think about what you want your program to do.
+也就是说，因为你在编写实际的程序前已经编写了测试，所以TDD可以促使你去思考你想要程序做什么事。
 
-Then, after you've documented the program's purposes using one or more tests, you can confidently proceed to create the program.
+在你通过一到两个测试记录下来你的程序的目的之后，你可以自信地去创建程序。
 
-Therefore, TDD is a helpful way to jot down the specific results you expect your intended program to produce.
+因此，TDD可以有效地帮助你记录下来你希望程序产生的结果。
 
-### 2\. Confidence booster
+### 2\. 信心助推器
 
-TDD is a benchmark for knowing that your program is working as expected. It gives you the confidence that your program is working correctly.
+TDD是了解你的程序是否如预期工作的的一个基准。它给予你信心，相信自己的程序正确执行。
 
-Therefore, irrespective of any future development on your codebase, TDD provides an effective way to test if your program is still working appropriately.
+所以无论之后你的代码库会有什么变化，TDD都可以有效地确保你的程序能够执行。
 
-Let's now discuss some popular TDD terms: "unit test," "integration test," "E2E," and "test doubles."
+让我们现在来讨论一下TDD的术语： "单元测试（unit test)"、 "集成测试(integration test)"、 "端对端（E2E）"、和 "测试替身(test doubles)"。
 
-## What is a Unit Test in Test-Driven Development?
+<h2 id="what-is-a-unit-test-in-test-driven-development">测试驱动开发中的单元测试是什么</h2>
 
-A **unit test** is a test you write to assess the functionality of an independent piece of a program. In other words, a unit test checks if a fully isolated unit of program is working as intended.
+**单元测试**是用于评估程序独立功能的测试。换句话说，单元测试检查一个完全独立的程序单元是不是按照预期工作。
 
-The test we wrote for step 10's `additionalCalculator` program is an excellent unit test example.
+我们为`additionalCalculator`程序编写的第十步里的测试就是一个完美的例子。
 
-Step 10's `additionalCalculator()`'s test is a unit test because the program is an independent function that does not depend on any external code.
+第十步里的`additionalCalculator()`测试是一个独立的函数，不依赖任何外部代码。
 
-Note that a unit test's primary purpose is not to check for bugs. Instead, a unit test's core purpose is to check whether an independent piece of program (called unit) behaves as intended under various test cases.
+注意单元测试首要目的并不是检查是否有bug，而是检查程序的一个独立片段（被称作单元）是否在不同的情况下按照预期工作。
 
-## What is an Integration Test in Test-Driven Development?
+<h2 id="what-is-an-integration-test-in-test-driven-development">测试驱动开发中的集成测试是什么？</h2>
 
-An **integration test** assesses the functionality of a dependent piece of program. In other words, an integration test checks if a program—which depends on other code—is working as intended.
+**集成测试**评估依赖程序的功能。也就是说，集成测试检查一个程序（依赖其他代码）是不是按照要求工作。
 
-The test we wrote for step 13's `additionalCalculator` program is an excellent example of an integration test.
+我们为 `additionalCalculator`程序编写的第十三步的测试就是一个很好的例子。
 
-Step 13's `additionalCalculator()`'s test is an integration test because the program is a dependent function that depends on JavaScript's [reduce()](https://codesweetly.com/javascript-reduce-method) method.
+第十三步的`additionalCalculator()`的测试一个例子是因为这个程序是一个依赖函数，依赖了JavaScript的[reduce()](https://codesweetly.com/javascript-reduce-method)方法。
 
-In other words, we used the prewritten test case to assess the integration of `additionalCalculator()` and `reduce()`.
+也就是说，我们使用事先编写好的测试案例来测试 `additionalCalculator()`和`reduce()`。
 
-Therefore, suppose JavaScript makes `reduce()` an obsolete method. In such a case, `additionalCalculator` will fail its test because of the `reduce()` method.
+因此，如果JavaScript把`reduce()`规定为一个过时的方法，那么在这个案例中，`additionalCalculator`会因为`reduce()`方法而无法通过测试。
 
-## What is an End-to-End Test in Test-Driven Development?
+<h2 id="what-is-an-end-to-end-test-in-test-driven-development">测试驱动开发中的端到端测试是什么？</h2>
 
-An **End-to-End (E2E) test** assesses the functionality of a user interface. In other words, E2E checks if your user interface is working as intended.
+**端到端(E2E)测试**访问用户接口（UI）的功能，也就是说E2E检查UI是否按照意图工作。
 
-Watch [Max's YouTube video](https://youtu.be/r9HdJ8P6GQI?t=1755) for a good illustration of an End-to-End test.
+可以观看[Max的Youtube频道](https://youtu.be/r9HdJ8P6GQI?t=1755)了解更多。
 
-## What are Test Doubles in Test-Driven Development?
+<h2 id="what-are-test-doubles-in-test-driven-development">测试驱动开发中的测试替身是什么？</h2>
 
-**Test doubles** are the imitation objects used to mimic real dependencies like databases, libraries, networks, and APIs.
+**测试替身（test doubles）**是模仿对象，用于模仿如数据库、库、网络和API等真实的依赖项。
 
-A test double allows you to bypass the natural objects on which your program depends. They let you test your code independently of any dependencies.
+使用测试替身可以绕过程序真实的依赖对象，你可以独立于任何依赖项来测试你的代码。
 
-For instance, suppose you need to verify if an error detected in your app originates from an external API or your code.
+假设你需要测试应用的一个错误是由外部API还是你自己的代码引起的。
 
-But suppose the API's service is available only in production—not in the development environment. In that case, you've got two options:
+但这个API仅在生产阶段，而不在开发阶段提供服务。所以，你有两种选择：
 
-1.  Wait until your app goes live—which could take months.
-2.  Clone the API so you can continue your test irrespective of the dependency's availability.
+1.  一直等到应用投入使用（这可能要等上数月）；
+2.  克隆API，这样不论这个依赖项是否可用，你都可以继续测试。
 
-Test doubles provide a helpful way to clone your program's dependencies so that your testing activities won't encounter any disruptions.
+使用测试替身来克隆项目依赖项，能够帮助你在不打断进度的情况下进行应用测试。
 
-Typical examples of test doubles are dummy objects, mocks, fakes, and stubs. Let's discuss them below.
+测试替身的典型示例是虚拟对象（dummy）、模拟（mock）、桩（stub）和仿冒（fake）。
 
-### What is a dummy in test-driven development?
+### 测试驱动开发中的虚拟对象（dummy）是什么?
 
-A **dummy** is a test double used to mimic the value of a specific dependency.
+**虚拟对象（dummy）** 是用于模仿特定依赖项的值的测试替身。
 
-For instance, suppose your app depends on a third-party method that requires you to provide some arguments. In such a case, a dummy allows you to pass in pretend values to the parameters of that method.
+假设你的应用依赖一个第三方的方法来提供一些参数。虚拟对象可以传入虚假的值给需要的方法提供参数。
 
-### What is a mock in test-driven development?
+### 测试驱动开发中的模拟（mock）是什么?
 
-**Mock** is a test double used to mimic an external dependency without considering the responses the dependency may return.
+**模拟（mock）** 是用于模仿外部依赖项的测试替身，使用模拟可以在开发的过程中不考虑依赖项的返回。
 
-For instance, suppose your app depends on a third-party API (for example, Facebook)—which you cannot access in the development mode. Mock allows you to bypass the API so that you can focus on testing your code regardless of the Facebook API's availability.
+假设你的应用依赖第三方API（如：Facebook），而这个API不可以在开发模式中被访问。使用模拟可以绕过这个API，这样你可以在不考虑Facebook的API是否可以访问的情况下进行测试。
 
-### What is a stub in test-driven development?
+### 测试驱动开发中的桩（stub）是什么?
 
-A **stub** is a test double used to mimic an external dependency while returning hand-coded values. You can use the returned value to assess your program's behavior with various test case responses from the dependency.
+**桩（stub）** 使用手动输入的值来模仿外部依赖项的返回值。你可以使用不同的返回值来测试应用的性能。
 
-For instance, suppose your app depends on a third-party API (for example, Facebook)—which you cannot access in the development mode. Stub allows you to bypass the API while mimicking the exact values Facebook will return.
+假设你的应用依赖于第三方API（如：Facebook），而这个API不可以在开发模式中被访问。桩模仿Facebook的返回值让你可以绕开这个API做测试。
 
-Therefore, stub helps you assess your program's behavior with various response scenarios.
+因此，桩可以帮助你获取不同响应场景的应用行为。
 
-### What is a fake in test-driven development?
+### 测试驱动开发中的仿冒（fake）是什么?
 
-**Fake** is a test double used to create a working test implementation of an external dependency with dynamic values.
+**仿冒（fake）** 是用于创建有动态值的外部依赖项的测试替身。
 
-For instance, you can use fake to create a local database that allows you to test how a real database will work with your program.
+例如你可以使用仿冒来创建一个本地数据库，来测试你的程序如何和实际数据库一起协同工作的。
 
-## Quick Overview of Test-Driven Development So Far
+<h2 id="quick-overview-of-test-driven-development-so-far">阶段性总结测试驱动开发</h2>
 
-We've learned that test-driven development helps you jot down your program's behavior before creating the program.
+我们学习了测试驱动开发如何在创建程序前记录程序的行为。
 
-We also saw a simple JavaScript test and used Jest as a test implementation tool.
+我们也实践了一个简单的JavaScript测试，并且使用Jest来作为测试的工具。
 
-Let's now see how to test React components.
+现在让我们一起来看看如何测试React组件。
 
-## How to Test React Components
+<h2 id="how-to-test-react-components">如何测试React组件</h2>
 
-The two main tools you need to test your React components are:
+两个主要的测试React组件的工具是：
 
-1.  A test runner tool
-2.  A React component testing tool
+1.  测试运行工具
+2.  React组件测试工具
 
-But what exactly is the difference between a test runner and a React component testing tool? Let's find out.
+测试运行工具和React组件测试工具的主要区别是什么？
 
-## Test Runner vs. React Component Testing Tool: What's the Difference?
+<h2 id="test-runner-vs-react-component-testing-tool-what-s-the-difference">测试运行工具 vs React组件测试工具：区别是什么？</h2>
 
-Below are the differences between a test runner and a React component testing tool.
+以下是测试运行工具和React组件测试工具的主要区别：
 
-### What is a test runner?
+### 什么是测试运行?
 
-A **test runner** is a tool developers use to run a test script and print the test's results on the command line (CLI).
+**测试运行**是一种测试工具，执行测试脚本，并将结果打印在命令行(CLI)。
 
-For instance, suppose you wish to run the test cases in your project's `App.test.js` test script. In such a case, you will use a test runner.
+假设你想要执行你的项目中`App.test.js`的测试脚本中的测试案例，你就可以使用测试运行。
 
-The test runner will execute `App.test.js` and print the test's results on the command line.
+测试运行执行`App.test.js`，并将结果打印在命令行。
 
-Typical examples of test runners are [Jasmine](https://jasmine.github.io/), [Mocha](https://mochajs.org/), [Tape](https://github.com/substack/tape), and [Jest](https://jestjs.io/).
+典型的测试运行工具有：[Jasmine](https://jasmine.github.io/)、 [Mocha](https://mochajs.org/)、 [Tape](https://github.com/substack/tape)和[Jest](https://jestjs.io/)。
 
-### What is a React component testing tool?
+### 什么是React组件测试工具?
 
-A **React component testing tool** provides helpful APIs for defining a component's test cases.
+**React组件测试工具**提供强大的API来定义组件测试案例。
 
-For instance, suppose you need to test your project's `<App />` component. In such a case, you will use a React component testing tool to define the component's test cases.
+假设你需要测试你的项目的`<App />`组件，你可以使用React组件测试工具来定义组件的测试案例。
 
-In other words, a React component testing tool provides the APIs for writing your component's test cases.
+也就是说，这个测试工具提供API来编写组件的测试案例。
 
-Typical examples are [Enzyme](https://enzymejs.github.io/enzyme/) and the [React Testing Library](https://testing-library.com/docs/react-testing-library/intro).
+典型的组件测试工具有： [Enzyme](https://enzymejs.github.io/enzyme/) 和 [React Testing Library](https://testing-library.com/docs/react-testing-library/intro)。
 
-So, now that we know what a test runner and React component testing tool are, let's use a mini-project to understand how React testing works.
+现在你已经知道了测试运行工具和React组件测试工具是什么，让我们来利用一个简单的项目例子进一步了解React测试是如何运行的。
 
-## Project: How React Testing Works
+<h2 id="project-how-react-testing-works">项目：React测试如何运行</h2>
 
-In the following steps, we will use [Jest](https://en.wikipedia.org/wiki/Jest_(JavaScript_framework)) and the [React Testing Library](https://testing-library.com/docs/react-testing-library/intro) (by Kent C. Dodds) to learn how React testing works.
+在接下来的例子中，我们将使用[Jest](https://en.wikipedia.org/wiki/Jest_(JavaScript_framework))和[React Testing Library](https://testing-library.com/docs/react-testing-library/intro) (文档由Kent C. Dodds编写)来学习React测试是如何运行的。
 
-**Note:** The React official docs [recommend](https://reactjs.org/docs/testing.html#tools) the Jest and React Testing Library combination for testing React components.
+**注意：** React官方文档[推荐](https://reactjs.org/docs/testing.html#tools)结合Jest和React Testing Library一起来测试React组件。
 
-### Step 1: Get the right Node and NPM version
+### 第一步：获取正确的Node和NPM版本
 
-Make sure that you have [Node 10.16](https://codesweetly.com/package-manager-explained#how-to-check-the-installed-node-version) (or greater) and NPM 5.6 (or greater) installed on your system.
+确保你的系统安装的是[Node 10.16](https://codesweetly.com/package-manager-explained#how-to-check-the-installed-node-version) (或者更高版本)以及NPM 5.6 (或者更高版本)。
 
-If you prefer to use Yarn, ensure you have Yarn 0.25 (or greater).
+如果你倾向于使用Yarn，确保你安装的是Yarn 0.25 (或者更高版本).
 
-### Step 2: Create a new React app
+### 第二步：创建一个新的React应用
 
-Use NPM's [create-react-app](https://create-react-app.dev/) package to create a new React app called `react-testing-project`.
+使用NPM的[create-react-app](https://create-react-app.dev/)包来创建一个名为`react-testing-project`的项目：
 
 ```bash
 npx create-react-app react-testing-project
 ```
 
-Alternatively, you can use Yarn to configure your project like so:
+同样，你可以使用Yarn来创建：
 
 ```bash
 yarn create react-app react-testing-project
 ```
 
-### Step 3: Go inside the project directory
+### 第三步：导航进入项目目录
 
-After the installation process, navigate into the project directory like so:
+创建完毕后，导航进入到项目目录
 
 ```bash
 cd react-testing-project
 ```
 
-### Step 4: Set up your test environment
+### 第四步：设置测试环境
 
-Install the following test packages:
+安装下列测试包
 
 -   jest
 -   @testing-library/react
 -   @testing-library/jest-dom
 -   @testing-library/user-event
 
-**Note:** If you've initialized your React project with `create-react-app` (step 2), you do not need to install any of the above packages. They come preinstalled and preconfigured in your `package.json` file.
+**注意:** 如果你是通过`create-react-app` (第二步)来初始化你的项目，你就不需要安装这些测试包。这些测试包已经被预安装到了`package.json`文件中。
 
-Now, let's discuss the purpose of each of the above test packages.
+现在让我们讲解一下这些测试包的作用：
 
-#### What is Jest?
+#### 什么是Jest?
 
-[jest](https://www.npmjs.com/package/jest) is the test runner tool we will use to run this project's test scripts and print the test results on the command line.
+[jest](https://www.npmjs.com/package/jest)是个测试运行工具，我们可以使用这个工具来运行测试脚本，并将结果打印在命令行。
 
-#### What is @testing-library/react?
+#### 什么是@testing-library/react?
 
-[@testing-library/react](https://www.npmjs.com/package/@testing-library/react) is the React Testing Library which gives you the APIs you need to write test cases for your React components.
+[@testing-library/react](https://www.npmjs.com/package/@testing-library/react)是一个React测试库，提供为React组件编写测试案例的API。
 
-#### What is @testing-library/jest-dom?
+#### 什么是@testing-library/jest-dom?
 
-[@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom) provides some set of custom Jest matchers for testing the DOM's state.
+[@testing-library/jest-dom](https://www.npmjs.com/package/@testing-library/jest-dom)提供定制的Jest匹配器来测试DOM的状态。
 
-**Note:** Jest already comes with lots of matchers, so using `jest-dom` is optional. `jest-dom` simply extends Jest by providing matchers that make your test more declarative, clear to read, and easy to maintain.
+**注意:** Jest已经包含很多匹配器，所以使用`jest-dom`是可选的。 `jest-dom`只是扩展了Jest匹配器，使得测试更加声明式、易阅读以及更容易维护。
 
-#### What is @testing-library/user-event?
+#### 什么是@testing-library/user-event?
 
-[@testing-library/user-event](https://www.npmjs.com/package/@testing-library/user-event) provides the `userEvent` API for simulating users' interaction with your app on a web page.
+[@testing-library/user-event](https://www.npmjs.com/package/@testing-library/user-event)提供`userEvent`API来模拟在web上用户和应用的交互。
 
-**Note:** `@testing-library/user-event` is a better alternative to the [fireEvent](https://testing-library.com/docs/dom-testing-library/api-events/#fireevent) API.
+**注意:** `@testing-library/user-event`比[fireEvent](https://testing-library.com/docs/dom-testing-library/api-events/#fireevent) API更好用。
 
-### Step 5: Clean up the `src` folder
+### 第五步: 清空`src`文件夹
 
-Delete all files inside the project directory's `src` folder.
+删除所有在`src`文件夹里的文件。
 
-### Step 6: Create your code files
+### 第六步: 创建代码文件
 
-Create the following files inside your project's `src` folder.
+在`src`文件夹中创建以下文件：
 
 -   `index.js`
 -   `App.js`
 -   `App.test.js`
 
-### Step 7: Render the `App` component
+### 第七步：渲染`App`组件
 
-Open your `index.js` file and render the `App` component to the DOM like so:
+打开`index.js`文件，并在DOM渲染`App`组件：
 
 ```js
 // index.js
@@ -674,15 +674,15 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App";
 
-// Render the App component into the root DOM
+// 在根DOM渲染APP组件
 createRoot(document.getElementById("root")).render(<App />);
 ```
 
-### Step 8: Write your test case
+### 第八步：创建测试案例
 
-Suppose you want your `App.js` file to render a `<h1>CodeSweetly Test</h1>` element to the web page. In that case, open your _test script_ and write some test code specifying the result you expect your `<App />` component to produce.
+假设你希望`App.js`文件在网页渲染一个`<h1>CodeSweetly Test</h1>` 元素。打开 _test script_ 并编写你希望 `<App />`组件生产的结果。
 
-**Here's an example:**
+**例子:**
 
 ```js
 // App.test.js
@@ -698,40 +698,40 @@ test("codesweetly test heading", () => {
 });
 ```
 
-Here are the main things we did in the test snippet above:
+上面的测试代码片段主要做了这些事：
 
-1.  We imported the packages needed to write our test case.
-2.  We wrote a test case specifying that we expect our `<App />` component to render a heading element with a `"codesweetly test"` text.
+1.  引入了测试案例需要的包
+2.  编写了测试案例，希望 `<App />`组件可以渲染一个head元素包含 `"codesweetly test"`文本。
 
--   [`test()`](https://jestjs.io/docs/api#testname-fn-timeout) is one of Jest's global methods. We use it to run a test case. The method accepts three arguments:
-    -   The name of the test (`"codesweetly test heading"`)
-    -   A function containing the expectations you wish to test
-    -   An optional timeout argument
--   [`render()`](https://testing-library.com/docs/react-testing-library/api/#render) is one of the React Testing Library APIs. We use it to render the component we wish to test.
--   [`expect()`](https://jestjs.io/docs/expect#expectvalue) is a Jest method that lets you test the output of your code.
--   [`screen`](https://testing-library.com/docs/queries/about/#screen) is a React Testing Library's object containing numerous methods for finding elements on a page.
--   [`getByRole()`](https://testing-library.com/docs/queries/about/#priority) is one of the React Testing Library's query methods for finding elements on a page.
--   [`toHaveTextContent()`](https://github.com/testing-library/jest-dom#tohavetextcontent) is one of `jest-dom`'s custom matchers that you can use to confirm the presence of a text content in a specific node.
--   `/codesweetly test/i` is a [regular expression](https://codesweetly.com/javascript-regular-expression-object) syntax that we used to specify a case-insensitive search for `codesweetly test`.
+-   [`test()`](https://jestjs.io/docs/api#testname-fn-timeout)是Jest的一个全局方法。我们使用它运行测试案例。这个方法接受三个参数：
+    -   测试名 (`"codesweetly test heading"`)
+    -   包含期望测试结果的函数
+    -   可选的timeout参数
+-   [`render()`](https://testing-library.com/docs/react-testing-library/api/#render)是React Testing library的一个API，我们使用它来渲染我们希望测试的组件。
+-   [`expect()`](https://jestjs.io/docs/expect#expectvalue)是一个测试代码结果的Jest方法。
+-   [`screen`](https://testing-library.com/docs/queries/about/#screen)是一个包含多种搜寻页面元素方法的React Testing Library对象。
+-   [`getByRole()`](https://testing-library.com/docs/queries/about/#priority)是搜寻页面元素的一个React Testing Library的请求方法。
+-   [`toHaveTextContent()`](https://github.com/testing-library/jest-dom#tohavetextcontent)是 `jest-dom`的一个定制匹配器，可以使用它来确认特定节点存在文本内容。
+-   `/codesweetly test/i` 是一个[正则表达式](https://codesweetly.com/javascript-regular-expression-object) 语法，用于表达搜索不区分大小写的`codesweetly test`。
 
-Keep in mind that there are three alternative ways to write the above expect statement:
+记住有三种方式来编写上面的声明：
 
 ```js
-// 1. Using jest-dom's toHaveTextContent() method:
+// 1. 使用jest-dom'的toHaveTextContent()方法：
 expect(screen.getByRole("heading")).toHaveTextContent(/codesweetly test/i);
 
-// 2. Using the heading's textContent property and Jest's toMatch() method:
+// 2. 使用头部的textContent属性和Jest的toMatch()方法：
 expect(screen.getByRole("heading").textContent).toMatch(/codesweetly test/i);
 
-// 3. Using React Testing Library's name option and jest-dom's toBeInTheDocument() method
+// 3. 使用React Testing Library的名称选项和jest-dom的toBeInTheDocument()方法：
 expect(screen.getByRole("heading", { name: /codesweetly test/i })).toBeInTheDocument();
 ```
 
-**Tip:**
+**提示:** 
 
-Add a `level` option to the `getByRole()` method to specify your heading's level.
+可以添加`level`选项到`getByRole()`方法，来标注head的层级。
 
-**Here's an example:**
+**例子:**
 
 ```js
 test("codesweetly test heading", () => {
@@ -740,15 +740,15 @@ test("codesweetly test heading", () => {
 });
 ```
 
-The `level: 1` option specifies an `<h1>` heading element.
+`level: 1` 代表了`<h1>`元素。
 
-Suppose you run the test code now. The test will fail because you've not developed the component for which you created the test. So, let's do that now.
+假设你现在运行测试，会测试失败，因为还没有编写组件，所以我们现在开始编写：
 
-### Step 9: Develop your React component
+### 第九步：开发你的React组件
 
-Open your `App.js` file and develop the component to pass the prewritten test.
+打开`App.js`文件来开发一个可以通过测试的组件
 
-**Here's an example:**
+**例子:**
 
 ```js
 // App.js
@@ -760,23 +760,23 @@ const App = () => <h1>CodeSweetly Test</h1>;
 export default App;
 ```
 
-The `App` component, in the snippet above, renders a `<h1>` element containing the `"CodeSweetly Test"` text.
+在代码片段中，`App`组件渲染了一个`<h1>`元素包含了 `"CodeSweetly Test"`文本。
 
-### Step 10: Run the test
+### 第十步：执行测试
 
-Run the prewritten test to check if your program passed or failed.
+执行实现写好的测试，检查测试通过还是失败：
 
 ```bash
 npm test App.test.js
 ```
 
-Alternatively, you can use Yarn like so:
+也可以使用Yarn：
 
 ```bash
 yarn test App.test.js
 ```
 
-Once you've initiated the test, Jest will print a pass or fail message on your editor's console. The message will look similar to this:
+初始化测试后，Jest会在你的编辑器的控制台打印通过或者失败的消息：
 
 ```bash
 $ jest
@@ -790,31 +790,31 @@ Time:        3.146 s
 Ran all test suites related to changed files.
 ```
 
-**Note:** The `create-react-app` configured Jest in [watch mode](https://codesweetly.com/javascript-module-bundler/#what-is-webpack---progress---watch) by default. Therefore, after running `npm test` (or `yarn test`), your currently opened terminal will continue to process the `test` command's activities. So, you won't be able to input any command on that terminal until you stop `test`'s execution. But you can open a new terminal window simultaneously with the one processing `test`.
+**注意:** `create-react-app`默认在[watch mode](https://codesweetly.com/javascript-module-bundler/#what-is-webpack---progress---watch)配置Jest。所以，在执行 `npm test` (或者`yarn test`)之后，你当前打开的终端会继续执行`test`命令的活动。在`test`执行的过程中，你将没办法在终端输入任何内容，但是你可以同时期开启一个新的终端窗口来执行`test`。
 
-In other words, use one terminal to run `test` and another to input commands.
+也就是说，使用一个窗口来执行`test`，另一个来输入命令。
 
-### Step 11: Run the application
+### 第十一步：执行应用
 
-Take a look at your app in the browser by running:
+在浏览器查看应用：
 
 ```bash
 npm start
 ```
 
-Or, if your [package manager](https://codesweetly.com/package-manager-explained) is Yarn, run:
+如果你的[包管理工具](https://codesweetly.com/package-manager-explained) 是Yarn，执行：
 
 ```bash
 yarn start
 ```
 
-Once you run the command above, your app will automatically open on your default browser.
+一旦执行上述命令，你的默认浏览器就会自动打开你的应用。
 
-### Step 12: Refactor the test code
+### 第十二步：重构测试代码
 
-Suppose you wish to change the heading's text when users click a button. In that case, you can simulate users' interaction with the button to confirm that it works as intended.
+假设你希望当用户点击按钮的时候改变head的文字。你可以模拟一个按钮来测试这个用户交互是否成立。
 
-**Here's an example:**
+**例子:**
 
 ```js
 // App.test.js
@@ -843,23 +843,23 @@ describe("App component", () => {
 });
 ```
 
-Here are the main things we did in the test snippet above:
+上面的测试代码片段的重要内容是：
 
-1.  We imported the packages needed to write our test case.
-2.  We wrote a test case specifying that we expect the `<App />` component to render a heading element with a `"codesweetly test"` text.
-3.  We wrote another test case simulating users' interaction with the app's button element. In other words, we specified that whenever a user clicks the button, we expect `<App />`'s heading to update to `"a codesweetly project"` text.
+1.  引入了测试案例需要的包。
+2.  编写了测试案例，希望 `<App />`组件可以渲染一个head元素包含 `"codesweetly test"`文本。
+3.  编写了另一个测试案例，模仿用户和应用按钮元素的互动。 也就是说，我们希望一旦用户点击按钮， `<App />`的head就会更新`"a codesweetly project"`文本。
 
-**Note:**
+**注意:**
 
--   [`describe()`](https://jestjs.io/docs/api#describename-fn) is one of Jest's global methods. It is optional code that helps organize related test cases into groups. `describe()` accepts two arguments:
-    -   A name you wish to call the test case group—for instance, `"App component"`.
-    -   A function containing your test cases.
--   [`userEvent`](https://www.npmjs.com/package/@testing-library/user-event) is the React Testing Library's package containing several methods for simulating users' interaction with an app. For instance, in the snippet above, we used `userEvent`'s `click()` method to simulate a click event on the button element.
--   We rendered `<App />` for each test case because React Testing Library unmounts the rendered components after each test. However, suppose you have numerous test cases for a component. In that case, use Jest's [`beforeEach()`](https://jestjs.io/docs/api#beforeeachfn-timeout) method to run `render(<App />)` before each test in your file (or `describe` block).
+-   [`describe()`](https://jestjs.io/docs/api#describename-fn)是Jest的一个全局方法。这是一个可选的方法，用户将相关的测试案例分组到一起。 `describe()`接受两个参数：
+    -   你希望测试案例组被命名的名称，如： `"App component"`.
+    -   包含测试案例的函数。
+-   [`userEvent`](https://www.npmjs.com/package/@testing-library/user-event) 包含许多模拟用户与应用交互方法的一个React Testing Library包。例如在代码块中，我们使用 `userEvent`的`click()`方法来模拟按钮元素的点击事件。
+-   每次测试案例我们都会渲染`<App />`，因为每次测试后，React测试库都会卸载掉已经渲染的组件。假设你的组件有多个测试案例， 使用Jest的[`beforeEach()`](https://jestjs.io/docs/api#beforeeachfn-timeout)方法来渲染你文件中的`render(<App />)`(或者`describe` 代码块中)的测试。
 
-### Step 13: Refactor your React component
+### 第十三步：重构React组件
 
-So, now that you've refactored your test code, let's do the same for the `App` component.
+我们已经重构了测试代码，现在我们来重构`App`组件：
 
 ```js
 // App.js
@@ -886,44 +886,44 @@ const App = () => {
 export default App;
 ```
 
-Here are the main things we did in the snippet above:
+在上述代码片段中主要发生了：
 
-1.  `App`'s `heading` state got initialized with a `"CodeSweetly Test"` string.
-2.  We programmed a `handleClick` function to update the `heading` state.
-3.  We rendered a `<h1>` and `<button>` elements to the DOM.
+1.  `App`的`heading`初始状态是`"CodeSweetly Test"`字符串。
+2.  编写了一个`handleClick`函数来处理`heading`状态。
+3.  在DOM渲染一个 `<h1>`和一个`<button>`元素。
 
-Note the following:
+注意以下几点：
 
--   `<h1>`'s content is the `heading` state's current value.
--   Whenever a user clicks the button element, the `onClick()` event listener will trigger the `handleClick()` function. And `handleClick` will update `App`'s `heading` state to `"A CodeSweetly Project"`. Therefore, `<h1>`'s content will change to `"A CodeSweetly Project"`.
+-   `<h1>`的内容是 `heading`状态的当前值。
+-   每当用户点击按钮元素， `onClick()`事件监听器就会调用`handleClick()`函数。 `handleClick`就会更新`App`的`heading`的状态到`"A CodeSweetly Project"`。因此 `<h1>`的内容会改成`"A CodeSweetly Project"`。
 
-### Step 14: Rerun the test
+### 第十四步：重新执行测试
 
-Once you've refactored your component, rerun the test (or check the actively running test) to confirm that your app still works as expected.
+一旦重构了组件之后，重新执行测试（或者检查正在运行的测试）来确保应用按照预期执行。
 
-Afterward, check the browser to see your recent updates.
+之后，在浏览器查看最近的更新。
 
-### And that's it!
+### 就这么多！
 
-Congratulations! You've successfully used Jest and the React Testing Library to test a React component. 🎉
+恭喜你！你成功的使用Jest和React测试库来测试React组件！ 🎉
 
-## Overview
+<h2 id="overview">总结</h2>
 
-This article discussed how test-driven development works in JavaScript and ReactJS applications.
+本文探讨了在JavaScript和ReactJS应用中如何使用测试驱动的开发。
 
-We also learned how to use Jest and the React Testing Library to make testing simpler and faster.
+我们还学习了如何使用Jest和React测试库使得测试更加简单快速。
 
-Thanks for reading!
+感谢阅读！
 
-### **And here's a useful ReactJS resource:**
+### **这里还有一些有用的ReactJS的资源:**
 
-I wrote a book about React!
+我编写了一本React相关的书籍!
 
--   It's beginner friendly ✔
--   It has live code snippets ✔
--   It contains scalable projects ✔
--   It has plenty of easy-to-grasp examples ✔
+-   初学者友好 ✔
+-   包含代码片段 ✔
+-   包含可以扩展的项目 ✔
+-   和非常多好理解的例子 ✔
 
-The [React Explained Clearly](https://www.amazon.com/dp/B09KYGDQYW) book is all you need to understand ReactJS.
+[React Explained Clearly](https://www.amazon.com/dp/B09KYGDQYW)是你了解ReactJS的敲门砖。
 
 [![React Explained Clearly Book Now Available at Amazon](https://www.freecodecamp.org/news/content/images/2022/01/Twitter-React_Explained_Clearly-CodeSweetly-Oluwatobi_Sofela.jpg)](https://www.amazon.com/dp/B09KYGDQYW)

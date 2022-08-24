@@ -5,35 +5,35 @@
 
 ![如何用 OpenAPI 在 Express 中构建更好的 API](https://images.unsplash.com/photo-1546411649-8c3bb42e6008?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDh8fGJ1aWxkfGVufDB8fHx8MTYxNzM5NDY2MQ&ixlib=rb-1.2.1&q=80&w=2000)
 
-In this article, I will share how to build robust REST APIs in Express. First, I will present some of the challenges of building REST APIs and then propose a solution using open standards.
+我将在这篇文章中分享在 Express 中构建鲁棒的 REST API 的方法。首先，我会介绍构建 REST API 的一些挑战，然后提出一个使用开放标准的解决方案。
 
-This article won't be an introduction to [Node.js](https://nodejs.org/en/), [Express.js](https://expressjs.com/), or [REST API](/news/rest-apis/)s. Make sure to check out the links before diving deeper if you need a refresher. 🤿
+本文并非一篇关于 [Node.js](https://nodejs.org/en/)、[Express.js](https://expressjs.com/) 或 [REST API](/news/rest-apis/) 的介绍。如果你需要复习，请在深入研究本文内容之前查看这些链接。🤿
 
-I love the Node.js ecosystem due to its flexibility and ease of use. The community is vibrant, and in a matter of minutes, you can setup a REST API using the language you already know.
+我喜欢 Node.js 那极具灵活性和易用性的生态。这个社区充满活力，并且你可以用你已经掌握的语言在几分钟内设置一个 REST API。
 
-There is great value in sharing the same programming language between an application's back-end and front-end. This makes it easier to navigate the codebase of an application with less [context switching](https://blog.rescuetime.com/context-switching/). Full-stack developers can move across the stack quickly, and [sharing code](https://betterprogramming.pub/sharing-logic-components-between-frontend-and-backend-repositories-6fdc1f9cb850) becomes a breeze.
+在应用的前后端使用相同的编程语言是很有价值的。这使我们在浏览代码库时可以减少[上下文切换](https://blog.rescuetime.com/context-switching/)，从而变得更轻松。全栈开发者可以快速切换技术栈，[共享代码](https://betterprogramming.pub/sharing-logic-components-between-frontend-and-backend-repositories-6fdc1f9cb850)也变得轻而易举。
 
-That said, as MVPs grow into full-blown production applications and development teams scale, this flexibility creates challenges too.
+尽管如此，随着 MVP 成长为成熟的生产环境应用程序和开发团队规模的扩大，这种灵活性也带来了挑战。
 
-## Challenges of Working with REST APIs
+## 使用 REST API 的挑战
 
-There are many challenges to face when codebases and teams grow, regardless of which tech stack you use.
+无论你使用哪种技术栈，当代码库和团队规模增长时，都会面临许多挑战。
 
-I'll narrow these challenges down to Express.js apps which contain business logic exposed over a REST API.
+在本文中，我将描述通过 REST API 暴露业务逻辑的 Express.js 应用程序所带来的挑战，以小见大。
 
-Regardless of the nature of the API consumers (webpages, mobile apps, third-party backends), they are likely to face one (or more) of the following challenges as they grow:
+无论 API 消费者的性质如何（网页、移动应用、第三方后端），随着他们的成长，他们都可能面临以下一个（或多个）挑战：
 
-### 1\. ⚠️ It's harder to make changes
+### 1\. ⚠️ 更难做出改变
 
-When the contract is not explicit, making changes on either side of the REST API becomes harder.
+在文档不够明确时，在 REST API 的任何一方进行修改都变得更加困难。
 
-For example, you may have a REST endpoint that returns a specific user's name. In the upcoming feature, you may need to modify it to return the age too. This may silently break the web application and mobile app.
+举个例子，假设你有一个 REST 端点，可以返回一个特定的用户的名字。在即将新增的功能中，你可能需要修改这个 API 使其返回年龄。这可能会潜在地破坏网络应用和移动应用。
 
-You can set up integration tests to mitigate this issue, but you will still heavily rely on the developers to manually cover all the edge cases. This takes lots of time and effort, and you are never 100% certain that the changes won't break the app.
+你可以设置集成测试来一定程度上避免这个问题，但你仍然会严重依赖开发人员来手动覆盖所有的边界情况。这需要大量的时间和精力，而且你永远无法 100% 确定这些变化不会破坏应用程序。
 
-### 2\. 📜 Lack of (updated) documentation
+### 2\. 📜 缺少（及时更新的）文档
 
-Documentation is another sensitive topic when building REST APIs. I am a firm believer that, in most cases, the code should serve as enough documentation.
+文档是构建 REST API 时的另一个敏感话题。我坚信在大多数情况下，代码应该作为足够的文档。
 
 That said, REST APIs can grow in complexity, and checking the security, parameters, and possible responses for each endpoint in the code becomes tedious and time-consuming. This slows down the speed of development, and bugs creep into the system.
 
@@ -76,9 +76,9 @@ For the sake of this example, let's suppose we are building a todo list manageme
 In this case, the backend will be an Express.js app that will expose over a REST API the following functionalities:
 
 -   Fetch todos: **\[GET\] /todos**
--   Create a todo: **\[POST\] /todos**
--   Edit a todo: **\[PUT\] /todos/:id**
--   Delete a todo: **\[DELETE\] /todos/:id**
+-   创建待办事项：**\[POST\] /todos**
+-   编辑待办事项：**\[PUT\] /todos/:id**
+-   删除待办事项：**\[DELETE\] /todos/:id**
 
 This is an over-simplification of the functionalities that a todo management app will need, but will serve to show how we can overcome the challenges presented above in a real context.
 
@@ -92,16 +92,18 @@ The complete code is available in **[this repository](https://github.com/aperkaz
 
 1.  Initialize a Express skeleton and initialize a Git repo:
 
-`npx express-generator --no-view --git todo-app`  
-`cd ./todo-app`  
-`git init`  
-`git add .; git commit -m "Initial commit";`
+```bash
+npx express-generator --no-view --git todo-app
+cd ./todo-app
+git init
+git add .; git commit -m "Initial commit";
+```
 
 2\. Add the OpenAPI Express library, **[express-openapi](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi)**:
 
 `npm i express-openapi -s`
 
-```
+```javascript
 // ./app.js
 
 ...
@@ -276,11 +278,11 @@ module.exports = function () {
 
 5\. Add autogenerated documentation, **[swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)**:
 
-```
+```bash
 npm i swagger-ui-express -s
 ```
 
-```
+```javascript
 // ./app.js
 
 ...
@@ -311,7 +313,7 @@ If you have made it this far, you should have a fully functioning Express applic
 
 Using the schema available in _[http://localhost:3030/api-docs](http://localhost:3030/api-docs)_ we can now easily generate [tests](https://nordicapis.com/generating-web-api-tests-from-an-openapi-specification/), a [mock server](https://github.com/stoplightio/prism), [types](https://github.com/drwpow/openapi-typescript) or even a [client](https://phrase.com/blog/posts/using-openapi-to-generate-api-client-code/)!
 
-## Conclusion
+## 总结
 
 We scratched only the surface of whats possible with OpenAPI. But I hope the article shed some light on how a standard API definition schema can help with visibility, testing, documentation, and overall confidence when building REST APIs.
 

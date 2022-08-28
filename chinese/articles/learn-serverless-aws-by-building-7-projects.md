@@ -1,7 +1,7 @@
-> -  原文地址：[How to Learn Serverless AWS by Building 7 Projects](https://www.freecodecamp.org/news/learn-serverless-aws-by-building-7-projects/)
-> -  原文作者：[Sam Williams](https://www.freecodecamp.org/news/author/sam-williams/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Learn Serverless AWS by Building 7 Projects](https://www.freecodecamp.org/news/learn-serverless-aws-by-building-7-projects/)
+> - 原文作者：[Sam Williams](https://www.freecodecamp.org/news/author/sam-williams/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Learn Serverless AWS by Building 7 Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-christina-morillo-1181316.jpg)
 
@@ -21,8 +21,8 @@ This project is designed to get you familiar with deploying an API with Lambda. 
 
 There are lots of logic you could use for this, but here are two examples:
 
--   Get Steam game deals, converted into your local currency
--   Get news translated into your local language
+- Get Steam game deals, converted into your local currency
+- Get news translated into your local language
 
 ![ch2.drawio](https://completecoding.io/wp-content/uploads/2022/08/ch2.drawio.png)
 
@@ -48,7 +48,7 @@ const handler = (event: APIGatewayProxyEvent) => {
     // combine the data 
 
     // return data in API Gateway format
-}	
+} 
 ```
 
 If you need some free and public APIs to use, then here's a massive doc of them to choose from [https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis).
@@ -131,8 +131,8 @@ The Time-To-Live (TTL) tells dynamo that once the time reaches this date, delete
 
 Two things to note with TTL:
 
--   Make sure that this is the Unix timestamp for the deletion date – but in seconds. `new Date('october 20 2022').getTime()` will be in milliseconds, so just divide by 1000.
--   The record will be deleted within a 15-minute window after your TTL so don't panic if it's been 5 minutes and the record hasn't been deleted yet.
+- Make sure that this is the Unix timestamp for the deletion date – but in seconds. `new Date('october 20 2022').getTime()` will be in milliseconds, so just divide by 1000.
+- The record will be deleted within a 15-minute window after your TTL so don't panic if it's been 5 minutes and the record hasn't been deleted yet.
 
 You can then set up a second Lambda which is triggered any time a record is deleted from Dynamo. This then sends the message to either their email or phone.
 
@@ -177,10 +177,10 @@ WebSockets work slightly differently than regular APIs. Instead of having multip
 
 There are some default message types and some custom ones:
 
--   connectToRoom – Custom
--   createRoom – Custom
--   onMessage – Custom
--   disconnect – Default
+- connectToRoom – Custom
+- createRoom – Custom
+- onMessage – Custom
+- disconnect – Default
 
 When a user connects to the WebSocket, they can either send a `connectToRoom` or `createRoom` message. Both of these will create a record in Dynamo with the user's WebSocket `connectionId` and the `roomId`. As we did before, we'll have a GSI in Dynamo so we can later query to get all users for a `roomId`.
 
@@ -219,10 +219,10 @@ This starts with all users needing to sign up to your application. We use Cognit
 
 You'll need to then create a few endpoints:
 
--   create a board
--   add an idea to a board
--   vote for an idea
--   get board details
+- create a board
+- add an idea to a board
+- vote for an idea
+- get board details
 
 ### Create a board
 
@@ -400,7 +400,7 @@ One for sending a "thank you" message to the customer.
 
 And another one that will do something a bit different. It will take the order, remove any personal data, and store it into another DynamoDB table.
 
-This is something becoming increasingly common as a preparation step for a data scientist. We remove the personal data to reduce the legal issues but still allow a data scientist to do things like train a model to give you "People also bought ...." kinds of recommendations.
+This is something becoming increasingly common as a preparation step for a data scientist. We remove the personal data to reduce the legal issues but still allow a data scientist to do things like train a model to give you "People also bought ……" kinds of recommendations.
 
 ## What's Next
 

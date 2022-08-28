@@ -15,7 +15,7 @@
 
 让我们开始吧。
 
-## How to Use Mcfly
+## 如何使用 Mcfly
 
 你是否无情地终端上的输入 `上箭头键`，直到得到你之前运行的命令？我也有过这样的经历。我不知道我可以优化这个，所以我在相当长的一段时间里虔诚地使用它。
 
@@ -43,7 +43,7 @@
 
 你可以从[这里](https://github.com/cantino/mcfly#installation) 安装 Mcfly .
 
-## How to Use Cheat.sh
+## 如何使用 Cheat.sh
 
 谁喜欢看 `man`信息？我不喜欢。当我在纠结一个命令的时候，我最不想看的就是手册页。不是因为它没有帮助，而是因为它让人不知所措。
 
@@ -61,7 +61,7 @@ curl cheat.sh/uptime
 
 因此，你不是在你的机器上安装手册，而是只为你需要的命令获取信息。你可以访问 [cheat.sh](https://cheat.sh/)，也可以在你的浏览器上使用它
 
-Here is how the output of the above command looks:
+以下是上述命令的输出情况:
 
 ![Cheatsheet output for uptime command](https://www.freecodecamp.org/news/content/images/2022/08/Image-Pasted-at-2022-8-19-13-56.png)
 
@@ -69,7 +69,7 @@ Here is how the output of the above command looks:
 
 你会在 [codebase](https://github.com/cheat/cheat) 中找到很多的例子。
 
-## How to Use Git Open
+## 如何使用 Git Open
 
 我经常需要在浏览器中打开我正在做的项目的 GitHub 仓库。这可能是为了检查我提出的 Pull Request 的评论更新，改变仓库的设置，或者任何需要 GitHub 仓库页面的事情。
 
@@ -88,7 +88,7 @@ alias blog="git open https://github.com/<username>/blog <branch>"
 
 在 Github 上查看 Git Open [这里](https://github.com/paulirish/git-open)。
 
-## How to Use Bat
+## 如何使用 Bat
 
 我们都使用过`cat`，对吗？Bat 就是这样，但它有语法高亮，漂亮的格式化和风格化选项，并支持 git diff。它非常通用，很容易与其他工具集成，并提供自定义主题选项。
 
@@ -108,7 +108,7 @@ bat 命令的输出
 
 请随意开始使用它[这里](https://github.com/sharkdp/bat)。
 
-## How to Use Jq
+## 如何使用 Jq
 
 Jq 是一个 JSON 的命令行处理工具。你可以对你的 JSON 进行切片和切块，进行投影以只显示某些字段，并从（巨大的）JSON 中只提取所需的信息。不再有满屏的终端输出了。
 

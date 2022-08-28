@@ -1,112 +1,112 @@
-> -  原文地址：[5 Linux Utilities to Improve Your Programming Workflow in 2022](https://www.freecodecamp.org/news/5-linux-utilities-for-better-programming-workflow/)
-> -  原文作者：[Rishabh Rawat](https://www.freecodecamp.org/news/author/rishabh570/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[5 Linux Utilities to Improve Your Programming Workflow in 2022](https://www.freecodecamp.org/news/5-linux-utilities-for-better-programming-workflow/)
+> - 原文作者：[Rishabh Rawat](https://www.freecodecamp.org/news/author/rishabh570/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![5 Linux Utilities to Improve Your Programming Workflow in 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/linux-shell-utilities-cover.jpeg)
 
-Working as a Software Developer, there are always new tools and frameworks coming out that can completely change your workflows – for the better (or worse?).
+作为一个软件开发人员，总是有新的工具和框架出现，可以完全改变你的工作流程——为了更好（或更糟？）
 
-Either way, there is always the possibility to optimize how you do things day-to-day.
+无论怎样，总是有可能优化你日常工作的方式。
 
-This article contains some Linux utilities that have recently replaced my overused and under-productive daily programming workflow.
+这篇文章包含了一些 Linux 工具，这些工具最近取代了我过度使用和生产力不足的日常编程工作流程。
 
-You will learn about those utilities and how they are a better alternative to their counterparts.
+你将了解到这些实用程序，以及它们是如何更好地替代它们的同行的。
 
-Let's begin.
+让我们开始吧。
 
 ## How to Use Mcfly
 
-Do you relentlessly hit `up arrow` on the terminal until you get the command you ran previously? I've been there. I didn't know I could optimize this, so I was using it religiously for quite some time.
+你是否无情地终端上的输入 `上箭头键`，直到得到你之前运行的命令？我也有过这样的经历。我不知道我可以优化这个，所以我在相当长的一段时间里虔诚地使用它。
 
-Then I got introduced to `ctrl + r`. It allows you to search through your command history and has wildcard search. Wow.
+然后我被介绍到 `ctrl + r`。它允许你搜索你的命令历史，并且有通配符搜索。哇！！！
 
-Results? My finger tapping exercise was over from the first day. Again, I thought this must be the peak DX for such a small utility. I was so wrong.
+结果呢？我的手指敲击练习从第一天开始就结束了。我再次认为，对于这样一个小工具来说，这一定是 DX 的峰值。我大错特错了。
 
-So what? Well, there's a better `ctrl-r` for you. Introducing Mcfly 🦋.
+所以呢？嗯，有一个更好的`ctrl-r`给你。介绍一下 Mcfly 🦋。
 
-In addition to the regular `ctrl+r` feature, it has some extra niceness:
+除了常规的`ctrl+r`功能外，它还有一些额外的优点:
 
-1.  The suggestions are customized using a neural network which considers your current working directory and recently executed commands.
-2.  It tracks exit status of commands (you probably don't want to run a failed command again), timestamp, and other useful information.
-3.  You can use `%` as a wildcard to match multiple characters.
+1. 这些建议是使用神经网络定制的，该网络考虑了你当前的工作目录和最近执行的命令。
+2. 它跟踪命令的退出状态（你可能不想再次运行一个失败的命令）、时间戳和其他有用的信息。
+3. 你可以使用`%`作为通配符来匹配多个字符。
 
-Here are the suggestions I got on two different repositories, based on my shell history:
+以下是我在两个不同的存储库中得到的建议，基于我的 `shell` 输入历史:
 
 ![mcfly giving context aware suggestions in the shell](https://www.freecodecamp.org/news/content/images/2022/08/mcfly-in-git-project.png)
 
-suggestions include a build script specific to this project
+建议使用包括一个专门针对这个项目的构建脚本。
 
 ![mcfly giving context aware suggestions in the shell](https://www.freecodecamp.org/news/content/images/2022/08/mcfly-in-different-git-project.png)
 
-project has a different build script
+项目有一个不同的构建脚本
 
-You can install Mcfly from [here](https://github.com/cantino/mcfly#installation).
+你可以从[这里](https://github.com/cantino/mcfly#installation) 安装 Mcfly .
 
 ## How to Use Cheat.sh
 
-Who loves reading man pages? I don’t. When I’m struggling with a command, the last thing I want to read is a man page. Not because it's not helpful, but it is overwhelming.
+谁喜欢看 `man`信息？我不喜欢。当我在纠结一个命令的时候，我最不想看的就是手册页。不是因为它没有帮助，而是因为它让人不知所措。
 
-I often just need quick examples that I can grab on the go and use. When I found [TLDR pages](https://tldr.sh/), I was the happiest person. Now with Cheat (sheets), I’m even happier.
+我经常只是需要简明的例子，可以快速上手。当我发现 [TLDR pages](https://tldr.sh/) 时，我是最高兴的人。现在有了 Cheat（表），我就更高兴了。
 
-Cheat gives you access to the [cheatsheets](https://github.com/cheat/cheatsheets/) for potentially every command you will ever need — only examples, without the encyclopedia.
+Cheat 让你可以访问 [cheatsheets](https://github.com/cheat/cheatsheets/)，这可能是你所需要的每个命令，只有例子，没有百科全书。
 
-If you do not want to install the utility, you can get the cheatsheet using CURL like this:
+如果你不想安装这个工具，你可以像这样用 CURL 获得手册:
 
 ```bash
 curl cheat.sh/uptime
 ```
 
-Fetching cheatsheet for sed
+获取 sed 的手册
 
-So instead of installing the cheatsheets on your machine, you are fetching the information for only the command you need. You can visit [cheat.sh](https://cheat.sh/) and use it on your browser as well.
+因此，你不是在你的机器上安装手册，而是只为你需要的命令获取信息。你可以访问 [cheat.sh](https://cheat.sh/)，也可以在你的浏览器上使用它
 
 Here is how the output of the above command looks:
 
 ![Cheatsheet output for uptime command](https://www.freecodecamp.org/news/content/images/2022/08/Image-Pasted-at-2022-8-19-13-56.png)
 
-Cheatsheet output for uptime command
+下面是上述命令的输出情况
 
-You will find a lot of examples in the [codebase](https://github.com/cheat/cheat).
+你会在 [codebase](https://github.com/cheat/cheat) 中找到很多的例子。
 
 ## How to Use Git Open
 
-I often need to open the GitHub repository of the project I'm working on in the browser. It may be to check for comment updates on the Pull Request I raised, change repository settings, or just about anything that will require the GitHub repository page.
+我经常需要在浏览器中打开我正在做的项目的 GitHub 仓库。这可能是为了检查我提出的 Pull Request 的评论更新，改变仓库的设置，或者任何需要 GitHub 仓库页面的事情。
 
-Well, we have a utility even for this!
+好吧，我们甚至有一个实用的工具来解决这个问题!
 
-Running `git open` will open your current working repository on your browser. By default, it opens the remote page for the branch you are on. You can even go ahead and create an alias for the commands to avoid typing the whole thing.
+运行 `git open` 会在你的浏览器上打开你当前的工作仓库。默认情况下，它打开的是你所在分支的远程页面。你甚至可以为这些命令创建一个别名，以避免输入全部内容。
 
-Here are some of alias ideas for you:
+这里有一些别名设置供你参考（译者注：golang 开发者要改成别的）:
 
 ```bash
 alias go="git open"
 alias blog="git open https://github.com/<username>/blog <branch>"
 ```
 
-opening remote Github repository using zsh alias
+使用 zsh 别名打开远程 Github 资源库
 
-Check out Git Open on Github [here](https://github.com/paulirish/git-open).
+在 Github 上查看 Git Open [这里](https://github.com/paulirish/git-open)。
 
 ## How to Use Bat
 
-We have all done `cat`, right? Bat is just that but has syntax highlighting, nice formatting and styling options, and git diff support. It is very versatile, integrates easily with other tools, and provides custom theming options as well.
+我们都使用过`cat`，对吗？Bat 就是这样，但它有语法高亮，漂亮的格式化和风格化选项，并支持 git diff。它非常通用，很容易与其他工具集成，并提供自定义主题选项。
 
-Let's a take a look. This is our express server file using `cat`:
+让我们来看看。这是我们使用 `cat` 的 Express 服务器文件:
 
 ![output of cat command](https://www.freecodecamp.org/news/content/images/2022/08/Image-Pasted-at-2022-8-19-16-26.png)
 
-output of cat command
+cat 命令的输出
 
-The above output has no syntax highlighting which decreases the readability of the code. Let's do the same using `bat`:
+上面的输出没有语法高亮，降低了代码的可读性。让我们用`bat`做同样的事情:
 
 ![output of bat command](https://www.freecodecamp.org/news/content/images/2022/08/Image-Pasted-at-2022-8-19-16-27.png)
 
-output of bat command
+bat 命令的输出
 
-This is clearly more readable. It has the appropriate syntax highlighting automatically applied (without any config), provides the file name, and line numbers.
+这显然更具可读性。它自动应用了适当的语法高亮（无需任何配置），提供了文件名和行号。
 
-Feel free to start using it [here](https://github.com/sharkdp/bat).
+请随意开始使用它[这里](https://github.com/sharkdp/bat)。
 
 ## How to Use Jq
 

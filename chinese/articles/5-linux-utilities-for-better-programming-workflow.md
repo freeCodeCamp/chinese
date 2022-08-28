@@ -110,7 +110,7 @@ bat 命令的输出
 
 ## How to Use Jq
 
-Jq is a command-line processor for JSON. You can slice and dice your JSON, perform projection to only show certain fields, and extract only the required information from a (huge) JSON. No more overwhelming the terminal output.
+Jq 是一个 JSON 的命令行处理工具。你可以对你的 JSON 进行切片和切块，进行投影以只显示某些字段，并从（巨大的）JSON 中只提取所需的信息。不再有满屏的终端输出了。
 
 ```javascript
 [
@@ -120,15 +120,15 @@ Jq is a command-line processor for JSON. You can slice and dice your JSON, perfo
 ]
 ```
 
-Sample input array
+输入数组样本
 
-Accessing a key from an array looks like this:
+从一个数组中访问一个键看起来像这样:
 
-```
+```shell
 jq '.[0] | { value }'
 ```
 
-We are asking for the first element in the array and projecting only the `value` field:
+我们要求的是数组中的第一个元素，并且只获取 `value` 字段:
 
 ```javascript
 {
@@ -136,18 +136,18 @@ We are asking for the first element in the array and projecting only the `value`
 }
 ```
 
-To learn more, head over to their [official tutorial](https://stedolan.github.io/jq/tutorial/).
+要了解更多，请前往他们的 [官方教程](https://stedolan.github.io/jq/tutorial/)。
 
-They also have a handy online playground. I have created a snippet [here](https://jqplay.org/s/E2-xscbiHba). Feel free to tweak it and play around.
+他们也有一个方便的在线网站。我已经创建了一个片段[这里](https://jqplay.org/s/E2-xscbiHba)。你可以自由地调整它，玩一玩。
 
-You can even take it a step further with [jid](https://github.com/simeji/jid). It is an interactive JSON digger that leverages Jq. It provides you very convenient suggestions and an auto-complete feature.
+你甚至可以用 [jid](https://github.com/simeji/jid) 更进一步。它是一个利用 Jq 的交互式 JSON 提取器。它为你提供非常方便的建议和自动完成功能。
 
-## Conclusion
+## 总结
 
-These were some of the utilities that expanded the horizon for me and made me realise that there is always a better way to do things. You just need to keep Googling. Starting with "how to do X" and "better alternatives to X".
+这些都是一些扩大我视野的实用工具，使我认识到总有更好的方法来做事情。你只需要不断上网搜索。从 `如何做X(how to do X)` 和 `X的更好替代品(better alternatives to X)` 开始。
 
-I use these utilities quite often in my daily programming workflow. I hope at least one of them will be useful to you.
+在我的日常编程工作流程中，我经常使用这些实用工具。我希望其中至少有一个会对你有用。
 
-I would love to know what utilities are crucial to your daily workflow – do you use any of the ones mentioned in this article?
+我很想知道哪些工具对你的日常工作流程至关重要,你是否使用本文中提到的任何工具？
 
-Liked the article? [Get biweekly improvement pills on backend web development](https://rrawat.com/newsletter) 💌.
+喜欢这篇文章吗？[获得关于后端网络开发的双周改进丸](https://rrawat.com/newsletter) 💌。

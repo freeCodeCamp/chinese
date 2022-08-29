@@ -1,26 +1,27 @@
 > -  原文地址：[Markdown Cheat Sheet – How to Write Articles in Markdown Language](https://www.freecodecamp.org/news/markdown-cheatsheet/)
 > -  原文作者：[Kealan Parr](https://www.freecodecamp.org/news/author/kealan/)
-> -  译者：
+> -  译者：HeZean
 > -  校对者：
 
-![Markdown Cheat Sheet – How to Write Articles in Markdown Language](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Markdown-cheatsheet.png)
+![Markdown 手册 —— 如何用 Markdown 语言写文章](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Markdown-cheatsheet.png)
 
-As a developer, you have likely heard of [HTML](https://en.wikipedia.org/wiki/HTML), which stands for **H**yper**T**ext **M**arkup **L**anguage.
+作为一名开发者，你很可能听说过 [HTML](https://baike.baidu.com/item/HTML/97049)，即超文本标记语言（**H**yper**T**ext **M**arkup **L**anguage）。
 
-And you may know that HTML is a language used to create websites – but what does **markup** mean?
+你可能还知道 HTML 是一种用于创建网站的语言 —— 但**标记**是什么意思？
 
-[Markup languages](https://techterms.com/definition/markup_language) are languages that use tags to define different elements within a text document. Most people are familiar with **Rich Text Editors** – programs that allow users to add extra formatting, images, and links to their documents.
+[标记语言](https://techterms.com/definition/markup_language)是使用标签来定义文本文件中不同元素的语言。大多数人都熟悉的**富文本编辑器**就是一种允许用户在他们的文件中添加额外的格式、图像和链接的程序。
 
-![image-30](https://www.freecodecamp.org/news/content/images/2022/08/image-30.png)
+<figure class="kg-card kg-card-image kg-card-hascaption">
+  <img src="https://www.freecodecamp.org/news/content/images/2022/08/image-30.png" class="kg-image" alt="Microsoft Word（一种富文本编辑器）的用户界面截图。">
+  <figcaption>Microsoft Word（一种富文本编辑器）的用户界面截图。</figcaption>
+</figure>
 
-A screenshot of the GUI of the Microsoft Word software (a Rich Text Editor).
+标记语言使用如下格式的表情标签：
 
-But markup languages use tags like:
+-   \<p\> \<\/p\> 是一对段落标签。
+-   \<b\> \<\/b\> 加粗标签内的文字.
 
--   <p> </p>  is a paragraph tag.
--   <b> </b> makes bold text.
-
-There are quite a few markup languages like [XML](https://en.wikipedia.org/wiki/XML), [HTML](https://en.wikipedia.org/wiki/HTML), and the topic of this article: **Markdown**.
+标记语言家族有许多成员，比如[XML](https://baike.baidu.com/item/%E5%8F%AF%E6%89%A9%E5%B1%95%E6%A0%87%E8%AE%B0%E8%AF%AD%E8%A8%80/2885849)、[HTML](https://baike.baidu.com/item/HTML/97049)，以及本文的主题：**Markdown**。
 
 Developers generally use markdown for documentation – and it is often included in most repositories. For example, I used markdown to write this article on freeCodeCamp.
 

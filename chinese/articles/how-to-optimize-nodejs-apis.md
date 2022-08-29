@@ -1,6 +1,6 @@
 > -  原文地址：[How to Optimize Your Node.js API](https://www.freecodecamp.org/news/how-to-optimize-nodejs-apis/)
 > -  原文作者：[Kayode Adeniyi](https://www.freecodecamp.org/news/author/mkbadeniyi/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Optimize Your Node.js API](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-ann-marie-kennon-1296000.jpg)

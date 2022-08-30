@@ -5,37 +5,37 @@
 
 ![How to Learn Serverless AWS by Building 7 Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-christina-morillo-1181316.jpg)
 
-Following tutorials when you start learning serverless is a good first step. But to really get better, you need to build your own projects.
+当你开始学习 `serverless` 时，遵循教程是一个很好的第一步。但要想真正进步，你需要建立自己的项目。
 
-The problem is that coming up with ideas that are realistic but help you grow is hard.
+问题是，想出一些既现实又能帮助你成长的想法是很难的。
 
-To help you out, I’ve come up with 7 awesome project ideas to progressively help you become a better serverless dev.
+为了帮助你，我想出了 7 个很棒的项目想法，以逐步帮助你成为一个更好的 `serverless` 开发人员。
 
-If you’re new to working with Serverless, then start with the first projects. If you’ve built APIs and Dynamo with Serverless before, then pick the projects that cover the topics you want to learn most.
+如果你是 `serverless` 工作的新手，那么就从第一个项目开始。如果你以前用 Serverless 构建过 API 和 Dynamo，那么就挑选那些涵盖你最想学习的主题的项目。
 
-I've also made this into a video if you want to watch and follow along:
+如果你想观看和跟随，我还把它做成了视频:
 
 # Combination API Project
 
-This project is designed to get you familiar with deploying an API with Lambda. You'll also practice calling other APIs and merging that data.
+这个项目是为了让你熟悉用 Lambda 部署 API。你还将练习调用其他 API 并合并这些数据。
 
-There are lots of logic you could use for this, but here are two examples:
+有很多逻辑可以用于此，但这里有两个例子:
 
-- Get Steam game deals, converted into your local currency
-- Get news translated into your local language
+- 获取 Steam 游戏交易，并转换为你的本地货币
+- 获得新闻翻译成你当地语言
 
 ![ch2.drawio](https://completecoding.io/wp-content/uploads/2022/08/ch2.drawio.png)
 
-The architecture for this one is simple but that is exactly what you want as your first project. The idea is that the API you create will take some parameters, so look something like this
+这个项目的架构很简单，但这作为你的第一个项目。我们的想法是，你创建的 API 将接收一些参数，所以看起来像这样
 
-```
+```shell
 https://apiurl.amazonaws.com/dev/steamdeals?currency=EUR
 https://apiurl.amazonaws.com/dev/news/fr
 ```
 
-The logic is all going to be written into the Lambda. I'm not going to write the full code but here's some pseudo-code:
+逻辑将全部写进 Lambda 中。我不打算写完整的代码，但这里有一些伪代码:
 
-```
+```JavaScript
 const handler = (event: APIGatewayProxyEvent) => {
     // get the path or query string parameter value
 
@@ -51,23 +51,22 @@ const handler = (event: APIGatewayProxyEvent) => {
 } 
 ```
 
-If you need some free and public APIs to use, then here's a massive doc of them to choose from [https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis).
+如果你需要一些免费和公共的 API 来使用，那么 [https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis) ，这里有一个庞大的文档供你选择.
 
-Then building this try using the Serverless Framework or AWS CDK. These tools will make you far more valuable as a developer.
+然后构建这个尝试使用无服务器框架或 AWS CDK。这些工具将使你作为一个开发者的价值大大增加。
 
-To get started with the Serverless Framework [check out this video](https://youtu.be/HhgXwKFUzT8).
+要开始使用 Serverless 框架 [查看此视频](https://youtu.be/HhgXwKFUzT8).
 
 # URL Shortener Project
 
-This project will get you deploying your first DynamoDB table, then writing and reading data from it.
+这个项目将让你部署你的第一个 DynamoDB 表，然后从表中写入和读取数据。
 
 ![ch3-url-shortener.drawio](https://www.freecodecamp.org/news/content/images/2022/08/ch3-url-shortener.drawio.png)
 
-There are going to be two API endpoints. One to add a new URL to the shortener, one to give a shortened URL and get the original.
+将会有两个 API endpoints（端点）。一个是向缩短器添加新的 URL，一个是提供缩短后的 URL 并获得原始 URL。
+下面是这两个 API 的伪代码:
 
-Here's the pseudo-code for the two endpoints:
-
-```
+```javascript
 // Adding a new URL
 const handler = (event: APIGatewayProxyEvent) => {
     // get their original url (body of the event)
@@ -80,9 +79,9 @@ const handler = (event: APIGatewayProxyEvent) => {
 }
 ```
 
-To get the `apiURL` we can pass it in as an environment variable. If you are using the Serverless Framework you can do this by adding this to the environment section of your config:
+为了获得 `apiURL`，我们可以把它作为一个环境变量(environment variable)传入。如果你使用的是 Serverless 框架，你可以通过在配置的环境部分添加以下内容来实现这一点:
 
-```
+```json
 apiUrl: {
   "Fn::Join": [
     "",
@@ -95,7 +94,7 @@ apiUrl: {
 },
 ```
 
-```
+```JavaScript
 // Getting a URL by code
 const handler = (event: APIGatewayProxyEvent) => {
     // get code from the url path
@@ -106,37 +105,37 @@ const handler = (event: APIGatewayProxyEvent) => {
 }
 ```
 
-You can take this one step further by changing the status code of the `getUrl` code to return a 301 - permanent redirect. You'll need to add some extra headers but this will automatically redirect the user to the desired page.
+你可以更进一步，改变 `getUrl` 代码的状态代码，返回 301(永久重定向状态码)。你需要添加一些额外的消息头（headers），但这将自动将用户重定向到所需页面。
 
 # Reminder App Project
 
-This project will teach you about Secondary Indexes in Dynamo as well as Dynamo Time-To-Live. You will also get to try either email automation with Amazon Simple Email Service (SES) or text messaging with Simple Notification Service (SNS).
+这个项目将教会你 Dynamo 的二级索引以及 Dynamo 的 Time-To-Live。你还可以尝试用亚马逊简单电子邮件服务（SES）实现电子邮件自动化，或者用简单通知服务（SNS）实现文本消息传递。
 
-You could also build a simple front end app and learn about hosting it in S3 and using CloudFront to distribute it.
+你还可以建立一个简单的前端应用程序，并学习在 S3 中托管它和使用 CloudFront 来分发它。
 
 ![ch4-reminder-app.drawio](https://www.freecodecamp.org/news/content/images/2022/08/ch4-reminder-app.drawio.png)
 
-The idea for this app is that you can post a new reminder to the first API endpoint. This will write a new record in DynamoDB, but you will have added a global secondary index (GSI) to the table. This means that you can get a reminder by id, or you can query based on the user.
+这个应用程序的想法是，你可以向第一个 API 发送一个新的提醒。这将在 DynamoDB 中写入一条新的记录，但你将为该表添加一个全局二级索引（GSI）。这意味着你可以通过 id 获得提醒，也可以基于用户进行查询。
 
-It will also have a Time-To-Live (TTL) which will allow you to trigger a Lambda at the time of the reminder. The code for set reminders will looks pretty similar to the previous project.
+它还将有一个 存活时间（TTL），这将允许你在提醒的时候触发一个 Lambda。设置提醒的代码看起来与之前的项目很相似。
 
-The table will look something like this:
+该表将看起来像这样:
 
 | id | userId | TTL | notificationType | message |
 | --- | --- | --- | --- | --- |
 | 123 | [test@gmail.com](mailto:test@gmail.com) | 1648277828 | email | Publish next youtube video |
 | 897 | 447113350882 | 1648842828 | sms | Get More MILK |
 
-The Time-To-Live (TTL) tells dynamo that once the time reaches this date, delete the record from Dynamo.
+存活时间（TTL）告诉 dynamo，一旦时间达到这个日期，就从 Dynamo 中删除该记录。
 
-Two things to note with TTL:
+关于 TTL，有两件事需要注意:
 
-- Make sure that this is the Unix timestamp for the deletion date – but in seconds. `new Date('october 20 2022').getTime()` will be in milliseconds, so just divide by 1000.
-- The record will be deleted within a 15-minute window after your TTL so don't panic if it's been 5 minutes and the record hasn't been deleted yet.
+- 确保这是删除日期的 Unix 时间戳，但以秒为单位。`new Date('october 20 2022').getTime()`的单位是毫秒，所以只需除以 1000。
+- 记录将在你的 TTL 之后的 15 分钟内被删除，所以如果已经过了 5 分钟，记录还没有被删除，也不要惊慌。
 
-You can then set up a second Lambda which is triggered any time a record is deleted from Dynamo. This then sends the message to either their email or phone.
+然后，你可以设置第二个 Lambda，当记录从 Dynamo 被删除时，它会被触发。然后将信息发送到他们的电子邮件或电话。
 
-```
+```javascript
 // Send reminder
 const handler = async (event: DynamoDBStreamEvent) => {
     // get the list of deleted records
@@ -146,9 +145,9 @@ const handler = async (event: DynamoDBStreamEvent) => {
 }
 ```
 
-The second API endpoint will be to get all of the reminders for a user. Make sure you've set up a GSI with a partition key of `userId` and a sort key of `TTL`.
+第二个 API 将是获取一个用户的所有提醒信息。确保你已经设置了一个 GSI （全局二级索引），分区键（partition key）为`userId`，排序键（sort key）为`TTL`。
 
-```
+```javascript
 // Get My Reminders
 const handler = (event: APIGatewayProxyEvent) => {
     // get the userId from request
@@ -163,9 +162,9 @@ const handler = (event: APIGatewayProxyEvent) => {
 }
 ```
 
-For the front end you can write a simple web app with two sections: create new reminder, and list my reminders. This can be in React, Vue, Angular, or even raw HTML, CSS, and JavaScript.
+对于前端，你可以写一个简单的网络应用，包括两个部分：创建新的提醒，以及列出我的提醒。这可以是 React、Vue、Angular，甚至是原始 HTML、CSS 和 JavaScript。
 
-Once you have the app you can use `serverless-s3-sync` to automatically push the code into S3 (which you create in Serverless).
+一旦你有了这个应用，你可以使用 `serverless-s3-sync` 来自动推送代码到 S3（你在 Serverless 中创建的）。
 
 # Live Chat App Project
 

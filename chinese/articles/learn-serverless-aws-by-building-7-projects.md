@@ -168,28 +168,28 @@ const handler = (event: APIGatewayProxyEvent) => {
 
 # Live Chat App Project
 
-This project will teach you how to build WebSockets. A user can either create a new 'room' or join an existing room. Any messages sent are sent to everyone connected to the room.
+这个项目将教你如何建立 WebSockets。用户可以创建一个新的房间或加入一个现有的房间。任何发送的信息都会被发送到连接到房间的所有人那里。
 
 ![ch5-live-chat.drawio](https://www.freecodecamp.org/news/content/images/2022/08/ch5-live-chat.drawio.png)
 
-WebSockets work slightly differently than regular APIs. Instead of having multiple endpoints, you have one endpoint and different message types.
+WebSockets 的工作方式与常规 API 略有不同。你不是有多个端点(endpoints)，而是有一个端点和不同的消息类型。
 
-There are some default message types and some custom ones:
+有一些默认的消息类型和一些自定义的消息类型:
 
 - connectToRoom – Custom
 - createRoom – Custom
 - onMessage – Custom
 - disconnect – Default
 
-When a user connects to the WebSocket, they can either send a `connectToRoom` or `createRoom` message. Both of these will create a record in Dynamo with the user's WebSocket `connectionId` and the `roomId`. As we did before, we'll have a GSI in Dynamo so we can later query to get all users for a `roomId`.
+当用户连接到 WebSocket 时，他们可以发送一个 `connectToRoom` 或 `createRoom` 消息。这两种方式都将在 Dynamo 中创建一条记录，其中包含用户的 WebSocket `connectionId`和 `roomId`。正如我们之前所做的，我们将在 Dynamo 中建立一个 GSI，这样我们以后就可以通过查询来获得所有用户的`roomId`。
 
-The code for `connectToRoom` and `createRoom` will look very similar to previous "writing data to Dynamo" lambdas.
+`connectToRoom`和`createRoom`的代码将与以前的 `向Dynamo写数据` 的 lambdas 非常相似。
 
-You may want to check in `connectToRoom` that the room does exist first. You can do that by querying for all users by roomId. If there are no users in the room then that means they're trying to connect to a room that doesn't exist anymore.
+你可能想在 `connectToRoom` 中首先检查房间是否存在。你可以通过查询所有用户的 roomId 来做到这一点。如果房间里没有用户，那就意味着他们正试图连接到一个已经不存在的房间。
 
-Now a user is in a room they can send a message. Here's the pseudo-code for that Lambda:
+现在一个用户在一个房间里，他们可以发送一个消息。以下是该 Lambda 的伪代码:
 
-```
+```JavaScript
 // onMessage
 const handler = (event: WebsocketMessageEvent) => {
     // get the user's connectionId
@@ -204,19 +204,19 @@ const handler = (event: WebsocketMessageEvent) => {
 }
 ```
 
-Finally, there is the onDisconnect which will be a simple Lambda that just deletes the user's record from Dynamo.
+最后是 onDisconnect，这将是一个简单的 Lambda，只是将用户的记录从 Dynamo 中删除。
 
 # Idea Voting App Project
 
-This project will teach you to design and build more advanced Dynamo tables and also work with Cognito for authentication. You should also build a simple front end for this to learn how to integrate Cognito into web apps.
+这个项目将教你设计和建立更高级的 Dynamo 表，同时与 Cognito 合作进行认证。你还应该为此建立一个简单的前端，以学习如何将 Cognito 集成到 Web 应用中。
 
-The tool allows you to ask your community for ideas and find out which of those are most popular.
+这个工具允许你向你的社区提出意见，并找出其中最受欢迎的。
 
 ![ch6-idea-voting-app.drawio](https://www.freecodecamp.org/news/content/images/2022/08/ch6-idea-voting-app.drawio.png)
 
-This starts with all users needing to sign up to your application. We use Cognito for this and do it so that we can ensure that each person can only vote once.
+这要从所有用户需要在你的应用程序开始时注册。我们使用 Cognito，这样做是为了确保每个人只能投票一次。
 
-You'll need to then create a few endpoints:
+然后你需要创建几个 API 端点:
 
 - create a board
 - add an idea to a board
@@ -225,7 +225,7 @@ You'll need to then create a few endpoints:
 
 ### Create a board
 
-The first API endpoint that we need is one to create a new board for ideas. Anyone can create a board and the record in Dynamo is really simple. Just a `boardId` and then some info about the board owner, maybe a title and description.
+我们需要的第一个 API 端点是用来创建一个新的创意板。任何人都可以创建一个论坛，Dynamo 中的记录非常简单。只有一个 "boardId"，然后是一些关于板块所有者的信息，也许是一个标题和描述。
 
 | boardId | owner | title | description |
 | --- | --- | --- | --- |
@@ -233,35 +233,35 @@ The first API endpoint that we need is one to create a new board for ideas. Anyo
 
 ### Add ideas to a board
 
-Next we need to be able to add ideas to a board. This will be another API endpoint and Lambda. With the idea database record we need to be a bit smarter as we need to be able to directly reference an idea, but also get all ideas for a board.
+接下来，我们需要能够将想法添加到一个板块（board）。这将是另一个 API 端点和 Lambda。对于想法数据库的记录，我们需要更聪明一些，因为我们需要能够直接引用一个想法，但也要获得一个板块(board)的所有想法。
 
-To do this we have a schema like this. `pk` is a partition key and `sk` is a sort key, which are both needed for querying on DynamoDB.
+为了做到这一点，我们有一个这样的模式。`pk`是一个分区键，`sk`是一个排序键，在 DynamoDB 上查询时都需要这两个键。
 
 | id | pk | sk | idea | owner |
 | --- | --- | --- | --- | --- |
 | id | boardId | ideaId | the idea | userId |
 
-With the `id` we can directly reference the idea, but we can also query on the record. We can get all ideas for board `1234` by querying for `pk = 1234`.
+通过 "id"，我们可以直接引用这个想法，但我们也可以查询这个记录。我们可以通过查询`pk = 1234` 来获得董事会`1234` 的所有想法。
 
 ### Add vote to the idea
 
-Now that we have ideas on the board, we need our users to vote for them. This will be a new API endpoint and Lambda. This Lambda has a bit more work to do than the other two. First, we'll look at the schema for this record.
+现在我们有了想法，我们需要我们的用户为他们投票。这将是一个新的 API 端点和 Lambda。这个 Lambda 比其他两个有更多的工作要做。首先，我们要看一下这个记录的模式。
 
 | pk | sk | pk2 | sk2 |
 | --- | --- | --- | --- |
 | ideaId | userId | userId | ideaId |
 
-This may look strange at first but I'll explain why we want to structure it like this.
+这初看起来很奇怪，但我会解释为什么我们要这样构建它。
 
-For a given idea, we want to know how many votes it has. We can find that out by querying on  `pk = ideaId` which will return all votes for the idea.
+对于一个给定的想法，我们想知道它有多少票。我们可以通过查询 `pk = ideaId` 来了解，这将返回该想法的所有投票。
 
-When adding a vote we want to check that the user hasn't already voted for the idea. We can do that by querying `pk = ideaId && sk = userId`. If we find a record that matches, we know they've already voted for this idea. If not then we can add the `vote` record for this user and idea.
+当添加投票时，我们要检查用户是否已经为该想法投票。我们可以通过查询`pk = ideaId && sk = userId` 来做到这一点。如果我们找到一个匹配的记录，我们就知道他们已经为这个想法投了票。如果没有，我们就可以为这个用户和想法添加`投票`记录。
 
 ### Get Board Details
 
-We can now write a lambda that will query the data we have:
+我们现在可以写一个 lambda，来查询我们所拥有的数据:
 
-```
+```JavaScript
 export const handler = async (event: APIGatewayProxyEvent) => {
     // get boardId from the request
     // query all ideas on the board
@@ -274,69 +274,69 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 ### Get votes for a user
 
-Lastly, we want to be able to show all votes for a given user. We can't query where `sk = userId` as you always need a partition key when querying DynamoDB. Therefore we created a second partition key (`pk2`) which contains the userId. Now we can query `pk2 = userId` to get all ideas that a user has voted for.
+最后，我们希望能够显示一个给定用户的所有投票。我们不能查询`sk = userId`，因为在查询 DynamoDB 时你总是需要一个分区键。因此，我们创建了第二个分区键(`pk2`)，其中包含了 userId。现在我们可以查询`pk2 = userId`来获得用户投票的所有想法。
 
-This pattern of having a second GSI where the PK and SK are switched is very common. It allows you to have a many-to-many relationship. You can query for all of B that are connected to a specific A and all of A that are connected to a specific B. This is often called a junction table.
+这种拥有第二个 GSI 的模式非常普遍，其中 PK 和 SK 是对调的。它允许你有一个多对多的关系。你可以查询所有连接到特定 A 的 B 和所有连接到特定 B 的 A。
 
 ## Messaging App Project
 
-This project will teach you to about Dynamo compound keys and give you more practice with websockets and Cognito.
+这个项目将教你了解 Dynamo 的复合键，并给你更多关于 websockets 和 Cognito 的练习。
 
-This app allows users to sign up, request to join a room, and then see all messages that have been sent in that room. The owner of a room decides whether to let someone join the room.
+这个应用程序允许用户注册，请求加入一个房间，然后查看该房间内已发送的所有信息。一个房间的主人决定是否让某人加入该房间。
 
 ![ch7-messaging-app-api.drawio](https://www.freecodecamp.org/news/content/images/2022/08/ch7-messaging-app-api.drawio.png)
 
-The architecture will start by looking a lot like the live chat application – with a WebSocket connection with Lambdas for `onConnect, onDisconect, create`Group, `joinGroup, listMyGroups handleJoinGroupRequest` and `sendMessage`.
+架构开始时看起来很像即时聊天应用程序--有一个 WebSocket 连接，有`onConnect, onDisconect, create` Group, `joinGroup, listMyGroups handleJoinGroupRequest`和`sendMessage`的 Lambda。
 
-Before we get onto the Lambda code, we want to add Cognito to the application so we can have users signup. This will be used later when a user requests access to a group.
+在我们开始 Lambda 代码之前，我们要把 Cognito 添加到应用程序中，这样我们就可以让用户注册了。这将在以后用户请求访问某个组时使用。
 
-The `createGroup` Lambda will be almost identical to the live chat solution. It just creates a simple `group` record.
+`createGroup` Lambda 与即时聊天解决方案几乎相同。它只是创建一个简单的 `群组(group)`记录。
 
 ### Websocket Connect / Disconnect
 
-Now when a user logs in and connects to the WebSocket, we can create an onConnection Lambda. This will get the userId and verify their Cognito user token. This token will easily give us the userId and userName.
+现在，当一个用户登录并连接到 WebSocket 时，我们可以创建一个 onConnection Lambda。这将获得用户身份并验证他们的 Cognito 用户令牌。这个令牌将很容易给我们提供 userId 和 userName。
 
-If they don't pass a token or the token is invalid (or has expired) then we can kill the websocket, stopping them from doing anything else without a valid token.
+如果他们没有传递令牌(token)，或者令牌无效（或者已经过期），那么我们可以杀死 websocket，阻止他们在没有有效令牌的情况下做任何事情。
 
-If the token is valid then we can store a simple connection record. This will allow us to send messages back down the websocket later.
+如果令牌是有效的，那么我们可以存储一个简单的连接记录。这将使我们能够在以后向 websocket 发送消息。
 
-Just remember to delete this record when the user disconnects from the WebSocket. We can use the default `$disconnect` action to trigger an `onDisconnect` lambda.
+只需记住在用户断开与 WebSocket 的连接时删除该记录。我们可以使用默认的 `$disconnect` 动作来触发`onDisconnect` lambda。
 
 ### Create a group
 
-The first thing that someone needs to be able to do is to create a group that they can then invite their friends to.
+有人需要做的第一件事是创建一个小组，然后邀请他们的朋友加入。
 
-This will involve creating two records in Dynamo. The first is just a record of the group. This will include the group ID, group name, and who is the group owner.
+这将涉及在 Dynamo 中创建两条记录。第一条是小组的记录。这将包括群组 ID、群组名称，以及谁是群组所有者。
 
-The second is going to be a group membership record. This will be saying that this user is part of this group.
+第二条将是一个组的成员记录。这将是说这个用户是这个组的一部分。
 
 | pk | sk | pk2 | sk2 | userName | groupName |
 | --- | --- | --- | --- | --- | --- |
 | groupId | user#{userId} | userId | groupId | user name | group name |
 
-This first part will allow us to query on `pk = groupId and sk startsWith('user')` to get all users for the group. That will be used in the `sendMessage` Lambda to get all the users to send the WebSocket message to.
+这第一部分将允许我们查询 `pk = groupId and sk startsWith('user')` 以获得该组的所有用户。这将用于 `sendMessage` Lambda，以获得所有的用户来发送 WebSocket 消息。
 
-The second parts (PK2, SK2) are added to allow us to get all groups that a user is authorised for by querying where `PK2 = userId`. This is used when we need to get a list of all of the user's groups.
+添加第二部分（PK2，SK2）是为了让我们通过查询 `PK2 = userId` 来获得用户授权的所有组。这在我们需要获得所有用户组的列表时使用。
 
 ### Joining a group
 
-The `join` Group request will now create a record in Dynamo for an `access request`. This will not give the user access to the group but will allow the owner of the group to review the access requests.
+现在，`加入(join)` 组请求将在 Dynamo 中创建一个 `访问请求(access request)` 的记录。这不会让用户访问该组，但将允许该组的所有者审查访问请求。
 
-These records will be the first time that we're going to use compound keys. This is taking the sort key to the next level and the record will look like this:
+这些记录将是我们第一次使用复合键。这是将排序键提升到一个新的层次，记录将看起来像这样:
 
 | pk | sk |
 | --- | --- |
 | groupId | joinRequest#{userId} |
 
-This enables us to query where `pk = groupId and sk startsWith('joinRequest')`. This will return all of the access requests for that group. When someone makes this request we can first check that they are the owner of the group.
+这使我们能够查询 `pk = groupId and sk startsWith('joinRequest')` 的地方。这将返回该组的所有访问请求。当有人提出这个请求时，我们可以首先检查他们是否是该组的所有者。
 
-The group owner then has two options – accept or reject. If the owner rejects the user we can just delete the access request record. If they accept the user then we need to add an `authorised user`. This will require a new record to Dynamo.
+然后组主有两个选择——接受（accept）或拒绝（reject）。如果所有者拒绝该用户，我们可以直接删除访问请求记录。如果他们接受该用户，我们需要添加一个 `授权用户（authorised user）`。这将需要向 Dynamo 添加一条新的记录。
 
 ### Send Message
 
-Now we're onto the core of the messaging app – sending and storing messages.
+现在我们进入了消息应用的核心,发送和存储消息。
 
-In the `sendMessage` WebSocket Lambda, we can query for all users in the group and send the message to all current connections. We also need to store the message in Dynamo.
+在 `sendMessage` WebSocket Lambda 中，我们可以查询组内的所有用户，并向所有当前连接发送消息。我们还需要在 Dynamo 中存储消息。
 
 | pk | sk | message | user |
 | --- | --- | --- | --- |
@@ -344,67 +344,67 @@ In the `sendMessage` WebSocket Lambda, we can query for all users in the group a
 
 ### Get Previous Messages
 
-When a user logs in they need to be able to get the messages they missed whilst offline. With the message data structured this way, we can query where:
+当用户登录时，他们需要能够得到他们在离线时错过的信息。有了这样的信息数据结构，我们可以查询到:
 
 `pk = groupId and sk > 'message#{ timestamp for yesterday }'`
 
-This will return all messages created since yesterday.
+这将返回从昨天开始创建的所有消息。
 
-We could also allow them to get older messages by passing up the last message they have. This will allow us to get the next chuck of messages. This will allow us to create an infinite up scroll on the message history.
+我们也可以让他们通过传递他们的最后一条消息来获得更早的消息。这将使我们能够得到下一条信息。这将使我们能够在信息历史上创建一个无限的向上滚动。
 
 ## Event Driven E-Commerce System Project
 
-This project will teach you about Event Bridge, plus give you some extra practice with DynamoDB Table design and services like SES and SNS for email and text.
+这个项目将教会你有关事件桥的知识，并给你一些有关 DynamoDB 表设计和服务的额外练习，如 SES 和 SNS 的电子邮件和文本。
 
-This system will have products and filtering, carts and orders as you would expect. The key here is that order placement, order status changes, and delivery updates will all be handled through Event Bridge.
+这个系统将有产品和过滤，购物车和订单，正如你所期望的。这里的关键是，订单的下达、订单状态的改变和交付的更新都将通过 Event Bridge 来处理。
 
 ![ch8-event-ecomerce.drawio](https://www.freecodecamp.org/news/content/images/2022/08/ch8-event-ecomerce.drawio.png)
 
 ### Storing Products
 
-To start we need to store products. We can structure our sort keys in a way to allow a level of hierarchy for our products.
+首先，我们需要存储产品。我们可以用一种方式来构造我们的排序键，以便让我们的产品有一个层次的划分。
 
 | id | pk | sk | title | description | ... |
 | --- | --- | --- | --- | --- | --- |
 | productId | clothing | mens#tops#{productId} | Next Slimfit T-Shirt | ... | ... |
 | productId | clothing | womens#trousers#{productId} | Levi's Jeans | ... | ... |
 
-This allows us to query for `pk = clothing and sk beginsWith mens` to get all men's clothes or for `pk = clothing and sk beginsWith womens#trousers` to get all women's trousers.
+这使得我们可以查询`pk = clothing and sk beginsWith mens`以获得所有男士的衣服，或者查询`pk = clothing and sk beginsWith womens#trousers`以获得所有女士的裤子。
 
 ### Placing an Order
 
-The next part is being able to place an order. We're not going to try and take payment, just add an order record to the dynamoDB table.
+接下来的部分是能够下订单。我们不打算尝试付款，只是向 dynamoDB 表添加一个订单记录。
 
 ### Event Bridge
 
-The big difference here is that we're going to start using Event Bridge. This is a tool which allows us to have events which can trigger multiple lambdas. This is great as we can add a new listener without having to change the upfront code.
+这里最大的区别是，我们将开始使用 Event Bridge。这是一个工具，它允许我们拥有可以触发多个 lambdas 的事件。这很好，因为我们可以添加一个新的监听器，而不需要改变前期的代码。
 
 ### Order Created
 
-We're going to have two lambdas that listen for the `orderCreated` event. The first is going to take the order data and send it to a warehouse API to get packed. The second is going to send the user an order confirmation email
+我们将有两个监听 "orderCreated "事件的 lambdas。第一个将获取订单数据，并将其发送到仓库 API 以获得包装。第二个将向用户发送一封订单确认邮件。
 
 ### Order Packed
 
-We're going to pretend that there is a real warehouse and after getting the order packing list, they packed up and got the order ready for shipping. They have a system that calls our API and changes the order status to `packed`.
+我们要假装有一个真正的仓库，在得到订单的装箱单后，他们打包，让订单准备发货。他们有一个系统调用我们的 API，并将订单状态改为`packed'。
 
-This change in the Dynamo record will trigger another Event Bridge event for `orderPacked`. This also has two listeners: one to email an update to the user, and another to email a delivery service to collect the parcel from the warehouse and deliver it to the customer.
+Dynamo 记录中的这一变化将触发另一个`orderPacked'的 Event Bridge 事件。这也有两个监听器：一个是通过电子邮件向用户发送更新信息，另一个是通过电子邮件让快递公司从仓库收取包裹并交付给客户。
 
 ### Order Shipped
 
-Similarly we're going to pretend that a delivery company took the parcel and delivered it. They call another `Order Shipped` API endpoint and that changes the status of the order in the database again.
+同样的，我们要假装一个快递公司拿了包裹并交付。他们调用另一个`Order Shipped`的 API 端点，这又改变了数据库中的订单状态。
 
-That triggers another event for `orderDelivered` and that has two listeners:
+这触发了另一个 "orderDelivered "的事件，这个事件有两个监听器:
 
-One for sending a "thank you" message to the customer.
+一个用于向客户发送 "感谢 "信息。
 
-And another one that will do something a bit different. It will take the order, remove any personal data, and store it into another DynamoDB table.
+另一个将做一些不同的事情。它将接收订单，删除任何个人数据，并将其存储到另一个 DynamoDB 表。
 
-This is something becoming increasingly common as a preparation step for a data scientist. We remove the personal data to reduce the legal issues but still allow a data scientist to do things like train a model to give you "People also bought ……" kinds of recommendations.
+这是作为数据科学家的准备步骤而变得越来越普遍的事情。我们删除个人数据，以减少法律问题，但仍然允许数据科学家做一些事情，如训练一个模型，给你 `人们也买了。。。` 之类的建议。
 
 ## What's Next
 
-If you like these project ideas but don't know where to start, then I have a full video course that will teach you how to build all of these projects.
+如果你喜欢这些项目的想法，但不知道从哪里开始，那么我有一个完整的视频课程，将教你如何建立所有这些项目。
 
-[Check out the course here](https://completecoding.mykajabi.com/7-serverless-projects).
+[在此查看该课程](https://completecoding.mykajabi.com/7-serverless-projects).
 
-You can also download a [Free PDF](https://completecoding.mykajabi.com/7-practical-project-pdf) of these projects so you can visualise your progress in your learning journey.
+你还可以下载这些项目的[免费 PDF](https://completecoding.mykajabi.com/7-practical-project-pdf)，这样你就可以在学习过程中直观地看到你的进展。

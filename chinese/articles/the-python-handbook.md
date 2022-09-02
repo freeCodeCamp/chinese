@@ -43,9 +43,9 @@ Enjoy!
 -   [Python循环](#loops-in-python)
 -   [Python类](#classes-in-python)
 -   [Python模块](#modules-in-python)
--   [The Python Standard Library](#thepythonstandardlibrary)
--   [The PEP8 Python Style Guide](#thepep8pythonstyleguide)
--   [Debugging in Python](#debugginginpython)
+-   [Python标准库](#the-python-standard-library)
+-   [Python PEP8风格指导](#the-pep8-python-style-guide)
+-   [Python代码调试](#debugging-in-python)
 -   [Variable Scope in Python](#variablescopeinpython)
 -   [How to Accept Arguments from the Command Line in Python](#howtoacceptargumentsfromthecommandlineinpython)
 -   [Lambda Functions in Python](#lambdafunctionsinpython)
@@ -2015,7 +2015,7 @@ from lib.dog import bark
 bark()
 ```
 
-## The Python Standard Library
+<h2 id="#the-python-standard-library">Python标准库</h2>
 
 Python exposes a lot of built-in functionality through its **standard library**.
 
@@ -2057,7 +2057,8 @@ sqrt(4) # 2.0
 
 We'll soon explore the most important modules individually to understand what we can do with them.
 
-## The PEP8 Python Style Guide
+
+<h2 id="the-pep8-python-style-guide">Python PEP8风格指导</h2>
 
 When you write code, you should adhere to the conventions of the programming language you use.
 
@@ -2088,7 +2089,7 @@ You can read its full content here: [https://www.python.org/dev/peps/pep-0008/](
 -   Add a blank line between methods in a class
 -   Inside functions/methods, blank lines can be used to separate related blocks of code to help readability
 
-## Debugging in Python
+<h2 id="debugging-in-python">Python代码调试</h2>
 
 Debugging is one of the best skills you can learn, as it will help you in many difficult situations.
 

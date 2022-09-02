@@ -2015,7 +2015,7 @@ from lib.dog import bark
 bark()
 ```
 
-<h2 id="#the-python-standard-library">Python标准库</h2>
+<h2 id="the-python-standard-library">Python标准库</h2>
 
 Python通过其**标准库**公开了许多内置功能。
 

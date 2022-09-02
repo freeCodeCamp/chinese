@@ -17,7 +17,7 @@
 2.  [**UX设计—— 产品效果如何**](#uxdesignhowthingswork)
 3.  [**UI设计和UX设计有何主要区别?**](#whatarethekeydifferencesbetweenuianduxdesign)
 4.  [**UI设计师和UX设计师分别做什么?**](#whatdouiuxdesignersdo)
-5.  [**将UI和UX工作合并有什么弊端?**](#whatarethedisadvantagesofacombineduiuxrole)
+5.  [**将UI和UX工作混淆有什么弊端?**](#whatarethedisadvantagesofacombineduiuxrole)
 6.  [**UI/UX设计师如何协作?**](#howdouiuxdesignersworktogether)
 7.  [**UI/UX设计师收入水平如何?**](#whatarethesalariesofuianduxdesigners)
 8.  [**如何成为一名UI/UX专家？哪里找到相应的设计课程或教程？**](#howdoyoubecomeauioruxexpertwhatkindofdesigncoursestutorialsshouldyoutake)
@@ -69,7 +69,7 @@ UX设计流程主要包含以下步骤：
 
 ![A codex of cognitive biases](https://www.freecodecamp.org/news/content/images/2021/07/Cognitive_bias_codex_en.svg)
 
-[Source](https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg)
+[来源](https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg)
 
 ## **3. UI设计和UX设计有何主要区别？**
 
@@ -79,9 +79,7 @@ UI设计和UX设计这两个词常常被混淆使用。
 
 尽管终端产品同时获益于这两种设计方法，但它们两者的设计过程却大相径庭。
 
-UX设计关注用户解决问题的全旅程。
-
-而UI设计则注重产品的外观。
+UX设计关注用户解决问题的全旅程，而UI设计则注重产品的外观。
 
 以下是UX和UI设计的主要区别：
 
@@ -124,7 +122,7 @@ UX设计关注用户解决问题的全旅程。
 - 分析客户需求、竞争对手、产品结构，制定产品体验策略。
 - 为移动端、网络端、桌面端和其他硬件终端创造无缝式的设计和交互策略。
 
-## **5. 将UI和UX工作和合并有什么弊端？**
+## **5. 将UI和UX工作混淆有什么弊端？**
 
 ![A concept seat belt design from the 1960s which went around people's necks.](https://www.freecodecamp.org/news/content/images/2021/07/Artboard--4--1.jpg)
 
@@ -140,7 +138,7 @@ UX设计关注用户解决问题的全旅程。
 
 尽管UI/UX设计师技能要求不同，但他们需要通力合作，为用户提供最佳体验。
 
-UI设计需要具有美感，但如果没有一个好的UX设计，它的导航可能笨拙混乱。另一方面，一个产品的用户体验就算完美无缺，但如果没有一个好看的用户界面，它就吸引不了用户。
+UI设计需要具有美感，但如果没有一个好的UX设计，它的导航可能笨拙混乱。另一方面，一个产品的用户体验就算完美无缺，但如果没有一个好看的用户界面，就吸引不了用户。
 
 任何前端开发和设计过程都应该从了解用户需求开始。UX和UI设计师应该与开发者、产品经理和老板一道，共同确定最终产品的功能、外观和效果。
 
@@ -168,7 +166,7 @@ UX设计师的收入略高，全球平均为5.2万。美国的UX设计师平均�
 
 要想成为一名UI/UX专家，首先要对UI/UX设计非常感兴趣。确认了自己的兴趣，就应该找到相应资源，并参加设计课程，为就业市场做好准备。
 
-有一些在线课程可以帮助你入门UI设计， 如 [UI设计课程](https://careerfoundry.com/en/courses/become-a-ui-designer/) 和[学习UI设计](<https://learnui.design/>)，。
+有一些在线课程可以帮助你入门UI设计， 如 [UI设计课程](https://careerfoundry.com/en/courses/become-a-ui-designer/) 和[学习UI设计](<https://learnui.design/>)。
 
 对于UX设计，可以选择网上自学，报名网络课程。您可以参考这里介绍的[学习UI/UX的最佳在线课程](https://uxplanet.org/30-best-online-course-websites-to-learn-ui-ux-updated-6b104762731a)，里面介绍了哪些网站提供免费课程，以及课程评价。
 

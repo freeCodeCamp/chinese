@@ -46,7 +46,7 @@ Enjoy!
 -   [Python标准库](#the-python-standard-library)
 -   [Python PEP8风格指导](#the-pep8-python-style-guide)
 -   [Python代码调试](#debugging-in-python)
--   [Variable Scope in Python](#variablescopeinpython)
+-   [Python变量作用域](#variable-scope-in-python)
 -   [How to Accept Arguments from the Command Line in Python](#howtoacceptargumentsfromthecommandlineinpython)
 -   [Lambda Functions in Python](#lambdafunctionsinpython)
 -   [Recursion in Python](#recursioninpython)
@@ -2017,113 +2017,112 @@ bark()
 
 <h2 id="#the-python-standard-library">Python标准库</h2>
 
-Python exposes a lot of built-in functionality through its **standard library**.
+Python通过其**标准库**公开了许多内置功能。
 
-The standard library is a huge collection of all sort of utilities, ranging from math utilities to debugging to creating graphical user interfaces.
+标准库是各种应用程序的集合，包括数学应用，代码调试，以及图形用户界面创建等等。
 
-You can find the full list of standard library modules here: [https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html)
+您可以在此处找到标准库模块的完整列表：[https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html)
 
-Some of the important modules are:
+一些比较重要的模块是：
 
--   `math` for math utilities
--   `re` for regular expressions
--   `json` to work with JSON
--   `datetime` to work with dates
--   `sqlite3` to use SQLite
--   `os` for Operating System utilities
--   `random` for random number generation
--   `statistics` for statistics utilities
--   `requests` to perform HTTP network requests
--   `http` to create HTTP servers
--   `urllib` to manage URLs
+-   `math` 数学计算相关应用程序
+-   `re` 正则表达式的使用
+-   `json` 处理json数据
+-   `datetime` 处理日期
+-   `sqlite3` 使用SQLite
+-   `os` 操作系统实用程序
+-   `random` 生成随机数
+-   `statistics` 数学统计相关应用程序
+-   `requests` 执行HTTP网络请求
+-   `http` 创建HTTP服务器
+-   `urllib` 管理URL
 
-Let's introduce how to _use_ a module of the standard library. You already know how to use modules you create, importing from other files in the program folder.
+接下来介绍如何_使用_标准库的一个模块。您已经知道如何使用自己创建的模块，即从程序文件夹中的其它文件导入。
 
-Well that's the same with modules provided by the standard library:
+标准库提供的模块也是如此使用：
 
 ```python
 import math
 
-math.sqrt(4) # 2.0
+math.sqrt(4)  # 2.0
 ```
 
-or
+或者
 
 ```python
 from math import sqrt
 
-sqrt(4) # 2.0
+sqrt(4)  # 2.0
 ```
 
-We'll soon explore the most important modules individually to understand what we can do with them.
-
+我们很快将单独探索最重要的模块，以了解我们可以用其做什么。
 
 <h2 id="the-pep8-python-style-guide">Python PEP8风格指导</h2>
 
-When you write code, you should adhere to the conventions of the programming language you use.
+编写代码时，应遵守所使用的编程语言的一些约定。
 
-If you learn the right naming and formatting conventions right from the start, it will be easier to read code written by other people, and people will find your code easier to read.
+如果您从一开始就学习正确的命名和格式约定，那么将更容易阅读其他人编写的代码，同样其他人也会发现您的代码易于阅读。
 
-Python defines its conventions in the PEP8 style guide. PEP stands for _Python Enhancement Proposals_ and it's the place where all Python language enhancements and discussions happen.
+Python在PEP8样式指南中定义了其代码风格约定。PEP即_Python Enhancement Proposals_，它描述了Python语言所有增强和讨论的地方。
 
-There are a lot of PEP proposals, all available at [https://www.python.org/dev/peps/](https://www.python.org/dev/peps/).
+有很多PEP提案，都可以在[https://www.python.org/dev/peps/](https://www.python.org/dev/peps/) 上找到。
 
-PEP8 is one of the first ones, and one of the most important, too. It defines the formatting and also some rules on how to write Python in a "pythonic" way.
+PEP8是最早和最重要的提案之一，它定义了格式和以"pythonic"方式编写Python代码的一些规则。
 
-You can read its full content here: [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/) but here's a quick summary of the important points you can start with:
+您可以在此处阅读其完整内容：[https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/) ，下面是几点总结，您可以从这里快速开始：
 
--   Indent using spaces, not tabs
--   Indent using 4 spaces.
--   Python files are encoded in UTF-8
--   Use maximum 80 columns for your code
--   Write each statement on its own line
--   Functions, variable names and file names are lowercase, with underscores between words (snake\_case)
--   Class names are capitalized, separate words are written with the capital letter too, (CamelCase)
--   Package names are lowercase and do not have underscores between words
--   Variables that should not change (constants) are written in uppercase
--   Variable names should be meaningful
--   Add useful comments, but avoid obvious comments
--   Add spaces around operators
--   Do not use unnecessary whitespace
--   Add a blank line before a function
--   Add a blank line between methods in a class
--   Inside functions/methods, blank lines can be used to separate related blocks of code to help readability
+-   使用空格而不是制表符缩进
+-   使用4个空格缩进
+-   Python文件用UTF-8编码
+-   一行代码最多80列
+-   每个语句写在自己所在的一行上
+-   函数、变量名和文件名使用小写，单词之间用下划线分隔（例如snake\_case）
+-   类名单词首字母大写（例如CamelCase）
+-   包名是小写的，单词之间没有下划线
+-   不应该改变的常量全用大写字母
+-   变量名应该有意义
+-   添加有用的注释，但应该避免为非常易懂的代码添加注释
+-   在运算符两边添加空格
+-   不要使用不必要的空格
+-   在函数（的定义）前添加一个空行
+-   在类中的方法之间添加一个空行
+-   在函数/方法内部，可以使用空行分隔相关的代码块，以提高可读性
 
 <h2 id="debugging-in-python">Python代码调试</h2>
 
-Debugging is one of the best skills you can learn, as it will help you in many difficult situations.
+调试代码是您应该学习的最佳技能之一，因为在许多困难的情况下，它将为您提供帮助。
 
-Every language has its debugger. Python has `pdb`, available through the standard library.
+每种编程语言都有其调试器。Python使用`pdb`调试代码，可通过标准库获得。
 
-You debug by adding one breakpoint into your code:
+您可以通过在代码中添加一个断点来进行调试：
 
 ```python
 breakpoint()
 ```
 
-> You can add more breakpoints if needed.
+> 如果需要，您可以添加更多断点。
 
-When the Python interpreter hits a breakpoint in your code, it will stop, and it will tell you what is the next instruction it will run.
+当Python解释器在您的代码中遇到断点时，它会停止执行代码，并会告诉您下一条将运行的指令是什么。
 
-Then and you can do a few things.
+接下来您可以做一些事情。
 
-You can type the name of any variable to inspect its value.
+您可以键入任何变量的名称来检查其值。
 
-You can press `n` to step to the next line in the current function. If the code calls functions, the debugger does not get into them, and considers them "black boxes".
+您可以按`n`跳到当前函数的下一行。如果下一行代码调用了函数，调试器不会进入它们，并将它们视为"黑匣子"。
 
-You can press `s` to step to the next line in the current function. If the next line is a function, the debugger goes into that, and you can then run one instruction of that function at a time.
+您可以按 `s`跳到当前函数的下一行。如果下一行是调用一个函数，则调试器会进入该函数，然后您可以一次运行该函数的一条指令。
 
-You can press `c` to continue the execution of the program normally, without the need to do it step-by-step.
+您可以按`c`继续正常执行剩下的程序，而无需逐步执行。
 
-You can press `q` to stop the execution of the program.
+您可以按`q`停止程序的执行。
 
-Debugging is useful to evaluate the result of an instruction, and it's especially good to know how to use it when you have complex iterations or algorithms that you want to fix.
+调试对于评估程序的结果很有用，当您有复杂的迭代或要修改的算法时，了解如何使用它尤其有用。
 
-## Variable Scope in Python
+<h2 id="variable-scope-in-python">Python变量作用域</h2>
 
-When you declare a variable, that variable is visible in parts of your program, depending on where you declare it.
+当您声明一个变量时，该变量在程序的某些部分中可见，这具体取决于您声明它的位置。
 
-If you declare it outside of any function, the variable is visible to any code running after the declaration, including functions:
+如果您在函数之外声明它，则该变量对声明之后的任何代码都是可见的，包括（这之后定义的）函数：
 
 ```python
 age = 8
@@ -2131,23 +2130,23 @@ age = 8
 def test():
     print(age)
 
-print(age) # 8
-test() # 8
+print(age)  # 8
+test()  # 8
 ```
 
-We call it a **global variable**.
+我们称这种变量为**全局变量**。
 
-If you define a variable inside a function, that variable is a **local variable**, and it is only visible inside that function. Outside the function, it is not reachable:
+如果您在函数内部定义变量，则该变量是**局部变量**，并且仅在该函数内部可见。在函数之外，它是不可访问的：
 
 ```python
 def test():
     age = 8
     print(age)
 
-test() # 8
+test()  # 8
 
 print(age)
-# NameError: name 'age' is not defined
+# 这些这个print会报错 NameError: name 'age' is not defined
 ```
 
 ## How to Accept Arguments from the Command Line in Python

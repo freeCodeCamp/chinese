@@ -5,206 +5,204 @@
 
 ![UI/UX Design Guide: What Are UI Designers, and How Are They Different Than UX Designers?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/cover.jpg)
 
-Have you noticed how User Interface and User Experience design are considered different topics nowadays?
+你可曾注意到用户界面设计（UI）和用户体验设计（UX）的区别？
 
-You're not the only one.
+不少人都有这种疑问。
 
-We live in a beautiful era of design, with new techniques and trends coming and going. Frontend development is also [gaining increased momentum](https://2020.stateofcss.com/en-US/), with more and more developers getting involved in UI/UX design.
+当下设计潮流和设计工具日新月异、推陈出新。前端设计越来越受到重视，[前端开发者](https://2020.stateofcss.com/en-US/)也开始涉足UI/UX设计。UI设计和UX设计常常被他们混为一谈。两者有本质上的区别，初学者应该充分了解两者区别。
 
-While both UI and UX design are often placed on the same pedestal, they are fundamentally different, and beginners should understand the difference between the two.
+鉴于此，我和来自[Creative Tim](https://creative-tim.com)的团队伙伴做了很多研究，为大家提供了这份综合指南，展示了这两个大领域的核心内容与区别：
 
-Knowing this, my team from [Creative Tim](https://creative-tim.com) and I have done a lot of research and created a comprehensive guide on the most important parts of these two huge domains:
+1.  [**UI设计——界面外观如何**](#uidesignhowthingslook)
+2.  [**UX设计—— 产品效果如何**](#uxdesignhowthingswork)
+3.  [**UI设计和UX设计有何主要区别?**](#whatarethekeydifferencesbetweenuianduxdesign)
+4.  [**UI设计师和UX设计师分别做什么?**](#whatdouiuxdesignersdo)
+5.  [**将UI和UX工作合并有什么弊端?**](#whatarethedisadvantagesofacombineduiuxrole)
+6.  [**UI/UX设计师如何协作?**](#howdouiuxdesignersworktogether)
+7.  [**UI/UX设计师收入水平如何?**](#whatarethesalariesofuianduxdesigners)
+8.  [**如何成为一名UI/UX专家？哪里找到相应的设计课程或教程？**](#howdoyoubecomeauioruxexpertwhatkindofdesigncoursestutorialsshouldyoutake)
+9.  [**你应该专攻哪一个领域？UI还是UX设计？**](#whichshouldyouspecializeinuioruxdesign)
 
-1.  [**UI Design — How Things Look**](#uidesignhowthingslook)
-2.  [**UX Design — How Things Work**](#uxdesignhowthingswork)
-3.  [**What Are the Key Differences Between UI and UX Design?**](#whatarethekeydifferencesbetweenuianduxdesign)
-4.  [**What Do UI/UX Designers Do?**](#whatdouiuxdesignersdo)
-5.  [**What Are the Disadvantages of a Combined UI/UX Role?**](#whatarethedisadvantagesofacombineduiuxrole)
-6.  [**How Do UI/UX Designers Work Together?**](#howdouiuxdesignersworktogether)
-7.  [**What Are the Salaries of UI and UX Designers?**](#whatarethesalariesofuianduxdesigners)
-8.  [**How Do You Become a UI or UX Expert? What Kind of Design Courses/Tutorials Should You Take?**](#howdoyoubecomeauioruxexpertwhatkindofdesigncoursestutorialsshouldyoutake)
-9.  [**Which Should You Specialize In? UI or UX Design?**](#whichshouldyouspecializeinuioruxdesign)
-
-## **UI Design — How Things Look**
+## 1.UI 设计---界面外观如何？
 
 ![Image with the quote "A User interface is like a joke. If you have to explain it, it's not that good." — Martin LeBlac](https://www.freecodecamp.org/news/content/images/2021/07/quote-martin-leblac-1.jpg)
 
-A UI (User Interface) deals with the application's graphical layout, which includes buttons, screen layout, animations, transitions, micro-interactions, and so on. In short, UI is all about how things look.
+UI关注软件图形界面，包括按钮、布局、动画、转场、微交互等。简而言之，UI关于界面外观。
 
-UI design includes the following formats:
+UI设计包括以下界面:
 
--   **[Graphical User Interface (GUI)](https://en.wikipedia.org/wiki/Graphical_user_interface)**: GUI design involves how users interact with the visuals and digital control panels of a system. The computer's desktop is an example of a GUI.
--   **[Voice-controlled Interface (VUI)](https://en.wikipedia.org/wiki/Voice_user_interface)**: VUI design deals with the interaction between a user and a system using voice. Smart assistants like Bixby for Samsung mobile devices and Siri for iPhones are examples of VUIs.
--   **[Gesture-based Interface](https://en.wikipedia.org/wiki/Gesture_recognition)**: This is mostly used in virtual reality (VR) and other gesture-based design scenarios, which deal with the engagement of users within 3D spaces. Here is an example of our fully coded simulation of the [Soft UI Admin Dashboard](https://www.creative-tim.com/product/soft-ui-dashboard-pro) in VR:
+-   **[用户图形界面 (GUI)](https://en.wikipedia.org/wiki/Graphical_user_interface)**: GUI设计用户与系统控制工具之间的视觉交互。电脑桌面就是一种GUI。
+-   **[语音控制界面 (VUI)](https://en.wikipedia.org/wiki/Voice_user_interface)**: VUI设计用户与系统的语音交互。三星的Bixby和苹果的Siri智能助手就是VUI例子。
+-   **[手势识别界面](https://en.wikipedia.org/wiki/Gesture_recognition)**: 这种界面主要面向与虚拟现实（VR）以及其他基于手势的系统交互。用户面对的是3D空间。这是我们创建的可编辑[Soft UI VR控制面板](https://www.creative-tim.com/product/soft-ui-dashboard-pro)。 
 
 ![Example of a gesture-based interface.](https://www.freecodecamp.org/news/content/images/2021/07/soft-vr-2-1.gif)
 
-[Source](https://demos.creative-tim.com/soft-ui-dashboard-pro/pages/dashboards/default.html)
+[来源](https://demos.creative-tim.com/soft-ui-dashboard-pro/pages/dashboards/default.html)
 
-For good UI design, you should take these characteristics into consideration:
-
--   The design should be focused on helping users complete tasks quickly with minimum effort. Completing tasks should be a seamless experience.
--   It should be enjoyable, satisfactory, and free from frustration.
--   The UI design should communicate the brand value of the company/organization.
+-   优秀的UI设计，需要考虑以下几点：
+    - 设计致力于帮助用户以最小的努力完成任务。
+    - 设计赏心悦目，令人愉悦。
+    - 设计传达企业或组织品牌价值。
 
 ![A list of principles for good design.](https://www.freecodecamp.org/news/content/images/2021/07/10-design-pinciples-1.jpg)
 
-## **UX Design — How Things Work**
+## **2. UX设计---产品效果如何？**
 
-UX (User Experience) design deals with how users interact with the system. Logical navigation and how smooth and intuitive the experience is all fall under UX design. In short, this type of design helps users have a positive experience.
+UX设计关注用户与系统全生态的交互。符合逻辑的导航和自然丝滑的体验都属于UX范畴。简而言之，UX设计使用户拥有积极的体验。
 
-To get a feeling of the UX process, here are the main steps:
+UX设计流程主要包含以下步骤：
 
--   **Interaction Design** deals with how users can complete their tasks effortlessly by using the interactive components of a system (page transitions, animations, buttons, and so on).
--   **User Research** involves conducting extensive research, collecting feedback and ideas from new or existing customers, understanding end user needs, and making design decisions based on these parameters.
--   **Information Architecture** involves the organization of information and content that users need to do their tasks. This requires a UX designer to understand the relationship between different sets of content and present them in the most understandable way possible.
+- **交互设计**涉及用户如何使用系统交互组件（包括页面转场、动画、按钮等），以便完成任务。
+- **用户研究**涉及广泛的调研，包括从新老用户收集意见反馈， 理解用户需求，并根据调研结果进行设计。
+- **信息架构**涉及信息内容的组织安排。为了便于用户完成任务，UX设计师需要厘清不同内容的类别关系，合理安排内容层级。
 
-For good UX design, you should follow these practices:
+优秀的UX设计，需要达到以下标准：
 
--   The product should be easily usable, logical, and self-explanatory.
--   The product should solve users's problems.
--   The product should be accessible and usable to a wide range of people.
--   The product should create a positive experience for the user, allowing them to complete tasks without frustration.
+- 产品易上手，易于理解。
+- 产品能解决用户问题。
+- 产品能满足不同用户群体的需求。
+- 产品能为用户带来积极体验，乐于使用。
 
-### **Cognitive Biases**
+### **认知偏差**
 
-Great UX designers must be aware of the cognitive biases that we all have, as this can affect the interaction between the user and interfaces. Many marketing strategies are based on these biases:
+优秀的UX设计师需要时刻注意人类与生俱来的认知偏差。这些偏差会影响用户的使用体验。许多营销策略就是利用了这些认知偏差：:
 
 ![A codex of cognitive biases](https://www.freecodecamp.org/news/content/images/2021/07/Cognitive_bias_codex_en.svg)
 
 [Source](https://upload.wikimedia.org/wikipedia/commons/6/65/Cognitive_bias_codex_en.svg)
 
-## **What Are the Key Differences Between UI and UX Design?**
+## **3. UI设计和UX设计有何主要区别？**
 
 ![Image of a branching walking path and dirt path.](https://www.freecodecamp.org/news/content/images/2021/07/ui-vs-ux-1.jpg)
 
-UI and UX design have often been used as interchangeable terms.
+UI设计和UX设计这两个词常常被混淆使用。
 
-While the end product requires consideral input from both design methodologies, the process of designing UI and UX is very different.
+尽管终端产品同时获益于这两种设计方法，但它们两者的设计过程却大相径庭。
 
-UX design mostly deals with the user’s entire journey to solve a problem.
+UX设计关注用户解决问题的全旅程。
 
-On the other hand, UI design is focused on how the product looks and feels when the problem is being solved.
+而UI设计则注重产品的外观。
 
-Here are the main differences between UI and UX design:
+以下是UX和UI设计的主要区别：
 
--   **Main focus:** The main focus of UI designers is to deal with the quality and visuals of the end product, and use hi-fi models as prototypes. UX designers focus more on the purpose and functionality of the end product, and care more about logic. Additionally, UI designers deal with the technicalities of the product design, while UX designers focus more on project management and analysis of the project.
--   **Use of color:** UI designers design prototypes in full color while UX designers do so in black, white, or grey.
--   **Tools:** UI designers use tools like [Sketch](https://www.sketch.com/), [Flinto](https://www.flinto.com/), [Principle](https://principleformac.com/), and [InVision](https://www.invisionapp.com/) for collaborative image designing. UX designers use wireframe-based prototyping tools like [Mockplus](https://www.mockplus.com/).
--   **Artistic Component:** UI designers have to include an artistic component in their design since it is related to what the end user sees, hears, and feels. UX design has more of a social component, as it needs to understand what a user wants to experience in the end product.
+- **关注点不同**：UI设计师的主要关注点是终端产品的视觉呈现，所以他们制作的是高保真的产品原型。UX设计师则更关注终端产品的目的和功能，以及产品的内在逻辑。此外，UI设计师处理产品的微观设计细节，UX设计师则更关注宏观的项目管理和分析。
+- **原型细节程度不同**：UI设计师设计彩色的产品原型，而UX设计师只绘制黑白的产品草图。
+- **使用工具不同**：UI设计师使用 [Sketch](https://www.sketch.com/)、[Flinto](https://www.flinto.com/)、 [Principle](https://principleformac.com/)等绘图工具，以及[InVision](https://www.invisionapp.com/)等设计协作工具。UX设计师使用线框图工具，比如 [Mockplus](https://www.mockplus.com/)。
+- **艺术成分不同**：UI设计师需要在设计中加入艺术成分，因为产品关系到终端用户的视听体验。而UX设计师需要更多的社会属性，因为他们需要理解用户想要获得何种体验。
 
-Here is an example of UX and UI prototypes for the same end product:
+这是同款产品UX线框图（左）和UI设计图（右）：
 
 ![A simple UX design wireframe and a hi-fi UI prototype for the same web page.](https://www.freecodecamp.org/news/content/images/2021/07/soft-ui-design-system-1.jpg)
 
-[Source](https://www.creative-tim.com/product/soft-ui-design-system-pro)
+[来源](https://www.creative-tim.com/product/soft-ui-design-system-pro)
 
-## **What Do UI/UX Designers Do?**
+## **UI设计师和UX设计师分别做什么？**
 
 ![A table showing the differences between UI and UX designers.](https://www.freecodecamp.org/news/content/images/2021/07/table-1.jpg)
 
-If you want to become a greate **UI designer**, you should develop the following skills/responsibilities:
+想成为**UI设计师**需具备以下技能：
 
--   Working in agile teams.
--   Creating user flows, wireframes, prototypes and so on.
--   Visualization tools such as [InVision](https://www.invisionapp.com/), [Sketch](https://www.sketch.com/), [Photoshop](https://www.photoshop.com/), [Figma](https://www.figma.com/), etc. For more details about which tool to choose, check out our research in this article: [InVision vs Sketch vs Figma vs Photoshop](/news/adobe-xd-vs-sketch-vs-figma-vs-invision/)
--   Frontend programming languages such as HTML5, CSS3, and JavaScript.
--   Executing visual design stages from inception to final hand-off.
--   Collaborating with UX designers, developers, QA, and product managers to design and implement innovative visual ideas for products.
--   Communicating the branding and style of the company to users through design.
--   Creating the look and feel of the product using customer analysis and research.
--   Managing the responsiveness, interactivity, and animation of a product and making it adaptive to all device screen sizes.
+- 适应敏捷工作模式。
+- 能够绘制交互流程图、线框图、原型图等。
+- 熟悉 [InVision](https://www.invisionapp.com/)、 [Sketch](https://www.sketch.com/) 、[Photoshop](https://www.photoshop.com/) 、[Figma](https://www.figma.com/) 等绘图工具。关于选择哪款绘图工具，可参看我们的这篇文章：
+- 能够使用HTML5, CSS3和JavaScript三种前端语言。
+- 能够完成从构思到交付视觉设计整套流程。
+- 与UX设计师、开发、测试人员和产品经理合作，为产品从设计到生产提供视觉创意。
+- 通过设计将公司的品牌和风格传达给用户。
+- 通过用户分析和研究，改进产品外观效果。
+- 根据不同设备尺寸，进行产品响应式设计，保证产品交互动画的一致性。
 
-If you want to become a great **UX designer**, you should develop these skills/responsibilities:
+想成为优秀的**UX设计师**需具备以下技能：
 
--   Working in agile teams.
--   A strong understanding of the UX process.
--   Prototyping tools like [Adobe Creative Suite](https://www.adobe.com/creativecloud.html), [Sketch](https://www.sketch.com/), [InVision](https://www.invisionapp.com/), [Axure](https://www.axure.com/), etc.
--   Problem solving skills and curiosity about everything related to design, people, life and technology.
--   Stakeholder management and client interaction.
--   Creating process flows, wireframes, sitemaps, prototypes, and UX deliverables.
--   Collaborating closely with developers, product managers, UI designers, external stakeholders, and QA Engineers to iterate designs based on market dynamics, user feedback, and tech constraints.
--   Analyzing customer needs, competitors, product structure, and strategies for designing the experience of a product.
--   Creating seamless design and interaction strategies for mobile, web, desktop, and other hardware endpoints.
+- 适应敏捷工作模式。
+- 对用户体验过程有深刻的理解。
+- 能够使用原型设计工具，如 [Adobe Creative Suite](https://www.adobe.com/creativecloud.html) 、[Sketch](https://www.sketch.com/)、[InVision](https://www.invisionapp.com/)、[Axure](https://www.axure.com/)等。
+- 解决问题的能力，以及保持对设计、人、生活和技术的好奇心。
+- 对相关利益方的管理和保持与客户的互动。
+- 创建流程图、线框图、网站地图、原型图及其他用户体验交付产品。
+- 与开发人员、产品经理、UI设计师、外部利益相关方和测试工程师紧密合作，根据市场动态、用户反馈和技术限制来迭代设计。
+- 分析客户需求、竞争对手、产品结构，制定产品体验策略。
+- 为移动端、网络端、桌面端和其他硬件终端创造无缝式的设计和交互策略。
 
-## **What Are the Disadvantages of a Combined UI/UX Role?**
+## **5. 将UI和UX工作和合并有什么弊端？**
 
 ![A concept seat belt design from the 1960s which went around people's necks.](https://www.freecodecamp.org/news/content/images/2021/07/Artboard--4--1.jpg)
 
-Having a combined UI/UX role is almost like wearing two different hats at the same time.
+将UI和UX角色混淆就像同时带两顶帽子一样可笑。
 
-While most organizations advertize a UI/UX role as a single, combined role, a UI and UX designers have different skill sets. Their main focus, way of thinking, and method of prototyping a product differ greatly.
+尽管许多组织都将UI/UX当做相同工种，但其实两者需要不同的技能。两者的关注点、思维方式和产品原型设计方法都大相径庭。
 
-A combined UI/UX role requires constant switching between conceptualization and visualization, which is often difficult and can reduce the amount of attention that each discipline requires.
+将两个角色混淆就要求设计师不断地在概念和视觉之间不断切换。这不仅十分困难，还消耗了向两方面各自投入的时间精力。
 
-## **How Do UI/UX Designers Work Together?**
+## **6. UI/UX设计师如何协作？**
 
 ![Designers working together.](https://www.freecodecamp.org/news/content/images/2021/07/Artboard-Copy-4--1--1.jpg)
 
-While UI design and UX design require very different skill sets, they are both important components that must work in harmony to give the best experience to end users.
+尽管UI/UX设计师技能要求不同，但他们需要通力合作，为用户提供最佳体验。
 
-A UI design might be beautiful, but it can be clunky and confusing to navigate without a good UX design. On the other hand, the user experience of a product can be flawless, but it is nothing without a good looking user interface.
+UI设计需要具有美感，但如果没有一个好的UX设计，它的导航可能笨拙混乱。另一方面，一个产品的用户体验就算完美无缺，但如果没有一个好看的用户界面，它就吸引不了用户。
 
-Any frontend development and design process should start with understanding the needs of the user. UX and UI designers should work in collaboration with other developers, managers, and product owners to understand what the end product should be able to do, how it should feel, and what it should look like.
+任何前端开发和设计过程都应该从了解用户需求开始。UX和UI设计师应该与开发者、产品经理和老板一道，共同确定最终产品的功能、外观和效果。
 
 ![A quote from Steve Jobs that reads, "Design is not just what it looks like and feels like. Design is how it works."](https://www.freecodecamp.org/news/content/images/2021/07/quote-steve-jobs-1.jpg)
 
-UX designers are generally involved in the earlier phases of a product design since they need to design the flow of activities that take place when a user needs to solve a problem. This involves analytic and project management activities.
+UX设计师通常参与产品设计的早期阶段，因为他们需要设计活动，帮助用户解决问题。这些活动包括用户分析和项目管理等。
 
-Later, a UI designer builds on the aesthetics and interactions based on the models provided by the UX designer.
+之后，UI设计师根据UX设计师提供的草图进行美学和交互设计。
 
-Given this, it is safe to state that UX and UI go hand in hand. And while there are instances when the same person does both, one design principle cannot exist without the other.
+可以这样说，UI设计师和UX设计师携手并进，共同创造产品。即使有人身兼两职，也必须遵循不同的设计准则。
 
-## **What Are the Salaries of UI and UX Designers?**
+## **7. UI/UX设计师收入水平如何？**
 
 ![A map showing different UI/UX designer salaries in different parts of the world.](https://www.freecodecamp.org/news/content/images/2021/07/ux-salary-1.jpg)
 
-UI designers earn an average of 50k worldwide, with the average salary in the USA being 91k, Germany being 57k, France being 47k, and 67k in the UK.
+UI设计师在全世界的平均收入为5万元，美国的平均工资为9.1万，德国为5.7万，法国为4.7万，英国为6.7万。
 
-UX designers earn slightly more, with an average of 52k worldwide. UX designers in the US earn 102k on average, with Germany paying 53k, 49k in France, and 68k in the UK. (Source: [Glassdoor](http://www.glassdoor.com/))
+UX设计师的收入略高，全球平均为5.2万。美国的UX设计师平均收入为10.2万，德国为5.3万，法国为4.9万，英国为6.8万。(来源： [Glassdoor](http://www.glassdoor.com/))
 
-Note: All the salaries listed above are an average for the area, and are in USD.
+注：上面列出的所有工资都是该地区的平均水平，并且以美元为单位。
 
-## **How Do You Become a UI or UX Expert? What Kind of Design Courses/Tutorials Should You Take?**
+## **8. 如何成为一名UI/UX专家？哪里找到相应的设计课程或教程？**
 
 ![Animated people using laptops.](https://www.freecodecamp.org/news/content/images/2021/07/tutorials--1--1.jpg)
 
-Becoming a UI or UX expert starts with being genuinely interested in UI/UX design. Once you know you're interested, you should find resources and take design courses that help prepare you for the job market.
+要想成为一名UI/UX专家，首先要对UI/UX设计非常感兴趣。确认了自己的兴趣，就应该找到相应资源，并参加设计课程，为就业市场做好准备。
 
-There are online courses like the [UI Design Program](https://careerfoundry.com/en/courses/become-a-ui-designer/) and [Learning UI Design](https://learnui.design/) that can help you kickstart your journey towards becoming a UI designer.
+有一些在线课程可以帮助你入门UI设计， 如 [UI设计课程](https://careerfoundry.com/en/courses/become-a-ui-designer/) 和[学习UI设计](<https://learnui.design/>)，。
 
-For UX design, you can study online, [paid courses](https://www.interaction-design.org/courses), or courses from [online universities](https://online.rmit.edu.au/course/sc-user-experience-design-dtr105). You can also look at the [best online course websites to learn UI/UX](https://uxplanet.org/30-best-online-course-websites-to-learn-ui-ux-updated-6b104762731a) so you can see which websites offer courses for free and the user feedback on these websites.
+对于UX设计，可以选择网上自学，报名网络课程。您可以参考这里介绍的[学习UI/UX的最佳在线课程](https://uxplanet.org/30-best-online-course-websites-to-learn-ui-ux-updated-6b104762731a)，里面介绍了哪些网站提供免费课程，以及课程评价。
 
-For UX design, there are a number of [paid courses](https://www.interaction-design.org/courses), of courses from [online universities](https://online.rmit.edu.au/course/sc-user-experience-design-dtr105). You can also check out a list of the [best online courses to learn UI/UX design](https://uxplanet.org/30-best-online-course-websites-to-learn-ui-ux-updated-6b104762731a) so you can see which websites offer courses for free, and read user feedback.
+还有许多大学公开的UX设计[付费课程](https://www.interaction-design.org/courses)，或者来自[在线大学](https://online.rmit.edu.au/course/sc-user-experience-design-dtr105)的课程。同样可以参考这里介绍的[学习UI/UX的最佳在线课程](https://uxplanet.org/30-best-online-course-websites-to-learn-ui-ux-updated-6b104762731a)，里面介绍了哪些网站提供免费课程，以及课程评价。
 
-Suppose you already have some of the required skills to be a UI/UX designer. In that case, you can also take a look at articles like the [behavior patterns for UX design](https://uxdesign.cc/10-essential-cognitive-behavior-patterns-for-ux-design-7f0cc2e00d31), [UX methods that you can use](https://uxdesign.cc/65-ux-methods-and-when-to-use-them-73e70c742d12), [inspirational graphic designs from the world's best designers](https://dribbble.com/tags/article), and [academic research papers that designers should read](https://uxdesign.cc/5-academic-research-papers-every-designer-should-read-f24b170db295).
+假设你已经具备了成为UI/UX设计师所需的一些技能。在这种情况下，你也可以看看诸如[UX设计行为模式](ttps://uxdesign.cc/10-essential-cognitive-behavior-patterns-for-ux-design-7f0cc2e00d31)、[常用用户体验方法](https://uxdesign.cc/65-ux-methods-and-when-to-use-them-73e70c742d12)、[世界上最好的设计师的启发式图形设计](https://dribbble.com/tags/article)、以及[设计师应该阅读的学术研究论文](https://uxdesign.cc/5-academic-research-papers-every-designer-should-read-f24b170db295)等文章。
 
-### **Which Should You Specialize In? UI or UX Design?**
 
-Specializing in UI or UX design is a personal preference that depends on your particular skillset.
+### **9. 你应该专攻哪一个领域？UI还是UX设计？**
 
-However, there are a huge number of companies that advertise a combined UI/UX designer role.
+专攻UI还是UX设计既取决于个人偏好，也要看自身特定技能组合。
 
-While the roles and responsibilities of both these vary differently, there is still a niche market for UI/UX design, making it a good idea to have adequate knowledge about both.
+然而，有大量的公司招聘身兼两职的UI/UX设计师。
 
-While difficult to implement, a combined UI/UX career can prove fruitful in terms of salary compensation and importance in the company.
+虽然这两者的角色和职责各不相同，但UI/UX设计仍是一片蓝海，因此最好对两者都有足够的了解。
 
-However, a combined UI/UX designer role is difficult to perform since it needs constant switching from one mindset to the other. So it is often a better option to specialize in one role instead.
+虽然两者很难平衡，但身兼两职当然报酬也更高，也利于提升自己在公司的重要性。
 
-For example, if you are artistic, know effective color combinations, and understand how products can be visually enhanced, UI design is a good choice for you.
+尽管如此，在两个角色之间来回切换十分困难，最好还是专攻一个领域。
 
-On the other hand, if you are good with managing user and stakeholder needs, have excellent analysis skills, and understand how user experiences can be improved, UX design would be more suited to you.
+比如，你有艺术细胞，了解色彩组合搭配，知道如何提升产品视觉美感，那你更适合UI设计。
+
+而如果你善于管理用户和相关利益方，具备出色的分析能力，并且了解如何改善用户体验，那么UX设计会更适合你。
 
 ![A quote from Joe Sparano that reads, "Good design is obvious. Great design is transparent."](https://www.freecodecamp.org/news/content/images/2021/07/quote-joe-sparano-1.jpg)
 
-## **Final Thoughts**
+## **10. 结语**
 
-User Interface and User Experience design both require an understanding of what users need.
+UI和UX设计都需要理解用户。
 
-Once you have this understanding, frontend development and design do not have to be a complex affair — there are a lot of ready-made components, tools, and kits that can make design easier and more effective.
+只要同用户有同理心，前端开发和设计并非十分复杂--有很多现成的组件、工具和套件可以使设计更高效。
 
-[Creative Tim](https://www.creative-tim.com/) offers you a huge number of free and premium, fully coded UI tools like Templates, Dashboards, and Design Systems.
+[Creative Tim](https://www.creative-tim.com/)为你提供了大量的免费、优质、可编辑的UI工具，如模板、仪表板和设计体系。
 
-If you want to build your illustrations using hand-drawn sketch components in a scalable manner, look no further than Creative Tim’s product: [IRA Design](https://iradesign.io/).
+如果想用手绘组件的方式绘制插图，请关注Creative Tim的产品：[IRA Design](https://iradesign.io/)。
 
-And let's keep in touch on [Twitter](https://twitter.com/CreativeTim).
+欢迎在[Twitter](https://twitter.com/CreativeTim)上联系我们。

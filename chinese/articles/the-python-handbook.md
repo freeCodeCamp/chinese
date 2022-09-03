@@ -47,9 +47,9 @@ Enjoy!
 -   [Python PEP8风格指导](#the-pep8-python-style-guide)
 -   [Python代码调试](#debugging-in-python)
 -   [Python变量作用域](#variable-scope-in-python)
--   [How to Accept Arguments from the Command Line in Python](#howtoacceptargumentsfromthecommandlineinpython)
--   [Lambda Functions in Python](#lambdafunctionsinpython)
--   [Recursion in Python](#recursioninpython)
+-   [Python接收从命令行传入的参数](#how-to-accept-arguments-from-the-command-line-in-python)
+-   [Python的Lambda函数](#lambda-functions-in-python)
+-   [Python递归](#recursion-in-python)
 -   [Nested Functions in Python](#nestedfunctionsinpython)
 -   [Closures in Python](#closuresinpython)
 -   [Decorators in Python](#decoratorsinpython)
@@ -2149,7 +2149,7 @@ print(age)
 # 这些这个print会报错 NameError: name 'age' is not defined
 ```
 
-## How to Accept Arguments from the Command Line in Python
+<h2 id="how-to-accept-arguments-from-the-command-line-in-python">Python接收从命令行传入的参数</h2>
 
 Python offers several ways to handle arguments passed when we invoke the program from the command line.
 
@@ -2233,7 +2233,8 @@ There are more options, but those are the basics.
 
 And there are community packages that provide this functionality, too, like [Click](https://click.palletsprojects.com/en/7.x/) and [Python Prompt Toolkit](https://python-prompt-toolkit.readthedocs.io/en/master/index.html).
 
-## Lambda Functions in Python
+
+<h2 id="lambda-functions-in-python">Python的Lambda函数</h2>
 
 Lambda functions (also called anonymous functions) are tiny functions that have no name and only have one expression as their body.
 
@@ -2269,7 +2270,8 @@ print(multiply(2, 2)) # 4
 
 The utility of lambda functions comes when combined with other Python functionality, for example in combination with `map()`, `filter()` and `reduce()`.
 
-## Recursion in Python
+
+<h2 id="recursion-in-python">Python递归</h2>
 
 A function in Python can call itself. That's what recursion is. And it can be pretty useful in many scenarios.
 

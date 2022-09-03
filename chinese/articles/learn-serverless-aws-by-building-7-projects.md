@@ -15,8 +15,7 @@
 
 如果你想观看和跟随，我还把它做成了视频:
 
-# Combination API Project
-
+# 组合式 API 项目
 这个项目是为了让你熟悉用 Lambda 部署 API。你还将练习调用其他 API 并合并这些数据。
 
 有很多逻辑可以用于此，但这里有两个例子:
@@ -57,7 +56,7 @@ const handler = (event: APIGatewayProxyEvent) => {
 
 要开始使用 Serverless 框架 [查看此视频](https://youtu.be/HhgXwKFUzT8).
 
-# URL Shortener Project
+# 短网址器项目
 
 这个项目将让你部署你的第一个 DynamoDB 表，然后从表中写入和读取数据。
 
@@ -107,7 +106,7 @@ const handler = (event: APIGatewayProxyEvent) => {
 
 你可以更进一步，改变 `getUrl` 代码的状态代码，返回 301(永久重定向状态码)。你需要添加一些额外的消息头（headers），但这将自动将用户重定向到所需页面。
 
-# Reminder App Project
+# 提醒应用程序项目
 
 这个项目将教会你 Dynamo 的二级索引以及 Dynamo 的 Time-To-Live。你还可以尝试用亚马逊简单电子邮件服务（SES）实现电子邮件自动化，或者用简单通知服务（SNS）实现文本消息传递。
 
@@ -166,7 +165,7 @@ const handler = (event: APIGatewayProxyEvent) => {
 
 一旦你有了这个应用，你可以使用 `serverless-s3-sync` 来自动推送代码到 S3（你在 Serverless 中创建的）。
 
-# Live Chat App Project
+# 即时聊天应用程序项目
 
 这个项目将教你如何建立 WebSockets。用户可以创建一个新的房间或加入一个现有的房间。任何发送的信息都会被发送到连接到房间的所有人那里。
 
@@ -206,7 +205,7 @@ const handler = (event: WebsocketMessageEvent) => {
 
 最后是 onDisconnect，这将是一个简单的 Lambda，只是将用户的记录从 Dynamo 中删除。
 
-# Idea Voting App Project
+# 创意投票应用项目
 
 这个项目将教你设计和建立更高级的 Dynamo 表，同时与 Cognito 合作进行认证。你还应该为此建立一个简单的前端，以学习如何将 Cognito 集成到 Web 应用中。
 
@@ -223,7 +222,7 @@ const handler = (event: WebsocketMessageEvent) => {
 - vote for an idea
 - get board details
 
-### Create a board
+### 创建一个板块
 
 我们需要的第一个 API 端点是用来创建一个新的创意板。任何人都可以创建一个论坛，Dynamo 中的记录非常简单。只有一个 "boardId"，然后是一些关于板块所有者的信息，也许是一个标题和描述。
 
@@ -231,7 +230,7 @@ const handler = (event: WebsocketMessageEvent) => {
 | --- | --- | --- | --- |
 | boardId | userId | My awesome idea | some description |
 
-### Add ideas to a board
+### 将想法添加到一个板块中
 
 接下来，我们需要能够将想法添加到一个板块（board）。这将是另一个 API 端点和 Lambda。对于想法数据库的记录，我们需要更聪明一些，因为我们需要能够直接引用一个想法，但也要获得一个板块(board)的所有想法。
 
@@ -243,7 +242,7 @@ const handler = (event: WebsocketMessageEvent) => {
 
 通过 "id"，我们可以直接引用这个想法，但我们也可以查询这个记录。我们可以通过查询`pk = 1234` 来获得董事会`1234` 的所有想法。
 
-### Add vote to the idea
+### 对该想法进行投票
 
 现在我们有了想法，我们需要我们的用户为他们投票。这将是一个新的 API 端点和 Lambda。这个 Lambda 比其他两个有更多的工作要做。首先，我们要看一下这个记录的模式。
 
@@ -257,7 +256,7 @@ const handler = (event: WebsocketMessageEvent) => {
 
 当添加投票时，我们要检查用户是否已经为该想法投票。我们可以通过查询`pk = ideaId && sk = userId` 来做到这一点。如果我们找到一个匹配的记录，我们就知道他们已经为这个想法投了票。如果没有，我们就可以为这个用户和想法添加`投票`记录。
 
-### Get Board Details
+### 获取详情
 
 我们现在可以写一个 lambda，来查询我们所拥有的数据:
 
@@ -272,13 +271,13 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 }
 ```
 
-### Get votes for a user
+### 为用户获取投票
 
 最后，我们希望能够显示一个给定用户的所有投票。我们不能查询`sk = userId`，因为在查询 DynamoDB 时你总是需要一个分区键。因此，我们创建了第二个分区键(`pk2`)，其中包含了 userId。现在我们可以查询`pk2 = userId`来获得用户投票的所有想法。
 
 这种拥有第二个 GSI 的模式非常普遍，其中 PK 和 SK 是对调的。它允许你有一个多对多的关系。你可以查询所有连接到特定 A 的 B 和所有连接到特定 B 的 A。
 
-## Messaging App Project
+## 信息化应用项目
 
 这个项目将教你了解 Dynamo 的复合键，并给你更多关于 websockets 和 Cognito 的练习。
 
@@ -302,7 +301,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 只需记住在用户断开与 WebSocket 的连接时删除该记录。我们可以使用默认的 `$disconnect` 动作来触发`onDisconnect` lambda。
 
-### Create a group
+### 创建一个组
 
 有人需要做的第一件事是创建一个小组，然后邀请他们的朋友加入。
 
@@ -318,7 +317,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 添加第二部分（PK2，SK2）是为了让我们通过查询 `PK2 = userId` 来获得用户授权的所有组。这在我们需要获得所有用户组的列表时使用。
 
-### Joining a group
+### 加入一个组
 
 现在，`加入(join)` 组请求将在 Dynamo 中创建一个 `访问请求(access request)` 的记录。这不会让用户访问该组，但将允许该组的所有者审查访问请求。
 
@@ -332,7 +331,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 然后组主有两个选择——接受（accept）或拒绝（reject）。如果所有者拒绝该用户，我们可以直接删除访问请求记录。如果他们接受该用户，我们需要添加一个 `授权用户（authorised user）`。这将需要向 Dynamo 添加一条新的记录。
 
-### Send Message
+### 发送信息
 
 现在我们进入了消息应用的核心,发送和存储消息。
 
@@ -342,7 +341,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 | --- | --- | --- | --- |
 | groupId | message#{timestamp} | my message | userId |
 
-### Get Previous Messages
+### 获取以前的信息
 
 当用户登录时，他们需要能够得到他们在离线时错过的信息。有了这样的信息数据结构，我们可以查询到:
 
@@ -352,7 +351,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 我们也可以让他们通过传递他们的最后一条消息来获得更早的消息。这将使我们能够得到下一条信息。这将使我们能够在信息历史上创建一个无限的向上滚动。
 
-## Event Driven E-Commerce System Project
+## 事件驱动的电子商务系统项目
 
 这个项目将教会你有关事件桥的知识，并给你一些有关 DynamoDB 表设计和服务的额外练习，如 SES 和 SNS 的电子邮件和文本。
 
@@ -360,7 +359,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 ![ch8-event-ecomerce.drawio](https://www.freecodecamp.org/news/content/images/2022/08/ch8-event-ecomerce.drawio.png)
 
-### Storing Products
+### 储存产品
 
 首先，我们需要存储产品。我们可以用一种方式来构造我们的排序键，以便让我们的产品有一个层次的划分。
 
@@ -371,7 +370,7 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 这使得我们可以查询`pk = clothing and sk beginsWith mens`以获得所有男士的衣服，或者查询`pk = clothing and sk beginsWith womens#trousers`以获得所有女士的裤子。
 
-### Placing an Order
+### 下订单
 
 接下来的部分是能够下订单。我们不打算尝试付款，只是向 dynamoDB 表添加一个订单记录。
 
@@ -379,17 +378,17 @@ export const handler = async (event: APIGatewayProxyEvent) => {
 
 这里最大的区别是，我们将开始使用 Event Bridge。这是一个工具，它允许我们拥有可以触发多个 lambdas 的事件。这很好，因为我们可以添加一个新的监听器，而不需要改变前期的代码。
 
-### Order Created
+### 创建订单
 
 我们将有两个监听 "orderCreated "事件的 lambdas。第一个将获取订单数据，并将其发送到仓库 API 以获得包装。第二个将向用户发送一封订单确认邮件。
 
-### Order Packed
+### 订单包装
 
 我们要假装有一个真正的仓库，在得到订单的装箱单后，他们打包，让订单准备发货。他们有一个系统调用我们的 API，并将订单状态改为`packed'。
 
 Dynamo 记录中的这一变化将触发另一个`orderPacked'的 Event Bridge 事件。这也有两个监听器：一个是通过电子邮件向用户发送更新信息，另一个是通过电子邮件让快递公司从仓库收取包裹并交付给客户。
 
-### Order Shipped
+### 已发货的订单（Order Shipped）
 
 同样的，我们要假装一个快递公司拿了包裹并交付。他们调用另一个`Order Shipped`的 API 端点，这又改变了数据库中的订单状态。
 
@@ -401,10 +400,10 @@ Dynamo 记录中的这一变化将触发另一个`orderPacked'的 Event Bridge �
 
 这是作为数据科学家的准备步骤而变得越来越普遍的事情。我们删除个人数据，以减少法律问题，但仍然允许数据科学家做一些事情，如训练一个模型，给你 `人们也买了。。。` 之类的建议。
 
-## What's Next
+## 下一步是什么
 
 如果你喜欢这些项目的想法，但不知道从哪里开始，那么我有一个完整的视频课程，将教你如何建立所有这些项目。
 
 [在此查看该课程](https://completecoding.mykajabi.com/7-serverless-projects).
 
-你还可以下载这些项目的[免费 PDF](https://completecoding.mykajabi.com/7-practical-project-pdf)，这样你就可以在学习过程中直观地看到你的进展。
+你还可以下载这些项目的 [免费 PDF](https://completecoding.mykajabi.com/7-practical-project-pdf)，这样你就可以在学习过程中直观地看到你的进展。

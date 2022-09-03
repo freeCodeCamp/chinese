@@ -1,50 +1,48 @@
-> -  原文地址：[Common Attacks on SSL/TLS – and How to Protect Your System](https://www.freecodecamp.org/news/attacks-on-ssl-tls-and-how-to-protect-your-system/)
-> -  原文作者：[Megan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Common Attacks on SSL/TLS – and How to Protect Your System](https://www.freecodecamp.org/news/attacks-on-ssl-tls-and-how-to-protect-your-system/)
+> - 原文作者：[Megan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Common Attacks on SSL/TLS – and How to Protect Your System](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/cybersecurity-by-Christiaan-Colen-creative-commons-free-to-use.jpeg)
 
-The SSL and TLS protocols are frequently attacked. And understanding past attacks can inform your knowledge as a defender and help you secure current systems. It can also help you predict the direction of future attacks.
+SSL 和 TLS 协议经常受到攻击。了解过去的攻击可以为你作为防御者的知识提供参考，并帮助你保护当前的系统。它还可以帮助你预测未来攻击的方向。
 
-So here's a summary of some of the most famous attacks targeting these protocols:
+因此，这里总结了一些针对这些协议的最有名的攻击:
 
-## Browser Exploit Against SSL/TLS (BEAST):
+## Browser Exploit Against SSL/TLS (BEAST)
 
-BEAST (disclosed in 2011) allowed a man-in-the-middle attacker to discover encrypted information from an SSL/TLS session. It impacted SSL 3.0 and TLS 1.0.
+BEAST（2011 年披露）允许中间人攻击者从 SSL/TLS 会话中发现加密的信息。它影响了 SSL 3.0 和 TLS 1.0。
 
-This attack depended on the implementation of the block cipher used by TLS. The implementation used CBC, Cipher Block Chaining mode. This involves XORing each block of plaintext (except the first) with the previous block of ciphertext, then using the encryption algorithm on the block.
+这种攻击取决于 TLS 使用的区块密码的实现。该实现使用 CBC，即密码块链模式。这包括将每个明文块（除了第一个）与前一个密码块进行 XOR，然后对该块使用加密算法。
 
-The first block is XORed with an IV (initialization vector). Much of the mode's security depends on the IV being truly random. But TLS 1.0 didn't randomly generate IVs – it just used the last block of ciphertext from the previous message. That meant that anyone able to snoop on the encrypted traffic had a copy of the IV.
+第一个区块与一个 IV（初始化向量）进行 XOR。该模式的大部分安全性取决于 IV 是真正随机的。但 TLS 1.0 并没有随机生成 IV--它只是使用前一个信息的最后一个密码文本块。这意味着，任何能够窥探加密通信的人都有一份 IV 的副本。
 
-An attacker who could snoop on the encrypted traffic could launch a chosen plaintext attack by guessing a block of data, XORing it with the (known) IV and the previous block of ciphertext, and injecting the created block into the session. This allowed the attacker to check if the entire block was correct.
+可以窥探加密通信的攻击者可以通过猜测一个数据块，将其与（已知）IV 和前一个密码文本块进行 XOR，并将创建的数据块注入会话，从而发起选择明文攻击。这使得攻击者可以检查整个数据块是否正确。
 
-Given this, the flaw was seen as largely theoretical until BEAST was released. BEAST found a way to shift the cipher block boundaries to isolate one byte of a message at a time until it had been guessed.
+鉴于此，在 BEAST 发布之前，这个缺陷在很大程度上被认为是理论上的。BEAST 找到了一种方法来转移密码块的边界，每次隔离一个字节的信息，直到它被猜中。
 
-That, and the fact that HTTP messages are typically standardized so that an attacker would know where in the message sensitive information (like the session cookie) was transmitted, allowed an attacker to brute force compromise a session cookie.
+这一点，加上 HTTP 消息通常是标准化的，所以攻击者会知道敏感信息（如会话 cookie）在消息中的传输位置，允许攻击者用暴力破坏会话 cookie。
 
-While the attack was theoretically extremely interesting, and generated a lot of interest, it only works if the attacker can insert malicious code into a page and violate the same-origin policy. If the attacker had this much access to your system, they would also have a number of attacks they could attempt, many of which are far less complicated to execute.
+虽然这种攻击在理论上非常有趣，并引起了很多人的兴趣，但它只有在攻击者能够在页面中插入恶意代码并违反同源策略的情况下才有效。如果攻击者对你的系统有这么多的访问权，他们也会有许多可以尝试的攻击，其中许多执行起来要复杂得多。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+### Mitigation Measures for SSL/TLS Attacks
 
-### Mitigation Measures for SSL/TLS Attacks:
+1. （最安全）只允许 TLS 1.1 或 1.2，因为它们解决了这个漏洞。然而，在当时，大多数网站和浏览器都不支持 TLS 1.1.或 1.2。
+2. 由于 TLS 同时支持区块密码和流密码，因此改用流密码（RC4）。然而，在 2013 年证明 RC4 是不安全的，在 2015 年它被正式禁止（由互联网工程任务组，或 IETF）。
+3. 使用不同的区块密码模式。不幸的是，TLS 1.0 并不支持任何其他模式。
+4. 基本上，由于长度为 0 的数据包将被填充到块的大小，它对发送方来说只是一个填充的数据包，但会被接收方立即丢弃。这些块将被用作下一个消息的 IV，解决了不安全的 IV 问题。这个选项在很大程度上没有被使用，因为它导致了与一些 SSL 堆栈的互操作性问题，特别是包括 Internet Explorer 6.0。OpenSSL 实现了这一点，但默认情况下禁用了它。
+5. 实行纵深防御，以防止攻击者获得对受害者网络的中间人访问。
 
-1.  (Safest) Only allow TLS 1.1 or 1.2 since they addressed the vulnerability. However, at the time, most websites and browsers didn't support TLS 1.1. or 1.2.
-2.  As TLS supported both a block cipher and a stream cipher, switch to the stream cipher (RC4). However, in 2013 it was demonstrated that RC4 was insecure, and in 2015 it was officially banned (by the Internet Engineering Task Force, or IETF).
-3.  Use a different block cipher mode. Unfortunately, TLS 1.0 didn't support any other modes.
-4.  Insert packets of length 0. Essentially, as a packet of length 0 would be padded to the block size, it becomes a packet of just padding for the sender, but is immediately discarded by the recipient. These blocks would be used as IVs for the next message, solving the problem of insecure IVs. This option was largely unused as it caused interoperability issues with some SSL stacks, notably including Internet Explorer 6.0. OpenSSL implemented this, but disabled it by default.
-5.  Practice defense in depth to prevent attackers from getting man-in-the-middle access to a victim network.
+### Sources/Further Information
 
-### Sources/Further Information:
-
--   [How the BEAST Attack Works](https://www.netsparker.com/blog/web-security/how-the-beast-attack-works/)
--   [An Illustrated Guide to the BEAST Attack](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art027)
--   [Original Write Up of BEAST](https://vnhacker.blogspot.com/2011/09/beast.html)
--   [A Comprehensive Study of BEAST, CRIME, TIME, BREACH, LUCKY 13 & RC4 Biases](https://www.nccgroup.com/us/our-research/attacks-on-ssl/)
+- [BEAST 攻击是如何工作的](https://www.netsparker.com/blog/web-security/how-the-beast-attack-works/)
+- [BEAST 攻击的图解指南](https://commandlinefanatic.com/cgi-bin/showarticle.cgi?article=art027)
+- [BEAST 的原创文章](https://vnhacker.blogspot.com/2011/09/beast.html)
+- [对 BEAST、CRIME、TIME、BREACH、LUCKY 13 和 RC4 Biases 的综合研究](https://www.nccgroup.com/us/our-research/attacks-on-ssl/)
 
 ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## Heartbleed Vulnerability:
+## Heartbleed Vulnerability
 
 Heartbleed (introduced in 2012/disclosed in April 2014) was a vulnerability in the heartbeat extension of the OpenSSL library (this is used to keep a connection opened).
 
@@ -60,7 +58,7 @@ The vulnerability was that the server would not check that the request was actua
 
 ![Screen-Shot-2020-12-29-at-4.16.38-PM](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-29-at-4.16.38-PM.png)
 
-https://xkcd.com/1354/
+<https://xkcd.com/1354/>
 
 This leaked data would be unencrypted and could contain anything – sensitive credentials, documents, and so on.
 
@@ -72,19 +70,19 @@ Also, this doesn't account for the danger of an attacker having previous pcaps o
 
 If intelligence agencies were able to pull off this type of attack, it's likely it would never be publicly released.
 
-### Mitigation Measures for Heartbleed:
+### Mitigation Measures for Heartbleed
 
--   Upgrade OpenSSL to the latest version, patching the vulnerability (the vulnerable versions were between 1.0.1 and 1.0.1f).
+- Upgrade OpenSSL to the latest version, patching the vulnerability (the vulnerable versions were between 1.0.1 and 1.0.1f).
 
 ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### Sources/Further Reading:
+### Sources/Further Reading
 
--   [5 Years Later, Heartbleed Vulnerability Still Unpatched](https://blog.malwarebytes.com/exploits-and-vulnerabilities/2019/09/everything-you-need-to-know-about-the-heartbleed-vulnerability/)
--   [XKCD Heartbleed](https://xkcd.com/1354/)
--   [Everything you need to know about the Heartbleed Bug](https://www.troyhunt.com/everything-you-need-to-know-about3/)
+- [5 Years Later, Heartbleed Vulnerability Still Unpatched](https://blog.malwarebytes.com/exploits-and-vulnerabilities/2019/09/everything-you-need-to-know-about-the-heartbleed-vulnerability/)
+- [XKCD Heartbleed](https://xkcd.com/1354/)
+- [Everything you need to know about the Heartbleed Bug](https://www.troyhunt.com/everything-you-need-to-know-about3/)
 
-## Padding Oracle On Downgraded Legacy Encryption (POODLE):
+## Padding Oracle On Downgraded Legacy Encryption (POODLE)
 
 POODLE (disclosed in September 2014) took advantage of a flaw in SSL3.0. In order to support legacy systems, some systems continued to offer support for SSL 3.0, even though it had been replaced by newer versions.
 
@@ -112,18 +110,18 @@ Essentially this attack makes brute-forcing SSL feasible. Whereas it would be pr
 
 ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### Mitigation Measures for POODLE:
+### Mitigation Measures for POODLE
 
--   Disabling SSL 3.0 is the only complete mitigation of POODLE. However, some sites only supported SSL 3.0.
--   An alternative is to use the TLS\_FALLBACK\_SCV cipher suite. This suite allows a server to fall back to earlier protocols, but rather than dropping immediately to SSL 3.0, the client can specify a preference. One problem with this suite is that it wasn't broadly supported when it was introduced (limited to largely Google services). Additionally, if the only option the server supports is SSL 3.0, POODLE attacks are still possible. However, it means that an attacker can't force a downgrade on a connection with a server which supports alternative protocols.
--   Practice defense in depth to prevent attackers from getting man-in-the-middle access to a victim network. While the attack is dangerous, it requires man-in-the-middle access, making it much harder to exploit than the remotely exploitable Heartbleed.
+- Disabling SSL 3.0 is the only complete mitigation of POODLE. However, some sites only supported SSL 3.0.
+- An alternative is to use the TLS\_FALLBACK\_SCV cipher suite. This suite allows a server to fall back to earlier protocols, but rather than dropping immediately to SSL 3.0, the client can specify a preference. One problem with this suite is that it wasn't broadly supported when it was introduced (limited to largely Google services). Additionally, if the only option the server supports is SSL 3.0, POODLE attacks are still possible. However, it means that an attacker can't force a downgrade on a connection with a server which supports alternative protocols.
+- Practice defense in depth to prevent attackers from getting man-in-the-middle access to a victim network. While the attack is dangerous, it requires man-in-the-middle access, making it much harder to exploit than the remotely exploitable Heartbleed.
 
-### Sources/Further Information:
+### Sources/Further Information
 
--   [Everything you need to know about the POODLE bug](https://www.troyhunt.com/everything-you-need-to-know-about/)
--   [This POODLE Bites: Exploiting the SSL 3.0 Fallback](https://www.openssl.org/~bodo/ssl-poodle.pdf)
--   [What is the POODLE Attack?](https://www.acunetix.com/blog/web-security-zone/what-is-poodle-attack/)
--   [CISA SSL 3.0 Protocol Vulnerability](https://us-cert.cisa.gov/ncas/alerts/TA14-290A)
+- [Everything you need to know about the POODLE bug](https://www.troyhunt.com/everything-you-need-to-know-about/)
+- [This POODLE Bites: Exploiting the SSL 3.0 Fallback](https://www.openssl.org/~bodo/ssl-poodle.pdf)
+- [What is the POODLE Attack?](https://www.acunetix.com/blog/web-security-zone/what-is-poodle-attack/)
+- [CISA SSL 3.0 Protocol Vulnerability](https://us-cert.cisa.gov/ncas/alerts/TA14-290A)
 
 ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 

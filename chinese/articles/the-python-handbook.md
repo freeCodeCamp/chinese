@@ -2151,24 +2151,24 @@ print(age)
 
 <h2 id="how-to-accept-arguments-from-the-command-line-in-python">Python接收从命令行传入的参数</h2>
 
-Python offers several ways to handle arguments passed when we invoke the program from the command line.
+当我们从命令行调用程序时，Python提供了几种方法来处理传递的参数。
 
-So far you've run programs either from a REPL, or using
-
-```sh
-python <filename>.py
-```
-
-You can pass additional arguments and options when you do so, like this:
+到目前为止，您已经使用过REPL来执行程序，或使用如下方法执行Python代码
 
 ```sh
-python <filename>.py <argument1>
-python <filename>.py <argument1> <argument2>
+python <文件名>.py
 ```
 
-A basic way to handle those arguments is to use the `sys` module from the standard library.
+（像上面）这样做时，您可以传递附加的参数和选项，如下所示：
 
-You can get the arguments passed in the `sys.argv` list:
+```sh
+python <文件名>.py <参数1>
+python <文件名>.py <参数1> <参数2>
+```
+
+处理这些参数的基本方法是使用标准库中的`sys`模块。
+
+您可以获取在`sys.argv`列表中传递的参数：
 
 ```python
 import sys
@@ -2176,13 +2176,13 @@ print(len(sys.argv))
 print(sys.argv)
 ```
 
-The `sys.argv` list contains as the first item the name of the file that was run, for example `['main.py']`.
+`sys.argv`列表的第一项包含所运行文件的名称，例如 `['main.py']`。
 
-This is a simple way, but you have to do a lot of work. You need to validate arguments, make sure their type is correct, and you need to print feedback to the user if they are not using the program correctly.
+这是一种简单的方法，但您必须自己做很多工作。您需要验证参数，确保它们的类型是正确的，如果用户没有正确使用程序，您需要向他们打印反馈信息。
 
-Python provides another package in the standard library to help you: `argparse`.
+Python在标准库中提供了另一个包来帮助您：`argparse`。
 
-First you import `argparse` and you call `argparse.ArgumentParser()`, passing the description of your program:
+您首先导入`argparse`并调用`argparse.ArgumentParser()`，传递程序的描述：
 
 ```python
 import argparse
@@ -2192,8 +2192,8 @@ parser = argparse.ArgumentParser(
 )
 ```
 
-Then you proceed to add arguments you want to accept.  
-For example in this program we accept a `-c` option to pass a color, like this: `python program.py -c red`
+然后继续添加想要接受的参数。
+例如，在下面这个程序中，我们接受一个`-c`选项来传递颜色，就像这样（执行代码文件）：`python program.py -c red`
 
 ```python
 import argparse
@@ -2206,18 +2206,21 @@ parser.add_argument('-c', '--color', metavar='color', required=True, help='the c
 
 args = parser.parse_args()
 
-print(args.color) # 'red'
+print(args.color)  # 'red'
 ```
 
-If the argument is not specified, the program raises an error:
+如果未指定参数，程序将报错：
 
 ```
 ➜  python python program.py
 usage: program.py [-h] -c color
 program.py: error: the following arguments are required: -c
+
+program.py: error: 程序运行需要如下参数: -c
 ```
 
-You can set an option to have a specific set of values, using `choices`:
+
+您可以使用`choices`将选项设置为一组特定值：
 
 ```python
 parser.add_argument('-c', '--color', metavar='color', required=True, choices={'red','yellow'}, help='the color to search for')
@@ -2227,57 +2230,58 @@ parser.add_argument('-c', '--color', metavar='color', required=True, choices={'r
 ➜  python python program.py -c blue
 usage: program.py [-h] -c color
 program.py: error: argument -c/--color: invalid choice: 'blue' (choose from 'yellow', 'red')
+
+program.py: error: argument -c/--color: 无效的选择: 'blue' (该选项只能为'yellow'或'red')
 ```
 
-There are more options, but those are the basics.
+还有更多选择，但以上是基础。
 
-And there are community packages that provide this functionality, too, like [Click](https://click.palletsprojects.com/en/7.x/) and [Python Prompt Toolkit](https://python-prompt-toolkit.readthedocs.io/en/master/index.html).
+也有提供此功能的社区包，例如[Click](https://click.palletsprojects.com/en/7.x/)和[Python Prompt Toolkit](https://python-prompt-toolkit.readthedocs.io/en/master/index.html)。
 
 
 <h2 id="lambda-functions-in-python">Python的Lambda函数</h2>
 
-Lambda functions (also called anonymous functions) are tiny functions that have no name and only have one expression as their body.
+Lambda函数（也称为匿名函数）是没有名称且只有一个表达式作为其主体的小型函数。
 
-In Python they are defined using the `lambda` keyword:
+在Python中，它们是使用`lambda`关键字定义的：
 
 ```python
-lambda <arguments> : <expression>
+lambda <参数> : <表达式>
 ```
 
-The body must be a single expression - an expression, not a statement.
+主体必须是单个表达式，而不是语句。
 
-> This difference is important. An expression returns a value, a statement does not.
+> 这很重要：表达式返回值，语句不返回。
 
-The simplest example of a lambda function is a function that doubles the value of a number:
+最简单的lambda函数示例是将数字的值加倍：
 
 ```python
 lambda num : num * 2
 ```
 
-Lambda functions can accept more arguments:
+Lambda函数可以接受更多参数：
 
 ```python
 lambda a, b : a * b
 ```
 
-Lambda functions cannot be invoked directly, but you can assign them to variables:
+无法直接调用Lambda函数，但您可以将它们分配给变量：
 
 ```python
 multiply = lambda a, b : a * b
 
-print(multiply(2, 2)) # 4
+print(multiply(2, 2))  # 4
 ```
 
-The utility of lambda functions comes when combined with other Python functionality, for example in combination with `map()`, `filter()` and `reduce()`.
-
+Lambda函数的实用性在于与其它Python功能结合使用，例如结合`map()`、`filter()`和`reduce()`。
 
 <h2 id="recursion-in-python">Python递归</h2>
 
-A function in Python can call itself. That's what recursion is. And it can be pretty useful in many scenarios.
+Python中的函数可以调用自身，这就是递归。递归在许多情况下都非常有用。
 
-The common way to explain recursion is by using the factorial calculation.
+解释递归的常用方法是实现阶乘计算。
 
-The factorial of a number is the number `n` mutiplied by `n-1`, multiplied by `n-2`... and so on, until reaching the number `1`:
+一个数字`n`的阶乘是数字`n`乘以`n-1`，再乘以`n-2`，以此类推，直到数字`1`：
 
 ```
 3! = 3 * 2 * 1 = 6
@@ -2285,21 +2289,21 @@ The factorial of a number is the number `n` mutiplied by `n-1`, multiplied by `n
 5! = 5 * 4 * 3 * 2 * 1 = 120
 ```
 
-Using recursion we can write a function that calculates the factorial of any number:
+使用递归，我们可以编写一个计算任意数阶乘的函数：
 
 ```python
 def factorial(n):
     if n == 1: return 1
     return n * factorial(n-1)
 
-print(factorial(3)) #   6
-print(factorial(4)) #  24
-print(factorial(5)) # 120
+print(factorial(3))  # 6
+print(factorial(4))  # 24
+print(factorial(5))  # 120
 ```
 
-If inside the `factorial()` function you call `factorial(n)` instead of `factorial(n-1)`, you are going to cause an infinite recursion. Python by default will halt recursions at 1000 calls, and when this limit is reached, you will get a `RecursionError` error.
+如果在 `factorial()` 函数中调用`factorial(n)`而不是`factorial(n-1)`，则会导致无限递归。 默认情况下，Python将在1000次调用时停止递归，此时您将收到`RecursionError`错误。
 
-Recursion is helpful in many places, and it helps us simplify our code when there's no other optimal way to do it, so it's good to know this technique.
+递归在很多地方都有用，它可以帮助我们在没有其它更好方法的情况下简化代码，所以了解这种技术是件好事。
 
 ## Nested Functions in Python
 

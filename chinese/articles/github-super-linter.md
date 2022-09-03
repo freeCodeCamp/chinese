@@ -1,31 +1,31 @@
-> -  原文地址：[How to Use GitHub Super Linter in Your Projects](https://www.freecodecamp.org/news/github-super-linter/)
-> -  原文作者：[Rishit Dagli](https://www.freecodecamp.org/news/author/rishit_dagli/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Use GitHub Super Linter in Your Projects](https://www.freecodecamp.org/news/github-super-linter/)
+> - 原文作者：[Rishit Dagli](https://www.freecodecamp.org/news/author/rishit_dagli/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Use GitHub Super Linter in Your Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/FCC-1.png)
 
-When you're starting a new project, you might have to add multiple linting tools to beautify your code and prevent simple errors.
+当你开始一个新的项目时，你可能需要添加多个 linting 工具来美化你的代码并防止简单的错误。
 
-You will often use multiple linters – one of them might support an npm installation and other one might have a PyPI installation and so on. You will also want to set up some automation in your CI to run these linters, but this process is quite tedious 😫.
+你经常会使用多个 linters--其中一个可能支持 npm 安装，另一个可能有 PyPI 安装，等等。你也会想在你的 CI 中设置一些自动化来运行这些 linters，但这个过程是相当乏味的😫。
 
-In this article, I will show you how you can use GitHub Super Linter, a single linter to solve all these problems. Most of my personal projects use GitHub Super Linter as well, and I have personally found it be a huge lifesaver.
+在这篇文章中，我将向你展示如何使用 GitHub Super Linter，一个可以解决所有这些问题的单一 linter。我的大部分个人项目也都使用 GitHub Super Linter，我个人发现它是一个大救星。
 
 ## Why is Linting Necessary?
 
-Linting is essentially a form of static code analysis. It analyzes the code you wrote against some rules for stylistic or programmatic errors. Think of it as a tool that flags suspicious usage in software.
+Linting 本质上是一种静态代码分析的形式。它根据一些规则来分析你写的代码，以找出风格上或程序上的错误。可以把它看作是一种在软件中标记出可疑用法的工具。
 
-A linter can help you save a lot of time by:
+linter 可以通过以下方式帮助你节省大量的时间:
 
--   Preventing broken code from being pushed
--   Helping establish coding best practices
--   Building guidelines for code layout and format
--   Helping code reviews be a lot smoother
--   Flagging bugs in your code from syntax errors
+- 防止有破坏性（broken）的代码被推送
+- 帮助建立编码的最佳实践
+- 建立代码布局和格式的准则
+- 帮助代码审查变得更加顺畅
+- 标记出你的代码中的语法错误的 bug
 
-Given the useful nature of linting tools, you would ideally want to run a linter before any code reviews happen on every single piece of code that is pushed to your repository. This definitely helps you write better, more readable, and more stable code.
+鉴于提示工具的作用，你最好在任何代码审查发生之前对推送到你的仓库的每一段代码运行一个 linter。这无疑有助于你写出更好、更可读、更稳定的代码。
 
-Here is an example of using [Black](https://github.com/psf/black), a linting tool for Python focusing on code formatting.
+下面是一个使用 [Black](https://github.com/psf/black) 的例子，这是一个专注于代码格式化的 Python 的提示工具。
 
 ![Black-Example](https://www.freecodecamp.org/news/content/images/2022/08/Black-Example.png)
 
@@ -92,8 +92,8 @@ GitHub Super Linter doesn't work any differently on other machine types so we ju
 
 Next up, we will start defining the steps we want this workflow to have. We essentially have two steps:
 
-1.  Checkout the code
-2.  Run the super linter
+1. Checkout the code
+2. Run the super linter
 
 On to checking out the code. To do this, we will use the official checkout action by GitHub.
 
@@ -144,18 +144,18 @@ jobs:
         with:
           fetch-depth: 0
           
-	  - name: Lint Code Base
+   - name: Lint Code Base
         uses: github/super-linter@v4
 ```
 
 We will now talk about the environment variables which you will often be using with GitHub Super Linter as well as some examples.
 
--   `VALIDATE_ALL_CODEBASE`: this decides whether Super Linter should lint the whole codebase or just the changes introduced with that commit. These changes are found out using `git diff`, but you can also change the search algorithm (but we will not be looking into this in this article). Example: `VALIDATE_ALL_CODEBASE: true`.
--   `GITHUB_TOKEN`: As the name suggests, this is the value of the GitHub token. If you use this, GitHub will show up each of the linters you use (we will see how to do that soon) as separate checks on the UI. Example: In GitHub Actions you can use `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}`.
--   `DEFAULT_BRANCH`: The name of the repository default branch. Example: `DEFAULT_BRANCH: main`.
--   `IGNORE_GENERATED_FILES`: In case you have any files which are generated by tools, you could mark them as `@generated`. If this environment variable is set to true, Super Linter ignores these files. Example: `IGNORE_GENERATED_FILES: true`.
--   `IGNORE_GITIGNORED_FILES`: Excludes the files which are in .gitignore from linting. Example: `IGNORE_GITIGNORED_FILES: true`.
--   `LINTER_RULES_PATH`: A custom path where any linter customization files should be. By default your files are expected to be at `.github/linters/`. Example: `LINTER_RULES_PATH: /`.
+- `VALIDATE_ALL_CODEBASE`: this decides whether Super Linter should lint the whole codebase or just the changes introduced with that commit. These changes are found out using `git diff`, but you can also change the search algorithm (but we will not be looking into this in this article). Example: `VALIDATE_ALL_CODEBASE: true`.
+- `GITHUB_TOKEN`: As the name suggests, this is the value of the GitHub token. If you use this, GitHub will show up each of the linters you use (we will see how to do that soon) as separate checks on the UI. Example: In GitHub Actions you can use `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}`.
+- `DEFAULT_BRANCH`: The name of the repository default branch. Example: `DEFAULT_BRANCH: main`.
+- `IGNORE_GENERATED_FILES`: In case you have any files which are generated by tools, you could mark them as `@generated`. If this environment variable is set to true, Super Linter ignores these files. Example: `IGNORE_GENERATED_FILES: true`.
+- `IGNORE_GITIGNORED_FILES`: Excludes the files which are in .gitignore from linting. Example: `IGNORE_GITIGNORED_FILES: true`.
+- `LINTER_RULES_PATH`: A custom path where any linter customization files should be. By default your files are expected to be at `.github/linters/`. Example: `LINTER_RULES_PATH: /`.
 
 These are some of the environment variables you will use the most often, but none of the ones we've discussed yet talk about language-specific linting.
 
@@ -190,7 +190,7 @@ jobs:
         with:
           fetch-depth: 0
           
-	  - name: Lint Code Base
+   - name: Lint Code Base
         uses: github/super-linter@v4
 
       - name: Lint Code Base
@@ -224,7 +224,7 @@ jobs:
         with:
           fetch-depth: 0
           
-	  - name: Lint Code Base
+   - name: Lint Code Base
         uses: github/super-linter@v4
 
       - name: Lint Code Base
@@ -254,7 +254,7 @@ You save this at `.github/linters/.flake8`. You'll then use it while running the
 
 However, here are two examples of how you can modify this path:
 
-1.  All your linter configuration files are in some other directory
+1. All your linter configuration files are in some other directory
 
 Add the directory path as an environment variable like this:
 
@@ -292,9 +292,9 @@ docker run -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true VALIDATE_PYTHON_BLACK=tr
 
 Notice a couple of things here:
 
--   We run it with the `RUN_LOCAL` flag to bypass some of the GitHub Actions checks. This automatically sets `VALIDATE_ALL_CODEBASE` to true.
--   We map our local codebase to `/tmp/lint` so that the linter can pick up the code.
--   The way we set environment variables is of course different, but the overall process of running the GitHub Super Linter remains the same.
+- We run it with the `RUN_LOCAL` flag to bypass some of the GitHub Actions checks. This automatically sets `VALIDATE_ALL_CODEBASE` to true.
+- We map our local codebase to `/tmp/lint` so that the linter can pick up the code.
+- The way we set environment variables is of course different, but the overall process of running the GitHub Super Linter remains the same.
 
 ### How to Run Super Linter on Other CI Platforms
 

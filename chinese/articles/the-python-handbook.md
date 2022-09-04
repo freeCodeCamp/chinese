@@ -50,8 +50,8 @@ Enjoy!
 -   [Python接收从命令行传入的参数](#how-to-accept-arguments-from-the-command-line-in-python)
 -   [Python的Lambda函数](#lambda-functions-in-python)
 -   [Python递归](#recursion-in-python)
--   [Nested Functions in Python](#nestedfunctionsinpython)
--   [Closures in Python](#closuresinpython)
+-   [Python嵌套函数](#nested-functions-in-python)
+-   [Python闭包](#closures-in-python)
 -   [Decorators in Python](#decoratorsinpython)
 -   [Docstrings in Python](#docstringsinpython)
 -   [Introspection in Python](#introspectioninpython)
@@ -2305,21 +2305,21 @@ print(factorial(5))  # 120
 
 递归在很多地方都有用，它可以帮助我们在没有其它更好方法的情况下简化代码，所以了解这种技术是件好事。
 
-## Nested Functions in Python
+<h2 id="nested-functions-in-python">Python嵌套函数</h2>
 
-Functions in Python can be nested inside other functions.
+Python中函数可以嵌套在其它函数中。
 
-A function defined inside a function is visible only inside that function.
+在函数内部定义的函数仅在该函数内可见。
 
-This is useful to create utilities that are useful to a function, but not useful outside of it.
+这对于创建在函数内有用，但在函数外无用的程序很有用。
 
-You might ask: why should I be "hiding" this function, if it does no harm?
+您可能会问：如果它没有害处，我为什么要“隐藏”这个功能？
 
-One, because it's always best to hide functionality that's local to a function, and is not useful elsewhere.
+因为最好隐藏函数本地并且在其它地方没有用的功能。
 
-Also, because we can make use of closures (more on this later).
+另外，这样我们可以使用闭包（稍后会详细介绍）。
 
-Here is an example:
+这里是一个例子：
 
 ```python
 def talk(phrase):
@@ -2333,7 +2333,7 @@ def talk(phrase):
 talk('I am going to buy the milk')
 ```
 
-If you want to access a variable defined in the outer function from the inner function, you first need to declare it as `nonlocal`:
+如果要从内部函数访问外部函数中定义的变量，首先需要将其声明为`nonlocal`：
 
 ```python
 def count():
@@ -2349,13 +2349,14 @@ def count():
 count()
 ```
 
-This is useful especially with closures, as we'll see next.
+这对闭包特别有用，我们将在接下来的说明中看到。
 
-## Closures in Python
 
-If you return a nested function from a function, that nested function has access to the variables defined in that function, even if that function is not active any more.
+<h2 id="closures-in-python">Python闭包</h2>
 
-Here is a simple counter example.
+如果函数返回一个嵌套函数，则该嵌套函数可以访问在该函数中定义的变量，即使该函数不再处于运行状态。
+
+这是一个简单的计数器示例。
 
 ```python
 def counter():
@@ -2370,12 +2371,12 @@ def counter():
 
 increment = counter()
 
-print(increment()) # 1
-print(increment()) # 2
-print(increment()) # 3
+print(increment())  # 1
+print(increment())  # 2
+print(increment())  # 3
 ```
 
-We return the `increment()` inner function, and that still has access to the state of the `count` variable even though the `counter()` function has ended.
+我们返回`increment()`这个内部函数，即使`counter()`函数已经结束，`increment`仍然可以访问`count`变量的状态。
 
 ## Decorators in Python
 

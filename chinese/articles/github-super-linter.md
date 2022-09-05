@@ -29,31 +29,29 @@ linter 可以通过以下方式帮助你节省大量的时间:
 
 ![Black-Example](https://www.freecodecamp.org/news/content/images/2022/08/Black-Example.png)
 
-Formatting changes made by Black
+Black 所做的格式化修改
 
-GitHub Super Linter can help you quite a lot in bringing these capabilities to your projects easily and efficiently. GitHub Super Linter is a combination of multiple commonly used linters which you can use very easily. It lets you set up automated runs for these linters, as well as manage multiple linters in a single project!
+GitHub Super Linter 在为你的项目带来这些功能方面可以提供相当大的帮助，轻松而有效。GitHub Super Linter 是一个由多个常用 linters 组成的组合，你可以非常容易地使用。它可以让你为这些 linters 设置自动运行，也可以在一个项目中管理多个 linters！它还有大量的自定义功能。
 
-There is also a ton of customization capabilities with environment variables that can help you customize the Super Linter to your individual repository.
-
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+它还有大量的环境变量的定制功能，可以帮助你根据你的个人仓库定制 Super Linter。
 
 ## How to Use GitHub Super Linter in GitHub Actions
 
-Super Linter is primarily designed to be run inside a GitHub Action, which is also how I have been using it for quite some time. We will talk about this first. To follow along you should create a new GitHub Action in your repository. Let us create a new file at `.github/workflows/linter.yml`.
+Super Linter 主要是为在 GitHub Action 中运行而设计的，这也是我在相当长一段时间内使用它的方式。我们将首先讨论这个问题。为了跟上进度，你应该在你的仓库里创建一个新的 GitHub Action。让我们在`.github/workflows/linter.yml` 创建一个新文件。
 
-Going forward, I will assume you know about the basic syntax for GitHub Actions. But in case you do not or need a quick refresher, I would suggest going through this [Quick Start Guide](https://docs.github.com/en/actions/quickstart).
+展望未来，我将假设你知道 GitHub 动作的基本语法。但如果你不知道或需要快速复习，我建议你看一下这个 [快速入门指南](https://docs.github.com/en/actions/quickstart).
 
 ### How to Create an Action
 
-We already have a blank file `.github/workflows/linter.yml`, which we will now populate with an action you can use to lint your project.
+我们已经有了一个空白文件`.github/workflows/linter.yml`，现在我们要用补充 action 相关内容，你可以用它来给你的项目加注。
 
-We will start by giving our action a name. This is what appears under the GitHub Action Status Check:
+我们将首先给我们的 action 一个名字（name）。这就是出现在 GitHub 动作状态检查下的内容:
 
 ```yaml
 name: Lint Code Base
 ```
 
-Next up, let's specify triggers for our action. This answers the question of when you should lint your codebase. Here we tell it to run the lint on every push and on every pull request.
+接下来，让我们为我们的 action 指定触发器。这将控制什么时候应该对你的代码库进行检查的问题。在这里，我们告诉它在每次推送（push）和每次拉动请求时（pull_request）都要运行 lint。
 
 ```yaml
 name: Lint Code Base
@@ -61,7 +59,7 @@ name: Lint Code Base
 on: [push, pull_request]
 ```
 
-This is another very commonly used configuration for the triggers. This only runs when you make a pull request to `main` or `master` branches and not on pushes to these branches.
+这是另一个非常常用的触发器配置。它只在你向主分支（main 或者 master）发出拉取请求时(pull_request)运行，而不是在向这些分支（master 或者 main 分支）推送时(push)运行。
 
 ```yaml
 on:

@@ -5,47 +5,46 @@
 
 ![How to Lazy Load Images in React](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/How-to-lazy-load-images-in-React-1.png)
 
-Optimizing the assets you use on your websites – like lazy loading images – is one of the most effective ways to improve web performance.
+优化网站上的资源（如图片懒加载）是提高web性能最有效的办法之一。
 
-Doing this helps you make sure that your websites are fast, they have great [SEO](https://en.wikipedia.org/wiki/Search_engine_optimization), and it helps enhance the user experience.
+这样做可以确保网站高速运行、有良好的[SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)以及用户体验。
 
-In this article, you'll learn how to lazy load images in a React application. We'll talk about the benefits of doing this, and how to implement it in your code.
+在这篇文章中，你将学习如何在React应用中实现懒加载。我将讲解这样做的好处，以及如何通过代码中实现。
 
-But before we begin, what is lazy loading, and how does it work?
+在开始之前，让我解释一下什么是懒加载，以及它是如何运作的。
 
-## What is Lazy Loading?
+## 什么是懒加载?
 
-> Lazy loading is a strategy that delays the loading of some assets (e.g., images) until they are needed by the user based on the user's activity and navigation pattern. Typically, these assets are only loaded when they are scrolled into view. [(Source: MDN Docs)](https://developer.mozilla.org/en-US/docs/Glossary/Lazy_load)
+> 懒加载是延迟加载一些资源（如：图片）的一种策略，以用户的行为和导航模式为依据，判断图片在被需要的时候才加载。通常来说，仅当这些资源滚动到视图中才被加载。 [(来源: MDN Docs)](https://developer.mozilla.org/en-US/docs/Glossary/Lazy_load)
 
-You can see an excellent example of this on [Unsplash](http://unsplash.com) when we scroll through the list of images. Initially, we see a blurred low-quality image placeholder [LQIP](https://web.dev/image-component/), and when we scroll within view, the whole image gets fully loaded to the page.
+[Unsplash](http://unsplash.com)就是一个很好的例子。当你滚动页面的时候，一开始会看到一个模糊的低质量图像占位符[LQIP](https://web.dev/image-component/)，当图片被滚动到视图中时，整个图片被完全加载。
 
 ![unsplash-lazy-load-image-illustration-](https://www.freecodecamp.org/news/content/images/2022/08/unsplash-lazy-load-image-illustration-.gif)
 
-The idea behind this process is to postpone the loading of images outside the viewport to reduce bandwidth usage, improve user experience, and speed up page load leading.
+这背后的理念是推迟视口以外图片的加载，以此来减少带宽的使用，提高用户体验，并加快页面加载的速度。
 
-Lazy loading an `image/iframe` today is as easy as adding the attribute `loading=" lazy"` inside the img/iframe element, like this:
+现在懒加载已经是一种`image/iframe`，所以仅需在img/iframe元素中添加 `loading=" lazy"`属性，如下：
 
 ```html
 <img src="image.jpg" alt="Image Alt" loading="lazy" />
 <iframe src="iframe" loading="lazy"></iframe>
 ```
 
-And it works without any further configuration.
+在不需要更多配置的情况下就可以生效。
 
-Sadly, lazy loading images this way is not widely supported in all browsers according to [caniuse.com](https://caniuse.com/?search=lazyloadin). Also, for browsers like Firefox, the `loading= "lazy"` property doesn't work in an `iframe` element. In those cases, you'll need to use/combine it with other libraries or tools.
+遗憾的是，根据[caniuse.com](https://caniuse.com/?search=lazyloadin)显示，不是所有的浏览器都支持这样的方式。 同时，在Firefox中，`loading= "lazy"` 属性并不能在`iframe`元素中使用。 在这些情况下，你需要搭配其他的库或者工具一起使用。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## Getting Started with Lazy Loading
+## 开始实现懒加载
 
-This article will utilize a JavaScript library called [React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component).  
-This popular library provides image rendering capabilities and effects that you can implement quickly and easily in your own React applications.
+本文将使用一个名为[React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)的库。  
+这个流行的库能够帮助你快速且轻松地在React应用中实现一些图片渲染的能力和效果。
 
-The code for this demo is available on [GitHub here](https://github.com/evavic44/react-lazyload).
+代码示例可以在[GitHub仓库](https://github.com/evavic44/react-lazyload)查看。
 
-### Step 1 – Install React Lazy Load Image Component
+### 步骤 1 – 安装React Lazy Load Image组件
 
-The first thing we need to do is install the React lazy load image component library using NPM:
+我们首先通过NPM来安装React lazy load image组件：
 
 ```js
 // Yarn
@@ -55,22 +54,21 @@ or
 $ npm i --save react-lazy-load-image-component
 ```
 
-### Step 2 – Import the component
+### 步骤 2 – 引用组件
 
-We'll just import our image and the lazy load component. But you may use an external URL if you like. In my case, I'm importing it as a component from the images directory.
+这里我们将直接通过组件来引用，你也可以通过外部URL的方式来引用图片。在这个例子中，我将图片作为images目录下的组件引用：
 
 ```js
 import Image from "../images/bird.jpg";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 ```
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### Step 3 – Declare the image
+### 步骤 3 – 声明图片
 
-To start using it, instead of declaring your images with an `img` tag, replace that with `LazyLoadImage` and declare the image with an `src` attribute as you would normally.
+使用`LazyLoadImage`替换掉`img`来声明图片，使用你习惯的`src`属性来声明图片。
 
-Here's what that looks like in code:
+代码如下：
 
 ```js
 import React from "react";
@@ -89,33 +87,32 @@ export default function App() {
 }
 ```
 
-Also, we explicitly defined the width and height of the image. This helps to avoid issues like [cumulative layout shift(CLS)](https://web.dev/cls/).
+同时，需要明确定义图片的宽和高，以避免[累积布局偏移(CLS)](https://web.dev/cls/)问题。
 
-To see the effects of the component, open up the network tab in your developer tools using Ctrl + Shift + E on Windows and Linux, and Cmd + Opt + E on Mac. Then set the throttling to a lower network (3G), disable the cache, and refresh the page.
+若要查看组件效果，可以打开浏览器的开发者工具，如果是Windows和Linux系统，使用组合键 Ctrl + Shift + E；如果是Mac使用 Cmd + Opt + E。然后将节流设置为较低的网络(3G)，禁用缓存，并刷新页面。
 
   
-
 ![network-tab](https://www.freecodecamp.org/news/content/images/2022/08/network-tab.png)
 
-Here's the result:
+效果如下:
 
   
 
 ![default](https://www.freecodecamp.org/news/content/images/2022/08/default.gif)
 
-By default, you can see that the image hasn't loaded on the screen because it is not visible on the viewport. Once we start scrolling and the image is within view, the lazy load is disabled, and we can see the image now.
+Default（默认）时，因为图片并不在视口，图片没有加载。一旦你开始滚动，图片到达视图，懒加载就被禁用，我们就可以看到图片。
 
-[Live Demo](https://react-lazyload.vercel.app/default)
+[Live演示](https://react-lazyload.vercel.app/default)
 
-### Step 4 – Add a placeholder image
+### 步骤 4 – 添加图片占位符
 
-Alternatively, we can preview a low-resolution image first while waiting for the main image to load. This helps fill the image area so users know a picture is loading. We refer to this placeholder image as a low-quality image placeholder (LQIP).
+另外，在图片加载的过程中，我们可以先提供一个低分辨率的图片。这样就可以填充图片区域，让用户知道有一个图片正在加载。我们将这种占位符图片称为低质量图片占位符(LQIP)。
 
-Doing this not only looks good but also gives the user some idea about what the actual image looks like.
+这样做不仅能使页面更美观，同时也给用户对实际图片的一个预估。
 
-To get a smaller image size, I like using [squoosh.app](https://squoosh.app/). Import the image and experiment with the resolution and quality until you're comfortable with the size.
+我使用[squoosh.app](https://squoosh.app/)来获取更小尺寸的图片。你可以在这个工具中引用你需要的图片，并且尝试各种分辨率和质量直至你觉得满意。
 
-Some other image tools you can use include:
+你还可以使用其他的图片处理工具：
 
 -   [Photoshop](https://www.adobe.com/products/photoshop.html)
 -   [Responsive Breakpoints](https://responsivebreakpoints.com)
@@ -124,7 +121,7 @@ Some other image tools you can use include:
 
 ![rasterized-image](https://www.freecodecamp.org/news/content/images/2022/08/rasterized.png)
 
-Initially, our image was `288KB`, but we've successfully compressed it to a low-res version of `2.41KB`. To use the placeholder image, add a `PlaceholderSrc` attribute to the image with the value of the image.
+一开始，我们的图片大小为 `288KB`，但是我们成功将其压缩为`2.41KB`。使用占位符图片需要在图片添加一个`PlaceholderSrc`属性，并包含图片的值。
 
 ```js
 import Image from "../images/bird.jpg";
@@ -141,17 +138,17 @@ import PlaceholderImage from "../images/placeholder.jpg";
 
 ![React-lazyload-LQIP-](https://www.freecodecamp.org/news/content/images/2022/08/React-lazyload---LQIP-.gif)
 
-You can see how it loaded the placeholder image initially, and after it finished loading, it was replaced by the main image.
+你可以看到一开始加载的是占位符图片，一旦完成加载，就替换成主图。
 
 [Live Demo](https://react-lazyload.vercel.app/placeholder)
 
-### Step 5 – Add image blur
+### 步骤 5 – 添加模糊图
 
-LazyLoadImage also provides a plugin to make an image blur initially before it loads and removes the blur after the image loads completely.
+LazyLoadImage提供一个插件，在加载前模糊图片，加载完成后去除掉模糊。
 
-Combining this with the placeholder image will improve the overall look and provide a better output.
+将其与占位符图片结合，可以提升整体效果。
 
-In order to use the blur effect, we need to import the CSS file that controls it:
+为了使用模糊效果，我们必须引用控制它的CSS文件：
 
 ```js
 import Image from "../images/bird.jpg";
@@ -170,39 +167,38 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 ![React-lazyload---Blur](https://www.freecodecamp.org/news/content/images/2022/08/React-lazyload---Blur.gif)
 
-[Live Demo](https://react-lazyload.vercel.app/blur)
+[Live演示](https://react-lazyload.vercel.app/blur)
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## Why Should You Lazy Load Your Images?
 
-You might be wondering why you should go through the trouble of lazy loading off-screen images in your web application. Is it worth it, and why should you care about the points shared in this article?
+## 为什么要对图片实现懒加载?
 
-Here's a list of reasons:
+你可能会好奇，为什么要在web应用中使用懒加载这么麻烦的技术。这样做值得吗，我为什么要关注文章中的观点？
 
-### 1\. Lazy Loading Saves Data and Bandwidth
+以下是使用懒加载的理由：
 
-Since images out of the viewport are not downloaded immediately, lazy loading conserves extra bandwidth usage. This is good for performance, especially for mobile users.
+### 1\. 懒加载节省数据和带宽
 
-### 2\. Lazy Loading Lowers the Cost of a CDN
+由于在视口外的图片不被及时加载，懒加载可以节省带宽的使用。这有利于提升特别是手机用户的使用性能。
 
-Media content services like [Cloudinary](https://cloudinary.com) or [Imagekit](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/imagekit.io) offer paid plans for media storage. Lazy loading images ensures that only images requested from the CDN are loaded, reducing server costs.
+### 2\. 懒加载减少CDN花销
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+如[Cloudinary](https://cloudinary.com)或 [Imagekit](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/imagekit.io)这样的媒体内容服务提供收费的媒体存储计划。懒加载可以确保仅从CDN请求的图片被加载，减少了服务器花销。
 
-### 3\. Lazy Loading Improves SEO
 
-Page speed is a critical factor that influences SEO (and makes search engines more likely to recommend your page). Because your page load time is very low, search engines will love your site.
+### 3\. 懒加载提升SEO
 
-## Conclusion
+页面速度是影响SEO (搜索引擎也更有可能推荐你的页面)的关键要素。因为页面加载时间少，搜索引擎会乐于推荐你的页面。
 
-Optimizing images is a good skill I believe every web developer should cultivate. It creates a better experience for users, especially those on mobile devices.
+## 总结
 
-Here's the [Code File for this article on GitHub](https://github.com/Evavic44/react-lazyload).
+我认为优化页面是每一个web开发者应该修炼的技术。它给用户提供了更好的体验，特别是使用手机的用户。
 
-That's it for this article. If you read up to this point, then I'm sure you'll like my other content. Check out [my blog](https://eke.hashnode.dev) or follow me on twitter [@victorekea](https://twitter.com/victorekea) for more.
+这里是[GitHub上关于这篇文章的代码](https://github.com/Evavic44/react-lazyload)。
 
-## Resources
+这篇文章就到这里，如果你已经读到了这里，我确信你对我其他的文章也会感兴趣。欢迎通过查看我的[博客](https://eke.hashnode.dev)或者关注我的twitter[@victorekea](https://twitter.com/victorekea)来获取更多内容。
 
--   [React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)
+## 其他资源
+
+-   [React Lazy Load Image 组件](https://www.npmjs.com/package/react-lazy-load-image-component)
 -   [Demo](https://react-lazyload.vercel.app)

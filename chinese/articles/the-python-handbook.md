@@ -2378,7 +2378,7 @@ print(increment())  # 3
 
 我们返回`increment()`这个内部函数，即使`counter()`函数已经结束，`increment`仍然可以访问`count`变量的状态。
 
-## Decorators in Python
+<h2 id="decorators-in-python">Python装饰器</h2>
 
 Decorators are a way to change, enhance, or alter in any way how a function works.
 
@@ -2408,7 +2408,7 @@ def logtime(func):
     return wrapper
 ```
 
-## Docstrings in Python
+<h2 id="docstrings-in-python">Python文档字符串</h2>
 
 Documentation is hugely important, not just to communicate to other people what the goal of a function/class/method/module is, but it also communicates it to yourself.
 
@@ -2501,7 +2501,9 @@ I like Google's standard: [https://github.com/google/styleguide/blob/gh-pages/py
 
 Standards allow to have tools to extract docstrings and automatically generate documentation for your code.
 
-## Introspection in Python
+
+
+<h2 id="introspection-in-python">Python反射</h2>
 
 Functions, variables, and objects can be analyzed using **introspection**.
 
@@ -2567,7 +2569,8 @@ It can be useful to check if two variables point to the same object.
 
 The `inspect` standard library module gives us more tools to get information about objects, and you can check it out here: [https://docs.python.org/3/library/inspect.html](https://docs.python.org/3/library/inspect.html)
 
-## Annotations in Python
+
+<h2 id="annotations-in-python">Python注解</h2>
 
 Python is dynamically typed. We do not have to specify the type of a variable or function parameter, or a function return value.
 
@@ -2597,7 +2600,9 @@ Python will ignore those annotations. A separate tool called [`mypy`](http://myp
 
 A great help especially when your software becomes large and you need to refactor your code.
 
-## Exceptions in Python
+
+
+<h2 id="exceptions-in-python">Python异常</h2>
 
 It's important to have a way to handle errors, and Python gives us exception handling to do so.
 

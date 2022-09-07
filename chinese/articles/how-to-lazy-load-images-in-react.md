@@ -1,6 +1,6 @@
 > -  原文地址：[How to Lazy Load Images in React](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/)
 > -  原文作者：[Victor Eke](https://www.freecodecamp.org/news/author/victoreke/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Lazy Load Images in React](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/How-to-lazy-load-images-in-React-1.png)

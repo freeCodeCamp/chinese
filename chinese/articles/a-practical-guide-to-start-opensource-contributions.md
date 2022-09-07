@@ -1,6 +1,6 @@
 > -  原文地址：[Open Source for Developers – A Beginner's Handbook to Help You Start Contributing](https://www.freecodecamp.org/news/a-practical-guide-to-start-opensource-contributions/)
 > -  原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Open Source for Developers – A Beginner's Handbook to Help You Start Contributing](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Book-PNG.png)

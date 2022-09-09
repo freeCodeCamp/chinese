@@ -5,174 +5,171 @@
 
 ![Open Source for Developers – A Beginner's Handbook to Help You Start Contributing](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Book-PNG.png)
 
-What comes to mind when you hear the term `Open Source`? In the programming world, open source is a generic term for Open Source Software (OSS). Open-source software is built on source code that's open to everyone to view, change, extend, and distribute.
+听到`开源`的时候你脑海中会浮现什么画面? 在编程世界中，开源是开源软件(OSS)的统称。开源软件建立在对所有人开放查看、更改、扩展和分发的源代码之上。
 
-In this article, we will get into many aspects of open source software and its ecosystem. We will discuss what it takes for you to start contributing to open source, the skills you need, how to maintain open-source projects, challenges, resources, and some exciting projects to get started.
+本文将讨论开源软件和其生态系统的各个方面。包括为开源项目贡献的条件、你需要掌握的技能、如何维护开源项目、挑战和资源，以及一些你可以开始着手尝试的激动人心的项目。
 
-Before we start, here are a few words about me and my interest in the open-source world.
+在开始之前，让我简单介绍一下我自己以及我对开源社区的兴趣。
 
-I've been using open source projects, products, and services daily and contributing to some of them to improve how I can. I also maintain many open source projects to educate beginners about web programming.
+我每天都会使用开源项目、产品和服务，我也参与贡献开源项目提升自我。我维护着一些向初学者提供web编程教学的开源项目。
 
-You can check out the open-source projects I maintain on my [GitHub Profile](https://github.com/atapas).
+你可以在我的[GitHub资料](https://github.com/atapas)上查看我的开源项目。
 
-This article is about sharing my experience with you to help you get started with open source, if you're not contributing already.
+如果你尚未开始贡献开源项目，我将通过这篇文章分享我自己的经验帮助你开启开源之旅。
 
-## How Does Open Source Work?
+## 开源是如何运作的?
 
-The open-source projects consist of the following people and elements:
+开源项目包含以下人物和元素：
 
-`Project Maintainer(s)`: Maintainers are one or more people who start the open-source project, manage it, make decisions, brainstorm ideas, and work closely with contributors, users, and marketing platforms.
+`项目维护者`: 维护者有一位或者多位，他们启动开源项目、管理项目、制定决策、集思广益并且和贡献者、用户以及营销平台密切接触。
 
-The project maintainers will have extra access rights and privileges to control various aspects of the project.
+项目维护者拥有额外的权利来控制项目的各个方面。
 
-`Project Contributor(s)`: When the maintainer(s) start an open-source project, they are the early contributors. As the project grows and more people learn about it, the willingness grows to contribute to it.
+`项目贡献者`: 启动开源项目的维护者是早起贡献者。随着项目的壮大，更多人了解到项目并且愿意参与贡献。
 
-As it grows, the project gets more contributors. Anyone can look into the project code, modify it, request a review, and get the changes into the project.
+项目越大，贡献者越多。任何人都可以查看项目代码、修改代码、请求校对并将改变并入项目中。
 
-`Source Code and Documentation Repository`: The maintainer keeps the project source code in a centralized source code repository (for example, GitHub). It helps all the contributors have the required access to the code to contribute.
+`源代码和文档库`: 维护者将项目源代码保存在一个中心化的源代码库 (例如GitHub)。这样所有贡献者就可以访问代码并且参与贡献。
 
-`Project License`: Every open source project must specify a distribution license to make it clear for its users/consumers.
+`项目许可证`: 每一个开源项目都必须指定一个分发许可证，给用户和使用者提供清晰的信息。
 
-Various license types exist, and the maintainer can pick one based on what suits the project. Some widespread distribution licenses are MIT, Apache License 2.0, GNU General Public License (GPL) 3.0 etc.
+有各种个样的许可证，维护者可以根据项目做选择。比较广泛被采用的许可证包括：MIT、 Apache License 2.0、 GNU General Public License (GPL) 3.0 等。
 
-`Contributing Guide`: A maintainer of the OSS project creates a contributing guide to help the contributors understand the pull request process, standards, scope, and so on.
+`贡献指南`: OSS项目的维护者创建贡献指南帮助贡献者理解合并请求（pull request)的流程、标准、范围等。
 
-`Code of Conduct Guide`: The code of conduct guide discusses various guidelines, collaboration, behaviour expectations from the contributors, and how to escalate and resolve issues.
+`行为准则指南`: 行为准则指南讨论各种指导方针、对贡献者的协同和行为期望，以及如何提出和解决issue（问题）。
 
-`Project Culture`: The project culture evolves with the project community. While the maintainers have a significant stake in it, the contributors are equally responsible for maintaining healthy learning, sharing, and growth culture.
+`项目文化`: 项目文化随着项目社区发展而变化。虽然维护者对其影响重大，但贡献者也有同样的责任来维护一个健康学习、分享和成长的文化。
 
-`Community`: As the project grows, the community builds around it. Tools like GitHub Discussions and Discord are famous for organizing community-based interactions.
+`社区`: 随着项目发展，围绕项目的社区也发展起来。组织社区交流的常用平台有GitHub Discussions和Discord。
 
-`Distribution`: The open-source project should have a way to reach its end-users and consumers. There should be a distribution model helping the code translate to the end product for delivery.
+`分发`: 开源项目应该接触到终端用户和消费者，所以应该有一个分发模型将代码转化为最终的产品，进行交付。
 
-`Users/Customers`: The users or customers are the consumers of the product the open-source team builds using the source code.
+`用户/客户`: 用户和客户是开源团队通过源代码构建产品的消费者。
 
-Now let's take a look at the image below. Here we see an open-source project community including maintainers and contributors.
+让我们查看下面的图片，图片是一个包含维护者和开发者的开源项目社区。
 
-The source code is in the centralized repository. The contributors `fork` (A term that we will learn shortly) the `upstream repository` and contribute. Once the contribution is over, the project maintainer `merges` it with the main branch.
+中心化的仓库里包含源代码。 贡献者 `fork（分叉）` (你马上要学到这个术语) `upstream repository（上游仓库）`并贡献。一旦完成，项目维护者将其`merges（合并）`到主分支（main branch)。
 
 ![opensource-model](https://www.freecodecamp.org/news/content/images/2022/07/opensource-model.png)
 
-A High-Level View of Open Source Working Model
+开源项目运作模型的高层视角
 
-Don't worry if you are unfamiliar with terms like fork, branch, merge, etc. We will learn them soon in this article. Just keep reading.
+如果你不熟悉fork、 branch、 merge这些词，不用担心！我们马上就会讨论这些词，请继续阅读。
 
-Now let's understand how the open-source software get delivered to the users/customers.
+现在让我们讨论一下开源软件是如何交付给用户/客户的。
 
-The image below shows one of the many possibilities at a high level. The open-source project should have a build-package-deploy mechanism using the Continuous Integration and Continuous Deployment(CI/CD) process.
+下面的图片显示了一种可能性的高层视角。开源项目应具有构建-打包-部署机制，该机制使用持续集成和持续部署（CI/CD）流程。
 
-Whenever there are code changes in the `main branch`, the CI/CD workflow kicks off automatically. It builds the source code, packages it, and deploys it to be accessible to the end-users and target customers.
+每当`main branch（主分支）`的代码发生改动，CI/CD工作流就开始自动工作：构建源代码、打包并部署，供终端用户和目标客户能够使用。
 
 ![deploy](https://www.freecodecamp.org/news/content/images/2022/07/deploy.png)
 
-A High-Level View of the SOURCE CODE Gets Into the Hands of the USERS
+从源代码到用户的高层视角
 
-Please note: The CI/CD or any other deploying mechanisms are not firmly part of the Open Source Software development. However, knowing it helps understand the OSS working model end to end.
+请注意: CI/CD或者其他部署机制并不是开源软件开发的一部分，但了解它有助于理解OSS端到端的工作模型。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## What Does Open Source Contribution Mean?
+## 开源项目贡献是什么意思?
 
-`Open Source` contribution means improving the open source project by any means. One of the misconceptions you may have about the contribution is that, you need to contribute to the source code alone. Well, that's not all there is to it.
+`开源`贡献就是使用一切办法来提升开源项目。一个常见的误解是你只能贡献源代码，完全不是这样。
 
-Contributing to the source code of an open source project is just a type of contribution you can make. However, you can contribute to other areas like,
+贡献源代码是参与开源项目的一种形式，但是还有其他方式：
 
--   The documentation of the project. Improve it so that more contributors and users find it easy to deal with.
--   Test the application, find issues, and create them in the issue management system.
--   Take part in code reviews to help the project with better coding standards.
--   Write unit tests, end-to-end tests, and make the application quality better.
--   Create content like articles and videos to spread awareness of the project.
--   Help build the community of interested people.
+-   项目的文档。提高文档质量，帮助贡献者和用户更容易参与和使用。
+-   测试应用、发现问题，并在问题管理系统创建问题（issue）。
+-   参与代码校对，帮助提高项目的编码标准。
+-   编写单元测试、端到端测试，使得应用的质量更高。
+-   创建如文章、视频之类的内容来提升项目的知名度。
+-   帮助创建兴趣社区。
 
-All the above are crucial open source project contributions.
+以上都是重要的开源贡献方面。
 
-## Benefits of Open Source Contributions
+## 参与开源贡献的好处
 
-Open Source contributions come with a number of benefits to the developers. Some key benefits are:
+贡献开源项目对于开发者来说好处多多，但是主要的好处有：
 
--   Get a chance to up skill yourself.
--   Make the software/application better with code and documentation.
--   Meet like-minded people, build networks and communities.
--   Understand the application development and maintenance cycles.
--   Learn from Pull Request feedback.
--   Learn how to manage your code as open source.
+-   抓住机会、提高技能水平
+-   提高软件/应用的代码和文档水平
+-   接触想法相似的朋友、建立人脉和社区
+-   理解应用开发和维护的流程
+-   从Pull Request反馈中学习
+-   学习如何管理自己的开源项目
 
-## Open Source Myths
+## 开源迷思
 
-So, we are now aware of the Open Source model and its benefits. The next thing we want to learn is how to start with Open Source contribution, both as a `maintainer` of the project and as a `contributor`.
+我们已经了解了开源模型和它的好处。接下来我们就要学习如何作为项目的`维护者` 和`参与者`来开启开源之旅。
 
-Before we do that, let's clarify certain myths about Open Source.
+在开始之前，让我们先消除一些迷思。
 
-❌ **Myth**: I don't know to code. Open Source is not my cup of tea.
+❌ **迷思**: 我不了解代码。开源不适合我。
 
-✅ **Fact:** Open Source is not about the coding alone! You have plenty of opportunities to contribute to improving documentation, testing, creating media, creating content, and many more. So do not stay back thinking the lack of coding can stop you from contributing to the OSS.
+✅ **事实:** 开源不仅仅是编写代码！你可以通过提高文档、测试、创建媒体、内容等各种方式参与进来。所以不要让不具备编码技能成为你参与开源项目的绊脚石。
 
-❌ **Myth**: I know how to code but I'm not familiar with the technology used in this Open Source project. I cannot contribute.
+❌ **迷思**: 我知道怎么写代码。但是我对开源项目使用的技术不熟悉，我不能贡献。
 
-✅ **Fact:** On the contrary, it is an excellent opportunity to learn something you do not know already! The Open Source ecosystem is patient enough to provide you that time so that you can learn and contribute.
+✅ **事实:** 相反，这是学习新东西绝佳的机会！开源生态系统提供足够的时间和耐心让你学习和参与贡献。
 
-❌ **Myth**: Open Source doesn't maintain an enterprise-level standard.
+❌ **迷思**: 开源项目的维护标准不如企业。
 
-✅ **Fact:** Not true at all. In fact, a lot of enterprise software is powered by Open Source software today. It's incorrect to assume that Open Source projects are not concerned about quality and standards.
+✅ **事实:** 完全不对。实际上有非常多的企业软件来源于开源软件。所以认为开源项目的质量和标准不高不对。
 
-❌ **Myth**: Open Source projects are not easy to maintain.
+❌ **迷思**: 开源项目难以维护。
 
-✅ **Fact:** An Open Source project is backed by contributors. An essential aspect for a maintainer is setting the ground, creating a roadmap, building the community, and keeping the motivation higher.
+✅ **事实:** 开源项目是由贡献者支持的。维护者主要的工作是设定范围、创建路线图、创建社区以及保持社区的贡献热情。
 
-For many Open Source projects, maintainers don't even have to code. Contributors can run the show provided the maintainer is putting in the necessary support.
+许多开源项目的维护者甚至不需要编写代码。只要维护者提供必要的支持，贡献者就可以将项目运作起来。
 
-❌ **Myth**: Open Source Software is always free.
+❌ **迷思**: 开源软件总是免费的。
 
-✅ **Fact:** Most of them are, but not all OSS is free. It is driven by the type of license the project is using. Some licenses are restrictive to give free access to use and distribute the code in any manner. You need to pay special attention to the licensing information of a project to understand "how much" free the OSS will be.
+✅ **事实:** 大多数开源项目是免费的，但不是所有的都是。这是由项目的许可证所决定的。有一些许可证要求必须让使用和分发免费。你需要格外注意项目许可证信息，了解OSS到底免费到什么程度。
 
-❌ **Myth**: Open Source is for beginners.
+❌ **迷思**: 开源项目只适合初学者。
 
-✅ **Fact:** Many developers think that OSS is for beginners and students. The fact is, everyone is welcome to contribute. It makes sense for a subject matter expert to enhance an Open Source project with their knowledge and experience.
+✅ **事实:** 许多开发者认为开源项目是为初学者和学生设计的。实际上任何人都可以参与进来。对于主题专家来说，利用他们的知识和经验来增强开源项目是有意义的。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+## 开始参与开源需要具备什么条件
 
-## What to Know to Get Started with Open Source
+开发者想要快速开始参与开源项目需要了解一些基本技能。这些是可选的，但是如果具备，你将更享受参与开源贡献。
 
-Developers need to know a few basic things to start with the Open Source projects quickly. These are optional prerequisites, but if you make yourself aware, you will enjoy contributing to Open Source even better.
+### 了解Git基础
 
-### Know Git Basics
+如果你已经了解Git的概念及其主要用途，那么你已经前进了一大步。Git在开源世界中无处不在，你不能忽视它。
 
-You have added mileage if you are already aware of the concept of Git and its primary usage. Git is omnipresent in the Open Source world, and you can not ignore it.
+你至少要了解以下话题：
 
-You need to know about these topics at a minimum,
+-   什么是Git，它是怎么运作的？
+-   仓库是什么?
+-   如何复制(clone)一个仓库?
+-   如何stage/un-stage（暂存/取消暂存）修改?
+-   如何commit（提交）你的修改?
+-   如何编写更好的提交消息?
+-   如何解决合并冲突?
+-   如何将你的修改推送（push）到远程仓库?
+-   如何从远程仓库拉取（pull）修改?
 
--   What is Git, and how does it work?
--   What is a repository?
--   How to clone a repository?
--   How to stage/un-stage changes?
--   How to commit your changes?
--   How to write better commit messages?
--   How to resolve merge conflicts?
--   How to push your changes to a remote repository?
--   How to pull changes from the remote repository?
+如果你尚不了解Git，我推荐你观看这个视频，了解Git的概念和上面提到的用例： [为初学者揭开Git的神秘面纱](https://www.youtube.com/watch?v=vWtu4mzUgQo).
 
-If you are new to Git, I recommend this video to help you learn Git concepts and all the usages mentioned above: [Demystifying Git for Beginners](https://www.youtube.com/watch?v=vWtu4mzUgQo).
+### 熟悉GitHub
 
-### Become Familiar with GitHub
+[GitHub](https://github.com/)上有超过1.28亿个公开仓库，其中很大一部分是开源项目。你想要参与贡献的开源项目可能在GitHub上，所以你应该学习如何使用GitHub。
 
-There are 128M+ public repositories on [GitHub](https://github.com/). A significant portion of these repositories are Open Source projects. The Open Source project you want to contribute to may also be on GitHub. So, you should learn how to handle things on GitHub.
+作为开源项目的贡献者，你应该知道：
 
-As a contributor to an Open Source Project, you must know:
+-   如何fork（分叉）一个仓库?
+-   如何找到仓库的URL并clone（克隆）仓库?
+-   如何创建一个Pull Request?
+-   如何校对一个Pull Request?
 
--   How to fork a repository?
--   How do you find the URL to clone the repository?
--   How to create a Pull Request?
--   How to review a Pull Request?
+作为一个项目维护者，你应该知道：
 
-As a Project maintainer, you must know,
+-   如何创建一个仓库?
+-   如何为项目添加许可证信息?
+-   如何创建贡献指南和行为准则指南?
+-   如何创建提交issue和pull requests的标准?
+-   如何合并pull requests?
 
--   How to create a repository?
--   How to add License information to the project?
--   How to create a Contributing guide and a Code of Conduct guide?
--   How to set a standard for creating issues and pull requests?
--   How to merge pull requests?
-
-You can follow the Twitter thread below. It explains everything in a step-by-step manner for you,
+你可以关注下面的Twitter thread，它分步骤讲解了上面的所有信息：
 
 > Do you have public GitHub repositories?  
 >   
@@ -189,39 +186,39 @@ You can follow the Twitter thread below. It explains everything in a step-by-ste
 > 
 > — Tapas Adhikary (@tapasadhikary) [September 21, 2021](https://twitter.com/tapasadhikary/status/1440296182396309513?ref_src=twsrc%5Etfw)
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### Learn to Fork a Repository
 
-Forking is another crucial concept to understand. Most `Open Source` projects will not allow a contributor to create branches directly on a repository. Instead, the contribution workflow may go like this:
+### 学习如何Fork（分叉）一个仓库
 
--   Fork the repository.
--   Clone the forked repository.
--   Perform changes.
--   Get changes from the UPSTREAM.
--   Create a pull request from the forked repo to the base repository.
+Fork（分叉）是一个重要的概念。 大部分`开源` 项目不允许贡献者直接在仓库创建分支。取而代之的工作流如下：
 
-In my experience of working with many contributors, most of them find the forking concept a bit challenging.
+-   fork（分叉）仓库。
+-   clone（克隆）分叉后的仓库。
+-   编写修改。
+-   从UPSTREAM（上游）提取修改。
+-   创建从分叉仓库到基础仓库的pull request。
 
-You can check out this video tutorial to learn [How to Fork a GitHub Repository](https://www.youtube.com/watch?v=h8suY-Osn8Q). Also, find this [GitHub repository](https://github.com/atapas/fork-me) to practice forking. It is for absolutely beginners to gain confidence on forking a repository.
+在我和众多贡献者的工作经验中，大部分人觉得理解Fork（分叉）的概念有点困难。
 
-### Learn to Resolve Merge Conflicts
+你可以通过这个视频学习Fork的概念 [如何分叉一个Github仓库](https://www.youtube.com/watch?v=h8suY-Osn8Q)。同时你可以在这个[GitHub仓库](https://github.com/atapas/fork-me)练习分叉，这是为初学者设计来提升信心的仓库。
 
-Ask any developer how they feel about resolving merge conflicts. Well, it's not very straightforward to do, but the more you face it, the better you learn. Understand the process of resolving merge conflicts, how to think about it, and how to resolve a merge conflict.
+### 学习解决合并冲突（Merge Conflicts）
 
-Here is a [practical guide with examples to learn to resolve merge conflicts](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/). Please take a look.
+如果询问任意一位开发者对解决待合并冲突的看法，你得到的答案会是不那么简单。遇到得越多，自然就更熟练。了解解决合并冲突的过程，并且思考背后的逻辑和如何具体操作十分有必要。
 
-### Learn Markdown Syntax
+这里有一份[解决合并冲突实用指南](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)，欢迎查阅。
 
-Documentation is one of the primary needs of any Open Source project. A `Readme.md` file explains the project, how to set it up, run, deploy, and so on.
+### 学习Markdown语法
 
-The `Contributing.md` file discusses how to contribute to the project.
+文档是任何开源项目的基础。`Readme.md`文件介绍了项目，如何设置、运行、部署等。
 
-The `CODE_OF_CONDUCT.md` file describes what to expect from a contributor's behaviour and engagement. Of course, you can write many other `.md` files based on your project needs.
+`Contributing.md`文件介绍如何给项目做贡献。
 
-The `md` stands for markdown. It is syntax used for documenting in GitHub. It is better to learn the basic syntax so that you can take part in documentation seamlessly.
+`CODE_OF_CONDUCT.md`文件介绍了对贡献者行为和参与的期望。当然，你可以基于自己的项目，编写任意 `.md`文件。
 
-Here is an Open Source project that provides the Mark Down Syntax to copy and use. You may want to take a look.
+`md`代表着markdown（标记语言），是一种在Github上用于写文档的语法。了解基础的语法有助于你流畅地编写文档。
+
+这里有一个开源项目提供了Markdown语法，可以复制和使用。欢迎查阅。
 
 [
 
@@ -235,66 +232,63 @@ A single place for all the markdown syntaxes I have learned so far. - GitHub - a
 
 ](https://github.com/atapas/markdown-cheatsheet)
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### Cultivate Your Soft Skills
 
-`Open Source` is a green field for many developers to work, learn, and build together. As a contributor, your technical skills may not be enough to thoroughly enjoy the open source experience.
+### 发展你的软技能
 
-Let's discuss a few must-have soft skills for developers.
+`开源`是许多开发者工作、学习和共同创建的天地。若想成为一位贡献者，仅仅具备技术技能不足以让你在此畅游。
 
--   **Patience**: `Patience` is a must-have skill for developers. It is required when you are learning something new, debugging a complex problem, working with others, negotiating with someone, and getting/giving feedback. At times, things may not move at a pace you are expecting, so you need to have patience and assess the situation.
--   **Curiosity**: A `curious` mind goes a long way. When contributing to open source, the possibilities are immense. You need to be curious to figure things out. It is not only applicable to figuring out technical challenges but also while working with people.
--   **Be Responsive**: In the Open Source ecosystem, you may not meet and talk to people in the daily basis but the work must go on. You need to be `responsive` to the queries, tasks, requests, and anything that you are accountable to. Many great initiatives die down just because of a lack of responsiveness from people.
--   **Be Humble**: Being `humble` is key to success. Someone who is knowledgeable but not humble often fails to work as a team.
+让我们来看看开发者需要具备的一些软技能：
 
-## How to Start Contributing to Open Source Projects
+-   **耐心**: `耐心`是所有开发者必备的技能。当你在学习新知识，排查复杂问题的bug，和其他人一起工作、谈判，给予和吸收意见的时候都需要耐心。事情常常不如预期的节奏推进，所以你需要保持耐心面对现状。
+-   **好奇心**: `好奇`使人进步。参与开源贡献将拥有无限可能。你需要对解决问题充满好奇心。好奇心不仅适用于解决技术难题，也适用于和他人一起工作。
+-   **责任心**: 在开源生态中，你可能不会经常和人见面及交流。你必须对所有查询、任务、请求以及委任与你的事情`负责`。许多伟大的倡议往往因为人们缺乏责任心而不了了之。
+-   **谦逊之心**: `谦虚`是成功的关键。有学识但不谦逊的人往往不适合团队协作。
 
-Let's now see how to get started with the open source contributions. The list below provides links and resources for you to get started with an open source contribution immediately.
+## 如何开始参与开源项目贡献
+
+让我们来看看如何开始参与开源项目贡献。下面的清单提供了一些链接和资源助你马上开启开源贡献之旅。
 
 ### GitHub Explore
 
-GitHub Explore shows you the repositories based on your interest. You can set the notifications to get informed about a project.
+GitHub Explore会向你展示你感兴趣的仓库，你可以给特定仓库设置提醒。
 
-Also, you can search repositories by topics and trends. Use GitHub explore to find out the projects that are more relevant to your skill, need, and aspirations. You can find it here: [https://github.com/explore/](https://github.com/explore/)
+同时，你可以使用话题和趋势来寻找仓库。使用GitHub explore来寻找最合适你的技能、需求以及对你最有启发的项目。你可以通过这个地址查看： [https://github.com/explore/](https://github.com/explore/)
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### How to Contribute to Open Source by freeCodeCamp
+### 如何参与freeCodeCamp的开源项目
 
-This repository from freeCodeCamp is an absolute gem. It provides you with many resources, pointers to get started with open source. You can find it here: [https://github.com/freeCodeCamp/how-to-contribute-to-open-source](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
+freeCodeCamp的这个仓库绝对是一个宝藏，它提供了许多资源和指示帮助你开启开源之旅。你可以通过这个地址查看：[https://github.com/freeCodeCamp/how-to-contribute-to-open-source](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
 
 ### Contributor Ninja
 
-This website helps you with a list of programming languages to chose from – JavaScript, HTML, Rust, Go, and many more. You get the cards of repositories to select from. It's a simple place to get started. You can find it here: [https://contributor.ninja/](https://contributor.ninja/)
+这个网站供你选择一系列编程语言：JavaScript、 HTML、 Rust、 Go等。你可以通过卡片选择对应的仓库，简单方便，是一个不错的开始。你可以通过这个地址查看： [https://contributor.ninja/](https://contributor.ninja/)
 
 ### First Contributions
 
-This is a huge list of open source projects to search and filter from. They also have a well-guided documentation to get started. You can find it here: [https://firstcontributions.github.io/](https://firstcontributions.github.io/)
+这是一个巨大的清单，包含供你查找和过滤的开源项目。每个项目都有编写清晰的文档。你可以通过这个地址查看：[https://firstcontributions.github.io/](https://firstcontributions.github.io/)
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
 ### CodeTriage
 
-CodeTriage is a mammoth list of projects with open issues. It shows a separation of issues and docs to triage. The website is very useful. You can find it here: [https://www.codetriage.com/](https://www.codetriage.com/)
+CodeTriage是一个包含巨量开放issue项目的清单。它将issue和文档归类后分发给你。这个网站十分有用，你可以通过这个地址查看: [https://www.codetriage.com/](https://www.codetriage.com/)
 
 ### Up For Grabs
 
-This is a comprehensive list of Open Source projects to pick from based on your interest. You can find it here: [https://up-for-grabs.net/#/](https://up-for-grabs.net/#/)
+这里包含了各种各样的开源项目，你可以基于自己兴趣筛选。你可以通过这个地址查看:[https://up-for-grabs.net/#/](https://up-for-grabs.net/#/)
 
 ### First Timers Only
 
-If you have never contributed to an open source project before and you’re just getting started, consider reading this page.
+如果你之前从未参与开源贡献，并且跃跃欲试，可以考虑阅读这个网站。
 
-You may see many of the sources we have already discussed but the page is full of motivations. You can find it here: [https://www.firsttimersonly.com/](https://www.firsttimersonly.com/)
+在阅读的过程中，你或许会碰到我们讨论过的资源，这个网站能量满满。你可以通过这个地址查看: [https://www.firsttimersonly.com/](https://www.firsttimersonly.com/)
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
 ### Open Source Friday
 
-What are you doing this Friday, or the next one? How about investing a few hours contributing to the software you use and love. Please check this out and register. You can find it here: [https://opensourcefriday.com/](https://opensourcefriday.com/)
+你本周五或者下周五有什么打算？花点时间给你使用或者喜欢的软件做点贡献？推荐你查看这个网站并且注册。你可以通过这个地址查看:  [https://opensourcefriday.com/](https://opensourcefriday.com/)
 
-I hope you found the resources helpful. Additionally, feel free to check this Twitter threads and responses, you may find some more information about it.
+希望这些资源对你来说有帮助。另外，你还可以查看这个Twitter thread以及相关的回应，你或许会有所收获。
 
 > Looking forward to contributing to OPENSOURCE? Here are 8 RESOURCES to get you started immediately.  
 >   
@@ -302,28 +296,28 @@ I hope you found the resources helpful. Additionally, feel free to check this Tw
 > 
 > — Tapas Adhikary (@tapasadhikary) [September 8, 2021](https://twitter.com/tapasadhikary/status/1435590663035310086?ref_src=twsrc%5Etfw)
 
-## Open Source Project Maintainers
+## 开源项目维护者
 
-So far, we have seen the side of open source contributors. This article would be incomplete if we didn't touch upon the side of open source project maintainers as well.
+到目前为止我们讨论的都是开源项目的贡献者，如果止步于此这篇文章就不完整，所以我们也讲讲开源项目维护者相关的内容。
 
-As a maintainer of the project, you must follow certain standards for others to know and contribute to your project repository.
+作为项目维护者，你应该遵循一些标准使得其他人能够理解并且参与贡献你的项目仓库。
 
--   Provide a clear name and description of the project. You should also add the topics that are related to your project.
--   Add a clear `Readme.md` file to explain the project objectives, how to use it, how to set it up, and so on. If source code is the heart of a repository, the README file is the face of it.
--   Build a community profile. It helps the open-source repository maintainers review the work and learn how to help it grow.
--   Establish a Code of Conduct.
--   Create a Contributing Guide.
--   Decide on the Issue Templates.
--   Create a Pull Request (PR) Template.
--   Activate GitHub Sponsors.
+-   提供项目明确的名字和介绍。你也可以添加项目相关的话题。
+-   添加清晰的`Readme.md`文件介绍项目的目标、如何使用、设置等。如果说源码是项目的心脏，拿README文件就是项目的脸面。
+-   建立社区档案。开源仓库维护者可以通过它来检查工作、了解哪里需要帮助。
+-   建立编码行为准则。
+-   创建贡献指南。
+-   决定issue的模板。
+-   创建Pull Request (PR)模板。
+-   激活GitHub赞助。
 
-[You can go over this article to know](https://www.freecodecamp.org/news/increase-engagement-on-your-public-github-repositories/) about these standards in more detail.
+[你可以通过阅读这篇文章](https://www.freecodecamp.org/news/increase-engagement-on-your-public-github-repositories/) 了解更多细节。
 
-## Before We End...
+## 在结束之前...
 
-That's all! Here we've come to the end of this article. I hope you found it insightful and that it has given you enough motivation to get started contributing to open source.
+就这么多！到这里，我们就到了本文的结尾。希望这篇文章对你有所启发，并且给了你足够的动力开始为开源做贡献。
 
-Before we end, I would like to mention a few open source projects and repositories for you to look into.
+在我们结束之前，我想再提几个开源项目和仓库：
 
 -   [EddieHub](https://github.com/EddieHubCommunity)
 -   [ReactPlay](https://github.com/reactplay)
@@ -331,9 +325,9 @@ Before we end, I would like to mention a few open source projects and repositori
 -   [First Contributions](https://github.com/firstcontributions/first-contributions)
 -   [The Hive](https://github.com/deleteman/the-hive)
 
-This list can keep growing but let me stop here. If you enjoyed reading this article and/or have any questions, want to connect, you can find me in these spots:
+这个列表可以继续增加，但让我停在这里。如果你喜欢阅读本文，或有任何疑问想要联系我，可以在以下地方找到我：
 
--   [Follow on Twitter](https://twitter.com/tapasadhikary)
--   [Connect on LinkedIn](https://www.linkedin.com/in/tapasadhikary/)
--   [Know my Work on GitHub](https://github.com/atapas)
--   [Subscribe to My YouTube Channel](https://youtube.com/tapasadhikary)
+-   [Twitter](https://twitter.com/tapasadhikary)
+-   [LinkedIn](https://www.linkedin.com/in/tapasadhikary/)
+-   [GitHub](https://github.com/atapas)
+-   [YouTube](https://youtube.com/tapasadhikary)

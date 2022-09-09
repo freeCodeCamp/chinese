@@ -1,6 +1,6 @@
 > -  原文地址：[How to Prepare for React Interviews – Front-End Technical Interview Guide](https://www.freecodecamp.org/news/prepare-for-react-technical-interviews/)
 > -  原文作者：[Manu Arora](https://www.freecodecamp.org/news/author/manu/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Prepare for React Interviews – Front-End Technical Interview Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Build-a-React-Code-Editor-That-Compiles-and-Executes-in-10--Languages--2-.png)

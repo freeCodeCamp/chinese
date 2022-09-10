@@ -1,6 +1,6 @@
 > -  原文地址：[How to Deploy Your Node.js Application for Free with Render](https://www.freecodecamp.org/news/how-to-deploy-nodejs-application-with-render/)
 > -  原文作者：[Yogesh Chavan](https://www.freecodecamp.org/news/author/yogesh/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Deploy Your Node.js Application for Free with Render](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/pexels-pixabay-163235--1-.jpg)

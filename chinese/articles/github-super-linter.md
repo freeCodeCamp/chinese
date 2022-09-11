@@ -11,7 +11,7 @@
 
 在这篇文章中，我将向你展示如何使用 GitHub Super Linter，一个可以解决所有这些问题的单一 linter。我的大部分个人项目也都使用 GitHub Super Linter，我个人发现它是一个大救星。
 
-## Why is Linting Necessary?
+## 为什么需要 Linting ?
 
 Linting 本质上是一种静态代码分析的形式。它根据一些规则来分析你写的代码，以找出风格上或程序上的错误。可以把它看作是一种在软件中标记出可疑用法的工具。
 
@@ -35,13 +35,13 @@ GitHub Super Linter 在为你的项目带来这些功能方面可以提供相当
 
 它还有大量的环境变量的定制功能，可以帮助你根据你的个人仓库定制 Super Linter。
 
-## How to Use GitHub Super Linter in GitHub Actions
+## 如何在  GitHub Actions 中使用 GitHub Super Linter
 
 Super Linter 主要是为在 GitHub Action 中运行而设计的，这也是我在相当长一段时间内使用它的方式。我们将首先讨论这个问题。为了跟上进度，你应该在你的仓库里创建一个新的 GitHub Action。让我们在`.github/workflows/linter.yml` 创建一个新文件。
 
 展望未来，我将假设你知道 GitHub 动作的基本语法。但如果你不知道或需要快速复习，我建议你看一下这个 [快速入门指南](https://docs.github.com/en/actions/quickstart).
 
-### How to Create an Action
+### 怎样创建一个 Action
 
 我们已经有了一个空白文件`.github/workflows/linter.yml`，现在我们要用补充 action 相关内容，你可以用它来给你的项目加注。
 
@@ -119,7 +119,7 @@ jobs:
 
 这段代码在 `$GITHUB_WORKSPACE` 下检出你的仓库，允许工作流（workflow）的其他部分访问这个仓库。我们要检查的版本库是你的代码所在的版本库，最好是同一个版本库。
 
-### How to Run the Linter
+### 如何运行 Linter
 
 现在我们要添加运行 linter 的步骤，因为我们的代码已经获取。你可以在运行动作时使用环境变量（environment variables）来定制 GitHub Super Linter。
 
@@ -157,7 +157,7 @@ jobs:
 
 如果您不使用我们讨论的任何环境变量，Super Linter 会自动为您的代码库查找并使用所有适用的 linter。
 
-## How to Add Specific Linters to Super Linter
+## 如何增加特定的 Linters 到 Super Linter
 
 您通常只会对为您的项目使用特定的 linter 感兴趣。 您可以使用以下环境变量模式来添加您想要的任何 linter：
 
@@ -231,7 +231,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-## How to Customize Lint Checks
+## 如何定制化 Lint Checks
 
 Linter 通常使用配置文件，因此您可以修改 linter 使用的规则。 在上面我展示的两个完整示例中，Super Linter 将尝试在 `.github/linters/` 下查找任何配置文件。
 
@@ -264,11 +264,11 @@ LINTER_RULES_PATH: configs/
 JAVASCRIPT_ES_CONFIG_FILE: configs/linters/.eslintrc.yml
 ```
 
-## How to Run Super Linter Outside GitHub Actions
+## 如何在 GitHub Actions 之外运行 Super Linter
 
 GitHub Super Linter 是为在 GitHub Actions 中运行而构建的。 但是在本地或其他 CI 平台上运行它可能特别有用。 您可以本地任何其他 CI 平台上一样运行 Super Linter。
 
-### How to Run Super Linter Locally
+### 如何在本地运行 Super Linter
 
 您首先要使用此命令从 DockerHub 中获取最新的 Docker 容器:
 
@@ -288,7 +288,7 @@ docker run -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true VALIDATE_PYTHON_BLACK=tr
 - 我们将本地代码库映射到`/tmp/lint`，这样 linter 就能接收到代码。
 - 当然，我们设置环境变量的方式是不同的，但运行 GitHub 超级 Linter 的整体过程是相同的。
 
-### How to Run Super Linter on Other CI Platforms
+### 如何在其他 CI 平台上运行 Super Linter
 
 在其他 CI 平台上运行 GitHub Super Linter 与在本地运行 GitHub Super Linter 非常相似。下面是 [Tao Yang](https://blog.tyang.org/2020/06/27/use-github-super-linter-in-azure-pipelines/)在 Azure Pipelines 中运行它的一个例子。
 
@@ -312,4 +312,4 @@ docker run -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true VALIDATE_PYTHON_BLACK=tr
 
 如果你学到了新的东西，或者喜欢读这篇文章，请分享出去，让别人看到。在那之前，我们在下一篇文章中再见吧!
 
-你也可以在 Twitter 上找到我[@rishit/_dagli](https://twitter.com/rishit_dagli)，我在那里发布关于开源和机器学习的推文。
+你也可以在 Twitter 上找到我 [@rishit/_dagli](https://twitter.com/rishit_dagli)，我在那里发布关于开源和机器学习的推文。

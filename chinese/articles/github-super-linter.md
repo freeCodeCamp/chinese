@@ -1,59 +1,57 @@
-> -  原文地址：[How to Use GitHub Super Linter in Your Projects](https://www.freecodecamp.org/news/github-super-linter/)
-> -  原文作者：[Rishit Dagli](https://www.freecodecamp.org/news/author/rishit_dagli/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Use GitHub Super Linter in Your Projects](https://www.freecodecamp.org/news/github-super-linter/)
+> - 原文作者：[Rishit Dagli](https://www.freecodecamp.org/news/author/rishit_dagli/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Use GitHub Super Linter in Your Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/FCC-1.png)
 
-When you're starting a new project, you might have to add multiple linting tools to beautify your code and prevent simple errors.
+当你开始一个新的项目时，你可能需要添加多个 linting 工具来美化你的代码并防止简单的错误。
 
-You will often use multiple linters – one of them might support an npm installation and other one might have a PyPI installation and so on. You will also want to set up some automation in your CI to run these linters, but this process is quite tedious 😫.
+你经常会使用多个 linters，其中一个可能支持 npm 安装，另一个可能有 PyPI 安装，等等。你也会想在你的 CI 中设置一些自动化来运行这些 linters，但这个过程是相当乏味的😫。
 
-In this article, I will show you how you can use GitHub Super Linter, a single linter to solve all these problems. Most of my personal projects use GitHub Super Linter as well, and I have personally found it be a huge lifesaver.
+在这篇文章中，我将向你展示如何使用 GitHub Super Linter，一个可以解决所有这些问题的单一 linter。我的大部分个人项目也都使用 GitHub Super Linter，我个人发现它是一个大救星。
 
-## Why is Linting Necessary?
+## 为什么需要 Linting ?
 
-Linting is essentially a form of static code analysis. It analyzes the code you wrote against some rules for stylistic or programmatic errors. Think of it as a tool that flags suspicious usage in software.
+Linting 本质上是一种静态代码分析的形式。它根据一些规则来分析你写的代码，以找出风格上或程序上的错误。可以把它看作是一种在软件中标记出可疑用法的工具。
 
-A linter can help you save a lot of time by:
+linter 可以通过以下方式帮助你节省大量的时间:
 
--   Preventing broken code from being pushed
--   Helping establish coding best practices
--   Building guidelines for code layout and format
--   Helping code reviews be a lot smoother
--   Flagging bugs in your code from syntax errors
+- 防止有破坏性（broken）的代码被推送
+- 帮助建立编码的最佳实践
+- 建立代码布局和格式的准则
+- 帮助代码审查变得更加顺畅
+- 标记出你的代码中的语法错误的 bug
 
-Given the useful nature of linting tools, you would ideally want to run a linter before any code reviews happen on every single piece of code that is pushed to your repository. This definitely helps you write better, more readable, and more stable code.
+鉴于提示工具的作用，你最好在任何代码审查发生之前对推送到你的仓库的每一段代码运行一个 linter。这无疑有助于你写出更好、更可读、更稳定的代码。
 
-Here is an example of using [Black](https://github.com/psf/black), a linting tool for Python focusing on code formatting.
+下面是一个使用 [Black](https://github.com/psf/black) 的例子，这是一个专注于代码格式化的 Python 的提示工具。
 
 ![Black-Example](https://www.freecodecamp.org/news/content/images/2022/08/Black-Example.png)
 
-Formatting changes made by Black
+Black 所做的格式化修改
 
-GitHub Super Linter can help you quite a lot in bringing these capabilities to your projects easily and efficiently. GitHub Super Linter is a combination of multiple commonly used linters which you can use very easily. It lets you set up automated runs for these linters, as well as manage multiple linters in a single project!
+GitHub Super Linter 在为你的项目带来这些功能方面可以提供相当大的帮助，轻松而有效。GitHub Super Linter 是一个由多个常用 linters 组成的组合，你可以非常容易地使用。它可以让你为这些 linters 设置自动运行，也可以在一个项目中管理多个 linters！它还有大量的自定义功能。
 
-There is also a ton of customization capabilities with environment variables that can help you customize the Super Linter to your individual repository.
+它还有大量的环境变量的定制功能，可以帮助你根据你的个人仓库定制 Super Linter。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+## 如何在  GitHub Actions 中使用 GitHub Super Linter
 
-## How to Use GitHub Super Linter in GitHub Actions
+Super Linter 主要是为在 GitHub Action 中运行而设计的，这也是我在相当长一段时间内使用它的方式。我们将首先讨论这个问题。为了跟上进度，你应该在你的仓库里创建一个新的 GitHub Action。让我们在`.github/workflows/linter.yml` 创建一个新文件。
 
-Super Linter is primarily designed to be run inside a GitHub Action, which is also how I have been using it for quite some time. We will talk about this first. To follow along you should create a new GitHub Action in your repository. Let us create a new file at `.github/workflows/linter.yml`.
+展望未来，我将假设你知道 GitHub 动作的基本语法。但如果你不知道或需要快速复习，我建议你看一下这个 [快速入门指南](https://docs.github.com/en/actions/quickstart).
 
-Going forward, I will assume you know about the basic syntax for GitHub Actions. But in case you do not or need a quick refresher, I would suggest going through this [Quick Start Guide](https://docs.github.com/en/actions/quickstart).
+### 怎样创建一个 Action
 
-### How to Create an Action
+我们已经有了一个空白文件`.github/workflows/linter.yml`，现在我们要用补充 action 相关内容，你可以用它来给你的项目加注。
 
-We already have a blank file `.github/workflows/linter.yml`, which we will now populate with an action you can use to lint your project.
-
-We will start by giving our action a name. This is what appears under the GitHub Action Status Check:
+我们将首先给我们的 action 一个名字（name）。这就是出现在 GitHub 动作状态检查下的内容:
 
 ```yaml
 name: Lint Code Base
 ```
 
-Next up, let's specify triggers for our action. This answers the question of when you should lint your codebase. Here we tell it to run the lint on every push and on every pull request.
+接下来，让我们为我们的 action 指定触发器。这将控制什么时候应该对你的代码库进行检查的问题。在这里，我们告诉它在每次推送（push）和每次拉动请求时（pull_request）都要运行 lint。
 
 ```yaml
 name: Lint Code Base
@@ -61,7 +59,7 @@ name: Lint Code Base
 on: [push, pull_request]
 ```
 
-This is another very commonly used configuration for the triggers. This only runs when you make a pull request to `main` or `master` branches and not on pushes to these branches.
+这是另一个非常常用的触发器配置。它只在你向主分支（main 或者 master）发出拉取请求时(pull_request)运行，而不是在向这些分支（master 或者 main 分支）推送时(push)运行。
 
 ```yaml
 on:
@@ -71,9 +69,9 @@ on:
     branches: [master, main]
 ```
 
-Next up, we want to set up a job. All the components you put in a single job will run sequentially. Here, think of it as the steps and in which order we want them to run whenever the trigger is satisfied.
+接下来，我们要设置一个 job(作业)。你放在一个作业中的所有组件将按顺序运行。在这里，我们把它看作是步骤，以及每当触发器得到满足时，我们希望它们按照哪个顺序运行。
 
-We will name this job "Lint Code Base" and ask GitHub to run our job on a runner with the last version of Ubuntu supported by GitHub.
+我们将把这个 job 命名为 `Lint Code Base`， 并要求 GitHub 用最新版本的 Ubuntu 运行我们的 job。
 
 ```yaml
 name: Lint Code Base
@@ -86,20 +84,20 @@ jobs:
     runs-on: ubuntu-latest
 ```
 
-You are not bound to using a single kind of runner (ubuntu-latest), like we do here. It's a common practice to have a matrix of agent kinds, but in this case it will run the same way on all kinds of runners. You often you use a matrix of runners to test that your code works well on all kinds of platforms.
+你不一定要像我们这里一样使用单一的 runner（ubuntu-latest）。可以选择多个 runner，但在这种情况下，它将以同样的方式在所有种类的 runner 上运行。你使用多个 runner 来测试你的代码，是否可以在多个平台上都能很好地运行。
 
-GitHub Super Linter doesn't work any differently on other machine types so we just use a single machine type.
+GitHub Super Linter 在其他机器类型上的工作方式没有任何不同，所以我们只用一个机器类型。
 
-Next up, we will start defining the steps we want this workflow to have. We essentially have two steps:
+接下来，我们将开始定义我们希望这个工作流程所具有的步骤。我们基本上有两个步骤:
 
-1.  Checkout the code
-2.  Run the super linter
+1. 获取对应代码
+2. 运行 super linter
 
-On to checking out the code. To do this, we will use the official checkout action by GitHub.
+获取代码。我们会使用 Github 官方的 checkout action。
 
-We will set `fetch-depth: 0` to fetch all history for all branches and tags which is required for Super linter to get a proper list of changed files. If you hadn't done this, only a single commit would be fetched.  
+我们设置 `fetch-depth: 0`  来获取所有分支和标签的所有历史记录，这对 Super linter 来说是必要的，可以获得修改过的文件列表。如果你没有这样做，就只能获取单个提交。
 
-We also give our step a name and tell it we want to use the action present in the GitHub repository at `actions/checkout@v3` .
+我们还要给我们的步骤起个名字，并告诉它我们要使用 GitHub 官方仓库中的 action，即 `actions/checkout@v3` .
 
 ```yaml
 name: Lint Code Base
@@ -119,13 +117,11 @@ jobs:
           fetch-depth: 0
 ```
 
-This piece of code checks out your repository under `$GITHUB_WORKSPACE` which allows the rest of the workflow to access this repository. The repository we are checking out is the one where your code resides, ideally the same repository.
+这段代码在 `$GITHUB_WORKSPACE` 下检出你的仓库，允许工作流（workflow）的其他部分访问这个仓库。我们要检查的版本库是你的代码所在的版本库，最好是同一个版本库。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+### 如何运行 Linter
 
-### How to Run the Linter
-
-Now we'll add the step to run the linter since we have our code checked out. You can customize GitHub Super Linter using environment variables when running the action.
+现在我们要添加运行 linter 的步骤，因为我们的代码已经获取。你可以在运行动作时使用环境变量（environment variables）来定制 GitHub Super Linter。
 
 ```yaml
 name: Lint Code Base
@@ -144,34 +140,34 @@ jobs:
         with:
           fetch-depth: 0
           
-	  - name: Lint Code Base
+   - name: Lint Code Base
         uses: github/super-linter@v4
 ```
 
-We will now talk about the environment variables which you will often be using with GitHub Super Linter as well as some examples.
+现在我们将谈谈在经常使用 Github 环境变量的例子。
 
--   `VALIDATE_ALL_CODEBASE`: this decides whether Super Linter should lint the whole codebase or just the changes introduced with that commit. These changes are found out using `git diff`, but you can also change the search algorithm (but we will not be looking into this in this article). Example: `VALIDATE_ALL_CODEBASE: true`.
--   `GITHUB_TOKEN`: As the name suggests, this is the value of the GitHub token. If you use this, GitHub will show up each of the linters you use (we will see how to do that soon) as separate checks on the UI. Example: In GitHub Actions you can use `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}`.
--   `DEFAULT_BRANCH`: The name of the repository default branch. Example: `DEFAULT_BRANCH: main`.
--   `IGNORE_GENERATED_FILES`: In case you have any files which are generated by tools, you could mark them as `@generated`. If this environment variable is set to true, Super Linter ignores these files. Example: `IGNORE_GENERATED_FILES: true`.
--   `IGNORE_GITIGNORED_FILES`: Excludes the files which are in .gitignore from linting. Example: `IGNORE_GITIGNORED_FILES: true`.
--   `LINTER_RULES_PATH`: A custom path where any linter customization files should be. By default your files are expected to be at `.github/linters/`. Example: `LINTER_RULES_PATH: /`.
+- `VALIDATE_ALL_CODEBASE`: 这控制 Super Linter 对整个代码库进行检查，还是只对该提交的修改进行检查。这些变化是通过`git diff`发现的，但你也可以改变搜索算法（但我们不会在这篇文章中研究这个问题）。 常用配置: `VALIDATE_ALL_CODEBASE: true`.
+- `GITHUB_TOKEN`: 顾名思义，这就是 GitHub 令牌。 如果你使用它，GitHub 将显示你使用的每个 linter（我们将很快看到如何做到这一点）作为 UI 上的单独检查。 例如:  你可以这样写  `GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}`.
+- `DEFAULT_BRANCH`: 存储库默认分支的名称。例子: `DEFAULT_BRANCH: main`.
+- `IGNORE_GENERATED_FILES`: 如果您有任何由工具生成的文件，您可以将它们标记为 `@generated`。如果此环境变量设置为 true，Super Linter 将忽略这些文件。例如: `IGNORE_GENERATED_FILES: true`.
+- `IGNORE_GITIGNORED_FILES`: 从 linting 中排除 .gitignore 中的文件。示例: `IGNORE_GITIGNORED_FILES: true`.
+- `LINTER_RULES_PATH`: 任何 linter 自定义文件应该位于的自定义路径。 默认情况下，您的文件应位于 `.github/linters/`. 示范 : `LINTER_RULES_PATH: /`。
 
-These are some of the environment variables you will use the most often, but none of the ones we've discussed yet talk about language-specific linting.
+这些是您最常使用的一些环境变量，但我们讨论过的还没有一个讨论特定于语言的 linting。
 
-If you do not use any of the environment variables we talk about, Super Linter automatically finds and uses all the applicable linters for your codebase.
+如果您不使用我们讨论的任何环境变量，Super Linter 会自动为您的代码库查找并使用所有适用的 linter。
 
-## How to Add Specific Linters to Super Linter
+## 如何增加特定的 Linters 到 Super Linter
 
-You will often only be interested in using specific linters for your projects. You can use the following environment variable pattern to add any linters you want:
+您通常只会对为您的项目使用特定的 linter 感兴趣。 您可以使用以下环境变量模式来添加您想要的任何 linter：
 
-```
+```shell
 VALIDATE_{LANGUAGE}_{LINTER}
 ```
 
-You can find the naming conventions for these in the list of [Supported Linters](https://github.com/github/super-linter#supported-linters).
+您可以在列表中找到这些 [Supported Linters](https://github.com/github/super-linter#supported-linters) 的命名约定。
 
-Here are a couple of examples, where we specify we want to use Black to lint all Python files, ESLint for JavaScript files, and HTMLHint for HTML files.
+这里有几个例子，我们指定要使用 Black 对所有 Python 文件进行 lint，对 JavaScript 文件使用 ESLint，对 HTML 文件使用 HTMLHint。
 
 ```yaml
 name: Lint Code Base
@@ -190,7 +186,7 @@ jobs:
         with:
           fetch-depth: 0
           
-	  - name: Lint Code Base
+   - name: Lint Code Base
         uses: github/super-linter@v4
 
       - name: Lint Code Base
@@ -203,9 +199,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-Once you set one of the linters to `true`, all the other linters will not run. In the above snippet, none of the linters except ESLint, Black, or HTMLHint will run.
+一旦将其中一个 linter 设置为 `true`，所有其他 linter 将不会运行。 在上面的代码片段中，除了 ESLint、Black 或 HTMLHint 之外的所有 linter 都不会运行。
 
-However, in this example, we set a single linter to `false` so every linter except ESLint will run here:
+然而，在这个例子中，我们将单个 linter 设置为 `false`，所以除了 `ESLint` 之外的每个 linter 都将在这里运行：
 
 ```yaml
 name: Lint Code Base
@@ -224,7 +220,7 @@ jobs:
         with:
           fetch-depth: 0
           
-	  - name: Lint Code Base
+   - name: Lint Code Base
         uses: github/super-linter@v4
 
       - name: Lint Code Base
@@ -235,70 +231,66 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+## 如何定制化 Lint Checks
 
-## How to Customize Lint Checks
+Linter 通常使用配置文件，因此您可以修改 linter 使用的规则。 在上面我展示的两个完整示例中，Super Linter 将尝试在 `.github/linters/` 下查找任何配置文件。
 
-Linters often use configuration files so you can modify the rules the linter uses. In the above two full length examples I showed, Super Linter will try to find any configuration files under `.github/linters/`.
-
-These could be your `.eslintrc.yml` file used to configure ESLint, `.htmlhintrc` for configuring HTMLHint, and so on.
+这些可能是用于配置 ESLint 的 `.eslintrc.yml` 文件，用于配置 HTMLHint 的 `.htmlhintrc` 等等。
 
 Here is an example of the configuration file if you use the Flake8 linter for Python:
 
-```
+```yaml
 [flake8]
 max-line-length = 120
 ```
 
-You save this at `.github/linters/.flake8`. You'll then use it while running the Flake8 linter. You can find an example of template configuration files you can use [here](https://github.com/github/super-linter/tree/main/TEMPLATES).
+你把它保存在`.github/linters/.flake8`。 然后，您将在运行 Flake8 linter 时使用它。 您可以在 [此处](https://github.com/github/super-linter/tree/main/TEMPLATES) 找到可以使用的模板配置文件示例。
 
-However, here are two examples of how you can modify this path:
+但是，这里有两个示例说明如何修改此路径:
 
-1.  All your linter configuration files are in some other directory
+1. 你所有的 linter 配置文件都在其他目录中
 
-Add the directory path as an environment variable like this:
+将目录路径添加为环境变量，如下所示:
 
 ```yaml
 LINTER_RULES_PATH: configs/
 ```
 
-2\.   Add path for a configuration file
+2. 添加配置文件的路径
 
-You can also hardcode a path for a specific linter as an environment variable. Here is an example:
+您还可以将特定 linter 的路径硬编码为环境变量。 这是一个例子：
 
 ```yaml
 JAVASCRIPT_ES_CONFIG_FILE: configs/linters/.eslintrc.yml
 ```
 
-## How to Run Super Linter Outside GitHub Actions
+## 如何在 GitHub Actions 之外运行 Super Linter
 
-GitHub Super Linter was built to be run inside GitHub Actions. But running it locally or on other CI platforms can be particularly helpful. You will essentially be running Super Linter as you were locally in any other CI platforms.
+GitHub Super Linter 是为在 GitHub Actions 中运行而构建的。 但是在本地或其他 CI 平台上运行它可能特别有用。 您可以本地任何其他 CI 平台上一样运行 Super Linter。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+### 如何在本地运行 Super Linter
 
-### How to Run Super Linter Locally
-
-You first want to pull the latest Docker container down from DockerHub with this command:
+您首先要使用此命令从 DockerHub 中获取最新的 Docker 容器:
 
 ```shell
 docker pull github/super-linter:latest
 ```
 
-To run this container you then run the following:
+为了运行这个容器，你可以运行以下命令:
 
 ```shell
 docker run -e RUN_LOCAL=true -e USE_FIND_ALGORITHM=true VALIDATE_PYTHON_BLACK=true -v /project/directory:/tmp/lint github/super-linter
 ```
 
-Notice a couple of things here:
+请注意这里的几件事:
 
--   We run it with the `RUN_LOCAL` flag to bypass some of the GitHub Actions checks. This automatically sets `VALIDATE_ALL_CODEBASE` to true.
--   We map our local codebase to `/tmp/lint` so that the linter can pick up the code.
--   The way we set environment variables is of course different, but the overall process of running the GitHub Super Linter remains the same.
+- 我们用`RUN_LOCAL`标志运行它，以绕过一些 GitHub  action 检查。这将自动设置 `VALIDATE_ALL_CODEBASE` 为 true。
+- 我们将本地代码库映射到`/tmp/lint`，这样 linter 就能接收到代码。
+- 当然，我们设置环境变量的方式是不同的，但运行 GitHub 超级 Linter 的整体过程是相同的。
 
-### How to Run Super Linter on Other CI Platforms
+### 如何在其他 CI 平台上运行 Super Linter
 
-Running GitHub Super Linter on other CI platform is pretty similar to locally running it. Here is an example of running it in Azure Pipelines by [Tao Yang](https://blog.tyang.org/2020/06/27/use-github-super-linter-in-azure-pipelines/).
+在其他 CI 平台上运行 GitHub Super Linter 与在本地运行 GitHub Super Linter 非常相似。下面是 [Tao Yang](https://blog.tyang.org/2020/06/27/use-github-super-linter-in-azure-pipelines/) 在 Azure Pipelines 中运行它的一个例子。
 
 ```yaml
 - job: lint_tests
@@ -312,14 +304,12 @@ Running GitHub Super Linter on other CI platform is pretty similar to locally ru
     displayName: 'Code Scan using GitHub Super-Linter'
 ```
 
-This just runs the commands we would have for locally running the Super Linter as a script. You could run it in the exact same way on other CI platforms.
+这只是把我们在本地运行 Super Linter 的命令作为一个脚本来运行。你可以在其他 CI 平台上以完全相同的方式运行它。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+## **总结**
 
-## **Conclusion**
+谢谢你坚持到最后。我希望你能从 GitHub Super Linter 的使用中得到一两点启发。它无疑是我最喜欢的开源项目之一。
 
-Thank you for sticking with me until the end. I hope that you've taken away a thing or two about linting and using GitHub Super Linter. It has most certainly been one of my favorite open source projects.
+如果你学到了新的东西，或者喜欢读这篇文章，请分享出去，让别人看到。在那之前，我们在下一篇文章中再见吧!
 
-If you learned something new or enjoyed reading this article, please share it so that others can see it. Until then, see you in the next post!
-
-You can also find me on Twitter [@rishit\_dagli](https://twitter.com/rishit_dagli), where I tweet about open source and machine learning.
+你也可以在 Twitter 上找到我 [@rishit/_dagli](https://twitter.com/rishit_dagli)，我在那里发布关于开源和机器学习的推文。

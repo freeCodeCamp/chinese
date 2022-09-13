@@ -1,6 +1,6 @@
 > -  原文地址：[How to Sign and Validate JSON Web Tokens – JWT Tutorial](https://www.freecodecamp.org/news/how-to-sign-and-validate-json-web-tokens/)
 > -  原文作者：[Rohit Jacob Mathew](https://www.freecodecamp.org/news/author/rohitjmathew/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Sign and Validate JSON Web Tokens – JWT Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/rohit-code-2400x1260.jpg)

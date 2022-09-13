@@ -1,47 +1,46 @@
 > -  原文地址：[How to Prepare for React Interviews – Front-End Technical Interview Guide](https://www.freecodecamp.org/news/prepare-for-react-technical-interviews/)
 > -  原文作者：[Manu Arora](https://www.freecodecamp.org/news/author/manu/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Prepare for React Interviews – Front-End Technical Interview Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Build-a-React-Code-Editor-That-Compiles-and-Executes-in-10--Languages--2-.png)
 
-A front-end technical interview is an opportunity for a potential employer to assess your skills and knowledge in web development.  
+前端技术面试往往是潜在雇主用来评估你在web开发方面技术的机会。
   
-The interviewer will ask you questions about your experience and skills in HTML, CSS, and JavaScript. They'll also likely ask you some framework specific questions about React, Angular, Vue, or whatever framework they use.  
+面试官通常会提问你在HTML、CSS和JavaScript方面的经验和技术，他们也会针对如：React、Angular、Vue等框架进行提问。
   
-They may also give you a coding challenge to test your abilities in a particular domain.  
+也会有就特定领域给你出写代码的测试。
   
-Today, we are going to look at the most common problems asked in a front-end technical interview round, focusing on React and JavaScript.
+我们一起来看看前端技术面试在React和JavaScript方面最常被问到的问题。
 
-## What Interviewers Are Looking For
+## 面试官考察什么？
 
-When interviewing for a front-end web development position, be prepared to discuss your skills and experience with various programming languages, tools, and frameworks.  
+当参与前端web开发职位的面试，请准备好你会被问到各种编程语言、工具和框架方面的技巧和经验。
   
-Interviewers will also want to see that you have a strong understanding of the latest trends and technologies in web development.  
+面试官希望你对web开发最新的趋势和技术有比较深刻的认识。
   
-Be prepared to talk about your past projects and how you approached solving various challenges.  
+请准备好描述你过去的项目，以及你是如何解决各种挑战的。
   
-Be sure to showcase your problem-solving skills by discussing how you tackled various challenges during your development process.  
+确保在讲解开发过程的时候展示你的解决问题的技能。
   
-Finally, don’t forget to highlight your strengths.
+最后，不要忘了强调你的优势。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## Most Commonly Asked Questions in a Front-End Technical Interview
+## 前端技术面试最常被问到的问题
 
-Front-end technical interview problems are pretty straightforward and common. If you have been actively coding for at least 6 months, you will be familiar with most of the concepts that are asked about.
+前端技术面试问题一般很直截了当。如果你过去半年一直在写代码，你应该很熟悉大部分将被问到的概念。
 
-Once you practice the right questions with a time based approach, you should be able to clear the interviews.
+一旦你利用一段时间练习对的问题，你就对面试有一个比较清晰的认识。
 
-Let's look at the most common questions asked.
+让我们一起来看看常被问到的问题。
 
-## Map, ForEach, Filter and Reduce
+## Map、ForEach、Filter和Reduce
 
-The most commonly asked questions (generally at the start of the interviews) are about `array methods`. The interviewer wants to asses how comfortable you are with array manipulation.
+有关`数组方法`是最常被问到的问题（通常是面试一开始）。面试官希望了解你在控制数组方面的熟悉程度。
 
-#### The `.map()` method
+#### `.map()` 方法
 
-The `.map()` methods iterates over an array, computes whatever logic you write inside the map body, and returns a **NEW** array.
+`.map()`方法迭代整个数组，并通过计算你在函数内编写的逻辑，返回一个**新**数组。
 
 ```javascript
 let arr = [
@@ -52,14 +51,12 @@ let arr = [
 
 let names = arr.map((el) => el.name)
 console.log(names)
-// Output: [ 'Manu', 'Quincy', 'Abbey' ]
+// 输出: [ 'Manu', 'Quincy', 'Abbey' ]
 ```
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+#### `.forEach()`方法
 
-#### The `.forEach()` method
-
-ForEach is similar to `.map()` but it DOES NOT return an array.
+`.forEach()`和`.map()`类似，但是不返回新数组。
 
 ```javascript
 let arr = [
@@ -71,14 +68,14 @@ let arr = [
 arr.forEach((el) => el.age+= 10);
 console.log(arr);
 
-// Output: 22 32 44
+// 输出: 22 32 44
 ```
 
-#### The `.filter()` method
+#### `.filter()`方法
 
-The filter method, as the name suggests, helps in filtering out the values inside of an array based on a Boolean condition.
+`.filter()`方法正如其名，是基于布尔条件过滤出数组中的值。
 
-If the boolean condition is true, the result will be returned and added in the final array. If not, it will be skipped. Filter also returns an array, just like the `.map()` method.
+如果布尔条件为真，结果会被返回，并且添加到最终的数组；如果布尔条件为假，则会被跳过。`.filter()`和`.map()`方法一样返回新数组。
 
 ```javascript
 let arr = [
@@ -90,17 +87,17 @@ let arr = [
 let tooYoung = arr.filter((el) => el.age <= 14);
 console.log(tooYoung);
 
-// Output: [ { id: 1, age: 12, name: 'Manu' } ]
+// 输出: [ { id: 1, age: 12, name: 'Manu' } ]
 ```
 
-#### The `.reduce()` method
+#### `.reduce()`方法
 
-In simple terms, the `.reduce()` method takes into account a `previous value` , current value and an `accumulator`.
+简单来说，`.reduce()`方法需要考虑`previous value（先前值）`、当前值（currentValue)和 `accumulator（累加器）`.
 
-The return type of the `.reduce()` method is always a single value. It is useful when you want to process all the values of the array and want to derive some accumulated result.
+`.reduce()`方法的返回类型始终是一个值。当你想要处理数组所有值并且最终累积一个结果的时候，reduce可以派上用场。
 
 ```javascript
-// Calculates the total age of all the three persons.
+// 计算三个人的年龄总和
 let arr = [
   { id: 1, age: 12, name: 'Manu' },
   { id: 2, age: 24, name: 'Quincy' },
@@ -110,22 +107,21 @@ let arr = [
 let totalAge = arr.reduce((acc, currentObj) => acc + currentObj.age, 0)
 console.log(totalAge)
 
-// Output: 57
+// 输出: 57
 ```
 
-Here, the `currentObj` is the object that is being iterated over. Also, the `acc` value stores the result and is outputted finally into the totalAge array.
+在上述代码中，`currentObj`是被迭代的对象。同时，`acc` 存储结果，并且输出totalAge数组最终的结果。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## How to Implement Polyfills
+## 如何实现Polyfills
 
-Another important interview question is [How to implement polyfills](https://www.algochurn.com/frontend/polyfills) of the map and filter array methods.
+[如何通过polyfills](https://www.algochurn.com/frontend/polyfills) 来实现map和filter数组，也是一个重要的面试问题。
 
-A polyfill is a code snippet (in terms of JavaScript web architecture) used for modern world functionalities on older browsers that do not implement it natively.
+polyfill是一个代码块 (在JavaScript的web架构中)。通常用于在旧的浏览器中原生地实现现代的功能。
 
-Simply put, a polyfill is a custom implementation of native JavaScript functions. Sort of a create your own `.map()` or `.filter()` method.
+简单来说，polyfill就是使用自定义的原生JavaScript函数来实现功能。比方说创建你自己的 `.map()` 或者 `.filter()`方法。
 
-#### How to use the `.map()` polyfill
+#### 如何实现`.map()`的polyfill
 
 ```javascript
 let data = [1, 2, 3, 4, 5];
@@ -141,13 +137,13 @@ const mapLog = data.myMap((el) => el * 2);
 console.log(mapLog);
 ```
 
-the `myMap` method takes in a `callback` that gets executed inside the `myMap` body. We basically have a native `for` loop inside the myMap body, which iterates over the `this.length`. This is nothing but the length of the array through which the `myMap` function is called.
+`myMap`方法接受一个在`mymap`函数体内执行的`回调（cb)`。在函数体内使用原生的`for`循环，并在 `this.length`范围内迭代，`this.length`是被`myMap`调用的数组的长度。
 
-Since the syntax of `map()` is `arr.map(currentElement, index, array)`, and the `myMap()` function takes into account exactly that.
+由于 `map()`的语法是`arr.map(currentElement, index, array)`，所以 `myMap()` 函数也要考虑这些参数。
 
-Also since `map()` returns a new array, we create an empty array and push the results into it. In the end we return it.
+同时，因为`map()` 返回一个新数组，所以我们创建一个空数组，并且把结果推入，并在最后返回这个数组。
 
-#### How to use the `.filter()` polyfill
+#### 如何实现`.filter()` polyfill
 
 ```javascript
 let data = [1, 2, 3, 4, 5];
@@ -165,19 +161,17 @@ const filterLog = data.myFilter((el) => el < 4);
 console.log(filterLog);
 ```
 
-`.filter()` is very similar to `.map()` in terms of implementation. But since `filter` filters out the results based on a boolean value, we have an additional `if()` condition to filter out results and conditionally push inside the array.
+在实现上，`.filter()`和`.map()`非常相似，但因为`filter`是基于布尔值来实现过滤, 所以我们在函数内添加了`if()`条件句来过滤条件，并将结果推入到数组。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+## 什么是防抖?
 
-## What is Debouncing?
+这是一个著名的面试问题，并在在现实世界也有非常多的用例。
 
-This is a famous interview question with a lot of practical real world usage and implementations.
-
-`Debouncing` is a method of preventing a function from being invoked too often, and instead waiting a certain amount of time until it was last called before invoking it.  
+`防抖` 是防止函数被过于频繁调用的一种方法，取而代之的是在上次调用之后等待一段时间之后再调用。
   
-Think of Amazon in this case. Whenever you type anything in the search bar, when you stop for AT LEAST 0.5 seconds, then the results are fetched. This is exactly what debouncing is.
+Amazon就是一个很好的例子，不论你在查找框中输入什么，都会等待至少0.5秒之后，结果才会输出，这就是防抖。
 
-In order to implement debouncing, let's take an example: Generating a username for a user based on the user input.
+我们来看一个实现防抖的例子：基于用户的输入来生成用户名。
 
 ```javascript
 import "./styles.css";
@@ -201,59 +195,57 @@ let debounce = function (cb, delay) {
 inputEle.addEventListener("keyup", debounce(generateUsername, 300));
 ```
 
-Here, we are trying to create a custom username based on the user input. Now if the user starts typing, we don't want to immediately create it, but actually wait for 300 milliseconds before creating the username. We are trying to mimic an API call here, so assume the user types anything and it has to make an API call to the backend and fetch a response.
+在上述代码中，我们尝试基于用户的输入来生成自定义的用户名。用户开始打字之后，我们并不希望马上生成用户名，而是等待300毫秒之后再生成。 这里实际上是在模仿一个API调用，假设用户输入任意内容，然后必须调用后端API来抓取一个响应。
 
-The `debounce()` function takes in two values, `cb` and `delay` . `cb` is the callback function that gets executed when the timer runs out.  
+`debounce()`函数接受两个值，`cb`和`delay`。`cb`是当定时器（timer）到时间之后执行的回调函数。
   
-We use `setTimeout()` to create a timeout timer, which means the function inside the setTimeout body will be executed after a certain amount of time.
+我们使用`setTimeout()`来创建定时器，也就是说在setTimeout函数体内部的函数会在一定时间之后执行。
 
-The `apply` method is used to call the callback function with the `object` that it was initially called with, applying the arguments and context to it.
+`apply`方法使用最初调用它的`对象`来调用回调函数，并在调用中应用参数(arguments)和上下文（context）。
 
-## What are Closures?
+## 什么是闭包?
 
-According to the [mdn docs for closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures),
+[闭包的MDN文档](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures)的定义：
 
-> A closure is the combination of a function bundled together (enclosed) with references to its surrounding state (the lexical environment). In other words, a closure gives you access to an outer function's scope from an inner function. In JavaScript, closures are created every time a function is created, at function creation time.
+> 闭包（closure）是一个函数以及其捆绑的周边环境状态（lexical environment，词法环境）的引用的组合。换而言之，闭包让开发者可以从内部函数访问外部函数的作用域。在 JavaScript中，闭包会随着函数的创建而被同时创建。
 
-To simplify this, let's take an example and understand how closures work.
+让我们来通过一个例子了解闭包是怎么运作的：
 
 ```javascript
 function start() {
-  var name = "Manu"; // name is a local variable created by start()
+  var name = "Manu"; // name是一个由start()创建的本地变量
   function displayName() {
-    // displayName() is the inner function, a `closure`
-    alert(name); // use variable declared in the parent function
+    // displayName()是内部函数，一个`闭包`
+    alert(name); //使用了父函数中的变量
   }
   displayName();
 }
-start(); // "Manu" alert box is displayed
+start(); // 弹出内容为"Manu"的警告框
 ```
 
-Here, a closure is formed between the `start()` and the `displayName()` function. The `displayName()` function has access to the `name` variable present in the `start()` function.
+在上述代码块中，闭包在`start()`和 `displayName()`之间形成。`displayName()`函数可以访问定义在`start()`函数的 `name`变量。
 
-In simple terms, the inner function will know its surroundings (the lexical environment).
+简言之，内部函数了解周围环境(词法作用域)。
 
-I have written a whole blog on [how to clear JavaScript interviews](https://manuarora.in/blog/ace-the-javascript-interview#closures). Have a look at that if you want to know more about in depth JavaScript interview process.
+我写过一整篇博文讲解[如何战胜JavaScript面试](https://manuarora.in/blog/ace-the-javascript-interview#closures)，如果你想深入了解JavaScript的面试过程，欢迎阅读。
 
 ## React Hooks
 
-The most popular questions asked in a front-end coding interview when it comes to React hooks are:
+当提到React Hooks的时候，前端编程面试中最常见的几个问题包括：
 
 1.  `useState()`
 2.  `useReducer()`
 3.  `useEffect()`
 4.  `useRef()`
-5.  Custom Hooks and their implementation.
+5.  自定义钩子和实现
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+### `useState()`钩子是如何运作的
 
-### How the `useState()` hook works
-
-To manage a state inside of your component, the `useState()` hook is your go-to hook.  
+想要管理组件的状态（state），可以使用`useState()`。 
   
-Let's take an example and understand:
+举例如下：
 
-```javscript
+```javascript
 import { useState } from "react";
 import "./styles.css";
 
@@ -271,21 +263,21 @@ export default function App() {
 }
 ```
 
-The `useState()` methods gives us two values, the `state` variable and `a function to change` that state variable.
+`useState()`方法包含两个值，`state`变量以及`一个函数`用于修改state变量。
 
-In the above code snippet, we are creating a `title` state to store the title of the page. The initial state is passed as `freeCodeCamp`.
+在上述代码块中，我们创建了一个 `title`状态（state）来存储页面的标题。初始状态（state）是 `freeCodeCamp`。
 
-On button click, we can use the `setTitle()` method to change the state variable to `FCC`.
+点击按钮之后，`setTitle()`方法将state变量修改为`FCC`。
 
-`useState()` method is your go-to resource for state management in a functional component.
+`useState()`是你在函数组件中管理状态的首选资源。
 
-### How the `useReducer()` hook works
+### `useReducer()`钩子是如何运作的？
 
-In simple terms, `useReducer()` is the cool way of managing state in your application. It is more structured and helps you maintain complex state in your application.
+简单来说，`useReducer()`是管理应用状态一个比较炫酷的方式。它的结构性更强，能够帮助你管理应用中复杂的状态。
 
-Let's take an example to understand the useReducer hook:
+让我们就一个例子来理解useReducer:
 
-```javscript
+```javascript
 import "./styles.css";
 import { useReducer } from "react";
 
@@ -321,23 +313,23 @@ export default function App() {
 }
 ```
 
-The `useReducer()` hook takes two parameters, the `reducer` function and an `initialState` value.  
+`useReducer()`接受两个参数，`reducer`函数和一个`initialState（初始状态）`值。  
   
-The reducer function is a `switch-case` based implementation that returns the final state value that `useReduer()` internally uses to supply back to the component.
+reducer函数是基于 `switch-case`的实现，并返回最终状态值。 `useReducer()` 在内部使用这个值然后返回给组件。
 
-The values returned from the `useReducer()` function are `state` and `dispatch`. The `state` is the actual `state` value that can be used inside of the component. In our case, the state has two values: `title and count`. This title and count can be manipulated using the `dispatch()` method which is returned by the `useReducer()` method.
+由 `useReducer()`函数返回的值是`state`和`dispatch`。 `state`是组件内部使用的`state`值。在我们的例子中，指的是`title`和`count`，它们可以被`dispatch()`方法操控，然后由`useReducer()`方法返回。
 
-In the above case, to change the title, we have written a case of `change-title` inside the reducer function. This can be triggered with the help of the `dispatch({ type: "change-title" })` function. This will trigger the change title function and it will change the state of the `title` attribute.  
+在我们的例子总，我们编写了一个`change-title`来修改`title`，他可以被 `dispatch({ type: "change-title" })`函数触发，然后调用改标题的函数，改变状态的`title`属性。 
   
-Similarly, the same happens for the `count` part that is there in the application.  
+应用中的`count`部分同理。
   
-Like I said earlier, it is a cool way of implementing state inside your application. 😉
+如我前文所述，这是一个更为炫酷的管理状态的办法。 😉
 
-### How the `useEffect()` hook works
+### `useEffect()`钩子是如何运作的？
 
-Think of it this way: if you want to have a `side effect` to a state variable that changes, you can use the `useEffect()` hook to trigger it.  
+可以这样思考：如果你希望state变量改变的时候有`副作用`，可以使用`useEffect()`来触发。
   
-For example, let's say if the `input value` of your input box changes, and you want to call an API after it has changed. You can write the logic of the `API handle` in the `useEffect()` block.
+例如，输入栏的`input value（输入值）`发生改变之后，就要调用API。你可以在`useEffect()`中编写 `API handle（处理API）`的逻辑。
 
 ```javascript
 import React, {useState, useEffect} from 'react';
@@ -353,33 +345,32 @@ export const App = () => {
 }
 ```
 
-Here, we have an `input box` that has a state value of `value` attached to it. This value will change when the user tries to input anything.  
+在上述代码块中，将状态值`value`绑定在`输入框`，一旦用户在输入框输入任意内容，这个值就会发生改变。
   
-Once the value has been updated and has been rendered, the `useEffect()` block will kick in and the `console` statement will be triggered, outputting the latest state value which is there.  
+一旦这个值更新并渲染之后，`useEffect()`代码块就会被调用，`console`声明被触发，然后输出最新的状态值。
   
-Here, one good use case of the `useEffect()` can be to implement `API calls`. Let's assume you want to call an API with the input field value. The useEffect function block will be the best way to do it.
+ `useEffect()`的常见用例是`调用API`。假设你需要通过输入框中的内容来调用API，useEffect函数将会是最好的办法。
 
-Another part of this is the `dependency array` which is the second argument to the `useEffect()` hook. In our case, we mentioned `[value]` as the second argument.
+这个函数的另一部分是`依赖数组`，也就是`useEffect()`的第二个参数。在我们的例子中，这个参数是`[value]`。
 
-This basically means that EVERY TIME THE `value` CHANGES, the function inside the useEffect gets triggered. If you don't pass anything in the `dependency array`, the function block gets triggered once.
+也就是说每当 `value`发生改变，useEffect就会被触发。如果你不在`依赖数组`内传入任何值（即依赖数组为空数组），函数只会被调用一次。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### How the `useRef()` hook works
+### `useRef()`钩子是如何运作的？
 
-The useRef hook gives us the ability to mutate the DOM (but this is not the only implication of useRef).
+useRef使得你可以改变DOM(但不单单只使用useRef)。
 
-According to the docs:
+据文档描述：
 
-> useRef returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object will persist for the full lifetime of the component.
+> useRef返回一个可以修改的ref对象，其中 .current属性用于传参(initialValue)。 返回对象会在组件的整个生命周期保留。
 
-In simple terms, we are going to useRef if we want to persist the value of something for the entire component lifecycle. The basic implementation of useRef comes with DOM elements. Let's take an example:
+简言之，如果想要在组件的整个生命周期保留某个值，就可以使用useRef。useRef的基本实现是基于DOM元素的，请看示例：
 
 ```javascript
 function TextInputWithFocusButton() {
   const inputEl = useRef(null);
   const onButtonClick = () => {
-    // `current` points to the mounted text input element
+    // `current`指向mounted文本输入元素
     inputEl.current.focus();
   };
   return (
@@ -391,32 +382,32 @@ function TextInputWithFocusButton() {
 }
 ```
 
-Here, we are assigning a `ref` property to the `input` block. This will be associated with the `inputEl` reference that we created.
+在这里，我们向`input`传入了`ref`属性，这将会和我们创建的`inputEl`引用绑定。
 
-Now this `input` element can be manipulated however we want. We can modify the `style` attribute and make it beautiful, we can take the `value` property to see what is being help by the input element as the value, and so on.
+现在`input`元素可以按需改变。我们可以修改`style`属性，让它更好看，修改`value`属性查看预备值是什么等。
 
-In the above example, when we click the button, the `input` is focused and we can immediately start typing. We can do this with the help of `inputEl.current.focus()` – essentially the `focus()` method present on the `current` object.
+在上述例子中，当我们点击按钮，`input`就被锁定，我们可以马上输入任何内容。我们可以通过 `inputEl.current.focus()`来实现 –  `focus()`方法是基于`current`对象的。
 
-### What are custom hooks?
+### 什么是自定义钩子?
 
-One of the most commonly asked questions that I've seen in front-end interview rounds is to [create a custom hook for keyboard events](https://www.algochurn.com/frontend/usekeypress-custom-hook).
+[为键盘事件创建一个自定义钩子](https://www.algochurn.com/frontend/usekeypress-custom-hook)是最常见的问题之一。
 
-We saw many different hooks, but the interviewer might ask you to create a hook of your own. This might be challenging for some but with some practice, it becomes much easier.
+我们见过各式各样的钩子，面试官可能需要你创建自己的钩子。这可能对一些人来说是一种挑战，但是通过一些练习，这就会变得容易许多。
 
-Let's understand what a `Hook` is:
+让我们先理解一下`钩子`是什么：
 
-The basic usage of a custom hook is to extract a function's logic into its own component.
+自定义钩子的基本用例是提炼出函数逻辑到自己的组件。
 
-Imaging what will happen if you have to `listen for an enter press` inside of each of your components. Instead of writing the logic for `listening` again and again, we can extract the logic into a component of its own and use it wherever we want (just like we use `useState()` or `useEffect()`).
+假设你需要在每个组件内部都`监听回车键`，与其一遍又一遍地重复编写`监听`的逻辑，不如将这个逻辑提取出来，组成一个自己的组件，在需要的时候调用。 (就像我们使用`useState()`或 `useEffect()`一样）。
 
-There are a few conditions for a function to be called a `Hook`:
+若一个函数想要被称为`钩子`，需要满足以下条件:
 
-1.  It should always start with the `use` keyword.
-2.  We can decide what it takes as arguments, and what, if anything, it should return.
+1.  命名必须以`use`关键词开头。
+2.  我们可以决定传入什么参数、以及如果需要的话，返回什么值。
 
 ```javascript
-// Custom Hook: useAvailable
-function useAvailabe(resource) {
+// 自定义钩子: useAvailable
+function useAvailable(resource) {
   const [isAvailable, setIsAvailable] = useState(null);
 
   // ...
@@ -424,24 +415,24 @@ function useAvailabe(resource) {
   return isAvailable;
 }
 
-// Usage:
+// 用例:
   const isAvailable = useAvailable(cpu);
 ```
 
-Here, no matter how many times we call `useState` and `useEffects` inside the custom hook, they will be completely independent from the function where we use the custom hook.  
+在上述代码中，无论我们在自定义钩子内部调用`useState`和 `useEffects`多少次，它们都完全独立于使用自定义钩子的函数。
   
-Let's take an example of creating a custom hook for `storing local storage values`.
+让我们创建一个`存储本地存储值（local storage values）`的自定义钩子。
 
-### How to create a custom hook – useLocalStorage example
+### 如何创建一个自定义钩子 – useLocalStorage示例
 
-The useLocalStorage custom hook is a way to persist data into the local storage. Get and set values inside the local storage using `key` and `value` pairs so that whenever the user comes back to your web app, they see the same result they used earlier.
+useLocalStorage自定义钩子是将数据保存在本地存储的一种方法。在本地存储中采用`key`和`value`对来获取和存储值，这样不论用户何时返回到web应用，都会得到同样的结果。
 
-The below implementation is of a simple `select` tag value that, once changed, persists the data into local storage.
+在下面的实现中，一旦`select`标签值发生改变，就会被存储到本地存储中。
 
 `useLocalStorage.js`
 
 ```javascript
-// Use Local Storage Custom Hook
+// 使用本地存储自定义钩子
 import { useState } from 'react';
 
 function useLocalStorage(key, initialValue) {
@@ -506,31 +497,30 @@ export default function App() {
 }
 ```
 
-Here, the `useLocalStorage` hook takes in two parameters, the `local storage key name` to store, and a `default` value that has to be there.
+`useLocalStorage`接受两个参数，`本地存储key名称`用于存储，以及必要的`默认值`。
 
-The hook returns two values: the `local storage value` of the key that you're using and a way to `change that key value` by giving us a `setter method`. In this case, the `setStoredValue` method.
+钩子返回两个值：你使用的key的 `local storage value（本地存储值）`以及通过`setter方法`来`改变key的值`。在例子中就是`setStoredValue`方法。
 
-In the `useLocalStorage.js` file, we are trying to first `GET` the local storage value with that key using `localStorage.getItem()` method. If that exists, we are setting the value. If found, we `JSON.parse()` the value and return it. Otherwise, initialValue which was provided is set as the default value.  
+在`useLocalStorage.js`中，我们首先使用`localStorage.getItem()`方法中的`GET`来获取本地存储值，如果存在，我们就获取这个值，然后用`JSON.parse()`转化这个值并返回，否则initialValue就被设置为默认值。
   
-The `setLocalStorage()` function takes into account whether the passed value is a function or a simple variable value. Also it takes care of setting the value of local storage using `localStorage.setItem()` function.
+`setLocalStorage()`函数需确认我们传入的是函数还是一个简单值，并且使用 `localStorage.setItem()`函数来设置本地存储的值。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## How to Stand Out as a Developer by Creating Side Projects
+## 如何通过副业项目脱引而出
 
-The thing that has always worked for me and helped me stand out is my side projects that I've built.  
+我确实有通过副业项目脱颖而出的经历。
   
-In my opinion, you don't have to build 10 basic cookie cutter side projects. Instead, try building one or two really good projects where you get to implement all the concepts of React/HTML/CSS/JavaScript and everything that you've been learning.  
+我认为创建10来个大同小异的副项目大可不必，需要做的是创建一到两个你运用了你所学的所有React/HTML/CSS/JavaScript知识好项目。
   
-Assume the interviewer has 14 interviews in a week and has to review the résumés of 14 candidates. They'll be more likely interested in your profile because you have created a `link shortener website that charges $1 after every 1000 link visits` instead of an Amazon / Netflix clone.
+假设面试官一周安排了14场面试，并且需要查看14个候选人的简历，由于你创建了`每1000次访问后就收取1美元的链接缩短网站`而不是Amazon或者Netflix克隆，你就会脱颖而出。
 
-Again, there's nothing wrong with creating clones and practicing your skills. But it's always good to have at least 1 unique project that helps you stand out from the crowd.  
+当然，通过克隆项目锻炼技能没有什么问题。但是你至少有一个独一无二的项目才能够突出自己。
   
-Also, creating side projects will help you upskill as a developer. It is not likely possible to know everything beforehand when creating a project from scratch. Along the way, you'll have to learn many different skills and get good at that.
+此外，创建辅助项目将帮助你提高开发技能。从头开始创建项目时，不可能事先了解所有内容，因此在这个过程中你将收获各种不同的技能并且熟练掌握。
 
-## Practice, Practice, Practice.
+## 练习、练习再练习！
 
-There's a famous saying that goes like this:
+正如一句名人名言：
 
 > Every interview is a mock interview for you till you get your first front-end job.  
 >   
@@ -538,23 +528,23 @@ There's a famous saying that goes like this:
 > 
 > — Manu Arora (@mannupaaji) [September 4, 2022](https://twitter.com/mannupaaji/status/1566350128767987712?ref_src=twsrc%5Etfw)
 
-and this is true to a great extent.
+言之有物。
 
-I myself have failed 100s of times before landing my first job. It's the constant feedback and iterations that you have to make in order to get what you want.  
+在获得第一份前端工作之前，我失败了超过100次，在收获成功之前，失败是获取反馈和迭代自我的常态。
   
-In our case, getting a front-end job becomes easy when:
+如果你满足以下条件，会更容易获得前端工作：
 
--   You have in depth knowledge of your skills – React in this case (along with HTML, CSS, and JS).
--   You have a set of projects to showcase, making you stand out.
--   You're willing to put in the time and the effort to learn more and challenge yourself.
--   You read the freeCodeCamp blog regularly and practice questions there (😉)
+-   你深入理解你的技术– 比方说React(甚至是HTML、 CSS和JS)。
+-   你拥有一些项目展示你的能力，突出自己。
+-   你愿意花更多时间和精力去学习并且挑战自己。
+-   你经常读freeCodeCamp的文章，并且利用它准备面积问题。 (😉)
 
-## **Conclusion**
+## **总结**
 
-There are a lot of questions to practice for a machine-coding round. The interviewer can ask different sets of questions to test your skills.  
+机器代码测试会有很多需要练习的问题。面试官也会有不同的问题来考察你的技能。 
   
-You can use [**Algochurn**](https://algochurn.com) to practice the most popular [JavaScript interview questions](https://www.algochurn.com/blog/top-5-react-front-end-questions-to-practice-before-a-technical-interview-round), [React Interview Questions](https://algochurn.com/frontend), and [algorithmic questions](https://algochurn.com/problems) asked in a front-end technical interview round along with their solutions and approaches.
+你可以通过[**Algochurn**](https://algochurn.com)来练习最常见的[JavaScript面试问题](https://www.algochurn.com/blog/top-5-react-front-end-questions-to-practice-before-a-technical-interview-round)、 [React 面试问题](https://algochurn.com/frontend)和[算法题](https://algochurn.com/problems)，这里不仅包含了问题还有解法。
 
-If you have any questions, please reach out to me via [Twitter(@mannupaaji)](https://twitter.com/mannupaaji) and/or my [website(manuarora.in)](https://manuarora.in)
+如果你有任何问题，欢迎通过 [Twitter(@mannupaaji)](https://twitter.com/mannupaaji) 以及我的 [个人网站(manuarora.in)](https://manuarora.in)联系我。
 
-Good luck and Happy Coding! 👑🫡
+祝你好运以及编码愉快! 👑🫡

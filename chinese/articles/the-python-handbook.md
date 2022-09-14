@@ -2567,7 +2567,7 @@ print(id(1))  # 140227521172384
 
 这对于检查两个变量是否指向同一个对象会很有用。
 
-`inspect`标准库模块为我们提供了更多获取对象信息的工具，您可以在这里查看：[https://docs.python.org/3/library/inspect.html](https://docs .python.org/3/library/inspect.html)
+`inspect`标准库模块为我们提供了更多获取对象信息的工具，您可以在[这里](https://docs.python.org/3/library/inspect.html)查看
 
 
 <h2 id="annotations-in-python">Python注解</h2>

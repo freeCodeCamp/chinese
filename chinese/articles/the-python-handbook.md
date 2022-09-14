@@ -52,11 +52,11 @@ Enjoy!
 -   [Python递归](#recursion-in-python)
 -   [Python嵌套函数](#nested-functions-in-python)
 -   [Python闭包](#closures-in-python)
--   [Decorators in Python](#decoratorsinpython)
--   [Docstrings in Python](#docstringsinpython)
--   [Introspection in Python](#introspectioninpython)
--   [Annotations in Python](#annotationsinpython)
--   [Exceptions in Python](#exceptionsinpython)
+-   [Python装饰器](#decorators-in-python)
+-   [Python文档字符串](#docstrings-in-python)
+-   [Python反射](#introspection-in-python)
+-   [Python注解](#annotations-in-python)
+-   [Python异常](#exceptions-in-python)
 -   [The with Statement in Python](#thewithstatementinpython)
 -   [How to Install 3rd Party Packages in Python Using pip](#howtoinstall3rdpartypackagesinpythonusingpip)
 -   [List Comprehensions in Python](#listcomprehensionsinpython)
@@ -2380,11 +2380,11 @@ print(increment())  # 3
 
 <h2 id="decorators-in-python">Python装饰器</h2>
 
-Decorators are a way to change, enhance, or alter in any way how a function works.
+装饰器是一种可以以任何方式增强或改变函数工作方式的方法。
 
-Decorators are defined with the `@` symbol followed by the decorator name, just before the function definition.
+装饰器是用`@`符号定义的，`@`后面跟装饰器名称，（装饰器用在）在函数定义之前。
 
-Example:
+例子：
 
 ```python
 @logtime
@@ -2392,11 +2392,11 @@ def hello():
     print('hello!')
 ```
 
-This `hello` function has the `logtime` decorator assigned.
+这个`hello`函数分配了`logtime`装饰器。
 
-Whenever we call `hello()`, the decorator is going to be called.
+每当我们调用`hello()`时，装饰器也都会被调用。
 
-A decorator is a function that takes a function as a parameter, wraps the function in an inner function that performs the job it has to do, and returns that inner function. In other words:
+装饰器是一个以函数为参数的函数，它将（被装饰的）函数包装在内部函数中，该内部函数执行必须完成的工作，然后返回这个内部函数。 换句话说：
 
 ```python
 def logtime(func):
@@ -2410,23 +2410,23 @@ def logtime(func):
 
 <h2 id="docstrings-in-python">Python文档字符串</h2>
 
-Documentation is hugely important, not just to communicate to other people what the goal of a function/class/method/module is, but it also communicates it to yourself.
+文档非常重要，不仅可以用于告知其他人（自己写的）函数/类/方法/模块的目标是什么，还可以帮助您（在较长时间后）理解自己的代码。
 
-When you come back to your code 6 or 12 months from now, you might not remember all the knowledge you are holding in your head. At that point, reading your code and understanding what it is supposed to do will be much more difficult.
+当您在6或12个月后会看您的的代码时，可能不记得写代码时脑海中的所有想法。这个时候阅读您的代码并理解它在做什么将变得非常困难。
 
-Comments are one way to help yourself (and others) out:
+注释是帮助自己（和他人）摆脱这种困境的一种方式：
 
 ```python
 # this is a comment
 
-num = 1 #this is another comment
+num = 1  # this is another comment
 ```
 
-Another way is to use **docstrings**.
+另一种方法是使用**docstrings**。
 
-The utility of docstrings is that they follow conventions. As such they can be processed automatically.
+文档字符串的实用性在于它们遵循约定，因此它们可以被自动处理。
 
-This is how you define a docstring for a function:
+这是您为函数定义文档字符串的方式：
 
 ```python
 def increment(n):
@@ -2434,7 +2434,7 @@ def increment(n):
     return n + 1
 ```
 
-This is how you define a docstring for a class and a method:
+这是为类和方法定义文档字符串的方式：
 
 ```python
 class Dog:
@@ -2449,7 +2449,7 @@ class Dog:
         print('WOF!')
 ```
 
-Document a module by placing a docstring at the top of the file, for example supposing this is `dog.py`:
+通过在文件顶部放置一个文档字符串来解释记录一个模块，例如，假设这是`dog.py`：
 
 ```python
 """Dog module
@@ -2472,7 +2472,7 @@ class Dog:
         print('WOF!')
 ```
 
-Docstrings can span multiple lines:
+文档字符串可以跨越多行：
 
 ```python
 def increment(n):
@@ -2482,9 +2482,9 @@ def increment(n):
     return n + 1
 ```
 
-Python will process those and you can use the `help()` global function to get the documentation for a class/method/function/module.
+Python将处理这些（文档字符串），您可以使用全局函数`help()`来获取类/方法/函数/模块的文档。
 
-For example calling `help(increment)` will give you this:
+例如调用`help(increment)`会给返回这个：
 
 ```
 Help on function increment in module
@@ -2495,21 +2495,21 @@ increment(n)
     a number
 ```
 
-There are many different standards to format docstrings, and you can choose to adhere to your favorite one.
+格式化文档字符串有许多不同的标准，您可以选择遵守自己喜欢的标准。
 
-I like Google's standard: [https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)
+我喜欢谷歌的标准： [https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)
 
-Standards allow to have tools to extract docstrings and automatically generate documentation for your code.
+（遵循）标准可以使用工具来提取文档字符串并自动为您的代码生成文档。
 
 
 
 <h2 id="introspection-in-python">Python反射</h2>
 
-Functions, variables, and objects can be analyzed using **introspection**.
+可以使用**反射**来分析函数、变量和对象。
 
-First, using the `help()` global function we can get the documentation if provided in form of docstrings.
+首先，使用全局函数`help()`（如果以文档字符串的形式提供）我们可以获得文档。
 
-Then, you can use print() to get information about a function:
+然后，您可以使用print()获取有关函数的信息：
 
 ```python
 def increment(n):
@@ -2520,7 +2520,7 @@ print(increment)
 # <function increment at 0x7f420e2973a0>
 ```
 
-or an object:
+或者（获取）对象（的信息）：
 
 ```python
 class Dog():
@@ -2534,7 +2534,7 @@ print(roger)
 # <__main__.Dog object at 0x7f42099d3340>
 ```
 
-The `type()` function gives us the type of an object:
+我们可以使用`type()`函数获取对象的类型：
 
 ```python
 print(type(increment))
@@ -2550,7 +2550,7 @@ print(type('test'))
 # <class 'str'>
 ```
 
-The `dir()` global function lets us find out all the methods and attributes of an object:
+全局函数`dir()`可以找出对象的所有方法和属性：
 
 ```python
 print(dir(roger))
@@ -2558,123 +2558,123 @@ print(dir(roger))
 # ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'bark']
 ```
 
-The `id()` global function shows us the location in memory of any object:
+全局函数`id()`显示任意对象在内存中的位置：
 
 ```python
-print(id(roger)) # 140227518093024
-print(id(1))     # 140227521172384
+print(id(roger))  # 140227518093024
+print(id(1))  # 140227521172384
 ```
 
-It can be useful to check if two variables point to the same object.
+这对于检查两个变量是否指向同一个对象会很有用。
 
-The `inspect` standard library module gives us more tools to get information about objects, and you can check it out here: [https://docs.python.org/3/library/inspect.html](https://docs.python.org/3/library/inspect.html)
+`inspect`标准库模块为我们提供了更多获取对象信息的工具，您可以在这里查看：[https://docs.python.org/3/library/inspect.html](https://docs .python.org/3/library/inspect.html)
 
 
 <h2 id="annotations-in-python">Python注解</h2>
 
-Python is dynamically typed. We do not have to specify the type of a variable or function parameter, or a function return value.
+Python是动态类型的，我们不必指定变量、函数参数或函数返回值的类型。
 
-Annotations allow us to (optionally) do that.
+注解允许我们（可选地）这样做。
 
-This is a function without annotations:
+这是一个没有注解的函数：
 
 ```python
 def increment(n):
     return n + 1
 ```
 
-This is the same function with annotations:
+这是带有注解的相同函数：
 
 ```python
 def increment(n: int) -> int:
     return n + 1
 ```
 
-You can also annotate variables:
+您还可以注解变量：
 
 ```python
 count: int = 0
 ```
 
-Python will ignore those annotations. A separate tool called [`mypy`](http://mypy-lang.org/) can be run standalone, or integrated by IDE like VS Code or PyCharm to automatically check for type errors statically, while you are coding. It will also help you catch type mismatch bugs before even running the code.
+Python将忽略这些注解。 一个名为[`mypy`](http://mypy-lang.org/)的工具可以独立运行，也可以集成到VS Code或PyCharm等IDE中，以便在您编码时自动检查静态类型错误。它还将帮助您在运行代码之前捕获类型不匹配的错误。
 
-A great help especially when your software becomes large and you need to refactor your code.
+这是一个很大的帮助，尤其是当您的软件规模变得很大并且需要重构代码时。
 
 
 
 <h2 id="exceptions-in-python">Python异常</h2>
 
-It's important to have a way to handle errors, and Python gives us exception handling to do so.
+处理错误很重要，Python为我们提供了异常处理来做到这一点。
 
-If you wrap lines of code into a `try:` block:
+如果将代码行包装到`try:`块中：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 ```
 
-If an error occurs, Python will alert you and you can determine which kind of error occurred using a `except` blocks:
+如果发生错误，Python会提醒您，您可以使用`except`块确认发生了哪种错误：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except <ERROR2>:
-    # handler <ERROR2>
+    # 处理 <ERROR2>
 ```
 
-To catch all exceptions you can use `except` without any error type:
+要捕获所有异常，您可以使用不包含任何错误类型的`except`块：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except:
-    # catch all other exceptions
+    # 捕获其它所有错误
 ```
 
-The `else` block is run if no exceptions were found:
+如果没有发现异常，则将运行`else`块：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except <ERROR2>:
-    # handler <ERROR2>
+    # 处理 <ERROR2>
 else:
-    # no exceptions were raised, the code ran successfully
+    # 没有抛出异常，代码成功运行
 ```
 
-A `finally` block lets you perform some operation in any case, regardless of whether an error occurred or not:
+`finally`块允许您在任何情况下执行某些操作，无论是否发生错误：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except <ERROR2>:
-    # handler <ERROR2>
+    # 处理 <ERROR2>
 else:
-    # no exceptions were raised, the code ran successfully
+    # 没有抛出异常，代码成功运行
 finally:
-    # do something in any case
+    # 任何情况下都将运行的代码
 ```
 
-The specific error that's going to occur depends on the operation you're performing.
+将发生的具体错误取决于您正在执行的操作。
 
-For example if you are reading a file, you might get an `EOFError`. If you divide a number by zero you will get a `ZeroDivisionError`. If you have a type conversion issue you might get a `TypeError`.
+例如，如果您正在读取一个文件，可能会得到一个`EOFError`。如果您将一个数除以零，将会得到一个`ZeroDivisionError`。如果发生类型转换问题，您可能会得到一个`TypeError`。
 
-Try this code:
+试试这个代码：
 
 ```python
 result = 2 / 0
 print(result)
 ```
 
-The program will terminate with an error:
+程序将因错误而终止：
 
 ```
 Traceback (most recent call last):
@@ -2683,9 +2683,9 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-and the lines of code after the error will not be executed.
+并且错误（代码行）之后的代码将不会被执行。
 
-Adding that operation in a `try:` block lets us recover gracefully and move on with the program:
+在`try:`块中添加该操作可以让我们优雅地恢复（错误）并继续执行程序：
 
 ```python
 try:
@@ -2695,16 +2695,16 @@ except ZeroDivisionError:
 finally:
     result = 1
 
-print(result) # 1
+print(result)  # 1
 ```
 
-You can raise exceptions in your own code, too, using the `raise` statement:
+您也可以在自己的代码中使用`raise`语句引发异常：
 
 ```python
 raise Exception('An error occurred!')
 ```
 
-This raises a general exception, and you can intercept it using:
+这会抛出一个异常，您可以使用以下方法拦截它：
 
 ```python
 try:
@@ -2713,14 +2713,14 @@ except Exception as error:
     print(error)
 ```
 
-You can also define your own exception class, extending from Exception:
+您还可以扩展Exception来定义自己的异常类：
 
 ```python
 class DogNotFoundException(Exception):
     pass
 ```
 
-> `pass` here means "nothing" and we must use it when we define a class without methods, or a function without code, too.
+> 这里`pass`的意思是“什么都没有”，当我们定义一个没有方法的类或没有代码的函数时，我们必须使用它。
 
 ```python
 try:

@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use JavaScript's Map() Method to Solve Breadth-First and Depth-First Search Problems](https://www.freecodecamp.org/news/how-to-use-javascript-map-method-to-make-a-breath-first-and-depth-first-search/)
 > -  原文作者：[Njoku Samson Ebere](https://www.freecodecamp.org/news/author/ebereplenty/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Use JavaScript's Map() Method to Solve Breadth-First and Depth-First Search Problems](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-porapak-apichodilok-346696.jpg)

@@ -57,13 +57,13 @@ Enjoy!
 -   [Python反射](#introspection-in-python)
 -   [Python注解](#annotations-in-python)
 -   [Python异常](#exceptions-in-python)
--   [The with Statement in Python](#thewithstatementinpython)
--   [How to Install 3rd Party Packages in Python Using pip](#howtoinstall3rdpartypackagesinpythonusingpip)
--   [List Comprehensions in Python](#listcomprehensionsinpython)
--   [Polymorphism in Python](#polymorphisminpython)
--   [Operator Overloading in Python](#operatoroverloadinginpython)
--   [Virtual Environments in Python](#virtualenvironmentsinpython)
--   [Conclusion](#conclusion)
+-   [Python中with语句](#the-with-statement-in-python)
+-   [Python如何使用pip安装第三方包](#how-to-install-3rd-party-packages-in-python-using-pip)
+-   [Python列表推导式](#list-comprehensions-in-python)
+-   [Python多态](#polymorphism-in-python)
+-   [Python操作重载](#operator-overloading-in-python)
+-   [Python虚拟环境](#virtual-environments-in-python)
+-   [总结](#conclusion)
 
 <h2 id="introduction-to-python">Python介绍</h2>
 
@@ -2729,7 +2729,7 @@ except DogNotFoundException:
     print('Dog not found!')
 ```
 
-## The `with` Statement in Python
+<h2 id="the-with-statement-in-python">Python中with语句</h2>
 
 The `with` statement is very helpful to simplify working with exception handling.
 
@@ -2764,7 +2764,7 @@ In other words we have built-in implicit exception handling, as `close()` will b
 
 `with` is not just helpful to work with files. The above example is just meant to introduce its capabilities.
 
-## How to Install 3rd Party Packages in Python Using `pip`
+<h2 id="how-to-install-3rd-party-packages-in-python-using-pip">Python如何使用pip安装第三方包</h2>
 
 The Python standard library contains a huge number of utilities that simplify our Python development needs, but nothing can satisfy _everything_.
 
@@ -2824,7 +2824,7 @@ Show an installed package details, including version, documentation website and 
 pip show <package>
 ```
 
-## List Comprehensions in Python
+<h2 id="list-comprehensions-in-python">Python列表推导式</h2>
 
 List comprehensions are a way to create lists in a very concise way.
 
@@ -2855,7 +2855,7 @@ and over `map()`:
 numbers_power_2 = list(map(lambda n : n**2, numbers))
 ```
 
-## Polymorphism in Python
+<h2 id="polymorphism-in-python">Python多态</h2>
 
 Polymorphism generalizes a functionality so it can work on different types. It's an important concept in object-oriented programming.
 
@@ -2883,7 +2883,7 @@ animal2.eat()
 
 We built a generalized interface and we now do not need to know that an animal is a Cat or a Dog.
 
-## Operator Overloading in Python
+<h2 id="operator-overloading-in-python">Python操作重载</h2>
 
 Operator overloading is an advanced technique we can use to make classes comparable and to make them work with Python operators.
 
@@ -2943,7 +2943,7 @@ Then you have methods to interoperate with arithmetic operations:
 
 There are a few more methods to work with other operators, but you get the idea.
 
-## Virtual Environments in Python
+<h2 id="virtual-environments-in-python">Python虚拟环境</h2>
 
 It's common to have multiple Python applications running on your system.
 
@@ -2981,7 +2981,7 @@ to
 
 Now running `pip` will use this virtual environment instead of the global environment.
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
 Thanks a lot for reading this book.
 

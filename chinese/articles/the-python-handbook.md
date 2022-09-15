@@ -15,7 +15,7 @@
 
 > Note: 您可以获取这本手册的[PDF、ePub或者Mobi版本](https://flaviocopes.com/page/python-handbook/)
 
-Enjoy!
+Enjoy it!
 
 <h2 id="summary">目录</h2>
 

@@ -61,7 +61,7 @@ Enjoy!
 -   [Python如何使用pip安装第三方包](#how-to-install-3rd-party-packages-in-python-using-pip)
 -   [Python列表推导式](#list-comprehensions-in-python)
 -   [Python多态](#polymorphism-in-python)
--   [Python操作重载](#operator-overloading-in-python)
+-   [Python运算符重载](#operator-overloading-in-python)
 -   [Python虚拟环境](#virtual-environments-in-python)
 -   [总结](#conclusion)
 
@@ -2731,13 +2731,13 @@ except DogNotFoundException:
 
 <h2 id="the-with-statement-in-python">Python中with语句</h2>
 
-The `with` statement is very helpful to simplify working with exception handling.
+`with`语句对于简化异常处理非常有帮助。
 
-For example when working with files, each time we open a file, we must remember to close it.
+例如，在处理文件时，每次打开文件都必须记得关闭它。
 
-`with` makes this process transparent.
+`with`使这个过程变得透明（即对程序员不可见）。
 
-Instead of writing:
+（使用`with`）可以不像下面这样写：
 
 ```python
 filename = '/Users/flavio/test.txt'
@@ -2750,7 +2750,7 @@ finally:
     file.close()
 ```
 
-You can write:
+您可以这样写：
 
 ```python
 filename = '/Users/flavio/test.txt'
@@ -2760,65 +2760,65 @@ with open(filename, 'r') as file:
     print(content)
 ```
 
-In other words we have built-in implicit exception handling, as `close()` will be called automatically for us.
+换句话说，Python有内置的隐式异常处理，其会自动为我们调用`close()`。
 
-`with` is not just helpful to work with files. The above example is just meant to introduce its capabilities.
+上面的例子只是为了介绍`with`的功能，而不是说它仅在处理文件方面对我们有帮助。
 
 <h2 id="how-to-install-3rd-party-packages-in-python-using-pip">Python如何使用pip安装第三方包</h2>
 
-The Python standard library contains a huge number of utilities that simplify our Python development needs, but nothing can satisfy _everything_.
+Python标准库包含大量实用的程序，可以简化我们的开发需求，但是没有什么能满足_一切_。
 
-That's why individuals and companies create packages, and make them available as open source software for the entire community.
+这就是个人和公司创建第三方包，并将它们作为开源软件提供给整个社区的原因。
 
-Those modules are all collected in a single place, the **Python Package Index** available at [https://pypi.org](https://pypi.org), and they can be installed on your system using `pip`.
+这些模块都收集在一个地方，可在[https://pypi.org](https://pypi.org) 获得**Python包索引**，并且可以使用`pip`将它们（第三方模块）安装在您的系统上。
 
-There are more than 270,000 packages freely available at the time of writing.
+在撰写本文时，有超过270,000个免费第三方包可供我们使用。
 
-> You should have `pip` already installed if you followed the Python installation instructions.
+> 如果您按照Python安装说明进行操作，您应该已经安装了 `pip`。
 
-Install any package using the command `pip install`:
+使用命令`pip install`可以安装任何第三方包：
 
 ```
 pip install <package>
 ```
 
-or, if you do have troubles, you can also run it through `python -m`:
+或者，如果您确实遇到了问题，也可以通过`python -m`运行它：
 
 ```
 python -m pip install <package>
 ```
 
-For example you can install the [`requests`](https://pypi.org/project/requests/) package, a popular HTTP library:
+例如，您可以安装 [`requests`](https://pypi.org/project/requests/) 包，这是一个流行的 HTTP 库：
 
 ```
 pip install requests
 ```
 
-and once you do, it will be available for all your Python scripts, because packages are installed globally.
+一旦这样做，它就可以用于您所有的Python脚本，因为包是全局安装的。
 
-The exact location depends on your operating system.
+（第三方包安装的）具体位置取决于您的操作系统。
 
-On macOS, running Python 3.9, the location is `/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages`.
+在运行Python 3.9的macOS上，位置是`/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages`。
 
-Upgrade a package to its latest version using:
+使用以下命令将第三方包升级到最新版本：
 
 ```
 pip install –U <package>
 ```
 
-Install a specific version of a package using:
+使用以下命令安装指定版本的第三方包：
 
 ```
 pip install <package>==<version>
 ```
 
-Uninstall a package using:
+使用以下命令卸载一个第三方包：
 
 ```
 pip uninstall <package>
 ```
 
-Show an installed package details, including version, documentation website and author information using:
+使用以下命令显示已安装第三方包的详细信息，包括版本、文档网站和作者信息：
 
 ```
 pip show <package>
@@ -2826,22 +2826,22 @@ pip show <package>
 
 <h2 id="list-comprehensions-in-python">Python列表推导式</h2>
 
-List comprehensions are a way to create lists in a very concise way.
+列表推导式以一种非常简洁的方式创建列表。
 
-Suppose you have a list:
+假设有一个列表：
 
 ```python
 numbers = [1, 2, 3, 4, 5]
 ```
 
-You can create a new list using a list comprehension, composed by the `numbers` list elements, power 2:
+您可以使用列表推导式创建一个新列表，该列表由`numbers`列表元素的2次幂组成：
 
 ```python
 numbers_power_2 = [n**2 for n in numbers]
 # [1, 4, 9, 16, 25]
 ```
 
-List comprehensions are a syntax that's sometimes preferred over loops, as it's more readable when the operation can be written on a single line:
+列表推导是一种有时比循环更受欢迎的语法，因为当（有些）操作写在一行时其更具可读性：
 
 ```python
 numbers_power_2 = []
@@ -2849,7 +2849,7 @@ for n in numbers:
     numbers_power_2.append(n**2)
 ```
 
-and over `map()`:
+同样有时也比`map()`更好：
 
 ```python
 numbers_power_2 = list(map(lambda n : n**2, numbers))
@@ -2857,9 +2857,9 @@ numbers_power_2 = list(map(lambda n : n**2, numbers))
 
 <h2 id="polymorphism-in-python">Python多态</h2>
 
-Polymorphism generalizes a functionality so it can work on different types. It's an important concept in object-oriented programming.
+多态将一个功能泛化，因此它可以在不同的类型上工作。多态是面向对象编程中的一个重要概念。
 
-We can define the same method on different classes:
+我们可以在不同的类上定义相同的方法：
 
 ```python
 class Dog:
@@ -2871,7 +2871,7 @@ class Cat:
         print('Eating cat food')
 ```
 
-Then we can generate objects and we can call the `eat()` method regardless of the class the object belongs to, and we'll get different results:
+然后我们可以生成对象，无论对象属于哪个类，我们都可以调用`eat()`方法，但是会得到不同的结果：
 
 ```python
 animal1 = Dog()
@@ -2881,13 +2881,49 @@ animal1.eat()
 animal2.eat()
 ```
 
-We built a generalized interface and we now do not need to know that an animal is a Cat or a Dog.
+我们构建了一个通用接口，不需要知道动物是猫还是狗。
 
-<h2 id="operator-overloading-in-python">Python操作重载</h2>
+译者：这个例子不太好，不完整，看下面这个例子：
 
-Operator overloading is an advanced technique we can use to make classes comparable and to make them work with Python operators.
+```python
+In [1]: class Animal:
+   ...:     def eat(self):
+   ...:         print("animal eating ...")
+   ...: 
 
-Let's take a class Dog:
+In [2]: class Dog(Animal):
+   ...:     def eat(self):
+   ...:         print("dog eating ...")
+   ...: 
+
+In [3]: class Cat(Animal):
+   ...:     def eat(self):
+   ...:         print("cat eating ...")
+   ...: 
+
+In [4]: a = Animal()
+
+In [5]: d = Dog()
+
+In [6]: c = Cat()
+
+In [7]: a.eat()
+animal eating ...
+
+In [8]: d.eat()
+dog eating ...
+
+In [9]: c.eat()
+cat eating ...
+```
+
+译者：多态实际上是看运行时对象具体的类型，在Java中，是可以这样写的`Animal dog = new Dog()`，即创建一个`Animal`对象`dog`，这是**编译**时，但是在**运行**时`dog.eat()`打印`dog eating ...`
+
+<h2 id="operator-overloading-in-python">Python运算符重载</h2>
+
+运算符重载是一种先进的技术，我们可以用来使类具有可比性，并使它们与Python运算符一起工作。
+
+让我们来创建一个类`Dog`：
 
 ```python
 class Dog:
@@ -2897,14 +2933,14 @@ class Dog:
         self.age = age
 ```
 
-Let's create 2 Dog objects:
+创建两个`Dog`对象：
 
 ```python
 roger = Dog('Roger', 8)
 syd = Dog('Syd', 7)
 ```
 
-We can use operator overloading to add a way to compare those 2 objects, based on the `age` property:
+我们可以使用运算符重载添加一种基于`age`属性的方法来比较这两个对象：
 
 ```python
 class Dog:
@@ -2916,79 +2952,81 @@ class Dog:
         return True if self.age > other.age else False
 ```
 
-Now if you try running `print(roger > syd)` you will get the result `True`.
+现在如果您尝试运行`print(roger > syd)`，将得到结果`True`。
 
-In the same way we defined `__gt__()` (which means greater than), we can define the following methods:
+与我们定义`__gt__()`（大于）的方式相同，我们可以定义以下方法：
 
--   `__eq__()` to check for equality
--   `__lt__()` to check if an object should be considered lower than another with the `<` operator
--   `__le__()` for lower or equal (`<=`)
--   `__ge__()` for greater or equal (`>=`)
--   `__ne__()` for not equal (`!=`)
+-   `__eq__()` 检查是否相等
+-   `__lt__()` 使用`<`操作符检查一个对象是否被认为低于另一个对象
+-   `__le__()` 表示小于或等于 (`<=`)
+-   `__ge__()` 表示大于或等于 (`>=`)
+-   `__ne__()` 表示不相等 (`!=`)
 
-Then you have methods to interoperate with arithmetic operations:
+然后还有使用算术运算符操作的方法：
 
--   `__add__()` respond to the `+` operator
--   `__sub__()` respond to the `–` operator
--   `__mul__()` respond to the `*` operator
--   `__truediv__()` respond to the `/` operator
--   `__floordiv__()` respond to the `//` operator
--   `__mod__()` respond to the `%` operator
--   `__pow__()` respond to the `**` operator
--   `__rshift__()` respond to the `>>` operator
--   `__lshift__()` respond to the `<<` operator
--   `__and__()` respond to the `&` operator
--   `__or__()` respond to the `|` operator
--   `__xor__()` respond to the `^` operator
+-   `__add__()` 响应`+`运算符
+-   `__sub__()` 响应`-`运算符
+-   `__mul__()` 响应`*`运算符
+-   `__truediv__()` 响应`/`运算符
+-   `__floordiv__()` 响应`//`运算符
+-   `__mod__()` 响应`%`运算符
+-   `__pow__()` 响应`**`运算符
+-   `__rshift__()` 响应`>>`运算符
+-   `__lshift__()` 响应`<<`运算符
+-   `__and__()` 响应`&`运算符
+-   `__or__()` 响应`|`运算符
+-   `__xor__()` 响应`^`运算符
 
-There are a few more methods to work with other operators, but you get the idea.
+还有其它几种方法可以与运算符一起使用，但您应该明白了（这种思想）。
 
 <h2 id="virtual-environments-in-python">Python虚拟环境</h2>
 
-It's common to have multiple Python applications running on your system.
+在您的系统上运行多个Python应用程序是很常见的。
 
-When applications require the same module, at some point you will reach a tricky situation where an app needs a version of a module, and another app a different version of that same module.
+当应用程序需要相同的模块时，有时您会遇到一个棘手的情况，即一个应用程序需要一个版本模块，而另一个应用程序需要该模块的不同版本。
 
-To solve this, you use **virtual environments**.
+您可以使用**虚拟环境**解决这个问题。
 
-We'll use `venv`. Other tools work similarly, like `pipenv`.
+我们将使用`venv`。其它工具的工作方式类似，例如`pipenv`。
 
-Create a virtual environment using
+如下创建虚拟环境
 
 ```sh
 python -m venv .venv
 ```
 
-in the folder where you want to start the project, or where you already have an existing project.
+（该命令）在您要开始的项目的文件夹或者现有项目的文件夹（的根目录下运行）。
 
-Then run
+译者：项目的根目录即其本身，例如一个项目FCC在`/Users/abc/projects/FCC`，那么该项目的根目录就是`/Users/abc/projects/FCC/`
+
+然后运行
 
 ```sh
 source .venv/bin/activate
 ```
 
-> Use `source .venv/bin/activate.fish` on the Fish shell
+> （如果是）在Fish shell上，使用 `source .venv/bin/activate.fish`
 
-Executing the program will activate the Python virtual environment. Depending on your configuration you might also see your terminal prompt change.
+执行这个命令将激活Python虚拟环境。根据您的配置，可能还会看到终端提示发生变化。
 
-Mine changed from
+我的从
 
 `➜ folder`
 
-to
+变成
 
 `(.venv) ➜ folder`
 
-Now running `pip` will use this virtual environment instead of the global environment.
+现在运行`pip`将使用这个虚拟环境而不是全局环境。
 
 <h2 id="conclusion">总结</h2>
 
-Thanks a lot for reading this book.
+非常感谢您阅读本书。
 
-I hope it will inspire you to learn more about Python.
+我希望它能鼓励您更多去地了解 Python。
 
-For more on Python and programming tutorials in general, check out my blog [flaviocopes.com](https://flaviocopes.com).
+有关Python和一般编程教程的更多信息，请查看我的博客 [flaviocopes.com](https://flaviocopes.com)。
 
-Send any feedback, errata, or opinions at [mailto:flavio@flaviocopes.com](mailto:flavio@flaviocopes.com), and you can reach me on Twitter [@flaviocopes](https://twitter.com/flaviocopes).
+在[mailto:flavio@flaviocopes.com](mailto:flavio@flaviocopes.com) 发送任何反馈、勘误或意见，您可以在Twitter[@flaviocopes](https://twitter.com/flaviocopes) 上与我联系 .
 
-> Note: You can [get a PDF, ePub and Mobi version of this Python Handbook](https://flaviocopes.com/page/python-handbook/)
+> 请注意：您可以[获取此Python手册的PDF、ePub和Mobi版本](https://flaviocopes.com/page/python-handbook/)

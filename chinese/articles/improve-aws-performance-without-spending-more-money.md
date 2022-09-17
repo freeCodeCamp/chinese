@@ -9,7 +9,7 @@
 
 最近我们在工作中遇到了一个问题，我觉得写这个问题很有意思。我将深入探讨我们如何去尝试找到问题的根源（这通常是问题的 90%），然后我们如何修复它。
 
-## Where The Problems Started
+## 问题开始的地方
 
 问题是从 AWS 开始的。该应用程序已经顺利地运行了一段时间，没有任何问题。我们决定运行一个负载测试，以了解一个特定的 API 是否能够处理我们预期的负载。
 
@@ -21,7 +21,7 @@
 
 好吧，那到底发生了什么？为什么这条路线的效率如此之低？
 
-## Throttling The CPU
+## 节流(Throttling)CPU
 
 我们立即做出的假设是将问题指向公司内部的 ERP 系统，我们依靠该系统进行验证。当然，这必须是 ERP，因为这意味着我们不需要承担任何责任，因为它是一个不同的供应商。
 
@@ -43,85 +43,85 @@ AWS 后来将 ECU 改为虚拟 CPU（vCPU），但你仍然可以在网上找到
 
 AWS 如何为 t2 类实例管理这一点是通过称为 Burst Credits 的。
 
-## So, How Am I Losing Money On Burst Credits?
+## 我如何因突发积分而 CPU 被限制？
 
 ![AWS_burst_credits_chart](https://www.freecodecamp.org/news/content/images/2022/08/AWS_burst_credits_chart.png)
 
-The chart above explains exactly how AWS burst credits work for EC2 instances. The source of the image is [this AWS documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-credits-baseline-concepts.html).
+上面的图表确切地解释了 AWS 突发积分对 EC2 实例的作用。该图片的来源是[该 AWS 文档](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/burstable-credits-baseline-concepts.html).
 
-The idea is that AWS provides you with a baseline CPU utilisation beyond which you pay for the CPU time that you consume.
+这是 AWS 为您提供了一个基准 CPU 利用率，超出该基准您需要为所消耗的 CPU 时间付费。
 
-Taking an EC2 t2.micro instances as an example, the baseline CPU utilisation for this is set at 10%. The instance is constantly earning credits based on the number of vCPU's it has.
+以 EC2 t2.micro 实例为例，其基准 CPU 利用率设置为 10%。 该实例根据其拥有的 vCPU 数量不断获得积分。
 
-The calculation for earning credits is:
+获得积分的计算方法是：
 
-`1vCPU * 10% baseline * 60 minutes = 6 credits per hour.`
+`1vCPU * 10% 基线 * 60 分钟 = 每小时6个积分。`
 
-The calculation for spending credits if you are utilising at 15% is:
+如果您使用的是 15%，则消费积分的计算是:
 
-`1vCPU * 15% CPU * 60 minutes = 9 credits per hour.`
+`1vCPU * 15% CPU * 60 分钟 = 每小时9个积分。`
 
-So, if you are constantly running at 15%, your instance is losing 9 credits per hour. A t2.micro instance can only accrue a total of 144 credits. Once those credits run out, your CPU usage will be throttled at 10% which is the baseline utilistaion.
+因此，如果你一直以 15%的速度运行，你的实例每小时就会损失 9 个积分。一个 t2.micro 实例总共只能积累 144 个积分。一旦这些信用额度用完，你的 CPU 使用率将被节制在 10%，这是基准利用率。
 
-So, while you might not be strictly losing money on the instance, you are paying for it in CPU cycles that are lost.
+因此，虽然您可能不会在实例上严格地付钱，但您是在损失的 CPU 周期中为此付出代价。
 
-Another way to confirm that you are losing CPU cycles because of throttling is to login to your EC2 instance and run the `top` command to check the steal time. If you try to load test your server and your CPU is throttled, then you can watch in real time as the steal time goes up to prevent your process from taking any additional CPU time.
+另一种确认您因节流而丢失 CPU 周期的方法是登录您的 EC2 实例并运行·`top` 命令来检查等待 CPU 的时间百分比（steal time）。 如果您尝试对服务器进行负载测试并且 CPU 受到限制，那么您可以实时观察等待 CPU 的时间百分比（steal time） 的增加，以防止您的进程占用任何额外的 CPU 时间。
 
-## DB Failures
+## 数据库故障
 
-Okay, so if the issue is the throttling of the EC2 instance, removing the throttling should fix the issue, right? Well, we checked our production instances and noticed that they were also having failures even though they weren't being throttled.
+好吧，如果问题是 EC2 实例的节流，移除节流应该可以解决问题，对吗？好吧，我们检查了我们的生产实例，发现它们也有故障，即使它们没有被节流。
 
-On the production instances, we realised that some requests were taking more than 10 seconds and were timing out once it became 2pm.
+在生产实例上，我们意识到一些请求需要超过 10 秒，一旦到了下午 2 点就会超时。
 
-Why is the 2PM time relevant?
+为什么下午 2 点是相关的？
 
-Because the same way that AWS limits the CPU cycles you can use on an EC2 server, they also limit the number of IOPS you have available to your RDS instances.
+因为 AWS 限制了你在 EC2 服务器上可以使用的 CPU 率，他们也限制了你的 RDS 实例的 IOPS 数量。
 
-AWS limits your IOPS at the rate of 3 \* (storage assigned to your EBS volume). When you instantiate an RDS instance, you also need to assign some disk storage to it. By decoupling these two from each other is how AWS manages to upgrade your RDS instance without affecting any of the data.
+AWS 将您的 IOPS 限制为 3 *（分配给您的 EBS 卷的存储）。 实例化 RDS 实例时，还需要为其分配一些磁盘存储。 AWS 如何在不影响任何数据的情况下升级您的 RDS 实例，将这两者相互分离。
 
-We started out with 20GB in our GP2 storage, which gives us 60IOPS. AWS, however, provides a minimum of 100 IOPS.
+我们一开始在 GP2 存储中使用 20GB，这为我们提供了 60IOPS。 但是，AWS 提供至少 100 IOPS。
 
-Every time your RDS instance goes above 100 IOPS, however, you consume burst credits which are specific to DB instances and different from CPU credits for EC2 instances.
+但是，每次您的 RDS 实例超过 100 IOPS 时，您都会消耗特定于数据库实例积分，不同于 EC2 实例的 CPU 突发积分。
 
-The reason users were facing a slow down at around 2PM everyday was because our IOPS would be over 100 throughout the day, which would consume burst credits which would then run out by 2PM, post which we were limited to 100 IOPS.
+用户在每天下午 2 点左右面临速度变慢的原因是因为我们的 IOPS 全天超过 100，这将消耗突发信用，然后在下午 2 点用完，我们被限制为 100 IOPS。
 
-This caused all the timeouts our users were facing! We figured the simplest and cheapest way to fix this would be to increase the storage capacity of our EBS volume. We increased it to 100GB which gave us a baseline of 300 IOPS. We figured this would be enough because our average IOPS over the course of a day had wild fluctuations but seemed to average around this number.
+这导致了我们的用户面临的所有超时！ 我们认为解决此问题的最简单和最便宜的方法是增加 EBS 卷的存储容量。 我们将其增加到 100GB，这为我们提供了 300 IOPS 的基准。 我们认为这已经足够了，因为我们一天中的平均 IOPS 波动很大，但似乎平均在这个数字附近。
 
-We upgraded our EBS volume and waited for the next afternoon – and the exact same issue came up again!
+我们升级了 EBS 卷并等待第二天下午，但是完全相同的问题再次出现！
 
-When viewing our average IOPS, I had picked the 1m interval which didn't give a fair reflection of the average since it showed a lot of spikes. Picking the 1 hour interval showed a significantly higher average of 600 IOPS!
+在查看我们的平均 IOPS 时，我选择了 1 分钟的间隔，因为它显示了很多尖峰，所以并不能公平地反映平均值。 选择 1 小时间隔显示平均 600 IOPS 显着更高！
 
-Upon investigating the IOPS issue a little deeper, I found that the read IOPS were contributing most of the load to the total IOPS.
+在深入研究 IOPS 问题后，我发现读取 IOPS 占总 IOPS 的大部分负载。
 
-As a last resort, we decided to enable Performance Insights on the AWS console for our RDS instance so we could see which queries were eating up most of the IOPS and fix that specific query.
+作为最后的手段，我们决定在 AWS 控制台上为我们的 RDS 实例启用 Performance Insights，以便我们可以查看哪些查询占用了大部分 IOPS 并修复该特定查询。
 
-When we were trying to enable Performance Insights, we found that it wouldn't work for anything less than a `db.t3.medium` which forced us to upgrade to a DB instance with 4GB of RAM.
+当我们尝试启用 Performance Insights 时，我们发现它只适用于 `db.t3.medium`，这迫使我们升级到具有 4GB RAM 的数据库实例。
 
-We upgraded the instance and then restarted the DB server and waited. I kept a close eye on the IOPS metric but it didn't seem to be budging beyond 0-10 IOPS, which I assumed meant that nobody was using the application yet.
+我们升级了实例，然后重新启动了数据库服务器并等待。 我密切关注 IOPS 指标，但它似乎没有超出 0-10 IOPS，我认为这意味着没有人使用该应用程序。
 
-I checked and was told repeatedly that people were using the application and it was working completely fine but I just couldn't understand what was going on. Why was it working? It shouldn't have been working, there were barely any IOPS happening.
+我反复检查并被告知，人们正在使用该应用程序，它的工作完全正常，但我就是不明白发生了什么。为什么它在工作？它不应该工作，几乎没有任何 IOPS 发生。
 
-## Remembering Why RAM Matters
+## 请记住为什么内存很重要
 
-Well, one of the things that I didn't realize was how RAM impacts how many IOPS occur for a database.
+好吧，我没有意识到的一件事是 RAM 如何影响数据库发生的 IOPS。
 
-AWS measures IOPS as the reads and writes to the hard disk itself. It doesn't measure it as reads / writes to the buffer pool maintained by the innoDB engine in MySQL.
+AWS 将 IOPS 测量为对硬盘本身的读取和写入。 它不会将其测量为对 MySQL 中的 innoDB 引擎维护的缓冲池的读/写。
 
-The issue was that the previous DB instance we had used (the `db.t2.micro`) had only 1BG of RAM, which meant the buffer pool size was about 250MB. On the new instance which had 4GB of RAM, it meant that the buffer pool had 2GB to work with.
+问题是我们之前使用的数据库实例（`db.t2.micro`）只有 1BG 的 RAM，这意味着缓冲池大小约为 250MB。 在具有 4GB RAM 的新实例上，这意味着缓冲池有 2GB 可供使用。
 
-The offending query that was causing the high number of IOPS was querying a table of about 210 MB in size. And since it was doing a table scan, it was loading almost the entire table into the buffer pool and then running whatever operations it had to on it.
+导致大量 IOPS 的有问题的查询是查询大小约为 210 MB 的表。 由于它正在执行表扫描，它几乎将整个表加载到缓冲池中，然后运行它必须对其执行的任何操作有影响。
 
-Since the buffer pool was only about 250 MB, once it loaded the big table, it would constantly remove all other data and then it would have to go back to the disk to fetch them, leading to more IOPS.
+由于缓冲池只有 250 MB 左右，一旦加载大表，它会不断删除所有其他数据，然后必须返回磁盘获取它们，从而导致更高的 IOPS。
 
 ![inno_db_engine_architecture](https://www.freecodecamp.org/news/content/images/2022/08/inno_db_engine_architecture.png)
 
-## The Offending Query
+## 有问题的查询
 
-There is still a missing piece to this puzzle. What is this query that is causing 210MB of data to be loaded into memory each time it runs? Sure, we fixed the issue by increasing the RAM, however there was clearly something going wrong here. The table was only going to grow in size and constantly increasing RAM wasn't a good fix.
+这个难题仍然缺少一块。 每次运行时都会将 210MB 的数据加载到内存中的查询是什么？ 当然，我们通过增加 RAM 解决了这个问题，但是这里显然出了点问题。 该表会增加大小，并且不断增加 RAM 并不是一个好的解决方法。
 
-Below is the query that was causing all the issues:
+以下是导致所有问题的查询:
 
-```
+```SQL
 EXPLAIN ANALYZE
 SELECT `oc`.`oc_number` AS `ocNumber` , `roll`.`po_number` AS `poNumber` ,
 `item`.`item_code` AS `itemCode` , `roll`.`roll_length` AS `rollLength` ,
@@ -132,9 +132,9 @@ INNER JOIN `fabric_barcode_items` AS `item` ON `item`.`item_unique_id` = `roll`.
 WHERE BINARY `roll`.`roll_number` = 'dZkzHJ_je8'
 ```
 
-Upon running `EXPLAIN ANALYZE` on it, MySQL provided the following query plan:
+在其上运行 `EXPLAIN ANALYZE` 后，MySQL 提供了以下分析（query plan）:
 
-```
+```SQL
 -> Nested loop inner join  (cost=468792.05 rows=582836) (actual time=0.092..288.104 rows=1 loops=1)
     -> Nested loop inner join  (cost=264799.45 rows=582836) (actual time=0.067..288.079 rows=1 loops=1)
         -> Filter: (cast(roll.roll_number as char charset binary) = 'dZkzHJ_je8')  (cost=60806.85 rows=582836) (actual time=0.053..288.064 rows=1 loops=1)
@@ -143,42 +143,42 @@ Upon running `EXPLAIN ANALYZE` on it, MySQL provided the following query plan:
     -> Single-row index lookup on item using PRIMARY (item_unique_id=roll.item_unique_id_fk)  (cost=0.25 rows=1) (actual time=0.024..0.024 rows=1 loops=1)
 ```
 
-Looking at the query plan, its odd how there is a full table scan on the `roll` table happening each time the query runs. It looks at 582,000 rows each time which is where the performance issues were coming from.
+查看查询计划(query plan)，奇怪的是每次查询运行时都会对 `roll` 表进行全表扫描。 它每次查看 582,000 行，这是性能问题的来源。
 
-This seemed like an issue with poor indexing. So, I went through the tables and viewed the indexes on each one and made sure they were accurate. I tried rewriting the query to filter the `roll` table before running the rest of the query and the performance was even worse.
+这似乎是索引不佳的问题。 因此，我浏览了数据表（tables）并查看了每个表的索引，并确保它们是准确的。 在运行其余查询之前，我尝试重写查询以过滤 `roll` 表，但性能更差。
 
-Finally, on a whim I removed the `BINARY` function call in the query which I had put in to make sure that case sensitivity would not be an issue. The resulting query execution plan was shocking:
+最后，一时兴起，我删除了查询中的 `BINARY` 函数调用，以确保不区分大小写。 由此产生的查询执行计划令人震惊:
 
-```
+```shell
 -> Rows fetched before execution  (cost=0.00 rows=1) (actual time=0.000..0.000 rows=1 loops=1)
 ```
 
-Just a ridiculous amount of execution time was being wasted by that one function call. So, why was that one function call causing all these issues?
+只是一个函数调用浪费了荒谬的执行时间。 那么，为什么一个函数调用会导致所有这些问题呢？
 
-I thought about it and did what every self-respecting software engineer does when faced with a problem they can't figure out. I posted the question on Stack Overflow.
+我想了想，做了每个有自尊的软件工程师在遇到他们无法解决的问题时所做的事情。 我在 Stack Overflow 上发布了这个问题。
 
-[Here's a link to the question](https://stackoverflow.com/questions/71908085/why-does-removing-the-binary-function-call-from-my-sql-query-change-the-query-pl). The answer is that it has to do with column collation.
+[问题的链接](https://stackoverflow.com/questions/71908085/why-does-removing-the-binary-function-call-from-my-sql-query-change-the-query-pl).答案是它与列排序规则有关。
 
-Since I was casting each value in the `roll_number` column in the `roll` table to a binary value, MySQL can't use indexes unless that specific collation is defined on the column in the DDL.
+由于我将 `roll` 表中的 `roll_number` 列中的每个值转换为二进制值，因此 MySQL 不能使用索引，除非在 DDL 中的列上定义了特定的排序规则。
 
-Since the index was useless, it was doing a full table scan and checking the value of each and every row through nested inner joins.
+由于索引没用，它正在执行全表扫描并通过嵌套的内连接检查每一行的值。
 
-Removing the `BINARY` function call was the easiest way to solve the issue. But changing the column collation to use the Latin character set and be case sensitive so the index is built with case sensitivity ensured that we didn't run into issues with barcode collisions occurring.
+删除 `BINARY` 函数调用是解决问题的最简单方法。 但是将列排序规则更改为使用拉丁字符集并区分大小写，因此索引是区分大小写的，确保我们不会遇到条形码冲突发生的问题。
 
-## Challenges With AWS
+## AWS 带来的挑战
 
-There is no doubt that AWS has done a wonderful job of abstracting away the hardware from millions of software engineers. But it has simultaneously made pricing so difficult to understand that nobody really knows how much they're paying until its too late.
+毫无疑问，AWS 在从数百万软件工程师手中抽象，把硬件方面做得非常出色。 但它同时让定价变得如此难以理解，以至于没有人真正知道他们支付了多少，直到为时已晚。
 
-We can't downgrade the EBS volume from 100GB back down to 20GB because AWS won't allow it. We have no need for the extra storage and it doesn't make sense to have it but we're stuck with it.
+我们不能把 EBS 卷从 100GB 降级到 20GB，因为 AWS 不允许这样做。我们不需要额外的存储空间，而且拥有它也没有意义，但我们只能这样做了。
 
-We also can't downgrade from `db.t3.medium` to `db.t3.micro` because we lose access to Performance Insights. Sure, we could recreate Performance Insights because it's essentially built on top of Performance Schema which is a native MySQL feature – but it's so much engineering time which contributes nothing in terms of value to our end customer.
+我们也不能从 `db.t3.medium` 降级到 `db.t3.micro`，因为我们无法使用性能洞察（Performance Insights）。当然，我们可以重新创建 Performance Insights，因为它本质上是建立在 Performance Schema 之上的，而 Performance Schema 是 MySQL 的原生功能，但这需要大量的工程时间，对我们的最终客户没有任何价值。
 
-## In Closing
+## 结语
 
-I love AWS and I love how easy it has made hardware access for millions of developers. But, I can't help but get frustrated at the poor documentation surrounding AWS and how easy it is to shoot yourself in the foot unless you're willing to constantly cough up money.
+我爱 AWS，我爱它使数百万的开发者能够轻松地使用硬件。但是，我不禁对围绕着 AWS 的糟糕的文档感到沮丧，而且除非你愿意不断地掏钱，否则很容易让自己吃亏。
 
-I know that understanding how hardware is being used is a must for software engineers. But it feels like a double whammy when you need to spend so much time understanding the AWS abstraction that should be removing the need to worry about the underlying hardware.
+我知道了解硬件是如何被使用的，是软件工程师的必修课。但是，当你需要花这么多时间去理解 AWS 的抽象时，感觉就像一个双重打击，因为它应该消除对底层硬件的担忧。
 
-AWS has an Aurora DB which seems like a managed database that prevents these kinds of issues from occurring. But sometimes it feels easier to just run your own hardware like [Oxide Computer](https://oxide.computer/) encourages people to do.
+AWS 有一个 Aurora DB，似乎是一个管理数据库，可以防止这类问题的发生。但有时感觉更容易，就像[Oxide Computer](https://oxide.computer/)鼓励人们做的那样，运行自己的硬件。
 
-_Note: You can find this and other articles on my blog [here](https://redixhumayun.github.io/performance/2022/05/27/diagnosing-performance-issues.html)._
+_注：你可以在我的博客 [这里](https://redixhumayun.github.io/performance/2022/05/27/diagnosing-performance-issues.html) 找到这篇文章和其他文章。_

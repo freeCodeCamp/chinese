@@ -1,62 +1,65 @@
 > -  原文地址：[How to Use JavaScript's Map() Method to Solve Breadth-First and Depth-First Search Problems](https://www.freecodecamp.org/news/how-to-use-javascript-map-method-to-make-a-breath-first-and-depth-first-search/)
 > -  原文作者：[Njoku Samson Ebere](https://www.freecodecamp.org/news/author/ebereplenty/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Use JavaScript's Map() Method to Solve Breadth-First and Depth-First Search Problems](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-porapak-apichodilok-346696.jpg)
 
-The JavaScript [`map()` method](https://www.freecodecamp.org/news/array-map-tutorial/) is an [object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object) with a key and value pair. An object's key and value are connected using a colon (:) while the key and value of a map are connected using an arrow (=>).
+JavaScript的[`map()`方法](https://www.freecodecamp.org/news/array-map-tutorial/)是一个包含键值对的[对象](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。对象的键和值通过冒号 (:) 连接，而map是通过箭头符号 (=>)连接。
 
-Here's an example of an object in JavaScript:
+以下是JavaScript中的对象：
 
 ```javascript
 { a: [ 1, 2, 3 ], b: 2, c: 3 }
 ```
 
-A JavaScript Object
+一个JavaScript对象
 
-And here's an example of a map in JavaScript:
+以下是JavaScript中的map：
 
 ```javascript
 { 'a' => [ 1, 2, 3 ], 'b' => 2, 'c' => 3 }
 ```
 
-A JavaScript Map
+一个 JavaScript Map
 
-The `map()` method is a good tool for solving algorithm and data structure problems like graphs, shortest distance, and best route. Many transport companies have used this method to build their application. We will be doing something like that in this tutorial.
+ `map()` 方法是解决如：图、最短距离、最佳路线等算法和数据结构行之有效的方法。许多运输公司都使用这个方法来创建应用，我们将在这篇教程中练习类似的事情。
 
-I have added videos at the end of various sections of this tutorial for those who may prefer visual tutorials.
+为了方便倾向使用视觉资料来学习的读者，我在每个章节之后都添加了视频资料。
 
-## Goal of This Article
+## 本文目标
 
-This tutorial aims to teach you how the `map()` method works and how you can use it when solving Breath-First search and Depth-First search problems.
+本教程的目的是教会你如何使用`map()`方式是解决广度优先和深度优先搜索的算法问题。
 
-By the end, you will have learned the basics of the `map()` method, and you will have seen another perspective on solving algorithm and data structure problems such as graphs, Breadth-First search (BFS), and Depth-First search (DFS).
+通过学习，你将掌握`map()`方法的基础知识，同时也将从另一个角度来观察类似图这样的算法和数据结构问题，以及广度优先搜索 (BFS)和深度优先搜索(DFS)。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## Prerequisites
+## 前提条件
 
-This tutorial assumes that you have already worked with basic Javascript concepts such as strings, arrays, objects, and sets. It may also be helpful to read up about algorithms and data structures.
+本教程假设你了解基本的 Javascript 概念，例如字符串、数组、对象和集合。阅读过有关算法和数据结构的信息也会有所帮助。
 
-Let's hit the road!
+让我们开始吧！
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+<iframe width="583" height="327" src="https://www.youtube.com/embed/LuVfrai8gpI?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="1  Introduction - How To Use JavaScript Map In Solving Breadth-First and Depth-First Search Problems" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## The Problem
+<iframe width="583" height="327" src="https://www.youtube.com/embed/2SKmhCr9Hp4?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="2  Overview of Map" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-Nigeria has 36 states. A tourist can move from one state to another by road, air, and water bodies known as routes. What we want to do is to programmatically:
+<iframe width="583" height="327" src="https://www.youtube.com/embed/VyUntT1sK20?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="3  Overview of Map (Cont)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-1.  Show each state and the other states connected to it in a graph.
-2.  Check if you can connect two (2) states.
+## 问题
 
-So we are given eleven (11) out of Nigeria's thirty-six (36) states to work with:
+尼日利亚有 36 个州。游客可以通过公路、空中和水运（路线routes）从一个州移动到另一个州。我们要做的是以下编程：
+
+1.  用图展示每个州和其他州之间的连接。
+2.  检查两个州之间是否有连接。
+
+我们从尼日利亚的36个州中挑选了11州来进行创建：
 
 ```js
 ENUGU, ABIA, SOKOTO, NIGER, LAGOS, OGUN, BAYELSA, AKWAIBOM, ANAMBRA, IMO, EBONYI
 ```
 
-These are the routes:
+路线如下：
 
 -   ENUGU to LAGOS
 -   ENUGU to NIGER
@@ -69,23 +72,20 @@ These are the routes:
 -   OGUN to BAYELSA
 -   EBONYI to ABIA
 
-Let's use these data to solve the problem!
+我们来使用这些数据解决问题！
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-## How to Solve the Problem
+## 如何解决问题
 
-In the previous section, we saw the problem. Now we'll solve that problem here. I will use [Replit](https://replit.com/) for this tutorial.
+上一章节我们讲解了问题，现在我们来解决问题，在这篇教程中我将使用[Replit](https://replit.com/)。
 
-Replit gives you a well-equipped IDE to quickly write and test programs like the one we are about to write.
+Replit是一个配置完全的IDE，方便你可以快速地编写和检查程序。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+### 如何创建 Map
 
-### How to Set Up the Map
+我们首先要解决的问题是如何展现每一个州和其他州之间的连接。
 
-The first problem we want to solve is to programmatically show each state and the other states connected to it.
-
-Start by defining the eleven (11) states and their routes. Enter the following code:
+我们先定义这11个州和路线，输入以下代码：
 
 ```javascript
 
@@ -105,13 +105,13 @@ const routes = [
 ];
 ```
 
-Create a new `map()` or graph named `connections`:
+创建一个新的 `map()` 也可以称作图，并命名为 `connections`:
 
 ```javascript
 const connections = new Map();
 ```
 
-Next, type the following code:
+接着输入以下代码：
 
 ```javascript
 states.forEach((state) => {
@@ -119,9 +119,9 @@ states.forEach((state) => {
 });
 ```
 
-This code loops through all the **states.** It takes each state and sets it as a key in the `connections` graph with a default value of an empty array (`[]`).
+这段代码迭代所有 **states**。每次迭代，都将当前state作为`connections`图中的键，并设置初始值为空数组 (`[]`)。
 
-If you log `connections` to the console, you will get the following result:
+如果你在控制台打印 `connections` ，会得到以下结果：
 
 ```javascript
 Map(11) {
@@ -139,13 +139,13 @@ Map(11) {
 }
 ```
 
-For now, picture the graph in the output above like in the image below:
+目前为止，上述图对应的图像如下：
 
 ![Screenshot-2022-08-10-at-16.44.32](https://www.freecodecamp.org/news/content/images/2022/08/Screenshot-2022-08-10-at-16.44.32.png)
 
-Graphical Representation of The Given States
+当前州的图像展示
 
-Enter the code below:
+输入以下代码：
 
 ```javascript
 routes.forEach(route => {
@@ -157,13 +157,13 @@ routes.forEach(route => {
 });
 ```
 
-This code adds states to the empty array values of the keys in the previous step. It circles through the routes array and extracts each route.
+上述代码将州添加到空数组，作为前一步键对应的值。代码循环迭代路线（routes）数组，并提取出每一个路线。
 
-The departure state is set to the first item in the route array, while the destination state is the second.
+departure（出发）州为每一个路线数组的第一个值，而destination（目的地）州为每一个路线数组的第二个值。
 
-It then adds the destination state to the array value of the departure state. Finally, the departure state gets included in the array value of the destination state.
+然后将目的地州添加到出发州对应的值数组，最后将出发州添加到目的地州的值数组中。
 
-At this point, if you log `connections` to the console, you will get the following result:
+在控制台打印`connections`，会得到以下结果：
 
 ```javascript
 Map(11) {
@@ -181,17 +181,17 @@ Map(11) {
 }
 ```
 
-This type of graph is undirected. An undirected graph is a type of graph where you can move from the node to the edge(s) and from the edge(s) back to the node. In our case, the node is the departure state, while the edge(s) is the destination state.
+这种类型的图是无向的。在无向图中，你可以从节点（node）移动到边（edge），然后从边移回节点。在我们的例子中，节点是出发州，而边是目的地州。
 
-The following is a pictorial representation of the output above:
+以下图像对此做了展示：
 
 ![Screenshot-2022-08-10-at-16.29.30](https://www.freecodecamp.org/news/content/images/2022/08/Screenshot-2022-08-10-at-16.29.30.png)
 
-An Undirected Graph Representing The Routes
+无向图展示路线
 
-The arrowhead with a black color fill points to the destination state, while the arrowhead with a white color fill points to the departure state.
+黑色箭头指向目的地州，而白色箭头指向出发州。
 
-To make this graph directed, you can use this code instead:
+若需要创建有向图，可以编写以下代码：
 
 ```javascript
 routes.forEach(route => {
@@ -199,7 +199,7 @@ routes.forEach(route => {
 });
 ```
 
-Here is the output below:
+输出如下：
 
 ```javascript
 Map(11) {
@@ -217,15 +217,15 @@ Map(11) {
 }
 ```
 
-The following is a pictorial representation of the output above:
+以下是图像展示：
 
 ![Screenshot-2022-08-10-at-16.06.57](https://www.freecodecamp.org/news/content/images/2022/08/Screenshot-2022-08-10-at-16.06.57.png)
 
-A Directed Graph Representing The Routes
+有向图展示路线
 
-If you find it difficult to understand, study the outputs and compare them with the given routes. The code will become easier as you practice.
+如果你觉得难以理解，仔细观察两段代码的输出结果和路线，你会发现代码变简单了许多。
 
-We have been able to show how these states are connected programmatically. See what the code looks like so far:
+我们已经能够展示这些州是如何以编程方式连接的。看看到目前为止的代码是什么样的：
 
 ```javascript
 
@@ -263,23 +263,23 @@ routes.forEach(route => {
 console.log(connections)
 ```
 
-We are moving to the next part of the problem (to check if you can connect two (2) states.). We will do it in two (2) ways. First, we will explore the breadth-first search algorithm then we will do it using the depth-first search way.
+接下来我们解决下一个问题（检查是否可以连接两个州）。我们将用两种办法来解决，首先使用广度优先搜索算法，然后使用深度优先搜索算法。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+<iframe width="583" height="327" src="https://www.youtube.com/embed/VyUntT1sK20?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="3  Overview of Map (Cont)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### How to Use Breadth-First Search
+### 如何使用广度优先搜索（BFS）
 
-[BFS](https://www.freecodecamp.org/news/breadth-first-search-in-javascript-e655cd824fa4/) is an algorithm used to inspect a tree or graph by exploring the direct children (edges) of a parent (node) before moving to the grandchildren. It continues in that manner till the end of the tree or graph.
+[BFS](https://www.freecodecamp.org/news/breadth-first-search-in-javascript-e655cd824fa4/) 是一种用于检查树或者图的算法，通过探索一个父（节点）的所有直系子（边）之后再探索孙节点，以这样的方式一直持续到树或者图的底部。
 
-For example, in our case, let's say we want to check if there is a possible connection between ENUGU and ABIA.
+例如，在我们的例子中，我们想检查ENUGU和ABIA之间有没有连接。
 
-The BFS will start from Enugu and check all of Enugu's direct routes (LAGOS and NIGER). Since ABIA is not connected to ENUGU directly, the algorithm will move on to check the state(s) attached to LAGOS.
+BFS会从检查Enugu的直线路线(LAGOS和NIGER)开始。因为ABIA并非直接和ENUGU联系的，算法会接着检查和LAGOS相连的州。
 
-Next, the algorithm will inspect the state(s) linked to NIGER. The process will continue until it finds ABIA or meets a dead end. That terminates the program.
+接着，算法会检查和NIGER相连的州，这个过程会一直持续到算法找到ABIA或者走到头。程序就会终止。
 
-BFS uses [a queue](https://www.freecodecamp.org/news/queue-data-structure-definition-and-java-example-code/) data structure. That means that items will be entered from one end and removed from the other end of an array. In our case, the queue will hold all states that have not yet visited. As we continue building the program, you will see it in action.
+BFS使用[队列](https://www.freecodecamp.org/news/queue-data-structure-definition-and-java-example-code/)数据结构。也就是说，项目会在数组的一端被添加，然后在另一端被删除。在我们的例子中，队列会保存所有还未被访问的州，我们会在编程中看到详细行为：
 
-Let's start building the BFS by creating a function named `bfs`:
+我们从创建一个命名为 `bfs`函数开始编写BFS：
 
 ```javascript
 function bfs(departureState, destinationState) {
@@ -287,25 +287,25 @@ function bfs(departureState, destinationState) {
 }
 ```
 
-This function takes two (2) arguments, `departureState`, and `destinationState`.
+该函数接受两个参数： `departureState`和 `destinationState`。
 
-Inside the function, define a `queue` and add the `departureState` in it:
+在函数内部，定义一个 `queue` ，并将 `departureState` 添加进去：
 
 ```javascript
   const queue = [departureState];
 ```
 
-We are adding the `departureState` to the `queue` array since it holds all the nodes yet to be visited.
+我们将 `departureState`添加至`queue`数组，是因为它保存了所有尚未被访问的节点。（译者注：除了起始点以外，广度优先搜索的无向图中所有节点都是自己顶点-边关系的顶点以及其他顶点-边关系中的边，这里queue数组记录的是所有尚未作为顶点被访问的节点，而后文的visited集合记录的是所有作为边已被访问的节点）。
 
-Next, define a new empty `[Set()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)` named `visited`:
+接下来，定义一个空`[Set()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)`，并命名为`visited`:
 
 ```javascript
   const visited = new Set();
 ```
 
-The `visited` variable will keep track of all the states visited just as the name indicates.
+`visited`变量正如其名，将记录所有访问过的州。
 
-Now, we begin the search proper by navigating through the graph starting from the `departureState`. Enter the code below:
+现在我们可以从`departureState`开始我们的导航搜索，输入以下代码：
 
 ```javascript
 while (queue.length > 0) {
@@ -313,25 +313,25 @@ while (queue.length > 0) {
 }
 ```
 
-This loop will run as long as the `queue` is not empty. That means as long as there are still states not yet visited.
+循环将在`queue`非空时一直运行，也就是说只要还有州，就不会停下来。
 
-Remove the `departureState` from the `queue` before visiting it to prevent the code from running into an infinite loop. Use the code below:
+在访问开始之前，将`departureState`从`queue`中删除，以防止无限循环。使用以下代码：
 
 ```javascript
     const state = queue.shift();
 ```
 
-The code above removes each `state` from the front or top of the `queue` array since a queue employs the First-In-First-Out principle. An array inserts items from the back or bottom by default.
+由于队列执行先进先出原则，所以`queue`数组第一个或者顶部的 `state`会优先被移除，并从尾部或者底部插入新的项目。
 
-Retrieve the edges (`destinations`) connected to this node (`state`):
+检索与节点(`state`)相连的边(`destinations`)：
 
 ```javascript
     const destinations = connections.get(state);
 ```
 
-Now that we have access to the children (`destinations`) of the current node (`state`), let's check if any of them is the `destinationState`.
+现在我们可以访问当前节点(`state`)的所有子边(`destinations`)，让我们检查一下，它们是否为`destinationState`：
 
-Loop through the `destinations` using this code:
+使用以下代码，循环迭代`destinations`：
 
 ```javascript
 for (const destination of destinations) {
@@ -339,7 +339,7 @@ for (const destination of destinations) {
 }
 ```
 
-At each point in this loop, check if the `destination` is the `destinationState`. If it is `true`, log a message to the console:
+在每一次循环都检查 `destination`是否为 `destinationState`，如果结果是`true`, 在控制台打印消息：
 
 ```javascript
       if (destination === destinationState) {
@@ -347,8 +347,7 @@ At each point in this loop, check if the `destination` is the `destinationState`
       }
 ```
 
-After that, add the `destination` to the `visited` and `queue` arrays if it is not in the `visited` already:
-
+然后，如果`destination`尚不是`visited`的元素，将 `destination`添加到`visited`和`queue`数组中，
 ```javascript
       if (!visited.has(destination)) {
         visited.add(destination);
@@ -356,9 +355,9 @@ After that, add the `destination` to the `visited` and `queue` arrays if it is n
       }
 ```
 
-The program terminates when all states are in the `visited` array because there will be no state to add to the `queue`.
+所有州都添加到`visited`数组后，程序终止。因为就没有州可以被添加到`queue`。
 
-The `bfs` function now looks like this:
+`bfs`函数如下：
 
 ```javascript
 function bfs(departureState, destinationState) {
@@ -383,13 +382,13 @@ function bfs(departureState, destinationState) {
 }
 ```
 
-To check if there is a connection between two (2) states, say ENUGU and SOKOTO, call the `bfs` function like this:
+检查两个州之间是否有连接，比方说ENUGU和SOKOTO，调用`bfs`函数：
 
 ```javascript
 bfs("ENUGU", "SOKOTO")
 ```
 
-Below is the output:
+以下是输出：
 
 ```javascript
 Map(11) {
@@ -422,21 +421,23 @@ Found => SOKOTO
 Found => SOKOTO
 ```
 
-If what we have done so far is unclear, I suggest you break down the code at different points so that you can see how the program flows.
+假设你不是很理解现在的内容，我建议你在不同节点暂停代码，来观察程序流。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+<iframe width="583" height="327" src="https://www.youtube.com/embed/N8a8XXIihTQ?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="5  Breadth First Search Algorithm on a graph" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-### How to Use Depth-First Search
+<iframe width="583" height="327" src="https://www.youtube.com/embed/MCfnFLMpq9E?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="6  Breadth First Search Algorithm on a graph (CONT)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-[DFS](https://www.freecodecamp.org/news/dfs-for-your-next-tech-giant-interview/) algorithm takes one child of a node at a time. It continues searching down one child at a time of that node until it gets to a dead end before it backtracks and tries another child.
+### 如何使用深度优先搜索
 
-In our case, let's say we want to check if there is a possible connection between ENUGU and ABIA.
+[DFS](https://www.freecodecamp.org/news/dfs-for-your-next-tech-giant-interview/)算法一次只取一个节点的一个子节点。它继续向下搜索该节点的一个子节点，直到走到死胡同，然后再回溯并尝试另一个子节点。
 
-The DFS will start from Enugu and check the first state connected to it (LAGOS). Since LAGOS isn't ABIA, the search will examine the first state tied to LAGOS next. It will continue until it locates ABIA or meets a dead end. Then it will backtrack to check another node.
+在我们的例子中，假设我们需要检查ENUGU和ABIA之间是否有连接。
 
-DFS uses a stack to keep track of the items (state(s) in our case) to be visited. When the stack becomes empty, the process ends. We'll use recursion in writing the code for the DFS algorithm. Let's get to it!
+DFS会从Enugu开始，并检查第一个与之相连的州(LAGOS)。因为LAGOS不是ABIA，搜索会继续检查LAGOS紧密连接的下一个州。搜索会一直持续到找到ABIA或者走到死胡同。然后回溯并尝试另一个节点。
 
-Begin by creating a function named `dfs`. It will take three (3) arguments (`departureState`, `destinationState`, and `visited`):
+DFS使用栈来记录访问过的项目(在我们的例子中就是州)。当栈为空的时候，搜索终止。我们将使用递归来编写DFS算法，让我们开始吧！
+
+首先创建一个名为`dfs`的函数， 该函数将接受三个参数(`departureState`, `destinationState`和 `visited`):
 
 ```js
 
@@ -445,19 +446,19 @@ function dfs(departureState, destinationState, visited = new Set()) {
 }
 ```
 
-The `visited` array will hold the visited states to avoid an infinite loop. So the first thing to be done in the `dfs` function is to add the `departureState` into the `visited` array. Enter this code:
+`visited`集合将保存所有访问过的州，以防止无限循环。所以第一件事是在`dfs`函数，将`departureState`添加到`visited`数组。输入以下代码：
 
 ```js
   visited.add(departureState);
 ```
 
-Next, get the `destinations` of the `departureState`:
+接着，由`departureState`得出`destinations`：
 
 ```js
   const destinations = connections.get(departureState);
 ```
 
-Now that we have the `destinations` of the `departureState`, we want to circle through them. Type the code below:
+在获取`departureState`的`destinations`之后，我们要就此迭代循环，如下：
 
 ```js
   for (let destination of destinations) {
@@ -465,7 +466,7 @@ Now that we have the `destinations` of the `departureState`, we want to circle t
   }
 ```
 
-Inside the loop, check if the current `destination` is the `destinationState`. If it is `true`, display a message in the console. Use the code below:
+在循环中，检查当前`destination`是否为`destinationState`，如果是`true`, 在控制台打印代码：
 
 ```js
     if (destination === destinationState) {
@@ -473,7 +474,7 @@ Inside the loop, check if the current `destination` is the `destinationState`. I
     }
 ```
 
-Next, if the current `destination` is yet to be visited, call the `dfs` function again (recursively) – but this time, use the `destination` as the `departureState`:
+接着，如果`destination`还未被访问，再次调用`dfs`(递归) – 但此时，使用`destination`作为`departureState`的实参：
 
 ```js
     if (!visited.has(destination)) {
@@ -481,9 +482,9 @@ Next, if the current `destination` is yet to be visited, call the `dfs` function
     }
 ```
 
-The `destinationState` remains constant while the `visited` `Set()` is no longer empty. At this point, those destinations in the loop not yet in the visited array go into the stack.
+`destinationState`保持不变，`visited`（访问过的）`Set()` 不再为空数组。此时，位于循环中，但并不在visited集合中的destination将被存储到栈。
 
-The following is what the `dfs` function looks like:
+`dfs`函数如下：
 
 ```js
 
@@ -505,13 +506,13 @@ function dfs(departureState, destinationState, visited = new Set()) {
 }
 ```
 
-To check if there is a connection between two (2) states, say ENUGU and SOKOTO, call the `dfs` function like this:
+检查两个州之间是否连接，如ENUGU和SOKOTO， 调用`dfs`函数：
 
 ```javascript
 dfs("ENUGU", "SOKOTO")
 ```
 
-See output below:
+输出如下：
 
 ```js
 Map(11) {
@@ -544,16 +545,16 @@ Found => SOKOTO
 Found => SOKOTO
 ```
 
-While the output above is the same as the one we got when we ran the bfs function, the process of arriving at this result differs. Try breaking up the code at different points to see the flow of the program.
+虽然上面的输出与我们运行bfs函数时得到的输出相同，但得出此结果的过程有所不同。尝试在不同的点分解代码以查看程序的流程。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+<iframe width="546" height="307" src="https://www.youtube.com/embed/yl8GjfOSNq0?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="7  Depth First Search Algorithm on a graph" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## Conclusion
+## 总结
 
-Data structures and algorithms have become a significant part of software engineering interviews. The `map()` method is a powerful tool in JavaScript that makes it easier to solve such complex tasks as we have seen in this tutorial.
+数据结构和算法逐渐成为软件工程师面试中重要的一环。 `map()` 是一个强大的JavaScript工具，能够帮助我们更容易地解决复杂问题。
 
-We began by creating a graph using the `map()` method. Then we searched for connections between states using the BFS and DFS algorithms.
+我们首先使用 `map()` 方法构建了一个图。 然后我们使用了BFS和DFS算法搜索了两个州之间是否有连接。
 
-You can find my code [here](https://replit.com/@EBEREGIT/MappingWithStates#index.js)
+你可以在[这里](https://replit.com/@EBEREGIT/MappingWithStates#index.js)查看我的代码。
 
-It might feel a bit overwhelming if you are new to algorithms and data structures. But with repeated practice, you will get used to it. So if you found it hard to understand what is going on at first, take a break and come back to it again with a clearer head.
+如果你对算法和数据结构不太熟悉，或许会觉得本教程知识量有点大。但反复练习一定会带来好结果。因此，如果一开始你觉得无法理解，请休息一下，然后以更清晰的头脑再看一遍。

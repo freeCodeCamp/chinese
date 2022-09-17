@@ -1,7 +1,7 @@
-> -  原文地址：[How to Improve AWS Performance Without Spending More Money](https://www.freecodecamp.org/news/improve-aws-performance-without-spending-more-money/)
-> -  原文作者：[Zaid Humayun](https://www.freecodecamp.org/news/author/zaid/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Improve AWS Performance Without Spending More Money](https://www.freecodecamp.org/news/improve-aws-performance-without-spending-more-money/)
+> - 原文作者：[Zaid Humayun](https://www.freecodecamp.org/news/author/zaid/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Improve AWS Performance Without Spending More Money](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-howard-adams-575835.jpg)
 

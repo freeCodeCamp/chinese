@@ -4,7 +4,7 @@
                         Estefania Cassingena Navone
                     
                 ](https://www.freecodecamp.org/news/author/estefaniacn/)
-> -  译者：
+> -  译者：[ZhijieXiong](https://github.com/ZhijieXiong)
 > -  校对者：
 
 ![Python Read JSON File – How to Load JSON from a File and Parse Dumps](https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/Read-JSON-image.png)

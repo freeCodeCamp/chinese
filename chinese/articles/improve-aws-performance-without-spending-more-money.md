@@ -5,43 +5,43 @@
 
 ![How to Improve AWS Performance Without Spending More Money](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-howard-adams-575835.jpg)
 
-Identifying performance issues has always been the holy grail of engineering. You want to be known as the software engineer who's able to diagnose and rectify the performance issue that came up in production. It really adds credibility to your engineering chops.
+识别性能问题一直是工程的圣杯。你希望成为能够诊断和解决生产中出现的性能问题的软件工程师。这确实为你的工程能力增加口碑。
 
-We had an issue at work recently that I thought would be fun to write about. I'll delve into the details of how we went about trying to find the root cause of the issue (which is 90% of the problem usually) and then how we fixed it.
+最近我们在工作中遇到了一个问题，我觉得写这个问题很有意思。我将深入探讨我们如何去尝试找到问题的根源（这通常是问题的 90%），然后我们如何修复它。
 
 ## Where The Problems Started
 
-The problems started with AWS. The application had been humming along smoothly for a while with no issues whatsoever. We decide to run a load test to understand whether a specific API endpoint could handle the load that we expected it to have.
+问题是从 AWS 开始的。该应用程序已经顺利地运行了一段时间，没有任何问题。我们决定运行一个负载测试，以了解一个特定的 API 是否能够处理我们预期的负载。
 
-We downloaded JMeter, tried to figure out how to use it, and then gave up. We got back to it a day later and finally had some idea of how to get it up and running.
+我们下载了 JMeter，试图弄清楚如何使用它，然后放弃了。一天后，我们又回到了这里，终于对如何启动和运行它有了一些想法。
 
-We pointed it to the test server running on AWS and launched 25 threads in a loop to run 8 times and promptly saw about 25% of the requests fail. The average time for the request was ~45 seconds. Not going to lie – this was pretty terrifying.
+我们把它指向在 AWS 上运行的测试服务器，并启动 25 个线程循环运行 8 次，很快就看到约 25% 的请求失败。请求的平均时间是 45 秒。不瞒你说，这是很可怕的。
 
-This scared us because it meant our route was so ridiculously inefficient that it managed to generate a throughput of only about 1.2 requests / second. But we expected it to handle a load of about 4-8 requests / second.
+这让我们很害怕，因为这意味着我们的路由是如此可笑的低效，以至于它只能产生大约 1.2 个请求/秒的吞吐量。但我们预计它可以处理大约 4-8 个请求/秒的负载。
 
-Okay, so what was going on? Why was this route so wildly inefficient?
+好吧，那到底发生了什么？为什么这条路线的效率如此之低？
 
 ## Throttling The CPU
 
-The immediate assumption we made is to point the finger of blame at the company's in-house ERP system that we depend upon for validation. Of course it had to be the ERP, because that meant we wouldn't have to take any responsibility for it since it's a different provider.
+我们立即做出的假设是将问题指向公司内部的 ERP 系统，我们依靠该系统进行验证。当然，这必须是 ERP，因为这意味着我们不需要承担任何责任，因为它是一个不同的供应商。
 
-Well, after pointing JMeter at a local machine and running the same load test, we easily achieved the throughput that we wanted. In fact, we exceeded it by quite a bit. If it was the internal ERP system that was causing the issue, why couldn't it be reproduced on a local machine?
+好吧，在将 JMeter 指向本地机器并运行相同的负载测试后，我们很容易达到了我们想要的吞吐量。事实上，我们超过了它（想要的吞吐量）相当多的数量。如果是内部 ERP 系统造成的问题，为什么不能在本地机器上重现？
 
-I reached out to someone who works at Amazon for help and got pointed in the direction of AWS throttling servers because our CPU load was never exceeding 10% on the EC2 test instance. And this opened up a whole can of worms for me.
+我联系了在 AWS 工作的人寻求帮助，并被指出 AWS 节省服务器费用的方向，因为我们的 CPU 负载在 EC2 测试实例上从未超过 10%。
 
-So, when you are running your application on AWS, what exactly is happening? To be honest, I didn't really understand the internals and I still don't completely, but here's the gist.
+那么，当你在 AWS 上运行你的应用程序时，到底发生了什么？说实话，我并不真正了解内部情况，现在也不完全了解，就是这样的。
 
-You purchase compute time from AWS. What I thought this meant was that they ran our application on a server and we paid for the server time. But, this isn't quite accurate.
+你从 AWS 购买计算时间。我以为这意味着他们在服务器上运行我们的应用程序，我们为服务器时间付费。但是，这并不十分准确。
 
-AWS has this concept of an EC2 Compute Unit (ECU) which is their way of abstracting away having to think about the servers your application is actually running on. If you can think in terms of ECU's, you don't have to worry about the actual physical infrastructure at all.
+AWS 有一个 EC2 计算单元（ECU）的概念，这是他们抽象出的，不必考虑你的应用程序实际运行在什么服务器上。如果你能从 ECU 的角度考虑问题，你就根本不必担心实际的物理基础设施。
 
-AWS later changed the ECU to a virtual CPU (vCPU), but you'll still find lots of references to an ECU on the web.
+AWS 后来将 ECU 改为虚拟 CPU（vCPU），但你仍然可以在网上找到很多关于 ECU 的参考资料。
 
-So, a vCPU is how they describe the computing power of their various instances. We're using a t2.micro EC2 instance for our test server and running two of them for our production server. Our application is mostly an OLTP workload which is read heavy.
+因此，vCPU 是他们描述各种实例的计算能力的方式。 我们为我们的测试服务器使用一个 t2.micro EC2 实例，并为我们的生产服务器运行其中两个实例。 我们的应用程序主要是读取繁重的 OLTP 工作负载。
 
-Since AWS runs multiple applications on a single server separated by a hypervisor, they allocate a specific amount of compute bandwidth, network bandwidth, and storage to your application depending on your choice of instance.
+由于 AWS 在由管理程序分隔的单个服务器上运行多个应用程序，因此它们会根据您选择的实例为您的应用程序分配特定数量的计算带宽、网络带宽和存储。
 
-How AWS manages this for t2 class of instances is through something called Burst Credits.
+AWS 如何为 t2 类实例管理这一点是通过称为 Burst Credits 的。
 
 ## So, How Am I Losing Money On Burst Credits?
 

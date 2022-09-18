@@ -1,6 +1,6 @@
 > -  原文地址：[Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/top-statistics-concepts-to-know-before-getting-into-data-science/)
 > -  原文作者：[Ibrahim Abayomi Ogunbiyi](https://www.freecodecamp.org/news/author/ibrahim/)
-> -  译者：
+> -  译者：Yaxing Li
 > -  校对者：
 
 ![Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/who-s-denilo-3ECPkzvwlBs-unsplash.jpg)

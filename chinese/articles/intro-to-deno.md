@@ -1,7 +1,7 @@
-> -  原文地址：[Intro to Deno – Guide for Beginners](https://www.freecodecamp.org/news/intro-to-deno/)
-> -  原文作者：[Brian Barrow](https://www.freecodecamp.org/news/author/brian/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Intro to Deno – Guide for Beginners](https://www.freecodecamp.org/news/intro-to-deno/)
+> - 原文作者：[Brian Barrow](https://www.freecodecamp.org/news/author/brian/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Intro to Deno – Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Screen-Shot-2022-09-07-at-4.09.00-PM.png)
 
@@ -14,8 +14,6 @@ Dahl had a few things that he regretted doing with Node and wanted to build a ru
 One of the main goals of Deno is to bring server side JavaScript closer to browser JavaScript.
 
 If you've written in both Node and browser JavaScript, then you have surely run into the differences in the APIs used in the respective spaces. Deno aims to have the same APIs on the server that you would use in the browser. We'll take a deeper look at specific examples of this later on.
-
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
 ## Key Features of Deno
 
@@ -31,17 +29,15 @@ Deno by default is secure. This means that unless the script is _specifically_ a
 
 In order to specifically allow for access to these features, you need to pass the respective flag in the CLI command. Here are some of the ones you'll use the most:
 
--   **Network access**: `--allow-net`, you can also specify which URLs the code is allowed to access. For example: `--allow-net=https://api.deepgram.com`
--   **File access**: `--allow-read`
--   **Environment access**: `--allow-env`
+- **Network access**: `--allow-net`, you can also specify which URLs the code is allowed to access. For example: `--allow-net=https://api.deepgram.com`
+- **File access**: `--allow-read`
+- **Environment access**: `--allow-env`
 
 ### Deno's Browser Compatibility
 
 Like I mentioned above, Deno strives to have the same API as the browser. The biggest of these in my opinion is the support of the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
 These days, in most of the JavaScript I write, I use the `fetch` API. Being able to use the same syntax on my server side code makes it a lot easier to be productive and it makes the load of context switching much smaller.
-
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
 ## Package Manager
 
@@ -60,8 +56,6 @@ Deno also uses ES Modules and does not support the `require()` syntax. Again, mo
 Deno ships with a [standard library](https://deno.land/std@0.138.0) that contains functionality that is audited by the Deno team. This makes it really easy to get started using Deno.
 
 There is no need to look to third party packages to do fairly basic things that are needed in server side code. As a developer, it is comforting knowing that the code I use is officially supported and approved by the Deno team.
-
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
 ### Testing module
 

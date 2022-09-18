@@ -5,76 +5,76 @@
 
 ![Intro to Deno – Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Screen-Shot-2022-09-07-at-4.09.00-PM.png)
 
-## What is Deno?
+## 什么是 Deno?
 
-Deno is a new JavaScript runtime. It was built by Ryan Dahl, the creator of Node.js.
+Deno 是一个新的 JavaScript 运行时。它是由 Node.js 的创建者 Ryan Dahl 建立的。
 
-Dahl had a few things that he regretted doing with Node and wanted to build a runtime that could solve those issues. Deno, like Node, is built on the V8 JavaScript engine but was built using Rust instead of C++.
+Dahl 对 Node 的一些做法感到遗憾，他想建立一个能够解决这些问题的运行时。Deno 和 Node 一样，建立在 V8 JavaScript 引擎上，但使用 Rust 而不是 C++构建。
 
-One of the main goals of Deno is to bring server side JavaScript closer to browser JavaScript.
+Deno 的主要目标之一是使服务器端的 JavaScript 更接近浏览器的 JavaScript。
 
-If you've written in both Node and browser JavaScript, then you have surely run into the differences in the APIs used in the respective spaces. Deno aims to have the same APIs on the server that you would use in the browser. We'll take a deeper look at specific examples of this later on.
+如果你在 Node 和浏览器的 JavaScript 中都写过，那么你肯定遇到过各自空间中使用的 API 的差异。Deno 旨在使服务器上的 API 与你在浏览器中使用的 API 相同。我们将在后面深入研究这方面的具体例子。
 
-## Key Features of Deno
+## Deno 的主要功能
 
-### Deno Uses TypeScript
+### Deno 使用 TypeScript
 
-One of the most eye catching features of Deno is that it treats TypeScript as a first class language out of the box. This means you can run or use TypeScript without installing any other external or third party packages. It just works.
+Deno 最吸引人的特点之一是，它把 TypeScript 当作开箱即用的第一类语言。这意味着你可以运行或使用 TypeScript 而无需安装任何其他外部或第三方软件包。它只是工作。
 
-TypeScript is increasingly popular in the JavaScript world, and lots of tools and companies are pushing towards using it. It is cool to see a new progressive technology like TypeScript get more attention, and getting first class status in a big project like Deno is a huge step forward.
+TypeScript 在 JavaScript 世界里越来越受欢迎，很多工具和公司都在推动使用它。看到像 TypeScript 这样的新的进步技术得到更多的关注是非常酷的，在 Deno 这样的大项目中获得一流的地位是一个巨大的进步。
 
-### Deno is Secure by Default
+### Deno 默认是安全的
 
-Deno by default is secure. This means that unless the script is _specifically_ allowed, it cannot access system files, the environment (things like environment variables), or the network.
+Deno 默认是安全的。这意味着，除非脚本被特别允许，否则它不能访问系统文件、环境（如环境变量）或网络。
 
-In order to specifically allow for access to these features, you need to pass the respective flag in the CLI command. Here are some of the ones you'll use the most:
+为了允许访问这些功能，你需要在 CLI 命令中传递相应的标志。以下是一些你最常使用的功能。:
 
-- **Network access**: `--allow-net`, you can also specify which URLs the code is allowed to access. For example: `--allow-net=https://api.deepgram.com`
-- **File access**: `--allow-read`
-- **Environment access**: `--allow-env`
+- **网络访问**: `--allow-net`, 你还可以指定代码允许访问哪些 URL。比如说: `--allow-net=https://api.deepgram.com`
+- **文件访问**: `--allow-read`
+- **环境变量访问**: `--allow-env`
 
-### Deno's Browser Compatibility
+### Deno 的浏览器兼容性
 
-Like I mentioned above, Deno strives to have the same API as the browser. The biggest of these in my opinion is the support of the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+就像我上面提到的，Deno 努力使其拥有与浏览器相同的 API。在我看来，其中最大的是对 [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)的支持。
 
-These days, in most of the JavaScript I write, I use the `fetch` API. Being able to use the same syntax on my server side code makes it a lot easier to be productive and it makes the load of context switching much smaller.
+这些天，在我写的大多数 JavaScript 中，我都使用了 `fetch` API。能够在我的服务器端代码中使用相同的语法，使我的工作效率提高了很多，而且使上下文切换的负荷大大降低。
 
-## Package Manager
+## 包管理
 
-Deno doesn't have a package manager registry. Node uses `npm` in order to load third party packages into your project, but Deno loads modules via URLs.
+Deno 没有一个软件包管理工具。Node 使用 `npm` 来加载第三方软件包到你的项目中，但 Deno 通过 URL 来加载模块。
 
-I was honestly confused at first by this. Having "grown up" with Node and npm it was weird to me to not have some sort of package manager or `package.json` file.
+老实说，我一开始对此感到很困惑。在 Node 和 npm 中长大的我对没有某种包管理器或 `package.json` 文件感到奇怪。
 
-Instead of this centralized registry, Deno allows package developers to host their code wherever they want. If the code is hosted on GitHub, you can register your module on their [hosting service](https://deno.land/x) where it is cached. That makes it easier for developers to find and use the module.
+Deno 允许软件包开发者将他们的代码托管在他们想要的地方，而不是这种集中式的注册表。如果代码托管在 GitHub 上，你可以在他们的 [托管服务](https://deno.land/x) 上注册你的模块，在那里它被缓存。这使得开发人员更容易找到和使用该模块。
 
-## ES Modules
+## ES 模块
 
-Deno also uses ES Modules and does not support the `require()` syntax. Again, most of the JavaScript I write these days uses modern features like this, so it has been nice to not worry about making sure I'm using the correct syntax depending on which environment I'm coding for.
+Deno 也使用 ES 模块，不支持 `require()` 语法。同样，我现在写的大部分 JavaScript 都使用了这样的现代功能，所以不用担心我是否使用了正确的语法，这很好，这取决于我为哪个环境编码。
 
-## Standard Library
+## 标准库
 
-Deno ships with a [standard library](https://deno.land/std@0.138.0) that contains functionality that is audited by the Deno team. This makes it really easy to get started using Deno.
+Deno 带有一个 [标准库](https://deno.land/std@0.138.0)，其中包含 Deno 团队审核过的功能。这使得开始使用 Deno 变得非常容易。
 
-There is no need to look to third party packages to do fairly basic things that are needed in server side code. As a developer, it is comforting knowing that the code I use is officially supported and approved by the Deno team.
+没有必要去寻找第三方软件包来做服务器端代码中需要的相当基本的事情。作为一个开发者，知道我使用的代码是由 Deno 团队正式支持和批准的，这让我很欣慰。
 
-### Testing module
+### 测试模块
 
-One of the modules included in the standard library is the [testing module](https://deno.land/std@0.109.0/testing). This module makes writing tests easier in Deno and will make them more consistent across projects. T
+包含在标准库中的一个模块是 [测试模块](https://deno.land/std@0.109.0/testing)。这个模块使得在 Deno 中编写测试更加容易，并且会使它们在不同的项目中更加一致。
 
-his might not be a plus for everyone, especially if some have strong opinions on testing libraries. I really like it though. As Deno continues to grow, consistency across projects will make maintaining code and switching projects much easier.
+这可能不是每个人都喜欢的，特别是如果有些人对测试库有强烈的意见。但我真的很喜欢它。随着 Deno 的不断发展，各项目间的一致性将使维护代码和切换项目更加容易。
 
-## Deno vs Node
+## Deno 与 Node 的对比
 
-The biggest question surrounding Deno is how it compares to Node.
+围绕 Deno 的最大问题是它与 Node 的比较。
 
-Deno clearly offers some advantages over Node. Being secure by default is definitely an attractive feature, and developers will see the out of the box support for TypeScript as a big win.
+与 Node 相比，Deno 显然具有一些优势。默认情况下是安全的，这无疑是一个有吸引力的功能，而开发者会把对 TypeScript 的开箱即用的支持视为一个巨大的胜利。
 
-On the other hand, Node has a very rich community with an established ecosystem and third party packages that make it easier to get up and running. With [the announcement that Deno will support _most_ npm packages](https://deno.com/blog/v1.25#experimental-npm-support) I can see people moving over to Deno sooner rather than later.
+另一方面，Node 有一个非常丰富的社区，有一个成熟的生态系统和第三方软件包，使它更容易启动和运行。随着[Deno 宣布将支持大多数 npm 包](https://deno.com/blog/v1.25#experimental-npm-support)，我可以看到人们很快就会转向 Deno。
 
-Deno also recently released [Deno Deploy](https://deno.com/deploy) to public beta. This will allow users to rapidly deploy JavaScript code at the edge. This service might give the Deno company an edge (pun intended) over time and grow the user-base.
+Deno 最近还发布了 [Deno Deploy](https://deno.com/deploy) 公测版。 这将允许用户在边缘快速部署 JavaScript 代码。 随着时间的推移，这项服务可能会给 Deno 公司带来优势并扩大用户群。
 
-## Conclusion
+## 总结
 
-The experience I've had with Deno over the last several months has been a lot of fun. I've enjoyed working with it and am excited to see what the future brings for it.
+在过去的几个月中，我与 Deno 的合作经历非常有趣。我很喜欢和它一起工作，也很高兴看到它的未来。
 
-Over the next few weeks I'll be writing several posts diving deeper into the Deno world.
+在接下来的几周里，我将写几篇文章，深入探讨 Deno 的世界。

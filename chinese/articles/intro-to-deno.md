@@ -9,7 +9,7 @@
 
 Deno 是一个新的 JavaScript 运行时。它是由 Node.js 的创建者 Ryan Dahl 建立的。
 
-Dahl 对 Node 的一些做法感到遗憾，他想建立一个能够解决这些问题的运行时。Deno 和 Node 一样，建立在 V8 JavaScript 引擎上，但使用 Rust 而不是 C++构建。
+Dahl 对 Node 的一些做法感到遗憾，他想建立一个能够解决这些问题的运行时。Deno 和 Node 一样，建立在 V8 JavaScript 引擎上，但使用 Rust 而不是 C++ 构建。
 
 Deno 的主要目标之一是使服务器端的 JavaScript 更接近浏览器的 JavaScript。
 
@@ -69,7 +69,7 @@ Deno 带有一个 [标准库](https://deno.land/std@0.138.0)，其中包含 Deno
 
 与 Node 相比，Deno 显然具有一些优势。默认情况下是安全的，这无疑是一个有吸引力的功能，而开发者会把对 TypeScript 的开箱即用的支持视为一个巨大的胜利。
 
-另一方面，Node 有一个非常丰富的社区，有一个成熟的生态系统和第三方软件包，使它更容易启动和运行。随着[Deno 宣布将支持大多数 npm 包](https://deno.com/blog/v1.25#experimental-npm-support)，我可以看到人们很快就会转向 Deno。
+另一方面，Node 有一个非常丰富的社区，有一个成熟的生态系统和第三方软件包，使它更容易启动和运行。随着 [Deno 宣布将支持大多数 npm 包](https://deno.com/blog/v1.25#experimental-npm-support)，我可以看到人们很快就会转向 Deno。
 
 Deno 最近还发布了 [Deno Deploy](https://deno.com/deploy) 公测版。 这将允许用户在边缘快速部署 JavaScript 代码。 随着时间的推移，这项服务可能会给 Deno 公司带来优势并扩大用户群。
 

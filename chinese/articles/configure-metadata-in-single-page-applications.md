@@ -1,6 +1,6 @@
 > -  原文地址：[How to Configure Metadata for a Single-Page Application](https://www.freecodecamp.org/news/configure-metadata-in-single-page-applications/)
 > -  原文作者：[Scott Gary](https://www.freecodecamp.org/news/author/scott-gary/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Configure Metadata for a Single-Page Application](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/meta-data-for-spa-seo.jpg)

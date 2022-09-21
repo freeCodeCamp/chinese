@@ -1,172 +1,169 @@
 > -  原文地址：[How to Deploy Your Node.js Application for Free with Render](https://www.freecodecamp.org/news/how-to-deploy-nodejs-application-with-render/)
 > -  原文作者：[Yogesh Chavan](https://www.freecodecamp.org/news/author/yogesh/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Deploy Your Node.js Application for Free with Render](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/pexels-pixabay-163235--1-.jpg)
 
-For years, Heroku has been an excellent platform to host your Full Stack applications. freeCodeCamp made heavy use of Heroku early on – as have countless open source projects.
+长久以来，Heroku都是托管全栈应用的优秀平台。freeCodeCamp早期大量使用Heroku，其他各式各样的开源项目也是如此。
 
-But that may change, as Heroku is bringing its generous free tier to an end.
+但由于Heroku决定停止免费提供服务，这一现象可能会发生改变。
 
-You may have received email from Heroku informing you that, starting November 28, 2022, you will not be able to host any app for free on the platform, and that you will now need to purchase paid plan.
+你可能已经收到了Heroku的邮件，通知你从2022年11月28日开始，在该平台托管应用不再免费，你可以购买付费计划。
 
 ![no_free_heroku](https://www.freecodecamp.org/news/content/images/2022/08/no_free_heroku.png)
 
-If you want to host static websites or webapps for free, you might use [Netlify](https://www.netlify.com/) as I explained in [this article](https://www.freecodecamp.org/news/how-to-deploy-react-router-based-app-to-netlify/) but for backend apps. This said, there are not many free platforms that provide the same feel and ease of deployment as Heroku.
+如果你想免费托管静态页面或者web应用可以使用[Netlify](https://www.netlify.com/)，具体操作可以[查看这篇文章](https://www.freecodecamp.org/news/how-to-deploy-react-router-based-app-to-netlify/)，但对于后端应用来说，并不存在太多如Heroku一样部署体验比较好的免费网站。
 
-So in this article, we'll learn how to deploy your Node.js application with Express server on [Render](https://render.com/). It's a free alternative to Heroku with a similar easy deployment process.
+在这篇文章中，我们将学习如何使用[Render](https://render.com/)来部署搭配Express服务器的Node.js应用。 它的部署过程和Hero一样简单，并且免费。
 
-So let's get started.
+让我们开始吧。
 
-## What to Do Before Deploying Your Application
+## 在部署应用之前需要做什么？
 
-As you might know from your experience using Heroku, every application deployed runs on a specific port which Heroku assigns randomly. You can access it using the `process.env.PORT` variable.
+根据使用Heroku的经验来看，每一个应用都部署在一个由Hero随机分配的端点，可以使用`process.env.PORT`变量访问。
 
-The same is true with the Render platform.
+使用Render平台也是一样的。
 
-So you need to make sure that, instead of providing a hardcoded port value for starting your Express server, you use the `process.env.PORT` variable like this:
+所以你必须确保自己不是通过硬编码端点值来开启Express服务器，而是使用`process.env.PORT`变量:
 
 ```js
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3030;
 
-// your code
+// 你的代码
 
 app.listen(PORT, () => {
   console.log(`server started on port ${PORT}`);
 });
 ```
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
+## **如果使用Render部署一个Github仓库**
 
-## **How to Deploy an App to Render from a GitHub Repository**
+改好端点之后，就可以开始部署你的应用了。
 
-Now, once you've made the port-related change, it's time to deploy your application.
+我准备好了[这个GitHub仓库](https://github.com/myogeshchavan97/github-repos-nodejs-api)来使用Render部署。这个Github仓库展示了一个排名前几位的仓库清单，以及每一个仓库获得的星星数量（以JSON的格式）。
 
-I already have [this GitHub repository](https://github.com/myogeshchavan97/github-repos-nodejs-api) that I will be deploying to Render. This GitHub repository code just displays the list of top repositories and the numbers of stars for each repository in JSON format.
+让我们开始吧！
 
-So let's get started.
-
-[Render](https://render.com/) provides various ways to sign up as shown below:
+[Render](https://render.com/)提供如下图各种注册方式：
 
 ![sign_up_render](https://www.freecodecamp.org/news/content/images/2022/08/sign_up_render.png)
 
-Once signed up and logged in to your account, you will see a dashboard like this:
+一旦注册并登陆账号之后，你会看到控制面板：
 
 ![dashboard](https://www.freecodecamp.org/news/content/images/2022/08/dashboard.png)
 
-To deploy a Node.js application, click on the `New Web Service` button under the `Web Services` option.
+点击`Web Services`选项卡下的 `New Web Service`按钮来部署Node.js应用。
 
-You can also click on the `New +` button displayed in the header just before your profile picture and select `Web Service` option.
+你也可以通过点击网页头部你头像旁边的 `New +` 按钮来选择 `Web Service`选择卡。
 
-Once clicked, you will see the following screen:
+点击之后，会看到以下画面：
 
 ![new_web_service](https://www.freecodecamp.org/news/content/images/2022/08/new_web_service.png)
 
-Click on the `Connect account` button displayed on the right side under the GitHub menu. Once clicked, you will see the following screen:
+点击Github菜单下方的`Connect account`按钮，会看到以下画面： 
 
 ![install_render](https://www.freecodecamp.org/news/content/images/2022/08/install_render.png)
 
-Click on the `Configure` link and you can give permission to select all your GitHub repositories or only selected repositories.
+点击`Configure`链接，就可以允许Render选取你所有或者选择的Github仓库。
 
-I like to give access to only selected repositories which I currently need to deploy. So I selected the `Only select repositories` option.
+我希望只访问选择的仓库，也就是我需要部署的。所以我选择`Only select repositories`选项。
 
-Next, click on the `Select repositories` button displayed below the option and select the GitHub repository which you want to deploy.
+然后，点击在选择卡下方的`Select repositories`按钮，选择你想要部署的仓库。
 
 ![connect_github](https://www.freecodecamp.org/news/content/images/2022/08/connect_github.png)
 
-Once selected, you will see the following screen displaying the selected repository.
+选择完毕后，你会看到如下画面：
 
 ![selected_repository](https://www.freecodecamp.org/news/content/images/2022/08/selected_repository.png)
 
-Click on the green `Install` button to give access to the selected repository to the Render website.
+点击绿色按钮`Install`，使得Render有权访问你选择的仓库。
 
-Once clicked, you will be redirected to your dashboard where you will see your selected repository as shown below:
+点击完毕后，你会被重定向到控制台，看到如下画面：
 
 ![connected_repository](https://www.freecodecamp.org/news/content/images/2022/08/connected_repository.png)
 
-Now, click on the `Connect` button and you will see the following screen:
+现在，点击`Connect`按钮，看到如下画面：
 
 ![deploy_details](https://www.freecodecamp.org/news/content/images/2022/08/deploy_details.png)
 
-Here, for the `Name` field, enter the a short and simple name to identify your website.
+在`Name`框中，输入一个简短的名字来标识你的网站。
 
-**Note:** keep the `Name` value simple because it will become your application URL once the application is deployed. So if I enter `github-repos` as the value for the `Name`, my application URL will become [`https://github-repos.onrender.com`](https://github-repos.onrender.com).
+**注意:** 请保持`Name`值的简单，因为部署完毕后，它将成为应用的URL。 所以如果我将`github-repos`设置为`Name`的值，我的应用URL会成为[`https://github-repos.onrender.com`](https://github-repos.onrender.com)。
 
-So make sure to enter a short and meaningful value for `Name`.
+所以请填写一个简单有意义的`Name`值。
 
-Enter the details as shown below:
+如图填写剩下的部分：
 
 ![details](https://www.freecodecamp.org/news/content/images/2022/08/details.png)
 
-For `Build Command` enter `yarn` as the value which is equivalent to the `yarn install` command. Yarn is a package manager similar to npm but faster than npm.
+在`Build Command`中填写`yarn`就等同于`yarn install`命令。Yarn是一个类似于npm的包管理工具，但是比npm要快。
 
-And for the `Start Command` enter `node index.js` as the value, if your entry file is `index.js`.
+如果你的入口文件是 `index.js`，在`Start Command`中填写`node index.js`。
 
-After entering all the details, scroll down and you will see the `Plans` section where your free plan will be automatically selected. If not selected, you need to select it because we're deploying the application for free.
+填写完所有细节之后，向下滚动页面，会看到`Plans`区域，自动勾选的是免费计划。如果没有被勾选，请勾选好，因为我们的目的是免费部署应用。
 
-If you scroll down a bit more, you will see an `Advanced` button.
+再向下滑动页面会看到`Advanced`按钮。
 
 ![advanced_options](https://www.freecodecamp.org/news/content/images/2022/08/advanced_options.png)
 
-If your application is using any environment variables, you can enter them in the `Advanced` settings as shown below. You can also add your `.env` files so you don't need to enter them manually one by one.
+如果你的应用使用了环境变量，你可以在`Advanced`设置中输入。也可以在这里添加 `.env`文件，这样就不用你手动一个一个地添加。
 
 ![env_vars-1](https://www.freecodecamp.org/news/content/images/2022/08/env_vars-1.png)
 
-Note that, the `Auto-Deploy` field has default value of `Yes` – so once you push your code changes to GitHub repository, they will be automatically deployed to Render.
+注意`Auto-Deploy`的默认值是`Yes` – 所以一旦你向Github仓库推送了更新，它们就会被自动部署到Render。
 
-If you don't want to auto-deploy your changes on every code change pushed to your GitHub repository, you can select the `No` value from the `Auto-Deploy` dropdown.
+如果你并不想每次更改仓库的时候都自动部署，你可以在 `Auto-Deploy`下拉菜单中选择`No`。
 
-Now, you can click on the the `Create Web Service` button to start the deployment process.
+现在，点击`Create Web Service`按钮来开始部署过程。
 
 ![10-1](https://www.freecodecamp.org/news/content/images/2022/08/10-1.png)
 
-Wait for a while until the deployment is going on. Sometimes, you might need to refresh the page if you keep seeing the "in progress" going on for long time.
+部署可能需要等待一段时间，有时候如果页面卡在了"in progress"阶段，可以尝试刷新一下页面。
 
-Once the deployment is completed, you will see your application is deployed `Live` as shown below:
+一旦部署完成，你可以看到如图，应用被部署，有一个`Live` 小标：
 
 ![11](https://www.freecodecamp.org/news/content/images/2022/08/11.png)
 
-You can click on the deployed application URL which is displayed at the top as shown in the above screenshot. In my case, the application URL is [https://github-repos.onrender.com/](https://github-repos.onrender.com/).
+你可以点击在顶部的应用URL，在我的例子中，这个URL是[https://github-repos.onrender.com/](https://github-repos.onrender.com/)。
 
-When you're deploying the application for the first time, you might see a `Page is not working` error when you try to access your deployed site.
+如果是首次部署应用，可能在访问网站的时候会遇到`Page is not working`报错。
 
-Wait for a little while and keep refreshing the page using `Ctrl + R` or `Cmd + R(Mac)`. Sometimes the Render platform takes some time to start the application as we're using a free service with limited hardware.
+等待一段时间，并且使用`Ctrl + R`或`Cmd + R(Mac)`来刷新页面。因为免费服务的硬件有限，所以Render平台需要一些时间来启动一个项目。
 
-Once deployed, you will see your deployed application as shown below.
+部署成功后，可以如下图一样看到你的应用：
 
 ![deployed_live](https://www.freecodecamp.org/news/content/images/2022/08/deployed_live.png)
 
-**Tip:** To see the JSON as it's formatted above, you can install the [JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en) Chrome Extension.
+**提示:** 想要JSON有格式地显示，你需要安装Chrome插件：[JSON Formatter](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)。
 
-As you might know, when using Heroku with a free account, your application goes to sleep mode after every 30 minutes if there are no requests coming in for the application. This means it takes some time to load the application when the next request comes.  
+你或许知道，在使用Heroku的免费账户的时候，没如果没有新的请求进来，你的应用会在30分钟后进入到休眠模式。也就是如果再次请求需要花上一点时间。
   
-Similarly, in case of Render, your application will go in sleep mode after 15 minutes if there are no requests for the application.
+同样的，使用Render的话，如果没有新的请求，应用会在15分钟后进入休眠模式。
 
-ADVERTISEMENT window.addEventListener('load', () => { if (notAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({}); });
 
-### **Thanks for reading!**
+### **感谢阅读!**
 
-You can find the complete GitHub source code for the deployed application in [this repository](https://github.com/myogeshchavan97/github-repos-nodejs-api).
+你可以在[这个仓库中](https://github.com/myogeshchavan97/github-repos-nodejs-api)找到完整的源代码。
 
-****You can see the live demo of the deployed application [here](https://github-repos.onrender.com/).****
+****你可以在[这里](https://github-repos.onrender.com/)查看实时demo****。
 
-If you want to learn Redux in detail from scratch and build 3 apps along with the [complete food ordering app](https://www.youtube.com/watch?v=2zaPDfCKAvM), check out my [Mastering Redux](https://master-redux.yogeshchavan.dev/) course.
+如果你想从零开始学Redux，并且完成三个应用，以及[一个完整的食物点单应用](https://www.youtube.com/watch?v=2zaPDfCKAvM)，可以查看我的[Mastering Redux](https://master-redux.yogeshchavan.dev/)课程。
 
-In the course, you will learn:
+在这篇课程中，你将学习：
 
--   Basic and advanced Redux
--   How to manage the complex state of array and objects
--   How to use multiple reducers to manage complex redux state
--   How to debug a Redux application
--   How to use Redux in React using the react-redux library to make your app reactive.
--   How to use the redux-thunk library to handle async API calls
--   Build 3 different apps using Redux
+-   基础和高阶的Redux
+-   如何管理复杂的数据和对象状态
+-   如何使用多个reducer来管理复杂的redux状态
+-   如果排除Redux应用的错误
+-   如果通过使用react-redux库来在React中使用Redux并使得你的应用是响应式的
+-   如何使用redux-thunk库来处理异步API调用
+-   使用Redux编写三个不同的app
 
-and much more.
+以及更多。
 
-Finally, we'll build a complete [food ordering app](https://www.youtube.com/watch?v=2zaPDfCKAvM) from scratch with stripe integration for accepting payments and deploy it to production.
+最后我们将从零开始搭建一个[食物点单应用](https://www.youtube.com/watch?v=2zaPDfCKAvM) ，包括付费模块和应用的部署。
 
-****Want to stay up to date with regular content regarding JavaScript, React, Node.js? [Follow me on LinkedIn](https://www.linkedin.com/in/yogesh-chavan97/).****
+****想要了解JavaScript、React或者Node.js最新的消息吗？ 请在[LinkedIn上关注我](https://www.linkedin.com/in/yogesh-chavan97/)。****

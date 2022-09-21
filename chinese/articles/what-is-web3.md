@@ -1,6 +1,6 @@
 > -  原文地址：[What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/)
 > -  原文作者：[Nader Dabit](https://www.freecodecamp.org/news/author/nader/)
-> -  译者：
+> -  译者：casey0808
 > -  校对者：
 
 ![What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/web3-future-of-web.jpg)

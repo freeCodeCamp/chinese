@@ -3,17 +3,17 @@
 > -  译者：casey0808
 > -  校对者：
 
-![What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/web3-future-of-web.jpg)
+![什么是Web3？解读未来的去中心化网络](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/web3-future-of-web.jpg)
 
-If you’re reading this then you are a participant in the modern web. The web we are experiencing today is much different than what it was just 10 years ago. How has the web evolved, and more importantly – where is it going next? Also, why do any of these things matter?
+如果你读到这篇文章，那么你已经是当代互联网世界的一员了。我们现在使用的网络和10年前大不相同。所以，互联网是怎么演化的，更重要的是———接下来它会如何发展？为什么我们需要在意这些问题呢？
 
-If history has taught us anything, these changes will matter a lot.
+历史教会我们，这些变化都会是重要的。
 
-In this article, I will lay out how the web has evolved, where's it going next, and why this matters.
+我将在这篇文章里讲述互联网的演化、发展走向，以及为什么了解这些事情很重要。
 
-Think about how the internet affects your life on a daily basis. Consider how society has changed as a result of the internet. Social media platforms. Mobile apps. And now the internet is going through another paradigm shift as we speak.
+想象一下网络是如何与你的日常生活息息相关。网络如何改变了社会，还有社交媒体平台、手机应用.....而现在，网络正在经历又一个模式的转换。
 
-## **The Evolution of the Web**
+## **互联网的演化**
 
 The web has evolved a lot over the years, and the applications of it today are almost unrecognizable from its most [early days](https://en.wikipedia.org/wiki/History_of_the_Internet). The evolution of the web is often partitioned into three separate stages: Web 1.0, Web 2.0, and Web 3.0.
 

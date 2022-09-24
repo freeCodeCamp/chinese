@@ -1,64 +1,54 @@
 > -  原文地址：[How to Get Headings and IDs for Your freeCodeCamp Blog Post Table of Contents](https://www.freecodecamp.org/news/how-to-get-headings-and-ids-for-your-freecodecamp-blog-posts/)
 > -  原文作者：[Scott Spence](https://www.freecodecamp.org/news/author/scott/)
-> -  译者：
+> -  译者：gyf11069
 > -  校对者：
 
-![How to Get Headings and IDs for Your freeCodeCamp Blog Post Table of Contents](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/brett-jordan-M9NVqELEtHU-unsplash-1.jpg)
+![如何为您的 freeCodeCamp 博客文章获取标题和 ID](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/brett-jordan-M9NVqELEtHU-unsplash-1.jpg)
 
-In this post we're going to get all the headings from a freeCodeCamp blog post to make a Table of Contents (ToC) in Ghost CMS.
+在这篇文章中，我们将从 freeCodeCamp 博客文章中获取所有标题，以在 Ghost CMS 中制作目录(ToC)。
 
-I recently published [quite a large post](/news/build-your-developer-portfolio-from-scratch-with-sveltekit-and-graphcms/) here on freeCodeCamp and needed to add a table of contents to the post.
+我最近在 freeCodeCamp 上发表了一篇 [相当长的文章](/news/build-your-developer-portfolio-from-scratch-with-sveltekit-and-graphcms/) 需要在文章中添加一个目录。
 
-There's a really good supporting post written by Colby Fayock on how to do this. It details the process really clearly.
+科尔比法约克 写了一篇关于如何做到这一点的非常好的支持文章。它非常详细地说明了该过程。
 
-You can check out the video and really comprehensive guide on that for all the details:
+您可以查看视频和关于所有详细信息的全面指南：
 
-[
+[如何在您的博客文章或文章中添加目录](https://www.freecodecamp.org/news/how-to-add-a-table-of-contents-to-your-blog-post-or-article)
 
-How to Add a Table of Contents to Your Blog Post or Article
+科尔比 的文章详细说明了您需要目录 (ToC) 的原因以及如何使用 Ghost 编辑器（用于在 Ghost CMS 中撰写本文的编辑器）创建目录。
 
-Providing a table of contents \[https://en.wikipedia.org/wiki/Table\_of\_contents\] helps preview and prioritize content when writing lengthier articles. But notevery platform makes it easy to add one. How can we implement one when we lackfirst class tooling? Want to skip ahead of the “what” and “wh…
+问题是，我需要为其添加链接的文章中有 33 个标题。滚动浏览 10,000 字文档以获取标题然后滚动到顶部以将其添加到目录中的想法让我想知道是否有更好的方法来做到这一点！
 
-![](https://www.freecodecamp.org/news/favicon.png)Colby FayockfreeCodeCamp.org
+### 目录:
 
-![](https://www.freecodecamp.org/news/content/images/2020/02/table-of-contents.jpg)
+-   [JavaScript 来拯救!](#javascript-to-the-rescue-)
+-   [获取元素属性](#get-the-element-properties)
+-   [获取元素 id 和 `innerText`](#get-the-element-id-and-innertext)
+-   [筛选 `localName`](#filter-on-the-localname)
+-   [结论](#conclusion)
 
-](/news/how-to-add-a-table-of-contents-to-your-blog-post-or-article/)
+## JavaScript 来拯救!
 
-Colby's post details why you would want a Table of Contents (ToC) and how to create one using the Ghost editor (the editor used for writing this post in the Ghost CMS).
-
-The thing is, I had 33 headings in the post I needed to add links for. And the thought of scrolling through a 10,000 word document to get a heading then scroll to the top to add it to the table of contents made me wonder if there was a better way to do it!
-
-### Table of contents:
-
--   [JavaScript to the rescue!](#javascript-to-the-rescue-)
--   [Get the element properties](#get-the-element-properties)
--   [Get the element id and `innerText`](#get-the-element-id-and-innertext)
--   [Filter on the `localName`](#filter-on-the-localname)
--   [Conclusion](#conclusion)
-
-## JavaScript to the rescue!
-
-With this thought in mind I did a quick search and found a [Stack Overflow](https://stackoverflow.com/a/7115083/1138354) answer that I could use. Here's the snippet:
+考虑到这个想法，我快速搜索并找到了一个可以使用的 [Stack Overflow](https://stackoverflow.com/a/7115083/1138354) 回答，代码如下:
 
 ```js
 var ids = document.querySelectorAll('[id]');
 
 Array.prototype.forEach.call( ids, function( el, i ) {
-  // "el" is your element
-  console.log( el.id ); // log the ID
+  // "el" 是你的元素
+  console.log( el.id ); // 打印 ID
 });
 ```
 
-So, let's hop on over to the browser now and try that out.
+所以，让我们现在跳转到浏览器并尝试一下。
 
-I'll go over to that published post now in the browser and open the developer tools. (In Chrome and Edge it's F12 to open the dev tools.) Then I'll paste in that example code into the console and hit enter, here's the output:
+我现在将在浏览器中查看已发布的帖子并打开开发人员工具。（在 Chrome 和 Edge 中，打开开发工具的快捷键是 F12。）然后我将该示例代码粘贴到控制台并按 Enter，这是输出：
 
-![The browser window with the dev tools open and the code snippet run showing all the element ids on the page](https://www.freecodecamp.org/news/content/images/2022/01/image-42.png)
+![带有开发工具的浏览器窗口打开，代码片段运行显示页面上的所有元素 ID](https://www.freecodecamp.org/news/content/images/2022/01/image-42.png)
 
-## Get the element properties
+## 获取元素属性
 
-Not bad but I want the heading title as well, so one quick way to see the properties of the elements is to wrap the `el` in some curly braces:
+效果不错，但我也想要标题，因此查看元素属性的一种快速方法是将它们`el`包括在一些花括号中：
 
 ```js
 let ids = document.querySelectorAll('[id]');
@@ -68,19 +58,19 @@ Array.prototype.forEach.call(ids, (el) => {
 });
 ```
 
-You'll notice I've cleaned up the function a bit, replacing the inline function with an arrow function and replaced `var` with `let` so the syntax is more modern.
+你会注意到我已经对函数进行了一些清理，将内联函数替换为箭头函数，并替换`var`为`let`因此语法更时髦。
 
-Running that snippet in the browser now gives me the object for each element:
+现在在浏览器中运行该片段会为我提供每个元素的对象：
 
-![The browser page with the dev tools open on the console showing the individual elements as objects](https://www.freecodecamp.org/news/content/images/2022/01/image-43.png)
+![带有开发工具的浏览器页面在控制台上打开，将各个元素显示为对象](https://www.freecodecamp.org/news/content/images/2022/01/image-43.png)
 
-I can then expand out one of the elements now to get all the properties relating to it. From here I'm going to want to get the `id` (which I already know was there) and also the `innerText` which is the heading title:
+然后，我现在可以扩展其中一个元素以获取与其相关的所有属性。从这里我想要得到`id`（我已经知道在哪）以及`innerText`头标和标题：
 
-![The browser page with the dev tools open on the console with one of the element objects expanded to show all the properties](https://www.freecodecamp.org/news/content/images/2022/01/image-45.png)
+![带有开发工具的浏览器页面在控制台上打开，其中一个元素对象展开以显示所有属性](https://www.freecodecamp.org/news/content/images/2022/01/image-45.png)
 
-## Get the element `id` and `innerText`
+## 获取元素 id 和 `innerText`
 
-Let's add the `innerText` element to the snippet we're working with and see what that looks like now. Here's the snippet:
+让我们将`innerText`元素添加到我们正在使用的代码片段中，看看现在是什么样子。代码如下：
 
 ```js
 let ids = document.querySelectorAll('[id]');
@@ -91,17 +81,17 @@ Array.prototype.forEach.call(ids, (el) => {
 });
 ```
 
-And here's the output we get from that:
+这是我们从中得到的输出：
 
-![The browser page with the dev tools open on the console showing all the innerText from every element with an id](https://www.freecodecamp.org/news/content/images/2022/01/image-46.png)
+![带有开发工具的浏览器页面在控制台上打开，显示来自每个具有 id 的元素的所有 innerText](https://www.freecodecamp.org/news/content/images/2022/01/image-46.png)
 
-Ok, so that is really noisy as it's showing the `innerText` of every element in the document with a lot of irrelevant information on there. All we're really interested in is the title of the heading and it's id.
+好的，干扰信息真的有点多，因为它显示`innerText`了文档中每个元素的内容，其中包含很多不相关的信息。我们真正感兴趣的是头标的标题和它的 id。
 
-## Filter on the `localName`
+## 筛选`localName`
 
-All the headings I use in the post are `h2` headings so I want a way to filter that. So from the `{el}` properties I'll need to grab the `localName` which denotes the type of the element `h2` in the case here.
+我在文章中使用的所有标题都是`h2`标题，所以我想要一种过滤方法。所以我需要从本案例中的`{el}`属性中获取表示`h2`元素类型的`localName`
 
-So let's use an `if` function to see if the `localName` includes `h2` and if it does log that out. I'll also use a template literal to add the anchor id `#` to the beginning of the id:
+因此，让我们使用一个`if`函数来查看`localName`是否包含`h2`以及是否将其注销。我还将使用模板文字将锚 id `#`添加到 id 的开头：
 
 ```js
 let ids = document.querySelectorAll('[id]');
@@ -114,18 +104,19 @@ Array.prototype.forEach.call(ids, (el) => {
 });
 ```
 
-Let's take a look at the output now:
+现在让我们看一下输出：
 
-![The browser page with the dev tools open on the console with the if function to filter on h2 elements](https://www.freecodecamp.org/news/content/images/2022/01/image-47.png)
+![带有开发工具的浏览器页面在控制台上打开，使用 if 函数过滤 h2 元素](https://www.freecodecamp.org/news/content/images/2022/01/image-47.png)
 
-Much nicer!
 
-Now I can use that output to start making my ToC!
+好看多了！
 
-## Conclusion
+现在我可以使用该输出开始制作我的 ToC（文章目录）!
 
-We took what could be quite an extended process and turned it into a handy snippet we can use in the browser console every time we need to create a ToC for our blog posts.
+## 结论
 
-That's it, hope you found it useful! 🙏
+我们采用了一个相当扩展的过程，并将其变成了一个便于使用的代码片段，我们可以在每次需要为我们的博客文章创建 ToC （目录）时在浏览器控制台中使用。
 
-If you like the content you can check out much more from me on my [blog](https://scottspence.com/) and you can follow me on [Twitter](https://twitter.com/spences10).
+就是这样，希望你发现它有用！ 🙏
+
+如果您喜欢这些内容，可以在我的 [博客](https://scottspence.com/) 也可以在 [推特](https://twitter.com/spences10) 上关注我。

@@ -1,178 +1,178 @@
-> -  原文地址：[Git Reset Origin – How to Reset a Local Branch to Remote Tracking Branch](https://www.freecodecamp.org/news/git-reset-origin-how-to-reset-a-local-branch-to-remote-tracking-branch/)
-> -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Git Reset Origin – How to Reset a Local Branch to Remote Tracking Branch](https://www.freecodecamp.org/news/git-reset-origin-how-to-reset-a-local-branch-to-remote-tracking-branch/)
+> - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Git Reset Origin – How to Reset a Local Branch to Remote Tracking Branch](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/tanner-van-dera-oaQ2mTeaP7o-unsplash.jpg)
 
-Git is a free and open-source version control system. It is the most popular version control system in use today.
+Git 是一个开源免费的版本控制系统。它是当今最流行的版本控制系统。
 
-Git keeps track of the changes made to a project over time. This allows multiple developers to collaborate and work on the same project in parallel, no matter where they are in the world.
+Git 可以跟踪一个项目在时间内的变化。这使得多个开发者可以在同一个项目上进行协作和并行工作，无论他们在世界何处。
 
-It lets developers view the history of the project and see who made what changes and why those changes were made in the first place. Also, with Git, you can revert to an older version of the code if needed.
+它可以让开发者查看项目的历史，了解谁做了什么修改，以及为什么要做这些修改。另外，有了 Git，你可以在需要时恢复到旧版本的代码。
 
-Essentially, Git ensures that developers are all on the same page and know what is going on in the project.
+本质上，Git 确保开发人员都在同一个交流频道上，并且知道项目中发生了什么。
 
-When working on a project, one of the challenges you may face is trying to synchronize your work - specifically, syncing local and remote branches.
+当在一个项目上工作时，你可能面临的挑战之一是试图同步你的工作。具体来说，同步本地和远程分支。
 
-In this article, you will learn how to reset and exactly match a local Git branch to a remote branch.
+在这篇文章中，你将学习如何重置并准确匹配本地 Git 分支和远程分支。
 
-Here is what we will cover:
+以下是我们涵盖的内容:
 
-1.  [What is a branch in Git?](#intro)
-    1.  [What's the difference between local, remote, and remote-tracking branches?](#difference)
-2.  [How to reset a local Git branch to remote?](#reset)
-    1.  [Save the current state of your local branch](#save)
-    2.  [Do a `git checkout`](#checkout)
-    3.  [Fetch origin](#fetch)
-    4.  [Reset local repository](#reset-local)
-    5.  [Clean up any untracked changes](#clean)
-3.  [Conclusion](#conclusion)
+1. [什么是 Git 中的分支?](#intro)
+    1. [本地、远程和远程跟踪分支之间有什么区别？](#difference)
+2. [如何将本地 Git 分支重置为远程分支？](#reset)
+    1. [保存你的本地分支机构的当前状态](#save)
+    2. [执行 `git checkout`](#checkout)
+    3. [获取 origin](#fetch)
+    4. [重置本地存储库](#reset-local)
+    5. [清理任何未被追踪的变化](#clean)
+3. [总结](#conclusion)
 
-## What is A Branch in Git? Git Branches in a Nutshell for Beginners
+## 什么是 Git 中的分支？
 
-Branching is a core aspect of version control and an important concept to learn.
+分支（Branching ）是版本控制的一个核心方面，也是一个需要学习的重要概念。
 
-Because of branching, developers are able to collaborate in a more flexible way. Branching makes the everyday development process smoother and more efficient.
+因为有了分支，开发者能够以更灵活的方式进行协作。分支使日常开发过程更加顺畅和高效。
 
-Branching is a way to manage different versions of your code, and acts as a pointer to a snapshot of your changes.
+分支是管理不同版本代码的一种方式，它就像一个指向变化快照的指针。
 
-When you first create a Git repository for your project, at that exact same time, the **main branch** is also created.
+当你第一次为你的项目创建一个 Git 仓库时，在同一时间，**主分支（main branch）**也被创建。
 
-The main branch is the primary and default branch for your project. It represents the bug-free, stable, and usable version of your code that is ready to be released and shared with the public. It is the main codebase.
+主分支是项目的主要和默认分支。它代表着你的代码的无错误、稳定和可用的版本，可以随时发布并与公众分享。它是主代码库。
 
-But what happens when you want to add a new feature to your project?
+但是，当你想给你的项目添加一个新的功能时，会发生什么？
 
-Before adding it, you need to test it out and ensure that it doesn’t introduce new bugs or interfere with the existing code.
+在添加之前，你需要对它进行测试，确保它不会引入新的错误或干扰现有的代码。
 
-There needs to be a way of working on the new feature without affecting the codebase.
+需要有一种方法在不影响代码库的情况下处理新功能。
 
-And this is where branching comes in handy.
+这就是分支派上用场的地方。
 
-Branches are isolated spaces to experiment and test new code without affecting the code in the main branch.
+分支是实验和测试新代码的隔离空间，不会影响主分支的代码。
 
-You can create a new branch and make the changes you want. If you are happy with the changes, you can add them to the main branch by _merging_ them. If you are not, you can delete that branch without messing with the main code in the project.
+你可以创建一个新的分支，做你想做的改动。如果你对这些改动感到满意，你可以通过合并把它们添加到主分支中。如果不满意，可以删除该分支，而不影响项目中的主代码。
 
-Branches also allow developers to work on different features at the same time without interfering with each other’s work.
+分支还允许开发者在同一时间处理不同的功能，而不会干扰彼此的工作。
 
-To learn more about branches in Git, check out [this video](https://www.youtube.com/watch?v=e2IbNHi4uCI) that explains how they work, and bookmark [this article](https://www.freecodecamp.org/news/how-to-use-branches-in-git/) that provides a cheat sheet on how to use them.
+要了解更多关于 Git 分支的信息，请看 [这段视频](https://www.youtube.com/watch?v=e2IbNHi4uCI) 解释它们是如何工作的，并收藏 [这篇文章](https://www.freecodecamp.org/news/how-to-use-branches-in-git/) 提供的关于如何使用它们的简明手册。
 
-### Local VS Remote VS Remote Tracking Branches in Git - What's the Difference?
+### 本地 VS 远程 VS 远程跟踪 Git 中的分支 - 有什么区别？
 
-A **local branch** is a branch that is accessible only on your local machine and exists there in isolation. From here, you can add files and commit any changes you make. Those changes will be saved locally and will only be visible to you and available on your local physical machine.
+**本地分支**是只能在您的本地机器上访问的分支，并且是独立存在的。从这里，您可以添加文件并提交您所做的任何更改。 这些更改将保存在本地，并且仅对您可见并且在您的本地物理机上可用。
 
-Other developers will not be able to look at your work and the changes you made.
+其他开发者将无法查看你的工作和你所做的修改。
 
-You can create a local branch named `my_branch` using the following command:
+你可以用以下命令创建一个名为 `my_branch` 的本地分支:
 
 ```bash
 git branch my_branch
 ```
 
-And to list all of your local branches, you use the `git branch` command.
+而要列出所有的本地分支，你可以使用`git branch`命令。
 
-To collaborate with other developers on the same project and for them to view any changes you make, you need to push changes from your local branch to a remote repository.
+为了与同一项目的其他开发者合作，并让他们查看你所做的任何修改，你需要从本地分支推送修改到远程仓库。
 
-This leads us to **remote branches**.
+这就引出了**远程分支（remote branches）**。
 
-A remote branch refers to a branch that exists in a remote repository.
+远程分支是指存在于远程仓库的一个分支。
 
-A remote repository, also referred to as remote, will typically be a repository hosted somewhere on the Internet, in a remote location such as on GitHub servers. The default name of a remote repository is `origin`.
+远程仓库，也被称为远程，通常是指托管在互联网上某个地方的仓库，如 GitHub 服务器上。远程仓库的默认名称是 `origin`。
 
-Now, a **remote-tracking branch** refers to a local reference of the state of the remote branch. By default, branches have no connection to one another. That said, you can tell a local branch to track a remote one.
+现在，一个**远程跟踪的分支（remote-tracking branch）**指的是对远程分支状态的本地引用。默认情况下，分支之间没有任何联系。也就是说，你可以告诉一个本地分支去跟踪（track）一个远程分支。
 
 ## How to Reset A Local Git Branch to Remote?
 
-You may have been working on your local branch, making various changes and modifications to a project, and you concluded that those changes you made are no longer needed.
+你可能一直在你的本地分支上工作，对一个项目做了各种修改，而你认为你所做的那些修改不再需要了。
 
-You want to remove them and reset the branch to the remote branch.
+你想删除它们，并将该分支重置为远程分支。
 
-On top of that, another developer may have made changes and pushed them to the remote branch, so you need to fetch those latest changes from the remote repository to be up to date.
+除此之外，另一个开发者可能已经做了修改并推送到了远程分支，所以你需要从远程仓库获取这些最新的修改，以获得最新的代码。
 
-The steps you need to take to achieve this are the following:
+要做到这一点，你需要采取以下步骤:
 
--   Save the current state of your local branch (optional).
--   Fetch the latest version of the code from the remote.
--   Reset the local branch.
--   Clean up files (optional).
+- 保存本地分支的当前状态（可选）。
+- 从远程获取（fetch）最新版本的代码。
+- 重置本地分支。
+- 清理文件（可选）。
 
-### Save the Current State of your Local Branch
+### 保存你的本地分支的当前状态
 
-Before starting, you may want to save the state of your current branch in another branch.
+在开始之前，你可能想在另一个分支中保存当前分支的状态。
 
-When resetting a local Git branch to remote, you will lose the changes you made locally.
+当把本地的 Git 分支重设为远程分支时，你会失去在本地所做的修改。
 
-This step is optional, and you may choose to do it just in case something goes wrong or you want to go back to that work again in the future.
+这一步是可选的，你可以选择这样做，以防出错或将来想再次回到该代码。
 
-To save the work, use the following commands:
+要保存代码，请使用以下命令:
 
 ```bash
 git commit -a -m "I am saving my work"
 git branch backup_work
 ```
 
-Your work now is saved to the branch named `backup_work`.
+你的工作现在被保存到名为 `backup_work` 的分支。
 
-### Do A `git checkout`
+### 执行 `git checkout`
 
-Typically, there will be a local remote-tracking branch with the same name as the remote one that you want to reset to, such as `main`.
+通常情况下，会有一个本地远程跟踪分支，其名称与你想重置的远程分支相同，如`main`。
 
-Use the following command to checkout the local remote main branch:
+使用下面的命令来检查本地远程主分支:
 
 ```bash
 git checkout main
 ```
 
-If you are using a different name for this branch, replace `main` with the name you are using.
+如果你为这个分支使用不同的名字，请用你使用别的名字替换`main`。
 
-### Fetch origin
+### 获取 origin
 
-To fetch the remote repository, and the latest state and version of the code in the remote repository, enter the following command:
+要获取远程版本库，以及远程版本库中代码的最新状态和版本，请输入以下命令:
 
 ```bash
 git fetch origin
 ```
 
-`origin` is an alias created by Git and specifies the remote URL of the remote repository. Usually, Git automatically assumes the remote repository’s name is `origin`.
+`origin`是一个由 Git 创建的别名，用来指定远程仓库的远程 URL。通常情况下，Git 会自动设置远程仓库的名称为 `origin`。
 
-If you have a different remote name, replace `origin` with the name you are using.
+如果你有一个不同的远程名称，请将`origin`替换为你正在使用的名称。
 
-### Reset Local Repository
+### 重置本地代码库
 
-Now, reset the local `main` branch to the remote repository using the following command:
+现在，用下面的命令将本地的`main`分支重置到远程版本库:
 
 ```bash
 git reset --hard origin/main
 ```
 
-### Clean Up Any Untracked Changes
+### 清理任何未跟踪的更改
 
-This step is optional.
+这个步骤是可选的。
 
-After using the above commands, you may end up with some untracked files.
+在使用上述命令后，你可能最终会有一些未被追踪(untracked)的文件。
 
-Use the following command to clean up any untracked changes:
+使用下面的命令来清理任何未被追踪的变化:
 
 ```bash
 git clean -xdf
 ```
 
-Let's break the `-xdf` flag down and explain what each part does:
+让我们把`-xdf` 参数分开来讲解，解释每一部分的作用。:
 
--   The `-x` flag removes ignored files.
--   The `-d` flag removes untracked folders.
--   The `-f` flag removes untracked files.
+- 参数 `-x`  删除被忽略的文件
+- 参数 `-d`  移除未跟踪的文件夹。
+- 参数 `-f`  删除未跟踪的文件。
 
-## Conclusion
+## 总结
 
-And there you have it – you now have reset your local branch to remote.
+就这样，你现在已经把你的本地分支重置为远程分支。
 
-Hopefully, you found this article helpful.
+希望这篇文章对你有帮助。
 
-To learn more about Git, check out the following free resources:
+要了解更多关于 Git 的信息，请查看以下免费资源:
 
--   [Git and GitHub for Beginners - Crash Course](https://www.youtube.com/watch?v=RGOj5yH7evk)
--   [Git for Professionals Tutorial - Tools & Concepts for Mastering Version Control with Git](https://www.youtube.com/watch?v=Uszj_k0DGsg)
--   [Advanced Git Tutorial - Interactive Rebase, Cherry-Picking, Reflog, Submodules and more](https://www.youtube.com/watch?v=qsTthZi23VE)
+- [Git 和 GitHub 初学者 - 快速入门](https://www.youtube.com/watch?v=RGOj5yH7evk)
+- [专业人士的 Git 教程 - 掌握 Git 版本控制的工具和概念](https://www.youtube.com/watch?v=Uszj_k0DGsg)
+- [高级 Git 教程 - 交互式 Rebase、Cherry-Picking、Reflog、子模块等](https://www.youtube.com/watch?v=qsTthZi23VE)
 
-Thank you for reading and happy coding :)
+谢谢你的阅读，祝你编码愉快 :)

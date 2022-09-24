@@ -1,356 +1,356 @@
 > -  原文地址：[What is Data Analysis?](https://www.freecodecamp.org/news/what-is-data-analysis/)
 > -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
+> -  译者：Celqaz
 > -  校对者：
 
-![What is Data Analysis?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/luke-chesser-JKUTrJ4vK00-unsplash.jpg)
+![什么是数据分析?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/luke-chesser-JKUTrJ4vK00-unsplash.jpg)
 
-Data are everywhere nowadays. And with each passing year, the amount of data we are producing will only continue to increase.
+如今，数据无处不在。随着时间流逝，我们产生的数据总量也与日俱增。
 
-There is a large amount of data available, but what do we do with all that data? How is it all used? And what does all that data mean?
+目前虽有大量的可用数据，但是我们应该怎么怎么处理这些数据？如何使用他们？这些数据又意味着什么？
 
-It’s not much use if we just collect and store data in a spreadsheet or database and don't look at it, explor it, or research it.
+如果我们只是在电子表格或数据库中收集和存储数据，而不去观察它、探索它、研究它，那么数据就没有意义。
 
-Data analysts use tools and processes to derive meaning from data. They are responsible for collecting, manipulating, investigating, analyzing, gathering insights, and gaining knowledge from it.
+数据分析师使用工具和流程去挖掘数据的意义。他们负责数据的收集、处理、调查、分析，得到洞察并获取新知。
 
-This is one of the reasons data analysts are very high in demand: they play an integral role in business and science.
+这也是对数据分析师存在大量需求的原因之一：他们在商业和科学中发挥着不可或缺的作用。
 
-In this article, I will first go over what data analysis means as a term and explain why it is so important.
+在这篇文章中，我会首先介绍数据分析作为一个术语的含义，并解释它为什么如此重要。
 
-I will also break down the data analysis process and list some of the necessary skills required for conducting data analysis.
+我也会拆解数据分析的过程，并列出进行数据分析所需的一些必要技能。
 
-Here is an overview of what we will cover:
+以下是我们将涉及内容的概览：
 
-1.  [What is data?](#data-intro)
-2.  [What is data analysis?](#data-analysis-intro)
-3.  [Why is data analysis important?](#importance)
-    1.  [Effective customer targeting](#targeting)
-    2.  [Measure success and performance](#performance)
-    3.  [Problem solving](#problem-solving)
-4.  [An overview of the data analysis process](#overview)
-    1.  [Step 1: recognising and identifying the questions that need answering](#step-1)
-    2.  [Step 2: collecting raw data](#step-2)
-    3.  [Step 3: cleaning the data](#step-3)
-    4.  [Step 4: analyzing the data](#step-4)
-    5.  [Step 5: sharing the results](#step-5)
-5.  [What skills are required for data analysis?](#skills)
-    1.  [A good grasp of maths and statistics](#maths)
-    2.  [Knowledge of SQL and Relational Databases](#sql)
-    3.  [Knowledge of a programming language](#programming-language)
-    4.  [Knowledge of data visualization tools](#data-viz)
-    5.  [Knowledge of Excel](#excel)
+1.  [什么是数据?](#data-intro)
+2.  [什么是数据分析?](#data-analysis-intro)
+3.  [数据分析为何重要?](#importance)
+    1.  [精准定位客户](#targeting)
+    2.  [衡量成功和表现](#performance)
+    3.  [解决问题](#problem-solving)
+4.  [数据分析流程概览](#overview)
+    1.  [步骤一：识别并明确需要解答的问题](#step-1)
+    2.  [步骤二：收集原始数据](#step-2)
+    3.  [步骤三：清洗数据](#step-3)
+    4.  [步骤四：分析数据](#step-4)
+    5.  [步骤五：分享结果](#step-5)
+5.  [数据分析需要什么技能?](#skills)
+    1.  [熟练掌握数学和统计学知识](#maths)
+    2.  [了解SQL和关系型数据库](#sql)
+    3.  [掌握一门编程语言](#programming-language)
+    4.  [熟悉数据可视化工具](#data-viz)
+    5.  [了解Excel](#excel)
 
-## What Is Data? Meaning and Definition of Data
+## 什么是数据？数据的含义和定义
 
-Data refers to collections of facts and individual pieces of information.
+数据是指事实和碎片信息的集合。
 
-Data is vital for decision-making, planning, and even telling a story.
+数据对决策、计划甚至讲故事都至关重要。
 
-There are two broad and general types of data:
+有两种广泛而普遍的数据类型：
 
--   Qualitative data
--   Quantitative data
+-   定性数据
+-   定量数据
 
-**Qualitative data** is data expressed in non-numerical characters.
+**定性数据** 是指用非数字字符表示的数据。
 
-It is expressed as images, videos, text documents, or audio.
+它表现为图片、视频、文稿或音频。
 
-This type of data can’t be measured or counted.
+这一类型的数据不能被测量或计数。
 
-It is used to determine how people feel about something – it’s about people's feelings, motivations, opinions, perceptions and involves bias.
+它用于确定人们对于某事的感受——它关于人们的感受、动机、观点、看法，并包含偏见。
 
-It is descriptive and aims to answer questions such as ‘Why’, ‘How’, and ‘What’.
+它是描述性的，旨在回答诸如”为什么“、”如何“和”是什么“等问题。
 
-Qualitative data is gathered from observations, surveys, or user interviews.
+定性数据通过观察、调查和对受访者的访问收集。
 
-**Quantitative data** is expressed in numerical characters.
+**定性数据** 用数字字符表示。
 
-This type of data is countable, measurable, and comparable.
+这一类型的数据可计数、可测量、可比较。
 
-It is about amounts of numbers and involves things such as quantity and the average of numbers.
+它关于数字的数量，涉及诸如总量和平均数。
 
-It aims to answer questions such as ‘How much, ‘How many’, ‘How often’, ‘and 'How long’.
+它旨在回答诸如“多少”、“多频繁”、“多久”的问题。
 
-The act of collecting, analyzing, and interpreting quantitative data is known as performing statistical analysis.
+收集、分析、解释定量数据的行为，被称为统计分析。
 
-Statistical analysis helps uncover underlying patterns and trends in data.
+统计分析有助于发掘数据中的潜在模式和趋势。
 
-## What Is Data Analysis? A Definition For Beginners
+## 什么是数据分析？给初学者的定义
 
-Data analysis is the act of turning raw, messy data into useful insights by cleaning the data up, transforming it, manipulating it, and inspecting it.
+数据分析是通过对数据的清理、转换、操纵和检查，以将原始、混乱的数据转化为有用认知的行为。
 
-The insights gathered from the data are then presented visually in the form of charts, graphs, or dashboards.
+从数据中获得的认知，会以图表、图形或仪表盘的形式，直观地展现出来。
 
-The insights discovered can help aid the company’s or organization’s growth. Decision-makers will be able to come to an actionable conclusion and make the right business decisions.
+被提取出的认知可以帮助企业或组织成长。决策者将能够得出可行的结论，并做出正确的商业决策。
 
-Extracting knowledge from raw data will help the company/organization take steps towards achieving greater customer reach, improving performance, and increasing profit.
+从原始数据中获取知识，将帮助企业或组织推行触达更广泛客户群体的举措，在提升业绩的同时，增加利润。
 
-At its core, data analysis is about identifying and predicting trends and figuring out patterns, correlations, and relationships in the available data, and finding solutions to complex problems.
+数据分析的核心是识别和预测趋势，从现有数据中找出模式、相关性和联系，并为复杂问题找到解决方案。
 
-## Why Is Data Analysis Important?
+## 数据分析为何重要？
 
-Data equals knowledge.
+数据即知识。
 
-This means that data analysis is integral for every business.
+这意味着，数据对各行各业都不可或缺。
 
-It can be useful and greatly beneficial for every department, whether it's administration, accounting, logistics, marketing, design, or engineering, to name a few.
+即使对行业内的每个部门来说，数据也是大有裨益的，不论是行政部、财务部、后勤部、营销部、设计部或工程部，不一而足。
 
-Below I will explain why exploring data and giving data context and meaning is really important.
+下面，我将解释为何探寻数据、并为数据赋予背景和意义至关重要。
 
-### Data Analysis Improves Customer Targeting
+### 数据分析提升目标客户定位
 
-By analyzing data, you understand your competitors, and you will be able to match your product/service to the current market needs.
+通过分析数据，了解你的竞争对手，你将使自己的产品或服务与当前市场需求相匹配。
 
-It also helps you determine the appropriate audience and demographic best suited to your product or service.
+数据分析还能帮你确定产品或服务的最佳受众群体。
 
-This way, you will be able to come up with an effective pricing strategy to make sure that your product/service will be profitable.
+这样，你将能通过精准的定价策略，确保你的产品或服务实现盈利。
 
-You will also be able to create more targeted campaigns and know what methods and forms of advertising and content to use to reach your audience directly and effectively.
+你也能开展更具针对性的活动，并了解将广告和内容直接有效触达受众的方法和形式。
 
-Knowing the right audience for your product or service will transform your whole strategy. It will become more customer-oriented and customized to fit customers' needs.
+了解你产品或服务的真正受众将改变你的整个战略，它将变得更以客户为导向，并根据客户需求定制。
 
-Essentially, with the appropriate information and tools, you will be able to figure out how your product or service can be of value and high quality.
+本质上讲，有了适当的信息和工具，你将明白怎样交付既有价值，又有质量的产品或服务。
 
-You'll also be able to make sure that your product or service helps solve a problem for your customers.
+你也确保自己的产品或服务能为客户解决一个痛点。
 
-This is especially important in the product development phases since it cuts down on expenses and saves time.
+这在产品开发阶段尤其重要，因为它既减少开支，又节省时间。
 
-### Data Analysis Measures Success and Performance
+### 数据分析衡量成功和表现
 
-By analyzing data, you can measure how well your product/service performs in the market compared to others.
+通过分析数据，你可以衡量自身产品或服务与市场其他竞品的相对表现。
 
-You are able to identify the stronger areas that have seen the most success and desired results. And you will be able to identify weaker areas that are facing problems.
+你既能识别出自身具有成功且理想结果的优势领域，也能确定存在问题的弱势领域。
 
-Additionally, you can predict what areas could possibly face problems before the problem actually occurs. This way, you can take action and prevent the problem from happening.
+此外，你还可以预估问题可能发生的领域并防患于未然。通过采取行动，防止问题的发生。
 
-Analyzing data will give you a better idea of what you should focus more on and what you should focus less on going forward.
+通过分析数据，你会明白在未来应该在何事上深度聚焦，在何事上抓大放小。
 
-By creating performance maps, you can then go on to set goals and identify potential opportunities.
+通过创建表现图，你可以设定目标并确定潜在机会。
 
-### Data Analysis Can Aid Problem Solving
+### 数据分析可以帮助解决问题
 
-By performing data analysis on relevant, correct, and accurate data, you will have a better understanding of the right choices you need to make and how to make more informed and wiser decisions.
+通过对关联、正确且准确的数据进行分析，你将对需要做出的正确选择及如何做出更明智的决定都有更好的理解。
 
-Data analysis means having better insights, which helps improve decision-making and leads to solving problems.
+数据分析意味着拥有更好的洞察力，这有助于改善决策，并导向问题的解决。
 
-All the above will help a business grow.
+以上这些都会帮助业务成长。
 
-Not analyzing data, or having insufficient data, could be one of the reasons why your business is not growing.
+缺少数据分析或数据不足，可能是你的业务停滞的原因之一。
 
-If that is the case, performing data analysis will help you come up with a more effective strategy for the future.
+如果是这种情况，数据分析将有助于你在未来提出更有效的战略。
 
-And if your business is growing, analyzing data will help it grow even further.
+如果你的业务正在成长，数据分析将让它如虎添翼。
 
-It will help reach its full potential and meet different goals – such as boosting customer retention, finding new customers, or providing a smoother and more pleasant customer experience.
+数据分析将助力业务潜力发挥，满足不同的目标：如提升客户留存率、开发新客户或提供更顺畅、愉悦的客户体验。
 
-## An Overview Of The Data Analysis Process
+## 数据分析流程概览
 
-### Step 1: Recognising and Identifying The Questions That Need Answering
+### 步骤一：识别并明确需要解答的问题
 
-The first step in the data analysis process is setting a clear objective.
+确立一个明确目标是数据分析过程的第一步。
 
-Before setting out to gather a large amount of data, it is important to think of why you are actually performing the data analysis in the first place.
+在着手收集大量的数据之前，首先要想清楚为什么要进行数据分析。
 
-What problem are you trying to solve?
+你希望解决什么问题？
 
-What is the purpose of this data analysis?
+此次数据分析的目的是什么？
 
-What are you trying to do?
+你想做什么尝试？
 
-What do you want to achieve?
+你想要达成什么？
 
-What is the end goal?
+最终目标是什么？
 
-What do you want to gain from the analysis?
+你想从数据分析中获得什么？
 
-Why do you even need data analysis?
+你真的需要数据分析吗？
 
-At this stage, it is paramount to have an insight and understanding of your business goals.
+在这个阶段，对自身商业目标的洞察和理解是至关重要的。
 
-Start by defining the right questions you want to answer and the immediate and long-term business goals.
+首先，明确你需要答案的正确问题，以及近期和长期的业务目标。
 
-Identify what is needed for the analysis, what kind of data you would need, what data you want to track and measure, and think of a specific problem you want to solve.
+接着，确定数据分析需要什么、需要什么样的数据、需要跟踪和测量什么数据，并思考你想解决的具体问题。
 
-### Step 2: Collecting Raw Data
+### 步骤二：收集原始数据
 
-The next step is to identify what type of data you want to collect – whether it will be qualitative (non-numerical, descriptive ) or quantitative (numerical).
+下一步要确定收集数据的类型--它是定性的（非数字、描述性的）还是定量的（数字的）。
 
-The way you go about collecting the data and the sources you gather from will depend on whether it is qualitative or quantitative.
+收集数据的方式和来源，取决于数据是定性的还是定量的。
 
-Some of the ways you could collect relevant and suitable data are:
+下面是一些收集相关且适当数据的方法：
 
--   By viewing the results of user groups, surveys, forms, questionnaires, internal documents, and interviews that have already been conducted in the business.
--   By viewing customer reviews and feedback on customer satisfaction.
--   By viewing transactions and purchase history records, as well as sales and financial figure reports created by the finance or marketing department of the business.
--   By using a customer relationship management system (CRM) in the company.
--   By monitoring website and social media activity and monthly visitors.
--   By monitoring social media engagement.
--   By tracking commonly searched keywords and search queries.
--   By checking which ads are regularly clicked on.
--   By checking customer conversion rates.
--   By checking email open rates.
--   By comparing the company’s data to competitors using third-party services.
--   By querying a database.
--   By gathering data through open data sets using web scraping. [Web scraping](https://www.freecodecamp.org/news/how-to-scrape-websites-with-python-2/) is the act of extracting and collecting data and content from websites.
+-   查阅此前在用户分类、调查、表单、问卷、内部文档和业内访谈中的已有结果。
+-   查看客户评论和满意度反馈。
+-   查看交易和历史购买记录，以及由企业财务部或营销部编制的相关报告。
+-   使用公司的客户关系管理系统（CRM）。
+-   监测网站、社交媒体上的活动以及每月访客。
+-   监测社交媒体的用户参与度。
+-   追踪常见的搜索关键词和搜索语句。
+-   检查常被点击的广告。
+-   检查客户转换率。
+-   检查电子邮件打开率。
+-   使用第三方的服务，比较公司与竞争对手的数据。
+-   查阅数据库。
+-   利用网络爬虫，通过爬取开放数据集来获取收据。[网络爬虫](https://www.freecodecamp.org/news/how-to-scrape-websites-with-python-2/) 是指从网站上提取数据和收集内容的行为。
 
-### Step 3: Cleaning The Data
+### 步骤三：清洗数据
 
-Once you have gathered the data from multiple sources, it is important to understand the structure of that data.
+一旦你从多个渠道完成了数据收集的工作，了解其中数据的结构是很重要的。
 
-It is also important to check if you have gathered all the data you needed and if any crucial data is missing.
+同样重要的是，检查你是否已经已经收集了全部所需数据，以及其中是否有任何关键数据被遗漏。
 
-If you used multiple sources for the data collection, your data will likely be unstructured.
+如果你通过多个来源收集数据，你的数据很可能是非结构化的。
 
-Raw, unstructured data is not usable. Not all data is necessarily good data.
+原始的、非结构化的数据无法使用。不是所有的数据都必然是好数据。
 
-Cleaning data is the most important part of the data analysis process and one on which data analysts spend most of their time.
+清洗数据是数据分析过程中最重要的部分，也是数据分析师投入大部分时间的部分。
 
-Data needs to be cleaned, which means correcting errors, polishing, and sorting through the data.
+数据需要被清理，这意味着对数据进行纠错、打磨和分类。
 
-This could include:
+这可能包括：
 
--   Looking for [outliers](https://www.freecodecamp.org/news/what-is-an-outlier-definition-and-how-to-find-outliers-in-statistics/) (values that are unusually big or small).
--   Fixing typos.
--   Removing errors.
--   Removing duplicate data.
--   Managing inconsistencies in the format.
--   Checking for missing values or correcting incorrect data.
--   Checking for inconsistencies
--   Getting rid of irrelevant data and data that is not useful or needed for the analysis.
+-   寻找[离群值](https://www.freecodecamp.org/news/what-is-an-outlier-definition-and-how-to-find-outliers-in-statistics/)（异常大或异常小的数值）。
+-   修正错别字。
+-   删除错误。
+-   删除重复数据。
+-   处理格式的不一致。
+-   检查空值或纠正失真的数据。
+-   检查矛盾之处。
+-   舍弃无关数据和在分析中不需要的数据。
 
-This step will ensure that you are focusing on and analyzing the correct and appropriate data and that your data is high-quality.
+这一步将确保你聚焦于分析正确、适当和高质量的数据。
 
-If you analyze irrelevant or incorrect data, it will affect the results of your analysis and have a negative impact overall.
+如果你对无关或错误的数据进行分析，它不仅会影响你的单次分析结果，甚至对整体分析都会产生负面影响。
 
-So, the accuracy of your end analysis will depend on this step.
+所以，你最终分析的准确性将取决于这一步。
 
-### Step 4: Analyzing The Data
+### 步骤四：分析数据
 
-The next step is to analyze the data based on the questions and objectives from step 1.
+下一步，是基于在步骤一中确定的问题和目标，对数据展开分析。
 
-There are four different data analysis techniques used, and they depend on the goals and aims of the business:
+根据企业的目标及目的，共有四种不同的数据分析技术：
 
--   **Descriptive Analysis**: This step is the initial and fundamental step in the analysis process. It provides a summary of the collected data and aims to answer the question: “**What** happened?”. It goes over the key points in the data and emphasizes what has already taken place.
--   **Diagnostic Analysis**: This step is about using the collected data and trying to understand the cause behind the issue at hand and identify patterns. It aims to answer the question: “**Why** has this happened?”.
--   **Predictive Analysis**: This step is about detecting and predicting future trends and is important for the future growth of the business. It aims to answer the question: “**What is likely to happen** in the future?
--   **Prescriptive Analysis:** This step is about gathering all the insights from the three previous steps, making recommendations for the future, and creating an actionable plan. It aims to answer the question: “**What needs to be done?**”
+-   **描述性分析**：这一步是分析过程中的起始和基础步骤。它通过总结收集到的数据，以回答"发生了**什么**？"。它回顾数据中的关键点，并强调已经发生的事情。
+-   **诊断性分析**：这一步利用收集到的数据，试图了解当前问题背后的原因，并识别模式。它的目的是回答"这为什么会发生？"。
+-   **预测性分析**：这一步着眼于察觉和预测未来的趋势，对企业未来的发展尤其重要。它旨在回答"未来**可能会发生什么**？
+-   **规范性分析**：这一步需要收集前三个步骤中的所有见解，为未来提出建议，并创建一个可行的计划。它的目的是回答"**需要做什么？**"
 
-### Step 5: Sharing The Results
+### 步骤五：分享结果
 
-The last step is to interpret your findings.
+最后一步是阐释你的发现。
 
-This is usually done by creating reports, charts, graphs, or interactive dashboards using data visualization tools.
+通常会使用数据可视化工具来创建报告、图表、图形或交互式仪表盘。
 
-All the above will help support the presentation of your findings and the results of your analysis to stakeholders, business executives, and decision-makers.
+当你向利益相关者、业务主管和决策者介绍发现和分析结果时，上述这些都会起到帮助作用。
 
-Data analysts are storytellers, which means having strong communication skills is important.
+数据分析师是讲故事的人，这意味着拥有强大的沟通技巧很重要。
 
-They need to showcase the findings and present the results in a clear, concise, and straightforward way by taking the data and creating a narrative.
+他们需要数据和叙事，从而以清晰、简洁、直截了当的方式来展示结果。
 
-This step will influence decision-making and the future steps of the business.
+这一步将影响企业的决策和未来选择。
 
-## What Skills Are Required For Data Analysis?
+## 数据分析需要什么技能?
 
-### A Good Grasp Of Maths And Statistics
+### 熟练掌握数学和统计学知识
 
-The amount of maths you will use as a data analyst will vary depending on the job. Some jobs may require working with maths more than others.
+作为一名数据分析师，你使用的数学知识量将根据工作的不同而不同。有些工作可能比其他工作更需要使用数学。
 
-You don’t necessarily need to be a math wizard, but with that said, having at least a fundamental understanding of math basics can be of great help.
+你不一定非要成为一个数学奇才，但对数学基础知识的基本了解，将对你有很大帮助。
 
-Here are some math courses to get you started:
+这里有一些数学课程可以让你起步：
 
--   [College Algebra – Learn College Math Prerequisites with this Free 7-Hour Course](https://www.freecodecamp.org/news/learn-algebra-to-improve-your-programming-skills/)
--   [Precalculus – Learn College Math Prerequisites with this Free 5-Hour Course](https://www.freecodecamp.org/news/precalculus-learn-college-math-prerequisites-with-this-free-5-hour-course/)
--   [Math for Programmers Course](https://www.freecodecamp.org/news/maths-for-programmers/)
+-   [大学代数——免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/learn-algebra-to-improve-your-programming-skills/)
+-   [微积分先修课——免费大学数学前置课程（7小时）](https://www.freecodecamp.org/news/precalculus-learn-college-math-prerequisites-with-this-free-5-hour-course/)
+-   [程序员的数学课](https://www.freecodecamp.org/news/maths-for-programmers/)
 
-Data analysts need to have good knowledge of statistics and probability for gathering and analyzing data, figuring out patterns, and drawing conclusions from the data.
+数据分析师需要掌握统计学和概率知识，以收集和分析数据，找出其中的模式，并从数据中得出结论。
 
-To get started, take an intro to statistics course, and then you can move on to more advanced topics:
+要想开始学习，可以先从统计学入门课程入手，然后继续学习进阶课题：
 
--   [Learn College-level Statistics in this free 8-hour course](https://www.freecodecamp.org/news/free-statistics-course/)
--   [If you want to learn Data Science, take a few of these statistics classes](https://www.freecodecamp.org/news/if-you-want-to-learn-data-science-take-a-few-of-these-statistics-classes-9bbabab098b9#.esdiw8wnk)
+-   [学习大学统计学（8小时免费课程）](https://www.freecodecamp.org/news/free-statistics-course/)
+-   [如果想学习数据科学，请上这几堂统计课](https://www.freecodecamp.org/news/if-you-want-to-learn-data-science-take-a-few-of-these-statistics-classes-9bbabab098b9#.esdiw8wnk)
 
-### Knowledge of SQL and Relational Databases
+### 了解 SQL 和关系型数据库
 
-Data analysts need to know how to interact with relational databases to extract data.
+数据分析师需要了解如何运用数据库以提取数据。
 
-A database is an electronic storage localization for data. Data can be easily retrieved and searched through.
+数据库是储存数据的电子空间，其中的数据可以很容易地被检索和查询。
 
-A relational database is structured in format and all data items stored have pre-defined relationships with each other.
+关系型数据库是结构化的，所有存储的数据项目都有预先定义的相互关系。
 
-SQL stands for **S**tructured **Q**uery **L**anguage and is the language used for querying and interacting with relational databases.
+SQL 是 **S**tructured **Q**uery **L**anguage （结构化查询语言）的缩写，是用于查询和与关系型数据库互动的语言。
 
-By writing SQL queries you can perform CRUD (Create, Read, Update, and Delete) operations on data.
+通过编写 SQL 查询语句，你可以对数据进行 CRUD （Create（创建）、Read（读取）、Update（更新）和 Delete（删除））操作。
 
-To learn SQL, check out the following resources:
+要想学习 SQL ，可以参考以下资源：
 
--   [SQL Commands Cheat Sheet – How to Learn SQL in 10 Minutes](https://www.freecodecamp.org/news/learn-sql-in-10-minutes/)
--   [Learn SQL – Free Relational Database Courses for Beginners](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
--   [Relational Database Certification](https://www.freecodecamp.org/learn/relational-database/)
+-   [SQL 命令小抄——如何在10分钟内学会 SQL](https://www.freecodecamp.org/news/learn-sql-in-10-minutes/)
+-   [学习 SQL ——初学者的免费关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
+-   [关系型数据库认证](https://www.freecodecamp.org/learn/relational-database/)
 
-### Knowledge Of A Programming Language
+### 掌握一门编程语言
 
-To further organize and manipulate databases, data analysts benefit from knowing a programming language.
+掌握一门编程语言，会让数据分析师在进一步组织和操作数据库中受益良多。
 
-Two of the most popular ones used in the data analysis field are Python and R.
+在数据分析领域，最受欢迎的两种语言是 Python 和 R 。
 
-Python is a general-purpose programming language, and it is very beginner-friendly thanks to its syntax that resembles the English language. It is also one of the most used technical tools for data analysis.
+Python 是一种通用的编程语言，因其语法类似英语，所以对初学者非常友好。它也是数据分析中最常用的技术工具之一。
 
-Python offers a wealth of packages and libraries for data manipulation, such as Pandas and NumPy, as well as for data visualization, such as Matplotlib.
+Python 提供了丰富的用于数据处理的包和库，如 Pandas 和 NumPy ，以及用于数据可视化的 Matplotlib 。
 
-To get started, [first see how to go about learning Python as a complete beginner](https://www.freecodecamp.org/news/how-to-learn-python/).
+要想开始学习，可以先看下[零基础如何学习 Python ](https://www.freecodecamp.org/news/how-to-learn-python/)。
 
-Once you understand the fundamentals, you can move on to learning about Pandas, NumPy, and Matplotlib.
+一旦你理解了基础知识，你就可以继续学习 Pandas 、 NumPy 和 Matplotlib 。
 
-Here are some resources to get you started:
+这里是一些可供学习的资源：
 
--   [How to Get Started with Pandas in Python – a Beginner's Guide](https://www.freecodecamp.org/news/python-pandas-functions/)
--   [The Ultimate Guide to the Pandas Library for Data Science in Python](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-pandas-library-for-data-science-in-python/)
--   [The Ultimate Guide to the NumPy Package for Scientific Computing in Python](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
--   [Learn NumPy and start doing scientific computing in Python](https://www.freecodecamp.org/news/numpy-python-tutorial/)
--   [How to Analyze Data with Python, Pandas & Numpy - 10 Hour Course](https://www.freecodecamp.org/news/how-to-analyze-data-with-python-pandas/)
--   [Matplotlib Course – Learn Python Data Visualization](https://www.freecodecamp.org/news/matplotlib-course-learn-python-data-visualization/)
--   [Python Data Science – A Free 12-Hour Course for Beginners. Learn Pandas, NumPy, Matplotlib, and More.](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/)
+-   [如何在 Python 中使用 Pandas ——初学者指南](https://www.freecodecamp.org/news/python-pandas-functions/)
+-   [Python 中用于数据科学的 Pandas 终极指南](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-pandas-library-for-data-science-in-python/)
+-   [Python 中用于科学计算的 NumPy 终极指南](https://www.freecodecamp.org/news/the-ultimate-guide-to-the-numpy-scientific-computing-library-for-python/)
+-   [学习 NumPy 并开始用 Python 进行科学计算](https://www.freecodecamp.org/news/numpy-python-tutorial/)
+-   [如何用 Python 、 Pandas 和 Numpy 分析数据——10小时课程](https://www.freecodecamp.org/news/how-to-analyze-data-with-python-pandas/)
+-   [Matplotlib 课程——学习 Python 数据可视化](https://www.freecodecamp.org/news/matplotlib-course-learn-python-data-visualization/)
+-   [Python 数据科学--面向初学者的12小时免费课程，学习 Pandas 、 NumPy 、 Matplotlib 及更多](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/)
 
-R is a language used for statistical analysis and data analysis. That said, it is not as beginner-friendly as Python.
+R 是一种用于统计分析和数据分析的语言。换言之，它不像 Python 那样适合初学者。
 
-To get started learning it, check out the following courses:
+要开始学习 R 语言，可以从以下课程入手：
 
--   [R Programming Language Explained](https://www.freecodecamp.org/news/r-programming-language-explained/)
--   [Learn R programming language basics in just 2 hours with this free course on statistical programming](https://www.freecodecamp.org/news/r-programming-course/)
+-   [R 语言解读](https://www.freecodecamp.org/news/r-programming-language-explained/)
+-   [2小时掌握 R 语言基础（免费统计编程课程）](https://www.freecodecamp.org/news/r-programming-course/)
 
-### Knowledge of data visualization tools
+### 熟悉数据可视化工具
 
-Data visualization is the graphical interpretation and presentation of data.
+数据可视化是对数据的图形化解释和展示。
 
-This includes creating graphs, charts, interactive dashboards, or maps that can be easily shared with other team members and important stakeholders.
+这包括创建图形、图表、交互式仪表板或地图，以便于与其他团队成员及重要的利益相关者分享。
 
-Data visualization tools are essentially used to tell a story with data and drive decision-making.
+数据可视化工具本质上是用于依托数据讲故事并推动决策。
 
-One of the most popular data visualization tools used is Tableau.
+Tableau 是最受欢迎的数据可视化工具之一。
 
-To learn Tableau, check out the following course:
+要学习 Tableau ，请查看以下课程：
 
--   [Tableau for Data Science and Data Visualization - Crash Course](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/)
+-  [用于数据科学和数据可视化的 Tableau ——速成班](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/)
 
-### Knowledge of Excel
+### 了解 Excel
 
-Excel is one of the most essential tools used in Data analysis.
+Excel 是数据分析中最必不可少的工具之一。
 
-It is used for storing, structuring, and formatting data, performing calculations, summarizing data and identifying trends, sorting data into categories, and creating reports.
+它用于存储、结构化和格式化数据，运行计算、总结数据和识别趋势，将数据进行分类，并创建报告。
 
-You can also use Excel to create charts and graphs.
+你也可以使用 Excel 来创建图表和图形。
 
-To learn how to use Excel, check out the following courses:
+要学习如何使用 Excel ，请查看以下课程：
 
--   [Learn Microsoft Excel - Full Video Course](https://www.freecodecamp.org/news/learn-microsoft-excel/)
--   [Excel Classes Online – 11 Free Excel Training Courses](https://www.freecodecamp.org/news/excel-classes-online-free-excel-training-courses/)
--   [Data Analysis with Python for Excel Users Course](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/)
+-   [学习 Excel ——完整视频课程](https://www.freecodecamp.org/news/learn-microsoft-excel/)
+-   [Excel 在线课程——11门免费 Excel 培训课程](https://www.freecodecamp.org/news/excel-classes-online-free-excel-training-courses/)
+-   [针对 Excel 用户的 Python 数据分析课程](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/)
 
-## Conclusion
+## 结论
 
-This marks the end of the article – thank you so much for making it to the end!
+这是文章的最后一部分了——非常感谢你能阅读到最后。
 
-Hopefully this guide was helpful, and it gave you some insight into what data analysis is, why it is important, and what skills you need to enter the field.
+希望这篇指南对你有所帮助，能让你了解什么是数据分析、数据分析为何重要，以及进入这个领域需要何种技能。
 
-Thank you for reading!
+感谢阅读！

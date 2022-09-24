@@ -53,24 +53,22 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 - 微信公众号发布：翻译者如有自己的公众号，可在自己的公众号首发译文，可给 freeCodeCamp 公众号设置白名单转载权限。
 
-对于以上内容，如果你有疑问，请在 [freeCodeCamp Chat 中文社区聊天室](https://chat.freecodecamp.org/channel/zhongwen)提问，我们随时在线和你交流:)
+对于以上内容，如果你有疑问，请在 [freeCodeCamp Discord 频道](https://discord.gg/RzWXEche) 提问，我们随时在线和你交流:)
 
 ## 译者交流
 
 ### 开放周会
 
-- 时间：每两周一次，周六下午 13:00 - 15:00（北京时间）
-- 地点：会议室链接（请在 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/zhongwen)留言，获得会议室链接）
+- 时间：每两周一次，周日上午 10:00 - 11:00（北京时间）
+- 地点：会议室链接（有两种方法可以获得会议室链接：1、请加入 [freeCodeCamp Discord 频道](https://discord.gg/RzWXEche)，搜索 #chinese 频道并留言，2、请添加小助手微信 fcczhongguo 并留言）
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 
-点击[此处](https://chinese.freecodecamp.org/forum/t/topic/1981)了解周会详情。
+点击[此处](https://forum.freecodecamp.org/t/freecodecamp/516584)了解周会详情。
 
-### 日常讨论
 
-欢迎大家加入 [freeCodeCamp Chat 聊天室](https://chat.freecodecamp.org/channel/zhongwen)，可随时讨论翻译、编程等话题。
-
-关于聊天室的详细介绍，请阅读[《freeCodeCamp Chat 上线了！欢迎加入中文开发者社区聊天室！》](https://chinese.freecodecamp.org/news/freecodecamp-chat/)。
+### 日常交流
+贡献者们可以在 Discord 频道或者中文社区微信群即时交流。
 
 ## Lint & Format rules
 

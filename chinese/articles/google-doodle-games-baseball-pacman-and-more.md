@@ -1,11 +1,11 @@
 > -  原文地址：[Google Doodle Games – Baseball, PacMan, and More](https://www.freecodecamp.org/news/google-doodle-games-baseball-pacman-and-more/)
 > -  原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
+> -  译者：Miya
 > -  校对者：
 
 ![Google Doodle Games – Baseball, PacMan, and More](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/google-doodle-article-image.png)
 
-The homepage for the Google Search engine is the most viewed webpage in the world. People conduct billions of searches every day.
+Google 搜索引擎的主页是世界上浏览次数最多的网页。People conduct billions of searches every day.
 
 When you land on the page, right above the search box, you'll see Google's logo. On many occassions the logo will be different and accompanied by what's called a _Doodle_.
 

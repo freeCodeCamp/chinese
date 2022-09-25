@@ -1,7 +1,7 @@
-> -  原文地址：[freeCodeCamp's Web3 Curriculum Open Beta – And How to Run it](https://www.freecodecamp.org/news/web3-curriculum-open-beta/)
-> -  原文作者：[Tom Mondloch](https://www.freecodecamp.org/news/author/tom-m/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[freeCodeCamp's Web3 Curriculum Open Beta – And How to Run it](https://www.freecodecamp.org/news/web3-curriculum-open-beta/)
+> - 原文作者：[Tom Mondloch](https://www.freecodecamp.org/news/author/tom-m/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![freeCodeCamp's Web3 Curriculum Open Beta – And How to Run it](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/thomas-habr-wprOCzLIEYI-unsplash.jpg)
 
@@ -21,11 +21,11 @@ Again, these prerequisites are just our recommendations. Feel free to just dive 
 
 Right now, we have designed five integrated Web3 projects for you to complete:
 
-1.  Build a Video Game Marketplace Blockchain
-2.  Build a Fundraising Smart Contract
-3.  Build a Peer-to-Peer Network
-4.  Build a Web3 Client-Side Package for your dApp
-5.  Build a Smart Contract in Rust
+1. Build a Video Game Marketplace Blockchain
+2. Build a Fundraising Smart Contract
+3. Build a Peer-to-Peer Network
+4. Build a Web3 Client-Side Package for your dApp
+5. Build a Smart Contract in Rust
 
 Each of these projects has its own set of instructions with tasks for you to fulfill, and tests to ensure you've implemented your project correctly. Complete all the tasks and get all the tests to pass to finish each project.
 
@@ -43,7 +43,7 @@ Why are we releasing the hard part (the 5 integrated projects) first? For the di
 
 Soon it will be a smoother ride for anyone to learn these tools and concepts. But we wanted to first get something out there for the hardcore crowd.
 
-## The Web3 Curriculum is in open beta. We welcome your feedback and bug reports.
+## The Web3 Curriculum is in open beta. We welcome your feedback and bug reports
 
 Note that these are in open beta – meaning that we will continue to refine them with your feedback.
 
@@ -69,9 +69,9 @@ Follow the steps below to run the courses
 
 Before you get started, make sure you have these installed on your computer:
 
-1.  [Docker Engine](https://docs.docker.com/engine/)
-2.  [VS Code](https://code.visualstudio.com/download) and the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
-3.  Git
+1. [Docker Engine](https://docs.docker.com/engine/)
+2. [VS Code](https://code.visualstudio.com/download) and the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
+3. Git
 
 ADVERTISEMENT
 
@@ -81,24 +81,24 @@ if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
 Follow these instructions to clone the repo and run the courses:
 
-1.  Open a terminal and clone the [web3-curriculum](https://github.com/freeCodeCamp/web3-curriculum) repo with:
+1. Open a terminal and clone the [web3-curriculum](https://github.com/freeCodeCamp/web3-curriculum) repo with:
 
 ```console
 git clone https://github.com/freeCodeCamp/web3-curriculum.git
 ```
 
-2.  Navigate to the `web3-curriculum` directory, and open it in a VSCode workspace with:
+2. Navigate to the `web3-curriculum` directory, and open it in a VSCode workspace with:
 
 ```console
 code .
 ```
 
-3.  Press `Ctrl / Cmd + Shift + P` to open the command palette, and run `Remote-Containers: Rebuild Container and Reopen in Container`. VS Code will build the container to run the projects in, it will take a few minutes the first time.
-4.  Once it's finished, press `Ctrl / Cmd + Shift + P` again and run `freeCodeCamp: Run Course` to start the courses. This will also take a moment.
-5.  The simple browser will open when it's done. If it's a blank white page, use the refresh button to update it and see the courses home page.
-6.  Click on one of the available projects to start a project.
-7.  Follow the instructions to complete the project.
-8.  Have fun!
+3. Press `Ctrl / Cmd + Shift + P` to open the command palette, and run `Remote-Containers: Rebuild Container and Reopen in Container`. VS Code will build the container to run the projects in, it will take a few minutes the first time.
+4. Once it's finished, press `Ctrl / Cmd + Shift + P` again and run `freeCodeCamp: Run Course` to start the courses. This will also take a moment.
+5. The simple browser will open when it's done. If it's a blank white page, use the refresh button to update it and see the courses home page.
+6. Click on one of the available projects to start a project.
+7. Follow the instructions to complete the project.
+8. Have fun!
 
 If you want to switch projects, click the freeCodeCamp logo at the top to get back to the home page.
 

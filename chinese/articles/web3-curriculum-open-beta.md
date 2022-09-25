@@ -5,43 +5,37 @@
 
 ![freeCodeCamp's Web3 Curriculum Open Beta – And How to Run it](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/thomas-habr-wprOCzLIEYI-unsplash.jpg)
 
-Over the past 11 months, we've made considerable progress on our Web3 curriculum. Today I'm thrilled to say that parts of this curriculum are now in open beta. You can try them today.
+在过去的 11 个月中，我们在 Web3 课程方面取得了相当大的进展。今天我很高兴地告诉大家，这个课程的部分内容现在已经进入公开测试阶段。你今天就可以试用它们。
 
-Before we get into the details, I want to thank the KaijuKingz community, who made a donation to freeCodeCamp that made development of these courses possible. You can [read more about their gift to the freeCodeCamp community here](https://www.freecodecamp.org/news/carbon-neutral-web3-curriculum-plans/).
+在我们讨论细节之前，我想感谢 KaijuKingz 社区，他们为 freeCodeCamp 提供了捐款，使这些课程的开发成为可能。你可以 [在这里阅读更多关于他们给 freeCodeCamp 社区的礼物](https://www.freecodecamp.org/news/carbon-neutral-web3-curriculum-plans/)。
 
 ## How to Approach These Web3 Courses
 
-As a prerequisite for this course, we recommend first learning full stack web development. You can do this by working through the first 7 [freeCodeCamp certifications](https://www.freecodecamp.org/learn/) and building their projects.
+作为本课程的先决条件，我们建议首先学习全栈网站开发。你可以通过学习前 7 个 [freeCodeCamp 认证](https://www.freecodecamp.org/learn/) 来做好准备。
 
-We also recommend you know some knowledge of basic blockchain development concepts. freeCodeCamp has [an in-depth 32-hour course that covers this](https://www.freecodecamp.org/news/learn-blockchain-solidity-full-stack-javascript-development/), taught by developer and instructor Patrick Collins.
+我们还建议你了解一些基本的区块链开发概念的知识。freeCodeCamp 有 [一个深入的 32 小时的课程，包括这个](https://www.freecodecamp.org/news/learn-blockchain-solidity-full-stack-javascript-development/)，由开发人员和讲师 Patrick Collins 教授制作。
 
-We also recommend learning some Rust, which you can learn interactively using [freeCodeCamp's Rust course](https://www.freecodecamp.org/news/rust-in-replit/).
+我们还建议你学习一些 Rust，你可以使用 [freeCodeCamp 的 Rust 课程](https://www.freecodecamp.org/news/rust-in-replit/) 进行互动学习。
 
-Again, these prerequisites are just our recommendations. Feel free to just dive in and return to those resources as you see fit.
+同样，这些先决条件只是我们的建议。你可以自由地选择，并在你认为合适的时候使用这些资源。
 
-Right now, we have designed five integrated Web3 projects for you to complete:
+1. 建立一个视频游戏市场区块链
+2. 构建一个筹款智能合约
+3. 构建一个点对点网络
+4. 为你的 dApp 建立一个 Web3 客户端软件包
+5. 在 Rust 中建立一个智能合约
 
-1. Build a Video Game Marketplace Blockchain
-2. Build a Fundraising Smart Contract
-3. Build a Peer-to-Peer Network
-4. Build a Web3 Client-Side Package for your dApp
-5. Build a Smart Contract in Rust
-
-Each of these projects has its own set of instructions with tasks for you to fulfill, and tests to ensure you've implemented your project correctly. Complete all the tasks and get all the tests to pass to finish each project.
-
-ADVERTISEMENT
-
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
+这些项目中的每一个都有自己的一套说明，其中有你需要完成的任务，以及确保你正确实施项目的测试。完成所有的任务并通过所有的测试来完成每个项目。
 
 ## These 5 projects are just the beginning
 
-We are also developing 10 interactive Web3 practice projects.
+我们还在开发 10 个交互式 Web3 实践项目。
 
-These will walk you through all the Web3 concepts you need to know to build these 5 integrated projects we're releasing today.
+这些将引导您了解构建我们今天发布的这 5 个集成项目所需了解的所有 Web3 概念。
 
-Why are we releasing the hard part (the 5 integrated projects) first? For the die-hard Web3 enthusiasts who don't mind using watching [Patrick's course](https://www.freecodecamp.org/news/learn-blockchain-solidity-full-stack-javascript-development/), reading official documentation, and referencing the many other free Web3 tutorials out there.
+为什么我们要先发布困难的部分（5 个集成项目）？ 对于不介意观看 [Patrick 的课程](https://www.freecodecamp.org/news/learn-blockchain-solidity-full-stack-javascript-development/) 的 Web3 铁杆爱好者，请阅读官方文档 ，并参考许多其他免费的 Web3 教程。
 
-Soon it will be a smoother ride for anyone to learn these tools and concepts. But we wanted to first get something out there for the hardcore crowd.
+任何人学习这些工具和概念，都很快地会变得更加顺畅。 但我们想首先为铁杆爱好者人群提供一些东西。
 
 ## The Web3 Curriculum is in open beta. We welcome your feedback and bug reports
 
@@ -54,10 +48,6 @@ You can also sign up for updates These will make it a lot easier to build these 
 ## How will it work?
 
 The courses will run in a docker container using VS Code and the [freeCodeCamp Courses extension.](https://marketplace.visualstudio.com/items?itemName=freeCodeCamp.freecodecamp-courses)
-
-ADVERTISEMENT
-
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
 ### Here's a sample
 
@@ -72,10 +62,6 @@ Before you get started, make sure you have these installed on your computer:
 1. [Docker Engine](https://docs.docker.com/engine/)
 2. [VS Code](https://code.visualstudio.com/download) and the [Remote Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
 3. Git
-
-ADVERTISEMENT
-
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
 ### How to Run the Curriculum in Docker
 

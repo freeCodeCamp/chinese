@@ -45,7 +45,7 @@
 
 您还可以注册更新,将使构建这 5 个集成项目变得更加容易，您实际上是在做最困难、最模棱两可的部分 [在下面注册更新](#sign-up) 课程发布。
 
-##  它将如何运作？
+## 它将如何运作？
 
 这些课程将使用 VS Code 和 [freeCodeCamp Courses extension](https://marketplace.visualstudio.com/items?itemName=freeCodeCamp.freecodecamp-courses) 在 docker 容器中运行。
 
@@ -99,4 +99,4 @@ code .
 查看[Solana 公告文章。](https://www.freecodecamp.org/news/solana-curriculum/)  
 查看[NEAR 公告文章。](https://www.freecodecamp.org/news/near-curriculum/)
 
-或者，查看我们展示所有课程的 [web3.freecodecamp.org](https://web3.freecodecamp.org/) 域名。
+或者，查看我们所有课程的 [web3.freecodecamp.org](https://web3.freecodecamp.org/) 网站。

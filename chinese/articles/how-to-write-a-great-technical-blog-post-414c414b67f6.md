@@ -1,6 +1,6 @@
 > -  原文地址：[How to write a great technical blog post](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/)
 > -  原文作者：[Sashko Stubailo](https://www.freecodecamp.org/news/author/stubailo/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How to write a great technical blog post](https://cdn-media-1.freecodecamp.org/images/1*QVTcnfXyMXivNu62IJ7JSg.jpeg)

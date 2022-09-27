@@ -1,6 +1,6 @@
 > -  原文地址：[Line Charts Tutorial – How to Create a Line Graph in JavaScript](https://www.freecodecamp.org/news/how-to-make-line-charts-in-javascript/)
 > -  原文作者：[Shachee Swadia](https://www.freecodecamp.org/news/author/shachee/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Line Charts Tutorial – How to Create a Line Graph in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/line-chart.png)

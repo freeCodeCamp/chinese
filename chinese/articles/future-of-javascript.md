@@ -1,91 +1,91 @@
 > -   原文地址：[Why JavaScript Is the Programming Language of the Future](https://www.freecodecamp.org/news/future-of-javascript/)
 > -   原文作者：Mehul Mohan
-> -   译者：
+> -   译者：赵翘楚
 > -   校对者：
 
 ![Why JavaScript Is the Programming Language of the Future](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/jsposter.jpg)
 
-JavaScript was the first programming language I picked up. Well, I actually started with HTML and CSS. Just like many other web developers, going with JavaScript was a no-brainer. This is simply because it blends so well with HTML and CSS, and actually enhances your HTML/CSS skills as well. I've developed applications and games in various other programming languages including Java, Swift, C++, Dart. But the flexibility which JavaScript provides is unmatchable - even though it could be considered bad for beginners as it gives way more options than required to do a simple task.
+JavaScript是我学习的第一种编程语言。嗯，实际上我是从HTML和CSS开始的。就像许多其他的网页开发者一样，选择 JavaScript 是不费吹灰之力的。这只是因为它与 HTML 和 CSS 融合得很好，而且实际上也能提高你的 HTML/CSS 技能。我曾经用其他各种编程语言开发过应用程序和游戏，包括 Java、Swift、C++ 和 Dart。但是，JavaScript 所提供的灵活性是无可比拟的--尽管它对初学者来说可能被认为是不好的，因为它所提供的选项远远超过了完成一项简单任务的要求。
 
-Today, JavaScript is one of the most powerful languages on the planet because of its performance and omnipresence.
+今天，JavaScript 是地球上最强大的语言之一，因为它的性能和无处不在的存在。
 
-Personally, I feel like JavaScript has the potential to tap into so many popular industries like Machine Learning and Data Analysis, where Python still rules the game. It's even happening now with tools like Tensorflow.js!
+我个人觉得，JavaScript 有潜力进入许多流行的行业，如机器学习和数据分析，而 Python 仍然统治着这些领域。现在，像 Tensorflow.js 这样的工具甚至已经诞生了!
 
-However this was definitely not the case for JavaScript before. Earlier, it was a weak, non-performant language and was frowned upon. JavaScript was for "losers".
+然而，以前的 JavaScript 绝对不是这样的。早些时候，它是一种脆弱的、不具性能的语言，而且被人诟病。JavaScript 是为“losers”准备的。
 
-But not anymore. Let's see how JavaScript turned the tables in the last 10 years, why it has become stronger than ever, and why it is here to stay.
+但现在不是了。让我们看看JavaScript在过去的10年里是如何扭转局面的，为什么它变得比以前更强大，以及为什么它将继续保持今天的地位。
 
-# V8: The beast powering JavaScript
+# V8: 为 JavaScript 提供动力的猛兽
 
-V8 is actually a JavaScript engine. What is a JavaScript engine, you might ask? A JavaScript engine is an interpreter which executes JavaScript code. A JavaScript engine can be implemented as a standard interpreter, or just-in-time (JIT) compiler that compiles JavaScript to bytecode in some form.
+V8 实际上是一个 JavaScript 引擎。你可能会问，什么是 JavaScript 引擎？JavaScript 引擎是一个执行 JavaScript 代码的解释器。一个 JavaScript 引擎可以实现为一个标准的解释器，也可以实现为及时（JIT）编译器，以某种形式将 JavaScript 编译为字节码。
 
-V8 is Google’s open source high-performance JavaScript and WebAssembly JIT engine, written in C++. It is used in Chrome and in Node.js, among others. V8 can run standalone, or can be embedded into any C++ application.
+V8 是谷歌的开源高性能 JavaScript 和 WebAssembly JIT 引擎，用 C++ 编写。它被用于 Chrome 和 Node.js 等等。V8 可以独立运行，也可以嵌入到任何 C++ 应用程序中。
 
-This is the piece of software which highly optimizes your JS code and converts it into machine code for the CPU to execute. Some of the tasks V8 handles are:
+这是一款可以深度优化你的 JS 代码并将其转换为机器代码供 CPU 执行的软件。V8 处理的一些任务是:
 
-1.  Garbage Collection
-2.  Compilation to Machine code
-3.  Inline caching
-4.  Pointer compression
-5.  and much much more optimization
+1.  垃圾回收
+2.  编译成机器码
+3.  内联缓存
+4.  指针压缩
+5.  还有更多的优化
 
-As a matter of fact, pointer compression is a very new technique in V8 to boost memory optimization while having no effect on performance. If you're a geek, you can read more about how it is implemented on the official V8 blog.
+事实上，指针压缩是 V8 中一项非常新的技术，可以在不影响性能的情况下提升内存优化。如果你是一个极客，你可以在 V8 的官方博客上阅读更多关于它是如何实现的。
 
-The takeaway from this is that you can write JavaScript and sleep tight at night because your JS code is in very good hands.
+从中得到的启示是，你可以写 JavaScript，并在晚上睡个安稳觉，因为你的JS代码可以非常好地运行。
 
-# Mature ecosystem and community
+# 成熟的生态系统和社区
 
-JavaScript has one of the most mature – if not THE most mature – ecosystems a programming language could ever have. The community for JavaScript is vast, and the entry barrier is extremely low.
+JavaScript 拥有最成熟的生态系统之一，这是任何一种编程语言从未拥有过的。JavaScript 的社区非常庞大，而且入门门槛极低。
 
-You can fire up a browser (found on 100% of personal computers), open the console, and you'll find a JS engine waiting for you to run code! This was never the case with any other programming languages of such complexity.
+你可以启动浏览器（100%的个人电脑上都有），打开控制台，你会发现一个 JS 引擎在等着你运行代码！这在其他编程语言中是绝无仅有的。任何其他如此复杂的编程语言都不存在这种情况。
 
-As if the vast community wasn't enough, we have the `npm` and `yarn` package systems. You name it and there's a package for that on the `npm` registry – everything from creating random strings to handling streams and buffers in JavaScript. There's a very famous saying among JavaScript developers:
+如果庞大的社区还不够，我们还有 `npm` 和 `yarn` 软件包系统。你能在 `npm` 源上找到任何一个包--例如从创建随机字符串到处理 JavaScript 中的流和缓冲区的一切。在 JavaScript 开发者中，有一句非常有名的话
 
-> What can be done in JavaScript, would eventually be done in JavaScript
+> 任何能被 JavaScript 实现的，终将被 JavaScript 实现
 
-It's funny, but lowkey, I believe this.
+这很有趣，但很低调，我相信这一点。
 
-If you enter as a beginner, there is very little chance you encounter a problem which nobody has encountered before. This is because all possible mistakes for simple JavaScript issues have probably already been asked about and archived on sites like Stack Overflow.
+如果你以初学者的身份进入，你很少有机会遇到以前没有人遇到过的问题。这是因为所有可能的简单 JavaScript 问题的错误几乎已经在 Stack Overflow 等网站上被问到并存档了。
 
-Frameworks and libraries like React, Angular, and Vue are paving the way for how future applications should be built. They're shifting the perspective towards declarative instead of imperative programming, the what instead of how. This lets developers develop quality applications without worrying about underlying high performant code.
+像 React、Angular 和 Vue 这样的框架和库正在为未来应用程序的构建方式铺平道路。他们将视角转向声明式编程而不是命令式编程，转向什么而不是如何。这让开发者可以开发高质量的应用程序，而不必担心底层的高性能代码。
 
-## Omnipresence
+## 全能
 
-JavaScript is present on:
+JavaScript 存在于:
 
-1.  Front end (Browsers)
-2.  Back end (Node, Deno)
-3.  Android/iOS (React Native, NativeScript, etc.)
-4.  Desktop (Electron)
-5.  Hybrid (Ionic)
+1.  前端（浏览器）
+2.  后端（Node，Deno）
+3.  Android/iOS（React Native、NativeScript等）
+4.  桌面（Electron）
+5.  混合型（Ionic）
 
-What makes this possible? JS engines like V8 are written in C/C++ and can even be compiled on embedded systems! For other platforms, because browsers are always present (like on Andorid/iOS), they ship with a JS engine which can then be used to run any JS code, even for native apps in the case of React Native.
+是什么让这成为可能？像 V8 这样的 JS 引擎是用 C/C++ 编写的，甚至可以在嵌入式系统上进行编译 对于其他平台来说，因为浏览器总是存在的（比如Andorid/iOS），所以它们搭载了一个 JS 引擎，然后可以用来运行任何 JS 代码，甚至可以用 React Native 写原生应用。
 
-## Bleeding edge features and advancement
+## 前沿功能和进阶
 
-JavaScript standards are led by the ECMA-262 TC39 community, and wow are these people fast! ECMAScript releases a new standard of JavaScript every single year (see the new ECMAScript2020 features!). You as a developer can even request that new features be added to the language.
+JavaScript 标准是由 ECMA-262 TC39 社区领导的，这些人的更新速度真快！ECMAScript 每年都会发布新的 JavaScript 标准（见 ECMAScript2020 的新功能！）。作为一个开发者，你甚至可以要求在语言中加入新的功能。
 
-For instance, here are some pending bleeding edge features which might make it into JavaScript in the near future:
+例如，这里有一些有待开发的前沿功能，在不久的将来可能会被加入到 JavaScript 中。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/04/Screenshot-2020-04-04-at-10.03.59-PM.png)
 
-You can find all the proposals here: [TC39 Proposals][1].
+你可以在这找到所有的提案: [TC39 Proposals][1].
 
-## JavaScript is FAST and SCALABLE
+## JavaScript 是快速且可扩展的
 
-Of course, nothing really beats C/C++/Rust, but JavaScript is a fast - in the sense that V8 can generate highly optimized code by monitoring how your code executes, delaying the bits of execution which are not used, and optimizing the code segments which are used over and over. Especially when compared to its nearest competitors like Python. With the advancements in V8, it is becoming even more performant and memory efficient.
+当然，没有什么能真正击败 C/C++/Rust，但 JavaScript 的意义在于快速，V8 可以通过监控你的代码执行情况，延迟不使用的位执行，并优化被反复使用的代码段，从而生成高度优化的代码。特别是与它最近的竞争对手如 Python 相比。随着 V8 的进步，它的性能和内存效率都在不断提高。
 
-JavaScript (Node) is highly scalable (with supersets like TypeScript). Running on a single threaded architecture, people often criticize Node for its lack of threading environment, but the reality is it doesn't matter a lot.
+JavaScript（Node）是高度可扩展的（有 TypeScript 等超集）。在单线程架构上运行，人们经常批评 Node 缺乏线程环境，但实际情况是它影响并不大。
 
-The way you scale Node applications is not similar to how you'd scale a multi-threaded application. Node literally means "node" - a single node in a tree of processes. Node is scaled by running multiple instances of it and managing the cluster.
+你扩展 Node 应用程序的方式与你扩展多线程应用程序的方式不太一样。Node 的字面意思是 "节点"--进程树中的一个单一节点。Node 是通过运行它的多个实例和集群管理来扩展的。
 
-JavaScript leads the asynchronous event driven programming model of the industry, and does not need threads to scale. Instead, individual Node processes could be spawned to handle and utilize the complete CPU core. More on scaling Node later!
+JavaScript 引领了业界的异步事件驱动编程模式，不需要线程来扩展。相反，单个 Node 进程可以被生成，以处理和利用完整的 CPU 核心。以后会有更多关于扩展 Node 的内容!
 
-## Conclusion
+## 总结
 
-I love JavaScript, and using it I've created a developer platform for developers like you. There you can not only learn JavaScript, but also various other languages like C, C++, Java, Node, Python, and more! [Join here for free][2] and learn with other developers straight outta your browser!
+我喜欢 JavaScript，利用它我为像你这样的开发者创建了一个开发平台。在那里，你不仅可以学习 JavaScript，还可以学习其他各种语言，如 C、C++、Java、Node、Python 等等 [Join here for free][2]并与其他开发者一起直接在你的浏览器上学习!
 
-JavaScript is here to stay, and rule the industry this decade. Do you agree? Tell me on my [twitter][3] and [Instagram][4] handles - let's connect!
+JavaScript 在这里将继续存在，并在这十年中统治整个行业。你同意吗？请在我的[twitter][3]和[Instagram][4]上告诉我--让我们联系起来!
 
 [1]: https://github.com/tc39/proposals
 [2]: https://codedamn.com/

@@ -15,7 +15,7 @@
 
 ## **互联网的演化**
 
-The web has evolved a lot over the years, and the applications of it today are almost unrecognizable from its most [early days](https://en.wikipedia.org/wiki/History_of_the_Internet). The evolution of the web is often partitioned into three separate stages: Web 1.0, Web 2.0, and Web 3.0.
+互联网在近年来变化非常大，很多应用都完全脱离[早年](https://en.wikipedia.org/wiki/History_of_the_Internet)的样子了。互联网的演化一般来说被分为三个阶段：Web 1.0, Web 2.0 和 Web 3.0.
 
 ### **What is Web 1.0?**
 

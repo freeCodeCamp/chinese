@@ -17,25 +17,25 @@
 
 互联网在近年来变化非常大，很多应用都完全脱离[早年](https://en.wikipedia.org/wiki/History_of_the_Internet)的样子了。互联网的演化一般来说被分为三个阶段：Web 1.0, Web 2.0 和 Web 3.0.
 
-### **What is Web 1.0?**
+### **什么是 Web 1.0?**
 
-Web 1.0 was the first iteration of the web. Most participants were consumers of content, and the creators were typically developers who build websites that contained information served up mainly in text or image format. Web 1.0 lasted approximately from 1991 to 2004.
+Web 1.0 是互联网的第一个迭代。参与者是消费互联网内容的人群，而创造者是那些典型的网站开发者。当时的网站内容基本只有文字和图片的形式。Web 1.0 大致从1991年延续至2004年。
 
-Web 1.0 consisted of sites serving static content instead of dynamic HTML. Data and content were served from a static file system rather than a database, and sites didn't have much interactivity at all.
+Web 1.0 时期的网站是由静态网页组成的，并没有动态的html。数据和内容由静态文件系统提供而非数据库，网站也几乎没有交互功能。
 
-You can think of Web 1.0 as the read-only web.
+你可以把 Web 1.0 当作只读互联网。
 
-### **What is Web 2.0?**
+### **什么是 Web 2.0?**
 
-Most of us have primarily experienced the web in its current form, commonly referred to as [web2](https://en.wikipedia.org/wiki/Web_2.0#top). You can think of web2 as the interactive and social web.
+我们大多数人主要经历的互联网就是 Web 2.0。你可以把它当作用来互动与社交的网络。
 
-In the web2 world, you don’t have to be a developer to participate in the creation process. Many apps are built in a way that easily allows anyone to be a creator.
+在 Web 2.0 的世界里，你不需要成为一名开发者才能参与创作。 许多应用程序的出现让任何人都能轻松地成为内容创作者。
 
-If you want to craft a thought and share it with the world, you can. If you want to upload a video and allow millions of people to see it, interact with it, and comment on it, you can do that too.
+你可以制作并且向世界分享你的所思所想。你也可以上传一个视频，让成千上万的人看到它，并产生交流和互动评论。
 
-Web2 is simple, really, and because of its simplicity more and more people around the world are becoming creators.
+Web 2.0 非常简单，正因为它的简单让越来越多的人更容易地成为创作者。
 
-The web in its current form is really great in many ways, but there are some areas where we can do a lot better.
+互联网当前的形式在各方面都非常出色，但在某些领域我们还有很多提升空间。
 
 ### **Web 2.0 Monetization and Security**
 

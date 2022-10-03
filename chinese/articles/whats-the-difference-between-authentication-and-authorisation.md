@@ -1,6 +1,6 @@
 > -  原文地址：[Authentication vs Authorization – What's the Difference?](https://www.freecodecamp.org/news/whats-the-difference-between-authentication-and-authorisation/)
 > -  原文作者：[Grant Weatherston](https://www.freecodecamp.org/news/author/gweaths/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Authentication vs Authorization – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Background1.jpg)

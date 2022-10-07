@@ -1,6 +1,6 @@
 > -  原文地址：[How to Build a Modal with JavaScript](https://www.freecodecamp.org/news/how-to-build-a-modal-with-javascript/)
 > -  原文作者：[Victor Eke](https://www.freecodecamp.org/news/author/victoreke/)
-> -  译者：
+> -  译者：dake0913
 > -  校对者：
 
 ![How to Build a Modal with JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/How-to-build-a-modal-with-JavaScript.png)

@@ -5,31 +5,31 @@
 
 ![How to Build a Modal with JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/How-to-build-a-modal-with-JavaScript.png)
 
-It's probably happened to you before: you unintentionally attempted to perform an action on a webpage, but luckily got a pop-up window asking you to confirm your decision.
+你可能曾经遇到过这样的情况:你无意中试图在网页上执行一个操作，但幸运的是弹出一个窗口，要求你确认你的决定。
 
-This pop-up window is called a modal. It's a web page element that pops up and displays in front of other page content.
+这个弹出窗口称为模态框。它是一个弹出并显示在其他页面内容前面的网页元素。
 
-You can use modals for doing things like storing information you don't want to immediately see on a webpage, creating navigation menus, adding call-to-action elements, and more.
+你可以使用模态框来做一些事情，比如存储你不想立即在网页上看到的信息，创建导航菜单，添加召唤行动元素，等等。
 
-An excellent example is the modal that appears on Twitter when you attempt to close the compose tweet menu.
+一个很好的例子是，当你试图关闭推文编辑菜单时，Twitter上出现的弹框。
 
-![Twitter warning modal window](https://www.freecodecamp.org/news/content/images/2022/10/twitter_warning_message_modal.png)
+![推特警告消息模态框](https://www.freecodecamp.org/news/content/images/2022/10/twitter_warning_message_modal.png)
 
-You can also use modals for other things like creating call-to-action elements, navigation menus, newsletter widgets, and more.
+你还可以将模态框用于其他事情，如创建召唤行动元素、导航菜单、通讯部件等。
 
-As a web developer, knowing how to build a modal can be an handy skill to have. In this tutorial, I'll walk you through the process of how you can create a simple modal using HTML, CSS, and JavaScript.
+作为一名web开发人员，知道如何构建一个模态框是个很方便的技能。在本教程中，我将带你走过如何使用HTML、CSS和JavaScript创建一个简单模态的过程。
 
-Here's a screenshot of what we’ll be building:
+以下是我们将制作的内容截图:
 
-![A modal built with html, css and javascript](https://www.freecodecamp.org/news/content/images/2022/10/modal.png)
+![一个用 html， css ，javascript创建的模态框](https://www.freecodecamp.org/news/content/images/2022/10/modal.png)
 
-The steps are very easy to follow so you can customize the modal or build your own from scratch – it’s entirely up to you. At the end of this article, I'll provide the codepen file so you can play around with it.
+这些步骤很容易遵循,这样你就可以定制或创建你自己的scratch——这完全取决于你。在本文的最后,我将提供codepen文件供你玩一玩。
 
-## Step 1 – Add the Markup
+## Step 1 – 添加标签
 
-Alright, let's get started with the HTML.
+让我们从html开始吧。
 
-First, you'll add a `section` element and give it two classes, `modal` and `hidden.` Under this element, you’ll also have a `<div>` element with a class of `overlay` and `hidden`. Then finally, you’ll add a `<button>` element with a class of `btn` and `btn-open.`
+首先，你要添加一个`section`元素，并赋予它两个`class`，“modal”和“hidden”。在这个元素下，你还会有一个`div`元素，它的`class`是“overlay”和“hidden”。最后，添加一个“<button>”元素，`class`为“btn”和“btn-open”。
 
 Here’s what that looks like:
 

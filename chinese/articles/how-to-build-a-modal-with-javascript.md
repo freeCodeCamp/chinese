@@ -31,7 +31,7 @@
 
 首先，你要添加一个`section`元素，并赋予它两个`class`，“modal”和“hidden”。在这个元素下，你还会有一个`div`元素，它的`class`是“overlay”和“hidden”。最后，添加一个“<button>”元素，`class`为“btn”和“btn-open”。
 
-Here’s what that looks like:
+就像这样:
 
 ```html
 <section class="modal hidden"></section>

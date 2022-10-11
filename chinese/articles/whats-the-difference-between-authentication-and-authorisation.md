@@ -1,147 +1,147 @@
 > -  原文地址：[Authentication vs Authorization – What's the Difference?](https://www.freecodecamp.org/news/whats-the-difference-between-authentication-and-authorisation/)
 > -  原文作者：[Grant Weatherston](https://www.freecodecamp.org/news/author/gweaths/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Authentication vs Authorization – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Background1.jpg)
 
-When you're starting out in web development, you'll likely hear the terms authentication and authorization all the time. And it doesn't help that they're both usually abbreviated 'auth', so it's very easy to get the two confused.
+在开发的过程中，常常听说认证（authentication）和授权（authorization），他们的缩写都为auth，所以非常容易混淆。
 
-In this article, you will learn:
+通过这篇文章，你将学习到：
 
--   The differences between authentication and authorization
--   How each of these processes work
--   Examples of authorization and authentication in everyday life.
+-   认证和授权的区别
+-   他们的运作过程是什么样
+-   日常生活中的认证和授权示例
 
-‌‌‌‌Ok, let's get started.
+让我们开始吧！
 
-## What is Authentication?
+## 什么是认证？
 
-Authentication is the the process of **verifying** the credentials a user provides with those stored in a system to **prove** the user is who they say they are. If the credentials match, then you grant access. If not, you deny it.
+认证（Authentication）是**验证**用户提供的或者存储在系统的证书，**证明**用户就是他们所说的人的过程。如果证书相符，就授予访问权，如果不符，就拒绝访问。
 
-### Methods of Authentication
+### 认证的方法
 
-#### Single Factor authentication:
+#### 单因素认证：
 
-This is often used as the authentication process for lower risk systems. You only need a single factor to authenticate, with the most common being a password, so it's more vulnerable to phishing attacks and key loggers.
+这种认证方式常被应用在低风险的系统中。只需要提供一种因素来进行认证，通常是密码，所以特别容易受到钓鱼和键盘记录器攻击。
 
-In addition to this, a recent [article](https://dataprot.net/statistics/password-statistics/) by DataProt showed that  78% of Gen-Z people utilize the same password for multiple services. This means that if an attacker gained access to one user account, they have a high probability of gaining access to others by simply using the same password.
+除此之外，最近由DataProt发布的[文章](https://dataprot.net/statistics/password-statistics/)显示，有78%的Z时代青年在多个服务使用同一个密码。也就是说一旦攻击者得到一个账号的密码，就非常有可能通过同样的密码截获其他的服务账户。
 
-#### 2-Factor Authentication:
+#### 双因素认证：
 
-This method is more secure, as it comprises two factors of authentication – typically something you know, for example username and password , plus something you have / own, for example a phone SMS or a security token.
+这种方法更安全，因为它包含两个身份验证因素——通常是你知道的元素，例如用户名和密码，加上你拥有的东西，例如手机短信或安全令牌。
 
-For 2-factor authentication, you would enter a one-time SMS password sent to your device, or perhaps a linked authenticator app code and provide an ever-changing access code.
+双因素身份验证流程是，你输入发送到设备的一次性SMS密码，或者是链接一段身份验证器应用程序代码，并提供不断变化的访问代码。
 
-As you can imagine, this is a lot more secure than simply entering a password, or a single authentication credential. You would need to know the login credentials, as well as have access to the physical device for the second part.
+如你所想，这比简单地输入密码或单个身份验证凭据要安全得多。你需要知道登录凭据，并有权访问第二部分的物理设备（上文中的手机等）。
 
-2-factor authentication has become very common amongst online services in recent years, and with many large companies it is the default authentication method. Many require that you setup 2-factor auth in order to even utilize the service.
+近年来，双因素身份验证在在线服务中变得非常普遍，并且是许多大公司默认的身份验证方法。许多应用要求你设置双因素身份验证才能使用该服务。
 
-#### Multi-Factor Authentication:
+#### 多因素身份认证:
 
-Going one step further to make your authentication process even more secure is having 3 or more factors. This form of authentication usually works on the premise of:
+进一步让身份验证更加安全的方式是使用3个或者更多因素。这种形式的身份验证通常需要以下前提：
 
--   something you know (username + password or a username + security question and answer)
--   something you have (mobile phone sms, authenticator app, USB key)
--   something you are (like a fingerprint / face recognition)
+-   你知道的元素 (用户名 + 密码或者用户名 + 安全问题及答案)
+-   你拥有的元素 (手机sms卡, 验证应用, USB密钥)
+-   属于你的元素 (指纹 / 人脸识别)
 
-For these reasons, multi-factor authentication offers the most protection, as you would need to compromise multiple factors, and these factors are a lot more difficult to "hack" or replicate.  
+由于以上原因，多因素身份验证提供最强大的保护，你必须满足多个因素才能够通过验证，而这些因素通常非常难以被“黑掉”或者造假。
   
-The downside to this method of authentication, and the reason it's not utilized in many average systems, is it can be cumbersome to setup and maintain. So the data / system you're protecting really has to justify the need for such security.
+这种认证方式的弊端，也就是为什么普通公司通常不使用这样的认证系统，是因为设置和维护这样的系统十分复杂。所以你想要保护的系统或者数据若想要采取这种方式的话需要做好利弊的权衡。
 
-## So, How Much Information Do You Need to Authenticate?
+## 所以，我们需要认证多少信息？
 
-This question comes up at many security architecture meetings, and the answer is "_it depends_".
+许多安全架构会议都会讨论这个问题，答案是"_因人而异_"。
 
-It is not unusual for companies to combine various authentication methods to increase security based on the nature of application.
+公司根据应用的特性来结合多种认证方式以提高安全性的例子并不少见。
 
-For example, take a banking app. It contains very sensitive information, and could have a huge financial and reputational impacts should it be obtained by the wrong person. The bank may combine personal questions to be answered, along with a customer number and complex password.
+以银行应用为例，这类应用包含了高敏感信息，如果被恶意利用将造成重大的财政和信用影响。银行通常会结合个人问题以及客户号码还有复杂的密码一起验证身份。
 
-On the other hand, for a social media site, you might only require a username and password, which is then checked and verified before allowing access.
+但对于社交媒体网站，你可能只需要提供用户名和密码就可以通过检验并访问网站。
 
 ![Auth_Process-1](https://www.freecodecamp.org/news/content/images/2022/09/Auth_Process-1.png)
 
-It's all about the level of risk involved and what information someone can access once they're in the application. This helps determine the level of authentication you need.
+认证级别的选择主要是由风险的程度以及在应用中用户可以访问的区域而决定的。
 
-If you or your team underestimates the level of authentication your app needs, you could be prosecuted for not securing the data within your system adequately. So companies employee security specialists to advise on best practices and appropriate solutions.
+如果你或团队低估了应用程序所需的身份验证级别，你可能会因未充分保护系统内的数据而受到起诉。因此，公司雇用安全专家就最佳实践和适当的解决方案提供建议。
 
-## How Does Authentication Work in the Real World?
+## 现实世界中，认证是如何运作的？
 
-Let's take an example of a social media account. You choose your favorite social media site (which is hosted on a server). The server will ask you to provide credentials to access the site via a sign in page. Here you would type in your username and password that you used when creating the account.
+让我们以社交媒体账号为例。你选择登陆你最喜欢的社交媒体网站（部署在某个服务器上）。在登陆页面，服务器会要求你提供凭证来访问网站，你可以在这里输入你的用户名和密码，这些信息是你在创建账号的时候创建。
 
 ![server-process-2](https://www.freecodecamp.org/news/content/images/2022/09/server-process-2.png)
 
-Image showing the authentication process
+展现认证过程的图片
 
-These details are then sent to the server, and the authentication process begins. The details you provided are verified and checked in the server's database, and if they match the details on record you are authenticated. Then you're provided with a form of identification data, for example a cookie or Json Web Token (JWT token).
+这些数据会发送到服务器，然后认证的过程就开始了。服务器数据库会检查验证你提供的信息，如果检验一致，你就通过认证。然后你得到一种身份识别数据，例如cookie或者JSON Web令牌（JWT令牌）。
 
-Success! You have accessed the site and are given entry.
+成功！你通过的认证，并且可以访问网站了。
 
-You can learn more about JWT tokens in another FreeCodeCamp article by Beau Carnes [here](https://www.freecodecamp.org/news/what-are-json-web-tokens-jwt-auth-tutorial/).
+你可以在freeCodeCamp跟着Beau Carnes学习更多JWT令牌的内容。[点击这里](https://www.freecodecamp.org/news/what-are-json-web-tokens-jwt-auth-tutorial/)。
 
-Next, let's look at authorization.
+接下来让我们看一看什么是授权。
 
-## What is Authorization?
+## 什么是授权?
 
-Authorization, is the process of verifying that you're **allowed** to access an area of an application or perform specific actions, based on certain criteria and conditions put in place by the application. You may also hear it called access control or privilege control.
+授权指的是你被 **允许** 访问应用的某个区域或者运行特定的行为，允许是建立在应用的特定标准和条件下的。它也被称为访问控制或者权限控制。
 
-Authorization can either grant or deny permission to carry out tasks, or access areas of an application.
+授权可以授予或者拒绝执行任务、访问应用某些区域的权利。
 
-Let's look at an example:
+让我们看个例子：
 
-We've gained access to the social media site, but what we're allowed to do there depends on what we're authorized to to do.
+我们已经可以访问社交媒体网站了，但是我们能够在网站做什么是由我们被授权的内容决定的。
 
-If we try to access someone's profile that we're not friends with (they've not accepted our connection request), we're not **authorized** to view their profile. This means that we are denied permission to view their shared posts.
+如果我们尝试去访问非好友的页面（他们不接受我们的连接请求），我们就未被 **授权** 查看他们的页面。 这就意味着我们被拒绝查看他们的发布的帖子。
 
 ![Basic Authorisation Process](https://www.freecodecamp.org/news/content/images/2022/09/auth-process2-1.png)
 
-Image of authorization flow
+授权流程示意图
 
-### How to Implement Authorization
+### 如何执行授权
 
-There are many ways you can implement authorization depending on the frameworks you are using.
+根据框架的不同，你可以选择不同的执行授权的方式。
 
-Within the .NET framework, for example, you could use role-based access control, or claims-based access control.
+例如在.NET框架中，你可以使用基于角色的访问控制或者基于声明的访问控制。
 
-Role-based access control is centered around the ideology that each user within your system is assigned a role. These roles have predefined permissions associated with them. Being granted a role means that user will automatically inherit all these permissions. The roles are assigned at time of user creation and setup.
+基于角色的访问控制的核心是，在你的系统中每个用户都被分配了一个角色。这些角色有与之相关的预定义的权限。被授予一个角色意味着用户将自动继承所有这些权限。角色是在用户创建和设置时分配。
 
-The endpoint or site simply then checks if the current logged-in user has the role of Admin when attempting to access the admin area.
+若用户尝试访问管理区域，终端或者网站检查当前已登陆的用户是否为管理角色(Admin)。
 
-The downside to this approach is that sometimes users are granted too many permissions that they don't need or shouldn't have.
+这种方式的弊端是有时候用户被赋予了过多没有必要的权利。
 
-For example, giving a user the role of `Admin` may mean they would have been given`Advanced Create`, `Edit`, `Delete`, and `View` user privileges. Whereas, you may want to only give them `View` and `Basic Create` permissions.
+例如，授予用户 `Admin`（管理角色），意味着给予他`Advanced Create`（高级创建）、 `Edit`（编辑）、 `Delete`（删除）以及`View` （查看）等特权，但你可能指向给予他`View`（查看）和 `Basic Create`（基础创建）的权利。
 
-Claims-based access control can allow for finer tuning of a specific user's permissions. The application can either check that the claim simply exists on a user, or whether a particular value is assigned to the claim.
+基于声明的访问控制可以允许对特定用户的权限进行更精细的调整。应用程序可以检查声明是否仅存在于用户身上，或者是否为声明分配了特定值。
 
-As an example, a claim called `CreateUser` could be given to a user, and this is checked when creating a user. Or you could assign a value of `Advanced` to the same claim, and then have different actions and user interface available depending whether the value was `Advanced` or `Basic`.
+例如，当创建用户时，一个被称作`CreateUser`的声明被赋予给用户。你也可以将`Advanced`变量赋予同一个声明，就可以根据变量到底是 `Advanced` 还是`Basic`来决定不同的行为的交互。
 
-## What's the Difference between Authentication and Authorization?
+## 认证和授权的区别是什么？
 
-So now that we have a better understanding of the terms, let's look at a scenario you may be familiar with that involves both processes.
+现在我们已经更了解这两个术语，让我们通过一个你可能熟悉的场景来深入理解他们的区别。
 
-At a dinner party with an exclusive guest list, each guest is given a nickname and a secret password.
+在拥有专属宾客名单的晚宴上，每位宾客都会获得一个昵称和一个密码。
 
-Upon arrival, a security guard asks you for your nickname and secret password. They then **authenticate** your credentials against the list they have. If your credentials match, you are handed an envelope showing you've been allowed in.
+当你到达宴会门口的时候，一个安保会要求你提供昵称和密码，然后他们通过清单**认证** 你的凭证。如果信息匹配，就递给你一个信封，告知你可以进入宴会。
 
-Once inside you are allowed to access the party and public areas of the venue as these require no **authorization** _(_everyone has the permission to enjoy the party). However, you then want to visit the VIP area.
+一旦被宴会准入，你就可以自由访问宴会的任意公共领域和场馆，因为这些地区不需要**授权** (每一个都有权享受宴会)。 但是，你或许想要瞧一瞧VIP区域。
 
-As you approach, another security personnel asks to open your envelope (your permissions and roles). They take a look but unfortunately you do not have the VIP role, and therefore are not **authorized** to access.‌‌‌‌Put as simply as possible, authentication verifies the identity of a user or service allowing access, whereas authorization determines what they can do once they're in.
+当你靠近VIP区域的时候，另一个安保要求你打开信封（你的权限和角色）。他们查看之后，发现你不具备VIP资格。这样你就未被**授权** 访问。简言之，身份验证查验用户身份或者可以访问的服务，而授权确定他们进入后可以做什么。
 
-## Why Should You Implement Both Authentication and Authorization?
+## 为什么要同时实现身份验证和授权？
 
-As you can see, although authentication and authorization are very different, each plays an integral part in the security and integrity of the application or system.
+如你所见，尽管身份验证和授权非常不同，但它们都在应用程序或系统的安全性和完整性方面发挥着不可或缺的作用。
 
-These processes go hand in hand, and without one the other is kind of meaningless. If you can gain access to the Admin area, but do whatever you want once in there, it could lead to big problems.
+他们是相互依存，共同发挥作用的。如果你可以访问管理区域，但是一旦进入你就任意妄为，这可能会导致大麻烦。
 
-On the other hand, you can't authorize individuals without knowing who they are! Which is why authentication always comes before authorization.
+另一方面，不能在不知道他是谁的情况下授权个人！这就是为什么身份验证总是在授权之前进行的原因。
 
-## Closing Thoughts
+## 结束语
 
-I hope this has been insightful and you now have a clearer understanding of the differences between Authorization and Authentication, and how to use them.
+希望这篇文章对你有所启发，并且让你对认证和授权有了更清晰的理解，以及知道如何使用他们：
 
-Remember:
+请记住：
 
--   Authenticate =  Verifies the identity of a user or process.
--   Authorize = Determines if the user / system has permission to use a resource or carry out an action.
+-   认证 =  验证用户身份或进程。
+-   授权 = 确定用户/系统是否有权使用资源或执行操作。
 
-Feel free to get in touch via Twitter if you wish to discuss this article in more detail [@gweaths](http://twitter.com/gweaths).
+如果你想要和我讨论更多本文相关内容，欢迎在Twiiter上找到我！[@gweaths](http://twitter.com/gweaths)

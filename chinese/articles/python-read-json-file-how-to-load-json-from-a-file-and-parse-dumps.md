@@ -9,46 +9,46 @@
 
 ![Python Read JSON File – How to Load JSON from a File and Parse Dumps](https://www.freecodecamp.org/news/content/images/size/w2000/2020/08/Read-JSON-image.png)
 
-Welcome! If you want to learn how to work with JSON files in Python, then this article is for you.
+欢迎！如果您想学习如何在Python中和JSON文件交互，那么本文适合你。
 
-**You will learn:**
+**你将学习：**
 
--   Why the JSON format is so important.
--   Its basic structure and data types.
--   How JSON and Python Dictionaries work together in Python.
--   How to work with the Python built-in  `json` module.
--   How to convert JSON strings to Python objects and vice versa.
--   How to use `loads()` and `dumps()`
--   How to indent JSON strings automatically.
--   How to read JSON files in Python using `load()`
--   How to write to JSON files in Python using `dump()`
--   And more!
+-   为什么JSON格式如此重要。
+-   json的基本结构和数据类型。
+-   JSON和字典如何在Python中协同工作。
+-   如何使用Python内置的`json`模块。
+-   如何将JSON字符串转换为Python对象，反之亦然。
+-   如何使用`loads()`和`dumps()`。
+-   如何让JSON字符串自动缩进。
+-   如何在Python中使用`load()`读取JSON文件。
+-   如何在Python中使用`dump()`将JSON字符串写入文件。
+-   以及更多！
 
-Are you ready? Let's begin! ✨
+准备好了吗？让我们开始！ ✨
 
-## 🔹 Introduction: What is JSON?
+## 🔹 介绍：什么是JSON？
 
 ![image-98](https://www.freecodecamp.org/news/content/images/2020/10/image-98.png)
 
-The JSON format was originally inspired by the syntax of JavaScript (a programming language used for web development). But since then it has become a **language-independent data format** and most of the programming languages that we use today can generate and read JSON.
+JSON格式的产生最初是受到JavaScript（一种用于web开发的编程语言）语法的启发，但在那之后，它成为一种**独立于语言的数据格式**，并且今天我们所使用的大多数编程语言都可以生成和读取JSON。
 
-### Importance and Use Cases of JSON
+### JSON的重要性和使用例子
 
-JSON is basically a format used to store or represent data. Its common use cases include web development and configuration files.
+基本上，JSON是一种用于存储或表示数据的格式。它的常见用例包括web开发和配置文件。
 
-Let's see why:
+让我们看看原因：
 
--   **Web Development:** JSON is commonly used to send data from the server to the client and vice versa in web applications.
+-   **Web开发：**在Web应用程序中，通常用JSON从服务端向客户端发送数据，反之亦然。
 
 ![image-65](https://www.freecodecamp.org/news/content/images/2020/10/image-65.png)
 
--   **Configuration files:** JSON is also used to store configurations and settings. For example, to create a [Google Chrome App](https://developer.chrome.com/apps/first_app#one), you need to include a JSON file called `manifest.json` to specify the name of the app, its description, current version, and other properties and settings.  
+-   **配置文件：**JSON还用于存储配置和设置信息。例如，要创建[Google Chrome App](https://developer.chrome.com/apps/first_app#one)，则需要一个名为`manifest.json`的JSON文件，用于指定应用程序的名称、描述、当前版本以及其它属性和设置。
 
 ![image-99](https://www.freecodecamp.org/news/content/images/2020/10/image-99.png)
 
-## 🔸 JSON Structure and Format
+## 🔸 JSON的结构和格式
 
-Now that you know what the JSON format is used for, let's see its basic structure with an example that represents the data of a pizza order:
+既然已经知道了JSON的用途，那么让我们通过一个比萨饼订单数据的示例来看看它的基本结构：
 
 ```JSON
 { 
@@ -65,20 +65,20 @@ Now that you know what the JSON format is used for, let's see its basic structur
 }
 ```
 
-Sample .json file
+上面是示例的sample.json文件
 
-These are the main characteristics of the JSON format:
+以下是JSON格式的主要特征：
 
--   There is a sequence of key-value pairs surrounded by curly brackets `{}`.
--   Each key is mapped to a particular value using this format:
+-   有一系列用花括号`{}`括起来的键-值对。
+-   每个键都使用以下格式映射到特定值：
 
 ```
 "key": <value> 
 ```
 
-💡 **Tip:** The values that require quotes have to be surrounded by double quotes.
+💡 **提示：**`value`的内容必须用双引号括起来。
 
--   Key-value pairs are separated by a comma. Only the last pair is not followed by a comma.
+-   键-值对用逗号分隔，只有最后一对后面可以不加逗号。
 
 ```JSON
 {
@@ -87,46 +87,46 @@ These are the main characteristics of the JSON format:
 }
 ```
 
-💡 **Tip:** We typically format JSON with different levels of indentation to make the data easier to read. In this article, you will learn how to add the indentation automatically with Python.
+💡 **提示：**我们通常使用不同级别的缩进来格式化JSON，以使数据更易于阅读。在本文中，你将学习如何使用Python自动添加缩进。
 
-### JSON Data Types: Keys and Values
+### JSON数据类型：键和值
 
-JSON files have specific rules that determine which data types are valid for keys and values.
+JSON文件具有特定规则，其用于确定哪些数据类型是有效的键和值。
 
--   **Keys** must be strings.
--   **Values** can be either a string, a number, an array, a boolean value (`true`/ `false`), `null`, or a JSON object.
+-   **键**必须是字符串。
+-   **值**可以是字符串、数字、数组、布尔值（`true`/`false`）、`null`或JSON对象。
 
-According to the [Python Documentation](https://docs.python.org/3/library/json.html#json.dumps):
+根据[Python文档](https://docs.python.org/3/library/json.html#json.dumps)：
 
-> Keys in key/value pairs of JSON are always of the type [`str`](https://docs.python.org/3/library/stdtypes.html#str). When a dictionary is converted into JSON, all the keys of the dictionary are coerced to strings.
+> JSON的键/值对中的键始终是[`str`类型](https://docs.python.org/3/library/stdtypes.html#str)。当字典转换为JSON时，字典中的所有键都被强制转换为字符串。
 
-### Style Guide
+### 风格指南
 
-According to the [Google JSON Style Guide](https://google.github.io/styleguide/jsoncstyleguide.xml):
+根据[Google JSON Style Guide](https://google.github.io/styleguide/jsoncstyleguide.xml)：
 
--   Always choose meaningful names.
--   Array types should have plural key names. All other key names should be singular. For example: use `"orders"` instead of `"order"` if the corresponding value is an array.
--   There should be no comments in JSON objects.
+-   始终使用有意义的名称。
+-   数组类型的值对应的键名应使用复数形式，所有其它键名应为单数形式。例如：如果对应的值是数组，请使用`orders`而不是`order`。
+-   JSON数据中不应该有注释。
 
-## 🔹 JSON vs. Python Dictionaries
+## 🔹 JSON vs. Python Dictionaries（字典数据类型）
 
-JSON and Dictionaries might look very similar at first (visually), but they are quite different. Let's see how they are "connected" and how they complement each other to make Python a powerful tool to work with JSON files.
+JSON和字典从显示形式来看可能非常相似，但它们有很大的不同。让我们看看它们是如何“连接（译者：这里意思应该是它们之间的关系）”，以及如何相互补充，来使得Python成为处理JSON文件的强大工具。
 
-JSON is a file format used to represent and store data whereas a Python Dictionary is the actual data structure (object) that is kept in memory while a Python program runs.
+JSON是用于表示和存储数据的文件格式，而Python字典是Pythons程序运行时保存在内存中的实际数据结构（对象）。
 
-### How JSON and Python Dictionaries Work Together
+### JSON和Python字典如何协同工作
 
 ![image-100](https://www.freecodecamp.org/news/content/images/2020/10/image-100.png)
 
-When we work with JSON files in Python, we can't just read them and use the data in our program directly. This is because the entire file would be represented as a single string and we would not be able to access the key-value pairs individually.
+当我们在Python中处理JSON文件时，我们不能直接读取数据并在程序中使用它，这是因为整个文件被表示为单个字符串，我们无法单独访问键值对。
 
-Unless...
+除非······
 
-We use the key-value pairs of the JSON file to create a Python dictionary that we can use in our program to read the data, use it, and modify it (if needed).
+我们使用JSON文件的键-值对创建一个Python字典，这样我们就可以在程序中使用它来读取、使用和修改（如果需要的话）数据。
 
-This is the main connection between JSON and Python Dictionaries. JSON is the string representation of the data and dictionaries are the actual data structures in memory that are created when the program runs.
+这是JSON和Python字典之间的“联系”：JSON是数据的字符串表示，字典是程序运行时在内存中创建的实际数据结构。（译者：字典转换为JSON叫序列化，反之为反序列化）
 
-Great. Now that you know more about JSON, let's start diving into the practical aspects of how you can work with JSON in Python.
+很好，既然你已经对JSON有足够多的了解，那么让我们开始深入了解实际情况中如何在Python里使用JSON的。
 
 ## 🔸 The JSON Module
 

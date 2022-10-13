@@ -1,6 +1,6 @@
 > -  原文地址：[What is the DOM? A Behind-the-Scenes Guide](https://www.freecodecamp.org/news/what-is-dom-in-javascript/)
 > -  原文作者：[Kedar Makode](https://www.freecodecamp.org/news/author/kedar/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What is the DOM? A Behind-the-Scenes Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/What-is-DOM-and-Events--in-JavaScipt--2-.png)

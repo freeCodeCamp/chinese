@@ -51,7 +51,7 @@ Web2 非常简单，正因为它的简单让越来越多的人更容易地成为
 
 当开发人员或公司发布了流行的应用程序时，既然该应用程序的受欢迎程度能不断提高，用户体验通常是非常流畅的。这就是他们能够迅速获得吸引力的主要原因。
 
-起初，许多软件公司并不担心变现问题。他们完全专注于增长和锁定新用户————但最终他们必须开始盈利。
+起初，许多软件公司并不担心变现问题。他们完全专注于增长和锁定新用户———但最终他们必须开始盈利。
 
 他们还需要考虑外部投资者的作用。通常，风险投资等的注入会限制我们今天使用的许多应用程序的生命周期，并且最终对用户体验产生负面影响。
 
@@ -106,19 +106,17 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 在这种情况下，就像许多类型的去中心化模式一样，你不会再看到那些不必要且通常效率低下的中间媒介了。
 
-Many web infrastructure protocols like [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/), [Livepeer](https://livepeer.com/), [Arweave](https://www.arweave.org/), and [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics) (which is what I work with at Edge & Node) have issued utility tokens that govern how the protocol functions. These tokens also reward participants at many levels of the network. Even native blockchain protocols like [Ethereum](https://ethereum.org/en/) operate in this manner.
-
 许多网络基础设施协议，如 [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/)、[Livepeer](https://livepeer.com/)、[Arweave](https://www .arweave.org/) 和 [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics)（我在 Edge & Node 做的就是这个）已发行使用代币管理协议的功能。这些代币还会奖励给网络多个级别的参与者。 甚至像 [Ethereum](https://ethereum.org/en/) 这样的原生区块链协议也以这种方式运行。
 
-### **Native payments**
+### **原生支付**
 
-Tokens also introduce a native payment layer that is completely borderless and frictionless. Companies like Stripe and Paypal have created billions of dollars of value in enabling electronic payments.
+代币还引入了完全无边界且相当流畅的原生支付层。 Stripe 和 Paypal 等公司在电子支付方面已经创造了数十亿美元的价值。
 
-These systems are overly complex and still do not enable true international interoperability between participants. They also require you to hand over your sensitive information and personal data in order to use them.
+这些系统过于复杂，仍然无法在参与者之间实现真正的国际间操作。 他们还需要你交出你的敏感信息和个人数据才能使用它们。
 
-Crypto [wallets](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/) like [MetaMask](https://metamask.io/) and [Torus](https://toruswallet.io/) enable you to integrate easy, anonymous, and secure international payments and transactions into web3 applications.
+加密 [钱包](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/) 比如 [MetaMask](https://metamask.io/) 和 [Torus](https://toruswallet.io/) 将简单、匿名和安全的国际支付和交易集成在 Web3 应用中，使你能更便捷地使用这些功能。
 
-Networks like Solana offer several hundred digit millisecond latency and transaction costs of a small fraction of a penny. Unlike the current financial system, users do not have to go through the traditional numerous, friction-filled steps to interact with and participate in the network. All they need to do is download or install a wallet, and they can start sending and receiving payments without any gatekeeping.
+使用像 Solana 这样的网络进行交易，只需几百毫秒的等待时间和一美分的几分之一的交易成本。 与当前的金融系统不同，用户不必通过传统的那些复杂步骤来与网络进行交互。他们需要做的就是下载或安装一个钱包，他们就可以开始发送和接收付款，而无需任何守门人。
 
 ### **A new way of building companies**
 

@@ -79,7 +79,6 @@ Web3 旨在通过从根本上重新思考我们如何从头开始构建应用程
 
 web2 和 web3 之间存在一些根本的差异，但去中心化是其核心。
 
-Web3 enhances the internet as we know it today with a few other added characteristics. web3 is:
 Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 - 可验证的
@@ -118,15 +117,15 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 使用像 Solana 这样的网络进行交易，只需几百毫秒的等待时间和一美分的几分之一的交易成本。 与当前的金融系统不同，用户不必通过传统的那些复杂步骤来与网络进行交互。他们需要做的就是下载或安装一个钱包，他们就可以开始发送和接收付款，而无需任何守门人。
 
-### **A new way of building companies**
+### **创立公司的新方式**
 
-Tokens also brings about the idea of tokenization and the realization of a [token economy](https://www.oreilly.com/library/view/what-is-the/9781492072973/ch01.html).
+代币也带来了代币化的思想和[代币经济]的实现(https://www.oreilly.com/library/view/what-is-the/9781492072973/ch01.html)。
 
-Take, for example, the current state of building a software company. Someone comes up with an idea, but in order to start building they need money in order to support themselves.
+以创立一家软件公司为例。有人提出了一个想法，但为了开始实施，他们需要资金支持。
 
-To get the money, they take on venture capital and give away a percentage of the company. This investment immediately introduces mis-aligned incentives that will, in the long run, not align well with building out the best user experience.
+为了赚钱，他们接受了风险投资并将公司的一部分作为抵押。这项投资立即引入了与原来的目标不一致的激励措施，从长远来看，这些激励措施与构建最佳用户体验并不相符。
 
-Also, if the company ever does become successful, it will take a very long time for anyone involved to realize any of the value, often leading to years of work without any real return on investment.
+此外，如果公司真的成功了，任何参与其中的人都需要很长时间才能价值变现，这通常会导致工作多年而没有任何真正的投资回报。
 
 Imagine, instead, that a new and exciting project is announced that solves a real problem. Anyone can participate in building it or investing in it from day one. The company announces the release of x number of tokens, and give 10% to the early builders, put 10% for sale to the public, and set the rest aside for future payment of contributors and funding of the project.
 

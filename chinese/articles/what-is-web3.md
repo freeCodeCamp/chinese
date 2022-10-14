@@ -29,7 +29,7 @@ Web 1.0 时期的网站是由静态网页组成的，并没有动态的html。�
 
 我们大多数人主要经历的互联网就是 Web 2.0。你可以把它当作用来互动与社交的网络。
 
-在 Web 2.0 的世界里，你不需要成为一名开发者才能参与创作。 许多应用程序的出现让任何人都能轻松地成为内容创作者。
+在 Web 2.0 的世界里，你不需要成为一名开发者才能参与创作。许多应用程序的出现让任何人都能轻松地成为内容创作者。
 
 你可以制作并且向世界分享你的所思所想。你也可以上传一个视频，让成千上万的人看到它，并产生交流和互动评论。
 
@@ -43,7 +43,7 @@ Web 2.0 非常简单，正因为它的简单让越来越多的人更容易地成
 
 #### **应用变现**
 
-想象一下 Instagram、Twitter、LinkedIn 或 YouTube 等流行应用程序的早期阶段，以及如今的它们和当初有多么不同。 这个变化过程通常是这样的：
+想象一下 Instagram、Twitter、LinkedIn 或 YouTube 等流行应用程序的早期阶段，以及如今的它们和当初有多么不同。这个变化过程通常是这样的：
 
 1. 公司推出应用
 2. 它可以吸引尽可能多的用户
@@ -53,27 +53,27 @@ Web 2.0 非常简单，正因为它的简单让越来越多的人更容易地成
 
 起初，许多软件公司并不担心变现问题。他们完全专注于增长和锁定新用户————但最终他们必须开始盈利。
 
-他们还需要考虑外部投资者的作用。 通常，风险投资等的注入会限制我们今天使用的许多应用程序的生命周期，并且最终对用户体验产生负面影响。
+他们还需要考虑外部投资者的作用。通常，风险投资等的注入会限制我们今天使用的许多应用程序的生命周期，并且最终对用户体验产生负面影响。
 
 如果一家构建应用程序的公司接受风险投资，其投资者通常期望获得数十或数百倍的投资回报。
 
 这意味着，公司通常无法采用原生的可持续增长模式，而是经常被推向两条路径：广告投放或出售个人数据。
 
-对于谷歌、Facebook、Twitter 等许多 web2 公司来说，更多的数据会带来更个性化的广告。 这会带来更多的点击量，并最终带来更多的广告收入。 用户数据的开发利用和集中处理是我们今天所知所用的网络如何运行的核心。
+对于谷歌、Facebook、Twitter 等许多 web2 公司来说，更多的数据会带来更个性化的广告。这会带来更多的点击量，并最终带来更多的广告收入。用户数据的开发利用和集中处理是我们今天所知所用的网络如何运行的核心。
 
-#### **Security and privacy**
+#### **安全与隐私**
 
-Web2 applications repeatedly experience [data breaches](https://en.wikipedia.org/wiki/List_of_data_breaches). There are even [websites](https://haveibeenpwned.com/) dedicated to keeping up with these breaches and telling you when your data has been compromised.
+Web2 应用程序反复经历[数据泄露](https://en.wikipedia.org/wiki/List_of_data_breaches)。 甚至有 [网站](https://haveibeenpwned.com/) 致力于追踪这些违规行为，并在你的数据遭到泄漏时告诉你。
 
-In web2, you don’t have any control over your data or how it is stored. In fact, companies often track and save user data without their users' consent. All of this data is then owned and controlled by the companies in charge of these platforms.
+在 web2 的世界中，你无法控制你的数据或数据的存储方式。事实上，公司经常在未经用户同意的情况下跟踪和保存用户数据。然后，所有这些数据都由负责这些平台的公司拥有和控制。
 
-Users who live in countries where they have to worry about the negative consequences of free speech are also at risk.
+生活在担心言论自由会产生负面影响的国家的用户也处于危险之中。
 
-Governments will often shut down servers or seize bank accounts if they believe a person is voicing an opinion that goes against their propaganda. With centralized servers, it is easy for governments to intervene, control, or shut down applications as they see fit.
+如果政府认为有人发表了与他们的宣传相悖的观点，政府通常会关闭服务器或没收银行账户。借助集中式服务器，政府可以轻松干预、控制或关闭相应的应用程序。
 
-Because banks are also digital and under centralized control, governments often intervene there as well. They can shut down access to bank accounts or limit access to funds during times of volatility, extreme inflation, or other political unrest.
+由于银行也是数字化的并且处于集中控制之下，政府也经常对其进行干预。在动荡、极端通货膨胀或其他政治不稳定时期，他们可以关闭对银行账户的访问或限制资金的使用。
 
-Web3 aims to solve many of these shortcomings by fundamentally rethinking how we architect and interact with applications from the ground up.
+Web3 旨在通过从根本上重新思考我们如何从头开始构建应用程序并与应用程序交互，来解决上述的这些缺点。
 
 ## **What is Web 3.0?**
 

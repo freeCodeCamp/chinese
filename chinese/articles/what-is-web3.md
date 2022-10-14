@@ -29,11 +29,11 @@ Web 1.0 时期的网站是由静态网页组成的，并没有动态的html。�
 
 我们大多数人主要经历的互联网就是 Web 2.0。你可以把它当作用来互动与社交的网络。
 
-在 Web 2.0 的世界里，你不需要成为一名开发者才能参与创作。许多应用程序的出现让任何人都能轻松地成为内容创作者。
+在 Web2 的世界里，你不需要成为一名开发者才能参与创作。许多应用程序的出现让任何人都能轻松地成为内容创作者。
 
 你可以制作并且向世界分享你的所思所想。你也可以上传一个视频，让成千上万的人看到它，并产生交流和互动评论。
 
-Web 2.0 非常简单，正因为它的简单让越来越多的人更容易地成为创作者。
+Web2 非常简单，正因为它的简单让越来越多的人更容易地成为创作者。
 
 互联网当前的形式在各方面都非常出色，但在某些领域我们还有很多提升空间。
 
@@ -63,7 +63,7 @@ Web 2.0 非常简单，正因为它的简单让越来越多的人更容易地成
 
 #### **安全与隐私**
 
-Web2 应用程序反复经历[数据泄露](https://en.wikipedia.org/wiki/List_of_data_breaches)。 甚至有 [网站](https://haveibeenpwned.com/) 致力于追踪这些违规行为，并在你的数据遭到泄漏时告诉你。
+Web2 应用程序反复经历[数据泄露](https://en.wikipedia.org/wiki/List_of_data_breaches)。 甚至有[网站](https://haveibeenpwned.com/)致力于追踪这些违规行为，并在你的数据遭到泄漏时告诉你。
 
 在 web2 的世界中，你无法控制你的数据或数据的存储方式。事实上，公司经常在未经用户同意的情况下跟踪和保存用户数据。然后，所有这些数据都由负责这些平台的公司拥有和控制。
 
@@ -75,37 +75,40 @@ Web2 应用程序反复经历[数据泄露](https://en.wikipedia.org/wiki/List_o
 
 Web3 旨在通过从根本上重新思考我们如何从头开始构建应用程序并与应用程序交互，来解决上述的这些缺点。
 
-## **What is Web 3.0?**
+## **什么是 Web 3.0?**
 
-There are a few fundamental differences between web2 and web3, but decentralization is at its core.
+web2 和 web3 之间存在一些根本的差异，但去中心化是其核心。
 
 Web3 enhances the internet as we know it today with a few other added characteristics. web3 is:
+Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
--   Verifiable
--   Trustless
--   Self-governing
--   Permissionless
--   Distributed and robust
--   Stateful
--   Native built-in payments
+- 可验证的
+- 免信任的
+- 自治的
+- 无需许可的
+- 分布式和健壮的
+- 有状态的
+- 原生内置支付
 
-In web3, developers don't usually build and deploy applications that run on a single server or that store their data in a single database (usually hosted on and managed by a single cloud provider).
+在 web3 中，开发人员通常不会将应用程序构建和部署在单个服务器上，或将其数据存储在单个数据库中（通常由某个云服务供应商托管）。
 
-Instead, web3 applications either run on blockchains, decentralized networks of many peer to peer nodes (servers), or a combination of the two that forms a [cryptoeconomic protocol](https://thegraph.com/blog/modeling-cryptoeconomic-protocols-as-complex-systems-part-1). These apps are often referred to as dapps (decentralized apps), and you will see that term used often in the web3 space.
+相反，web3 应用程序要么运行在区块链、有许多点对点节点（服务器）的去中心化网络上，要么运行在形成[加密经济协议](https://thegraph.com/blog/modeling-cryptoeconomic-protocols-as-complex-systems-part-1)的区块链和去中心化网络的组合上。这些应用程序通常被称为 dapps（去中心化应用程序），你会在 web3 里经常看到这个术语被使用。
 
-To achieve a stable and secure decentralized network, network participants (developers) are incentivized and compete to provide the highest quality services to anyone using the service.
+为了构建稳定和安全的去中心化网络，网络参与者（开发人员）受到激励并竞相为使用该服务的人们提供最优质的服务。
 
-When you hear about web3, you'll notice that cryptocurrency is often part of the conversation. This is because cryptocurrency plays a big role in many of these protocols. It provides a financial incentive (tokens) for anyone who wants to participate in creating, governing, contributing to, or improving one of the projects themselves.
+当你听说 web3 时，你会注意到加密货币通常是对话的一部分。这是因为加密货币会在大部分的协议中扮演重要角色。它为任何想要参与创建、管理、贡献或改进其中一个项目的人提供经济激励（代币）。
 
-These protocols may often offer a variety of different services like compute, storage, bandwidth, identity, hosting, and other web services commonly provided by cloud providers in the past.
+这些协议通常可以提供各种不同的服务，例如计算、存储、带宽、身份、托管以及过去通常由云服务供应商提供的其他 Web 服务。
 
-People can make a living by participating in the protocol in various ways, in both technical and non-technical levels.
+人们可以用各种方式、通过在技术和非技术层面参与协议来谋生。
 
-Consumers of the service usually pay to use the protocol, similarly to how they would pay a cloud provider like AWS today. Except in web3, the money goes directly to the network participants.
+该服务的消费者通常为使用该协议付费，类似于他们今天向 AWS 等云服务供应商付费的方式。 只是在 web3 中，钱直接流向网络参与者。
 
-In this, like in many forms of decentralization, you'll see that unnecessary and often inefficient intermediaries are cut out.
+在这种情况下，就像许多类型的去中心化模式一样，你不会再看到那些不必要且通常效率低下的中间媒介了。
 
 Many web infrastructure protocols like [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/), [Livepeer](https://livepeer.com/), [Arweave](https://www.arweave.org/), and [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics) (which is what I work with at Edge & Node) have issued utility tokens that govern how the protocol functions. These tokens also reward participants at many levels of the network. Even native blockchain protocols like [Ethereum](https://ethereum.org/en/) operate in this manner.
+
+许多网络基础设施协议，如 [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/)、[Livepeer](https://livepeer.com/)、[Arweave](https://www .arweave.org/) 和 [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics)（我在 Edge & Node 做的就是这个）已发行使用代币管理协议的功能。这些代币还会奖励给网络多个级别的参与者。 甚至像 [Ethereum](https://ethereum.org/en/) 这样的原生区块链协议也以这种方式运行。
 
 ### **Native payments**
 

@@ -105,7 +105,7 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 在这种情况下，就像许多类型的去中心化模式一样，你不会再看到那些不必要且通常效率低下的中间媒介了。
 
-许多网络基础设施协议，如 [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/)、[Livepeer](https://livepeer.com/)、[Arweave](https://www .arweave.org/) 和 [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics)（我在 Edge & Node 做的就是这个）已发行使用代币管理协议的功能。这些代币还会奖励给网络多个级别的参与者。 甚至像 [Ethereum](https://ethereum.org/en/) 这样的原生区块链协议也以这种方式运行。
+许多网络基础设施协议，如 [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/)、[Livepeer](https://livepeer.com/)、[Arweave](https://www.arweave.org/) 和 [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics)（我在 Edge & Node 做的就是这个）已发行使用代币管理协议的功能。这些代币还会奖励给网络多个级别的参与者。 甚至像 [Ethereum](https://ethereum.org/en/) 这样的原生区块链协议也以这种方式运行。
 
 ### **原生支付**
 
@@ -113,7 +113,7 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 这些系统过于复杂，仍然无法在参与者之间实现真正的国际间操作。 他们还需要你交出你的敏感信息和个人数据才能使用它们。
 
-加密[钱包](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/) 比如 [MetaMask](https://metamask.io/) 和 [Torus](https://toruswallet.io/) 将简单、匿名和安全的国际支付和交易集成在 Web3 应用中，使你能更便捷地使用这些功能。
+加密[钱包](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/)比如 [MetaMask](https://metamask.io/) 和 [Torus](https://toruswallet.io/) 将简单、匿名和安全的国际支付和交易集成在 Web3 应用中，使你能更便捷地使用这些功能。
 
 使用像 Solana 这样的网络进行交易，只需几百毫秒的等待时间和一美分的几分之一的交易成本。 与当前的金融系统不同，用户不必通过传统的那些复杂步骤来与网络进行交互。他们需要做的就是下载或安装一个钱包，他们就可以开始发送和接收付款，而无需任何守门人。
 

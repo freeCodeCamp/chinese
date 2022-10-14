@@ -37,29 +37,29 @@ Web 2.0 非常简单，正因为它的简单让越来越多的人更容易地成
 
 互联网当前的形式在各方面都非常出色，但在某些领域我们还有很多提升空间。
 
-### **Web 2.0 Monetization and Security**
+### **Web 2.0 变现与安全性**
 
-In the web2 world, many popular apps are following a common pattern in their life cycles. Think of some of the apps that you use on a daily basis, and how the following examples might apply to them.
+在 Web2 的世界里，大部分流行的应用在它们的生命周期中都遵循一个通用的模式。想一想你日常用的那些应用，以及以下示例如何适用于它们。
 
-#### **Monetization of Apps**
+#### **应用变现**
 
-Imagine the early days of popular applications like Instagram, Twitter, LinkedIn, or YouTube and how different they are today. The process usually goes something like this:
+想象一下 Instagram、Twitter、LinkedIn 或 YouTube 等流行应用程序的早期阶段，以及如今的它们和当初有多么不同。 这个变化过程通常是这样的：
 
-1.  Company launches an app
-2.  It onboards as many users as possible
-3.  Then it monetizes its user base
+1. 公司推出应用
+2. 它可以吸引尽可能多的用户
+3. 然后将其用户群体货币化/变现
 
-When a developer or company launches a popular app, the user experience is often very slick as the app continues rising in popularity. This is the reason they are able to gain traction quickly in the first place.
+当开发人员或公司发布了流行的应用程序时，既然该应用程序的受欢迎程度能不断提高，用户体验通常是非常流畅的。这就是他们能够迅速获得吸引力的主要原因。
 
-At first, many software companies do not worry about monetization. They strictly focus on growth and on locking in new users – but eventually they have to start turning a profit.
+起初，许多软件公司并不担心变现问题。他们完全专注于增长和锁定新用户————但最终他们必须开始盈利。
 
-They also need to consider the role of outside investors. Often the constraints of taking on things like venture capital negatively affect the life cycle, and eventually the user experience, of many applications that we use today.
+他们还需要考虑外部投资者的作用。 通常，风险投资等的注入会限制我们今天使用的许多应用程序的生命周期，并且最终对用户体验产生负面影响。
 
-If a company building an application takes in venture capital, its investors often expect a return on investment in the order of magnitude of tens or hundreds of what they paid in.
+如果一家构建应用程序的公司接受风险投资，其投资者通常期望获得数十或数百倍的投资回报。
 
-This means that, instead of going for some sustainable model of growth that they can sustain in a somewhat organic manner, the company is often pushed towards two paths: advertisements or selling personal data.
+这意味着，公司通常无法采用原生的可持续增长模式，而是经常被推向两条路径：广告投放或出售个人数据。
 
-For many web2 companies like Google, Facebook, Twitter, and others, more data leads to more personalized ads. This leads to more clicks and ultimately more ad revenue. The exploitation and centralization of user data is core to how the web as we know and use it today is engineered to function.
+对于谷歌、Facebook、Twitter 等许多 web2 公司来说，更多的数据会带来更个性化的广告。 这会带来更多的点击量，并最终带来更多的广告收入。 用户数据的开发利用和集中处理是我们今天所知所用的网络如何运行的核心。
 
 #### **Security and privacy**
 

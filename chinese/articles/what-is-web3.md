@@ -113,13 +113,13 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 这些系统过于复杂，仍然无法在参与者之间实现真正的国际间操作。 他们还需要你交出你的敏感信息和个人数据才能使用它们。
 
-加密 [钱包](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/) 比如 [MetaMask](https://metamask.io/) 和 [Torus](https://toruswallet.io/) 将简单、匿名和安全的国际支付和交易集成在 Web3 应用中，使你能更便捷地使用这些功能。
+加密[钱包](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/) 比如 [MetaMask](https://metamask.io/) 和 [Torus](https://toruswallet.io/) 将简单、匿名和安全的国际支付和交易集成在 Web3 应用中，使你能更便捷地使用这些功能。
 
 使用像 Solana 这样的网络进行交易，只需几百毫秒的等待时间和一美分的几分之一的交易成本。 与当前的金融系统不同，用户不必通过传统的那些复杂步骤来与网络进行交互。他们需要做的就是下载或安装一个钱包，他们就可以开始发送和接收付款，而无需任何守门人。
 
 ### **创立公司的新方式**
 
-代币也带来了代币化的思想和[代币经济]的实现(https://www.oreilly.com/library/view/what-is-the/9781492072973/ch01.html)。
+代币也带来了代币化的思想和[代币经济](https://www.oreilly.com/library/view/what-is-the/9781492072973/ch01.html)的实现。
 
 以创立一家软件公司为例。有人提出了一个想法，但为了开始实施，他们需要资金支持。
 

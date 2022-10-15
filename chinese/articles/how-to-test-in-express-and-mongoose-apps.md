@@ -1,53 +1,53 @@
-> -  原文地址：[How to Test Your Express.js and Mongoose Apps with Jest and SuperTest](https://www.freecodecamp.org/news/how-to-test-in-express-and-mongoose-apps/)
-> -  原文作者：[Rakesh Potnuru](https://www.freecodecamp.org/news/author/rakesh/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Test Your Express.js and Mongoose Apps with Jest and SuperTest](https://www.freecodecamp.org/news/how-to-test-in-express-and-mongoose-apps/)
+> - 原文作者：[Rakesh Potnuru](https://www.freecodecamp.org/news/author/rakesh/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Test Your Express.js and Mongoose Apps with Jest and SuperTest](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/how-to-write-tests.png)
 
-Testing is a vital part of software development. The sooner you start testing, the better.
+测试是软件开发的重要组成部分。 越早进行越好。
 
-In this article, I'll show you how to write tests for your NodeJs/ExpressJS and MongoDB/Mongoose applications with **Jest** and **Supertest**.
+在本文中，我将向您展示如何使用 **Jest** 和 **Supertest** 为您的 NodeJs/ExpressJS 和 MongoDB/Mongoose 应用程序编写测试。
 
-## Let's get started
+## 开始
 
-First let's set up a demo Express.js app.
+首先让我们做一个演示 Express.js 应用程序。
 
-Let's say we are building a backend REST API for an eCommerce application.
+假设我们正在为电子商务应用程序构建一个后端 REST API。
 
-This app should:
+这个应用程序：
 
--   Get all the products
--   Get a product by id
--   Add product(s) to the database
--   Delete product(s) from the database
--   Update product information
+- 获取所有产品
+- 通过 id 获取产品
+- 将产品添加到数据库
+- 从数据库中删除产品
+- 更新产品信息
 
-## Express.js App Set Up
+## Express.js 应用设置
 
-### Step 1: Project set up
+### Step 1: Project 设置
 
-First, create a folder and start a blank application with `npm`.
+首先，创建一个文件夹，用`npm`启动一个空白应用程序。
 
 ```bash
 npm init
 ```
 
-Fill all the details it asks for.
+填写它所要求的所有细节。
 
-Then, install `express`, `mongoose`, `axios` and `dotenv` with the following command:
+然后,通过下面的命令，安装 `express`, `mongoose`, `axios` 和 `dotenv`:
 
 ```bash
 npm i express mongoose axios dotenv
 ```
 
-Here's a link to the [package.json](https://github.com/itsrakeshhq/jest-tests-demo/blob/a1725cb3379f78a03cf8d3d4cfa22127469e8b50/package.json) on my GitHub.
+下面是我在 GitHub 上的[package.json](https://github.com/itsrakeshhq/jest-tests-demo/blob/a1725cb3379f78a03cf8d3d4cfa22127469e8b50/package.json)的一个链接。
 
-### Step 2: Create the boilerplate
+### Step 2: 创建模板
 
-Let's create all the folders and files and then fill them with some boilerplate code.
+让我们创建所有的文件夹和文件，然后用一些模板代码填充它们。
 
-This is how your folder hierarchy should look:
+你的文件夹层次结构应该是这样的:
 
 ```bash
 .
@@ -66,85 +66,85 @@ This is how your folder hierarchy should look:
 
 package.json
 
-Use these files' code by copying and pasting. Analyze the code and flow as best you can.
+通过复制和粘贴来使用这些文件的代码。你要尽可能地分析代码和流程。
 
--   `[product.controller.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/controllers/product.controller.js)`
--   `[product.model.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/models/product.model.js)`
--   `[product.route.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/routes/product.route.js)`
--   `[app.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/app.js)`
--   `[server.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/server.js)`
+- `[product.controller.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/controllers/product.controller.js)`
+- `[product.model.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/models/product.model.js)`
+- `[product.route.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/routes/product.route.js)`
+- `[app.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/app.js)`
+- `[server.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/server.js)`
 
-### Step 3: Database setup
+### Step 3: Database 设置
 
-I advise using two databases for a project—one for testing, the other for development. But just one database will be sufficient for learning purposes.
+我建议为一个项目使用两个数据库--一个用于测试，另一个用于开发。但对于学习来说，只用一个数据库就足够了。
 
-First, create a [MongoDB](https://mongodb.com) account or log in.
+首先，创建一个[MongoDB](https://mongodb.com)账户或登录。
 
-Then create a new project. Give it a name and press the **Next** button.
+然后创建一个新的项目。给它起个名字，然后按 **Next** 按钮。
 
 ![Naming the project](https://www.freecodecamp.org/news/content/images/2022/09/Screenshot-2022-09-26-205148.png)
 
-Naming the project
+为 project 命名
 
-Then click **Create Project** after that.
+然后点击 **Create Project**。
 
-We must create a database in the following window by selecting a cloud provider, a location, and specs. So press **Build a Database** to get going.
+我们必须在下面的窗口中通过选择一个云供应商、一个位置和规格来创建一个数据库。因此，按 **Build a Database** 就可以开始了。
 
 ![Build a database](https://www.freecodecamp.org/news/content/images/2022/09/Screenshot-2022-09-26-205911.png)
 
-Build a database
+创建一个 database
 
-Choose "Shared" because it is sufficient for learning purposes. And then click **Create**.
+选择 "Shared"，因为它足以满足学习目的。然后点击 **Create**。
 
 ![Choose a deployment option](https://www.freecodecamp.org/news/content/images/2022/09/Screenshot-2022-09-26-211701.png)
 
-Choose a deployment option
+选择部署选项
 
-Next, select "aws" as your cloud provider and the region that is closest to you. Following your selection, click **Create Cluster**.
+下来，选择 `aws` 作为你的云供应商，并选择离你最近的地区。在你选择之后，点击 **Create Cluster**。
 
-The cluster's formation will take some time. Create a user to access your database in the meanwhile.
+该集群的形成将需要一些时间。在此同时，创建一个用户来访问你的数据库。
 
 ![Create Superuser](https://www.freecodecamp.org/news/content/images/2022/09/Screenshot-2022-09-26-212537.png)
 
-Create Superuser
+创建 Superuser 用户
 
-Choose "My Local Environment" because we are developing our application. You can then add an IP addresses. To conclude, click **Close**.
+选择 "My Local Environment"，因为我们正在开发我们的应用程序。然后你可以添加一个 IP 地址。最后，点击**Close**。
 
 ![Add IP addresses](https://www.freecodecamp.org/news/content/images/2022/09/Screenshot-2022-09-26-213347.png)
 
-Add IP addresses
+添加 IP 地址
 
-You will receive a URI string after the database is set up, which we'll use to connect to the database. The string appears as follows:
+数据库建立后，你会收到一个 URI 字符串，我们将用它来连接数据库。该字符串显示如下:
 
 ```bash
 mongodb+srv://<YOUR_USERNAME>:<YOUR_PASSWORD>@<YOUR_CLUSTER_URL>/<DATABASE_NAME>?retryWrites=true&w=majority
 ```
 
-Put this string in the `.env` file.
+把这个字符串放在`.env`文件中。
 
 ```bash
 MONGODB_URI=your database string
 ```
 
-Now we're ready to start testing our app.
+现在我们准备开始测试我们的应用程序。
 
-## How to Write Tests with Jest and SuperTest
+## 如何用 Jest 和 SuperTest 编写测试
 
-### Step 1: Install packages
+### Step 1: 安装 npm 包
 
-You need three npm packages to begin writing tests: `jest`, `supertest`, and `cross-env`. You can install them like this:
+你需要三个 npm 包来开始编写测试。`jest`，`supertest`，和`cross-env`。你可以像这样安装它们。
 
 ```bash
 npm i jest supertest cross-env
 ```
 
--   `jest`: Jest is a framework for testing JavaScript code. Unit testing is the main usage of it.
--   `supertest`: Using Supertest, we can test endpoints and routes on HTTP servers.
--   `cross-env`: You can set environmental variables inline within a command using cross-env.
+- `jest`: Jest 是一个测试 JavaScript 代码的框架。单元测试是它的主要用途。
+- `supertest`: : 使用 Supertest，我们可以测试 HTTP 服务器上的端点和路由。
+- `cross-env`: 你可以使用 cross-env 在命令中内联设置环境变量。
 
-### Step 2: Add test script
+### Step 2: 添加测试命令
 
-Open your `package.json` file and add the test script to the scripts.
+打开你的`package.json`文件，将测试命令添加到脚本中。
 
 ```json
 "scripts": {
@@ -154,22 +154,20 @@ Open your `package.json` file and add the test script to the scripts.
 },
 ```
 
-Add test script
+在这个案例中，我们使用`cross-env`来设置环境变量，`jest`来执行测试套件，`testTimeout`被设置为`5000`，因为某些请求可能需要一段时间才能完成。
 
-In this case, we're using `cross-env` to set environment variables, `jest` to execute test suites, and `testTimeout` is set to `5000` because certain requests might take a while to finish.
+### Step 3: 开始编写测试代码
 
-### Step 3: Start writing tests
+首先，在应用程序的根目录下创建一个名为`tests`的文件夹，然后在那里创建一个名为`product.test.js`的文件。当你执行 `npm run test` 时，Jest 会在项目的根目录下搜索 `tests` 文件夹。因此，你必须将你的测试文件放在`tests`文件夹中。
 
-First, create a folder called `tests` at the application's root, and then create a file there called `product.test.js`. Jest searches for the folder `tests` at the project's root when you do `npm run test`. As a result, you must place your test files in the `tests` folder.
-
-Next, import the `supertest` and `mongoose` packages into the test file.
+接下来，在测试文件中导入`supertest`和`mongoose`包。
 
 ```javascript
 const mongoose = require("mongoose");
 const request = require("supertest");
 ```
 
-Import `dotenv` to load environment variables, and import `app.js` as that is where our application starts.
+导入`dotenv`以加载环境变量，并导入`app.js`，因为那是我们的应用程序启动的地方。
 
 ```javascript
 const mongoose = require("mongoose");
@@ -179,21 +177,21 @@ const app = require("../app");
 require("dotenv").config();
 ```
 
-You'll need to connect and disconnect the database before and after each test (because we don't require the database once testing is complete).
+你需要在每次测试前连接数据库和测试后断开数据库（因为测试完成后我们不需要数据库）。
 
 ```javascript
-/* Connecting to the database before each test. */
+/* 在每次测试前连接到数据库。*/
 beforeEach(async () => {
   await mongoose.connect(process.env.MONGODB_URI);
 });
 
-/* Closing database connection after each test. */
+/* 每次测试后关闭数据库连接。*/
 afterEach(async () => {
   await mongoose.connection.close();
 });
 ```
 
-Now you can write your first unit test.
+现在你可以写你的第一个单元测试。
 
 ```javascript
 describe("GET /api/products", () => {
@@ -205,13 +203,13 @@ describe("GET /api/products", () => {
 });
 ```
 
-In the above code,
+在上面的代码中。
 
--   We use `describe` to describe the unit test. Even though it is not required, it will be useful to identify tests in test results.
--   In `it`, we write the actual test code. Tell what the test performs in the first argument, and then in the second argument, write a callback function that contains the test code.
--   In the callback function, the request is sent to the endpoint first, and the expected and actual responses are then compared. The test passes if both answers match, else, it fails. ✨ As simple as that ✨.
+- 我们使用`describe`来描述单元测试。尽管它不是必需的，但它对于在测试结果中识别测试是很有用的。
+- 在`it`中，我们写了实际的测试代码。在第一个参数中告诉测试执行的内容，然后在第二个参数中，写一个包含测试代码的回调函数。
+- 在回调函数中，首先向端点（endpoint）发送请求，然后比较预期和实际的响应。如果两个答案都吻合，测试就通过，否则就失败。就这么简单✨。
 
-You can write tests for all the endpoints in the same manner.
+你可以以同样的方式为所有的端点编写测试。
 
 ```javascript
 describe("GET /api/products/:id", () => {
@@ -260,14 +258,14 @@ describe("DELETE /api/products/:id", () => {
 });
 ```
 
-Then run `npm run test` to run the test suites (suite - test file).
+然后运行`npm run test`来运行测试套件（套件-测试文件）。
 
 ![image-428](https://www.freecodecamp.org/news/content/images/2022/09/image-428.png)
 
-Test results
+测试结果
 
-And that's it! You now know how to test your Express/Mongoose apps with Jest and SuperTest.
+就这样了! 你现在知道如何用 Jest 和 SuperTest 来测试你的 Express/Mongoose 应用程序了。
 
-Now go forth and create new tests for your apps. :)
+现在去为你的应用程序创建新的测试吧！:)
 
-If you have any questions, feel free to message me on [Twitter](https://twitter.com/rakesh_at_tweet).
+如果你有任何问题，请随时在[Twitter](https://twitter.com/rakesh_at_tweet)上给我留言。

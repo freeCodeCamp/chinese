@@ -7,7 +7,7 @@
 
 测试是软件开发的重要组成部分。 越早进行越好。
 
-在本文中，我将向您展示如何使用 **Jest** 和 **Supertest** 为您的 NodeJs/ExpressJS 和 MongoDB/Mongoose 应用程序编写测试。
+在本文中，我将向您展示如何使用 **Jest** 和 **Supertest** 为你的 NodeJs/ExpressJS 和 MongoDB/Mongoose 应用程序编写测试。
 
 ## 开始
 
@@ -64,8 +64,6 @@ npm i express mongoose axios dotenv
 └── server.js
 ```
 
-package.json
-
 通过复制和粘贴来使用这些文件的代码。你要尽可能地分析代码和流程。
 
 - `[product.controller.js](https://github.com/itsrakeshhq/jest-tests-demo/blob/main/controllers/product.controller.js)`
@@ -94,7 +92,7 @@ package.json
 
 创建一个 database
 
-选择 "Shared"，因为它足以满足学习目的。然后点击 **Create**。
+选择 **Shared**，因为它足以满足学习目的。然后点击 **Create**。
 
 ![Choose a deployment option](https://www.freecodecamp.org/news/content/images/2022/09/Screenshot-2022-09-26-211701.png)
 

@@ -29,7 +29,7 @@
 
 让我们从html开始吧。
 
-首先，你要添加一个`section`元素，并赋予它两个`class`，“modal”和“hidden”。在这个元素下，你还会有一个`div`元素，它的`class`是“overlay”和“hidden”。最后，添加一个“<button>”元素，`class`为“btn”和“btn-open”。
+首先，你要添加一个`section`元素，并赋予它两个类，`modal`和`hidden`。在这个元素下，你还会有一个`div`元素，它的类是`overlay`和`hidden`。最后，添加一个`<button>`按钮元素，类为`btn`和`btn-open`。
 
 就像这样:
 
@@ -39,13 +39,15 @@
 <button class="btn btn-open">Open Modal</button>
 ```
 
--   The section element with a class of modal will serve as your modal container.
--   The div with the class of `overlay` will serve as your overlay element. This is the dark blurred background you see when the modal is open.
--   The button with the class of `btn` and `btn-open` will serve as your modal button so it fires up our modal when you click this button.
+-   带有`modal`的类的`section`将用于模态框的容器。
 
-Now inside of your modal, add the markup, and also add the `X` button for closing the modal. This button will be assigned a `btn-close` class.
+-   带有`overlay`类的`div`将作为覆盖的元素。这是模态框打开时你看到的黑色模糊背景。
 
-So here’s what your complete markup will look like at the end:
+-  类为`btn`和`btn-open`的按钮将作为你的模态框按钮，当你点击按钮时，打开模态框。
+
+现在在你的模态框中，添加标记，并添加“X”按钮来关闭模态框。这个按钮的类为`btn-close`。
+
+最后你的标记文本会像下面这样:
 
 ```html
 <section class="modal hidden">
@@ -54,10 +56,10 @@ So here’s what your complete markup will look like at the end:
     <button class="btn-close">⨉</button>
   </div>
   <div>
-    <h3>Stay in touch</h3>
+    <h3>Stay in touch保持联系</h3>
     <p>
       This is a dummy newsletter form so don't bother trying to test it. Not
-      that I expect you to, anyways. :)
+      that I expect you to, anyways.这是一个虚拟的通讯表单，所以不要费心去测试它。反正我也不指望你这么做 :)
     </p>
   </div>
 
@@ -69,17 +71,17 @@ So here’s what your complete markup will look like at the end:
 <button class="btn btn-open">Open Modal</button>
 ```
 
-**Important** ⚠️ Take note of the hidden class added to the modal and the overlay element. This is very important because you'll target these classes to hide your modal and overlay using CSS.
+**注意** ⚠️ Take note of the hidden class added to the modal and the overlay element. This is very important because you'll target these classes to hide your modal and overlay using CSS.注意添加到模态框和覆盖元素的`hidden`类。这是非常重要的，因为你将使用CSS针对这些类来隐藏你的模态框和覆盖层。
 
-Here's the output:
+这里是输出的结果:
 
 ![complete-markup](https://www.freecodecamp.org/news/content/images/2022/10/complete-markup.png)
 
-## Step 2 – Style the Modal
+## Step 2 – 设置模态框的样式
 
-Let's start by resetting the default margin and padding of every element on the page, and then center both the modal and open-modal button.
+让我们从取消页面所有元素的内外边距开始，之后把模态框和打开模态框的按钮都居中对齐。
 
-Now jump over to your CSS and add the following styles:
+现在跳转到CSS页面添加这些样式：
 
 ```css
 * {
@@ -100,7 +102,7 @@ body {
 }
 ```
 
-The next step is styling the modal container itself and the elements inside the container. This process is a bit lenghty so I’ll just copy and paste the styling here and then explain it a bit after:
+下一步是设置模态框本身和内部元素的样式。这个过程有些冗长，所以我将直接复制粘贴样式并作简要说明。
 
 ```css
 .modal {
@@ -167,19 +169,19 @@ button {
 }
 ```
 
-And here's the output:
+这里是输出的结果：
 
 ![complete-modal-style](https://www.freecodecamp.org/news/content/images/2022/10/complete-modal-style.png)
 
-What you did was style the modal element and then position it using the absolute property. This works because you added a position relative property to the body element earlier.
+刚才你设置了模态框元素的样式，和绝对定位。定位起作用的原因是之前给body元素设置了相对定位。
 
-You also styled the elements inside of the modal, but I won’t go deep into the details of that because that is not completely important to us here.
+你也给模态框内部的元素设置了样式，但是我不会更深地解释细节，因为这部分不是我们的重要内容。
 
-## Step 3 – Add the Overlay
+## Step 3 – 添加覆盖层overlay
 
-For the overlay, you want to position it over the entire page with a subtle dark background and blur.
+对于覆盖层，你想让它在整个页面上有一个微妙的黑色背景和模糊。
 
-Since you have the position relative to the body element, you can use the position fixed property to add the overlay over the body element. You'll overlay it 100% of the viewport width and height.
+由于你已经给body设置了相对定位，所以你可以用固定定位让overlay覆盖在body上。宽和高要设置为视窗的100%。
 
 ```css
 .overlay {
@@ -196,11 +198,11 @@ Since you have the position relative to the body element, you can use the positi
 }
 ```
 
-Here's the output:
+这里是输出效果:
 
 ![overlay](https://www.freecodecamp.org/news/content/images/2022/10/overlay.png)
 
-The overlay works, but you only want it to affect the body element and not the modal. To fix this, add a higher `z-index` property to the modal container.
+如果你只想让overlay只覆盖body而不覆盖模态框，你需要让模态框modal处在更高的`z-index`。
 
 ```css
 .modal {
@@ -208,13 +210,13 @@ The overlay works, but you only want it to affect the body element and not the m
 }
 ```
 
-Now the modal should be on the overlay and not behind it.
+现在模态框将在overlay的上层而不被覆盖。
 
 ![modal](https://www.freecodecamp.org/news/content/images/2022/10/modal-1.png)
 
-You've successfully created the modal and added an overlay behind it! But you don't want to show the modal, at least not until the `open-modal` button is clicked.
+到这里，你已经成功地创建了模态框并在它下面添加了一个覆盖层！但现在你并不想显示模态框，至少在点击`open-modal`按钮之前不要显示。
 
-To hide it, you need to target the `.hidden` class you added earlier to the modal and overlay element in your CSS. You'll also give it a display of none.
+为了隐藏模态框，你需要让添加了`.hidden`的类（模态框和覆盖层）不显示。
 
 ```css
 .hidden {
@@ -222,13 +224,13 @@ To hide it, you need to target the `.hidden` class you added earlier to the moda
 }
 ```
 
-Now only the button is showing on the page. You can now work on the modal functionality using JavaScript.
+现在，页面中只有按钮显示。现在你可以在JavaScript中为模态框的功能做些事情了。
 
-## Step 4 – Add Modal Functionality
+## Step 4 – 模态框的功能
 
-Before we proceed, I believe it is best to explain how the modal works. Remember how you used the `hidden` class to hide the modal and overlay? To add or remove this class from the elements, you'll use the DOM's classList element.
+在我们继续之前，我认为最好解释一下模态框是如何工作的。还记得你如何使用' hidden '类来隐藏模态框和覆盖层吗?要从元素中添加或删除这个类，需要使用DOM的classList元素。
 
-But first, you need to select your classes using the DOM's `querySelector` method and store them in variables so they are reusable.
+但是，收敛，你需要使用DOM的`querySelector` 方法选中并把它们存在变量里，以便重复使用。
 
 ```js
 const modal = document.querySelector(".modal");
@@ -237,9 +239,9 @@ const openModalBtn = document.querySelector(".btn-open");
 const closeModalBtn = document.querySelector(".btn-close");
 ```
 
-## How to Open the Modal
+## 如何打开模态框
 
-In other to show the modal, create a function called `openModal`. Inside this function, you'll use the DOM `classList` property which takes in different methods like `.remove()` and `.add()` to remove the `hidden` class from the `modal` and `overlay`.
+为了显示模态框，创建一个函数 `openModal`。在这个函数中，你将使用DOM `classList` 的属性，它采用了不同的方法比如'。remove() '和'。add() '从' modal '和' overlay '中移除' hidden '类。
 
 ```js
 const openModal = function () {
@@ -248,23 +250,23 @@ const openModal = function () {
 };
 ```
 
-And then you can use an `eventListener` to tie this function to the open modal button `openModalBtn`. That way, anytime this button is clicked, the function is executed, which shows the modal.
+然后你可以使用' eventListener '把这个函数绑定到打开模态框按钮' openModalBtn '上。这样，只要点击这个按钮，函数就会被执行，这将显示模态框。
 
 ```js
 openModalBtn.addEventListener("click", openModal);
 ```
 
-Now when you click on the `open modal` button, this will remove the `hidden` class from the modal element and you can see your modal.
+现在，当你点击 `open modal` 按钮，它将把 `hidden` 样式移除，以便你能看到你的模态框。
 
-Here's the output:
+这里是输出结果:
 
 ![Open modal](https://www.freecodecamp.org/news/content/images/2022/10/open-modal.gif)
 
-## How to Close the Modal
+## 如何关闭模态框
 
-For closing the modal, you’ll also create a function called `closeModal`. Inside the function, use the `.add()` method to add back the `hidden` class you removed.
+要关闭模态框，你也要创建一个函数 `closeModal`，在函数中，使用 `.add()` 方法把你移除的 `hidden` 添加回来。
 
-The `classList` property also has an `add()` method which you'll use to add the hidden class back when you click the `closeModal` button. Just like you added an `eventListener` to the button to close the modal, you'll do the same to the `x` button – but this time, you'll add the `hidden` class back.
+`classList` 也有一个 `add()` 方法，你可以用它在你点击 `closeModal` 时，把隐藏的样式加回来。就像你给打开按钮添加一个 `eventListener` ，你还需要把函数绑定给`X`按钮关闭模态框——但现在，你要把`hidden`样式加回来。
 
 ```js
 const closeModal = function () {
@@ -273,19 +275,19 @@ const closeModal = function () {
 };
 ```
 
-To close the modal, add an `eventListener` to the close modal button to execute the function you just wrote now.
+要关闭模态框，在关闭模态框按钮中添加一个' eventListener '来执行你刚刚编写的函数。
 
 ```js
 closeModalBtn.addEventListener("click", closeModal);
 ```
 
-Now when you click the close button, the function will add back the hidden class to the modal and overlay components, thus closing the modal.
+Now when you click the close button, the function will add back the hidden class to the modal and overlay components, thus closing the modal.现在，当您点击关闭按钮时，该函数将把隐藏样式添加回模态框和覆盖层组件，从而关闭模态框。
 
-Here's the output
+这里是输出结果：
 
 ![close modal](https://www.freecodecamp.org/news/content/images/2022/10/close_modal.gif)
 
-Usually, modals are also closed when you click outside of the modal container or on the body of the webpage. To do that, add an `eventListener` to close the modal when you click on the overlay.
+通常情况下，当你在模态框容器外部或网页主体上点击时，模态框也会关闭。为此，添加一个`eventListener`，在你点击覆盖层时关闭模态框。
 
 ```js
 overlay.addEventListener("click", closeModal);
@@ -293,19 +295,19 @@ overlay.addEventListener("click", closeModal);
 
 ![close_modal_when_overlay_is_clicked](https://www.freecodecamp.org/news/content/images/2022/10/close_modal_when_overlay_is_clicked.gif)
 
-## How to Close the Modal on Key Press
+## 如何在按下键盘时关闭模态框
 
-In addition to closing the modal when you click the close button or the overlay, you can also attach an event listener to watch for keyboard events.
+除了在单击关闭按钮或覆盖层时关闭模态框外，您还可以附加一个事件侦听器来监视键盘事件。
 
-In this instance, you want the modal to close when you press the `Escape` key, much like in the Twitter compose modal example.
+在本例中，你可以希望在按下“Escape”键时关闭模态框，这与Twitter compose模态框示例非常相似。
 
 ```js
 document.addEventListener("keydown");
 ```
 
-But this time the type of event you want is not the `“click”` event – you want to use the `“keydown”` event to execute your function.
+但是这次你想要的事件类型不是` " click " `事件——你想使用` " keydown " `事件来执行你的函数。
 
-Next up, you'll write a condition that checks if the current key pressed is the `Escape` key and the modal does not contain the `hidden` class. So it’s open, and you want to execute the `closeModal` function (in essence, close the modal).
+接下来，你将编写一个条件，检查当前按下的键是否为`Escape`键，模态框是否包含`hidden`类。现在它打开了，你想执行` closemmodal `函数(本质上就是关闭模态窗口)。
 
 ```js
 document.addEventListener("keydown", function (e) {
@@ -315,16 +317,16 @@ document.addEventListener("keydown", function (e) {
 });
 ```
 
-Now when the modal is open and you hit the `<kbd>Esc</kbd>` key, it will close the modal.
+当模态框打开时，你点击<kbd>Esc</kbd>键，它会关闭模态框。
 
-And with this, you’ve successfully created a modal component with HTML, CSS, and JavaScript and it works just as intended. 🥳
+有了这个，你已经成功地用HTML, CSS和JavaScript创建了一个模态组件，它就像预期的那样工作。🥳
 
-Here’s the codepen file to test this modal in action:
+下面是测试模态框效果的codepen文件:
 
 See the Pen <a href="https://codepen.io/evavic44/pen/zYjjzoV"> Modal with overlay and blur</a> by Eke (<a href="https://codepen.io/evavic44">@evavic44</a>) on <a href="https://codepen.io">CodePen</a>.
 
 ## Conclusion
 
-I sincerely hope you found this post interesting or useful. If you did, kindly share with your friends or subscribe to my blog so you won't miss any future postings. Thanks for reading.
+我真诚地希望你觉得这篇文章有趣或有用。如果你喜欢，请与你的朋友分享或订阅我的博客，这样你就不会错过任何之后发布的帖子。感谢你的阅读。
 
 [GitHub](https://github.com/evavic44) | [Twitter](https://twitter.com/victorekea) | [Blog](https://eke.hashnode.dev) | [Portfolio](https://victoreke.com)

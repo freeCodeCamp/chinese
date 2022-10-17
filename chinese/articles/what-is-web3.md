@@ -5,17 +5,17 @@
 
 ![什么是Web3？解读未来的去中心化网络](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/web3-future-of-web.jpg)
 
-如果你读到这篇文章，那么你已经是当代互联网世界的一员了。我们现在使用的网络和10年前大不相同。所以，互联网是怎么演化的，更重要的是———接下来它会如何发展？为什么我们需要在意这些问题呢？
+如果你读到这篇文章，那么你已经是当代互联网世界的一员了。我们现在使用的网络和10年前大不相同。所以，互联网是怎么演化的，更重要的是 ——— 接下来它会如何发展？为什么我们需要在意这些问题呢？
 
 历史教会我们，这些变化都会是重要的。
 
 我将在这篇文章里讲述互联网的演化、发展走向，以及为什么了解这些事情很重要。
 
-想象一下网络是如何与你的日常生活息息相关。网络如何改变了社会，还有社交媒体平台、手机应用.....而现在，网络正在经历又一个模式的转换。
+想象一下网络是如何与你的日常生活息息相关的。网络如何改变了社会，还有社交媒体平台、手机应用.....而现在，网络正在经历又一个模式的转换。
 
 ## **互联网的演化**
 
-互联网在近年来变化非常大，很多应用都完全脱离[早年](https://en.wikipedia.org/wiki/History_of_the_Internet)的样子了。互联网的演化一般来说被分为三个阶段：Web 1.0, Web 2.0 和 Web 3.0.
+互联网在近年来变化非常大，很多应用都完全脱离[早年](https://en.wikipedia.org/wiki/History_of_the_Internet)的样子了。互联网的演化一般来说被分为三个阶段：Web 1.0, Web 2.0 和 Web 3.0。
 
 ### **什么是 Web 1.0?**
 
@@ -31,7 +31,7 @@ Web 1.0 时期的网站是由静态网页组成的，并没有动态的html。�
 
 在 Web2 的世界里，你不需要成为一名开发者才能参与创作。许多应用程序的出现让任何人都能轻松地成为内容创作者。
 
-你可以制作并且向世界分享你的所思所想。你也可以上传一个视频，让成千上万的人看到它，并产生交流和互动评论。
+你可以制作并且向世界分享你的所思所想。你也可以上传一个视频，让成千上万的人看到它，并产生交流、互动和评论。
 
 Web2 非常简单，正因为它的简单让越来越多的人更容易地成为创作者。
 
@@ -51,7 +51,7 @@ Web2 非常简单，正因为它的简单让越来越多的人更容易地成为
 
 当开发人员或公司发布了流行的应用程序时，既然该应用程序的受欢迎程度能不断提高，用户体验通常是非常流畅的。这就是他们能够迅速获得吸引力的主要原因。
 
-起初，许多软件公司并不担心变现问题。他们完全专注于增长和锁定新用户———但最终他们必须开始盈利。
+起初，许多软件公司并不担心变现问题。他们完全专注于增长和锁定新用户 ——— 但最终他们必须开始盈利。
 
 他们还需要考虑外部投资者的作用。通常，风险投资等的注入会限制我们今天使用的许多应用程序的生命周期，并且最终对用户体验产生负面影响。
 
@@ -63,7 +63,7 @@ Web2 非常简单，正因为它的简单让越来越多的人更容易地成为
 
 #### **安全与隐私**
 
-Web2 应用程序反复经历[数据泄露](https://en.wikipedia.org/wiki/List_of_data_breaches)。 甚至有[网站](https://haveibeenpwned.com/)致力于追踪这些违规行为，并在你的数据遭到泄漏时告诉你。
+Web2 应用程序反复经历[数据泄露](https://en.wikipedia.org/wiki/List_of_data_breaches)。甚至有[网站](https://haveibeenpwned.com/)致力于追踪这些违规行为，并在你的数据遭到泄漏时告诉你。
 
 在 web2 的世界中，你无法控制你的数据或数据的存储方式。事实上，公司经常在未经用户同意的情况下跟踪和保存用户数据。然后，所有这些数据都由负责这些平台的公司拥有和控制。
 
@@ -101,7 +101,7 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 人们可以用各种方式、通过在技术和非技术层面参与协议来谋生。
 
-该服务的消费者通常为使用该协议付费，类似于他们今天向 AWS 等云服务供应商付费的方式。 只是在 web3 中，钱直接流向网络参与者。
+该服务的消费者通常为使用该协议付费，类似于他们今天向 AWS 等云服务供应商付费的方式。 只是在 Web3 中，钱直接流向网络参与者。
 
 在这种情况下，就像许多类型的去中心化模式一样，你不会再看到那些不必要且通常效率低下的中间媒介了。
 
@@ -143,36 +143,36 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 这些类型的组织被代币化，颠覆了组织结构的理念，为大部分利益相关者提供真实、流动和公平的所有权，并以新颖有趣的方式调整激励措施。
 
-例如，[Friends with Benefits](https://www.fwb.help/) 是一个由 web3 建设者和艺术家们组成的 DAO，大约成立一年，在撰写本文时市值约为 1.25 亿美元，最近获得了来自 [a16z](https://a16z.com/)的[1000 万美元](https://tittlepress.com/crypto/1146487/)投资。
+例如，[Friends with Benefits](https://www.fwb.help/) 是一个由 web3 建设者和艺术家们组成的 DAO，大约成立一年，在撰写本文时市值约为 1.25 亿美元，最近获得了来自 [a16z](https://a16z.com/) 的[1000 万美元](https://tittlepress.com/crypto/1146487/)投资。
 
 
-描述 DAOs 就可以占用整篇文章，但现在我只想说，我认为它们是构建产品和（传统意义上的）公司的未来。 [这篇好文章](https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw) 是当前 DAO 的概览。
+描述 DAOs 就可以占用整篇文章，但现在我只想说，我认为它们是构建产品和（传统意义上的）公司的未来。 [这篇好文章](https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw)是当前 DAO 的概览。
 
 ### **Web3 中的身份**
 
-在 web3 中，[身份](http://sinahab.com/identity-and-reputation-in-web-3/) 也与我们今天习惯的方式大不相同。大多数情况下，在 web3 应用程序中，身份将与与应用程序交互的用户钱包地址相关联。
+在 web3 中，[身份](http://sinahab.com/identity-and-reputation-in-web-3/)也与我们今天习惯的方式大不相同。大多数情况下，在 web3 应用程序中，身份将与与应用程序交互的用户钱包地址相关联。
 
 与 OAuth 或电子邮件 + 密码（几乎总是要求用户交出敏感信息和个人信息）等 web2 身份验证方法不同，钱包地址是完全匿名的，除非用户决定公开地将自己的身份与其绑定。
 
 如果用户选择在多个 dapps 中使用同一个钱包，他们的身份也可以在应用程序之间无缝转移，这让他们随着时间的推移建立自己的声誉。
 
-[Ceramic](https://ceramic.network/) 和 [IDX](https://idx.xyz/) 等协议和工具已经允许开发人员在其应用程序中构建自我主权身份，用来取代传统的身份验证和身份层。以太坊基金会还有 [一个有效的 RFP](https://notes.ethereum.org/@djrtwo/sign-in-with-ethereum-RFP) 用来定义“使用以太坊登录”的规范，这将有助于提供一个更简化和更有记录的方式来做到这一点。 [这](https://twitter.com/BrantlyMillegan/status/1402388133086367751)也是一个很好的方法，它概述了一些增强传统身份验证流程的方法。
+[Ceramic](https://ceramic.network/) 和 [IDX](https://idx.xyz/) 等协议和工具已经允许开发人员在其应用程序中构建自我主权身份，用来取代传统的身份验证和身份层。以太坊基金会还有[一个有效的 RFP](https://notes.ethereum.org/@djrtwo/sign-in-with-ethereum-RFP)用来定义“使用以太坊登录”的规范，这将有助于提供一个更简化和更有记录的方式来做到这一点。 [这](https://twitter.com/BrantlyMillegan/status/1402388133086367751)也是一个很好的方法，它概述了一些增强传统身份验证流程的方法。
 
 ## **如何在 Web3 构建**
 
-我是一名开发人员，最近刚从传统开发背景过渡到 web3 领域。 所以我想通过构建来体验在 Web3 开发的感觉。 我也想了解我们今天可以构建哪些类型的应用程序。
+我是一名开发人员，最近刚从传统开发背景过渡到 web3 领域。 所以我想通过开发来体验在 Web3 世界的感觉。 我也想了解我们当前可以构建哪些类型的应用程序。
 
 我全心投入进去，并且决定在几篇博客文章中记录我正在做的一些事情。
 
-[作为开发人员如何使用以太坊、加密和 Web3](https://www.freecodecamp.org/news/break-into-ethereum-crypto-web3-as-a-developer/) ———— 这是一个来自开发人员的大致介绍，适用于希望进入该行业的开发人员。
+[作为开发人员如何使用以太坊、加密和 Web3](https://www.freecodecamp.org/news/break-into-ethereum-crypto-web3-as-a-developer/) ——— 这是一个来自开发人员的大致介绍，适用于希望进入该行业的开发人员。
 
-[以太坊全栈开发完全指南](https://www.freecodecamp.org/news/full-stack-ethereum-development/) ———— 这个教程会教你如何构建你的第一个 dapp。
+[以太坊全栈开发完全指南](https://www.freecodecamp.org/news/full-stack-ethereum-development/) ——— 这个教程会教你如何构建你的第一个 dapp。
 
-[使用 React、Anchor、Rust 和 Phantom 进行全栈 Solana 开发的完全指南](https://dev.to/dabit3/the-complete-guide-to-full-stack-solana-development-with-react- anchor-rust-and-phantom-3291) ———— 本指南深入介绍 Solana，向你展示如何构建全栈 dapp。
+[使用 React、Anchor、Rust 和 Phantom 进行全栈 Solana 开发的完全指南](https://dev.to/dabit3/the-complete-guide-to-full-stack-solana-development-with-react-anchor-rust-and-phantom-3291) ——— 本指南深入介绍 Solana，向你展示如何构建全栈 dapp。
 
 如果你有兴趣了解更多有关 web3 的信息，可以查看以下帖子：
 
-[新的创造者经济——DAO、社区所有权和加密经济学](https://dev.to/dabit3/the-new-creator-economy-daos-community-ownership-and-cryptoeconomics-lnl)
+[新的创造者经济 —— DAO、社区所有权和加密经济学](https://dev.to/dabit3/the-new-creator-economy-daos-community-ownership-and-cryptoeconomics-lnl)
 
 [Metaverse 的价值链](https://www.notboring.co/p/the-value-chain-of-the-open-metaverse)
 

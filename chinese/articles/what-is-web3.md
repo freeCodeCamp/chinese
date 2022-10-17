@@ -137,43 +137,43 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 这已经是 web3 领域里正在发生的事情了。
 
-一个例子是应用程序 [Radicle](https://radicle.xyz/blog/introducing-rad.html)(一个去中心化的 GitHub 替代品)，它允许利益相关者参与他们项目的 [管理](https://everest.link/category/0x46aff9a161267c2c01f5ce1b6e3b717a77f21480/)。[Gitcoin](https://gitcoin.co/) 是另一种允许开发人员通过参与和处理开源问题而获得加密货币报酬的网站。[Yearn](https://docs.yearn.finance/faq#governance) 允许利益相关者参与决策和对提案进行投票。[Uniswap](https://uniswap.org/blog/uni/), [SuperRare](https://superrare.com/rare), [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics), [Audius](https://audius.co/), 和无数其他协议和项目已发行代币作为实现所有权、参与管理的一种方式。
+一个例子是应用程序 [Radicle](https://radicle.xyz/blog/introducing-rad.html)(一个去中心化的 GitHub 替代品)，它允许利益相关者参与他们项目的[管理](https://everest.link/category/0x46aff9a161267c2c01f5ce1b6e3b717a77f21480/)。[Gitcoin](https://gitcoin.co/) 是另一种允许开发人员通过参与和处理开源问题而获得加密货币报酬的网站。[Yearn](https://docs.yearn.finance/faq#governance) 允许利益相关者参与决策和对提案进行投票。[Uniswap](https://uniswap.org/blog/uni/), [SuperRare](https://superrare.com/rare), [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics), [Audius](https://audius.co/), 和无数其他协议和项目已发行代币作为实现所有权、参与管理的一种方式。
 
 提供了另一种方式来建立传统意义上的公司的 [DAOs](https://linda.mirror.xyz/Vh8K4leCGEO06_qSGx-vS5lvgUqhqkCz9ut81WwCP2o)（一个去中心化自治组织），正获得来自传统开发人员的和风投公司的巨大驱动力和投资。
 
 这些类型的组织被代币化，颠覆了组织结构的理念，为大部分利益相关者提供真实、流动和公平的所有权，并以新颖有趣的方式调整激励措施。
 
-例如，[Friends with Benefits](https://www.fwb.help/) 是一个由 web3 建设者和艺术家们组成的 DAO，大约成立一年，在撰写本文时市值约为 1.25 亿美元，最近获得了来自 [a16z](https://a16z.com/) [1000 万美元](https://tittlepress.com/crypto/1146487/) 的投资。
+例如，[Friends with Benefits](https://www.fwb.help/) 是一个由 web3 建设者和艺术家们组成的 DAO，大约成立一年，在撰写本文时市值约为 1.25 亿美元，最近获得了来自 [a16z](https://a16z.com/)的[1000 万美元](https://tittlepress.com/crypto/1146487/)投资。
 
 
 描述 DAOs 就可以占用整篇文章，但现在我只想说，我认为它们是构建产品和（传统意义上的）公司的未来。 [这篇好文章](https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw) 是当前 DAO 的概览。
 
-### **How Identity Works in Web3**
+### **Web3 中的身份**
 
-In web3, [Identity](http://sinahab.com/identity-and-reputation-in-web-3/) also works much differently than what we are used to today. Most of the time in web3 apps, identities will be tied to the wallet address of the user interacting with the application.
+在 web3 中，[身份](http://sinahab.com/identity-and-reputation-in-web-3/) 也与我们今天习惯的方式大不相同。大多数情况下，在 web3 应用程序中，身份将与与应用程序交互的用户钱包地址相关联。
 
-Unlike web2 authentication methods like OAuth or email + password (that almost always require users to hand over sensitive and personal information), wallet addresses are completely anonymous unless the user decides to tie their own identity to it publicly.
+与 OAuth 或电子邮件 + 密码（几乎总是要求用户交出敏感信息和个人信息）等 web2 身份验证方法不同，钱包地址是完全匿名的，除非用户决定公开地将自己的身份与其绑定。
 
-If the user chooses to use the same wallet across multiple dapps, their identity is also seamlessly transferable across apps, which lets them build up their reputation over time.
+如果用户选择在多个 dapps 中使用同一个钱包，他们的身份也可以在应用程序之间无缝转移，这让他们随着时间的推移建立自己的声誉。
 
-Protocols and tools like [Ceramic](https://ceramic.network/) and [IDX](https://idx.xyz/) already allow developers to build self-sovereign identity into their applications to replace traditional authentication and identity layers. The Ethereum foundation also has [a working RFP](https://notes.ethereum.org/@djrtwo/sign-in-with-ethereum-RFP) for defining a specification for "Sign in with Ethereum" which would help provide a more streamlined and documented way to do this going forward. [This](https://twitter.com/BrantlyMillegan/status/1402388133086367751) is also a good thread that outlines some of the ways that this would enhance traditional authentication flows.
+[Ceramic](https://ceramic.network/) 和 [IDX](https://idx.xyz/) 等协议和工具已经允许开发人员在其应用程序中构建自我主权身份，用来取代传统的身份验证和身份层。以太坊基金会还有 [一个有效的 RFP](https://notes.ethereum.org/@djrtwo/sign-in-with-ethereum-RFP) 用来定义“使用以太坊登录”的规范，这将有助于提供一个更简化和更有记录的方式来做到这一点。 [这](https://twitter.com/BrantlyMillegan/status/1402388133086367751)也是一个很好的方法，它概述了一些增强传统身份验证流程的方法。
 
-## **How to Build on Web3**
+## **如何在 Web3 构建**
 
-I'm a developer who recently transitioned into the web3 space from a traditional development background. So I wanted to start building to get a sense of what the development experience felt like. And I wanted to get an understanding of the types of apps that we can build today.
+我是一名开发人员，最近刚从传统开发背景过渡到 web3 领域。 所以我想通过构建来体验在 Web3 开发的感觉。 我也想了解我们今天可以构建哪些类型的应用程序。
 
-I dove right in and decided to document some of the things I was doing in a couple of blog posts.
+我全心投入进去，并且决定在几篇博客文章中记录我正在做的一些事情。
 
-[How to Get Into Ethereum, Crypto, and Web3 as a Developer](https://www.freecodecamp.org/news/breaking-into-ethereum-crypto-web3-as-a-developer/) – This is an introduction to the space in general, coming from a developer, for developers looking to break into the industry.
+[作为开发人员如何使用以太坊、加密和 Web3](https://www.freecodecamp.org/news/break-into-ethereum-crypto-web3-as-a-developer/) ———— 这是一个来自开发人员的大致介绍，适用于希望进入该行业的开发人员。
 
-[The Complete Guide to Full Stack Ethereum Development](https://www.freecodecamp.org/news/full-stack-ethereum-development/) – This is a tutorial that teaches you how to build out your first dapp.
+[以太坊全栈开发完全指南](https://www.freecodecamp.org/news/full-stack-ethereum-development/) ———— 这个教程会教你如何构建你的第一个 dapp。
 
-[The Complete Guide to Full Stack Solana Development with React, Anchor, Rust, and Phantom](https://dev.to/dabit3/the-complete-guide-to-full-stack-solana-development-with-react-anchor-rust-and-phantom-3291) - This guide dives into Solana to show you how to build a full stack dapp.
+[使用 React、Anchor、Rust 和 Phantom 进行全栈 Solana 开发的完全指南](https://dev.to/dabit3/the-complete-guide-to-full-stack-solana-development-with-react- anchor-rust-and-phantom-3291) ———— 本指南深入介绍 Solana，向你展示如何构建全栈 dapp。
 
-If you are interested in learning more about web3 in general, you can check out these posts:
+如果你有兴趣了解更多有关 web3 的信息，可以查看以下帖子：
 
-[The New Creator Economy - DAOs, Community Ownership, and Cryptoeconomics](https://dev.to/dabit3/the-new-creator-economy-daos-community-ownership-and-cryptoeconomics-lnl)
+[新的创造者经济——DAO、社区所有权和加密经济学](https://dev.to/dabit3/the-new-creator-economy-daos-community-ownership-and-cryptoeconomics-lnl)
 
-[The Value Chain of the Open Metaverse](https://www.notboring.co/p/the-value-chain-of-the-open-metaverse)
+[Metaverse 的价值链](https://www.notboring.co/p/the-value-chain-of-the-open-metaverse)
 
-[The Rise of Micro-Economies](https://coopahtroopa.mirror.xyz/gWY6Kfebs9wHdfoZZswfiLTBVzfKiyFaIwNf2q8JpgI)
+[微观经济的兴起](https://coopahtroopa.mirror.xyz/gWY6Kfebs9wHdfoZZswfiLTBVzfKiyFaIwNf2q8JpgI)

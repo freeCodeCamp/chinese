@@ -127,25 +127,26 @@ Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
 此外，如果公司真的成功了，任何参与其中的人都需要很长时间才能价值变现，这通常会导致工作多年而没有任何真正的投资回报。
 
-Imagine, instead, that a new and exciting project is announced that solves a real problem. Anyone can participate in building it or investing in it from day one. The company announces the release of x number of tokens, and give 10% to the early builders, put 10% for sale to the public, and set the rest aside for future payment of contributors and funding of the project.
+相反，想象一下，一个全新的、令人兴奋的项目被宣布，它解决了一个真正的问题。 从第一天开始，所有人都可以参与构建或投资。 公司宣布发行x个代币，并将其中10%的部分给那些早期建设者，将10%出售给公众，其余留作未来贡献者的支付金和项目资金。
 
-Stakeholders can use their tokens to vote on changes to the future of the project, and the people who helped build the project can sell some of their holdings to make money after the tokens have been released.
+股东们可以使用他们的代币对项目未来的走向进行投票，帮助构建项目的人可以在代币发行后出售他们的部分资产来赚钱。
 
-People who believe in the project can buy and hold ownership, and people who think the project is headed in the wrong direction can signal this by selling their stake.
+相信该项目的人可以购买并持有所有权，而认为该项目正朝着错误方向发展的人可以通过出售他们的股份来发出（危机）信号。
 
-Because blockchain data is all completely public and open, purchasers have complete transparency over what is happening. This is in contrast to buying equity in private or centralized businesses where many things are often cloaked in secrecy.
+因为区块链数据都是完全公开的，购买者对市场的走向也完全知情。 这与购买私人或集中式企业的股权形成鲜明对比，在这些企业中，许多事情往往是保密的。
 
-This is already happening in the web3 space.
+这已经是 web3 领域里正在发生的事情了。
 
-One example is the app [Radicle](https://radicle.xyz/blog/introducing-rad.html) (a decentralized GitHub alternative) which allows stakeholders to participate in the [governance](https://everest.link/category/0x46aff9a161267c2c01f5ce1b6e3b717a77f21480/) of their project. [Gitcoin](https://gitcoin.co/) is another that allows developers to get paid in cryptocurrency for jumping in and working on Open Source issues. [Yearn](https://docs.yearn.finance/faq#governance) allows stakeholders to participate in decision making and voting on proposals. [Uniswap](https://uniswap.org/blog/uni/), [SuperRare](https://superrare.com/rare), [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics), [Audius](https://audius.co/), and countless other protocols and projects have issued tokens as a way to enable ownership, participation, and governance.
+一个例子是应用程序 [Radicle](https://radicle.xyz/blog/introducing-rad.html)(一个去中心化的 GitHub 替代品)，它允许利益相关者参与他们项目的 [管理](https://everest.link/category/0x46aff9a161267c2c01f5ce1b6e3b717a77f21480/)。[Gitcoin](https://gitcoin.co/) 是另一种允许开发人员通过参与和处理开源问题而获得加密货币报酬的网站。[Yearn](https://docs.yearn.finance/faq#governance) 允许利益相关者参与决策和对提案进行投票。[Uniswap](https://uniswap.org/blog/uni/), [SuperRare](https://superrare.com/rare), [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics), [Audius](https://audius.co/), 和无数其他协议和项目已发行代币作为实现所有权、参与管理的一种方式。
 
-[DAOs](https://linda.mirror.xyz/Vh8K4leCGEO06_qSGx-vS5lvgUqhqkCz9ut81WwCP2o) (Decentralized Autonomous Organizations), which offer an alternative way to build what we traditionally thought of as a company, are gaining tremendous momentum and investment from both traditional developers and venture capital firms.
+提供了另一种方式来建立传统意义上的公司的 [DAOs](https://linda.mirror.xyz/Vh8K4leCGEO06_qSGx-vS5lvgUqhqkCz9ut81WwCP2o)（一个去中心化自治组织），正获得来自传统开发人员的和风投公司的巨大驱动力和投资。
 
-These types of organizations are tokenized and turn the idea of organizational structure on its head, offering real, liquid, and equitable ownership to larger portions of stakeholders and aligning incentives in new and interesting ways.
+这些类型的组织被代币化，颠覆了组织结构的理念，为大部分利益相关者提供真实、流动和公平的所有权，并以新颖有趣的方式调整激励措施。
 
-For example, [Friends with Benefits](https://www.fwb.help/) is a DAO of web3 builders and artists, is about a year old, has a market cap of around $125 million as of this writing, and recently received [a $10 million round](https://tittlepress.com/crypto/1146487/) of investment from [a16z](https://a16z.com/).
+例如，[Friends with Benefits](https://www.fwb.help/) 是一个由 web3 建设者和艺术家们组成的 DAO，大约成立一年，在撰写本文时市值约为 1.25 亿美元，最近获得了来自 [a16z](https://a16z.com/) [1000 万美元](https://tittlepress.com/crypto/1146487/) 的投资。
 
-DAOs could encompass an entire post in and of themselves, but for now I'll just say that I think that they are the future of building products and (what we in the past thought of as) companies. [Here is a good post](https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw) outlining the current DAO landscape.
+
+描述 DAOs 就可以占用整篇文章，但现在我只想说，我认为它们是构建产品和（传统意义上的）公司的未来。 [这篇好文章](https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw) 是当前 DAO 的概览。
 
 ### **How Identity Works in Web3**
 

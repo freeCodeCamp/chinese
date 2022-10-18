@@ -1,6 +1,6 @@
 > -  原文地址：[How to Improve Machine Learning Code Quality with Scikit-learn Pipeline and ColumnTransformer](https://www.freecodecamp.org/news/machine-learning-pipeline/)
 > -  原文作者：[Yannawut Kimnaruk](https://www.freecodecamp.org/news/author/yannawut/)
-> -  译者：
+> -  译者：toudatouda
 > -  校对者：
 
 ![How to Improve Machine Learning Code Quality with Scikit-learn Pipeline and ColumnTransformer](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Python-Power-BI-1.png)

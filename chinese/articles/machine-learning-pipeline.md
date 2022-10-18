@@ -1,11 +1,11 @@
 > -  原文地址：[How to Improve Machine Learning Code Quality with Scikit-learn Pipeline and ColumnTransformer](https://www.freecodecamp.org/news/machine-learning-pipeline/)
 > -  原文作者：[Yannawut Kimnaruk](https://www.freecodecamp.org/news/author/yannawut/)
-> -  译者：
+> -  译者：touda
 > -  校对者：
 
 ![How to Improve Machine Learning Code Quality with Scikit-learn Pipeline and ColumnTransformer](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Python-Power-BI-1.png)
 
-When you're working on a machine learning project, the most tedious steps are often data cleaning and preprocessing. Especially when you're working in a Jupyter Notebook, running code in many cells can be confusing.
+当你在做一个机器学习项目时，the most tedious steps are often data cleaning and preprocessing. Especially when you're working in a Jupyter Notebook, running code in many cells can be confusing.
 
 The Scikit-learn library has tools called Pipeline and ColumnTransformer that can really make your life easier. Instead of transforming the dataframe step by step, the pipeline combines all transformation steps. You can get the same result with less code. It's also easier to understand data workflows and modify them for other projects.
 

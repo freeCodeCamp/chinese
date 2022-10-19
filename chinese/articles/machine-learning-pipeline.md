@@ -71,19 +71,19 @@ Scikit-learn网站中对列变形工具的描述如下：
 
 ### 获取数据集
 
-You can download the data I used in this article from this [kaggle dataset](https://www.kaggle.com/datasets/arashnic/hr-analytics-job-change-of-data-scientists?datasetId=1019790&sortBy=voteCount&select=aug_train.csv). Here's a sample of the dataset:
+你可以使用我在这篇文章中所使用的数据集[kaggle数据集](https://www.kaggle.com/datasets/arashnic/hr-analytics-job-change-of-data-scientists?datasetId=1019790&sortBy=voteCount&select=aug_train.csv)。以下是数据集中一段样本：
 
 ![image-210](https://www.freecodecamp.org/news/content/images/2022/09/image-210.png)
 
-Dataset sample
+数据集样本
 
-I wrote an article exploring the data from this dataset which you can find [here if you're interested.](https://medium.com/mlearning-ai/data-analysis-job-change-of-data-scientist-685f3de0a983)
+我还写了一篇针对这个数据集进行探索性分析的文章，如果你感兴趣这是[文章链接](https://medium.com/mlearning-ai/data-analysis-job-change-of-data-scientist-685f3de0a983)
 
-In short, this dataset contains information about job candidates and their decision about whether they want to change jobs or not. The dataset has both numerical and categorical columns.
+简单来说，这个数据集中包含求职者的信息以及他们是否决定更换工作。数据集同时包含了分类型数据和数值型数据列。
 
-Our goal is to predict whether a candidate will change jobs based on their information. This is a classification task.
+我们的目标是基于求职者信息预测他们是否最终决定更换工作。这个目标是分类型预测。
 
-## Data Preprocessing Plan
+## 数据预处理计划
 
 ![1*ZT7S2SuhMd4Zazb2lVWmcw](https://miro.medium.com/max/1400/1*ZT7S2SuhMd4Zazb2lVWmcw.png)
 

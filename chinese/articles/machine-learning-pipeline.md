@@ -15,15 +15,15 @@ Scikit-learn库中的管道（Pipeline）和列变形（ColumnTransformer）工�
 
 ## 目录
 
--   [什么是Scikitlearn管道工具](#什么是Scikitlearn管道工具)
--   [什么是Scikitlearn列变形工具](#什么是Scikitlearn列变形工具)
+-   [什么是Scikit learn管道工具](#什么是Scikit-learn管道工具)
+-   [什么是Scikit learn列变形工具](#什么是Scikit-learn列变形工具)
 -   [What's the Difference between the Pipeline and ColumnTransformer?](#what-s-the-difference-between-the-pipeline-and-columntransformer)
 -   [How to Create a Pipeline](#how-to-create-a-pipeline)
 -   [How to Find the Best Hyperparameter and Data Preparation Method](#how-to-find-the-best-hyperparameter-and-data-preparation-method)
 -   [How to Add Custom Transformations](#how-to-add-custom-transformations-and-find-the-best-machine-learning-model)
 -   [How to Choose the Best Machine Learning Model](#how-to-add-custom-transformations-and-find-the-best-machine-learning-model)
 
-## 什么是Scikitlearn管道工具
+## 什么是Scikit learn管道工具
 
 Before training a model, you should split your data into a training set and a test set. Each dataset will go through the data cleaning and preprocessing steps before you put it in a machine learning model.
 
@@ -39,7 +39,7 @@ First of all, imagine that you can create only one pipeline in which you can inp
 
 The Scikit-learn pipeline is a tool that links all steps of data manipulation together to create a pipeline. It will shorten your code and make it easier to read and adjust. (You can even visualize your pipeline to see the steps inside.) It's also easier to perform GridSearchCV without data leakage from the test set.
 
-## 什么是Scikitlearn列变形工具
+## 什么是Scikit learn列变形工具
 
 As stated on the scikit-learn website, this is the purpose of ColumnTransformer:
 

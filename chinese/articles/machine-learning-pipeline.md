@@ -15,7 +15,7 @@ Scikit-learn库中的管道（Pipeline）和列变形（ColumnTransformer）工�
 
 ## 目录
 
--   [什么是Scikit-learn管道工具？](#什么是Scikit-learn管道工具？)
+-   [什么是Scikit-learn管道工具？](#what-is-the-scikit-learn-pipeline)
 -   [What is the Scikit-learn ColumnTransformer?](#what-is-the-scikit-learn-columntransformer)
 -   [What's the Difference between the Pipeline and ColumnTransformer?](#what-s-the-difference-between-the-pipeline-and-columntransformer)
 -   [How to Create a Pipeline](#how-to-create-a-pipeline)

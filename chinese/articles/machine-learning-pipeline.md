@@ -3,15 +3,15 @@
 > -  译者：toudatouda
 > -  校对者：
 
-![How to Improve Machine Learning Code Quality with Scikit-learn Pipeline and ColumnTransformer](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Python-Power-BI-1.png)
+![如何通过Scikit-learn Pipeline和ColumnTransformer提升机器学习代码质量](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Python-Power-BI-1.png)
 
-When you're working on a machine learning project, the most tedious steps are often data cleaning and preprocessing. Especially when you're working in a Jupyter Notebook, running code in many cells can be confusing.
+当你在推进机器学习项目时，最麻烦的步骤通常是数据清洗和数据预处理。尤其是当你使用Jupyter Notebook时，运行大量代码块常常令人迷失。
 
-The Scikit-learn library has tools called Pipeline and ColumnTransformer that can really make your life easier. Instead of transforming the dataframe step by step, the pipeline combines all transformation steps. You can get the same result with less code. It's also easier to understand data workflows and modify them for other projects.
+Scikit-learn库中的管道（Pipeline）和列变形（ColumnTransformer）工具可以大幅减轻你的工作量。管道工具可以将多个数据变形步骤结合，使相关的数据变形操作不再需要一步一步运行。你可以用更少的代码获得相同的结果。管道工具还可以使数据工作流程更易于理解也更易于复用。
 
-This article will show you step by step how to create the machine learning pipeline, starting with an easy one and working up to a more complicated one.
+这篇文章将从一个简单的案例开始逐步增加难度，一步一步的展示如何使用机器学习管道。
 
-If you are familiar with the Scikit-learn pipeline and ColumnTransformer, you can jump directly to the part you want to learn more about.
+如果你已经熟悉了Scikit-learn管道和列变形工具，你可以略过简单的案例直接阅读你感兴趣的部分。
 
 ## Table of Contents
 

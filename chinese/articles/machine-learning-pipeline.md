@@ -13,9 +13,9 @@ Scikit-learn库中的管道（Pipeline）和列变形（ColumnTransformer）工�
 
 如果你已经熟悉了Scikit-learn管道和列变形工具，你可以略过简单的案例直接阅读你感兴趣的部分。
 
-## Table of Contents
+## 目录
 
--   [What is the Scikit-learn Pipeline?](#what-is-the-scikit-learn-pipeline)
+-   [什么是Scikit-learn管道工具？](#什么是Scikit-learn管道工具？)
 -   [What is the Scikit-learn ColumnTransformer?](#what-is-the-scikit-learn-columntransformer)
 -   [What's the Difference between the Pipeline and ColumnTransformer?](#what-s-the-difference-between-the-pipeline-and-columntransformer)
 -   [How to Create a Pipeline](#how-to-create-a-pipeline)
@@ -23,7 +23,7 @@ Scikit-learn库中的管道（Pipeline）和列变形（ColumnTransformer）工�
 -   [How to Add Custom Transformations](#how-to-add-custom-transformations-and-find-the-best-machine-learning-model)
 -   [How to Choose the Best Machine Learning Model](#how-to-add-custom-transformations-and-find-the-best-machine-learning-model)
 
-## What is the Scikit-learn Pipeline?
+## 什么是Scikit-learn管道工具？
 
 Before training a model, you should split your data into a training set and a test set. Each dataset will go through the data cleaning and preprocessing steps before you put it in a machine learning model.
 

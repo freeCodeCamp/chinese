@@ -128,33 +128,33 @@ JSON是用于表示和存储数据的文件格式，而Python字典是Pythons程
 
 很好，既然你已经对JSON有足够多的了解，那么让我们开始深入了解实际情况中如何在Python里使用JSON的。
 
-## 🔸 The JSON Module
+## 🔸 JSON模块
 
-Luckily for us, Python comes with a built-in module called `json`. It is installed automatically when you install Python and it includes functions to help you work with JSON files and strings.
+幸运的是，Python自带一个名为`json`的内置模块，安装Python时会自动安装该模块，这个模块包含一些帮助处理JSON文件和字符串的功能。
 
-We will use this module in the coming examples.
+我们将在接下来的示例中使用此模块。
 
-### How to Import the JSON Module
+### 如何导入JSON模块
 
-To use `json` in our program, we just need to write an import statement at the top of the file.
+要在程序中使用`json`，只需在文件顶部写一个导入语句。（译者注：实际上只要在使用它之前导入就行）
 
-Like this:
+就像这样：
 
 ![image-73](https://www.freecodecamp.org/news/content/images/2020/10/image-73.png)
 
-With this line, you will have access to the functions defined in the module. We will use several of them in the examples.
+通过此行就可以使用模块中定义的函数，我们将在示例中调用其中几个方法。
 
-**💡 Tip:** If you write this import statement, you will need to use this syntax to call a function defined in the `json` module:
+**💡 提示：**如果写了上面的导入语句，则需要使用下面的语法来调用在`json`模块中定义的函数：
 
 ![image-76](https://www.freecodecamp.org/news/content/images/2020/10/image-76.png)
 
-## 🔹 Python and JSON Strings
+## 🔹 Python和JSON字符串
 
-To illustrate how some of the most important functions of the `json` module work, we will use a multi-line string with JSON format.
+为了说明`json`模块中最重要的一些函数是如何工作的，我们将使用JSON格式的多行字符串。
 
-### JSON String
+### JSON字符串
 
-Particularly, we will use this string in the examples. It is just a regular multi-line Python string that follows the JSON format.
+特别地，这个字符串只是一个普通的遵循JSON格式的多行Python字符串，我们将在示例中使用它。
 
 ```python
 data_JSON =  """
@@ -171,30 +171,30 @@ data_JSON =  """
 """
 ```
 
-JSON String
+JSON字符串
 
--   To define a multi-line string in Python, we use triple quotes.  
--   Then, we assign the string to the variable `data_JSON`.
+-   我们使用三重引号在Python中定义多行字符串。
+-   然后我们将字符串赋给变量`data_JSON`。
 
-💡 **Tip:** The [Python Style Guide](https://www.python.org/dev/peps/pep-0008/#string-quotes) recommends using double quote characters for triple-quoted strings.  
+💡 **提示：**[Python Style Guide](https://www.python.org/dev/peps/pep-0008/#string-quotes)建议三重引号字符串使用双引号。
 
-### JSON String to Python Dictionary
+### JSON字符串到Python字典
 
-We will use the string with JSON format to create a Python dictionary that we can access, work with, and modify.
+我们将使用此JSON格式的字符串来创建一个可以访问、使用和修改的Python字典。
 
-To do this, we will use the `loads()` function of the `json` module, passing the string as the argument.
+为此，我们将使用`json`模块的`loads()`函数，并将字符串作为参数传递进去。
 
-This is the basic syntax:
+这是基本语法：
 
 ![image-77](https://www.freecodecamp.org/news/content/images/2020/10/image-77.png)
 
-Here is the code:
+这是代码：
 
 ```python
-# Import the module
+# 导入模块
 import json
 
-# String with JSON format
+# JSON格式的字符串
 data_JSON =  """
 {
 	"size": "Medium",
@@ -208,28 +208,28 @@ data_JSON =  """
 }
 """
 
-# Convert JSON string to dictionary
+# 将JSON字符串转换为字典
 data_dict = json.loads(data_JSON)
 ```
 
-Let's focus on this line:
+注意这行：
 
 ```python
 data_dict = json.loads(data_JSON)
 ```
 
--   `json.loads(data_JSON)` creates a new dictionary with the key-value pairs of the JSON string and it returns this new dictionary.
--   Then, the dictionary returned is assigned to the variable `data_dict`.
+-   `json.loads(data_json)`使用JSON字符串的键-值对创建一个新字典，并返回这个字典。
+-   然后返回的字典被赋值给变量`data_dict`。
 
-**Awesome!** If we print this dictionary, we see this output:
+**太棒了！**如果我们打印这个字典，会看到以下输出：
 
 ```python
 {'size': 'Medium', 'price': 15.67, 'toppings': ['Mushrooms', 'Extra Cheese', 'Pepperoni', 'Basil'], 'client': {'name': 'Jane Doe', 'phone': '455-344-234', 'email': 'janedoe@email.com'}}
 ```
 
-The dictionary has been populated with the data of the JSON string. Each key-value pair was added successfully.
+字典中已填充了JSON字符串的数据，每个键值对都被成功添加到字典里。
 
-Now let's see what happens when we try to access the values of the key-value pairs with the same syntax that we would use to access the values of a regular Python dictionary:
+现在让我们尝试使用与访问常规Python字典相同的语法，来访问键-值对的值，看看会发生什么：
 
 ```python
 print(data_dict["size"])
@@ -238,7 +238,7 @@ print(data_dict["toppings"])
 print(data_dict["client"])
 ```
 
-The output is:
+输出是：
 
 ```
 Medium
@@ -247,35 +247,35 @@ Medium
 {'name': 'Jane Doe', 'phone': '455-344-234', 'email': 'janedoe@email.com'}
 ```
 
-Exactly what we expected. Each key can be used to access its corresponding value.
+每个键都可以用来访问其对应的值，正如我们所期望的那样。
 
-💡 **Tip:** We can use this dictionary just like any other Python dictionary. For example, we can call dictionary methods, add, update, and remove key-value pairs, and more. We can even use it in a for loop.
+💡 **提示：**我们可以像使用任何其它Python字典一样来使用此字典。例如，我们可以调用字典的方法，添加、更新和删除键-值对，以及其它等等操作，我们甚至可以在for循环中使用它。
 
-### JSON to Python: Type Conversion
+### JSON到Python：类型转换
 
-When you use `loads()` to create a Python dictionary from a JSON string, you will notice that some values will be converted into their corresponding Python values and data types.
+当使用`loads()`从JSON字符串来创建Python字典时，你会注意到一些值将被转换为Python中对应的值和数据类型。
 
-This table presented in the [Python Documentation](https://docs.python.org/3/library/json.html#encoders-and-decoders) for the `json` module summarizes the correspondence from JSON data types and values to Python data types and values:
+[Python文档](https://docs.python.org/3/library/json.html#encoders-and-decoders)上的这个`json`模块表格总结了JSON数据类型和Python数据类型的对应关系：
 
 ![image-79](https://www.freecodecamp.org/news/content/images/2020/10/image-79.png)
 
-Table presented in the official [documentation of the json module](https://docs.python.org/3/library/json.html#encoders-and-decoders) 
+这是官方[json模块文档](https://docs.python.org/3/library/json.html#encoders-and-decoders)中的表格
 
-**💡 Tip:** The same conversion table applies when we work with JSON files.
+**💡 提示：**当我们处理JSON文件时，转换表同样也适用。
 
-### Python Dictionary to JSON String
+### Python字典到JSON字符串
 
-Now you know how to create a Python dictionary from a string with JSON format.
+现在你知道了如何用JSON格式的字符串创建Python字典。
 
-But sometimes we might need to do exactly the opposite, creating a string with JSON format from an object (for example, a dictionary) to print it, display it, store it, or work with it as a string.
+但有时我们可能需要做相反的事情，即用对象（例如字典）创建JSON格式的字符串，以便打印、显示、存储，或者将其作为字符串使用。
 
-To do that, we can use the `dumps` function of the `json` module, passing the object as argument:
+为此，我们可以使用`json`模块的`dumps`函数，该函数要求将（要转换的）对象作为参数传递：
 
 ![image-80](https://www.freecodecamp.org/news/content/images/2020/10/image-80.png)
 
-**💡 Tip:** This function will return a string.
+**💡 提示：**此函数将返回一个字符串。
 
-This is an example where we convert the Python dictionary `client` into a string with JSON format and store it in a variable:
+这是一个例子，我们将Python字典`client`转换为JSON格式的字符串，并将其赋值给变量：
 
 ```python
 # Python Dictionary
@@ -287,68 +287,68 @@ client = {
     "wears_glasses": False
 }
 
-# Get a JSON formatted string
+# 获得一个JSON格式的字符串
 client_JSON = json.dumps(client)
 ```
 
-Let's focus on this line:
+注意这行：
 
 ```python
 client_JSON = json.dumps(client)
 ```
 
--   `json.dumps(client)` creates and returns a string with all the key-value pairs of the dictionary in JSON format.
--   Then, this string is assigned to the `client_JSON` variable.
+-   `json.dumps(client)`创建并返回一个包含字典中所有键-值对的JSON格式的字符串。
+-   然后将此字符串赋值给`client_JSON`变量。
 
-If we print this string, we see this output:
+如果我们打印这个字符串，会看到如下输出：
 
 ```python
 {"name": "Nora", "age": 56, "id": "45355", "eye_color": "green", "wears_glasses": false}
 ```
 
-💡 **Tip:** Notice that the last value (`false`) was changed. In the Python dictionary, this value was `False` but in JSON, the equivalent value is `false`. This helps us confirm that, indeed, the original dictionary is now represented as a string with JSON format.
+💡 **提示：**请注意，最后一个值（`false`）已更改。在Python字典中，此值为`False`，但在JSON中等效值为`false`，这有助于我们确认原始字典现在确实已经表示为JSON格式的字符串。
 
-If we check the data type of this variable, we see:
+如果我们检查此变量（`client_JSON`）的数据类型，我们会看到：
 
 ```python
 <class 'str'>
 ```
 
-So the return value of this function was definitely a string.
+所以这个函数的返回值确实是一个字符串。
 
-### Python to JSON: Type Conversion
+### Python到JSON：类型转换
 
-A process of type conversion occurs as well when we convert a dictionary into a JSON string. This table from the [Python Documentation](https://docs.python.org/3/library/json.html#json.JSONEncoder) illustrates the corresponding values:
+当我们将字典转换为JSON字符串时，也会发生类型转换过程。来自[Python文档](https://docs.python.org/3/library/json.html#json.JSONEncoder)的这张表显示了二者相对应的值：
 
 ![image-81](https://www.freecodecamp.org/news/content/images/2020/10/image-81.png)
 
-Table from the [official documentation of the json module](https://docs.python.org/3/library/json.html#json.JSONEncoder).
+表格来自[官方json模块文档](https://docs.python.org/3/library/json.html#json.JSONEncoder)。
 
-### How to Print JSON With Indentation
+### 如何使用缩进打印JSON数据
 
-If we use the `dumps` function and we print the string that we got in the previous example, we see:
+如果我们使用`dumps`函数打印上一示例中得到的字符串，我们会看到：
 
 ```python
 {"name": "Nora", "age": 56, "id": "45355", "eye_color": "green", "wears_glasses": false}
 ```
 
-But this is not very readable, right?
+但是这样可读性不是很高，对吧？
 
-We can improve the readability of the JSON string by adding **indentation**.
+我们可以通过添加**缩进**来提高JSON字符串的可读性。
 
-To do this automatically, we just need to pass a second argument to specify the number of spaces that we want to use to indent the JSON string:
+我们只需传递第二个参数来指定要用于JSON字符串缩进的空格数，（`dumps`函数）就会自动执行此操作：
 
 ![image-111](https://www.freecodecamp.org/news/content/images/2020/10/image-111.png)
 
-**💡 Tip:** the second argument has to be a non-negative integer (number of spaces) or a string. If indent is a string (such as `"\t"`), that string is used to indent each level ([source](https://docs.python.org/3/library/json.html#json.dump)).
+**💡 提示：**第二个参数必须是非负整数（表示空格数）或字符串，如果`indent`是一个字符串（例如`"\t"`），则用该字符串缩进每个级别（[帮助文档](https://docs.python.org/3/library/json.html#json.dump)).
 
-Now, if we call `dumps` with this second argument:
+现在，如果我们使用第二个参数来调用`dumps`：
 
 ```python
 client_JSON = json.dumps(client, indent=4)
 ```
 
-The result of printing `client_JSON` is:
+打印`client_JSON`的结果是：
 
 ```python
 {
@@ -360,29 +360,29 @@ The result of printing `client_JSON` is:
 }
 ```
 
-That's great, right? Now our string is nicely formatted. This will be very helpful when we start working with files to store the data in a human-readable format.
+这很棒，对吧？现在我们的字符串格式很好看，这对我们处理存储人类可读格式的数据的文件来说将非常有用。
 
-### How to Sort the Keys
+### 如何对键排序
 
-You can also sort the keys in alphabetical order if you need to. To do this, you just need to write the name of the parameter `sort_keys` and pass the value `True`:
+如果有需要，还可以按字母顺序对键进行排序，只需写入参数`sort_keys`并传递值`True`：
 
 ![image-84](https://www.freecodecamp.org/news/content/images/2020/10/image-84.png)
 
-💡 **Tip:** The value of `sort_keys` is `False` by default if you don't pass a value.
+💡 **提示：**如果不传递值，`sort_keys`默认为`False`。
 
-For example:
+例如：
 
 ```python
 client_JSON = json.dumps(client, sort_keys=True)
 ```
 
-Returns this string with the keys sorted in alphabetical order:
+将会返回键按字母顺序排序的JSON字符串：
 
 ```python
 {"age": 56, "eye_color": "green", "id": "45355", "name": "Nora", "wears_glasses": false}
 ```
 
-### How to Sort Alphabetically and Indent (at the same time)
+### 如何同时按字母排序和使用缩进
 
 To generate a JSON string that is sorted alphabetically and indented, you just need to pass the two arguments:
 

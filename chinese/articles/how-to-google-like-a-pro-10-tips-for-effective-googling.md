@@ -1,6 +1,6 @@
 > -  原文地址：[How to Google like a Pro – 10 Tips for More Effective Googling](https://www.freecodecamp.org/news/how-to-google-like-a-pro-10-tips-for-effective-googling/)
 > -  原文作者：[Soham De Roy](https://www.freecodecamp.org/news/author/sohamderoy/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Google like a Pro – 10 Tips for More Effective Googling](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Group-61.png)

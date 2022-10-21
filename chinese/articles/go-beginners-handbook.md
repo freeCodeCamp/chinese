@@ -1,106 +1,106 @@
 > -  原文地址：[The Go Handbook – Learn Golang for Beginners](https://www.freecodecamp.org/news/go-beginners-handbook/)
 > -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
+> -  译者：herosql
 > -  校对者：
 
-![The Go Handbook – Learn Golang for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/pexels-christina-morillo-1181290.jpg)
+![Go语言手册-面对go语言的初学者](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/pexels-christina-morillo-1181290.jpg)
 
-Golang is an awesome, simple, modern, and fast programming language.
+Go语言是一门非常棒的,简单的,现代化的,性能特别高的编程语言.
 
-It’s compiled, open source, and strongly typed.
+它是编译类型,开源的,强类型语言.
 
-Golang – also called Go – was created by Google engineers with these main goals:
+Golang – 也可以称为 Go – 谷歌工程师创造这门语言的主要目标:
 
--   make their projects compile (and run) faster
--   be simple so people can pick it up in little time
--   be low level enough but also avoid some pitfalls of being too low level
--   be portable (compiled Go programs are binaries that do not require other files to run and are cross-platform, so they can be distributed easily)
--   be boring, stable, predictable, offer less opportunities to make mistakes
--   make it easy to take advantage of multiprocessor systems
+-   让他们的项目编译(和运行)快
+-   是简单的,这样人们可以很短的时间就能用起来
+-   足够低的水平,但也要避免一些水平过低的陷阱
+-   具有可移植(经过编译的GO程序不需要其他文件的支持,就可以跨平台运行,因此它们很容易分发)
+-   具有简单,稳定的,可以预测性,从而减少犯错的机会
+-   使得利用多处理器系统变得容易
 
-Go was meant to be a replacement for C and C++ codebases. It aims to make some things simpler like concurrency and memory management, with garbage collection.
+Go是基于C和C++.它做一些东西特别简单像并发和内存的管理,和垃圾回收.
 
-Also, it was built to work along with C and C++ codebases, thanks to its C interoperability features.
+当然,它是基于C和C++构建的,它具有很多C语言的特性.
 
-You can use Go for many different tasks, and it can solve both simple problems and very complex ones.
+你可以用GO做很多不一样的任务,它既可以解决简单的问题也可以解决复杂的问题.
 
-You can use Go to create command line utilities and networking servers, and it's widely used in many different scenarios.
+你可以用Go做命令行的工具和网络服务器,它还可以跨多个不同的学科使用.
 
-For example, Docker and Kubernetes are written in Go.
+举个例子,Docker和K8s是用Go编写的.
 
-My favorite Static Site Generator (Hugo) is written in Go.
+我最喜欢的静态网站生成工具Hugo是用Go编写的.
 
-Caddy, a quite popular web server, is written in Go.
+Caddy,一个非常流行的web服务器是用GO编写的.
 
-There’s lots of different, widely used tools that use this programming language under the hood.
+这些形色各异,广泛使用的工具都是用这门编程语言作为基础创建.
 
-This handbook will introduce you to the Go programming language so you can get started coding in Go.
+这本手册将向你介绍Go编程语言,使得你开始使用Go编写程序.
 
-[You can get a PDF and ePub version of this Go Beginner's Handbook here](https://thevalleyofcode.com/download/go/).
+[你可以点击链接获得pdf版本和ePub版本的GO初学者手册](https://thevalleyofcode.com/download/go/).
 
-## Table of Contents
+## 目录内容
 
-1.  [How to get started with Go](#how-to-get-started-with-go)
-2.  [How to install Go](#how-to-install-go)
-3.  [How to setup your editor](#how-to-setup-your-editor)
-4.  [How to write Hello, World! in Go](#how-to-write-hello-world-in-go)
-5.  [How to compile and run a Go program](#how-to-compile-and-run-a-go-program)
-6.  [The Go workspace](#the-go-workspace)
-7.  [Diving into the Go language](#diving-into-the-go-language)
-8.  [Variables in Go](#variables-in-go)
-9.  [Basic types in Go](#basic-types-in-go)
-10.  [Strings in Go](#strings-in-go)
-11.  [Arrays in Go](#arrays-in-go)
-12.  [Slices in Go](#slices-in-go)
-13.  [Maps in Go](#maps-in-go)
-14.  [Loops in Go](#loops-in-go)
-15.  [Conditionals in Go](#conditionals-in-go)
-16.  [Operators in Go](#operators-in-go)
-17.  [Structs in Go](#structs-in-go)
-18.  [Functions in Go](#functions-in-go)
-19.  [Pointers in Go](#pointers-in-go)
-20.  [Methods in Go](#methods-in-go)
-21.  [Interfaces in Go](#interfaces-in-go)
-22.  [Where to go from here](#where-to-go-from-here)
+1.  [怎么获得Go](#how-to-get-started-with-go)
+2.  [怎么安装Go语言环境](#how-to-install-go)
+3.  [怎么选择你的版本](#how-to-setup-your-editor)
+4.  [怎么在用Go编写Hello,World!](#how-to-write-hello-world-in-go)
+5.  [怎么编译和运行Go程序](#how-to-compile-and-run-a-go-program)
+6.  [Go的工作空间](#the-go-workspace)
+7.  [分离Go语言](#diving-into-the-go-language)
+8.  [Go中的变量](#variables-in-go)
+9.  [Go的基础类型](#basic-types-in-go)
+10.  [Go中的字符串](#strings-in-go)
+11.  [Go中的数组](#arrays-in-go)
+12.  [Go中的切片](#slices-in-go)
+13.  [Go中的哈希表](#maps-in-go)
+14.  [Go中的循环](#loops-in-go)
+15.  [Go中的条件运算符](#conditionals-in-go)
+16.  [Go中的运算符](#operators-in-go)
+17.  [Go中的结构体](#structs-in-go)
+18.  [Go中的函数](#functions-in-go)
+19.  [Go中的指针](#pointers-in-go)
+20.  [Go中的方法](#methods-in-go)
+21.  [Go中的接口](#interfaces-in-go)
+22.  [以后的路](#where-to-go-from-here)
 
-## How to Get Started with Go
+## 怎样开始获得Go
 
-Here are a few things you should know before we dive into the specifics of the language.
+在我们深入语言特性之前,我们首先得知道一些东西
 
-First, [https://go.dev](https://go.dev/) is the homepage of the language. This will be your go-to resource to:
+首先, [https://go.dev](https://go.dev/) 这是语言的官网. 在官网你可以获得的资料:
 
--   Download the Go binaries (the `go` command and other related tools) from [https://go.dev/doc/install](https://go.dev/doc/install)
--   Reference the official Go documentation [https://go.dev/doc/](https://go.dev/doc/)
--   See all the the Go packages [https://pkg.go.dev/](https://pkg.go.dev/)
--   Access the Go Playground [https://go.dev/play/](https://go.dev/play/)
+-   下载Go的二进制包 (是 `go` 命令和发行的工具)  [https://go.dev/doc/install](https://go.dev/doc/install)
+-   Go的官方文档 [https://go.dev/doc/](https://go.dev/doc/)
+-   看到Go的所有第三方库 [https://pkg.go.dev/](https://pkg.go.dev/)
+-   Go的在线游乐园 [https://go.dev/play/](https://go.dev/play/)
 
-…and more.
+…待续.
 
-## How to Install Go
+## 怎么安装Go语言环境
 
-Go to [https://go.dev/doc/install](https://go.dev/doc/install) and download the package for your Operating System.
+到 [https://go.dev/doc/install](https://go.dev/doc/install) 下载你电脑使用的操作系统的Go程序包.
 
-Run the installer, and at the end of the process you will have the `go` command available in your terminal:
+运行并安装,在最后一个步骤你需要在命令行设置`go`命令:
 
 ![Screen Shot 2022-07-28 at 10.19.21.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_10.19.21.png)
 
-Welcome to the Go installer
+欢迎进行Go的安装
 
 ![Screen Shot 2022-07-28 at 10.20.54.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_10.20.54.png)
 
-Successful installation modal
+安装成功
 
-Open the terminal and run `go version` and you should see something like this:
+打开命令行并运行 `go version` 你会看到以下内容:
 
 ![Screen Shot 2022-07-28 at 10.21.32.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_10.21.32.png)
 
-Displaying the Go version you have
+展示你当前的Go版本
 
-NOTE: you might have to open a new terminal before you can run the program, as the installer added the Go binaries folder to the path.
+说明: 你如果在你允许Go的安装程序之前打开的命令行窗口,你可能看不到以上效果.
 
-The exact location of the Go installation files will depend on your Operating System.
+执行本地的Go安装文件会依赖于你的操作系统.
 
-On macOS, it’s under `/usr/local/go`, with binaries in `/usr/local/go/bin`.
+ 在 mac系统中,它在`/usr/local/go`路径下,  `/usr/local/go/bin`.
 
 On Windows, it will be under `C:\Program Files\go`.
 

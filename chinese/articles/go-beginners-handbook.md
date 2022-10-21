@@ -42,8 +42,8 @@ Caddy,一个非常流行的web服务器是用GO编写的.
 
 1.  [怎么获得Go](#how-to-get-started-with-go)
 2.  [怎么安装Go语言环境](#how-to-install-go)
-3.  [怎么选择你的版本](#how-to-setup-your-editor)
-4.  [怎么在用Go编写Hello,World!](#how-to-write-hello-world-in-go)
+3.  [怎么选择你的编辑器](#how-to-setup-your-editor)
+4.  [怎么用Go编写Hello,World!](#how-to-write-hello-world-in-go)
 5.  [怎么编译和运行Go程序](#how-to-compile-and-run-a-go-program)
 6.  [Go的工作空间](#the-go-workspace)
 7.  [分离Go语言](#diving-into-the-go-language)
@@ -100,46 +100,46 @@ Caddy,一个非常流行的web服务器是用GO编写的.
 
 执行本地的Go安装文件会依赖于你的操作系统.
 
- 在 mac系统中,它在`/usr/local/go`路径下,  `/usr/local/go/bin`.
+在mac系统中,它在`/usr/local/go`, 运行文件在`/usr/local/go/bin`.
 
-On Windows, it will be under `C:\Program Files\go`.
+在Windows系统中,它在`C:\Program Files\go`.
 
-The Windows and Mac installers will set the Go binaries path automatically.
+在Windows和Mac安装中Go执行文件路径都是自动设定的.
 
-On a Mac you might also want to install Go via Homebrew using `brew install golang`. This will make it easier to update later.
+在Mac你可以在Homebrew中使用`brew install golang`命令安装. 这样方式更容易升级最新版本.
 
-On Linux you will have to add the Go binaries folder to your terminal path before you can run the `go` command after unpackaging the Linux package to `/usr/local/go` with this command:
+在Linux上你在运行`go`命令之前需要配置环境变量,配置Linux环境变量的路径`/usr/local/go`的命令:
 
 ```bash
 echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
 source $HOME/.profile
 ```
 
-## How to Setup Your Editor
+## 怎么选择你的编辑器
 
-I recommend using [**Visual Studio Code**](https://code.visualstudio.com/) (aka VS Code) as your editor.
+我推荐使用 [**Visual Studio Code**](https://code.visualstudio.com/) (也叫 VS Code) 作为你的编辑器.
 
-Read [Go in Visual Studio Code](https://code.visualstudio.com/docs/languages/go) for a quick “up and running” setup. At the bare minimum, install [the Go extension](https://marketplace.visualstudio.com/items?itemName=golang.go).
+阅读 [在 Visual Studio Code 编写Go](https://code.visualstudio.com/docs/languages/go) 查看 “up and running” 安装. 在最小版,  安装[Go的扩展](https://marketplace.visualstudio.com/items?itemName=golang.go).
 
 ![Screen Shot 2022-07-28 at 10.54.06.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_10.54.06.png)
 
-Go extension for VSCode
+在VSCode中的Go扩展
 
-This extension will make your life easier, as it provides IntelliSense (syntax highlighting, autocompletion, on hover information, error highlighting…) and other things like auto formatting, menu options to install packages, testing, and more.
+这个扩展可以让你的生活更加轻松.在生产产品(符号高亮,自动编译,动态信息提示,高亮...)和其他的功能如自动格式化,可以选择性的安装其他包,测试,还有更多.
 
-## How to Write Hello, World! in Go
+## 怎么用Go编写Hello,World!
 
-Now we’re ready to create our first Go program!
+现在我们准备创建我们第一个Go程序!
 
-It’s a programmer's tradition to make the first program print the “Hello, World!” string to the terminal when it’s run. So we’ll do that first, and then we’ll explain how we did it.
+它是一个程序员创建第一个程序,它会在运行的时候在命令行输入“Hello, World!” 字符串.在我们做第一个程序的同时,我们解释一下我们为什么这样做.
 
-Maybe you have a folder in your home directory where you keep all your coding projects and tests.
+或许你可以在你的目录下创建一个文件夹保存你所有编写的项目和测试.
 
-In there, create a new folder, for example call it `hello`.
+在这,创建一个新的文件夹,比如取名叫`hello`.
 
-In there, create a `hello.go` file (you can name it as you want).
+在这,创建一个叫`hello.go` 的文件 (你可以用任何想要用的名字).
 
-Add this content:
+文件内容如下:
 
 ```go
 package main
@@ -153,37 +153,37 @@ func main() {
 
 ![Screen Shot 2022-07-28 at 12.17.14.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_12.17.14.png)
 
-Go "Hello, World!" code
+Go "Hello, World!" 代码
 
-This is your first Go program!
+这是你编写的第一个Go程序!
 
-Let’s analyze this line by line.
+开始一行行的解析.
 
 ```go
 package main
 ```
 
-We organize Go programs in packages.
+我们通过包的形式组织Go程序.
 
-Each `.go` file first declares which package it is part of.
+每一个`.go` 文件首先声明包的部分.
 
-A package can be composed by multiple files, or just one file.
+一个包可以放多个文件,或者一个文件.
 
-A program can contain multiple packages.
+一个程序可以由多个包组成.
 
-The `main` package is the entry point of the program and identifies an executable program.
+这个 `main` 是程序识别可执行程序用的.
 
 ```go
 import "fmt"
 ```
 
-We use the `import` keyword to import a package.
+我们可以使用 `import` 关键字导入一个包.
 
-`fmt` is a built-in package provided by Go that provides input/output utility functions.
+`fmt` 是Go提供的输入/输出工具函数包.
 
-We have a [large standard library](https://pkg.go.dev/std) ready to use that we can use for anything from network connectivity to math, crypto, image processing, filesystem access, and more.
+我们有[第三方包仓库](https://pkg.go.dev/std) 可以通过网络使用我们想要用的任何包,如数据计算库,加密库,图片处理库,文件系统操作库等更多.
 
-You can read about all the features that this `fmt` package provides [on the official documentation](https://pkg.go.dev/fmt).
+你可以阅读关于`fmt` 包提供的全部功能 [在介绍文档中](https://pkg.go.dev/fmt).
 
 ```go
 func main() {
@@ -191,35 +191,35 @@ func main() {
 }
 ```
 
-Here we declare the `main()` function.
+这里我们声明名为 `main()` 的函数.
 
-What’s a function? We’ll see more about them later, but in the meantime let’s say a function is a block of code that’s assigned a name, and contains some instructions.
+什么是函数?我们待会再看,但是在实际含义中一个函数是一段代码块,包括名字,内部的一些结构.
 
-The `main` function is special because what’s where the program starts.
+这个`main`函数是特殊的因为这也是程序启动的地方. 
 
-In this simple case we just have one function – the program starts with that and then ends.
+在这个简单的案例中我们只是有一个函数-这个程序启动和结束在一起.
 
 ```go
 fmt.Println("Hello, World!")
 ```
 
-This is the content of the function we defined.
+这是我们在函数中的定义.
 
-We call the `Println()` function defined in the `fmt` package we previously imported, passing a string as a parameter.
+我们调用了我们引入的`fmt`包中`Println()` 函数,会输出一个字符串.
 
-This function, according to the [docs](https://pkg.go.dev/fmt#Printf) "_formats according to a format specifier and writes to standard output_”.
+这个函数的描述在[文档中](https://pkg.go.dev/fmt#Printf) "_formats according to a format specifier and writes to standard output_”.
 
-Take a look at the docs because they are great. They even have examples you can run:
+看一下他们伟大的源码,他们有提供示例,你可以试着运行:
 
 ![Screen Shot 2022-07-28 at 14.18.46.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_14.18.46.png)
 
-Go basic function example
+Go基础的函数模板
 
-We use the “dot” syntax `fmt.Println()` to specify that the function is provided by that package.
+我们可以用 “dot” 符号 `fmt.Println()` 获得包中提供的函数的特性.
 
-After the code executes the `main` function, it has nothing else to do and the execution ends.
+在执行代码`main`函数之后,它没有做其他的事就结束了执行.
 
-## How to Compile and Run a Go program
+## 怎么编译和运行Go程序
 
 Now open the terminal in the `hello` folder and run the program using:
 

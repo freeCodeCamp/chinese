@@ -1,121 +1,119 @@
 > -  原文地址：[How to Google like a Pro – 10 Tips for More Effective Googling](https://www.freecodecamp.org/news/how-to-google-like-a-pro-10-tips-for-effective-googling/)
 > -  原文作者：[Soham De Roy](https://www.freecodecamp.org/news/author/sohamderoy/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How to Google like a Pro – 10 Tips for More Effective Googling](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/Group-61.png)
 
-Pretty much everything is available on the internet, and Google is one of the main ways people search for information.
+你几乎可以在互联网上搜索到任何内容，而Google是大多数人选择搜索信息的主要途径之一。
 
-And while you might think it's obvious, many internet users don't know how to use Google search **efficiently** and **effectively**.
+尽管频繁地使用Google，但是大部分互联网用户都不知道如何**快速**和**高效**地使用Google搜索。
 
-In truth, Googling is an art.
+可以说使用Google是一门艺术。
 
-To get the right answers, you need to ask the right questions. And to get the right answers quickly, you must know **how** to ask the right questions.
+想要获得正确的答案，你需要提出正确的问题。想要快速地获得正确的答案，你必须知道 **如何** 提正确的问题。
 
-Everyone should learn the **how** part, and that's what this tutorial is all about. Below are some helpful tips and tricks you can use to find correct answers to your questions effectively and efficiently.
+每一个人都应该学学这个**实操（how）**部分，这也是一篇教程教学目的所在。 以下是一些提示和技巧，帮助你快速、高效地寻找到问题的正确答案。
 
-## How to Search Google Effectively
+## 如何高效地使用Google搜索
 
-### 1\. Use quotes to get an "EXACT" match
+### 1\. 使用引号来获得“完全一致”的匹配搜获
 
-Generally, when we do a regular search on Google, it makes a **shallow** search. This may result in pages that may or may not contain all the words you mentioned in your search query.
+当我们按照惯常的习惯在Google上搜索的时候，实际上我们使用的是**浅**搜索。 这样得到的搜索结果可能会包括你的搜索查询里没有的词。
 
-But if you wrap your search query or question (either a term or a phrase) in quotes like this: `"your question goes here"` then Google will do a deep search. This means that all the results will include pages that **contain all the terms** in your question that you put within quotes.
+但如果你将自己的查询请求或者问题（词汇或者短语）用引号打包，像这样 —— `"你的问题"`，Google就会进入深度搜索模式。这样的搜索结果会**包含所有**在引号内你的搜索问题里的词汇。
 
-This is helpful when you absolutely want a particular term or phrase to be there in your search results.
+当你需要在搜索结果中呈现出某个特定的词汇或者短语的时候，这个方法就十分有用。
 
 ![img1](https://www.freecodecamp.org/news/content/images/2022/08/img1.PNG)
 
-### 2\. Search within a specific site with `site:`
+### 2\. 使用 `site:` 在特定网站搜索
 
-If you want Google to return results from within a particular website, just add `site:` before the question you are searching.
+如果你希望Google返回的搜索结果是来自某个特定的网站，仅需要在你的搜索问题前添加`site:` 。
 
-This is also helpful when you want to search for something within a website that doesn't have an internal search option or perhaps doesn't have a very effective one.
+当你想要在某个没有内置搜索选项的网站，或者内置搜索不太好用的网站进行搜索的时候，这个方法可以派上用场。
 
-For example, searching for **site:freecodecamp.org react** will populate search results only from the [www.freecodecamp.org](https://www.freecodecamp.org/) website on the topic of React.
+假设，你的搜索问题是 **site:freecodecamp.org react**， 返回的搜索结果仅会是来自[www.freecodecamp.org](https://www.freecodecamp.org/) 关于React的话题。
 
 ![img2](https://www.freecodecamp.org/news/content/images/2022/08/img2.PNG)
 
-### 3\. Exclude a term from search results with `-`
+### 3\. 使用`-`在搜索结果中排除某个词汇
 
-If you don't want a term or phrase to appear in your search results, then just add `-` in front of that word.
+如果你不希望自己的搜索结果中出现某个词汇或者短语，可以在那个单词前添加 `-` 。
 
-For e.g. a search on => **how to write components in React -class** will return all the search results that don't have the term "class" in them. So, (if you know a bit of React) it'll give you only ways to write functional components in React.
+假设你的搜索内容是 => **how to write components in React -class**（如何编写React组件 -class），返回的搜索结果会不包含"class"。所以， (如果你了解一点React)，你会发现搜索结果只包含函数式组件。
 
 ![img3](https://www.freecodecamp.org/news/content/images/2022/08/img3.PNG)
 
-### 4\. Search images of a particular size with `imagesize:`
+### 4\. 使用`imagesize:`搜索特定大小的图片
 
-If you want to search images of a particular size, then use the tag `imagesize:` in your search query along with the width and height in **pixels**.
+如果你想搜索特定大小的图片，可以在你的搜索查询中使用`imagesize:`标签，并且标注好以**pixels（像素）**为单位的宽和高。
 
-Dimension should be in **pixels** only – for example, `imagesize:500x500` will populate image results which have a dimension of 500px x 500px. So a search on => "cute dog images imagesize:500x600" (coz why not) will result in pictures of cute dogs with an image size of `500px x 600px`.
+尺寸仅以 **pixels** 为单位 – 例如：`imagesize:500x500`的搜索结果是尺寸为 500px x 500px的图片。 所以如果搜索查询是 => "cute dog images imagesize:500x600"（可爱小狗图片 imagesize：500*600）的搜索结果是尺寸为`500px x 600px`的可爱小狗的图片。
 
 ![img4](https://www.freecodecamp.org/news/content/images/2022/08/img4.PNG)
 
-### 5\. Search for a particular filetype with `filetype:`
+### 5\. 使用`filetype:`搜索特定文件类型
 
-If you want to get search results that contain a particular file type such as PDF or PPT, then add `filetype:<extension>` (without the angular brackets). For example, **react tutorial filetype:pdf** will generate results that contains PDF in them, as seen in the following image:
-
+如果你希望搜索的结果包含了某个特定的文件类型，如：PDF或者PPT，就可以添加`filetype:<扩展名>` (不需要尖括号)。 如, **react tutorial filetype:pdf**（react教学 filetype：pdf）的搜索结果是PDF格式的，如图：
 ![img5](https://www.freecodecamp.org/news/content/images/2022/08/img5.PNG)
 
-### 6\. Use wildcard `*` to make searches
+### 6\. 在搜索中使用通配符`*`
 
-If you are unsure about or have forgotten any term in your search query/ question, then use the wildcard `*` charachter. Google will replace it for you with relevant terms.
+如果你不确定搜索查询/问题或者忘记了其中的词汇，你可以在搜索中使用通配符`*`，Google会用相关的词汇来替换通配符。
 
-For example, a search on => the \* of money will populate the following results. It will be a bunch of pages that include the phrase such as "the _exchange_ of money", "the _use_ of money", "the _role_ of money", "the _psychology_ of money", and so on.
+例如，如果你搜索 => the \* of money（钱的 *），会产生如下结果。 Google会返回一系列搜索页面，包括 "the _exchange_ of money"（金钱交易）、 "the _use_ of money"（金钱的用途）、 "the _role_ of money"（金钱的角色）、 "the _psychology_ of money"（金钱心理学）等。
 
 ![img6](https://www.freecodecamp.org/news/content/images/2022/08/img6.PNG)
 
-### 7\. Combine searches with `OR`, `AND` logic
+### 7\. 使用 `OR`（或）、 `AND`（且）逻辑合并搜索
 
-If you want your search results to contain two terms, then put the `AND` keyword in between them. For example, the search on => **React AND Angular** will fetch results that have both the terms react and angular in it.
+如果你希望搜索结果包含两个词汇，可以在其中使用`AND` 关键字。例如，你搜素=> **React AND Angular**， Google会返回即包含React，又包含Angular的结果。
 
-Similarly, if you want either of the terms in your search results, then use the `OR` keyword in between them. For example, the search on => **React OR Angular** will fetch results that have either of the terms or even both.
+同样的，如果你希望搜索结果包含两个词汇中的任意一个， 可以在其中使用 `OR` 关键字。 例如，你搜索 => **React OR Angular** ， Google会返回包含React或者Angular的结果，甚至包含两者的结果。
 
 ![img7](https://www.freecodecamp.org/news/content/images/2022/08/img7.PNG)
 
-### 8\. Filter out searches with `AFTER:`, `BEFORE:` or `..` between two numbers
+### 8\. 在两个数字间使用 `AFTER:`（在……之后）、 `BEFORE:`（在……之前） 或 `..` 来筛选结果
 
-If you want Google to populate search results that were published after a particular year, then use the tag `AFTER:`. For example, the search on => **React tutorials AFTER:2020** will populate search results published after 2020.
+如果你希望Google的搜索结果是发布在特定年份之后的，你可以使用`AFTER:`标签。例如，你搜索 => **React tutorials AFTER:2020**（React教程 AFTER：2020）会返回迟于2020年发布的结果。
 
-Similarly adding the tag `BEFORE:` will return results published before a particular year.
+同样的，如果添加`BEFORE:` 标签，会返回早于某个特定年份的结果。
 
-You can also search for results published in a certain year range, or for that matter between any numbers. Just add `..` between the two numbers you want to search between along with the units, if any.
-
+你也可以搜索发布在某个年份范围内的结果，或者介于两个数字之间的任意事物。仅在两个数字之间添加 `..`即可，如果有计算单位，也可以添加计算单位。
 ![img8](https://www.freecodecamp.org/news/content/images/2022/08/img8.PNG)
 
-### 9\. Check out related websites using `related:`
+### 9\. 使用 `related:`查询相关网站。
 
-If you want to know what all other websites are available on the internet that are similar to a particular website, then use the `related:` tag.
+如果你想知道和某个特定网站相关的其他网站，可以使用`related:`标签。
 
-For example, a search on **related:google.com** will fetch all the websites that are similar to Google like Bing, Yahoo, DuckDuckGo, and so on.
+例如，你搜索 **related:google.com** 就会得到所有和Google类似的网站，如：Bing、Yahoo、DuckDuckGo等。
 
 ![img9](https://www.freecodecamp.org/news/content/images/2022/08/img9.PNG)
 
-### 10\. Use `cache:` to see Google's cached version of a website
+### 10\. 使用`cache:`查看Google对某个网站的缓存版本
 
-Google stores a cached version of websites to provide search results quickly. To see if Google has cached any site or not, just use the tag `cache:` in front of the website's URL.
+Google提供网站的缓存版本以提高搜索速度。想要知道Google是否缓存了某个网站，可以在网站URL前面添加`cache:`。
 
-This is especially helpful for **web developers** if they want to check if they are currently viewing a cached site or the latest version of a website after they have pushed some changes to the website. For example, a search for => **cache:www.sohamderoy.dev** on the day of writing this tutorial (that is, 4th Aug 2022) returns the following result:
+这一招对于**web开发**来说非常管用，可以检查现在浏览的到底是Google缓存的网站，还是提交了一些修改之后的最近版本的网站。 例如，在写这篇教程的时候（2022年8月4日）搜索 => **cache:www.sohamderoy.dev** ，得到的结果如下：
 
 ![img10a](https://www.freecodecamp.org/news/content/images/2022/08/img10a.png)
 
-As you see, even though I am searching for the site on 4th August 2022, I still see a copy of the site from 3rd August 2022, as that is when Google has cached the website.
+你可以看到，即便我是在2022年8月4日搜索这个网站，我得到的搜索结果是Google缓存的2022年8月3日的版本。
 
-It is important to note that "Not all search operators return exhaustive results." as mentioned by [Google](https://support.google.com/websearch/answer/2466433?visit_id=637790664879774647-1036329470&p=adv_pages_similar&hl=en&rd=1) itself.
+正如[Google](https://support.google.com/websearch/answer/2466433?visit_id=637790664879774647-1036329470&p=adv_pages_similar&hl=en&rd=1)自己描述的一样，我们必须知道“不是所有的搜索运算都会穷举所有结果。”
 
-Still, I believe that these are some really handy tips that help you make an effective and efficient Google search. I hope I've explained them properly and have encouraged you to use them in your regular Google search.
+但我仍相信以上的方法可以帮助你提高使用Google搜索的效率。我希望我的解释足够清晰，并且在日后你能够将这些方法运用在日常的Google搜索中。
 
-## Wrapping Up
+## 总结
 
-Thanks for reading! I really hope you enjoyed reading this short article about how to google efficeiently and effectively and found this tutorial useful.
+感谢阅读！希望你喜欢这篇关于提高Google搜索效率的简短教程。
 
-Do consider sharing it with your friends – I'd really appreciate that. Follow me on LinkedIn and Twitter and stay tuned for more amazing content! Peace out! 🖖
+希望你可以转发给自己的朋友 —— 我将非常感谢。你可以在LinkedIn和Twitter上关注我的最新精彩内容！再见！ 🖖
 
-### Social Links
+### 社交媒体链接
 
 -   [LinkedIn](https://www.linkedin.com/feed/)
 -   [Website](https://www.sohamderoy.dev/)
--   [Other Blogs by me](https://blogs.sohamderoy.dev)
+-   [我的其他博文](https://blogs.sohamderoy.dev)
 -   [Twitter](https://twitter.com/_sohamderoy)

@@ -221,7 +221,7 @@ Go基础的函数模板
 
 ## 怎么编译和运行Go程序
 
-Now open the terminal in the `hello` folder and run the program using:
+现在在`hello`文件夹下打开命令行,用以下命令运行程序:
 
 ```bash
 go run hello.go
@@ -229,53 +229,53 @@ go run hello.go
 
 ![Screen Shot 2022-07-28 at 12.18.23.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_12.18.23.png)
 
-Hello world output in Go
+Go 输出 Hello world 
 
-Our program ran successfully, and it printed “Hello, World!” to the terminal.
+我们的程序运行成功,它会在命令行输出“Hello, World!” .
 
-The `go run` tool first compiles and then runs the program specified.
+这个`go run`会先编译并运行程序.
 
-You can create a **binary** using `go build`:
+你可以用`go build`创建一个**可执行文件**:
 
 ```bash
 go build hello.go
 ```
 
-This will create a `hello` file that’s a binary you can execute:
+这里会创建一个名为`hello`的可执行文件,你可以执行:
 
 ![Screen Shot 2022-07-28 at 12.19.50.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_12.19.50.png)
 
-Executable binary in Go
+执行Go的可执行文件
 
-In the introduction I mentioned that Go is portable.
+在引言部分我提到过Go是轻便的.
 
-Now you can distribute this binary and everyone can run the program as-is, because the binary is already packaged for execution.
+现在你可以分发这个可执行文件到每一个可以运行程序的地方,但是这个可执行文件是可以执行的.
 
-The program will run on the same architecture we built it on.
+这个程序可以运行这和我们的编译有关系.
 
-We can create a different binary for a different architecture using the `GOOS` and `GOARCH` environment variables, like this:
+我们可以创建不一样的可执行文件,通过环境变量`GOOS` 和 `GOARCH`如:
 
 ```go
 GOOS=windows GOARCH=amd64 go build hello.go
 ```
 
-This will create a `hello.exe` executable for 64-bit Windows machines:
+ 这将会创建`hello.exe`文件,可以在64位的Windows机器上运行:
 
 ![Screen Shot 2022-07-28 at 15.36.55.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_15.36.55.png)
 
-Hello.exe executable
+Hello.exe 执行
 
-Setup for 64-bit macOS (Intel or Apple Silicon) is `GOOS=darwin GOARCH=amd64` and Linux is `GOOS=linux GOARCH=amd64`.
+设置64位的Mac的环境变量为`GOOS=darwin GOARCH=amd64` ,Linux的环境变量是`GOOS=linux GOARCH=amd64`.
 
-This is one of the best features of Go.
+这个Go最好的特性之一.
 
-## The Go Workspace
+## Go的工作空间
 
-One special thing about Go is what we call the **workspace**.
+关于Go中的一个特殊的点,我们称为 **工作区**.
 
-The workspace is the “home base” for Go.
+这个工作区是 Go中的 “家目录”.
 
-By default Go picks the `$HOME/go` path, so you will see a `go` folder in your home.
+Go默认的路径在`$HOME/go`下,所以你可以在你的家目录中看到`go`文件夹.
 
 It’s first created when you install a package (as we’ll see later) but also to store some tooling.
 

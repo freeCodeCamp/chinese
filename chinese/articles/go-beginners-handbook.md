@@ -46,7 +46,7 @@ Caddy,一个非常流行的web服务器是用GO编写的.
 4.  [怎么用Go编写Hello,World!](#how-to-write-hello-world-in-go)
 5.  [怎么编译和运行Go程序](#how-to-compile-and-run-a-go-program)
 6.  [Go的工作空间](#the-go-workspace)
-7.  [分离Go语言](#diving-into-the-go-language)
+7.  [深入Go语言](#diving-into-the-go-language)
 8.  [Go中的变量](#variables-in-go)
 9.  [Go的基础类型](#basic-types-in-go)
 10.  [Go中的字符串](#strings-in-go)
@@ -277,49 +277,49 @@ Hello.exe 执行
 
 Go默认的路径在`$HOME/go`下,所以你可以在你的家目录中看到`go`文件夹.
 
-It’s first created when you install a package (as we’ll see later) but also to store some tooling.
+它会在你安装包(待会我们看一下)进行创建.
 
-For example the moment I loaded the `hello.go` file in VS Code, it prompted me to install the `[gopls](https://pkg.go.dev/golang.org/x/tools/gopls)` command, the Delve debugger (`dlv`), and the [`staticcheck` linter](https://staticcheck.io/).
+在示例中我在VS Code中加载`hello.go`文件, 它会安装`[gopls](https://pkg.go.dev/golang.org/x/tools/gopls)` 命令, 开发调试工具(`dlv`), 和[`静态检查`行](https://staticcheck.io/).
 
-They were automatically installed under `$HOME/go`:
+他们会自动安装到`$HOME/go`路径下:
 
 ![Screen Shot 2022-07-28 at 12.27.27.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_12.27.27.png)
 
 `$HOME/go`
 
-When you install packages using `go install`, they will be stored here.
+当你使用`go install`安装库时, 他们会出现在这里.
 
-This is what we call **GOPATH**.
+这就是我们讲的**GOPATH**.
 
-You can change the `GOPATH` environment variable to change where Go should install packages.
+你可以修改环境变量`GOPATH`来决定库文件的位置.
 
-This is useful when working on different projects at the same time and you want to isolate the libraries you use.
+同在在不同项目工作的时候你可以按你想要库的方式来设置.
 
-## Diving into the Go Language
+## 深入Go语言
 
-Now that we've got the first notions in place, and we ran our first Hello, World! program, we can dive into the language.
+现在我们编写了一个部分,我们运行了第一个Hello, World! 程序, 我们可以深入Go语言了.
 
-The language has no semantically significant whitespace. This is like C, C++, Rust, Java, JavaScript, but unlike Python, where whitespace is meaningful and is used to create blocks instead of curly brackets.
+这门语言不是在白板上凭空产生的,它像 C, C++, Rust, Java, JavaScript, 但是不像Python,在白板上定义了语言的特性.
 
-Semicolons are optional, like in JavaScript (unlike in C, C++, Rust or Java).
+分号结束符是可选的, 像 JavaScript (不像 C, C++, Rust 和 Java).
 
-Go takes indentation and visual order very seriously.
+Go对动态缩进和视觉次序很重视.
 
-When we install Go we also get access to the `gofmt` command line tool which we can use to format Go programs. VS Code uses that under the hood to format Go source files.
+在我们安装Go程序的时候自带了`gofmt`命令,我们可以用它对Go程序进行格式化. 在VS Code中可以对Go源码文件进行格式化. 
 
-This is very interesting and innovative because formatting and issues like tabs vs spaces or “should I put the curly brackets on the same line of the loop definition or in the next line” are a huge waste of time.
+这是非常重要的,因为格式和问题像tab符和空格符或者是“我是否应该将循环体放在下一行”这些问题浪费很多时间 .
 
-The language creators defined the rules, and everyone uses those rules.
+语言在创建的时候就定义了规则,每个人都使用这些规则.
 
-This is great for projects with large teams.
+这对于拥有大型团队的项目非常有用.
 
-I recommend you enable in the VS Code Settings “**Format on Save**” and “**Format on Paste**”:
+我推荐你在VS Code中设置 “**保存时格式化**” 和 “**粘贴时格式化**”:
 
 ![Screen Shot 2022-07-28 at 14.39.42.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_14.39.42.png)
 
-VS Code settings for Go - Format on Paste and Format on Save
+在VS Code 中设置Go的粘贴时格式化和保存时格式化
 
-You can write comments in Go using the usual C / C++ / JavaScript / Java syntax:
+你可以使用常用的 C / C++ / JavaScript / Java 语法在Go中写注释:
 
 ```go
 // this is a line comment
@@ -331,17 +331,17 @@ comment
 */
 ```
 
-## Variables in Go
+## Go中的变量
 
-One of the first things you do in a programming language is defining a variable.
+你在使用编程语言时第一件做的事就是定义一个变量.
 
-In Go we define variables using `var`:
+在Go中我们用`var`关键字声明变量:
 
 ```go
 var age = 20
 ```
 
-You can define variables at the package level:
+你可以定义包作用域的变量:
 
 ```go
 package main
@@ -355,7 +355,7 @@ func main() {
 }
 ```
 
-or inside a function:
+或是在函数中:
 
 ```go
 package main

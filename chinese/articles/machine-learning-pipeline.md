@@ -87,34 +87,35 @@ Scikit-learn网站中对列变形工具的描述如下：
 
 ![1*ZT7S2SuhMd4Zazb2lVWmcw](https://miro.medium.com/max/1400/1*ZT7S2SuhMd4Zazb2lVWmcw.png)
 
-Note that I skipped categorical feature encoding for the simplicity of this article.
+注意，本文为了突出重点我省略了对分类特征的编码步骤。
 
-### Here are the steps we'll follow:
+### 以下是我们将进行的步骤分解:
 
-1.  Import data and encoding
-2.  Define sets of columns to be transformed in different ways
-3.  Split data to train and test sets
-4.  Create pipelines for numerical and categorical features
-5.  Create ColumnTransformer to apply pipeline for each column set
-6.  Add a model to a final pipeline
-7.  Display the pipeline
-8.  Pass data through the pipeline
-9.  (Optional) Save the pipeline
 
-### Step 1: Import and Encode the Data
+1.  导入数据并编码
+2.  框定并基于变形的不同对需要变形的列进行分类
+3.  将数据分成训练集和测试集
+4.  对数值型特征和分类型特征创建对应管道工具
+5.  对每种管道创建对应的列变形工具
+6.  对成品管道添加一个模型
+7.  检视管道
+8.  用管道处理相关数据
+9.  (可选) 保存相关管道
 
-After downloading the data, you can import it using Pandas like this:
+### 第一步：导入数据并编码
+
+下载数据后，你需要将数据导入。代码如下：
 
 ```Python
-import pandas as pd
+import pandas as pd # 导入pandas包
 
-df = pd.read_csv("aug_train.csv")
+df = pd.read_csv("aug_train.csv") # 导入csv数据
 ```
 
-Then, encode the ordinal feature using mapping to transform categorical features into numerical features (since the model takes only numerical input).
+接着，利用将分类特征映射（mapping）成数值特征的功能对序数特征进行编码（encoding）（模型仅支持数值特征作为输入）
 
 ```Python
-# Making Dictionaries of ordinal features
+# 对序数特征建立字典（dictionary）
 
 relevent_experience_map = {
     'Has relevent experience':  1,
@@ -155,7 +156,7 @@ last_new_job_map = {
     '>4'           :    5
 }
 
-# Transform categorical features into numerical features
+# 将分类型特征变形为数值型特征
 
 def encode(df_pre):
     df_pre.loc[:,'relevent_experience'] = df_pre['relevent_experience'].map(relevent_experience_map)

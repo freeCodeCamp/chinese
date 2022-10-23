@@ -96,13 +96,13 @@ Scikit-learn网站中对列变形工具的描述如下：
 2.  框定并基于变形的不同对需要变形的列进行分类
 3.  为数值和分类特征创建不同的管道
 4.  对数值和分类型特征创建对应的列变形工具
-5.  对每种管道创建对应的列变形工具
-6.  向最终管道添加模型
-7.  检视管道
-8.  用管道处理相关数据
-9.  (可选) 保存相关管道
+5.  向最终管道添加模型
+6.  检视管道
+7.  将数据拆分成训练集和测试集
+8.  令数据通过管道工具
+9.  (可选) 保存管道工具
 
-### 第一步：导入数据并编码
+### 步骤1：导入数据并编码
 
 下载数据后，你需要将数据导入。代码如下：
 
@@ -237,9 +237,9 @@ col_trans = ColumnTransformer(transformers=[
 
 ### 步骤5：向最终管道添加模型
 
-I'm using the logistic regression model in this example.
+在这个案例中我们采用逻辑回归模型。
 
-Create a new pipeline to commingle the ColumnTransformer in step 4 with the logistic regression model. I use a pipeline in this case because the entire dataframe must pass the ColumnTransformer step and modeling step, respectively.
+构建新的管道工具将步骤4中的列变形工具和逻辑回归模型结合起来。在这里利用管道的原因是整个数据框架需要经理列变形步骤和建模步骤。
 
 ```Python
 from sklearn.linear_model import LogisticRegression
@@ -251,9 +251,9 @@ clf_pipeline = Pipeline(steps=[
 ])
 ```
 
-### Step 6: Display the Pipeline
+### 步骤6：检视管道
 
-The syntax for this is `display(pipeline name)`:
+这个步骤的语法是 `display(pipeline name)`:
 
 ```Python
 from sklearn import set_config
@@ -264,18 +264,17 @@ display(clf_pipeline)
 
 ![1*ZAQ6T65iADOmFx1eCJsjDQ](https://miro.medium.com/max/560/1*ZAQ6T65iADOmFx1eCJsjDQ.png)
 
-Displayed pipeline
+管道示意图
 
-You can click on the displayed image to see the details of each step.  
-How convenient!
+你可以点击管道示意图来检查每个步骤的细节，就是这么方便！
 
 ![1*gahdAdZlFSICnQmiqbQYvg](https://miro.medium.com/max/1400/1*gahdAdZlFSICnQmiqbQYvg.png)
 
-Expanded displayed pipeline
+展开后的管道示意图
 
-### Step 7: Split the Data into Train and Test Sets
+### 步骤7：将数据拆分成训练集和测试集
 
-Split 20% of the data into a test set like this:
+通过以下代码将20%的数据拆分成测试集：
 
 ```Python
 from sklearn.model_selection import train_test_split
@@ -286,21 +285,21 @@ y = df['target']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y)
 ```
 
-I will fit the pipeline for the train set and use that fitted pipeline for the test set to prevent data leakage from the test set to the model.
+我会先用训练集训练这个管道工具，再令测试集通过训练后的管道工具。这样做可以防止训练集数据泄露（data leakage）影响模型质量。
 
-### Step 8: Pass Data through the Pipeline
+### 步骤8：令数据通过管道工具
 
-Here's the syntax for this:
+以下是这个步骤的语法：
 
 ```Python
 pipeline_name.fit, pipeline_name.predict, pipeline_name.score
 ```
 
-`pipeline.fit` passes data through a pipeline. It also fits the model.
+`pipeline.fit` 可以令数据通过一个管道工具。这个步骤会同时训练对应模型。
 
-`pipeline.predict` uses the model trained when `pipeline.fit`s to predict new data.
+`pipeline.predict` 可以应用训练后的模型 `pipeline.fit`可以预测新数据。
 
-`pipeline.score` gets a score of the model in the pipeline (accuracy of logistic regression in this example).
+`pipeline.score` 获取管道工具中模型的评价（在这一案例中是逻辑回归的准确度）。
 
 ```Python
 clf_pipeline.fit(X_train, y_train)
@@ -311,11 +310,11 @@ print(f"Model score: {score}") # model accuracy
 
 ![1*Y5liijw_WH1kRMnO4S3ung](https://miro.medium.com/max/1400/1*Y5liijw_WH1kRMnO4S3ung.png)
 
-### (Optional) Step 9: Save the Pipeline
+### （可选）步骤9：保存管道工具
 
-The syntax for this is `joblib.dumb`.
+这个步骤的语法是 `joblib.dumb`.
 
-Use the joblib library to save the pipeline for later use, so you don’t need to create and fit the pipeline again. When you want to use a saved pipeline, just load the file using joblib.load like this:
+应用joblib包可以保存创建的管道以便日后应用，这样你就不用一次次重新创建和训练之前的步骤和管道工具了。当你想使用保存的管道时，只需要读取joblib.load的保存文件，具体代码如下：
 
 ```Python
 import joblib

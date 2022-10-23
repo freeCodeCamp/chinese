@@ -676,4 +676,3 @@ orders\_new.json
 -   可以以JSON格式存储Python对象的内容，并将其写入JSON文件。
 
 **我真的希望你喜欢我的文章，并觉得它很有帮助。**现在你已经知道如何在Python中使用JSON了。在Twitter上可以关注我[@EstefaniaCassN](https://twitter.com/EstefaniaCassN)和[查看我的在线课程](https://www.udemy.com/user/estefania-cn/)。
-

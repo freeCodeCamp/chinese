@@ -378,13 +378,13 @@ client_JSON = json.dumps(client, sort_keys=True)
 {"age": 56, "eye_color": "green", "id": "45355", "name": "Nora", "wears_glasses": false}
 ```
 
-### 如何同时按字母排序键和使用缩进
+### 如何同时按字母排序和使用缩进
 
-To generate a JSON string that is sorted alphabetically and indented, you just need to pass the two arguments:
+要生成（键）按字母顺序和有缩进的JSON字符串，只需要传递两个参数：
 
 ![image-104](https://www.freecodecamp.org/news/content/images/2020/10/image-104.png)
 
-In this case, the output is:
+在这个例子中，输出是：
 
 ```python
 {
@@ -396,23 +396,23 @@ In this case, the output is:
 }
 ```
 
-**💡 Tip:** You can pass these arguments in any order (relative to each other), but the object has to be the first argument in the list.
+**💡 提示：**可以按任何顺序（相对于彼此）传递这两个参数，但（要进行转换的）对象必须是第一个参数。
 
-Great. Now you know how to work with JSON strings, so let's see how you can work with JSON files in your Python programs.
+太棒了，现在你已经知道如何使用JSON字符串，那就让我们看看如何在Python程序中处理JSON文件。
 
-## 🔸 JSON and Files
+## 🔸 JSON和文件
 
-Typically, JSON is used to store data in files, so Python gives us the tools we need to read these types of file in our program, work with their data, and write new data.
+JSON通常用于将数据存储在文件中，因此Python为我们提供了在程序中读取这些类型的文件、处理文件的数据以及编写新数据所需的工具。
 
-**💡 Tip:** a JSON file has a `.json` extension:
+**💡 提示：**JSON文件有一个`.json`扩展名：
 
 ![image-62](https://www.freecodecamp.org/news/content/images/2020/10/image-62.png)
 
-Let's see how we can work with `.json` files in Python.
+来看看如何在Python中处理`.json`文件。
 
-### How to Read a JSON File in Python
+### 在Python中如何读取JSON文件
 
-Let's say that we created an `orders.json` file with this data that represents two orders in a pizza shop:
+假设我们创建了一个 `orders.json` 文件，文件中有披萨店两个订单的数据：
 
 ```python
 {
@@ -447,115 +447,115 @@ Let's say that we created an `orders.json` file with this data that represents t
 
 orders.json
 
-Please take a moment to analyze the structure of this JSON file.
+请花点时间分析此JSON文件的结构。
 
-Here are some quick tips:
+以下是一些提示：
 
--   Notice the data types of the values, the indentation, and the overall structure of the file.
--   The value of the main key `"orders"` is an array of JSON objects (this array will be represented as list in Python). Each JSON object holds the data of a pizza order.
+-   请注意值的数据类型、缩进和文件的整体结构。
+-   主键`"orders"`的值是一个JSON对象数组（这个数组在Python中表示列表），（数组里）每个JSON对象都保存了披萨订单的数据。
 
-If we want to read this file in Python, we just need to use a `with` statement:
+如果我们想在Python中读取此文件，只需要使用`with`语句：
 
 ![image-87](https://www.freecodecamp.org/news/content/images/2020/10/image-87.png)
 
-💡 **Tip:** In the syntax above, we can assign any name to `file` (green box). This is a variable that we can use within the `with` statement to refer to the file object.
+💡 **提示：**在上面的语法中，我们可以为`file`（绿色框）指定任何名称，这是一个我们可以在`with`语句中用来引用文件对象的变量。
 
-The key line of code in this syntax is:
+此语法中的关键代码行是：
 
 ```
 data = json.load(file)
 ```
 
--   `json.load(file)` creates and returns a new Python dictionary with the key-value pairs in the JSON file.
--   Then, this dictionary is assigned to the `data` variable.
+-   `json.load（file）`创建并返回一个新的包含JSON文件中键-值对的Python字典。
+-   然后将该字典赋值给`data`变量。
 
-💡 **Tip:** Notice that we are using `load()` instead of `loads()`. This is a different function in the `json` module. You will learn more about their differences at the end of this article.
+💡 **提示：**请注意，我们使用的是`load()`而不是`loads()`，这是`json`模块中的不同函数。你将在本文的末尾了解更多它们的差异。
 
-Once we have the content of the JSON file stored in the `data` variable as a dictionary, we can use it to do basically anything we want.
+一旦我们将JSON文件的内容作为字典存储在`data`变量中，我们就可以使用它做想要做的任何事情。
 
-### Examples
+### 例子
 
-For example, if we write:
+例如，如果我们执行：
 
 ```python
 print(len(data["orders"]))
 ```
 
-The output is `2` because the value of the main key `"orders"` is a list with two elements.
+输出为`2`，因为主键`orders`的值是一个包含两个元素的列表。
 
-We can also use the keys to access their corresponding values. This is what we typically do when we work with JSON files.
+我们还可以使用键访问其对应的值，即处理JSON文件时通常要做的事情。
 
-For example, to access the toppings of the first order, we would write:
+例如，要访问第一个订单的toppings，我们执行：
 
 ```
 data["orders"][0]["toppings"]
 ```
 
--   First, we select the main key `"orders"`
--   Then, we select the first element in the list (index `0`).
--   Finally, we select the value that corresponds to the key `"toppings"`
+-   首先，我们选择主键`"orders"`
+-   然后，我们选择列表中的第一个元素（索引`0`）
+-   最后，我们选择与键`"toppings"`对应的值
 
-You can see this "path" graphically in the diagram:
+你可以在图表中以图形方式看到此“路径”：
 
 ![image-101](https://www.freecodecamp.org/news/content/images/2020/10/image-101.png)
 
-If we print this value, the output is:
+如果我们打印这个值，输出是：
 
 ```python
 ['mushrooms', 'pepperoni', 'basil']
 ```
 
-Exactly what we expected. You just need to "dive deeper" into the structure of the dictionary by using the necessary keys and indices. You can use the original JSON file/string as a visual reference. This way, you can access, modify, or delete any value.
+这正是我们所期望的。你只需要通过使用必要的键和索引来“深入”了解字典的结构（可以使用原始JSON文件或字符串作为视觉参考），就可以访问、修改或删除任何值。
 
-**💡 Tip:** Remember that we are working with the new dictionary. The changes made to this dictionary will not affect the JSON file. To update the content of the file, we need to write to the file.
+**💡 提示：**请记住，我们正在使用新创建的字典，对此字典所做的更改不会影响原JSON文件。要更新文件的内容，需要写入文件中。
 
-### How to Write to a JSON File
+### 如何写一个JSON文件
 
-Let's see how you can write to a JSON file.
+让我们看看如何写一个JSON文件。
 
-The first line of the `with` statement is very similar. The only change is that you need to open the file in `'w'` (write) mode to be able to modify the file.
+第一行的`with`语句（和读JSON文件）非常相似，唯一的改变是需要以`'w'`（即写入）模式打开文件，这样才能修改文件。
 
 ![image-105](https://www.freecodecamp.org/news/content/images/2020/10/image-105.png)
 
-**💡 Tip:** If the file doesn't exist already in the current working directory (folder), it will be created automatically. By using the `'w'` mode, we will be replacing the entire content of the file if it already exists.
+**💡 提示：**如果当前工作目录（文件夹）中文件不存在，则会自动创建该文件。如果文件存在，通过使用`'w'`模式，我们将替换文件的全部内容。
 
-There are two alternative ways to write to a JSON file in the body of the `with` statement:
+在`with`语句中，有两种写入JSON文件的方法：
 
 -   `dump`
 -   `dumps`
 
-Let's see them in detail.
+让我们详细看看。
 
-**First Approach: `dump`**
+**第一种方法：`dump`**
 
-This is a function that takes two arguments:
+这是一个有两个参数的函数：
 
--   The object that will be stored in JSON format (for example, a dictionary).
--   The file where it will be stored (a file object).
+-   将以JSON格式存储的对象（例如字典）。
+-   将存储该JSON字符串的文件（即文件对象）。
 
 ![image-91](https://www.freecodecamp.org/news/content/images/2020/10/image-91.png)
 
-Let's say that the pizza shop wants to remove the clients' data from the JSON file and create a new JSON file called `orders_new.json` with this new version.
+如果披萨店想从JSON文件中删除客户的数据，并创建一个新版本的`orders_new.json`文件。
 
-We can do this with this code:
+我们可以通过以下代码完成此操作：
 
 ```python
-# Open the orders.json file
+# 打开orders.json文件
 with open("orders.json") as file:
-    # Load its content and make a new dictionary
+    # 加载它的内容并创建一个新字典
     data = json.load(file)
 
-    # Delete the "client" key-value pair from each order
+    # 在每个order中删除"client"键-值对
     for order in data["orders"]:
         del order["client"]
 
-# Open (or create) an orders_new.json file 
-# and store the new version of the data.
+# 打开（或者创建）一个orders_new.json文件
+# 保存新版本的数据
 with open("orders_new.json", 'w') as file:
     json.dump(data, file)
 ```
 
-This was the original version of the data in the `orders.json` file. Notice that the `"client"` key-value pair exists.
+这是 `orders.json` 中数据的原始版本，请注意里面存在`"client"`键-值对。
 
 ```python
 {
@@ -590,7 +590,7 @@ This was the original version of the data in the `orders.json` file. Notice that
 
 orders.json
 
-This is the new version in the `orders_new.json` file:
+这是`orders_new.json`文件里的新版本数据：
 
 ```Python
 {"orders": [{"size": "medium", "price": 15.67, "toppings": ["mushrooms", "pepperoni", "basil"], "extra_cheese": false, "delivery": true}, {"size": "small", "price": 6.54, "toppings": null, "extra_cheese": true, "delivery": false}]}
@@ -598,19 +598,19 @@ This is the new version in the `orders_new.json` file:
 
 orders\_new.json
 
-If you analyze this carefully, you will see that the `"clients"` key-value pair was removed from all the orders.
+如果仔细分析，你会发现`"clients"`键-值对从所有订单中被删除。
 
-However, there is something missing in this file, right?
+然而，这个文件中缺少了一些东西，对吗？
 
-Please take a moment to think about this... What could it be?
+请花点时间思考一下…可能是什么？
 
-Indentation, of course!
+当然是缩进！
 
-The file doesn't really look like a JSON file, but we can easily fix this by passing the argument `indentation=4` to `dump()`.
+该文件实际上看起来不像JSON文件，但我们可以通过将参数`indentation=4`传递给`dump()`来轻松解决这个问题。
 
 ![image-92](https://www.freecodecamp.org/news/content/images/2020/10/image-92.png)
 
-Now the content of the file looks like this:
+现在文件内容如下所示：
 
 ```python
 {
@@ -639,40 +639,41 @@ Now the content of the file looks like this:
 
 orders\_new.json
 
-What a difference! This is exactly what we would expect a JSON file to look like.
+多么大的变化啊！这正是我们期望的JSON文件的样子。
 
-Now you know how to read and write to JSON files using `load()` and `dump()`. Let's see the differences between these functions and the functions that we used to work with JSON strings.  
+现在你已经知道如何使用`load()`和`dump`来读取和写入JSON文件，就让我们看看这两个函数和用来处理JSON字符串的函数之间的区别。
 
 ## 🔹 load() vs. loads()
 
-This table summarizes the key differences between these two functions:
+这个表格总结了这两个函数之间的主要区别：
 
 ![image-110](https://www.freecodecamp.org/news/content/images/2020/10/image-110.png)
 
-💡 **Tip:** Think of `loads()` as "load string" and that will help you remember which function is used for which purpose.
+💡 **提示：**将`loads()`视为"load string"，这有助于记住函数处理的目标。
 
 ## 🔸 dump() vs. dumps()
 
-Here we have a table that summarizes the key differences between these two functions:
+这是一个总结了两个函数之间主要差异的表格：
 
 ![image-109](https://www.freecodecamp.org/news/content/images/2020/10/image-109.png)
 
-💡 **Tip:** Think of `dumps()` as a "dump string" and that will help you remember which function is used for which purpose.
+💡 **提示：**将`dumps()`视为"dump string"，这有助于记住函数处理的目标。
 
-## 🔹 Important Terminology in JSON
+## 🔹 JSON中的重要术语
 
-Finally, there are two important terms that you need to know to work with JSON:
+最后，使用JSON需要了解两个重要术语：
 
--   **Serialization:** converting an object into a JSON string.
--   **Deserialization:** converting a JSON string into an object.
+-   **序列化：** 将一个对象转换为JSON字符串
+-   **反序列化：** 将一个JSON字符串转换为对象
 
-## 🔸 In Summary
+## 🔸 总结
 
--   JSON (JavaScript Object Notation) is a format used to represent and store data.
--   It is commonly used to transfer data on the web and to store configuration settings.
--   JSON files have a `.json` extension.
--   You can convert JSON strings into Python objects and vice versa.
--   You can read JSON files and create Python objects from their key-value pairs.
--   You can write to JSON files to store the content of Python objects in JSON format.
+-   JSON（JavaScript Object Notation）是一种用于表示和存储的数据格式。
+-   它通常用于存储配置信息和在网络上传输数据。
+-   JSON文件有一个`.json`扩展名。
+-   可以将JSON字符串转换为Python对象，反之亦然。
+-   可以读取JSON文件并用其键-值对创建Python对象。
+-   可以以JSON格式存储Python对象的内容，并将其写入JSON文件。
 
-****I really hope you liked my article and found it helpful.**** Now you know how to work with JSON in Python. Follow me on Twitter [@EstefaniaCassN](https://twitter.com/EstefaniaCassN) and [check out my online courses](https://www.udemy.com/user/estefania-cn/).
+**我真的希望你喜欢我的文章，并觉得它很有帮助。**现在你已经知道如何在Python中使用JSON了。在Twitter上可以关注我[@EstefaniaCassN](https://twitter.com/EstefaniaCassN)和[查看我的在线课程](https://www.udemy.com/user/estefania-cn/)。
+

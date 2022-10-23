@@ -369,23 +369,23 @@ func main() {
 }
 ```
 
-Defined at the package level, a variable is visible across all the files that compose the package. A package can be composed of multiple files, you just need to create another file and use the same package name at the top.
+定义在包中,一个变量可以在包中的所有文件中进行使用.多个文件可以放在一个包里面,你只需要在创建另一个文件并在同样的包名写在文件顶部.
 
-Defined at the function level, a variable is visible only within that function. It’s initialized when the function is called, and destroyed when the function ends the execution.
+定义在函数中,一个变量只能在函数内使用.它会在调用函数时进行初始化,函数执行结束时销毁.
 
-In the example we used:
+我们使用以下示例:
 
 ```go
 var age = 20
 ```
 
-we assign the value `20` to `age`.
+我们设置变量`age`的值为`20`.
 
-This makes Go determine that the **type** of the variable `age` is `int`.
+Go使用默认定义这里变量 `age` 的**类型**是 `int`.
 
-We’ll see more about types later, but you should know there are many different ones, starting with `int`, `string`, and `bool`.
+我们待会看到更多其他的类型,但你应该知道各种的类型的不同之处,比如`int`, `string`, 和 `bool`.
 
-We can also declare a variable without an existing value, but in this case we must set the type like this:
+我们可以不给变量设置值,但是必须设置它们的类型如下:
 
 ```go
 var age int
@@ -393,14 +393,14 @@ var name string
 var done bool
 ```
 
-When you know the value, you typically use the short variable declaration with the `:=` operator:
+当你知道值时,你可以直接用短的变量声明如 `:=` 运算符:
 
 ```go
 age := 10
 name := "Roger"
 ```
 
-For the name of the variable you can use letters, digits, and the underscore `_` as long as the name starts with a character or `_`.
+`_`  `_`.
 
 Names are **case sensitive**.
 

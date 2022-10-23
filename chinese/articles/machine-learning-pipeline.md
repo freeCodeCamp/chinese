@@ -94,10 +94,10 @@ Scikit-learn网站中对列变形工具的描述如下：
 
 1.  导入数据并编码
 2.  框定并基于变形的不同对需要变形的列进行分类
-3.  将数据分成训练集和测试集
-4.  对数值型特征和分类型特征创建对应管道工具
+3.  为数值和分类特征创建不同的管道
+4.  对数值和分类型特征创建对应的列变形工具
 5.  对每种管道创建对应的列变形工具
-6.  对成品管道添加一个模型
+6.  向最终管道添加模型
 7.  检视管道
 8.  用管道处理相关数据
 9.  (可选) 保存相关管道
@@ -218,14 +218,11 @@ cat_pipeline = Pipeline(steps=[
 ```Python
 ColumnTransformer(transformers=[(‘step name’, transform function,cols), …])
 ```
+在步骤3中创建模型后令数值型特征通过数值变形管道，令分类型特征通过分类变形管道。
 
+为了跳过不同类型的特征我创建了remainder=’drop’标签。
 
-
-Pass numerical columns through the numerical pipeline and pass categorical columns through the categorical pipeline created in step 3.
-
-remainder=’drop’ is specified to ignore other columns in a dataframe.
-
-n\_job = -1 means that we'll be using all processors to run in parallel.
+n\_job = -1 标签可以令处理器并行处理
 
 ```Python
 from sklearn.compose import ColumnTransformer
@@ -238,7 +235,7 @@ col_trans = ColumnTransformer(transformers=[
     n_jobs=-1)
 ```
 
-### Step 5: Add a Model to the Final Pipeline
+### 步骤5：向最终管道添加模型
 
 I'm using the logistic regression model in this example.
 

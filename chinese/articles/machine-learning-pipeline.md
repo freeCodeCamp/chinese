@@ -168,9 +168,9 @@ def encode(df_pre):
 df = encode(df)
 ```
 
-### Step 2: Define Sets of Columns to be Transformed in Different Ways
+### 步骤2：将数值和分类型特征分类为不同的数据变形做准备
 
-Numerical and categorical data should be transformed in different ways. So I define `num_col` for numerical columns (numbers) and `cat_cols` for categorical columns.
+数值型数据和分类型数据的变形方法是不同的。所以我定义了两个列表`num_col`和`cat_cols`来储存数值型特征和分类型特征。
 
 ```python
 num_cols = ['city_development_index','relevent_experience', 'experience','last_new_job', 'training_hours']
@@ -178,23 +178,23 @@ num_cols = ['city_development_index','relevent_experience', 'experience','last_n
 cat_cols = ['gender', 'enrolled_university', 'education_level', 'major_discipline', 'company_size', 'company_type']
 ```
 
-### Step 3: Create Pipelines for Numerical and Categorical Features
+### 步骤3：为数值和分类特征创建不同的管道
 
-The syntax of the pipeline is:
+管道工具的语法如下：
 
 ```Python
 Pipeline(steps = [(‘step name’, transform function), …])
 ```
 
-For **numerical features**, I perform the following actions:
+针对**数值型特征**，以下步骤将被执行：
 
-1.  SimpleImputer to fill in the missing values with the mean of that column.
-2.  MinMaxScaler to scale the value to range from 0 to 1 (this will affect regression performance).
+1.  利用均值对缺失值进行填充。
+2.  通过缩放将特征最小值和最大值缩放至0和1（这个步骤会影响回归模型的表现）。
 
-For **categorical features**, I perform the following actions:
+针对**分类型特征**，以下步骤将被执行：
 
-1.  SimpleImputer to fill in the missing values with the most frequency value of that column.
-2.  OneHotEncoder to split to many numerical columns for model training. (handle\_unknown=’ignore’ is specified to prevent errors when it finds an unseen category in the test set)
+1.  利用众数对缺失值进行填充。
+2.  通过独热编码对数值特征进行拆分以便进行模型训练。（为了防止出现未知类目而无法处理，定义handle\_unknown=’ignore’用以处理这类情况）
 
 ```Python
 from sklearn.impute import SimpleImputer
@@ -211,13 +211,15 @@ cat_pipeline = Pipeline(steps=[
 ])
 ```
 
-### Step 4: Create ColumnTransformer to Apply the Pipeline for Each Column Set
+### 步骤4：对数值和分类型特征创建对应的列变形工具
 
-The syntax of the ColumnTransformer is:
+列变形工具的语法如下：
 
 ```Python
 ColumnTransformer(transformers=[(‘step name’, transform function,cols), …])
 ```
+
+
 
 Pass numerical columns through the numerical pipeline and pass categorical columns through the categorical pipeline created in step 3.
 

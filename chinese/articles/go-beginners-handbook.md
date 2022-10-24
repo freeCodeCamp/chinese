@@ -600,64 +600,64 @@ func main() {
 -   `strings.Split()` 创建一个数组来保存通过特殊字符串对字符串进行分割的结果,例如通常使用空格
 -   `strings.ReplaceAll()` 使用替换,可以使用一个新的字符串替换掉原字符中的字符串
 
-## Arrays in Go
+## Go中的数组
 
-Arrays are a sequence of items of a single type.
+数组是单个类型的序列.
 
-We define an array in this way:
+我们可以这种方式定义数组:
 
 ```go
 var myArray [3]string //an array of 3 strings
 ```
 
-and you can initialize the array with values using:
+或者你也可以给数组赋予初始值:
 
 ```go
 var myArray = [3]string{"First", "Second", "Third"}
 ```
 
-In this case you can also let Go do some work and count the items for you:
+在这个例子中,你可以让Go来帮你进行数组长度的推断:
 
 ```go
 var myArray = [...]string{"First", "Second", "Third"}
 ```
 
-An array can only contain values of the same type.
+数组只能包含同一种类型的数据.
 
-The array cannot be resized – you have to explicitly define the length of an array in Go. That’s part of the _type_ of an array. Also, you cannot use a variable to set the length of the array.
+数组不能动态扩容-在Go中你必须声明数组的长度.这和类型一样是数组的一部分.当然,你不能使用一个没有声明长度的数组.
 
-Due to this limitation, arrays are rarely used directly in Go. Instead we use **slices** (more on them later). Slices use arrays under the hood, so it’s still necessary to know how they work.
+由于这个限制,数组在Go中很少使用,我们经常用到**切片**(稍后我们会讲到更多).切片的底层是数组.所以我们需要知道它的工作原理.
 
-You can access an item in the array with the square brackets notation we already used in strings to access a single character:
+你可以通过中括号获得数组中的每一个值正如我们之前获取字符串中单个字符一样:
 
 ```go
 myArray[0] //indexes start at 0
 myArray[1]
 ```
 
-You can set a new value for a specific position in the array:
+你可以给数组中的成员设置新的值:
 
 ```go
 myArray[2] = "Another"
 ```
 
-And you can get the length of an array using the `len()` function:
+你可以通过`len()`函数来获取数组的长度:
 
 ```go
 len(myArray)
 ```
 
-Arrays are **value types**. This means copying an array:
+数组是**值类型**. 这意味着复制一个数组:
 
 ```go
 anotherArray := myArray
 ```
 
-or passing an array to a function, or returning it from a function, creates a copy of the original array.
+传递一个数组给一个函数,或者一个函数返回数组,创建的都是原数组的副本.
 
-This is different from other programming languages out there.
+这也是和其他编程语言的不同之处.
 
-Let’s make a simple example where we assign a new value to an array item after copying it. See, the copy doesn't change:
+这里创建一个简单的示例,我们将一个新的值赋值给副本的一个元素,这个过程中不会修改原数组的元素:
 
 ```go
 var myArray = [3]string{"First", "Second", "Third"}
@@ -668,11 +668,11 @@ myArray[2]     //"Another"
 myArrayCopy[2] //"Third"
 ```
 
-Remember you can only add a single type of items in an array, so setting the `myArray[2] = 2` for example will raise an error.
+记住你只能在数组中加入同一类型的数据,所以在例子中设置`myArray[2] = 2`会报错.
 
-Low-level elements are stored continuously in memory.
+底层的元素存储在连续的内存当中.
 
-## Slices in Go
+## Go中的字符串
 
 A slice is a data structure similar to an array, but it can change in size.
 

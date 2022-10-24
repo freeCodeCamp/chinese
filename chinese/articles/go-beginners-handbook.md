@@ -672,21 +672,21 @@ myArrayCopy[2] //"Third"
 
 底层的元素存储在连续的内存当中.
 
-## Go中的字符串
+## Go中的切片
 
-A slice is a data structure similar to an array, but it can change in size.
+切片是一种很像数组的数据结构,但它的大小是可以改变的.
 
-Under the hood, slices use an array and they are an abstraction built on top of them that makes them more flexible and useful (think about arrays as lower level).
+底层,切片使用了数组且它是建立在数组之上的抽象概念使得本身变得更加灵活和方便使用(可以把数组想象底层结构)
 
-You will use slices in a way that’s very similar to how you use arrays in higher level languages.
+你可以把切片作为高级语言中使用数组的一种使用方式.
 
-You define a slice similarly to an array, omitting the length:
+你定义一个切片就像数组一样,忽略长度:
 
 ```go
 var mySlice []string //a slice of strings
 ```
 
-You can initialize the slice with values:
+你可以初始化切片的值:
 
 ```go
 var mySlice = []string{"First", "Second", "Third"}
@@ -696,13 +696,13 @@ var mySlice = []string{"First", "Second", "Third"}
 mySlice := []string{"First", "Second", "Third"}
 ```
 
-You can create an empty slice of a specific length using the `make()` function:
+你可以用`make()` 函数创建一个有明确长度的空切片:
 
 ```go
 mySlice := make([]string, 3) //a slice of 3 empty strings
 ```
 
-You can create a new slice from an existing slice, appending one or more items to it:
+你可以用已经存在的切片创建一个新的切片,添加一个或多个元素进去:
 
 ```go
 mySlice := []string{"First", "Second", "Third"}
@@ -710,9 +710,9 @@ mySlice := []string{"First", "Second", "Third"}
 newSlice := append(mySlice, "Fourth", "Fifth")
 ```
 
-Note that we need to assign the result of `append()` to a new slice, otherwise we’ll get a compiler error. The original slice is not modified – we’ll get a brand new one.
+注意我们需要给`append()`的结果给一个新的切片,否则我们会得到一个错误的结果.原来的切片不会改变,我们会得到全新的一个.
 
-You can also use the `copy()` function to duplicate a slice so it does not share the same memory of the other one and is independent:
+你也可以使用`copy()`函数来创建一个重复的切片,它并不会共享同一个块内存,它是独立的:
 
 ```go
 mySlice := []string{"First", "Second", "Third"}
@@ -722,9 +722,9 @@ newSlice := make([]string, 3)
 copy(newSlice, mySlice)
 ```
 
-If the slice you’re copying to does not have enough space (is shorter than the original) only the first items (until there’s space) will be copied.
+如果你复制的切片没有足够的空间(比原来的短),则只复制第一个元素(只到有空间为止).
 
-You can initialize a slice from an array:
+你可以从数组中初始化一个切片:
 
 ```go
 myArray := [3]string{"First", "Second", "Third"}
@@ -732,7 +732,7 @@ myArray := [3]string{"First", "Second", "Third"}
 mySlice = myArray[:]
 ```
 
-Multiple slices can use the same array as the underlying array:
+多个切片可以使用与底层数组相同的数组:
 
 ```go
 myArray := [3]string{"First", "Second", "Third"}
@@ -745,20 +745,20 @@ mySlice[0] = "test"
 fmt.Println(mySlice2[0]) //"test"
 ```
 
-Those 2 slices now share the same memory. Modifying one slice modifies the underlying array and causes the other slice generated from the array to be modified, too.
+这两个切片现在共享同一块内存.修改一个切片底层数组也会跟着改变,并导致从该数组生成的另一个切片也会被修改.
 
-As with arrays, each item in a slice is stored in memory in consecutive memory locations.
+与数组一样,每一个切片中的元素同样存储在内存的连续内存之中.
 
-If you know you need to perform operations on the slice, you can request it to have more capacity than initially needed. This way, when you need more space, the space will be readily available (instead of finding and moving the slice to a new memory location with more space to grow and dispose via garbage collection of the old location).
+如果你知道你必须用到切片,你可以在初始化的时候设置所需的容量.这种方式,在你需要更多空间的时候,这些空间已经准备好了(替代了选择和移动切片到从老的内存空间到新的内存的方式,并减少了垃圾回收).
 
-We can specify the **capacity** by adding a third parameter to `make()`:
+我们可以通过`make()`函数的第三个参数定义**容量**:
 
 ```go
 newSlice := make([]string, 0, 10)
 //an empty slice with capacity 10
 ```
 
-As with strings, you can get a portion of a slice using this syntax:
+例如字符串,你可以以下符号获得切片中的一部分:
 
 ```go
 mySlice := []string{"First", "Second", "Third"}
@@ -768,51 +768,51 @@ newSlice2 := mySlice[2:] //ignore the first 2 items
 newSlice3 := mySlice[1:3] //new slice with items in position 1-2
 ```
 
-## Maps in Go
+## Go中的map
 
-A map is a very useful data type in Go.
+map是Go中一种常见的数据类型.
 
-In other language it’s also called a _dictionary_ or _hash map_ or _associative array_.
+在其他语言被称为_字典_ 或 _哈系表_ 或 _关联数组_.
 
-Here’s how you create a map:
+这是怎么创建一个map:
 
 ```go
 agesMap := make(map[string]int)
 ```
 
-You don’t need to set how many items the map will hold.
+你不需要对map做过多的设置.
 
-You can add a new item to the map in this way:
+你可以通过这个方式添加新的元素到map中:
 
 ```go
 agesMap["flavio"] = 39
 ```
 
-You can also initialize the map with values directly using this syntax:
+你可以用以下符号初始化map并赋值:
 
 ```go
 agesMap := map[string]int{"flavio": 39}
 ```
 
-You can get the value associated with a key using:
+你可以通过键来获取对应的值:
 
 ```go
 age := agesMap["flavio"]
 ```
 
-You can delete an item from the map using the `delete()` function in this way:
+你可以通过`delete()`函数这种方式来删除map中的元素:
 
 ```go
 delete(agesMap, "flavio")
 ```
 
-## Loops in Go
+## Go中的循环
 
-One of Go’s best features is to give you fewer choices.
+Go中最好的特性是它只提供最少的选择.
 
-We have one loop statement: `for`.
+我们只有一个循环关键字: `for`.
 
-You can use it like this:
+你可以像这样使用它:
 
 ```go
 for i := 0; i < 10; i++ {
@@ -820,15 +820,15 @@ for i := 0; i < 10; i++ {
 }
 ```
 
-We first initialize a loop variable, then we set the _condition_ we check for with each iteration to decide if the loop should end. Finally we have the _post statement_, executed at the end of each iteration, which in this case increments `i`.
+我们首先初始化一个循环的变量, 我们设置一个 _条件_ 用于检查我们的循环是否应该结束. 最后我们设置 _通过声明_, 在每一次循环后执行, 这里案例中是增长`i`.
 
-`i++` increments the `i` variable.
+`i++` 增长 `i` 变量.
 
-The `<` _operator_ is used to compare `i` to the number `10` and returns `true` or `false`, determining if the loop body should be executed or not.
+这 `<` _运算符_ 用于比较 `i` 和 `10`会返回`true` 或 `false`, 会决定循环体是否执行.
 
-We don’t need parentheses around this block, unlike other languages like C or JavaScript.
+我们不需要用圆括号来包围代码块,与C和JavaScript不太一样.
 
-Other languages offer different kind of loop structures, but Go only has this one. We can simulate a `while` loop, if you’re familiar with a language that has it, like this:
+其他语言有各种不同的循环结构,当时Go中只有这一个,我们可以有像`while`一样的循环,如果你熟悉一门有它的语言,像这样:
 
 ```go
 i := 0
@@ -839,7 +839,7 @@ for i < 10 {
 }
 ```
 
-We can also completely omit the condition and use `break` to end the loop when we want:
+我们完全可以忽略条件,在我们想要中止可以使用`break`:
 
 ```go
 i := 0
@@ -855,11 +855,11 @@ for {
 }
 ```
 
-I used a `if` statement inside the loop body, but we haven’t seen _conditionals_ yet! We’ll do that next.
+我在循环体中使用了一个`if`声明,但是在我们没有看到 _条件_ 语句! 我们下一步看.
 
-One thing I want to introduce now is `range`.
+我现在想要介绍一种东西`range`.
 
-We can use `for` to iterate through an array using this syntax:
+我们可以使用以下符号通过`for`来迭代数组:
 
 ```go
 numbers := []int{1, 2, 3}
@@ -873,9 +873,9 @@ for i, num := range numbers {
 //2: 3
 ```
 
-Note: I used `fmt.Printf()` which allows us to print any value to the terminal using the _verbs_ `%d` which mean _decimal integer_ and `\n` means add a line terminator.
+注意: 我使用 `fmt.Printf()`它允许我们使用 _占位符_ `%d` 意思是 _整数_ 且 `\n` 意思是加入一个换行符.
 
-It’s common to use this syntax when you don’t need to use the index:
+在你不需要索引时,一般可以使用这个符号:
 
 ```go
 for _, num := range numbers {
@@ -883,9 +883,9 @@ for _, num := range numbers {
 }
 ```
 
-We're using the special `_` character that means “ignore this” to avoid the Go compiler raising an error saying “you’re not using the `i` variable!”.
+我们可以使用 `_` 符号,它表示 “忽略 这个” 在Go程序中会产生错误说“你没有使用 `i` 变量!”.
 
-## Conditionals in Go
+## Go中的条件运算符
 
 We use the `if` statement to execute different instructions depending on a condition:
 

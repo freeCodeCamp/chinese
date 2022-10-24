@@ -328,71 +328,71 @@ same_pipe = joblib.load("pipe.joblib")
 
 ## 如何发现最佳的超维特征（Hyperparameter）和数据预处理方法
 
-A pipeline does not only make your code tidier, it can also help you optimize hyperparameters and data preparation methods.
+管道工具不止可以使你的代码可读性更高，它同时可以帮助优化超维特征和数据预处理。
 
-### Here's what we'll cover in this section:
+### 以下是我们将会在下一节讨论的内容：
 
--   How to find the changeable pipeline parameters
--   How to find the best hyperparameter sets: Add a pipeline to Grid Search
--   How to find the best data preparation method: Skip a step in a pipeline
--   How to Find the best hyperparameter sets and the best data preparation method
+-   如何找到可更改的管道工具变量
+-   如何通过网格搜索找到最佳的超维特征组合
+-   如何通过跳过步骤找到最佳的数据预处理方法
+-   如何找到最佳的超维特征组合和最佳的数据预处理方法
 
-### How to Find the Changeable Pipeline Parameters
+### 如何找到可更改的管道工具变量
 
-First, let’s see the list of parameters that can be adjusted.
+首先，让我们看看可以调整的变量有哪些。
 
 ```Python
 clf_pipeline.get_params()
 ```
 
-The result can be very long. Take a deep breath and continue reading.
+可以调整的变量可能会非常多。让我们深呼吸调整心态继续阅读。
 
-The first part is just about the steps of the pipeline.
+第一部分是管道工具的步骤。
 
 ![1*JWw_1l68o9z_D9ptmvIIMA](https://miro.medium.com/max/1400/1*JWw_1l68o9z_D9ptmvIIMA.png)
 
-Below the first part you'll find what we are interested in: a list of parameters that we can adjust.
+接着你会看到我们需要研究的部分，一个包含我们能调整的变量的列表。
 
 ![1*NCkmLiyit676K3M-HfEbnw](https://miro.medium.com/max/926/1*NCkmLiyit676K3M-HfEbnw.png)
 
-The format is ****step1\_step2\_…\_parameter****.
+它的格式是 ****step1\_step2\_…\_parameter****.
 
-For example ****col\_trans****\_****cat\_pipeline****\_****one-hot****\_****sparse**** means parameter sparse of the one-hot step.
+举例来说 ****col\_trans****\_****cat\_pipeline****\_****one-hot****\_****sparse**** 这个例子包含的是独热编码步骤能调整的变量。
 
 ![1*ZITc6M2sB8Qxzr5BCnBMHQ](https://miro.medium.com/max/876/1*ZITc6M2sB8Qxzr5BCnBMHQ.png)
 
-You can change parameters directly using set\_param.
+如何通过网格搜索找到最佳的超维特征组合。
 
 ```Python
 clf_pipeline.set_params(model_C = 10)
 ```
 
-### How to Find the Best Hyperparameter Sets: Add a Pipeline to Grid Search
+### 如何通过网格搜索找到最佳的超维特征组合
 
-Grid Search is a method you can use to perform hyperparameter tuning. It helps you find the optimum parameter sets that yield the highest model accuracy.
+网格搜索可以对超维特征进行调优。它可以帮助你找到最优的变量组合获得最好的模型准确度。
 
-#### Set the tuning parameters and their range.
+#### 设定需要调优的变量和他们的取值范围。
 
-Create a dictionary of tuning parameters (hyperparameters)
+为需要调优的变量（超维特征）创建一个字典
 
 ```Python
 { ‘tuning parameter’ : ‘possible value’, … }
 ```
 
-In this example, I want to find the best penalty type and C of a logistic regression model.
+在这个例子中，我希望找到逻辑回归模型中最好的惩罚类（penalty type）和C。
 
 ```Python
 grid_params = {'model__penalty' : ['none', 'l2'],
                'model__C' : np.logspace(-4, 4, 20)}
 ```
 
-#### Add the pipeline to Grid Search
+#### 将这个管道加入网格搜索中
 
 ```Python
 GridSearchCV(model, tuning parameter, …)
 ```
 
-Our pipeline has a model step as the final step, so we can input the pipeline directly to the GridSearchCV function.
+我们的管道工具的最后一步是建模，所以我们可以直接将管道模型输入GridSearchCV函数当中去。
 
 ```Python
 from sklearn.model_selection import GridSearchCV
@@ -407,18 +407,18 @@ print("Test Score: "+str(gs.score(X_test,y_test)))
 
 ![1*JP64DvryL62BV2Z8ctyVXw](https://miro.medium.com/max/1252/1*JP64DvryL62BV2Z8ctyVXw.png)
 
-Result of Grid Search
+网格搜索结果
 
-After setting Grid Search, you can fit Grid Search with the data and see the results. Let's see what the code is doing:
+在完成网格搜索的设定后，你可以将数据输入网格搜索来检视搜索结果。让我们来看看这些代码都是什么功能：
 
--   `.fit`: fits the model and tries all sets of parameters in the tuning parameter dictionary
--   `.best_score_`: the highest accuracy across all sets of parameters
--   `.best_params_`: The set of parameters that yield the best score
--   `.score(X_test,y_test)`: The score when trying the best model with the test set.
+-   `.fit`: 训练模型并尝试所有调优变量集中可能的变量组合
+-   `.best_score_`: 所有变量组合中最高的准确度
+-   `.best_params_`: 生成最高准确度的一组变量组合
+-   `.score(X_test,y_test)`: 用测试集测试最佳模型时的评分
 
-You can read more about GridSearchCV in the documentation [here](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).
+你可以在文档中获取更多有关GridSearchCV的信息 [here](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).
 
-### How to Find the Best Data Preparation Method: Skip a Step in a Pipeline
+### 如何通过跳过步骤找到最佳的数据预处理方法
 
 Finding the best data preparation method can be difficult without a pipeline since you have to create so many variables for many data transformation cases.
 

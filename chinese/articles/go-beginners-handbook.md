@@ -503,14 +503,14 @@ var name = "test"
 len(name) //4
 ```
 
-:
+你可以用方括号访问单独字符,使用索引来取得你想要的字符:
 
 ```go
 name[0] //"t" (indexes start at 0)
 name[1] //"e"
 ```
 
-You can get a portion of the string using this syntax:
+你可以使用切片获取到字符串:
 
 ```go
 name[0:2] //"te"
@@ -518,22 +518,22 @@ name[:2]  //"te"
 name[2:]  //"st"
 ```
 
-Using this you can create a copy of the string using:
+你可以创建一个字符串的副本:
 
 ```go
 var newstring = name[:]
 ```
 
-You can assign a string to a new variable like this:
+你可以将字符串赋值给一个新的变量,如下:
 
 ```go
 var first = "test"
 var second = first
 ```
 
-Strings are **immutable**, so you cannot update the value of a string.
+字符串是**不可变**的, 所以你无法修改字符串的值.
 
-Even if you assign a new value to `first` using an assignment operator, the value `second` is still going to be `"test"`:
+如果你给`first`赋予一个新值,`second`的值依然是`"test"`:
 
 ```go
 var first = "test"
@@ -545,9 +545,9 @@ first  //"another test"
 second //"test"
 ```
 
-Strings are reference types, which means if you pass a string to a function, the **reference** to the string will be copied, not its value. But since strings are immutable, in this case it’s not a big difference in practice with passing an `int`, for example.
+字符串是类型,意味着如果你将一个字符串传递给一个方法,字符串**引用**会被复制,而不是它的值,但是字符串是不可变的,所在在实践过程中它和`int`类型并没有很大的区别,例如.
 
-You can concatenate two strings using the `+` operator:
+你可以通过`+`运算符连接两个字符串:
 
 ```go
 var first = "first"
@@ -556,11 +556,11 @@ var second = "second"
 var word = first + " " + second  //"first second"
 ```
 
-Go provides several string utilities in the the `strings` package.
+Go提供了`strings`库来进行字符串的操作.
 
-We already saw how to import a package in the “Hello, World!” example.
+我们已经知道怎么在“Hello, World!”的案例中引入一个包.
 
-Here’s how you can import `strings`:
+这里你可以引入`strings`:
 
 ```go
 package main
@@ -570,9 +570,9 @@ import (
 )
 ```
 
-And then you can use it.
+你可以使用它了.
 
-For example we can use the `HasPrefix()` function to see if a string starts with a specific substring:
+在例子中我们使用`HasPrefix()`函数来判断一个字符串的开头是否是以另一个子串开头的:
 
 ```go
 package main
@@ -586,19 +586,19 @@ func main() {
 }
 ```
 
-You can find the full list of methods here: [https://pkg.go.dev/strings](https://pkg.go.dev/strings).
+你可以在这找到所有的函数列表: [https://pkg.go.dev/strings](https://pkg.go.dev/strings).
 
-Here’s a list of methods you might use frequently:
+以下是你经常会用到的函数列表:
 
--   `strings.ToUpper()` returns a new string, uppercase
--   `strings.ToLower()` returns a new string, lowercase
--   `strings.HasSuffix()` checks if a string ends with a substring
--   `strings.HasPrefix()` checks if a string starts with a substring
--   `strings.Contains()` checks if a string contains a substring
--   `strings.Count()` counts how many times a substring appears in a string
--   `strings.Join()` used to join multiple strings and create a new one
--   `strings.Split()` used to create an array of strings from a string, dividing the original one on a specific character, like a comma or a space
--   `strings.ReplaceAll()` used to replace a portion in a string and replace it with a new one
+-   `strings.ToUpper()` 返回一个新的字符串, 大写
+-   `strings.ToLower()` 返回一个新的字符串, 小写
+-   `strings.HasSuffix()` 检查是否以某子串结尾
+-   `strings.HasPrefix()` 检查是否以某子串开头
+-   `strings.Contains()` 检查是否包含某字串
+-   `strings.Count()` 计算一个某子串在当前字符串出现的次数
+-   `strings.Join()` 创建一个新的字符串并连接多个字符串
+-   `strings.Split()` 创建一个数组来保存通过特殊字符串对字符串进行分割的结果,例如通常使用空格
+-   `strings.ReplaceAll()` 使用替换,可以使用一个新的字符串替换掉原字符中的字符串
 
 ## Arrays in Go
 

@@ -400,13 +400,13 @@ age := 10
 name := "Roger"
 ```
 
-`_`  `_`.
+变量名你可以使用小写字母,数字和`_`或者可以使用类似于`_`的其他字符.
 
-Names are **case sensitive**.
+名字是**区分大小写**的.
 
-If the name is long, it’s common to use camelCase. So to indicate the name of the car we use `carName`.
+如果名字太长,通常可使用驼峰命名法,例如我们想表现车的名字就用`carName`.
 
-You can assign a new value to a variable with the assignment operator `=`
+你可以使用赋值运算符`=`给一个变量赋予新的值.
 
 ```go
 var age int
@@ -414,19 +414,19 @@ age = 10
 age = 11
 ```
 
-If you have a variable that never changes during the program you can declare it as a constant using `const`:
+如果你有一个变量在编程过程中永远都不会变,你可以使用`const`关键字来声明这个变量:
 
 ```go
 const age = 10
 ```
 
-You can declare multiple variables on a single line:
+你可以一行代码中声明多个变量:
 
 ```go
 var age, name
 ```
 
-and initialize them too:
+将它们全部都初始化:
 
 ```go
 var age, name = 10, "Roger"
@@ -436,74 +436,74 @@ var age, name = 10, "Roger"
 age, name := 10, "Roger"
 ```
 
-Declared variables that are not used in the program raise an error and the program does not compile.
+在程序中使用未声明的变量,程序会报错,而且无法通过编译.
 
-You will see a warning in VS Code:
+在VS Code中你可以看到警告如下:
 
 ![Screen Shot 2022-07-28 at 15.45.31.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_15.45.31.png)
 
-Warning for unused declared variables
+使用未声明变量的警告
 
-and the error from the compiler:
+以下是编译的报错:
 
 ![Screen Shot 2022-07-28 at 15.45.44.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_15.45.44.png)
 
-Error in compiler for unused declared variables
+使用未声明变量的编译期报错
 
-If you declare a variable without initializing it to a value, it is assigned a value automatically that depends on the type – for example an integer is `0` and a string is an empty string.
+如果你声明了一个变量且没有给这个变量一个初始值,它会自动初始化一个对应类型的初始值,例如integer类型的值为`0`而字符串的值是一个空的字符串.
 
-## Basic Types in Go
+## Go的基础类型
 
-Go is a typed language.
+Go是一门强类型语言.
 
-We saw how you can declare a variable, specifying its type:
+我们可以看到你怎么定义一个变量,指定它的类型:
 
 ```go
 var age int
 ```
 
-Or you can let Go infer the type from the initial value assigned:
+或者你可以直接给变量赋予初始值,让Go来推断它的类型:
 
 ```go
 var age = 10
 ```
 
-The basic types in Go are:
+这些是Go中的基础类型:
 
--   Integers (`int`, `int8`, `int16`, `int32`, `rune`, `int64`, `uint`, `uintptr`, `uint8`, `uint16`, `uint64`)
--   Floats (`float32`, `float64`), useful to represent decimals
--   Complex types (`complex64`, `complex128`), useful in math
--   Byte (`byte`), represents a single ASCII character
--   Strings (`string`), a set of `byte`s
--   Booleans (`bool`), either true or false
+-   整型 (`int`, `int8`, `int16`, `int32`, `rune`, `int64`, `uint`, `uintptr`, `uint8`, `uint16`, `uint64`)
+-   浮点型 (`float32`, `float64`), 用于表示带小数点的数
+-   复数类型 (`complex64`, `complex128`),常用于科学计算中
+-   字符型 (`byte`), 表示一个ASCII字符
+-   字符串 (`string`), 一个`byte`的集合
+-   布尔型 (`bool`)表示true或false
 
-We have a lot of different types to represent integers. You will use `int` most of the time, and you might choose a more specialized one for optimization (not something you need to think about when you are just learning).
+我们有很多不同类型的整数类型,在大多数情况下你只会用到`int`,在你需要进行很多特殊的优化的时候(你可以在需要考虑使用的时候再学习)
 
-An `int` type will default to be 64 bits when used on a 64 bit system, 32 bits on a 32 bit system, and so on.
+在你使用64位系统的时候`int`类型默认为64位, 使用32位系统的时候`int`类型默认为32位,其他的与此类似.
 
-`uint` is an `int` that’s unsigned, and you can use this to double the amount of values you can store if you know the number is not going to be negative.
+`uint` 类型是无符号的`int`类型,如果你知道这个数字不是负数,你可以用这个类型存储比现在大两倍的数字.
 
-All the above basic types are **value types**, which means they are **passed by value** to functions when passed as parameters, or when returned from functions.
+所有的基础类型都是**值类型**, 这意味着当它们作为参数传递或从函数返回时,它们通过**值传递**给函数.
 
-## Strings in Go
+## Go中的字符串
 
-A string in Go is a sequence of `byte` values.
+Go中的字符串是一系列`byte`值.
 
-As we saw above, you can define a string using this syntax:
+像我们所看到的一样,你可以定义字符串如下:
 
 ```go
 var name = "test"
 ```
 
-It’s important to note that unlike other languages, strings are defined only using double quotes, not single quotes.
+其中很重要一点是不像其他语言,字符串定义只能使用双引号表示,而不是单引号.
 
-To get the length of a string, use the built-in `len()` function:
+获得字符串的长度,可以使用内置函数`len()`:
 
 ```go
 len(name) //4
 ```
 
-You can access individual characters using square brackets, passing the index of the character you want to get:
+:
 
 ```go
 name[0] //"t" (indexes start at 0)

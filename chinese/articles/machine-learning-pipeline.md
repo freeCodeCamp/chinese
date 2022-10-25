@@ -416,7 +416,7 @@ print("Test Score: "+str(gs.score(X_test,y_test)))
 -   `.best_params_`: 生成最高准确度的一组变量组合
 -   `.score(X_test,y_test)`: 用测试集测试最佳模型时的评分
 
-你可以在文档中获取更多有关GridSearchCV的信息 [here](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html).
+你可以在[文档](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.GridSearchCV.html)中获取更多有关GridSearchCV的信息。
 
 ### 如何通过跳过步骤找到最佳的数据预处理方法
 

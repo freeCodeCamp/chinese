@@ -1164,17 +1164,17 @@ total := sumNumbers(1, 2, 3, 4)
 
 ## Go中的指针
 
-Go supports pointers.
+Go支持使用指针.
 
-Suppose you have a variable:
+假设你有一个变量:
 
 ```go
 age := 20
 ```
 
-Using `&age` you get the pointer to the variable, its memory address.
+使用 `&age` 你获得这个变量的指针, 它是内存地址.
 
-When you have the pointer to the variable, you can get the value it points to by using the `*` operator:
+当你拥有一个变量的指针时, 你可以使用 `*` 运算符获取它的值:
 
 ```go
 age := 20
@@ -1182,7 +1182,7 @@ ageptr = &age
 agevalue = *ageptr
 ```
 
-This is useful when you want to call a function and pass the variable as a parameter. Go by default copies the value of the variable inside the function, so this will not change the value of `age`:
+通常当你想要传递一个参数给你调用的函数时. Go默认会在函数内部复制这个变量的值, 所以这不会改变 `age` 的值:
 
 ```go
 func increment(a int) {
@@ -1197,7 +1197,7 @@ func main() {
 }
 ```
 
-You can use pointers for this:
+你可以像这样使用指针:
 
 ```go
 func increment(a *int) {
@@ -1212,11 +1212,11 @@ func main() {
 }
 ```
 
-## Methods in Go
+## Go中的方法
 
-You can assign a function to a struct, and in this case we call it a _method_.
+你可以给结构体设置一个函数,在这个例子中我们称它为一个 _方法_.
 
-Example:
+示例:
 
 ```go
 type Person struct {
@@ -1234,11 +1234,11 @@ func main() {
 }
 ```
 
-You can declare methods to be pointer receiver or value receiver.
+你可以定义一个方法为指针接收或值接收.
 
-The above example shows a value receiver. It receives a copy of the struct instance.
+上述例子中我们展示的是值接收,这个接收器会复制结构体的结构.
 
-This would be a pointer receiver that receives the pointer to the struct instance:
+这里将会有一个指针接收,接收结构实例的指针:
 
 ```go
 func (p *Person) Speak() {
@@ -1246,13 +1246,13 @@ func (p *Person) Speak() {
 }
 ```
 
-## Interfaces in Go
+## Go中的接口
 
-An interface is a _type_ that defines one or more _method signatures_.
+接口是一个 _类型_ 可以定义一个或多个 _方法声明_.
 
-Methods are not implemented, just their signature: the name, parameter types and return value type.
+方法没有被实现, 只是定义了声明: 名字,入参类型和返回值类型.
 
-Something like this:
+像这样:
 
 ```go
 type Speaker interface {
@@ -1260,7 +1260,7 @@ type Speaker interface {
 }
 ```
 
-Now you could have a function accept any type that implements all the methods defined by the interface:
+现在你有一个函数,可以接纳任何类型来实现接口定义所有方法:
 
 ```go
 func SaySomething(s Speaker) {
@@ -1268,7 +1268,7 @@ func SaySomething(s Speaker) {
 }
 ```
 
-And we can pass it any struct that implements those methods:
+我们可以让任何一个结构体来实现这些方法:
 
 ```go
 type Speaker interface {
@@ -1294,18 +1294,18 @@ func main() {
 }
 ```
 
-## Where to Go from Here
+## 以后的路
 
-This handbook is an introduction to the Go programming language.
+手册只是介绍了Go编程语言.
 
-Beside these basics, there are many things to learn now.
+基于这里的基础,现在可以学更多东西.
 
-Garbage collection, error handling, concurrency and networking, the filesystem APIs, and much more.
+垃圾回收, 错误处理, 并发和网络, 文件系统接口, 等等.
 
-The sky is the limit.
+天高任鸟飞.
 
-My suggestion is to pick a program you want to build and just start, learning the things you need along the way.
+我的建议是选择一个你想要建立的程序,然后开始学习你需要的东西.
 
-It will be fun and rewarding.
+它是有趣且值得做的.
 
-Note: [you can get a PDF and ePub version of this Go Beginner's Handbook here](https://thevalleyofcode.com/download/go/).
+注意: [你可以在这获得Go初学者手册的PDF版本和ePub版本](https://thevalleyofcode.com/download/go/).

@@ -63,7 +63,7 @@ Caddy,一个非常流行的web服务器是用GO编写的.
 21.  [Go中的接口](#interfaces-in-go)
 22.  [以后的路](#where-to-go-from-here)
 
-## 怎样开始获得Go
+## <div id="how-to-get-started-with-go">怎样开始获得Go</div>
 
 在我们深入语言特性之前,我们首先得知道一些东西
 
@@ -76,7 +76,7 @@ Caddy,一个非常流行的web服务器是用GO编写的.
 
 …待续.
 
-## 怎么安装Go语言环境
+## <div id="how-to-install-go">怎么安装Go语言环境</div>
 
 到 [https://go.dev/doc/install](https://go.dev/doc/install) 下载你电脑使用的操作系统的Go程序包.
 
@@ -115,7 +115,7 @@ echo 'export PATH=$PATH:/usr/local/go/bin' >> $HOME/.profile
 source $HOME/.profile
 ```
 
-## 怎么选择你的编辑器
+## <div id="how-to-setup-your-editor">怎么选择你的编辑器</div>
 
 我推荐使用 [**Visual Studio Code**](https://code.visualstudio.com/) (也叫 VS Code) 作为你的编辑器.
 
@@ -127,7 +127,7 @@ source $HOME/.profile
 
 这个扩展可以让你的生活更加轻松.在生产产品(符号高亮,自动编译,动态信息提示,高亮...)和其他的功能如自动格式化,可以选择性的安装其他包,测试,还有更多.
 
-## 怎么用Go编写Hello,World!
+## <div id="how-to-write-hello-world-in-go">怎么用Go编写Hello,World!</div>
 
 现在我们准备创建我们第一个Go程序!
 
@@ -219,7 +219,7 @@ Go基础的函数模板
 
 在执行代码`main`函数之后,它没有做其他的事就结束了执行.
 
-## 怎么编译和运行Go程序
+## <div id="how-to-compile-and-run-a-go-program">怎么编译和运行Go程序</div>
 
 现在在`hello`文件夹下打开命令行,用以下命令运行程序:
 
@@ -269,7 +269,7 @@ Hello.exe 执行
 
 这个Go最好的特性之一.
 
-## Go的工作空间
+## <div id="the-go-workspace">Go的工作空间</div>
 
 关于Go中的一个特殊的点,我们称为 **工作区**.
 
@@ -295,7 +295,7 @@ Go默认的路径在`$HOME/go`下,所以你可以在你的家目录中看到`go`
 
 同在在不同项目工作的时候你可以按你想要库的方式来设置.
 
-## 深入Go语言
+## <div id="diving-into-the-go-language">深入Go语言</div>
 
 现在我们编写了一个部分,我们运行了第一个Hello, World! 程序, 我们可以深入Go语言了.
 
@@ -331,7 +331,7 @@ comment
 */
 ```
 
-## Go中的变量
+## <div id="variables-in-go">Go中的变量</div>
 
 你在使用编程语言时第一件做的事就是定义一个变量.
 
@@ -452,7 +452,7 @@ age, name := 10, "Roger"
 
 如果你声明了一个变量且没有给这个变量一个初始值,它会自动初始化一个对应类型的初始值,例如integer类型的值为`0`而字符串的值是一个空的字符串.
 
-## Go的基础类型
+## <div id="basic-types-in-go">Go的基础类型</div>
 
 Go是一门强类型语言.
 
@@ -485,7 +485,7 @@ var age = 10
 
 所有的基础类型都是**值类型**, 这意味着当它们作为参数传递或从函数返回时,它们通过**值传递**给函数.
 
-## Go中的字符串
+## <div id="strings-in-go">Go中的字符串</div>
 
 Go中的字符串是一系列`byte`值.
 
@@ -600,7 +600,7 @@ func main() {
 -   `strings.Split()` 创建一个数组来保存通过特殊字符串对字符串进行分割的结果,例如通常使用空格
 -   `strings.ReplaceAll()` 使用替换,可以使用一个新的字符串替换掉原字符中的字符串
 
-## Go中的数组
+## <div id="arrays-in-go">Go中的数组</div>
 
 数组是单个类型的序列.
 
@@ -672,7 +672,7 @@ myArrayCopy[2] //"Third"
 
 底层的元素存储在连续的内存当中.
 
-## Go中的切片
+## <div id="slices-in-go">Go中的切片</div>
 
 切片是一种很像数组的数据结构,但它的大小是可以改变的.
 
@@ -768,7 +768,7 @@ newSlice2 := mySlice[2:] //ignore the first 2 items
 newSlice3 := mySlice[1:3] //new slice with items in position 1-2
 ```
 
-## Go中的map
+## <div id="maps-in-go">Go中的map</div>
 
 map是Go中一种常见的数据类型.
 
@@ -806,7 +806,7 @@ age := agesMap["flavio"]
 delete(agesMap, "flavio")
 ```
 
-## Go中的循环
+## <div id="loops-in-go">Go中的循环</div>
 
 Go中最好的特性是它只提供最少的选择.
 
@@ -885,7 +885,7 @@ for _, num := range numbers {
 
 我们可以使用 `_` 符号,它表示 “忽略 这个” 在Go程序中会产生错误说“你没有使用 `i` 变量!”.
 
-## Go中的条件运算符
+## <div id="conditionals-in-go">Go中的条件运算符</div>
 
 我们使用`if`声明一个条件从而执行不同的代码:
 
@@ -934,7 +934,7 @@ default: fmt.Println(i + " years old")
 
 与 C, JavaScript和其他语言相比,你不需要在每一个`case`中写`break`.
 
-## Go中的运算符
+## <div id="operators-in-go">Go中的运算符</div>
 
 到目前为止，我们已经在代码示例中使用了一些运算符, 如 `=`, `:=` and `<`.
 
@@ -1005,7 +1005,7 @@ false || false //false
 
 这三个是最主要.
 
-## Go中的结构体
+## <div id="structs-in-go">Go中的结构体</div>
 
 **结构体** 是一种 _类型_,它包括一个或多个变量.它像是一个变量的集合. 我们将它们称为 _字段_. 它们可以有不同的类型.
 
@@ -1078,7 +1078,7 @@ type Person struct {
 }
 ```
 
-## Go中的函数
+## <div id="functions-in-go">Go中的函数</div>
 
 一个函数是一块代码,它被赋予了一个名字且包含了一些指令.
 
@@ -1162,7 +1162,7 @@ func sumNumbers(numbers ...int) int {
 total := sumNumbers(1, 2, 3, 4)
 ```
 
-## Go中的指针
+## <div id="pointers-in-go">Go中的指针</div>
 
 Go支持使用指针.
 
@@ -1212,7 +1212,7 @@ func main() {
 }
 ```
 
-## Go中的方法
+## <div id="methods-in-go">Go中的方法</div>
 
 你可以给结构体设置一个函数,在这个例子中我们称它为一个 _方法_.
 
@@ -1246,7 +1246,7 @@ func (p *Person) Speak() {
 }
 ```
 
-## Go中的接口
+## <div id="interfaces-in-go">Go中的接口</div>
 
 接口是一个 _类型_ 可以定义一个或多个 _方法声明_.
 
@@ -1294,7 +1294,7 @@ func main() {
 }
 ```
 
-## 以后的路
+## <div id="where-to-go-from-here">以后的路</div>
 
 手册只是介绍了Go编程语言.
 

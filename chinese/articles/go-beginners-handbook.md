@@ -887,7 +887,7 @@ for _, num := range numbers {
 
 ## Go中的条件运算符
 
-We use the `if` statement to execute different instructions depending on a condition:
+我们使用`if`声明一个条件从而执行不同的代码:
 
 ```go
 if age < 18 {
@@ -895,7 +895,7 @@ if age < 18 {
 }
 ```
 
-The `else` part is optional:
+`else`部分是可选的:
 
 ```go
 if age < 18 {
@@ -905,7 +905,7 @@ if age < 18 {
 }
 ```
 
-and can be combined with other `if`s:
+或者可以使用多个`if`:
 
 ```go
 if age < 12 {
@@ -917,9 +917,9 @@ if age < 12 {
 }
 ```
 
-If you define any variable inside the `if`, that’s only visible inside the `if` (same applies to `else` and anywhere you open a new block with `{}`).
+如果你在`if`中定义了任何的变量,  那么只能在`if`中使用 (`else`中也一样且你需要在`{}`中写新的代码块).
 
-If you’re going to have many different if statements to check a single condition, it’s probably better to use `switch`:
+如果你有很多不同的if声明来检查同一个条件,使用`switch`是更好的选择:
 
 ```go
 switch age {
@@ -932,15 +932,15 @@ default: fmt.Println(i + " years old")
 }
 ```
 
-Compared to C, JavaScript, and other languages, you don’t need to have a `break` after each `case`.
+与 C, JavaScript和其他语言相比,你不需要在每一个`case`中写`break`.
 
-## Operators in Go
+## Go中的运算符
 
-We've used some operators so far in our code examples, like `=`, `:=` and `<`.
+到目前为止，我们已经在代码示例中使用了一些运算符, 如 `=`, `:=` and `<`.
 
-Let’s talk a bit more about them.
+让我们了解更多.
 
-We have assignment operators `=` and `:=` we use to declare and initialize variables:
+我们有赋值运算符 `=` 和 `:=` 我们用来定义和初始化变量:
 
 ```go
 var a = 1
@@ -948,7 +948,7 @@ var a = 1
 b := 1
 ```
 
-We have comparison operators `==` and `!=` that take 2 arguments and return a boolean:
+我们有比较运算符 `==` 和 `!=` 用来比较两个参数并会返回一个布尔值:
 
 ```go
 var num = 1
@@ -956,7 +956,7 @@ num == 1 //true
 num != 1 //false
 ```
 
-and `<`, `<=`, `>`, `>=`:
+还有 `<`, `<=`, `>`, `>=`:
 
 ```go
 var num = 1
@@ -966,7 +966,7 @@ num < 1 //false
 num <= 1 //true
 ```
 
-We have binary (require two arguments) arithmetic operators, like `+`, `-`, `*`, `/`, `%`.
+我们有双元(要求有两个参数) 算术运算符, 像 `+`, `-`, `*`, `/`, `%`.
 
 ```go
 1 + 1 //2
@@ -976,13 +976,13 @@ We have binary (require two arguments) arithmetic operators, like `+`, `-`, `*`,
 2 % 2 //0
 ```
 
-`+` can also join strings:
+`+` 可以用来连接字符串:
 
 ```go
 "a" + "b" //"ab"
 ```
 
-We have unary operators `++` and `--` to increment or decrement a number:
+我们有单元运算符 `++` 和 `--` 用来对一个数字进行自增或自减:
 
 ```go
 var num = 1
@@ -990,9 +990,9 @@ num++ // num == 2
 num-- // num == 1
 ```
 
-Note that unlike C or JavaScript we can’t prepend them to a number like `++num`. Also, the operation does not return any value.
+注意不想 C 和 JavaScript 像这样`++num`让一个数字预先操作. 当然, 运算符不会返回任何值.
 
-We have boolean operators that help us with making decisions based on `true` and `false` values: `&&`, `||` and `!`:
+我们有逻辑运算符来帮我们进行基本的`true` 和 `false` 的判断,使用:`&&`, `||` 和 `!`:
 
 ```go
 true && true  //true
@@ -1003,13 +1003,13 @@ false || false //false
 !false //true
 ```
 
-Those are the main ones.
+这三个是最主要.
 
-## Structs in Go
+## Go中的结构体
 
-A **struct** is a _type_ that contains one or more variables. It’s like a collection of variables. We call them _fields_. And they can have different types.
+**结构体** 是一种 _类型_,它包括一个或多个变量.它像是一个变量的集合. 我们将它们称为 _字段_. 它们可以有不同的类型.
 
-Here’s an example of a struct definition:
+这是一个结构体定义的示例:
 
 ```go
 type Person struct {
@@ -1018,34 +1018,34 @@ type Person struct {
 }
 ```
 
-Note that I used uppercase names for the fields, otherwise those will be _private_ to the package. And when you pass the struct to a function provided by another package, like the ones we use to work with JSON or database, those fields cannot be accessed.
+注意这里我们使用大写的名字作为字段名, 不然它们在包内将会是_私有_的. 且当你想让结构体作为参数传递给另一个库的函数时, 像我们使用JSON及数据库, 这些字段都将无法访问.
 
-Once we define a struct we can initialize a variable with that type:
+一旦我们定义了一个结构体，我们就可以用这个类型初始化一个变量:
 
 ```go
 flavio := Person{"Flavio", 39}
 ```
 
-and we can access the individual fields using the dot syntax:
+且我们可以用以下符号修改字段的值:
 
 ```go
 flavio.Age //39
 flavio.Name //"Flavio"
 ```
 
-You can also initialize a new variable from a struct in this way:
+你也可以使用这种方式将一个结构体初始化赋给一个变量:
 
 ```go
 flavio := Person{Age: 39, Name: "Flavio"}
 ```
 
-This lets you initialize only one field, too:
+你也可以只初始化一个字段:
 
 ```go
 flavio := Person{Age: 39}
 ```
 
-or even initialize it without any value:
+或者不初始化任何值:
 
 ```go
 flavio := Person{}
@@ -1055,16 +1055,16 @@ flavio := Person{}
 var flavio Person
 ```
 
-and set the values later:
+或者在之后设值:
 
 ```go
 flavio.Name = "Flavio"
 flavio.Age = 39
 ```
 
-Structs are useful because you can group unrelated data and pass it around to/from functions, store in a slice, and more.
+结构体很常用,因为您可以对不相关的数据进行分组，并将其传递给函数或从函数传递给函数,保存在切片中,等等.
 
-Once defined, a struct is a type like `int` or `string` and this means you can use it inside other structs, too:
+一个重要的定义,一个结构体的类型像 `int` 或 `string` 且这意味着你可以将它嵌入到其他结构体中, 一样:
 
 ```go
 type FullName struct {
@@ -1078,11 +1078,11 @@ type Person struct {
 }
 ```
 
-## Functions in Go
+## Go中的函数
 
-A function is a block of code that’s assigned a name, and contains some instructions.
+一个函数是一块代码,它被赋予了一个名字且包含了一些指令.
 
-In the “Hello, World!” example we created a `main` function, which is the entry point of the program.
+在“Hello, World!”示例中我们创建了一个`main` 函数, 那是程序的入口.
 
 ```go
 package main
@@ -1094,9 +1094,9 @@ func main() {
 }
 ```
 
-That’s a special function.
+这是一个特殊的函数.
 
-Usually we define functions with a custom name:
+通常我们使用自定义的名字来定义函数:
 
 ```go
 func doSomething() {
@@ -1104,13 +1104,13 @@ func doSomething() {
 }
 ```
 
-and then you can call them, like this:
+你可以像这样调用它:
 
 ```go
 doSomething()
 ```
 
-A function can accept parameters, and we have to set the type of the parameters like this:
+一个函数可以设置入参,我们需要给参数设置类型,如下:
 
 ```go
 func doSomething(a int, b int) {
@@ -1120,9 +1120,9 @@ func doSomething(a int, b int) {
 doSomething(1, 2)
 ```
 
-`a` and `b` are the names we associate to the parameters internally to the function.
+`a` 和 `b`是函数内部参数的名字.
 
-A function can return a value, like this:
+一个函数可以返回一个值,像这样:
 
 ```go
 func sumTwoNumbers(a int, b int) int {
@@ -1132,9 +1132,9 @@ func sumTwoNumbers(a int, b int) int {
 result := sumTwoNumbers(1, 2)
 ```
 
-Note that we specified the return value _type_.
+注意这里我们指定的返回的值的 _类型_.
 
-A function in Go can return more than one value:
+一个函数可以返回多个或一个值:
 
 ```go
 func performOperations(a int, b int) (int, int) {
@@ -1144,11 +1144,11 @@ func performOperations(a int, b int) (int, int) {
 sum, diff := performOperations(1, 2)
 ```
 
-It’s interesting because many languages only allow one return value.
+有趣的是很多语言只能返回一个值.
 
-Any variable defined inside the function is local to the function.
+函数内部定义的任何变量都是函数的本地变量。
 
-A function can also accept an unlimited number of parameters, and in this case we call it a _variadic function_:
+一个函数也可以不限制参数的个数, 且这样的函数我们称它为 _可变函数_:
 
 ```go
 func sumNumbers(numbers ...int) int {
@@ -1162,7 +1162,7 @@ func sumNumbers(numbers ...int) int {
 total := sumNumbers(1, 2, 3, 4)
 ```
 
-## Pointers in Go
+## Go中的指针
 
 Go supports pointers.
 

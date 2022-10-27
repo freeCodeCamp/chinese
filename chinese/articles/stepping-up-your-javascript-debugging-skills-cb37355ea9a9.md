@@ -1,6 +1,6 @@
 > -  原文地址：[How you can step up your JavaScript debugging skills](https://www.freecodecamp.org/news/stepping-up-your-javascript-debugging-skills-cb37355ea9a9/)
 > -  原文作者：[Periklis Gkolias](https://www.freecodecamp.org/news/author/periklis-gkolias/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How you can step up your JavaScript debugging skills](https://cdn-media-1.freecodecamp.org/images/1*e3eGMlHCBdhS6Sv9rlEJXg.png)

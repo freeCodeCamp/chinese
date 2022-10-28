@@ -1,6 +1,6 @@
 > -  原文地址：[What is Software Testing? A Beginner's Guide](https://www.freecodecamp.org/news/software-testing-beginners-guide/)
 > -  原文作者：[Sophia Iroegbu](https://www.freecodecamp.org/news/author/sophia-iroegbu/)
-> -  译者：
+> -  译者：JunoWei
 > -  校对者：
 
 ![What is Software Testing? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Tech-Blog-Cover--4-.png)

@@ -1,6 +1,6 @@
 > -  原文地址：[How to code the Caesar Cipher: an introduction to basic encryption](https://www.freecodecamp.org/news/how-to-code-the-caesar-cipher-an-introduction-to-basic-encryption-3bf77b4e19f7/)
 > -  原文作者：[Anonymous](https://www.freecodecamp.orgAnonymous)
-> -  译者：
+> -  译者：dake0913
 > -  校对者：
 
 ![How to code the Caesar Cipher: an introduction to basic encryption](https://cdn-media-1.freecodecamp.org/images/0*tuogeHoQ53SQACY-.png)

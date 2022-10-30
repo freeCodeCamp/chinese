@@ -6,11 +6,11 @@
 ![What is Software Testing? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Tech-Blog-Cover--4-.png)
 
 Software testing is essential to development. It saves you time and money in production mode.
-软件测试是开发过程中非常重要的部分
+软件测试是开发过程中非常重要的环节。这将降低生产环境出现缺陷的可能性，减少在生产模式下的精力与成本投入。
 But software testing is a complex topic and can be a bit difficult to understand.
-
+但软件测试又是一个复杂且难懂的话题。
 In this article, I'll explain the major topics in software testing and how this practice can help you.
-
+在本文中，我将介绍软件测试中的主要内容，并解释软件测试在实际开发中的益处。
 ### Table of Contents:
 
 -   [What is Software Testing?](#what-is-software-testing)

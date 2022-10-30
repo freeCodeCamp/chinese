@@ -27,11 +27,11 @@ if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 ## What is Software Testing?
 
 Software testing is the process of making sure your software/app works as it should. There are various methods you can use to test your code, and each testing method has different requirements.
-
+软件测试是确保开发的软件或者app可以正确稳定使用。现在有很多可供使用的方法测试代码，而不同方法都有特定要求。
 For instance, unit testing involves writing test cases to ensure the code works as it should, and Beta testing consists of testing the preview version of the software or app to make sure users can use the product.
-
+例如，单元测试需要编写测试用例，并参照用例测试代码是否存在缺陷；β测试需要回测历史版本验证产品功能是否能正常使用。
 Software testing is integral to the process of building good software that works as it should. It also helps improve productivity and performance. Testing is an important part of the _Software Development Life Cycle_ (SDLC).
-
+软件测试是打造优秀产品过程中必不可少的一环。同时这也有利于提升生产力和性能。
 Other benefits of testing your code include preventing bugs, reducing cost, and reducing time of development.
 
 ## Types of Software Testing

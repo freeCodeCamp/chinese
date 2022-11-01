@@ -1,6 +1,6 @@
 > -  原文地址：[Linked Lists in Python – Explained with Examples](https://www.freecodecamp.org/news/introduction-to-linked-lists-in-python/)
 > -  原文作者：[Fakorede Damilola](https://www.freecodecamp.org/news/author/fakorede/)
-> -  译者：
+> -  译者：Xiang Liao
 > -  校对者：
 
 ![Linked Lists in Python – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/chain-3481377_1280.jpg)

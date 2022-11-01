@@ -5,23 +5,24 @@
 
 ![Linked Lists in Python – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/chain-3481377_1280.jpg)
 
-Different programming languages offer different ways to store and access data.
-
-Some of the data structures you can use are collections such as arrays, lists, maps, sets, and so on.
-
-These all do an awesome job storing and accessing data, but sometimes you might need something different. Another data structure commonly used is called a Linked List.
-
-## What is a Linked List?
-
-Linked Lists are a data structure that store data in the form of a chain. The structure of a linked list is such that each piece of data has a connection to the next one (and sometimes the previous data as well). Each element in a linked list is called a node.
-
-You can think of it as an actual chain, where each ring or node is connected.  
-Something like this  
-
+<!-- Different programming languages offer different ways to store and access data. -->
+不同的编程语言提供了不同的方式去存取数据。
+<!-- Some of the data structures you can use are collections such as arrays, lists, maps, sets, and so on. -->
+有些你使用的数据结构例如数组，列表，映射，集合等等都是数据合集。
+<!-- These all do an awesome job storing and accessing data, but sometimes you might need something different. Another data structure commonly used is called a Linked List. -->
+这些数据结构在存取数据上都做的非常好，但有些时候你需要不同的数据结构。另一个经常被用到的数据结构就叫链表。
+<!-- ## What is a Linked List? -->
+## 什么是链表？
+<!-- Linked Lists are a data structure that store data in the form of a chain. The structure of a linked list is such that each piece of data has a connection to the next one (and sometimes the previous data as well). Each element in a linked list is called a node. -->
+链表是一种以链的形式来存储数据的数据结构。链表的结构是这样的：每一个数据都与其后一个数据相连（有时候也与前一个数据相连）。链表中的每个元素都被称为一个结点。
+<!-- You can think of it as an actual chain, where each ring or node is connected.  
+Something like this   -->
+你可以把它看作一个实际的链条，其中每一环或者结点都是相连的。
+就像这样
 ![A-chain](https://www.freecodecamp.org/news/content/images/2022/09/A-chain.png)
 
 Like every other data structure, linked lists have their pros and cons:
-
+就像其他所有的数据结构一样，链表也有它的优点和缺点
 ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});

@@ -1,6 +1,6 @@
 > -  原文地址：[Semantic HTML Guide – 10 Alternatives to Using divs](https://www.freecodecamp.org/news/semantic-html-alternatives-to-using-divs/)
 > -  原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Semantic HTML Guide – 10 Alternatives to Using divs](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/How-To-Start-Freelancing-1.png)

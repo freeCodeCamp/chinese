@@ -23,47 +23,48 @@ Something like this   -->
 
 Like every other data structure, linked lists have their pros and cons:
 就像其他所有的数据结构一样，链表也有它的优点和缺点
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
 ### Advantages of Linked Lists:
-
+### 链表的优点
+1. 因为链表是一个链式的数据结构，你可以快速地添加和移除其中的元素。并且这也不需要像数组或者列表那样来重新组织数据。线性的数据结构用链表来实现更加容易。
 1.  Because of the chain-like system of linked lists, you can add and remove elements quickly. This also doesn't require reorganizing the data structure unlike arrays or lists. Linear data structures are often easier to implement using linked lists.
 2.  Linked lists also don't require a fixed size or initial size due to their chainlike structure.
+2. 同样因为它的链式结构，链表也不需要一个固定的或者初始的大小。
 
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
 ### Disadvantages of a Linked Lists:
-
+### 链表的缺点
+1. 与数组相比，链表占用更多的内存空间。这是因为你需要一个占用额外内存空间的指针来指向下一个元素。
 1.  More memory is required when compared to an array. This is because you need a pointer (which takes up its own memory) to point you to the next element.
 2.  Search operations on a linked list are very slow. Unlike an array, you don't have the option of random access.
+2. 在链表上执行搜索操作非常的慢。不像数组，你不能随机访问链表中的元素。
 
-ADVERTISEMENT
-
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
 ## When Should You Use a Linked List?
-
+## 什么时候应该用链表呢？
 You should use a linked list over an array when:
+在以下情况下，你应该使用链表而不是数组：
+1. 你不知道数据列表中会有多少个元素（这是链表的一个优势 - 添加元素非常简单）。
+2. 你不需要随机访问任何一个元素（与数组不同，你不能在链表中以一个特定的索引访问元素）。
+3. 你想要在数据列表的中间插入元素。
+4. 你需要以常数式时间从数据列表中插入和删除元素（与数组不同，你不需要先移动数据列表中的每一个其他元素）。
+5.  You don't know how many items will be in the list (that is one of the advantages - ease of adding items).
+6.  You don't need random access to any elements (unlike an array, you cannot access an element at a particular index in a linked list).
+7.  You want to be able to insert items in the middle of the list.
+8.  You need constant time insertion/deletion from the list (unlike an array, you don't have to shift every other item in the list first).
 
-1.  You don't know how many items will be in the list (that is one of the advantages - ease of adding items).
-2.  You don't need random access to any elements (unlike an array, you cannot access an element at a particular index in a linked list).
-3.  You want to be able to insert items in the middle of the list.
-4.  You need constant time insertion/deletion from the list (unlike an array, you don't have to shift every other item in the list first).
-
+这些就是你在尝试实现一个链表前需要考虑的事情，
 These are a few things you should consider before trying to implement a linked list.
 
+
 Now with all the theory out of the way, it's time to implement one. We'll do this using Python, but most of what we learn here applies to any language you are using. The most important thing is to understand how it works.
+现在所有的理论都结束了，是时候去真正地实现一个链表了。我们将使用Python语言来实现，但在这里学到的大部分都可以应用到任何你使用的语言上。最重要的是理解其中的思想。
 
-ADVERTISEMENT
-
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
 ## How to Use Linked Lists in Python
-
+## 如何在Python中使用链表
 Here's a trick when creating a Linked List. It's something that helped me understand it much better.
 
 You just have to realize that every item that you will be adding to the list is just a node (similar to a ring in a chain). What differentiates the **head** (which is the first node in the list) is that you gave it the title **head**, and then you started adding other nodes to it.

@@ -69,11 +69,11 @@ if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 ### Unit Testing:
 
 Unit testing is a type of software testing that validates how each software unit performs and whether that specific piece of code does what it should. A unit is the smallest testable component of an application.
-
+最小可测试代码称为一个单元，单元测试是验证每一个独立代码块如何运行及运行的准确性。
 The aim is to confirm that each unit of software code works as expected. You do unit testing during the coding (development) stage or phase. Developers write these tests as they go.
-
+目的是测试软件中的每一单元准确运行出所需要的结果。单元测试是在软件开发过程中由开发人员自行完成的测试。
 Unit tests isolate possible bugs in your code and help you correct them. A unit could be a single function, method, procedure, module, or object.
-
+单元测试可以发现独立代码模块内可能存在的各种缺陷。独立的函数、方法、过程、模块及对象都可作为一个单元。
 ![image-404](https://www.freecodecamp.org/news/content/images/2022/09/image-404.png)
 
 Code Snippet of a unit test case in Python

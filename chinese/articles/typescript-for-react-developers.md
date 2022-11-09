@@ -1,6 +1,6 @@
 > -  原文地址：[TypeScript for React Developers – Why TypeScript is Useful and How it Works](https://www.freecodecamp.org/news/typescript-for-react-developers/)
 > -  原文作者：[Daniel Asta](https://www.freecodecamp.org/news/author/daniel-asta/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![TypeScript for React Developers – Why TypeScript is Useful and How it Works](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/typescript-cover.jpg)

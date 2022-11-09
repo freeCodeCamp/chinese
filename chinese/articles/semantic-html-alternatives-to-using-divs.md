@@ -1,12 +1,11 @@
-> -  原文地址：[Semantic HTML Guide – 10 Alternatives to Using divs](https://www.freecodecamp.org/news/semantic-html-alternatives-to-using-divs/)
-> -  原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Semantic HTML Guide – 10 Alternatives to Using divs](https://www.freecodecamp.org/news/semantic-html-alternatives-to-using-divs/)
+> - 原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![Semantic HTML Guide – 10 Alternatives to Using divs](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/How-To-Start-Freelancing-1.png)
 
-  
-Raise your hand if your typical HTML layout looks like this:
+如果你的 HTML 布局是这个样子，请举手：
 
 ```html
 <body>
@@ -28,57 +27,57 @@ Raise your hand if your typical HTML layout looks like this:
 </body>
 ```
 
-Many of us use the `<div>` element by default because it’s the quickest way to build an HTML layout. It can be tempting to just get the markup out of the way so we can focus on the juicy stuff like CSS or JavaScript.
+大部分人在搭建 HTML 布局的时候会默认使用 `<div>` 元素。大多数人会把精力放在更有趣的 CSS 或者 JavaScript。
 
-While building a full layout in a document using `<div>` elements may be the lowest hanging fruit, it can create problems down the road.
+使用 `<div>` 元素在搭建页面的时候很简单，但是在后期会造成一些麻烦。
 
-## The Problems with Only Using `div`
+## 仅使用`div`带来的问题
 
-Using the `<div>` element in itself is not an issue. It serves a purpose and there’s no reason not to use it.
+使用 `<div>` 元素本身并没有什么问题。存在即合理。
 
-But using DIV exclusively in your HTML can cause issues for you and anyone else who works on your project.
+但大量地使用 DIV 会给你和你的合作伙伴带来麻烦。
 
-### Readability Issues
+### 易读性问题
 
-If you have ever looked at someone else’s code, or even your own code months after writing it, it can be hard to scan if it’s populated solely with `<div>` elements.
+如果你尝试去看别人的代码，或者是几个月后回看自己的代码，如果整个页面只有 `<div>`元素，很难快速浏览。
 
-Deciphering the layout can take much longer than necessary, which is like Kryptonite for your productivity. Just trying to figure out where the closing `</div>` tag is for a specific block of code can be tedious.
+你得花费更多地时间去解构页面，这或许会成为你效率的绊脚石。仅是寻找某一个代码块的结束 `</div>` 标签都会花费你大量时间。
 
-### Accessibility Issues
+### 无障碍问题
 
-Adhering to a11y considerations is not just about color, contrast and captioning. The World Health Organization estimates that 285 million people are visually impaired worldwide: 39 million are blind and 246 million have low vision.
+遵循无障碍（a11y）原则是实践，不单是考虑颜色、对比和字幕。根据 WHO（联合国卫生组织）的统计结果：全世界约有 2.85 亿人口遭遇视觉损伤，其中 0.39 亿失明，2.46 亿视力低下。
 
-This is another reason why it’s important to write your HTML to be as accessible as possible, which means writing semantic code.
+这就是 HTML 应该无障碍的原因，也就是使用语义化代码。
 
-Screen readers need context in order to accurately read a web page out loud. To a screen reader, elements like `<div>` and `<span>` mean nothing. Semantic divs like `<form>` and `<button>` are easier to parse.
+屏幕阅读器需要通过上下文来判断网页的准确信息。 对于屏幕阅读器来说，`<div>`和`<span>`这类元素没有任何意义； 而`<form>`和 `<button>`这类语义化的元素更好解析。
 
-### Consistency Issues
+### 一致性问题
 
-If you know what to expect when working on a project with a team, you’ll be much more effective. You’ll also tend to have fewer bugs in your code.
+在团队工作中，如果你知道你即将在项目中担任什么角色，你的工作效率会更高，代码中的问题也会越少。
 
-Setting a standard for using semantic HTML makes sense because anyone picking up the project will more easily understand the layout.
+把使用语义化 HTML 设置为一个标准可以使任何刚加入的人马上了解网页布局。
 
-Additionally, when you start applying or tweaking the CSS for an HTML document, you’ll find it much faster and easier to find specific elements when semantic HTML was used in the layout.
+另外，当你开始使用 CSS 来调整 HTML 样式的时候，你会发现语义化的 HTML 的元素更容易被选定。
 
-### SEO Issues
+### SEO 问题
 
-When using semantic markup, search engines will consider its contents as important keywords to influence the page's search rankings. [(MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
+使用语义化标记时，搜索引擎会将这些内容视为重要的关键字，以此来提高页面的搜索排名。 [(MDN 网页文档)](https://developer.mozilla.org/en-US/docs/Glossary/Semantics)
 
-What is semantic HTML?
+何为语义化 HTML?
 
-The [clearest definition](https://www.w3schools.com/html/html5_semantic_elements.asp) of semantic HTML that I found states that:
+我找到最[清晰的定义](https://www.w3schools.com/html/html5_semantic_elements.asp) 是：
 
-> A semantic element clearly describes its meaning to both the browser and the developer.
+> 语义元素清楚地向浏览器和开发人员描述了它的含义。
 
-Using semantic HTML is like the difference between pointing out an object in the sky and saying, “Look, an object!” or “Look, an airplane!”
+使用语义化 HTML 带来的改变很像这样的场景：当你指向天空一个物品大呼：“快看！有一个物品”和“快看！有一架飞机”。
 
-Just as describing real world objects makes everyday communication easier, semantic HTML makes reading code easier.
+清晰描述日常物品使得日常交流更加容易，而语义化 HTML 使得读取代码更加容易。
 
-In fact, using semantic HTML is noted as part of the [HTML5 standard](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element):
+实际上，语义化 HTML 已经被当作 [HTML5 标准](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element):
 
-> Authors are strongly encouraged to view the [div](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element) element as an element of last resort, for when no other element is suitable. Use of more appropriate elements instead of the `div` element leads to better accessibility for readers and easier maintainability for authors.
+> 鼓励开发者将 [div](https://html.spec.whatwg.org/multipage/grouping-content.html#the-div-element) 元素作为备选方案，当实在没有别的元素可以使用的时候再使用。使用比 `div` 元素更适合的元素可以使网页的无障碍性更好，使开发者更易维护代码。
 
-For example, which is easier to scan:
+举一个例子，哪一个更方面阅读：
 
 ```html
 <div class="quote" id="twain-quote">
@@ -86,7 +85,7 @@ For example, which is easier to scan:
 </div>
 ```
 
-Or
+或者
 
 ```html
 <blockquote>
@@ -94,15 +93,15 @@ Or
 </blockquote>
 ```
 
-In the second example, you can see the `<blockquote>` element, which is immediately understandable as text that needs to be displayed in a quotation format.
+在上面两个例子中，我们看到了 `<blockquote>` 元素，我们很容易就理解到元素内的文字应该被当作引用来处理格式。
 
-Using `div` alternatives may take a little more thought, but that bit of extra planning with semantic HTML will be worth it in the end.
+如果使用`div`可能需要进一步判断，但使用语义化 HTML 总不会错。
 
-## Alternatives to `div` in HTML
+## HTML 中`div`的替换元素
 
-Let’s talk about some of the more common `div` alternatives. Chances are you’ve seen these elements before, but here we’ll cover exactly what they’re for and how to use them.
+让我们来看看一些常用的`div` 替换元素。你很有可能见过这些元素，我们将在这里讲解它们存在的原因以及如何使用。
 
-### The <nav> element
+### <nav>元素
 
 ```html
 <nav>
@@ -114,11 +113,11 @@ Let’s talk about some of the more common `div` alternatives. Chances are you�
 </nav>
 ```
 
-The nav element is exactly what it sounds like. You use this element to outline a set of navigation links.
+nav 元素正如其名，是用来标记一系列导航连接的元素。
 
-As mentioned before, this also allows screen readers to decide whether or not to display this type of content initially. The `nav` element is best used for a major block of navigation links in the document.
+如上文所述，这个标记可以帮助屏幕阅读器判断是否现在就展示所属内容。 `nav` 元素的最佳实践是 HTML 文档中的导航链接代码块。
 
-### The <main> element
+### <main> 元素
 
 ```html
 <main>
@@ -134,13 +133,15 @@ As mentioned before, this also allows screen readers to decide whether or not to
 </main>
 ```
 
-Similar to `<nav>`, the main element is used just as it sounds (semantics at work again). This element wraps the blocks of code that specify the main content of the page, or document. The main element will live between the opening and closing `<body>` tags.
+和 `<nav>`类似，这个元素也正如其名（语义化派上了用场）。该元素将页面或者文档的主要内容打包成一个块级元素。main 元素位于两个`<body>`标签之间。
 
-### The <section> element
+### <section> 元素
 
 ```html
 <section>
   <h1>The Best Sandwich Ever</h1>
+</section>
+<section>
   <p>
     The best sandwich is a mutton, lettuce and tomato, where the mutton is nice
     and lean. It's so perky, I love that.
@@ -148,23 +149,23 @@ Similar to `<nav>`, the main element is used just as it sounds (semantics at wor
 </section>
 ```
 
-The `<section>` element is a great example of using a `div` alternative to separate content.
+`<section>`元素是取代`div`来区分不同内容绝佳的例子。
 
-In the example above, we are separating an introduction and opening paragraph into two sections. Finding and styling those sections in our CSS document will be much faster than hunting down a `<div>` class.
+在上面的例子中，我们将一段介绍和段落开头区分成两个 section，这样和`<div>`类相比在 CSS 文档中就更容易找到这些 section。
 
-### The <header> element
+### <header> 元素
 
 ```html
 <header>
-  <img src="/" id="logo">
+  <img src="/" id="logo" />
 </header>
 ```
 
-The `<header>` element is different from the `<head>` element in that you can use it multiple times throughout the document.
+`<header>` 元素和`<head>` 不同，你可以在文档内多次使用。
 
-For example, you could use one set of `<header>` elements to place a logo and another set to describe a header for a specific piece of content, like an article (more on this later).
+例如，你可以使用一对`<header>` 元素来放置一个 logo，以及另一组对 header 来介绍特定的内容，如 article（之后会详细说明）。
 
-### The <footer> element
+### <footer> 元素
 
 ```html
 <footer>
@@ -173,15 +174,15 @@ For example, you could use one set of `<header>` elements to place a logo and an
 </footer>
 ```
 
-Just like with the `<header>` element, you can use `<footer>` elements anywhere in your HTML document.
+和 `<header>` 元素一样，你可以在 HTML 文档中的任意地方使用 `<footer>` 元素。
 
-A typical use for `<footer>` is for copyright or author information. You can also use a footer element as a closing within a `<section>` element.
+`<footer>` 的典型案例是展示版权和作者信息，也可以使用 footer 元素来结束 `<section>` 元素。
 
-### Less common alternatives to `div`
+### 一些不那么常见的 `div`替换
 
-There are also some elements you may not have seen before or have only seen very rarely. But they do come in handy and learning them will help make your code much more readable.
+还有一些元素你可能见过，或者只见过一两次。但是当你需要的时候，它们很有用，学习它们可以使得你的代码的易读性更好。
 
-### The <aside> element
+### <aside> 元素
 
 ```html
 <p>
@@ -194,11 +195,11 @@ There are also some elements you may not have seen before or have only seen very
 </aside>
 ```
 
-In film or theater, an aside is known as a dramatic device in which a character speaks to the audience, separately from the main dialogue.
+在影视和戏剧作品中，aside 是一种戏剧手法，角色会跳脱出主要的对话，和观众进行交流。
 
-That’s exactly how we can use the <aside> element in our HTML. We are making a notation that’s related to the content, but that we want to keep separate. We can use it in a sidebar as well.
+我们在 HTML 中也可以这样使用 <aside> 元素。我们对一个内容做注解，注解和主题内容区分。我们可以把它放置在侧边栏。
 
-### The <code> element
+### <code> 元素
 
 ```html
 <p>
@@ -208,11 +209,11 @@ That’s exactly how we can use the <aside> element in our HTML. We are making a
 </p>
 ```
 
-In instances where we want to differentiate a piece of code from regular text, the `<code>` element comes in very handy. The resulting text when rendered in the browser might look like this, with a little CSS styling:
+如果想要将代码和普通文本区分开来，可以使用 `<code>` 元素。上面示例在浏览器的渲染结果（添加了一点 CSS 样式）如下：
 
 ![code-display](https://www.freecodecamp.org/news/content/images/2022/07/code-display.png)
 
-### The <article> element
+### <article> 元素
 
 ```html
 <article class="all-muppets">
@@ -229,15 +230,15 @@ In instances where we want to differentiate a piece of code from regular text, t
 </article>
 ```
 
-The `<article>` element is yet another element that’s used to differentiate types of content from one another in the layout.
+`<article>` 元素也是用来和其他元素区分内容的。
 
-An `<article>` should be self-contained content that’s separate from the main content. Using this element also makes it easier to style with CSS, making the article content clearly different from other content on the page.
+`<article>`自成一体，和主内容区分开来。使用这个元素可以更容易使用 CSS 将它与页面其他内容区分开来。
 
-### The <blockquote> element
+### <blockquote> 元素
 
-The `<blockquote>` element is another straightforward one, used just as it sounds: to separate a quotation from other text, as seen earlier.
+`<blockquote>` 简单明了，将引文和其他文本区分开来，如上文所示。
 
-### The <mark> element
+### <mark> 元素
 
 ```html
 <p>
@@ -246,16 +247,16 @@ The `<blockquote>` element is another straightforward one, used just as it sound
 </p>
 ```
 
-The `<mark>` element is not only a perfect way to highlight a block of text, it’s easily understood when you come across it in a document. It looks like this:
+`<mark>` 元素不仅可以是文本高亮，也可以使文档内容更易被理解，如下：
 
 ![mark-display](https://www.freecodecamp.org/news/content/images/2022/07/mark-display.png)
 
-Try using these `div` alternatives in your own code and see how much easier it makes it to read.
+请在你的代码中使用这些`div`替换元素，提高你的代码的易读性。
 
-## Wrapping Up
+## 总结
 
-These are only ten examples of `div` alternatives. There are quite a few other semantic elements that we can use in our HTML.
+以上只是十个 `div` 的替换元素，在 HTML 还有另一些语义化元素。
 
-You’re not going to use them all in one document, and you don’t have to worry about memorizing the 100+ elements that exist. The MDN has a handy reference page you can refer to when you need it: [HTML Elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
+我们不可能在一个文档中把它们全都用了，也不需要记住这一百来个元素。 需要的时候你可以查看 MDN 文档： [HTML 元素参考](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
 
-Writing semantic HTML is a good habit to get into as early as possible. It’s good for readability, SEO, and don’t forget the millions of vision-impaired people who will appreciate your thoughtfully created code.
+编写语义化 HTML 是一个好习惯，越早开始越好。它提高了易读性、SEO，同时也不要忘了那些视觉障碍的人，他们会非常感谢你的体贴。

@@ -1,260 +1,258 @@
 > -  原文地址：[Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/top-statistics-concepts-to-know-before-getting-into-data-science/)
 > -  原文作者：[Ibrahim Abayomi Ogunbiyi](https://www.freecodecamp.org/news/author/ibrahim/)
-> -  译者：
+> -  译者：Yaxing Li (Suntar)
 > -  校对者：
 
 ![Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/who-s-denilo-3ECPkzvwlBs-unsplash.jpg)
 
-You've probably heard that statistics is the gateway to data science and that the data science map starts with stats.
+[TOC]
 
-Perhaps you've also heard from others that you have to learn statistics before learning data science.  But then you ponder, "Since I'm not from a technical background like science, technology, engineering, or math (STEM), do I need to learn everything in statistics before getting into data science?" And those same people will tell you "Yes! You have to learn statistics."
+你可能听说过，统计学是数据科学的入门门槛，是打开数据科学的钥匙。
 
-Well, here's my answer: you don't need to learn all of statistics before beginning data science (though you do need to learn some fundamentals).
+可能你还听说过，想学数据科学，必须先学统计。 这时候你也许会迟疑，“我不是理工科背景，没有相关数学基础，我是不是要把统计学的相关知识学习完，才算入门了数据科学啊？“ 有些人会告诉你：“是的！你必须先学习统计学。”
 
-You can also learn as you go instead of wasting time learning statistics first before data science (that is, as you advance in your knowledge of data science, you can always learn more statistics concepts).
+而我的回答是：在开始数据科学之前，你不需要学习所有的统计学（尽管你需要掌握一些基础知识）。
 
-That being said, it is helpful to know statistics basics before jumping into data science. You can indeed say that stats is the gateway to data science because it will help you to have some intuition about your data and how to work with it.
+你可以边学边做，而不是浪费时间在数据科学之前先修统计学（也就是说，随着你对数据科学知识的进一步了解，你同时可以学到更多的统计学概念）。
 
-In this article, we'll look at the top statistical concepts you need to know before diving into data science. I'll make it as simple as possible even if you don't come from a technical background. I can tell you're excited and ready to dive into the realm of data science. Let's get started.
+话虽如此，了解一些统计学基础知识，还是很有必要的。确实可以这样说，统计学是打开数据科学的钥匙，因为它会让你对数据更为敏感，知道如何处理它们。
 
-# What is Statistics?
+在这篇文章中，我将介绍一些入门数据科学所必须的统计学概念。我将尽量用简单的语言来介绍，即使你不是理工科出身，我相信你听完以后也会十分兴奋，迫不及待想进入数据科学领域。让我们开始吧。
 
-According to economist and sampling technique pioneer Arthur Lyon Bowley, Statistics is:
+# 什么是统计学？
 
-> "numerical statements of facts in any department of inquiry placed in relation to each other."
+根据经济学家和抽样方法先驱阿瑟-里昂-鲍利（Arthur Lyon Bowley）的说法，统计学是：
 
-That basically means that statistics helps us comprehend our data and also helps us convey the results in that data to others.
+> “对调查事件的量化描述，并将之与其他事件进行联系。”
 
-Statistical methods (that is, the techniques employed in dealing with data in statistics) are classified into two types:
+这句话的意思是，统计学帮助我们理解数据，并向他人传达数据得出的结果。
 
-1.  Descriptive Statistics
-2.  Inferential Statistics
+统计方法（即在处理统计数据时所采用的技术方法）分为两种类型：
 
-**Descriptive Statistics** is a discipline of statistics that assists us in summarizing data through numerical values or graphical visualization.
+1.  描述统计
+2.  推断统计
 
-Descriptive statistics helps us identify and understand some key properties in our data. It includes concepts such as central tendency, dispersion, boxplots, histograms, and so on, which we'll discuss later in the article.
+**描述统计**是统计学的一大分支，它协助我们通过数值或图形可视化来总结数据。
 
-**Inferential Statistics,** on the other hand, is a branch of statistics that helps us make decisions or predictions based on the data that we have gathered.
+描述统计帮助我们识别和理解数据中的一些关键属性。它包含如中心极限、离散、箱形图、直方图等概念，我们将在下文讨论这些概念。
 
-Inferential statistics is a significantly more advanced topic because it requires a deep understanding of descriptive statistics. It includes concepts such as hypothesis, probability, and so forth.
+**推断统计**是统计学的另一大分支，它帮助我们根据收集到的数据做出决策或预测。
 
-# Top Statistical Concepts to Know Before Learning Data Science
+推断统计是在描述性统计的基础上，更进一步的推理判断。它包括诸如假设、概率等概念。
 
-Since you're now familiar with the definition of statistics, let's have a look at some of the concepts you'll need to know in statistics that'll help guide you when you dive into the realm of statistics.
+# 数据科学入门必备统计学概念
 
-Among the most fundamental concepts are:
+既然你现在已经熟悉了统计学的定义，让我们来看看在统计学中需要知道的一些相关概念，这些概念将带你入门统计学。
 
-## What is a Subject?
+其中最基本的概念包括：
 
-This is the specific thing we wish to observe. It could be a person, an animal, or something else. It is also known as observation.
+## 什么是对象？
 
-## What is a Population?
+对象是我们想要观测的具体事物。它可以是一个人，一个动物，或其他东西。它也被称为观测点。
 
-Population refers to the entire set of topics in which we are interested (that is, that we want to observe). Assume you wish to count the number of females in a specific country.
+## 什么是总体？
 
-## What is a Sample?
+总体指的是我们感兴趣的（也就是我们想观察的）整个对象集，比如一个国家的全体女性人数。
 
-In reality, observing a population is hardly an ideal situation (because it can be very expensive to perform, and also time-consuming).
+## 什么是样本？
 
-Consider the following scenario: you wish to observe every female in the world. This type of observation can be costly to carry out. However, in statistics, we have something called a sample, which is a portion/subset of the population that you want to study. We can now make a decision (inferential statistic) about the full population using the sample.
+现实情况下，观察一个总体几乎不可能（因为它费时费力）。
 
-## What are Parameters?
+比如：你希望观测世界上所有女性数量，但进行这种观测成本很大。所以，在统计学中，我们有一种叫做样本的东西，它是总体的一部分或子集。我们可以利用样本对全部人口做出判断（推断统计）。
 
-This is a property/summary of a population. Consider the following scenario: you are observing the entire country and you discover that 90% of the inhabitants are males while 10% are females. The numerical values, 90%, and 10% are a numerical summary (that is, descriptive statistics) of the entire population. As a result, the summary is known as the population parameter.
+## 什么是参数？
 
-## What is a Statistic?
+参数是描述总体特征的度量。比如，你正在观测一个国家的人口，你发现90%的居民为男性，10%为女性。数值90%和10%是整个人口的性别度量（描述统计）。它就是总体特征的一个参数。
 
-On the other hand, a statistic (not to be confused with statistic(s)) is about a sample's property. As stated in the preceding example, instead of working with the full population, we work with samples, so the numerical value is referred to as the statistic of the sample.
+## 什么是统计量
 
-Hopefully you now have a decent understanding of what population, sample, statistic, and parameters are. Let's take a look at another concept with which we are all too familiar: **"Data"**.
+统计量（不要与统计学混淆）是描述样本特征的度量。如前所述，我们没法观测总体，只能观测样本，统计量就是对样本特征的数值度量。
 
-**Data**, as the term implies, represents factual information. That is, it conveys a message to us. It can, however, be divided into two categories:
+希望现在你对什么是总体、样本、统计量和参数有了基本了解。让我们来看看另一个我们都很熟悉的概念："**数据**"。
 
-1.  Quantitative data.
-2.  Qualitative data.
+**数据**代表了事件信息，也就是说，它向我们传达了一个事实。它可以被分为两类：
 
-## What is Quantitative Data?
+1.  定量数据。
+2.  定性数据。
 
-This is also known as numerical data. These data are a sort of data in which numerical values can be counted or measured. Quantitative data can be further classified into two types:
+## 什么是定量数据？
 
-**Quantitative discrete data:** These are numerical data that can be counted but cannot be measured. Counting the number of shoes in a shoe store is a common example.
+它也被称为数值数据。它是一种可以计数或计量数值的数据。定量数据可以进一步分为两种类型：
 
-**Quantitative continuous data:** This is a type of numerical data that is based on measurement. For example, measuring the weight of a glass cylinder is continuous, not discrete.
+**定量离散数据**：它可以计数但不能精确计量， 比如计数鞋店中的鞋子个数。
 
-## What is Qualitative Data?
+**定量连续数据**：这是一种基于精确计量的数值数据。例如，测量一个玻璃缸的重量。
 
-These are sorts of data that represent categories or groups of data. They are also known as categorical data. They are usually written in text. They can be characteristics, names, or anything else.
+## 什么是定性数据？
 
-A common example is a person's name, dog breeds, and so on. However, there are some data that appear to be numerical data but are encoded as categorical data.
+它是代表类别或数据组的各种数据。它也被称为类别数据。它通常是特征、名字或其他东西的名称分类。
 
-For example, suppose you wanted to group a certain group of people based on their age and discovered that the lowest and highest ages are 10 and 60, respectively. You then divided the ages into 5 categories (10-20, 21-30, 31-40, 41-50, 51-60) and assigned numerical values to each of those categories where 1 represents 10-20,  2 represents 21-30, and so on.
+常见的例子包括人名，狗的品种等等。然而，有一些数据看起来像数值数据，但也被归为类别数据。
 
-In this situation, the numerical values will be handled as categorical data rather than quantitative data. As your data science career progresses, you will learn how to work with categorical data.
+例如，假设你想根据年龄对某一群人进行分组，发现最低和最高年龄分别是10岁和60岁。然后你把年龄分成5个类别（10-20岁，21-30岁，31-40岁，41-50岁，51-60岁），并给每个类别分配数值，其中1代表10-20岁，2代表21-30岁，以此类推。
 
-Now you know the categories of data. Quantitative and qualitative data can be treated in statistics using these levels of measurement. Data in statistics can be classified into 4 levels of measurement which are:
+在这种情况下，数值将被作为定性数据而不是定量数据来处理。随着不断深入数据科学，你将学会如何处理类别数据。
 
-1.  Nominal scale data
-2.  Ordinal Scale data
-3.  Interval Scale data
-4.  Ratio Scale data
+了解了数据分类，现在我们来看看定量和定性数据在统计学中是如何计量的。统计学依据数据的计量尺度将数据划分为4类，它们分别是：
 
-Qualitative data can be measured using:
+1.  名义数据
+2.  有序数据
+3.  间隔数据
+4.  比率数据
 
-**Nominal scale data:** These are the type of categorical data that do not have an ordered sense. That is, they cannot be ordered.
+定性数据可以用以下方式计量：
 
-Each piece of data represents a single unit. An example of such categorical data includes color. It is not very ideal to rank blue over yellow. When working with nominal data, each data point must be handled as a separate unit.
+**名义数据**：名义数据是无序的分类数据，也就是说，它们不能被排序。
 
-**Ordinal Scale data:** Ordinal Scale data consists of ordered categorical data. When data is ranked, there is a sense of order in it. A survey response such as excellent, good, satisfactory, and unsatisfactory is an example of this. It makes sense to rank excellence above good.
+每一组数据都代表一个分类，比如颜色。蓝色没有任何理由排在黄色之前。在处理名义数据时，每组数据都必须作为一个独立的分类来处理。
 
-Quantitative data can be measured using:
+**有序数据**。有序数据是有顺序的分类数据。当数据被排序后，就有了先后顺序。像优秀、良好、满意和不满意这样的调查回答就是一个例子。将优秀排在良好之上符合现实需要。
 
-**Interval Scale Data:** These are numerical data with ordering and can be measured (for example find the difference between the data). The readings on a temperature scale are an example of interval data.
+定量数据可以用以下方式计量：
 
-For example, you can measure the difference between 4 and 10 degrees Celsius, and 10 degrees is higher than 4 degrees. However, there are two exceptions for interval scale data:
+**间隔数据**。间隔数据是指有排序的数值数据，并且可以进行测量（比如，数据之间可以相减）。温度计的读数就是一个间隔数据例子。
 
-1.  It does not have a starting point (that is, it does not begin from zero and you can have a temperature value below zero)
-2.  You can't figure out their ratio: For example, it makes no logic to claim that 4 times 20 degrees Celsius is 80 degrees Celsius.
+例如，你可以测量摄氏4度和10度之间的差值，10度比4度高6度。间隔刻度数据有两个特点：
 
-**Ratio Scale data**: These are numerical data that have the features of interval scale data (that is they may be ordered and measured), but also solve the exception of interval scale data (they have a starting point, and also you can find the ratio between them).
+1. 它没有一个起点（也就是说，它不从零开始，可以有一个低于零的温度值）
+2. 无法计算出它们的比例。比如，80摄氏度比20摄氏度高4倍，这不符合逻辑，因为它们没有一个起点。
 
-A grade score of 20, 68, 90, or 80 is an example. We can order it, measure it, and find the ratio between the values.  It makes sense to say the score of 80 is 4 times better than the score of 20.
+**比率数据**。比率数据具有间隔数据可以被排序和计量的特点，但比率数据有一个共同的起点，所以能计算它们之间的比率。
 
-Now that we've covered the fundamentals of data, let's look at how the first category of statistics (descriptive statistics) can be applied to data.
+比如考试成绩分别为20、68、90或80分。我们可以给它排序，计算差值，并找到数值之间的比率，比如80分比20分高4倍。
 
-As previously stated, descriptive statistics require summarizing data either numerically or graphically. Let's take a look at some of the most typical numerical and graphical summaries you'll encounter when dealing with data on a regular basis.
+现在我们已经介绍了数据的基本概念，接下来我们看看第一大类统计方法（描述统计）如何处理数据。
 
-## Mean vs Median vs Mode – What is the Difference?
+如前所述，描述统计需要用数字或图形来总结数据。让我们来看看在处理数据时，你会经常用到的一些最典型的数字和图形。
+
+## 平均数 vs 中位数 vs 众数 --- 它们有什么区别？ 
 
 ![Visualisation_mode_median_mean](https://www.freecodecamp.org/news/content/images/2022/06/Visualisation_mode_median_mean.svg)
 
-Mean, Median, and Mode explained through illustration. Mode is the high point, Median is the half way point, and Mean is the average.
+上图解释了平均数、中位数和众数的区别。众数是最高点，中位数是中间点，而平均数是均值。
 
-### What is a Mean?
+### 什么是平均数
 
-When we have a set of numerical data like this (4, 5, 6, 7, 10), each value in the set of data is referred to as a data point. We might want to find the data's average value.
+当我们有一组像4，5，6，7，10这样的数值数据时，这组数据中的每个值都被称为一个数据点。我们可能想找到这组数据的平均值。
 
-So mean is essentially the average of a set of data and is calculated as the sum of all the data points divided by the total number of data points.
+平均值本质上就是一组数据的平均数，计算方法是所有数据点的总和除以数据点的总个数。
 
-In our above data set, their sum is 32 and the total number of data points is 5. So the average number, that is the mean, is 6.4
+上面的数据集的总和是32，数据点的总个数是5，所以平均数，也就是平均值，是6.4。
 
-Mean is only used on numerical data. Finding the average of our category data is impractical.
+平均数只存在于定量数据上，定性数据没有平均数。
 
-### What is a Median?
+### 什么是中位数
 
-Also, given a group of values, we may want to discover the value in the center. The median is used to compute the value in the middle. Median also is used on numerical data only.
+给定一组数值，我们可能想找到位于中间位置的数值，中位数就是最中间的数据点，中位数也只存在于定量数据。
 
-### What is a Mode?
+### 什么是众数？
 
-This is the value with the highest frequency (that is a value that has the highest number of occurrences). The mode can be used for numerical or categorical data.
+众数是最高频出现的数据点（也就是出现次数最多的数值）。定量数据和定性数据都有众数。
 
-## What is an Outlier?
+## 什么是离群值？
 
-Outliers are data points that differ from other data points and, when present, can lead us to incorrect conclusions. Here's a typical example of how outliers are harmful.
+离群值是指与其他数据点显著不同的异常数据点。离群值会导致我们得出错误的结论。下面就是一个典型的例子。
 
-Consider the following scenario: you have a machine that counts how many customers enter your supermarket every day, and the readings are thus for a given week (20, 23, 26, 27, 302). We can see that the number 302 is an outlier because it deviates significantly from the other data points.
+假设你有一台机器能计算每天进入超市的顾客数。它某一周值为20、23、26、27、302。我们可以判断302就是一个离群值，因为它与其他数值有很大的差别。
 
-Outliers could have resulted from a sudden change, machine faults, or other circumstances. However, when they are present, they can lead us to make incorrect decisions, such as if you want to find the average number of consumers who visit your supermarket, the value 302 may lead you to an incorrect result. The mean of the preceding values is 75.
+离群值可能是由突然的变化、机器故障或其他情况造成的。它们的出现会导致错误结论。例如，如果想知道平均超市顾客访问量，数值302就可能具有误导性，让我们认为平均访问量是75。
 
-## What is a Standard Deviation?
+## 什么是标准差？
 
-A Standard Deviation is a summary value that indicates how far our data point deviates from the mean. It is used to determine the spread of our data.
+标准差是一种描述性数值，表明数据点与平均值的偏离程度。它被用来确定数据的分布情况。
 
-The closer the standard deviation is to zero, the closer our data points are to one another.
+标准差越接近于零，数据点就越趋近于平均值。
 
-The standard deviation is an extremely valuable summary that informs us that we have some outliers in our dataset. Here's how it works:
+标准差是一种非常重要的描述性统计。它能告诉我们数据集的离散程度。下图是一张数据正态分布图，X轴以标准差为刻度。
 
 ![1920px-Standard_deviation_diagram.svg](https://www.freecodecamp.org/news/content/images/2022/06/1920px-Standard_deviation_diagram.svg.png)
 
-A chart of a Normal Distribution, with the number of standard deviations listed on the x axis.
+从上图可以看出，34.1% + 34.1% = 68.2% 的所有观测值都在一个标准差之内，或1σ（读作一个西格玛）。
 
-In the above chart, we see a Normal Distribution. 34.1% + 34.1% = 68.2% of all observations are within one standard deviation, or 1σ (pronounced one Sigma).
+加上13.6%+13.6%=27.2%的观测值在两个标准差之内，或2σ，以此类推。
 
-13.6% + 13.6% = 27.2% of the remaining observations are within two standard deviations, or 2σ. And so on.
+不知道你是否听说过六西格玛这个工程学概念。它表示在质量保证过程中要考虑到六个标准差的可能性。这意味着除了最最极端的异常值之外，你要考虑到所有的情况。准确地说，是所有可能性的99.99966%。
 
-And yes, if you've heard of Six Sigma, that is a concept in engineering where six standard deviation's worth of possibilities are accounted for in the quality assurance process. Meaning you are accounting for all but the most extreme outliers. 99.99966% of all possibilities, to be exact.
+现在我们已经掌握了一些以数字进行描述统计的方法，接下来让我们来看看一些常见的图形描述方法。
 
-Now that we've grasped some numerical summaries, let's take a look at some common graphical summaries.
+## 什么是柱状图？
 
-## What is a Bar Chart?
-
-A bar chart is a type of data visualization used for categorical data. You use it to graphically show the frequency of categorical data (that is the number of times a categorical data point occurs). Here's an example:
+柱状图用于类别数据的可视化。用它可以来展示每组数据的频数（即一个类别中数据点出现的次数）。如图所示：
 
 ![download-1](https://www.freecodecamp.org/news/content/images/2022/06/download-1.png)
 
-## What is a Histogram?
+## 什么是直方图？
 
-A histogram is similar to a bar chart in that it shows the frequency of your numerical data called height, but it groups the numerical data points into bins or ranges.
+直方图与柱状图类似，用以展示数据组的频数。但与柱状图不同的是，它展示了定量连续数据组的频数，这些连续数据组也被称为区间或组距。
 
-It is a very efficient visualization tool because it helps you visualize the distribution of your numerical data. You can read more [here](https://www.cuemath.com/data/histograms/) to learn more about histograms.
+直方图是非常有效的可视化图形，可以帮助展示定量数据的分布。你可以在[这里](https://www.cuemath.com/data/histograms/)读到更多关于直方图的信息。
 
 ![p7o9X1bVJPpmNy5U+leTK9U7FXlBV70vy95OcWlVHkrw5yRVJrqmq12bjPyIuWt+E7AUPcxxeluQJSW7Y+D+wfKy7f2xtQ3JClDO4AAAA87iMEwAAYCCxBwAAMJDYAwAAGEjsAQAADCT2AAAABhJ7AAAAA4k9AACAgcQeAADAQP8Psf4OCOabt3QAAAAASUVORK5CYII=](data:image/png;base64,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)
 
-## What is a Boxplot?
+## 什么是箱型图？
 
-Another excellent visualization that helps you visualize the distribution of your data is the boxplot.
+另一个非常棒的数据描述图表就是箱型图。
 
-A boxplot, for example, allows you to visually observe if there are any outliers in your data collection. It includes terms such as minimum, 25th percentile, 50th percentile, 75th percentile, and maximum. A Boxplot looks as follows:
+箱型图可以直观地查看是否存在离散点，它还展示了诸如最小区间值、第一四分位数，中位数，第三四分位数和最大区间值等数字。箱型图如图所示：
 
 ![OutliersAnomalies--1-](https://www.freecodecamp.org/news/content/images/2022/06/OutliersAnomalies--1-.png)
 
-Image by Ibrahim Ogunbiyi
+图片由Ibrahim Ogunbiyi提供
 
-So let’s go over what we have in the above diagram:
+让我们来来看看上图都代表了什么意思。
 
-**Minimum**: The minimum value does not imply the smallest value in our dataset. It is calculated using this formula ( Q1 -1.5\*IQR) where:
+**最小区间值**：最小区间值并不是最小值。它等于 ( Q1 -1.5*IQR) 。
 
--   Q1 – implies The 25th percentile
--   IQR – implies the Interquartile range (which is the difference between the 75th percentile and the 25th percentile).
+-   Q1是第一四分位数。
+-   IQR是第三四分位数和第一四分位数的差值。
 
-With the minimum, it can help us detect data points that are also far below the other observed values.
+最小区间界定了正常数据点的范围，它可以帮助我们发现那些小于正常范围的离散点。
 
-For instance, assuming our data points are spread like these \[345, 402, 295, 386, 10\]. We can see that the value 10 is also an outlier because it is a lower value that is far below other observations.
+举个例子，假设我们的数据点是像这样分布[345, 402, 295, 386, 10]。我们可以判断数据点10是一个离群点，因为它远低于其他观察值。
 
-**The 25th percentile** is a value that tells us that 25% of our data points are below that value and 75% of our data points are above that value. The 25th percentile is also known as the first quartile.
+**第一四分位数**告诉我们25%的数据点低于这个数值，75%的数据点高于这个数值。它也被称为第25百分位数。
 
-**The 50th percentile** is a value that indicates that 50% of our data points are below that value and the remaining 50% are above that value. It is also known as the second quartile.
+**第二四分位数**告诉我们50%的数据点低于该数值，其余50%高于该数值。它也被称为第50百分位数。
 
-**The 75th percentile** is a value that tells us that 75 percent of our data point is below that value and the remaining 25 percent is above it. It is also known as the third quartile.
+**第三四分位数**告诉我们75%的数据点低于该数值，其余25%高于该数值。它也被称为第75百分位数。
 
-**Maximum:** Also like the minimum, the maximum does not imply the highest value in the dataset. It is calculated using the formula (Q3 + 1.5\*IQR) where:
+**最大区间值**，和最小区间值一样，也不是数据集中的最高值。它的计算公式是（Q3+1.5*IQR）。
 
--   Q3 – implies the 75th percentile
--   IQR implies Interquartile Range (which is the difference between the 75th percentile and the 25th percentile).
+-   Q3 是第三四分位数。
+-   IQR是第三四分位数和第一四分位数的差值。
 
-With maximum also, it can help us detect data points that are also far above the other observed values.
+最大区间值可以帮助我们发现那些远高于其他观察值的离散点。
 
-For instance, assuming our data points are spread like these \[645, 40, 25, 38, 42\]. We can see that the value 645 is also an outlier because it is a higher value that is far above other observations.
+比如，假设我们的数据点是像这样分布[645, 40, 25, 38, 42]。我们可以确定645是一个离散点，因为它是远远高于其他观察值。
 
-We've seen some graphical summaries of what we'll be dealing with on a daily basis. Let's look at the final topic we will discuss in this article:
+总结完不同类型的数据图形展示后，让我们进入最后一个话题：
 
-## What is the Association Between Quantitative Variables?
+## 什么是定量变量之间的相关性？
 
-**Variables** are any values (alphabetical or numerical, but typically alphabetical) that represent a collection of observations. It is sometimes referred to as a column in a table.
+**变量**是代表任何一组数值的统称，时常表示为表格中的一列。
 
-Two variables are said to be associated if a specific value of one variable is most likely to occur with a specific value of another variable.
+如果一个变量中的数值变化引起另一个变量中的数值变化，我们就称这两个变量具有相关性。
 
-To study the association between two quantitative variables (often referred to as correlation), we calculate it using the Karl Pearson formula, and the result is between -1 and +1.
+为了度量两个定量变量之间的相关性，我们常常用卡尔-皮尔逊公式来计算，其结果在-1和+1之间。
 
-If the correlation value approaches 1, it indicates that the two variables are positively correlated (that is, as one variable increases the other variable increases as well). If the value approaches -1, it indicates that the variables are negatively linked (that is as one variable increases, the other variable decreases). Finally, if the correlation current is 0, there is no correlation between the variables.
+如果相关值接近1，表明这两个变量正相关（也就是说，当一个变量数值增加时，另一个变量数值也会增加）。如果数值接近-1，表明这两个变量负相关（即随着一个变量数值增加，另一个变量数值减少）。最后，如果相关值为0，则两个变量之间没有相关性。
 
-You can read more [here](https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/) to know more about correlation and Karl Pearson formula
+你可以在[这里]((https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/) )阅读更多关于相关性和卡尔-皮尔逊公式的知识。
 
-## What is a Scatter Plot?
+## 什么是散点图？
 
-We can represent the correlation between quantitative variables in a graphical summary by using a plot called a scatter plot.
-
-A scatter plot looks like this:
+我们可以通过散点图来表示定量变量之间的相关性，如下图所示。
 
 ![scatter-ice-cream1](https://www.freecodecamp.org/news/content/images/2022/06/scatter-ice-cream1.svg)
 
-[Scatter (XY) Plots (mathsisfun.com)](https://www.mathsisfun.com/data/scatter-xy-plots.html)
+[图片来源：散点（XY）图（mathsisfun.com）](https://www.mathsisfun.com/data/scatter-xy-plots.html)
 
-To learn about scatter plots you can read more [here](https://byjus.com/maths/scatter-plot/#:~:text=Scatter%20plots%20are%20the%20graphs,plotted%20on%20the%20Y%2Daxis.).
+想要了解更多散点图内容，可以点击[这里](https://byjus.com/maths/scatter-plot/#:~:text=Scatter%20plots%20are%20the%20graphs,plotted%20on%20the%20Y%2Daxis.)。
 
-# Conclusion and Learning More
+# 结论：学无止境
 
-In this tutorial, we've explored some fundamental statistics concepts that will help you work more efficiently with your data.
+在本教程中，我们已经探讨了一些基本的统计学概念，这些概念将帮助你更有效地处理数据。
 
-But the learning does not stop here – there are a few fundamental topics that you must be familiar with. Because this is only the beginning, you can delve deeper by consulting online resources or textbooks.
+但学无止境---还有一些基本的统计学概念我们没有涉及，你必须自己去学习。这只是一个开始，你可以通过查阅在线资源或教科书进行更深入地学习。
 
-Thank you very much for reading, and please share the article so that beginners who want to go into data science can learn as well.
+非常感谢你的阅读，请将本文分享给那些也想涉足数据科学的初学者。

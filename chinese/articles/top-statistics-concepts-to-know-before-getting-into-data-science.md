@@ -1,0 +1,273 @@
+> -  原文地址：[Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/top-statistics-concepts-to-know-before-getting-into-data-science/)
+> -  原文作者：[Ibrahim Abayomi Ogunbiyi](https://www.freecodecamp.org/news/author/ibrahim/)
+<<<<<<< HEAD
+> -  译者：Yaxing Li (Suntar)
+=======
+> -  译者：Suntar
+>>>>>>> 8a80dd111627cbfebcfb00a4a89a48f9f25f966f
+> -  校对者：
+
+![统计学入门--数据科学领域最需要了解的统计学基础概念](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/who-s-denilo-3ECPkzvwlBs-unsplash.jpg)
+
+[TOC]
+
+你可能听说过，统计学是数据科学的入门门槛，是打开数据科学的钥匙。
+<<<<<<< HEAD
+
+可能你还听说过，想学数据科学，必须先学统计。 这时候你也许会迟疑，“我不是理工科背景，没有相关数学基础，我是不是要把统计学的相关知识学习完，才算入门了数据科学啊？“ 有些人会告诉你：“是的！你必须先学习统计学。”
+
+而我的回答是：在开始数据科学之前，你不需要学习所有的统计学（尽管你需要掌握一些基础知识）。
+=======
+可能你还听说过，想学数据科学，必须先学统计。 这时候你也许会迟疑，“我不是理工科背景，没有相关数学基础，我是不是要把统计学的相关知识学习完，才算入门了数据科学啊？“ 有些人会告诉你：“是的！你必须先学习统计学。”
+
+而我的回答是：在开始数据科学之前，你不需要学习所有的统计学（尽管你需要掌握一些基础知识）。
+
+你可以边学边做，而不是浪费时间在数据科学之前先修统计学（也就是说，随着你对数据科学知识的进一步了解，你同时可以学到更多的统计学概念）。
+>>>>>>> 8a80dd111627cbfebcfb00a4a89a48f9f25f966f
+
+你可以边学边做，而不是浪费时间在数据科学之前先修统计学（也就是说，随着你对数据科学知识的进一步了解，你同时可以学到更多的统计学概念）。
+
+话虽如此，了解一些统计学基础知识，还是很有必要的。确实可以这样说，统计学是打开数据科学的钥匙，因为它会让你对数据更为敏感，知道如何处理它们。
+
+在这篇文章中，我将介绍一些入门数据科学所必须的统计学概念。我将尽量用简单的语言来介绍，即使你不是理工科出身，我相信你听完以后也会十分兴奋，迫不及待想进入数据科学领域。让我们开始吧。
+
+# 什么是统计学？
+
+根据经济学家和抽样方法先驱阿瑟-里昂-鲍利（Arthur Lyon Bowley）的说法，统计学是：
+
+> “对调查事件的量化描述，并将之与其他事件进行联系。”
+
+这句话的意思是，统计学帮助我们理解数据，并向他人传达数据得出的结果。
+
+统计方法（即在处理统计数据时所采用的技术方法）分为两种类型：
+
+1.  描述统计
+2.  推断统计
+
+**描述统计**是统计学的一大分支，它协助我们通过数值或图形可视化来总结数据。
+
+描述统计帮助我们识别和理解数据中的一些关键属性。它包含如中心极限、离散、箱形图、直方图等概念，我们将在下文讨论这些概念。
+
+**推断统计**是统计学的另一大分支，它帮助我们根据收集到的数据做出决策或预测。
+
+推断统计是在描述性统计的基础上，更进一步的推理判断。它包括诸如假设、概率等概念。
+
+# 数据科学入门必备统计学概念
+
+既然你现在已经熟悉了统计学的定义，让我们来看看在统计学中需要知道的一些相关概念，这些概念将带你入门统计学。
+
+其中最基本的概念包括：
+
+## 什么是对象？
+
+对象是我们想要观测的具体事物。它可以是一个人，一个动物，或其他东西。它也被称为观测点。
+
+## 什么是总体？
+
+总体指的是我们感兴趣的（也就是我们想观察的）整个对象集，比如一个国家的全体女性人数。
+
+## 什么是样本？
+
+现实情况下，观察一个总体几乎不可能（因为它费时费力）。
+
+比如：你希望观测世界上所有女性数量，但进行这种观测成本很大。所以，在统计学中，我们有一种叫做样本的东西，它是总体的一部分或子集。我们可以利用样本对全部人口做出判断（推断统计）。
+
+## 什么是参数？
+
+参数是描述总体特征的度量。比如，你正在观测一个国家的人口，你发现90%的居民为男性，10%为女性。数值90%和10%是整个人口的性别度量（描述统计）。它就是总体特征的一个参数。
+
+## 什么是统计量
+
+统计量（不要与统计学混淆）是描述样本特征的度量。如前所述，我们没法观测总体，只能观测样本，统计量就是对样本特征的数值度量。
+
+希望现在你对什么是总体、样本、统计量和参数有了基本了解。让我们来看看另一个我们都很熟悉的概念："**数据**"。
+
+**数据**代表了事件信息，也就是说，它向我们传达了一个事实。它可以被分为两类：
+
+1.  定量数据。
+2.  定性数据。
+
+## 什么是定量数据？
+
+它也被称为数值数据。它是一种可以计数或计量数值的数据。定量数据可以进一步分为两种类型：
+
+**定量离散数据**：它可以计数但不能精确计量， 比如计数鞋店中的鞋子个数。
+
+**定量连续数据**：这是一种基于精确计量的数值数据。例如，测量一个玻璃缸的重量。
+
+## 什么是定性数据？
+
+它是代表类别或数据组的各种数据。它也被称为类别数据。它通常是特征、名字或其他东西的名称分类。
+
+常见的例子包括人名，狗的品种等等。然而，有一些数据看起来像数值数据，但也被归为类别数据。
+
+例如，假设你想根据年龄对某一群人进行分组，发现最低和最高年龄分别是10岁和60岁。然后你把年龄分成5个类别（10-20岁，21-30岁，31-40岁，41-50岁，51-60岁），并给每个类别分配数值，其中1代表10-20岁，2代表21-30岁，以此类推。
+
+在这种情况下，数值将被作为定性数据而不是定量数据来处理。随着不断深入数据科学，你将学会如何处理类别数据。
+
+了解了数据分类，现在我们来看看定量和定性数据在统计学中是如何计量的。统计学依据数据的计量尺度将数据划分为4类，它们分别是：
+
+1.  名义数据
+2.  有序数据
+3.  间隔数据
+4.  比率数据
+
+定性数据可以用以下方式计量：
+
+**名义数据**：名义数据是无序的分类数据，也就是说，它们不能被排序。
+
+每一组数据都代表一个分类，比如颜色。蓝色没有任何理由排在黄色之前。在处理名义数据时，每组数据都必须作为一个独立的分类来处理。
+
+**有序数据**。有序数据是有顺序的分类数据。当数据被排序后，就有了先后顺序。像优秀、良好、满意和不满意这样的调查回答就是一个例子。将优秀排在良好之上符合现实需要。
+
+定量数据可以用以下方式计量：
+
+**间隔数据**。间隔数据是指有排序的数值数据，并且可以进行测量（比如，数据之间可以相减）。温度计的读数就是一个间隔数据例子。
+
+例如，你可以测量摄氏4度和10度之间的差值，10度比4度高6度。间隔刻度数据有两个特点：
+
+1. 它没有一个起点（也就是说，它不从零开始，可以有一个低于零的温度值）
+2. 无法计算出它们的比例。比如，80摄氏度比20摄氏度高4倍，这不符合逻辑，因为它们没有一个起点。
+
+**比率数据**。比率数据具有间隔数据可以被排序和计量的特点，但比率数据有一个共同的起点，所以能计算它们之间的比率。
+
+比如考试成绩分别为20、68、90或80分。我们可以给它排序，计算差值，并找到数值之间的比率，比如80分比20分高4倍。
+
+现在我们已经介绍了数据的基本概念，接下来我们看看第一大类统计方法（描述统计）如何处理数据。
+
+如前所述，描述统计需要用数字或图形来总结数据。让我们来看看在处理数据时，你会经常用到的一些最典型的数字和图形。
+
+## 平均数 vs 中位数 vs 众数 --- 它们有什么区别？ 
+
+![Visualisation_mode_median_mean](https://www.freecodecamp.org/news/content/images/2022/06/Visualisation_mode_median_mean.svg)
+
+上图解释了平均数、中位数和众数的区别。众数是最高点，中位数是中间点，而平均数是均值。
+
+### 什么是平均数
+
+当我们有一组像4，5，6，7，10这样的数值数据时，这组数据中的每个值都被称为一个数据点。我们可能想找到这组数据的平均值。
+
+平均值本质上就是一组数据的平均数，计算方法是所有数据点的总和除以数据点的总个数。
+
+上面的数据集的总和是32，数据点的总个数是5，所以平均数，也就是平均值，是6.4。
+
+平均数只存在于定量数据上，定性数据没有平均数。
+
+### 什么是中位数
+
+给定一组数值，我们可能想找到位于中间位置的数值，中位数就是最中间的数据点，中位数也只存在于定量数据。
+
+### 什么是众数？
+
+众数是最高频出现的数据点（也就是出现次数最多的数值）。定量数据和定性数据都有众数。
+
+## 什么是离群值？
+
+离群值是指与其他数据点显著不同的异常数据点。离群值会导致我们得出错误的结论。下面就是一个典型的例子。
+
+假设你有一台机器能计算每天进入超市的顾客数。它某一周值为20、23、26、27、302。我们可以判断302就是一个离群值，因为它与其他数值有很大的差别。
+
+离群值可能是由突然的变化、机器故障或其他情况造成的。它们的出现会导致错误结论。例如，如果想知道平均超市顾客访问量，数值302就可能具有误导性，让我们认为平均访问量是75。
+
+## 什么是标准差？
+
+标准差是一种描述性数值，表明数据点与平均值的偏离程度。它被用来确定数据的分布情况。
+
+标准差越接近于零，数据点就越趋近于平均值。
+
+标准差是一种非常重要的描述性统计。它能告诉我们数据集的离散程度。下图是一张数据正态分布图，X轴以标准差为刻度。
+
+![1920px-Standard_deviation_diagram.svg](https://www.freecodecamp.org/news/content/images/2022/06/1920px-Standard_deviation_diagram.svg.png)
+
+从上图可以看出，34.1% + 34.1% = 68.2% 的所有观测值都在一个标准差之内，或1σ（读作一个西格玛）。
+
+加上13.6%+13.6%=27.2%的观测值在两个标准差之内，或2σ，以此类推。
+
+不知道你是否听说过六西格玛这个工程学概念。它表示在质量保证过程中要考虑到六个标准差的可能性。这意味着除了最最极端的异常值之外，你要考虑到所有的情况。准确地说，是所有可能性的99.99966%。
+
+现在我们已经掌握了一些以数字进行描述统计的方法，接下来让我们来看看一些常见的图形描述方法。
+
+## 什么是柱状图？
+
+柱状图用于类别数据的可视化。用它可以来展示每组数据的频数（即一个类别中数据点出现的次数）。如图所示：
+
+![download-1](https://www.freecodecamp.org/news/content/images/2022/06/download-1.png)
+
+## 什么是直方图？
+
+直方图与柱状图类似，用以展示数据组的频数。但与柱状图不同的是，它展示了定量连续数据组的频数，这些连续数据组也被称为区间或组距。
+
+直方图是非常有效的可视化图形，可以帮助展示定量数据的分布。你可以在[这里](https://www.cuemath.com/data/histograms/)读到更多关于直方图的信息。
+
+![p7o9X1bVJPpmNy5U+leTK9U7FXlBV70vy95OcWlVHkrw5yRVJrqmq12bjPyIuWt+E7AUPcxxeluQJSW7Y+D+wfKy7f2xtQ3JClDO4AAAA87iMEwAAYCCxBwAAMJDYAwAAGEjsAQAADCT2AAAABhJ7AAAAA4k9AACAgcQeAADAQP8Psf4OCOabt3QAAAAASUVORK5CYII=](data:image/png;base64,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)
+
+## 什么是箱型图？
+
+另一个非常棒的数据描述图表就是箱型图。
+
+箱型图可以直观地查看是否存在离散点，它还展示了诸如最小区间值、第一四分位数，中位数，第三四分位数和最大区间值等数字。箱型图如图所示：
+
+![OutliersAnomalies--1-](https://www.freecodecamp.org/news/content/images/2022/06/OutliersAnomalies--1-.png)
+
+图片由Ibrahim Ogunbiyi提供
+
+让我们来来看看上图都代表了什么意思。
+
+**最小区间值**：最小区间值并不是最小值。它等于 ( Q1 -1.5*IQR) 。
+
+-   Q1是第一四分位数。
+-   IQR是第三四分位数和第一四分位数的差值。
+
+最小区间界定了正常数据点的范围，它可以帮助我们发现那些小于正常范围的离散点。
+
+举个例子，假设我们的数据点是像这样分布[345, 402, 295, 386, 10]。我们可以判断数据点10是一个离群点，因为它远低于其他观察值。
+
+**第一四分位数**告诉我们25%的数据点低于这个数值，75%的数据点高于这个数值。它也被称为第25百分位数。
+
+**第二四分位数**告诉我们50%的数据点低于该数值，其余50%高于该数值。它也被称为第50百分位数。
+
+**第三四分位数**告诉我们75%的数据点低于该数值，其余25%高于该数值。它也被称为第75百分位数。
+
+**最大区间值**，和最小区间值一样，也不是数据集中的最高值。它的计算公式是（Q3+1.5*IQR）。
+
+-   Q3 是第三四分位数。
+-   IQR是第三四分位数和第一四分位数的差值。
+
+最大区间值可以帮助我们发现那些远高于其他观察值的离散点。
+
+比如，假设我们的数据点是像这样分布[645, 40, 25, 38, 42]。我们可以确定645是一个离散点，因为它是远远高于其他观察值。
+
+总结完不同类型的数据图形展示后，让我们进入最后一个话题：
+
+## 什么是定量变量之间的相关性？
+
+**变量**是代表任何一组数值的统称，时常表示为表格中的一列。
+
+如果一个变量中的数值变化引起另一个变量中的数值变化，我们就称这两个变量具有相关性。
+
+为了度量两个定量变量之间的相关性，我们常常用卡尔-皮尔逊公式来计算，其结果在-1和+1之间。
+
+如果相关值接近1，表明这两个变量正相关（也就是说，当一个变量数值增加时，另一个变量数值也会增加）。如果数值接近-1，表明这两个变量负相关（即随着一个变量数值增加，另一个变量数值减少）。最后，如果相关值为0，则两个变量之间没有相关性。
+
+你可以在[这里]((https://www.statisticshowto.com/probability-and-statistics/correlation-coefficient-formula/) )阅读更多关于相关性和卡尔-皮尔逊公式的知识。
+
+## 什么是散点图？
+
+我们可以通过散点图来表示定量变量之间的相关性，如下图所示。
+
+![scatter-ice-cream1](https://www.freecodecamp.org/news/content/images/2022/06/scatter-ice-cream1.svg)
+
+[图片来源：散点（XY）图（mathsisfun.com）](https://www.mathsisfun.com/data/scatter-xy-plots.html)
+
+想要了解更多散点图内容，可以点击[这里](https://byjus.com/maths/scatter-plot/#:~:text=Scatter%20plots%20are%20the%20graphs,plotted%20on%20the%20Y%2Daxis.)。
+
+# 结论：学无止境
+
+在本教程中，我们已经探讨了一些基本的统计学概念，这些概念将帮助你更有效地处理数据。
+
+但学无止境---还有一些基本的统计学概念我们没有涉及，你必须自己去学习。这只是一个开始，你可以通过查阅在线资源或教科书进行更深入地学习。
+
+<<<<<<< HEAD
+非常感谢你的阅读，请将本文分享给那些也想涉足数据科学的初学者。
+=======
+>>>>>>> 8a80dd111627cbfebcfb00a4a89a48f9f25f966f

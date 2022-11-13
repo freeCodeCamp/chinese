@@ -1,21 +1,22 @@
 > -  原文地址：[Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/top-statistics-concepts-to-know-before-getting-into-data-science/)
 > -  原文作者：[Ibrahim Abayomi Ogunbiyi](https://www.freecodecamp.org/news/author/ibrahim/)
-> -  译者：
+> -  译者：Suntar
 > -  校对者：
 
-![Statistics for Beginners – Top Stats Concepts to Know Before Getting into Data Science](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/who-s-denilo-3ECPkzvwlBs-unsplash.jpg)
+![统计学入门--数据科学领域最需要了解的统计学基础概念](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/who-s-denilo-3ECPkzvwlBs-unsplash.jpg)
 
-You've probably heard that statistics is the gateway to data science and that the data science map starts with stats.
+[TOC]
 
-Perhaps you've also heard from others that you have to learn statistics before learning data science.  But then you ponder, "Since I'm not from a technical background like science, technology, engineering, or math (STEM), do I need to learn everything in statistics before getting into data science?" And those same people will tell you "Yes! You have to learn statistics."
+你可能听说过，统计学是数据科学的入门门槛，是打开数据科学的钥匙。
+可能你还听说过，想学数据科学，必须先学统计。 这时候你也许会迟疑，“我不是理工科背景，没有相关数学基础，我是不是要把统计学的相关知识学习完，才算入门了数据科学啊？“ 有些人会告诉你：“是的！你必须先学习统计学。”
 
-Well, here's my answer: you don't need to learn all of statistics before beginning data science (though you do need to learn some fundamentals).
+而我的回答是：在开始数据科学之前，你不需要学习所有的统计学（尽管你需要掌握一些基础知识）。
 
-You can also learn as you go instead of wasting time learning statistics first before data science (that is, as you advance in your knowledge of data science, you can always learn more statistics concepts).
+你可以边学边做，而不是浪费时间在数据科学之前先修统计学（也就是说，随着你对数据科学知识的进一步了解，你同时可以学到更多的统计学概念）。
 
 That being said, it is helpful to know statistics basics before jumping into data science. You can indeed say that stats is the gateway to data science because it will help you to have some intuition about your data and how to work with it.
 
-In this article, we'll look at the top statistical concepts you need to know before diving into data science. I'll make it as simple as possible even if you don't come from a technical background. I can tell you're excited and ready to dive into the realm of data science. Let's get started.
+话虽如此，了解一些统计学基础知识，还是很有必要的。确实可以这样说，统计学是打开数据科学的钥匙，因为它会让你对数据更为敏感，知道如何处理它们。
 
 # What is Statistics?
 

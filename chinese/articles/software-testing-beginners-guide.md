@@ -91,21 +91,21 @@ In this type of testing, units or individual software components are tested in g
 ### System Testing:
 
 System testing involves the process of testing integrated software. The aim is to evaluate the system's compliance with specify requirements.
-
+系统测试需要测试集成软件，旨在评判软件是否按照具体需求运行。
 In system testing, the quality assurance team evaluates how each component of the application or software work together in a full, integrated environment.
-
+系统测试过程中，QA团队需要在完整的集成环境中验证APP或软件的每个部分之间配套运行是否存在缺陷。
 ### Acceptance Testing:
 
 Acceptance testing is a software testing method where a system is tested or checked for acceptability. It evaluates the system's compatibility with the business requirements and assesses whether it is acceptable for delivery.
-
+验收测试是测试软件是否已达到可验收的标准，验证系统功能是否符合业务需求并且评估是否可交付。
 It is also known as formal testing performed to fit user needs, requirements, and business processes. It determines if a system satisfies the standard business criteria and if users or customers will be able to accept it.
-
+在正式环境测试系统与用户的需求、要求和业务流程的匹配度，目的是判断系统是否已经满足标准的业务细则，用户或者客户是否愿意使用。
 Acceptance testing is the last stage of software testing done after system testing and before making the system available for public use.
-
+验收测试是在完成系统测试后，在产品发布之前的测试步骤，是软件测试的最后一项流程。
 ### Regression Testing:
 
 Regression testing ensures that a component continues working as it should, after including additional components in the program. You perform regression testing when something changes, such as adding a new module to the program.
-
+回归测试是
 This type of testing represents the complete testing of executed test cases that are re-executed to ensure the current functionalities still work just fine.
 
 ADVERTISEMENT

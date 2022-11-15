@@ -1,6 +1,6 @@
 > -  原文地址：[React Hooks for Beginners – Learn to Use the useState Hook in 10 Minutes](https://www.freecodecamp.org/news/learn-react-usestate-hook-in-10-minutes/)
 > -  原文作者：[Eduardo Vedes](https://www.freecodecamp.org/news/author/evedes/)
-> -  译者：
+> -  译者：dake0913
 > -  校对者：
 
 ![React Hooks for Beginners – Learn to Use the useState Hook in 10 Minutes](https://www.freecodecamp.org/news/content/images/size/w2000/2021/09/philipp-katzenberger-jVx8JaO2Ddc-unsplash.jpg)

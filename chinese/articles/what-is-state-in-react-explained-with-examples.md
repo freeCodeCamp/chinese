@@ -1,6 +1,6 @@
 > -  原文地址：[How State Works in React – Explained with Code Examples](https://www.freecodecamp.org/news/what-is-state-in-react-explained-with-examples/)
 > -  原文作者：[Yogesh Chavan](https://www.freecodecamp.org/news/author/yogesh/)
-> -  译者：
+> -  译者：dake0913
 > -  校对者：
 
 ![How State Works in React – Explained with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/state.jpg)

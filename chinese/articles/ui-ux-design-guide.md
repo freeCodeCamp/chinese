@@ -3,7 +3,7 @@
 > -  译者：suntarliarzn
 > -  校对者：
 
-![UI/UX Design Guide: What Are UI Designers, and How Are They Different Than UX Designers?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/cover.jpg)
+![UI/UX 设计指南：什么是 UI 设计师，他们与 UX 设计师有何不同？](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/cover.jpg)
 
 你可曾注意到用户界面设计（UI）和用户体验设计（UX）的区别？
 
@@ -204,3 +204,4 @@ UI和UX设计都需要理解用户。
 如果想用手绘组件的方式绘制插图，请关注Creative Tim的产品：[IRA Design](https://iradesign.io/)。
 
 欢迎在[Twitter](https://twitter.com/CreativeTim)上联系我们。
+

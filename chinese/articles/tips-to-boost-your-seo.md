@@ -1,51 +1,51 @@
 > -  原文地址：[SEO Tips for Developers](https://www.freecodecamp.org/news/tips-to-boost-your-seo/)
 > -  原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
-> -  译者：
+> -  译者：herosql
 > -  校对者：
 
-![SEO Tips for Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/10-Tips-to-Boost-Your-SEO.jpg)
+![针对开发人员的SEO技巧](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/10-Tips-to-Boost-Your-SEO.jpg)
 
-SEO (Search Engine Optimization) is essential for your online marketing strategy. It's the process of optimizing your site and content to help you get as much traffic as you can from search engines.
+SEO(搜索引擎优化)对你的在线营销策略至关重要.这是优化网站和内容的过程,以帮助你从搜索引擎获得尽可能多的流量.
 
-Reaching top positions in the search engine results pages (SERPs) with your website is one of the fastest ways to drive traffic to your site and boost conversions.
+让你的网站到达搜索引擎结果页,是一种快速提高流量转换率的方式.
 
-This article will go over the top 10 tips to boost your SEO and grow your website.
+本文将会给前10个SEO的技巧,帮助你的网站成长.
 
-## How to Create a Content Marketing Strategy
+## 如何创建内容销售策略
 
-You’ll want to create a content [marketing strategy](https://en.wikipedia.org/wiki/Marketing_strategy) that will help you increase your rankings and reach your target audience.
+你想要创建内容[销售策略](https://en.wikipedia.org/wiki/Marketing_strategy).这将帮助你提升排名和管理计划.
 
-But what’s a content marketing strategy? Content marketing will keep your business top of mind and help you establish yourself as an expert in your field, but it requires a lot of work.
+什么是内容销售策略?内容销售策略将把你的业务放在首位,并帮助你成为你所在领域的专家,但它需要大量的工作.
 
-For example, the company's content marketing manager would usually have to post a minimum of one article per week, taking into consideration keywords and the searcher’s intent.
+例如,考虑到关键词和搜索者的意图,公司的内容销售经理通常每周至少要发布一篇文章.
 
-It sounds like a lot, but it pays off. The content you're posting is relevant to the audience and shows that the company cares about them. It builds trust with consumers and helps them stay connected with the brand.
+这听起来好像很多,但它是有回报的.你发布的内容要与读者相关,并表明公司关心他们.它与消费者建立信任,帮助他们与品牌保持联系.
 
-The best way to do this is to create content specific to your business, targeted toward your prospects, optimized for SEO, and distributed through social media. But don’t forget – consistency is key.
+最好的方式是根据你的业务创建特殊的内容,针对你的潜在客户,优化SEO,并通过社交媒体分发,但不要忘记-一致性是最重要的.
 
-Create a plan for the kind of content you want to put out there and how often you wish to publish it. Track what works and what doesn’t so you can make adjustments as necessary.
+为你想要发布的内容类型和发布频率制定计划.跟踪哪些有效,哪些无效,以便于你可以根据需要进行调整.
 
-Here are a few initial steps to follow during your content strategy process:
+以下是内容策略过程中要遵循的几个初始步骤:
 
-1.  Understand your goals. Do you want to get more traffic or more conversions? Do you want to let your audience know about new features, or do you want to educate them?
-2.  Figure out which content channels are best for your business. Creating content is not just about publishing a few articles. It’s also about distributing them. Share your content on websites such as LinkedIn, Reddit, or Hacker News.
-3.  Research the keywords people search for when browsing for your solution. Address those keywords in your content and appeal to your audience’s pain points.
+1.  明确你的目标.你想要更多的流量还是更多的转换?你想让你的读者了解新功能,还是想教育他们?
+2.  找出哪些内容渠道最适合你的业务.创建内容不仅仅是发布一些文章.这也是关于分发它们的问题.在 LinkedIn、Reddit 或 Hacker News 等网站上共享您的内容。
+3.  研究人们在浏览你的解决方案时搜索的关键字,解决内容中的关键词,并迎合受众的痛点.
 
-## How to Make Your Website Mobile Friendly
+## 怎么让你的网站在移动端更加友好
 
-How can you know if your website is mobile-friendly?
+你怎么知道你的网站对于移动端是否友好？
 
-Mobile-friendliness isn’t the only thing that matters. It’s also essential to have a fast website, responsive design, mobile-friendly content, and navigation.
+移动端友好不是唯一重要的事情.拥有一个快速的网站、响应式的设计、移动端友好的内容和导航也是至关重要的。
 
-Google has tools that you can use to check if your site is mobile-friendly, as well as other tools for testing speed.
+谷歌有一些工具可以用来检查你的网站对于移动端是否友好，以及其他测试速度的工具。
 
-If your website isn’t optimized for mobile, you should start doing this:
+如果你的网站没有对移动端进行优化,你应该开始这样做:
 
-1.  Make sure your website is not overloaded with plugins. If you’re using WordPress, too many plugins can slow down your website.
-2.  Use appropriate sizes and formats for your pictures and media. Images that are too large will slow your pages down and will have an undesirable effect on customer experience.
-3.  Check your Core Web Vitals periodically. Make sure that your website loads under 2 seconds and your CWV metrics are within limits.
+1.  保证你的网站没有全负荷运行一些插件,如果你使用 WordPress,很多插件会拖慢你网站的速度.
+2.  为图片和多媒体使用适当的大小和格式.图片太大将会让你的网站更慢,并会对用户的体验产生不良的影响.
+3.  定期检查你的web核心代码.确保你的网站能在两秒内加载,并且你的 CWV 指标在限制范围内。
 
-Your customers and Google will thank you, and it will pay dividends in both traffic and conversions.
+你的客户和 Google 将会感谢你,它将在流量和转化率方面带来红利。
 
 ## How to Create Evergreen Content
 

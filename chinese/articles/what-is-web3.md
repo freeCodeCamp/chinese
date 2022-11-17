@@ -1,178 +1,179 @@
 > -  原文地址：[What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/what-is-web3/)
 > -  原文作者：[Nader Dabit](https://www.freecodecamp.org/news/author/nader/)
-> -  译者：
+> -  译者：casey0808
 > -  校对者：
 
-![What is Web3? The Decentralized Internet of the Future Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/web3-future-of-web.jpg)
+![什么是Web3？解读未来的去中心化网络](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/web3-future-of-web.jpg)
 
-If you’re reading this then you are a participant in the modern web. The web we are experiencing today is much different than what it was just 10 years ago. How has the web evolved, and more importantly – where is it going next? Also, why do any of these things matter?
+如果你读到这篇文章，那么你已经是当代互联网世界的一员了。我们现在使用的网络和10年前大不相同。所以，互联网是怎么演化的，更重要的是 ——— 接下来它会如何发展？为什么我们需要在意这些问题呢？
 
-If history has taught us anything, these changes will matter a lot.
+历史教会我们，这些变化都会是重要的。
 
-In this article, I will lay out how the web has evolved, where's it going next, and why this matters.
+我将在这篇文章里讲述互联网的演化、发展走向，以及为什么了解这些事情很重要。
 
-Think about how the internet affects your life on a daily basis. Consider how society has changed as a result of the internet. Social media platforms. Mobile apps. And now the internet is going through another paradigm shift as we speak.
+想象一下网络是如何与你的日常生活息息相关的。网络如何改变了社会，还有社交媒体平台、手机应用.....而现在，网络正在经历又一个模式的转换。
 
-## **The Evolution of the Web**
+## **互联网的演化**
 
-The web has evolved a lot over the years, and the applications of it today are almost unrecognizable from its most [early days](https://en.wikipedia.org/wiki/History_of_the_Internet). The evolution of the web is often partitioned into three separate stages: Web 1.0, Web 2.0, and Web 3.0.
+互联网在近年来变化非常大，很多应用都完全脱离[早年](https://en.wikipedia.org/wiki/History_of_the_Internet)的样子了。互联网的演化一般来说被分为三个阶段：Web 1.0, Web 2.0 和 Web 3.0。
 
-### **What is Web 1.0?**
+### **什么是 Web 1.0?**
 
-Web 1.0 was the first iteration of the web. Most participants were consumers of content, and the creators were typically developers who build websites that contained information served up mainly in text or image format. Web 1.0 lasted approximately from 1991 to 2004.
+Web 1.0 是互联网的第一个迭代。参与者是消费互联网内容的人群，而创造者是那些典型的网站开发者。当时的网站内容基本只有文字和图片的形式。Web 1.0 大致从1991年延续至2004年。
 
-Web 1.0 consisted of sites serving static content instead of dynamic HTML. Data and content were served from a static file system rather than a database, and sites didn't have much interactivity at all.
+Web 1.0 时期的网站是由静态网页组成的，并没有动态的html。数据和内容由静态文件系统提供而非数据库，网站也几乎没有交互功能。
 
-You can think of Web 1.0 as the read-only web.
+你可以把 Web 1.0 当作只读互联网。
 
-### **What is Web 2.0?**
+### **什么是 Web 2.0?**
 
-Most of us have primarily experienced the web in its current form, commonly referred to as [web2](https://en.wikipedia.org/wiki/Web_2.0#top). You can think of web2 as the interactive and social web.
+我们大多数人主要经历的互联网就是 Web 2.0。你可以把它当作用来互动与社交的网络。
 
-In the web2 world, you don’t have to be a developer to participate in the creation process. Many apps are built in a way that easily allows anyone to be a creator.
+在 Web2 的世界里，你不需要成为一名开发者才能参与创作。许多应用程序的出现让任何人都能轻松地成为内容创作者。
 
-If you want to craft a thought and share it with the world, you can. If you want to upload a video and allow millions of people to see it, interact with it, and comment on it, you can do that too.
+你可以制作并且向世界分享你的所思所想。你也可以上传一个视频，让成千上万的人看到它，并产生交流、互动和评论。
 
-Web2 is simple, really, and because of its simplicity more and more people around the world are becoming creators.
+Web2 非常简单，正因为它的简单让越来越多的人更容易地成为创作者。
 
-The web in its current form is really great in many ways, but there are some areas where we can do a lot better.
+互联网当前的形式在各方面都非常出色，但在某些领域我们还有很多提升空间。
 
-### **Web 2.0 Monetization and Security**
+### **Web 2.0 变现与安全性**
 
-In the web2 world, many popular apps are following a common pattern in their life cycles. Think of some of the apps that you use on a daily basis, and how the following examples might apply to them.
+在 Web2 的世界里，大部分流行的应用在它们的生命周期中都遵循一个通用的模式。想一想你日常用的那些应用，以及以下示例如何适用于它们。
 
-#### **Monetization of Apps**
+#### **应用变现**
 
-Imagine the early days of popular applications like Instagram, Twitter, LinkedIn, or YouTube and how different they are today. The process usually goes something like this:
+想象一下 Instagram、Twitter、LinkedIn 或 YouTube 等流行应用程序的早期阶段，以及如今的它们和当初有多么不同。这个变化过程通常是这样的：
 
-1.  Company launches an app
-2.  It onboards as many users as possible
-3.  Then it monetizes its user base
+1. 公司推出应用
+2. 它可以吸引尽可能多的用户
+3. 然后将其用户群体货币化/变现
 
-When a developer or company launches a popular app, the user experience is often very slick as the app continues rising in popularity. This is the reason they are able to gain traction quickly in the first place.
+当开发人员或公司发布了流行的应用程序时，既然该应用程序的受欢迎程度能不断提高，用户体验通常是非常流畅的。这就是他们能够迅速获得吸引力的主要原因。
 
-At first, many software companies do not worry about monetization. They strictly focus on growth and on locking in new users – but eventually they have to start turning a profit.
+起初，许多软件公司并不担心变现问题。他们完全专注于增长和锁定新用户 ——— 但最终他们必须开始盈利。
 
-They also need to consider the role of outside investors. Often the constraints of taking on things like venture capital negatively affect the life cycle, and eventually the user experience, of many applications that we use today.
+他们还需要考虑外部投资者的作用。通常，风险投资等的注入会限制我们今天使用的许多应用程序的生命周期，并且最终对用户体验产生负面影响。
 
-If a company building an application takes in venture capital, its investors often expect a return on investment in the order of magnitude of tens or hundreds of what they paid in.
+如果一家构建应用程序的公司接受风险投资，其投资者通常期望获得数十或数百倍的投资回报。
 
-This means that, instead of going for some sustainable model of growth that they can sustain in a somewhat organic manner, the company is often pushed towards two paths: advertisements or selling personal data.
+这意味着，公司通常无法采用原生的可持续增长模式，而是经常被推向两条路径：广告投放或出售个人数据。
 
-For many web2 companies like Google, Facebook, Twitter, and others, more data leads to more personalized ads. This leads to more clicks and ultimately more ad revenue. The exploitation and centralization of user data is core to how the web as we know and use it today is engineered to function.
+对于谷歌、Facebook、Twitter 等许多 web2 公司来说，更多的数据会带来更个性化的广告。这会带来更多的点击量，并最终带来更多的广告收入。用户数据的开发利用和集中处理是我们今天所知所用的网络如何运行的核心。
 
-#### **Security and privacy**
+#### **安全与隐私**
 
-Web2 applications repeatedly experience [data breaches](https://en.wikipedia.org/wiki/List_of_data_breaches). There are even [websites](https://haveibeenpwned.com/) dedicated to keeping up with these breaches and telling you when your data has been compromised.
+Web2 应用程序反复经历[数据泄露](https://en.wikipedia.org/wiki/List_of_data_breaches)。甚至有[网站](https://haveibeenpwned.com/)致力于追踪这些违规行为，并在你的数据遭到泄漏时告诉你。
 
-In web2, you don’t have any control over your data or how it is stored. In fact, companies often track and save user data without their users' consent. All of this data is then owned and controlled by the companies in charge of these platforms.
+在 web2 的世界中，你无法控制你的数据或数据的存储方式。事实上，公司经常在未经用户同意的情况下跟踪和保存用户数据。然后，所有这些数据都由负责这些平台的公司拥有和控制。
 
-Users who live in countries where they have to worry about the negative consequences of free speech are also at risk.
+生活在担心言论自由会产生负面影响的国家的用户也处于危险之中。
 
-Governments will often shut down servers or seize bank accounts if they believe a person is voicing an opinion that goes against their propaganda. With centralized servers, it is easy for governments to intervene, control, or shut down applications as they see fit.
+如果政府认为有人发表了与他们的宣传相悖的观点，政府通常会关闭服务器或没收银行账户。借助集中式服务器，政府可以轻松干预、控制或关闭相应的应用程序。
 
-Because banks are also digital and under centralized control, governments often intervene there as well. They can shut down access to bank accounts or limit access to funds during times of volatility, extreme inflation, or other political unrest.
+由于银行也是数字化的并且处于集中控制之下，政府也经常对其进行干预。在动荡、极端通货膨胀或其他政治不稳定时期，他们可以关闭对银行账户的访问或限制资金的使用。
 
-Web3 aims to solve many of these shortcomings by fundamentally rethinking how we architect and interact with applications from the ground up.
+Web3 旨在通过从根本上重新思考我们如何从头开始构建应用程序并与应用程序交互，来解决上述的这些缺点。
 
-## **What is Web 3.0?**
+## **什么是 Web 3.0?**
 
-There are a few fundamental differences between web2 and web3, but decentralization is at its core.
+web2 和 web3 之间存在一些根本的差异，但去中心化是其核心。
 
-Web3 enhances the internet as we know it today with a few other added characteristics. web3 is:
+Web3 用一些新特性增强了我们今天所知的互联网。 web3 是：
 
--   Verifiable
--   Trustless
--   Self-governing
--   Permissionless
--   Distributed and robust
--   Stateful
--   Native built-in payments
+- 可验证的
+- 免信任的
+- 自治的
+- 无需许可的
+- 分布式和健壮的
+- 有状态的
+- 原生内置支付
 
-In web3, developers don't usually build and deploy applications that run on a single server or that store their data in a single database (usually hosted on and managed by a single cloud provider).
+在 web3 中，开发人员通常不会将应用程序构建和部署在单个服务器上，或将其数据存储在单个数据库中（通常由某个云服务供应商托管）。
 
-Instead, web3 applications either run on blockchains, decentralized networks of many peer to peer nodes (servers), or a combination of the two that forms a [cryptoeconomic protocol](https://thegraph.com/blog/modeling-cryptoeconomic-protocols-as-complex-systems-part-1). These apps are often referred to as dapps (decentralized apps), and you will see that term used often in the web3 space.
+相反，web3 应用程序要么运行在区块链、有许多点对点节点（服务器）的去中心化网络上，要么运行在形成[加密经济协议](https://thegraph.com/blog/modeling-cryptoeconomic-protocols-as-complex-systems-part-1)的区块链和去中心化网络的组合上。这些应用程序通常被称为 dapps（去中心化应用程序），你会在 web3 里经常看到这个术语被使用。
 
-To achieve a stable and secure decentralized network, network participants (developers) are incentivized and compete to provide the highest quality services to anyone using the service.
+为了构建稳定和安全的去中心化网络，网络参与者（开发人员）受到激励并竞相为使用该服务的人们提供最优质的服务。
 
-When you hear about web3, you'll notice that cryptocurrency is often part of the conversation. This is because cryptocurrency plays a big role in many of these protocols. It provides a financial incentive (tokens) for anyone who wants to participate in creating, governing, contributing to, or improving one of the projects themselves.
+当你听说 web3 时，你会注意到加密货币通常是对话的一部分。这是因为加密货币会在大部分的协议中扮演重要角色。它为任何想要参与创建、管理、贡献或改进其中一个项目的人提供经济激励（代币）。
 
-These protocols may often offer a variety of different services like compute, storage, bandwidth, identity, hosting, and other web services commonly provided by cloud providers in the past.
+这些协议通常可以提供各种不同的服务，例如计算、存储、带宽、身份、托管以及过去通常由云服务供应商提供的其他 Web 服务。
 
-People can make a living by participating in the protocol in various ways, in both technical and non-technical levels.
+人们可以用各种方式、通过在技术和非技术层面参与协议来谋生。
 
-Consumers of the service usually pay to use the protocol, similarly to how they would pay a cloud provider like AWS today. Except in web3, the money goes directly to the network participants.
+该服务的消费者通常为使用该协议付费，类似于他们今天向 AWS 等云服务供应商付费的方式。 只是在 Web3 中，钱直接流向网络参与者。
 
-In this, like in many forms of decentralization, you'll see that unnecessary and often inefficient intermediaries are cut out.
+在这种情况下，就像许多类型的去中心化模式一样，你不会再看到那些不必要且通常效率低下的中间媒介了。
 
-Many web infrastructure protocols like [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/), [Livepeer](https://livepeer.com/), [Arweave](https://www.arweave.org/), and [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics) (which is what I work with at Edge & Node) have issued utility tokens that govern how the protocol functions. These tokens also reward participants at many levels of the network. Even native blockchain protocols like [Ethereum](https://ethereum.org/en/) operate in this manner.
+许多网络基础设施协议，如 [Filecoin](https://filecoin.io/blog/filecoin-circulating-supply/)、[Livepeer](https://livepeer.com/)、[Arweave](https://www.arweave.org/) 和 [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics)（我在 Edge & Node 做的就是这个）已发行使用代币管理协议的功能。这些代币还会奖励给网络多个级别的参与者。 甚至像 [Ethereum](https://ethereum.org/en/) 这样的原生区块链协议也以这种方式运行。
 
-### **Native payments**
+### **原生支付**
 
-Tokens also introduce a native payment layer that is completely borderless and frictionless. Companies like Stripe and Paypal have created billions of dollars of value in enabling electronic payments.
+代币还引入了完全无边界且相当流畅的原生支付层。 Stripe 和 Paypal 等公司在电子支付方面已经创造了数十亿美元的价值。
 
-These systems are overly complex and still do not enable true international interoperability between participants. They also require you to hand over your sensitive information and personal data in order to use them.
+这些系统过于复杂，仍然无法在参与者之间实现真正的国际间操作。 他们还需要你交出你的敏感信息和个人数据才能使用它们。
 
-Crypto [wallets](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/) like [MetaMask](https://metamask.io/) and [Torus](https://toruswallet.io/) enable you to integrate easy, anonymous, and secure international payments and transactions into web3 applications.
+加密[钱包](https://everest.link/category/0xc00f480db7754ce2e0f992a1080598e53fc511a0/)比如 [MetaMask](https://metamask.io/) 和 [Torus](https://toruswallet.io/) 将简单、匿名和安全的国际支付和交易集成在 Web3 应用中，使你能更便捷地使用这些功能。
 
-Networks like Solana offer several hundred digit millisecond latency and transaction costs of a small fraction of a penny. Unlike the current financial system, users do not have to go through the traditional numerous, friction-filled steps to interact with and participate in the network. All they need to do is download or install a wallet, and they can start sending and receiving payments without any gatekeeping.
+使用像 Solana 这样的网络进行交易，只需几百毫秒的等待时间和一美分的几分之一的交易成本。 与当前的金融系统不同，用户不必通过传统的那些复杂步骤来与网络进行交互。他们需要做的就是下载或安装一个钱包，他们就可以开始发送和接收付款，而无需任何守门人。
 
-### **A new way of building companies**
+### **创立公司的新方式**
 
-Tokens also brings about the idea of tokenization and the realization of a [token economy](https://www.oreilly.com/library/view/what-is-the/9781492072973/ch01.html).
+代币也带来了代币化的思想和[代币经济](https://www.oreilly.com/library/view/what-is-the/9781492072973/ch01.html)的实现。
 
-Take, for example, the current state of building a software company. Someone comes up with an idea, but in order to start building they need money in order to support themselves.
+以创立一家软件公司为例。有人提出了一个想法，但为了开始实施，他们需要资金支持。
 
-To get the money, they take on venture capital and give away a percentage of the company. This investment immediately introduces mis-aligned incentives that will, in the long run, not align well with building out the best user experience.
+为了赚钱，他们接受了风险投资并将公司的一部分作为抵押。这项投资立即引入了与原来的目标不一致的激励措施，从长远来看，这些激励措施与构建最佳用户体验并不相符。
 
-Also, if the company ever does become successful, it will take a very long time for anyone involved to realize any of the value, often leading to years of work without any real return on investment.
+此外，如果公司真的成功了，任何参与其中的人都需要很长时间才能价值变现，这通常会导致工作多年而没有任何真正的投资回报。
 
-Imagine, instead, that a new and exciting project is announced that solves a real problem. Anyone can participate in building it or investing in it from day one. The company announces the release of x number of tokens, and give 10% to the early builders, put 10% for sale to the public, and set the rest aside for future payment of contributors and funding of the project.
+相反，想象一下，一个全新的、令人兴奋的项目被宣布，它解决了一个真正的问题。 从第一天开始，所有人都可以参与构建或投资。 公司宣布发行x个代币，并将其中10%的部分给那些早期建设者，将10%出售给公众，其余留作未来贡献者的支付金和项目资金。
 
-Stakeholders can use their tokens to vote on changes to the future of the project, and the people who helped build the project can sell some of their holdings to make money after the tokens have been released.
+股东们可以使用他们的代币对项目未来的走向进行投票，帮助构建项目的人可以在代币发行后出售他们的部分资产来赚钱。
 
-People who believe in the project can buy and hold ownership, and people who think the project is headed in the wrong direction can signal this by selling their stake.
+相信该项目的人可以购买并持有所有权，而认为该项目正朝着错误方向发展的人可以通过出售他们的股份来发出（危机）信号。
 
-Because blockchain data is all completely public and open, purchasers have complete transparency over what is happening. This is in contrast to buying equity in private or centralized businesses where many things are often cloaked in secrecy.
+因为区块链数据都是完全公开的，购买者对市场的走向也完全知情。 这与购买私人或集中式企业的股权形成鲜明对比，在这些企业中，许多事情往往是保密的。
 
-This is already happening in the web3 space.
+这已经是 web3 领域里正在发生的事情了。
 
-One example is the app [Radicle](https://radicle.xyz/blog/introducing-rad.html) (a decentralized GitHub alternative) which allows stakeholders to participate in the [governance](https://everest.link/category/0x46aff9a161267c2c01f5ce1b6e3b717a77f21480/) of their project. [Gitcoin](https://gitcoin.co/) is another that allows developers to get paid in cryptocurrency for jumping in and working on Open Source issues. [Yearn](https://docs.yearn.finance/faq#governance) allows stakeholders to participate in decision making and voting on proposals. [Uniswap](https://uniswap.org/blog/uni/), [SuperRare](https://superrare.com/rare), [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics), [Audius](https://audius.co/), and countless other protocols and projects have issued tokens as a way to enable ownership, participation, and governance.
+一个例子是应用程序 [Radicle](https://radicle.xyz/blog/introducing-rad.html)(一个去中心化的 GitHub 替代品)，它允许利益相关者参与他们项目的[管理](https://everest.link/category/0x46aff9a161267c2c01f5ce1b6e3b717a77f21480/)。[Gitcoin](https://gitcoin.co/) 是另一种允许开发人员通过参与和处理开源问题而获得加密货币报酬的网站。[Yearn](https://docs.yearn.finance/faq#governance) 允许利益相关者参与决策和对提案进行投票。[Uniswap](https://uniswap.org/blog/uni/), [SuperRare](https://superrare.com/rare), [The Graph](https://thegraph.com/blog/the-graph-grt-token-economics), [Audius](https://audius.co/), 和无数其他协议和项目已发行代币作为实现所有权、参与管理的一种方式。
 
-[DAOs](https://linda.mirror.xyz/Vh8K4leCGEO06_qSGx-vS5lvgUqhqkCz9ut81WwCP2o) (Decentralized Autonomous Organizations), which offer an alternative way to build what we traditionally thought of as a company, are gaining tremendous momentum and investment from both traditional developers and venture capital firms.
+提供了另一种方式来建立传统意义上的公司的 [DAOs](https://linda.mirror.xyz/Vh8K4leCGEO06_qSGx-vS5lvgUqhqkCz9ut81WwCP2o)（一个去中心化自治组织），正获得来自传统开发人员的和风投公司的巨大驱动力和投资。
 
-These types of organizations are tokenized and turn the idea of organizational structure on its head, offering real, liquid, and equitable ownership to larger portions of stakeholders and aligning incentives in new and interesting ways.
+这些类型的组织被代币化，颠覆了组织结构的理念，为大部分利益相关者提供真实、流动和公平的所有权，并以新颖有趣的方式调整激励措施。
 
-For example, [Friends with Benefits](https://www.fwb.help/) is a DAO of web3 builders and artists, is about a year old, has a market cap of around $125 million as of this writing, and recently received [a $10 million round](https://tittlepress.com/crypto/1146487/) of investment from [a16z](https://a16z.com/).
+例如，[Friends with Benefits](https://www.fwb.help/) 是一个由 web3 建设者和艺术家们组成的 DAO，大约成立一年，在撰写本文时市值约为 1.25 亿美元，最近获得了来自 [a16z](https://a16z.com/) 的[1000 万美元](https://tittlepress.com/crypto/1146487/)投资。
 
-DAOs could encompass an entire post in and of themselves, but for now I'll just say that I think that they are the future of building products and (what we in the past thought of as) companies. [Here is a good post](https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw) outlining the current DAO landscape.
 
-### **How Identity Works in Web3**
+描述 DAOs 就可以占用整篇文章，但现在我只想说，我认为它们是构建产品和（传统意义上的）公司的未来。 [这篇好文章](https://coopahtroopa.mirror.xyz/_EDyn4cs9tDoOxNGZLfKL7JjLo5rGkkEfRa_a-6VEWw)是当前 DAO 的概览。
 
-In web3, [Identity](http://sinahab.com/identity-and-reputation-in-web-3/) also works much differently than what we are used to today. Most of the time in web3 apps, identities will be tied to the wallet address of the user interacting with the application.
+### **Web3 中的身份**
 
-Unlike web2 authentication methods like OAuth or email + password (that almost always require users to hand over sensitive and personal information), wallet addresses are completely anonymous unless the user decides to tie their own identity to it publicly.
+在 web3 中，[身份](http://sinahab.com/identity-and-reputation-in-web-3/)也与我们今天习惯的方式大不相同。大多数情况下，在 web3 应用程序中，身份将与与应用程序交互的用户钱包地址相关联。
 
-If the user chooses to use the same wallet across multiple dapps, their identity is also seamlessly transferable across apps, which lets them build up their reputation over time.
+与 OAuth 或电子邮件 + 密码（几乎总是要求用户交出敏感信息和个人信息）等 web2 身份验证方法不同，钱包地址是完全匿名的，除非用户决定公开地将自己的身份与其绑定。
 
-Protocols and tools like [Ceramic](https://ceramic.network/) and [IDX](https://idx.xyz/) already allow developers to build self-sovereign identity into their applications to replace traditional authentication and identity layers. The Ethereum foundation also has [a working RFP](https://notes.ethereum.org/@djrtwo/sign-in-with-ethereum-RFP) for defining a specification for "Sign in with Ethereum" which would help provide a more streamlined and documented way to do this going forward. [This](https://twitter.com/BrantlyMillegan/status/1402388133086367751) is also a good thread that outlines some of the ways that this would enhance traditional authentication flows.
+如果用户选择在多个 dapps 中使用同一个钱包，他们的身份也可以在应用程序之间无缝转移，这让他们随着时间的推移建立自己的声誉。
 
-## **How to Build on Web3**
+[Ceramic](https://ceramic.network/) 和 [IDX](https://idx.xyz/) 等协议和工具已经允许开发人员在其应用程序中构建自我主权身份，用来取代传统的身份验证和身份层。以太坊基金会还有[一个有效的 RFP](https://notes.ethereum.org/@djrtwo/sign-in-with-ethereum-RFP)用来定义“使用以太坊登录”的规范，这将有助于提供一个更简化和更有记录的方式来做到这一点。 [这](https://twitter.com/BrantlyMillegan/status/1402388133086367751)也是一个很好的方法，它概述了一些增强传统身份验证流程的方法。
 
-I'm a developer who recently transitioned into the web3 space from a traditional development background. So I wanted to start building to get a sense of what the development experience felt like. And I wanted to get an understanding of the types of apps that we can build today.
+## **如何在 Web3 构建**
 
-I dove right in and decided to document some of the things I was doing in a couple of blog posts.
+我是一名开发人员，最近刚从传统开发背景过渡到 web3 领域。 所以我想通过开发来体验在 Web3 世界的感觉。 我也想了解我们当前可以构建哪些类型的应用程序。
 
-[How to Get Into Ethereum, Crypto, and Web3 as a Developer](https://www.freecodecamp.org/news/breaking-into-ethereum-crypto-web3-as-a-developer/) – This is an introduction to the space in general, coming from a developer, for developers looking to break into the industry.
+我全心投入进去，并且决定在几篇博客文章中记录我正在做的一些事情。
 
-[The Complete Guide to Full Stack Ethereum Development](https://www.freecodecamp.org/news/full-stack-ethereum-development/) – This is a tutorial that teaches you how to build out your first dapp.
+[作为开发人员如何使用以太坊、加密和 Web3](https://www.freecodecamp.org/news/break-into-ethereum-crypto-web3-as-a-developer/) ——— 这是一个来自开发人员的大致介绍，适用于希望进入该行业的开发人员。
 
-[The Complete Guide to Full Stack Solana Development with React, Anchor, Rust, and Phantom](https://dev.to/dabit3/the-complete-guide-to-full-stack-solana-development-with-react-anchor-rust-and-phantom-3291) - This guide dives into Solana to show you how to build a full stack dapp.
+[以太坊全栈开发完全指南](https://www.freecodecamp.org/news/full-stack-ethereum-development/) ——— 这个教程会教你如何构建你的第一个 dapp。
 
-If you are interested in learning more about web3 in general, you can check out these posts:
+[使用 React、Anchor、Rust 和 Phantom 进行全栈 Solana 开发的完全指南](https://dev.to/dabit3/the-complete-guide-to-full-stack-solana-development-with-react-anchor-rust-and-phantom-3291) ——— 本指南深入介绍 Solana，向你展示如何构建全栈 dapp。
 
-[The New Creator Economy - DAOs, Community Ownership, and Cryptoeconomics](https://dev.to/dabit3/the-new-creator-economy-daos-community-ownership-and-cryptoeconomics-lnl)
+如果你有兴趣了解更多有关 web3 的信息，可以查看以下帖子：
 
-[The Value Chain of the Open Metaverse](https://www.notboring.co/p/the-value-chain-of-the-open-metaverse)
+[新的创造者经济 —— DAO、社区所有权和加密经济学](https://dev.to/dabit3/the-new-creator-economy-daos-community-ownership-and-cryptoeconomics-lnl)
 
-[The Rise of Micro-Economies](https://coopahtroopa.mirror.xyz/gWY6Kfebs9wHdfoZZswfiLTBVzfKiyFaIwNf2q8JpgI)
+[Metaverse 的价值链](https://www.notboring.co/p/the-value-chain-of-the-open-metaverse)
+
+[微观经济的兴起](https://coopahtroopa.mirror.xyz/gWY6Kfebs9wHdfoZZswfiLTBVzfKiyFaIwNf2q8JpgI)

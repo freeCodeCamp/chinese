@@ -1,158 +1,139 @@
 > -  原文地址：[How to write a great technical blog post](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/)
 > -  原文作者：[Sashko Stubailo](https://www.freecodecamp.org/news/author/stubailo/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
-![How to write a great technical blog post](https://cdn-media-1.freecodecamp.org/images/1*QVTcnfXyMXivNu62IJ7JSg.jpeg)
+![如何撰写一篇优秀的技术博文](https://cdn-media-1.freecodecamp.org/images/1*QVTcnfXyMXivNu62IJ7JSg.jpeg)
 
-#### Five steps to get from idea to polished result
+#### 五步法从构思到打磨出终稿
 
-I’ve been working in the open source community for almost 5 years now, building and promoting developer tools including [Meteor](https://github.com/meteor/) and [Apollo](https://github.com/apollographql/). In that time, I’ve found that blogging is one of the most effective ways to spread ideas.
+我在开源社区工作了将近5年，建立并推广了包括 [Meteor](https://github.com/meteor/) 和 [Apollo](https://github.com/apollographql/) 在内的开发者工具。在这段时间里，我发现写博客是传播思想最有效的方式之一。
 
-A blog post doesn’t take as long to prepare as a video or conference talk, but is easy to consume and can reach a ton of people. I’ve also personally gotten a ton of benefit out of writing: it has helped me organize my thoughts, teach people about technologies I love, and get my name out there.
+一篇博客文章不需要像视频或会议演讲那样花很长时间来准备，它很容易上手，而且受众面很广。我个人也从写作中受益颇多：帮助我整理思路以及向他人传授我喜欢的技术的同时，也让我被更多人认识。
 
-Since publishing [my first blog post ever](https://blog.meteor.com/collaborative-3d-scene-builder-in-50-lines-of-code-3c8ac717c658) in 2014, I’ve ended up writing [68 posts](https://medium.com/@stubailo/latest) so far here on Medium, some with over 50k views and 1000 fans, and edited many posts for my friends and coworkers. Over that time, I’ve picked up a few strategies for taking a post from concept to publication.
+自从2014年发布[我的第一篇博文](https://blog.meteor.com/collaborative-3d-scene-builder-in-50-lines-of-code-3c8ac717c658)以来，到目前为止，我已经在Medium上写了[68篇文章](https://medium.com/@stubailo/latest)。有些文章的浏览量超过5万，我的粉丝数也超过1000人。我也为我的朋友和同事编辑过许多文章。在这段时间里，我掌握了一些从提出概念到最终完稿的方法策略。
 
-In this article, we’ll go over five main steps of my process for writing a post:
+在本篇文章中，我将介绍我写文章时涉及的五个步骤：
 
-1.  Find a good topic and commit to it
-2.  Make your goals and audience specific
-3.  Have a beginning, middle, and end
-4.  Get feedback and iterate
-5.  Add finishing touches: packaging, publication, and promotion
+1.  找到一个好的主题并围绕主题写作
+2.  确定你的写作目标和读者对象
+3.  文章有开头、中间、结尾
+4.  获取反馈并迭代文章
+5.  添加点睛之笔：包装、发布和推广
 
-Let’s get right into the first step!
+让我们直接进入第一个步骤！
 
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
+### 1\. 找到一个好的主题并围绕主题写作
 
-### 1\. Find a good topic and commit to it
+除非有东西可写，否则你没法开始写文章！在我和那些想要开始写博客的人交谈时发现，他们的主要障碍往往是没东西可写。
 
-You can’t get started on a post unless you have something to write about! When I talk to people who want to start blogging, this is often their main blocker.
+最简单的办法是写你知道的东西。如果你花了很多时间学习某件事情，并且你认为你可以在几分钟内将它解释清楚，那么你就可以为你的读者提供很多价值。
 
-The simplest strategy is to write about what you know. If you spent many hours learning about something, and you think you could explain it in just a few minutes, you’re going to provide a lot of value to your readers.
+另一个办法是在一个你认为缺乏内容的领域写作。比如，现在关于如何申请技术会议的文章很少，那么写这方面内容就可以填补技术社区的空白。
 
-Another idea is to write about an area you think is lacking content. For example, right now there aren’t a lot of posts about how to apply to technical conferences, so content about that could fill a gap in the community.
+这里有一些具体的文章类型，你可以去看看。例子来自Apollo博客上GraphQL相关的文章：
 
-Here are some specific types of posts you could go for. Examples are from the GraphQL-related posts on the Apollo blog:
+1.  实现特定目标的分步操作指南：[“在React Native中使用Flatlist创建可滚动列表”](https://blog.apollographql.com/loading-data-into-react-natives-flatlist-9646fa9a199b) 或者 [“通过Apollo和Recompose简化React组件”](https://blog.apollographql.com/simplify-your-react-components-with-apollo-and-recompose-8b9e302dea51)。这类文章很适合那些希望读懂就上手，然后迅速离开的读者。
+2.  关于特定主题的深入调查：[“在GraphQL中使用nullability”](https://blog.apollographql.com/using-nullability-in-graphql-2254f84c4ed7) 或者 [“GraphQL查询的剖析”](https://blog.apollographql.com/the-anatomy-of-a-graphql-query-6dffa9e9e747)。这类文章适合那些有时间慢慢深入学习的读者。
+3.  就一个常见主题列出多项实用因素：[“调用GraphQL API的4种简单方法”](https://blog.apollographql.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355) 或者[“静态GraphQL查询的5个好处”](https://blog.apollographql.com/5-benefits-of-static-graphql-queries-b7fa90b0b69a)。这类有趣又轻量的内容，适合碎片式阅读，读者无需阅读全部内容。
 
-1.  A step-by-step guide to achieving a specific goal: [“Building a great scrollable list in React Native with FlatList”](https://blog.apollographql.com/loading-data-into-react-natives-flatlist-9646fa9a199b) or [“Simplify your React components with Apollo and Recompose”](https://blog.apollographql.com/simplify-your-react-components-with-apollo-and-recompose-8b9e302dea51). These are great for readers that are looking to get in, do a thing, and get out fast.
-2.  An in-depth survey on a particular topic: [“Using nullability in GraphQL”](https://blog.apollographql.com/using-nullability-in-graphql-2254f84c4ed7) or [“Anatomy of a GraphQL query”](https://blog.apollographql.com/the-anatomy-of-a-graphql-query-6dffa9e9e747). These are useful if you’re targeting a more interested audience that wants to grab a cup of coffee and learn a ton.
-3.  A numbered list of useful facts around a common topic: [“4 simple ways to call a GraphQL API”](https://blog.apollographql.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355) or [“5 benefits of static GraphQL queries”](https://blog.apollographql.com/5-benefits-of-static-graphql-queries-b7fa90b0b69a). These are a fun, lightweight read since you don’t have to commit to reading the whole thing, and it’s easy to consume the bite-sized pieces.
+现在，我想消除一些你们常见的担忧。
 
-Now, let me dispel a few common concerns:
+1.  **这个主题的内容已经有人写过啦。** 不要因此而退缩。即使你的选题已经有人写过，你也可以写出自己的观点，或者基于你自己的情况写出更具体的内容。
+2.  **我的想法不够有趣。** 我的朋友和同事最后都没有写，就是因为他们担心他们的结论可能会很无聊或者没有创意。这种感觉是正常的！如果你是某方面的专家，那当然你写的结论会很无聊……那是对你而言。关键是你的读者还并不了解这些结论。
 
-1.  **There is already content out there about this topic.** Don’t let that stop you. Even if your idea has been written about before, you can put your own perspective on it, or make it specific to your situation.
-2.  **My idea isn’t interesting enough.** A lot of my friends and coworkers don’t end up writing because they are worried their conclusions might be boring or obvious. That’s a normal feeling! If you’re an expert on something, then of course the conclusions you’re writing about will be boring… _to you_. The key is that people in your audience don’t know that stuff yet.
-
-Having said all that, at the end of the day, it’s hard to predict what topics will make a great post and which ones won’t, and often it’s the _execution_ that makes or breaks a post, not a brilliant topic. My main suggestion would be to try writing about several different things and see what works.
+说了这么多，说到底，很难预测哪些话题会让一篇文章成为热门。决定一篇文章成败的往往是要行动起来开始写而不是要精选一个完美的话题。我主要的建议是，多尝试写不同的东西，看看哪些效果还不错。
 
 ![49vpFzkVXA9fHTQoMGGDKEnqVDBIY4-eZ8d7](https://cdn-media-1.freecodecamp.org/images/49vpFzkVXA9fHTQoMGGDKEnqVDBIY4-eZ8d7)
 
-The lightbulb - a universal symbol for ideas. [James Pond on Unsplash](https://unsplash.com/photos/1qkyck-UL3g)
+灯泡-常用来象征思想 [James Pond来自Unsplash](https://unsplash.com/photos/1qkyck-UL3g)
 
-### 2\. Make your goals and audience specific
+### 2\. 确定你的写作目标和读者对象
 
-Now that you know your topic, you need an audience and goal for your post. Who will be reading it, and what are they going to get out of it?
+明确主题后，现在你需要确定你的读者对象和写作目标。谁会阅读这些文章呢？他们想从中获得什么呢？
 
-Your goal needs to be _specific_ so that you can focus all of your energy on one main idea. For this post, the goal couldn’t have just been “write about blogging”. I needed a more specific goal in mind:
+你的目标应该很明确具体，这样你才能集中精力专注在一个主要的观点上。就本篇文章来说，目标不可能只是“写博客”，我需要一个更明确具体的目标：
 
--   **Audience:** People who want to start blogging, especially about technical topics, but haven’t done it yet.
--   **Goal:** Give people a concrete set of steps and pointers so they can get started.
+-   **读者对象:** 想开始写博客的人，尤其是想写技术博客却还没写过的人。
+-   **写作目标:** 提供一套具体的写作步骤和指导方法，便于他们开始行动起来。
 
-Once you have these, keep your post focused by removing anything that doesn’t contribute, and avoid adding extra detail just because it’s related. I’ve found that relatively concise posts with a 5 - 10 minute read time are the most successful.
+有了这些以后，就要专注于文章的重点了，删掉没有意义的内容，不要增加看起来有关联但很多余的细节。我发现那种阅读时间在5至10分钟，相对简洁的文章是最好的。
 
-Knowing the background of your audience will allow you to tailor your writing to their existing knowledge, and can help determine how you should publish and promote your content. For example, I hope to publish this on freeCodeCamp, because a lot of people in my target audience might already read that publication.
+了解读者背景可以帮助你基于读者现有知识水平去定制化写作。而且可以帮助你决定如何去发布和推广你的内容。比如，我就希望在freeCodeCamp上发表这篇文章，因为在我的目标读者中，可能已经有很多人读过此类文章了。
 
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
+### 3\. 文章有开头、中间、结尾
 
-### 3\. Have a beginning, middle, and end
+当一篇文章偏离了自己所期望的方向时，就会给人感觉很迷惑。在虚构短篇小说里，情节曲折可能是一件好事。但是，在技术文章里，应该秉持所见即所得。简单舒适的文章结构会更益于读者理解和消化。
 
-It’s disorienting when a post veers off in a direction you weren’t expecting. Plot twists can be a big benefit in fictional short stories, but it’s easier to consume a technical article if you get exactly what you expect. You can keep your readers on track by giving your post a comfortable structure.
+#### 开头介绍
 
-#### Introduction
+文章的第一段或者前两段将决定读者是继续读下去还是放弃阅读。开篇，先介绍一下背景，帮助读者了解你这篇文章的定位。然后，告诉读者他们能从这篇文章获得什么。开头设置悬念，把大揭秘留到最后可能会吊起读者胃口，但是注意，如果运用不恰当，是没法吸引读者坚持读到最后的。
 
-The first paragraph or two of your post will either convince the reader to stay on or lose their attention. Start off with a little bit of context to help people understand where your post fits into the big picture. Then, tell your audience what they will get out of reading your article. It might be tempting to leave the big reveal for the end, but watch out: if you don’t have a good hook, your readers won’t stick around to find out.
+#### 中间细化
 
-ADVERTISEMENT
+你已经告诉读者他们能获得什么了，那就如他们所期去写吧。你可以根据需要自行细化内容，做好结构标注，引导读者阅读。使用大量标题、编号列表和格式，帮助读者了解自己读到哪儿了，同时便于他们跳转到最感兴趣的部分去阅读。
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
+#### 最后结论
 
-#### Middle
+文章注意不能虎头蛇尾。如果读者都读到结尾了，说明他们确实被吸引了。可以在结尾快速总结所学内容、对读者的坚持给予鼓励，甚至可以呼吁读者受鼓舞后采取行动。
 
-Now that you’ve told your readers what to expect, give it to them! Feel free to go into as much detail as you need, and leave sign-posts along the way to orient people. Use a lot of headings, numbered lists, and formatting to help people understand where they are, and enable them to skip around to the content they are most interested in.
-
-#### Conclusion
-
-Don’t just taper off into the void at the end of the article. If your reader has made it all the way there, they really care. Give them a quick summary of what they learned, a pat on the back for reading, and maybe even something to do next if they’re inspired - a call to action.
-
-The format I’m suggesting here isn’t the most creative, and there are certainly other ways of doing it. But a simple structure is the most direct way to communicate with your readers.
+我在此建议的文章结构并不是最有创意的，当然还有其它的结构方式。但是与读者沟通最直接的方式就是文章结构足够简洁。
 
 ![op8670wN9BlN6an-m9qZpZcFbitHwZnDFief](https://cdn-media-1.freecodecamp.org/images/op8670wN9BlN6an-m9qZpZcFbitHwZnDFief)
 
-Like road signage, your post’s structure guides people along. [Bart Anestin on Unsplash](https://unsplash.com/photos/bXMbMw560C8)
+就像道路标识一样，文章的结构可以引导读者阅读。[Bart Anestin来自Unsplash](https://unsplash.com/photos/bXMbMw560C8)
 
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
+### 4\. 获取反馈并迭代文章
 
-### 4\. Get feedback and iterate
+读者读过你的文章，你才会了解他们到底想从你的文章中获得什么。这是对你假设性主题、目标、文章细节和结构的真正考验。如果你想有一个好的结果，就不能跳过这一步。
 
-You won’t know what people are going to get from your writing until they read it. This is where your assumptions about your topic, goals, the details of the post, and the structure are really put to the test. If you want to have a good result, you can’t skip this step.
+当你要求反馈时，你可能会觉得自己在强加于人，或者你可能担心反馈会是负面的。但是实际上读者比你预期的更乐于帮助他人。最好在你对外发布你的文章之前，就知道如何能够优化你的文章。在我整理这篇文章时，我就得到了一些超级有价值的反馈，这些反馈使得这篇文章更精炼。
 
-It might feel like you’re imposing when you ask for feedback, or you might be worried that it will be negative, but people are more willing to help than you expect. It’s much better to find out how your post could be better before you publish it to the world. When I was putting together this post, I got some super valuable feedback that made the content much better and more focused.
+你应该问你的文章审阅者一些什么问题呢？我的主要建议是尽可能地不设限。尽量不要提前解释你的目标。把草稿原封不动地交给审阅者，然后问他们从中得到了什么或者有什么修改建议。当读者在网上看到你的文章时，他们就因为已经被考虑进目标读者中而自然认可你的文章了。
 
-What should you ask your reviewers? My main advice is to leave it as open-ended as possible. Try not to explain up front what you meant to achieve. Hand over the draft as-is, and ask your reviewer what they got out of it or what should be changed. When someone on the Internet comes across your article, they won’t have any extra context and it has to stand on its own.
+反馈主要是要验证一件事：这篇文章能否实现你在第2步中决定的目标？如果不能，那就一直迭代，直到你确信目标能实现为止。
 
-The main thing to validate from the feedback is: will this post achieve the goals you decided on in step 2? Iterate until you’re confident it will.
+### 5\. 添加点睛之笔：包装、发布和推广
 
-### 5\. Add finishing touches: packaging, publication, and promotion
+现在你有了想法、目标、结构和反馈，是时候打磨好一切准备发布了。
 
-Now that you have the idea, the goal, the structure, and some feedback, it’s time to polish everything up and ship it.
 
-ADVERTISEMENT
+#### 包装
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
+想一个出色的标题和副标题，并确保文章至少有一张配图。文章分享到Twitter或Facebook时，读者会看到这些标题和图片的。这也是吸引读者阅读的机会。
 
-#### Packaging
+同样重要的是，你的文章要让人觉得专业，这样你的内容才能真正出彩。文章中应该避免拼写错误、语法错误或者奇怪的格式。如果你有善于发现细节的朋友，可以请他们先阅读一遍文章，然后你再发布出去。
 
-Come up with a great title and subtitle, and make sure your post has at least one image. This is what people will see when the post is shared on Twitter or Facebook, and it’s your chance to get people interested in reading.
+[freeCodeCamp上关于文章的发布](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e) 也有一些文章，提到了写作风格和样式的技巧。既然你已经在文章中投入了这么多精力，那么额外多付出一些努力去打磨它，让它有更大的影响力也是值得的。
 
-It’s also important that your post looks and feels professional, so that your content can really shine. You should aim to have no spelling errors, grammar mistakes, or weird formatting in your post. If you have a friend that is great at spotting small details, ask them to read it over before publishing.
+最后，请务必注明你引用了谁的作品或者谁帮助过审阅和编辑你的文章。
 
-The [freeCodeCamp article about getting published](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e) also has some great tips about writing style and formatting. Since you’ve already put so much work into your post, it’s worth it to add that little extra effort to really polish it up and give it a wider reach.
+#### 发布
 
-Finally, make sure to credit anyone whose work you referenced, or who helped review and edit your post.
+你就快大功告成了！选择最利于触达读者的平台来发布文章。通常，Medium是一个发表技术文章很好的平台，在这儿你的文章很容易被读者发现。
 
-#### Publication
+为了效果更好，试试将你的文章发表在有助于分享你内容的平台上-基于这种考虑，我选择了freeCodeCamp。因为我认为这个建议是考虑了freeCodeCamp上的读者人群。如果你也想这样做，[这里有他们给出的提交文章的指南](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e)。你感兴趣的发布平台也可能正在寻找相应的文章，所以大胆去联系吧！
 
-You’re almost there! Pick where you actually publish the post so that it has the best chance of reaching your audience. Medium is generally a great place for technical content, and makes it easy for people to discover your writing.
 
-For bonus points, try to get your post into a relevant publication that will help share your content - in this case, I’ve selected freeCodeCamp because I think this advice will be relevant to their readers. If you’d like to do the same, [here are their directions for submitting your post](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e). Publications in your areas of interest are likely also looking for posts, so don’t be afraid to get in touch!
+#### 推广
 
-ADVERTISEMENT
+即使你真正发布了文章，工作也还没有结束！如果你想要读者看到你写的东西，并从中受益，那就要把文章分享到读者经常阅读的地方。像包括Facebook群组、Reddit、Hacker News、LinkedIn或者其它任何平台。另外，也要在你自己的社交媒体账户分享你的创作，比如Twitter。你的朋友会很乐意阅读、分享和点赞你的文章。
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
-
-#### Promotion
-
-Once you’ve actually published the post, you’re not done! If you want people to see what you’ve written and get value out of it, make sure to share it in the places where your audience is likely to hang out. This might include Facebook groups, Reddit, Hacker News, LinkedIn, or any other platform. Also, make sure to share your creation on your own social media accounts, like Twitter. Your friends will be excited to read, share, and upvote what you’ve written!
-
-And now, you’re done. Go get a coffee or take a walk - taking a blog post from start to finish is no small feat. Read any feedback and replies from the the community so that you can keep improving. And when you have another idea, go do it again!
+现在，你已经大功告成了！去喝杯咖啡或者散散步吧-把一篇博客文章从头到尾写完可不是一件小事。阅读来自社区的所有反馈和回复。当你有了另一个想法时，又继续这样来一遍吧！
 
 ![lMYImUN-AHrgvCD74GhFaHyXGkIa6L0zP15z](https://cdn-media-1.freecodecamp.org/images/lMYImUN-AHrgvCD74GhFaHyXGkIa6L0zP15z)
 
-Beautiful presentation can enhance an already delicious donut. [Zach Miles on Unsplash](https://unsplash.com/photos/BE9AifuJfD4)
+精美的包装对美味的甜甜圈来说是锦上添花。[Zach Miles来自Unsplash](https://unsplash.com/photos/BE9AifuJfD4)
 
-### There’s no replacement for practice
+### 除了实践，没有别的选择
 
-We just walked through five of the most important things to do when writing a blog post, from coming up with the idea to publishing. Now that you’ve read it, you try applying this advice and see what works for you.
+我们刚刚把关于撰写技术博文，从提出想法到发布终稿最重要的五件事梳理了一遍。现在你也已经读完了，试一试这些建议吧，看看会有什么收获。
 
-I’ll leave you with one last bit of advice. The main thing I learned from blogging over the last 3 years is that I absolutely can’t predict what content will take off and what will end up being a total dud. Sometimes, I’ll put several days into a post, polishing every corner, and it won’t go anywhere. On the other hand, [“GraphQL vs. REST”](https://blog.apollographql.com/graphql-vs-rest-5d425123e34b), my most-read post ever, was written in a few hours late at night.
+我再提最后一点建议。在过去三年里，我从博客中学到的重要的东西是我绝对无法预测哪些内容会爆火，哪些内容会平淡无奇。有时，我会花几天时间写一篇文章，打磨每一个细节，但它却没有引起多大反响。相反，[“GraphQL vs. REST”](https://blog.apollographql.com/graphql-vs-rest-5d425123e34b)，这是我的有史以来阅读量最多的一篇文章，它却是我在深夜几个小时内写成的。
 
-So even if your first, or second, or third posts don’t succeed, keep trying new stuff, putting your ideas out there, and improving over time. The world wants to hear what you’ve got to say. Go tell them!
+所以，即使你的第一篇、第二篇或者第三篇文章没有成功，也要继续尝试写新的东西。把你的想法写出来，并不断优化。世界想听听你要说点什么，去告诉他们吧！
 
-_Huge thanks to [Anvisha Pai](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined), [Angela Zhang](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined), [Katie Siegel](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined), and the freeCodeCamp editors for helping review this post._
+_非常感谢[Anvisha Pai](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)、[Angela Zhang](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)、[Katie Siegel](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)和freeCodeCamp的编辑人员，帮助审阅这篇文章。_

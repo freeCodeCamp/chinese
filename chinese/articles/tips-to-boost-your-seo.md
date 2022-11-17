@@ -1,6 +1,6 @@
 > -  原文地址：[SEO Tips for Developers](https://www.freecodecamp.org/news/tips-to-boost-your-seo/)
 > -  原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
-> -  译者：
+> -  译者：herosql
 > -  校对者：
 
 ![SEO Tips for Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/10-Tips-to-Boost-Your-SEO.jpg)

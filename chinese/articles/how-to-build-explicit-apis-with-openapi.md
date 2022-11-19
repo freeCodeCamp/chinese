@@ -11,7 +11,7 @@
 
 我喜欢 Node.js 那极具灵活性和易用性的生态。这个社区充满活力，并且你可以用你已经掌握的语言在几分钟内设置一个 REST API。
 
-在应用的前后端使用相同的编程语言是很有价值的。这使我们在浏览代码库时可以减少[上下文切换](https://blog.rescuetime.com/context-switching/)，从而变得更轻松。全栈开发者可以快速切换技术栈，[共享代码](https://betterprogramming.pub/sharing-logic-components-between-frontend-and-backend-repositories-6fdc1f9cb850)也变得轻而易举。
+在应用的前后端使用相同的编程语言是一件很有价值的事。这使我们在浏览代码库时可以减少[上下文切换](https://blog.rescuetime.com/context-switching/)，从而变得更轻松。全栈开发者可以快速切换技术栈，[共享代码](https://betterprogramming.pub/sharing-logic-components-between-frontend-and-backend-repositories-6fdc1f9cb850)也变得轻而易举。
 
 尽管如此，随着 MVP 成长为成熟的生产环境应用程序和开发团队规模的扩大，这种灵活性也带来了挑战。
 
@@ -33,25 +33,26 @@
 
 ### 2\. 📜 缺少（及时更新的）文档
 
-文档是构建 REST API 时的另一个敏感话题。我坚信在大多数情况下，代码应该作为足够的文档。
+文档是构建 REST API 时的另一个敏感话题。我坚信在大多数情况下，代码本身应该足以代替一部分文档。
 
-That said, REST APIs can grow in complexity, and checking the security, parameters, and possible responses for each endpoint in the code becomes tedious and time-consuming. This slows down the speed of development, and bugs creep into the system.
+也就是说，REST API 在开发中会变得越来越复杂，检查代码中每个端点的安全性、参数和可能的响应也随之变得繁琐且耗时。这就减慢了开发的速度，也给 bug 进入系统留下了隐患。
 
-Even if the team is committed to manually keeping the documentation up to date in a separate document from the code, it's hard to be 100% certain that it reflects the code.
+即使团队致力于在一个独立于代码的文档中手动保持文档的更新，也很难 100% 确保它反映了代码的情况。
 
-### 3\. 📢 Public APIs
+### 3\. 📢 公共 API
 
-This won't apply to all apps, but an application may need to expose a set of functionalities to a third party in some cases. When doing so, the third party may build core functionalities on top of our exposed APIs.
+这并不适用于所有的应用程序，但在某些情况下，一个应用程序可能需要向第三方暴露一系列的功能。对于这种情况，第三方有可能会在我们暴露的 API 之上构建核心功能。
 
-This means that we can't modify those APIs at the same rate that we update our private APIs. The third-party application may break, and that's something we should avoid at all costs.
+这意味着我们不能以更新我们的私有 API 的同样速度来修改这些公共 API。一旦修改了公共 API，第三方应用程序可能会因此崩溃，而这正是我们应该不惜一切代价避免的事情。
 
-What the public APIs expose should be explicit and simple to develop against, to limit the amount of back and forth communication needed between internal and external developer teams.
+公共 API 所暴露的内容应该是明确的，并且可以简单地进行开发，以限制内部和外部开发团队之间所需的来回沟通的数量。
 
-### 4\. ✍️ Manual integration tests
+### 4\. ✍️ 手动集成测试
 
-When applications grow organically without a thorough plan, the chances are high that what the API provides and what the API consumer expects is buried deep into the code.
+当应用程序的开发没有与之匹配的周密计划时，很有可能 API 所提供的内容和 API 消费者期望的内容被深埋在代码中。
 
-This is not a big problem when you have a small number of endpoints for internal use. But as the API surface grows, modifying existing endpoints requires following breadcrumbs across the whole system to ensure that what the consumer expects to receive is equal to what's provided.
+对于仅有少量的内部端点的系统来说，这并不是一个大问题。但随着 API 接口数量的增长，修改现有的端点需要在整个系统中遵循面包屑，以确保消费者期望得到的东西与提供的东西是相等的。
+
 
 This can be mitigated by keeping integration tests between the parts of the system that talk to the REST API. But doing it manually is tremendous work and when done poorly, provides false security that the system will work properly.
 

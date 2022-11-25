@@ -1,174 +1,174 @@
-> -  原文地址：[TypeScript for React Developers – Why TypeScript is Useful and How it Works](https://www.freecodecamp.org/news/typescript-for-react-developers/)
-> -  原文作者：[Daniel Asta](https://www.freecodecamp.org/news/author/daniel-asta/)
-> -  译者：Papaya HUANG
-> -  校对者：
+> - 原文地址：[TypeScript for React Developers – Why TypeScript is Useful and How it Works](https://www.freecodecamp.org/news/typescript-for-react-developers/)
+> - 原文作者：[Daniel Asta](https://www.freecodecamp.org/news/author/daniel-asta/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![TypeScript for React Developers – Why TypeScript is Useful and How it Works](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/typescript-cover.jpg)
 
-If you've been using React for a while, you may have noticed times when the freedom and wild nature of JavaScript works against you (and not because of JS 😄). This can be especially true if you're working in a team.
+如果你已经使用 React 一段时间，你会察觉 JavaScript 一些自由野性的天性让你难以驾驭（这当然不是 JS 的问题 😄），当你和团队协作的时候，这个特点尤为显著。
 
-**You may not know it, but you need TypeScript – or at least, you need to test it**.
+**或许你不知道，你需要 TypeScript，至少试一下**。
 
-Let me be clear, I love JavaScript and the freedom it provides. In fact, for a long time I was "against" TypeScript.
+我先声明一下，我喜欢 JavaScript 的自由，甚至有相当长的时间，我“反对”使用 TypeScript。
 
-So I want to go on a journey together, figuring out if TypeScript is worth using or whether it's only for people who don't know how to code properly (this was an inside joke in my team a long time ago!).
+我想和你一起探索 TypeScript 是否值得使用，还只是适合那些不怎么会写代码的人（这是我们团队内部玩笑）。
 
-The idea behind this article is to go through the basics of TS and understand the benefits. This should help you decide if you want those benefits or not. Then in the second section of this article, I will cover the specifics of TS with React.
+本文旨在介绍 TS 的基础以便你了解它的优势，决定是否使用它。本文的第二部分会介绍在 React 中的 TS。
 
-## Table of Contents
+## 目录
 
--   [Resources](#resources)
--   [Why Use ESLint, Prettier, and Husky?](#whyuseeslintprettierandhusky)
--   [What is TypeScript?](#whatistypescript)
--   [Why Bother Dealing with TS?](#whybotherdealingwithts)
--   [How to Setup TypeScript](#howtosetuptypescript)
--   [Sample Shopping List Project](#sampleshoppinglistproject)
-    -   [TypeScript Modules](#typescriptmodules)
-    -   [TypeScript Types](#typescripttypes)
-        -   [Inference in TypeScript](#inferenceintypescript)
-        -   [`any` and `unknown` in TypeScript](#anyandunknownintypescript)
-        -   [Arrays in TypeScript](#arraysintypescript)
-        -   [Objects in TypeScript](#objectsintypescript)
-        -   [Aliases in TypeScript](#aliasesintypescript)
-    -   [Functions in TypeScript](#functionsintypescript)
-        -   [Optional parameters in TypeScript](#optionalparametersintypescript)
-    -   [TypeScript Enums](#typescriptenums)
-    -   [TypeScript Generics](#typescriptgenerics)
-    -   [Tuples in TypeScript](#tuplesintypescript)
-    -   [Classes in TypeScript](#classesintypescript)
-    -   [Interfaces in TypeScript](#interfacesintypescript)
-    -   [DOM Manipulation in TypeScript](#dommanipulationintypescript)
--   [How to Combine React + TypeScript](#howtocombinereacttypescript)
-    -   [Setup](#setup)
-    -   [Typing Component Props](#typingcomponentprops)
-        -   [React Built-in Types](#reactbuiltintypes)
-        -   [Return type of a React component](#returntypeofareactcomponent)
-        -   [Combinations with Template Literals](#combinationswithtemplateliterals)
-        -   [How to use `Exclude`](#howtouseexclude)
-        -   [Custom HTML Components](#customhtmlcomponents)
-    -   [Typing Hooks](#typinghooks)
-        -   [useState hook](#usestatehook)
-        -   [useReducer hook](#usereducerhook)
-        -   [useContext](#usecontext)
-        -   [useRef hook](#userefhook)
-    -   [Forwarding ref](#forwardingref)
-    -   [How to Use TypeScript Generics in React](#howtousetypescriptgenericsinreact)
-    -   [Typing a Custom useFetch Hook](#typingacustomusefetchhook)
--   [Conclusion](#conclusion)
+- [参考资料](#resources)
+- [为什么使用 ESLint、Prettier 和 Husky？](#whyuseeslintprettierandhusky)
+- [何为 TypeScript?](#whatistypescript)
+- [为什么要使用 TS?](#whybotherdealingwithts)
+- [如何设置 TypeScript](#howtosetuptypescript)
+- [购物清单项目示例](#sampleshoppinglistproject)
+  - [TypeScript 模块](#typescriptmodules)
+  - [TypeScript 类型](#typescripttypes)
+    - [TypeScript 中的类型推论](#inferenceintypescript)
+    - [TypeScript 中的`any` 和 `unknown`](#anyandunknownintypescript)
+    - [TypeScript 中的数组](#arraysintypescript)
+    - [TypeScript 中的对象](#objectsintypescript)
+    - [TypeScript 中的类型别名](#aliasesintypescript)
+  - [TypeScript 中的函数](#functionsintypescript)
+    - [TypeScript 中的可选参数](#optionalparametersintypescript)
+  - [TypeScript 枚举](#typescriptenums)
+  - [TypeScript 泛型](#typescriptgenerics)
+  - [TypeScript 中的元祖](#tuplesintypescript)
+  - [TypeScript 中的类](#classesintypescript)
+  - [TypeScript 中的接口](#interfacesintypescript)
+  - [TypeScript 中的 DOM 操作](#dommanipulationintypescript)
+- [如何结合 React + TypeScript](#howtocombinereacttypescript)
+  - [设置](#setup)
+  - [设置组件 Props 类型](#typingcomponentprops)
+    - [React 内置类型](#reactbuiltintypes)
+    - [React 组件返回类型](#returntypeofareactcomponent)
+    - [结合模板字面量](#combinationswithtemplateliterals)
+    - [如何使用`Exclude`](#howtouseexclude)
+    - [自定义 HTML 组件](#customhtmlcomponents)
+  - [定义 hook 的类型](#typinghooks)
+    - [useState hook](#usestatehook)
+    - [useReducer hook](#usereducerhook)
+    - [useContext](#usecontext)
+    - [useRef hook](#userefhook)
+  - [传递 ref](#forwardingref)
+  - [如何在 React 中使用 TypeScript 泛型](#howtousetypescriptgenericsinreact)
+  - [定义自定义 useFetch Hook 类型](#typingacustomusefetchhook)
+- [总结](#conclusion)
 
-## Resources
+<h2 id="resources">参考资料</h2>
 
-Here's some small boilerplates to start with:
+你可以从以下样板着手：
 
--   [Create React App + TypeScript + ESLint + Prettier Boilerplate](https://github.com/dastasoft/react-boilerplate/tree/cra-typescript)
--   [Vite + TypeScript + ESLint + Prettier Boilerplate](https://github.com/dastasoft/react-boilerplate/tree/vite-typescript)
+- [Create React App + TypeScript + ESLint + Prettier Boilerplate](https://github.com/dastasoft/react-boilerplate/tree/cra-typescript)
+- [Vite + TypeScript + ESLint + Prettier Boilerplate](https://github.com/dastasoft/react-boilerplate/tree/vite-typescript)
 
-If you like programming games, try [PhaserJS](https://phaser.io/). You can make games for the browser with TypeScript and it's a fun way to learn it.
+如果你喜欢游戏编程，可以尝试 [PhaserJS](https://phaser.io/)。你可以在浏览器通过创建游戏边玩边学 TypeScript 。
 
-Also be sure to check out [The Official Handbook of TS](https://www.typescriptlang.org/docs/handbook/intro.html). It has tons of useful documentation and examples.
+确保你也阅读了[TS 官方文档](https://www.typescriptlang.org/docs/handbook/intro.html)。里面包含大量有用的文档和案例。
 
-Also we'll look at two sample projects so you have some real code to refer to and test real implementations. Here they are:
+另外还有两个示例项目，这样你就可以看到代码是如何实现的：
 
-### Shopping List project
+### 购物清单项目
 
 ![shopping-list](https://www.freecodecamp.org/news/content/images/2022/10/shopping-list.jpg)
 
-This is a simple project to test the TypeScript developer experience without Webpack, React, or any other add-ons – just plain TypeScript converted to JavaScript.
+这是一个简单的体验 TypeScript 开发的项目，不需要 Webpack、React 以及任何其他组件，仅需要把 TypeScript 转换成 JavaScript。
 
--   [Working live example](https://shopping-list.dastasoft.com/)
--   [Source code](https://github.com/dastasoft/shopping-list)
+- [在线示例](https://shopping-list.dastasoft.com/)
+- [源码](https://github.com/dastasoft/shopping-list)
 
-### AnimeTrailers project
+### 动漫预告片项目
 
 ![animetrailers-screenshot](https://www.freecodecamp.org/news/content/images/2022/10/animetrailers-screenshot.jpg)
 
-For the integration of TypeScript with React I built another example project. It's a dummy application that, thanks to [JikanAPI](https://jikan.moe/), provides a list of anime and basic information to watch the latest trailers of your favourite anime.
+借助 [JikanAPI](https://jikan.moe/)我搭建了一个简单的结合 React 和 TypeScript 的应用，该应用提供一系列动画和基本信息，你可以观看你最喜欢的动画的最新预告。
 
--   [Working live example](https://animetrailers.dastasoft.com/)
--   [Source code](https://github.com/dastasoft/animetrailers)
+- [在线示例](https://animetrailers.dastasoft.com/)
+- [源码](https://github.com/dastasoft/animetrailers)
 
-## Why Use ESLint, Prettier, and Husky?
+<h2 id="whyuseeslintprettierandhusky">为什么使用 ESLint、Prettier 和 Husky？</h2>
 
-On the boilerplates I tend to use Airbnb's ESLint rules, Prettier's recommended rules, and Husky's pre-commits actions. This is quite useful especially in a team environment where you need everyone to follow the same style of code. But you can also benefit as a solo developer or as a learner.
+在样板中我使用了 Airbnb 的 ESlint 规则、Prettier 建议规则以及 Husky 的提前提交（pre-commit)行为。团队协作的时候，这样可以促使大家遵循同样的代码规则，即便你是单人作业或者学习开发，这样操作也会对你的项目有所助益。
 
-The Airbnb rules can be strange sometimes, but they provide a great explanation and examples. This way you can decide if the rule makes sense for you or not. If they don't, you can disable it in the `.eslintrc` file.
+有些 Airbnb 的规则可能会有些奇怪，但是规则都有注解和示例，你可以以此来决定采不采用，如果想要关闭某个规则，可以放在`.eslintrc`文件中。
 
-I found that for junior devs or people who are just starting out with JS or TS, these rules are very useful. So I recommend you at least try to include them in a project and check the results. 😉
+这些规则对入门开发和刚刚开始使用 JS 或者 TS 的人来说非常有用。所以我建议你将它们纳入你的项目，尝试一下。 😉
 
-## What is TypeScript?
+<h2 id="whatistypescript">何为TypeScript</h2>
 
-[TypeScript](https://www.typescriptlang.org/) or TS is an open source language developed and maintained by Microsoft. Here are some other facts about TS:
+[TypeScript](https://www.typescriptlang.org/)或者 TS 是由微软开发并且维护的开源语言，它具有以下特性：
 
--   It's a multi-paradigm language (like JavaScript).
--   It's an alternative to JavaScript (more precisely, a superset)
--   It allows the use of static types
--   It has extra features (generics, interfaces, tuples, etc which will be explained in detail below)
--   It allows for gradual adoption (that is, uou can turn an existing project into a TS project by changing the files one by one, it's not a big bang change).
--   You can use it for front-end and back-end development (just like JS)
+- 它是一个多范式语言 (和 JavaScript 一样)；
+- 它是 JavaScript 的一个替代品 (更准确地说，是一个超集)；
+- 它允许静态类型；
+- 它具有额外的特性: 泛型（generics)、接口(interfaces)、元组(tuples)等，将在下文详细说明；
+- 它允许阶段性采用（也就是你可以一个文件一个文件地将现有的项目改写成 TS，而不是一次性改变）；
+- 你可以在前端和后端中使用（和 JS 一样）。
 
-The browser does not understand TS code. It must be _transcompiled_ into JS. JS has a dynamic type mapping value and TS has static types which is less error prone.
+浏览器不能解读 TS 代码，必须 _转译_ 为 JS。JS 为动态类型映射值，而 TS 是静态类型，所以不易出错。
 
-In React you already _transcompile_ JS with [Babel](https://babeljs.io/), so having to _transcompile_ the code is not an extra inconvenience nowadays.
+React 中已经是通过[Babel](https://babeljs.io/)_转译_ JS 了 ，所以 _转译_ 代码并不是 TS 额外的优势。
 
-## Why Bother Dealing with TS?
+<h2 id="whybotherdealingwithts">为什么要使用TS？</h2>
 
-That's the thing – why even bother with TS when you are happy with JS and everything is fine? A while back, as I said before, we had an inside joke about languages like TS with types (I was doing Java at the time by the way). My team joked that you need types if you don't know how to code correctly.
+问题就在这儿： 为什么要使用 TS，JS 不好用吗？你用得不开心吗？你不怕麻烦吗？正如上文所诉，过去我们团队内部会取笑像 TS 这样带类型的语言（当时我还在使用 Java）。我们团队会说如果你需要类型，证明你不会正确地写代码。
 
-TypeScript, Java, and a bunch of other languages have **static typing** that will define a type associated with a variable. The type will be checked during compile time. Once you define something to be a _string_ or a _boolean_ you can't change its type.
+TypeScript、 Java 以及其他一些语言具备 **静态类型** ，也就是会定义变量的类型。一旦你将变量定义为 _string_ 或者 _boolean_ ，你就不能改变它的类型。
 
-JavaScript, on the other hand, has **dynamic typing**. This means that you can assign a string to a variable, and later convert it to a boolean, a number, or whatever you want. The type will be dynamically assigned at run time.
+而 JavaScript 拥有 **动态类型**。也就是说，变量一开始是字符串，之后可以变为布尔值、数字或者任意你想要的值。变量类型会在运行时动态分配。
 
-But when you look at the TS code on the Internet, you can see...
+当你浏览网络上的 TS 代码，你会看到……（语法糖）。
 
-![sintactic sugar](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript%2Fsyntaxsugar.jpeg&w=1920&q=75 "Syntactic Sugar, syntactic sugar everywhere.")
+![sintactic sugar](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript%2Fsyntaxsugar.jpeg&w=1920&q=75 'Syntactic Sugar, syntactic sugar everywhere.')
 
-So going back to my team's old joke, yes indeed **it was correct**: if you know exactly what you're doing, you don't need someone constantly telling you that this is a string and only a string, and if at some point it becomes a boolean or something else.... I know what I'm doing!
+回到我们团队的玩笑，当然这个说法**没错**: 如果你知道自己在做什么，你不需要别人不断提醒你这是字符串，也只能是字符串，在某一刻它变成了布尔值或者其他类型……我知道自己在做什么！
 
-But the truth is that we are not perfect, and things happen:
+真相是人非完人，总有这样的事情发生：
 
--   Working in a hurry.
--   Having a bad day.
--   Leaving an idea on Friday and when you come back on Monday you don't have the same picture of the situation.
--   Working in a team, and not everyone has the same level and/or vision.
+- 赶进度的时候；
+- 心情糟糕的时候；
+- 周五的想法下周一再回顾的时候发现自己无法理解；
+- 团队协作时，团队成员的技术和看法不在一个水平。
 
-For the same reasons we use an IDE, IDE extensions, syntax highlighting and linters instead of the Notepad app. TypeScript can fit into these aids.
+出于同样的原因，我们使用 IDE、IDE 插件、代码高亮、linter 而不是记事本应用。TypeScript 和这些辅助工具一样。
 
-![airbnb bugs](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript%2Fairbnb.jpg&w=1920&q=75 "Airbnb claims that 38% of bugs on Airbnb could have been prevented by using TypeScript.")
+![airbnb bugs](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript%2Fairbnb.jpg&w=1920&q=75 'Airbnb claims that 38% of bugs on Airbnb could have been prevented by using TypeScript.')
 
-### Some examples of common mistakes
+### 一些常见的问题
 
-Let's look at some basic examples with and without TS in the equation:
+让我们看一看使用和不使用 TS 的一些对比示例：
 
-#### Please, I know what I'm using
+#### 拜托，我知道自己用的是什么！
 
 ```js
 // App.js
-import { MemoryRouter as Router } from 'react-router-dom'
+import { MemoryRouter as Router } from 'react-router-dom';
 
-import Routes from './routes'
+import Routes from './routes';
 
 export default function App() {
   return (
     <Router basename="/my-fancy-app">
       <Routes />
     </Router>
-  )
+  );
 }
 ```
 
-Do you see anything unusual in the code above? If so, congratulate yourself.
+你知道上面代码块的问题出在哪儿吗？如果知道的话，请给自己一朵大红花！
 
-This file was in my boilerplate for a long time. It's not a bug but... `MemoryRouter` doesn't need any `basename` at all. This happens because at some point in the past `BrowserRouter` was used, which in fact needs a `basename` property.
+这个文件在我的样板中存在了很长时间，这并不是一个 bug，但是…… `MemoryRouter`并不需要任何 `basename`。它出现的原因是我之前使用了`BrowserRouter`，所以需要`basename`属性。
 
-With TS you will be notified that `No overload matches this call` which tells you that there is no signature for that component with that property.
+如果使用 TS 你会被提示 `No overload matches this call` 告诉你有这个属性的组件并没有被签名。
 
-**TypeScript not only works as static typing, but it helps you better understand the needs of other libraries**. By others I mean components and functions from third parties or your co-workers.
+**TypeScript 不仅可以使用静态类型，也可以帮助你决定是否需要其他的库**。 这里的库可以是第三方或者同事提供的组件和函数。
 
-Yes I can hear the answer – you must properly know the libraries you are using, and again yes you are right. But assuming that everyone involved in a project knows every "external" library and the nuances of the versions can be a daunting task.
+肯定会有一些声音——“了解正在使用的库不是必须么”，是的，你是对的。但是让参与项目的每个人都知道每个“外部”库以及版本的细微差别，可是艰巨的任务！
 
-#### The devil's flag
+#### 魔鬼标志变量
 
-```ts
+```javascript
 let isVerified = false;
 verifyAmount();
 
@@ -176,28 +176,28 @@ verifyAmount();
 if (isVerified) proceedPayment();
 ```
 
-I have seen this error many times. I don't have the exact code and each time it has a different nuance, but you can get the point. You have a boolean variable that is responsible for letting some code run or not and at some point someone else (or maybe yourself in an error) turns the boolean into a string and a non-empty string is a true value.
+我被这个问题困扰了很多次。虽然每次不是一模一样的代码，一些细微的差别，但是你可以从这个示例中体会我的用意：你设置一个布尔值变量来决定一些代码运不运行，但很有可能其他人（或者你自己）后来将布尔值变成了字符串，而非空字符串为真值。
 
-With TypeScript you would have had the error: `The type 'string' is not assignable to the type 'boolean'`. This error will occur at compile time, even if you don't have your application running at the time. So the chances of the error making it to production are very small.
+如果使用 TypeScript，会出现报错: `The type 'string' is not assignable to the type 'boolean'`。代码在编译时就会出现这个报错，不需要等到运行时，那么在生产阶段出现这样的报错的机率非常低。
 
-Again, we can apply the same rule as before – if you code correctly this doesn't happen. If you follow the rules of Clean Code and be careful with what you are doing this can also be avoided. **TypeScript is not meant to allow us to be lazy and disorganized – but it can be a good ally**, as syntax highlighting can help to avoid some errors or detect unused variables.
+当然，和前文的规则一样，如果你正确编写代码，这个问题不会发生，如果你采用简洁代码的策略并且在编码的时候非常小心也可以避免这样的错误。 **TypeScript 并不是为了让我们偷懒，而是我们的好帮手**，正如代码高亮可以帮助我们避免错误，找出不正常的变量。
 
-#### I though the cat was alive inside that box
+#### 我以为盒子里面的猫是活着的
 
 ```ts
 const MONTH_SELECT_OPTIONS = MONTHS.map((month) => ({
   label: getMonthName(month),
-  value: month,
-}))
+  value: month
+}));
 
 export default function PaymentDisplayer() {
   const [currentMonthFilter, setCurrentMonthFilter] = useState(
     MONTH_SELECT_OPTIONS[0]
-  )
+  );
 
-  const onChangeHandler = option => {
-    setCurrentMonthFilter(option.value)
-  }
+  const onChangeHandler = (option) => {
+    setCurrentMonthFilter(option.value);
+  };
 
   return (
     <select onChange={onChangeHandler}>
@@ -207,55 +207,55 @@ export default function PaymentDisplayer() {
         </option>
       ))}
     </select>
-  )
+  );
 }
 ```
 
-It is very common (and perhaps not recommended) to change a state's type. Sometimes it is on purpose like having an `isError` flag and suddenly changing it from boolean false to error message string (and again not recommended at all!). But in other scenarios it is by mistake, like the example above.
+改变一个 state 的类型非常常见（虽然不建议这么做），有些时候会设置一个`isError` 标志变量，突然从布尔假值变成表示错误信息的字符串（也不建议这么做！）。还有一些时候是无意为之。
 
-The person who wrote this in the first instance thought that in `currentMonthFilter` they would store the actual option of the select, an `HTMLOptionElement` with label and value. Later, the same person on another day (or perhaps another developer) makes the `changeHandler` and sets the value instead of the full option.
+编写这段代码的人一开始认为 `currentMonthFilter` 会存储实际的选项，一个包含 label 和 value 的`HTMLOptionElement`。之后，同样的开发在另一个天（或者另一个开发）创建了 `changeHandler`函数并只设置了`value`而不是整个选项。
 
-The above example works, and is simplified for learning. But imagine this on a large scale, especially in those components where actions are passed underneath as props.
+上述代码可以运行，为了方便学习我也做了简化，但是假设项目规模更大，特别是组件的行为是由 props 传递的时候，问题就复杂得多。
 
-Here TypeScript would help us in two ways:
+使用 TypeScript 可以从两个方面解决这个问题：
 
--   Static typing will throw an error when trying to change the type of `currentMonthFilter` from `{label: string, value: number}` to `number`.
--   The person coding the next step of calling a service to retrieve payments with that filter will know through _IntelliSense_ what type they will get from the state and whether it matches the type the service needs.
+- 当你将`currentMonthFilter`的`{label: string, value: number}`改成`number`时，静态类型会报错。
+- 下一个步骤的开发人员，在调用服务回溯包含这个筛选条件的付款时候，会通过 _IntelliSense_（VS Code 中的代码提示）了解他从 state 中获得什么类型，这个类型是否和服务匹配。
 
-So TypeScript also allows us to **inspect from the IDE the different functions, parameters and documentation of third-party libraries and components of our peers**.
+所以使用 TypeScript，**可以从 IDE 检查第三方库提供的函数、参数以及文档或者是同事编写的组件**。
 
-Through these examples (which are perhaps not too representative to be honest) we can conclude that TypeScript tries to help us in a React environment with:
+从上文例子中（可能不那么典型），我们可以得出，TypeScript 在 React 的环境中，可以帮助我们：
 
--   Being coherent in typing and consistent with static types
--   Providing documentation and _IntelliSense_ of the available possibilities
--   Detecting bugs early
+- 代码前后一致，静态类型一致
+- 提供文档记录，并通过 _IntelliSense_ 了解可能性
+- 尽早发现问题
 
-## How to Setup TypeScript
+<h2 id="howtosetuptypescript">如何设置TypeScript</h2>
 
-In this article we will use the Global Installation. This is because I think it is better to first dive into TypeScript in isolation without any Webpack, React or any other variables and see how it works and what problems it solves.
+在本文中我们将使用全局安装。因为我认为第一次探索 TypeScript 应该不受到 Webpack、React 等其他变量的干扰，这样才能更加了解 TypeScript 是如何运行和处理问题的。
 
-### How to Install TypeScript Globally
+### 如何全局安装 TypeScript
 
 ```bash
 npm install -g typescript
 
-#or
+#或
 
 yarn install --global typescript
 ```
 
-### How the TypeScript Compiler Works (tsc)
+### TypeScript 编译器（tsc）是如何工作的
 
-Once you have installed TypeScript on your system or with any of the other options mentioned above, you can use the TypeScript compiler, using the `tsc` command.
+在系统中安装好 TypeScript 之后，就可以使用 TypeScript 的编译器，使用 `tsc` 命令行。
 
-Let's test the compiler with the minimum configuration:
+让我们通过简单配置编译器测试一下：
 
--   Create a new empty folder
--   Place an `index.html` with the basic HTML5 structure inside.
--   Create an empty `index.ts` file at the same level as `index.html`.
--   Open a terminal and type `tsc --init` (assuming you have installed global TypeScript) this will create for you a `tsconfig.json` (we will look at this file in detail in the next section).
+- 创建一个新的空文件夹。
+- 放置一个`index.html`文件，文件内容是基础的 HTML5 结构。
+- 在`index.html`同一层，创建一个空的`index.ts`文件。
+- 打开终端，并输入`tsc --init` (假设你是全局安装 TypeScript)，便会创建一个 `tsconfig.json`文件。 (我们将在下一章详细探讨这个文件)
 
-You will have something like this:
+你的文件夹结构如下：
 
 ```sh
 - index.html
@@ -276,7 +276,7 @@ You will have something like this:
 </html>
 ```
 
-Now you need to include the TS file in the HTML. But browsers don't understand TypeScript they understand JavaScript, so you can modify your `index.html` to:
+你需要在 HTML 中添加 TS 文件，但是浏览器并不理解 TypeScript，只认识 JavaScript，所以你可以将`index.html`修改为：
 
 ```html
 <!DOCTYPE html>
@@ -292,158 +292,158 @@ Now you need to include the TS file in the HTML. But browsers don't understand T
 </html>
 ```
 
-Open a new terminal and type `tsc`. Your `index.ts` file will be converted into an `index.js` that the browser can read.
+打开一个新的终端，并输入`tsc`，你的 `index.ts` 文件将转换为 `index.js`，浏览器就可以理解。
 
-Instead of typing the `tsc` command every time you want to compile the TS file into a JS file, you can put TypeScript in watch mode with `tsc -w`.
+为了不在每一次将 TS 文件转换为 JS 文件的时候都输入`tsc`，你可以将 TypeScript 设置为监控模式，使用`tsc -w`。
 
-Now my recommendation is that you open both TS and JS files side by side. Then type regular JS into the `index.ts` file, and test what the outputs are. (We'll use this a lot in the next sections to test what TS generates).
+现在我建议你同时打开 TS 文件和 JS 文件，在`index.ts`文件中输入普通的 JS，测试输出是什么。（我们将在接下来的章节大量使用这样的方法）。
 
-![side by side](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript%2Fside-by-side.png&w=1920&q=75 "Do some test using tsc -w option")
+![side by side](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript%2Fside-by-side.png&w=1920&q=75 'Do some test using tsc -w option')
 
-### What's in `tsconfig.json`
+### `tsconfig.json`里是什么？
 
-If you are following the article, you have created this file with the `tsc --init` command. It creates the `tsconfig.json` with some default configuration and a bunch of comments which are great to start with.
+跟着文章一边看一边实践的话，通过`tsc --init`命令，你将创建 `tsconfig.json`并包含默认配置和初始化的注解。
 
-Let's look at some of the properties that might be useful to get you started:
+让我们看一看一些关键的属性：
 
--   `target` is the version of JS we are converting our TS code to. Depending on the browsers you want to support, you may need to set some older version. It can be a good learning resource too – try playing with different versions and see what JS code is generated.
--   `module` defines what kind of syntax you will use for modules. `commonjs` which is the default uses `require/module.exports` and modern JS (ES6+) uses `import/export`. If you want to use `import/export` you need to change `target` to ES6 or higher. In the example project we will use this syntax so check the rest of the article for this.
--   `lib` You need it to specify additional libraries you will use in your project and check additional types, for example DOM related.
--   `jsx` In React you will need to set it to at least `preserve`. This mode assumes that another tool will compile that part (Babel in this case) but TSC will do the type checking. You can set this property to `react` or `react-native`. You use this if you want TSC to compile your JSX code into regular JS code. In most cases we will leave this property to `preserve` which will send the file as regular JSX and Babel/Webpack will do the rest.
--   `outDir` where the files will be placed after the compilation, for example in most React projects it will be placed in a `build` folder.
--   `rootDir` where the files will be taken for compilation. On most React projects this will be `./src`.
--   `strict` enables a set of rules for type checking which results in a stronger check for what is considered "correct"/ I recommend starting with this on false when you are learning. Then when you feel confident enough turn it on and check what new red flags you have. But remember you will get the full potential of TS with this option enabled. This option also enables all the strict options below, which you can disable individually.
--   `include` the folder(s) you want to include to be compiled, for example the `src` folder
--   `exclude` the folder(s) you want to prevent from being compiled, for example the `node_modules` folder.
+- `target`是 TS 代码将要转换成的 JS 的版本。版本主要取决于支持的浏览器，你可能需要使用比较早期版本的 JS。这也是很好的学习资源，你可以修改不同版本来看生成什么样的 JS 代码。
+- `module` 设置模块的语法。 `commonjs`默认使用`require/module.exports`，现代 JS (ES6+)使用`import/export`。如果你希望使用 `import/export`，你需要将`target`设置为 ES6 或更高。 本文中的示例项目将使用这个语法。
+- `lib`你需要指定你在项目中额外使用的库，检查额外的类型，如 DOM 相关。
+- `jsx`如果使用 React，我们需要把这一项设置为`preserve`，也就是由另一个工具(即 Babel)来编译这 JSX，TSC 仅用于检查类型。你也可以设置为`react`或者`react-native`。这个配置决定是否使用 TSC 将你的 JSX 代码转换为常规的 JS 代码。大多数情况，我们将这个属性设置为`preserve`，将文件设置为常规的 JSX 并由 Babel 或者 Webpack 来处理编译工作。
+- `outDir`是编译后文件存储的地方，例如大部分 React 项目会被存放在`build`文件。
+- `rootDir` 是需要被编译的文件的位置，大部分 React 项目的位置为`./src`。
+- `strict`开启一系列检查类型的规则，这些规则对"正确"的要求更为严格。我建议在学习阶段将它设置为 false，当你掌握得还不错了之后再开启。记住开启这个选项就是开启了 TS 的所有潜能，其中包含的一些选项你可以单独关闭。
+- `include` 你想要编译的文件夹，如`src`文件夹。
+- `exclude` 你不想要编译的文件夹，如`node_modules`文件夹。
 
-In the sample project for this article, we will take the files `rootDir` from `./src` and will place it `outDir` in the `public` folder.
+在示例中，我们将 `rootDir`设置为 `./src`， `outDir`设置为 `public`文件夹。
 
-## Sample Shopping List Project
+<h2 id="sampleshoppinglistproject">购物清单项目示例</h2>
 
-The sample project is very basic stuff: you can insert different items and their quantities in different sections of your shopping list. Then later you can remove them while you shop and check what you have to buy next.
+项目示例很简单：你可以在购物清单中添加不同的物品、修改数量、删除物品以及查看需要买什么物品。
 
-The idea behind this example project is to get used to TypeScript and the general workflow. Once you get into the React environment a lot of the magic is done for you by Webpack or any other bundler. So I think it's important to know the very basic things and later enjoy the work that the bundler does for you.
+示例项目是为了让你适应 TypeScript 的工作流。一旦使用 React 环境，Webpack 和其他一些打包器就完成很多神奇的事情，所以我认为了解基础之后再接触 React 的打包器比较重要。
 
-Let's see what we can use from TS to get a better, less error-prone code base.
+让我们来看看如何使用 TS 来获得一个更优并不容易出错的代码库。
 
-### TypeScript Modules
+<h3 id="typescriptmodules"> TypeScript 模块</h3>
 
-If you want to use ES6 `import/export` modules you must configure `tsconfig` with:
+你如果想使用 ES6 `import/export`模块，你必须设置 `tsconfig` ：
 
--   **target**: es6 or higher
--   **module**: es2015 or later
+- **target**: es6 or higher
+- **module**: es2015 or later
 
-And in the `index.html` file you must add the module type like this:
+并且在`index.html` 文件中增加模块类型：
 
 ```html
-<script type="module" src="app.js"></script> 
+<script type="module" src="app.js"></script>
 ```
 
-But keep in mind that using modules has two drawbacks:
+注意使用模块有两个弊端：
 
--   Compatibility with older browsers is less likely.
--   Files in production will be split, so you will have multiple requests for each file (this can be fixed by using a bundler like Webpack).
+- 和旧浏览器的兼容性不好
+- 生产阶段的文件很分散，所以在文件间需要使用大量的请求（这可以通过使用 Webpack 这样的打包器来处理）。
 
-### TypeScript Types
+<h3 id="typescripttypes"> TypeScript 类型</h3>
 
-In JavaScript, types are assigned at runtime. When the interpreter sees your variable and the value, it decides what type it is. This means that we can do things like this:
+在 JavaScript 中，类型在运行时分配。当编译器遇到变量和值时候再决定它们的类型是什么。这就意味着我们可以这样做：
 
-```ts
-let job = "Warrior"; // string
-let level = 75; // number
-let isExpansionJob = false; // boolean
+```js
+let job = 'Warrior'; // 字符串
+let level = 75; // 数字
+let isExpansionJob = false; // 布尔值
 
-level = "iLevel" + 75 
-// now it's an string
+level = 'iLevel' + 75;
+// 现在是一个字符串
 ```
 
-In TypeScript, types are assigned at compile time. So once the type is defined it will be protected under that signature.
+在 TypeScript 中，类型在编译时分配，一旦一个类型被定义就受到该签名的保护：
 
 ```ts
-let job: string = "Samurai";
+let job: string = 'Samurai';
 let level: number = 75;
 let isExpansionJob: boolean = true;
 
-level = "iLevel" + 75 
+level = 'iLevel' + 75;
 // Error, Type string cannot
 // be assign to type number!
 ```
 
-#### Inference in TypeScript
+<h4 id="inferenceintypescript"> TypeScript 中的类型推论</h4>
 
-In fact, it is not necessary to explicitly state the type you want the variables to be. TS can infer the type by its value.
+实际上不需要明确指定变量类型，TS 可以自行推断：
 
 ```ts
-let job = "Samurai";
+let job = 'Samurai';
 let level = 75;
 let isExpansionJob = true;
 
-level = "iLevel" + 75 
-// Error, Type string cannot 
+level = 'iLevel' + 75;
+// Error, Type string cannot
 // be assign to type number!
 ```
 
-In React, which we'll look at in the second section of this article in detail, you'll see the inference as well – for example in `useState`
+在接下来的 React 项目中，我们也会看到类似的推论，如在使用`useState`的时候：
 
 ```ts
-const [currentMonthFilter, setCurrentMonthFilter] = useState("January")
+const [currentMonthFilter, setCurrentMonthFilter] = useState('January');
 
 useEffect(() => {
-   setCurrentMonthFilter(1) 
-   // Error, Type number cannot 
-   // be assign to type string!
-}, [])
+  setCurrentMonthFilter(1);
+  // Error, Type number cannot
+  // be assign to type string!
+}, []);
 ```
 
-#### `any` and `unknown` in TypeScript
+<h4 id="anyandunknownintypescript"> TypeScript 中的`any`和`unknown`</h4>
 
-I have said all along that the TS has static types, but there is a nuance to that statement.
+我一直说 TS 有静态类型，但有一个细微的点需要说明：
 
 ```ts
 let level: any = 10;
 
-level = "iLevel" + 125; 
+level = 'iLevel' + 125;
 // OK, still type any
 
-level = false; 
+level = false;
 // OK, still type any
 ```
 
-Welcome back to JavaScript! `any` is a dynamic type for when you don't know what type the variable will be in the future – but it somehow reverses all the advantages that TS provides.
+欢迎回到 JavaScript！ `any` 是一种动态类型，当你不知道这个变量在未来的值为何时可以使用，当然这也就放弃掉了 TS 提供的所有优势。
 
 ```ts
 let level: any = 10;
 
-level = "iLevel" + 125;
+level = 'iLevel' + 125;
 
 level = false;
 
 let stringLevel: string = level;
 console.log(typeof stringLevel);
-stringLevel.replace("false", "true");
+stringLevel.replace('false', 'true');
 ```
 
-When you assign `level` to `stringLevel` of type `string` it does not become a string, it is still a boolean. So the `replace` function does not exist and the code fails at runtime. You'll get `Uncaught TypeError: stringLevel.replace is not a function`.
+当你将 `level`分配给`stringLevel`时，变量类型并没有变成`string`，而是保持布尔值。所以`replace`函数并不存在，代码在运行时失效，你会收到报错： `Uncaught TypeError: stringLevel.replace is not a function`。
 
-For that we have another type which is the safe counterpart of the `any` type:
+在这种情况下我们可以使用比`any`更安全的替换方案:
 
 ```ts
 let level: unknown = 10;
 
-level = "iLevel" + 125;
+level = 'iLevel' + 125;
 
 level = false;
 
-let stringLevel: string = level; 
+let stringLevel: string = level;
 // Error
 ```
 
-With `unknown` you can assign any type as in `any`, but this time the compiler gets the error when you try to assign to another type. So if you don't know what type it will be, try using `unknown` instead of `any`.
+`unknown`和`any`一样，可以分配任何类型，当但你想要将它分配给另外一个变量时，编译器会报错。所以当你不知道变量未来是什么类型的值时，使用 `unknown` 而不是 `any`。
 
-#### Arrays in TypeScript
+<h4 id="arraysintypescript"> TypeScript 中的数组</h4>
 
 ```ts
-let job = "Red Mage";
+let job = 'Red Mage';
 let level = 75;
 let isExpansionJob = false;
 let jobAbilities = ['Chainspell', 'Convert'];
@@ -453,82 +453,82 @@ jobAbilities.push(2); // Error
 jobAbilities[0] = 2; // Error
 ```
 
-In the example above, we declared an array of strings `jobAbilities`. We can add more strings, but we cannot add other types or change the current values to values of other types. This is because in the declaration we have made the inference of type `string[]`.
+在上面例子中，我们定义了一个由字符串组成的数组：`jobAbilities`，我们可以在这个数组中添加其他的字符串，但是不能添加其他类型的值，也不能将当前值转换成其他类型。因为在声明数组时，我们将类型推论设置为了 `string[]`。
 
 ```ts
-let job = "Red Mage";
+let job = 'Red Mage';
 let level = 75;
 let isExpansionJob = false;
 let jobAbilities = ['Chainspell', 'Convert'];
-let swordSkill = ["B", 5, 144, 398]; 
+let swordSkill = ['B', 5, 144, 398];
 
-swordSkill.push("B+"); // OK
+swordSkill.push('B+'); // OK
 swordSkill.push(230); // OK
 
-swordSkill[1] = "C"; 
+swordSkill[1] = 'C';
 // OK, the type is not position related
 
 swordSkill.push(true); // Error
 ```
 
-As in the previous example, type inference is done in the declaration. We now declare an array of strings and numbers for `swordSkill`.
+和之前的例子一样，声明时类型推论就形成。所以我们声明了一个由字符串和数组组成的数组`swordSkill`。
 
-If you want to explicitly declare the types for the arrays we saw in the examples:
+如果你希望指定声明数组的类型，可以：
 
 ```ts
 let jobAbilities: string[] = ['Chainspell', 'Convert'];
-let swordSkill: (string | number)[] = ["B", 5, 144, 398];
+let swordSkill: (string | number)[] = ['B', 5, 144, 398];
 ```
 
-By the way, `|` is for doing a `union` of different types.
+`|` 是 `union`（联合声明）不同的类型。
 
-#### Objects in TypeScript
+<h4 id="objectsintypescript"> TypeScript 中的对象</h4>
 
-Let's go back to the example – but now in the form of an object:
+让我们回到例子，不过这一次是以对象的形式：
 
 ```ts
 let job = {
-  name: "Summoner",
+  name: 'Summoner',
   level: 75,
   isExpansion: true,
-  jobAbilities: ["Astral Flow", "Elemental Siphon"]
+  jobAbilities: ['Astral Flow', 'Elemental Siphon']
 };
 
-job.name = "Blue Mage"; // OK
-job.level = "Four" // Error
-job.avatars = ["Carbuncle"]; // Error
+job.name = 'Blue Mage'; // OK
+job.level = 'Four'; // Error
+job.avatars = ['Carbuncle']; // Error
 ```
 
--   `job.level = "Four"` cannot be done because we cannot change the type of a property. Properties have static types as well.
--   `job.avatars = ["Carbuncle"]` – we cannot add new properties, as the `job` object already has a type that has a defined structure.
+- `job.level = "Four"` 不可以实现，因为我们不可以修改属性的类型。对象的属性也是静态类型。
+- `job.avatars = ["Carbuncle"]` – 我们不能增加新的属性，因为 `job` 对象已经拥有一个类型和定义好的结构。
 
 ```ts
 let job = {
-  name: "Summoner",
+  name: 'Summoner',
   level: 75,
   isExpansion: true,
-  jobAbilities: ["Astral Flow", "Elemental Siphon"]
+  jobAbilities: ['Astral Flow', 'Elemental Siphon']
 };
 
 job = {
-  name: "Blue Mage",
+  name: 'Blue Mage',
   level: 4,
   isExpansion: true,
-  jobAbilities: ["Azure Lore", "Burst Affinity"]
+  jobAbilities: ['Azure Lore', 'Burst Affinity']
 }; // OK
 
 job = {
-  name: "Corsair",
+  name: 'Corsair',
   level: 25,
   isExpansion: true
 }; // Error
 ```
 
-We can assign another object, because we define the object as `let` but it has to be in the exact same form.
+我们可以分配另一个对象，因为对象是由 `let` 声明的，但必须是一模一样的形式。
 
-Take a moment and think about it: how many times do you repeat object structures in the front-end without any kind of check like this? How many times have you made a typo by typing `data.descrption` and days later you discover the bug? If not, I can promise you that this will happen sooner rather than later.
+停下来思考一下：有多少次你在前端的工作中，在没有检查的情况下，像这样重复对象结构？有多少次你犯过如`data.descrption`这样的拼写错误，几天之后你发现问题？如果没有发生过，我保证这种问题迟早会发生。
 
-Let's check the explicit type of our example:
+让我们看看如何指定具体类型：
 
 ```ts
 let job: {
@@ -537,16 +537,16 @@ let job: {
   isExpansion: boolean;
   jobAbilities: string[];
 } = {
-  name: "Summoner",
+  name: 'Summoner',
   level: 75,
   isExpansion: true,
-  jobAbilities: ["Astral Flow", "Elemental Siphon"]
+  jobAbilities: ['Astral Flow', 'Elemental Siphon']
 };
 ```
 
-As you can see, this gets a bit bigger for a simple object, so in this case we can use `type aliases`.
+对于一个简单的对象来说，这样可能有一点复杂了，所以我们可以使用`类型别名`(Type Aliases)。
 
-#### Aliases in TypeScript
+<h4 id="aliasesintypescript">TypeScript 中的类型别名</h4>
 
 ```ts
 type Job = {
@@ -557,25 +557,25 @@ type Job = {
 };
 
 let Summoner: Job = {
-  name: "Summoner",
+  name: 'Summoner',
   level: 75,
   isExpansion: true,
-  jobAbilities: ["Astral Flow", "Elemental Siphon"]
+  jobAbilities: ['Astral Flow', 'Elemental Siphon']
 };
 
 let BlueMage: Job = {
-  name: "Blue Mage",
+  name: 'Blue Mage',
   level: 4,
   isExpansion: true,
-  jobAbilities: ["Azure Lore", "Burst Affinity"]
+  jobAbilities: ['Azure Lore', 'Burst Affinity']
 };
 ```
 
-With type aliases we can define a common type for reuse. In React, DOM, and other libraries you will find a lot of ready-to-use defined types.
+使用类型别名可以定义可复用的常见类型。在 React、DOM 和其他的库中有很多这种即用型定义类型。
 
-### Functions in TypeScript
+<h3 id="functionsintypescript"> TypeScript 中的函数</h3>
 
-The syntax of the functions is quite similar to JS, but you can specify the type of the parameter and the type of the return.
+TS 中的函数语法和 JS 类似，但是你可以指定参数类型和返回类型。
 
 ```ts
 type Enemy = {
@@ -589,15 +589,15 @@ let attack = (target: Enemy) => {
   console.log(`Attacking to ${target.name}`);
 };
 
-attack = "Hello Enemy"; // Error
+attack = 'Hello Enemy'; // Error
 ```
 
-I use an arrow function, but you can also use regular function declarations. There are two main differences in functions between JS and TS:
+在示例中我使用了箭头函数，你也可以使用普通的函数声明。JS 和 TS 函数的两大不同是：
 
--   You specify the type of the parameters you pass to the function, like our `target: Enemy`.
--   The variable `attack` is given the type of the function's return, so you cannot change its type afterwards.
+- 你需要指定传入参数的类型，如 `target: Enemy`。
+- `attack`变量已经设定了返回类型，之后就不能修改。
 
-The type of the function is described as follows:
+函数的类型可以这样声明：
 
 ```ts
 let attack = (target: Enemy): void => {
@@ -605,7 +605,7 @@ let attack = (target: Enemy): void => {
 };
 ```
 
-The `void` type is used when the return type is nothing, and it is also not necessary to explicitly set the type:
+当返回值为空的时候可以用`void`类型，也不需要指定特定类型。
 
 ```ts
 // let attack = (target: Enemy): number => {
@@ -614,7 +614,7 @@ let attack = (target: Enemy) => {
 };
 ```
 
-As with `any`, the `void` type has some nuances:
+`any`和`void`类型有一些不同：
 
 ```ts
 let attack = (target: Enemy): void => {
@@ -629,9 +629,9 @@ attack = (target: Enemy): number => {
 console.log(attack(lizard)); // 198
 ```
 
-The example above has no errors – even if you think you have changed `attack` from `(target: Enemy) => void` to `(target: Enemy) => number` it is still `void`.
+上面的示例没有报错：即便你认为将 `attack`从`(target: Enemy) => void`变成了 `(target: Enemy) => number`，类型实际上还是 `void`。
 
-Check what happens if you define the function with the `number` first.
+尝试一下如果首先使用 `number`来定义函数会怎么样：
 
 ```ts
 let attack = (target: Enemy) => {
@@ -645,13 +645,13 @@ attack = (target: Enemy) => {
 let attackResult = attack(lizard);
 ```
 
-`Type '(target: Enemy) => void' is not assignable to the type '(target: Enemy) => number'`. `Type 'void' is not assignable to the type 'number'`. So, `void` works as `any` in this scenario.
+`Type '(target: Enemy) => void' is not assignable to the type '(target: Enemy) => number'`. `Type 'void' is not assignable to the type 'number'`，所以在这个情况下 `void` 和 `any`类似。
 
-For the `attackResult` the type will be `number`. There is no need to specify it – TS will infer the type from the return type of the function.
+`attackResult`的类型为 `number`，没有必要重新指定，TS 会通过函数的返回类型完成推论。
 
-#### Optional parameters in TypeScript
+<h4 id="optionalparametersintypescript"> TypeScript 中的可选参数</h4>
 
-You can define optional parameters in functions with `?`.
+使用 `?`来定义 TS 函数中的可选参数：
 
 ```ts
 let heal = (target: Player | Enemy, spell: Spell, message?: string) => {
@@ -660,13 +660,13 @@ let heal = (target: Player | Enemy, spell: Spell, message?: string) => {
 };
 
 heal(player1); // Error
-heal(player1, cure, "Healing player1"); // OK
+heal(player1, cure, 'Healing player1'); // OK
 heal(skeleton, cure); // OK
 ```
 
-The first call won't work because we need to pass at least two parameters, but the second and third are fine. `message` is an optional parameter. When not passed it will be received as `undefined`.
+第一个函数调用不成功是因为我们必须至少传入两个参数，后面两次调用成功。 `message`是一个可选参数，如果没有传入的话，就被定义为`undefined`。
 
-If you compare the last example with a simple JS function:
+这个示例转换为 JS 为：
 
 ```ts
 let heal = (target, spell, message) => {
@@ -675,19 +675,19 @@ let heal = (target, spell, message) => {
 };
 
 heal(player1); // Error
-heal(player1, cure, "Healing player1"); // OK
+heal(player1, cure, 'Healing player1'); // OK
 heal(skeleton, cure); // OK
 ```
 
-The basic behavior will be the same, but the difference is that the error will appear at runtime, because in the first call you cannot call `power` from an undefined value.
+两个函数的基本行为一致，只是 JS 的问题会在运行时显示出来，第一个调用出错的原因是不可以从一个没有定义的值获取 `power`。
 
-As you can see from these examples, working with functions is safer in TS because you don't need to rely on what happens outside. You know what parameters must arrive and what form they take.
+从示例中我们可以发现，TS 的函数更安全，因为你不需要依赖外部环境，也清楚知道需要传入什么参数。
 
-The same goes for the people using your function: they will know exactly what parameters are needed, the form, and what they will get from the function.
+这对于其他使用这个函数的开发者说也是一样的，他们知道需要使用什么参数、形式以及会返回什么参数。
 
-### TypeScript Enums
+<h3 id="typescriptenums">TypeScript 枚举（Enum）</h3>
 
-With enums, we can define a collection of constants.
+使用枚举，我们可以定义一个常量集合。
 
 ```ts
 enum BattleMenu {
@@ -706,23 +706,23 @@ enum Equipment {
   LEGS = 4
 }
 
-console.log(BattleMenu.ATTACK, Equipment.WEAPON); 
+console.log(BattleMenu.ATTACK, Equipment.WEAPON);
 // 0 0
 ```
 
-Enums are auto-indexed by default – both statements in the example above are equivalent.
+枚举默认是自动序列化的，示例中的两种声明方式对等。
 
-Enums can also store strings. For example in React I often use enums to store paths:
+也可以使用枚举来存储字符串，我常在 React 中使用枚举来存储路径：
 
 ```ts
 enum Routes {
-  HOME = "/",
-  ABOUT = "/about",
-  BLOG = "/blog"
+  HOME = '/',
+  ABOUT = '/about',
+  BLOG = '/blog'
 }
 ```
 
-### TypeScript Generics
+<h3 id="typescriptgenerics"> TypeScript 泛型(Generics)</h3>
 
 ```ts
 const getPartyLeader = (memberList: Player[]) => {
@@ -732,22 +732,22 @@ const getPartyLeader = (memberList: Player[]) => {
 const partyLeader = getPartyLeader(partyA);
 ```
 
-We want to implement a `getPartyLeader` function that returns the party leader group that is first in the array.
+上面代码想要实现一个 `getPartyLeader` 函数，返回党魁（数组的第一位）。
 
-What if we want to support other types besides `Player`? We can come up with this solution for now:
+如果我们想要函数支持除 `Player`以外的类型呢？根据我们所知的信息，可以采取这样的做法：
 
 ```ts
 const getPartyLeader = (memberList: Player[] | Enemy[]) => {
   return memberList[0];
 };
 
-const partyLeader = getPartyLeader(partyA); 
+const partyLeader = getPartyLeader(partyA);
 // Player[] | Enemy[]
 ```
 
-OK, now we can pass a `Player` group or an `Enemy` group but our `PartyLeader` constant can be either. So the type check is `Player[] | Enemy[]`.
+现在我们可以传入 `Player`组也可以传入 `Enemy`组，但是 `PartyLeader`常数可以为两组中任意一种类型，所以使用 `Player[] | Enemy[]`。
 
-If we want to assign the type exactly, one way is to use generics:
+如果我们想要使用指定类型的话，也可以使用泛型：
 
 ```ts
 const getPartyLeader = <T>(memberList: T[]) => {
@@ -757,11 +757,11 @@ const getPartyLeader = <T>(memberList: T[]) => {
 const partyLeader = getPartyLeader(partyA); // Player
 ```
 
-As `partyA` is full of `Player` types, `partyLeader` will be of type `Player`. But let's check the syntax:
+`partyA` 数组内是`Player`类型， `partyLeader` 就为 `Player`类型。 让我们查看语法：
 
--   `T` is the common way to define a generic, but you can call it whatever you want.
+- `T` 是通常定义泛型的方法，但是你可以采用任意你喜欢的方式。
 
-Now the problem can be, as with `any`, that T accepts everything. So we can adjust what kind of things we want to be able to pass to that function:
+和使用 `any`一样， T 接收任意类型。所以我们可以修改传入的参数类型：
 
 ```ts
 type Player = {
@@ -788,11 +788,11 @@ const enemyPartyLeader = getPartyLeader(partyOfEnemies); // Ok
 const whatAreYouTrying = getPartyLeader(spellList); // Error
 ```
 
-We can now only pass types containing the `hp` property.
+我们只能传入包含`hp`属性的对象。
 
-### Tuples in TypeScript
+<h3 id="tuplesintypescript">TypeScript中的元祖(Tuples)</h3>
 
-As we saw before, an Array can contain different types but is not restricted to position. The Tuple type is just to cover that:
+正如我们之前看到的，数组可以包含不同的类型但不受位置限制。元组可以补充这一点。
 
 ```ts
 type Weapon = {
@@ -806,12 +806,12 @@ type Shield = {
 };
 
 const sword: Weapon = {
-  name: "Onion Sword",
+  name: 'Onion Sword',
   damage: 10
 };
 
 const shield: Shield = {
-  name: "Rusty Shield",
+  name: 'Rusty Shield',
   def: 5
 };
 
@@ -824,11 +824,11 @@ equipment = [shield, sword, false]; // Error
 equipment[1] = true; // Error
 ```
 
-We now have an array-like type, which cares about where the types are placed.
+这样我们就拥有了类数组的类型，它关心类型的放置位置。
 
-### Classes in TypeScript
+<h3 id="classesintypescript"> TypeScript中的类</h3>
 
-With ES6, classes were added to JavaScript. So there is no big difference between JS classes and TS classes.
+由于从 ES6 开始 JS 中添加了类，TS 和 JS 的类大同小异：
 
 ```ts
 class Job {
@@ -843,27 +843,27 @@ class Job {
   }
 }
 
-const whiteMage = new Job("White Mage", 75, false);
+const whiteMage = new Job('White Mage', 75, false);
 
 console.log(whiteMage.name); // "White Mage"
 console.log(whiteMage.level); // Error
 console.log(whiteMage.isExpansion); // false
 
-whiteMage.name = "Blue Mage"; // Ok
+whiteMage.name = 'Blue Mage'; // Ok
 whiteMage.level = 50; // Error
 whiteMage.isExpansion = true; // Error
 ```
 
-In TS classes, you have access modifiers for the properties of a class:
+在 TS 类中，你可以访问类属性的修饰符（modifiers)：
 
--   **public** - properties and methods will be accessible from all locations. This is the value by default.
--   **private** - you can only access to the property inside the same class.
--   **protected** - limits the access to the class and sub classes.
--   **readonly** - marks the property as immutable.
+- **public** - 可以自由访问属性和方法，这时 TS 类的默认值
+- **private** - 只能从声明它的类访问
+- **protected** - 限制声明类和子类访问
+- **readonly** - 标记属性为不可变
 
-### Interfaces in TypeScript
+<h3 id="interfacesintypescript">TypeScript中的接口(interfaces)</h3>
 
-Similar to what we saw with `type aliases`, we can define a type through an `interface`.
+和 `类型别名`（type aliases)相同，我们可以使用`接口`(interfaces)来定义类：
 
 ```ts
 interface Enemy {
@@ -876,93 +876,93 @@ let attack = (target: Enemy): void => {
 };
 ```
 
-So, it seems to be the same as `type aliases`, right? Which one to use there? Both have been gaining capabilities over the different versions of TS and the nuances between them are now very slight.
+是不是看上去和`类型别名`很像？那应该使用哪一个呢？两种方法都可以控制不同类型的 TS，并且区别非常小：
 
-You should follow these rules:
+你可以遵循以下规则来做取舍：
 
--   If you write object-oriented code, use interfaces. If you write functional code, use type aliases.
--   Use interfaces for public API libraries and types for components, state, JSX, etc.
+- 如果你编写面向对象的代码，可以使用接口，如果你编写函数式代码，可以使用 aliases。
+- 公共 API 库、组件类型、state、JSX 使用接口。
 
-For that reason I included in the boilerplates that ESLint autofixes interfaces to types.
+因此，我在样板中加入了 ESLint 自动将类型别名转换为接口。
 
-If you want to go deeper into the differences you can read [this post in the TS Handbook](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces) but nowadays most of the features present in an interface are in a type as well, and vice versa.
+如果想要深入了解两者的区别，可以阅读[TS 手册中的这篇文章](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#differences-between-type-aliases-and-interfaces) ，但现在很多使用接口的功能都可以使用类型别名，反之亦然。
 
-### DOM Manipulation in TypeScript
+<h3 id="dommanipulationintypescript">TypeScript中的DOM操作</h3>
 
-In React we won't use (directly) much DOM manipulation. But I think it's useful to know how it works.
+虽然在 React 中直接操作 DOM 的机会不多，但是我觉得还是有必要知道 DOM 的相关知识。
 
-#### How to Retrieve elements from the DOM
+#### 如何从 DOM 检索元素
 
 ```ts
 // HTMLFormElement | null
-const form = document.querySelector("form");
+const form = document.querySelector('form');
 
 // HTMLElement | null
-const otherForm = document.getElementById("myFancyForm");
+const otherForm = document.getElementById('myFancyForm');
 
 // HTMLSelectElement
-const select = document.createElement("select"); 
+const select = document.createElement('select');
 ```
 
-When we perform `document.querySelector("form")` our constant `form` is inferred with type `HTMLFormElement` or `null`. But in the second example, we get a form via its ID. The TS does not know what exact HTML element it is, so it gives a more generic type `HTMLElement`.
+执行`document.querySelector("form")`时， 常量`form`被类型推论为`HTMLFormElement` 或 `null`。 但在第二个例子中，我们通过 ID 来获取 dom，TS 并不知道是什么 HTML 元素，所以推论为泛型 `HTMLElement`。
 
 ```ts
-const form = document.querySelector("form");
+const form = document.querySelector('form');
 
-form.addEventListener("submit", (e: Event) => {
+form.addEventListener('submit', (e: Event) => {
   e.preventDefault();
   console.log(e);
 }); // Error
 ```
 
-TS doesn't know if it will find anything in the HTML about the query selector, so it can't assign the `addEventListener` function to a possible null type. You can fix this in three ways.
+TS 不知道是否能够通过查询选择器在 HTML 找到元素，所以不能对一个可能为 null 的类型添加 `addEventListener` 函数，你可以这样修改：
 
-I promise you that you will find that element:
+我确认会找到元素：
 
 ```ts
 // HTMLFormElement
-const form = document.querySelector("form")!; 
+const form = document.querySelector('form')!;
 ```
 
-With `!` you tell TS not to worry, it will find it, and it can't be `null`.
+使用 `!` 告诉 TS 放心，一定不会是`null`。
 
-Do it only if it is not null:
+如果不为 null 运行：
 
 ```ts
-const form = document.querySelector("form");
+const form = document.querySelector('form');
 
-form?.addEventListener("submit", (e: Event) => {
+form?.addEventListener('submit', (e: Event) => {
   e.preventDefault();
   console.log(e);
 });
 ```
 
-You may have already seen `?` of [JS Optional Chaining operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
+你可能在 [JS 可选链式运算符](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)中见过“？”。
 
-It's type casting time:
+是铸造类型的时候了：
 
 ```ts
-const otherForm = document.getElementById("myFancyForm") as HTMLFormElement;
+const otherForm = document.getElementById('myFancyForm') as HTMLFormElement;
 
-otherForm.addEventListener("submit", (e: Event) => {
+otherForm.addEventListener('submit', (e: Event) => {
   e.preventDefault();
   console.log(e);
 });
 ```
 
-You tell TS what type it will get when it finds that element. With this, you make sure it will be `HTMLFormElement` and not `null`.
+通过 `HTMLFormElement` 告诉 TS 会找到什么类型的元素，而不是 `null`。
 
-## How to Combine React + TypeScript
+<h2 id="dommanipulationintypescript"> 如何结合React + TypeScript</h2>
 
-Let's get started with the second secion of this article. Remember, the first section was about why to use TypeScript in general, how to use it, and an overview of the language.
+让我们进入文章的第二个部分，记住，在第一个部分我们探讨了为什么使用 TypeScript，如何使用，以及这个语言的概览。
 
-In this second section you can take a closer look at how to use TypeScript in React and how to solve the different challenges you will face when trying to develop an app with React and TypeScript.
+在这个部分，我们将学习如何在 React 中使用 TypeScript，如何解决相应的难题，以及如何使用 React 和 TypeScript 共同创建一个应用。
 
-### Setup
+<h3 id="setup"> 设置</h3>
 
 #### Create React App
 
-For [CRA](https://create-react-app.dev) users, you only need to specify the template:
+对于 [CRA](https://create-react-app.dev) 用户来说，你们只需要设定模板：
 
 ```bash
 npx create-react-app my-awesome-project --template typescript
@@ -970,77 +970,77 @@ npx create-react-app my-awesome-project --template typescript
 
 #### Vite
 
-Creating a TypeScript project with [Vite](https://vitejs.dev) is as easy as using the CLI and choosing the TypeScript template.
+使用 [Vite](https://vitejs.dev) 创建 TypeScript 项目和使用 CLI 一样简单，只需要选择 TypeScript 模板：
 
 ```bash
 npm create vite@latest my-awesome-project
 ```
 
-#### Add to existing project
+#### 添加到现有项目
 
-If you want to add TypeScript to a project that is in JavaScript, just add TypeScript as a development dependency.
+如果你想要对已经存在的 JavaScript 项目添加 TypeScript，只需要添加对应开发依赖项：
 
 ```bash
 npm install -D typescript
 ```
 
-I should warn you that if this is your first encounter with TypeScript, I do not recommend that you try it on a project that you have already built. This is because your experience will be to constantly think that you have something working and that it is all just more work for nothing. But that cannot be further from the real benefits of TypeScript.
+需要提醒你的事，如果是首次使用 TypeScript，不建议你从现有的项目着手。因为这样的话，你会不断地认为有一些部分还能运转，这对于学习来说没什么好处，你没办法从中体会 TypeScript 的优势。
 
-### Typing Component Props
+<h3 id="typingcomponentprops"> 设置组件Props类型</h3>
 
-The first and most common scenario when using TypeScript in a React project is to write the props for a component.
+在 React 项目中使用 TypeScript 最常用的场景是编写组件 props。
 
-To correctly write the component props, you need to specify what properties you are accepting on the component, the type, and if it is required or not.
+想要正确地编写组件 props，必须定义清楚组件接受什么样的 props、props 类型以及是否是必要的。
 
 ```ts
 // src/components/AnimeDetail/Cover/index.tsx
 
 type CoverProps = {
-  url: string
-}
+  url: string;
+};
 
 export default function Cover({ url }: CoverProps) {
   // ...
 }
 ```
 
-We only use a `url` prop which is a `string` and is a mandatory prop.
+我们只使用 `url` prop ，类型为 `string` 并且是强制的。
 
-Another example with more props and optionals:
+另一个有多个 props 和可选项的例子：
 
 ```ts
 // src/components/AnimeDetail/StreamingList/PlatformLink/index.tsx
 
 type PlatformLinkProps = {
-  name: string
-  url?: string
-}
+  name: string;
+  url?: string;
+};
 
 export default function PlatformLink({ name, url }: PlatformLinkProps) {
   // ...
 }
 ```
 
-With `?` we are indicating that it is an optional parameter, so TypeScript knows that the type of `url` in this case will be `string` or `undefined`. Also, consumers of this component will not get an error if they do not pass a `url` prop to the component.
+使用 `?` 来定义可选参数， TypeScript 知道在这个例子中`url` 的类型是 `string`，默认值为`undefined`，即便未传入`url` ，消费组件也不会报错。
 
-Let's look at one last, more complex example:
+让我们看一个更复杂的例子：
 
 ```ts
 // src/components/AnimeDetail/Detail/index.tsx
 
-type AnimeType = 'TV' | 'Movie'
+type AnimeType = 'TV' | 'Movie';
 
 type DetailProps = {
-  liked: boolean
-  toggleFav: () => void
-  title: string
-  type: AnimeType
-  episodeCount: number
-  score: number
-  status: string
-  year: number
-  votes: number
-}
+  liked: boolean;
+  toggleFav: () => void;
+  title: string;
+  type: AnimeType;
+  episodeCount: number;
+  score: number;
+  status: string;
+  year: number;
+  votes: number;
+};
 
 export default function Detail({
   liked,
@@ -1051,68 +1051,68 @@ export default function Detail({
   score,
   status,
   year,
-  votes,
+  votes
 }: DetailProps) {
   // ...
 }
 ```
 
-This time you can see a myriad of types, including a `function` and a custom type `AnimeType`.
+这次包含无数类型，包括 `function`和一个自定义类型 `AnimeType`。
 
-So, to summarise, writing props is useful for:
+所以总结一下，使用 TS 来编写 props：
 
--   Actual validation of the prop type from the consumer's side.
-    -   No more guessing what a component needs.
-    -   No more opening a component's source code to check what it does with the data.
--   Auto-completion and documentation
-    -   Know directly from the consumer what props and values are needed through auto-completion without knowing in advance.
+- 对于消费组件来说的 props 验证
+  - 不需要猜测组件需要什么
+  - 不需要打开组件源码来检查需要什么数据
+- 自动填充和文档记录
+  - 直接从消费组件端知道自动填充的 prop 和 value，不需要提前浏览
 
 ![autocomplete](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript2%2Fautocomplete.webp&w=1920&q=75)
 
-Of course, this will absolutely shine on complex components and third party components that come from fancy libraries you use in your project.
+如果是使用复杂的组件，或是从第三方库使用组件的，这一定可以派上用场。
 
-#### React Built-in Types
+<h4 id="reactbuiltintypes"> React内置类型</h4>
 
-With React and a lot of libraries, you will find tons of pre-built types to ease your experience as a developer. For example in React it is quite common to have the following component:
+在 React 和很多其他的库中，你会发现大量预置的类型，可以减轻开发者的编写负担。如以下示例：
 
 ```ts
 // src/components/Layout/index.tsx
 
 type LayoutProps = {
-  children: React.ReactNode
-}
+  children: React.ReactNode;
+};
 
 export default function Layout({ children }: LayoutProps) {
   // ...
 }
 ```
 
-A custom React component that receives other element as children. For those cases you will define `children` as a `ReactNode` type.
+一个自定义的 React 组件，接受其他元素作为子元素，在这种情况下 `children`被定义为`ReactNode` 类型。
 
-##### A warning about React.FC && React.FunctionComponent
+##### 一个关于 React.FC 和 React.FunctionComponent 的提醒
 
-You may find code with this syntax for declaring component props:
+你可以能会遇到这样定义组件 props 的语法：
 
 ```ts
 type PlatformLinkProps = {
-  name: string
-  url?: string
-}
+  name: string;
+  url?: string;
+};
 
 const PlatformLink: React.FC<PlatformLinkProps> = ({ name, url }) => {
   // ...
-}
+};
 ```
 
-This code works using `React.FC`, or its longer version `React.FunctionComponent`. But you should know that it has some disadvantages and that is why we are not using it in this article:
+使用 `React.FC`或者使用 `React.FunctionComponent`时，上面的代码生效，但是你需要知道这样使用的弊端，也就是为什么在本文中我们不这样用：
 
--   You have to use a function expression and you can't use a function declaration. This is a minor point, but I built all components with function declaration on purpose.
--   You can't use generics (we'll see this later).
--   In the past, this caused your props to indirectly accept the `children` property and in this component you don't use it. This was true until React 18, nowadays it doesn't apply.
+- 必须使用函数表达式而不是函数声明，虽然这是一个很小的点，但是我的编码习惯是使用函数声明。
+- 不可以使用泛型（之后会讨论）。
+- 在过去，这样会导致 props 非直接地接受`children`属性，即便该组件并不使用这个属性。直到 React18 之后，这个问题才改善。
 
-#### Return type of a React component
+<h4 id="returntypeofareactcomponen"> React 组件的返回类型</h4>
 
-Last piece of the puzzle, what does a component return? You can use React's built-in types `React.ReactElement`, `React.ReactNode` and `JSX.Element`:
+最后一块拼图，组件返回什么？可以使用内置的类型：`React.ReactElement`、 `React.ReactNode`和 `JSX.Element`:
 
 ```ts
 export default function Favorites(): JSX.Element {
@@ -1120,188 +1120,187 @@ export default function Favorites(): JSX.Element {
 }
 ```
 
-To summarise the answer from this section: **let TypeScript automatically infer the return type**. If you need a detailed list of the differences between those 3 types, I suggest you [have a look at this SO post](https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement)
+总结一下： **让 TypeScript 自行推论返回类型**。 如果你需要这一部分的详细介绍，我推荐[阅读这个来自 stack overflow 的帖子](https://stackoverflow.com/questions/58123398/when-to-use-jsx-element-vs-reactnode-vs-reactelement)。
 
-#### Combinations with Template Literals
+<h4 id="combinationswithtemplateliterals"> 集合模板字面量 </h4>
 
-Inside [AnimeTrailers](https://animetrailers.dastasoft.com/) I have included a simple custom UI that will be useful to demonstrate cases like this. You can check the different simple components in `src/components/UI` but most of them will be explained through this guide.
+在[动漫预告片项目](https://animetrailers.dastasoft.com/)中，我引入的一个自定义 UI 就是很好的示例。你可以查看`src/components/UI`中的组件，其中大部分内容都会在本文讨论：
 
-Let's take a look at the `Position` custom component:
+让我们看一下自定义组件`Position`：
 
 ```ts
 // src/components/UI/Position/index.tsx
 
-import React from 'react'
+import React from 'react';
 
-import { StyledPosition } from './StyledPosition'
+import { StyledPosition } from './StyledPosition';
 
-type VPosition = 'top' | 'bottom'
-type HPositon = 'left' | 'right'
+type VPosition = 'top' | 'bottom';
+type HPositon = 'left' | 'right';
 
-export type PositionValues = `${VPosition}-${HPositon}`
+export type PositionValues = `${VPosition}-${HPositon}`;
 
 type PositionProps = {
-  children: React.ReactNode
-  position?: PositionValues
-}
+  children: React.ReactNode;
+  position?: PositionValues;
+};
 
 export default function Position({
   children,
-  position = 'top-right',
+  position = 'top-right'
 }: PositionProps) {
-  return <StyledPosition position={position}>{children}</StyledPosition>
+  return <StyledPosition position={position}>{children}</StyledPosition>;
 }
 ```
 
-Position is a simple component to use with any other component with absolute positon and place it on any of the four edges with `top-left`, `top-right`, `bottom-left` and `bottom-right`.
+Position 是一个简单的组件，可以与任何其他具有绝对位置的组件一起使用，可以通过 `top-left`, `top-right`, `bottom-left`和 `bottom-right`将组件放置在四个边上。
 
-Creating a new type with template literals is no secret if you are already using it in JavaScript. The clever trick here is when you combine template literals `${VPosition}-${HPositon}` with union types `top` | `bottom` like in the example above, TypeScript will generate all possible combinations of both. This lets us generate the four different values we need.
+使用字面量模板来创建新的类型并不新鲜，在这里有趣的地方是结合 `${VPosition}-${HPositon}`和联合类型 `top` | `bottom` ，TypeScript 会自动生成所有组合，就可以创建我们需要的四种类型。
 
-#### How to use `Exclude`
+<h4 id="howtouseexclude"> 如何使用 `Exclude`</h4>
 
-Let's take the previous example and add more values to the union:
+让我们给上面的例子添加更多值：
 
 ```ts
-type VPosition = 'top' | 'middle' | 'bottom'
-type HPositon = 'left' | 'center' | 'right'
+type VPosition = 'top' | 'middle' | 'bottom';
+type HPositon = 'left' | 'center' | 'right';
 
-export type PositionValues = `${VPosition}-${HPositon}`
+export type PositionValues = `${VPosition}-${HPositon}`;
 ```
 
-This template literal will generate all possible combinations of unions, so we will have `"top-left" | "top-center" | "top-right" | "top-left" | "center-left" | "center-right" | "bottom-left" | "bottom-center" | "bottom-right"`.
+模板会创建所有可能的组合，所以我们将拥有 `"top-left" | "top-center" | "top-right" | "top-left" | "center-left" | "center-right" | "bottom-left" | "bottom-center" | "bottom-right"`。
 
-There is one case that is a bit strange, `middle-center`. In this case you may want to simply put `center`, in which case `Exclude` is very useful.
+有一条比较奇怪： `middle-center`，我们只需要`center`，这时就可以使用 `Exclude` ：
 
 ```ts
 type PositionValues =
   | Exclude<`${VPosition}-${HPositon}`, 'middle-center'>
-  | 'center'
+  | 'center';
 ```
 
-Now `PositionValues` will generate `"center" | "top-left" | "top-center" | "top-right" | "middle-left" | "middle-right" | "bottom-left" | "bottom-center" | "bottom-right"`.
+这时 `PositionValues`会生成`"center" | "top-left" | "top-center" | "top-right" | "middle-left" | "middle-right" | "bottom-left" | "bottom-center" | "bottom-right"`。
 
-With exclude you can remove the `middle-center` and add `center` afterwards with a union.
+使用 exclude 删除`middle-center`之后再添加`center`。
 
-#### Custom HTML Components
+<h4 id="customhtmlcomponents"> 自定义 HTML 组件</h4>
 
-If you want to create a component that behaves like an `input` but you don't want to write every single property and function of the input HTML, you can achieve this with:
+如果你想创建一个行为类似`input`的组件，但是你又不想编写 input HTML 的所有属性和方法，你可以这样：
 
 ```ts
 // src/components/UI/Input/index.tsx
 
-import React from 'react'
+import React from 'react';
 
-import styles from './StyledInput.module.css'
+import styles from './StyledInput.module.css';
 
-type InputProps = React.ComponentProps<'input'>
+type InputProps = React.ComponentProps<'input'>;
 
 const Input = React.forwardRef(
   (props: InputProps, ref: React.Ref<HTMLInputElement>) => {
-    return <input {...props} className={styles.StyledInput} ref={ref} />
+    return <input {...props} className={styles.StyledInput} ref={ref} />;
   }
-)
+);
 
-export default Input
+export default Input;
 ```
 
-With `React.ComponentProps` you can specify which element you are basing your new type on and get everything a real HTML input has to create a custom UI component. But what happens when you want to override some of these properties or forbid their use?
+使用`React.ComponentProps`，你可以指定你需要基于什么类型创建一个组件，获取一个真正的 HTML input 的功能来自定义 UI 组件。但如果你想覆盖掉一些属性甚至禁用怎么办？
 
-##### Omit
+##### 忽略（Omit）
 
-Let's take a look at the `Tag` UI component:
+让我们以 UI 组件中的 `Tag`为例：
 
 ```ts
 // src/components/UI/Tag/index.tsx
 
-import React from 'react'
+import React from 'react';
 
-import { StyledTag } from './StyledTag' // aka a styled span
+import { StyledTag } from './StyledTag'; // aka a styled span
 
 type TagProps = {
-  variant?: 'solid' | 'outlined'
-  text: string
-} & Omit<React.ComponentProps<'span'>, 'children'>
+  variant?: 'solid' | 'outlined';
+  text: string;
+} & Omit<React.ComponentProps<'span'>, 'children'>;
 
 export default function Tag({ text, variant = 'solid' }: TagProps) {
-  return <StyledTag variant={variant}>{text}</StyledTag>
+  return <StyledTag variant={variant}>{text}</StyledTag>;
 }
 ```
 
-In this case, this component explicitly passes a `text` to display as `children` of the component. You may not want consumers of this component to use the original `children`, so you can omit that property from the collection given by `React.ComponentProps`.
+在这个例子中，我们显式地传递了一个`text`展示组件的 `children` 。你或许不希望消费组件使用原始的`children`，你可以忽略掉 `React.ComponentProps`中的这个属性。
 
-### Typing Hooks
+<h3 id="typinghooks"> 定义Hook的类型</h3>
 
-Now let's dive into how to write each of the most commonly used hooks in React.
+现在让我们看一下如何编写 React 中一些常用的 hook。
 
-#### useState hook
+<h4 id="usestatehook"> useState hook</h4>
 
-In most cases, typing `useState` will not require anything from you, because TypeScript will try to infer the type. In other scenarios, for example when the initial value is different from future values, you need to specify it directly.
+大多数情况下，`useState` 不需要额外的操作，TypeScript 会自行推论。但是如果初始值和未来值不同则需要特别声明。
 
 ```ts
 // src/pages/Search.tsx
 
 export default function Search() {
-  const [animeList, setAnimeList] = useState<Anime[] | null>(null)
-  const [page, setPage] = useState(1)
+  const [animeList, setAnimeList] = useState<Anime[] | null>(null);
+  const [page, setPage] = useState(1);
   // const [page, setPage] = useState<number>(1)
   // ...
 }
 ```
 
-From the state `page`, the type is inferred as a number based on the initial value provided. It will be exactly the same as the commented version. Also state setters are automatically typed as `React.Dispatch<React.SetStateAction<number>>` with `number` replaced by the inferred/specified type.
+`page`的状态可以根据初始值推论为数字，它的行为和注解里的代码一模一样。state 的 setter 也会定义为 `React.Dispatch<React.SetStateAction<number>>`， `number`来替换推论的类型。
 
-On the other hand `animeList` without any explicit type would be only `null`. This is true before the component gets the necessary data but will eventually contain a collection of `Anime` types for which you must explicitly set the type with a union of the two possible types.
+如果`animeList` 没有任何显式类型的话就为 `null`。在组件获取必要的数据之前这都是正确的，但是最终会是包含 `Anime`类型集合，所以必须将这个类型显式地设置为这两个可能类型的组合。
 
-Beyond setting the type to null for initial control states in useState, there are other similar solutions, such as:
+除了给 useState 的初始 state 设置为 null 以外，还可以：
 
 ```ts
 export default function Search() {
   // const [animeList, setAnimeList] = useState<Anime[] | null>(null)
-  const [animeList, setAnimeList] = useState<Anime[]>([])
-  const [anime, setAnime] = useState<Anime>({} as Anime)
+  const [animeList, setAnimeList] = useState<Anime[]>([]);
+  const [anime, setAnime] = useState<Anime>({} as Anime);
   // ...
 }
 ```
 
-It's important to take a closer look at the `anime, setAnime` line. In that case it works because it is not a collection, but rather is a single element.
-
-The main difference with these additional solutions is that you are not 100% honest with the compiler. You are assuming that you will have a value with that shape, and that has an implicit risk.
+请仔细观察 `anime, setAnime` 代码行，它之所以生效是因为这不是一个集合，而是单个元素。
+这里的区别在于你对编译器没有完全诚实，你预设会得到这个对象形状(shape)的值，有一定风险。
 
 ```ts
 export default function Search() {
-  const [anime, setAnime] = useState<Anime>({} as Anime)
+  const [anime, setAnime] = useState<Anime>({} as Anime);
   // ...
 
-  return <div>{anime.coverURL}</div>
+  return <div>{anime.coverURL}</div>;
 }
 ```
 
-If you do not provide a correct value with this option, this may explode at runtime.
+如果没有在可选项中提供正确的值，会在运行时报错。
 
-##### How to pass state as props
+##### 如何将 state 作为 props 传递
 
-Quite often you may need to pass state down in the hirearchy and delegate to a child when a state is read or set. You will need to write the props for that component with state types in mind.
+多数情况下，是由上至下传递 state，并且等 state 完成或者设置好了才能传递到子组件，所以需要在编写 props 的时候想好状态的类型。
 
 ```ts
 type FancyComponentProps = {
-  anime: Anime,
-  setAnime: React.Dispatch<React.SetStateAction<Anime>>
-}
+  anime: Anime;
+  setAnime: React.Dispatch<React.SetStateAction<Anime>>;
+};
 
-const FancyComponent = ({anime, setAnime}: FancyComponentProps) => {
+const FancyComponent = ({ anime, setAnime }: FancyComponentProps) => {
   // ...
-}
+};
 ```
 
-It is best to understand what types you need to pass. But if you have difficulty with that, you can check the current state variables and the IDE will tell you what you need to pass.
+最好清楚自己传递的是什么类型。如果你觉得困难的话，可以使用 IDE 的提示。
 
 ![type intellisense](https://blog.dastasoft.com/_next/image?url=%2Fassets%2Fposts%2Fcontent%2Ftypescript2%2Ftype-intellisense.webp&w=1920&q=75)
 
-#### useReducer hook
+<h4 id="usereducerhook"> useReducer hook</h4>
 
-At this point you have mostly all the tools to correctly define the types for `useReducer`.
+你已经具备正确定义 `useReducer`所需的所有知识。
 
-For the following example, I have simplified it here and we will cover the actual code in the Generics section.
+下面的例子中我简化了代码，正式代码会在泛型部分讲解：
 
 ```ts
 // src/hooks/useFetch.ts
@@ -1309,96 +1308,98 @@ For the following example, I have simplified it here and we will cover the actua
 const enum ACTIONS {
   LOADING,
   FETCHED,
-  ERROR,
+  ERROR
 }
 
 type State = {
-  data?: Anime[]
-  loading: boolean
-  error?: Error
-}
+  data?: Anime[];
+  loading: boolean;
+  error?: Error;
+};
 
 type Action =
   | { type: ACTIONS.LOADING }
   | { type: ACTIONS.FETCHED; payload: Anime }
-  | { type: ACTIONS.ERROR; payload: Error }
+  | { type: ACTIONS.ERROR; payload: Error };
 
 const initialState: State = {
   loading: true,
   error: undefined,
-  data: undefined,
-}
+  data: undefined
+};
 
 const fetchReducer = (state: State, action: Action): State => {
-    switch (action.type) {
-      case ACTIONS.LOADING:
-        return { ...initialState }
-      case ACTIONS.FETCHED:
-        return { ...initialState, data: action.payload, loading: false }
-      case ACTIONS.ERROR:
-        return { ...initialState, error: action.payload, loading: false }
-      default:
-        return state
-    }
+  switch (action.type) {
+    case ACTIONS.LOADING:
+      return { ...initialState };
+    case ACTIONS.FETCHED:
+      return { ...initialState, data: action.payload, loading: false };
+    case ACTIONS.ERROR:
+      return { ...initialState, error: action.payload, loading: false };
+    default:
+      return state;
   }
+};
 
-const [state, dispatch] = useReducer(fetchReducer, initialState)
+const [state, dispatch] = useReducer(fetchReducer, initialState);
 ```
 
-As always, you get a `status` and a `dispatch` from `useReducer` when you provide a `reducer function` and an `initial state`. You don't need to do anything in the useReducer itself, but you must write the `state` and `actions` because this will define how the state and dispatch will behave.
+和往常一样， `status` 和 `dispatch` 来自于使用 `useReducer`时的 `reducer function` 以及一个 `initial state`。你不需要额外编写其他内容，但是你必须编写`state` 和 `actions`，因为 state 和 dispatch 的行为是根据它们来的。
 
 ##### initialState
 
-For the `initial state` you can simplify the process. Instead of creating a `State` type, you can use `typeof initialState` whenever you need to define a type based on the initial state.
+我们可以简化`initial state` 这个部分。 不是创建一个`State`类型，而是使用 `typeof initialState` 来定义。
 
 ```ts
 const initialState: State = {
   loading: true,
   error: undefined,
-  data: undefined,
-}
+  data: undefined
+};
 
 const fetchReducer = (state: typeof initialState, action: Action) => {
   // ...
-}
+};
 ```
 
-The drawback of this version is that it does not control the future values of `data` and `error`. This may work when the type is always the same but it is not the case here so you can use a custom `State` type for that.
+这样写的弊端是无法控制未来的 `data`和`error`的值，如果 state 的类型始终保持一致的话，没有问题，除此之外可以使用 `State`类型。
 
 ##### Actions
 
-You have to specify which actions the reducer will be able to handle, and you do that with unions. The enum part is entirely optional, but it helps to be less error-prone than writing strings in several places.
+你可以使用组合（union）来处理 reducer 的 action 部分，你也可以选择使用枚举（Emun），这样写的话比在多个地方写字符串要更不容易出错。
 
 ##### reducer function
 
-You only have to specify the types of the params passed to the function, which are in fact the ones you created in the previous steps.
+你只需要指定传入函数的参数的类型，这个已经在上一部分完成。
 
-##### Passing as props
+##### 作为 props 传递
 
-Again, if you want to pass something from useReducer as a prop, you will have to write the consumer props accordingly.
+另外，如果你需要从 useReducer 传出 prop，你必须编写对应的消费组件 props。
 
--   `state` will be the type you have defined in your `initialState` and/or a custom `State` type as in the example above.
--   `dispatch` will be `React.Dispatch<Action>` where `Action` is the custom type for actions.
+- `state` 必须是你定义在 `initialState` 的类型，或者是例子中的自定义 `State`类型。
+- `dispatch` 是 `React.Dispatch<Action>` 中自定义 `Action`类型。
 
-#### useContext
+<h4 id="usecontext"> useContext </h4>
 
-The context in the example project is used to manage a list of anime you like and toggle the state at different points in the application. At this point `useContext` shouldn't give you any trouble because it is simply a combination of what you have seen so far – but let's look at an example:
+示例项目中的上下文用于管理你喜欢动漫的列表，你可以在应用不同地方切换它们的 state。 `useContext` 并不是一个难点，使用它的方法就是上述内容的结合——让我们一起看代码：
 
 ```ts
 // src/context/FavContext.tsx
 
 type FavContextType = {
-  favList: Favorite[]
+  favList: Favorite[];
   // setFavList: React.Dispatch<React.SetStateAction<Favorite[]>>
-  toggleFav: (id: number, favorite: Favorite) => void
-}
+  toggleFav: (id: number, favorite: Favorite) => void;
+};
 
-export const FavContext = createContext({} as FavContextType)
+export const FavContext = createContext({} as FavContextType);
 
 export const FavContextProvider = ({ children }: FavContextProviderProps) => {
-  const [favList, setFavList] = useState<Favorite[]>([])
+  const [favList, setFavList] = useState<Favorite[]>([]);
 
-  const toggleFav = (id: number, favorite: Favorite) => { /* ... */ }
+  const toggleFav = (id: number, favorite: Favorite) => {
+    /* ... */
+  };
 
   // ...
 
@@ -1406,196 +1407,197 @@ export const FavContextProvider = ({ children }: FavContextProviderProps) => {
     <FavContext.Provider value={{ favList, toggleFav }}>
       {children}
     </FavContext.Provider>
-  )
-}
+  );
+};
 ```
 
-`useContext` follows the same rules as `useState` for typing. In this case, the initial value will be null but we trick TypeScrpt with `as` on `createContext` and define an object that will contain an array of `favourite animes` and a function to toggle.
+`useContext`和 `useState`定义类型的规则相同。在我们的示例中，初始值应该为 null，但是我们使用了一个小技巧，在`createContext`添加`as`，并且定义了一个对象，包含一个`favourite animes`数组，和负责切换的函数。
 
-Commented you have the typical setter scenario in case you need it.
+注解部分是你根据场景需要的特定 setter。
 
-For the rest of the code, you already learned `useState` in the previous section so nothing new. With the `Favorite` type, useState will determine the necessary types and those types will be available directly on the consumer side.
+接下来的代码都是你在 `useState` 中学过的内容。 在 `Favorite` 类型中，useState 会推断必要的类型，这些类型可以直接在消费组件中访问。
 
 ```ts
 // src/components/AnimeDetail/index.tsx
 
-const { favList, toggleFav } = useContext(FavContext)
+const { favList, toggleFav } = useContext(FavContext);
 ```
 
-#### useRef hook
+<h4 id="userefhook"> useRef hook</h4>
 
-You can use `useRef` in two different ways, so the typing will be slightly different in each case.
+可以通过两种方式来使用 `useRef`，我们将分别讲解。
 
-##### DOM references
+##### DOM 引用
 
-One of the uses of `useRef` is to keep a reference to a DOM element.
+其中一个方式是使用`useRef`保持一个 DOM 元素的引用 。
 
-In the example project, you'll find this for infinite scrolling by holding a reference to an observable of the last item in the anime list. This lets you know when the user is viewing that item in the viewport and trigger a new fetch.
+在示例项目中，通过持有对动画列表中最后一项的可观察对象的引用，你会发现它可以无限滚动。这让你知道用户何时在视口中查看该项目并触发新的获取。
 
-Let's look at a shorter example of useRef for the DOM reference, but you can [check the full version of the useRef + observer](https://github.com/dastasoft/animetrailers/blob/main/src/components/AnimeList/index.tsx):
-
-```ts
-  const myDomReference = useRef<HTMLInputElement>(null)
-
-  useEffect(() => {
-    if(myDomReference.current) myDomReference.current.focus()
-  }, [])
-```
-
-A typical case might be when a page loads and you want an automatic focus on an input. Just specify the type of the DOM element being referenced, in this case `HTMLInputElement`.
-
-Some considerations about the above code:
-
--   The hook will return a read-only `current` property.
--   You don't need to manually write `current`. React will handle it through `React.RefObject<HTMLInputElement>` in this case.
--   If the DOM element is always present, you can set the initial value to `null!` and avoid the if check.
-
-##### Mutable references
-
-The second use of `useRef` is when you want to keep mutable values between renders. For example, in cases where you need a unique variable for each instance of a component that survives between renders and does not trigger a re-render.
+让我们查看使用 useRef 来引用 DOM 一个更简短的示例，你也可以 [查看 useRef + observer 的完整版本](https://github.com/dastasoft/animetrailers/blob/main/src/components/AnimeList/index.tsx):
 
 ```ts
-const isFirstRun = useRef(true)
+const myDomReference = useRef<HTMLInputElement>(null);
 
 useEffect(() => {
-  if(isFirstRun) {
-    // ...
-    isFirstRun.current = false
-  }
-}, [])
+  if (myDomReference.current) myDomReference.current.focus();
+}, []);
 ```
 
-Some considerations you will notice compared to the previous example:
+一个典型的情况是当页面加载的时候，你希望自动聚焦在输入框，只需要指定好引用的 DOM 元素，在这个示例中就是`HTMLInputElement`。
 
--   You can now mutate the value inside `current`.
--   React provides `React.MutableRefObject<boolean>` is now a `MutableRefObject` instead of `RefObject`.
+使用上面代码需要注意的是：
 
-### Forwarding ref
+- 钩子会返回一个只读的 `current` 属性。
+- 你不需要手动编写`current`，React 会通过`React.RefObject<HTMLInputElement>`处理。
+- 如果 DOM 元素永远指向现在，你可以将初始值设定为 `null!` 以避开 if 检查。
 
-If at some point you need to pass a reference to an HTML element as in the `useRef` section, writing the props for that component will be slightly different:
+##### 可变引用
+
+`useRef` 的第二个使用场景是在渲染之间保持可变值。例如，在你需要为组件的每个实例提供一个唯一变量的情况下，该变量在渲染之间存在并且不会触发重新渲染。
+
+```ts
+const isFirstRun = useRef(true);
+
+useEffect(() => {
+  if (isFirstRun) {
+    // ...
+    isFirstRun.current = false;
+  }
+}, []);
+```
+
+使用上面代码，你需要注意的是：
+
+- 现在你可以改变`current`的值。
+- React 提供的 `React.MutableRefObject<boolean>`现在是`RefObject`内部的`MutableRefObject`（可变引用对象）。
+
+<h3 id="forwardingref">传递ref</h3>
+
+如果在某些时候你需要像 useRef 部分那样传递对 HTML 元素的引用，那么为该组件编写 props 会略有不同：
 
 ```ts
 // src/components/AnimeGrid/Card/index.tsx
 
 const Card = React.forwardRef(
-(
-  { id, coverURL, title, status, score, type, year }: CardProps,
-  ref: React.Ref<HTMLImageElement>
-) => {
-  // ...
-})
+  (
+    { id, coverURL, title, status, score, type, year }: CardProps,
+    ref: React.Ref<HTMLImageElement>
+  ) => {
+    // ...
+  }
+);
 ```
 
-To pass the reference you will need to wrap your component with `React.forwardRef`. That will inject along with the regular props of the component the `ref` (which will be any HTML element wrapped in the `React.Ref` type).
+要传递引用，需要用`React.forwardRef`打包组件，这将与组件的常规 props 一起注入 `ref`（是包装在 `React.Ref` 类型中的任何 HTML 元素）。
 
-In this case we know the type of the HTML element we are forwarding to, but if this is not your case, this might be a good time to use generics.
+这样我们就知道我们传递的 HTML 元素的类型，如果你的使用场景不是这样，可以使用泛型。
 
-### How to Use TypeScript Generics in React
+<h3 id="howtousetypescriptgenericsinreact">如何在React中使用TypeScript范型</h3>
 
-Let's imagine we want to create a custom UI component by wrapping existing HTML elements but giving it a set of custom properties as most component libraries do.
+假设我们想通过包装现有的 HTML 元素来创建自定义 UI 组件，但像大多数组件库一样为它提供一组自定义属性。
 
-Most of these libraries also provide the flexibility to decide which HTML element is finally rendered with an `as` property – and that is exactly the case for the `Text` UI component.
+这些组件库也提供一些灵活性，如哪一个 HTML 元素被渲染由 `as`属性控制 – `Text` UI 组件的示例就是这样。
 
-This Text UI component is used to display any text with a set of sizes and colors. Plus we want to allow the user to choose any HTML element – they need, not restrict themselves to a single `p` or `span`.
+Text UI 组件用来显示一组尺寸和颜色的任意文本，同时我们也希望使用者选择他们需要的 HTML 元素，而不是只限定于 `p` 或 `span`。
 
-In this scenario you don't know in advance what element the consumer will pass to your component, so you need to use generics to infer the type to whichever one they pass.
+在这个示例中，你不能提前知道用户会选择什么元素传入组件，所以你需要使用泛型来推断它们使用了什么类型。
 
-So the prop types for the component will be:
+所以组件的 prop 如下：
 
 ```ts
 // src/components/UI/Text/index.tsx
 
 type TextOwnProps<T extends React.ElementType> = {
-  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl'
-  variant?: 'base' | 'primary' | 'secondary'
-  as?: T | 'div'
-}
+  size?: 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+  variant?: 'base' | 'primary' | 'secondary';
+  as?: T | 'div';
+};
 
 type TextProps<T extends React.ElementType> = TextOwnProps<T> &
-  React.ComponentPropsWithoutRef<T>
+  React.ComponentPropsWithoutRef<T>;
 
 export default function Text<T extends React.ElementType = 'div'>({
   size = 'md',
   variant = 'base',
   children,
-  as = 'div',
+  as = 'div'
 }: TextProps<T>) {
   // ...
 }
 ```
 
-Let's examine in detail what happens in the example above:
+让我们仔细查看上面代码：
 
--   We use `T` for generics here, but you can use any name you want.
--   T extends from `React.ElementType` which is the most generic type for HTML elements. So we know that whatever is passed to the component is based on an HTML element rather than a manually typed union of all possible HTML elements.
--   The second type `TextProps` is used for two things:
-    -   We need extra properties depending on the type of HTML element. When a consumer uses the Text component as a `label` we want to check and suggest different properties than when it is a `span`. For that we need to use `React.ComponentProps`. In this case we don't need references so we explicitly use the type `ComponentPropsWithoutRef`.
-    -   `React.ComponentProps` also provides the `children` prop so you don't need to include in `TextOwnProps`.
-    -   There is no need to deal with `Omit` or other exclusion techniques because `children` is not modified or overwritten by any `TextOwnProps` props.
+- 我们使用`T`来命名泛型，你也可以使用任意字母。
+- T 扩展自`React.ElementType`，即 HTML 元素的最通用的类型。所以我们知道传递给组件的任何东西都是基于 HTML 元素，而不是所有可能的 HTML 元素的手动类型的组合。
+- `TextProps` 的第二个类型有两个用途：
+- 根据 HTML 元素的类型，我们需要额外的属性。当消费组件使用 Text 组件作为`label`时，我们希望检查并建议与为`span`时不同的属性。为此，我们需要使用 `React.ComponentProps`。在这种情况下，我们不需要引用，因此我们显式使用`ComponentPropsWithoutRef`类型。
+- `React.ComponentProps`同时也提供 `children` prop，所以不需要在 `TextOwnProps`引入。
+- 你也不需要处理`Omit` 或者其他排除技术，因为 `children` 并没有被 `TextOwnProps` props 修改或者覆盖。
 
-With this example, we have a very flexible component that is correctly typed and provides a good developer experience.
+通过这个例子，我们有一个非常灵活的组件，它的类型正确并且提供了良好的开发者体验。
 
-Within the example project you can examine the different custom UI components to check the implementation following this same pattern.
+在示例项目中，你可以测试不同的自定义 UI 组件，来检查上述模式的实现。
 
-### Typing a Custom useFetch Hook
+<h3 id="typingacustomusefetchhook"> 定义自定义useFetch Hook类型</h3>
 
-In the example project I have included a simple hook to get the data and use `localStorage` as a temporary cache so as not to exceed the API limit. It is not a big deal but I think it is a complete example of everything explained in this article.
+在示例项目中，我编写了一个简单的钩子来获取数据，并且利用`localStorage`来暂时缓存数据，这样就不会超出 API 的限制。这没什么大不了的，但我认为它是本文中解释的所有内容的完整示例。
 
-Let's take a look at some parts of that hook – but I encourague you to watch [the real file](https://github.com/dastasoft/animetrailers/blob/main/src/hooks/useFetch.ts) and try to understand everything with the different sections explained in this article.
+让我们一起看看这个钩子 – 但是我更推荐你查看 [实际文件](https://github.com/dastasoft/animetrailers/blob/main/src/hooks/useFetch.ts) ，以及理解这本文章不同部分的讲解。
 
 ```ts
 // src/hooks/useFetch.ts
 
 type State<T> = {
-  data?: T
-  loading: boolean
-  error?: Error
-}
+  data?: T;
+  loading: boolean;
+  error?: Error;
+};
 
 function useFetch<T = unknown>(
   url?: string,
   { initialFetch, delayFetch }: Options = { initialFetch: true, delayFetch: 0 }
 ): State<T> {
-// ...
+  // ...
 }
 ```
 
--   The hook receives a generic type that you can't know in advance what kind of data it will handle.
--   The hook accepts `url` on where to do the fetch and options to decide if the hook does an initial fetch and if there is a delay between fetches.
--   The `options` object has default values if nothing is provided.
--   The hook returns a `State` of the type specified by the consumer via the generics.
--   The status type defines that optionally a data of the type provided by the consumer, a loading flag, or an error is returned if something goes wrong.
+- 钩子接受一个泛型，你并不能提前知道你将处理什么类型的数据。
+- 钩子接受 `url`来确定从哪里获取资源，以及一个选项来决定是否需要初始获取，以及两次获取之间有没有延迟。
+- 如果不设置`options`拥有默认值。
+- 钩子返回一个类的`State`，由消费组件通过泛型指定。
+- 状态类型定义由消费组件提供的可选数据类型：如加载标志变量，或者发生错误时返回的 error。
 
-Let's check the usage on the consumer side:
+让我们看一下消费组件的使用情况：
 
 ```ts
 // src/pages/AnimeDetail.tsx
 
 const { data, loading, error } = useFetch<JikanAPIResponse<RawAnimeData>>(
-    getAnimeFullById(Number(id))
-  )
+  getAnimeFullById(Number(id))
+);
 ```
 
--   `getAnimeFullById` returns the URL of that endpoint.
--   `useFetch` in this case will return a `data` of type `JikanAPIResponse` which also has different possibilities, in this case `RawAnimeData`.
+- `getAnimeFullById` 返回终端的 URL。
+- `useFetch`会返回 `JikanAPIResponse`类型的`data`，根据情况不同，返回的数据也不同。在我们的示例中为 `RawAnimeData`。
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
-Throughout this article you've seen the most common pain points that using TypeScript can help solve. It's especially useful when you're working with others that you fully understand the ins and outs of every component, hook, and context you need to use.
+本文探索了 TypeScript 能够解决的一些常见痛点。特别是当你和团队一起工作，并且完全理解每一个组件的输入和输出、钩子以及上下文，TypeScript 非常有用。
 
-Using TypeScript means investing in code that is more reliable, better documented, and more readable. It's also less error-prone and more maintainable.
+使用 TypeScript 意味着代码更加可靠、记录更完善以及可读性更强。同时也更不容易出错并且更好管理。
 
-Coding isn't just about making an efficient algorithm. You're going to be working with other people (even if you're working as a solo developer, at some point you might publish your work, seek collaboration or help). In those scenarios, good communication between members is key.
+编写代码不仅仅是创建一个有效的算法。你也和别人一起工作（即便你是独立开发者，你也要发表你的作品，寻求他人的帮助和协作），在这些场景中，组员之间的沟通是关键。
 
-I like to think of TypeScript as the Babel for humans: you can optimize your code for the CPU with Babel, but you need something to scale and guide others around your ideas and vice versa.
+我喜欢将 TypeScript 类比为人类的 Babel：我们通过 Babel 来优化 CPU 的使用，同时也需要一个类似的 Babel 来指导和扩展团队合作。
 
-Only one question remains, **when should you use TypeScript**?
+还剩下一个问题， **什么时候需要使用 TypeScript**?
 
--   If you work with more people or plan to publish your code, chances are you want the code to be as readable and representative of your ideas as possible.
--   If you're working on a large project.
+- 如果你和别人协作，或者你计划发表代码，你可能希望代码可读性更好，更能够清晰表达你的想法。
+- 如果你在编写一个大型项目。
 
-Every big project starts out as a small project, so be careful with this statement about only using it on "big" projects.
+所有大项目都是由小项目组成，所以注意这里“大型”的定义。
 
-This has been a long article no doubt. If you have reached this point I must really thank you for your effort and passion. My initial idea was not so broad but I wanted to explain the whys and wherefores.
+这篇文章相当长，如果你读到这里，我对你的付出和热情表示感谢。我的初衷并不是文章的曝光，而是解释清楚为什么。
 
-I hope you enjoy this article. If you've already switched from JS to TS, are using both, are considering it, at some point thought about it but didn't like it or any other situation – **I would like to read about your experience**.
+希望你喜欢这篇文章，如果你已经从 JS 转换成 TS，或者两个都在使用，或者思考过是否使用但是暂时不考虑以及其他任何情况– **我非常渴望听到你的分享**。

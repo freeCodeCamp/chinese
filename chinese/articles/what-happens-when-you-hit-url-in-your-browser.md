@@ -1,6 +1,6 @@
 > -  原文地址：[What happens when you click on a URL in your browser](https://www.freecodecamp.org/news/what-happens-when-you-hit-url-in-your-browser/)
 > -  原文作者：[Anchal Nigam](https://www.freecodecamp.org/news/author/anchal/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What happens when you click on a URL in your browser](https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/browser.png)

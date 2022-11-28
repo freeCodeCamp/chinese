@@ -1,103 +1,102 @@
-> -  原文地址：[What happens when you click on a URL in your browser](https://www.freecodecamp.org/news/what-happens-when-you-hit-url-in-your-browser/)
-> -  原文作者：[Anchal Nigam](https://www.freecodecamp.org/news/author/anchal/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What happens when you click on a URL in your browser](https://www.freecodecamp.org/news/what-happens-when-you-hit-url-in-your-browser/)
+> - 原文作者：[Anchal Nigam](https://www.freecodecamp.org/news/author/anchal/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![What happens when you click on a URL in your browser](https://www.freecodecamp.org/news/content/images/size/w2000/2019/06/browser.png)
 
-In this article, I want my readers to get a picture of a very basic concept of the web world. Previously, I've written articles on the fancy stuff of today’s market, i.e. [Angular journey](https://www.freecodecamp.org/news/angular-a-journey-into-one-of-the-most-popular-front-end-tools-in-todays-job-market/), [basics of react,](https://www.freecodecamp.org/news/start-your-journey-into-the-world-of-react-by-learning-these-basics-d6e05d3655e3/) etc. But, today, I want my readers to get into the journey which they encounter at first when they hit any URL.
+在这篇文章中，我希望给读者建立一个网络世界的基本印象。我之前的文章都是互联网相关更高阶的内容，如： [Angular 之旅](https://www.freecodecamp.org/news/angular-a-journey-into-one-of-the-most-popular-front-end-tools-in-todays-job-market/), [react 基础](https://www.freecodecamp.org/news/start-your-journey-into-the-world-of-react-by-learning-these-basics-d6e05d3655e3/)等。 但在今天这篇文章中，我想带领各位读者一起领略点击 URL 之后的风光。
 
-As the topic is self explanatory - **when we hit any URL then what happens?** \- let’s start!
+正如文章标题所示 - **当你点击 URL 之后会发生什么？** \- 让我们开始吧！
 
-Before discussing **what happens after hitting the URL**, we must go through what a URL actually is, and what different parts of the URL mean - right? Without wasting any time, let’s understand more about URLs.
+在探讨 **点击 URL 之后**，我们得先了解 URL 是什么，它的各个组成部分，对不对？那么别浪费时间了，让我们开始了解 URL 吧！
 
-## URL – Uniform Resource Locator
+## URL – 统一资源定位符（Uniform Resource Locator）
 
-If you look into its full form, then it is self explanatory: it has the location of the resources which we want to access. It is an **address of the place** where we want to go to interact with or find information.
+正如 URL 的全称所述：它表示了我们想要访问的资源的地址。它相当于一个物理世界的**地址**，而在这个地址有你想要交互或者搜寻的信息。
 
-Let's look into your daily life. If you want to visit your friend’s house for some work or to get information, you need their address. The same thing goes here in this big web world: we have to give an address of the website which we want to access. The **web site is like the house and the URL is the address.**
+在你的日常生活中，如果你出于工作或者讯息需求想要拜访一位朋友，你首先需要他/她的住址。在网络世界也是如此，你想要访问的网站必须有一个地址。**网站就相当于朋友的房子，而 URL 就是房子的地址**。
 
-### Anatomy of a URL
+### 剖析 URL
 
-Now, we know what a URL is but we still don’t know about the parts of a URL. Let’s go!
+现在我们已经清楚了 URL 是什么，但还不了解它的组成部分，让我开始吧！
 
-Let’s take an example:
+看看这个例子：
 
 [https://www.example.com/page1](https://www.example.com/page1)
 
-Here, the first part is **‘https’**. This basically tells the browser which protocol it should use. It can be **http, https, ftp,** etc. A **protocol** is a **set of rules** that browser use for communication over the network. **'https'** is basically a **secure version**, i.e. information is exchanged in a secure way.
+在示例中，第一个部分是 **‘https’**，它告诉浏览器应该使用哪种协议。 协议可以是 **http, https, ftp,** 等。 **协议**是浏览器用于网络通信的**一组规则**。 **'https'**是**安全版本**，信息以一种安全的方式交换。
 
-The second part **www.example.com** is a **domain name**. You can relate it to your friend’s house. It is an address of website. We use it to reach to the server (trained computer) that is responsible for serving the information for that website. Wait! You might think, a seconds before I mentioned URL is the address whereas I also mentioned domain name is also address. You may have been confused. Don’t be confused!
+第二部分 **www.example.com** 是 **域名**。你可以把它当作你朋友的房子。域名是网站的地址。我们使用域名来访问服务器（训练后的电脑），服务器的任务是给网站提供信息。稍等！我刚刚才说过 URL 是地址，现在又说域名也是地址。可别搞混了！
 
-### Difference between URL and Domain Name
+### URL 和域名之间的区别
 
-The major difference between both is that the **URL is a complete address**. URL tells about the method through which information should exchange, the path after reaching that website. Whereas the **domain name is part of a URL**.
+两者之间最大的不同是 **URL 是完整的地址**。 URL 提供了信息交流的方法以及登录网站之后的路径。而 **域名是 URL 的一部分**。
 
-Let’s take our previous example to better understand. You can say that your friend’s house address is a domain name, whereas the URL not only tells the friend’s house address (domain name) but also how you are going to communicate like talking in a separate room (secure) or in front of everyone (info can get leak). It also tells the path, i.e. at which part of the house you will go after entering into the house. Hence, the domain name is part of the URL. A domain name with more information is a URL.
+让我们通过之前的示例来了解。你可以认为你朋友的住址是域名，同时 URL 不仅告知了朋友房子的住址（域名），以及你们交流的方式，如去到一个单独的房间（安全）或者当着所有人的面（信息可能会泄漏）。它也告知了路径，即到达房子之后，你应该去哪个房间。因此，域名是 URL 的一部分。一个包含域名和更多信息的地址才是 URL。
 
-I hope now you are clear with the URL. Let’s get into the next part.
+希望现在你更清楚 URL 是什么了，让我们进入下一个部分。
 
-## Domain Name
+## 域名
 
-In the previous part, I explained about domain names, but not in depth. I want you to go into it more. As I told you, the Domain name is the address of the website. It gives a **unique identity** to your **website** in such a huge web world. No two domain names can be the same BUT - Yes! There is ‘but’. This is not the only definition of a domain name. There is another story behind it. Let’s get into that story.
+上文我介绍了域名，但未做深入讨论。现在就来看看，域名是网站的地址。它是浩瀚网络世界中**网站**的**唯一标识**。不能有两个相同的域名，但是 - 对！还有一个“但是”。 域名之间不仅仅是通过这个来区别的，还有其他的内容。
 
-As we know, when we hit any URL or you can say domain name, then that website gets opened with its content. A server (a trained computer) serves it. We also know that every computer has an IP address which is used for communication over the internet. It is an address as its self explaining ‘IP address’. When we **hit** any **URL,** then we are actually **hitting** the **IP address** of the computer which is responsible for serving the website content (hosting).
+当点击 URL，也就是域名之后，网站被打开，内容呈现出来。每一台计算机都有 IP 地址，用来在互联网通信。正如它的名字“IP 地址”所述，它就是一个地址。当我们**点击**任意**URL**时，我们实际上是在 **点击** 负责提供网站内容（托管）的电脑的 **IP 地址**。
 
-But, now, you might think what the hell...is everything an address? Why does this domain name exist if the IP address is there? Why can’t we use IP address to get content of the website?
+现在你可能会觉得，什么鬼！所有东西都是地址？有 IP 地址的话，还要域名干嘛？为什么不直接用 IP 地址获取内容？
 
-Yes! You can **use IP addresses** to **get content** of the website but really!.. Would you be able to remember each website’s associated IP address? Obviously not! It’s **hard** to **remember the IP address** of every website. That’s why domain names came into the market.
+是的！你可以 **使用 IP 地址** 来 **获取内容**，但你真的记得住所有网站对应的 IP 地址吗？显然不行！记住每一个网站**的 IP 地址**可**太难了**，域名才应运而生。
 
-You can relate it to your contact list. You can’t remember every person’s number, but you can remember their name. Same concept applies here as well. You **can’t remember** those scary **IP addresses**, but you can easily **remember** **domain names**.
+你可以类比通讯录。你记不住每一个人的手机号码，但是你可以记住他们的名字。域名和 IP 地址的关系也同样。你**可记不住**这些吓死人的**IP 地址**，但是你可以轻松**记住域名**。
 
-This huge amount of data is maintained in a database where the domain name with its IP address is stored. A system that stores domain names with its corresponding IP address is known as **DNS (Domain name system)** (I believe you must have heard about it).
+大量的数据由数据库维护，并且存储在域名下这个 IP 地址内。存储域名和对应 IP 地址的系统被称为 **DNS (域名系统)** 。(我相信你肯定听说过)
 
-I think I have discussed enough basics. Now, get a deep dive into the process of when we hit any URL.
+基础介绍得差不多了，让我们进入点击 URL 之后的步骤。
 
-## DNS lookup to find IP address
+## DNS lookup 查找 IP 地址
 
-After hitting the URL, the first thing that needs to happen is to resolve IP address associated with the domain name. DNS helps in resolving this. **DNS is like a phone book** and **helps us to provide the IP address** that is associated with the domain name just like our phone book gives a mobile number which is associated with the person’s name.
+访问 URL 之后，首先要做的是解析与域名相关联的 IP 地址。DNS 辅助这个工作。 **DNS 就像电话簿一样，给我们提供与域名关联的 IP 地址** ，就如同我电话簿提供和人名相关的手机号码一样。
 
 ![dns](https://www.freecodecamp.org/news/content/images/2019/06/dns.png)
 
-  
-This is the overview, but there are **four layers** through which this domain name query goes through. Let’s understand the steps:
+这是概述，但此域名查询通过 **四层**，分以下几个步骤 ：
 
-1\. After hitting the URL, the **browser cache** is checked. As browser maintains its DNS records for some amount of time for the websites you have visited earlier. Hence, firstly, DNS query runs here to find the IP address associated with the domain name.
+1\. 点击 URL 之后，将检查**浏览器缓存**。因为浏览器会在一段时间内存储你访问过的网站的 DNS 记录，DNS 查询会先查缓存里的与域名关联的 IP 地址。
 
-2\. The second place where DNS query runs in **OS cache** followed by **router cache**.
+2\. DNS 查询检查的第二个位置是 **系统缓存**，其次是 **路由缓存**。
 
-3\. If in the above steps, a DNS query does not get resolved, then it takes the help of resolver server. Resolver server is nothing but your ISP (Internet service provider). The query is sent to ISP where DNS query runs in **ISP cache.**
+3\. 如果在上述步骤中，DNS 查询未得到解析，则需要解析服务器的帮助。解析器服务器只不过是 ISP（Internet 服务提供商）。查询被发送到 ISP，DNS 查询在 **ISP 缓存**中运行。
 
-4\. If in 3rd steps as well, no results found, then request sends to **top or root server** of the DNS hierarchy. There it never happens that it says no results found, but actually it tells, from where this information you can get. If you are searching IP address of the top level domain (.com,.net,.Gov,. org). It tells the resolver server to search **TLD server** (Top level domain).
+4\. 如果在第 3 步中也没有找到结果，则将请求发送到 DNS 层级结构的 **顶层或者根服务器**。从来没有发生过在这个阶段没有找到结果的情况，实际上，这部分告诉你可以从那儿找到信息。如果你正在搜索顶级域(.com,.net,.Gov,. org)的 IP 地址，就是告诉解析器服务器搜索 **TLD 服务器** (顶级域)。
 
-5\. Now, resolver asks TLD server to give IP address of our domain name. TLD stores address information of domain name. It tells the resolver to ask it to **Authoritative Name server.**
+5\. 现在，解析器要求 TLD 服务器提供域名的 IP 地址。 TLD 存储域名的地址信息。它告诉解析器向**权威性域名服务器**询问。
 
-6\. The authoritative name server is responsible for knowing everything about the domain name. Finally, resolver (ISP) gets the IP address associated with the domain name and sends it back to the browser.
+6\. 权威性域名服务器负责了解域名的所有信息。最终，解析器（ISP）获取与域名相关联的 IP 地址，并将其发送会浏览器。
 
-After getting an IP address, resolver stores it in its cache so that next time, if the same query comes then it does not have to go to all these steps again. It can now provide IP address from their cache.
+获取 IP 地址后，解析器将其存储在缓存中，这样下次如果出现相同的查询，就不必再次执行所有这些步骤。它可以从缓存得到 IP 地址。
 
-This is all about the steps that is followed to resolve IP address that is associated with the domain name. Have a look below to better understand:
+这就是解析与域名关联的 IP 地址所遵循的所有步骤。可以结合下图理解：
 
 ![dns_resolve](https://www.freecodecamp.org/news/content/images/2019/06/dns_resolve.png)
 
-## TCP connection initiates with the server by Browser
+## 由浏览器发起的与服务器的 TCP 连接
 
-Once the **IP address** of the computer (where your website information is there) is **found**, it **initiates connection** with it. To communicate over the network, **internet protocol** is followed. **TCP/IP** is most common protocol. A connection is built between two using a process called **‘TCP 3-way handshake’**. Let’s understand the process in brief:
+一旦计算机的**IP 地址** (网站信息存储的地方) 被 **发现**， 就会 **启动连接**。 网络通信遵循 **互联网协议**。 **TCP/IP** 就是最常见的协议。浏览器和服务器之间的通讯遵循 **‘TCP 三次握手’**。让我们简短地了解一下这个过程：
 
-1\. A client computer sends a **SYN message** means, whether second computer is open for new connection or not.
+1\. 客户端计算机发送一个 **SYN 消息**，确认另一台计算机是否可以建立连接。
 
-2\. Then **another computer**, if open for new connection, it sends **acknowledge message** with SYN message as well.
+2\. 之后来到**另一台计算机**，如果可以建立新的连接，会同时发送 SYN 消息和 **确认消息**。
 
-3\. After this, **first computer** receives its message and acknowledge by **sending** an **ACK message.**
+3\. 在此之后， **第一台计算机** 接收到它的消息，并通过 **发送 ACK 消息**进行确认。
 
-To better  understand, look below diagram.
+可以通过下图理解：
 
 ![process](https://www.freecodecamp.org/news/content/images/2019/06/process.png)
 
-## Communication Starts (Request Response Process)
+## 通信开始 (请求响应过程)
 
-Finally, the connection is built between client and server. Now, they both can communicate with each other and share information. After successful connection, **browser (client)** sends a **request** to a **server** that I want this content. The server knows everything of what response it should send for every request. Hence, the **server responds back.** This response contains every information that you requested like web page, status-code, cache-control, etc. Now, the browser renders the content that has been requested.
+最终客户端和服务器之间的连接建立，双方可以相互交流信息。连接成功之后， **浏览器(客户端)**向**服务器**发送**请求**，告诉服务器需要什么内容。服务器知道应该对每一种请求做何种反应。因此 **服务器响应客户端** ，响应包含了请求的所有内容，包括网页、状态码、缓存控制等。然后浏览器渲染请求内容。
 
-That’s it! All the above process happens when we hit any URL. Although this lengthy process takes less than seconds to complete. This is the answer to your question **‘what happens when we hit any URL in a browser?’**
+就这么多，当你点击 URL 之后，上面的所有步骤就运转起来，当然这些步骤可能在一秒之内就完成了。这就回答了 **‘当我们点击 URL 之后，发生了什么?’**这个问题。
 
-Thanks for reading!
+感谢阅读！

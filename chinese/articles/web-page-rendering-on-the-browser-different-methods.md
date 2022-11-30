@@ -1,6 +1,6 @@
 > -  原文地址：[How Web Pages Get Rendered on the Browser – Different Methods Explained](https://www.freecodecamp.org/news/web-page-rendering-on-the-browser-different-methods/)
 > -  原文作者：[Favour C. Felix](https://www.freecodecamp.org/news/author/favour/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![How Web Pages Get Rendered on the Browser – Different Methods Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/fav-poster.jpg)

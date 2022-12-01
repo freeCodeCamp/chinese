@@ -47,17 +47,17 @@ SEO(搜索引擎优化)对你的在线营销策略至关重要.这是优化网�
 
 你的客户和 Google 将会感谢你,它将在流量和转化率方面带来红利。
 
-## How to Create Evergreen Content
+## 如何创造拥有持续影响力的内容
 
-Another tip to boost your SEO is creating evergreen content. Evergreen content is any type of information that has long-term relevance, meaning it's both timeless and timely (that is, not outdated). It's also search engine optimized, readable on mobile devices, and can be repurposed in multiple formats.
+另外一个促进你的SEO是创建拥有持续影响力的内容.具有持续影响力的内容是指任何类型的信息在长远的时间中都具有适应性,意思是具有永不过时和适时性(不会过时的).它也是经过搜索引擎优化的,适应移动端设备,有多种格式进行使用.
 
-Evergreen content can be an excellent tool to help with SEO because it tends to rank well in search engines and can help your website gain traction when posted on other sites.
+具有持续影响力的内容能够极好的帮助SEO,因为它会在搜索引擎中得到一个好的等级,这可以帮助你的网站在其他网站之上赢得关注.
 
-When done correctly, evergreen content provides an opportunity for your business to market itself without having to rely on time-sensitive events or news items to draw traffic to your site. Evergreen posts are updated frequently but are always focused on something new or something old that has been updated.
+在合适的时候,具有持续影响力的内容给你的生意提供了更多的机会,推销自己,而不必时间敏感的事件或新闻项目来吸引流量到你的网站.具有持续影响力的帖子经常更新,但总是关注一些新的或已经更新的旧的东西.
 
-Examples of evergreen content include "How to Start a Business," "The Importance of Being Organized at Work", and "5 Things You Can Do With Leftover Pasta".
+具有持续影响的内容的例子包括"如何开始一门生意","组织工作的重要性"和"你可以用剩下的意大利面做的五件事".
 
-Content like this won’t ever lose its value because it doesn’t rely on current events or trends to stay relevant. Because of this, you can build a library of evergreen content that will continue to drive traffic over time.
+像这样的内容永远不会失去价值，因为它不依赖于当前事件或趋势来保持相关性。,正因为此,你可以构建有持续影响力的资料库,，随着时间的推移，它将继续推动流量。
 
 ## How to Reduce Your Bounce Rate
 

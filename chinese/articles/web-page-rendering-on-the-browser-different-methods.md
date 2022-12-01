@@ -1,155 +1,155 @@
-> -  原文地址：[How Web Pages Get Rendered on the Browser – Different Methods Explained](https://www.freecodecamp.org/news/web-page-rendering-on-the-browser-different-methods/)
-> -  原文作者：[Favour C. Felix](https://www.freecodecamp.org/news/author/favour/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How Web Pages Get Rendered on the Browser – Different Methods Explained](https://www.freecodecamp.org/news/web-page-rendering-on-the-browser-different-methods/)
+> - 原文作者：[Favour C. Felix](https://www.freecodecamp.org/news/author/favour/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![How Web Pages Get Rendered on the Browser – Different Methods Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/fav-poster.jpg)
 
-Today, all over the world, computers and networks are getting faster. This is good for web development and user experience in general. And the possibilities of what people can achieve have taken a massive leap forward.
+今天，世界各地的计算机和网络通讯速度都变得越来越快。这有利于提升 Web 开发和用户体验。人们通过互联网能够实现的可能性也向前迈了一大步。
 
-But although growth is evident in many places, others are left behind in this sprint. The big question is how do we level the web experience given this digital divide and make the web more accessible to people with less efficient computers and networks?
+显著进步的另一面也意味着有一些人掉队了。在这个数字分化的年代，如何提高网络体验，以触达到更多网络和设备条件没有那么好的用户，是一个难题。
 
-In many cases, an answer to this question lies in understanding how we render webpages on the browser.
+要解决这个难题，必须先理解浏览器是渲染网页的方法。
 
-## Terms Used in this Article
+## 本文涉及的术语
 
-Before you go on, I want to make sure you're familiar with the terms used in this article. Some of them might be particularly difficult to grasp for new developers. Feel free to skip to the next section if you are familiar with these already.
+在开始之前，我需要确保你熟悉本文涉及的术语。其中一些对于新开发者来说可能难以理解。如果你对这部分已经很了解了，可以跳过。
 
--   **Server**: A server is a computer that resides in a remote location (mostly the internet). Its job is to handle requests from the client and process a response.
--   **Client**: A client is any device communicating with a server to access resources. A client, in many cases, is any device that can access the internet. In this article, your web browser plays the role of the client.
--   **CDN**: Acronym for Content Delivery Network. A CDN is "a network of interconnected servers that speeds up webpage loading for data-heavy applications" (from [AWS](https://aws.amazon.com/what-is/cdn/)).
--   **Build-time**: During build-time, your application code is prepared for another environment. Most times — a hosted environment on the internet.
+- **服务器**: 服务器是位于远程（互联网意义上的）电脑，它的职责就是处理客户端发来的请求并且做出响应。
+- **客户端**: 客户端是用于和服务器通信的设备，以此来访问资源。在绝大多数情况下，客户端是可以访问网络的设备。在本文中，网络浏览器充当了客户端的角色。
+- **CDN**: Content Delivery Network（内容分发网络）的首字母缩写。CDN 是“一个互连服务器网络，可加快数据密集型应用程序的网页加载速度” (引用自 [AWS](https://aws.amazon.com/what-is/cdn/))。
+- **构建时**: 在构建时，应用程序代码为另一个环境做准备。这里的另一个环境大多数时候指的是互联网上的托管环境。
 
-Now let's learn about the different ways websites can be rendered.
+现在让我们学习渲染网站的不同方式。
 
-## What is Client-Side Rendering (CSR)?
+## 什么是客户端渲染(CSR)?
 
 ![csr](https://www.freecodecamp.org/news/content/images/2022/10/csr.jpg)
 
-Client-Side Rendering generates webpages in the browser, fully relying on your JavaScript Code. The browser fully processes your JS code before your web page's content is visible to the user.
+客户端渲染完全依赖 JavaScript 代码在浏览器中生成网页。在页面内容加载完毕，供用户浏览之前，浏览器预先处理 JS 代码。
 
-Your JavaScript code helps to dynamically define the website's **architecture** as soon as it is downloaded. Architecture in this context means data fetching from an [API](https://aws.amazon.com/what-is/restful-api/), website navigation, and simple business logic on your website.
+JavaScript 在下载时就动态辅助定义网站 **架构** 。 这里的架构指的是从[API](https://aws.amazon.com/what-is/restful-api/)获取数据、 网站导航和一些网站内简单的业务逻辑。
 
-### Client-Side Rendering  and JavaScript Frameworks
+### 客户端渲染和 JavaScript 框架
 
-Client-Side Rendering gained popularity with the release of JavaScript frameworks and libraries like React, Vue and Angular. These frameworks are only functional by including a CDN at the head of an HTML page —  and these CDNs typically contain JS code that is large in size.
+客户端渲染因为一些 JavaScript 框架或者库，如：React、 Vue 和 Angular 的发布而变得越来越流行。仅当在 HTML 页面的头部（head）引入一个 CDN，这些架构才生效——通常这些 CDN 包含大量的 JS 代码。
 
-It's no secret that large files result in increased download time, but there is a catch here: downloading large files at the initial load of the application means significantly less loading time in accessing other pages on that website.
+毫无疑问大文件意味着更久的下载时间，同时，在首次加载就下载好大文件意味着之后访问网站其他页面的加载时间会大幅下降。
 
-The website primarily fetches data from an API. This data is then used to populate pages rendered on the client.
+网站首先从 API 获取数据，然后数据被用于填充在客户端渲染的页面。
 
-You can find common examples of a real-life application that use CSR in many of the Progressive Web Applications (PWA) we use today, like Spotify, Figma, and Google Drive.
+许多我们现实生活中的渐进式应用（PWA）就是使用 CSR 的示例，如：Spotify、Figma 和 Google Drive。
 
-## What is Server-Side Rendering (SSR)?
+## 什么是服务端渲染(SSR)?
 
 ![ssr](https://www.freecodecamp.org/news/content/images/2022/10/ssr.jpg)
 
-Client-Side Rendering was a game-changer and still is — in many cases. Although, a closer look at performance in CSR showed that the more features a website had, the more JS code it had. Recall that more JS code means more download time.
+客户端渲染改变了游戏规则，并且这种改变仍在持续。但是，如果细看 CSR 的性能，会发现想要网站具备更多的功能，就需要更多的 JS 代码。也就是上文提到的越多的 JS 代码意味着更久的下载时间。
 
-Heavy downloads during the initial load to ensure faster access to all web pages did not seem like a trade-off some people were willing to make. This gave rise to Server-Side rendering.
+牺牲首次加载时间来换取网页的快速访问，对于一些人来并不划算。服务器端渲染就应运而生。
 
-SSR doesn't solve all the problems of rendering on the web. But it solved many of the issues faced by CSR like faster load times on initial visit and a few others highlighted in the Benefits and Trade-offs section of this article.
+SSR 并未解决网页渲染的所有问题，但确实解决了使用 CSR 会面临的问题，如首次加载的时间，更多优势会在后文提到。
 
-Server-Side Rendering helps generate a webpage on the server just after receiving a request from the browser. With SSR, the server renders the full HTML, CSS, and JavaScript required for the requested resource and sends it back to the browser.
+服务器端在接收到浏览器的请求后就在服务器渲染生成网页。服务器通过 SSR 渲染整个 HTML、CSS 和资源需求的必要 JavaScript，并且返回给浏览器。
 
-This means you can always be sure that the website content contains the most recent information from the server. You can think of it as an integration of a [REST API](https://aws.amazon.com/what-is/restful-api/) — content from the backend is always updated.
+也就意味着网站内容始终是来自服务器的最新的信息。你可以把这个类比为[REST API](https://aws.amazon.com/what-is/restful-api/) — 后端内容实时更新。
 
-Like all other methods of rendering on the web, SSR has its fair share of drawbacks. For one, having to make network requests to the server to load a webpage could impact users with less internet bandwidth. SSR also requires a relatively higher volume of computing power to be active.
+和其他渲染手段一样，SSR 也有一些弊端。其中一个就是因为需要通过向服务发送请求才能加载网页，所以网络带宽小的用户会收到影响。同时，SSR 也对计算机的算力有要求。
 
-## What is Static Site Generation (SSG)?
+## 什么是静态网站生成 (SSG)?
 
 ![ssg](https://www.freecodecamp.org/news/content/images/2022/10/ssg.jpg)
 
-Static Site Generation is a very common approach to rendering on the web. This is because most websites, if not all before JavaScript frameworks, were statically generated.
+静态网站生成是渲染网页一个常用的手段，在 JavaScript 框架诞生之前，大部分的网站都是静态生成的。
 
-Static sites are still very popular, but there are better ways to generate them. This goes to show how important they are in terms of performance on the web.
+静态网站很受欢迎，但是有更好的生成它们的方式。这主要取决于网站是否看重性能。
 
-### But, What is a Static Site?
+### 但是，静态网站是什么?
 
-A static site is rendered on a browser exactly how it was generated. The content of a static site is typically unaffected by the user viewing, unlike a web app rendered in CSR, or SSR, where each user can see content based on authentication or authorization.
+静态网站的渲染和生成是一致的，也就是说静态网站的内容基本上不会被浏览的用户影响，不像使用 CSR 或者 SSR 渲染的 web 应用，用户看到的内容取决于认证和授权。
 
-Static sites are ideal for showing content that never changes or is updated once in a while.
+静态网站是展现不会改变，或者只需要定期更新内容的理想手段。
 
-### Static Site Generation Explained
+### 静态网站生成详解
 
-Static Site Generation largely involves automating the process of building webpages. JavaScript frameworks today (like Nuxt.js, Next.js, and so on), provide template engines for building multiple static webpages with one template. As you can imagine, this saves time.
+静态网页生成主要设计到自动化构建网页的过程。今天的 JavaScript 框架（如 Nuxt.js、Next.js 等）提供模版引擎，可使用一个模板来构建多个静态页面，可以想像这样可以解决时间。
 
-Static Site Generation is different from SSR and CSR in the sense that your HTML webpages are rendered and generated during build-time — before the user attempts to access your webpage. This is why SSG is commonly referred to as pre-rendering. It does the hard work beforehand.
+在 SSR 和 CSR 中，HTML 网页是在构建时须髯安和生成，但是静态网站生成截然不同。在你尝试访问网页之间，SSG 就生成了网站。这就是为什么 SSG 被认为是预渲染，苦差事都在渲染前做完了。
 
-Though SSG seems all bliss, there are tradeoffs. A major drawback of rendering with SSG is that a page must be generated for every accessible URL on your website. This could get even more tedious when you have [dynamic pages](https://nuxtjs.org/docs/directory-structure/pages#dynamic-pages).
+看上去 SSG 可以春风化雨，但使用 SSG 渲染页面有一个大缺点就是必须为网站的每一个可以访问的 URL 生成一个页面，如果你使用[动态页面](https://nuxtjs.org/docs/directory-structure/pages#dynamic-pages)，就会更复杂。
 
-Recall that static sites are ideal for showing content that rarely gets updated, so this rendering method doesn't work for all use cases.
+这就回到上文提到的，静态网站的理想使用场景是展现不怎么更新的内容，也就是静态网站并不是万金油。
 
-## Benefits and Trade-offs of Different Rendering Methods
+## 不同渲染方式优势和折衷
 
-Now that you understand how all these rendering methods generate pages for the browser, we should consolidate all of this information and do some comparisons.
+在分别了解这些渲染方式之后，让我们把知识整合到一起做一下对比。
 
-We'll look at the three major metrics — Performance, SEO, and Cost.
+我们将看三个指标——性能、SEO 和花销。
 
-### Performance
+### 性能
 
-To build websites that are accessible regardless of the user’s internet or computer speed, we need to consider performance. Performance in this context could be how fast a website loads or fetches data from an API.
+搭建可以兼容不同网络和电脑速度的网站，需要考虑到网站的性能。这里的性能指的是网站的加载速度和从 API 获取数据的速度。
 
-The subsequent paragraphs shows how CSR, SSR and SSG translate in terms of performance.
+接下来将分析 CSR、SSR 和 SSG 在这方面的表现
 
-#### Client-side rendering performance
+#### 客户端渲染性能
 
-A client-side-rendered website can be relatively slow to load. This is because JS code is first downloaded and used to generate actual content that users see.
+客户端渲染网站相对较慢。因为一开始需要加载 JS 代码，才能生成用户可以看到的内容。
 
-Oftentimes, JS downloads are heavy, especially with JS frameworks. Client-side rendered webpages might also need to make API calls to fetch data from the backend. This increases load time for the user.
+通常情况下，JS 下载都很慢，特别是使用 JS 框架的时候。客户端渲染网页也调用 API 以从后端获取数据，这样也会增加用户的加载时间。
 
-#### Server-side rendering performance
+#### 服务器端渲染性能
 
-SSR Rendered webpages can be very fast. This is majorly dependent on the server's speed and the user's speed. If both conditions are met, SSR could take an easy win in terms of performance.
+SSR 渲染网页可以非常快。这主要取决于服务器的速度以及用户电脑的速度，如果两者都达到预期，SSR 在性能方面可以轻松取胜。
 
-#### Static site rendering performance
+#### 静态网站生成性能
 
-Webpages generated with SSG are relatively fast as actual rendering does not take place on the browser.
+使用 SSG 生成页面相对较快，因为实际渲染并没有在浏览器发生。
 
-SSG feeds the browser with content that it requires without extra work. SSG-rendered webpages, like CSR, might also need to make API calls to fetch data from the backend. This also increases load time for the user.
+SSG 不需要额外的工作就可以向浏览器提供内容。和 CSR 一样，SSG 可能也需要调用 API 来获取后端数据，这样也会增加用户的加载时间。
 
-Ultimately, the amount of JavaScript used in a webpage can determine its performance.
+最终性能是由网页中使用的 JavaScript 的数量决定的。
 
-### Search Engine Optimization (SEO)
+### 搜索引擎优化 (SEO)
 
-Every website that needs visibility should value Search Engine Optimization. SEO determines how accessible your content is on search engines like Google. It also determines how high you rank in the Search Engine Result Pages (SERPs).
+页面如果需要曝光的话，就应当重视搜索引擎优化。SEO 决定了内容在如 Google 这样的搜索引擎上的可访问性，同时也决定了网站在搜索引擎结果页面（SERP）上的排名。
 
-Let's see how all three rendering methods perform when they are indexed by search engines.
+让我们看看当这些网站被搜索引擎索引的时候，他们的 SEO 表现如何。
 
-#### CSR Search Engine Optimization
+#### CSR 搜索引擎优化
 
-Webpages rendered with CSR typically have no meaningful content and depend on JS to generate content. The downside is not all web crawlers support JS, so your website might not be indexed properly on search engines.
+使用 CSR 渲染的页面并没有语义化的内容，内容主要靠 JS 生成。这样的弊端是不是所有网络爬虫都支持 JS，因此你的网站可能不能被搜索引擎正确索引。
 
-#### SSR Search Engine Optimization
+#### SSR 搜索引擎优化
 
-SSR renders complete webpages with updated content from the server. Webpages rendered with SSR can be crawled and indexed by search engines.
+SSR 渲染通过由服务器发出的最新的内容生成页面，由 SS 渲染的页面可以被爬虫识别也可以被搜索引擎索引。
 
-#### SSG Search Engine Optimization
+#### SSG 搜索引擎优化
 
-A web crawler very easily crawls webpages generated with SSG. They do not rely on JS to render fully.
+由 SSG 生成的页面极易被网络爬虫爬取，因为它不完全依赖 JS 渲染。
 
-### Cost
+### 花销
 
-It’s important that users have the best experience when they visit a website, but the bills don’t pay themselves, so the cumulative cost of this experience has to be as lean as possible.
+给用户提供最佳的体验很重要，但账单不会自我消化，所以由体验带来额花销约精简越好。
 
-The three rendering methods do not share the same financial implications. The paragraphs beneath takes a closer look into the cost of using each.
+三种渲染手段的经济花销并不相同。让我们仔细分析一下：
 
-#### CSR Cost
+#### CSR 花销
 
-Client-Side Rendering runs 100% on the browser. This means no additional cost is incurred.
+客户端渲染 100%在浏览器运行，也就意味着没有额外产生花销。
 
-#### SSR Cost
+#### SSR 花销
 
-Server-Side Rendering generates a fully functional webpage remotely on the server. This means extra computing resources and extra costs.
+客户端渲染由远程的服务器生成功能完整的页面，所以为生成额外的计算资源和花销。
 
-#### SSG Cost
+#### SSG 花销
 
-No Cost. Static Website Generation is during build-time. Hence, generated webpages are hosted, and no extra rendering is done on the server.
+没有花销。静态网站生成在构建时完成。因此，生成的网页被托管，不需要服务器额外的渲染。
 
-## Conclusion
+## 总结
 
-When selecting a rendering method, consider your use case and what works best for it based on what you have learned from this article. Different rendering methods are suitable for different kinds of websites.
+党选择渲染方式的时候，请考虑好你的用例，可以根据本文所学来做判断。不同的渲染方式适用于不同的网站。
 
-An e-commerce website developer might choose to go the SSR route or feel more secure using static sites. A web application developer, on the other hand, might not mind a lengthy initial load as long as it means a better experience for the user in the long run.
+电子商务网站的开发者可能会选择 SSR 路线，或者选择更安全额静态网站。同时，web 应用的开发可能不在乎首次加载的时长，只要长远看的用户体验够好。
 
-Whichever rendering method you select, ensure your website is as accessible as possible — beyond conditions you would not necessarily experience. Finally, never forget to stay on a healthy JS diet.
+不论你选用哪种渲染方式，都要确保网站的可访问性——跳出自身经历。最后，千万别忘了 JS 代码的精炼。

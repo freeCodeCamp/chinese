@@ -2,6 +2,9 @@
 > -  原文作者：[Yogesh Chavan](https://www.freecodecamp.org/news/author/yogesh/)
 > -  译者：dake0913
 > -  校对者：
+
+
+
 状态state是React中最复杂的东西，初学者和有经验的开发人员都很难理解。因此，在本文中，我们将探索React中状态的所有基础知识。
 
 在理解状态之前，让我们先了解一些基础知识，以便稍后更容易理解状态。

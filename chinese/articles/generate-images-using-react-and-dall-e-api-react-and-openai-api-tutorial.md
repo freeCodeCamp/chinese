@@ -5,23 +5,23 @@
 
 ![How to Generate Images using React and the Dall-E 2 API – React and OpenAI API Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2022/11/Important-Concepts-and-questions--1-.png)
 
-Hey everyone! OpenAI just released its DALL-E API where users can generate custom images by just typing in a query.
+嘿,大家好!OpenAI刚刚发布了它的DALL-E API，用户可以通过键入查询生成自定义图像。
 
-So in this tutorial, you'll learn how to integrate the OpenAI DALL-E 2 API with a React app.
+在本教程中，您将学习如何集成OpenAI DALL-E 2 API与React app。
 
-## But First, How Does Dall-E Work?
+## 但首先，Dell-E 是如何工作的呢?
 
-So as you already know, you have to type a query – something like **Bears with Paint Brushes in Starry Night, painted by Vincent Van Gogh**. This contains so many keywords, like Paint Brushes, Starry Night, and Vincent Van Gogh.
+正如你已经知道的，你必须输入一个查询 – 就像 **熊拿着画笔在星空里, 文森特·梵高画**。这里面有很多关键词，比如“画笔”、“星空”和“文森特·梵高”。
 
-What Dall-E will do is search for these images that are related to the keywords that I just mentioned above. Then it will use Artificial Intelligence to merge all the images into one, and then serve it to us.
+Dall-E要做的是搜索这些与我上面提到的关键字相关的图像。然后它将使用人工智能将所有的图像合并为一个，然后提供给我们。
 
-Now let’s learn how you can integrate this into your React application to create your own application with these amazing features.
+现在让我们学习如何将其集成到React应用程序中，以创建具有这些惊人特性的应用程序。
 
-## How to Create a React Application
+## 如何创建React应用程序
 
-So, create a React application. You can create it with the CRA (create-react-app) command or you can use Vite.
+至于，创建一个React应用程序。您可以使用CRA (create-react-app)命令创建它，也可以使用Vite。
 
-We need a text field and a button as UI components. The text field will be used to get the query from the user and the button to trigger the API request. Let’s also create a state to store the query and a function that will run on the button click.
+我们需要一个文本字段和一个按钮作为UI组件。文本字段将用于从用户获取查询和触发API请求的按钮。让我们同时创建一个状态来存储查询和一个函数，该函数将在单击按钮时运行。
 
 ```
 import { useState } from "react";
@@ -53,47 +53,47 @@ function App() {
 export default App;
 ```
 
-Our output will look something like this:
+我们的输出将会像这样：
 
 ![Screenshot-2022-11-05-212826](https://www.freecodecamp.org/news/content/images/2022/11/Screenshot-2022-11-05-212826.png)
 
-### How to Integrate the DALL-E 2 API with the React Application
+### 如何将DALL-E 2 API集成到React应用程序
 
-Let’s see how we can integrate the DALL-E 2 API into our application.
+让我们看看如何将DALL-E 2 API集成到我们的应用程序中。
 
-First of all, we need to go to the [OpenAI](https://beta.openai.com) website. You need to sign up to generate an API key. You will also get $18 in your account that you can use.
+首先，我们需要访问[OpenAI](https://beta.openai.com)网站。您需要注册以生成一个API密钥。你的账户里还会有18美元可以使用。
 
-Choose that you are creating an application while you are signing up.
+选择在注册时创建应用程序。
 
-So after you have created your account, go to the View API Keys section, where you can create your unique API key. Check the below image for reference.
+因此，在您创建了您的帐户之后，转到View API Keys部分，在那里您可以创建您惟一的API密钥。查看下面的图片作为参考。
 
 ![Screenshot-2022-11-05-213523](https://www.freecodecamp.org/news/content/images/2022/11/Screenshot-2022-11-05-213523.png)
 
-Now in your React App, create a **.env** file. This is to store the API key.
+现在在React App中，创建一个 **.env** 文件。这是为了存储API键。
 
 ![Screenshot-2022-11-05-213733](https://www.freecodecamp.org/news/content/images/2022/11/Screenshot-2022-11-05-213733.png)
 
-Add your API key there. Note that the method of getting the key from .env files is different in CRA and Vite React App. So please keep that in mind. I am using Vite, so this is how we do it:
+在这里添加API密钥。请注意，在CRA和Vite React App中，从.env文件中获取密钥的方法是不同的。所以请记住这一点。我使用的是Vite，所以我们是这样做的:
 
 ```
 VITE_Open_AI_Key = "Your API Key"
 ```
 
-Now that the API key is added, we need to import a few things in our App.js or App.jsx file. These include the **Configuration** and **OpenAIApi** from **openai SDK**. But first, we need to install the **openai SDK** into the React App.
+现在已经添加了API键，我们需要在App.js或App.jsx文件中导入一些东西。 包括 **Configuration** 和来自 **openai SDK** 的 **OpenAIApi**. But first, we need to install the **openai SDK** into the React App.
 
-To install it, just type the command below:
+只需输入下面的指令安装:
 
 ```
 npm install openai
 ```
 
-It may take some time to install. Then, import both things that we mentioned earlier like this:
+安装可能需要一些时间。然后，像这样导入我们之前提到的两个东西:
 
 ```
 import { Configuration, OpenAIApi } from "openai";
 ```
 
-We need to create a configuration variable, which will take the API key from the .env file.
+我们需要创建一个配置变量，它将从.env文件中获取API键。
 
 ```
 const configuration = new Configuration({
@@ -101,13 +101,12 @@ const configuration = new Configuration({
 });
 ```
 
-Now, we need to pass this configuration instance to the OpenAIApi, and create a new instance for OpenAIApi.
-
+现在，我们需要将这个配置实例传递给OpenAIApi，并为OpenAIApi创建一个新实例。
 ```
 const openai = new OpenAIApi(configuration);
 ```
 
-Here is the whole code until now:
+以下是到目前为止的全部代码:
 
 ```
 import { Configuration, OpenAIApi } from "openai";
@@ -145,7 +144,7 @@ function App() {
 export default App;
 ```
 
-Now in the **generateImage** function, we need to call the OpenAIApi instance that we created before. Remember, the function needs to be asynchronous.
+现在，在**generateImage**函数中，我们需要调用之前创建的OpenAIApi实例。记住，功能需求是异步的。
 
 ```
 const generateImage = async () => {
@@ -157,13 +156,13 @@ const generateImage = async () => {
   };
 ```
 
-As you can see, we are using **openai.createImage**. This API is used to create an image using a user query. It also takes **n**, which is the number of images we want the API to return, and the **size of the image**.
+如您所见，我们使用的是**openai.createImage**。这个API用于使用用户查询创建图像。它还需要**数量n**，这是我们希望API返回的图像的数量，以及**图像的尺寸size**。
 
-There are three different image sizes with different prices, which are listed below. If you are using 1024x1024 size, it will cost you $0.020 per image.
+有三种不同的图像尺寸，不同的价格，如下表所示。如果您使用的是1024x1024大小，每张图像将花费0.020美元。
 
 ![Screenshot-2022-11-05-215314](https://www.freecodecamp.org/news/content/images/2022/11/Screenshot-2022-11-05-215314.png)
 
-Now this **openai.createImage** returns some response that we can store in a variable. We can then get the generated image link from the response variable.
+现在这个**openai.createImage**返回一些可以存储在变量中的response接口。然后，我们可以从response变量获得生成的图像链接。
 
 ```
 const generateImage = async () => {
@@ -177,7 +176,7 @@ const generateImage = async () => {
   };
 ```
 
-But let’s not do that. Let’s create one more state to store this image link so that we can view the image in the UI itself.
+但我们还是别这么做了。让我们再创建一个状态来存储这个图像链接，这样我们就可以在UI本身中查看图像。
 
 ```
 const [result, setResult] = useState("");
@@ -193,7 +192,7 @@ const generateImage = async () => {
   };
 ```
 
-Now the image link will be stored inside the **result** state. Let's also render the image in the UI. But as the result is initially empty, we can create a check. We will only see the image tag where there is a link inside the state.
+现在，图像链接将存储在**result**状态中。让我们在UI中渲染图像。但是由于结果最初是空的，我们可以创建一个查验。我们将只看到在状态中有链接的图像标记。
 
 ```
 {result.length > 0 ? (
@@ -212,30 +211,30 @@ And here's the styling too:
 }
 ```
 
-The UI will now look something like this:
+UI现在看起来像这样:
 
 ![Screenshot-2022-11-05-220108](https://www.freecodecamp.org/news/content/images/2022/11/Screenshot-2022-11-05-220108.png)
 
-Let's type something and see the output:
+让我们输入一些东西并查看输出:
 
 ![Screenshot-2022-11-05-220222](https://www.freecodecamp.org/news/content/images/2022/11/Screenshot-2022-11-05-220222.png)
 
-In the above example, I have typed **A Horse on the Beach with Red Sands.** And here is the result.
+在上面的例子中，我输入了**一匹在红色沙滩里的马**这是结果。
 
-Let's try something more complex, like **Bears with Paint Brushes in Starry Night, painted by Vincent Van Gogh.**
+让我们尝试一些更复杂的东西，比如**熊拿着画笔在星空里, 文森特·梵高画**
 
-Here is the result:
+结果如下:
 
 ![Screenshot-2022-11-05-220423](https://www.freecodecamp.org/news/content/images/2022/11/Screenshot-2022-11-05-220423.png)
 
 This is how you do it. You can type any input query and it will generate that image through Artificial Intelligence.
 
-## Wrapping Up
+## 总结
 
-And that’s all folks. Now you know how to create your own React application with the DALL-E 2 API to generate images using AI. There are a lot more functionalities that you can add. So go ahead and experiment a little.
+这就是所有的内容。现在您知道了如何使用DALL-E 2 API创建自己的React应用程序，以使用AI生成图像。你可以添加更多的功能，所以不妨尝试一下。
 
-If you want to see the video version of this, check my video on [Generate Images using React and Dall-E API - React and OpenAI API Tutorial](https://youtu.be/oacBV4tnuYQ) on my YouTube channel [Cybernatico](https://www.youtube.com/c/CybernaticoByNishant).
+如果你想看视频版本，请点击我的视频 [使用React和Dall-E API生成图像- React和OpenAI API教程](https://youtu.be/oacBV4tnuYQ) 在我的YouTube频道 [Cybernatico](https://www.youtube.com/c/CybernaticoByNishant).
 
-Check the code on [GitHub](https://github.com/nishant-666/Dall-E-API-with-React) for your reference.
+查看代码[GitHub](https://github.com/nishant-666/Dall-E-API-with-React)以供参考.
 
-> Happy Learning.
+> 学习快乐~

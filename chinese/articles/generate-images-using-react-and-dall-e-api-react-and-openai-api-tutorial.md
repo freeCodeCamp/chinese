@@ -1,6 +1,6 @@
 > -  原文地址：[How to Generate Images using React and the Dall-E 2 API – React and OpenAI API Tutorial](https://www.freecodecamp.org/news/generate-images-using-react-and-dall-e-api-react-and-openai-api-tutorial/)
 > -  原文作者：[Nishant Kumar](https://www.freecodecamp.org/news/author/nishant-kumar/)
-> -  译者：
+> -  译者：dake0913
 > -  校对者：
 
 ![How to Generate Images using React and the Dall-E 2 API – React and OpenAI API Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2022/11/Important-Concepts-and-questions--1-.png)

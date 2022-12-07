@@ -1,578 +1,602 @@
-> -  原文地址：[The Express +  Node.js Handbook – Learn the Express JavaScript Framework for Beginners [2022 Edition]](https://www.freecodecamp.org/news/the-express-handbook/)
-> -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：Papaya HUANG
-> -  校对者：
+> - 原文地址：[The Express + Node.js Handbook – Learn the Express JavaScript Framework for Beginners [2022 Edition]](ø)
+> - 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![The Express +  Node.js Handbook – Learn the Express JavaScript Framework for Beginners [2022 Edition]](https://www.freecodecamp.org/news/content/images/size/w2000/2022/11/pexels-paul-ijsendoorn-1181202.jpg)
 
-## What is Express?
+## 什么是 Express?
 
-Express is a Web Framework built upon Node.js.
+Express 是一个基于 Node.js 的 Web 框架。
 
-Node.js is an amazing tool for building networking services and applications.
+Node.js 是一种搭建网络服务和应用的实用工具。
 
-Express builds on top of its features to provide easy to use functionality that satisfies the needs of the Web Server use-case. It's Open Source, free, easy to extend, and very performant.
+Express 搭建在 Node.js 之上，提供易于使用的功能来满足 Web 服务器的用例需求。它开源、免费、易于扩展并且非常高效。
 
-There are also lots and lots of pre-built packages you can just drop in and use to do all kinds of things.
+可以使用各种各样的预构建的包来处理应用中的各项内容。
 
-[You can get a PDF and ePub version of this Express Handbook](https://thevalleyofcode.com/download/express/)
+[点击获取 Express 手册的 PDF 和 ePub 版本](https://thevalleyofcode.com/download/express/)
 
-## Table of Contents
+## 目录
 
--   [How to Install Express](#how-to-install-express)
--   [The first "Hello, World" example](#the-first-hello-world-example)
--   [Request Parameters](#request-parameters)
--   [How to Send a Response to the Client](#how-to-send-a-response-to-the-client)
--   [How to Send a JSON Response](#how-to-send-a-json-response)
--   [How to Manage Cookies](#how-to-manage-cookies)
--   [How to Work with HTTP Headers](#how-to-work-with-http-headers)
--   [How to Handle Redirects](#how-to-handle-redirects)
--   [Routing in Express](#routing-in-express)
--   [Templates in Express](#templates-in-express)
--   [Express Middleware](#express-middleware)
--   [How to Serve Static Assets with Express](#how-to-serve-static-assets-with-express)
--   [How to Send Files to the Client](#how-to-send-files-to-the-client)
--   [Sessions in Express](#sessions-in-express)
--   [How to Validate Input in Express](#how-to-validate-input-in-express)
--   [How to Sanitize Input in Express](#how-to-sanitize-input-in-express)
--   [How to Handle Forms in Express](#how-to-handle-forms-in-express)
--   [How to Handle File Uploads in Forms in Express](#how-to-handle-file-uploads-in-forms-in-express)
+- [如何安装 Express](#how-to-install-express)
+- [第一个 "Hello, World"](#the-first-hello-world-example)
+- [请求参数](#request-parameters)
+- [如何向客户端发送响应](#how-to-send-a-response-to-the-client)
+- [如何发送一个 JSON 响应](#how-to-send-a-json-response)
+- [如何管理 Cookies](#how-to-manage-cookies)
+- [如何处理 HTTP 标头](#how-to-work-with-http-headers)
+- [如何处理重定向](#how-to-handle-redirects)
+- [Express 中的路由](#routing-in-express)
+- [Express 中的模版](#templates-in-express)
+- [Express 中间件](#express-middleware)
+- [如何使用 Express 提供静态资源](#how-to-serve-static-assets-with-express)
+- [如何向客户端发送文件](#how-to-send-files-to-the-client)
+- [Express 中的会话](#sessions-in-express)
+- [如何在 Express 中验证输入](#how-to-validate-input-in-express)
+- [如何在 Express 中清理输入](#how-to-sanitize-input-in-express)
+- [如何在 Express 中处理表单](#how-to-handle-forms-in-express)
+- [如何在 Express 中处理表单中的文件上传](#how-to-handle-file-uploads-in-forms-in-express)
 
-## How to Install Express
+<h2 id="how-to-install-express">如何安装Express</h2>
 
-You can install Express into any project with npm.
+你可以使用 npm 在任何项目中安装 Express。
 
-If you're in an empty folder, first create a new Node.js project with this command:
+如果是一个空文件夹，首先使用命令创建一个新的 Node.js 项目：
 
 ```
 npm init -y
 ```
 
-then run this:
+然后执行：
 
 ```
 npm install express
 ```
 
-to install Express into the project.
+在项目中安装 Express。
 
-## The First "Hello, World" Example
+<h2 id="the-first-hello-world-example">第一个"Hello World"</h2>
 
-The first example we're going to create is a simple Express Web Server.
+我们要创建的第一个示例是一个简单的 Express Web 服务器：
 
-Copy this code:
+请复制以下代码：
 
 ```js
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.get('/', (req, res) => res.send('Hello World!'))
-app.listen(3000, () => console.log('Server ready'))
+app.get('/', (req, res) => res.send('Hello World!'));
+app.listen(3000, () => console.log('Server ready'));
 ```
 
-Save this to an `index.js` file in your project root folder, and start the server using this command:
+并将其保存在项目根文件夹的 `index.js` 文件中，然后通过以下命令启动服务器：
 
 ```
 node index.js
 ```
 
-You can open the browser to port 3000 on localhost and you should see the `Hello World!` message.
+你可以打开浏览器并通过 localhost 导航到 port 3000，就会看到 `Hello World!` 信息。
 
-Those 4 lines of code do a lot behind the scenes.
+上面四行代码在幕后做了很多工作：
 
-First, we import the `express` package to the `express` value.
+首先我们通过 `express` 变量引用 `express` 包。
 
-We instantiate an application by calling the `express()` method.
+通过调用 `express()` 方法来实例化一个应用。
 
-Once we have the application object, we tell it to listen for GET requests on the `/` path, using the `get()` method.
+一旦创建了应用对象，就使用 `get()` 方法监听来自 `/` 路径的 GET 请求。
 
-There is a method for every HTTP **verb**: `get()`, `post()`, `put()`, `delete()`, and `patch()`:
+每一种 HTTP 方法都有一个对应的 **动词**: `get()`, `post()`, `put()`, `delete()`和 `patch()`:
 
 ```js
-app.get('/', (req, res) => { /* */ })
-app.post('/', (req, res) => { /* */ })
-app.put('/', (req, res) => { /* */ })
-app.delete('/', (req, res) => { /* */ })
-app.patch('/', (req, res) => { /* */ })
+app.get('/', (req, res) => {
+  /* */
+});
+app.post('/', (req, res) => {
+  /* */
+});
+app.put('/', (req, res) => {
+  /* */
+});
+app.delete('/', (req, res) => {
+  /* */
+});
+app.patch('/', (req, res) => {
+  /* */
+});
 ```
 
-Those methods accept a callback function – which is called when a request is started – and we need to handle it.
+这些方法接受一个回调函数（当请求开始时调用），我们需要处理回调函数。
 
-We pass in an arrow function:
+可以在回调中传入一个箭头函数：
 
 ```js
-(req, res) => res.send('Hello World!')
+(req, res) => res.send('Hello World!');
 ```
 
-Express sends us two objects in this callback, which we called `req` and `res`. They represent the Request and the Response objects.
+Express 在回调中发送两个对象：`req` 和`res`，分别代表了请求（Request）和响应(Response)对象。
 
-Both are standards and you can read more on them [here](https://developer.mozilla.org/en-US/docs/Web/API/Request) and [here](https://developer.mozilla.org/en-US/docs/Web/API/Response).
+更多标准可以参考[这里](https://developer.mozilla.org/en-US/docs/Web/API/Request)和[这里](https://developer.mozilla.org/en-US/docs/Web/API/Response)。
 
-Request is the HTTP request. It gives us all the request information, including the request parameters, the headers, the body of the request, and more.
+请求是一个 HTTP 请求，它包含了所有请求信息：包括请求参数、标头、请求体等。
 
-Response is the HTTP response object that we'll send to the client.
+响应是 HTTP 响应对象，会返回给客户端。
 
-What we do in this callback is send the 'Hello World!' string to the client, using the `Response.send()` method.
+在这个回调示例中，我们通过`Response.send()`方法发送"Hello World!"字符串给客户端。
 
-This method sets that string as the body, and it closes the connection.
+这个方法将字符串作为请求体，传输完毕后关闭连接。
 
-The last line of the example actually starts the server, and tells it to listen on port `3000`. We pass in a callback that is called when the server is ready to accept new requests.
+Hello World 示例中最后一行代码启动服务器，并且告诉它在 port`3000`监听。我们传入一个回调，当服务器准备好接受新请求时调用该回调。
 
-## Request Parameters
+<h2 id="request-parameters">请求参数</h2>
 
-I mentioned how the Request object holds all the HTTP request information.
+我介绍了 Request 对象是如何持有 HTTP 请求信息的。
 
-These are the main properties you'll likely use:
+以下是主要的属性：
 
-| Property | Description |
-| --- | --- |
-| .app | holds a reference to the Express app object |
-| .baseUrl | the base path on which the app responds |
-| .body | contains the data submitted in the request body (must be parsed and populated manually before you can access it) |
-| .cookies | contains the cookies sent by the request (needs the `cookie-parser` middleware) |
-| .hostname | the hostname as defined in the [Host HTTP header](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Host) value |
-| .ip | the client IP |
-| .method | the HTTP method used |
-| .params | the route named parameters |
-| .path | the URL path |
-| .protocol | the request protocol |
-| .query | an object containing all the query strings used in the request |
-| .secure | true if the request is secure (uses HTTPS) |
-| .signedCookies | contains the signed cookies sent by the request (needs the `cookie-parser` middleware) |
-| .xhr | true if the request is an [XMLHttpRequest](https://www.freecodecamp.org/news/xhr/) |
+| 属性           | 介绍                                                                                            |
+| -------------- | ----------------------------------------------------------------------------------------------- |
+| .app           | 持有对 Express app 对象的引用                                                                   |
+| .baseUrl       | app 响应的基本路径                                                                              |
+| .body          | 包含在请求体提交的数据（必须手动解析和填充后才能访问）                                          |
+| .cookies       | 包含由请求发送的 cookies(需要 `cookie-parser`中间件)                                            |
+| .hostname      | [Host HTTP 标头](https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Host) 值定义的主机名 |
+| .ip            | 客户端 IP                                                                                       |
+| .method        | 使用的 HTTP 方法                                                                                |
+| .params        | 路由命名参数                                                                                    |
+| .path          | URL 路径                                                                                        |
+| .protocol      | 请求协议                                                                                        |
+| .query         | 包含请求中使用的所有查询字符串的对象                                                            |
+| .secure        | 请求是安全时(使用 HTTPS)为 true                                                                 |
+| .signedCookies | 包含由请求发送的签名 cookies (需要 `cookie-parser` 中间件)                                      |
+| .xhr           | 请求为 [XMLHttpRequest](https://www.freecodecamp.org/news/xhr/)时为 true                        |
 
-## How to Send a Response to the Client
+<h2 id="how-to-send-a-response-to-the-client">如何向客户端发送响应</h2>
 
-In the Hello World example, we used the `send()` method of the Response object to send a simple string as a response, and to close the connection:
+在 Hello World 示例中， 我们使用响应对象的`send()`方法来将一个简单的字符串作为响应，之后关闭连接。
 
 ```js
-(req, res) => res.send('Hello World!')
+(req, res) => res.send('Hello World!');
 ```
 
-If you pass in a string, it sets the `Content-Type` header to `text/html`.
+如果你传入一个字符串，它将`Content-Type`标头设置为`text/html`。
 
-If you pass in an object or an array, it sets the `application/json` `Content-Type` header, and parses that parameter into [JSON](https://www.freecodecamp.org/news/json/).
+如果你传入的是对象或者数组，它将`Content-Type`标头设置为`application/json`，并将传入的对象或数组解析为[JSON](https://www.freecodecamp.org/news/json/)。
 
-After this, `send()` closes the connection.
+之后`send()`关闭连接。
 
-`send()` automatically sets the `Content-Length` HTTP response header, unlike `end()` which requires you to do that.
+`send()`自动设置 `Content-Length` HTTP 响应标头，不像 `end()` 需要你手动设置。
 
-### How to use end() to send an empty response
+### 如何使用 end()发送空响应
 
-An alternative way to send the response, without any body, is by using the `Response.end()` method:
+另一个发送响应的方式，是使用`Response.end()`方法，这种方法不发送任何响应体：
 
 ```js
-res.end()
+res.end();
 ```
 
-### How to set the HTTP response status
+### 如何设置 HTTP 响应状态
 
-Use the `status()` method on the response object:
+在响应对象使用 `status()` 方法：
 
 ```js
-res.status(404).end()
+res.status(404).end();
 ```
 
-or
+或者
 
 ```js
-res.status(404).send('File not found')
+res.status(404).send('File not found');
 ```
 
-`sendStatus()` is a shortcut:
+`sendStatus()` 是快捷方式。
 
 ```js
-res.sendStatus(200)
+res.sendStatus(200);
 // === res.status(200).send('OK')
 
-res.sendStatus(403)
+res.sendStatus(403);
 // === res.status(403).send('Forbidden')
 
-res.sendStatus(404)
+res.sendStatus(404);
 // === res.status(404).send('Not Found')
 
-res.sendStatus(500)
+res.sendStatus(500);
 // === res.status(500).send('Internal Server Error')
 ```
 
-## How to Send a JSON Response
+<h2 id="how-to-send-a-json-response">如何发送一个JSON响应</h2>
 
-When you listen for connections on a route in Express, the callback function will be invoked on every network call with a Request object instance and a Response object instance.
+当你在 Express 中监听路由上的连接时，回调函数将在每次网络调用时被调用，并带有一个 Request 对象实例和一个 Response 对象实例。
 
-Example:
-
-```js
-app.get('/', (req, res) => res.send('Hello World!'))
-```
-
-Here we used the `Response.send()` method, which accepts any string.
-
-You can send [JSON](https://www.freecodecamp.org/news/json/) to the client by using `Response.json()`, a useful method.
-
-It accepts an object or array, and converts it to JSON before sending it:
+示例：
 
 ```js
-res.json({ username: 'Flavio' })
+app.get('/', (req, res) => res.send('Hello World!'));
 ```
 
-## How to Manage Cookies
+我们在这里使用 `Response.send()` 方法，接受任意字符串。
 
-Use the `Response.cookie()` method to manipulate your cookies.
+你可以使用[JSON](https://www.freecodecamp.org/news/json/)，即使用 `Response.json()`发送到客户端。
 
-Examples:
+它接受一个对象或者数组，并在发送前将其转换为 JSON 格式：
 
 ```js
-res.cookie('username', 'Flavio')
+res.json({ username: 'Flavio' });
 ```
 
-This method accepts a third parameter, which contains various options:
+<h2 id="how-to-manage-cookies">如何管理cookies</h2>
+
+使用`Response.cookie()`方法来控制 cookies。
+
+示例：
 
 ```js
-res.cookie('username', 'Flavio', { domain: '.flaviocopes.com', path: '/administrator', secure: true })
-
-res.cookie('username', 'Flavio', { expires: new Date(Date.now() + 900000), httpOnly: true })
+res.cookie('username', 'Flavio');
 ```
 
-The most useful parameters you can set are:
-
-| Value | Description |
-| --- | --- |
-| `domain` | The [cookie domain name](https://www.freecodecamp.org/news/cookies/#set-a-cookie-domain) |
-| `expires` | Set the [cookie expiration date](https://www.freecodecamp.org/news/cookies/#set-a-cookie-expiration-date). If missing, or 0, the cookie is a session cookie |
-| `httpOnly` | Set the cookie to be accessible only by the web server. See [HttpOnly](https://www.freecodecamp.org/news/cookies/#httponly) |
-| `maxAge` | Set the expiry time relative to the current time, expressed in milliseconds |
-| `path` | The [cookie path](https://www.freecodecamp.org/news/cookies/#set-a-cookie-path). Defaults to '/' |
-| `secure` | Marks the [cookie HTTPS only](https://www.freecodecamp.org/news/cookies/#secure) |
-| `signed` | Set the cookie to be signed |
-| `sameSite` | Value of [`SameSite`](https://www.freecodecamp.org/news/cookies/#samesite) |
-
-A cookie can be cleared with:
+这个方法还接受第三个参数，这个参数包含各种选项：
 
 ```js
-res.clearCookie('username')
+res.cookie('username', 'Flavio', {
+  domain: '.flaviocopes.com',
+  path: '/administrator',
+  secure: true
+});
+
+res.cookie('username', 'Flavio', {
+  expires: new Date(Date.now() + 900000),
+  httpOnly: true
+});
 ```
 
-## How to Work with HTTP Headers
+一些你可以设置的有用的参数包括：
 
-### How to access HTTP headers values from a request
+| 值         | 描述                                                                                                                                                 |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `domain`   | [cookie 的域名](https://www.freecodecamp.org/news/cookies/#set-a-cookie-domain)                                                                      |
+| `expires`  | 设置[cookie 过期日期](https://www.freecodecamp.org/news/cookies/#set-a-cookie-expiration-date)。 如果未设置或者为 0，这个 cookie 将作为会话 cookie。 |
+| `httpOnly` | 设置 cookie 仅被 web 服务器访问。 具体可查看[HttpOnly](https://www.freecodecamp.org/news/cookies/#httponly)                                          |
+| `maxAge`   | 设置相对于当前时间的过期时间，以毫秒为单位                                                                                                           |
+| `path`     | [cookie 路径](https://www.freecodecamp.org/news/cookies/#set-a-cookie-path)。默认值为 '/'                                                            |
+| `secure`   | 标记为[cookie HTTPS only](https://www.freecodecamp.org/news/cookies/#secure)                                                                         |
+| `signed`   | 设置需要签名的 cookie                                                                                                                                |
+| `sameSite` | [`SameSite`](https://www.freecodecamp.org/news/cookies/#samesite)的值                                                                                |
 
-You can access all the HTTP headers using the `Request.headers` property:
+清除 cookie 可以使用：
+
+```js
+res.clearCookie('username');
+```
+
+<h2 id="how-to-work-with-http-headers">如何处理HTTP标头</h2>
+
+### 如何通过请求获取 HTTP 标头值
+
+可以使用 `Request.headers` 属性访问所有 HTTP 标头的值：
 
 ```js
 app.get('/', (req, res) => {
-  console.log(req.headers)
-})
+  console.log(req.headers);
+});
 ```
 
-Use the `Request.header()` method to access one individual request header's value:
+使用`Request.header()` 方法获取单个请求标头的值：
 
 ```js
 app.get('/', (req, res) => {
-  req.header('User-Agent')
-})
+  req.header('User-Agent');
+});
 ```
 
-### How to change any HTTP header value for a response
+### 如何为响应改变 HTTP 标头
 
-You can change any HTTP header value using `Response.set()`:
+可以使用 `Response.set()`改变 HTTP 标头值：
 
 ```js
-res.set('Content-Type', 'text/html')
+res.set('Content-Type', 'text/html');
 ```
 
-There is a shortcut for the Content-Type header, however:
+Content-Type 标头的便捷方式是：
 
 ```js
-res.type('.html')
+res.type('html');
 // => 'text/html'
 
-res.type('html')
-// => 'text/html'
-
-res.type('json')
+res.type('json');
 // => 'application/json'
 
-res.type('application/json')
+res.type('application/json');
 // => 'application/json'
 
-res.type('png')
+res.type('png');
 // => image/png:
 ```
 
-## How to Handle Redirects
+<h2 id="how-to-handle-redirects">如何处理重定向</h2>
 
-Redirects are common in Web Development. You can create a redirect using the `Response.redirect()` method:
-
-```js
-res.redirect('/go-there')
-```
-
-This creates a 302 redirect.
-
-A 301 redirect is made in this way:
+在 Web 开发中重定向很常见，可以使用 `Response.redirect()`实现：
 
 ```js
-res.redirect(301, '/go-there')
+res.redirect('/go-there');
 ```
 
-You can specify an absolute path (`/go-there`), an absolute URL (`https://anothersite.com`), a relative path (`go-there`) or use the `..` to go back one level:
+这样就创建了一个 302 重定向。
+
+可以使用以下方法创建一个 301 重定向：
 
 ```js
-res.redirect('../go-there')
-res.redirect('..')
+res.redirect(301, '/go-there');
 ```
 
-You can also redirect back to the Referrer HTTP header value (defaulting to `/` if not set) using
+你可以指定绝对路径 (`/go-there`)、绝对 URL (`https://anothersite.com`)、相对路径(`go-there`) 或者 `..` 返回上一层：
 
 ```js
-res.redirect('back')
+res.redirect('../go-there');
+res.redirect('..');
 ```
 
-## Routing in Express
-
-Routing is the process of determining what should happen when a URL is called, or also which parts of the application should handle a specific incoming request.
-
-In the Hello World example we used this code:
+你还可以重定向回 Referrer HTTP 标头值 (如果未设置默认值为 `/`)：
 
 ```js
-app.get('/', (req, res) => { /* */ })
+res.redirect('back');
 ```
 
-This creates a route that maps accessing the root domain URL `/` using the HTTP GET method to the response we want to provide.
+<h2 id="routing-in-express">Express中的路由</h2>
 
-### Named parameters
+路由是确定调用 URL 时应该发生什么的过程，或者应用程序的哪些部分应该处理特定的传入请求。
 
-What if we want to listen for custom requests? Maybe we want to create a service that accepts a string and returns it as uppercase – and we don't want the parameter to be sent as a query string, but as part of the URL. In a case like that, we use named parameters:
+在 Hello World 示例中，我们使用了这段代码：
 
 ```js
-app.get('/uppercase/:theValue', (req, res) => res.send(req.params.theValue.toUpperCase()))
+app.get('/', (req, res) => {
+  /* */
+});
 ```
 
-If we send a request to `/uppercase/test`, we'll get `TEST` in the body of the response.
+这里创建一个路由，访问根域 URL`/`， 并使用 HTTP GET 方法映射到我们需要的响应。
 
-You can use multiple named parameters in the same URL, and they will all be stored in `req.params`.
+### 命名参数
 
-### How to use a regular expression to match a path
-
-You can use [regular expressions](https://flaviocopes.com/javascript-regular-expressions/) to match multiple paths with one statement:
+如果想监听自定义请求怎么办？也许我们想创建一个接受字符串并将其作为大写字母返回的服务——我们不希望参数作为查询字符串发送，而是作为 URL 的一部分发送。在这种情况下，我们使用命名参数：
 
 ```js
-app.get(/post/, (req, res) => { /* */ })
+app.get('/uppercase/:theValue', (req, res) =>
+  res.send(req.params.theValue.toUpperCase())
+);
 ```
 
-will match `/post`, `/post/first`, `/thepost`, `/posting/something`, and so on.
+如果发送请求到 `/uppercase/test`，我们会在响应体中得到 `TEST`。
 
-## Templates in Express
+你可以在同一个 URL 中使用多个命名参数，它们都将存储在 `req.params`.
 
-Express is capable of handling server-side template engines.
+### 如何使用正则表达式匹配路径
 
-Template engines allow us to add data to a view, and generate HTML dynamically.
+可以通过一条[正则表达式](https://flaviocopes.com/javascript-regular-expressions/) 来匹配多个路径：
 
-Express uses Jade as the default. Jade is the old version of Pug, specifically Pug 1.0.
+```js
+app.get(/post/, (req, res) => {
+  /* */
+});
+```
 
-Note that the name was changed from Jade to Pug due to a trademark issue in 2016, when the project released version 2. You can still use Jade, aka Pug 1.0, but going forward, it's best to use Pug 2.0
+以上代码将匹配 `/post`, `/post/first`, `/thepost`, `/posting/something`等路径。
 
-Although the last version of Jade is getting old, it's still the default in Express for backward compatibility reasons.
+<h2 id="templates-in-express">Express中的模版</h2>
 
-In any new project, you should use Pug or another engine of your choice. The official site of Pug is [https://pugjs.org/](https://pugjs.org/).
+Express 能够处理服务器端模板引擎。
 
-You can use many different template engines, including Pug, Handlebars, Mustache, EJS and more.
+模板引擎允许我们向视图添加数据，并动态生成 HTML。
 
-To use Pug we must first install it:
+Express 默认使用 Jade。 Jade 是 Pug 的旧版本，特指 Pug 1.0。
+
+请注意，由于商标问题，该项目在 2016 年发布第二版时，名称从 Jade 改为 Pug。你仍然可以使用 Jade，又称 Pug 1.0，但往后最好使用 Pug 2.0。
+
+尽管 Jade 的最后一个版本已经陈旧了，但出于向后兼容的原因，它仍然是 Express 中的默认版本。
+
+你可以在任何新项目中使用 Pug 或你选择的引擎。Pug 的官方网站是[https://pugjs.org/](https://pugjs.org/)。
+
+可以使用许多不同的模板引擎，包括 Pug、Handlebars、Mustache、EJS 等。
+
+要使用 Pug，我们必须先安装它：
 
 ```bash
 npm install pug
 ```
 
-and when initializing the Express app, we need to set it:
+在初始化 Express 应用程序时，我们需要设置它：
 
 ```js
-const express = require('express')
-const app = express()
-app.set('view engine', 'pug')
+const express = require('express');
+const app = express();
+app.set('view engine', 'pug');
 ```
 
-We can now start writing our templates in `.pug` files.
+然后就可以在 `.pug` 文件中编写模板。
 
-Create an about view:
+创建一个 about 视图：
 
 ```js
 app.get('/about', (req, res) => {
-  res.render('about')
-})
+  res.render('about');
+});
 ```
 
-and the template in `views/about.pug`:
+模板路径为`views/about.pug`:
 
 ```
 p Hello from Flavio
 ```
 
-This template will create a `p` tag with the content `Hello from Flavio`.
+该模板创建一个 `p` 标签，内容为 `Hello from Flavio`。
 
-You can interpolate a variable using this code:
+你也可以使用以下代码插入变量：
 
 ```js
 app.get('/about', (req, res) => {
-  res.render('about', { name: 'Flavio' })
-})
+  res.render('about', { name: 'Flavio' });
+});
 ```
 
 ```
 p Hello from #{name}
 ```
 
-Look at the [Pug guide](https://flaviocopes.com/pug) for more information on how to use Pug.
+更多使用 Pug 的信息，可以查看[Pug 指南](https://flaviocopes.com/pug)。
 
-This online converter from HTML to Pug will be a great help: [https://html-to-pug.com/](https://html-to-pug.com/).
+推荐你使用这个在线 HTML 到 Pug 转换器 [https://html-to-pug.com/](https://html-to-pug.com/)。
 
-## Express Middleware
+<h2 id="express-middleware">Express中间件</h2>
 
-A middleware is a function that hooks into the routing process, performing an arbitrary operation at some point in the chain (depending on what we want it to do).
+中间件是一个挂钩到路由过程中的函数，在链中的某个点执行任意操作（取决于我们想要它做什么）。
 
-It's commonly used to edit the request or response objects, or terminate the request before it reaches the route handler code.
+它通常用于编辑请求或响应对象，或者在请求到达路由处理程序代码之前终止请求。
 
-Middleware is added to the execution stack like so:
-
-```js
-app.use((req, res, next) => { /* */ })
-```
-
-This is similar to defining a route, but in addition to the Request and Response objects instances, we also have a reference to the _next_ middleware function, which we assign to the variable `next`.
-
-We always call `next()` at the end of our middleware function, in order to pass the execution to the next handler. That is unless we want to prematurely end the response and send it back to the client.
-
-You typically use pre-made middleware, in the form of `npm` packages. You can find a big list of the available ones [here](https://expressjs.com/en/resources/middleware.html).
-
-One example is `cookie-parser`, which is used to parse cookies into the `req.cookies` object. You can install it using `npm install cookie-parser` and you use it like this:
+可以通过如下方法将中间件添加到执行栈：
 
 ```js
-const express = require('express')
-const app = express()
-const cookieParser = require('cookie-parser')
-
-app.get('/', (req, res) => res.send('Hello World!'))
-
-app.use(cookieParser())
-app.listen(3000, () => console.log('Server ready'))
+app.use((req, res, next) => {
+  /* */
+});
 ```
 
-We can also set a middleware function to run for specific routes only (not for all), by using it as the second parameter of the route definition:
+这和定义路由类似，但是在 Request 和 Response 实例之后，我们还引用了 _next_ 中间件函数，并分配给了`next`变量。
+
+我们总是在中间件函数末尾调用`next()`以便将执行传递给下一个处理程序。除非我们想提前结束响应并将其发送回客户端。
+
+通常我们通过 `npm` 包来使用预制的中间件。你可以在 [这里](https://expressjs.com/en/resources/middleware.html)找到中间件列表。
+
+其中一个预制中间件示例就是 `cookie-parser`，它可以将 cookie 解析为 `req.cookies`对象。 你可以使用 `npm install cookie-parser` 命令安装并使用：
+
+```js
+const express = require('express');
+const app = express();
+const cookieParser = require('cookie-parser');
+
+app.get('/', (req, res) => res.send('Hello World!'));
+
+app.use(cookieParser());
+app.listen(3000, () => console.log('Server ready'));
+```
+
+我们还可以将中间件函数设置为仅针对特定路由运行（而不是针对所有路由），方法是将其作为路由定义的第二个参数：
 
 ```js
 const myMiddleware = (req, res, next) => {
   /* ... */
-  next()
-}
+  next();
+};
 
-app.get('/', myMiddleware, (req, res) => res.send('Hello World!'))
+app.get('/', myMiddleware, (req, res) => res.send('Hello World!'));
 ```
 
-If you need to store data that's generated in a middleware to pass it down to subsequent middleware functions, or to the request handler, you can use the `Request.locals` object. It will attach that data to the current request:
+如果需要存储中间件生成的数据，并传递给后续中间件函数或请求处理程序，你可以使用`Request.locals`对象。它将该数据附加到当前请求：
 
 ```js
-req.locals.name = 'Flavio'
+req.locals.name = 'Flavio';
 ```
 
-## How to Serve Static Assets with Express
+<h2 id="how-to-serve-static-assets-with-express">如何使用Express提供静态资源</h2>
 
-It's common to have images, CSS, and more in a `public` subfolder, and expose them to the root level:
+通常图片、CSS 被存储在 `public`子文件夹，并暴露给根目录：
 
 ```js
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.use(express.static('public'))
+app.use(express.static('public'));
 
 /* ... */
 
-app.listen(3000, () => console.log('Server ready'))
+app.listen(3000, () => console.log('Server ready'));
 ```
 
-If you have an `index.html` file in `public/`, that will be served if you now hit the root domain URL (`http://localhost:3000`)
+如果在 `public/`有一个`index.html`文件，当你访问根域 URL(`http://localhost:3000`)时，就会提供静态资源。
 
-## How to Send Files to the Client
+<h2 id="how-to-send-files-to-the-client">如何向客户端发送文件</h2>
 
-Express provides a handy method to transfer a file as an attachment: `Response.download()`.
+Express 提供了一个简便的方法将文件转换为附件传输： `Response.download()`。
 
-Once a user hits a route that sends a file using this method, browsers will prompt the user to download.
+一旦用户点击使用此方法发送文件的路由，浏览器将提示用户下载。
 
-The `Response.download()` method allows you to send a file attached to the request, and the browser, instead of showing it in the page, will save it to disk.
+`Response.download()` 方法允许发送附加到请求的文件，浏览器不会在页面中显示它，而是将其保存到磁盘。
 
 ```js
-app.get('/', (req, res) => res.download('./file.pdf'))
+app.get('/', (req, res) => res.download('./file.pdf'));
 ```
 
-In the context of an app:
+在应用上下文中的示例：
 
 ```js
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.get('/', (req, res) => res.download('./file.pdf'))
-app.listen(3000, () => console.log('Server ready'))
+app.get('/', (req, res) => res.download('./file.pdf'));
+app.listen(3000, () => console.log('Server ready'));
 ```
 
-You can set the file to be sent with a custom filename:
+你可以将文件设置为使用自定义文件名发送：
 
 ```js
-res.download('./file.pdf', 'user-facing-filename.pdf')
+res.download('./file.pdf', 'user-facing-filename.pdf');
 ```
 
-This method provides a callback function which you can use to execute code once the file has been sent:
+此方法提供了一个回调函数，你可以使用它在文件发送后执行代码：
 
 ```js
 res.download('./file.pdf', 'user-facing-filename.pdf', (err) => {
   if (err) {
     //handle error
-    return
+    return;
   } else {
     //do something
   }
-})
+});
 ```
 
-## Sessions in Express
+<h2 id="sessions-in-express">Express中的会话</h2>
 
-By default Express requests are sequential and no request can be linked to another. There is no way to know if this request comes from a client that already performed a request previously.
+默认情况下，Express 请求是有顺序的，但请求之间没有相互链接，所以没有办法知道这个请求是否来自之前已经执行过请求的客户端。
 
-Users cannot be identified unless using some kind of mechanism that makes it possible.
+除非使用某种识别机制，否则用户无法识别请求。
 
-That's what sessions are.
+会话就应运而生。
 
-When implemented, every user of your API or website will be assigned a unique session, and this allows you to store the user's state.
+使用会话后，你的 API 或网站的每个用户都将被分配一个唯一的会话，就可以存储用户的状态。
 
-We'll use the `express-session` module, which is maintained by the Express team.
+我们将使用 `express-session` 模块来演示，它由 Express 团队维护。
 
-You can install it using this command:
+可以使用以下命令安装：
 
 ```bash
 npm install express-session
 ```
 
-and once you're done, you can instantiate it in your application with this one:
+安装完毕后，可以通过以下代码实例化：
 
 ```js
-const session = require('express-session')
+const session = require('express-session');
 ```
 
-This is a middleware, so you _install_ it in Express using the following:
+它是一个中间件，所以你使用以下代码在 Express 中 _安装_ 它:
 
 ```js
-const express = require('express')
-const session = require('express-session')
+const express = require('express');
+const session = require('express-session');
 
-const app = express()
-app.use(session({
-  'secret': '343ji43j4n3jn4jk3n'
-}))
+const app = express();
+app.use(
+  session({
+    secret: '343ji43j4n3jn4jk3n'
+  })
+);
 ```
 
-After this is done, all the requests to the app routes are now using sessions.
+编写完毕后，所有应用路由都使用会话。
 
-`secret` is the only required parameter, but there are many more you can use. It should be a randomly unique string for your application.
+`secret`是唯一的必填参数，还有许多可选参数。`secret`必须为一个唯一的随机字符串。
 
-The session is attached to the request, so you can access it using `req.session` here:
+会话被添加到请求，所以可以通过 `req.session`访问：
 
 ```js
 app.get('/', (req, res, next) => {
@@ -580,153 +604,155 @@ app.get('/', (req, res, next) => {
 }
 ```
 
-This object can be used to get data out of the session, and also to set data:
+该对象可用于从会话中获取数据，也可用于设置数据：
 
 ```js
-req.session.name = 'Flavio'
-console.log(req.session.name) // 'Flavio'
+req.session.name = 'Flavio';
+console.log(req.session.name); // 'Flavio'
 ```
 
-This data is serialized as [JSON](https://www.freecodecamp.org/news/json/) when stored, so you are safe to use nested objects.
+此数据在存储时被序列化为[JSON](https://www.freecodecamp.org/news/json/) ，所以可以安全使用嵌套对象。
 
-You can use sessions to communicate data to middleware that's executed later, or to retrieve it later on, on subsequent requests.
+你可以使用会话将数据传递给稍后执行的中间件，或者稍后根据后续请求检索数据。
 
-Where is the session data stored? It depends on how you set up the `express-session` module.
+会话数据存储在哪里？这取决于你如何设置`express-session`模块。
 
-It can store session data in:
+会话数据可被存储在：
 
--   **memory**, not meant for production
--   a **database** like MySQL or Mongo
--   a **memory cache** like Redis or Memcached
+- **内存**，不适用于生产
+- **数据库**，如 MySQL 或者 Mongo
+- **内存缓存**，如 Redis 或者 Memcached
 
-There is a big list of 3rd packages that implement a wide variety of different compatible caching stores in [https://github.com/expressjs/session](https://github.com/expressjs/session).
+在[https://github.com/expressjs/session](https://github.com/expressjs/session)中有一个巨大的第三方包列表，可以实现不同兼容性的缓存存储。
 
-All solutions store the session id in a cookie, and keep the data server-side. The client will receive the session id in a cookie, and will send it along with every HTTP request.
+所有解决方案都将会话 ID 存储在 cookie 中，并将数据保存在服务器端。客户端将在 cookie 中接收会话 ID，并将它与每个 HTTP 请求一起发送。
 
-We'll reference that server-side to associate the session id with the data stored locally.
+我们将引用该服务器端以将会话 ID 与本地存储的数据相关联。
 
-Memory is the default, and it requires no special setup on your part. It's the simplest thing but it's meant only for development purposes.
+内存是默认设置，不需要你进行特殊操作。这样很便捷，但它仅用于开发目的。
 
-The best choice is a memory cache like Redis, for which you need to setup its own infrastructure.
+最好是选择 Redis 之类的内存缓存，需要为其设置自己的基础架构。
 
-Another popular package to manage sessions in Express is `cookie-session`, which has a big difference: it stores data client-side in the cookie.
+另一个常用管理会话的包是`cookie-session`，与 Redis 巨大的不同是将数据存储在客户端的 cookie。
 
-I do not recommend doing that because storing data in cookies means that it's stored client-side, and sent back and forth in every single request made by the user. It's also limited in size, as it can only store 4 kilobytes of data.
+我不建议这样做，因为将数据存储在 cookie 中意味着它存储在客户端，并在用户发出的每个请求中来回发送。它的大小也有限制，因为它只能存储 4 KB 的数据。
 
-Cookies also need to be secured, but by default they are not, since secure Cookies are possible on HTTPS sites and you need to configure them if you have proxies.
+Cookie 也需要受到保护，但默认情况它不受保护，安全 Cookie 可以在 HTTPS 站点上使用，如果你使用代理上网，则需要配置它。
 
-## How to Validate Input in Express
+<h2 id="how-to-validate-input-in-express">如何在Express中验证输入</h2>
 
-Let's see how to validate any data coming in as input in your Express endpoints.
+让我们看看如何验证作为输入进入 Express 端点的任何数据。
 
-Say you have a POST endpoint that accepts the name, email, and age parameters:
+假设你有一个接受 name、email 和 age 参数的 POST 端点：
 
 ```js
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
 app.post('/form', (req, res) => {
-  const name  = req.body.name
-  const email = req.body.email
-  const age   = req.body.age
-})
+  const name = req.body.name;
+  const email = req.body.email;
+  const age = req.body.age;
+});
 ```
 
-How do you perform server-side validation on those results to make sure that:
+如何对这些结果执行服务器端验证以确保：
 
--   name is a string of at least 3 characters?
--   email is a real email?
--   age is a number, between 0 and 110?
+- name 是包含至少 3 个字符的字符串?
+- email 是真正的邮箱地址?
+- age 为 0 到 110 之间的数字?
 
-The best way to handle validation on any kind of input coming from outside in Express is by using the [`express-validator` package](https://express-validator.github.io):
+在 Express 中处理来自外部的任何输入的验证的最佳方法是使用[`express-validator` 包](https://express-validator.github.io):
 
 ```bash
 npm install express-validator
 ```
 
-You require the `check` and `validationResult` objects from the package:
+引用包中的`check`和`validationResult`对象：
 
 ```js
 const { check, validationResult } = require('express-validator');
 ```
 
-We pass an array of `check()` calls as the second argument of the `post()` call. Every `check()` call accepts the parameter name as argument. Then we call `validationResult()` to verify there were no validation errors. If there are any, we tell them to the client:
+在`post()`调用中，我们将包含`check()`调用的数组作为第二个参数传入。 每一个 `check()` 都接受参数名作为实参。最后调用`validationResult()`来验证是否有验证报错，如果有就告知客户端：
 
 ```js
-app.post('/form', [
-  check('name').isLength({ min: 3 }),
-  check('email').isEmail(),
-  check('age').isNumeric()
-], (req, res) => {
-  const errors = validationResult(req)
-  if (!errors.isEmpty()) {
-    return res.status(422).json({ errors: errors.array() })
+app.post(
+  '/form',
+  [
+    check('name').isLength({ min: 3 }),
+    check('email').isEmail(),
+    check('age').isNumeric()
+  ],
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.status(422).json({ errors: errors.array() });
+    }
+
+    const name = req.body.name;
+    const email = req.body.email;
+    const age = req.body.age;
   }
-
-  const name  = req.body.name
-  const email = req.body.email
-  const age   = req.body.age
-})
+);
 ```
 
-Notice I used:
+注意我使用了：
 
--   `isLength()`
--   `isEmail()`
--   `isNumeric()`
+- `isLength()`
+- `isEmail()`
+- `isNumeric()`
 
-There are many more of these methods, all coming from [validator.js](https://github.com/chriso/validator.js#validators), including:
+还有更多方法，都来自[validator.js](https://github.com/chriso/validator.js#validators)，包括：
 
--   `contains()`, checks if value contains the specified value
--   `equals()`, checks if value equals the specified value
--   `isAlpha()`
--   `isAlphanumeric()`
--   `isAscii()`
--   `isBase64()`
--   `isBoolean()`
--   `isCurrency()`
--   `isDecimal()`
--   `isEmpty()`
--   `isFQDN()`, checks if it's a fully qualified domain name
--   `isFloat()`
--   `isHash()`
--   `isHexColor()`
--   `isIP()`
--   `isIn()`, checks if the value is in an array of allowed values
--   `isInt()`
--   `isJSON()`
--   `isLatLong()`
--   `isLength()`
--   `isLowercase()`
--   `isMobilePhone()`
--   `isNumeric()`
--   `isPostalCode()`
--   `isURL()`
--   `isUppercase()`
--   `isWhitelisted()`, checks the input against a whitelist of allowed characters
+- `contains()`, 检查是否包含指定值
+- `equals()`, 检查是否与指定值相等
+- `isAlpha()`
+- `isAlphanumeric()`
+- `isAscii()`
+- `isBase64()`
+- `isBoolean()`
+- `isCurrency()`
+- `isDecimal()`
+- `isEmpty()`
+- `isFQDN()`, 检查是否为完全合格的域名
+- `isFloat()`
+- `isHash()`
+- `isHexColor()`
+- `isIP()`
+- `isIn()`, 检查值是否属于允许值数组
+- `isInt()`
+- `isJSON()`
+- `isLatLong()`
+- `isLength()`
+- `isLowercase()`
+- `isMobilePhone()`
+- `isNumeric()`
+- `isPostalCode()`
+- `isURL()`
+- `isUppercase()`
+- `isWhitelisted()`, 检查输入是否在白名单内
 
-You can validate the input against a regular expression using `matches()`.
+你也可以使用`matches()`来进行正则表达式验证。
 
-Dates can be checked using:
+日期可以通过以下方式验证：
 
--   `isAfter()`, checks if the entered date is after the one you pass
--   `isBefore()`, checks if the entered date is before the one you pass
--   `isISO8601()`
--   `isRFC3339()`
+- `isAfter()`, 检查输入的日期是否在你传入的日期之后
+- `isBefore()`, 检查输入的日期是否在你传入的日期之前
+- `isISO8601()`
+- `isRFC3339()`
 
-For exact details on how to use those validators, [refer to the docs here](https://github.com/chriso/validator.js#validators).
+更多如何使用验证器的方法，[可以参考这份文档](https://github.com/chriso/validator.js#validators)。
 
-All those checks can be combined by piping them:
+所有上述验证都可以串联起来：
 
 ```js
-check('name')
-  .isAlpha()
-  .isLength({ min: 10 })
+check('name').isAlpha().isLength({ min: 10 });
 ```
 
-If there is any error, the server automatically sends a response to communicate the error. For example if the email is not valid, this is what will be returned:
+如果有任何错误，服务器会自动发送一个响应来传达错误。例如，如果电子邮件无效，将返回以下内容：
 
 ```js
 {
@@ -738,159 +764,175 @@ If there is any error, the server automatically sends a response to communicate 
 }
 ```
 
-This default error can be overridden for each check you perform, using `withMessage()`:
+可以使用 `withMessage()`覆盖默认报错：
 
 ```js
 check('name')
   .isAlpha()
   .withMessage('Must be only alphabetical chars')
   .isLength({ min: 10 })
-  .withMessage('Must be at least 10 chars long')
+  .withMessage('Must be at least 10 chars long');
 ```
 
-What if you want to write your own special, custom validator? You can use the `custom` validator.
+如果你想要编写自定义验证器，可以使用 `custom` 验证器。
 
-In the callback function you can reject the validation either by throwing an exception, or by returning a rejected promise:
-
-```js
-app.post('/form', [
-  check('name').isLength({ min: 3 }),
-  check('email').custom(email => {
-    if (alreadyHaveEmail(email)) {
-      throw new Error('Email already registered')
-    }
-  }),
-  check('age').isNumeric()
-], (req, res) => {
-  const name  = req.body.name
-  const email = req.body.email
-  const age   = req.body.age
-})
-```
-
-The custom validator:
+在回调函数中，你可以通过抛出异常或返回被拒绝的 promise 来拒绝验证：
 
 ```js
-check('email').custom(email => {
-  if (alreadyHaveEmail(email)) {
-    throw new Error('Email already registered')
+app.post(
+  '/form',
+  [
+    check('name').isLength({ min: 3 }),
+    check('email').custom((email) => {
+      if (alreadyHaveEmail(email)) {
+        throw new Error('Email already registered');
+      }
+    }),
+    check('age').isNumeric()
+  ],
+  (req, res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const age = req.body.age;
   }
-})
+);
 ```
 
-can be rewritten like this:
+自定义验证器：
 
 ```js
-check('email').custom(email => {
+check('email').custom((email) => {
   if (alreadyHaveEmail(email)) {
-    return Promise.reject('Email already registered')
+    throw new Error('Email already registered');
   }
-})
+});
 ```
 
-## How to Sanitizing Input in Express
-
-You've seen how to validate input that comes from the outside world to your Express app.
-
-There's one thing you quickly learn when you run a public-facing server: never trust the input.
-
-Even if you sanitize and make sure that people can't enter weird things using client-side code, you'll still be subject to people using tools (even just the browser devtools) to POST directly to your endpoints.
-
-Or bots trying every possible combination of exploit known to humans.
-
-What you need to do is sanitize your input.
-
-The [`express-validator` package](https://express-validator.github.io) you already use to validate input can also conveniently be used to perform sanitization.
-
-Say you have a POST endpoint that accepts the name, email, and age parameters:
+也可改写为：
 
 ```js
-const express = require('express')
-const app = express()
+check('email').custom((email) => {
+  if (alreadyHaveEmail(email)) {
+    return Promise.reject('Email already registered');
+  }
+});
+```
 
-app.use(express.json())
+<h2 id="how-to-sanitize-input-in-express">如何在Express清理输入</h2>
+
+你已经了解了如何验证从外部世界到 Express 应用程序的输入。
+
+当运行面向公众的服务器时，你很快就会学到一件事：永远不要相信输入。
+
+即使在客户端你已经预做了一遍清理，确保任命不会输入奇怪的内容，您仍然会受到人们使用工具（甚至只是浏览器开发工具）直接 POST 到端点的影响。
+
+或者机器人尝试人类已知的每一种可能的攻击组合。
+
+需要做的是在服务器端清理输入。
+
+[`express-validator` 包](https://express-validator.github.io)除了可以验证输入以外也可以清理输入。
+
+假设你有一个接受 name、email 和 age 参数的 POST 端点：
+
+```js
+const express = require('express');
+const app = express();
+
+app.use(express.json());
 
 app.post('/form', (req, res) => {
-  const name  = req.body.name
-  const email = req.body.email
-  const age   = req.body.age
-})
+  const name = req.body.name;
+  const email = req.body.email;
+  const age = req.body.age;
+});
 ```
 
-You might validate it using:
+你可以这样验证输入：
 
 ```js
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.use(express.json())
+app.use(express.json());
 
-app.post('/form', [
-  check('name').isLength({ min: 3 }),
-  check('email').isEmail(),
-  check('age').isNumeric()
-], (req, res) => {
-  const name  = req.body.name
-  const email = req.body.email
-  const age   = req.body.age
-})
+app.post(
+  '/form',
+  [
+    check('name').isLength({ min: 3 }),
+    check('email').isEmail(),
+    check('age').isNumeric()
+  ],
+  (req, res) => {
+    const name = req.body.name;
+    const email = req.body.email;
+    const age = req.body.age;
+  }
+);
 ```
 
-You can add sanitization by piping the sanitization methods after the validation ones:
+你可以通过在验证方法之后串联清理方法来添加清理：
 
 ```js
-app.post('/form', [
-  check('name').isLength({ min: 3 }).trim().escape(),
-  check('email').isEmail().normalizeEmail(),
-  check('age').isNumeric().trim().escape()
-], (req, res) => {
-  //...
-})
+app.post(
+  '/form',
+  [
+    check('name').isLength({ min: 3 }).trim().escape(),
+    check('email').isEmail().normalizeEmail(),
+    check('age').isNumeric().trim().escape()
+  ],
+  (req, res) => {
+    //...
+  }
+);
 ```
 
-Here I used the methods:
+在代码中我使用的清理方法包括：
 
--   `trim()` trims characters (whitespace by default) at the beginning and at the end of a string
--   `escape()` replaces `<`, `>`, `&`, `'`, `"` and `/` with their corresponding HTML entities
--   `normalizeEmail()` canonicalizes an email address. Accepts several options to lowercase email addresses or subaddresses (for example `flavio+newsletters@gmail.com`)
+- `trim()`修剪字符串开头和结尾的字符（默认为空格）
+- `escape()`将 `<`, `>`, `&`, `'`, `"`和 `/`替换成它们对应的 HTML 实体
+- `normalizeEmail()`规范化电子邮件地址，它接受小写邮件地址或者子地址的选项。(如 `flavio+newsletters@gmail.com`)
 
-Other sanitization methods:
+其他的清理方法包括：
 
--   `blacklist()` removes characters that appear in the blacklist
--   `whitelist()` removes characters that do not appear in the whitelist
--   `unescape()` replaces HTML encoded entities with `<`, `>`, `&`, `'`, `"` and `/`
--   `ltrim()` like trim(), but only trims characters at the start of the string
--   `rtrim()` like trim(), but only trims characters at the end of the string
--   `stripLow()` removes ASCII control characters, which are normally invisible
+- `blacklist()` 删除出现在黑名单中的字符
+- `whitelist()` 删除未出现在白名单中的字符
+- `unescape()` 将 HTML 编码的实体替换为`<`, `>`, `&`, `'`, `"` 和 `/`
+- `ltrim()` 类似于 trim()，但只修剪字符串开头的字符
+- `rtrim()` 类似于 trim()， 但只修剪字符串末尾的字符
+- `stripLow()`删除通常不可见的 ASCII 控制字符
 
-Force conversion to a format:
+强制转换格式：
 
--   `toBoolean()` converts the input string to a boolean. Everything except for '0', 'false' and '' returns true. In strict mode only '1' and 'true' return true.
--   `toDate()` converts the input string to a date, or null if the input is not a date
--   `toFloat()` converts the input string to a float, or NaN if the input is not a float
--   `toInt()` converts the input string to an integer, or NaN if the input is not an integer
+- `toBoolean()` 将输入字符串转换为布尔值。除了 '0'、'false' 和 '' 之外的所有内容都返回 true。在严格模式下，只有 '1' 和 'true' 返回 true。
+- `toDate()` 将输入字符串转换为日期，如果输入不是日期，则为 null
+- `toFloat()` 将输入字符串转换为浮点数，如果输入不是浮点数，则转换为 NaN
+- `toInt()`将输入字符串转换为整数，如果输入不是整数，则转换为 NaN
 
-Like with custom validators, you can create a custom sanitizer.
+与自定义验证器一样，你可以创建自定义清理器。
 
-In the callback function you just return the sanitized value:
+在回调函数中，你只需返回清理后的值：
 
 ```js
-const sanitizeValue = value => {
+const sanitizeValue = (value) => {
   //sanitize...
-}
+};
 
-app.post('/form', [
-  check('value').customSanitizer(value => {
-    return sanitizeValue(value)
-  }),
-], (req, res) => {
-  const value  = req.body.value
-})
+app.post(
+  '/form',
+  [
+    check('value').customSanitizer((value) => {
+      return sanitizeValue(value);
+    })
+  ],
+  (req, res) => {
+    const value = req.body.value;
+  }
+);
 ```
 
-## How to Handle Forms in Express
+<h2 id="how-to-handle-forms-in-express">如何在Express中处理表单</h2>
 
-This is an example of an HTML form:
+以下是一个 HTML 表单示例：
 
 ```html
 <form method="POST" action="/submit-form">
@@ -899,38 +941,40 @@ This is an example of an HTML form:
 </form>
 ```
 
-When the user presses the submit button, the browser will automatically make a `POST` request to the `/submit-form` URL on the same origin of the page. The browser sends the data contained, encoded as `application/x-www-form-urlencoded`. In this particular example, the form data contains the `username` input field value.
+当用户按下提交按钮时，浏览器会自动向页面同源的`/submit-form` URL 发出 `POST`请求。浏览器发送表单包含的数据，编码为 `application/x-www-form-urlencoded`。在此特定示例中，表单数据包含`username`输入字段值。
 
-Forms can also send data using the `GET` method, but the vast majority of the forms you'll build will use `POST`.
+表单也可以通过 `GET` 方法发送数据，但是大多数情况为`POST`。
 
-The form data will be sent in the POST request body.
+表单数据将在 POST 请求体中发送。
 
-To extract it, you will need to use the `express.urlencoded()` middleware:
+可以使用`express.urlencoded()`中间件提取：
 
 ```js
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.use(express.urlencoded({
-  extended: true
-}))
+app.use(
+  express.urlencoded({
+    extended: true
+  })
+);
 ```
 
-Now, you need to create a `POST` endpoint on the `/submit-form` route, and any data will be available on `Request.body`:
+现在，需要在`/submit-form` 路由上创建一个 `POST` 端点，任何数据都可以在 `Request.body` 访问：
 
 ```js
 app.post('/submit-form', (req, res) => {
-  const username = req.body.username
+  const username = req.body.username;
   //...
-  res.end()
-})
+  res.end();
+});
 ```
 
-Don't forget to validate the data before using it with `express-validator`.
+别忘记提前使用`express-validator`验证数据。
 
-## How to Handle File Uploads in Forms in Express
+<h2 id='how-to-handle-file-uploads-in-forms-in-express'>如何在 Express 中处理表单中的文件上传</h2>
 
-This is an example of an HTML form that allows a user to upload a file:
+以下代码是允许用户上传文件的 HTML 表单示例：
 
 ```html
 <form method="POST" action="/submit-form" enctype="multipart/form-data">
@@ -939,98 +983,100 @@ This is an example of an HTML form that allows a user to upload a file:
 </form>
 ```
 
-Don't forget to add `enctype="multipart/form-data"` to the form, or files won't be uploaded.
+别忘记在表单添加`enctype="multipart/form-data"`，否则表单不会被上传。
 
-When the user press the submit button, the browser will automatically make a `POST` request to the `/submit-form` URL on the same origin of the page. The browser sends the data contained, not encoded as as a normal form `application/x-www-form-urlencoded`, but as `multipart/form-data`.
+当用户按下提交按钮时，浏览器会自动向页面同源的`/submit-form` URL 发出 `POST` 请求。浏览器发送表单包含的数据，但表单未编码为普通表单 `application/x-www-form-urlencoded`，而是 `multipart/form-data`。
 
-On the server-side, handling multipart data can be tricky and error prone, so we are going to use a utility library called **formidable**. [Here's the GitHub repo](https://github.com/felixge/node-formidable) – it has over 4000 stars and is well-maintained.
+在服务器端，处理多部分数据可能很棘手且容易出错，因此我们将使用一个名为 **formidable** 的库。 [这里是它的 GitHub 仓库](https://github.com/felixge/node-formidable) – 拥有超过 4000 颗星，并且维护良好。
 
-You can install it using:
+可以通过以下命令安装：
 
 ```bash
 npm install formidable
 ```
 
-Then include it in your Node.js file:
+然后引用到 Node.js 文件：
 
 ```js
-const express = require('express')
-const app = express()
-const formidable = require('formidable')
+const express = require('express');
+const app = express();
+const formidable = require('formidable');
 ```
 
-Now, in the `POST` endpoint on the `/submit-form` route, we instantiate a new Formidable form using `formidable.IncomingForm()`:
+现在，在 `/submit-form` 路由的 `POST` 端点中，我们使用 `formidable.IncomingForm()` 实例化一个新的 Formidable 表单：
 
 ```js
 app.post('/submit-form', (req, res) => {
-  new formidable.IncomingForm()
-})
+  new formidable.IncomingForm();
+});
 ```
 
-After doing so, we need to be able to parse the form. We can do so synchronously by providing a callback, which means all files are processed. Once formidable is done, it makes them available:
+这样做之后，我们需要解析表单。我们可以通过回调来同步执行此操作，这意味着所有文件都已处理。一旦 formidable 完成，文件就可以被访问：
 
 ```js
 app.post('/submit-form', (req, res) => {
   new formidable.IncomingForm().parse(req, (err, fields, files) => {
     if (err) {
-      console.error('Error', err)
-      throw err
+      console.error('Error', err);
+      throw err;
     }
-    console.log('Fields', fields)
-    console.log('Files', files)
+    console.log('Fields', fields);
+    console.log('Files', files);
     for (const file of Object.entries(files)) {
-      console.log(file)
+      console.log(file);
     }
-  })
-})
+  });
+});
 ```
 
-Or, you can use events instead of a callback. For example, you can be notified when each file is parsed, or other events such as completion of file processing, receiving a non-file field, or if an error occurred:
+或者可以使用事件而不是回调。例如，当每个文件被解析时，或其他事件（例如文件处理完成、接收非文件字段或发生错误）时，都会收到通知：
 
 ```js
 app.post('/submit-form', (req, res) => {
-  new formidable.IncomingForm().parse(req)
+  new formidable.IncomingForm()
+    .parse(req)
     .on('field', (name, field) => {
-      console.log('Field', name, field)
+      console.log('Field', name, field);
     })
     .on('file', (name, file) => {
-      console.log('Uploaded file', name, file)
+      console.log('Uploaded file', name, file);
     })
     .on('aborted', () => {
-      console.error('Request aborted by the user')
+      console.error('Request aborted by the user');
     })
     .on('error', (err) => {
-      console.error('Error', err)
-      throw err
+      console.error('Error', err);
+      throw err;
     })
     .on('end', () => {
-      res.end()
-    })
-})
+      res.end();
+    });
+});
 ```
 
-Whichever way you choose, you'll get one or more Formidable.File objects, which give you information about the file uploaded. These are some of the methods you can call:
+无论选择哪种方式，你都将获得一个或多个 Formidable.File 对象，这些对象为你提供有关已上传文件的信息。这些是可以调用的一些方法：
 
--   `file.size`, the file size in bytes
--   `file.path`, the path the file is written to
--   `file.name`, the name of the file
--   `file.type`, the MIME type of the file
+- `file.size`, 以字节为单位的文件大小
+- `file.path`, 文件写入的路径
+- `file.name`, 文件名
+- `file.type`, 文件的 MIME 类型
 
-The path defaults to the temporary folder and can be modified if you listen for the `fileBegin` event:
+路径默认为临时文件夹，如果监听 `fileBegin` 事件可以修改：
 
 ```js
 app.post('/submit-form', (req, res) => {
-  new formidable.IncomingForm().parse(req)
+  new formidable.IncomingForm()
+    .parse(req)
     .on('fileBegin', (name, file) => {
-        file.path = __dirname + '/uploads/' + file.name
+      file.path = __dirname + '/uploads/' + file.name;
     })
     .on('file', (name, file) => {
-      console.log('Uploaded file', name, file)
-    })
-    //...
-})
+      console.log('Uploaded file', name, file);
+    });
+  //...
+});
 ```
 
-## Thank you for reading!
+## 感谢阅读!
 
-That's it for this handbook. And don't forget that [you can get a PDF and ePub version of this Express Handbook](https://thevalleyofcode.com/download/express/) if you'd like.
+这就是手册的全部内容。别忘了，如果需要的话，[你可以下载该手册的 PDF 或者 ePub 版本](https://thevalleyofcode.com/download/express/)。

@@ -1,6 +1,6 @@
 > -  原文地址：[The Express +  Node.js Handbook – Learn the Express JavaScript Framework for Beginners [2022 Edition]](https://www.freecodecamp.org/news/the-express-handbook/)
 > -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
+> -  译者：Celqaz
 > -  校对者：
 
 ![The Express +  Node.js Handbook – Learn the Express JavaScript Framework for Beginners [2022 Edition]](https://www.freecodecamp.org/news/content/images/size/w2000/2022/11/pexels-paul-ijsendoorn-1181202.jpg)

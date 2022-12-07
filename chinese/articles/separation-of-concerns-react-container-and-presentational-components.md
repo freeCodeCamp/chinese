@@ -1,6 +1,6 @@
 > -  原文地址：[Separation of Concerns in React –How to Use Container and Presentational Components](https://www.freecodecamp.org/news/separation-of-concerns-react-container-and-presentational-components/)
 > -  原文作者：[Keyur Paralkar](https://www.freecodecamp.org/news/author/keyurparalkar/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Separation of Concerns in React –How to Use Container and Presentational Components](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/container-and-presentational-component-pattern-image.jpeg)

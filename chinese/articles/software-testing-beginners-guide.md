@@ -31,21 +31,21 @@ Software testing is the process of making sure your software/app works as it sho
 For instance, unit testing involves writing test cases to ensure the code works as it should, and Beta testing consists of testing the preview version of the software or app to make sure users can use the product.
 例如，单元测试需要编写测试用例，并参照用例测试代码是否存在缺陷；β测试需要回测历史版本验证产品功能是否能正常使用。
 Software testing is integral to the process of building good software that works as it should. It also helps improve productivity and performance. Testing is an important part of the _Software Development Life Cycle_ (SDLC).
-软件测试是打造优秀产品过程中必不可少的一环。同时这也有利于提升生产力和性能。
+软件测试是软件开发生命周期的重要组成部分，有助于提升开发效率和产品性能，打造符合要求的优质产品。
 Other benefits of testing your code include preventing bugs, reducing cost, and reducing time of development.
-
+另外，测试还能降低bug率，节省成本投入，减少开发时间。
 ## Types of Software Testing
 
 There are two general types of software testing:
-
+软件测试主要有两类：
 ### Functional Testing:
 
 Functional Testing is a software testing method that validates the system against the customer's requirements or specifications.
-
+功能测试是验证系统是否按照客户需求或者规范运行。
 This type of testing aims to test each function of the software by providing the correct input and ensuring the output is right.
-
+这类测试旨在保证每个功能正确输入后会有对应的正确输出。
 For examples, let's say you write a test case to test creating a user. The test case provides the correct input (email, first name, last name and password) and ensures the output (success message) is accurate, as well.
-
+例如，编写一条用于测试创建用户的测试用例，用例中需要提供正确的输入（邮箱地址、姓名和密码），验证输出结果（创建成功的提示）是正确的。
 Functional testing checks that everything is functioning properly by emulating business scenarios based on applicable requirements.
 
 ### Non-functional Testing:

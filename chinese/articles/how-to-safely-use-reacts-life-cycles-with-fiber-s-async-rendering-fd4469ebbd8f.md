@@ -1,6 +1,6 @@
 > -  原文地址：[Revisiting use of React’s Component Life Cycles in Anticipation of Async Rendering](https://www.freecodecamp.org/news/how-to-safely-use-reacts-life-cycles-with-fiber-s-async-rendering-fd4469ebbd8f/)
 > -  原文作者：[Anonymous](https://www.freecodecamp.orgAnonymous)
-> -  译者：
+> -  译者：宋
 > -  校对者：
 
 ![Revisiting use of React’s Component Life Cycles in Anticipation of Async Rendering](https://cdn-media-1.freecodecamp.org/images/1*zE7ymidBZ9BffwrT4MbfHw.jpeg)
@@ -21,9 +21,9 @@ Because Fiber’s async rendering isn’t yet enabled, ignoring some of the wisd
 
 If Fiber’s async rendering isn’t ready to go, you might be wondering whether the team sold you a [counterfeit countdown](http://isfiberreadyyet.com/). Rest assured, this isn’t the case. Fiber’s new engine, or more specifically the reconciliation process, has been put into operation with React v16. With that said, we [can’t change gears](https://reactjs.org/docs/codebase-overview.html#fiber-reconciler) from synchronous render to prioritised renders just yet.
 
-### How will using life cycles be impacted?
+### How will using life cycles be impacted? 
 
-Conclusively, we don’t know until async rendering is set in stone. Otherwise the React team would have said as much. But we can draw some safe conclusions about handling subscriptions and side-effects. And that’s what we’ll explore.
+总的来说, we don’t know until async rendering is set in stone. Otherwise the React team would have said as much. But we can draw some safe conclusions about handling subscriptions and side-effects. And that’s what we’ll explore.
 
 For the sake of simplicity, here’s an example of subscribing to a [media query list](https://developer.mozilla.org/en-US/docs/Web/API/MediaQueryList) in the constructor, which **presently** will not cause us issues:
 

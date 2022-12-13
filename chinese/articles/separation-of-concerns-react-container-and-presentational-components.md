@@ -1,68 +1,68 @@
-> -  原文地址：[Separation of Concerns in React –How to Use Container and Presentational Components](https://www.freecodecamp.org/news/separation-of-concerns-react-container-and-presentational-components/)
-> -  原文作者：[Keyur Paralkar](https://www.freecodecamp.org/news/author/keyurparalkar/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Separation of Concerns in React –How to Use Container and Presentational Components](https://www.freecodecamp.org/news/separation-of-concerns-react-container-and-presentational-components/)
+> - 原文作者：[Keyur Paralkar](https://www.freecodecamp.org/news/author/keyurparalkar/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![Separation of Concerns in React –How to Use Container and Presentational Components](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/container-and-presentational-component-pattern-image.jpeg)
 
-Many new React developers combine logic and presentation inside the same React component. And they may not know why it's important to separate these two – they just want to make it work.
+许多 React 新手会将逻辑和展示代码放在同一个 React 组件中，不知道将两者分离的重要性，对于他们来说，最重要的是代码能运行。
 
-But later, they'll find that they need to make changes to the file and doing so becomes a humungous task. Then they'll have to re-work things to separate these two parts.
+但之后当他们需要对文件进行改动，就面临一项艰巨的任务。这个时候他们就得重新考虑将两者分离的问题。
 
-This comes from not knowing about the separation of concerns and the presentation and container components pattern. That's why I'm going to teach you about them so you can mitigate this problem early in your project's development lifecycle.
+产生问题的原因是他们不了解关注点分离的概念、展示组件和容器组件模型。所以我将在这篇文章讲解这方面内容，帮助你在项目开发早期缓解这个问题。
 
-In this article, we are going to dive into container and presentational components and briefly touch on the concept of separation of concerns.
+本文将深入探讨容器和展示组件，稍微讲解一下关注点分离。
 
-Without further ado, let's get started!
+话不多说，让我们开始吧！
 
-## Table of Contents
+## 目录
 
--   [What is the separation of concerns?](#whatistheseparationofconcerns)
--   [What are presentation and container components?](#whatarecontainerandpresentationalcomponents)
--   [Why do we need these components?](#whydoweneedthesecomponents)
--   [Presentation and container component example](#presentationandcontainercomponentexample)
--   [How to replace container components with React hooks](#howtoreplacecontainercomponentswithreacthooks)
--   [Summary](#summary)
+- [什么是关注点分离](#whatistheseparationofconcerns)
+- [什么是容器组件和展示组件？](#whatarecontainerandpresentationalcomponents)
+- [为什么需要这两种组件?](#whydoweneedthesecomponents)
+- [展示组件和容器组件示例](#presentationandcontainercomponentexample)
+- [如何通过 React 钩子取代容器组件](#howtoreplacecontainercomponentswithreacthooks)
+- [总结](#summary)
 
-## What is the Separation of Concerns?
+<h2 id="whatistheseparationofconcerns">什么是关注点分离</h2>
 
-Separation of concerns is a concept that is widely used in programming. It states that logic that performs different actions should not be groupled or combined together.
+关注点分离是一个在编程中广泛使用的概念。它指的是执行不同操作的逻辑不应被分组或结合在一起。
 
-For example, what we discussed in the introduction section violates the separation of concerns, because we placed the logic of fetching the data and presenting the data in the same component.
+例如接下来的代码示例就违反了关注点分离。我们把获取数据和展示数据放在了同一个组件中。
 
-To solve this and to adhere to the separation of concerns, we should separate these two pieces of logic – that is, fetching data and presenting it on the UI – into two different components.
+若要解决这个问题，并且遵循关注点分离，我们应该将两块（即：获取数据和在 UI 上展示）逻辑分开放置在不同的组件。
 
-This is were the container and presentation component pattern will help us solve this issue. In the following sections, we are going to dive deep into this pattern.
+此时就需要容器组件和展示组件模式。在下文将做详细讲解。
 
-## What are Container and Presentational Components?
+<h2 id="whatarecontainerandpresentationalcomponents">什么是容器组件和展示组件？</h2>
 
-To achieve a separation of concerns we have two types of components:
+为了实现关注点分离我们需要两种类型的组件：
 
--   Container components
--   Presentational components
+- 容器组件
+- 展示组件
 
-### Container components
+### 容器组件
 
-These are the components that provide, create, or hold data for the children components.
+是提供、创建和持有数据并服务于子组件的组件。
 
-The only job of a container component is to handle data. It does not consist of any UI of its own. Rather, it consists of presentational components as its children that uses this data.
+容器组件的唯一工作是处理数据。它不包含自己的任何 UI。相反，展示组件作为使用这些数据的子组件。
 
-A simple example would be a component named `FetchUserContainer` that consists of some logic that fetches all the users.
+一个简单的示例就是 `FetchUserContainer` 组件，包含获取所有用户的逻辑。
 
-### Presentational components
+### 展示组件
 
-These are the components whose primary responsibility is to present the data on the UI. They take in the data from the container components.
+主要职责是在 UI 上呈现数据。从容器组件中获取数据。
 
-These components are stateless unless they need their own state for rendering the UI. They do not alter the data that they receive.
+这些组件是无状态的，除非它们需要状态来呈现 UI。它们不会更改收到的数据。
 
-An example of this would be a `UserList` component that displays all the users.
+一个简单的示例就是 `UserList`组件，展示所有用户。
 
-## Why Do We Need These Components?
+<h2 id="whydoweneedthesecomponents">为什么需要这两种组件?</h2>
 
-To understand this, let's take a simple example. We want to display a list of posts that we fetch from the [JSON placeholder API](https://jsonplaceholder.typicode.com/). Here is the code for the same:
+我们可以通过一个示例来理解，假设我们需要展示一份从[JSON placeholder API](https://jsonplaceholder.typicode.com/)获取的帖子列表。代码如下：
 
-```tsx
-import { useEffect, useState } from "react";
+```typescript
+import { useEffect, useState } from 'react';
 
 interface Post {
   userId: number;
@@ -72,19 +72,19 @@ interface Post {
 }
 
 /**
- * An example of how we shouldn't combine the logic and presentation of data.
+ * 我们不应该把逻辑和数据展示结合的例子
  */
 export default function DisplayPosts() {
   const [posts, setPosts] = useState<Post[] | null>(null);
   const [isLoading, setIsLoading] = useState<Boolean>(false);
   const [error, setError] = useState<unknown>();
 
-// Logic
+  // 逻辑
   useEffect(() => {
     (async () => {
       try {
         setIsLoading(true);
-        const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
         const data = await resp.json();
         setPosts(data);
         setIsLoading(false);
@@ -95,7 +95,7 @@ export default function DisplayPosts() {
     })();
   }, []);
 
-// Presentation
+  //展示
   return isLoading ? (
     <span>Loading... </span>
   ) : posts ? (
@@ -112,44 +112,44 @@ export default function DisplayPosts() {
 }
 ```
 
-Here is what this component does:
+这个组件做了这些事：
 
--   It has 3 state variables: `posts`, `isLoading`, and `error`.
--   We have a `useEffect` hook that consists of the business logic. Here we are fetching the data from the API: `[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)` with the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch).
--   We make sure that when the data is fetched, we store it in the `posts` state variable using `setPosts`.
--   We also make sure that we toggle the `isLoading` and `error` values during the respective scenarios.
--   We put this entire logic inside an async IIFE.
--   Finally, we return the posts in the form of an unordered list and map through all the posts that we fetched earlier.
+- 它包含三个变量： `posts`, `isLoading` 和 `error`.
+- 使用 `useEffect` 来处理业务逻辑。 从 API 获取数据： `[https://jsonplaceholder.typicode.com/posts](https://jsonplaceholder.typicode.com/posts)`，获取方法采用的是[fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)。
+- 确保数据获取完毕后，使用 `setPosts`存储到 `posts`状态。
+- 确保在不同的场景变换 `isLoading` 和 `error` 的值。
+- 将这个逻辑放置在一个异步的 IIFE（立即调用函数）。
+- 最后，我们以无序列表的形式返回帖子并映射我们获取的所有帖子
 
-The problem with the above is that the logic of fetching the data and displaying the data is coded into a single component. We can say that the component is now tightly coupled with the logic. This is the exact thing that we don’t want.
+上面的问题是获取数据和显示数据的逻辑被编码到一个组件中。可以说组件现在与逻辑高耦合。这正是我们不想要的。
 
-Below are some reasons as to why we require container and presentational components:
+以下是我们需要容器和展示组件的原因：
 
--   They help us create components that are loosely coupled
--   They help us maintain separation of concerns
--   Code refactoring becomes much easier.
--   Code becomes more organized and maintainable
--   It makes testing much easier.
+- 创建低耦合的组件
+- 保持关注点分离
+- 代码更易重构
+- 代码更有组织性和可维护性
+- 更易测试
 
-## Presentation and Container Component Example
+<h2 id="presentationandcontainercomponentexample">展示组件和容器组件示例</h2>
 
-Ok, enough talk – let’s get things working by starting off with a simple example. We are going to use the same example as above – fetching the data from a JSON placeholder API.
+好了，讲解部分就到这里——让我们从一个简单的例子开始吧。我们将使用与上面相同的示例——从 JSON placeholder API 获取数据。
 
-Let's understand the file structure here:
+先理解文件结构：
 
--   Our container component will be `PostContainer`
--   We will be having two presentation components:
-    -   `Posts`: A component that has an unordered list.
-    -   `SinglePost`: A component that renders a list tag. This will render each element of the list.
+- 容器组件为 `PostContainer`
+- 有两个展示组件:
+  - `Posts`: 展示无序列表
+  - `SinglePost`: 呈现单个列表标签的组件。即呈现列表的每个元素。
 
-Note: We are going to store all the above components in a separate folder named `components`.
+注意：我们将把上述所有组件存储在一个名为 `components` 的单独文件夹中。
 
-Now that we know which things go where, let's start off with the container component: `PostContainer`. Copy-paste the below code into the `components/PostContainer.tsx` file
+了解文件结构后，让我们从容器组件开始： `PostContainer`。将下面代码复制到 `components/PostContainer.tsx` 文件。
 
 ```tsx
-import { useEffect, useState } from "react";
-import { ISinglePost } from "../Definitions";
-import Posts from "./Posts";
+import { useEffect, useState } from 'react';
+import { ISinglePost } from '../Definitions';
+import Posts from './Posts';
 
 export default function PostContainer() {
   const [posts, setPosts] = useState<ISinglePost[] | null>(null);
@@ -160,7 +160,7 @@ export default function PostContainer() {
     (async () => {
       try {
         setIsLoading(true);
-        const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
         const data = await resp.json();
         setPosts(data.filter((post: ISinglePost) => post.userId === 1));
         setIsLoading(false);
@@ -181,25 +181,25 @@ export default function PostContainer() {
 }
 ```
 
-From the example we saw in the previous section of this article, the above code just contains the logic of fetching the data. This logic is present in the `useEffect` hook. Here this container component passes this data to the `Posts` presentational component.
+从本文上一节我们看到的例子来看，上面的代码只是包含了获取数据的逻辑。此逻辑存在于 `useEffect` 中。容器组件将数据传递给 `Posts` 展示组件。
 
-Let's have a look at the `Posts` presentational component. Copy-paste the below code in the `components/Posts.tsx` file:
+让我们看一看 `Posts` 展示组件。将下面代码复制粘贴到 `components/Posts.tsx` 文件：
 
 ```tsx
 /**
- * A presentational component
+ * 展示组件
  */
 
-import { ISinglePost } from "../Definitions";
-import SinglePost from "./SinglePost";
+import { ISinglePost } from '../Definitions';
+import SinglePost from './SinglePost';
 
 export default function Posts(props: { posts: ISinglePost[] }) {
   return (
     <ul
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center"
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
       }}
     >
       {props.posts.map((post: ISinglePost) => (
@@ -210,12 +210,12 @@ export default function Posts(props: { posts: ISinglePost[] }) {
 }
 ```
 
-As you can see, this is a simple file that consists of a `ul` tag – an unordered list. This component then maps over the `posts` that are being passed as props. We pass each to the `SinglePost` component.
+如你所见，这是一个简单的文件，包含一个 `ul` 标签——一个无序列表。该组件映射作为 props 传递的`posts`。然后传递给 `SinglePost` 组件。
 
-There is another presentational component that renders the list tag, that is the `li` tag. It displays the title and the body of the post. Copy-paste the below code in the `components/SinglePost.tsx` file:
+还有另一个呈现列表标签的展示组件，即 `li` 标签。它显示帖子的标题和正文。将以下代码复制粘贴到 `components/SinglePost.tsx` 文件中：
 
 ```tsx
-import { ISinglePost } from "../Definitions";
+import { ISinglePost } from '../Definitions';
 
 export default function SinglePost(props: ISinglePost) {
   const { userId, id, title, body } = props;
@@ -230,27 +230,27 @@ export default function SinglePost(props: ISinglePost) {
 }
 ```
 
-These presentational components, as you can see, just display the data on the screen. That’s all. They don’t do anything else. Since they are just displaying the data here, they will also have their own styling.
+正如你所见，这些展示组件只是在屏幕上显示数据。就这样。其他什么都不做。由于它们用于显示数据，因此会有自己的样式。
 
-Now that we have setup the components, let's look back on what we have achieved here:
+我们已经设置好组件，让我们回顾一下做了些什么：
 
--   The concept of separation of concerns is not violated in this example.
--   Writing unit tests for each component becomes easier.
--   Code maintainability and readability are much better. Thus our codebase has become much more organized.
+- 在例子中没有违反关注点分离的概念。
+- 为每个组件编写单元测试变得更加容易。
+- 代码的可维护性和可读性要好得多。因此，我们的代码库变得更有条理。
 
-We have achieved what we wanted here, but we can further enhance this pattern with the help of hooks.
+我们实现了我们想要的，但是我们利用钩子进一步增强这个模式。
 
-## How to Replace Container Components with React Hooks
+<h2 id="howtoreplacecontainercomponentswithreacthooks">如何通过React钩子取代容器组件</h2>
 
-Since **React 16.8.0**, it has become so much easier to build and develop components with the help of functional components and hooks.
+自**React 16.8.0**以来，借助函数组件和钩子构建和开发组件变得更加容易。
 
-We are going to leverage these capabilities here and replace the container component with a hook.
+我们将利用这一能力，用钩子替换容器组件。
 
-Copy-paste the below code in the `hooks/usePosts.ts` file:
+将以下代码复制粘贴到 `hooks/usePosts.ts` 文件中：
 
 ```tsx
-import { useEffect, useState } from "react";
-import { ISinglePost } from "../Definitions";
+import { useEffect, useState } from 'react';
+import { ISinglePost } from '../Definitions';
 
 export default function usePosts() {
   const [posts, setPosts] = useState<ISinglePost[] | null>(null);
@@ -261,7 +261,7 @@ export default function usePosts() {
     (async () => {
       try {
         setIsLoading(true);
-        const resp = await fetch("https://jsonplaceholder.typicode.com/posts");
+        const resp = await fetch('https://jsonplaceholder.typicode.com/posts');
         const data = await resp.json();
         setPosts(data.filter((post: ISinglePost) => post.userId === 1));
         setIsLoading(false);
@@ -280,23 +280,23 @@ export default function usePosts() {
 }
 ```
 
-Here we have,
+在这里：
 
--   Extracted logic that was present in the `PostContainer` component into a hook.
--   This hook will return an object that contains the `isLoading`, `posts`, and `error` values.
+- 将 `PostContainer` 组件的逻辑提取到挂钩中。
+- 此钩子将返回一个包含 `isLoading`、`posts` 和`error`的对象。
 
-Now we can simply remove the container component `PostContainer`. Then, rather than passing the container's data to the presentational components as a prop, we can directly use this hook inside the `Posts` presentational component.
+现在我们可以简单地移除容器组件 `PostContainer`。然后，我们可以直接在 `Posts` 展示组件中使用这个钩子，而不是将容器的数据作为 `prop` 传递给展示组件。
 
-Make the following edits to the `Posts` component:
+对`Post`组件进行以下编辑：
 
 ```tsx
 /**
- * A presentational component
+ * 展示组件
  */
 
-import { ISinglePost } from "../Definitions";
-import usePosts from "../hooks/usePosts";
-import SinglePost from "./SinglePost";
+import { ISinglePost } from '../Definitions';
+import usePosts from '../hooks/usePosts';
+import SinglePost from './SinglePost';
 
 export default function Posts(props: { posts: ISinglePost[] }) {
   const { isLoading, posts, error } = usePosts();
@@ -304,9 +304,9 @@ export default function Posts(props: { posts: ISinglePost[] }) {
   return (
     <ul
       style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center"
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
       }}
     >
       {isLoading ? (
@@ -321,23 +321,23 @@ export default function Posts(props: { posts: ISinglePost[] }) {
 }
 ```
 
-By making use of hooks we have eliminated an extra layer of component that was present on top of these presentational components.
+通过使用钩子，我们消除了存在于这些展示组件之上的额外组件层。
 
-With hooks, we achieved the same results as that of the container/presentational components pattern.
+使用钩子，我们获得了与容器/展示组件模式相同的结果。
 
-## Summary
+<h2 id="summary">总结</h2>
 
-So in this article, we learned about:
+通过这篇文章，我们学习了：
 
--   Separation of concerns
--   Container and presentational components
--   Why we need these components
--   How hooks can replace container components
+- 关注点分离
+- 容器和展示组件
+- 为什么需要这两种组件
+- 钩子如何取代容器组件
 
-For further reading I would highly recommend going through the [react-table:](https://tanstack.com/table/v8/). This library extensively uses hooks and it has great examples.
+如果想要了解更多，我强烈推荐你阅读 [react-table:](https://tanstack.com/table/v8/)。这个库使用了大量的钩子都是很好的示例。
 
-You can find the entire code for this article in this [codesandbox](https://codesandbox.io/s/container-presentation-pattern-lm1osl?file=/src/components/PostContainer.tsx).
+你可以在[codesandbox](https://codesandbox.io/s/container-presentation-pattern-lm1osl?file=/src/components/PostContainer.tsx)找到本文的完整代码。
 
-Thanks for reading!
+感谢阅读！
 
-Follow me on [Twitter](https://twitter.com/keurplkar), [GitHub](https://github.com/keyurparalkar), and [LinkedIn](https://www.linkedin.com/in/keyur-paralkar-494415107/).
+可以在[Twitter](https://twitter.com/keurplkar)、[GitHub](https://github.com/keyurparalkar)和[LinkedIn](https://www.linkedin.com/in/keyur-paralkar-494415107/)上关注我。

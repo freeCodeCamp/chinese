@@ -1,6 +1,6 @@
 > -  原文地址：[Linux Shells for Beginners – Bash, Zsh, and Fish Explained](https://www.freecodecamp.org/news/linux-shells-explained/)
 > -  原文作者：[Anthony Behery](https://www.freecodecamp.org/news/author/anthonybehery/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Linux Shells for Beginners – Bash, Zsh, and Fish Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/pexels-oleksandr-pidvalnyi-320260.jpg)

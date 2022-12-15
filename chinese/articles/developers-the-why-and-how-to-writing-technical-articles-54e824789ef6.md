@@ -1,6 +1,6 @@
 > -  原文地址：[Developers: The Why and How to Writing Technical Articles](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/)
 > -  原文作者：[Anonymous](https://www.freecodecamp.orgAnonymous)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![Developers: The Why and How to Writing Technical Articles](https://cdn-media-1.freecodecamp.org/images/1*9oDjve1kBfhr0xw7p4gwRQ.jpeg)

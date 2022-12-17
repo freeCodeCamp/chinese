@@ -1,6 +1,6 @@
 > -  原文地址：[Better React Performance – When to Use the useCallback vs useMemo Hook](https://www.freecodecamp.org/news/better-react-performance-usecallback-vs-usememo/)
 > -  原文作者：[Daniel Asta](https://www.freecodecamp.org/news/author/daniel-asta/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Better React Performance – When to Use the useCallback vs useMemo Hook](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/useCallback-vs-useMemo.png)

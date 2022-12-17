@@ -1,102 +1,102 @@
-> -  原文地址：[Linux Shells for Beginners – Bash, Zsh, and Fish Explained](https://www.freecodecamp.org/news/linux-shells-explained/)
-> -  原文作者：[Anthony Behery](https://www.freecodecamp.org/news/author/anthonybehery/)
-> -  译者：Papaya HUANG
-> -  校对者：
+> - 原文地址：[Linux Shells for Beginners – Bash, Zsh, and Fish Explained](https://www.freecodecamp.org/news/linux-shells-explained/)
+> - 原文作者：[Anthony Behery](https://www.freecodecamp.org/news/author/anthonybehery/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![Linux Shells for Beginners – Bash, Zsh, and Fish Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/pexels-oleksandr-pidvalnyi-320260.jpg)
 
-When you open up your terminal, chances are that it uses Bash as its UNIX shell environment. But other "shell" environments exist.
+当你打开终端时，很可能发现终端使用 Bash 作为其 [UNIX shell](https://zh.m.wikipedia.org/zh-hans/Unix_shell) 环境。当然除了 Bash，还存在其他“shell”环境。
 
-There are other environments such as the C Shell, Korn Shell, Z Shell, and even the Fish Shell. All of these different shell environments have their own pros and cons, and you should consider them before you choose one to use on your own system.
+例如 [C Shell](https://zh.wikipedia.org/wiki/C_Shell)、[Korn Shell](https://zh.wikipedia.org/wiki/KornShell)、[Z Shell](https://zh.wikipedia.org/zh-tw/Z_shell)，甚至 Fish Shell。不同的 shell 环境各有千秋，在你选择自己系统的 shell 之前，你应该评估一下。
 
-In this article, I'll go over a few popular shells along with their main features to help you pick one.
+我将在本文中介绍一些流行的 shell 及主要功能，帮助你做选择。
 
-## The Bash Shell
+## Bash Shell
 
-The Bash Shell (or the Bourne Again Shell) is a UNIX shell and command language. It was written by Brain Fox for the GNU Project as a free software replacement for the Bourne Shell (sh).
+Bash Shell（或 Bourne Again Shell）是一种 UNIX shell 和命令语言。它是由 Brain Fox 为 GNU 项目编写的，目的是作为 Bourne Shell (sh) 的免费软件替代品。
 
-Bash was first released in 1989, and for most Linux distributions it's the default Shell environment. Other distros, like Kali Linux, use the Z Shell as their default shell.
+Bash 于 1989 年首次发布，它是大多数 Linux 发行版的默认 Shell 环境。其他发行版，如 Kali Linux，使用 Z Shell 作为默认 shell。
 
-Bash is one of the first programs that Linus Torvalds (the creator of Linux) ported to Linux.
+Bash 是 Linus Torvalds（Linux 的创建者）移植到 Linux 的首批程序之一。
 
 ![Bash](https://media.geeksforgeeks.org/wp-content/uploads/cli_example.png)
 
-[Image Source](https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/)
+[图片来源](https://www.geeksforgeeks.org/introduction-linux-shell-shell-scripting/)
 
-Something you should not get confused about is that Bash is also a programming language. So it's a "Shell", but you can also program behavior in Bash. For example:
+你应该记住 Bash 也是一种编程语言。所以它即是一个“Shell”，同时你也可以使用 Bash 对行为进行编程。例如：
 
 ```
 #!/bin/bash
 echo "Hello World"
 ```
 
-a "Hello World" program in Bash
+Bash 中的"Hello World"程序
 
-### Key points about Bash
+### Bash 的关键点
 
--   Most users use Bash, since it is the default shell environment on most systems
--   Bash does not have an inline wildcard expression. A wildcard expression is when you would want to search for patterns in your Shell, similar to Regex. The three main wildcards are `*`, `?`, and `[]`.
--   You can't automatically change the directory name
--   `#` is treated as a comment in scripting
--   It has `shopt` settings
--   Prompt has backslash escapes
--   User configuration settings are in `.bashrc`
+- 因为 Bash 是大多数系统上的默认 shell 环境，大多数用户使用它。
+- Bash 没有内联通配符表达式。通配符表达式是当你想要在 Shell 中搜索模式（pattern）的时候使用，类似于正则表达式（Regex）。三个主要的通配符是 `*`、`?` 和 `[]`。
+- 不能自动更改目录名称。
+- `#` 在脚本中被视为注释。
+- 它有`shopt`（shell option 缩写）设置。
+- 提示符（prompt）有反斜杠转义。
+- 用户配置设置在 `.bashrc` 中。
 
-## The Z Shell
+## Z Shell
 
-The Z Shell, or Zsh is also a UNIX shell that is very similar to Bash. You can also script and use the shell as a command interpreter.
+Z Shell 又称 Zsh， 是一个与 Bash 非常相似的 UNIX shell。你还可以使用 Zsh 编写脚本并将 shell 用作命令解释器。
 
-Zsh is an extension of the Bourne shell with a lot of improvements. Zsh was released in 1990 by Paul Falstad, and it has some features that Bash, Korn Shell, and C Shell share.
+Zsh 是 Bourne shell 的扩展，因此在此之上很多改进。 Zsh 于 1990 年由 Paul Falstad 发布，它具有 Bash、Korn Shell 和 C Shell 共有的一些功能。
 
-macOS by default uses the Zsh Shell.
+macOS 默认使用 Zsh Shell。
 
 ![Zsh Shell](https://ohmyz.sh/img/themes/nebirhos.jpg)
 
-[Image Source](https://ohmyz.sh/)
+[图片来源](https://ohmyz.sh/)
 
-### Key points about Zsh
+### Zsh 的关键点
 
--   Comes with autocompletion when using the terminal. So when you press `Tab ↹` in order to autocomplete whatever command you want to run, not only does it autocomplete for you but will bring down a drop-down of all the other possible files and directories:
+- 在终端使用时，Zsh 带有自动补全功能。因此，当你按下`Tab↹`以自动补全你想运行的任何命令时，它不仅为你自动补全，而且弹出下拉菜单，包含所有其他可能的文件和目录。
 
 ![Zsh Toggle](https://i.ibb.co/bswYkn0/0f8c8e1a6016.gif)
 
--   Supports inline wildcard expressions
--   Much more configurable than Bash
--   Supports plugins and themes. Here's a [list of plugins](https://github.com/unixorn/awesome-zsh-plugins) available for Zsh.
+- 支持内联通配符表达式
+- 比 Bash 可配置度更高
+- 支持插件和主题。这里是 Zsh 的[插件清单](https://github.com/unixorn/awesome-zsh-plugins)
 
-There are also frameworks built around the Z Shell. One of the most popular ones is [Oh My Zsh](https://ohmyz.sh/), which is a community driven, open-source framework for managing Zsh configuration. (I use Oh My Zsh 😄)
+同时，还有围绕 Z Shell 构建的框架。最受欢迎的框架之一是[Oh My Zsh](https://ohmyz.sh/)，它是一个社区驱动的开源框架，用于管理 Zsh 配置。 （我用 Oh My Zsh😄)
 
 ![Oh My Zsh](https://cdn.osxdaily.com/wp-content/uploads/2021/11/oh-my-zsh-mac.jpg)
 
-[Image Source](https://osxdaily.com/2021/11/15/how-install-oh-my-zsh-mac/)
+[图片来源](https://osxdaily.com/2021/11/15/how-install-oh-my-zsh-mac/)
 
-Zsh and Oh My Zsh are similar but not the same exact things. To reiterate, Oh My Zsh is a way of managing your Zsh configurations, it is not the Shell itself.
+Zsh 和 Oh My Zsh 很相似，但并不完全相同。重申一下，Oh My Zsh 是一种管理 Zsh 配置的方式，它不是 Shell 本身。
 
-## The Fish Shell
+## Fish Shell
 
-Fish is a UNIX shell environment with an emphasis on interactivity and usability. Unlike Zsh, Fish aims to give the user interactivity by default instead of trusting the user to implement their own configuration.  
+Fish 是一个强调交互性和可用性的 UNIX shell 环境。与 Zsh 不同，Fish 旨在为用户提供交互性，而不是信任用户实现自己的配置。
 
-It was created by Axel Liljencrantz in 2005. Fish is considered to be an "exotic shell" due to the fact that it does not comply to the POSIX shell standards. \[[Source](https://en.wikipedia.org/wiki/Fish_(Unix_shell)\]
+它由 Axel Liljencrantz 于 2005 年创建。由于不符合 POSIX shell 标准，Fish 被认为是“奇异的 shell”。 \[[资料来源](https://en.wikipedia.org/wiki/Fish_(Unix_shell)\]
 
 ![Fish Shell](http://blog.sudobits.com/wp-content/uploads/2015/06/fish-shell-screenshot.png)
 
-[Image Source](https://blog.sudobits.com/2015/06/05/fish-a-user-friendly-command-line-shell-for-ubuntulinux/)
+[图片来源](https://blog.sudobits.com/2015/06/05/fish-a-user-friendly-command-line-shell-for-ubuntulinux/)
 
-### Key points about Fish
+### Fish 的关键点
 
--   Fish has "search as you type" automatic suggestions based on your command history and the directory you are in. Similar to Bash's history search, Fish Shell's search history is **always** turned on. That way the user will be able to get interactive feedback when working in their terminal.
+- Fish 根据您的命令历史记录和所在目录提供“键入时搜索”自动建议。与 Bash 的历史搜索类似，Fish Shell 的搜索历史**始终**处于打开状态。这样，用户终端工作时能够获得交互式反馈。
 
 ![Fish autocomplete](https://taskwarrior.org/images/fish.gif)
 
-[Image Source](https://taskwarrior.org/news/news.20140906/)
+[图片来源](https://taskwarrior.org/news/news.20140906/)
 
--   Fish also prefers features as commands rather than syntax. This makes features visible in terms of commands with options and help texts
--   Since Fish by default comes with a lot of configurations already set, it is believed to be more beginner friendly than other `sh` options like Zsh.
--   Fish's scripting language is different than Zsh and Bash. Zsh uses more aliases whereas Fish avoids using aliases in the scripting language.
+- Fish 还倾向将功能作为命令而不是语法。这使得功能的选项和帮助文本可见。
+- 由于默认情况下 Fish 已经预置了很多配置，因此它被认为比 Zsh 等其他 `sh` 选项更适合初学者。
+- Fish 的脚本语言不同于 Zsh 和 Bash。 Zsh 使用更多简化指令(alias)，而 Fish 避免在脚本语言中使用简化指令。
 
-If you were to just make scripts using basic commands such as, `cd`, `cp`, `vim`, `ssh`, and so on, you would not notice any difference in the way Fish and Bash's scripting languages work.
+如果您只是使用基本命令（如 `cd`、 `cp`、 `vim`、 `ssh` 等）编写脚本，你将不会注意到 Fish 和 Bash 的脚本语言的工作方式有何不同。
 
-One of the biggest differences is when you try capturing output from a command. In Bash you may be used to this:
+两者最大的区别之一是当你尝试捕获命令的输出时。在 Bash 中你可能习惯于这样：
 
 ```bash
 todays_date=$(date)
@@ -109,7 +109,7 @@ echo "Todays date is $todays_date"
 Todays Date is Tue Dec 13 15:29:28 CST 2022
 ```
 
-Whereas in Fish, capturing output works differently. The equivalent for Fish in scripting would look like this:
+而在 Fish 中，捕获输出的方式不同。 Fish 脚本等价物如下：
 
 ```bash
 set date (date)
@@ -119,15 +119,15 @@ echo "Todays Date $date"
 ![ezgif.com-gif-maker](https://www.freecodecamp.org/news/content/images/2022/12/ezgif.com-gif-maker.gif)
 
 ```bash
-todays date is Tue Dec 13 21:35:03 UTC 2022                                   
+todays date is Tue Dec 13 21:35:03 UTC 2022
 ```
 
-## Conclusion
+## 总结
 
-Bash, Z Shell, and Fish Shell all have their merits, along with some similarities. You can use each of them effectively in your work environment now that you know a bit more about them.
+Bash、Z Shell 和 Fish Shell 各有优点，也有一些相似之处。既然对它们有了更多的了解，你就可以在工作中更有效地使用它们。
 
-If you want something more configurable, you could use Zsh (or even install Oh My Zsh). If you want more of an interactive terminal experience without a lot of configuration, you could use Fish Shell. If you want the classic feel, you can just keep Bash.
+如果你想要更可配置的 shell，你可以使用 Zsh（甚至安装 Oh My Zsh）。如果你想要更多交互的终端体验，同时不需要大量配置，你可以使用 Fish Shell。如果你想要经典的感觉，你可以保留 Bash。
 
-It all really comes down to your preferences as a developer - so just choose the shell that works best for you.
+选择取决于你作为开发人员的偏好 - 所以只需选择最适合你的 shell。
 
-_Hope this helped you! Thank you for reading_ 🐚🐚🐚
+_希望这对篇文章对你有所帮助！感谢阅读_ 🐚🐚🐚

@@ -1,6 +1,6 @@
 > -  原文地址：[How to Create a Telegram Bot using Python](https://www.freecodecamp.org/news/how-to-create-a-telegram-bot-using-python/)
 > -  原文作者：[Ashutosh Krishna](https://www.freecodecamp.org/news/author/ashutoshkrris/)
-> -  译者：
+> -  译者：songyp0505
 > -  校对者：
 
 ![How to Create a Telegram Bot using Python](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/Telegram-Bot.png)

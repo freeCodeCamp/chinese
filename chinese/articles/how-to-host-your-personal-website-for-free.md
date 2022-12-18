@@ -1,145 +1,110 @@
-> * 原文地址：[How To Host Your Personal Website for Free](https://medium.com/better-programming/how-to-host-your-personal-website-for-free-3101c4ab2e49)
-> * 原文作者：[Joey Colon](https://medium.com/@joey_colon)
-> * 译者：
-> * 校对者：
+> -   原文地址：[How To Host Your Personal Website for Free](https://medium.com/better-programming/how-to-host-your-personal-website-for-free-3101c4ab2e49)
+> -   原文作者：[Joey Colon](https://medium.com/@joey_colon)
+> -   译者：ZhichengChen
+> -   校对者：
 
+# 通过亚马逊 S3 和 Cloudflare 免费托管网站
 
-# How To Host Your Personal Website for Free
+![https://miro.medium.com/max/1000/1*qpOIeHOF-U0XuODBODQLCQ.jpeg](https://miro.medium.com/max/1000/1*qpOIeHOF-U0XuODBODQLCQ.jpeg)
 
-## Through the magic of AWS S3 and Cloudflare
+图片来自https://unsplash.com/@kevnbhagat
 
-![img](https://miro.medium.com/max/1000/1*qpOIeHOF-U0XuODBODQLCQ.jpeg)
+在过去的五年左右时间里，web 变化很大，曾经 dev-op 实践被奉为圭臬，如今却略显过时。
 
-Picture from https://unsplash.com/@kevnbhagat
+发布网站到线上，过去的标准做法是给服务商支付费用，比如 NameCheap 或者 GoDaddy。现在虚拟主机仍然是一个不错的选择，不过已经有一些更简便的方法。接下来会介绍我免费部署[个人网站](http://joey.dev/)到线上的方法。
 
-With the web rapidly evolving in the last five or so years, dev-op practices that used to be considered the standard are now obsolete.
+## 开始的开始
 
-To get a website online, the standard used to be to look at paid shared cPanel hosting services, such as NameCheap or GoDaddy. While shared hosting is still a valid solution for pushing your website to production, more intuitive solutions have surfaced. I’ll be explaining the approach that I took for deploying [my personal website](http://joey.dev/) where I effectively pay $0 per month to keep my website online.
+需要准备网站的静态文件（HTML/CSS/JS）。这个教程讲述的是托管静态站。
 
-## First things first — prerequisites:
+还需要一个域名。域名价格一般是一年 15 美元左右，不同的顶级域名价格不同。如果你想要打造个人品牌，那么购买一个域名还是很有必要的。
 
-You will need to have the static files (HTML/CSS/JS) to your website. This guide is only applicable to sites that utilize a static set of files.
+此外还需要在 [Cloudflare](https://www.cloudflare.com/) 和 [AWS](https://aws.amazon.com/) 注册账号。如果没用过这两个服务，没关系---我会一步步讲解每个平台的操作步骤。干就完了。
 
-You will also need a custom domain. Domains typically run around $15 a year on average, depending on the TLD extension you are looking at. It is definitely worth the investment for personal branding.
+## 设置 AWS S3 文件桶
 
-You will also need to have an account created on [Cloudflare](https://www.cloudflare.com/) and [Amazon Web Services](https://aws.amazon.com/). If you are not familiar with either of these services, that is OK — I will be explaining each step you need to take on both platforms. Let’s get started.
+登录 AWS 控制台，进入 [S3 管理控制台](https://console.aws.amazon.com/s3/home)。
 
-## Setting up AWS S3 bucket:
+点击创建存储桶按钮。弹出一个存储桶信息表单的对话框。
 
-After signing into the AWS console, head over to the [S3 Management Console](https://console.aws.amazon.com/s3/home).
+![](https://miro.medium.com/max/1398/1*SQ-ze3rTSlM8M4FtHhm7vQ.png)
 
-Go ahead and click the *Create Bucket* button. A modal will appear asking for details about the bucket you are creating.
+_AWS S3 管理控制台_
 
-![img](https://miro.medium.com/max/60/1*SQ-ze3rTSlM8M4FtHhm7vQ.png?q=20)
+在“存储桶名称”栏，填写完整的域名。在这个教程里，我会使用 tutorial.joey.dev。“区域”栏，选择离我比较近的州，US East (N.Virginia)。当然你可以选择离你比较近的地区。选好后点击下一步。
 
-![img](https://miro.medium.com/max/1398/1*SQ-ze3rTSlM8M4FtHhm7vQ.png)
+![](https://miro.medium.com/max/1093/1*8hN5P5cU0e2xR73btV3P0w.png)
 
-AWS S3 Management Console
+_AWS S3 创建存储桶 步骤一_
 
-For your *Bucket Name*, make sure you are entering exactly what your domain name is. For the example of this tutorial, I will be using the domain `**tutorial.joey.dev**`. For the region, I am picking what is geographically closest to me, *US East (N. Virginia)*. Feel free to pick what is closest to you as well. Click Next when you are ready to move on.
+在步骤二，直接点击下一步。在步骤三，取消*阻止所有公共访问*选项，我们也用不到 S3 日志传输服务，直接点击下一步。
 
-![img](https://miro.medium.com/max/60/1*8hN5P5cU0e2xR73btV3P0w.png?q=20)
+![https://miro.medium.com/max/1099/1*6Dqwkgk5dUglp2fZAmZ94Q.png](https://miro.medium.com/max/1099/1*6Dqwkgk5dUglp2fZAmZ94Q.png)
 
-![img](https://miro.medium.com/max/1093/1*8hN5P5cU0e2xR73btV3P0w.png)
+_AWS S3 创建存储桶 步骤三_
 
-AWS S3 Create Bucket — Step One
+在步骤四，直接单击创建存储桶按钮。在 S3 管理控制台会看见新创建的存储桶。点击新创建的存储桶，会出现下面的界面：
 
-Once you are on step two, click Next. On step three, make sure you uncheck the *Block all public access* option, as well as the other checkboxes. We do not need to utilize S3 Log Delivery, so disable that option too. Click Next.
+![](https://miro.medium.com/max/1251/1*DAws-OGBVHZrNKh0oAEZWQ.png)
 
-![img](https://miro.medium.com/max/60/1*6Dqwkgk5dUglp2fZAmZ94Q.png?q=20)
+_AWS S3 新创建的存储桶_
 
-![img](https://miro.medium.com/max/1099/1*6Dqwkgk5dUglp2fZAmZ94Q.png)
+点击屏幕顶部的*属性*选项卡，然后选择第一行的*静态网站托管*卡片。选中*使用此存储桶托管网站*选项。索引文档，直接填写 `idnex.html`然后点击保存。
 
-AWS S3 Create Bucket — Step Three
+**留意一下卡片顶部终端节点的值，记下来。**
 
-On step four, go ahead and click the *Create bucket* button. After you have created the bucket, you should see the new bucket shown in the list of your buckets on the S3 Management Console page. Click your newly created bucket, and you should see something similar to this:
+![](https://miro.medium.com/max/1905/1*H_O_F82gTDOnmNjfYMYEag.png)
 
-![img](https://miro.medium.com/max/60/1*DAws-OGBVHZrNKh0oAEZWQ.png?q=20)
+_AWS S3 静态网站托管配置_
 
-![img](https://miro.medium.com/max/1251/1*DAws-OGBVHZrNKh0oAEZWQ.png)
+漂亮。最后一步就是上传网站文件到存储桶里了。点击*概述*标签页然后点击*上传*按钮。出现下面的弹窗，开始上传吧。
 
-AWS S3 — Newly Created S3 Bucket
+![](https://miro.medium.com/max/1094/1*QZkDDVQGmYh6UaXNNnhP5w.png)
 
-Click the *Properties* tab near the top of the screen, and then *Static website hosting* on the first row of cards. Click the *Use this bucket to host a website*option. For the index document, go ahead and enter `index.html` and click save.
+_AWS S3 上传文件 步骤一_
 
-**Make sure you note down the endpoint they give you.**
+在选择上传的文件后，点击下一步按钮。在第二步，点击*管理公共权限下拉框*选择*为此对象授予公共读取访问权限*选项。点击下一步。
 
-![img](https://miro.medium.com/max/60/1*H_O_F82gTDOnmNjfYMYEag.png?q=20)
+![](https://miro.medium.com/max/1095/1*k8j04DlNIT4XLZuCQVHFiQ.png)
 
-![img](https://miro.medium.com/max/1905/1*H_O_F82gTDOnmNjfYMYEag.png)
+第三步，所有选项都不用更改，直接点击下一步。在第四步点击*上传*按钮。上传完成后，通过访问终端节点地址就可以访问网站了。
 
-AWS S3 — Static website hosting configuration
+厉害了，接下来设置 Cloudflare。
 
-Awesome! Now the last part of the AWS side is uploading your static site’s files to your new bucket. Click the *Overview* tab and then the *Upload* button. You will be greeted with the modal below. Go ahead and upload your site’s files.
+![](https://miro.medium.com/max/1272/1*TyrD5ejxnz0E0d2Sl201HQ.png)
 
-![img](https://miro.medium.com/max/60/1*QZkDDVQGmYh6UaXNNnhP5w.png?q=20)
+## 设置 Cloudflare
 
-![img](https://miro.medium.com/max/1094/1*QZkDDVQGmYh6UaXNNnhP5w.png)
+这里假设你是第一次使用 Cloudflare 服务，Cloudflare 并没有绑定任何域名。在 Cloudflare 控制台，点击*Add a Site* 按钮，输入网站地址，点击 Next。再点击 Next，选择 Free plan。
 
-AWS S3 — Upload files step one
+进入 DNS 查询结果页面后，删除扫描到的所有记录。结果看起来如下：
 
-After selecting the files to upload, click the Next button. On step two, you will want to click the *Manage public permissions* dropdown and change it to the option *Grant public read access to this object(s)*. Click Next.
+![](https://miro.medium.com/max/1076/1*AOzFHjCSQ-6j12L84XHJ1A.png)
 
-![img](https://miro.medium.com/max/60/1*k8j04DlNIT4XLZuCQVHFiQ.png?q=20)
+这里需要两个不同的`CNAME`记录。
 
-![img](https://miro.medium.com/max/1095/1*k8j04DlNIT4XLZuCQVHFiQ.png)
+第一个记录，_name_，输入`www`，_Domain name_，输入不包含 http:// 的域名，如`tutorial.joey.dev`。
 
-AWS S3 — Upload files step two
+第二个记录，_name_ 输入域名，_Domain name_，输入我们之前提到的 S3 存储桶的终端节点。确保添加这些记录的时候橙色的云是可用的。
 
-From step three, ignore all the options and click the Next button. On step four, click the *Upload* button. After uploading, you should now be able to visit your website through the back end endpoint URL I told you to save.
+![](https://miro.medium.com/max/1074/1*a1FiP8wLTfhBRkxi5iK-rQ.png)
 
-Hooray! Let’s move on to setting up Cloudflare.
+_Cloudflare DNS 记录配置_
 
-![img](https://miro.medium.com/max/60/1*TyrD5ejxnz0E0d2Sl201HQ.png?q=20)
+对照着上图，如果确定设置没有问题，点击*Continue*。现在需要把你的域名的 nameservers 从域名注册商指向 Cloudflare 的 nameservers。这涉及到域名注册商网站的一些操作，可以阅读一下相关的文档。
 
-![img](https://miro.medium.com/max/1272/1*TyrD5ejxnz0E0d2Sl201HQ.png)
+修改完 nameservers，还需要设置一些页面规则。在这之前，先确保 SSL 证书设置正确。在 Cloudflare 控制台，点击域名进入到域名控制台，点击 _Crypto_ 选项卡确保 SSL 的设置是 _Flexible_。
 
-AWS S3 Hosted website
+![](https://miro.medium.com/max/1196/1*lpTdVq6okXGcga07TeSNhQ.png)
 
-## Setting up Cloudflare:
+好事将近。点击 Page Rules 选项卡。这里需要创建两个页面规则，把非 SSL 的流量跳转到 SSL，把 www.joey.dev 跳转到更简短的 joey.dev，在这里合并成了一条规则（按需配置）。
 
-I am assuming that you are a first-time Cloudflare user and have not connected your site’s domain to Cloudflare’s services. From the Cloudflare dashboard, click the *Add a Site* button. Enter your website URL, and click Next. Click Next once more, and, when asked about a plan, select the Free plan and move on.
+![](https://miro.medium.com/max/797/1*QT9LXp3wPcsrQap_4jb56w.png)
 
-When you get to the DNS query results page, go ahead and delete all the records it has scanned. Your results should look similar to this:
+至此，.dev 域名自动跳转到了 SSL，当有人访问 www.domain.dev 时，也会跳转，一箭双雕。
 
-![img](https://miro.medium.com/max/60/1*AOzFHjCSQ-6j12L84XHJ1A.png?q=20)
+如果你的顶级域名不是 .dev，需要额外配置下面的规则：
 
-![img](https://miro.medium.com/max/1076/1*AOzFHjCSQ-6j12L84XHJ1A.png)
+![](https://miro.medium.com/max/793/1*ngy4I0l-fe5JGBzyESUH9w.png)
 
-We want to add two different `**CNAME**` records.
-
-For the first record, for *name*, enter `**www**`, and for *Domain name*, enter your domain name without http://. E.g. `**tutorial.joey.dev**`).
-
-For the second record, for *name*, enter your domain name, and for *Domain name*, enter your back end S3 bucket endpoint we visited earlier in this tutorial. Make sure the orange cloud is enabled when adding these records.
-
-![img](https://miro.medium.com/max/60/1*a1FiP8wLTfhBRkxi5iK-rQ.png?q=20)
-
-![img](https://miro.medium.com/max/1074/1*a1FiP8wLTfhBRkxi5iK-rQ.png)
-
-Cloudflare DNS records configuration
-
-After you have confirmed that your records are set up correctly compared to my picture, click continue. You will now have to change your domain’s nameservers from your domain’s registrar to point to Cloudflare’s nameservers. You should reference your domain registrar’s knowledge base on a guide on how to change your nameservers, as every website is slightly different in terms of layout.
-
-After changing your nameservers, you will need to set up a few page rules. Before that, let’s make sure the SSL certificate is on the correct setting. From the Cloudflare dashboard, click on the domain to be redirected to the domain dashboard. Click the *Crypto* tab and make sure your SSL is set to *Flexible*.
-
-![img](https://miro.medium.com/max/60/1*lpTdVq6okXGcga07TeSNhQ.png?q=20)
-
-![img](https://miro.medium.com/max/1196/1*lpTdVq6okXGcga07TeSNhQ.png)
-
-Cloudflare SSL Configuration
-
-The end is near! Click on the Page Rules tab. We will need to create two page rules to have all non-SSL traffic redirected to SSL. For this section, I will include the page rules I am using for my actual sites. If you are on a .dev domain, you will only need this page rule (this rule is required for all other domain TLD extensions as well):
-
-![img](https://miro.medium.com/max/60/1*QT9LXp3wPcsrQap_4jb56w.png?q=20)
-
-![img](https://miro.medium.com/max/797/1*QT9LXp3wPcsrQap_4jb56w.png)
-
-Since .dev domains automatically redirect to SSL, the only case you need to take care of is the case when someone enters *www.domain.dev*. This rule combats that.
-
-If you are not on a .dev domain, you will also have to include additional this page rule:
-
-![img](https://miro.medium.com/max/60/1*ngy4I0l-fe5JGBzyESUH9w.png?q=20)
-
-![img](https://miro.medium.com/max/793/1*ngy4I0l-fe5JGBzyESUH9w.png)
-
-Visit your website using your custom domain. Ta-dah! You will be visiting an SSL enabled version of your site that is hosted on the cloud utilizing an AWS S3 Bucket.
+访问域名。哈哈哈，现在可以访问 SSL 加密版部署在 AWS S3 存储桶集成 cdn 的网站啦。

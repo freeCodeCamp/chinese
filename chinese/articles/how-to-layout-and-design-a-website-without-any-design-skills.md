@@ -1,7 +1,7 @@
-> * 原文地址：[How to layout and design a website (without any design skills)](https://www.freecodecamp.org/news/how-to-layout-and-design-a-website-without-any-design-skills-86d94e40b55a/)
-> * 原文作者：[Jessica Chan](https://www.freecodecamp.org/news/author/thecodercoder/)
-> * 译者：sunnysly123
-> * 校对者：
+> -   原文地址：[How to layout and design a website (without any design skills)](https://www.freecodecamp.org/news/how-to-layout-and-design-a-website-without-any-design-skills-86d94e40b55a/)
+> -   原文作者：[Jessica Chan](https://www.freecodecamp.org/news/author/thecodercoder/)
+> -   译者：sunnysly123
+> -   校对者：
 
 ![How to layout and design a website (without any design skills)](https://cdn-media-1.freecodecamp.org/images/1*Phg_9259Vl8tNHyCh_W3sg.jpeg)
 
@@ -10,10 +10,10 @@
 在没有任何网站设计技巧的情况下，如何建立一个网站？
 
 有以下方案可供你选择：
- 
-- 你可以雇一个网站设计师——不过设计师或者说好的设计师收费不低。
-- 你也可以在 Fiverr，Upwork, 猪八戒等等平台找一个收费低的设计师——但是你也知道这是有风险的。
-- 或者你可以直接从网上下载一个免费甚至是高级的主题模板——不过通常这并不能满足你的所有要求
+
+-   你可以雇一个网站设计师——不过设计师或者说好的设计师收费不低。
+-   你也可以在 Fiverr，Upwork, 猪八戒等等平台找一个收费低的设计师——但是你也知道这是有风险的。
+-   或者你可以直接从网上下载一个免费甚至是高级的主题模板——不过通常这并不能满足你的所有要求
 
 还有个方法是自己学习一些设计和布局网站的技巧，然后打造出自己的前端展现效果。
 
@@ -23,8 +23,8 @@
 
 这个方法包括：
 
-- 了解网站视觉呈现的基础
-- 调查现有网站设计以获得灵感和想法
+-   了解网站视觉呈现的基础
+-   调查现有网站设计以获得灵感和想法
 
 以上两点正是我用来建立[自己网站][1]的技巧。当然，这只是一个很简单的设计，不是特别精致。但是通常简单的设计就可以满足你的需求。
 
@@ -34,10 +34,10 @@
 
 以下是这个过程中的关键步骤：
 
-- 确定网站的基础内容
-- 规划网站布局
-- 整合设计
-- 完成作品
+-   确定网站的基础内容
+-   规划网站布局
+-   整合设计
+-   完成作品
 
 每一步都需要调查支撑——浏览其他网站看看他们是怎么做的，然后将其中好的部分复用到你自己的网站中。
 
@@ -63,14 +63,14 @@
 
 ### 调查现有网站
 
-选择3-4个相似行业的网站，观察网站都包含哪些页面。
+选择 3-4 个相似行业的网站，观察网站都包含哪些页面。
 
 注意网站是如何设计的并记录下来：
 
-- 网站包含哪些页面，
-- 网站整体样式是怎样的，
-- 导航和搜索的便捷性，
-- 还有其他你感兴趣的方面。
+-   网站包含哪些页面，
+-   网站整体样式是怎样的，
+-   导航和搜索的便捷性，
+-   还有其他你感兴趣的方面。
 
 [Theme Forest][2]是一个寻找示例网站很好的地方，上面有大量免费和高级的网站模板以及主题。如果你有关注最流行的主题，就会知道他们通常是好设计的典范。
 
@@ -151,14 +151,15 @@
 
 我认为即将建立的 Central Coffee 网站，是包含以下模块的简约风单页网站：
 
-- 头部导航栏
-- 主页
-- 关于我们
-- 菜单
-- 地址/联系方式
-- 页脚
+-   头部导航栏
+-   主页
+-   关于我们
+-   菜单
+-   地址/联系方式
+-   页脚
 
 ### 规划网站布局
+
 此刻我们已经勾画出这个网站有了的大致框架，接下来就是确定各个页面或者模块需要填充的内容。我们最终确定的布局也可以被称为“线框图”。
 
 现在我们还没给这个线框图具体的设计，也就是字体、颜色或者照片都不确定。我们只需要大致清楚需要填充什么类型的内容，或是他们在页面中的位置。这更像是现阶段的结构图或是蓝图。
@@ -193,9 +194,9 @@
 
 每家网站都有不同的菜单：
 
-- Seven Coffee 的菜单是一个价格表
-- Caffe Streets 只有商品清单
-- Build and Sawada 提供的是 PDF 版本菜单的外部链接
+-   Seven Coffee 的菜单是一个价格表
+-   Caffe Streets 只有商品清单
+-   Build and Sawada 提供的是 PDF 版本菜单的外部链接
 
 我个人不喜欢在手机上浏览网站的时候还需要下载个 PDF 文件，因此我准备提供带有图片的简易食品饮料菜单。
 
@@ -250,6 +251,7 @@
 -   [Snappa][13]
 
 ### 建立网站
+
 现在我们已经有了展示各个部分布局的线框图，也有关于前端样式的设计指南。
 
 因为我们没有可以给出详细 PSD 的设计师，所以可以直接对照着之前建造的框架来开始编写我们的网站。
@@ -278,11 +280,11 @@
 
 有以下网站可供模拟移动设备调试：
 
--   [Responsinator.com][15]  （免费）
--   [Screenfly][16]  by Quirktools （免费）
--   [Browserstack][17]  （收费）——Browserstack 可以让你在真机上调试效果。
+-   [Responsinator.com][15] （免费）
+-   [Screenfly][16] by Quirktools （免费）
+-   [Browserstack][17] （收费）——Browserstack 可以让你在真机上调试效果。
 
-### 作品完成!
+### 作品完成
 
 这张是完成后的 Central Coffee 网站截图
 
@@ -294,11 +296,11 @@
 
 希望这篇文章对你有用。如果你有任何想法也可以在下方评论区留言。
 
-#### 想浏览更多内容?
+#### 想浏览更多内容
 
 ◾️ 可以在我的博客[Coder-Coder.com.][19]上阅读更多类似这样的对你有帮助的文章。  
-◾️ 在 [Instagram][20]  和  [Twitter][21]上关注我!  
-◾️ 在我的Youtube频道[my YouTube channel][22]查看编码指导。
+◾️ 在 [Instagram][20] 和 [Twitter][21]上关注我!  
+◾️ 在我的 Youtube 频道[my YouTube channel][22]查看编码指导。
 
 [1]: https://coder-coder.com/
 [2]: https://themeforest.net/

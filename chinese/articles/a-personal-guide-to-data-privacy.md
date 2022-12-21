@@ -45,7 +45,7 @@
 
 此外，在（最近的）过去，美国政府承认:
 
-> "国家安全局多年来一直在秘密收集[几乎每个美国人的电话](https://www.aclu.org/blog/national-security/privacy-and-surveillance/why-todays-landmark-court-victory-against-mass?redirect=blog/speak-freely/why-todays-landmark-court-victory-against-mass-surveillance-matters)的记录。谁在给谁打电话，这些电话是什么时候打的，以及它们持续多久。这种信息，当国家安全局日复一日地积累时，可以揭示人们生活和交往中令人难以置信的敏感细节，例如他们是否给牧师、堕胎者、成瘾咨询师或自杀热线打电话。" ([来源](https://www.aclu.org/news/national-security/the-privacy-lesson-of-9-11-mass-surveillance-is-not-the-way-forward))
+> "国家安全局多年来一直在秘密收集 [几乎每个美国人的电话](https://www.aclu.org/blog/national-security/privacy-and-surveillance/why-todays-landmark-court-victory-against-mass?redirect=blog/speak-freely/why-todays-landmark-court-victory-against-mass-surveillance-matters) 的记录。谁在给谁打电话，这些电话是什么时候打的，以及它们持续多久。这种信息，当国家安全局日复一日地积累时，可以揭示人们生活和交往中令人难以置信的敏感细节，例如他们是否给牧师、堕胎者、成瘾咨询师或自杀热线打电话。" ([来源](https://www.aclu.org/news/national-security/the-privacy-lesson-of-9-11-mass-surveillance-is-not-the-way-forward))
 
 仅仅因为你现在没有什么可隐瞒的，并不意味着你希望你生活中的每个人（或你的政府）每时每刻都在监视你的一切。保护你的信息可以保护你免受其中的一些影响。
 
@@ -57,19 +57,19 @@
 
 因此，如果您想减少被跟踪的关于您的信息量，这里有一个简明列表，列出了 10 种可以改善您的数字隐私的方法。
 
-首先，**提高你的数字安全**。你可以找到我的快速指南[这里](https://megankaczanowski.com/digital-security/)。拥有强大的数字安全并确保没有未经授权的用户可以访问你的数据是保护你隐私的第一步。
+首先，**提高你的数字安全**。你可以找到我的快速指南 [这里](https://megankaczanowski.com/digital-security/)。拥有强大的数字安全并确保没有未经授权的用户可以访问你的数据是保护你隐私的第一步。
 
-**改用浏览器，如[Brave](https://brave.com/download/)或[DuckDuckGo](https://duckduckgo.com/)**，这将保护你在搜索互联网时不受跟踪器和广告的影响。
+**改用浏览器，如 [Brave](https://brave.com/download/) 或 [DuckDuckGo](https://duckduckgo.com/)**，这将保护你在搜索互联网时不受跟踪器和广告的影响。
 
-如果你继续使用 Chrome 等浏览器，请使用[uBlock Origin](https://ublockorigin.com/)或[Privacy Badger](https://privacybadger.org/#What-is-Privacy-Badger)等浏览器扩展，它们可以阻止广告商和其他追踪者秘密追踪你在互联网上的去向和所看的内容。
+如果你继续使用 Chrome 等浏览器，请使用 [uBlock Origin](https://ublockorigin.com/) 或[Privacy Badger](https://privacybadger.org/#What-is-Privacy-Badger) 等浏览器扩展，它们可以阻止广告商和其他追踪者秘密追踪你在互联网上的去向和所看的内容。
 
-**使用端对端加密的聊天应用程序**，如[Signal](https://signal.org/en/download/)或 iMessage。虽然这也是一种安全措施，但使用不跟踪你的元数据的应用程序是一种隐私措施。
+**使用端对端加密的聊天应用程序**，如 [Signal](https://signal.org/en/download/) 或 iMessage。虽然这也是一种安全措施，但使用不跟踪你的元数据的应用程序是一种隐私措施。
 
 例如，虽然 WhatsApp 有加密信息，但它也属于 Meta（Facebook），Meta 使用元数据（谁在给谁打电话，什么时候打的，持续多长时间，等等），这并不是真正保护你的隐私，所以我不建议使用。此外，如果你把这些信息备份到云端，这些信息可能不再被加密。
 
-**选择退出广告个性化**。你可以为 50 多家公司这样做[这里](https://simpleoptout.com/)。选择退出不会阻止公司收集你的数据，但会大大减少他们收集的数据。
+**选择退出广告个性化**。你可以为 50 多家公司这样做 [这里](https://simpleoptout.com/)。选择退出不会阻止公司收集你的数据，但会大大减少他们收集的数据。
 
-苹果在新的 iPhone 更新中推出了一个类似的选项，你现在可以选择要求应用程序 "不跟踪"。此外，选择从[谷歌](https://support.google.com/accounts/answer/465?hl=en&co=GENIE.Platform%3DDesktop)、[Facebook](https://time.com/5633726/how-to-delete-facebook-data/)和[Twitter](https://www.forbes.com/sites/davidbalaban/2020/12/11/how-to-remove-your-data-from-twitter/?sh=5c5c9745498c)等网站删除你的用户数据（并设置一个经常性选项，定期从谷歌清除你的 cookies 和搜索历史）。
+苹果在新的 iPhone 更新中推出了一个类似的选项，你现在可以选择要求应用程序 "不跟踪"。此外，选择从 [谷歌](https://support.google.com/accounts/answer/465?hl=en&co=GENIE.Platform%3DDesktop)、[Facebook](https://time.com/5633726/how-to-delete-facebook-data/) 和 [Twitter](https://www.forbes.com/sites/davidbalaban/2020/12/11/how-to-remove-your-data-from-twitter/?sh=5c5c9745498c) 等网站删除你的用户数据（并设置一个经常性选项，定期从谷歌清除你的 cookies 和搜索历史）。
 
 **清除你不再需要的数据**。如果你要处理一个设备，确保你在这样做之前完全清除数据（并重置为出厂设置）（并确保你对每个连接互联网的设备都这样做）。
 
@@ -93,6 +93,6 @@
 
 ### 想了解更多信息?
 
-- [Michael Bazzell 的这本书](https://www.amazon.com/Hiding-Internet-Eliminating-Personal-Information/dp/1500397814)是互联网隐私的黄金标准，如果你想抹去你的在线身份。
+- [Michael Bazzell 的这本书](https://www.amazon.com/Hiding-Internet-Eliminating-Personal-Information/dp/1500397814) 是互联网隐私的黄金标准，如果你想抹去你的在线身份。
 - [Michael Bazzell 的这本书](https://www.amazon.com/Extreme-Privacy-What-Takes-Disappear/dp/B09W78GW2T/ref=pd_lpo_1?pd_rd_w=YBUvo&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=HMH66VW54QQ6Q0Z7XYBT&pd_rd_wg=VfguC&pd_rd_r=6f70c63c-0c73-43cb-8505-7dbc3d0bde31&pd_rd_i=B09W78GW2T&psc=1#customerReviews) 是关于重新开始并重新创建在线状态。
 - [Kevin Mitnick 这本书](https://www.amazon.com/Art-Invisibility-Worlds-Teaches-Brother/dp/0316380520/ref=pd_lpo_5?pd_rd_w=YBUvo&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=HMH66VW54QQ6Q0Z7XYBT&pd_rd_wg=VfguC&pd_rd_r=6f70c63c-0c73-43cb-8505-7dbc3d0bde31&pd_rd_i=0316380520&psc=1#customerReviews) 提供一些高级技巧以提高您的数据安全性和隐私性。

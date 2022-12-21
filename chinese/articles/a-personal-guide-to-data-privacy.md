@@ -1,7 +1,7 @@
-> -  原文地址：[How to Improve Your Data Privacy – A Personal Guide to Protecting Your Online Information](https://www.freecodecamp.org/news/a-personal-guide-to-data-privacy/)
-> -  原文作者：[Megan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Improve Your Data Privacy – A Personal Guide to Protecting Your Online Information](https://www.freecodecamp.org/news/a-personal-guide-to-data-privacy/)
+> - 原文作者：[Megan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Improve Your Data Privacy – A Personal Guide to Protecting Your Online Information](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/pexels-antoni-shkraba-5475793.jpg)
 
@@ -29,9 +29,9 @@ If companies are collecting and storing your data (often with poor cybersecurity
 
 Even if companies aren't losing your data, they're collecting it for a number of reasons, including:
 
--   Personalized services (and ads)
--   Better understanding of their customer base (which improves their ability to effectively sell products)
--   Training data for models
+- Personalized services (and ads)
+- Better understanding of their customer base (which improves their ability to effectively sell products)
+- Training data for models
 
 Even if you're okay with this, the down side is that often companies are using data to manipulate you in ways that are hard to realize or break out of.
 
@@ -93,6 +93,6 @@ Lastly, **contact your congresspeople/local government representatives**. There'
 
 ### Looking for more information?
 
--   [This book from Michael Bazzell](https://www.amazon.com/Hiding-Internet-Eliminating-Personal-Information/dp/1500397814) is the gold standard for internet privacy, if you're looking to erase your online identity.
--   [This book from Michael Bazell](https://www.amazon.com/Extreme-Privacy-What-Takes-Disappear/dp/B09W78GW2T/ref=pd_lpo_1?pd_rd_w=YBUvo&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=HMH66VW54QQ6Q0Z7XYBT&pd_rd_wg=VfguC&pd_rd_r=6f70c63c-0c73-43cb-8505-7dbc3d0bde31&pd_rd_i=B09W78GW2T&psc=1#customerReviews ) is about starting over and re-creating an online presence.
--   [This book from Kevin Mitnick](https://www.amazon.com/Art-Invisibility-Worlds-Teaches-Brother/dp/0316380520/ref=pd_lpo_5?pd_rd_w=YBUvo&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=HMH66VW54QQ6Q0Z7XYBT&pd_rd_wg=VfguC&pd_rd_r=6f70c63c-0c73-43cb-8505-7dbc3d0bde31&pd_rd_i=0316380520&psc=1#customerReviews) gives some high level tips to improve your data security and privacy.
+- [This book from Michael Bazzell](https://www.amazon.com/Hiding-Internet-Eliminating-Personal-Information/dp/1500397814) is the gold standard for internet privacy, if you're looking to erase your online identity.
+- [This book from Michael Bazell](https://www.amazon.com/Extreme-Privacy-What-Takes-Disappear/dp/B09W78GW2T/ref=pd_lpo_1?pd_rd_w=YBUvo&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=HMH66VW54QQ6Q0Z7XYBT&pd_rd_wg=VfguC&pd_rd_r=6f70c63c-0c73-43cb-8505-7dbc3d0bde31&pd_rd_i=B09W78GW2T&psc=1#customerReviews) is about starting over and re-creating an online presence.
+- [This book from Kevin Mitnick](https://www.amazon.com/Art-Invisibility-Worlds-Teaches-Brother/dp/0316380520/ref=pd_lpo_5?pd_rd_w=YBUvo&content-id=amzn1.sym.116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_p=116f529c-aa4d-4763-b2b6-4d614ec7dc00&pf_rd_r=HMH66VW54QQ6Q0Z7XYBT&pd_rd_wg=VfguC&pd_rd_r=6f70c63c-0c73-43cb-8505-7dbc3d0bde31&pd_rd_i=0316380520&psc=1#customerReviews) gives some high level tips to improve your data security and privacy.

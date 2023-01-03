@@ -1,69 +1,69 @@
 > -  原文地址：[Linux Networking Commands You Should Know as a Beginner](https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/)
 > -  原文作者：[Arunachalam B](https://www.freecodecamp.org/news/author/arunachalam/)
-> -  译者：
+> -  译者：[luojiyin](https://github.com/luojiyin1987)
 > -  校对者：
 
 ![Linux Networking Commands You Should Know as a Beginner](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/FreeCodeCamp---Networking-in-Linux.png)
 
-Can you imagine what it would be like to have a laptop but not to be able to access the internet?
+你能想象有一台笔记本电脑却不能上网是什么样子吗？
 
-If you're a developer (or an aspiring one), you'll likely use the internet every day. So you should learn a few useful networking commands.
+如果你是一名开发人员（或有抱负的人），你可能每天都会使用互联网。所以你应该学习一些有用的网络命令。
 
-To learn networking in Linux, you should also know how to use the Terminal. Because using terminal commands is way more powerful than using the UI. It'll also be faster and more efficient.
+要在 Linux 中学习网络，你还应该知道如何使用终端。因为使用终端命令要比使用用户界面强大得多。它也会更快、更有效率。
 
 ## Prerequisites
 
-A basic understanding of the Linux terminal is enough to learn networking in Linux.
+对 Linux 终端有一个基本的了解，就足以学习 Linux 中的网络。
 
 ## How to Find the IP Address of Your Machine
 
-This is the most basic question in networking and it's the starting point of learning networking.
+这是网络中最基本的问题，它是学习网络的起点。
 
-But, Wait.
+但是，请等待。
 
 ### What's an IP Address?
 
-IP stands for "Internet Protocol," which is the protocol (set of rules) governing how data are sent via the internet or a local network.
+IP 是 "互联网协议 "的缩写，它是管理数据如何通过互联网或本地网络发送的协议（一套规则）。
 
-An IP address is basically a unique address to identify a device on the internet or on a local network.
+IP 地址基本上是一个唯一的地址，用于识别互联网或本地网络上的设备。
 
-Ok, now that we know what an IP address is, let's continue.
+好了，现在我们知道什么是 IP 地址了，让我们继续。
 
-Being a professional web developer, I work on developing websites along with their backend services.
+作为一个专业的网络开发人员，我的工作是开发网站及其后端服务。
 
-One day an intern asked me some questions about an interesting project he was working on. He wanted his site to be responsive on desktop, mobile, and tablet.
+有一天，一个实习生问我一些关于他正在做的一个有趣项目的问题。他希望他的网站在桌面、手机和平板电脑上都能访问。
 
-Though the site looked responsive, once I adjusted the browser window and switched to the mobile view on his laptop, the outcome on the phone after deployment was not so impressive.
+虽然该网站看起来是响应式的，但一旦我调整浏览器窗口，在他的笔记本电脑上切换到移动视图，部署后在手机上的结果就不那么令人印象深刻了。
 
-So, he asked me for help,
+所以，他向我寻求帮助。
 
-"I wanted to check the site's responsiveness with my mobile in development mode. Is it possible?" he asked.
+"我想用我的手机在开发模式下检查网站的响应性。这可能吗？"他问。
 
-"Yes, it is. Connect your laptop and mobile on the same network. Find your laptop IP, and navigate to `ip:<server_port>` on your mobile browser", I replied.
+"是的，它是。将你的笔记本电脑和手机连接在同一个网络上。找到你的笔记本 IP，并在你的手机浏览器上访问`ip:<server_port>`，我回答说。
 
-So he opened a new tab in the browser and started typing "https://whatismy...", I stopped him and asked what he was searching for.
+于是他在浏览器中打开一个新标签，开始输入 "https://whatismy..."，我阻止了他，问他在搜索什么。
 
-He told me he was finding his IP address.
+他告诉我他正在寻找他的 IP 地址。
 
-"Use `ifconfig` command to find the IP address of your machine", I replied.
+我回答说："使用 `ifconfig`命令来查找你的机器的 IP 地址"。
 
-He opened up the terminal and tried out the command, like this:
+他打开了终端，试了试这个命令，像这样:
 
 ```bash
 ifconfig
 ```
 
-Command to find IP address of your machine
+找到你的机器的 IP 地址的命令
 
 ![ikkm_6NNhq1HetyT5ahF0dKUda-E23afbdn6seevR-tZTEalhOBN-W75GhUApYv1Xiw-ojtm9YLqIAXcalxsSpal53tsOefrLuzbhMzlK-2N7bkyUu4PZyharx0XzsQSN-9KBNjZ4pk_kLnnaTiyQcsYDBaSF5mAUSz0EGZx1pGJGlBO0PYhQZEpOjVCVg](https://lh3.googleusercontent.com/ikkm_6NNhq1HetyT5ahF0dKUda-E23afbdn6seevR-tZTEalhOBN-W75GhUApYv1Xiw-ojtm9YLqIAXcalxsSpal53tsOefrLuzbhMzlK-2N7bkyUu4PZyharx0XzsQSN-9KBNjZ4pk_kLnnaTiyQcsYDBaSF5mAUSz0EGZx1pGJGlBO0PYhQZEpOjVCVg)
 
-Sample Output of the ifconfig command
+ifconfig 命令的输出示例
 
-"Oh, Man! I'm confused now. Which is my IP here?", was his next question.
+"哦，伙计! 我现在很迷惑。哪个是我的 IP？"，这是他的下一个问题。
 
-So I explained to him about each block in the above output:
+于是我向他解释了上述输出中的每个内容:
 
-Before walking into each block, you can find that few items are common for all blocks. Let's learn about them.
+在进入每个信息区间之前，你可以发现有几个是所有信息区间的共同点。让我们来了解一下它们。
 
 ### Characteristics of Network Interface
 

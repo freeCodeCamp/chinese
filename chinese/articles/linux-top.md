@@ -124,5 +124,3 @@ Htop (看起来很酷!)
 来源: https://tenor.com/view/how-linux-users-install-a-web-browser-linux-linux-users-gif-20223386
 
 希望这对你有帮助! 谢谢你的阅读 :)
-
-

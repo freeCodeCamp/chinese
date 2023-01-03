@@ -1,13 +1,6 @@
 ![freeCodeCamp.org Social Banner](https://s3.amazonaws.com/freecodecamp/wide-social-banner.png)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)][1]
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)][2]
-
-# news-translation
-
-This repository is used for collaborating on [Developer News][3] translation to different world languages.
-
-Each language translation is available in their own directories at the root of the repository. As of now, we are working on supporting chinese language first and will eventually add translations for other languages in future.
-
 [![NPM Dependency](https://david-dm.org/freeCodeCamp/news-translation.svg)][4]
 [![CI & CD](https://github.com/freeCodeCamp/news-translation/workflows/CI%20&%20CD/badge.svg)][5]
 

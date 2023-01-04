@@ -1,6 +1,6 @@
 > -  原文地址：[Principle of Least Privilege – Definition and Meaning in Cybersecurity](https://www.freecodecamp.org/news/principle-of-lease-privilege-meaning-cybersecurity/)
 > -  原文作者：[Manish Shivanandhan](https://www.freecodecamp.org/news/author/manishmshiva/)
-> -  译者：
+> -  译者：Miya Liu
 > -  校对者：
 
 ![Principle of Least Privilege – Definition and Meaning in Cybersecurity](https://www.freecodecamp.org/news/content/images/size/w2000/2022/11/cover.png)

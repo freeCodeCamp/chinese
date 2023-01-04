@@ -1,6 +1,6 @@
 > -  原文地址：[Web Layouts – How to Use CSS Grid and Flex to Create a Responsive Web Page](https://www.freecodecamp.org/news/web-layouts-use-css-grid-and-flex-to-create-responsive-webpages/)
 > -  原文作者：[Ophy Boamah](https://www.freecodecamp.org/news/author/ophelia/)
-> -  译者：
+> -  译者：Celqaz
 > -  校对者：
 
 ![Web Layouts – How to Use CSS Grid and Flex to Create a Responsive Web Page](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/WebLayouts-1.png)

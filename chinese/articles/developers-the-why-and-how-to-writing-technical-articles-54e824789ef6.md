@@ -7,120 +7,120 @@
 
 by Goodness Kayode
 
-# Developers: The Why and How to Writing Technical Articles
+# 开发人员为何要重视技术文章写作以及应该如何开始写作
 
 ![vBYM3clasrOG9A8bkLmF5RtcHUiOC0U2vmq6](https://cdn-media-1.freecodecamp.org/images/vBYM3clasrOG9A8bkLmF5RtcHUiOC0U2vmq6)
 
-I posted a small broadcast on the need for technical articles to add to my publication on a Whatsapp group of over 200 developers. The response I got prompted me to write this short article. I have found out that many developers do not find it important to write articles and I believe it is not right.
+我在一个由200多名开发人员组成的Whatsapp群中发布了一个小广播，说多发表一些技术文章的必要性。群里的回复给了我写这篇短文的灵感。我发现很多开发人员不重视写作，我觉得这是不对的。
 
-As if I knew many developers wouldn’t have technical articles, I decided to add the last paragraph to the broadcast. To my surprise several developers messaged me that they needed help on starting to write technical articles and that is why I decided to write this quick article.
-
-```
-If you have write-ups basically technical ones and you want to reach out to a wider audience on Medium, please DM me with your medium username and link to the articles or article.
-```
+就像我知道很多开发人员不会写技术文章一样，我决定在广播最后补充如下文字。令我惊讶的是，有几个开发人员给我发消息说对于如何开始写文章，他们还需要帮助。所以我决定写这篇快速上手文章。
 
 ```
-If you would like to start writing technical posts and you don't know where to start from, you can also DM me
+如果你想要让更多Medium用户看到你的技术类文章，可直接与我联系。提供一下你的Medium用户名并附上一篇或多篇文章链接。
 ```
 
-To start with, it takes a lot to come out with awesome content. I know this is what puts many developers off. But at the first part of this article, I will talk about the benefits of writing technical posts.
+```
+如果你想开始写技术博文，却不知如何入手，也可以直接与我联系。
+```
 
-**Build Your Portfolio**
+首先，要写出优质的内容需要付出很多努力。我知道这也是让许多开发人员放弃写作的原因。不过，在这篇文章的第一部分，我会先来说说写技术博文的好处。
 
-One key thing about writing technical posts is that it can help build your portfolio as a developer. And it gives you an ample opportunity to be seen as skilled at what you do.
+**创建自己的作品集**
 
-Another thing I feel has helped developers like [Prosper Otemuyiwa](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined) and some others is the fact that no matter how little the tutorial is, they make sure they do something.
+写技术博文的一个关键好处是它可以帮助你构建开发人员作品集。并且，它让你有充分的机会向他人展示你的工作技能。
 
-**Help Newbies**
+另一点我认为对像[Prosper Otemuyiwa](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined) 这类开发人员有益的事就是无论所写教程长短，保证自己所做的事有意义。
 
-Before you got to the stage you are right now, some people helped you get there through videos and articles. That is enough reason to write contents for other people to learn from.
+**帮助新人**
 
-**Learn More**
+你曾从他人的视频和文章受益才达到现在这个状态。这个理由足够促使你也写一些内容来帮助更多的人。
 
-The more you write on a particular thing, or let me say the more you teach a particular thing, the better you get at it. Writing technical contents may involve you writing about an application you just built that gave you a lot of stress that you don’t want other developers to go through. Or you just learned a new thing and you want the world to know what you have learned.
+**懂得更多**
 
-Doing the above mentioned, helps you build confidence in what you know.
+针对某一特定主题，你写得越多，或者说你教得越多，你就会越精通。你写的技术内容可能是关于如何搭建一个应用程序。因为你自己在构建过程中费了点劲，你希望所写文章可以帮助其他开发人员少走弯路。或者你写的技术内容是你刚学会的一个新东西，你想让全世界都知道你学会了什么。
 
-**Make Money**
+做好上述事项，有助于你对自己的知识体系建立信心。
 
-Yea! Money is very important and you don’t get it by sitting and not doing anything that will add to someone’s life. You can get paid for writing technical contents. But before you get paid, you must have written some interesting content as samples.
+**赚钱**
 
-I know a few companies that pay for technical write-ups. One is [Scotch Development](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined). This is not because they have a lot of more to waste, but because they believe development is a lot easier when you have the right content to guide you.
+是啊！钱非常重要，你坐着不动或者不做点有意义的事是不可能获得金钱的。你可以通过写技术内容获得报酬。只是在获得报酬之前，你必须先写出一些有趣的内容作为样本。
 
-**The Views**
+我知道有一些公司会为技术写作付费。一家是[Scotch Development](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined)。并不是因为他们有更多的资金可以浪费，而是因为他们相信如果有正确的内容指导，开发工作会容易得多。
 
-One of the things that makes me glad is the number of views I get on my articles. I wrote an article on \[[React, Babel,webpack and Webpack 3.0](https://www.codementor.io/goodnesskay/setting-up-react-with-webpack-3-0-yarn-and-babel-9ftd5phqz)\] and [Codementor](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined) alerted me on twitter that I have had 2,000 views. And I became proud of myself.
+**增加浏览量**
 
-I think seeing people reading your content and learning from it should be a plus to you.
+文章有浏览量也是令我兴奋的一件事。我曾在\[[React、Babel、webpack和Webpack 3.0](https://www.codementor.io/goodnesskay/setting-up-react-with-webpack-3-0-yarn-and-babel-9ftd5phqz)\]写过文章，然后我的[Codementor](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined)在Twitter上提醒我，浏览量达2000了。我开始为自己感到骄傲。
 
-**Limited Restrictions**
+我认为有人阅读和学习你的内容，对你来说应该是个好事。
 
-Few people invest their time in writing technical articles and it gives more opportunity for people who write to have an edge to getting something a lot of people apply for.
+**获得有限的机会**
 
-[Auth0](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined) opened their web application for applying as an Auth0 Ambassador. One of the fields for the application included that one could attach links to write-ups written. **That should ring a bell**.
+愿意投入时间来写技术文章的人很少。当有很多人申请某个东西时，有写作优势的人更有机会申请成功。
 
-#### **HOW DO I START?**
+[Auth0](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined)开放了他们的Web应用程序便于用户申请为Auth0大使。申请的条目之一是用户可以附上所写文章链接。**这你应该有印象吧**。
 
-I get asked this question every time I talk about writing technical articles. In this article I will just explain how to get started based on my experience and other posts I have read on getting started with writing technical articles.
+#### **我应该如何开始写作？**
 
-1.  **Believe you can**
+每次我谈到写技术文章时，都会有人问我这个问题。在这篇文章中，我将根据我的经验和我读过的其它同类文章，来讲讲如何开始写作。
 
-You don’t have to be the world greatest developer to write an article. You can always write an article on what you are learning presently.
+1.  **相信你可以**
 
-But the first thing is to believe in yourself.
+你不必以世界顶级开发人员的水平来要求自己写作。你可以就你当前正在学习的内容来写文章。
 
-2\. **A Little Step but Great Beginning**
+但首先是要相信自己可以写作。
 
-Many developers get confused at this point because they feel “What can they write that will impress people?” But I will always say “Start with something small.”
+2\. **千里之行始于足下**
 
-My first post on medium was [PHP: BEYOND BUILDING WEBSITES](https://aboveintelligent.com/php-beyond-building-websites-207520c98d9f) and it was not a real ‘techy’ kind of article. I wrote it just to have something out and people encouraged me by recommending it. And I got an invite to become a writer on a medium publication.
+许多开发人员对此感到困惑，因为他们会想“他们可以写些什么让人印象深刻的内容呢？”但是我总是说“从小处着手”。
 
-That was the little step I took and now I have more tutorials out on [Scotch Development](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined), [Codementor](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined), [Medium](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined), [@dev.to](https://dev.to/) and so on.
+我在媒体上发布的第一篇博文是[PHP: BEYOND BUILDING WEBSITES](https://aboveintelligent.com/php-beyond-building-websites-207520c98d9f)。它不算是一篇真正的“技术”类文章。我写这篇文章只是为了输出一些东西，读者对文章的推荐又鼓励了我。随后我受邀成为一家媒体刊物上的一名作者。
 
-**Just give it a try.**
+这是我迈出的一小步。现在我在[Scotch Development](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined)、[Codementor](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined)、[Medium](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined)、[@dev.to](https://dev.to/)等平台上发布了更多的教程。
 
-3\. **Learn New Technology**
+**你也试试吧。**
 
-The best way to have something to write on is to learn new technologies. Learn new frameworks you were not asked to learn and write on it.
+3\. **学习新技术**
 
-Recently, I saw there was a new JavaScript framework without any tutorial on it. When I went through the documentation I found out how light and awesome it was.
+寻找写作素材的最佳方法是学习新技术。可以学习没人要求你学习的新框架，然后着手写作。
 
-So, I made a tutorial on it and some popular JavaScript Twitter users got to know about the article and kept re-tweeting and I kept getting more views.
+最近，我看到一个新的JavaScript框架，却没看到关于这个框架的任何教程。在我翻阅这个框架的文档时，发现这个框架轻量又好用。
 
-4\. **Topics are around you**
+所以，我做了相关教程。一些活跃的JavaScript Twitter用户看到我的文章后不断转发，文章就获得了更多的浏览量。
 
-Some developers feel topics are the main issue. To be sincere, it is not as the quality of content is the most important thing. You just have to be sensitive.
+4\. **主题就在你身边**
 
-I know [Scotch Development](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined) has a section on their websites where you can get ideas of tutorials you can write on. Check it out [here](http://scotch.io/ideas).
+有些开发人员认为主题是主要问题。其实不是的。内容质量才是最重要的。你只需要保持敏锐。
 
-Basically, there are no new topics. What you have are differences in content most of the time.
+我知道[Scotch Development](https://www.freecodecamp.org/news/developers-the-why-and-how-to-writing-technical-articles-54e824789ef6/undefined)网站有一个版块，你可以去那里找找灵感，看看可以写些什么教程。点击[此处](http://scotch.io/ideas)查看。
 
-5. **Know Your Niche**
+基本上，主题没有什么新的。大多数时候，都是内容上有些差异。
 
-To be successful at this game, you have to carve a niche for yourself. If you know you are awesome at building web applications, stick to it. And if it is mobile development, Artificial Intelligence, ML and so on, stick to it.
+5. **知道你的利基（定位）**
 
-Because if you make mistakes that you shouldn’t have made while writing a tutorial, people will take you as a confused individual.
+要在技术文章写作方面取得成功，你必须找准自己的定位。如果你知道自己在构建Web应用程序方面很厉害，就坚持写这方面的文章。同样，如果是在移动开发、人工智能、机器学习等方面很厉害，就坚持写这些方面的文章。
 
-6\. **Be Unique In Your Writing**
+因为如果你在编写教程时犯了不该犯的错，读者会把你当成迷糊粗心的人。
 
-When writing, you have to be as simple as possible and free at the same time. Write your articles like you are explaining something to another developer and you want them to understand in simple terms.
+6\. **独特的写作方式**
 
-You could always include funny GIF images, short videos, screen shots and so on to keep your reader reading.
+在写作时，你必须尽可能写得简单且让人读着轻松。就像是在向另一个开发人员解释一样写作，你要用简单的术语就能让他们理解。
 
-7. **Get Feedback**
+你可以插入一些有趣的GIF图片、短视频、屏幕截图等等，吸引读者注意力。
 
-Brother! Sister! Don’t think you know everything. You will only be shooting yourself on the leg. Ask for comments and be open to criticism because you cannot avoid it.
+7. **获取反馈**
 
-Let people be able to talk to you about something not being clear to them via e-mail or Twitter.
+兄弟姐妹们，不要以为自己什么都懂！那样只会是搬起石头砸自己的脚。征求意见，对于批评意见持开放态度，因为批评在所难免。
 
-8\. **Don’t Stop Writing**
+读者有一些不清楚的事情时，保证他们能够通过邮件或Twitter与你探讨。
 
-I shouldn't have added this but let me. Don’t stop writing once you start and maybe face a lot of criticism that you don’t know anything.
+8\. **别停止写作**
 
-Work on the corrections and write more and it will pay.
+我本不该加最后这一点，但是还是想说，一旦开始，即使受到一些无端批评，也不要停止写作。
 
-**Conclusion**
+认真修改每一篇文章，勤加写作，终会有收获。
 
-I believe you must have gained something from my little mind-speaking article and I will be glad if you can share your thoughts with me on Twitter [@goodnesskayode](https://twitter.com/goodnesskayode)
+**总结**
 
-I will love if you could read some of my articles on [Scotch.io](https://scotch.io/@goodnesskay), [Codementor](https://www.codementor.io/goodnesskay/posts), [LinkedIn](https://www.linkedin.com/in/goodness-toluwanimi-kayode/detail/recent-activity/posts/) and [Dev.to](https://dev.to/goodnesskay).
+我相信你一定从我这篇简短但真挚的文章中有所收获。欢迎你在Twitter[@goodnesskayode](https://twitter.com/goodnesskayode)上与我分享你的想法。
+
+如果你能在[Scotch.io](https://scotch.io/@goodnesskay)、[Codementor](https://www.codementor.io/goodnesskay/posts)、[LinkedIn](https://www.linkedin.com/in/goodness-toluwanimi-kayode/detail/recent-activity/posts/)和[Dev.to](https://dev.to/goodnesskay)阅读我的文章，我也会非常高兴。

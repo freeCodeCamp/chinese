@@ -44,6 +44,15 @@
 
 ![image](https://user-images.githubusercontent.com/19358186/168287247-4dba5249-6199-4d94-a0bc-c005ad6d25cb.png)
 
+代码是这样的：
+
+```css
+<figure class="kg-card kg-card-image kg-card-hascaption">
+    <img src="https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_10.54.06.png" alt="VSCode 中的 Go 扩展" class="kg-image">
+    <figcaption>VSCode 中的 Go 扩展</figcaption>
+</figure>
+```
+
 12. 除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。
 
 点击 Get started，根据提示填写 issue 的内容，即可添加你想翻译的文章。

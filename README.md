@@ -25,12 +25,6 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 相信你可以根据这份清晰、简洁的指南提交你的第一篇译文！
 
-**除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。**
-
-点击 Get started，根据提示填写 issue 的内容，即可添加你想翻译的文章。
-
-![image](https://user-images.githubusercontent.com/19358186/114123554-1e87fb80-9925-11eb-9dab-18f8a4964782.png)
-
 ### 如何参与校对
 
 每一篇翻译好的文章，我们会有一位贡献者对其进行校对。如果你希望参与校对，请在 [Review-awaiting][13] 列表选取文章并留言“认领校对”。

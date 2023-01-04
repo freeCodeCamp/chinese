@@ -1,8 +1,7 @@
 ![freeCodeCamp.org Social Banner](https://s3.amazonaws.com/freecodecamp/wide-social-banner.png)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)][1]
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)][2]
-[![NPM Dependency](https://david-dm.org/freeCodeCamp/news-translation.svg)][4]
-[![CI & CD](https://github.com/freeCodeCamp/news-translation/workflows/CI%20&%20CD/badge.svg)][5]
+[![CI & CD](https://github.com/freeCodeCamp/chinese/actions/workflows/main.yml/badge.svg)](https://github.com/freeCodeCamp/chinese/actions/workflows/main.yml)
 
 ## freeCodeCamp 文章翻译计划
 

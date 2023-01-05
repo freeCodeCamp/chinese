@@ -67,35 +67,35 @@ ifconfig 命令的输出示例
 
 ### Characteristics of Network Interface
 
-The first line shows UP, LOOPBACK, RUNNING, NOARP, MULTICAST, etc. These are the characteristics of the network interface. For example, able to do BROADCAST, able to do MULTICAST. By default, the `ifconfig` command lists only the UP devices. The interface can also made down.
+第一行显示 UP、LOOPBACK、RUNNING、NOARP、MULTICAST 等。这些是网络接口的特性。例如，能够进行 BROADCAST，能够进行 MULTICAST。默认情况下，`ifconfig` 命令只列出 UP 状态设备。该接口也可以处于 down 状态。
 
 ### What is MTU?
 
-MTU stands for Maximum Transmission Unit. It determines the maximum payload size of a packet that is sent. The default standard value is **1500 bytes**. However, you can increase the payload size of the packet, which allows you to send more data and increase the data transfer rates.
+MTU 是指最大传输单元。它决定了所发送的数据包的最大有效载荷大小。默认的标准值是 **1500 字节**。然而，你可以增加数据包的有效载荷大小（MTU），这样你就可以发送更多的数据，提高数据传输率。
 
 ### inet row in ifconfig
 
-**inet** is the internet(IPv4) address assigned to that particular interface.  It will be set by DHCP client.
+**inet** 是分配给该指定接口的互联网（IPv4）地址。它将由 DHCP 客户端设置。
 
-A **Netmask** is a 32-bit "mask" used to divide an IP address into subnets and specify the network's available hosts.
+**Netmask** 是一个 32 位的 `掩码`，用于将一个 IP 地址段划分为子网，并指定网络的可用主机。
 
-**Broadcast** address refers to all hosts on the specified network simultaneously.
+**Broadcast address（广播地址）** 指的是同时在指定网络上的所有主机。
 
-**Destination** adress is the address of the remote host at the other end of the point-to-point link.
+**Destination adress （目的地）** 是点对点链接另一端的远程主机的地址。
 
-**inet6** is the IPv6 address assigned to that particular interface.
+**inet6** 是分配给该指定接口的 IPv6 地址。
 
-**prefixlen** is called Prefix length which specifies the number of bits in the IP address that are to be used as the subnet mask.
+**prefixlen** 被称为前缀长度，它指定了 IP 地址中作为子网掩码的比特数。
 
-**scopeid** is a id assigned for a zone. A scope is a topological area within which the IPv6 address can be used as a unique identifier for an interface or a set of interfaces.
+**scopeid** 是为一个区域分配的 ID。范围是一个拓扑区域，在这个区域内，IPv6 地址可以作为一个接口或一组接口的唯一标识。
 
 ### RX and Tx
 
-Rx / Tx packets – displays the number of received / transmitted packets  
-Rx / Tx bytes – displays the packets size in buckets  
-Rx / Tx errors – displays the amount of error packets  
-Rx / Tx drop – displays the amount of dropped packets  
-Rx / Tx overrun – displays the amount of overrun packets  
+Rx / Tx packets  - 显示接收/传输的数据包数量  
+Rx / Tx bytes – 显示桶（buckets）中的数据包大小
+Rx / Tx errors – 显示错误数据包的数量
+Rx / Tx drop – 显示丢弃的数据包数量
+Rx / Tx overrun – 显示溢出数据包的数量
 
 All the items mentioned above are self-explanatory except overrun. Here's a quick definition of overrun.  
 An **overrun** is a packet that does not get sent out during a specific polling cycle. This is due to scheduling. It does not indicate a failure of the packet, merely that it was not sent. Overrun packets are re-scheduled for the next cycle, but it is possible that the same packet may be overrun once more.

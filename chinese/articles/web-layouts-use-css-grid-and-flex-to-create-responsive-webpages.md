@@ -5,15 +5,15 @@
 
 ![Web Layouts – How to Use CSS Grid and Flex to Create a Responsive Web Page](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/WebLayouts-1.png)
 
-Your web layout is to your website what a floor plan is to a building. Without them, you’re just building castles in the air.
+网页布局之于网站，就像平面图之于建筑。没有他们，你只是在建造空中楼阁。
 
-The first thing to do when you have a website or application to build or design is to decide on the layout. This is important because it is within this layout that you specify how elements are arranged so that you can assess them in their intended manner and hierarchy.
+当你要建造一个网站或应用时，首先要决定的就是网页布局。这一步的重要之处在于，正是在布局中，你明确了各个元素之间如何排列组合，并按照预定的方式和层级评估它们。
 
-Basically, the aim of every web layout is to reduce confusion, enhance usability and to ultimately give your users an enjoyable experience. Some of the main elements of a layout are navigation, menus and content.
+通常来说，网页布局的目标是减少混乱，提升可用性，并最终带来愉悦的用户体验。网页布局中的主要元素包括导航栏，菜单栏和内容。
 
-In web and front-end development, having a layout in mind ahead of building can help you decide on what CSS layout module to use: Flexbox or Grid.
+在网页和前端开发中，在进行构建前先确定一个布局，可以帮助你决定使用哪一个 CSS 布局模块：Flexbox 或 Grid.
 
-In this article, we’re going to learn what each of these tools are and the best way to use them by building a simple yet beautiful landing page.
+在本篇文章中，我们将通过建造一个简单但优雅的登陆页，学习每一个工具以及它们的最佳实践。
 
 ## What We're Going To Build
 

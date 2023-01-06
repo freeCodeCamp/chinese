@@ -1,19 +1,19 @@
 > -  原文地址：[Hoisting in JavaScript with let and const – and How it Differs from var](https://www.freecodecamp.org/news/javascript-let-and-const-hoisting/)
 > -  原文作者：[Dillion Megida](https://www.freecodecamp.org/news/author/dillionmegida/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![Hoisting in JavaScript with let and const – and How it Differs from var](https://www.freecodecamp.org/news/content/images/size/w2000/2022/11/5.-let-const-hoisting.png)
 
-I used to think that hoisting only happened to variables declared with `var`. But recently, I learned that it also happens to variables declared with `let` and `const`.
+我曾经以为只有 `var` 定义的变量会提升（hoisting）。但我最近又了解到，`let` 或者 `const` 定义的变量也会提升。
 
-I'll explain what I mean in this article.
+本文会详细解释这个问题。
 
-I also have a [video version of this article](https://www.youtube.com/watch?v=VbHaL_J8Ex0) you can check out if you're interested.
+感兴趣的话，可以查看[本文的视频版本](https://www.youtube.com/watch?v=VbHaL_J8Ex0) 。
 
-## How Hoisting Works with `var` in JavaScript
+## `var` 定义的变量是如何提升的
 
-Here's how hoisting works on variables declared with `var`:
+以下代码展示了 `var` 定义的变量的提升情况：
 
 ```js
 console.log(number)
@@ -23,54 +23,57 @@ var number = 10
 
 console.log(number)
 // 10
+
 ```
 
-The `number` variable is hoisted to the top of the global scope. This makes it possible to access the variable before the line it was declared, without errors.
+`number` 提升到了全局作用域的顶部，这使得它在变量声明代码之前的代码中也能够被访问，而不会报错。
 
-But what you'll notice here is that only the variable declaration (`var number`) is hoisted – the initialization (`= 10`) isn't. So when you try to access `number` before it is declared, you get the **default initialization that happens with var** which is `undefined`.
+不过需要注意的是，这里只有变量声明（`var number`）被提升了，变量的初始化（`= 10`）却没有被提升。所以在 `number` 声明之前访问它，得到的是 **var 定义的变量的默认初始值**，即 `undefined`。
 
-Then, the declaration and initialization line is executed, so accessing `number` after that returns the initialized value, **10**.
+变量声明和初始化的代码执行之后，访问 `number` 得到的就是它的初始值，即 **10**。
 
-## How Hoisting Works with let/const in JavaScript
+## let/const 定义的变量是如何提升的
 
-If you try to do the same thing as above with `let` or `const`, here's what happens:
+对 `let` 或 `const` 定义的变量做同样的测试：
 
 ```js
 console.log(number)
 
 let number = 10
-// or const number = 10
+// 或 const number = 10
 
 console.log(number)
+
 ```
 
-You get an error that says: **ReferenceError: Cannot access 'number' before initialization**.
+发现会报错：**ReferenceError: Cannot access 'number' before initialization**。
 
-So you can access a variable declared with var before declaration without errors, but you cannot do the same with `let` or `const`.
+由此可见，用 var 定义的变量可以在声明之前被访问而不报错，但是用 `let` 或 `const` 定义的变量却不行。
 
-This why I had always thought that hoisting only happens with var, it doesn't happen with let or const.
+这正是令我以为只有 var 定义的变量才会提升的原因。
 
-But as I said, I learned recently that variables declared with `let` or `const` are also hoisted. Let me explain.
+不过，如我所言，我最近发现 `let` 或者 `const` 定义的变量也会提升。接下来，我会解释这个情况。
 
-Take a look at this example:
+看以下代码：
 
 ```js
 console.log(number2)
 
 let number = 10
+
 ```
 
-I log a variable called `number2` to the console, and I declare and initialize a variable called `number`.
+我尝试在控制台打印名为 `number2` 的变量，接着又初始化了一个名为 `number` 的变量。
 
-Running this code produces this error: **ReferenceError: number2 is not defined**
+执行这段代码，结果报错了：**ReferenceError: number2 is not defined**。
 
-What do you notice between the previous error and this error? The previous error says **ReferenceError: Cannot access 'number' before initialization** while this new error says **ReferenceError: number2 is not defined**.
+注意到这个报错信息和之前的报错信息有何不同了吗？之前的报错信息是 **ReferenceError: Cannot access 'number' before initialization**，而这次则是 **ReferenceError: number2 is not defined**。
 
-Here's the difference. The former says "cannot access before initialization" while the latter says "is not defined".
+两者是有区别的，前一个是说“无法在初始化之前访问”，后一个是说“未定义”。
 
-What the latter means is that JavaScript has no idea what the `number2` variable is because it is not defined – and indeed we didn't define it. We only defined `number`.
+后一个报错意味着 JavaScript 完全不认识 `number2` 这个变量，因为找不到它的定义——事实上我们确实没定义它，我们只定义了 `number`。
 
-But the former doesn't say "is not defined", instead it says, "cannot access before initialization". Here's the code again:
+但是前一个报错说的并不是“未定义”，而是“无法在初始化之前访问”。回顾以下代码：
 
 ```js
 console.log(number)
@@ -79,21 +82,22 @@ console.log(number)
 let number = 10
 
 console.log(number)
+
 ```
 
-This means that JavaScript "knows" about the `number` variable. How does it know? Because `number` is hoisted to the top of the global scope.
+这意味着 JavaScript “认识” `number` 变量。怎么回事？这是因为 `number` 被提升到全局作用域的顶部了。
 
-But why does an error occur? Well, this clarifies the difference between the hoisting behavior with `var` and `let`/`const`.
+可是为什么又会报错呢？这就体现出 `var` 与 `let`/`const` 的提升行为之间的区别了。
 
-Variables declared with `let` or `const` are **hoisted WITHOUT a default initialization**. So accessing them before the line they were declared throws **ReferenceError: Cannot access 'variable' before initialization**.
+由 `let` 或 `const` 定义的变量提升时**不会**默认初始化，所以在声明之前访问会报错：**ReferenceError: Cannot access 'variable' before initialization**。
 
-But variables declared with `var` are **hoisted WITH a default initialization of undefined**. So accessing them before the line they were declared returns `undefined`.
+然而由 `var` 定义的变量提升时**会**被初始化为默认值 `undefined`，所以在声明之前访问会得到 `undefined`。
 
-## Temporal Dead Zone
+## 暂时性死区
 
-There's a name for the period during execution where `let`/`const` variables are hoisted but not accessible: it's called the **Temporal Dead Zone**.
+`let`/`const` 定义的变量被提升却无法正常访问，是因为存在**暂时性死区（Temporal Dead Zone）**。
 
-Again, the code from above:
+再次回顾之前的代码：
 
 ```js
 console.log(number)
@@ -101,16 +105,17 @@ console.log(number)
 let number = 10
 
 console.log(number)
+
 ```
 
-The `number` variable is in a temporal dead zone where JavaScript knows of its existence (because its declaration is hoisted) but it's not accessible (as it doesn't have an initialization).
+`number` 变量就处于暂时性死区中，JavaScript 知道它的存在（因为它的声明被提升了），却无法正常访问它（因为它没有被初始化）。
 
-## Wrapping Up
+## 总结
 
-If you were like me, and you thought that hoisting only applies with `var` and not `let`/`const`, I hope this article clears up that false assumption.
+如果你和我一样，以为只有 `var` 定义的变量会提升而 `let`/`const` 定义的变量则不然，希望本文能澄清这个错误的想法。
 
-As I've explained in this article, `let` and `const` variables are hoisted, only they are hoisted without a default initialization. This makes them inaccessible (as such variables are in a temporal dead zone).
+正如我在文中所说的，`let` 和 `const` 定义的变量是会提升的，只是它们提升的时候不会进行默认初始化，使得它们无法被访问（因为这些变量在暂时性死区里）。
 
-Variables declared with `var`, on the other hand, are hoisted with a default initialization of `undefined`.
+另一方面，`var` 定义的变量在提升时会默认初始化为 `undefined`。
 
-I hope you learned something from this article :)
+希望本文对你有所帮助 :)

@@ -1,7 +1,7 @@
-> -  原文地址：[Linux Networking Commands You Should Know as a Beginner](https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/)
-> -  原文作者：[Arunachalam B](https://www.freecodecamp.org/news/author/arunachalam/)
-> -  译者：[luojiyin](https://github.com/luojiyin1987)
-> -  校对者：
+> - 原文地址：[Linux Networking Commands You Should Know as a Beginner](https://www.freecodecamp.org/news/linux-networking-commands-for-beginners/)
+> - 原文作者：[Arunachalam B](https://www.freecodecamp.org/news/author/arunachalam/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Linux Networking Commands You Should Know as a Beginner](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/FreeCodeCamp---Networking-in-Linux.png)
 
@@ -91,173 +91,167 @@ MTU 是指最大传输单元。它决定了所发送的数据包的最大有效�
 
 ### RX and Tx
 
-Rx / Tx packets  - 显示接收/传输的数据包数量  
+Rx / Tx packets - 显示接收/传输的数据包数量  
 Rx / Tx bytes – 显示桶（buckets）中的数据包大小
 Rx / Tx errors – 显示错误数据包的数量
 Rx / Tx drop – 显示丢弃的数据包数量
 Rx / Tx overrun – 显示溢出数据包的数量
 
-All the items mentioned above are self-explanatory except overrun. Here's a quick definition of overrun.  
-An **overrun** is a packet that does not get sent out during a specific polling cycle. This is due to scheduling. It does not indicate a failure of the packet, merely that it was not sent. Overrun packets are re-scheduled for the next cycle, but it is possible that the same packet may be overrun once more.
+上面提到的所有关键词都是不言自明的，除了溢出（overrun）。这里有一个关于溢出（overrun）的定义。  
+**overrun** 是指在一个特定的轮询周期内没有被发送出去的数据包。这是由于调度的原因。它并不表明数据包的失败，只是表明它没有被发送。Overrun packets（溢出数据包）会在下一个周期重新调度，但同一个数据包有可能再次被溢出（overrun）。
 
-Let's explore what's each block for.
+让我们探讨一下每个信息展示的用途。
 
-The first block starting with `enx...` (previously called `eth0`) is for Ethernet connection. Since, I have not connected an ethernet cable, it does not show any data.
+第一个以 "enx... "开头的块（以前叫 "eth0"）是用于以太网连接。由于我没有连接以太网电缆（网线），所以它没有显示任何数据。
 
 ![image-34](https://www.freecodecamp.org/news/content/images/2022/12/image-34.png)
 
-Ethernet block in ifconfig command
+ifconfig 命令中的以太信息
 
-The block starting with `lo` is called LoopBack Interface. This is a special interface that the system uses to communicate with itself.
+以 `lo`开头的块被称为回环接口。这是一个特殊的接口，系统用它来与自己通信。
 
 ![image-35](https://www.freecodecamp.org/news/content/images/2022/12/image-35.png)
 
-LoopBack Interface block in ifconfig command
+ifconfig 命令中的 LoopBack 接口信息
 
-The block starting with `tun0` is called Tunneling Interface. It contains information about the VPN you are connected to.
+以 `tun0` 开头的块被称为隧道接口。它包含你所连接的 VPN 的信息。
 
 ![image-36](https://www.freecodecamp.org/news/content/images/2022/12/image-36.png)
 
-Tunnel Interface block in ifconfig command
+ifconfig 命令中的隧道接口信息
 
-The block starting with `wlp2s0` is called Wireless on PCI. This is the main interface that is connected to the WIFI of your Local network.
+以 `wlp2s0` 开头的块被称为 PCI 上的无线。这是连接到本地网络 WIFI 的主要接口。
 
 ![image-37](https://www.freecodecamp.org/news/content/images/2022/12/image-37.png)
 
-Wireless Interface block in ifconfig command
+ifconfig 命令中的无线接口信息
 
-If you're connected to your Wifi, you have to use the last one.
+如果你连接了你的 Wifi，你应该使用最后一个。
 
 ## How to Download a File Using the Linux Terminal
 
-One fine day my boss sent a bunch of downloadable links to me and asked me to download and wrap them in a Zip file and send it back to him.  
+有一天，我的老板给我发了一堆可下载的链接，并要求我下载并把它们压缩在一个 Zip 文件中，然后发送回给他。
 
-I thought it would be easy work, but then I realized that it had 100+ downloadable links 🥲.
+我以为这是个简单的工作，但后来我发现它有 100 多个可下载的链接。
 
-Activating Zen mode, I started searching for a way to automate this. This is when I found out about the `wget` command. You can use this terminal command to download a resource from a link.
+激活了思考模式，我开始寻找一种方法来自动处理这个问题。这时我发现了`wget`命令。你可以使用这个终端命令从一个链接中下载资源。
 
-The `wget` command is highly flexible and you can use it in scripts and cron jobs. As `wget` is non-interactive, it can independently download resources in the background and does not require a user to be active or logged in.
+`wget`命令非常灵活，你可以在脚本和 cron 工作中使用它。由于`wget`是非交互式的，它可以在后台独立下载资源，并且不要求用户处于活动或登录状态。
 
-The following command will download an image from the w3schools website, as an example, in your current folder:
+下面的命令将从 w3schools 网站下载一张图片，作为例子，在你当前的文件夹中:
 
 ```bash
 wget https://www.w3schools.com/html/img_chania.jpg
 ```
 
-Command to download file from Linux-terminal
+从 Linux 终端下载文件的命令
 
 ![qOuoghtmQbA7z0LYjN0vyL_UmDcJr_GIcOx_eU2RbUAo5IJFJ1_PiS6ncoTcUm_MUDHBEkk9N5oEnq3nH6ClbIwXFstZzBKqCHcU-0EUw0wObDngNWeMWOAUOBMBzpzrlJxGSNBP9omCkqVCMuujevN1-x6QnS-ZME0v6uPK0eKir02c5mSdfvfZEFSQog](https://lh5.googleusercontent.com/qOuoghtmQbA7z0LYjN0vyL_UmDcJr_GIcOx_eU2RbUAo5IJFJ1_PiS6ncoTcUm_MUDHBEkk9N5oEnq3nH6ClbIwXFstZzBKqCHcU-0EUw0wObDngNWeMWOAUOBMBzpzrlJxGSNBP9omCkqVCMuujevN1-x6QnS-ZME0v6uPK0eKir02c5mSdfvfZEFSQog)
 
-Command to download file using Linux Terminal
-
-You can pass another argument to specify the destination folder where the file should be downloaded, like this:
+你可以传递另一个参数来指定下载文件的目标文件夹，像这样。
 
 ```bash
 wget https://www.w3schools.com/html/img_chania.jpg /home/user/downloads/pics/
 ```
 
-Terminal command to download a file on the given folder
+终端命令下载文件到指定文件夹上
 
-I wrote a script to download all the files using the `wget` command and handed them over to my boss in just 15 minutes. He was pretty amazed.
+我写了一个脚本，使用`wget`命令下载所有的文件，并在短短 15 分钟内把它们交给了我的老板。他相当惊讶。
 
 ## How to Find Out if Your System is Connected to the Internet Using a Terminal Command
 
-You've likely faced this issue at least once in your lifetime.
+在你的一生中，你可能至少遇到过一次这个问题。
 
-My Laptop is connected to wifi. But why I'm not able to access the internet whereas the people around me can?
+我的笔记本电脑连接了 wifi。但为什么我不能上网，而我周围的人却能上网？
 
-By default, most people typically try to disconnect and re-connect to the same or a different wifi network. 99% of the time this won't work, and you'll end up facing a "**Hmm. We’re having trouble finding that site.**" message in **Firefox**, or "**No internet**" with a dinosaur game in **Chrome**.
+默认情况下，大多数人通常会尝试断开连接并重新连接到相同或不同的 WIFI 网络。99%的情况下这是行不通的，你最终会面临一个 **嗯。我们找不到那个网站。** 的信息，或者在 **Chorme 浏览器的恐龙游戏中出现**，提示没有互联网。
 
-This is when you just need to be patient to figure out the issue. You need to discover whether it's an issue with your system or your browser. You have to figure out if you're able to access the internet without using a browser.
+这时你只需要耐心地找出问题所在。你需要发现是你的系统还是你的浏览器有问题。你必须弄清楚你是否能够在不使用浏览器的情况下访问互联网。
 
-You can achieve this by using the `ping` terminal command. It looks like this:
+你可以通过使用 `ping` 终端命令来实现这一目标。它看起来像这样:
 
 ```bash
 ping google.com
 ```
 
-Terminal command to check Internet Connectivity
+检查互联网连接的终端命令
 
 ![2XfEhTdEZNavg-ZMMyWDjhBzQAe4ZSXmXkeUUElef6KSrmCcfJ1Y9G2-R2BFo8iO7SoIuKMp37PAUvIYMOzrODEHaUdatGqonjUOKLXpyJBoSInyfqdpy5_0SFhrXPyqkMO5utbvsC4vBekygIq4FX4OG1_YL7C6a07KYqnuPrCtWf-1aNWz-qaUhVkLSA](https://lh6.googleusercontent.com/2XfEhTdEZNavg-ZMMyWDjhBzQAe4ZSXmXkeUUElef6KSrmCcfJ1Y9G2-R2BFo8iO7SoIuKMp37PAUvIYMOzrODEHaUdatGqonjUOKLXpyJBoSInyfqdpy5_0SFhrXPyqkMO5utbvsC4vBekygIq4FX4OG1_YL7C6a07KYqnuPrCtWf-1aNWz-qaUhVkLSA)
 
-Sample output of ping command
+ping 命令的输出示例
 
-You can use the ping command to check your network connectivity. This command takes the URL or IP address as an argument and sends data packets to that specified address. Then it prints the response from the server with the transition time. It will print the response continuously until you cancel that process (with CTRL + C). Finally it will return the following details:
+你可以使用 ping 命令来检查你的网络连接。该命令以 URL 或 IP 地址为参数，向该指定地址发送数据包。然后它打印来自服务器的响应和传输时间。它将连续打印响应，直到你取消这个过程（用 CTRL + C）。最后，它将返回以下细节:
 
-1.  Minimum Time taken to receive a response
-2.  Average Time taken to receive a response
-3.  Maximum Time taken to receive a response
+1. 收到响应所需的最少时间
+2. 接收响应的平均时间
+3. 收到回复所需的最长时间
 
-We can specify the number of packets to send using the `-c` flag, like this:
+我们可以使用`-c`标志指定要发送的数据包的数量，像这样:
 
 ```bash
 ping google.com -c 10
 ```
 
-Terminal command to verify connectivity by sending 10 packets
+通过发送 10 个数据包来验证连接性的终端命令
 
-And we can specify the packet size also using the `-s` flag:
+我们还可以使用 `-s` 标志指定数据包的大小:
 
 ```bash
 ping google.com -s 40
 ```
 
-Terminal command to verify connectivity by sending 40 bytes of packets
+终端命令通过发送 40 字节的数据包来验证连接性
 
-We can also specify the next request time using the `-i` flag:
+我们还可以使用`-i`标志来指定下一个请求时间:
 
 ```bash
 ping google.com -i 2
 ```
 
-Terminal command to verify connectivity with a gap between two requests of 2 seconds
+终端命令来验证连接性，两个请求之间的间隔为 2 秒以及更多。
 
-and many more.
-
-After executing the above command, hopefully you should be able to find if your system is connected to the internet. Most probably, your browser will be the culprit. Reinstalling the browser will fix this issue.
+执行上述命令后，希望你能发现你的系统是否连接到了互联网。最有可能的是，你的浏览器将是问题的根源。重新安装浏览器将解决这个问题。
 
 ## How to Find the IP Address of a Website
 
-Before we move on, you should be able to answer the following:
+在我们继续前进之前，你应该能够回答以下问题:
 
 ### What is a DNS?
 
-DNS stands for Domain Name System. Every website we use has a domain (for example google.com or freecodecamp.org). Each of these domain names will point to particular IP address of a server. DNS is basically a system that has a table that maps each domain with the IP address.
+DNS 是域名系统的意思。我们使用的每个网站都有一个域名（例如 google.com 或 freecodecamp.org）。这些域名中的每一个都会指向服务器的特定 IP 地址。DNS 基本上是一个系统，它有一个表，将每个域名与 IP 地址映射。
 
-Now it's time to move back on track and learn how to find the IP address of a site.
+现在是时候回到正轨，学习如何找到一个网站的 IP 地址。
 
-**`nslookup`** (stands for “Name Server Lookup”) is a command to query the DNS server. It is a network administration tool for querying the Domain Name System (DNS) to get the domain name or IP address mapping or any other specific DNS record. System Admins and DevOps use it to troubleshoot DNS related issues.
+**`nslookup`**（代表 "名称服务器查询"）是一个查询 DNS 服务器的命令。它是一个网络管理工具，用于查询域名系统（DNS）以获得域名或 IP 地址映射或任何其他特定的 DNS 记录。系统管理员和 DevOps 使用它来解决与 DNS 有关的问题。
 
-Here's how to use it:
+下面是如何使用它:
 
 ```bash
 nslookup google.com
 ```
 
-Terminal Command to find IP address of any site
+查找任何网站的 IP 地址的终端命令
 
 ![lwSLDftMWk2HsBYdKfc7FTwksBDqe4DqYBeNj6YEtU22Qi9cMVhbxy3SKFORTptHl2MOf4n8RZqmGDPPpFZoa5yyythXFKBVtIQBeioK3rLOgK6ExQ3_CUiC76DNMIreiW2zdLrVGgtI9DMIU4Tx8dj8Gg0pHh1PF5pdwl6vNBmf4bsSOX--dquLupoJbw](https://lh3.googleusercontent.com/lwSLDftMWk2HsBYdKfc7FTwksBDqe4DqYBeNj6YEtU22Qi9cMVhbxy3SKFORTptHl2MOf4n8RZqmGDPPpFZoa5yyythXFKBVtIQBeioK3rLOgK6ExQ3_CUiC76DNMIreiW2zdLrVGgtI9DMIU4Tx8dj8Gg0pHh1PF5pdwl6vNBmf4bsSOX--dquLupoJbw)
 
-Sample output of nslookup command
+nslookup 命令的输出样本
 
 ## How to Know Which User is Logged-In
 
-Linux supports multiple users and lets you manage those users. Each time you can log in as a different user. And you can use the `who` command to know which user you have been logged in as.
+Linux 支持多个用户并让你管理这些用户。每次你都可以以不同的用户身份登录。而且你可以使用 `who` 命令来了解你以哪个用户的身份登录。
 
 ```bash
 who
 ```
 
-Terminal Command to find the logged-in user
+寻找登录用户的终端命令
 
-It looks like this:
+它看起来像这样:
 
 ![H6ceH-av643ixKZD2Zj5R13uPoNrHKH4gqcipQmWUMCIREKz9AAPZ8jV5eVYXvGldFPZKQzL5CiRZ-DXUSfVNH6Ot0jXo-5BkrcQ2DMr3Zs-TUCAFA0VmOwRQYvPLjwIRW3mZfpdkiMw5CC22edsvC4rNi4rcbf3Je0cXEfWSRyg30ohFChk8w93klrSXg](https://lh5.googleusercontent.com/H6ceH-av643ixKZD2Zj5R13uPoNrHKH4gqcipQmWUMCIREKz9AAPZ8jV5eVYXvGldFPZKQzL5CiRZ-DXUSfVNH6Ot0jXo-5BkrcQ2DMr3Zs-TUCAFA0VmOwRQYvPLjwIRW3mZfpdkiMw5CC22edsvC4rNi4rcbf3Je0cXEfWSRyg30ohFChk8w93klrSXg)
 
-Terminal command to find Logged-In user in Linux Terminal
+## 总结
 
-## Conclusion
+在这篇文章中，你已经学会了 Linux 中的一些基本网络命令。
 
-In this article, you have learned some basic networking commands in Linux.
-
-You can subscribe to my newsletter on my [personal site](https://5minslearn.gogosoon.com/) to receive more such insightful articles straight to your inbox. You'll also find a consolidated list of all my blogs.
+你可以在我的 [个人网站](https://5minslearn.gogosoon.com/) 上订阅我的消息，以便直接在你的收件箱中收到更多这样有见地的文章。你还会发现我所有博客的综合列表。

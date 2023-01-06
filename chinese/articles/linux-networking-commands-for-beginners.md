@@ -11,17 +11,17 @@
 
 要在 Linux 中学习网络，你还应该知道如何使用终端。因为使用终端命令要比使用用户界面强大得多。它也会更快、更有效率。
 
-## Prerequisites
+## 前提条件
 
 对 Linux 终端有一个基本的了解，就足以学习 Linux 中的网络。
 
-## How to Find the IP Address of Your Machine
+## 如何找到你的机器的 IP 地址
 
 这是网络中最基本的问题，它是学习网络的起点。
 
 但是，请等待。
 
-### What's an IP Address?
+### 什么是 IP 地址？
 
 IP 是 "互联网协议 "的缩写，它是管理数据如何通过互联网或本地网络发送的协议（一套规则）。
 
@@ -45,7 +45,7 @@ IP 地址基本上是一个唯一的地址，用于识别互联网或本地网�
 
 他告诉我他正在寻找他的 IP 地址。
 
-我回答说："使用 `ifconfig`命令来查找你的机器的 IP 地址"。
+我回答说："使用 `ifconfig` 命令来查找你的机器的 IP 地址"。
 
 他打开了终端，试了试这个命令，像这样:
 
@@ -65,15 +65,15 @@ ifconfig 命令的输出示例
 
 在进入每个信息区间之前，你可以发现有几个是所有信息区间的共同点。让我们来了解一下它们。
 
-### Characteristics of Network Interface
+### 网络接口的特性
 
 第一行显示 UP、LOOPBACK、RUNNING、NOARP、MULTICAST 等。这些是网络接口的特性。例如，能够进行 BROADCAST，能够进行 MULTICAST。默认情况下，`ifconfig` 命令只列出 UP 状态设备。该接口也可以处于 down 状态。
 
-### What is MTU?
+### 什么是 MTU?
 
 MTU 是指最大传输单元。它决定了所发送的数据包的最大有效载荷大小。默认的标准值是 **1500 字节**。然而，你可以增加数据包的有效载荷大小（MTU），这样你就可以发送更多的数据，提高数据传输率。
 
-### inet row in ifconfig
+### ifconfig 中的 inet 行
 
 **inet** 是分配给该指定接口的互联网（IPv4）地址。它将由 DHCP 客户端设置。
 
@@ -89,7 +89,7 @@ MTU 是指最大传输单元。它决定了所发送的数据包的最大有效�
 
 **scopeid** 是为一个区域分配的 ID。范围是一个拓扑区域，在这个区域内，IPv6 地址可以作为一个接口或一组接口的唯一标识。
 
-### RX and Tx
+### RX 和 Tx
 
 Rx / Tx packets - 显示接收/传输的数据包数量  
 Rx / Tx bytes – 显示桶（buckets）中的数据包大小
@@ -128,7 +128,7 @@ ifconfig 命令中的无线接口信息
 
 如果你连接了你的 Wifi，你应该使用最后一个。
 
-## How to Download a File Using the Linux Terminal
+## 如何使用 Linux 终端下载文件
 
 有一天，我的老板给我发了一堆可下载的链接，并要求我下载并把它们压缩在一个 Zip 文件中，然后发送回给他。
 
@@ -212,11 +212,11 @@ ping google.com -i 2
 
 执行上述命令后，希望你能发现你的系统是否连接到了互联网。最有可能的是，你的浏览器将是问题的根源。重新安装浏览器将解决这个问题。
 
-## How to Find the IP Address of a Website
+## 如何找到一个网站的 IP 地址
 
 在我们继续前进之前，你应该能够回答以下问题:
 
-### What is a DNS?
+### 什么是 DNS?
 
 DNS 是域名系统的意思。我们使用的每个网站都有一个域名（例如 google.com 或 freecodecamp.org）。这些域名中的每一个都会指向服务器的特定 IP 地址。DNS 基本上是一个系统，它有一个表，将每个域名与 IP 地址映射。
 
@@ -236,7 +236,7 @@ nslookup google.com
 
 nslookup 命令的输出样本
 
-## How to Know Which User is Logged-In
+## 如何知道哪个用户已经登录
 
 Linux 支持多个用户并让你管理这些用户。每次你都可以以不同的用户身份登录。而且你可以使用 `who` 命令来了解你以哪个用户的身份登录。
 

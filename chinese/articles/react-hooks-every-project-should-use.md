@@ -1,6 +1,6 @@
 > -  原文地址：[React Hooks You Can Use in Every Project – Explained with Examples](https://www.freecodecamp.org/news/react-hooks-every-project-should-use/)
 > -  原文作者：[Reed Barger](https://www.freecodecamp.org/news/author/reed/)
-> -  译者：
+> -  译者：SuXiong
 > -  校对者：
 
 ![React Hooks You Can Use in Every Project – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/7-react-hooks.png)

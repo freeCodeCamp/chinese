@@ -13,43 +13,43 @@
 
 在网页和前端开发中，在进行构建前先确定一个布局，可以帮助你决定使用哪一个 CSS 布局模块：Flexbox 或 Grid.
 
-在本篇文章中，我们将通过建造一个简单但优雅的登陆页，学习每一个工具以及它们的最佳实践。
+在本篇文章中，我们将通过建造一个简单但优雅的登陆页面，学习每一个工具以及它们的最佳实践。
 
-## What We're Going To Build
+## 我们将要建造什么
 
 ![homepage-2](https://www.freecodecamp.org/news/content/images/2022/10/homepage-2.png)
 
-landing page design
+登陆页面设计
 
-Check it out on Codepen [here](https://codepen.io/ophyboamah/pen/KKRLoJr).
+你可以在 [Codepen](https://codepen.io/ophyboamah/pen/KKRLoJr) 上查看这个项目
 
-## Project Functionality
+## 项目功能
 
-1.  Web Layout: Create a beautiful landing page
-2.  Mobile Responsiveness
+1.  网页布局：创建一个优雅的登陆页面。
+2.  手机端自适应。
 
-## Prerequisites
+## 前置技能
 
--   Basic knowledge of HTML and CSS.
--   An IDE (text editor) like VS Code
--   A web browser
+-   HTML 和 CSS 的基础知识 。
+-   一个 IDE（文本编辑器），例如 VS Code。
+-   一个网页浏览器。
 
-## Setup
+## 项目配置
 
-1.  Create a folder for your project and open in an IDE.
-2.  Within your project folder, create index.html and style.css files.
-3.  Create an asset folder to store images.
-4.  Within your index.html file, create your HTML boilerplate and link your CSS file and font URL within the `<head>` tag.
+1.  创建一个项目文件夹，并在 IDE 中打开。
+2.  在项目文件夹内，创建一个 index.html 和 style.css 文件。
+3.  创建一个名为 asset 的文件夹以存放图片。
+4.  在 index.html 文件中，创建 HTML 文件样板，并在 `<head>` 标签内链接 CSS 文件和字体地址。
 
 ## Resources
 
-1.  **Font:** [https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap](https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap)
-2.  **Desktop Image:** [https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png](https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png)
-3.  **Mobile Image:** [https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png](https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png)
-4.  **Client Logo (Databiz):** [https://i.postimg.cc/gJ9Y84m6/client-databiz.png](https://i.postimg.cc/gJ9Y84m6/client-databiz.png)
-5.  **Client Logo (Audiophile):** [https://i.postimg.cc/15DDqYSD/client-audiophile.png](https://i.postimg.cc/15DDqYSD/client-audiophile.png)
-6.  **Client Logo (Meet):** [https://i.postimg.cc/5ybQqfbv/client-meet.png](https://i.postimg.cc/5ybQqfbv/client-meet.png)
-7.  **Client Logo (Maker):** [https://i.postimg.cc/g2NsxByN/client-maker.png](https://i.postimg.cc/g2NsxByN/client-maker.png)
+1.  **字体:** [https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap](https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap)
+2.  **电脑端图片:** [https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png](https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png)
+3.  **手机端图片:** [https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png](https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png)
+4.  **客户 logo (Databiz):** [https://i.postimg.cc/gJ9Y84m6/client-databiz.png](https://i.postimg.cc/gJ9Y84m6/client-databiz.png)
+5.  **客户 logo (Audiophile):** [https://i.postimg.cc/15DDqYSD/client-audiophile.png](https://i.postimg.cc/15DDqYSD/client-audiophile.png)
+6.  **客户 logo (Meet):** [https://i.postimg.cc/5ybQqfbv/client-meet.png](https://i.postimg.cc/5ybQqfbv/client-meet.png)
+7.  **客户 logo (Maker):** [https://i.postimg.cc/g2NsxByN/client-maker.png](https://i.postimg.cc/g2NsxByN/client-maker.png)
 
 # How to Use Flexbox
 

@@ -200,20 +200,21 @@ The only real "gotcha" you have to be aware of when making a markdown table is t
 
 ## **如何在 Markdown 中添加代码及语法高亮**
 
-Adding code snippets to your markdown can be incredibly helpful if you are creating documentation for developers, for example.
+如果你为开发者创建文档，在你的 Markdown 中添加代码片断会有很大的帮助。
 
-The below is a very simple JavaScript example, but almost all modern programming languages are supported (with syntax highlighting and so on).
+下面是一个非常简单的 JavaScript 例子，但 Markdown 几乎支持所有的现代编程语言（包括对齐进行语法高亮等）。
 
 ```javascript
 console.log('example log')
 ```
 
-  
-\`\`\`javascript  
+````
+```javascript  
 console.log('example log')  
-\`\`\`
+```
+````
 
-Just type the three backticks followed by the programming language and then enter to start writing your code. End the code block with three backticks.
+只要输入三个反引号，并加上编程语言的名字，再回车就可以开始写代码了。再用三个反引号来结束代码块。
 
 # 如何在 Markdown 中添加引用
 

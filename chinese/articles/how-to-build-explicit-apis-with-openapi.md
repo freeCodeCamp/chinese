@@ -53,45 +53,44 @@
 
 对于仅有少量的内部端点的系统来说，这并不是一个大问题。但随着 API 接口数量的增长，修改现有的端点需要在整个系统中遵循面包屑，以确保消费者期望得到的东西与提供的东西是相等的。
 
+这个问题可以通过对系统的不同部分之间进行集成测试来缓解。但是人工完成这件事的工作量非常巨大的，并且如果没做好的话，可能会在系统实际上不能正常工作的时候让开发人员误以为系统状态良好。
 
-This can be mitigated by keeping integration tests between the parts of the system that talk to the REST API. But doing it manually is tremendous work and when done poorly, provides false security that the system will work properly.
+## 提出的解决方案
 
-## Proposed solution
+我们已经看到了构建 REST API 所带来的固有挑战。在下一节中，我们将使用开放标准构建一个示例 Express 项目，以解决这些挑战。
 
-We have seen some of the inherent challenges that come with building REST APIs. In the following section we will build an example Express project that addresses those challenges using open standards.
+### API 标准规范
 
-### API standard specification
+前面部分描述的挑战已经存在很长时间了，所以面对这个问题，我们最好查看现有的解决方案，而不是重新发明轮子。
 
-The challenges described in the previous section have been around for a long time, so it pays off to look into existing solutions, instead of re-inventing the wheel.
+许多标准尝试对 REST API 进行规范化定义（[RAML](https://raml.org/)、[JsonAPI](https://jsonapi.org/)、[OpenAPI](https://www.openapis.org/)...）。这些项目的共同目标是使开发人员更容易定义他们的 API 行为，以便跨多种语言的服务器和客户端能够“共说一种语言”。
 
-There have been multiple attempts to standardize REST API definitions ([RAML](https://raml.org/), [JsonAPI](https://jsonapi.org/), [OpenAPI](https://www.openapis.org/)...). These projects have the shared goal making it easier for developers to define how their APIs behave, so servers and clients across multiple languages can 'speak a common language'.
+有了某种形式的 API 规范，可以解决许多挑战，因为在许多情况下，可以从这些规范自动生成客户端 SDK、测试、模拟服务器和文档。
 
-Having some sort of formal specification of the API solves many of the challenges, since in many cases, client SDKs, tests, mock servers and documentation can be auto generated from those specifications.
+一种我最喜欢的规范是 OpenAPI (原名 Swagger)。它有一个很大的社区，并且有很多用于 Express 的工具。这可能不是所有 REST API 项目中的最佳工具，因此请在为你自己的项目选择规范之前进行额外的研究，以确保该规范的工具和支持对你的项目有帮助。
 
-One of my favorites is OpenAPI (formerly Swagger). It has a big community, and plenty of tooling for Express. This may not the be the best tool for every REST API project out there, so remember to do some extra research to make sure the tooling and support around the said specification makes sense in your case.
+### 示例的背景
 
-### Context for our example
+在这个示例中，假设我们正在构建一个待办事项列表管理应用。用户可以通过访问一个 web 应用来获取、创建、编辑和删除待办事项，这些待办事项被保存在后端。
 
-For the sake of this example, let's suppose we are building a todo list management app. The user has access to a web app where they can fetch, create, edit and delete todos, which are persisted in the backend.
+在这个例子中，后端使用一个 Express.js 应用程序，它将通过 REST API 暴露以下功能：
 
-In this case, the backend will be an Express.js app that will expose over a REST API the following functionalities:
-
--   Fetch todos: **\[GET\] /todos**
+-   获取待办事项: **\[GET\] /todos**
 -   创建待办事项：**\[POST\] /todos**
 -   编辑待办事项：**\[PUT\] /todos/:id**
 -   删除待办事项：**\[DELETE\] /todos/:id**
 
-This is an over-simplification of the functionalities that a todo management app will need, but will serve to show how we can overcome the challenges presented above in a real context.
+对于一个真实的待办事项管理应用来说，上面的功能有点过度简化，但这有助于展示我们如何在实际情况下克服上面提出的挑战。
 
-### Implementation
+### 实现
 
-Great, now that we have introduced open standards for API definitions and a context, let's implement an Express todos app tackling the previous challenges.
+很好，现在我们已经介绍了 API 定义的开放标准和背景，让我们来实现一个 Express 待办事项应用，演示怎么解决前面的挑战。
 
-We will be using an OpenAPI with the Express library [**express-openapi**](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi). Note that this library provides advanced functionalities (response validation, authentication, middleware setup...) beyond the scope of this post.
+我们将使用 Express 库 [**express-openapi**](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi) 的 OpenAPI。请注意，这个库提供的高级功能（响应验证、认证、中间件设置......）超出了本文的范围。
 
-The complete code is available in **[this repository](https://github.com/aperkaz/express-open-api)**.
+你可以在**[这个仓库](https://github.com/aperkaz/express-open-api)**中找到演示的完整代码。
 
-1.  Initialize a Express skeleton and initialize a Git repo:
+1. 初始化一个 Express 框架，并初始化一个 Git 仓库：
 
 ```bash
 npx express-generator --no-view --git todo-app
@@ -100,7 +99,7 @@ git init
 git add .; git commit -m "Initial commit";
 ```
 
-2\. Add the OpenAPI Express library, **[express-openapi](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi)**:
+2. 将 **[express-openapi](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi)** 引入我们的程序：
 
 `npm i express-openapi -s`
 
@@ -123,9 +122,9 @@ initialize({
 module.exports = app;
 ```
 
-3\. Add OpenAPI base schema.
+3. 添加 OpenAPI 基础模型。
 
-Note that the schema defines the type of a **Todo**, which will be referenced in the route handlers.
+请注意，模型中定义了 **Todo** 的类型，将在路由处理程序中引用。
 
 ```javascript
 // ./api/api-doc.js
@@ -157,9 +156,9 @@ const apiDoc = {
 module.exports = apiDoc;
 ```
 
-4\. Add route [handlers](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi#getting-started).
+4. 添加路由[处理程序](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi#getting-started)。
 
-Each handler declares which operations it supports (GET, POST...), the callbacks for each operation, and the **apiDoc** OpenAPI schema for that handler.
+每个处理程序都声明它支持哪些操作（GET、POST ...），对每个操作的回调，以及该处理程序的 **apiDoc** OpenAPI 模型。
 
 ```javascript
 // ./api/paths/todos/index.js
@@ -277,7 +276,7 @@ module.exports = function () {
 };
 ```
 
-5\. Add autogenerated documentation, **[swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)**:
+5. 添加自动生成的文档，**[swagger-ui-express](https://github.com/scottie1984/swagger-ui-express)**：
 
 ```bash
 npm i swagger-ui-express -s
@@ -302,24 +301,24 @@ app.use(
 module.exports = app;
 ```
 
-And here's what we'll get:
+这就是我们最终获得的效果：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/image-23.png)
 
-Auto-generated SwaggerUi, at http://localhost:3030/api-documentation
+这个 SwaggerUi 是自动生成的，你可以在 http://localhost:3030/api-documentation 访问它。
 
-🎉 **Congratulations!**
+🎉 **恭喜！**
 
-If you have made it this far, you should have a fully functioning Express application, fully integrated with OpenAPI.
+当你进行到文章的这里时，你应该创建好了一个完全可运行的 Express 应用程序，其与 OpenAPI 完全集成。
 
-Using the schema available in _[http://localhost:3030/api-docs](http://localhost:3030/api-docs)_ we can now easily generate [tests](https://nordicapis.com/generating-web-api-tests-from-an-openapi-specification/), a [mock server](https://github.com/stoplightio/prism), [types](https://github.com/drwpow/openapi-typescript) or even a [client](https://phrase.com/blog/posts/using-openapi-to-generate-api-client-code/)!
+现在，通过使用在 _[http://localhost:3030/api-docs](http://localhost:3030/api-docs)_ 中定义的模型，我们可以轻松生成[测试](https://nordicapis.com/generating-web-api-tests-from-an-openapi-specification/)、[模拟服务器](https://github.com/stoplightio/prism)、[类型](https://github.com/drwpow/openapi-typescript)，甚至[客户端](https://phrase.com/blog/posts/using-openapi-to-generate-api-client-code/)！
 
 ## 总结
 
-We scratched only the surface of whats possible with OpenAPI. But I hope the article shed some light on how a standard API definition schema can help with visibility, testing, documentation, and overall confidence when building REST APIs.
+我们只是浅浅涉猎了 OpenAPI 所能做到的事情。但是我希望这篇文章能够让你了解标准 API 定义模式是如何在可见性、测试、文档和整体置信度方面帮助构建 REST API 的。
 
-Thanks for sticking around until the end!
+谢谢你看到最后！
 
-I am currently building [__**taggr**__](https://taggr.ai/)_,_ a cross-platform desktop application that enables users to ****rediscover**** their digital ****memories**** while keeping their ****privacy****.
+我目前正在构建 [__**taggr**__](https://taggr.ai/)，这是一个跨平台的桌面应用程序，它在帮助用户**重新发现**他们的数字记忆的同时保持他们的**隐私**。
 
-The open-alpha is coming soon to Linux, Windows, and Mac OS. Make sure to check the [webpage](https://taggr.ai/) and [signup](https://taggr.us18.list-manage.com/subscribe/post?u=482d473aa1e4dedadc89fb3e2&id=aa6a10c164) so you don't miss it!
+Linux、Windows 和 macOS 平台上的 alpha 版本即将推出。请查看[网页](https://taggr.ai/)并[登记](https://taggr.us18.list-manage.com/subscribe/post?u=482d473aa1e4dedadc89fb3e2&id=aa6a10c164)，以免错过！

@@ -51,13 +51,13 @@
 6.  **客户 logo (Meet):** [https://i.postimg.cc/5ybQqfbv/client-meet.png](https://i.postimg.cc/5ybQqfbv/client-meet.png)
 7.  **客户 logo (Maker):** [https://i.postimg.cc/g2NsxByN/client-maker.png](https://i.postimg.cc/g2NsxByN/client-maker.png)
 
-# How to Use Flexbox
+# 如何使用 Flexbox
 
-Generally, HTML elements align according to their default display style. This means, without external styling with CSS, block elements like `p` and `div` will start on a new line. Inline elements like `input` and `span`, on the other hand, are arranged next to each other on the same line.
+通常， HTML 元素按照他们默认的展示样式对齐。这意味着，在没有外部 CSS 样式的情况下，像 `p` 和 `div` 作为块级元素将会在新的一行中显示。而像 `input` 和 `span` 这样的行内元素，将在同一行中相邻排列。
 
-However, the concept of Flexbox allows you to easily place these elements either horizontally or vertically in what’s often referred to as one dimension. In order to achieve this, at least two elements are required: **flex container** and **flex item**. These refer to a parent and child element, respectively.
+但是， Flexbox 让我们可以轻松地在水平维度或垂直维度上排列这些元素。为了实现这一点，我们需要至少两个元素： flex 容器 和 flex 项目，他们分别指代父元素和子元素。
 
-In responsive design, the purpose of Flexbox is to allow containers and their child elements to fill defined spaces or shrink depending on a device’s dimensions.
+在自适应设计中，Flexbox 的目的在于允许容器及和它的子元素根据设备的尺寸填充或收缩。
 
 ## Flex-direction and Axes
 

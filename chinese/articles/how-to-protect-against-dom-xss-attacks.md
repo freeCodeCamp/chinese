@@ -1,6 +1,6 @@
 > -  原文地址：[What is XSS? How to Protect Your Website from DOM Cross-Site Scripting Attacks](https://www.freecodecamp.org/news/how-to-protect-against-dom-xss-attacks/)
 > -  原文作者：[Andrej Kovacevic](https://www.freecodecamp.org/news/author/andrej/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What is XSS? How to Protect Your Website from DOM Cross-Site Scripting Attacks](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/xss-code-case.jpg)

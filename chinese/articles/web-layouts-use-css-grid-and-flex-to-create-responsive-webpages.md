@@ -59,29 +59,29 @@
 
 在自适应设计中，Flexbox 的目的在于允许容器及和它的子元素根据设备的尺寸填充或收缩。
 
-## Flex-direction and Axes
+## Flex-direction 和 Axes
 
-Flex-direction is an important property of CSS Flexbox, because it is what determines the direction that flex items are arranged in. It does this by pointing out the main axis of a flex container.
+Flex-direction 是 CSS Flexbox 中的一个重要属性，因为它通过指定弹性容器的主轴的方向，决定弹性项目的排列方向。
 
-There are two main axes, namely **main axis** and **cross axis**. The main axis is the defined direction of how your flex items are placed in the flex container, whilst the cross axis is always the axis at the opposite side of the main axis.
+**主轴**和**交叉轴**是两个主要的轴。主轴是你在弹性项目中，为弹性项目定义的排列方向，而交叉轴总是垂直于主轴。
 
-It can be dangerous to try using the concept of x and y axis from math to understand this. This is mainly because in Flexbox the main axis can be vertical or horizontal, always depending on the value of the flex-direction.
+试图用数学中 x 轴和 y 轴的概念来理解这一点并不恰当。因为在 Flexbox 中，主轴既可以是竖直的，也可以是水平的，它的方向总是取决于 flex-direction 的值。
 
-The values accepted by the flex-direction property include row (which is default), row-reverse, column, and column-reverse. For the purposes of this project, we’re going to look at row and column.
+Flex-direction 属性接受的指包括 row ， row-reverse ， column 和 column-reverse 。在这个项目中，我们主要探索 row 和 column 。
 
 ![flexdirection](https://www.freecodecamp.org/news/content/images/2022/10/flexdirection.png)
 
 flex-direction: row
 
-When the flex-direction attribute has a value of row, the main axis is horizontal and the cross axis is vertical, as shown in the image above. This means flex items will be arranged horizontally.
+当 flex-direction 属性的值为 row 时，正如上图所示，主轴是水平的，交叉轴为竖直的，即，弹性元素将会水平排列。
 
-Since the row is the default value, if you display a container as flex but don't specify the flex-direction, the flex items will automatically be in a row.
+由于 row 是默认值，所以如果你将一个容器的展示方式定义为 flex ，但又没有特别指定 flex-direction ，那么弹性元素将自动在一行中排列。
 
 ![flexdirectioncolumn](https://www.freecodecamp.org/news/content/images/2022/10/flexdirectioncolumn.png)
 
 flex-direction: column
 
-When the flex-direction attribute has a value of column, the main axis is vertical and the cross axis is horizontal, as shown in the image above. This means flex items will be arranged vertically.
+当 flex-direction 属性的值为 column 时，正如上图所示，主轴是竖直的，交叉轴为水平的，即，弹性元素将会垂直排列。
 
 ## How to Build the Navbar
 

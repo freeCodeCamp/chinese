@@ -83,9 +83,9 @@ flex-direction: column
 
 当 flex-direction 属性的值为 column 时，正如上图所示，主轴是竖直的，交叉轴为水平的，即，弹性元素将会垂直排列。
 
-## How to Build the Navbar
+## 如何创建一个导航栏
 
-Now that we know how Flexbox works, let’s start building our navbar. We'll first provide the content within it, that is the menu items and logo. We’ll give them descriptive classes so that we can easily reference them within our CSS file.
+即然我们已经了解了 Flexbox 的运作机制，那让我们创建一个导航栏吧。我们将先完成其中的内容，即，菜单元素和 logo 。我们将会给予它们描述性的类名，以便在 CSS 文件中引用。
 
 ```HTML
 <nav>
@@ -103,15 +103,15 @@ Now that we know how Flexbox works, let’s start building our navbar. We'll fir
 </nav>
 ```
 
-The image below is the output for the code above. Because both `<ul>` and `<li>`  are block elements, each of the items we specified within them will be displayed on a new line.
+下图即我们以上代码的输出效果。因为 `ul` 和 `li` 是块级元素，我们在其中指定的每一个项目都会在新行中显示。
 
 ![preflexx-1](https://www.freecodecamp.org/news/content/images/2022/10/preflexx-1.png)
 
-Navbar content output
+导航栏内容输出效果
 
-Flexbox layout display is declared on parent containers and affects child elements. This means that if you had a list of groceries in an unordered list, display flex can’t be applied on the `<li>`s which are child elements in this case. Instead, to display them as flex, you’d first have to create a parent container and apply it to that.
+Flexbox 的布局样式将在父元素中声明，并影响其中的子元素。也就是说，如果你有一个包含诸多杂货的无序列表， flex 不应在子元素 `<li>` 中声明。为了将该列表以 flex 进行展示，你应该首先创建一个父级容器，并将布局样式应用于该父级容器。
 
-In our CSS code below, we're defining the font style and size for our project as well as our navbar logo. We're also displaying our nav elements and some of the elements within those as flex.
+在下方的 CSS 代码中，我们定义了项目的字体样式和大小，以及导航栏 logo。我们还将 nav 元素及其中的字元素的展示方式定义为 flex 。
 
 ```CSS
 * {
@@ -130,15 +130,15 @@ nav,
 }
 ```
 
-Navbar initial styling
+导航栏初始样式
 
-The image below is the output for the code above. The elements have been displayed as flex. Yet because we didn't specify the flex-direction, they're automatically arranged in a row.
+下图是以上代码的输出效果。元素都以按照 flex 排列。虽然我们没有特别指定 flex-direction ，但它们自动在同一行中排列。
 
-But as you can see below using the ruler (red line), the flex items are not aligned as they should be. Let's fix that by learning another important flex element.
+然而，正如你可以在下图中借助标尺（红线）所能观察到的，弹性项目并没有按预期的方式对齐。让我们通过学习另一个重要的 flex 元素来解决这个问题。
 
 ![displayflex](https://www.freecodecamp.org/news/content/images/2022/10/displayflex.png)
 
-Flex without alignment
+尚未对齐的 Flex 布局
 
 ### How to use the `align-items` attribute
 

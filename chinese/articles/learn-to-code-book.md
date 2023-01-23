@@ -19,9 +19,9 @@ It may take you a few hours to read all this. But this is it. My insights into l
 
 I learned all of this while:
 
--   learning to code in my 30s
--   then working as a software engineer
--   then running freeCodeCamp.org for the past 8 years. Today, more than a million people visit this website each day to learn about math, programming, and computer science.
+- learning to code in my 30s
+- then working as a software engineer
+- then running freeCodeCamp.org for the past 8 years. Today, more than a million people visit this website each day to learn about math, programming, and computer science.
 
 I was an English teacher who had never programmed before. And I was able to learn enough coding to get my first software development job in just one year.
 
@@ -53,15 +53,16 @@ Ah. Here it is:
 
 ## Table of Contents
 
-1.  [Forward: Who is this book for?](#forward-who-is-this-book-for)
-2.  [500 Word Executive Summary](#500-word-executive-summary)
-3.  [Chapter 1: How to Build Your Skills](#chapter-1-how-to-build-your-skills)
-4.  [Chapter 2: How to Build Your Network](#chapter-2-how-to-build-your-network)
-5.  [Chapter 3: How to Build Your Reputation](#chapter-3-how-to-build-your-reputation)
-6.  [Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search](#chapter-2-how-to-build-your-network)
-7.  [Epilogue: You Can Do This](#epilogue-you-can-do-this)
+1. [Preface: Who is this book for?](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
+2. [500 Word Executive Summary](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
+3. [Chapter 1: How to Build Your Skills](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
+4. [Chapter 2: How to Build Your Network](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
+5. [Chapter 3: How to Build Your Reputation](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
+6. [Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
+7. [Chapter 5: How to Succeed in Your First Developer Job](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
+8. [Epilogue: You Can Do This](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
 
-## Forward: Who is This Book For?
+## Preface: Who is This Book For?
 
 This book is for anyone who is considering a career in software development.
 
@@ -141,7 +142,7 @@ There's nothing wrong with learning to code so you can start a business.
 
 You may encounter people who say that you must be so passionate about coding that you dream about it. That you clock out of your full-time job, then spend all weekend contributing to open source projects.
 
-I do know people who are _that_ passionate about coding. But I also know plenty of people who, after finishing a hard week's work, just want to go spend time in nature, or play board games with friends.
+I do know people who are *that* passionate about coding. But I also know plenty of people who, after finishing a hard week's work, just want to go spend time in nature, or play board games with friends.
 
 People generally enjoy doing things they're good at doing. And you can develop a reasonable level of passion for coding just by getting better at coding.
 
@@ -165,23 +166,21 @@ You can find work in just about any industry. About two thirds of developer jobs
 
 If you're worried your job might be automated before you reach retirement, consider this: coding is the act of automating things. Thus it is by definition the last career that will be completely automated.
 
-Have I've sold you on coding as a good career for you? Then here's what you need to do to break into the field.
+Have I sold you on coding as a good career for you? Then here's what you need to do to break into the field.
 
 ### Build your skills.
 
 You need to learn:
 
--   Front End Development: HTML, CSS, JavaScript
--   Back End Development: SQL, Git, Linux, and Webservers
--   Scientific Computing: Python and its many libraries
+- Front End Development: HTML, CSS, JavaScript
+- Back End Development: SQL, Git, Linux, and Webservers
+- Scientific Computing: Python and its many libraries
 
 These are all mature, 20+ year old technologies. Whichever company you work for, you will almost certainly use most of these tools.
 
 The best way to learn these tools is to build projects. Try to code at least some every day. If you do the freeCodeCamp curriculum from top to bottom, you'll learn all of this and build dozens of projects.
 
-![Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png)
-
-Some of the certifications in the freeCodeCamp core curriculum.
+![Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png)Some of the certifications in the freeCodeCamp core curriculum.
 
 ### Build your network.
 
@@ -238,6 +237,8 @@ It is a privilege to still be here, working alongside you all. Together, we face
 These are still early days. I have no illusion that everyone will know how to code within my lifetime. But just like the Gutenberg Bible accelerated literacy in 1455, we can continue to accelerate technology literacy through free, open learning resources.
 
 Again, thank you all.
+
+And special thanks to Abbey Rennemeyer for her editorial feedback, and to Estefania Cassingena Navone for designing the book cover.
 
 And now, the book.
 
@@ -329,9 +330,7 @@ But then somebody managed to do it. And his heart did not explode.
 
 Once Roger Bannister – a 25-year old Oxford student – broke that psychological barrier – a ton of other people did it, too. To date, more than 1,000 people have run a sub-4 minute mile.
 
-![Roger-Bannister-1951_jpg__1269-1600_](https://www.freecodecamp.org/news/content/images/2023/01/Roger-Bannister-1951_jpg__1269-1600_.png)
-
-Roger Bannister running like a a champ. (Image: Britannica)
+![Roger-Bannister-1951_jpg__1269-1600_](https://www.freecodecamp.org/news/content/images/2023/01/Roger-Bannister-1951_jpg__1269-1600_.png)Roger Bannister running like a a champ. (Image: Britannica)
 
 And it's not like I was doing something bold and unprecedented as running a 4 minute mile here. Plenty of famous developers have managed to teach themselves coding over the years.
 
@@ -403,9 +402,7 @@ Something can be "hacky" meaning it's not an elegant solution. And yet you can h
 
 In short: don't be scared of the term "hack."
 
-![1200x-1_jpg__1200-797_](https://www.freecodecamp.org/news/content/images/2023/01/1200x-1_jpg__1200-797_.png)
-
-Facebook's corporate campus has the word "hack" written in giant letter on the concrete. (Image: Bloomberg)
+![1200x-1_jpg__1200-797_](https://www.freecodecamp.org/news/content/images/2023/01/1200x-1_jpg__1200-797_.png)Facebook's corporate campus has the word "hack" written in giant letter on the concrete. (Image: Bloomberg)
 
 I, for one, scarcely use the term because it's so confusing. And I think recently a lot of hackerspaces have picked up on the ambiguity. Many of them now call themselves "makerspaces" instead.
 
@@ -439,7 +436,7 @@ We ate sandwiches together. And I said to him: "I could code for my entire caree
 
 But Steve pushed back. He said, "I'm nothing special. Don't limit yourself. If you stick with coding, you could easily surpass me."
 
-I didn't for a second believe the words he said to me. But just the fact the he said it gave me butterflies.
+I didn't for a second believe the words he said to me. But just the fact that he said it gave me butterflies.
 
 Here he was: a developer who believed in me. He saw me – some random teacher – the very definition of a "script kiddie" – and thought I could make it.
 
@@ -515,11 +512,11 @@ I smiled for an awkwardly long time, not saying anything, just happy with myself
 
 Then Steve squinted and pursed his lips. He said: "Start your next project tonight."
 
-## Lessons from my Coding Journey
+### Lessons from my Coding Journey
 
 We'll check in on younger Quincy's coding journey in each of the following chapters. But now I want to break down some of the lessons here. And I want to answer some of the questions you may have.
 
-## Why is Learning to Code so Hard?
+### Why is Learning to Code so Hard?
 
 Learning any new skill is hard. Whether it's dribbling a soccer ball, changing the oil on a car, or speaking a new language.
 
@@ -545,9 +542,7 @@ But contemporary software development involves so many "layers of abstraction" �
 
 In the 1960s, a "bug" could be an insect crawling around inside a room-sized computer, and getting fried in one of the circuits.
 
-![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)
-
-The first computer bug, discovered in 1945, was a month that got trapped in the panels of a room-sized calculator computer at Harvard. (Image: Public Domain)
+![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)The first computer bug, discovered in 1945, was a moth that got trapped in the panels of a room-sized calculator computer at Harvard. (Image: Public Domain)
 
 Today, we're writing code so many layers of abstraction above the physical hardware.
 
@@ -559,19 +554,17 @@ I am not exaggerating when I say that in a few decades, coding will be so easy a
 
 There are three big reasons why learning to code is so hard, even in 2023.
 
-1.  The tools are still primitive
-2.  Most people aren't good at handling ambiguity, and learning to code is ambiguous. People get lost.
-3.  Most people aren't good at handling constant negative feedback. And learning to code is one brutal error message after another. People get frustrated.
+1. The tools are still primitive
+2. Most people aren't good at handling ambiguity, and learning to code is ambiguous. People get lost.
+3. Most people aren't good at handling constant negative feedback. And learning to code is one brutal error message after another. People get frustrated.
 
 Now I'll discuss each of these difficulties in more detail. And I'll give you some practical strategies for overcoming each of them.
 
 ### The Tools are Still Primitive
 
-![TNG-S4E19-171](https://www.freecodecamp.org/news/content/images/2023/01/TNG-S4E19-171.jpeg)
+![TNG-S4E19-171](https://www.freecodecamp.org/news/content/images/2023/01/TNG-S4E19-171.jpeg)A Possessed Barclay from Star Trek: The Next Generation, programming on the Holodeck.
 
-A Possessed Barclay from Star Trek: The Next Generation, programming on the Holodeck.
-
-> "Computer. Begin new program. Create as follows. Work station chair. Now create a standard alphanumer console positioned to the left hand. Now an iconic display console for the right hand. Tie both consoles into the Enterprise main computer core, utilizing neuralscan interface." - Barclay from Star Trek: The Next Generation, Season 4 Episode 19: "The Nth Degree"
+> "Computer. Begin new program. Create as follows. Work station chair. Now create a standard alphanumeric console positioned to the left hand. Now an iconic display console for the right hand. Tie both consoles into the Enterprise main computer core, utilizing neuralscan interface." - Barclay from Star Trek: The Next Generation, Season 4 Episode 19: "The Nth Degree"
 
 This is how people might program in the future. It's an example from my favorite science fiction TV show, Star Trek: The Next Generation.
 
@@ -585,9 +578,7 @@ What if programming was as easy as just saying instructions to a computer in pla
 
 Well, we've already made significant progress toward this goal. Think of our grandmothers, running between room-sized mainframe computers with stacks of punchcards.
 
-![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)
-
-Working with a punchcard-based computer in the 1950s (Image: NASA)
+![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)Working with a punchcard-based computer in the 1950s (Image: NASA)
 
 It used to be that programming even a simple application would require meticulous instructions.
 
@@ -724,9 +715,7 @@ My theory is that most developers will figure out how to solve a problem and sim
 
 And then, of course, there are the old forum threads and StackOverflow pages.
 
-![wisdom_of_the_ancients_png__485-270_](https://www.freecodecamp.org/news/content/images/2023/01/wisdom_of_the_ancients_png__485-270_.png)
-
-Comic by XKCD
+![wisdom_of_the_ancients_png__485-270_](https://www.freecodecamp.org/news/content/images/2023/01/wisdom_of_the_ancients_png__485-270_.png)Comic by XKCD
 
 ### How Not to Get Lost When Learning to Code
 
@@ -808,9 +797,7 @@ This does not work. And I'll tell you why.
 
 The universe is complex. Software is complex. You are unlikely to just Forest Gump your way into anything good.
 
-![gump](https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg)
-
-Forest Gump doing what he does and getting improbably lucky catching shrimp.
+![gump](https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg)Forest Gump doing what he does and getting improbably lucky catching shrimp.
 
 You may have heard of the Infinite Monkey Theorem. It's a thought experiment where you imagine chimpanzees typing on typewriters.
 
@@ -902,11 +889,11 @@ But those freeCodeCamp alumni who landed those jobs probably had to be extra str
 
 You can look at these job openings as having a variety of criteria they judge candidates on:
 
-1.  Work experience
-2.  Education
-3.  Portfolio and projects
-4.  Do they have a recommendation from someone who already works at the company? (We'll discuss building your network in depth in Chapter 2)
-5.  Other reputation considerations (we'll discuss building your reputation in Chapter 3)
+1. Work experience
+2. Education
+3. Portfolio and projects
+4. Do they have a recommendation from someone who already works at the company? (We'll discuss building your network in depth in Chapter 2)
+5. Other reputation considerations (we'll discuss building your reputation in Chapter 3)
 
 For these employers who do not require a bachelor's degree, education is just one of several considerations. If you are stronger in other areas, they may opt to interview you – regardless of whether you've ever even set foot inside a university classroom.
 
@@ -944,9 +931,9 @@ This is why I always encourage people who are in their teens and 20s to seriousl
 
 Not because of any of the things universities market themselves as:
 
--   The education itself. (You can take courses from some of the best universities online for free, so this alone does not justify the high cost of tuition.)
--   The "college experience" of living in a dorm, making new friends, and self discovery. (Most US University students never live on campus so they don't really get this anyway.)
--   General education courses that help you become a "well rounded individual" (Ever hear of the Freshman 15? This is a joke of course. But a lot of university freshman do gain weight due to the stress of the experience.)
+- The education itself. (You can take courses from some of the best universities online for free, so this alone does not justify the high cost of tuition.)
+- The "college experience" of living in a dorm, making new friends, and self discovery. (Most US University students never live on campus so they don't really get this anyway.)
+- General education courses that help you become a "well rounded individual" (Ever hear of the Freshman 15? This is a joke of course. But a lot of university freshman do gain weight due to the stress of the experience.)
 
 Again, the real value of getting a bachelor's degree – the real reason Americans pay $100,000 or more for 4 years of university – is because many employers require degrees.
 
@@ -986,7 +973,7 @@ The full-time student lifestyle is really designed with "traditional" students i
 
 Traditional universities cost a lot of money to attend, and the assumption is that students will pay through some combination of scholarships, family funds, and student loans.
 
-As a working adult, you will likely have less access to these funding sources. And just as importantly, you will not have the all the time on your hands that a recent high school graduate would have.
+As a working adult, you'll have less access to these funding sources. And just as importantly, you'll have less time on your hands than a recent high school graduate.
 
 But that doesn't mean you have to give up on the dream of getting a bachelor's degree.
 
@@ -1062,7 +1049,7 @@ Sure – there are certification programs and bootcamps.
 
 But these do not carry the same weight with employers. And they are rarely as rigorous.
 
-_Side note: when I say "certification programs" I mean a program where you attend a course, then earn a certification at the end. These are of limited value. But exam-based certifications from companies like Amazon and Microsoft are quite valuable. We'll discuss these in more depth later._
+*Side note: when I say "certification programs" I mean a program where you attend a course, then earn a certification at the end. These are of limited value. But exam-based certifications from companies like Amazon and Microsoft are quite valuable. We'll discuss these in more depth later.*
 
 What I tell people is: to degree or not to degree – that is the question.
 
@@ -1084,9 +1071,7 @@ The main thing bootcamps and other certification programs are going to give you 
 
 Most developers are self-taught. Even the developers who earned a Bachelor's of computer science still often report themselves as "self-taught" on industry surveys like Stack Overflow's annual survey.
 
-![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)
-
-Most working developers consider themselves to be "self-taught" (Image: Stack Overflow 2016 Survey)
+![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)Most working developers consider themselves to be "self-taught" (Image: Stack Overflow 2016 Survey)
 
 This is because learning to code is a life-long process. There are constantly new tools to learn, new legacy codebases to map out, and new problems to solve.
 
@@ -1102,7 +1087,7 @@ Similarly, Ada Lovelace taught herself programming. Because before her there was
 
 Someone might tell you: "You're not really self taught because you learned from books or online courses. So you had teachers." And they are correct, but only in the most narrow sense.
 
-If someone takes issue with you calling yourself self-taught, just say: "By your standards, no one who wasn't raised by wolves is really self-taught at anything."
+If someone takes issue with you calling yourself self-taught, just say: "By your standards, no one who wasn't raised by wolves can claim to be self-taught at anything."
 
 Point them to this section of this book and tell them: "Quincy anticipated your snobbery." And then move on with your life.
 
@@ -1150,9 +1135,7 @@ You could code your entire career in JavaScript and would never need to learn a 
 
 So I recommend starting with JavaScript. Not only is it much easier to use than languages like Java and C++ – it's easier to learn, too. And there are far, far more job openings for people who know JavaScript.
 
-![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)
-
-A screenshot from job search engine Indeed. My search for "javascript" for the US yielded 68,838 job listings.
+![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)A screenshot from job search engine Indeed. My search for "javascript" for the US yielded 68,838 job listings.
 
 The other skills you'll want to focus on are **HTML** and **CSS**. If a webpage were a body, HTML would be the bones, and CSS would be the skin. (JavaScript would be the muscles, making it possible for the website to move around and be interactive.)
 
@@ -1186,14 +1169,14 @@ There are lots of other tools you'll want to learn, like React, NGINX, Docker, a
 
 But the key skills you should spend 90% of your pre-job learning time on are:
 
-1.  HTML
-2.  CSS
-3.  JavaScript
-4.  Linux
-5.  Git
-6.  SQL
-7.  Node.js
-8.  Express.js
+1. HTML
+2. CSS
+3. JavaScript
+4. Linux
+5. Git
+6. SQL
+7. Node.js
+8. Express.js
 
 If you learn these tools, you can build most major web and mobile apps. And you will be qualified for most entry-level developer jobs. (Of course, many job descriptions will include other tools, but we'll discuss these later in the book.)
 
@@ -1205,10 +1188,10 @@ Funny you should ask. There's a full curriculum designed by experienced software
 
 That's right. I'm talking about [freeCodeCamp's core curriculum](https://www.freecodecamp.org/learn). It will help you learn:
 
--   Front End Development
--   Back End Development
--   Engineering Mathematics
--   and Scientific Computing (with Python for Data Science and Machine Learning)
+- Front End Development
+- Back End Development
+- Engineering Mathematics
+- and Scientific Computing (with Python for Data Science and Machine Learning)
 
 To date, thousands of people have gone through this core curriculum and gotten a developer job. They didn't need to quit their day job, take out loans, or really risk anything other than some of their nights and weekends.
 
@@ -1254,7 +1237,7 @@ I'll show you how to build a robust personal network that will support you for d
 
 ### Story Time: How did a Teacher in his 30s Build a Network in Tech?
 
-_Last time on Story Time: Quincy learned some coding by reading books, watching free online courses, and hanging out with developers at the local Hackerspace. He had just finished building his first project and given his first tech talk..._
+*Last time on Story Time: Quincy learned some coding by reading books, watching free online courses, and hanging out with developers at the local Hackerspace. He had just finished building his first project and given his first tech talk...*
 
 OK – so I now had some rudimentary coding skills. I could now code my way out of the proverbial paper bag.
 
@@ -1308,21 +1291,21 @@ I took cues from the devs I met at the hackerspace: Be passionate, but understat
 
 And I read lots of books to better understand developer culture.
 
-[The Coders at Work](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3/ref=sr_1_1?crid=13BTAQ7TH9YSN) is a good book from the 1980s.
+[The Coders at Work](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3?crid=13BTAQ7TH9YSN&linkCode=ll1&tag=out0b4b-20&linkId=32d14a148c54f36f5ef701578a2abd8e&language=en_US&ref_=as_li_ss_tl) is a good book from the 1980s.
 
-Hackers: Heroes of the Revolution is a good book from the 1990s.
+[Hackers: Heroes of the Revolution](https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396?&linkCode=ll1&tag=out0b4b-20&linkId=0c216f2cd4cc2d2090b8c9b50b0befee&language=en_US&ref_=as_li_ss_tl) is a good book from the 1990s.
 
-For a more contemporary cultural resource, check out the TV series [Mr. Robot](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6/ref=sr_1_7). Its characters are a bit extreme, but they do a good job of capturing the mindset and mannerisms of many developers.
+For a more contemporary cultural resource, check out the TV series [Mr. Robot](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6?crid=188UUOE6ZT0W3&keywords=mr+robot&qid=1673746625&sprefix=mr+robot%2Caps%2C111&sr=8-6&linkCode=ll1&tag=out0b4b-20&linkId=a896ab7630fadc332c2696d3a4b8e85d&language=en_US&ref_=as_li_ss_tl). Its characters are a bit extreme, but they do a good job of capturing the mindset and mannerisms of many developers.
 
 Soon, I was talking less like a teacher and more like a developer. I didn't stick out quite as awkwardly.
 
 Several times a week I attended local tech-related events. My favorite event wasn't even a developer event. It was the Santa Barbara Startup Night. Once every few weeks, they'd have an event where developers would pitch their prototypes. Some of the devs demoing their code were even able to secure funding from angels – rich people who invest in early-stage companies.
 
-The guy who ran event was named Mike. He must have known every developer and entrepreneur in Santa Barbara.
+The guy who ran the event was named Mike. He must have known every developer and entrepreneur in Santa Barbara.
 
 When I finally got the nerve to introduce myself to Mike, I was star-struck. He was an ultra-marathoner with a resting heartbeat in the low 40s. Perfectly cropped hair and beard. To me he was the coolest guy on the planet. Always polished. Always respectful.
 
-Mike was "non-technical." He worked as a product manager. And though knew a lot about technology and user experience design, he didn't know how to code.
+Mike was "non-technical." He worked as a product manager. And though he knew a lot about technology and user experience design, he didn't know how to code.
 
 Sometimes devs would write non-technical people off. "He's just a business guy," they'd say. Or: "She's a suit." But I never heard anyone say that about Mike. He had the respect of everyone.
 
@@ -1336,7 +1319,7 @@ And then I'd go home and google that developer's name, and realize they were a c
 
 I quickly learned not to boast of my accomplishments or my skills. There's a good chance a person you're talking to can code circles around you. But most of them would never volunteer this fact.
 
-There's nothing worse than confidently pulling out your laptop, showing off your code, and then having someone ask you a bunch of questions that you're wholy unprepared to answer.
+There's nothing worse than confidently pulling out your laptop, showing off your code, and then having someone ask you a bunch of questions that you're wholly unprepared to answer.
 
 My first few months of attending events was a humbling experience. But these events energized me to keep pushing forward with my skills.
 
@@ -1348,10 +1331,10 @@ That inspired me to spend more time refining my online presence. I made my Linke
 
 Within a few months, I knew people from so many fields:
 
--   experienced developers
--   non-technical or semi-technical people who worked at tech companies
--   hiring managers and recruiters
--   and most importantly, my peers who were also mid-career and trying to break into tech
+- experienced developers
+- non-technical or semi-technical people who worked at tech companies
+- hiring managers and recruiters
+- and most importantly, my peers who were also mid-career and trying to break into tech
 
 Why were peers the most important? Surely they would be the least able to help me get a job, right?
 
@@ -1403,9 +1386,7 @@ Now you can start creating cards. Each card can just be their name, and if you h
 
 Here is the Trello board I created to give you an idea of what this Personal Network Board might look like. I used characters from my favorite childhood movie, the 1989 classic Teenage Mutant Ninja Turtles.
 
-![Personal_Network_Board___Trello_--](https://www.freecodecamp.org/news/content/images/2023/01/Personal_Network_Board___Trello_--.png)
-
-My Personal Network Board with my friends from my side job fighting crime.
+![Personal_Network_Board___Trello_--](https://www.freecodecamp.org/news/content/images/2023/01/Personal_Network_Board___Trello_--.png)My Personal Network Board with my friends from my side job fighting crime.
 
 You can go through your social media accounts – even your old school year books if you have them – and start adding people.
 
@@ -1457,11 +1438,9 @@ If you have the money, just find a local photographer and pay them to take some 
 
 You may even have a friend who's into photography, who can take them for free.
 
-I took my headshot myself, using Photobooth, which comes pre-installed on MacOS. Here's what it looks like:
+I took my headshot myself, using Photobooth, which comes pre-installed on MacOS. My friend spent about 10 minutes fixing some background and shading in Photoshop. He may have made my teeth slightly whiter. Here's what it looks like:
 
-![Michael_Headshot_B_W_Full_heic](https://www.freecodecamp.org/news/content/images/2023/01/Michael_Headshot_B_W_Full_heic.png)
-
-My headshot. I use this same photo everywhere.
+![Michael_Headshot_B_W_Full_heic](https://www.freecodecamp.org/news/content/images/2023/01/Michael_Headshot_B_W_Full_heic.png)My headshot. I use this same photo everywhere.
 
 Be sure to smile with your eyes, so you don't look robotic. Or better yet, think of something really funny, like I did here. Then the smile will be genuine.
 
@@ -1469,7 +1448,7 @@ Take a lot of shots from different angles, and just use whichever one looks best
 
 I recommend using a headshot that looks like how you look on any given day. Not a heavily photoshopped photo that tries to maximize your attractiveness. You want people at events to recognize you from your photo. And you don't want to intimidate people with your beauty. You want to put them at ease.
 
-Speaking of putting people at ease: do **not** wear sunglasses, or try too hard to look cool. You want to look friendly and  approachable. A good acid test for this is: look at your photo. If you were lost, and saw this person on the street, would you be brave enough to ask them for directions?
+Speaking of putting people at ease: do **not** wear sunglasses, or try too hard to look cool. You want to look friendly and  approachable. A good acid test for this is: look at your photo. If you were lost, and saw this person on the street, would you be brave enough to ask them for directions?
 
 Once you have chosen your headshot photo, use that same photo everywhere. Put it on all of your social media accounts.
 
@@ -1493,9 +1472,9 @@ So what is that point you need to get to?
 
 Essentially:
 
-1.  I know you
-2.  I like you
-3.  and I respect the work you're doing.
+1. I know you
+2. I like you
+3. and I respect the work you're doing.
 
 That's it.
 
@@ -1517,7 +1496,7 @@ I'm going to share a template, but never use any templates verbatim, because if 
 
 If I were messaging someone I hadn't talked to in a few months or years out of the blue, I would say something like this:
 
-"Hey \[name\], I hope your \[new year / spring / week\] is off to a fun start. Congrats on \[new job / promotion / new baby / completed project\]. It's inspiring to see you out there getting things done."
+"Hey [name], I hope your [new year / spring / week] is off to a fun start. Congrats on [new job / promotion / new baby / completed project]. It's inspiring to see you out there getting things done."
 
 Something short and to the point like that. Greeting + congratulations + compliment. That is the basic formula.
 
@@ -1535,11 +1514,11 @@ Because – say it with me again – **people are busy.**
 
 Because people are so busy, they are often tempted to see strangers more for what those strangers can do for them:
 
--   This person drives the bus that gets me to work.
--   This person makes my beverage just the way I like it.
--   This person in HR answers my questions about time off.
--   This person put together a bangin' acid jazz playlist for me to listen to while I code.
--   This person sends me helpful emails each week with free coding resources.
+- This person drives the bus that gets me to work.
+- This person makes my beverage just the way I like it.
+- This person in HR answers my questions about time off.
+- This person put together a bangin' acid jazz playlist for me to listen to while I code.
+- This person sends me helpful emails each week with free coding resources.
 
 To some extent, you are what you do for people.
 
@@ -1559,9 +1538,7 @@ On the contrary – you're reaching out because you have something to offer them
 
 You are, after all, in possession of one of the most powerful skillsets a person can acquire. The ability to bend machines to your will. You are a programmer.
 
-![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)
-
-This is what being good at coding feels like.
+![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)This is what being good at coding feels like.
 
 Or, at least, you're on the road to becoming one.
 
@@ -1579,7 +1556,7 @@ As I said, the strongest opening move – the approach that's most likely to get
 
 If I were doing this, here's a simple template I'd use. Remember not to use this template verbatim. Rewrite it in your own voice, how you would say it to a friend:
 
-> "Hey \[name\], congrats on the \[new job / promotion / new baby\]. I've been learning some programming, and am building my portfolio. You immediately came to mind as someone who gets a lot of things done. Is there any sort of tool or app that would make your life easier? I may be able to code it up for you, for practice."
+> "Hey [name], congrats on the [new job / promotion / new baby]. I've been learning some programming, and am building my portfolio. You immediately came to mind as someone who gets a lot of things done. Is there any sort of tool or app that would make your life easier? I may be able to code it up for you, for practice."
 
 This is a strong approach, because it is personalized and doesn't come across as automated. People get so many automated messages these days that they are quick to disregard anything that even resembles an automated message.
 
@@ -1633,10 +1610,10 @@ First of all, meeting people for the first time in person is so much more powerf
 
 When you meet someone in person, your memory has so much more information to latch onto:
 
--   How the person looks, their posture, and how they move through the space
--   The sound of their voice and the way they speak
--   The lights, sounds, aromas, temperature, and the general feel of the venue
--   And so many other little details that get baked into your memory
+- How the person looks, their posture, and how they move through the space
+- The sound of their voice and the way they speak
+- The lights, sounds, aromas, temperature, and the general feel of the venue
+- And so many other little details that get baked into your memory
 
 Spending 10 minutes talking with someone in person can build a deeper connection than dozens of messages back and forth, across weeks of correspondence.
 
@@ -1674,9 +1651,9 @@ You build relationships over time. It's not about total time spent with someone 
 
 There is a good chance you will see the person again in the future. Maybe at that same exact location a few weeks later. And **that** is when you make your move:
 
-"Hi \[name\] how's the \[thing you talked about the previous time\] going?"
+"Hi [name] how's the [thing you talked about the previous time] going?"
 
-Pick the conversation up where it left off. If they seem like someone who would be a helpful addition to your Personal Network Board, ask them "hey what are you doing next \[day of week\]? Do you want to come with me to \[other upcoming local event\]?"
+Pick the conversation up where it left off. If they seem like someone who would be a helpful addition to your Personal Network Board, ask them "hey what are you doing next [day of week]? Do you want to come with me to [other upcoming local event]?"
 
 Always have your upcoming week of events in mind, so you can invite people to join you.
 
@@ -1727,6 +1704,8 @@ In this chapter, I'll share practical tips for how you can build a sterling repu
 But first, here's how I built my reputation.
 
 ### Story Time: How Did a Teacher in His 30s Build a Reputation as a Developer?
+
+*Last time on Story Time: Quincy started building his network of developers, entrepreneurs, and hiring managers in tech. He was frequenting hackerspaces and tech events around the city. But he had yet to climb into the arena and test his might...*
 
 I was already several months into my coding journey when I finally worked up the courage to go to my first hackathon.
 
@@ -1788,13 +1767,13 @@ I showed them examples of the three formats that essays might require: MLA, APA,
 
 "Could we generate all three of these at once, so they can just copy-paste them?" I asked.
 
-"We can do better than that," Steve said. "We can have button for each of them that puts the citation directly into their clipboard."
+"We can do better than that," Steve said. "We can have a button for each of them that puts the citation directly into their clipboard."
 
 We worked fast, creating a simple MVP (Minimum Viable Product) by the end of Friday night. All it did was grab the current website's metadata and structure it as a citation. But it worked.
 
 Since it was my first hackathon, I didn't want the stress of staying in a hostel. So I'd splurged to get a hotel room. We had two twin beds, so each night we'd rotate which of us had to sleep on the floor.
 
-Saturday morning, our ambitions grew. I walked to the whiteboard and said to the team: "Citing websites is great and all. But a lot of the things student cite are in books or academic papers. We need to be able to generate citations for those, too."
+Saturday morning, our ambitions grew. I walked to the whiteboard and said to the team: "Citing websites is great and all. But a lot of the things students cite are in books or academic papers. We need to be able to generate citations for those, too."
 
 We found an API that we could use to get citation information based on ISBN (a serial number used for books). And we hacked together a script that could search for academic papers based on their DOI (a serial number used for academic papers), then scrape data from the result page.
 
@@ -1806,7 +1785,7 @@ As a teacher, I would routinely give talks in front of my peers – sometimes do
 
 In a few hours, I'd be presenting to a room full of ambitious developers. And judges. People with Ph.D.'s, some of whom had founded their own tech companies. They were going to be evaluating our work. I was terrified I'd somehow blow it.
 
-Unable to sleep, I opened my email. The Startup Weekend staff had sent out an email, which included a PDF of a book. It was an unofficial mash-up of the tech startup classics _4 Steps to the Epiphany_ and _The Lean Startup_.
+Unable to sleep, I opened my email. The Startup Weekend staff had sent out an email, which included a PDF of a book. It was an unofficial mash-up of the tech startup classics [4 Steps to the Epiphany](https://www.amazon.com/Four-Steps-Epiphany-Successful-Strategies/dp/1119690358?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=662e9d222ccd9aa050d3ad29438e74e3&language=en_US&ref_=as_li_ss_tl) and [The Lean Startup](https://www.amazon.com/The-Lean-Startup-Eric-Ries-audiobook/dp/B005MM7HY8?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=13b3c19bdbda93658336cf7c69e27100&language=en_US&ref_=as_li_ss_tl).
 
 Now, I had already read these books, because they were required reading for anyone who wanted to build software products in the early 2010s. But I had also read dozens of other startup books. A lot of their insights sort of ran together into a slurry of advice.
 
@@ -1820,11 +1799,11 @@ But it was Sunday morning. Where was I going to find potential customers? Well, 
 
 I drove my team to the event venue, waved goodbye and said: "I'll come back when I have cold, hard cash from customers."
 
-My team mates chuckled. I'm not sure if they thought I was serious. They said, "Don't be late for the pitch."
+My teammates chuckled. I'm not sure if they thought I was serious. They said, "Don't be late for the pitch."
 
 But I was serious. I had a prototype of the app running on my laptop. I punched Stanford into my GPS and embarked on my mission.
 
-Now, I had gone to a really inexpensive state university in Oklahoma. So I felt really out of my depth when I rolled up to one of the premier universities in the world.
+Now, I studied at a really inexpensive state university in Oklahoma. So I felt really out of my depth when I rolled up to one of the premier universities in the world.
 
 Stanford costs $50,000 per year to attend. And I pulled into their parking lot driving a car worth 1/10th of that.
 
@@ -1834,7 +1813,7 @@ I asked myself: where are the most high-achieving, hard-core students this time 
 
 I walked into the main library, right past the security desk and a sign that said "no soliciting."
 
-I strided around the stacks, finding a small handful of people studying. This one kid was studiously taking notes as he read through a thick textbook. Bingo.
+I strode around the stacks, finding a small handful of people studying. This one kid was studiously taking notes as he read through a thick textbook. Bingo.
 
 I slid into the seat next to him. "Psst. Hey. Do you like citations?"
 
@@ -1878,7 +1857,7 @@ He fumbled with his wallet, then said, "five bucks."
 
 I looked at the crumpled bill and shrugged. "Sold."
 
-He smiled, and I sent him an email to with instructions for how to install it. Then I said, "One more thing. Let's take a picture together."
+He smiled, and I sent him an email with instructions for how to install it. Then I said, "One more thing. Let's take a picture together."
 
 I put my phone on selfie mode. He started to smile, and I said, "Here. Hold up the five dollar bill."
 
@@ -1918,7 +1897,7 @@ My teams had come in second or third so many times I could barely keep count. Bu
 
 That was until an event in San Diego. I'll never forget the feeling of building something that won over the audience and judges to the extent that our victory felt like a foregone conclusion.
 
-After they announced us as the winner, I remember sneaking out the back to a parking lot and calling my grandparents. I told them that I'd finally done it. I'd helped build an app and craft a pitch that had won a hackathon.
+After they announced us as the winner, I remember sneaking out the back door to a parking lot and calling my grandparents. I told them that I'd finally done it. I'd helped build an app and craft a pitch that had won a hackathon.
 
 I don't know how much my grandparents understood about software development, or about hackathons. But they said they were proud of me.
 
@@ -1938,7 +1917,9 @@ And that reputation was crucial to getting my first freelance clients, my first 
 
 ### Why Your Reputation is So Important
 
-The role of reputation in society goes way, way back to human prehistory. In most tribes and settlements, there was some system to keep track of who owed what to whom. Before there was cash, there was credit.
+The role of reputation in society goes way, way back to human prehistory. In most tribes and settlements, there was some system to keep track of who owed what to whom.
+
+Before there was cash, there was credit.
 
 This may have been a written ledger. Or it may have been an elder who simply kept all these records in their head.
 
@@ -1954,9 +1935,7 @@ You'll note that these examples all involve someone being good at something. Not
 
 It certainly helps to be a chill, down-to-earth human being. But this isn't The Big Lebowski, and we aren't going to survive on our charm alone.
 
-![image__2000-1338_](https://www.freecodecamp.org/news/content/images/2023/01/image__2000-1338_.png)
-
-The Big Lebowski (left). He had no job, he had no skills, he had no energy. But he had chill, out the wazoo.
+![image__2000-1338_](https://www.freecodecamp.org/news/content/images/2023/01/image__2000-1338_.png)The Big Lebowski (left). He had no job, he had no skills, he had no energy. But he had chill, out the wazoo.
 
 It's easy for a developer to say: "Oh yeah. I know JavaScript like the back of my hand. I can build you any kind of JavaScript application you need, running on any device you can think of."
 
@@ -1966,8 +1945,8 @@ But how do you know they're not exaggerating their claims?
 
 After all, a devious man once said:
 
-> "If you can only be good at one thing, be good at lying.  
->   
+> "If you can only be good at one thing, be good at lying.
+>
 > Then you're good at everything."
 
 (The true provenance of this quote is unknown. But I like to imagine it was said by a 1920s con man wearing a top hat and a monocle.)
@@ -1998,28 +1977,28 @@ The worst-case scenario is not merely someone who lies to make more money. It's 
 
 History is rife with employees who unleashed catastrophic damage upon their employers, all for their own personal gain.
 
-Thus, the developer hiring process at most big companies is paranoid as heck. Maybe it should be. But unfortunately, this makes it harder for _everyone_ to get a developer job – even the most honest of candidates.
+Thus, the developer hiring process at most big companies is paranoid as heck. Maybe it should be. But unfortunately, this makes it harder for *everyone* to get a developer job – even the most honest of candidates.
 
 As developers, we need proof that our skills are as strong as we say they are. We need proof that our work ethic is as steadfast as our employers need it to be.
 
 That's where reputation comes in. It reduces ambiguity. It reduces counter-party risk. It makes it safer for employers to make a job offer, and to sign an employment contract with you.
 
-This means that – if you have a strong enough reputation – you may be able to get into the company through a side door – rather than the front door that other applicants have to line up for.
+This means that – if you have a strong enough reputation – you may be able to get into the company through a side door – rather than the front door that other applicants line up for.
 
 Some companies even have in-house recruiters who can fast track your interview process. A strong reputation can also help you command more bargaining power during salary negotiations.
 
-So let's talk about you can build a strong reputation, and become sought-after by managers.
+So let's talk about how you can build a strong reputation, and become sought-after by managers.
 
 ### How to Build Your Reputation as a Developer
 
-There are at least six time-tested ways you can build your reputation as developer. These are:
+There are at least six time-tested ways you can build your reputation as a developer. These are:
 
-1.  Hackathons
-2.  Contributing to open source
-3.  Creating Developer-focused content
-4.  Rising in the ranks working at companies who have a "household name"
-5.  Building a portfolio of freelance clients
-6.  Starting your own open source project, company, or charity
+1. Hackathons
+2. Contributing to open source
+3. Creating Developer-focused content
+4. Rising in the ranks working at companies who have a "household name"
+5. Building a portfolio of freelance clients
+6. Starting your own open source project, company, or charity
 
 #### How to Find Hackathons and Other Developer Competitions
 
@@ -2033,35 +2012,33 @@ Even though I lived in Santa Barbara, which only had hackathons once every few m
 
 Hackathons used to be hard core events. People would knock back energy drinks and sleep on floors, all to finish their project by pitch time.
 
-But hackathon organizers are gradually becoming more mindful about the health and sustainability of these events. After all, a lot of participant have kids, or demanding full-time jobs, and can't just go all-out for an entire weekend.
+But hackathon organizers are gradually becoming more mindful about the health and sustainability of these events. After all, a lot of participants have kids, or demanding full-time jobs, and can't just all-out code for an entire weekend.
 
-The best way to find upcoming events is to just google "hackathon \[your city name\]" and browse the various event calendars that come up. Many of these will be run by universities, local employers, or even education-focused charities.
+The best way to find upcoming events is to just google "hackathon [your city name]" and browse the various event calendars that come up. Many of these will be run by universities, local employers, or even education-focused charities.
 
 If you're playing to win, I recommend doing your research ahead of time.
 
 Who are the event sponsors? Usually it will be Business-to-Developer type companies, with APIs, database tools, or various Software-as-a-Service offerings.
 
-These sponsors will probably have a booth at the event where you can talk with their developer advocates. These are people who get paid to teach people how to use the company's tools, and sometimes they're even the company founders themselves.
+These sponsors will probably have a booth at the event where you can talk with their developer advocates. These are people who get paid to teach people how to use the company's tools. Sometimes you'll even meet key employees or founders at these booths, which can be a great networking opportunity, too.
 
-Often the hackathon will often have sponsor-specific prizes. "Best Use of the \[sponsor's\] API." It may be easier to focus your time on incorporating specific sponsor tools into your project, rather than trying to win the grand prize. You can still put these down as wins on your LinkedIn or your résumé. A win is a win.
+Often the hackathon will offer sponsor-specific prizes. "Best Use of the [sponsor's] API." It may be easier to focus your time on incorporating specific sponsor tools into your project, rather than trying to win the grand prize. You can still put these down as wins on your LinkedIn or your résumé. A win is a win.
 
 Sometimes the hackathon is just so high profile – or the prize is so substantial – that is just makes sense to try and win the competition outright.
 
-During my time going to hackathons, I was able to win several month's rent worth of cash prizes, more than a year's worth of free co-working space, and even a private tour of the United Nations building in New York.
+During my time going to hackathons, I was able to win several month's rent worth of cash prizes, several years' worth of free co-working space, and even a private tour of the United Nations building in New York City.
 
-On the circuit, I met people whose main source of income was cash prizes from winning hackathons. One dev I knew managed to win nine sponsor prizes at the same hackathon. He managed to integrate all of those sponsor tools into his project – and still win second place overall.
+On the circuit, I met people whose main source of income was cash prizes from winning hackathons. One dev I knew managed to win nine sponsor prizes at the same hackathon. He managed to integrate all of those sponsor tools into his project – and also win second place overall.
 
 Don't be surprised if some of the people you run into frequently at hackathons go on to found venture-backed companies, or launch prominent open source projects.
 
-The level of ambition you'll see among hackathon regulars is way, way higher than that of the average developer. These are, after all, people who finish a work week, then go straight into a work weekend. Out of the frying pan and into the fire.
+The level of ambition you'll see among hackathon regulars is way, way higher than that of the average developer. These are, after all, people who finish a work week, then go straight into a work weekend. These people are not afraid to leap out of the frying pan and into the fire.
 
 ### How to Contribute to Open Source
 
 Contributing to open source is one of the most immediate ways you can build your reputation. Most employers are going to look at your GitHub profile, which will prominently display your Git commit history.
 
-![raisedadead__Mrugesh_Mohapatra__--](https://www.freecodecamp.org/news/content/images/2023/01/raisedadead__Mrugesh_Mohapatra__--.png)
-
-The GitHub profile of Mrugesh Mohapatra, who does a ton of platform development and DevOps for freeCodeCamp.org. Note how green his activity bar is. 2,208 contributions in the past year alone.
+![raisedadead__Mrugesh_Mohapatra__--](https://www.freecodecamp.org/news/content/images/2023/01/raisedadead__Mrugesh_Mohapatra__--.png)The GitHub profile of Mrugesh Mohapatra, who does a ton of platform development and DevOps for freeCodeCamp.org. Note how green his activity bar is. 2,208 contributions in the past year alone.
 
 Many open source project maintainers, such as Linux Foundation, Mozilla (Firefox), and of course freeCodeCamp ourselves, have high standards for code quality.
 
@@ -2077,11 +2054,11 @@ Read Hillary Nyakundi's comprehensive guide to [getting started with open source
 
 ### How to Create Developer-Focused Content
 
-Developers are people, and like other people, they want something to do with their time when they're not working, sleeping, or hanging with friends and family.
+Developers are people. And like other people, they want something to do with their time when they're not working, sleeping, or hanging with friends and family.
 
 For many people – including myself – that means spending time in other people's thoughts. Books. Video essays. Interactive experiences like [visual novels](https://www.freecodecamp.org/news/learn-to-code-rpg-1-5-update/).
 
-You can broadly refer to these as "content". I'm not a huge fan of the word, because it makes these feel disposable. But that's what people call it.
+You can broadly refer to these as "content." I'm not a huge fan of the word, because it makes these works feel disposable. But that's what people call it.
 
 Software development is an incredibly broad field, with so many different topics you could approach. There are developer lifestyle vlogs, coding interview prep tutorials, coding live streams on Twitch, and developer interview podcasts.
 
@@ -2093,7 +2070,7 @@ You can pick a specific topic and gradually come to be seen as the expert.
 
 There are developers who specialize in tutorials for specific technology stacks, for example.
 
-My friend Andrew Brown creates [free courses to prepare you for all the AWS, Azure, and Google Cloud certifications](https://www.freecodecamp.org/news/azure-developer-certification-az-204-pass-the-exam-with-this-free-13-5-hour-course/), and also runs an exam prep service.
+My friend Andrew Brown is a former CTO from Toronto who has passed all the major DevOps exams. He creates [free courses to prepare you for all the AWS, Azure, and Google Cloud certifications](https://www.freecodecamp.org/news/azure-developer-certification-az-204-pass-the-exam-with-this-free-13-5-hour-course/), and also runs an exam prep service.
 
 There are more than 20 million software developers around the world. That's a lot of people who will potentially consume your content, and who will come to know who you are.
 
@@ -2101,11 +2078,11 @@ There are more than 20 million software developers around the world. That's a lo
 
 You may have seen a developer introduced as an "Ex-Googler" or an "Ex-Netflix engineer."
 
-Some tech companies have such rigorous hiring processes, and such high standards, that even getting a job at the company is big accomplishment.
+Some tech companies have such rigorous hiring processes – and such high standards – that even getting a job at the company is a big accomplishment.
 
 There are some practical reasons why employers look at where candidates have previously worked. It reduces the risk of a bad hire.
 
-You can build up your reputation by virtue of working your way up the prestige hierarchy. You can ladder from a local employer to a Fortune 500 company, and ultimately to one of the big tech giants.
+You can build up your reputation by working your way up the prestige hierarchy. You can ladder from a local employer to a Fortune 500 company, and ultimately to one of the big tech giants.
 
 Of course, working at a giant corporation is not for everyone. I'll talk about this more in Chapter 4. But know that it is one option you have for building up your reputation.
 
@@ -2119,17 +2096,51 @@ For example, if you did good work for a locally-based bank, that may be enough t
 
 There is something to be said for being a "hometown hero." I know many developers who can effectively compete with online competition just by being physically present in meetings, and knowing people locally.
 
+### How to Build a Developer Portfolio of Your Work
+
+Once you've built some projects, you'll want to show them off. And the best way to do this is with short videos.
+
+People are busy. They don't have time to pull down your code and run it on their own computer.
+
+And if you send people to a website, they may not fully grasp what they're looking at, and why it's so special.
+
+That's why I recommend you use a screen capture tool to recording 2 minute video demos.
+
+Two minutes should be long enough to show how the project works. And once you've done that, you can explain some of the implementation details, and design decisions you made.
+
+But always, always start with the demo. People want to see something work. They want to see something visual.
+
+Once you've lured people in with your compelling demo of your app running, you can explain all the details you want. Your audience will now have more context, and be more interested.
+
+Two minutes is also a magic length, because you can upload that video to a tweet, and it will auto-play on Twitter as people scroll past it. Auto-play videos are much, much more likely to be watched on Twitter. They remove the friction of having to click a play button, or navigate to another website.
+
+<iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" title="Twitter Tweet" src="https://platform.twitter.com/embed/Tweet.html?creatorScreenName=ossia&amp;dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfaG9yaXpvbl90aW1lbGluZV8xMjAzNCI6eyJidWNrZXQiOiJ0cmVhdG1lbnQiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfYmFja2VuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfcmVmc3JjX3Nlc3Npb24iOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYnVzaW5lc3NfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2NoaW5fcGlsbHNfMTQ3NDEiOnsiYnVja2V0IjoiY29sb3JfaWNvbnMiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X3Jlc3VsdF9taWdyYXRpb25fMTM5NzkiOnsiYnVja2V0IjoidHdlZXRfcmVzdWx0IiwidmVyc2lvbiI6bnVsbH0sInRmd19taXhlZF9tZWRpYV8xNTg5NyI6eyJidWNrZXQiOiJ0cmVhdG1lbnQiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NlbnNpdGl2ZV9tZWRpYV9pbnRlcnN0aXRpYWxfMTM5NjMiOnsiYnVja2V0IjoiaW50ZXJzdGl0aWFsIiwidmVyc2lvbiI6bnVsbH0sInRmd19leHBlcmltZW50c19jb29raWVfZXhwaXJhdGlvbiI6eyJidWNrZXQiOjEyMDk2MDAsInZlcnNpb24iOm51bGx9LCJ0ZndfZHVwbGljYXRlX3NjcmliZXNfdG9fc2V0dGluZ3MiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3ZpZGVvX2hsc19keW5hbWljX21hbmlmZXN0c18xNTA4MiI6eyJidWNrZXQiOiJ0cnVlX2JpdHJhdGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmx1ZV92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19nb3ZfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYnVzaW5lc3NfYWZmaWxpYXRlX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1603405016525688834&amp;lang=en&amp;origin=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Flearn-to-code-book%2F&amp;sessionId=5fb6a17a050a6f4d155b53178392f91afe5602a7&amp;siteScreenName=freecodecamp&amp;theme=light&amp;widgetsVersion=2b959255e8896%3A1673658205745&amp;width=550px" data-tweet-id="1603405016525688834" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; position: static; visibility: visible; width: 550px; height: 708px; display: block; flex-grow: 1;"></iframe>
+
+A video demo of a twitter clone project, built by a freeCodeCamp alumni. This one has no voice-over explanation, and is 2 minutes of UI demo. But it's still really good.
+
+You can can put these project demo videos on websites like YouTube, Twitter, your GitHub profile, and of course your own portfolio website.
+
+For capturing this video, I recommend using QuickTime, which comes built-in with MacOS. And if you're on Windows, you can use Game Recorder, which comes free in Windows 10.
+
+And if you want a more powerful tool, OBS is free and open source. It's harder to learn, but infinitely customizable.
+
+As far as recording tips: keep your font size as large as possible, and use an external mic. Any mic you can find – even from cheap headphones – will be better than speaking into your laptop's built in mic.
+
+Invest as much time as you need to in recording and re-recording takes until you nail it.
+
+Being able to demo your projects and present your code is a valuable skill you'll use throughout your career. Time spent practicing pitching is never wasted.
+
 ### How to Start Your Own Open Source Project, Company, or Charity
 
 Being a founder is the fastest – but also riskiest – way to build a reputation as a developer.
 
-It is riskiest because you are wagering your time, your money, and possibly even your personal relationships – all for an unknown outcome.
+It's riskiest because you're wagering your time, your money, and possibly even your personal relationships – all for an unknown outcome.
 
-If you contribute to open source for long enough, you _will_ build a reputation as a developer.
+If you contribute to open source for long enough, you *will* build a reputation as a developer.
 
-If you grind the hackathon circuit for long enough, you _will_ build a reputation as a developer_._
+If you grind the hackathon circuit for long enough, you *will* build a reputation as a developer*.*
 
-But you could attempt to start entrepreneurial projects for decades without getting traction, and squander your time, money, and connections along the way.
+But you could attempt to start entrepreneurial projects for decades without getting traction. And squander your time, money, and connections along the way.
 
 Entrepreneurship is beyond the scope of this book. But if you're interested in it, I will give you this quick advice:
 
@@ -2143,7 +2154,7 @@ By working for someone else, you get paid to learn. You get exposure to the work
 
 ## How Not to Destroy Your Reputation
 
-> "It takes a lifetime to build a good reputation, but you can lose it in a minute." – Will Rogers, Actor, Cowboy, and one of my heroes growing up in Oklahoma
+> "It takes a lifetime to build a good reputation, but you can lose it in a minute." – Will Rogers, Actor, Cowboy, and one of my heroes growing up in Oklahoma City
 
 Building your reputation is a marathon, not a sprint.
 
@@ -2157,13 +2168,13 @@ People used to say dumb things all the time. The words might hang in the air for
 
 Now when people say dumb things, they often do so online. And in indelible ink.
 
-Always assume that the moment you type something into a website and press enter, it's going to be saved to a database. That database is going to be backed up in several data centers around the world.
+Always assume that the moment you type something into a website and press enter, it's going to be saved to a database. That database is going to be backed up across several data centers around the world.
 
 You can prove the existence of data, but there is no way to prove the absence of data.
 
 You should assume, for all intents and purposes, that the cat is out of the bag. There's no getting the cat back in the bag. Whatever you just said: that's on your permanent record.
 
-You can delete the remark. You can delete your account. You can even try to scrub it from Google search results. But someone has probably already backed it up on the Wayback Machine. And when that company inevitably gets hacked years from now, that data will probably still be in there somewhere, ready to be resurfaced.
+You can delete the remark. You can delete your account. You can even try to scrub it from Google search results. But someone has probably already backed it up on the Wayback Machine. And when one of those databases inevitably gets hacked years from now, those data will probably still be in there somewhere, ready to resurfaced.
 
 It is a scary time to be a loud mouth. So don't be. Think before you speak.
 
@@ -2179,7 +2190,9 @@ But I generally refrain from tearing people down. Even people who deserve it.
 
 In a fight, everyone looks dirty.
 
-Do you want to look wrathful, dog piling in on someone who just said something dumb?
+You don't want to look wrathful, tearing apart someone's argument, or dog piling in on someone who just said something dumb.
+
+Sure – caustic wit can win you internet points in the short term. But it can also make people love you a little bit less and fear you a little bit more.
 
 I also try to refrain from complaining. Yes, I could probably get better customer service if I threatened to tweet about a cancelled flight.
 
@@ -2187,7 +2200,7 @@ But people are busy. Most of them don't want to use their scarce time, scrolling
 
 So that is my advice on using social media. Try to keep it positive.
 
-If it is a matter that you believe strongly about, I won't stop you from speaking your mind. Just think before you type, and think before you hit send.
+If it's a matter that you believe strongly about, I won't stop you from speaking your mind. Just think before you type, and think before you hit send.
 
 ### Don't Over-promise and Under-deliver
 
@@ -2195,15 +2208,31 @@ One of the most common ways I see developers torpedo their own reputations is to
 
 Remember when I talked about the Las Vegas hackathon where I utterly failed to finish the project in time for the pitch, and we had to use slides instead of a working app?
 
-Yeah, that was one of the lowest points in my learn to code journey. My team mates were polite, but I'm sure they were disappointed in me. After all, I had been overconfident. I had over-promised what I'd be able to achieve in that time frame, and I had under-delivered.
+Yeah, that was one of the lowest points in my learn to code journey. My teammates were polite, but I'm sure they were disappointed in me. After all, I had been overconfident. I had over-promised what I'd be able to achieve in that time frame, and I had under-delivered.
 
 It is much better to be modest in your estimations of your abilities.
 
-Remember the parable of Icarus, who flew too close to the sun. If only he'd taken a more measured approach. He wouldn't have plunged into the sea, leaving a guilt-stricken father.
+Remember the parable of Icarus, who on wax wings flew too close to the sun. If only he'd taken a more measured approach. Ascended a bit slower. Then his wings wouldn't have melted, and he wouldn't have plunged into the sea, leaving a guilt-stricken father.
 
-![1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus](https://www.freecodecamp.org/news/content/images/2023/01/1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg)
+![1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus](https://www.freecodecamp.org/news/content/images/2023/01/1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg)Landscape with the Fall of Icarus by Pieter Bruegel the Elder, circa 1560. Icarus coulda been a contender. He coulda been somebody. But instead, he's just legs disappearing into the sea. And the farmers and the shepherds can't be bothered to look up from their work to take in his insignificance.
 
-Landscape with the Fall of Icarus by Pieter Bruegel the Elder, circa 1560. Icarus coulda been a contender. He coulda been somebody. But instead, he's just feet disappearing into the sea. And the farmers and the shepherds can't be bothered to look up from their work to take in his insignificance.
+### Get Addictions Under Control Before They Damage Your Reputation
+
+If you have an untreated drug, alcohol, or gambling addiction, seek help first. The developer job search can be a long, grueling one. You want to go into it with your full attention.
+
+Even something as seemingly harmless as video game addiction can distract you, and soak up too much of your time. It's worth getting it under control first.
+
+I am not a doctor. And I'm not going to give you a "drugs are bad" speech. But I will say: you may hear of Silicon Valley fads, where developers abuse drugs thinking they can somehow improve their coding or problem solving abilities.
+
+For a while there was a "micro-dosing LSD" trend. There was a pharmaceutical amphetamines trend.
+
+My gut reaction to that is: any edge these may give you is probably unsustainable, and a net negative over a longer time period.
+
+Don't feel peer pressure to take psychoactive drugs. Don't feel peer pressure to drink at happy hours. (I haven't drank so much as a beer since my daughter was born 7 years ago, and I don't feel like I've missed out on anything at all.)
+
+If you are in recovery from addiction, be mindful that learning to code and getting a developer job will be a stressful process. Pace yourself, so you don't risk a relapse.
+
+You do not want to reach the end of the career transition process – and achieve so much – only to have old habits resurface and undo your hard work.
 
 ### Try and Separate Your Professional Life From Your Personal Life
 
@@ -2217,15 +2246,85 @@ You are going to talk with people who would love to be in your shoes.
 
 Do not flaunt your wealth.
 
-Do not act like you're smarter than everybody else.
+Do not act as though you're smarter than everybody else.
 
 Do not abuse the power dynamic to get what you want in relationships.
 
-This will make you unlikable to the people around you. And if it's somehow captured online, it may go on to haunt you for the rest of your career.
+This will make you unlikable to the people around you. And if it's somehow captured and posted online, it may go on to haunt you for the rest of your career.
 
 Never lose sight of how much you have. And how much you have to lose.
 
-Now on that rather ominous note, we're ready to talk about something much more upbeat. You have now finished Chapter 3 and are ready to learn about the job search.
+### Use the Narrator Trick
+
+I'll close this chapter with a little trick I use to pump myself up.
+
+First, remember that you are the hero in your own coding journey. In the theater of your mind, you are the person everyone's watching – the one they are rooting for.
+
+The Narrator Trick is to narrate your actions in your head as you do them.
+
+> Quincy strides across the hackerspace, his laptop tucked under his arm. He sets his mug under the hot water dispenser and drops in a fresh tea bag. He pulls back the lever. And as the steaming water fills his mug, he says aloud in his best British accent: "Tea. Earl Grey. Hot."
+>
+> His energizing beverage in hand, he slides into a booth, squares his laptop on the surface, and catches the glance of a fellow developer. They lock eyes for a second. Quincy bows his head ever-so-slightly, acknowledging the dev's presence. The dev bows back, almost telepathically sharing this sentiment: "I see you friend. I see you showing up. I see you getting things done."
+
+This may sound ridiculous. Why yes, it is ridiculous. But I do it all the time. And it works.
+
+Narrating even the most mundane moments of your life in your head can help energize you. Crystalize the moment laid out before you, and give you clarity of purpose.
+
+And this works even better when you think of your life in terms of eras ("the Taco Bell years"). Or inflection points ("passing the GED exam").
+
+What does this have to do with building your reputation? Your reputation is essentially the summary of who you are. What you mean to people around you.
+
+By taking yourself more seriously, by thinking about your life as a movie, you're gradually working through who you are. And who you one day want to be.
+
+By narrating your actions, you shine a brighter light on them in your own mind. Why did I just do that? What was I thinking? Was there a better move there?
+
+So many people sabotage their reputations without even realizing it, just because they've settled into bad habits.
+
+For years I thought I had to be "funny" all the time. I would find any opportunity to inject some self-deprecating humor. A lot of people realized what I was doing and found it amusing. But a lot of them didn't understand, and just got the impression I was a jerk.
+
+Why did I do that? I think it went back to grade school, when I was always trying to be the class clown and make people laugh.
+
+But decades later, this reflex to fill silence with laughter was not serving me well.
+
+> "When you repeat a mistake, it's not a mistake anymore. It's a decision." – Paulo Coelho
+
+I might have gone on much longer without noticing this bad habit. But with the Narrator Trick, the awkwardness of my behavior was laid bare.
+
+I'm sure I've got lots of other ways of thinking and ways of doing things that are suboptimal. And with the help of the Narrator Trick, I'm hoping to identify them in the future and refine them, before they give people the wrong impression.
+
+### Your Reputation Will Become Your Legacy.
+
+Think about who you want to be at the end of your story. How you want people to think of your time on Earth. Then work backward from there.
+
+The person you want to be at the end of the movie. That hero you want people to admire. Why not start carrying yourself like that now?
+
+Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+
+That future you – how would they think? How would they approach situations and solve problems? How would they talk about their accomplishments? Their setbacks?
+
+Merely thinking about your future self can help you clarify your thinking. Your priorities.
+
+I often think of "Old Man Quincy", with his bad back. He has to excuse himself to run to the toilet every 30 minutes.
+
+But Old Man Quincy still tries his best to work with what he has. He moves in spite of sore joints. He ponders in spite of a foggy mind.
+
+Old Man Quincy still wants to get things done. He's proud of what he's accomplished, but he doesn't spend much time looking back. He looks forward at what he's going to do that day, and what goals he's going to accomplish.
+
+I often think about Old Man Quincy, and work backward to where I am today.
+
+What decisions can I make today that will set me up for being someone worthy of admiration tomorrow? Do I have to wait decades to earn that reputation? Or can I borrow some of that respect from the future?
+
+By thinking like my future self might think, can I make moves that earn me a positive reputation in the present?
+
+I believe that you can leverage your future reputation – your legacy – right now. Just think in terms of your future self and what you'll accomplish. And use that as a waypoint to guide you forward.
+
+I hope that these tools – the Narrator Trick and the visualizing your future self trick – help you not only think about the nature of reputation. I hope they also help you take concrete steps toward improving your reputation.
+
+Because building a reputation – making a name for yourself – is the surest path to sustainable success as a developer.
+
+Success can mean many things to many people. But most people – from most cultures – would agree: one big aspect of success is putting food on the table for yourself and your family.
+
+And that's what we're going to talk about next.
 
 ## Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search
 
@@ -2236,6 +2335,8 @@ Note that I said it's not complicated – it's still a lot of work. And it can b
 First, let me tell you how I got my first job.
 
 ### Story Time: How Did a Teacher in His 30s Get His First Developer Job?
+
+*Last time on Story Time: Quincy hit the hackathon circuit hard, even winning a few of the events. He was building his reputation as a developer who was "dangerous" with JavaScript. Not super skilled. Just dangerous...*
 
 I had just finished a long day of learning at the Santa Barbara downtown library, sipping tea and building projects.
 
@@ -2271,7 +2372,7 @@ That night I walked home feeling an electricity. It was much more dread than exc
 
 I felt nowhere near ready. And I wasn't even looking for a job. I was just living off my savings, learning to code full-time, with health insurance through my wife's job.
 
-I was a notorious penny pincher. People would give me a hard time about it. I would change my own oil, cut my own hair, and even cook my own rice at home when we ordered takeout, just to save a few bucks.
+I was a compulsive saver. People would give me a hard time about it. I would change my own oil, cut my own hair, and even cook my own rice at home when we ordered takeout – just to save a few bucks.
 
 Over the decade that I'd worked as a teacher, I'd managed to save nearly a quarter of my after-tax earnings. And I would buy old video games on Craigslist, then flip them on eBay. That may sound silly, but it was a substantial source of income for me.
 
@@ -2291,11 +2392,11 @@ I spent the final hours before the interview revisiting all the Ruby on Rails tu
 
 The office manager was a nice lady who took me back to the developer bullpen and introduced me to their small team of devs. There were maybe a dozen of them, most of them dressed in jeans and hoodies, aged from early 20s to late 40s. Two of them were women.
 
-I took turns navigating the tangle of desks and cables, shaking hands with each of them and introducing myself. This is where all my experience as a classroom teacher memorizing student names came in handy. I was able to remember all their names, so that later in the day when I left I could follow up with each of them: "Great meeting you \[name\]. I'd be excited to work alongside you."
+I took turns navigating the tangle of desks and cables, shaking hands with each of them and introducing myself. This is where all my experience as a classroom teacher memorizing student names came in handy. I was able to remember all their names, so that later in the day when I left I could follow up with each of them: "Great meeting you [name]. I'd be excited to work alongside you."
 
 First I met with the director of engineering. We went into a small office and closed the door.
 
-The whiteboard on the wall had sketches of Universal Markup Language (UML) diagrams. Dry erase marker of every color laid out the various servers and services, and how they were connected to one another.
+A whiteboard on the wall was covered in sketches of Unified Modeling Language (UML) diagrams. A rainbow of dry-erase marker laid out the relationships between various servers and services.
 
 I kept glancing at that whiteboard, fearing that he'd send me over to it to solve some sort coding problems and demonstrate my skills. Maybe the famous fizzbuzz problem? Maybe he'd want me to invert a binary tree?
 
@@ -2307,11 +2408,11 @@ They were a company of about 50 employees, with lots of venture capital funding,
 
 I gulped, leaned forward, and mustered all the confidence I could. "Yes," I said. "I believe I can."
 
-And he said, "Good. Good. OK. Go wait in the Pho restaurant downstairs. \[The CTO\] should be down there in a minute."
+And he said, "Good. Good. OK. Go wait in the Pho restaurant downstairs. [The CTO] should be down there in a minute."
 
 So I talked with the CTO over noodles. Mostly listened. I'd learned that people project intelligence on quiet people. Listening intently not only helps you get smarter – it even makes you looks smarter.
 
-And the approach worked. The meeting lasted about an hour. The noodles were good, I learned a lot about the company history, and the near-term goals. The CTO said, "OK go back up and talk with \[the director of engineering\]."
+And the approach worked. The meeting lasted about an hour. The noodles were tasty. I learned a lot about the company history, and the near-term goals. The CTO said, "OK go back up and talk with [the director of engineering]."
 
 And I did. And he offered me a job.
 
@@ -2329,7 +2430,7 @@ I was now a professional developer.
 
 ### What Employers Want
 
-Flash forward a decade. I have now been on both sides of the table. Interviewing hiring managers as a developer, and interviewing developers as a hiring manager.
+Flash forward a decade. I have now been on both sides of the table. I've been interviewed by hiring managers as a developer. I've interviewed developers as a hiring manager.
 
 I've spent many hours on calls with developers who are in the middle of the job search. Some of them have applied to hundreds of jobs and gotten only a few "call-backs" for job interviews.
 
@@ -2345,7 +2446,7 @@ Which of these candidates do you think an employer would prefer?
 
 **Y** is an OK coder, and has slower but more consistent output. Y gets along fine with colleagues, and rarely misses meetings or deadlines.
 
-**Z** is similar to Y in output, getting along with colleagues, meetings and deadlines. But Z has changed jobs 3 times in the past 3 years.
+**Z** is similar to Y in output, and able to get along well with colleagues and meet deadlines. But Z has changed jobs 3 times in the past 3 years.
 
 OK, you can probably guess from everything I've said up to this point: **Y** is the preferred candidate. And that is because employers value predictability above all else.
 
@@ -2367,19 +2468,19 @@ Let's say a manager hires the wrong developer. Take a moment to think about how 
 
 On average, it takes about 3 months to fill a developer position at a company. Employers have to first:
 
--   get the budget to hire a developer approved by their bosses
--   create the job description
--   post the job on job sites and communicate with recruiters
--   sift through résumés – many of which will be low-effort from candidates who are blindly applying to as many jobs as possible
--   start the interviewing process, which may involve flying the candidates out to the city and lodging them in a hotel
--   rounds of interviews involving lots of other team members. For some employers, this is a multi-day affair
--   selecting a final candidate, and negotiating an offer...
--   which many candidates will not accept anyway
--   signing contracts and onboarding the employee
--   giving them access to sensitive internal systems
--   introducing them to their team mates, and making sure everyone gets along OK
--   and then months of informal training, when the employee needs to understand a service or a part of a legacy codebase
--   steeping them in the team's way of doing things
+- get the budget to hire a developer approved by their bosses
+- create the job description
+- post the job on job sites and communicate with recruiters
+- sift through résumés – many of which will be low-effort from candidates who are blindly applying to as many jobs as possible
+- start the interviewing process, which may involve flying the candidates out to the city and lodging them in a hotel
+- rounds of interviews involving lots of other team members. For some employers, this is a multi-day affair
+- selecting a final candidate, and negotiating an offer...
+- which many candidates will not accept anyway
+- signing contracts and onboarding the employee
+- giving them access to sensitive internal systems
+- introducing them to their teammates, and making sure everyone gets along OK
+- and then months of informal training, when the employee needs to understand a service or a part of a legacy codebase
+- steeping them in the team's way of doing things
 
 In short – a lot of work.
 
@@ -2399,12 +2500,12 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 Now if you think hiring is hard, wait until you hear about the job application process. You may already be all-too-familiar with it. But here goes...
 
--   You have to prepare your résumé and CV, making decisions which you will constantly second-guess throughout your job search
--   You have to look around for job openings online, research the employers, and assess whether they're likely to be a good fit for you.
--   Most job openings will lead to webforms where you will have to retype your résumé over and over again, hoping the form doesn't crash due to server errors or JavaScript validation errors.
--   Once you submit these job applications, you have to wait while the employers process your application. Some employers receive so many applications that they can't manually review them all. (Google alone receives 9,000 applications per day.) Employers will use software to filter through applications. In-house recruiters [spend an average of 6 seconds looking at each résumé](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/). Often your application will never even be reviewed by a human.
--   You will likely never hear anything back from the company. They have little incentive to tell you why they rejected you (they don't want you to file a discrimination lawsuit). If you're lucky, you'll get one of those "We've chosen to pursue other candidates" emails.
--   And all the time you spend applying for these jobs – potentially hours per week – is mentally exhausting and, of course, unpaid.
+- You have to prepare your résumé or CV. Along the way, you will make decisions which you'll constantly second-guess throughout your job search.
+- You have to look around for job openings online, research the employers, and assess whether they're likely to be a good fit for you.
+- Most job openings will lead to webforms where you will have to retype your résumé over and over again, hoping the form doesn't crash due to server errors or JavaScript validation errors.
+- Once you submit these job applications, you have to wait while employer process them. Some employers receive so many applications that they can't manually review them all. (Google alone receives 9,000 applications per day.) Employers will use software to filter through applications. In-house recruiters [spend an average of 6 seconds looking at each résumé](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/). Often your application will never even be reviewed by a human.
+- You will likely never hear anything back from the company. They have little incentive to tell you why they rejected you (they don't want you to file a discrimination lawsuit). If you're lucky, you'll get one of those "We've chosen to pursue other candidates" emails.
+- And all the time you spend applying for these jobs – potentially hours per week – is mentally exhausting and, of course, unpaid.
 
 Wow. So you can see what a nightmare the hiring process is for employers, and especially for job candidates.
 
@@ -2412,15 +2513,11 @@ But if you stick with it, you can eventually land offers. And when it rains, it 
 
 Here's data from one freeCodeCamp contributor's job search over the span of 12 weeks:
 
-![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)
-
-Out of 291 applications, he ultimately received 8 offers.
+![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)Out of 291 applications, he ultimately received 8 offers.
 
 And as the offers came in, the starting salary got higher and higher. Note, of course, that this is for a job in San Francisco, one of the most expensive cities in the world.
 
-![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)
-
-By week 12 his starting salary offers were nearly double what they were in week 2.
+![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)By week 12 his starting salary offers were nearly double what they were in week 2.
 
 This developer's rate of getting interviews is quite strong. And his negotiation ability was also strong. You can [read more about his process if you're curious](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/).
 
@@ -2452,7 +2549,457 @@ My hope is that with strong skills, a strong network, and a strong reputation, y
 
 Hopefully one day in our lifetime, it will be easier for employers and skilled employees to find one another, without the long, brutal job application and interviewing process.
 
-But until that day, I hope my tips here in this book serve you well.
+### Should I Negotiate My Salary at My First Developer Job?
+
+Trying to negotiate your salary upward generally does not hurt as long as you do so politely.
+
+I've written at length on [how to negotiate your developer job offer salary](https://www.freecodecamp.org/news/salary-negotiation-how-not-to-set-a-bunch-of-money-on-fire-605aabbaf84b/).
+
+Essentially, negotiating a higher starting salary comes down to how much leverage you have.
+
+Your employer has work to be done. How badly does your employer need you to work for them? What other options do they have?
+
+And you need income to survive. What other options do you have? What is your backup plan?
+
+If you have a job offer from another employer offering to pay you a certain amount, you can use that as leverage in your salary negation.
+
+If your best backup plan is to go back to school and get a graduate degree... that's not particularly strong leverage, but it's better than nothing. And you could mention it during the salary negotiation process.
+
+Think back to the lengthy hiring process I described earlier. Employers have to go through at least a dozen steps before they can reach the job offer step with candidates. They are probably already planning for you to negotiate, and won't be surprised by it.
+
+Now, if you're in a situation like I was where a company just offers you a job out of the blue, you may feel awkward trying to negotiate.
+
+![92508](https://www.freecodecamp.org/news/content/images/2023/01/92508.jpeg)Smithers from the Simpsons
+
+I will admit – in my story time above, when my manager offered me the job, I did not negotiate.
+
+In retrospect, should I have negotiated my compensation? Probably.
+
+Did I have leverage? Probably not much. My backup plan was to just keep competing in hackathons and keep sipping tea and coding at the public library.
+
+I may have been able to negotiate and get a few more bucks an hour. But in the moment they offered me the job, compensation was the last thing on my mind. I was just ecstatic that I was going to be a professional developer.
+
+By the way, once you've worked as a developer at a company for a year or so, you may want to ask for a raise. I've written at length about [how to ask for a raise as a developer](https://www.freecodecamp.org/news/youre-underpaid-here-s-how-you-can-get-the-pay-raise-you-deserve-fafcf52956d6/). But it comes down to the same thing: leverage.
+
+### Should You Use a Recruiter for Your Developer Job Search?
+
+Yes. If you can find a recruiter who will help you land your first developer job, I think you should.
+
+I've written at length about [why recruiters are an underrated tool in your toolbox](https://www.freecodecamp.org/news/the-tech-recruiter-red-pill-967dd492560c/).
+
+Many employers will pay recruiters a finder's fee for sending them high quality job candidates.
+
+Recruiters’ incentives are well-aligned with your own goals as a job seeker:
+
+1. Since they get paid based on your starting salary, they are inclined to help you negotiate as high a starting salary as possible.
+2. The more candidates they place — and the faster they place them — the more money recruiters make. So they’ll want to help you get a job as fast as possible so they can move on to other job seekers.
+3. Since they only get paid if you succeed as an employee (and stay for at least 90 days), they'll try and make sure you’re competent, and a good fit for the company’s culture.
+
+This said, if a recruiter asks you to pay them money for anything, that is a red flag.
+
+And not all recruiters are created equal. Do your research before working with a recruiter. Even if they're ultimately getting paid by the employer, you are still investing your time in helping them place you. And time is valuable.
+
+Speaking of time, one way you can start getting paid to code sooner – even while you're preparing for the job search – is to get some freelance clients.
+
+### How to Get Freelance Clients
+
+I encourage new developers to try and get some freelance clients before they start their job search. There are three good reasons for this:
+
+1. It's much easier to get a freelance client than it is to get a full time job.
+2. Freelance work is less risky since you can do it without quitting your day job.
+3. You can start getting paid to code sooner, and start building your portfolio of professional work sooner.
+
+Getting freelance clients can be much easier than getting a developer job. Why is this?
+
+Think about small local businesses. It may just be a family that runs a restaurant. Or a shop. Or a plumbing company. Or a law firm.
+
+How many of those businesses could benefit from having an interactive website, back office management systems, and tools to automate their common workflows? Most of them.
+
+Now how many of those companies can afford to have a full-time software developer to build and maintain those systems? Not as many.
+
+That's where freelancers come in. They can do work in a more economical, case-by-case basis. A small business can bring on a freelancer for a single project, or for a shorter period of time.
+
+If you are actively building your network, some of the people you meet may become your clients.
+
+For example, you may meet a local accountant who wants to update their website. And maybe add the ability to schedule a consultation, or accept a credit card payment for a bill. These are common features that small businesses may request, and you may get pretty good at implementing them.
+
+You may also meet the managers of small businesses who need an ERP system, or a CRM system, or an inventory system, or one of countless other tools.
+
+In many cases, there is an open source tool that you can deploy and configure for them. Then you can just teach them how to use that system. And you can bill them a monthly service fee to have you "on call" and ready to fix problems that may arise.
+
+### Should I Use a Contract for Freelance Work?
+
+You will want to find a standard contract template, customize it, and get a lawyer to approve it.
+
+It may feel awkward to make the local bakery sign a contract with you just to help update their website or social media presence. But doing so will make the entire transaction feel more professional than a mere handshake agreement.
+
+It's unlikely that a small business will take you to court over a few thousand dollars. But in the event that this happens, you'll be glad you signed a contract.
+
+### How Much Should I Charge for Freelance Work?
+
+I would take whatever you make at your day job, figure out your hourly rate, and double it. This may sound like a lot of money, but freelance work is much harder than regular work. You have to learn a lot.
+
+Alternatively, you could just bill for a project. "I will deploy and configure this system for you for $1,000."
+
+Just be sure to specify a time frame that you are willing to maintain the project. You don't want people calling you 3 years later expecting you to come back and fix a system that nobody has been maintaining.
+
+### How Do I Make Sure Freelance Clients Pay Me?
+
+A lot of other freelancer – myself included – use this simple approach: ask for half of your compensation up-front, before you start the work. And when you can demonstrate that you're half way finished, ask for the other half.
+
+Always try to get all the money before you actually finish the project. That way, the client will not be able to dangle the money over your head and try to get extra work out of you.
+
+If you're already paid in full, the work you do to help your client after the fact will convey: "I'm going above and beyond for you."
+
+Which is a totally different vibe from: "Uh oh – are you even going to pay me for all this work I'm doing?"
+
+### Should I Use a Freelance Website like Upwork or Fiverr?
+
+If you are in a rural part of the world and can't find any clients locally, you could try some of these freelance websites. But otherwise I would not focus on them. Here's why:
+
+When you try to land contracts on a freelance website, you are competing with all the freelancers around the world. Many of them will live in cities that have a much lower cost of living than yours. Some of them will not even really care about their reputations like you do, and may be willing to deliver sub-par work.
+
+To some extent, these websites promote a "race to the bottom" phenomenon where the person who offers to do the work the cheapest usually gets the job.
+
+If you instead focus on finding clients through your own local network, you will not have to compete with these freelancers abroad.
+
+And the same goes for people who are looking for help from freelance developers. If you ever want to hire a freelancer, I strongly recommend working with someone you can meet with in-person, who has ties to your community.
+
+Someone who has lived in your city for several years, and attends a lot of the same social gatherings as you – they're going to be much less likely to try to take advantage of you. If both you and your counterparty care about their reputation, you are both invested in a partnership that works.
+
+You can each be a success story in one another's portfolios.
+
+### When Should I Stop Freelancing and Start Looking for a Job?
+
+If you are able to pay your bills freelancing, you may just want to keep doing it. Over time, you may even be able to build up your own software development agency, and hire other developers to help you.
+
+This said, if you are yearning for the stability of a developer job, you may be in luck. Freelance clients may convert into full-time jobs if you stick with them long enough. At some point, it may make economic sense for a client to just offer you a full-time job at a lower hourly rate. You get the stability of a 40-hour work week, and they get your skills full-time.
+
+You may also be able to hang onto a few freelance clients when you get a job. This can be a nice supplement to your income. But keep in mind that, as we'll learn in the next chapter, your first developer job can be an all-consuming responsibility. At least at first.
+
+How wild is that first year of working as a professional developer going to be? Well, let's talk about that.
+
+## Chapter 5: How to Succeed in Your First Developer Job
+
+> "A ship in port is safe. But that's not what ships are built for." – Grace Hopper, Mathematician, US Navy Rear Admiral, and Computer Science Pioneer
+
+Once you get your first developer job, that's when the real learning begins.
+
+You'll learn how to work productively alongside other developers.
+
+You'll learn how to navigate large legacy codebases.
+
+You'll learn Version Control Systems, Continuous Integration and Continuous Delivery tools (CI/CD), project management tools, and more.
+
+You'll learn how to work under an engineering manager. How to ship ahead of a deadline. And how to and work through a great deal of ambiguity on the job.
+
+Most importantly, you'll learn how to manage yourself.
+
+You'll learn how to break through psychological barriers that affect all of us, such as imposter syndrome. You'll learn your limits, and how to push ever so slightly beyond them.
+
+### Story Time: How did a Teacher in his 30s Succeed in his First Developer Job?
+
+*Last time on Story Time: Quincy landed his first developer job at a local tech startup. He was going to work as one of a dozen developers maintaining a large, sophisticated codebase. And he had no idea what he was doing...*
+
+I woke up at 4 a.m. and I couldn't go back to sleep. I tried. But I had this burning in my chest. This anxiety. Panic.
+
+I had worked for a decade in education. First as a tutor. Then as a teacher. And then as a school director.
+
+In a few hours, I would be starting over from the very bottom, working as a developer.
+
+Would any of my past learnings – past success – even matter in this new career?
+
+I did what I always do when I feel anxiety – I went for a run. I bounded down the hills, my headlamp bobbing in the darkness. When I reached the beach, I ran alongside the ocean as the sun crept up over the treetops.
+
+By the time I got home, my wife was already leaving for work. She told me not to worry. She said, "I'll still love you even if you get fired for not knowing what you're doing."
+
+When I reached my new office, nobody was there. As a teacher, I was used to getting to school at 7:30 sharp. But I quickly realized that most software developers don't start work that early.
+
+So I sat crosslegged in the entry hallway, coding along to tutorials on my netbook.
+
+An employee walked up to me with a nervous look on her face. She probably thought I was a squatter. But I reassured her that I did indeed now work at her company, and convinced her to let me in.
+
+It felt surreal walking across the empty open-plan office toward the developer bullpen, with only the light of the exit sign to guide my way.
+
+I set up my netbook on an empty standing desk and finished my coding tutorial.
+
+A little while later, the lights flickered on around me. My boss had arrived. At first he didn't acknowledge my presence. He just sat down at his desk and started firing off bursts of keystrokes onto his mechanical keyboard.
+
+"Larson," he finally said. "You ready for your big first day?"
+
+I wasn't. But I wanted to signal confidence. So I said the words first uttered in Big Trouble in Little China, one of my favorite 80s moves: "I was born ready."
+
+![big-trubs-born-ready](https://www.freecodecamp.org/news/content/images/2023/01/big-trubs-born-ready.jpeg)You've probably heard "I was born ready" a million times. But it was first uttered in 1986 by Jack Burton to his friend Wang Chi, when they were getting ready to confront a thousand year old wizard in his death warehouse. I can't believe my parents let me watch this back then, but I'm glad they did.
+
+"Great," my boss said. "Let's get you a machine."
+
+"Oh, I've already got one," I said, tapping my $200 netbook. "This baby is running Linux Mint, and I've already customized my .emacs file to be able to..."
+
+"We're a Mac shop," he said walking to a storage closet. He rustled around for a moment and emerged. "Here. It's a 3 year old model, but it should do. We wiped it to factory default."
+
+I started to say that I was already familiar with my setup, and that I could work much faster with it, but he would have none of it.
+
+"We're all using the same tools. It makes collaborating a lot easier. Convention over configuration, you know."
+
+That was the first time I'd heard the phrase "convention over configuration" but it would come up a lot over the next few days.
+
+I spent the next few hours configuring my new work computer as other developers gradually filed in.
+
+It was nearly 10 a.m. when we started our team "standup meeting." We all stood in a circle by the whiteboard. We took turns reporting what we were working on that day.
+
+Everyone gave quick, precise status updates.
+
+When it was my turn, I started to introduce myself. I was already anxious enough, when in walked none other than Mike, that ultramarathoner guy who ran the Santa Barbara Startup events. He was crunching on some baby carrots, having already run about 30 miles that morning.
+
+After I finished, Mike spoke, welcoming me and saying he'd seen me at some of his events. He then gave a 15 second status update about some feature he was working on.
+
+The entire meeting only took about 10 minutes, and everyone scattered back to their desks.
+
+I eventually got the company's codebase to run on my new laptop. It was a Ruby on Rails app that had grown over 5 years. I ran the `rake stats` command and saw that it was millions of lines of code. I shuddered. How could I ever comprehend all that?
+
+My neighbor, a gruff, bearded dev said, "Eh, most of that is just packages. The actual codebase you'll be working on is only maybe 100,000 lines. Don't worry. You'll get the hang of it."
+
+I gulped, but thought to myself: "That's less than millions. So that is good."
+
+"Name's Nick by the way," he said, introducing himself. "If you need any help just let me know. I've been stumbling around this codebase for quite a few years now, so I should be able to help you out."
+
+Over the next few days, I peppered Nick with questions about every internal system I encountered.
+
+Eventually Nick started setting his chat status to "code mode" and putting on his noise cancelling headphones. He swiveled his back toward me a bit, with the body language of: "leave me alone so I can get some of my own work done, too."
+
+This was one of my earliest lessons about team dynamics. You don't want to wear out your welcome with too many questions. You need to get better at learning things for yourself.
+
+But this was a massive codebase, and it was largely undocumented, aside from inline comments and a pretty sparse team wiki.
+
+Since it was a close-source codebase that only the devs around me were working in, I couldn't use Stack Overflow to figure out where particular logic was located. I just had to feel around in the dark.
+
+I started rotating through which neighbor I'd bug about a particular question. But it felt like I was quickly ringing out any enthusiasm they may have had left for me as a teammate.
+
+I over-corrected. I became shy about asking even simple questions. I made a rule for myself that I would try for 2 hours to get unstuck before I would ask for help.
+
+At some point, after thrashing for several hours, I did ask for help. When my manager discovered I'd been stuck all morning, he asked, "Why didn't you ask for help earlier?"
+
+Another struggle was with understanding the codebase itself – the "monolith" and its many microservices.
+
+The codebase had thousands unit tests and integration tests. Whenever you wrote a new code contribution, you were also supposed to write tests. These tests helped ensure that your code did what it was supposed to – and didn't break any existing functionality.
+
+I would frequently "break the build" by committing code that I thought was sufficiently tested – only to have my code break some other part of the app I hadn't thought about. This frustrated the entire team, who were unable to merge their own code until the root problem had been fixed.
+
+The build would break several times a week. And I was not the only person who made these sorts of mistakes. But it **felt** like I was.
+
+There were days where I felt like I was not cut out to be a developer. I'd say to myself: "Who am I kidding? I just wake up one day and decide I'm going to be a developer?"
+
+I kept hearing echoes of all those things my developer friends had said to me a year earlier, when I was first starting my coding journey.
+
+"How are you going to hang with people who grew up coding from an early age?"
+
+"Why don't you just stick with what you're good at?"
+
+"You're going to have to drink an entire ocean of knowledge."
+
+I would take progressively longer breaks to get away from my computer. The office had a kitchen filled with snacks. I would find more excuses to get up to grab a snack. Anything to delay the crushing sense that I had no idea what I was doing.
+
+The first few months were rough. During morning standup meetings, it felt like everyone was moving fast. Closing open bugs and shipping features. It felt like I had nothing to say. I was still working on the same feature as the day before.
+
+Every day when I woke up and got ready for work, I felt dread. "This is going to be the day they fire me."
+
+But then I'd go to work and everyone would be pretty kind, pretty patient. I would ask for help if I was really stuck. I would make **some** progress, and maybe fix a bug or two.
+
+I was getting faster at navigating the codebase. I was getting faster at reading stack traces when my code errored out. I was shipping features at a faster clip than before.
+
+Whenever my boss called me into his office, I would think to myself: "Oh no, I was right. I'm going to get fired today." But he would just assign me some more bugs to fix, or features to develop. Phew.
+
+It was the most surreal thing – me terrified out of my mind that I'm about to get the axe, and him having no idea anything's wrong.
+
+Of course, I had heard the term "imposter syndrome" before. But I didn't realize that was what I was experiencing. Surely I was just suffering from "sucks at coding" syndrome, right?
+
+One day I was sitting next to Nick, and he was looking pretty frazzled. I offered to grab him a soda from the kitchen.
+
+When I got back, he cracked the can open, took a sip, and leaned back in his chair, gazing at his monitor full of code. "This bug, man. Three weeks trying to fix this one bug. At this point I'm debugging it in my sleep."
+
+"Three weeks trying to fix the same bug?" I asked. I had never heard of such a thing.
+
+"Some bugs are tougher to crack than others. This is one of those really devious ones."
+
+It felt like someone had slapped me across the face with a salmon. I had viewed my job as chunks of work. As though it should take half a day to fix a bug, and if it took longer than that, I was doing something wrong.
+
+But here Nick was – with his computer science degree from University of California and his years of experience working on this same codebase – and he was stumped for three weeks on a single bug.
+
+Maybe I had been too hard on myself. Maybe some of these bugs I'd been fixing were not necessarily "half day bugs", but were "two or three day bugs." Yes, I was inexperienced and slow. But even so, maybe I was holding myself to unrealistic standards.
+
+After all, when we budgeted time for features, sometimes we would have "5-day features" or even "2-week features." We didn't do this for bugs, but they probably varied similarly.
+
+I went home and read more about Imposter Syndrome. And what I read explained away a lot of my anxiety.
+
+Over the coming months, I kept building out features for the codebase. I kept collaborating with my team. It was still hard, brain-busting work. But it was starting to get a little bit easier.
+
+I bonded with my teammates each day at lunch over board games. One week, we had a company-wide chess tournament.
+
+A couple rounds in, I played against the CEO.
+
+The CEO has an unorthodox chess play style. He used a silly opening that few serious chess players would opt for. And I was able to take any early lead in the game.
+
+But over the next few moves, he was able to slowly grind back control over the game. He eventually gained the upper hand and beat me.
+
+When I asked him how he found time to keep his chess skills sharp while running a company, he said, "Oh, I don't. I only play once or twice a year."
+
+He paused for a moment, his hand frozen in front of him, as if preparing to launch into a lecture. He said: "My uncle was a competitive chess player. And he just gave me a single piece of advice to follow: **every time your opponent moves, slow down and try to understand the game from their perspective – why did they make that move?**"
+
+He bowed then excused himself to run to a meeting.
+
+I've thought a lot about what he said over the years. And I've realized this advice doesn't just apply to chess. You can apply it to any adversarial situation.
+
+### If You Keep Having to Do a Task, You Should Probably Automate it
+
+Another lesson I learned about software development: since I was the most junior person on the team, I often got assigned the "grunt work" that nobody else wanted to do. One of these tasks was to be the "build nanny."
+
+Whenever someone broke the build, I would pull down the latest version of our main branch and use `git bisect` to try and identify the commit that broke it.
+
+I'd open up that commit, run the tests, and figure out what went wrong. Then I'd send a message to the person who broke the build, telling them what they needed to fix.
+
+I got really fast at doing this. In a day full of confusing bug reports and ambiguous feature requests, I looked forward to the build breaking. It would give me a chance to feel useful real quick.
+
+It wasn't long before someone on the team said, "With how often the build breaks, we should just automate this."
+
+I didn't say anything, but I felt defensive. This was a bad idea. How could a script do as good a job at finding the guilty commit as I – a flesh and blood developer – could?
+
+It took a few days. But sure enough, one of my teammates whipped up a script. And I didn't have to be the build nanny anymore.
+
+It felt strange to see a message that the build failed, and then a moment later see a message saying which commit broke the build and who needed to go fix it.
+
+I felt indignant. I didn't say anything, but in my mind I was thinking: "That's supposed to be my work. That script took my job."
+
+But of course, I now look back at my reaction and laugh. I imagine myself, now in my 40s, still dropping everything several times each week so I could be the build nanny.
+
+Because in practice, if a task can be automated – if you can break it down into discrete steps that a computer can reliably do for you – then you should probably automate it.
+
+There's plenty of more interesting work you can do with your time.
+
+![is_it_worth_the_time_2x-1](https://www.freecodecamp.org/news/content/images/2023/01/is_it_worth_the_time_2x-1.png)This chart from XKCD shows can help you figure out whether a task is worth the time investment to automate.
+
+### Lessons from the Village Elders
+
+I learned a lot from other people on the team. I learned product design concepts from Mike. He took me running on the beach, and taught me how to run on my forefoot, where the balls of my feet hit the ground before my heels. This is a bit easier on your joints.
+
+And I learned about agile software engineering concepts from Nick. He helped me pick out some good software development books from the library. And he even invited me over for a house-warming party, and I got to meet his kids.
+
+After about a year of working for the company, I felt it was time to try to strike out on my own, and build some projects around online learning. I sat down with the CTO to break the news to him that I was leaving.
+
+I said, "I'm grateful that you all hired me, even though I was clearly the weakest developer at the company."
+
+He let out a laugh and said, "Sure, when you started, you were the worst developer on the team. I'd say you're still the worst developer on the team."
+
+I sat there smiling awkwardly, blinking at him, not sure whether he was just angry I was leaving.
+
+And then he said, "But that's smart. You're smart. Because **you always want to be the worst musician in the band**. You always want to be surrounded by people who are better than you. That's how you grow."
+
+Two weeks later, I checked in my code changes for the day and handed off my open tickets. I reset my Mac to factory settings and handed it to my manager.
+
+I shook hands with my teammates and headed out the door into the California evening air.
+
+I hit the ground running, lining up freelance contracts to keep the lights on. And I scouted out an apartment in Oakland, just across the bridge from the beating heart of tech in South of Market San Francisco.
+
+I was now a professional developer with a year of experience already under my belt.
+
+I was ready to dream new dreams and make new moves.
+
+I was off to the land of startups.
+
+### Lessons From my First Year as a Developer
+
+I did a lot of things right during my first year as a professional developer. I give myself a B-.
+
+But if I had the chance to do it all again, there are some things I'd do differently.
+
+Here are some tips. May these maximize your learning and minimize your heartache.
+
+#### Leave Your Ego at the Door
+
+Many people entering the software development field will start at the very bottom. One title you might have is "Junior Developer."
+
+It can feel a bit awkward to be middle aged and have the word "junior" in your title. But with some patience and some hard work, you can move past it.
+
+One problem I faced every day was – I had 10 years of professional experience. I was not an entry level employee. Yes, I was new to development, but I was quite experienced at teaching and even managing people. (I'd managed 30 employees at my most recent teaching job.)
+
+And yet – in spite of all my past work experience – I was still an entry level developer. I was still a novice. A neophyte. A newbie.
+
+As much as I wanted to scream "I used to be the boss – I don't need you to babysit me" – the truth was I did need babysitters.
+
+What if I accidentally broke production? What if I introduced a security vulnerability into the app? What if I wiped the entire database? Or encrypted something important and lost the key?
+
+These sorts of disasters happen all the time. And it's not just new developers who make these mistakes.
+
+The reality is as a new developer, you are like a bull in a China shop, trying to walk carefully, but smashing everything in your path.
+
+Don't let yourself get impatient with your teammates. Resist the temptation to talk about your advanced degrees, awards your work has won, or that time the mayor gave you the key to the city. (OK, maybe that last one never happened to me.)
+
+Not just because it will make you hard to work with. Because it will distract you from the task at hand.
+
+For the first few months of my developer career, I used my past accomplishments as a sort of pacifier. "Yeah I suck at coding, but I'm phenomenal at teaching English grammar. Did I mention I used to run a school?"
+
+When your fingers are on the keyboard, and your eyes are on the code editor, you have to let that past self go. You can revel in yesterday's accomplishment tonight, after today's work is done.
+
+But for now, you need to accept all the emotions that come with being a beginner again. You need to focus on the task at hand and get the job done.
+
+### It's Probably Just the Imposter Syndrome Talking
+
+Almost everyone I know has experienced Imposter Syndrome. That feeling that you do not belong. That feeling that at any moment your teammates are going to see how terrible your code is and expose you as not a "real developer."
+
+To some extent, the feeling does not go away. It's always there in the back of your mind, ready to rear its head when you try to do something new.
+
+"Could you help me get past this error message?" "Um... I'm not sure if I'm the best person to ask."
+
+"Could you pair program with me on implementing this feature?" "Um... I guess if you can't find someone more qualified."
+
+"Could you give a talk at our upcoming conference?" "Um... me?"
+
+I've met senior engineers who still suffer from occasional imposter syndrome, more than a decade into their career.
+
+When you feel inadequate or unprepared, it may just be imposter syndrome.
+
+Sure – if you handed me a scalpel and said, "help me perform heart surgery" I would feel like an imposter. To some extent, feeling out of your depth is totally reasonable if you are indeed out of your depth.
+
+The problem is that if you've been practicing software development, you may be able to do something but still inexplicably suffer from anxiety.
+
+I am not a doctor. But my instinct is that – for most people – imposter syndrome will gradually diminish with time, as you get more practice and build more confidence.
+
+But it can randomly pop up. I'm not afraid to admit that I sometimes feel pangs of imposter syndrome when doing a new task, or one I haven't done in a while.
+
+The key is to just accept it: "It's probably just the imposter syndrome talking."
+
+And to keep going.
+
+### Find Your Tribe. But Don't Fall for Tribalism
+
+When you get your first developer job, you'll work alongside other developers. Yipee – you found your tribe.
+
+You'll spend a lot of time with them, and you all may start to feel like a tight unit.
+
+But don't ignore the non-developer people around you.
+
+In my story above, I talked about Mike, the Product Manager who also ran startup events. He was "non-technical". His knowledge of coding was limited at best. But I'd venture to say I learned as much from him as anyone else at the company.
+
+You may work with other people from other departments – designers, product managers, project managers, IT people, QA people, marketers, even finance and accounting folks. You can learn a lot from these people, too.
+
+Yes, you should focus on building strong connective tissue between you and the other devs on the team. But stay curious. Hang out with other people in the lunch room or at company events. You never know who's going to be the next person to help you build your skills, your network, or your reputation.
+
+### Don't Get Too Comfortable and Specialize too Early
+
+I often give this advice to folks who are first starting their coding journey: "learn general coding skills (JavaScript, SQL, Linux, and so on) and then specialize on the job."
+
+The idea is, once you understand how the most common tools work, you can learn those tools' less common equivalents.
+
+For example, once you've learned PostgreSQL, you can easily learn MySQL. Once you've learned Node.js, you can easily learn Ruby on Rails or Java Spring Boot.
+
+But some people specialize too early at work. Their boss might ask them to "own" a certain API or feature. And if they do a good job with that, their boss may keep giving them similar projects.
+
+You are only managing yourself, but your boss is managing many people. They may be too busy to develop a nuanced understanding of your abilities and interests. They may come to see you as "the XYZ person" and just give you tasks related to that.
+
+But you know what you're good at, and what you're interested in. You can try and volunteer for projects outside of your comfort zone. If you can get your boss to assign these to you, you'll be able to continue to expand your skills, and potentially work with new teams.
+
+Remember: your boss may be responsible for your performance at your job, but you are responsible for your performance across your career.
+
+Take on projects that both fulfill your obligation to your employer, and also position you well for your long-term career goals.
 
 ## Epilogue: You Can Do This
 

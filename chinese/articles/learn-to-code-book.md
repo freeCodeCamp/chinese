@@ -1749,27 +1749,27 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 我太紧张了，感觉就像一个外星人要从我的胸膛里冲出来。 所以很自然地，我排在第一位。 撕掉创可贴，对吧？
 
-I was sweating and gesticulating wildly as I raced through my pitch. I said something like this: "Citations suck. I mean, they don't suck. They're necessary. And you need to add them to your papers. But preparing citations sucks. Let's build an app that will fill out your Work Cited page for you. Who's with me?"
+我满头大汗，疯狂地打着手势，飞快地完成我的演讲。我说了这样一段话。"引文很烂。我的意思是，它们并不糟糕。它们是必要的。你需要把它们添加到你的论文中。但准备引文的工作很糟糕。让我们建立一个应用程序，为你填写你的工作引文页。谁支持我？"
 
-The room was quiet. Then people realized I was finished talking, and they gave me an obligatory round of applause. The MC took the mic out of my hand and gave it to the next person, and I pranced back to my seat.
+房间里很安静。然后人们意识到我已经讲完了，他们给了我一个强制性的掌声。主持人从我手中拿过麦克风，把它交给下一个人，而我则蹦蹦跳跳地回到了我的座位。
 
-After pitches, it was time to form teams. Our Santa Barbara contingent looked at each other and said "I guess we're a team."
+投球结束后，就到了组队的时间。我们的圣巴巴拉小分队互相看了看，说 "我想我们是一个团队"。
 
-We figured out the wifi password and grabbed the choicest of workspaces: a corner office that had a door you could actually close.
+我们弄清了 WIFI 密码，抢到了最合适的工作场所：一个角落里的办公室，有一扇可以真正关闭的门。
 
-I started scrawling UI mockups on whiteboard. I said, "We want something that's always a click away. Right in your browser's menu bar."
+我开始在白板上写下 UI 模型。我说："我们想要的东西总是一击即中。就在你的浏览器的菜单栏里。"
 
-"Like a browser plugin," Steve said.
+"像一个浏览器插件，"史蒂夫说。
 
-"Yeah. Let's build a browser extension."
+"是的。让我们建立一个浏览器扩展。"
 
-I showed them examples of the three formats that essays might require: MLA, APA, and Chicago.
+我向他们展示了论文可能需要的三种格式的例子。MLA，APA，和 Chicago。
 
-"Could we generate all three of these at once, so they can just copy-paste them?" I asked.
+"我们能不能同时生成这三种格式，让他们可以直接复制粘贴？我问道。
 
-"We can do better than that," Steve said. "We can have a button for each of them that puts the citation directly into their clipboard."
+"我们可以做得更好，"史蒂夫说。"我们可以为他们每个人设置一个按钮，把引文直接放到他们的剪贴板中。"
 
-We worked fast, creating a simple MVP (Minimum Viable Product) by the end of Friday night. All it did was grab the current website's metadata and structure it as a citation. But it worked.
+我们工作得很快，在星期五晚上结束时创造了一个简单的 MVP（最小可行产品）。它所做的只是抓取当前网站的元数据，并将其结构化为一个引文。但它成功了。
 
 Since it was my first hackathon, I didn't want the stress of staying in a hostel. So I'd splurged to get a hotel room. We had two twin beds, so each night we'd rotate which of us had to sleep on the floor.
 

@@ -1510,7 +1510,7 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 因为，跟我说一遍 **人很忙**。
 
-### How to Build Even Deeper Connections
+### 如何建立更深入的联系
 
 因为人们是如此忙碌，他们往往会因为这些陌生人能为他们做什么而更多地看到陌生人:
 
@@ -1574,7 +1574,7 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 为什么？因为提醒人们你们是如何认识的行为本身会促使一些人退一步想："哎呀，我几乎不认识这个人。"
 
-### How to Keep the Conversation Going
+### 如何让对话持续下去
 
 同样，你的目标是得到他们的回应，这样你就可以开始一个来回的对话。
 
@@ -1598,7 +1598,7 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 再次重申，保持一切休闲和乐观。 如果感觉谈话进行得很慢，那没问题。 因为您将进行许多其他对话。保持热度，你将成为一只忙碌的蜜蜂，建立你的人际联系。
 
-### How to Meet New People and Expand Your Personal Network
+### 如何认识新朋友并扩大你的人际网络
 
 我们已经谈到了如何与你已经认识的人联系。这些联系仍然存在，即使它们多年来已经有点萎缩了。
 
@@ -1619,7 +1619,7 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 这就是为什么我强烈建议：走出去，在当地的活动中认识人们。
 
-### How to Meet People at Local Events Around Town
+### 如何在城市周边的当地活动中结识朋友
 
 哪些活动？如果你住在一个人口稠密的城市，你可能有大量的选择供你支配。你可能每周都能去参加几个晚上的科技活动，而且通勤时间最少。
 
@@ -1671,7 +1671,7 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 让其他人克服这种不信任的最好方法是：在以前的接触中已经作为一个通情达理的人，出现在他们的视野上。
 
-### How to Leverage Your Network
+### 如何利用你的人际网络
 
 我们将在第 4 章详细讨论如何利用您的网络。现在，将您的网络纯粹视为时间和精力的投资。
 
@@ -1691,7 +1691,7 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 有因就有果。有一天你会收获你所播种的东西。如果你播种的是正能量，你就为自己的丰收做了准备。
 
-## Chapter 3: How to Build Your Reputation
+## 第三章：如何建立你的声誉
 
 > "获得良好声誉的方法是努力成为你希望出现的样子"。  苏格拉底
 
@@ -1703,7 +1703,7 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 但首先，我是如何建立我的声誉的。
 
-### Story Time: How Did a Teacher in His 30s Build a Reputation as a Developer?
+### 故事时间：一位 30 多岁的教师是如何建立起开发者的声誉的？
 
 *上一次是在故事时间。昆西开始建立他的网络，包括开发人员、企业家和科技界的招聘经理。他经常参加城市周围的黑客空间和科技活动。但他还没有爬上竞技场，测试自己的实力……*。
 

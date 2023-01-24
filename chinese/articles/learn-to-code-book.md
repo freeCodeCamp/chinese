@@ -1492,111 +1492,111 @@ Step 2: Think about something you could say that might make their day a bit brig
 
 Step 3: Choose a social media platform they've been recently active on. Send them a direct message.
 
-I'm going to share a template, but never use any templates verbatim, because if the recipient plugs your message into Google, they'll discover it's a template, and all your goodwill will be squandered.
+我将分享一个模板，但永远不要逐字逐句地使用任何模板，因为如果收件人将你的信息,用谷歌进行搜索，他们会发现这是一个模板，而你所有的善意将被误解。
 
-If I were messaging someone I hadn't talked to in a few months or years out of the blue, I would say something like this:
+如果我突然给一个几个月或几年没有联系过的人发信息，我会说这样的话:
 
-"Hey [name], I hope your [new year / spring / week] is off to a fun start. Congrats on [new job / promotion / new baby / completed project]. It's inspiring to see you out there getting things done."
+"嘿，[姓名]，我希望你的[新的一年/春天/一周]有一个有趣的开始。祝贺你[新工作/晋升/新生儿/完成项目]。看到你在外面做事情，很受鼓舞。"
 
-Something short and to the point like that. Greeting + congratulations + compliment. That is the basic formula.
+像这样简短而有针对性的东西。问候+祝贺+赞美。这就是基本公式。
 
-Don't just say it. Mean it.
+不要只是说出来。
 
-Really want this person to feel recognized. Really want to brighten their day. Really want to encourage them to keep progressing toward their goals.
+真的想让这个人感到被认可。真的想照亮他们的一天。真的想鼓励他们继续向他们的目标迈进。
 
-Humans are very good at detecting insincerity. Don't try to over-sell it. Don't give them any reason to think "this person wants something from me."
+人类非常善于察觉不诚恳。不要试图过度推销。不要给他们任何理由去想 "这个人想从我这里得到什么"。
 
-That's why the most important thing about this is: be brief. Be respectful of people's time. Nobody wants a long letter that they'll feel obligated to respond to at length.
+这就是为什么这方面最重要的事情是：要简短。要尊重人们的时间。没有人想要一封长信，他们会觉得有义务对其进行长时间的回应。
 
-Because – say it with me again – **people are busy.**
+因为，跟我说一遍 **人很忙**。
 
 ### How to Build Even Deeper Connections
 
-Because people are so busy, they are often tempted to see strangers more for what those strangers can do for them:
+因为人们是如此忙碌，他们往往会因为这些陌生人能为他们做什么而更多地看到陌生人:
 
-- This person drives the bus that gets me to work.
-- This person makes my beverage just the way I like it.
-- This person in HR answers my questions about time off.
-- This person put together a bangin' acid jazz playlist for me to listen to while I code.
-- This person sends me helpful emails each week with free coding resources.
+- 这个人开着巴士送我去上班。
+- 这个人按照我喜欢的方式给我做饮料。
+- 这个人在人力资源部门回答我关于休假的问题。
+- 这个人为我准备了一份 acid 爵士乐的播放列表，让我在写代码时听。
+- 这个人每周都会给我发送有用的电子邮件，提供免费的编程资源。
 
-To some extent, you are what you do for people.
+在某种程度上，你就是你为人们所做的。
 
-I know, I know. That might sound overly reductive. Cynical even. And that is 100% not true for the close friends and family in your life.
+我知道，我知道。这听起来可能过于简化。甚至愤世嫉俗。而对于你生活中的亲密朋友和家人来说，这 100%不是真的。
 
-But for people who barely know you – who just encounter you while going about their day – this is likely how they see you.
+但是对于那些几乎不认识你的人--他们只是在日常工作中遇到你--这可能是他们对你的看法。
 
-You have to give people a reason to care about you. You have to inspire them to learn more about you.
+你必须给人们一个关心你的理由。 你必须激励他们更多地了解你。
 
-Before you can become somebody's close friend – someone they truly care about, and think about when you're not around – you need to start off as someone who is helpful to them.
+在你能成为某人的亲密朋友之前，他们真正关心的人，并且在你不在的时候想到的人，你需要从一个对他们有帮助的人开始。
 
-And that's what we're going to do here. We're going to build even deeper relationships by offering to help people.
+而这正是我们在这里要做的。我们要通过提供帮助来建立更深的关系。
 
-This will be a long process. And you should start it well in advance of your job search. The last thing you want is for someone to think "Oh – you're just reaching out because you need something from me."
+这将是一个漫长的过程。而且你应该在找工作之前提前开始。你最不希望看到的是，有人认为 "哦，你只是因为需要我的东西而伸出援手"。
 
-On the contrary – you're reaching out because you have something to offer them.
+恰恰相反，你伸出援手是因为你有东西可以提供给他们。
 
-You are, after all, in possession of one of the most powerful skillsets a person can acquire. The ability to bend machines to your will. You are a programmer.
+毕竟，你拥有一个人可以获得的最强大的技能之一。使机器服从你的意志的能力。你是一个程序员。
 
-![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)This is what being good at coding feels like.
+![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)这就是擅长编码的感觉。
 
-Or, at least, you're on the road to becoming one.
+或者，至少，你正在成为一个人的道路上。
 
-So you already have a good pretext to reach out to people.
+所以你已经有了一个很好的理由去接触人们。
 
-You may have heard the term "cold call". This is where you call someone knowing almost nothing about them, and trying to sell them something. This is not easy, and a vast majority of cold calls end with the other party hanging up.
+你可能听说过 **冷电话** 这个词。这就是你在对某人几乎一无所知的情况下给他打电话，并试图向他们推销东西。这并不容易，绝大部分的冷电话都以对方挂断而告终。
 
-But the more information you know about the other person, the warmer the call gets, and the more likely you are to succeed.
+但是，你对对方了解的信息越多，电话就越温暖，你就越有可能成功。
 
-Now, you're not selling anything here. And as I mentioned earlier, you're not calling them either. You're sending them a direct message.
+现在，你在这里不是在卖东西。正如我前面提到的，你也不是在给他们打电话。你是在给他们发送一条直接信息。
 
-Maybe this is through Twitter, LinkedIn, Discord, Reddit – wherever. But you are reaching out to them with a single paragraph of text.
+也许这是通过 Twitter、LinkedIn、Discord、Reddit。 任何地方。但你是用一段文字向他们伸出援手。
 
-As I said, the strongest opening move – the approach that's most likely to get a response – is to casually offer help.
+正如我所说，最有力的开场白,最有可能得到回应的方法，是随意地提供帮助。
 
-If I were doing this, here's a simple template I'd use. Remember not to use this template verbatim. Rewrite it in your own voice, how you would say it to a friend:
+如果我在做这件事，这里有一个我将使用的简单模板。记住不要逐字逐句地使用这个模板。用你自己的声音重写，你会怎么对朋友说。\:
 
-> "Hey [name], congrats on the [new job / promotion / new baby]. I've been learning some programming, and am building my portfolio. You immediately came to mind as someone who gets a lot of things done. Is there any sort of tool or app that would make your life easier? I may be able to code it up for you, for practice."
+> "嘿[姓名]，祝贺你[新工作/晋升/新生儿]。我一直在学习一些编程，并正在建立我的作品集。我立刻想到了你，你是一个能完成很多事情的人。有没有什么工具或应用程序可以让你的生活更轻松？我也许可以为你编码，作为我的练习。"
 
-This is a strong approach, because it is personalized and doesn't come across as automated. People get so many automated messages these days that they are quick to disregard anything that even resembles an automated message.
+这是一个强有力的方法，因为它是个性化的，不会让人觉得是自动的。如今，人们收到如此多的自动信息，以至于他们很快就会无视任何甚至类似于自动信息的东西。
 
-This is why I send all my messages manually, and don't rely on automation. It's better to slowly compose messages one-by-one than it is try and save time with a script or a mail-merge.
+这就是为什么我手动发送我所有的信息，而不依赖自动化。慢慢地逐一编写信息比试图用脚本或邮件合并来节省时间更好。
 
-The fastest way to get blocked is to message someone with "Hi , how's it going?" where there's clearly a first name missing – evidence that the message is a template.
+最快的被屏蔽的方法是给别人发消息说 `嗨，你好吗？` 其中明显少了一个名字,证明这个消息是一个模板。
 
-Sometimes I get a message using my last name instead of my first name. "Hey Larson." What, am I in military school now?
+有时我收到的信息用我的姓而不是我的名。`嘿，拉森。` 什么，我现在是在军事学校吗？
 
-And a lot of people on LinkedIn have started putting an emoji at the beginning of their name. This makes it easy to detect automated messages, because nobody would include that emoji in their direct message.
+而且，LinkedIn 上的很多人已经开始在他们名字的开头加上一个表情符号。这使得检测自动信息变得很容易，因为没有人会在他们的直接信息中包括这个表情符号。
 
-When a message starts with: "Hi 🍜Sarah, are you looking for a new job?" Then you know it's a bulk message.
+当一条信息的开头是 "嗨🍜莎拉，你在找新工作吗？" 那么你就知道这是一条批量信息。
 
-Also note that my above template does not say "we went to school together" or something like that. Unless you just met someone a few days ago, you shouldn't specify how you two know one another.
+还要注意的是，我上面的模板并没有说 "我们是同学 "或类似的话。除非你几天前刚认识某人，否则你不应该说明你们俩是怎么认识的。
 
-Why? Because the very act of reminding people how you know one another will prompt some people to step back and think: "Gee, I barely know this person."
+为什么？因为提醒人们你们是如何认识的行为本身会促使一些人退一步想："哎呀，我几乎不认识这个人。"
 
 ### How to Keep the Conversation Going
 
-Again, your goal is to get a response from them, so you can start a back-and-forth conversation.
+同样，你的目标是得到他们的回应，这样你就可以开始一个来回的对话。
 
-These messaging platforms have a casual feel to them. Keep it casual.
+这些信息传递平台有一种休闲的感觉。保持随意。
 
-Don't send a single, multi-paragraph message. Keep your messages short and snappy. You don't want for it to feel like a chore to reply to you.
+不要发送单一的、多段落的信息。保持你的信息短而快。你不想让他们觉得回复你是件苦差事。
 
-Once you've got them replying to you, start making notes on your Personal Network Board so you can remember these facts later.
+一旦你让他们回复你，就开始在你的个人网络板上做笔记，这样你以后就能记住这些事实。
 
-Maybe they do have some app idea or tool idea. Great. Ask them questions about it. See if you can build it for them.
+也许他们确实有一些应用程序的想法或工具的想法。很好。向他们询问有关问题。看看你是否可以为他们建立它。
 
-Start by sketching out a simple mockup of the user interface. Use graphing paper if you want to look extra sophisticated. Snap a photo of it and send it to them. "Something like this?"
+从画出用户界面的简单模型开始。如果你想看起来更复杂，就用绘图纸。给它拍张照片，然后发给他们。"像这样的东西？"
 
-This will establish that you're serious about helping them. And I'd be willing to bet for most people, this would be a new experience.
+这将确立你对帮助他们是认真的。而且我愿意打赌，对大多数人来说，这将是一种新的体验。
 
-"You're helping me? You're creating this app for me?" It will be flattering, and they will be likely to remember it. Even if the app itself doesn't go anywhere.
+"你在帮助我？你在为我创建这个应用程序？" 这将是一种奉承，他们将有可能记住它。即使这个应用程序本身没有任何进展。
 
-From there, you can just go with the flow of conversation. Maybe it fizzles out. No worries. Let it. You can find a reason to pick the conversation back up a few weeks later.
+从那里开始，你可以随着谈话的流程走。也许它消失了。不用担心。随它去吧。你可以在几周后找到一个理由来重新拾起对话。
 
-The great thing about these social media direct messages is the entire message log is there. The next time you message them, they can just scroll up and see "oh – this is that person who offered to build that app for me." There are no more "who are you again?" head tilts that you might get during in-person conversations.
+这些社交媒体直接信息的好处是整个信息记录都在那里。下次你给他们发信息时，他们可以直接滚动并看到 "哦，这是那个提议为我建立应用程序的人"。没有更多的 "你是谁来着？"的疑问，而你可能在面对面的谈话中得到。
 
-Again, keep everything casual and upbeat. If it feels like the conversation is going slow, that's no problem. Because you're going to have dozens of other conversations going. Other irons in the fire. You're going to be a busy bee building your network.
+再次重申，保持一切休闲和乐观。 如果感觉谈话进行得很慢，那没问题。 因为您将进行许多其他对话。保持热度，你将成为一只忙碌的蜜蜂，建立你的人际联系。
 
 ### How to Meet New People and Expand Your Personal Network
 

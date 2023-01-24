@@ -1364,133 +1364,133 @@ But you don't need a time machine to do this. Because you already have a network
 
 They may be friends from your home town, or the colleagues of your parents. Any person you know from your past – however marginally – may be of help.
 
-So step one is to take full inventory of the people you know. Don't worry – I am not asking you to reach out to anyone yet, or tax your personal relationships.
+因此，第一步是对你认识的人进行全面盘点。请不要担心，我并不是要你现在就去接触任何人，也不是在考验你的人际关系。
 
-Think before you move. Formulate a strategy.
+三思而后行，先制定一个行动计划。
 
-First, let's inventory all the people you know.
+首先，让我们一起来列出所有你认识的人。
 
-### How to Build a Personal Network Board
+### 如何打造个人关系网看板
 
-You want to start by creating a list of people you know.
+从创建一个熟人清单开始。
 
-You could do this with a spreadsheet, or a Customer Relationship Management tool (CRM) like sales people use. But that's probably overkill for what we're doing here.
+你可以使用电子表格，也可以像销售人员那样使用客户关系管理工具（CRM）来做这件事。但就我们这里要做的事情而言，它们可能有点大材小用了。
 
-I recommend using a Kanban board tool like Trello, which is free.
+我推荐使用像 Trello 这样的看板工具，它是免费的。
 
-You're going to create 5 columns: "to evaluate", "to contact", "waiting for reply", "recently in contact", and "don't contact yet".
+你将创建五大列：“待评估”、“待联系”、“待回复”、“最近联系”、“暂不联系”。
 
-Then you're going to want to create labels, so you can classify people by how you know them. Here are some label ideas for you: "Childhood friend", "Friend of the family", "Former colleague", "Classmate", "Friends from Tech Events".
+然后创建标签，这样你就可以根据你对他们的了解程度对他们进行分类了。这里有一些可供你参考的标签想法："儿时好友"、"家庭的朋友"、"前同事"、"同学"、"参加技术活动认识的朋友"。
 
-Now you can start creating cards. Each card can just be their name, and if you have time you can add a photo to the card.
+现在你可以开始创建卡片了。每张卡片可以只有他们的名字，如果你有时间的话，可以在卡片上添加一张照片。
 
-Here is the Trello board I created to give you an idea of what this Personal Network Board might look like. I used characters from my favorite childhood movie, the 1989 classic Teenage Mutant Ninja Turtles.
+这是我创建的 Trello 看板，你可以从中得知个人关系网看板可能是什么样子的。我使用了我最喜欢的童年电影（1989 年的经典电影《忍者神龟》）中的人物。
 
-![Personal_Network_Board___Trello_--](https://www.freecodecamp.org/news/content/images/2023/01/Personal_Network_Board___Trello_--.png)My Personal Network Board with my friends from my side job fighting crime.
+<figure><img src="https://www.freecodecamp.org/news/content/images/2023/01/Personal_Network_Board___Trello_--.png"><figcaption>我的个人关系网看板：副业中一起打击犯罪的朋友们</figcaption></figure>
 
-You can go through your social media accounts – even your old school year books if you have them – and start adding people.
+你可以开始从你的社交媒体帐号，甚至你老旧的毕业纪念册（如果你有的话）添加联系人。
 
-Many of these people are not going to be of any help. But I recommend adding them for the sake of being comprehensive. You never know when you'll remember: "oh – so and so got a job at XYZ corp. I should reach out to them."
+他们中的许多人不会再有任何帮助。但为了全面起见，我建议你依然添加他们。你永远不知道什么时候你会想起："噢……某某在 XYZ 公司得到了一份工作，我应该与他们联系。"
 
-This process may take a day or two. But know that this is an investment. You'll be able to use this board for the rest of your career.
+这个过程可能要花一两天的时间。但要知道，这是一项投资。这个看板能够在你的职业生涯中为你所用。
 
-You may think "I don't need to do this – I already have a LinkedIn account." That might work OK, but LinkedIn is a blunt instrument. You want to maximize signal and minimize noise here. That's why I'm encouraging you to create this dedicated personal network board.
+你可能会认为“我不需要这样做，我已经有一个领英账户了”。这或许能行得通，但是领英又大又杂。但你想在这里让信号最大化，让噪音最小化。这也是我鼓励你创建这个专门的个人关系网看板的原因。
 
-As you add people to your board, you can label them. Take a moment to research each of these people. What are they up to these days? Do they have a job? Run a company?
+在你把人添加到你的看板的同时，还可以给他们贴上标签。花点时间来研究看板中的每一个人。他们这些天都在忙什么？他们有工作吗？还是在开公司？
 
-You can add notes to each card, as you discover new facts about them. Did they recently run a fundraiser 5K run? Did their grandma recently celebrate her 90th birthday? These facts may seem extraneous. But if the person is sharing them on social media, it means these facts are important to **them**.
+当你发现了和他们有关的事情，可以在每张卡片上添加笔记。他们最近是否参加了跑步 5 公里的募捐活动？他们的祖母最近是否庆祝了九十大寿？这些信息看起来可能无关紧要。但如果某个人在社交媒体上分享这些事情，那就说明这些事情对他们来说很重要。
 
-Make an effort to be interested in people. Their daily lives. Their aspirations. By understanding their motivations and goals, you will have deeper insight into how you can help them.
+努力对人们产生兴趣。发现他们的日常生活，发现他们的抱负。通过了解他们的动机和目标，你将更深入地洞察到你如何才能帮到他们。
 
-And as I said earlier, the best way to forge alliances is to help people. We'll talk about this at length in a little bit.
+正如我之前所说，缔结盟友的最佳方式是帮助他人。我们将在稍后详细讨论这个问题。
 
-For each of the people you add to your Personal Network Board, consider whether they might be worth reaching out to. Then either put them into the "to contact" or "don't contact yet" column.
+对于你添加到个人关系网看板中的每个人，逐一思考他们是否值得联系，然后把他们放入“待联系”或“暂不联系”中。
 
-You may be wondering: why is the column called "don't contact **yet**"? Because you never know when it might be helpful to know someone. Never take any friendship or acquaintanceship for granted.
+你可能想知道：为什么这一列叫 “暂不联系”？因为你永远不知道认识的某个人在何时会帮上忙。永远不要把任何友谊或熟人关系视为理所当然。
 
-Once you've filled up your board, labeled everyone, and sorted them into columns, you're ready to start reaching out.
+在你填满看板，给每个人贴上标签，并将他们分门别类之后，就可以开始联系了。
 
-### How to Prepare for Network Outreach
+### 如何为关系网延伸做准备
 
-The main thing to keep in mind when reaching out and trying to make an impression: keep yourself simple.
+在联系并试图给人留下印象时，请牢记：简单为上，不要啰嗦。
 
-People are busy, and they can only remember so many facts about you. You want to boil down who you are to the fundamentals. And the best way to do this is to write a personal bio.
+大家都很忙，他们并不能记住太多和你有关的事情。如果你想完全讲清楚自己是谁，最好方法是写一份个人简历。
 
-#### How to Write a Personal Bio for Social Media
+#### 如何在社交媒体写个人简历
 
-You want your presence to be consistent across all of your social media accounts.
+你希望自己的信息在你所有的社交媒体账户中都是一致的。
 
-Here's how I introduce myself:
+以下是我的自我介绍：
 
-"I'm Quincy. I'm a teacher at freeCodeCamp. I live in Dallas, Texas. I can help you learn to code."
+“我叫 Quincy，是 freeCodeCamp 的一名老师，住在德克萨斯州的达拉斯。我可以帮助你学习编程。”
 
-Go ahead and write yours. See if you can get it down to 100 characters or less. Try to avoid using fancy words or jargon.
+去写你自己的简历吧。看看你能否把它压缩到 100 个字甚至更少。尽量避免使用花哨的词语或专业术语。
 
-It may be hard to distill your identity down to a few words. But this is an important process.
+把你的身份提炼成几个字可能很难，但这是一个很重要的过程。
 
-Remember: people are busy. They don't need to know your life story. As you get to know these people better, you can gradually fill in the details of who you are as a person. As they ask questions, they can get to know you better over time.
+记住：人们很忙，他们并不需要知道你的生活往事。随着你对他们的了解的深入，你可以慢慢地说出更多和你有关的细节。随着时间的推移，他们也会在问你问题的同时更好地了解你。
 
-And on that note, you need a good photo of your smiling face.
+好了，记得准备好一张带有你的笑脸的照片。
 
-#### How to Make a Social Media Headshot
+#### 如何制作社交媒体头像
 
-If you have the money, just find a local photographer and pay them to take some professional headshots.
+如果你有钱，直接去找一个当地的摄影师，付钱让他们给你拍一些专业的头像。
 
-You may even have a friend who's into photography, who can take them for free.
+或许你有一个从事摄影的朋友，他可以免费为你拍照。
 
-I took my headshot myself, using Photobooth, which comes pre-installed on MacOS. My friend spent about 10 minutes fixing some background and shading in Photoshop. He may have made my teeth slightly whiter. Here's what it looks like:
+我自己使用预装在 MacOS 上的 Photobooth 拍了头像。我的朋友在 Photoshop 中花了大约 10 分钟修正了一些背景和阴影。他可能使我的牙齿看起来要略微白了一点。下面是我的头像：
 
-![Michael_Headshot_B_W_Full_heic](https://www.freecodecamp.org/news/content/images/2023/01/Michael_Headshot_B_W_Full_heic.png)My headshot. I use this same photo everywhere.
+<figure><img src="https://www.freecodecamp.org/news/content/images/2023/01/Michael_Headshot_B_W_Full_heic.png"><figcaption>我的头像：我在任何地方都使用这张照片</figcaption></figure>
 
-Be sure to smile with your eyes, so you don't look robotic. Or better yet, think of something really funny, like I did here. Then the smile will be genuine.
+一定要用你的眼睛微笑，这样你才不会看起来像个机器人。或者更好一点，想一些非常有趣的事情，我就是这样做的。然后，你的笑容就会显得很真诚。
 
-Take a lot of shots from different angles, and just use whichever one looks best on you.
+从不同的角度拍很多照片，然后使用最好看的那一张。
 
-I recommend using a headshot that looks like how you look on any given day. Not a heavily photoshopped photo that tries to maximize your attractiveness. You want people at events to recognize you from your photo. And you don't want to intimidate people with your beauty. You want to put them at ease.
+我建议你使用一张看起来和你的日常生活贴近的始终如一头像。不要使用试图将你的吸引力最大化的经过大量修改的照片。你希望人们能够在活动中通过你的照片认出你。而且，你不想让美颜吓到别人，你想让他们感到安心。
 
-Speaking of putting people at ease: do **not** wear sunglasses, or try too hard to look cool. You want to look friendly and  approachable. A good acid test for this is: look at your photo. If you were lost, and saw this person on the street, would you be brave enough to ask them for directions?
+说到让人安心：不要戴墨镜，也不要努力地看起来很酷。你要看起来友好、平易近人。在这方面，有的一个很好的带有讽刺意味的测试：看看你的照片。如果你迷路了，你在街上看到这个人，你会有勇气向他们问路吗？
 
-Once you have chosen your headshot photo, use that same photo everywhere. Put it on all of your social media accounts.
+选好了头像之后，就在所有的地方使用同一张照片。把它放在你所有的社交媒体账户上。
 
-Use it on your personal website. Even [add the profile photo to your email account](https://www.freecodecamp.org/news/gmail-profile-picture/).
+在你的个人网站上使用它，甚至你还可以[将个人照片添加到你的电子邮件帐户](https://www.freecodecamp.org/news/gmail-profile-picture/)。
 
-I recommend using that same photo for years. Every time you change it, you run the risk that some people won't immediately recognize you. Even subtle changes in lighting, angle, or background can throw off people's familiarity.
+我建议常年来使用同一张照片。每次你改变它，都会冒着有些人不会立即认出你的风险。即使是灯光、角度或背景的细微变化，也会使人们失去熟悉感。
 
-Be sure to keep a high-definition version of the photo. That way people can use it to promote your talk at their conference, or your guest appearance on their podcast. (Don't worry – in time, you will get there.)
+一定要保留一张高清版本的照片。这样，当你在别人的会议上的演讲，或他们的播客中的客串的时候，他们就可以用这张照片来宣传了。(别担心，假以时日，你能做到的）。
 
-### How to Reach Out to People from your Past
+### 如何与过去的人联系
 
-Now that you've got your bio and photos sorted out, you're ready to start talking with people.
+现在简历和照片都已就绪，你已经做好与人交谈的准备了。
 
-15 years ago, I would say you should call people on the phone instead of messaging them. But culture has changed a lot with the introduction of smart phones. Most people will not respond well to a phone call.
+15 年前，我会说你应该给人们打电话，而不是给他们发消息。但随着智能手机的出现，相关文化已经发生了很大的变化。大多数人都不会很好地回应电话了。
 
-Similarly, I don't recommend asking people out to coffee or lunch until much later in the conversation. People are busy, and may view the request as awkward.
+同样，我也不建议在谈话接近尾声的时候才邀请别人去喝咖啡或吃午餐。人们很忙，可能会觉得这个请求有些尴尬。
 
-You need to get to the point, and do so quickly.
+你需要直奔主题，越快越好。
 
-So what is that point you need to get to?
+那么，你需要奔入的主题是什么呢？
 
-Essentially:
+本质上如下：
 
-1. I know you
-2. I like you
-3. and I respect the work you're doing.
+1. 我知道你
+2. 我喜欢你
+3. 我敬佩你的做的事情
 
-That's it.
+就是这样。
 
-People like to be known. They like to be liked. They like for the work they do and the lives they live to be noticed.
+人们喜欢被了解，喜欢被人喜欢，喜欢自己做的事情和生活受到关注。
 
-Most of us get recognition on our birthdays. People from our past might send "happy birthday" text messages, social media posts, or even call us.
+我们中的大多数人都会在生日当天得到认可。在过去，人们可能会通过短信、社交媒体，甚至打电话的方式祝我们生日快乐。
 
-But what about the other 364 days of the year? People like to be recognized on those other days, too.
+但一年中的其它 364 天呢？人们也喜欢在这些日子里得到认可。
 
-Well, here's a simple way you can recognize people.
+哈哈，这里有一个认可别人的简单方法。
 
-Step 1: Research the person. Google them. Read through their most recent social media posts. Read through their LinkedIn. If they post family photos, actually take time to look at them.
+第 1 步：研究这个人。在谷歌上搜索他们，阅读他们最近发布在社交媒体上的内容，阅读他们的领英账户。如果他们发布了家庭照片，更要多花点时间看一下。
 
-Step 2: Think about something you could say that might make their day a bit brighter.
+第 2 步：想一想你可以说点什么，从而让他们的一天变得更加美好。
 
-Step 3: Choose a social media platform they've been recently active on. Send them a direct message.
+第 3 步：选择一个他们最近比较活跃的社交媒体平台，直接给他们发一条信息。
 
 I'm going to share a template, but never use any templates verbatim, because if the recipient plugs your message into Google, they'll discover it's a template, and all your goodwill will be squandered.
 

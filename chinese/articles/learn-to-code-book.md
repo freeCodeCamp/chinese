@@ -1771,27 +1771,27 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 我们工作得很快，在星期五晚上结束时创造了一个简单的 MVP（最小可行产品）。它所做的只是抓取当前网站的元数据，并将其结构化为一个引文。但它成功了。
 
-Since it was my first hackathon, I didn't want the stress of staying in a hostel. So I'd splurged to get a hotel room. We had two twin beds, so each night we'd rotate which of us had to sleep on the floor.
+由于这是我第一次参加黑客马拉松，我不想承受住在旅馆里的压力。所以我花钱买了一个酒店房间。我们有两张双人床，所以每天晚上我们都会轮流睡在地板上。
 
-Saturday morning, our ambitions grew. I walked to the whiteboard and said to the team: "Citing websites is great and all. But a lot of the things students cite are in books or academic papers. We need to be able to generate citations for those, too."
+星期六早上，我们的野心越来越大。我走到白板前，对团队说。"引用网站是伟大的，所有的。但学生们引用的很多东西都是在书本或学术论文中。我们也需要能够为这些东西生成引文。"
 
-We found an API that we could use to get citation information based on ISBN (a serial number used for books). And we hacked together a script that could search for academic papers based on their DOI (a serial number used for academic papers), then scrape data from the result page.
+我们找到了一个 API，我们可以用它来获取基于 ISBN（用于书籍的序列号）的引文信息。我们还写了一个脚本，可以根据 DOI（用于学术论文的序列号）搜索学术论文，然后从结果页中刮取数据。
 
-By Saturday night, the code for our browser extension was really coming together. So I sat down and started preparing the presentation slides. I left a lot of the final coding to my teammates while I rehearsed my pitch over and over again for hours.
+到了星期六晚上，我们的浏览器扩展的代码终于完成了。于是我坐下来，开始准备演示幻灯片。我把很多最后的编码工作留给了我的队友，而我则反复排练了几个小时的演讲。
 
-Even though it was my turn to sleep in a bed, I could barely get any shut-eye due to the jitters. Here I was, right in the heart of the tech ecosystem. Silicon Valley.
+尽管轮到我在床上睡觉，但由于紧张，我几乎无法闭目养神。我在这里，就在科技生态系统的中心。硅谷。
 
-As a teacher, I would routinely give talks in front of my peers – sometimes dozens of them. But this was different.
+作为一名教师，我经常在我的同行面前发表演讲，有时是几十个人。但这是不同的。
 
-In a few hours, I'd be presenting to a room full of ambitious developers. And judges. People with Ph.D.'s, some of whom had founded their own tech companies. They were going to be evaluating our work. I was terrified I'd somehow blow it.
+几个小时后，我将向一屋子雄心勃勃的开发者发表演讲。还有评委。拥有博士学位的人，其中一些人已经创办了自己的科技公司。他们将对我们的工作进行评估。我很害怕自己会以某种方式搞砸。
 
-Unable to sleep, I opened my email. The Startup Weekend staff had sent out an email, which included a PDF of a book. It was an unofficial mash-up of the tech startup classics [4 Steps to the Epiphany](https://www.amazon.com/Four-Steps-Epiphany-Successful-Strategies/dp/1119690358?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=662e9d222ccd9aa050d3ad29438e74e3&language=en_US&ref_=as_li_ss_tl) and [The Lean Startup](https://www.amazon.com/The-Lean-Startup-Eric-Ries-audiobook/dp/B005MM7HY8?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=13b3c19bdbda93658336cf7c69e27100&language=en_US&ref_=as_li_ss_tl).
+由于无法入睡，我打开了我的电子邮件。创业周末的工作人员发出了一封电子邮件，其中包括一本书的 PDF。这是一本非官方的科技创业经典 [顿悟的 4 个步骤](https://www.amazon.com/Four-Steps-Epiphany-Successful-Strategies/dp/1119690358?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=662e9d222ccd9aa050d3ad29438e74e3&language=en_US&ref_=as_li_ss_tl) 和 [精益创业](https://www.amazon.com/The-Lean-Startup-Eric-Ries-audiobook/dp/B005MM7HY8?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=13b3c19bdbda93658336cf7c69e27100&language=en_US&ref_=as_li_ss_tl) 的混搭。
 
-Now, I had already read these books, because they were required reading for anyone who wanted to build software products in the early 2010s. But I had also read dozens of other startup books. A lot of their insights sort of ran together into a slurry of advice.
+现在，我已经读过这些书，因为它们是 2010 年代初期想要构建软件产品的任何人的必读书籍。 但我还阅读了数十本其他创业书籍。 他们的很多见解都汇集在一起，形成了一堆建议。
 
-It was 4 a.m., and I couldn't sleep. So I just started reading. One thing these books really hit on is building something that people will pay for. The ultimate form of customer validation.
+凌晨 4 点，我无法入睡。 所以我才开始阅读。 这些书真正触及的一件事是构建人们愿意支付的东西。 客户验证的最终形式。
 
-That's when I realized: you know what would really push my presentation over the finish line? Proof of product-market fit. Proof that the app we were building solved a real problem people had. So much so that they'd open up their wallets.
+就在那时我意识到：你知道什么能真正推动我的演讲越过终点线吗？ 产品市场契合度的证明。 证明我们正在构建的应用程序解决了人们遇到的实际问题。 如此之多，以至于他们会打开钱包。
 
 This gave me an idea. I should take our app on the road and sell it to people.
 

@@ -1653,43 +1653,43 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 `你好[姓名]，[你们上次谈的事情]进展如何？`
 
-Pick the conversation up where it left off. If they seem like someone who would be a helpful addition to your Personal Network Board, ask them "hey what are you doing next [day of week]? Do you want to come with me to [other upcoming local event]?"
+从中断处继续对话。 如果他们看起来像是对您的个人网络板 (Personal Network Board)有帮助的人，请问他们 `嘿，你接下来 [星期几] 在做什么？你想和我一起去 [其他即将举行的本地活动] 吗？”`
 
-Always have your upcoming week of events in mind, so you can invite people to join you.
+始终牢记你即将到来的一周的活动，所以你可以邀请人们加入你。
 
-This is a great way to get people to hang out with you in a safe, public space. And you're providing something of value – giving them awareness of an upcoming event.
+这是一个让人们在一个安全的公共空间与你一起玩耍的好方法。而且你还提供了一些有价值的东西,让他们意识到即将到来的活动。
 
-If they seem interested, you can say "Awesome. What's the best way for me to message with you, and get the event details to you?"
+如果他们看起来感兴趣，你可以说 "太棒了。我有什么最好的方式给你留言，并把活动的细节告诉你？"
 
-Boom – you now have their email or social media or phone number, and your relationship can unfold from there.
+你现在有了他们的电子邮件或社交媒体或电话号码，你们的关系可以从那里展开。
 
-This may sound like a slow burn approach. Why be so cautious?
+这可能听起来像是一种慢热的方法。为什么如此谨慎？
 
-Again, people are busy. Smart people are defensive of their time, and of their personal information.
+同样，人们很忙。聪明人会保护他们的时间和他们的个人信息。
 
-There are too many vampires out there who want to take advantage of people – trying to sell them something, scam them, get them into their multi-level marketing scheme, or in some other way proselytize them.
+外面有太多的吸血鬼想利用人们,试图向他们推销东西，诈骗他们，让他们加入他们的多层次营销计划，或以其他方式向他们传教。
 
-The best way to help other people get past this reflexive defensiveness: already be on their radar from previous encounters as a reasonable person.
+让其他人克服这种不信任的最好方法是：在以前的接触中已经作为一个通情达理的人，出现在他们的视野上。
 
 ### How to Leverage Your Network
 
-We'll talk more about how to leverage your network in Chapter 4. For now, look at your network purely as an investment of time and energy.
+我们将在第 4 章详细讨论如何利用您的网络。现在，将您的网络纯粹视为时间和精力的投资。
 
-I like to think of my network as an orchard. I am planting relationships. Tending to them, and making sure they're healthy.
+我喜欢把我的人际关系想象成一个果园。 我正在建立关系。 照顾他们，确保他们健康。
 
-Who knows when those relationships will grow into trees and bear fruit. The goal is to keep planting trees, and at some point in the future, those trees will help sustain you.
+谁知道这些关系何时会长成大树并结出果实。 目标是继续植树，在未来的某个时候，这些树将帮助维持你的生命。
 
-Keep sending out positive energy. Keep offering to help people using your skills, and even your own network. (It is rarely a bad move to make a polite introduction between two people you know.)
+不断散发正能量。 不断提供帮助人们使用你的技能，甚至是你自己的人际关系。（在你认识的两个人之间进行礼貌的介绍很少是一个坏举动。）
 
-Be a kind, thoughtful, helpful person.
+做一个善良、体贴、乐于助人的人。
 
-Don't ever feel impatient with how slow a job search may be going.
+永远不要对求职过程的缓慢感到不耐烦。
 
-Don't ever let yourself feel slighted or snubbed.
+永远不要让自己感到被轻视或冷落。
 
-Don't ever let yourself feel jealous of someone else's success.
+永远不要让自己嫉妒别人的成功。
 
-What goes around comes around. You will one day reap what you sow. And if you're sowing positive energy, you are setting yourself up for one bountiful harvest.
+有因就有果。有一天你会收获你所播种的东西。如果你播种的是正能量，你就为自己的丰收做了准备。
 
 ## Chapter 3: How to Build Your Reputation
 

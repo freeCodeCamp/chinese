@@ -454,141 +454,161 @@ I didn't understand what he meant. "I'm learning how to use Emacs. Check it out.
 
 But Steve looked pensive. "That's cool and all. But you need a project. Always have a project. Then learn what you need to learn en route to finishing that project."
 
-Other than a few scripts I'd written for to help the teachers at my school, I had never finished anything. But I started to see what he was saying.
+我除了帮助学校的老师写的几个脚本之外，我从来没有完成过任何东西。但我开始明白他所说的是什么意思。
 
-And it started to dawn on me. All this time I had been trapped in tutorial hell, going in circles, finishing nothing.
+这一刻我恍然大悟了。一直以来，我都被困在教程的地狱里，兜兜转转，什么也没完成。
 
-Steve said, "I want you to build a project using HTML5. And next Saturday, I want you to present it at the hackerspace."
+史蒂夫说："我希望你用HTML5建立一个项目。下周六，我希望你在黑客空间（hackerspace）展示它。"
 
-I was mortified at his words. But I stood up straight and said. "Sounds like a plan. I'm on it."
+听到他的话，我感到很羞愧。但我站直了身子，对他说： "这个计划听起来不错。我这就开始做。"
 
-### Nobody Can Make You a Developer But You
+### 除了你，没有人可以让你成为一个开发者
 
-> "I'm trying to free your mind, Neo. But I can only show you the door. You're the one that has to walk through it." – Morpheus in the 1999 film The Matrix
+> "我试着解放你的心灵，尼奥。 但我只能带你到门口，你必须自己走过去。" （莫斐斯，1999年电影《黑客帝国》） 
 
-The next morning, I woke up extra early before work and googled something like "HTML5 tutorial." I already knew a lot of this from my previous time in tutorial hell. But instead of skipping ahead, I just slowed my roll and followed along exactly, typing every single command.
+第二天早上，我在上班前起得特别早，在网上搜索 "HTML5教程 "之类的东西。在之前的教程地狱中，我已经了解了很多相关知识。我没有跳过，而是放慢脚步，准确地跟着教程走，输入每一条命令。
 
-Usually once I finished a tutorial I would just go find another tutorial. But instead, I started playing with the tutorial's code. I had a simple idea for a project. I was going to make an HTML5 documentation page. And I was going to code it purely in HTML5.
+通常情况下，一旦我完成一个教程，我就会去找另一个教程。但是，我却开始玩起了教程中的代码。我对自己想做的项目有了初步的想法，我打算制作一个纯HTML5的文档页面。
 
-Let me explain HTML5 real quick. It's just a newer version of HTML, which has existed since the first webpages back in the 1990s.
+\---
 
-If a website was a body, HTML would be the bones. Everything else rests on top of those bones. (You can think of JavaScript as the muscles and CSS as the skin. But let's get back to the story.)
+如果你不知道什么是HTML5，让我快速地解释一下。它只是HTML的一个较新的版本，从20世纪90年代的第一个网页开始，它就已经存在了。
 
-I knew that in HTML, you could link to different parts of the same webpage by using ID properties. So I thought: what if I put a table of contents along the left hand side? Clicking the different items on the left would scroll down the page on the right to show those items.
+如果一个网站是一个身体，那么HTML就是骨头。其他一切都建立在这些骨骼之上。(你可以把JavaScript看作是肌肉，把CSS看作是皮肤）。
 
-Within half an hour, I had coded a rough prototype.
+让我们重新回到故事上来。
 
-But it was time to report for work at the school. The entire day, all I could think about was my project, and how I should best go about finishing it.
+\---
 
-I raced home, opened up my laptop, and spent the entire evening coding.
+我已经知道在HTML中，你可以通过使用ID属性链接到同一个网页的不同部分。所以我想：如果我沿着左手边放一个目录会怎么样？点击左边的不同选项（item），右边的页面就会相应地滚动并显示这些项目。
 
-I copied the official (and creative commons-licensed) HTML documentation directly into my page, "hard coding" it into the HTML.
+半个小时内，我就编出了一个粗略的原型。
 
-Then I spent about an hour on the CSS, getting everything to look right, and using absolute positioning to keep the sidebar in place.
+但是又到了去学校报到的时间了，我只好中断编程。整整一天，我所想的都是我的项目，以及我应该如何最好地完成它。 
 
-I made a point to make use of as many of HTML5's new "semantic" tags as I could.
+我飞快地跑回家，打开我的笔记本电脑，花了整整一个晚上来编码。
 
-And boom – project finished.
+我把官方和使用创作共用许可证 （Creative Commons license）的HTML文档直接复制到我的页面，把它 "硬编码 "到HTML中。
 
-A wave of accomplishment washed over me. I jogged to a nearby football field and ran laps around the field, celebrating. I did it. I finished a project.
+然后，我花了大约一个小时的时间在CSS上，让所有东西看起来都是正确的，并使用绝对定位来保持侧边栏的位置。
 
-And I decided right then and there: from here on out, everything I do is going to be a project. I'm going to be working toward some finished product.
+我尽可能多地使用了HTML5的新 "语义 "标签。
 
-The next evening I walked up to the podium, plugged in my laptop, and presented my HTML5 webpage. I answered questions from the developers there about HTML5.
+轰--项目完成了。 
 
-Sometimes I'd get something wrong, and someone in the audience would say, "that doesn't sound right – let me check the documentation."
+一股成就感涌上心头。我慢跑到附近的一个足球场，绕着球场跑了几圈，庆祝一下。我成功了，我完成了一个项目。 
 
-People weren't afraid to correct me. But they were polite and supportive. It didn't even feel like they were correcting me – it felt like they were correcting the public record – lest someone walk away with incorrect information.
+我当时就决定：从现在开始，我所做的一切都将成为一个项目。我将努力使它成为一个完成品。
 
-I didn't feel any of the anxiety that I might have felt giving a talk at a teacher in-service meeting.
+第二天晚上，我走到讲台上，插上我的笔记本电脑，展示了我的HTML5网页。我回答了在场的开发者们关于HTML5的问题。
 
-Instead I almost felt like I was part of the audience, learning alongside them.
+有时我会弄错一些东西，这时我会听到听众说，"这听起来不对--让我查查文档"。
 
-After all, these tools were new and emerging. We were all trying to understand how to use them together.
+人们并不害怕纠正我。但他们都很有礼貌，而且乐于提供支持。我甚至不觉得他们在纠正我，感觉他们比较像是在纠正公共记录，以免有人带着错误的信息离开。
 
-After my talk, Steve came up to me and said, "Not bad."
+我没有感到任何可能在在职教师会议上发表演讲的焦虑。
 
-I smiled for an awkwardly long time, not saying anything, just happy with myself.
+相反地，我几乎觉得自己是观众的一部分，与他们一起学习。
 
-Then Steve squinted and pursed his lips. He said: "Start your next project tonight."
+毕竟，这些都是新兴的开发工具。我们都在努力了解如何使用它们。 
 
-### Lessons from my Coding Journey
+我的演讲结束后，史蒂夫走过来对我说："还不错"。
 
-We'll check in on younger Quincy's coding journey in each of the following chapters. But now I want to break down some of the lessons here. And I want to answer some of the questions you may have.
+我尴尬地笑了很久，没有说什么，只是对自己很满意。
 
-### Why is Learning to Code so Hard?
+然后史蒂夫眯着眼睛，抿起嘴。他说： "今晚开始你的下一个项目"。
 
-Learning any new skill is hard. Whether it's dribbling a soccer ball, changing the oil on a car, or speaking a new language.
 
-Learning to code is hard for a few particular reasons. And some of these are unique to coding.
+### 我的编码之旅的经验教训
 
-The first one is that most people don't understand exactly what coding is. Well, I'm going to tell you.
+我们会在接下来的每一章中查看小昆西的编码之旅。但现在我想把这里的一些教训分解一下。我还想回答你可能有的一些问题。
 
-### What is coding?
 
-Coding is telling a computer what to do, in a way the computer can understand.
+### 为什么学习编码如此困难？
 
-That's it. That's all coding really is.
+学习任何新技能都是困难的。无论是运球，还是给汽车换油，或是说一门新的语言。
 
-Now, make no mistake. Communicating with computers is hard. They are "dumb" by human standards. They will do exactly what you tell them to do. But unless you're good at coding, they are probably not going to do what you **want** them to do.
+有几个特别的原因让学习代码如此困难，而其中一些是编码所特有的。
 
-You may be thinking: what about servers? What about databases? What about networks?
+第一个原因是，大多数人不明白编码到底是什么。那么，我这就来告诉你。
 
-At the end of the day, these are all controlled by layers of software. Code. It's code all the way down. Eventually you reach the physical hardware, which is moving electrons around circuit boards.
 
-For the first few decades of computing, developers wrote code that was "close to the metal" – often operating on the hardware directly, flipping bits from 0 to 1 and back.
+### 什么是编码？
 
-But contemporary software development involves so many "layers of abstraction" – programs running on top of programs – that just a few lines of JavaScript code can do some really powerful things.
+编码是用计算机能理解的方式告诉计算机要做什么。
 
-In the 1960s, a "bug" could be an insect crawling around inside a room-sized computer, and getting fried in one of the circuits.
+所谓的编码就仅仅是这样而已。 
 
-![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)The first computer bug, discovered in 1945, was a moth that got trapped in the panels of a room-sized calculator computer at Harvard. (Image: Public Domain)
+但你不要搞错了，与计算机沟通是很难的。按照人类的标准，它们很 "愚蠢"。它们会完全按照你的要求去做，但除非你擅长编码，否则它们可能不会做你“想”让它们做的事。 
 
-Today, we're writing code so many layers of abstraction above the physical hardware.
+你可能在想：那服务器呢？数据库呢？网络呢？
 
-That is coding. It's vastly easier than it has ever been in the past. And it is getting easier to do every year.
+归根结底，这些都是由一层层的软件控制的，而这些软件都是由代码所组成。从最上层
 
-I am not exaggerating when I say that in a few decades, coding will be so easy and so common that most younger people will know how to do it.
+一路往下都是代码所构成的，直到抵达最底层的物理硬件，也就是在电路板上移动的电子。
 
-## Why is learning to code still hard even in 2023?
+在计算机发展最初的几十年里，开发人员编写的代码是 "接近金属 "的，意思是他们通常是直接在硬件上操作，将比特从0翻转到1，再翻转回来。
 
-There are three big reasons why learning to code is so hard, even in 2023.
+但是，当代的软件开发涉及许多 "抽象层"——一个程序运行在另外的程序之上，仅仅几行JavaScript代码就可以完成一些非常强大的事情。
 
-1. The tools are still primitive
-2. Most people aren't good at handling ambiguity, and learning to code is ambiguous. People get lost.
-3. Most people aren't good at handling constant negative feedback. And learning to code is one brutal error message after another. People get frustrated.
+在20世纪60年代，一个 "bug" （虫子，也有程序错误的意思）可能是一只昆虫在一个房间大小的计算机中爬来爬去，并在其中一个电路中被烧毁。
 
-Now I'll discuss each of these difficulties in more detail. And I'll give you some practical strategies for overcoming each of them.
+![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)
 
-### The Tools are Still Primitive
+ 1945 年发现的史上第一个计算机虫子是一只飞蛾，它被困在哈佛大学一个房间大小的计算机的面板中。  (图片：Public Domain)
 
-![TNG-S4E19-171](https://www.freecodecamp.org/news/content/images/2023/01/TNG-S4E19-171.jpeg)A Possessed Barclay from Star Trek: The Next Generation, programming on the Holodeck.
+今天，我们编写的代码比物理硬件高出了许多抽象层。
 
-> "Computer. Begin new program. Create as follows. Work station chair. Now create a standard alphanumeric console positioned to the left hand. Now an iconic display console for the right hand. Tie both consoles into the Enterprise main computer core, utilizing neuralscan interface." - Barclay from Star Trek: The Next Generation, Season 4 Episode 19: "The Nth Degree"
+这就是编码。它比过去要容易得多。而且它每年都在变得更加容易。
 
-This is how people might program in the future. It's an example from my favorite science fiction TV show, Star Trek: The Next Generation.
+不夸张地说，几十年后，编码将变得如此简单和普遍，以至于大多数年轻人都会知道如何编码。
 
-Every character in Star Trek can code. Doctors, security officers, pilots. Even little Wesley Crusher (played by child actor Wil Wheaton) can get the ship's computer to do his bidding.
 
-Sure – one of the reasons everyone can code is that they live in a post-scarcity 24th-century society, with access to free high quality education.
+## 为什么即使在2023年，学习编码仍然很难？
 
-Another reason is that in the future, coding will be much, much easier. You just tell a computer precisely what to do, and – if you're precise enough – the computer does it.
+ 即使在2023年，学习编码也是如此困难，有三大原因。
 
-What if programming was as easy as just saying instructions to a computer in plain English?
+1. 工具仍然很原始
 
-Well, we've already made significant progress toward this goal. Think of our grandmothers, running between room-sized mainframe computers with stacks of punchcards.
+2. 大多数人不善于处理模棱两可的问题，而学习编码面对的就是这样的问题。人们常会迷失方向。
 
-![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)Working with a punchcard-based computer in the 1950s (Image: NASA)
+3. 大多数人不善于处理持续的负面反馈，而学习编码常常会收到一个又一个残酷的错误信息，会使人感到沮丧。
 
-It used to be that programming even a simple application would require meticulous instructions.
+现在我将更详细地一一讨论这些困难。我还会教你一些实用的策略来克服每一项困难。
 
-Here are two examples of a "Cesar Cypher", the classic computer science homework project.
 
-This is also known as "ROT-13" because you ROTate the letters by 13 positions. For example, A becomes N (13 letters after A), and B becomes O (13 letters after B).
+### 工具仍然是原始的
 
-I'm going to show you two examples of this program, both of which come from the Creative Commons-licensed Rosetta Code project.
+![tng-s4e19-171](https://www.freecodecamp.org/news/content/images/2023/01/TNG-S4E19-171.jpeg)
 
-First, here's the program in x86 Assembly:
+ 来自《星际迷航：下一代》着魔似的巴克利（Barclay）在全息甲板（Holodeck）上编程
+
+>   "计算机，开始新的程序，创建如下：工作站的椅子，现在创建一个标准的字母数字控制台，定位在左手；现在为右手创建一个标志性的显示控制台。将这两个控制台与企业主计算机核心相连，利用神经扫描界面。" ——巴克利，来自《星际迷航：下一代》第四季第19集："第N度"
+
+上面我拿了我最喜欢的科幻电视剧《星际迷航：下一代》中的一段作为例子，告诉你这就是人们在未来可能的编程方式。
+
+《星际迷航》中的每个角色都会编码。医生、保安人员、飞行员，甚至小韦斯利-克鲁舍（Wesley Crusher，由儿童演员威尔-惠顿扮演）也能让飞船上的计算机听从他的命令。
+
+当然，每个人都会编码的原因之一是他们生活在一个后稀缺的24世纪社会，可以获得免费的高质量教育。
+
+另一个原因是，在未来，编码会容易得多。你只需准确地告诉计算机要做什么，然后，如果你足够精确，计算机就会执行。 
+
+如果编程就像用简单的英语对计算机说指令一样容易呢？
+
+我们已经朝着这个目标取得了重大进展。想一想以前我们的祖母，她们在房间大小的大型计算机和成堆的打孔卡（punch cards）之间奔波。 
+
+![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)
+20世纪50年代使用打卡机的计算机（图片：NASA）
+
+过去，即使是一个简单的应用程序的编程也需要严谨的指令。
+
+这里有两个 "凯撒密码 "（Cesar Cypher）的例子，这是经典的计算机科学家庭作业项目。
+
+这也被称为 "ROT-13"，因为你将字母ROT了13个位置。例如，A变成N（A后13个字母），B变成O（B后13个字母）。 
+
+我将向你展示这个程序的两个例子，这两个例子都来自创作共用许可证的罗塞塔代码（Rosetta Code）项目。 
+
+首先，这是x86汇编中的程序：
 
 ```x86
 format 	ELF 	executable 3
@@ -647,7 +667,7 @@ exit: 	mov     eax,1		; syscall exit
 	int     80h
 ```
 
-And here's the same program in Python:
+下面是Python中的同一程序:
 
 ```python
 import string
@@ -671,15 +691,15 @@ if __name__ == "__main__":
         print(rot13(line), end="")
 ```
 
-Quite a bit simpler and easier to read, right?
+更简单，更容易阅读，对吗？
 
-And in the future it will be as simple as saying to your spaceship:
+ 而在未来，编码将像对你的宇宙飞船说的那样简单。
 
-"Computer. New program. Take each letter of the word I say and replace it with the letter that appears 13 positions later in the English alphabet. Then read the result back to me. The word is Banana."
+"计算机，开始新程序。把我说的每一个字母，替换成英语字母表中13个位置之后出现的字母，然后将结果读回给我。这个词就是 "香蕉"。
 
-And then your computer will say: "Onanan."
+然后你的电脑会说： "Onanan"。
 
-What we're doing is called "declarative programming." We're declaring "computer, you should do this." And the computer is smart enough (well-programmed enough) to understand our instructions and execute them.
+我们正在做的事情被称为 "声明式编程" （declarative programming）。我们在宣布 "计算机，你应该这样做"。而计算机足够聪明（编程足够好），能够理解我们的指令并执行它们。
 
 Here in 2023, the style of coding most of us are doing is "imperative programming." We're telling the computer exactly what to do, step-by-step.
 

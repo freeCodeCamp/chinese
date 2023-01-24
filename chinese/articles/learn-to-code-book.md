@@ -1693,61 +1693,61 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 ## Chapter 3: How to Build Your Reputation
 
-> "The way to gain a good reputation is to endeavor to be what you desire to appear." – Socrates
+> "获得良好声誉的方法是努力成为你希望出现的样子"。  苏格拉底
 
-Now that you've started building your skills and your network, you're ready to start building your reputation.
+现在你已经开始建立你的技能和你的人际网络，你已经准备好开始建立你的声誉。
 
-You may be starting from scratch – a total newcomer to tech. Or you may already have some credibility you can bring with you from your other job.
+你可能从零开始，一个完全的技术新人。或者你可能已经有了一些信誉，你可以从你的其他工作中带来。
 
-In this chapter, I'll share practical tips for how you can build a sterling reputation among your peers. This will be the key to getting freelance clients, a first job, and advancing in your career.
+在本章中，我将分享如何在同行中建立良好声誉的实用技巧。这将是获得自由职业者客户、第一份工作以及在事业上取得进展的关键。
 
-But first, here's how I built my reputation.
+但首先，我是如何建立我的声誉的。
 
 ### Story Time: How Did a Teacher in His 30s Build a Reputation as a Developer?
 
-*Last time on Story Time: Quincy started building his network of developers, entrepreneurs, and hiring managers in tech. He was frequenting hackerspaces and tech events around the city. But he had yet to climb into the arena and test his might...*
+*上一次是在故事时间。昆西开始建立他的网络，包括开发人员、企业家和科技界的招聘经理。他经常参加城市周围的黑客空间和科技活动。但他还没有爬上竞技场，测试自己的实力……*。
 
-I was already several months into my coding journey when I finally worked up the courage to go to my first hackathon.
+当我终于鼓起勇气去参加我的第一次黑客马拉松时，我的编码之旅已经有几个月了。
 
-One day I encountered a particularly nasty bug, and I wasn't sure how to fix it. So I did what a lot of people would do in that situation: I procrastinated by browsing the web. And that's when I saw it. Startup Weekend EDU.
+有一天，我遇到了一个特别讨厌的错误，我不知道如何解决它。所以我做了很多人在这种情况下会做的事情。我通过浏览网页来拖延时间。这时我看到了它。创业周末（Startup Weekend EDU）。
 
-Startup Weekend is a 54-hour competition that involves building an app, then pitching it to a panel of judges. These events reward your knowledge of coding, design, and entrepreneurship as well.
+创业周末是一个长达 54 小时的比赛，包括建立一个应用程序，然后将其提交给评审团。这些活动也奖励你的编码、设计和创业知识。
 
-This particular event – held in the heart of Silicon Valley – had a panel of educators and education entrepreneurs as its judges. With my background in adult education, this seemed like an ideal first hackathon for me.
+这个特别的活动--在硅谷的中心地带举行，有一个由教育家和教育企业家组成的评审团。由于我有成人教育的背景，这似乎是我第一次参加黑客马拉松的理想选择。
 
-I told Steve about the event. And then I said the magic words: "I'll do the driving." Which was good, because Steve didn't have a driver's license.
+我把这个活动告诉了史蒂夫。然后我说出了那句神奇的话。"由我来开车"。这很好，因为史蒂夫没有驾驶执照。
 
-With Steve onboard, we rounded out our team with a couple of devs from the Santa Barbara Hackerspace.
+有了史蒂夫的加入，我们与来自圣巴巴拉黑客空间的几个开发人员组成了我们的团队。
 
-I spent weeks preparing for the event by researching the judges and the companies they worked for. I researched the sponsors. And of course, I practiced coding like a Shaolin monk.
+我花了几周时间准备这次活动，研究评委和他们工作的公司。我研究了赞助商。当然，我还像少林寺的和尚一样练习编码。
 
-Finally, after a month of preparation, it was the big weekend. We piled into my 2005 Toyota Corolla with the peeling clear coat, put on some high energy music, and started our 5-hour drive.
+终于，经过一个月的准备，迎来了大周末。 我们挤进我的 2005 年丰田卡罗拉，车上的透明涂层已经剥落，放上一些充满活力的音乐，开始了我们 5 小时的车程。
 
-On the way up, we discussed what we should build. It would be education-focused, of course. Preferably catering to high school students, since those were the grade levels the judge's companies focused on.
+在路上，我们讨论了我们应该建造什么。当然，它将是以教育为重点的。最好是满足高中生的需求，因为这些是评审人员的公司所关注的年级。
 
-But what should the app do? How was it going to make people's lives easier?
+但这个应用程序应该做什么？它将如何使人们的生活更轻松？
 
-I thought back to my own time in high school. I didn't have much to go on, since I'd dropped out after just one year. (I did manage to study for and pass the GED – Good Enough Degree as we called it – while working at Taco Bell, before eventually going to college).
+我回想了一下我自己在高中的时候。我没有什么可说的，因为我只上了一年就退学了。(我确实设法学习并通过了普通教育证书，我们称之为 "足够好的学位"，同时在 Taco Bell 工作，最后才上了大学）。
 
-But one pain point I did remember from high school, which still rang out after all these years: English papers.
+但我确实记得高中时的一个痛点，在这么多年后仍然响起。英语论文。
 
-Now I loved writing. But I didn't love writing in MLA format, with its rigid citation rules. I used to dread preparing a Work Cited page. My teacher would always dock me points for not formatting my citations correctly.
+现在我喜欢写作。但我不喜欢用 MLA 格式写作，因为它有严格的引证规则。我曾经害怕准备工作引证页。我的老师总是会因为我的引文格式不正确而扣我的分。
 
-After listening to a lot of OK ideas from the other passengers in the car, I piped up. I said: "I have an idea. We should code an app that creates citations for you."
+在听了车上其他乘客的很多好主意后，我开始说了。 我说：“我有个主意。我们应该编写一个应用程序，为您创建引文。”
 
-And someone laughed and said: "Out of sight."
+而有人笑着说： "看不见了。"
 
-And Steve said, "Hey that's a good name. We could call it Out of Cite with a 'C'."
+史蒂夫说，“嘿，这是个好名字。我们可以用 `C` 称它为 `Out of Cite`。
 
-We all laughed and felt clever. Then we started discussing the implementation details.
+我们都笑了起来，觉得自己很聪明。然后我们开始讨论实施细节。
 
-When we arrived at the venue, there were about 100 other devs there. It was an open-plan office space, with low-rise cubicles flanked by whiteboards.
+当我们到达会场时，那里有大约 100 名其他开发人员。那是一个开放式的办公空间，低矮的隔间两边是白板。
 
-I heard whispers about one of those developers. "Hey, it's that guy who won the event last year," I heard people say. They gestured in the direction of a cocky-looking dev surrounded by fans. "Maybe he'll let me be on his team."
+我听到了关于其中一个开发者的窃窃私语。"嘿，是那个去年赢得比赛的家伙。" 我听到人们说。他们向一个被粉丝包围的、看起来很自负的开发者打手势。"也许他会让我加入他的团队。"
 
-The event started with pitches. Anyone could go up to the front of the room, grab the mic, and deliver a 60 second pitch for the app they wanted to build.
+活动开始时，大家纷纷发表意见。任何人都可以走到房间前面，拿起麦克风，为他们想要建立的应用程序做 60 秒的演讲。
 
-I was so nervous it felt like an alien was about to burst out of my chest. So naturally, I was first in line. Rip the band-aid off, right?
+我太紧张了，感觉就像一个外星人要从我的胸膛里冲出来。 所以很自然地，我排在第一位。 撕掉创可贴，对吧？
 
 I was sweating and gesticulating wildly as I raced through my pitch. I said something like this: "Citations suck. I mean, they don't suck. They're necessary. And you need to add them to your papers. But preparing citations sucks. Let's build an app that will fill out your Work Cited page for you. Who's with me?"
 

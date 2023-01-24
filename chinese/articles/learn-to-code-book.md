@@ -1137,7 +1137,7 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 ![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)A screenshot from job search engine Indeed. My search for "javascript" for the US yielded 68,838 job listings.
 
-The other skills you'll want to focus on are **HTML** and **CSS**. If a webpage were a body, HTML would be the bones, and CSS would be the skin. (JavaScript would be the muscles, making it possible for the website to move around and be interactive.)
+其他需要你专注的技能是 **HTML** 和 **CSS** 。如果网页是躯体，那么 HTML 会是骨架，而 CSS 则是皮肤。（ Javascript 将会是肌肉——使得网页的运转及交互成为可能。）
 
 You can learn some HTML and CSS in a single afternoon. Like most of the tools I mention here, they are easy to learn, but difficult to master.
 
@@ -1362,7 +1362,7 @@ The best time to start building your network is **yesterday**.
 
 But you don't need a time machine to do this. Because you already have a network. It's probably much smaller than you'd like it to be, but you **do** know people.
 
-They may be friends from your home town, or the colleagues of your parents. Any person you know from your past – however marginally – may be of help.
+他们可能是你家乡的朋友，或你父母的同事。任何一个你过去相识的人，不论多么籍籍无名，都能提供帮助。
 
 So step one is to take full inventory of the people you know. Don't worry – I am not asking you to reach out to anyone yet, or tax your personal relationships.
 

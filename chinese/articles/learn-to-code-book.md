@@ -1600,46 +1600,46 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 ### How to Meet New People and Expand Your Personal Network
 
-We've talked about how to reach out to people you already know. Those connections are still there, even if they've atrophied a bit over the years.
+我们已经谈到了如何与你已经认识的人联系。这些联系仍然存在，即使它们多年来已经有点萎缩了。
 
-But how do you make brand new connections?
+但你如何建立全新的联系？
 
-This is no easy task. But I have some tips that will make this process a bit less daunting.
+这不是一件容易的事。但我有一些建议，可以使这个过程不那么令人生畏。
 
-First of all, meeting people for the first time in person is so much more powerful than meeting them online.
+首先，第一次与人见面，比在网上见面要有效的多。
 
-When you meet someone in person, your memory has so much more information to latch onto:
+当你见到某人的时候，你的记忆有更多的信息可以获取:
 
-- How the person looks, their posture, and how they move through the space
-- The sound of their voice and the way they speak
-- The lights, sounds, aromas, temperature, and the general feel of the venue
-- And so many other little details that get baked into your memory
+- 这个人的长相，他们的姿势，以及他们如何在空间中移动
+- 他们的声音和他们说话的方式
+- 灯光、声音、香气、温度和场地的总体感觉
+- 还有许多其他的小细节，这些都会在你的记忆中留下烙印
 
-Spending 10 minutes talking with someone in person can build a deeper connection than dozens of messages back and forth, across weeks of correspondence.
+与一个人当面交谈 10 分钟，比来回几十条信息，跨越几周的通信建立更深的联系。
 
-This is why I strongly recommend: get out there and meet people at local events.
+这就是为什么我强烈建议：走出去，在当地的活动中认识人们。
 
 ### How to Meet People at Local Events Around Town
 
-Which events? If you live in a densely-populated city, you may have a ton of options at your disposal. You may be able to go to tech events several nights each week, with minimal commuting.
+哪些活动？如果你住在一个人口稠密的城市，你可能有大量的选择供你支配。你可能每周都能去参加几个晚上的科技活动，而且通勤时间最少。
 
-If you live in a small town, you may have to stick with meeting people at local gatherings. Book fairs, ice cream socials, sporting events.
+如果你住在一个小镇上，你可能不得不坚持在当地的聚会上认识人。书展、冰激凌社交活动、体育赛事。
 
-If you go to church, mosque, or temple, get to know people there, too.
+如果你去教堂、清真寺或寺庙，也要认识那里的人。
 
-And yes, I realize this may sound ridiculous. "That person standing in the bleachers next to me at the soccer game? They're somehow going to help me get a developer job?"
+是的，我知道这可能听起来很荒谬。"在足球比赛中站在我旁边看台的那个人？他们会以某种方式帮助我找到一份开发商的工作？"
 
-Maybe. Maybe not. But don't write people off.
+也许吧。也许不是。但不要把人撇开。
 
-That person may run a small business.
+那个人可能经营一个小企业。
 
-They may have gone to school with a friend who's a VP of Engineering at a Fortune 500 company.
+他们可能和一个在财富 500 强公司担任工程副总裁的朋友一起上学。
 
-And maybe – just maybe – they're a software engineer, too. After all, there are millions of us software engineers out there. And we don't all live in Silicon Valley. 😉
+也许他们也是一名软件工程师。毕竟，我们有数以百万计的软件工程师在那里。而且我们并不都住在硅谷。 😉
 
-When you do meet a new person, you don't want to immediately pull out your phone and say "Can I add you to my LinkedIn professional network?"
+当你遇到一个新的人时，你不想立即掏出你的手机，说 `我可以把你加入我的LinkedIn 的联系人吗？`
 
-Instead, you want to play it cool. Introduce yourself.
+相反，你要表现得冷静。介绍一下自己。
 
 **Remember their name.** Names are integral to building a relationship. If you are bad with names, practice remembering them. You can practice by just trying to remember the name of every character – no matter how minor they are – when you're watching TV shows or movies.
 

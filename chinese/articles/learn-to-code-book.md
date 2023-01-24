@@ -1641,17 +1641,17 @@ Step 3: Choose a social media platform they've been recently active on. Send the
 
 相反，你要表现得冷静。介绍一下自己。
 
-**Remember their name.** Names are integral to building a relationship. If you are bad with names, practice remembering them. You can practice by just trying to remember the name of every character – no matter how minor they are – when you're watching TV shows or movies.
+**记住他们的名字。**名字是建立关系不可或缺的。如果你不善于记名字，就练习记住它们。你可以在看电视节目或电影时，试着记住每个角色的名字,不管他们是不是大明星，来练习。
 
-If you forget someone's name, don't guess. Just say "what's your name again" and be sure to remember it the second time.
+如果你忘记某人的名字，不要猜测。只要说 `你叫什么名字来着`，第二次一定要记住它。
 
-Shake their hand or fist bump. Talk with them about whatever feels natural. If the conversation peters out, no worries. Let it.
+与他们握手或握拳。与他们谈论任何感觉自然的话题。如果谈话结束了，不用担心。随它去吧。
 
-You build relationships over time. It's not about total time spent with someone – it's about the number of times you meet that person over a longer span of time.
+你随着时间的推移建立关系。这不是指与某人相处的总时间,而是指你在较长的时间跨度内与该人见面的次数。
 
-There is a good chance you will see the person again in the future. Maybe at that same exact location a few weeks later. And **that** is when you make your move:
+有一个很好的机会，你会在未来再次见到这个人。也许几周后，在同一个确切的地点。而就是你采取行动的时候:
 
-"Hi [name] how's the [thing you talked about the previous time] going?"
+`你好[姓名]，[你们上次谈的事情]进展如何？`
 
 Pick the conversation up where it left off. If they seem like someone who would be a helpful addition to your Personal Network Board, ask them "hey what are you doing next [day of week]? Do you want to come with me to [other upcoming local event]?"
 

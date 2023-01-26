@@ -1137,37 +1137,37 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 ![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)A screenshot from job search engine Indeed. My search for "javascript" for the US yielded 68,838 job listings.
 
-其他需要你专注的技能是 **HTML** 和 **CSS** 。如果网页是躯体，那么 HTML 会是骨架，而 CSS 则是皮肤。（ Javascript 将会是肌肉——使得网页的运转及交互成为可能。）
+其他需要你专注的技能是 **HTML** 和 **CSS**。如果网页是躯体，那么 HTML 就是骨架，而 CSS 则是皮肤。（ Javascript 将会是肌肉——使得网页的运转及交互成为可能。）
 
-You can learn some HTML and CSS in a single afternoon. Like most of the tools I mention here, they are easy to learn, but difficult to master.
+你可以在一个下午就学些 HTML 和 CSS。但就像本书提到的其他工具一样，它们入门容易精通难。
 
-You'll also want to learn how to use **Linux**. Linux powers a vast majority of the world's servers, and you will spend much of your career running commands in the Linux command line.
+对 **Linux** 的学习也不应错过。Linux 驱动着这个世界大多数的服务器，而且在你在职业生涯中，也会在 Linux 命令行中度过很多时光。
 
-If you have a Mac, MacOS has a terminal that accepts almost all the same commands as Linux. (MacOS and Linux have a common ancestor in Unix.)
+如果你有一台 Mac 的话, MacOS 提供的终端工具，可以接受几乎所有与 Linux 相同的命令。（ MacOS 和 Linux 有一个共同的祖先，即 Unix）。
 
-But if you're on a Windows PC, you'll want to install WSL, which stands for Windows Subsystem for Linux. You will then be able to run Linux commands on your PC. And if you're feeling particularly adventurous, you can even dual boot both the Windows and Linux operating systems on the same computer.
+但是如果你的电脑是 Windows 系统，你需要安装 WSL（Windows Subsystem for Linux）。安装后你就可以在电脑上运行 Linux 命令。如果你想更进一步，你甚至可以在同一台电脑上同时安装 Windows 和 Linux 两套操作系统。
 
-If you're going to install Linux on a computer, I recommend starting with Ubuntu. It is the most widely used (and widely documented) Linux distribution. So it should be the most forgiving.
+如果想在电脑上安装 Linux，我推荐在最开始选择 Ubuntu——一个最被广泛使用（并且文档完备）的 Linux 发行版。因此它应该是对新手最为友好的。
 
-Make no mistake – Linux is quite a bit harder to use than Windows and MacOS. But what you get in return for your efforts is an extremely fast, secure, and highly customizable operating system.
+不要误会， Linux 比 Windows 和 MacOS 都更难以使用一些。但是你的努力将换得一个极其迅速、安全且高度可定制的操作系统。
 
-Also, you will never have to pay for an operating system license again. Unless you want to. Red Hat is a billion dollar company even though its software is open source, because companies pay for their help servicing and supporting Linux servers.
+而且，你再也不用为一个操作系统的许可而付费了。除非你想这么做。尽管 Red Hat 的软件都是开源的，但它仍是一家价值 10 亿美元的公司，这都源于其他企业愿意付费获得它的帮助及对 Linux 服务器的支持。
 
-You'll also want to learn **Git**. This Version Control System is how teams of developers coordinate their changes to a codebase.
+你还会想学习 **Git**。开发团队会使用这个版本控制系统进行代码更新上的协作。
 
-You may have heard of GitHub. It's a website that makes it easier for developers to collaborate on open source projects. And it further extends some of the features of Git. You'll learn more about GitHub in the How to Build Your Reputation chapter later.
+你可能已经听说过 GitHub。GitHub 是个让开发者更容易进行开源项目协作的网站。它拓展了 Git 的一些特性。你将会在本书“⚠️⚠️⚠️如何打造你的声誉【需要和其他译者的版本统一】⚠️⚠️⚠️”一章中增进对 GitHub 的了解。
 
-You'll want to learn **SQL** and how relational databases work. These are the workhorses of the information economy.
+还有 **SQL** 以及关系型数据库如何运作。这些是信息经济中的主力军。
 
-You'll also hear a lot about NoSQL databases (Non-relational databases such as graph databases, document databases, and key-value stores.) You can learn more about these later. But focus on SQL first.
+你可能还听说过 NoSQL 数据库（非关系型数据库，如图形数据库，文档数据库和键/值数据库。）你会在今后学习到更多。但最初请专注于 SQL。
 
-Finally, you'll want to learn how **web servers** work. You'll want to start with Node.js and Express.js.
+最后，你还会希望了解**网路服务器**如何运作。Node.js 和 Express.js 会是一个好的起点。
 
-When you hear the term "full stack development" it refers to tying together the front end (HTML, CSS, JavaScript) with the back end (Linux, SQL databases, and Node + Express).
+当你听到“全栈开发”这个词的时候，它代表联结前端（HTML、CSS 和 JavaScript）与后端（Linux、SQL 数据库和 Node + Express）。
 
-There are lots of other tools you'll want to learn, like React, NGINX, Docker, and testing libraries. You can pick these up as you go.
+还有很多你希望学习的工具，例如 React、NGINX、Doker 和测试库。你可以在学习途中随心选择。
 
-But the key skills you should spend 90% of your pre-job learning time on are:
+但你应该将 90% 的职前学习时间，用在以下的关键技能上：
 
 1. HTML
 2. CSS
@@ -1178,9 +1178,9 @@ But the key skills you should spend 90% of your pre-job learning time on are:
 7. Node.js
 8. Express.js
 
-If you learn these tools, you can build most major web and mobile apps. And you will be qualified for most entry-level developer jobs. (Of course, many job descriptions will include other tools, but we'll discuss these later in the book.)
+学会了这些工具，你将有能力构建大多数主流的网页和手机应用。而且你也达到了大多数入门级开发工作的门槛。（当然，许多职位的描述中还会包括其他工具，但我们将在本书的后续部分进行探讨。）
 
-So you may be thinking: great. How do I learn these?
+现在你可能在想：真不错，但我要如何学习这些呢？
 
 ### Where do I learn how to code?
 

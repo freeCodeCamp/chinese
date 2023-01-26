@@ -3,66 +3,66 @@
 > -  译者：
 > -  校对者：
 
-![How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
+[如何在 2023 年学习编程并入行程序员 [完结]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
 
-If you want to learn to code and get a job as a developer, you're in the right place. This book will show you how.
+如果你打算学习编程并成为一名开发者，希望这本书对你有帮助。
 
-And yes this is the full book – for free – right here on this webpage.
+这本书已编写完毕，完全免费。你可以在此阅读。
 
-A few years back, one of the Big 5 book publishers from New York City reached out to me about a book deal. I met with them, but didn't have time to write a book.
+几年前，纽约市的 5 家头部出版商找到我，希望与我合作出书。我和他们当面聊了下，可当时我根本抽不出时间来写书。
 
-Well, I finally had time. And I decided to just publish this book for free, right here on freeCodeCamp.
+现在我终于有时间写书了，而且我打算让大家在 freeCodeCamp 上免费阅读我写的这本书。
 
-Information wants to be free, right? 🙂
+信息本身即是自由且免费的，对吧？🙂（注：原文 "Information wants to be free" 旨在表达信息本应无障碍地被人们获取，见[此词条](https://en.wikipedia.org/wiki/Information_wants_to_be_free)，英文中的 free 既有“自由”也有“免费”之意；另外，此处译文参考自[这里](https://web.law.duke.edu/cspd/chinese/information/)）
 
-It may take you a few hours to read all this. But this is it. My insights into learning to code and getting a developer job.
+这本书包括了我对学编程和成为开发者的许多思考，因此篇幅较长，通读可能需要几个小时。
 
-I learned all of this while:
+以下是我的个人经历：
 
-- learning to code in my 30s
-- then working as a software engineer
-- then running freeCodeCamp.org for the past 8 years. Today, more than a million people visit this website each day to learn about math, programming, and computer science.
+- 30 多岁开始学习编程
+- 然后成为软件工程师
+- 之后，我于 8 年前（2015 年）创办了 freeCodeCamp.org。现在，每天都有一百多万人来这里学习数学、编程和计算机科学
 
-I was an English teacher who had never programmed before. And I was able to learn enough coding to get my first software development job in just one year.
+在这之前，我是一名从未接触过编程的英语老师。不过，我在开始学习编程一年后就拿到了我的第一份开发者工作。
 
-All without spending any money on books or courses.
+在这个过程中，我没有花一分钱购买书籍或参与任何课程。
 
-(I did spend money to travel to nearby cities and participate in tech events. And as you'll see later in the book, this was money well spent.)
+（确切地说我其实花钱了，因为我经常跑到周边城市参加了技术会议。后文中会提到，这些钱花得非常值得）
 
-After working as a software engineer for a few years, I felt ready. I wanted to teach other people how to make this career transition, too.
+做了几年软件工程师之后，我觉得是时候改变一下了：我想教会其他人如何实现职业生涯的转换。
 
-I built several technology education tools that nobody was interested in using. But then one weekend, I built freeCodeCamp.org. A vibrant community quickly gathered around it.
+一开始我尝试着做了一些技术类的教学工具，但反响平平。直到有一个周末，我上线的 freeCodeCamp.org 竟成为了爆款，吸引了很多用户，逐步构建了 freeCodeCamp 社区。
 
-Along the way, we all helped each other. And today, people all around the world have used freeCodeCamp to prepare for their first job in tech.
+一直以来，我们在社区内互相帮助。现在，全世界的人们得以通过 freeCodeCamp 来为自己的第一份技术工作做准备。
 
-You may be thinking: I don't know if I have time to read this entire book.
+你也许会想：“我可能没那么多时间读完整本书”。
 
-No worries. You can bookmark it. You can come back to it and read it across as many sittings as you need to.
+没关系，你可以随时标注读到了哪里；之后有空了随时回来继续读。这本书会一直在这里等你。
 
-And you can share it on social media. Sharing: "check out this book I'm reading" and linking to it is a surprisingly effective way to convince yourself to finish reading a book.
+或许你还可以尝试在社交网络上分享，说：“看，我在读这本书”，并附上链接。你可能想不到，这是一种很好的激励方式，有助于你尽快读完这本书。
 
-I say this because I'm not trying to sell you this book. You already "bought" this book when you opened this webpage. Now my goal is to reassure you that this book **will** be worth investing your scarce time in finish. 😉
+我这样说的目的不是要把书卖给你；其实在你打开这个页面的时候，这本书就已经是你的了。我是想告诉你，这本书绝对值得你抽出一些时间来读完😉。
 
-I promise to be respectful of your time. There's no hype or fluff here – just blunt, actionable tips.
+我理解，你的时间很宝贵。所以这本书里绝对不会有任何的虚构和炒作，只会有直率且可执行的建议。
 
-I'm going to jam as much insight as I can into every chapter of this book.
+我会尽力在这本书的每一章内容里多写一些我的思考和理解。
 
-Which reminds me: where's the table of contents?
+噢对了，书都应该有个目录的吧。
 
-Ah. Here it is:
+来，请看目录：
 
-## Table of Contents
+## 目录
 
-1. [Preface: Who is this book for?](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
-2. [500 Word Executive Summary](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
-3. [Chapter 1: How to Build Your Skills](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
-4. [Chapter 2: How to Build Your Network](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
-5. [Chapter 3: How to Build Your Reputation](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
-6. [Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
-7. [Chapter 5: How to Succeed in Your First Developer Job](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
-8. [Epilogue: You Can Do This](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
+1. [前言：本书适合的人群](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
+2. [概论](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
+3. [第一章：如何打造自己的技术栈](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
+4. [第二章：如何增加自己的人脉](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
+5. [第三章：如何提升自己的圈内名声](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
+6. [第四章：如何靠编程赚钱——自由职业与求职](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
+7. [第五章：如何在第一份工作中取得成功](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
+8. [后记：相信自己，你能行](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
 
-## Preface: Who is This Book For?
+## 前言：本书适合的人群
 
 This book is for anyone who is considering a career in software development.
 

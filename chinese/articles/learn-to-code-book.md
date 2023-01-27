@@ -1205,15 +1205,15 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 自学编程从未如此简单。
 
-### Building Your Skills is a Life-Long Endeavor
+### 打磨你的技能是项终身事业
 
-We've talked about why self-teaching is probably the best way to go, and how to go about it.
+我们已经探讨了为什么自学编程可能是最好的方式，以及如何去做。
 
-We've talked about the alternatives to self-teaching, such as getting a bachelor's degree in Computer Science, or getting a Master's degree.
+我们也聊过了自学的替代方案，例如获得计算机科学的学士或硕士学位。
 
-And we've talked about which specific tools you should focus on learning first.
+我们还讨论了你应该先重点专注于哪些具体的工具。
 
-Now, let's shift gears and talk about how to build the second leg of your stool: your network.
+现在，让我们换换思路，关注下如何打造另一驱动：你的人际关系。
 
 ## Chapter 2: How to Build Your Network
 

@@ -2496,13 +2496,13 @@ Hiring is hard.
 
 So you can see why employers are risk averse. Many of them will pass over seemingly qualified candidates until they find someone whom they feel 99% sure about.
 
-### Because Employers are So Risk Averse, Job Seekers Suffer
+### 因为雇主非常厌恶风险，所以求职者遭殃
 
-Now if you think hiring is hard, wait until you hear about the job application process. You may already be all-too-familiar with it. But here goes...
+如果你现在认为招聘很困难，你一定不知道工作申请流程有多复杂。你或许已经对它再熟悉不过了。就像这样...
 
-- You have to prepare your résumé or CV. Along the way, you will make decisions which you'll constantly second-guess throughout your job search.
-- You have to look around for job openings online, research the employers, and assess whether they're likely to be a good fit for you.
-- Most job openings will lead to webforms where you will have to retype your résumé over and over again, hoping the form doesn't crash due to server errors or JavaScript validation errors.
+- 你必须准备简历。同时，你将在整个求职过程中不断地摸索着做决定。
+- 你必须在网上四处寻找职位空缺，研究雇主，并且评估他们是否适合你。
+- 大多数职位的申请都需要填表，你将不得不一遍又一遍地重新填写简历，希望表单不会因服务器错误或 JavaScript 验证错误而崩溃。
 - Once you submit these job applications, you have to wait while employer process them. Some employers receive so many applications that they can't manually review them all. (Google alone receives 9,000 applications per day.) Employers will use software to filter through applications. In-house recruiters [spend an average of 6 seconds looking at each résumé](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/). Often your application will never even be reviewed by a human.
 - You will likely never hear anything back from the company. They have little incentive to tell you why they rejected you (they don't want you to file a discrimination lawsuit). If you're lucky, you'll get one of those "We've chosen to pursue other candidates" emails.
 - And all the time you spend applying for these jobs – potentially hours per week – is mentally exhausting and, of course, unpaid.

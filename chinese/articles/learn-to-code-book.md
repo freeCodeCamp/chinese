@@ -1182,28 +1182,28 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 现在你可能在想：真不错，但我要如何学习这些呢？
 
-### Where do I learn how to code?
+### 我在哪里可以学习编程？
 
-Funny you should ask. There's a full curriculum designed by experienced software engineers and teachers. It's designed with busy adults in mind. And it's completely free and self-paced.
+好问题。这里有一个由经验丰富的软件工程师和教师设计的完整课程，它的设计考虑到了成年人的繁忙，内容完全免费并且可以自由掌控学习进度。
 
-That's right. I'm talking about [freeCodeCamp's core curriculum](https://www.freecodecamp.org/learn). It will help you learn:
+是的，我说的就是 [freeCodeCamp 的核心课程](https://www.freecodecamp.org/learn)。它能帮助你学习：
 
-- Front End Development
-- Back End Development
-- Engineering Mathematics
-- and Scientific Computing (with Python for Data Science and Machine Learning)
+- 前端开发
+- 后端开发
+- 工程数学
+- 科学计算（使用 Python 探索数据科学和机器学习）
 
-To date, thousands of people have gone through this core curriculum and gotten a developer job. They didn't need to quit their day job, take out loans, or really risk anything other than some of their nights and weekends.
+迄今为止，已有数千人完成了这一核心课程并获得了一份开发者工作。他们不需辞去日常的工作、贷款或冒任何风险，只需利用上他们的晚上和周末。
 
-In practice, freeCodeCamp has become the default path for most people who are learning to code on their own.
+实际上， freeCodeCamp 已经成为大多数人自学编程的默认路径。
 
-If nothing else, the freeCodeCamp core curriculum can be your "home base" for learning, and you can branch out from there. You can learn the core skills that most jobs require, and also dabble in technologies you're interested in.
+没有其他问题的话，你可以在 freeCodeCamp 核心课程中落地生根，并从这里开枝散叶。你可以学习大多数工作都需要的核心技能，也可以涉猎你感兴趣的技术。
 
-There are decades worth of books and courses to learn from. Some are available at your public library, or through monthly subscription services. (And you may be able to access some of these subscription services for free through your library as well.)
+还有数十年的书籍和课程可以学习。有些可以在公共图书馆中找到，或通过每月订阅获取。（你或许也可以通过图书馆免费获得其中的一些订阅服务）。
 
-Also, freeCodeCamp now has nearly 1,000 free full-length courses on everything from AWS certification prep to mobile app development to Kali Linux.
+此外， freeCodeCamp 目前拥有近 1000 门免费的完整课程，内容从 AWS 认证准备，到移动应用开发，再到 Kali Linux。
 
-There has never been an easier time to teach yourself programming.
+自学编程从未如此简单。
 
 ### Building Your Skills is a Life-Long Endeavor
 

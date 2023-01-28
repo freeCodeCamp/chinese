@@ -2513,14 +2513,15 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 以下是一位 freeCodeCamp 贡献者在12周内的求职数据：
 
-![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png) 在投递了291份申请之后，他最终收到了8个 offer。
+![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)
+在投递了291份申请之后，他最终收到了8个 offer。
 
-And as the offers came in, the starting salary got higher and higher. Note, of course, that this is for a job in San Francisco, one of the most expensive cities in the world.
 随着 offer 的陆续到来，起薪也越来越高。当然，请注意，这是在世界上消费水平最高的城市之一————旧金山的工作。
 
-![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png) 到第12周时，在他收到的 offer 里，起薪几乎是第2周的两倍。
+![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)
+到第12周时，在他收到的 offer 里，起薪几乎是第2周的两倍。
 
-这位开发者得到面试的几率相当高。而且他的谈判能力也很强。如果你感兴趣，可以 [在这里](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/) 了解更多关于他求职过程的内容。
+这位开发者得到面试的几率相当高。而且他的谈判能力也很强。如果你感兴趣，可以[在这里](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/)了解更多关于他求职过程的内容。
 
 但正如我之前所说，其实从“旁门”进入一家公司会更容易一些。
 
@@ -2530,7 +2531,7 @@ And as the offers came in, the starting salary got higher and higher. Note, of c
 
 在本书中，我一直在教你一些增加“走运”获得工作机会可能性的技巧。
 
-> “运气是准备遇见机会。如果你在机会来临时没有做好准备，你就不会'幸运'。” – 奥普拉·温弗瑞
+> “运气是准备遇见机会。如果你在机会来临时没有做好准备，你就不会'幸运'。” —— 奥普拉·温弗瑞
 
 这就是为什么在整本书中我都鼓励你同时发展这三个领域，并且从第一天起就开始考虑它们——在你找工作之前。
 
@@ -2550,37 +2551,37 @@ And as the offers came in, the starting salary got higher and higher. Note, of c
 
 希望在我们有生之年的某一天，雇主和有技能的员工可以更容易地找到彼此，而无需漫长、残酷的工作申请和面试过程。
 
-### Should I Negotiate My Salary at My First Developer Job?
+### 我应该在第一份开发工作谈判薪资吗？
 
-Trying to negotiate your salary upward generally does not hurt as long as you do so politely.
+只要你礼貌地进行谈判沟通，尝试提高你的薪水通常不会有什么坏处。
 
-I've written at length on [how to negotiate your developer job offer salary](https://www.freecodecamp.org/news/salary-negotiation-how-not-to-set-a-bunch-of-money-on-fire-605aabbaf84b/).
+我写过一篇更详细的关于[如何进行开发工作的薪资谈判](https://www.freecodecamp.org/news/salary-negotiation-how-not-to-set-a-bunch-of-money-on-fire-605aabbaf84b/)的文章。
 
-Essentially, negotiating a higher starting salary comes down to how much leverage you have.
+从本质上讲，谈判更高的起薪取决于你有多少能力。
 
-Your employer has work to be done. How badly does your employer need you to work for them? What other options do they have?
+你的雇主有工作要完成。他们有多需要你来为他们工作？他们还有什么其他选择？
 
-And you need income to survive. What other options do you have? What is your backup plan?
+而你需要收入来生活。你有什么其他的选择？你的备选计划是什么？
 
-If you have a job offer from another employer offering to pay you a certain amount, you can use that as leverage in your salary negation.
+如果你有另一家雇主提供的工作机会，并且愿意支付某个金额的薪水，你可以将其作为谈判薪资的筹码。
 
-If your best backup plan is to go back to school and get a graduate degree... that's not particularly strong leverage, but it's better than nothing. And you could mention it during the salary negotiation process.
+如果你的最佳后备计划是回到学校并获得研究生学位...那不算特别强大的筹码，但总比没有好。你可以在薪资谈判的过程中提到它。
 
-Think back to the lengthy hiring process I described earlier. Employers have to go through at least a dozen steps before they can reach the job offer step with candidates. They are probably already planning for you to negotiate, and won't be surprised by it.
+回想一下我之前描述的漫长的招聘过程。雇主必须经过至少十几个步骤才能与候选人到达将要发放 offer 的那一步。他们可能已经预料到你会进行薪资谈判，并不会对此感到惊讶。
 
-Now, if you're in a situation like I was where a company just offers you a job out of the blue, you may feel awkward trying to negotiate.
+现在，如果你和我一样，有家公司突然给你一份工作，你可能会觉得谈判薪资很尴尬。
 
-![92508](https://www.freecodecamp.org/news/content/images/2023/01/92508.jpeg)Smithers from the Simpsons
+![92508](https://www.freecodecamp.org/news/content/images/2023/01/92508.jpeg)《辛普森一家》里的史密瑟斯
 
-I will admit – in my story time above, when my manager offered me the job, I did not negotiate.
+我承认——在我上面写的故事里，当我的经理给我这份工作时，我没有谈判。
 
-In retrospect, should I have negotiated my compensation? Probably.
+回想起来，我本应该协商我的报酬吗？也许吧。
 
-Did I have leverage? Probably not much. My backup plan was to just keep competing in hackathons and keep sipping tea and coding at the public library.
+我有什么筹码吗？可能不多。我的备选计划是继续参加编程比赛，在公共图书馆喝茶和写代码。
 
-I may have been able to negotiate and get a few more bucks an hour. But in the moment they offered me the job, compensation was the last thing on my mind. I was just ecstatic that I was going to be a professional developer.
+我也许能去谈判并每小时多赚几美元。但在他们给我那份工作的那一刻，报酬是我最后才考虑到的事情。我只是欣喜若狂，因为我即将成为一名专业的开发人员。
 
-By the way, once you've worked as a developer at a company for a year or so, you may want to ask for a raise. I've written at length about [how to ask for a raise as a developer](https://www.freecodecamp.org/news/youre-underpaid-here-s-how-you-can-get-the-pay-raise-you-deserve-fafcf52956d6/). But it comes down to the same thing: leverage.
+顺便说一句，一旦你在一家公司担任开发人员一年左右，你可能会想要求加薪。我已经写了更详细的关于[作为开发人员如何要求加薪](https://www.freecodecamp.org/news/youre-underpaid-here-s-how-you-can-get-the-pay-raise-you-deserve-fafcf52956d6/)的文章。但归根结底都是同一件事：谈判筹码。
 
 ### Should You Use a Recruiter for Your Developer Job Search?
 

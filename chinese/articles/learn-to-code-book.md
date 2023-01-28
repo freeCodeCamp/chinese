@@ -2526,29 +2526,29 @@ And as the offers came in, the starting salary got higher and higher. Note, of c
 
 这就是我写这本书的原因之一。我不希望你们都在雇主的“前门”排队。
 
-### If you Build Your Skills, Your Network, and Your Reputation You Can Bypass a Lot of the Job Application Process.
+### 如果你建立了自己的技能、人脉和声誉，你就可以绕过很多工作申请流程。
 
-Throughout this book, I've been teaching you techniques to increase your likelihood of "lucking" into a job offer.
+在本书中，我一直在教你一些增加“走运”获得工作机会可能性的技巧。
 
-> "Luck is preparation meeting opportunity. If you hadn't been prepared when the opportunity came along, you wouldn't have been 'lucky.'" – Oprah Winfrey
+> “运气是准备遇见机会。如果你在机会来临时没有做好准备，你就不会'幸运'。” – 奥普拉·温弗瑞
 
-This is why throughout this book I've encouraged you to develop all three of these areas at once, and to start thinking about them from day one – well in advance of your job search.
+这就是为什么在整本书中我都鼓励你同时发展这三个领域，并且从第一天起就开始考虑它们——在你找工作之前。
 
-My story of not even looking for a job and landing a job may seem silly. But this happens more often than you might think.
+我没有特意找工作但却找到了工作的故事可能看起来有点蠢。但这种情况发生的频率可能比你想象的要高。
 
-The reality is: learning to code is hard.
+现实是：学习编程很困难。
 
-But knowing how to code is important.
+但是知道如何编程很重要。
 
-In every industry – in virtually every company in the world – managers are trying to figure out ways to push their processes to the software layer.
+在每个行业中——几乎在世界上的每个公司中——管理者们都在试图找到将他们的流程软件化的方法。
 
-That means developers.
+这就意味着需要开发人员。
 
-You may hear about the occasional big layoff in tech. But if you zoom out and look at a longer timeline, the developer hiring trends are decidedly up and to the right.
+你可能听说过科技行业偶尔会出现大规模裁员。 但是，如果你缩小并查看更长的时间线，开发人员的招聘趋势无疑是增长的。
 
-My hope is that with strong skills, a strong network, and a strong reputation, you will be able to land a good job with minimal additional fuss.
+我希望凭借优秀的技能、强大的人脉和良好的声誉，你将额外耗费最少的精力并找到一份好工作。
 
-Hopefully one day in our lifetime, it will be easier for employers and skilled employees to find one another, without the long, brutal job application and interviewing process.
+希望在我们有生之年的某一天，雇主和有技能的员工可以更容易地找到彼此，而无需漫长、残酷的工作申请和面试过程。
 
 ### Should I Negotiate My Salary at My First Developer Job?
 

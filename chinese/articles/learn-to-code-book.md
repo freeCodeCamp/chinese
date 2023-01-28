@@ -2496,34 +2496,35 @@ Hiring is hard.
 
 So you can see why employers are risk averse. Many of them will pass over seemingly qualified candidates until they find someone whom they feel 99% sure about.
 
-### 因为雇主非常厌恶风险，所以求职者遭殃
+### 因为雇主非常厌恶风险，所以求职者受苦
 
 如果你现在认为招聘很困难，你一定不知道工作申请流程有多复杂。你或许已经对它再熟悉不过了。就像这样...
 
 - 你必须准备简历。同时，你将在整个求职过程中不断地摸索着做决定。
 - 你必须在网上四处寻找职位空缺，研究雇主，并且评估他们是否适合你。
 - 大多数职位的申请都需要填表，你将不得不一遍又一遍地重新填写简历，希望表单不会因服务器错误或 JavaScript 验证错误而崩溃。
-- Once you submit these job applications, you have to wait while employer process them. Some employers receive so many applications that they can't manually review them all. (Google alone receives 9,000 applications per day.) Employers will use software to filter through applications. In-house recruiters [spend an average of 6 seconds looking at each résumé](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/). Often your application will never even be reviewed by a human.
-- You will likely never hear anything back from the company. They have little incentive to tell you why they rejected you (they don't want you to file a discrimination lawsuit). If you're lucky, you'll get one of those "We've chosen to pursue other candidates" emails.
-- And all the time you spend applying for these jobs – potentially hours per week – is mentally exhausting and, of course, unpaid.
+- 提交这些工作申请后，你必须等待雇主处理它们。有一些雇主并不会人工审阅所有申请，因为他们收到的申请实在太多了。（比如谷歌每天能收到 9000 份申请。）雇主会使用软件来筛选。内部招聘人员 [平均只花6秒查看每份简历](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/)。通常你的申请甚至永远不会被人工审阅。
+- 你可能永远不会收到公司的任何回复。他们几乎没有动机告诉你他们为什么拒绝你（他们不希望你提起歧视诉讼）。如果你幸运的话，你会收到一封“我们已经决定选择其他候选人”的电子邮件。
+- 所有你花在申请这些工作上的时间————可能是每周几个小时————是消耗精力的，当然，也是无偿的。
 
-Wow. So you can see what a nightmare the hiring process is for employers, and especially for job candidates.
+是吧。所以你可以看到招聘过程对雇主，尤其对求职者来说都是一场噩梦。
 
-But if you stick with it, you can eventually land offers. And when it rains, it pours.
+但如果你坚持下去，你最终可以拿到一些 offer。毕竟好运也是连着来的。
 
-Here's data from one freeCodeCamp contributor's job search over the span of 12 weeks:
+以下是一位 freeCodeCamp 贡献者在12周内的求职数据：
 
-![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)Out of 291 applications, he ultimately received 8 offers.
+![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png) 在投递了291份申请之后，他最终收到了8个 offer。
 
 And as the offers came in, the starting salary got higher and higher. Note, of course, that this is for a job in San Francisco, one of the most expensive cities in the world.
+随着 offer 的陆续到来，起薪也越来越高。当然，请注意，这是在世界上消费水平最高的城市之一————旧金山的工作。
 
-![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)By week 12 his starting salary offers were nearly double what they were in week 2.
+![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png) 到第12周时，在他收到的 offer 里，起薪几乎是第2周的两倍。
 
-This developer's rate of getting interviews is quite strong. And his negotiation ability was also strong. You can [read more about his process if you're curious](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/).
+这位开发者得到面试的几率相当高。而且他的谈判能力也很强。如果你感兴趣，可以 [在这里](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/) 了解更多关于他求职过程的内容。
 
-But as I've said before, it is much easier to get into a company through the side door.
+但正如我之前所说，其实从“旁门”进入一家公司会更容易一些。
 
-And that's one of the reasons I wrote this book. I don't want you to keep lining up for the front door at these employers.
+这就是我写这本书的原因之一。我不希望你们都在雇主的“前门”排队。
 
 ### If you Build Your Skills, Your Network, and Your Reputation You Can Bypass a Lot of the Job Application Process.
 

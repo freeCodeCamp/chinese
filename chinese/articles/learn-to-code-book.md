@@ -2605,34 +2605,33 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 并不是所有的猎头都是相同的。在与猎头合作之前先做个调查。即使他们最终得到了雇主的报酬，你仍然在花时间帮助他们的工作。时间是很宝贵的。
 
-Speaking of time, one way you can start getting paid to code sooner – even while you're preparing for the job search – is to get some freelance clients.
 说到时间，有一种可以让你更快达到写代码获得报酬的方法——即便你还在为求职做准备——做一些自由开发者的工作。
 
-### 如何找到自由开发者工作
+### 如何找到自由客户
 
-I encourage new developers to try and get some freelance clients before they start their job search. There are three good reasons for this:
+我鼓励初级开发人员在开始找工作之前尝试获得一些自由客户。这里有三个很好的理由：
 
-1. It's much easier to get a freelance client than it is to get a full time job.
-2. Freelance work is less risky since you can do it without quitting your day job.
-3. You can start getting paid to code sooner, and start building your portfolio of professional work sooner.
+1. 获得自由客户比找到全职工作要容易得多。
+2. 自由职业的风险较小，因为你可以在不辞去日常工作的情况下进行。
+3. 你可以更快地开始通过写代码获得报酬，并更快地开始构建你的专业作品集。
 
-Getting freelance clients can be much easier than getting a developer job. Why is this?
+获得自由客户比找到开发工作要容易得多。这是为什么？
 
-Think about small local businesses. It may just be a family that runs a restaurant. Or a shop. Or a plumbing company. Or a law firm.
+想想当地的小型企业。它可能只是一个经营餐馆、商店、管道公司或者律师事务所的家庭。
 
-How many of those businesses could benefit from having an interactive website, back office management systems, and tools to automate their common workflows? Most of them.
+这些企业中有多少可以从交互式网站、后台管理系统和工具中受益，以自动化他们的日常工作流程呢？答案当然是他们中的大多数。
 
-Now how many of those companies can afford to have a full-time software developer to build and maintain those systems? Not as many.
+然而这些公司中有多少能够聘请全职软件开发人员来构建和维护这些系统呢？没有那么多。
 
-That's where freelancers come in. They can do work in a more economical, case-by-case basis. A small business can bring on a freelancer for a single project, or for a shorter period of time.
+这就是自由职业者的用武之地。使用他们更加经济实惠。小型企业可以为单个项目或短期聘请自由职业者。
 
-If you are actively building your network, some of the people you meet may become your clients.
+如果你正在积极建立你的人脉，你遇到的一些人可能会成为你的客户。
 
-For example, you may meet a local accountant who wants to update their website. And maybe add the ability to schedule a consultation, or accept a credit card payment for a bill. These are common features that small businesses may request, and you may get pretty good at implementing them.
+例如，你可能会遇到一位想要更新其网站的本地会计师，他可能想添加安排咨询或接受信用卡支付的能力。这些是小型企业可能要求的常见功能，你可能会非常擅长实现它们。
 
-You may also meet the managers of small businesses who need an ERP system, or a CRM system, or an inventory system, or one of countless other tools.
+你可能还会遇到需要 ERP 系统、CRM 系统、库存系统或无数其他工具之一的小型企业的管理者。
 
-In many cases, there is an open source tool that you can deploy and configure for them. Then you can just teach them how to use that system. And you can bill them a monthly service fee to have you "on call" and ready to fix problems that may arise.
+在许多情况下，你可以为他们部署和配置一个开源工具。然后你可以教他们如何使用那个系统。你可以按月向他们收取服务费，让你“随叫随到”并准备好解决可能出现的问题。
 
 ### Should I Use a Contract for Freelance Work?
 

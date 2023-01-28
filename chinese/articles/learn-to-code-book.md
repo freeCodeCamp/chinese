@@ -2505,7 +2505,7 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 - 大多数职位的申请都需要填表，你将不得不一遍又一遍地重新填写简历，希望表单不会因服务器错误或 JavaScript 验证错误而崩溃。
 - 提交这些工作申请后，你必须等待雇主处理它们。有一些雇主并不会人工审阅所有申请，因为他们收到的申请实在太多了。（比如谷歌每天能收到 9000 份申请。）雇主会使用软件来筛选。内部招聘人员 [平均只花6秒查看每份简历](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/)。通常你的申请甚至永远不会被人工审阅。
 - 你可能永远不会收到公司的任何回复。他们几乎没有动机告诉你他们为什么拒绝你（他们不希望你提起歧视诉讼）。如果你幸运的话，你会收到一封“我们已经决定选择其他候选人”的电子邮件。
-- 所有你花在申请这些工作上的时间————可能是每周几个小时————是消耗精力的，当然，也是无偿的。
+- 所有你花在申请这些工作上的时间———可能是每周几个小时———是消耗精力的，当然，也是无偿的。
 
 是吧。所以你可以看到招聘过程对雇主，尤其对求职者来说都是一场噩梦。
 
@@ -2514,11 +2514,13 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 以下是一位 freeCodeCamp 贡献者在12周内的求职数据：
 
 ![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)
+
 在投递了291份申请之后，他最终收到了8个 offer。
 
 随着 offer 的陆续到来，起薪也越来越高。当然，请注意，这是在世界上消费水平最高的城市之一————旧金山的工作。
 
 ![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)
+
 到第12周时，在他收到的 offer 里，起薪几乎是第2周的两倍。
 
 这位开发者得到面试的几率相当高。而且他的谈判能力也很强。如果你感兴趣，可以[在这里](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/)了解更多关于他求职过程的内容。
@@ -2571,7 +2573,9 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 现在，如果你和我一样，有家公司突然给你一份工作，你可能会觉得谈判薪资很尴尬。
 
-![92508](https://www.freecodecamp.org/news/content/images/2023/01/92508.jpeg)《辛普森一家》里的史密瑟斯
+![92508](https://www.freecodecamp.org/news/content/images/2023/01/92508.jpeg)
+
+《辛普森一家》里的史密瑟斯
 
 我承认——在我上面写的故事里，当我的经理给我这份工作时，我没有谈判。
 
@@ -2583,27 +2587,28 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 顺便说一句，一旦你在一家公司担任开发人员一年左右，你可能会想要求加薪。我已经写了更详细的关于[作为开发人员如何要求加薪](https://www.freecodecamp.org/news/youre-underpaid-here-s-how-you-can-get-the-pay-raise-you-deserve-fafcf52956d6/)的文章。但归根结底都是同一件事：谈判筹码。
 
-### Should You Use a Recruiter for Your Developer Job Search?
+### 你应该找猎头帮忙搜寻开发职位吗？
 
-Yes. If you can find a recruiter who will help you land your first developer job, I think you should.
+是的。如果你能找到一位猎头来帮助你找到第一份开发工作，那么你应该这样做。
 
-I've written at length about [why recruiters are an underrated tool in your toolbox](https://www.freecodecamp.org/news/the-tech-recruiter-red-pill-967dd492560c/).
+我已经写过关于[为什么猎头是你找工作时被低估的工具](https://www.freecodecamp.org/news/the-tech-recruiter-red-pill-967dd492560c/)的文章。
 
-Many employers will pay recruiters a finder's fee for sending them high quality job candidates.
+许多雇主会向猎头支付中介费，用以向他们输送高质量的求职者。
 
-Recruiters’ incentives are well-aligned with your own goals as a job seeker:
+猎头的目标和奖励机制与作为求职者的你完全一致：
 
-1. Since they get paid based on your starting salary, they are inclined to help you negotiate as high a starting salary as possible.
-2. The more candidates they place — and the faster they place them — the more money recruiters make. So they’ll want to help you get a job as fast as possible so they can move on to other job seekers.
-3. Since they only get paid if you succeed as an employee (and stay for at least 90 days), they'll try and make sure you’re competent, and a good fit for the company’s culture.
+1. 他们将根据你的起薪获得报酬，因此他们倾向于帮助你协商到尽可能高的起薪。
+2. 他们成功输送的候选人越多——输送的速度越快——他们赚的钱就越多。所以他们会希望帮助你尽快找到工作，这样他们就可以转向其他求职者。
+3. 因为他们只有在你成为一名正式员工（并且至少待90天）后才会得到报酬，所以他们会努力确保你能胜任这份工作，并且适合公司的文化。
 
-This said, if a recruiter asks you to pay them money for anything, that is a red flag.
+话说回来，如果猎头要求你为任何事情付钱给他们，那就是危险信号。
 
-And not all recruiters are created equal. Do your research before working with a recruiter. Even if they're ultimately getting paid by the employer, you are still investing your time in helping them place you. And time is valuable.
+并不是所有的猎头都是相同的。在与猎头合作之前先做个调查。即使他们最终得到了雇主的报酬，你仍然在花时间帮助他们的工作。时间是很宝贵的。
 
 Speaking of time, one way you can start getting paid to code sooner – even while you're preparing for the job search – is to get some freelance clients.
+说到时间，有一种可以让你更快达到写代码获得报酬的方法——即便你还在为求职做准备——做一些自由开发者的工作。
 
-### How to Get Freelance Clients
+### 如何找到自由开发者工作
 
 I encourage new developers to try and get some freelance clients before they start their job search. There are three good reasons for this:
 

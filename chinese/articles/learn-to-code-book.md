@@ -64,33 +64,33 @@
 
 ## 前言：本书适合的人群
 
-This book is for anyone who is considering a career in software development.
+这本书适合所有正在考虑从事软件开发职位的人。
 
-If you're looking for a career that's flexible, high-paying, and involves a lot of creative problem solving, software development may be for you.
+如果你打算从事一份工作时间灵活、薪资高、解决问题方式不死板的工作，软件开发职位很可能符合你的需求。
 
-Of course, each of us approaches our own coding journey with certain resources: **time**, **money**, and **opportunity**.
+当然，学习软件开发离不开这三点：**时间**、**钱**和**机遇**。
 
-You may be older, and may have kids or elderly relatives you're taking care of. So you may have less **time**.
+你可能已人到中年，上有老下有小，平日空闲**时间**不多。
 
-You may be younger, and may have had less time to build up any savings, or acquire skills that boost your income. So you may have less **money**.
+你可能很年轻，或许还不具备提升薪资的能力，因此还没有攒下**钱**。
 
-And you may live far away from the major tech cities like San Francisco, Berlin, Tokyo, or Bengaluru.
+或者你所在的城市技术氛围不浓，离那些着重发展科技的城市（如旧金山、柏林、东京、班加罗尔）比较远。
 
-You may live with disabilities, physical or mental. Agism, racism, and sexism are real. Immigration status can complicate the job search. So can a criminal record.
+还有人患有残疾；有人饱受年龄、种族、性别歧视；有人因移民身份或犯罪记录四处碰壁。
 
-So you may have less **opportunity**.
+对这些人来说，他们的**机遇**本身就比其他人少。
 
-Learning to code and getting a developer job is going to be harder for some people that it will be for others. Everyone approaches this challenge from their own starting point, with whatever resources they happen to have on hand.
+每个人的起点不同，周围环境和资源也不尽相同；学习编程和找到开发者工作对这些人来说会比其他人更困难。
 
-But wherever you may be starting out from – in terms of time, money, and opportunity – I'll do my best to give you actionable advice.
+但无论你的起点和资源如何，我都会尽力给出我认为适合的建议。
 
-In other words: you are in the right place.
+总之，请继续读下去，你一定会有所收获。
 
-#### A Quick Note on Terminology
+#### 文中涉及的专业词汇
 
-Whenever I use new terms, I'll do my best to define them.
+我会尽力在提到新词的时候顺便给出定义。
 
-But there are a few terms I'll be saying all the time.
+有些词汇出现频率很高，比如：
 
 I'll use the words "programming" and "coding" interchangeably.
 

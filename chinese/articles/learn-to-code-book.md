@@ -2633,47 +2633,47 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 在许多情况下，你可以为他们部署和配置一个开源工具。然后你可以教他们如何使用那个系统。你可以按月向他们收取服务费，让你“随叫随到”并准备好解决可能出现的问题。
 
-### Should I Use a Contract for Freelance Work?
+### 我应该签订自由职业合同吗？
 
-You will want to find a standard contract template, customize it, and get a lawyer to approve it.
+你需要找到一个标准的合同模板，修改它，然后请律师批准。
 
-It may feel awkward to make the local bakery sign a contract with you just to help update their website or social media presence. But doing so will make the entire transaction feel more professional than a mere handshake agreement.
+让当地的面包店与你签订合同只是为了帮助更新他们的网站或社交媒体形象，这可能会让人感到尴尬。但这样做会让整个交易比单纯的握手协议更专业。
 
-It's unlikely that a small business will take you to court over a few thousand dollars. But in the event that this happens, you'll be glad you signed a contract.
+一家小企业不太可能会因为几千美元而将你告上法庭。但如果发生这种情况，你会很高兴自己签了合同。
 
-### How Much Should I Charge for Freelance Work?
+### 我应该为自由职业的工作收取多少费用？
 
-I would take whatever you make at your day job, figure out your hourly rate, and double it. This may sound like a lot of money, but freelance work is much harder than regular work. You have to learn a lot.
+我会计算出你日常工作的时薪，然后加倍。这听起来可能是很多钱，但自由职业比常规工作要难得多。你必须学习很多东西。
 
-Alternatively, you could just bill for a project. "I will deploy and configure this system for you for $1,000."
+或者，你可以以单个项目为单位计费。 “我将以1000美元的价格为你部署和配置此系统。”
 
-Just be sure to specify a time frame that you are willing to maintain the project. You don't want people calling you 3 years later expecting you to come back and fix a system that nobody has been maintaining.
+请务必指定你愿意维护项目的时间范围。你不希望人们在3年后打电话给你，希望你回来修复一个没有人维护的系统。
 
-### How Do I Make Sure Freelance Clients Pay Me?
+### 我如何确保自由客户会付钱给我？
 
-A lot of other freelancer – myself included – use this simple approach: ask for half of your compensation up-front, before you start the work. And when you can demonstrate that you're half way finished, ask for the other half.
+很多其他的自由职业者——包括我自己——都使用这种简单的方法：在开始工作之前预先索取一半的报酬。当你能证明你已经完成了一半时，就要求他们支付另一半。
 
-Always try to get all the money before you actually finish the project. That way, the client will not be able to dangle the money over your head and try to get extra work out of you.
+尽量在你真正完成项目之前拿到所有报酬，这样，客户就无法用未支付的报酬来试图让你做额外的工作。
 
-If you're already paid in full, the work you do to help your client after the fact will convey: "I'm going above and beyond for you."
+如果你已经得到全额报酬，那么你之后为客户所做的工作将传达这个意思：“我为你付出了更多。”
 
-Which is a totally different vibe from: "Uh oh – are you even going to pay me for all this work I'm doing?"
+这带来了一种完全不同的气氛：“啊哦——你会为我做的所有工作付钱给我吗？”
 
-### Should I Use a Freelance Website like Upwork or Fiverr?
+### 我应该使用像 Upwork 或者 Fiverr 这样的自由职业网站吗？
 
-If you are in a rural part of the world and can't find any clients locally, you could try some of these freelance websites. But otherwise I would not focus on them. Here's why:
+如果你在一些偏远地区并且在当地找不到任何客户，你可以尝试其中的一些自由职业网站。但除此之外，我不会关注它们。原因如下：
 
-When you try to land contracts on a freelance website, you are competing with all the freelancers around the world. Many of them will live in cities that have a much lower cost of living than yours. Some of them will not even really care about their reputations like you do, and may be willing to deliver sub-par work.
+当你尝试在自由职业网站上找兼职工作时，你是在与世界各地的所有自由职业者竞争。他们中的许多人居住在生活成本比你低得多的城市。他们中的一些人甚至不会像你一样真正关心自己的声誉，并且可能愿意接受低于标准报酬的工作。
 
-To some extent, these websites promote a "race to the bottom" phenomenon where the person who offers to do the work the cheapest usually gets the job.
+在某种程度上，这些网站助长了一种“逐底竞争”现象，即提供最廉价劳动力的人通常会得到这份工作。
 
-If you instead focus on finding clients through your own local network, you will not have to compete with these freelancers abroad.
+如果你转而专注于通过自己的本地人际关系寻找客户，你将不必与这些国外的自由职业者竞争。
 
-And the same goes for people who are looking for help from freelance developers. If you ever want to hire a freelancer, I strongly recommend working with someone you can meet with in-person, who has ties to your community.
+需要寻求自由开发者帮助的人也是如此。 如果你想雇用一名自由职业者，我强烈建议你与可以见到面的人一起工作，他与你的社区有联系。
 
-Someone who has lived in your city for several years, and attends a lot of the same social gatherings as you – they're going to be much less likely to try to take advantage of you. If both you and your counterparty care about their reputation, you are both invested in a partnership that works.
+在你的城市生活了几年，并且与你有很多交集的人——他们不太可能试图占你的便宜。如果你和你的合作方都关心自己的声誉，那么你们会成就一段有效的合作伙伴关系。
 
-You can each be a success story in one another's portfolios.
+你们会可以成为对方履历中的成功故事。
 
 ### When Should I Stop Freelancing and Start Looking for a Job?
 

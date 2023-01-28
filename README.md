@@ -1,15 +1,7 @@
 ![freeCodeCamp.org Social Banner](https://s3.amazonaws.com/freecodecamp/wide-social-banner.png)
 [![Pull Requests Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)][1]
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)][2]
-
-# news-translation
-
-This repository is used for collaborating on [Developer News][3] translation to different world languages.
-
-Each language translation is available in their own directories at the root of the repository. As of now, we are working on supporting chinese language first and will eventually add translations for other languages in future.
-
-[![NPM Dependency](https://david-dm.org/freeCodeCamp/news-translation.svg)][4]
-[![CI & CD](https://github.com/freeCodeCamp/news-translation/workflows/CI%20&%20CD/badge.svg)][5]
+[![CI & CD](https://github.com/freeCodeCamp/chinese/actions/workflows/main.yml/badge.svg)](https://github.com/freeCodeCamp/chinese/actions/workflows/main.yml)
 
 ## freeCodeCamp 文章翻译计划
 
@@ -32,12 +24,6 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 -   [图文详解如何参与翻译][8]
 
 相信你可以根据这份清晰、简洁的指南提交你的第一篇译文！
-
-**除了在 [Translation-needed](https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3ATranslation-needed) 列表认领文章来翻译，你也可以从[英文专栏](https://www.freecodecamp.org/news)选择自己喜欢的文章，自己[发起 New issue](https://github.com/freeCodeCamp/news-translation/issues/new/choose) 进行翻译。**
-
-点击 Get started，根据提示填写 issue 的内容，即可添加你想翻译的文章。
-
-![image](https://user-images.githubusercontent.com/19358186/114123554-1e87fb80-9925-11eb-9dab-18f8a4964782.png)
 
 ### 如何参与校对
 

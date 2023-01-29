@@ -1492,306 +1492,306 @@ Step 2: Think about something you could say that might make their day a bit brig
 
 Step 3: Choose a social media platform they've been recently active on. Send them a direct message.
 
-I'm going to share a template, but never use any templates verbatim, because if the recipient plugs your message into Google, they'll discover it's a template, and all your goodwill will be squandered.
+我将分享一个模板，但永远不要逐字逐句地使用任何模板，因为如果收件人将你的信息,用谷歌进行搜索，他们会发现这是一个模板，而你所有的善意将被误解。
 
-If I were messaging someone I hadn't talked to in a few months or years out of the blue, I would say something like this:
+如果我突然给一个几个月或几年没有联系过的人发信息，我会说这样的话:
 
-"Hey [name], I hope your [new year / spring / week] is off to a fun start. Congrats on [new job / promotion / new baby / completed project]. It's inspiring to see you out there getting things done."
+"嘿，[姓名]，我希望你的[新的一年/春天/一周]有一个有趣的开始。祝贺你[新工作/晋升/新生儿/完成项目]。看到你在外面做事情，很受鼓舞。"
 
-Something short and to the point like that. Greeting + congratulations + compliment. That is the basic formula.
+像这样简短而有针对性的东西。问候+祝贺+赞美。这就是基本公式。
 
-Don't just say it. Mean it.
+不要只是说出来。
 
-Really want this person to feel recognized. Really want to brighten their day. Really want to encourage them to keep progressing toward their goals.
+真的想让这个人感到被认可。真的想照亮他们的一天。真的想鼓励他们继续向他们的目标迈进。
 
-Humans are very good at detecting insincerity. Don't try to over-sell it. Don't give them any reason to think "this person wants something from me."
+人类非常善于察觉不诚恳。不要试图过度推销。不要给他们任何理由去想 "这个人想从我这里得到什么"。
 
-That's why the most important thing about this is: be brief. Be respectful of people's time. Nobody wants a long letter that they'll feel obligated to respond to at length.
+这就是为什么这方面最重要的事情是：要简短。要尊重人们的时间。没有人想要一封长信，他们会觉得有义务对其进行长时间的回应。
 
-Because – say it with me again – **people are busy.**
+因为，跟我说一遍 **人很忙**。
 
-### How to Build Even Deeper Connections
+### 如何建立更深入的联系
 
-Because people are so busy, they are often tempted to see strangers more for what those strangers can do for them:
+因为人们是如此忙碌，他们往往会因为这些陌生人能为他们做什么而更多地看到陌生人:
 
-- This person drives the bus that gets me to work.
-- This person makes my beverage just the way I like it.
-- This person in HR answers my questions about time off.
-- This person put together a bangin' acid jazz playlist for me to listen to while I code.
-- This person sends me helpful emails each week with free coding resources.
+- 这个人开着巴士送我去上班。
+- 这个人按照我喜欢的方式给我做饮料。
+- 这个人在人力资源部门回答我关于休假的问题。
+- 这个人为我准备了一份 acid 爵士乐的播放列表，让我在写代码时听。
+- 这个人每周都会给我发送有用的电子邮件，提供免费的编程资源。
 
-To some extent, you are what you do for people.
+在某种程度上，你就是你为人们所做的。
 
-I know, I know. That might sound overly reductive. Cynical even. And that is 100% not true for the close friends and family in your life.
+我知道，我知道。这听起来可能过于简化。甚至愤世嫉俗。而对于你生活中的亲密朋友和家人来说，这 100%不是真的。
 
-But for people who barely know you – who just encounter you while going about their day – this is likely how they see you.
+但是对于那些几乎不认识你的人--他们只是在日常工作中遇到你--这可能是他们对你的看法。
 
-You have to give people a reason to care about you. You have to inspire them to learn more about you.
+你必须给人们一个关心你的理由。 你必须激励他们更多地了解你。
 
-Before you can become somebody's close friend – someone they truly care about, and think about when you're not around – you need to start off as someone who is helpful to them.
+在你能成为某人的亲密朋友之前，他们真正关心的人，并且在你不在的时候想到的人，你需要从一个对他们有帮助的人开始。
 
-And that's what we're going to do here. We're going to build even deeper relationships by offering to help people.
+而这正是我们在这里要做的。我们要通过提供帮助来建立更深的关系。
 
-This will be a long process. And you should start it well in advance of your job search. The last thing you want is for someone to think "Oh – you're just reaching out because you need something from me."
+这将是一个漫长的过程。而且你应该在找工作之前提前开始。你最不希望看到的是，有人认为 "哦，你只是因为需要我的东西而伸出援手"。
 
-On the contrary – you're reaching out because you have something to offer them.
+恰恰相反，你伸出援手是因为你有东西可以提供给他们。
 
-You are, after all, in possession of one of the most powerful skillsets a person can acquire. The ability to bend machines to your will. You are a programmer.
+毕竟，你拥有一个人可以获得的最强大的技能之一。使机器服从你的意志的能力。你是一个程序员。
 
-![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)This is what being good at coding feels like.
+![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)这就是擅长编码的感觉。
 
-Or, at least, you're on the road to becoming one.
+或者，至少，你正在成为一个人的道路上。
 
-So you already have a good pretext to reach out to people.
+所以你已经有了一个很好的理由去接触人们。
 
-You may have heard the term "cold call". This is where you call someone knowing almost nothing about them, and trying to sell them something. This is not easy, and a vast majority of cold calls end with the other party hanging up.
+你可能听说过 **冷电话** 这个词。这就是你在对某人几乎一无所知的情况下给他打电话，并试图向他们推销东西。这并不容易，绝大部分的冷电话都以对方挂断而告终。
 
-But the more information you know about the other person, the warmer the call gets, and the more likely you are to succeed.
+但是，你对对方了解的信息越多，电话就越温暖，你就越有可能成功。
 
-Now, you're not selling anything here. And as I mentioned earlier, you're not calling them either. You're sending them a direct message.
+现在，你在这里不是在卖东西。正如我前面提到的，你也不是在给他们打电话。你是在给他们发送一条直接信息。
 
-Maybe this is through Twitter, LinkedIn, Discord, Reddit – wherever. But you are reaching out to them with a single paragraph of text.
+也许这是通过 Twitter、LinkedIn、Discord、Reddit。 任何地方。但你是用一段文字向他们伸出援手。
 
-As I said, the strongest opening move – the approach that's most likely to get a response – is to casually offer help.
+正如我所说，最有力的开场白,最有可能得到回应的方法，是随意地提供帮助。
 
-If I were doing this, here's a simple template I'd use. Remember not to use this template verbatim. Rewrite it in your own voice, how you would say it to a friend:
+如果我在做这件事，这里有一个我将使用的简单模板。记住不要逐字逐句地使用这个模板。用你自己的声音重写，你会怎么对朋友说。\:
 
-> "Hey [name], congrats on the [new job / promotion / new baby]. I've been learning some programming, and am building my portfolio. You immediately came to mind as someone who gets a lot of things done. Is there any sort of tool or app that would make your life easier? I may be able to code it up for you, for practice."
+> "嘿[姓名]，祝贺你[新工作/晋升/新生儿]。我一直在学习一些编程，并正在建立我的作品集。我立刻想到了你，你是一个能完成很多事情的人。有没有什么工具或应用程序可以让你的生活更轻松？我也许可以为你编码，作为我的练习。"
 
-This is a strong approach, because it is personalized and doesn't come across as automated. People get so many automated messages these days that they are quick to disregard anything that even resembles an automated message.
+这是一个强有力的方法，因为它是个性化的，不会让人觉得是自动的。如今，人们收到如此多的自动信息，以至于他们很快就会无视任何甚至类似于自动信息的东西。
 
-This is why I send all my messages manually, and don't rely on automation. It's better to slowly compose messages one-by-one than it is try and save time with a script or a mail-merge.
+这就是为什么我手动发送我所有的信息，而不依赖自动化。慢慢地逐一编写信息比试图用脚本或邮件合并来节省时间更好。
 
-The fastest way to get blocked is to message someone with "Hi , how's it going?" where there's clearly a first name missing – evidence that the message is a template.
+最快的被屏蔽的方法是给别人发消息说 `嗨，你好吗？` 其中明显少了一个名字,证明这个消息是一个模板。
 
-Sometimes I get a message using my last name instead of my first name. "Hey Larson." What, am I in military school now?
+有时我收到的信息用我的姓而不是我的名。`嘿，拉森。` 什么，我现在是在军事学校吗？
 
-And a lot of people on LinkedIn have started putting an emoji at the beginning of their name. This makes it easy to detect automated messages, because nobody would include that emoji in their direct message.
+而且，LinkedIn 上的很多人已经开始在他们名字的开头加上一个表情符号。这使得检测自动信息变得很容易，因为没有人会在他们的直接信息中包括这个表情符号。
 
-When a message starts with: "Hi 🍜Sarah, are you looking for a new job?" Then you know it's a bulk message.
+当一条信息的开头是 "嗨🍜莎拉，你在找新工作吗？" 那么你就知道这是一条批量信息。
 
-Also note that my above template does not say "we went to school together" or something like that. Unless you just met someone a few days ago, you shouldn't specify how you two know one another.
+还要注意的是，我上面的模板并没有说 "我们是同学 "或类似的话。除非你几天前刚认识某人，否则你不应该说明你们俩是怎么认识的。
 
-Why? Because the very act of reminding people how you know one another will prompt some people to step back and think: "Gee, I barely know this person."
+为什么？因为提醒人们你们是如何认识的行为本身会促使一些人退一步想："哎呀，我几乎不认识这个人。"
 
-### How to Keep the Conversation Going
+### 如何让对话持续下去
 
-Again, your goal is to get a response from them, so you can start a back-and-forth conversation.
+同样，你的目标是得到他们的回应，这样你就可以开始一个来回的对话。
 
-These messaging platforms have a casual feel to them. Keep it casual.
+这些信息传递平台有一种休闲的感觉。保持随意。
 
-Don't send a single, multi-paragraph message. Keep your messages short and snappy. You don't want for it to feel like a chore to reply to you.
+不要发送单一的、多段落的信息。保持你的信息短而快。你不想让他们觉得回复你是件苦差事。
 
-Once you've got them replying to you, start making notes on your Personal Network Board so you can remember these facts later.
+一旦你让他们回复你，就开始在你的个人网络板上做笔记，这样你以后就能记住这些事实。
 
-Maybe they do have some app idea or tool idea. Great. Ask them questions about it. See if you can build it for them.
+也许他们确实有一些应用程序的想法或工具的想法。很好。向他们询问有关问题。看看你是否可以为他们建立它。
 
-Start by sketching out a simple mockup of the user interface. Use graphing paper if you want to look extra sophisticated. Snap a photo of it and send it to them. "Something like this?"
+从画出用户界面的简单模型开始。如果你想看起来更复杂，就用绘图纸。给它拍张照片，然后发给他们。"像这样的东西？"
 
-This will establish that you're serious about helping them. And I'd be willing to bet for most people, this would be a new experience.
+这将确立你对帮助他们是认真的。而且我愿意打赌，对大多数人来说，这将是一种新的体验。
 
-"You're helping me? You're creating this app for me?" It will be flattering, and they will be likely to remember it. Even if the app itself doesn't go anywhere.
+"你在帮助我？你在为我创建这个应用程序？" 这将是一种奉承，他们将有可能记住它。即使这个应用程序本身没有任何进展。
 
-From there, you can just go with the flow of conversation. Maybe it fizzles out. No worries. Let it. You can find a reason to pick the conversation back up a few weeks later.
+从那里开始，你可以随着谈话的流程走。也许它消失了。不用担心。随它去吧。你可以在几周后找到一个理由来重新拾起对话。
 
-The great thing about these social media direct messages is the entire message log is there. The next time you message them, they can just scroll up and see "oh – this is that person who offered to build that app for me." There are no more "who are you again?" head tilts that you might get during in-person conversations.
+这些社交媒体直接信息的好处是整个信息记录都在那里。下次你给他们发信息时，他们可以直接滚动并看到 "哦，这是那个提议为我建立应用程序的人"。没有更多的 "你是谁来着？"的疑问，而你可能在面对面的谈话中得到。
 
-Again, keep everything casual and upbeat. If it feels like the conversation is going slow, that's no problem. Because you're going to have dozens of other conversations going. Other irons in the fire. You're going to be a busy bee building your network.
+再次重申，保持一切休闲和乐观。 如果感觉谈话进行得很慢，那没问题。 因为您将进行许多其他对话。保持热度，你将成为一只忙碌的蜜蜂，建立你的人际联系。
 
-### How to Meet New People and Expand Your Personal Network
+### 如何认识新朋友并扩大你的人际网络
 
-We've talked about how to reach out to people you already know. Those connections are still there, even if they've atrophied a bit over the years.
+我们已经谈到了如何与你已经认识的人联系。这些联系仍然存在，即使它们多年来已经有点萎缩了。
 
-But how do you make brand new connections?
+但你如何建立全新的联系？
 
-This is no easy task. But I have some tips that will make this process a bit less daunting.
+这不是一件容易的事。但我有一些建议，可以使这个过程不那么令人生畏。
 
-First of all, meeting people for the first time in person is so much more powerful than meeting them online.
+首先，第一次与人见面，比在网上见面要有效的多。
 
-When you meet someone in person, your memory has so much more information to latch onto:
+当你见到某人的时候，你的记忆有更多的信息可以获取:
 
-- How the person looks, their posture, and how they move through the space
-- The sound of their voice and the way they speak
-- The lights, sounds, aromas, temperature, and the general feel of the venue
-- And so many other little details that get baked into your memory
+- 这个人的长相，他们的姿势，以及他们如何在空间中移动
+- 他们的声音和他们说话的方式
+- 灯光、声音、香气、温度和场地的总体感觉
+- 还有许多其他的小细节，这些都会在你的记忆中留下烙印
 
-Spending 10 minutes talking with someone in person can build a deeper connection than dozens of messages back and forth, across weeks of correspondence.
+与一个人当面交谈 10 分钟，比来回几十条信息，跨越几周的通信建立更深的联系。
 
-This is why I strongly recommend: get out there and meet people at local events.
+这就是为什么我强烈建议：走出去，在当地的活动中认识人们。
 
-### How to Meet People at Local Events Around Town
+### 如何在城市周边的当地活动中结识朋友
 
-Which events? If you live in a densely-populated city, you may have a ton of options at your disposal. You may be able to go to tech events several nights each week, with minimal commuting.
+哪些活动？如果你住在一个人口稠密的城市，你可能有大量的选择供你支配。你可能每周都能去参加几个晚上的科技活动，而且通勤时间最少。
 
-If you live in a small town, you may have to stick with meeting people at local gatherings. Book fairs, ice cream socials, sporting events.
+如果你住在一个小镇上，你可能不得不坚持在当地的聚会上认识人。书展、冰激凌社交活动、体育赛事。
 
-If you go to church, mosque, or temple, get to know people there, too.
+如果你去教堂、清真寺或寺庙，也要认识那里的人。
 
-And yes, I realize this may sound ridiculous. "That person standing in the bleachers next to me at the soccer game? They're somehow going to help me get a developer job?"
+是的，我知道这可能听起来很荒谬。"在足球比赛中站在我旁边看台的那个人？他们会以某种方式帮助我找到一份开发商的工作？"
 
-Maybe. Maybe not. But don't write people off.
+也许吧。也许不是。但不要把人撇开。
 
-That person may run a small business.
+那个人可能经营一个小企业。
 
-They may have gone to school with a friend who's a VP of Engineering at a Fortune 500 company.
+他们可能和一个在财富 500 强公司担任工程副总裁的朋友一起上学。
 
-And maybe – just maybe – they're a software engineer, too. After all, there are millions of us software engineers out there. And we don't all live in Silicon Valley. 😉
+也许他们也是一名软件工程师。毕竟，我们有数以百万计的软件工程师在那里。而且我们并不都住在硅谷。 😉
 
-When you do meet a new person, you don't want to immediately pull out your phone and say "Can I add you to my LinkedIn professional network?"
+当你遇到一个新的人时，你不想立即掏出你的手机，说 `我可以把你加入我的LinkedIn 的联系人吗？`
 
-Instead, you want to play it cool. Introduce yourself.
+相反，你要表现得冷静。介绍一下自己。
 
-**Remember their name.** Names are integral to building a relationship. If you are bad with names, practice remembering them. You can practice by just trying to remember the name of every character – no matter how minor they are – when you're watching TV shows or movies.
+**记住他们的名字。**名字是建立关系不可或缺的。如果你不善于记名字，就练习记住它们。你可以在看电视节目或电影时，试着记住每个角色的名字,不管他们是不是大明星，来练习。
 
-If you forget someone's name, don't guess. Just say "what's your name again" and be sure to remember it the second time.
+如果你忘记某人的名字，不要猜测。只要说 `你叫什么名字来着`，第二次一定要记住它。
 
-Shake their hand or fist bump. Talk with them about whatever feels natural. If the conversation peters out, no worries. Let it.
+与他们握手或握拳。与他们谈论任何感觉自然的话题。如果谈话结束了，不用担心。随它去吧。
 
-You build relationships over time. It's not about total time spent with someone – it's about the number of times you meet that person over a longer span of time.
+你随着时间的推移建立关系。这不是指与某人相处的总时间,而是指你在较长的时间跨度内与该人见面的次数。
 
-There is a good chance you will see the person again in the future. Maybe at that same exact location a few weeks later. And **that** is when you make your move:
+有一个很好的机会，你会在未来再次见到这个人。也许几周后，在同一个确切的地点。而就是你采取行动的时候:
 
-"Hi [name] how's the [thing you talked about the previous time] going?"
+`你好[姓名]，[你们上次谈的事情]进展如何？`
 
-Pick the conversation up where it left off. If they seem like someone who would be a helpful addition to your Personal Network Board, ask them "hey what are you doing next [day of week]? Do you want to come with me to [other upcoming local event]?"
+从中断处继续对话。 如果他们看起来像是对您的个人网络板 (Personal Network Board)有帮助的人，请问他们 `嘿，你接下来 [星期几] 在做什么？你想和我一起去 [其他即将举行的本地活动] 吗？”`
 
-Always have your upcoming week of events in mind, so you can invite people to join you.
+始终牢记你即将到来的一周的活动，所以你可以邀请人们加入你。
 
-This is a great way to get people to hang out with you in a safe, public space. And you're providing something of value – giving them awareness of an upcoming event.
+这是一个让人们在一个安全的公共空间与你一起玩耍的好方法。而且你还提供了一些有价值的东西,让他们意识到即将到来的活动。
 
-If they seem interested, you can say "Awesome. What's the best way for me to message with you, and get the event details to you?"
+如果他们看起来感兴趣，你可以说 "太棒了。我有什么最好的方式给你留言，并把活动的细节告诉你？"
 
-Boom – you now have their email or social media or phone number, and your relationship can unfold from there.
+你现在有了他们的电子邮件或社交媒体或电话号码，你们的关系可以从那里展开。
 
-This may sound like a slow burn approach. Why be so cautious?
+这可能听起来像是一种慢热的方法。为什么如此谨慎？
 
-Again, people are busy. Smart people are defensive of their time, and of their personal information.
+同样，人们很忙。聪明人会保护他们的时间和他们的个人信息。
 
-There are too many vampires out there who want to take advantage of people – trying to sell them something, scam them, get them into their multi-level marketing scheme, or in some other way proselytize them.
+外面有太多的吸血鬼想利用人们,试图向他们推销东西，诈骗他们，让他们加入他们的多层次营销计划，或以其他方式向他们传教。
 
-The best way to help other people get past this reflexive defensiveness: already be on their radar from previous encounters as a reasonable person.
+让其他人克服这种不信任的最好方法是：在以前的接触中已经作为一个通情达理的人，出现在他们的视野上。
 
-### How to Leverage Your Network
+### 如何利用你的人际网络
 
-We'll talk more about how to leverage your network in Chapter 4. For now, look at your network purely as an investment of time and energy.
+我们将在第 4 章详细讨论如何利用您的网络。现在，将您的网络纯粹视为时间和精力的投资。
 
-I like to think of my network as an orchard. I am planting relationships. Tending to them, and making sure they're healthy.
+我喜欢把我的人际关系想象成一个果园。 我正在建立关系。 照顾他们，确保他们健康。
 
-Who knows when those relationships will grow into trees and bear fruit. The goal is to keep planting trees, and at some point in the future, those trees will help sustain you.
+谁知道这些关系何时会长成大树并结出果实。 目标是继续植树，在未来的某个时候，这些树将帮助维持你的生命。
 
-Keep sending out positive energy. Keep offering to help people using your skills, and even your own network. (It is rarely a bad move to make a polite introduction between two people you know.)
+不断散发正能量。 不断提供帮助人们使用你的技能，甚至是你自己的人际关系。（在你认识的两个人之间进行礼貌的介绍很少是一个坏举动。）
 
-Be a kind, thoughtful, helpful person.
+做一个善良、体贴、乐于助人的人。
 
-Don't ever feel impatient with how slow a job search may be going.
+永远不要对求职过程的缓慢感到不耐烦。
 
-Don't ever let yourself feel slighted or snubbed.
+永远不要让自己感到被轻视或冷落。
 
-Don't ever let yourself feel jealous of someone else's success.
+永远不要让自己嫉妒别人的成功。
 
-What goes around comes around. You will one day reap what you sow. And if you're sowing positive energy, you are setting yourself up for one bountiful harvest.
+有因就有果。有一天你会收获你所播种的东西。如果你播种的是正能量，你就为自己的丰收做了准备。
 
-## Chapter 3: How to Build Your Reputation
+## 第三章：如何建立你的声誉
 
-> "The way to gain a good reputation is to endeavor to be what you desire to appear." – Socrates
+> "获得良好声誉的方法是努力成为你希望出现的样子"。  苏格拉底
 
-Now that you've started building your skills and your network, you're ready to start building your reputation.
+现在你已经开始建立你的技能和你的人际网络，你已经准备好开始建立你的声誉。
 
-You may be starting from scratch – a total newcomer to tech. Or you may already have some credibility you can bring with you from your other job.
+你可能从零开始，一个完全的技术新人。或者你可能已经有了一些信誉，你可以从你的其他工作中带来。
 
-In this chapter, I'll share practical tips for how you can build a sterling reputation among your peers. This will be the key to getting freelance clients, a first job, and advancing in your career.
+在本章中，我将分享如何在同行中建立良好声誉的实用技巧。这将是获得自由职业者客户、第一份工作以及在事业上取得进展的关键。
 
-But first, here's how I built my reputation.
+但首先，我是如何建立我的声誉的。
 
-### Story Time: How Did a Teacher in His 30s Build a Reputation as a Developer?
+### 故事时间：一位 30 多岁的教师是如何建立起开发者的声誉的？
 
-*Last time on Story Time: Quincy started building his network of developers, entrepreneurs, and hiring managers in tech. He was frequenting hackerspaces and tech events around the city. But he had yet to climb into the arena and test his might...*
+*上一次是在故事时间。昆西开始建立他的网络，包括开发人员、企业家和科技界的招聘经理。他经常参加城市周围的黑客空间和科技活动。但他还没有爬上竞技场，测试自己的实力……*。
 
-I was already several months into my coding journey when I finally worked up the courage to go to my first hackathon.
+当我终于鼓起勇气去参加我的第一次黑客马拉松时，我的编码之旅已经有几个月了。
 
-One day I encountered a particularly nasty bug, and I wasn't sure how to fix it. So I did what a lot of people would do in that situation: I procrastinated by browsing the web. And that's when I saw it. Startup Weekend EDU.
+有一天，我遇到了一个特别讨厌的错误，我不知道如何解决它。所以我做了很多人在这种情况下会做的事情。我通过浏览网页来拖延时间。这时我看到了它。创业周末（Startup Weekend EDU）。
 
-Startup Weekend is a 54-hour competition that involves building an app, then pitching it to a panel of judges. These events reward your knowledge of coding, design, and entrepreneurship as well.
+创业周末是一个长达 54 小时的比赛，包括建立一个应用程序，然后将其提交给评审团。这些活动也奖励你的编码、设计和创业知识。
 
-This particular event – held in the heart of Silicon Valley – had a panel of educators and education entrepreneurs as its judges. With my background in adult education, this seemed like an ideal first hackathon for me.
+这个特别的活动--在硅谷的中心地带举行，有一个由教育家和教育企业家组成的评审团。由于我有成人教育的背景，这似乎是我第一次参加黑客马拉松的理想选择。
 
-I told Steve about the event. And then I said the magic words: "I'll do the driving." Which was good, because Steve didn't have a driver's license.
+我把这个活动告诉了史蒂夫。然后我说出了那句神奇的话。"由我来开车"。这很好，因为史蒂夫没有驾驶执照。
 
-With Steve onboard, we rounded out our team with a couple of devs from the Santa Barbara Hackerspace.
+有了史蒂夫的加入，我们与来自圣巴巴拉黑客空间的几个开发人员组成了我们的团队。
 
-I spent weeks preparing for the event by researching the judges and the companies they worked for. I researched the sponsors. And of course, I practiced coding like a Shaolin monk.
+我花了几周时间准备这次活动，研究评委和他们工作的公司。我研究了赞助商。当然，我还像少林寺的和尚一样练习编码。
 
-Finally, after a month of preparation, it was the big weekend. We piled into my 2005 Toyota Corolla with the peeling clear coat, put on some high energy music, and started our 5-hour drive.
+终于，经过一个月的准备，迎来了大周末。 我们挤进我的 2005 年丰田卡罗拉，车上的透明涂层已经剥落，放上一些充满活力的音乐，开始了我们 5 小时的车程。
 
-On the way up, we discussed what we should build. It would be education-focused, of course. Preferably catering to high school students, since those were the grade levels the judge's companies focused on.
+在路上，我们讨论了我们应该建造什么。当然，它将是以教育为重点的。最好是满足高中生的需求，因为这些是评审人员的公司所关注的年级。
 
-But what should the app do? How was it going to make people's lives easier?
+但这个应用程序应该做什么？它将如何使人们的生活更轻松？
 
-I thought back to my own time in high school. I didn't have much to go on, since I'd dropped out after just one year. (I did manage to study for and pass the GED – Good Enough Degree as we called it – while working at Taco Bell, before eventually going to college).
+我回想了一下我自己在高中的时候。我没有什么可说的，因为我只上了一年就退学了。(我确实设法学习并通过了普通教育证书，我们称之为 "足够好的学位"，同时在 Taco Bell 工作，最后才上了大学）。
 
-But one pain point I did remember from high school, which still rang out after all these years: English papers.
+但我确实记得高中时的一个痛点，在这么多年后仍然响起。英语论文。
 
-Now I loved writing. But I didn't love writing in MLA format, with its rigid citation rules. I used to dread preparing a Work Cited page. My teacher would always dock me points for not formatting my citations correctly.
+现在我喜欢写作。但我不喜欢用 MLA 格式写作，因为它有严格的引证规则。我曾经害怕准备工作引证页。我的老师总是会因为我的引文格式不正确而扣我的分。
 
-After listening to a lot of OK ideas from the other passengers in the car, I piped up. I said: "I have an idea. We should code an app that creates citations for you."
+在听了车上其他乘客的很多好主意后，我开始说了。 我说：“我有个主意。我们应该编写一个应用程序，为您创建引文。”
 
-And someone laughed and said: "Out of sight."
+而有人笑着说： "看不见了。"
 
-And Steve said, "Hey that's a good name. We could call it Out of Cite with a 'C'."
+史蒂夫说，“嘿，这是个好名字。我们可以用 `C` 称它为 `Out of Cite`。
 
-We all laughed and felt clever. Then we started discussing the implementation details.
+我们都笑了起来，觉得自己很聪明。然后我们开始讨论实施细节。
 
-When we arrived at the venue, there were about 100 other devs there. It was an open-plan office space, with low-rise cubicles flanked by whiteboards.
+当我们到达会场时，那里有大约 100 名其他开发人员。那是一个开放式的办公空间，低矮的隔间两边是白板。
 
-I heard whispers about one of those developers. "Hey, it's that guy who won the event last year," I heard people say. They gestured in the direction of a cocky-looking dev surrounded by fans. "Maybe he'll let me be on his team."
+我听到了关于其中一个开发者的窃窃私语。"嘿，是那个去年赢得比赛的家伙。" 我听到人们说。他们向一个被粉丝包围的、看起来很自负的开发者打手势。"也许他会让我加入他的团队。"
 
-The event started with pitches. Anyone could go up to the front of the room, grab the mic, and deliver a 60 second pitch for the app they wanted to build.
+活动开始时，大家纷纷发表意见。任何人都可以走到房间前面，拿起麦克风，为他们想要建立的应用程序做 60 秒的演讲。
 
-I was so nervous it felt like an alien was about to burst out of my chest. So naturally, I was first in line. Rip the band-aid off, right?
+我太紧张了，感觉就像一个外星人要从我的胸膛里冲出来。 所以很自然地，我排在第一位。 撕掉创可贴，对吧？
 
-I was sweating and gesticulating wildly as I raced through my pitch. I said something like this: "Citations suck. I mean, they don't suck. They're necessary. And you need to add them to your papers. But preparing citations sucks. Let's build an app that will fill out your Work Cited page for you. Who's with me?"
+我满头大汗，疯狂地打着手势，飞快地完成我的演讲。我说了这样一段话。"引文很烂。我的意思是，它们并不糟糕。它们是必要的。你需要把它们添加到你的论文中。但准备引文的工作很糟糕。让我们建立一个应用程序，为你填写你的工作引文页。谁支持我？"
 
-The room was quiet. Then people realized I was finished talking, and they gave me an obligatory round of applause. The MC took the mic out of my hand and gave it to the next person, and I pranced back to my seat.
+房间里很安静。然后人们意识到我已经讲完了，他们给了我一个强制性的掌声。主持人从我手中拿过麦克风，把它交给下一个人，而我则蹦蹦跳跳地回到了我的座位。
 
-After pitches, it was time to form teams. Our Santa Barbara contingent looked at each other and said "I guess we're a team."
+投球结束后，就到了组队的时间。我们的圣巴巴拉小分队互相看了看，说 "我想我们是一个团队"。
 
-We figured out the wifi password and grabbed the choicest of workspaces: a corner office that had a door you could actually close.
+我们弄清了 WIFI 密码，抢到了最合适的工作场所：一个角落里的办公室，有一扇可以真正关闭的门。
 
-I started scrawling UI mockups on whiteboard. I said, "We want something that's always a click away. Right in your browser's menu bar."
+我开始在白板上写下 UI 模型。我说："我们想要的东西总是一击即中。就在你的浏览器的菜单栏里。"
 
-"Like a browser plugin," Steve said.
+"像一个浏览器插件，"史蒂夫说。
 
-"Yeah. Let's build a browser extension."
+"是的。让我们建立一个浏览器扩展。"
 
-I showed them examples of the three formats that essays might require: MLA, APA, and Chicago.
+我向他们展示了论文可能需要的三种格式的例子。MLA，APA，和 Chicago。
 
-"Could we generate all three of these at once, so they can just copy-paste them?" I asked.
+"我们能不能同时生成这三种格式，让他们可以直接复制粘贴？我问道。
 
-"We can do better than that," Steve said. "We can have a button for each of them that puts the citation directly into their clipboard."
+"我们可以做得更好，"史蒂夫说。"我们可以为他们每个人设置一个按钮，把引文直接放到他们的剪贴板中。"
 
-We worked fast, creating a simple MVP (Minimum Viable Product) by the end of Friday night. All it did was grab the current website's metadata and structure it as a citation. But it worked.
+我们工作得很快，在星期五晚上结束时创造了一个简单的 MVP（最小可行产品）。它所做的只是抓取当前网站的元数据，并将其结构化为一个引文。但它成功了。
 
-Since it was my first hackathon, I didn't want the stress of staying in a hostel. So I'd splurged to get a hotel room. We had two twin beds, so each night we'd rotate which of us had to sleep on the floor.
+由于这是我第一次参加黑客马拉松，我不想承受住在旅馆里的压力。所以我花钱买了一个酒店房间。我们有两张双人床，所以每天晚上我们都会轮流睡在地板上。
 
-Saturday morning, our ambitions grew. I walked to the whiteboard and said to the team: "Citing websites is great and all. But a lot of the things students cite are in books or academic papers. We need to be able to generate citations for those, too."
+星期六早上，我们的野心越来越大。我走到白板前，对团队说。"引用网站是伟大的，所有的。但学生们引用的很多东西都是在书本或学术论文中。我们也需要能够为这些东西生成引文。"
 
-We found an API that we could use to get citation information based on ISBN (a serial number used for books). And we hacked together a script that could search for academic papers based on their DOI (a serial number used for academic papers), then scrape data from the result page.
+我们找到了一个 API，我们可以用它来获取基于 ISBN（用于书籍的序列号）的引文信息。我们还写了一个脚本，可以根据 DOI（用于学术论文的序列号）搜索学术论文，然后从结果页中刮取数据。
 
-By Saturday night, the code for our browser extension was really coming together. So I sat down and started preparing the presentation slides. I left a lot of the final coding to my teammates while I rehearsed my pitch over and over again for hours.
+到了星期六晚上，我们的浏览器扩展的代码终于完成了。于是我坐下来，开始准备演示幻灯片。我把很多最后的编码工作留给了我的队友，而我则反复排练了几个小时的演讲。
 
-Even though it was my turn to sleep in a bed, I could barely get any shut-eye due to the jitters. Here I was, right in the heart of the tech ecosystem. Silicon Valley.
+尽管轮到我在床上睡觉，但由于紧张，我几乎无法闭目养神。我在这里，就在科技生态系统的中心。硅谷。
 
-As a teacher, I would routinely give talks in front of my peers – sometimes dozens of them. But this was different.
+作为一名教师，我经常在我的同行面前发表演讲，有时是几十个人。但这是不同的。
 
-In a few hours, I'd be presenting to a room full of ambitious developers. And judges. People with Ph.D.'s, some of whom had founded their own tech companies. They were going to be evaluating our work. I was terrified I'd somehow blow it.
+几个小时后，我将向一屋子雄心勃勃的开发者发表演讲。还有评委。拥有博士学位的人，其中一些人已经创办了自己的科技公司。他们将对我们的工作进行评估。我很害怕自己会以某种方式搞砸。
 
-Unable to sleep, I opened my email. The Startup Weekend staff had sent out an email, which included a PDF of a book. It was an unofficial mash-up of the tech startup classics [4 Steps to the Epiphany](https://www.amazon.com/Four-Steps-Epiphany-Successful-Strategies/dp/1119690358?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=662e9d222ccd9aa050d3ad29438e74e3&language=en_US&ref_=as_li_ss_tl) and [The Lean Startup](https://www.amazon.com/The-Lean-Startup-Eric-Ries-audiobook/dp/B005MM7HY8?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=13b3c19bdbda93658336cf7c69e27100&language=en_US&ref_=as_li_ss_tl).
+由于无法入睡，我打开了我的电子邮件。创业周末的工作人员发出了一封电子邮件，其中包括一本书的 PDF。这是一本非官方的科技创业经典 [顿悟的 4 个步骤](https://www.amazon.com/Four-Steps-Epiphany-Successful-Strategies/dp/1119690358?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=662e9d222ccd9aa050d3ad29438e74e3&language=en_US&ref_=as_li_ss_tl) 和 [精益创业](https://www.amazon.com/The-Lean-Startup-Eric-Ries-audiobook/dp/B005MM7HY8?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=13b3c19bdbda93658336cf7c69e27100&language=en_US&ref_=as_li_ss_tl) 的混搭。
 
-Now, I had already read these books, because they were required reading for anyone who wanted to build software products in the early 2010s. But I had also read dozens of other startup books. A lot of their insights sort of ran together into a slurry of advice.
+现在，我已经读过这些书，因为它们是 2010 年代初期想要构建软件产品的任何人的必读书籍。 但我还阅读了数十本其他创业书籍。 他们的很多见解都汇集在一起，形成了一堆建议。
 
-It was 4 a.m., and I couldn't sleep. So I just started reading. One thing these books really hit on is building something that people will pay for. The ultimate form of customer validation.
+凌晨 4 点，我无法入睡。 所以我才开始阅读。 这些书真正触及的一件事是构建人们愿意支付的东西。 客户验证的最终形式。
 
-That's when I realized: you know what would really push my presentation over the finish line? Proof of product-market fit. Proof that the app we were building solved a real problem people had. So much so that they'd open up their wallets.
+就在那时我意识到：你知道什么能真正推动我的演讲越过终点线吗？ 产品市场契合度的证明。 证明我们正在构建的应用程序解决了人们遇到的实际问题。 如此之多，以至于他们会打开钱包。
 
 This gave me an idea. I should take our app on the road and sell it to people.
 

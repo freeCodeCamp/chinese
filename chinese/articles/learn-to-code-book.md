@@ -92,39 +92,39 @@
 
 有些词汇出现频率很高，比如：
 
-I'll use the words "programming" and "coding" interchangeably.
+“编程”（programming）和“写码”（coding）意思相同。
 
-I'll use the word "app" as it was intended – as shorthand for any sort of application, regardless of whether it runs on a phone, laptop, game console, or refrigerator. (Sorry, Steve Jobs. iPhone does not have a monopoly on the word app.)
+“应用”（app）是 application 的缩写；且这里的 app 是泛指，包括但不限于在手机、电脑、游戏主机甚至冰箱上运行的应用（译者注：作者不认为 app 是 iPhone 手机应用的专属称谓）。
 
-I will also use the words "software engineer" and "software developer" interchangeably.
+“软件工程师”（software engineer）和“软件开发者”（software developer）意思相同。
 
-You may encounter people in tech who take issue with this. As though software engineering is some fancy-pants field with a multi-century legacy, like mechanical engineering or civil engineering. And maybe that will be true for your grandkids. But we are still very much in the early days of software development as a field.
+技术圈的一些人对此持有不同意见，仿佛“软件工程师”这一职位已饱经沧桑，其发展史横跨几个世纪，就好像机械工程师和土木工程师一样。也许多年后你的孙辈会这么认为，但至少目前，软件开发这一领域尚处于发展初期。
 
-I'll just drop this quote here for you:
+以下引用一位名人说过的话：
 
-> "If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization." – Gerald Weinberg, Programmer, Author, and University Professor
+> 如果建筑师像程序员写程序那样造房子，那么一只路过的啄木鸟就足以摧毁整个社会 —— 杰拉德·温伯格（计算机科学家、作家、大学讲师）
 
-### Can Anyone Learn to Code?
+### 所有人都可以学习编程吗？
 
-Yes. I believe that any sufficiently motivated person can learn to code. At the end of the day, learning to code is a motivational challenge – not a question of aptitude.
+是的，我坚信只要驱动力足够，人人都可以学习编程。归根结底，我认为学习编程是一个与驱动力有关的挑战，而不是靠天资吃饭。
 
-On the savannas of Africa – where early humans lived for thousands of years before spreading to Europe, Asia, and the Americas – were there computers?
+曾经，我们的祖先在广袤的非洲草原上生活了几千年，然后才迁徙到了欧洲、亚洲和美洲。那时根本没有电脑。
 
-Programming skills were never something that was selected for over the millennia. Computers as we know them (desktops, laptops, smartphones) emerged in the 80s, 90s, and 00s.
+编程也显然不是经历了几千年发展的技术，计算机和智能手机是在 1980 - 2010 年间经历飞速发展的。
 
-Yes – I do believe that aptitude and interest play a part. But at the end of the day, anyone who wants to become a professional developer will need to put in time at the keyboard.
+虽然我也认同天资和兴趣可以让学习编程之路走得更加顺利，但对于想从事开发者职业的人来说，我觉得花时间去练习和敲代码才是正道。
 
-A vast majority of people who try to learn to code will get frustrated and give up.
+很多人是这样，他们会开始学习编程，然后遇到困难，同时感到非常受挫，进而放弃。
 
-I sure did. I got frustrated and gave up. Several times.
+我也放弃过，事实上我之前因为受挫放弃了好几次。
 
-But like other people who eventually succeeded, I kept coming back after a few days, and tried again.
+但和那些最终成功入行的人一样，我都是在放弃后的几天调整好心情，然后重新回来接受挑战。
 
-I say all this because I want to acknowledge: learning to code and getting a developer job is hard. And it's even harder for some people than others, due to circumstance.
+说了这么多，我是像告诉你：学习编程并获得一份开发者工作其实并不容易；对于一些有特殊情况的人来说更是难上加难。
 
-I'm not going to pretend to have faced true adversity in learning to code. Yes, I was in my 30s, and I had no formal background in programming or computers science. But consider this:
+我不想在这里为自己编造一个逆境翻盘的人设。我是从 30 多岁开始学习编程的，在这之前我也确实没有任何编程或计算机科学的学习经验。不过：
 
-I grew up middle class in the United States – a 4th-generation American from an English-speaking home. I went to university. My father went to university. And his father went to university. (His parents before him were farmers from Sweden.)
+我在美国中产阶级的家庭里长大，我是这个家庭的第四代，而且我的母语是英语。我读过大学，我的父亲和爷爷也都读过大学；我的曾祖父（爷爷的父亲）是来自瑞典的农民。
 
 I benefitted from a sort of intergenerational privilege. A momentum that some families are able to pick up over time when they are not torn apart by war, famine, or slavery.
 

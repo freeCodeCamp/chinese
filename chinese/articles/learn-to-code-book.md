@@ -1215,25 +1215,25 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 现在，让我们换换思路，关注下如何打造另一驱动：你的人际关系。
 
-## Chapter 2: How to Build Your Network
+##  第2章：如何打造你的人际关系网络
 
-> "If you want to go fast, go alone. If you want to go far, go together." – African Proverb
+> "独行者速，众行者远。" – 非洲谚语
 
-"Networking." You may wince at the sound of that word.
+人际关系网络这个词，你可能会感到畏缩。
 
-Networking may bring to mind awkward job fairs in stuffy suits, desperately pushing your résumé into the hands of anyone who will accept it.
+人际关系网络可能会让人联想到尴尬的招聘会：穿着闷热的西装，拼命把你的简历送到任何愿意接受它的人手中。
 
-Networking may bring to mind alcohol-drenched watch parties – where you pretend to be interested in a sport you don't even follow.
+人际关系网络可能还会让人想到充斥着酒精的观看聚会，而你在要那里假装对一项从未关注过的运动充满兴趣。
 
-Networking may bring to mind wishing "happy birthday" to people you barely know on LinkedIn, or liking their status updates hoping they'll notice you.
+人际关系网络可能还会让人想到在领英上向一个几乎不认识的人发送”生日快乐“，或者给他们的状态点赞，以希望他们能注意到你。
 
-But networking does not have to be that way.
+但是人际关系网络不需要总是这样。
 
-In this chapter, I'll tell you everything I've learned about meeting people. I'll show you how to earn their trust and be top of their mind when they're looking for help.
+在本章，我会分享自己在结识人们上学到的一切。我会想你展示如何获得他们的信任，并在他们寻求帮助时，成为第一人选。
 
-Because at the end of the day, that's what it's all about. Helping people solve their problems. Being of use to people.
+因为说到底，这就是人际关系网络的全部内容。帮助人们解决问题。做一个有益于他人的人。
 
-I'll show you how to build a robust personal network that will support you for decades to come.
+我会向你展示如何建造一个强大的、可以在未来数十年内为你提供支持的人际关系网络。
 
 ### Story Time: How did a Teacher in his 30s Build a Network in Tech?
 

@@ -2675,101 +2675,103 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 你们会可以成为对方履历中的成功故事。
 
-### When Should I Stop Freelancing and Start Looking for a Job?
+### 我什么时候应该停止自由职业并开始找正式工作？
 
-If you are able to pay your bills freelancing, you may just want to keep doing it. Over time, you may even be able to build up your own software development agency, and hire other developers to help you.
+如果你有能力以自由职业维生，你可能只想继续做下去。慢慢地，你甚至可以建立自己的软件开发机构，并聘请其他开发人员来帮助你。
 
-This said, if you are yearning for the stability of a developer job, you may be in luck. Freelance clients may convert into full-time jobs if you stick with them long enough. At some point, it may make economic sense for a client to just offer you a full-time job at a lower hourly rate. You get the stability of a 40-hour work week, and they get your skills full-time.
+话说回来，如果你渴望拥有稳定的开发工作，那么你可能很走运。如果你坚持足够长的时间，自由客户可能会给你全职工作。在某些时候，客户以较低的时薪给你提供一份全职工作可能更经济实惠。你得到一份稳定的每周工作40小时的工作，而他们全职获得你的技能。
 
-You may also be able to hang onto a few freelance clients when you get a job. This can be a nice supplement to your income. But keep in mind that, as we'll learn in the next chapter, your first developer job can be an all-consuming responsibility. At least at first.
+当你找到工作时，你也可以保留一些自由客户。这是很好的收入补贴。但请记住，正如我们将在下一章中了解到的那样，你的第一份开发工作可能会需要你非常尽职尽责。至少在一开始的时候是这样。
 
-How wild is that first year of working as a professional developer going to be? Well, let's talk about that.
+成为职业开发者的第一年会有多疯狂呢？让我们来谈谈这个。
 
-## Chapter 5: How to Succeed in Your First Developer Job
+## 第5章：如何在你的第一份开发工作中取得成功
 
-> "A ship in port is safe. But that's not what ships are built for." – Grace Hopper, Mathematician, US Navy Rear Admiral, and Computer Science Pioneer
+> "待在港口的船很安全。但这不是造船的目的。" —— 格蕾丝·霍珀，数学家，美国海军少将，计算机科学先驱
 
-Once you get your first developer job, that's when the real learning begins.
+一旦你获得第一份开发工作，那就是真正学习的开始。
 
-You'll learn how to work productively alongside other developers.
+你将学习如何与其他开发人员一起高效工作。
 
-You'll learn how to navigate large legacy codebases.
+你将学习如何浏览大型遗留代码库。
 
-You'll learn Version Control Systems, Continuous Integration and Continuous Delivery tools (CI/CD), project management tools, and more.
+你将学习版本控制系统、持续集成和持续交付工具 (CI/CD)、项目管理工具等。
 
-You'll learn how to work under an engineering manager. How to ship ahead of a deadline. And how to and work through a great deal of ambiguity on the job.
+你将学习如何在技术管理者手下工作。如何在截止日期前交付。以及如何解决工作中的大量分歧。
 
-Most importantly, you'll learn how to manage yourself.
+最重要的是，你将学会如何管理自己。
 
-You'll learn how to break through psychological barriers that affect all of us, such as imposter syndrome. You'll learn your limits, and how to push ever so slightly beyond them.
+你将学习如何突破影响我们所有人的心理障碍，例如冒名顶替综合症。你将了解到自己的极限，以及如何稍微地超越它们。
 
-### Story Time: How did a Teacher in his 30s Succeed in his First Developer Job?
+### 讲故事时间：一名30多岁的教师如何在他的第一份开发工作中取得成功？
 
-*Last time on Story Time: Quincy landed his first developer job at a local tech startup. He was going to work as one of a dozen developers maintaining a large, sophisticated codebase. And he had no idea what he was doing...*
+*上一次故事时间回顾：昆西在当地一家科技初创公司找到了他的第一份开发工作。他将成为维护一个庞大、复杂的代码库的十几名开发人员中的一员。他不知道自己在做什么……*
 
-I woke up at 4 a.m. and I couldn't go back to sleep. I tried. But I had this burning in my chest. This anxiety. Panic.
+我凌晨4点醒来，再也睡不着了。我努力尝试睡着。但是我的胸口像在燃烧一样。焦虑和恐慌包围了我。
 
-I had worked for a decade in education. First as a tutor. Then as a teacher. And then as a school director.
+我在教育领域工作了十年。先当家教。然后当老师。接着担任校长。
 
-In a few hours, I would be starting over from the very bottom, working as a developer.
+几个小时后，我将从头开始，成为一名开发人员。
 
-Would any of my past learnings – past success – even matter in this new career?
+我过去的任何学习——过去的成功——对我的新职业来说有什么意义吗？
 
-I did what I always do when I feel anxiety – I went for a run. I bounded down the hills, my headlamp bobbing in the darkness. When I reached the beach, I ran alongside the ocean as the sun crept up over the treetops.
+我做了我感到焦虑时最常做的事——跑步。我跑下山坡，头灯在黑暗中摇晃。当我到达海滩时，太阳慢慢爬上树梢，我沿着大海奔跑。
 
-By the time I got home, my wife was already leaving for work. She told me not to worry. She said, "I'll still love you even if you get fired for not knowing what you're doing."
+当我回到家时，我妻子已经出门上班了。她告诉我不要担心。她说，“即使你因为不知道自己在做什么而被解雇，我依然爱你。”
 
-When I reached my new office, nobody was there. As a teacher, I was used to getting to school at 7:30 sharp. But I quickly realized that most software developers don't start work that early.
+当我到达我的新办公室时，那里没有人。作为一名教师，我习惯于7点30分准时到校。但我很快意识到，大多数软件开发人员并没有那么早开始工作。
 
-So I sat crosslegged in the entry hallway, coding along to tutorials on my netbook.
+所以我盘腿坐在入口走廊上，按照上网本上的教程写代码。
 
-An employee walked up to me with a nervous look on her face. She probably thought I was a squatter. But I reassured her that I did indeed now work at her company, and convinced her to let me in.
+一名员工朝我走来，脸上带着紧张的表情。她可能认为我是一个来占位的闲杂人等。我向她保证我确实在她的公司工作，并说服她让我进去。
 
-It felt surreal walking across the empty open-plan office toward the developer bullpen, with only the light of the exit sign to guide my way.
+穿过空荡荡的开放式办公室走向开发人员工作的区域，我感觉像在做梦，只有出口标志的灯光指引着我的路。
 
-I set up my netbook on an empty standing desk and finished my coding tutorial.
+我在一张空的站立式办公桌上设置了我的上网本，并完成了编码教程。
 
-A little while later, the lights flickered on around me. My boss had arrived. At first he didn't acknowledge my presence. He just sat down at his desk and started firing off bursts of keystrokes onto his mechanical keyboard.
+过了一会儿，我周围的灯光亮了起来。我的老板来了。起初他并没在意我的存在。他只是在办公桌前坐下，开始敲击他的机械键盘。
 
-"Larson," he finally said. "You ready for your big first day?"
+“拉尔森，”他终于开口了。“你准备好迎接你这个重要的第一天了吗？”
 
-I wasn't. But I wanted to signal confidence. So I said the words first uttered in Big Trouble in Little China, one of my favorite 80s moves: "I was born ready."
+我还没准备好。但我想表现出我的信心。所以我说了我最喜欢的 80 年代电影之一《妖魔大闹唐人街》中的第一句台词：“我生来就准备好了。”
 
-![big-trubs-born-ready](https://www.freecodecamp.org/news/content/images/2023/01/big-trubs-born-ready.jpeg)You've probably heard "I was born ready" a million times. But it was first uttered in 1986 by Jack Burton to his friend Wang Chi, when they were getting ready to confront a thousand year old wizard in his death warehouse. I can't believe my parents let me watch this back then, but I'm glad they did.
+![big-trubs-born-ready](https://www.freecodecamp.org/news/content/images/2023/01/big-trubs-born-ready.jpeg)
 
-"Great," my boss said. "Let's get you a machine."
+你可能已经听过上百万次“我天生就准备好了”。但这句话最早是在 1986 年杰克·伯顿 (Jack Burton) 对他的朋友王驰 (Wang Chi) 说的，当时他们正准备在他的死亡仓库中与一位千年老巫师对峙。 我不敢相信我的父母当时让我看这个，但我很高兴他们这么做了。
 
-"Oh, I've already got one," I said, tapping my $200 netbook. "This baby is running Linux Mint, and I've already customized my .emacs file to be able to..."
+“好极了，”我的老板说。“那么先给你配一台电脑。”
 
-"We're a Mac shop," he said walking to a storage closet. He rustled around for a moment and emerged. "Here. It's a 3 year old model, but it should do. We wiped it to factory default."
+“哦，我已经有了一个，”我敲了敲我200美元的上网本说。“这个宝贝正在运行 Linux Mint，我已经自定义了我的 .emacs 文件，以便能够...”
 
-I started to say that I was already familiar with my setup, and that I could work much faster with it, but he would have none of it.
+“我们是一家 Mac 商店，”他说着走向储藏室。他搜寻了一会儿，然后出现了。“这是一个已经用了3年的模型，但它应该还够用。我们把它重置到出厂设置。”
 
-"We're all using the same tools. It makes collaborating a lot easier. Convention over configuration, you know."
+我开始说我已经熟悉我的电脑配置，而且我用它能更快地工作，但他并不接受。
 
-That was the first time I'd heard the phrase "convention over configuration" but it would come up a lot over the next few days.
+“我们都在使用相同的工具。它使协作变得更加容易。你要知道，惯例优于配置。”
 
-I spent the next few hours configuring my new work computer as other developers gradually filed in.
+那是我第一次听到“惯例优于配置”这个词，但在接下来的几天里它会出现很多次。
 
-It was nearly 10 a.m. when we started our team "standup meeting." We all stood in a circle by the whiteboard. We took turns reporting what we were working on that day.
+其他开发人员陆续到了公司，而我花了接下来的几个小时来配置我的新电脑。
 
-Everyone gave quick, precise status updates.
+接近上午10点时，我们开始了团队“站会”。我们站在白板前围成一圈，轮流汇报当天的工作。
 
-When it was my turn, I started to introduce myself. I was already anxious enough, when in walked none other than Mike, that ultramarathoner guy who ran the Santa Barbara Startup events. He was crunching on some baby carrots, having already run about 30 miles that morning.
+每个人都提供简洁、准确的进展更新。
 
-After I finished, Mike spoke, welcoming me and saying he'd seen me at some of his events. He then gave a 15 second status update about some feature he was working on.
+轮到我了，我开始自我介绍。当时我已经非常紧张了，结果这时候迈克走了进来，他是超级马拉松运动员，也主持举办圣塔芭芭拉的初创企业活动。他正在吃一些小胡萝卜，那天早上他已经跑了大约30英里。
 
-The entire meeting only took about 10 minutes, and everyone scattered back to their desks.
+在我结束后，迈克说话了，欢迎了我并且说他在一些活动中见过我。然后，他用15秒的时间讲述了有关他正在写一些功能的工作。
 
-I eventually got the company's codebase to run on my new laptop. It was a Ruby on Rails app that had grown over 5 years. I ran the `rake stats` command and saw that it was millions of lines of code. I shuddered. How could I ever comprehend all that?
+整个会议只进行了大约10分钟，大家就各自回到了自己的办公桌。
 
-My neighbor, a gruff, bearded dev said, "Eh, most of that is just packages. The actual codebase you'll be working on is only maybe 100,000 lines. Don't worry. You'll get the hang of it."
+我最终让公司的代码库在我的新笔记本电脑上运行。这是一个已经发展了5年多的 Ruby on Rails 应用程序。我运行了“rake stats”命令，发现它有数百万行代码。我不寒而栗。我怎么可能能理解这些东西呢？
 
-I gulped, but thought to myself: "That's less than millions. So that is good."
+我的隔壁桌，一个看起来粗鲁的、留着胡子的开发人员说，“嗯，其中大部分只是包。你实际要处理的代码库可能只有100000行。别担心。你会掌握它的窍门的。”
 
-"Name's Nick by the way," he said, introducing himself. "If you need any help just let me know. I've been stumbling around this codebase for quite a few years now, so I should be able to help you out."
+我咽了咽口水，心想：“这还不到一百万呢，还行。”
 
-Over the next few days, I peppered Nick with questions about every internal system I encountered.
+“顺便说一句，我叫尼克，”他自我介绍道。 “如果你需要任何帮助，请告诉我。我已经在这个代码库上摸索了好几年，所以我应该可以帮到你。”
+
+在接下来的几天里，我向尼克提问了每一个我遇到的内部系统问题。
 
 Eventually Nick started setting his chat status to "code mode" and putting on his noise cancelling headphones. He swiveled his back toward me a bit, with the body language of: "leave me alone so I can get some of my own work done, too."
 

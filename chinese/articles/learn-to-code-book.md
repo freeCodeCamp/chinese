@@ -909,233 +909,234 @@ Want to get a work visa to work abroad? You'll probably need a bachelor's degree
 
 And for so many job openings that say "bachelor's degree required" – any major will do.
 
-Why is this? Doesn't the subject you study in university matter at all?
+为什么会这样？难道在大学校园里的学习没有用吗？
 
-Well, here's my theory on this: what you learn in university is less important than **whether** you finished university.
+我的理论是这样的：你在大学里学了什么没有你**是否**完成大学学业重要。
 
-Employers are trying to select for people who can figure out a way to get through this rite of passage.
+雇主倾向于选择通过自己的方式完成大学学业的人。
 
-It is certainly true that you can be at the bottom of your class, repeating courses you failed, and being on academic probation for half the time. But a degree is a degree.
+你当然可以成绩垫底，一直挂科和花一半的大学时光缓考，但是学位就是学位。
 
-You know what they call the student who finished last in their class at medical school? "Doctor."
+你知道以最后一名的成绩毕业于医学院的学生被称作什么吗？“医生”。
 
-And for most employers, the same holds true.
+对于大部分雇主来说，就是这样的道理。
 
-In many cases, HR folks are just checking a box on their job application filtering software. They're filtering out applicants who don't have a degree. In those cases, they may never even look at job applications from people without degrees.
+多数情况下，HR只是通过招聘过滤软件的勾选框来筛选简历，过滤掉没有学位的应聘人员。他们可能完全没看过这些被筛选掉的简历。
 
-Again, not every employer is like this. But many of them are. Here in the US, and perhaps even more so in other countries.
+必须强调，并不是所有HR都这样。但大多数HR都这样，在美国如此，其他国家可能更为严重。
 
-It sucks, but it's how the labor market works right now. It may change over the next few decades. It may not.
+这很糟糕，但这就是劳动力市场目前的状况，在几十年后可能会好转也可能没有变化。
 
-This is why I always encourage people who are in their teens and 20s to seriously considering getting a bachelor's degree.
+这就是为什么我总是鼓励十几二十多岁的年轻人认真考虑获得一个学士学位。
 
-Not because of any of the things universities market themselves as:
+并不是为了大学本身：
 
-- The education itself. (You can take courses from some of the best universities online for free, so this alone does not justify the high cost of tuition.)
-- The "college experience" of living in a dorm, making new friends, and self discovery. (Most US University students never live on campus so they don't really get this anyway.)
-- General education courses that help you become a "well rounded individual" (Ever hear of the Freshman 15? This is a joke of course. But a lot of university freshman do gain weight due to the stress of the experience.)
+- 教育本身。（你可以在线免费学习世界上最好大学的课程，所以这并不构成高额学费的充分理由）
+- 如宿舍生活、交友、自我探索等“大学经验”。（美国学生基本不住在学校，也就没有类似的经验）
+- 通识课程帮助你成为“全面人才”(听说过[“Freshman 15”](https://www.healthline.com/nutrition/freshman-15)（大一胖三斤半）这个笑话吗?但确实有很多大一新生过劳肥)
 
-Again, the real value of getting a bachelor's degree – the real reason Americans pay $100,000 or more for 4 years of university – is because many employers require degrees.
+再次申明，学士学位真正的意义（美国人花十万美元甚至更多来支付大学4年的学费）是因为雇主要求学历。
 
-Of course, there are other benefits of having a bachelor's degree, such as the ones I mentioned: expanded military career options, and greater ease getting work visas.
+当然，获得学士学位还有其他的好处，如：更多从军的选择、更容易获得工作签证等。
 
-One of these is: if you want to become a doctor, dentist, lawyer, or professor, you will first need a bachelor's degree. You can then use that to get into grad school.
+还有一个好处是：如果你想要成为一名医生、牙医或者教授，你必须先拥有学士学位。然后再进入研究生院。
 
-OK – this is a lot of background information. So allow me to answer your questions bluntly.
+已经铺垫地差不多了，让我直言不讳地回答你的问题。
 
-### Do You Need a University Degree to Work as a Software Developer?
+### 成为一个软件工程师需要大学学历吗?
 
-No. There are plenty of employers who will hire you without a bachelor's degree.
+不需要。很多雇主都不需要你有学士学位。
 
-A bachelor's degree will make it much easier to get an interview at a lot of employers. And it may also help you command a higher salary.
+但学士学位可以帮助你更快获得面试机会，获得更高的工资。
 
-### What About Associate's Degrees? Are Those Valuable?
+### 那[副学士（Associate degree)文凭](https://zh.wikipedia.org/zh-hans/%E5%89%AF%E5%AD%B8%E5%A3%AB)(相当于中国的大专）呢？有含金量吗？
 
-In theory, yes. There are some fields in tech where having an associates may be required. And I think it always does increase your chances of getting an interview.
+理论上是的。在科技行业的某些领域的确需要副学士文凭，这个文凭也会帮助你更快获得面试机会。
 
-This said, I would not recommend going to university with the specific goal of getting an associate's degree. I would 100% encourage you to stay in school until you get a bachelor's degree, which is vastly more useful.
+虽然如此，我不鼓励你为了副学士文凭而去读大学。我更鼓励你待够4年，拿到大学文凭，这个的含金量更高。
 
-According to the US Department of Education, over the course of your career, having a bachelor's degree will earn you 31% more than merely having an associate's degree.
+美国教育部的数据显示，在整个职业生涯中，大学学历的薪资比副学士学历高31%。
 
-And I'm confident that difference is much wider with a bachelor's in Computer Science.
+这两种学历的区别可比普通本科以及计算机科学本科的区别要大得多。
 
-### Is it Worth Going to University to Get a Bachelor's Degree Later in Life, if You Don't Already Have One?
+### 如果没有大学学历，过了年龄还申请学士学位值得吗？
 
-Let's say you're in your 30s. Maybe you attended some college or university courses. Maybe you completed the first two years and were able to get an associate's degree.
+假设你三十多岁，你参加过一些学院和大学的课程，并且你已经完成了头两年的学业可以获得副学士学位。
 
-Does it make sense to go "back to school" in the formal sense?
+“重返校园”值得吗？
 
-Yes, it may make sense to do so.
+是的，重返校园值得！
 
-But I don't think it ever makes sense to quit your job to go back to school full time.
+但我并不认为你应该辞掉工作脱产学习。
 
-The full-time student lifestyle is really designed with "traditional" students in mind. That is, people age 18 to 22 (or a bit older if they served in the military), who have not yet entered the workforce beyond high school / summer jobs.
+脱产学习是为“传统”学生设计的。他们通常在18到22岁之间（如果服过兵役可能年龄稍长一些），除了高中校外打工和暑期实习，并未有任何工作经验。
 
-Traditional universities cost a lot of money to attend, and the assumption is that students will pay through some combination of scholarships, family funds, and student loans.
+传统的大学的学费高昂，一般学生会结合奖学金、家庭基金和学生贷款来支付。
 
-As a working adult, you'll have less access to these funding sources. And just as importantly, you'll have less time on your hands than a recent high school graduate.
+作为一个工作了的成年人，你获得这些现金资助的渠道更少。与此同时，你也没有一个刚毕业的高中生时间宽裕。
 
-But that doesn't mean you have to give up on the dream of getting a bachelor's degree.
+但这并不意味着你就要放弃获得学士学位的梦想了。
 
-Instead of attending a traditional university, I recommend that folks over 30 attend one of the online nonprofit universities. Two that have good reputations, and whose fees are quite reasonable, are Western Governor's University and University of the People.
+与其加入一个传统大学，我更推荐三十岁以上的成年人参与线上非盈利大学。有两所名声在外、收费合理的大学：西部州长大学（ Western Governor's University）和美国人民大学（ University of the People）。
 
-You may also find a local community college or state university extension program that offers degrees. Many of these programs are online. And some of them are even self-paced, so that you can complete courses as your work schedule permits.
+一些本地社区大学和州立大学的衍生项目也提供学位。许多项目都是线上的，其中一部分还可以自己管理学习进度，你可以根据自己的工作安排完成学业的时间。
 
-Do your research. If a school looks promising, I recommend finding one of its alumni on LinkedIn and reaching out to them. Ask them questions about their experience, and whether they think it was worth it.
+做好研究功课。如果一个大学看上去不错，推荐你使用LinkedIn找到该学校校友，向他们寻求帮助。询问他们的经验，他们觉得这些课程是否物有所值。
 
-I recommend not taking on any debt to finance your degree. It is much better to attend a cheaper school. After all, a degree is a degree. As long as it's from an accredited institution, it should be fine for most intents and purposes.
+我不推荐通过借贷的方式来获得学位。去一个学费没那么贵的学校更好。学位只是一个学位而已，只要是来自一个授权的机构，基本上就可以服务于你需要用学位达成的大部分目的。
 
-### If You Already Have a Bachelor's Degree, Does it Make Sense to Go Back and Earn a Second Bachelor's in Computer Science?
+### 如果你已经有学士学位，有必要再回到校园，读一个计算机科学专业吗？
 
-No. Second bachelor's degrees are almost never worth the time and money.
+没有必要，既浪费钱又浪费时间！
 
-If you have any bachelor's degree – even if it's in a non-STEM field – you have already gotten most of the value you will get out of university.
+如果你已经拥有学士学位– 即便和科学、科技、工程、数学（non-STEM）无关 – 你已经获得大学能提供的大部分价值了。
 
-### What About a Master's of Computer Science Degree?
+### 那计算机科学的研究生学历呢?
 
-These can be helpful for career advancement. But you should pursue them later, after you're already working as a developer.
+这对职业进阶有助益，但你可以在已经有开发者工作经验之后再去申请。
 
-Many employers will pay for their employee's continuing education.
+许多雇主会支付员工继续教育的学费。
 
-One program a lot of my friends in tech have attended is Georgia Tech's Master's in Computer Science degree.
+我技术领域的很多伙伴都参加了佐治亚理工学院的计算机科学研究生的课程。
 
-Georgia Tech's Computer Science department is among the best in the US. And this degree program is not only fully online – it's also quite affordable.
+佐治亚理工学院的计算机科学部不仅仅在全美数一数二，而且其研究生学位完全线上，费用也合理。
 
-But I wouldn't recommend doing it now. First focus on getting a developer job. (We'll cover that in-depth later in this book).
+但我不鼓励你现在就去申请，先找一份开发者工作。（本书之后的章节会详细介绍）
 
-### Will Degrees Continue to Matter in the Future?
+### 未来学位还会这么重要吗？
 
-Yes, I believe that university degrees will continue to matter for decades – and possibly centuries – to come.
+是的，我认为学士学位会在未来几十年，甚至是几百年依旧保持重要的地位。
 
-University degrees have existed for more than 1,000 years.
+学士学位已经存在超过1000年了。
 
-Many of the top universities in the US are older than the USA itself is. (Harvard is more than 400 years old.)
+许多美国顶尖学校比美国历史还悠久。(哈佛有400年历史)
 
-The death of the university degree is greatly exaggerated.
+学士学位的消亡这一说法实属夸大。
 
-It has become popular in some circles to bash universities, and say that degrees don't matter anymore.
+一些圈子开始抨击大学，倡导学位无用论。
 
-But if you look at the statistics, this is clearly not true. They do have an impact on lifetime earnings.
+当如果你查看相关数据，会发现事实并非如此。学位和薪资息息相关。
 
-And just as importantly, they can open up careers that are safer, more stable, and ultimately more fulfilling.
+同时，一个学位也可以帮助你获得更安全、稳定以及更有成就感的工作。
 
-Sure, you can make excellent money working as a deckhand offshore, servicing oil rigs.
+当然，你也可以通过做甲板工，为石油钻井服务赚得丰厚的收入。
 
-But you can make similarly excellent money working as a developer in a climate-controlled office, servicing servers and patching codebases.
+但你也可以作为一个开发人员，在恒温的办公环境，通过维护服务器、修补代码库赚钱同样丰厚的收入。
 
-One of these jobs is dangerous, back-breaking work. The other is a job you could comfortably do for 40 years.
+前者工作环境危险，对背部有损伤；而后者工作环境舒适，即便是40岁，你也可以继续工作下去。
 
-Many of the "thought leaders" out there who are bashing universities have themselves benefitted from a university education.
+许多抨击大学的“意见领袖”本身从自己的大学学历获益。
 
-One reason why I think so many people think degrees are "useless" is: it's hard to untangle the learning from the status boost you get.
+我认为倡导“大学无用论”的其中一个理由是：很难将学习与获得地位提升联系起来。
 
-Is university just a form of class signaling – a way for the wealthy to continue to pass advantage on to their children? After all, you're 20 times as likely to find a rich kid at Harvard as you are a poor kid.
+大学只是阶级信号的一种形式吗 – 即富裕阶级将财富传承到下一代的一种方式？总体来说，在哈佛找到一位富家子弟比穷苦学子的概率要大20倍。
 
-The fact is: life is fundamentally unfair. But that does not change how the labor market works.
+事实是：人生的本质就是不公平。但这并不改变劳动力市场的运行规律。
 
-You can choose easy mode, and finish a degree that will give you more options down the road.
+你可以选择简单模式，完成学位，并且在职业道路上获得更多机会。
 
-Or you can go hard mode, potentially save time and money, and just be more selective about which employers you apply to.
+或者是困难模式，省下一些时间和金钱，但是需要更谨慎地选择雇主。
 
-I have plenty of friends who've used both approaches to great success.
+我的许多朋友在获取成功的路上两种模式切换使用。
 
-### What Does a Computer Science Bachelor's Degree Cover?
+### 计算机科学学士学位包含哪些内容?
 
-### What Alternatives are There to a University Degree?
+### 大学学历的替代品有哪些?
 
-I've worked in adult education for nearly two decades, and I have yet to see a convincing substitute for a university degree.
+我已经在成人教育领域耕耘了二十多年，我看到了许多大学学历的替代品。
 
-Sure – there are certification programs and bootcamps.
+当然包含一些认证项目和集训班（bootcamp）。
 
-But these do not carry the same weight with employers. And they are rarely as rigorous.
+雇主并不认可这些的含金量，而且它们很少要求严格。
 
-*Side note: when I say "certification programs" I mean a program where you attend a course, then earn a certification at the end. These are of limited value. But exam-based certifications from companies like Amazon and Microsoft are quite valuable. We'll discuss these in more depth later.*
+*旁注：当我说 "认证项目 "时，我指的是你参加一个课程，然后在最后获得一个证书。这些项目的价值有限。但是来自亚马逊和微软等公司的基于考试的认证是相当有价值的。我们将在后面更深入地讨论这些。*
 
-What I tell people is: to degree or not to degree – that is the question.
+我常常告诉人们：到底去不去攻读学位，这是一个问题。
 
-I meet lots of people who are auto mechanics, electricians, or who do some other sort of trade, who don't have a bachelor's. They can clearly learn a skillset, apply it, and hold down a job.
+我遇到过很多没有学士学位的人，他们是汽车修理工、电工或从事其他行业的人。他们可以清楚地学会一套技能，应用它，并保住一份工作。
 
-I meet lots of people who are bookkeepers, paralegals, and other "knowledge workers" who don't have a bachelor's. They can clearly learn a skillset, apply it, and hold down a job.
+我遇到过很多没有学士学位的簿记员、律师助理和其他“知识工作者”。他们可以清楚地学会一套技能，应用它，并保住一份工作。
 
-In many cases, these people can just learn to code on their own, using free learning resources and hanging out with likeminded people.
+这些人可以自学代码，使用免费的学习资源并与志同道合的人交流。
 
-Some of these people have always had the personal goal of going back and finishing their bachelor's. That's a good reason to do it.
+其中一些人的个人目标一直是回去完成他们的学士学位。这是攻读学位的一个很好的理由。
 
-But it's not for everyone.
+但不适用于每一个人。
 
-If you want formal education, go for the bachelor's degree. If you don't want formal education, don't do any program. Just self-teach.
+如果你想要获得正规教育，你可以去攻读学士学位；如果你不想，别参与这些项目。自学就可以。
 
-The main thing bootcamps and other certification programs are going to give you is structure and a little bit of peer pressure. That's not a bad thing. But is it worth paying thousands of dollars for it?
+培训班和认证项目仅给你提供课程大纲和同学间的竞争压力。这并不赖，但值得你花上千美元吗？
 
-### How to Teach Yourself to Code
+### 如何自学代码
 
-Most developers are self-taught. Even the developers who earned a Bachelor's of computer science still often report themselves as "self-taught" on industry surveys like Stack Overflow's annual survey.
+大部分开发者都是自学的，即便是有相关学历的程序员也在Stack Overflow的年度调查中宣称自己是“自学”。
 
-![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)Most working developers consider themselves to be "self-taught" (Image: Stack Overflow 2016 Survey)
+![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)大部分在职程序员认为自己的“自学的” (图片来源: Stack Overflow 2016 调查)
 
-This is because learning to code is a life-long process. There are constantly new tools to learn, new legacy codebases to map out, and new problems to solve.
+因为代码需要终生学习。不断有新的工具需要学习，新的过气代码需要重新规划，新的问题需要解决。
 
-So whether you pursue formal education or not, know this: you will need to get good at self-teaching.
+所以不论你是否接受了正规教育，你都要知道：你必须擅长自学。
 
-#### What Does it Mean to be a "Self-Taught" Developer?
+#### “自学”开发意味着什么?
 
-Not to be pedantic, but when I refer to self-teaching, I mean self-directed learning – learning outside of formal education.
+但当我提到自学时，我指的是自主学习——在正规教育之外学习。
 
-Very few people are truly "self-taught" at anything. For example, Isaac Newton taught himself Calculus because there were no Calculus books. He had to figure it out and invent it as he went along.
+很少有人在任何事情上都是真正“自学成才”的。例如，艾萨克·牛顿自学了微积分，因为当时没有微积分书籍。他必须边做边弄明白并发明它。
 
-Similarly, Ada Lovelace taught herself programming. Because before her there was no programming. She invented it.
+同样地，爱达·勒芙蕾丝自学了编程。因为在她之前，没有编程。她发明了它。
 
-Someone might tell you: "You're not really self taught because you learned from books or online courses. So you had teachers." And they are correct, but only in the most narrow sense.
+有人可能会告诉你：“你不是真正的自学，因为你是从书本或在线课程中学习的。所以你有老师。”它们是正确的，但只是在最狭义的意义上。
 
-If someone takes issue with you calling yourself self-taught, just say: "By your standards, no one who wasn't raised by wolves can claim to be self-taught at anything."
+如果有人对你自称是自学成才提出异议，只需说：“按照你的标准，只要不是被狼养大的，就不能声称自己是自学成才的。”
 
-Point them to this section of this book and tell them: "Quincy anticipated your snobbery." And then move on with your life.
+将本书的这一部分指给他们看，并告诉他们：“Quincy预料到了你的傲慢。”然后继续你的生活。
 
-Because come on, life's too short, right?
+人生苦短，别浪费时间。
 
-You're self taught.
+你就是自学成才的！
 
-#### What is Self-Directed Learning?
+#### 什么是自主学习?
 
-As a self-learner, you are going to curate your own learning resources. You're going to choose what to learn, from where. That is the essence of "Self-Directed Learning."
+作为自学者，你将整理自己的学习资源。选择从哪里学习什么。这就是“自主学习”的本质。
 
-But how do you know you're learning the right skills, and leveraging the right resources?
+但是你怎么知道你学习正确的技能，并利用正确的资源呢？
 
-Well, that's where community comes in.
+社区就派上用场了。
 
-There are lots of communities of learners around the world, all helping one another expand their skills.
+世界上有各种学习者的社区，相互帮助提高技能。
 
-Community is a hard word to define. Is Tech Twitter a community? What about the freeCodeCamp forum? Or the many Discord groups and subreddits dedicated to specific coding skillsets?
+社区是一个很难定义的词。Twitter Tech话题是一个社区吗？ freeCodeCamp 论坛呢？还是许多专门针对特定代码技能的 Discord 组和 reddit 话题？
 
-I consider all of these communities. If there are people who regularly hang out there and help one another, I consider it a community.
+我认为这些都是社区。如果经常有人活跃，互相帮助，我就认为这是一个社区。
 
-What about in-person events? The monthly meetup of Ruby developers in Oakland? The New York City Startup community meetup? The Central Texas Linux User Group?
+面对面的活动呢？奥克兰的 Ruby 开发人员月度聚会？纽约市创业社区聚会？德克萨斯州中部 Linux 用户组？
 
-These communities can be online, in-person, or some mix of both.
+这些社区可以是在线的、面对面的，或者两者兼而有之。
 
-We'll talk more about communities in the Build Your Network chapter. But the big takeaway is: the new friends you meet in these communities can help you narrow your options for what to learn, and which resources to learn from.
+我们将在 "建立你的网络 "一章中更多地谈及社区。但最大的收获是：你在这些社区中遇到的新朋友可以帮助你缩小选择范围，知道要学什么，要从哪些资源中学习。
 
-### What Programming Language Should I Learn First?
+### 我应该先学习什么编程语言?
 
-The short answer is: it doesn't really matter. Once you've learned one programming language well, it is much easier to learn your second language.
+简短的回答是：这并不重要。学好一门编程语言后，学习第二语言就容易多了。
 
-There are different types of programming languages, but today most development is done using "high-level scripting languages" like JavaScript and Python. These languages trade away the raw efficiency you get from "low-level programming languages" like C. What they get in return: the benefit of being much easier to use.
+有不同类型的编程语言，但今天大多数开发是使用 "高级脚本语言"，如JavaScript和Python。这些语言放弃了C语言等 "低级编程语言 "的效率，得到的回报是：更容易使用。
 
-Today's computers are billions of times faster than they were in the 1970s and 1980s, when people were writing most of their programs in languages like C. That power more than makes up for the relative inefficiency of scripting languages.
+今天的计算机比 1970 年代和 80 年代快数十亿倍。那时人们用 C 等语言编写大部分程序。现在计算机速度足以弥补脚本语言的相对低效。
 
-It's worth noting that both JavaScript and Python themselves are written in C, and they are both getting faster every year – thanks to their large communities of open source code contributors.
+值得注意的是，JavaScript 和 Python 本身都是用 C 语言编写的，而且它们每年都在变得更快——这要归功于它们庞大的开源代码贡献者社区。
 
-Python is a powerful language for scientific computing (Data Science and Machine Learning).
+Python 是用于科学计算（数据科学和机器学习）的强大语言。
 
-And JavaScript... well, JavaScript can do everything. It is the ultimate Swiss Army Knife programming language. JavaScript is the duct tape that holds the World Wide Web together.
+还有 JavaScript……好吧，JavaScript 无所不能。它是终极的瑞士军刀型编程语言。 JavaScript 是将万维网连接在一起的胶带。
 
-> "Any application that can be written in JavaScript, will eventually be written in JavaScript." – Atwood's Law (Jeff Atwood, founder of Stack Overflow and Discourse)
+> "任何可以用 JavaScript 编写的应用程序，最终都会用 JavaScript 编写。" – 阿特伍德定律 (Jeff Atwood, Stack Overflow 和 Discourse 发起人)
 
-You could code your entire career in JavaScript and would never need to learn a second language. (This said, you'll want to learn Python later on, and maybe some other languages as well.)
+你的整个职业生涯都可以使用JavaScript，并不需要学习第二门语言。
+(话是这么说，但是你之后可能会学习Python，或者其他语言)
 
-So I recommend starting with JavaScript. Not only is it much easier to use than languages like Java and C++ – it's easier to learn, too. And there are far, far more job openings for people who know JavaScript.
+所以我建议从 JavaScript 开始。它不仅比 Java 和 C++ 等语言更易于使用，而且更易于学习。对于懂 JavaScript 的人来说，工作机会要多得多。
 
-![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)A screenshot from job search engine Indeed. My search for "javascript" for the US yielded 68,838 job listings.
+![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)通过Indeed获得的职位搜索截图。 我输入了"javascript"，地区是美国，搜索结果为68838个工作。
 
 The other skills you'll want to focus on are **HTML** and **CSS**. If a webpage were a body, HTML would be the bones, and CSS would be the skin. (JavaScript would be the muscles, making it possible for the website to move around and be interactive.)
 

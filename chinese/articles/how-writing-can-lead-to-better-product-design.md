@@ -1,6 +1,6 @@
 > -  原文地址：[How Writing Can Lead to Better Product Design](https://www.freecodecamp.org/news/how-writing-can-lead-to-better-product-design/)
 > -  原文作者：[Adam Naor](https://www.freecodecamp.org/news/author/adam-naor/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How Writing Can Lead to Better Product Design](https://cdn-media-2.freecodecamp.org/w1280/604adcf9a7946308b7687147.jpg)

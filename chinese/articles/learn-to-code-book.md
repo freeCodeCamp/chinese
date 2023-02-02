@@ -1235,55 +1235,55 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 我会向你展示如何建造一个强大的、可以在未来数十年内为你提供支持的人际关系网络。
 
-### Story Time: How did a Teacher in his 30s Build a Network in Tech?
+### 故事时间：一位老师如何在30岁时，在科技圈建立人际关系网络
 
-*Last time on Story Time: Quincy learned some coding by reading books, watching free online courses, and hanging out with developers at the local Hackerspace. He had just finished building his first project and given his first tech talk...*
+*前情回顾： Quincy 通过阅读、观看免费在线课程和与开发者在当地的黑客空间共度时光，学习了一些编程知识。他刚刚完成了他的第一个项目，并作了首次科技演讲。*
 
-OK – so I now had some rudimentary coding skills. I could now code my way out of the proverbial paper bag.
+有了基础的编程技能，我对编程已初窥门径。
 
-What was next? After all, I was a total tech outsider.
+接下来要做什么呢？毕竟，我是个彻底的科技圈圈外人士。
 
-Well, even though I was new to tech, I wasn't new to working. I'd put food on the table for nearly a decade by working at schools and teaching English.
+虽然我是科技圈的新人，但却久经职场。近十年来，我通过学校工作和教英语谋生。
 
-As a teacher, I got paid to sling knowledge. And as a developer, I'd get paid to sling code.
+作为一名老师，我靠传授知识获取报酬。而作为开发者，我也可以靠写代码获得收入。
 
-I already knew one very important truth about the nature of work: it's who you know.
+我已经知道了一个关于工作本质的重要真理：你认识谁决定一切。
 
-I knew the power of networks. I knew that the path to opportunity goes right through the gatekeepers.
+我深知人际关系网络的能量。我了解机遇之路上总有个守门人。
 
-All that stood between me and a lucrative developer job was a hiring manager who could say: "Yes. This Quincy guy seems like someone worthy of joining our team."
+在我和一份赚钱的开发者工作中，只隔着一个愿意说“对，这个叫 Quincy 的的人，似乎值得加入我们的团队”的招聘经理。
 
-Of course, being a tech outsider, I didn't know the culture.
+当然，作为一个科技圈门外汉，我并不了解他们的文化。
 
-Academic culture is much more formal.
+学院派的文化更加的正式。
 
-You wear a suit.
+你穿正装。
 
-You use fancy academic terminology to demonstrate you're part of the "in group."
+用新奇的学院派术语来表明自己是这个群体的一员。
 
-You find ways to work into every conversation that you went to X university, or that you TA'd under Dr. Y, or that you got published in The Journal of Z.
+你想方设法在每次谈话中提及你去了 X 大学，或者你在 Y 教授手下做助教，抑或你在期刊 Z 上发布了文章。
 
-Career progressions are different. Conferences are different. Power structures are different.
+职业发展是不同的。会议是不同的。权力结构是不同的。
 
-And I didn't immediately appreciate this fact.
+而我并没有一开始就立即接受这个事实。
 
-The first few tech events I went to, I wore a suit.
+在最开始的几场科技活动中，我身着西装参加。
 
-I kept neatly-folded copies of my résumé in my pocket at all times.
+我在口袋中一直放着折叠整齐的简历副本。
 
-I even carried business cards. I had ordered sheets of anodized aluminum, and used a laser cutter to etch in my name, email address, and even a quote from legendary educator John Dewey:
+我甚至带了名片。我订购了阳极氧化铝片，用激光刻上我的名字、邮箱、甚至包括传奇教育家约翰·杜威的一句话： 
 
-> "Anyone who has begun to think places some portion of the world in jeopardy." – John Dewey
+> "任何开始思考的人，都将世界的某一部分置于危险中。" – 约翰·杜威
 
-It's still my favorite quote to this day.
+这至今仍然是我最喜欢的一句话。
 
-But talk about heavy-handed.
+但说回惨淡的现实。
 
-"Hi, I'm Quincy. Here's my red aluminum business card. Sorry in advance – it might set off the metal detector on your flight home."
+“Hi, 我是 Quincy。这是我的红色铝制名片。先说声抱歉，它在你回家的航班上，可能会触发金属探测仪。”
 
-I was trying too hard. And it was probably painfully apparent to everyone I talked to.
+我当时有些用力过猛。而且我和每个人谈话的时候，都可能会痛苦地发现这一点。
 
-I went on Meetup.com and RSVP'd for every developer event I could find. Santa Barbara is a small town, but it's near Los Angeles. So I made the drive for events there, too.
+我在 Meetup.com 上，报名了每一个我能找到的开发者活动。圣巴巴拉是一个小地方，但是靠近洛杉矶。所以我也开车参加洛杉矶的活动。
 
 I quickly wised up, and traded my suit for jeans and a hoody. And I noticed that no one else gave out business cards. So I stopped carrying them.
 

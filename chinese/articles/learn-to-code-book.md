@@ -1305,82 +1305,82 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 我在 Meetup.com 上，报名了每一个我能找到的开发者活动。圣巴巴拉是一个小地方，但是靠近洛杉矶。所以我也开车参加洛杉矶的活动。
 
-I quickly wised up, and traded my suit for jeans and a hoody. And I noticed that no one else gave out business cards. So I stopped carrying them.
+我很快学聪明了，将我的西装换成了牛仔裤和卫衣。我还注意到了没有人会送出名片。所以我也不再携带名片。
 
-I took cues from the devs I met at the hackerspace: Be passionate, but understated. Keep some of your enthusiasm in reserve.
+从在黑客空间中遇到的开发者的那里，我得到了提示：怀有激情，但不张扬。保留一些你的热情。
 
-And I read lots of books to better understand developer culture.
+我还阅读了一些书以更好地理解开发者文化。
 
-[The Coders at Work](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3?crid=13BTAQ7TH9YSN&linkCode=ll1&tag=out0b4b-20&linkId=32d14a148c54f36f5ef701578a2abd8e&language=en_US&ref_=as_li_ss_tl) is a good book from the 1980s.
+[《编程人生》](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3?crid=13BTAQ7TH9YSN&linkCode=ll1&tag=out0b4b-20&linkId=32d14a148c54f36f5ef701578a2abd8e&language=en_US&ref_=as_li_ss_tl) 是本来自于 1980 年代的好书。
 
-[Hackers: Heroes of the Revolution](https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396?&linkCode=ll1&tag=out0b4b-20&linkId=0c216f2cd4cc2d2090b8c9b50b0befee&language=en_US&ref_=as_li_ss_tl) is a good book from the 1990s.
+[《黑客：计算机革命的英雄》](https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396?&linkCode=ll1&tag=out0b4b-20&linkId=0c216f2cd4cc2d2090b8c9b50b0befee&language=en_US&ref_=as_li_ss_tl) 是本来自 1990 年代的好书。
 
-For a more contemporary cultural resource, check out the TV series [Mr. Robot](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6?crid=188UUOE6ZT0W3&keywords=mr+robot&qid=1673746625&sprefix=mr+robot%2Caps%2C111&sr=8-6&linkCode=ll1&tag=out0b4b-20&linkId=a896ab7630fadc332c2696d3a4b8e85d&language=en_US&ref_=as_li_ss_tl). Its characters are a bit extreme, but they do a good job of capturing the mindset and mannerisms of many developers.
+对于更现代的文化资源，可以关注下[《黑客军团》](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6?crid=188UUOE6ZT0W3&keywords=mr+robot&qid=1673746625&sprefix=mr+robot%2Caps%2C111&sr=8-6&linkCode=ll1&tag=out0b4b-20&linkId=a896ab7630fadc332c2696d3a4b8e85d&language=en_US&ref_=as_li_ss_tl)这部剧集。剧中的角色有些极端，但是它很好地表现了许多开发者的心态和举止。
 
-Soon, I was talking less like a teacher and more like a developer. I didn't stick out quite as awkwardly.
+很快，我的谈吐更像一位开发者，而不是教师。我不再尴尬地冒进。
 
-Several times a week I attended local tech-related events. My favorite event wasn't even a developer event. It was the Santa Barbara Startup Night. Once every few weeks, they'd have an event where developers would pitch their prototypes. Some of the devs demoing their code were even able to secure funding from angels – rich people who invest in early-stage companies.
+我每周都会参加几次本地与科技有关的活动。我最喜欢的活动甚至不是开发者活动。而是圣巴巴拉创业之夜。开发者们会在这个几周举办一次的活动中，介绍他们的产品原型。一些进行代码演示的开发者甚至可以从天使投资人——投资早期公司的有钱人——处获得资金。
 
-The guy who ran the event was named Mike. He must have known every developer and entrepreneur in Santa Barbara.
+组织这个活动的人叫 Mike。他一定认识很多圣巴巴拉的开发者和企业家。
 
-When I finally got the nerve to introduce myself to Mike, I was star-struck. He was an ultra-marathoner with a resting heartbeat in the low 40s. Perfectly cropped hair and beard. To me he was the coolest guy on the planet. Always polished. Always respectful.
+当我终于鼓起勇气向 Mike 介绍自己时，我吓了一跳。他是个超级马拉松运动员，静息心率在 40 以下。有着完美修剪的头发和胡子。对我而言，他是这个星球上最酷的人了。他总是举止得体，彬彬有礼。
 
-Mike was "non-technical." He worked as a product manager. And though he knew a lot about technology and user experience design, he didn't know how to code.
+Mike 完全不是一个技术型的人。他的工作是产品经理。他虽然在科技和用户体验设计上了解很多，但却完全不知道如何写代码。
 
-Sometimes devs would write non-technical people off. "He's just a business guy," they'd say. Or: "She's a suit." But I never heard anyone say that about Mike. He had the respect of everyone.
+有时，开发者们会忽视非技术型的人。他们会说：“他只是个商人”或“她只是个甩手掌柜”。但是我从没听到有谁这样谈论 Mike，他赢得了所有人的尊重。
 
-I made a point to watch the way Mike interacted with developers. After all, I wasn't that far removed from "non-technical" myself. I'd only been coding for a few months.
+我特意观察了 Mike 与其他开发者打交道方式。毕竟，只写了几个月代码的我，也不能完全摆脱“非技术型”这个标签。
 
-Often my old habits would creep in. During conversations I'd have the temptation to show off what I'd learned or what I'd built.
+我的旧习惯时常显露。我总有炫耀自己所学和所做的冲动。
 
-Many developers are modest about their skills or accomplishments. They might say: "I dabble in Python." And little 'ol insecure me would open his big mouth and say something like, "Oh yeah. I've coded so many algorithms in Python. I write Python in my sleep."
+很多开发者对他们的技能和成就保持谦逊。他们会说：“我对 Python 有所涉猎。“而缺乏安全感的我，则大放厥词：“我用 Python 写了许多算法。我做梦都在写 Python。”
 
-And then I'd go home and google that developer's name, and realize they were a core contributor to a major Python library. And I'd kick myself.
+后来，当我回家谷歌了那位开发者的姓名，才了解到他是主流 Python 库的核心贡献者。我羞愧不已。
 
-I quickly learned not to boast of my accomplishments or my skills. There's a good chance a person you're talking to can code circles around you. But most of them would never volunteer this fact.
+我很快学会了不要吹嘘自己的成就或技能。你正在谈话的人很可能比你更懂编程。只是他们中的大多数不会主动说出这个事实。
 
-There's nothing worse than confidently pulling out your laptop, showing off your code, and then having someone ask you a bunch of questions that you're wholly unprepared to answer.
+再没有比自信地打开笔记本电脑炫耀代码，但别人抛出了一堆你完全没有准备好回答的问题更糟糕的事情了。
 
-My first few months of attending events was a humbling experience. But these events energized me to keep pushing forward with my skills.
+参加活动的前几个月对我而言是趟谦逊之旅。但是这些活动也让我有动力去继续打磨我的技能。
 
-Soon people around southern California would start to recognize me. They'd say: "I keep running to you at these events. What's your name again?"
+不久，南加州附近的人都开始注意到我。他们会说：“我总在这些活动中遇到你。你叫什么来着？”。
 
-One night a dev said, "Let's follow each other on Twitter." I had grudgingly set up a Twitter account a few days earlier, thinking it was a gimmicky website. How much could you really convey with just 140 characters? I had barely tweeted anything. But I did have a Twitter account ready, and she did follow me.
+有天晚上，一个开发者说：“让我们在推特上加个好友吧。”。我当时认为推特只是一个噱头性网站，几天前才勉勉强强建立了一个推特账户。你能用区区 140 个字符真正表达什么呢？我基本不发推。但是我确实已经有了一个推特账户，所以她加了我。
 
-That inspired me to spend more time refining my online presence. I made my LinkedIn less formal and more friendly. I looked at how other devs in the community presented themselves online.
+这鼓舞我投入更多时间，去塑造自己的网络形象。我弱化了自己领英页面的正式性，提升了友善度。我研究社区中的其他开发者如何在网络上展示自己。
 
-Within a few months, I knew people from so many fields:
+在几个月内，我结识了众多领域中的人：
 
-- experienced developers
-- non-technical or semi-technical people who worked at tech companies
-- hiring managers and recruiters
-- and most importantly, my peers who were also mid-career and trying to break into tech
+- 经验丰富的开发者
+- 非技术型或半技术型、在科技公司工作的人
+- 招聘经理和招聘人员
+- 以及最重要的，和我一样处在职业生涯中期，想要转入科技行业的同龄人
 
-Why were peers the most important? Surely they would be the least able to help me get a job, right?
+为什么这些同龄人是最重要的？在帮我谋求一份工作这件事上，他们应该是最帮不上忙的，对吧？
 
-Well, let me tell you a secret: let's say a hiring manager brings on a new dev, trains them, and they turn out to be really good at their job. That hiring manager is going to ask: where can I find more people like you?
+好吧，我来告诉你一个秘密：假设招聘经理招来了新的开发人员，这些人在加以培训后完全胜任了他们的工作。那么这个招聘经理就会问：“我到哪里可以找到像你一样的人呢？”。
 
-Your peers are one of the most important pieces of your network. So many of my freelance opportunities and job interview opportunities came from people who started learning to code around the same time as I did.
+你的同龄人是你人际关系网络中，最重要的拼图之一。通过和我同时学习编程的人，我获得了许多自由职业的工作机会和工作面试机会。
 
-We came up together. We were brothers and sisters in arms. Those bonds are the tightest.
+我们一同成长。我们是兄弟和姐妹。这些纽带是最为紧密的。
 
-Anyway, all this networking over the months would ultimately come to fruition one night when I walked into the bar of a fancy downtown hotel for a developer event.
+总之，这几个月的人际关系，都最终在我进入市中心高级酒店的酒吧、参加开发者活动的某个晚上开花结果。
 
-But more on that in the next chapter. Now let's talk more about the art and science of building your network.
+在下一章会有这部分的更多内容。现在，让我们多聊聊建立人际关系网络的艺术和科学。
 
-### Is it Really Who You Know?
+### 认识谁真的决定一切吗？
 
-You may have heard the expression that success is "less about what you know, and more about who you know."
+你可能听过这么一句话，成功“不在于你所知，而在于你所识。”。
 
-In practice, it's about both.
+现实中，这两者都是重要的。
 
-Yes – your connections may help you land your dream job. But if you're out of your depth, and lack the skills to succeed, you will not fare well in that role.
+是的，你的关系可能会帮助你获得梦想工作。但如果你没有金刚钻，缺乏获得成功的技能，你在这份工作中不会有好的表现。
 
-But let's assume that you are proactively building your skills. You've followed my advice from Chapter 1. When is the right time to start building your network?
+但是让我们假定你已经遵循我在第一章中提出的建议，主动地培养自己的技能。什么时候是开始建立人际关系网络的正确时间？
 
-The best time to start building your network is **yesterday**.
+最好的开始时间是**昨天**。
 
-But you don't need a time machine to do this. Because you already have a network. It's probably much smaller than you'd like it to be, but you **do** know people.
+但你无需时间机器去做这件事。你已经有了一个人际关系网络。它可能比你想要的要小很多，但是你确实**已经**认识了一些人。
 
 他们可能是你家乡的朋友，或你父母的同事。任何一个你过去相识的人，不论多么籍籍无名，都能提供帮助。
 

@@ -126,23 +126,23 @@
 
 我在美国中产阶级的家庭里长大，我是这个家庭的第四代，而且我的母语是英语。我读过大学，我的父亲和爷爷也都读过大学；我的曾祖父（爷爷的父亲）是来自瑞典的农民。
 
-I benefitted from a sort of intergenerational privilege. A momentum that some families are able to pick up over time when they are not torn apart by war, famine, or slavery.
+这几代以来，我的家庭很幸运，至少我们没有受到战争、饥荒、奴隶制的影响。
 
-So that is my giant caveat to you: I am not some motivational figure to pump you up to overcome adversity.
+因此，在我身上并没有逆境翻盘的剧本，我也不打算编造这样的故事来激励你。
 
-There are a ton of people in the developer community who have overcome real adversity. And I'll reference those people later in the book if you want to seek out their teachings.
+如果你对这类经历感兴趣，其实开发者社区中有一些人经历过逆境翻盘，稍后我会在这本书里提到一些人，供你参考。
 
-I'm not seeking to elevate the field of software development. I'm not going to paint pictures of science fiction utopias that can come about if you learn to code.
+我不打算吹捧软件开发，也不打算为学习编程这件事情画饼，构建出一个虚幻的乌托邦。
 
-Instead, I'm just going to give you practical tips for how you can acquire these skills. And how you can go get a good job, so you can provide for your family.
+相反地，我只会为你提供学习技术的方法建议，以及如何获得一份可以养家糊口的好工作。
 
-There's nothing wrong with learning to code because you want a good, stable job.
+如果你学习编程的目的是找一份好的、稳定的工作，那没问题。
 
-There's nothing wrong with learning to code so you can start a business.
+或者你学习编程的目的是为了自己创业，那也没问题。
 
-You may encounter people who say that you must be so passionate about coding that you dream about it. That you clock out of your full-time job, then spend all weekend contributing to open source projects.
+一些人认为，学习编程最重要的是要对编程有极大的兴趣，而且要有全身心投入学习编程的决心：就是那种甘愿辞掉自己工作，一周七天都在搞开源项目，并乐在其中。
 
-I do know people who are *that* passionate about coding. But I also know plenty of people who, after finishing a hard week's work, just want to go spend time in nature, or play board games with friends.
+我确实认识一些对编程有*如此*兴趣的人，但同时我也认识很多不这么硬核的人：他们在一周的劳顿后，更愿意在周末探索自然，或者和朋友玩桌游。
 
 People generally enjoy doing things they're good at doing. And you can develop a reasonable level of passion for coding just by getting better at coding.
 

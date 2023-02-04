@@ -56,7 +56,7 @@ Ah. Here it is:
 1. [Preface: Who is this book for?](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
 2. [500 Word Executive Summary](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
 3. [Chapter 1: How to Build Your Skills](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
-4. [Chapter 2: How to Build Your Network](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
+4. [第2章：如何打造你的人际关系网络](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
 5. [Chapter 3: How to Build Your Reputation](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
 6. [Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
 7. [Chapter 5: How to Succeed in Your First Developer Job](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
@@ -1163,11 +1163,11 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 对 **Linux** 的学习也不应错过。Linux 驱动着这个世界大多数的服务器，而且在你在职业生涯中，也会在 Linux 命令行中度过很多时光。
 
-如果你有一台 Mac 的话, MacOS 提供的终端工具，可以接受几乎所有与 Linux 相同的命令。（ MacOS 和 Linux 有一个共同的祖先，即 Unix）。
+如果你有一台 Mac 的话, MacOS 提供的终端工具，可以接受几乎所有与 Linux 相同的命令。（ MacOS 和 Linux 有一个共同的祖先，即 Unix ）。
 
 但是如果你的电脑是 Windows 系统，你需要安装 WSL（Windows Subsystem for Linux）。安装后你就可以在电脑上运行 Linux 命令。如果你想更进一步，你甚至可以在同一台电脑上同时安装 Windows 和 Linux 两套操作系统。
 
-如果想在电脑上安装 Linux，我推荐在最开始选择 Ubuntu——一个最被广泛使用（并且文档完备）的 Linux 发行版。因此它应该是对新手最为友好的。
+如果想在电脑上安装 Linux，我推荐在最开始选择 Ubuntu ——一个最被广泛使用（并且文档完备）的 Linux 发行版。因此它应该是对新手最为友好的。
 
 不要误会， Linux 比 Windows 和 MacOS 都更难以使用一些。但是你的努力将换得一个极其迅速、安全且高度可定制的操作系统。
 
@@ -1175,7 +1175,7 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 你还会想学习 **Git**。开发团队会使用这个版本控制系统进行代码更新上的协作。
 
-你可能已经听说过 GitHub。GitHub 是个让开发者更容易进行开源项目协作的网站。它拓展了 Git 的一些特性。你将会在本书“⚠️⚠️⚠️如何打造你的声誉【需要和其他译者的版本统一】⚠️⚠️⚠️”一章中增进对 GitHub 的了解。
+你可能已经听说过 GitHub。GitHub 是个让开发者更容易进行开源项目协作的网站。它拓展了 Git 的一些特性。你将会在本书“如何建立你的声誉”一章中增进对 GitHub 的了解。
 
 还有 **SQL** 以及关系型数据库如何运作。这些是信息经济中的主力军。
 
@@ -1185,7 +1185,7 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 当你听到“全栈开发”这个词的时候，它代表联结前端（HTML、CSS 和 JavaScript）与后端（Linux、SQL 数据库和 Node + Express）。
 
-还有很多你希望学习的工具，例如 React、NGINX、Doker 和测试库。你可以在学习途中随心选择。
+还有很多你希望学习的工具，例如 React、 NGINX、 Doker 和测试库。你可以在学习途中随心选择。
 
 但你应该将 90% 的职前学习时间，用在以下的关键技能上：
 
@@ -1206,7 +1206,7 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 好问题。这里有一个由经验丰富的软件工程师和教师设计的完整课程，它的设计考虑到了成年人的繁忙，内容完全免费并且可以自由掌控学习进度。
 
-是的，我说的就是 [freeCodeCamp 的核心课程](https://www.freecodecamp.org/learn)。它能帮助你学习：
+是的，我说的就是 [freeCodeCamp 核心课程](https://www.freecodecamp.org/learn)。它能帮助你学习：
 
 - 前端开发
 - 后端开发
@@ -1241,7 +1241,7 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 人际关系网络这个词，你可能会感到畏缩。
 
-人际关系网络可能会让人联想到尴尬的招聘会：穿着闷热的西装，拼命把你的简历送到任何愿意接受它的人手中。
+人际关系网络可能会让人联想到尴尬的招聘会：身着闷热的西装，拼命把你的简历送到任何愿意接受它的人手中。
 
 人际关系网络可能还会让人想到充斥着酒精的观看聚会，而你在要那里假装对一项从未关注过的运动充满兴趣。
 
@@ -1257,7 +1257,7 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 ### 故事时间：一位老师如何在30岁时，在科技圈建立人际关系网络
 
-*前情回顾： Quincy 通过阅读、观看免费在线课程和与开发者在当地的黑客空间共度时光，学习了一些编程知识。他刚刚完成了他的第一个项目，并作了首次科技演讲。*
+*前情回顾： Quincy 通过阅读、观看免费在线课程和与开发者在当地的黑客空间共度时光，学习了一些编程知识。他刚刚完成了他的第一个项目，并作了首次技术演讲。*
 
 有了基础的编程技能，我对编程已初窥门径。
 
@@ -1275,9 +1275,9 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 当然，作为一个科技圈门外汉，我并不了解他们的文化。
 
-学院派的文化更加的正式。
+学院派的文化更加得正式。
 
-你穿正装。
+你穿着正装。
 
 用新奇的学院派术语来表明自己是这个群体的一员。
 
@@ -1293,13 +1293,13 @@ So I recommend starting with JavaScript. Not only is it much easier to use than 
 
 我甚至带了名片。我订购了阳极氧化铝片，用激光刻上我的名字、邮箱、甚至包括传奇教育家约翰·杜威的一句话： 
 
-> "任何开始思考的人，都将世界的某一部分置于危险中。" – 约翰·杜威
+> "任何开始思考的人，都将世界的某一部分置于危险中。" —— 约翰·杜威
 
 这至今仍然是我最喜欢的一句话。
 
 但说回惨淡的现实。
 
-“Hi, 我是 Quincy。这是我的红色铝制名片。先说声抱歉，它在你回家的航班上，可能会触发金属探测仪。”
+“Hi,我是 Quincy。这是我的红色铝制名片。先说声抱歉，它在你回家的航班上，可能会触发金属探测仪。”
 
 我当时有些用力过猛。而且我和每个人谈话的时候，都可能会痛苦地发现这一点。
 
@@ -1341,7 +1341,7 @@ Mike 完全不是一个技术型的人。他的工作是产品经理。他虽然
 
 再没有比自信地打开笔记本电脑炫耀代码，但别人抛出了一堆你完全没有准备好回答的问题更糟糕的事情了。
 
-参加活动的前几个月对我而言是趟谦逊之旅。但是这些活动也让我有动力去继续打磨我的技能。
+参加活动的前几个月对我而言是趟谦逊之旅。但是这些活动也让我有动力继续打磨我的技能。
 
 不久，南加州附近的人都开始注意到我。他们会说：“我总在这些活动中遇到你。你叫什么来着？”。
 
@@ -1376,7 +1376,7 @@ Mike 完全不是一个技术型的人。他的工作是产品经理。他虽然
 
 是的，你的关系可能会帮助你获得梦想工作。但如果你没有金刚钻，缺乏获得成功的技能，你在这份工作中不会有好的表现。
 
-但是让我们假定你已经遵循我在第一章中提出的建议，主动地培养自己的技能。什么时候是开始建立人际关系网络的正确时间？
+但是让我们假定你已经遵循我在第一章中提出的建议，主动地培养自己的技能。什么时候是开始建立人际关系网络的正确时间呢？
 
 最好的开始时间是**昨天**。
 

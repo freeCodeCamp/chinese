@@ -1,29 +1,29 @@
 > - 原文地址：[JavaScript Performance – How to Improve Page Speed with async and defer](https://www.freecodecamp.org/news/javascript-performance-async-defer/)
 > - 原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> - 译者：
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
 > - 校对者：
 
 ![JavaScript Performance – How to Improve Page Speed with async and defer](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/freeCodeCamp-Cover.png)
 
-In web programming, JavaScript brings interactiveness and dynamic behaviour to your web pages. While HTML and CSS take care of the structure and aesthetics of the pages, they will be merely usable without JavaScript doing its job in the background.
+在 web 开发中, JavaScript 给你的网页带来了交互性和动态效果。虽然 HTML 和 CSS 负责网页的结构和美学，但如果没有 JavaScript 在背后工作，它们将只是可用的。
 
-You can include JavaScript code in the HTML file in several ways. The most standard approach is to keep the JavaScript code in a separate file with the `.js` extension and then load that file into the HTML file for the script to download and execute.
+你可以通过几种方式在 HTML 文件中引入 JavaScript 代码。最标准的方法是将 JavaScript 代码放在一个以`.js`为扩展名的单独文件中，然后将该文件加载到 HTML 文件中，下载并执行 Javascript 代码。
 
-In this article, you will learn the most efficient way of loading a JavaScript file into HTML to improve the application's page loading speed. We will deep dive into visually understanding two special HTML attributes, `async` and `defer`, and how they help improve page loading.
+在这篇文章中，你将学习将 JavaScript 文件加载到 HTML 中的最有效方法，以提高应用程序的页面加载速度。我们将深入浅出地了解两个特殊的 HTML 属性`async`和`defer`，以及它们如何提高页面加载速度。
 
-If you like to learn from video content as well, this article is also available as a video tutorial here: 🙂
+如果你也喜欢从视频内容中学习，这篇文章也提供 [视频教程](https://www.youtube.com/embed/4sBfx3ISBdM?feature=oembed): 🙂
 
 ## How Do We Load Scripts into HTML?
 
-Let's first understand the basics of loading JavaScript code from an external file. Assume we have a file called `some-script.js` (note the file extension. It's .js which stands for JavaScript) with all the JavaScript code.
+让我们先了解一下从外部文件加载 JavaScript 代码的基本原理。假设我们有一个叫 `some-script.js` 的文件（注意文件扩展名，是 `.js`，JavaScript 的缩写），里面全是 JavaScript 代码。
 
-You need to use the `<script>` tag to load and execute this code. The `src` attribute of the <script> tag points to the JavaScript file you want to load.
+你需要使用`<script>`元素来加载和执行这些代码。`<script>`元素中的 `src` 属性写上你要加载的 JavaScript 文件。
 
 ```html
 <script src="some-script.js"></script>
 ```
 
-Finally, you need to make sure you place the <script> tag either inside the `<head>` tag or at the end of the `<body>` tag of the HTML file.
+最后，你需要确保将 `<script>` 元素放在 HTML 文件的 `<head>` 元素内或 `<body>` 元素的后面。
 
 ```html
 <html lang="en">
@@ -40,25 +40,25 @@ Finally, you need to make sure you place the <script> tag either inside the `<he
 </html>
 ```
 
-Specifying the `<script>` tag inside the `<head>` or `<body>` tags has its own consequences. We will learn about them shortly.
+在 `<head>` 或 `<body>` 元素内指定 `<script>` 元素有不同的结果。我们将很快了解它们。
 
 ## Why Care about Script Loading?
 
-If your app is a tiny one dealing with script files of a few KBs, you will only care a little about the page speed and script loading.
+如果你的应用程序是一个很小的应用程序，处理几 KB 的脚本文件，你只需要关心一下页面速度和脚本加载。
 
-But you may deal with larger scripts written by a 3rd party library or by you in real life. You have to make sure the page loading speed is not degraded because of this.
+但你可能会处理由第三方库或你在现实生活中编写的较大的脚本。你必须确保页面的加载速度不会因此而降低。
 
-But hold on! How does the larger script file degrade the page loading speed? Let's understand with the demonstration of a simple app called `The Secret Santa Game`.
+但是，请等一下! 较大的脚本文件是如何降低页面加载速度的？让我们通过一个名为 `秘密圣诞老人(The Secret Santa Game)` 的简单应用的演示来了解。
 
 ### The Secret Santa Game – Page Speed Demo
 
-The `Secret Santa Game` is a simple game that selects a Santa, a Child, and the gift that Santa to give to the child. Every time you click the `Play` button, a new Santa, child, and gift are selected.
+`圣诞老人的秘密(The Secret Santa Game)` 是一个简单的游戏，可以选择一个圣诞老人，一个孩子，以及圣诞老人要送给孩子的礼物。每当你点击 "播放 "按钮，就会选择一个新的圣诞老人、孩子和礼物。
 
 ![Screen-Recording-2023-01-05-at-5.14.51-PM](https://www.freecodecamp.org/news/content/images/2023/01/Screen-Recording-2023-01-05-at-5.14.51-PM.gif)
 
-The Secret Santa Game
+圣诞老人的秘密
 
-The entry point HTML file creates the structure to show the image of the gift and the names of Santa and the child. It has a button with the text `Play` and a footer where we show a copyright text.
+在网页上显示礼物的图像以及圣诞老人和孩子的名字。它有一个带有文字 `play` 的按钮和一个显示版权文本的页脚。
 
 ```html
 <html lang="en">

@@ -1,7 +1,7 @@
-> -  原文地址：[JavaScript Performance – How to Improve Page Speed with async and defer](https://www.freecodecamp.org/news/javascript-performance-async-defer/)
-> -  原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[JavaScript Performance – How to Improve Page Speed with async and defer](https://www.freecodecamp.org/news/javascript-performance-async-defer/)
+> - 原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
+> - 译者：
+> - 校对者：
 
 ![JavaScript Performance – How to Improve Page Speed with async and defer](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/freeCodeCamp-Cover.png)
 
@@ -20,26 +20,23 @@ Let's first understand the basics of loading JavaScript code from an external fi
 You need to use the `<script>` tag to load and execute this code. The `src` attribute of the <script> tag points to the JavaScript file you want to load.
 
 ```html
-<script src="some-script.js"></script>  
+<script src="some-script.js"></script>
 ```
 
 Finally, you need to make sure you place the <script> tag either inside the `<head>` tag or at the end of the `<body>` tag of the HTML file.
 
 ```html
-
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Some Title</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Some Title</title>
+    <link rel="stylesheet" href="./styles/main.css" />
 
-  <script src="some-script.js"></script>  
-</head>
-<body>
-
-</body>
+    <script src="some-script.js"></script>
+  </head>
+  <body></body>
 </html>
 ```
 
@@ -65,36 +62,35 @@ The entry point HTML file creates the structure to show the image of the gift an
 
 ```html
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Secret Santa - V1</title>
-  <link rel="stylesheet" href="./styles/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Secret Santa - V1</title>
+    <link rel="stylesheet" href="./styles/main.css" />
 
-  <script src="./js/script-1.js"></script>
-  <script src="./js/script-2.js"></script>
-  <script src="./js/script-3.js"></script>
-  
-</head>
-<body>
-  <div class="container">
-    <header>
-      <h1>Secret Santa Game</h1>
-    </header>
-    <div class="content">
-      <p id="gift-id" class="gift"></p>
-      <p style="font-size: 3rem;"> 🎅 
-          <strong>Santa</strong>: <span id="santa-id"></span>
-      </p>
-      <p style="font-size: 3rem;"> 👶 
-          <strong>Child</strong>: <span id="child-id"></span>
-      </p>
-      <button class="play-btn" onclick="init()">Play</button>
+    <script src="./js/script-1.js"></script>
+    <script src="./js/script-2.js"></script>
+    <script src="./js/script-3.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Secret Santa Game</h1>
+      </header>
+      <div class="content">
+        <p id="gift-id" class="gift"></p>
+        <p style="font-size: 3rem;">
+          🎅 <strong>Santa</strong>: <span id="santa-id"></span>
+        </p>
+        <p style="font-size: 3rem;">
+          👶 <strong>Child</strong>: <span id="child-id"></span>
+        </p>
+        <button class="play-btn" onclick="init()">Play</button>
+      </div>
+      <footer id="footer-id"></footer>
     </div>
-    <footer id="footer-id"></footer>
-  </div>
-</body>
+  </body>
 </html>
 ```
 
@@ -103,25 +99,13 @@ Look at the `<head>` section of the HTML file. We load three scripts here.
 **script-1.js**: This file contains the JavaScript code responsible for the DOM updates. The `init()` method picks up random participant and gift values to render on the DOM nodes. The same init method is called when clicking the `Play` button.
 
 ```js
-const gifts = [
-  'hoodie',
-  'moon-light',
-  'perfumes',
-  'watch',
-  'studio-light'
-];
+const gifts = ['hoodie', 'moon-light', 'perfumes', 'watch', 'studio-light'];
 
-const participants = [
-  'Alex',
-  'Bob',
-  'Carl',
-  'Dell',
-  'Emle'
-];
+const participants = ['Alex', 'Bob', 'Carl', 'Dell', 'Emle'];
 
-const getRandomElem = arr => {
-  return arr[Math.floor(Math.random()*arr.length)];
-}
+const getRandomElem = (arr) => {
+  return arr[Math.floor(Math.random() * arr.length)];
+};
 
 const init = () => {
   const giftElem = document.getElementById('gift-id');
@@ -129,15 +113,14 @@ const init = () => {
   const santaElem = document.getElementById('santa-id');
 
   const child = getRandomElem(participants);
-  const santa = getRandomElem(participants.filter(
-      elem => elem !== child));
+  const santa = getRandomElem(participants.filter((elem) => elem !== child));
   const gift = getRandomElem(gifts);
 
   console.log(`${santa} to give ${gift} to ${child}`);
 
   childElem.innerText = '';
   childElem.innerText = child;
-  santaElem.innerText = ''
+  santaElem.innerText = '';
   santaElem.innerText = santa;
 
   giftElem.innerHTML = '';
@@ -155,11 +138,10 @@ init();
 **script-2.js**: This JavaScript file contains a smaller amount of code to set a copyright text into the footer element.
 
 ```js
-
 const addToFooter = () => {
   const footerElem = document.getElementById('footer-id');
   footerElem.innerText = `CopyRight ${new Date().getFullYear()} @tapasadhikary`;
-}
+};
 
 addToFooter();
 ```
@@ -200,14 +182,14 @@ The below image shows a higher load time when we run the same app with network t
 
 Here is a knowledge byte for you. You can use the browser DevTools to simulate how your app may load on a slower network. All our users may not have the 4G/5G network. Please check this tweet for more details.
 
-> With browser Devtools, you can simulate how your app may load in a slower network(All our users may not have 4G/5G)  
->   
+> With browser Devtools, you can simulate how your app may load in a slower network(All our users may not have 4G/5G)
+>
 > \- You can set a Network Throttling(3G, Custom)  
 > \- Disable Browser Case  
-> \- Inspect Load time  
->   
+> \- Inspect Load time
+>
 > Worth exploring further. [pic.twitter.com/KgvKL6fcUE](https://t.co/KgvKL6fcUE)
-> 
+>
 > — Tapas Adhikary (@tapasadhikary) [December 23, 2022](https://twitter.com/tapasadhikary/status/1606205278969630720?ref_src=twsrc%5Etfw)
 
 [Follow me on Twitter](https://twitter.com/tapasadhikary) for the daily knowledge bytes like this.
@@ -290,11 +272,11 @@ The bottom line is to use the `defer` attribute with scripts that manipulate the
 
 Let's do a quick recap of things we learned in this article:
 
--   The best place for the `<script>` tag in an HTML document is inside the `<head>...</head>` tags. However, you may encounter issues in setting DOM content.
--   Placing the `<script>` tag at the end of the `<body>` tag is an ideal way of handling scripts.
--   HTML provides the `async` and `defer` attributes to load the page faster and minimize the larger script loading lag by downloading them in the background.
--   Use `async` for the external scripts that don't perform DOM manipulations. The `async` doesn't guarantee the page rendering interruption when the script executes.
--   Use `defer` for all the scripts that perform DOM manipulations. The scripts with the `defer` attribute execute in sequence at the end of the page load.
+- The best place for the `<script>` tag in an HTML document is inside the `<head>...</head>` tags. However, you may encounter issues in setting DOM content.
+- Placing the `<script>` tag at the end of the `<body>` tag is an ideal way of handling scripts.
+- HTML provides the `async` and `defer` attributes to load the page faster and minimize the larger script loading lag by downloading them in the background.
+- Use `async` for the external scripts that don't perform DOM manipulations. The `async` doesn't guarantee the page rendering interruption when the script executes.
+- Use `defer` for all the scripts that perform DOM manipulations. The scripts with the `defer` attribute execute in sequence at the end of the page load.
 
 ## Before We End...
 
@@ -302,9 +284,9 @@ That's all for now. I hope you found this article informative and insightful. Al
 
 Let's connect.
 
--   [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
--   [Follow on Twitter](https://twitter.com/tapasadhikary) or [LinkedIn](https://www.linkedin.com/in/tapasadhikary/) if you don't want to miss the daily dose of Web Development and Programming Tips.
--   Check out my Open Source work on [GitHub](https://github.com/atapas).
--   Follow on [Showwcase](https://www.showwcase.com/atapas398) for community-based learning.
+- [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
+- [Follow on Twitter](https://twitter.com/tapasadhikary) or [LinkedIn](https://www.linkedin.com/in/tapasadhikary/) if you don't want to miss the daily dose of Web Development and Programming Tips.
+- Check out my Open Source work on [GitHub](https://github.com/atapas).
+- Follow on [Showwcase](https://www.showwcase.com/atapas398) for community-based learning.
 
 See you soon with my next article. Until then, please take care of yourself, and stay happy.

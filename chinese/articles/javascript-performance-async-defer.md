@@ -200,25 +200,25 @@ addToFooter();
 
 在第一种情况下，我们看到 DOM 的构建被暂停了，因为脚本正在被下载和执行。一旦完成，DOM 的构建就恢复并完成了。因此，很明显，当浏览器执行脚本时，有相当一部分 DOM 标签没有被创建，没有对它们进行控制。
 
-在另一种情况下，我们在`<body>`标签的结尾处加载脚本，DOM 标签已经完全准备好。最后，浏览器下载并执行了这些脚本。
+在另一种情况下，我们在`<body>`标签的结尾处加载脚本，DOM 内容已经完全准备好。最后，浏览器下载并执行了这些脚本。
 
-Everything worked this time because when the script was executed, the DOM was ready to update the content. The total time required for the page to become fully operational is driven by when the scripts download and execution completes at the end.
+这次一切正常，因为当脚本执行时，DOM 已经准备好更新内容。页面完全运行所需的总时间是由脚本下载和运行最后完成的时间。
 
-In both cases, the sequence of the scripts specified matters. The scripts will be downloaded and executed in the same sequence specified in the HTML document.
+在这两种情况下，指定脚本的顺序很重要。脚本将按照 HTML 文档中指定的相同顺序下载和执行。
 
 ![flow-1](https://www.freecodecamp.org/news/content/images/2023/01/flow-1.png)
 
-Script in Head vs Body
+Script 放在 Head，Body 的对比 
 
 ## What's the `async` Attribute and How Does it Help with Page Loading?
 
-The `async` attribute of the `<script>` tag ensures that other script downloads don't wait for an async script to download and vice versa. The browser also doesn't block the DOM content creation when it encounters the async script. The async scripts gets downloaded in the background and execute once done.
+`<script>`标签的`async`属性确保其他脚本下载不会等待该脚本的下载。浏览器在遇到该脚本时也不会阻止 DOM 内容的创建。该脚本在后台被下载，一旦完成就会执行。
 
-The async scripts execute in the `load-first` order. Even if a smaller async script is specified lower in order in the HTML file, it may execute before all other scripts.
+该脚本以 `先加载(load-first)` 的顺序执行。即使一个较小的 async 脚本在 HTML 文件中被指定为较低的顺序(在 html 文件中，放在后面的位置)，它也可能在所有其他脚本之前执行。
 
-You must be careful when you specify the `async` attribute to a script that performs any DOM manipulation. Let's experience a tricky scenario using our `Secret Santa Game`!
+当你为一个执行任何 DOM 操作的脚本添加 `async` 属性时，你必须小心。让我们用我们的 `圣诞老人的秘密(The Secret Santa Game)` 来体验一个棘手的场景吧
 
-Let's add the `async` attribute to all our scripts without changing their placement order in the `<head>` of the HTML document. Remember, the `script-1.js` and `script-2.js` both manipulate the DOM content, and the `script-2.js` is smaller in size. The `script-3` is another small script which doesn't perform any DOM manipulation.
+让我们为所有的脚本添加`async`属性，而不改变它们在 HTML 文档的`<head>`中的位置顺序。记住，`script-1.js`和`script-2.js`都是对 DOM 内容进行操作的，`script-2.js`的大小较小。`script-3`是另一个小脚本，不进行任何 DOM 操作。
 
 ```js
 <script async src="./js/script-1.js"></script>
@@ -226,27 +226,27 @@ Let's add the `async` attribute to all our scripts without changing their placem
 <script async src="./js/script-3.js"></script>
 ```
 
-Now when you run the application on a slow network, you can see that the loading sequence of the scripts changed. The `script-2`, which is small in size, gets downloaded first and executes, then the `script-3`, and at last the `script-1`. So, their order in the HTML document doesn't matter here.
+现在，当你在一个慢速网络上运行该应用程序时，你可以看到脚本的加载顺序发生了变化。大小较小的 `script-2`,首先被下载并执行，然后是 `script-3`，最后是 `script-1`。所以，它们在 HTML 文档中的顺序在这里并不重要。
 
 ![image-21](https://www.freecodecamp.org/news/content/images/2023/01/image-21.png)
 
-That's precisely what happened with our application. The copyright notice below the `Play` button doesn't render. We learn from the error that the `footer` element was not available in DOM for the script to add the desired texts.
+这正是我们的应用程序所发生的情况。在 "播放 "按钮下面的版权声明没有呈现。我们从错误中得知，DOM 中的`footer`元素无法让脚本添加所需的文本。
 
 ![image-22](https://www.freecodecamp.org/news/content/images/2023/01/image-22.png)
 
-Now let's look into the download and execution of the script with the `async` attribute.
+现在我们来看看使用`async`属性的脚本的下载和执行情况。
 
-As you can see, the browser will not pause while the script gets downloaded. The script starts executing right after it gets downloaded. There is no guarantee that the relevant DOM is loaded into the browser when an async script executes.
+正如你所看到的，当脚本被下载时，浏览器不会停顿。脚本在被下载后就开始执行了。当一个 `异步（async）`脚本执行时，并不能保证相关的 DOM 已经加载到浏览器中。
 
 ![flow-3](https://www.freecodecamp.org/news/content/images/2023/01/flow-3.png)
 
-Introducing the async attribute
+Async 属性的介绍
 
-The bottom line is not to use the `async` attribute with scripts that manipulate the DOM. Use `async` with scripts external to the application which do not manipulate the DOM. Scripts like libraries, chatbots, analytics tools, and so on are suitable cases where you must consider using the `async` attribute.
+原则是不要在操作 DOM 的脚本中使用`async`属性。在应用程序外部不操作 DOM 的脚本中使用`async`。像库、聊天机器人、分析工具等脚本是必须考虑使用`async`属性的合适情况。
 
 ## What's the `defer` Attribute and How Does it Help with Page Loading?
 
-The last and most effective way of loading a script is by using the `defer` attribute. The `defer` attribute works mostly like the `async` attribute but has a few key differences.
+最后一种也是最有效的加载脚本的方法是使用`defer`属性。`defer`属性的工作原理与`async`属性基本相同，但有几个关键的区别。
 
 ```js
 <script defer src="./js/script-1.js"></script>
@@ -254,39 +254,39 @@ The last and most effective way of loading a script is by using the `defer` attr
 <script defer src="./js/script-3.js"></script>
 ```
 
-Like `async`, `defer` downloads the script in the background, but it will never interrupt the page rendering while it executes.
+和`async`一样，`defer`在后台下载脚本，但它在执行时绝不会中断页面的渲染。
 
-Look at the image below, where we have added the download and execution flow of the `defer` attribute.
+请看下面的图片，我们在这里添加了`defer`属性的下载和执行流程。
 
 ![flow](https://www.freecodecamp.org/news/content/images/2023/01/flow.png)
 
-Introducing the defer attribute
+介绍 defer 属性
 
-As you can see, the script with the `defer` attribute downloads parallel to the page document. Still, it executes only after the document is loaded. If there are multiple scripts with the `defer` attributes, they all execute in the sequence before the `DOMContentLoaded` event.
+正如你所看到的，带有`defer`属性的脚本是与页面文档同时下载的。尽管如此，它仍然只在文档加载完毕后执行。如果有多个带有`defer`属性的脚本，它们都会在`DOMContentLoaded`事件之前按顺序执行。
 
-This is the most significant difference with the `async`, where the scripts execute as soon as they load without following any order.
+这是与 `async` 最显著的区别，在 `async` 中，脚本在加载时立即执行，不遵循任何顺序。
 
-The bottom line is to use the `defer` attribute with scripts that manipulate the DOM. It will improve page loading by downloading the scripts in the background and execute after the DOM is ready.
+原则是对操作 DOM 的脚本使用`defer`属性。它将通过在后台下载脚本并在 DOM 准备好后执行来改善页面加载。
 
 ## Here is a Quick Recap
 
-Let's do a quick recap of things we learned in this article:
+让我们快速回顾一下我们在本文中学到的东西:
 
-- The best place for the `<script>` tag in an HTML document is inside the `<head>...</head>` tags. However, you may encounter issues in setting DOM content.
-- Placing the `<script>` tag at the end of the `<body>` tag is an ideal way of handling scripts.
-- HTML provides the `async` and `defer` attributes to load the page faster and minimize the larger script loading lag by downloading them in the background.
-- Use `async` for the external scripts that don't perform DOM manipulations. The `async` doesn't guarantee the page rendering interruption when the script executes.
-- Use `defer` for all the scripts that perform DOM manipulations. The scripts with the `defer` attribute execute in sequence at the end of the page load.
+- 在 HTML 文档中，`<script>`标签的最佳位置是在`<head>...</head>`标签内。然而，你可能会在设置 DOM 内容时遇到问题。
+- 将`<script>`标签放在`<body>`标签的后面，是处理脚本的理想方式。
+- HTML 提供了`async`和`defer`属性，通过在后台下载，可以更快地加载页面，并将较大的脚本加载带来的延迟降到最低
+- 对于不执行 DOM 操作的外部脚本，使用`async`。`async`不能保证脚本执行时页面渲染的中断。
+- 对所有执行 DOM 操作的脚本使用`defer`。带有`defer`属性的脚本会在页面加载结束时依次执行。
 
 ## Before We End...
 
-That's all for now. I hope you found this article informative and insightful. All the source code used in this article can be found on [this GitHub repository](https://github.com/atapas/youtube/tree/main/javascript/load-async-defer).
+现在就说到这里。我希望你能发现这篇文章的信息量和洞察力。本文使用的所有源代码都可以在 [这个 GitHub 仓库](https://github.com/atapas/youtube/tree/main/javascript/load-async-defer)上找到。
 
-Let's connect.
+交流方式。
 
-- [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
-- [Follow on Twitter](https://twitter.com/tapasadhikary) or [LinkedIn](https://www.linkedin.com/in/tapasadhikary/) if you don't want to miss the daily dose of Web Development and Programming Tips.
-- Check out my Open Source work on [GitHub](https://github.com/atapas).
-- Follow on [Showwcase](https://www.showwcase.com/atapas398) for community-based learning.
+- [订阅](https://www.youtube.com/tapasadhikary?sub_confirmation=1)到我的 YouTube 频道，如果你想以实用的方式学习 JavaScript、ReactJS、Node.js、Git 和所有关于 Web 开发的知识。
+- 如果你不想错过每天的 Web 开发和编程技巧，请关注我的 [Twitter](https://twitter.com/tapasadhikary)或[LinkedIn]
+- 可以在[GitHub](https://github.com/atapas)上查看我的开源代码。
+- 在[Showwcase](https://www.showwcase.com/atapas398)上关注基于社区的学习。
 
-See you soon with my next article. Until then, please take care of yourself, and stay happy.
+我的下一篇文章很快就会与你见面。希望你保持快乐，身体健康。

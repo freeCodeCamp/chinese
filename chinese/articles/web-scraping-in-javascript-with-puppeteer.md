@@ -1,6 +1,6 @@
 > -  原文地址：[Web Scraping in JavaScript – How to Use Puppeteer to Scrape Web Pages](https://www.freecodecamp.org/news/web-scraping-in-javascript-with-puppeteer/)
 > -  原文作者：[Gaël Thomas](https://www.freecodecamp.org/news/author/gaelgthomas/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![Web Scraping in JavaScript – How to Use Puppeteer to Scrape Web Pages](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/web-scraping-in-javascript-with-puppeteer.png)

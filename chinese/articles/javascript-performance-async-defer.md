@@ -17,13 +17,13 @@
 
 让我们先了解一下从外部文件加载 JavaScript 代码的基本原理。假设我们有一个叫 `some-script.js` 的文件（注意文件扩展名，是 `.js`，JavaScript 的缩写），里面全是 JavaScript 代码。
 
-你需要使用`<script>`元素来加载和执行这些代码。`<script>`元素中的 `src` 属性写上你要加载的 JavaScript 文件。
+你需要使用`<script>`标签来加载和执行这些代码。`<script>`标签中的 `src` 属性写上你要加载的 JavaScript 文件。
 
 ```html
 <script src="some-script.js"></script>
 ```
 
-最后，你需要确保将 `<script>` 元素放在 HTML 文件的 `<head>` 元素内或 `<body>` 元素的后面。
+最后，你需要确保将 `<script>` 标签放在 HTML 文件的 `<head>` 标签内或 `<body>` 标签的后面。
 
 ```html
 <html lang="en">
@@ -40,7 +40,7 @@
 </html>
 ```
 
-在 `<head>` 或 `<body>` 元素内指定 `<script>` 元素有不同的结果。我们将很快了解它们。
+在 `<head>` 或 `<body>` 标签内指定 `<script>` 标签有不同的结果。我们将很快了解它们。
 
 ## Why Care about Script Loading?
 
@@ -94,7 +94,7 @@
 </html>
 ```
 
-看一下 HTML 文件的 `<head>` 元素。我们在这里加载三个脚本。
+看一下 HTML 文件的 `<head>` 标签。我们在这里加载三个脚本。
 
 **script-1.js**: 这个文件包含负责 DOM 更新的 JavaScript 代码。`init()`方法提取随机的参与者和礼物值，在 DOM 节点上呈现。当点击 `play` 按钮时，同样的 init 方法被调用。
 
@@ -135,7 +135,7 @@ const init = () => {
 init();
 ```
 
-**script-2.js**: 这个 JavaScript 文件包含一个较小的代码，用于将版权文本设置到页脚元素(footer element)中。
+**script-2.js**: 这个 JavaScript 文件包含一个较小的代码，用于将版权文本设置到页脚标签(footer element)中。
 
 ```js
 const addToFooter = () => {
@@ -152,9 +152,9 @@ addToFooter();
 
 ### The issue with loading a JavaScript file in the <head>
 
-那么，当我们在 HTML 文件的 `<head>` 元素里加载这些脚本时，会发生什么？正如我们在上面看到的那样？不幸的是，我们不会看到任何设置在 DOM 中的值，使页面看起来不完整。
+那么，当我们在 HTML 文件的 `<head>` 标签里加载这些脚本时，会发生什么？正如我们在上面看到的那样？不幸的是，我们不会看到任何设置在 DOM 中的值，使页面看起来不完整。
 
-看看下面的图片，它清楚地显示了从`script-1.js`和`script.js`中发现 DOM 元素为`null`的错误（脚本文件先于想控制的 DOM 元素加载，并运行，自然就找不到）。另外，我们没有看到礼物图片和参与者的名字（圣诞老人和孩子）
+看看下面的图片，它清楚地显示了从`script-1.js`和`script.js`中发现 DOM 标签为`null`的错误（脚本文件先于想控制的 DOM 标签加载，并运行，自然就找不到）。另外，我们没有看到礼物图片和参与者的名字（圣诞老人和孩子）
 
 ![image-18](https://www.freecodecamp.org/news/content/images/2023/01/image-18.png)
 
@@ -162,11 +162,11 @@ addToFooter();
 
 发生这种情况是因为在下载和执行脚本的时候，DOM 还没有准备好。
 
-浏览器会从上到下解析 HTML 文档。当它遇到`<head>`部分的脚本时，其余的 DOM 元素的创建将暂停，以便脚本的下载和执行。一旦完成，剩余的 HTML 将被处理以创建 DOM 元素。
+浏览器会从上到下解析 HTML 文档。当它遇到`<head>`部分的脚本时，其余的 DOM 标签的创建将暂停，以便脚本的下载和执行。一旦完成，剩余的 HTML 将被处理以创建 DOM 标签。
 
 ### The dirty fix – move it to the body
 
-那么，我们该如何解决这个问题呢？一个显而易见但不太妙的解决方法是把下载和执行脚本的工作移到`<body>`元素的后面。这将确保在我们下载和运行脚本之前，所有的 DOM 元素都已构建并准备就绪。
+那么，我们该如何解决这个问题呢？一个显而易见但不太妙的解决方法是把下载和执行脚本的工作移到`<body>`标签的后面。这将确保在我们下载和运行脚本之前，所有的 DOM 标签都已构建并准备就绪。
 
 你猜怎么着？这次应用程序可以正常工作，没有任何错误。
 
@@ -192,15 +192,15 @@ addToFooter();
 >
 > — Tapas Adhikary (@tapasadhikary) [December 23, 2022](https://twitter.com/tapasadhikary/status/1606205278969630720?ref_src=twsrc%5Etfw)
 
-[在 Twitter 上关注我](https://twitter.com/tapasadhikary)，每日获取开发技巧。
+[在 Twitter 上关注我](https://twitter.com/tapasadhikary)，每日获取新知识。
 
 ### Let's understand the problem visually
 
-Alright, let's understand these two situations visually now. A picture is worth a thousand words, after all. The image below shows both situations of loading the script files in the `<header>` tag and at the end of the `<body>` tag.
+好吧，让我们现在直观地了解这两种情况。毕竟，一张图片胜过千言万语。下面的图片显示了在`<header>` 标签和`<body>` 标签末尾加载脚本文件的两种情况。
 
-In the first case, we see the building DOM is paused because the scripts were getting downloaded and executed. Once done, the DOM building resumes and completes. So it is evident that, when the browser was executing the scripts, a good portion of DOM elements were not created to set values to them.
+在第一种情况下，我们看到 DOM 的构建被暂停了，因为脚本正在被下载和执行。一旦完成，DOM 的构建就恢复并完成了。因此，很明显，当浏览器执行脚本时，有相当一部分 DOM 标签没有被创建，没有对它们进行控制。
 
-In the other case, where we load the scripts at the end of the `<body>` tag, the DOM elements are fully ready. In the end, the browser downloads and executes the scripts.
+在另一种情况下，我们在`<body>`标签的结尾处加载脚本，DOM 标签已经完全准备好。最后，浏览器下载并执行了这些脚本。
 
 Everything worked this time because when the script was executed, the DOM was ready to update the content. The total time required for the page to become fully operational is driven by when the scripts download and execution completes at the end.
 

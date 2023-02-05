@@ -17,7 +17,7 @@
 
 让我们先了解一下从外部文件加载 JavaScript 代码的基本原理。假设我们有一个叫 `some-script.js` 的文件（注意文件扩展名，是 `.js`，JavaScript 的缩写），里面全是 JavaScript 代码。
 
-你需要使用`<script>`标签来加载和执行这些代码。`<script>`标签中的 `src` 属性写上你要加载的 JavaScript 文件。
+你需要使用 `<script>` 标签来加载和执行这些代码。`<script>` 标签中的 `src` 属性写上你要加载的 JavaScript 文件。
 
 ```html
 <script src="some-script.js"></script>
@@ -262,7 +262,7 @@ Async 属性的介绍
 
 介绍 defer 属性
 
-正如你所看到的，带有`defer`属性的脚本是与页面文档同时下载的。尽管如此，它仍然只在文档加载完毕后执行。如果有多个带有`defer`属性的脚本，它们都会在`DOMContentLoaded`事件之前按顺序执行。
+正如你所看到的，带有 `defer` 属性的脚本是与页面文档同时下载的。尽管如此，它仍然只在文档加载完毕后执行。如果有多个带有`defer` 属性的脚本，它们都会在 `DOMContentLoaded` 事件之前按顺序执行。
 
 这是与 `async` 最显著的区别，在 `async` 中，脚本在加载时立即执行，不遵循任何顺序。
 
@@ -272,21 +272,21 @@ Async 属性的介绍
 
 让我们快速回顾一下我们在本文中学到的东西:
 
-- 在 HTML 文档中，`<script>`标签的最佳位置是在`<head>...</head>`标签内。然而，你可能会在设置 DOM 内容时遇到问题。
-- 将`<script>`标签放在`<body>`标签的后面，是处理脚本的理想方式。
-- HTML 提供了`async`和`defer`属性，通过在后台下载，可以更快地加载页面，并将较大的脚本加载带来的延迟降到最低
-- 对于不执行 DOM 操作的外部脚本，使用`async`。`async`不能保证脚本执行时页面渲染的中断。
-- 对所有执行 DOM 操作的脚本使用`defer`。带有`defer`属性的脚本会在页面加载结束时依次执行。
+- 在 HTML 文档中，`<script>` 标签的最佳位置是在 `<head>...</head>` 标签内。然而，你可能会在设置 DOM 内容时遇到问题。
+- 将 `<script>` 标签放在 `<body>` 标签的后面，是处理脚本的理想方式。
+- HTML 提供了 `async` 和 `defer` 属性，通过在后台下载，可以更快地加载页面，并将较大的脚本加载带来的延迟降到最低
+- 对于不执行 DOM 操作的外部脚本，使用 `async`。`async` 不能保证脚本执行时页面渲染的中断。
+- 对所有执行 DOM 操作的脚本使用 `defer`。带有 `defer` 属性的脚本会在页面加载结束时依次执行。
 
 ## 在我们结束之前...
 
-现在就说到这里。我希望你能发现这篇文章的信息量和洞察力。本文使用的所有源代码都可以在 [这个 GitHub 仓库](https://github.com/atapas/youtube/tree/main/javascript/load-async-defer)上找到。
+现在就说到这里。我希望你能发现这篇文章的信息量和洞察力。本文使用的所有源代码都可以在 [这个 GitHub 仓库](https://github.com/atapas/youtube/tree/main/javascript/load-async-defer) 上找到。
 
 交流方式。
 
-- [订阅](https://www.youtube.com/tapasadhikary?sub_confirmation=1)到我的 YouTube 频道，如果你想以实用的方式学习 JavaScript、ReactJS、Node.js、Git 和所有关于 Web 开发的知识。
-- 如果你不想错过每天的 Web 开发和编程技巧，请关注我的 [Twitter](https://twitter.com/tapasadhikary)或[LinkedIn]
-- 可以在[GitHub](https://github.com/atapas)上查看我的开源代码。
-- 在[Showwcase](https://www.showwcase.com/atapas398)上关注基于社区的学习。
+- [订阅](https://www.youtube.com/tapasadhikary?sub_confirmation=1) 我的 YouTube 频道，如果你想以实用的方式学习 JavaScript、ReactJS、Node.js、Git 和所有关于 Web 开发的知识。
+- 如果你不想错过每天的 Web 开发和编程技巧，请关注我的 [Twitter](https://twitter.com/tapasadhikary) 或 [LinkedIn](https://www.linkedin.com/in/tapasadhikary/)
+- 可以在 [GitHub](https://github.com/atapas) 上查看我的开源代码。
+- 在 [Showwcase](https://www.showwcase.com/atapas398) 上关注基于社区的学习。
 
 我的下一篇文章很快就会与你见面。希望你保持快乐，身体健康。

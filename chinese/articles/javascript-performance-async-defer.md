@@ -13,7 +13,7 @@
 
 如果你也喜欢从视频内容中学习，这篇文章也提供 [视频教程](https://www.youtube.com/embed/4sBfx3ISBdM?feature=oembed): 🙂
 
-## How Do We Load Scripts into HTML?
+## 我们如何将脚本加载到 HTML 中？
 
 让我们先了解一下从外部文件加载 JavaScript 代码的基本原理。假设我们有一个叫 `some-script.js` 的文件（注意文件扩展名，是 `.js`，JavaScript 的缩写），里面全是 JavaScript 代码。
 
@@ -42,7 +42,7 @@
 
 在 `<head>` 或 `<body>` 标签内指定 `<script>` 标签有不同的结果。我们将很快了解它们。
 
-## Why Care about Script Loading?
+## 为什么要关心脚本加载？
 
 如果你的应用程序是一个很小的应用程序，处理几 KB 的脚本文件，你只需要关心一下页面速度和脚本加载。
 
@@ -50,7 +50,7 @@
 
 但是，请等一下! 较大的脚本文件是如何降低页面加载速度的？让我们通过一个名为 `秘密圣诞老人(The Secret Santa Game)` 的简单应用的演示来了解。
 
-### The Secret Santa Game – Page Speed Demo
+### 圣诞老人的秘密 - 页面速度演示
 
 `圣诞老人的秘密(The Secret Santa Game)` 是一个简单的游戏，可以选择一个圣诞老人，一个孩子，以及圣诞老人要送给孩子的礼物。每当你点击 "播放 "按钮，就会选择一个新的圣诞老人、孩子和礼物。
 
@@ -150,7 +150,7 @@ addToFooter();
 
 前面的两个脚本控制 DOM 的脚本，其中一个是很小的一个。第三个不控制 DOM，并给应用程序带来一些独立的功能。
 
-### The issue with loading a JavaScript file in the <head>
+### 在 <head> 中加载一个 JavaScript 文件的问题
 
 那么，当我们在 HTML 文件的 `<head>` 标签里加载这些脚本时，会发生什么？正如我们在上面看到的那样？不幸的是，我们不会看到任何设置在 DOM 中的值，使页面看起来不完整。
 
@@ -164,7 +164,7 @@ addToFooter();
 
 浏览器会从上到下解析 HTML 文档。当它遇到`<head>`部分的脚本时，其余的 DOM 标签的创建将暂停，以便脚本的下载和执行。一旦完成，剩余的 HTML 将被处理以创建 DOM 标签。
 
-### The dirty fix – move it to the body
+### 肮脏的解决方法--把它挪到 `body` 后面
 
 那么，我们该如何解决这个问题呢？一个显而易见但不太妙的解决方法是把下载和执行脚本的工作移到`<body>`标签的后面。这将确保在我们下载和运行脚本之前，所有的 DOM 标签都已构建并准备就绪。
 
@@ -194,7 +194,7 @@ addToFooter();
 
 [在 Twitter 上关注我](https://twitter.com/tapasadhikary)，每日获取新知识。
 
-### Let's understand the problem visually
+### 让我们直观地了解这个问题
 
 好吧，让我们现在直观地了解这两种情况。毕竟，一张图片胜过千言万语。下面的图片显示了在`<header>` 标签和`<body>` 标签末尾加载脚本文件的两种情况。
 
@@ -210,7 +210,7 @@ addToFooter();
 
 Script 放在 Head，Body 的对比 
 
-## What's the `async` Attribute and How Does it Help with Page Loading?
+## 什么是 "async "属性，它是如何帮助页面加载的？
 
 `<script>`标签的`async`属性确保其他脚本下载不会等待该脚本的下载。浏览器在遇到该脚本时也不会阻止 DOM 内容的创建。该脚本在后台被下载，一旦完成就会执行。
 
@@ -244,7 +244,7 @@ Async 属性的介绍
 
 原则是不要在操作 DOM 的脚本中使用`async`属性。在应用程序外部不操作 DOM 的脚本中使用`async`。像库、聊天机器人、分析工具等脚本是必须考虑使用`async`属性的合适情况。
 
-## What's the `defer` Attribute and How Does it Help with Page Loading?
+## 什么是`defer`属性，它是如何帮助页面加载的？
 
 最后一种也是最有效的加载脚本的方法是使用`defer`属性。`defer`属性的工作原理与`async`属性基本相同，但有几个关键的区别。
 
@@ -268,7 +268,7 @@ Async 属性的介绍
 
 原则是对操作 DOM 的脚本使用`defer`属性。它将通过在后台下载脚本并在 DOM 准备好后执行来改善页面加载。
 
-## Here is a Quick Recap
+## 这里是一个快速回顾
 
 让我们快速回顾一下我们在本文中学到的东西:
 
@@ -278,7 +278,7 @@ Async 属性的介绍
 - 对于不执行 DOM 操作的外部脚本，使用`async`。`async`不能保证脚本执行时页面渲染的中断。
 - 对所有执行 DOM 操作的脚本使用`defer`。带有`defer`属性的脚本会在页面加载结束时依次执行。
 
-## Before We End...
+## 在我们结束之前...
 
 现在就说到这里。我希望你能发现这篇文章的信息量和洞察力。本文使用的所有源代码都可以在 [这个 GitHub 仓库](https://github.com/atapas/youtube/tree/main/javascript/load-async-defer)上找到。
 

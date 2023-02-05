@@ -94,9 +94,9 @@
 </html>
 ```
 
-Look at the `<head>` section of the HTML file. We load three scripts here.
+看一下 HTML 文件的 `<head>` 元素。我们在这里加载三个脚本。
 
-**script-1.js**: This file contains the JavaScript code responsible for the DOM updates. The `init()` method picks up random participant and gift values to render on the DOM nodes. The same init method is called when clicking the `Play` button.
+**script-1.js**: 这个文件包含负责 DOM 更新的 JavaScript 代码。`init()`方法提取随机的参与者和礼物值，在 DOM 节点上呈现。当点击 `play` 按钮时，同样的 init 方法被调用。
 
 ```js
 const gifts = ['hoodie', 'moon-light', 'perfumes', 'watch', 'studio-light'];
@@ -135,7 +135,7 @@ const init = () => {
 init();
 ```
 
-**script-2.js**: This JavaScript file contains a smaller amount of code to set a copyright text into the footer element.
+**script-2.js**: 这个 JavaScript 文件包含一个较小的代码，用于将版权文本设置到页脚元素(footer element)中。
 
 ```js
 const addToFooter = () => {
@@ -146,53 +146,53 @@ const addToFooter = () => {
 addToFooter();
 ```
 
-**script-3.js**: The final JavaScript file contains code that doesn't manipulate the DOM but brings additional functionality to the app, like AD blocks, Analytics, Chatbot, and so on.
+**script-3.js**: 最后的 JavaScript 文件不包含操作 DOM 的代码，但为应用程序带来额外的功能，如 AD 、分析、聊天工具等。
 
-The bottom line is that we have two scripts that manipulate the DOM, and one is a tiny small one. The third one doesn't manipulate the DOM and brings some independent functionality to the app.
+前面的两个脚本控制 DOM 的脚本，其中一个是很小的一个。第三个不控制 DOM，并给应用程序带来一些独立的功能。
 
 ### The issue with loading a JavaScript file in the <head>
 
-So what happens when we load these scripts in the `<head>` section of the HTML file, as we have seen above? Unfortunately, we will not see any values set to the DOM, making the page look incomplete.
+那么，当我们在 HTML 文件的 `<head>` 元素里加载这些脚本时，会发生什么？正如我们在上面看到的那样？不幸的是，我们不会看到任何设置在 DOM 中的值，使页面看起来不完整。
 
-Look at the image below that clearly shows the errors of finding the DOM elements as `null` from the `script-1.js` and `script.js`. Also, we do not see the gift image and the names of the participants (Santa and the child).
+看看下面的图片，它清楚地显示了从`script-1.js`和`script.js`中发现 DOM 元素为`null`的错误（脚本文件先于想控制的 DOM 元素加载，并运行，自然就找不到）。另外，我们没有看到礼物图片和参与者的名字（圣诞老人和孩子）
 
 ![image-18](https://www.freecodecamp.org/news/content/images/2023/01/image-18.png)
 
-Error in Rendering
+渲染时出错
 
-This happens because the DOM was not ready when the scripts were downloaded and executed.
+发生这种情况是因为在下载和执行脚本的时候，DOM 还没有准备好。
 
-The browser will parse the HTML document from top to bottom. As it encounters the scripts in the `<head>` section, the rest of the DOM element creations will be paused for the scripts to download and execute. Once done, the remaining HTML will be processed to create the DOM elements.
+浏览器会从上到下解析 HTML 文档。当它遇到`<head>`部分的脚本时，其余的 DOM 元素的创建将暂停，以便脚本的下载和执行。一旦完成，剩余的 HTML 将被处理以创建 DOM 元素。
 
 ### The dirty fix – move it to the body
 
-So how do we fix this problem? One obvious but not-so-good fix is to move the download and execution of the script to the end of the `<body>` tag. It will ensure that all the DOM elements are constructed and ready before we download and execute the scripts.
+那么，我们该如何解决这个问题呢？一个显而易见但不太妙的解决方法是把下载和执行脚本的工作移到`<body>`元素的后面。这将确保在我们下载和运行脚本之前，所有的 DOM 元素都已构建并准备就绪。
 
-Guess what? The app works this time without any errors.
+你猜怎么着？这次应用程序可以正常工作，没有任何错误。
 
 ![image-19](https://www.freecodecamp.org/news/content/images/2023/01/image-19.png)
 
-The Dirty Fix Worked
+肮脏的补救措施奏效了
 
-But why is it a dirty fix? The interactiveness and data rendering wait much longer, even after the DOM constructions. Many of our users may not use a high-speed 4G/5G network. A large script will take a long time to download and execute. The downloading time may get so long that the end users may get frustrated and decide to quit using the app.
+但为什么说这是一个肮脏的修复？交互性和数据渲染等待的时间更长，甚至在 DOM 构造之后。我们的许多用户可能没有使用高速的 4G/5G 网络。一个大的脚本将需要很长的时间来下载和执行。下载时间可能会变得如此之长，以至于终端用户可能会感到沮丧并决定放弃使用该应用程序。
 
-The below image shows a higher load time when we run the same app with network throttling (3G network simulation) and disabling cache. As you can see, the DOM content was loaded much before the final loading occurred.
+下面的图片显示，当我们在网络节流（3G 网络模拟）和禁用缓存的情况下运行同一个应用程序时，加载时间较长。正如你所看到的，DOM 内容在最终加载发生之前已经加载了很多。
 
 ![image-20](https://www.freecodecamp.org/news/content/images/2023/01/image-20.png)
 
-Here is a knowledge byte for you. You can use the browser DevTools to simulate how your app may load on a slower network. All our users may not have the 4G/5G network. Please check this tweet for more details.
+这里有一个开发技巧。你可以使用浏览器的 DevTools 来模拟你的应用程序在较慢的网络上的加载情况。我们所有的用户可能没有 4G/5G 的网络。请查看此推文以了解更多细节。
 
-> With browser Devtools, you can simulate how your app may load in a slower network(All our users may not have 4G/5G)
+> 使用浏览器开发工具，你可以模拟你的应用程序在一个较慢的网络中如何加载（我们所有的用户可能没有 4G/5G）。
 >
-> \- You can set a Network Throttling(3G, Custom)  
-> \- Disable Browser Case  
-> \- Inspect Load time
+> \- 你可以设置一个网络节流（3G，自定义）
+> \- 禁用浏览器缓存
+> \- 检查加载时间
 >
-> Worth exploring further. [pic.twitter.com/KgvKL6fcUE](https://t.co/KgvKL6fcUE)
+> 值得进一步探索。 [pic.twitter.com/KgvKL6fcUE](https://t.co/KgvKL6fcUE)
 >
 > — Tapas Adhikary (@tapasadhikary) [December 23, 2022](https://twitter.com/tapasadhikary/status/1606205278969630720?ref_src=twsrc%5Etfw)
 
-[Follow me on Twitter](https://twitter.com/tapasadhikary) for the daily knowledge bytes like this.
+[在 Twitter 上关注我](https://twitter.com/tapasadhikary)，每日获取开发技巧。
 
 ### Let's understand the problem visually
 

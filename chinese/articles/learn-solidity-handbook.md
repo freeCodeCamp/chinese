@@ -96,51 +96,51 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 现在，从上述例子中吸取七个关键的经验教训:
 
 1. 第一个注释是一个机器可读的行(`// SPDX-License-Identifier: MIT`)，指定代码的许可证。
-    强烈建议使用 SPDX 代码许可证，尽管你的代码不需要它也能编译。阅读更多[这里]
+   强烈建议使用 SPDX 代码许可证，尽管你的代码不需要它也能编译。阅读更多[这里]
 2. `pragma`指令必须是任何 Solidity 文件中的第一行代码。Pragma 是一个指令，它告诉编译器它应该使用哪个编译器版本，将人类可读的 Solidity 代码转换为机器可读的字节码。
-    Solidity 是一种新的语言，并且经常更新，所以不同版本的编译器在编译代码时产生不同的结果。一些旧的 solidity 文件在用较新的编译器版本编译时，会出现错误或警告。
-    在更大的项目中，当你使用像 Hardhat 这样的工具时，你可能需要指定多个编译器版本，因为导入的 solidity 文件或你依赖的库是为旧版本的 solidity 编写的。阅读更多关于 [Solidity 的 pragma 指令在此](https://docs.soliditylang.org/en/develop/layout-of-source-files.html)。
+   Solidity 是一种新的语言，并且经常更新，所以不同版本的编译器在编译代码时产生不同的结果。一些旧的 solidity 文件在用较新的编译器版本编译时，会出现错误或警告。
+   在更大的项目中，当你使用像 Hardhat 这样的工具时，你可能需要指定多个编译器版本，因为导入的 solidity 文件或你依赖的库是为旧版本的 solidity 编写的。阅读更多关于 [Solidity 的 pragma 指令在此](https://docs.soliditylang.org/en/develop/layout-of-source-files.html)。
 3. `pragma` 指令遵循语义版本控制 (SemVer 一个系统，其中每个数字表示该版本中包含的更改的类型和范围)。 如果你想要 SemVer 的实际操作解释，请查看本教程, 它非常有助于理解，并且如今在开发（尤其是 Web 开发）中得到广泛使用。
 4. 分号在 Solidity 中是必不可少的。如果少了一个，编译器就会运行失败。Remix 会提醒你。
 5. 关键字 `contract` 告诉编译器你正在声明一个智能合约。 如果您熟悉面向对象编程，那么您可以将 contract（合约） 视为 class (类)。
-    如果你不熟悉 OOP，那么可以将 contract（合约）视为保存数据的对象，包括变量和函数。 您可以结合智能合约为您的区块链应用程序提供所需的功能。
+   如果你不熟悉 OOP，那么可以将 contract（合约）视为保存数据的对象，包括变量和函数。 您可以结合智能合约为您的区块链应用程序提供所需的功能。
 6. 函数是可执行的代码单元，封装了单一的想法、特定的功能、任务等等。一般来说，我们希望函数能一次只做一件事。
-    函数最常出现在智能合约内部，尽管它们可以在智能合约(smart contracts)的代码块之外的文件中声明。函数可以接受 0 个或多个参数，它们可以返回 0 个或多个值。输入和输出是静态类型的，这是你将在本手册后面学习的一个概念。
+   函数最常出现在智能合约内部，尽管它们可以在智能合约(smart contracts)的代码块之外的文件中声明。函数可以接受 0 个或多个参数，它们可以返回 0 个或多个值。输入和输出是静态类型的，这是你将在本手册后面学习的一个概念。
 7. 在上面的例子中，变量 `qtyCups` 被称为 `状态变量`。 它持有合约的状态。这是程序需要跟踪运行的数据的术语。
    与其他程序不同，智能合约应用程序即使在程序不运行时也会保持其状态。数据与应用程序一起存储在区块链中，这意味着区块链网络中的每个节点都维护并同步区块链上的数据和智能合约的本地副本。
-    状态变量（State variables）就像传统应用程序中的数据库`存储（storage）`，但由于区块链需要在网络中的所有节点之间同步状态，因此使用存储可能非常昂贵(消耗比较多的 gas)！ 稍后会详细介绍。
+   状态变量（State variables）就像传统应用程序中的数据库`存储（storage）`，但由于区块链需要在网络中的所有节点之间同步状态，因此使用存储可能非常昂贵(消耗比较多的 gas)！ 稍后会详细介绍。
 
 ## How to Declare Variables and Functions in Solidity
 
-Let’s break down that `HotFudgeSauce` Smart Contract so we understand more about each little piece.
+让我们拆解一下 `HotFudgeSauce` 智能合约，以便我们更多地了解每个小部分。
 
-The basic structure/syntax to defining things in Solidity is similar to other statically typed languages. We give functions and variables a name.
+在 Solidity 中的程序基本结构/语法类似于其他静态类型语言。 我们给函数和变量一个名字。
 
-But in typed languages we also need to specify the _type_ of the data that is created, passed as input or returned as output. You can jump down to the Typing Data section in this handbook if you need to understand what typed data is.
+但在类型语言中，我们还需要指定创建的数据的\_类型，作为输入传递或作为输出返回。如果你需要了解什么是类型化的数据，你可以跳到本手册中的类型化数据部分。
 
-Below, we see what declaring a “State Variable” looks like. We also see what declaring a function looks like.
+下面，我们看到声明一个 `状态变量(State Variable)` 是什么样子的。我们还可以看到怎样声明一个函数。
 
 ![(Alt: The structure variable declaration and function declaration) ](https://lh5.googleusercontent.com/P0bkGvqTA70VN-VZlV13ICNL4sxhzHCIU_8GL0JF9iHZPn6ml4vA6grWy_dKbiMa-y_ALc8oHOyIDGLFZgIIi5pU2Ep5ENuFJd0dPRL8RCPx8bksESh44loRbFqAA9f7GZ9_e5thytMuOk3EeObhmQnG791pBviHuxrv3N3HAXcGAQL0q-4TwV2LQhoA-w)
 
-The first snippet declares a State Variable (I’ll explain what this is soon, I promise) called `qtyCups`. This can only store values that are of type `uint` which means unsigned integers. “Integer” refers to all whole numbers below zero (negative) and above zero (positive).
+第一个片段声明了一个名为 `qtyCups` 的状态变量（我很快会解释这是什么，我保证）。它只能存储`uint`类型的值，也就是无符号整数。`有符号整数`是指所有小于 0（负数）和大于 0（正数）的整数。
 
-Since these numbers have a + or - sign attached, they’re called _signed_ integers. An unsigned integer is therefore always a positive integer (including zero).
+因为这些数字有一个+或-符号，所以它们被称为有符号整数。因此，一个无符号整数总是一个正整数（包括 0）。
 
-In the second snippet, we see a familiar structure when we declare functions too.   Most importantly, we see that the functions have to specify a data type for the value that the function returns.
+在第二个片段中，我们在声明函数时也看到了一个熟悉的结构。最重要的是，我们看到函数必须为函数返回的值指定一个数据类型。
 
-In this example, since `get()` returns the value of the storage variable we just created, we can see that the returned value must be a `uint`.
+在这个例子中，由于`get()`返回我们刚刚创建的存储变量的值，我们可以看到返回值必须是`uint`。
 
-`public` is a visibility specifier. More on that later. `view` is a State-Mutability modifier. More on that below too!
+`public`是一个可见性指定符。稍后会有更多关于这个的内容。`view`是一个状态-可变性修改器（State-Mutability modifier）。下面也会有更多的内容!
 
-It’s worth noting here that state variables can also be of other types - `constant` and `immutable`. They look like this:
+这里值得注意的是，状态变量也可以是其他类型的--`constant`和`immutable`。它们看起来像这样:
 
 <table style="border:none;border-collapse:collapse;"><colgroup></colgroup><tbody><tr style="height:0pt"><td style="vertical-align:top;background-color:#002451;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">string constant TEXT = </span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#d1f1a9;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">"abc"</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">;</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><br></span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">address immutable owner = </span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffc58f;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">;</span></p></td></tr></tbody></table>
 
-Constants and immutable variables have their values assigned once, and only once. They cannot be given another value after their first value is assigned.
+常量和不可变型变量的值只分配一次，而且只有一次。在它们的第一个值被分配后，它们不能再被赋予另一个值。
 
-So if we made the `qtyCups` state variable either constant or immutable, we would not be able to call the `increment()` or `decrement()` functions on it anymore (in fact, the code wouldn’t compile!).
+因此，如果我们让`qtyCups`状态变量成为常量（constant）或不可变（immutable），我们就不能再对它调用`increment()`或`decrement()`函数（事实上，代码不会被编译！）。
 
-Constants must have their values hardcoded in the code itself, whereas immutable variables can have their values set once, generally by assignment in the constructor function (we’ll talk about constructor functions very soon, I promise). You can read more in the [docs here](https://docs.soliditylang.org/en/v0.8.16/contracts.html#constant-and-immutable-state-variables).
+常量的值必须在代码本身中硬编码，而不可变的变量的值可以设置一次，一般是通过构造函数中的赋值（我们很快会谈论构造函数，我保证）。你可以在 [这里的文档](https://docs.soliditylang.org/en/v0.8.16/contracts.html#constant-and-immutable-state-variables) 中阅读更多内容。
 
 ## Variable Scope in Smart Contracts
 
@@ -293,16 +293,16 @@ This smart contract [gets the latest USD price of 1 Eth](https://docs.chain.link
 Now to the 6 essential Solidity concepts you need to absorb:
 
 1. Right after the `pragma` statement we have an import statement. This imports existing code into our smart contract.
-    This is super cool because this is how we reuse and benefit from code that others have written. You can check out the code that is imported on this [GitHub link](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol).……
-    In effect, when we compile our smart contract, this imported code gets pulled in and compiled into bytecode along with it. We will see why we need it in a second…
+   This is super cool because this is how we reuse and benefit from code that others have written. You can check out the code that is imported on this [GitHub link](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol).……
+   In effect, when we compile our smart contract, this imported code gets pulled in and compiled into bytecode along with it. We will see why we need it in a second…
 2. Previously you saw that single-line comments were marked with `//`. Now you're learning about multiline comments. They may span one or more lines and use `/*` and `*/` to start and end the comments.
 3. We declare a variable called `priceFeed` and it has a type `AggregatorV3Interface`. But where does this strange type come from? From our imported code in the import statement - we get to use the `AggregatorV3Interface` type because Chainlink defined it.
-    If you looked at that Github link, you’d see that the type defines an interface (we just finished talking about interfaces). So `priceFeed` is a _reference_ to some object that is of type `AggregatorV3Interface`.
+   If you looked at that Github link, you’d see that the type defines an interface (we just finished talking about interfaces). So `priceFeed` is a _reference_ to some object that is of type `AggregatorV3Interface`.
 4. Take a look at the constructor function. This one doesn’t accept parameters, but we could have just as easily passed the ETH/USD Price Feed’s oracle smart contract’s address `0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e` to it as a parameter of type `address`. Instead, we are hard-coding the address inside the constructor.
-    But we are also creating a reference to the Price Feed Aggregator smart contract (using the interface called `AggregatorV3Interface`).
-    Now we can call all the methods available on the `AggregatorV3Interface` because the `priceFeed` variable refers to that Smart Contract. In fact, we do that next……
+   But we are also creating a reference to the Price Feed Aggregator smart contract (using the interface called `AggregatorV3Interface`).
+   Now we can call all the methods available on the `AggregatorV3Interface` because the `priceFeed` variable refers to that Smart Contract. In fact, we do that next……
 5. Let's jump to the function `getLatestPrice()`. You’ll recognize its structure from our discussion in `HotFudgeSauce`, but it’s doing some interesting things.
-    Inside this `getLatestPrice()` function we call the `latestRoundData()` function which exists on the `AggregatorV3Interface` type. If you [look at the source code of this method](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol#L22) you’ll notice that this  `latestRoundData()` function returns 5 different types of integers!
+   Inside this `getLatestPrice()` function we call the `latestRoundData()` function which exists on the `AggregatorV3Interface` type. If you [look at the source code of this method](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol#L22) you’ll notice that this  `latestRoundData()` function returns 5 different types of integers!
 
 ![Calling methods on another smart contract from our smart contract](https://lh5.googleusercontent.com/GMqCsBxRblJ2rMQDrMPTx1iDfj6Q3h0eiPqE-RE0-MaHwDDyr6JVna6-57e4jdQxp6VJ4FbMWUMKxFpM2ot4BzqsagLpmD2clz1xCjQhAfl4tn8HhCK4uSKj1hZkDGwXJj9DhuY7nmunj4j_aDx9APc8mqXUPoR9Tl20DdYvjIoUjotmQfJByXKbW2EY5g)
 

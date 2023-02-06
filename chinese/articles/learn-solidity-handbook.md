@@ -144,19 +144,19 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 ## Variable Scope in Smart Contracts
 
-There are three scopes of variables that Smart Contracts have access to:
+智能合约可以访问三个变量作用域（scopes）：
 
-1. State Variables: store permanent data in the smart contract (referred to as persistent state) by recording the values on the blockchain.
-2. Local Variables: these are “transient” pieces of data that hold information for short periods of time while running computations. These values are not stored permanently on the blockchain.
-3. [Global variables](https://docs.soliditylang.org/en/v0.8.17/units-and-global-variables.html#special-variables-and-functions): these variables and functions are “injected” into your code by Solidity, and made available without the need to specifically create or import them from anywhere. These provide information about the blockchain environment the code is running on and also include utility functions for general use in the program.
+1. 状态变量：通过记录区块链上的值，在智能合约中存储永久数据（称为持久状态）。
+2. 本地变量：这些是 `瞬时(transient)`的数据，在运行计算时短时间内保存信息。这些值不会永久地存储在区块链上。
+3. [全局变量](https://docs.soliditylang.org/en/v0.8.17/units-and-global-variables.html#special-variables-and-functions)：这些变量和函数被 Solidity "注入 "到你的代码中，并使其可用，而不需要专门从任何地方创建或导入它们。这些提供了关于代码所运行的区块链环境的信息，还包括在程序中一般使用的实用程序。
 
-You can tell the difference between the scopes as follows:
+你可以通过以下方式来区分这些作用域的不同:
 
-1. state variables are generally found inside the smart contract but outside of a function.
-2. local variables are found inside functions and cannot be accessed from outside that function’s scope.
-3. Global variables aren’t declared by you - they are “magically” available for you to use.
+1. 状态变量通常位于智能合约内部，但位于函数外部。
+2. 局部变量位于函数内部，不能从函数范围外访问
+3. 全局变量不是由您声明的——它们 `魔法` 地可供您使用。
 
-Here is our `HotFudgeSauce` example, slightly modified to show the different types of variables. We give `qtyCups` a starting value and we dispense cups of fudge sauce to everyone except me (because I’m on a diet).
+这是我们的“HotFudgeSauce”示例，稍作修改以显示不同类型的变量。 我们给 `qtyCups` 一个初始值，然后给除了我以外的每个人都分一杯软糖酱（因为我正在节食）。
 
 ![Annotated image showing state variables, local variables and global variables in a smart contract](https://lh4.googleusercontent.com/Z9wk7BXxi-669WmSamT25cV88_RK-psGJvCA69vUxgpcs2_EzJFzLZJOitQlsuSl_AD-LdRylCaKh4Iumo_tVHmft2mtKofDu4qZfWQ8Z7BhdZ-6g4B6JAwLF57gMi-osCSDocgyE6kdqMCL4uxjBtpzjMf6rlLM0Ja6w4ndaIxEZhE3YsxmDY1BIWOwnA)
 

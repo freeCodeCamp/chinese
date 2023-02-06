@@ -71,8 +71,8 @@ To use Linters locally by running these commands shown below:
 ```Shell
 # First time
 cd ~/Desktop
-git clone https://github.com/freeCodeCamp/news-translation.git
-cd news-translation
+git clone https://github.com/freeCodeCamp/chinese.git
+cd chinese
 npm install
 # Every time
 npm test
@@ -86,15 +86,15 @@ npm test
 [2]: http://www.firsttimersonly.com/
 [3]: https://www.freecodecamp.org/news
 [4]: https://david-dm.org/freeCodeCamp/news-translation
-[5]: https://github.com/freeCodeCamp/news-translation/actions
+[5]: https://github.com/freeCodeCamp/chinese/actions
 [6]: https://www.freecodecamp.org/news/
 [7]: https://chinese.freecodecamp.org/news/
-[8]: https://github.com/freeCodeCamp/news-translation/blob/master/Contributing.md
-[9]: https://github.com/freeCodeCamp/news-translation/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7
-[10]: https://github.com/freeCodeCamp/news-translation/wiki/words_list
-[11]: https://github.com/freeCodeCamp/news-translation/issues/46
-[12]: https://github.com/freeCodeCamp/news-translation/wiki/%E5%8D%8F%E4%BD%9C%E6%B5%81%E7%A8%8B
-[13]: https://github.com/freeCodeCamp/news-translation/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting
+[8]: https://github.com/freeCodeCamp/chinese/blob/master/Contributing.md
+[9]: https://github.com/freeCodeCamp/chinese/wiki/%E7%BF%BB%E8%AF%91%E6%8A%80%E5%B7%A7
+[10]: https://github.com/freeCodeCamp/chinese/wiki/words_list
+[11]: https://github.com/freeCodeCamp/chinese/issues/46
+[12]: https://github.com/freeCodeCamp/chinese/wiki/%E5%8D%8F%E4%BD%9C%E6%B5%81%E7%A8%8B
+[13]: https://github.com/freeCodeCamp/chinese/issues?q=is%3Aissue+is%3Aopen+label%3AReview-awaiting
 [14]: https://chinese.freecodecamp.org/news/
-[15]: https://github.com/freeCodeCamp/news-translation/actions?query=workflow%3A%22CI+%26+CD%22
+[15]: https://github.com/freeCodeCamp/chinese/actions?query=workflow%3A%22CI+%26+CD%22
 [16]: https://prettier.io/

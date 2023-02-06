@@ -120,7 +120,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 下面，我们看到声明一个 `状态变量(State Variable)` 是什么样子的。我们还可以看到怎样声明一个函数。
 
-![(Alt: The structure variable declaration and function declaration) ](https://lh5.googleusercontent.com/P0bkGvqTA70VN-VZlV13ICNL4sxhzHCIU_8GL0JF9iHZPn6ml4vA6grWy_dKbiMa-y_ALc8oHOyIDGLFZgIIi5pU2Ep5ENuFJd0dPRL8RCPx8bksESh44loRbFqAA9f7GZ9_e5thytMuOk3EeObhmQnG791pBviHuxrv3N3HAXcGAQL0q-4TwV2LQhoA-w)
+![(Alt: The structure variable declaration and function declaration)](https://lh5.googleusercontent.com/P0bkGvqTA70VN-VZlV13ICNL4sxhzHCIU_8GL0JF9iHZPn6ml4vA6grWy_dKbiMa-y_ALc8oHOyIDGLFZgIIi5pU2Ep5ENuFJd0dPRL8RCPx8bksESh44loRbFqAA9f7GZ9_e5thytMuOk3EeObhmQnG791pBviHuxrv3N3HAXcGAQL0q-4TwV2LQhoA-w)
 
 第一个片段声明了一个名为 `qtyCups` 的状态变量（我很快会解释这是什么，我保证）。它只能存储`uint`类型的值，也就是无符号整数。`有符号整数`是指所有小于 0（负数）和大于 0（正数）的整数。
 
@@ -156,43 +156,43 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 2. 局部变量位于函数内部，不能从函数范围外访问
 3. 全局变量不是由您声明的——它们 `魔法` 地可供您使用。
 
-这是我们的“HotFudgeSauce”示例，稍作修改以显示不同类型的变量。 我们给 `qtyCups` 一个初始值，然后给除了我以外的每个人都分一杯软糖酱（因为我正在节食）。
+这是我们的 `HotFudgeSauce` 示例，稍作修改以显示不同类型的变量。 我们给 `qtyCups` 一个初始值，然后给除了我以外的每个人都分一杯软糖酱（因为我正在节食）。
 
 ![Annotated image showing state variables, local variables and global variables in a smart contract](https://lh4.googleusercontent.com/Z9wk7BXxi-669WmSamT25cV88_RK-psGJvCA69vUxgpcs2_EzJFzLZJOitQlsuSl_AD-LdRylCaKh4Iumo_tVHmft2mtKofDu4qZfWQ8Z7BhdZ-6g4B6JAwLF57gMi-osCSDocgyE6kdqMCL4uxjBtpzjMf6rlLM0Ja6w4ndaIxEZhE3YsxmDY1BIWOwnA)
 
 ## How Visibility Specifiers Work
 
-The use of the word “visibility” is a bit confusing because on a public blockchain, pretty much everything is “visible” because transparency is a key feature. But visibility, in this context, means the ability for one piece of code to be seen and accessed by another piece of code.
+使用 `visibility(可见性）`这个词有点令人困惑，因为在公共区块链上，几乎所有东西都是 `visibility(可见性）`，因为透明度是一个关键特征。但是，在这种情况下，`visibility(可见性）` 意味着一段代码被另一段代码看到和访问的能力。
 
-Visibility specifies the extent to which a variable, function, or contract can be accessed from outside the region of code where it was defined. The scope of visibility can be adjusted depending on which portions of the software system need to access it.
+ 变量、函数或合约的 `visibility(可见性）`，可以从控制它的代码区域之外访问的程度。可以根据软件系统的需要它来调整可见访问范围。
 
-If you’re a JavaScript or NodeJS developer, you’re already familiar with visibility – any time you export an object you’re making it visible outside the file where it is declared.
+如果你是一个 JavaScript 或 NodeJS 的开发者，你已经熟悉了`visibility(可见性）`，任何时候你导出一个对象，你可以在其他的文件访问。
 
 ### Types of Visibility
 
-In Solidity there are [4 different types of visibility](https://docs.soliditylang.org/en/v0.8.16/cheatsheet.html#function-visibility-specifiers): `public`, `external`, `internal` and `private`.
+在 Solidity 中，有[4 种不同类型的可见性](https://docs.soliditylang.org/en/v0.8.16/cheatsheet.html#function-visibility-specifiers)。`public(公共)`、`external(外部)`、`internal(内部)`和 `private(私有)`。
 
-**Public** functions and variables can be accessed inside the contract, outside it, from other smart contracts, and from external accounts (the kind that sit in your [Metamask](https://metamask.io/) wallet) - pretty much from anywhere.  It’s the broadest, most permissive visibility level.
+**Public** 函数和变量可以在合约内部、外部、从其他智能合约、以及从外部账户（位于你的[Metamask](https://metamask.io/)钱包中的那种），几乎可以从任何地方访问。 这是最广泛、最大的可见性级别。
 
-When a storage variable is given `public` visibility, Solidity automatically creates an implicit getter function for that variable’s value.
+当一个存储变量被赋予 `Public`时，Solidity 会自动为该变量的值创建一个隐含的`getter`函数。
 
-So in our `HotFudgeSauce` smart contract, we don’t really need to have the `get()` method, because Solidity will implicitly provide us identical functionality, just by giving `qtyCups` a `public` visibility modifier.
+因此，在我们的 `HotFudgeSauce` 智能合约中，我们并不需要有 `get()` 方法，因为 Solidity 会隐含地提供给我们相同的方法，只要给 `qtyCups` 一个 `public`,设置它的 `visibility(可见性）`。
 
-**Private** functions and variables are only accessible within the smart contract that declares them. But they cannot be accessed outside of the Smart Contract that encloses them. `private` is the most restrictive of the four visibility specifiers.
+**Private** 函数和变量只能在声明它们的智能合约中访问。但它们不能在包围它们的智能合约之外被访问。`private` 是四个可见性说明符中限制性最强的一个。
 
-**Internal** visibility is similar to `private` visibility, in that internal functions and variables can only be accessed from within the contract that declares them. But functions and variables marked internal can also be accessed from derived contracts (that is, child contracts that inherit from the declaring contract) but not from outside the contract. We will talk about inheritance (and derived/child contracts) later on.
+**Internal** 可见性与`private`可见性类似，因为内部函数和变量只能从声明它们的合约内访问。但是标记为内部的函数和变量也可以从派生合约（derived contracts 也就是继承自声明合约的子合约）中访问，但不能从合约外部访问。我们将在后面讨论继承（和派生/子合同）。
 
-`internal` is the default visibility for storage variables.
+`internal` 存储变量的默认可见性。
 
 ![gcNCm0-739P27Bqp_5zYT6kM_fmfW3tnrx-ZJ8iKH5Gnhpp9-JXo4NrSk7UaUPv9SF34ka7eNYtFK-FmnTGtHSupFUE6A6UvX1738cqDG0X9qhWCRdqI-jGf1BCpvK2Qi6MqMQWgN4H3VOpa5xh2zVkQrQlfGuBPRWIovNxfDH3zhFuxHKsUpXq9Oh_Saw](https://lh5.googleusercontent.com/gcNCm0-739P27Bqp_5zYT6kM_fmfW3tnrx-ZJ8iKH5Gnhpp9-JXo4NrSk7UaUPv9SF34ka7eNYtFK-FmnTGtHSupFUE6A6UvX1738cqDG0X9qhWCRdqI-jGf1BCpvK2Qi6MqMQWgN4H3VOpa5xh2zVkQrQlfGuBPRWIovNxfDH3zhFuxHKsUpXq9Oh_Saw)
 
-The 4 Solidity Visibility specifiers and where they can be accessed from
+4 个 Solidity 可见性说明符(Visibility specifiers )以及它们可以从哪里被访问
 
-The **external** visibility specifier does not apply to variables - only functions can be specified as external.
+**external** 可见性说明符不适用于变量,只有函数可以指定为 `external`。
 
-External functions cannot be called from inside the declaring contract or contracts that inherit from the declaring contract.  Thus, they can only be called from outside the enclosing contract.
+外部函数（External functions）不能从声明合约或继承于声明合约的合约内部调用。 因此，它们只能从封闭合约之外调用。
 
-And that’s how they’re different from public functions – public functions can also be called from _inside_ the contract that declare them, whereas an external function cannot.
+这就是它们与公共函数（public functions）的不同之处，公共函数也可以从声明它们的合约内部调用，而外部函数则不能。
 
 ## What are Constructors?
 

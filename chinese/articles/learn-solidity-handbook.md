@@ -344,23 +344,23 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 ## Data Locations – Storage, Memory, and Stack
 
-On Ethereum and EVM-based chains, data inside the system can be placed and accessed in more than one “data location”.
+在以太坊和基于 EVM 的链上，系统内的数据可以放在一个以上的 `数据位置(data location)` 中并被访问。
 
-Data locations are part of the fundamental design and architecture of the EVM. When you see the words “memory”, “storage” and “stack”, you should start thinking “data locations” - that is, where can data be stored (written) to and retrieved (read) from.
+数据位置是 EVM 的基本设计和架构的一部分。当你看到 `内存(memory)`、`存储(storage)` 和 `堆栈(stack)` 这些词时，你应该开始思考 `数据位置(data locations)`,也就是说，数据可以存储（写入）到哪里和检索（读取）到哪里?
 
-Data location has an impact on how the code executes at run time. But it also has very important impacts on how much [gas](https://ethereum.org/en/developers/docs/gas/) gets used during deployment and running of the smart contract.
+数据位置对代码在运行时的执行方式有影响。但它也对智能合约的部署和运行过程中使用多少 [gas](https://ethereum.org/en/developers/docs/gas/) 有非常重要的影响。
 
-The use of gas requires a deeper understanding of the EVM and something called opcodes - we can park that discussion for now. While useful, it is not strictly necessary for you to understand data locations.
+使用 gas 需要对 EVM 和称为操作码的东西有更深的了解--我们可以暂时不讨论这个问题。虽然很有用，但严格来说，你没有必要了解数据位置。
 
-Though I’ve mentioned 3 data _locations_ so far, there are 2 other ways in which data can be stored and accessed in Smart Contracts: “calldata”, and “code”.  But these are not data locations in the EVM’s design. They’re just subsets of the 3 data locations.
+虽然到目前为止我已经提到了 3 个数据 _位置(locations)_，但还有另外两种方法可以在智能合约中存储和访问数据。`calldata` 和 `code`。 但这些不是 EVM 设计中的数据位置。它们只是 3 个数据位置的子集。
 
-Let’s start with storage. In the EVM’s design, data that needs to be stored permanently on the blockchain is placed in the relevant smart contract’s “storage” area. This includes any contract “state variables”.
+让我们从存储开始。在 EVM 的设计中，需要永久存储在区块链上的数据被放置在相关智能合约的 `存储(storage)` 区域。这包括任何合约的 `状态变量(state variables)`。
 
-Once a contract is deployed and has its specific address, it also gets its own storage area, which you can think of as a key-value store (like a hash table) where **both** the keys and the values are 256 bit (32 byte) data “words”. And “words” [has a specific meaning](<https://en.wikipedia.org/wiki/Word_(computer_architecture)>) in computer architecture.
+当一个合约被部署并拥有其特定的地址，它也会得到自己的存储区域（storage area），你可以把它看作是一个键值存储（像一个哈希表），其中的键和值都是 256 位（32 字节）的数据 `字(words)`。而 `字(words)`在计算机体系中[有特定的含义](<https://en.wikipedia.org/wiki/Word_(computer_architecture)>)。
 
-Because storage persists data on the blockchain permanently, all data needs to be synchronized across all the nodes in the network, which is why nodes have to achieve consensus on data state. This consensus makes storage expensive to use.
+由于存储在区块链上永久保存数据，所有数据需要在网络中的所有节点上同步，这就是为什么节点必须在数据状态上取得共识（consensus）。这种共识使得存储的使用成本很高。
 
-You’ve already seen examples of storage variables (aka contract state variables) but here is an example taken from the [Chainlink Verifiable Random Number Consumer smart contract](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/VRFConsumerBaseV2.sol)
+你已经看到了存储变量（又称合约状态变量）的例子，但这里是一个取自[Chainlink Verifiable Random Number Consumer 智能合约]（https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/VRFConsumerBaseV2.sol）的例子
 
 ![Storage data location. Putting data in the contract's storage layout.](https://lh3.googleusercontent.com/oV_AXHhYqs7DIB_WQvzB7A97qlnVKAoQYAvLCr9euiwC-XlO8d23-HZuwGjkANpEBnMKQ8u1MrBupg8IWjdX9_YubpjQobML8AyKAQ9vnU_nBxgTAxlYHA-JJlc1xZ3wD14zzER6gAyKmkQ7yLQDCKOr2V5M48Xo5t2SfYVoPRJKI_lUJ5yJMh8YSNaT9w)
 

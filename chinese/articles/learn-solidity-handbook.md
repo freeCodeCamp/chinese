@@ -364,37 +364,37 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 ![Storage data location. Putting data in the contract's storage layout.](https://lh3.googleusercontent.com/oV_AXHhYqs7DIB_WQvzB7A97qlnVKAoQYAvLCr9euiwC-XlO8d23-HZuwGjkANpEBnMKQ8u1MrBupg8IWjdX9_YubpjQobML8AyKAQ9vnU_nBxgTAxlYHA-JJlc1xZ3wD14zzER6gAyKmkQ7yLQDCKOr2V5M48Xo5t2SfYVoPRJKI_lUJ5yJMh8YSNaT9w)
 
-Storage data location. Putting data in the contract's storage layout.
+存储数据的位置。将数据放在合约的 storage layout。
 
-When the above contract is created and deployed, whatever address that is passed into the contract’s constructor becomes permanently stored in the smart contract’s storage, and is accessible using the variable `vrfCoodinator`.  Since this state variable is marked as `immutable`, it cannot be changed after this.
+当上述合约被创建和部署时，无论传入合约构造函数的地址是什么，都会永久地存储在智能合约的存储里，并且可以使用变量`vrfCoodinator`进行访问。 由于这个状态变量被标记为 `不可变(immutable)`，所以在这之后它不能被改变。
 
-To refresh your memory from the previous section on keywords, where we last discussed `immutable` and `constant` variables, these values are not put in storage. They become part of the code itself when the contract is constructed, so these values don’t consume as much gas as storage variables.
+为了让你回忆一下上一节关于关键字的内容，我们最后讨论了`immutable`和`constant`变量，这些值并没有放在存储中。它们在构建合约时成为代码本身的一部分，所以这些值不会像存储变量那样消耗大量的 gas。
 
-Now let’s move to `memory`. This is temporary storage where you can read and write data needed during the running of the smart contract. This data is erased once the functions that use the data are done executing.
+现在让我们来看看`内存（memory）`。这是临时存储（temporary storage），你可以在智能合约运行过程中读写所需的数据。一旦使用这些数据的函数执行完毕，这些数据就会被擦除。
 
-The `memory` location space is like a temporary notepad, and a new one is made available in the smart contract each time a function is triggered. That notepad is thrown away after the execution completes.
+`memory`位置空间就像一个临时记事本，每次触发一个函数时，智能合约中都会有一个新的记事本。该记事本在执行完成后被扔掉。
 
-When understanding the difference between storage and memory, you can think of storage as a kind of hard disk in the traditional computing world, in the sense that it has “persistent” storage of data. But memory is closer to RAM in traditional computing.
+在理解存储（storage）和内存（memory）的区别时，你可以认为存储（storage）是传统计算世界中的一种硬盘，在这个意义上，它有 `持久性（persistent）`的数据存储。但内存（memory）更接近于传统计算中 RAM。
 
-The `stack` is the data area where most of the EVM’s computations are performed. The EVM follows a [stack based computation model](https://en.wikipedia.org/wiki/Stack_machine#Comparison_with_register_machines) and not a register based computation model, which means each operation to be carried out needs to be stored and accessed using a [stack data structure](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>).
+“堆栈”是执行大部分 EVM 计算的数据区域。 EVM 遵循[基于堆栈的计算模型](https://en.wikipedia.org/wiki/Stack_machine#Comparison_with_register_machines) 而不是基于寄存器的计算模型，这意味着要执行的每个操作都需要使用存储和访问 [堆栈数据结构](<https://en.wikipedia.org/wiki/Stack_(abstract_data_type)>)。
 
-The stack’s depth - that is the total number of items it can hold - is 1024, and each item in the stack can be 256 bits (32 bytes) long. This is the same as the size of each key and value in the storage data location.
+堆栈的深度，即它可以容纳的项目总数是 1024，堆栈中的每个项目可以是 256 位（32 字节）长。 这与存储数据位置中每个键和值的大小相同。
 
-You can read more about how the EVM controls access to the stack data storage area [here](https://docs.soliditylang.org/en/v0.8.17/introduction-to-smart-contracts.html#storage-memory-and-the-stack).
+你可以阅读更多关于 EVM 如何控制对堆栈数据存储区的访问[这里](https://docs.soliditylang.org/en/v0.8.17/introduction-to-smart-contracts.html#storage-memory-and-the-stack)。
 
-Next, let's talk about `calldata`. I have assumed that you have a basic understanding about Ethereum smart contract [messages](https://ethereum.org/en/whitepaper/#messages) and [transactions](https://ethereum.org/en/developers/docs/transactions/#:~:text=An%20Ethereum%20transaction%20refers%20to,takes%20place%20within%20a%20transaction.). If you don’t, you should first read those links.
+接下来，我们来谈谈`calldata`。我已经假设你对 Ethereum 智能合约的 [消息(messages)](https://ethereum.org/en/whitepaper/#messages) 和 [交易(transactions)](https://ethereum.org/en/developers/docs/transactions/#:~:text=An%20Ethereum%20transaction%20refers%20to,takes%20place%20within%20transaction.)有基本了解。如果你不知道，你应该首先阅读这些链接。
 
-Messages and transactions are how smart contract functions are invoked, and they contain a variety of data necessary for the execution of those functions.  This message data is stored in a read-only section of the memory called `calldata`, which holds things like the function name and parameters.
+消息和交易是智能合约函数被调用的方式，它们包含执行这些函数所需的各种数据。 这些消息数据被存储在内存(memory)的一个名为 `calldata` 的只读部分，其中保存了函数名称(function name)和参数(parameters)。
 
-This is relevant for externally callable functions, as internal and private functions don’t use calldata. Only “incoming” function execution data and function parameters are stored in this location.
+这与外部可调用的函数有关，因为内部(internal)和私有(private)函数不使用 `calldata`。只有 `传入(incoming)` 的函数执行数据和函数参数,被存储在这个位置。
 
-Remember, `calldata` is memory except that `calldata` is read-only. You cannot write data to it.
+记住，`calldata`是内存，只是`calldata`是只读的。你不能向它写入数据。
 
-And finally, `code` is not a data location but instead refers to the smart contract's compiled bytecode that is deployed and stored permanently on the blockchain. This bytecode is stored in an immutable ROM (Read Only Memory), that is loaded with the bytecode of the smart contract to be executed.
+最后，`代码(code)` 不是数据位置(data location)，而是指智能合约编译后的字节码，该字节码永久部署并存储在区块链上。 该字节码存储在不可变的 ROM（只读存储器）中，加载了其中要执行的智能合约的字节码。
 
-Remember how we discussed the difference between immutable and constant variables in Solidity? Immutable values get assigned their value once (usually in the constructor) and constant variables have their values hard-coded into the smart contract code. Because they’re hardcoded, constant values are compiled literally and embedded directly into the smart contract’s bytecode, and stored in this code / ROM data location.
+还记得我们如何讨论 Solidity 中不可变变量和常量变量之间的区别吗？ 不可变值被赋值一次（通常在构造函数中），常量变量的值被硬编码到智能合约代码中。 因为它们是硬编码的，常量值按字面编译并直接嵌入到智能合约的字节码中，并存储在这个代码/ROM 数据位置。
 
-Like `calldata`, `code` is also read-only - if you understood the previous paragraph you’ll understand why!
+和 `calldata` 一样，`code` 也是只读的——如果你理解了上一段，你就会明白为什么！
 
 ## How Typing Works
 

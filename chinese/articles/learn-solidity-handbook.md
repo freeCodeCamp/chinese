@@ -292,29 +292,29 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 现在，您需要了解 6 个基本的 Solidity 概念：
 
-1. Right after the `pragma` statement we have an import statement. This imports existing code into our smart contract.
-   This is super cool because this is how we reuse and benefit from code that others have written. You can check out the code that is imported on this [GitHub link](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol).……
-   In effect, when we compile our smart contract, this imported code gets pulled in and compiled into bytecode along with it. We will see why we need it in a second…
-2. Previously you saw that single-line comments were marked with `//`. Now you're learning about multiline comments. They may span one or more lines and use `/*` and `*/` to start and end the comments.
-3. We declare a variable called `priceFeed` and it has a type `AggregatorV3Interface`. But where does this strange type come from? From our imported code in the import statement - we get to use the `AggregatorV3Interface` type because Chainlink defined it.
-   If you looked at that Github link, you’d see that the type defines an interface (we just finished talking about interfaces). So `priceFeed` is a _reference_ to some object that is of type `AggregatorV3Interface`.
-4. Take a look at the constructor function. This one doesn’t accept parameters, but we could have just as easily passed the ETH/USD Price Feed’s oracle smart contract’s address `0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e` to it as a parameter of type `address`. Instead, we are hard-coding the address inside the constructor.
-   But we are also creating a reference to the Price Feed Aggregator smart contract (using the interface called `AggregatorV3Interface`).
-   Now we can call all the methods available on the `AggregatorV3Interface` because the `priceFeed` variable refers to that Smart Contract. In fact, we do that next……
-5. Let's jump to the function `getLatestPrice()`. You’ll recognize its structure from our discussion in `HotFudgeSauce`, but it’s doing some interesting things.
-   Inside this `getLatestPrice()` function we call the `latestRoundData()` function which exists on the `AggregatorV3Interface` type. If you [look at the source code of this method](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol#L22) you’ll notice that this  `latestRoundData()` function returns 5 different types of integers!
+1. 在 `pragma` 语句之后，我们有一个导入语句。这将现有的代码导入到我们的智能合约中。
+   这是超级酷的，因为这就是我们重用和受益于他人编写的代码的方式。你可以在这个[GitHub 链接](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol) 上,查看被导入的代码。
+   实际上，当我们编译我们的智能合约时，这些导入的代码会被拉进来，并被一起编译成字节码。我们稍后会看到为什么我们需要它。
+2. 之前你看到单行注释是用`//`标记的。现在你要学习的是多行注释。它们可以跨越一行或多行，使用`/*`和`*/`来开始和结束注释。
+3. 我们声明了一个名为 `priceFeed` 的变量，它的类型是 `AggregatorV3Interface`。但是这个奇怪的类型是从哪里来的呢？来自我们导入语句中的导入代码,我们可以使用`AggregatorV3Interface`类型，因为 Chainlink 定义了它。
+   如果你看了那个 Github 链接，你会发现这个类型定义了一个接口（我们刚讨论完接口）。所以 `priceFeed` 是对某个 `AggregatorV3Interface` 类型对象的 _引用(reference)_ 。
+4. 看一下构造函数。这个函数不接收参数，但我们可以很容易地将 ETH/USD 价格源的 oracle 智能合约的地址 `0xD4a33860578De61DBAbDc8BFdb98FD742fA7028e` 作为`address`类型的参数传递给它。相反，我们在构造函数中硬编码了 `address`。
+   但我们也在创建一个对 `Price Feed Aggregator` 智能合约的引用（使用名为`AggregatorV3Interface`的接口）。
+   现在我们可以调用`AggregatorV3Interface`上的所有方法，因为`PriceFeed`变量是引用（refers）该智能合约。事实上，我们接下来要做的。
+5. 让我们跳到函数`getLatestPrice()`。你会从我们对 `HotFudgeSauce` 的讨论中认识到它的结构，但它正在做一些有趣的事情。
+   在这个`getLatestPrice()'函数中，我们调用`latestRoundData()'函数，它存在于`AggregatorV3Interface'类型中。如果你[看一下这个方法的源代码](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol#L22)，你会发现这个`latestRoundData()`函数返回 5 种不同类型的整数!
 
 ![Calling methods on another smart contract from our smart contract](https://lh5.googleusercontent.com/GMqCsBxRblJ2rMQDrMPTx1iDfj6Q3h0eiPqE-RE0-MaHwDDyr6JVna6-57e4jdQxp6VJ4FbMWUMKxFpM2ot4BzqsagLpmD2clz1xCjQhAfl4tn8HhCK4uSKj1hZkDGwXJj9DhuY7nmunj4j_aDx9APc8mqXUPoR9Tl20DdYvjIoUjotmQfJByXKbW2EY5g)
 
-Calling methods on another smart contract from our smart contract
+从我们的智能合约中调用另一个智能合约的方法
 
-In our smart contract, we are commenting out all 4 values that we don’t need. So this means that Solidity functions can return multiple values (in this example we are returned 5 values), and we can pick and choose which ones we want.
+在我们的智能合约中，我们正在注释掉所有我们不需要的 4 个值。所以这意味着 Solidity 函数可以返回多个值（在这个例子中，我们被返回 5 个值），我们可以从中挑选我们想要的值。
 
-Another way of consuming the results of calling `latestRoundData()` would be:`( ,int price, , ,) = priceFeed.latestRoundData()` where we ignore 4 out of 5 returned values by not giving them a variable name.
+另一种消耗调用`latestRoundData()`结果的方式是：`(,int price, , , ) = priceFeed.latestRoundData()`在这里，我们通过不给它们一个变量名来忽略 5 个返回值中的四个。
 
-When we assign variable names to one or more values returned by a function, we call it “destructuring assignment” because we destructure the returned values (separate each one out) and assign them at the time of destructuring, like we do with `price` above.
+当我们给一个或多个函数返回的值分配变量名时，我们称之为 `析构赋值(destructuring assignment)`，因为我们对返回的值进行了析构（将每个值分离出来），并在析构时进行赋值，就像我们对上面的`price`所做的那样。
 
-Since you’ve learned about interfaces, I recommend you take a look at Chainlink Labs’ [GitHub repo](https://github.com/smartcontractkit/) to examine the implemented `latestRoundData()` function in [the `Aggregator` contract](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.6/AggregatorProxy.sol#L211) and how the `AggregatorV3Interface` [provides the interface](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol#L22) to interact with the `Aggregator` contract.
+既然你已经了解了接口，我建议你看看 Chainlink Labs 的 [GitHub repo](https://github.com/smartcontractkit/)，看看[`Aggregator`合约](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.6/AggregatorProxy.sol#L211)中实现的 `latestRoundData()` 函数以及 `AggregatorV3Interface` 如何 [提供接口](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol#L22) 与 `Aggregator` 合约交互。
 
 ## What is Contract State?
 

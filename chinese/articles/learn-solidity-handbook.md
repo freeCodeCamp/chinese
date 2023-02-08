@@ -469,33 +469,33 @@ JavaScript 已经具有[内置类型](https://www.w3schools.com/js/js_datatypes.
 
 ## Solidity Data Types
 
-Types that are built into the language and come with it “out of the box” are often referred to as “primitives”. They’re intrinsic to the language. You can combine primitive types to form more complex data structures that become “custom” data types.
+内置于语言中并开箱即用的类型通常被称为`基本类型(primitives)`。它们是语言固有的。您可以组合基本类型以形成更复杂的数据结构，这些数据结构成为自定义数据类型。
 
-In JavaScript, for example, [primitives](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) are data that is not a JS object _and_ has no methods or properties. There are 7 primitive data types in JavaScript: `string`, `number`, `bigint`, `boolean`, `undefined`, `symbol`, and `null`.
+例如，在 JavaScript 中，[基本类型](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)是不属于 JS 对象的数据，_而且_ 没有方法或属性。在 JavaScript 中有 7 种原始数据类型。`string`, `number`, `bigint`, `boolean`, `undefined`, `symbol`, 和`null`。
 
-Solidity also has its own primitive data types. Interestingly, Solidity does _not_ have “undefined” or “null”. Instead, when you declare a variable and its type, but do not assign a value to it, Solidity will assign a [Default Value](https://docs.soliditylang.org/en/v0.8.17/control-structures.html#default-value) to that type. What exactly that default value is depends on the data type .
+Solidity 也有自己的原始数据类型。 有趣的是，Solidity 没有 `undefined` 或 `null`。 相反，当您声明一个变量及其类型，但不为其分配值时，Solidity 将分配一个 [默认值](https://docs.soliditylang.org/en/v0.8.17/control-structures.html#default-value) 到那个变量。 该默认值究竟是什么取决于数据类型。
 
-Many of Solidity’s primitive data types are variations of the same ‘base’ type. For example the `int` type itself has subtypes based on the number of binary digits that the `integer` type can hold.
+Solidity 的许多基本数据类型（primitive data types）都是同一基本类型（base type）的变化。例如，`int` 类型本身有基于 `integer` 类型所能容纳的二进制的子类型。
 
-If that confuses you a bit, don’t worry - it isn’t easy if you’re not familiar with bits and bytes, and I’ll cover integers a bit more shortly.
+如果这让你有点困惑，不要担心,如果你不熟悉比特(bit)和字节(bytes)，这并不容易，我很快就会更多地介绍整数。
 
-Before we explore Solidity types, there is another very important concept that you must understand - it is the source of many bugs, and “unexpected gotchas” in programming languages.
+在我们探索 Solidity 类型之前，还有一个非常重要的概念，你必须了解,它是许多错误的来源，也是编程语言中 `意外的错误`。
 
-This is the difference between a value type and reference type, and the resulting distinction between data in programs being “passed by value” vs “passed by reference”. I’ll go into a quick summary below but you may also find it useful to watch [this short video](https://www.youtube.com/watch?v=1HHjKG1372E) to strengthen your mental model before proceeding.
+这就是值类型（ value type）和引用类型（reference type）之间的区别，以及由此产生的程序中数据 `通过值传递(passed by value)`和 `通过引用传递(passed by reference)`之间的区别。我将在下面做一个简单的总结，但你可能会发现在继续之前观看 [这个简短的视频](https://www.youtube.com/watch?v=1HHjKG1372E) 以加强你的理解。
 
 ### Pass by reference vs pass by value
 
-At an operating system level, when a program is running, all data used by the program during its execution is stored in locations in the computer’s RAM (memory). When you declare a variable, some memory space is allocated to hold data about that variable and the value that is, or eventually will be, assigned to that variable.
+在操作系统层，当程序运行时，程序在运行期间使用的所有数据都存储在计算机 RAM（内存）中的位置。 当你声明一个变量时，会分配一些内存空间来保存有关该变量的数据以及正在或最终分配给该变量的值。
 
-There is also a piece of data that is often called a “pointer”. This pointer points to the memory location (an “address” in the computer’s RAM) where that variable and its value can be found. So the pointer effectively contains a _reference_ to where the data can be found in the computer’s memory.
+还有一块数据，通常被称为 `指针(pointer)`。这个指针指向可以找到该变量及其值的内存位置（计算机 RAM 中的一个 `地址(address)`）。因此，指针有效地包含了在计算机内存中可以找到数据的位置。
 
-So when you pass data around in a program  (for example when you assign a value to a new variable name, or when you pass inputs (parameters) into a function or method, the language’s compiler can achieve this in two ways. It can pass a pointer to the data’s location in the computer’s memory, **or** it can make a copy of the data itself, and pass the actual value.
+因此，当你在程序中传递数据时（例如，当你给一个新的变量名赋值时，或者当你向一个函数或方法传递输入（参数）时，语言的编译器可以通过两种方式实现。它可以传递一个指向数据在计算机内存中的位置的指针，或者它可以对数据本身进行复制，并传递实际值。
 
-The first approach is “pass by reference”. The second approach is “pass by value”.
+第一种是`通过引用传递(passed by reference)` 。第二种是 `通过值传递(passed by value)`。
 
-Solidity’s data type primitives fall into two buckets - they’re either value types, or they’re reference types.
+Solidity 的数据类型基元分为两类。它们要么是值类型（value types），要么是引用类型（reference types）。
 
-In other words, in Solidity, when you pass data around, the type of the data will decide whether you’re passing copies of the value or a reference to the value’s location in the computer’s memory.
+换句话说，在 Solidity 中，当你传递数据时，数据的类型将决定你是在传递值的副本还是对计算机内存中的值的引用。
 
 ![Value Types and Reference Types in Solidity](https://lh6.googleusercontent.com/Nj0wt2rDWoanEGT3onBaNxJEnoBp-7NXBrXdL07SO1qbj6PYiE-fhz2zGId-AuGqLiMMHCJIwYbEMYp5oKebmhMudnOhhM_-ZRkLBiatMR6zgcpAPbMDl4hqlLr4UJYa061Plha044IqX_pqeWnx5V1P53dYxopqlddIFmj7qHnXAclPKdLy4XYuwkeGlA)
 

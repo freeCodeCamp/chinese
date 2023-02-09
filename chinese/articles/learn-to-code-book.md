@@ -2274,247 +2274,247 @@ This will make you unlikable to the people around you. And if it's somehow captu
 
 Never lose sight of how much you have. And how much you have to lose.
 
-### Use the Narrator Trick
+### 使用讲述者技巧
 
-I'll close this chapter with a little trick I use to pump myself up.
+在这一章节的最后，让我来分享一个给自己打气的小技巧。
 
-First, remember that you are the hero in your own coding journey. In the theater of your mind, you are the person everyone's watching – the one they are rooting for.
+首先，请记住，你是你自己编码之旅中的英雄。 在你的脑海中，每个人都在关注你——他们都支持你。
 
-The Narrator Trick is to narrate your actions in your head as you do them.
+讲述者技巧是，当你在执行一系列操作时，在脑海中讲述你的动作。
 
-> Quincy strides across the hackerspace, his laptop tucked under his arm. He sets his mug under the hot water dispenser and drops in a fresh tea bag. He pulls back the lever. And as the steaming water fills his mug, he says aloud in his best British accent: "Tea. Earl Grey. Hot."
->
-> His energizing beverage in hand, he slides into a booth, squares his laptop on the surface, and catches the glance of a fellow developer. They lock eyes for a second. Quincy bows his head ever-so-slightly, acknowledging the dev's presence. The dev bows back, almost telepathically sharing this sentiment: "I see you friend. I see you showing up. I see you getting things done."
+> Quincy 大步穿过黑客空间，他的笔记本电脑夹在胳膊下。 他将马克杯放在热水器下面，然后放入一个新鲜的茶包。 他拉动拉杆。 当热气腾腾的水装满他的杯子时，他用他最好的英国口音大声说道：“茶。 伯爵茶。 热的。”
+> 
+> 他手里拿着提神饮料，钻进一个隔间，将笔记本电脑平放在桌面上，并瞥见了一位开发者的目光。 他们对视了一会儿。 Quincy 微微地点头，承认了开发者的存在。 开发者也点头回应，仿佛是在心灵感应般地分享着这种情绪：“我看到你了，朋友。 我看到你出现了。 我看到你把事情做好了。”
 
-This may sound ridiculous. Why yes, it is ridiculous. But I do it all the time. And it works.
+这可能听起来很荒谬。 当然啦，这是很荒谬的。 但我一直这样做。 而且还很有效。
 
-Narrating even the most mundane moments of your life in your head can help energize you. Crystalize the moment laid out before you, and give you clarity of purpose.
+即使是在脑海中讲述生活中最平凡的时刻，也能帮助你充满活力。 将摆在你面前的时刻具体化，可以使你的目的明确。
 
-And this works even better when you think of your life in terms of eras ("the Taco Bell years"). Or inflection points ("passing the GED exam").
+而当你以时代为单位思考你的生活时（"塔可钟时代"），这就更有效了。 或者拐点（"通过高考"）。
 
-What does this have to do with building your reputation? Your reputation is essentially the summary of who you are. What you mean to people around you.
+这与建立你的声誉有什么关系？ 你的声誉本质上是你是谁的总结。 你对周围的人意味着什么。
 
-By taking yourself more seriously, by thinking about your life as a movie, you're gradually working through who you are. And who you one day want to be.
+通过更认真地对待自己，通过把你的生活想象成一部电影，你会逐渐了解你是谁。 以及你有一天想成为的人。
 
-By narrating your actions, you shine a brighter light on them in your own mind. Why did I just do that? What was I thinking? Was there a better move there?
+通过讲述你的行为，你可以在自己的脑海中照亮它们。 我为什么要那样做？ 我在想什么？ 在这里有更好的举动吗？
 
-So many people sabotage their reputations without even realizing it, just because they've settled into bad habits.
+很多人都在不知不觉中破坏了自己的声誉，只是因为他们养成了坏习惯。
 
-For years I thought I had to be "funny" all the time. I would find any opportunity to inject some self-deprecating humor. A lot of people realized what I was doing and found it amusing. But a lot of them didn't understand, and just got the impression I was a jerk.
+多年来，我一直认为我必须一直“有趣”。 我会找任何机会加入一些自嘲的幽默。 很多人意识到我在做什么，觉得很好玩。 但他们中的很多人不明白，只是觉得我是个混蛋。
 
-Why did I do that? I think it went back to grade school, when I was always trying to be the class clown and make people laugh.
+我为什么要那样做？ 我想这可以追溯到小学，那时我总是想成为班上的小丑，逗别人笑。
 
-But decades later, this reflex to fill silence with laughter was not serving me well.
+但几十年后，这种用笑声来填补沉默的条件反射对我来说并不合适。
 
-> "When you repeat a mistake, it's not a mistake anymore. It's a decision." – Paulo Coelho
+> “当你重复地犯一个错误时，它就不再是错误了。 它是一项决定。” – Paulo Coelho
 
-I might have gone on much longer without noticing this bad habit. But with the Narrator Trick, the awkwardness of my behavior was laid bare.
+如果我没有注意到这个坏习惯，我可能会坚持更长时间。 但是有了讲述者技巧，我行为的尴尬就暴露无遗了。
 
-I'm sure I've got lots of other ways of thinking and ways of doing things that are suboptimal. And with the help of the Narrator Trick, I'm hoping to identify them in the future and refine them, before they give people the wrong impression.
+我确信我有很多其他的思维方式和行为方式都不是最理想的。 在讲述者技巧的帮助下，我希望将来能够发现它们并加以完善，以免给人留下错误的印象。
 
-### Your Reputation Will Become Your Legacy.
+### 你的声誉将成为你的传奇。
 
-Think about who you want to be at the end of your story. How you want people to think of your time on Earth. Then work backward from there.
+想想看在你的故事的结尾，你想成为谁。 你希望人们如何看待你在地球上的时间。 然后从那里向后推进。
 
-The person you want to be at the end of the movie. That hero you want people to admire. Why not start carrying yourself like that now?
+电影结尾你想成为的那个人。 你希望人们钦佩的那个英雄。 为什么不从现在就开始这样装扮自己呢？
 
-Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+你能想象成为一名成功的开发者会是什么样子吗？ 开发出了人们依赖的软件系统？
 
-That future you – how would they think? How would they approach situations and solve problems? How would they talk about their accomplishments? Their setbacks?
+那个未来的你——他们会怎么想？ 他们将如何处理情况和解决问题？ 他们会如何谈论他们的成就？ 他们的挫折？
 
-Merely thinking about your future self can help you clarify your thinking. Your priorities.
+仅仅想一想未来的自己，就能帮助你理清思路。 你的优先事项。
 
-I often think of "Old Man Quincy", with his bad back. He has to excuse himself to run to the toilet every 30 minutes.
+我经常考虑“Quincy 老头”和他不是很好的腰。 他每隔 30 分钟就得借口跑去上厕所。
 
-But Old Man Quincy still tries his best to work with what he has. He moves in spite of sore joints. He ponders in spite of a foggy mind.
+但 Quincy 老头仍然尽力为自己的事业尽力。 尽管关节酸痛，他还是能动。 尽管头脑一片模糊，他还是在思考。
 
-Old Man Quincy still wants to get things done. He's proud of what he's accomplished, but he doesn't spend much time looking back. He looks forward at what he's going to do that day, and what goals he's going to accomplish.
+Quincy 老头还是想把事情做好。 他为自己所取得的成就感到自豪，但他并没有花太多时间回顾过去。 他期待那天他要做什么，以及他要完成什么目标。
 
-I often think about Old Man Quincy, and work backward to where I am today.
+我经常想起 Quincy 老头，然后倒回到今天。
 
-What decisions can I make today that will set me up for being someone worthy of admiration tomorrow? Do I have to wait decades to earn that reputation? Or can I borrow some of that respect from the future?
+我今天可以做出哪些决定，使我明天成为值得钦佩的人？ 我必须等上几十年才能赢得那个声誉吗？ 或者我可以从未来借用一些尊重吗？
 
-By thinking like my future self might think, can I make moves that earn me a positive reputation in the present?
+通过像我未来的自己那样思考，我可以采取一些行动来为我赢得现在的正面声誉吗？
 
-I believe that you can leverage your future reputation – your legacy – right now. Just think in terms of your future self and what you'll accomplish. And use that as a waypoint to guide you forward.
+我相信你现在可以利用你未来的声誉——你的传承。 想想你未来的自己和你将取得的成就。 并将其用作引导你前进的路标。
 
-I hope that these tools – the Narrator Trick and the visualizing your future self trick – help you not only think about the nature of reputation. I hope they also help you take concrete steps toward improving your reputation.
+我希望这些工具——讲述者技巧和想象你未来的自我技巧——不仅能帮助你思考声誉的本质。 我希望它们也能帮助你采取具体步骤来提高你的声誉。
 
-Because building a reputation – making a name for yourself – is the surest path to sustainable success as a developer.
+因为建立声誉——让自己名声大噪——是作为开发人员获得可持续成功的最可靠途径。
 
-Success can mean many things to many people. But most people – from most cultures – would agree: one big aspect of success is putting food on the table for yourself and your family.
+对很多人来说，成功可能意味着很多事情。 但来自大多数文化的大多数人都会同意：成功的一个重要方面是为自己和家人提供食物。
 
-And that's what we're going to talk about next.
+这就是我们接下来要讨论的内容。
 
-## Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search
+## 第 4 章：如何通过编写代码获得报酬——自由职业客户和求职
 
-If you've been building your skills, your network, and your reputation, then getting a developer job is not all that complicated.
+如果你一直在培养自己的技能、人脉和声誉，那么获得一份开发人员的工作并没有那么复杂。
 
-Note that I said it's not complicated – it's still a lot of work. And it can be a grind.
+请注意，我说的是并不复杂——工作量仍然很大。 并且这可能是一种折磨。
 
-First, let me tell you how I got my first job.
+首先，让我告诉你我是如何找到第一份工作的。
 
-### Story Time: How Did a Teacher in His 30s Get His First Developer Job?
+### 故事时间：一位 30 多岁的老师是如何获得第一份开发人员工作的？
 
-*Last time on Story Time: Quincy hit the hackathon circuit hard, even winning a few of the events. He was building his reputation as a developer who was "dangerous" with JavaScript. Not super skilled. Just dangerous...*
+*上次的故事时间：Quincy 在黑客马拉松赛道上表现出色，甚至赢得了一些赛事。 他正在建立自己作为一名使用 JavaScript 的“危险”开发人员的声誉。 不是超级熟练。 只是危险...*
 
-I had just finished a long day of learning at the Santa Barbara downtown library, sipping tea and building projects.
+我刚刚在圣巴巴拉市中心的图书馆结束了漫长的一天学习、喝茶和做项目。
 
-The best thing about living in California is the weather. We'd joke that when you rented an exorbitantly-priced one-bedroom apartment in the suburbs, you were not paying for the inside – you were paying for the outside.
+住在加利福尼亚最好的事情就是天气。 我们开玩笑说，当你在郊区租了一套价格过高的单居室公寓时，你不是在为室内买单——你是在为室外买单。
 
-My goal was to spend as little time in that cramped 100-year old rat trap as necessary, and to spend the rest out walking around town.
+我的目标是尽可能少地呆在那个狭窄的、有 100 年历史的老鼠窝里，利用剩下的时间就在城里四处走走。
 
-It was a beautiful Wednesday evening. I still had two more days to prepare for that weekend's hackathon. And my brain was completely fried from the day of coding. My wife was working late, so I checked my calendar to find something to do.
+那是一个美丽的星期三晚上。 我还有两天时间准备那个周末的黑客马拉松。 我的大脑因为那一天的编码而乱成一团。 我妻子工作到很晚，所以我查看了日历，想找点事做。
 
-On the first Monday of each month, I would map out all that month's upcoming tech events around southern California, so I'd always have a tech event I could attend if I had the energy.
+在每个月的第一个星期一，我会规划南加州当月即将举行的所有科技活动，所以如果我有精力的话，我总会找到一个我可以参加的科技活动。
 
-Ah – tonight is the Santa Barbara Ruby on Rails meetup, and I had already RSVP'd.
+啊——今晚是圣巴巴拉 Ruby on Rails 聚会，我已经回复了。
 
-I didn't know a lot about Ruby on Rails, but I had completed a few small projects with it. I was much more of a JavaScript and Python developer.
+我对 Ruby on Rails 了解不多，但我用它完成了几个小项目。 更多的时候，我是一名 JavaScript 和 Python 开发人员。
 
-But I figured, what the heck. I need to keep up my momentum with building my network. And the venue was just a few blocks away.
+但是我想，管他呢。 我需要保持建立人脉的势头。 并且会场就在几个街区之外。
 
-I walked in and it was just a few devs sitting around a table chatting. It quickly became clear that they all worked together at a local startup, maintaining a large Ruby on Rails codebase. Most of them had been working there for several years.
+我走进去，只有几个开发人员围坐在桌子旁聊天。 我很快发现，他们都在当地的一家初创公司工作，一起维护着一个庞大的 Ruby on Rails 代码库。 他们中的大多数人已经在那里工作了几年。
 
-Now at this point, I'd spent the past year building my skills, my network, and my reputation. So I was able to hold my own during the conversation.
+在这一点上，我在过去的一年里建立了我的技能、我的人脉和我的声誉。 所以我能够在谈话中保持自己的身份。
 
-But I also had a feel for the limits of my abilities. So I stayed modest. Understated. The way I'd seen so many other successful developers maneuver a conversation at tech events.
+但我也意识到自己能力的局限性。 所以我保持谦虚的态度。 低调。 我见过许多其他成功的开发人员在技术活动中操纵对话的方式。
 
-It became clear that one of the developers at the table was the Director of Engineering. He reported directly to the CTO.
+很明显，会议桌上的一位开发人员是工程总监。 他直接向 CTO 汇报。
 
-And then it became clear that they were looking to hire Ruby on Rails developers.
+然后很明显，他们正在寻找 Ruby on Rails 开发人员。
 
-I was candid about my background and my abilities. "My background is in adult education. Teaching English and running schools. I just started learning to code about a year ago."
+我对自己的背景和能力持坦率态度。 “我的背景是成人教育。 教英语和办学。 我大约一年前才开始学习编码。”
 
-But he was surprisingly unfazed. "Well if you want to come in for an interview, we can see whether you'd be a good fit for the team."
+但出乎意料的是，他毫不在意。 “行吧，如果你想过来面试，我们可以看看你是否适合这个团队。”
 
-That night I walked home feeling an electricity. It was much more dread than excitement.
+那天晚上，我走在回家的路上，感觉浑身像是通了电似的。 那是一种恐惧，而不是兴奋。
 
-I felt nowhere near ready. And I wasn't even looking for a job. I was just living off my savings, learning to code full-time, with health insurance through my wife's job.
+我觉得还没有准备好。 而且我甚至没有在找工作。 我只是靠积蓄过活，全职学习编码，并通过我妻子的工作获得健康保险。
 
-I was a compulsive saver. People would give me a hard time about it. I would change my own oil, cut my own hair, and even cook my own rice at home when we ordered takeout – just to save a few bucks.
+我是一个强迫性储蓄者。 人们会因此而为难我。 我会自己换机油，自己剪头发，甚至在叫外卖的时候自己在家煮米饭——只是为了省几块钱。
 
-Over the decade that I'd worked as a teacher, I'd managed to save nearly a quarter of my after-tax earnings. And I would buy old video games on Craigslist, then flip them on eBay. That may sound silly, but it was a substantial source of income for me.
+在我当老师的十年间，我成功地存下了将近四分之一的税后收入。 我会在 Craigslist 上购买旧的游戏，然后在 eBay 上出售它们。 这听起来可能很愚蠢，但这对我来说是一个重要的收入来源。
 
-What were we saving all this for? We weren't sure. Maybe to buy a house in California at some point in the future? But it meant that I did not have to hustle to get a job. I knew I was in a privileged position, and I tried to make the most of it by learning more every day.
+我们存这一切是为了什么？ 我们不确定。 也许将来某个时候在加利福尼亚买房子？ 但这意味着我不必为找工作而忙碌。 我知道我处于一个特权位置，我试图通过每天学习更多来充分利用它。
 
-So in short, I didn't think I was ready for my first developer job. And I was worried that if they hired me, it would be a big mistake. They would realize how inexperienced I was, fire me, and then I'd have to explain that failure during future job interviews.
+所以简而言之，我认为我还没有为我的第一份开发人员工作做好准备。 我担心如果他们雇用我，那将是一个大错误。 他们会意识到我是多么缺乏经验，解雇我，然后我必须在以后的工作面试中解释失败的原因。
 
-Of course, I now know I was looking at this opportunity the wrong way. But let me finish the story.
+当然，我现在知道我错误地看待了这个机会。 但是让我把这个故事讲完。
 
-When I scheduled my job interview, they asked me for a résumé. I wasn't sure what to do, so I left all my professional experience there. All the schools I'd worked for over the years. (I left off my time running the drive-thru at Taco Bell.)
+当我申请安排面试的时候，他们找我要简历。 我不知道该怎么做，所以我把我所有的专业经验都写在了那里。 这些年来我工作过的所有学校。 （我故意遗漏了在 Taco Bell 得来速工作的时间。）
 
-Of course, none of my work experience had anything to do with coding. But what was I supposed to do, hand them a blank sheet of paper?
+当然，我的工作经验都与编码无关。 但我该怎么办，递给他们一张白纸？
 
-Well, I did have an online portfolio of projects I'd built. And most importantly, I had a list of all the hackathons I'd won or placed in. So I included those.
+好吧，我确实有一个我构建的线上项目组合。 最重要的是，我有一份我赢得或参加的所有黑客马拉松的清单。 所以我包括了那些。
 
-I spent the final hours before the interview revisiting all the Ruby on Rails tutorials I'd used over the past year, to refresh my memory. And then I put on my hoody, jeans, and backpack, and walked over to their office.
+在面试前的最后几个小时，我重温了过去一年中使用过的所有 Ruby on Rails 教程，以刷新记忆。 然后我穿上连帽衫、牛仔裤和背包，走到他们的办公室。
 
-The office manager was a nice lady who took me back to the developer bullpen and introduced me to their small team of devs. There were maybe a dozen of them, most of them dressed in jeans and hoodies, aged from early 20s to late 40s. Two of them were women.
+办公室经理是一位和蔼可亲的女士，她带我到开发人员分区，并将我介绍给他们的小型开发团队。 他们大概有十几个人，大多数穿着牛仔裤和连帽衫，年龄从 20 出头到 40 出头。 其中两人是女性。
 
-I took turns navigating the tangle of desks and cables, shaking hands with each of them and introducing myself. This is where all my experience as a classroom teacher memorizing student names came in handy. I was able to remember all their names, so that later in the day when I left I could follow up with each of them: "Great meeting you [name]. I'd be excited to work alongside you."
+我轮流在乱七八糟的桌子和电缆中穿行，与他们每个人握手并自我介绍。 这是我作为课堂老师记住学生名字的所有经验都派上用场的地方。 我能够记住他们所有的名字，所以在那天晚些时候当我离开时，我可以跟他们每个人道别：“很高兴见到你，[名字]。 期待能和你一起工作。”
 
-First I met with the director of engineering. We went into a small office and closed the door.
+首先我会见了工程总监。 我们走进一间小办公室，关上了门。
 
-A whiteboard on the wall was covered in sketches of Unified Modeling Language (UML) diagrams. A rainbow of dry-erase marker laid out the relationships between various servers and services.
+墙上的白板上写满了统一建模语言（UML）图的草图。 彩虹般的马克笔列出了各种服务器和服务之间的关系。
 
-I kept glancing at that whiteboard, fearing that he'd send me over to it to solve some sort coding problems and demonstrate my skills. Maybe the famous fizzbuzz problem? Maybe he'd want me to invert a binary tree?
+我一直盯着那块白板，担心他会派我去解决一些编码问题并展示我的技能。 也许是著名的 fizzbuzz 问题？ 也许他想让我反转二叉树？
 
-But he never even mentioned the whiteboard. He just sat there looking intensely at me the whole time.
+但他甚至从未提到过白板。 他只是坐在那里，一直盯着我看。
 
-They were a company of about 50 employees, with lots of venture capital funding, and thousands of paying customers – mostly small businesses. They prided themselves on being pragmatic. At no point did they inquire about what I studied in school, or what kind of work I did in the past. All they really cared about was...
+他们是一家约有 50 名员工的公司，拥有大量风险投资资金和数以千计的付费客户——主要是小企业。 他们以务实为荣。 他们从来没有问过我在学校学的是什么，或者我过去做过什么工作。 他们真正关心的是...
 
-"Look. I know you can code," he said. "You've been coding this whole time, winning hackathons. I checked out some of your portfolio projects. The code quality was OK for someone who's new to coding. So for me, the real question is – can you learn how we do things here? Can you work with the other devs on the team? And most critically: can you get things done?"
+“听着。 我知道你会写代码，”他说。 “你一直在写代码，赢了黑客马拉松。 我检查了你的一些组合项目。 对于刚接触编码的人来说，代码质量还可以。 所以对我来说，真正的问题是——你能了解我们在这里是如何做事的吗？ 你能和团队中的其他开发人员一起工作吗？ 最关键的是：你能把事情做好吗？”
 
-I gulped, leaned forward, and mustered all the confidence I could. "Yes," I said. "I believe I can."
+我咽了咽口水，身体前倾，尽我所能地鼓起信心。 “可以，”我说。 “我相信我可以。”
 
-And he said, "Good. Good. OK. Go wait in the Pho restaurant downstairs. [The CTO] should be down there in a minute."
+他说：“很好。 很好。 可以。 去楼下的越南米粉餐厅等着。 [CTO 的名字] 应该马上就过去。”
 
-So I talked with the CTO over noodles. Mostly listened. I'd learned that people project intelligence on quiet people. Listening intently not only helps you get smarter – it even makes you looks smarter.
+于是和 CTO 边吃边聊。 主要是听。 我了解到人们会将智慧投射到安静的人身上。 专心聆听不仅可以帮助你变得更聪明，甚至可以让你看起来更聪明。
 
-And the approach worked. The meeting lasted about an hour. The noodles were tasty. I learned a lot about the company history, and the near-term goals. The CTO said, "OK go back up and talk with [the director of engineering]."
+这种方法奏效了。 会议持续了大约一个小时。 米粉很好吃。 我学到了很多关于公司历史和近期目标的知识。 CTO 说，“好的，回去和 [工程总监] 谈谈。”
 
-And I did. And he offered me a job.
+我也这样做了。 然后他给了我一份工作。
 
-Now, I want to emphasize. This is not how most people get their first developer job.
+现在，我要强调。 这不是大多数人获得第一份开发人员工作的方式。
 
-You're probably thinking, "Gee, here Quincy is Forest Gumping his way into a developer job that he wasn't even looking for. If only we could all be so lucky"
+你可能在想，“哎呀，Quincy 只是随便做做，就得到了他甚至都没有寻找过的开发人员工作。 要是我们都能这么幸运就好了”
 
-And that's certainly what it felt like for me at the time. But in the next section, I'm going to explore the relationship between employers and developers. And how me landing that job was less about my skills as an interviewee, and more about the year of coding, networking, and reputation building that preceded it.
+这当然就是我当时的感觉。 但在下一节中，我将探讨雇主与开发者之间的关系。 我如何找到那份工作，与其说是我作为面试者的技能，不如说是之前一年的编码、人脉和声誉建设的成果。
 
-This wasn't a cushy job at a big tech company, with all the compensation, benefits, and company bowling alleys. It was a contractor role that paid about the same as I was making as a teacher.
+这不是一份轻松的工作，在一家大型的科技公司，有着丰厚的薪酬、福利和公司保龄球馆。 这是一个合同工的角色，薪水与我作为老师的薪水大致相同。
 
-But it was a developer job. A company was paying me to write code.
+但这是一项开发工作。 一家公司付钱让我写代码。
 
-I was now a professional developer.
+我现在是一名专业的开发人员了。
 
-### What Employers Want
+### 雇主想要什么
 
-Flash forward a decade. I have now been on both sides of the table. I've been interviewed by hiring managers as a developer. I've interviewed developers as a hiring manager.
+转眼间十年过去了。 我现在已经在桌子的两边都坐过了。 我作为开发者接受过招聘经理的面试。 我也以招聘经理的身份面试过开发人员。
 
-I've spent many hours on calls with developers who are in the middle of the job search. Some of them have applied to hundreds of jobs and gotten only a few "call-backs" for job interviews.
+我花了很多时间与正在找工作的开发人员通电话。 他们中的一些人已经申请了数百份工作，但只收到了几次面试的“回电”。
 
-I've also spent many hours on calls with managers and recruiters, trying to better understand how they hire and what they look for.
+我还花了很多时间与经理和招聘人员通电话，试图更好地了解他们如何招聘以及他们在寻找什么。
 
-I think much of the frustration developers feel about the hiring process comes down to a misunderstanding.
+我认为开发人员对招聘过程感到沮丧的大部分原因，都归结为误解。
 
-Employers value one thing above all else: predictability.
+雇主最看重一件事：可预测性。
 
-Which of these candidates do you think an employer would prefer?
+你认为雇主会喜欢哪位候选人？
 
-**X** is a "rockstar" 10x coder who often has flashes of genius. X also has bursts of incredible productivity. But X is often grumpy with colleagues, and often misses deadlines or meetings.
+**X** 是拥有十倍效率的“摇滚明星”天才程序员。 X 还具有令人难以置信的生产力。 但 X 经常对同事脾气暴躁，还经常错过最后期限或会议。
 
-**Y** is an OK coder, and has slower but more consistent output. Y gets along fine with colleagues, and rarely misses meetings or deadlines.
+**Y** 是一个不错的程序员，输出速度较慢但更始终如一。 Y 与同事相处融洽，很少错过会议或截止日期。
 
-**Z** is similar to Y in output, and able to get along well with colleagues and meet deadlines. But Z has changed jobs 3 times in the past 3 years.
+**Z** 在输出上与 Y 相似，能够与同事和睦相处，按时完成任务。 但是 Z 在过去 3 年里换了 3 次工作。
 
-OK, you can probably guess from everything I've said up to this point: **Y** is the preferred candidate. And that is because employers value predictability above all else.
+好吧，你可能会从我到目前为止所说的一切中猜到：**Y** 是首选候选者。 这是因为雇主最看重可预测性。
 
-**X** is a trap candidate that some first-time managers may make the mistake of hiring. If you are curious why hiring X would be such a bad idea, read [We fired our top talent. Best decision we ever made.](https://www.freecodecamp.org/news/we-fired-our-top-talent-best-decision-we-ever-made-4c0a99728fde/)
+**X** 是一些新任经理可能会在招聘时犯的错误的陷阱候选人。 如果你好奇为什么雇用 X 会是一个糟糕的主意，请阅读 [我们解雇了我们的顶尖人才。 我们做出的最佳决定。](https://www.freecodecamp.org/news/we-fired-our-top-talent-best-decision-we-ever-made-4c0a99728fde/)
 
-I only added **Z** to this list to make a point: try not to change jobs too often.
+我将 **Z** 添加到此列表只是为了说明一个观点：尽量不要过于频繁地更换工作。
 
-You can increase your income pretty quickly by laddering from employer to employer. You can start applying for new jobs the moment you accept an offer letter. But this will repel many hiring managers.
+你可以通过从雇主到雇主的阶梯式跳跃快速增加收入。 接受录用通知后，你就可以开始申请新工作。 但这会遭到许多招聘经理的排斥。
 
-After all, the rolling stone gathers no moss. You will be in and out of codebases before you have the time to understand how they work.
+毕竟滚石不生苔。 你会进入然后退出代码库，还没来得及了解它们的工作原理。
 
-Consider this: it can take 6 months or longer for a manager to bring a new developer up to speed, to the point where they can be a net positive for the team.
+考虑一下：经理可能需要 6 个月或更长时间才能让新开发人员跟上速度，让他们可以为团队带来正向收入。
 
-Until that point, the new hire is essentially a drain on company resources, absorbing time and energy from their peers who have to onboard them, help them find their way around a codebase, and fix their bugs.
+在那之前，新员工本质上是在消耗公司资源，从同事那里吸收时间和精力，而同事必须让他们入职，帮助他们找到解决代码库的方法，并修复他们的错误。
 
-### Most Employers are Risk Averse
+### 大多数雇主都厌恶风险
 
-Let's say a manager hires the wrong developer. Take a moment to think about how bad that can be for the team.
+假设一个经理雇用了错误的开发者。 花点时间想象一下，这对团队来说会有多糟糕。
 
-On average, it takes about 3 months to fill a developer position at a company. Employers have to first:
+平均而言，填补一家公司的开发人员职位需要大约 3 个月的时间。 雇主必须首先：
 
-- get the budget to hire a developer approved by their bosses
-- create the job description
-- post the job on job sites and communicate with recruiters
-- sift through résumés – many of which will be low-effort from candidates who are blindly applying to as many jobs as possible
-- start the interviewing process, which may involve flying the candidates out to the city and lodging them in a hotel
-- rounds of interviews involving lots of other team members. For some employers, this is a multi-day affair
-- selecting a final candidate, and negotiating an offer...
-- which many candidates will not accept anyway
-- signing contracts and onboarding the employee
-- giving them access to sensitive internal systems
-- introducing them to their teammates, and making sure everyone gets along OK
-- and then months of informal training, when the employee needs to understand a service or a part of a legacy codebase
-- steeping them in the team's way of doing things
+- 获得预算，来雇佣一个已经被老板批准的开发人员
+- 编写职位描述
+- 在求职网站上发布职位并与招聘人员沟通
+- 筛选简历——其中许多都是盲目申请尽可能多的工作的求职者的低成本努力
+- 开始面试过程，这可能涉及让候选人飞到当前城市并住在酒店
+- 涉及许多其他团队成员的多轮面试。 对于一些雇主来说，这是一个为期数天的事情
+- 选择最终候选人，并谈判报价......
+- 许多候选人无论如何都不会接受
+- 签订合同和帮员工入职
+- 给与让他们访问敏感的内部系统的权限
+- 将他们介绍给他们的队友，并确保每个人都相处得很好
+- 然后是几个月的非正式培训，让员工了解一项服务或遗留代码库的一部分
+- 让他们沉浸在团队的做事方式中
 
-In short – a lot of work.
+简而言之——大量的工作。
 
-Now imagine that after doing all that, the new employee says "Hey, I just got a higher offer from this other company. Peace out, yo."
+现在想象一下，在完成所有这些之后，新员工说：“嘿，我刚刚从另一家公司得到了更高的薪资。 拜拜了，您嘞。”
 
-Or imagine that the employee is unreliable, and often shows up hours after the workday has started.
+或者想象该员工并不可靠，经常在工作开始后几个小时才出现。
 
-Or imagine that the employee struggles with untreated drug, alcohol, or gambling addiction, anger issues – or just turns out to be a passive aggressive person who undermines the team.
+再想象一下，该员工与未经许可的药物、酒精或赌博成瘾、愤怒问题作斗争——或者只是被发现是一个争强好斗、破坏团队的人。
 
-Now you have to start this entire process over again, and search for a new candidate for the position.
+现在你必须重新开始整个过程，并为该职位寻找新的候选人。
 
-Hiring is hard.
+招聘是很难的。
 
-So you can see why employers are risk averse. Many of them will pass over seemingly qualified candidates until they find someone whom they feel 99% sure about.
+所以你可以明白为什么雇主厌恶风险。 他们中的许多人会忽略看似合格的候选人，直到找到他们认为有 99% 把握的人。
 
 ### 因为雇主非常厌恶风险，所以求职者受苦
 

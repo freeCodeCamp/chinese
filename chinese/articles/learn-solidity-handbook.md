@@ -36,22 +36,22 @@
 11. [什么是合约状态？](./#what-is-contract-state)
 12. [状态可变性关键字(modifiers)](./#state-mutability-keywords-modifiers-)
 13. [数据位置 – storage, memory, and stack](./#data-locations-storage-memory-and-stack)
-14. [How typing works](#how-typing-works)
-15. [Solidity data types](#solidity-data-types)
-16. [How to declare and initialize arrays in Solidity](#how-to-declare-and-initialize-arrays-in-solidity)
-17. [What are function modifiers?](#what-are-function-modifiers)
-18. [Error handling in Solidity - require, assert, revert](#error-handling-in-solidity-require-assert-revert)
-19. [Inheritance in Solidity](#inheritance-in-solidity)
-20. [Inheritance with constructor parameters](#inheritance-with-constructor-parameters)
-21. [Type conversion and type casting in Solidity](#type-conversion-and-type-casting-in-solidity)
-22. [How to work with floating point numbers in Solidity](#how-to-work-with-floating-point-numbers-in-solidity)
-23. [Hashing, ABI encoding and decoding](#hashing-abi-encoding-and-decoding)
-24. [How to call contracts and use the fallback function](#how-to-call-contracts-and-use-the-fallback-function)
-25. [How to send and receive Ether](#how-to-send-and-receive-ether)
-26. [Solidity libraries](#solidity-libraries)
-27. [Events and logs in Solidity](#events-and-logs-in-solidity)
-28. [Time logic in Solidity](#time-logic-in-solidity)
-29. [Conclusion and further resources](#conclusion-and-further-resources)
+14. [类型是如何工作的](./#how-typing-works)
+15. [Solidity 数据类型](./#solidity-data-types)
+16. [如何在 Solidity 中声明和初始化数组](./#how-to-de 如何发送和接收 Etherclare-and-initialize-arrays-in-solidity)
+17. [什么是函数修饰器？](./#what-are-function-modifiers)
+18. [Solidity 中的错误处理 - require, assert, revert](./#error-handling-in-solidity-require-assert-revert)
+19. [Solidity 中的继承](./#inheritance-in-solidity)
+20. [带有构造函数参数的继承](./#inheritance-with-constructor-parameters)
+21. [Solidity 中的类型转换](./#type-conversion-and-type-casting-in-solidity)
+22. [如何在 Solidity 中处理浮点数字](./#how-to-work-with-floating-point-numbers-in-solidity)
+23. [哈希、ABI 编码和解码](./#hashing-abi-encoding-and-decoding)
+24. [如何调用合同和使用回退函数](./#how-to-call-contracts-and-use-the-fallback-function)
+25. [如何发送和接收 Ether](./#how-to-send-and-receive-ether)
+26. [Solidity 库](./#solidity-libraries)
+27. [Solidity 中的事件和日志](./#events-and-logs-in-solidity)
+28. [Solidity 中的时间逻辑](./#time-logic-in-solidity)
+29. [总结和更多资源](./#conclusion-and-further-resources)
 
 <h2 id="who-is-this-handbook-for">这本手册是为谁而写的<h2>
 
@@ -396,7 +396,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 和 `calldata` 一样，`code` 也是只读的。如果你理解了上一段，你就会明白为什么！
 
-## How Typing Works
+<h2 id="how-typing-works">类型是如何工作的</h2>
 
 类型（typing）是编程中一个非常重要的概念，因为它是我们为数据提供结构的方式。 从该结构中，我们可以以安全、一致和可预测的方式对数据运行操作。
 
@@ -467,7 +467,7 @@ JavaScript 已经具有[内置类型](https://www.w3schools.com/js/js_datatypes.
 
 现在，只要记住 Solidity 是静态类型的，这意味着每个变量的类型必须在代码中声明的时候明确指定。你可以将类型结合起来，形成更复杂的复合类型。 接下来，我们可以讨论其中的一些内建类型。
 
-## Solidity Data Types
+<h2 id="solidity-data-types">Solidity数据类型</h2>
 
 内置于语言中并开箱即用的类型通常被称为`基本类型(primitives)`。它们是语言固有的。您可以组合基本类型以形成更复杂的数据结构，这些数据结构成为自定义数据类型。
 
@@ -574,7 +574,7 @@ Solidity 中的值类型和引用类型
 
 映射有一个有趣的 `陷阱`。 与你可以将键值数据结构作为参数传递给函数的其他语言不同，Solidity 不支持将映射作为参数传递给函数，除非函数可见性被标记为 `internal(内部)`。 因此，你无法写出接收键值对作为参数的外部（externally）或公共可调用函数（publicly callable function）。
 
-## How to Declare and Initialize Arrays in Solidity
+<h2 id="how-to-declare-and-initialize-arrays-in-solidity">如何在Solidity中声明和初始化数组</h2>
 
 Solidity 有两种类型的数组，所以了解它们的声明和初始化的不同方式是很有用的。
 
@@ -608,7 +608,7 @@ Solidity 中的两种主要数组类型是固定大小的数组和动态大小�
 
 这也会影响到你的代码设计，也会受到影响。你是需要存储中的数组还是只需要在内存中的数组？。
 
-## What are Function Modifiers?
+<h2 id="what-are-function-modifiers">什么是函数修饰器？</h2>
 
 在编写函数时，我们经常会收到需要对这些输入进行某种验证、检查或其他逻辑的输入，然后再进行其他的业务逻辑。
 
@@ -638,7 +638,7 @@ Solidity 中的两种主要数组类型是固定大小的数组和动态大小�
 
 装饰器是打包逻辑片段的好方法，可以在各种智能合约中重复使用，共同为你的 dApp 提供支持。重用逻辑使你的代码更容易阅读、维护和推理。这就是[DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself)（不要重复自己）的原则。
 
-## Error Handling in Solidity - Require, Assert, Revert
+<h2 id="error-handling-in-solidity-require-assert-revert">Solidity中的错误处理 - require, assert, revert</h2>
 
 Solidity 中的错误处理可以通过一些不同的关键字和操作来实现。
 
@@ -686,7 +686,7 @@ Solidity 中的错误处理可以通过一些不同的关键字和操作来实�
 
 在上面的例子中，我们使用了一次 revert，其中有一个需要两个特定参数的自定义错误，然后我们又使用了一次 revert，只有一个字符串错误数据。无论哪种情况，区块链状态都会被还原，未使用的 gas 将被返回给调用者。
 
-## Inheritance in Solidity
+<h2 id="inheritance-in-solidity">Solidity 中的继承</h2>
 
 [继承（Inheritance）](https://www.freecodecamp.org/news/inheritance-in-java-explained/)是面向对象编程（OOP）中的一个强大概念。我们不会在这里讨论什么是 [OOP](https://www.freecodecamp.org/news/object-oriented-concepts/) 的细节。但是，在编程中理解继承的最好方法是把它看作是一种方式，通过导入和嵌入，代码片段从其他代码片段 `继承`数据和函数。
 
@@ -765,7 +765,7 @@ Solidity 允许开发者改变父合约中的函数在派生合约中的实现�
 
 还值得注意的是，当一个合约继承自一个或多个父合约时，区块链上只会创建一个（组合）合约。 编译器有效地将所有其他合约及其父合约等编译成一个单一的编译合约（称为 `flattened(扁平化)`合约）。
 
-## Inheritance with Constructor Parameters
+<h2 id="inheritance-with-constructor-parameters">带有构造函数参数的继承</h2>
 
 一些构造函数指定了输入参数，因此它们需要你在实例化智能合约时向其传递参数。
 
@@ -779,7 +779,7 @@ Solidity 允许开发者改变父合约中的函数在派生合约中的实现�
 
 这不是必须的，但却是一个非常常见的模式。关键的一点是，在父合约构造函数期望数据被传递给它们的地方，我们需要在实例化子合约的时候提供它们。
 
-## Type Conversion and Type Casting in Solidity
+<h2 id="type-conversion-and-type-casting-in-solidity">Solidity中的类型转换</h2>
 
 有时我们需要将一种数据类型转换为另一种。当我们这样做的时候，我们需要在转换数据时非常小心，让转换后的数据如何被计算机理解。
 
@@ -841,7 +841,7 @@ Solidity 允许开发者改变父合约中的函数在派生合约中的实现�
 
 Solidity 类型转换和类型转换还有更多的内容，你可以在 [本文](https://betterprogramming.pub/solidity-tutorial-all-about-conversion-661130eb8bec) 中深入了解一些细节的内容。
 
-## How to Work with Floating Point Numbers in Solidity
+<h2 id="how-to-work-with-floating-point-numbers-in-solidity">如何在Solidity中处理浮点数字</h2>
 
 Solidity 并不处理小数点。这在将来可能会改变，但目前你无法真正处理像 93.6 这样的 fixed（浮动）点数字。事实上，在您的 Remix IDE 中输入`int256 floating = 93.6;`会出现类似的错误: Type rational _const 468 / 5 is not implicitly convertible to expected type int256._
 
@@ -869,7 +869,7 @@ Solidity 并不处理小数点。这在将来可能会改变，但目前你无�
 
 上述除法操作的结果是 1.5，但这有一个小数点，Solidity 目前不支持。因此，Solidity 智能合约会返回非常大的数字，通常是小数点后 18 位，这超过了 JavaScript 的处理能力。因此，您需要在您的前端使用[Ethersjs](https://docs.ethers.io)这样的 JavaScript 库来适当地处理这个问题，这些库为[BigNumber](https://docs.ethers.io/v5/api/utils/bignumber/)类型实现辅助函数。
 
-## Hashing, ABI Encoding and Decoding
+<h2 id="hashing-abi-encoding-and-decoding">哈希、ABI编码和解码</h2>
 
 当你更多地使用 Solidity 时，你会看到一些听起来很奇怪的术语，如散列(hashing)、ABI 编码和 ABI 解码。
 
@@ -919,7 +919,7 @@ EVM 在比特和字节上运行计算。因此，编码是[将结构化输入数
 
 因此，编码的目的是将数据转换成 EVM 处理数据所需的字节数据类型。而解码则把它带回到可读的结构化数据中，以便我们的开发人员可以使用。
 
-## How to Call Contracts and Use the Fallback Function
+<h2 id="how-to-call-contracts-and-use-the-fallback-function">如何调用合同和使用回退函数</h2>
 
 根据智能合约的设计和其中存在的可见性指定器(visibility specifiers)，该合约可以被其他智能合约或外部拥有的账户所交互。
 
@@ -973,7 +973,7 @@ EVM 在比特和字节上运行计算。因此，编码是[将结构化输入数
 
 回退函数的目的是在没有其他函数可以处理的情况下处理对合同的调用。如果回退被标记为 `payable`，回退函数也将使智能合约能够接收以太币（尽管这不是回退函数的推荐用途）。我们将在下一节介绍这个问题
 
-## How to Send and Receive Ether
+<h2 id="how-to-send-and-receive-ether">如何发送和接收 Ether</h2>
 
 要从你的智能合约中发送以太币到目标合约，你需要使用以下三种内置的 Solidity 方法之一来调用目标合约：`transfer`, `send` 或 `call`。
 
@@ -1022,7 +1022,7 @@ Solidity 通过检查调用者发送的事务中的 `msg.data` 字段来匹配�
 
 因此，任何将 Ether 转移到智能合约都需要接收智能合约具有可以接收它的 `支付`函数。 至少，接收智能合约需要一个`payable(回退)`函数，尽管 `payable` `receive` 函数是接收 Ether 付款的更好方法。
 
-## Solidity Libraries
+<h2 id="solidity-libraries">Solidity库</h2>
 
 在任何编程语言中，库指的是一系列的辅助和实用函数，这些函数被设计为可在多个代码库中重复使用。这些函数解决了特定的、反复出现的编程问题。
 
@@ -1065,7 +1065,7 @@ Solidity 中的库具有超越代码重用的优势。 在区块链上一次性�
 
 第二种方法使用 Solidity `using`关键字。表达式`return num1.add(num2);`将`WeirdMath`库的 add 函数应用于`num1`变量。这与把它作为`self`传入是一样的，它是 add 函数的第一个参数。
 
-## Events and Logs in Solidity
+<h2 id="events-and-logs-in-solidity">Solidity中的事件和日志</h2>
 
 智能合约可以发出事件。这些事件包含你这个开发者指定的数据片段。
 
@@ -1129,7 +1129,7 @@ When working in Remix you can also inspect the Events in the console as shown be
 
 您也可以在您的前端应用程序中使用诸如 EtherJs 库来[监听事件](https://docs.ethers.io/v5/getting-started/#getting-started--events) 和[过滤历史事件](https://docs.ethers.io/v5/getting-started/#getting-started--history)。当您的应用程序需要对区块链上的事件做出反应时，这两点都很有用。
 
-## Time Logic in Solidity
+<h2 id="time-logic-in-solidity">Solidity中的时间逻辑</h2>
 
 Solidity 中的时间是与被添加到区块链的每个区块有关的。
 
@@ -1153,7 +1153,7 @@ Solidity 支持直接引用以下时间单位: seconds, minutes, hours, days, an
 
 这也是可以配置 [Chainlink Automation](https://docs.chain.link/chainlink-automation/introduction/) 的一种方式，这是一种自动执行智能合约的去中心化方式。 Chainlink 去中心化预言机网络可以配置为自动触发您的智能合约，您可以通过检查条件（包括与时间相关的条件）来运行各种自动化。 这些被广泛用于空投、促销、特殊奖励、赚取收益等。
 
-## Conclusion and Further Resources
+<h2 id="conclusion-and-further-resources">总结和更多资源</h2>
 
 祝贺你! 您已经完成了这个史诗般的旅程。如果你花时间消化了这本手册，并在 Remix IDE 中运行了一些代码，你现在已经接受了 Solidity 的培训。
 

@@ -38,7 +38,7 @@
 13. [数据位置 – storage, memory, and stack](./#data-locations-storage-memory-and-stack)
 14. [类型是如何工作的](./#how-typing-works)
 15. [Solidity 数据类型](./#solidity-data-types)
-16. [如何在 Solidity 中声明和初始化数组](./#how-to-de 如何发送和接收 Etherclare-and-initialize-arrays-in-solidity)
+16. [如何在 Solidity 中声明和初始化数组](./#how-to-declare-and-initialize-arrays-in-solidity)
 17. [什么是函数修饰器？](./#what-are-function-modifiers)
 18. [Solidity 中的错误处理 - require, assert, revert](./#error-handling-in-solidity-require-assert-revert)
 19. [Solidity 中的继承](./#inheritance-in-solidity)

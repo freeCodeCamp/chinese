@@ -26,16 +26,16 @@
 1. [这本手册是为谁而写的](./#who-is-this-handbook-for)
 2. [必要的前置知识](./#essential-prior-knowledge)
 3. [Solidity 是什么?](./#what-is-solidity)
-4. [什么是智能合约？](#what-is-a-basic-smart-contract)
-5. [How to declare variables and functions in Solidity?](#how-to-declare-variables-and-functions-in-solidity)
-6. [Variable scope in Smart Contracts](#variable-scope-in-smart-contracts)
-7. [How visibility specifiers work](#how-visibility-specifiers-work)
-8. [What are constructors?](#what-are-constructors)
-9. [Interfaces and abstract contracts](#interfaces-and-abstract-contracts)
-10. [Smart contract example #2](#smart-contract-example-2)
-11. [What is contract state?](#what-is-contract-state)
-12. [State mutability keywords (modifiers)](#state-mutability-keywords-modifiers-)
-13. [Data locations – storage, memory, and stack](#data-locations-storage-memory-and-stack)
+4. [什么是智能合约？](./#what-is-a-basic-smart-contract)
+5. [怎样在 Solidity 中声明变量和函数](./#how-to-declare-variables-and-functions-in-solidity)
+6. [智能合约中的变量作用域](./#variable-scope-in-smart-contracts)
+7. [可见性说明符是如何工作](./#how-visibility-specifiers-work)
+8. [什么是构造函数?](./#what-are-constructors)
+9. [接口和抽象合约](./#interfaces-and-abstract-contracts)
+10. [智能合约实例 2](./#smart-contract-example-2)
+11. [什么是合约状态？](./#what-is-contract-state)
+12. [状态可变性关键字(modifiers)](./#state-mutability-keywords-modifiers-)
+13. [数据位置 – storage, memory, and stack](./#data-locations-storage-memory-and-stack)
 14. [How typing works](#how-typing-works)
 15. [Solidity data types](#solidity-data-types)
 16. [How to declare and initialize arrays in Solidity](#how-to-declare-and-initialize-arrays-in-solidity)
@@ -110,7 +110,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
    与其他程序不同，智能合约应用程序即使在程序不运行时也会保持其状态。数据与应用程序一起存储在区块链中，这意味着区块链网络中的每个节点都维护并同步区块链上的数据和智能合约的本地副本。
    状态变量（State variables）就像传统应用程序中的数据库`存储（storage）`，但由于区块链需要在网络中的所有节点之间同步状态，因此使用存储可能非常昂贵(消耗比较多的 gas)！ 稍后会详细介绍。
 
-## How to Declare Variables and Functions in Solidity
+<h2 id="how-to-declare-variables-and-functions-in-solidity">怎样在Solidity中声明变量和函数</h2>
 
 让我们拆解一下 `HotFudgeSauce` 智能合约，以便我们更多地了解每个小部分。
 
@@ -142,7 +142,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 常量的值必须在代码本身中硬编码，而不可变的变量的值可以设置一次，一般是通过构造函数中的赋值（我们很快会谈论构造函数，我保证）。你可以在 [这里的文档](https://docs.soliditylang.org/en/v0.8.16/contracts.html#constant-and-immutable-state-variables) 中阅读更多内容。
 
-## Variable Scope in Smart Contracts
+<h2 id="variable-scope-in-smart-contracts">智能合约中的变量作用域</h2>
 
 智能合约可以访问三个变量作用域（scopes）：
 
@@ -160,7 +160,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 ![Annotated image showing state variables, local variables and global variables in a smart contract](https://lh4.googleusercontent.com/Z9wk7BXxi-669WmSamT25cV88_RK-psGJvCA69vUxgpcs2_EzJFzLZJOitQlsuSl_AD-LdRylCaKh4Iumo_tVHmft2mtKofDu4qZfWQ8Z7BhdZ-6g4B6JAwLF57gMi-osCSDocgyE6kdqMCL4uxjBtpzjMf6rlLM0Ja6w4ndaIxEZhE3YsxmDY1BIWOwnA)
 
-## How Visibility Specifiers Work
+<h2 id="how-visibility-specifiers-work">可见性说明符是如何工作</h2>
 
 使用 `visibility(可见性）`这个词有点令人困惑，因为在公共区块链上，几乎所有东西都是 `visibility(可见性）`，因为透明度是一个关键特征。但是，在这种情况下，`visibility(可见性）` 意味着一段代码被另一段代码看到和访问的能力。
 
@@ -194,7 +194,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 这就是它们与公共函数（public functions）的不同之处，公共函数也可以从声明它们的合约内部调用，而外部函数则不能。
 
-## What are Constructors?
+<h2 id="what-are-constructors">什么是构造函数?</h2>
 
 构造函数(constructor)是一种特殊类型的函数。在 Solidity 中，它是可选的，只在合约创建时执行一次。
 
@@ -237,7 +237,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 如果你在脑子里想一下，你会发现它什么也没做，这就是为什么它可以被排除在外（做成隐式 implicit），编译器将使用默认的构造函数。
 
-## Interfaces and Abstract Contracts
+<h2 id="interfaces-and-abstract-contracts">接口和抽象合约</h2>
 
 一个[solidity 中的接口](https://docs.soliditylang.org/en/develop/contracts.html#interfaces)是一个需要理解的基本概念。以太坊上的智能合约是可以公开查看的，因此你可以通过它们的函数（functions）与它们交互（interact）（在可见性说明符 允许你这样做的范围内！）。
 
@@ -280,7 +280,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 - 接口不能有构造函数，而抽象合约可以。
 - 接口不能有状态变量，而抽象合约可以。
 
-## Smart Contract Example #2
+<h2 id="smart-contract-example-2">智能合约实例2</h2>
 
 在接下来的几个 Solidity 概念中，我们将使用下面这个智能合约。这部分是因为这个例子包含了一个在现实世界中实际使用的智能合约。我选择它也是因为我对 Chainlink 实验室有明显的偏爱，因为我在那里工作（😆），而且它很酷。但它也是我学到很多 Solidity 的地方，用真实世界的例子来学习总是更好。
 
@@ -316,7 +316,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 既然你已经了解了接口，我建议你看看 Chainlink Labs 的 [GitHub repo](https://github.com/smartcontractkit/)，看看[`Aggregator`合约](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.6/AggregatorProxy.sol#L211)中实现的 `latestRoundData()` 函数以及 `AggregatorV3Interface` 如何 [提供接口](https://github.com/smartcontractkit/chainlink/blob/develop/contracts/src/v0.8/interfaces/AggregatorV3Interface.sol#L22) 与 `Aggregator` 合约交互。
 
-## What is Contract State?
+<h2 id="what-is-contract-state">什么是合同状态</h2>
 
 在我们进一步进行之前，重要的是要确保我们将对你对经常看到的术语的理解。
 
@@ -330,7 +330,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 2. 区块链相关的全局变量在那一刻有什么值，以及
 3. 智能合约账户中的余额（如果有的话）
 
-## State Mutability Keywords (Modifiers)
+<h2 id="state-mutability-keywords-modifiers-">状态可变性关键字(modifiers)</h2>
 
 现在我们已经讨论了状态、状态变量和函数，让我们来理解 Solidity 的关键字，这些关键字限定了允许我们对状态做什么。
 
@@ -342,7 +342,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 请注意，不存储变量的变量（即在特定函数范围内声明和使用的局部变量）不需要状态修饰器。这是因为它们实际上不是智能合约状态的一部分。它们只是该函数内部局部状态（local state）的一部分。根据定义，它们是可修改的，不需要对它们的可修改性进行控制。
 
-## Data Locations – Storage, Memory, and Stack
+<h2 id="data-locations-storage-memory-and-stack">数据位置 – storage, memory, and stack</h2>
 
 在以太坊和基于 EVM 的链上，系统内的数据可以放在一个以上的 `数据位置(data location)` 中并被访问。
 

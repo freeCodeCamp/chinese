@@ -23,10 +23,10 @@
 
 ## Table of Contents
 
-1. [Who is this handbook for?](#who-is-this-handbook-for)
-2. [Essential prior knowledge](#essential-prior-knowledge)
-3. [What is Solidity?](#what-is-solidity)
-4. [What is a smart contract?](#what-is-a-basic-smart-contract)
+1. [这本手册是为谁而写的](./#who-is-this-handbook-for)
+2. [必要的前置知识](./#essential-prior-knowledge)
+3. [Solidity 是什么?](./#what-is-solidity)
+4. [什么是智能合约？](#what-is-a-basic-smart-contract)
 5. [How to declare variables and functions in Solidity?](#how-to-declare-variables-and-functions-in-solidity)
 6. [Variable scope in Smart Contracts](#variable-scope-in-smart-contracts)
 7. [How visibility specifiers work](#how-visibility-specifiers-work)
@@ -53,7 +53,7 @@
 28. [Time logic in Solidity](#time-logic-in-solidity)
 29. [Conclusion and further resources](#conclusion-and-further-resources)
 
-## Who Is This Handbook For?
+<h2 id="who-is-this-handbook-for">这本手册是为谁而写的<h2>
 
 这本手册是为那些有兴趣探索 [Web3 背后的愿景](https://chain.link/education/web3)，并希望获得实现该愿景所必需的紧缺技能的人编写的。
 
@@ -67,13 +67,13 @@
 
 只要你有一台联网的笔记本电脑和的浏览器，你就能运行 Solidity 代码。您可以在浏览器中使用 [Remix](https://www.youtube.com/watch?v=JWJWT9cwFbo&list=PLVP9aGDn-X0QwJVbQvuKr-zrh2_DV5M6J&index=47) 来编写本手册中的代码。不需要其他 IDE!
 
-## Essential Prior Knowledge
+<h2 id="essential-prior-knowledge">必要的前置知识</h2>
 
 我还假设你知道 [区块链技术的基础知识](https://blog.chain.link/what-is-blockchain/)，特别是你了解 [以太坊的基础知识](https://www.youtube.com/watch?v=NsyFGzhktYA&list=PLVP9aGDn-X0QwJVbQvuKr-zrh2_DV5M6J&index=49) 和 [什么是智能合约](https://chain.link/education/smart-contracts)（提示：它们是运行在区块链上的程序，获得特殊信任最小化的好处！）。
 
 你不太可能需要它们来理解本手册。但实际上，拥有一个像 [Metamask](https://metamask.io/) 这样的浏览器钱包，并了解[以太坊合约账户和外部拥有的账户之间的区别](https://info.etherscan.com/understanding-ethereum-accounts/)将有助于你从本手册中获得最大收益。
 
-## What is Solidity?
+<h2 id="what-is-solidity">Solidity 是什么?</h2>
 
 现在，让我们先来了解一下什么是 Solidity。Solidity 是一种受 C++、JavaScript 和 Python 影响的 [面向对象编程语言](https://www.freecodecamp.org/news/what-is-object-oriented-programming/)。
 
@@ -83,7 +83,7 @@ Solidity 被设计为被编译（从人类可读的代码转换为机器可读�
 
 你可以在[我制作的这个视频](https://www.youtube.com/watch?v=Z7UNjk_roXI&t=1052s)中获得关于 EVM 和字节码的基本介绍。
 
-## What is a Smart Contract?
+<h2 id="what-is-a-basic-smart-contract">什么是智能合约？</h2>
 
 这里有一个简单的智能合约，可以开箱即用。它可能看起来没什么用，但你会从这一点上了解到很多 Solidity 的知识！你可以在这里找到很多关于 Solidity 的信息。
 

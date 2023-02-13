@@ -1,155 +1,158 @@
-> -  原文地址：[What is XSS? How to Protect Your Website from DOM Cross-Site Scripting Attacks](https://www.freecodecamp.org/news/how-to-protect-against-dom-xss-attacks/)
-> -  原文作者：[Andrej Kovacevic](https://www.freecodecamp.org/news/author/andrej/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[What is XSS? How to Protect Your Website from DOM Cross-Site Scripting Attacks](https://www.freecodecamp.org/news/how-to-protect-against-dom-xss-attacks/)
+> - 原文作者：[Andrej Kovacevic](https://www.freecodecamp.org/news/author/andrej/)
+> - 译者：Papaya HUANG
+> - 校对者：
 
 ![What is XSS? How to Protect Your Website from DOM Cross-Site Scripting Attacks](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/xss-code-case.jpg)
 
-**Website security issues** and vulnerabilities are a global problem as cyber security vulnerabilities are increasing. We have seen a major rise in the average number of these cases in the past few years, and 2021 saw an all-time high.
+**网站安全**和漏洞是一个全球性问题，网络安全漏洞正在增加。过去几年，这类案件的平均数量有了显著增长，2021 年达到了历史最高水平。
 
-So in this tutorial, we are going to talk about DOM XSS cross-site scripting security issues and what impact they can have on your data. Make sure you read till the end. Let's begin by brushing up on some basics about DOM XSS cross-site script security.
+因此，在本教程中，我们将讨论 DOM XSS 跨站脚本安全问题以及它们对数据产生的影响。请务必阅读到最后。让我们从复习 DOM XSS 跨站脚本安全的基础知识开始。
 
-## What is Cross-Site Scripting?
+## 什么是跨站脚本?
 
-Cross-site scripting, also called XSS, is a [website security issue](https://www.wix.com/blog/2022/01/website-security/) that compromises user information and data when those people use a vulnerable application. The attacker can use this to circumvent the origin policy, which separates two websites from one another.
+跨站脚本（也称为 XSS）是一种[网站安全问题](https://www.wix.com/blog/2022/01/website-security/)，当用户使用脆弱的应用程序时，会危害用户信息和数据。攻击者可以利用此漏洞绕过同源策略，该策略将两个网站彼此隔离。
 
-Attackers may use XSS to pretend to be a user, perform actions that a user would, and gain access to the user’s information. This can also allow the attackers to gain full access to the user’s information if they have permissions and privileges. It can also take over the complete actions and performance of the website if this continues.
+攻击者可能会利用 XSS 假装自己是用户，执行用户将会执行的操作，并获取用户的信息。如果攻击者拥有权限和特权，攻击者便可以完全访问用户的信息。持续恶化下去，攻击者还可以接管网站的整个操作和性能。
 
-To help you better understand these types of attacks, we are going to discuss some fundamentals of how XSS operates and what it does.
+为了帮助你更好地理解这些类型的攻击，我们将讨论 XSS 的运作原理和方法相关的基础知识。
 
-## How Does XSS Work?
+## XSS 如何运作?
 
-Cross-site scripting uses technology to manipulate a vulnerable site so that it sends dangerous JavaScript to users. This allows the attacker to gain complete access to the site when the script gains access to the user’s system. But the user needs to execute the JavaScript for this first.
+跨站脚本利用技术操纵脆弱网站，使其向用户发送危险的 JavaScript。这使攻击者能够在脚本获得用户系统访问权限时完全获得用户在网站的权限。但这一切的开始是用户执行 JavaScript。
 
-### Types of XSS Attacks
+### XSS 攻击的类型
 
-#### Reflected XSS:
+#### 反射型 XSS:
 
-This malicious script comes from the HTTP request. This is the most basic type of XSS attack, where an application could receive malicious data and reflect it immediately towards the user.
+这种恶意脚本来自 HTTP 请求。这是 XSS 攻击的最基本类型，在这种情况下，应用程序接收到恶意数据后立即向用户反映。
 
-The attacker’s payload must be part of the request sent to a server, which is then reflected and executed onto the user’s application.
+攻击者的负载必须是发送到服务器的请求的一部分，然后反映到用户的应用程序上并执行。
 
-One example of this would be an attacker convincing someone to click on a phishing link before it takes effect.
+其中一个例子是攻击者想方设法让某人点击钓鱼链接，然后攻击才生效。
 
-#### Stored XSS:
+#### 存储型 XSS:
 
-This malicious script comes from the database of the website. The attacker inputs the malicious request onto the server where it could stay permanently unless manually addressed.
+这种恶意脚本来自网站的数据库。攻击者在服务器上输入恶意请求，除非手动处理，否则它可能永久存在。
 
-For example, the attacker could input a malicious script into a comment field, which would be on display for everyone who visits the page. Even without directly engaging with the script, page visitors could fall victim to this attack.
+例如，攻击者可以在评论字段中输入恶意脚本，该脚本将对访问该页面的所有人显示。即使没有直接与脚本互动，页面访问者也可能成为此攻击的受害者
 
-#### DOM-based XSS:
+#### 基于 DOM 的 XSS:
 
-This more advanced vulnerability exists in client code and not on the server code. DOM-based XSS is neither reflected nor stored onto the server, but exists in a page’s Document Object Model (DOM). The web application reads the malicious code and executes it in the browser as part of the DOM, which is more difficult to detect as it doesn’t come through the server.
+这种是更高级的漏洞，它存在于客户端代码中的，而不是在服务器代码中。基于 DOM 的 XSS 既不是反射型的，也不存在于服务器上，而是存在于页面的文档对象模型(DOM)中。Web 应用程序读取恶意代码并将其作为 DOM 的一部分在浏览器中执行，这更难检测，因为它不通过服务器传递。
 
-The **security vulnerabilities** involved in DOM XSS attacks are a serious concern for most websites. We are going to talk about some of the most common risks that you have on open source web building platforms such as WordPress with regard to DOM - XSS hacks.
+基于 DOM 的 XSS 攻击中涉及的**安全漏洞**对于大多数网站来说是一个严峻的问题。我们将讨论一些开源 Web 构建平台（例如 WordPress）上最常见的基于 DOM 的 XSS 风险。
 
-This allows the attacker to execute malicious JavaScript code in the victim's browser, potentially allowing the attacker to steal sensitive information or perform other harmful actions on the victim's behalf.
+攻击者在受害者的浏览器中执行恶意 JavaScript 代码，窃取敏感信息或以受害者的名义执行其他有害的操作。
 
-Here is an example of a DOM-based XSS attack:
+以下是一个例子：
 
-```JavaScript
+```html
 <script>
- // This function is intended to take a user supplied URL and display it on the page
- function displayURL(url) {
-  // The URL is passed through innerHTML, which can execute JavaScript code
-  document.getElementById("display").innerHTML = url;
- }
+  //该函数接受一个用户提供的url并展示在页面
+  function displayURL(url) {
+    // URL通过innerHTML获得，执行JavaScript代码
+    document.getElementById('display').innerHTML = url;
+  }
 </script>
 
-<!-- User supplied input is passed to the displayURL function -->
+<!-- 用户的输入传递给displayURL函数 -->
 <p>Enter a URL to display: <input type="text" id="user-input" /></p>
 <button onclick="displayURL(document.getElementById('user-input').value)">
- Display URL
+  Display URL
 </button>
 
-<!-- The URL is displayed in this div -->
+<!-- URL在div中显示 -->
 <div id="display"></div>
 ```
 
-Remember that this tutorial is purely for educational purposes, to help you recognize and defend against XSS. You shouldn't use this information to perform any of these sorts of attacks.
+请注意本教程仅用于教学目的，帮助你识别和防护 XSS。你不可以复刻类似攻击。
 
-## DOM XSS – WordPress Vulnerabilities
+## DOM XSS – WordPress 漏洞
 
-The main target of DOM XSS attacks on WordPress is its users. Users enter their details, accounts, and site credentials to access their WordPress sites and this is what the DOM XSS attacks aim to compromise online. The attackers can use DOM XSS to get access to user information and details with a single click.
+WordPress 的 DOM XSS 攻击的主要目标是它的用户。用户输入他们的详细信息，帐户和网站凭证以访问他们的 WordPress 站点，这就是 DOM XSS 攻击试图在线损害的内容。攻击者可以使用 DOM XSS 获取用户信息和详细信息，只需点击一下。
 
-This also includes your cookies, information, and others, making it one of the most common **WordPress security vulnerabilities.**
+这也包括您的 cookies、信息等，使它成为最常见的 **WordPress 安全漏洞**。
 
-Following are some of the top WordPress website security issues you should bear in mind to ensure better cross-site script security.
+以下是您应该牢记的一些顶级 WordPress 网站安全问题，以确保更好的跨站脚本安全
 
-### Accessing a User's Private Information
+### 访问用户私人信息
 
-One of the most common WordPress security vulnerabilities involved with DOM XSS attacks is that attackers can gain useful information and even completely take over a user’s site. This can often make things escalate fast and cause complete data compromise.
+一个最常见的 WordPress 安全漏洞与 DOM XSS 攻击有关，攻击者可以获得有用的信息，甚至完全控制用户的网站。这通常会使事态迅速升级，导致完全数据泄露。
 
-### Impersonating a User
+### 假冒用户
 
-Attackers can pretend to be the user, to interact with the victim’s online users, clients, and customers to gain their information.
+攻击者可以假装是用户，与受害者的在线用户，客户互动，以获得信息。
 
-### Compromising a Site
+### 破坏网站
 
-Another common cross-site scripting security issue with websites is that these attacks can compromise the website and take access from the user. This includes displaying deviating content on the site (or content that is not originally from the site).
+另一个相关的 XSS 安全问题是，攻击者破坏网站并从用户那里夺取访问权限。这包括在网站上显示与原始网站不同的内容（或不是来自原始网站的内容）。
 
-Other cases may involve changing the way WordPress looks online. Other people may also exploit the website by installing explicit content.
+其他情况可能涉及改变 WordPress 在线的外观。其他人也可能通过安装特定工具使用网站。
 
-### Social Engineering
+### 社交工程
 
-In more severe cases, attackers may impact the WordPress site through phishing attempts. This is a common concern for web builder security vulnerabilities that we will discuss shortly.
+更严重的情况下，攻击者可能通过网络钓鱼影响 WordPress 网站。这是一个常见的网站构建平台安全漏洞，我们马上就要详细讨论。
 
-The impact of XSS cross script-security issues varies for each website. However, WordPress sites are usually at a higher risk of these kinds of compromises because users save their personal information on the website. The risk increases further if the user is an admin, as the attacker can compromise the complete WordPress site.
+XSS 跨站脚本安全问题对每个网站的影响各不相同。然而，WordPress 网站通常面临更高的风险，因为用户在网站上保存了个人信息。如果用户是管理员，风险进一步增加，因为攻击者可以破坏整个 WordPress 网站。
 
-## DOM XSS and Closed Code Web Builder Platforms
+## DOM XSS 和非开源网站构建平台
 
-Website builders such as Weebly, Squarespace, Webflow and Wix, unlike WordPress, are non-open source platforms. They allow users to intuitively create websites for their businesses via drag and drop DIY features without any coding or design experience. They also work hard to protect their users' security.
+不同于 WordPress，如 Weebly，Squarespace，Webflow 和 Wix 这类网站构建器是非开源平台。它们允许用户通过拖放式 DIY 功能，在没有任何代码或设计经验的情况下，直观地为业务创建网站。这些平台也努力保护用户的安全。
 
-There are tons of useful tools, options, easy-to-integrate dashboards, and hosting opportunities available for users instilling their trust in these platforms. Website security issues are of course a major concern for the majority of the users on these platforms.
+有大量有用的工具、选项、易于整合的仪表板和托管方式，供用户使用并信任这些平台。当然，网站安全问题对于这些平台的大多数用户来说是一个主要关注点。
 
-Many website builders try their best to protect the sites of their users from [hacker threats](https://techbullion.com/how-to-secure-your-online-store-from-hackers/). But out of all of the website builders available, I believe that Wix follows the NIST framework for cyber security the best and has become a major contributor to improvements in this field.
+许多网站构建器都在努力保护用户网站免受[黑客威胁](https://techbullion.com/how-to-secure-your-online-store-from-hackers/)。但是在所有可用的网站构建器中，我相信 Wix 在遵循 NIST 网络安全框架方面做得最好，并已成为该领域的重要贡献者。
 
-Wix protects users on their sites from being vulnerable to these kinds of attacks online with tools such as:
+Wix 使用如下工具保护用户不受这类攻击的影响：
 
--   Third-party updates that project against DOM XSS attacks
--   A secure Sockets Layer that protects against unwanted access for users on site
--   Round-the-clock secure web hosting which protects users against any kind of unwanted logins or phishing attempts.
--   Granting its users admin privileges, which restrict site access and control to the original owner only
--   Highlighting weak passwords and suggesting more difficult-to-decipher passwords.
+- 第三方更新项目，防止 DOM XSS 攻击
+- 安全的套接字层，防止网站上的用户被未经授权的访问
+- 全天候的安全网络托管，防止任何不需要的登录或网络钓鱼攻击
+- 只有给原始所有者控制和访问限制网站的管理员特权
+- 显示弱密码并建议更难解密的密码。
 
-## Ways to Protect Against XSS Attacks
+## 防御 XSS 攻击的方法
 
-Defending your system and users against XSS attacks often requires a multifaceted approach to ensure that your servers and applications are protected against various types of attacks.
+防御 XSS 攻击通常需要多维度的方法，以确保服务器和应用程序不受各种类型攻击的影响。
 
-The best way to defend against XSS attacks is to properly sanitize user input. This means making sure that any user input is properly encoded so that it cannot be interpreted as code by the browser.
+防御 XSS 攻击的最佳方法是适当地对用户输入进行清理。这意味着确保任何用户输入被正确编码，浏览器则不能将其解释为代码。
 
-Additionally, you can use a web application firewall (WAF) to help identify and block XSS attacks. It's also a good idea to keep your software and web applications up to date, as many XSS vulnerabilities can be mitigated by simply applying the latest security patches.
+此外，您可以使用 web 应用程序防火墙 (WAF) 来帮助识别和阻止 XSS 攻击。最好将软件和 web 应用程序保持在最新版本，因为许多 XSS 漏洞可以通过最新的安全补丁来解决。
 
-### Input Validation
+### 输入验证
 
-This programming technique ensures that only properly-formatted data can enter a software system. Websites can either allow or block certain values to ensure that no XSS can penetrate their servers.
+这种编程技巧确保只有格式正确的数据才能进入软件系统。网站可以允许或阻止某些值，以确保不会有 XSS 侵入其服务器。
 
-### Escaping or Encoding User Input
+### 转义或编码用户输入
 
-Encoding and escaping changes user input to make them safer for the system. Encoding replaces special characters with more harmless equivalents (for example, translating < to &lt;), while escaping adds special characters to protect against injection attacks.
+编码和转义将用户输入转换为更安全的形式。编码用更安全的等效物替换特殊字符（例如，将`<`转换为 `&lt`），而转义则添加特殊字符以防注入攻击。
 
-### Implementing a Content Security Policy (CSP)
+### 执行内容安全策略 (CSP)
 
-Content security policies help administrators mitigate XSS attacks by restricting the resources a page can load at a given time. These resources can include scripts and images that could potentially harm clients and servers.
+内容安全策略帮助管理员通过限制页面在特定时间内加载的资源来减轻 XSS 攻击的影响。这些资源可以包括可能损害客户端和服务器的脚本和图像。
 
-## Bottom Line
+## 底线
 
-DOM XSS cross-site scripting security issues are a serious concern for users on websites. But closed code web building platforms provide features like admin privileges, password best practices, 3rd party updates, and much more. These features make them a more secure website building option than many open code platforms.
+DOM XSS 跨站脚本安全问题对网站用户是一个严峻的问题。但是封闭的代码网站构建平台提供的，如：管理员权限、密码最佳实践、第三方更新等功能，使它们比许多开放代码平台更加安全。
 
-You can also prevent XSS attacks by filtering input once it arrives. You can do this by ensuring that only valid input is accepted.
+你可以通过过滤输入来防止 XSS 攻击。你也可以通过只接受有效输入来实现。
 
-When encoding data on output, the process should be done in HTTP responses so it will not be read as active content. More complex coding might be required, such as applying combinations of URL, JavaScript, CSS, and HTML encoding, depending on the context of output.
+输出时对数据进行编码，该过程应在 HTTP 响应中完成，以免被读取为活跃内容。根据输出的上下文，可能需要更复杂的编码，例如应用 URL，JavaScript，CSS 和 HTML 编码的组合。
 
-Keep response headers in check so browsers will have an appropriate interpretation of content.
+检查响应标头，以便浏览器对内容有适当的解释。
 
-Finally, use Content Security Policy (CSP) to minimize the severity of XSS attacks.
+最后，使用内容安全策略 (CSP) 来最大程度地降低 XSS 攻击的严重性。
 
+```html
+<meta
+  http-equiv="Content-Security-Policy"
+  content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';"
+/>
 ```
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline';">
-```
 
-This CSP will allow your website to load scripts and styles from the same origin (that is, your own website), but it will block scripts and styles from external sources. It will also allow the use of inline scripts and styles, but it will block eval() statements, which can be used to execute arbitrary code.
+CSP 允许网站从同一个源（即你自己的网站）加载脚本和样式，但它将阻止来自外部来源的脚本和样式。它还将允许使用内联脚本和样式，但阻止`eval（）`语句，因为这个语句可用于执行任意代码。
 
-Of course, this is just a simple example, and you can customize your CSP to suit your specific needs. For more information on how to use CSPs to defend against XSS attacks, you can refer to the Content Security Policy Level 2 specification.
+当然，这只是一个简单的例子，你可以根据自己的特殊需求自定义 CSP。有关如何使用 CSP 来防御 XSS 攻击的更多信息，你可以参考内容安全策略级别 2 规范。
 
-_Feature image via Unsplash (Florian Olivo)._
+_图片来自 Unsplash (Florian Olivo)._

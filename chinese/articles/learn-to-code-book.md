@@ -1,6 +1,6 @@
 > -  原文地址：[How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/learn-to-code-book/)
 > -  原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> -  译者：
+> -  译者：casey cui
 > -  校对者：
 
 ![How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
@@ -454,141 +454,161 @@ I didn't understand what he meant. "I'm learning how to use Emacs. Check it out.
 
 But Steve looked pensive. "That's cool and all. But you need a project. Always have a project. Then learn what you need to learn en route to finishing that project."
 
-Other than a few scripts I'd written for to help the teachers at my school, I had never finished anything. But I started to see what he was saying.
+我除了帮助学校的老师写的几个脚本之外，我从来没有完成过任何东西。但我开始明白他所说的是什么意思。
 
-And it started to dawn on me. All this time I had been trapped in tutorial hell, going in circles, finishing nothing.
+这一刻我恍然大悟了。一直以来，我都被困在教程的地狱里，兜兜转转，什么也没完成。
 
-Steve said, "I want you to build a project using HTML5. And next Saturday, I want you to present it at the hackerspace."
+史蒂夫说："我希望你用HTML5建立一个项目。下周六，我希望你在黑客空间（hackerspace）展示它。"
 
-I was mortified at his words. But I stood up straight and said. "Sounds like a plan. I'm on it."
+听到他的话，我感到很羞愧。但我站直了身子，对他说： "这个计划听起来不错。我这就开始做。"
 
-### Nobody Can Make You a Developer But You
+### 除了你，没有人可以让你成为一个开发者
 
-> "I'm trying to free your mind, Neo. But I can only show you the door. You're the one that has to walk through it." – Morpheus in the 1999 film The Matrix
+> "我试着解放你的心灵，尼奥。 但我只能带你到门口，你必须自己走过去。" （莫斐斯，1999年电影《黑客帝国》） 
 
-The next morning, I woke up extra early before work and googled something like "HTML5 tutorial." I already knew a lot of this from my previous time in tutorial hell. But instead of skipping ahead, I just slowed my roll and followed along exactly, typing every single command.
+第二天早上，我在上班前起得特别早，在网上搜索 "HTML5教程 "之类的东西。在之前的教程地狱中，我已经了解了很多相关知识。我没有跳过，而是放慢脚步，准确地跟着教程走，输入每一条命令。
 
-Usually once I finished a tutorial I would just go find another tutorial. But instead, I started playing with the tutorial's code. I had a simple idea for a project. I was going to make an HTML5 documentation page. And I was going to code it purely in HTML5.
+通常情况下，一旦我完成一个教程，我就会去找另一个教程。但是，我却开始玩起了教程中的代码。我对自己想做的项目有了初步的想法，我打算制作一个纯HTML5的文档页面。
 
-Let me explain HTML5 real quick. It's just a newer version of HTML, which has existed since the first webpages back in the 1990s.
+\---
 
-If a website was a body, HTML would be the bones. Everything else rests on top of those bones. (You can think of JavaScript as the muscles and CSS as the skin. But let's get back to the story.)
+如果你不知道什么是HTML5，让我快速地解释一下。它只是HTML的一个较新的版本，从20世纪90年代的第一个网页开始，它就已经存在了。
 
-I knew that in HTML, you could link to different parts of the same webpage by using ID properties. So I thought: what if I put a table of contents along the left hand side? Clicking the different items on the left would scroll down the page on the right to show those items.
+如果一个网站是一个身体，那么HTML就是骨头。其他一切都建立在这些骨骼之上。(你可以把JavaScript看作是肌肉，把CSS看作是皮肤）。
 
-Within half an hour, I had coded a rough prototype.
+让我们重新回到故事上来。
 
-But it was time to report for work at the school. The entire day, all I could think about was my project, and how I should best go about finishing it.
+\---
 
-I raced home, opened up my laptop, and spent the entire evening coding.
+我已经知道在HTML中，你可以通过使用ID属性链接到同一个网页的不同部分。所以我想：如果我沿着左手边放一个目录会怎么样？点击左边的不同选项（item），右边的页面就会相应地滚动并显示这些项目。
 
-I copied the official (and creative commons-licensed) HTML documentation directly into my page, "hard coding" it into the HTML.
+半个小时内，我就编出了一个粗略的原型。
 
-Then I spent about an hour on the CSS, getting everything to look right, and using absolute positioning to keep the sidebar in place.
+但是又到了去学校报到的时间了，我只好中断编程。整整一天，我所想的都是我的项目，以及我应该如何最好地完成它。 
 
-I made a point to make use of as many of HTML5's new "semantic" tags as I could.
+我飞快地跑回家，打开我的笔记本电脑，花了整整一个晚上来编码。
 
-And boom – project finished.
+我把官方和使用创作共用许可证 （Creative Commons license）的HTML文档直接复制到我的页面，把它 "硬编码 "到HTML中。
 
-A wave of accomplishment washed over me. I jogged to a nearby football field and ran laps around the field, celebrating. I did it. I finished a project.
+然后，我花了大约一个小时的时间在CSS上，让所有东西看起来都是正确的，并使用绝对定位来保持侧边栏的位置。
 
-And I decided right then and there: from here on out, everything I do is going to be a project. I'm going to be working toward some finished product.
+我尽可能多地使用了HTML5的新 "语义 "标签。
 
-The next evening I walked up to the podium, plugged in my laptop, and presented my HTML5 webpage. I answered questions from the developers there about HTML5.
+轰--项目完成了。 
 
-Sometimes I'd get something wrong, and someone in the audience would say, "that doesn't sound right – let me check the documentation."
+一股成就感涌上心头。我慢跑到附近的一个足球场，绕着球场跑了几圈，庆祝一下。我成功了，我完成了一个项目。 
 
-People weren't afraid to correct me. But they were polite and supportive. It didn't even feel like they were correcting me – it felt like they were correcting the public record – lest someone walk away with incorrect information.
+我当时就决定：从现在开始，我所做的一切都将成为一个项目。我将努力使它成为一个完成品。
 
-I didn't feel any of the anxiety that I might have felt giving a talk at a teacher in-service meeting.
+第二天晚上，我走到讲台上，插上我的笔记本电脑，展示了我的HTML5网页。我回答了在场的开发者们关于HTML5的问题。
 
-Instead I almost felt like I was part of the audience, learning alongside them.
+有时我会弄错一些东西，这时我会听到听众说，"这听起来不对--让我查查文档"。
 
-After all, these tools were new and emerging. We were all trying to understand how to use them together.
+人们并不害怕纠正我。但他们都很有礼貌，而且乐于提供支持。我甚至不觉得他们在纠正我，感觉他们比较像是在纠正公共记录，以免有人带着错误的信息离开。
 
-After my talk, Steve came up to me and said, "Not bad."
+我没有感到任何可能在在职教师会议上发表演讲的焦虑。
 
-I smiled for an awkwardly long time, not saying anything, just happy with myself.
+相反地，我几乎觉得自己是观众的一部分，与他们一起学习。
 
-Then Steve squinted and pursed his lips. He said: "Start your next project tonight."
+毕竟，这些都是新兴的开发工具。我们都在努力了解如何使用它们。 
 
-### Lessons from my Coding Journey
+我的演讲结束后，史蒂夫走过来对我说："还不错"。
 
-We'll check in on younger Quincy's coding journey in each of the following chapters. But now I want to break down some of the lessons here. And I want to answer some of the questions you may have.
+我尴尬地笑了很久，没有说什么，只是对自己很满意。
 
-### Why is Learning to Code so Hard?
+然后史蒂夫眯着眼睛，抿起嘴。他说： "今晚开始你的下一个项目"。
 
-Learning any new skill is hard. Whether it's dribbling a soccer ball, changing the oil on a car, or speaking a new language.
 
-Learning to code is hard for a few particular reasons. And some of these are unique to coding.
+### 我的编码之旅的经验教训
 
-The first one is that most people don't understand exactly what coding is. Well, I'm going to tell you.
+我们会在接下来的每一章中查看小昆西的编码之旅。但现在我想把这里的一些教训分解一下。我还想回答你可能有的一些问题。
 
-### What is coding?
 
-Coding is telling a computer what to do, in a way the computer can understand.
+### 为什么学习编码如此困难？
 
-That's it. That's all coding really is.
+学习任何新技能都是困难的。无论是运球，还是给汽车换油，或是说一门新的语言。
 
-Now, make no mistake. Communicating with computers is hard. They are "dumb" by human standards. They will do exactly what you tell them to do. But unless you're good at coding, they are probably not going to do what you **want** them to do.
+有几个特别的原因让学习代码如此困难，而其中一些是编码所特有的。
 
-You may be thinking: what about servers? What about databases? What about networks?
+第一个原因是，大多数人不明白编码到底是什么。那么，我这就来告诉你。
 
-At the end of the day, these are all controlled by layers of software. Code. It's code all the way down. Eventually you reach the physical hardware, which is moving electrons around circuit boards.
 
-For the first few decades of computing, developers wrote code that was "close to the metal" – often operating on the hardware directly, flipping bits from 0 to 1 and back.
+### 什么是编码？
 
-But contemporary software development involves so many "layers of abstraction" – programs running on top of programs – that just a few lines of JavaScript code can do some really powerful things.
+编码是用计算机能理解的方式告诉计算机要做什么。
 
-In the 1960s, a "bug" could be an insect crawling around inside a room-sized computer, and getting fried in one of the circuits.
+所谓的编码就仅仅是这样而已。 
 
-![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)The first computer bug, discovered in 1945, was a moth that got trapped in the panels of a room-sized calculator computer at Harvard. (Image: Public Domain)
+但你不要搞错了，与计算机沟通是很难的。按照人类的标准，它们很 "愚蠢"。它们会完全按照你的要求去做，但除非你擅长编码，否则它们可能不会做你“想”让它们做的事。 
 
-Today, we're writing code so many layers of abstraction above the physical hardware.
+你可能在想：那服务器呢？数据库呢？网络呢？
 
-That is coding. It's vastly easier than it has ever been in the past. And it is getting easier to do every year.
+归根结底，这些都是由一层层的软件控制的，而这些软件都是由代码所组成。从最上层
 
-I am not exaggerating when I say that in a few decades, coding will be so easy and so common that most younger people will know how to do it.
+一路往下都是代码所构成的，直到抵达最底层的物理硬件，也就是在电路板上移动的电子。
 
-## Why is learning to code still hard even in 2023?
+在计算机发展最初的几十年里，开发人员编写的代码是 "接近金属 "的，意思是他们通常是直接在硬件上操作，将比特从0翻转到1，再翻转回来。
 
-There are three big reasons why learning to code is so hard, even in 2023.
+但是，当代的软件开发涉及许多 "抽象层"——一个程序运行在另外的程序之上，仅仅几行JavaScript代码就可以完成一些非常强大的事情。
 
-1. The tools are still primitive
-2. Most people aren't good at handling ambiguity, and learning to code is ambiguous. People get lost.
-3. Most people aren't good at handling constant negative feedback. And learning to code is one brutal error message after another. People get frustrated.
+在20世纪60年代，一个 "bug" （虫子，也有程序错误的意思）可能是一只昆虫在一个房间大小的计算机中爬来爬去，并在其中一个电路中被烧毁。
 
-Now I'll discuss each of these difficulties in more detail. And I'll give you some practical strategies for overcoming each of them.
+![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)
 
-### The Tools are Still Primitive
+ 1945 年发现的史上第一个计算机虫子是一只飞蛾，它被困在哈佛大学一个房间大小的计算机的面板中。  (图片：Public Domain)
 
-![TNG-S4E19-171](https://www.freecodecamp.org/news/content/images/2023/01/TNG-S4E19-171.jpeg)A Possessed Barclay from Star Trek: The Next Generation, programming on the Holodeck.
+今天，我们编写的代码比物理硬件高出了许多抽象层。
 
-> "Computer. Begin new program. Create as follows. Work station chair. Now create a standard alphanumeric console positioned to the left hand. Now an iconic display console for the right hand. Tie both consoles into the Enterprise main computer core, utilizing neuralscan interface." - Barclay from Star Trek: The Next Generation, Season 4 Episode 19: "The Nth Degree"
+这就是编码。它比过去要容易得多。而且它每年都在变得更加容易。
 
-This is how people might program in the future. It's an example from my favorite science fiction TV show, Star Trek: The Next Generation.
+不夸张地说，几十年后，编码将变得如此简单和普遍，以至于大多数年轻人都会知道如何编码。
 
-Every character in Star Trek can code. Doctors, security officers, pilots. Even little Wesley Crusher (played by child actor Wil Wheaton) can get the ship's computer to do his bidding.
 
-Sure – one of the reasons everyone can code is that they live in a post-scarcity 24th-century society, with access to free high quality education.
+## 为什么即使在2023年，学习编码仍然很难？
 
-Another reason is that in the future, coding will be much, much easier. You just tell a computer precisely what to do, and – if you're precise enough – the computer does it.
+ 即使在2023年，学习编码也是如此困难，有三大原因。
 
-What if programming was as easy as just saying instructions to a computer in plain English?
+1. 工具仍然很原始
 
-Well, we've already made significant progress toward this goal. Think of our grandmothers, running between room-sized mainframe computers with stacks of punchcards.
+2. 大多数人不善于处理模棱两可的问题，而学习编码面对的就是这样的问题。人们常会迷失方向。
 
-![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)Working with a punchcard-based computer in the 1950s (Image: NASA)
+3. 大多数人不善于处理持续的负面反馈，而学习编码常常会收到一个又一个残酷的错误信息，会使人感到沮丧。
 
-It used to be that programming even a simple application would require meticulous instructions.
+现在我将更详细地一一讨论这些困难。我还会教你一些实用的策略来克服每一项困难。
 
-Here are two examples of a "Cesar Cypher", the classic computer science homework project.
 
-This is also known as "ROT-13" because you ROTate the letters by 13 positions. For example, A becomes N (13 letters after A), and B becomes O (13 letters after B).
+### 工具仍然是原始的
 
-I'm going to show you two examples of this program, both of which come from the Creative Commons-licensed Rosetta Code project.
+![tng-s4e19-171](https://www.freecodecamp.org/news/content/images/2023/01/TNG-S4E19-171.jpeg)
 
-First, here's the program in x86 Assembly:
+ 来自《星际迷航：下一代》着魔似的巴克利（Barclay）在全息甲板（Holodeck）上编程
+
+>   "计算机，开始新的程序，创建如下：工作站的椅子，现在创建一个标准的字母数字控制台，定位在左手；现在为右手创建一个标志性的显示控制台。将这两个控制台与企业主计算机核心相连，利用神经扫描界面。" ——巴克利，来自《星际迷航：下一代》第四季第19集："第N度"
+
+上面我拿了我最喜欢的科幻电视剧《星际迷航：下一代》中的一段作为例子，告诉你这就是人们在未来可能的编程方式。
+
+《星际迷航》中的每个角色都会编码。医生、保安人员、飞行员，甚至小韦斯利-克鲁舍（Wesley Crusher，由儿童演员威尔-惠顿扮演）也能让飞船上的计算机听从他的命令。
+
+当然，每个人都会编码的原因之一是他们生活在一个后稀缺的24世纪社会，可以获得免费的高质量教育。
+
+另一个原因是，在未来，编码会容易得多。你只需准确地告诉计算机要做什么，然后，如果你足够精确，计算机就会执行。 
+
+如果编程就像用简单的英语对计算机说指令一样容易呢？
+
+我们已经朝着这个目标取得了重大进展。想一想以前我们的祖母，她们在房间大小的大型计算机和成堆的打孔卡（punch cards）之间奔波。 
+
+![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)
+20世纪50年代使用打卡机的计算机（图片：NASA）
+
+过去，即使是一个简单的应用程序的编程也需要严谨的指令。
+
+这里有两个 "凯撒密码 "（Cesar Cypher）的例子，这是经典的计算机科学家庭作业项目。
+
+这也被称为 "ROT-13"，因为你将字母ROT了13个位置。例如，A变成N（A后13个字母），B变成O（B后13个字母）。 
+
+我将向你展示这个程序的两个例子，这两个例子都来自创作共用许可证的罗塞塔代码（Rosetta Code）项目。 
+
+首先，这是x86汇编中的程序：
 
 ```x86
 format 	ELF 	executable 3
@@ -647,7 +667,7 @@ exit: 	mov     eax,1		; syscall exit
 	int     80h
 ```
 
-And here's the same program in Python:
+下面是Python中的同一程序:
 
 ```python
 import string
@@ -671,15 +691,15 @@ if __name__ == "__main__":
         print(rot13(line), end="")
 ```
 
-Quite a bit simpler and easier to read, right?
+更简单，更容易阅读，对吗？
 
-And in the future it will be as simple as saying to your spaceship:
+ 而在未来，编码将像对你的宇宙飞船说的那样简单。
 
-"Computer. New program. Take each letter of the word I say and replace it with the letter that appears 13 positions later in the English alphabet. Then read the result back to me. The word is Banana."
+"计算机，开始新程序。把我说的每一个字母，替换成英语字母表中13个位置之后出现的字母，然后将结果读回给我。这个词就是 "香蕉"。
 
-And then your computer will say: "Onanan."
+然后你的电脑会说： "Onanan"。
 
-What we're doing is called "declarative programming." We're declaring "computer, you should do this." And the computer is smart enough (well-programmed enough) to understand our instructions and execute them.
+我们正在做的事情被称为 "声明式编程" （declarative programming）。我们在宣布 "计算机，你应该这样做"。而计算机足够聪明（编程足够好），能够理解我们的指令并执行它们。
 
 Here in 2023, the style of coding most of us are doing is "imperative programming." We're telling the computer exactly what to do, step-by-step.
 
@@ -1364,434 +1384,434 @@ But you don't need a time machine to do this. Because you already have a network
 
 They may be friends from your home town, or the colleagues of your parents. Any person you know from your past – however marginally – may be of help.
 
-So step one is to take full inventory of the people you know. Don't worry – I am not asking you to reach out to anyone yet, or tax your personal relationships.
+因此，第一步是对你认识的人进行全面盘点。请不要担心，我并不是要你现在就去接触任何人，也不是在考验你的人际关系。
 
-Think before you move. Formulate a strategy.
+三思而后行，先制定一个行动计划。
 
-First, let's inventory all the people you know.
+首先，让我们一起来列出所有你认识的人。
 
-### How to Build a Personal Network Board
+### 如何打造个人关系网看板
 
-You want to start by creating a list of people you know.
+从创建一个熟人清单开始。
 
-You could do this with a spreadsheet, or a Customer Relationship Management tool (CRM) like sales people use. But that's probably overkill for what we're doing here.
+你可以使用电子表格，也可以像销售人员那样使用客户关系管理工具（CRM）来做这件事。但就我们这里要做的事情而言，它们可能有点大材小用了。
 
-I recommend using a Kanban board tool like Trello, which is free.
+我推荐使用像 Trello 这样的看板工具，它是免费的。
 
-You're going to create 5 columns: "to evaluate", "to contact", "waiting for reply", "recently in contact", and "don't contact yet".
+你将创建五大列：“待评估”、“待联系”、“待回复”、“最近联系”、“暂不联系”。
 
-Then you're going to want to create labels, so you can classify people by how you know them. Here are some label ideas for you: "Childhood friend", "Friend of the family", "Former colleague", "Classmate", "Friends from Tech Events".
+然后创建标签，这样你就可以根据你对他们的了解程度对他们进行分类了。这里有一些可供你参考的标签想法："儿时好友"、"家庭的朋友"、"前同事"、"同学"、"参加技术活动认识的朋友"。
 
-Now you can start creating cards. Each card can just be their name, and if you have time you can add a photo to the card.
+现在你可以开始创建卡片了。每张卡片可以只有他们的名字，如果你有时间的话，可以在卡片上添加一张照片。
 
-Here is the Trello board I created to give you an idea of what this Personal Network Board might look like. I used characters from my favorite childhood movie, the 1989 classic Teenage Mutant Ninja Turtles.
+这是我创建的 Trello 看板，你可以从中得知个人关系网看板可能是什么样子的。我使用了我最喜欢的童年电影（1989 年的经典电影《忍者神龟》）中的人物。
 
-![Personal_Network_Board___Trello_--](https://www.freecodecamp.org/news/content/images/2023/01/Personal_Network_Board___Trello_--.png)My Personal Network Board with my friends from my side job fighting crime.
+<figure><img src="https://www.freecodecamp.org/news/content/images/2023/01/Personal_Network_Board___Trello_--.png"><figcaption>我的个人关系网看板：副业中一起打击犯罪的朋友们</figcaption></figure>
 
-You can go through your social media accounts – even your old school year books if you have them – and start adding people.
+你可以开始从你的社交媒体帐号，甚至你老旧的毕业纪念册（如果你有的话）添加联系人。
 
-Many of these people are not going to be of any help. But I recommend adding them for the sake of being comprehensive. You never know when you'll remember: "oh – so and so got a job at XYZ corp. I should reach out to them."
+他们中的许多人不会再有任何帮助。但为了全面起见，我建议你依然添加他们。你永远不知道什么时候你会想起："噢……某某在 XYZ 公司得到了一份工作，我应该与他们联系。"
 
-This process may take a day or two. But know that this is an investment. You'll be able to use this board for the rest of your career.
+这个过程可能要花一两天的时间。但要知道，这是一项投资。这个看板能够在你的职业生涯中为你所用。
 
-You may think "I don't need to do this – I already have a LinkedIn account." That might work OK, but LinkedIn is a blunt instrument. You want to maximize signal and minimize noise here. That's why I'm encouraging you to create this dedicated personal network board.
+你可能会认为“我不需要这样做，我已经有一个领英账户了”。这或许能行得通，但是领英又大又杂。但你想在这里让信号最大化，让噪音最小化。这也是我鼓励你创建这个专门的个人关系网看板的原因。
 
-As you add people to your board, you can label them. Take a moment to research each of these people. What are they up to these days? Do they have a job? Run a company?
+在你把人添加到你的看板的同时，还可以给他们贴上标签。花点时间来研究看板中的每一个人。他们这些天都在忙什么？他们有工作吗？还是在开公司？
 
-You can add notes to each card, as you discover new facts about them. Did they recently run a fundraiser 5K run? Did their grandma recently celebrate her 90th birthday? These facts may seem extraneous. But if the person is sharing them on social media, it means these facts are important to **them**.
+当你发现了和他们有关的事情，可以在每张卡片上添加笔记。他们最近是否参加了跑步 5 公里的募捐活动？他们的祖母最近是否庆祝了九十大寿？这些信息看起来可能无关紧要。但如果某个人在社交媒体上分享这些事情，那就说明这些事情对他们来说很重要。
 
-Make an effort to be interested in people. Their daily lives. Their aspirations. By understanding their motivations and goals, you will have deeper insight into how you can help them.
+努力对人们产生兴趣。发现他们的日常生活，发现他们的抱负。通过了解他们的动机和目标，你将更深入地洞察到你如何才能帮到他们。
 
-And as I said earlier, the best way to forge alliances is to help people. We'll talk about this at length in a little bit.
+正如我之前所说，缔结盟友的最佳方式是帮助他人。我们将在稍后详细讨论这个问题。
 
-For each of the people you add to your Personal Network Board, consider whether they might be worth reaching out to. Then either put them into the "to contact" or "don't contact yet" column.
+对于你添加到个人关系网看板中的每个人，逐一思考他们是否值得联系，然后把他们放入“待联系”或“暂不联系”中。
 
-You may be wondering: why is the column called "don't contact **yet**"? Because you never know when it might be helpful to know someone. Never take any friendship or acquaintanceship for granted.
+你可能想知道：为什么这一列叫 “暂不联系”？因为你永远不知道认识的某个人在何时会帮上忙。永远不要把任何友谊或熟人关系视为理所当然。
 
-Once you've filled up your board, labeled everyone, and sorted them into columns, you're ready to start reaching out.
+在你填满看板，给每个人贴上标签，并将他们分门别类之后，就可以开始联系了。
 
-### How to Prepare for Network Outreach
+### 如何为关系网延伸做准备
 
-The main thing to keep in mind when reaching out and trying to make an impression: keep yourself simple.
+在联系并试图给人留下印象时，请牢记：简单为上，不要啰嗦。
 
-People are busy, and they can only remember so many facts about you. You want to boil down who you are to the fundamentals. And the best way to do this is to write a personal bio.
+大家都很忙，他们并不能记住太多和你有关的事情。如果你想完全讲清楚自己是谁，最好方法是写一份个人简历。
 
-#### How to Write a Personal Bio for Social Media
+#### 如何在社交媒体写个人简历
 
-You want your presence to be consistent across all of your social media accounts.
+你希望自己的信息在你所有的社交媒体账户中都是一致的。
 
-Here's how I introduce myself:
+以下是我的自我介绍：
 
-"I'm Quincy. I'm a teacher at freeCodeCamp. I live in Dallas, Texas. I can help you learn to code."
+“我叫 Quincy，是 freeCodeCamp 的一名老师，住在德克萨斯州的达拉斯。我可以帮助你学习编程。”
 
-Go ahead and write yours. See if you can get it down to 100 characters or less. Try to avoid using fancy words or jargon.
+去写你自己的简历吧。看看你能否把它压缩到 100 个字甚至更少。尽量避免使用花哨的词语或专业术语。
 
-It may be hard to distill your identity down to a few words. But this is an important process.
+把你的身份提炼成几个字可能很难，但这是一个很重要的过程。
 
-Remember: people are busy. They don't need to know your life story. As you get to know these people better, you can gradually fill in the details of who you are as a person. As they ask questions, they can get to know you better over time.
+记住：人们很忙，他们并不需要知道你的生活往事。随着你对他们的了解的深入，你可以慢慢地说出更多和你有关的细节。随着时间的推移，他们也会在问你问题的同时更好地了解你。
 
-And on that note, you need a good photo of your smiling face.
+好了，记得准备好一张带有你的笑脸的照片。
 
-#### How to Make a Social Media Headshot
+#### 如何制作社交媒体头像
 
-If you have the money, just find a local photographer and pay them to take some professional headshots.
+如果你有钱，直接去找一个当地的摄影师，付钱让他们给你拍一些专业的头像。
 
-You may even have a friend who's into photography, who can take them for free.
+或许你有一个从事摄影的朋友，他可以免费为你拍照。
 
-I took my headshot myself, using Photobooth, which comes pre-installed on MacOS. My friend spent about 10 minutes fixing some background and shading in Photoshop. He may have made my teeth slightly whiter. Here's what it looks like:
+我自己使用预装在 MacOS 上的 Photobooth 拍了头像。我的朋友在 Photoshop 中花了大约 10 分钟修正了一些背景和阴影。他可能使我的牙齿看起来要略微白了一点。下面是我的头像：
 
-![Michael_Headshot_B_W_Full_heic](https://www.freecodecamp.org/news/content/images/2023/01/Michael_Headshot_B_W_Full_heic.png)My headshot. I use this same photo everywhere.
+<figure><img src="https://www.freecodecamp.org/news/content/images/2023/01/Michael_Headshot_B_W_Full_heic.png"><figcaption>我的头像：我在任何地方都使用这张照片</figcaption></figure>
 
-Be sure to smile with your eyes, so you don't look robotic. Or better yet, think of something really funny, like I did here. Then the smile will be genuine.
+一定要用你的眼睛微笑，这样你才不会看起来像个机器人。或者更好一点，想一些非常有趣的事情，我就是这样做的。然后，你的笑容就会显得很真诚。
 
-Take a lot of shots from different angles, and just use whichever one looks best on you.
+从不同的角度拍很多照片，然后使用最好看的那一张。
 
-I recommend using a headshot that looks like how you look on any given day. Not a heavily photoshopped photo that tries to maximize your attractiveness. You want people at events to recognize you from your photo. And you don't want to intimidate people with your beauty. You want to put them at ease.
+我建议你使用一张看起来和你的日常生活贴近的始终如一头像。不要使用试图将你的吸引力最大化的经过大量修改的照片。你希望人们能够在活动中通过你的照片认出你。而且，你不想让美颜吓到别人，你想让他们感到安心。
 
-Speaking of putting people at ease: do **not** wear sunglasses, or try too hard to look cool. You want to look friendly and  approachable. A good acid test for this is: look at your photo. If you were lost, and saw this person on the street, would you be brave enough to ask them for directions?
+说到让人安心：不要戴墨镜，也不要努力地看起来很酷。你要看起来友好、平易近人。在这方面，有的一个很好的带有讽刺意味的测试：看看你的照片。如果你迷路了，你在街上看到这个人，你会有勇气向他们问路吗？
 
-Once you have chosen your headshot photo, use that same photo everywhere. Put it on all of your social media accounts.
+选好了头像之后，就在所有的地方使用同一张照片。把它放在你所有的社交媒体账户上。
 
-Use it on your personal website. Even [add the profile photo to your email account](https://www.freecodecamp.org/news/gmail-profile-picture/).
+在你的个人网站上使用它，甚至你还可以[将个人照片添加到你的电子邮件帐户](https://www.freecodecamp.org/news/gmail-profile-picture/)。
 
-I recommend using that same photo for years. Every time you change it, you run the risk that some people won't immediately recognize you. Even subtle changes in lighting, angle, or background can throw off people's familiarity.
+我建议常年来使用同一张照片。每次你改变它，都会冒着有些人不会立即认出你的风险。即使是灯光、角度或背景的细微变化，也会使人们失去熟悉感。
 
-Be sure to keep a high-definition version of the photo. That way people can use it to promote your talk at their conference, or your guest appearance on their podcast. (Don't worry – in time, you will get there.)
+一定要保留一张高清版本的照片。这样，当你在别人的会议上的演讲，或他们的播客中的客串的时候，他们就可以用这张照片来宣传了。(别担心，假以时日，你能做到的）。
 
-### How to Reach Out to People from your Past
+### 如何与过去的人联系
 
-Now that you've got your bio and photos sorted out, you're ready to start talking with people.
+现在简历和照片都已就绪，你已经做好与人交谈的准备了。
 
-15 years ago, I would say you should call people on the phone instead of messaging them. But culture has changed a lot with the introduction of smart phones. Most people will not respond well to a phone call.
+15 年前，我会说你应该给人们打电话，而不是给他们发消息。但随着智能手机的出现，相关文化已经发生了很大的变化。大多数人都不会很好地回应电话了。
 
-Similarly, I don't recommend asking people out to coffee or lunch until much later in the conversation. People are busy, and may view the request as awkward.
+同样，我也不建议在谈话接近尾声的时候才邀请别人去喝咖啡或吃午餐。人们很忙，可能会觉得这个请求有些尴尬。
 
-You need to get to the point, and do so quickly.
+你需要直奔主题，越快越好。
 
-So what is that point you need to get to?
+那么，你需要奔入的主题是什么呢？
 
-Essentially:
+本质上如下：
 
-1. I know you
-2. I like you
-3. and I respect the work you're doing.
+1. 我知道你
+2. 我喜欢你
+3. 我敬佩你的做的事情
 
-That's it.
+就是这样。
 
-People like to be known. They like to be liked. They like for the work they do and the lives they live to be noticed.
+人们喜欢被了解，喜欢被人喜欢，喜欢自己做的事情和生活受到关注。
 
-Most of us get recognition on our birthdays. People from our past might send "happy birthday" text messages, social media posts, or even call us.
+我们中的大多数人都会在生日当天得到认可。在过去，人们可能会通过短信、社交媒体，甚至打电话的方式祝我们生日快乐。
 
-But what about the other 364 days of the year? People like to be recognized on those other days, too.
+但一年中的其它 364 天呢？人们也喜欢在这些日子里得到认可。
 
-Well, here's a simple way you can recognize people.
+哈哈，这里有一个认可别人的简单方法。
 
-Step 1: Research the person. Google them. Read through their most recent social media posts. Read through their LinkedIn. If they post family photos, actually take time to look at them.
+第 1 步：研究这个人。在谷歌上搜索他们，阅读他们最近发布在社交媒体上的内容，阅读他们的领英账户。如果他们发布了家庭照片，更要多花点时间看一下。
 
-Step 2: Think about something you could say that might make their day a bit brighter.
+第 2 步：想一想你可以说点什么，从而让他们的一天变得更加美好。
 
-Step 3: Choose a social media platform they've been recently active on. Send them a direct message.
+第 3 步：选择一个他们最近比较活跃的社交媒体平台，直接给他们发一条信息。
 
-I'm going to share a template, but never use any templates verbatim, because if the recipient plugs your message into Google, they'll discover it's a template, and all your goodwill will be squandered.
+我将分享一个模板，但永远不要逐字逐句地使用任何模板，因为如果收件人将你的信息,用谷歌进行搜索，他们会发现这是一个模板，而你所有的善意将被误解。
 
-If I were messaging someone I hadn't talked to in a few months or years out of the blue, I would say something like this:
+如果我突然给一个几个月或几年没有联系过的人发信息，我会说这样的话:
 
-"Hey [name], I hope your [new year / spring / week] is off to a fun start. Congrats on [new job / promotion / new baby / completed project]. It's inspiring to see you out there getting things done."
+"嘿，[姓名]，我希望你的[新的一年/春天/一周]有一个有趣的开始。祝贺你[新工作/晋升/新生儿/完成项目]。看到你在外面做事情，很受鼓舞。"
 
-Something short and to the point like that. Greeting + congratulations + compliment. That is the basic formula.
+像这样简短而有针对性的东西。问候+祝贺+赞美。这就是基本公式。
 
-Don't just say it. Mean it.
+不要只是说出来。
 
-Really want this person to feel recognized. Really want to brighten their day. Really want to encourage them to keep progressing toward their goals.
+真的想让这个人感到被认可。真的想照亮他们的一天。真的想鼓励他们继续向他们的目标迈进。
 
-Humans are very good at detecting insincerity. Don't try to over-sell it. Don't give them any reason to think "this person wants something from me."
+人类非常善于察觉不诚恳。不要试图过度推销。不要给他们任何理由去想 "这个人想从我这里得到什么"。
 
-That's why the most important thing about this is: be brief. Be respectful of people's time. Nobody wants a long letter that they'll feel obligated to respond to at length.
+这就是为什么这方面最重要的事情是：要简短。要尊重人们的时间。没有人想要一封长信，他们会觉得有义务对其进行长时间的回应。
 
-Because – say it with me again – **people are busy.**
+因为，跟我说一遍 **人很忙**。
 
-### How to Build Even Deeper Connections
+### 如何建立更深入的联系
 
-Because people are so busy, they are often tempted to see strangers more for what those strangers can do for them:
+因为人们是如此忙碌，他们往往会因为这些陌生人能为他们做什么而更多地看到陌生人:
 
-- This person drives the bus that gets me to work.
-- This person makes my beverage just the way I like it.
-- This person in HR answers my questions about time off.
-- This person put together a bangin' acid jazz playlist for me to listen to while I code.
-- This person sends me helpful emails each week with free coding resources.
+- 这个人开着巴士送我去上班。
+- 这个人按照我喜欢的方式给我做饮料。
+- 这个人在人力资源部门回答我关于休假的问题。
+- 这个人为我准备了一份 acid 爵士乐的播放列表，让我在写代码时听。
+- 这个人每周都会给我发送有用的电子邮件，提供免费的编程资源。
 
-To some extent, you are what you do for people.
+在某种程度上，你就是你为人们所做的。
 
-I know, I know. That might sound overly reductive. Cynical even. And that is 100% not true for the close friends and family in your life.
+我知道，我知道。这听起来可能过于简化。甚至愤世嫉俗。而对于你生活中的亲密朋友和家人来说，这 100%不是真的。
 
-But for people who barely know you – who just encounter you while going about their day – this is likely how they see you.
+但是对于那些几乎不认识你的人--他们只是在日常工作中遇到你--这可能是他们对你的看法。
 
-You have to give people a reason to care about you. You have to inspire them to learn more about you.
+你必须给人们一个关心你的理由。 你必须激励他们更多地了解你。
 
-Before you can become somebody's close friend – someone they truly care about, and think about when you're not around – you need to start off as someone who is helpful to them.
+在你能成为某人的亲密朋友之前，他们真正关心的人，并且在你不在的时候想到的人，你需要从一个对他们有帮助的人开始。
 
-And that's what we're going to do here. We're going to build even deeper relationships by offering to help people.
+而这正是我们在这里要做的。我们要通过提供帮助来建立更深的关系。
 
-This will be a long process. And you should start it well in advance of your job search. The last thing you want is for someone to think "Oh – you're just reaching out because you need something from me."
+这将是一个漫长的过程。而且你应该在找工作之前提前开始。你最不希望看到的是，有人认为 "哦，你只是因为需要我的东西而伸出援手"。
 
-On the contrary – you're reaching out because you have something to offer them.
+恰恰相反，你伸出援手是因为你有东西可以提供给他们。
 
-You are, after all, in possession of one of the most powerful skillsets a person can acquire. The ability to bend machines to your will. You are a programmer.
+毕竟，你拥有一个人可以获得的最强大的技能之一。使机器服从你的意志的能力。你是一个程序员。
 
-![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)This is what being good at coding feels like.
+![c_BasicProgramming_Picture_front](https://atariage.com/2600/carts/c_BasicProgramming_Picture_front.jpg)这就是擅长编码的感觉。
 
-Or, at least, you're on the road to becoming one.
+或者，至少，你正在成为一个人的道路上。
 
-So you already have a good pretext to reach out to people.
+所以你已经有了一个很好的理由去接触人们。
 
-You may have heard the term "cold call". This is where you call someone knowing almost nothing about them, and trying to sell them something. This is not easy, and a vast majority of cold calls end with the other party hanging up.
+你可能听说过 **冷电话** 这个词。这就是你在对某人几乎一无所知的情况下给他打电话，并试图向他们推销东西。这并不容易，绝大部分的冷电话都以对方挂断而告终。
 
-But the more information you know about the other person, the warmer the call gets, and the more likely you are to succeed.
+但是，你对对方了解的信息越多，电话就越温暖，你就越有可能成功。
 
-Now, you're not selling anything here. And as I mentioned earlier, you're not calling them either. You're sending them a direct message.
+现在，你在这里不是在卖东西。正如我前面提到的，你也不是在给他们打电话。你是在给他们发送一条直接信息。
 
-Maybe this is through Twitter, LinkedIn, Discord, Reddit – wherever. But you are reaching out to them with a single paragraph of text.
+也许这是通过 Twitter、LinkedIn、Discord、Reddit。 任何地方。但你是用一段文字向他们伸出援手。
 
-As I said, the strongest opening move – the approach that's most likely to get a response – is to casually offer help.
+正如我所说，最有力的开场白,最有可能得到回应的方法，是随意地提供帮助。
 
-If I were doing this, here's a simple template I'd use. Remember not to use this template verbatim. Rewrite it in your own voice, how you would say it to a friend:
+如果我在做这件事，这里有一个我将使用的简单模板。记住不要逐字逐句地使用这个模板。用你自己的声音重写，你会怎么对朋友说。\:
 
-> "Hey [name], congrats on the [new job / promotion / new baby]. I've been learning some programming, and am building my portfolio. You immediately came to mind as someone who gets a lot of things done. Is there any sort of tool or app that would make your life easier? I may be able to code it up for you, for practice."
+> "嘿[姓名]，祝贺你[新工作/晋升/新生儿]。我一直在学习一些编程，并正在建立我的作品集。我立刻想到了你，你是一个能完成很多事情的人。有没有什么工具或应用程序可以让你的生活更轻松？我也许可以为你编码，作为我的练习。"
 
-This is a strong approach, because it is personalized and doesn't come across as automated. People get so many automated messages these days that they are quick to disregard anything that even resembles an automated message.
+这是一个强有力的方法，因为它是个性化的，不会让人觉得是自动的。如今，人们收到如此多的自动信息，以至于他们很快就会无视任何甚至类似于自动信息的东西。
 
-This is why I send all my messages manually, and don't rely on automation. It's better to slowly compose messages one-by-one than it is try and save time with a script or a mail-merge.
+这就是为什么我手动发送我所有的信息，而不依赖自动化。慢慢地逐一编写信息比试图用脚本或邮件合并来节省时间更好。
 
-The fastest way to get blocked is to message someone with "Hi , how's it going?" where there's clearly a first name missing – evidence that the message is a template.
+最快的被屏蔽的方法是给别人发消息说 `嗨，你好吗？` 其中明显少了一个名字,证明这个消息是一个模板。
 
-Sometimes I get a message using my last name instead of my first name. "Hey Larson." What, am I in military school now?
+有时我收到的信息用我的姓而不是我的名。`嘿，拉森。` 什么，我现在是在军事学校吗？
 
-And a lot of people on LinkedIn have started putting an emoji at the beginning of their name. This makes it easy to detect automated messages, because nobody would include that emoji in their direct message.
+而且，LinkedIn 上的很多人已经开始在他们名字的开头加上一个表情符号。这使得检测自动信息变得很容易，因为没有人会在他们的直接信息中包括这个表情符号。
 
-When a message starts with: "Hi 🍜Sarah, are you looking for a new job?" Then you know it's a bulk message.
+当一条信息的开头是 "嗨🍜莎拉，你在找新工作吗？" 那么你就知道这是一条批量信息。
 
-Also note that my above template does not say "we went to school together" or something like that. Unless you just met someone a few days ago, you shouldn't specify how you two know one another.
+还要注意的是，我上面的模板并没有说 "我们是同学 "或类似的话。除非你几天前刚认识某人，否则你不应该说明你们俩是怎么认识的。
 
-Why? Because the very act of reminding people how you know one another will prompt some people to step back and think: "Gee, I barely know this person."
+为什么？因为提醒人们你们是如何认识的行为本身会促使一些人退一步想："哎呀，我几乎不认识这个人。"
 
-### How to Keep the Conversation Going
+### 如何让对话持续下去
 
-Again, your goal is to get a response from them, so you can start a back-and-forth conversation.
+同样，你的目标是得到他们的回应，这样你就可以开始一个来回的对话。
 
-These messaging platforms have a casual feel to them. Keep it casual.
+这些信息传递平台有一种休闲的感觉。保持随意。
 
-Don't send a single, multi-paragraph message. Keep your messages short and snappy. You don't want for it to feel like a chore to reply to you.
+不要发送单一的、多段落的信息。保持你的信息短而快。你不想让他们觉得回复你是件苦差事。
 
-Once you've got them replying to you, start making notes on your Personal Network Board so you can remember these facts later.
+一旦你让他们回复你，就开始在你的个人网络板上做笔记，这样你以后就能记住这些事实。
 
-Maybe they do have some app idea or tool idea. Great. Ask them questions about it. See if you can build it for them.
+也许他们确实有一些应用程序的想法或工具的想法。很好。向他们询问有关问题。看看你是否可以为他们建立它。
 
-Start by sketching out a simple mockup of the user interface. Use graphing paper if you want to look extra sophisticated. Snap a photo of it and send it to them. "Something like this?"
+从画出用户界面的简单模型开始。如果你想看起来更复杂，就用绘图纸。给它拍张照片，然后发给他们。"像这样的东西？"
 
-This will establish that you're serious about helping them. And I'd be willing to bet for most people, this would be a new experience.
+这将确立你对帮助他们是认真的。而且我愿意打赌，对大多数人来说，这将是一种新的体验。
 
-"You're helping me? You're creating this app for me?" It will be flattering, and they will be likely to remember it. Even if the app itself doesn't go anywhere.
+"你在帮助我？你在为我创建这个应用程序？" 这将是一种奉承，他们将有可能记住它。即使这个应用程序本身没有任何进展。
 
-From there, you can just go with the flow of conversation. Maybe it fizzles out. No worries. Let it. You can find a reason to pick the conversation back up a few weeks later.
+从那里开始，你可以随着谈话的流程走。也许它消失了。不用担心。随它去吧。你可以在几周后找到一个理由来重新拾起对话。
 
-The great thing about these social media direct messages is the entire message log is there. The next time you message them, they can just scroll up and see "oh – this is that person who offered to build that app for me." There are no more "who are you again?" head tilts that you might get during in-person conversations.
+这些社交媒体直接信息的好处是整个信息记录都在那里。下次你给他们发信息时，他们可以直接滚动并看到 "哦，这是那个提议为我建立应用程序的人"。没有更多的 "你是谁来着？"的疑问，而你可能在面对面的谈话中得到。
 
-Again, keep everything casual and upbeat. If it feels like the conversation is going slow, that's no problem. Because you're going to have dozens of other conversations going. Other irons in the fire. You're going to be a busy bee building your network.
+再次重申，保持一切休闲和乐观。 如果感觉谈话进行得很慢，那没问题。 因为您将进行许多其他对话。保持热度，你将成为一只忙碌的蜜蜂，建立你的人际联系。
 
-### How to Meet New People and Expand Your Personal Network
+### 如何认识新朋友并扩大你的人际网络
 
-We've talked about how to reach out to people you already know. Those connections are still there, even if they've atrophied a bit over the years.
+我们已经谈到了如何与你已经认识的人联系。这些联系仍然存在，即使它们多年来已经有点萎缩了。
 
-But how do you make brand new connections?
+但你如何建立全新的联系？
 
-This is no easy task. But I have some tips that will make this process a bit less daunting.
+这不是一件容易的事。但我有一些建议，可以使这个过程不那么令人生畏。
 
-First of all, meeting people for the first time in person is so much more powerful than meeting them online.
+首先，第一次与人见面，比在网上见面要有效的多。
 
-When you meet someone in person, your memory has so much more information to latch onto:
+当你见到某人的时候，你的记忆有更多的信息可以获取:
 
-- How the person looks, their posture, and how they move through the space
-- The sound of their voice and the way they speak
-- The lights, sounds, aromas, temperature, and the general feel of the venue
-- And so many other little details that get baked into your memory
+- 这个人的长相，他们的姿势，以及他们如何在空间中移动
+- 他们的声音和他们说话的方式
+- 灯光、声音、香气、温度和场地的总体感觉
+- 还有许多其他的小细节，这些都会在你的记忆中留下烙印
 
-Spending 10 minutes talking with someone in person can build a deeper connection than dozens of messages back and forth, across weeks of correspondence.
+与一个人当面交谈 10 分钟，比来回几十条信息，跨越几周的通信建立更深的联系。
 
-This is why I strongly recommend: get out there and meet people at local events.
+这就是为什么我强烈建议：走出去，在当地的活动中认识人们。
 
-### How to Meet People at Local Events Around Town
+### 如何在城市周边的当地活动中结识朋友
 
-Which events? If you live in a densely-populated city, you may have a ton of options at your disposal. You may be able to go to tech events several nights each week, with minimal commuting.
+哪些活动？如果你住在一个人口稠密的城市，你可能有大量的选择供你支配。你可能每周都能去参加几个晚上的科技活动，而且通勤时间最少。
 
-If you live in a small town, you may have to stick with meeting people at local gatherings. Book fairs, ice cream socials, sporting events.
+如果你住在一个小镇上，你可能不得不坚持在当地的聚会上认识人。书展、冰激凌社交活动、体育赛事。
 
-If you go to church, mosque, or temple, get to know people there, too.
+如果你去教堂、清真寺或寺庙，也要认识那里的人。
 
-And yes, I realize this may sound ridiculous. "That person standing in the bleachers next to me at the soccer game? They're somehow going to help me get a developer job?"
+是的，我知道这可能听起来很荒谬。"在足球比赛中站在我旁边看台的那个人？他们会以某种方式帮助我找到一份开发商的工作？"
 
-Maybe. Maybe not. But don't write people off.
+也许吧。也许不是。但不要把人撇开。
 
-That person may run a small business.
+那个人可能经营一个小企业。
 
-They may have gone to school with a friend who's a VP of Engineering at a Fortune 500 company.
+他们可能和一个在财富 500 强公司担任工程副总裁的朋友一起上学。
 
-And maybe – just maybe – they're a software engineer, too. After all, there are millions of us software engineers out there. And we don't all live in Silicon Valley. 😉
+也许他们也是一名软件工程师。毕竟，我们有数以百万计的软件工程师在那里。而且我们并不都住在硅谷。 😉
 
-When you do meet a new person, you don't want to immediately pull out your phone and say "Can I add you to my LinkedIn professional network?"
+当你遇到一个新的人时，你不想立即掏出你的手机，说 `我可以把你加入我的LinkedIn 的联系人吗？`
 
-Instead, you want to play it cool. Introduce yourself.
+相反，你要表现得冷静。介绍一下自己。
 
-**Remember their name.** Names are integral to building a relationship. If you are bad with names, practice remembering them. You can practice by just trying to remember the name of every character – no matter how minor they are – when you're watching TV shows or movies.
+**记住他们的名字。**名字是建立关系不可或缺的。如果你不善于记名字，就练习记住它们。你可以在看电视节目或电影时，试着记住每个角色的名字,不管他们是不是大明星，来练习。
 
-If you forget someone's name, don't guess. Just say "what's your name again" and be sure to remember it the second time.
+如果你忘记某人的名字，不要猜测。只要说 `你叫什么名字来着`，第二次一定要记住它。
 
-Shake their hand or fist bump. Talk with them about whatever feels natural. If the conversation peters out, no worries. Let it.
+与他们握手或握拳。与他们谈论任何感觉自然的话题。如果谈话结束了，不用担心。随它去吧。
 
-You build relationships over time. It's not about total time spent with someone – it's about the number of times you meet that person over a longer span of time.
+你随着时间的推移建立关系。这不是指与某人相处的总时间,而是指你在较长的时间跨度内与该人见面的次数。
 
-There is a good chance you will see the person again in the future. Maybe at that same exact location a few weeks later. And **that** is when you make your move:
+有一个很好的机会，你会在未来再次见到这个人。也许几周后，在同一个确切的地点。而就是你采取行动的时候:
 
-"Hi [name] how's the [thing you talked about the previous time] going?"
+`你好[姓名]，[你们上次谈的事情]进展如何？`
 
-Pick the conversation up where it left off. If they seem like someone who would be a helpful addition to your Personal Network Board, ask them "hey what are you doing next [day of week]? Do you want to come with me to [other upcoming local event]?"
+从中断处继续对话。 如果他们看起来像是对您的个人网络板 (Personal Network Board)有帮助的人，请问他们 `嘿，你接下来 [星期几] 在做什么？你想和我一起去 [其他即将举行的本地活动] 吗？”`
 
-Always have your upcoming week of events in mind, so you can invite people to join you.
+始终牢记你即将到来的一周的活动，所以你可以邀请人们加入你。
 
-This is a great way to get people to hang out with you in a safe, public space. And you're providing something of value – giving them awareness of an upcoming event.
+这是一个让人们在一个安全的公共空间与你一起玩耍的好方法。而且你还提供了一些有价值的东西,让他们意识到即将到来的活动。
 
-If they seem interested, you can say "Awesome. What's the best way for me to message with you, and get the event details to you?"
+如果他们看起来感兴趣，你可以说 "太棒了。我有什么最好的方式给你留言，并把活动的细节告诉你？"
 
-Boom – you now have their email or social media or phone number, and your relationship can unfold from there.
+你现在有了他们的电子邮件或社交媒体或电话号码，你们的关系可以从那里展开。
 
-This may sound like a slow burn approach. Why be so cautious?
+这可能听起来像是一种慢热的方法。为什么如此谨慎？
 
-Again, people are busy. Smart people are defensive of their time, and of their personal information.
+同样，人们很忙。聪明人会保护他们的时间和他们的个人信息。
 
-There are too many vampires out there who want to take advantage of people – trying to sell them something, scam them, get them into their multi-level marketing scheme, or in some other way proselytize them.
+外面有太多的吸血鬼想利用人们,试图向他们推销东西，诈骗他们，让他们加入他们的多层次营销计划，或以其他方式向他们传教。
 
-The best way to help other people get past this reflexive defensiveness: already be on their radar from previous encounters as a reasonable person.
+让其他人克服这种不信任的最好方法是：在以前的接触中已经作为一个通情达理的人，出现在他们的视野上。
 
-### How to Leverage Your Network
+### 如何利用你的人际网络
 
-We'll talk more about how to leverage your network in Chapter 4. For now, look at your network purely as an investment of time and energy.
+我们将在第 4 章详细讨论如何利用您的网络。现在，将您的网络纯粹视为时间和精力的投资。
 
-I like to think of my network as an orchard. I am planting relationships. Tending to them, and making sure they're healthy.
+我喜欢把我的人际关系想象成一个果园。 我正在建立关系。 照顾他们，确保他们健康。
 
-Who knows when those relationships will grow into trees and bear fruit. The goal is to keep planting trees, and at some point in the future, those trees will help sustain you.
+谁知道这些关系何时会长成大树并结出果实。 目标是继续植树，在未来的某个时候，这些树将帮助维持你的生命。
 
-Keep sending out positive energy. Keep offering to help people using your skills, and even your own network. (It is rarely a bad move to make a polite introduction between two people you know.)
+不断散发正能量。 不断提供帮助人们使用你的技能，甚至是你自己的人际关系。（在你认识的两个人之间进行礼貌的介绍很少是一个坏举动。）
 
-Be a kind, thoughtful, helpful person.
+做一个善良、体贴、乐于助人的人。
 
-Don't ever feel impatient with how slow a job search may be going.
+永远不要对求职过程的缓慢感到不耐烦。
 
-Don't ever let yourself feel slighted or snubbed.
+永远不要让自己感到被轻视或冷落。
 
-Don't ever let yourself feel jealous of someone else's success.
+永远不要让自己嫉妒别人的成功。
 
-What goes around comes around. You will one day reap what you sow. And if you're sowing positive energy, you are setting yourself up for one bountiful harvest.
+有因就有果。有一天你会收获你所播种的东西。如果你播种的是正能量，你就为自己的丰收做了准备。
 
-## Chapter 3: How to Build Your Reputation
+## 第三章：如何建立你的声誉
 
-> "The way to gain a good reputation is to endeavor to be what you desire to appear." – Socrates
+> "获得良好声誉的方法是努力成为你希望出现的样子"。  苏格拉底
 
-Now that you've started building your skills and your network, you're ready to start building your reputation.
+现在你已经开始建立你的技能和你的人际网络，你已经准备好开始建立你的声誉。
 
-You may be starting from scratch – a total newcomer to tech. Or you may already have some credibility you can bring with you from your other job.
+你可能从零开始，一个完全的技术新人。或者你可能已经有了一些信誉，你可以从你的其他工作中带来。
 
-In this chapter, I'll share practical tips for how you can build a sterling reputation among your peers. This will be the key to getting freelance clients, a first job, and advancing in your career.
+在本章中，我将分享如何在同行中建立良好声誉的实用技巧。这将是获得自由职业者客户、第一份工作以及在事业上取得进展的关键。
 
-But first, here's how I built my reputation.
+但首先，我是如何建立我的声誉的。
 
-### Story Time: How Did a Teacher in His 30s Build a Reputation as a Developer?
+### 故事时间：一位 30 多岁的教师是如何建立起开发者的声誉的？
 
-*Last time on Story Time: Quincy started building his network of developers, entrepreneurs, and hiring managers in tech. He was frequenting hackerspaces and tech events around the city. But he had yet to climb into the arena and test his might...*
+*上一次是在故事时间。昆西开始建立他的网络，包括开发人员、企业家和科技界的招聘经理。他经常参加城市周围的黑客空间和科技活动。但他还没有爬上竞技场，测试自己的实力……*。
 
-I was already several months into my coding journey when I finally worked up the courage to go to my first hackathon.
+当我终于鼓起勇气去参加我的第一次黑客马拉松时，我的编码之旅已经有几个月了。
 
-One day I encountered a particularly nasty bug, and I wasn't sure how to fix it. So I did what a lot of people would do in that situation: I procrastinated by browsing the web. And that's when I saw it. Startup Weekend EDU.
+有一天，我遇到了一个特别讨厌的错误，我不知道如何解决它。所以我做了很多人在这种情况下会做的事情。我通过浏览网页来拖延时间。这时我看到了它。创业周末（Startup Weekend EDU）。
 
-Startup Weekend is a 54-hour competition that involves building an app, then pitching it to a panel of judges. These events reward your knowledge of coding, design, and entrepreneurship as well.
+创业周末是一个长达 54 小时的比赛，包括建立一个应用程序，然后将其提交给评审团。这些活动也奖励你的编码、设计和创业知识。
 
-This particular event – held in the heart of Silicon Valley – had a panel of educators and education entrepreneurs as its judges. With my background in adult education, this seemed like an ideal first hackathon for me.
+这个特别的活动--在硅谷的中心地带举行，有一个由教育家和教育企业家组成的评审团。由于我有成人教育的背景，这似乎是我第一次参加黑客马拉松的理想选择。
 
-I told Steve about the event. And then I said the magic words: "I'll do the driving." Which was good, because Steve didn't have a driver's license.
+我把这个活动告诉了史蒂夫。然后我说出了那句神奇的话。"由我来开车"。这很好，因为史蒂夫没有驾驶执照。
 
-With Steve onboard, we rounded out our team with a couple of devs from the Santa Barbara Hackerspace.
+有了史蒂夫的加入，我们与来自圣巴巴拉黑客空间的几个开发人员组成了我们的团队。
 
-I spent weeks preparing for the event by researching the judges and the companies they worked for. I researched the sponsors. And of course, I practiced coding like a Shaolin monk.
+我花了几周时间准备这次活动，研究评委和他们工作的公司。我研究了赞助商。当然，我还像少林寺的和尚一样练习编码。
 
-Finally, after a month of preparation, it was the big weekend. We piled into my 2005 Toyota Corolla with the peeling clear coat, put on some high energy music, and started our 5-hour drive.
+终于，经过一个月的准备，迎来了大周末。 我们挤进我的 2005 年丰田卡罗拉，车上的透明涂层已经剥落，放上一些充满活力的音乐，开始了我们 5 小时的车程。
 
-On the way up, we discussed what we should build. It would be education-focused, of course. Preferably catering to high school students, since those were the grade levels the judge's companies focused on.
+在路上，我们讨论了我们应该建造什么。当然，它将是以教育为重点的。最好是满足高中生的需求，因为这些是评审人员的公司所关注的年级。
 
-But what should the app do? How was it going to make people's lives easier?
+但这个应用程序应该做什么？它将如何使人们的生活更轻松？
 
-I thought back to my own time in high school. I didn't have much to go on, since I'd dropped out after just one year. (I did manage to study for and pass the GED – Good Enough Degree as we called it – while working at Taco Bell, before eventually going to college).
+我回想了一下我自己在高中的时候。我没有什么可说的，因为我只上了一年就退学了。(我确实设法学习并通过了普通教育证书，我们称之为 "足够好的学位"，同时在 Taco Bell 工作，最后才上了大学）。
 
-But one pain point I did remember from high school, which still rang out after all these years: English papers.
+但我确实记得高中时的一个痛点，在这么多年后仍然响起。英语论文。
 
-Now I loved writing. But I didn't love writing in MLA format, with its rigid citation rules. I used to dread preparing a Work Cited page. My teacher would always dock me points for not formatting my citations correctly.
+现在我喜欢写作。但我不喜欢用 MLA 格式写作，因为它有严格的引证规则。我曾经害怕准备工作引证页。我的老师总是会因为我的引文格式不正确而扣我的分。
 
-After listening to a lot of OK ideas from the other passengers in the car, I piped up. I said: "I have an idea. We should code an app that creates citations for you."
+在听了车上其他乘客的很多好主意后，我开始说了。 我说：“我有个主意。我们应该编写一个应用程序，为您创建引文。”
 
-And someone laughed and said: "Out of sight."
+而有人笑着说： "看不见了。"
 
-And Steve said, "Hey that's a good name. We could call it Out of Cite with a 'C'."
+史蒂夫说，“嘿，这是个好名字。我们可以用 `C` 称它为 `Out of Cite`。
 
-We all laughed and felt clever. Then we started discussing the implementation details.
+我们都笑了起来，觉得自己很聪明。然后我们开始讨论实施细节。
 
-When we arrived at the venue, there were about 100 other devs there. It was an open-plan office space, with low-rise cubicles flanked by whiteboards.
+当我们到达会场时，那里有大约 100 名其他开发人员。那是一个开放式的办公空间，低矮的隔间两边是白板。
 
-I heard whispers about one of those developers. "Hey, it's that guy who won the event last year," I heard people say. They gestured in the direction of a cocky-looking dev surrounded by fans. "Maybe he'll let me be on his team."
+我听到了关于其中一个开发者的窃窃私语。"嘿，是那个去年赢得比赛的家伙。" 我听到人们说。他们向一个被粉丝包围的、看起来很自负的开发者打手势。"也许他会让我加入他的团队。"
 
-The event started with pitches. Anyone could go up to the front of the room, grab the mic, and deliver a 60 second pitch for the app they wanted to build.
+活动开始时，大家纷纷发表意见。任何人都可以走到房间前面，拿起麦克风，为他们想要建立的应用程序做 60 秒的演讲。
 
-I was so nervous it felt like an alien was about to burst out of my chest. So naturally, I was first in line. Rip the band-aid off, right?
+我太紧张了，感觉就像一个外星人要从我的胸膛里冲出来。 所以很自然地，我排在第一位。 撕掉创可贴，对吧？
 
-I was sweating and gesticulating wildly as I raced through my pitch. I said something like this: "Citations suck. I mean, they don't suck. They're necessary. And you need to add them to your papers. But preparing citations sucks. Let's build an app that will fill out your Work Cited page for you. Who's with me?"
+我满头大汗，疯狂地打着手势，飞快地完成我的演讲。我说了这样一段话。"引文很烂。我的意思是，它们并不糟糕。它们是必要的。你需要把它们添加到你的论文中。但准备引文的工作很糟糕。让我们建立一个应用程序，为你填写你的工作引文页。谁支持我？"
 
-The room was quiet. Then people realized I was finished talking, and they gave me an obligatory round of applause. The MC took the mic out of my hand and gave it to the next person, and I pranced back to my seat.
+房间里很安静。然后人们意识到我已经讲完了，他们给了我一个强制性的掌声。主持人从我手中拿过麦克风，把它交给下一个人，而我则蹦蹦跳跳地回到了我的座位。
 
-After pitches, it was time to form teams. Our Santa Barbara contingent looked at each other and said "I guess we're a team."
+投球结束后，就到了组队的时间。我们的圣巴巴拉小分队互相看了看，说 "我想我们是一个团队"。
 
-We figured out the wifi password and grabbed the choicest of workspaces: a corner office that had a door you could actually close.
+我们弄清了 WIFI 密码，抢到了最合适的工作场所：一个角落里的办公室，有一扇可以真正关闭的门。
 
-I started scrawling UI mockups on whiteboard. I said, "We want something that's always a click away. Right in your browser's menu bar."
+我开始在白板上写下 UI 模型。我说："我们想要的东西总是一击即中。就在你的浏览器的菜单栏里。"
 
-"Like a browser plugin," Steve said.
+"像一个浏览器插件，"史蒂夫说。
 
-"Yeah. Let's build a browser extension."
+"是的。让我们建立一个浏览器扩展。"
 
-I showed them examples of the three formats that essays might require: MLA, APA, and Chicago.
+我向他们展示了论文可能需要的三种格式的例子。MLA，APA，和 Chicago。
 
-"Could we generate all three of these at once, so they can just copy-paste them?" I asked.
+"我们能不能同时生成这三种格式，让他们可以直接复制粘贴？我问道。
 
-"We can do better than that," Steve said. "We can have a button for each of them that puts the citation directly into their clipboard."
+"我们可以做得更好，"史蒂夫说。"我们可以为他们每个人设置一个按钮，把引文直接放到他们的剪贴板中。"
 
-We worked fast, creating a simple MVP (Minimum Viable Product) by the end of Friday night. All it did was grab the current website's metadata and structure it as a citation. But it worked.
+我们工作得很快，在星期五晚上结束时创造了一个简单的 MVP（最小可行产品）。它所做的只是抓取当前网站的元数据，并将其结构化为一个引文。但它成功了。
 
-Since it was my first hackathon, I didn't want the stress of staying in a hostel. So I'd splurged to get a hotel room. We had two twin beds, so each night we'd rotate which of us had to sleep on the floor.
+由于这是我第一次参加黑客马拉松，我不想承受住在旅馆里的压力。所以我花钱买了一个酒店房间。我们有两张双人床，所以每天晚上我们都会轮流睡在地板上。
 
-Saturday morning, our ambitions grew. I walked to the whiteboard and said to the team: "Citing websites is great and all. But a lot of the things students cite are in books or academic papers. We need to be able to generate citations for those, too."
+星期六早上，我们的野心越来越大。我走到白板前，对团队说。"引用网站是伟大的，所有的。但学生们引用的很多东西都是在书本或学术论文中。我们也需要能够为这些东西生成引文。"
 
-We found an API that we could use to get citation information based on ISBN (a serial number used for books). And we hacked together a script that could search for academic papers based on their DOI (a serial number used for academic papers), then scrape data from the result page.
+我们找到了一个 API，我们可以用它来获取基于 ISBN（用于书籍的序列号）的引文信息。我们还写了一个脚本，可以根据 DOI（用于学术论文的序列号）搜索学术论文，然后从结果页中刮取数据。
 
-By Saturday night, the code for our browser extension was really coming together. So I sat down and started preparing the presentation slides. I left a lot of the final coding to my teammates while I rehearsed my pitch over and over again for hours.
+到了星期六晚上，我们的浏览器扩展的代码终于完成了。于是我坐下来，开始准备演示幻灯片。我把很多最后的编码工作留给了我的队友，而我则反复排练了几个小时的演讲。
 
-Even though it was my turn to sleep in a bed, I could barely get any shut-eye due to the jitters. Here I was, right in the heart of the tech ecosystem. Silicon Valley.
+尽管轮到我在床上睡觉，但由于紧张，我几乎无法闭目养神。我在这里，就在科技生态系统的中心。硅谷。
 
-As a teacher, I would routinely give talks in front of my peers – sometimes dozens of them. But this was different.
+作为一名教师，我经常在我的同行面前发表演讲，有时是几十个人。但这是不同的。
 
-In a few hours, I'd be presenting to a room full of ambitious developers. And judges. People with Ph.D.'s, some of whom had founded their own tech companies. They were going to be evaluating our work. I was terrified I'd somehow blow it.
+几个小时后，我将向一屋子雄心勃勃的开发者发表演讲。还有评委。拥有博士学位的人，其中一些人已经创办了自己的科技公司。他们将对我们的工作进行评估。我很害怕自己会以某种方式搞砸。
 
-Unable to sleep, I opened my email. The Startup Weekend staff had sent out an email, which included a PDF of a book. It was an unofficial mash-up of the tech startup classics [4 Steps to the Epiphany](https://www.amazon.com/Four-Steps-Epiphany-Successful-Strategies/dp/1119690358?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=662e9d222ccd9aa050d3ad29438e74e3&language=en_US&ref_=as_li_ss_tl) and [The Lean Startup](https://www.amazon.com/The-Lean-Startup-Eric-Ries-audiobook/dp/B005MM7HY8?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=13b3c19bdbda93658336cf7c69e27100&language=en_US&ref_=as_li_ss_tl).
+由于无法入睡，我打开了我的电子邮件。创业周末的工作人员发出了一封电子邮件，其中包括一本书的 PDF。这是一本非官方的科技创业经典 [顿悟的 4 个步骤](https://www.amazon.com/Four-Steps-Epiphany-Successful-Strategies/dp/1119690358?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=662e9d222ccd9aa050d3ad29438e74e3&language=en_US&ref_=as_li_ss_tl) 和 [精益创业](https://www.amazon.com/The-Lean-Startup-Eric-Ries-audiobook/dp/B005MM7HY8?_encoding=UTF8&qid=&sr=&linkCode=ll1&tag=out0b4b-20&linkId=13b3c19bdbda93658336cf7c69e27100&language=en_US&ref_=as_li_ss_tl) 的混搭。
 
-Now, I had already read these books, because they were required reading for anyone who wanted to build software products in the early 2010s. But I had also read dozens of other startup books. A lot of their insights sort of ran together into a slurry of advice.
+现在，我已经读过这些书，因为它们是 2010 年代初期想要构建软件产品的任何人的必读书籍。 但我还阅读了数十本其他创业书籍。 他们的很多见解都汇集在一起，形成了一堆建议。
 
-It was 4 a.m., and I couldn't sleep. So I just started reading. One thing these books really hit on is building something that people will pay for. The ultimate form of customer validation.
+凌晨 4 点，我无法入睡。 所以我才开始阅读。 这些书真正触及的一件事是构建人们愿意支付的东西。 客户验证的最终形式。
 
-That's when I realized: you know what would really push my presentation over the finish line? Proof of product-market fit. Proof that the app we were building solved a real problem people had. So much so that they'd open up their wallets.
+就在那时我意识到：你知道什么能真正推动我的演讲越过终点线吗？ 产品市场契合度的证明。 证明我们正在构建的应用程序解决了人们遇到的实际问题。 如此之多，以至于他们会打开钱包。
 
 这启发了我。我应该将我们的程序卖给其他人。
 
@@ -2495,274 +2515,282 @@ Hiring is hard.
 
 So you can see why employers are risk averse. Many of them will pass over seemingly qualified candidates until they find someone whom they feel 99% sure about.
 
-### Because Employers are So Risk Averse, Job Seekers Suffer
+### 因为雇主非常厌恶风险，所以求职者受苦
 
-Now if you think hiring is hard, wait until you hear about the job application process. You may already be all-too-familiar with it. But here goes...
+如果你现在认为招聘很困难，你一定不知道工作申请流程有多复杂。你或许已经对它再熟悉不过了。就像这样……
 
-- You have to prepare your résumé or CV. Along the way, you will make decisions which you'll constantly second-guess throughout your job search.
-- You have to look around for job openings online, research the employers, and assess whether they're likely to be a good fit for you.
-- Most job openings will lead to webforms where you will have to retype your résumé over and over again, hoping the form doesn't crash due to server errors or JavaScript validation errors.
-- Once you submit these job applications, you have to wait while employer process them. Some employers receive so many applications that they can't manually review them all. (Google alone receives 9,000 applications per day.) Employers will use software to filter through applications. In-house recruiters [spend an average of 6 seconds looking at each résumé](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/). Often your application will never even be reviewed by a human.
-- You will likely never hear anything back from the company. They have little incentive to tell you why they rejected you (they don't want you to file a discrimination lawsuit). If you're lucky, you'll get one of those "We've chosen to pursue other candidates" emails.
-- And all the time you spend applying for these jobs – potentially hours per week – is mentally exhausting and, of course, unpaid.
+- 你必须准备简历。同时，你将在整个求职过程中不断地摸索着做决定。
+- 你必须在网上四处寻找职位空缺，研究雇主，并且评估他们是否适合你。
+- 大多数职位的申请都需要填表，你将不得不一遍又一遍地重新填写简历，希望表单不会因服务器错误或 JavaScript 验证错误而崩溃。
+- 提交这些工作申请后，你必须等待雇主处理它们。有一些雇主并不会人工审阅所有申请，因为他们收到的申请实在太多了。（比如谷歌每天能收到 9000 份申请。）雇主会使用软件来筛选。内部招聘人员 [平均只花6秒查看每份简历](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/)。通常你的申请甚至永远不会被人工审阅。
+- 你可能永远不会收到公司的任何回复。他们几乎没有动机告诉你他们为什么拒绝你（他们不希望你提起歧视诉讼）。如果你幸运的话，你会收到一封“我们已经决定选择其他候选人”的电子邮件。
+- 所有你花在申请这些工作上的时间——可能是每周几个小时——是消耗精力的，当然，也是无偿的。
 
-Wow. So you can see what a nightmare the hiring process is for employers, and especially for job candidates.
+是吧。所以你可以看到招聘过程对雇主，尤其对求职者来说都是一场噩梦。
 
-But if you stick with it, you can eventually land offers. And when it rains, it pours.
+但如果你坚持下去，你最终可以拿到一些 offer。毕竟好运也是连着来的。
 
-Here's data from one freeCodeCamp contributor's job search over the span of 12 weeks:
+以下是一位 freeCodeCamp 贡献者在12周内的求职数据：
 
-![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)Out of 291 applications, he ultimately received 8 offers.
+![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)
 
-And as the offers came in, the starting salary got higher and higher. Note, of course, that this is for a job in San Francisco, one of the most expensive cities in the world.
+在投递了291份申请之后，他最终收到了8个 offer。
 
-![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)By week 12 his starting salary offers were nearly double what they were in week 2.
+随着 offer 的陆续到来，起薪也越来越高。当然，请注意，这是在世界上消费水平最高的城市之一——旧金山的工作。
 
-This developer's rate of getting interviews is quite strong. And his negotiation ability was also strong. You can [read more about his process if you're curious](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/).
+![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)
 
-But as I've said before, it is much easier to get into a company through the side door.
+到第12周时，在他收到的 offer 里，起薪几乎是第2周的两倍。
 
-And that's one of the reasons I wrote this book. I don't want you to keep lining up for the front door at these employers.
+这位开发者得到面试的几率相当高。而且他的谈判能力也很强。如果你感兴趣，可以[在这里](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/)了解更多关于他求职过程的内容。
 
-### If you Build Your Skills, Your Network, and Your Reputation You Can Bypass a Lot of the Job Application Process.
+但正如我之前所说，其实从“旁门”进入一家公司会更容易一些。
 
-Throughout this book, I've been teaching you techniques to increase your likelihood of "lucking" into a job offer.
+这就是我写这本书的原因之一。我不希望你们都在雇主的“前门”排队。
 
-> "Luck is preparation meeting opportunity. If you hadn't been prepared when the opportunity came along, you wouldn't have been 'lucky.'" – Oprah Winfrey
+### 如果你建立了自己的技能、人脉和声誉，你就可以绕过很多工作申请流程。
 
-This is why throughout this book I've encouraged you to develop all three of these areas at once, and to start thinking about them from day one – well in advance of your job search.
+在本书中，我一直在教你一些增加“走运”获得工作机会可能性的技巧。
 
-My story of not even looking for a job and landing a job may seem silly. But this happens more often than you might think.
+> “运气是准备遇见机会。如果你在机会来临时没有做好准备，你就不会'幸运'。” —— 奥普拉·温弗瑞
 
-The reality is: learning to code is hard.
+这就是为什么在整本书中我都鼓励你同时发展这三个领域，并且从第一天起就开始考虑它们——在你找工作之前。
 
-But knowing how to code is important.
+我没有特意找工作但却找到了工作的故事可能看起来有点蠢。但这种情况发生的频率可能比你想象的要高。
 
-In every industry – in virtually every company in the world – managers are trying to figure out ways to push their processes to the software layer.
+现实是：学习编程很困难。
 
-That means developers.
+但是知道如何编程很重要。
 
-You may hear about the occasional big layoff in tech. But if you zoom out and look at a longer timeline, the developer hiring trends are decidedly up and to the right.
+在每个行业中——几乎在世界上的每个公司中——管理者们都在试图找到将他们的流程软件化的方法。
 
-My hope is that with strong skills, a strong network, and a strong reputation, you will be able to land a good job with minimal additional fuss.
+这就意味着需要开发人员。
 
-Hopefully one day in our lifetime, it will be easier for employers and skilled employees to find one another, without the long, brutal job application and interviewing process.
+你可能听说过科技行业偶尔会出现大规模裁员。 但是，如果你缩小并查看更长的时间线，开发人员的招聘趋势无疑是增长的。
 
-### Should I Negotiate My Salary at My First Developer Job?
+我希望凭借优秀的技能、强大的人脉和良好的声誉，你将额外耗费最少的精力并找到一份好工作。
 
-Trying to negotiate your salary upward generally does not hurt as long as you do so politely.
+希望在我们有生之年的某一天，雇主和有技能的员工可以更容易地找到彼此，而无需漫长、残酷的工作申请和面试过程。
 
-I've written at length on [how to negotiate your developer job offer salary](https://www.freecodecamp.org/news/salary-negotiation-how-not-to-set-a-bunch-of-money-on-fire-605aabbaf84b/).
+### 我应该在第一份开发工作谈判薪资吗？
 
-Essentially, negotiating a higher starting salary comes down to how much leverage you have.
+只要你礼貌地进行谈判沟通，尝试提高你的薪水通常不会有什么坏处。
 
-Your employer has work to be done. How badly does your employer need you to work for them? What other options do they have?
+我写过一篇更详细的关于[如何进行开发工作的薪资谈判](https://www.freecodecamp.org/news/salary-negotiation-how-not-to-set-a-bunch-of-money-on-fire-605aabbaf84b/)的文章。
 
-And you need income to survive. What other options do you have? What is your backup plan?
+从本质上讲，谈判更高的起薪取决于你有多少能力。
 
-If you have a job offer from another employer offering to pay you a certain amount, you can use that as leverage in your salary negation.
+你的雇主有工作要完成。他们有多需要你来为他们工作？他们还有什么其他选择？
 
-If your best backup plan is to go back to school and get a graduate degree... that's not particularly strong leverage, but it's better than nothing. And you could mention it during the salary negotiation process.
+而你需要收入来生活。你有什么其他的选择？你的备选计划是什么？
 
-Think back to the lengthy hiring process I described earlier. Employers have to go through at least a dozen steps before they can reach the job offer step with candidates. They are probably already planning for you to negotiate, and won't be surprised by it.
+如果你有另一家雇主提供的工作机会，并且愿意支付某个金额的薪水，你可以将其作为谈判薪资的筹码。
 
-Now, if you're in a situation like I was where a company just offers you a job out of the blue, you may feel awkward trying to negotiate.
+如果你的最佳后备计划是回到学校并获得研究生学位……那不算特别强大的筹码，但总比没有好。你可以在薪资谈判的过程中提到它。
 
-![92508](https://www.freecodecamp.org/news/content/images/2023/01/92508.jpeg)Smithers from the Simpsons
+回想一下我之前描述的漫长的招聘过程。雇主必须经过至少十几个步骤才能与候选人到达将要发放 offer 的那一步。他们可能已经预料到你会进行薪资谈判，并不会对此感到惊讶。
 
-I will admit – in my story time above, when my manager offered me the job, I did not negotiate.
+现在，如果你和我一样，有家公司突然给你一份工作，你可能会觉得谈判薪资很尴尬。
 
-In retrospect, should I have negotiated my compensation? Probably.
+![92508](https://www.freecodecamp.org/news/content/images/2023/01/92508.jpeg)
 
-Did I have leverage? Probably not much. My backup plan was to just keep competing in hackathons and keep sipping tea and coding at the public library.
+《辛普森一家》里的史密瑟斯
 
-I may have been able to negotiate and get a few more bucks an hour. But in the moment they offered me the job, compensation was the last thing on my mind. I was just ecstatic that I was going to be a professional developer.
+我承认——在我上面写的故事里，当我的经理给我这份工作时，我没有谈判。
 
-By the way, once you've worked as a developer at a company for a year or so, you may want to ask for a raise. I've written at length about [how to ask for a raise as a developer](https://www.freecodecamp.org/news/youre-underpaid-here-s-how-you-can-get-the-pay-raise-you-deserve-fafcf52956d6/). But it comes down to the same thing: leverage.
+回想起来，我本应该协商我的报酬吗？也许吧。
 
-### Should You Use a Recruiter for Your Developer Job Search?
+我有什么筹码吗？可能不多。我的备选计划是继续参加编程比赛，在公共图书馆喝茶和写代码。
 
-Yes. If you can find a recruiter who will help you land your first developer job, I think you should.
+我也许能去谈判并每小时多赚几美元。但在他们给我那份工作的那一刻，报酬是我最后才考虑到的事情。我只是欣喜若狂，因为我即将成为一名专业的开发人员。
 
-I've written at length about [why recruiters are an underrated tool in your toolbox](https://www.freecodecamp.org/news/the-tech-recruiter-red-pill-967dd492560c/).
+顺便说一句，一旦你在一家公司担任开发人员一年左右，你可能会想要求加薪。我已经写了更详细的关于[作为开发人员如何要求加薪](https://www.freecodecamp.org/news/youre-underpaid-here-s-how-you-can-get-the-pay-raise-you-deserve-fafcf52956d6/)的文章。但归根结底都是同一件事：谈判筹码。
 
-Many employers will pay recruiters a finder's fee for sending them high quality job candidates.
+### 你应该找猎头帮忙搜寻开发职位吗？
 
-Recruiters’ incentives are well-aligned with your own goals as a job seeker:
+是的。如果你能找到一位猎头来帮助你找到第一份开发工作，那么你应该这样做。
 
-1. Since they get paid based on your starting salary, they are inclined to help you negotiate as high a starting salary as possible.
-2. The more candidates they place — and the faster they place them — the more money recruiters make. So they’ll want to help you get a job as fast as possible so they can move on to other job seekers.
-3. Since they only get paid if you succeed as an employee (and stay for at least 90 days), they'll try and make sure you’re competent, and a good fit for the company’s culture.
+我已经写过关于[为什么猎头是你找工作时被低估的工具](https://www.freecodecamp.org/news/the-tech-recruiter-red-pill-967dd492560c/)的文章。
 
-This said, if a recruiter asks you to pay them money for anything, that is a red flag.
+许多雇主会向猎头支付中介费，用以向他们输送高质量的求职者。
 
-And not all recruiters are created equal. Do your research before working with a recruiter. Even if they're ultimately getting paid by the employer, you are still investing your time in helping them place you. And time is valuable.
+猎头的目标和奖励机制与作为求职者的你完全一致：
 
-Speaking of time, one way you can start getting paid to code sooner – even while you're preparing for the job search – is to get some freelance clients.
+1. 他们将根据你的起薪获得报酬，因此他们倾向于帮助你协商到尽可能高的起薪。
+2. 他们成功输送的候选人越多——输送的速度越快——他们赚的钱就越多。所以他们会希望帮助你尽快找到工作，这样他们就可以转向其他求职者。
+3. 因为他们只有在你成为一名正式员工（并且至少待90天）后才会得到报酬，所以他们会努力确保你能胜任这份工作，并且适合公司的文化。
 
-### How to Get Freelance Clients
+话说回来，如果猎头要求你为任何事情付钱给他们，那就是危险信号。
 
-I encourage new developers to try and get some freelance clients before they start their job search. There are three good reasons for this:
+并不是所有的猎头都是相同的。在与猎头合作之前先做个调查。即使他们最终得到了雇主的报酬，你仍然在花时间帮助他们的工作。时间是很宝贵的。
 
-1. It's much easier to get a freelance client than it is to get a full time job.
-2. Freelance work is less risky since you can do it without quitting your day job.
-3. You can start getting paid to code sooner, and start building your portfolio of professional work sooner.
+说到时间，有一种可以让你更快达到写代码获得报酬的方法——即便你还在为求职做准备——做一些自由开发者的工作。
 
-Getting freelance clients can be much easier than getting a developer job. Why is this?
+### 如何找到自由客户
 
-Think about small local businesses. It may just be a family that runs a restaurant. Or a shop. Or a plumbing company. Or a law firm.
+我鼓励初级开发人员在开始找工作之前尝试获得一些自由客户。这里有三个很好的理由：
 
-How many of those businesses could benefit from having an interactive website, back office management systems, and tools to automate their common workflows? Most of them.
+1. 获得自由客户比找到全职工作要容易得多。
+2. 自由职业的风险较小，因为你可以在不辞去日常工作的情况下进行。
+3. 你可以更快地开始通过写代码获得报酬，并更快地开始构建你的专业作品集。
 
-Now how many of those companies can afford to have a full-time software developer to build and maintain those systems? Not as many.
+获得自由客户比找到开发工作要容易得多。这是为什么？
 
-That's where freelancers come in. They can do work in a more economical, case-by-case basis. A small business can bring on a freelancer for a single project, or for a shorter period of time.
+想想当地的小型企业。它可能只是一个经营餐馆、商店、管道公司或者律师事务所的家庭。
 
-If you are actively building your network, some of the people you meet may become your clients.
+这些企业中有多少可以从交互式网站、后台管理系统和工具中受益，以自动化他们的日常工作流程呢？答案当然是他们中的大多数。
 
-For example, you may meet a local accountant who wants to update their website. And maybe add the ability to schedule a consultation, or accept a credit card payment for a bill. These are common features that small businesses may request, and you may get pretty good at implementing them.
+然而这些公司中有多少能够聘请全职软件开发人员来构建和维护这些系统呢？没有那么多。
 
-You may also meet the managers of small businesses who need an ERP system, or a CRM system, or an inventory system, or one of countless other tools.
+这就是自由职业者的用武之地。使用他们更加经济实惠。小型企业可以为单个项目或短期聘请自由职业者。
 
-In many cases, there is an open source tool that you can deploy and configure for them. Then you can just teach them how to use that system. And you can bill them a monthly service fee to have you "on call" and ready to fix problems that may arise.
+如果你正在积极建立你的人脉，你遇到的一些人可能会成为你的客户。
 
-### Should I Use a Contract for Freelance Work?
+例如，你可能会遇到一位想要更新其网站的本地会计师，他可能想添加安排咨询或接受信用卡支付的能力。这些是小型企业可能要求的常见功能，你可能会非常擅长实现它们。
 
-You will want to find a standard contract template, customize it, and get a lawyer to approve it.
+你可能还会遇到需要 ERP 系统、CRM 系统、库存系统或无数其他工具之一的小型企业的管理者。
 
-It may feel awkward to make the local bakery sign a contract with you just to help update their website or social media presence. But doing so will make the entire transaction feel more professional than a mere handshake agreement.
+在许多情况下，你可以为他们部署和配置一个开源工具。然后你可以教他们如何使用那个系统。你可以按月向他们收取服务费，让你“随叫随到”并准备好解决可能出现的问题。
 
-It's unlikely that a small business will take you to court over a few thousand dollars. But in the event that this happens, you'll be glad you signed a contract.
+### 我应该签订自由职业合同吗？
 
-### How Much Should I Charge for Freelance Work?
+你需要找到一个标准的合同模板，修改它，然后请律师批准。
 
-I would take whatever you make at your day job, figure out your hourly rate, and double it. This may sound like a lot of money, but freelance work is much harder than regular work. You have to learn a lot.
+让当地的面包店与你签订合同只是为了帮助更新他们的网站或社交媒体形象，这可能会让人感到尴尬。但这样做会让整个交易比单纯的握手协议更专业。
 
-Alternatively, you could just bill for a project. "I will deploy and configure this system for you for $1,000."
+一家小企业不太可能会因为几千美元而将你告上法庭。但如果发生这种情况，你会很高兴自己签了合同。
 
-Just be sure to specify a time frame that you are willing to maintain the project. You don't want people calling you 3 years later expecting you to come back and fix a system that nobody has been maintaining.
+### 我应该为自由职业的工作收取多少费用？
 
-### How Do I Make Sure Freelance Clients Pay Me?
+我会计算出你日常工作的时薪，然后加倍。这听起来可能是很多钱，但自由职业比常规工作要难得多。你必须学习很多东西。
 
-A lot of other freelancer – myself included – use this simple approach: ask for half of your compensation up-front, before you start the work. And when you can demonstrate that you're half way finished, ask for the other half.
+或者，你可以以单个项目为单位计费。 “我将以1000美元的价格为你部署和配置此系统。”
 
-Always try to get all the money before you actually finish the project. That way, the client will not be able to dangle the money over your head and try to get extra work out of you.
+请务必指定你愿意维护项目的时间范围。你不希望人们在3年后打电话给你，希望你回来修复一个没有人维护的系统。
 
-If you're already paid in full, the work you do to help your client after the fact will convey: "I'm going above and beyond for you."
+### 我如何确保自由客户会付钱给我？
 
-Which is a totally different vibe from: "Uh oh – are you even going to pay me for all this work I'm doing?"
+很多其他的自由职业者——包括我自己——都使用这种简单的方法：在开始工作之前预先索取一半的报酬。当你能证明你已经完成了一半时，就要求他们支付另一半。
 
-### Should I Use a Freelance Website like Upwork or Fiverr?
+尽量在你真正完成项目之前拿到所有报酬，这样，客户就无法用未支付的报酬来试图让你做额外的工作。
 
-If you are in a rural part of the world and can't find any clients locally, you could try some of these freelance websites. But otherwise I would not focus on them. Here's why:
+如果你已经得到全额报酬，那么你之后为客户所做的工作将传达这个意思：“我为你付出了更多。”
 
-When you try to land contracts on a freelance website, you are competing with all the freelancers around the world. Many of them will live in cities that have a much lower cost of living than yours. Some of them will not even really care about their reputations like you do, and may be willing to deliver sub-par work.
+这带来了一种完全不同的气氛：“啊哦——你会为我做的所有工作付钱给我吗？”
 
-To some extent, these websites promote a "race to the bottom" phenomenon where the person who offers to do the work the cheapest usually gets the job.
+### 我应该使用像 Upwork 或者 Fiverr 这样的自由职业网站吗？
 
-If you instead focus on finding clients through your own local network, you will not have to compete with these freelancers abroad.
+如果你在一些偏远地区并且在当地找不到任何客户，你可以尝试其中的一些自由职业网站。但除此之外，我不会关注它们。原因如下：
 
-And the same goes for people who are looking for help from freelance developers. If you ever want to hire a freelancer, I strongly recommend working with someone you can meet with in-person, who has ties to your community.
+当你尝试在自由职业网站上找兼职工作时，你是在与世界各地的所有自由职业者竞争。他们中的许多人居住在生活成本比你低得多的城市。他们中的一些人甚至不会像你一样真正关心自己的声誉，并且可能愿意接受低于标准报酬的工作。
 
-Someone who has lived in your city for several years, and attends a lot of the same social gatherings as you – they're going to be much less likely to try to take advantage of you. If both you and your counterparty care about their reputation, you are both invested in a partnership that works.
+在某种程度上，这些网站助长了一种“逐底竞争”现象，即提供最廉价劳动力的人通常会得到这份工作。
 
-You can each be a success story in one another's portfolios.
+如果你转而专注于通过自己的本地人际关系寻找客户，你将不必与这些国外的自由职业者竞争。
 
-### When Should I Stop Freelancing and Start Looking for a Job?
+需要寻求自由开发者帮助的人也是如此。 如果你想雇用一名自由职业者，我强烈建议你与可以见到面的人一起工作，他与你的社区有联系。
 
-If you are able to pay your bills freelancing, you may just want to keep doing it. Over time, you may even be able to build up your own software development agency, and hire other developers to help you.
+在你的城市生活了几年，并且与你有很多交集的人——他们不太可能试图占你的便宜。如果你和你的合作方都关心自己的声誉，那么你们会成就一段有效的合作伙伴关系。
 
-This said, if you are yearning for the stability of a developer job, you may be in luck. Freelance clients may convert into full-time jobs if you stick with them long enough. At some point, it may make economic sense for a client to just offer you a full-time job at a lower hourly rate. You get the stability of a 40-hour work week, and they get your skills full-time.
+你们会可以成为对方履历中的成功故事。
 
-You may also be able to hang onto a few freelance clients when you get a job. This can be a nice supplement to your income. But keep in mind that, as we'll learn in the next chapter, your first developer job can be an all-consuming responsibility. At least at first.
+### 我什么时候应该停止自由职业并开始找正式工作？
 
-How wild is that first year of working as a professional developer going to be? Well, let's talk about that.
+如果你有能力以自由职业维生，你可能只想继续做下去。慢慢地，你甚至可以建立自己的软件开发机构，并聘请其他开发人员来帮助你。
 
-## Chapter 5: How to Succeed in Your First Developer Job
+话说回来，如果你渴望拥有稳定的开发工作，那么你可能很走运。如果你坚持足够长的时间，自由客户可能会给你全职工作。在某些时候，客户以较低的时薪给你提供一份全职工作可能更经济实惠。你得到一份稳定的每周工作40小时的工作，而他们全职获得你的技能。
 
-> "A ship in port is safe. But that's not what ships are built for." – Grace Hopper, Mathematician, US Navy Rear Admiral, and Computer Science Pioneer
+当你找到工作时，你也可以保留一些自由客户。这是很好的收入补贴。但请记住，正如我们将在下一章中了解到的那样，你的第一份开发工作可能会需要你非常尽职尽责。至少在一开始的时候是这样。
 
-Once you get your first developer job, that's when the real learning begins.
+成为职业开发者的第一年会有多疯狂呢？让我们来谈谈这个。
 
-You'll learn how to work productively alongside other developers.
+## 第5章：如何在你的第一份开发工作中取得成功
 
-You'll learn how to navigate large legacy codebases.
+> "待在港口的船很安全。但这不是造船的目的。" —— 格蕾丝·霍珀，数学家，美国海军少将，计算机科学先驱
 
-You'll learn Version Control Systems, Continuous Integration and Continuous Delivery tools (CI/CD), project management tools, and more.
+一旦你获得第一份开发工作，那就是真正学习的开始。
 
-You'll learn how to work under an engineering manager. How to ship ahead of a deadline. And how to and work through a great deal of ambiguity on the job.
+你将学习如何与其他开发人员一起高效工作。
 
-Most importantly, you'll learn how to manage yourself.
+你将学习如何浏览大型遗留代码库。
 
-You'll learn how to break through psychological barriers that affect all of us, such as imposter syndrome. You'll learn your limits, and how to push ever so slightly beyond them.
+你将学习版本控制系统、持续集成和持续交付工具 (CI/CD)、项目管理工具等。
 
-### Story Time: How did a Teacher in his 30s Succeed in his First Developer Job?
+你将学习如何在技术管理者手下工作。如何在截止日期前交付。以及如何解决工作中的大量分歧。
 
-*Last time on Story Time: Quincy landed his first developer job at a local tech startup. He was going to work as one of a dozen developers maintaining a large, sophisticated codebase. And he had no idea what he was doing...*
+最重要的是，你将学会如何管理自己。
 
-I woke up at 4 a.m. and I couldn't go back to sleep. I tried. But I had this burning in my chest. This anxiety. Panic.
+你将学习如何突破影响我们所有人的心理障碍，例如冒名顶替综合症。你将了解到自己的极限，以及如何稍微地超越它们。
 
-I had worked for a decade in education. First as a tutor. Then as a teacher. And then as a school director.
+### 讲故事时间：一名30多岁的教师如何在他的第一份开发工作中取得成功？
 
-In a few hours, I would be starting over from the very bottom, working as a developer.
+*上一次故事时间回顾：昆西在当地一家科技初创公司找到了他的第一份开发工作。他将成为维护一个庞大、复杂的代码库的十几名开发人员中的一员。他不知道自己在做什么……*
 
-Would any of my past learnings – past success – even matter in this new career?
+我凌晨4点醒来，再也睡不着了。我努力尝试睡着。但是我的胸口像在燃烧一样。焦虑和恐慌包围了我。
 
-I did what I always do when I feel anxiety – I went for a run. I bounded down the hills, my headlamp bobbing in the darkness. When I reached the beach, I ran alongside the ocean as the sun crept up over the treetops.
+我在教育领域工作了十年。先当家教。然后当老师。接着担任校长。
 
-By the time I got home, my wife was already leaving for work. She told me not to worry. She said, "I'll still love you even if you get fired for not knowing what you're doing."
+几个小时后，我将从头开始，成为一名开发人员。
 
-When I reached my new office, nobody was there. As a teacher, I was used to getting to school at 7:30 sharp. But I quickly realized that most software developers don't start work that early.
+我过去的任何学习——过去的成功——对我的新职业来说有什么意义吗？
 
-So I sat crosslegged in the entry hallway, coding along to tutorials on my netbook.
+我做了我感到焦虑时最常做的事——跑步。我跑下山坡，头灯在黑暗中摇晃。当我到达海滩时，太阳慢慢爬上树梢，我沿着大海奔跑。
 
-An employee walked up to me with a nervous look on her face. She probably thought I was a squatter. But I reassured her that I did indeed now work at her company, and convinced her to let me in.
+当我回到家时，我妻子已经出门上班了。她告诉我不要担心。她说，“即使你因为不知道自己在做什么而被解雇，我依然爱你。”
 
-It felt surreal walking across the empty open-plan office toward the developer bullpen, with only the light of the exit sign to guide my way.
+当我到达我的新办公室时，那里没有人。作为一名教师，我习惯于7点30分准时到校。但我很快意识到，大多数软件开发人员并没有那么早开始工作。
 
-I set up my netbook on an empty standing desk and finished my coding tutorial.
+所以我盘腿坐在入口走廊上，按照上网本上的教程写代码。
 
-A little while later, the lights flickered on around me. My boss had arrived. At first he didn't acknowledge my presence. He just sat down at his desk and started firing off bursts of keystrokes onto his mechanical keyboard.
+一名员工朝我走来，脸上带着紧张的表情。她可能认为我是一个来占位的闲杂人等。我向她保证我确实在她的公司工作，并说服她让我进去。
 
-"Larson," he finally said. "You ready for your big first day?"
+穿过空荡荡的开放式办公室走向开发人员工作的区域，我感觉像在做梦，只有出口标志的灯光指引着我的路。
 
-I wasn't. But I wanted to signal confidence. So I said the words first uttered in Big Trouble in Little China, one of my favorite 80s moves: "I was born ready."
+我在一张空的站立式办公桌上设置了我的上网本，并完成了编码教程。
 
-![big-trubs-born-ready](https://www.freecodecamp.org/news/content/images/2023/01/big-trubs-born-ready.jpeg)You've probably heard "I was born ready" a million times. But it was first uttered in 1986 by Jack Burton to his friend Wang Chi, when they were getting ready to confront a thousand year old wizard in his death warehouse. I can't believe my parents let me watch this back then, but I'm glad they did.
+过了一会儿，我周围的灯光亮了起来。我的老板来了。起初他并没在意我的存在。他只是在办公桌前坐下，开始敲击他的机械键盘。
 
-"Great," my boss said. "Let's get you a machine."
+“拉尔森，”他终于开口了。“你准备好迎接你这个重要的第一天了吗？”
 
-"Oh, I've already got one," I said, tapping my $200 netbook. "This baby is running Linux Mint, and I've already customized my .emacs file to be able to..."
+我还没准备好。但我想表现出我的信心。所以我说了我最喜欢的 80 年代电影之一《妖魔大闹唐人街》中的第一句台词：“我生来就准备好了。”
 
-"We're a Mac shop," he said walking to a storage closet. He rustled around for a moment and emerged. "Here. It's a 3 year old model, but it should do. We wiped it to factory default."
+![big-trubs-born-ready](https://www.freecodecamp.org/news/content/images/2023/01/big-trubs-born-ready.jpeg)
 
-I started to say that I was already familiar with my setup, and that I could work much faster with it, but he would have none of it.
+你可能已经听过上百万次“我天生就准备好了”。但这句话最早是在 1986 年杰克·伯顿 (Jack Burton) 对他的朋友王驰 (Wang Chi) 说的，当时他们正准备在他的死亡仓库中与一位千年老巫师对峙。 我不敢相信我的父母当时让我看这个，但我很高兴他们这么做了。
 
-"We're all using the same tools. It makes collaborating a lot easier. Convention over configuration, you know."
+“好极了，”我的老板说。“那么先给你配一台电脑。”
 
-That was the first time I'd heard the phrase "convention over configuration" but it would come up a lot over the next few days.
+“哦，我已经有了一个，”我敲了敲我200美元的上网本说。“这个宝贝正在运行 Linux Mint，我已经自定义了我的 .emacs 文件，以便能够……”
 
-I spent the next few hours configuring my new work computer as other developers gradually filed in.
+“我们是一家 Mac 商店，”他说着走向储藏室。他搜寻了一会儿，然后出现了。“这是一个已经用了3年的模型，但它应该还够用。我们把它重置到出厂设置。”
 
-It was nearly 10 a.m. when we started our team "standup meeting." We all stood in a circle by the whiteboard. We took turns reporting what we were working on that day.
+我开始说我已经熟悉我的电脑配置，而且我用它能更快地工作，但他并不接受。
 
-Everyone gave quick, precise status updates.
+“我们都在使用相同的工具。它使协作变得更加容易。你要知道，惯例优于配置。”
 
-When it was my turn, I started to introduce myself. I was already anxious enough, when in walked none other than Mike, that ultramarathoner guy who ran the Santa Barbara Startup events. He was crunching on some baby carrots, having already run about 30 miles that morning.
+那是我第一次听到“惯例优于配置”这个词，但在接下来的几天里它会出现很多次。
 
-After I finished, Mike spoke, welcoming me and saying he'd seen me at some of his events. He then gave a 15 second status update about some feature he was working on.
+其他开发人员陆续到了公司，而我花了接下来的几个小时来配置我的新电脑。
 
-The entire meeting only took about 10 minutes, and everyone scattered back to their desks.
+接近上午10点时，我们开始了团队“站会”。我们站在白板前围成一圈，轮流汇报当天的工作。
 
-I eventually got the company's codebase to run on my new laptop. It was a Ruby on Rails app that had grown over 5 years. I ran the `rake stats` command and saw that it was millions of lines of code. I shuddered. How could I ever comprehend all that?
+每个人都提供简洁、准确的进展更新。
 
-My neighbor, a gruff, bearded dev said, "Eh, most of that is just packages. The actual codebase you'll be working on is only maybe 100,000 lines. Don't worry. You'll get the hang of it."
+轮到我了，我开始自我介绍。当时我已经非常紧张了，结果这时候迈克走了进来，他是超级马拉松运动员，也主持举办圣塔芭芭拉的初创企业活动。他正在吃一些小胡萝卜，那天早上他已经跑了大约30英里。
 
-I gulped, but thought to myself: "That's less than millions. So that is good."
+在我结束后，迈克说话了，欢迎了我并且说他在一些活动中见过我。然后，他用15秒的时间讲述了有关他正在写一些功能的工作。
 
-"Name's Nick by the way," he said, introducing himself. "If you need any help just let me know. I've been stumbling around this codebase for quite a few years now, so I should be able to help you out."
+整个会议只进行了大约10分钟，大家就各自回到了自己的办公桌。
 
-Over the next few days, I peppered Nick with questions about every internal system I encountered.
+我最终让公司的代码库在我的新笔记本电脑上运行。这是一个已经发展了5年多的 Ruby on Rails 应用程序。我运行了“rake stats”命令，发现它有数百万行代码。我不寒而栗。我怎么可能能理解这些东西呢？
+
+我的隔壁桌，一个看起来粗鲁的、留着胡子的开发人员说，“嗯，其中大部分只是包。你实际要处理的代码库可能只有100000行。别担心。你会掌握它的窍门的。”
+
+我咽了咽口水，心想：“这还不到一百万呢，还行。”
+
+“顺便说一句，我叫尼克，”他自我介绍道。 “如果你需要任何帮助，请告诉我。我已经在这个代码库上摸索了好几年，所以我应该可以帮到你。”
+
+在接下来的几天里，我向尼克提问了每一个我遇到的内部系统问题。
 
 Eventually Nick started setting his chat status to "code mode" and putting on his noise cancelling headphones. He swiveled his back toward me a bit, with the body language of: "leave me alone so I can get some of my own work done, too."
 

@@ -1,6 +1,6 @@
 > -  原文地址：[Revisiting use of React’s Component Life Cycles in Anticipation of Async Rendering](https://www.freecodecamp.org/news/how-to-safely-use-reacts-life-cycles-with-fiber-s-async-rendering-fd4469ebbd8f/)
 > -  原文作者：[Anonymous](https://www.freecodecamp.orgAnonymous)
-> -  译者：
+> -  译者：Ucely
 > -  校对者：
 
 ![Revisiting use of React’s Component Life Cycles in Anticipation of Async Rendering](https://cdn-media-1.freecodecamp.org/images/1*zE7ymidBZ9BffwrT4MbfHw.jpeg)

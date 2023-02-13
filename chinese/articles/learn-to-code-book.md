@@ -1793,232 +1793,231 @@ It was 4 a.m., and I couldn't sleep. So I just started reading. One thing these 
 
 That's when I realized: you know what would really push my presentation over the finish line? Proof of product-market fit. Proof that the app we were building solved a real problem people had. So much so that they'd open up their wallets.
 
-This gave me an idea. I should take our app on the road and sell it to people.
+这启发了我。我应该将我们的程序卖给其他人。
 
-But it was Sunday morning. Where was I going to find potential customers? Well, our hotel just happened to be located near the main campus of Stanford University.
+那是星期天早上。我该去哪里寻找我的潜在客户呢？好吧，我们的酒店正好位于斯坦福大学主校区附近。
 
-I drove my team to the event venue, waved goodbye and said: "I'll come back when I have cold, hard cash from customers."
+我开车带着我的团队去了活动地点并且挥手告别说：“等从客户那里拿到了实实在在的现金，我会再回来的。”
 
-My teammates chuckled. I'm not sure if they thought I was serious. They said, "Don't be late for the pitch."
+我的队友笑了。我不确定他们是否觉得我是认真的。他们说，“那你不要迟到啊。”
 
-But I was serious. I had a prototype of the app running on my laptop. I punched Stanford into my GPS and embarked on my mission.
+但我是认真的。我在笔记本电脑上运行了一个应用程序的范例，在GPS中输入斯坦福，然后开始了我的任务。
 
-Now, I studied at a really inexpensive state university in Oklahoma. So I felt really out of my depth when I rolled up to one of the premier universities in the world.
+我曾经在俄克拉荷马州一所十分普通的州立大学学习。因此当我来到这所世界上最好的大学时，我真的感到力不从心。
 
-Stanford costs $50,000 per year to attend. And I pulled into their parking lot driving a car worth 1/10th of that.
+斯坦福大学的学费是每年五万美元。但我驾驶着一辆价值为其十分之一的小汽车，开进了他们的停车场。
 
-The campus was a ghost town this time of the week. But a palatial ghost town, none the less. Bronze statues. Iconic arches everywhere.
+这时的校园就像一个鬼城。但是是一个富丽堂皇的鬼城。因为到处都是青铜雕像和标志性的拱门。
 
-I asked myself: where are the most high-achieving, hard-core students this time of day? The ones who don't have time to waste on manually creating their Work Cited pages?
+我自言自语道：“今天这个时候成绩最好、最刻苦的学生都去哪里了？那些不会浪费时间去手动创建他们的论文参考文献的人。”
 
-I walked into the main library, right past the security desk and a sign that said "no soliciting."
+我走进主图书馆，正好经过安检台和一个写着“禁止推销”的牌子。
 
-I strode around the stacks, finding a small handful of people studying. This one kid was studiously taking notes as he read through a thick textbook. Bingo.
+我在书架周围来回溜达，发现几个人正在学习。其中一个孩子正在读着厚厚的课本，认真地做着笔记。就他了。
 
-I slid into the seat next to him. "Psst. Hey. Do you like citations?"
+我在他旁边的座位坐下。“你好。你喜欢文献引文吗？”
 
-"What?"
+“什么？”
 
-"Citations. You know, like, work cited pages."
+”文献引文。就像是论文参考文献。“
 
-"Um..."
+“嗯……”
 
-"You know, the last page of your paper, where you have to list all the..."
+“就是论文最后一页，在那里你会列出所有的……”
 
-"I know what a work cited page is."
+“我知道论文参考文献是什么。”
 
-"OK. Well check this out." I pulled my jacket to the side like a drug dealer, and whipped out my $200 netbook. He humored me for a moment while I delivered my awkward sales pitch.
+“好吧。来看看这个。”我将我的夹克放到一边，然后掏出我那200美元的笔记本电脑。当我发表了那尴尬的推销词时，他迁就了我一会儿。
 
-I said: "Here. I've got this browser plugin. I go to any website, click the button, and voilà. It will create a citation for me."
+我说：“看这里。我有一个浏览器插件。我去任何网站，仅需点击这个按钮，它就会为我创建一个引用。”
 
-The kid raised his eyebrows. "Can it do MLA?"
+这个孩子挑起眉毛。“它能做MLA吗？”
 
-I bit back my excitement and said, "MLA, APA, and even Chicago. Watch." I clicked the button and three citations appeared – each with its own copy-to-clipboard button.
+我强忍着兴奋说:“MLA, APA，甚至Chicago都可以。请看。”我点击了按钮，并且出现了三个引用-每个都有自己的复制按钮。
 
-The kid nodded, seeming somewhat impressed. So I attempted to close the sale.
+那个孩子点了点头，似乎很感兴趣。因此我试图尽快完成交易。
 
-"What if I told you that I was about to launch this app with a yearly subscription. But if you sign up now, I'll get unlimited access not for a year, but for a lifetime."
+“如果我告诉你，我打算将这个应用程序按年订阅。但是如果你现在注册，你就能无限制使用，不仅是一年，而是永久。“
 
-The kid thought for a moment.
+那个孩子思考了一会儿。
 
-I had heard that silence was the salesperson's best friend. So I sat there for an uncomfortably long time in total silence, staring him down.
+据说，沉默是销售最好的朋友。因此我坐在那里很长时间，完全沉默地盯着他。
 
-Finally he said: "Cool I'm in."
+最后他说：“很酷，我加入了。”
 
-"Awesome. That'll be twenty bucks."
+“太棒了。这应该需要20美元。”
 
-The kid recoiled. "What? That's expensive."
+那孩子退缩了。“什么？这么贵。”
 
-This was of course the era of venture capital-subsidized startups, where Uber and Lyft were losing money on every ride in a race for market share. So the kid's reaction was not totally surprising.
+这是风险资本补贴初创企业的时代，Uber和Lyft在争夺市场份额的过程中每次乘车都在亏损。因此，他的反应并不完全令人惊讶。
 
-But I thought fast. "Well, how much cash do you have on you?"
+我快速思考了一会儿。“那么，你身上带了多少现金？”
 
-He fumbled with his wallet, then said, "five bucks."
+他摸了摸钱包说，“五美元。”
 
-I looked at the crumpled bill and shrugged. "Sold."
+我看着那张皱巴巴的钞票，耸了耸肩。“成交。”
 
-He smiled, and I sent him an email with instructions for how to install it. Then I said, "One more thing. Let's take a picture together."
+他笑了，我给他发了一封电子邮件，告诉他如何安装这个程序。我说：“还有一件事。让我们一起照相吧。”
 
-I put my phone on selfie mode. He started to smile, and I said, "Here. Hold up the five dollar bill."
+我将相机调成自拍模式。他开始微笑，我说：“拿起这五美元吧。”
 
-I spent another hour pitching people in the library, and managed to get another paying customer as well. Then I raced back to the event venue to finalize our prototype with the team.
+我又花了一个小时在图书馆向人们推销，并设法获得了另一个付费客户。然后我跑回活动地点，与团队一起完成我们的程序示例。
 
-That afternoon, I gave what I still think is the best presentation of my life. We live-demoed the working app – which worked perfectly.
+那天下午，我做了我至今认为是我人生中最好的一次演讲。我们现场演示了这个应用程序，效果非常好。 
 
-We ended the presentation with the photos I'd taken, posing with Stanford students who were now our paying customers. When I held up the cash, the audience burst into applause.
+演讲结束时，我展示了我与那位斯坦福学生的合影，他们现在是我们的付费客户。当我举起那张现金时，观众爆发出热烈的掌声。
 
-Overall, it was one of the most exhilarating experiences of my life. We came in second place, and won some API credit from one of the companies who sponsored the event.
+总的来说，这是我一生中最令人振奋的经历之一。我们获得了第二名，并从赞助该活动的一家公司那里获得了一些API积分。
 
-At the after party, I chipmunked some pizza, so I'd have more time to network with everyone I could. I connected on LinkedIn. I followed on Twitter. I snapped selfies together with people and used the heck out of the event's hashtag.
+在会后派对上，我仅仅吃了些披萨，这样我就有更多时间和所有人交流了。我在LinkedIn上联系了他们。并且在Twitter上关注了他。我和人们一起自拍，并贴上了这个活动的标签。
 
-This was a watershed moment in my coding journey. I had proven to the people in that room that I could help design, code, and even sell an app. And more importantly, I'd proven it to myself.
+这是我编程旅程中的一个分水岭。我向那个房间里的人证明了我可以帮助设计、编码，甚至销售一款应用。更重要的是，我也向自己证明了这一点。
 
-### Riding the Hackathon Circuit
+### 参加黑客马拉松
 
-From that moment on, I was hooked on hackathons. That year, I participated in dozens of them. I became a road warrior, railing up and down the coast, attending every competition I could.
+从那一刻起，我就迷上了黑客松。那一年，我参加了几十场。我成了一名公路战士，沿着海岸来回奔跑，尽可能地参加每一场比赛。
 
-It would be much harder from here on out. I didn't have a team anymore. I was on my own.
+从现在开始将会变得更难了。因为我已经没有任何一个团队了。我只能靠自己。
 
-I'd arrive, meet as many people as I could, then go up and pitch an idea I thought might win over the judges.
+我到达后，尽可能多地与人见面，然后走上前去，提出一个我认为可能会赢得评委的想法。
 
-Sometimes people joined my team. Sometimes I joined other people's teams.
+有时人们加入我的团队。有时我加入其他人的团队。
 
-I didn't merely want to design apps – I wanted to code them, too. And my reach often exceeded my grasp.
+我不仅仅想要设计应用程序，我也想编写它们。我所达到的效果常常超出我的预期。
 
-There were many hackathons where I would still be trying to fix bugs down to the final minutes before going on stage. Sometimes my apps would crash during live demos.
+在很多黑客松比赛中，我直到上台前的最后几分钟都在努力修复漏洞。因为有时我的应用程序会在现场演示时崩溃。
 
-One hackathon in Las Vegas, I managed to screw up the codebase so badly that we just had to use a slideshow. I sat in the audience with my head in my hands, watching helplessly as my team member demonstrated how our app would hypothetically work – if I could have gotten it to work. We didn't fare well with the judges.
+在拉斯维加斯的一次黑客马拉松中，我无意将代码库搞得一团糟，以至于我们不得不使用幻灯片。我双手抱头坐在观众席上，无助地看着我的团队成员演示我们的应用程序，尽可能去假设其如何工作——如果我能让它工作的话。因此我们在评委面前表现不佳。
 
-But I kept grinding. Kept arriving in new towns, checking into the hostel, and hitting the venue, and eating as much free pizza as I could.
+但我一直在努力。不断到达新的城镇，入住旅馆，去会场，尽可能多地吃免费的披萨。
 
-My teams had come in second or third so many times I could barely keep count. But we'd never managed to outright win a hackathon.
+我的队伍获得第二或第三的次数太多了，我几乎数不清。但我们从来没有在黑客松比赛中直接获胜。
+### 破茧而出
 
-### Breaking Through
+直到圣地亚哥的一次活动。我永远不会忘记当我们创造的东西赢得了观众和评委的支持的感觉，以至于我们的胜利就像一个注定的结局。
 
-That was until an event in San Diego. I'll never forget the feeling of building something that won over the audience and judges to the extent that our victory felt like a foregone conclusion.
+他们宣布我们中奖后，我记得从后门溜到停车场，打电话给我的祖父母。我告诉他们我终于做到了。我帮助开发了一个应用程序，并精心准备了一场赢得黑客马拉松的演讲。
 
-After they announced us as the winner, I remember sneaking out the back door to a parking lot and calling my grandparents. I told them that I'd finally done it. I'd helped build an app and craft a pitch that had won a hackathon.
+我不知道我的祖父母对软件开发或黑客松了解多少。但他们说他们为我感到骄傲。
 
-I don't know how much my grandparents understood about software development, or about hackathons. But they said they were proud of me.
+现在他们去世了，但我经常回想起这段对话。我珍惜他们的鼓励。他们对一位30多岁的老师的信任，并且这位老师正疯狂地想成为一名开发人员。
 
-With them gone now, I often think back to this conversation. I cherish their encouragement. Their faith in a 30-something teacher who was trying like crazy to become a developer.
+从那以后，我一直在参加黑客松。在此过程中，我不断组建新的团队，学习新的工具。你永远不会忘记第一次让API工作的场景或者终于明白了Git命令是如何工作的。你永远不会忘记那些在你身边忙碌的人，他们试图让应用程序在演示过程中保持一致。
 
-I kept going to hackathons after that. I kept forming new teams and learning new tools along the way. You never forget the first time you get an API to work. Or when you finally grok how some Git command works. And you never forget the people hustling alongside you, trying to get the app to hold together through the demo.
+TechCrunch Disrupt黑客松。DeveloperWeek黑客松。ProgrammableWeb黑客松。The $1 Million Prize Salesforce黑客松。这么多大型的黑客马拉松，学到了这么多东西。这是我成为开发者的摇床。
 
-The TechCrunch Disrupt hackathon. The DeveloperWeek hackathon. The ProgrammableWeb hackathon. The $1 Million Prize Salesforce Hackathon. So many big hackathons and so much learning. This was the crucible where my developer chops were forged.
+在这个过程中，我不仅成功地提升了自己的技能和人脉，而且我现在也赢得黑客松的名声。
 
-Not only did I manage to build my skills and my network along the way – I now had a reputation as someone who could actually win a hackathon.
+我甚至扬名海外。
 
-I could ship.
+这使我成了一个有名的人物。
 
-This made me a known quantity.
+这种声誉对我获得第一批自由职业者客户、第一份开发人员工作，以及最重要的——相信自己作为开发人员的直觉至关重要。
 
-And that reputation was crucial to getting my first freelance clients, my first developer job, and most importantly – trusting my own instincts as a dev.
+### 为什么你的影响力很重要
 
-### Why Your Reputation is So Important
+影响力在社会中的起源可以追溯到人类的史前时期。当时在大多数部落和定居点，都有一些系统来记录交易记录。
 
-The role of reputation in society goes way, way back to human prehistory. In most tribes and settlements, there was some system to keep track of who owed what to whom.
+在有现金之前，仍然存在信贷。
 
-Before there was cash, there was credit.
+它可能是一份书面账簿，也可能是一位长者把所有这些记录都记在了脑子里。
 
-This may have been a written ledger. Or it may have been an elder who simply kept all these records in their head.
+除了原始的账目，还有一种不那么具体但同样重要的东西。
 
-Beyond raw accounting, there was also a less tangible, but equally important vibe that people carried with them.
+“约翰真会给马钉铁蹄。”
 
-"John sure knows how to shoe a horse."
+或者"简是全国最会讲故事的人"
 
-Or "Jane is the best story teller in the land."
+或者“杰在三年前的冬天对抗入侵者，拯救了我们。”
 
-Or "Jay's courage in battle saved us against the invaders three winters ago."
+你会注意到这些例子都涉及到某人擅长某事。不仅仅是做一个讨人喜欢的好人。
 
-You'll note that these examples all involve someone being good at something. Not merely being a good, likable person.
+做一个冷静、脚踏实地的人当然很有帮助。但这不是谋杀绿脚趾，我们不能只靠魅力活下去。
 
-It certainly helps to be a chill, down-to-earth human being. But this isn't The Big Lebowski, and we aren't going to survive on our charm alone.
+[image__2000-1338_](https://www.freecodecamp.org/news/content/images/2023/01/image__2000-1338_.png)谋杀绿脚趾(左)。他没有工作，没有技能，也没有精力。但他很冷静，冷静得不得了。
 
-![image__2000-1338_](https://www.freecodecamp.org/news/content/images/2023/01/image__2000-1338_.png)The Big Lebowski (left). He had no job, he had no skills, he had no energy. But he had chill, out the wazoo.
+开发人员很容易说:“哦，是的。我对JavaScript了如指掌。我可以为您构建任何类型的JavaScript应用程序，在您能想到的任何设备上运行。”
 
-It's easy for a developer to say: "Oh yeah. I know JavaScript like the back of my hand. I can build you any kind of JavaScript application you need, running on any device you can think of."
+或者可以说:“我总是在预期内提前发布代码。”
 
-Or to say: "I ship code under budget and ahead of time – all the time."
+但你怎么知道他们没有夸大其词呢?
 
-But how do you know they're not exaggerating their claims?
+毕竟，一个狡猾的人曾经说过:
 
-After all, a devious man once said:
+> “如果你只能擅长一件事，那就擅长撒谎。
+> 
+> 那么你什么都擅长了。”
 
-> "If you can only be good at one thing, be good at lying.
->
-> Then you're good at everything."
+(这句话的真实出处不详。但我愿意想象这句话是20世纪20年代一个戴着大礼帽和单片眼镜的骗子说的。)
 
-(The true provenance of this quote is unknown. But I like to imagine it was said by a 1920s con man wearing a top hat and a monocle.)
+任何人都会撒谎。有些人确实如此。
 
-Anyone can lie. And some people do.
+在我职业生涯的早期，我曾有过一个不愉快的经历——解雇一位谎称自己有硕士学位的老师。几年过去了，却没有人发现他。
 
-Earlier in my career, I had the unpleasant task of firing a teacher who had lied about earning a master's degree. The years went by and nobody caught it.
+每年，他都会在年度报告上撒谎，这样他就能比其他老师得到更高的加薪。因此每年他都能逃脱惩罚。
 
-Every year, he would lie on his annual paperwork, so that he could get a higher pay raise than the other teachers. And every year, he would get away with it.
+但有一天，一个小小的差异被我发现了。我查看了他的档案，给一些大学的记录部门打了电话，发现他从来没有完成学位。
 
-But one day a small discrepancy tipped me off. I reviewed his file, called up some university record departments, and discovered that he had never bothered finishing his degree.
+当我抓住他的时候，那真是史酷比的时刻。“如果不是因为你们这些该死的孩子，我本来可以逃脱惩罚的。”
 
-When I caught him it was a real Scooby Doo moment. "And I would have gotten away with it, if not for you darn kids."
+知道这个人在学校教书多年，薪水比其他许多老师都高——仅仅因为他愿意撒谎，这让人很难受。
 
-It sucked to know that this person was teaching at the school for years and getting paid more than many of the other teachers – just because he was willing to lie.
+说谎的战利品总是在那里，闪闪发光。有些人愿意向这种诱惑屈服。
 
-The spoils of lying are always there, glistening. Some people are willing to give in to that temptation.
+雇主们知道这一点。他们知道你不能相信任何声称知道全栈JavaScript开发的人。对于那些能获得公司徽章、公司电子邮件地址和生产数据库的密钥的人，你必须保持谨慎。
 
-Employers know this. They know you can't trust just any person who claims to know full-stack JavaScript development. You have to be cautious about who gets a company badge, a company email address, and the keys to your production databases.
+这就是为什么雇主使用行为面试问题——试图抓住那些更有可能不诚实的人。
 
-This is why employers use behavioral interview questions – to try and catch people who are more capable of dishonesty.
+你可以说我天真，但我相信大多数人天生善良。大多数人都愿意遵守规则，只要这些规则是合理公平的。
 
-Call me naive, but I believe that most people are inherently good. That most people are willing to play by the rules as long as those rules are reasonably fair.
+但是，如果十个人中就有一个人是糟糕的雇员，这意味着我们所有人都要接受更高的审查。
 
-But if even one person out of ten would be a disaster hire, it means that all of us are subjected to higher scrutiny.
+最糟糕的情况不仅仅是为了赚更多的钱而撒谎，而是出售公司机密，破坏与客户的关系，或以夸大数字的名义违反法律。
 
-The worst-case scenario is not merely someone who lies to make more money. It's someone who sells company secrets, destroys relationships with customers, or breaks laws in the name of inflating their numbers.
+历史上有很多员工为了自己的个人利益，对雇主造成灾难性的损失。
 
-History is rife with employees who unleashed catastrophic damage upon their employers, all for their own personal gain.
+因此，大多数大公司的开发人员招聘过程都是苛刻的。也许应该如此。但不幸的是，这使得“每个人”都更难得到开发人员的工作——即使是最诚实的求职者。
 
-Thus, the developer hiring process at most big companies is paranoid as heck. Maybe it should be. But unfortunately, this makes it harder for *everyone* to get a developer job – even the most honest of candidates.
+作为开发人员，我们需要证明我们的技能同我们所说的那样一样强大。我们需要证明，我们的职业道德是坚定的，因为我们的雇主需要它。
 
-As developers, we need proof that our skills are as strong as we say they are. We need proof that our work ethic is as steadfast as our employers need it to be.
+这就是影响力发挥作用的地方。它减少了歧义。它降低了交易对手风险。对雇主来说，提供工作机会，与你签订雇佣合同会更安全。
 
-That's where reputation comes in. It reduces ambiguity. It reduces counter-party risk. It makes it safer for employers to make a job offer, and to sign an employment contract with you.
+这意味着，如果你的影响力足够大，你就可以从侧门进入公司，而不是像其他求职者那样从正门进入。
 
-This means that – if you have a strong enough reputation – you may be able to get into the company through a side door – rather than the front door that other applicants line up for.
+有些公司甚至有内部招聘人员，他们可以快速跟踪你的面试过程。良好的声誉也可以帮助你在薪资谈判中掌握更多的议价权。
 
-Some companies even have in-house recruiters who can fast track your interview process. A strong reputation can also help you command more bargaining power during salary negotiations.
+因此，让我们来谈谈如何建立良好的影响力，并成为管理者们追捧的对象。
 
-So let's talk about how you can build a strong reputation, and become sought-after by managers.
+### 如何建立开发者的个人影响力
 
-### How to Build Your Reputation as a Developer
+作为一名开发者，至少有六种经过时间考验的方法可以建立你的影响力。这些都是:
 
-There are at least six time-tested ways you can build your reputation as a developer. These are:
+1. 黑客马拉松
+2. 为开源做出贡献
+3. 创建面向开发人员的内容
+4. 在大厂工作，步步高升
+5. 建立自由职业者客户的作品集
+6. 创建你自己的开源项目、公司或慈善机构
 
-1. Hackathons
-2. Contributing to open source
-3. Creating Developer-focused content
-4. Rising in the ranks working at companies who have a "household name"
-5. Building a portfolio of freelance clients
-6. Starting your own open source project, company, or charity
+#### 如何找到黑客马拉松和其他开发者竞赛
 
-#### How to Find Hackathons and Other Developer Competitions
+黑客马拉松是能够建立你的声誉，并且提高编码技能的最直接的方式。
 
-Hackathons represent the most immediate way to build your reputation, your network, and your coding skills at the same time.
+大多数黑客马拉松都是免费的，对公众开放。你只需要有时间和预算去旅行。
 
-Most hackathons are free, and open to the public. You just need to have the time and the budget to travel.
+如果你生活在一个有很多黑客松的城市——比如旧金山、纽约、班加罗尔或北京——你可能可以通勤去参加活动，然后回家睡在自己的床上。
 
-If you live in a city with lots of hackathons – like San Francisco, New York, Bengaluru, or Beijing – you may be able to commute to the event, then go home and sleep in your own bed.
+尽管我住在圣巴巴拉，那里每隔几个月才有一次黑客松，但我在旧金山有一个老同学，他让我睡在他的沙发上。这让我有机会参加更多的活动。
 
-Even though I lived in Santa Barbara, which only had hackathons once every few months, I did have an old classmate in San Francisco who let me crash on his couch. This gave me access to many more events.
+黑客松曾是很硬核的活动。人们会喝能量饮料，睡在地板上，这一切都是为了在宣传时间前完成他们的项目。
 
-Hackathons used to be hard core events. People would knock back energy drinks and sleep on floors, all to finish their project by pitch time.
+但黑客马拉松的组织者逐渐开始关注这些活动的健康和可持续。毕竟，很多参与者都有孩子，或者需要全职工作，不可能整个周末都在全力以赴地编写代码。
 
-But hackathon organizers are gradually becoming more mindful about the health and sustainability of these events. After all, a lot of participants have kids, or demanding full-time jobs, and can't just all-out code for an entire weekend.
+找到即将到来的活动的最好方法是谷歌“黑客马拉松[你所在城市的名字]”，并浏览出现的各种活动日历。其中许多将由大学、当地雇主，甚至以教育为重点的慈善机构运营。
 
-The best way to find upcoming events is to just google "hackathon [your city name]" and browse the various event calendars that come up. Many of these will be run by universities, local employers, or even education-focused charities.
+如果你想赢，我建议你提前做些研究。
 
-If you're playing to win, I recommend doing your research ahead of time.
-
-Who are the event sponsors? Usually it will be Business-to-Developer type companies, with APIs, database tools, or various Software-as-a-Service offerings.
+活动赞助商是谁?通常是面向开发者类型的公司，它们提供api、数据库工具或各种软件产品的服务。
 
 These sponsors will probably have a booth at the event where you can talk with their developer advocates. These are people who get paid to teach people how to use the company's tools. Sometimes you'll even meet key employees or founders at these booths, which can be a great networking opportunity, too.
 

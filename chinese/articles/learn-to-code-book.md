@@ -56,7 +56,7 @@
 1. [前言：本书适合的人群](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
 2. [概论](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
 3. [第一章：如何打造自己的技术栈](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
-4. [第二章：如何增加自己的人脉](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
+4. [第二章：如何拓展自己的人脉](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
 5. [第三章：如何提升自己的圈内名声](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
 6. [第四章：如何靠编程赚钱——自由职业与求职](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
 7. [第五章：如何在第一份工作中取得成功](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
@@ -144,87 +144,87 @@
 
 我确实认识一些对编程有*如此*兴趣的人，但同时我也认识很多不这么硬核的人：他们在一周的劳顿后，更愿意在周末探索自然，或者和朋友玩桌游。
 
-People generally enjoy doing things they're good at doing. And you can develop a reasonable level of passion for coding just by getting better at coding.
+人都是这样，我们会更倾向于做自己擅长的事情。你会在学习写代码的过程中逐渐提升自己的编程水平，进而提升对编程的兴趣。
 
-So in short: who is this book for? Anyone who wants to get better at coding, and get a job as a developer. That's it.
+那么说到底，这本书的受众到底是谁？其实就是想要学习编程、并获得一份开发者工作的每个人。
 
-You don't need to be a self-proclaimed "geek", an introvert, or an ideologically-driven activist. Or any of those stereotypes.
+无论你本身是“极客”，还是个内向的人，或者你是个理性的激进分子，你都可以学习编程。
 
-It's fine if you are. But you don't need to be.
+或者你还有以上没提到的其他特质，那也无妨。这些都不会成为你学习编程道路上的绊脚石。
 
-So if that's you – if you're serious about learning to code well enough to get paid to code – this book is for you.
+总之，只要你是想学好编程并通过编程赚钱的人，那这本书就是为你量身打造的。
 
-And you should start by reading this quick summary of the book. And then reading the rest of it.
+在通读此书前，请你花一点时间读完以下的概论章节。
 
-## 500 Word Executive Summary
+## 概论
 
-Learning to code is hard. Getting a job as a software developer is even harder. But for many people, it's worth the effort.
+学习编程本身并不容易，而想要拿到一份软件开发职位其实更难。不过对于大多数人来说，这份努力一定是值得的。
 
-Coding is a high-paying, intellectually challenging, creatively rewarding field. There is a clear career progression ahead of you: senior developer, tech lead, engineering manager, CTO, and perhaps even CEO.
+编程是高薪的、包含创新性工作的脑力劳动。职业发展路线也很明确：高级开发、技术领头人、管理岗、CTO，然后或许可以成为 CEO。
 
-You can find work in just about any industry. About two thirds of developer jobs are outside of what we traditionally call "tech" – in agriculture, manufacturing, government, and service industries like banking and healthcare.
+任何行业都需要软件开发。在所有软件开发职位中，非技术类公司约占 66%；这类公司包括农业、制造业、政府部门、以及像是银行和医院这样的服务业。
 
-If you're worried your job might be automated before you reach retirement, consider this: coding is the act of automating things. Thus it is by definition the last career that will be completely automated.
+如果你很担心软件开发这一职业会在你退休之前被自动化工具取代，不妨这样考虑：编程本身就是在让事情自动化。因此就算将来编程可以自动化，那也不会是最先被自动化取代的职业。
 
-Have I sold you on coding as a good career for you? Then here's what you need to do to break into the field.
+如果你看到了这里，希望你和我的想法一致，认为软件开发是一份不错的职业。接下来，咱们来讨论下如何进入软件开发领域吧。
 
-### Build your skills.
+### 打造自己的技术栈
 
-You need to learn:
+你需要学习如下内容：
 
-- Front End Development: HTML, CSS, JavaScript
-- Back End Development: SQL, Git, Linux, and Webservers
-- Scientific Computing: Python and its many libraries
+- 前端开发：HTML、CSS、JavaScript
+- 后端开发：SQL、Git、Linux、网页服务器
+- 科学运算：Python 及其相关[库](https://zh.wikipedia.org/wiki/%E5%87%BD%E5%BC%8F%E5%BA%AB)
 
-These are all mature, 20+ year old technologies. Whichever company you work for, you will almost certainly use most of these tools.
+以上提到的都是有 20 多年的发展史，而且发展相对成熟的领域。不论你将来为哪家公司效劳，都大概率会用到上面提到的这些技术。
 
-The best way to learn these tools is to build projects. Try to code at least some every day. If you do the freeCodeCamp curriculum from top to bottom, you'll learn all of this and build dozens of projects.
+学习这些东西的最好方式是做项目，最好是在学习过程中坚持一天做几个小项目。顺便，freeCodeCamp 上的课程里总共有几十个项目。
 
-![Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png)Some of the certifications in the freeCodeCamp core curriculum.
+![免费学-编程-适合忙碌人士的编程课程--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png) freeCodeCamp 核心课程里的一些板块（Certification：认证）。
 
-### Build your network.
+### 拓展自己的人脉
 
-So much of getting a job is who you know.
+人脉广的人一般能更快找到自己想要的工作。
 
-It's OK to be an introvert, but you do need to push your boundaries.
+内向虽然不是问题，但有时候你或多或少要跳出自己的舒适圈。
 
-Create GitHub, Twitter, LinkedIn, and Discord accounts.
+不如从为自己创建 GitHub、Twitter、LinkedIn 和 Discord 账号开始吧。
 
-Go to tech meetups and conferences. Travel if you have to. (Most of your "learn to code" budget should go toward travel and event tickets – not books and courses.)
+尽量多参加技术会议，哪怕是需要坐火车、高铁、飞机去的那种。我建议你把学习编程的资金预算花在通勤和技术会议门票上，而不是花在购买书和课程上。
 
-Greet people who are standing by themselves. Let others do most of the talking, and really listen. Remember people's names.
+多与有识之士攀谈，认真听取他们的观点，而且记住他们的名字。
 
-Add people on LinkedIn, follow them on Twitter, and go to after-parties.
+然后在 LinkedIn 上添加他们为好友，在 Twitter 上关注他们。如果你参加的技术会议有会后聚餐的安排，不要错过。
 
-### Build your reputation.
+### 提升自己的圈内名声。
 
-Share short video demos of your projects.
+可以考虑为自己做的项目录制一段 demo，然后发到网上。
 
-Keep applying to speak at bigger and bigger conferences.
+尝试申请成为技术会议的演讲人，越大型的会议越好。
 
-Hang out at hackerspaces and help people who are even newer to coding than you.
+在程序员的聊天频道里，花一些时间帮助那些比你晚入行的朋友们。
 
-Contribute to open source. The work is similar to professional software development.
+参与贡献开源项目。开源项目的开发和公司里的软件开发其实有很多相似之处。
 
-**Build all 3 of these at the same time.** Don't let yourself procrastinate the scariest parts.
+**这些事情可以同时做，没有先后顺序。**不要拖延。
 
-Instead of applying for jobs through the "front door", use your network to land job interviews through the "side door". Recruiters can help, too.
+与其海投职位等结果，不如考虑多认识些人，让他们帮你内推。哪怕你认识人力资源部门的朋友，也会有帮助。
 
-Keep interviewing until you start getting job offers. You don't need to accept the first offer you get, though. Be patient.
+在拿到 offer 之前，不要停下面试的脚步；甚至你也可以选择不接受第一份 offer，要有耐心。
 
-Your first developer job will be the hardest. Try to stay there for at least 2 years, and essentially get paid to learn.
+你的第一份开发职位一定是对你来说最有挑战性的。建议考虑至少做两年。别忘了，在这个过程中，你不只是在学习，还有收入。
 
-The real learning begins once you're on-the-job, working alongside a team, and with large legacy codebases.
+找到工作也绝不意味着学习的终止。事实上，在公司与团队合作和维护代码都是学习的过程。
 
-Most importantly, sleep and exercise.
+当然，身体健康一样重要。别忘了按时作息，保证睡眠和运动。
 
-Any sufficiently-motivated person can learn to code well enough to get a job as a developer.
+只要有足够的驱动力，任何人都可以学习编程并找到一份开发工作。
 
-It's just a question of how badly you want it, and how persistent you can be in the job search.
+区别只是你有多想成为开发者，以及你在找工作的过程中有多坚持。
 
-Remember: you can do this.
+保持信念：你一定可以的！
 
-## This Book is Dedicated to the Global freeCodeCamp Community.
+## 谨以此书献给全球的 freeCodeCamp 参与者。
 
 Thank you to all of you who have supported our charity and our mission over the past 8 years.
 

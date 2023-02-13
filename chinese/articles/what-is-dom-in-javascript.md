@@ -1,59 +1,59 @@
 > -  原文地址：[What is the DOM? A Behind-the-Scenes Guide](https://www.freecodecamp.org/news/what-is-dom-in-javascript/)
 > -  原文作者：[Kedar Makode](https://www.freecodecamp.org/news/author/kedar/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![What is the DOM? A Behind-the-Scenes Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/What-is-DOM-and-Events--in-JavaScipt--2-.png)
 
-Understanding how the DOM and events work in JavaScript is key if you want to be an effective front end developer.
+对于一名高效工作的前端开发者来说，了解JavaScript中的DOM和事件是如何运作非常重要。
 
-In this article, you'll learn what the DOM is and how it works.
+本文将讲解DOM是什么以及如何运作的。
 
-## What is the DOM?
+## DOM是什么?
 
-DOM stands for Document Object Model. It's the interface between JavaScript and the web browser.
+DOM的全称是文档对象模型，是连接JavaScript和web浏览器之间的接口。
 
-With the help of the DOM, you can write JavaScript to create, modify, and delete HTML elements, set styles, classes and attributes, and listen and respond to events.
+通过DOM，你可以编写JavaScript来创建、修改、删除HTML元素，设置样式、类别和属性，监听以及和响应事件。
 
-The DOM tree is generated from an HTML document, which you can then interact with. The DOM is a very complex API which has methods and properties to interact with the DOM tree.
+HTML文档生成DOM树之后，你就可以与之交互。DOM是一个复杂的API，包含与DOM树交互的方法和属性。
 
 ![Frame-70-1](https://www.freecodecamp.org/news/content/images/2022/09/Frame-70-1.png)
 
-Illustration of the DOM
+DOM图解
 
-You can visualize the DOM tree [here](https://fritscher.ch/dom-css/).
+你可以在[这个网站](https://fritscher.ch/dom-css/)视觉化DOM。
 
-## How the DOM Works – Behind the Scenes
+## DOM是如何运作的 – 幕后揭秘
 
-The DOM is organized in a really clever manner. The parent element is called the EventTarget. You can understand better how it works with the help of the below diagram:
+DOM的组织形式非常巧妙。顶层元素被称作`EventTarget`。你可以借助下图更好地了解工作原理。
 
 ![DOM-behind-the-scene-1](https://www.freecodecamp.org/news/content/images/2022/09/DOM-behind-the-scene-1.png)
 
-The EventTarget interface is implemented by objects which can receive events and may have listeners for them. In other words, any target of events implements the three methods associated with this interface. **Element**, and its children, as well as **Document** and **Window** are the most common event targets, but other objects can be event targets, too.
+`EventTarget`接口由可以接收事件、并且可以创建监听器的对象实现。换句话说，任何事件目标都会实现与该接口有关的这三个方法。虽然**Element**及其子项、**Document** 和 **Window** 是最常见的事件目标（EventTarget），但其他对象也可以是。
 
-Window represents the browser's window. All global JavaScript objects, functions, and variables automatically become members of the window object. Global variables are properties of the window object. Global functions are methods of the window object. Even the document object (of the HTML DOM) is a property of the window object.
+Window代表了浏览器窗口。所有全局的JavaScript对象、函数和变量都自动归属于window对象。全局变量是window对象的属性，全局函数是window对象的方法。即便是文档对象（HTML DOM）也是window对象的属性。
 
 ```js
 window.document.getElementById("header");
 
-// Both are same
+//两者相同
 
 document.getElementById("header");
 ```
 
-Nodes are in the DOM aka Document Object model. In the DOM, all parts of the document, such as elements, attributes, text, and so on are organized in a hierarchical tree-like structure that consists of parents and children. These individual parts of the document are known as nodes.
+Nodes归属于DOM（即文档对象模型）。在DOM中，如元素、属性、文本等都被组织在一个分层级的树状结构中，相互为子或父元素。这些个体就被称为node（节点）。
 
-The Node in the above diagram is represented by a JavaScript object. We mostly work with the document which has most commonly used methods like document.queryselector(), document.getElementBy Id(), and so on.
+上图中的Node可以被JavaScript对象表示。我们通常使用`document.querySelector()`, `document.getElementById()`等方法来调用这些节点。
 
-Now we will take a look at the document.
+现在让我们看看文档。
 
-## How to Select, Create, and Delete Elements Using the DOM
+## 如何使用DOM来选择、创建和删除元素
 
-With the help of the DOM, we can select, delete, and create element in JavaScript.
+因为DOM，我们可以使用JavaScript来选择、删除和创建元素。
 
-### How to Select Elements
+### 如何选择元素
 
-There are multiple ways we can select HTML elements in JavaScript. These are the methods we'll look at here:
+JavaScript中有各种各样的方式来选择HTML元素：
 
 -   document.getElementById();
 -   document.getElementByClassName();
@@ -61,78 +61,78 @@ There are multiple ways we can select HTML elements in JavaScript. These are the
 -   document.querySelector();
 -   document.querySelectorAll();
 
-#### How to use the `document.getElementById()` method
+#### 如何使用 `document.getElementById()` 方法
 
-The `getElementById()` method returns an element whose id matches a passed string. Since the ids of HTML elements are supposed to be unique, this is a faster way to select an element with ids.
+ `getElementById()`方法返回的元素id与传入的字符串匹配。因为HTML元素的id是唯一值，所以这种方式的速度最快。
 
-Example:
+例子:
 
 ```js
 const ele = document.getElementById("IDName");
-console.log(ele); // This will log the whole HTML element
+console.log(ele); // 打印对应id名称的元素
 ```
 
-#### How to use the `document.getElementByClassName()` method
+#### 如何使用`document.getElementByClassName()`方法
 
-The `document.getElementByClassName()` method returns an `HTMLCollection` of elements that match the passed class's name. We can search for multiple class names by passing the class names separated by whitespaces. It will return a live HTMLCollection.
+`document.getElementByClassName()`返回一个`HTMLCollection`，这个集合中的元素类名与传入的字符串匹配。我们可以同时搜索多个类别名称，传入的时候用空格隔开，它会实时返回的HTMLCollection。
 
-So what does it mean that the HTMLCollection is "live"? Well, it means that once we get the HTMLCollection for a class name, if we add an element with the same class name, then the HTMLCollection gets updated automatically.
+“实时”是什么意思？就是说，一旦我们给传入的类名添加一个元素，HTMLCollection会自动获取这个新的元素。
 
-Example:
+例子:
 
 ```js
 const ele = document.getElementByClassName("ClassName");
-console.log(ele); // Logs Live HTMLCollection
+console.log(ele); // 打印实时HTMLCollection
 ```
 
-#### How to use the `document.getElementByTagName();` method
+#### 如何使用`document.getElementByTagName();`方法
 
-The `document.getElementByTagName()` method returns the HTMLCollection of elements that match the passed tag name. It can be called on any HTML element. It returns an HTMLCollection which is a live collection.
+`document.getElementByTagName()`返回一个`HTMLCollection`，这个集合中的元素标签与传入的字符串匹配。可以对任何HTML元素调用这个方法，它会返回实时的HTMLCollection。
 
-Example:
+例子:
 
 ```js
 const paragraph = document.getElementByTagName("p");
 const heading = document.getElementByTagName("h1");
 
-console.log(paragraph); // p element HTMLCollection
-console.log(heading); // h1 element HTMLCollection
+console.log(paragraph); // p 元素 HTMLCollection
+console.log(heading); // h1 元素 HTMLCollection
 ```
 
-#### How to use the document.querySelector() method
+#### 如何使用document.querySelector()方法
 
-The `document.querySelector()` method returns the first element that matches the passed selector. Now here, we can pass classname, id, and tagname. Take a look at the below example:
+`document.querySelector()`返回满足传入条件的第一个HTML元素。在这个方法中我们可以传入类名、id和标签名。参见例子：
 
 ```js
-const id = document.querySelector("#idname"); // using id
-const classname = document.querySelector(".classname"); // using class
-const tag = document.querySelector("p"); // using tagname
+const id = document.querySelector("#idname"); // 使用id
+const classname = document.querySelector(".classname"); // 使用类名
+const tag = document.querySelector("p"); // 使用标签名
 ```
 
-Rules for selection:
+选择规则：
 
--   When selecting using class, use (.) at the start. For example (".classname")
--   When selecting using id, use (#) at the start. For example ("#id")
--   When selecting using a tag, simply select directly. For example ("p")
+-   若使用类别名，在开头要添加(.)， 如 (".classname")
+-   若使用id， 在开头要添加(#)，如("#id")
+-   若使用标签，可以直接使用标签名，如 ("p")
 
-#### How to use the document.querySelectorAll() method
+#### 如何使用document.querySelectorAll()方法
 
-The `document.querySelectorAll()` method is an extension of the `querySelector` method. This method returns **all** the elements that match the passed selector. It returns the Nodelist collection which is not live.
+`document.querySelectorAll()`是`querySelector`方法的延伸。这个方法返回**所有**匹配传入值的元素。该方法返回一个不会实时更新的NodeList。
 
 ```js
 const ele = document.querySelectorAll("p");
-console.log(ele); // return nodelist collection of p tag
+console.log(ele); // 返回p标签的NodeList
 ```
 
-**NOTE**: HTMLCollection is a live collection, while the Nodelist collection is a static collection.
+**注意**: HTMLCollection是实时更新的，但是NodeList并不是。
 
-### How to Create Elements
+### 如何创建元素
 
-You can create HTML elements in JavaScript and add them to HTML dynamically. You can create any HTML element with `document.createElement()` by passing the tag name in parenthesis.
+你可以在JavaScript中创建HTML元素，并且动态地添加到HTML中。可以使用`document.createElement()`来添加元素，在括号内传入元素的标签名。
 
-After you create the element, you can add the classname, attributes and textcontent to that element.
+元素创建成功之后，可以添加类名，属性以及该元素的文本内容。
 
-**Here's an example:**
+**例子:**
 
 ```js
 const ele = document.createElement("a");
@@ -140,144 +140,144 @@ ele.innerText = "Click Me";
 ele.classList.add("text-left");
 ele.setAttribute("href", "www.google.com");
 
-// update to existing element in HTML
+// 类似于以下标记
+// <a href="www.google.com">Click Me</a>
+
+// 在HTML中更新已有的元素
 document.querySelector(".links").prepend(ele);
 document.querySelector(".links").append(ele);
-document.querySelector(".links").befor(ele);
+document.querySelector(".links").before(ele);
 document.querySelector(".links").after(ele);
-
-// Simalar to below anchor tag
-// <a href="www.google.com">Click Me</a>
 ```
 
-In the above example, we created an anchor tag in JavaScript and added attributes and a classname to that anchor tag. We have four methods in the above example to update the created element in the HTML.
 
--   prepend(): inserts the data at the top of its first child element.
--   append(): inserts the data or content inside an element at the last index.
--   before(): inserts the data before the selected element.
--   after(): puts the element after the specified element. Or you can say that it inserts data outside an element (making the content its sibling) in the set of matched elements.
+在上述例子中，我们在JavaScript中创建了一个anchor标签，并且添加了类名和属性。在HTML中更新这个元素有以下四种方法：
 
-### How to Delete Elements
+-   `prepend()`: 在父节点的第一个子节点之前插入数据
+-   `append()`: 对位于最后一个索引的元素之后插入数据或内容
+-   `before()`: 在选定的元素前插入数据
+-   `after()`: 在选定的元素后插入数据。也可以说是在匹配的其父节点的子节点列表之后插入。（可以不作为元素插入，作为相邻的文本内容插入）。
 
-We know how to create elements in JavaScript and push them to the HTML. But what if we want to delete existing elements in the HTML? It's easy – we just need to use the `remove()` method on that element.
+### 如何删除元素
 
-**Here's an example:**
+我们已经了解了如何使用JavaScript创建元素以及如何将它添加到HTML中。但是如果我们想要删除一个HTML元素呢？很简单！只需要对这个元素调用`remove()`方法。
+
+**例子:**
 
 ```js
 const ele = document.querySelector("p");
 
-// This will remove ele when clicked on
-ele.addEventListner('click', function(){
+// ele被点击后就会被删除
+ele.addEventListener('click', function(){
 	ele.remove();
 })
 ```
 
-## How to Manipulate CSS from JavaScript
+## 如何通过JavaScript来控制CSS
 
-We know how to manipulate HTML from JavaScript. Now we will learn how to manipulate CSS from JavaScript. This can help you change the styling of your web pages dynamically.
+我们已经学习了如何通过JavaScript来控制HTML，现在我们来学习如何通过JavaScript来控制CSS，帮助你动态地更改页面。
 
-For example, if you click on an element, its background color should change. This is possible by manipulating CSS from JavaScript.
+如果想要通过点击一个元素，就更改这个元素的背景颜色的话，可以通过JavaScript来实现。
 
-**Here's some example syntax:**
+**语法如下:**
 
 ```js
 const ele = document.querySelector("desired element");
 
 ele.style.propertyName = value;
-
-// E.g -
-ele.style.color = red;
+// e.g.
+//ele.style.color = red;
 ```
 
-When changing CSS properties using JavaScript, you need to make sure whenever there is a `-` in the CSS, you capitalize the next letter. For example, in CSS you would write `background-color`, but in JavaScript, `backgroundColor` (with a capital C).
+当使用JavaScript来修改CSS属性的时候，需要注意在CSS中 `-` 用来连接单词，如 `background-color`但在JavaScript中我们使用 `backgroundColor` (驼峰样式)。
 
-**Here's an example:**
+**例子:**
 
 ```js
 const ele = document.querySelector("div");
 ele.style.backgroundColor = "red";
 ```
 
-Now suppose you already wrote CSS for your project and you wanted to add classes using JavaScript. We can do that using `classList` in JavaScript.
+假设你已经给项目编写好了CSS，你希望通过JavaScript来添加类名，可以使用`classList`。
 
-**Here's an example:**
-
-```js
-const ele = document.querySelector(".link");
-ele.classList.add("bg-red"); // add class bg-red to existing class list
-ele.classList.remove("pb-4");// remove class bg-red from existing class list
-ele.classList.toggle("bg-green"); // toggle class bg-red to existing class list which means if it already exists then it will be removed, if it doesn't exist it will be added.
-```
-
-When we use classList it adds, removes, or toggles classes directly to the element. It's like updating with existing classes.
-
-Unlike element.className it removes all existing classes and adds the given class.
-
-**Here's an example:**
+**例子:**
 
 ```js
 const ele = document.querySelector(".link");
-ele.classList.add("bg-red"); // add class bg-red to existing class list
-ele.classList.remove("pb-4");// remove class bg-red from existing class list
-
-ele.className = "p-10"; // Now this will remove all existing classes and add only "p-10 class to element."
+ele.classList.add("bg-red"); // 为已经存在的列表添加bg-red类名
+ele.classList.remove("pb-4");// 为已经存在的列表删除pb-4类名
+ele.classList.toggle("bg-green"); // 将bg-red类切换到现有的类列表中，这意味着如果它已经存在，那么它将被删除，如果它不存在，它将被添加。
 ```
 
-## How to Use Event Handlers
+当我们使用`classList`时，直接对元素进行添加、删除或切换类。这就像在更新现有的类。
 
-The change in the state of an object is known as an ****Event**.** The process of reacting to the events is called ****Event Handling**.**
+`element.className`的特别之处在于，它删除了所有现有的类别，然后添加一个新的类别。
 
-Events happen when a user does something like click, hover over an element, press a key, and so on. So when an event happens and you want to do a certain thing or manipulate anything, you use event handlers to trigger that event.
+**例子:**
 
-We use event handlers to execute certain code when that particular event happens. There are multiple event handlers in JavaScript (here's a quick [list of them](https://way2tutorial.com/html/html5_events_handler_list.php)), but you use the same process to add event handlers to any element.
+```js
+const ele = document.querySelector(".link");
+ele.classList.add("bg-red"); // 在现有的类别中添加bg-red类别
+ele.classList.remove("pb-4");//从现有的类别中删除pb-4类别
 
-**Here's the syntax:**
+ele.className = "p-10"; // 删除所有现有类别，添加p-10
+```
+
+## 如何使用事件处理器
+
+对象状态的改变被称作为**事件**。对事件做出反应的过程被称为**事件处理**。
+
+当用户点击鼠标、让鼠标在元素上滑过、按键等时，事件就发生了。所以当你想在事件发生时做一些事情的话，就可以使用事件处理器来引发这个事件。
+
+我们使用事件处理器在事件发生的时候来执行一些JavaScript代码。在JavaScript中有许多不同的事件处理器 (这里是一份简单的[列表](https://way2tutorial.com/html/html5_events_handler_list.php))，但将事件处理器添加到元素的方法相同。
+
+**语法如下:**
 
 ```js
 const ele = document.querySelector("a");
 
-ele.addEventListner("event", function(){
-	// callback function
+ele.addEventListener("event", function(){
+	// 回调函数
 });
 ```
 
-Some events you can use:
+你可以使用的事件
 
--   click
--   mouseover
--   mouseout
--   keypress
--   keydown
+-   click（点击鼠标）
+-   mouseover（鼠标移动到某个元素）
+-   mouseout（鼠标离开某个元素）
+-   keypress（按下键盘）
+-   keydown（按下键盘）
 
-**And here's an example of using the "click" event:**
+**这里是使用"click"事件的例子:**
 
 ```js
 const ele = document.querySelector("a");
 
-ele.addEventListner("click", function(){
+ele.addEventListener("click", function(){
 	ele.style.backgroundColor = "pink";
 });
 ```
 
-## Event Propagation: Bubbling and Capturing
+## 事件传播：冒泡和捕获
 
-Event Propagation determines in which order the elements receive the event(s). There are two ways to handle this event propagation order in the DOM: Event Bubbling and Event Capturing.
+事件传播决定了元素接收事件的顺序。有两种处理DOM中事件传播顺序的方式：事件冒泡和事件捕获。
 
 ![Frame-71-1](https://www.freecodecamp.org/news/content/images/2022/09/Frame-71-1.png)
 
-### What is Event Bubbling?
+### 什么是事件冒泡?
 
-When an event happens on a component, it first runs the event handler on it, then on its parent component, then all the way up on the other ancestors’ components.
+当一个事件发生在一个组件时，首先会在该组件上触发事件处理器，然后传播到它的父组件，一直向上到其他的父组件。
 
-By default, all event handlers move through this order from center component event to outermost component event.
+事件处理器的默认情况时从中心组件一路向外到最外层的组件传播。
 
-### What is Event Capturing?
+### 什么是事件捕获？
 
-This is the opposite of bubbling. The event handler acts first on its parent component and then on the component where it was actually meant to fire.
+这个过程和冒泡刚好相反。事件处理器首先作用在父组件，然后再作用到触发处理器的组件。
 
-In short, this means that the event is first captured by the outermost element and propagated to the inner elements. It is also called trickle down.
+简言之，事件首先由最外层的元素捕获，然后传递到最内层的元素。这个过程也被称作涓涓细流。
 
-**Let's try the below example:**
+**让我们看一下下面的例子:**
 
 ```html
 <!DOCTYPE html>
@@ -330,27 +330,27 @@ In short, this means that the event is first captured by the outermost element a
 </html>
 ```
 
-This code gives us the following:
+代码效果如图：
 
 ![Screenshot-2022-09-26-142920](https://www.freecodecamp.org/news/content/images/2022/09/Screenshot-2022-09-26-142920.png)
 
-Now study above example carefully. I have added an event listener to the `nav` tag and to the `anchor` tag. When you click on nav, the background color changes to green. When you click on the anchor tag, the background color changes to pink.
+仔细看上面的代码示例，我分别在`nav`标签和`anchor`标签添加了事件处理器：当你点击`nav`的时候背景色会变成绿色，而当点击`anchor`标签的时候，背景色会看成粉色。
 
-But when you click on the anchor tag, the background color of anchor as well as nav changes. This is because of **event bubbling.**
+但是当你点击`anchor`标签的时候，anchor和nav的背景色都发生了变化。这是因为**事件冒泡**。
 
-**This is what happens when you only click on the nav element:**
+**当你只点击nav元素的时候发生的事情：**
 
 ![Frame-72--1-](https://www.freecodecamp.org/news/content/images/2022/09/Frame-72--1-.png)
 
-**This is what happens when you only click on the nav element.**
+**点击nav元素的时候发生的事情**
 
-**This is what happens when you only click on the anchor element:**
+**当你只点击anchor元素的时候发生的事情:**
 
 ![Frame-73--1-](https://www.freecodecamp.org/news/content/images/2022/09/Frame-73--1-.png)
 
-**This is what happens when you only click on the anchor element**
+**当你点击anchor元素的时候发生的事情**
 
-To stop event propagation, we can use `stoppropagation()` on the event listener because of which the event propagation is happing. It will prevent the nav element event listener from getting activated in the above example.
+停止事件传播的方式是在事件发起的元素的事件处理器上使用 `stopPropagation()`。这样就可以阻止nav元素因为上面的原因被激活。
 
 ```html
 <!DOCTYPE html>
@@ -404,41 +404,44 @@ To stop event propagation, we can use `stoppropagation()` on the event listener 
 </html>
 ```
 
-## How to Traverse the DOM
+## 如何遍历DOM
 
-"A good JavaScript developer needs to know how to traverse the DOM— it’s **the act of selecting an element from another element.** " – [Zell Liew](https://zellwk.com/blog/dom-traversals/)
+"优秀的JavaScript开发者应该知道如何遍历DOM — 即 **从一个元素选择到另一个元素的行为** " – [Zell Liew](https://zellwk.com/blog/dom-traversals/)
 
-Now we are going to see why traversing the DOM is better than using the `document.querySelector()` method, and how to traverse like a pro.
+现在我们来看看为什么遍历会比 `document.querySelector()`方法好用，以及如何像专家一样遍历。
 
-There are 3 ways to traverse the DOM:
+有三种遍历DOM的方式：
 
--   Upward
--   Downward
--   Sideways
+-   向上
+-   向下
+-   相临
 
-### How to traverse the DOM upward
+### 如何向上遍历DOM
 
-There are two methods which help you traverse the DOM upward:
+有两种向上遍历DOM的方式：
 
 -   parentElement
 -   closest
 
-`parentElement` is a property that selects the parent element, like this:
+`parentElement`是选取父元素的属性，如下：
 
 ```js
 const ele = document.querySelector("a");
 console.log(ele.parentElement); // <div>
 ```
 
-The parentElement is great for selecting one level upwards. But `closest` lets you find an element that can be multiple levels above the current element. `closest` lets you select the closest ancestor element that matches a selector.
+`parentElement`可以完美地选择上一层的元素，而`closest`可以让你选择上几层的元素。 `closest`可以选择符合选择器最近的祖先元素。
 
-Here's an example of using `closest`:
+使用`closest`的例子：
 
 ```html
 <div>
-    <h3 class="demo">This is sample</h3>
-    <h1 class="demo">This is heading</h1>
-    <h2 class="heading"> This heading 2</h2>
+    <div class="demo">This is sample
+          <div class="demo">This is heading
+            <div class="heading"> This
+                heading 2</div>
+        </div>
+    </div>
 </div>
 ```
 
@@ -447,13 +450,13 @@ const ele = document.querySelector(".heading");
 console.log(ele.closest(".demo")); // This is heading
 ```
 
-In above code we are trying to get closest element to `.heading` which has a class of `.demo`.
+在上述代码中我们选在离`.heading`最近并且类名为 `.demo`的元素。
 
-### How to traverse the DOM downward
+### 如何向下遍历DOM
 
-We can traverse downward using the `children` method on a selector. With children you can select direct child of selected element.
+我们可以在选择器中使用`children`方法来向下遍历，就可以选择到直属子元素。
 
-**Here's an example:**
+**例子:**
 
 ```html
 <div>
@@ -468,18 +471,18 @@ We can traverse downward using the `children` method on a selector. With childre
 const ele = document.querySelector("div");
 const child = ele.children;
 
-console.log(child); // gives HTMLCollection
-// 4 element inside div
+console.log(child); // 返回HTMLCollection
+// div中的4个元素
 ```
 
-### How to traverse the DOM sideways
+### 如何遍历相邻的DOM
 
-It's very interesting to traverse the DOM sideways. There are mainly two methods we can use:
+遍历相邻的DOM很有趣，有两种主要的方法：
 
 -   previousElementSibling
 -   nextElementSibling
 
-With the help of the `previousElementSibling` method, we can select previous elements in the HTML like this:
+使用`previousElementSibling`方法，我们可以选择HTML中的前一个元素：
 
 ```html
 <div>
@@ -493,7 +496,7 @@ const ele = document.querySelector("h1");
 console.log(ele.previousElementSibling); // <a href="#">Link-1</a>
 ```
 
-With the help of `nextElementSibling`, we can select the next element in the HTML like this:
+使用`nextElementSibling`，我们可以选择HTML中的后一个元素：
 
 ```html
 <div>
@@ -507,11 +510,11 @@ const ele = document.querySelector("a");
 console.log(ele.nextElementSibling); // <h1>Heading</h1>
 ```
 
-## **Wrapping Up**
+## **总结**
 
-I hope you now understand how the DOM works in JavaScript. Thank you for reading!
+希望你已经了解JavaScript中的DOM是如何工作的，感谢阅读！
 
-You can follow me on:
+你可以在以下地方关注我：
 
 -   [Twitter](https://twitter.com/Kedar__98)
 -   [LinkedIn](https://www.linkedin.com/in/kedar-makode-9833321ab/?originalSubdomain=in)

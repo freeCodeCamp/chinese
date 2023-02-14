@@ -701,235 +701,235 @@ if __name__ == "__main__":
 
 我们正在做的事情被称为 "声明式编程" （declarative programming）。我们在宣布 "计算机，你应该这样做"。而计算机足够聪明（编程足够好），能够理解我们的指令并执行它们。
 
-Here in 2023, the style of coding most of us are doing is "imperative programming." We're telling the computer exactly what to do, step-by-step.
+在2023的今天，我们大多数正在使用的代码风格就是“命令性编程”。我们一步步地告诉计算机，我们要做什么。
 
-Computers are dumb, so we have to help them put one foot in front of the other.
+计算机很呆，所以我们必须帮它们把一只脚放在另一只脚前面，以让它知道怎么走路。
 
-Right now, the field just isn't mature yet.
+现在，这个领域尚未成熟。
 
-Early human tools advanced from stone to bronze to iron. And the same thing is happening with software tools. But much faster.
+人类早期的工具是从石头到青铜再到铁，同样的事情也发生在软件工具上，不过速度要快得多。
 
-We're probably in the programming equivalent of the bronze age right now. But we may reach the iron age in our lifetime.
+我们现在可能处于相当于青铜时代的编程阶段。但在我们的有生之年，我们可能会达到铁器时代。
 
-### Learning to Code is an Ambiguous Process
+### 学习编程是一个模糊的过程
 
-When you're learning to code, you constantly ask yourself: "Am I spending my time wisely? Am I learning the right tools? Do these book authors / course creators even know what they're talking about?"
+学习编程的时候，你可能经常会问自己：“我这样花时间干这个事儿正确吗？我现在学的是正确的工具吗？这些书的作者和课程制作者真的知道他们自己在说什么吗？”
 
-Ambiguity fogs your every study session. "Did my test case fail because the tutorial is out of date, and there have been breaking changes to the framework I'm using? Or am I just doing it wrong?"
+模糊性会迷惑你的每一次学习。“我的测试案例失败是因为教程过时了，而且我使用的框架发生了重大变化？还是我只是做错了？”
 
-As I mentioned earlier with Tutorial Hell, you also have to cope with "grass is greener on the other side" disease.
+正如我之前在《教程地狱》中提到的，你还得应对“这山望着那山高”的问题。
 
-This is compounded by the fact that some developers think it's clever to answer questions with "RTFM" which means "Read the Freaking Manual." Not super helpful. Which manual? Which section?
+很多开发者在面临这个问题的解答时，都会用一个他们自认为很聪明的“RTFM”原则作为答案，即“Read the Freaking Manual（直接啃说明书）”。但是这个答案也并不是那么有用，甚至会让问题变得更加复杂，该读哪本说明书？读哪个章节？
 
-Another problem is: you don't know what you don't know. Often you can't even articulate the question you're trying to ask.
+另一个问题是：你没有清晰的了解你不知道的事情，以至于你往往不能清楚地表达出你想问的问题。
 
-And if you can't even ask the right question, you're going to thrash.
+如果你连问出正确的问题都做不到，那么得到正确的答案更是异想天开，你会被学习过程折磨得很惨。
 
-This is extra hard with coding because it's possible no one has attempted to build quite the same app that you're building.
+这会让编程这件事变得格外苦难，因为在你做这个软件之前，很大几率没人试着做过和你这个完全相同的软件。
 
-And thus some of the problems you encounter may be unprecedented. There may be no one to turn to.
+因此，你在过程中遇到的问题大概率是前所未有的，而且可能没有人可以帮你。
 
-15% of the queries people type into Google every day have never ever been searched before. That's bad news if you're the person typing one of those.
+人们每天在谷歌上输入的查询中，有15%是以前从未被搜索过的。如果你正在搜索的内容是这15里的东西，那可能有点不妙。
 
-My theory is that most developers will figure out how to solve a problem and simply move on, without ever documenting it anywhere. So you may be one of dozens of developers who has had to invent their own solution to the same exact problem.
+我的理论是：大多数开发人员会想出如何解决一个问题，然后简单地继续前进，而不会把它记录在任何地方，因此，你可能是少数不得不为相同的问题找出自己的解决方案的开发者之一。
 
-And then, of course, there are the old forum threads and StackOverflow pages.
+然后，当然我们还有很多古老的论坛主题和Stackflow页面。
 
-![wisdom_of_the_ancients_png__485-270_](https://www.freecodecamp.org/news/content/images/2023/01/wisdom_of_the_ancients_png__485-270_.png)Comic by XKCD
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/01/wisdom_of_the_ancients_png__485-270_.png" alt="来自XKCD的绘画" class="kg-image"><figcaption>来自XKCD的绘画</figcaption></figure>
 
-### How Not to Get Lost When Learning to Code
+### 如何在学习编程的时候不迷失方向
 
-The good news is: both **competence** and **confidence** come with practice.
+好消息是：当你练习多了以后， **能力** 和 **自信** 都会随之而来。
 
-Soon you'll know exactly what to google. You'll get a second sense for how documentation is usually structured, and where to look for what. And you'll know where to ask which questions.
+很快你就会知道在Google上搜什么了。对于文档通常是如何组织的，以及在哪里寻找目标信息，你很快就会有第二直觉，而且你也会知道该在哪里问哪些问题。
 
-I wish there were a simpler solution to the ambiguity problem. But you just need to accept it. Learning to code is an ambiguous process. And even experienced developers grapple with ambiguity.
+我希望这些含糊不清的问题都能有一个简单的答案，但是你不得不承认，学习编程就是一个含糊不清的过程。而且即使是有经验的开发者也会为模棱两可的问题而烦恼。
 
-After all, coding is the rare profession where you can just infinitely reuse solutions to problems you've previously encountered.
+毕竟，在编程时，你可以无限地重复使用你以前遇到的问题的解决方案，就职业内容这方面来说，编程是一份稀有的职业。
 
-Thus as a developer, you are always doing something you've never done before.
+因此，作为一名开发者，你总是在做一些你以前从未做过的事情。
 
-People think software development is about typing code into a computer. But it's really about learning.
+人们总是认为软件开发就是把代码输进电脑里，但这实际上是在学习。
 
-You're going to spend a huge portion of your career just thinking really hard. Or blindly inputting commands into a prompt trying to understand how a system works.
+在你的职业生涯中，你会花很大一部分时间去认真思考。又或是盲目地将命令输入提示符，试图了解一个系统是如何运作的。
 
-And you're going to spend a lot of time in meetings with other people: managers, customers, fellow devs. Learning about the problem that needs to be solved, so you can build a solution to it.
+而且你会花很长时间跟别人开会，比如管理者、顾客、开发者同事。学习需要解决的问题，这样你就可以建立一个解决方案。
 
-Get comfortable with ambiguity and you will go far.
+适应这种模糊的感觉，你就会走得更远。
 
-### Learning to Code is One Error Message After Another
+### 编程是在一个又一个的错误信息中学习的
 
-A lot of people who are learning to code feel like they hit a wall. Progress does not come as fast as they expect.
+很多学习编程的人有时感觉像是撞到了墙上，因为进展并不像他们期待中的那么快。
 
-One huge reason for this: in programming, the feedback loop is much tighter than in other fields.
+一个很大的原因是：编程的反馈比回路要比其他领域紧密的多。
 
-In most schools, your teacher will give you assignments, then grade those assignments and give them back to you. Over the course of a semester, you may only have a dozen instances where you get feedback.
+在很多学校里，你的老师会给你布置一些作业，然后给它们打分之后再返回给你。在一个学期里，你可能只有十几次得到反馈的机会。
 
-"Oh no, I really bombed that exam," you might say to yourself. "I need to study harder for the midterm."
+你可能会对自己自言自语道：“完了，那门课的考试考砸了，期中考试之前得好好学习了。”
 
-Maybe your teacher will leave notes in red ink on your paper to help you improve your work.
+或许你老师会在你的书卷上用红笔标出要点，来帮助你改善工作。
 
-Getting a bad grade on an exam or paper can really ruin your day.
+在考试或试卷上得到一个糟糕的成绩真的会让人心情糟糕一整天。
 
-And that's how we generally think about feedback as humans.
+而这一般就是我们作为人类对反馈的思考方式。
 
-If you've spent much time coding, you know that computers are quite fast. They can execute your code within a few milliseconds.
+如果你花时间在编程上，你会知道电脑是很快的，他们可以在毫秒内将你的代码执行完毕。
 
-Most of the time your code will crash.
+大多数情况下你的代码会崩溃。
 
-If you're lucky, you'll get an error message.
+如果你比较幸运的话，你会得到一个错误信息。
 
-And if you're really lucky, you'll get a "stack trace" – everything the computer was trying to do when it encountered the error – along with the line of code that caused the program to crash.
+而如果你足够幸运的话，你会得到一个“堆栈记录”以及导致程序崩溃的那一行代码，堆栈记录指的是当计算机遇到错误时试图做的一切操作。
 
-![A stack trace error message while running freeCodeCamp locally.](https://www.freecodecamp.org/news/content/images/2023/01/oh-my-zsh-stack-trace-error.jpg)
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/01/oh-my-zsh-stack-trace-error.jpg" alt="在本地运行freeCodeCamp时的堆栈跟踪错误信息" class="kg-image"><figcaption>在本地运行freeCodeCamp时的堆栈跟踪错误信息</figcaption></figure>
 
-Now this in-your-face negative feedback from a computer. Not everyone can handle it seeing this over and over all day long.
+上面就是来自电脑的当面的负面反馈，不是每个人都能接受整天看到这种情况。
 
-Imagine if every time you handed your teacher your term paper, they handed it back with big red "F" written on it. And imagine they did this before you could even blink. Over and over.
+想象一下，如果每次你把你的学期论文交给老师，他们都会把大红的"F"写在上面。再想象一下，在你还没来得及眨眼的时候，他们就这样做了。一遍又一遍。
 
-That's what coding can feel like sometimes. You want to grab the computer and shout at it, "why don't you just understand what I'm trying to do?"
+编码有时就是这种感觉，你想抓住电脑，然后不停地质问它："你为什么就是不懂我？"
 
-### How Not to Get Frustrated
+### 怎样才能不感到沮丧
 
-The key, again, is practice.
+再重复一遍，关键是练习。
 
-Over time, you will develop a tolerance for vague error messages and screen-length stack traces.
+随着时间的推移，你会对模糊的错误信息和像屏幕一样长的堆栈记录形成一种容忍。
 
-Coding will never be harder than it is when you're just starting out.
+编程永远不会比你刚开始的时候更难。
 
-Not only do you not know what you're doing, but you're not used to receiving such impersonal, rapid-fire, negative feedback.
+你不仅不知道自己在做什么，而且你也不习惯接受这种不近人情的、快速的、负面的反馈。
 
-So here are some tips:
+所以这里有一些小建议：
 
-#### Tip #1: Know that you are not uniquely bad at this.
+#### Tip #1：明确自己在这方面并不是独一无二的糟糕。
 
-Everyone who learns to code struggles with the frustration of trying to Vulcan Mind Meld with a computer, and get it to understand you. (That's another Star Trek reference.)
+每个学习代码的人都会为试图与计算机进行Vulcan心灵融合并让它理解你而感到沮丧。(这是另一个来自《星际迷航》的参考资料）。
 
-Of course, some people started programming when they were just kids. They may act like they've always been good at programming. But they most likely struggled just like we adults do, and over time have simply forgotten the hours of frustration.
+当然，很多人在他们是孩子的时候就开始编程了。他们会表现得像他们一直很擅长编程，但他们很可能像我们成年人一样挣扎，随着时间的推移，他们只是忘记了那几个小时的挫折。
 
-Think of the computer as your friend, not your adversary. It's just asking you to clarify your instructions.
+把电脑看作你的朋友，而不是对手，电脑有什么错，它只是想让你把自己的指令明确一些罢了。
 
-#### Tip #2: Breathe.
+#### Tip #2：呼吸。
 
-Many people's natural reaction when they get an error message is to gnash their teeth. Then go back into their code editor and start blindly changing code, hoping to somehow luck into getting past it.
+很多人在面对错误信息的时候，本能反应都是咬牙切齿。然后重新在代码编辑器中盲目的修改代码，希望以某种幸运的方式通过这个问题。
 
-This does not work. And I'll tell you why.
+这样是行不通的，下面是为什么这么说。
 
-The universe is complex. Software is complex. You are unlikely to just Forest Gump your way into anything good.
+宇宙是很复杂的。软件也是很复杂的。你不太可能仅仅通过"阿甘正传"的方式获得任何好处。
 
-![gump](https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg)Forest Gump doing what he does and getting improbably lucky catching shrimp.
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg" alt="阿甘做他该做的事，并以不寻常的运气抓到了虾子" class="kg-image"><figcaption>阿甘做他该做的事，并以不寻常的运气抓到了虾子</figcaption></figure>
 
-You may have heard of the Infinite Monkey Theorem. It's a thought experiment where you imagine chimpanzees typing on typewriters.
+你可能听说过"无限猴子定理"。这是一个思想实验，实验内容是让你想象黑猩猩在打字机上打字。
 
-If you had a newsroom full of chimpanzees doing this, how long would it take before one of them typed out the phrase "to be or not to be" by random chance?
+如果你有一个新闻编辑室，里面都是黑猩猩在做这件事，要多久才会有一只黑猩猩随机打出"to be or not to be"这句话？
 
-Let's say each chimp types one random character per second. It would likely take 1 quintillion years for one of them to type "to be or not to be." That's 10 to the 18th power. A billion billion.
+假设每只黑猩猩每秒钟打一个随机字符。他们中的一个可能需要1万亿年的时间来输入"to be or not to be"，那是10的18次方，十亿亿。
 
-Even assuming the chimps remain in good health and the typewriters are regularly serviced – the galaxy would be a cold, dark void by the time one of them managed to type "to be or not to be."
+即使假设黑猩猩保持健康，打字机定期维修，当它们中的一个设法打出"to be or not to be"时，银河系将是一个寒冷、黑暗的虚空。
 
-Why do I tell you all of this? Because you don't want to be one of those chimps.
+我为什么要告诉你这一切？因为你不希望成为那些黑猩猩中的一员。
 
-In that time, you could almost certainly figure out a way to teach those chimps how to type English words. They could probably manage to type out all of Hamlet – not just its most famous line.
+在这段时间里，你几乎肯定可以想出办法来教那些黑猩猩如何打英文单词。它们可能会设法打出《哈姆雷特》的全部内容，而不仅仅是其中最著名的一句。
 
-Even if you somehow do get lucky, and get past the bug, what will you have learned?
+即使你真的很幸运，通过了这个bug，你会学到什么？
 
-So instead of thrashing, you want to take some time. Understand the code. Understand what's happing. And then fix the error.
+因此，与其惊慌失措，不如花些时间，理解代码，理解正在发生的事情，然后修复错误。
 
-Always take time to understand the failing code. Don't be a quintillionarian chimp. (I think that means someone who is 1 quintillion years old, though according to Google, nobody has ever typed that word before.)
+务必花时间去理解错误的代码，不要成为一个quintillionarian(五亿年)的黑猩猩。(我认为quintillionarian意味着一个五亿岁的人，虽然根据谷歌，以前没有人用过这个词）。
 
-Instead of blindly trying things, hoping to get past the error message, slow down.
+与其盲目地尝试，寄希望于简单地跳过错误信息，不如放慢速度。
 
-Take a deep breath. Stretch. Get up to grab a hot beverage.
+深吸一口气，伸个懒腰，起身去拿一杯热饮。
 
-Your future self will be grateful that you took this as a teachable moment.
+未来的自己会感谢你把这作为一个有教育意义的时刻。
 
-#### Tip #3: Use Rubber Duck Debugging
+#### Tip #3：使用“橡皮鸭”调试
 
-Get a rubber ducky and set it next to your computer. Every time you hit an error message, try to explain what you think is happening to your rubber duck.
+找一只橡皮鸭子，把它放在你的电脑旁边。每当你遇到错误信息时，试着解释一下你认为你的橡皮鸭发生了什么。
 
-Of course, this is silly. How could this possibly be helpful?
+当然，这是很蠢的，这怎么可能有帮助呢？
 
-Except it is.
+除非真的有帮助。
 
-Rubber Duck Debugging is a great tool for slowing down and talking through the problem at hand.
+“橡皮鸭调试”对于让自己慢下来、尝试专注于眼前的工作是很有帮助的。
 
-You don't have to use a rubber duck, of course. You could explain your Python app to your pet cactus. Your SQL query to the cat that keeps jumping onto your keyboard.
+当然，你不一定要用橡皮鸭子。你可以向你的宠物仙人掌解释你的Python应用程序，解释你的SQL查询给那只一直跳到你键盘上的猫。
 
-The very act of explaining your thinking out loud seems to help you process the situation better.
+大声解释你的想法似乎能帮助你更好地处理这一情况。
 
-### How do Most People Learn to Code?
+### 大多数人是怎么学习编程的呢？
 
-Now let's talk about traditional pathways to a first developer job.
+现在让我们来谈谈通往第一份开发者工作的传统途径。
 
-Why should you care what everyone else does? Spoiler alert: you don't really need to.
+为什么要在意别人是怎么做的呢？剧透警告：没必要。
 
-You do **you**.
+做好自己的事情就可以了。
 
-This said, you may doubt yourself and the decisions you've made about your learning. You may yearn for the path not taken.
+这就是说，你可能会怀疑自己和你对学习所做的决定，你可能会向往没有走过的路。
 
-My goal with this section is to calm any anxieties you may have.
+我在这一部分的目标是安抚你可能有的任何焦虑。
 
-#### The Importance of Computer Science Degrees
+#### 计算机科学学位的重要性
 
-University degrees are still the gold standard for preparing for a career in software development. Especially bachelor's degrees in Computer Science.
+大学学位对于准备从事软件开发职业的人来说仍然是一个黄金标准，尤其是计算机科学的学士学位。
 
-Before you start saying "But I don't have a computer science degree" – no worries. **You don't need a Computer Science degree to become a developer**.
+在你开始说“但我没有计算机科学学位”之前，不用担心，**你不需要计算机科学学位就能成为一名开发人员**。
 
-But their usefulness is undeniable. And I'll explain why.
+但它们的用处是不可否认的，下面将解释原因。
 
-First, you may wonder: why should developers study computer science? After all, one of the most prominent developers of all time had this to say about the field:
+首先，你会想“为什么开发者需要学习计算机科学？”，毕竟，有史以来最著名的开发者之一对该领域有这样的评价：
 
-> "Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter." – Eric Raymond, Developer, Computer Scientist, and Author
+> “计算机科学教育不能使任何人成为专家级的程序员，就像研究画笔和颜料不会让人成为专家级的画家一样。” - Eric Raymond，开发人员、计算机科学家和作家。
 
-Computer Science departments were traditionally part of the math department. Universities back in the 1960s and 1970s didn't know quite where to put this whole computer thing.
+计算机科学系在传统上是数学系的一部分，20世纪60年代和70年代的大学不知道该把整个计算机的事情放在哪里。
 
-At other universities, Computer Science was considered an extension of Electrical Engineering. And until recently, even University of California – Berkeley – one of the greatest public universities in the world – only provided Computer Science degrees as sort of a double-major with Electrical Engineering.
+在其他大学，计算机科学被认为是电气工程的延伸。直到最近，即使是加州大学伯克利分校--世界上最伟大的公立大学之一--也只提供计算机科学学位，作为电气工程的一种双主修课程。
 
-But most universities have now come to understand the importance of Computer Science as a field of study.
+但大多数大学现在已经开始了解计算机科学作为一个研究领域的重要性。
 
-As of writing this, Computer Science is the highest paying degree you can get. Higher even than fields focused on money, such as Finance and Economics.
+截至本文写作时，计算机科学是你能得到的报酬最高的学位，甚至高于专注于金钱的领域，如金融和经济学。
 
-[According to Glassdoor](https://www.glassdoor.com/blog/50-highest-paying-college-majors/), the average US-based Computer Science major makes more money at their first job than any other major. US $70,000. That's a lot of money for someone who just graduated from college.
+[根据Glassdoor](https://www.glassdoor.com/blog/50-highest-paying-college-majors/), 美国的计算机科学专业平均在第一份工作中比其他专业赚得更多。70000美刀对一个刚从大学毕业的人来说是一笔不小的收入。
 
-More than Nursing majors ($59,000), Finance majors ($55,000) and Architecture majors ($50,000).
+高于护理专业（59000美元）、金融专业（55000美元）和建筑专业（50000美元）。
 
-OK – so getting a Computer Science degree can help you land a high-paying entry level job. That is probably news to no one. But why is that?
+OK--所以获得计算机科学学位可以帮助你找到一份高薪的入门工作。这可能对任何人都不是新闻，但这是为什么呢？
 
-#### How Employers Think About Bachelor's Degrees
+#### 雇主如何看待学士学位的问题
 
-You may have heard some big employers in tech say things like, "we no longer require job candidates to have a bachelor's degree."
+你可能已经听到科技界的一些大雇主说，“我们不再要求求职者有学士学位”之类的话。
 
-Google said this. Apple said this.
+谷歌这么说过，苹果也这么说过。
 
-And I believe them. That they no longer require bachelor's degrees.
+而且我相信他们，他们不再需要本科学位。
 
-We've had lots of freeCodeCamp alumni get jobs at these companies, some of whom did not have a bachelor's degrees.
+我们已经有很多freeCodeCamp的校友在这些公司找到了工作，其中有些人没有相应的学士学位。
 
-But those freeCodeCamp alumni who landed those jobs probably had to be extra strong candidates to overcome the fact that they didn't have bachelor's degrees.
+但那些找到这些工作的freeCodeCamp校友可能必须是特别强的候选人，以克服他们没有学士学位的事实。
 
-You can look at these job openings as having a variety of criteria they judge candidates on:
+你可以看一下这些职位空缺，他们判断候选人的标准有很多：
 
-1. Work experience
-2. Education
-3. Portfolio and projects
-4. Do they have a recommendation from someone who already works at the company? (We'll discuss building your network in depth in Chapter 2)
-5. Other reputation considerations (we'll discuss building your reputation in Chapter 3)
+1. 工作经验
+2. 教育
+3. 投资组合和项目
+4. 他们是否有已经在该公司工作的人的推荐？(我们将在第二章深入讨论建立你的网络）
+5. 其他声誉方面的考虑（我们将在第三章中讨论建立你的声誉。）
 
-For these employers who do not require a bachelor's degree, education is just one of several considerations. If you are stronger in other areas, they may opt to interview you – regardless of whether you've ever even set foot inside a university classroom.
+对于这些不要求学士学位的雇主来说，教育只是几个考虑因素中的一个。如果你在其他方面比较强，他们可能会选择面试你--不管你是否曾经踏入过大学的教室。
 
-Just note that having a bachelor's degree will make it easier for you to get an interview, even at these "degree-optional" employers.
+只需注意，拥有学士学位将使你更容易获得面试机会，即使在这些 "可选择学位 "的雇主那里。
 
-#### Why do so Many Developer Jobs Require a Computer Science Degree Specifically?
+#### 为什么那么多开发者的岗位特别要求有计算机科学的学位呢？
 
-A bachelor's is a bachelor's, I often tell people. Because for most intents and purposes, it is.
+我经常告诉人们，学士就是学士。因为就大多数意图和目的而言，它是有用的。
 
-Want to enter the US military as an officer, rather than an enlisted service member? You'll need a bachelor's degree, but any major will do.
+想进入美国军队成为一名军官，而不是一名士兵？你将需要一个学士学位，但任何专业都可以。
 
-Want to get a work visa to work abroad? You'll probably need a bachelor's degree, but any major will do.
+想获得工作签证到国外工作吗？你可能需要一个本科学位，但任何专业都可以。
 
-And for so many job openings that say "bachelor's degree required" – any major will do.
+而对于许多写着“需要学士学位”的职位空缺--任何专业都可以。
 
-Why is this? Doesn't the subject you study in university matter at all?
+这是为什么呢？你在大学里学习的科目难道一点都不重要吗？
 
 Well, here's my theory on this: what you learn in university is less important than **whether** you finished university.
 

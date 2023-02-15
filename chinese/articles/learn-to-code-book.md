@@ -3,228 +3,228 @@
 > -  译者：casey cui
 > -  校对者：
 
-![How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
+[如何在 2023 年学习编程并入行程序员 [完结]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
 
-If you want to learn to code and get a job as a developer, you're in the right place. This book will show you how.
+如果你打算学习编程并成为一名开发者，希望这本书对你有帮助。
 
-And yes this is the full book – for free – right here on this webpage.
+这本书已编写完毕，完全免费。你可以在此阅读。
 
-A few years back, one of the Big 5 book publishers from New York City reached out to me about a book deal. I met with them, but didn't have time to write a book.
+几年前，纽约市的 5 家头部出版商找到我，希望与我合作出书。我和他们当面聊了下，可当时我根本抽不出时间来写书。
 
-Well, I finally had time. And I decided to just publish this book for free, right here on freeCodeCamp.
+现在我终于有时间写书了，而且我打算让大家在 freeCodeCamp 上免费阅读我写的这本书。
 
-Information wants to be free, right? 🙂
+信息本身即是自由且免费的，对吧？🙂（注：原文 "Information wants to be free" 旨在表达信息本应无障碍地被人们获取，见[此词条](https://en.wikipedia.org/wiki/Information_wants_to_be_free)，英文中的 free 既有“自由”也有“免费”之意；另外，此处译文参考自[这里](https://web.law.duke.edu/cspd/chinese/information/)）
 
-It may take you a few hours to read all this. But this is it. My insights into learning to code and getting a developer job.
+这本书包括了我对学编程和成为开发者的许多思考，因此篇幅较长，通读可能需要几个小时。
 
-I learned all of this while:
+以下是我的个人经历：
 
-- learning to code in my 30s
-- then working as a software engineer
-- then running freeCodeCamp.org for the past 8 years. Today, more than a million people visit this website each day to learn about math, programming, and computer science.
+- 30 多岁开始学习编程
+- 然后成为软件工程师
+- 之后，我于 8 年前（2015 年）创办了 freeCodeCamp.org。现在，每天都有一百多万人来这里学习数学、编程和计算机科学
 
-I was an English teacher who had never programmed before. And I was able to learn enough coding to get my first software development job in just one year.
+在这之前，我是一名从未接触过编程的英语老师。不过，我在开始学习编程一年后就拿到了我的第一份开发者工作。
 
-All without spending any money on books or courses.
+在这个过程中，我没有花一分钱购买书籍或参与任何课程。
 
-(I did spend money to travel to nearby cities and participate in tech events. And as you'll see later in the book, this was money well spent.)
+（确切地说我其实花钱了，因为我经常跑到周边城市参加了技术会议。后文中会提到，这些钱花得非常值得）
 
-After working as a software engineer for a few years, I felt ready. I wanted to teach other people how to make this career transition, too.
+做了几年软件工程师之后，我觉得是时候改变一下了：我想教会其他人如何实现职业生涯的转换。
 
-I built several technology education tools that nobody was interested in using. But then one weekend, I built freeCodeCamp.org. A vibrant community quickly gathered around it.
+一开始我尝试着做了一些技术类的教学工具，但反响平平。直到有一个周末，我上线的 freeCodeCamp.org 竟成为了爆款，吸引了很多用户，逐步构建了 freeCodeCamp 社区。
 
-Along the way, we all helped each other. And today, people all around the world have used freeCodeCamp to prepare for their first job in tech.
+一直以来，我们在社区内互相帮助。现在，全世界的人们得以通过 freeCodeCamp 来为自己的第一份技术工作做准备。
 
-You may be thinking: I don't know if I have time to read this entire book.
+你也许会想：“我可能没那么多时间读完整本书”。
 
-No worries. You can bookmark it. You can come back to it and read it across as many sittings as you need to.
+没关系，你可以随时标注读到了哪里；之后有空了随时回来继续读。这本书会一直在这里等你。
 
-And you can share it on social media. Sharing: "check out this book I'm reading" and linking to it is a surprisingly effective way to convince yourself to finish reading a book.
+或许你还可以尝试在社交网络上分享，说：“看，我在读这本书”，并附上链接。你可能想不到，这是一种很好的激励方式，有助于你尽快读完这本书。
 
-I say this because I'm not trying to sell you this book. You already "bought" this book when you opened this webpage. Now my goal is to reassure you that this book **will** be worth investing your scarce time in finish. 😉
+我这样说的目的不是要把书卖给你；其实在你打开这个页面的时候，这本书就已经是你的了。我是想告诉你，这本书绝对值得你抽出一些时间来读完😉。
 
-I promise to be respectful of your time. There's no hype or fluff here – just blunt, actionable tips.
+我理解，你的时间很宝贵。所以这本书里绝对不会有任何的虚构和炒作，只会有直率且可执行的建议。
 
-I'm going to jam as much insight as I can into every chapter of this book.
+我会尽力在这本书的每一章内容里多写一些我的思考和理解。
 
-Which reminds me: where's the table of contents?
+噢对了，书都应该有个目录的吧。
 
-Ah. Here it is:
+来，请看目录：
 
-## Table of Contents
+## 目录
 
-1. [Preface: Who is this book for?](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
-2. [500 Word Executive Summary](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
-3. [Chapter 1: How to Build Your Skills](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
-4. [Chapter 2: How to Build Your Network](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
-5. [Chapter 3: How to Build Your Reputation](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
-6. [Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
-7. [Chapter 5: How to Succeed in Your First Developer Job](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
-8. [Epilogue: You Can Do This](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
+1. [前言：本书适合的人群](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
+2. [概论](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
+3. [第一章：如何打造自己的技术栈](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
+4. [第二章：如何拓展自己的人脉](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
+5. [第三章：如何提升自己的圈内名声](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
+6. [第四章：如何靠编程赚钱——自由职业与求职](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
+7. [第五章：如何在第一份工作中取得成功](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
+8. [后记：相信自己，你能行](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
 
-## Preface: Who is This Book For?
+## 前言：本书适合的人群
 
-This book is for anyone who is considering a career in software development.
+这本书适合所有正在考虑从事软件开发职位的人。
 
-If you're looking for a career that's flexible, high-paying, and involves a lot of creative problem solving, software development may be for you.
+如果你打算从事一份工作时间灵活、薪资高、解决问题方式不死板的工作，软件开发职位很可能符合你的需求。
 
-Of course, each of us approaches our own coding journey with certain resources: **time**, **money**, and **opportunity**.
+当然，学习软件开发离不开这三点：**时间**、**钱**和**机遇**。
 
-You may be older, and may have kids or elderly relatives you're taking care of. So you may have less **time**.
+你可能已人到中年，上有老下有小，平日空闲**时间**不多。
 
-You may be younger, and may have had less time to build up any savings, or acquire skills that boost your income. So you may have less **money**.
+你可能很年轻，或许还不具备提升薪资的能力，因此还没有攒下**钱**。
 
-And you may live far away from the major tech cities like San Francisco, Berlin, Tokyo, or Bengaluru.
+或者你所在的城市技术氛围不浓，离那些着重发展科技的城市（如旧金山、柏林、东京、班加罗尔）比较远。
 
-You may live with disabilities, physical or mental. Agism, racism, and sexism are real. Immigration status can complicate the job search. So can a criminal record.
+还有人患有残疾；有人饱受年龄、种族、性别歧视；有人因移民身份或犯罪记录四处碰壁。
 
-So you may have less **opportunity**.
+对这些人来说，他们的**机遇**本身就比其他人少。
 
-Learning to code and getting a developer job is going to be harder for some people that it will be for others. Everyone approaches this challenge from their own starting point, with whatever resources they happen to have on hand.
+每个人的起点不同，周围环境和资源也不尽相同；学习编程和找到开发者工作对这些人来说会比其他人更困难。
 
-But wherever you may be starting out from – in terms of time, money, and opportunity – I'll do my best to give you actionable advice.
+但无论你的起点和资源如何，我都会尽力给出我认为适合的建议。
 
-In other words: you are in the right place.
+总之，请继续读下去，你一定会有所收获。
 
-#### A Quick Note on Terminology
+#### 文中涉及的专业词汇
 
-Whenever I use new terms, I'll do my best to define them.
+我会尽力在提到新词的时候顺便给出定义。
 
-But there are a few terms I'll be saying all the time.
+有些词汇出现频率很高，比如：
 
-I'll use the words "programming" and "coding" interchangeably.
+“编程”（programming）和“写码”（coding）意思相同。
 
-I'll use the word "app" as it was intended – as shorthand for any sort of application, regardless of whether it runs on a phone, laptop, game console, or refrigerator. (Sorry, Steve Jobs. iPhone does not have a monopoly on the word app.)
+“应用”（app）是 application 的缩写；且这里的 app 是泛指，包括但不限于在手机、电脑、游戏主机甚至冰箱上运行的应用（译者注：作者不认为 app 是 iPhone 手机应用的专属称谓）。
 
-I will also use the words "software engineer" and "software developer" interchangeably.
+“软件工程师”（software engineer）和“软件开发者”（software developer）意思相同。
 
-You may encounter people in tech who take issue with this. As though software engineering is some fancy-pants field with a multi-century legacy, like mechanical engineering or civil engineering. And maybe that will be true for your grandkids. But we are still very much in the early days of software development as a field.
+技术圈的一些人对此持有不同意见，仿佛“软件工程师”这一职位已饱经沧桑，其发展史横跨几个世纪，就好像机械工程师和土木工程师一样。也许多年后你的孙辈会这么认为，但至少目前，软件开发这一领域尚处于发展初期。
 
-I'll just drop this quote here for you:
+以下引用一位名人说过的话：
 
-> "If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization." – Gerald Weinberg, Programmer, Author, and University Professor
+> 如果建筑师像程序员写程序那样造房子，那么一只路过的啄木鸟就足以摧毁整个社会 —— 杰拉德·温伯格（计算机科学家、作家、大学讲师）
 
-### Can Anyone Learn to Code?
+### 所有人都可以学习编程吗？
 
-Yes. I believe that any sufficiently motivated person can learn to code. At the end of the day, learning to code is a motivational challenge – not a question of aptitude.
+是的，我坚信只要驱动力足够，人人都可以学习编程。归根结底，我认为学习编程是一个与驱动力有关的挑战，而不是靠天资吃饭。
 
-On the savannas of Africa – where early humans lived for thousands of years before spreading to Europe, Asia, and the Americas – were there computers?
+曾经，我们的祖先在广袤的非洲草原上生活了几千年，然后才迁徙到了欧洲、亚洲和美洲。那时根本没有电脑。
 
-Programming skills were never something that was selected for over the millennia. Computers as we know them (desktops, laptops, smartphones) emerged in the 80s, 90s, and 00s.
+编程也显然不是经历了几千年发展的技术，计算机和智能手机是在 1980 - 2010 年间经历飞速发展的。
 
-Yes – I do believe that aptitude and interest play a part. But at the end of the day, anyone who wants to become a professional developer will need to put in time at the keyboard.
+虽然我也认同天资和兴趣可以让学习编程之路走得更加顺利，但对于想从事开发者职业的人来说，我觉得花时间去练习和敲代码才是正道。
 
-A vast majority of people who try to learn to code will get frustrated and give up.
+很多人是这样，他们会开始学习编程，然后遇到困难，同时感到非常受挫，进而放弃。
 
-I sure did. I got frustrated and gave up. Several times.
+我也放弃过，事实上我之前因为受挫放弃了好几次。
 
-But like other people who eventually succeeded, I kept coming back after a few days, and tried again.
+但和那些最终成功入行的人一样，我都是在放弃后的几天调整好心情，然后重新回来接受挑战。
 
-I say all this because I want to acknowledge: learning to code and getting a developer job is hard. And it's even harder for some people than others, due to circumstance.
+说了这么多，我是像告诉你：学习编程并获得一份开发者工作其实并不容易；对于一些有特殊情况的人来说更是难上加难。
 
-I'm not going to pretend to have faced true adversity in learning to code. Yes, I was in my 30s, and I had no formal background in programming or computers science. But consider this:
+我不想在这里为自己编造一个逆境翻盘的人设。我是从 30 多岁开始学习编程的，在这之前我也确实没有任何编程或计算机科学的学习经验。不过：
 
-I grew up middle class in the United States – a 4th-generation American from an English-speaking home. I went to university. My father went to university. And his father went to university. (His parents before him were farmers from Sweden.)
+我在美国中产阶级的家庭里长大，我是这个家庭的第四代，而且我的母语是英语。我读过大学，我的父亲和爷爷也都读过大学；我的曾祖父（爷爷的父亲）是来自瑞典的农民。
 
-I benefitted from a sort of intergenerational privilege. A momentum that some families are able to pick up over time when they are not torn apart by war, famine, or slavery.
+这几代以来，我的家庭很幸运，至少我们没有受到战争、饥荒、奴隶制的影响。
 
-So that is my giant caveat to you: I am not some motivational figure to pump you up to overcome adversity.
+因此，在我身上并没有逆境翻盘的剧本，我也不打算编造这样的故事来激励你。
 
-There are a ton of people in the developer community who have overcome real adversity. And I'll reference those people later in the book if you want to seek out their teachings.
+如果你对这类经历感兴趣，其实开发者社区中有一些人经历过逆境翻盘，稍后我会在这本书里提到一些人，供你参考。
 
-I'm not seeking to elevate the field of software development. I'm not going to paint pictures of science fiction utopias that can come about if you learn to code.
+我不打算吹捧软件开发，也不打算为学习编程这件事情画饼，构建出一个虚幻的乌托邦。
 
-Instead, I'm just going to give you practical tips for how you can acquire these skills. And how you can go get a good job, so you can provide for your family.
+相反地，我只会为你提供学习技术的方法建议，以及如何获得一份可以养家糊口的好工作。
 
-There's nothing wrong with learning to code because you want a good, stable job.
+如果你学习编程的目的是找一份好的、稳定的工作，那没问题。
 
-There's nothing wrong with learning to code so you can start a business.
+或者你学习编程的目的是为了自己创业，那也没问题。
 
-You may encounter people who say that you must be so passionate about coding that you dream about it. That you clock out of your full-time job, then spend all weekend contributing to open source projects.
+一些人认为，学习编程最重要的是要对编程有极大的兴趣，而且要有全身心投入学习编程的决心：就是那种甘愿辞掉自己工作，一周七天都在搞开源项目，并乐在其中。
 
-I do know people who are *that* passionate about coding. But I also know plenty of people who, after finishing a hard week's work, just want to go spend time in nature, or play board games with friends.
+我确实认识一些对编程有*如此*兴趣的人，但同时我也认识很多不这么硬核的人：他们在一周的劳顿后，更愿意在周末探索自然，或者和朋友玩桌游。
 
-People generally enjoy doing things they're good at doing. And you can develop a reasonable level of passion for coding just by getting better at coding.
+人都是这样，我们会更倾向于做自己擅长的事情。你会在学习写代码的过程中逐渐提升自己的编程水平，进而提升对编程的兴趣。
 
-So in short: who is this book for? Anyone who wants to get better at coding, and get a job as a developer. That's it.
+那么说到底，这本书的受众到底是谁？其实就是想要学习编程、并获得一份开发者工作的每个人。
 
-You don't need to be a self-proclaimed "geek", an introvert, or an ideologically-driven activist. Or any of those stereotypes.
+无论你本身是“极客”，还是个内向的人，或者你是个理性的激进分子，你都可以学习编程。
 
-It's fine if you are. But you don't need to be.
+或者你还有以上没提到的其他特质，那也无妨。这些都不会成为你学习编程道路上的绊脚石。
 
-So if that's you – if you're serious about learning to code well enough to get paid to code – this book is for you.
+总之，只要你是想学好编程并通过编程赚钱的人，那这本书就是为你量身打造的。
 
-And you should start by reading this quick summary of the book. And then reading the rest of it.
+在通读此书前，请你花一点时间读完以下的概论章节。
 
-## 500 Word Executive Summary
+## 概论
 
-Learning to code is hard. Getting a job as a software developer is even harder. But for many people, it's worth the effort.
+学习编程本身并不容易，而想要拿到一份软件开发职位其实更难。不过对于大多数人来说，这份努力一定是值得的。
 
-Coding is a high-paying, intellectually challenging, creatively rewarding field. There is a clear career progression ahead of you: senior developer, tech lead, engineering manager, CTO, and perhaps even CEO.
+编程是高薪的、包含创新性工作的脑力劳动。职业发展路线也很明确：高级开发、技术领头人、管理岗、CTO，然后或许可以成为 CEO。
 
-You can find work in just about any industry. About two thirds of developer jobs are outside of what we traditionally call "tech" – in agriculture, manufacturing, government, and service industries like banking and healthcare.
+任何行业都需要软件开发。在所有软件开发职位中，非技术类公司约占 66%；这类公司包括农业、制造业、政府部门、以及像是银行和医院这样的服务业。
 
-If you're worried your job might be automated before you reach retirement, consider this: coding is the act of automating things. Thus it is by definition the last career that will be completely automated.
+如果你很担心软件开发这一职业会在你退休之前被自动化工具取代，不妨这样考虑：编程本身就是在让事情自动化。因此就算将来编程可以自动化，那也不会是最先被自动化取代的职业。
 
-Have I sold you on coding as a good career for you? Then here's what you need to do to break into the field.
+如果你看到了这里，希望你和我的想法一致，认为软件开发是一份不错的职业。接下来，咱们来讨论下如何进入软件开发领域吧。
 
-### Build your skills.
+### 打造自己的技术栈
 
-You need to learn:
+你需要学习如下内容：
 
-- Front End Development: HTML, CSS, JavaScript
-- Back End Development: SQL, Git, Linux, and Webservers
-- Scientific Computing: Python and its many libraries
+- 前端开发：HTML、CSS、JavaScript
+- 后端开发：SQL、Git、Linux、网页服务器
+- 科学运算：Python 及其相关[库](https://zh.wikipedia.org/wiki/%E5%87%BD%E5%BC%8F%E5%BA%AB)
 
-These are all mature, 20+ year old technologies. Whichever company you work for, you will almost certainly use most of these tools.
+以上提到的都是有 20 多年的发展史，而且发展相对成熟的领域。不论你将来为哪家公司效劳，都大概率会用到上面提到的这些技术。
 
-The best way to learn these tools is to build projects. Try to code at least some every day. If you do the freeCodeCamp curriculum from top to bottom, you'll learn all of this and build dozens of projects.
+学习这些东西的最好方式是做项目，最好是在学习过程中坚持一天做几个小项目。顺便，freeCodeCamp 上的课程里总共有几十个项目。
 
-![Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png)Some of the certifications in the freeCodeCamp core curriculum.
+![免费学-编程-适合忙碌人士的编程课程--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png) freeCodeCamp 核心课程里的一些板块（Certification：认证）。
 
-### Build your network.
+### 拓展自己的人脉
 
-So much of getting a job is who you know.
+人脉广的人一般能更快找到自己想要的工作。
 
-It's OK to be an introvert, but you do need to push your boundaries.
+内向虽然不是问题，但有时候你或多或少要跳出自己的舒适圈。
 
-Create GitHub, Twitter, LinkedIn, and Discord accounts.
+不如从为自己创建 GitHub、Twitter、LinkedIn 和 Discord 账号开始吧。
 
-Go to tech meetups and conferences. Travel if you have to. (Most of your "learn to code" budget should go toward travel and event tickets – not books and courses.)
+尽量多参加技术会议，哪怕是需要坐火车、高铁、飞机去的那种。我建议你把学习编程的资金预算花在通勤和技术会议门票上，而不是花在购买书和课程上。
 
-Greet people who are standing by themselves. Let others do most of the talking, and really listen. Remember people's names.
+多与有识之士攀谈，认真听取他们的观点，而且记住他们的名字。
 
-Add people on LinkedIn, follow them on Twitter, and go to after-parties.
+然后在 LinkedIn 上添加他们为好友，在 Twitter 上关注他们。如果你参加的技术会议有会后聚餐的安排，不要错过。
 
-### Build your reputation.
+### 提升自己的圈内名声。
 
-Share short video demos of your projects.
+可以考虑为自己做的项目录制一段 demo，然后发到网上。
 
-Keep applying to speak at bigger and bigger conferences.
+尝试申请成为技术会议的演讲人，越大型的会议越好。
 
-Hang out at hackerspaces and help people who are even newer to coding than you.
+在程序员的聊天频道里，花一些时间帮助那些比你晚入行的朋友们。
 
-Contribute to open source. The work is similar to professional software development.
+参与贡献开源项目。开源项目的开发和公司里的软件开发其实有很多相似之处。
 
-**Build all 3 of these at the same time.** Don't let yourself procrastinate the scariest parts.
+**这些事情可以同时做，没有先后顺序。**不要拖延。
 
-Instead of applying for jobs through the "front door", use your network to land job interviews through the "side door". Recruiters can help, too.
+与其海投职位等结果，不如考虑多认识些人，让他们帮你内推。哪怕你认识人力资源部门的朋友，也会有帮助。
 
-Keep interviewing until you start getting job offers. You don't need to accept the first offer you get, though. Be patient.
+在拿到 offer 之前，不要停下面试的脚步；甚至你也可以选择不接受第一份 offer，要有耐心。
 
-Your first developer job will be the hardest. Try to stay there for at least 2 years, and essentially get paid to learn.
+你的第一份开发职位一定是对你来说最有挑战性的。建议考虑至少做两年。别忘了，在这个过程中，你不只是在学习，还有收入。
 
-The real learning begins once you're on-the-job, working alongside a team, and with large legacy codebases.
+找到工作也绝不意味着学习的终止。事实上，在公司与团队合作和维护代码都是学习的过程。
 
-Most importantly, sleep and exercise.
+当然，身体健康一样重要。别忘了按时作息，保证睡眠和运动。
 
-Any sufficiently-motivated person can learn to code well enough to get a job as a developer.
+只要有足够的驱动力，任何人都可以学习编程并找到一份开发工作。
 
-It's just a question of how badly you want it, and how persistent you can be in the job search.
+区别只是你有多想成为开发者，以及你在找工作的过程中有多坚持。
 
-Remember: you can do this.
+保持信念：你一定可以的！
 
-## This Book is Dedicated to the Global freeCodeCamp Community.
+## 谨以此书献给全球的 freeCodeCamp 参与者。
 
 Thank you to all of you who have supported our charity and our mission over the past 8 years.
 

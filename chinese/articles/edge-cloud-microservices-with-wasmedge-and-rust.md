@@ -1,7 +1,7 @@
-> -  原文地址：[Edge Cloud Microservices – How to Build High Performance & Secure Apps with WasmEdge and Rust](https://www.freecodecamp.org/news/edge-cloud-microservices-with-wasmedge-and-rust/)
-> -  原文作者：[Michael Yuan](https://www.freecodecamp.org/news/author/michael/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Edge Cloud Microservices – How to Build High Performance & Secure Apps with WasmEdge and Rust](https://www.freecodecamp.org/news/edge-cloud-microservices-with-wasmedge-and-rust/)
+> - 原文作者：[Michael Yuan](https://www.freecodecamp.org/news/author/michael/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Edge Cloud Microservices – How to Build High Performance & Secure Apps with WasmEdge and Rust](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/richard-r-schunemann-DD3VNthK_Kw-unsplash.jpg)
 
@@ -23,21 +23,21 @@ We will package the microservice application, written in Rust or JavaScript, in 
 
 There are several compelling advantages to this approach:
 
--   WasmEdge runs sandboxed applications at near-native speed. According to a peer-reviewed study, WasmEdge runs Rust programs at nearly the same speed as Linux runs native machine code.
--   WasmEdge is a highly secure runtime. It protects your app against both external and internal threats.
--   The attack surface of the WasmEdge runtime is dramatically reduced from a regular Linux OS runtime.
--   The risk of software supply chain attack is greatly reduced since the WebAssembly sandbox only has access to explicitly declared capabilities.
--   WasmEdge provides a complete and portable application runtime environment at a memory footprint that is only 1/10 of a standard Linux OS runtime image.
--   The WasmEdge runtime is cross-platform. That means the development and deployment of machines do not have to be the same. And once you created a WasmEdge application, you can deploy it to anywhere WasmEdge is supported including [fly.io](http://fly.io) infrastructure.
+- WasmEdge runs sandboxed applications at near-native speed. According to a peer-reviewed study, WasmEdge runs Rust programs at nearly the same speed as Linux runs native machine code.
+- WasmEdge is a highly secure runtime. It protects your app against both external and internal threats.
+- The attack surface of the WasmEdge runtime is dramatically reduced from a regular Linux OS runtime.
+- The risk of software supply chain attack is greatly reduced since the WebAssembly sandbox only has access to explicitly declared capabilities.
+- WasmEdge provides a complete and portable application runtime environment at a memory footprint that is only 1/10 of a standard Linux OS runtime image.
+- The WasmEdge runtime is cross-platform. That means the development and deployment of machines do not have to be the same. And once you created a WasmEdge application, you can deploy it to anywhere WasmEdge is supported including [fly.io](http://fly.io) infrastructure.
 
 The performance advantages are amplified if the application is complex. For example, a WasmEdge AI inference application would NOT require a Python install. A WasmEdge node.js application would NOT require a Node.js and v8 install.
 
 In the rest of this article, I will demonstrate how to run:
 
--   an async HTTP server (in Rust)
--   a very fast image classification web service (in Rust), and
--   a node.JS web server
--   stateful microservices with database connections
+- an async HTTP server (in Rust)
+- a very fast image classification web service (in Rust), and
+- a node.JS web server
+- stateful microservices with database connections
 
 All of them run fast and securely in WasmEdge while consuming 1/10 of the resources required by regular Linux containers.
 
@@ -180,7 +180,7 @@ async fn classify(req: Request<Body>) -> Result<Response<Body>, hyper::Error> {
     let model_data: &[u8] = include_bytes!("models/mobilenet_v1_1.0_224/mobilenet_v1_1.0_224_quant.tflite");
     let labels = include_str!("models/mobilenet_v1_1.0_224/labels_mobilenet_quant_v1_224.txt");
     match (req.method(), req.uri().path()) {
-        
+
         (&Method::POST, "/classify") => {
             let buf = hyper::body::to_bytes(req.into_body()).await?;
             let flat_img = wasmedge_tensorflow_interface::load_jpg_image_to_rgb8(&buf, 224, 224);
@@ -190,7 +190,7 @@ async fn classify(req: Request<Body>) -> Result<Response<Body>, hyper::Error> {
                 .run();
             let res_vec: Vec<u8> = session.get_output("MobilenetV1/Predictions/Reshape_1");
             ... ...
-            
+
             let mut label_lines = labels.lines();
             for _i in 0..max_index {
               label_lines.next();
@@ -264,7 +264,7 @@ WasmEdge’s QuickJS engine provides not only Node.js support, but also Tensorfl
 
 With WasmEdge, it is also possible to create stateful microservices backed by databases. [This GitHub repo](https://github.com/WasmEdge/wasmedge-db-examples) contains examples of tokio-based non-blocking database clients in WasmEdge applications.
 
--   The [MySQL client](https://github.com/WasmEdge/wasmedge-db-examples/tree/main/mysql) allows WasmEdge applications to access most cloud databases.
--   The [anna-rs project](https://github.com/essa-project/anna-rs) is an edge-native KV store with adjustable sync and consistency levels on edge nodes. WasmEdge applications [can use anna-rs](https://github.com/WasmEdge/wasmedge-db-examples/tree/main/anna) as an edge cache or database.
+- The [MySQL client](https://github.com/WasmEdge/wasmedge-db-examples/tree/main/mysql) allows WasmEdge applications to access most cloud databases.
+- The [anna-rs project](https://github.com/essa-project/anna-rs) is an edge-native KV store with adjustable sync and consistency levels on edge nodes. WasmEdge applications [can use anna-rs](https://github.com/WasmEdge/wasmedge-db-examples/tree/main/anna) as an edge cache or database.
 
 You can now build a wide variety of web services on the edge cloud using WasmEdge SDKs and runtimes. Cannot wait to see your creations!

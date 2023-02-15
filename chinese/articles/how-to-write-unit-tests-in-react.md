@@ -1,6 +1,6 @@
 > -  原文地址：[How to Write Unit Tests in React](https://www.freecodecamp.org/news/how-to-write-unit-tests-in-react/)
 > -  原文作者：[Kunal Nalawade](https://www.freecodecamp.org/news/author/kunal-nalawade-25/)
-> -  译者：
+> -  译者：serene-ding
 > -  校对者：
 
 ![How to Write Unit Tests in React](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/unit-testing-in-react-image.jpeg)

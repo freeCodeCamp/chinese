@@ -3,228 +3,227 @@
 > -  译者：casey cui Celqaz
 > -  校对者：
 
-![How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
+[如何在 2023 年学习编程并入行程序员 [完结]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
 
-If you want to learn to code and get a job as a developer, you're in the right place. This book will show you how.
+如果你打算学习编程并成为一名开发者，希望这本书对你有帮助。
 
-And yes this is the full book – for free – right here on this webpage.
+这本书已编写完毕，完全免费。你可以在此阅读。
 
-A few years back, one of the Big 5 book publishers from New York City reached out to me about a book deal. I met with them, but didn't have time to write a book.
+几年前，纽约市的 5 家头部出版商找到我，希望与我合作出书。我和他们当面聊了下，可当时我根本抽不出时间来写书。
 
-Well, I finally had time. And I decided to just publish this book for free, right here on freeCodeCamp.
+现在我终于有时间写书了，而且我打算让大家在 freeCodeCamp 上免费阅读我写的这本书。
 
-Information wants to be free, right? 🙂
+信息本身即是自由且免费的，对吧？🙂（注：原文 "Information wants to be free" 旨在表达信息本应无障碍地被人们获取，见[此词条](https://en.wikipedia.org/wiki/Information_wants_to_be_free)，英文中的 free 既有“自由”也有“免费”之意；另外，此处译文参考自[这里](https://web.law.duke.edu/cspd/chinese/information/)）
 
-It may take you a few hours to read all this. But this is it. My insights into learning to code and getting a developer job.
+这本书包括了我对学编程和成为开发者的许多思考，因此篇幅较长，通读可能需要几个小时。
 
-I learned all of this while:
+以下是我的个人经历：
 
-- learning to code in my 30s
-- then working as a software engineer
-- then running freeCodeCamp.org for the past 8 years. Today, more than a million people visit this website each day to learn about math, programming, and computer science.
+- 30 多岁开始学习编程
+- 然后成为软件工程师
+- 之后，我于 8 年前（2015 年）创办了 freeCodeCamp.org。现在，每天都有一百多万人来这里学习数学、编程和计算机科学
 
-I was an English teacher who had never programmed before. And I was able to learn enough coding to get my first software development job in just one year.
+在这之前，我是一名从未接触过编程的英语老师。不过，我在开始学习编程一年后就拿到了我的第一份开发者工作。
 
-All without spending any money on books or courses.
+在这个过程中，我没有花一分钱购买书籍或参与任何课程。
 
-(I did spend money to travel to nearby cities and participate in tech events. And as you'll see later in the book, this was money well spent.)
+（确切地说我其实花钱了，因为我经常跑到周边城市参加了技术会议。后文中会提到，这些钱花得非常值得）
 
-After working as a software engineer for a few years, I felt ready. I wanted to teach other people how to make this career transition, too.
+做了几年软件工程师之后，我觉得是时候改变一下了：我想教会其他人如何实现职业生涯的转换。
 
-I built several technology education tools that nobody was interested in using. But then one weekend, I built freeCodeCamp.org. A vibrant community quickly gathered around it.
+一开始我尝试着做了一些技术类的教学工具，但反响平平。直到有一个周末，我上线的 freeCodeCamp.org 竟成为了爆款，吸引了很多用户，逐步构建了 freeCodeCamp 社区。
 
-Along the way, we all helped each other. And today, people all around the world have used freeCodeCamp to prepare for their first job in tech.
+一直以来，我们在社区内互相帮助。现在，全世界的人们得以通过 freeCodeCamp 来为自己的第一份技术工作做准备。
 
-You may be thinking: I don't know if I have time to read this entire book.
+你也许会想：“我可能没那么多时间读完整本书”。
 
-No worries. You can bookmark it. You can come back to it and read it across as many sittings as you need to.
+没关系，你可以随时标注读到了哪里；之后有空了随时回来继续读。这本书会一直在这里等你。
 
-And you can share it on social media. Sharing: "check out this book I'm reading" and linking to it is a surprisingly effective way to convince yourself to finish reading a book.
+或许你还可以尝试在社交网络上分享，说：“看，我在读这本书”，并附上链接。你可能想不到，这是一种很好的激励方式，有助于你尽快读完这本书。
 
-I say this because I'm not trying to sell you this book. You already "bought" this book when you opened this webpage. Now my goal is to reassure you that this book **will** be worth investing your scarce time in finish. 😉
+我这样说的目的不是要把书卖给你；其实在你打开这个页面的时候，这本书就已经是你的了。我是想告诉你，这本书绝对值得你抽出一些时间来读完😉。
 
-I promise to be respectful of your time. There's no hype or fluff here – just blunt, actionable tips.
+我理解，你的时间很宝贵。所以这本书里绝对不会有任何的虚构和炒作，只会有直率且可执行的建议。
 
-I'm going to jam as much insight as I can into every chapter of this book.
+我会尽力在这本书的每一章内容里多写一些我的思考和理解。
 
-Which reminds me: where's the table of contents?
+噢对了，书都应该有个目录的吧。
 
-Ah. Here it is:
+来，请看目录：
 
-## Table of Contents
+## 目录
+1. [前言：本书适合的人群](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
+2. [概论](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
+3. [第一章：如何打造自己的技术栈](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
+4. [第二章：如何拓展自己的人脉](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
+5. [第三章：如何提升自己的圈内名声](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
+6. [第四章：如何靠编程赚钱——自由职业与求职](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
+7. [第五章：如何在第一份工作中取得成功](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
+8. [后记：相信自己，你能行](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
 
-1. [Preface: Who is this book for?](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
-2. [500 Word Executive Summary](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
-3. [Chapter 1: How to Build Your Skills](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
-4. [第2章：如何打造你的人际关系网络](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
-5. [Chapter 3: How to Build Your Reputation](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
-6. [Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
-7. [Chapter 5: How to Succeed in Your First Developer Job](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
-8. [Epilogue: You Can Do This](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
+## 前言：本书适合的人群
 
-## Preface: Who is This Book For?
+这本书适合所有正在考虑从事软件开发职位的人。
 
-This book is for anyone who is considering a career in software development.
+如果你打算从事一份工作时间灵活、薪资高、解决问题方式不死板的工作，软件开发职位很可能符合你的需求。
 
-If you're looking for a career that's flexible, high-paying, and involves a lot of creative problem solving, software development may be for you.
+当然，学习软件开发离不开这三点：**时间**、**钱**和**机遇**。
 
-Of course, each of us approaches our own coding journey with certain resources: **time**, **money**, and **opportunity**.
+你可能已人到中年，上有老下有小，平日空闲**时间**不多。
 
-You may be older, and may have kids or elderly relatives you're taking care of. So you may have less **time**.
+你可能很年轻，或许还不具备提升薪资的能力，因此还没有攒下**钱**。
 
-You may be younger, and may have had less time to build up any savings, or acquire skills that boost your income. So you may have less **money**.
+或者你所在的城市技术氛围不浓，离那些着重发展科技的城市（如旧金山、柏林、东京、班加罗尔）比较远。
 
-And you may live far away from the major tech cities like San Francisco, Berlin, Tokyo, or Bengaluru.
+还有人患有残疾；有人饱受年龄、种族、性别歧视；有人因移民身份或犯罪记录四处碰壁。
 
-You may live with disabilities, physical or mental. Agism, racism, and sexism are real. Immigration status can complicate the job search. So can a criminal record.
+对这些人来说，他们的**机遇**本身就比其他人少。
 
-So you may have less **opportunity**.
+每个人的起点不同，周围环境和资源也不尽相同；学习编程和找到开发者工作对这些人来说会比其他人更困难。
 
-Learning to code and getting a developer job is going to be harder for some people that it will be for others. Everyone approaches this challenge from their own starting point, with whatever resources they happen to have on hand.
+但无论你的起点和资源如何，我都会尽力给出我认为适合的建议。
 
-But wherever you may be starting out from – in terms of time, money, and opportunity – I'll do my best to give you actionable advice.
+总之，请继续读下去，你一定会有所收获。
 
-In other words: you are in the right place.
+#### 文中涉及的专业词汇
 
-#### A Quick Note on Terminology
+我会尽力在提到新词的时候顺便给出定义。
 
-Whenever I use new terms, I'll do my best to define them.
+有些词汇出现频率很高，比如：
 
-But there are a few terms I'll be saying all the time.
+“编程”（programming）和“写码”（coding）意思相同。
 
-I'll use the words "programming" and "coding" interchangeably.
+“应用”（app）是 application 的缩写；且这里的 app 是泛指，包括但不限于在手机、电脑、游戏主机甚至冰箱上运行的应用（译者注：作者不认为 app 是 iPhone 手机应用的专属称谓）。
 
-I'll use the word "app" as it was intended – as shorthand for any sort of application, regardless of whether it runs on a phone, laptop, game console, or refrigerator. (Sorry, Steve Jobs. iPhone does not have a monopoly on the word app.)
+“软件工程师”（software engineer）和“软件开发者”（software developer）意思相同。
 
-I will also use the words "software engineer" and "software developer" interchangeably.
+技术圈的一些人对此持有不同意见，仿佛“软件工程师”这一职位已饱经沧桑，其发展史横跨几个世纪，就好像机械工程师和土木工程师一样。也许多年后你的孙辈会这么认为，但至少目前，软件开发这一领域尚处于发展初期。
 
-You may encounter people in tech who take issue with this. As though software engineering is some fancy-pants field with a multi-century legacy, like mechanical engineering or civil engineering. And maybe that will be true for your grandkids. But we are still very much in the early days of software development as a field.
+以下引用一位名人说过的话：
 
-I'll just drop this quote here for you:
+> 如果建筑师像程序员写程序那样造房子，那么一只路过的啄木鸟就足以摧毁整个社会 —— 杰拉德·温伯格（计算机科学家、作家、大学讲师）
 
-> "If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization." – Gerald Weinberg, Programmer, Author, and University Professor
+### 所有人都可以学习编程吗？
 
-### Can Anyone Learn to Code?
+是的，我坚信只要驱动力足够，人人都可以学习编程。归根结底，我认为学习编程是一个与驱动力有关的挑战，而不是靠天资吃饭。
 
-Yes. I believe that any sufficiently motivated person can learn to code. At the end of the day, learning to code is a motivational challenge – not a question of aptitude.
+曾经，我们的祖先在广袤的非洲草原上生活了几千年，然后才迁徙到了欧洲、亚洲和美洲。那时根本没有电脑。
 
-On the savannas of Africa – where early humans lived for thousands of years before spreading to Europe, Asia, and the Americas – were there computers?
+编程也显然不是经历了几千年发展的技术，计算机和智能手机是在 1980 - 2010 年间经历飞速发展的。
 
-Programming skills were never something that was selected for over the millennia. Computers as we know them (desktops, laptops, smartphones) emerged in the 80s, 90s, and 00s.
+虽然我也认同天资和兴趣可以让学习编程之路走得更加顺利，但对于想从事开发者职业的人来说，我觉得花时间去练习和敲代码才是正道。
 
-Yes – I do believe that aptitude and interest play a part. But at the end of the day, anyone who wants to become a professional developer will need to put in time at the keyboard.
+很多人是这样，他们会开始学习编程，然后遇到困难，同时感到非常受挫，进而放弃。
 
-A vast majority of people who try to learn to code will get frustrated and give up.
+我也放弃过，事实上我之前因为受挫放弃了好几次。
 
-I sure did. I got frustrated and gave up. Several times.
+但和那些最终成功入行的人一样，我都是在放弃后的几天调整好心情，然后重新回来接受挑战。
 
-But like other people who eventually succeeded, I kept coming back after a few days, and tried again.
+说了这么多，我是像告诉你：学习编程并获得一份开发者工作其实并不容易；对于一些有特殊情况的人来说更是难上加难。
 
-I say all this because I want to acknowledge: learning to code and getting a developer job is hard. And it's even harder for some people than others, due to circumstance.
+我不想在这里为自己编造一个逆境翻盘的人设。我是从 30 多岁开始学习编程的，在这之前我也确实没有任何编程或计算机科学的学习经验。不过：
 
-I'm not going to pretend to have faced true adversity in learning to code. Yes, I was in my 30s, and I had no formal background in programming or computers science. But consider this:
+我在美国中产阶级的家庭里长大，我是这个家庭的第四代，而且我的母语是英语。我读过大学，我的父亲和爷爷也都读过大学；我的曾祖父（爷爷的父亲）是来自瑞典的农民。
 
-I grew up middle class in the United States – a 4th-generation American from an English-speaking home. I went to university. My father went to university. And his father went to university. (His parents before him were farmers from Sweden.)
+这几代以来，我的家庭很幸运，至少我们没有受到战争、饥荒、奴隶制的影响。
 
-I benefitted from a sort of intergenerational privilege. A momentum that some families are able to pick up over time when they are not torn apart by war, famine, or slavery.
+因此，在我身上并没有逆境翻盘的剧本，我也不打算编造这样的故事来激励你。
 
-So that is my giant caveat to you: I am not some motivational figure to pump you up to overcome adversity.
+如果你对这类经历感兴趣，其实开发者社区中有一些人经历过逆境翻盘，稍后我会在这本书里提到一些人，供你参考。
 
-There are a ton of people in the developer community who have overcome real adversity. And I'll reference those people later in the book if you want to seek out their teachings.
+我不打算吹捧软件开发，也不打算为学习编程这件事情画饼，构建出一个虚幻的乌托邦。
 
-I'm not seeking to elevate the field of software development. I'm not going to paint pictures of science fiction utopias that can come about if you learn to code.
+相反地，我只会为你提供学习技术的方法建议，以及如何获得一份可以养家糊口的好工作。
 
-Instead, I'm just going to give you practical tips for how you can acquire these skills. And how you can go get a good job, so you can provide for your family.
+如果你学习编程的目的是找一份好的、稳定的工作，那没问题。
 
-There's nothing wrong with learning to code because you want a good, stable job.
+或者你学习编程的目的是为了自己创业，那也没问题。
 
-There's nothing wrong with learning to code so you can start a business.
+一些人认为，学习编程最重要的是要对编程有极大的兴趣，而且要有全身心投入学习编程的决心：就是那种甘愿辞掉自己工作，一周七天都在搞开源项目，并乐在其中。
 
-You may encounter people who say that you must be so passionate about coding that you dream about it. That you clock out of your full-time job, then spend all weekend contributing to open source projects.
+我确实认识一些对编程有*如此*兴趣的人，但同时我也认识很多不这么硬核的人：他们在一周的劳顿后，更愿意在周末探索自然，或者和朋友玩桌游。
 
-I do know people who are *that* passionate about coding. But I also know plenty of people who, after finishing a hard week's work, just want to go spend time in nature, or play board games with friends.
+人都是这样，我们会更倾向于做自己擅长的事情。你会在学习写代码的过程中逐渐提升自己的编程水平，进而提升对编程的兴趣。
 
-People generally enjoy doing things they're good at doing. And you can develop a reasonable level of passion for coding just by getting better at coding.
+那么说到底，这本书的受众到底是谁？其实就是想要学习编程、并获得一份开发者工作的每个人。
 
-So in short: who is this book for? Anyone who wants to get better at coding, and get a job as a developer. That's it.
+无论你本身是“极客”，还是个内向的人，或者你是个理性的激进分子，你都可以学习编程。
 
-You don't need to be a self-proclaimed "geek", an introvert, or an ideologically-driven activist. Or any of those stereotypes.
+或者你还有以上没提到的其他特质，那也无妨。这些都不会成为你学习编程道路上的绊脚石。
 
-It's fine if you are. But you don't need to be.
+总之，只要你是想学好编程并通过编程赚钱的人，那这本书就是为你量身打造的。
 
-So if that's you – if you're serious about learning to code well enough to get paid to code – this book is for you.
+在通读此书前，请你花一点时间读完以下的概论章节。
 
-And you should start by reading this quick summary of the book. And then reading the rest of it.
+## 概论
 
-## 500 Word Executive Summary
+学习编程本身并不容易，而想要拿到一份软件开发职位其实更难。不过对于大多数人来说，这份努力一定是值得的。
 
-Learning to code is hard. Getting a job as a software developer is even harder. But for many people, it's worth the effort.
+编程是高薪的、包含创新性工作的脑力劳动。职业发展路线也很明确：高级开发、技术领头人、管理岗、CTO，然后或许可以成为 CEO。
 
-Coding is a high-paying, intellectually challenging, creatively rewarding field. There is a clear career progression ahead of you: senior developer, tech lead, engineering manager, CTO, and perhaps even CEO.
+任何行业都需要软件开发。在所有软件开发职位中，非技术类公司约占 66%；这类公司包括农业、制造业、政府部门、以及像是银行和医院这样的服务业。
 
-You can find work in just about any industry. About two thirds of developer jobs are outside of what we traditionally call "tech" – in agriculture, manufacturing, government, and service industries like banking and healthcare.
+如果你很担心软件开发这一职业会在你退休之前被自动化工具取代，不妨这样考虑：编程本身就是在让事情自动化。因此就算将来编程可以自动化，那也不会是最先被自动化取代的职业。
 
-If you're worried your job might be automated before you reach retirement, consider this: coding is the act of automating things. Thus it is by definition the last career that will be completely automated.
+如果你看到了这里，希望你和我的想法一致，认为软件开发是一份不错的职业。接下来，咱们来讨论下如何进入软件开发领域吧。
 
-Have I sold you on coding as a good career for you? Then here's what you need to do to break into the field.
+### 打造自己的技术栈
 
-### Build your skills.
+你需要学习如下内容：
 
-You need to learn:
+- 前端开发：HTML、CSS、JavaScript
+- 后端开发：SQL、Git、Linux、网页服务器
+- 科学运算：Python 及其相关[库](https://zh.wikipedia.org/wiki/%E5%87%BD%E5%BC%8F%E5%BA%AB)
 
-- Front End Development: HTML, CSS, JavaScript
-- Back End Development: SQL, Git, Linux, and Webservers
-- Scientific Computing: Python and its many libraries
+以上提到的都是有 20 多年的发展史，而且发展相对成熟的领域。不论你将来为哪家公司效劳，都大概率会用到上面提到的这些技术。
 
-These are all mature, 20+ year old technologies. Whichever company you work for, you will almost certainly use most of these tools.
+学习这些东西的最好方式是做项目，最好是在学习过程中坚持一天做几个小项目。顺便，freeCodeCamp 上的课程里总共有几十个项目。
 
-The best way to learn these tools is to build projects. Try to code at least some every day. If you do the freeCodeCamp curriculum from top to bottom, you'll learn all of this and build dozens of projects.
+![免费学-编程-适合忙碌人士的编程课程--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png) freeCodeCamp 核心课程里的一些板块（Certification：认证）。
 
-![Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png)Some of the certifications in the freeCodeCamp core curriculum.
+### 拓展自己的人脉
 
-### Build your network.
+人脉广的人一般能更快找到自己想要的工作。
 
-So much of getting a job is who you know.
+内向虽然不是问题，但有时候你或多或少要跳出自己的舒适圈。
 
-It's OK to be an introvert, but you do need to push your boundaries.
+不如从为自己创建 GitHub、Twitter、LinkedIn 和 Discord 账号开始吧。
 
-Create GitHub, Twitter, LinkedIn, and Discord accounts.
+尽量多参加技术会议，哪怕是需要坐火车、高铁、飞机去的那种。我建议你把学习编程的资金预算花在通勤和技术会议门票上，而不是花在购买书和课程上。
 
-Go to tech meetups and conferences. Travel if you have to. (Most of your "learn to code" budget should go toward travel and event tickets – not books and courses.)
+多与有识之士攀谈，认真听取他们的观点，而且记住他们的名字。
 
-Greet people who are standing by themselves. Let others do most of the talking, and really listen. Remember people's names.
+然后在 LinkedIn 上添加他们为好友，在 Twitter 上关注他们。如果你参加的技术会议有会后聚餐的安排，不要错过。
 
-Add people on LinkedIn, follow them on Twitter, and go to after-parties.
+### 提升自己的圈内名声。
 
-### Build your reputation.
+可以考虑为自己做的项目录制一段 demo，然后发到网上。
 
-Share short video demos of your projects.
+尝试申请成为技术会议的演讲人，越大型的会议越好。
 
-Keep applying to speak at bigger and bigger conferences.
+在程序员的聊天频道里，花一些时间帮助那些比你晚入行的朋友们。
 
-Hang out at hackerspaces and help people who are even newer to coding than you.
+参与贡献开源项目。开源项目的开发和公司里的软件开发其实有很多相似之处。
 
-Contribute to open source. The work is similar to professional software development.
+**这些事情可以同时做，没有先后顺序。**不要拖延。
 
-**Build all 3 of these at the same time.** Don't let yourself procrastinate the scariest parts.
+与其海投职位等结果，不如考虑多认识些人，让他们帮你内推。哪怕你认识人力资源部门的朋友，也会有帮助。
 
-Instead of applying for jobs through the "front door", use your network to land job interviews through the "side door". Recruiters can help, too.
+在拿到 offer 之前，不要停下面试的脚步；甚至你也可以选择不接受第一份 offer，要有耐心。
 
-Keep interviewing until you start getting job offers. You don't need to accept the first offer you get, though. Be patient.
+你的第一份开发职位一定是对你来说最有挑战性的。建议考虑至少做两年。别忘了，在这个过程中，你不只是在学习，还有收入。
 
-Your first developer job will be the hardest. Try to stay there for at least 2 years, and essentially get paid to learn.
+找到工作也绝不意味着学习的终止。事实上，在公司与团队合作和维护代码都是学习的过程。
 
-The real learning begins once you're on-the-job, working alongside a team, and with large legacy codebases.
+当然，身体健康一样重要。别忘了按时作息，保证睡眠和运动。
 
-Most importantly, sleep and exercise.
+只要有足够的驱动力，任何人都可以学习编程并找到一份开发工作。
 
-Any sufficiently-motivated person can learn to code well enough to get a job as a developer.
+区别只是你有多想成为开发者，以及你在找工作的过程中有多坚持。
 
-It's just a question of how badly you want it, and how persistent you can be in the job search.
+保持信念：你一定可以的！
 
-Remember: you can do this.
-
-## This Book is Dedicated to the Global freeCodeCamp Community.
+## 谨以此书献给全球的 freeCodeCamp 参与者。
 
 Thank you to all of you who have supported our charity and our mission over the past 8 years.
 
@@ -701,461 +700,462 @@ if __name__ == "__main__":
 
 我们正在做的事情被称为 "声明式编程" （declarative programming）。我们在宣布 "计算机，你应该这样做"。而计算机足够聪明（编程足够好），能够理解我们的指令并执行它们。
 
-Here in 2023, the style of coding most of us are doing is "imperative programming." We're telling the computer exactly what to do, step-by-step.
+在2023的今天，我们大多数正在使用的代码风格就是“命令性编程”。我们一步步地告诉计算机，我们要做什么。
 
-Computers are dumb, so we have to help them put one foot in front of the other.
+计算机很呆，所以我们必须帮它们把一只脚放在另一只脚前面，以让它知道怎么走路。
 
-Right now, the field just isn't mature yet.
+现在，这个领域尚未成熟。
 
-Early human tools advanced from stone to bronze to iron. And the same thing is happening with software tools. But much faster.
+人类早期的工具是从石头到青铜再到铁，同样的事情也发生在软件工具上，不过速度要快得多。
 
-We're probably in the programming equivalent of the bronze age right now. But we may reach the iron age in our lifetime.
+我们现在可能处于相当于青铜时代的编程阶段。但在我们的有生之年，我们可能会达到铁器时代。
 
-### Learning to Code is an Ambiguous Process
+### 学习编程是一个模糊的过程
 
-When you're learning to code, you constantly ask yourself: "Am I spending my time wisely? Am I learning the right tools? Do these book authors / course creators even know what they're talking about?"
+学习编程的时候，你可能经常会问自己：“我这样花时间干这个事儿正确吗？我现在学的是正确的工具吗？这些书的作者和课程制作者真的知道他们自己在说什么吗？”
 
-Ambiguity fogs your every study session. "Did my test case fail because the tutorial is out of date, and there have been breaking changes to the framework I'm using? Or am I just doing it wrong?"
+模糊性会迷惑你的每一次学习。“我的测试案例失败是因为教程过时了，而且我使用的框架发生了重大变化？还是我只是做错了？”
 
-As I mentioned earlier with Tutorial Hell, you also have to cope with "grass is greener on the other side" disease.
+正如我之前在《教程地狱》中提到的，你还得应对“这山望着那山高”的问题。
 
-This is compounded by the fact that some developers think it's clever to answer questions with "RTFM" which means "Read the Freaking Manual." Not super helpful. Which manual? Which section?
+很多开发者在面临这个问题的解答时，都会用一个他们自认为很聪明的“RTFM”原则作为答案，即“Read the Freaking Manual（直接啃说明书）”。但是这个答案也并不是那么有用，甚至会让问题变得更加复杂，该读哪本说明书？读哪个章节？
 
-Another problem is: you don't know what you don't know. Often you can't even articulate the question you're trying to ask.
+另一个问题是：你没有清晰的了解你不知道的事情，以至于你往往不能清楚地表达出你想问的问题。
 
-And if you can't even ask the right question, you're going to thrash.
+如果你连问出正确的问题都做不到，那么得到正确的答案更是异想天开，你会被学习过程折磨得很惨。
 
-This is extra hard with coding because it's possible no one has attempted to build quite the same app that you're building.
+这会让编程这件事变得格外苦难，因为在你做这个软件之前，很大几率没人试着做过和你这个完全相同的软件。
 
-And thus some of the problems you encounter may be unprecedented. There may be no one to turn to.
+因此，你在过程中遇到的问题大概率是前所未有的，而且可能没有人可以帮你。
 
-15% of the queries people type into Google every day have never ever been searched before. That's bad news if you're the person typing one of those.
+人们每天在谷歌上输入的查询中，有15%是以前从未被搜索过的。如果你正在搜索的内容是这15里的东西，那可能有点不妙。
 
-My theory is that most developers will figure out how to solve a problem and simply move on, without ever documenting it anywhere. So you may be one of dozens of developers who has had to invent their own solution to the same exact problem.
+我的理论是：大多数开发人员会想出如何解决一个问题，然后简单地继续前进，而不会把它记录在任何地方，因此，你可能是少数不得不为相同的问题找出自己的解决方案的开发者之一。
 
-And then, of course, there are the old forum threads and StackOverflow pages.
+然后，当然我们还有很多古老的论坛主题和Stackflow页面。
 
-![wisdom_of_the_ancients_png__485-270_](https://www.freecodecamp.org/news/content/images/2023/01/wisdom_of_the_ancients_png__485-270_.png)Comic by XKCD
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/01/wisdom_of_the_ancients_png__485-270_.png" alt="来自XKCD的绘画" class="kg-image"><figcaption>来自XKCD的绘画</figcaption></figure>
 
-### How Not to Get Lost When Learning to Code
+### 如何在学习编程的时候不迷失方向
 
-The good news is: both **competence** and **confidence** come with practice.
+好消息是：当你练习多了以后， **能力** 和 **自信** 都会随之而来。
 
-Soon you'll know exactly what to google. You'll get a second sense for how documentation is usually structured, and where to look for what. And you'll know where to ask which questions.
+很快你就会知道在Google上搜什么了。对于文档通常是如何组织的，以及在哪里寻找目标信息，你很快就会有第二直觉，而且你也会知道该在哪里问哪些问题。
 
-I wish there were a simpler solution to the ambiguity problem. But you just need to accept it. Learning to code is an ambiguous process. And even experienced developers grapple with ambiguity.
+我希望这些含糊不清的问题都能有一个简单的答案，但是你不得不承认，学习编程就是一个含糊不清的过程。而且即使是有经验的开发者也会为模棱两可的问题而烦恼。
 
-After all, coding is the rare profession where you can just infinitely reuse solutions to problems you've previously encountered.
+毕竟，在编程时，你可以无限地重复使用你以前遇到的问题的解决方案，就职业内容这方面来说，编程是一份稀有的职业。
 
-Thus as a developer, you are always doing something you've never done before.
+因此，作为一名开发者，你总是在做一些你以前从未做过的事情。
 
-People think software development is about typing code into a computer. But it's really about learning.
+人们总是认为软件开发就是把代码输进电脑里，但这实际上是在学习。
 
-You're going to spend a huge portion of your career just thinking really hard. Or blindly inputting commands into a prompt trying to understand how a system works.
+在你的职业生涯中，你会花很大一部分时间去认真思考。又或是盲目地将命令输入提示符，试图了解一个系统是如何运作的。
 
-And you're going to spend a lot of time in meetings with other people: managers, customers, fellow devs. Learning about the problem that needs to be solved, so you can build a solution to it.
+而且你会花很长时间跟别人开会，比如管理者、顾客、开发者同事。学习需要解决的问题，这样你就可以建立一个解决方案。
 
-Get comfortable with ambiguity and you will go far.
+适应这种模糊的感觉，你就会走得更远。
 
-### Learning to Code is One Error Message After Another
+### 编程是在一个又一个的错误信息中学习的
 
-A lot of people who are learning to code feel like they hit a wall. Progress does not come as fast as they expect.
+很多学习编程的人有时感觉像是撞到了墙上，因为进展并不像他们期待中的那么快。
 
-One huge reason for this: in programming, the feedback loop is much tighter than in other fields.
+一个很大的原因是：编程的反馈比回路要比其他领域紧密的多。
 
-In most schools, your teacher will give you assignments, then grade those assignments and give them back to you. Over the course of a semester, you may only have a dozen instances where you get feedback.
+在很多学校里，你的老师会给你布置一些作业，然后给它们打分之后再返回给你。在一个学期里，你可能只有十几次得到反馈的机会。
 
-"Oh no, I really bombed that exam," you might say to yourself. "I need to study harder for the midterm."
+你可能会对自己自言自语道：“完了，那门课的考试考砸了，期中考试之前得好好学习了。”
 
-Maybe your teacher will leave notes in red ink on your paper to help you improve your work.
+或许你老师会在你的书卷上用红笔标出要点，来帮助你改善工作。
 
-Getting a bad grade on an exam or paper can really ruin your day.
+在考试或试卷上得到一个糟糕的成绩真的会让人心情糟糕一整天。
 
-And that's how we generally think about feedback as humans.
+而这一般就是我们作为人类对反馈的思考方式。
 
-If you've spent much time coding, you know that computers are quite fast. They can execute your code within a few milliseconds.
+如果你花时间在编程上，你会知道电脑是很快的，他们可以在毫秒内将你的代码执行完毕。
 
-Most of the time your code will crash.
+大多数情况下你的代码会崩溃。
 
-If you're lucky, you'll get an error message.
+如果你比较幸运的话，你会得到一个错误信息。
 
-And if you're really lucky, you'll get a "stack trace" – everything the computer was trying to do when it encountered the error – along with the line of code that caused the program to crash.
+而如果你足够幸运的话，你会得到一个“堆栈记录”以及导致程序崩溃的那一行代码，堆栈记录指的是当计算机遇到错误时试图做的一切操作。
 
-![A stack trace error message while running freeCodeCamp locally.](https://www.freecodecamp.org/news/content/images/2023/01/oh-my-zsh-stack-trace-error.jpg)
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/01/oh-my-zsh-stack-trace-error.jpg" alt="在本地运行freeCodeCamp时的堆栈跟踪错误信息" class="kg-image"><figcaption>在本地运行freeCodeCamp时的堆栈跟踪错误信息</figcaption></figure>
 
-Now this in-your-face negative feedback from a computer. Not everyone can handle it seeing this over and over all day long.
+上面就是来自电脑的当面的负面反馈，不是每个人都能接受整天看到这种情况。
 
-Imagine if every time you handed your teacher your term paper, they handed it back with big red "F" written on it. And imagine they did this before you could even blink. Over and over.
+想象一下，如果每次你把你的学期论文交给老师，他们都会把大红的"F"写在上面。再想象一下，在你还没来得及眨眼的时候，他们就这样做了。一遍又一遍。
 
-That's what coding can feel like sometimes. You want to grab the computer and shout at it, "why don't you just understand what I'm trying to do?"
+编码有时就是这种感觉，你想抓住电脑，然后不停地质问它："你为什么就是不懂我？"
 
-### How Not to Get Frustrated
+### 怎样才能不感到沮丧
 
-The key, again, is practice.
+再重复一遍，关键是练习。
 
-Over time, you will develop a tolerance for vague error messages and screen-length stack traces.
+随着时间的推移，你会对模糊的错误信息和像屏幕一样长的堆栈记录形成一种容忍。
 
-Coding will never be harder than it is when you're just starting out.
+编程永远不会比你刚开始的时候更难。
 
-Not only do you not know what you're doing, but you're not used to receiving such impersonal, rapid-fire, negative feedback.
+你不仅不知道自己在做什么，而且你也不习惯接受这种不近人情的、快速的、负面的反馈。
 
-So here are some tips:
+所以这里有一些小建议：
 
-#### Tip #1: Know that you are not uniquely bad at this.
+#### Tip #1：明确自己在这方面并不是独一无二的糟糕。
 
-Everyone who learns to code struggles with the frustration of trying to Vulcan Mind Meld with a computer, and get it to understand you. (That's another Star Trek reference.)
+每个学习代码的人都会为试图与计算机进行Vulcan心灵融合并让它理解你而感到沮丧。(这是另一个来自《星际迷航》的参考资料）。
 
-Of course, some people started programming when they were just kids. They may act like they've always been good at programming. But they most likely struggled just like we adults do, and over time have simply forgotten the hours of frustration.
+当然，很多人在他们是孩子的时候就开始编程了。他们会表现得像他们一直很擅长编程，但他们很可能像我们成年人一样挣扎，随着时间的推移，他们只是忘记了那几个小时的挫折。
 
-Think of the computer as your friend, not your adversary. It's just asking you to clarify your instructions.
+把电脑看作你的朋友，而不是对手，电脑有什么错，它只是想让你把自己的指令明确一些罢了。
 
-#### Tip #2: Breathe.
+#### Tip #2：呼吸。
 
-Many people's natural reaction when they get an error message is to gnash their teeth. Then go back into their code editor and start blindly changing code, hoping to somehow luck into getting past it.
+很多人在面对错误信息的时候，本能反应都是咬牙切齿。然后重新在代码编辑器中盲目的修改代码，希望以某种幸运的方式通过这个问题。
 
-This does not work. And I'll tell you why.
+这样是行不通的，下面是为什么这么说。
 
-The universe is complex. Software is complex. You are unlikely to just Forest Gump your way into anything good.
+宇宙是很复杂的。软件也是很复杂的。你不太可能仅仅通过"阿甘正传"的方式获得任何好处。
 
-![gump](https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg)Forest Gump doing what he does and getting improbably lucky catching shrimp.
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg" alt="阿甘做他该做的事，并以不寻常的运气抓到了虾子" class="kg-image"><figcaption>阿甘做他该做的事，并以不寻常的运气抓到了虾子</figcaption></figure>
 
-You may have heard of the Infinite Monkey Theorem. It's a thought experiment where you imagine chimpanzees typing on typewriters.
+你可能听说过"无限猴子定理"。这是一个思想实验，实验内容是让你想象黑猩猩在打字机上打字。
 
-If you had a newsroom full of chimpanzees doing this, how long would it take before one of them typed out the phrase "to be or not to be" by random chance?
+如果你有一个新闻编辑室，里面都是黑猩猩在做这件事，要多久才会有一只黑猩猩随机打出"to be or not to be"这句话？
 
-Let's say each chimp types one random character per second. It would likely take 1 quintillion years for one of them to type "to be or not to be." That's 10 to the 18th power. A billion billion.
+假设每只黑猩猩每秒钟打一个随机字符。他们中的一个可能需要1万亿年的时间来输入"to be or not to be"，那是10的18次方，十亿亿。
 
-Even assuming the chimps remain in good health and the typewriters are regularly serviced – the galaxy would be a cold, dark void by the time one of them managed to type "to be or not to be."
+即使假设黑猩猩保持健康，打字机定期维修，当它们中的一个设法打出"to be or not to be"时，银河系将是一个寒冷、黑暗的虚空。
 
-Why do I tell you all of this? Because you don't want to be one of those chimps.
+我为什么要告诉你这一切？因为你不希望成为那些黑猩猩中的一员。
 
-In that time, you could almost certainly figure out a way to teach those chimps how to type English words. They could probably manage to type out all of Hamlet – not just its most famous line.
+在这段时间里，你几乎肯定可以想出办法来教那些黑猩猩如何打英文单词。它们可能会设法打出《哈姆雷特》的全部内容，而不仅仅是其中最著名的一句。
 
-Even if you somehow do get lucky, and get past the bug, what will you have learned?
+即使你真的很幸运，通过了这个bug，你会学到什么？
 
-So instead of thrashing, you want to take some time. Understand the code. Understand what's happing. And then fix the error.
+因此，与其惊慌失措，不如花些时间，理解代码，理解正在发生的事情，然后修复错误。
 
-Always take time to understand the failing code. Don't be a quintillionarian chimp. (I think that means someone who is 1 quintillion years old, though according to Google, nobody has ever typed that word before.)
+务必花时间去理解错误的代码，不要成为一个quintillionarian(五亿年)的黑猩猩。(我认为quintillionarian意味着一个五亿岁的人，虽然根据谷歌，以前没有人用过这个词）。
 
-Instead of blindly trying things, hoping to get past the error message, slow down.
+与其盲目地尝试，寄希望于简单地跳过错误信息，不如放慢速度。
 
-Take a deep breath. Stretch. Get up to grab a hot beverage.
+深吸一口气，伸个懒腰，起身去拿一杯热饮。
 
-Your future self will be grateful that you took this as a teachable moment.
+未来的自己会感谢你把这作为一个有教育意义的时刻。
 
-#### Tip #3: Use Rubber Duck Debugging
+#### Tip #3：使用“橡皮鸭”调试
 
-Get a rubber ducky and set it next to your computer. Every time you hit an error message, try to explain what you think is happening to your rubber duck.
+找一只橡皮鸭子，把它放在你的电脑旁边。每当你遇到错误信息时，试着解释一下你认为你的橡皮鸭发生了什么。
 
-Of course, this is silly. How could this possibly be helpful?
+当然，这是很蠢的，这怎么可能有帮助呢？
 
-Except it is.
+除非真的有帮助。
 
-Rubber Duck Debugging is a great tool for slowing down and talking through the problem at hand.
+“橡皮鸭调试”对于让自己慢下来、尝试专注于眼前的工作是很有帮助的。
 
-You don't have to use a rubber duck, of course. You could explain your Python app to your pet cactus. Your SQL query to the cat that keeps jumping onto your keyboard.
+当然，你不一定要用橡皮鸭子。你可以向你的宠物仙人掌解释你的Python应用程序，解释你的SQL查询给那只一直跳到你键盘上的猫。
 
-The very act of explaining your thinking out loud seems to help you process the situation better.
+大声解释你的想法似乎能帮助你更好地处理这一情况。
 
-### How do Most People Learn to Code?
+### 大多数人是怎么学习编程的呢？
 
-Now let's talk about traditional pathways to a first developer job.
+现在让我们来谈谈通往第一份开发者工作的传统途径。
 
-Why should you care what everyone else does? Spoiler alert: you don't really need to.
+为什么要在意别人是怎么做的呢？剧透警告：没必要。
 
-You do **you**.
+做好自己的事情就可以了。
 
-This said, you may doubt yourself and the decisions you've made about your learning. You may yearn for the path not taken.
+这就是说，你可能会怀疑自己和你对学习所做的决定，你可能会向往没有走过的路。
 
-My goal with this section is to calm any anxieties you may have.
+我在这一部分的目标是安抚你可能有的任何焦虑。
 
-#### The Importance of Computer Science Degrees
+#### 计算机科学学位的重要性
 
-University degrees are still the gold standard for preparing for a career in software development. Especially bachelor's degrees in Computer Science.
+大学学位对于准备从事软件开发职业的人来说仍然是一个黄金标准，尤其是计算机科学的学士学位。
 
-Before you start saying "But I don't have a computer science degree" – no worries. **You don't need a Computer Science degree to become a developer**.
+在你开始说“但我没有计算机科学学位”之前，不用担心，**你不需要计算机科学学位就能成为一名开发人员**。
 
-But their usefulness is undeniable. And I'll explain why.
+但它们的用处是不可否认的，下面将解释原因。
 
-First, you may wonder: why should developers study computer science? After all, one of the most prominent developers of all time had this to say about the field:
+首先，你会想“为什么开发者需要学习计算机科学？”，毕竟，有史以来最著名的开发者之一对该领域有这样的评价：
 
-> "Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter." – Eric Raymond, Developer, Computer Scientist, and Author
+> “计算机科学教育不能使任何人成为专家级的程序员，就像研究画笔和颜料不会让人成为专家级的画家一样。” - Eric Raymond，开发人员、计算机科学家和作家。
 
-Computer Science departments were traditionally part of the math department. Universities back in the 1960s and 1970s didn't know quite where to put this whole computer thing.
+计算机科学系在传统上是数学系的一部分，20世纪60年代和70年代的大学不知道该把整个计算机的事情放在哪里。
 
-At other universities, Computer Science was considered an extension of Electrical Engineering. And until recently, even University of California – Berkeley – one of the greatest public universities in the world – only provided Computer Science degrees as sort of a double-major with Electrical Engineering.
+在其他大学，计算机科学被认为是电气工程的延伸。直到最近，即使是加州大学伯克利分校--世界上最伟大的公立大学之一--也只提供计算机科学学位，作为电气工程的一种双主修课程。
 
-But most universities have now come to understand the importance of Computer Science as a field of study.
+但大多数大学现在已经开始了解计算机科学作为一个研究领域的重要性。
 
-As of writing this, Computer Science is the highest paying degree you can get. Higher even than fields focused on money, such as Finance and Economics.
+截至本文写作时，计算机科学是你能得到的报酬最高的学位，甚至高于专注于金钱的领域，如金融和经济学。
 
-[According to Glassdoor](https://www.glassdoor.com/blog/50-highest-paying-college-majors/), the average US-based Computer Science major makes more money at their first job than any other major. US $70,000. That's a lot of money for someone who just graduated from college.
+[根据Glassdoor](https://www.glassdoor.com/blog/50-highest-paying-college-majors/), 美国的计算机科学专业平均在第一份工作中比其他专业赚得更多。70000美刀对一个刚从大学毕业的人来说是一笔不小的收入。
 
-More than Nursing majors ($59,000), Finance majors ($55,000) and Architecture majors ($50,000).
+高于护理专业（59000美元）、金融专业（55000美元）和建筑专业（50000美元）。
 
-OK – so getting a Computer Science degree can help you land a high-paying entry level job. That is probably news to no one. But why is that?
+OK--所以获得计算机科学学位可以帮助你找到一份高薪的入门工作。这可能对任何人都不是新闻，但这是为什么呢？
 
-#### How Employers Think About Bachelor's Degrees
+#### 雇主如何看待学士学位的问题
 
-You may have heard some big employers in tech say things like, "we no longer require job candidates to have a bachelor's degree."
+你可能已经听到科技界的一些大雇主说，“我们不再要求求职者有学士学位”之类的话。
 
-Google said this. Apple said this.
+谷歌这么说过，苹果也这么说过。
 
-And I believe them. That they no longer require bachelor's degrees.
+而且我相信他们，他们不再需要本科学位。
 
-We've had lots of freeCodeCamp alumni get jobs at these companies, some of whom did not have a bachelor's degrees.
+我们已经有很多freeCodeCamp的校友在这些公司找到了工作，其中有些人没有相应的学士学位。
 
-But those freeCodeCamp alumni who landed those jobs probably had to be extra strong candidates to overcome the fact that they didn't have bachelor's degrees.
+但那些找到这些工作的freeCodeCamp校友可能必须是特别强的候选人，以克服他们没有学士学位的事实。
 
-You can look at these job openings as having a variety of criteria they judge candidates on:
+你可以看一下这些职位空缺，他们判断候选人的标准有很多：
 
-1. Work experience
-2. Education
-3. Portfolio and projects
-4. Do they have a recommendation from someone who already works at the company? (We'll discuss building your network in depth in Chapter 2)
-5. Other reputation considerations (we'll discuss building your reputation in Chapter 3)
+1. 工作经验
+2. 教育
+3. 投资组合和项目
+4. 他们是否有已经在该公司工作的人的推荐？(我们将在第二章深入讨论建立你的网络）
+5. 其他声誉方面的考虑（我们将在第三章中讨论建立你的声誉。）
 
-For these employers who do not require a bachelor's degree, education is just one of several considerations. If you are stronger in other areas, they may opt to interview you – regardless of whether you've ever even set foot inside a university classroom.
+对于这些不要求学士学位的雇主来说，教育只是几个考虑因素中的一个。如果你在其他方面比较强，他们可能会选择面试你--不管你是否曾经踏入过大学的教室。
 
-Just note that having a bachelor's degree will make it easier for you to get an interview, even at these "degree-optional" employers.
+只需注意，拥有学士学位将使你更容易获得面试机会，即使在这些 "可选择学位 "的雇主那里。
 
-#### Why do so Many Developer Jobs Require a Computer Science Degree Specifically?
+#### 为什么那么多开发者的岗位特别要求有计算机科学的学位呢？
 
-A bachelor's is a bachelor's, I often tell people. Because for most intents and purposes, it is.
+我经常告诉人们，学士就是学士。因为就大多数意图和目的而言，它是有用的。
 
-Want to enter the US military as an officer, rather than an enlisted service member? You'll need a bachelor's degree, but any major will do.
+想进入美国军队成为一名军官，而不是一名士兵？你将需要一个学士学位，但任何专业都可以。
 
-Want to get a work visa to work abroad? You'll probably need a bachelor's degree, but any major will do.
+想获得工作签证到国外工作吗？你可能需要一个本科学位，但任何专业都可以。
 
-And for so many job openings that say "bachelor's degree required" – any major will do.
+而对于许多写着“需要学士学位”的职位空缺--任何专业都可以。
 
-Why is this? Doesn't the subject you study in university matter at all?
+这是为什么呢？你在大学里学习的科目难道一点都不重要吗？
 
-Well, here's my theory on this: what you learn in university is less important than **whether** you finished university.
+我的理论是这样的：你在大学里学了什么没有你**是否**完成大学学业重要。
 
-Employers are trying to select for people who can figure out a way to get through this rite of passage.
+雇主倾向于选择通过自己的方式完成大学学业的人。
 
-It is certainly true that you can be at the bottom of your class, repeating courses you failed, and being on academic probation for half the time. But a degree is a degree.
+你当然可以成绩垫底，一直挂科和花一半的大学时光缓考，但是学位就是学位。
 
-You know what they call the student who finished last in their class at medical school? "Doctor."
+你知道以最后一名的成绩毕业于医学院的学生被称作什么吗？“医生”。
 
-And for most employers, the same holds true.
+对于大部分雇主来说，就是这样的道理。
 
-In many cases, HR folks are just checking a box on their job application filtering software. They're filtering out applicants who don't have a degree. In those cases, they may never even look at job applications from people without degrees.
+多数情况下，HR只是通过招聘过滤软件的勾选框来筛选简历，过滤掉没有学位的应聘人员。他们可能完全没看过这些被筛选掉的简历。
 
-Again, not every employer is like this. But many of them are. Here in the US, and perhaps even more so in other countries.
+必须强调，并不是所有HR都这样。但大多数HR都这样，在美国如此，其他国家可能更为严重。
 
-It sucks, but it's how the labor market works right now. It may change over the next few decades. It may not.
+这很糟糕，但这就是劳动力市场目前的状况，在几十年后可能会好转也可能没有变化。
 
-This is why I always encourage people who are in their teens and 20s to seriously considering getting a bachelor's degree.
+这就是为什么我总是鼓励十几二十多岁的年轻人认真考虑获得一个学士学位。
 
-Not because of any of the things universities market themselves as:
+并不是为了大学本身：
 
-- The education itself. (You can take courses from some of the best universities online for free, so this alone does not justify the high cost of tuition.)
-- The "college experience" of living in a dorm, making new friends, and self discovery. (Most US University students never live on campus so they don't really get this anyway.)
-- General education courses that help you become a "well rounded individual" (Ever hear of the Freshman 15? This is a joke of course. But a lot of university freshman do gain weight due to the stress of the experience.)
+- 教育本身。（你可以在线免费学习世界上最好大学的课程，所以这并不构成高额学费的充分理由）
+- 如宿舍生活、交友、自我探索等“大学经验”。（美国学生基本不住在学校，也就没有类似的经验）
+- 通识课程帮助你成为“全面人才”(听说过[“Freshman 15”](https://www.healthline.com/nutrition/freshman-15)（大一胖三斤半）这个笑话吗?但确实有很多大一新生过劳肥)
 
-Again, the real value of getting a bachelor's degree – the real reason Americans pay $100,000 or more for 4 years of university – is because many employers require degrees.
+再次申明，学士学位真正的意义（美国人花十万美元甚至更多来支付大学4年的学费）是因为雇主要求学历。
 
-Of course, there are other benefits of having a bachelor's degree, such as the ones I mentioned: expanded military career options, and greater ease getting work visas.
+当然，获得学士学位还有其他的好处，如：更多从军的选择、更容易获得工作签证等。
 
-One of these is: if you want to become a doctor, dentist, lawyer, or professor, you will first need a bachelor's degree. You can then use that to get into grad school.
+还有一个好处是：如果你想要成为一名医生、牙医或者教授，你必须先拥有学士学位。然后再进入研究生院。
 
-OK – this is a lot of background information. So allow me to answer your questions bluntly.
+已经铺垫地差不多了，让我直言不讳地回答你的问题。
 
-### Do You Need a University Degree to Work as a Software Developer?
+### 成为一个软件工程师需要大学学历吗?
 
-No. There are plenty of employers who will hire you without a bachelor's degree.
+不需要。很多雇主都不需要你有学士学位。
 
-A bachelor's degree will make it much easier to get an interview at a lot of employers. And it may also help you command a higher salary.
+但学士学位可以帮助你更快获得面试机会，获得更高的工资。
 
-### What About Associate's Degrees? Are Those Valuable?
+### 那[副学士（Associate degree)文凭](https://zh.wikipedia.org/zh-hans/%E5%89%AF%E5%AD%B8%E5%A3%AB)(相当于中国的大专）呢？有含金量吗？
 
-In theory, yes. There are some fields in tech where having an associates may be required. And I think it always does increase your chances of getting an interview.
+理论上是的。在科技行业的某些领域的确需要副学士文凭，这个文凭也会帮助你更快获得面试机会。
 
-This said, I would not recommend going to university with the specific goal of getting an associate's degree. I would 100% encourage you to stay in school until you get a bachelor's degree, which is vastly more useful.
+虽然如此，我不鼓励你为了副学士文凭而去读大学。我更鼓励你待够4年，拿到大学文凭，这个的含金量更高。
 
-According to the US Department of Education, over the course of your career, having a bachelor's degree will earn you 31% more than merely having an associate's degree.
+美国教育部的数据显示，在整个职业生涯中，大学学历的薪资比副学士学历高31%。
 
-And I'm confident that difference is much wider with a bachelor's in Computer Science.
+这两种学历的区别可比普通本科以及计算机科学本科的区别要大得多。
 
-### Is it Worth Going to University to Get a Bachelor's Degree Later in Life, if You Don't Already Have One?
+### 如果没有大学学历，过了年龄还申请学士学位值得吗？
 
-Let's say you're in your 30s. Maybe you attended some college or university courses. Maybe you completed the first two years and were able to get an associate's degree.
+假设你三十多岁，你参加过一些学院和大学的课程，并且你已经完成了头两年的学业可以获得副学士学位。
 
-Does it make sense to go "back to school" in the formal sense?
+“重返校园”值得吗？
 
-Yes, it may make sense to do so.
+是的，重返校园值得！
 
-But I don't think it ever makes sense to quit your job to go back to school full time.
+但我并不认为你应该辞掉工作脱产学习。
 
-The full-time student lifestyle is really designed with "traditional" students in mind. That is, people age 18 to 22 (or a bit older if they served in the military), who have not yet entered the workforce beyond high school / summer jobs.
+脱产学习是为“传统”学生设计的。他们通常在18到22岁之间（如果服过兵役可能年龄稍长一些），除了高中校外打工和暑期实习，并未有任何工作经验。
 
-Traditional universities cost a lot of money to attend, and the assumption is that students will pay through some combination of scholarships, family funds, and student loans.
+传统的大学的学费高昂，一般学生会结合奖学金、家庭基金和学生贷款来支付。
 
-As a working adult, you'll have less access to these funding sources. And just as importantly, you'll have less time on your hands than a recent high school graduate.
+作为一个工作了的成年人，你获得这些现金资助的渠道更少。与此同时，你也没有一个刚毕业的高中生时间宽裕。
 
-But that doesn't mean you have to give up on the dream of getting a bachelor's degree.
+但这并不意味着你就要放弃获得学士学位的梦想了。
 
-Instead of attending a traditional university, I recommend that folks over 30 attend one of the online nonprofit universities. Two that have good reputations, and whose fees are quite reasonable, are Western Governor's University and University of the People.
+与其加入一个传统大学，我更推荐三十岁以上的成年人参与线上非盈利大学。有两所名声在外、收费合理的大学：西部州长大学（ Western Governor's University）和美国人民大学（ University of the People）。
 
-You may also find a local community college or state university extension program that offers degrees. Many of these programs are online. And some of them are even self-paced, so that you can complete courses as your work schedule permits.
+一些本地社区大学和州立大学的衍生项目也提供学位。许多项目都是线上的，其中一部分还可以自己管理学习进度，你可以根据自己的工作安排完成学业的时间。
 
-Do your research. If a school looks promising, I recommend finding one of its alumni on LinkedIn and reaching out to them. Ask them questions about their experience, and whether they think it was worth it.
+做好研究功课。如果一个大学看上去不错，推荐你使用LinkedIn找到该学校校友，向他们寻求帮助。询问他们的经验，他们觉得这些课程是否物有所值。
 
-I recommend not taking on any debt to finance your degree. It is much better to attend a cheaper school. After all, a degree is a degree. As long as it's from an accredited institution, it should be fine for most intents and purposes.
+我不推荐通过借贷的方式来获得学位。去一个学费没那么贵的学校更好。学位只是一个学位而已，只要是来自一个授权的机构，基本上就可以服务于你需要用学位达成的大部分目的。
 
-### If You Already Have a Bachelor's Degree, Does it Make Sense to Go Back and Earn a Second Bachelor's in Computer Science?
+### 如果你已经有学士学位，有必要再回到校园，读一个计算机科学专业吗？
 
-No. Second bachelor's degrees are almost never worth the time and money.
+没有必要，既浪费钱又浪费时间！
 
-If you have any bachelor's degree – even if it's in a non-STEM field – you have already gotten most of the value you will get out of university.
+如果你已经拥有学士学位– 即便和科学、科技、工程、数学（non-STEM）无关 – 你已经获得大学能提供的大部分价值了。
 
-### What About a Master's of Computer Science Degree?
+### 那计算机科学的研究生学历呢?
 
-These can be helpful for career advancement. But you should pursue them later, after you're already working as a developer.
+这对职业进阶有助益，但你可以在已经有开发者工作经验之后再去申请。
 
-Many employers will pay for their employee's continuing education.
+许多雇主会支付员工继续教育的学费。
 
-One program a lot of my friends in tech have attended is Georgia Tech's Master's in Computer Science degree.
+我技术领域的很多伙伴都参加了佐治亚理工学院的计算机科学研究生的课程。
 
-Georgia Tech's Computer Science department is among the best in the US. And this degree program is not only fully online – it's also quite affordable.
+佐治亚理工学院的计算机科学部不仅仅在全美数一数二，而且其研究生学位完全线上，费用也合理。
 
-But I wouldn't recommend doing it now. First focus on getting a developer job. (We'll cover that in-depth later in this book).
+但我不鼓励你现在就去申请，先找一份开发者工作。（本书之后的章节会详细介绍）
 
-### Will Degrees Continue to Matter in the Future?
+### 未来学位还会这么重要吗？
 
-Yes, I believe that university degrees will continue to matter for decades – and possibly centuries – to come.
+是的，我认为学士学位会在未来几十年，甚至是几百年依旧保持重要的地位。
 
-University degrees have existed for more than 1,000 years.
+学士学位已经存在超过1000年了。
 
-Many of the top universities in the US are older than the USA itself is. (Harvard is more than 400 years old.)
+许多美国顶尖学校比美国历史还悠久。(哈佛有400年历史)
 
-The death of the university degree is greatly exaggerated.
+学士学位的消亡这一说法实属夸大。
 
-It has become popular in some circles to bash universities, and say that degrees don't matter anymore.
+一些圈子开始抨击大学，倡导学位无用论。
 
-But if you look at the statistics, this is clearly not true. They do have an impact on lifetime earnings.
+当如果你查看相关数据，会发现事实并非如此。学位和薪资息息相关。
 
-And just as importantly, they can open up careers that are safer, more stable, and ultimately more fulfilling.
+同时，一个学位也可以帮助你获得更安全、稳定以及更有成就感的工作。
 
-Sure, you can make excellent money working as a deckhand offshore, servicing oil rigs.
+当然，你也可以通过做甲板工，为石油钻井服务赚得丰厚的收入。
 
-But you can make similarly excellent money working as a developer in a climate-controlled office, servicing servers and patching codebases.
+但你也可以作为一个开发人员，在恒温的办公环境，通过维护服务器、修补代码库赚钱同样丰厚的收入。
 
-One of these jobs is dangerous, back-breaking work. The other is a job you could comfortably do for 40 years.
+前者工作环境危险，对背部有损伤；而后者工作环境舒适，即便是40岁，你也可以继续工作下去。
 
-Many of the "thought leaders" out there who are bashing universities have themselves benefitted from a university education.
+许多抨击大学的“意见领袖”本身从自己的大学学历获益。
 
-One reason why I think so many people think degrees are "useless" is: it's hard to untangle the learning from the status boost you get.
+我认为倡导“大学无用论”的其中一个理由是：很难将学习与获得地位提升联系起来。
 
-Is university just a form of class signaling – a way for the wealthy to continue to pass advantage on to their children? After all, you're 20 times as likely to find a rich kid at Harvard as you are a poor kid.
+大学只是阶级信号的一种形式吗 – 即富裕阶级将财富传承到下一代的一种方式？总体来说，在哈佛找到一位富家子弟比穷苦学子的概率要大20倍。
 
-The fact is: life is fundamentally unfair. But that does not change how the labor market works.
+事实是：人生的本质就是不公平。但这并不改变劳动力市场的运行规律。
 
-You can choose easy mode, and finish a degree that will give you more options down the road.
+你可以选择简单模式，完成学位，并且在职业道路上获得更多机会。
 
-Or you can go hard mode, potentially save time and money, and just be more selective about which employers you apply to.
+或者是困难模式，省下一些时间和金钱，但是需要更谨慎地选择雇主。
 
-I have plenty of friends who've used both approaches to great success.
+我的许多朋友在获取成功的路上两种模式切换使用。
 
-### What Does a Computer Science Bachelor's Degree Cover?
+### 计算机科学学士学位包含哪些内容?
 
-### What Alternatives are There to a University Degree?
+### 大学学历的替代品有哪些?
 
-I've worked in adult education for nearly two decades, and I have yet to see a convincing substitute for a university degree.
+我已经在成人教育领域耕耘了二十多年，我看到了许多大学学历的替代品。
 
-Sure – there are certification programs and bootcamps.
+当然包含一些认证项目和集训班（bootcamp）。
 
-But these do not carry the same weight with employers. And they are rarely as rigorous.
+雇主并不认可这些的含金量，而且它们很少要求严格。
 
-*Side note: when I say "certification programs" I mean a program where you attend a course, then earn a certification at the end. These are of limited value. But exam-based certifications from companies like Amazon and Microsoft are quite valuable. We'll discuss these in more depth later.*
+*旁注：当我说 "认证项目 "时，我指的是你参加一个课程，然后在最后获得一个证书。这些项目的价值有限。但是来自亚马逊和微软等公司的基于考试的认证是相当有价值的。我们将在后面更深入地讨论这些。*
 
-What I tell people is: to degree or not to degree – that is the question.
+我常常告诉人们：到底去不去攻读学位，这是一个问题。
 
-I meet lots of people who are auto mechanics, electricians, or who do some other sort of trade, who don't have a bachelor's. They can clearly learn a skillset, apply it, and hold down a job.
+我遇到过很多没有学士学位的人，他们是汽车修理工、电工或从事其他行业的人。他们可以清楚地学会一套技能，应用它，并保住一份工作。
 
-I meet lots of people who are bookkeepers, paralegals, and other "knowledge workers" who don't have a bachelor's. They can clearly learn a skillset, apply it, and hold down a job.
+我遇到过很多没有学士学位的簿记员、律师助理和其他“知识工作者”。他们可以清楚地学会一套技能，应用它，并保住一份工作。
 
-In many cases, these people can just learn to code on their own, using free learning resources and hanging out with likeminded people.
+这些人可以自学代码，使用免费的学习资源并与志同道合的人交流。
 
-Some of these people have always had the personal goal of going back and finishing their bachelor's. That's a good reason to do it.
+其中一些人的个人目标一直是回去完成他们的学士学位。这是攻读学位的一个很好的理由。
 
-But it's not for everyone.
+但不适用于每一个人。
 
-If you want formal education, go for the bachelor's degree. If you don't want formal education, don't do any program. Just self-teach.
+如果你想要获得正规教育，你可以去攻读学士学位；如果你不想，别参与这些项目。自学就可以。
 
-The main thing bootcamps and other certification programs are going to give you is structure and a little bit of peer pressure. That's not a bad thing. But is it worth paying thousands of dollars for it?
+培训班和认证项目仅给你提供课程大纲和同学间的竞争压力。这并不赖，但值得你花上千美元吗？
 
-### How to Teach Yourself to Code
+### 如何自学代码
 
-Most developers are self-taught. Even the developers who earned a Bachelor's of computer science still often report themselves as "self-taught" on industry surveys like Stack Overflow's annual survey.
+大部分开发者都是自学的，即便是有相关学历的程序员也在Stack Overflow的年度调查中宣称自己是“自学”。
 
-![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)Most working developers consider themselves to be "self-taught" (Image: Stack Overflow 2016 Survey)
+![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)大部分在职程序员认为自己的“自学的” (图片来源: Stack Overflow 2016 调查)
 
-This is because learning to code is a life-long process. There are constantly new tools to learn, new legacy codebases to map out, and new problems to solve.
+因为代码需要终生学习。不断有新的工具需要学习，新的过气代码需要重新规划，新的问题需要解决。
 
-So whether you pursue formal education or not, know this: you will need to get good at self-teaching.
+所以不论你是否接受了正规教育，你都要知道：你必须擅长自学。
 
-#### What Does it Mean to be a "Self-Taught" Developer?
+#### “自学”开发意味着什么?
 
-Not to be pedantic, but when I refer to self-teaching, I mean self-directed learning – learning outside of formal education.
+但当我提到自学时，我指的是自主学习——在正规教育之外学习。
 
-Very few people are truly "self-taught" at anything. For example, Isaac Newton taught himself Calculus because there were no Calculus books. He had to figure it out and invent it as he went along.
+很少有人在任何事情上都是真正“自学成才”的。例如，艾萨克·牛顿自学了微积分，因为当时没有微积分书籍。他必须边做边弄明白并发明它。
 
-Similarly, Ada Lovelace taught herself programming. Because before her there was no programming. She invented it.
+同样地，爱达·勒芙蕾丝自学了编程。因为在她之前，没有编程。她发明了它。
 
-Someone might tell you: "You're not really self taught because you learned from books or online courses. So you had teachers." And they are correct, but only in the most narrow sense.
+有人可能会告诉你：“你不是真正的自学，因为你是从书本或在线课程中学习的。所以你有老师。”它们是正确的，但只是在最狭义的意义上。
 
-If someone takes issue with you calling yourself self-taught, just say: "By your standards, no one who wasn't raised by wolves can claim to be self-taught at anything."
+如果有人对你自称是自学成才提出异议，只需说：“按照你的标准，只要不是被狼养大的，就不能声称自己是自学成才的。”
 
-Point them to this section of this book and tell them: "Quincy anticipated your snobbery." And then move on with your life.
+将本书的这一部分指给他们看，并告诉他们：“Quincy预料到了你的傲慢。”然后继续你的生活。
 
-Because come on, life's too short, right?
+人生苦短，别浪费时间。
 
-You're self taught.
+你就是自学成才的！
 
-#### What is Self-Directed Learning?
+#### 什么是自主学习?
 
-As a self-learner, you are going to curate your own learning resources. You're going to choose what to learn, from where. That is the essence of "Self-Directed Learning."
+作为自学者，你将整理自己的学习资源。选择从哪里学习什么。这就是“自主学习”的本质。
 
-But how do you know you're learning the right skills, and leveraging the right resources?
+但是你怎么知道你学习正确的技能，并利用正确的资源呢？
 
-Well, that's where community comes in.
+社区就派上用场了。
 
-There are lots of communities of learners around the world, all helping one another expand their skills.
+世界上有各种学习者的社区，相互帮助提高技能。
 
-Community is a hard word to define. Is Tech Twitter a community? What about the freeCodeCamp forum? Or the many Discord groups and subreddits dedicated to specific coding skillsets?
+社区是一个很难定义的词。Twitter Tech话题是一个社区吗？ freeCodeCamp 论坛呢？还是许多专门针对特定代码技能的 Discord 组和 reddit 话题？
 
-I consider all of these communities. If there are people who regularly hang out there and help one another, I consider it a community.
+我认为这些都是社区。如果经常有人活跃，互相帮助，我就认为这是一个社区。
 
-What about in-person events? The monthly meetup of Ruby developers in Oakland? The New York City Startup community meetup? The Central Texas Linux User Group?
+面对面的活动呢？奥克兰的 Ruby 开发人员月度聚会？纽约市创业社区聚会？德克萨斯州中部 Linux 用户组？
 
-These communities can be online, in-person, or some mix of both.
+这些社区可以是在线的、面对面的，或者两者兼而有之。
 
-We'll talk more about communities in the Build Your Network chapter. But the big takeaway is: the new friends you meet in these communities can help you narrow your options for what to learn, and which resources to learn from.
+我们将在 "建立你的网络 "一章中更多地谈及社区。但最大的收获是：你在这些社区中遇到的新朋友可以帮助你缩小选择范围，知道要学什么，要从哪些资源中学习。
 
-### What Programming Language Should I Learn First?
+### 我应该先学习什么编程语言?
 
-The short answer is: it doesn't really matter. Once you've learned one programming language well, it is much easier to learn your second language.
+简短的回答是：这并不重要。学好一门编程语言后，学习第二语言就容易多了。
 
-There are different types of programming languages, but today most development is done using "high-level scripting languages" like JavaScript and Python. These languages trade away the raw efficiency you get from "low-level programming languages" like C. What they get in return: the benefit of being much easier to use.
+有不同类型的编程语言，但今天大多数开发是使用 "高级脚本语言"，如JavaScript和Python。这些语言放弃了C语言等 "低级编程语言 "的效率，得到的回报是：更容易使用。
 
-Today's computers are billions of times faster than they were in the 1970s and 1980s, when people were writing most of their programs in languages like C. That power more than makes up for the relative inefficiency of scripting languages.
+今天的计算机比 1970 年代和 80 年代快数十亿倍。那时人们用 C 等语言编写大部分程序。现在计算机速度足以弥补脚本语言的相对低效。
 
-It's worth noting that both JavaScript and Python themselves are written in C, and they are both getting faster every year – thanks to their large communities of open source code contributors.
+值得注意的是，JavaScript 和 Python 本身都是用 C 语言编写的，而且它们每年都在变得更快——这要归功于它们庞大的开源代码贡献者社区。
 
-Python is a powerful language for scientific computing (Data Science and Machine Learning).
+Python 是用于科学计算（数据科学和机器学习）的强大语言。
 
-And JavaScript... well, JavaScript can do everything. It is the ultimate Swiss Army Knife programming language. JavaScript is the duct tape that holds the World Wide Web together.
+还有 JavaScript……好吧，JavaScript 无所不能。它是终极的瑞士军刀型编程语言。 JavaScript 是将万维网连接在一起的胶带。
 
-> "Any application that can be written in JavaScript, will eventually be written in JavaScript." – Atwood's Law (Jeff Atwood, founder of Stack Overflow and Discourse)
+> "任何可以用 JavaScript 编写的应用程序，最终都会用 JavaScript 编写。" – 阿特伍德定律 (Jeff Atwood, Stack Overflow 和 Discourse 发起人)
 
-You could code your entire career in JavaScript and would never need to learn a second language. (This said, you'll want to learn Python later on, and maybe some other languages as well.)
+你的整个职业生涯都可以使用JavaScript，并不需要学习第二门语言。
+(话是这么说，但是你之后可能会学习Python，或者其他语言)
 
-So I recommend starting with JavaScript. Not only is it much easier to use than languages like Java and C++ – it's easier to learn, too. And there are far, far more job openings for people who know JavaScript.
+所以我建议从 JavaScript 开始。它不仅比 Java 和 C++ 等语言更易于使用，而且更易于学习。对于懂 JavaScript 的人来说，工作机会要多得多。
 
-![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)A screenshot from job search engine Indeed. My search for "javascript" for the US yielded 68,838 job listings.
+![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)通过Indeed获得的职位搜索截图。 我输入了"javascript"，地区是美国，搜索结果为68838个工作。
 
 其他需要你专注的技能是 **HTML** 和 **CSS**。如果网页是躯体，那么 HTML 就是骨架，而 CSS 则是皮肤。（ Javascript 将会是肌肉——使得网页的运转及交互成为可能。）
 

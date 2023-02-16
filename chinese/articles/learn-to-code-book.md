@@ -1,7 +1,5 @@
 > -  原文地址：[How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/learn-to-code-book/)
 > -  原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> -  译者：casey cui Celqaz
-> -  校对者：
 
 [如何在 2023 年学习编程并入行程序员 [完结]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
 
@@ -223,263 +221,263 @@
 
 保持信念：你一定可以的！
 
-## 谨以此书献给全球的 freeCodeCamp 参与者。
+谨以此书献给 freecodecamp 全球社区成员。
 
-Thank you to all of you who have supported our charity and our mission over the past 8 years.
+感谢所有在过去 8 年中支持我们的慈善机构和使命的人们。
 
-It is through your volunteerism and through your philanthropy that we've been able to help so many people learn to code and get their first developer job.
+正是通过你们的志愿服务，通过你们的慈善事业，我们才能够帮助这么多人学习代码，获得他们的第一份开发者工作。
 
-The community has grown so much from the humble open source project I first deployed in 2014. I am now just a small part of this global community.
+从 2014 年我第一次部署的那个简陋的开源项目开始，这个社区已经发展得非常好。我现在只是这个全球社区的一个小部分。
 
-It is a privilege to still be here, working alongside you all. Together, we face the fundamental problems of our time. Access to information. Access to education. And access to the tools that are shaping the future.
+我很荣幸还能在这里，与你们大家一起工作。我们一起面对我们这个时代的基本问题。获取信息。获得教育的机会。以及获得塑造未来的工具的机会。
 
-These are still early days. I have no illusion that everyone will know how to code within my lifetime. But just like the Gutenberg Bible accelerated literacy in 1455, we can continue to accelerate technology literacy through free, open learning resources.
+这些仍然是早期的事情。我不幻想在我的有生之年每个人都能知道如何编码。但是，就像古腾堡圣经在 1455 年加速了扫盲一样，我们可以通过免费、开放的学习资源继续加速技术扫盲。
 
-Again, thank you all.
+再次感谢大家。
 
-And special thanks to Abbey Rennemeyer for her editorial feedback, and to Estefania Cassingena Navone for designing the book cover.
+并特别感谢 Abbey Rennemeyer 的编辑反馈，以及 Estefania Cassingena Navone 的图书封面设计。
+ 
+而现在，你能看到这本书。
 
-And now, the book.
+## Chapter 1: 如何培养你的技能
 
-## Chapter 1: How to Build Your Skills
+> "每个艺术家一开始都是业余爱好者。" ― Ralph Waldo Emerson
 
-> "Every artist was first an amateur." ― Ralph Waldo Emerson
+掌握如何编程是一条漫长的道路。
 
-The road to knowing how to code is a long one.
+对我来说，这是条崎岖的路。
 
-For me, it was an ambiguous one.
+但对你来说不必这样。
 
-But it doesn't have to be like that for you.
+在这个章节，我将分享如何丝滑地学习编程的一些策略。
 
-In this chapter, I'm going to share some strategies for learning to code as smoothly as possible.
+首先，请让我带你了解我在 2011 年是如何学习编程的。
 
-First, allow me to walk you through how I learned to code back in 2011.
+之后我会分享在这过程中我学到了什么。
 
-Then I'll share what I learned from this process.
+我会向你展示如何学习比我更有效。
 
-I'll show you how to learn much more efficiently than I did.
+### 故事时间：一个 30 多岁的老师是怎么教他自己编程的？
 
-### Story Time: How Did a Teacher in His 30s Teach Himself to Code?
+我曾是运营一间英文学校的老师。我们有大概 100 个从世界各地前往加州的成年学生。他们通过学习提高英语能力以进入研究生学校。
 
-I was a teacher running an English school. We had about 100 adult-aged students who had traveled to California from all around the world. They were learning advanced English so they could get into grad school.
+学校的大部分老师热爱教学。他们热衷于和学生在城市闲逛，以帮助他们提高口语能力。
 
-Most of our school's teachers loved teaching. They loved hanging out with students around town, and helping them improve their conversational English.
+但这些老师并不喜欢文书工作：出勤报告、成绩报告、移民文书。
 
-What these teachers didn't love was paperwork: Attendance reports. Grade reports. Immigration paperwork.
+我希望老师们能花更多的时间和学生一起度过。更少的时间被束缚在办公桌上做文书工作。
 
-I wanted our teachers to be able to spend more time with students. And less time chained to their desks doing paperwork.
+但我对计算机了解什么呢？
 
-But what did I know about computers?
+编程？难道不需要聪明才智就能会编程吗？我甚至不能配置一个 WiFi 路由器。并且我讨厌数学。
 
-Programming? Didn't you have to be smart to do that? I could barely configure a WiFi router. And I sucked at math.
+直到有一天，我决定把一切都抛到一边，然后想：“我要去试一试编程。试一试我能失去什么呢？”
 
-Well one day I just pushed all that aside and thought "You know what: I'm going to give it a try. What do I have to lose?"
+我开始在谷歌上搜索诸如“如何自动点击浏览网站”之类的问题。以及“如何将网站数据导入 Excel”。
 
-I started googling questions like "how to automatically click through websites." And "how to import data from websites into Excel."
+我当时没有意识到，我正在学习如何自动化工作流程。
 
-I didn't realize it at the time, but I was learning how to automate workflows.
+于是学习开始了。首先是 Excel 的宏。然后是一个叫 AutoHotKey 的工具，在那里你可以对你的鼠标进行编程，使其移动到屏幕的某些坐标上，点击，复制文本，然后移动到不同的坐标上并粘贴它。
 
-And the learning began. First with Excel macros. Then with a tool called AutoHotKey where you can program your mouse to move to certain coordinates of a screen, click around, copy text, then move to different coordinates and paste it.
+摸索了几周后，我想出了如何将一些任务自动化的方法。我可以打开一个 Excel 电子表格和一个网站，运行我的脚本，10 分钟后回来，电子表格将被完全填充。
 
-After a few weeks of grasping in the dark, I figured out how to automate a few tasks. I could open an Excel spreadsheet and a website, run my script, then come back 10 minutes later and the spreadsheet would be fully populated.
+这是一个业余爱好者做的事。开发人员可能称之为 "肮脏的黑客"。但它完成了工作。
 
-It was the work of an amateur. What developers might call a "dirty hack". But it got the job done.
+我利用我新发现的自动化技能，继续简化学校的工作。
 
-I used my newfound automation skills to continue streamlining the school.
+很快，老师们几乎不需要碰电脑。我只是用我最基本的技能，就完成了几个老师的工作。
 
-Soon teachers barely had to touch a computer. I was doing the work of several teachers, just with my rudimentary skills.
+这对学校产生了明显的影响。我们的很多时间都被电脑上机械的工作捆绑住了。而现在我们有了自由。
 
-This had a visible impact on the school. So much of our time had been tied up with rote work on the computer. And now we were free.
+老师们更高兴了。他们花了更多时间与学生相处。
 
-The teachers were happier. They spent more time with students.
+学生们也更高兴了。他们告诉他们在家乡的所有朋友，"你一定要来看看这所学校"。
 
-The students were happier. They told all their friends back in their home country "you've got to check out this school."
+很快，我们成为整个学校系统中最成功的学校之一。
 
-Soon we were one of the most successful schools in the entire school system.
+这让我更有底气。我记得我自己在想："也许我可以学习编码。"
 
-This further emboldened me. I remember thinking to myself: "Maybe I **can** learn to code."
+我在棋牌游戏之夜认识了一些软件工程师。他们有传统的教育背景，拥有加州理工学院、哈维穆德学院和其他著名计算机科学课程的学位。
 
-I knew some software engineers from my board game night. They had traditional backgrounds, with degrees from Cal Tech, Harvey Mudd, and other famous Computer Science programs.
+在当时，30 多岁的人学习编程的情况要少得多。
 
-At the time, it was far less common for people in their 30s to learn to code.
+我鼓起勇气与这些朋友中的一些人分享我的梦想。
 
-I worked up the courage to share my dreams with some of these friends.
+我想学习如何正确编程。我希望能够像他们那样以写代码为生。也许还能写出能为学校赋能的软件。
 
-I wanted to learn to how program properly. I wanted to be able to write code for a living like they did. And to maybe even write software that could power schools.
+我将与我的开发者朋友分享这些梦想。"我想做你做的事"。
 
-I would share these dreams up with my developer friends. "I want to do what you do."
+但他们会耸耸肩。然后他们会说一些类似的话：
 
-But they would sort of shrug. Then they'd say something like:
+"我的意思是，你可以试试。但你将不得不饮下整个知识的海洋。"。
 
-"I mean, you could try. But you're going to have to drink an entire ocean of knowledge."
+"这是个竞争相当激烈的领域。你怎么能和那些从小就开始编码的人混在一起？"
 
-And: "It's a pretty competitive field. How are you going to hang with people who grew up coding from an early age?"
+"你作为一名教师已经做得很好了。你为什么不坚持做你擅长的事情？"
 
-And: "You're already doing fine as a teacher. Why don't you just stick with what you're good at?"
+这让我几周里都无法正常工作。我会在晚上进行长时间的反思性散步。我会在星空下思索我的未来。这些人是对的吗？我是说--他们真的知道，对吗？
 
-And that would knock me off course for a few weeks. I would go on long, soul-searching walks at night. I would ponder my future under the stars. Were these people right? I mean – they would know, right?
+但每天早上我都会回到我的办公桌前。看着我的脚本运行。看着我的报告以超人的速度自行编译。看着我的电脑为我效劳。
 
-But every morning I'd be back at my desk. Watching my scripts run. Watching my reports compile themselves at superhuman speeds. Watching as my computer did my bidding.
+我确实想到了一个问题：也许这些朋友只是想把我从心痛中拯救出来。也许他们只是不知道有谁在 30 多岁时学会了编程。所以他们认为这是不可能的。
 
-A thought did occur to me: maybe these friends were just trying to save me from heartache. Maybe they just don't know anyone who learned to code in their 30s. So they don't think it's possible.
+这就像……多年来，医生认为一个人在 4 分钟内跑完一英里是不可能的。他们认为你的心脏会因为跑得太快而爆炸。
 
-It's like... for years doctors thought that it would be impossible for someone to run a mile in 4 minutes. They thought your heart would explode from running so fast.
+但后来有人成功做到了。并且他的心脏没有爆炸。
 
-But then somebody managed to do it. And his heart did not explode.
+Roger Bannister ——一个 25 岁的牛津大学学生--打破了这个心理障碍--其他许多人也都做到了。迄今为止，已有超过 1000 人跑出了 4 分钟以下的成绩。
 
-Once Roger Bannister – a 25-year old Oxford student – broke that psychological barrier – a ton of other people did it, too. To date, more than 1,000 people have run a sub-4 minute mile.
+![Roger-Bannister-1951_jpg__1269-1600_](https://www.freecodecamp.org/news/content/images/2023/01/Roger-Bannister-1951_jpg__1269-1600_.png)像冠军一样奔跑 (照片来源: 大英百科全书)
 
-![Roger-Bannister-1951_jpg__1269-1600_](https://www.freecodecamp.org/news/content/images/2023/01/Roger-Bannister-1951_jpg__1269-1600_.png)Roger Bannister running like a a champ. (Image: Britannica)
+而且，我也不是在做什么大胆的、史无前例的事情，比如在这里跑了 4 分钟的路程。多年来，很多著名的开发者都设法自学了编程。
 
-And it's not like I was doing something bold and unprecedented as running a 4 minute mile here. Plenty of famous developers have managed to teach themselves coding over the years.
+哎呀，Ada Lovelace 在 19 世纪 40 年代就自学了编程。而她甚至没有一台可用的计算机。她只是了解了她的朋友 Charles Babbage 的计算机在理论上是如何工作的。
 
-Heck, Ada Lovelace taught herself programming in the 1840s. And she didn't even have a working computer. She just had an understanding of how her friend Charles Babbage's computer would work in theory.
+她写了几个最早的计算机算法。她被公认是世界上第一个计算机程序员。没有人教她。因为没有人可以教她。无论她有什么自我怀疑，她显然克服了这种怀疑。
 
-She wrote several of the first computer algorithms. And she's widely regarded as the world's first computer programmer. Nobody taught her. Because there was nobody to teach her. Whatever self doubt she may have had, she clearly overcame it.
+我不是 Ada Lovelace。我只是一个拥有一台可用的电脑、良好的互联网连接，并且能够使用 Google 搜索数十亿个网页的老师。
 
-I was no Ada Lovelace. I was just some teacher who already had a working computer, a decent internet connection, and the ability to search through billions of webpages with Google.
+我掰开指关节，眯起眼睛。我要自学编程。
 
-I cracked my knuckles and narrowed my gaze. I was going to do this.
+### 陷入教程地狱
 
-### Stuck in Tutorial Hell
+> "如果你工作了 10 年，你是得到了 10 年的经验还是得到了 1 年 10 次重复的经验？你必须对你的活动进行反思，以获得真正的经验。如果你把学习作为一个持续的承诺，你会得到经验。如果你不这样做，你就不会，无论你有多少年的经验。" - Steve McConnell，软件工程师
 
-> "If you work for 10 years, do you get 10 years of experience or do you get 1 year of experience 10 times? You have to reflect on your activities to get true experience. If you make learning a continuous commitment, you’ll get experience. If you don’t, you won’t, no matter how many years you have under your belt." – Steve McConnell, Software Engineer
+在接下来的几个星期里，我花了很多时间在谷歌上搜索，并做一些在网上遇到的随机教程。
 
-I spent the next few weeks googling around, and doing random tutorials that I encountered online.
+哦，看，一个 Ruby 教程。
 
-Oh look, a Ruby tutorial.
+呃，哦，开始变得困难了。我得到了教程中没有提到的错误信息。嗯……这到底是怎么回事……
 
-Uh-oh, it's starting to get hard. I'm getting error messages not mentioned in the tutorial. Hm... what's going on here...
+哦，看，一个 Python 教程。
 
-Oh look, a Python tutorial.
+人类的心理是个有趣的东西。当事情开始变得困难的时候，我们会问：我这样做对吗？
 
-Human psychology is a funny thing. The moment something starts to get hard, we ask: am I doing this right?
+也许这个教程已经过时了。也许它的作者不知道他们在说什么。甚至还有人在使用这种编程语言吗？
 
-Maybe this tutorial is out of date. Maybe its author didn't know what they were talking about. Does anybody even still use this programming language?
+当你在编码过程中面对模棱两可的错误信息时，邻家的草分外青，这山望着那山高。
 
-When you're facing the ambiguous error messages hours into a coding session, the grass on the other side starts to look a lot greener.
+假装我已经取得了进展是很容易的。是时候去吃午饭了。
 
-It was easy to pretend I'd made progress. Time to go grab lunch.
+我在咖啡馆里遇到一个朋友。"你的编码工作进展如何？"他们会问。
 
-I'd see a friend at the café. "How's your coding going?" they'd ask.
+"很好。我今天已经编码了 4 个小时。"
 
-"It's going great. I already coded 4 hours today."
+"太棒了。有机会我很想看看你在做什么。"
 
-"Awesome. I'd love to see what you're building sometime."
+"当然，"我说，即使我知道我什么都没做。"很快你可以看到。"
 
-"Sure thing," I'd say, knowing that I'd built nothing. "Soon."
+也许我会去书店，买一本新的 JavaScript 书。
 
-Maybe I'd go to the book store and get a new JavaScript book.
+买书是世界上最好的感觉。因为这也有种你在购买时间来阅读它们的感觉。
 
-Buying books is the best feeling in the world. Because it also feels like you're buying the time to read them.
+而这正是我在学习代码的几周后的情况。
 
-And this is precisely where I found myself a few weeks into learning to code.
+我读了几本编程书籍的前 100 页，但没有完成任何一本。
 
-I had read the first 100 pages of several programming books, but finished none.
+我写了几本编程教程的前 100 行代码，但没有完成。
 
-I had written the first 100 lines of code from several programming tutorials, but finished none.
+我不知道，但我被困在了一个被开发者亲切地称为 "教程地狱 "的地方。
 
-I didn't know it, but I was trapped in place that developers lovingly call "tutorial hell."
+教程地狱是指你从一个教程跳到另一个教程，重新学习同样的基本原理。但从未真正超越基本原理。
 
-Tutorial hell is where you jump from one tutorial to the next, learning and then relearning the same basic things. But never really going beyond the fundamentals.
+因为超越基本原理——这需要一些真正的努力。
 
-Because going beyond the fundamentals – that requires some real work.
+###培养一个程序员需要一个村庄
 
-### It Takes a Village to Raise a Coder
+学习编程榨干了我所有的空闲时间。但我并没有取得什么进展。我现在可以在不看键盘的情况下输入`{`和`*`字符。但也就这样了。
 
-Learning to code was absorbing all of my free time. But I wasn't making much progress. I could now type the `{` and `*` characters without looking at the keyboard. But that was about it.
+我知道我需要帮助。也许是一些像 Yoda 一样的导师，他可以教我方法。是的，如果有这样的人存在，那肯定会让一切变得不同。
 
-I knew I needed help. Perhaps some Yoda-like mentor, who could teach me the ways. Yes – if such a person existed, surely that would make all the difference.
+我发现附近有一个叫做 "黑客空间 "的地方。当我第一次听到这个名字时，我有点忐忑不安。难道黑客不做非法的事情吗？我是一名英语教师，喜欢玩棋盘游戏。我并不是在找麻烦。
 
-I found out about a nearby place called a "hackerspace." When I first heard the name, I was a bit apprehensive. Don't hackers do illegal things? I was an English teacher who liked playing board games. I was not looking for trouble.
+好吧，我拨通了列出的号码，和一个叫 Steve 的人交谈。我紧张地问："你们不做违法的事，是吗？" Steve 笑了起来。
 
-Well I called the number listed and talked with a guy named Steve. I nervously asked: "You all don't do anything illegal, do you?" And Steve laughed.
+事实证明，"黑客 "这个词被他称为一个超负荷的术语。是的-——"黑客 "可以指恶意闯入一个软件系统。但 "黑客 "也可以指更平凡的事情：编写计算机代码。
 
-It turns out the word "hack" is what he called an overloaded term. Yes – "to hack" can mean to maliciously break into a software system. But "to hack" can also mean something more mundane: to write computer code.
+一些东西可以是 "黑客"，意味着它不是一个优雅的解决方案。然而，你可以有 "聪明的黑客"———一个巧妙的技巧，使你的代码更有效地工作。
 
-Something can be "hacky" meaning it's not an elegant solution. And yet you can have "a clever hack" – an ingenious trick to make your code work more efficiently.
+简而言之：不要害怕 "黑客 "这个词。
 
-In short: don't be scared of the term "hack."
+![1200x-1_jpg__1200-797_](https://www.freecodecamp.org/news/content/images/2023/01/1200x-1_jpg__1200-797_.png)Facebook 的企业园区在混凝土上用巨大的字母写着“hack”一词。 （图片来源：彭博社）
 
-![1200x-1_jpg__1200-797_](https://www.freecodecamp.org/news/content/images/2023/01/1200x-1_jpg__1200-797_.png)Facebook's corporate campus has the word "hack" written in giant letter on the concrete. (Image: Bloomberg)
+就我而言，我很少使用这个词，因为它太令人困惑了。而且我认为最近很多黑客空间已经意识到了这种模糊性。他们中的许多人现在称自己为 "创客空间"。
 
-I, for one, scarcely use the term because it's so confusing. And I think recently a lot of hackerspaces have picked up on the ambiguity. Many of them now call themselves "makerspaces" instead.
+因为这就是创客空间的全部内容--制造东西。
 
-Because that's what a hackerspace is all about – making things.
+Steve 邀请我在星期六下午参观黑客空间。他说该地区的几个开发人员会在那里。
 
-Steve invited me to visit the hackerspace on Saturday afternoon. He said several developers from the area would be there.
+当我第一次走进 Santa Barbara 黑客空间的大门时，我被震撼了。
 
-The first time I walked through the doors of the Santa Barbara Hackerspace, I was blown away.
+这个地方闻起来有一股电气的味道。临时搭建的桌子上摆放着电烙铁、LED 灯条、业余爱好者的 Arduino 电路板和成堆的 Roomba 真空机器人。
 
-The place smelled like an electric fire. Its makeshift tables were lined with soldering irons, strips of LED lights, hobbyist Arduino circuit boards, and piles of Roomba vacuum robots.
+与我通过电话的那个 Steve 也在那里，他向我问好。他戴着眼镜，头发向后梳理，留着山羊胡须。他总是面带微笑。当你问他问题时，他不会迅速回答，而是先点点头，思考几秒钟。
 
-The same Steve I'd spoken to on the phone was there, and he greeted me. He had glasses, slicked back hair, and a goatee beard. He was always smiling. And when you asked him a question, instead of responding quickly, he would nod and think for a few seconds first.
+Steve 是一个充满激情的程序员，曾在加州大学圣巴巴拉分校学习数学和哲学。他对这些学科仍然充满热情。但他真正的热情是 Python。
 
-Steve was a passionate programmer who had studied math and philosophy at the University of California – Santa Barbara. He was still passionate about those subjects. But his real passion was Python.
+Steve 打开了投影仪，做了一个非正式的 "闪电演讲"。他正在演示他写的一个应用程序，该程序可以识别视频中的二维码，并将其替换为图像。
 
-Steve turned on the projector and gave an informal "lightning talk." He was demoing an app he'd written that would recognize QR codes in a video and replace them with images.
+观众中有人在他们的笔记本电脑上调出了一个二维码，并把它放在摄像机前。然后， Steve 的应用程序将二维码替换成一张比萨饼的图片。
 
-Someone in the audience pulled up a QR code on their laptop and held it in front of the camera. Steve's app then replaced the QR code with a picture of a pizza.
+观众中有人喊道："你能让比萨饼旋转吗？"
 
-Somebody in the audience shouted, "Can you make the pizza spin?"
+Steve 在一个名为 Emacs 的代码编辑器中打开了他的代码，并开始实时地对其进行修改。他毫不费力地在他的代码编辑器、命令行和应用程序运行的浏览器之间进行切换，"热加载 "代码的更新。
 
-Steve opened up his code in a code editor called Emacs, and started making changes to it in real time. He effortlessly tabbed between his code editor, his command line, and the browser the app was running in, "hot loading" updates to the code.
+对我来说，这就是魔法。我无法相信 Steve 在几个小时内就完成了这个应用程序。而现在，他正在根据听众的要求，不断增加新的功能。
 
-For me, this was sorcery. I couldn't believe Steve had just busted out that app over the course of few hours. And now he was adding new features on the fly, as the audience requested them.
+我想："这家伙是个天才"。
 
-I thought: "This guy is a genius."
+那天晚上，活动结束后，我和他留了下来，我这样告诉他。
 
-And that evening, after the event ended, he and I stayed after and I told him so.
+我们一起吃了三明治。我对他说："我可以在我的整个职业生涯中编码，但不能像你一样好。如果 10 年后我的代码能达到你的一半，我就很高兴了。"
 
-We ate sandwiches together. And I said to him: "I could code for my entire career and not be as good as you. I would be thrilled if after 10 years I could code even half as well as you."
+但 Steve 反驳了我，他说："我没有什么特别的。不要限制自己。如果你坚持编码，你可以轻易地超过我。"
 
-But Steve pushed back. He said, "I'm nothing special. Don't limit yourself. If you stick with coding, you could easily surpass me."
+我丝毫不相信他对我说的那些话。但是，仅仅是他说这句话的事实就使我产生了蝴蝶效应。
 
-I didn't for a second believe the words he said to me. But just the fact that he said it gave me butterflies.
+他是一个相信我的开发者。他看到了我——一个奇怪的老师——一个 "脚本小子 "的定义——并认为我可以成功。
 
-Here he was: a developer who believed in me. He saw me – some random teacher – the very definition of a "script kiddie" – and thought I could make it.
+Steve 和我一直聊到深夜。他给我看了他那台价值 200 美元的上网本电脑，即使以 2011 年的标准来看，它的性能也是非常差的。
 
-Steve and I talked late into the night. He showed me his $200 netbook computer, which even by 2011 standards was woefully underpowered.
+"你不需要一个强大的电脑来构建软件，" Steve 告诉我。"今天的硬件是令人难以置信的强大。计算机之所以慢，只是因为它们运行的臃肿软件使它们变慢。买一台现成的笔记本电脑，清空硬盘，在上面安装 Linux，然后开始编码。"
 
-"You don't need a powerful computer to build software," Steve told me. "Today's hardware is incredibly powerful. Computers are only slow because the bloated software they run makes them slow. Get an off-the-shelf laptop, wipe the hard drive, install Linux on it, and start coding."
+我记下了他的笔记本电脑的型号，并在当晚回家后订购了完全相同的一台。
 
-I took note of the model of laptop he had and ordered the exact same one when I got home that night.
+在用 Stack Overflow 调试了我的新电脑几天后，我成功地安装了 Ubuntu。我开始学习如何使用 Emacs 代码编辑器。到了下一个星期六，我知道了一些命令，并很快就把它们展示了出来。
 
-After a few days of debugging my new computer with Stack Overflow, I successfully installed Ubuntu. I started learning how to use the Emacs code editor. By the following Saturday, I knew a few commands, and was quick to show them off.
+Steve 点头表示赞同。他说，"太棒了。但你在码什么？"
 
-Steve nodded in approval. He said, "Awesome. But what are you building?"
+我不明白他的意思。"我在学习如何使用 Emacs。来看看。我记住了……"
 
-I didn't understand what he meant. "I'm learning how to use Emacs. Check it out. I memorized..."
+但 Steve 看起来若有所思。"这些很酷。但你需要一个项目。总要有一个项目。然后学习你在完成该项目过程中需要学习的东西。"
 
-But Steve looked pensive. "That's cool and all. But you need a project. Always have a project. Then learn what you need to learn en route to finishing that project."
+我除了帮学校的老师写的几个脚本之外，我从来没有完成过任何东西。但我开始明白他所说的是什么意思。
 
-我除了帮助学校的老师写的几个脚本之外，我从来没有完成过任何东西。但我开始明白他所说的是什么意思。
+这一刻我恍然大悟。一直以来，我都被困在教程的地狱里，兜兜转转，什么也没完成。
 
-这一刻我恍然大悟了。一直以来，我都被困在教程的地狱里，兜兜转转，什么也没完成。
+Steve 说："我希望你用 HTML5 建立一个项目。下周六，我希望你在黑客空间（hackerspace）展示它。"
 
-史蒂夫说："我希望你用HTML5建立一个项目。下周六，我希望你在黑客空间（hackerspace）展示它。"
-
-听到他的话，我感到很羞愧。但我站直了身子，对他说： "这个计划听起来不错。我这就开始做。"
+听到他的话，我感到很羞愧。但我站直了身子，对他说："这个计划听起来不错。我这就开始做。"
 
 ### 除了你，没有人可以让你成为一个开发者
 
-> "我试着解放你的心灵，尼奥。 但我只能带你到门口，你必须自己走过去。" （莫斐斯，1999年电影《黑客帝国》） 
+> "我试着解放你的心灵，尼奥。 但我只能带你到门口，你必须自己走过去。" （莫斐斯，1999 年电影《黑客帝国》） 
 
-第二天早上，我在上班前起得特别早，在网上搜索 "HTML5教程 "之类的东西。在之前的教程地狱中，我已经了解了很多相关知识。我没有跳过，而是放慢脚步，准确地跟着教程走，输入每一条命令。
+第二天早上，我在上班前起得特别早，在网上搜索 "HTML5 教程 "之类的东西。在之前的教程地狱中，我已经了解了很多相关知识。我没有跳过，而是放慢脚步，准确地跟着教程走，输入每一条命令。
 
-通常情况下，一旦我完成一个教程，我就会去找另一个教程。但是，我却开始玩起了教程中的代码。我对自己想做的项目有了初步的想法，我打算制作一个纯HTML5的文档页面。
+通常情况下，一旦我完成一个教程，我就会去找另一个教程。但是，我却开始玩起了教程中的代码。我对自己想做的项目有了初步的想法，我打算制作一个纯 HTML5 的文档页面。
 
 \---
 
-如果你不知道什么是HTML5，让我快速地解释一下。它只是HTML的一个较新的版本，从20世纪90年代的第一个网页开始，它就已经存在了。
+如果你不知道什么是 HTML5，让我快速地解释一下。它只是 HTML 的一个较新的版本，从 20 世纪 90 年代的第一个网页开始，它就已经存在了。
 
-如果一个网站是一个身体，那么HTML就是骨头。其他一切都建立在这些骨骼之上。(你可以把JavaScript看作是肌肉，把CSS看作是皮肤）。
+如果一个网站是一个身体，那么 HTML 就是骨头。其他一切都建立在这些骨骼之上。(你可以把 JavaScript 看作是肌肉，把 CSS 看作是皮肤）。
 
 让我们重新回到故事上来。
 
 \---
 
-我已经知道在HTML中，你可以通过使用ID属性链接到同一个网页的不同部分。所以我想：如果我沿着左手边放一个目录会怎么样？点击左边的不同选项（item），右边的页面就会相应地滚动并显示这些项目。
+我已经知道在 HTML 中，你可以通过使用 ID 属性链接到同一个网页的不同部分。所以我想：如果我沿着左手边放一个目录会怎么样？点击左边的不同选项（item），右边的页面就会相应地滚动并显示这些项目。
 
 半个小时内，我就编出了一个粗略的原型。
 
@@ -487,21 +485,21 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 
 我飞快地跑回家，打开我的笔记本电脑，花了整整一个晚上来编码。
 
-我把官方和使用创作共用许可证 （Creative Commons license）的HTML文档直接复制到我的页面，把它 "硬编码 "到HTML中。
+我把官方和使用创作共用许可证 （Creative Commons license）的 HTML 文档直接复制到我的页面，把它 "硬编码 "到 HTML 中。
 
-然后，我花了大约一个小时的时间在CSS上，让所有东西看起来都是正确的，并使用绝对定位来保持侧边栏的位置。
+然后，我花了大约一个小时的时间在 CSS 上，让所有东西看起来都是正确的，并使用绝对定位来保持侧边栏的位置。
 
-我尽可能多地使用了HTML5的新 "语义 "标签。
+我尽可能多地使用了 HTML5 的新 "语义 "标签。
 
-轰--项目完成了。 
+轰——项目完成了。 
 
 一股成就感涌上心头。我慢跑到附近的一个足球场，绕着球场跑了几圈，庆祝一下。我成功了，我完成了一个项目。 
 
 我当时就决定：从现在开始，我所做的一切都将成为一个项目。我将努力使它成为一个完成品。
 
-第二天晚上，我走到讲台上，插上我的笔记本电脑，展示了我的HTML5网页。我回答了在场的开发者们关于HTML5的问题。
+第二天晚上，我走到讲台上，插上我的笔记本电脑，展示了我的 HTML5 网页。我回答了在场的开发者们关于 HTML5 的问题。
 
-有时我会弄错一些东西，这时我会听到听众说，"这听起来不对--让我查查文档"。
+有时我会弄错一些东西，这时我会听到听众说，"这听起来不对——让我查查文档"。
 
 人们并不害怕纠正我。但他们都很有礼貌，而且乐于提供支持。我甚至不觉得他们在纠正我，感觉他们比较像是在纠正公共记录，以免有人带着错误的信息离开。
 
@@ -542,15 +540,13 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 
 你可能在想：那服务器呢？数据库呢？网络呢？
 
-归根结底，这些都是由一层层的软件控制的，而这些软件都是由代码所组成。从最上层
+归根结底，这些都是由一层层的软件控制的，而这些软件都是由代码所组成。从最上层一路往下都是代码所构成的，直到抵达最底层的物理硬件，也就是在电路板上移动的电子。
 
-一路往下都是代码所构成的，直到抵达最底层的物理硬件，也就是在电路板上移动的电子。
+在计算机发展最初的几十年里，开发人员编写的代码是 "接近金属 "的，意思是他们通常是直接在硬件上操作，将比特从 0 翻转到 1，再翻转回来。
 
-在计算机发展最初的几十年里，开发人员编写的代码是 "接近金属 "的，意思是他们通常是直接在硬件上操作，将比特从0翻转到1，再翻转回来。
+但是，当代的软件开发涉及许多 "抽象层"——一个程序运行在另外的程序之上，仅仅几行 JavaScript 代码就可以完成一些非常强大的事情。
 
-但是，当代的软件开发涉及许多 "抽象层"——一个程序运行在另外的程序之上，仅仅几行JavaScript代码就可以完成一些非常强大的事情。
-
-在20世纪60年代，一个 "bug" （虫子，也有程序错误的意思）可能是一只昆虫在一个房间大小的计算机中爬来爬去，并在其中一个电路中被烧毁。
+在 20 世纪 60 年代，一个 "bug" （虫子，也有程序错误的意思）可能是一只昆虫在一个房间大小的计算机中爬来爬去，并在其中一个电路中被烧毁。
 
 ![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)
 
@@ -563,9 +559,9 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 不夸张地说，几十年后，编码将变得如此简单和普遍，以至于大多数年轻人都会知道如何编码。
 
 
-## 为什么即使在2023年，学习编码仍然很难？
+## 为什么即使在 2023 年，学习编码仍然很难？
 
- 即使在2023年，学习编码也是如此困难，有三大原因。
+ 即使在 2023 年，学习编码也是如此困难，有三大原因。
 
 1. 工具仍然很原始
 
@@ -582,13 +578,13 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 
  来自《星际迷航：下一代》着魔似的巴克利（Barclay）在全息甲板（Holodeck）上编程
 
->   "计算机，开始新的程序，创建如下：工作站的椅子，现在创建一个标准的字母数字控制台，定位在左手；现在为右手创建一个标志性的显示控制台。将这两个控制台与企业主计算机核心相连，利用神经扫描界面。" ——巴克利，来自《星际迷航：下一代》第四季第19集："第N度"
+> "计算机，开始新的程序，创建如下：工作站的椅子，现在创建一个标准的字母数字控制台，定位在左手；现在为右手创建一个标志性的显示控制台。将这两个控制台与企业主计算机核心相连，利用神经扫描界面。" ——巴克利，来自《星际迷航：下一代》第四季第 19 集："第 N 度"
 
 上面我拿了我最喜欢的科幻电视剧《星际迷航：下一代》中的一段作为例子，告诉你这就是人们在未来可能的编程方式。
 
 《星际迷航》中的每个角色都会编码。医生、保安人员、飞行员，甚至小韦斯利-克鲁舍（Wesley Crusher，由儿童演员威尔-惠顿扮演）也能让飞船上的计算机听从他的命令。
 
-当然，每个人都会编码的原因之一是他们生活在一个后稀缺的24世纪社会，可以获得免费的高质量教育。
+当然，每个人都会编码的原因之一是他们生活在一个后稀缺的 24 世纪社会，可以获得免费的高质量教育。
 
 另一个原因是，在未来，编码会容易得多。你只需准确地告诉计算机要做什么，然后，如果你足够精确，计算机就会执行。 
 
@@ -597,17 +593,17 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 我们已经朝着这个目标取得了重大进展。想一想以前我们的祖母，她们在房间大小的大型计算机和成堆的打孔卡（punch cards）之间奔波。 
 
 ![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)
-20世纪50年代使用打卡机的计算机（图片：NASA）
+20 世纪 50 年代使用打卡机的计算机（图片：NASA）
 
 过去，即使是一个简单的应用程序的编程也需要严谨的指令。
 
 这里有两个 "凯撒密码 "（Cesar Cypher）的例子，这是经典的计算机科学家庭作业项目。
 
-这也被称为 "ROT-13"，因为你将字母ROT了13个位置。例如，A变成N（A后13个字母），B变成O（B后13个字母）。 
+这也被称为 "ROT-13"，因为你将字母 ROT 了 13 个位置。例如，A 变成 N（A 后 13 个字母），B 变成 O（B 后 13 个字母）。 
 
 我将向你展示这个程序的两个例子，这两个例子都来自创作共用许可证的罗塞塔代码（Rosetta Code）项目。 
 
-首先，这是x86汇编中的程序：
+首先，这是 x86 汇编中的程序：
 
 ```x86
 format 	ELF 	executable 3
@@ -666,7 +662,7 @@ exit: 	mov     eax,1		; syscall exit
 	int     80h
 ```
 
-下面是Python中的同一程序:
+下面是 Python 中的同一程序:
 
 ```python
 import string
@@ -694,7 +690,7 @@ if __name__ == "__main__":
 
  而在未来，编码将像对你的宇宙飞船说的那样简单。
 
-"计算机，开始新程序。把我说的每一个字母，替换成英语字母表中13个位置之后出现的字母，然后将结果读回给我。这个词就是 "香蕉"。
+"计算机，开始新程序。把我说的每一个字母，替换成英语字母表中 13 个位置之后出现的字母，然后将结果读回给我。这个词就是 "香蕉"。
 
 然后你的电脑会说： "Onanan"。
 
@@ -2523,7 +2519,7 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 - 你必须准备简历。同时，你将在整个求职过程中不断地摸索着做决定。
 - 你必须在网上四处寻找职位空缺，研究雇主，并且评估他们是否适合你。
 - 大多数职位的申请都需要填表，你将不得不一遍又一遍地重新填写简历，希望表单不会因服务器错误或 JavaScript 验证错误而崩溃。
-- 提交这些工作申请后，你必须等待雇主处理它们。有一些雇主并不会人工审阅所有申请，因为他们收到的申请实在太多了。（比如谷歌每天能收到 9000 份申请。）雇主会使用软件来筛选。内部招聘人员 [平均只花6秒查看每份简历](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/)。通常你的申请甚至永远不会被人工审阅。
+- 提交这些工作申请后，你必须等待雇主处理它们。有一些雇主并不会人工审阅所有申请，因为他们收到的申请实在太多了。（比如谷歌每天能收到 9000 份申请。）雇主会使用软件来筛选。内部招聘人员 [平均只花 6 秒查看每份简历](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/)。通常你的申请甚至永远不会被人工审阅。
 - 你可能永远不会收到公司的任何回复。他们几乎没有动机告诉你他们为什么拒绝你（他们不希望你提起歧视诉讼）。如果你幸运的话，你会收到一封“我们已经决定选择其他候选人”的电子邮件。
 - 所有你花在申请这些工作上的时间——可能是每周几个小时——是消耗精力的，当然，也是无偿的。
 
@@ -2531,17 +2527,17 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 但如果你坚持下去，你最终可以拿到一些 offer。毕竟好运也是连着来的。
 
-以下是一位 freeCodeCamp 贡献者在12周内的求职数据：
+以下是一位 freeCodeCamp 贡献者在 12 周内的求职数据：
 
 ![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)
 
-在投递了291份申请之后，他最终收到了8个 offer。
+在投递了 291 份申请之后，他最终收到了 8 个 offer。
 
 随着 offer 的陆续到来，起薪也越来越高。当然，请注意，这是在世界上消费水平最高的城市之一——旧金山的工作。
 
 ![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)
 
-到第12周时，在他收到的 offer 里，起薪几乎是第2周的两倍。
+到第 12 周时，在他收到的 offer 里，起薪几乎是第 2 周的两倍。
 
 这位开发者得到面试的几率相当高。而且他的谈判能力也很强。如果你感兴趣，可以[在这里](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/)了解更多关于他求职过程的内容。
 
@@ -2619,7 +2615,7 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 1. 他们将根据你的起薪获得报酬，因此他们倾向于帮助你协商到尽可能高的起薪。
 2. 他们成功输送的候选人越多——输送的速度越快——他们赚的钱就越多。所以他们会希望帮助你尽快找到工作，这样他们就可以转向其他求职者。
-3. 因为他们只有在你成为一名正式员工（并且至少待90天）后才会得到报酬，所以他们会努力确保你能胜任这份工作，并且适合公司的文化。
+3. 因为他们只有在你成为一名正式员工（并且至少待 90 天）后才会得到报酬，所以他们会努力确保你能胜任这份工作，并且适合公司的文化。
 
 话说回来，如果猎头要求你为任何事情付钱给他们，那就是危险信号。
 
@@ -2665,9 +2661,9 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 我会计算出你日常工作的时薪，然后加倍。这听起来可能是很多钱，但自由职业比常规工作要难得多。你必须学习很多东西。
 
-或者，你可以以单个项目为单位计费。 “我将以1000美元的价格为你部署和配置此系统。”
+或者，你可以以单个项目为单位计费。 “我将以 1000 美元的价格为你部署和配置此系统。”
 
-请务必指定你愿意维护项目的时间范围。你不希望人们在3年后打电话给你，希望你回来修复一个没有人维护的系统。
+请务必指定你愿意维护项目的时间范围。你不希望人们在 3 年后打电话给你，希望你回来修复一个没有人维护的系统。
 
 ### 我如何确保自由客户会付钱给我？
 
@@ -2699,13 +2695,13 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 如果你有能力以自由职业维生，你可能只想继续做下去。慢慢地，你甚至可以建立自己的软件开发机构，并聘请其他开发人员来帮助你。
 
-话说回来，如果你渴望拥有稳定的开发工作，那么你可能很走运。如果你坚持足够长的时间，自由客户可能会给你全职工作。在某些时候，客户以较低的时薪给你提供一份全职工作可能更经济实惠。你得到一份稳定的每周工作40小时的工作，而他们全职获得你的技能。
+话说回来，如果你渴望拥有稳定的开发工作，那么你可能很走运。如果你坚持足够长的时间，自由客户可能会给你全职工作。在某些时候，客户以较低的时薪给你提供一份全职工作可能更经济实惠。你得到一份稳定的每周工作 40 小时的工作，而他们全职获得你的技能。
 
 当你找到工作时，你也可以保留一些自由客户。这是很好的收入补贴。但请记住，正如我们将在下一章中了解到的那样，你的第一份开发工作可能会需要你非常尽职尽责。至少在一开始的时候是这样。
 
 成为职业开发者的第一年会有多疯狂呢？让我们来谈谈这个。
 
-## 第5章：如何在你的第一份开发工作中取得成功
+## 第 5 章：如何在你的第一份开发工作中取得成功
 
 > "待在港口的船很安全。但这不是造船的目的。" —— 格蕾丝·霍珀，数学家，美国海军少将，计算机科学先驱
 
@@ -2723,11 +2719,11 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 你将学习如何突破影响我们所有人的心理障碍，例如冒名顶替综合症。你将了解到自己的极限，以及如何稍微地超越它们。
 
-### 讲故事时间：一名30多岁的教师如何在他的第一份开发工作中取得成功？
+### 讲故事时间：一名 30 多岁的教师如何在他的第一份开发工作中取得成功？
 
 *上一次故事时间回顾：昆西在当地一家科技初创公司找到了他的第一份开发工作。他将成为维护一个庞大、复杂的代码库的十几名开发人员中的一员。他不知道自己在做什么……*
 
-我凌晨4点醒来，再也睡不着了。我努力尝试睡着。但是我的胸口像在燃烧一样。焦虑和恐慌包围了我。
+我凌晨 4 点醒来，再也睡不着了。我努力尝试睡着。但是我的胸口像在燃烧一样。焦虑和恐慌包围了我。
 
 我在教育领域工作了十年。先当家教。然后当老师。接着担任校长。
 
@@ -2739,7 +2735,7 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 当我回到家时，我妻子已经出门上班了。她告诉我不要担心。她说，“即使你因为不知道自己在做什么而被解雇，我依然爱你。”
 
-当我到达我的新办公室时，那里没有人。作为一名教师，我习惯于7点30分准时到校。但我很快意识到，大多数软件开发人员并没有那么早开始工作。
+当我到达我的新办公室时，那里没有人。作为一名教师，我习惯于 7 点 30 分准时到校。但我很快意识到，大多数软件开发人员并没有那么早开始工作。
 
 所以我盘腿坐在入口走廊上，按照上网本上的教程写代码。
 
@@ -2761,9 +2757,9 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 “好极了，”我的老板说。“那么先给你配一台电脑。”
 
-“哦，我已经有了一个，”我敲了敲我200美元的上网本说。“这个宝贝正在运行 Linux Mint，我已经自定义了我的 .emacs 文件，以便能够……”
+“哦，我已经有了一个，”我敲了敲我 200 美元的上网本说。“这个宝贝正在运行 Linux Mint，我已经自定义了我的 .emacs 文件，以便能够……”
 
-“我们是一家 Mac 商店，”他说着走向储藏室。他搜寻了一会儿，然后出现了。“这是一个已经用了3年的模型，但它应该还够用。我们把它重置到出厂设置。”
+“我们是一家 Mac 商店，”他说着走向储藏室。他搜寻了一会儿，然后出现了。“这是一个已经用了 3 年的模型，但它应该还够用。我们把它重置到出厂设置。”
 
 我开始说我已经熟悉我的电脑配置，而且我用它能更快地工作，但他并不接受。
 
@@ -2773,19 +2769,19 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 其他开发人员陆续到了公司，而我花了接下来的几个小时来配置我的新电脑。
 
-接近上午10点时，我们开始了团队“站会”。我们站在白板前围成一圈，轮流汇报当天的工作。
+接近上午 10 点时，我们开始了团队“站会”。我们站在白板前围成一圈，轮流汇报当天的工作。
 
 每个人都提供简洁、准确的进展更新。
 
-轮到我了，我开始自我介绍。当时我已经非常紧张了，结果这时候迈克走了进来，他是超级马拉松运动员，也主持举办圣塔芭芭拉的初创企业活动。他正在吃一些小胡萝卜，那天早上他已经跑了大约30英里。
+轮到我了，我开始自我介绍。当时我已经非常紧张了，结果这时候迈克走了进来，他是超级马拉松运动员，也主持举办圣塔芭芭拉的初创企业活动。他正在吃一些小胡萝卜，那天早上他已经跑了大约 30 英里。
 
-在我结束后，迈克说话了，欢迎了我并且说他在一些活动中见过我。然后，他用15秒的时间讲述了有关他正在写一些功能的工作。
+在我结束后，迈克说话了，欢迎了我并且说他在一些活动中见过我。然后，他用 15 秒的时间讲述了有关他正在写一些功能的工作。
 
-整个会议只进行了大约10分钟，大家就各自回到了自己的办公桌。
+整个会议只进行了大约 10 分钟，大家就各自回到了自己的办公桌。
 
-我最终让公司的代码库在我的新笔记本电脑上运行。这是一个已经发展了5年多的 Ruby on Rails 应用程序。我运行了“rake stats”命令，发现它有数百万行代码。我不寒而栗。我怎么可能能理解这些东西呢？
+我最终让公司的代码库在我的新笔记本电脑上运行。这是一个已经发展了 5 年多的 Ruby on Rails 应用程序。我运行了“rake stats”命令，发现它有数百万行代码。我不寒而栗。我怎么可能能理解这些东西呢？
 
-我的隔壁桌，一个看起来粗鲁的、留着胡子的开发人员说，“嗯，其中大部分只是包。你实际要处理的代码库可能只有100000行。别担心。你会掌握它的窍门的。”
+我的隔壁桌，一个看起来粗鲁的、留着胡子的开发人员说，“嗯，其中大部分只是包。你实际要处理的代码库可能只有 100000 行。别担心。你会掌握它的窍门的。”
 
 我咽了咽口水，心想：“这还不到一百万呢，还行。”
 

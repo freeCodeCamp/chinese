@@ -2793,280 +2793,280 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 在接下来的几天里，我向尼克提问了每一个我遇到的内部系统问题。
 
-Eventually Nick started setting his chat status to "code mode" and putting on his noise cancelling headphones. He swiveled his back toward me a bit, with the body language of: "leave me alone so I can get some of my own work done, too."
+终于，Nick 开始将他的聊天状态设置为“代码模式”，并戴上了降噪耳机。他转身背对我，用肢体语言说：“让我一个人待一会，我也要完成自己的工作。”
 
-This was one of my earliest lessons about team dynamics. You don't want to wear out your welcome with too many questions. You need to get better at learning things for yourself.
+这是我关于团队动力学到的第一个教训。如果不想因为提问太多而不受欢迎，就要更好地为自己学习。
 
-But this was a massive codebase, and it was largely undocumented, aside from inline comments and a pretty sparse team wiki.
+但这个代码库很庞大，除了内部注释和相当空旷的团队 wiki 外基本什么都没有。
 
-Since it was a close-source codebase that only the devs around me were working in, I couldn't use Stack Overflow to figure out where particular logic was located. I just had to feel around in the dark.
+这个代码库是封闭的，只有我身边的人在进行开发，也没办用 Stack Overflow 搜索，我只能在黑暗中摸索。
 
-I started rotating through which neighbor I'd bug about a particular question. But it felt like I was quickly ringing out any enthusiasm they may have had left for me as a teammate.
+我开始纠结该骚扰哪个邻桌同事提问，但又感觉这样是在消耗队友的热情。
 
-I over-corrected. I became shy about asking even simple questions. I made a rule for myself that I would try for 2 hours to get unstuck before I would ask for help.
+我开始过分担忧，连最简单的问题也羞于提问。我定了一个规矩：先自己摸索两小时再去向别人求助。
 
-At some point, after thrashing for several hours, I did ask for help. When my manager discovered I'd been stuck all morning, he asked, "Why didn't you ask for help earlier?"
+折腾了几个小时之后，我终于求助了。主管发现我整个上午都没有进展，问我：“为什么不早点开口呢？”
 
-Another struggle was with understanding the codebase itself – the "monolith" and its many microservices.
+我遇到的另一个难题是理解代码库，包括整体和微服务部分。
 
-The codebase had thousands unit tests and integration tests. Whenever you wrote a new code contribution, you were also supposed to write tests. These tests helped ensure that your code did what it was supposed to – and didn't break any existing functionality.
+整个代码库有几千个单元测试和集成测试。贡献新的代码时也要编写测试，用来确认新代码实现了预期功能，且不会破坏现有的功能。
 
-I would frequently "break the build" by committing code that I thought was sufficiently tested – only to have my code break some other part of the app I hadn't thought about. This frustrated the entire team, who were unable to merge their own code until the root problem had been fixed.
+往往我提交了自认为充分测试的代码，却影响了其他我没有考虑到的部分，破坏了程序。其他人在根本问题解决之前无法合并代码，整个团队都很失望。
 
-The build would break several times a week. And I was not the only person who made these sorts of mistakes. But it **felt** like I was.
+程序一周会出几次问题，我不是唯一一个犯这种错误的人，但我**感觉**都是我的错。
 
-There were days where I felt like I was not cut out to be a developer. I'd say to myself: "Who am I kidding? I just wake up one day and decide I'm going to be a developer?"
+有段时间我觉得自己不是做开发的料，我自己想着，“开什么玩笑呢？怎么突然就决定来做开发了呢？”
 
-I kept hearing echoes of all those things my developer friends had said to me a year earlier, when I was first starting my coding journey.
+我不断回想起一年前我刚刚开始学习编程的时候，其他开发朋友们对我说过的话。
 
-"How are you going to hang with people who grew up coding from an early age?"
+“你怎么和那些从小学编程的人共事？”
 
-"Why don't you just stick with what you're good at?"
+“为什么不去做你擅长的事呢？”
 
-"You're going to have to drink an entire ocean of knowledge."
+“你怕不是得痛饮知识的海洋。”
 
-I would take progressively longer breaks to get away from my computer. The office had a kitchen filled with snacks. I would find more excuses to get up to grab a snack. Anything to delay the crushing sense that I had no idea what I was doing.
+我离开电脑的时间越来越长。办公室的厨房里摆满了零食，我不停找借口起来吃零食，不管怎样，只要能摆脱那种不知道自己在做什么的感觉就行。
 
-The first few months were rough. During morning standup meetings, it felt like everyone was moving fast. Closing open bugs and shipping features. It felt like I had nothing to say. I was still working on the same feature as the day before.
+最开始几个月很难。每日立会的时候，我感觉每个人都在飞快前进，修补 bug、发布新功能，只有我没什么可说的，我还在做前一天的那个功能。 
 
-Every day when I woke up and got ready for work, I felt dread. "This is going to be the day they fire me."
+每天醒来去上班时我都感到恐惧，“今天就是他们炒我鱿鱼的日子。”
 
-But then I'd go to work and everyone would be pretty kind, pretty patient. I would ask for help if I was really stuck. I would make **some** progress, and maybe fix a bug or two.
+但是工作中每个人都很友善，很有耐心。遇到真的无法解决的问题我会去求助，渐渐地，我有了**一点**进展，还修复了一两个 bug。
 
-I was getting faster at navigating the codebase. I was getting faster at reading stack traces when my code errored out. I was shipping features at a faster clip than before.
+我浏览代码库的速度越来越快，代码出错时，我读取堆栈轨迹的速度也越来越快，也能更快地发布新功能了。
 
-Whenever my boss called me into his office, I would think to myself: "Oh no, I was right. I'm going to get fired today." But he would just assign me some more bugs to fix, or features to develop. Phew.
+每次老板叫我去办公室时，我都在想：“完了，这次没跑了，我今天就要被炒鱿鱼了。”但他只是给我更多bug来修，更多要开发的功能。谢天谢地。
 
-It was the most surreal thing – me terrified out of my mind that I'm about to get the axe, and him having no idea anything's wrong.
+最离谱的就在这了：我怕被解雇怕得要死，他却完全不知道怎么回事。
 
-Of course, I had heard the term "imposter syndrome" before. But I didn't realize that was what I was experiencing. Surely I was just suffering from "sucks at coding" syndrome, right?
+当然，我也听说过“冒名顶替者综合症”，但我没有意识到这件事会发生在我身上，我这肯定是得了“编程很烂”综合症，对吧？
 
-One day I was sitting next to Nick, and he was looking pretty frazzled. I offered to grab him a soda from the kitchen.
+有一天我坐在 Nick 旁边，看他好像很累，我去厨房给他拿了瓶汽水。
 
-When I got back, he cracked the can open, took a sip, and leaned back in his chair, gazing at his monitor full of code. "This bug, man. Three weeks trying to fix this one bug. At this point I'm debugging it in my sleep."
+我回来后，他打开拉环喝了一口，靠在椅子上，盯着满是代码的显示器。“这个bug啊，哥们我花了三周时间来修，做梦都在调试。”
 
-"Three weeks trying to fix the same bug?" I asked. I had never heard of such a thing.
+“三周时间修一个 bug ？”我问道。我从未听说过这样的事。
 
-"Some bugs are tougher to crack than others. This is one of those really devious ones."
+“有些bug更难修，这个就坏得很。”
 
-It felt like someone had slapped me across the face with a salmon. I had viewed my job as chunks of work. As though it should take half a day to fix a bug, and if it took longer than that, I was doing something wrong.
+这句话给了我当头一棒。我总是把我的任务按份处理，比如修一个 bug 要半天时间，超过了半天就肯定是我做的不对。
 
-But here Nick was – with his computer science degree from University of California and his years of experience working on this same codebase – and he was stumped for three weeks on a single bug.
+但是，有着加利福尼亚大学的计算机科学学位、多年同一代码库工作经验的尼克却在一个bug上困住了三个星期。
 
-Maybe I had been too hard on myself. Maybe some of these bugs I'd been fixing were not necessarily "half day bugs", but were "two or three day bugs." Yes, I was inexperienced and slow. But even so, maybe I was holding myself to unrealistic standards.
+也许是我对自己太苛刻了，可能我修的一些bug不是“半天的bug”，而是“两三天的 bug ”。是，我缺乏经验，工作也慢。但就算这样，我是不是给自己设立了不切实际的标准呢？
 
-After all, when we budgeted time for features, sometimes we would have "5-day features" or even "2-week features." We didn't do this for bugs, but they probably varied similarly.
+在开发新功能时，有的功能开发要5天，甚至是两周时间而修bug的时候没有这样的时间规划，但其实bug也会遇到同样的问题。
 
-I went home and read more about Imposter Syndrome. And what I read explained away a lot of my anxiety.
+回家后，我深入了解了下“冒名顶替综合症”，也缓解了不少焦虑。
 
-Over the coming months, I kept building out features for the codebase. I kept collaborating with my team. It was still hard, brain-busting work. But it was starting to get a little bit easier.
+在接下来的几个月里，我还在为代码库构建新功能，与队友合作。虽然工作还是很难很费脑，但开始没有那么困难了。
 
-I bonded with my teammates each day at lunch over board games. One week, we had a company-wide chess tournament.
+每天午餐时，我都会和队友一起下棋。有一周有一个全公司的国际象棋锦标赛。
 
-A couple rounds in, I played against the CEO.
+几轮后，轮到我和 CEO 对弈。
 
-The CEO has an unorthodox chess play style. He used a silly opening that few serious chess players would opt for. And I was able to take any early lead in the game.
+这位 CEO 的下棋风格很不一般，他开局开得很不好，少有棋手会做出这样的选择，最初我取得了领先。
 
-But over the next few moves, he was able to slowly grind back control over the game. He eventually gained the upper hand and beat me.
+但接下来的几步，他慢慢地夺回了比赛的控制权，最终占了上风，打败了我。
 
-When I asked him how he found time to keep his chess skills sharp while running a company, he said, "Oh, I don't. I only play once or twice a year."
+我问他在经营公司的同时，怎么还有时间保持棋艺精湛，他说：“没有，我一年只下一两次。”
 
-He paused for a moment, his hand frozen in front of him, as if preparing to launch into a lecture. He said: "My uncle was a competitive chess player. And he just gave me a single piece of advice to follow: **every time your opponent moves, slow down and try to understand the game from their perspective – why did they make that move?**"
+他停顿了一会儿，手停着不动，好像准备开始演讲。他说：“我叔叔是一名优秀的棋手，他给了我一个简单的建议：**“轮到你的对手时，放慢速度，试着从他们的角度来理解比赛——他们为什么要这么做？”**
 
-He bowed then excused himself to run to a meeting.
+他鞠了一躬，然后告辞去开会了。
 
-I've thought a lot about what he said over the years. And I've realized this advice doesn't just apply to chess. You can apply it to any adversarial situation.
+这些年，我不停在想他说的话，我想他的建议不仅仅适用于国际象棋，也适用于任何对局。
 
-### If You Keep Having to Do a Task, You Should Probably Automate it
+### 重复任务就该自动化
 
-Another lesson I learned about software development: since I was the most junior person on the team, I often got assigned the "grunt work" that nobody else wanted to do. One of these tasks was to be the "build nanny."
+关于软件开发我还学到了一个经验。由于我是团队中资历最浅的人，就经常被分配到没有人愿意做的苦差事，其中一项任务就是“代码保姆”。
 
-Whenever someone broke the build, I would pull down the latest version of our main branch and use `git bisect` to try and identify the commit that broke it.
+每当有人破坏了代码，我就会 pull 主分支的最新版本，并使用 `git bisect`来找到破坏代码的提交。
 
-I'd open up that commit, run the tests, and figure out what went wrong. Then I'd send a message to the person who broke the build, telling them what they needed to fix.
+打开提交，运行测试，找出出错的地方，向破坏 build 的人发送消息，告知要修复的地方。
 
-I got really fast at doing this. In a day full of confusing bug reports and ambiguous feature requests, I looked forward to the build breaking. It would give me a chance to feel useful real quick.
+这套流程我做的飞快。在充满迷惑的 bug 报告和含糊不清的功能请求的一天里，我期待着 build 出错，这样只需要花上很短的时间，我就能感受到自己的价值。
 
-It wasn't long before someone on the team said, "With how often the build breaks, we should just automate this."
+没过多久团队中有人说：“build 出错的频率太高，应该自动化一下。”
 
-I didn't say anything, but I felt defensive. This was a bad idea. How could a script do as good a job at finding the guilty commit as I – a flesh and blood developer – could?
+我什么也没说，但产生了戒心。这可不是什么好主意，一个脚本怎么能像我这个有血有肉的开发人员一样找到有问题的提交呢?
 
-It took a few days. But sure enough, one of my teammates whipped up a script. And I didn't have to be the build nanny anymore.
+但又过了几天，果不其然，队友随手写了一个脚本，我再也不用做代码保姆了。
 
-It felt strange to see a message that the build failed, and then a moment later see a message saying which commit broke the build and who needed to go fix it.
+收到 build 出错的消息，没过多久，又收到是哪个 commit 破坏了 build ，需要谁来修复，总感觉怪怪的。
 
-I felt indignant. I didn't say anything, but in my mind I was thinking: "That's supposed to be my work. That script took my job."
+我感到气愤，什么也没说，但心里想：“这是我的工作，脚本抢了我的活。”
 
-But of course, I now look back at my reaction and laugh. I imagine myself, now in my 40s, still dropping everything several times each week so I could be the build nanny.
+当然，现在每每回想起自己的反应我都感到好笑。我想象着自己已经40多岁了，每周还要放下几次别的事情，来做代码保姆。
 
-Because in practice, if a task can be automated – if you can break it down into discrete steps that a computer can reliably do for you – then you should probably automate it.
+工作中，如果一项任务可以自动化，可以分解成计算机可以可靠完成的小步骤，那么就应该自动化。
 
-There's plenty of more interesting work you can do with your time.
+你的时间应该留给更有趣的工作。
 
-![is_it_worth_the_time_2x-1](https://www.freecodecamp.org/news/content/images/2023/01/is_it_worth_the_time_2x-1.png)This chart from XKCD shows can help you figure out whether a task is worth the time investment to automate.
+![is_it_worth_the_time_2x-1](https://www.freecodecamp.org/news/content/images/2023/01/is_it_worth_the_time_2x-1.png)这张XKCD的图表，帮你弄清一项任务是否值得投入时间来实现自动化。
 
-### Lessons from the Village Elders
+### 多听老人言
 
-I learned a lot from other people on the team. I learned product design concepts from Mike. He took me running on the beach, and taught me how to run on my forefoot, where the balls of my feet hit the ground before my heels. This is a bit easier on your joints.
+我向团队里每个人都学到了很多。我从 Mike 那里学到了产品设计概念。他带我在沙滩上跑步，教我如何用前脚掌跑步，前脚掌先于脚跟着地，这样对关节更为友好。
 
-And I learned about agile software engineering concepts from Nick. He helped me pick out some good software development books from the library. And he even invited me over for a house-warming party, and I got to meet his kids.
+从Nick那里我学到了快速软件工程（agile software engineering）的概念，他帮我从图书馆挑选了软件开发书籍，甚至还邀请我去他家参加乔迁派对，那次我见到了他的几个孩子。
 
-After about a year of working for the company, I felt it was time to try to strike out on my own, and build some projects around online learning. I sat down with the CTO to break the news to him that I was leaving.
+在这家公司工作了大概一年时间，我觉得到了创业的时候了，我想要做与在线学习相关的内容。我找到CTO坐下谈话，把要离开的消息告诉了他。
 
-I said, "I'm grateful that you all hired me, even though I was clearly the weakest developer at the company."
+我说：“很感激大家雇用了我，显然我是全公司最弱的开发者。”
 
-He let out a laugh and said, "Sure, when you started, you were the worst developer on the team. I'd say you're still the worst developer on the team."
+他大笑着说：“当然，最开始你是团队中最烂的开发者，我得说，现在你还是团队中最烂的开发者。”
 
-I sat there smiling awkwardly, blinking at him, not sure whether he was just angry I was leaving.
+我坐在那里尴尬地笑着，朝他眨了眨眼睛，不知道他是不是因为我要离开而生气。
 
-And then he said, "But that's smart. You're smart. Because **you always want to be the worst musician in the band**. You always want to be surrounded by people who are better than you. That's how you grow."
+然后他说，“但这很聪明，你是个聪明人。你**总是想成为乐队里最差的乐手**，希望身边都是比你优秀的人，这样你才能成长。”
 
-Two weeks later, I checked in my code changes for the day and handed off my open tickets. I reset my Mac to factory settings and handed it to my manager.
+两周后，我检查了当天的代码更改，上交了我的开启支持问题，把Mac电脑重置为出厂设置，交给了主管。
 
-I shook hands with my teammates and headed out the door into the California evening air.
+我和队友们握了握手，走出门，走入加州的傍晚。
 
-I hit the ground running, lining up freelance contracts to keep the lights on. And I scouted out an apartment in Oakland, just across the bridge from the beating heart of tech in South of Market San Francisco.
+我全力以赴，争取签约自由职业维持收入。我在奥克兰物色了一套公寓，就在旧金山南市场科技中心的桥对面。
 
-I was now a professional developer with a year of experience already under my belt.
+我已经是一个有一年经验的专业开发人员了。
 
-I was ready to dream new dreams and make new moves.
+我已经准备好追寻新的梦想，采取新的行动。
 
-I was off to the land of startups.
+我走向了创业之路。
 
-### Lessons From my First Year as a Developer
+### 开发者第一年的经验教训
 
-I did a lot of things right during my first year as a professional developer. I give myself a B-.
+作为专业开发者的第一年，我做了很多正确的选择，我给自己打个B-。
 
-But if I had the chance to do it all again, there are some things I'd do differently.
+但如果有机会重新来过，有些选择会不同。
 
-Here are some tips. May these maximize your learning and minimize your heartache.
+接下来是我的建议，希望能够尽量提高你的学习能力，让你没那么痛心。
 
-#### Leave Your Ego at the Door
+#### 丢下自负
 
-Many people entering the software development field will start at the very bottom. One title you might have is "Junior Developer."
+许多进入软件开发领域的人都是从最底层开始的，你可能会获得“初级开发者”的头衔。
 
-It can feel a bit awkward to be middle aged and have the word "junior" in your title. But with some patience and some hard work, you can move past it.
+人到中年，头衔里还有个“初级”总觉得有点尴尬。但只要耐心、努力，就能克服这一点。
 
-One problem I faced every day was – I had 10 years of professional experience. I was not an entry level employee. Yes, I was new to development, but I was quite experienced at teaching and even managing people. (I'd managed 30 employees at my most recent teaching job.)
+每天我都面临的问题是：我有十年的专业经验了。我不是个入门员工。是，我是个开发新手，但我在教学与管理方面都经验丰富。(上一份教学工作中，我管理了30名员工。)
 
-And yet – in spite of all my past work experience – I was still an entry level developer. I was still a novice. A neophyte. A newbie.
+但尽管过去的工作经验丰富，我仍然是个入门级的开发者，我还是个新手。
 
-As much as I wanted to scream "I used to be the boss – I don't need you to babysit me" – the truth was I did need babysitters.
+我也很想大喊“我当过老板，不需要你来照顾”，但事实是我确实需要别人来手把手带领。
 
-What if I accidentally broke production? What if I introduced a security vulnerability into the app? What if I wiped the entire database? Or encrypted something important and lost the key?
+要是不小心影响了生产怎么办？在应用中引入了安全漏洞怎么办？清空了整个数据库怎么办？加密了重要的东西却把密码忘了怎么办？
 
-These sorts of disasters happen all the time. And it's not just new developers who make these mistakes.
+这些灾难经常发生，并不只有新开发者才会犯这些错误。
 
-The reality is as a new developer, you are like a bull in a China shop, trying to walk carefully, but smashing everything in your path.
+现实情况是，新开发者就是个闯祸鬼，很努力很小心翼翼，却搞坏了所有东西。
 
-Don't let yourself get impatient with your teammates. Resist the temptation to talk about your advanced degrees, awards your work has won, or that time the mayor gave you the key to the city. (OK, maybe that last one never happened to me.)
+不要对队友失去耐心，别总想提你的高等学位、获得的奖项、或者市长给你的城市钥匙。(好吧，也许最后一个问题从来就不存在。)
 
-Not just because it will make you hard to work with. Because it will distract you from the task at hand.
+这不仅仅会让您很难相处，也会分散你对手头工作的注意力。
 
-For the first few months of my developer career, I used my past accomplishments as a sort of pacifier. "Yeah I suck at coding, but I'm phenomenal at teaching English grammar. Did I mention I used to run a school?"
+在做开发者的最初几个月里，我把过去的成就作为一种安慰。“是，我编程很烂，但我教英语语法还不错，我跟你讲过我以前开过一所学校吗?”
 
-When your fingers are on the keyboard, and your eyes are on the code editor, you have to let that past self go. You can revel in yesterday's accomplishment tonight, after today's work is done.
+手指放在键盘上，眼睛盯着代码编辑器，就必须抛弃过去的自己。只有今天的工作完成之后，才可以陶醉于今天的成就。
 
-But for now, you need to accept all the emotions that come with being a beginner again. You need to focus on the task at hand and get the job done.
+但首先，你要接受再次成为初学者所带来的所有情绪，专注于手头的任务，完成任务。
 
-### It's Probably Just the Imposter Syndrome Talking
+### 可能只是“冒名顶替者综合症”
 
-Almost everyone I know has experienced Imposter Syndrome. That feeling that you do not belong. That feeling that at any moment your teammates are going to see how terrible your code is and expose you as not a "real developer."
+几乎我认识的每个人都经历过“冒名顶替者综合症”。那种你不属于这里的感觉，感觉队友随时会发现你的代码有多糟糕，暴露你不是“真正的开发人员”。
 
-To some extent, the feeling does not go away. It's always there in the back of your mind, ready to rear its head when you try to do something new.
+在某种程度上，这种感觉并没有不会消失，它总是在脑海中，在尝试做新的事情时随时蠢蠢欲动。
 
-"Could you help me get past this error message?" "Um... I'm not sure if I'm the best person to ask."
+“能帮我处理这个错误信息吗？” “嗯……找我可能不太合适吧。”
 
-"Could you pair program with me on implementing this feature?" "Um... I guess if you can't find someone more qualified."
+“能和我一起编程实现这个功能吗?”“嗯……是不是找别人更好啊。”
 
-"Could you give a talk at our upcoming conference?" "Um... me?"
+“能在接下来的会议上做个演讲吗?”“嗯……你确定是我吗?”
 
-I've met senior engineers who still suffer from occasional imposter syndrome, more than a decade into their career.
+我见过一些高级工程师进入职业生涯十多年后，仍不时患上“冒名顶替者综合症”。
 
-When you feel inadequate or unprepared, it may just be imposter syndrome.
+当你觉得自己能力不足或毫无准备时，这可能只是一种“冒名顶替者综合症”。
 
-Sure – if you handed me a scalpel and said, "help me perform heart surgery" I would feel like an imposter. To some extent, feeling out of your depth is totally reasonable if you are indeed out of your depth.
+当然，如果你递给我一把手术刀，说“帮我做心脏手术”，我会觉得自己是个骗子。在某种程度上，如果真的做不到，感觉力不从心是完全合理的。
 
-The problem is that if you've been practicing software development, you may be able to do something but still inexplicably suffer from anxiety.
+问题是，如果你一直在做软件开发，一些事情你明明做得到，却仍然莫名其妙地焦虑。
 
-I am not a doctor. But my instinct is that – for most people – imposter syndrome will gradually diminish with time, as you get more practice and build more confidence.
+我不是医生，但直觉上认为对大多数人来说，“冒名顶替者综合症”会随着时间的推移逐渐消失，练习得越多，也就更有信心。
 
-But it can randomly pop up. I'm not afraid to admit that I sometimes feel pangs of imposter syndrome when doing a new task, or one I haven't done in a while.
+但有时，这种感觉还是会出现。我也承认，在做一项新任务或一段时间没有做的任务时，我有时会感到“冒名顶替者综合症”。
 
-The key is to just accept it: "It's probably just the imposter syndrome talking."
+关键是要接受它，要记住，可能只是“冒名顶替者综合症”。
 
-And to keep going.
+继续前进吧。
 
-### Find Your Tribe. But Don't Fall for Tribalism
+### 找到团体，但不要陷入团体
 
-When you get your first developer job, you'll work alongside other developers. Yipee – you found your tribe.
+找到第一份开发者工作后，你将与其他开发者一起工作，你找到了一个团体。
 
-You'll spend a lot of time with them, and you all may start to feel like a tight unit.
+你和他们有很多共事的时间，感觉成为了一个紧密的单位。
 
-But don't ignore the non-developer people around you.
+但请不要忽视周围的非开发人员。
 
-In my story above, I talked about Mike, the Product Manager who also ran startup events. He was "non-technical". His knowledge of coding was limited at best. But I'd venture to say I learned as much from him as anyone else at the company.
+前文中我提到了产品经理 Mike，他也负责创业活动。他“不懂技术”，在编码方面的知识有限，但我敢说我从他身上学到的东西和其他人一样多。
 
-You may work with other people from other departments – designers, product managers, project managers, IT people, QA people, marketers, even finance and accounting folks. You can learn a lot from these people, too.
+你可能会和其他部门的人一起工作——设计师、产品经理、项目经理、IT人员、QA人员、营销人员，甚至是财务和会计人员，从这些人身上也可以学到很多东西。
 
-Yes, you should focus on building strong connective tissue between you and the other devs on the team. But stay curious. Hang out with other people in the lunch room or at company events. You never know who's going to be the next person to help you build your skills, your network, or your reputation.
+确实，你应该与团队其他开发者之间建立牢固的联系。但请保持好奇，在餐厅或公司活动中与不同的人一起活动，你永远不知道谁会是下一个帮你学习技能、建立人脉或声誉的人。
 
-### Don't Get Too Comfortable and Specialize too Early
+### 不要太舒适，也不要太早专攻
 
-I often give this advice to folks who are first starting their coding journey: "learn general coding skills (JavaScript, SQL, Linux, and so on) and then specialize on the job."
+我经常给第一次学习代码的人这样建议：“从一般的编码技能（JavaScript、SQL、Linux等等）开始学起，然后专门从事这项工作。”
 
-The idea is, once you understand how the most common tools work, you can learn those tools' less common equivalents.
+我的想法是一旦学会了最常用的工具，就可以学习那些不太常用的工具。
 
-For example, once you've learned PostgreSQL, you can easily learn MySQL. Once you've learned Node.js, you can easily learn Ruby on Rails or Java Spring Boot.
+比如说，学会了 PostgreSQL，很容易就能学会 MySQL。学会了 Node.js，很容易就能学会 uby on Rails 或 Java Spring Boot。
 
-But some people specialize too early at work. Their boss might ask them to "own" a certain API or feature. And if they do a good job with that, their boss may keep giving them similar projects.
+但有些人在工作中太早专精了，老板可能会要求他们“专管”某个API或特性。如果在这方面做得好，老板可能就会继续给类似的项目。
 
-You are only managing yourself, but your boss is managing many people. They may be too busy to develop a nuanced understanding of your abilities and interests. They may come to see you as "the XYZ person" and just give you tasks related to that.
+你只负责管理自己，而老板在管理很多人，无法细致地了解你能力和兴趣，可能会把你看成“某专业人”，只给你安排相关的任务。
 
-But you know what you're good at, and what you're interested in. You can try and volunteer for projects outside of your comfort zone. If you can get your boss to assign these to you, you'll be able to continue to expand your skills, and potentially work with new teams.
+但你知道自己擅长什么，对什么感兴趣，可以尝试自愿走出舒适区。如果能让老板给你分配舒适区之外的任务，就能继续扩展技能，并可能与新的团队合作。
 
-Remember: your boss may be responsible for your performance at your job, but you are responsible for your performance across your career.
+记住：老板要为你工作上的表现负责，而你要为自己的整个职业生涯负责。
 
-Take on projects that both fulfill your obligation to your employer, and also position you well for your long-term career goals.
+接受那些既能履行对雇主的义务，又能为自己的长期职业目标做好准备的项目。
 
-## Epilogue: You Can Do This
+## 尾记：你能够做到
 
-If there's one message I want to leave you with here, it is this: **you can do this.**
+在这里我只想留下一句话，那就是：**你能够做到**
 
-You can learn these concepts.
+你能够学会这些概念。
 
-You can learn these tools.
+你能够学会这些工具。
 
-You can become a developer.
+你能够成为一名开发者。
 
-Then, the moment someone hands you money for you to help them code something, you will graduate to being a professional developer.
+接下来，在有人愿意花钱让你编写代码的时候，你就会成为一名专业的开发者。
 
-Learning to code and getting a first developer job is a daunting process. But do not be daunted.
+学习编程，找到第一份开发工作，这个过程令人生畏，但请不要气馁。
 
-If you stick with it, you will eventually succeed. It is just a matter of practice.
+坚持下去总会成功，一切都在于练习。
 
-Build your projects. Show them to your friends. Build projects for your friends.
+创建一个项目，给朋友展示自己的项目，为朋友创建项目。
 
-Build your network. Help the people you meet along the way. What goes around comes around. You'll get what's coming to you.
+建立人际网络，帮助你遇到的人。一报还一报，你总会得到回报。
 
-It is not too late. Life is long.
+现在还不算太晚，人生漫漫。
 
-You will look back on this moment years from now and be glad you made a move.
+多年以后，当你回顾这一刻的时候，你会为做出的改变而欣慰。
 
-Plan for it to take a long time. Plan for uncertainty.
+做好长期计划，计划好不确定性。
 
-But above all, keep coming back to the keyboard. Keep making it out to events. Keep sharing your wins with friends.
+但最重要的是，不要停下代码的编写。继续参加活动，继续与朋友分享你的成功。
 
-As Lao Tsu, the Old Master, once said:
+正如老子所说：
 
-> "A journey of a thousand miles begins with a single step."
+> “千里之行，始于足下。”
 
-By finishing this book, you've already taken a step. Heck, you may have already taken many steps toward your goals.
+读完这本书，你就已经迈出了一步，说不定已经朝着目标走了许多步。
 
-Momentum is everything. So keep up that forward momentum you've already built up over these past few hours with this book.
+一鼓作气，继续保持阅读这本书的势头。
 
-Start coding your next project today.
+现在就开始编写下一个项目。
 
-And always remember:
+永远记住：
 
-You can do this.
+你能够做到。

@@ -1,6 +1,6 @@
 > -  原文地址：[How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/learn-to-code-book/)
 > -  原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> -  译者：casey cui
+> -  译者：casey cui Celqaz
 > -  校对者：
 
 [如何在 2023 年学习编程并入行程序员 [完结]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
@@ -52,7 +52,6 @@
 来，请看目录：
 
 ## 目录
-
 1. [前言：本书适合的人群](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
 2. [概论](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
 3. [第一章：如何打造自己的技术栈](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
@@ -1158,37 +1157,37 @@ Python 是用于科学计算（数据科学和机器学习）的强大语言。
 
 ![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)通过Indeed获得的职位搜索截图。 我输入了"javascript"，地区是美国，搜索结果为68838个工作。
 
-The other skills you'll want to focus on are **HTML** and **CSS**. If a webpage were a body, HTML would be the bones, and CSS would be the skin. (JavaScript would be the muscles, making it possible for the website to move around and be interactive.)
+其他需要你专注的技能是 **HTML** 和 **CSS**。如果网页是躯体，那么 HTML 就是骨架，而 CSS 则是皮肤。（ Javascript 将会是肌肉——使得网页的运转及交互成为可能。）
 
-You can learn some HTML and CSS in a single afternoon. Like most of the tools I mention here, they are easy to learn, but difficult to master.
+你可以在一个下午就学些 HTML 和 CSS。但就像本书提到的其他工具一样，它们入门容易精通难。
 
-You'll also want to learn how to use **Linux**. Linux powers a vast majority of the world's servers, and you will spend much of your career running commands in the Linux command line.
+对 **Linux** 的学习也不应错过。Linux 驱动着这个世界大多数的服务器，而且在你在职业生涯中，也会在 Linux 命令行中度过很多时光。
 
-If you have a Mac, MacOS has a terminal that accepts almost all the same commands as Linux. (MacOS and Linux have a common ancestor in Unix.)
+如果你有一台 Mac 的话, MacOS 提供的终端工具，可以接受几乎所有与 Linux 相同的命令。（ MacOS 和 Linux 有一个共同的祖先，即 Unix ）。
 
-But if you're on a Windows PC, you'll want to install WSL, which stands for Windows Subsystem for Linux. You will then be able to run Linux commands on your PC. And if you're feeling particularly adventurous, you can even dual boot both the Windows and Linux operating systems on the same computer.
+但是如果你的电脑是 Windows 系统，你需要安装 WSL（Windows Subsystem for Linux）。安装后你就可以在电脑上运行 Linux 命令。如果你想更进一步，你甚至可以在同一台电脑上同时安装 Windows 和 Linux 两套操作系统。
 
-If you're going to install Linux on a computer, I recommend starting with Ubuntu. It is the most widely used (and widely documented) Linux distribution. So it should be the most forgiving.
+如果想在电脑上安装 Linux，我推荐在最开始选择 Ubuntu ——一个最被广泛使用（并且文档完备）的 Linux 发行版。因此它应该是对新手最为友好的。
 
-Make no mistake – Linux is quite a bit harder to use than Windows and MacOS. But what you get in return for your efforts is an extremely fast, secure, and highly customizable operating system.
+不要误会， Linux 比 Windows 和 MacOS 都更难以使用一些。但是你的努力将换得一个极其迅速、安全且高度可定制的操作系统。
 
-Also, you will never have to pay for an operating system license again. Unless you want to. Red Hat is a billion dollar company even though its software is open source, because companies pay for their help servicing and supporting Linux servers.
+而且，你再也不用为一个操作系统的许可而付费了。除非你想这么做。尽管 Red Hat 的软件都是开源的，但它仍是一家价值 10 亿美元的公司，这都源于其他企业愿意付费获得它的帮助及对 Linux 服务器的支持。
 
-You'll also want to learn **Git**. This Version Control System is how teams of developers coordinate their changes to a codebase.
+你还会想学习 **Git**。开发团队会使用这个版本控制系统进行代码更新上的协作。
 
-You may have heard of GitHub. It's a website that makes it easier for developers to collaborate on open source projects. And it further extends some of the features of Git. You'll learn more about GitHub in the How to Build Your Reputation chapter later.
+你可能已经听说过 GitHub。GitHub 是个让开发者更容易进行开源项目协作的网站。它拓展了 Git 的一些特性。你将会在本书“如何建立你的声誉”一章中增进对 GitHub 的了解。
 
-You'll want to learn **SQL** and how relational databases work. These are the workhorses of the information economy.
+还有 **SQL** 以及关系型数据库如何运作。这些是信息经济中的主力军。
 
-You'll also hear a lot about NoSQL databases (Non-relational databases such as graph databases, document databases, and key-value stores.) You can learn more about these later. But focus on SQL first.
+你可能还听说过 NoSQL 数据库（非关系型数据库，如图形数据库，文档数据库和键/值数据库。）你会在今后学习到更多。但最初请专注于 SQL。
 
-Finally, you'll want to learn how **web servers** work. You'll want to start with Node.js and Express.js.
+最后，你还会希望了解**网路服务器**如何运作。Node.js 和 Express.js 会是一个好的起点。
 
-When you hear the term "full stack development" it refers to tying together the front end (HTML, CSS, JavaScript) with the back end (Linux, SQL databases, and Node + Express).
+当你听到“全栈开发”这个词的时候，它代表联结前端（HTML、CSS 和 JavaScript）与后端（Linux、SQL 数据库和 Node + Express）。
 
-There are lots of other tools you'll want to learn, like React, NGINX, Docker, and testing libraries. You can pick these up as you go.
+还有很多你希望学习的工具，例如 React、 NGINX、 Doker 和测试库。你可以在学习途中随心选择。
 
-But the key skills you should spend 90% of your pre-job learning time on are:
+但你应该将 90% 的职前学习时间，用在以下的关键技能上：
 
 1. HTML
 2. CSS
@@ -1199,191 +1198,191 @@ But the key skills you should spend 90% of your pre-job learning time on are:
 7. Node.js
 8. Express.js
 
-If you learn these tools, you can build most major web and mobile apps. And you will be qualified for most entry-level developer jobs. (Of course, many job descriptions will include other tools, but we'll discuss these later in the book.)
+学会了这些工具，你将有能力构建大多数主流的网页和手机应用。而且你也达到了大多数入门级开发工作的门槛。（当然，许多职位的描述中还会包括其他工具，但我们将在本书的后续部分进行探讨。）
 
-So you may be thinking: great. How do I learn these?
+现在你可能在想：真不错，但我要如何学习这些呢？
 
-### Where do I learn how to code?
+### 我在哪里可以学习编程？
 
-Funny you should ask. There's a full curriculum designed by experienced software engineers and teachers. It's designed with busy adults in mind. And it's completely free and self-paced.
+好问题。这里有一个由经验丰富的软件工程师和教师设计的完整课程，它的设计考虑到了成年人的繁忙，内容完全免费并且可以自由掌控学习进度。
 
-That's right. I'm talking about [freeCodeCamp's core curriculum](https://www.freecodecamp.org/learn). It will help you learn:
+是的，我说的就是 [freeCodeCamp 核心课程](https://www.freecodecamp.org/learn)。它能帮助你学习：
 
-- Front End Development
-- Back End Development
-- Engineering Mathematics
-- and Scientific Computing (with Python for Data Science and Machine Learning)
+- 前端开发
+- 后端开发
+- 工程数学
+- 科学计算（使用 Python 探索数据科学和机器学习）
 
-To date, thousands of people have gone through this core curriculum and gotten a developer job. They didn't need to quit their day job, take out loans, or really risk anything other than some of their nights and weekends.
+迄今为止，已有数千人完成了这一核心课程并获得了一份开发者工作。他们不需辞去日常的工作、贷款或冒任何风险，只需利用上他们的晚上和周末。
 
-In practice, freeCodeCamp has become the default path for most people who are learning to code on their own.
+实际上， freeCodeCamp 已经成为大多数人自学编程的默认路径。
 
-If nothing else, the freeCodeCamp core curriculum can be your "home base" for learning, and you can branch out from there. You can learn the core skills that most jobs require, and also dabble in technologies you're interested in.
+没有其他问题的话，你可以在 freeCodeCamp 核心课程中落地生根，并从这里开枝散叶。你可以学习大多数工作都需要的核心技能，也可以涉猎你感兴趣的技术。
 
-There are decades worth of books and courses to learn from. Some are available at your public library, or through monthly subscription services. (And you may be able to access some of these subscription services for free through your library as well.)
+还有数十年的书籍和课程可以学习。有些可以在公共图书馆中找到，或通过每月订阅获取。（你或许也可以通过图书馆免费获得其中的一些订阅服务）。
 
-Also, freeCodeCamp now has nearly 1,000 free full-length courses on everything from AWS certification prep to mobile app development to Kali Linux.
+此外， freeCodeCamp 目前拥有近 1000 门免费的完整课程，内容从 AWS 认证准备，到移动应用开发，再到 Kali Linux。
 
-There has never been an easier time to teach yourself programming.
+自学编程从未如此简单。
 
-### Building Your Skills is a Life-Long Endeavor
+### 打磨你的技能是项终身事业
 
-We've talked about why self-teaching is probably the best way to go, and how to go about it.
+我们已经探讨了为什么自学编程可能是最好的方式，以及如何去做。
 
-We've talked about the alternatives to self-teaching, such as getting a bachelor's degree in Computer Science, or getting a Master's degree.
+我们也聊过了自学的替代方案，例如获得计算机科学的学士或硕士学位。
 
-And we've talked about which specific tools you should focus on learning first.
+我们还讨论了你应该先重点专注于哪些具体的工具。
 
-Now, let's shift gears and talk about how to build the second leg of your stool: your network.
+现在，让我们换换思路，关注下如何打造另一驱动：你的人际关系。
 
-## Chapter 2: How to Build Your Network
+##  第2章：如何打造你的人际关系网络
 
-> "If you want to go fast, go alone. If you want to go far, go together." – African Proverb
+> "独行者速，众行者远。" – 非洲谚语
 
-"Networking." You may wince at the sound of that word.
+人际关系网络这个词，你可能会感到畏缩。
 
-Networking may bring to mind awkward job fairs in stuffy suits, desperately pushing your résumé into the hands of anyone who will accept it.
+人际关系网络可能会让人联想到尴尬的招聘会：身着闷热的西装，拼命把你的简历送到任何愿意接受它的人手中。
 
-Networking may bring to mind alcohol-drenched watch parties – where you pretend to be interested in a sport you don't even follow.
+人际关系网络可能还会让人想到充斥着酒精的观看聚会，而你在要那里假装对一项从未关注过的运动充满兴趣。
 
-Networking may bring to mind wishing "happy birthday" to people you barely know on LinkedIn, or liking their status updates hoping they'll notice you.
+人际关系网络可能还会让人想到在领英上向一个几乎不认识的人发送”生日快乐“，或者给他们的状态点赞，以希望他们能注意到你。
 
-But networking does not have to be that way.
+但是人际关系网络不需要总是这样。
 
-In this chapter, I'll tell you everything I've learned about meeting people. I'll show you how to earn their trust and be top of their mind when they're looking for help.
+在本章，我会分享自己在结识人们上学到的一切。我会想你展示如何获得他们的信任，并在他们寻求帮助时，成为第一人选。
 
-Because at the end of the day, that's what it's all about. Helping people solve their problems. Being of use to people.
+因为说到底，这就是人际关系网络的全部内容。帮助人们解决问题。做一个有益于他人的人。
 
-I'll show you how to build a robust personal network that will support you for decades to come.
+我会向你展示如何建造一个强大的、可以在未来数十年内为你提供支持的人际关系网络。
 
-### Story Time: How did a Teacher in his 30s Build a Network in Tech?
+### 故事时间：一位老师如何在30岁时，在科技圈建立人际关系网络
 
-*Last time on Story Time: Quincy learned some coding by reading books, watching free online courses, and hanging out with developers at the local Hackerspace. He had just finished building his first project and given his first tech talk...*
+*前情回顾： Quincy 通过阅读、观看免费在线课程和与开发者在当地的黑客空间共度时光，学习了一些编程知识。他刚刚完成了他的第一个项目，并作了首次技术演讲。*
 
-OK – so I now had some rudimentary coding skills. I could now code my way out of the proverbial paper bag.
+有了基础的编程技能，我对编程已初窥门径。
 
-What was next? After all, I was a total tech outsider.
+接下来要做什么呢？毕竟，我是个彻底的科技圈圈外人士。
 
-Well, even though I was new to tech, I wasn't new to working. I'd put food on the table for nearly a decade by working at schools and teaching English.
+虽然我是科技圈的新人，但却久经职场。近十年来，我通过学校工作和教英语谋生。
 
-As a teacher, I got paid to sling knowledge. And as a developer, I'd get paid to sling code.
+作为一名老师，我靠传授知识获取报酬。而作为开发者，我也可以靠写代码获得收入。
 
-I already knew one very important truth about the nature of work: it's who you know.
+我已经知道了一个关于工作本质的重要真理：你认识谁决定一切。
 
-I knew the power of networks. I knew that the path to opportunity goes right through the gatekeepers.
+我深知人际关系网络的能量。我了解机遇之路上总有个守门人。
 
-All that stood between me and a lucrative developer job was a hiring manager who could say: "Yes. This Quincy guy seems like someone worthy of joining our team."
+在我和一份赚钱的开发者工作中，只隔着一个愿意说“对，这个叫 Quincy 的的人，似乎值得加入我们的团队”的招聘经理。
 
-Of course, being a tech outsider, I didn't know the culture.
+当然，作为一个科技圈门外汉，我并不了解他们的文化。
 
-Academic culture is much more formal.
+学院派的文化更加得正式。
 
-You wear a suit.
+你穿着正装。
 
-You use fancy academic terminology to demonstrate you're part of the "in group."
+用新奇的学院派术语来表明自己是这个群体的一员。
 
-You find ways to work into every conversation that you went to X university, or that you TA'd under Dr. Y, or that you got published in The Journal of Z.
+你想方设法在每次谈话中提及你去了 X 大学，或者你在 Y 教授手下做助教，抑或你在期刊 Z 上发布了文章。
 
-Career progressions are different. Conferences are different. Power structures are different.
+职业发展是不同的。会议是不同的。权力结构是不同的。
 
-And I didn't immediately appreciate this fact.
+而我并没有一开始就立即接受这个事实。
 
-The first few tech events I went to, I wore a suit.
+在最开始的几场科技活动中，我身着西装参加。
 
-I kept neatly-folded copies of my résumé in my pocket at all times.
+我在口袋中一直放着折叠整齐的简历副本。
 
-I even carried business cards. I had ordered sheets of anodized aluminum, and used a laser cutter to etch in my name, email address, and even a quote from legendary educator John Dewey:
+我甚至带了名片。我订购了阳极氧化铝片，用激光刻上我的名字、邮箱、甚至包括传奇教育家约翰·杜威的一句话： 
 
-> "Anyone who has begun to think places some portion of the world in jeopardy." – John Dewey
+> "任何开始思考的人，都将世界的某一部分置于危险中。" —— 约翰·杜威
 
-It's still my favorite quote to this day.
+这至今仍然是我最喜欢的一句话。
 
-But talk about heavy-handed.
+但说回惨淡的现实。
 
-"Hi, I'm Quincy. Here's my red aluminum business card. Sorry in advance – it might set off the metal detector on your flight home."
+“Hi,我是 Quincy。这是我的红色铝制名片。先说声抱歉，它在你回家的航班上，可能会触发金属探测仪。”
 
-I was trying too hard. And it was probably painfully apparent to everyone I talked to.
+我当时有些用力过猛。而且我和每个人谈话的时候，都可能会痛苦地发现这一点。
 
-I went on Meetup.com and RSVP'd for every developer event I could find. Santa Barbara is a small town, but it's near Los Angeles. So I made the drive for events there, too.
+我在 Meetup.com 上，报名了每一个我能找到的开发者活动。圣巴巴拉是一个小地方，但是靠近洛杉矶。所以我也开车参加洛杉矶的活动。
 
-I quickly wised up, and traded my suit for jeans and a hoody. And I noticed that no one else gave out business cards. So I stopped carrying them.
+我很快学聪明了，将我的西装换成了牛仔裤和卫衣。我还注意到了没有人会送出名片。所以我也不再携带名片。
 
-I took cues from the devs I met at the hackerspace: Be passionate, but understated. Keep some of your enthusiasm in reserve.
+从在黑客空间中遇到的开发者的那里，我得到了提示：怀有激情，但不张扬。保留一些你的热情。
 
-And I read lots of books to better understand developer culture.
+我还阅读了一些书以更好地理解开发者文化。
 
-[The Coders at Work](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3?crid=13BTAQ7TH9YSN&linkCode=ll1&tag=out0b4b-20&linkId=32d14a148c54f36f5ef701578a2abd8e&language=en_US&ref_=as_li_ss_tl) is a good book from the 1980s.
+[《编程人生》](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3?crid=13BTAQ7TH9YSN&linkCode=ll1&tag=out0b4b-20&linkId=32d14a148c54f36f5ef701578a2abd8e&language=en_US&ref_=as_li_ss_tl) 是本来自于 1980 年代的好书。
 
-[Hackers: Heroes of the Revolution](https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396?&linkCode=ll1&tag=out0b4b-20&linkId=0c216f2cd4cc2d2090b8c9b50b0befee&language=en_US&ref_=as_li_ss_tl) is a good book from the 1990s.
+[《黑客：计算机革命的英雄》](https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396?&linkCode=ll1&tag=out0b4b-20&linkId=0c216f2cd4cc2d2090b8c9b50b0befee&language=en_US&ref_=as_li_ss_tl) 是本来自 1990 年代的好书。
 
-For a more contemporary cultural resource, check out the TV series [Mr. Robot](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6?crid=188UUOE6ZT0W3&keywords=mr+robot&qid=1673746625&sprefix=mr+robot%2Caps%2C111&sr=8-6&linkCode=ll1&tag=out0b4b-20&linkId=a896ab7630fadc332c2696d3a4b8e85d&language=en_US&ref_=as_li_ss_tl). Its characters are a bit extreme, but they do a good job of capturing the mindset and mannerisms of many developers.
+对于更现代的文化资源，可以关注下[《黑客军团》](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6?crid=188UUOE6ZT0W3&keywords=mr+robot&qid=1673746625&sprefix=mr+robot%2Caps%2C111&sr=8-6&linkCode=ll1&tag=out0b4b-20&linkId=a896ab7630fadc332c2696d3a4b8e85d&language=en_US&ref_=as_li_ss_tl)这部剧集。剧中的角色有些极端，但是它很好地表现了许多开发者的心态和举止。
 
-Soon, I was talking less like a teacher and more like a developer. I didn't stick out quite as awkwardly.
+很快，我的谈吐更像一位开发者，而不是教师。我不再尴尬地冒进。
 
-Several times a week I attended local tech-related events. My favorite event wasn't even a developer event. It was the Santa Barbara Startup Night. Once every few weeks, they'd have an event where developers would pitch their prototypes. Some of the devs demoing their code were even able to secure funding from angels – rich people who invest in early-stage companies.
+我每周都会参加几次本地与科技有关的活动。我最喜欢的活动甚至不是开发者活动。而是圣巴巴拉创业之夜。开发者们会在这个几周举办一次的活动中，介绍他们的产品原型。一些进行代码演示的开发者甚至可以从天使投资人——投资早期公司的有钱人——处获得资金。
 
-The guy who ran the event was named Mike. He must have known every developer and entrepreneur in Santa Barbara.
+组织这个活动的人叫 Mike。他一定认识很多圣巴巴拉的开发者和企业家。
 
-When I finally got the nerve to introduce myself to Mike, I was star-struck. He was an ultra-marathoner with a resting heartbeat in the low 40s. Perfectly cropped hair and beard. To me he was the coolest guy on the planet. Always polished. Always respectful.
+当我终于鼓起勇气向 Mike 介绍自己时，我吓了一跳。他是个超级马拉松运动员，静息心率在 40 以下。有着完美修剪的头发和胡子。对我而言，他是这个星球上最酷的人了。他总是举止得体，彬彬有礼。
 
-Mike was "non-technical." He worked as a product manager. And though he knew a lot about technology and user experience design, he didn't know how to code.
+Mike 完全不是一个技术型的人。他的工作是产品经理。他虽然在科技和用户体验设计上了解很多，但却完全不知道如何写代码。
 
-Sometimes devs would write non-technical people off. "He's just a business guy," they'd say. Or: "She's a suit." But I never heard anyone say that about Mike. He had the respect of everyone.
+有时，开发者们会忽视非技术型的人。他们会说：“他只是个商人”或“她只是个甩手掌柜”。但是我从没听到有谁这样谈论 Mike，他赢得了所有人的尊重。
 
-I made a point to watch the way Mike interacted with developers. After all, I wasn't that far removed from "non-technical" myself. I'd only been coding for a few months.
+我特意观察了 Mike 与其他开发者打交道方式。毕竟，只写了几个月代码的我，也不能完全摆脱“非技术型”这个标签。
 
-Often my old habits would creep in. During conversations I'd have the temptation to show off what I'd learned or what I'd built.
+我的旧习惯时常显露。我总有炫耀自己所学和所做的冲动。
 
-Many developers are modest about their skills or accomplishments. They might say: "I dabble in Python." And little 'ol insecure me would open his big mouth and say something like, "Oh yeah. I've coded so many algorithms in Python. I write Python in my sleep."
+很多开发者对他们的技能和成就保持谦逊。他们会说：“我对 Python 有所涉猎。“而缺乏安全感的我，则大放厥词：“我用 Python 写了许多算法。我做梦都在写 Python。”
 
-And then I'd go home and google that developer's name, and realize they were a core contributor to a major Python library. And I'd kick myself.
+后来，当我回家谷歌了那位开发者的姓名，才了解到他是主流 Python 库的核心贡献者。我羞愧不已。
 
-I quickly learned not to boast of my accomplishments or my skills. There's a good chance a person you're talking to can code circles around you. But most of them would never volunteer this fact.
+我很快学会了不要吹嘘自己的成就或技能。你正在谈话的人很可能比你更懂编程。只是他们中的大多数不会主动说出这个事实。
 
-There's nothing worse than confidently pulling out your laptop, showing off your code, and then having someone ask you a bunch of questions that you're wholly unprepared to answer.
+再没有比自信地打开笔记本电脑炫耀代码，但别人抛出了一堆你完全没有准备好回答的问题更糟糕的事情了。
 
-My first few months of attending events was a humbling experience. But these events energized me to keep pushing forward with my skills.
+参加活动的前几个月对我而言是趟谦逊之旅。但是这些活动也让我有动力继续打磨我的技能。
 
-Soon people around southern California would start to recognize me. They'd say: "I keep running to you at these events. What's your name again?"
+不久，南加州附近的人都开始注意到我。他们会说：“我总在这些活动中遇到你。你叫什么来着？”。
 
-One night a dev said, "Let's follow each other on Twitter." I had grudgingly set up a Twitter account a few days earlier, thinking it was a gimmicky website. How much could you really convey with just 140 characters? I had barely tweeted anything. But I did have a Twitter account ready, and she did follow me.
+有天晚上，一个开发者说：“让我们在推特上加个好友吧。”。我当时认为推特只是一个噱头性网站，几天前才勉勉强强建立了一个推特账户。你能用区区 140 个字符真正表达什么呢？我基本不发推。但是我确实已经有了一个推特账户，所以她加了我。
 
-That inspired me to spend more time refining my online presence. I made my LinkedIn less formal and more friendly. I looked at how other devs in the community presented themselves online.
+这鼓舞我投入更多时间，去塑造自己的网络形象。我弱化了自己领英页面的正式性，提升了友善度。我研究社区中的其他开发者如何在网络上展示自己。
 
-Within a few months, I knew people from so many fields:
+在几个月内，我结识了众多领域中的人：
 
-- experienced developers
-- non-technical or semi-technical people who worked at tech companies
-- hiring managers and recruiters
-- and most importantly, my peers who were also mid-career and trying to break into tech
+- 经验丰富的开发者
+- 非技术型或半技术型、在科技公司工作的人
+- 招聘经理和招聘人员
+- 以及最重要的，和我一样处在职业生涯中期，想要转入科技行业的同龄人
 
-Why were peers the most important? Surely they would be the least able to help me get a job, right?
+为什么这些同龄人是最重要的？在帮我谋求一份工作这件事上，他们应该是最帮不上忙的，对吧？
 
-Well, let me tell you a secret: let's say a hiring manager brings on a new dev, trains them, and they turn out to be really good at their job. That hiring manager is going to ask: where can I find more people like you?
+好吧，我来告诉你一个秘密：假设招聘经理招来了新的开发人员，这些人在加以培训后完全胜任了他们的工作。那么这个招聘经理就会问：“我到哪里可以找到像你一样的人呢？”。
 
-Your peers are one of the most important pieces of your network. So many of my freelance opportunities and job interview opportunities came from people who started learning to code around the same time as I did.
+你的同龄人是你人际关系网络中，最重要的拼图之一。通过和我同时学习编程的人，我获得了许多自由职业的工作机会和工作面试机会。
 
-We came up together. We were brothers and sisters in arms. Those bonds are the tightest.
+我们一同成长。我们是兄弟和姐妹。这些纽带是最为紧密的。
 
-Anyway, all this networking over the months would ultimately come to fruition one night when I walked into the bar of a fancy downtown hotel for a developer event.
+总之，这几个月的人际关系，都最终在我进入市中心高级酒店的酒吧、参加开发者活动的某个晚上开花结果。
 
-But more on that in the next chapter. Now let's talk more about the art and science of building your network.
+在下一章会有这部分的更多内容。现在，让我们多聊聊建立人际关系网络的艺术和科学。
 
-### Is it Really Who You Know?
+### 认识谁真的决定一切吗？
 
-You may have heard the expression that success is "less about what you know, and more about who you know."
+你可能听过这么一句话，成功“不在于你所知，而在于你所识。”。
 
-In practice, it's about both.
+现实中，这两者都是重要的。
 
-Yes – your connections may help you land your dream job. But if you're out of your depth, and lack the skills to succeed, you will not fare well in that role.
+是的，你的关系可能会帮助你获得梦想工作。但如果你没有金刚钻，缺乏获得成功的技能，你在这份工作中不会有好的表现。
 
-But let's assume that you are proactively building your skills. You've followed my advice from Chapter 1. When is the right time to start building your network?
+但是让我们假定你已经遵循我在第一章中提出的建议，主动地培养自己的技能。什么时候是开始建立人际关系网络的正确时间呢？
 
-The best time to start building your network is **yesterday**.
+最好的开始时间是**昨天**。
 
-But you don't need a time machine to do this. Because you already have a network. It's probably much smaller than you'd like it to be, but you **do** know people.
+但你无需时间机器去做这件事。你已经有了一个人际关系网络。它可能比你想要的要小很多，但是你确实**已经**认识了一些人。
 
-They may be friends from your home town, or the colleagues of your parents. Any person you know from your past – however marginally – may be of help.
+他们可能是你家乡的朋友，或你父母的同事。任何一个你过去相识的人，不论多么籍籍无名，都能提供帮助。
 
 因此，第一步是对你认识的人进行全面盘点。请不要担心，我并不是要你现在就去接触任何人，也不是在考验你的人际关系。
 

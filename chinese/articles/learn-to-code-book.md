@@ -2015,253 +2015,253 @@ TechCrunch Disrupt黑客松。DeveloperWeek黑客松。ProgrammableWeb黑客松�
 5. 建立自由职业者客户的作品集
 6. 创建你自己的开源项目、公司或慈善机构
 
-#### 如何找到黑客马拉松和其他开发者竞赛
+#### 如何寻找黑客马拉松和其他开发者比赛
 
-黑客马拉松是能够建立你的声誉，并且提高编码技能的最直接的方式。
+黑客马拉松代表了同时建立你的声誉、人际关系网络和提供你的编码技能的最直接方式。
 
-大多数黑客马拉松都是免费的，对公众开放。你只需要有时间和预算去旅行。
+大多数黑客马拉松是免费的，并向公众开放。你只需要有时间和预算去旅行。
 
-如果你生活在一个有很多黑客松的城市——比如旧金山、纽约、班加罗尔或北京——你可能可以通勤去参加活动，然后回家睡在自己的床上。
+如果你住在一个有很多黑客活动的城市--比如旧金山、纽约、班加罗尔或北京--你也许可以通勤到活动现场，然后回家睡在自己的床上。
 
-尽管我住在圣巴巴拉，那里每隔几个月才有一次黑客松，但我在旧金山有一个老同学，他让我睡在他的沙发上。这让我有机会参加更多的活动。
+尽管我住在圣巴巴拉，那里每隔几个月才有一次黑客大会，但我在旧金山有一个老同学，他让我睡在他的沙发上。这让我有机会参加更多的活动。
 
-黑客松曾是很硬核的活动。人们会喝能量饮料，睡在地板上，这一切都是为了在宣传时间前完成他们的项目。
+黑客马拉松曾经是硬核活动。人们会喝能量饮料，睡在地板上，都是为了在演讲时间前完成他们的项目。
 
-但黑客马拉松的组织者逐渐开始关注这些活动的健康和可持续。毕竟，很多参与者都有孩子，或者需要全职工作，不可能整个周末都在全力以赴地编写代码。
+但是，黑客马拉松的组织者正逐渐变得更加关注这些活动的健康和可持续性。毕竟，很多参与者都有孩子，或者有要求很高的全职工作，他们不可能在整个周末全力以赴地写代码。
 
-找到即将到来的活动的最好方法是谷歌“黑客马拉松[你所在城市的名字]”，并浏览出现的各种活动日历。其中许多将由大学、当地雇主，甚至以教育为重点的慈善机构运营。
+找到即将举行的活动的最好方法是用谷歌搜索 "黑客马拉松[你的城市名称]"，然后浏览出现的各种活动日历。其中许多是由大学、当地雇主，甚至是以教育为重点的慈善机构举办的。
 
-如果你想赢，我建议你提前做些研究。
+如果你想赢得比赛，我建议提前做研究。
 
-活动赞助商是谁?通常是面向开发者类型的公司，它们提供api、数据库工具或各种软件产品的服务。
+活动赞助商是谁？通常是面向开发者提供服务的公司，它们提供 API、数据库工具或各种软件产品的服务。这些赞助商可能会在活动中设立展位，你可以与他们的开发者支持者交谈。这些人拿着钱教人们如何使用该公司的工具。有时你甚至会在这些展位上遇到关键员工或创始人，这也是一个很好的交流机会。
 
-These sponsors will probably have a booth at the event where you can talk with their developer advocates. These are people who get paid to teach people how to use the company's tools. Sometimes you'll even meet key employees or founders at these booths, which can be a great networking opportunity, too.
+通常情况下，黑客马拉松会提供针对赞助商的奖品。"对[赞助商]API的最佳使用"。将你的时间集中在将特定的赞助商工具纳入你的项目中，而不是试图赢得大奖，这可能更容易。你仍然可以在你的LinkedIn或你的履历表上把这些作为胜利。胜利就是胜利。
 
-Often the hackathon will offer sponsor-specific prizes. "Best Use of the [sponsor's] API." It may be easier to focus your time on incorporating specific sponsor tools into your project, rather than trying to win the grand prize. You can still put these down as wins on your LinkedIn or your résumé. A win is a win.
+有时，黑客马拉松是如此高调--或者奖金如此可观--以至于尝试直接赢得比赛是有意义的。
 
-Sometimes the hackathon is just so high profile – or the prize is so substantial – that is just makes sense to try and win the competition outright.
+在我参加黑客马拉松的过程中，我赢得了相当于几个月租金的现金奖励，几年的免费联合办公空间，甚至是纽约市联合国大楼的私人参观。
 
-During my time going to hackathons, I was able to win several month's rent worth of cash prizes, several years' worth of free co-working space, and even a private tour of the United Nations building in New York City.
+在我参加黑客马拉松的这段时间里，我能够赢得价值几个月租金的现金奖，几年的免费联合办公空间，甚至是纽约市的联合国大楼的私人参观。
 
-On the circuit, I met people whose main source of income was cash prizes from winning hackathons. One dev I knew managed to win nine sponsor prizes at the same hackathon. He managed to integrate all of those sponsor tools into his project – and also win second place overall.
+在巡回赛中，我遇到了一些人，他们的主要收入来源是赢得黑客马拉松的现金奖励。我认识的一个开发者在同一个黑客马拉松上成功赢得了九个赞助商的奖金。他设法将所有这些赞助商的工具整合到他的项目中--而且还赢得了总分第二名。
 
-Don't be surprised if some of the people you run into frequently at hackathons go on to found venture-backed companies, or launch prominent open source projects.
+如果你在黑客马拉松上经常遇到的一些人后来成立了有风险投资的公司，或者启动了著名的开源项目，请不要感到惊讶。
 
-The level of ambition you'll see among hackathon regulars is way, way higher than that of the average developer. These are, after all, people who finish a work week, then go straight into a work weekend. These people are not afraid to leap out of the frying pan and into the fire.
+你在黑客马拉松常客中看到的雄心壮志水平比普通开发者要高得多。毕竟，这些人完成了一周的工作，然后直接进入周末的工作。这些人不怕从油锅里跳出来，跳进火里。
 
-### How to Contribute to Open Source
+### 如何为开源项目做贡献
 
-Contributing to open source is one of the most immediate ways you can build your reputation. Most employers are going to look at your GitHub profile, which will prominently display your Git commit history.
+为开放源代码做贡献是建立自己声誉的最直接方式之一。大多数雇主都会看你的GitHub档案，其中会突出显示你的Git提交历史。
 
-![raisedadead__Mrugesh_Mohapatra__--](https://www.freecodecamp.org/news/content/images/2023/01/raisedadead__Mrugesh_Mohapatra__--.png)The GitHub profile of Mrugesh Mohapatra, who does a ton of platform development and DevOps for freeCodeCamp.org. Note how green his activity bar is. 2,208 contributions in the past year alone.
+![raisedadead__Mrugesh_Mohapatra__--](https://www.freecodecamp.org/news/content/images/2023/01/raisedadead__Mrugesh_Mohapatra__--.png)
 
-Many open source project maintainers, such as Linux Foundation, Mozilla (Firefox), and of course freeCodeCamp ourselves, have high standards for code quality.
+以上是 Mrugesh Mohapatra 的 GitHub 简介，他为 freeCodeCamp.org 做了大量的平台开发和 DevOps 工作。注意他的活动栏是多么的绿色。仅在过去一年就有 2208 个贡献。
 
-You can read through open GitHub issues to find known bugs or feature requests. Then you can make the code changes and open a pull request. If the maintainers merge your pull request, this will be a major feather in your cap.
+许多开源项目的维护者，如Linux基金会、Mozilla（火狐），当然还有 freeCodeCamp 自己，对代码质量有很高的标准。
 
-One of the best ways to get a job at a tech company is to become a prolific open source contributor to their repositories.
+你可以通过阅读开放的 GitHub 问题来寻找已知的错误或功能请求。然后你可以进行代码修改，并打开一个拉动请求。如果维护者合并了你的拉动请求，这将是你帽子上的一个重要标志。
 
-Open source contribution is a great way to build your reputation because everything you do is right out in public. And you get the **social proof** of having other developers review and accept your work.
+在科技公司找到工作的最好方法之一是成为他们资料库中多产的开放源码贡献者。
 
-If you're interested in building your reputation through open source, here's how to get started.
+开源贡献是建立自己声誉的好方法，因为你所做的一切都在公众面前。而且你还可以得到其他开发者审查和接受你的工作的**社会证明**。
 
-Read Hillary Nyakundi's comprehensive guide to [getting started with open source](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/).
+如果你对通过开放源码建立你的声誉感兴趣，这里是如何开始的。
 
-### How to Create Developer-Focused Content
+阅读希拉里-尼亚昆迪的 [开源入门综合指南](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/).
 
-Developers are people. And like other people, they want something to do with their time when they're not working, sleeping, or hanging with friends and family.
+### 如何创建以开发者为中心的内容
 
-For many people – including myself – that means spending time in other people's thoughts. Books. Video essays. Interactive experiences like [visual novels](https://www.freecodecamp.org/news/learn-to-code-rpg-1-5-update/).
+开发人员是人。和其他人一样，当他们不工作、不睡觉、不和朋友和家人在一起的时候，他们想用自己的时间做些什么。
 
-You can broadly refer to these as "content." I'm not a huge fan of the word, because it makes these works feel disposable. But that's what people call it.
+对许多人来说--包括我自己--这意味着花时间在别人的想法上。书籍。视频散文。互动体验，如[视觉小说](https://www.freecodecamp.org/news/learn-to-code-rpg-1-5-update/)。
 
-Software development is an incredibly broad field, with so many different topics you could approach. There are developer lifestyle vlogs, coding interview prep tutorials, coding live streams on Twitch, and developer interview podcasts.
+你可以广泛地将这些称为 "内容"。我不太喜欢这个词，因为它使这些作品感觉是一次性的。但人们就是这样称呼它。
 
-There are probably entire categories of developer content that we haven't even thought of yet, which will break over the next decade.
+软件开发是一个令人难以置信的广泛领域，有许多不同的主题，你可以接近。有开发者生活方式的博客，编码面试准备教程，Twitch上的编码直播流，以及开发者访谈播客。
 
-If you're interested in film, journalism, or creative writing, developer content may be a good way to build your reputation.
+可能有整个类别的开发者内容，我们甚至还没有想到，这将在未来十年内打破。
 
-You can pick a specific topic and gradually come to be seen as the expert.
+如果你对电影、新闻或创意写作感兴趣，开发者内容可能是建立自己声誉的好方法。
 
-There are developers who specialize in tutorials for specific technology stacks, for example.
+你可以选择一个特定的主题，逐渐被视为专家。
 
-My friend Andrew Brown is a former CTO from Toronto who has passed all the major DevOps exams. He creates [free courses to prepare you for all the AWS, Azure, and Google Cloud certifications](https://www.freecodecamp.org/news/azure-developer-certification-az-204-pass-the-exam-with-this-free-13-5-hour-course/), and also runs an exam prep service.
+例如，有一些开发者专门从事特定技术栈的教程。
 
-There are more than 20 million software developers around the world. That's a lot of people who will potentially consume your content, and who will come to know who you are.
+我的朋友安德鲁-布朗是一位来自多伦多的前CTO，他已经通过了所有主要的DevOps考试。他创建了[为所有AWS、Azure和谷歌云认证做准备的免费课程](https://www.freecodecamp.org/news/azure-developer-certification-az-204-pass-the-exam-with-this-free-13-5-hour-course/)，还经营着一个考试准备服务。
 
-### How to Rise in the Ranks Working at Big Companies
+世界上有超过2000万的软件开发人员。这是有可能消费你的内容的很多人，他们会知道你是谁。
 
-You may have seen a developer introduced as an "Ex-Googler" or an "Ex-Netflix engineer."
+### 如何在大公司工作中提升地位
 
-Some tech companies have such rigorous hiring processes – and such high standards – that even getting a job at the company is a big accomplishment.
+你可能已经看到一个开发人员被介绍为 "前 Googler "或 "前 Netflix 工程师"。
 
-There are some practical reasons why employers look at where candidates have previously worked. It reduces the risk of a bad hire.
+一些科技公司有如此严格的招聘程序--以及如此高的标准--甚至在该公司获得一份工作都是一个很大的成就。
 
-You can build up your reputation by working your way up the prestige hierarchy. You can ladder from a local employer to a Fortune 500 company, and ultimately to one of the big tech giants.
+雇主看候选人以前在哪里工作有一些实际原因。它减少了招聘失败的风险。
 
-Of course, working at a giant corporation is not for everyone. I'll talk about this more in Chapter 4. But know that it is one option you have for building up your reputation.
+你可以通过努力提高自己的声望等级来建立自己的声誉。你可以从一个本地雇主到财富500强公司，并最终到大型科技巨头之一。
 
-### How to Build your Reputation by Building a Portfolio of Freelance Clients
+当然，在巨头公司工作并不适合所有人。我将在第四章中更多地谈论这个问题。但要知道，这是你建立自己声誉的一个选择。
 
-You can build your reputation by working with companies as a freelancer.
+### 如何通过建立自由职业者客户组合来建立自己的声誉
 
-Freelance developers usually work on smaller one-person projects. So this may be a better strategy for building your reputation locally.
+你可以通过以自由职业者的身份与公司合作来建立自己的声誉。
 
-For example, if you did good work for a locally-based bank, that may be enough to convince a local law firm to contract you as well.
+自由职业者通常从事较小的单人项目。因此，这可能是在当地建立你的声誉的一个更好的策略。
 
-There is something to be said for being a "hometown hero." I know many developers who can effectively compete with online competition just by being physically present in meetings, and knowing people locally.
+例如，如果你为当地的一家银行做了很好的工作，这可能足以说服当地的一家律师事务所也与你签约。
 
-### How to Build a Developer Portfolio of Your Work
+做一个 "家乡的英雄 "是有道理的。我知道很多开发商可以通过亲自参加会议和认识当地人来有效地与网络竞争。
 
-Once you've built some projects, you'll want to show them off. And the best way to do this is with short videos.
+### 如何建立你的开发作品集
 
-People are busy. They don't have time to pull down your code and run it on their own computer.
+一旦你建立了一些项目，你就会想把它们展示出来。做到这一点的最好方法是用短视频。
 
-And if you send people to a website, they may not fully grasp what they're looking at, and why it's so special.
+人们都很忙。他们没有时间拉下你的代码并在自己的电脑上运行它。
 
-That's why I recommend you use a screen capture tool to recording 2 minute video demos.
+如果你把人们送到一个网站，他们可能不会完全掌握他们正在看的东西，以及为什么它是如此特别。
 
-Two minutes should be long enough to show how the project works. And once you've done that, you can explain some of the implementation details, and design decisions you made.
+这就是为什么我建议你使用屏幕捕捉工具来录制2分钟的视频演示。
 
-But always, always start with the demo. People want to see something work. They want to see something visual.
+两分钟的时间应该足够展示项目如何运作。一旦你完成了这些，你就可以解释一些实施细节，以及你所做的设计决定。
 
-Once you've lured people in with your compelling demo of your app running, you can explain all the details you want. Your audience will now have more context, and be more interested.
+但总是，总是从演示开始。人们希望看到一些工作。他们想看到的是视觉上的东西。
 
-Two minutes is also a magic length, because you can upload that video to a tweet, and it will auto-play on Twitter as people scroll past it. Auto-play videos are much, much more likely to be watched on Twitter. They remove the friction of having to click a play button, or navigate to another website.
+一旦你用你的应用程序运行的引人注目的演示吸引了人们，你就可以解释你想要的所有细节。你的听众现在会有更多的背景，也会更感兴趣。
+
+两分钟也是一个神奇的长度，因为你可以把视频上传到推特上，当人们滚动经过它时，它就会在推特上自动播放。自动播放的视频在Twitter上被观看的可能性要高得多。它们消除了必须点击播放按钮的摩擦，或导航到另一个网站。
 
 <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" title="Twitter Tweet" src="https://platform.twitter.com/embed/Tweet.html?creatorScreenName=ossia&amp;dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfaG9yaXpvbl90aW1lbGluZV8xMjAzNCI6eyJidWNrZXQiOiJ0cmVhdG1lbnQiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfYmFja2VuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfcmVmc3JjX3Nlc3Npb24iOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYnVzaW5lc3NfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2NoaW5fcGlsbHNfMTQ3NDEiOnsiYnVja2V0IjoiY29sb3JfaWNvbnMiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X3Jlc3VsdF9taWdyYXRpb25fMTM5NzkiOnsiYnVja2V0IjoidHdlZXRfcmVzdWx0IiwidmVyc2lvbiI6bnVsbH0sInRmd19taXhlZF9tZWRpYV8xNTg5NyI6eyJidWNrZXQiOiJ0cmVhdG1lbnQiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NlbnNpdGl2ZV9tZWRpYV9pbnRlcnN0aXRpYWxfMTM5NjMiOnsiYnVja2V0IjoiaW50ZXJzdGl0aWFsIiwidmVyc2lvbiI6bnVsbH0sInRmd19leHBlcmltZW50c19jb29raWVfZXhwaXJhdGlvbiI6eyJidWNrZXQiOjEyMDk2MDAsInZlcnNpb24iOm51bGx9LCJ0ZndfZHVwbGljYXRlX3NjcmliZXNfdG9fc2V0dGluZ3MiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3ZpZGVvX2hsc19keW5hbWljX21hbmlmZXN0c18xNTA4MiI6eyJidWNrZXQiOiJ0cnVlX2JpdHJhdGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmx1ZV92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19nb3ZfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYnVzaW5lc3NfYWZmaWxpYXRlX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1603405016525688834&amp;lang=en&amp;origin=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Flearn-to-code-book%2F&amp;sessionId=5fb6a17a050a6f4d155b53178392f91afe5602a7&amp;siteScreenName=freecodecamp&amp;theme=light&amp;widgetsVersion=2b959255e8896%3A1673658205745&amp;width=550px" data-tweet-id="1603405016525688834" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; position: static; visibility: visible; width: 550px; height: 708px; display: block; flex-grow: 1;"></iframe>
 
-A video demo of a twitter clone project, built by a freeCodeCamp alumni. This one has no voice-over explanation, and is 2 minutes of UI demo. But it's still really good.
+一个twitter克隆项目的视频演示，由freeCodeCamp的校友建立。这个视频没有画外音解释，只有2分钟的UI演示。但它仍然非常好。
 
-You can can put these project demo videos on websites like YouTube, Twitter, your GitHub profile, and of course your own portfolio website.
+你可以把这些项目演示视频放到YouTube、Twitter、你的GitHub档案，当然还有你自己的作品集网站上。
 
-For capturing this video, I recommend using QuickTime, which comes built-in with MacOS. And if you're on Windows, you can use Game Recorder, which comes free in Windows 10.
+为了捕捉这个视频，我建议使用QuickTime，它是MacOS内置的。如果你是在Windows上，你可以使用Game Recorder，它在Windows 10中是免费的。
 
-And if you want a more powerful tool, OBS is free and open source. It's harder to learn, but infinitely customizable.
+如果你想要一个更强大的工具，OBS是免费和开源的。它比较难学，但可以无限地定制。
 
-As far as recording tips: keep your font size as large as possible, and use an external mic. Any mic you can find – even from cheap headphones – will be better than speaking into your laptop's built in mic.
+至于录音技巧：保持你的字体大小尽可能大，并使用外部麦克风。任何你能找到的麦克风--即使是廉价的耳机--都会比对着你的笔记本电脑的内置麦克风说话好。
 
-Invest as much time as you need to in recording and re-recording takes until you nail it.
+投入尽可能多的时间来录制和重新录制片段，直到你掌握了它。
 
-Being able to demo your projects and present your code is a valuable skill you'll use throughout your career. Time spent practicing pitching is never wasted.
+能够演示你的项目和介绍你的代码是你整个职业生涯中都会用到的宝贵技能。练习演讲的时间永远不会被浪费。
 
-### How to Start Your Own Open Source Project, Company, or Charity
+### 如何启动你自己的开源项目、公司或慈善机构
 
-Being a founder is the fastest – but also riskiest – way to build a reputation as a developer.
+成为创始人是建立开发者声誉的最快--但也是风险最大的方式。
 
-It's riskiest because you're wagering your time, your money, and possibly even your personal relationships – all for an unknown outcome.
+它的风险最大，因为你在用你的时间、金钱，甚至可能是你的个人关系作赌注--所有这些都是为了一个未知的结果。
 
-If you contribute to open source for long enough, you *will* build a reputation as a developer.
+如果你为开放源码贡献了足够长的时间，你*会*建立一个作为开发者的声誉。
 
-If you grind the hackathon circuit for long enough, you *will* build a reputation as a developer*.*
+如果你在黑客马拉松赛场上磨练了足够长的时间，你*会*建立起作为一个开发者的声誉*。
 
-But you could attempt to start entrepreneurial projects for decades without getting traction. And squander your time, money, and connections along the way.
+但是，你可以尝试启动创业项目数十年而没有得到牵引力。而在这一过程中，你的时间、金钱和关系都会被浪费掉。
 
-Entrepreneurship is beyond the scope of this book. But if you're interested in it, I will give you this quick advice:
+创业已经超出了本书的范围。但如果你对它感兴趣，我将给你这个快速建议。
 
-Entrepreneur is a French word that essentially translates to "one who bears risk."
+企业家是一个法语单词，本质上翻译为 "承担风险的人"。
 
-Most entrepreneurs fail. Some fail due to circumstances outside their control. But a lot fail due to not understanding the nature of the risks they're taking on.
+大多数创业者都会失败。有些失败是由于他们无法控制的情况。但很多失败是由于不了解他们所承担的风险的性质。
 
-Don't rush into founding a project, company, or charity. Try to work for other organizations who are already doing work in your field of interest.
+不要急于创建一个项目、公司或慈善机构。尝试为已经在你感兴趣的领域开展工作的其他组织工作。
 
-By working for someone else, you get paid to learn. You get exposure to the work, and the risks surrounding it. And you can build savings for an eventual entrepreneurial venture.
+通过为别人工作，你得到了学习的报酬。你可以接触到这些工作，以及围绕这些工作的风险。而且，你可以为最终的创业项目积累储蓄。
 
-## How Not to Destroy Your Reputation
+## 如何不要毁掉你的声誉
 
-> "It takes a lifetime to build a good reputation, but you can lose it in a minute." – Will Rogers, Actor, Cowboy, and one of my heroes growing up in Oklahoma City
+> "建立一个好的声誉需要一生，但你可以在一分钟内失去它"。- 威尔-罗杰斯，演员，牛仔，是我在俄克拉荷马城长大的英雄之一。
 
-Building your reputation is a marathon, not a sprint.
+建立你的声誉是一场马拉松，而不是一场短跑。
 
-It may take years to build up a reputation strong enough to open the right doors.
+它可能需要几年的时间来建立一个足够强大的声誉，以打开正确的大门。
 
-But just like in a competitive marathon, a stumble can cost you valuable time. A stumble that results in injury may put you out of the race completely.
+但就像在一场竞争激烈的马拉松比赛中，一个趔趄会让你失去宝贵的时间。导致受伤的跌倒可能使你完全退出比赛。
 
-### Don't Say Dumb Things on the Internet
+### 不要在互联网上说傻话
 
-People used to say dumb things all the time. The words might hang in the air for a few minutes while everyone winced. But the words did eventually dissipate.
+人们过去经常说一些愚蠢的事情。这些话可能会在空气中停留几分钟，而每个人都会畏惧。但这些话最终都会消散。
 
-Now when people say dumb things, they often do so online. And in indelible ink.
+现在，当人们说蠢话时，他们经常在网上说。而且是用不可磨灭的墨水。
 
-Always assume that the moment you type something into a website and press enter, it's going to be saved to a database. That database is going to be backed up across several data centers around the world.
+始终认为，当你在网站上输入东西并按下回车键时，它将被保存到一个数据库中。该数据库将在世界各地的几个数据中心进行备份。
 
-You can prove the existence of data, but there is no way to prove the absence of data.
+你可以证明数据的存在，但没有办法证明没有数据。
 
-You should assume, for all intents and purposes, that the cat is out of the bag. There's no getting the cat back in the bag. Whatever you just said: that's on your permanent record.
+你应该假设，就所有的意图和目的而言，猫已经离开了袋子。没有办法让猫回到袋子里。无论你刚才说了什么：那都是在你的永久记录上。
 
-You can delete the remark. You can delete your account. You can even try to scrub it from Google search results. But someone has probably already backed it up on the Wayback Machine. And when one of those databases inevitably gets hacked years from now, those data will probably still be in there somewhere, ready to resurfaced.
+你可以删除这句话。你可以删除你的账户。你甚至可以尝试把它从谷歌搜索结果中删除。但是有人可能已经在Wayback Machine上备份了它。而当这些数据库中的某一个在几年后不可避免地被黑客攻击时，这些数据可能仍然在那里的某个地方，准备重新出现。
 
-It is a scary time to be a loud mouth. So don't be. Think before you speak.
+现在是一个可怕的时代，要做一个大嘴巴。所以不要这样做。在你说话之前先想想。
 
-My advice, which may sound cowardly: get out of the habit of arguing with people online.
+我的建议，可能听起来很懦弱：摆脱在网上与人争论的习惯。
 
-Some people abide by the playground rule of "if you don't have something nice to say, don't say anything at all."
+有些人遵守 "如果你没有好话可说，就不要说 "的操场规则。
 
-I prefer the "praise in public, criticize in private."
+我更喜欢 "公开表扬，私下批评"。
 
-I will publicly recognize good work someone is doing in the developer community. If I see a project that impresses me, I will say so.
+我将公开承认某人在开发者社区所做的好工作。如果我看到一个让我印象深刻的项目，我会说出来。
 
-But I generally refrain from tearing people down. Even people who deserve it.
+但是，我一般不会拆穿别人。即使是那些应得的人。
 
-In a fight, everyone looks dirty.
+在一场战斗中，每个人都看起来很脏。
 
-You don't want to look wrathful, tearing apart someone's argument, or dog piling in on someone who just said something dumb.
+你不希望看起来怒气冲冲，撕毁别人的论点，或对刚刚说了一些蠢话的人进行狗刨。
 
-Sure – caustic wit can win you internet points in the short term. But it can also make people love you a little bit less and fear you a little bit more.
+当然--尖刻的机智可以在短期内为你赢得网络积分。但它也可能使人们对你的爱少一点，对你的恐惧多一点。
 
-I also try to refrain from complaining. Yes, I could probably get better customer service if I threatened to tweet about a cancelled flight.
+我也努力避免抱怨。是的，如果我在推特上威胁说航班被取消，我可能会得到更好的客户服务。
 
-But people are busy. Most of them don't want to use their scarce time, scrolling through social media, only to see me groaning about what is in the grand scheme of things a mild inconvenience.
+但是人们都很忙。他们中的大多数人不想利用他们稀少的时间，滚动浏览社交媒体，只想看到我在呻吟什么，在事情的大计划中，这是一个轻微的不便。
 
-So that is my advice on using social media. Try to keep it positive.
+所以这就是我对使用社交媒体的建议。尽量保持积极的态度。
 
-If it's a matter that you believe strongly about, I won't stop you from speaking your mind. Just think before you type, and think before you hit send.
+如果这是一个你坚信的问题，我不会阻止你说出你的想法。只是在你打字之前要考虑，在你点击发送之前要考虑。
 
-### Don't Over-promise and Under-deliver
+### 不要过度承诺和不充分交付
 
-One of the most common ways I see developers torpedo their own reputations is to over-promise and under-deliver. This is not necessarily a fatal error. But it is bad.
+我看到开发者最常见的方式之一是过度承诺和交付不足，使他们自己的声誉受到损害。这不一定是一个致命的错误。但它是不好的。
 
-Remember when I talked about the Las Vegas hackathon where I utterly failed to finish the project in time for the pitch, and we had to use slides instead of a working app?
+还记得吗，我说过在拉斯维加斯黑客马拉松上，我完全没有及时完成项目，而我们不得不使用幻灯片，而不是一个运行的应用程序。
 
-Yeah, that was one of the lowest points in my learn to code journey. My teammates were polite, but I'm sure they were disappointed in me. After all, I had been overconfident. I had over-promised what I'd be able to achieve in that time frame, and I had under-delivered.
+是的，那是我学习代码旅程中的最低点之一。我的队友们都很有礼貌，但我相信他们对我很失望。毕竟，我过于自信了。我对自己在那个时间段内能够取得的成绩作出了过高的承诺，而我却没有兑现。
 
-It is much better to be modest in your estimations of your abilities.
+谦虚地估计自己的能力要好得多。
 
-Remember the parable of Icarus, who on wax wings flew too close to the sun. If only he'd taken a more measured approach. Ascended a bit slower. Then his wings wouldn't have melted, and he wouldn't have plunged into the sea, leaving a guilt-stricken father.
+记住伊卡洛斯的寓言，他用蜡质的翅膀飞得太靠近太阳。如果他能采取更有分寸的方法。上升得慢一点。那么他的翅膀就不会融化，他也就不会坠入大海，留下一个内疚的父亲。
 
-![1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus](https://www.freecodecamp.org/news/content/images/2023/01/1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg)Landscape with the Fall of Icarus by Pieter Bruegel the Elder, circa 1560. Icarus coulda been a contender. He coulda been somebody. But instead, he's just legs disappearing into the sea. And the farmers and the shepherds can't be bothered to look up from their work to take in his insignificance.
+![1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus](https://www.freecodecamp.org/news/content/images/2023/01/1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg)
 
-### Get Addictions Under Control Before They Damage Your Reputation
+Pieter Bruegel the Elder的《伊卡洛斯坠落的风景》，约1560年。伊卡洛斯本可以是一个竞争者。他本可以成为一个人物。但相反，他只是双腿消失在海里。农民和牧羊人不屑于从他们的工作中抬起头来看一看他的渺小。
 
-If you have an untreated drug, alcohol, or gambling addiction, seek help first. The developer job search can be a long, grueling one. You want to go into it with your full attention.
+### 在声誉受损前，控制住瘾
 
-Even something as seemingly harmless as video game addiction can distract you, and soak up too much of your time. It's worth getting it under control first.
+如果你有未经治疗的毒瘾、酒瘾或赌瘾，请先寻求帮助。开发商找工作可能是一个漫长而艰苦的过程。你要全神贯注地去做这件事。
 
-I am not a doctor. And I'm not going to give you a "drugs are bad" speech. But I will say: you may hear of Silicon Valley fads, where developers abuse drugs thinking they can somehow improve their coding or problem solving abilities.
+即使是像视频游戏成瘾这样看似无害的东西也会分散你的注意力，并占用你太多的时间。值得先把它控制住。
 
-For a while there was a "micro-dosing LSD" trend. There was a pharmaceutical amphetamines trend.
+我不是医生。我也不打算给你讲 "毒品是坏事"。但我要说的是：你可能听说过硅谷的风潮，在那里，开发人员滥用药物，认为他们可以以某种方式提高他们的编码或解决问题的能力。
 
-My gut reaction to that is: any edge these may give you is probably unsustainable, and a net negative over a longer time period.
+有一段时间，有一个 "微剂量LSD "的趋势。有一个药物安非他命的趋势。
 
-Don't feel peer pressure to take psychoactive drugs. Don't feel peer pressure to drink at happy hours. (I haven't drank so much as a beer since my daughter was born 7 years ago, and I don't feel like I've missed out on anything at all.)
+我的直觉反应是：这些东西可能给你带来的任何优势都可能是不可持续的，而且在一个较长的时期内是净负值。
 
-If you are in recovery from addiction, be mindful that learning to code and getting a developer job will be a stressful process. Pace yourself, so you don't risk a relapse.
+不要感受到服用精神活性药物的同伴压力。不要感受到在欢乐时光喝酒的同伴压力。(自从7年前我的女儿出生以来，我没有喝过那么多的啤酒，我不觉得我错过了什么）。
 
-You do not want to reach the end of the career transition process – and achieve so much – only to have old habits resurface and undo your hard work.
+如果你正在从毒瘾中恢复，请注意学习代码和获得开发人员的工作将是一个紧张的过程。给自己定个节奏，这样你就不会有复发的风险。
 
-### Try and Separate Your Professional Life From Your Personal Life
+你不希望在职业转型过程的最后阶段--取得了如此大的成就--却让旧的习惯重新出现，使你的努力付诸东流。
 
-You may have heard the expression, "Don't mix business with pleasure."
+### 尝试将你的职业生活与你的个人生活分开
 
-As a developer, you are going to become a powerful person. You are going to command a certain degree of respect from other people in your city.
+你可能听说过这样一句话："不要把生意和娱乐混在一起"。
 
-Maybe not as much as a doctor or an astronaut. But still. People are going to look up to you.
+作为一个开发者，你将成为一个有权力的人。你将从你所在城市的其他人那里获得一定程度的尊重。也许没有医生或宇航员那么多。但仍然如此。人们将仰视你。
 
-You are going to talk with people who would love to be in your shoes.
+你会和那些愿意和你一样的人交谈。
 
-Do not flaunt your wealth.
-
-Do not act as though you're smarter than everybody else.
+不要炫耀你的财富。不要表现得好像你比其他人更聪明。
 
 Do not abuse the power dynamic to get what you want in relationships.
 

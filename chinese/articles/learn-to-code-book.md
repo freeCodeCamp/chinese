@@ -1,486 +1,483 @@
 > -  原文地址：[How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/learn-to-code-book/)
 > -  原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> -  译者：casey cui
-> -  校对者：
 
-![How to Learn to Code & Get a Developer Job in 2023 [Full Book]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
+[如何在 2023 年学习编程并入行程序员 [完结]](https://www.freecodecamp.org/news/content/images/size/w2000/2023/01/Learn-to-Code-and-Get-a-Developer-Job-Book.jpg)
 
-If you want to learn to code and get a job as a developer, you're in the right place. This book will show you how.
+如果你打算学习编程并成为一名开发者，希望这本书对你有帮助。
 
-And yes this is the full book – for free – right here on this webpage.
+这本书已编写完毕，完全免费。你可以在此阅读。
 
-A few years back, one of the Big 5 book publishers from New York City reached out to me about a book deal. I met with them, but didn't have time to write a book.
+几年前，纽约市的 5 家头部出版商找到我，希望与我合作出书。我和他们当面聊了下，可当时我根本抽不出时间来写书。
 
-Well, I finally had time. And I decided to just publish this book for free, right here on freeCodeCamp.
+现在我终于有时间写书了，而且我打算让大家在 freeCodeCamp 上免费阅读我写的这本书。
 
-Information wants to be free, right? 🙂
+信息本身即是自由且免费的，对吧？🙂（注：原文 "Information wants to be free" 旨在表达信息本应无障碍地被人们获取，见[此词条](https://en.wikipedia.org/wiki/Information_wants_to_be_free)，英文中的 free 既有“自由”也有“免费”之意；另外，此处译文参考自[这里](https://web.law.duke.edu/cspd/chinese/information/)）
 
-It may take you a few hours to read all this. But this is it. My insights into learning to code and getting a developer job.
+这本书包括了我对学编程和成为开发者的许多思考，因此篇幅较长，通读可能需要几个小时。
 
-I learned all of this while:
+以下是我的个人经历：
 
-- learning to code in my 30s
-- then working as a software engineer
-- then running freeCodeCamp.org for the past 8 years. Today, more than a million people visit this website each day to learn about math, programming, and computer science.
+- 30 多岁开始学习编程
+- 然后成为软件工程师
+- 之后，我于 8 年前（2015 年）创办了 freeCodeCamp.org。现在，每天都有一百多万人来这里学习数学、编程和计算机科学
 
-I was an English teacher who had never programmed before. And I was able to learn enough coding to get my first software development job in just one year.
+在这之前，我是一名从未接触过编程的英语老师。不过，我在开始学习编程一年后就拿到了我的第一份开发者工作。
 
-All without spending any money on books or courses.
+在这个过程中，我没有花一分钱购买书籍或参与任何课程。
 
-(I did spend money to travel to nearby cities and participate in tech events. And as you'll see later in the book, this was money well spent.)
+（确切地说我其实花钱了，因为我经常跑到周边城市参加了技术会议。后文中会提到，这些钱花得非常值得）
 
-After working as a software engineer for a few years, I felt ready. I wanted to teach other people how to make this career transition, too.
+做了几年软件工程师之后，我觉得是时候改变一下了：我想教会其他人如何实现职业生涯的转换。
 
-I built several technology education tools that nobody was interested in using. But then one weekend, I built freeCodeCamp.org. A vibrant community quickly gathered around it.
+一开始我尝试着做了一些技术类的教学工具，但反响平平。直到有一个周末，我上线的 freeCodeCamp.org 竟成为了爆款，吸引了很多用户，逐步构建了 freeCodeCamp 社区。
 
-Along the way, we all helped each other. And today, people all around the world have used freeCodeCamp to prepare for their first job in tech.
+一直以来，我们在社区内互相帮助。现在，全世界的人们得以通过 freeCodeCamp 来为自己的第一份技术工作做准备。
 
-You may be thinking: I don't know if I have time to read this entire book.
+你也许会想：“我可能没那么多时间读完整本书”。
 
-No worries. You can bookmark it. You can come back to it and read it across as many sittings as you need to.
+没关系，你可以随时标注读到了哪里；之后有空了随时回来继续读。这本书会一直在这里等你。
 
-And you can share it on social media. Sharing: "check out this book I'm reading" and linking to it is a surprisingly effective way to convince yourself to finish reading a book.
+或许你还可以尝试在社交网络上分享，说：“看，我在读这本书”，并附上链接。你可能想不到，这是一种很好的激励方式，有助于你尽快读完这本书。
 
-I say this because I'm not trying to sell you this book. You already "bought" this book when you opened this webpage. Now my goal is to reassure you that this book **will** be worth investing your scarce time in finish. 😉
+我这样说的目的不是要把书卖给你；其实在你打开这个页面的时候，这本书就已经是你的了。我是想告诉你，这本书绝对值得你抽出一些时间来读完😉。
 
-I promise to be respectful of your time. There's no hype or fluff here – just blunt, actionable tips.
+我理解，你的时间很宝贵。所以这本书里绝对不会有任何的虚构和炒作，只会有直率且可执行的建议。
 
-I'm going to jam as much insight as I can into every chapter of this book.
+我会尽力在这本书的每一章内容里多写一些我的思考和理解。
 
-Which reminds me: where's the table of contents?
+噢对了，书都应该有个目录的吧。
 
-Ah. Here it is:
+来，请看目录：
 
-## Table of Contents
+## 目录
+1. [前言：本书适合的人群](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
+2. [概论](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
+3. [第一章：如何打造自己的技术栈](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
+4. [第二章：如何拓展自己的人脉](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
+5. [第三章：如何提升自己的圈内名声](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
+6. [第四章：如何靠编程赚钱——自由职业与求职](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
+7. [第五章：如何在第一份工作中取得成功](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
+8. [后记：相信自己，你能行](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
 
-1. [Preface: Who is this book for?](https://www.freecodecamp.org/news/learn-to-code-book/#preface-who-is-this-book-for)
-2. [500 Word Executive Summary](https://www.freecodecamp.org/news/learn-to-code-book/#500-word-executive-summary)
-3. [Chapter 1: How to Build Your Skills](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-1-how-to-build-your-skills)
-4. [Chapter 2: How to Build Your Network](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-2-how-to-build-your-network)
-5. [Chapter 3: How to Build Your Reputation](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-3-how-to-build-your-reputation)
-6. [Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-4-how-to-get-paid-to-code-freelance-clients-and-the-job-search)
-7. [Chapter 5: How to Succeed in Your First Developer Job](https://www.freecodecamp.org/news/learn-to-code-book/#chapter-5-how-to-succeed-in-your-first-developer-job)
-8. [Epilogue: You Can Do This](https://www.freecodecamp.org/news/learn-to-code-book/#epilogue-you-can-do-this)
+## 前言：本书适合的人群
 
-## Preface: Who is This Book For?
+这本书适合所有正在考虑从事软件开发职位的人。
 
-This book is for anyone who is considering a career in software development.
+如果你打算从事一份工作时间灵活、薪资高、解决问题方式不死板的工作，软件开发职位很可能符合你的需求。
 
-If you're looking for a career that's flexible, high-paying, and involves a lot of creative problem solving, software development may be for you.
+当然，学习软件开发离不开这三点：**时间**、**钱**和**机遇**。
 
-Of course, each of us approaches our own coding journey with certain resources: **time**, **money**, and **opportunity**.
+你可能已人到中年，上有老下有小，平日空闲**时间**不多。
 
-You may be older, and may have kids or elderly relatives you're taking care of. So you may have less **time**.
+你可能很年轻，或许还不具备提升薪资的能力，因此还没有攒下**钱**。
 
-You may be younger, and may have had less time to build up any savings, or acquire skills that boost your income. So you may have less **money**.
+或者你所在的城市技术氛围不浓，离那些着重发展科技的城市（如旧金山、柏林、东京、班加罗尔）比较远。
 
-And you may live far away from the major tech cities like San Francisco, Berlin, Tokyo, or Bengaluru.
+还有人患有残疾；有人饱受年龄、种族、性别歧视；有人因移民身份或犯罪记录四处碰壁。
 
-You may live with disabilities, physical or mental. Agism, racism, and sexism are real. Immigration status can complicate the job search. So can a criminal record.
+对这些人来说，他们的**机遇**本身就比其他人少。
 
-So you may have less **opportunity**.
+每个人的起点不同，周围环境和资源也不尽相同；学习编程和找到开发者工作对这些人来说会比其他人更困难。
 
-Learning to code and getting a developer job is going to be harder for some people that it will be for others. Everyone approaches this challenge from their own starting point, with whatever resources they happen to have on hand.
+但无论你的起点和资源如何，我都会尽力给出我认为适合的建议。
 
-But wherever you may be starting out from – in terms of time, money, and opportunity – I'll do my best to give you actionable advice.
+总之，请继续读下去，你一定会有所收获。
 
-In other words: you are in the right place.
+#### 文中涉及的专业词汇
 
-#### A Quick Note on Terminology
+我会尽力在提到新词的时候顺便给出定义。
 
-Whenever I use new terms, I'll do my best to define them.
+有些词汇出现频率很高，比如：
 
-But there are a few terms I'll be saying all the time.
+“编程”（programming）和“写码”（coding）意思相同。
 
-I'll use the words "programming" and "coding" interchangeably.
+“应用”（app）是 application 的缩写；且这里的 app 是泛指，包括但不限于在手机、电脑、游戏主机甚至冰箱上运行的应用（译者注：作者不认为 app 是 iPhone 手机应用的专属称谓）。
 
-I'll use the word "app" as it was intended – as shorthand for any sort of application, regardless of whether it runs on a phone, laptop, game console, or refrigerator. (Sorry, Steve Jobs. iPhone does not have a monopoly on the word app.)
+“软件工程师”（software engineer）和“软件开发者”（software developer）意思相同。
 
-I will also use the words "software engineer" and "software developer" interchangeably.
+技术圈的一些人对此持有不同意见，仿佛“软件工程师”这一职位已饱经沧桑，其发展史横跨几个世纪，就好像机械工程师和土木工程师一样。也许多年后你的孙辈会这么认为，但至少目前，软件开发这一领域尚处于发展初期。
 
-You may encounter people in tech who take issue with this. As though software engineering is some fancy-pants field with a multi-century legacy, like mechanical engineering or civil engineering. And maybe that will be true for your grandkids. But we are still very much in the early days of software development as a field.
+以下引用一位名人说过的话：
 
-I'll just drop this quote here for you:
+> 如果建筑师像程序员写程序那样造房子，那么一只路过的啄木鸟就足以摧毁整个社会 —— 杰拉德·温伯格（计算机科学家、作家、大学讲师）
 
-> "If builders built buildings the way programmers wrote programs, then the first woodpecker that came along would destroy civilization." – Gerald Weinberg, Programmer, Author, and University Professor
+### 所有人都可以学习编程吗？
 
-### Can Anyone Learn to Code?
+是的，我坚信只要驱动力足够，人人都可以学习编程。归根结底，我认为学习编程是一个与驱动力有关的挑战，而不是靠天资吃饭。
 
-Yes. I believe that any sufficiently motivated person can learn to code. At the end of the day, learning to code is a motivational challenge – not a question of aptitude.
+曾经，我们的祖先在广袤的非洲草原上生活了几千年，然后才迁徙到了欧洲、亚洲和美洲。那时根本没有电脑。
 
-On the savannas of Africa – where early humans lived for thousands of years before spreading to Europe, Asia, and the Americas – were there computers?
+编程也显然不是经历了几千年发展的技术，计算机和智能手机是在 1980 - 2010 年间经历飞速发展的。
 
-Programming skills were never something that was selected for over the millennia. Computers as we know them (desktops, laptops, smartphones) emerged in the 80s, 90s, and 00s.
+虽然我也认同天资和兴趣可以让学习编程之路走得更加顺利，但对于想从事开发者职业的人来说，我觉得花时间去练习和敲代码才是正道。
 
-Yes – I do believe that aptitude and interest play a part. But at the end of the day, anyone who wants to become a professional developer will need to put in time at the keyboard.
+很多人是这样，他们会开始学习编程，然后遇到困难，同时感到非常受挫，进而放弃。
 
-A vast majority of people who try to learn to code will get frustrated and give up.
+我也放弃过，事实上我之前因为受挫放弃了好几次。
 
-I sure did. I got frustrated and gave up. Several times.
+但和那些最终成功入行的人一样，我都是在放弃后的几天调整好心情，然后重新回来接受挑战。
 
-But like other people who eventually succeeded, I kept coming back after a few days, and tried again.
+说了这么多，我是像告诉你：学习编程并获得一份开发者工作其实并不容易；对于一些有特殊情况的人来说更是难上加难。
 
-I say all this because I want to acknowledge: learning to code and getting a developer job is hard. And it's even harder for some people than others, due to circumstance.
+我不想在这里为自己编造一个逆境翻盘的人设。我是从 30 多岁开始学习编程的，在这之前我也确实没有任何编程或计算机科学的学习经验。不过：
 
-I'm not going to pretend to have faced true adversity in learning to code. Yes, I was in my 30s, and I had no formal background in programming or computers science. But consider this:
+我在美国中产阶级的家庭里长大，我是这个家庭的第四代，而且我的母语是英语。我读过大学，我的父亲和爷爷也都读过大学；我的曾祖父（爷爷的父亲）是来自瑞典的农民。
 
-I grew up middle class in the United States – a 4th-generation American from an English-speaking home. I went to university. My father went to university. And his father went to university. (His parents before him were farmers from Sweden.)
+这几代以来，我的家庭很幸运，至少我们没有受到战争、饥荒、奴隶制的影响。
 
-I benefitted from a sort of intergenerational privilege. A momentum that some families are able to pick up over time when they are not torn apart by war, famine, or slavery.
+因此，在我身上并没有逆境翻盘的剧本，我也不打算编造这样的故事来激励你。
 
-So that is my giant caveat to you: I am not some motivational figure to pump you up to overcome adversity.
+如果你对这类经历感兴趣，其实开发者社区中有一些人经历过逆境翻盘，稍后我会在这本书里提到一些人，供你参考。
 
-There are a ton of people in the developer community who have overcome real adversity. And I'll reference those people later in the book if you want to seek out their teachings.
+我不打算吹捧软件开发，也不打算为学习编程这件事情画饼，构建出一个虚幻的乌托邦。
 
-I'm not seeking to elevate the field of software development. I'm not going to paint pictures of science fiction utopias that can come about if you learn to code.
+相反地，我只会为你提供学习技术的方法建议，以及如何获得一份可以养家糊口的好工作。
 
-Instead, I'm just going to give you practical tips for how you can acquire these skills. And how you can go get a good job, so you can provide for your family.
+如果你学习编程的目的是找一份好的、稳定的工作，那没问题。
 
-There's nothing wrong with learning to code because you want a good, stable job.
+或者你学习编程的目的是为了自己创业，那也没问题。
 
-There's nothing wrong with learning to code so you can start a business.
+一些人认为，学习编程最重要的是要对编程有极大的兴趣，而且要有全身心投入学习编程的决心：就是那种甘愿辞掉自己工作，一周七天都在搞开源项目，并乐在其中。
 
-You may encounter people who say that you must be so passionate about coding that you dream about it. That you clock out of your full-time job, then spend all weekend contributing to open source projects.
+我确实认识一些对编程有*如此*兴趣的人，但同时我也认识很多不这么硬核的人：他们在一周的劳顿后，更愿意在周末探索自然，或者和朋友玩桌游。
 
-I do know people who are *that* passionate about coding. But I also know plenty of people who, after finishing a hard week's work, just want to go spend time in nature, or play board games with friends.
+人都是这样，我们会更倾向于做自己擅长的事情。你会在学习写代码的过程中逐渐提升自己的编程水平，进而提升对编程的兴趣。
 
-People generally enjoy doing things they're good at doing. And you can develop a reasonable level of passion for coding just by getting better at coding.
+那么说到底，这本书的受众到底是谁？其实就是想要学习编程、并获得一份开发者工作的每个人。
 
-So in short: who is this book for? Anyone who wants to get better at coding, and get a job as a developer. That's it.
+无论你本身是“极客”，还是个内向的人，或者你是个理性的激进分子，你都可以学习编程。
 
-You don't need to be a self-proclaimed "geek", an introvert, or an ideologically-driven activist. Or any of those stereotypes.
+或者你还有以上没提到的其他特质，那也无妨。这些都不会成为你学习编程道路上的绊脚石。
 
-It's fine if you are. But you don't need to be.
+总之，只要你是想学好编程并通过编程赚钱的人，那这本书就是为你量身打造的。
 
-So if that's you – if you're serious about learning to code well enough to get paid to code – this book is for you.
+在通读此书前，请你花一点时间读完以下的概论章节。
 
-And you should start by reading this quick summary of the book. And then reading the rest of it.
+## 概论
 
-## 500 Word Executive Summary
+学习编程本身并不容易，而想要拿到一份软件开发职位其实更难。不过对于大多数人来说，这份努力一定是值得的。
 
-Learning to code is hard. Getting a job as a software developer is even harder. But for many people, it's worth the effort.
+编程是高薪的、包含创新性工作的脑力劳动。职业发展路线也很明确：高级开发、技术领头人、管理岗、CTO，然后或许可以成为 CEO。
 
-Coding is a high-paying, intellectually challenging, creatively rewarding field. There is a clear career progression ahead of you: senior developer, tech lead, engineering manager, CTO, and perhaps even CEO.
+任何行业都需要软件开发。在所有软件开发职位中，非技术类公司约占 66%；这类公司包括农业、制造业、政府部门、以及像是银行和医院这样的服务业。
 
-You can find work in just about any industry. About two thirds of developer jobs are outside of what we traditionally call "tech" – in agriculture, manufacturing, government, and service industries like banking and healthcare.
+如果你很担心软件开发这一职业会在你退休之前被自动化工具取代，不妨这样考虑：编程本身就是在让事情自动化。因此就算将来编程可以自动化，那也不会是最先被自动化取代的职业。
 
-If you're worried your job might be automated before you reach retirement, consider this: coding is the act of automating things. Thus it is by definition the last career that will be completely automated.
+如果你看到了这里，希望你和我的想法一致，认为软件开发是一份不错的职业。接下来，咱们来讨论下如何进入软件开发领域吧。
 
-Have I sold you on coding as a good career for you? Then here's what you need to do to break into the field.
+### 打造自己的技术栈
 
-### Build your skills.
+你需要学习如下内容：
 
-You need to learn:
+- 前端开发：HTML、CSS、JavaScript
+- 后端开发：SQL、Git、Linux、网页服务器
+- 科学运算：Python 及其相关[库](https://zh.wikipedia.org/wiki/%E5%87%BD%E5%BC%8F%E5%BA%AB)
 
-- Front End Development: HTML, CSS, JavaScript
-- Back End Development: SQL, Git, Linux, and Webservers
-- Scientific Computing: Python and its many libraries
+以上提到的都是有 20 多年的发展史，而且发展相对成熟的领域。不论你将来为哪家公司效劳，都大概率会用到上面提到的这些技术。
 
-These are all mature, 20+ year old technologies. Whichever company you work for, you will almost certainly use most of these tools.
+学习这些东西的最好方式是做项目，最好是在学习过程中坚持一天做几个小项目。顺便，freeCodeCamp 上的课程里总共有几十个项目。
 
-The best way to learn these tools is to build projects. Try to code at least some every day. If you do the freeCodeCamp curriculum from top to bottom, you'll learn all of this and build dozens of projects.
+![免费学-编程-适合忙碌人士的编程课程--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png) freeCodeCamp 核心课程里的一些板块（Certification：认证）。
 
-![Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--](https://www.freecodecamp.org/news/content/images/2023/01/Learn_to_Code_-_For_Free_-_Coding_Courses_for_Busy_People_--.png)Some of the certifications in the freeCodeCamp core curriculum.
+### 拓展自己的人脉
 
-### Build your network.
+人脉广的人一般能更快找到自己想要的工作。
 
-So much of getting a job is who you know.
+内向虽然不是问题，但有时候你或多或少要跳出自己的舒适圈。
 
-It's OK to be an introvert, but you do need to push your boundaries.
+不如从为自己创建 GitHub、Twitter、LinkedIn 和 Discord 账号开始吧。
 
-Create GitHub, Twitter, LinkedIn, and Discord accounts.
+尽量多参加技术会议，哪怕是需要坐火车、高铁、飞机去的那种。我建议你把学习编程的资金预算花在通勤和技术会议门票上，而不是花在购买书和课程上。
 
-Go to tech meetups and conferences. Travel if you have to. (Most of your "learn to code" budget should go toward travel and event tickets – not books and courses.)
+多与有识之士攀谈，认真听取他们的观点，而且记住他们的名字。
 
-Greet people who are standing by themselves. Let others do most of the talking, and really listen. Remember people's names.
+然后在 LinkedIn 上添加他们为好友，在 Twitter 上关注他们。如果你参加的技术会议有会后聚餐的安排，不要错过。
 
-Add people on LinkedIn, follow them on Twitter, and go to after-parties.
+### 提升自己的圈内名声。
 
-### Build your reputation.
+可以考虑为自己做的项目录制一段 demo，然后发到网上。
 
-Share short video demos of your projects.
+尝试申请成为技术会议的演讲人，越大型的会议越好。
 
-Keep applying to speak at bigger and bigger conferences.
+在程序员的聊天频道里，花一些时间帮助那些比你晚入行的朋友们。
 
-Hang out at hackerspaces and help people who are even newer to coding than you.
+参与贡献开源项目。开源项目的开发和公司里的软件开发其实有很多相似之处。
 
-Contribute to open source. The work is similar to professional software development.
+**这些事情可以同时做，没有先后顺序。**不要拖延。
 
-**Build all 3 of these at the same time.** Don't let yourself procrastinate the scariest parts.
+与其海投职位等结果，不如考虑多认识些人，让他们帮你内推。哪怕你认识人力资源部门的朋友，也会有帮助。
 
-Instead of applying for jobs through the "front door", use your network to land job interviews through the "side door". Recruiters can help, too.
+在拿到 offer 之前，不要停下面试的脚步；甚至你也可以选择不接受第一份 offer，要有耐心。
 
-Keep interviewing until you start getting job offers. You don't need to accept the first offer you get, though. Be patient.
+你的第一份开发职位一定是对你来说最有挑战性的。建议考虑至少做两年。别忘了，在这个过程中，你不只是在学习，还有收入。
 
-Your first developer job will be the hardest. Try to stay there for at least 2 years, and essentially get paid to learn.
+找到工作也绝不意味着学习的终止。事实上，在公司与团队合作和维护代码都是学习的过程。
 
-The real learning begins once you're on-the-job, working alongside a team, and with large legacy codebases.
+当然，身体健康一样重要。别忘了按时作息，保证睡眠和运动。
 
-Most importantly, sleep and exercise.
+只要有足够的驱动力，任何人都可以学习编程并找到一份开发工作。
 
-Any sufficiently-motivated person can learn to code well enough to get a job as a developer.
+区别只是你有多想成为开发者，以及你在找工作的过程中有多坚持。
 
-It's just a question of how badly you want it, and how persistent you can be in the job search.
+保持信念：你一定可以的！
 
-Remember: you can do this.
+谨以此书献给 freecodecamp 全球社区成员。
 
-## This Book is Dedicated to the Global freeCodeCamp Community.
+感谢所有在过去 8 年中支持我们的慈善机构和使命的人们。
 
-Thank you to all of you who have supported our charity and our mission over the past 8 years.
+正是通过你们的志愿服务，通过你们的慈善事业，我们才能够帮助这么多人学习代码，获得他们的第一份开发者工作。
 
-It is through your volunteerism and through your philanthropy that we've been able to help so many people learn to code and get their first developer job.
+从 2014 年我第一次部署的那个简陋的开源项目开始，这个社区已经发展得非常好。我现在只是这个全球社区的一个小部分。
 
-The community has grown so much from the humble open source project I first deployed in 2014. I am now just a small part of this global community.
+我很荣幸还能在这里，与你们大家一起工作。我们一起面对我们这个时代的基本问题。获取信息。获得教育的机会。以及获得塑造未来的工具的机会。
 
-It is a privilege to still be here, working alongside you all. Together, we face the fundamental problems of our time. Access to information. Access to education. And access to the tools that are shaping the future.
+这些仍然是早期的事情。我不幻想在我的有生之年每个人都能知道如何编码。但是，就像古腾堡圣经在 1455 年加速了扫盲一样，我们可以通过免费、开放的学习资源继续加速技术扫盲。
 
-These are still early days. I have no illusion that everyone will know how to code within my lifetime. But just like the Gutenberg Bible accelerated literacy in 1455, we can continue to accelerate technology literacy through free, open learning resources.
+再次感谢大家。
 
-Again, thank you all.
+并特别感谢 Abbey Rennemeyer 的编辑反馈，以及 Estefania Cassingena Navone 的图书封面设计。
+ 
+而现在，你能看到这本书。
 
-And special thanks to Abbey Rennemeyer for her editorial feedback, and to Estefania Cassingena Navone for designing the book cover.
+## Chapter 1: 如何培养你的技能
 
-And now, the book.
+> "每个艺术家一开始都是业余爱好者。" ― Ralph Waldo Emerson
 
-## Chapter 1: How to Build Your Skills
+掌握如何编程是一条漫长的道路。
 
-> "Every artist was first an amateur." ― Ralph Waldo Emerson
+对我来说，这是条崎岖的路。
 
-The road to knowing how to code is a long one.
+但对你来说不必这样。
 
-For me, it was an ambiguous one.
+在这个章节，我将分享如何丝滑地学习编程的一些策略。
 
-But it doesn't have to be like that for you.
+首先，请让我带你了解我在 2011 年是如何学习编程的。
 
-In this chapter, I'm going to share some strategies for learning to code as smoothly as possible.
+之后我会分享在这过程中我学到了什么。
 
-First, allow me to walk you through how I learned to code back in 2011.
+我会向你展示如何学习比我更有效。
 
-Then I'll share what I learned from this process.
+### 故事时间：一个 30 多岁的老师是怎么教他自己编程的？
 
-I'll show you how to learn much more efficiently than I did.
+我曾是运营一间英文学校的老师。我们有大概 100 个从世界各地前往加州的成年学生。他们通过学习提高英语能力以进入研究生学校。
 
-### Story Time: How Did a Teacher in His 30s Teach Himself to Code?
+学校的大部分老师热爱教学。他们热衷于和学生在城市闲逛，以帮助他们提高口语能力。
 
-I was a teacher running an English school. We had about 100 adult-aged students who had traveled to California from all around the world. They were learning advanced English so they could get into grad school.
+但这些老师并不喜欢文书工作：出勤报告、成绩报告、移民文书。
 
-Most of our school's teachers loved teaching. They loved hanging out with students around town, and helping them improve their conversational English.
+我希望老师们能花更多的时间和学生一起度过。更少的时间被束缚在办公桌上做文书工作。
 
-What these teachers didn't love was paperwork: Attendance reports. Grade reports. Immigration paperwork.
+但我对计算机了解什么呢？
 
-I wanted our teachers to be able to spend more time with students. And less time chained to their desks doing paperwork.
+编程？难道不需要聪明才智就能会编程吗？我甚至不能配置一个 WiFi 路由器。并且我讨厌数学。
 
-But what did I know about computers?
+直到有一天，我决定把一切都抛到一边，然后想：“我要去试一试编程。试一试我能失去什么呢？”
 
-Programming? Didn't you have to be smart to do that? I could barely configure a WiFi router. And I sucked at math.
+我开始在谷歌上搜索诸如“如何自动点击浏览网站”之类的问题。以及“如何将网站数据导入 Excel”。
 
-Well one day I just pushed all that aside and thought "You know what: I'm going to give it a try. What do I have to lose?"
+我当时没有意识到，我正在学习如何自动化工作流程。
 
-I started googling questions like "how to automatically click through websites." And "how to import data from websites into Excel."
+于是学习开始了。首先是 Excel 的宏。然后是一个叫 AutoHotKey 的工具，在那里你可以对你的鼠标进行编程，使其移动到屏幕的某些坐标上，点击，复制文本，然后移动到不同的坐标上并粘贴它。
 
-I didn't realize it at the time, but I was learning how to automate workflows.
+摸索了几周后，我想出了如何将一些任务自动化的方法。我可以打开一个 Excel 电子表格和一个网站，运行我的脚本，10 分钟后回来，电子表格将被完全填充。
 
-And the learning began. First with Excel macros. Then with a tool called AutoHotKey where you can program your mouse to move to certain coordinates of a screen, click around, copy text, then move to different coordinates and paste it.
+这是一个业余爱好者做的事。开发人员可能称之为 "肮脏的黑客"。但它完成了工作。
 
-After a few weeks of grasping in the dark, I figured out how to automate a few tasks. I could open an Excel spreadsheet and a website, run my script, then come back 10 minutes later and the spreadsheet would be fully populated.
+我利用我新发现的自动化技能，继续简化学校的工作。
 
-It was the work of an amateur. What developers might call a "dirty hack". But it got the job done.
+很快，老师们几乎不需要碰电脑。我只是用我最基本的技能，就完成了几个老师的工作。
 
-I used my newfound automation skills to continue streamlining the school.
+这对学校产生了明显的影响。我们的很多时间都被电脑上机械的工作捆绑住了。而现在我们有了自由。
 
-Soon teachers barely had to touch a computer. I was doing the work of several teachers, just with my rudimentary skills.
+老师们更高兴了。他们花了更多时间与学生相处。
 
-This had a visible impact on the school. So much of our time had been tied up with rote work on the computer. And now we were free.
+学生们也更高兴了。他们告诉他们在家乡的所有朋友，"你一定要来看看这所学校"。
 
-The teachers were happier. They spent more time with students.
+很快，我们成为整个学校系统中最成功的学校之一。
 
-The students were happier. They told all their friends back in their home country "you've got to check out this school."
+这让我更有底气。我记得我自己在想："也许我可以学习编码。"
 
-Soon we were one of the most successful schools in the entire school system.
+我在棋牌游戏之夜认识了一些软件工程师。他们有传统的教育背景，拥有加州理工学院、哈维穆德学院和其他著名计算机科学课程的学位。
 
-This further emboldened me. I remember thinking to myself: "Maybe I **can** learn to code."
+在当时，30 多岁的人学习编程的情况要少得多。
 
-I knew some software engineers from my board game night. They had traditional backgrounds, with degrees from Cal Tech, Harvey Mudd, and other famous Computer Science programs.
+我鼓起勇气与这些朋友中的一些人分享我的梦想。
 
-At the time, it was far less common for people in their 30s to learn to code.
+我想学习如何正确编程。我希望能够像他们那样以写代码为生。也许还能写出能为学校赋能的软件。
 
-I worked up the courage to share my dreams with some of these friends.
+我将与我的开发者朋友分享这些梦想。"我想做你做的事"。
 
-I wanted to learn to how program properly. I wanted to be able to write code for a living like they did. And to maybe even write software that could power schools.
+但他们会耸耸肩。然后他们会说一些类似的话：
 
-I would share these dreams up with my developer friends. "I want to do what you do."
+"我的意思是，你可以试试。但你将不得不饮下整个知识的海洋。"。
 
-But they would sort of shrug. Then they'd say something like:
+"这是个竞争相当激烈的领域。你怎么能和那些从小就开始编码的人混在一起？"
 
-"I mean, you could try. But you're going to have to drink an entire ocean of knowledge."
+"你作为一名教师已经做得很好了。你为什么不坚持做你擅长的事情？"
 
-And: "It's a pretty competitive field. How are you going to hang with people who grew up coding from an early age?"
+这让我几周里都无法正常工作。我会在晚上进行长时间的反思性散步。我会在星空下思索我的未来。这些人是对的吗？我是说--他们真的知道，对吗？
 
-And: "You're already doing fine as a teacher. Why don't you just stick with what you're good at?"
+但每天早上我都会回到我的办公桌前。看着我的脚本运行。看着我的报告以超人的速度自行编译。看着我的电脑为我效劳。
 
-And that would knock me off course for a few weeks. I would go on long, soul-searching walks at night. I would ponder my future under the stars. Were these people right? I mean – they would know, right?
+我确实想到了一个问题：也许这些朋友只是想把我从心痛中拯救出来。也许他们只是不知道有谁在 30 多岁时学会了编程。所以他们认为这是不可能的。
 
-But every morning I'd be back at my desk. Watching my scripts run. Watching my reports compile themselves at superhuman speeds. Watching as my computer did my bidding.
+这就像……多年来，医生认为一个人在 4 分钟内跑完一英里是不可能的。他们认为你的心脏会因为跑得太快而爆炸。
 
-A thought did occur to me: maybe these friends were just trying to save me from heartache. Maybe they just don't know anyone who learned to code in their 30s. So they don't think it's possible.
+但后来有人成功做到了。并且他的心脏没有爆炸。
 
-It's like... for years doctors thought that it would be impossible for someone to run a mile in 4 minutes. They thought your heart would explode from running so fast.
+Roger Bannister ——一个 25 岁的牛津大学学生--打破了这个心理障碍--其他许多人也都做到了。迄今为止，已有超过 1000 人跑出了 4 分钟以下的成绩。
 
-But then somebody managed to do it. And his heart did not explode.
+![Roger-Bannister-1951_jpg__1269-1600_](https://www.freecodecamp.org/news/content/images/2023/01/Roger-Bannister-1951_jpg__1269-1600_.png)像冠军一样奔跑 (照片来源: 大英百科全书)
 
-Once Roger Bannister – a 25-year old Oxford student – broke that psychological barrier – a ton of other people did it, too. To date, more than 1,000 people have run a sub-4 minute mile.
+而且，我也不是在做什么大胆的、史无前例的事情，比如在这里跑了 4 分钟的路程。多年来，很多著名的开发者都设法自学了编程。
 
-![Roger-Bannister-1951_jpg__1269-1600_](https://www.freecodecamp.org/news/content/images/2023/01/Roger-Bannister-1951_jpg__1269-1600_.png)Roger Bannister running like a a champ. (Image: Britannica)
+哎呀，Ada Lovelace 在 19 世纪 40 年代就自学了编程。而她甚至没有一台可用的计算机。她只是了解了她的朋友 Charles Babbage 的计算机在理论上是如何工作的。
 
-And it's not like I was doing something bold and unprecedented as running a 4 minute mile here. Plenty of famous developers have managed to teach themselves coding over the years.
+她写了几个最早的计算机算法。她被公认是世界上第一个计算机程序员。没有人教她。因为没有人可以教她。无论她有什么自我怀疑，她显然克服了这种怀疑。
 
-Heck, Ada Lovelace taught herself programming in the 1840s. And she didn't even have a working computer. She just had an understanding of how her friend Charles Babbage's computer would work in theory.
+我不是 Ada Lovelace。我只是一个拥有一台可用的电脑、良好的互联网连接，并且能够使用 Google 搜索数十亿个网页的老师。
 
-She wrote several of the first computer algorithms. And she's widely regarded as the world's first computer programmer. Nobody taught her. Because there was nobody to teach her. Whatever self doubt she may have had, she clearly overcame it.
+我掰开指关节，眯起眼睛。我要自学编程。
 
-I was no Ada Lovelace. I was just some teacher who already had a working computer, a decent internet connection, and the ability to search through billions of webpages with Google.
+### 陷入教程地狱
 
-I cracked my knuckles and narrowed my gaze. I was going to do this.
+> "如果你工作了 10 年，你是得到了 10 年的经验还是得到了 1 年 10 次重复的经验？你必须对你的活动进行反思，以获得真正的经验。如果你把学习作为一个持续的承诺，你会得到经验。如果你不这样做，你就不会，无论你有多少年的经验。" - Steve McConnell，软件工程师
 
-### Stuck in Tutorial Hell
+在接下来的几个星期里，我花了很多时间在谷歌上搜索，并做一些在网上遇到的随机教程。
 
-> "If you work for 10 years, do you get 10 years of experience or do you get 1 year of experience 10 times? You have to reflect on your activities to get true experience. If you make learning a continuous commitment, you’ll get experience. If you don’t, you won’t, no matter how many years you have under your belt." – Steve McConnell, Software Engineer
+哦，看，一个 Ruby 教程。
 
-I spent the next few weeks googling around, and doing random tutorials that I encountered online.
+呃，哦，开始变得困难了。我得到了教程中没有提到的错误信息。嗯……这到底是怎么回事……
 
-Oh look, a Ruby tutorial.
+哦，看，一个 Python 教程。
 
-Uh-oh, it's starting to get hard. I'm getting error messages not mentioned in the tutorial. Hm... what's going on here...
+人类的心理是个有趣的东西。当事情开始变得困难的时候，我们会问：我这样做对吗？
 
-Oh look, a Python tutorial.
+也许这个教程已经过时了。也许它的作者不知道他们在说什么。甚至还有人在使用这种编程语言吗？
 
-Human psychology is a funny thing. The moment something starts to get hard, we ask: am I doing this right?
+当你在编码过程中面对模棱两可的错误信息时，邻家的草分外青，这山望着那山高。
 
-Maybe this tutorial is out of date. Maybe its author didn't know what they were talking about. Does anybody even still use this programming language?
+假装我已经取得了进展是很容易的。是时候去吃午饭了。
 
-When you're facing the ambiguous error messages hours into a coding session, the grass on the other side starts to look a lot greener.
+我在咖啡馆里遇到一个朋友。"你的编码工作进展如何？"他们会问。
 
-It was easy to pretend I'd made progress. Time to go grab lunch.
+"很好。我今天已经编码了 4 个小时。"
 
-I'd see a friend at the café. "How's your coding going?" they'd ask.
+"太棒了。有机会我很想看看你在做什么。"
 
-"It's going great. I already coded 4 hours today."
+"当然，"我说，即使我知道我什么都没做。"很快你可以看到。"
 
-"Awesome. I'd love to see what you're building sometime."
+也许我会去书店，买一本新的 JavaScript 书。
 
-"Sure thing," I'd say, knowing that I'd built nothing. "Soon."
+买书是世界上最好的感觉。因为这也有种你在购买时间来阅读它们的感觉。
 
-Maybe I'd go to the book store and get a new JavaScript book.
+而这正是我在学习代码的几周后的情况。
 
-Buying books is the best feeling in the world. Because it also feels like you're buying the time to read them.
+我读了几本编程书籍的前 100 页，但没有完成任何一本。
 
-And this is precisely where I found myself a few weeks into learning to code.
+我写了几本编程教程的前 100 行代码，但没有完成。
 
-I had read the first 100 pages of several programming books, but finished none.
+我不知道，但我被困在了一个被开发者亲切地称为 "教程地狱 "的地方。
 
-I had written the first 100 lines of code from several programming tutorials, but finished none.
+教程地狱是指你从一个教程跳到另一个教程，重新学习同样的基本原理。但从未真正超越基本原理。
 
-I didn't know it, but I was trapped in place that developers lovingly call "tutorial hell."
+因为超越基本原理——这需要一些真正的努力。
 
-Tutorial hell is where you jump from one tutorial to the next, learning and then relearning the same basic things. But never really going beyond the fundamentals.
+###培养一个程序员需要一个村庄
 
-Because going beyond the fundamentals – that requires some real work.
+学习编程榨干了我所有的空闲时间。但我并没有取得什么进展。我现在可以在不看键盘的情况下输入`{`和`*`字符。但也就这样了。
 
-### It Takes a Village to Raise a Coder
+我知道我需要帮助。也许是一些像 Yoda 一样的导师，他可以教我方法。是的，如果有这样的人存在，那肯定会让一切变得不同。
 
-Learning to code was absorbing all of my free time. But I wasn't making much progress. I could now type the `{` and `*` characters without looking at the keyboard. But that was about it.
+我发现附近有一个叫做 "黑客空间 "的地方。当我第一次听到这个名字时，我有点忐忑不安。难道黑客不做非法的事情吗？我是一名英语教师，喜欢玩棋盘游戏。我并不是在找麻烦。
 
-I knew I needed help. Perhaps some Yoda-like mentor, who could teach me the ways. Yes – if such a person existed, surely that would make all the difference.
+好吧，我拨通了列出的号码，和一个叫 Steve 的人交谈。我紧张地问："你们不做违法的事，是吗？" Steve 笑了起来。
 
-I found out about a nearby place called a "hackerspace." When I first heard the name, I was a bit apprehensive. Don't hackers do illegal things? I was an English teacher who liked playing board games. I was not looking for trouble.
+事实证明，"黑客 "这个词被他称为一个超负荷的术语。是的-——"黑客 "可以指恶意闯入一个软件系统。但 "黑客 "也可以指更平凡的事情：编写计算机代码。
 
-Well I called the number listed and talked with a guy named Steve. I nervously asked: "You all don't do anything illegal, do you?" And Steve laughed.
+一些东西可以是 "黑客"，意味着它不是一个优雅的解决方案。然而，你可以有 "聪明的黑客"———一个巧妙的技巧，使你的代码更有效地工作。
 
-It turns out the word "hack" is what he called an overloaded term. Yes – "to hack" can mean to maliciously break into a software system. But "to hack" can also mean something more mundane: to write computer code.
+简而言之：不要害怕 "黑客 "这个词。
 
-Something can be "hacky" meaning it's not an elegant solution. And yet you can have "a clever hack" – an ingenious trick to make your code work more efficiently.
+![1200x-1_jpg__1200-797_](https://www.freecodecamp.org/news/content/images/2023/01/1200x-1_jpg__1200-797_.png)Facebook 的企业园区在混凝土上用巨大的字母写着“hack”一词。 （图片来源：彭博社）
 
-In short: don't be scared of the term "hack."
+就我而言，我很少使用这个词，因为它太令人困惑了。而且我认为最近很多黑客空间已经意识到了这种模糊性。他们中的许多人现在称自己为 "创客空间"。
 
-![1200x-1_jpg__1200-797_](https://www.freecodecamp.org/news/content/images/2023/01/1200x-1_jpg__1200-797_.png)Facebook's corporate campus has the word "hack" written in giant letter on the concrete. (Image: Bloomberg)
+因为这就是创客空间的全部内容--制造东西。
 
-I, for one, scarcely use the term because it's so confusing. And I think recently a lot of hackerspaces have picked up on the ambiguity. Many of them now call themselves "makerspaces" instead.
+Steve 邀请我在星期六下午参观黑客空间。他说该地区的几个开发人员会在那里。
 
-Because that's what a hackerspace is all about – making things.
+当我第一次走进 Santa Barbara 黑客空间的大门时，我被震撼了。
 
-Steve invited me to visit the hackerspace on Saturday afternoon. He said several developers from the area would be there.
+这个地方闻起来有一股电气的味道。临时搭建的桌子上摆放着电烙铁、LED 灯条、业余爱好者的 Arduino 电路板和成堆的 Roomba 真空机器人。
 
-The first time I walked through the doors of the Santa Barbara Hackerspace, I was blown away.
+与我通过电话的那个 Steve 也在那里，他向我问好。他戴着眼镜，头发向后梳理，留着山羊胡须。他总是面带微笑。当你问他问题时，他不会迅速回答，而是先点点头，思考几秒钟。
 
-The place smelled like an electric fire. Its makeshift tables were lined with soldering irons, strips of LED lights, hobbyist Arduino circuit boards, and piles of Roomba vacuum robots.
+Steve 是一个充满激情的程序员，曾在加州大学圣巴巴拉分校学习数学和哲学。他对这些学科仍然充满热情。但他真正的热情是 Python。
 
-The same Steve I'd spoken to on the phone was there, and he greeted me. He had glasses, slicked back hair, and a goatee beard. He was always smiling. And when you asked him a question, instead of responding quickly, he would nod and think for a few seconds first.
+Steve 打开了投影仪，做了一个非正式的 "闪电演讲"。他正在演示他写的一个应用程序，该程序可以识别视频中的二维码，并将其替换为图像。
 
-Steve was a passionate programmer who had studied math and philosophy at the University of California – Santa Barbara. He was still passionate about those subjects. But his real passion was Python.
+观众中有人在他们的笔记本电脑上调出了一个二维码，并把它放在摄像机前。然后， Steve 的应用程序将二维码替换成一张比萨饼的图片。
 
-Steve turned on the projector and gave an informal "lightning talk." He was demoing an app he'd written that would recognize QR codes in a video and replace them with images.
+观众中有人喊道："你能让比萨饼旋转吗？"
 
-Someone in the audience pulled up a QR code on their laptop and held it in front of the camera. Steve's app then replaced the QR code with a picture of a pizza.
+Steve 在一个名为 Emacs 的代码编辑器中打开了他的代码，并开始实时地对其进行修改。他毫不费力地在他的代码编辑器、命令行和应用程序运行的浏览器之间进行切换，"热加载 "代码的更新。
 
-Somebody in the audience shouted, "Can you make the pizza spin?"
+对我来说，这就是魔法。我无法相信 Steve 在几个小时内就完成了这个应用程序。而现在，他正在根据听众的要求，不断增加新的功能。
 
-Steve opened up his code in a code editor called Emacs, and started making changes to it in real time. He effortlessly tabbed between his code editor, his command line, and the browser the app was running in, "hot loading" updates to the code.
+我想："这家伙是个天才"。
 
-For me, this was sorcery. I couldn't believe Steve had just busted out that app over the course of few hours. And now he was adding new features on the fly, as the audience requested them.
+那天晚上，活动结束后，我和他留了下来，我这样告诉他。
 
-I thought: "This guy is a genius."
+我们一起吃了三明治。我对他说："我可以在我的整个职业生涯中编码，但不能像你一样好。如果 10 年后我的代码能达到你的一半，我就很高兴了。"
 
-And that evening, after the event ended, he and I stayed after and I told him so.
+但 Steve 反驳了我，他说："我没有什么特别的。不要限制自己。如果你坚持编码，你可以轻易地超过我。"
 
-We ate sandwiches together. And I said to him: "I could code for my entire career and not be as good as you. I would be thrilled if after 10 years I could code even half as well as you."
+我丝毫不相信他对我说的那些话。但是，仅仅是他说这句话的事实就使我产生了蝴蝶效应。
 
-But Steve pushed back. He said, "I'm nothing special. Don't limit yourself. If you stick with coding, you could easily surpass me."
+他是一个相信我的开发者。他看到了我——一个奇怪的老师——一个 "脚本小子 "的定义——并认为我可以成功。
 
-I didn't for a second believe the words he said to me. But just the fact that he said it gave me butterflies.
+Steve 和我一直聊到深夜。他给我看了他那台价值 200 美元的上网本电脑，即使以 2011 年的标准来看，它的性能也是非常差的。
 
-Here he was: a developer who believed in me. He saw me – some random teacher – the very definition of a "script kiddie" – and thought I could make it.
+"你不需要一个强大的电脑来构建软件，" Steve 告诉我。"今天的硬件是令人难以置信的强大。计算机之所以慢，只是因为它们运行的臃肿软件使它们变慢。买一台现成的笔记本电脑，清空硬盘，在上面安装 Linux，然后开始编码。"
 
-Steve and I talked late into the night. He showed me his $200 netbook computer, which even by 2011 standards was woefully underpowered.
+我记下了他的笔记本电脑的型号，并在当晚回家后订购了完全相同的一台。
 
-"You don't need a powerful computer to build software," Steve told me. "Today's hardware is incredibly powerful. Computers are only slow because the bloated software they run makes them slow. Get an off-the-shelf laptop, wipe the hard drive, install Linux on it, and start coding."
+在用 Stack Overflow 调试了我的新电脑几天后，我成功地安装了 Ubuntu。我开始学习如何使用 Emacs 代码编辑器。到了下一个星期六，我知道了一些命令，并很快就把它们展示了出来。
 
-I took note of the model of laptop he had and ordered the exact same one when I got home that night.
+Steve 点头表示赞同。他说，"太棒了。但你在码什么？"
 
-After a few days of debugging my new computer with Stack Overflow, I successfully installed Ubuntu. I started learning how to use the Emacs code editor. By the following Saturday, I knew a few commands, and was quick to show them off.
+我不明白他的意思。"我在学习如何使用 Emacs。来看看。我记住了……"
 
-Steve nodded in approval. He said, "Awesome. But what are you building?"
+但 Steve 看起来若有所思。"这些很酷。但你需要一个项目。总要有一个项目。然后学习你在完成该项目过程中需要学习的东西。"
 
-I didn't understand what he meant. "I'm learning how to use Emacs. Check it out. I memorized..."
+我除了帮学校的老师写的几个脚本之外，我从来没有完成过任何东西。但我开始明白他所说的是什么意思。
 
-But Steve looked pensive. "That's cool and all. But you need a project. Always have a project. Then learn what you need to learn en route to finishing that project."
+这一刻我恍然大悟。一直以来，我都被困在教程的地狱里，兜兜转转，什么也没完成。
 
-我除了帮助学校的老师写的几个脚本之外，我从来没有完成过任何东西。但我开始明白他所说的是什么意思。
+Steve 说："我希望你用 HTML5 建立一个项目。下周六，我希望你在黑客空间（hackerspace）展示它。"
 
-这一刻我恍然大悟了。一直以来，我都被困在教程的地狱里，兜兜转转，什么也没完成。
-
-史蒂夫说："我希望你用HTML5建立一个项目。下周六，我希望你在黑客空间（hackerspace）展示它。"
-
-听到他的话，我感到很羞愧。但我站直了身子，对他说： "这个计划听起来不错。我这就开始做。"
+听到他的话，我感到很羞愧。但我站直了身子，对他说："这个计划听起来不错。我这就开始做。"
 
 ### 除了你，没有人可以让你成为一个开发者
 
-> "我试着解放你的心灵，尼奥。 但我只能带你到门口，你必须自己走过去。" （莫斐斯，1999年电影《黑客帝国》） 
+> "我试着解放你的心灵，尼奥。 但我只能带你到门口，你必须自己走过去。" （莫斐斯，1999 年电影《黑客帝国》） 
 
-第二天早上，我在上班前起得特别早，在网上搜索 "HTML5教程 "之类的东西。在之前的教程地狱中，我已经了解了很多相关知识。我没有跳过，而是放慢脚步，准确地跟着教程走，输入每一条命令。
+第二天早上，我在上班前起得特别早，在网上搜索 "HTML5 教程 "之类的东西。在之前的教程地狱中，我已经了解了很多相关知识。我没有跳过，而是放慢脚步，准确地跟着教程走，输入每一条命令。
 
-通常情况下，一旦我完成一个教程，我就会去找另一个教程。但是，我却开始玩起了教程中的代码。我对自己想做的项目有了初步的想法，我打算制作一个纯HTML5的文档页面。
+通常情况下，一旦我完成一个教程，我就会去找另一个教程。但是，我却开始玩起了教程中的代码。我对自己想做的项目有了初步的想法，我打算制作一个纯 HTML5 的文档页面。
 
 \---
 
-如果你不知道什么是HTML5，让我快速地解释一下。它只是HTML的一个较新的版本，从20世纪90年代的第一个网页开始，它就已经存在了。
+如果你不知道什么是 HTML5，让我快速地解释一下。它只是 HTML 的一个较新的版本，从 20 世纪 90 年代的第一个网页开始，它就已经存在了。
 
-如果一个网站是一个身体，那么HTML就是骨头。其他一切都建立在这些骨骼之上。(你可以把JavaScript看作是肌肉，把CSS看作是皮肤）。
+如果一个网站是一个身体，那么 HTML 就是骨头。其他一切都建立在这些骨骼之上。(你可以把 JavaScript 看作是肌肉，把 CSS 看作是皮肤）。
 
 让我们重新回到故事上来。
 
 \---
 
-我已经知道在HTML中，你可以通过使用ID属性链接到同一个网页的不同部分。所以我想：如果我沿着左手边放一个目录会怎么样？点击左边的不同选项（item），右边的页面就会相应地滚动并显示这些项目。
+我已经知道在 HTML 中，你可以通过使用 ID 属性链接到同一个网页的不同部分。所以我想：如果我沿着左手边放一个目录会怎么样？点击左边的不同选项（item），右边的页面就会相应地滚动并显示这些项目。
 
 半个小时内，我就编出了一个粗略的原型。
 
@@ -488,21 +485,21 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 
 我飞快地跑回家，打开我的笔记本电脑，花了整整一个晚上来编码。
 
-我把官方和使用创作共用许可证 （Creative Commons license）的HTML文档直接复制到我的页面，把它 "硬编码 "到HTML中。
+我把官方和使用创作共用许可证 （Creative Commons license）的 HTML 文档直接复制到我的页面，把它 "硬编码 "到 HTML 中。
 
-然后，我花了大约一个小时的时间在CSS上，让所有东西看起来都是正确的，并使用绝对定位来保持侧边栏的位置。
+然后，我花了大约一个小时的时间在 CSS 上，让所有东西看起来都是正确的，并使用绝对定位来保持侧边栏的位置。
 
-我尽可能多地使用了HTML5的新 "语义 "标签。
+我尽可能多地使用了 HTML5 的新 "语义 "标签。
 
-轰--项目完成了。 
+轰——项目完成了。 
 
 一股成就感涌上心头。我慢跑到附近的一个足球场，绕着球场跑了几圈，庆祝一下。我成功了，我完成了一个项目。 
 
 我当时就决定：从现在开始，我所做的一切都将成为一个项目。我将努力使它成为一个完成品。
 
-第二天晚上，我走到讲台上，插上我的笔记本电脑，展示了我的HTML5网页。我回答了在场的开发者们关于HTML5的问题。
+第二天晚上，我走到讲台上，插上我的笔记本电脑，展示了我的 HTML5 网页。我回答了在场的开发者们关于 HTML5 的问题。
 
-有时我会弄错一些东西，这时我会听到听众说，"这听起来不对--让我查查文档"。
+有时我会弄错一些东西，这时我会听到听众说，"这听起来不对——让我查查文档"。
 
 人们并不害怕纠正我。但他们都很有礼貌，而且乐于提供支持。我甚至不觉得他们在纠正我，感觉他们比较像是在纠正公共记录，以免有人带着错误的信息离开。
 
@@ -543,15 +540,13 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 
 你可能在想：那服务器呢？数据库呢？网络呢？
 
-归根结底，这些都是由一层层的软件控制的，而这些软件都是由代码所组成。从最上层
+归根结底，这些都是由一层层的软件控制的，而这些软件都是由代码所组成。从最上层一路往下都是代码所构成的，直到抵达最底层的物理硬件，也就是在电路板上移动的电子。
 
-一路往下都是代码所构成的，直到抵达最底层的物理硬件，也就是在电路板上移动的电子。
+在计算机发展最初的几十年里，开发人员编写的代码是 "接近金属 "的，意思是他们通常是直接在硬件上操作，将比特从 0 翻转到 1，再翻转回来。
 
-在计算机发展最初的几十年里，开发人员编写的代码是 "接近金属 "的，意思是他们通常是直接在硬件上操作，将比特从0翻转到1，再翻转回来。
+但是，当代的软件开发涉及许多 "抽象层"——一个程序运行在另外的程序之上，仅仅几行 JavaScript 代码就可以完成一些非常强大的事情。
 
-但是，当代的软件开发涉及许多 "抽象层"——一个程序运行在另外的程序之上，仅仅几行JavaScript代码就可以完成一些非常强大的事情。
-
-在20世纪60年代，一个 "bug" （虫子，也有程序错误的意思）可能是一只昆虫在一个房间大小的计算机中爬来爬去，并在其中一个电路中被烧毁。
+在 20 世纪 60 年代，一个 "bug" （虫子，也有程序错误的意思）可能是一只昆虫在一个房间大小的计算机中爬来爬去，并在其中一个电路中被烧毁。
 
 ![First_Computer_Bug-_1945](https://www.freecodecamp.org/news/content/images/2023/01/First_Computer_Bug-_1945.jpeg)
 
@@ -564,9 +559,9 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 不夸张地说，几十年后，编码将变得如此简单和普遍，以至于大多数年轻人都会知道如何编码。
 
 
-## 为什么即使在2023年，学习编码仍然很难？
+## 为什么即使在 2023 年，学习编码仍然很难？
 
- 即使在2023年，学习编码也是如此困难，有三大原因。
+ 即使在 2023 年，学习编码也是如此困难，有三大原因。
 
 1. 工具仍然很原始
 
@@ -583,13 +578,13 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 
  来自《星际迷航：下一代》着魔似的巴克利（Barclay）在全息甲板（Holodeck）上编程
 
->   "计算机，开始新的程序，创建如下：工作站的椅子，现在创建一个标准的字母数字控制台，定位在左手；现在为右手创建一个标志性的显示控制台。将这两个控制台与企业主计算机核心相连，利用神经扫描界面。" ——巴克利，来自《星际迷航：下一代》第四季第19集："第N度"
+> "计算机，开始新的程序，创建如下：工作站的椅子，现在创建一个标准的字母数字控制台，定位在左手；现在为右手创建一个标志性的显示控制台。将这两个控制台与企业主计算机核心相连，利用神经扫描界面。" ——巴克利，来自《星际迷航：下一代》第四季第 19 集："第 N 度"
 
 上面我拿了我最喜欢的科幻电视剧《星际迷航：下一代》中的一段作为例子，告诉你这就是人们在未来可能的编程方式。
 
 《星际迷航》中的每个角色都会编码。医生、保安人员、飞行员，甚至小韦斯利-克鲁舍（Wesley Crusher，由儿童演员威尔-惠顿扮演）也能让飞船上的计算机听从他的命令。
 
-当然，每个人都会编码的原因之一是他们生活在一个后稀缺的24世纪社会，可以获得免费的高质量教育。
+当然，每个人都会编码的原因之一是他们生活在一个后稀缺的 24 世纪社会，可以获得免费的高质量教育。
 
 另一个原因是，在未来，编码会容易得多。你只需准确地告诉计算机要做什么，然后，如果你足够精确，计算机就会执行。 
 
@@ -598,17 +593,17 @@ But Steve looked pensive. "That's cool and all. But you need a project. Always h
 我们已经朝着这个目标取得了重大进展。想一想以前我们的祖母，她们在房间大小的大型计算机和成堆的打孔卡（punch cards）之间奔波。 
 
 ![naca-computer-operates-an-ibm-telereader-5b6f9f-1024](https://www.freecodecamp.org/news/content/images/2023/01/naca-computer-operates-an-ibm-telereader-5b6f9f-1024.jpeg)
-20世纪50年代使用打卡机的计算机（图片：NASA）
+20 世纪 50 年代使用打卡机的计算机（图片：NASA）
 
 过去，即使是一个简单的应用程序的编程也需要严谨的指令。
 
 这里有两个 "凯撒密码 "（Cesar Cypher）的例子，这是经典的计算机科学家庭作业项目。
 
-这也被称为 "ROT-13"，因为你将字母ROT了13个位置。例如，A变成N（A后13个字母），B变成O（B后13个字母）。 
+这也被称为 "ROT-13"，因为你将字母 ROT 了 13 个位置。例如，A 变成 N（A 后 13 个字母），B 变成 O（B 后 13 个字母）。 
 
 我将向你展示这个程序的两个例子，这两个例子都来自创作共用许可证的罗塞塔代码（Rosetta Code）项目。 
 
-首先，这是x86汇编中的程序：
+首先，这是 x86 汇编中的程序：
 
 ```x86
 format 	ELF 	executable 3
@@ -667,7 +662,7 @@ exit: 	mov     eax,1		; syscall exit
 	int     80h
 ```
 
-下面是Python中的同一程序:
+下面是 Python 中的同一程序:
 
 ```python
 import string
@@ -695,499 +690,500 @@ if __name__ == "__main__":
 
  而在未来，编码将像对你的宇宙飞船说的那样简单。
 
-"计算机，开始新程序。把我说的每一个字母，替换成英语字母表中13个位置之后出现的字母，然后将结果读回给我。这个词就是 "香蕉"。
+"计算机，开始新程序。把我说的每一个字母，替换成英语字母表中 13 个位置之后出现的字母，然后将结果读回给我。这个词就是 "香蕉"。
 
 然后你的电脑会说： "Onanan"。
 
 我们正在做的事情被称为 "声明式编程" （declarative programming）。我们在宣布 "计算机，你应该这样做"。而计算机足够聪明（编程足够好），能够理解我们的指令并执行它们。
 
-Here in 2023, the style of coding most of us are doing is "imperative programming." We're telling the computer exactly what to do, step-by-step.
+在2023的今天，我们大多数正在使用的代码风格就是“命令性编程”。我们一步步地告诉计算机，我们要做什么。
 
-Computers are dumb, so we have to help them put one foot in front of the other.
+计算机很呆，所以我们必须帮它们把一只脚放在另一只脚前面，以让它知道怎么走路。
 
-Right now, the field just isn't mature yet.
+现在，这个领域尚未成熟。
 
-Early human tools advanced from stone to bronze to iron. And the same thing is happening with software tools. But much faster.
+人类早期的工具是从石头到青铜再到铁，同样的事情也发生在软件工具上，不过速度要快得多。
 
-We're probably in the programming equivalent of the bronze age right now. But we may reach the iron age in our lifetime.
+我们现在可能处于相当于青铜时代的编程阶段。但在我们的有生之年，我们可能会达到铁器时代。
 
-### Learning to Code is an Ambiguous Process
+### 学习编程是一个模糊的过程
 
-When you're learning to code, you constantly ask yourself: "Am I spending my time wisely? Am I learning the right tools? Do these book authors / course creators even know what they're talking about?"
+学习编程的时候，你可能经常会问自己：“我这样花时间干这个事儿正确吗？我现在学的是正确的工具吗？这些书的作者和课程制作者真的知道他们自己在说什么吗？”
 
-Ambiguity fogs your every study session. "Did my test case fail because the tutorial is out of date, and there have been breaking changes to the framework I'm using? Or am I just doing it wrong?"
+模糊性会迷惑你的每一次学习。“我的测试案例失败是因为教程过时了，而且我使用的框架发生了重大变化？还是我只是做错了？”
 
-As I mentioned earlier with Tutorial Hell, you also have to cope with "grass is greener on the other side" disease.
+正如我之前在《教程地狱》中提到的，你还得应对“这山望着那山高”的问题。
 
-This is compounded by the fact that some developers think it's clever to answer questions with "RTFM" which means "Read the Freaking Manual." Not super helpful. Which manual? Which section?
+很多开发者在面临这个问题的解答时，都会用一个他们自认为很聪明的“RTFM”原则作为答案，即“Read the Freaking Manual（直接啃说明书）”。但是这个答案也并不是那么有用，甚至会让问题变得更加复杂，该读哪本说明书？读哪个章节？
 
-Another problem is: you don't know what you don't know. Often you can't even articulate the question you're trying to ask.
+另一个问题是：你没有清晰的了解你不知道的事情，以至于你往往不能清楚地表达出你想问的问题。
 
-And if you can't even ask the right question, you're going to thrash.
+如果你连问出正确的问题都做不到，那么得到正确的答案更是异想天开，你会被学习过程折磨得很惨。
 
-This is extra hard with coding because it's possible no one has attempted to build quite the same app that you're building.
+这会让编程这件事变得格外苦难，因为在你做这个软件之前，很大几率没人试着做过和你这个完全相同的软件。
 
-And thus some of the problems you encounter may be unprecedented. There may be no one to turn to.
+因此，你在过程中遇到的问题大概率是前所未有的，而且可能没有人可以帮你。
 
-15% of the queries people type into Google every day have never ever been searched before. That's bad news if you're the person typing one of those.
+人们每天在谷歌上输入的查询中，有15%是以前从未被搜索过的。如果你正在搜索的内容是这15里的东西，那可能有点不妙。
 
-My theory is that most developers will figure out how to solve a problem and simply move on, without ever documenting it anywhere. So you may be one of dozens of developers who has had to invent their own solution to the same exact problem.
+我的理论是：大多数开发人员会想出如何解决一个问题，然后简单地继续前进，而不会把它记录在任何地方，因此，你可能是少数不得不为相同的问题找出自己的解决方案的开发者之一。
 
-And then, of course, there are the old forum threads and StackOverflow pages.
+然后，当然我们还有很多古老的论坛主题和Stackflow页面。
 
-![wisdom_of_the_ancients_png__485-270_](https://www.freecodecamp.org/news/content/images/2023/01/wisdom_of_the_ancients_png__485-270_.png)Comic by XKCD
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/size/w1000/2023/01/wisdom_of_the_ancients_png__485-270_.png" alt="来自XKCD的绘画" class="kg-image"><figcaption>来自XKCD的绘画</figcaption></figure>
 
-### How Not to Get Lost When Learning to Code
+### 如何在学习编程的时候不迷失方向
 
-The good news is: both **competence** and **confidence** come with practice.
+好消息是：当你练习多了以后， **能力** 和 **自信** 都会随之而来。
 
-Soon you'll know exactly what to google. You'll get a second sense for how documentation is usually structured, and where to look for what. And you'll know where to ask which questions.
+很快你就会知道在Google上搜什么了。对于文档通常是如何组织的，以及在哪里寻找目标信息，你很快就会有第二直觉，而且你也会知道该在哪里问哪些问题。
 
-I wish there were a simpler solution to the ambiguity problem. But you just need to accept it. Learning to code is an ambiguous process. And even experienced developers grapple with ambiguity.
+我希望这些含糊不清的问题都能有一个简单的答案，但是你不得不承认，学习编程就是一个含糊不清的过程。而且即使是有经验的开发者也会为模棱两可的问题而烦恼。
 
-After all, coding is the rare profession where you can just infinitely reuse solutions to problems you've previously encountered.
+毕竟，在编程时，你可以无限地重复使用你以前遇到的问题的解决方案，就职业内容这方面来说，编程是一份稀有的职业。
 
-Thus as a developer, you are always doing something you've never done before.
+因此，作为一名开发者，你总是在做一些你以前从未做过的事情。
 
-People think software development is about typing code into a computer. But it's really about learning.
+人们总是认为软件开发就是把代码输进电脑里，但这实际上是在学习。
 
-You're going to spend a huge portion of your career just thinking really hard. Or blindly inputting commands into a prompt trying to understand how a system works.
+在你的职业生涯中，你会花很大一部分时间去认真思考。又或是盲目地将命令输入提示符，试图了解一个系统是如何运作的。
 
-And you're going to spend a lot of time in meetings with other people: managers, customers, fellow devs. Learning about the problem that needs to be solved, so you can build a solution to it.
+而且你会花很长时间跟别人开会，比如管理者、顾客、开发者同事。学习需要解决的问题，这样你就可以建立一个解决方案。
 
-Get comfortable with ambiguity and you will go far.
+适应这种模糊的感觉，你就会走得更远。
 
-### Learning to Code is One Error Message After Another
+### 编程是在一个又一个的错误信息中学习的
 
-A lot of people who are learning to code feel like they hit a wall. Progress does not come as fast as they expect.
+很多学习编程的人有时感觉像是撞到了墙上，因为进展并不像他们期待中的那么快。
 
-One huge reason for this: in programming, the feedback loop is much tighter than in other fields.
+一个很大的原因是：编程的反馈比回路要比其他领域紧密的多。
 
-In most schools, your teacher will give you assignments, then grade those assignments and give them back to you. Over the course of a semester, you may only have a dozen instances where you get feedback.
+在很多学校里，你的老师会给你布置一些作业，然后给它们打分之后再返回给你。在一个学期里，你可能只有十几次得到反馈的机会。
 
-"Oh no, I really bombed that exam," you might say to yourself. "I need to study harder for the midterm."
+你可能会对自己自言自语道：“完了，那门课的考试考砸了，期中考试之前得好好学习了。”
 
-Maybe your teacher will leave notes in red ink on your paper to help you improve your work.
+或许你老师会在你的书卷上用红笔标出要点，来帮助你改善工作。
 
-Getting a bad grade on an exam or paper can really ruin your day.
+在考试或试卷上得到一个糟糕的成绩真的会让人心情糟糕一整天。
 
-And that's how we generally think about feedback as humans.
+而这一般就是我们作为人类对反馈的思考方式。
 
-If you've spent much time coding, you know that computers are quite fast. They can execute your code within a few milliseconds.
+如果你花时间在编程上，你会知道电脑是很快的，他们可以在毫秒内将你的代码执行完毕。
 
-Most of the time your code will crash.
+大多数情况下你的代码会崩溃。
 
-If you're lucky, you'll get an error message.
+如果你比较幸运的话，你会得到一个错误信息。
 
-And if you're really lucky, you'll get a "stack trace" – everything the computer was trying to do when it encountered the error – along with the line of code that caused the program to crash.
+而如果你足够幸运的话，你会得到一个“堆栈记录”以及导致程序崩溃的那一行代码，堆栈记录指的是当计算机遇到错误时试图做的一切操作。
 
-![A stack trace error message while running freeCodeCamp locally.](https://www.freecodecamp.org/news/content/images/2023/01/oh-my-zsh-stack-trace-error.jpg)
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/01/oh-my-zsh-stack-trace-error.jpg" alt="在本地运行freeCodeCamp时的堆栈跟踪错误信息" class="kg-image"><figcaption>在本地运行freeCodeCamp时的堆栈跟踪错误信息</figcaption></figure>
 
-Now this in-your-face negative feedback from a computer. Not everyone can handle it seeing this over and over all day long.
+上面就是来自电脑的当面的负面反馈，不是每个人都能接受整天看到这种情况。
 
-Imagine if every time you handed your teacher your term paper, they handed it back with big red "F" written on it. And imagine they did this before you could even blink. Over and over.
+想象一下，如果每次你把你的学期论文交给老师，他们都会把大红的"F"写在上面。再想象一下，在你还没来得及眨眼的时候，他们就这样做了。一遍又一遍。
 
-That's what coding can feel like sometimes. You want to grab the computer and shout at it, "why don't you just understand what I'm trying to do?"
+编码有时就是这种感觉，你想抓住电脑，然后不停地质问它："你为什么就是不懂我？"
 
-### How Not to Get Frustrated
+### 怎样才能不感到沮丧
 
-The key, again, is practice.
+再重复一遍，关键是练习。
 
-Over time, you will develop a tolerance for vague error messages and screen-length stack traces.
+随着时间的推移，你会对模糊的错误信息和像屏幕一样长的堆栈记录形成一种容忍。
 
-Coding will never be harder than it is when you're just starting out.
+编程永远不会比你刚开始的时候更难。
 
-Not only do you not know what you're doing, but you're not used to receiving such impersonal, rapid-fire, negative feedback.
+你不仅不知道自己在做什么，而且你也不习惯接受这种不近人情的、快速的、负面的反馈。
 
-So here are some tips:
+所以这里有一些小建议：
 
-#### Tip #1: Know that you are not uniquely bad at this.
+#### Tip #1：明确自己在这方面并不是独一无二的糟糕。
 
-Everyone who learns to code struggles with the frustration of trying to Vulcan Mind Meld with a computer, and get it to understand you. (That's another Star Trek reference.)
+每个学习代码的人都会为试图与计算机进行Vulcan心灵融合并让它理解你而感到沮丧。(这是另一个来自《星际迷航》的参考资料）。
 
-Of course, some people started programming when they were just kids. They may act like they've always been good at programming. But they most likely struggled just like we adults do, and over time have simply forgotten the hours of frustration.
+当然，很多人在他们是孩子的时候就开始编程了。他们会表现得像他们一直很擅长编程，但他们很可能像我们成年人一样挣扎，随着时间的推移，他们只是忘记了那几个小时的挫折。
 
-Think of the computer as your friend, not your adversary. It's just asking you to clarify your instructions.
+把电脑看作你的朋友，而不是对手，电脑有什么错，它只是想让你把自己的指令明确一些罢了。
 
-#### Tip #2: Breathe.
+#### Tip #2：呼吸。
 
-Many people's natural reaction when they get an error message is to gnash their teeth. Then go back into their code editor and start blindly changing code, hoping to somehow luck into getting past it.
+很多人在面对错误信息的时候，本能反应都是咬牙切齿。然后重新在代码编辑器中盲目的修改代码，希望以某种幸运的方式通过这个问题。
 
-This does not work. And I'll tell you why.
+这样是行不通的，下面是为什么这么说。
 
-The universe is complex. Software is complex. You are unlikely to just Forest Gump your way into anything good.
+宇宙是很复杂的。软件也是很复杂的。你不太可能仅仅通过"阿甘正传"的方式获得任何好处。
 
-![gump](https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg)Forest Gump doing what he does and getting improbably lucky catching shrimp.
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/01/gump.jpeg" alt="阿甘做他该做的事，并以不寻常的运气抓到了虾子" class="kg-image"><figcaption>阿甘做他该做的事，并以不寻常的运气抓到了虾子</figcaption></figure>
 
-You may have heard of the Infinite Monkey Theorem. It's a thought experiment where you imagine chimpanzees typing on typewriters.
+你可能听说过"无限猴子定理"。这是一个思想实验，实验内容是让你想象黑猩猩在打字机上打字。
 
-If you had a newsroom full of chimpanzees doing this, how long would it take before one of them typed out the phrase "to be or not to be" by random chance?
+如果你有一个新闻编辑室，里面都是黑猩猩在做这件事，要多久才会有一只黑猩猩随机打出"to be or not to be"这句话？
 
-Let's say each chimp types one random character per second. It would likely take 1 quintillion years for one of them to type "to be or not to be." That's 10 to the 18th power. A billion billion.
+假设每只黑猩猩每秒钟打一个随机字符。他们中的一个可能需要1万亿年的时间来输入"to be or not to be"，那是10的18次方，十亿亿。
 
-Even assuming the chimps remain in good health and the typewriters are regularly serviced – the galaxy would be a cold, dark void by the time one of them managed to type "to be or not to be."
+即使假设黑猩猩保持健康，打字机定期维修，当它们中的一个设法打出"to be or not to be"时，银河系将是一个寒冷、黑暗的虚空。
 
-Why do I tell you all of this? Because you don't want to be one of those chimps.
+我为什么要告诉你这一切？因为你不希望成为那些黑猩猩中的一员。
 
-In that time, you could almost certainly figure out a way to teach those chimps how to type English words. They could probably manage to type out all of Hamlet – not just its most famous line.
+在这段时间里，你几乎肯定可以想出办法来教那些黑猩猩如何打英文单词。它们可能会设法打出《哈姆雷特》的全部内容，而不仅仅是其中最著名的一句。
 
-Even if you somehow do get lucky, and get past the bug, what will you have learned?
+即使你真的很幸运，通过了这个bug，你会学到什么？
 
-So instead of thrashing, you want to take some time. Understand the code. Understand what's happing. And then fix the error.
+因此，与其惊慌失措，不如花些时间，理解代码，理解正在发生的事情，然后修复错误。
 
-Always take time to understand the failing code. Don't be a quintillionarian chimp. (I think that means someone who is 1 quintillion years old, though according to Google, nobody has ever typed that word before.)
+务必花时间去理解错误的代码，不要成为一个quintillionarian(五亿年)的黑猩猩。(我认为quintillionarian意味着一个五亿岁的人，虽然根据谷歌，以前没有人用过这个词）。
 
-Instead of blindly trying things, hoping to get past the error message, slow down.
+与其盲目地尝试，寄希望于简单地跳过错误信息，不如放慢速度。
 
-Take a deep breath. Stretch. Get up to grab a hot beverage.
+深吸一口气，伸个懒腰，起身去拿一杯热饮。
 
-Your future self will be grateful that you took this as a teachable moment.
+未来的自己会感谢你把这作为一个有教育意义的时刻。
 
-#### Tip #3: Use Rubber Duck Debugging
+#### Tip #3：使用“橡皮鸭”调试
 
-Get a rubber ducky and set it next to your computer. Every time you hit an error message, try to explain what you think is happening to your rubber duck.
+找一只橡皮鸭子，把它放在你的电脑旁边。每当你遇到错误信息时，试着解释一下你认为你的橡皮鸭发生了什么。
 
-Of course, this is silly. How could this possibly be helpful?
+当然，这是很蠢的，这怎么可能有帮助呢？
 
-Except it is.
+除非真的有帮助。
 
-Rubber Duck Debugging is a great tool for slowing down and talking through the problem at hand.
+“橡皮鸭调试”对于让自己慢下来、尝试专注于眼前的工作是很有帮助的。
 
-You don't have to use a rubber duck, of course. You could explain your Python app to your pet cactus. Your SQL query to the cat that keeps jumping onto your keyboard.
+当然，你不一定要用橡皮鸭子。你可以向你的宠物仙人掌解释你的Python应用程序，解释你的SQL查询给那只一直跳到你键盘上的猫。
 
-The very act of explaining your thinking out loud seems to help you process the situation better.
+大声解释你的想法似乎能帮助你更好地处理这一情况。
 
-### How do Most People Learn to Code?
+### 大多数人是怎么学习编程的呢？
 
-Now let's talk about traditional pathways to a first developer job.
+现在让我们来谈谈通往第一份开发者工作的传统途径。
 
-Why should you care what everyone else does? Spoiler alert: you don't really need to.
+为什么要在意别人是怎么做的呢？剧透警告：没必要。
 
-You do **you**.
+做好自己的事情就可以了。
 
-This said, you may doubt yourself and the decisions you've made about your learning. You may yearn for the path not taken.
+这就是说，你可能会怀疑自己和你对学习所做的决定，你可能会向往没有走过的路。
 
-My goal with this section is to calm any anxieties you may have.
+我在这一部分的目标是安抚你可能有的任何焦虑。
 
-#### The Importance of Computer Science Degrees
+#### 计算机科学学位的重要性
 
-University degrees are still the gold standard for preparing for a career in software development. Especially bachelor's degrees in Computer Science.
+大学学位对于准备从事软件开发职业的人来说仍然是一个黄金标准，尤其是计算机科学的学士学位。
 
-Before you start saying "But I don't have a computer science degree" – no worries. **You don't need a Computer Science degree to become a developer**.
+在你开始说“但我没有计算机科学学位”之前，不用担心，**你不需要计算机科学学位就能成为一名开发人员**。
 
-But their usefulness is undeniable. And I'll explain why.
+但它们的用处是不可否认的，下面将解释原因。
 
-First, you may wonder: why should developers study computer science? After all, one of the most prominent developers of all time had this to say about the field:
+首先，你会想“为什么开发者需要学习计算机科学？”，毕竟，有史以来最著名的开发者之一对该领域有这样的评价：
 
-> "Computer science education cannot make anybody an expert programmer any more than studying brushes and pigment can make somebody an expert painter." – Eric Raymond, Developer, Computer Scientist, and Author
+> “计算机科学教育不能使任何人成为专家级的程序员，就像研究画笔和颜料不会让人成为专家级的画家一样。” - Eric Raymond，开发人员、计算机科学家和作家。
 
-Computer Science departments were traditionally part of the math department. Universities back in the 1960s and 1970s didn't know quite where to put this whole computer thing.
+计算机科学系在传统上是数学系的一部分，20世纪60年代和70年代的大学不知道该把整个计算机的事情放在哪里。
 
-At other universities, Computer Science was considered an extension of Electrical Engineering. And until recently, even University of California – Berkeley – one of the greatest public universities in the world – only provided Computer Science degrees as sort of a double-major with Electrical Engineering.
+在其他大学，计算机科学被认为是电气工程的延伸。直到最近，即使是加州大学伯克利分校--世界上最伟大的公立大学之一--也只提供计算机科学学位，作为电气工程的一种双主修课程。
 
-But most universities have now come to understand the importance of Computer Science as a field of study.
+但大多数大学现在已经开始了解计算机科学作为一个研究领域的重要性。
 
-As of writing this, Computer Science is the highest paying degree you can get. Higher even than fields focused on money, such as Finance and Economics.
+截至本文写作时，计算机科学是你能得到的报酬最高的学位，甚至高于专注于金钱的领域，如金融和经济学。
 
-[According to Glassdoor](https://www.glassdoor.com/blog/50-highest-paying-college-majors/), the average US-based Computer Science major makes more money at their first job than any other major. US $70,000. That's a lot of money for someone who just graduated from college.
+[根据Glassdoor](https://www.glassdoor.com/blog/50-highest-paying-college-majors/), 美国的计算机科学专业平均在第一份工作中比其他专业赚得更多。70000美刀对一个刚从大学毕业的人来说是一笔不小的收入。
 
-More than Nursing majors ($59,000), Finance majors ($55,000) and Architecture majors ($50,000).
+高于护理专业（59000美元）、金融专业（55000美元）和建筑专业（50000美元）。
 
-OK – so getting a Computer Science degree can help you land a high-paying entry level job. That is probably news to no one. But why is that?
+OK--所以获得计算机科学学位可以帮助你找到一份高薪的入门工作。这可能对任何人都不是新闻，但这是为什么呢？
 
-#### How Employers Think About Bachelor's Degrees
+#### 雇主如何看待学士学位的问题
 
-You may have heard some big employers in tech say things like, "we no longer require job candidates to have a bachelor's degree."
+你可能已经听到科技界的一些大雇主说，“我们不再要求求职者有学士学位”之类的话。
 
-Google said this. Apple said this.
+谷歌这么说过，苹果也这么说过。
 
-And I believe them. That they no longer require bachelor's degrees.
+而且我相信他们，他们不再需要本科学位。
 
-We've had lots of freeCodeCamp alumni get jobs at these companies, some of whom did not have a bachelor's degrees.
+我们已经有很多freeCodeCamp的校友在这些公司找到了工作，其中有些人没有相应的学士学位。
 
-But those freeCodeCamp alumni who landed those jobs probably had to be extra strong candidates to overcome the fact that they didn't have bachelor's degrees.
+但那些找到这些工作的freeCodeCamp校友可能必须是特别强的候选人，以克服他们没有学士学位的事实。
 
-You can look at these job openings as having a variety of criteria they judge candidates on:
+你可以看一下这些职位空缺，他们判断候选人的标准有很多：
 
-1. Work experience
-2. Education
-3. Portfolio and projects
-4. Do they have a recommendation from someone who already works at the company? (We'll discuss building your network in depth in Chapter 2)
-5. Other reputation considerations (we'll discuss building your reputation in Chapter 3)
+1. 工作经验
+2. 教育
+3. 投资组合和项目
+4. 他们是否有已经在该公司工作的人的推荐？(我们将在第二章深入讨论建立你的网络）
+5. 其他声誉方面的考虑（我们将在第三章中讨论建立你的声誉。）
 
-For these employers who do not require a bachelor's degree, education is just one of several considerations. If you are stronger in other areas, they may opt to interview you – regardless of whether you've ever even set foot inside a university classroom.
+对于这些不要求学士学位的雇主来说，教育只是几个考虑因素中的一个。如果你在其他方面比较强，他们可能会选择面试你--不管你是否曾经踏入过大学的教室。
 
-Just note that having a bachelor's degree will make it easier for you to get an interview, even at these "degree-optional" employers.
+只需注意，拥有学士学位将使你更容易获得面试机会，即使在这些 "可选择学位 "的雇主那里。
 
-#### Why do so Many Developer Jobs Require a Computer Science Degree Specifically?
+#### 为什么那么多开发者的岗位特别要求有计算机科学的学位呢？
 
-A bachelor's is a bachelor's, I often tell people. Because for most intents and purposes, it is.
+我经常告诉人们，学士就是学士。因为就大多数意图和目的而言，它是有用的。
 
-Want to enter the US military as an officer, rather than an enlisted service member? You'll need a bachelor's degree, but any major will do.
+想进入美国军队成为一名军官，而不是一名士兵？你将需要一个学士学位，但任何专业都可以。
 
-Want to get a work visa to work abroad? You'll probably need a bachelor's degree, but any major will do.
+想获得工作签证到国外工作吗？你可能需要一个本科学位，但任何专业都可以。
 
-And for so many job openings that say "bachelor's degree required" – any major will do.
+而对于许多写着“需要学士学位”的职位空缺--任何专业都可以。
 
-Why is this? Doesn't the subject you study in university matter at all?
+这是为什么呢？你在大学里学习的科目难道一点都不重要吗？
 
-Well, here's my theory on this: what you learn in university is less important than **whether** you finished university.
+我的理论是这样的：你在大学里学了什么没有你**是否**完成大学学业重要。
 
-Employers are trying to select for people who can figure out a way to get through this rite of passage.
+雇主倾向于选择通过自己的方式完成大学学业的人。
 
-It is certainly true that you can be at the bottom of your class, repeating courses you failed, and being on academic probation for half the time. But a degree is a degree.
+你当然可以成绩垫底，一直挂科和花一半的大学时光缓考，但是学位就是学位。
 
-You know what they call the student who finished last in their class at medical school? "Doctor."
+你知道以最后一名的成绩毕业于医学院的学生被称作什么吗？“医生”。
 
-And for most employers, the same holds true.
+对于大部分雇主来说，就是这样的道理。
 
-In many cases, HR folks are just checking a box on their job application filtering software. They're filtering out applicants who don't have a degree. In those cases, they may never even look at job applications from people without degrees.
+多数情况下，HR只是通过招聘过滤软件的勾选框来筛选简历，过滤掉没有学位的应聘人员。他们可能完全没看过这些被筛选掉的简历。
 
-Again, not every employer is like this. But many of them are. Here in the US, and perhaps even more so in other countries.
+必须强调，并不是所有HR都这样。但大多数HR都这样，在美国如此，其他国家可能更为严重。
 
-It sucks, but it's how the labor market works right now. It may change over the next few decades. It may not.
+这很糟糕，但这就是劳动力市场目前的状况，在几十年后可能会好转也可能没有变化。
 
-This is why I always encourage people who are in their teens and 20s to seriously considering getting a bachelor's degree.
+这就是为什么我总是鼓励十几二十多岁的年轻人认真考虑获得一个学士学位。
 
-Not because of any of the things universities market themselves as:
+并不是为了大学本身：
 
-- The education itself. (You can take courses from some of the best universities online for free, so this alone does not justify the high cost of tuition.)
-- The "college experience" of living in a dorm, making new friends, and self discovery. (Most US University students never live on campus so they don't really get this anyway.)
-- General education courses that help you become a "well rounded individual" (Ever hear of the Freshman 15? This is a joke of course. But a lot of university freshman do gain weight due to the stress of the experience.)
+- 教育本身。（你可以在线免费学习世界上最好大学的课程，所以这并不构成高额学费的充分理由）
+- 如宿舍生活、交友、自我探索等“大学经验”。（美国学生基本不住在学校，也就没有类似的经验）
+- 通识课程帮助你成为“全面人才”(听说过[“Freshman 15”](https://www.healthline.com/nutrition/freshman-15)（大一胖三斤半）这个笑话吗?但确实有很多大一新生过劳肥)
 
-Again, the real value of getting a bachelor's degree – the real reason Americans pay $100,000 or more for 4 years of university – is because many employers require degrees.
+再次申明，学士学位真正的意义（美国人花十万美元甚至更多来支付大学4年的学费）是因为雇主要求学历。
 
-Of course, there are other benefits of having a bachelor's degree, such as the ones I mentioned: expanded military career options, and greater ease getting work visas.
+当然，获得学士学位还有其他的好处，如：更多从军的选择、更容易获得工作签证等。
 
-One of these is: if you want to become a doctor, dentist, lawyer, or professor, you will first need a bachelor's degree. You can then use that to get into grad school.
+还有一个好处是：如果你想要成为一名医生、牙医或者教授，你必须先拥有学士学位。然后再进入研究生院。
 
-OK – this is a lot of background information. So allow me to answer your questions bluntly.
+已经铺垫地差不多了，让我直言不讳地回答你的问题。
 
-### Do You Need a University Degree to Work as a Software Developer?
+### 成为一个软件工程师需要大学学历吗?
 
-No. There are plenty of employers who will hire you without a bachelor's degree.
+不需要。很多雇主都不需要你有学士学位。
 
-A bachelor's degree will make it much easier to get an interview at a lot of employers. And it may also help you command a higher salary.
+但学士学位可以帮助你更快获得面试机会，获得更高的工资。
 
-### What About Associate's Degrees? Are Those Valuable?
+### 那[副学士（Associate degree)文凭](https://zh.wikipedia.org/zh-hans/%E5%89%AF%E5%AD%B8%E5%A3%AB)(相当于中国的大专）呢？有含金量吗？
 
-In theory, yes. There are some fields in tech where having an associates may be required. And I think it always does increase your chances of getting an interview.
+理论上是的。在科技行业的某些领域的确需要副学士文凭，这个文凭也会帮助你更快获得面试机会。
 
-This said, I would not recommend going to university with the specific goal of getting an associate's degree. I would 100% encourage you to stay in school until you get a bachelor's degree, which is vastly more useful.
+虽然如此，我不鼓励你为了副学士文凭而去读大学。我更鼓励你待够4年，拿到大学文凭，这个的含金量更高。
 
-According to the US Department of Education, over the course of your career, having a bachelor's degree will earn you 31% more than merely having an associate's degree.
+美国教育部的数据显示，在整个职业生涯中，大学学历的薪资比副学士学历高31%。
 
-And I'm confident that difference is much wider with a bachelor's in Computer Science.
+这两种学历的区别可比普通本科以及计算机科学本科的区别要大得多。
 
-### Is it Worth Going to University to Get a Bachelor's Degree Later in Life, if You Don't Already Have One?
+### 如果没有大学学历，过了年龄还申请学士学位值得吗？
 
-Let's say you're in your 30s. Maybe you attended some college or university courses. Maybe you completed the first two years and were able to get an associate's degree.
+假设你三十多岁，你参加过一些学院和大学的课程，并且你已经完成了头两年的学业可以获得副学士学位。
 
-Does it make sense to go "back to school" in the formal sense?
+“重返校园”值得吗？
 
-Yes, it may make sense to do so.
+是的，重返校园值得！
 
-But I don't think it ever makes sense to quit your job to go back to school full time.
+但我并不认为你应该辞掉工作脱产学习。
 
-The full-time student lifestyle is really designed with "traditional" students in mind. That is, people age 18 to 22 (or a bit older if they served in the military), who have not yet entered the workforce beyond high school / summer jobs.
+脱产学习是为“传统”学生设计的。他们通常在18到22岁之间（如果服过兵役可能年龄稍长一些），除了高中校外打工和暑期实习，并未有任何工作经验。
 
-Traditional universities cost a lot of money to attend, and the assumption is that students will pay through some combination of scholarships, family funds, and student loans.
+传统的大学的学费高昂，一般学生会结合奖学金、家庭基金和学生贷款来支付。
 
-As a working adult, you'll have less access to these funding sources. And just as importantly, you'll have less time on your hands than a recent high school graduate.
+作为一个工作了的成年人，你获得这些现金资助的渠道更少。与此同时，你也没有一个刚毕业的高中生时间宽裕。
 
-But that doesn't mean you have to give up on the dream of getting a bachelor's degree.
+但这并不意味着你就要放弃获得学士学位的梦想了。
 
-Instead of attending a traditional university, I recommend that folks over 30 attend one of the online nonprofit universities. Two that have good reputations, and whose fees are quite reasonable, are Western Governor's University and University of the People.
+与其加入一个传统大学，我更推荐三十岁以上的成年人参与线上非盈利大学。有两所名声在外、收费合理的大学：西部州长大学（ Western Governor's University）和美国人民大学（ University of the People）。
 
-You may also find a local community college or state university extension program that offers degrees. Many of these programs are online. And some of them are even self-paced, so that you can complete courses as your work schedule permits.
+一些本地社区大学和州立大学的衍生项目也提供学位。许多项目都是线上的，其中一部分还可以自己管理学习进度，你可以根据自己的工作安排完成学业的时间。
 
-Do your research. If a school looks promising, I recommend finding one of its alumni on LinkedIn and reaching out to them. Ask them questions about their experience, and whether they think it was worth it.
+做好研究功课。如果一个大学看上去不错，推荐你使用LinkedIn找到该学校校友，向他们寻求帮助。询问他们的经验，他们觉得这些课程是否物有所值。
 
-I recommend not taking on any debt to finance your degree. It is much better to attend a cheaper school. After all, a degree is a degree. As long as it's from an accredited institution, it should be fine for most intents and purposes.
+我不推荐通过借贷的方式来获得学位。去一个学费没那么贵的学校更好。学位只是一个学位而已，只要是来自一个授权的机构，基本上就可以服务于你需要用学位达成的大部分目的。
 
-### If You Already Have a Bachelor's Degree, Does it Make Sense to Go Back and Earn a Second Bachelor's in Computer Science?
+### 如果你已经有学士学位，有必要再回到校园，读一个计算机科学专业吗？
 
-No. Second bachelor's degrees are almost never worth the time and money.
+没有必要，既浪费钱又浪费时间！
 
-If you have any bachelor's degree – even if it's in a non-STEM field – you have already gotten most of the value you will get out of university.
+如果你已经拥有学士学位– 即便和科学、科技、工程、数学（non-STEM）无关 – 你已经获得大学能提供的大部分价值了。
 
-### What About a Master's of Computer Science Degree?
+### 那计算机科学的研究生学历呢?
 
-These can be helpful for career advancement. But you should pursue them later, after you're already working as a developer.
+这对职业进阶有助益，但你可以在已经有开发者工作经验之后再去申请。
 
-Many employers will pay for their employee's continuing education.
+许多雇主会支付员工继续教育的学费。
 
-One program a lot of my friends in tech have attended is Georgia Tech's Master's in Computer Science degree.
+我技术领域的很多伙伴都参加了佐治亚理工学院的计算机科学研究生的课程。
 
-Georgia Tech's Computer Science department is among the best in the US. And this degree program is not only fully online – it's also quite affordable.
+佐治亚理工学院的计算机科学部不仅仅在全美数一数二，而且其研究生学位完全线上，费用也合理。
 
-But I wouldn't recommend doing it now. First focus on getting a developer job. (We'll cover that in-depth later in this book).
+但我不鼓励你现在就去申请，先找一份开发者工作。（本书之后的章节会详细介绍）
 
-### Will Degrees Continue to Matter in the Future?
+### 未来学位还会这么重要吗？
 
-Yes, I believe that university degrees will continue to matter for decades – and possibly centuries – to come.
+是的，我认为学士学位会在未来几十年，甚至是几百年依旧保持重要的地位。
 
-University degrees have existed for more than 1,000 years.
+学士学位已经存在超过1000年了。
 
-Many of the top universities in the US are older than the USA itself is. (Harvard is more than 400 years old.)
+许多美国顶尖学校比美国历史还悠久。(哈佛有400年历史)
 
-The death of the university degree is greatly exaggerated.
+学士学位的消亡这一说法实属夸大。
 
-It has become popular in some circles to bash universities, and say that degrees don't matter anymore.
+一些圈子开始抨击大学，倡导学位无用论。
 
-But if you look at the statistics, this is clearly not true. They do have an impact on lifetime earnings.
+当如果你查看相关数据，会发现事实并非如此。学位和薪资息息相关。
 
-And just as importantly, they can open up careers that are safer, more stable, and ultimately more fulfilling.
+同时，一个学位也可以帮助你获得更安全、稳定以及更有成就感的工作。
 
-Sure, you can make excellent money working as a deckhand offshore, servicing oil rigs.
+当然，你也可以通过做甲板工，为石油钻井服务赚得丰厚的收入。
 
-But you can make similarly excellent money working as a developer in a climate-controlled office, servicing servers and patching codebases.
+但你也可以作为一个开发人员，在恒温的办公环境，通过维护服务器、修补代码库赚钱同样丰厚的收入。
 
-One of these jobs is dangerous, back-breaking work. The other is a job you could comfortably do for 40 years.
+前者工作环境危险，对背部有损伤；而后者工作环境舒适，即便是40岁，你也可以继续工作下去。
 
-Many of the "thought leaders" out there who are bashing universities have themselves benefitted from a university education.
+许多抨击大学的“意见领袖”本身从自己的大学学历获益。
 
-One reason why I think so many people think degrees are "useless" is: it's hard to untangle the learning from the status boost you get.
+我认为倡导“大学无用论”的其中一个理由是：很难将学习与获得地位提升联系起来。
 
-Is university just a form of class signaling – a way for the wealthy to continue to pass advantage on to their children? After all, you're 20 times as likely to find a rich kid at Harvard as you are a poor kid.
+大学只是阶级信号的一种形式吗 – 即富裕阶级将财富传承到下一代的一种方式？总体来说，在哈佛找到一位富家子弟比穷苦学子的概率要大20倍。
 
-The fact is: life is fundamentally unfair. But that does not change how the labor market works.
+事实是：人生的本质就是不公平。但这并不改变劳动力市场的运行规律。
 
-You can choose easy mode, and finish a degree that will give you more options down the road.
+你可以选择简单模式，完成学位，并且在职业道路上获得更多机会。
 
-Or you can go hard mode, potentially save time and money, and just be more selective about which employers you apply to.
+或者是困难模式，省下一些时间和金钱，但是需要更谨慎地选择雇主。
 
-I have plenty of friends who've used both approaches to great success.
+我的许多朋友在获取成功的路上两种模式切换使用。
 
-### What Does a Computer Science Bachelor's Degree Cover?
+### 计算机科学学士学位包含哪些内容?
 
-### What Alternatives are There to a University Degree?
+### 大学学历的替代品有哪些?
 
-I've worked in adult education for nearly two decades, and I have yet to see a convincing substitute for a university degree.
+我已经在成人教育领域耕耘了二十多年，我看到了许多大学学历的替代品。
 
-Sure – there are certification programs and bootcamps.
+当然包含一些认证项目和集训班（bootcamp）。
 
-But these do not carry the same weight with employers. And they are rarely as rigorous.
+雇主并不认可这些的含金量，而且它们很少要求严格。
 
-*Side note: when I say "certification programs" I mean a program where you attend a course, then earn a certification at the end. These are of limited value. But exam-based certifications from companies like Amazon and Microsoft are quite valuable. We'll discuss these in more depth later.*
+*旁注：当我说 "认证项目 "时，我指的是你参加一个课程，然后在最后获得一个证书。这些项目的价值有限。但是来自亚马逊和微软等公司的基于考试的认证是相当有价值的。我们将在后面更深入地讨论这些。*
 
-What I tell people is: to degree or not to degree – that is the question.
+我常常告诉人们：到底去不去攻读学位，这是一个问题。
 
-I meet lots of people who are auto mechanics, electricians, or who do some other sort of trade, who don't have a bachelor's. They can clearly learn a skillset, apply it, and hold down a job.
+我遇到过很多没有学士学位的人，他们是汽车修理工、电工或从事其他行业的人。他们可以清楚地学会一套技能，应用它，并保住一份工作。
 
-I meet lots of people who are bookkeepers, paralegals, and other "knowledge workers" who don't have a bachelor's. They can clearly learn a skillset, apply it, and hold down a job.
+我遇到过很多没有学士学位的簿记员、律师助理和其他“知识工作者”。他们可以清楚地学会一套技能，应用它，并保住一份工作。
 
-In many cases, these people can just learn to code on their own, using free learning resources and hanging out with likeminded people.
+这些人可以自学代码，使用免费的学习资源并与志同道合的人交流。
 
-Some of these people have always had the personal goal of going back and finishing their bachelor's. That's a good reason to do it.
+其中一些人的个人目标一直是回去完成他们的学士学位。这是攻读学位的一个很好的理由。
 
-But it's not for everyone.
+但不适用于每一个人。
 
-If you want formal education, go for the bachelor's degree. If you don't want formal education, don't do any program. Just self-teach.
+如果你想要获得正规教育，你可以去攻读学士学位；如果你不想，别参与这些项目。自学就可以。
 
-The main thing bootcamps and other certification programs are going to give you is structure and a little bit of peer pressure. That's not a bad thing. But is it worth paying thousands of dollars for it?
+培训班和认证项目仅给你提供课程大纲和同学间的竞争压力。这并不赖，但值得你花上千美元吗？
 
-### How to Teach Yourself to Code
+### 如何自学代码
 
-Most developers are self-taught. Even the developers who earned a Bachelor's of computer science still often report themselves as "self-taught" on industry surveys like Stack Overflow's annual survey.
+大部分开发者都是自学的，即便是有相关学历的程序员也在Stack Overflow的年度调查中宣称自己是“自学”。
 
-![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)Most working developers consider themselves to be "self-taught" (Image: Stack Overflow 2016 Survey)
+![stack-overflow](https://www.freecodecamp.org/news/content/images/2023/01/stack-overflow.jpeg)大部分在职程序员认为自己的“自学的” (图片来源: Stack Overflow 2016 调查)
 
-This is because learning to code is a life-long process. There are constantly new tools to learn, new legacy codebases to map out, and new problems to solve.
+因为代码需要终生学习。不断有新的工具需要学习，新的过气代码需要重新规划，新的问题需要解决。
 
-So whether you pursue formal education or not, know this: you will need to get good at self-teaching.
+所以不论你是否接受了正规教育，你都要知道：你必须擅长自学。
 
-#### What Does it Mean to be a "Self-Taught" Developer?
+#### “自学”开发意味着什么?
 
-Not to be pedantic, but when I refer to self-teaching, I mean self-directed learning – learning outside of formal education.
+但当我提到自学时，我指的是自主学习——在正规教育之外学习。
 
-Very few people are truly "self-taught" at anything. For example, Isaac Newton taught himself Calculus because there were no Calculus books. He had to figure it out and invent it as he went along.
+很少有人在任何事情上都是真正“自学成才”的。例如，艾萨克·牛顿自学了微积分，因为当时没有微积分书籍。他必须边做边弄明白并发明它。
 
-Similarly, Ada Lovelace taught herself programming. Because before her there was no programming. She invented it.
+同样地，爱达·勒芙蕾丝自学了编程。因为在她之前，没有编程。她发明了它。
 
-Someone might tell you: "You're not really self taught because you learned from books or online courses. So you had teachers." And they are correct, but only in the most narrow sense.
+有人可能会告诉你：“你不是真正的自学，因为你是从书本或在线课程中学习的。所以你有老师。”它们是正确的，但只是在最狭义的意义上。
 
-If someone takes issue with you calling yourself self-taught, just say: "By your standards, no one who wasn't raised by wolves can claim to be self-taught at anything."
+如果有人对你自称是自学成才提出异议，只需说：“按照你的标准，只要不是被狼养大的，就不能声称自己是自学成才的。”
 
-Point them to this section of this book and tell them: "Quincy anticipated your snobbery." And then move on with your life.
+将本书的这一部分指给他们看，并告诉他们：“Quincy预料到了你的傲慢。”然后继续你的生活。
 
-Because come on, life's too short, right?
+人生苦短，别浪费时间。
 
-You're self taught.
+你就是自学成才的！
 
-#### What is Self-Directed Learning?
+#### 什么是自主学习?
 
-As a self-learner, you are going to curate your own learning resources. You're going to choose what to learn, from where. That is the essence of "Self-Directed Learning."
+作为自学者，你将整理自己的学习资源。选择从哪里学习什么。这就是“自主学习”的本质。
 
-But how do you know you're learning the right skills, and leveraging the right resources?
+但是你怎么知道你学习正确的技能，并利用正确的资源呢？
 
-Well, that's where community comes in.
+社区就派上用场了。
 
-There are lots of communities of learners around the world, all helping one another expand their skills.
+世界上有各种学习者的社区，相互帮助提高技能。
 
-Community is a hard word to define. Is Tech Twitter a community? What about the freeCodeCamp forum? Or the many Discord groups and subreddits dedicated to specific coding skillsets?
+社区是一个很难定义的词。Twitter Tech话题是一个社区吗？ freeCodeCamp 论坛呢？还是许多专门针对特定代码技能的 Discord 组和 reddit 话题？
 
-I consider all of these communities. If there are people who regularly hang out there and help one another, I consider it a community.
+我认为这些都是社区。如果经常有人活跃，互相帮助，我就认为这是一个社区。
 
-What about in-person events? The monthly meetup of Ruby developers in Oakland? The New York City Startup community meetup? The Central Texas Linux User Group?
+面对面的活动呢？奥克兰的 Ruby 开发人员月度聚会？纽约市创业社区聚会？德克萨斯州中部 Linux 用户组？
 
-These communities can be online, in-person, or some mix of both.
+这些社区可以是在线的、面对面的，或者两者兼而有之。
 
-We'll talk more about communities in the Build Your Network chapter. But the big takeaway is: the new friends you meet in these communities can help you narrow your options for what to learn, and which resources to learn from.
+我们将在 "建立你的网络 "一章中更多地谈及社区。但最大的收获是：你在这些社区中遇到的新朋友可以帮助你缩小选择范围，知道要学什么，要从哪些资源中学习。
 
-### What Programming Language Should I Learn First?
+### 我应该先学习什么编程语言?
 
-The short answer is: it doesn't really matter. Once you've learned one programming language well, it is much easier to learn your second language.
+简短的回答是：这并不重要。学好一门编程语言后，学习第二语言就容易多了。
 
-There are different types of programming languages, but today most development is done using "high-level scripting languages" like JavaScript and Python. These languages trade away the raw efficiency you get from "low-level programming languages" like C. What they get in return: the benefit of being much easier to use.
+有不同类型的编程语言，但今天大多数开发是使用 "高级脚本语言"，如JavaScript和Python。这些语言放弃了C语言等 "低级编程语言 "的效率，得到的回报是：更容易使用。
 
-Today's computers are billions of times faster than they were in the 1970s and 1980s, when people were writing most of their programs in languages like C. That power more than makes up for the relative inefficiency of scripting languages.
+今天的计算机比 1970 年代和 80 年代快数十亿倍。那时人们用 C 等语言编写大部分程序。现在计算机速度足以弥补脚本语言的相对低效。
 
-It's worth noting that both JavaScript and Python themselves are written in C, and they are both getting faster every year – thanks to their large communities of open source code contributors.
+值得注意的是，JavaScript 和 Python 本身都是用 C 语言编写的，而且它们每年都在变得更快——这要归功于它们庞大的开源代码贡献者社区。
 
-Python is a powerful language for scientific computing (Data Science and Machine Learning).
+Python 是用于科学计算（数据科学和机器学习）的强大语言。
 
-And JavaScript... well, JavaScript can do everything. It is the ultimate Swiss Army Knife programming language. JavaScript is the duct tape that holds the World Wide Web together.
+还有 JavaScript……好吧，JavaScript 无所不能。它是终极的瑞士军刀型编程语言。 JavaScript 是将万维网连接在一起的胶带。
 
-> "Any application that can be written in JavaScript, will eventually be written in JavaScript." – Atwood's Law (Jeff Atwood, founder of Stack Overflow and Discourse)
+> "任何可以用 JavaScript 编写的应用程序，最终都会用 JavaScript 编写。" – 阿特伍德定律 (Jeff Atwood, Stack Overflow 和 Discourse 发起人)
 
-You could code your entire career in JavaScript and would never need to learn a second language. (This said, you'll want to learn Python later on, and maybe some other languages as well.)
+你的整个职业生涯都可以使用JavaScript，并不需要学习第二门语言。
+(话是这么说，但是你之后可能会学习Python，或者其他语言)
 
-So I recommend starting with JavaScript. Not only is it much easier to use than languages like Java and C++ – it's easier to learn, too. And there are far, far more job openings for people who know JavaScript.
+所以我建议从 JavaScript 开始。它不仅比 Java 和 C++ 等语言更易于使用，而且更易于学习。对于懂 JavaScript 的人来说，工作机会要多得多。
 
-![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)A screenshot from job search engine Indeed. My search for "javascript" for the US yielded 68,838 job listings.
+![Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--](https://www.freecodecamp.org/news/content/images/2023/01/Find_Javascript_Jobs_with_great_pay_and_benefits_in_United_States___Indeed_com_--.png)通过Indeed获得的职位搜索截图。 我输入了"javascript"，地区是美国，搜索结果为68838个工作。
 
-The other skills you'll want to focus on are **HTML** and **CSS**. If a webpage were a body, HTML would be the bones, and CSS would be the skin. (JavaScript would be the muscles, making it possible for the website to move around and be interactive.)
+其他需要你专注的技能是 **HTML** 和 **CSS**。如果网页是躯体，那么 HTML 就是骨架，而 CSS 则是皮肤。（ Javascript 将会是肌肉——使得网页的运转及交互成为可能。）
 
-You can learn some HTML and CSS in a single afternoon. Like most of the tools I mention here, they are easy to learn, but difficult to master.
+你可以在一个下午就学些 HTML 和 CSS。但就像本书提到的其他工具一样，它们入门容易精通难。
 
-You'll also want to learn how to use **Linux**. Linux powers a vast majority of the world's servers, and you will spend much of your career running commands in the Linux command line.
+对 **Linux** 的学习也不应错过。Linux 驱动着这个世界大多数的服务器，而且在你在职业生涯中，也会在 Linux 命令行中度过很多时光。
 
-If you have a Mac, MacOS has a terminal that accepts almost all the same commands as Linux. (MacOS and Linux have a common ancestor in Unix.)
+如果你有一台 Mac 的话, MacOS 提供的终端工具，可以接受几乎所有与 Linux 相同的命令。（ MacOS 和 Linux 有一个共同的祖先，即 Unix ）。
 
-But if you're on a Windows PC, you'll want to install WSL, which stands for Windows Subsystem for Linux. You will then be able to run Linux commands on your PC. And if you're feeling particularly adventurous, you can even dual boot both the Windows and Linux operating systems on the same computer.
+但是如果你的电脑是 Windows 系统，你需要安装 WSL（Windows Subsystem for Linux）。安装后你就可以在电脑上运行 Linux 命令。如果你想更进一步，你甚至可以在同一台电脑上同时安装 Windows 和 Linux 两套操作系统。
 
-If you're going to install Linux on a computer, I recommend starting with Ubuntu. It is the most widely used (and widely documented) Linux distribution. So it should be the most forgiving.
+如果想在电脑上安装 Linux，我推荐在最开始选择 Ubuntu ——一个最被广泛使用（并且文档完备）的 Linux 发行版。因此它应该是对新手最为友好的。
 
-Make no mistake – Linux is quite a bit harder to use than Windows and MacOS. But what you get in return for your efforts is an extremely fast, secure, and highly customizable operating system.
+不要误会， Linux 比 Windows 和 MacOS 都更难以使用一些。但是你的努力将换得一个极其迅速、安全且高度可定制的操作系统。
 
-Also, you will never have to pay for an operating system license again. Unless you want to. Red Hat is a billion dollar company even though its software is open source, because companies pay for their help servicing and supporting Linux servers.
+而且，你再也不用为一个操作系统的许可而付费了。除非你想这么做。尽管 Red Hat 的软件都是开源的，但它仍是一家价值 10 亿美元的公司，这都源于其他企业愿意付费获得它的帮助及对 Linux 服务器的支持。
 
-You'll also want to learn **Git**. This Version Control System is how teams of developers coordinate their changes to a codebase.
+你还会想学习 **Git**。开发团队会使用这个版本控制系统进行代码更新上的协作。
 
-You may have heard of GitHub. It's a website that makes it easier for developers to collaborate on open source projects. And it further extends some of the features of Git. You'll learn more about GitHub in the How to Build Your Reputation chapter later.
+你可能已经听说过 GitHub。GitHub 是个让开发者更容易进行开源项目协作的网站。它拓展了 Git 的一些特性。你将会在本书“如何建立你的声誉”一章中增进对 GitHub 的了解。
 
-You'll want to learn **SQL** and how relational databases work. These are the workhorses of the information economy.
+还有 **SQL** 以及关系型数据库如何运作。这些是信息经济中的主力军。
 
-You'll also hear a lot about NoSQL databases (Non-relational databases such as graph databases, document databases, and key-value stores.) You can learn more about these later. But focus on SQL first.
+你可能还听说过 NoSQL 数据库（非关系型数据库，如图形数据库，文档数据库和键/值数据库。）你会在今后学习到更多。但最初请专注于 SQL。
 
-Finally, you'll want to learn how **web servers** work. You'll want to start with Node.js and Express.js.
+最后，你还会希望了解**网路服务器**如何运作。Node.js 和 Express.js 会是一个好的起点。
 
-When you hear the term "full stack development" it refers to tying together the front end (HTML, CSS, JavaScript) with the back end (Linux, SQL databases, and Node + Express).
+当你听到“全栈开发”这个词的时候，它代表联结前端（HTML、CSS 和 JavaScript）与后端（Linux、SQL 数据库和 Node + Express）。
 
-There are lots of other tools you'll want to learn, like React, NGINX, Docker, and testing libraries. You can pick these up as you go.
+还有很多你希望学习的工具，例如 React、 NGINX、 Doker 和测试库。你可以在学习途中随心选择。
 
-But the key skills you should spend 90% of your pre-job learning time on are:
+但你应该将 90% 的职前学习时间，用在以下的关键技能上：
 
 1. HTML
 2. CSS
@@ -1198,191 +1194,191 @@ But the key skills you should spend 90% of your pre-job learning time on are:
 7. Node.js
 8. Express.js
 
-If you learn these tools, you can build most major web and mobile apps. And you will be qualified for most entry-level developer jobs. (Of course, many job descriptions will include other tools, but we'll discuss these later in the book.)
+学会了这些工具，你将有能力构建大多数主流的网页和手机应用。而且你也达到了大多数入门级开发工作的门槛。（当然，许多职位的描述中还会包括其他工具，但我们将在本书的后续部分进行探讨。）
 
-So you may be thinking: great. How do I learn these?
+现在你可能在想：真不错，但我要如何学习这些呢？
 
-### Where do I learn how to code?
+### 我在哪里可以学习编程？
 
-Funny you should ask. There's a full curriculum designed by experienced software engineers and teachers. It's designed with busy adults in mind. And it's completely free and self-paced.
+好问题。这里有一个由经验丰富的软件工程师和教师设计的完整课程，它的设计考虑到了成年人的繁忙，内容完全免费并且可以自由掌控学习进度。
 
-That's right. I'm talking about [freeCodeCamp's core curriculum](https://www.freecodecamp.org/learn). It will help you learn:
+是的，我说的就是 [freeCodeCamp 核心课程](https://www.freecodecamp.org/learn)。它能帮助你学习：
 
-- Front End Development
-- Back End Development
-- Engineering Mathematics
-- and Scientific Computing (with Python for Data Science and Machine Learning)
+- 前端开发
+- 后端开发
+- 工程数学
+- 科学计算（使用 Python 探索数据科学和机器学习）
 
-To date, thousands of people have gone through this core curriculum and gotten a developer job. They didn't need to quit their day job, take out loans, or really risk anything other than some of their nights and weekends.
+迄今为止，已有数千人完成了这一核心课程并获得了一份开发者工作。他们不需辞去日常的工作、贷款或冒任何风险，只需利用上他们的晚上和周末。
 
-In practice, freeCodeCamp has become the default path for most people who are learning to code on their own.
+实际上， freeCodeCamp 已经成为大多数人自学编程的默认路径。
 
-If nothing else, the freeCodeCamp core curriculum can be your "home base" for learning, and you can branch out from there. You can learn the core skills that most jobs require, and also dabble in technologies you're interested in.
+没有其他问题的话，你可以在 freeCodeCamp 核心课程中落地生根，并从这里开枝散叶。你可以学习大多数工作都需要的核心技能，也可以涉猎你感兴趣的技术。
 
-There are decades worth of books and courses to learn from. Some are available at your public library, or through monthly subscription services. (And you may be able to access some of these subscription services for free through your library as well.)
+还有数十年的书籍和课程可以学习。有些可以在公共图书馆中找到，或通过每月订阅获取。（你或许也可以通过图书馆免费获得其中的一些订阅服务）。
 
-Also, freeCodeCamp now has nearly 1,000 free full-length courses on everything from AWS certification prep to mobile app development to Kali Linux.
+此外， freeCodeCamp 目前拥有近 1000 门免费的完整课程，内容从 AWS 认证准备，到移动应用开发，再到 Kali Linux。
 
-There has never been an easier time to teach yourself programming.
+自学编程从未如此简单。
 
-### Building Your Skills is a Life-Long Endeavor
+### 打磨你的技能是项终身事业
 
-We've talked about why self-teaching is probably the best way to go, and how to go about it.
+我们已经探讨了为什么自学编程可能是最好的方式，以及如何去做。
 
-We've talked about the alternatives to self-teaching, such as getting a bachelor's degree in Computer Science, or getting a Master's degree.
+我们也聊过了自学的替代方案，例如获得计算机科学的学士或硕士学位。
 
-And we've talked about which specific tools you should focus on learning first.
+我们还讨论了你应该先重点专注于哪些具体的工具。
 
-Now, let's shift gears and talk about how to build the second leg of your stool: your network.
+现在，让我们换换思路，关注下如何打造另一驱动：你的人际关系。
 
-## Chapter 2: How to Build Your Network
+##  第2章：如何打造你的人际关系网络
 
-> "If you want to go fast, go alone. If you want to go far, go together." – African Proverb
+> "独行者速，众行者远。" – 非洲谚语
 
-"Networking." You may wince at the sound of that word.
+人际关系网络这个词，你可能会感到畏缩。
 
-Networking may bring to mind awkward job fairs in stuffy suits, desperately pushing your résumé into the hands of anyone who will accept it.
+人际关系网络可能会让人联想到尴尬的招聘会：身着闷热的西装，拼命把你的简历送到任何愿意接受它的人手中。
 
-Networking may bring to mind alcohol-drenched watch parties – where you pretend to be interested in a sport you don't even follow.
+人际关系网络可能还会让人想到充斥着酒精的观看聚会，而你在要那里假装对一项从未关注过的运动充满兴趣。
 
-Networking may bring to mind wishing "happy birthday" to people you barely know on LinkedIn, or liking their status updates hoping they'll notice you.
+人际关系网络可能还会让人想到在领英上向一个几乎不认识的人发送”生日快乐“，或者给他们的状态点赞，以希望他们能注意到你。
 
-But networking does not have to be that way.
+但是人际关系网络不需要总是这样。
 
-In this chapter, I'll tell you everything I've learned about meeting people. I'll show you how to earn their trust and be top of their mind when they're looking for help.
+在本章，我会分享自己在结识人们上学到的一切。我会想你展示如何获得他们的信任，并在他们寻求帮助时，成为第一人选。
 
-Because at the end of the day, that's what it's all about. Helping people solve their problems. Being of use to people.
+因为说到底，这就是人际关系网络的全部内容。帮助人们解决问题。做一个有益于他人的人。
 
-I'll show you how to build a robust personal network that will support you for decades to come.
+我会向你展示如何建造一个强大的、可以在未来数十年内为你提供支持的人际关系网络。
 
-### Story Time: How did a Teacher in his 30s Build a Network in Tech?
+### 故事时间：一位老师如何在30岁时，在科技圈建立人际关系网络
 
-*Last time on Story Time: Quincy learned some coding by reading books, watching free online courses, and hanging out with developers at the local Hackerspace. He had just finished building his first project and given his first tech talk...*
+*前情回顾： Quincy 通过阅读、观看免费在线课程和与开发者在当地的黑客空间共度时光，学习了一些编程知识。他刚刚完成了他的第一个项目，并作了首次技术演讲。*
 
-OK – so I now had some rudimentary coding skills. I could now code my way out of the proverbial paper bag.
+有了基础的编程技能，我对编程已初窥门径。
 
-What was next? After all, I was a total tech outsider.
+接下来要做什么呢？毕竟，我是个彻底的科技圈圈外人士。
 
-Well, even though I was new to tech, I wasn't new to working. I'd put food on the table for nearly a decade by working at schools and teaching English.
+虽然我是科技圈的新人，但却久经职场。近十年来，我通过学校工作和教英语谋生。
 
-As a teacher, I got paid to sling knowledge. And as a developer, I'd get paid to sling code.
+作为一名老师，我靠传授知识获取报酬。而作为开发者，我也可以靠写代码获得收入。
 
-I already knew one very important truth about the nature of work: it's who you know.
+我已经知道了一个关于工作本质的重要真理：你认识谁决定一切。
 
-I knew the power of networks. I knew that the path to opportunity goes right through the gatekeepers.
+我深知人际关系网络的能量。我了解机遇之路上总有个守门人。
 
-All that stood between me and a lucrative developer job was a hiring manager who could say: "Yes. This Quincy guy seems like someone worthy of joining our team."
+在我和一份赚钱的开发者工作中，只隔着一个愿意说“对，这个叫 Quincy 的的人，似乎值得加入我们的团队”的招聘经理。
 
-Of course, being a tech outsider, I didn't know the culture.
+当然，作为一个科技圈门外汉，我并不了解他们的文化。
 
-Academic culture is much more formal.
+学院派的文化更加得正式。
 
-You wear a suit.
+你穿着正装。
 
-You use fancy academic terminology to demonstrate you're part of the "in group."
+用新奇的学院派术语来表明自己是这个群体的一员。
 
-You find ways to work into every conversation that you went to X university, or that you TA'd under Dr. Y, or that you got published in The Journal of Z.
+你想方设法在每次谈话中提及你去了 X 大学，或者你在 Y 教授手下做助教，抑或你在期刊 Z 上发布了文章。
 
-Career progressions are different. Conferences are different. Power structures are different.
+职业发展是不同的。会议是不同的。权力结构是不同的。
 
-And I didn't immediately appreciate this fact.
+而我并没有一开始就立即接受这个事实。
 
-The first few tech events I went to, I wore a suit.
+在最开始的几场科技活动中，我身着西装参加。
 
-I kept neatly-folded copies of my résumé in my pocket at all times.
+我在口袋中一直放着折叠整齐的简历副本。
 
-I even carried business cards. I had ordered sheets of anodized aluminum, and used a laser cutter to etch in my name, email address, and even a quote from legendary educator John Dewey:
+我甚至带了名片。我订购了阳极氧化铝片，用激光刻上我的名字、邮箱、甚至包括传奇教育家约翰·杜威的一句话： 
 
-> "Anyone who has begun to think places some portion of the world in jeopardy." – John Dewey
+> "任何开始思考的人，都将世界的某一部分置于危险中。" —— 约翰·杜威
 
-It's still my favorite quote to this day.
+这至今仍然是我最喜欢的一句话。
 
-But talk about heavy-handed.
+但说回惨淡的现实。
 
-"Hi, I'm Quincy. Here's my red aluminum business card. Sorry in advance – it might set off the metal detector on your flight home."
+“Hi,我是 Quincy。这是我的红色铝制名片。先说声抱歉，它在你回家的航班上，可能会触发金属探测仪。”
 
-I was trying too hard. And it was probably painfully apparent to everyone I talked to.
+我当时有些用力过猛。而且我和每个人谈话的时候，都可能会痛苦地发现这一点。
 
-I went on Meetup.com and RSVP'd for every developer event I could find. Santa Barbara is a small town, but it's near Los Angeles. So I made the drive for events there, too.
+我在 Meetup.com 上，报名了每一个我能找到的开发者活动。圣巴巴拉是一个小地方，但是靠近洛杉矶。所以我也开车参加洛杉矶的活动。
 
-I quickly wised up, and traded my suit for jeans and a hoody. And I noticed that no one else gave out business cards. So I stopped carrying them.
+我很快学聪明了，将我的西装换成了牛仔裤和卫衣。我还注意到了没有人会送出名片。所以我也不再携带名片。
 
-I took cues from the devs I met at the hackerspace: Be passionate, but understated. Keep some of your enthusiasm in reserve.
+从在黑客空间中遇到的开发者的那里，我得到了提示：怀有激情，但不张扬。保留一些你的热情。
 
-And I read lots of books to better understand developer culture.
+我还阅读了一些书以更好地理解开发者文化。
 
-[The Coders at Work](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3?crid=13BTAQ7TH9YSN&linkCode=ll1&tag=out0b4b-20&linkId=32d14a148c54f36f5ef701578a2abd8e&language=en_US&ref_=as_li_ss_tl) is a good book from the 1980s.
+[《编程人生》](https://www.amazon.com/Coders-Work-Reflections-Craft-Programming/dp/B092R8RQM3?crid=13BTAQ7TH9YSN&linkCode=ll1&tag=out0b4b-20&linkId=32d14a148c54f36f5ef701578a2abd8e&language=en_US&ref_=as_li_ss_tl) 是本来自于 1980 年代的好书。
 
-[Hackers: Heroes of the Revolution](https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396?&linkCode=ll1&tag=out0b4b-20&linkId=0c216f2cd4cc2d2090b8c9b50b0befee&language=en_US&ref_=as_li_ss_tl) is a good book from the 1990s.
+[《黑客：计算机革命的英雄》](https://www.amazon.com/Hackers-Computer-Revolution-Steven-Levy/dp/1449388396?&linkCode=ll1&tag=out0b4b-20&linkId=0c216f2cd4cc2d2090b8c9b50b0befee&language=en_US&ref_=as_li_ss_tl) 是本来自 1990 年代的好书。
 
-For a more contemporary cultural resource, check out the TV series [Mr. Robot](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6?crid=188UUOE6ZT0W3&keywords=mr+robot&qid=1673746625&sprefix=mr+robot%2Caps%2C111&sr=8-6&linkCode=ll1&tag=out0b4b-20&linkId=a896ab7630fadc332c2696d3a4b8e85d&language=en_US&ref_=as_li_ss_tl). Its characters are a bit extreme, but they do a good job of capturing the mindset and mannerisms of many developers.
+对于更现代的文化资源，可以关注下[《黑客军团》](https://www.amazon.com/Mr-Robot-Complete-Rami-Malek/dp/B0833WXXL6?crid=188UUOE6ZT0W3&keywords=mr+robot&qid=1673746625&sprefix=mr+robot%2Caps%2C111&sr=8-6&linkCode=ll1&tag=out0b4b-20&linkId=a896ab7630fadc332c2696d3a4b8e85d&language=en_US&ref_=as_li_ss_tl)这部剧集。剧中的角色有些极端，但是它很好地表现了许多开发者的心态和举止。
 
-Soon, I was talking less like a teacher and more like a developer. I didn't stick out quite as awkwardly.
+很快，我的谈吐更像一位开发者，而不是教师。我不再尴尬地冒进。
 
-Several times a week I attended local tech-related events. My favorite event wasn't even a developer event. It was the Santa Barbara Startup Night. Once every few weeks, they'd have an event where developers would pitch their prototypes. Some of the devs demoing their code were even able to secure funding from angels – rich people who invest in early-stage companies.
+我每周都会参加几次本地与科技有关的活动。我最喜欢的活动甚至不是开发者活动。而是圣巴巴拉创业之夜。开发者们会在这个几周举办一次的活动中，介绍他们的产品原型。一些进行代码演示的开发者甚至可以从天使投资人——投资早期公司的有钱人——处获得资金。
 
-The guy who ran the event was named Mike. He must have known every developer and entrepreneur in Santa Barbara.
+组织这个活动的人叫 Mike。他一定认识很多圣巴巴拉的开发者和企业家。
 
-When I finally got the nerve to introduce myself to Mike, I was star-struck. He was an ultra-marathoner with a resting heartbeat in the low 40s. Perfectly cropped hair and beard. To me he was the coolest guy on the planet. Always polished. Always respectful.
+当我终于鼓起勇气向 Mike 介绍自己时，我吓了一跳。他是个超级马拉松运动员，静息心率在 40 以下。有着完美修剪的头发和胡子。对我而言，他是这个星球上最酷的人了。他总是举止得体，彬彬有礼。
 
-Mike was "non-technical." He worked as a product manager. And though he knew a lot about technology and user experience design, he didn't know how to code.
+Mike 完全不是一个技术型的人。他的工作是产品经理。他虽然在科技和用户体验设计上了解很多，但却完全不知道如何写代码。
 
-Sometimes devs would write non-technical people off. "He's just a business guy," they'd say. Or: "She's a suit." But I never heard anyone say that about Mike. He had the respect of everyone.
+有时，开发者们会忽视非技术型的人。他们会说：“他只是个商人”或“她只是个甩手掌柜”。但是我从没听到有谁这样谈论 Mike，他赢得了所有人的尊重。
 
-I made a point to watch the way Mike interacted with developers. After all, I wasn't that far removed from "non-technical" myself. I'd only been coding for a few months.
+我特意观察了 Mike 与其他开发者打交道方式。毕竟，只写了几个月代码的我，也不能完全摆脱“非技术型”这个标签。
 
-Often my old habits would creep in. During conversations I'd have the temptation to show off what I'd learned or what I'd built.
+我的旧习惯时常显露。我总有炫耀自己所学和所做的冲动。
 
-Many developers are modest about their skills or accomplishments. They might say: "I dabble in Python." And little 'ol insecure me would open his big mouth and say something like, "Oh yeah. I've coded so many algorithms in Python. I write Python in my sleep."
+很多开发者对他们的技能和成就保持谦逊。他们会说：“我对 Python 有所涉猎。“而缺乏安全感的我，则大放厥词：“我用 Python 写了许多算法。我做梦都在写 Python。”
 
-And then I'd go home and google that developer's name, and realize they were a core contributor to a major Python library. And I'd kick myself.
+后来，当我回家谷歌了那位开发者的姓名，才了解到他是主流 Python 库的核心贡献者。我羞愧不已。
 
-I quickly learned not to boast of my accomplishments or my skills. There's a good chance a person you're talking to can code circles around you. But most of them would never volunteer this fact.
+我很快学会了不要吹嘘自己的成就或技能。你正在谈话的人很可能比你更懂编程。只是他们中的大多数不会主动说出这个事实。
 
-There's nothing worse than confidently pulling out your laptop, showing off your code, and then having someone ask you a bunch of questions that you're wholly unprepared to answer.
+再没有比自信地打开笔记本电脑炫耀代码，但别人抛出了一堆你完全没有准备好回答的问题更糟糕的事情了。
 
-My first few months of attending events was a humbling experience. But these events energized me to keep pushing forward with my skills.
+参加活动的前几个月对我而言是趟谦逊之旅。但是这些活动也让我有动力继续打磨我的技能。
 
-Soon people around southern California would start to recognize me. They'd say: "I keep running to you at these events. What's your name again?"
+不久，南加州附近的人都开始注意到我。他们会说：“我总在这些活动中遇到你。你叫什么来着？”。
 
-One night a dev said, "Let's follow each other on Twitter." I had grudgingly set up a Twitter account a few days earlier, thinking it was a gimmicky website. How much could you really convey with just 140 characters? I had barely tweeted anything. But I did have a Twitter account ready, and she did follow me.
+有天晚上，一个开发者说：“让我们在推特上加个好友吧。”。我当时认为推特只是一个噱头性网站，几天前才勉勉强强建立了一个推特账户。你能用区区 140 个字符真正表达什么呢？我基本不发推。但是我确实已经有了一个推特账户，所以她加了我。
 
-That inspired me to spend more time refining my online presence. I made my LinkedIn less formal and more friendly. I looked at how other devs in the community presented themselves online.
+这鼓舞我投入更多时间，去塑造自己的网络形象。我弱化了自己领英页面的正式性，提升了友善度。我研究社区中的其他开发者如何在网络上展示自己。
 
-Within a few months, I knew people from so many fields:
+在几个月内，我结识了众多领域中的人：
 
-- experienced developers
-- non-technical or semi-technical people who worked at tech companies
-- hiring managers and recruiters
-- and most importantly, my peers who were also mid-career and trying to break into tech
+- 经验丰富的开发者
+- 非技术型或半技术型、在科技公司工作的人
+- 招聘经理和招聘人员
+- 以及最重要的，和我一样处在职业生涯中期，想要转入科技行业的同龄人
 
-Why were peers the most important? Surely they would be the least able to help me get a job, right?
+为什么这些同龄人是最重要的？在帮我谋求一份工作这件事上，他们应该是最帮不上忙的，对吧？
 
-Well, let me tell you a secret: let's say a hiring manager brings on a new dev, trains them, and they turn out to be really good at their job. That hiring manager is going to ask: where can I find more people like you?
+好吧，我来告诉你一个秘密：假设招聘经理招来了新的开发人员，这些人在加以培训后完全胜任了他们的工作。那么这个招聘经理就会问：“我到哪里可以找到像你一样的人呢？”。
 
-Your peers are one of the most important pieces of your network. So many of my freelance opportunities and job interview opportunities came from people who started learning to code around the same time as I did.
+你的同龄人是你人际关系网络中，最重要的拼图之一。通过和我同时学习编程的人，我获得了许多自由职业的工作机会和工作面试机会。
 
-We came up together. We were brothers and sisters in arms. Those bonds are the tightest.
+我们一同成长。我们是兄弟和姐妹。这些纽带是最为紧密的。
 
-Anyway, all this networking over the months would ultimately come to fruition one night when I walked into the bar of a fancy downtown hotel for a developer event.
+总之，这几个月的人际关系，都最终在我进入市中心高级酒店的酒吧、参加开发者活动的某个晚上开花结果。
 
-But more on that in the next chapter. Now let's talk more about the art and science of building your network.
+在下一章会有这部分的更多内容。现在，让我们多聊聊建立人际关系网络的艺术和科学。
 
-### Is it Really Who You Know?
+### 认识谁真的决定一切吗？
 
-You may have heard the expression that success is "less about what you know, and more about who you know."
+你可能听过这么一句话，成功“不在于你所知，而在于你所识。”。
 
-In practice, it's about both.
+现实中，这两者都是重要的。
 
-Yes – your connections may help you land your dream job. But if you're out of your depth, and lack the skills to succeed, you will not fare well in that role.
+是的，你的关系可能会帮助你获得梦想工作。但如果你没有金刚钻，缺乏获得成功的技能，你在这份工作中不会有好的表现。
 
-But let's assume that you are proactively building your skills. You've followed my advice from Chapter 1. When is the right time to start building your network?
+但是让我们假定你已经遵循我在第一章中提出的建议，主动地培养自己的技能。什么时候是开始建立人际关系网络的正确时间呢？
 
-The best time to start building your network is **yesterday**.
+最好的开始时间是**昨天**。
 
-But you don't need a time machine to do this. Because you already have a network. It's probably much smaller than you'd like it to be, but you **do** know people.
+但你无需时间机器去做这件事。你已经有了一个人际关系网络。它可能比你想要的要小很多，但是你确实**已经**认识了一些人。
 
-They may be friends from your home town, or the colleagues of your parents. Any person you know from your past – however marginally – may be of help.
+他们可能是你家乡的朋友，或你父母的同事。任何一个你过去相识的人，不论多么籍籍无名，都能提供帮助。
 
 因此，第一步是对你认识的人进行全面盘点。请不要担心，我并不是要你现在就去接触任何人，也不是在考验你的人际关系。
 
@@ -2019,253 +2015,253 @@ TechCrunch Disrupt黑客松。DeveloperWeek黑客松。ProgrammableWeb黑客松�
 5. 建立自由职业者客户的作品集
 6. 创建你自己的开源项目、公司或慈善机构
 
-#### 如何找到黑客马拉松和其他开发者竞赛
+#### How to Find Hackathons and Other Developer Competitions
 
-黑客马拉松是能够建立你的声誉，并且提高编码技能的最直接的方式。
+Hackathons represent the most immediate way to build your reputation, your network, and your coding skills at the same time.
 
-大多数黑客马拉松都是免费的，对公众开放。你只需要有时间和预算去旅行。
+Most hackathons are free, and open to the public. You just need to have the time and the budget to travel.
 
-如果你生活在一个有很多黑客松的城市——比如旧金山、纽约、班加罗尔或北京——你可能可以通勤去参加活动，然后回家睡在自己的床上。
+If you live in a city with lots of hackathons – like San Francisco, New York, Bengaluru, or Beijing – you may be able to commute to the event, then go home and sleep in your own bed.
 
-尽管我住在圣巴巴拉，那里每隔几个月才有一次黑客松，但我在旧金山有一个老同学，他让我睡在他的沙发上。这让我有机会参加更多的活动。
+Even though I lived in Santa Barbara, which only had hackathons once every few months, I did have an old classmate in San Francisco who let me crash on his couch. This gave me access to many more events.
 
-黑客松曾是很硬核的活动。人们会喝能量饮料，睡在地板上，这一切都是为了在宣传时间前完成他们的项目。
+Hackathons used to be hard core events. People would knock back energy drinks and sleep on floors, all to finish their project by pitch time.
 
-但黑客马拉松的组织者逐渐开始关注这些活动的健康和可持续。毕竟，很多参与者都有孩子，或者需要全职工作，不可能整个周末都在全力以赴地编写代码。
+But hackathon organizers are gradually becoming more mindful about the health and sustainability of these events. After all, a lot of participants have kids, or demanding full-time jobs, and can't just all-out code for an entire weekend.
 
-找到即将到来的活动的最好方法是谷歌“黑客马拉松[你所在城市的名字]”，并浏览出现的各种活动日历。其中许多将由大学、当地雇主，甚至以教育为重点的慈善机构运营。
+The best way to find upcoming events is to just google "hackathon [your city name]" and browse the various event calendars that come up. Many of these will be run by universities, local employers, or even education-focused charities.
 
-如果你想赢，我建议你提前做些研究。
+If you're playing to win, I recommend doing your research ahead of time.
 
-活动赞助商是谁?通常是面向开发者类型的公司，它们提供api、数据库工具或各种软件产品的服务。
+Who are the event sponsors? Usually it will be Business-to-Developer type companies, with APIs, database tools, or various Software-as-a-Service offerings.
 
-These sponsors will probably have a booth at the event where you can talk with their developer advocates. These are people who get paid to teach people how to use the company's tools. Sometimes you'll even meet key employees or founders at these booths, which can be a great networking opportunity, too.
+通常情况下，黑客马拉松会提供针对赞助商的奖品。"对[赞助商]API的最佳使用"。将你的时间集中在将特定的赞助商工具纳入你的项目中，而不是试图赢得大奖，这可能更容易。你仍然可以在你的LinkedIn或你的履历表上把这些作为胜利。胜利就是胜利。
 
-Often the hackathon will offer sponsor-specific prizes. "Best Use of the [sponsor's] API." It may be easier to focus your time on incorporating specific sponsor tools into your project, rather than trying to win the grand prize. You can still put these down as wins on your LinkedIn or your résumé. A win is a win.
+有时，黑客马拉松是如此高调--或者奖金如此可观--以至于尝试直接赢得比赛是有意义的。
 
-Sometimes the hackathon is just so high profile – or the prize is so substantial – that is just makes sense to try and win the competition outright.
+在我参加黑客马拉松的过程中，我赢得了相当于几个月租金的现金奖励，几年的免费联合办公空间，甚至是纽约市联合国大楼的私人参观。
 
-During my time going to hackathons, I was able to win several month's rent worth of cash prizes, several years' worth of free co-working space, and even a private tour of the United Nations building in New York City.
+在我参加黑客马拉松的这段时间里，我能够赢得价值几个月租金的现金奖，几年的免费联合办公空间，甚至是纽约市的联合国大楼的私人参观。
 
-On the circuit, I met people whose main source of income was cash prizes from winning hackathons. One dev I knew managed to win nine sponsor prizes at the same hackathon. He managed to integrate all of those sponsor tools into his project – and also win second place overall.
+在巡回赛中，我遇到了一些人，他们的主要收入来源是赢得黑客马拉松的现金奖励。我认识的一个开发者在同一个黑客马拉松上成功赢得了九个赞助商的奖金。他设法将所有这些赞助商的工具整合到他的项目中--而且还赢得了总分第二名。
 
-Don't be surprised if some of the people you run into frequently at hackathons go on to found venture-backed companies, or launch prominent open source projects.
+如果你在黑客马拉松上经常遇到的一些人后来成立了有风险投资的公司，或者启动了著名的开源项目，请不要感到惊讶。
 
-The level of ambition you'll see among hackathon regulars is way, way higher than that of the average developer. These are, after all, people who finish a work week, then go straight into a work weekend. These people are not afraid to leap out of the frying pan and into the fire.
+你在黑客马拉松常客中看到的雄心壮志水平比普通开发者要高得多。毕竟，这些人完成了一周的工作，然后直接进入周末的工作。这些人不怕从油锅里跳出来，跳进火里。
 
-### How to Contribute to Open Source
+### 如何为开源项目做贡献
 
-Contributing to open source is one of the most immediate ways you can build your reputation. Most employers are going to look at your GitHub profile, which will prominently display your Git commit history.
+为开放源代码做贡献是建立自己声誉的最直接方式之一。大多数雇主都会看你的GitHub档案，其中会突出显示你的Git提交历史。
 
-![raisedadead__Mrugesh_Mohapatra__--](https://www.freecodecamp.org/news/content/images/2023/01/raisedadead__Mrugesh_Mohapatra__--.png)The GitHub profile of Mrugesh Mohapatra, who does a ton of platform development and DevOps for freeCodeCamp.org. Note how green his activity bar is. 2,208 contributions in the past year alone.
+![raisedadead__Mrugesh_Mohapatra__--](https://www.freecodecamp.org/news/content/images/2023/01/raisedadead__Mrugesh_Mohapatra__--.png)
 
-Many open source project maintainers, such as Linux Foundation, Mozilla (Firefox), and of course freeCodeCamp ourselves, have high standards for code quality.
+以上是 Mrugesh Mohapatra 的 GitHub 简介，他为 freeCodeCamp.org 做了大量的平台开发和 DevOps 工作。注意他的活动栏是多么的绿色。仅在过去一年就有 2208 个贡献。
 
-You can read through open GitHub issues to find known bugs or feature requests. Then you can make the code changes and open a pull request. If the maintainers merge your pull request, this will be a major feather in your cap.
+许多开源项目的维护者，如Linux基金会、Mozilla（火狐），当然还有 freeCodeCamp 自己，对代码质量有很高的标准。
 
-One of the best ways to get a job at a tech company is to become a prolific open source contributor to their repositories.
+你可以通过阅读开放的 GitHub 问题来寻找已知的错误或功能请求。然后你可以进行代码修改，并打开一个拉动请求。如果维护者合并了你的拉动请求，这将是你帽子上的一个重要标志。
 
-Open source contribution is a great way to build your reputation because everything you do is right out in public. And you get the **social proof** of having other developers review and accept your work.
+在科技公司找到工作的最好方法之一是成为他们资料库中多产的开放源码贡献者。
 
-If you're interested in building your reputation through open source, here's how to get started.
+开源贡献是建立自己声誉的好方法，因为你所做的一切都在公众面前。而且你还可以得到其他开发者审查和接受你的工作的**社会证明**。
 
-Read Hillary Nyakundi's comprehensive guide to [getting started with open source](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/).
+如果你对通过开放源码建立你的声誉感兴趣，这里是如何开始的。
 
-### How to Create Developer-Focused Content
+阅读希拉里-尼亚昆迪的 [开源入门综合指南](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-projects-beginners-guide/).
 
-Developers are people. And like other people, they want something to do with their time when they're not working, sleeping, or hanging with friends and family.
+### 如何创建以开发者为中心的内容
 
-For many people – including myself – that means spending time in other people's thoughts. Books. Video essays. Interactive experiences like [visual novels](https://www.freecodecamp.org/news/learn-to-code-rpg-1-5-update/).
+开发人员是人。和其他人一样，当他们不工作、不睡觉、不和朋友和家人在一起的时候，他们想用自己的时间做些什么。
 
-You can broadly refer to these as "content." I'm not a huge fan of the word, because it makes these works feel disposable. But that's what people call it.
+对许多人来说--包括我自己--这意味着花时间在别人的想法上。书籍。视频散文。互动体验，如[视觉小说](https://www.freecodecamp.org/news/learn-to-code-rpg-1-5-update/)。
 
-Software development is an incredibly broad field, with so many different topics you could approach. There are developer lifestyle vlogs, coding interview prep tutorials, coding live streams on Twitch, and developer interview podcasts.
+你可以广泛地将这些称为 "内容"。我不太喜欢这个词，因为它使这些作品感觉是一次性的。但人们就是这样称呼它。
 
-There are probably entire categories of developer content that we haven't even thought of yet, which will break over the next decade.
+软件开发是一个令人难以置信的广泛领域，有许多不同的主题，你可以接近。有开发者生活方式的博客，编码面试准备教程，Twitch上的编码直播流，以及开发者访谈播客。
 
-If you're interested in film, journalism, or creative writing, developer content may be a good way to build your reputation.
+可能有整个类别的开发者内容，我们甚至还没有想到，这将在未来十年内打破。
 
-You can pick a specific topic and gradually come to be seen as the expert.
+如果你对电影、新闻或创意写作感兴趣，开发者内容可能是建立自己声誉的好方法。
 
-There are developers who specialize in tutorials for specific technology stacks, for example.
+你可以选择一个特定的主题，逐渐被视为专家。
 
-My friend Andrew Brown is a former CTO from Toronto who has passed all the major DevOps exams. He creates [free courses to prepare you for all the AWS, Azure, and Google Cloud certifications](https://www.freecodecamp.org/news/azure-developer-certification-az-204-pass-the-exam-with-this-free-13-5-hour-course/), and also runs an exam prep service.
+例如，有一些开发者专门从事特定技术栈的教程。
 
-There are more than 20 million software developers around the world. That's a lot of people who will potentially consume your content, and who will come to know who you are.
+我的朋友安德鲁-布朗是一位来自多伦多的前CTO，他已经通过了所有主要的DevOps考试。他创建了[为所有AWS、Azure和谷歌云认证做准备的免费课程](https://www.freecodecamp.org/news/azure-developer-certification-az-204-pass-the-exam-with-this-free-13-5-hour-course/)，还经营着一个考试准备服务。
 
-### How to Rise in the Ranks Working at Big Companies
+世界上有超过2000万的软件开发人员。这是有可能消费你的内容的很多人，他们会知道你是谁。
 
-You may have seen a developer introduced as an "Ex-Googler" or an "Ex-Netflix engineer."
+### 如何在大公司工作中提升地位
 
-Some tech companies have such rigorous hiring processes – and such high standards – that even getting a job at the company is a big accomplishment.
+你可能已经看到一个开发人员被介绍为 "前 Googler "或 "前 Netflix 工程师"。
 
-There are some practical reasons why employers look at where candidates have previously worked. It reduces the risk of a bad hire.
+一些科技公司有如此严格的招聘程序--以及如此高的标准--甚至在该公司获得一份工作都是一个很大的成就。
 
-You can build up your reputation by working your way up the prestige hierarchy. You can ladder from a local employer to a Fortune 500 company, and ultimately to one of the big tech giants.
+雇主看候选人以前在哪里工作有一些实际原因。它减少了招聘失败的风险。
 
-Of course, working at a giant corporation is not for everyone. I'll talk about this more in Chapter 4. But know that it is one option you have for building up your reputation.
+你可以通过努力提高自己的声望等级来建立自己的声誉。你可以从一个本地雇主到财富500强公司，并最终到大型科技巨头之一。
 
-### How to Build your Reputation by Building a Portfolio of Freelance Clients
+当然，在巨头公司工作并不适合所有人。我将在第四章中更多地谈论这个问题。但要知道，这是你建立自己声誉的一个选择。
 
-You can build your reputation by working with companies as a freelancer.
+### 如何通过建立自由职业者客户组合来建立自己的声誉
 
-Freelance developers usually work on smaller one-person projects. So this may be a better strategy for building your reputation locally.
+你可以通过以自由职业者的身份与公司合作来建立自己的声誉。
 
-For example, if you did good work for a locally-based bank, that may be enough to convince a local law firm to contract you as well.
+自由职业者通常从事较小的单人项目。因此，这可能是在当地建立你的声誉的一个更好的策略。
 
-There is something to be said for being a "hometown hero." I know many developers who can effectively compete with online competition just by being physically present in meetings, and knowing people locally.
+例如，如果你为当地的一家银行做了很好的工作，这可能足以说服当地的一家律师事务所也与你签约。
 
-### How to Build a Developer Portfolio of Your Work
+做一个 "家乡的英雄 "是有道理的。我知道很多开发商可以通过亲自参加会议和认识当地人来有效地与网络竞争。
 
-Once you've built some projects, you'll want to show them off. And the best way to do this is with short videos.
+### 如何建立你的开发作品集
 
-People are busy. They don't have time to pull down your code and run it on their own computer.
+一旦你建立了一些项目，你就会想把它们展示出来。做到这一点的最好方法是用短视频。
 
-And if you send people to a website, they may not fully grasp what they're looking at, and why it's so special.
+人们都很忙。他们没有时间拉下你的代码并在自己的电脑上运行它。
 
-That's why I recommend you use a screen capture tool to recording 2 minute video demos.
+如果你把人们送到一个网站，他们可能不会完全掌握他们正在看的东西，以及为什么它是如此特别。
 
-Two minutes should be long enough to show how the project works. And once you've done that, you can explain some of the implementation details, and design decisions you made.
+这就是为什么我建议你使用屏幕捕捉工具来录制2分钟的视频演示。
 
-But always, always start with the demo. People want to see something work. They want to see something visual.
+两分钟的时间应该足够展示项目如何运作。一旦你完成了这些，你就可以解释一些实施细节，以及你所做的设计决定。
 
-Once you've lured people in with your compelling demo of your app running, you can explain all the details you want. Your audience will now have more context, and be more interested.
+但总是，总是从演示开始。人们希望看到一些工作。他们想看到的是视觉上的东西。
 
-Two minutes is also a magic length, because you can upload that video to a tweet, and it will auto-play on Twitter as people scroll past it. Auto-play videos are much, much more likely to be watched on Twitter. They remove the friction of having to click a play button, or navigate to another website.
+一旦你用你的应用程序运行的引人注目的演示吸引了人们，你就可以解释你想要的所有细节。你的听众现在会有更多的背景，也会更感兴趣。
+
+两分钟也是一个神奇的长度，因为你可以把视频上传到推特上，当人们滚动经过它时，它就会在推特上自动播放。自动播放的视频在Twitter上被观看的可能性要高得多。它们消除了必须点击播放按钮的摩擦，或导航到另一个网站。
 
 <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true" class="" title="Twitter Tweet" src="https://platform.twitter.com/embed/Tweet.html?creatorScreenName=ossia&amp;dnt=false&amp;embedId=twitter-widget-0&amp;features=eyJ0ZndfdGltZWxpbmVfbGlzdCI6eyJidWNrZXQiOltdLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2ZvbGxvd2VyX2NvdW50X3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0ZndfaG9yaXpvbl90aW1lbGluZV8xMjAzNCI6eyJidWNrZXQiOiJ0cmVhdG1lbnQiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X2VkaXRfYmFja2VuZCI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfcmVmc3JjX3Nlc3Npb24iOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYnVzaW5lc3NfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X2NoaW5fcGlsbHNfMTQ3NDEiOnsiYnVja2V0IjoiY29sb3JfaWNvbnMiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3R3ZWV0X3Jlc3VsdF9taWdyYXRpb25fMTM5NzkiOnsiYnVja2V0IjoidHdlZXRfcmVzdWx0IiwidmVyc2lvbiI6bnVsbH0sInRmd19taXhlZF9tZWRpYV8xNTg5NyI6eyJidWNrZXQiOiJ0cmVhdG1lbnQiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3NlbnNpdGl2ZV9tZWRpYV9pbnRlcnN0aXRpYWxfMTM5NjMiOnsiYnVja2V0IjoiaW50ZXJzdGl0aWFsIiwidmVyc2lvbiI6bnVsbH0sInRmd19leHBlcmltZW50c19jb29raWVfZXhwaXJhdGlvbiI6eyJidWNrZXQiOjEyMDk2MDAsInZlcnNpb24iOm51bGx9LCJ0ZndfZHVwbGljYXRlX3NjcmliZXNfdG9fc2V0dGluZ3MiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3ZpZGVvX2hsc19keW5hbWljX21hbmlmZXN0c18xNTA4MiI6eyJidWNrZXQiOiJ0cnVlX2JpdHJhdGUiLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYmx1ZV92ZXJpZmllZF9iYWRnZSI6eyJidWNrZXQiOiJvbiIsInZlcnNpb24iOm51bGx9LCJ0ZndfbGVnYWN5X3RpbWVsaW5lX3N1bnNldCI6eyJidWNrZXQiOnRydWUsInZlcnNpb24iOm51bGx9LCJ0Zndfc2hvd19nb3ZfdmVyaWZpZWRfYmFkZ2UiOnsiYnVja2V0Ijoib24iLCJ2ZXJzaW9uIjpudWxsfSwidGZ3X3Nob3dfYnVzaW5lc3NfYWZmaWxpYXRlX2JhZGdlIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH0sInRmd190d2VldF9lZGl0X2Zyb250ZW5kIjp7ImJ1Y2tldCI6Im9uIiwidmVyc2lvbiI6bnVsbH19&amp;frame=false&amp;hideCard=false&amp;hideThread=false&amp;id=1603405016525688834&amp;lang=en&amp;origin=https%3A%2F%2Fwww.freecodecamp.org%2Fnews%2Flearn-to-code-book%2F&amp;sessionId=5fb6a17a050a6f4d155b53178392f91afe5602a7&amp;siteScreenName=freecodecamp&amp;theme=light&amp;widgetsVersion=2b959255e8896%3A1673658205745&amp;width=550px" data-tweet-id="1603405016525688834" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; position: static; visibility: visible; width: 550px; height: 708px; display: block; flex-grow: 1;"></iframe>
 
-A video demo of a twitter clone project, built by a freeCodeCamp alumni. This one has no voice-over explanation, and is 2 minutes of UI demo. But it's still really good.
+一个twitter克隆项目的视频演示，由freeCodeCamp的校友建立。这个视频没有画外音解释，只有2分钟的UI演示。但它仍然非常好。
 
-You can can put these project demo videos on websites like YouTube, Twitter, your GitHub profile, and of course your own portfolio website.
+你可以把这些项目演示视频放到YouTube、Twitter、你的GitHub档案，当然还有你自己的作品集网站上。
 
-For capturing this video, I recommend using QuickTime, which comes built-in with MacOS. And if you're on Windows, you can use Game Recorder, which comes free in Windows 10.
+为了捕捉这个视频，我建议使用QuickTime，它是MacOS内置的。如果你是在Windows上，你可以使用Game Recorder，它在Windows 10中是免费的。
 
-And if you want a more powerful tool, OBS is free and open source. It's harder to learn, but infinitely customizable.
+如果你想要一个更强大的工具，OBS是免费和开源的。它比较难学，但可以无限地定制。
 
-As far as recording tips: keep your font size as large as possible, and use an external mic. Any mic you can find – even from cheap headphones – will be better than speaking into your laptop's built in mic.
+至于录音技巧：保持你的字体大小尽可能大，并使用外部麦克风。任何你能找到的麦克风--即使是廉价的耳机--都会比对着你的笔记本电脑的内置麦克风说话好。
 
-Invest as much time as you need to in recording and re-recording takes until you nail it.
+投入尽可能多的时间来录制和重新录制片段，直到你掌握了它。
 
-Being able to demo your projects and present your code is a valuable skill you'll use throughout your career. Time spent practicing pitching is never wasted.
+能够演示你的项目和介绍你的代码是你整个职业生涯中都会用到的宝贵技能。练习演讲的时间永远不会被浪费。
 
-### How to Start Your Own Open Source Project, Company, or Charity
+### 如何启动你自己的开源项目、公司或慈善机构
 
-Being a founder is the fastest – but also riskiest – way to build a reputation as a developer.
+成为创始人是建立开发者声誉的最快--但也是风险最大的方式。
 
-It's riskiest because you're wagering your time, your money, and possibly even your personal relationships – all for an unknown outcome.
+它的风险最大，因为你在用你的时间、金钱，甚至可能是你的个人关系作赌注--所有这些都是为了一个未知的结果。
 
-If you contribute to open source for long enough, you *will* build a reputation as a developer.
+如果你为开放源码贡献了足够长的时间，你*会*建立一个作为开发者的声誉。
 
-If you grind the hackathon circuit for long enough, you *will* build a reputation as a developer*.*
+如果你在黑客马拉松赛场上磨练了足够长的时间，你*会*建立起作为一个开发者的声誉*。
 
-But you could attempt to start entrepreneurial projects for decades without getting traction. And squander your time, money, and connections along the way.
+但是，你可以尝试启动创业项目数十年而没有得到牵引力。而在这一过程中，你的时间、金钱和关系都会被浪费掉。
 
-Entrepreneurship is beyond the scope of this book. But if you're interested in it, I will give you this quick advice:
+创业已经超出了本书的范围。但如果你对它感兴趣，我将给你这个快速建议。
 
-Entrepreneur is a French word that essentially translates to "one who bears risk."
+企业家是一个法语单词，本质上翻译为 "承担风险的人"。
 
-Most entrepreneurs fail. Some fail due to circumstances outside their control. But a lot fail due to not understanding the nature of the risks they're taking on.
+大多数创业者都会失败。有些失败是由于他们无法控制的情况。但很多失败是由于不了解他们所承担的风险的性质。
 
-Don't rush into founding a project, company, or charity. Try to work for other organizations who are already doing work in your field of interest.
+不要急于创建一个项目、公司或慈善机构。尝试为已经在你感兴趣的领域开展工作的其他组织工作。
 
-By working for someone else, you get paid to learn. You get exposure to the work, and the risks surrounding it. And you can build savings for an eventual entrepreneurial venture.
+通过为别人工作，你得到了学习的报酬。你可以接触到这些工作，以及围绕这些工作的风险。而且，你可以为最终的创业项目积累储蓄。
 
-## How Not to Destroy Your Reputation
+## 如何不要毁掉你的声誉
 
-> "It takes a lifetime to build a good reputation, but you can lose it in a minute." – Will Rogers, Actor, Cowboy, and one of my heroes growing up in Oklahoma City
+> "建立一个好的声誉需要一生，但你可以在一分钟内失去它"。- 威尔-罗杰斯，演员，牛仔，是我在俄克拉荷马城长大的英雄之一。
 
-Building your reputation is a marathon, not a sprint.
+建立你的声誉是一场马拉松，而不是一场短跑。
 
-It may take years to build up a reputation strong enough to open the right doors.
+它可能需要几年的时间来建立一个足够强大的声誉，以打开正确的大门。
 
-But just like in a competitive marathon, a stumble can cost you valuable time. A stumble that results in injury may put you out of the race completely.
+但就像在一场竞争激烈的马拉松比赛中，一个趔趄会让你失去宝贵的时间。导致受伤的跌倒可能使你完全退出比赛。
 
-### Don't Say Dumb Things on the Internet
+### 不要在互联网上说傻话
 
-People used to say dumb things all the time. The words might hang in the air for a few minutes while everyone winced. But the words did eventually dissipate.
+人们过去经常说一些愚蠢的事情。这些话可能会在空气中停留几分钟，而每个人都会畏惧。但这些话最终都会消散。
 
-Now when people say dumb things, they often do so online. And in indelible ink.
+现在，当人们说蠢话时，他们经常在网上说。而且是用不可磨灭的墨水。
 
-Always assume that the moment you type something into a website and press enter, it's going to be saved to a database. That database is going to be backed up across several data centers around the world.
+始终认为，当你在网站上输入东西并按下回车键时，它将被保存到一个数据库中。该数据库将在世界各地的几个数据中心进行备份。
 
-You can prove the existence of data, but there is no way to prove the absence of data.
+你可以证明数据的存在，但没有办法证明没有数据。
 
-You should assume, for all intents and purposes, that the cat is out of the bag. There's no getting the cat back in the bag. Whatever you just said: that's on your permanent record.
+你应该假设，就所有的意图和目的而言，猫已经离开了袋子。没有办法让猫回到袋子里。无论你刚才说了什么：那都是在你的永久记录上。
 
-You can delete the remark. You can delete your account. You can even try to scrub it from Google search results. But someone has probably already backed it up on the Wayback Machine. And when one of those databases inevitably gets hacked years from now, those data will probably still be in there somewhere, ready to resurfaced.
+你可以删除这句话。你可以删除你的账户。你甚至可以尝试把它从谷歌搜索结果中删除。但是有人可能已经在Wayback Machine上备份了它。而当这些数据库中的某一个在几年后不可避免地被黑客攻击时，这些数据可能仍然在那里的某个地方，准备重新出现。
 
-It is a scary time to be a loud mouth. So don't be. Think before you speak.
+现在是一个可怕的时代，要做一个大嘴巴。所以不要这样做。在你说话之前先想想。
 
-My advice, which may sound cowardly: get out of the habit of arguing with people online.
+我的建议，可能听起来很懦弱：摆脱在网上与人争论的习惯。
 
-Some people abide by the playground rule of "if you don't have something nice to say, don't say anything at all."
+有些人遵守 "如果你没有好话可说，就不要说 "的操场规则。
 
-I prefer the "praise in public, criticize in private."
+我更喜欢 "公开表扬，私下批评"。
 
-I will publicly recognize good work someone is doing in the developer community. If I see a project that impresses me, I will say so.
+我将公开承认某人在开发者社区所做的好工作。如果我看到一个让我印象深刻的项目，我会说出来。
 
-But I generally refrain from tearing people down. Even people who deserve it.
+但是，我一般不会拆穿别人。即使是那些应得的人。
 
-In a fight, everyone looks dirty.
+在一场战斗中，每个人都看起来很脏。
 
-You don't want to look wrathful, tearing apart someone's argument, or dog piling in on someone who just said something dumb.
+你不希望看起来怒气冲冲，撕毁别人的论点，或对刚刚说了一些蠢话的人进行狗刨。
 
-Sure – caustic wit can win you internet points in the short term. But it can also make people love you a little bit less and fear you a little bit more.
+当然--尖刻的机智可以在短期内为你赢得网络积分。但它也可能使人们对你的爱少一点，对你的恐惧多一点。
 
-I also try to refrain from complaining. Yes, I could probably get better customer service if I threatened to tweet about a cancelled flight.
+我也努力避免抱怨。是的，如果我在推特上威胁说航班被取消，我可能会得到更好的客户服务。
 
-But people are busy. Most of them don't want to use their scarce time, scrolling through social media, only to see me groaning about what is in the grand scheme of things a mild inconvenience.
+但是人们都很忙。他们中的大多数人不想利用他们稀少的时间，滚动浏览社交媒体，只想看到我在呻吟什么，在事情的大计划中，这是一个轻微的不便。
 
-So that is my advice on using social media. Try to keep it positive.
+所以这就是我对使用社交媒体的建议。尽量保持积极的态度。
 
-If it's a matter that you believe strongly about, I won't stop you from speaking your mind. Just think before you type, and think before you hit send.
+如果这是一个你坚信的问题，我不会阻止你说出你的想法。只是在你打字之前要考虑，在你点击发送之前要考虑。
 
-### Don't Over-promise and Under-deliver
+### 不要过度承诺和不充分交付
 
-One of the most common ways I see developers torpedo their own reputations is to over-promise and under-deliver. This is not necessarily a fatal error. But it is bad.
+我看到开发者最常见的方式之一是过度承诺和交付不足，使他们自己的声誉受到损害。这不一定是一个致命的错误。但它是不好的。
 
-Remember when I talked about the Las Vegas hackathon where I utterly failed to finish the project in time for the pitch, and we had to use slides instead of a working app?
+还记得吗，我说过在拉斯维加斯黑客马拉松上，我完全没有及时完成项目，而我们不得不使用幻灯片，而不是一个运行的应用程序。
 
-Yeah, that was one of the lowest points in my learn to code journey. My teammates were polite, but I'm sure they were disappointed in me. After all, I had been overconfident. I had over-promised what I'd be able to achieve in that time frame, and I had under-delivered.
+是的，那是我学习代码旅程中的最低点之一。我的队友们都很有礼貌，但我相信他们对我很失望。毕竟，我过于自信了。我对自己在那个时间段内能够取得的成绩作出了过高的承诺，而我却没有兑现。
 
-It is much better to be modest in your estimations of your abilities.
+谦虚地估计自己的能力要好得多。
 
-Remember the parable of Icarus, who on wax wings flew too close to the sun. If only he'd taken a more measured approach. Ascended a bit slower. Then his wings wouldn't have melted, and he wouldn't have plunged into the sea, leaving a guilt-stricken father.
+记住伊卡洛斯的寓言，他用蜡质的翅膀飞得太靠近太阳。如果他能采取更有分寸的方法。上升得慢一点。那么他的翅膀就不会融化，他也就不会坠入大海，留下一个内疚的父亲。
 
-![1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus](https://www.freecodecamp.org/news/content/images/2023/01/1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg)Landscape with the Fall of Icarus by Pieter Bruegel the Elder, circa 1560. Icarus coulda been a contender. He coulda been somebody. But instead, he's just legs disappearing into the sea. And the farmers and the shepherds can't be bothered to look up from their work to take in his insignificance.
+![1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus](https://www.freecodecamp.org/news/content/images/2023/01/1690px-Pieter_Bruegel_de_Oude_-_De_val_van_Icarus.jpg)
 
-### Get Addictions Under Control Before They Damage Your Reputation
+Pieter Bruegel the Elder的《伊卡洛斯坠落的风景》，约1560年。伊卡洛斯本可以是一个竞争者。他本可以成为一个人物。但相反，他只是双腿消失在海里。农民和牧羊人不屑于从他们的工作中抬起头来看一看他的渺小。
 
-If you have an untreated drug, alcohol, or gambling addiction, seek help first. The developer job search can be a long, grueling one. You want to go into it with your full attention.
+### 在声誉受损前，控制住瘾
 
-Even something as seemingly harmless as video game addiction can distract you, and soak up too much of your time. It's worth getting it under control first.
+如果你有未经治疗的毒瘾、酒瘾或赌瘾，请先寻求帮助。开发商找工作可能是一个漫长而艰苦的过程。你要全神贯注地去做这件事。
 
-I am not a doctor. And I'm not going to give you a "drugs are bad" speech. But I will say: you may hear of Silicon Valley fads, where developers abuse drugs thinking they can somehow improve their coding or problem solving abilities.
+即使是像视频游戏成瘾这样看似无害的东西也会分散你的注意力，并占用你太多的时间。值得先把它控制住。
 
-For a while there was a "micro-dosing LSD" trend. There was a pharmaceutical amphetamines trend.
+我不是医生。我也不打算给你讲 "毒品是坏事"。但我要说的是：你可能听说过硅谷的风潮，在那里，开发人员滥用药物，认为他们可以以某种方式提高他们的编码或解决问题的能力。
 
-My gut reaction to that is: any edge these may give you is probably unsustainable, and a net negative over a longer time period.
+有一段时间，有一个 "微剂量LSD "的趋势。有一个药物安非他命的趋势。
 
-Don't feel peer pressure to take psychoactive drugs. Don't feel peer pressure to drink at happy hours. (I haven't drank so much as a beer since my daughter was born 7 years ago, and I don't feel like I've missed out on anything at all.)
+我的直觉反应是：这些东西可能给你带来的任何优势都可能是不可持续的，而且在一个较长的时期内是净负值。
 
-If you are in recovery from addiction, be mindful that learning to code and getting a developer job will be a stressful process. Pace yourself, so you don't risk a relapse.
+不要感受到服用精神活性药物的同伴压力。不要感受到在欢乐时光喝酒的同伴压力。(自从7年前我的女儿出生以来，我没有喝过那么多的啤酒，我不觉得我错过了什么）。
 
-You do not want to reach the end of the career transition process – and achieve so much – only to have old habits resurface and undo your hard work.
+如果你正在从毒瘾中恢复，请注意学习代码和获得开发人员的工作将是一个紧张的过程。给自己定个节奏，这样你就不会有复发的风险。
 
-### Try and Separate Your Professional Life From Your Personal Life
+你不希望在职业转型过程的最后阶段--取得了如此大的成就--却让旧的习惯重新出现，使你的努力付诸东流。
 
-You may have heard the expression, "Don't mix business with pleasure."
+### 尝试将你的职业生活与你的个人生活分开
 
-As a developer, you are going to become a powerful person. You are going to command a certain degree of respect from other people in your city.
+你可能听说过这样一句话："不要把生意和娱乐混在一起"。
 
-Maybe not as much as a doctor or an astronaut. But still. People are going to look up to you.
+作为一个开发者，你将成为一个有权力的人。你将从你所在城市的其他人那里获得一定程度的尊重。也许没有医生或宇航员那么多。但仍然如此。人们将仰视你。
 
-You are going to talk with people who would love to be in your shoes.
+你会和那些愿意和你一样的人交谈。
 
-Do not flaunt your wealth.
-
-Do not act as though you're smarter than everybody else.
+不要炫耀你的财富。不要表现得好像你比其他人更聪明。
 
 Do not abuse the power dynamic to get what you want in relationships.
 
@@ -2273,247 +2269,247 @@ This will make you unlikable to the people around you. And if it's somehow captu
 
 Never lose sight of how much you have. And how much you have to lose.
 
-### Use the Narrator Trick
+### 使用讲述者技巧
 
-I'll close this chapter with a little trick I use to pump myself up.
+在这一章节的最后，让我来分享一个给自己打气的小技巧。
 
-First, remember that you are the hero in your own coding journey. In the theater of your mind, you are the person everyone's watching – the one they are rooting for.
+首先，请记住，你是你自己编码之旅中的英雄。 在你的脑海中，每个人都在关注你——他们都支持你。
 
-The Narrator Trick is to narrate your actions in your head as you do them.
+讲述者技巧是，当你在执行一系列操作时，在脑海中讲述你的动作。
 
-> Quincy strides across the hackerspace, his laptop tucked under his arm. He sets his mug under the hot water dispenser and drops in a fresh tea bag. He pulls back the lever. And as the steaming water fills his mug, he says aloud in his best British accent: "Tea. Earl Grey. Hot."
->
-> His energizing beverage in hand, he slides into a booth, squares his laptop on the surface, and catches the glance of a fellow developer. They lock eyes for a second. Quincy bows his head ever-so-slightly, acknowledging the dev's presence. The dev bows back, almost telepathically sharing this sentiment: "I see you friend. I see you showing up. I see you getting things done."
+> Quincy 大步穿过黑客空间，他的笔记本电脑夹在胳膊下。 他将马克杯放在热水器下面，然后放入一个新鲜的茶包。 他拉动拉杆。 当热气腾腾的水装满他的杯子时，他用他最好的英国口音大声说道：“茶。 伯爵茶。 热的。”
+> 
+> 他手里拿着提神饮料，钻进一个隔间，将笔记本电脑平放在桌面上，并瞥见了一位开发者的目光。 他们对视了一会儿。 Quincy 微微地点头，承认了开发者的存在。 开发者也点头回应，仿佛是在心灵感应般地分享着这种情绪：“我看到你了，朋友。 我看到你出现了。 我看到你把事情做好了。”
 
-This may sound ridiculous. Why yes, it is ridiculous. But I do it all the time. And it works.
+这可能听起来很荒谬。 当然啦，这是很荒谬的。 但我一直这样做。 而且还很有效。
 
-Narrating even the most mundane moments of your life in your head can help energize you. Crystalize the moment laid out before you, and give you clarity of purpose.
+即使是在脑海中讲述生活中最平凡的时刻，也能帮助你充满活力。 将摆在你面前的时刻具体化，可以使你的目的明确。
 
-And this works even better when you think of your life in terms of eras ("the Taco Bell years"). Or inflection points ("passing the GED exam").
+而当你以时代为单位思考你的生活时（"塔可钟时代"），这就更有效了。 或者拐点（"通过高考"）。
 
-What does this have to do with building your reputation? Your reputation is essentially the summary of who you are. What you mean to people around you.
+这与建立你的声誉有什么关系？ 你的声誉本质上是你是谁的总结。 你对周围的人意味着什么。
 
-By taking yourself more seriously, by thinking about your life as a movie, you're gradually working through who you are. And who you one day want to be.
+通过更认真地对待自己，通过把你的生活想象成一部电影，你会逐渐了解你是谁。 以及你有一天想成为的人。
 
-By narrating your actions, you shine a brighter light on them in your own mind. Why did I just do that? What was I thinking? Was there a better move there?
+通过讲述你的行为，你可以在自己的脑海中照亮它们。 我为什么要那样做？ 我在想什么？ 在这里有更好的举动吗？
 
-So many people sabotage their reputations without even realizing it, just because they've settled into bad habits.
+很多人都在不知不觉中破坏了自己的声誉，只是因为他们养成了坏习惯。
 
-For years I thought I had to be "funny" all the time. I would find any opportunity to inject some self-deprecating humor. A lot of people realized what I was doing and found it amusing. But a lot of them didn't understand, and just got the impression I was a jerk.
+多年来，我一直认为我必须一直“有趣”。 我会找任何机会加入一些自嘲的幽默。 很多人意识到我在做什么，觉得很好玩。 但他们中的很多人不明白，只是觉得我是个混蛋。
 
-Why did I do that? I think it went back to grade school, when I was always trying to be the class clown and make people laugh.
+我为什么要那样做？ 我想这可以追溯到小学，那时我总是想成为班上的小丑，逗别人笑。
 
-But decades later, this reflex to fill silence with laughter was not serving me well.
+但几十年后，这种用笑声来填补沉默的条件反射对我来说并不合适。
 
-> "When you repeat a mistake, it's not a mistake anymore. It's a decision." – Paulo Coelho
+> “当你重复地犯一个错误时，它就不再是错误了。 它是一项决定。” – Paulo Coelho
 
-I might have gone on much longer without noticing this bad habit. But with the Narrator Trick, the awkwardness of my behavior was laid bare.
+如果我没有注意到这个坏习惯，我可能会坚持更长时间。 但是有了讲述者技巧，我行为的尴尬就暴露无遗了。
 
-I'm sure I've got lots of other ways of thinking and ways of doing things that are suboptimal. And with the help of the Narrator Trick, I'm hoping to identify them in the future and refine them, before they give people the wrong impression.
+我确信我有很多其他的思维方式和行为方式都不是最理想的。 在讲述者技巧的帮助下，我希望将来能够发现它们并加以完善，以免给人留下错误的印象。
 
-### Your Reputation Will Become Your Legacy.
+### 你的声誉将成为你的传奇。
 
-Think about who you want to be at the end of your story. How you want people to think of your time on Earth. Then work backward from there.
+想想看在你的故事的结尾，你想成为谁。 你希望人们如何看待你在地球上的时间。 然后从那里向后推进。
 
-The person you want to be at the end of the movie. That hero you want people to admire. Why not start carrying yourself like that now?
+电影结尾你想成为的那个人。 你希望人们钦佩的那个英雄。 为什么不从现在就开始这样装扮自己呢？
 
-Can you imagine what it would be like to be a successful developer? To have built software systems that people rely upon?
+你能想象成为一名成功的开发者会是什么样子吗？ 开发出了人们依赖的软件系统？
 
-That future you – how would they think? How would they approach situations and solve problems? How would they talk about their accomplishments? Their setbacks?
+那个未来的你——他们会怎么想？ 他们将如何处理情况和解决问题？ 他们会如何谈论他们的成就？ 他们的挫折？
 
-Merely thinking about your future self can help you clarify your thinking. Your priorities.
+仅仅想一想未来的自己，就能帮助你理清思路。 你的优先事项。
 
-I often think of "Old Man Quincy", with his bad back. He has to excuse himself to run to the toilet every 30 minutes.
+我经常考虑“Quincy 老头”和他不是很好的腰。 他每隔 30 分钟就得借口跑去上厕所。
 
-But Old Man Quincy still tries his best to work with what he has. He moves in spite of sore joints. He ponders in spite of a foggy mind.
+但 Quincy 老头仍然尽力为自己的事业尽力。 尽管关节酸痛，他还是能动。 尽管头脑一片模糊，他还是在思考。
 
-Old Man Quincy still wants to get things done. He's proud of what he's accomplished, but he doesn't spend much time looking back. He looks forward at what he's going to do that day, and what goals he's going to accomplish.
+Quincy 老头还是想把事情做好。 他为自己所取得的成就感到自豪，但他并没有花太多时间回顾过去。 他期待那天他要做什么，以及他要完成什么目标。
 
-I often think about Old Man Quincy, and work backward to where I am today.
+我经常想起 Quincy 老头，然后倒回到今天。
 
-What decisions can I make today that will set me up for being someone worthy of admiration tomorrow? Do I have to wait decades to earn that reputation? Or can I borrow some of that respect from the future?
+我今天可以做出哪些决定，使我明天成为值得钦佩的人？ 我必须等上几十年才能赢得那个声誉吗？ 或者我可以从未来借用一些尊重吗？
 
-By thinking like my future self might think, can I make moves that earn me a positive reputation in the present?
+通过像我未来的自己那样思考，我可以采取一些行动来为我赢得现在的正面声誉吗？
 
-I believe that you can leverage your future reputation – your legacy – right now. Just think in terms of your future self and what you'll accomplish. And use that as a waypoint to guide you forward.
+我相信你现在可以利用你未来的声誉——你的传承。 想想你未来的自己和你将取得的成就。 并将其用作引导你前进的路标。
 
-I hope that these tools – the Narrator Trick and the visualizing your future self trick – help you not only think about the nature of reputation. I hope they also help you take concrete steps toward improving your reputation.
+我希望这些工具——讲述者技巧和想象你未来的自我技巧——不仅能帮助你思考声誉的本质。 我希望它们也能帮助你采取具体步骤来提高你的声誉。
 
-Because building a reputation – making a name for yourself – is the surest path to sustainable success as a developer.
+因为建立声誉——让自己名声大噪——是作为开发人员获得可持续成功的最可靠途径。
 
-Success can mean many things to many people. But most people – from most cultures – would agree: one big aspect of success is putting food on the table for yourself and your family.
+对很多人来说，成功可能意味着很多事情。 但来自大多数文化的大多数人都会同意：成功的一个重要方面是为自己和家人提供食物。
 
-And that's what we're going to talk about next.
+这就是我们接下来要讨论的内容。
 
-## Chapter 4: How to Get Paid to Code – Freelance Clients and the Job Search
+## 第 4 章：如何通过编写代码获得报酬——自由职业客户和求职
 
-If you've been building your skills, your network, and your reputation, then getting a developer job is not all that complicated.
+如果你一直在培养自己的技能、人脉和声誉，那么获得一份开发人员的工作并没有那么复杂。
 
-Note that I said it's not complicated – it's still a lot of work. And it can be a grind.
+请注意，我说的是并不复杂——工作量仍然很大。 并且这可能是一种折磨。
 
-First, let me tell you how I got my first job.
+首先，让我告诉你我是如何找到第一份工作的。
 
-### Story Time: How Did a Teacher in His 30s Get His First Developer Job?
+### 故事时间：一位 30 多岁的老师是如何获得第一份开发人员工作的？
 
-*Last time on Story Time: Quincy hit the hackathon circuit hard, even winning a few of the events. He was building his reputation as a developer who was "dangerous" with JavaScript. Not super skilled. Just dangerous...*
+*上次的故事时间：Quincy 在黑客马拉松赛道上表现出色，甚至赢得了一些赛事。 他正在建立自己作为一名使用 JavaScript 的“危险”开发人员的声誉。 不是超级熟练。 只是危险...*
 
-I had just finished a long day of learning at the Santa Barbara downtown library, sipping tea and building projects.
+我刚刚在圣巴巴拉市中心的图书馆结束了漫长的一天学习、喝茶和做项目。
 
-The best thing about living in California is the weather. We'd joke that when you rented an exorbitantly-priced one-bedroom apartment in the suburbs, you were not paying for the inside – you were paying for the outside.
+住在加利福尼亚最好的事情就是天气。 我们开玩笑说，当你在郊区租了一套价格过高的单居室公寓时，你不是在为室内买单——你是在为室外买单。
 
-My goal was to spend as little time in that cramped 100-year old rat trap as necessary, and to spend the rest out walking around town.
+我的目标是尽可能少地呆在那个狭窄的、有 100 年历史的老鼠窝里，利用剩下的时间就在城里四处走走。
 
-It was a beautiful Wednesday evening. I still had two more days to prepare for that weekend's hackathon. And my brain was completely fried from the day of coding. My wife was working late, so I checked my calendar to find something to do.
+那是一个美丽的星期三晚上。 我还有两天时间准备那个周末的黑客马拉松。 我的大脑因为那一天的编码而乱成一团。 我妻子工作到很晚，所以我查看了日历，想找点事做。
 
-On the first Monday of each month, I would map out all that month's upcoming tech events around southern California, so I'd always have a tech event I could attend if I had the energy.
+在每个月的第一个星期一，我会规划南加州当月即将举行的所有科技活动，所以如果我有精力的话，我总会找到一个我可以参加的科技活动。
 
-Ah – tonight is the Santa Barbara Ruby on Rails meetup, and I had already RSVP'd.
+啊——今晚是圣巴巴拉 Ruby on Rails 聚会，我已经回复了。
 
-I didn't know a lot about Ruby on Rails, but I had completed a few small projects with it. I was much more of a JavaScript and Python developer.
+我对 Ruby on Rails 了解不多，但我用它完成了几个小项目。 更多的时候，我是一名 JavaScript 和 Python 开发人员。
 
-But I figured, what the heck. I need to keep up my momentum with building my network. And the venue was just a few blocks away.
+但是我想，管他呢。 我需要保持建立人脉的势头。 并且会场就在几个街区之外。
 
-I walked in and it was just a few devs sitting around a table chatting. It quickly became clear that they all worked together at a local startup, maintaining a large Ruby on Rails codebase. Most of them had been working there for several years.
+我走进去，只有几个开发人员围坐在桌子旁聊天。 我很快发现，他们都在当地的一家初创公司工作，一起维护着一个庞大的 Ruby on Rails 代码库。 他们中的大多数人已经在那里工作了几年。
 
-Now at this point, I'd spent the past year building my skills, my network, and my reputation. So I was able to hold my own during the conversation.
+在这一点上，我在过去的一年里建立了我的技能、我的人脉和我的声誉。 所以我能够在谈话中保持自己的身份。
 
-But I also had a feel for the limits of my abilities. So I stayed modest. Understated. The way I'd seen so many other successful developers maneuver a conversation at tech events.
+但我也意识到自己能力的局限性。 所以我保持谦虚的态度。 低调。 我见过许多其他成功的开发人员在技术活动中操纵对话的方式。
 
-It became clear that one of the developers at the table was the Director of Engineering. He reported directly to the CTO.
+很明显，会议桌上的一位开发人员是工程总监。 他直接向 CTO 汇报。
 
-And then it became clear that they were looking to hire Ruby on Rails developers.
+然后很明显，他们正在寻找 Ruby on Rails 开发人员。
 
-I was candid about my background and my abilities. "My background is in adult education. Teaching English and running schools. I just started learning to code about a year ago."
+我对自己的背景和能力持坦率态度。 “我的背景是成人教育。 教英语和办学。 我大约一年前才开始学习编码。”
 
-But he was surprisingly unfazed. "Well if you want to come in for an interview, we can see whether you'd be a good fit for the team."
+但出乎意料的是，他毫不在意。 “行吧，如果你想过来面试，我们可以看看你是否适合这个团队。”
 
-That night I walked home feeling an electricity. It was much more dread than excitement.
+那天晚上，我走在回家的路上，感觉浑身像是通了电似的。 那是一种恐惧，而不是兴奋。
 
-I felt nowhere near ready. And I wasn't even looking for a job. I was just living off my savings, learning to code full-time, with health insurance through my wife's job.
+我觉得还没有准备好。 而且我甚至没有在找工作。 我只是靠积蓄过活，全职学习编码，并通过我妻子的工作获得健康保险。
 
-I was a compulsive saver. People would give me a hard time about it. I would change my own oil, cut my own hair, and even cook my own rice at home when we ordered takeout – just to save a few bucks.
+我是一个强迫性储蓄者。 人们会因此而为难我。 我会自己换机油，自己剪头发，甚至在叫外卖的时候自己在家煮米饭——只是为了省几块钱。
 
-Over the decade that I'd worked as a teacher, I'd managed to save nearly a quarter of my after-tax earnings. And I would buy old video games on Craigslist, then flip them on eBay. That may sound silly, but it was a substantial source of income for me.
+在我当老师的十年间，我成功地存下了将近四分之一的税后收入。 我会在 Craigslist 上购买旧的游戏，然后在 eBay 上出售它们。 这听起来可能很愚蠢，但这对我来说是一个重要的收入来源。
 
-What were we saving all this for? We weren't sure. Maybe to buy a house in California at some point in the future? But it meant that I did not have to hustle to get a job. I knew I was in a privileged position, and I tried to make the most of it by learning more every day.
+我们存这一切是为了什么？ 我们不确定。 也许将来某个时候在加利福尼亚买房子？ 但这意味着我不必为找工作而忙碌。 我知道我处于一个特权位置，我试图通过每天学习更多来充分利用它。
 
-So in short, I didn't think I was ready for my first developer job. And I was worried that if they hired me, it would be a big mistake. They would realize how inexperienced I was, fire me, and then I'd have to explain that failure during future job interviews.
+所以简而言之，我认为我还没有为我的第一份开发人员工作做好准备。 我担心如果他们雇用我，那将是一个大错误。 他们会意识到我是多么缺乏经验，解雇我，然后我必须在以后的工作面试中解释失败的原因。
 
-Of course, I now know I was looking at this opportunity the wrong way. But let me finish the story.
+当然，我现在知道我错误地看待了这个机会。 但是让我把这个故事讲完。
 
-When I scheduled my job interview, they asked me for a résumé. I wasn't sure what to do, so I left all my professional experience there. All the schools I'd worked for over the years. (I left off my time running the drive-thru at Taco Bell.)
+当我申请安排面试的时候，他们找我要简历。 我不知道该怎么做，所以我把我所有的专业经验都写在了那里。 这些年来我工作过的所有学校。 （我故意遗漏了在 Taco Bell 得来速工作的时间。）
 
-Of course, none of my work experience had anything to do with coding. But what was I supposed to do, hand them a blank sheet of paper?
+当然，我的工作经验都与编码无关。 但我该怎么办，递给他们一张白纸？
 
-Well, I did have an online portfolio of projects I'd built. And most importantly, I had a list of all the hackathons I'd won or placed in. So I included those.
+好吧，我确实有一个我构建的线上项目组合。 最重要的是，我有一份我赢得或参加的所有黑客马拉松的清单。 所以我包括了那些。
 
-I spent the final hours before the interview revisiting all the Ruby on Rails tutorials I'd used over the past year, to refresh my memory. And then I put on my hoody, jeans, and backpack, and walked over to their office.
+在面试前的最后几个小时，我重温了过去一年中使用过的所有 Ruby on Rails 教程，以刷新记忆。 然后我穿上连帽衫、牛仔裤和背包，走到他们的办公室。
 
-The office manager was a nice lady who took me back to the developer bullpen and introduced me to their small team of devs. There were maybe a dozen of them, most of them dressed in jeans and hoodies, aged from early 20s to late 40s. Two of them were women.
+办公室经理是一位和蔼可亲的女士，她带我到开发人员分区，并将我介绍给他们的小型开发团队。 他们大概有十几个人，大多数穿着牛仔裤和连帽衫，年龄从 20 出头到 40 出头。 其中两人是女性。
 
-I took turns navigating the tangle of desks and cables, shaking hands with each of them and introducing myself. This is where all my experience as a classroom teacher memorizing student names came in handy. I was able to remember all their names, so that later in the day when I left I could follow up with each of them: "Great meeting you [name]. I'd be excited to work alongside you."
+我轮流在乱七八糟的桌子和电缆中穿行，与他们每个人握手并自我介绍。 这是我作为课堂老师记住学生名字的所有经验都派上用场的地方。 我能够记住他们所有的名字，所以在那天晚些时候当我离开时，我可以跟他们每个人道别：“很高兴见到你，[名字]。 期待能和你一起工作。”
 
-First I met with the director of engineering. We went into a small office and closed the door.
+首先我会见了工程总监。 我们走进一间小办公室，关上了门。
 
-A whiteboard on the wall was covered in sketches of Unified Modeling Language (UML) diagrams. A rainbow of dry-erase marker laid out the relationships between various servers and services.
+墙上的白板上写满了统一建模语言（UML）图的草图。 彩虹般的马克笔列出了各种服务器和服务之间的关系。
 
-I kept glancing at that whiteboard, fearing that he'd send me over to it to solve some sort coding problems and demonstrate my skills. Maybe the famous fizzbuzz problem? Maybe he'd want me to invert a binary tree?
+我一直盯着那块白板，担心他会派我去解决一些编码问题并展示我的技能。 也许是著名的 fizzbuzz 问题？ 也许他想让我反转二叉树？
 
-But he never even mentioned the whiteboard. He just sat there looking intensely at me the whole time.
+但他甚至从未提到过白板。 他只是坐在那里，一直盯着我看。
 
-They were a company of about 50 employees, with lots of venture capital funding, and thousands of paying customers – mostly small businesses. They prided themselves on being pragmatic. At no point did they inquire about what I studied in school, or what kind of work I did in the past. All they really cared about was...
+他们是一家约有 50 名员工的公司，拥有大量风险投资资金和数以千计的付费客户——主要是小企业。 他们以务实为荣。 他们从来没有问过我在学校学的是什么，或者我过去做过什么工作。 他们真正关心的是...
 
-"Look. I know you can code," he said. "You've been coding this whole time, winning hackathons. I checked out some of your portfolio projects. The code quality was OK for someone who's new to coding. So for me, the real question is – can you learn how we do things here? Can you work with the other devs on the team? And most critically: can you get things done?"
+“听着。 我知道你会写代码，”他说。 “你一直在写代码，赢了黑客马拉松。 我检查了你的一些组合项目。 对于刚接触编码的人来说，代码质量还可以。 所以对我来说，真正的问题是——你能了解我们在这里是如何做事的吗？ 你能和团队中的其他开发人员一起工作吗？ 最关键的是：你能把事情做好吗？”
 
-I gulped, leaned forward, and mustered all the confidence I could. "Yes," I said. "I believe I can."
+我咽了咽口水，身体前倾，尽我所能地鼓起信心。 “可以，”我说。 “我相信我可以。”
 
-And he said, "Good. Good. OK. Go wait in the Pho restaurant downstairs. [The CTO] should be down there in a minute."
+他说：“很好。 很好。 可以。 去楼下的越南米粉餐厅等着。 [CTO 的名字] 应该马上就过去。”
 
-So I talked with the CTO over noodles. Mostly listened. I'd learned that people project intelligence on quiet people. Listening intently not only helps you get smarter – it even makes you looks smarter.
+于是和 CTO 边吃边聊。 主要是听。 我了解到人们会将智慧投射到安静的人身上。 专心聆听不仅可以帮助你变得更聪明，甚至可以让你看起来更聪明。
 
-And the approach worked. The meeting lasted about an hour. The noodles were tasty. I learned a lot about the company history, and the near-term goals. The CTO said, "OK go back up and talk with [the director of engineering]."
+这种方法奏效了。 会议持续了大约一个小时。 米粉很好吃。 我学到了很多关于公司历史和近期目标的知识。 CTO 说，“好的，回去和 [工程总监] 谈谈。”
 
-And I did. And he offered me a job.
+我也这样做了。 然后他给了我一份工作。
 
-Now, I want to emphasize. This is not how most people get their first developer job.
+现在，我要强调。 这不是大多数人获得第一份开发人员工作的方式。
 
-You're probably thinking, "Gee, here Quincy is Forest Gumping his way into a developer job that he wasn't even looking for. If only we could all be so lucky"
+你可能在想，“哎呀，Quincy 只是随便做做，就得到了他甚至都没有寻找过的开发人员工作。 要是我们都能这么幸运就好了”
 
-And that's certainly what it felt like for me at the time. But in the next section, I'm going to explore the relationship between employers and developers. And how me landing that job was less about my skills as an interviewee, and more about the year of coding, networking, and reputation building that preceded it.
+这当然就是我当时的感觉。 但在下一节中，我将探讨雇主与开发者之间的关系。 我如何找到那份工作，与其说是我作为面试者的技能，不如说是之前一年的编码、人脉和声誉建设的成果。
 
-This wasn't a cushy job at a big tech company, with all the compensation, benefits, and company bowling alleys. It was a contractor role that paid about the same as I was making as a teacher.
+这不是一份轻松的工作，在一家大型的科技公司，有着丰厚的薪酬、福利和公司保龄球馆。 这是一个合同工的角色，薪水与我作为老师的薪水大致相同。
 
-But it was a developer job. A company was paying me to write code.
+但这是一项开发工作。 一家公司付钱让我写代码。
 
-I was now a professional developer.
+我现在是一名专业的开发人员了。
 
-### What Employers Want
+### 雇主想要什么
 
-Flash forward a decade. I have now been on both sides of the table. I've been interviewed by hiring managers as a developer. I've interviewed developers as a hiring manager.
+转眼间十年过去了。 我现在已经在桌子的两边都坐过了。 我作为开发者接受过招聘经理的面试。 我也以招聘经理的身份面试过开发人员。
 
-I've spent many hours on calls with developers who are in the middle of the job search. Some of them have applied to hundreds of jobs and gotten only a few "call-backs" for job interviews.
+我花了很多时间与正在找工作的开发人员通电话。 他们中的一些人已经申请了数百份工作，但只收到了几次面试的“回电”。
 
-I've also spent many hours on calls with managers and recruiters, trying to better understand how they hire and what they look for.
+我还花了很多时间与经理和招聘人员通电话，试图更好地了解他们如何招聘以及他们在寻找什么。
 
-I think much of the frustration developers feel about the hiring process comes down to a misunderstanding.
+我认为开发人员对招聘过程感到沮丧的大部分原因，都归结为误解。
 
-Employers value one thing above all else: predictability.
+雇主最看重一件事：可预测性。
 
-Which of these candidates do you think an employer would prefer?
+你认为雇主会喜欢哪位候选人？
 
-**X** is a "rockstar" 10x coder who often has flashes of genius. X also has bursts of incredible productivity. But X is often grumpy with colleagues, and often misses deadlines or meetings.
+**X** 是拥有十倍效率的“摇滚明星”天才程序员。 X 还具有令人难以置信的生产力。 但 X 经常对同事脾气暴躁，还经常错过最后期限或会议。
 
-**Y** is an OK coder, and has slower but more consistent output. Y gets along fine with colleagues, and rarely misses meetings or deadlines.
+**Y** 是一个不错的程序员，输出速度较慢但更始终如一。 Y 与同事相处融洽，很少错过会议或截止日期。
 
-**Z** is similar to Y in output, and able to get along well with colleagues and meet deadlines. But Z has changed jobs 3 times in the past 3 years.
+**Z** 在输出上与 Y 相似，能够与同事和睦相处，按时完成任务。 但是 Z 在过去 3 年里换了 3 次工作。
 
-OK, you can probably guess from everything I've said up to this point: **Y** is the preferred candidate. And that is because employers value predictability above all else.
+好吧，你可能会从我到目前为止所说的一切中猜到：**Y** 是首选候选者。 这是因为雇主最看重可预测性。
 
-**X** is a trap candidate that some first-time managers may make the mistake of hiring. If you are curious why hiring X would be such a bad idea, read [We fired our top talent. Best decision we ever made.](https://www.freecodecamp.org/news/we-fired-our-top-talent-best-decision-we-ever-made-4c0a99728fde/)
+**X** 是一些新任经理可能会在招聘时犯的错误的陷阱候选人。 如果你好奇为什么雇用 X 会是一个糟糕的主意，请阅读 [我们解雇了我们的顶尖人才。 我们做出的最佳决定。](https://www.freecodecamp.org/news/we-fired-our-top-talent-best-decision-we-ever-made-4c0a99728fde/)
 
-I only added **Z** to this list to make a point: try not to change jobs too often.
+我将 **Z** 添加到此列表只是为了说明一个观点：尽量不要过于频繁地更换工作。
 
-You can increase your income pretty quickly by laddering from employer to employer. You can start applying for new jobs the moment you accept an offer letter. But this will repel many hiring managers.
+你可以通过从雇主到雇主的阶梯式跳跃快速增加收入。 接受录用通知后，你就可以开始申请新工作。 但这会遭到许多招聘经理的排斥。
 
-After all, the rolling stone gathers no moss. You will be in and out of codebases before you have the time to understand how they work.
+毕竟滚石不生苔。 你会进入然后退出代码库，还没来得及了解它们的工作原理。
 
-Consider this: it can take 6 months or longer for a manager to bring a new developer up to speed, to the point where they can be a net positive for the team.
+考虑一下：经理可能需要 6 个月或更长时间才能让新开发人员跟上速度，让他们可以为团队带来正向收入。
 
-Until that point, the new hire is essentially a drain on company resources, absorbing time and energy from their peers who have to onboard them, help them find their way around a codebase, and fix their bugs.
+在那之前，新员工本质上是在消耗公司资源，从同事那里吸收时间和精力，而同事必须让他们入职，帮助他们找到解决代码库的方法，并修复他们的错误。
 
-### Most Employers are Risk Averse
+### 大多数雇主都厌恶风险
 
-Let's say a manager hires the wrong developer. Take a moment to think about how bad that can be for the team.
+假设一个经理雇用了错误的开发者。 花点时间想象一下，这对团队来说会有多糟糕。
 
-On average, it takes about 3 months to fill a developer position at a company. Employers have to first:
+平均而言，填补一家公司的开发人员职位需要大约 3 个月的时间。 雇主必须首先：
 
-- get the budget to hire a developer approved by their bosses
-- create the job description
-- post the job on job sites and communicate with recruiters
-- sift through résumés – many of which will be low-effort from candidates who are blindly applying to as many jobs as possible
-- start the interviewing process, which may involve flying the candidates out to the city and lodging them in a hotel
-- rounds of interviews involving lots of other team members. For some employers, this is a multi-day affair
-- selecting a final candidate, and negotiating an offer...
-- which many candidates will not accept anyway
-- signing contracts and onboarding the employee
-- giving them access to sensitive internal systems
-- introducing them to their teammates, and making sure everyone gets along OK
-- and then months of informal training, when the employee needs to understand a service or a part of a legacy codebase
-- steeping them in the team's way of doing things
+- 获得预算，来雇佣一个已经被老板批准的开发人员
+- 编写职位描述
+- 在求职网站上发布职位并与招聘人员沟通
+- 筛选简历——其中许多都是盲目申请尽可能多的工作的求职者的低成本努力
+- 开始面试过程，这可能涉及让候选人飞到当前城市并住在酒店
+- 涉及许多其他团队成员的多轮面试。 对于一些雇主来说，这是一个为期数天的事情
+- 选择最终候选人，并谈判报价......
+- 许多候选人无论如何都不会接受
+- 签订合同和帮员工入职
+- 给与让他们访问敏感的内部系统的权限
+- 将他们介绍给他们的队友，并确保每个人都相处得很好
+- 然后是几个月的非正式培训，让员工了解一项服务或遗留代码库的一部分
+- 让他们沉浸在团队的做事方式中
 
-In short – a lot of work.
+简而言之——大量的工作。
 
-Now imagine that after doing all that, the new employee says "Hey, I just got a higher offer from this other company. Peace out, yo."
+现在想象一下，在完成所有这些之后，新员工说：“嘿，我刚刚从另一家公司得到了更高的薪资。 拜拜了，您嘞。”
 
-Or imagine that the employee is unreliable, and often shows up hours after the workday has started.
+或者想象该员工并不可靠，经常在工作开始后几个小时才出现。
 
-Or imagine that the employee struggles with untreated drug, alcohol, or gambling addiction, anger issues – or just turns out to be a passive aggressive person who undermines the team.
+再想象一下，该员工与未经许可的药物、酒精或赌博成瘾、愤怒问题作斗争——或者只是被发现是一个争强好斗、破坏团队的人。
 
-Now you have to start this entire process over again, and search for a new candidate for the position.
+现在你必须重新开始整个过程，并为该职位寻找新的候选人。
 
-Hiring is hard.
+招聘是很难的。
 
-So you can see why employers are risk averse. Many of them will pass over seemingly qualified candidates until they find someone whom they feel 99% sure about.
+所以你可以明白为什么雇主厌恶风险。 他们中的许多人会忽略看似合格的候选人，直到找到他们认为有 99% 把握的人。
 
 ### 因为雇主非常厌恶风险，所以求职者受苦
 
@@ -2522,7 +2518,7 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 - 你必须准备简历。同时，你将在整个求职过程中不断地摸索着做决定。
 - 你必须在网上四处寻找职位空缺，研究雇主，并且评估他们是否适合你。
 - 大多数职位的申请都需要填表，你将不得不一遍又一遍地重新填写简历，希望表单不会因服务器错误或 JavaScript 验证错误而崩溃。
-- 提交这些工作申请后，你必须等待雇主处理它们。有一些雇主并不会人工审阅所有申请，因为他们收到的申请实在太多了。（比如谷歌每天能收到 9000 份申请。）雇主会使用软件来筛选。内部招聘人员 [平均只花6秒查看每份简历](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/)。通常你的申请甚至永远不会被人工审阅。
+- 提交这些工作申请后，你必须等待雇主处理它们。有一些雇主并不会人工审阅所有申请，因为他们收到的申请实在太多了。（比如谷歌每天能收到 9000 份申请。）雇主会使用软件来筛选。内部招聘人员 [平均只花 6 秒查看每份简历](https://www.freecodecamp.org/news/you-in-6-seconds-how-to-write-a-resume-that-employers-will-actually-read-fd7757740802/)。通常你的申请甚至永远不会被人工审阅。
 - 你可能永远不会收到公司的任何回复。他们几乎没有动机告诉你他们为什么拒绝你（他们不希望你提起歧视诉讼）。如果你幸运的话，你会收到一封“我们已经决定选择其他候选人”的电子邮件。
 - 所有你花在申请这些工作上的时间——可能是每周几个小时——是消耗精力的，当然，也是无偿的。
 
@@ -2530,17 +2526,17 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 但如果你坚持下去，你最终可以拿到一些 offer。毕竟好运也是连着来的。
 
-以下是一位 freeCodeCamp 贡献者在12周内的求职数据：
+以下是一位 freeCodeCamp 贡献者在 12 周内的求职数据：
 
 ![85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn](https://www.freecodecamp.org/news/content/images/2023/01/85L921BMzXxKhVySPo9gxWamr5J4QLFJaVEn.png)
 
-在投递了291份申请之后，他最终收到了8个 offer。
+在投递了 291 份申请之后，他最终收到了 8 个 offer。
 
 随着 offer 的陆续到来，起薪也越来越高。当然，请注意，这是在世界上消费水平最高的城市之一——旧金山的工作。
 
 ![bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD](https://www.freecodecamp.org/news/content/images/2023/01/bDp3eVv6VQS3Og3ulVpwp6dDylIybdpRczsD.png)
 
-到第12周时，在他收到的 offer 里，起薪几乎是第2周的两倍。
+到第 12 周时，在他收到的 offer 里，起薪几乎是第 2 周的两倍。
 
 这位开发者得到面试的几率相当高。而且他的谈判能力也很强。如果你感兴趣，可以[在这里](https://www.freecodecamp.org/news/5-key-learnings-from-the-post-bootcamp-job-search-9a07468d2331/)了解更多关于他求职过程的内容。
 
@@ -2618,7 +2614,7 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 1. 他们将根据你的起薪获得报酬，因此他们倾向于帮助你协商到尽可能高的起薪。
 2. 他们成功输送的候选人越多——输送的速度越快——他们赚的钱就越多。所以他们会希望帮助你尽快找到工作，这样他们就可以转向其他求职者。
-3. 因为他们只有在你成为一名正式员工（并且至少待90天）后才会得到报酬，所以他们会努力确保你能胜任这份工作，并且适合公司的文化。
+3. 因为他们只有在你成为一名正式员工（并且至少待 90 天）后才会得到报酬，所以他们会努力确保你能胜任这份工作，并且适合公司的文化。
 
 话说回来，如果猎头要求你为任何事情付钱给他们，那就是危险信号。
 
@@ -2664,9 +2660,9 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 我会计算出你日常工作的时薪，然后加倍。这听起来可能是很多钱，但自由职业比常规工作要难得多。你必须学习很多东西。
 
-或者，你可以以单个项目为单位计费。 “我将以1000美元的价格为你部署和配置此系统。”
+或者，你可以以单个项目为单位计费。 “我将以 1000 美元的价格为你部署和配置此系统。”
 
-请务必指定你愿意维护项目的时间范围。你不希望人们在3年后打电话给你，希望你回来修复一个没有人维护的系统。
+请务必指定你愿意维护项目的时间范围。你不希望人们在 3 年后打电话给你，希望你回来修复一个没有人维护的系统。
 
 ### 我如何确保自由客户会付钱给我？
 
@@ -2698,13 +2694,13 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 如果你有能力以自由职业维生，你可能只想继续做下去。慢慢地，你甚至可以建立自己的软件开发机构，并聘请其他开发人员来帮助你。
 
-话说回来，如果你渴望拥有稳定的开发工作，那么你可能很走运。如果你坚持足够长的时间，自由客户可能会给你全职工作。在某些时候，客户以较低的时薪给你提供一份全职工作可能更经济实惠。你得到一份稳定的每周工作40小时的工作，而他们全职获得你的技能。
+话说回来，如果你渴望拥有稳定的开发工作，那么你可能很走运。如果你坚持足够长的时间，自由客户可能会给你全职工作。在某些时候，客户以较低的时薪给你提供一份全职工作可能更经济实惠。你得到一份稳定的每周工作 40 小时的工作，而他们全职获得你的技能。
 
 当你找到工作时，你也可以保留一些自由客户。这是很好的收入补贴。但请记住，正如我们将在下一章中了解到的那样，你的第一份开发工作可能会需要你非常尽职尽责。至少在一开始的时候是这样。
 
 成为职业开发者的第一年会有多疯狂呢？让我们来谈谈这个。
 
-## 第5章：如何在你的第一份开发工作中取得成功
+## 第 5 章：如何在你的第一份开发工作中取得成功
 
 > "待在港口的船很安全。但这不是造船的目的。" —— 格蕾丝·霍珀，数学家，美国海军少将，计算机科学先驱
 
@@ -2722,11 +2718,11 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 你将学习如何突破影响我们所有人的心理障碍，例如冒名顶替综合症。你将了解到自己的极限，以及如何稍微地超越它们。
 
-### 讲故事时间：一名30多岁的教师如何在他的第一份开发工作中取得成功？
+### 讲故事时间：一名 30 多岁的教师如何在他的第一份开发工作中取得成功？
 
 *上一次故事时间回顾：昆西在当地一家科技初创公司找到了他的第一份开发工作。他将成为维护一个庞大、复杂的代码库的十几名开发人员中的一员。他不知道自己在做什么……*
 
-我凌晨4点醒来，再也睡不着了。我努力尝试睡着。但是我的胸口像在燃烧一样。焦虑和恐慌包围了我。
+我凌晨 4 点醒来，再也睡不着了。我努力尝试睡着。但是我的胸口像在燃烧一样。焦虑和恐慌包围了我。
 
 我在教育领域工作了十年。先当家教。然后当老师。接着担任校长。
 
@@ -2738,7 +2734,7 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 当我回到家时，我妻子已经出门上班了。她告诉我不要担心。她说，“即使你因为不知道自己在做什么而被解雇，我依然爱你。”
 
-当我到达我的新办公室时，那里没有人。作为一名教师，我习惯于7点30分准时到校。但我很快意识到，大多数软件开发人员并没有那么早开始工作。
+当我到达我的新办公室时，那里没有人。作为一名教师，我习惯于 7 点 30 分准时到校。但我很快意识到，大多数软件开发人员并没有那么早开始工作。
 
 所以我盘腿坐在入口走廊上，按照上网本上的教程写代码。
 
@@ -2760,9 +2756,9 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 “好极了，”我的老板说。“那么先给你配一台电脑。”
 
-“哦，我已经有了一个，”我敲了敲我200美元的上网本说。“这个宝贝正在运行 Linux Mint，我已经自定义了我的 .emacs 文件，以便能够……”
+“哦，我已经有了一个，”我敲了敲我 200 美元的上网本说。“这个宝贝正在运行 Linux Mint，我已经自定义了我的 .emacs 文件，以便能够……”
 
-“我们是一家 Mac 商店，”他说着走向储藏室。他搜寻了一会儿，然后出现了。“这是一个已经用了3年的模型，但它应该还够用。我们把它重置到出厂设置。”
+“我们是一家 Mac 商店，”他说着走向储藏室。他搜寻了一会儿，然后出现了。“这是一个已经用了 3 年的模型，但它应该还够用。我们把它重置到出厂设置。”
 
 我开始说我已经熟悉我的电脑配置，而且我用它能更快地工作，但他并不接受。
 
@@ -2772,19 +2768,19 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 其他开发人员陆续到了公司，而我花了接下来的几个小时来配置我的新电脑。
 
-接近上午10点时，我们开始了团队“站会”。我们站在白板前围成一圈，轮流汇报当天的工作。
+接近上午 10 点时，我们开始了团队“站会”。我们站在白板前围成一圈，轮流汇报当天的工作。
 
 每个人都提供简洁、准确的进展更新。
 
-轮到我了，我开始自我介绍。当时我已经非常紧张了，结果这时候迈克走了进来，他是超级马拉松运动员，也主持举办圣塔芭芭拉的初创企业活动。他正在吃一些小胡萝卜，那天早上他已经跑了大约30英里。
+轮到我了，我开始自我介绍。当时我已经非常紧张了，结果这时候迈克走了进来，他是超级马拉松运动员，也主持举办圣塔芭芭拉的初创企业活动。他正在吃一些小胡萝卜，那天早上他已经跑了大约 30 英里。
 
-在我结束后，迈克说话了，欢迎了我并且说他在一些活动中见过我。然后，他用15秒的时间讲述了有关他正在写一些功能的工作。
+在我结束后，迈克说话了，欢迎了我并且说他在一些活动中见过我。然后，他用 15 秒的时间讲述了有关他正在写一些功能的工作。
 
-整个会议只进行了大约10分钟，大家就各自回到了自己的办公桌。
+整个会议只进行了大约 10 分钟，大家就各自回到了自己的办公桌。
 
-我最终让公司的代码库在我的新笔记本电脑上运行。这是一个已经发展了5年多的 Ruby on Rails 应用程序。我运行了“rake stats”命令，发现它有数百万行代码。我不寒而栗。我怎么可能能理解这些东西呢？
+我最终让公司的代码库在我的新笔记本电脑上运行。这是一个已经发展了 5 年多的 Ruby on Rails 应用程序。我运行了“rake stats”命令，发现它有数百万行代码。我不寒而栗。我怎么可能能理解这些东西呢？
 
-我的隔壁桌，一个看起来粗鲁的、留着胡子的开发人员说，“嗯，其中大部分只是包。你实际要处理的代码库可能只有100000行。别担心。你会掌握它的窍门的。”
+我的隔壁桌，一个看起来粗鲁的、留着胡子的开发人员说，“嗯，其中大部分只是包。你实际要处理的代码库可能只有 100000 行。别担心。你会掌握它的窍门的。”
 
 我咽了咽口水，心想：“这还不到一百万呢，还行。”
 
@@ -2792,280 +2788,280 @@ So you can see why employers are risk averse. Many of them will pass over seemin
 
 在接下来的几天里，我向尼克提问了每一个我遇到的内部系统问题。
 
-Eventually Nick started setting his chat status to "code mode" and putting on his noise cancelling headphones. He swiveled his back toward me a bit, with the body language of: "leave me alone so I can get some of my own work done, too."
+终于，Nick 开始将他的聊天状态设置为“代码模式”，并戴上了降噪耳机。他转身背对我，用肢体语言说：“让我一个人待一会，我也要完成自己的工作。”
 
-This was one of my earliest lessons about team dynamics. You don't want to wear out your welcome with too many questions. You need to get better at learning things for yourself.
+这是我关于团队动力学到的第一个教训。如果不想因为提问太多而不受欢迎，就要更好地为自己学习。
 
-But this was a massive codebase, and it was largely undocumented, aside from inline comments and a pretty sparse team wiki.
+但这个代码库很庞大，除了内部注释和相当空旷的团队 wiki 外基本什么都没有。
 
-Since it was a close-source codebase that only the devs around me were working in, I couldn't use Stack Overflow to figure out where particular logic was located. I just had to feel around in the dark.
+这个代码库是封闭的，只有我身边的人在进行开发，也没办用 Stack Overflow 搜索，我只能在黑暗中摸索。
 
-I started rotating through which neighbor I'd bug about a particular question. But it felt like I was quickly ringing out any enthusiasm they may have had left for me as a teammate.
+我开始纠结该骚扰哪个邻桌同事提问，但又感觉这样是在消耗队友的热情。
 
-I over-corrected. I became shy about asking even simple questions. I made a rule for myself that I would try for 2 hours to get unstuck before I would ask for help.
+我开始过分担忧，连最简单的问题也羞于提问。我定了一个规矩：先自己摸索两小时再去向别人求助。
 
-At some point, after thrashing for several hours, I did ask for help. When my manager discovered I'd been stuck all morning, he asked, "Why didn't you ask for help earlier?"
+折腾了几个小时之后，我终于求助了。主管发现我整个上午都没有进展，问我：“为什么不早点开口呢？”
 
-Another struggle was with understanding the codebase itself – the "monolith" and its many microservices.
+我遇到的另一个难题是理解代码库，包括整体和微服务部分。
 
-The codebase had thousands unit tests and integration tests. Whenever you wrote a new code contribution, you were also supposed to write tests. These tests helped ensure that your code did what it was supposed to – and didn't break any existing functionality.
+整个代码库有几千个单元测试和集成测试。贡献新的代码时也要编写测试，用来确认新代码实现了预期功能，且不会破坏现有的功能。
 
-I would frequently "break the build" by committing code that I thought was sufficiently tested – only to have my code break some other part of the app I hadn't thought about. This frustrated the entire team, who were unable to merge their own code until the root problem had been fixed.
+往往我提交了自认为充分测试的代码，却影响了其他我没有考虑到的部分，破坏了程序。其他人在根本问题解决之前无法合并代码，整个团队都很失望。
 
-The build would break several times a week. And I was not the only person who made these sorts of mistakes. But it **felt** like I was.
+程序一周会出几次问题，我不是唯一一个犯这种错误的人，但我**感觉**都是我的错。
 
-There were days where I felt like I was not cut out to be a developer. I'd say to myself: "Who am I kidding? I just wake up one day and decide I'm going to be a developer?"
+有段时间我觉得自己不是做开发的料，我自己想着，“开什么玩笑呢？怎么突然就决定来做开发了呢？”
 
-I kept hearing echoes of all those things my developer friends had said to me a year earlier, when I was first starting my coding journey.
+我不断回想起一年前我刚刚开始学习编程的时候，其他开发朋友们对我说过的话。
 
-"How are you going to hang with people who grew up coding from an early age?"
+“你怎么和那些从小学编程的人共事？”
 
-"Why don't you just stick with what you're good at?"
+“为什么不去做你擅长的事呢？”
 
-"You're going to have to drink an entire ocean of knowledge."
+“你怕不是得痛饮知识的海洋。”
 
-I would take progressively longer breaks to get away from my computer. The office had a kitchen filled with snacks. I would find more excuses to get up to grab a snack. Anything to delay the crushing sense that I had no idea what I was doing.
+我离开电脑的时间越来越长。办公室的厨房里摆满了零食，我不停找借口起来吃零食，不管怎样，只要能摆脱那种不知道自己在做什么的感觉就行。
 
-The first few months were rough. During morning standup meetings, it felt like everyone was moving fast. Closing open bugs and shipping features. It felt like I had nothing to say. I was still working on the same feature as the day before.
+最开始几个月很难。每日立会的时候，我感觉每个人都在飞快前进，修补 bug、发布新功能，只有我没什么可说的，我还在做前一天的那个功能。 
 
-Every day when I woke up and got ready for work, I felt dread. "This is going to be the day they fire me."
+每天醒来去上班时我都感到恐惧，“今天就是他们炒我鱿鱼的日子。”
 
-But then I'd go to work and everyone would be pretty kind, pretty patient. I would ask for help if I was really stuck. I would make **some** progress, and maybe fix a bug or two.
+但是工作中每个人都很友善，很有耐心。遇到真的无法解决的问题我会去求助，渐渐地，我有了**一点**进展，还修复了一两个 bug。
 
-I was getting faster at navigating the codebase. I was getting faster at reading stack traces when my code errored out. I was shipping features at a faster clip than before.
+我浏览代码库的速度越来越快，代码出错时，我读取堆栈轨迹的速度也越来越快，也能更快地发布新功能了。
 
-Whenever my boss called me into his office, I would think to myself: "Oh no, I was right. I'm going to get fired today." But he would just assign me some more bugs to fix, or features to develop. Phew.
+每次老板叫我去办公室时，我都在想：“完了，这次没跑了，我今天就要被炒鱿鱼了。”但他只是给我更多bug来修，更多要开发的功能。谢天谢地。
 
-It was the most surreal thing – me terrified out of my mind that I'm about to get the axe, and him having no idea anything's wrong.
+最离谱的就在这了：我怕被解雇怕得要死，他却完全不知道怎么回事。
 
-Of course, I had heard the term "imposter syndrome" before. But I didn't realize that was what I was experiencing. Surely I was just suffering from "sucks at coding" syndrome, right?
+当然，我也听说过“冒名顶替者综合症”，但我没有意识到这件事会发生在我身上，我这肯定是得了“编程很烂”综合症，对吧？
 
-One day I was sitting next to Nick, and he was looking pretty frazzled. I offered to grab him a soda from the kitchen.
+有一天我坐在 Nick 旁边，看他好像很累，我去厨房给他拿了瓶汽水。
 
-When I got back, he cracked the can open, took a sip, and leaned back in his chair, gazing at his monitor full of code. "This bug, man. Three weeks trying to fix this one bug. At this point I'm debugging it in my sleep."
+我回来后，他打开拉环喝了一口，靠在椅子上，盯着满是代码的显示器。“这个bug啊，哥们我花了三周时间来修，做梦都在调试。”
 
-"Three weeks trying to fix the same bug?" I asked. I had never heard of such a thing.
+“三周时间修一个 bug ？”我问道。我从未听说过这样的事。
 
-"Some bugs are tougher to crack than others. This is one of those really devious ones."
+“有些bug更难修，这个就坏得很。”
 
-It felt like someone had slapped me across the face with a salmon. I had viewed my job as chunks of work. As though it should take half a day to fix a bug, and if it took longer than that, I was doing something wrong.
+这句话给了我当头一棒。我总是把我的任务按份处理，比如修一个 bug 要半天时间，超过了半天就肯定是我做的不对。
 
-But here Nick was – with his computer science degree from University of California and his years of experience working on this same codebase – and he was stumped for three weeks on a single bug.
+但是，有着加利福尼亚大学的计算机科学学位、多年同一代码库工作经验的尼克却在一个bug上困住了三个星期。
 
-Maybe I had been too hard on myself. Maybe some of these bugs I'd been fixing were not necessarily "half day bugs", but were "two or three day bugs." Yes, I was inexperienced and slow. But even so, maybe I was holding myself to unrealistic standards.
+也许是我对自己太苛刻了，可能我修的一些bug不是“半天的bug”，而是“两三天的 bug ”。是，我缺乏经验，工作也慢。但就算这样，我是不是给自己设立了不切实际的标准呢？
 
-After all, when we budgeted time for features, sometimes we would have "5-day features" or even "2-week features." We didn't do this for bugs, but they probably varied similarly.
+在开发新功能时，有的功能开发要5天，甚至是两周时间而修bug的时候没有这样的时间规划，但其实bug也会遇到同样的问题。
 
-I went home and read more about Imposter Syndrome. And what I read explained away a lot of my anxiety.
+回家后，我深入了解了下“冒名顶替综合症”，也缓解了不少焦虑。
 
-Over the coming months, I kept building out features for the codebase. I kept collaborating with my team. It was still hard, brain-busting work. But it was starting to get a little bit easier.
+在接下来的几个月里，我还在为代码库构建新功能，与队友合作。虽然工作还是很难很费脑，但开始没有那么困难了。
 
-I bonded with my teammates each day at lunch over board games. One week, we had a company-wide chess tournament.
+每天午餐时，我都会和队友一起下棋。有一周有一个全公司的国际象棋锦标赛。
 
-A couple rounds in, I played against the CEO.
+几轮后，轮到我和 CEO 对弈。
 
-The CEO has an unorthodox chess play style. He used a silly opening that few serious chess players would opt for. And I was able to take any early lead in the game.
+这位 CEO 的下棋风格很不一般，他开局开得很不好，少有棋手会做出这样的选择，最初我取得了领先。
 
-But over the next few moves, he was able to slowly grind back control over the game. He eventually gained the upper hand and beat me.
+但接下来的几步，他慢慢地夺回了比赛的控制权，最终占了上风，打败了我。
 
-When I asked him how he found time to keep his chess skills sharp while running a company, he said, "Oh, I don't. I only play once or twice a year."
+我问他在经营公司的同时，怎么还有时间保持棋艺精湛，他说：“没有，我一年只下一两次。”
 
-He paused for a moment, his hand frozen in front of him, as if preparing to launch into a lecture. He said: "My uncle was a competitive chess player. And he just gave me a single piece of advice to follow: **every time your opponent moves, slow down and try to understand the game from their perspective – why did they make that move?**"
+他停顿了一会儿，手停着不动，好像准备开始演讲。他说：“我叔叔是一名优秀的棋手，他给了我一个简单的建议：**“轮到你的对手时，放慢速度，试着从他们的角度来理解比赛——他们为什么要这么做？”**
 
-He bowed then excused himself to run to a meeting.
+他鞠了一躬，然后告辞去开会了。
 
-I've thought a lot about what he said over the years. And I've realized this advice doesn't just apply to chess. You can apply it to any adversarial situation.
+这些年，我不停在想他说的话，我想他的建议不仅仅适用于国际象棋，也适用于任何对局。
 
-### If You Keep Having to Do a Task, You Should Probably Automate it
+### 重复任务就该自动化
 
-Another lesson I learned about software development: since I was the most junior person on the team, I often got assigned the "grunt work" that nobody else wanted to do. One of these tasks was to be the "build nanny."
+关于软件开发我还学到了一个经验。由于我是团队中资历最浅的人，就经常被分配到没有人愿意做的苦差事，其中一项任务就是“代码保姆”。
 
-Whenever someone broke the build, I would pull down the latest version of our main branch and use `git bisect` to try and identify the commit that broke it.
+每当有人破坏了代码，我就会 pull 主分支的最新版本，并使用 `git bisect`来找到破坏代码的提交。
 
-I'd open up that commit, run the tests, and figure out what went wrong. Then I'd send a message to the person who broke the build, telling them what they needed to fix.
+打开提交，运行测试，找出出错的地方，向破坏 build 的人发送消息，告知要修复的地方。
 
-I got really fast at doing this. In a day full of confusing bug reports and ambiguous feature requests, I looked forward to the build breaking. It would give me a chance to feel useful real quick.
+这套流程我做的飞快。在充满迷惑的 bug 报告和含糊不清的功能请求的一天里，我期待着 build 出错，这样只需要花上很短的时间，我就能感受到自己的价值。
 
-It wasn't long before someone on the team said, "With how often the build breaks, we should just automate this."
+没过多久团队中有人说：“build 出错的频率太高，应该自动化一下。”
 
-I didn't say anything, but I felt defensive. This was a bad idea. How could a script do as good a job at finding the guilty commit as I – a flesh and blood developer – could?
+我什么也没说，但产生了戒心。这可不是什么好主意，一个脚本怎么能像我这个有血有肉的开发人员一样找到有问题的提交呢?
 
-It took a few days. But sure enough, one of my teammates whipped up a script. And I didn't have to be the build nanny anymore.
+但又过了几天，果不其然，队友随手写了一个脚本，我再也不用做代码保姆了。
 
-It felt strange to see a message that the build failed, and then a moment later see a message saying which commit broke the build and who needed to go fix it.
+收到 build 出错的消息，没过多久，又收到是哪个 commit 破坏了 build ，需要谁来修复，总感觉怪怪的。
 
-I felt indignant. I didn't say anything, but in my mind I was thinking: "That's supposed to be my work. That script took my job."
+我感到气愤，什么也没说，但心里想：“这是我的工作，脚本抢了我的活。”
 
-But of course, I now look back at my reaction and laugh. I imagine myself, now in my 40s, still dropping everything several times each week so I could be the build nanny.
+当然，现在每每回想起自己的反应我都感到好笑。我想象着自己已经40多岁了，每周还要放下几次别的事情，来做代码保姆。
 
-Because in practice, if a task can be automated – if you can break it down into discrete steps that a computer can reliably do for you – then you should probably automate it.
+工作中，如果一项任务可以自动化，可以分解成计算机可以可靠完成的小步骤，那么就应该自动化。
 
-There's plenty of more interesting work you can do with your time.
+你的时间应该留给更有趣的工作。
 
-![is_it_worth_the_time_2x-1](https://www.freecodecamp.org/news/content/images/2023/01/is_it_worth_the_time_2x-1.png)This chart from XKCD shows can help you figure out whether a task is worth the time investment to automate.
+![is_it_worth_the_time_2x-1](https://www.freecodecamp.org/news/content/images/2023/01/is_it_worth_the_time_2x-1.png)这张XKCD的图表，帮你弄清一项任务是否值得投入时间来实现自动化。
 
-### Lessons from the Village Elders
+### 多听老人言
 
-I learned a lot from other people on the team. I learned product design concepts from Mike. He took me running on the beach, and taught me how to run on my forefoot, where the balls of my feet hit the ground before my heels. This is a bit easier on your joints.
+我向团队里每个人都学到了很多。我从 Mike 那里学到了产品设计概念。他带我在沙滩上跑步，教我如何用前脚掌跑步，前脚掌先于脚跟着地，这样对关节更为友好。
 
-And I learned about agile software engineering concepts from Nick. He helped me pick out some good software development books from the library. And he even invited me over for a house-warming party, and I got to meet his kids.
+从Nick那里我学到了快速软件工程（agile software engineering）的概念，他帮我从图书馆挑选了软件开发书籍，甚至还邀请我去他家参加乔迁派对，那次我见到了他的几个孩子。
 
-After about a year of working for the company, I felt it was time to try to strike out on my own, and build some projects around online learning. I sat down with the CTO to break the news to him that I was leaving.
+在这家公司工作了大概一年时间，我觉得到了创业的时候了，我想要做与在线学习相关的内容。我找到CTO坐下谈话，把要离开的消息告诉了他。
 
-I said, "I'm grateful that you all hired me, even though I was clearly the weakest developer at the company."
+我说：“很感激大家雇用了我，显然我是全公司最弱的开发者。”
 
-He let out a laugh and said, "Sure, when you started, you were the worst developer on the team. I'd say you're still the worst developer on the team."
+他大笑着说：“当然，最开始你是团队中最烂的开发者，我得说，现在你还是团队中最烂的开发者。”
 
-I sat there smiling awkwardly, blinking at him, not sure whether he was just angry I was leaving.
+我坐在那里尴尬地笑着，朝他眨了眨眼睛，不知道他是不是因为我要离开而生气。
 
-And then he said, "But that's smart. You're smart. Because **you always want to be the worst musician in the band**. You always want to be surrounded by people who are better than you. That's how you grow."
+然后他说，“但这很聪明，你是个聪明人。你**总是想成为乐队里最差的乐手**，希望身边都是比你优秀的人，这样你才能成长。”
 
-Two weeks later, I checked in my code changes for the day and handed off my open tickets. I reset my Mac to factory settings and handed it to my manager.
+两周后，我检查了当天的代码更改，上交了我的开启支持问题，把Mac电脑重置为出厂设置，交给了主管。
 
-I shook hands with my teammates and headed out the door into the California evening air.
+我和队友们握了握手，走出门，走入加州的傍晚。
 
-I hit the ground running, lining up freelance contracts to keep the lights on. And I scouted out an apartment in Oakland, just across the bridge from the beating heart of tech in South of Market San Francisco.
+我全力以赴，争取签约自由职业维持收入。我在奥克兰物色了一套公寓，就在旧金山南市场科技中心的桥对面。
 
-I was now a professional developer with a year of experience already under my belt.
+我已经是一个有一年经验的专业开发人员了。
 
-I was ready to dream new dreams and make new moves.
+我已经准备好追寻新的梦想，采取新的行动。
 
-I was off to the land of startups.
+我走向了创业之路。
 
-### Lessons From my First Year as a Developer
+### 开发者第一年的经验教训
 
-I did a lot of things right during my first year as a professional developer. I give myself a B-.
+作为专业开发者的第一年，我做了很多正确的选择，我给自己打个B-。
 
-But if I had the chance to do it all again, there are some things I'd do differently.
+但如果有机会重新来过，有些选择会不同。
 
-Here are some tips. May these maximize your learning and minimize your heartache.
+接下来是我的建议，希望能够尽量提高你的学习能力，让你没那么痛心。
 
-#### Leave Your Ego at the Door
+#### 丢下自负
 
-Many people entering the software development field will start at the very bottom. One title you might have is "Junior Developer."
+许多进入软件开发领域的人都是从最底层开始的，你可能会获得“初级开发者”的头衔。
 
-It can feel a bit awkward to be middle aged and have the word "junior" in your title. But with some patience and some hard work, you can move past it.
+人到中年，头衔里还有个“初级”总觉得有点尴尬。但只要耐心、努力，就能克服这一点。
 
-One problem I faced every day was – I had 10 years of professional experience. I was not an entry level employee. Yes, I was new to development, but I was quite experienced at teaching and even managing people. (I'd managed 30 employees at my most recent teaching job.)
+每天我都面临的问题是：我有十年的专业经验了。我不是个入门员工。是，我是个开发新手，但我在教学与管理方面都经验丰富。(上一份教学工作中，我管理了30名员工。)
 
-And yet – in spite of all my past work experience – I was still an entry level developer. I was still a novice. A neophyte. A newbie.
+但尽管过去的工作经验丰富，我仍然是个入门级的开发者，我还是个新手。
 
-As much as I wanted to scream "I used to be the boss – I don't need you to babysit me" – the truth was I did need babysitters.
+我也很想大喊“我当过老板，不需要你来照顾”，但事实是我确实需要别人来手把手带领。
 
-What if I accidentally broke production? What if I introduced a security vulnerability into the app? What if I wiped the entire database? Or encrypted something important and lost the key?
+要是不小心影响了生产怎么办？在应用中引入了安全漏洞怎么办？清空了整个数据库怎么办？加密了重要的东西却把密码忘了怎么办？
 
-These sorts of disasters happen all the time. And it's not just new developers who make these mistakes.
+这些灾难经常发生，并不只有新开发者才会犯这些错误。
 
-The reality is as a new developer, you are like a bull in a China shop, trying to walk carefully, but smashing everything in your path.
+现实情况是，新开发者就是个闯祸鬼，很努力很小心翼翼，却搞坏了所有东西。
 
-Don't let yourself get impatient with your teammates. Resist the temptation to talk about your advanced degrees, awards your work has won, or that time the mayor gave you the key to the city. (OK, maybe that last one never happened to me.)
+不要对队友失去耐心，别总想提你的高等学位、获得的奖项、或者市长给你的城市钥匙。(好吧，也许最后一个问题从来就不存在。)
 
-Not just because it will make you hard to work with. Because it will distract you from the task at hand.
+这不仅仅会让您很难相处，也会分散你对手头工作的注意力。
 
-For the first few months of my developer career, I used my past accomplishments as a sort of pacifier. "Yeah I suck at coding, but I'm phenomenal at teaching English grammar. Did I mention I used to run a school?"
+在做开发者的最初几个月里，我把过去的成就作为一种安慰。“是，我编程很烂，但我教英语语法还不错，我跟你讲过我以前开过一所学校吗?”
 
-When your fingers are on the keyboard, and your eyes are on the code editor, you have to let that past self go. You can revel in yesterday's accomplishment tonight, after today's work is done.
+手指放在键盘上，眼睛盯着代码编辑器，就必须抛弃过去的自己。只有今天的工作完成之后，才可以陶醉于今天的成就。
 
-But for now, you need to accept all the emotions that come with being a beginner again. You need to focus on the task at hand and get the job done.
+但首先，你要接受再次成为初学者所带来的所有情绪，专注于手头的任务，完成任务。
 
-### It's Probably Just the Imposter Syndrome Talking
+### 可能只是“冒名顶替者综合症”
 
-Almost everyone I know has experienced Imposter Syndrome. That feeling that you do not belong. That feeling that at any moment your teammates are going to see how terrible your code is and expose you as not a "real developer."
+几乎我认识的每个人都经历过“冒名顶替者综合症”。那种你不属于这里的感觉，感觉队友随时会发现你的代码有多糟糕，暴露你不是“真正的开发人员”。
 
-To some extent, the feeling does not go away. It's always there in the back of your mind, ready to rear its head when you try to do something new.
+在某种程度上，这种感觉并没有不会消失，它总是在脑海中，在尝试做新的事情时随时蠢蠢欲动。
 
-"Could you help me get past this error message?" "Um... I'm not sure if I'm the best person to ask."
+“能帮我处理这个错误信息吗？” “嗯……找我可能不太合适吧。”
 
-"Could you pair program with me on implementing this feature?" "Um... I guess if you can't find someone more qualified."
+“能和我一起编程实现这个功能吗?”“嗯……是不是找别人更好啊。”
 
-"Could you give a talk at our upcoming conference?" "Um... me?"
+“能在接下来的会议上做个演讲吗?”“嗯……你确定是我吗?”
 
-I've met senior engineers who still suffer from occasional imposter syndrome, more than a decade into their career.
+我见过一些高级工程师进入职业生涯十多年后，仍不时患上“冒名顶替者综合症”。
 
-When you feel inadequate or unprepared, it may just be imposter syndrome.
+当你觉得自己能力不足或毫无准备时，这可能只是一种“冒名顶替者综合症”。
 
-Sure – if you handed me a scalpel and said, "help me perform heart surgery" I would feel like an imposter. To some extent, feeling out of your depth is totally reasonable if you are indeed out of your depth.
+当然，如果你递给我一把手术刀，说“帮我做心脏手术”，我会觉得自己是个骗子。在某种程度上，如果真的做不到，感觉力不从心是完全合理的。
 
-The problem is that if you've been practicing software development, you may be able to do something but still inexplicably suffer from anxiety.
+问题是，如果你一直在做软件开发，一些事情你明明做得到，却仍然莫名其妙地焦虑。
 
-I am not a doctor. But my instinct is that – for most people – imposter syndrome will gradually diminish with time, as you get more practice and build more confidence.
+我不是医生，但直觉上认为对大多数人来说，“冒名顶替者综合症”会随着时间的推移逐渐消失，练习得越多，也就更有信心。
 
-But it can randomly pop up. I'm not afraid to admit that I sometimes feel pangs of imposter syndrome when doing a new task, or one I haven't done in a while.
+但有时，这种感觉还是会出现。我也承认，在做一项新任务或一段时间没有做的任务时，我有时会感到“冒名顶替者综合症”。
 
-The key is to just accept it: "It's probably just the imposter syndrome talking."
+关键是要接受它，要记住，可能只是“冒名顶替者综合症”。
 
-And to keep going.
+继续前进吧。
 
-### Find Your Tribe. But Don't Fall for Tribalism
+### 找到团体，但不要陷入团体
 
-When you get your first developer job, you'll work alongside other developers. Yipee – you found your tribe.
+找到第一份开发者工作后，你将与其他开发者一起工作，你找到了一个团体。
 
-You'll spend a lot of time with them, and you all may start to feel like a tight unit.
+你和他们有很多共事的时间，感觉成为了一个紧密的单位。
 
-But don't ignore the non-developer people around you.
+但请不要忽视周围的非开发人员。
 
-In my story above, I talked about Mike, the Product Manager who also ran startup events. He was "non-technical". His knowledge of coding was limited at best. But I'd venture to say I learned as much from him as anyone else at the company.
+前文中我提到了产品经理 Mike，他也负责创业活动。他“不懂技术”，在编码方面的知识有限，但我敢说我从他身上学到的东西和其他人一样多。
 
-You may work with other people from other departments – designers, product managers, project managers, IT people, QA people, marketers, even finance and accounting folks. You can learn a lot from these people, too.
+你可能会和其他部门的人一起工作——设计师、产品经理、项目经理、IT人员、QA人员、营销人员，甚至是财务和会计人员，从这些人身上也可以学到很多东西。
 
-Yes, you should focus on building strong connective tissue between you and the other devs on the team. But stay curious. Hang out with other people in the lunch room or at company events. You never know who's going to be the next person to help you build your skills, your network, or your reputation.
+确实，你应该与团队其他开发者之间建立牢固的联系。但请保持好奇，在餐厅或公司活动中与不同的人一起活动，你永远不知道谁会是下一个帮你学习技能、建立人脉或声誉的人。
 
-### Don't Get Too Comfortable and Specialize too Early
+### 不要太舒适，也不要太早专攻
 
-I often give this advice to folks who are first starting their coding journey: "learn general coding skills (JavaScript, SQL, Linux, and so on) and then specialize on the job."
+我经常给第一次学习代码的人这样建议：“从一般的编码技能（JavaScript、SQL、Linux等等）开始学起，然后专门从事这项工作。”
 
-The idea is, once you understand how the most common tools work, you can learn those tools' less common equivalents.
+我的想法是一旦学会了最常用的工具，就可以学习那些不太常用的工具。
 
-For example, once you've learned PostgreSQL, you can easily learn MySQL. Once you've learned Node.js, you can easily learn Ruby on Rails or Java Spring Boot.
+比如说，学会了 PostgreSQL，很容易就能学会 MySQL。学会了 Node.js，很容易就能学会 uby on Rails 或 Java Spring Boot。
 
-But some people specialize too early at work. Their boss might ask them to "own" a certain API or feature. And if they do a good job with that, their boss may keep giving them similar projects.
+但有些人在工作中太早专精了，老板可能会要求他们“专管”某个API或特性。如果在这方面做得好，老板可能就会继续给类似的项目。
 
-You are only managing yourself, but your boss is managing many people. They may be too busy to develop a nuanced understanding of your abilities and interests. They may come to see you as "the XYZ person" and just give you tasks related to that.
+你只负责管理自己，而老板在管理很多人，无法细致地了解你能力和兴趣，可能会把你看成“某专业人”，只给你安排相关的任务。
 
-But you know what you're good at, and what you're interested in. You can try and volunteer for projects outside of your comfort zone. If you can get your boss to assign these to you, you'll be able to continue to expand your skills, and potentially work with new teams.
+但你知道自己擅长什么，对什么感兴趣，可以尝试自愿走出舒适区。如果能让老板给你分配舒适区之外的任务，就能继续扩展技能，并可能与新的团队合作。
 
-Remember: your boss may be responsible for your performance at your job, but you are responsible for your performance across your career.
+记住：老板要为你工作上的表现负责，而你要为自己的整个职业生涯负责。
 
-Take on projects that both fulfill your obligation to your employer, and also position you well for your long-term career goals.
+接受那些既能履行对雇主的义务，又能为自己的长期职业目标做好准备的项目。
 
-## Epilogue: You Can Do This
+## 尾记：你能够做到
 
-If there's one message I want to leave you with here, it is this: **you can do this.**
+在这里我只想留下一句话，那就是：**你能够做到**
 
-You can learn these concepts.
+你能够学会这些概念。
 
-You can learn these tools.
+你能够学会这些工具。
 
-You can become a developer.
+你能够成为一名开发者。
 
-Then, the moment someone hands you money for you to help them code something, you will graduate to being a professional developer.
+接下来，在有人愿意花钱让你编写代码的时候，你就会成为一名专业的开发者。
 
-Learning to code and getting a first developer job is a daunting process. But do not be daunted.
+学习编程，找到第一份开发工作，这个过程令人生畏，但请不要气馁。
 
-If you stick with it, you will eventually succeed. It is just a matter of practice.
+坚持下去总会成功，一切都在于练习。
 
-Build your projects. Show them to your friends. Build projects for your friends.
+创建一个项目，给朋友展示自己的项目，为朋友创建项目。
 
-Build your network. Help the people you meet along the way. What goes around comes around. You'll get what's coming to you.
+建立人际网络，帮助你遇到的人。一报还一报，你总会得到回报。
 
-It is not too late. Life is long.
+现在还不算太晚，人生漫漫。
 
-You will look back on this moment years from now and be glad you made a move.
+多年以后，当你回顾这一刻的时候，你会为做出的改变而欣慰。
 
-Plan for it to take a long time. Plan for uncertainty.
+做好长期计划，计划好不确定性。
 
-But above all, keep coming back to the keyboard. Keep making it out to events. Keep sharing your wins with friends.
+但最重要的是，不要停下代码的编写。继续参加活动，继续与朋友分享你的成功。
 
-As Lao Tsu, the Old Master, once said:
+正如老子所说：
 
-> "A journey of a thousand miles begins with a single step."
+> “千里之行，始于足下。”
 
-By finishing this book, you've already taken a step. Heck, you may have already taken many steps toward your goals.
+读完这本书，你就已经迈出了一步，说不定已经朝着目标走了许多步。
 
-Momentum is everything. So keep up that forward momentum you've already built up over these past few hours with this book.
+一鼓作气，继续保持阅读这本书的势头。
 
-Start coding your next project today.
+现在就开始编写下一个项目。
 
-And always remember:
+永远记住：
 
-You can do this.
+你能够做到。

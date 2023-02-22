@@ -1,6 +1,6 @@
 > - 原文地址：[The JavaScript Beginner's Handbook (2020 Edition)](https://www.freecodecamp.org/news/the-complete-javascript-handbook-f26b2c71719c/)
 > - 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> - 译者：
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
 > - 校对者：
 
 JavaScript is one of the most popular programming languages in the world.
@@ -30,7 +30,7 @@ JavaScript is a programming language that is:
 - **interpreted**: it's commonly known as an interpreted language, which means that it does not need a compilation stage before a program can run, as opposed to C, Java or Go for example. In practice, browsers do compile JavaScript before executing it, for performance reasons, but this is transparent to you \- there is no additional step involved.
 - **multi\-paradigm**: the language does not enforce any particular programming paradigm, unlike Java for example, which forces the use of object\-oriented programming, or C that forces imperative programming. You can write JavaScript using an object\-oriented paradigm, using prototypes and the new (as of ES6) classes syntax. You can write JavaScript in a functional programming style, with its first\-class functions, or even in an imperative style (C\-like).
 
-In case you're wondering, *JavaScript has nothing to do with Java*, it's a poor name choice but we have to live with it.
+In case you're wondering, _JavaScript has nothing to do with Java_, it's a poor name choice but we have to live with it.
 
 ## Summary of the handbook
 
@@ -66,9 +66,9 @@ It was the first scripting language that was supported natively by web browsers,
 
 Other languages exist, but all must compile to JavaScript \- or more recently to WebAssembly, but this is another story.
 
-In the begining, JavaScript was not nearly powerful as it is today, and it was mainly used for fancy animations and the marvel known at the time as *Dynamic HTML*.
+In the begining, JavaScript was not nearly powerful as it is today, and it was mainly used for fancy animations and the marvel known at the time as _Dynamic HTML_.
 
-With the growing needs that the web platform demanded (and continues to demand), JavaScript *had* the responsibility to grow as well, to accommodate the needs of one of the most widely used ecosystems of the world.
+With the growing needs that the web platform demanded (and continues to demand), JavaScript _had_ the responsibility to grow as well, to accommodate the needs of one of the most widely used ecosystems of the world.
 
 JavaScript is also now widely used outside of the browser. The rise of Node.js in the last few years unlocked backend development, once the domain of Java, Ruby, Python, PHP, and more traditional server\-side languages.
 
@@ -100,9 +100,9 @@ In this little introduction I want to tell you about 5 concepts:
 
 ### White space
 
-JavaScript does not consider white space meaningful. Spaces and line breaks can be added in any fashion you might like, at least *in theory*.
+JavaScript does not consider white space meaningful. Spaces and line breaks can be added in any fashion you might like, at least _in theory_.
 
-In practice, you will most likely keep a well defined style and adhere to what people commonly use, and enforce this using a linter or a style tool such as *Prettier*.
+In practice, you will most likely keep a well defined style and adhere to what people commonly use, and enforce this using a linter or a style tool such as _Prettier_.
 
 For example, I always use 2 space characters for each indentation.
 
@@ -129,12 +129,12 @@ true
 An **identifier** is a sequence of characters that can be used to identify a variable, a function, or an object. It can start with a letter, the dollar sign `$` or an underscore `_`, and it can contain digits. Using Unicode, a letter can be any allowed character, for example, an emoji ?.
 
 ```js
-Test
-test
-TEST
-_test
-Test1
-$test
+Test;
+test;
+TEST;
+_test;
+Test1;
+$test;
 ```
 
 The dollar sign is commonly used to reference DOM elements.
@@ -151,7 +151,7 @@ Like this:
 
 ```js
 // a comment
-true //another comment
+true; //another comment
 ```
 
 Another type of comment is a multi\-line comment. It starts with `/*` and ends with `*/`.
@@ -201,13 +201,13 @@ A variable must be declared before you can use it.
 We have 2 main ways to declare variables. The first is to use `const`:
 
 ```js
-const a = 0
+const a = 0;
 ```
 
 The second way is to use `let`:
 
 ```js
-let a = 0
+let a = 0;
 ```
 
 What's the difference?
@@ -219,8 +219,8 @@ Using `let` you can assign a new value to it.
 For example, you cannot do this:
 
 ```js
-const a = 0
-a = 1
+const a = 0;
+a = 1;
 ```
 
 Because you'll get an error: `TypeError: Assignment to constant variable.`.
@@ -228,8 +228,8 @@ Because you'll get an error: `TypeError: Assignment to constant variable.`.
 On the other hand, you can do it using `let`:
 
 ```js
-let a = 0
-a = 1
+let a = 0;
+a = 1;
 ```
 
 `const` does not mean "constant" in the way some other languages like C mean. In particular, it does not mean the value cannot change \- it means it cannot be reassigned. If the variable points to an object or an array (we'll see more about objects and arrays later) the content of the object or the array can freely change.
@@ -237,28 +237,30 @@ a = 1
 `const` variables must be initialized at the declaration time:
 
 ```js
-const a = 0
+const a = 0;
 ```
 
 but `let` values can be initialized later:
 
 ```js
-let a
-a = 0
+let a;
+a = 0;
 ```
 
 You can declare multiple variables at once in the same statement:
 
 ```js
-const a = 1, b = 2
-let c = 1, d = 2
+const a = 1,
+  b = 2;
+let c = 1,
+  d = 2;
 ```
 
 But you cannot redeclare the same variable more than one time:
 
 ```js
-let a = 1
-let a = 2
+let a = 1;
+let a = 2;
 ```
 
 or you'd get a "duplicate declaration" error.
@@ -273,7 +275,7 @@ Until 2015, `var` was the only way we could declare a variable in JavaScript. To
 
 Variables in JavaScript do not have any type attached.
 
-They are *untyped*.
+They are _untyped_.
 
 Once you assign a value with some type to a variable, you can later reassign the variable to host a value of any other type without any issues.
 
@@ -307,37 +309,37 @@ Expressions can vary in complexity.
 We start from the very simple ones, called primary expressions:
 
 ```js
-2
-0.02
-'something'
-true
-false
-this //the current scope
-undefined
-i //where i is a variable or a constant
+2;
+0.02;
+('something');
+true;
+false;
+this; //the current scope
+undefined;
+i; //where i is a variable or a constant
 ```
 
 Arithmetic expressions are expressions that take a variable and an operator (more on operators soon), and result in a number:
 
 ```js
-1 / 2
-i++
-i -= 2
-i * 2
+1 / 2;
+i++;
+i -= 2;
+i * 2;
 ```
 
 String expressions are expressions that result in a string:
 
 ```js
-'A ' + 'string'
+'A ' + 'string';
 ```
 
 Logical expressions make use of logical operators and resolve to a boolean value:
 
 ```js
-a && b
-a || b
-!a
+a && b;
+a || b;
+!a;
 ```
 
 More advanced expressions involve objects, functions, and arrays, and I'll introduce them later.
@@ -353,7 +355,7 @@ In this first introduction to operators, we'll introduce the operators you are m
 I already introduced one when talking about variables: the assignment operator `=`. You use `=` to assign a value to a variable:
 
 ```js
-let b = 2
+let b = 2;
 ```
 
 Let's now introduce another set of binary operators that you're already familiar with from basic math.
@@ -361,22 +363,22 @@ Let's now introduce another set of binary operators that you're already familiar
 ### The addition operator (+)
 
 ```js
-const three = 1 + 2
-const four = three + 1
+const three = 1 + 2;
+const four = three + 1;
 ```
 
 The `+` operator also does string concatenation if you use strings, so pay attention:
 
 ```js
-const three = 1 + 2
-three + 1 // 4
-'three' + 1 // three1
+const three = 1 + 2;
+three + 1; // 4
+'three' + 1; // three1
 ```
 
 ### The subtraction operator (\-)
 
 ```js
-const two = 4 - 2
+const two = 4 - 2;
 ```
 
 ### The division operator (/)
@@ -384,15 +386,15 @@ const two = 4 - 2
 Returns the quotient of the first operator and the second:
 
 ```js
-const result = 20 / 5 //result === 4
-const result = 20 / 7 //result === 2.857142857142857
+const result = 20 / 5; //result === 4
+const result = 20 / 7; //result === 2.857142857142857
 ```
 
 If you divide by zero, JavaScript does not raise any error but returns the `Infinity` value (or `-Infinity` if the value is negative).
 
 ```js
-1 / 0 //Infinity
--1 / 0 //-Infinity
+1 / 0 - //Infinity
+  1 / 0; //-Infinity
 ```
 
 ### The remainder operator (%)
@@ -400,15 +402,15 @@ If you divide by zero, JavaScript does not raise any error but returns the `Infi
 The remainder is a very useful calculation in many use cases:
 
 ```js
-const result = 20 % 5 //result === 0
-const result = 20 % 7 //result === 6
+const result = 20 % 5; //result === 0
+const result = 20 % 7; //result === 6
 ```
 
 A remainder by zero is always `NaN`, a special value that means "Not a Number":
 
 ```js
-1 % 0 //NaN
--1 % 0 //NaN
+(1 % 0) - //NaN
+  (1 % 0); //NaN
 ```
 
 ### The multiplication operator (\*)
@@ -416,8 +418,8 @@ A remainder by zero is always `NaN`, a special value that means "Not a Number":
 Multiply two numbers
 
 ```js
-1 * 2 //2
--1 * 2 //-2
+1 * 2 - //2
+  1 * 2; //-2
 ```
 
 ### The exponentiation operator (\*\*)
@@ -425,11 +427,11 @@ Multiply two numbers
 Raise the first operand to the power of the second operand
 
 ```js
-1 ** 2 //1
-2 ** 1 //2
-2 ** 2 //4
-2 ** 8 //256
-8 ** 2 //64
+1 ** 2; //1
+2 ** 1; //2
+2 ** 2; //4
+2 ** 8; //256
+8 ** 2; //64
 ```
 
 <h2 id="precedencerules">Precedence rules</h2>
@@ -439,7 +441,7 @@ Every complex statement with multiple operators in the same line will introduce 
 Take this example:
 
 ```js
-let a = 1 * 2 + 5 / 2 % 2
+let a = 1 * 2 + ((5 / 2) % 2);
 ```
 
 The result is 2.5, but why?
@@ -448,22 +450,22 @@ What operations are executed first, and which need to wait?
 
 Some operations have more precedence than the others. The precedence rules are listed in this table:
 
-| Operator | Description |
-| --- | --- |
+| Operator    | Description             |
+| ----------- | ----------------------- |
 | `*` `/` `%` | multiplication/division |
-| `+` `-` | addition/subtraction |
-| `=` | assignment |
+| `+` `-`     | addition/subtraction    |
+| `=`         | assignment              |
 
 Operations on the same level (like `+` and `-`) are executed in the order they are found, from left to right.
 
 Following these rules, the operation above can be solved in this way:
 
 ```js
-let a = 1 * 2 + 5 / 2 % 2
-let a = 2 + 5 / 2 % 2
-let a = 2 + 2.5 % 2
-let a = 2 + 0.5
-let a = 2.5
+let a = 1 * 2 + ((5 / 2) % 2);
+let a = 2 + ((5 / 2) % 2);
+let a = 2 + (2.5 % 2);
+let a = 2 + 0.5;
+let a = 2.5;
 ```
 
 <h2 id="comparisonoperators">Comparison operators</h2>
@@ -484,8 +486,8 @@ Those are **disequality comparison operators**:
 Example:
 
 ```js
-let a = 2
-a >= 1 //true
+let a = 2;
+a >= 1; //true
 ```
 
 In addition to those, we have 4 **equality operators**. They accept two values, and return a boolean:
@@ -524,7 +526,7 @@ Did you notice the curly braces? That is called a **block**, and it is used to g
 A block can be put wherever you can have a single statement. And if you have a single statement to execute after the conditionals, you can omit the block, and just write the statement:
 
 ```js
-if (true) doSomething()
+if (true) doSomething();
 ```
 
 But I always like to use curly braces to be more clear.
@@ -557,15 +559,15 @@ if (a === true) {
 
 An array is a collection of elements.
 
-Arrays in JavaScript are not a *type* on their own.
+Arrays in JavaScript are not a _type_ on their own.
 
 Arrays are **objects**.
 
 We can initialize an empty array in these 2 different ways:
 
 ```js
-const a = []
-const a = Array()
+const a = [];
+const a = Array();
 ```
 
 The first is using the **array literal syntax**. The second uses the Array built\-in function.
@@ -573,14 +575,14 @@ The first is using the **array literal syntax**. The second uses the Array built
 You can pre\-fill the array using this syntax:
 
 ```js
-const a = [1, 2, 3]
-const a = Array.of(1, 2, 3)
+const a = [1, 2, 3];
+const a = Array.of(1, 2, 3);
 ```
 
 An array can hold any value, even values of different types:
 
 ```js
-const a = [1, 'Flavio', ['a', 'b']]
+const a = [1, 'Flavio', ['a', 'b']];
 ```
 
 Since we can add an array into an array, we can create multi\-dimensional arrays, which have very useful applications (e.g. a matrix):
@@ -590,40 +592,40 @@ const matrix = [
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
-]
+];
 
-matrix[0][0] //1
-matrix[2][0] //7
+matrix[0][0]; //1
+matrix[2][0]; //7
 ```
 
 You can access any element of the array by referencing its index, which starts from zero:
 
 ```js
-a[0] //1
-a[1] //2
-a[2] //3
+a[0]; //1
+a[1]; //2
+a[2]; //3
 ```
 
 You can initialize a new array with a set of values using this syntax, which first initializes an array of 12 elements, and fills each element with the number `0`:
 
 ```js
-Array(12).fill(0)
+Array(12).fill(0);
 ```
 
 You can get the number of elements in the array by checking its `length` property:
 
 ```js
-const a = [1, 2, 3]
-a.length //3
+const a = [1, 2, 3];
+a.length; //3
 ```
 
 Note that you can set the length of the array. If you assign a bigger number than the arrays current capacity, nothing happens. If you assign a smaller number, the array is cut at that position:
 
 ```js
-const a = [1, 2, 3]
-a //[ 1, 2, 3 ]
-a.length = 2
-a //[ 1, 2 ]
+const a = [1, 2, 3];
+a; //[ 1, 2, 3 ]
+a.length = 2;
+a; //[ 1, 2 ]
 ```
 
 ### How to add an item to an array
@@ -631,14 +633,14 @@ a //[ 1, 2 ]
 We can add an element at the end of an array using the `push()` method:
 
 ```js
-a.push(4)
+a.push(4);
 ```
 
 We can add an element at the beginning of an array using the `unshift()` method:
 
 ```js
-a.unshift(0)
-a.unshift(-2, -1)
+a.unshift(0);
+a.unshift(-2, -1);
 ```
 
 ### How to remove an item from an array
@@ -646,14 +648,13 @@ a.unshift(-2, -1)
 We can remove an item from the end of an array using the `pop()` method:
 
 ```js
-a.pop()
+a.pop();
 ```
 
 We can remove an item from the beginning of an array using the `shift()` method:
 
 ```js
-a.shift()
-
+a.shift();
 ```
 
 ### How to join two or more arrays
@@ -661,20 +662,20 @@ a.shift()
 You can join multiple arrays by using `concat()`:
 
 ```js
-const a = [1, 2]
-const b = [3, 4]
-const c = a.concat(b) //[1,2,3,4]
-a //[1,2]
-b //[3,4]
+const a = [1, 2];
+const b = [3, 4];
+const c = a.concat(b); //[1,2,3,4]
+a; //[1,2]
+b; //[3,4]
 ```
 
 You can also use the **spread** operator (`...`) in this way:
 
 ```js
-const a = [1, 2]
-const b = [3, 4]
-const c = [...a, ...b]
-c //[1,2,3,4]
+const a = [1, 2];
+const b = [3, 4];
+const c = [...a, ...b];
+c; //[1,2,3,4]
 ```
 
 ### How to find a specific item in the array
@@ -684,7 +685,7 @@ You can use the `find()` method of an array:
 ```js
 a.find((element, index, array) => {
   //return true or false
-})
+});
 ```
 
 Returns the first item that returns true, and returns `undefined` if the element is not found.
@@ -692,7 +693,7 @@ Returns the first item that returns true, and returns `undefined` if the element
 A commonly used syntax is:
 
 ```js
-a.find(x => x.id === my_id)
+a.find((x) => x.id === my_id);
 ```
 
 The above line will return the first element in the array that has `id === my_id`.
@@ -702,19 +703,19 @@ The above line will return the first element in the array that has `id === my_id
 ```js
 a.findIndex((element, index, array) => {
   //return true or false
-})
+});
 ```
 
 Another method is `includes()`:
 
 ```js
-a.includes(value)
+a.includes(value);
 ```
 
 Returns true if `a` contains `value`.
 
 ```js
-a.includes(value, i)
+a.includes(value, i);
 ```
 
 Returns true if `a` contains `value` after the position `i`.
@@ -726,8 +727,8 @@ A string is a sequence of characters.
 It can be also defined as a string literal, which is enclosed in quotes or double quotes:
 
 ```js
-'A string'
-"Another string"
+'A string';
+'Another string';
 ```
 
 I personally prefer single quotes all the time, and use double quotes only in HTML to define attributes.
@@ -735,34 +736,34 @@ I personally prefer single quotes all the time, and use double quotes only in HT
 You assign a string value to a variable like this:
 
 ```js
-const name = 'Flavio'
+const name = 'Flavio';
 ```
 
 You can determine the length of a string using the `length` property of it:
 
 ```js
-'Flavio'.length //6
-const name = 'Flavio'
-name.length //6
+'Flavio'.length; //6
+const name = 'Flavio';
+name.length; //6
 ```
 
 This is an empty string: `''`. Its length property is 0:
 
 ```js
-''.length //0
+''.length; //0
 ```
 
 Two strings can be joined using the `+` operator:
 
 ```js
-"A " + "string"
+'A ' + 'string';
 ```
 
-You can use the `+` operator to *interpolate* variables:
+You can use the `+` operator to _interpolate_ variables:
 
 ```js
-const name = 'Flavio'
-"My name is " + name //My name is Flavio
+const name = 'Flavio';
+'My name is ' + name; //My name is Flavio
 ```
 
 Another way to define strings is to use template literals, defined inside backticks. They are especially useful to make multiline strings much simpler. With single or double quotes you can't define a multiline string easily \- you'd need to use escaping characters.
@@ -774,7 +775,7 @@ const string = `Hey
 this
 
 string
-is awesome!`
+is awesome!`;
 ```
 
 Template literals are also great because they provide an easy way to interpolate variables and expressions into strings.
@@ -790,9 +791,9 @@ const string = `something ${var}`
 inside the `${}` you can add anything, even expressions:
 
 ```js
-const string = `something ${1 + 2 + 3}`
+const string = `something ${1 + 2 + 3}`;
 const string2 = `something
-  ${foo() ? 'x' : 'y'}`
+  ${foo() ? 'x' : 'y'}`;
 ```
 
 <h2 id="loops">Loops</h2>
@@ -818,12 +819,12 @@ We add a condition after the `while` keyword, and we provide a block that is run
 Example:
 
 ```js
-const list = ['a', 'b', 'c']
-let i = 0
+const list = ['a', 'b', 'c'];
+let i = 0;
 while (i < list.length) {
-  console.log(list[i]) //value
-  console.log(i) //index
-  i = i + 1
+  console.log(list[i]); //value
+  console.log(i); //index
+  i = i + 1;
 }
 ```
 
@@ -831,7 +832,7 @@ You can interrupt a `while` loop using the `break` keyword, like this:
 
 ```js
 while (true) {
-  if (somethingIsTrue) break
+  if (somethingIsTrue) break;
 }
 ```
 
@@ -839,26 +840,26 @@ and if you decide that in the middle of a loop you want to skip the current iter
 
 ```js
 while (true) {
-  if (somethingIsTrue) continue
+  if (somethingIsTrue) continue;
 
   //do something else
 }
 ```
 
-Very similar to `while`, we have `do..while` loops. It's basically the same as `while`, except the condition is evaluated *after* the code block is executed.
+Very similar to `while`, we have `do..while` loops. It's basically the same as `while`, except the condition is evaluated _after_ the code block is executed.
 
-This means the block is always executed *at least once*.
+This means the block is always executed _at least once_.
 
 Example:
 
 ```js
-const list = ['a', 'b', 'c']
-let i = 0
+const list = ['a', 'b', 'c'];
+let i = 0;
 do {
-  console.log(list[i]) //value
-  console.log(i) //index
-  i = i + 1
-} while (i < list.length)
+  console.log(list[i]); //value
+  console.log(i); //index
+  i = i + 1;
+} while (i < list.length);
 ```
 
 ### `for`
@@ -870,11 +871,11 @@ We use the `for` keyword and we pass a set of 3 instructions: the initialization
 Example:
 
 ```js
-const list = ['a', 'b', 'c']
+const list = ['a', 'b', 'c'];
 
 for (let i = 0; i < list.length; i++) {
-  console.log(list[i]) //value
-  console.log(i) //index
+  console.log(list[i]); //value
+  console.log(i); //index
 }
 ```
 
@@ -885,10 +886,10 @@ Just like with `while` loops, you can interrupt a `for` loop using `break` and y
 This loop is relatively recent (introduced in 2015) and it's a simplified version of the `for` loop:
 
 ```js
-const list = ['a', 'b', 'c']
+const list = ['a', 'b', 'c'];
 
 for (const value of list) {
-  console.log(value) //value
+  console.log(value); //value
 }
 ```
 
@@ -913,7 +914,7 @@ function getData() {
 A function can be run any time you want by invoking it, like this:
 
 ```js
-getData()
+getData();
 ```
 
 A function can have one or more argument:
@@ -939,8 +940,8 @@ function getData(color, age) {
   //do something
 }
 
-getData('green', 24)
-getData('black')
+getData('green', 24);
+getData('black');
 ```
 
 Note that in the second invokation I passed the `black` string parameter as the `color` argument, but no `age`. In this case, `age` inside the function is `undefined`.
@@ -986,7 +987,7 @@ A function has a return value. By default a function returns `undefined`, unless
 ```js
 function getData() {
   // do something
-  return 'hi!'
+  return 'hi!';
 }
 ```
 
@@ -995,10 +996,10 @@ We can assign this return value to a variable when we invoke the function:
 ```js
 function getData() {
   // do something
-  return 'hi!'
+  return 'hi!';
 }
 
-let result = getData()
+let result = getData();
 ```
 
 `result` now holds a string with the the `hi!` value.
@@ -1009,20 +1010,20 @@ To return multiple values, you can return an object, or an array, like this:
 
 ```js
 function getData() {
-  return ['Flavio', 37]
+  return ['Flavio', 37];
 }
 
-let [name, age] = getData()
+let [name, age] = getData();
 ```
 
 Functions can be defined inside other functions:
 
 ```js
 const getData = () => {
-  const dosomething = () => {}
-  dosomething()
-  return 'test'
-}
+  const dosomething = () => {};
+  dosomething();
+  return 'test';
+};
 ```
 
 The nested function cannot be called from the outside of the enclosing function.
@@ -1048,7 +1049,7 @@ to
 ```js
 () => {
   //...
-}
+};
 ```
 
 But.. notice that we don't have a name here.
@@ -1060,24 +1061,24 @@ We can assign a regular function to a variable, like this:
 ```js
 let getData = function getData() {
   //...
-}
+};
 ```
 
 When we do so, we can remove the name from the function:
 
 ```js
-let getData = function() {
+let getData = function () {
   //...
-}
+};
 ```
 
 and invoke the function using the variable name:
 
 ```js
-let getData = function() {
+let getData = function () {
   //...
-}
-getData()
+};
+getData();
 ```
 
 That's the same thing we do with arrow functions:
@@ -1085,27 +1086,26 @@ That's the same thing we do with arrow functions:
 ```js
 let getData = () => {
   //...
-}
-getData()
+};
+getData();
 ```
 
 If the function body contains just a single statement, you can omit the parentheses and write everything on a single line:
 
 ```js
-const getData = () => console.log('hi!')
+const getData = () => console.log('hi!');
 ```
 
 Parameters are passed in the parentheses:
 
 ```js
-const getData = (param1, param2) =>
-  console.log(param1, param2)
+const getData = (param1, param2) => console.log(param1, param2);
 ```
 
 If you have one (and just one) parameter, you could omit the parentheses completely:
 
 ```js
-const getData = param => console.log(param)
+const getData = (param) => console.log(param);
 ```
 
 Arrow functions allow you to have an implicit return \- values are returned without having to use the `return` keyword.
@@ -1113,18 +1113,17 @@ Arrow functions allow you to have an implicit return \- values are returned with
 It works when there is a one\-line statement in the function body:
 
 ```js
-const getData = () => 'test'
+const getData = () => 'test';
 
-getData() //'test'
+getData(); //'test'
 ```
 
 Like with regular functions, we can have default values for parameters in case they are not passed:
 
 ```js
-const getData = (color = 'black',
-                 age = 2) => {
+const getData = (color = 'black', age = 2) => {
   //do something
-}
+};
 ```
 
 And like regular functions, we can only return one value.
@@ -1140,9 +1139,7 @@ Any value that's not of a primitive type (a string, a number, a boolean, a symbo
 Here's how we define an object:
 
 ```js
-const car = {
-
-}
+const car = {};
 ```
 
 This is the **object literal** syntax, which is one of the nicest things in JavaScript.
@@ -1150,30 +1147,30 @@ This is the **object literal** syntax, which is one of the nicest things in Java
 You can also use the `new Object` syntax:
 
 ```js
-const car = new Object()
+const car = new Object();
 ```
 
 Another syntax is to use `Object.create()`:
 
 ```js
-const car = Object.create()
+const car = Object.create();
 ```
 
 You can also initialize an object using the `new` keyword before a function with a capital letter. This function serves as a constructor for that object. In there, we can initialize the arguments we receive as parameters, to setup the initial state of the object:
 
 ```js
 function Car(brand, model) {
-  this.brand = brand
-  this.model = model
+  this.brand = brand;
+  this.model = model;
 }
 ```
 
 We initialize a new object using:
 
 ```js
-const myCar = new Car('Ford', 'Fiesta')
-myCar.brand //'Ford'
-myCar.model //'Fiesta'
+const myCar = new Car('Ford', 'Fiesta');
+myCar.brand; //'Ford'
+myCar.model; //'Fiesta'
 ```
 
 Objects are **always passed by reference**.
@@ -1183,19 +1180,19 @@ If you assign a variable the same value of another, if it's a primitive type lik
 Take this example:
 
 ```js
-let age = 36
-let myAge = age
-myAge = 37
-age //36
+let age = 36;
+let myAge = age;
+myAge = 37;
+age; //36
 ```
 
 ```js
 const car = {
   color: 'blue'
-}
-const anotherCar = car
-anotherCar.color = 'yellow'
-car.color //'yellow'
+};
+const anotherCar = car;
+anotherCar.color = 'yellow';
+car.color; //'yellow'
 ```
 
 Even arrays or functions are, under the hood, objects, so it's very important to understand how they work.
@@ -1209,9 +1206,7 @@ The value of a property can be of any type, which means that it can be an array,
 This is the object literal syntax we saw in the previous chapter:
 
 ```js
-const car = {
-
-}
+const car = {};
 ```
 
 We can define a `color` property in this way:
@@ -1219,7 +1214,7 @@ We can define a `color` property in this way:
 ```js
 const car = {
   color: 'blue'
-}
+};
 ```
 
 Here we have a `car` object with a property named `color`, with value `blue`.
@@ -1230,7 +1225,7 @@ Labels can be any string, but beware of special characters \- if I wanted to inc
 const car = {
   color: 'blue',
   'the color': 'blue'
-}
+};
 ```
 
 Invalid variable name characters include spaces, hyphens, and other special characters.
@@ -1242,19 +1237,19 @@ We can retrieve the value of a property using 2 different syntaxes.
 The first is **dot notation**:
 
 ```js
-car.color //'blue'
+car.color; //'blue'
 ```
 
 The second (which is the only one we can use for properties with invalid names), is to use square brackets:
 
 ```js
-car['the color'] //'blue'
+car['the color']; //'blue'
 ```
 
 If you access a nonexistant property, you'll get the `undefined` value:
 
 ```js
-car.brand //undefined
+car.brand; //undefined
 ```
 
 As mentioned before, objects can have nested objects as properties:
@@ -1265,19 +1260,19 @@ const car = {
     name: 'Ford'
   },
   color: 'blue'
-}
+};
 ```
 
 In this example, you can access the brand name using
 
 ```js
-car.brand.name
+car.brand.name;
 ```
 
 or
 
 ```js
-car['brand']['name']
+car['brand']['name'];
 ```
 
 You can set the value of a property when you define the object.
@@ -1287,18 +1282,18 @@ But you can always update it later on:
 ```js
 const car = {
   color: 'blue'
-}
+};
 
-car.color = 'yellow'
-car['color'] = 'red'
+car.color = 'yellow';
+car['color'] = 'red';
 ```
 
 And you can also add new properties to an object:
 
 ```js
-car.model = 'Fiesta'
+car.model = 'Fiesta';
 
-car.model //'Fiesta'
+car.model; //'Fiesta'
 ```
 
 Given the object
@@ -1307,13 +1302,13 @@ Given the object
 const car = {
   color: 'blue',
   brand: 'Ford'
-}
+};
 ```
 
 you can delete a property from this object using
 
 ```js
-delete car.brand
+delete car.brand;
 ```
 
 <h2 id="objectmethods">Object Methods</h2>
@@ -1328,12 +1323,12 @@ In this example, the `start` property has a function assigned, and we can invoke
 const car = {
   brand: 'Ford',
   model: 'Fiesta',
-  start: function() {
-    console.log('Started')
+  start: function () {
+    console.log('Started');
   }
-}
+};
 
-car.start()
+car.start();
 ```
 
 Inside a method defined using a `function() {}` syntax we have access to the object instance by referencing `this`.
@@ -1344,13 +1339,13 @@ In the following example, we have access to the `brand` and `model` properties v
 const car = {
   brand: 'Ford',
   model: 'Fiesta',
-  start: function() {
+  start: function () {
     console.log(`Started
-      ${this.brand} ${this.model}`)
+      ${this.brand} ${this.model}`);
   }
-}
+};
 
-car.start()
+car.start();
 ```
 
 It's important to note this distinction between regular functions and arrow functions \- we don't have access to `this` if we use an arrow function:
@@ -1361,11 +1356,11 @@ const car = {
   model: 'Fiesta',
   start: () => {
     console.log(`Started
-      ${this.brand} ${this.model}`) //not going to work
+      ${this.brand} ${this.model}`); //not going to work
   }
-}
+};
 
-car.start()
+car.start();
 ```
 
 This is because **arrow functions are not bound to the object**.
@@ -1378,12 +1373,12 @@ Methods can accept parameters, like regular functions:
 const car = {
   brand: 'Ford',
   model: 'Fiesta',
-  goTo: function(destination) {
-    console.log(`Going to ${destination}`)
+  goTo: function (destination) {
+    console.log(`Going to ${destination}`);
   }
-}
+};
 
-car.goTo('Rome')
+car.goTo('Rome');
 ```
 
 <h2 id="classes">Classes</h2>
@@ -1399,35 +1394,35 @@ Let's take a person object:
 ```js
 const person = {
   name: 'Flavio'
-}
+};
 ```
 
 We can create a class named `Person` (note the capital `P`, a convention when using classes), that has a `name` property:
 
 ```js
 class Person {
-  name
+  name;
 }
 ```
 
 Now from this class, we initialize a `flavio` object like this:
 
 ```js
-const flavio = new Person()
+const flavio = new Person();
 ```
 
-`flavio` is called an *instance* of the Person class.
+`flavio` is called an _instance_ of the Person class.
 
 We can set the value of the `name` property:
 
 ```js
-flavio.name = 'Flavio'
+flavio.name = 'Flavio';
 ```
 
 and we can access it using
 
 ```js
-flavio.name
+flavio.name;
 ```
 
 like we do for object properties.
@@ -1439,7 +1434,7 @@ Methods are defined in this way:
 ```js
 class Person {
   hello() {
-    return 'Hello, I am Flavio'
+    return 'Hello, I am Flavio';
   }
 }
 ```
@@ -1449,11 +1444,11 @@ and we can invoke methods on an instance of the class:
 ```js
 class Person {
   hello() {
-    return 'Hello, I am Flavio'
+    return 'Hello, I am Flavio';
   }
 }
-const flavio = new Person()
-flavio.hello()
+const flavio = new Person();
+flavio.hello();
 ```
 
 There is a special method called `constructor()` that we can use to initialize the class properties when we create a new object instance.
@@ -1463,11 +1458,11 @@ It works like this:
 ```js
 class Person {
   constructor(name) {
-    this.name = name
+    this.name = name;
   }
 
   hello() {
-    return 'Hello, I am ' + this.name + '.'
+    return 'Hello, I am ' + this.name + '.';
   }
 }
 ```
@@ -1477,8 +1472,8 @@ Note how we use `this` to access the object instance.
 Now we can instantiate a new object from the class, pass in a string, and when we call `hello` we'll get a personalized message:
 
 ```js
-const flavio = new Person('flavio')
-flavio.hello() //'Hello, I am flavio.'
+const flavio = new Person('flavio');
+flavio.hello(); //'Hello, I am flavio.'
 ```
 
 When the object is initialized, the `constructor` method is called with any parameters passed.
@@ -1490,11 +1485,11 @@ You can define a method as `static` to allow it to be executed on the class inst
 ```js
 class Person {
   static genericHello() {
-    return 'Hello'
+    return 'Hello';
   }
 }
 
-Person.genericHello() //Hello
+Person.genericHello(); //Hello
 ```
 
 This is very useful, at times.
@@ -1508,27 +1503,22 @@ Suppose we have a class `Person`:
 ```js
 class Person {
   hello() {
-    return 'Hello, I am a Person'
+    return 'Hello, I am a Person';
   }
 }
-
 ```
 
 We can define a new class, `Programmer`, that extends `Person`:
 
 ```js
-class Programmer extends Person {
-
-}
-
+class Programmer extends Person {}
 ```
 
 Now if we instantiate a new object with the class `Programmer`, it has access to the `hello()` method:
 
 ```js
-const flavio = new Programmer()
-flavio.hello() //'Hello, I am a Person'
-
+const flavio = new Programmer();
+flavio.hello(); //'Hello, I am a Person'
 ```
 
 Inside a child class, you can reference the parent class by calling `super()`:
@@ -1536,17 +1526,15 @@ Inside a child class, you can reference the parent class by calling `super()`:
 ```js
 class Programmer extends Person {
   hello() {
-    return super.hello() +
-      '. I am also a programmer.'
+    return super.hello() + '. I am also a programmer.';
   }
 }
 
-const flavio = new Programmer()
-flavio.hello()
-
+const flavio = new Programmer();
+flavio.hello();
 ```
 
-The above program prints *Hello, I am a Person. I am also a programmer.*.
+The above program prints _Hello, I am a Person. I am also a programmer._.
 
 <h2 id="asynchonousprogrammingandcallbacks">Asynchonous Programming and Callbacks</h2>
 
@@ -1573,8 +1561,8 @@ Example:
 ```js
 setTimeout(() => {
   // runs after 2 seconds
-  console.log('inside the function')
-}, 2000)
+  console.log('inside the function');
+}, 2000);
 ```
 
 The function containing the `console.log('inside the function')` line will be executed after 2 seconds.
@@ -1582,12 +1570,12 @@ The function containing the `console.log('inside the function')` line will be ex
 If you add a `console.log('before')` prior to the function, and `console.log('after')` after it:
 
 ```js
-console.log('before')
+console.log('before');
 setTimeout(() => {
   // runs after 2 seconds
-  console.log('inside the function')
-}, 2000)
-console.log('after')
+  console.log('inside the function');
+}, 2000);
+console.log('after');
 ```
 
 You will see this happening in your console:
@@ -1611,20 +1599,19 @@ We define a function that accepts a `callback` parameter, which is a function.
 When the code is ready to invoke the callback, we invoke it by passing the result:
 
 ```js
-const doSomething = callback => {
+const doSomething = (callback) => {
   //do things
   //do things
-  const result = /* .. */
-  callback(result)
-}
+  const result = /* .. */ callback(result);
+};
 ```
 
 Code using this function would use it like this:
 
 ```js
-doSomething(result => {
-  console.log(result)
-})
+doSomething((result) => {
+  console.log(result);
+});
 ```
 
 <h2 id="promises">Promises</h2>
@@ -1636,32 +1623,31 @@ As we saw in the previous chapter, with callbacks we'd be passing a function to 
 Like this:
 
 ```js
-doSomething(result => {
-  console.log(result)
-})
+doSomething((result) => {
+  console.log(result);
+});
 ```
 
 When the `doSomething()` code ends, it calls the function received as a parameter:
 
 ```js
-const doSomething = callback => {
+const doSomething = (callback) => {
   //do things
   //do things
-  const result = /* .. */
-  callback(result)
-}
+  const result = /* .. */ callback(result);
+};
 ```
 
 The main problem with this approach is that if we need to use the result of this function in the rest of our code, all our code must be nested inside the callback, and if we have to do 2\-3 callbacks we enter in what is usually defined "callback hell" with many levels of functions indented into other functions:
 
 ```js
-doSomething(result => {
-  doSomethingElse(anotherResult => {
-    doSomethingElseAgain(yetAnotherResult => {
-      console.log(result)
-    })
-  })
-})
+doSomething((result) => {
+  doSomethingElse((anotherResult) => {
+    doSomethingElseAgain((yetAnotherResult) => {
+      console.log(result);
+    });
+  });
+});
 ```
 
 Promises are one way to deal with this.
@@ -1669,18 +1655,17 @@ Promises are one way to deal with this.
 Instead of doing:
 
 ```js
-doSomething(result => {
-  console.log(result)
-})
+doSomething((result) => {
+  console.log(result);
+});
 ```
 
 We call a promise\-based function in this way:
 
 ```js
-doSomething()
-  .then(result => {
-    console.log(result)
-  })
+doSomething().then((result) => {
+  console.log(result);
+});
 ```
 
 We first call the function, then we have a `then()` method that is called when the function ends.
@@ -1691,12 +1676,12 @@ It's common to detect errors using a `catch()` method:
 
 ```js
 doSomething()
-  .then(result => {
-    console.log(result)
+  .then((result) => {
+    console.log(result);
   })
-  .catch(error => {
-    console.log(error)
-  })
+  .catch((error) => {
+    console.log(error);
+  });
 ```
 
 Now, to be able to use this syntax, the `doSomething()` function implementation must be a little bit special. It must use the Promises API.
@@ -1704,32 +1689,25 @@ Now, to be able to use this syntax, the `doSomething()` function implementation 
 Instead of declaring it as a normal function:
 
 ```js
-const doSomething = () => {
-
-}
+const doSomething = () => {};
 ```
 
 We declare it as a promise object:
 
 ```js
-const doSomething = new Promise()
+const doSomething = new Promise();
 ```
 
 and we pass a function in the Promise constructor:
 
 ```js
-const doSomething = new Promise(() => {
-
-})
+const doSomething = new Promise(() => {});
 ```
 
 This function receives 2 parameters. The first is a function we call to resolve the promise, the second a function we call to reject the promise.
 
 ```js
-const doSomething = new Promise(
-  (resolve, reject) => {
-
-})
+const doSomething = new Promise((resolve, reject) => {});
 ```
 
 Resolving a promise means to complete it successfully (which results in calling the `then()` method in whatever uses it).
@@ -1763,16 +1741,15 @@ An async function returns a promise, like in this example:
 ```js
 const getData = () => {
   return new Promise((resolve, reject) => {
-    setTimeout(() =>
-      resolve('some data'), 2000)
-  })
-}
+    setTimeout(() => resolve('some data'), 2000);
+  });
+};
 ```
 
 Any code that wants to use this function will use the `await` keyword right before the function:
 
 ```js
-const data = await getData()
+const data = await getData();
 ```
 
 and doing so, any data returned by the promise is going to be assigned to the `data` variable.
@@ -1785,9 +1762,9 @@ Like this:
 
 ```js
 const doSomething = async () => {
-  const data = await getData()
-  console.log(data)
-}
+  const data = await getData();
+  console.log(data);
+};
 ```
 
 The async/await duo allows us to have a cleaner code and a simple mental model to work with asynchronous code.
@@ -1801,19 +1778,20 @@ As an example, here's how you would get a JSON resource using the Fetch API, and
 ```js
 const getFirstUserData = () => {
   // get users list
-  return fetch('/users.json')
-    // parse JSON
-    .then(response => response.json())
-    // pick first user
-    .then(users => users[0])
-    // get user data
-    .then(user =>
-      fetch(`/users/${user.name}`))
-    // parse JSON
-    .then(userResponse => response.json())
-}
+  return (
+    fetch('/users.json')
+      // parse JSON
+      .then((response) => response.json())
+      // pick first user
+      .then((users) => users[0])
+      // get user data
+      .then((user) => fetch(`/users/${user.name}`))
+      // parse JSON
+      .then((userResponse) => response.json())
+  );
+};
 
-getFirstUserData()
+getFirstUserData();
 ```
 
 And here is the same functionality provided using await/async:
@@ -1821,20 +1799,19 @@ And here is the same functionality provided using await/async:
 ```js
 const getFirstUserData = async () => {
   // get users list
-  const response = await fetch('/users.json')
+  const response = await fetch('/users.json');
   // parse JSON
-  const users = await response.json()
+  const users = await response.json();
   // pick first user
-  const user = users[0]
+  const user = users[0];
   // get user data
-  const userResponse =
-    await fetch(`/users/${user.name}`)
+  const userResponse = await fetch(`/users/${user.name}`);
   // parse JSON
-  const userData = await user.json()
-  return userData
-}
+  const userData = await user.json();
+  return userData;
+};
 
-getFirstUserData()
+getFirstUserData();
 ```
 
 <h2 id="variablescope">Variable scope</h2>
@@ -1864,8 +1841,8 @@ Suppose you define a `var` variable inside an `if` conditional in a function
 ```js
 function getData() {
   if (true) {
-    var data = 'some data'
-    console.log(data)
+    var data = 'some data';
+    console.log(data);
   }
 }
 ```
@@ -1877,9 +1854,9 @@ If you try to move console.log(data) after the `if`, it still works:
 ```js
 function getData() {
   if (true) {
-    var data = 'some data'
+    var data = 'some data';
   }
-  console.log(data)
+  console.log(data);
 }
 ```
 
@@ -1888,9 +1865,9 @@ But if you switch `var data` to `let data`:
 ```js
 function getData() {
   if (true) {
-    let data = 'some data'
+    let data = 'some data';
   }
-  console.log(data)
+  console.log(data);
 }
 ```
 
@@ -1900,11 +1877,11 @@ This is because `var` is function scoped, and there's a special thing happening 
 
 ```js
 function getData() {
-  var data
+  var data;
   if (true) {
-    data = 'some data'
+    data = 'some data';
   }
-  console.log(data)
+  console.log(data);
 }
 ```
 
@@ -1912,9 +1889,9 @@ This is why you can also `console.log(data)` at the top of a function, even befo
 
 ```js
 function getData() {
-  console.log(data)
+  console.log(data);
   if (true) {
-    var data = 'some data'
+    var data = 'some data';
   }
 }
 ```
@@ -1928,12 +1905,12 @@ It can be tricky at first, but once you realize this difference, then you'll see
 ```js
 function doLoop() {
   for (var i = 0; i < 10; i++) {
-    console.log(i)
+    console.log(i);
   }
-  console.log(i)
+  console.log(i);
 }
 
-doLoop()
+doLoop();
 ```
 
 When you exit the loop, `i` will be a valid variable with value 10.

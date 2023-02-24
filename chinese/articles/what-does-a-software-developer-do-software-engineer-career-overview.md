@@ -5,11 +5,19 @@
 
 ![What Does a Software Developer Do? Software Engineer Career Overview](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg)
 
+如果你在学习如何成为一名专业的软件开发者，你或许会好奇软件开发者每天的工作日常在做些什么。
+
+我会在本文中谈谈软件开发者典型的一天是怎样的，以及工作中的主要职责。
+
 If you're studying to become a professional software developer, you might be wondering what a software developer does everyday on the job.
 
 In this article, I will talk about the typical day of a software developer and what to expect on the job.
 
-## Main Responsibilities of a Software Developer
+## 软件开发者的主要职责
+
+作为一名软件开发者，你的主要职责包括修代码库中的故障，搭建新功能，写程序测试，写文档，代码评审，以及参与团队讨论会。
+
+非常有经验的开发者，比如软件架构师，会负责为软件程序做出更高阶的技术和架构决策。
 
 As a software developer, your main responsibilities will include fixing bugs in the codebase, building out new features, writing tests for the applications, writing documentation, performing code reviews, and participating in team discussion meetings.
 
@@ -18,6 +26,16 @@ Very experienced developers, like software architects, will be responsible for t
 Let's take a look at each of these responsibilities in greater detail.
 
 ### Debugging Codebases and Fixing Bugs
+
+在你刚开始成为软件开发者之后，你的主要职责之一就是修理小的软件故障以及调试代码库中的小型报错。
+
+一个任务单（问题）的列表会被拆分成可胜任的小块，其中一些会包含程序中的故障。
+
+你会挑选其中一些小的任务，它们能帮你学习代码库。一个初级软件开发者通常会把最初的几个月花在熟悉代码库和新工作上。
+
+记得要多问问题，并且和其他程序员组队写码。和其他程序员一起工作将会帮你学习新的技术，并且成长得更快。
+
+我从我的同事那里学到很多，而且大多数时候，他人的视角能帮助我用不同的方式看待问题。
 
 When you first start out as a software developer, one of your main responsibilities will be to work on small bug fixes and debugging small errors in the codebase.
 
@@ -29,7 +47,19 @@ Just make sure to ask plenty of questions and try to pair program with other dev
 
 I have learned a lot from my coworkers, and most of the time a fresh pair of eyes have helped me see the problem in a different way.
 
-### Building New Features
+### 搭建新功能
+
+随着你对工作越来越上手并且获得更多的经验，你会开始得到更多代码库上的职能。这就是搭建新功能的机会。
+
+功能是软件产品的核心组件。这种工作会比修理故障更费时间，也能给你更多机会为项目做贡献。
+
+它也能给你提供更多机会解决复杂的问题，以及作为开发者更多成长。我的第一个功能是为公司网站实现一个亮色/暗色的主题色。
+
+我花了不少时间思考要如何在现有代码库的基础上更好地实现这个功能。
+
+最后一步是通过代码评审，以及更新网站文档以加入新功能。
+
+这段完整的经历教会了我如何如何做出能和现有代码库兼容的，可维护且可扩展的代码方案。
 
 As you start to become more comfortable with the job and gain more experience, you will start to be given more responsibility with the codebase. This is where building out new features comes in.
 
@@ -43,7 +73,19 @@ The final phase was to go through code reviews and update the website documentat
 
 The whole experience taught me how to build out solutions that were maintainable and scalable that would work well with the existing codebase.
 
-### Writing Tests for the Applications
+### 为应用写测试
+
+软件应用的一个重要组成是确保软件是能如期运行的。这就是测试要做的事。
+
+软件开发者负责写各种不同的测试，比如单元测试，整合测试，功能测试，以及更多。他们也会参与人工测试，开发者会通过一系列的测试案例来确保应用是如期工作的。
+
+我的测试初体验是冒烟测试和为我们的几个程序写人工测试指南。冒烟测试是开发者为了确保应用的基础功能完好而进行的测试。
+
+为了写测试指南，测试者需要测试应用的所有功能，并且新建测试案例。这些案例包括写下用户需要执行的具体步骤，和预想结果。
+
+我第一次写人工测试指南的时候，我没有意识到写每一步的时候需要多细致。但当我写了几个测试案例之后，这个过程立刻变得好懂了很多，写这些测试案例也更容易了。
+
+如果你想了解更多关于测试的内容，那么我推荐你去读[这篇有用的freeCodeCamp文章](https://www.freecodecamp.org/news/types-of-software-testing/)。
 
 One important element of software applications is ensure that they work they way they are supposed to work. This is where testing comes in.
 
@@ -57,7 +99,13 @@ The first time I had to write a manual test guide, I didn't realize how specific
 
 If you are interested to learn more about testing, then I suggest you read [this helpful freeCodeCamp article](https://www.freecodecamp.org/news/types-of-software-testing/).
 
-### Writing Documentation
+### 写文档
+
+文档是是任何软件应用非常重要的一部分。把软件的主要功能以及所有在本地运行的步骤都记录下来，这对程序员来说很重要。
+
+每当你加入一个新项目的时候，如果你注意到文档有任何不清楚或缺失的，一定要和团队提出来。那会是个很好的更新文档的机会。
+
+有时候当你忙于一个项目，团队急于赶上截止期限的时候，文档的更新会落后。当事情稍微定下来一点后，记得要重看文档，并确保它及时得到正确的更新。
 
 Documentation is an important part of any software application. It is important to document the main features of the application as well as all of the steps required to run it locally for developers.
 
@@ -65,7 +113,17 @@ Whenever you join a new project, and you notice anything confusing or missing ab
 
 Sometimes when you are working on a project and the team is busy with meeting deadlines, documentation can sometime fall behind. When things calm down a bit, make sure to revisit the documentation and make sure it is up to date and accurate.
 
-### Performing Code Reviews
+### 代码评审
+
+做软件是团队活动，所以每个团队成员互相审核代码很重要。当你对代码库做出更新的时候，你创建了所谓的合并请求。
+
+合并请求代表了你想要添加到代码库的更新。之后你会向团队成员提出审核请求，然后他们会在审阅过你的代码之后给出反馈。
+
+重要的是把那些反馈看作是建设性的反馈，因为你的团队只是想要帮助你捉故障，并且为优化解决方案提出建议。
+
+同样重要的是提出建设性的意见，并且确保合并请求中的所有内容能修好故障，或者符合新功能的需求。
+
+如果你想要了解更多关于代码评审过程的内容，你可以阅读[这篇有用的freeCodeCamp文章](https://www.freecodecamp.org/news/proven-code-review-best-practices/)。
 
 Building software is a team activity, and it important that everyone on the team has their code reviewed by their peers. When you have made changes to the codebase you will create what is called a pull request.
 
@@ -77,7 +135,17 @@ It is also important to provide constructive feedback and ensure that everything
 
 To learn more about the code review process, please read through [this helpful freeCodeCamp article](https://www.freecodecamp.org/news/proven-code-review-best-practices/).
 
-### Participating in Team Discussion Meetings
+### 参与团队讨论会
+
+做软件产品有需要变动的部分。整个团队在整个的开发过程中保持一致很重要。
+
+这些会议的目的是为了让每个成员和团队分享更新情况，以及分享阻止他们继续推进项目的障碍。如果你对软件开发不熟悉，参与这些会议会让人紧张。
+
+你可能会因为某些讨论和所有这些会议中使用的新名词而过载。记得要提问，以及软件流程的里里外外确实要花些时间理解。
+
+我的天性让我在这些会议中有所保留，但我尝试了开口和询问我不理解的点。有时候你会发现其他人也有同样的问题，并且会因为你问了那个问题感到开心。
+
+努力尝试积极参与会议讨论，并且分享你对项目的见解，以及提出你需要帮助的地方。
 
 There are a lot of moving components that go into building software products. It is important that the entire team is on the same page during the entire application process.
 
@@ -89,7 +157,12 @@ My natural inclination is to be more reserved in meetings, but I have made more 
 
 Try your best to actively participate in meetings and share your input on the project and ask questions on what you need help with.
 
-## Conclusion
+## 总结
+正如你所见，做软件产品有许多组成部分。一天8小时不会都用来写代码。
+
+与之不同的是，你的一天会被会议，结对编程，代码排障，读文档，写文档，和测试软件填满。
+
+我希望你喜欢这篇文章，并且对软件工程师是做什么的有了更好的理解。祝你的软件旅程一切顺利。
 
 As you can see, there are a lot of components to building out software products. Your days won't be spent writing code 8 hours straight.
 

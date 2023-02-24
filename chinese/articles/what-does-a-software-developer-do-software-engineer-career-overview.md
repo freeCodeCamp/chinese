@@ -1,6 +1,6 @@
 > -  原文地址：[What Does a Software Developer Do? Software Engineer Career Overview](https://www.freecodecamp.org/news/what-does-a-software-developer-do-software-engineer-career-overview/)
 > -  原文作者：[Jessica Wilkins](https://www.freecodecamp.org/news/author/jessica-wilkins/)
-> -  译者：
+> -  译者：Shangguan Wang
 > -  校对者：
 
 ![What Does a Software Developer Do? Software Engineer Career Overview](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/desola-lanre-ologun-IgUR1iX0mqM-unsplash.jpg)

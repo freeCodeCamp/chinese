@@ -1,6 +1,6 @@
 > -  原文地址：[D3.js Tutorial – Data Visualization for Beginners](https://www.freecodecamp.org/news/d3js-tutorial-data-visualization-for-beginners/)
 > -  原文作者：[Spruce Emmanuel](https://www.freecodecamp.org/news/author/spruce/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
 ![D3.js Tutorial – Data Visualization for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2021/11/Group-1.png)

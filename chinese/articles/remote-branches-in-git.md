@@ -103,7 +103,7 @@ git branch -r
 
 你需要检出(checkout)你感兴趣的分支，这样你就可以开始在本地进行你想做的修改。
 
-要做到这一点，使用`git checkout`命令，加上`b`（代表分支）选项。语法看起来与此类似。:
+要做到这一点，使用`git checkout`命令，加上`-b`（代表分支）选项。语法看起来与此类似。:
 
 ```bash
 git checkout -b <new-local-branch-name> origin/<remote-branch-name>

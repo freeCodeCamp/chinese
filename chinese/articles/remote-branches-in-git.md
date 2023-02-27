@@ -97,7 +97,7 @@ git branch -r
 
 该命令的输出将是一个所有可供签出的远程分支的列表。你会看到分支名称前有`remotes/origin`的前缀。
 
-### How to Check Out the Remote Branch
+### 如何检出远程分支的情况
 
 你不能直接对你感兴趣的远程分支进行修改，你需要一个本地副本。
 

@@ -1,112 +1,112 @@
 > -  原文地址：[How Writing Can Lead to Better Product Design](https://www.freecodecamp.org/news/how-writing-can-lead-to-better-product-design/)
 > -  原文作者：[Adam Naor](https://www.freecodecamp.org/news/author/adam-naor/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
-![How Writing Can Lead to Better Product Design](https://cdn-media-2.freecodecamp.org/w1280/604adcf9a7946308b7687147.jpg)
+![写作为何有助于产品设计](https://cdn-media-2.freecodecamp.org/w1280/604adcf9a7946308b7687147.jpg)
 
-In my time building and devising products – apps, websites, and [graphics makers](http://gfxmaker.com/) – I have come across two types of people in general: those that prefer qualitative narratives and those that prefer data and analytics.
+在我创建和设计产品，如APP应用程序、网站和[图形制作工具](http://gfxmaker.com/)时，通常会遇到两类人：一类是偏好定性叙述的人，另一类是偏好数据和分析的人。
 
-The first group is comfortable framing product development in the context of more subjective user feedback and perspectives. The second group, wary of this approach, wants to apply “excel models” to work backwards from numbers.
+第一类人习惯基于用户主观反馈和观点去构建产品开发框架。第二类人对第一类人的方法持谨慎态度。第二类人希望应用“excel模型”根据数字来倒推工作。
 
-For ease of categorization, let’s call the first group “storytellers” and the second group “quants”.
+为便于区分，我们就称第一类人为“storyteller”（叙述者），第二类人为“quant”（量化员）。
 
-Both groups want to construct meaningful [product visions](https://instasize.com/blog/5-tips-for-taking-great-product-images), understand users, and build tools at scale. Both groups are well intended but have a different approach to leveraging insights to make decisions.
+这两类人都想要设立有意义的[产品愿景](https://instasize.com/blog/5-tips-for-taking-great-product-images)，了解用户，然后创建出大规模的工具。两者的用意都很好，只是在如何利用洞察做决策方面，采用了不同方法。
 
-Yet the way they go about collecting, analyzing, and deploying these insights varies.
+另外，他们收集、分析和部署这些洞察的方式也不同。
 
-It is likely useful to pause for a moment and ask yourself which camp do you more readily side with? Are you more of a storyteller or a quant?
+暂停片刻，问问自己你更像哪类人呢？storyteller还是quant？或许会对你有用。
 
-Regardless of the answer, there is a unifying approach that I believe can bring these two personas together and help them find common ground in the pursuit of building better, more well thought out products.
+无论你的答案是什么，我相信有一种将两者统一结合起来的方法，帮助他们在追求创建更优质更构思周密产品的路途中找到共通点。
 
-And that approach is through writing.
+那就是通过写作。
 
-## Why writing is critical to product design
+## 为什么写作对产品设计至关重要
 
-Writing is defined as the activity or skill of marking coherent words on paper and composing text. Learning to write starts with foundational principles: you must learn an alphabet and how to organize letters to make words.
+写作被定义为一种记录连贯词汇并构成文本的书面活动或技能。学习写作要从基础原则开始：你必须学习字母表，学习如何将字母组成单词。
 
-These words, in turn, are then placed together to make sentences.
+然后，这些单词又被放在一起组成句子。
 
-Sentences, when taken together, can start to convey deeper meaning.
+句子组合在一起又能开始表达更深的含义。
 
-Writing is a forcing mechanism. It makes us think deeply about what we want to communicate and why.
+写作是一种成因机制。它让我们深入思考自己想要表达的内容和动机。
 
-Writing helps us focus on what is most important.
+写作帮助我们专注于最重要的东西。
 
-And writing – when done well – mitigates obfuscation.
+而且，如果做得好的话，写作可以减少困惑。
 
-How many times have you seen a product presentation and been convinced about its merits due to the quality (both good or bad) of the presenter? A charismatic argument, for example, can mask what really matters to users and sway judgements.
+有多少次你在看产品演示文稿时，是因为演讲者的质量（无论好坏）而相信产品优点的？例如，一个有吸引力的观点可以掩盖对用户来说真正重要的东西，并影响用户的判断。
 
-Amazon founder Jeff Bezos once wrote:
+亚马逊创始人杰夫·贝佐斯（Jeff Bezos）曾经写道：
 
-> “Powerpoint-style presentations somehow give permission to gloss over ideas, flatten out any sense of relative importance, and ignore the interconnectedness of ideas.”
+> “Powerpoint式的演讲文稿在某种程度上允许掩饰观点，抹平任何相对重要性的感觉，忽略观点之间的关联性。”
 
-Writing forces us to see what really matters: the strength and coherence of an argument and how that argument is supported or substantiated by evidence.
+写作促使我们明白真正重要的东西：一个论点的力度和条理性，以及论点如何被论据支持或证实。
 
-[Product development](https://crustlab.com/) is inherently messy because oftentimes products, even if they appear simple, are inherently complex.
+[产品开发](https://crustlab.com/)本质上是杂乱的。因为很多时候，产品即使看起来很简单，本质上却很复杂。
 
-This is true for both hardware and software. Massive complexity exists in common items we take for granted.
+软硬件都是如此。我们认为理所当然的日常物品中就存在着巨大的复杂性。
 
-Lufthansa claimed that it took 6 million parts for Boeing to build the 747-8.
+汉莎航空声称，波音制造747-8需要600万个零件。
 
-A simple drive-off-the-lot car might have 30,000 parts.
+一辆简单的汽车整车可能有30,000个零件。
 
-By some estimates the Android operating system runs on 12-15 million lines of code.
+据估计，Android操作系统的代码量有1200-1500万行。
 
-The Large Hadron Collider uses 50 million lines.
+大型强子对撞机使用了5000万条线。
 
-Not including backend code, Facebook (the front end and various [landing pages](https://www.ideazinc.com/top-20-amazing-landing-pages-reviewed/)) runs on 70 million lines of code.
+不包括后端代码， Facebook（前端和各种[登录页面](https://www.ideazinc.com/top-20-amazing-landing-pages-reviewed/)）的代码量就有7000万行。
 
-Well-structured narrative text (as opposed to bullet points or plain text) can help the writer or product designer explain the “why” behind an argument.
+结构清晰的叙述性文本（与项目符号或纯文本相比）能够帮助作者或产品设计师阐释论点背后的“原因”。
 
-Strong and active writing forces more reflective thought and a better understanding of what’s most important and how things – parts, people, plans, budgets, product – are related.
+积极有力的写作促使人们进行更多的反思，更好地理解什么是最重要的，以及事物（零件、人员、计划、预算、产品）之间的关系。
 
-Lastly, writing helps create an even playing field.
+最后，写作有助于创造一个公平的竞争环境。
 
-All too often ideas (and how or who explains them) can lead to bias. Imagine being given a memo advocating for a product feature or Go To Market plan and you knew nothing of the author, including their background, role, or team.
+很多时候，观点（以及因解释的方式或主体不同）会造成偏见。想象一下，当你收到一份宣传产品功能或上市计划的备忘录，你对作者一无所知，不知道作者的背景、角色或团队。
 
-And all you were allowed to do was evaluate the quality, durability, and clarity of the author’s words. This might lead to better business outcomes and product design decisions.
+你所能做的就是评估作者文字的质量、持续性和清晰度。这样可能会带来更好的商业结果和产品设计决策。
 
-## How to get better at writing
+## 如何提高写作水平
 
-Writing is a skill that can be improved through practice. I remember in 5th grade my mother sitting down with me and using a red ink pen to edit and correct an essay I had written for homework.
+写作是一种通过练习可以提高的技能。我记得五年级的时候，我母亲坐在我旁边，用红墨水笔批改我为完成家庭作业写的一篇作文。
 
-Editing words is not easy. It wasn’t fun then and more than two decades later it's still not always fun. But by chipping away at it, we can embrace writing and get better at it.
+编辑文字并不容易。当时写作不好玩，二十多年后，它也不总是有趣。但是，通过打磨，我们可以拥抱写作，并写得越来越好。
 
-The old expression “practice makes perfect” certainly didn’t apply in my case. Nevertheless, by forcing myself to write frequently, I was able to improve.
+“熟能生巧”这句老话当然不适用于我。尽管这样，通过强迫自己经常写作，我还是能够有所提高。
 
-If you are building products and want to use written words to share your vision, win over internal stakeholders, and [help communicate more effectively](https://www.cloudtalk.io/blog/types-of-call-centers), there are a few things that you can start doing today.
+如果你正在创建产品并想要通过书面文字分享你的愿景，赢得内部利益相关者，[助力更有效地沟通](https://www.cloudtalk.io/blog/types-of-call-centers)，那么从今天开始，你可以从这几件事开始着手。
 
-### Create an outline
+### 创建一个大纲
 
-Firstly, you can take out a piece of paper or open an online document, and start building an outline of what you want to communicate. Lead with they _why_.
+首先，你可以拿出一张纸或打开一个在线文档，对于你想要表达的内容，开始创建一个大纲。大纲以 _为什么_ 做引导。
 
-You can use an outline to sharpen your thoughts and sketch out your product vision.
+你可以通过大纲来打磨你的想法，勾勒你的产品愿景。
 
-### Try different types of writing
+### 尝试不同的写作类型
 
-Secondly, you can play around with fun and different ways of writing to communicate about your product.
+第二，你可以尝试不同有趣的写作方式来表达你的产品。
 
-For example, you can write a press release. What would the New York Times say about your product if you were a journalist writing for the technology section?
+例如，你可以撰写一篇新闻稿。如果你是《纽约时报》的一名技术版块撰稿记者，会如何评价你的产品？
 
-Writing a futuristic press clipping is fun, gets the creative juices flowing, and is an enjoyable way to think through how others might see what you are building.
+编写一篇具有未来感的新闻简报很有趣，让创造性思维活跃起来，并且思考他人会如何看待自己创建的产品也是一种令人愉悦的方式。
 
-### Jot down some FAQ
+### 快速记下一些常见问题
 
-Thirdly, you can improve your product writing skills by drafting and completing Frequently Asked Questions (FAQs). What do people not understand about your product and why? Try to think through the questions users have and answer these questions.
+第三，你可以通过起草和完成“常见问题”（FAQ）来提高你的产品写作技能。人们对你的产品有什么不理解，为什么不理解？试着思考和回复用户的这些问题。
 
-The benefits of writing out FAQs are two-fold: you can improve your writing while also more deeply understanding those aspects of your product that users might struggle with. And as a result of this insight you can preemptively solve these problems.
+写FAQ有两方面的好处，一是可以提高你的写作水平，二是你能更深入理解产品的哪些方面可能对用户来说是难以理解的。有了这种洞察，你可以预先解决这些问题。
 
-## Bringing It All Together: Writing and Product Design
+## 将写作和产品设计结合起来
 
-At the beginning of this article I described “storytellers” and “quants”. These two groups represent different approaches to using inputs (data, numbers, feedback, [credentials](https://resources.credly.com/blog/degree-inflation-hiring), and so on) to draw conclusions and make inferences.
+在这篇文章开头，我描述了“storytellers” 和 “quants”。在根据信息（数据、数字、反馈、[证书](https://resources.credly.com/blog/degree-inflation-hiring)等）作出结论和进行推断方面，这两类人代表着两种不同的处理方式。
 
-Writing can bring “storytellers” and “quants” together and provides a level playing field for the expression of ideas.
+写作可以将“storytellers”和“quants”结合起来，并为思想表达提供一个公平的竞争环境。
 
-Writing helps us avoid premature optimization.
+写作有助于我们避免过早优化。
 
-While writing might be a challenge for you today, it is worth practicing. If you need prompts to get started try outlining the future of the [gig economy](https://www.savingjunkie.com/best-gig-economy-apps/) or futuristic trends in [mobile apps](https://www.resourcifi.com/blog/latest-trends-in-mobile-app-design-2020-2021/).
+今天写作可能对你来说是一个挑战，但它值得练习。如果你需要指点才能开始，那就试试概述[零工经济](https://www.savingjunkie.com/best-gig-economy-apps/)的未来或者[移动应用程序](https://www.resourcifi.com/blog/latest-trends-in-mobile-app-design-2020-2021/)的未来趋势。
 
-If you don’t write about the future state of your products, you should start. It will help sharpen your thinking and enable you to build for better outcomes.
+如果你还没有写你的产品未来状态，你应该开始了。它将有助于磨砺你的思维，让你产出更好的结果。
 
-In the end of the day that should be the North Star for all builders.
+最终，产品未来状态应该成为每个产品创建者的北极星指标。

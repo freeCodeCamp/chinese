@@ -2015,25 +2015,25 @@ TechCrunch Disrupt黑客松。DeveloperWeek黑客松。ProgrammableWeb黑客松�
 5. 建立自由职业者客户的作品集
 6. 创建你自己的开源项目、公司或慈善机构
 
-#### 如何寻找黑客马拉松和其他开发者比赛
+#### How to Find Hackathons and Other Developer Competitions
 
-黑客马拉松代表了同时建立你的声誉、人际关系网络和提供你的编码技能的最直接方式。
+Hackathons represent the most immediate way to build your reputation, your network, and your coding skills at the same time.
 
-大多数黑客马拉松是免费的，并向公众开放。你只需要有时间和预算去旅行。
+Most hackathons are free, and open to the public. You just need to have the time and the budget to travel.
 
-如果你住在一个有很多黑客活动的城市--比如旧金山、纽约、班加罗尔或北京--你也许可以通勤到活动现场，然后回家睡在自己的床上。
+If you live in a city with lots of hackathons – like San Francisco, New York, Bengaluru, or Beijing – you may be able to commute to the event, then go home and sleep in your own bed.
 
-尽管我住在圣巴巴拉，那里每隔几个月才有一次黑客大会，但我在旧金山有一个老同学，他让我睡在他的沙发上。这让我有机会参加更多的活动。
+Even though I lived in Santa Barbara, which only had hackathons once every few months, I did have an old classmate in San Francisco who let me crash on his couch. This gave me access to many more events.
 
-黑客马拉松曾经是硬核活动。人们会喝能量饮料，睡在地板上，都是为了在演讲时间前完成他们的项目。
+Hackathons used to be hard core events. People would knock back energy drinks and sleep on floors, all to finish their project by pitch time.
 
-但是，黑客马拉松的组织者正逐渐变得更加关注这些活动的健康和可持续性。毕竟，很多参与者都有孩子，或者有要求很高的全职工作，他们不可能在整个周末全力以赴地写代码。
+But hackathon organizers are gradually becoming more mindful about the health and sustainability of these events. After all, a lot of participants have kids, or demanding full-time jobs, and can't just all-out code for an entire weekend.
 
-找到即将举行的活动的最好方法是用谷歌搜索 "黑客马拉松[你的城市名称]"，然后浏览出现的各种活动日历。其中许多是由大学、当地雇主，甚至是以教育为重点的慈善机构举办的。
+The best way to find upcoming events is to just google "hackathon [your city name]" and browse the various event calendars that come up. Many of these will be run by universities, local employers, or even education-focused charities.
 
-如果你想赢得比赛，我建议提前做研究。
+If you're playing to win, I recommend doing your research ahead of time.
 
-活动赞助商是谁？通常是面向开发者提供服务的公司，它们提供 API、数据库工具或各种软件产品的服务。这些赞助商可能会在活动中设立展位，你可以与他们的开发者支持者交谈。这些人拿着钱教人们如何使用该公司的工具。有时你甚至会在这些展位上遇到关键员工或创始人，这也是一个很好的交流机会。
+Who are the event sponsors? Usually it will be Business-to-Developer type companies, with APIs, database tools, or various Software-as-a-Service offerings.
 
 通常情况下，黑客马拉松会提供针对赞助商的奖品。"对[赞助商]API的最佳使用"。将你的时间集中在将特定的赞助商工具纳入你的项目中，而不是试图赢得大奖，这可能更容易。你仍然可以在你的LinkedIn或你的履历表上把这些作为胜利。胜利就是胜利。
 

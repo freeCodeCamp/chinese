@@ -1,292 +1,292 @@
 > -   原文地址：[What Is a File System? Types of Computer File Systems and How they Work – Explained with Examples](https://www.freecodecamp.org/news/file-systems-architecture-explained/)
 > -   原文作者：Reza Lavarian
-> -   译者：
+> -   译者：michaelhe545
 > -   校对者：
 
-![What Is a File System? Types of Computer File Systems and How they Work – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/pexels-photo-6571015.jpeg)
+![何为文件系统？例解几种计算机文件系统及其运行原理](https://www.freecodecamp.org/news/content/images/size/w2000/2021/02/pexels-photo-6571015.jpeg)
 
-It's a bit tricky to explain what exactly a file system is in just one sentence.
+文件系统到底是个啥？单凭一句话来解释清楚这个问题可不容易。
 
-That's why I decided to write an article about it. This post is meant to be a high\-level overview of file systems, but I'll sneak into the lower\-level concepts as well. As long as it doesn't get boring. :)
+所以我决定写下这篇文章来聊这个话题。写这篇帖子的初衷是想从一个比较宏观的角度去谈各种文件系统，但文中时不时也会提及一些微观层面的概念，但愿你读到时不会睡着。 :)
 
-## What is a file system?
+## 什么是文件系统？
 
-Let's start with a simple definition:
+先来上一个简单的定义：
 
-A **file system** defines how files are **named**, **stored**, and **retrieved** from a storage device.
+**文件系统** 决定着从存储设备中对文件进行 **命名**、 **存储** 和 **检索** 的方式。
 
-When people talk about file systems, they might refer to different aspects of a file system depending on the context \- that's where things start to seem knotty.
+当说到“文件系统”一词时，基于不同的语境，人们实际所指的可能是有关“文件系统”一词多重定义的某个方面 \- 这也是让问题变得棘手的地方。
 
-And you might end up asking yourself, WHAT IS A FILE SYSTEM ANYWAY? 🤯
+最后，你可能会“扪心自问”，文件系统到底是个啥？ 🤯
 
-In this guide, I'll help you understand file systems and any conversation about file systems. I'll also cover partitioning and booting as well, to help you understand the concepts surrounding file systems.
+在本份指南，我将帮你理解这一问题，并助你搞定任何关于文件系统的谈话。此外，为了帮助你理解有关文件系统的一些概念，指南也会涉及分区和启动程式的讲解。
 
-To keep this guide manageable, I'll concentrate on Unix\-like environments when explaining the lower\-level structures or console commands. However, the concepts remain relevant to other environments and file systems.
+为保证指南的可操作性，在解释较低级别的结构或控制台命令时，我将专注Unix一类的环境下进行讲解。虽说如此，讲到的概念和其它环境及文件系统也是相通的。
 
-### Why do we need a file system in the first place, you may ask?
+### 你可能有这样一个疑问，我们在最初为什么需要文件系统？
 
-Well, without a file system, the storage device would contain a big hunk of data stored back to back, and you wouldn't be able to tell them apart.
+嗯，答案是，如果没有文件系统，存储设备会将大量数据简单地堆积存储，如此一来数据间便无法区分。
 
-The term file system takes its name from the old paper\-based data management systems, where we kept documents as files, and put them into directories.
+文件系统的命名源于过去的纸质数据管理系统。纸质系统中，我们将文档保留为纸质文件，然后将其存放在各个目录中。
 
-Imagine a room with piles of papers scattered all over the place.
+试想如若没有分类，存放文件的房间便到处都会堆着杂乱无章的文件。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/pexels-photo-6571015-1.jpg)
 
-A storage device without a file system would be in the same situation \- and it would be a useless electronic device.
+类似地，当存储设备缺少了文件系统时便会陷入同样的杂乱无序之中，存储设备本身也将毫无用处。
 
-However, a file system changes everything:
+然而，有了文件系统之后，一切便会全然不同：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/pexels-photo-6571015-2.jpg)
 
-A file system isn't just a bookkeeping feature, though.
+但也不能说文件系统的功能仅限于整理数据。
 
-Space management, metadata, data encryption, file access control, and data integrity are the responsibilities of file system too.
+空间管理，元数据，数据加密，文件访问控制和数据完整性同样是文件系统施展拳脚的阵地。
 
-## Everything begins with partitioning
+## 一切始于分区
 
-Storage devices must be **partitioned** and **formatted** before the first use.
+首次使用之前，必须对存储设备进行 **分区** and **格式化**。
 
-But what is partitioning?
+什么是分区？
 
-Partitioning is splitting a storage device into several *logical regions*, so they can be managed separately as if they are separate storage devices.
+分区是指将存储设备划分为几个 *逻辑区域* 的过程。分区后，就能像管理一个个彼此独立的存储设备一样对这些逻辑区域进行一一单独管理。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/partitions.jpg)
 
-Partitioning is done by a disk management tool provided by operating systems, or a as text\-based CLI tool provided by the system's firmware.
+分区过程可通过操作系统提供的磁盘管理工具完成，亦或通过系统固件提供的基于文本\的CLI工具完成。
 
-A storage device should have at least one partition, or more, if needed.
+一台存储设备应至少有一个分区，视需求而定，也可进行更多分区。
 
-For example, a basic Linux installation has three partitions: one partition dedicated to the operating system, one partition for user files, and a swap partition.
+举例来说，一个基础的Linux安装就具有三个分区：一个专门用于存储操作系统，一个专门用于存放用户文件，外加一个交换分区。
 
-Windows and Mac OS also have similar layout, although they don't use a dedicated swap partition. Instead, they manage swapping within the partition the operating system is installed on.
+在Windows和Mac OS系统中并没有专门的交换分区，它们在操作系统所安装的分区内管理交换，但二者的分区布局与Linux相似。
 
-So why should we split the storage devices into multiple partitions?
+那么我们又为什么要把存储设备进行分区呢？
 
-The reason is that we don't want to manage and use the whole storage space as a single unit, and for a single purpose.
+原因在于，我们不想将整个存储空间作为单个单元或出于单个目的进行管理和使用。
 
-It's just like how we partition our workspace, to separate (and isolate) meeting rooms, conference rooms, and teams.
+这和我们划分工作空间的理念类似，你不也会把办公空间划分为会客室、会议室、团队办公区域吗？
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/office-space.jpeg)
 
-On a computer with multiple partitions, you can install multiple operating systems and every time choose a different partition to boot up your system with.
+在具有多个分区的计算机上，你可以安装多种操作系统，并且每次可以选择不同的分区来启动系统。
 
-The recovery and diagnostic utilities reside in dedicated partitions too.
+就连恢复和诊断实用程序也有它们的专属分区。
 
-For instance to boot up a MacBook in recovery mode, you need hold `Command + R` as soon as you restart (or turn on) your MacBook.
+比方说你要在恢复模式下重新启动MacBook，你就需要在重启或启动MacBook后迅速按住 `Command + R` 不松。
 
-By doing so, you're instructing the system to boot up with a partition that contains the recovery program.
+这样一来，你就在指示操作系统使用包含恢复程序的分区启动MacBook。
 
-Partitioning isn't just a way of installing multiple operating systems and tools, though. It also allows us to keep critical system files apart from ordinary files.
+然而，分区的意义不仅仅限于可安装多种操作系统和工具。通过分区，我们还可以将重要系统文件与普通文件分开存放。
 
-So no matter how many heavy games you install on your computer, it won't have any affect on the operating system's performance \- since they reside in different partitions.
+这样一来，无论你在计算机上安装了多少个大型游戏，都不会对操作系统的性能产生任何影响， \- 因为它们和系统文件存放在不同的分区中。
 
-Back to the office example, having a call center and a tech team in a common area would have a negative effect on both team's productivity, because each team has their own requirements to be efficient.
+再拿办公室那个例子来说，如果将一个呼叫中心团队和一个技术团队安排在同一个办公区域，那么如此对两个团队的生产力产生的影响都会是负面的，因为这两个团队都有自己独特的效率需求。
 
-For instance, the tech team would appreciate a quieter area.
+好比说，技术团队会更需要一个安静的工作环境。
 
-Some operating systems, like Windows, assign a drive letter (A, B, C, or D) to the partitions. For instance the *primary partition* on Windows (on which Windows is installed) is referred to as **C**:, or drive C.
+有一些操作系统，比如Windows，会对磁盘分区分配以不同的字母编号（A，B，C，D）。例如，Windows上 *主分区* （Windows所安装的分区）的命名为 **C**：或驱动器C。
 
-In Unix\-like operating systems, however, partitions appear as normal directories under the root directory \- we'll cover this later.
+而在Unix一类的操作系统中，分区则以根目录下的普通目录显示，这点在后面会介绍到。
 
-Guess what? W're taking a detour here ↩️
+至于现在吗，我们要先绕个弯 ↩️
 
-In the next section, we'll dive deeper into partitioning, and get to know two concepts that will change your perspective on file systems: **system firmwares** and **booting.**
+在下一小节，我们将更深入地理解分区，内容涉及 **系统固件** and **启动程式** 这两个概念，它们将改变你对文件系统的看法。
 
-Are you ready?
+准备好了吗？
 
-Away we go!  🏊‍♂️
+一起看看吧！  🏊‍♂️
 
-## Partitioning schemes, system firmwares, and booting
+## 分区方案，系统固件和启动程式
 
-When partitioning a storage device, we have two partitioning methods to choose from:
+在对存储设备进行分区时，有两种分区方法可供选择：
 
-*   **Master boot record (MBR) Scheme**
-*   **GUID Partition Table (GPT) Scheme**
+*   **主引导记录（MBR）方案**
+*   **GUID分区表（GPT）方案**
 
-Regardless of what partitioning scheme you choose, the first few blocks on the storage device will always contain critical data about your partitions.
+无论选择哪种方案，存储设备上的前几个存储块所存储的始终都是有关分区的关键数据。
 
-The system's *firmware* uses these data structures to boot up the operating system.
+利用这些数据结构，系统的 *固件* 便能启动操作系统。
 
-Wait, what is the system firmware? you may ask.
+等等，你可能会问，啥又是系统固件？
 
-Here's an explanation:
+解释如下：
 
-A firmware is a low\-level software embedded into electronic devices to operate the device, or bootstrap another program to operate the device.
+固件是嵌入电子设备中以操作该设备或引导另一个程序来操作该设备的低级软件。
 
-Firmware exists in computers, peripherals (keyboards, mouse, and printers), or even electronic home appliances.
+固件存在于计算机，外围设备（键盘，鼠标和打印机）中，甚至存在于家用电器中。
 
-In computers, the firmware provides a standard environment for a complex software like an operating system to boot up and work with hardware components.
+在计算机中，固件为诸如操作系统之类的复杂软件提供了启动和使用硬件组件的标准环境。
 
-However, on simpler systems like a printer, the firmware is the main operating system of the device. The printer menu is the interface of its firmware.
+但是，在打印机等较为简单的系统上，固件却是设备的主要操作系统。打印机菜单就是其固件的人机界面。
 
-Computer firmwares are implemented based on two specifications:
+计算机固件依据以下两个规范执行：
 
-*   **Basic Input/Output (BIOS)**
-*   **Unified Extensible Firmware Interface (UEFI)**
+*   **基本输入/输出（BIOS）**
+*   **统一可扩展固件接口（UEFI）**
 
-Firmwares \- BIOS\-based or UEFI\-based \- reside on a non\-volatile memory, like a flash ROM attached to the motherboard.
+固件（或基于BIOS或基于UEFI）存储在非易失性存储器中，例如连接到主板的Flash ROM（闪存）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/5794340306_caef1e6960_b.jpg)
 
-[**BIOS**](https://www.flickr.com/photos/computerhotline/5794340306) By [Thomas Bresson](https://www.flickr.com/photos/computerhotline/), Licensed under **[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)**
+[**BIOS**](https://www.flickr.com/photos/computerhotline/5794340306)，图源： [Thomas Bresson](https://www.flickr.com/photos/computerhotline/)， 许可： **[CC BY 2.0](https://creativecommons.org/licenses/by/2.0/)**
 
-When you power on your computer, the firmware is the first program to run.
+当打开计算机电源时，固件是第一个运行的程序。
 
-The mission of the firmware (among other things) is to boot up the computer, run the operating system, and pass it the control of the whole system.
+固件的任务（除其它事项外）包括启动计算机，运行操作系统，并将整个系统的控制权传递给操作系统。
 
-A firmware also runs pre\-OS environments (with network support), like recovery or diagnostic tools, or even a special shell to run text\-based commands.
+固件还可以（在连网环境下）运行预操作系统，例如恢复或诊断工具，甚至还可以运行特殊的壳层来运行基于文本的命令。
 
-The first few screens you see before your operating system's logo appears are the output of your computer's firmware, verifying the health of hardware components and the memory.
+在操作系统的徽标出现之前，你所看到的那几个页面就是计算机固件的输出，该输出用于验证硬件组件和内存的运行状况。
 
-The initial check is confirmed with a beep, indicating everything is good to go.
+初始检查完成后会发出“哔”的一声，表明一切正常。
 
-MBR partitioning scheme is a part of the BIOS specifications, and used by BIOS\-based firmwares.
+MBR分区方案是BIOS规范的一部分，由基于BIOS的固件使用。
 
-On MBR\-partitioned disks, the first sector on the storage device contains essential data to boot up the system.
+在采用MBR分区方案的磁盘上，存储设备上的第一个扇区存储着启动系统所需的基本数据。
 
-This sector is called MBR.
+这一扇区被称为MBR（主引导扇区）。
 
-MBR contains the following information:
+MBR内存有以下信息：
 
-*   The boot loader, which is a **simple program** (in machine code) to initiate the first stage of the booting process
-*   A **partition table**, which contains information about your partitions.
+*   引导程序，它是（机器代码中的）一个 **简单程序**，用于启动引导过程的第一阶段
+*   **分区表**，其中包含有关分区的信息。
 
-BIOS\-based firmwares with MBR\-partitioned disks boot the system differently than UEFI\-based firmwares.
+MBR分区磁盘上，基于BIOS的固件与基于UEFI的固件会以不同的方式引导系统。
 
-Here's how it works:
+以下是其工作过程：
 
-Once the system is powered on, the BIOS firmware starts and loads the content of MBR into the memory, and runs the boot loader inside it.
+系统启动后，BIOS固件将启动并将MBR的内容加载到内存中，并在其中运行引导加载程序。
 
-Having the boot loader and the partition table in a predefined location like MBR enables BIOS to boot up the system without having to deal with any file.
+通过将引导加载程序和分区表放置在MBR之类的预定义位置中，便可使BIOS来引导系统，而无需处理任何文件。
 
-The boot loader code in the MBR takes between 434 bytes to 446 bytes of the MBR (out of 512b). 64 bytes is also allocated to the partition table for a maximum of four partitions.
+MBR中的引导加载程序代码占用MBR 512字节空间中的434字节至446字节，另有64字节分配给了分区表，分区数量最多为四个。
 
-446 bytes isn't big enough to accommodate too much code, though. That said, sophisticated boot loaders like GRUB 2 on Linux split their functionality into pieces, or stages.
+446字节并不足以容纳很多的代码。正因如此，复杂的引导加载程序（例如Linux上的GRUB 2）会将其功能切分为多个部分或多个阶段。
 
-The smallest piece, which is known as the first\-stage boot loader, sits within the MBR.
+其中，最小的部分被称为第一阶段引导加载程序，位于MBR内。
 
-The first\-stage boot loader initiates the next stages of the booting process.
+第一阶段引导加载程序将启动引导过程的下一个阶段。
 
-Immediately after the MBR, and before the first partition, there's a small space, around 1MB, called the **MBR gap**. It can be used to place another piece of the boot loader, if needed.
+MBR之后紧接第一个分区之前，还有一个很小的空间，大约1MB，被称为 **MBR间隙**。必要时，它也可以用来放置一部分引导加载程序。
 
-A boot loader, such as GRUB 2, uses the MBR gap to store another stage of its functionality. GRUB calls this the *stage 1.5* boot loader, which contains a file system driver.
+利用MBR间隙，引导加载程序（例如GRUB 2）存储其功能的另一阶段。GRUB将此称为引导加载程序的 *第1.5个阶段* ，其中包含文件系统驱动程序。
 
-The stage 1.5 enables the next stages of GRUB to work with files, rather than loading raw data from the storage device (like the first\-stage boot loader).
+1.5阶段使GRUB的下一阶段可以处理文件，而不再是再向第一阶段引导加载程序那样从存储设备中加载原始数据。
 
-The second stage boot loader, which is now file\-system\-aware, can load the operating system's boot loader file to boot up the operating system.
+第二阶段引导加载程序，现在为file\-system\-aware，可以加载操作系统的引导加载程序文件来引导操作系统。
 
-This is when the operating system's logo fades in...
+此时也是操作系统徽标逐渐淡出的时候...
 
-Here's the layout of an MBR\-partition storage device:
+下面是MBR分区存储设备的图示：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/mbr-partition.jpg)
 
-An if we magnify the MBR, its content would look like this:
+如果我们放大MBR这部分，其内容将显示如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/mbr.jpg)
 
-Although MBR is very simple and widely supported, it has some limitations.
+尽管MBR非常简单并得到了广泛兼容，但它仍存在一些局限。
 
-MBR's data structure limits the number of partitions to only *four primary* partitions.
+MBR的数据结构将分区数量限制为了仅 *四个主要* 分区。
 
-A common workaround is to make an *extended* partition beside the primary partitions, as long as the total number of partitions won't exceed four.
+一个常见的解决方法是在主分区旁创建一个 *拓展* 分区。总之，只要分区总数不超过四个即可。
 
-An extended partition can be split into multiple *logical partitions*.
+扩展分区又可以分为多个 *逻辑分区*。
 
-When making a partition you can choose between primary and extended.
+进行分区时，你可以在主分区和扩展分区之间进行选择。
 
-After this is solved, we'll encounter the second limitation.
+解决此问题后，我们还面临着第二个限制。
 
-Each partition can be maximum of 2TiB.
+每个分区的空间最大为2TiB。
 
-And wait, there's more!
+等等，这还不只！
 
-The content of MBR sector has no back up 😱, meaning if MBR gets corrupted due to an unexpected reason, we'll have a useless storage device.
+MBR扇区的内容还没有备份 😱，也就是说一旦MBR遭到意外损坏，我们的存储设备就变成废铁了。
 
-The **GPT** partitioning scheme is more sophisticated than MBR, and doesn't have the limitations MBR has.
+比起MBR， **GPT** 分区方案要更复杂，但没有MBR那些限制。
 
-For instance, you can have as many partitions as your operating systems allows.
+比如，只要操作系统允许，你可以拥有尽可能多的分区。
 
-And every partition can be the size of the biggest storage device available in the market \- actually a lot more.
+而且每一个分区的大小都可以达到市场上最大的存储设备的大小， \- 实际上还可以更大。
 
-GPT is gradually replacing MBR, although MBR is still widely supported across both old PC's and new.
+GPT正在逐步取代MBR，尽管旧PC和新PC仍广泛支持MBR。
 
-As mentioned earlier, GPT is a part of the UEFI specification, which is replacing the good old BIOS.
+如前所述，GPT是UEFI规范的一部分，该规范正在替代旧的BIOS。
 
-That means that UEFI\-based firmwares use a GPT\-partitioned storage device to perform the booting.
+这意味着基于UEFI的固件将使用GPT分区的存储设备来执行引导。
 
-Many hardware and operating systems now support UEFI and use the GPT scheme to partition storage devices.
+现在，许多固件和操作系统都支持UEFI，并使用GPT方案对存储设备进行分区。
 
-In the GPT partitioning scheme, the first sector of the storage device is reserved for compatibility reasons with BIOS\-based systems. This is because some systems might still use a BIOS\-based firmware but have a GPT\-partitioned storage device.
+在GPT分区方案下，出于与基于BIOS\的系统兼容的考虑，保留了存储设备的第一个扇区。这是因为某些系统可能仍使用基于BIOS\的固件，但却具有GPT\分区的存储设备。
 
-This sector is called **Protective MBR.** (This is where the first\-stage boot loader would reside in an MBR\-partitioned disk)
+这一扇区被称为 **保护性MBR。** （这也是第一阶段引导加载程序在MBR\分区的磁盘中存储的位置）
 
-After this first sector, the GPT data structures are stored, including the **GPT header** and the **partition entries**.
+第一个扇区之后，将存储GPT数据结构，包括 **GPT标头** 和 **分区表条目**。
 
-As a backup, the GPT entries and the GPT header are also stored at the end of the storage device, so it can be recovered if the main copy gets corrupted. This backup is called **Secondary GPT.**
+作为备份，GPT条目和GPT标头也会存储在存储设备的最后，这样即便主副本被损坏，也可以将其恢复。此备份被称为 **辅助GPT。**
 
-The layout of a GPT\-partitioned storage device looks like this:
+下面是GPT分区存储设备的图示：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/GUID_Partition_Table_Scheme.svg)
 
-**[GUID Partition Table Scheme](https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg)** By [Kbolino](https://en.wikipedia.org/wiki/User:Kbolino), Licensed under **[CC BY\-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/)**
+**[GUID Partition Table Scheme](https://commons.wikimedia.org/wiki/File:GUID_Partition_Table_Scheme.svg)** ，图源： [Kbolino](https://en.wikipedia.org/wiki/User:Kbolino)， 许可： **[CC BY\-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/)**
 
-In GPT, all the booting services (boot loaders, boot managers, pre\-os environments, and shells) live in a special partition called **EFI System Partition (ESP)**, which UEFI firmware can use.
+在GPT中，所有的引导服务（引导加载程序，引导管理器，预操作系统环境和壳层）都位于名为 **EFI系统分区（简称ESP）**的特殊分区中，UEFI固件可以使用该分区。
 
-ESP even has it own file system, which is a specific version of **FAT**. On Linux, ESP resides under the `/sys/firmware/efi` path.
+ESP甚至拥有自己专属的文件系统，该系统是 **FAT**的一个特定版本。在Linux上，ESP存储在 `/sys/firmware/efi` 路径下。
 
-If this path cannot be found on your system, then you firmware is probably a BIOS\-based firmware.
+如果你在自己的系统上找不到此路径，那你的固件可能是基于BIOS的固件。
 
-To check you can try to change the directory to the ESP mount point, like so:
+想要查看的话，你可以尝试将目录更改为ESP挂载点，如下所示：
 
 ```
 cd /sys/firmware/efi
 ```
 
-UEFI\-based firmware assumes that the storage device is partitioned with GPT, and looks up the ESP in the GPT partition table.
+基于UEFI\的固件会假定其存储设备使用GPT进行分区，并在GPT分区表中查找ESP。
 
-Once the EFI partition is found, it looks for the configured boot loader, which is normally a file ending with `.efi`.
+找到EFI分区后，该固件将查找已配置的引导加载程序，该引导加载程序通常是以 `.efi` 结尾的文件。
 
-UEFI\-based firmware gets the booting configuration from **NVRAM** (which is non\-volatile RAM). NVRAM contains the booting settings as well as paths to the operating system boot loaders.
+基于UEFI\的固件从 **NVRAM** （一种非易失性RAM）中获取引导配置。NVRAM内有引导设置以及前往操作系统引导加载程序的路径。
 
-UEFI firmwares are also capable of performing BIOS\-boot (to boot the system from an MBR disk) if configured accordingly.
+如果进行了相应的配置，UEFI固件也能够执行BIOS\-boot，进而从MBR磁盘启动系统。
 
-You can use the `parted` command on Linux to see what partitioning scheme is used for a storage device.
+在Linux上，你可以使用 `parted` 命令来查看用于存储设备的分区方案。
 
 ```
 sudo parted -l
 ```
 
-And the output would be something like this:
+命令输出如下：
 
 ```
-Model: Virtio Block Device (virtblk)
-Disk /dev/vda: 172GB
-Sector size (logical/physical): 512B/512B
-Partition Table: gpt
-Disk Flags:
+型号：Virtio Block设备（virtblk）
+磁盘 /dev/vda: 172GB
+扇区大小（逻辑/物理）: 512B/512B
+分区表: gpt
+磁盘标志:
 
-Number  Start   End     Size    File system  Name  Flags
+编号  开始   结束     大小    文件系统  名称  标志
 14      1049kB  5243kB  4194kB                     bios_grub
 15      5243kB  116MB   111MB   fat32              msftdata
  1      116MB   172GB   172GB   ext4
 
 ```
 
-Based on the above output, the storage device's ID is `/dev/vda` with the capacity of 172GB.
+根据上面的输出可知，示例存储设备的ID为 `/dev/vda`，容量为172GB。
 
-The storage device is partitioned based on GPT, and has three partitions. The second and third partitions are formatted based on the FAT32 and EXT4 file systems respectively.
+该存储设备基于GPT进行分区，共具有三个分区，其中第二和第三分区分别基于FAT32和EXT4文件系统进行格式化。
 
-Having a BIOS GRUB partition implies the firmware is a BIOS\-based firmware.
+该固件具有BIOS GRUB分区，表明其为基于BIOS的固件。
 
-Let's confirm that with the `dmidecode` command like so:
+让我们借助 `dmidecode` 命令来确认这一点，输入如下：
 
 ```
 sudo dmidecode -t 0
 ```
 
-And the output would be:
+输出结果如下：
 
 ```
 # dmidecode 3.2
@@ -296,211 +296,211 @@ SMBIOS 2.4 present.
 ...
 ```
 
-✅ Confirmed!
+✅ 我们的判断没错！
 
-When partitioning is done, the partitions should be formatted.
+完成分区后，就要对分区进行格式化了。
 
-Most operating systems allow you to format a partition based on a set of file systems.
+大多数操作系统都支持基于一组文件系统来格式化分区。
 
-For instance, if you are formatting a partition on Windows, you can choose between **FAT32**, **NTFS**, and **exFAT** file systems.
+例如，在Windows上格式化分区时，可以选择 **FAT32**， **NTFS** 或 **exFAT**。
 
-Formatting involves the creation of various **data structures** and metadata used to manage files within a partition.
+格式化还会涉及创建各种 **数据结构** 和用于管理分区内文件的元数据。
 
-These data structures are one aspect of a file system.
+这些数据结构便是文件系统诸多定义中的一个方面。
 
-Let's take the NTFS file system as an example.
+我们拿NTFS文件系统为例吧。
 
-When you format a partition to NTFS, the formatting process places the key NTFS data structures, as well as **Master file table (MFT)**, on the partition.
+在将一个分区格式化为NTFS时，格式化过程会将关键NTFS数据结构以及 **主引导表（MFT）**放置在该分区上。
 
-Alright, enough about partitioning and booting. Let's get back to file systems.
+好了，关于分区和启动已经讲得够多了，我们还是绕回到文件系统吧。
 
-## How it started, how it's going
+## 文件系统一开始是怎么出现的，如今又发展到了什么地步
 
-A file system is a set of data structures, interfaces, abstractions and APIs that work together to manage any type of file on any type of storage device, in a consistent manner.
+文件系统由一套数据结构、连接电路、抽象概念和API构成。它们协同工作，步调一致地管理任何类型存储设备上的任何类型文件。
 
-Each operating system uses a particular file system to manage the files.
+每种操作系统会使用特定的文件系统来管理文件。
 
-In the early days, Microsoft used **FAT** (FAT12, FAT16, and FAT32) in the **MS\-DOS** and **Windows 9x** family.
+过去，Microsoft曾在 **MS\-DOS** 和 **Windows 9x** 家族系统中使用过 **FAT** （FAT12，FAT16和FAT32）。
 
-Starting from Windows **NT 3.1**, Microsoft developed **New Technology File System (NTFS)**, which had many advantages over FAT32, such as supporting bigger files, longer filenames, data encryption, access management, journaling, and a lot more.
+但自Windows  **NT 3.1**  开始，Microsoft研发了 **新技术文件系统（NTFS）**。比起FAT32，NTFS具有诸多多优势，如支持更大的文件，更长的文件名，数据加密，访问管理，日志记录等等。
 
-NTFS has been the default file system of the Window NT family (2000, XP, Vista, 7, 10, etc) since then.
+从那时起，NTFS就一直是Window NT家族（2000，XP，Vista，7、10等）的默认文件系统。
 
-NTFS isn’t suitable for non\-Windows environments, though.
+不过，NTFS并不适用于非Windows环境。
 
-For instance, you can **only read** the content of an NTFS\-formatted storage device (like flash memory) on a Mac OS, but you won’t be able to write anything to it \- unless you install a NTFS driver with write support.
+例如，在Mac OS上，你 **只能读取** NTFS格式存储设备（如闪存）上的内容，但无法写入任何内容，除非安装具有写入支持的NTFS驱动程序。
 
-**Extended File Allocation Table (exFAT)** is a lighter version of NTFS created by Microsoft in 2006.
+2006年，Microsoft创建 **扩展文件分配表（exFAT）** 文件系统，exFAT堪称NTFS的精简版。
 
-exFAT was designed for high\-capacity removable devices, such as external hard disks, USB drives, and memory cards.
+exFAT的设计面向对象是大容量可移动设备（例如外部硬盘，USB驱动器和存储卡）。
 
-exFAT is the default file system used by **SDXC** **cards**.
+它也是 **SDXC** **卡** 使用的默认文件系统。
 
-Unlike NTFS, exFAT has **read and write** support on Non\-Windows environments as well , including Mac OS — making it the best cross\-platform file system for high\-capacity removable storage devices.
+与NTFS不同，exFAT在非Windows环境（包括Mac OS）上也支持 **读写** ，这也使其成为最佳的高容量可移动存储设备跨平台文件系统。
 
-So basically, if you have a removable disk you want to use on Windows, Mac, and Linux, you need to format it to exFAT.
+因此基本上可以这么说，如果你想同时在Windows、Mac和Linux上使用同一块可移动磁盘，就需要将其格式化为exFAT格式。
 
-Apple has also developed and used various file systems over the years, including
-**Hierarchical File System (HFS)**, **HFS+**, and recently **Apple File System (APFS)**.
+多年以来，Apple也在研发利用自己的各种文件系统，这就包括
+**分层文件系统（HFS）**, **HFS+** 以及最近推出的 **苹果文件系统（APFS）**.
 
-Just like NTFS, APFS is a journaling file system, and has been in use since the launch of **OS X High Sierra** in 2017.
+和NTFS类似，APFS也是一个日志文件系统。自苹果在2017年推出 **OS X High Sierra** 以来，APFS一直使用至今。
 
-**The Extended File System (ext)** family of file systems was specifically created for the Linux kernel \- the core of the Linux operating system.
+文件系统中的 **扩展文件系统（ext）** 家族是专门为Linux内核（即Linux操作系统的核心）创建的。
 
-The first version of **ext** was released in 1991 but soon after it was replaced by the **second extended file system** (**ext2)** in 1993.
+**ext** 的第一版发布于1991年，但不久便在1993年被 **第二代扩展文件系统** （**ext2）** 取代。
 
-In the 2000s the **third extended filesystem** (**ext3)** and **fourth extended filesystem (ext4)** were developed for Linux with journaling capability.
+进入21世纪，针对Linux开发的具有日志功能的 **第三代扩展文件系统** （**ext3）** 和 **第四代扩展文件系统 （ext4）** 也相继出现。
 
-**ext4** is now the default file system in many distributions of Linux, including [Debian](https://en.wikipedia.org/wiki/Debian) and [Ubuntu](https://en.wikipedia.org/wiki/Ubuntu).
+如今，**ext4** 成为Linux的许多发行版本中的默认文件系统，这就包括 [Debian](https://en.wikipedia.org/wiki/Debian) 和 [Ubuntu](https://en.wikipedia.org/wiki/Ubuntu)。
 
-You can use the `findmnt` command on Linux to list your ext4\-formatted partitions:
+在Linux上，你可以输入 `findmnt` 命令来陈列出ext4\格式的分区：
 
 ```
 findmnt -lo source,target,fstype,used -t ext4
 ```
 
-The output would be something like:
+输出结果如下：
 
 ```
 SOURCE    TARGET FSTYPE  USED
 /dev/vda1 /      ext4    3.6G
 ```
 
-## Architecture of file systems
+## 文件系统的体系结构
 
-The anatomy of a file system within an operating system consists of three layers:
+一个操作系统中的文件系统有三层结构：
 
-*   **Physical file system**
-*   **Virtual file system**
-*   **Logical file system.**
+*   **物理文件系统**
+*   **虚拟文件系统**
+*   **逻辑文件系统。**
 
-These layers can be implemented as independent or tightly coupled abstractions.
+不同层次之间既可彼此独立存在，也可紧密耦合为诸多抽象。
 
-When people talk about file systems, they refer to one of these layers.
+当人们谈论文件系统时，他们所指的就是这三层中的某一层。
 
-Although these layers are different across operating systems, the concept is pretty much the same.
+尽管这些层次在不同操作系统之间有所不同，但这些概念基本是相通的。
 
-The  physical layer is the concrete implementation of a file system. It is responsible for data storage and retrieval, as well as space management on the storage device.(or more precisely partitions)
+物理层是文件系统的具体实现，负责数据存储和检索，以及存储设备上的空间管理（或者更确切地说是分区）。
 
-The physical file system interacts with the actual storage hardware, via [device drivers](https://www.skillupp.tech/books/essentials-of-computing-for-the-new-coders#device-drivers).
+物理文件系统通过 [设备驱动程序](https://www.skillupp.tech/books/essentials-of-computing-for-the-new-coders#device-drivers)与实际的存储硬件进行交互。
 
-The next layer is the virtual file system, or **VFS**.
+下一层是虚拟文件系统，简称 **VFS**。
 
-The virtual file system provides a **consistent view** of various file systems mounted on the same operating system.
+虚拟文件系统提供了一种支持在操作系统上安装的各类文件系统的 **一致视图**。
 
-So does this mean an operating system can use multiple file systems at the same time?
+那么，这是否意味着一个操作系统可以同时使用多种文件系统呢？
 
-The answer is yes!
+答案是肯定的！
 
-It's common for a removable storage medium to have a different file system than that of the computer.
+可移动存储工具通常都具有与计算机不同的文件系统。
 
-For instance, on Windows (which uses NTFS as the main file system), a flash memory might have been formatted to exFAT or FAT32.
+例如，在使用NTFS作为主要文件系统的Windows环境下，闪存可能已格式化为exFAT或FAT32。
 
-That said, the operating system should provide a **unified interface** \- a consistent view \- between programs (file explorers and other apps that work with files) and the different mounted file systems (such as NTFS, APFS, EXT4, FAT32, exFAT, and UDF).
+也就是说，操作系统需要能够在处理不同程序（文件浏览器和其他处理文件的应用）和不同的挂载文件系统（例如NTFS，APFS，EXT4， FAT32，exFAT和UDF）时提供一种 **一致视图**。
 
-For instance, when you open up your file explorer program, you can copy an image from an EXT4 file system, and paste it over to your exFAT\-formatted flash memory \- without having to know that files are managed differently under the hood.
+比如说，当你打开文件资源管理器时，你可以从EXT4文件系统复制一份图像，然后将其直接粘贴到exFAT格式的闪存中，而不必去管文件在后台进行了不同的管理。
 
-This convenient layer between the user (you) and the underlying file systems is provided by the VFS.
+VFS堪称连接用户（你）和后台文件系统的“便利层”。
 
-A VFS defines a *contract* that all physical file systems must implement to be supported by the operating system.
+它制定了一种 *合同* ，要求所有的物理文件系统都必须以操作系统支持的方式工作。
 
-However, this compliance isn't built into the file system core, meaning the source code of a file system doesn't include support for every operating system.
+但是，这种合规性并未内置于文件系统的核心中，也就是说，文件系统的源代码并不包含对各种操作系统的支持。
 
-Instead it uses a **file system driver** to adhere to the VFS rules.
+事实是，这些源代码利用 **文件系统驱动程序** 来遵守VFS的规则。
 
-A driver is a special program that enables a software to communicate with another software or hardware.
+驱动程序是一种能够使软件与另一个软件或硬件进行通信的特殊程序。
 
-User programs don't directly interact with the VFS, though.
+但用户程序不会直接与VFS交互。
 
-Instead, they use a unified API, which sits between programs and the VFS.
+而是利用位于程序和VFS之间的统一API实现交互。
 
-Yes, we're talking about the logical file system.
+没错，我们接下来要说的就是逻辑文件系统。
 
-The logical file system is the user facing part of a file system, which provides an API to enable user programs to perform various file operations, such as `OPEN`, `READ`, and `WRITE` , without having to deal with any storage hardware.
+逻辑文件系统是文件系统中面向用户的一层。通过提供API，它能使用户程序无需处理任何存储硬件便能执行各种文件操作，例如 `打开`， `读`， `写`。
 
-On the other hand, VFS provides a bridge between the logical layer (which programs interact with) and a set of physical file systems.
+话说回来，VFS也在逻辑文件系统（程序与之交互）和一组物理文件系统之间搭建了桥梁。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/filesystem-1.jpg)
 
-A high\-level architecture of the file system layers
+文件系统层的高级架构
 
-### What does it mean to mount a file system?
+### 什么叫挂载文件系统？
 
-On Unix\-like systems, the VFS assigns a **device ID** (for example `dev/disk1s1`) to each partition or removable storage device.
+在Unix一类的系统上，VFS为每个分区或可移动存储设备都分配一个 **device ID** （如 `dev/disk1s1`）。
 
-Then, it creates a **virtual directory tree** and puts the content of each device under that directory tree as separate directories.
+接着，它会创建一个 **虚拟目录树** ，并将每个设备的内容按照单独的目录放在该目录树下。
 
-The act of assigning a directory to a storage device (under the root directory tree) is called **mounting**, and the assigned directory is called a **mount point**.
+而在根目录树下给存储设备分配目录的活动就是 **挂载**，分配的目录被称为 **挂载点**。
 
-That said, on a Unix\-like operating system, all partitions and removable storage devices appear as if they are directories under the root directory.
+就是说，在Unix一类的操作系统上，所有分区和可移动存储设备看起来就都好像是根目录下的目录。
 
-For instance, on Linux, the mounting point for a removable device (such as a memory card), is `/media` (relative to the root directory) by default \-  unless configured otherwise.
+例如，在Linux上，除非有所配置，否则默认情况下可移动设备（例如存储卡）的挂载点就是根目录下的 `/media`。
 
-That said, once a flash memory is attached to the system, and consequently, *auto mounted* at the default mounting point (`/media` in this case), its content would be available under `/media` directory .
+也就是说，当将闪存连接到一个操作系统时，它会被 *自动挂载* 在默认挂载点（在Linux环境下就是 `/media`），其内容也将在 `/media` 目录下显示。
 
-However, there are times you need to mount a file system manually.
+但是，有些时后会需要你手动挂载文件系统。
 
-On Linux, it’s done like so:
+在Linux上，可进行如下操作：
 
 ```
 mount /dev/disk1s1 /media/usb
 ```
 
-In the above command, the first parameter is the device ID (`/dev/disk1s1`), and the second parameter (`/media/usb`) is the mount point.
+在上面的命令中，第一个参数（`/dev/disk1s1`）是设备ID，第二个参数（`/media/usb`）是挂载点。
 
-Please note that the mount point should already exist as a directory.
+请注意，挂载点应当已经作为目录存在。
 
-If it doesn’t, it has to be created first:
+如果没有，则必须先创建它：
 
 ```
 mkdir -p /media/usb
 mount /dev/disk1s1 /media/usb
 ```
 
-## File Metadata
+## 文件元数据
 
-File metadata is a data structure that contains **data about a file**, such as:
+文件元数据是一种数据结构，存储 **有关文件的数据**，比如：
 
-*   File size
-*   Timestamps, like creation date, last accessed date, and modification date
-*   The file's owner
-*   The file's mode (who can do what with the file)
-*   What blocks on the partition are allocated to the file
-*   and a lot more
+*   文件大小
+*   时间戳，如创建日期，上次访问日期和修改日期
+*   文件所有者
+*   文件权限状态（“谁”可以“如何”处理文件）
+*   分区上的哪些块分配给了文件
+*   等等
 
-Metadata isn’t stored with the file content, though. Instead, it’s stored in a different place  on the disk \- but associated with the file.
+不过，元数据不会与文件内容一起存储，而是存储在磁盘上的其它位置并与文件关联。
 
-In Unix\-like systems, the metadata is in the form of special data structures, called **inode**.
+在Unix一类的系统中，元数据以一种特殊的数据结构形式存储，被称为 **索引节点**。
 
-Inodes are identified by a unique number called the *inode number.*
+索引节点由唯一的 *索引节点号* 标识。
 
-Inodes are associated with files in a data structure called *inode tables*.
+索引节点与 *索引节点表* （一种数据结构）中的文件关联。
 
-Each file on the storage device has an inode, which contains information about the file, including the address of the blocks allocated to the file.
+存储设备上的每个文件都有一个索引节点，该索引节点包含有关文件的信息，包括分配给该文件的区块地址。
 
-In an ext4 inode, the address of the allocated blocks is stored as a set of data structures called **extents** (within the inode).
+在一个ext4索引节点中，所分配区块的地址以索引节点中的 **区段** （一组数据结构）形式存储。
 
-Each extent contains the address of the first data block allocated to the file, and the number of the next continuous blocks that the file has occupied.
+每个区段包含分配给文件的第一个数据块的地址，以及文件已占用的下面几个区块的数量。
 
-If the file is fragmented, each fragment will have its own extent.
+如果文件是分段存储的，每个分段都会有其专属的范围。
 
-This is different than ext3's pointer system, which points to individual data blocks via indirect pointers.
+这与ext3的指针系统不同，后者是通过间接块指针指向各个数据块的。
 
-Using an extent data structure enables the file system to point to large files without taking up too much space.
+使用区段数据结构可使文件系统指向大型文件，但同时又不会占用太多空间。
 
-Whenever a file is requested, its name is first resolved to an inode number.
+每当请求文件时，其名称都会首先解析为一个索引节点号。
 
-Having the inode number, the file system fetches the respective inode from the storage device.
+有了索引节点号之后，文件系统便会从存储设备中获取相应的索引节点。
 
-Once the inode is fetched, the file system starts to compose the file from the data blocks stored in the inode.
+提取索引节点过后，文件系统便开始根据索引节点中存储的数据块来组成文件。
 
-You can use the `df` command with the `-i` parameter on Linux to see the inodes (total, used, and free) in your partitions:
+在Linux上，你可以将 `df` 命令与 `-i` 参数一起使用，以查看分区中的索引节点（节点总计，已使用节点和可用节点）：
 
 ```
 df -i
 ```
 
-The output would look like this:
+输出结果如下：
 
 ```
 udev           4116100    378 4115722    1% /dev
@@ -508,15 +508,15 @@ tmpfs          4118422    528 4117894    1% /run
 /dev/vda1      6451200 175101 6276099    3% /
 ```
 
-As you can see, the partition `/dev/vda1` has a total number of 6451200, of which 3% have been used (175101 inodes).
+可以看到，分区 `/dev/vda1` 的索引节点总数为6451200，其中3%（175101个）已被使用。
 
-Additionally, to see the inodes associated with files in a directory, you can use the `ls` command with `-il` parameters.
+此外，如果要查看与目录中的文件相关联的索引节点，则可以使用带有 `-il` 参数的 `ls` 命令。
 
 ```
 ls -li
 ```
 
-And the output would be:
+输出结果如下：
 
 ```
 1303834 -rw-r--r--  1 root www-data  2502 Jul  8  2019 wp-links-opml.php
@@ -526,199 +526,199 @@ And the output would be:
 1303838 -rw-r--r--  1 root www-data 18962 Jul  8  2019 wp-settings.php
 ```
 
-The first column is the inode number associated with each file.
+第一列是与每个文件关联的索引节点号。
 
-The number of inodes on a partition is decided when the partition is formatted. So as long as there's free space and there are unused inodes, files can be stored on the storage device.
+分区上的索引节点数是在格式化分区时确定的。也就是说，只要设备上还有可用空间并且有未使用的缩阴节点，文件就可以存储在存储设备上。
 
-It's unlikely that a personal Linux OS would run out of inodes. However, enterprise services that deal with a large number of files (like mail servers) have to manage their inode quota smartly.
+事实上，个人版的Linux操作系统不太可能会耗尽索引节点。但是，企业在使用需要处理大量文件的服务（例如邮件服务器）时，就必须聪明地管理其索引节点的配额了。
 
-On NTFS, the metadata is stored differently, though.
+然而，在NTFS上，元数据的存储方式会有所不同。
 
-NTFS keeps file information in a special data structure called the **Master File Table (MFT)**.
+NTFS将文件信息保存在 **主引导表（MFT）** 这一特殊数据结构中。
 
-Every file has at least one entry in MFT, which contains everything about the respective file, including its location on the storage device \- similar to inodes.
+MFT中，每个文件都至少具有一个条目，和索引节点类似，其中包含有关相应文件的所有内容，包括其在存储设备上的位置。
 
-On most operating systems, general file metadata can be accessed from the graphical user interface as well.
+在大多数操作系统上，你也可以从图形用户界面访问常规文件元数据。
 
-For instance, when you right\-click on a file on Mac OS, and select Get Info  (Properties in Windows), a window appears with information about the file. This information is fetched from the respective file’s metadata.
+例如，当在Mac OS上右键单击一个文件并选择“获取信息”（即Windows中的“属性”）时，将回弹出一个窗口，其中包含有关该文件的信息。该信息便是从相应文件的元数据中获取的。
 
-## Space Management
+## 空间管理
 
-Storage devices are divided into fixed\-sized blocks called **sectors**.
+存储设备内分为大小固定的区块，称为 **扇区**。
 
-A sector is the **minimum storage unit** on a storage device, and is between 512 bytes and 4096 bytes (Advanced Format).
+扇区是存储设备上的 **最小存储单元**，大小介于512字节和4096字节之间（高级格式）。
 
-However, file systems use a high\-level concept as the storage unit, called **blocks.**
+然而，文件系统实际使用高级概念 **区块** 作为存储单元。
 
-Blocks are an abstraction over physical sectors and consist of multiple sectors.
+块是对物理扇区的抽象，由多个扇区组成。
 
-Depending on the size of a file, the file system allocates one or more blocks to each file.
+根据文件的大小，文件系统为每个文件分配一个或多个块。
 
-Speaking of space management, the file system is aware of every *used* and *unused* block on the partitions, so it’ll be able to allocate space to new files or fetch the existing ones when requested.
+进行空间管理时，文件系统很明确分区上每个 *已使用* 和 *未使用* 的块，因此便可以为新文件分配空间或在收到请求时获取现有文件。
 
-The most basic storage unit in ext4\-formatted partitions is the block.
+ext4格式的分区中最基本的存储单元就是块。
 
-However, the contiguous blocks are grouped into **block groups** for easier management.
+为便于管理，连续的块会被集中在一起，组成 **块组**。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/block-group.jpg)
 
-The layout of a block group within an ext4 partition
+ext4分区中的块组图示
 
-Each block group has its own data structures and data blocks.
+每个块组都有自己的数据结构和数据块。
 
-Here are the data structures a block group can contain:
+H下面是一个块组可以包含的数据结构：
 
-*   **Super Block:** a metadata repository, which contains meta data about the entire file system, such as total number of blocks in the file system, total blocks in block groups, inodes, and more. Not all block groups contain the super block, though. A certain number of block groups store a copy of the super as a backup.
-*   **Group Descriptors:** Group descriptors also contain bookkeeping information for each block group
-*   **Inode Bitmap:** Each block group has its own inode quota for storing files. A block bitmap is a data structure used to identify *used* and *unused* inodes within the block group. `1` denotes used and `0` denotes unused inode objects.
-*   **Block Bitmap:** a data structure used to identify used and unused data blocks within the block group. `1` denotes used and `0` denotes unused data blocks
-*   **Inode Table:** a data structure which defines the relation of files and their inodes. The number of inodes stored in this area is related to the block size used by the file system.
-*   **Data Blocks:** This is the zone within the block group where file contents are stored.
+*   **超级块：** 元数据存储库，其中包含有关整个文件系统的元数据，例如文件系统中的总块数，块组中的块总数，索引节点等。但并非所有的块组都包含超级块。一定数量的块组会存储超级副本作为备份。
+*   **组描述符：** 组描述符同样包含每个块组的簿记信息
+*   **索引节点位图：** 每个块组都有自己的索引节点配额用于存储文件。块位图是一种数据结构，用于标识块组中 *已使用* 和 *未使用* 的索引节点。`1` 表示已使用的索引节点对象，`0` 表示未使用的索引节点对象。
+*   **块位图:** 一种数据结构，用于标识块组中已使用和未使用的数据块。`1` 表示已使用的数据块，`0` 表示未使用的数据块。
+*   **索引节点表：** 一种数据结构，用于定义文件及其索引节点的关系。存储在该区域中的索引节点的数量与文件系统使用的块大小有关。
+*   **数据块：** 存储文件内容的块组中的区域。
 
-Ext4 file systems even take one step further (comparing to ext3), and organise block groups into a bigger group called *flex block groups.*
+与ext3相比，Ext4文件系统又往前更进一步，将块组集合成为了一个更大的组，被称为 *弹性块组。*
 
-Each flex box group contains a number block groups.
+每个弹性块组包含多个数字块组。
 
-The data structures of each block group, including the block bitmap, inode bitmap, and inode table, are *concatenated* and stored in the *first block group* within the respective flex block group.
+每个块组的数据结构（包括块位图，索引节点位图和索引节点表）被 *串联* 在一起并存储在相应的弹性块组内的 *首个块组* 中。
 
-Having all the data structures concatenated in one block group (the first one) frees up more contiguous data blocks on other block groups within each flex block group.
+通过将所有数据结构连接到一个块组（第一个）中，便可以释放每个弹性块组内其它块组上的更多连续数据块。
 
-The layout of the first block group looks like this:
+第一个块组的图示如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/block-group-detail.jpg)
 
-Layout of the first block in a ext4 flex block group
+ext4弹性块组中第一个块的图示
 
-When a file is being written to a disk it is written to a one or more blocks within a certain block group.
+文件被写入磁盘时，会被写入某个块组中的一个或多个块。
 
-Managing files in block group level significantly improves the performance of the file system.
+通过在块组级别管理文件，可显著提高文件系统的性能。
 
-### Size vs size on disk
+### 文件大小vs占用磁盘大小
 
-Have you ever noticed that your file explorer displays two different sizes for each file: **size,** and **size on disk**.
+你是否曾注意到文件浏览器会为每个文件显示两种大小： **文件大小，** 和 **占用磁盘大小**。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/disksize-1.jpg)
 
-Size and Size on disk
+文件大小和占用磁盘大小
 
-Why are size and size on disk slightly different? You may ask.
+你可能会问，为什么文件大小和占用磁盘大小会略有不同？
 
-Here’s an explanation:
+解释如下：
 
-We already know that, depending on the file size, one or more blocks are allocated to a file.
+我们已经知道，基于文件大小，一个文件会被分配一个或多个块。
 
-One block is the minimum space that can be allocated to a file. This means the remaining space of a partially\-filled block cannot be used by another file.
+而一个块是可以分配给文件的最小空间，这就意味着那些仅被部分占用的块的剩余空间是不能被另一个文件使用的。
 
-Since the size of the file *isn't an integer multiple of blocks*, the last block might be partially used, and the remaining space would remain unused \- or would be filled with zeros.
+由于文件的大小 *并不是块的整数倍*，因此很有可能最后一个块仅被部分占用，而该块剩余的空间将保持未使用的状态或会被零填充。
 
-So "size" is basically the actual file size, while “size on disk” is the space it has occupied, even though it’s not using it all.
+因此，“文件大小”基本上是指文件的实际大小，而“占用磁盘大小”是指文件已占用的空间，即使它没有完全使用这些空间。
 
-You can use `du` command on Linux to see it for yourself.
+在Linux上，你可以使用 `du` 命令来查看文件大小，
 
 ```
 du -b "some-file.txt"
 
 ```
 
-The output would be something like this:
+输出结果如下：
 
 ```
 623 icon-link.svg
 ```
 
-And to check the size on disk:
+并查看其占用磁盘大小：
 
 ```
 du -B 1 "icon-link.svg"
 ```
 
-Which will result in:
+输出结果如下：
 
 ```
 4096    icon-link.svg
 ```
 
-Based on the output, the allocated block is about 4kb, while the actual file size is 623 bytes.
+可以看出，该文件被分配的块约为4kb，而文件的实际大小为623字节。
 
-### What is disk fragmentation?
+### 什么是磁盘碎片？
 
-Over time, new files are written to the disk, existing files increase in size, are shrunk, or are deleted.
+随着时间的推移，新文件会被写入磁盘，现有文件或增大，或缩小，或被删除。
 
-These frequent changes in the storage medium leave many small gaps (empty spaces) between files.
+在存储工具中频繁进行这些更改便会在文件之间留下许多小的间隙（空白空间）。
 
-File Fragmentation occurs when a file is stored as fragments on the storage device because the file system cannot find enough contiguous blocks to store the whole file in a row.
+当文件作为片段存储在存储设备上时便会产生文件碎片，这是因为文件系统已不能找到足够多的连续块来将整个文件存储在一行中。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/disk_image-1.jpg)
 
-An example of a fragmented and non\-fragmented file
+碎片和非碎片文件的示例
 
-Let's make it more clear with an example.
+让我们通过一个示例来更好地说明这一点。
 
-Imagine you have a Word document named `myfile.docx`.
+假设你有一个名为 `myfile.docx` 的Word文档。
 
-`myfile.docx` is initially stored in a few contiguous blocks on the disk, let's say `LBA250`, `LBA251`, and `LBA252`  \- by the way, this naming is hypothetical.
+起初，`myfile.docx` 存储在磁盘上的几个连续块中，比方说就是 `LBA250`， `LBA251` 和 `LBA252` （这种命名方式是假设的）这几个块。
 
-Now, if you add more content to `myfile.docx` and save it, it will need to occupy more blocks on the storage medium.
+现在，如果你将更多内容添加到了 `myfile.docx` 中并将其保存，该文档将会在存储工具上占用更多的块。
 
-Since `myfile.docx` is currently stored on `LBA250`, `LBA251`, and `LBA252`, the new content should preferably sit within `LBA253` and so forth \- depending on how much space is needed.
+考虑到 `myfile.docx` 当前存储在 `LBA250`， `LBA251`， 和 `LBA252` 上，因此，根据所需空间，新增加的内容最好存储在紧跟其后的 `LBA253` 等几个块上。
 
-However, if `LBA253` is already taken by another file (maybe it’s the first block of another file), the remaining content of `myfile.docx` has to be stored on different blocks somewhere else on the disks, for instance, `LBA312` and `LBA313`.
+但是，如果现在 `LBA253` 已经被另一个文件占用（可能是另一个文件的第一个块）了，那么 `myfile.docx` 的新增内容就只能存储在磁盘上其它位置的块中，比方说是 `LBA312` 和 `LBA313`。
 
 [`myfile.docx`](https://www.freecodecamp.org/news/p/4521a4e0-fc09-4f63-80bb-6c01f617c4db/myfile.docx) got fragmented 💔.
 
-File fragmentation puts a burden on the file system because every time a fragmented file is requested by a user program, the file system needs to collect every piece of the file from various locations on disk.
+文件碎片会给文件系统带来运行负担，因为每次用户程序请求碎片文件时，文件系统都需要从磁盘上的各个位置收集文件的每个片段。
 
-The applies to saving the file back to the disk as well.
+这一过程也适用于将文件保存回磁盘的情况。
 
-The fragmentation might also occur when a file is written to the disk for the first time, probably because the file is huge, and not much space is left on the storage device.
+即便是第一次将文件写入磁盘时，也有可能发生碎片，原因可能是因为文件很大，但存储设备上已没有剩余空间。
 
-Fragmentation is one of the reasons some operating systems get slow as the file system ages.
+碎片也是某些操作系统随着文件系统老化而性能变慢的原因之一。
 
-### Should We Care About Fragmentation these days?
+### 如今我们还有必要担心碎片的问题吗？
 
-The short answer is: not anymore!
+一个直截了当的回答是：再也不用了！
 
-Modern file system use smart algorithms to avoid (or early detect) fragmentation as much as possible.
+利用智能算法，时下的文件系统会尽可能避免（或及早发现）碎片的产生。
 
-Ext4 also does some sort of **preallocation,** which involves  reserving blocks for a file before they are actually needed \- making sure the file won't get fragmented if it get bigger over time.
+Ext4还会进行所谓的 **预分配，** 就是为文件提前保留一些块以备不时之需，以此来确保即便使用了一段时间文件也不会产生碎片。
 
-The number of the *preallocated blocks* is defined in the *length field* of the file's extent of its inode object.
+*预分配块* 的数量在文件索引节点对象区段的 *长度字段* 中有所定义。
 
-Additionally, Ext4 uses an allocation technique called **delayed allocation**.
+此外，Ext4还会使用一种名为 **延迟分配** 的技术。
 
-The idea is instead of writing to data blocks one at a time during a write, the allocation requests are accumulated in a buffer. Finally, the allocation is done and data is written to the disk.
+该技术不再在写入过程中一次写入一个数据块，而是先将分配请求累积在缓冲区。然后在分配完成后再将数据写入磁盘。
 
-Not having to call the block allocator on every write request helps the file system make better choices with distributing the available space. For instance, by placing large files apart from smaller files.
+这种方法无需再在回应每个“写”请求时都调用块分配器，从而有助于文件系统在分配可用空间时做出更好的选择，如将大文件与小文件分开放置。
 
-Imagine that a small file is located between to large files. Now, if the small file is deleted, it leaves a small space between the two files.
+想象如果一个小文件存在了两个大文件之间。那如果删除了这个小文件，则这两个大文件之间便会滞留出一个小空间。
 
-If the big files and small files are kept in different areas on the storage device, when a file deletes small files won't leave many gaps on the storage device.
+而当大文件和小文件保存在存储设备上的不同区域时，即便删除了小文件，也不会在存储设备上留下很多空白。
 
-Spreading the files out in this manner leaves enough gaps between data blocks, which helps the filesystem manage (and avoid) fragmentation more easily.
+通过这种方式散布文件时，还可以在数据块之间留出足够的空隙，进而有助于文件系统更轻松地管理并避免产生碎片。
 
-Delayed allocation actively reduces fragmentation and increases performance.
+延迟分配同样可以有效减少碎片并提高系统性能。
 
-## Directories
+## 目录
 
-A Directory (Folder in Windows) is a special file used as a **logical container** to group files and directories.
+目录（Windows中的文件夹）是一种特殊文件，在对文件和目录进行分组时发挥着 **逻辑容器** 的作用。
 
-On NTFS and Ext4, directories and files are treated the same way. That said, directories are just files that have their own inode (on Ext4) or MFT entry (on NTFS).
+目录和文件的处理方式在NTFS和Ext4上是相同的。也就是说，目录只是具有自己的索引节点（在Ext4上）或MFT条目（在NTFS上）的文件。
 
-The inode or MFT entry of a directory contains information about that directory, as well as a collection  of entries pointing to the files associated with that directory.
+目录的索引节点或MFT条目包含有关该目录的信息，并指向与该目录相关联文件的条目集合。
 
-The files aren't literally contained within the directory, but they are associated to the directory in a way that they appear as directory's children in a higher level \- like a file explorer program.
+实际上，这些文件并不包含在目录中，但它们却以某种方式显示为了目录的子级，从而与目录相关联，就像是一个文件浏览器。
 
-These entries are called **directory entries.** Directory entries contain file names mapped to their inode/MFT entry.
+这些条目被称为 **目录条目。** 目录条目内含有映射到其索引节点或MFT条目的文件名。
 
-In addition to the directory entries, two other entries also exist, `.`,  which points the directory itself, and `..`, which points to its parent directory.
+除了目录条目，还存在另外两种条目，一个是 `.`，指向目录本身，一个是 `..`，指向其上级目录。
 
-On Linux, you can use the `ls` in a directory to see the directory entries with their associated inode numbers:
+在Linux上，可以使用 `ls` 命令在目录中查看目录条目及其关联的索引节点编号：
 
 ```
 ls -lai
 ```
 
-And the output would be something like this:
+输出结果如下：
 
 ```
 63756 drwxr-xr-x 14 root root   4096 Dec  1 17:24 .
@@ -731,17 +731,17 @@ And the output would be something like this:
  ...
 ```
 
-## Filename Rules
+## 文件命名规则
 
-Some file systems enforce limitations on filenames.
+有些文件系统会对文件命名实加一些限制。
 
-The limitation can be on the **length of the filename** or **filename case sensitivity**.
+这种限制可以是 **文件名的长度** 或是 **文件名区分大小写**。
 
-For instance, in NTFS file system, `MyFile` and `myfile` refer to the same file, while on EXT4, they point to different files.
+例如，在NTFS文件系统中，`MyFile` 和 `myfile` 所指的是同一文件，但在EXT4上，它们便指向不同的文件。
 
-Why does this matter? you may ask.
+你可能会问，这有什么大不了的？
 
-Imagine that you’re creating a web page on your Windows machine. The web page contains your brand logo, a PNG file, like this:
+想象一下，假如你正在一台Windows环境的计算机上创建网页。网页内容包含你的品牌徽标，这一徽标为PNG文件，如下所示：
 
 ```html
 <!DOCTYPE html>
@@ -757,120 +757,120 @@ Imagine that you’re creating a web page on your Windows machine. The web page 
 </html>
 ```
 
-Even if the actual file name is `Logo.png` (note the capital **L**), you can still see the image when you open your web page on your web browser.
+即便该徽标文件的实际命名为 `Logo.png` （注意这里是大写的字母 **L**），你也仍可以在浏览器上打开网页时看到该徽标。
 
-However, once you deploy it to a Linux server, and view it live, the image would be broken.
+但是在将该网页部署到Linux服务器上进行实时查看时，徽标文件就会受到损坏。
 
-Why?
+为什么？
 
-Because in Linux (EXT4 file system) `logo.png` and `Logo.png` point to two different files.
+因为在Linux（EXT4文件系统）环境下，`logo.png` 和 `Logo.png` 分别指向两个不同的文件。
 
-## File Size Rules
+## 文件大小规则
 
-One important aspects of file systems is their supported **maximum file size**.
+有关文件系统的一个重要方面是它们支持的 **最大文件大小**。
 
-An old file system like **FAT32**, (used by MS\-DOS +7.1, Windows 9x family, and flash memories) can’t store files more than 4 GB, while its successor, **NTFS** allows file sizes to be up to **16 EB** (1000 TB).
+就MS\-DOS + 7.1、Windows 9x家族和闪存使用的 **FAT32** 等旧文件系统来说，存储文件大小不能超过4GB，而其后继产品 **NTFS** 允许的文件大小最高可达 **16 EB**（1000 TB）。
 
-Just like NTFS, exFAT allows a file size of 16 EB as well, which makes it an ideal choice for storing massive data objects, such as video files.
+和NTFS类似，exFAT也支持16EB的文件大小，这也使其成为存储海量数据文件（如视频文件）的理想选择。
 
-Practically, there’s no limitation on the file size in the exFAT and NTFS file systems.
+实际上，exFAT和NTFS文件系统中对文件大小是没有限制的。
 
-Linux’s EXT4 and Apple’s APFS support files up to **16 TiB** and **8 EiB** respectively.
+Linux的EXT4和Apple的APFS支持的文件大小分别高达 **16 TiB** 和 **8 EiB**。
 
-## File Explorers
+## 文件资源管理器
 
-As you know, the logical layer of the file system provides an API to enable user applications to perform file operations, such as `read`, `write`, `delete`, and `execute`.
+如你所知，文件系统的逻辑层通过提供一个API，可使用户应用程序对文件执行诸如 `读`， `写`， `删除` 和 `执行`等操作。
 
-The file system’s API is a low\-level mechanism, though, designed for computer programs, runtime environments, and shells \- not designed for daily use.
+但文件系统的API其实是一种低级机制，专为计算机程序、运行时环境和壳设计，而非为日常使用而设计。
 
-That said, operating systems provide convenient file management utilities out of the box for your day\-to\-day file management. For instance, **File** **Explorer** on Windows, **Finder** on Mac OS, and **Nautilus** on Ubuntu are examples of file explorers.
+可以说，操作系统为我们日常的文件管理提供了多种非常方便、开箱即用的文件管理实用程序。例如，Windows上的 **File** **Explorer** ，Mac OS上的 **Finder** ，Ubuntu上的 **Nautilus** 都是文件浏览器的示例。
 
-These utilities use the logical file system’s API under the hood.
+这些实用程序在后台使用逻辑文件系统的API。
 
-Apart from these GUI tools, operating systems expose the file system’s APIs via the command\-line interfaces as well, like Command Prompt on Windows, and Terminal on Mac and Linux.
+除了这些GUI（图形用户界面）工具外，操作系统还能通过命令行界面显示文件系统的API，例如Windows上的命令提示符，以及Mac和Linux上的Terminal。
 
-These text\-based interfaces help users do all sorts of file operations in the form of text commands. Just like how we did in the previous examples.
+这些基于文本的界面可以帮助用户以文本命令的形式执行各种文件操作，就和我们在前面的示例中所做的一样。
 
-## File access management
+## 文件访问权限管理
 
-Not everyone should be able to remove or modify a file they don’t own or update files if they are not authorised to do so.
+如果说每个人都能删除或修改任何文件，哪怕是非自己所属的文件，或者在没有任何授权的情况下就更新这些文件，后果可想而知。
 
-Modern file systems provide mechanisms to control users’ access and capabilities with regard to files.
+时下的文件系统故而提供了一种控制用户对文件的访问权限和访问功能的机制。
 
-The data regarding user permissions and file ownership is stored in a data structure, called Access\-Control List (ACL) on Windows, or Access\-Control Entries (ACE) on Unix\-like operating systems (Linux and Mac OS).
+有关用户权限和文件所有权的数据存储在一个数据结构中。这一数据结构在Windows下被称为访问控制列表（ACL，Access Control List），在Unix一类的操作系统（Linux和Mac OS）上被称为访问控制项（ACE，Access Control Entry）。
 
-This feature is also available in the CLI, where a user can change file ownerships, or limit permissions of each file right from the command line interface.
+此功能在CLI（命令行界面）也同样可用，用户可从命令行界面直接更改文件所有权或设置某个文件的权限。
 
-For instance, a file owner (on Linux or Mac) can set a file to be available to the public, like so:
+例如，在Linux或Mac上，文件所有者可以将文件设置为可供所有人使用，步骤如下：
 
 ```
 chmod 777 myfile.txt
 ```
 
-`777` means everyone can do every operation (read, write, execute) on `myfile.txt`.
+`777` 的意思是，每个人都可以对文件 `myfile.txt` 进行读、写、执行等任何操作。
 
-## Maintaining data integrity
+## 维护数据完整性
 
-Let’s suppose that you’ve been working on your thesis for a month now. One day you open the file, make some modifications, and save it.
+假设你有一项论文研究已经进行了一个月。有一天，你打开论文文件，进行了一些修改，然后将其保存。
 
-Once you save the file, your word processor program sends a “write” request to the file system’s API (the logical file system).
+而在你点击保存文件后，你的文字处理器程序便会向文件系统的API（逻辑文件系统）发送“写入”请求。
 
-The request is eventually passed down to the physical layer to store the file on a number of blocks.
+该请求最终会传递到物理层，以将文件修改存储在诸多块中。
 
-But what if the system crashes while the older version of the file is being replaced with the new version?
+但是，如果在将文件的旧版本替换为新版本的过程中系统突然崩溃了该怎么办呢？
 
-Well, in older file systems (like FAT32 or ext2) the data would be corrupted because it was partially written to the disk.
+哈哈，在较老的文件系统（如FAT32或ext2）中，那意味着你的数据将面临损坏，因为只有部分数据被写入了磁盘。
 
-However, this is less likely to happen with modern file systems as they use a technique called **journaling.**
+但在今天，**journaling** 技术的使用让这种情况已不太可能再发生在时下的文件系统上。
 
-Journaling file systems record every single operation that’s about to happen in the physical layer but hasn’t happened yet.
+日志文件系统记录着物理层中将要发生但尚未发生的每一项操作。
 
-The main purpose is to keep track of the changes that haven't yet been committed to the file system physically.
+记录的主要目的就是跟踪记录物理层上尚未提交至文件系统的更改。
 
-The journal is a special allocation on disk where each write attempt is first stored as a **transaction**.
+日志是磁盘上的一种特殊空间分配。在这里，每一次的“写入”尝试都将首先作为 **事务** 进行存储。
 
-Once the data is physically placed on the storage device, the change is committed to the filesystem.
+当数据存储在存储设备的物理层后，这一更改会立即被提交至文件系统。
 
-In case of a system failure, the file system will detect the incomplete transaction and rolls it back as if it never happened.
+发生系统崩溃时，文件系统将检测未完成的事务并将其回滚，就好像该事务从未发生一样。
 
-That said, the new content (that was being written) may still be lost, but the existing data would remain intact.
+这样一来，新内容（正在写入的内容）可能仍会丢失，但现有数据将完好无损。
 
-Modern file systems such as NTFS, APFS, and EXT4 (even EXT3) use journaling to avoid data corruption in case of system failure.
+诸如NTFS、APFS和EXT4（甚至EXT3）一类的现代文件系统都已使用日志功能来避免系统故障造成的数据损坏。
 
-## Database File Systems
+## 数据库文件系统
 
-Typical file systems organise files as directories.
+大多文件系统通常都会将文件组织为目录形式。
 
-To access a file, you traverse to the respective directory and you have it.
+要访问某个文件，只需层层“跨越”相关目录直至文件所在目录。
 
 ```
 cd /music/country/highwayman
 ```
 
-However, in a database file system, there’s no concept of paths and directories.
+但是，在数据库文件系统中，并不存在路径和目录的概念。
 
-The database file system is a **faceted system** which groups files based on various *attributes* and *dimensions*.
+数据库文件系统是一个根据多种 *属性* 和 *维度* 对文件进行归组的 **多面系统**。
 
-For instance, MP3 files can be listed by artist, genre, release year, and album \-  at the same time!
+比如，它可以把一堆MP3文件按照艺术家、流派、发行年份和专辑等多种属性同时陈列。
 
-A database file system is more like a high\-level application to help you organise and access your files more easily and more efficiently. However, you won’t be able to access the files outside of this application.
+数据库文件系统更像是一种高级应用程序，它可以帮助你更轻松、更有效地组织和访问文件。但是，你将无法访问此应用程序之外的文件。
 
-A database file system cannot replace a typical file system, though. It’s just a high\-level abstraction to handle files efficiently
+然而，数据库文件系统并不能取代传统的文件系统。它只是一个可以高效处理文件的高级抽象。
 
-The **iTunes** app on Mac OS is a good example of a database file system.
+Mac OS上的应用程序 **iTunes** 就是数据库文件系统的一个范例。
 
-## Wrapping Up
+## 小结
 
-Wow! You made to the end, which means you now know a lot more about file systems. But I'm sure this won't be the end of your file system studies.
+哇！你读到了最后，这也意味着现在的你已经懂得了很多文件系统的知识。但我也相信，这绝不是你文件系统学习的终点。
 
-So again \- can we describe what a file system is and how it works in one sentence?
+再次回到那个问题，我们能用一句话描述一下什么是文件系统以及它是如何工作的吗？
 
-Let's finish this post with the brief description I used at the beginning:
+让我们就以我在开头写下的那句简单定义来结束本文吧：
 
-A **file system** defines how files are **named**, **stored**, and **retrieved** from the storage device.
+**文件系统** 决定着在存储设备中对文件进行 **命名**、 **存储** 和 **检索** 的方式。
 
-If there's something that you think is missing or that I've gotten wrong, please let me in the comments below.
+如果你觉得我的讲解有遗漏之处或是我搞错了一些问题，欢迎在下面评论给我留言哦。
 
-By the way, if you like more detailed content like this, visit my web site [skillupp.tech](https://www.skillupp.tech) and follow me on [Twitter](https://twitter.com/lavary_), because these are the channels I use to share my everyday findings.
+顺便告诉你，如果你想获得更多相关内容的详细讲解，欢迎访问我的网站 [skillupp.tech](https://www.skillupp.tech) 并关注我的 [Twitter](https://twitter.com/lavary_)，我经常在这两个地方分享我的日常发现。
 
-Thanks for reading and enjoy learning!
+再次感谢阅读，祝你学的开心哦！

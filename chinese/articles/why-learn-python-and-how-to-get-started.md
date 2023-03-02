@@ -1,6 +1,6 @@
 > -  原文地址：[Why Python is Good for Beginners – and How to Start Learning It](https://www.freecodecamp.org/news/why-learn-python-and-how-to-get-started/)
 > -  原文作者：[Hillary Nyakundi](https://www.freecodecamp.org/news/author/larymak/)
-> -  译者：
+> -  译者：songyp0505
 > -  校对者：
 
 ![Why Python is Good for Beginners – and How to Start Learning It](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/OOP--2-.png)

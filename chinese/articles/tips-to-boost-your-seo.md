@@ -59,26 +59,30 @@ SEO(搜索引擎优化)对你的在线营销策略至关重要.这是优化网�
 
 像这样的内容永远不会失去价值，因为它不依赖于当前事件或趋势来保持相关性。,正因为此,你可以构建有持续影响力的资料库,，随着时间的推移，它将继续推动流量。
 
-## How to Reduce Your Bounce Rate
+## 如何降低你的跳出率
 
-Once you have people arriving on your site, you need to keep them there. A low bounce rate signals to Google that your content is valuable and will rank you higher in search results.
+当每一个人进入你的网站, 你需要想办法留住他们,低的跳出率对于谷歌来说表示你的内容是有效的,同时你会在搜索结果中的排名会很高.
 
-Remember, it’s not just about bringing more traffic to your site but keeping the traffic that comes from a good SEO strategy.
+记住,这对于你的网站不仅仅是关于带来更多的流量,而且保持流量来源于好的SEO策略.
 
-We know what you’re thinking: how do I reduce my bounce rate?
+我知道你在想什么:怎么做可以减低我的跳出率.
 
-Here are some ways:
+这里有一些方法:
 
--   Reduce friction for users. Make it easy for them to read your content by making it readable and entertaining enough to stay on the page. Improve your navigation, so readers don’t get lost or stuck trying to find what they came for. Remove annoying pop-ups that distract users from reading your content or even prevent them from accessing it altogether.
+-   减少与用户的摩擦. Make it easy for them to read your content by making it readable and entertaining enough to stay on the page. Improve your navigation, so readers don’t get lost or stuck trying to find what they came for. Remove annoying pop-ups that distract users from reading your content or even prevent them from accessing it altogether.
+-   减少与用户的摩擦.让你页面的内容容易阅读,让人愉快.改善你的导航栏,这样读者就不会迷路或是找不到他们想要的东西.去除烦人的弹窗,这会使用户在阅读你的内容时分心在进入环节.
 -   Use visual elements such as images and videos where appropriate. They can make reading text easier and more enjoyable by breaking up chunks of text and making long articles seem shorter.
+-   在恰当的地方使用可视化的元素,如图片和视频.这可以使得文章阅读更加容易,更多的舒适感,让很长的文章看起来更短.
 -   Use short paragraphs and bullet points so readers can skim through the page quickly without losing their place or interest in the material.
+-   使用更短的章节和重点符号标记,这可以使得读者可以跳过他们不感兴趣的部分,从而阅读的很快.
 -   Use headings and subheadings throughout long articles so readers can get an idea of what each paragraph is about before reading it all word by word.
+-   在长文章中使用标题和副标题,使得读者在阅读整篇文章前获得关于每个章节的观点.
 
 ![GTmetrix report for limey.io showing A score and 552ms of load time](https://www.freecodecamp.org/news/content/images/2022/04/Screen-Shot-2022-04-21-at-3.41.52-PM.png)
 
-GTmetrix report for [Limey](https://limey.io/)
+GTmetrix 报告来自于 [Limey](https://limey.io/)
 
-## How to Optimize Page Speed
+## 如何优化页面的速度
 
 As you might know, optimizing your page speed is no small task. It requires several steps and can be challenging. If this seems like too much to take on, consider hiring an SEO to help you identify page speed issues on your WordPress or Shopify website.
 

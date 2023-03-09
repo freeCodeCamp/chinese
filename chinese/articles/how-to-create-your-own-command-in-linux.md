@@ -6,24 +6,33 @@
 ![How to Create Your Own Commands in Linux](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/BB---Alias-Commands---Brief.png)
 
 In this article, let's learn about creating your own commands in Linux. Yes – we're going to talk about creating an alias command.
+在这篇文章中，让我们学习如何在Linux中创建自己的命令。是的 - 我们要讨论如何创建一个命令的别名。
 
 Before we begin, I want to tell you how the idea for this tutorial came about.
+在我们开始之前，我想告诉你这个教程的想法是怎么来的。
 
 One of the followers of my blog asked me,
-
+我博客的一个粉丝问我，
 "Hey Arun! I wonder about your brain's capability to store a lot of commands. How is that possible?"
+“嘿，阿伦！我想知道你的大脑如何能够记忆这么多的命令。这是怎么可能的？”
 
 "I've been learning Linux and writing code since I started college (almost 7+ years). During that time I encountered a lot of errors and solved each and everyone on my own which helped me to master it", I replied.
+我回答道：“自从我上大学以来（已经有7年多了），我一直在学习Linux和编写代码。在这段时间里，我遇到了很多错误，但是每个错误我都自己解决了，这帮助我掌握了它。”
 
 "Even then, how could you memorize those flags and options along with each command?", he enquired.
+他问道：”即使这样， 你是怎么记住每个命令的选项和参数的？“
 
 "I cannot memorize each and every command with its options and flags. So, I create my own commands", I replied.
+我回答道："我记不住每一个命令的参数和它的选项，所以，我创建自己的命令”
 
 "What? You created your own commands? Can I create my own commands?", he asked with great excitement.
+“什么？你创建了自己的命令？我可以可以创建自己的命令吗？” 他非常激动的问道
 
 "Yes. You can. It's called an alias command in Linux", I replied.
+“可以啊，你当然可以。在Linux里面，这被称为别名命令，你也可以理解为命令的别名” 我回答道
 
 He asked me to write a blog on it and here it is. Let's learn about `alias` commands in this blog.
+他让我写一篇关于别名命令的博客，这就是这篇文章。让我们在这篇博客中学习有关alias命令的内容。
 
 ## What are Alias commands in Linux?
 

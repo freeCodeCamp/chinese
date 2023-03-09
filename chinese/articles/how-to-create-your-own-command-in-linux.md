@@ -1,6 +1,6 @@
 > -  原文地址：[How to Create Your Own Commands in Linux](https://www.freecodecamp.org/news/how-to-create-your-own-command-in-linux/)
 > -  原文作者：[Arunachalam B](https://www.freecodecamp.org/news/author/arunachalam/)
-> -  译者：
+> -  译者：Andy Lau
 > -  校对者：
 
 ![How to Create Your Own Commands in Linux](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/BB---Alias-Commands---Brief.png)

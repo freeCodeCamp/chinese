@@ -1,6 +1,6 @@
 > -  原文地址：[How to Contribute to Open Source – a Guide for Technical Writers](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-for-technical-writers/)
 > -  原文作者：[Valentine Gatwiri](https://www.freecodecamp.org/news/author/gatwirival/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How to Contribute to Open Source – a Guide for Technical Writers](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/pexels-william-fortunato-6393024.jpg)

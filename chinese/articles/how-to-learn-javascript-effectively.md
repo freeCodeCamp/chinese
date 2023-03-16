@@ -5,21 +5,31 @@
 
 ![如何有效地学习 JavaScript —— 技巧和学习策略](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/freeCodeCamp-Cover-2.png)
 
-`JavaScript` is a widely used programming language that has ruled the software development technology stack for over a decade.
+`JavaScript` 是一种广泛使用的编程语言，十多年来一直统治着软件开发技术栈。
 
-You can find JavaScript in web applications, mobile applications, or apps for your desktop.
+你可以在 Web 应用程序、移动应用程序或你的桌面应用程序中找到 JavaScript。
 
-According to a survey done by `Statista` in 2022, JavaScript developer communities worldwide have about 17.4 million members, and they're growing.
+根据 `Statista` 在 2022 年所做的一项调查，全球 JavaScript 开发者社区拥有约 1740 万成员，并且还在不断增长。
 
-There are also a number of JavaScript frameworks and libraries, like React, Angular, and Vue, that are solving varied use cases and customer problems. And there are many resources available online and in textbooks to learn JavaScript.
+还有许多 JavaScript 框架和库，例如 React、Angular 和 Vue，它们正在解决各种用例和客户问题。在网上和教科书上也有许多学习 JavaScript 的资源。
 
-Despite the language being so useful and well-known, many JavaScript developers still need help to learn the language confidently. They might be able to complete their day-to-day development tasks using JavaScript with some help, but may need clarification on the underlying concepts. And they may struggle to debug issues and solve customer problems on time.
+尽管这门语言是如此有用和广为人知，但许多 JavaScript 开发人员仍然需要帮助才能自信地学习这门语言。他们也许能够在一些帮助下使用 JavaScript 完成日常开发任务，但可能需要澄清基本概念。此外他们可能很难调试问题和按时解决客户问题。
 
-This article doesn't aim to teach you JavaScript at all. It would be wonderful if you could actually learn JavaScript from such a short article, right.
+本文的目的根本不是要教你 JavaScript。如果你真的能从这么短的文章中学会 JavaScript，那就太好了，对吧。
 
-Instead, this article aims to teach you `How to learn JavaScript` to help you become a confident JavaScript developer. I'll talk about strategies and concepts that are essential to understand before you learn JavaScript to make your learning more effective.
+相反，本文旨在教你`如何学习 JavaScript`，以帮助你成为一名自信的 JavaScript 开发人员。我将讨论在你学习 JavaScript 之前必须了解的策略和概念，使你的学习更有效率。
 
-If you like to learn from video content as well, this article is also available as a video tutorial here: 🙂
+如果你也喜欢从视频内容中学习，本文也可以作为视频教程在此处获得：🙂
+
+[https://www.youtube.com/watch?v=PDtlYNfo5zE](https://www.youtube.com/watch?v=PDtlYNfo5zE)
+
+<!--
+
+missing youtube video link
+
+<figure class="kg-card kg-embed-card"><div class="fluid-width-video-container"><div class="fluid-width-video-wrapper" style="padding-top: 56.1798%;"><iframe src="https://www.youtube.com/embed/PDtlYNfo5zE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" title="Embedded content" loading="lazy" name="fitvid0"></iframe></div></div></figure>
+
+-->
 
 ## Let's Go Back to `Kindergarten`
 

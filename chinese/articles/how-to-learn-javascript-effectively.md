@@ -1,9 +1,9 @@
 > -  原文地址：[How to Learn JavaScript Effectively – Tips and Learning Strategies](https://www.freecodecamp.org/news/how-to-learn-javascript-effectively/)
 > -  原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
+> -  译者：[xgqfrms](https://www.freecodecamp.org/news/author/xgqfrms/)
 > -  校对者：
 
-![How to Learn JavaScript Effectively – Tips and Learning Strategies](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/freeCodeCamp-Cover-2.png)
+![如何有效地学习 JavaScript —— 技巧和学习策略](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/freeCodeCamp-Cover-2.png)
 
 `JavaScript` is a widely used programming language that has ruled the software development technology stack for over a decade.
 

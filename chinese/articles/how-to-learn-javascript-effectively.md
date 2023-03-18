@@ -31,27 +31,27 @@ missing youtube video link
 
 -->
 
-## Let's Go Back to `Kindergarten`
+## 让我们回到`幼儿园`
 
-In your early years, when you were learning a spoken or written language (like English, Spanish, Hindi, and others), did you start forming sentences without knowing about the words? Did your teacher try to make you spell words without teaching you the alphabet? Probably not!
+在你早年学习口语或书面语言（如英语、西班牙语、印地语等）时，你是否在不知道单词的情况下开始造句？你的老师是否试图在不教你字母表的情况下让你拼写单词？可能不会！
 
-The same goes for any programming language as well. You must know how to learn it progressively. How do things work under the hood? Why do certain concepts exist? What do you not need to focus on? In a nutshell, you need to understand the `fundamental concepts`.
+任何编程语言也是如此。你必须知道如何循序渐进地学习它。事情是如何运作的？为什么存在某些概念？你不需要关注什么？简而言之，您需要了解`基本概念`。
 
-Just as you need to understand basic grammatical and spelling concepts to be able to correctly form sentences in your own language, programming languages also need "something" to run correctly. The rules and grammar of a programming language are called `syntax`.
+正如你需要了解基本的语法和拼写概念才能用你自己的语言正确构成句子一样，编程语言也需要“某些东西”才能正确运行。编程语言的规则和语法称为`句法`。
 
-By the way, fun fact: if you think the word `Kindergarten` in the heading is a misspelling, you are mistaken, like I was:
+顺便说一下，有趣的事实：如果你认为标题中的 Kindergarten 一词是拼写错误，那你就错了，就像我一样:
 
-> Confession:  
+> 承认:  
 >   
-> I didn't know that "Kindergarden" is not a correct spelling. It's "Kindergarten". 😲  
+> 我不知道 “Kindergarden” 是不正确的拼写。其实是 “Kindergarten”。😲  
 >   
-> Google it if you find it surprising too.
+> 如果你也发现它令人惊讶，请谷歌它。
 > 
 > — Tapas Adhikary (@tapasadhikary) [February 13, 2023](https://twitter.com/tapasadhikary/status/1625139550132613121?ref_src=twsrc%5Etfw)
 
-I'm pointing this out to emphasize that `syntax` is as important as `concepts`!
+我指出这一点是为了强调`语法`与`概念`一样重要！
 
-With all this in mind, let's focus on learning JavaScript.
+考虑到这一切，让我们专注于学习 JavaScript。
 
 ## How to Use JavaScript Topic `Bubbles`
 

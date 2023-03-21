@@ -190,13 +190,13 @@ if (color === "red") {
 
 ## 渐进式练习
 
-Practice makes you a better programmer. As you start understanding JavaScript concepts, you need to practice them. Practice incrementally to make your learning engaging and continuous. What does incremental practice mean, though?
+练习使你成为更好的程序员。当你开始理解 JavaScript 概念时，你需要练习它们。循序渐进地练习，让你的学习充满吸引力和持续性。但是，增量练习意味着什么？
 
-In an incremental practice strategy, you start with a practice code example of a concept. When you go to the next concept in the mind map, you build your next practice code example on top of the previous example.
+在增量实践策略中，你从一个概念的实践代码示例开始。当你转到思维导图中的下一个概念时，你将在前一个示例之上构建下一个练习代码示例。
 
-Let's say you are learning about JavaScript functions and practising by creating code snippets. Next, when you learn about scope or the scope chain, extend the same example you used for functions and inject the scope and scope chain concepts into it.
+假设你正在学习 JavaScript 函数并通过创建代码片段进行练习。接下来，当你了解作用域或作用域链时，扩展你用于函数的相同示例，并将作用域和作用域链概念注入其中。
 
-Say, you are learning to write a function that adds two numbers. You may come up with a `sum()` function like this:
+比如说，你正在学习编写一个将两个数字相加的函数。你可能想出这样一个 `sum()` 函数:
 
 ```js
 var sum = function(a,b) {
@@ -204,22 +204,22 @@ var sum = function(a,b) {
 }
 ```
 
-By creating this function, you would have learned:
+通过创建此函数，你将了解到：
 
--   How to create a function
--   How to pass parameters to a function
--   How to return from a function
--   How to use function as an expressions
+-   如何创建一个函数
+-   如何将参数传递给一个函数
+-   如何从一个函数返回
+-   如何将函数用作一个表达式
 
-Next, a logical step will be to call/invoke the function.
+接下来，一个合乎逻辑的步骤是调用该函数。
 
 ```js
-sum(2,3); // produces 5 as result
+sum(2,3); // 结果是 5
 ```
 
-Great! Now when you learn about scope, you can use the same function to practice functional scope.
+很棒！现在，当你了解作用域时，你可以使用相同的函数来练习函数作用域。
 
-Take a look into the example below. Here the `calc()` function uses the same `sum()` we learned a while back.
+看看下面的例子。这里的 `calc()` 函数使用了我们之前学过的相同的 `sum()`。
 
 ```js
 function calc() {
@@ -229,60 +229,60 @@ function calc() {
   }
   let total = extra + sum(2,3);
 }
-console.log(extra); // is extra accessible here?
+console.log(extra); // 可以在这里访问 extra 吗？
 calc();
-console.log(total); // is total accessible here?
+console.log(total); // 可以在这里访问 total 吗？
 ```
 
-In the `calc()` function we are trying to experiment with the scope of a couple of variables. In the same way, now you can write an example of a scope chain by using the same `calc()` function (and I am leaving that to your creativity to try out).
+在 `calc()` 函数中，我们尝试对几个变量的作用域进行试验。同样，现在你可以使用相同的 `calc()` 函数编写作用域链的示例（我将把它留给你的创造力来尝试）。
 
-This strategy has a couple of advantages:
+这种策略有两个优点:
 
--   As your concepts are connected in a mind map, your examples are also connected topic by topic.
--   In the future, when you refresh your memory by looking back at any of the examples, it will be easier for you to traverse back and forth to connect the dots.
+-  由于你的概念在思维导图中相互关联，因此你的示例也逐个主题地相互关联。
+-  将来，当你通过回顾任何示例来刷新记忆时，你将更容易来回遍历以连接点。
 
-## Connect Concepts to Projects
+## 将概念与项目连接起来
 
-While you practice the concepts incrementally, it is essential to create projects. When you follow a course or tutorial, you get to practice the exact project your instructor will teach. This is good, but can be better.
+当你逐步练习这些概念时，创建项目是必不可少的。当你学习课程或教程时，你可以练习讲师将会教授的确切项目。这很好，但可以做得更好。
 
-After you follow the instructor and complete the project, try to pause. Think, what else can you build with the concept you learned just now? You are on the right track if you can think of an idea or use case to build using the concept. Next, try implementing it.
+跟随导师完成项目后，尝试暂停一下。想一想，你还可以用刚刚学到的概念构建什么？如果你能想到一个想法或使用该概念构建的用例，那么你就走在了正确的轨道上。接下来，尝试实现它。
 
-You may get stuck in the implementation phase. Go back to your topic mind maps. Find which concepts you need to brush up on to remove the blockers. Read up on those concepts, practice them incrementally, and start back on the project. That's how you learn effectively!
+你可能会卡在实施阶段。回到你的主题思维导图。找出你需要复习哪些概念以消除障碍。阅读这些概念，逐步实践它们，然后重新开始该项目。这样才能有效学习！
 
-Here are some ideas of projects to build to get you started as you're learning:
+以下是构建项目的一些想法，以帮助您在学习过程中入门:
 
--   [40 JavaScript projects for beginners](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
--   [20 Python projects for beginners](https://www.freecodecamp.org/news/python-projects-for-beginners/)
+-   [40 个适合初学者的 JavaScript 项目](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
+-   [20 个适合初学者的 Python 项目](https://www.freecodecamp.org/news/python-projects-for-beginners/)
 
-## Is JavaScript Weird?
+## JavaScript 很奇怪吗？
 
-The rumors are that `JavaScript is weird`! Well, it can be, especially when you see code like these examples:
+谣言说 `JavaScript 很奇怪`! 好吧，有可能，尤其是当你看到像这些例子这样的代码时:
 
 ```js
-+[] == +![]; // returns true
++[] == +![]; // 返回 true
 
-Number([]); // returns 0
+Number([]); // 返回 0
 
-null >= 0; // returns true
+null >= 0; // 返回 true
 
-0.1 + 0.2 == 0.3 // Who could believe, it returns fasle!
+0.1 + 0.2 == 0.3 // 谁能相信，它返回 fasle!
 
-[10, 1, 3].sort() // Returns, [1, 10, 3]
+[10, 1, 3].sort() // 返回, [1, 10, 3]
 ```
 
-How can you explain these? The only way you can explain these quirks is by explaining their underlying concepts. Besides a few tiny weird things (for example, the type of `null` is still an `object` in JavaScript), you can explain most syntax by understanding the underlying concepts. You'll need to try doing that to figure out these weird things.
+你怎么解释这些？解释这些怪癖的唯一方法是解释它们的基本概念。除了一些奇怪的小东西（例如，`null` 的类型在 JavaScript 中仍然是一个`对象`），你可以通过理解底层概念来解释大多数语法。你需要尝试这样做才能弄清楚这些奇怪的事情。 
 
-## So, What's Next?
+## 所以, 下一步是什么？
 
-I hope this article provides insights and a less daunting path forward for `learning JavaScript effectively`. I've been working on JavaScript and frameworks/libraries based on it for over a decade. Everything I shared here is from my experience in learning the language deeply.
+我希望这篇文章能为`有效学习 JavaScript` 提供见解和不那么令人望而生畏的前进道路. 十多年来，我一直致力于 JavaScript 和基于它的框架/库。我在这里分享的一切都来自我深入学习这门语言的经验。
 
-Try following the `six points` you have learned about the `JavaScript learning model`. Feel free to tweak them based on your needs. If you have any further queries, feel free to connect.
+尝试按照你了解的有关 `JavaScript 学习模型`的`六点`进行操作。随意根据你的需要调整它们。如果您有任何进一步的疑问，请随时联系。
 
-Let's connect.
+让我们连接。
 
--   [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
--   [Follow on Twitter](https://twitter.com/tapasadhikary) and [LinkedIn](https://www.linkedin.com/in/tapasadhikary/) if you don't want to miss the daily dose of Web Development and Programming Tips.
--   Follow on [Showwcase](https://www.showwcase.com/atapas398) for community-based learning.
--   You can [connect with me on a call](https://topmate.io/tapasadhikary).
+-   如果你想以实用的方式学习 JavaScript、ReactJS、Node.js、Git 以及所有关于 Web 开发的知识，请[订阅](https://www.youtube.com/tapasadhikary?sub_confirmation=1) 我的 YouTube 频道。
+-   如果您不想错过每日的 Web 开发和编程技巧，请[关注 Twitter](https://twitter.com/tapasadhikary) 和 [LinkedIn](https://www.linkedin.com/in/tapasadhikary/)。
+-   关注 [Showwcase](https://www.showwcase.com/atapas398) 以进行基于社区的学习。
+-   你可以[通过电话与我联系](https://topmate.io/tapasadhikary)。
 
-See you soon with my next article. Until then, please take care of yourself, and stay happy.
+下一篇文章见。在那之前，请照顾好自己，保持快乐。

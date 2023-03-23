@@ -1,19 +1,21 @@
 > -  原文地址：[How to Generate a Random Number within Certain a Range in JavaScript](https://www.freecodecamp.org/news/generate-random-number-within-a-range-in-javascript/)
 > -  原文作者：[Dillion Megida](https://www.freecodecamp.org/news/author/dillionmegida/)
-> -  译者：
+> -  译者：Jiajun-Jiao
 > -  校对者：
 
 ![How to Generate a Random Number within Certain a Range in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/9.-random-number.png)
 
-Let's say you want to generate a random number between 10 and 15 – how do you do that in JavaScript? I'll show you how with examples in this article.
+如果想在 `10` 和 `15` 之间生成一个随机数，如何通过JavaScript实现呢？在这篇文章里，我将通过实例向您介绍。
 
-In JavaScript, there's the `random` method of the `Math` object which returns random numbers. But this has a range limitation. So let's see how we can take advantage of this method to solve for different ranges.
+JavaScript中，`Math` 对象的 `random` 方法可以实现返回随机数，然而它有着取值范围的局限性。接下来，让我们看看如何对这个方法进行延伸。
 
-I've created a video version of this article that you can [use to supplement your learning here](https://www.youtube.com/watch?v=oUZVKzXVJaE).
+我为这个文章创建了一个[视频版本]((https://www.youtube.com/watch?v=oUZVKzXVJaE))，您可以作为补充资料进行学习。
 
-## How to Use `Math.random` in JavaScript
+## 如何在JavaScript中使用`Math.random`
 
-The `random` method returns a random floating number between `0` and `1`. Here's a code example:
+已知`random` 方法返回一个 `0` 和 `1` 之间的随机浮点数。
+
+示例：
 
 ```js
 Math.random()
@@ -26,11 +28,11 @@ Math.random()
 // 0.05992852707853347
 ```
 
-From the results, you can see three random numbers between 0 and 1. Now let's solve for other ranges.
+可以注意到，运行结果返回了 `0` 和 `1` 之间的随机数。现在我们尝试将此方法延伸到其他取值范围。
 
-## How to Get Random Numbers within a Range in JavaScript
+## 如何在JavaScript中获取给定范围中的随机数
 
-We will have a function that we can use for different ranges:
+接下来我们为此构建一个函数：
 
 ```js
 function getRandom(min, max) {
@@ -38,7 +40,7 @@ function getRandom(min, max) {
 }
 ```
 
-This function takes the `min` (lowest parameter of the range) and `max` (highest parameter of the range) arguments. Now let's use this range and `Math.random` to get a random number:
+此函数接收 `min`（范围中的最小值）和 `max`（范围中的最大值）作为参数。基于此范围和 `Math.random` ，我们想实现获取随机数：
 
 ```js
 function getRandom(min, max) {
@@ -55,21 +57,21 @@ function getRandom(min, max) {
 }
 ```
 
-Here's what's happening in the function:
+以下是函数的基本逻辑：
 
--   first, we get a random floating number using `Math.random()`
--   next, we find the difference between the highest and lowest range
--   next, we evaluate a random number between 0 and the difference between the ranges
+-   首先，我们通过 `Math.random()` 获取一个随机浮点数。
+-   接下来，我们求出最大值和最小值的差。
+-   随后，我们可以获得`0`和大小差值之间的一个随机数。
 
-To get this random number, we multiply the difference by the random number we got from `Math.random` and we apply `Math.round` on the result to round the number to the nearest integer.
+为了获得上述随机数，我们只需将（从`Math.random`中）获取的随机数与大小差值相乘，随后对结果使用 `Math.round` 四舍五入取整即可。
 
-So if, for example, `Math.random` returns **0.3** and the difference between the ranges is **5**, multiplying them together gives **1.5**. Then using `Math.round` makes it **2** which is between 0 and 5 (the difference).
+例：
+- `Math.random` 返回 **0.3** 并且大小差值为 **5**, 其乘积为 **1.5**. 使用 `Math.round` 将其四舍五入到 **2**（在 `0` 和大小差值 `5` 之间）。
+- `Math.random` 返回 **0.9** 并且大小差值为 **8**, 其乘积为 **7.2**. 使用 `Math.round` 将其四舍五入到 **7**（在 `0` 和大小差值 `8` 之间）。
 
-Another example: if `Math.random` returns **0.9** and the difference between the specified ranges is **8**, multiplying them together gives **7.2**. Then using `Math.round` makes it **7** which is between 0 and 8 (the difference).
+现在已经获得了 `0` 和大小差值之间的一个随机整数，我们可以将其与最小值相加。这样就得到了在最小值和最大值之间的随机整数。最后将此结果作为 `randomWithinRange` 函数的返回值。
 
-Now that we have a random number between 0 and the difference, we can add that random number to the minimum range. Doing this gives us a result that is within the minimum and maximum range.
-
-We assign this result to `randomWithinRange` and return it from the function. Now let's see the function in use:
+接下来让我们看看此函数的应用实例：
 
 ```js
 console.log(getRandom(10, 15))
@@ -85,9 +87,9 @@ console.log(getRandom(10, 15))
 // 15
 ```
 
-Here, we use a `min` of **10** and a `max` of **15**. The four times we call the function with these arguments, you can see the results which are random numbers between the range provided.
+以上例子中，我们使用 **10** 作为 `min` ，**15** 作为 `max`. 通过这两个参数调用四次函数，可以注意到结果都是在所提供范围内的随机数。
 
-Let's look at another example of the function in use:
+让我们看看另一个应用实例：
 
 ```js
 console.log(getRandom(180, 450))
@@ -103,12 +105,12 @@ console.log(getRandom(180, 450))
 // 442
 ```
 
-Here, we use a `min` of **180** and a `max` of **450**. Again, you can see how the random number results from our function.
+以上例子中，我们使用 **180** 作为 `min` ，**450** 作为 `max`. 同样的，结果也在预料之内。
 
-## Wrapping Up
+## 总结
 
-If you ever need to generate a random number within a specific range, I hope this article has shown you how.
+如果您需要在给定范围内生成随机数，我希望这篇文章能提供有用的思路。
 
-In this article, I explained the range limitation of `Math.random` which returns a random number between 0 and 1. And I also showed you how to take advantage of this math method to create a reusable function for generating random numbers within any range of your choice.
+在这篇文章里，我解释了 `Math.random` 的取值范围限制：它只能返回一个 `0` 和 `1` 之间的随机数。我接着向您展示了如何应用此数学函数自创一个可重复使用的函数，以生成任何您选择的范围内的随机数。
 
-Kindly share this article if you find it helpful.
+如果您觉得这篇文章有帮助，不妨分享给他人。

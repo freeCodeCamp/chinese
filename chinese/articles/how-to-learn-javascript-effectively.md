@@ -1,192 +1,202 @@
 > -  原文地址：[How to Learn JavaScript Effectively – Tips and Learning Strategies](https://www.freecodecamp.org/news/how-to-learn-javascript-effectively/)
 > -  原文作者：[TAPAS ADHIKARY](https://www.freecodecamp.org/news/author/tapas/)
-> -  译者：
+> -  译者：[xgqfrms](https://www.freecodecamp.org/news/author/xgqfrms/)
 > -  校对者：
 
-![How to Learn JavaScript Effectively – Tips and Learning Strategies](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/freeCodeCamp-Cover-2.png)
+![如何有效地学习 JavaScript —— 技巧和学习策略](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/freeCodeCamp-Cover-2.png)
 
-`JavaScript` is a widely used programming language that has ruled the software development technology stack for over a decade.
+`JavaScript` 是一种广泛使用的编程语言，十多年来一直统治着软件开发技术栈。
 
-You can find JavaScript in web applications, mobile applications, or apps for your desktop.
+你可以在 Web 应用程序、移动应用程序或你的桌面应用程序中找到 JavaScript。
 
-According to a survey done by `Statista` in 2022, JavaScript developer communities worldwide have about 17.4 million members, and they're growing.
+根据 `Statista` 在 2022 年所做的一项调查，全球 JavaScript 开发者社区拥有约 1740 万成员，并且还在不断增长。
 
-There are also a number of JavaScript frameworks and libraries, like React, Angular, and Vue, that are solving varied use cases and customer problems. And there are many resources available online and in textbooks to learn JavaScript.
+还有许多 JavaScript 框架和库，例如 React、Angular 和 Vue，它们正在解决各种用例和客户问题。在网上和教科书上也有许多学习 JavaScript 的资源。
 
-Despite the language being so useful and well-known, many JavaScript developers still need help to learn the language confidently. They might be able to complete their day-to-day development tasks using JavaScript with some help, but may need clarification on the underlying concepts. And they may struggle to debug issues and solve customer problems on time.
+尽管这门语言是如此有用和广为人知，但许多 JavaScript 开发人员仍然需要帮助才能自信地学习这门语言。他们也许能够在一些帮助下使用 JavaScript 完成日常开发任务，但可能需要澄清基本概念。此外他们可能很难调试问题和按时解决客户问题。
 
-This article doesn't aim to teach you JavaScript at all. It would be wonderful if you could actually learn JavaScript from such a short article, right.
+本文的目的根本不是要教你 JavaScript。如果你真的能从这么短的文章中学会 JavaScript，那就太好了，对吧。
 
-Instead, this article aims to teach you `How to learn JavaScript` to help you become a confident JavaScript developer. I'll talk about strategies and concepts that are essential to understand before you learn JavaScript to make your learning more effective.
+相反，本文旨在教你`如何学习 JavaScript`，以帮助你成为一名自信的 JavaScript 开发人员。我将讨论在你学习 JavaScript 之前必须了解的策略和概念，使你的学习更有效率。
 
-If you like to learn from video content as well, this article is also available as a video tutorial here: 🙂
+如果你也喜欢从视频内容中学习，本文也可以作为视频教程在此处获得：🙂
 
-## Let's Go Back to `Kindergarten`
+[https://www.youtube.com/watch?v=PDtlYNfo5zE](https://www.youtube.com/watch?v=PDtlYNfo5zE)
 
-In your early years, when you were learning a spoken or written language (like English, Spanish, Hindi, and others), did you start forming sentences without knowing about the words? Did your teacher try to make you spell words without teaching you the alphabet? Probably not!
+<!--
 
-The same goes for any programming language as well. You must know how to learn it progressively. How do things work under the hood? Why do certain concepts exist? What do you not need to focus on? In a nutshell, you need to understand the `fundamental concepts`.
+missing youtube video link
 
-Just as you need to understand basic grammatical and spelling concepts to be able to correctly form sentences in your own language, programming languages also need "something" to run correctly. The rules and grammar of a programming language are called `syntax`.
+<figure class="kg-card kg-embed-card"><div class="fluid-width-video-container"><div class="fluid-width-video-wrapper" style="padding-top: 56.1798%;"><iframe src="https://www.youtube.com/embed/PDtlYNfo5zE?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" title="Embedded content" loading="lazy" name="fitvid0"></iframe></div></div></figure>
 
-By the way, fun fact: if you think the word `Kindergarten` in the heading is a misspelling, you are mistaken, like I was:
+-->
 
-> Confession:  
+## 让我们回到`幼儿园`
+
+在你早年学习口语或书面语言（如英语、西班牙语、印地语等）时，你是否在不知道单词的情况下开始造句？你的老师是否试图在不教你字母表的情况下让你拼写单词？可能不会！
+
+任何编程语言也是如此。你必须知道如何循序渐进地学习它。事情是如何运作的？为什么存在某些概念？你不需要关注什么？简而言之，您需要了解`基本概念`。
+
+正如你需要了解基本的语法和拼写概念才能用你自己的语言正确构成句子一样，编程语言也需要“某些东西”才能正确运行。编程语言的规则和语法称为`句法`。
+
+顺便说一下，有趣的事实：如果你认为标题中的 Kindergarten 一词是拼写错误，那你就错了，就像我一样:
+
+> 承认:  
 >   
-> I didn't know that "Kindergarden" is not a correct spelling. It's "Kindergarten". 😲  
+> 我不知道 “Kindergarden” 是不正确的拼写。其实是 “Kindergarten”。😲  
 >   
-> Google it if you find it surprising too.
+> 如果你也发现它令人惊讶，请谷歌它。
 > 
 > — Tapas Adhikary (@tapasadhikary) [February 13, 2023](https://twitter.com/tapasadhikary/status/1625139550132613121?ref_src=twsrc%5Etfw)
 
-I'm pointing this out to emphasize that `syntax` is as important as `concepts`!
+我指出这一点是为了强调`语法`与`概念`一样重要！
 
-With all this in mind, let's focus on learning JavaScript.
+考虑到这一切，让我们专注于学习 JavaScript。
 
-## How to Use JavaScript Topic `Bubbles`
+## 如何使用 JavaScript 主题`气泡`
 
-Undoubtedly, JavaScript is vast! As a programming language, it covers all essential aspects of software development:
+毫无疑问，JavaScript 是浩瀚无边的！作为一种编程语言，它涵盖了软件开发的所有重要方面:
 
--   Scope
--   Functional Programming
--   Data Types
--   Data Structures
--   Operations
--   Expressions
--   Memory Management
--   Reflection
--   OOP
--   Web APIs
--   Asynchronous Programming
--   Exception Handling
--   Events
--   Immutability
+-   作用域
+-   函数式编程
+-   数据类型
+-   数据结构
+-   操作
+-   表达式
+-   内存管理
+-   反射
+-   面向对象编程
+-   网络接口
+-   异步编程
+-   异常处理
+-   事件
+-   不可变性
 -   DOM
--   Many much more
+-   还有很多
 
-The list will grow if we continue, but our objective is different. You just need to realize that the number of topics you may have to learn to master the language is quite large. But I do not intend to scare you!
+如果我们继续，这个名单将会增加，但我们的目标是不同的。你只需要意识到，要掌握这门语言，你可能需要学习的主题数量是非常多的。但我无意吓唬你！
 
 ![image-63](https://www.freecodecamp.org/news/content/images/2023/02/image-63.png)
 
-JavaScript Topic Bubbles
+JavaScript 主题气泡
 
-If you're a beginner JavaScript developer, you might be wondering:
+如果你是一名初级 JavaScript 开发人员，你可能想知道：
 
--   Can I do this?
--   How many courses and tutorials will I need to go through?
--   Isn't it too much?
--   How do I remember everything that I am learning?
--   Overall, how can I actually learn JavaScript?
+-   我可以这样做吗？
+-   我需要学习多少课程和教程？
+-   是不是太多了？
+-   我如何记住我所学的一切？
+-   总的来说，我怎样才能真正地学习 JavaScript？
 
-Let's find the answers together as we read further.
+让我们在进一步阅读时，一起寻找答案。
 
-## Introducing a JavaScript Learning Model
+## 介绍 JavaScript 学习模型
 
-Let me introduce a conceptual model for learning JavaScript. The model consists of strategies and concepts you must embrace to learn JavaScript effectively.
+让我介绍一个学习 JavaScript 的概念模型。该模型包含有效学习 JavaScript 必须采用的策略和概念。
 
 ![image-67](https://www.freecodecamp.org/news/content/images/2023/02/image-67.png)
 
-JavaScript Learning Model
+JavaScript 学习模型
 
-The model is summarized in these six points, which I will expand on soon.
+该模型总结为这六点，我将在稍后进行展开。
 
-✅ First, you need to learn `Programming Concepts`.
+✅ 首先，你需要学习`编程概念`。
 
-✅ Concepts `>>>` Syntax.
+✅ 概念 `>>>` 语法。
 
-✅ Create a `mind map` of related topics.
+✅ 创建一个相关主题的`思维导图`。
 
-✅ Practice `incrementally`.
+✅ `循序渐进地`练习。
 
-✅ You don't have to worry about most JavaScript `weird things`.
+✅ 你不必担心大多数 JavaScript 中`奇怪的事情`。
 
-✅ Build `projects` that connect the concepts.
+✅ 构建连接概念的`项目`。
 
-## Programming Concepts vs JavaScript in Particular
+## 编程概念与 JavaScript 尤其是
 
-To begin with, separate the basic programming concepts from JavaScript specifically. These basic programming concepts are common among most programming languages.
+首先，将基本编程概念与 JavaScript 明确分开。这些基本编程概念在大多数编程语言中都很常见。
 
-Learning them well will help you to pick up any programming languages easily. Some fundamental programming concepts are:
+学好它们将帮助你轻松掌握任何编程语言。一些基本的编程概念是:
 
--   **Variables**: In programming, variables are the human-readable names you provide to a memory location that stores a value. For example, `car`, `students`, and `oranges` are variable names.
--   **Values**: A value is something that we usually manipulate, change, or use to create other values. We assign values to variables. For example, `Honda` can be the value of the `car` variable.
--   **Data Types**: Data types indicate the particular type of a value like number, string, boolean, and others.
--   **Operators**: Operators in programming are symbols that help us perform operations like addition, subtraction, multiplication, concatenation, and so on.
--   **Conditions and Control Flow**: Conditions in programming are statements that result in some actions. It's like if this happens, then do that, otherwise do some other thing.
--   **Loops**: Loops in programming are about repeating a bunch of tasks in the same sequence under a specific condition. There are different loops available in programming languages, and some common ones are a for-loop, while-loop, and do-while-loop.
--   **Functions**: Functions are a block of code you want to execute over and over again rather than repeating it everywhere. You create a function by giving it a name and a bunch of instructions to execute when you invoke it.
--   **Environment**: The programming environment allows developers to code, test, build, and deploy. The base principle remains the same for each aspect of the environment, but the technology may differ for different programming languages.
--   **Debugging**: Debugging is the art of finding and fixing problems in your code. You must know how to debug code irrespective of the language in which the code has been written.
+-   **变量**: 在编程中，变量是你提供给存储值的内存位置的人类可读名称。例如，`car`、`students` 和 `oranges` 都是变量名。
+-   **值**: 值是我们通常操纵、改变或用来创造其他值的东西。我们给变量赋值。例如，`Honda` 可以是变量 `car` 的值。
+-   **数据类型**: 数据类型指示值的特定类型，例如数字、字符串、布尔值等。
+-   **运算符**: 编程中的运算符是帮助我们执行加法、减法、乘法、连接等运算的符号。
+-   **条件和控制流程**: 编程中的条件是导致某些操作的语句。就像如果发生这种情况，那么就做那个，否则做一些其他的事情。
+-   **循环**: 编程中的循环是关于在特定条件下以相同顺序重复一堆任务。编程语言中有不同的循环可用，一些常见的循环是 `for` 循环、`while` 循环和 `do-while` 循环。
+-   **函数**: 函数是你希望一遍又一遍执行的代码块，而不是到处重复它。你通过给它一个名字和一堆指令来创建一个函数，当你调用它时就会执行它。
+-   **环境**: 编程环境允许开发人员编码、测试、构建和部署。对于环境的各个方面，基本原则保持不变，但技术可能因不同的编程语言而异。
+-   **调试**: 调试是发现和修复代码中问题的艺术。你必须知道如何调试代码，而不管代码是用什么语言编写的。
 
-All the points mentioned above are basic programming concepts. As a JavaScript developer, you must be familiar with these concepts.
+上面提到的所有点都是基本的编程概念。作为一名 JavaScript 开发者，你必须熟悉这些概念。
 
-## Concepts >>> Syntax
+## 概念 >>> 语法
 
-We discussed the differences between programming concepts and programming syntax. They both are important. But, understanding concepts helps us better than memorizing syntax.
+我们讨论了编程概念和编程语法之间的差异。他们都很重要。但是，理解概念比记忆语法更能帮助我们。
 
-> ❌ Memorizing Syntaxes.  
+> ❌ 记忆语法。
 >   
-> ✅ Understanding Concepts.
+> ✅ 理解概念。
 > 
 > — Tapas Adhikary (@tapasadhikary) [January 30, 2023](https://twitter.com/tapasadhikary/status/1619916335105933313?ref_src=twsrc%5Etfw)
 
-Let's take an example problem statement that we might solve using coding.
+让我们举一个我们可以使用编码解决的问题陈述示例。
 
-**The problem statement:** If the colour variable has the value "red", return a red ball. Otherwise, return a green ball.
+**问题陈述:** 如果颜色变量的值为“red”，则返回一个红色的球。否则，返回一个绿色的球。
 
-The JavaScript code to address this problem statement is pretty straightforward:
+解决此问题陈述的 JavaScript 代码非常简单:
 
 ```js
 if (color === "red") {
-    // return a red ball 
+    // 返回一个红色的球
 } else if(color === "green") {
-    // return a green ball
+    // 返回一个绿色的球
 }
 ```
 
-But if you memorize the above syntax and do not try to understand the concepts behind it, you may have problems in the future. If someone tweaks the problem statement a bit, your memorized code syntax may not work to produce the expected results.
+但是如果你死记硬背上面的语法，而不去尝试去理解它背后的概念，你以后可能会出问题。如果有人稍微调整一下问题陈述，你记住的代码语法可能无法产生预期的结果。
 
-In this problem statement, the programming concept used is `flow control`. So if you draw the flow control as a diagram and associate it with your code syntax, you will imprint the logic on your brain more permanently. Here's what it would look like:
+在这个问题陈述中，使用的编程概念是`流控制`。因此，如果你将流程控制画成图表并将其与你的代码语法相关联，你将更永久地将逻辑烙印在你的大脑中。这是它的样子:
 
 ![image-64](https://www.freecodecamp.org/news/content/images/2023/02/image-64.png)
 
-Diagram showing control flow concept. Remember: Concept first, Syntax second.
+显示控制流概念的图表。记住：概念第一，语法第二。
 
-If the problem statement changes, you change the flow, re-draw it, and map it back to your code.
+如果问题陈述发生变化，你可以更改流程，重新绘制它，并将其映射回你的代码。
 
-## The JavaScript Topics Mind Map
+## JavaScript 主题思维导图
 
-When you pick up a JavaScript topic to learn, you start by going over any resources that you find helpful. It's an excellent first step, but more is needed for `effective learning`.
+当你选择要学习的 JavaScript 主题时，你首先会浏览你认为有帮助的任何资源。这是一个很好的第一步，但`有效学习`还需要更多。
 
-The effective way is to create a mind map of JavaScript topics and guide your learning. It will help you to know the concept well and familiarise yourself with related concepts. Another advantage of mind maps is with multiple topics, you form an intersection of common sub-topics to go over multiple times.
+有效的方法是创建 JavaScript 主题的思维导图并指导你的学习。它将帮助你很好地了解概念并熟悉相关概念。思维导图的另一个优点是有多个主题，你可以形成一个共同的子主题的交集来多次讨论。
 
-Here is an example of a mind map to learn the JavaScript `this` keyword. As you can see, the flow of topics moves logically through progressive concepts to help you get a foundational understanding of the `this` keyword in JavaScript.
+这是学习 JavaScript `this` 关键字的思维导图示例。正如你所见，主题流通过渐进的概念逻辑地移动，以帮助你对 JavaScript 中的 `this` 关键字有一个基本的理解。
 
 ![image-65](https://www.freecodecamp.org/news/content/images/2023/02/image-65.png)
 
-Mind Map - The 'this' keyword
+思维导图 - `this` 关键字
 
-Another example could be understanding JavaScript promises. It would help if you started with functions, then the call stack and execution context, then learned about task and job queues and finally promises.
+另一个例子可能是理解 JavaScript `Promise`。如果你从函数开始，然后是调用堆栈和执行上下文，然后是任务和作业队列，最后是`Promise`，那将会有所帮助。
 
 ![image-66](https://www.freecodecamp.org/news/content/images/2023/02/image-66.png)
 
-Mind Map - The promises
+思维导图 - `Promise`
 
-It may sound like a time-consuming process, but following the mind map approach to learning fundamentals will save you lots of time in the long run.
+这听起来像是一个耗时的过程，但从长远来看，按照思维导图方法学习基础知识将为你节省大量时间。
 
-> The great thing about understanding fundamentals is you save lots of time in the long run.
+> 了解基础知识的好处在于，从长远来看，你可以节省大量时间。
 > 
 > — Tapas Adhikary (@tapasadhikary) [February 11, 2023](https://twitter.com/tapasadhikary/status/1624406714836475904?ref_src=twsrc%5Etfw)
 
-## Practice Incrementally
+## 渐进式练习
 
-Practice makes you a better programmer. As you start understanding JavaScript concepts, you need to practice them. Practice incrementally to make your learning engaging and continuous. What does incremental practice mean, though?
+练习使你成为更好的程序员。当你开始理解 JavaScript 概念时，你需要练习它们。循序渐进地练习，让你的学习充满吸引力和持续性。但是，增量练习意味着什么？
 
-In an incremental practice strategy, you start with a practice code example of a concept. When you go to the next concept in the mind map, you build your next practice code example on top of the previous example.
+在增量实践策略中，你从一个概念的实践代码示例开始。当你转到思维导图中的下一个概念时，你将在前一个示例之上构建下一个练习代码示例。
 
-Let's say you are learning about JavaScript functions and practising by creating code snippets. Next, when you learn about scope or the scope chain, extend the same example you used for functions and inject the scope and scope chain concepts into it.
+假设你正在学习 JavaScript 函数并通过创建代码片段进行练习。接下来，当你了解作用域或作用域链时，扩展你用于函数的相同示例，并将作用域和作用域链概念注入其中。
 
-Say, you are learning to write a function that adds two numbers. You may come up with a `sum()` function like this:
+比如说，你正在学习编写一个将两个数字相加的函数。你可能想出这样一个 `sum()` 函数:
 
 ```js
 var sum = function(a,b) {
@@ -194,22 +204,22 @@ var sum = function(a,b) {
 }
 ```
 
-By creating this function, you would have learned:
+通过创建此函数，你将了解到：
 
--   How to create a function
--   How to pass parameters to a function
--   How to return from a function
--   How to use function as an expressions
+-   如何创建一个函数
+-   如何将参数传递给一个函数
+-   如何从一个函数返回
+-   如何将函数用作一个表达式
 
-Next, a logical step will be to call/invoke the function.
+接下来，一个合乎逻辑的步骤是调用该函数。
 
 ```js
-sum(2,3); // produces 5 as result
+sum(2,3); // 结果是 5
 ```
 
-Great! Now when you learn about scope, you can use the same function to practice functional scope.
+很棒！现在，当你了解作用域时，你可以使用相同的函数来练习函数作用域。
 
-Take a look into the example below. Here the `calc()` function uses the same `sum()` we learned a while back.
+看看下面的例子。这里的 `calc()` 函数使用了我们之前学过的相同的 `sum()`。
 
 ```js
 function calc() {
@@ -219,60 +229,60 @@ function calc() {
   }
   let total = extra + sum(2,3);
 }
-console.log(extra); // is extra accessible here?
+console.log(extra); // 可以在这里访问 extra 吗？
 calc();
-console.log(total); // is total accessible here?
+console.log(total); // 可以在这里访问 total 吗？
 ```
 
-In the `calc()` function we are trying to experiment with the scope of a couple of variables. In the same way, now you can write an example of a scope chain by using the same `calc()` function (and I am leaving that to your creativity to try out).
+在 `calc()` 函数中，我们尝试对几个变量的作用域进行试验。同样，现在你可以使用相同的 `calc()` 函数编写作用域链的示例（我将把它留给你的创造力来尝试）。
 
-This strategy has a couple of advantages:
+这种策略有两个优点:
 
--   As your concepts are connected in a mind map, your examples are also connected topic by topic.
--   In the future, when you refresh your memory by looking back at any of the examples, it will be easier for you to traverse back and forth to connect the dots.
+-  由于你的概念在思维导图中相互关联，因此你的示例也逐个主题地相互关联。
+-  将来，当你通过回顾任何示例来刷新记忆时，你将更容易来回遍历以连接点。
 
-## Connect Concepts to Projects
+## 将概念与项目连接起来
 
-While you practice the concepts incrementally, it is essential to create projects. When you follow a course or tutorial, you get to practice the exact project your instructor will teach. This is good, but can be better.
+当你逐步练习这些概念时，创建项目是必不可少的。当你学习课程或教程时，你可以练习讲师将会教授的确切项目。这很好，但可以做得更好。
 
-After you follow the instructor and complete the project, try to pause. Think, what else can you build with the concept you learned just now? You are on the right track if you can think of an idea or use case to build using the concept. Next, try implementing it.
+跟随导师完成项目后，尝试暂停一下。想一想，你还可以用刚刚学到的概念构建什么？如果你能想到一个想法或使用该概念构建的用例，那么你就走在了正确的轨道上。接下来，尝试实现它。
 
-You may get stuck in the implementation phase. Go back to your topic mind maps. Find which concepts you need to brush up on to remove the blockers. Read up on those concepts, practice them incrementally, and start back on the project. That's how you learn effectively!
+你可能会卡在实施阶段。回到你的主题思维导图。找出你需要复习哪些概念以消除障碍。阅读这些概念，逐步实践它们，然后重新开始该项目。这样才能有效学习！
 
-Here are some ideas of projects to build to get you started as you're learning:
+以下是构建项目的一些想法，以帮助您在学习过程中入门:
 
--   [40 JavaScript projects for beginners](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
--   [20 Python projects for beginners](https://www.freecodecamp.org/news/python-projects-for-beginners/)
+-   [40 个适合初学者的 JavaScript 项目](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)
+-   [20 个适合初学者的 Python 项目](https://www.freecodecamp.org/news/python-projects-for-beginners/)
 
-## Is JavaScript Weird?
+## JavaScript 很奇怪吗？
 
-The rumors are that `JavaScript is weird`! Well, it can be, especially when you see code like these examples:
+谣言说 `JavaScript 很奇怪`! 好吧，有可能，尤其是当你看到像这些例子这样的代码时:
 
 ```js
-+[] == +![]; // returns true
++[] == +![]; // 返回 true
 
-Number([]); // returns 0
+Number([]); // 返回 0
 
-null >= 0; // returns true
+null >= 0; // 返回 true
 
-0.1 + 0.2 == 0.3 // Who could believe, it returns fasle!
+0.1 + 0.2 == 0.3 // 谁能相信，它返回 fasle!
 
-[10, 1, 3].sort() // Returns, [1, 10, 3]
+[10, 1, 3].sort() // 返回, [1, 10, 3]
 ```
 
-How can you explain these? The only way you can explain these quirks is by explaining their underlying concepts. Besides a few tiny weird things (for example, the type of `null` is still an `object` in JavaScript), you can explain most syntax by understanding the underlying concepts. You'll need to try doing that to figure out these weird things.
+你怎么解释这些？解释这些怪癖的唯一方法是解释它们的基本概念。除了一些奇怪的小东西（例如，`null` 的类型在 JavaScript 中仍然是一个`对象`），你可以通过理解底层概念来解释大多数语法。你需要尝试这样做才能弄清楚这些奇怪的事情。 
 
-## So, What's Next?
+## 所以, 下一步是什么？
 
-I hope this article provides insights and a less daunting path forward for `learning JavaScript effectively`. I've been working on JavaScript and frameworks/libraries based on it for over a decade. Everything I shared here is from my experience in learning the language deeply.
+我希望这篇文章能为`有效学习 JavaScript` 提供见解和不那么令人望而生畏的前进道路. 十多年来，我一直致力于 JavaScript 和基于它的框架/库。我在这里分享的一切都来自我深入学习这门语言的经验。
 
-Try following the `six points` you have learned about the `JavaScript learning model`. Feel free to tweak them based on your needs. If you have any further queries, feel free to connect.
+尝试按照你了解的有关 `JavaScript 学习模型`的`六点`进行操作。随意根据你的需要调整它们。如果您有任何进一步的疑问，请随时联系。
 
-Let's connect.
+让我们连接。
 
--   [SUBSCRIBE](https://www.youtube.com/tapasadhikary?sub_confirmation=1) to my YouTube channel if you want to learn JavaScript, ReactJS, Node.js, Git, and all about Web Development in a practical way.
--   [Follow on Twitter](https://twitter.com/tapasadhikary) and [LinkedIn](https://www.linkedin.com/in/tapasadhikary/) if you don't want to miss the daily dose of Web Development and Programming Tips.
--   Follow on [Showwcase](https://www.showwcase.com/atapas398) for community-based learning.
--   You can [connect with me on a call](https://topmate.io/tapasadhikary).
+-   如果你想以实用的方式学习 JavaScript、ReactJS、Node.js、Git 以及所有关于 Web 开发的知识，请[订阅](https://www.youtube.com/tapasadhikary?sub_confirmation=1) 我的 YouTube 频道。
+-   如果您不想错过每日的 Web 开发和编程技巧，请[关注 Twitter](https://twitter.com/tapasadhikary) 和 [LinkedIn](https://www.linkedin.com/in/tapasadhikary/)。
+-   关注 [Showwcase](https://www.showwcase.com/atapas398) 以进行基于社区的学习。
+-   你可以[通过电话与我联系](https://topmate.io/tapasadhikary)。
 
-See you soon with my next article. Until then, please take care of yourself, and stay happy.
+下一篇文章见。在那之前，请照顾好自己，保持快乐。

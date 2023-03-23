@@ -1,13 +1,13 @@
 > -  原文地址：[Introduction to Evolutionary Game Theory](https://www.freecodecamp.org/news/introduction-to-evolutionary-game-theory/)
 > -  原文作者：[Peter GleesonPeter Gleeson](https://www.freecodecamp.org/news/author/peter/)
-> -  译者：
+> -  译者：Shenghan0329
 > -  校对者：
 
 ![Introduction to Evolutionary Game Theory](https://images.unsplash.com/photo-1521427887716-b3e96ad066a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDM5fHxoYXdrfGVufDB8fHx8MTYxNjc2NjIwNQ&ixlib=rb-1.2.1&q=80&w=2000)
 
-For the longest time, the evolution of cooperative social behaviour has fascinated evolutionary biologists.
+长期以来，合作社会行为的进化一直吸引着进化生物学家。
 
-The mathematical field of game theory helps shed light on how it emerges. Game theory is “the study of mathematical models of strategic interaction among rational decision-makers” (according to [Wikipedia](https://en.wikipedia.org/wiki/Game_theory)).
+数学领域里的博弈论有助于阐明它是如何出现的。 Game theory is “the study of mathematical models of strategic interaction among rational decision-makers” (according to [Wikipedia](https://en.wikipedia.org/wiki/Game_theory)).
 
 Game theory applies to “games” as varied as economics, politics, chess and tic-tac-toe. In each case, there are some rules, some “players” or “agents”, and a set of strategies available to them.
 

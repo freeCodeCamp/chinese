@@ -5,7 +5,7 @@
 
 ![Introduction to Evolutionary Game Theory](https://images.unsplash.com/photo-1521427887716-b3e96ad066a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDM5fHxoYXdrfGVufDB8fHx8MTYxNjc2NjIwNQ&ixlib=rb-1.2.1&q=80&w=2000)
 
-长期以来，合作社会行为的进化一直吸引着进化生物学家。
+长期以来，合作社会行为的演化一直吸引着演化生物学家。
 
 数学领域里的博弈论有助于阐明它是如何出现的。 博弈论是“之于理性决策者之间战略互动的数学模型的研究” (来自于[维基百科](https://en.wikipedia.org/wiki/Game_theory)).
 
@@ -13,11 +13,11 @@
 
 每个玩家都有一个叫做“效用”的概念——一种“货币”，并且他们会试图通过各种策略来实现“货币”的最大化。
 
-在进化中，这种货币是[适应度](https://www.nature.com/scitable/blog/accumulating-glitches/the_meaning_of_fitness/).
+在演化中，这种货币是[适应度](https://www.nature.com/scitable/blog/accumulating-glitches/the_meaning_of_fitness/).
 
 适应度是个体的基因能在后代中出现的机会。也就是说，能使个体更可能存活到成年的基因和性状更容易被遗传给下一代。所以说，携带了这些基因和性状的个体会有更高的适应度。
 
-演化博弈论采用了博弈论里的概念，并且将它们用于了进化背景中。
+演化博弈论采用了博弈论里的概念，并且将它们用于了演化背景中。
 
 一个演化博弈论的模型可以让你了解哪些策略能够占上风，以及哪些策略可以共存。如果多种策略能共存的话，它们共存的频率是多少呢？
 

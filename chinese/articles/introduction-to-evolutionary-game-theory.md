@@ -7,18 +7,19 @@
 
 长期以来，合作社会行为的进化一直吸引着进化生物学家。
 
-数学领域里的博弈论有助于阐明它是如何出现的。 Game theory is “the study of mathematical models of strategic interaction among rational decision-makers” (according to [Wikipedia](https://en.wikipedia.org/wiki/Game_theory)).
+数学领域里的博弈论有助于阐明它是如何出现的。 博弈论是“之于理性决策者之间战略互动的数学模型的研究” (来自于[维基百科](https://en.wikipedia.org/wiki/Game_theory)).
 
-Game theory applies to “games” as varied as economics, politics, chess and tic-tac-toe. In each case, there are some rules, some “players” or “agents”, and a set of strategies available to them.
+博弈论适用于各种各样的“博弈”，比如说经济学、政治学、国际象棋和井字游戏。在每种博弈下，都会有一些规则，一些“参与者”或“代理者”，以及一套可供他们使用的策略。
 
-Each player has a concept of “utility” – a “currency” they seek to individually maximise through the strategies they play.
+每个玩家都有一个叫做“效用”的概念——一种“货币”，并且他们会试图通过各种策略来实现“货币”的最大化。
 
-The currency of evolution is the concept of [fitness](https://www.nature.com/scitable/blog/accumulating-glitches/the_meaning_of_fitness/).
+在进化中，这种货币是[适应度](https://www.nature.com/scitable/blog/accumulating-glitches/the_meaning_of_fitness/).
 
-That is, the chance of being represented in the next generation. Genes and traits which increase the odds of survival to reproductive age are more likely to be passed on to future generations. Therefore, they confer a greater fitness to the individual which "hosts” them.
+适应度是个体的基因能在后代中出现的机会。也就是说，能使个体更可能存活到成年的基因和性状更容易被遗传给下一代。所以说，携带了这些基因和性状的个体会有更高的适应度。
 
-Evolutionary game theory takes the concepts from game theory and applies them in an evolutionary context.
+进化博弈论采用了博弈论里的概念，并且将它们用于了进化背景中。
 
+一个进化博弈论的模型可以让你了解哪些策略能够占上风，以及哪些策略可以共存。（如果多种策略能共存的话，它们共存的频率是多少呢？）<-存疑
 For a given model, it lets you ask questions about which strategy prevails, and whether certain strategies can coexist. And if so – at what frequencies?
 
 ## Replicator dynamics

@@ -58,23 +58,23 @@
 
 ### 复制器动力学背后的数学
 
-设_V_为赢得比赛的价值，_C_为比赛中受伤的代价。
+设 _V_ 为赢得比赛的价值，_C_ 为比赛中受伤的代价。
 
-将鹰派在种群中的频率表示为_p_，鸽派的频率则为_1-p_。
+将鹰派在种群中的频率表示为 _p_，鸽派的频率则为 _1-p_。
 
 现在，定义两个函数F（H）和F（D），这两个函数分别定义了鹰派策略和鸽派策略的期望适合度。
 
-鹰派策略意味着参加一场频率为_p的鹰派对鹰派竞赛。这样做的期望效用被理解为平均结果。一半的时间某个鹰派赢得_V_，一半的时间它损失_C_。
+鹰派策略意味着参加一场频率为 _p_ 的鹰派对鹰派竞赛。这样做的期望效用被理解为平均结果。一半的时间某个鹰派赢得 _V_，一半的时间它损失 _C_。
 
-在剩下的比赛中，这个鹰派将对阵鸽派。这保证了它能轻松赢得_V_。
+在剩下的比赛中，这个鹰派将对阵鸽派。这保证了它能轻松赢得 _V_。
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8b5ac2e8-fdfb-4ffc-8abe-15d0d014f580_544x112.png)
 
-用鸽派策略对阵鹰派毫无益处。但是一只鸽派会以_1-p_的频率遇到另一只鸽子。在这种情况下，它的预期效用是分到的资源，价值为_V/2_。
+用鸽派策略对阵鹰派毫无益处。但是一只鸽派会以 _1-p_ 的频率遇到另一只鸽子。在这种情况下，它的预期效用是分到的资源，价值为 _V/2_。
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6303e0b2-d6ab-434d-b7ec-cad18a82d154_508x110.png)
 
-现在，设_F（H）_等于_F（D）_，并求解_p_。
+现在，设 _F（H）_ 等于 _F（D）_ ，并求解 _p_。
 
 解出的频率_p_会使得鹰派策略和鸽派策略拥有相同适应度。
 
@@ -88,18 +88,18 @@
 
 这个结果揭示了在平衡中，鹰派和鸽派的比例。
 
-通过一些代数排列，我们能得到在平衡中_p_的值：
+通过一些代数排列，我们能得到在平衡中 _p_ 的值：
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb812b56c-8387-4a47-902e-61aaa87cf317_342x98.png)
 
 
 通过这个表达式的性质，可以发现两件事：
 
--   每当输掉比赛的成本_C_小于或等于获胜的价值_V_时，鹰派策略就会占据主导地位。这两种策略无法共存。
+-   每当输掉比赛的成本 _C_ 小于或等于获胜的价值 _V_ 时，鹰派策略就会占据主导地位。这两种策略无法共存。
 
--   如果成本_C_大于价值_V_，则策略将会在平衡里共存。
+-   如果成本 _C_ 大于价值 _V_，则策略将会在平衡里共存。
 
-代入_V_\=4和_C_\=6，我们发现当2/3的种群使用鹰策略时，出现了平衡。
+代入 _V_\=4和 _C_\=6，我们发现当2/3的种群使用鹰策略时，出现了平衡。
 
 您可以通过在Python里模拟模型来测试这一点。
 
@@ -250,7 +250,7 @@ if __name__ == "__main__":
     main()
 ```
 
-看，这是个_V_\=4，_C_\=6的例子：
+看，这是个 _V_\=4，_C_\=6的例子：
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F44100a89-d377-435e-bf11-97b046db5f32_1438x1048.png)
 

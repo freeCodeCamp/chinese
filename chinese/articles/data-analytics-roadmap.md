@@ -1,37 +1,39 @@
 > -  原文地址：[How to Get Started in Data Analytics – A Roadmap for Beginners](https://www.freecodecamp.org/news/data-analytics-roadmap/)
 > -  原文作者：[Oluseye Jeremiah](https://www.freecodecamp.org/news/author/oluseye-jeremiah/)
-> -  译者：
+> -  译者：Jiajun-Jiao
 > -  校对者：
 
-![How to Get Started in Data Analytics – A Roadmap for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/dataa.JPG)
+感谢中文版译者：
 
-Hello and welcome to the world of data analysis! If you're considering a career in this field, you're in good company. Data analysis is a growing and exciting field that's becoming increasingly important in today's data-driven world.
+![如何踏出数据分析第一步——零基础新手指引](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/dataa.JPG)
 
-Let's face it, we're all drowning in data these days. From social media posts to financial transactions to medical records, there's no shortage of information to sift through.
+欢迎来到数据分析的世界！如果您正在考虑从事于此，可算是找对地方了。数据分析作为一个迅猛发展、令人心潮澎湃的领域，在当今数据社会下愈发重要。
 
-That's where data analysts come in. They're the ones who help us make sense of all that data and turn it into valuable insights.
+面对现实，我们已经被海量的数据淹没了。从社交媒体，到金融交易，再到医疗记录，不乏可供筛选的信息。
 
-And those insights can be game-changing. They can help businesses improve their products and services, governments make more informed policy decisions, and individuals make better choices in their personal and professional lives.
+因此数据分析师们应运而生。他们帮助我们理解所有数据，并将其转化为有价值的见解。
 
-But it's not just about the impact. Data analysis can also be quite lucrative. According to recent studies, the median salary for a data analyst in the US is around $70,000 per year, and that number can climb even higher with experience and expertise.
+这些见解可以是颠覆性的。它们能帮助企业改善产品和服务，帮助政府发布更明智的政策，帮助个人在私人和职业生活中做出更好的选择。
 
-Of course, like any profession, data analysis has its challenges. There's the occasional headache-inducing data set, the ever-present threat of imposter syndrome, and the endless debates over the best programming language or data visualization tool. But hey, if you're up for a challenge, this could be the field for you.
+除了是其影响力，数据分析也十分赚钱。最近研究表明，美国数据分析师的年薪中位数大约在$70,000，这个数字随着经验和技术实力增长可能会更高。
 
-So if you're trying to be a Data Analyst, this article is for you. Hopefully, it saves you a lot of time and effort and you don't have to waste your time learning a whole lot of irrelevant things like I once did.
+当然，与任何职业一样，数据分析也有其面临的挑战：偶尔令人头疼的数据集、长久的的冒名顶替症威胁，以及关于最佳编程语言或数据可视化工具的无休止争论。嘿！但是如果您准备好迎接挑战，这可能是适合您的领域。
 
-![tenor-1](https://www.freecodecamp.org/news/content/images/2023/03/tenor-1.gif)
+所以如果您正在努力成为一个数据分析师，这篇文章为您量身打造。希望它能帮助您节省时间和精力，而不必像我一样浪费时间学习无关紧要的东西。
 
-## Step 1: Get to Know the Role of a Data Analyst
+![图1](https://www.freecodecamp.org/news/content/images/2023/03/tenor-1.gif)
 
-Are you considering a career as a data analyst? That's fantastic! Let's take a moment to grasp the gist of it before moving forward.
+## 第一步: 了解数据分析师的职责
 
-You see, a data analyst's job involves more than just crunching figures and creating charts (although those things can be pretty cool, too). It involves leveraging data to find insights and address issues. This means coming up with the correct questions, organizing and evaluating the data, and explaining your conclusions to others.
+您正在考虑从事数据分析师职业吗？太棒了！在继续之前，让我们先花点时间了解一下它。
 
-Some core skills and activities that a data analyst typically performs include:
+你看，数据分析师的工作不仅仅是处理图片和生成图表（即使这些也很酷）。它还涉及通过数据来洞察和解决问题。这意味着提出正确的问题，组织并评估数据，以及向他人解释你的结论。
 
--   Collecting and analyzing large data sets to identify patterns, trends, and insights that can inform business decisions.
--   Using statistical tools and techniques to draw insights from data.
--   Developing and implementing data collection systems and other strategies that optimize efficiency and data quality.
+数据分析师通常拥有的核心技能、参与的核心活动包括：
+
+-   收集并分析庞大数据集，为业务决策提供信息的模式、趋势和洞察。
+-   使用统计工具和技术洞察数据。
+-   开发并实现数据收集系统，以及其他能优化效率和数据质量策略。
 -   Collaborating with other teams to identify business needs and develop data solutions that address them.
 -   Communicating findings and insights to stakeholders in a clear and actionable way.
 

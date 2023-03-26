@@ -120,23 +120,23 @@ Remember, Excel is just one tool in your data analysis toolkit. But it's a cruci
 
 Now let's move on to the next skill and also one of the most important skills you'll need as a data analyst.
 
-## Step 5: Master SQL for Data Extraction
+## 第五步：熟练掌握用于提取数据的SQL
 
-SQL (Structured Query Language) is a critical tool in data analysis. As a data analyst, one of your primary responsibilities is to extract data from databases, and SQL is the language used to do so.
+SQL (结构化查询语言Structured Query Language)是一个在数据分析中重要的工具。作为一个数据分析师，你的主要责任包括从数据库中提取数据。SQL是帮助你实现该目的的编程语言。
 
-SQL is more than just running basic queries like SELECT, FROM, and WHERE. It's a complex language that allows you to manipulate and transform data in countless ways. SQL is used for joining data from multiple tables, filtering and aggregating data, and creating new tables and views.
+SQL不仅限于执行像SELECT，FROM，和WHERE这样的基本查询。它是一个复杂的编程语言——你能用它以多种方式操纵和转化数据。SQL被用于从多个表格中合并数据，筛选提炼数据，和生成新的表格和视图。
 
-To be an effective data analyst, it's essential to master SQL. You should be comfortable with writing queries, creating tables, and understanding how to optimize your queries for performance.
+为了成为一个高效的数据分析师，熟练掌握SQL非常重要。你需要能得心应手地查询数据，生成表格，并且理解如何使你的查询高效运行。
 
-Fortunately, there are many resources available to help you learn SQL. Some great places to start are [Khan Academy SQL](https://www.khanacademy.org/computing/computer-programming/sql/), W3Schools, [SQLZoo,](https://sqlzoo.net/wiki/SQL_Tutorial) [SQLbolt](https://www.freecodecamp.org/news/p/98971712-334e-40fb-8401-3e78a822dde8/SQLbolt.com), [Luke Barousse](https://www.youtube.com/@LukeBarousse), [Alex the Analyst](https://www.youtube.com/@AlexTheAnalyst), [Microsoft Power Tools](https://www.youtube.com/@TheOyinbooke), and finally some SQL games like SQL island and SQL Murder.
+幸运的是，有很多帮助你学习SQL的资源。你能从以下平台开始你的学习：[可汗学院 SQL](https://www.khanacademy.org/computing/computer-programming/sql/), W3Schools, [SQLZoo,](https://sqlzoo.net/wiki/SQL_Tutorial) [SQLbolt](https://www.freecodecamp.org/news/p/98971712-334e-40fb-8401-3e78a822dde8/SQLbolt.com), [Luke Barousse](https://www.youtube.com/@LukeBarousse), [Alex the Analyst](https://www.youtube.com/@AlexTheAnalyst), [Microsoft Power Tools](https://www.youtube.com/@TheOyinbooke), 最后一些像SQL island和SQL murder这样的SQL游戏也能帮助你学习。
 
-Additionally, there are many online courses and books available that cover SQL in-depth. Here are a few to get you started:
+此外，还有很多现有的网课和书籍能够深入地覆盖SQL。以下是一些可以帮助你入门的例子：
 
-1.  [Learn SQL and Databases – Full Course for Beginners](https://www.freecodecamp.org/news/sql-and-databases-full-course/)
-2.  [Relational Database curriculum from freeCodeCamp](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/#relational-database-freecodecamp-curriculum)
-3.  [Collection of free relational database courses](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
+1.  [学习SQL和数据库-初学者完整课程](https://www.freecodecamp.org/news/sql-and-databases-full-course/)
+2.  [来自freeCodeCamp的关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/#relational-database-freecodecamp-curriculum)
+3.  [免费的数据库课程系列](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
 
-By mastering SQL, you'll be able to extract valuable insights from databases and manipulate data in ways that provide meaningful business insights.
+通过熟练掌握SQL，你将能够从数据库中提取有价值的见解，并能操作数据以提供有意义的业务见解。
 
 ## Step 6: Learn Python for Data Analysis
 

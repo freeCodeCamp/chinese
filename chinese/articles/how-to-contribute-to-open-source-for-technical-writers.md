@@ -11,15 +11,15 @@ This guide will help technical writers get started contributing to open-source p
 
 It'll also highlight some of the benefits of contributing to open source, and provide some additional resources for getting started with contributing to open source as a technical writer.
 
-## What You Will Learn
+## 你能学到什么？
 
 This post will cover how technical writers can contribute to open source, what the benefits are, and some of the potential drawbacks. We'll also go over a few resources for getting started.
 
-## What is Open Source?
+## 什么是开源？
 
 Open source is a collaborative way of developing and distributing software. People all over the world contribute to open-source projects by adding features, fixing bugs, answering questions, translating text, or writing tutorials.
 
-## Why Contribute?
+## 为什么要为开源项目做贡献？
 
 Contributing to open-source software is one of the best ways for technical writers and other knowledge workers to give back and make a difference.
 
@@ -31,13 +31,13 @@ Contributing to open-source will not only increase your skill set but also allow
 
 It takes some time to build up the knowledge and skills necessary to become an active contributor (especially because documentation often requires a different skill set than programming), but it’s worth the investment.
 
-## Challenges of Contributing
+## 开源贡献中的挑战
 
 Technical writers can face several challenges when they start contributing to open-source projects. One of the most common is not being sure how best to contribute, especially if you don't know anything about the project yet.
 
 You might also be unsure about where your work should go or what is expected from contributors. There are a couple of ways around this problem: you can read the project's `README` file and/or documentation to see if they have contribution guidelines. You can also get in touch with the team behind the project and ask for help.
 
-## How to Contribute to Open-Source Projects
+## 如何为开源项目做贡献？
 
 First, you'll want to find a project on [GitHub](https://github.com/) you want to contribute to. You can [read this tutorial](https://www.freecodecamp.org/news/github-search-tips/) about how to search GitHub and find projects.
 
@@ -77,7 +77,7 @@ By downloading the appropriate versions of huge files slowly, the Git LFS (Large
 
 You can also use the following [documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage) to install `git-lfs`.
 
-### Best practices when contributing to open-source
+### 开源贡献中的最佳实践
 
 1.  Identify an area where you could be of assistance and find the relevant project on GitHub.
 2.  Read the documentation for any projects or programs that may be similar to the one you're interested in. This will give you a better understanding of what is involved in contributing and what other people have contributed.
@@ -89,7 +89,7 @@ You can also use the following [documentation](https://docs.github.com/en/reposi
 8.  If they do accept your pull request then thank them!
 9.  Continue searching for new problems to solve and share your progress along the way!
 
-## What Types of Contributions Can I Make?
+## 我能做什么样的开源贡献？
 
 You can contribute to these projects in many ways, including submitting pull requests for bug fixes or feature additions, writing documentation about how to use the software, improving the current documentation, translating the text into another language, and fixing typos.
 
@@ -99,7 +99,7 @@ Writing for an open-source project is a great way to establish yourself as an ex
 
 One thing that technical writers should always keep in mind when writing for open-source projects is that their audience is primarily developers. This means that they need more technical details than what you would find in other types of writing.
 
-## Where Can I Find Open Source Projects?
+## 我可以在哪里找到开源项目？
 
 There are a variety of places you can find open-source projects. GitHub is the most popular place for open-source projects, but there are also repositories on BitBucket, Gitlab and other sites.
 

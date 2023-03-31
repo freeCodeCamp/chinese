@@ -105,7 +105,7 @@ There are a variety of places you can find open-source projects. GitHub is the m
 
 If you have an idea for an open-source project that doesn't exist yet, start by putting together your plan in a `README` file. If you're not sure how to get started with contributing to an existing project, check out its documentation or read through some pull requests before submitting one of your own.
 
-## **Sample Projects**
+## **可供参考的开源项目**
 
 -   [The HTML5 Boilerplate project](https://github.com/h5bp/html5-boilerplate) is a popular open-source project for web developers that provides HTML, CSS, and Javascript code for building a website or web application.
 -   [The Bootstrap framework,](https://github.com/twbs) also an open-source project, is a collection of tools to help developers quickly create responsive websites.
@@ -119,8 +119,8 @@ You can also check out [Google Season of Docs](https://developers.google.com/sea
 
 There are many different ways you can contribute, which means there is something out there for everyone.
 
-## **Conclusion**
+## **结论**
 
-Contributing to open source is a great way for technical writers and other content creators to share their knowledge with the world.
+于技术文档工程师和其他的内容创作者而言，为开源项目做贡献是向全世界分享知识的绝佳途径。
 
-There are many different ways you can contribute, which means there is something out there for everyone.
+你可以通过多种方式做出贡献，这也意味着There are many different ways you can contribute, which means there is something out there for everyone.

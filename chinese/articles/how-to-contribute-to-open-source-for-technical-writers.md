@@ -5,19 +5,19 @@
 
 ![How to Contribute to Open Source – a Guide for Technical Writers](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/pexels-william-fortunato-6393024.jpg)
 
-Contributing to open source can be a daunting prospect, especially if you haven't done so before, or if you're used to working on documentation rather than code.
+参与开源项目听起来令人望而却步。特别是如果你以前没有参与过类似项目，或者习惯于从事文档工作而非编码工作。
 
-This guide will help technical writers get started contributing to open-source projects, and outline some of the common pitfalls you might encounter when starting to contribute.
+本指南将帮助技术文档工程师开始为开源项目做出贡献，并概述你开始贡献时可能遇到的常见陷阱。
 
-It'll also highlight some of the benefits of contributing to open source, and provide some additional resources for getting started with contributing to open source as a technical writer.
+它还将突出一些参与开源的好处，并提供一些额外的资源，帮助技术文档工程师开始为开源做出贡献。
 
 ## 你能学到什么？
 
-This post will cover how technical writers can contribute to open source, what the benefits are, and some of the potential drawbacks. We'll also go over a few resources for getting started.
+本文将介绍技术文档工程师如何为开源项目做出贡献、做出贡献的好处以及一些潜在的缺点。我们还将介绍一些入门级的开源项目资源。
 
 ## 什么是开源？
 
-Open source is a collaborative way of developing and distributing software. People all over the world contribute to open-source projects by adding features, fixing bugs, answering questions, translating text, or writing tutorials.
+开源是一种协作开发和分发软件的方式。世界各地的人们通过添加功能、修复错误、回答问题、翻译文本或编写教程等方式为开源项目做出贡献。
 
 ## 为什么要为开源项目做贡献？
 

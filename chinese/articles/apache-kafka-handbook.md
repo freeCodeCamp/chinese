@@ -1,6 +1,6 @@
 > -  原文地址：[The Apache Kafka Handbook – How to Get Started Using Kafka](https://www.freecodecamp.org/news/apache-kafka-handbook/)
 > -  原文作者：[Gerard Hynes](https://www.freecodecamp.org/news/author/gerardhynes/)
-> -  译者：
+> -  译者：Jing Yan
 > -  校对者：
 
 ![The Apache Kafka Handbook – How to Get Started Using Kafka](https://www.freecodecamp.org/news/content/images/size/w2000/2023/02/apache-kafka-handbook.png)

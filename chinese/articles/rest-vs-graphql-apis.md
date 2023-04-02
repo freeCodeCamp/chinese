@@ -394,6 +394,6 @@ Additionally, GraphQL APIs can provide a more flexible schema that can be easily
 
 Well everyone, as always, I hope you enjoyed the article and learned something new.
 
-If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman). See you in the next one!
+If you want, 你可以在 [领英](https://www.linkedin.com/in/germancocca/) 或 [推特](https://twitter.com/CoccaGerman) 上关注我。下次再见！
 
 ![giphy](https://www.freecodecamp.org/news/content/images/2023/03/giphy.gif)

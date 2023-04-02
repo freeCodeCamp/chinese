@@ -11,7 +11,7 @@ We're going to talk about the main kinds of APIs used nowadays (SOAP, REST and G
 
 Let's go! 🙃
 
-# Table of Contents
+# 目录
 
 -   [How SOAP APIs Work](#how-soap-apis-work)
     -   [About XML](#about-xml)
@@ -22,9 +22,9 @@ Let's go! 🙃
     -   [How to Consume a GraphQL API](#how-to-consume-a-graphql-api)
 -   [Wrapping Up](#wrapping-up)
 
-## Intro
+## 介绍
 
-In [a recent article](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/) I talked briefly about two very important concepts in modern software development: the client-server model and APIs.
+在 [最近的一篇文章里](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/)，我简要介绍了两个在现代软件开发中非常重要的概念：客户端和 API。
 
 ****Client-server**** is a model that structures the tasks or workloads of an application between a resource or service ****provider**** (server) and a service or resource requester (client).
 
@@ -44,7 +44,7 @@ If you'd like a deeper intro to what APIs are, [here's an awesome video about it
 
 With all this in mind, let's get into the details of how SOAP, REST and GraphQL APIs work.
 
-# How SOAP APIs Work
+# SOAP APIs 如何运作
 
 Simple Object Access Protocol (SOAP) is a messaging protocol used for exchanging structured data between different systems over the internet. SOAP is an XML-based protocol and is considered one of the earliest web service protocols.
 
@@ -105,7 +105,7 @@ XML is widely used in various industries, including finance, healthcare, and gov
 
 Overall, XML provides a flexible and extensible way of describing and exchanging data that can be easily processed by computers. However, its use has declined in recent years with the rise of more modern formats such as JSON and YAML, which are more lightweight and easier to use for many applications.
 
-## How to Consume a SOAP API
+## 如何使用 SOAP API
 
 Here's an example of how you can make a simple request to a SOAP API from a JavaScript front-end application:
 
@@ -197,7 +197,7 @@ Here's what each line does:
 
 Overall, SOAP responses tend to be more verbose and complex than responses from REST or GraphQL APIs, due to their use of XML and the envelope format. But this format provides a standardized way of exchanging information that can be useful in certain industries and use cases.
 
-# How REST APIs Work
+# REST APIs 如何运作
 
 Representational State Transfer (REST) is a widely used architectural style for building web services and APIs.
 
@@ -205,7 +205,7 @@ REST was first introduced in 2000 by Roy Fielding in his doctoral dissertation, 
 
 RESTful APIs are designed to be simple, scalable, and flexible. They are often used in web and mobile applications, as well as in Internet of Things (IoT) and microservices architectures.
 
-**Main Characteristics:**
+**主要特点：**
 
 1.  **Stateless:** REST APIs are stateless, which means that each request contains all the necessary information to process it. This makes it easier to scale the API and improves performance by reducing the need to store and manage session data on the server.
 2.  **Resource-based:** REST APIs are resource-based, which means that each resource is identified by a unique URI (Uniform Resource Identifier) and can be accessed using standard HTTP methods such as GET, POST, PUT, and DELETE.
@@ -213,20 +213,20 @@ RESTful APIs are designed to be simple, scalable, and flexible. They are often u
 4.  **Cacheable:** REST APIs are cacheable, which means that responses can be cached to improve performance and reduce network traffic.
 5.  **Layered System:** REST APIs are designed to be layered, which means that intermediaries such as proxies and gateways can be added between the client and server without affecting the overall system.
 
-**Pros:**
+**优点：**
 
 -   **Easy to learn and use:** REST APIs are relatively simple and easy to learn compared to other APIs.
 -   **Scalability:** The stateless nature of REST APIs makes them highly scalable and efficient.
 -   **Flexibility:** REST APIs are flexible and can be used to build a wide range of applications and systems.
 -   **Wide support:** REST APIs are widely supported by development tools and frameworks, making it easy to integrate them into existing systems.
 
-**Cons:**
+**缺点：**
 
 -   **Lack of standards:** The lack of strict standards for REST APIs can lead to inconsistencies and interoperability issues.
 -   **Limited functionality:** REST APIs are designed to handle simple requests and responses and may not be suitable for more complex use cases.
 -   **Security concerns:** REST APIs can be vulnerable to security attacks such as cross-site scripting (XSS) and cross-site request forgery (CSRF) if not implemented properly.
 
-**Best for:**
+**最佳实践：**
 
 -   REST APIs are well-suited for building web and mobile applications, as well as microservices architectures and IoT systems.
 -   They are particularly useful in situations where scalability and flexibility are important, and where developers need to integrate with existing systems and technologies.
@@ -235,7 +235,7 @@ In summary, REST APIs are a popular and widely used architectural style for buil
 
 While there are some limitations and concerns with REST APIs, they remain a popular and effective option for building APIs in many different industries and sectors.
 
-## How to Consume a REST API
+## 如何使用 REST API
 
 Here's an example of how to make a simple GET request to a REST API from a JavaScript front-end application, and how to access the values within the response:
 
@@ -282,7 +282,7 @@ Additionally, REST APIs often use standard HTTP status codes to indicate the suc
 
 Overall, REST APIs are a popular and widely used approach to building web APIs due to their simplicity, flexibility, and ease of use.
 
-# How GraphQL APIs Work
+# GraphQL APIs 如何运作
 
 GraphQL is a query language and runtime for APIs that was developed by Facebook in 2012. It was released to the public in 2015 and has since gained popularity as an alternative to REST APIs.
 
@@ -290,7 +290,7 @@ GraphQL was originally developed by Facebook as a way to simplify data fetching 
 
 GraphQL was released as an open-source project in 2015 and has since gained popularity in the developer community. It is now supported by many development tools and frameworks, including Apollo, Prisma, and Hasura.
 
-**Main Characteristics:**
+**主要特点：**
 
 1.  **Strongly Typed:** GraphQL APIs are strongly typed, which means that each field has a specific data type. This makes it easier to validate and handle data on the client and server sides.
 2.  **Query Language:** GraphQL has its own query language that allows clients to specify exactly what data they need. This reduces over-fetching of data and improves performance.
@@ -298,20 +298,20 @@ GraphQL was released as an open-source project in 2015 and has since gained popu
 4.  **Declarative:** GraphQL APIs are declarative, which means that clients specify what they want, not how to get it. This allows for more efficient and flexible data fetching.
 5.  **Schema-Driven:** GraphQL APIs are schema-driven, which means that the schema defines the structure of the data and the available queries and mutations. This makes it easier for developers to understand and work with the API.
 
-**Pros:**
+**优点：**
 
 -   **Efficient Data Fetching:** GraphQL APIs allow clients to fetch only the data they need, reducing over-fetching and improving performance.
 -   **Strongly Typed:** GraphQL APIs are strongly typed, making it easier to validate and handle data.
 -   **Single Endpoint:** GraphQL APIs have a single endpoint, reducing the complexity of the API and making it easier to work with.
 -   **Schema-Driven:** GraphQL APIs are schema-driven, which makes it easier for developers to understand and work with the API.
 
-**Cons:**
+**缺点：**
 
 -   **Complexity:** GraphQL APIs can be more complex to set up and work with compared to REST APIs.
 -   **Caching:** Caching can be more challenging with GraphQL APIs due to the flexible nature of the API.
 -   **Learning Curve:** GraphQL requires a learning curve for both developers and clients, as it has its own query language and approach to data fetching.
 
-**Best for:**
+**最佳实践：**
 
 -   **Efficient and flexible needs:** GraphQL is well-suited for building applications that require efficient and flexible data fetching, such as mobile and web applications.
 -   **Complex data requirements:** It is particularly useful in situations where there are complex data requirements and where over-fetching data can cause performance issues.
@@ -320,7 +320,7 @@ In conclusion, GraphQL is a query language and runtime for APIs that provides ef
 
 While it can be more complex to set up and work with compared to REST APIs, it offers benefits such as strongly typed data, single endpoints, and schema-driven development. It is well-suited for building applications with complex data requirements and where efficient data fetching is important.
 
-## How to Consume a GraphQL API
+## 如何使用 GraphQL API
 
 Here's an example of how to make a simple request to retrieve information from a GraphQL API from a JavaScript front-end application, and how to access the values within the response:
 
@@ -390,7 +390,7 @@ GraphQL API responses are typically more focused and specific than REST API resp
 
 Additionally, GraphQL APIs can provide a more flexible schema that can be easily modified over time without breaking existing clients. Overall, GraphQL APIs are a popular choice for building modern web applications due to their flexibility, efficiency, and ease of use.
 
-# **Wrapping Up**
+# **总结**
 
 Well everyone, as always, I hope you enjoyed the article and learned something new.
 

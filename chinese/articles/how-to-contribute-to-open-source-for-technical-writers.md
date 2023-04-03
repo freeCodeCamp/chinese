@@ -1,126 +1,126 @@
 > -  原文地址：[How to Contribute to Open Source – a Guide for Technical Writers](https://www.freecodecamp.org/news/how-to-contribute-to-open-source-for-technical-writers/)
 > -  原文作者：[Valentine Gatwiri](https://www.freecodecamp.org/news/author/gatwirival/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
-![How to Contribute to Open Source – a Guide for Technical Writers](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/pexels-william-fortunato-6393024.jpg)
+![技术文档作者如何参与开源贡献](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/pexels-william-fortunato-6393024.jpg)
 
-Contributing to open source can be a daunting prospect, especially if you haven't done so before, or if you're used to working on documentation rather than code.
+可能想到开源贡献，你就会觉得畏惧，尤其是如果你之前从未参与过开源贡献，或者你习惯的是写文档而不是写代码。
 
-This guide will help technical writers get started contributing to open-source projects, and outline some of the common pitfalls you might encounter when starting to contribute.
+本指南将帮助技术文档作者开启开源项目贡献之旅，并概述在开始贡献时，你可能会遇到的常见误区。
 
-It'll also highlight some of the benefits of contributing to open source, and provide some additional resources for getting started with contributing to open source as a technical writer.
+另外，本指南会重点介绍一些参与开源贡献的好处，也会提供一些便于技术文档作者开始参与开源贡献的资源。
 
-## What You Will Learn
+## 你能学到什么
 
-This post will cover how technical writers can contribute to open source, what the benefits are, and some of the potential drawbacks. We'll also go over a few resources for getting started.
+本文内容包括：技术文档作者参与开源贡献的方式、好处、一些潜在的坏处，以及一些新手入门资源。
 
-## What is Open Source?
+## 什么是开源？
 
-Open source is a collaborative way of developing and distributing software. People all over the world contribute to open-source projects by adding features, fixing bugs, answering questions, translating text, or writing tutorials.
+开源是一种软件开发与发布的协作方式。世界各地的人们通过为软件添加功能、修复bug（错误）、回答问题、翻译文本或写作教程来做开源贡献。
 
-## Why Contribute?
+## 为什么要贡献？
 
-Contributing to open-source software is one of the best ways for technical writers and other knowledge workers to give back and make a difference.
+为开源软件做贡献是技术文档作者和其他知识工作者回馈社会并为社会带来改变的最佳方式之一。
 
-You can help improve the software you use every day, or you can learn from the example of others who have contributed before you. Plus, it's a great way to meet people with common interests. And when your contributions are appreciated, you'll feel like part of the community.
+你可以帮忙改进你每天都在使用的软件，或者你可以从开源界前辈那儿学到东西。此外，参与贡献也是一种结识志趣相投的朋友的好途径。当你所做的贡献被人赞赏时，你会觉得自己是社区的一部分。
 
-You might be wondering – when should you contribute? Well, if you're new to open source, contribute at your own pace—don't worry about trying to do too much too soon. You'll find what you're comfortable with.
+你可能会想自己应该什么时候参与贡献呢？嗯，如果你是开源新手，按你自己的节奏参与贡献就好啦——不要担心过早地尝试做太多。你会找到自己觉得舒适的节奏。
 
-Contributing to open-source will not only increase your skill set but also allow you to develop contacts within the community and even create opportunities for freelance work.
+为开源做贡献不仅可以增加你的技能，还可以发展你的社区人脉，甚至创造自由工作的机会。
 
-It takes some time to build up the knowledge and skills necessary to become an active contributor (especially because documentation often requires a different skill set than programming), but it’s worth the investment.
+要成为一名活跃的贡献者需要花一些时间积累必要的知识和技能（尤其是因为通常文档写作所需要的技能是不同于编程的），但是，这些时间是值得投入的。
 
-## Challenges of Contributing
+## 参与贡献会面临的挑战
 
-Technical writers can face several challenges when they start contributing to open-source projects. One of the most common is not being sure how best to contribute, especially if you don't know anything about the project yet.
+技术文档作者在开始参与开源项目贡献时，会面临一些挑战。最常见的一项挑战就是不确定如何最大化做出贡献，特别是如果你还对项目一无所知。
 
-You might also be unsure about where your work should go or what is expected from contributors. There are a couple of ways around this problem: you can read the project's `README` file and/or documentation to see if they have contribution guidelines. You can also get in touch with the team behind the project and ask for help.
+你可能也不清楚你的任务应该做到什么程度或者这个任务对贡献者有什么期望。对于这个问题，有几个解决办法：你可以阅读 `README` 文件和/或文档，看看里面有没有贡献指南。你也可以与项目团队成员联系，并寻求帮助。
 
-## How to Contribute to Open-Source Projects
+## 如何参与开源项目
 
-First, you'll want to find a project on [GitHub](https://github.com/) you want to contribute to. You can [read this tutorial](https://www.freecodecamp.org/news/github-search-tips/) about how to search GitHub and find projects.
+首先，在[GitHub](https://github.com/)上找到你想要参与贡献的一个项目。你可以[阅读这份教程](https://www.freecodecamp.org/news/github-search-tips/) 查看如何在GitHub上进行搜索并找到项目。
 
-Next, you'll want to open the README and make sure you understand the given instructions.
+然后，打开README文件，确保你理解里面提到的说明。
 
-Then, fork the repo by clicking on Fork located at the top right corner of your screen.
+接着，点击屏幕右上角的Fork按钮，将这个repo（仓库）fork（复制）下来。
 
 ![x3IyU70meecZi1qYS4_CCZW0cOZqpcTdVfKjG3_TpM1TJj_tH15FhNaKmrAL2bl8fTU7fcUAditd6AzqJbJItmCavBxQObpD2bAJCRlYds-sX-Z3iyA4b_pajXsOnAJM1_8tbPdbyOGNrXyxCfu1Qk-x3AyDrtDrFxbbxlmIaSSwaj3kYX87ELMUSQ](https://lh5.googleusercontent.com/x3IyU70meecZi1qYS4_CCZW0cOZqpcTdVfKjG3_TpM1TJj_tH15FhNaKmrAL2bl8fTU7fcUAditd6AzqJbJItmCavBxQObpD2bAJCRlYds-sX-Z3iyA4b_pajXsOnAJM1_8tbPdbyOGNrXyxCfu1Qk-x3AyDrtDrFxbbxlmIaSSwaj3kYX87ELMUSQ)
 
-Clone the forked repo in your local computer using the following command:
+使用下列命令将fork（复制）的仓库复制到你的本地电脑：
 
 ```bash
-git clone <LINK TO THE REPO>
+git clone <链接到仓库>
 ```
 
-You'll see the repo link when you click on the code dropdown.
+当你点击代码下拉菜单时，会看到仓库链接。
 
-Once you've cloned it, open up the directory containing your new fork and start adding your contribution.
+复制好后，打开包含你的新fork的目录，开始添加你的贡献。
 
-When done push your changes on GitHub by using the following instructions:
+完成后，使用下列说明将你的修改推送到GitHub：
 
 ```bash
-git status //displays which modifications have been staged.
-git add . // adds changes to the cloned repo
-git commit -m "changes" //performs a commit to the cloned repo
-git branch -M changes //creates a new branch
-git push -u origin changes //pushes the changes
+git status //显示哪些修改已经分阶段完成
+git add . // 在复制的仓库里添加更改
+git commit -m "changes" //对复制的仓库进行一次提交
+git branch -M changes //创建一个新的分支
+git push -u origin changes //推送修改
 ```
 
-You will be prompted by GitHub to create a pull request after pushing your changes to the cloned repo. Go ahead and create the pull request and wait for the maintainers to merge your cloned repo to the main repo.
+将修改推送到复制的仓库后，GitHub页面会弹出提示创建一个Pull Request（PR，拉取请求）。创建PR，等待项目维护者将你复制的仓库合并到主仓库。
 
-**Make sure to incorporate upstream modifications into your local repository** if you forked the project a while ago.
+如果你不久前叉入了该项目，**请确保将上游的修改纳入你的本地仓库** 。
 
-If you encounter a large file, install `git-lfs` if it is not already installed with the following command:`brew install git-lfs`
+如果你遇到一个大文件，并且还没有安装`git-lfs`的话，就用这条命令`brew install git-lfs`去安装一个git-lsf。
 
-By downloading the appropriate versions of huge files slowly, the Git LFS (Large File Storage) extension, created by Atlassian, GitHub, and a few other open-source contributors, lessens the impact of large files in your repository
+Git LFS（Large File Storage大文件存储）是由Atlassian、GitHub以及其他开源贡献者开发的Git扩展。它通过缓慢下载大文件的相关版本来减少文件在仓库中的影响。
 
-You can also use the following [documentation](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage) to install `git-lfs`.
+你也可以根据这个[文档](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage) 安装`git-lfs`。
 
-### Best practices when contributing to open-source
+### 开源贡献的最佳实践
 
-1.  Identify an area where you could be of assistance and find the relevant project on GitHub.
-2.  Read the documentation for any projects or programs that may be similar to the one you're interested in. This will give you a better understanding of what is involved in contributing and what other people have contributed.
-3.  Search for issues labeled good first issue and read through them – these are typically fairly easy to solve.
-4.  Get your code ready by following the contribution guidelines of the project.
-5.  Write up a pull request with your solution and explain why it solves the problem at hand. Include links to related resources like tutorials if necessary.
-6.  Submit your pull request for review. The team will discuss whether it should be accepted into the repository and update you about their decision.
-7.  If they decide not to accept your pull request ask them how you might go about addressing their concerns so that they'll reconsider acceptance at a later date.
-8.  If they do accept your pull request then thank them!
-9.  Continue searching for new problems to solve and share your progress along the way!
+1.  确定一个你可以提供帮助的领域，然后在GitHub上找到相关的项目。
+2.  阅读任何可能与你感兴趣的项目或程序相似的文档。这样你就会更了解贡献会涉及什么以及其他人做了什么贡献。
+3.  搜索标注了good first issue（第一个好问题）的问题，并通读这些问题——这些问题通常是很容易解决的。
+4.  遵循项目的贡献指南，准备好你的代码。
+5.  写一个详细的PR，给出你的解决方案，并解释为什么你的方案可以解决当前问题。如果有必要，附上相关资源的链接。
+6.  提交你的PR以待审阅。项目团队会讨论是否将你的PR合入仓库，并将结果更新给你。
+7.  如果他们决定不接受你的PR，你就询问如何能解决他们的顾虑，这样他们之后就会重新考虑接受PR。
+8.  如果他们确实接受了你的PR请求，记得表示感谢！
+9.  继续寻找要解决的新问题，并在此过程中分享你的进步！
 
-## What Types of Contributions Can I Make?
+## 我能做什么类型的贡献？
 
-You can contribute to these projects in many ways, including submitting pull requests for bug fixes or feature additions, writing documentation about how to use the software, improving the current documentation, translating the text into another language, and fixing typos.
+你可以通过多种方式为项目做贡献，包括为bug修复或功能新增提PR、编写软件使用文档、改进已有文档、翻译文档和修改拼写错误。
 
-You should get involved by picking a project you're interested in and reading through its documentation before diving right in.
+在深入参与贡献某个项目之前，你应该首先挑选一个你感兴趣的项目，并通读该项目的文档。
 
-Writing for an open-source project is a great way to establish yourself as an expert in your field and position yourself for future freelance opportunities.
+参与开源项目的文档写作，有助于将自己打造成行业专家并为将来获得自由职业机会做准备。
 
-One thing that technical writers should always keep in mind when writing for open-source projects is that their audience is primarily developers. This means that they need more technical details than what you would find in other types of writing.
+在为开源项目写文档时，技术文档作者始终应牢记的一点是，文档读者主要是开发人员。这意味着相较于其他类型的文档，读者需要在技术文档中看到更多的技术细节。
 
-## Where Can I Find Open Source Projects?
+## 去哪里找开源项目？
 
-There are a variety of places you can find open-source projects. GitHub is the most popular place for open-source projects, but there are also repositories on BitBucket, Gitlab and other sites.
+有很多地方都能找到开源项目。GitHub是最受欢迎的地方，但在BitBucket、Gitlab和其它网站也有开源项目的仓库。
 
-If you have an idea for an open-source project that doesn't exist yet, start by putting together your plan in a `README` file. If you're not sure how to get started with contributing to an existing project, check out its documentation or read through some pull requests before submitting one of your own.
+如果你有一个想法，但还没有对应的开源项目，可以先把你的想法和计划放在一个`README`文件中。如果你不确定如何开始为一个已有的项目做贡献，那么可以查看该项目的文档或通读一些PR，然后提交自己的PR。
 
-## **Sample Projects**
+## **示例项目**
 
--   [The HTML5 Boilerplate project](https://github.com/h5bp/html5-boilerplate) is a popular open-source project for web developers that provides HTML, CSS, and Javascript code for building a website or web application.
--   [The Bootstrap framework,](https://github.com/twbs) also an open-source project, is a collection of tools to help developers quickly create responsive websites.
--   [Jekyll](https://jekyllrb.com/docs/contributing/) is a static site generator written in Ruby, designed for personal blogs.
--   [React.js  documentation](https://github.com/reactjs/reactjs.org) - React.js documentation provides official information on how to use react.js
--   [GitHub pages](https://github.com/github/docs) - They contain everything you need to know about GitHub.
--   [Galaxy project (training material)](https://github.com/galaxyproject/training-material) -A collection of training materials about the Galaxy project which is a web-based open platform for data-intensive computational research that extends beyond the biological sciences.
--   [CNCF (Cloud Native Computing Foundation)](https://github.com/cncf) -CNCF is open-source cloud-native computing that hosts projects such as Kubernetes and Prometheus to make cloud-native ubiquitous and sustainable.
+-   [HTML5 Boilerplate项目](https://github.com/h5bp/html5-boilerplate) 是一个受Web网页开发者欢迎的开源项目。项目支持通过HTML、CSS和Javascript代码来创建网站或网页应用。
+-   [Bootstrap框架](https://github.com/twbs) 也是一个开源项目，是一个帮助开发者快速创建响应式网站的工具集合。
+-   [Jekyll](https://jekyllrb.com/docs/contributing/) 是一个用Ruby编写的静态网站生成器，为个人博客而设计。
+-   [React.js文档](https://github.com/reactjs/reactjs.org) 上有官方的React.js使用文档。
+-   [GitHub pages](https://github.com/github/docs) 包含所有你需要知道的GitHub信息。
+-   [Galaxy项目（培训资料）](https://github.com/galaxyproject/training-material) 是Galaxy项目的一个培训资料集。该项目是一个基于网页的开放平台，用于数据密集型的计算研究，其范围超出了生物科学。
+-   [CNCF（云原生计算基金会）](https://github.com/cncf) CNCF是开源的云原生计算，托管Kubernetes和Prometheus等项目，使云原生无处不在且可持续。
 
-You can also check out [Google Season of Docs](https://developers.google.com/season-of-docs) which provides assistance to open-source projects in improving their documentation and allows skilled technical writers to acquire experience in open-source.
+你还可以看看[谷歌文档之季](https://developers.google.com/season-of-docs)，它帮助开源项目优化文档，同时让技术熟练的技术文档作者获得开源方面的经验。
 
-There are many different ways you can contribute, which means there is something out there for everyone.
+不同的贡献方式有很多，你总能找到适合自己的。
 
-## **Conclusion**
+## **总结**
 
-Contributing to open source is a great way for technical writers and other content creators to share their knowledge with the world.
+对技术文档作者和内容创作者来说，参与开源贡献是一种很好的与世界分享知识的方式。
 
-There are many different ways you can contribute, which means there is something out there for everyone.
+参与开源贡献的方式有很多，总之，人人皆可贡献。

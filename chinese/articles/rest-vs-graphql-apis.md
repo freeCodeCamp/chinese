@@ -9,7 +9,7 @@ Hi everyone! In this article we're going to take a good look at APIs, a core con
 
 We're going to talk about the main kinds of APIs used nowadays (SOAP, REST and GraphQL), their characteristics, pros and cons, and situations in which each of them might be more beneficial.
 
-Let's go! 🙃
+现在开始吧！🙃
 
 # 目录
 
@@ -28,7 +28,7 @@ Let's go! 🙃
 
 ****Client-server**** is a model that structures the tasks or workloads of an application between a resource or service ****provider**** (server) and a service or resource requester (client).
 
-Put simply, the client is the application that requests some kind of information or performs actions, and the server is the program that sends information or performs actions according to what the client does.
+简单来说， the client is the application that requests some kind of information or performs actions, and the server is the program that sends information or performs actions according to what the client does.
 
 Most applications nowadays use a client-server model. The most important concept to remember about it is that ****clients request resources or services**** that ****the server performs****. The way in which these two parts usually communicate is through an **API** (application programming interface).
 
@@ -52,7 +52,7 @@ SOAP was first introduced in 1998 by Microsoft as a successor to Common Object R
 
 SOAP was designed to provide a platform-independent way to exchange data between different systems over the internet. SOAP was later standardized by the World Wide Web Consortium (W3C) in 2003.
 
-**Main Characteristics:**
+**主要特点：**
 
 1.  **Protocol-Independent:** SOAP is designed to work with any protocol that supports the transmission of messages over the internet, including HTTP, SMTP, and FTP.
 2.  **Platform-Independent:** SOAP is designed to work with any programming language or platform that supports XML and can send and receive HTTP messages.

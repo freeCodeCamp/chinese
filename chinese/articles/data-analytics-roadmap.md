@@ -3,7 +3,7 @@
 > -  译者：Jiajun-Jiao
 > -  校对者：
 
-感谢中文版译者：
+感谢共同译者及校对者：[John Cheng](https://www.freecodecamp.org/chinese/news/author/john/)
 
 ![如何踏出数据分析第一步——零基础新手指引](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/dataa.JPG)
 
@@ -27,27 +27,27 @@
 
 您正在考虑从事数据分析师职业吗？太棒了！在继续之前，让我们先花点时间了解一下它。
 
-你看，数据分析师的工作不仅仅是处理图片和生成图表（即使这些也很酷）。它还涉及通过数据来洞察和解决问题。这意味着提出正确的问题，组织并评估数据，以及向他人解释你的结论。
+您看，数据分析师的工作不仅仅是处理图片和生成图表（即使这些也很酷）。它还涉及通过数据来洞察和解决问题。这意味着提出正确的问题，组织并评估数据，以及向他人解释您的结论。
 
 数据分析师通常拥有的核心技能、参与的核心活动包括：
 
 -   收集并分析庞大数据集，为业务决策提供信息的模式、趋势和洞察。
 -   使用统计工具和技术洞察数据。
 -   开发并实现数据收集系统，以及其他能优化效率和数据质量策略。
--   Collaborating with other teams to identify business needs and develop data solutions that address them.
--   Communicating findings and insights to stakeholders in a clear and actionable way.
+-   与其他小组合作，确定业务需求并开发数据解决方案。
+-   以清晰且可操作的方式与利益相关者交流自己的发现和洞察.
 
-So if you're not a math prodigy or a computer whiz, don't worry. Statistics, computer science, and business are just a few of the numerous disciplines that are incorporated into the multidisciplinary topic of data analysis. Everyone who enjoys learning, solving problems, and making a difference can really enjoy it.
+所以如果您不是数学或计算机方面的天才，不要担心。统计、计算机科学和商学都只是数据分析跨学科主题中包含的一小部分。每个享受学习、解决问题并希望有所作为的人都能真正地享受其中。
 
-So how can you find out more about what a data analyst does? You can start by looking through the numerous free resources that are accessible online. For example, [here an article that discusses what data analysts actually do](https://www.freecodecamp.org/news/what-does-a-data-analyst-do-data-analyst-job-description/). And [here's one that discusses data analyst vs data science roles](https://www.freecodecamp.org/news/data-analyst-vs-data-scientist-whats-the-difference/).
+那如何才能了解更多数据分析师的工作内容呢？您可以从众多线上免费资源入手。比如说，[这篇文章讨论了数据分析师的实际工作](https://www.freecodecamp.org/news/what-does-a-data-analyst-do-data-analyst-job-description/)；[这篇文章讨论了数据分析和数据科学](https://www.freecodecamp.org/news/data-analyst-vs-data-scientist-whats-the-difference/).
 
-Many blogs, podcasts, and YouTube channels offer entertaining and informative content on the subject of data analysis. I will be dropping some YouTube channels that have helped me over the years below.
+许多博客、播客以及YouTube频道都提供数据分析相关的娱乐和资讯内容。我将会在下方列出一些多年来对我有帮助的YouTube频道。
 
-To gain a feel of the skills and qualities needed, you can also network with other data analysts, go to meetings or seminars, and study job descriptions.
+要了解所需技能和素质，您还可以与其他数据分析师联系、参加会议或研讨会，并研究职位描述。
 
-Don't forget to consider whether dealing with data is something you enjoy. Do you enjoy finding patterns and solving puzzles? Do you want to change the world for the better? Data analysis may be the ideal career choice for you if the answer is yes.
+别忘了考虑一下您是否享受处理数据。您喜欢寻找规律和解决难题吗？您想让世界变得更美好吗？如果答案是肯定的，数据分析可能是您理想的职业选择。
 
-The first step in your path is to understand what a data analyst does. Enjoy yourself, take your time, and don't be hesitant to ask questions.
+您的第一步是了解数据分析师的工作。尽情享受，慢慢来，同时不要犹豫提出疑问。
 
 ## Step 2: Explore Job Requirements for Data Analyst Roles
 

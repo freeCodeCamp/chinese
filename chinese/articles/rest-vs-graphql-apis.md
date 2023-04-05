@@ -5,9 +5,9 @@
 
 ![Different Types of APIs – SOAP vs REST vs GraphQL](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/john-towner-p-rN-n6Miag-unsplash.jpg)
 
-Hi everyone! In this article we're going to take a good look at APIs, a core concept in modern software development.
+大家好！在这篇文章中，我们会详细介绍现代软件开发中的核心概念————APIs。
 
-We're going to talk about the main kinds of APIs used nowadays (SOAP, REST and GraphQL), their characteristics, pros and cons, and situations in which each of them might be more beneficial.
+我们将讨论当今使用的主要 API 类型（SOAP、REST 和 GraphQL）、它们的特性、优缺点以及让它们各自发挥最大效用的实践情况。
 
 现在开始吧！🙃
 
@@ -36,6 +36,8 @@ An API is nothing more than a **set of defined rules that establishes how one ap
 
 Having this set of rules, the client knows exactly what it has to require in order to complete a certain task, and the server knows exactly what the client will require when a certain action has to be performed.
 
+有了这组规则，客户端就确切地知道完成某项任务需要什么，服务器则确切地知道当必须执行某项操作时，客户端需要什么。
+
 APIs are absolutely everywhere in current software development. Almost any kind of application will use a client-server model enabled by API communication. That's why I think it's a very good idea for us as developers to get to know them well.
 
 The most popular ways to implement APIs nowadays are REST and GraphQl. We'll also take a look at SOAP, which was quite popular some years ago and is still used in some niche sectors.
@@ -47,6 +49,7 @@ With all this in mind, let's get into the details of how SOAP, REST and GraphQL 
 # SOAP APIs 如何运作
 
 Simple Object Access Protocol (SOAP) is a messaging protocol used for exchanging structured data between different systems over the internet. SOAP is an XML-based protocol and is considered one of the earliest web service protocols.
+简单对象访问协议 （SOAP） 是一种消息传递协议，用于通过互联网在不同系统之间交换结构化数据。SOAP 是一种基于 XML 的协议，是最早的 Web 服务协议之一。
 
 SOAP was first introduced in 1998 by Microsoft as a successor to Common Object Request Broker Architecture (CORBA) and Distributed Component Object Model (DCOM).
 
@@ -72,7 +75,7 @@ SOAP was designed to provide a platform-independent way to exchange data between
 2.  **Overhead:** SOAP messages can be large and can require significant processing resources, resulting in increased overhead.
 3.  **Performance:** SOAP can be slower compared to other API protocols due to its messaging nature.
 
-**Best for:**
+**最佳实践：**
 
 1.  **When you need to transmit sensitive data:** SOAP supports several security standards, making it a secure choice for transmitting sensitive data.
 2.  **When you need to support complex data structures:** SOAP supports complex data structures, making it a good choice for transmitting and exchanging data between different systems.

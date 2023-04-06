@@ -138,62 +138,80 @@ SQL不仅限于执行像SELECT，FROM，和WHERE这样的基本查询。它是�
 
 通过熟练掌握SQL，你将能够从数据库中提取有价值的见解，并能操作数据以提供有意义的业务见解。
 
-## Step 6: Learn Python for Data Analysis
+## 第五步：熟练掌握用于提取数据的SQL
 
-I know there's a lot of speculation as to whether or not a data analyst needs Python – some say they do while some say they don't.
+SQL (结构化查询语言Structured Query Language)是一个在数据分析中重要的工具。作为一个数据分析师，你的主要责任包括从数据库中提取数据。SQL是帮助你实现该目的的编程语言。
 
-For me, I'd like to say it depends on the company you're working for – but it's nice to have an edge by learning Python as it's one of the most widely used programming languages in the world of data analysis. Python is known for its simplicity, readability, and versatility, making it a popular choice for data analysts.
+SQL不仅限于执行像SELECT，FROM，和WHERE这样的基本查询。它是一个复杂的编程语言——你能用它以多种方式操纵和转化数据。SQL被用于从多个表格中合并数据，筛选提炼数据，和生成新的表格和视图。
 
-Python has a [vast array of libraries and tools](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/) that can make data analysis easier, such as Pandas for data manipulation and analysis, NumPy for scientific computing, and Matplotlib for data visualization. It also has the [ability to automate tasks](https://www.freecodecamp.org/news/python-automation-scripts/), making data analysis more efficient and effective.
+为了成为一个高效的数据分析师，熟练掌握SQL非常重要。你需要能得心应手地查询数据，生成表格，并且理解如何使你的查询高效运行。
 
-[Learning Python for data analysis](https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/) is a great investment in your career as a data analyst. Not only will it allow you to work with powerful libraries, but it will also open up many opportunities to work with larger datasets and more complex analyses.
+幸运的是，有很多帮助你学习SQL的资源。你能从以下平台开始你的学习：[可汗学院 SQL](https://www.khanacademy.org/computing/computer-programming/sql/), W3Schools, [SQLZoo,](https://sqlzoo.net/wiki/SQL_Tutorial) [SQLbolt](https://www.freecodecamp.org/news/p/98971712-334e-40fb-8401-3e78a822dde8/SQLbolt.com), [Luke Barousse](https://www.youtube.com/@LukeBarousse), [Alex the Analyst](https://www.youtube.com/@AlexTheAnalyst), [Microsoft Power Tools](https://www.youtube.com/@TheOyinbooke), 最后一些像SQL island和SQL murder这样的SQL游戏也能帮助你学习。
 
-There are many resources available to help you learn Python, from free online courses to paid online programs and textbooks. Some resources include [freeCodeCamp](https://www.youtube.com/@freecodecamp), DataCamp, [CodeBasis](https://www.youtube.com/@codebasics), [Programming with Mosh](https://www.youtube.com/@programmingwithmosh) and [Microsoft Learn.](https://learn.microsoft.com?wt.mc_id=studentamb_207021)
+此外，还有很多现有的网课和书籍能够深入地覆盖SQL。以下是一些可以帮助你入门的例子：
 
-By learning Python, you'll be able to perform more complex data analysis, automate tasks, and work with a broader range of datasets, making you a valuable asset in any data-focused organization.
+1.  [学习SQL和数据库-初学者完整课程](https://www.freecodecamp.org/news/sql-and-databases-full-course/)
+2.  [来自freeCodeCamp的关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/#relational-database-freecodecamp-curriculum)
+3.  [免费的数据库课程系列](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
 
-## Step 7: Master a Data Visualization Tool
+通过熟练掌握SQL，你将能够从数据库中提取有价值的见解，并能操作数据以提供有意义的业务见解。
 
-As a data analyst, it's essential to be able to communicate your findings in a clear and concise manner. One way to do this is through data visualization. Data visualization tools like [PowerBI](https://www.freecodecamp.org/news/python-in-powerbi/) and Tableau can help you create interactive charts, graphs, and dashboards that make it easy for others to understand your findings. We'll talk about them more in a minute.
+## 第六步：针对数据分析学习Python
 
-Here's a [Tableau for Data Science and Data Visualization course](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/) you can check out.
+我了解有很多对于数据分析师是否需要学习Python的怀疑——有人说要学而有人说不要。
 
-While SQL is great for querying and manipulating data, it can't fully bring your data to life. This is where a data visualization tool comes in. These tools allow you to transform your data into insightful and easy-to-understand visualizations that can be shared with stakeholders.
+对我而言，我更倾向于说这看你在的公司——但通过学习Python，一种在数据分析中最广泛使用的编程语言，来获得一技之长是不错的。Python因它的简洁性、可读性和多功能性而出名。这使得它成为一个受数据分析师欢迎的选择。
 
-You can [learn data visualization basics in this in-depth free course](https://www.freecodecamp.org/news/learn-data-visualization-in-this-free-17-hour-course/) on freeCodeCamp's YouTube channel.
+Python拥有着[极为广泛的工具包和函数库](https://www.freecodecamp.org/news/python-data-science-course-matplotlib-pandas-numpy/)。 这些工具使得数据分析变得容易，比如说用于操纵和分析数据dPandas，和用于可视化数据的Matplotlib。Python也有着[自动化任务的能力](https://www.freecodecamp.org/news/python-automation-scripts/), 使得数据分析变得更加简洁高效。
 
-PowerBI is a great choice for data visualization as it is easy to learn and integrate with other Microsoft products. This makes it an ideal tool for organizations that use Microsoft Office. Tableau is also a popular choice and has a strong community of users and a wide range of features.
+[为数据分析学习Python](https://www.freecodecamp.org/news/learn-data-analysis-with-python-course/) 是一个你在数据分析职业道路上的不错的投资。它不仅让你能使用强大的函数库工作，而且它还能为你提供不少机会，来分析更大的数据集和进行更复杂的分析。
 
-Learning a data visualization tool like PowerBI or Tableau will enable you to create compelling visualizations that help you better understand your data and communicate your findings to others. There are many online courses and tutorials available to help you learn these tools, such as the official [Microsoft PowerBI training](https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/) and [Tableau's own training courses](https://trailheadacademy.salesforce.com/classes/TVA101-Tableau-Visual-Analytics).
+从免费网课到付费的网络和纸质教程，有很多帮助你学习Python的资源。这些资源包括[freeCodeCamp](https://www.youtube.com/@freecodecamp), DataCamp, [CodeBasis](https://www.youtube.com/@codebasics), [Programming with Mosh](https://www.youtube.com/@programmingwithmosh)和[Microsoft Learn](https://learn.microsoft.com?wt.mc_id=studentamb_207021)。
 
-By mastering a data visualization tool, you'll be able to create interactive and engaging visualizations that will help you better understand your data and communicate your findings to others, making you an invaluable asset to any data-focused organization.
+通过学习Python，你可以进行更复杂的数据分析，使任务自动化，和分析更多的数据库，使得你成为任何一个重视数据的公司所需要的人才。
 
-You can also dive into other popular data viz tools like D3.js - [here's a course on it to get you started](https://www.freecodecamp.org/news/data-visualization-using-d3-course/).
+## 第七步：精通一个数据可视化的工具
 
-## Step 8: Network with Other Data Analysts and Developers
+作为一个数据分析师，能用简洁清晰的方式来展现你的发现是至关重要的。你能用数据可视化来达到这点。像[PowerBI](https://www.freecodecamp.org/news/python-in-powerbi/)和Tableau这样的数据可视化工具可以使得别人更容易理解你的发现。我们待会会进一步讨论它们。
 
-Networking is an essential part of any profession, and data analytics is no exception. By networking with other data analysts and developers, you can learn from their experiences, get insights on the latest industry trends and technologies, and potentially find job opportunities.
+你可以看看这个[针对数据科学和数据可视化的Tableau教程](https://www.freecodecamp.org/news/tableau-for-data-science-and-data-visualization-crash-course/)。
 
-Here are a few ways to network with others in the field:
+虽然SQL能够很好地查询和操作数据，它不能让这些数据获得生机。在这数据可视化工具就派上了用场。这些工具让你能将你的数据转化为一些有见地并且易于理解的形象。它们可以被分享给你的股东们。
 
-1.  Attend industry events: Look for conferences, meetups, and other events related to data analytics and attend them. This is a great way to meet others in the field and learn about new developments and technologies.
-2.  Join online communities: There are many online communities for data analysts and developers, such as forums, LinkedIn groups, and social media groups. Join these communities and participate in discussions to connect with others in the field.
-3.  Reach out to others: Don't be afraid to reach out to other data analysts and developers, whether through social media, email, or in person. Introduce yourself, ask for advice, and build relationships.
+你可以通过FreeCodeCamp的YouTube频道来[在这个深入且免费的课程中学习数据可视化基础](https://www.freecodecamp.org/news/learn-data-visualization-in-this-free-17-hour-course/)。
 
-Remember, networking is a two-way street. Be willing to offer help and advice to others in the field as well. By building a strong network of contacts in the data analytics field, you can enhance your career opportunities and stay up to date on the latest industry trends and technologies.
+PowerBI是一个对于数据可视化的极佳选择，因为它学习过程简单，并且能和其他微软产品相结合。对于使用Microsoft Office的企业而言，这点使PowerBI成为了一个理想的工具。Tableau也是个流行的选择，它有着有凝聚力的用户社群和广泛的功能。
 
-## Step 9: Don't Forget about "Soft Skills"
+通过学习像PowerBI或Tableau这样的数据可视化工具，你能够创造些令人信服的可视化：它们能帮助你更好地理解自己的数据，更好地向大家分享自己的发现。有很多网课和教程能够帮到你学习这些工具，比如说官方的[微软PowerBI训练](https://learn.microsoft.com/en-us/training/modules/get-started-with-power-bi/)和[Tableau's自己的教学课程](https://trailheadacademy.salesforce.com/classes/TVA101-Tableau-Visual-Analytics)。
 
-One final skill that I think needs to be worked on before you can be a great DA is your soft skills which involves your ability to communicate, solve problems etc
+通过熟练掌握一个数据可视化的工具，你能够创造可互动且吸引人的可视化。它们能够帮助你更好地理解你的数据和向大家交流你的数据。这也使得你成为任何一个重视数据的公司所需要的人才。
+
+你也可以更深入地了解其他的热门数据可视化工具，比如说D3.js - [这是个能帮助你学习它的课程](https://www.freecodecamp.org/news/data-visualization-using-d3-course/)。
+
+## 第八步：和其他数据分析师和开发者建立联系
+
+对于任何职业而言，建立人际网都是特别重要的，对于数据分析也不例外。通过和别的数据分析师和开发者建立联系，你能够从他们的经历中学习，得到关于最新行业趋势和技术的洞见，并且可能找到工作机会。
+
+以下是和该领域从业者建立联系的几种方法：
+
+1.  参加产业活动：寻找会议、见面会和其他和数据分析相关的项目，然后参加它们。这个方法能很好地帮助你遇见该行业其他的从业者并了解更多最新发展和科技。
+2.  加入网上的社群：有很多关于数据分析师和开发者的网络社群，比如说讨论平台，LinkedIn小组，和社交媒体小组。可以加入这些社群并参与讨论，从而和该领域的其他人产生联系。
+3.  与别人沟通：不要害怕和别的数据分析师和开发者沟通，不管是通过社交媒体，邮件，还是线下见面。向他们介绍自己，询问一些建议，然后建立关系。 
+
+记住，建立人际网是双向的。我们也要愿意帮忙和向别人提供建议。通过在数据分析领域里建立一个好的联系网络，你可以增加你的职场机会，并且了解及时的产业趋势和技术。
+
+## 第九步：不要忘了软技能
+
+在成为一个出色的数据分析师之前，我能想到的最后一个需要练习的技能是你的软技能。它包括你的交流和解决问题等能力。
 
 ![Analyst](https://www.freecodecamp.org/news/content/images/2023/03/Analyst.jpeg)
 
-After all is said and done, practice and practice and build projects.
+当所有这些完成之后，练习再练习，然后建立项目
 
-## Conclusion.
+## 结论
 
-Becoming a data analyst requires dedication, hard work, and a passion for data analysis. Following the steps outlined in this roadmap will help you gain the necessary skills and knowledge to become a successful data analyst.
+成为一个数据分析师，我们需要投入、努力、和对数据分析的热爱。通过在这份指南里列出的步骤，我们可以得到成为一个成功的数据分析师所需的技能和知识。
 
-From understanding the role of a data analyst, to mastering SQL and Python, to networking with other developers, each step is crucial to achieving success in this field.
+从理解数据分析师的工作，到熟练掌握SQL和Python，再到和其他的开发者建立联系，其中每一步对于在数据分析领域取得成功而言都至关重要。
 
-Remember to stay curious, never stop learning, and always be willing to adapt to new technologies and methodologies. With determination and persistence, you can achieve your goal of becoming a proficient data analyst and unlock a world of exciting career opportunities.
+要记得保持好奇心、从不停止学习，也要记得一直愿意去接受新的科技和方法。带着决心和坚持，你能成为一个熟练的数据分析师，并解锁更多令人激动的职业机会。

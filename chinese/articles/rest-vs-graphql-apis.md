@@ -387,7 +387,7 @@ console.log(data.data.user.name); // output: "John Doe"
 console.log(data['data']['user']['name']); // output: "John Doe"
 ```
 
-Here, `data` refers to the JavaScript object that contains the response data. The response data is wrapped in a `data` object, and the values can be accessed by traversing the object using dot notation or bracket notation.
+在这里, `data` 指的是 the JavaScript object that contains the response data. The response data is wrapped in a `data` object, and the values can be accessed by traversing the object using dot notation or bracket notation.
 
 GraphQL API responses are typically more focused and specific than REST API responses because the client can specify exactly what data they want to receive. This makes it easier to avoid overfetching or underfetching data, and can improve performance by reducing the amount of data transferred over the network.
 
@@ -395,8 +395,8 @@ Additionally, GraphQL APIs can provide a more flexible schema that can be easily
 
 # **总结**
 
-Well everyone, as always, I hope you enjoyed the article and learned something new.
+各位，我希望你们能一如往常地享受阅读本文的过程，并学到新知识。
 
-If you want, 你可以在 [领英](https://www.linkedin.com/in/germancocca/) 或 [推特](https://twitter.com/CoccaGerman) 上关注我。下次再见！
+如有需要，你可以在 [领英](https://www.linkedin.com/in/germancocca/) 或 [推特](https://twitter.com/CoccaGerman) 上关注我。下次再见！
 
 ![giphy](https://www.freecodecamp.org/news/content/images/2023/03/giphy.gif)

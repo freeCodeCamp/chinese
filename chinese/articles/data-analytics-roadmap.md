@@ -144,24 +144,6 @@ SQL不仅限于执行像SELECT，FROM，和WHERE这样的基本查询。它是�
 
 通过熟练掌握SQL，你将能够从数据库中提取有价值的见解，并能操作数据以提供有意义的业务见解。
 
-## 第五步：熟练掌握用于提取数据的SQL
-
-SQL (结构化查询语言Structured Query Language)是一个在数据分析中重要的工具。作为一个数据分析师，你的主要责任包括从数据库中提取数据。SQL是帮助你实现该目的的编程语言。
-
-SQL不仅限于执行像SELECT，FROM，和WHERE这样的基本查询。它是一个复杂的编程语言——你能用它以多种方式操纵和转化数据。SQL被用于从多个表格中合并数据，筛选提炼数据，和生成新的表格和视图。
-
-为了成为一个高效的数据分析师，熟练掌握SQL非常重要。你需要能得心应手地查询数据，生成表格，并且理解如何使你的查询高效运行。
-
-幸运的是，有很多帮助你学习SQL的资源。你能从以下平台开始你的学习：[可汗学院 SQL](https://www.khanacademy.org/computing/computer-programming/sql/), W3Schools, [SQLZoo,](https://sqlzoo.net/wiki/SQL_Tutorial) [SQLbolt](https://www.freecodecamp.org/news/p/98971712-334e-40fb-8401-3e78a822dde8/SQLbolt.com), [Luke Barousse](https://www.youtube.com/@LukeBarousse), [Alex the Analyst](https://www.youtube.com/@AlexTheAnalyst), [Microsoft Power Tools](https://www.youtube.com/@TheOyinbooke), 最后一些像SQL island和SQL murder这样的SQL游戏也能帮助你学习。
-
-此外，还有很多现有的网课和书籍能够深入地覆盖SQL。以下是一些可以帮助你入门的例子：
-
-1.  [学习SQL和数据库-初学者完整课程](https://www.freecodecamp.org/news/sql-and-databases-full-course/)
-2.  [来自freeCodeCamp的关系数据库课程](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/#relational-database-freecodecamp-curriculum)
-3.  [免费的数据库课程系列](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/)
-
-通过熟练掌握SQL，你将能够从数据库中提取有价值的见解，并能操作数据以提供有意义的业务见解。
-
 ## 第六步：针对数据分析学习Python
 
 我了解有很多对于数据分析师是否需要学习Python的怀疑——有人说要学而有人说不要。

@@ -68,7 +68,6 @@
 但是不要止步于此！你还可以联系在此领域工作或拥有您感兴趣职位的人。咨询他们的经验，以及他们认为哪些技能对他们的工作取得成功最为重要。你甚至可以尝试与他们安排非正式面试以了解更多此领域的信息，并获取从何入门的建议。
 
 说到入门，一定要记住没有什么可以替代实践经验。尽管花所有时间观看教程可能很吸引人，但通过实际架构并上手真实的数据分析项目，您将更快更有效地学习。
-As tempting as it may be to spend all your time watching tutorials, you'll learn much more quickly and effectively by actually building things and working on real data analysis projects.
 
 因此，花些时间去探索工作要求，但不要忘了持续培养自己的技能并获得实践经验。付出一点努力，同时维持好奇心，您就能成为一名成功的数据分析师。
 
@@ -92,7 +91,7 @@ As tempting as it may be to spend all your time watching tutorials, you'll learn
 
 但这不仅仅是数字。您还需要初步了解线性代数，它在许多数据分析方法中都有应用。 [这里有一个深入的课程（以及教科书）](https://www.freecodecamp.org/news/linear-algebra-full-course/) 带领您入门。
 
-您可能需要使用矩阵以修改和操作数据，或者您可能需要使用 [线性回归](https://www.freecodecamp.org/news/data-science-with-python-8-ways-to-do -linear-regression-and-measure-their-speed-b5577d75f8b/) 以根据历史趋势预测未来数值。
+您可能需要使用矩阵以修改和操作数据，或者您可能需要使用 [线性回归](https://www.freecodecamp.org/news/data-science-with-python-8-ways-to-do-linear-regression-and-measure-their-speed-b5577d75f8b/) 以根据历史趋势预测未来数值。
 
 如果您没有扎实的数学背景，这可能看起来很难。但别担心！有许多可用的资源能辅助您学习。
 
@@ -104,7 +103,6 @@ freeCodeCamp 也正在开发数学课程 [您可以点击此处阅读](https://w
 您还可以阅读[您需要了解的统计学指南](https://www.freecodecamp.org/news/statistics-for-data-science/) 以进入数据科学领域、从事机器学习等领域。
 
 千里之行，始于足下。关键是要从小处着手并逐渐积累知识。在您需要时，不要害怕提问或寻求帮助。只需稍加练习并坚持，您很快就会发现数学和统计学实际上挺有趣的（真的！）。
-The key is to start small and build up your knowledge gradually. Don't be afraid to ask questions or seek help when you need it. With a little practice and persistence, you'll soon find that math and statistics are actually kind of fun (no, seriously!).
 
 ![动图](https://www.freecodecamp.org/news/content/images/2023/03/raw.gif)
 

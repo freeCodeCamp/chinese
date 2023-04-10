@@ -3,7 +3,7 @@
 > -  译者：Jiajun-Jiao
 > -  校对者：
 
-感谢共同译者及校对者：[John Cheng](https://www.freecodecamp.org/chinese/news/author/john/)
+感谢共同译者：[John Cheng](https://www.freecodecamp.org/chinese/news/author/john/)
 
 ![如何踏出数据分析第一步——零基础新手指引](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/dataa.JPG)
 
@@ -49,76 +49,82 @@
 
 您的第一步是了解数据分析师的工作。尽情享受，慢慢来，同时不要犹豫提出疑问。
 
-## Step 2: Explore Job Requirements for Data Analyst Roles
+## 第二步：探索数据分析师的工作要求
 
-Now that you have a better understanding of the role of a data analyst, it's time to start looking at what employers are looking for. After all, you want to make sure that your skills and knowledge match up with what's required in the job market.
+现在您已经对数据分析师的职责有了更深理解，是时候开始了解雇主有什么需求了。毕竟，您想要确保您的技能和知识符合就业市场的需求。
 
-But before you start panicking about not having enough experience, remember that every company is different. Some may prioritize programming skills, while others may value communication and business acumen. That's why it's important to do your research and find out what specific skills and qualifications are most in demand in your desired industry or company.
+但在您开始担心没有足够经验之前，请记住：每个公司都是不同的。有些可能更需要编程技能，另一些可能更看重沟通能力和商业头脑。因此，调研并找出您想要的行业或公司最需要哪些特定技能和条件十分重要。
 
-So how do you go about finding this information? Well, one great place to start is by checking out job listings and descriptions on job boards like LinkedIn, Indeed, or Glassdoor. This can give you a good sense of the key requirements and qualifications for different data analyst roles.
+所以如何才能找到此类信息呢？您可以从查看 LinkedIn、Indeed 和 Glassdoor 等求职网站上的职位列表及描述着手开始。
 
-Some examples of what job listings might ask for include:
+下面列出了一些职位要求示例：
 
--   Proficiency in SQL and experience working with large datasets
--   Familiarity with Python and data visualization tools like Tableau or Power BI
--   Strong analytical skills and the ability to draw insights from complex data
--   Experience with statistical analysis and modeling techniques
--   Excellent communication skills and the ability to explain complex findings to both technical and non-technical audiences
+-   熟练掌握SQL并有大型数据集的工作经验
+-   熟悉Python，熟悉 Tableau、Power BI 等数据可视化工具
+-   拥有强大的分析能力并能从复杂数据中洞察信息
+-   拥有统计分析和建模技术的经验
+-   拥有卓越的沟通能力，以及向技术和非技术受众解释复杂发现的能力
 
-But don't stop there! You can also reach out to people who work in the field or who have job titles that interest you. Ask them about their experience and what skills they think are most important for success in their role. You might even want to consider setting up informational interviews to learn more about the field and get advice on how to get started.
+但是不要止步于此！你还可以联系在此领域工作或拥有您感兴趣职位的人。咨询他们的经验，以及他们认为哪些技能对他们的工作取得成功最为重要。你甚至可以尝试与他们安排非正式面试以了解更多此领域的信息，并获取从何入门的建议。
 
-And speaking of getting started, it's important to remember that there's no substitute for hands-on experience. As tempting as it may be to spend all your time watching tutorials, you'll learn much more quickly and effectively by actually building things and working on real data analysis projects.
+说到入门，一定要记住没有什么可以替代实践经验。尽管花所有时间观看教程可能很吸引人，但通过实际架构并上手真实的数据分析项目，您将更快更有效地学习。
+As tempting as it may be to spend all your time watching tutorials, you'll learn much more quickly and effectively by actually building things and working on real data analysis projects.
 
-So take some time to explore job requirements, but don't forget to keep building your skills and gaining practical experience. With a little effort and a lot of curiosity, you'll be well on your way to becoming a successful data analyst.
+因此，花些时间去探索工作要求，但不要忘了持续培养自己的技能并获得实践经验。付出一点努力，同时维持好奇心，您就能成为一名成功的数据分析师。
 
-## Step 3: Get Comfortable with Math and Statistics
+## 第三步：适应数学和统计学
 
-Okay, I know what you're thinking. Math and statistics? Yikes!
 
-![im-out-gif-11-1](https://www.freecodecamp.org/news/content/images/2023/03/im-out-gif-11-1.gif)
+好吧，我知道你在想什么。数学和统计学？哎呀！
 
-But hear me out before you run for the hills. For a data analyst to be able to make sense of data and derive valuable insights from it, having a fundamental understanding of these concepts is essential.
+![动图11-1](https://www.freecodecamp.org/news/content/images/2023/03/im-out-gif-11-1.gif)
 
-So what fundamental statistical concepts and formulas should you be familiar with?
+但在知难而退前，请听我讲两句。一名数据分析师为了能够理解数据并从中获得有价值的洞悉，对这些概念有基本了解是必要的。
 
-Now, to start, there are measures of central tendency known as mean, median, and mode, which can give you an idea of the typical value in a dataset. You should know how to calculate them.
+那么您应该熟悉哪些基本统计概念和公式呢？
 
-The standard deviation is a measure of how widely distributed the data are from the average, and you should be able to calculate it.
 
-And in order to find relationships between variables and generate predictions based on those associations, you should also be familiar with correlation and regression.
+现在，首先，有一些集中趋势的测量方法，被称为平均值、中位数和众数，它们可以让您了解数据集的典型值。您应该知道如何计算它们。
 
-But it's not just about numbers. You'll also need a rudimentary understanding of linear algebra, which is employed in many data analysis approaches. [Here's an in-depth course (and textbook)](https://www.freecodecamp.org/news/linear-algebra-full-course/) to get you started.
+标准差是数据与平均值的分布差距的测量方法，您应该能够计算它。
 
-You may need to employ matrices to modify and manipulate data, or you may need to use [linear regression](https://www.freecodecamp.org/news/data-science-with-python-8-ways-to-do-linear-regression-and-measure-their-speed-b5577d75f8b/) to forecast future values based on historical trends.
+为了找到变量之间的关系，并基于其联系生成预测，您还应该熟悉相关性和回归的概念。
 
-If you don't have a solid math background, this may seem difficult. But don't be concerned! There are numerous resources available to assist you in your learning.
+但这不仅仅是数字。您还需要初步了解线性代数，它在许多数据分析方法中都有应用。 [这里有一个深入的课程（以及教科书）](https://www.freecodecamp.org/news/linear-algebra-full-course/) 带领您入门。
 
-For example, Khan Academy offers lessons and practice tasks in math and statistics. If you prefer books, "Data Science for Beginners" by Andrew Park is an excellent resource that covers both statistical and mathematical principles in an accessible manner.
+您可能需要使用矩阵以修改和操作数据，或者您可能需要使用 [线性回归](https://www.freecodecamp.org/news/data-science-with-python-8-ways-to-do -linear-regression-and-measure-their-speed-b5577d75f8b/) 以根据历史趋势预测未来数值。
 
-freeCodeCamp is developing a math curriculum [which you can read about here](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).
+如果您没有扎实的数学背景，这可能看起来很难。但别担心！有许多可用的资源能辅助您学习。
 
-And [here's a guide on the statistics you need to know](https://www.freecodecamp.org/news/statistics-for-data-science/) to get into data science and pursue fields like Machine Learning.
+比如说，可汗学院(Khan Academy)提供数学和统计的课程和练习任务。如果您更喜欢书籍，Andrew Park 撰写的 “Data Science for Beginners” 是很棒的资源，它以易于理解的方式涵盖了统计和数学原理。
 
+freeCodeCamp 也正在开发数学课程 [您可以点击此处阅读](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/)。
+
+
+您还可以阅读[您需要了解的统计学指南](https://www.freecodecamp.org/news/statistics-for-data-science/) 以进入数据科学领域、从事机器学习等领域。
+
+千里之行，始于足下。关键是要从小处着手并逐渐积累知识。在您需要时，不要害怕提问或寻求帮助。只需稍加练习并坚持，您很快就会发现数学和统计学实际上挺有趣的（真的！）。
 The key is to start small and build up your knowledge gradually. Don't be afraid to ask questions or seek help when you need it. With a little practice and persistence, you'll soon find that math and statistics are actually kind of fun (no, seriously!).
 
-![raw](https://www.freecodecamp.org/news/content/images/2023/03/raw.gif)
+![动图](https://www.freecodecamp.org/news/content/images/2023/03/raw.gif)
 
-## Step 4: Master Excel for Data Analysis
+## 第四步：精通 Excel 数据分析
 
-Excel is a vital tool in a data analyst's arsenal. It's used by virtually every organization out there, and mastering it will help you clean, manipulate, and analyze data with ease.
 
-With Excel, you can create formulas and functions to perform calculations, pivot tables and charts to visualize data, and use data analysis tools to make predictions and identify patterns. Excel is particularly useful for regression analysis, forecasting, and scenario analysis.
+Excel 是数据分析师装备库中的重要工具。几乎每个组织都在使用它，而且掌握它可以帮助您轻松地清理、操作并分析数据。
 
-If you're serious about becoming a data analyst, it's essential to master Excel. Fortunately, there are plenty of online resources available to help you learn. Check out [ExcelIsFun](https://www.youtube.com/@excelisfun), [Excel Chandoo](https://www.youtube.com/playlist?list=PLmejDGrsgFyCZ4YC5s8mgdQztj7zt5to5), [Tutorials Point,](https://www.youtube.com/playlist?list=PLWPirh4EWFpEpO6NjjWLbKSCb-wx3hMql) [Ashutosh Kumar](https://www.youtube.com/@AshutoshKumaryt) , and [MyOnlineTrainingHub](https://www.youtube.com/@MyOnlineTrainingHub) for tutorials on Youtube. Also, the following courses will guide you on how to get the most out of Excel.
+使用 Excel，您可以创建公式和函数以进行计算、创建数据透视表和图表以可视化数据，以及使用数据分析工具预测并识别模式。 Excel 对于回归分析、预测和情景分析尤其有用。
 
-1.  [Introduction to Data Analysis Using Excel](https://www.coursera.org/learn/excel-data-analysis?irclickid=WskXxw2EKxyNRBjSCewfUQQZUkARwUz2LzeJ2A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=1359419&utm_content=b2c) by Coursera
-2.  [Data Analysis with Python for Excel Users](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/) on freeCodeCamp's YouTube channel
-3.  [Excel Skills for Business Specialization](https://www.coursera.org/specializations/excel?irclickid=WskXxw2EKxyNRBjSCewfUQQZUkARwUQvLzeJ2A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=1359419&utm_content=b2c) by Coursera
-4.  [Analyzing and Visualizing Data with Excel](https://www.edx.org/course/analyzing-and-visualizing-data-with-excel-2?irclickid=RrSQ3tWpyxyNTDdSXVVnIRUdUkARwR0WLzeJ2A0&utm_source=affiliate&utm_medium=guru99&utm_campaign=Online%20Tracking%20Link_&utm_content=ONLINE_TRACKING_LINK&irgwc=1) by EdX
+如果你真的想成为一名数据分析师，那么掌握 Excel 是必要的。幸运的是，有大量可用的在线资源能帮助您学习。您可以在YouTube上观看教程 [ExcelIsFun](https://www.youtube.com/@excelisfun)、[Excel Chandoo](https://www.youtube.com/playlist?list=PLmejDGrsgFyCZ4YC5s8mgdQztj7zt5to5)、[Tutorials Point](https://www.youtube.com/playlist?list=PLWPirh4EWFpEpO6NjjWLbKSCb-wx3hMql)、[Ashutosh Kumar](https://www.youtube.com/@AshutoshKumaryt) 和 [MyOnlineTrainingHub](https://www.youtube.com/ @MyOnlineTrainingHub)。此外，以下课程将指导您如何充分利用 Excel。
 
-Remember, Excel is just one tool in your data analysis toolkit. But it's a crucial one that you'll use daily as a data analyst. By mastering Excel, you'll be well-equipped to handle any data-related task that comes your way.
+1.  [使用 Excel 进行数据分析简介](https://www.coursera.org/learn/excel-data-analysis?irclickid=WskXxw2EKxyNRBjSCewfUQQZUkARwUz2LzeJ2A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=1359419&utm_content=b2c) Coursera
+2.  [Excel 用户使用 Python 数据分析](https://www.freecodecamp.org/news/data-analysis-with-python-for-excel-users-course/) freeCodeCamp 的 YouTube 频道
+3.  [商业专业的 Excel 技能](https://www.coursera.org/specializations/excel?irclickid=WskXxw2EKxyNRBjSCewfUQQZUkARwUQvLzeJ2A0&irgwc=1&utm_medium=partners&utm_source=impact&utm_campaign=1359419&utm_content=b2c) Coursera
+4.  [使用 Excel 分析并可视化数据](https://www.edx.org/course/analyzing-and-visualizing-data-with-excel-2?irclickid=RrSQ3tWpyxyNTDdSXVVnIRUdUkARwR0WLzeJ2A0&utm_source=affiliate&utm_medium=guru99&utm_campaign=Online%20Tracking%20Link_&utm_content=ONLINE_TRACKING_LINK&irgwc=1) EdX
 
-Now let's move on to the next skill and also one of the most important skills you'll need as a data analyst.
+请记住，Excel 只是数据分析工具包中的工具之一。但它是您作为数据分析师每天都使用的重要工具。通过掌握 Excel，您将完全有能力处理遇到的任何数据相关的任务。
+
+现在让我们学习下一项技能，这也是您作为数据分析师需要掌握的最重要技能之一。
 
 ## 第五步：熟练掌握用于提取数据的SQL
 

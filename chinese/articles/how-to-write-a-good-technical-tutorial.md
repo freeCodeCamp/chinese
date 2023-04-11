@@ -1,6 +1,6 @@
 > -  原文地址：[How to write a Good Technical Tutorial](https://www.freecodecamp.org/news/how-to-write-a-good-technical-tutorial/)
 > -  原文作者：[Avdhoot Fulsundar](https://www.freecodecamp.org/news/author/avdhoot/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How to write a Good Technical Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Gradient-Modern-Digital-Marketing-Facebook-Cover--14-.png)

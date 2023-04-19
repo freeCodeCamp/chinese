@@ -3,7 +3,7 @@
 > -  译者：Shenghan0329
 > -  校对者：
 
-![如何在Python中美观地打印JSON](https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Shittu-Olumide-How-to-Pretty-Print-JSON-in-Python.png)
+![如何在Python中代码美化JSON](https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Shittu-Olumide-How-to-Pretty-Print-JSON-in-Python.png)
 
 JSON(JavaScript Object Notation)是一种流行的数据交换格式。它在互联网应用、API、和数据库中被广泛应用。JSON是一个轻量的可读的格式，这种格式容易被解析和生成。
 

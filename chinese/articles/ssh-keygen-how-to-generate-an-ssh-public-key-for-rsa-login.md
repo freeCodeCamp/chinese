@@ -1,6 +1,6 @@
 > -  原文地址：[SSH Keygen Tutorial – How to Generate an SSH Public Key for RSA Login](https://www.freecodecamp.org/news/ssh-keygen-how-to-generate-an-ssh-public-key-for-rsa-login/)
 > -  原文作者：[Bolaji Ayodeji](https://www.freecodecamp.org/news/author/bolajiayodeji/)
-> -  译者：
+> -  译者：Jun Sun
 > -  校对者：
 
 ![SSH Keygen Tutorial – How to Generate an SSH Public Key for RSA Login](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/article-banner.jpg)

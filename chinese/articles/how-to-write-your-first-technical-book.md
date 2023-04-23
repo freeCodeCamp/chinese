@@ -1,6 +1,6 @@
 > -  原文地址：[How to Write Your First Technical Book: Tools, Techniques, and Resources for First-time Developer Authors](https://www.freecodecamp.org/news/how-to-write-your-first-technical-book/)
 > -  原文作者：[Shubham Chadokar](https://www.freecodecamp.org/news/author/schadokar/)
-> -  译者：
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How to Write Your First Technical Book: Tools, Techniques, and Resources for First-time Developer Authors](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/writing-cover.jpg)

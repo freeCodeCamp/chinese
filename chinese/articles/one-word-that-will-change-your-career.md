@@ -1,6 +1,6 @@
 > -  原文地址：[One Word That Will Change Your Career](https://www.freecodecamp.org/news/one-word-that-will-change-your-career/)
 > -  原文作者：[Yazeed Bzadough](https://www.freecodecamp.org/news/author/yazeedb/)
-> -  译者：
+> -  译者：kangwei11
 > -  校对者：
 
 ![One Word That Will Change Your Career](https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/l-how.jpeg)

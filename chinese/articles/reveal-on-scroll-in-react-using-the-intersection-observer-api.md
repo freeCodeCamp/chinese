@@ -1,6 +1,6 @@
 > -  原文地址：[How to Implement Reveal on Scroll in React using the Intersection Observer API](https://www.freecodecamp.org/news/reveal-on-scroll-in-react-using-the-intersection-observer-api/)
 > -  原文作者：[Jaja Ibifubara David](https://www.freecodecamp.org/news/author/daiveed/)
-> -  译者：
+> -  译者：TEST
 > -  校对者：
 
 ![How to Implement Reveal on Scroll in React using the Intersection Observer API](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/Group-107.png)

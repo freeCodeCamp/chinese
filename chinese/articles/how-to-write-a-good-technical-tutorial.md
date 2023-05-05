@@ -3,47 +3,47 @@
 > -  译者：Wendy Chen
 > -  校对者：
 
-![How to write a Good Technical Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Gradient-Modern-Digital-Marketing-Facebook-Cover--14-.png)
+![如何写一篇优秀的技术教程](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Gradient-Modern-Digital-Marketing-Facebook-Cover--14-.png)
 
-If you are a software developer, then you know how often you search Google to help you solve specific problems when you're coding.
+如果你是一名软件开发者，你知道当你编码时你经常得搜索谷歌来帮助你解决具体的问题。
 
-Every developer looks at online tutorials to solve the problems they have. To help you solve your problem, these tutorials should have a few things that make them more valuable for you and other readers.
+每个开发者在网上查看教程来解决他们的问题。为了帮助你解决你的问题，这些教程应该有许多对你和其他读者更有价值的东西。
 
-Here are a few things you need to keep in mind while writing a good technical tutorial.
+这里有一些在你写一篇优秀的技术教程时需要记住的技巧。
 
-## Know Your Audience
+## 了解你的读者
 
-Understanding for which audience you are writing is important. You need to decide what to include and what to leave out in the article.
+了解你正在为哪些受众写作是很重要的。你需要决定在文章中包含什么和去除什么。
 
-You don't want to make the reader leave your tutorial halfway. Sometimes you'll need to include just the necessary information instead of writing everything about it.
+你不想要让读者在你的教程中半途而废。有时你需要只保留一些必要的信息而不是写下所有信息。
 
-Look at this article on [How to change background color in HTML](https://www.freecodecamp.org/news/html-background-color-change-bg-color-tutorial/), readers want to know what are the methods to change the background color in HTML.
+看看这篇关于 [如何在HTML中更改背景颜色](https://www.freecodecamp.org/news/html-background-color-change-bg-color-tutorial/)的文章，读者想要知道在HTML中更改背景颜色的方法有哪些。
 
-The author has directly included different ways of doing that instead of starting from "What is HTML and CSS."
+作者直接包括了做到那些的不同方法而不是从“什么是HTML和CSS”开始。
 
-Also keep in mind whether you're writing for beginners or more advanced learners – and try to make this clear (either in a prerequisites section or just by stating for whom you wrote the tutorial). This will help determine how you explain things, how much background knowledge you assume, and so on.
+同时记住不论你是为初学者还是高级学习者而写——尽力使得它清楚(在先决条件或者仅仅通过说明您为谁编写教程)。这将有助于决定您如何解释事物和您假定有多少背景知识等等。
 
-## Make an Outline
+## 制作提纲
 
-Before starting to write a tutorial, outline what things are you going to write about.
+在编写一篇教程之前，列下你将要写的内容。
 
-Take this article that I'm writing now as an example. To get started, I wrote down different steps I was going to go through to explain how to write a good tutorial.
+以我正在写的这篇文章为例。开始时，我写下我将要经历的不同步骤来解释如何编写一篇优秀的教程。
 
-This process can help you give the article a structure that makes sense and you will be able to explain the specific steps rather than just writing about anything that comes to your mind.
+这个过程可以帮助你给予文章一个合理的结构并且你将能解释具体的步骤而不是只是写下你头脑中出现的任何想法。
 
-Look at this outline that I made to write this article:
+以下是我写这篇文章列出的提纲：
 
 ![free](https://www.freecodecamp.org/news/content/images/2022/09/free.PNG)
 
-Outline that I've made for this article
+我为这篇文章列出的提纲
 
-Once you know what you're going to write about, it makes it easier to stay on task and cover all the necessary points.
+一旦你知道你将要写下的东西，就更容易专注于任务和覆盖所有的要点。
 
-## State the Problem You Are Solving
+## 陈述你正在解决的问题
 
-The first thing a reader looks for in a tutorial is what the tutorial will solve or answer for them. That helps them determine if they're looking at the right article.
+读者在一篇教程中寻找的第一件事情就是它将解决或者回答什么。那帮助他们决定他们是否在看正确的文章。
 
-In order to make sure your reader is going to read further, tell them what problem you are solving, describe the purpose of the tutorial, what value it is providing, and how it will benefit them.
+为了确保你的读者将继续读下去，告诉他们你正在解决什么问题，描述教程的目的，提供什么价值并且它将如何使他们受益。
 
 You can directly tell your readers in the introduction what the tutorial actually does or talks about.
 

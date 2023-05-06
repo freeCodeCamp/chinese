@@ -45,49 +45,50 @@
 
 为了确保你的读者将继续读下去，告诉他们你正在解决什么问题，描述教程的目的，提供什么价值并且它将如何使他们受益。
 
-You can directly tell your readers in the introduction what the tutorial actually does or talks about.
+你可以直接在简介部分告诉你的读者教程实际上做了什么或者在讨论什么。
 
-Check out the introduction of this article: when I say, "Here are a few things you need to keep in mind while writing a good technical tutorial", I'm giving you an idea of what we'll be discussing and what you'll learn.
+查看这篇文章的介绍：当我说，“这里有一些在你写一篇优秀的技术教程时需要记住的技巧”，我就在让您了解我们将要讨论和您将要学习的内容。
 
-## Include Prerequisites Readers Need to Follow the Tutorial
 
-You should tell the reader which tools, services, and resources you are going to use for the tutorial.
+## 包括读者需要按照教程学习的先决条件
 
-You don't want your reader to leave the tutorial without completing it. They can get frustrated if they just learn in the middle of that tutorial that you are using some other tool or something they're not familiar with.
+你应该告诉读者你将要用在教程中的一些工具、服务以及资源。
 
-Just include a list describing what you're going to use and if it's free or paid. It'll help your readers get prepared before starting to follow the tutorial.
+你不想要你的读者在未完成教程的时候离开。如果他们只学到教程的中途，发现你在教程中使用一些其他的工具或者某些他们不熟悉的东西，他们会感到沮丧。
 
-## Use Headings and Small Paragraphs
+只要包含一张列表来描述你将使用的东西以及它是免费或者付费就好。它将有助于你的读者在开始跟随教程之前做好准备。
 
-Use headings to separate different sections of your article by topic. That way, each time a reader sees a new heading, they'll have a better idea of what's coming next.
+## 使用标题和小段落
 
-If you are going through a list of something, then try to present each element of that list using a heading or sub-heading, and then explain it briefly using small paragraphs.
+使用标题来按照主题分离你文章的不同部分。那样，每一次读者看到一个新的标题，他们将会对接下来的内容有更好的了解。
 
-Using headings will help in your SEO, too, and the tutorial will look more presentable and be easier to follow.
+如果你正列出一些内容，那么尽力去通过一个标题或者副标题来展现那个列表中的每个元素，然后通过使用小段落来简明的解释它。
 
-## Provide Code Snippets
+使用标题也将会帮助你的搜索引擎优化，并且教程将会看着更像样和容易跟着学。
 
-It's always helpful to provide code snippets in your technical tutorials.
+## 提供代码片段
 
-This will let your readers know what you are doing and what you are trying to achieve with that piece of code.
+在你的技术教程中提供代码片段总是有帮助的。
 
-Also, break down the code into smaller parts, as it will be easier for you to explain (rather than explaining all the code at once).
+这将让你的读者知道你在做什么并且你想用那段代码来实现什么。
 
-Use comments to describe why you have used that specific code there. Also, formatting the code properly will make it more understandable.
+同时，分隔代码成更小的部分，这将更易于你解释（而不是一次性解释所有的代码）。
 
-Here's an example:
+使用注释来描述你为什么使用了这段具体的代码。同时，正确格式化代码将使得它更好理解。
+
+这里是一个例子：
 
 ```Python
-# The comment below describes what the program does.
-# This program prints Hello, world!
+# 以下的注释描述了程序做的事情
+# 这个程序打印了 Hello, world!
 
 print('Hello, world!')
 ```
 
-Use Code Snippets like this.
+使用如这样的代码片段。
 
-## Wrapping up
+## 结语
 
-I hope this information helps you write clear and helpful technical tutorials. Follow these steps and you will be able to provide more value to your readers.
+我希望这个信息帮助你写出清晰且有用的技术教程。根据这些步骤，你将能提供更多价值给你的读者。
 
-Thank you for reading!
+感谢阅读！

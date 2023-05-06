@@ -1,11 +1,11 @@
 > -  原文地址：[How to Write Your First Technical Book: Tools, Techniques, and Resources for First-time Developer Authors](https://www.freecodecamp.org/news/how-to-write-your-first-technical-book/)
 > -  原文作者：[Shubham Chadokar](https://www.freecodecamp.org/news/author/schadokar/)
-> -  译者：narcissus91
+> -  译者：Narcissus91
 > -  校对者：
 
 ![How to Write Your First Technical Book: Tools, Techniques, and Resources for First-time Developer Authors](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/writing-cover.jpg)
 
-Recently, I wrote my first technical book – yes, I finally finished it. ?  
+最近，我写了我的第一本技术书籍——是的，我终于写完了。？
 This project was on my list for a long time. And now that I've finally completed it, I'd like to share my experience with everyone.
 
 In this post, I tried to document my complete journey of writing the book. I discuss everything motivation and hurdles to tools, techniques and resources.

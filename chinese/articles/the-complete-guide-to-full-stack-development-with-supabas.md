@@ -1,73 +1,73 @@
 > -  原文地址：[Full Stack Development with Next.js and Supabase – The Complete Guide](https://www.freecodecamp.org/news/the-complete-guide-to-full-stack-development-with-supabas/)
 > -  原文作者：[Nader Dabit](https://www.freecodecamp.org/news/author/nader/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![Full Stack Development with Next.js and Supabase – The Complete Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/supanext.png)
+![使用 Next.js 和 Supabase 进行全栈开发](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/supanext.png)
 
-[Supabase](https://twitter.com/supabase_io) is an open source Firebase alternative that lets you create a real-time backend in less than two minutes.
+[Supabase](https://twitter.com/supabase_io) 是一个Firebase的开源替代品，让你在不到两分钟的时间内创建一个实时后台。
 
-Supabase has continued to gain hype and adoption with developers in my network over the past few months. And a lot of the people I've talked to about it prefer the fact that it leverages a SQL-style database, and they like that it's open source, too.
+在过去的几个月里，Supabase继续通过我的网站获得开发人员的宣传和采用。和我交流过的很多人都喜欢它利用 SQL 风格的数据库这一事实，他们也喜欢它是开源的。
 
-When you create a project Supabase automatically gives you a Postgres SQL database, user authentication, and API. From there you can easily implement additional features like realtime subscriptions and file storage.
+当你创建一个项目时，Supabase会自动给你一个Postgres SQL数据库、用户认证和API。从那里你可以很容易地实现额外的功能，如实时订阅和文件存储。
 
-In this guide, you will learn how to build a full stack app that implements the core features that most apps require – like routing, a database, API, authentication, authorization, realtime data, and fine grained access control. We'll be using a modern stack including [React](https://reactjs.org/docs/getting-started.html), [Next.js](https://nextjs.org/), and [TailwindCSS](https://tailwindcss.com/).
+在本指南中，你将学习如何构建一个全栈应用程序，实现大多数应用程序需要的核心功能--如路由、数据库、API、认证、授权、实时数据和细粒度访问控制。我们将使用一个现代堆栈，包括[React](https://reactjs.org/docs/getting-started.html), [Next.js](https://nextjs.org/), 和 [TailwindCSS](https://tailwindcss.com/).
 
-I've tried to distill everything I've learned while myself getting up to speed with Supabase in as short of a guide as possible so you too can begin building full stack apps with the framework.
+我试图把我自己在使用Supabase的过程中所学到的东西提炼成一个尽可能简短的指南，这样你也可以开始用这个框架构建全栈应用。
 
-The app that we will be building is a multi-user blogging app that incorporates all of the types of features you see in many modern apps. This will take us beyond basic CRUD by enabling things like file storage as well as authorization and fine grained access control.
+我们将建立的应用程序是一个多用户博客应用程序，其中包含了你在许多现代应用程序中看到的所有类型的功能。这将使我们超越基本的CRUD，实现文件存储以及授权和细粒度的访问控制等功能。
 
-> You can find the code for the app we will be building [here](https://github.com/dabit3/supabase-next.js).
+>  你可以找到我们将要建立的应用程序的代码，[在这里](https://github.com/dabit3/supabase-next.js)。
 
-By learning how to incorporate all of these features together you should be able to take what you learn here and build out your own ideas. Understanding the basic building blocks themselves allows you to then take this knowledge with you in the future to put it to use in any way you see fit.
+通过学习如何将所有这些功能结合在一起，你应该能够利用你在这里学到的东西，建立你自己的想法。了解基本结构本身，你就可以在将来带着这些知识，以你认为合适的方式使用它。
 
-## Supabase Overview
+## Supabase概述
 
-### How to Build Full Stack Apps
+### 如何构建全栈式应用程序
 
-I'm fascinated by full stack Serverless frameworks because of the amount of power and agility they give to developers looking to build complete applications.
+我对全栈式无服务器框架非常着迷，因为它们为希望构建完整应用的开发者提供了大量的支持和敏捷性。
 
-Supabase brings to the table the important combination of powerful back end services and easy to use client-side libraries and SDKs for an end to end solution.
+Supabase将强大的后端服务与易于使用的客户端库和SDK结合起来，提供了一个端到端的解决方案。
 
-This combination lets you not only build out the individual features and services necessary on the back end, but easily integrate them together on the front end by leveraging client libraries maintained by the same team.
+这种组合使你不仅可以在后端建立起必要的个别功能和服务，而且可以通过利用同一团队维护的客户端库，在前端轻松地将它们整合在一起。
 
-Because Supabase is open source, you have the option to self-host or deploy your backend as a managed service. And as you can see, this will be easy for us to do on a free tier that does not require a credit card to get started with.
+由于Supabase是开源的，你可以选择自我托管或将你的后端部署为托管服务。而且，正如你所看到的，这对我们来说将很容易在一个不需要信用卡的，免费的基础设施上开始做。
 
-## Why Use Supabase?
+## 为什么使用Supabase?
 
-I've led the Front End Web and Mobile Developer Advocacy team at AWS, and written a book on building these types of apps. So I've had quite a bit of experience building in this space.
+我曾在AWS领导前端Web和移动开发者倡导团队，并写了一本关于构建这些类型的应用程序的书。所以我在这个领域有相当多的建设经验。
 
-And I think that Supabase brings to the table some really powerful features that immediately stood out to me when I started to build with it.
+我认为Supabase带来了一些非常强大的功能，当我开始使用它进行构建时，这些功能立即让我感到震惊。
 
-### Data access patterns
+### 数据访问方式
 
-One of the biggest limitations of some of the tools and frameworks I've used in the past is the lack of querying capabilities. What I like a lot about Supabase is that, since it's built on top of Postgres, it enables an extremely rich set of performant querying capabilities out of the box without having to write any additional back end code.
+我过去使用的一些工具和框架的最大限制之一是缺乏查询功能。我非常喜欢Supabase，因为它是建立在Postgres之上的，它能够实现一套极其丰富的、开箱即用的高性能查询功能，而不需要编写任何额外的后端代码。
 
-The client-side SDKs provide easy to use [filters](https://supabase.io/docs/reference/javascript/using-filters) and [modifiers](https://supabase.io/docs/reference/javascript/using-modifiers) to enable an almost infinite combination of data access patterns.
+客户端SDK提供了易于使用的[filters](https://supabase.io/docs/reference/javascript/using-filters) 和[modifiers](https://supabase.io/docs/reference/javascript/using-modifiers)，以实现几乎无限的数据访问模式的组合。
 
-Because the database is SQL, relational data is easy to configure and query, and the client libraries take it into account as a first class citizen.
+因为数据库是SQL，关系型数据很容易配置和查询，而且客户端库把它作为第一等公民来考虑。
 
-### Permissions
+### 权限
 
-When you get past "hello world" many types of frameworks and services fall over very quickly. This is because most real-world use cases extend far beyond the basic CRUD functionality you often see made available by these tools.
+当你写好 "hello world "时，许多类型的框架和服务很快就会被淘汰。这是因为大多数真实世界的需要远远超出了你经常看到的这些工具所提供的基本CRUD功能。
 
-The problem with some frameworks and managed services is that the abstractions they create are not extensible enough to enable easy to modify configurations or custom business logic. These restrictions often make it difficult to take into account the many one-off use cases that come up with building an app in the real-world.
+一些框架和管理服务的问题是，它们创建的抽象没有足够的扩展性，无法轻松修改配置或定制业务逻辑。这些限制往往使其难以考虑到在现实世界中构建应用程序时出现的许多一次性的用例。
 
-In addition to enabling a wide array of data access patterns, Supabase makes it easy to configure authorization and fine grained access controls. This is because it is simply Postgres, enabling you implement whatever [row-level security policies](https://www.postgresql.org/docs/10/ddl-rowsecurity.html) you would like directly from the built-in SQL editor (something we will cover here).
+除了实现广泛的数据访问模式外，Supabase还使配置授权和精细的访问控制变得容易。这是因为它是简单的Postgres，使你能够直接从内置的SQL编辑器中实现任何你想要的[row-level security policies(行级安全策略)](https://www.postgresql.org/docs/10/ddl-rowsecurity.html) 你可以直接从内置的SQL编辑器中获取你想要的信息(我们将在这里讨论这个问题)。
 
-### UI components
+### UI 组件
 
-In addition to the client-side libraries maintained by the same team building the other Supabase tooling, they also maintain a [UI component library](https://ui.supabase.io/) (beta) that allows you to get up and running with various UI elements.
+除了由构建其他Supabase工具的同一个团队维护的客户端库之外，他们还维护了一个[UI 组件库](https://ui.supabase.io/) (beta)使你能够使用各种UI元素来启动和运行。
 
-The most powerful is [Auth](https://ui.supabase.io/components/auth) which integrates with your Supabase project to quickly spin up a user authentication flow (which I'll be using in this tutorial).
+最强大的是[Auth](https://ui.supabase.io/components/auth)，它与你的Supabase项目集成，以快速启动一个用户认证流程(我将在本教程中使用它)。
 
-### Multiple authentication providers
+### 多种认证方式
 
 Supabase enables all of the following types of authentication mechanisms:
 
-1.  Username & password
-2.  Magic email link
-3.  Google
+1.  用户名和密码
+2.  电子邮件链接
+3.  谷歌
 4.  Facebook
 5.  Apple
 6.  GitHub
@@ -76,44 +76,43 @@ Supabase enables all of the following types of authentication mechanisms:
 9.  GitLab
 10.  Bitbucket
 
-### Open Source
+### 开源
 
-One of the biggest things it has going for it is that it is [completely open source](https://github.com/supabase) (yes the back end too). This means that you can choose either the Serverless hosted approach or to host it yourself.
+它最大的优点之一是[完全开源](https://github.com/supabase) (是的，后端也是)。 这意味着，你可以选择无服务器托管的方式，也可以自己托管。
 
-That means that if you wanted to, you could [run Supabase with Docker and host your app](https://supabase.io/docs/guides/self-hosting) on AWS, GCP, or Azure. This would eliminate the vendor lock-in issue you may run into with Supabase alternatives.
+这意味着，如果你愿意，你可以[用Docker运行Supabase，托管自己的应用程序](https://supabase.io/docs/guides/self-hosting) 在 AWS, GCP, or Azure上。这将消除你在使用Supabase时，避免云服务商锁定问题。
+## 如何开始使用Supabase
 
-## How to Get Started with Supabase
+### 项目设置
 
-### Project setup
-
-To get started, let's first create the Next.js app.
+为了开始，让我们首先创建Next.js应用程序。
 
 ```sh
 npx create-next-app next-supabase
 ```
 
-Next, change into the directory and install the dependencies we'll be needing for the app using either NPM or Yarn:
+接下来，进入目录并使用NPM或Yarn安装我们的应用程序所需的依赖。
+
 
 ```sh
 npm install @supabase/supabase-js @supabase/ui react-simplemde-editor easymde react-markdown uuid
 npm install tailwindcss@latest @tailwindcss/typography postcss@latest autoprefixer@latest
 ```
 
-Next, create the necessary Tailwind configuration files:
+接下来，创建必要的Tailwind配置文件:
 
 ```sh
 npx tailwindcss init -p
 ```
 
-Now update **tailwind.config.js** to add the Tailwind typography plugin to the array of plugins. We'll be using this plugin to style the markdown for our blog:
-
+现在更新**tailwind.config.js**，将Tailwind typography插件添加到插件数组中。我们将使用这个插件来为我们的博客设计标记。
 ```
 plugins: [
   require('@tailwindcss/typography')
 ]
 ```
 
-Finally, replace the styles in **styles/globals.css** with the following:
+最后，将**styles/globals.css**中的样式替换为以下内容。
 
 ```
 @tailwind base;
@@ -121,25 +120,25 @@ Finally, replace the styles in **styles/globals.css** with the following:
 @tailwind utilities;
 ```
 
-### Supabase project initialization
+### Supabase项目初始化
 
-Now that the project is created locally, let's create the Supabase project.
+现在项目已经在本地创建，让我们来创建Supabase项目。
 
-To do so, head over to [Supabase.io](https://supabase.io/) and click on **Start Your Project**. Authenticate with GitHub and then create a new project under the organization that is provided to you in your account.
+为此，请前往[Supabase.io](https://supabase.io/)，点击**Start Your Project**。通过GitHub账号完成认证，然后在账户中提供给你的组织下创建一个新项目。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/myaccountsorg.jpg)
 
-Give the project a **Name** and **Password** and click **Create new project**.
+给项目一个**Name**和**Password**，然后点击**Create new project**。
 
-It will take approximately 2 minutes for your project to be created.
+你的项目将需要大约2分钟的时间来创建。
 
-### How to create a database table in Supabase
+### 如何在Supabase中创建一个数据库表
 
-Once you've created your project, let's go ahead and create the table for our app along with all of the permissions we'll need. To do so, click on the **SQL** link in the left hand menu.
+当你创建了你的项目，让我们继续为我们的应用程序创建表，以及我们需要的所有权限。要做到这一点，请点击左边菜单中的**SQL**链接。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Screen-Shot-2021-06-06-at-6.07.00-PM.png)
 
-In this view, click on **Query-1** under **Open queries** and paste in the following SQL query and click **RUN**:
+在这个视图中，点击**Query-1**下的 **Open queries**，粘贴以下SQL查询，并点击 **RUN**。
 
 ```
 CREATE TABLE posts (
@@ -166,34 +165,34 @@ create policy "Posts are public." on posts for
     select using (true);
 ```
 
-This will create the `posts` table that we'll be using for the app. It also enabled some row level permissions:
+这将创建我们将在应用程序中使用的`posts`表。它还启用了一些行级(row)权限:
 
--   All users can query for posts
--   Only signed in users can create posts, and their user ID must match the user ID passed into the arguments
--   Only the owner of the post can update or delete it
+-   所有用户都可以查询帖子
+-   只有已登录的用户可以创建帖子，他们的用户ID必须与传入参数的用户ID一致
+-   只有帖子的主人可以更新或删除它
 
-Now, if we click on the **Table editor** link, we should see our new table created with the proper schema.
+现在，如果我们点击**Table editor**链接，我们应该看到我们的新表以适当的模式创建。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Screen-Shot-2021-06-06-at-6.11.49-PM.png)
 
-That's it! Our back end is ready to go now and we can start building out the UI. Username + password authentication is already enabled by default, so all we need to do now is wire everything up on the front end.
+这这样! 我们的后端已经准备好了，我们可以开始建立用户界面了。用户名+密码认证已经默认启用，所以我们现在需要做的就是在前端把一切都连接起来。
 
-### Next.js Supabase configuration
+### Next.js Supabase 配置
 
-Now that the project has been created, we need a way for our Next.js app to know about the back end services we just created for it.
+现在项目已经创建，我们需要一种方法让我们的Next.js应用程序知道我们刚刚为它创建的后端服务。
 
-The best way for us to configure this is using environment variables. Next.js allows environment variables to be set by creating a file called **.env.local** in the root of the project and storing them there.
+对我们来说，配置的最好方法是使用环境变量。Next.js允许通过在项目根部创建一个名为 **.env.local** 的文件来设置环境变量，并将它们存储在那里。
 
-In order to expose a variable to the browser you have to prefix the variable with `NEXT_PUBLIC_`.
+为了向浏览器暴露一个变量，你必须在变量前加上 `NEXT_PUBLIC_`。
 
-Create a file called **.env.local** at the root of the project, and add the following configuration:
+在项目的根部创建一个名为**.env.local**的文件，并添加以下配置。
 
 ```
 NEXT_PUBLIC_SUPABASE_URL=https://app-id.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-public-api-key
 ```
 
-You can find the values of your API URL and API Key in the Supabase dashboard settings:
+你可以在Supabase仪表板的设置中找到你的API URL和API密钥的值:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/appurls.jpg)
 
@@ -208,11 +207,11 @@ export const supabase = createClient(
 )
 ```
 
-Now we will be able to import the `supabase` instance and use it anywhere in our app.
+现在我们将能够导入`supabase`实例并在我们的应用程序中的任何地方使用它。
 
-Here's an overview of what it looks like to interact with the API using the Supabase JavaScript client.
+下面是使用Supabase JavaScript客户端与API互动的概况。
 
-**Querying for data:**
+**查询数据:**
 
 ```javascript
 import { supabase } from '../path/to/api'
@@ -222,7 +221,7 @@ const { data, error } = await supabase
   .select()
 ```
 
-**Creating new items in the database:**
+**在数据库中创建新条目:**
 
 ```javascript
 const { data, error } = await supabase
@@ -237,9 +236,9 @@ const { data, error } = await supabase
   ])
 ```
 
-As I mentioned earlier, the [filters](https://supabase.io/docs/reference/javascript/using-filters) and [modifiers](https://supabase.io/docs/reference/javascript/using-modifiers) make it really easy to implement various data access patterns and selection sets of your data.
+正如我前面提到的,[filters](https://supabase.io/docs/reference/javascript/using-filters) 和 [modifiers](https://supabase.io/docs/reference/javascript/using-modifiers)使得实现各种数据访问模式和你的数据的选择集变得非常容易。
 
-**Authentication – signing up:**
+**认证 – 注册:**
 
 ```javascript
 const { user, session, error } = await supabase.auth.signUp({
@@ -248,7 +247,7 @@ const { user, session, error } = await supabase.auth.signUp({
 })
 ```
 
-**Authentication – signing in:**
+**认证 – 登录:**
 
 ```javascript
 const { user, session, error } = await supabase.auth.signIn({
@@ -257,19 +256,20 @@ const { user, session, error } = await supabase.auth.signIn({
 })
 ```
 
-In our case we won't be writing the main authentication logic by hand, we'll be using the Auth component from [Supabase UI](https://ui.supabase.io/components/auth).
+在我们的案例中，我们不会手工编写主要的认证逻辑，我们将使[Supabase UI](https://ui.supabase.io/components/auth)中的Auth组件。
 
-## How to Build the App
+## 如何构建应用程序
 
-Now let's start building out the UI!
+现在，让我们开始构建用户界面吧！
 
-To get started, let's first update the app to implement some basic navigation and layout styling.
+为了开始，让我们首先更新应用程序，实现一些基本的导航和布局风格。
 
-We will also configure some logic to check if the user is signed in, and show a link for creating new posts if they are.
+我们还将配置一些逻辑，以检查用户是否已经登录，并在他们登录后显示一个创建新帖子的链接。
 
-Finally we'll implement a listener for any `auth` events. And when a new `auth` event occurs, we'll check to make sure there is currently a signed in user in order to show or hide the **Create Post** link.
+最后，我们将为任何`auth'事件实现一个监听器。当一个新的 "Auth "事件发生时，我们将检查以确保当前有一个登录的用户，以便显示或隐藏 **Create Post** 的链接。
 
-Open **\_app.js** and add the following code:
+
+打开文件 **\_app.js**，添加以下代码:
 
 ```javascript
 // pages/_app.js
@@ -320,9 +320,9 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 ```
 
-### How to make a user profile page
+### 如何制作一个用户资料页
 
-Next, let's create the **profile** page. In the pages directory, create a new file named **profile.js** and add the following code:
+接下来，让我们创建**profile**页面。在页面目录中，创建一个名为**profile.js**的新文件，并添加以下代码:
 
 ```javascript
 // pages/profile.js
@@ -355,9 +355,10 @@ export default function AuthProfile() {
 }
 ```
 
-The profile page uses the [`Auth`](https://ui.supabase.io/components/auth) component from the [Supabase UI library](https://ui.supabase.io/components/auth). This component will render a "sign up" and "sign in" form for **unauthenticated** users, and a basic user profile with a "sign out" button for **authenticated** users. It will also enable a magic sign in link.
+简介页使用了[`Auth`](https://ui.supabase.io/components/auth)组件，源自[Supabase UI library](https://ui.supabase.io/components/auth)。 这组件将渲染出一个有"sign up" 和 "sign in" 表单(form)为 **未认证** 用户, 一个带有"sign out" 按钮的基本用户资料为**已认证**用户。 它还将启用一个有随机数(magic)的登录链接。
 
-### How to create new posts
+
+### 如何创建新的帖子
 
 Next, let's create the **create-post** page. In the pages directory, create a page named **create-post.js** with the following code:
 
@@ -419,23 +420,23 @@ function CreatePost() {
 export default CreatePost
 ```
 
-This component renders a Markdown editor, allowing users to create new posts.
+这个组件渲染了一个Markdown编辑器，允许用户创建新的帖子。
 
-The `createNewPost` function will use the `supabase` instance to create new posts using the local form state.
+`createNewPost`函数将使用`supabase`实例，使用本地表单状态创建新的帖子。
 
-You may notice that we are not passing in any headers. This is because if a user is signed in, the Supabase client libraries automatically include the access token in the headers for a signed in user.
+你可能注意到，我们没有传入任何消息头(headers)。这是因为如果用户已经登录，Supabase客户端库会自动将访问令牌包含在已登录用户的消息头(headers)中。
 
-### How to view a single post
+### 如何查看单个帖子
 
-We need to configure a page to view a single post.
+我们需要配置一个页面来查看单个帖子。
 
-This page uses `getStaticPaths` to dynamically create pages at build time based on the posts coming back from the API.
+这个页面使用`getStaticPaths`来在构建时根据从API回来的帖子动态地创建页面。
 
-We also use the `fallback` flag to enable fallback routes for dynamic SSG page generation.
+我们还使用`fallback`标志来启用动态SSG页面生成的返回路径。
 
-We use `getStaticProps` to enable the Post data to be fetched and then passed into the page as props at build time.
+我们使用`getStaticProps`使帖子数据被获取，然后在构建时作为props传入页面。
 
-Create a new folder in the **pages** directory called **posts** and a file called **\[id\].js** within that folder. In **pages/posts/\[id\].js**, add the following code:
+在**pages**目录下创建一个名为**posts**的新文件夹， 并在该文件夹中创建一个名为 **[id\].js**的文件。在**pages/posts/[id\].js**，添加以下代码。
 
 ```javascript
 // pages/posts/[id].js
@@ -485,9 +486,9 @@ export async function getStaticProps ({ params }) {
 }
 ```
 
-### How to query for and render the list of posts
+### 如何查询和渲染帖子列表
 
-Next, let's update **index.js** to fetch and render a list of posts:
+接下来，让我们更新**index.js**，以获取并渲染一个帖子的列表:
 
 ```javascript
 // pages/index.js
@@ -528,37 +529,37 @@ export default function Home() {
 }
 ```
 
-### Let's test it out
+### 让我们来测试一下
 
-We now have all of the pieces of our app ready to go, so let's try it out.
+现在我们的应用程序的所有部分都准备好了，所以让我们来试试。
 
-To run the local server, run the `dev` command from your terminal:
+要运行本地服务器，从你的终端运行`dev`命令。
 
 ```sh
 npm run dev
 ```
 
-When the app loads, you should see the following screen:
+当应用程序加载时，你应该看到以下画面:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/SS1-1.png)
 
-To sign up, click on **Profile** and create a new account. You should receive an email link to confirm your account after signing up.
+要注册，请点击**Profile**并创建一个新账户。你应该在注册后收到一个电子邮件链接，以确认你的账户。
 
-You can also create a new account by using the magic link.
+你也可以通过使用随机数(magic)的链接创建一个新账户。
 
-Once you're signed in, you should be able to create new posts:
+当你登录后，你应该能够创建新的帖子:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/SS2.png)
 
-Navigating back to the home page, you should be able to see a list of the posts that you've created and be able to click on a link to the post to view it:
+回到主页，你应该能够看到你已经创建的帖子的列表，并能够点击帖子的链接来查看它。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/SS3.png)
 
-## How to Edit Posts
+## 如何编辑帖子
 
-Now that we have the app up and running, let's learn how to edit posts. To get started with this, let's create a new view that will fetch only the posts that the signed in user has created.
+现在我们已经启动并运行了应用程序，让我们来学习如何编辑帖子。为了开始学习，让我们创建一个新的视图(view)，它将只获取已登录用户创建的帖子。
 
-To do so, create a new file named **my-posts.js** in the root of the project with the following code:
+为此，在项目的根目录创建一个名为**my-posts.js**的新文件，代码如下。
 
 ```javascript
 // pages/my-posts.js
@@ -609,13 +610,13 @@ export default function MyPosts() {
 }
 ```
 
-In the query for the `posts`, we use the user `id` to select only the posts created by the signed in user.
+在对 `post` 的查询中，我们使用用户 `id`，选择由登录用户创建的帖子。
 
-Next, create a new folder named **edit-post** in the **pages** directory. Then, create a file named **\[id\].js** in this folder.
+接下来，在**pages**目录下创建一个名为**edit-post**的新文件夹。然后，在这个文件夹中创建一个名为 **[id\].js** 的文件。
 
-In this file, we'll be accessing the `id` of the post from a route parameter. When the component loads, we will then use the post id from the route to fetch the post data and make it available for editing.
+在这个文件中，我们将从一个路由参数中获取访问帖子的`id'。当组件加载时，我们将使用来自路由的帖子ID来获取帖子数据，并使其可用于编辑。
 
-In this file, add the following code:
+在这个文件中，添加以下代码:
 
 ```javascript
 // pages/edit-post/[id].js
@@ -680,7 +681,7 @@ function EditPost() {
 export default EditPost
 ```
 
-Now, add a new link to our navigation located in **pages/\_app.js**:
+现在，在位于**pages/\_app.js**的导航中添加一个新链接。:
 
 ```javascript
 // pages/_app.js
@@ -693,17 +694,17 @@ Now, add a new link to our navigation located in **pages/\_app.js**:
 }
 ```
 
-When running the app, you should be able to view your own posts, edit them, and delete them from the updated UI.
+当运行应用程序时，你应该能够查看你自己的帖子，编辑它们，并从更新用户界面删除它们。
 
-### How to enable real-time updates
+### 如何启用实时更新
 
-Now that we have the app running it's trivial to add real-time updates.
+现在，我们已经运行了应用程序，添加实时更新是很容易的。
 
-By default, Realtime is disabled on your database. Let's turn on Realtime for the **posts** table.
+默认情况下，数据库中的Realtime是禁用的。让我们为**posts**表打开Realtime。
 
-To do so, open the app dashboard and click on **Databases** -> **Replication** -> **0 Tables** (under Source). Toggle on Realtime functionality for the **posts** table. [Here](https://supabase.io/docs/guides/api#managing-realtime) is a video walkthrough of how you can do this for clarity.
+要做到这一点，打开应用程序仪表板并点击 **Databases** -> **Replication** -> **0 Tables** (Source下面)。 打开 **posts** 表Realtime功能。 [这里](https://supabase.io/docs/guides/api#managing-realtime) 是一个关于如何做的视频演练，以使其清晰明了。
 
-Next, open **src/index.js** and update the `useEffect` hook with the following code:
+接下来，打开 **src/index.js**，用以下代码更新 `useEffect` hook:
 
 ```
   useEffect(() => {
@@ -716,21 +717,21 @@ Next, open **src/index.js** and update the `useEffect` hook with the following c
   }, [])
 ```
 
-Now, we will be subscribed to realtime changes in the **posts** table.
+现在，我们将订阅**posts**表中的实时变化。
 
-> The code for the app is located [here](https://github.com/dabit3/supabase-next.js).
+> 该应用程序的代码位于[这里](https://github.com/dabit3/supabase-next.js).
 
-## Next Steps
+## 下一步
 
-By now you should have a good understanding of how to build full stack apps with Supabase and Next.js.
+现在你应该对如何用Supabase和Next.js构建全栈应用有了一定的了解。
 
-If you'd like to learn more about building full stack apps with Supabase, I'd check out the following resources.
+如果你想了解更多关于用Supabase构建全栈应用的信息，我建议查看以下资源。
 
--   [Supabase docs](https://supabase.io/docs)
--   [Supabase example projects](https://github.com/supabase/supabase/tree/master/examples)
+-   [Supabase 文档](https://supabase.io/docs)
+-   [Supabase 示例项目](https://github.com/supabase/supabase/tree/master/examples)
 -   [Is Supabase Legit? Firebase Alternative Breakdown](https://www.youtube.com/watch?v=WiwfiVdfRIc)
--   [Supabase Auth Deep Dive Part 1: JWTs](https://www.youtube.com/watch?v=v3Exg5YpJvE)
--   [Build in Public 001 - Building a Next.js + Supabase Tutorial](https://www.youtube.com/watch?v=p561ogKZ63o)
--   [Auth Deep Dive](https://supabase.io/docs/learn/auth-deep-dive/auth-deep-dive-jwts)
--   [Supabase and Sveltekit](https://www.youtube.com/watch?v=j4AV2Liojk0)
--   [Using Supabase in Replit with node.js](https://www.youtube.com/watch?v=lQ5iIxaYduI)
+-   [Supabase Auth 深入探讨第 1 部分：JWT](https://www.youtube.com/watch?v=v3Exg5YpJvE)
+-   [Build in Public 001 - 构建 Next.js + Supabase 教程](https://www.youtube.com/watch?v=p561ogKZ63o)
+-   [身份验证深入了解](https://supabase.io/docs/learn/auth-deep-dive/auth-deep-dive-jwts)
+-   [Supabase 和 Sveltekit](https://www.youtube.com/watch?v=j4AV2Liojk0)
+-   [ 在Replit上使用Supabase和nodejs](https://www.youtube.com/watch?v=lQ5iIxaYduI)

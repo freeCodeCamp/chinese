@@ -3,272 +3,273 @@
 > -  译者：Narcissus91
 > -  校对者：
 
-![How to Write Your First Technical Book: Tools, Techniques, and Resources for First-time Developer Authors](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/writing-cover.jpg)
+![开发人员如何写自己的第一本技术类书籍——工具、技术和资源](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/writing-cover.jpg)
 
-最近，我写了我的第一本技术书籍——是的，我终于写完了。？
-This project was on my list for a long time. And now that I've finally completed it, I'd like to share my experience with everyone.
+最近，我写完了我的第一本技术类书籍——是的，我终于写完了。？
 
-In this post, I tried to document my complete journey of writing the book. I discuss everything motivation and hurdles to tools, techniques and resources.
+写书这件事已经躺在我的待办事项清单里很久了。现在我终于把它完成了，想要跟大家分享一下我的经验。
 
-My book focuses on the [Hyperledger Composer Blockchain](https://schadokar.dev/ebooks/) tool. It is completely free and right now is only available in PDF format.
+在这篇帖子里，我会尽量记录我的整个写作历程。所有我都会谈到，包括我的动机、遇到的难关以及用到的工具、技术和资源。
 
-All these points are equally helpful for technical blog writing. So let's get started and dive into what I learned.
+我的书重点讲的是[Hyperledger Composer区块链](https://schadokar.dev/ebooks/)工具。这个工具是完全免费的，目前仅支持PDF格式。
 
-# Motivation
+帖子里提到的所有要点也同样有助于技术博客写作。所以，咱们开始吧，一起深入了解我到底学到了什么。
 
-I have been writing technical articles and tutorials since late 2018. By now I am quite comfortable with the process of writing an article or a tutorial. I understand how to approach the article and which tools I should use.
+# 动机
 
-But when it comes to book writing – and especially a technical book – the arena is quite different.
+从2018年年底我就开始写技术文章和教程了。到现在，我已经对写文章或教程的流程得心应手了。我知道自己该如何写好一篇文章，以及应该使用哪种工具来写作。
 
-My motivation was curiosity. I wondered how authors write books. What is their thought process? What tools do they use? And of course, how does it feel to write a book? ?
+但，如果说到写一本书—尤其是技术书—这是很不同以往的。
 
-I am a Software Engineer and I have been working on Blockchain since 2018. I have learned about different blockchains like Ethereum and Hyperledger Fabric. I have also used many tools like [truffle](https://www.trufflesuite.com/), [remix](https://remix.ethereum.org/) and [hyperledger composer](https://hyperledger.github.io/composer/).
+我写这本书的动机是好奇心。我想知道那些作者是如何写书的。他们的思考过程是怎样的？他们会用到什么工具？当然，我还想知道写一本书是什么样的体验？？
 
-There were a few different things I wanted to write about, like **Ethereum** or **Hyperledger Fabric**.
+我是一名软件工程师，从2018年起我就一直从事区块链相关工作。我了解过不同的区块链，比如Ethereum和Hyperledger Fabric。我也用过很多工具，比如[truffle](https://www.trufflesuite.com/)、[remix](https://remix.ethereum.org/)和[hyperledger composer](https://hyperledger.github.io/composer/)。
 
-But since it was my first book, these topics were not ideal for me. They would've required a lot more time and effort than I could give. So, I picked a simple one: Hyperledger Composer.
+有好多不同的东西我都想写，像**Ethereum**或者**Hyperledger Fabric**。
 
-# First Hurdle
+但因为这是我的第一本书，这些主题对我来说都不太适合。它们会占据我过多的时间和精力。所以，我选择了一个简单的主题：Hyperledger Composer。
 
-Before getting started, I wondered which tool or editor I should use to write the book.
+# 第一道难关
 
-Should I write in MS Word, Google Docs, or use something else?  
-The major issue was how to format code snippets correctly. These editors are not designed for technical writing.
+在开始之前，我犹豫该用哪种工具或编辑器来写书。
 
-There are different work arounds to add code, but it would require additional formatting.
+我应该用Word、Google Docs还是其它什么工具呢？ 
+主要的问题是如何正确排版代码片段。这些编辑器都不是为技术写作设计的。
 
-I read lots of articles about **what good tools are available for technical book writing.** I tried many of them, but I wasn't happy with any of them. I wasted a lot of time finding the perfect tool.
+有不同的添加代码方法，但那需要额外的排版工作。
 
-In the end, I realized that editors only ease the writing process and make managing the book simpler. But what really matters is the content. So, I stopped searching for the perfect editor and went to the basics.
+我读了很多关于**有哪些技术书籍写作工具好用**的文章。我试用了很多工具，但都没有让我满意的。我浪费了很多时间去寻找完美的工具。
 
-## The basics: VS Code
+最后，我意识到，编辑器只是让写作过程更简便，让书籍管理更简化。但真正重要的是内容。所以，我不再寻找完美的编辑器，而是转向了基础的工具。
 
-I used my favourite code editor to write the book. Yes, **VS Code** ?.
+## 基础工具：VS Code
 
-After spending days searching around on the Internet, not a single article suggested that you need any specific tool or editor to write a technical book. VS Code or Atom would be more than enough.
+我用我最喜欢的代码编辑器来写书。是的，**VS Code**？。
 
-I wrote the whole book in **VS Code** in my favourite markdown format. To make my writing easier, I used a couple of markdown plugins like **Markdown All in One** and **Markdown Preview Enhanced**.
+我花了几天时间在网上搜索，没有一篇文章建议说你需要任何特定的工具或编辑器来写技术书籍。VS Code或者Atom就足够了。
 
-The first plugin helps you write markdown while the second helps in preview mode. It shows how the markdown will look and behave after converting it into HTML or other formats.
+我在**VS Code**里用我最喜欢的Markdown格式写完了整本书。为了让写作更容易，我用到了一些Markdown插件，比如：**Markdown All in One**和**Markdown Preview Enhanced**。
 
-**Markdown All in One** also has a preview mode, but **Markdown Preview Enhanced** has multiple themes and options to export the markdown file in HTML, PDF, and other readable formats like epub or Mobi.
+第一个插件帮助写作，第二个插件帮助预览。可以看到Markdown转换为HTML或其它格式后是什么样子，以及会有什么变化。
 
-Just a heads up – those other formats require that you install **Pandoc** on your machine.
+**Markdown All in One**也有预览模式，但**Markdown Preview Enhanced**有多个主题和选项，可以将Markdown文件以HTML、PDF和其它可读格式如epub或Mobi导出。
 
-> I am a Windows User. For Mac Users, I found there are many great editors available like [bear](https://bear.app/), [ulysses](https://ulysses.app/) and many others.
+提醒一下—想导出其它文档格式需要你在电脑上安装**Pandoc**。
 
-Recently, I discovered that there are many markdown editors available on **Windows** and **MacOS** which you can use for book writing. Check out [Notion](https://www.notion.so/), [Typora](https://typora.io/), [iA Writer](https://ia.net/writer), and [SimpleNote](https://simplenote.com/).
+> 我是Windows系统用户，对于Mac系统用户，我发现还可以选择很多很棒的编辑器，比如[bear](https://bear.app/)和[ulysses](https://ulysses.app/)等等。
 
-Bottom line **Don't waste too much time finding the perfect editor**. Just start writing in your editor of choice. With time you'll figure it out.
+最近，我发现了很多在**Windows系统**和**MacOS系统**都能用来写书的Markdown编辑器。搜一搜[Notion](https://www.notion.so/)、[Typora](https://typora.io/)、[iA Writer](https://ia.net/writer)和[SimpleNote](https://simplenote.com/)。
 
-# Second Hurdle
+划重点：**不要浪费太多时间去寻找完美的编辑器**。选择了一款编辑器就开始写作。慢慢你就会懂得的。
 
-Then I started asking myself, from where should I start writing? How should I write? How should I approach it?
+# 第二道难关
 
-In short, I wanted to know how exactly I should write this book so that the reader would get the most out of it.
+然后，我开始问自己，我应该从哪儿开始写呢？我应该怎么写呢？我应该怎么做呢？
 
-These questions made me scratch my head a lot. In the beginning, I changed my approach 4 or 5 times.
+简而言之，我想知道我到底该如何写这本书，这样读者就能从书中得到最大的收获。
 
-At this point, I suggest spending some time to really ponder your approach. Because once you're in the middle of the book, it is not going to be an easy task to change it.
+这些问题让我抓耳挠腮了很久。一开始，我改了有4、5次办法。
 
-### Ask the questions
+在这一点上，我的建议是花一点时间真正思考你的方法。因为一旦你写到中途，想要做更改就不容易了。
 
-I asked myself these questions about the book and noted my thoughts down.
+### 问问题
 
-1.  Who is my target audience? Are they beginner, intermediate, or expert?
-2.  Do they need some prior knowledge of the subject?
-3.  How should I organize the book?
-4.  How should I name the files or chapters so it's easy to find each topic?
-5.  How should I track my progress?
-6.  How should I maintain the versions of the chapters and drafts of the book? There will be a number of occasions that last edit was actually much better than the current version.
+关于这本书，我问了自己这些问题，并记下了我的想法。
 
-These are a few basic questions which I asked, and they were helpful.
+1.  我的目标读者是谁？他们是小白、中级选手还是大神？
+2.  他们需要一些主题背景知识吗？
+3.  我该如何组织这本书？
+4.  我该如何为文件或者章节命名，便于查找每个主题？
+5.  我该如何跟踪自己的进展？
+6.  我该如何维护书中各章节和草稿的版本？很多时候，上一版内容其实比当前版本好得多。
 
-## My approach
+以上就是我问自己的一些基本问题，这些问题很有用。
 
-I'll now describe the approach I took to writing this book.
+## 我的方法
 
-### Create a todo list
+现在我要讲讲我在写这本书时用到的方法。
 
-First, I created a to-do list. In this list, I noted down all the main points, topics, sub-topics, references, preface, cover, title and so on.
+### 创建一个待办事项清单（to-do list）
 
-I pretty much added all the thoughts that came to mind about the book.
+首先，我建了一个待办事项清单。在清单上我记下了所有的要点、主题、副主题、参考文献、序言、封面、书名等等。
 
-I would suggest creating 2 todo lists: one on paper and the same as a soft copy.
+我把所有想到的关于这本书的想法都尽可能加到清单里。
 
-First, note down all the points on paper. Once you note down everything, read it 2-3 times. Then whatever new ideas pop into your head, note them down.
+我建议创建2份同样的待办事项清单：一份纸质档，一份电子档。
 
-For example, if you think about how you're going to explain a particular topic, note it down. It will make your work much easier. Then when you start writing about that topic, you can refer to these notes.
+首先，在纸上记下所有要点。所有内容都记下后，再阅读2至3遍。然后，不管脑子里闪现什么新的点子，都记到纸上。
 
-Once you have a **todo** list on paper, create a soft copy and save all the points in chronological order.
+例如，如果你想到了将如何解释某个特殊的主题，就把想法记下来。这会让你的写作变得更容易。后面在你开始写这个主题时，你就可以参考这些笔记。
 
-This is what my **todo** list used to look like:
+有了纸质版**待办事项**清单后，你就再创建一个电子版，并按时间顺序保存所有要点。
 
-#### Tasks
+这就是我以前做的**待办事项** 清单：
 
--   \[x\] Index
--   \[x\] Cover
--   \[x\] Title
--   \[x\] Subtitle
--   \[x\] Preface
--   \[x\] What is Blockchain and Hyperledger Fabric?
--   \[x\] Introduction to Hyperledger Composer
--   \[x\] Environment Requirements and Setup
+#### 任务
+
+-   \[x\] 索引
+-   \[x\] 封面
+-   \[x\] 标题
+-   \[x\] 副标题
+-   \[x\] 前言
+-   \[x\] 什么是Blockchain和Hyperledger Fabric？
+-   \[x\] 介绍Hyperledger Composer
+-   \[x\] 环境要求和设置
     -   \[x\] Azure
     -   \[x\] AWS
     -   \[x\] GCP
--   \[x\] Project Objective
--   \[x\] Project Setup in Composer
--   \[x\] Model File
-    -   \[x\] Definition
-    -   \[x\] Modeling Language
-    -   \[x\] project code
--   \[x\] Script File
-    -   \[x\] Definition
-    -   \[x\] syntax
-    -   \[x\] project code
--   \[x\] Query File
-    -   \[x\] Definition
-    -   \[x\] Query Language
-    -   \[x\] project code
--   \[x\] ACL File
-    -   \[x\] Definition
-    -   \[x\] syntax
-    -   \[x\] project code
--   \[x\] Deployment in Composer Playground
--   \[x\] Testing in Composer Playground
--   \[x\] Export the .bna
--   \[x\] Composer Rest Server
--   \[x\] Frontend
--   \[x\] Conclusion
--   \[x\] References
--   \[x\] About Me
--   \[x\] Grammar Check 1
--   \[x\] Grammar Check 2
--   \[x\] Read the draft
--   \[x\] Read the final draft
--   \[x\] PDF format
--   \[x\] Add page no. to PDF
--   \[x\] New chapter starts from the new page
--   \[x\] Thank You Note
--   \[x\] License
--   \[x\] End cover
+-   \[x\] 项目目标
+-   \[x\] Composer中的项目设置
+-   \[x\] 模型文件
+    -   \[x\] 定义
+    -   \[x\] 建模语言
+    -   \[x\] 项目代码
+-   \[x\] 脚本文件
+    -   \[x\] 定义
+    -   \[x\] 语法
+    -   \[x\] 项目代码
+-   \[x\] 查询文件
+    -   \[x\] 定义
+    -   \[x\] 查询语言
+    -   \[x\] 项目代码
+-   \[x\] ACL文件
+    -   \[x\] 定义
+    -   \[x\] 语法
+    -   \[x\] 项目代码
+-   \[x\] 在Composer Playground中部署
+-   \[x\] 在Composer Playground中测试
+-   \[x\] 导出.bna
+-   \[x\] Composer Rest服务器
+-   \[x\] 前端
+-   \[x\] 总结
+-   \[x\] 参考文献
+-   \[x\] 关于我
+-   \[x\] 一查语法
+-   \[x\] 复查语法
+-   \[x\] 阅读草稿
+-   \[x\] 阅读最后的草稿
+-   \[x\] PDF格式
+-   \[x\] 在PDF中添加页码
+-   \[x\] 新章节另起一页
+-   \[x\] 感谢信
+-   \[x\] 许可协议
+-   \[x\] 封底
 
-I used markdown format for my **todo** list. You can use whatever format is easiest for you.
+我是用的Markdown格式写的**待办事项**你可以选择任何自己觉得最方便的格式来写。
 
-## Start Small but Do Start
+## 从小处着手，但一定要开始
 
-Keep in mind that you don't need to write about each topic in order. There might be many topics which depend on previous topics, but others won't.
+记住，你不必按顺序写每个主题。有很多主题可能要依赖于之前的主题，但其余主题并不依赖。
 
-Also, you don't have to finish writing about the topic all at once either. Whatever topics you are feeling comfortable with, start there.
+另外，你也不必一次性写完所有主题。哪个主题你觉得写来顺畅，就从哪个主题开始写。
 
-Your goal should be to start the book. Aim to write 10-20% of your book within a couple of weeks. Once you start, it will keep reminding you that you have to complete the book. In time you'll realize that this turns into a great motivator.
+你的目标应该是开始行动起来写书。计划在几周内写10%-20%的量。一旦开始了，就会有声音不断提醒你，你必须写完这本书。久而久之，你就会发现，这变成了一个巨大的动力。
 
-If there is a topic you don't know as much about, don't worry. Don't hesitate to get help from the Internet. Read how other people explained it. Take inspiration and then write about it in your way.
+如果主题不熟悉，不用担心。尽管去互联网上寻求帮助。读一读别人是怎么阐述的，从中获得灵感，然后用你自己的方式写出来。
 
-And remember – If you use any content from other people's work, make sure you inform them, cite it properly in your text, and list their work as a reference at the end.
+请记住—如果你要使用他人作品中的任何内容，一定要通知原作者。在你的书里做适当引用，并在最后的参考文献中，列出原作者的作品。
 
-> Consider this as a professional courtesy. -- John Wick ?
+> 将此视为一种专业的礼节。--约翰威克？
 
-## Chronological Order
+## 编排顺序
 
-It took me a while to understand the importance of having a file naming convention.
+我花了一段时间才懂得文件命名规范的重要性。
 
-At first I started following a _Chapter 1_, _Chapter 2_ naming convention for each topic. It turned out to be a terrible idea.
+最开始，每个主题我都用 _第一章_、_第二章_ 这种命名规范来命名。结果发现这种方式很糟糕。
 
-The problem with this naming scheme is that you have to maintain a separate file where you explain what is in the file. Or you have to open each file to see what it contains.
+这种命名方案的问题是你必须维护一个单独的说明性文件。或者你必须打开每个文件来确认里面写的是什么。
 
-Another problem is that if you add a new chapter in between then you have to rename all the following chapters.
+另一个问题是如果你在章节之间新增了一个章节，你就不得不给后面所有的章节重新命名。
 
-There are two conventions I found helpful, but each has its disadvantages.
+我发现了2种有用的命名规范，但也各有缺点。
 
-One option is to use **chapternumber-topic**: Name the file as a chapter number followed by the topic of the chapter. Like this **10-Introduction-of-Blockchain**.
+一种选择是使用**章节编号-主题**：文件命名为一个章节编号跟上该章节的主题。比如这样**第10章-区块链介绍**。
 
-Name the chapter number in 2 digits. This will help you add sub-sections to the same chapter in different files. Like this **11-History-of-Blockchain**.
+章节编号用2位数。这有助于在不同文件中为同一章节增加子章节。比如这样**第11章-区块链的历史**。
 
-Another benefit of this naming convention is it will show all the files in the order of your book chapters.
+这种命名方式的另一个好处是它将按你书籍章节的顺序显示所有文件。
 
-**Disadvantage:** Adding new chapter in between requires that you rename all the following chapters.
+**缺点：** 在章节之间新增一个章节时，你需要给后面所有的章节重新命名。
 
-The second option is to use **filename as topic**: Name all the files as the topic name. This will give you the freedom to write topics in random order. And you can maintain the order of the book in your todo list.
+第二个选择是使用**文件名作为主题**：将所有文件以主题名命名。这样你可以按任意顺序写主题。而且你可以保持书中的顺序与你待办事项清单中的顺序一致。
 
-**Disadvantage:** All the files will be arranged in alphabetical order. After 10-15 files it will be difficult to track all the files, and it'll be harder to put them together in a draft.
+**缺点：** 所有文件都将按字母顺序排列。文件数达10至15个之后，就会变得难以追踪所有文件，而且也更难将这些文件组合在一起形成草稿。
 
-In the end, I followed the second method. It worked alright for me.
+最后，我选择了第二种方式。对我来说还效果还不错。
 
-To create a draft, I created a Node.js script. In this script, I entered all the topics in an array. Then I created a draft file and appended all the topics in it. Of course by reading them first ?. A few perks of being a Software Engineer ?.
+为了创建草稿，我创建了一个Node.js脚本。在这个脚本里，我将所有主题输入一个数组中。然后我创建了一个草稿文件，并在其中追加了所有主题。当然，要先通过阅读主题？。作为一名软件工程师的一些优势？
 
-This script was a saviour when I was editing. Many times I updated the topics or pictures within them. I fixed grammatical mistakes. Here Grammarly really saved me...but not completely as I was using the free version. ?
+这个脚本是我编辑时的一个救星。很多次，我都是在脚本里更新主题或图片，以及修改语法错误。这里要说Grammarly（译者注：Grammarly是一种在线语法纠正和校对工具）真的拯救了我……但并没能完全拯救，因为我用的是免费版。？
 
-## Chronicle of the book journey
+## 书籍之旅记录
 
-Writing a book is not a sprint, it is a marathon. Always save your work when you complete a topic or are done for the day.
+写书不是一场短跑赛，而是一场马拉松。每当写完一个主题或完成当日写作时，总要记得保存。
 
-The next day, you might get a new idea for the same topic which you already completed. You might spend an hour on it, but it doesn't look good. In this case, UNDO is great but it also has limitations (and its limits vary from editor to editor). **Do not test its limits too much**.
+第二天，你可能会对已完成的同一主题产生新的想法。你可能会花上一个小时都不能得到满意结果。这个时候，好的做法是撤销还原（UNDO）。但编辑器也有撤销次数极限（不同的编辑器极限各有不同）。 **不要过多测试它的极限**。
 
-Instead of relying on the editor or making duplicate copies, I used **Git** for version control. Don't think that **git** can only be used for managing your code. It is a versitile tool and its applications are only limited by your imagination.
+我用**Git**来做版本控制，而不是依赖编辑器或制作重复的副本。不要以为**Git**只能用来管理代码。它是一个多功能的工具，它的可应用范围超乎你的想象。
 
-For the readers who don't know about **git**:
+对于不知道**Git**是什么的读者可看以下释义：
 
-> Git is a distributed version control system for tracking changes in source code during software development. It is designed for coordinating work among programmers, but it can be used to track changes in any set of files. --[Wikipedia](https://en.wikipedia.org/wiki/Git)
+> Git是一个分布式版本控制系统，用于记录软件开发过程中的源码变更。Git为程序员之间协同工作而设计，但也能用于记录所有文件变更。--[维基百科](https://en.wikipedia.org/wiki/Git)
 
-You don't have to learn everything about **git** to use it for writing. The basic commands like **init**, **add**, **commit**, **logs** and **checkout** are more than enough for you to maintain your versions and keep your text accessible and safe.
+你不必等学完**Git**的一切才开始用它来写作。掌握基础的命令，如**init**、**add**、**commit**、**logs**和**checkout**就远远足够你维护文档版本以及保证文本的可访问性和安全性了。
 
-There are many Git code hosting platforms available, like [GitHub](https://github.com/), [GitLab](https://about.gitlab.com/) and others. To host your book on one of these platforms, you can follow the below steps:
+可用的Git代码托管平台有很多，比如：[GitHub](https://github.com/)和[GitLab](https://about.gitlab.com/) 等。要将你的书籍托管在这些平台上，可采用以下步骤：
 
-1.  Create an account. My personal choice is **GitHub**.
-2.  Create a private repository with default choices. You can change its visibility to public in the future.
-3.  Follow the instructions provided once the repository is created. Basically, in this step, you're connecting your local **Git** to your hosted repository.
-4.  Learn 2 more commands, **push** and **pull**. Use **push** to push the local changes to the cloud repo and use **pull** to get the content from the cloud.
+1.  创建一个账号。我个人选择的是用**GitHub**平台。
+2.  创建一个私人仓库，保持默认选项。你可以在将来把这个仓库可见性设置为公共。
+3.  仓库创建完毕后，根据提示进行操作。基本上，这一步是将你本地**Git**连接到你的托管仓库。
+4.  再学习2条命令：**push**和**pull**。**push**命令是将本地变更上传至云仓库，**pull**命令是从云端获取内容。
 
-After this, whenever you make any changes, just **add**, **commit** and **push**. Simple, isn't it? ?
+之后，无论何时你做任何变更，只需**add**、**commit**和**push**3条命令搞定。是不是很简单？？
 
-After a couple of commits, you will feel comfortable with **git**.
+提交几次之后，你就会对**Git**运用自如了。
 
-> Check out this amazing article to learn more: [Learn Git and Version Control in an Hour](https://www.freecodecamp.org/news/learn-git-and-version-control-in-an-hour/)
+> 阅读这篇精彩文章[一小时掌握Git和版本控制](https://www.freecodecamp.org/news/learn-git-and-version-control-in-an-hour/)，学习更多Git知识。
 
-# The tools and resources I used
+# 我用到的工具和资源
 
-I used many tools and resources while writing, editing, formatting and designing the book.
+在写作、编辑、排版和设计这本书时，我用过许多工具和资源。
 
-## Writing
+## 写作
 
-For writing, I used the VS Code editor with a couple of markdown plugins, as I've discussed above.
+对于写作，如我前文所述，我用的是VS Code编辑器和几个Markdown插件。
 
-For emojis, I used [copy and paste emojis](https://getemoji.com/).
+表情符号，我用的是[复制粘贴emojis](https://getemoji.com/)。
 
-## Editing
+## 编辑
 
-For correcting grammatical mistakes I used the free version of Grammarly. In the free version, it corrects all the basic mistakes like incorrect or missing articles, prepositions, commas, and so on.
+我用的是免费版Grammarly来纠正语法错误。免费版可以纠正所有的基础错误，比如错误的或遗漏的冠词、介词、逗号等等。
 
-I used the [online pdf editor](https://www.ilovepdf.com/add_pdf_page_number) to add page numbers to the book.
+我用的是[在线PDF编辑器](https://www.ilovepdf.com/add_pdf_page_number) 给书籍添加页码。
 
-## Formatting
+## 排版
 
-I used the Markdown in Preview plugin in VS Code to generate the PDF format. I used the default Git markdown formatting. You can change the formatting in the settings.
+在VS Code中，我用Preview插件将Markdown生成PDF格式。我用的是默认的Git Markdown样式，你也可以在设置里更改样式。
 
-### Page breaks in the PDF
+### PDF中的分页符
 
-As I was writing in markdown format, the PDF output was inconsistent. For example, it starts a new topic from the last page instead of from a new page.
+因为我是用Markdown格式进行写作的，在输出为PDF格式时会产生差异。比如，新建的主题是接着上一页排版的，而没有另起一页。
 
-To fix this, I used the page break `html` code at the end of each topic.
+为解决这个问题，我在每个主题最后都使用了用于分页的HTML代码。
 
 ```html
 <div style="page-break-after:always;"></div>
 ```
 
-This will make the content that follows it start on a new page.  
-You can also add the end of the page-sequence like \***\*\*\*\*** this.
+这个代码可以让其后的内容另起一页。 
+你也可以添加页面序列的结尾，像这样\***\*\*\*\***。
 
 ```html
 <div style="page-break-after:always; display:block; text-align:center; border:none">*****</div>
 ```
 
-### About Me Page
+### 关于我的页面
 
-In the **About Me** section of my book, I divided the content into two columns: a brief about me and a profile picture.
+在我的书中 **关于我**部分，我把内容分为了两栏：一栏是关于我的简介，另一栏是一张个人照片。
 
-It took me a while to realize the full capabilities of the markdown format. We can add plain `html` code in it. Here's what my "about me" page says:
+我花了一段时间才了解Markdown格式的全部功能。我们可以在Markdown里添加普通的`html`代码。下面是我的 "关于我 "页面的内容：
 
 ```html
 <div >
@@ -290,15 +291,15 @@ If you have any queries or questions, please feel free to drop me an email.
 <img src="https://github.githubassets.com/images/icons/emoji/octocat.png" style="width:20px;" />[github.com/schadokar](https://github.com/schadokar)
 ```
 
-For octacat, I used the `img` tag.
+对于Octocat（译者注：GitHub的吉祥物章鱼猫），我用的是`img`标签。
 
-It looks like this.
+看起来像这样。
 
 ![about-me-3](https://www.freecodecamp.org/news/content/images/2020/09/about-me-3.PNG)
 
-### Thank You Page
+### 感谢页
 
-I added a thank you page to express my gratitude to the **Hyperledger Composer Community** for their work. I tried to add the content in the middle of the page.
+我添加了一个感谢页，以此感谢**Hyperledger Composer社区**的工作付出。我试着将内容加在页面中间位置。
 
 ```html
 <div style="padding-top:40%; text-align: center; font-size:35px;">
@@ -313,142 +314,141 @@ wrapping a complex Hyperledger Fabric into the easy to use Hyperledger Composer.
 </div>
 ```
 
-It looks like this.
+看起来像这样。
 
 ![thanks-note](https://www.freecodecamp.org/news/content/images/2020/09/thanks-note.PNG)
 
-## Book Title and Sub-title
+## 书的标题和副标题
 
-The book title should make the contents of the book clear in a few words or one short sentence.
+书的标题应该用几个词或一个短句就表明书的内容。
 
-While you're writing the book, note down all the keywords you use. This will help you to come up with a great title. You want to capture the essence of the book and let readers know, for example, whether it's theoretical or more hands-on.
+在写书的时候，记下你使用的所有关键词。这将有助于你想出一个好标题。你要抓住这本书的本质，并让读者也知道，例如，它是偏理论性的还是偏实践性的。
 
-A sub-title should give readers more detail about what they will get from this book or what they are going to learn.
+副标题应该向读者提供更多细节，让读者知道自己将从书中获得什么或者他们即将学到什么。
 
-A one sentence sub-title is ideal, and shouldn't be any longer than two sentences. Don't overdo it – let readers read the book. The idea is to give readers a taste of the complete book in one sentence but still not to tell anything ?.
+副标题用一句话是合适的，不应超过两句。不要过长—让读者自己阅读书里的内容。副标题的目的是让读者通过一句话了解整本书的格调，但仍觉语意未尽？。
 
-My book title is **_Playtime with Hyperledger Composer_** and sub-title is **Create a supply chain management project in Blockchain using Hyperledger Composer**.
+我的书的标题是 **《玩转Hyperledger Composer》**，副标题是 **《使用Hyperledger Composer在区块链中创建一个供应链管理项目》**。
 
-When you start writing your book, don't spend much time on the book title. When you finish writing, you'll be in a much better position to decide the book title. Everything is written, you know what it is all about, and what others will get from it.
+在开始写书时，不要花太多时间在书的标题上。当你写完了，你能站在一个更好的视角去想标题。所有内容都写完了，你知道写了些什么，读者能从中收获什么。
 
-In my case, I changed the book title and book cover at the last moment before publishing it. Before that, it was so boring ?.
+就我而言，我在书籍出版前的最后一秒更改了书的标题和封面。在这之前，它是如此的无聊？。
 
-## Designing the Book Cover
+## 设计书籍封面
 
-You might have heard the idiom **Don't judge a book by its cover**.  
-But the harsh reality is, a book's cover is very important. It is the face of the book.
+你可能听说过习语**不要以封面评价一本书（不要以貌取人）**。 
+但残酷的现实是，一本书的封面非常重要。它是一本书的脸。
 
-Try to keep it simple and informative. Don't overdo it. A simple title and a short subtitle with an image or two is more than enough.
+封面尽量保持简单且信息翔实。不要过度设计。一个简单的标题和一个简短的副标题加上一两张图片就足够了。
 
-I started designing the book cover by taking references from other books, and trying to edit them in Paint. The result was a complete disaster, and I couldn't think of anything good.
+我开始设计书的封面时，参考了其他书，并试着Paint中进行编辑。结果完全是一场灾难，我想不出什么好的设计了。
 
-Then I realized that _designing is not my cup of tea_. I decided to hire a freelancer for this, so I checked out freelancing sites like **UpWork** and **Fiverr**.
+然后我意识到，设计不是我的长处。我决定找一个自由职业者来做这件事，所以我查看了**UpWork**和**Fiverr**等自由职业网站。
 
-Then, I found [**Canva**](https://canva.com). It's such a great tool. Amazing! ? ? ? ?
+然后，我发现了[**Canva**](https://canva.com)。这真是一个很棒的工具。太神奇了！？? ? ? ?
 
-> Canva is a graphic design platform that allows users to create social media graphics, presentations, posters and other visual content. It is available on web and mobile and integrates millions of images, fonts, templates and illustrations. [Wikipedia](https://en.wikipedia.org/wiki/Canva)
+> Canva是一个图形设计平台，支持用户创建社交媒体图形、演示文稿、海报和其他视觉内容。它可以在网页端和移动端使用，并集成了数百万张图片、字体、模板和插图。[维基百科](https://en.wikipedia.org/wiki/Canva)
 
-I used one of the templates from the canva book cover section and created my book cover. Not bad, right? ?
+我通过Canva上书籍封面版块中的一个模板，创建了我的书籍封面。还不错吧？？
 
 ![book-cover](https://www.freecodecamp.org/news/content/images/2020/09/book-cover.png)
 
-## License
+## 许可协议
 
-I wrote this book out of curiosity and for fun. So, I wanted it to be free, and open-source, but I didn't want others to monetize it. Without a license, there are no restrictions.
+我写这本书是出于好奇心和乐趣。所以，我希望它是免费的，而且是开源的，但我不希望有人利用这本书来谋利。没有许可协议，就没有约束。
 
-I searched for a while and found a great answer on StackOverflow regarding free licenses, [Creative Commons Licenses](https://creativecommons.org/licenses/).
+我搜索了一段时间，在StackOverflow上发现了一个关于免费许可协议的很好回答，即[知识共享版权许可协议（Creative Commons Licenses）](https://creativecommons.org/licenses/)。
 
-> **Creative Commons is a nonprofit organization that helps overcome legal obstacles to the sharing of knowledge and creativity to address the world’s pressing challenges.**
+> **知识共享基金会（Creative Commons）是一个非营利组织，帮助解决知识分享和创造力有关的法律困境，应对世界上（译者注：版权方面的）紧迫的挑战。**
 
-They have provided a [form](https://creativecommons.org/choose/) with a couple of questions related to what kind of license you want. Fill out the form and voilà ?, your license is ready. Copy and paste it or use the embedded link.
+他们会提供一个[表格](https://creativecommons.org/choose/)，表格上面会问几个与你想要申请的许可协议类型相关的问题。填写表格，然后就可以了，你的许可证就准备好了。你可以复制粘贴或通过嵌入的链接获得许可证。
 
 ![license](https://www.freecodecamp.org/news/content/images/2020/09/license.PNG)
 
-# Publishing your book
+# 出版你的书
 
-There are many options you can choose from to publish your book. You can approach a publishing house and send in your draft. If they want to publish you can go ahead and secure a deal.
+可选的书籍出版方式有很多。你可以找一家出版社，把你的草稿送过去。如果他们想出版，你就可以着手处理然后与其达成协议。
 
-After this, the publishing house takes care of other processes like formatting, editing your book, creating an attractive book cover, all the licensing, the publishing process, and most importantly marketing.
+达成协议后，出版社负责其它过程，比如书籍的排版和编辑、吸引人的书籍封面设计、所有的协议许可、出版过程，以及最重要的市场营销。
 
-In short, if you want to monetize your book and you're expecting a good amount, then a publishing house is the best option available.
+简而言之，如果你想通过你的书获得稿费，而且你期待一个好的收益，那么出版社是最佳选择。
 
-Another option is self-publishing. Yes, we can self-publish our own books. Amazon's [Kindle Direct Publishing](https://kdp.amazon.com/en_US/) provides a great platform for this. It is free and it publishes the book worldwide.
+另一个选择是自助出版。是的，我们可以自行出版自己的书。亚马逊的自行出版系统[Kindle Direct Publishing](https://kdp.amazon.com/en_US/)（KDP）提供了一个很好的平台。它是免费的，而且可以在全世界范围内出版书籍。
 
-You'll get 70% of the profits for each sale. The kdp take cares of all the publishing process. You just have to write the book, upload it and format it.
+你将从每笔销售中获得70%的利润。KDP负责所有的出版过程。你只需将书籍写好、上传并排版。
 
-You simply enter the price you want to charge, along with some basic info about the book and and yourself. You can follow their tutorials for more info – they have done a great job.
+你只需填写你想收取的价格，以及你的书和你自己的一些基本信息。你可以阅读他们的教程了解更多信息—他们的教程写得非常棒。
 
-But I wanted to keep my book free and didn't have the patience for the above processes. So, I self-published it without using any third party.
+但我希望我的书是免费的，而且我没有耐心操作上述过程。所以，我并没有依靠任何第三方就自行出版了我的书。
 
-I just converted the book to PDF format and saved it in an AWS S3 Bucket so that anyone can download it. Then I hosted the book on my website. Simple. ?
+我只是把书转换成PDF格式，并把它存在AWS S3 Bucket上，这样任何人都可以下载。然后我把这本书托管在我的网站上。简单吧。?
 
-# Share your work
+# 分享你的作品
 
-Once you complete your masterpiece, it is time to show it to the world.  
-If you haven't teamed up with a publisher or even if you did, you have to spread the word.
+完成你的杰作后，就该向世界展示它了。  
+如果你没有与出版商合作，或者即使你有，你也必须推广自己的作品。
 
-These are the few platforms I used, but don't limit yourself.
+这些是我使用的几个平台，但你不必局限于这几个。
 
-## LinkedIn
+## 领英（LinkdeIn）
 
-LinkedIn is a professional platform and many developers are on it, no matter their specialty in the tech world. You'll also find people of every profession, you name it.
+LinkedIn是一个专业平台，上面有许多技术领域不同专业的开发人员。凡是你能说得出来的职业，在LinkedIn上你也都能找到从事该职业的人。
 
-Share your work with them, ask for feedback. 90% of the time you'll get a reply. I shared my work with Dan Selmon, one of the Hyperledger Composer contributors, as well as Srinivas Mahankali, who wrote many books on Blockchain.
+与他们分享你的作品，并询问反馈。90%的可能你都会得到回复。我向Dan Selmon分享了我的书，他是Hyperledger Composer的一名贡献者。还有Srinivas Mahankali，他写了很多关于区块链的书。
 
-They were both very helpful and gave their honest feedback. I am thankful to Dan, who even offered to share the book among his network on LinkedIn and Twitter. ?
+他们都非常乐于助人，并给出了他们真诚的反馈。我很感谢Dan，他甚至提出会在他的社交网络LinkedIn和Twitter上分享我的书。?
 
 ## Reddit
 
-Reddit is a community hub. You will find many active communities on various subjects here. You just have to join the community that's relevant to your work and share it there.
+Reddit是一个社区枢纽。你会发现这里有许多关于各种主题的活跃社区。你只需加入与你工作相关的社区，然后在那里分享你的作品。
 
-You'll find a lot of active members on Reddit, in these groups, and they are not shy to share their opinion. If there is a room for improvement, some of them might offer to help.
+你会发现Reddit上有很多活跃的成员，在这些群体中，他们并不羞于分享自己的观点。如果你的作品有提升空间，他们中的一些人可能会提供帮助。
 
-_But before sharing, DO READ THE GUIDELINES. If you violate any of them, they will remove your post_.
+_但在分享你的作品之前，请务必阅读指南。如果你违反了其中任何一条规则，他们将删除你的帖子_。
 
-## Twitter
+## 推特（Twitter）
 
-Twitter is not just a social platform where people share their opinions. So don't underestimate it.
+推特不仅仅是一个人们分享自己观点的社交平台。所以不要低估它。
 
-If you like facts and figures, here you go: there are 1.3+ billion accounts on Twitter, 330 million monthly active users, 152 million daily active users and 500 million tweets per day. This is huge.
+如果你喜欢事实和数字，可以看到：Twitter上有13亿多个账户，3.3亿月活跃用户，1.52亿日活跃用户，每天有5亿条推文。这个数字是很庞大的。
 
-You just have to craft your message and select the right keywords within the 280 characters limit and you can potentially reach a large audience.
+你只需要在有限的280个字符内，精心设计你的信息，选择合适的关键词，你就有可能接触到大量的受众。
 
-## Blogs
+## 博客
 
-Do some research and figure out which publications or digital magazines publish articles in your book's category. Share your book summary and details with them.
+做一些研究，弄清楚哪些出版物或电子杂志会发布你图书类别的文章。与他们分享你的书中摘要和细节。
 
-Ask them if they can write an article about your book. Or you can write an article about your book and share the draft with those publications.
+询问他们是否可以写一篇关于你的书籍的文章。或者你可以写一篇关于你的书的文章，然后把文章初稿发给他们。
 
-There are also many other platforms you can try – just do a bit of digging.
+还有很多其它的平台你也可以试一试————只要你去深入了解一下。
 
-# Conclusion
+# 总结
 
-This was my first experience writing a book. It took some time but it was worth it. Now, I have another badge on my portfolio. ?
+这就是我第一次写书的经历。写书花了一些时间，但是值得的。现在，我的作品集上又多了一个徽章。?
 
-I learned a lot from this experience. This article serves as documentation of all my learning for anyone who wants to write their first book or their next book.
+我从这次经历中学到了很多东西。这篇文章可以作为我所有学习的记录，供任何想写第一本书或下一本书的人参考。
 
-Below is the final list of tools I've used so far.  
-Any suggestions for others are most welcome.
+下面是到目前为止我用过的工具最终清单。  
+若有我未列出的工具，也欢迎你推荐。
 
-Thank you for reading and don't forget to share your first book with me. ?
+谢谢你的阅读，别忘了与我分享你的第一本书。?
 
-# Final List of Tools I used
+# 我所使用工具的最终清单
 
--   **Editor**: [Visual Studio Code](https://code.visualstudio.com/) with 2 Markdown plugins
--   **Versioning Tool**:Git and [GitHub](https://github.com)
--   **Emojis**: [Copy and Paste emojis](https://getemoji.com/)
--   **Grammar Check**: [Grammarly](https://app.grammarly.com/)
--   **License**: [Creative Commons Licenses](https://creativecommons.org/licenses/)
--   **Cover Design**: [Canva](https://www.canva.com/)
--   **PDF page number**: [online pdf editor](https://www.ilovepdf.com/add_pdf_page_number)
--   **eBook storage**: [AWS S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
--   **Book Hosting**: [On my blog](https://schadokar.dev/ebooks/)
+-   **编辑器**：[Visual Studio Code](https://code.visualstudio.com/)及2个Markdown插件
+-   **版本控制工具**：Git和[GitHub](https://github.com)
+-   **表情符号**：[复制粘贴emojis](https://getemoji.com/)
+-   **语法检查**：[Grammarly](https://app.grammarly.com/)
+-   **许可协议**：[Creative Commons Licenses](https://creativecommons.org/licenses/)
+-   **封面设计**：[Canva](https://www.canva.com/)
+-   **PDF页码编辑器**：[在线PDF编辑器](https://www.ilovepdf.com/add_pdf_page_number)
+-   **电子书存储**：[AWS S3 bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html).
+-   **书籍托管**：[我的博客](https://schadokar.dev/ebooks/)
 
-## Thanks for Reading
+## 感谢你的阅读
 
-If you have any feedback or suggestions to help me improve this article please connect with me on [twitter](https://twitter.com/schadokar1) or [email](https://www.freecodecamp.org/news/how-to-write-your-first-technical-book/hello@schadokar.dev) me.
+如果你有任何反馈或建议帮助我改进这篇文章，请在[推特](https://twitter.com/schadokar1)上与我联系或给我发[电子邮件](https://www.freecodecamp.org/news/how-to-write-your-first-technical-book/hello@schadokar.dev)。
+-   [阅读我的其它文章](https://schadokar.dev)
+-   订阅[我的简报](https://schadokar.dev/newsletter/)
 
--   [Read my other articles](https://schadokar.dev)
--   Subscribe to [My Newsletter](https://schadokar.dev/newsletter/)
-
-Cover photo by [Thought Catalog](https://unsplash.com/@thoughtcatalog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/writers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+封面照片：来自 [Unsplash](https://unsplash.com/s/photos/writers?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)上的[Thought Catalog](https://unsplash.com/@thoughtcatalog?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

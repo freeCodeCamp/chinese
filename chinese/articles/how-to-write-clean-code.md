@@ -1,18 +1,17 @@
 > -  原文地址：[How to Write Clean Code – Tips and Best Practices](https://www.freecodecamp.org/news/how-to-write-clean-code/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：hezean
 > -  校对者：
 
-![How to Write Clean Code – Tips and Best Practices](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-ken-tomita-389819.jpg)
+![如何写出整洁的代码 - 技巧与实践](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-ken-tomita-389819.jpg)
 
 Hi everyone! In this article we're going to talk about writing "clean" code. It's a topic that used to confuse me a bit when I was starting out as a programmer, and I find that it has many nuances and possible interpretations.
 
 So in this article we'll talk about what the term "clean code" means, why it's important, how can we assess whether a codebase is clean or not. You'll also learn some best practices and conventions you can follow to make your code cleaner.
 
-Let's go!
+那我们开始吧！
 
-# Table of Contents
-
+# 目录
 -   [What does it mean to write "clean code" and why should I care?](#what-does-it-mean-to-write-clean-code-and-why-should-i-care)
 -   [How can I assess whether a codebase is clean or not?](#how-can-i-assess-whether-a-codebase-is-clean-or-not)
 -   [Tips and conventions to write cleaner code](#tips-and-conventions-to-write-cleaner-code)

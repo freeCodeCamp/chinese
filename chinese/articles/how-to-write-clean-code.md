@@ -5,74 +5,56 @@
 
 ![如何写出整洁的代码 - 技巧与实践](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-ken-tomita-389819.jpg)
 
-Hi everyone! In this article we're going to talk about writing "clean" code. It's a topic that used to confuse me a bit when I was starting out as a programmer, and I find that it has many nuances and possible interpretations.
+大家好！在今天的这篇文章中，我们将讨论怎么写出“整洁”的代码。在我刚开始做程序员的时候，我对这个话题曾感到困惑，我也意识到它有很多细微的差别和可能的解释。
 
-So in this article we'll talk about what the term "clean code" means, why it's important, how can we assess whether a codebase is clean or not. You'll also learn some best practices and conventions you can follow to make your code cleaner.
+因此，接下来我们将讨论“整洁的代码”这个术语的含义，为什么它很重要，以及如何评估一个代码库是否整洁。你还会了解到一些最佳实践和惯例，你可以遵循它们来使你的代码更整洁。
 
 那我们开始吧！
 
-# 目录
--   [What does it mean to write "clean code" and why should I care?](#what-does-it-mean-to-write-clean-code-and-why-should-i-care)
--   [How can I assess whether a codebase is clean or not?](#how-can-i-assess-whether-a-codebase-is-clean-or-not)
--   [Tips and conventions to write cleaner code](#tips-and-conventions-to-write-cleaner-code)
-    -   [Effectiveness, efficiency and simplicity](#effectiveness-efficiency-and-simplicity)
-    -   [Format and syntax](#format-and-syntax)
-    -   [Naming](#naming)
-    -   [Conciseness versus clarity](#conciseness-versus-clarity)
-    -   [Re-usability](#re-usability)
-    -   [Clear flow of execution](#clear-flow-of-execution)
-    -   [Single responsability principle](#single-responsibility-principle)
-    -   [Having a "single source of truth"](#having-a-single-source-of-truth)
-    -   [Only expose and consume information you need](#only-expose-and-consume-data-you-need)
-    -   [Modularization](#modularization)
-    -   [Folder structures](#folder-structures)
-    -   [Documentation](#documentation)
--   [Wrapping up](#wrapping-up)
+# 编写“整洁的代码”意味着什么？我为什么要关心它
 
-# What Does it Mean to Write "Clean Code" and Why Should I Care?
+“整洁的代码”这个术语是用来描述易于阅读、理解和维护的计算机代码。整洁的代码是以一种能够使代码简单、简明且富有表现力的方式来写的。它遵循一套惯例、标准和实践，使其易于阅读和遵循。
 
-Clean code is a term used to describe computer code that is easy to read, understand, and maintain. Clean code is written in a way that makes it simple, concise, and expressive. It follows a set of conventions, standards, and practices that make it easy to read and follow.
+整洁的代码没有过高的复杂性、冗余和其他代码异味，或让它变得难以维护、调试和修改的模式。
 
-Clean code is free from complexity, redundancy, and other code smells and anti-patterns that can make it difficult to maintain, debug, and modify.
+再怎么强调整洁代码的重要性都不为过！当代码易于阅读和理解时，开发人员会更容易在这样的代码库中工作。这可以提升生产力并减少错误。
 
-I can't overstate the importance of clean code. When code is easy to read and understand, it makes it easier for developers to work on the codebase. This can lead to increased productivity and reduced errors.
+另外，当代码易于维护时，它可以确保代码库可以随着时间的推移而被改进和更新。这对长期项目尤其重要，因为在这些项目中，代码必须在未来数年内得到维护和更新。
 
-Also, when code is easy to maintain, it ensures that the codebase can be improved and updated over time. This is especially important for long-term projects where code must be maintained and updated for years to come.
+# 如何评估一个代码库是否整洁？
 
-# How Can I Assess Whether a Codebase is Clean or Not?
+你可以通过各种方式来评估代码的整洁性。良好的文档，一致的格式，以及组织良好的代码库都是代码整洁性的指标。
 
-You can assess clean code in a variety of ways. Good documentation, consistent formatting, and a well-organized codebase are all indicators of clean code.
+代码审查也可以帮助识别潜在的问题，并确保代码遵循最佳实践和惯例。
 
-Code reviews can also help to identify potential issues and ensure that code follows best practices and conventions.
+测试是保持代码整洁的另一个重要方面。它有助于确保代码按预期运行，并能及早发现错误。
 
-Testing is also an important aspect of clean code. It helps to ensure that code is functioning as expected and can catch errors early.
+有几种工具、实践和惯例可以实施，以帮助你确保代码库的整洁。通过实施这些工具和实践，开发人员可以创建一个易于阅读、理解和维护的代码库。
 
-There are several tools, practices, and conventions you can implement to ensure a clean codebase. By implementing these tools and practices, developers can create a codebase that is easy to read, understand, and maintain.
+同样重要的一点是要记住，“整洁的代码”这个话题是相当具有主观性的，许多人对其持有许多不同的意见和看法。同样的代码，对一个人或项目来说可能算很整洁，但对与另一个人或项目来说可能完全不是这么一回事。
 
-It's also important to remember that there's an inevitable amount of subjectivity related to this topic, and there are a number of different opinions and tips out there. What might look clean and awesome for one person or one project might not be so for another person or another project.
+但是，我们仍然可以遵循一些一般的惯例来使得代码更整洁，下面我们马上来讨论这个问题。
 
-But still there are a few general conventions we can follow to achieve cleaner code, so let's jump into that now.
+# 编写更清洁的代码的技巧和惯例
 
-# Tips and Conventions to Write Cleaner Code
+## 有效性、效率和简单性
 
-## Effectiveness, Efficiency and Simplicity
+每当我需要考虑如何在已经存在的代码库中实现一个新的功能，或者解决一个具体问题时，我总是优先考虑这三件简单的事情。
 
-Whenever I need to think about how to implement a new feature into an already existing codebase, or how to tackle the solution of a specific problem, I always prioritize this three simple things.
+### 有效性
 
-### Effectiveness
+首先，我们的代码应该是**有效的**，也就是说它应该解决它理应解决的问题。当然，这是我们对代码最基本的期望，但如果我们的实现不能达到预期的功能，再去考虑其他的事情就显得毫无意义。
 
-First, our code should be **effective**, meaning it should solve the problem it's supposed to solve. Of course this is the most basic expectation we could have for our code, but if our implementation doesn't actually work, it's worthless to think about any other thing.
+### 效率
 
-### Efficiency
+其次，一旦确认了我们的代码能解决问题，我们应该检查它是否**有效率地**解决了问题。程序的运行是否使用了合理的时间或空间资源？它能不能运行得更快，用更少的空间？
 
-Second, once we know our code solves the problem, we should check if it does so **efficiently**. Does the program run using a reasonable amount of resources in terms of time and space? Can it run faster and with less space?
+为了评估这一点，你应该了解算法复杂性。如果你不熟悉复杂度相关的理论，你可以查看[我写的这篇文章](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/#algorithmic-complexity)。
 
-Algorithmic complexity is something you should be aware of in order to evaluate this. If you're not familiar with it, you can check [this article I wrote](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/#algorithmic-complexity).
-
-To expand upon efficiency, here are two examples of a function that calculates the sum of all numbers in an array.
+这里有两个关于计算数组中所有数字之和的函数的例子，我们将以此说明如何提升效率。
 
 ```javascript
-// Inefficient Example
+// 效率底下的例子
 function sumArrayInefficient(array) {
   let sum = 0;
   for (let i = 0; i < array.length; i++) {
@@ -82,35 +64,35 @@ function sumArrayInefficient(array) {
 }
 ```
 
-This implementation of the `sumArrayInefficient` function iterates over the array using a `for` loop and adds each element to the `sum` variable. This is a valid solution, but it is not very efficient because it requires iterating over the entire array, regardless of its length.
+这个 `sumArrayInefficient` 函数的实现是用一个 `for` 循环来遍历数组，并将每个元素添加到 `sum` 变量中。这是一个行之有效的方案，但是效率不高，因为它需要对整个数组进行迭代，无论其长度如何。
 
 ```javascript
-// Efficient example
+// 更高效的例子
 function sumArrayEfficient(array) {
   return array.reduce((a, b) => a + b, 0);
 }
 ```
 
-This implementation of the `sumArrayEfficient` function uses the `reduce` method to sum the elements of the array. The `reduce` method applies a function to each element of the array and accumulates the result. In this case, the function simply adds each element to the accumulator, which starts at 0.
+这个 `sumArrayEfficient` 函数的实现使用 `reduce` 方法对数组的元素进行求和。`reduce` 方法对数组中的每个元素应用一个函数，并将结果累积起来。在这个例子中，该函数只是将每个元素加到累加器中，其起点为0。
 
-This is a more efficient solution because it only requires a single iteration over the array and performs the summing operation on each element as it goes.
+这是一个更有效的解决方案，因为它只需要在数组上进行一次迭代，并在每个元素上执行求和操作。
 
-### Simplicity
+### 简单性
 
-And last comes **simplicity**. This is the toughest one to evaluate because its subjective, it depends on the person who reads the code. But some guidelines we can follow are:
+最后一点是**简单性**。这是最难评价的一项，因为它是主观的，且取决于读代码的人。但我们可以遵循一些下面的准则来评价简单性：
 
-1.  Can you easily understand what the program does at each line?
-2.  Do functions and variables have names that clearly represent their responsibilities?
-3.  Is the code indented correctly and spaced with the same format all along the codebase?
-4.  Is there any documentation available for the code? Are comments used to explain complex parts of the program?
-5.  How quick can you identify in which part of the codebase are certain features of the program? Can you delete/add new features without the need of modifying many other parts of the code?
-6.  Does the code follow a modular approach, with different features separated in components?
-7.  Is code reused when possible?
-8.  Are the same architecture, design, and implementation decisions followed equally all along the codebase?
+1. 你能很容易地理解程序在每一行做什么吗？
+2. 函数和变量的名称是否清楚地代表了它们的职责？
+3. 代码的缩进是否正确，并且在代码库中以相同的格式间隔？
+4. 代码是否有任何文档？是否用注释来解释程序的复杂部分？
+5. 你能多快地确定程序的某些功能在代码库的哪个部分？你是否可以删除/添加新的功能而不需要修改代码的许多其他部分？
+6. 代码是否遵循模块化的方法，将不同的功能分离成不同的组件？
+7. 在可能的情况下，代码是否被重用？
+8. 代码库中的架构、设计和实现决定是否都是一致的？
 
-By following and prioritizing these three concepts of effectiveness, efficiency, and simplicity, we can always have a guideline to follow when thinking about how to implement a solution. Now let's expand upon some of the guidelines that can help us simplify our code.
+通过遵循和优先考虑有效性、效率和简单性这三个概念，我们可以在思考如何实现一个解决方案时始终有一个准则可以遵循。现在让我们来扩展一些可以帮助我们简化代码的准则。
 
-## Format and Syntax
+## 格式和语法
 
 Using consistent formatting and syntax throughout a codebase is an important aspect of writing clean code. This is because consistent formatting and syntax make the code more readable and easier to understand.
 

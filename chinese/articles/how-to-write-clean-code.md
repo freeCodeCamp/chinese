@@ -1,76 +1,78 @@
 > -  原文地址：[How to Write Clean Code – Tips and Best Practices](https://www.freecodecamp.org/news/how-to-write-clean-code/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：yipeng0505
 > -  校对者：
 
-![How to Write Clean Code – Tips and Best Practices](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-ken-tomita-389819.jpg)
+<figure class="kg-card kg-card-image kg-card-hascaption"><img src = "https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-ken-tomita-389819.jpg " alt="How to Write Clean Code – Tips and Best Practices" class="kg-image"><figcaption>How to Write Clean Code – Tips and Best Practices</figcaption></figure>
 
-Hi everyone! In this article we're going to talk about writing "clean" code. It's a topic that used to confuse me a bit when I was starting out as a programmer, and I find that it has many nuances and possible interpretations.
+大家好！这篇文章讲的主要是如何写出“整洁”的代码。我刚开始成为一个程序员的时候，这个概念常常会有点模糊，后来我发现它有很多细微差别的地方和一些可能的解释。
 
-So in this article we'll talk about what the term "clean code" means, why it's important, how can we assess whether a codebase is clean or not. You'll also learn some best practices and conventions you can follow to make your code cleaner.
+所以在这篇文章中，我们将会讨论“代码整洁”指的是什么，它为什么这么重要，我们如何评估一个代码库整洁与否。同时你也会学会一些你能一起做的最佳实践和惯例，从而让你的代码更加整洁。
 
-Let's go!
+冲！
 
-# Table of Contents
+## 目录
 
--   [What does it mean to write "clean code" and why should I care?](#what-does-it-mean-to-write-clean-code-and-why-should-i-care)
--   [How can I assess whether a codebase is clean or not?](#how-can-i-assess-whether-a-codebase-is-clean-or-not)
--   [Tips and conventions to write cleaner code](#tips-and-conventions-to-write-cleaner-code)
-    -   [Effectiveness, efficiency and simplicity](#effectiveness-efficiency-and-simplicity)
-    -   [Format and syntax](#format-and-syntax)
-    -   [Naming](#naming)
-    -   [Conciseness versus clarity](#conciseness-versus-clarity)
-    -   [Re-usability](#re-usability)
-    -   [Clear flow of execution](#clear-flow-of-execution)
-    -   [Single responsability principle](#single-responsibility-principle)
-    -   [Having a "single source of truth"](#having-a-single-source-of-truth)
-    -   [Only expose and consume information you need](#only-expose-and-consume-data-you-need)
-    -   [Modularization](#modularization)
-    -   [Folder structures](#folder-structures)
-    -   [Documentation](#documentation)
--   [Wrapping up](#wrapping-up)
+-   [写出“clean code”意味着什么以及我为什么要注意它？](##what-does-it-mean-to-write-clean-code-and-why-should-i-care)
+-   [我如何评估一个代码库是否整洁？](##how-can-i-assess-whether-a-codebase-is-clean-or-not)
+-   [写出整洁的代码的一些技巧和惯例](##tips-and-conventions-to-write-cleaner-code)
+    -   [有效、效率和简单 ](###effectiveness-efficiency-and-simplicity)
+    -   [格式和语法](###format-and-syntax)
+    -   [命名](###naming)
+    -   [简洁VS清晰](###conciseness-versus-clarity)
+    -   [复用性](###re-usability)
+    -   [清晰的执行流程](###clear-flow-of-execution)
+    -   [单一制责原则](###single-responsibility-principle)
+    -   [拥有“唯一事实的来源”](###having-a-single-source-of-truth)
+    -   [只暴露和使用你需要的数据](###only-expose-and-consume-data-you-need)
+    -   [模块化](###modularization)
+    -   [文件夹结构](###folder-structures)
+    -   [文档化](###documentation)
+-   [总结](##wrapping-up)
 
-# What Does it Mean to Write "Clean Code" and Why Should I Care?
+<h2 id="what-does-it-mean-to-write-clean-code-and-why-should-i-care">写出“clean code”意味着什么以及我为什么要注意它？</h2>
 
-Clean code is a term used to describe computer code that is easy to read, understand, and maintain. Clean code is written in a way that makes it simple, concise, and expressive. It follows a set of conventions, standards, and practices that make it easy to read and follow.
+代码整洁是一个术语，用来形容计算机代码容易阅读、理解和维护。整洁的代码需要用一种，能让代码简单、简洁且形象生动的方式进行书写。它遵循一套惯例、标准来使得代码容易阅读和理解。
 
-Clean code is free from complexity, redundancy, and other code smells and anti-patterns that can make it difficult to maintain, debug, and modify.
+整洁的代码脱离了复杂性、冗余以及一些“代码味”和反人类模式，因为这些东西会让代码变得难以维护、调试以及修改。
 
-I can't overstate the importance of clean code. When code is easy to read and understand, it makes it easier for developers to work on the codebase. This can lead to increased productivity and reduced errors.
+我并不能夸大代码整洁的重要性。当代码很容易阅读和理解的时候，开发者们就能很容易地在代码库中工作。这就可以提高工作效率以及降低产生的错误。
 
-Also, when code is easy to maintain, it ensures that the codebase can be improved and updated over time. This is especially important for long-term projects where code must be maintained and updated for years to come.
+并且，代码易于维护也就保证了，即使随着时间的推移，代码库也能不断提高和更新。这对于长期项目来说十分重要，尤其是代码在未来几年需要不断更新和维护的时候。
 
-# How Can I Assess Whether a Codebase is Clean or Not?
+<h2 id="how-can-i-assess-whether-a-codebase-is-clean-or-not">我如何评估一个代码库是否整洁？</h2>
 
-You can assess clean code in a variety of ways. Good documentation, consistent formatting, and a well-organized codebase are all indicators of clean code.
+这里可以用很多方法。好的文档、前后一致的格式以及组织良好的代码库都是需要考虑的因素。
 
-Code reviews can also help to identify potential issues and ensure that code follows best practices and conventions.
+代码审查也可以帮助识别潜在的问题，确保代码遵循最佳实践和惯例。
 
-Testing is also an important aspect of clean code. It helps to ensure that code is functioning as expected and can catch errors early.
+测试也是一个很重要的方面，它可以帮助确保代码运行的情况跟预期的保持一致，而且能尽早地发现运行中的问题和错误。
 
-There are several tools, practices, and conventions you can implement to ensure a clean codebase. By implementing these tools and practices, developers can create a codebase that is easy to read, understand, and maintain.
+你有很多工具、实践以及惯例可以直接引入，从而确保一个代码库是整洁的。
 
-It's also important to remember that there's an inevitable amount of subjectivity related to this topic, and there are a number of different opinions and tips out there. What might look clean and awesome for one person or one project might not be so for another person or another project.
+通过引入这些工具和实践，开发者们可以创建一个容易阅读、理解和维护的代码库。
 
-But still there are a few general conventions we can follow to achieve cleaner code, so let's jump into that now.
+还有一件事情也很重要，就是一定要记住在代码整洁这件事情上，不可避免地会粘连很多主观性，并且对于这件事情也有许许多多不同的观点和见解。一个代码库对一个人来说可能看起来很整洁、厉害，但是对另一个人或者另一个项目来说可能就不是这样了。
 
-# Tips and Conventions to Write Cleaner Code
+但是在这个问题上依然还是有很多惯例是我们可以遵守的，下面就说一下这些。
 
-## Effectiveness, Efficiency and Simplicity
+<h2 id="tips-and-conventions-to-write-cleaner-code">写出cleaner code的一些技巧和惯例</h2>
 
-Whenever I need to think about how to implement a new feature into an already existing codebase, or how to tackle the solution of a specific problem, I always prioritize this three simple things.
+<h3 id="effectiveness-efficiency-and-simplicity">有效、效率和简单</h3>
 
-### Effectiveness
+当我需要思考如何向已有的代码库引入新的功能、或者如何找到某个特殊问题的答案的时候，我总会优先考虑折三个东西。
 
-First, our code should be **effective**, meaning it should solve the problem it's supposed to solve. Of course this is the most basic expectation we could have for our code, but if our implementation doesn't actually work, it's worthless to think about any other thing.
+#### 有效
 
-### Efficiency
+首先，我们的代码必须有效，这就意味着它必须能够解决它应该解决的问题。当然这是我们对我们自己的代码最基本的期望，但是如果我们实施的东西没有起到作用的话，此时考虑其他事情是毫无意义的。
 
-Second, once we know our code solves the problem, we should check if it does so **efficiently**. Does the program run using a reasonable amount of resources in terms of time and space? Can it run faster and with less space?
+#### 效率
 
-Algorithmic complexity is something you should be aware of in order to evaluate this. If you're not familiar with it, you can check [this article I wrote](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/#algorithmic-complexity).
+第二，一旦我们我们只我们的代码解决了问题，我们就应该检查它是否有效率。就时间和空间而言，程序运行时是否使用了合理的资源？它能不能运行地更快一些或者占用空间更少一些。
 
-To expand upon efficiency, here are two examples of a function that calculates the sum of all numbers in an array.
+为了评估这一点，算法复杂度是一个你应该注意的事情。如果你对这个词不熟悉，你可以去我写的[这一篇文章](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/#algorithmic-complexity)看一下。
+
+在效率这部分展开的话， 下面有两个例子，都是计算一个数组中所有数字的总和。
 
 ```javascript
 // Inefficient Example
@@ -83,7 +85,7 @@ function sumArrayInefficient(array) {
 }
 ```
 
-This implementation of the `sumArrayInefficient` function iterates over the array using a `for` loop and adds each element to the `sum` variable. This is a valid solution, but it is not very efficient because it requires iterating over the entire array, regardless of its length.
+`sumArrayInefficient`函数使用`for`循环迭代数组，并将每个元素添加到`sum`变量中。虽然这是一个可行解，但是这样就没太有效率了，因为不管数组有多长，它都需要迭代整个数组。
 
 ```javascript
 // Efficient example
@@ -92,34 +94,34 @@ function sumArrayEfficient(array) {
 }
 ```
 
-This implementation of the `sumArrayEfficient` function uses the `reduce` method to sum the elements of the array. The `reduce` method applies a function to each element of the array and accumulates the result. In this case, the function simply adds each element to the accumulator, which starts at 0.
+在这里， `sumArrayEfficient` 函数使用`reduce` 方法去计算数组里的数字的总和。 `reduce` 方法将函数应用于数组的每个元素，并累加结果。在这种情况下，函数只需将每个元素添加到从0开始的累加器中。
 
-This is a more efficient solution because it only requires a single iteration over the array and performs the summing operation on each element as it goes.
+这是一个更有效的解决方案，因为它只需要对数组进行一次迭代，并在进行时对每个元素执行求和操作。
 
-### Simplicity
+#### 简单
 
-And last comes **simplicity**. This is the toughest one to evaluate because its subjective, it depends on the person who reads the code. But some guidelines we can follow are:
+最后是**简单**。这是最难评估的一个方面，因为它很主观，它取决于读代码的人。但是也有一些我们可以遵循的指南：
 
-1.  Can you easily understand what the program does at each line?
-2.  Do functions and variables have names that clearly represent their responsibilities?
-3.  Is the code indented correctly and spaced with the same format all along the codebase?
-4.  Is there any documentation available for the code? Are comments used to explain complex parts of the program?
-5.  How quick can you identify in which part of the codebase are certain features of the program? Can you delete/add new features without the need of modifying many other parts of the code?
-6.  Does the code follow a modular approach, with different features separated in components?
-7.  Is code reused when possible?
-8.  Are the same architecture, design, and implementation decisions followed equally all along the codebase?
+1. 你能简单地理解程序的每行代码在干什么吗？
+2. 函数和变量的定义是否都清晰地代表他们需要代表的内容？
+3. 在整个代码库中，代码的缩进和空格是否遵循正确的代码格式？
+4. 代码有可用的文档吗？评论是否用于解释程序的复杂部分？
+5. 你能以多快的速度识别出代码库的哪个部分是程序的某些功能？你能在不修改代码其他部分的前提下删除/增加新功能吗？
+6. 代码是否遵循模块化方法，在组件中分离不同的功能？
+7. 代码在可能的情况下会重复使用吗？
+8. 在整个代码库中，相同的架构、设计和实现决策是否得到一样的遵循？
 
-By following and prioritizing these three concepts of effectiveness, efficiency, and simplicity, we can always have a guideline to follow when thinking about how to implement a solution. Now let's expand upon some of the guidelines that can help us simplify our code.
+通过遵循和优先考虑有效、效率和简单这三个概念，在考虑如何实施解决方案时，我们总是可以遵循一个指导方针。现在，让我们扩展一些可以帮助我们简化代码的指南。
 
-## Format and Syntax
+<h3 id="format-and-syntax">格式和语法</h3>
 
-Using consistent formatting and syntax throughout a codebase is an important aspect of writing clean code. This is because consistent formatting and syntax make the code more readable and easier to understand.
+在整个代码库中使用一致的格式和语法也是写出整洁代码的一个重要因素。这是因为一致的结构和语法能让代码可读性更强，并且能够更加容易理解。
 
-When code is consistent, developers can easily identify patterns and understand how the code works, which makes it easier to debug, maintain, and update the codebase over time. Consistency also helps to reduce errors, as it ensures that all developers are following the same standards and conventions.
+当代码一致时，开发者们可以轻松的识别模式、理解代码的工作流程，这也就使得未来调试、维护和更新代码库变得更加容易。一致性也能帮助降低错误，因为它确保所有的开发者都遵循相同的标准和惯例。
 
-Some of the things we should think about regarding format and syntax are:
+我们应该考虑的一些格式和语法如下：
 
--   **Indentation and spacing**
+-   **缩进和间距**
 
 ```javascript
 // bad indentation and spacing
@@ -135,9 +137,9 @@ const myFunc = (number1, number2) => {
 }
 ```
 
-Here we have an example of a same function, one done with no indentation and spacing, and the other properly spaced and indented. We can see that the second one is clearly easier to read.
+这里是同一个函数的例子，一个是没有缩进和空格，另一个是有合适的空格和缩进，我们可以发现第二个更容易阅读。
 
--   **Consistent syntax**
+-   **一致的语法**
 
 ```javascript
 // Arrow function, no colons, no return
@@ -149,13 +151,13 @@ function multiplyByThree(number) {
 }
 ```
 
-Again, here we have very similar functions implemented with different syntax. The first one is an arrow function, with no colons and no return, while the other is a common function that uses colons and a return.
+同样，这里是用两种语法写出来的非常相似的函数。第一个用的是一个箭头定义的函数，没有括号和返回，而另一个是一个使用了括号和返回的相同函数。
 
-Both work and are just fine, but we should aim to always use the same syntax for similar operations, as it becomes more even and readable along the codebase.
+两个都可以顺利的实现功能，但是我们在相似的操作中应该总是使用相似的操作，这样的话可以使得代码库更加的可读，且代码量也更加的均匀。
 
-Linterns and code formatters are great tools we can use in our projects to automatize the syntax and formatting conventions in our codebase. If you're not familiar with this tools, [check out this other article of mine](https://www.freecodecamp.org/news/using-prettier-and-jslint/).
+Linterns 和代码格式化程序是我们可以在项目中使用的很棒的工具，可以在我们的代码库中自动化语法和格式约定。 如果您不熟悉这些工具，[查看我的另一篇文章](https://www.freecodecamp.org/news/using-prettier-and-jslint/)。
 
--   **Consistent case conventions**
+-   **一致的案例惯例**
 
 ```javascript
 // camelCase
@@ -166,13 +168,14 @@ const MyName = 'John'
 const my_name = 'John'
 ```
 
-Same goes for the case convention we choose to follow. All of these work, but we should aim to consistently use the same one all through our project.
+我们选择的案例遵循的惯例也是如此。上述三种情况都可以，但我们应该在整个项目中始终使用相同的用法。
 
-## Naming
+<h3 id="naming">命名</h3>
 
-Naming variables and functions clearly and descriptively is an important aspect of writing clean code. It helps to improve the readability and maintainability of the codebase. When names are well-chosen, other developers can quickly understand what the variable or function is doing, and how it is related to the rest of the code.
 
-Here are two examples in JavaScript that demonstrate the importance of clear and descriptive naming:
+清晰而有描述性地命名变量和函数，对于书写clean code也是十分钟重要的一个方面。它可以帮助提高代码的可读性和维护能力。当命名选择良好时，其他开发人员可以快速理解变量或函数在做什么，以及它与代码的其余部分有何关系。
+
+下面是Javascript中的两个例子，用来展示清晰且有描述性地命名的重要性：
 
 ```javascript
 // Example 1: Poor Naming
@@ -185,7 +188,7 @@ function ab(a, b) {
 ab(5, 3);
 ```
 
-In this example, we have a function that takes two parameters, adds them to a hardcoded value of 10, and logs the result to the console. The function name and variable names are poorly chosen and don't give any indication of what the function does or what the variables represent.
+在本例中，我们有一个函数，它接受两个参数，将它们与常量值10相加，并将结果记录到控制台。函数名称和变量名选择不当，没有给出任何指示函数的作用或变量代表什么。
 
 ```javascript
 // Example 1: Good Naming
@@ -198,15 +201,15 @@ function calculateTotalWithTax(basePrice, taxRate) {
 calculateTotalWithTax(50, 20);
 ```
 
-In this example, we have a function that calculates the total price of a product including tax. The function name and variable names are well-chosen and give a clear indication of what the function does and what the variables represent.
+在这个例子中，我们有一个函数来计算产品的总价格，包括收取的税值。函数名称和变量名选择得很好，可以清楚地表明函数的作用以及变量代表什么。
 
-This makes the code easier to read and understand, especially for other developers who may be working with the codebase in the future.
+这使得代码更容易阅读和理解，特别是对于未来可能使用代码库的其他开发人员来说。
 
-## Conciseness vs Clarity
+<h3 id="conciseness-versus-clarity">简洁VS清晰</h3>
 
-When it comes to writing clean code, it's important to strike a balance between conciseness and clarity. While it's important to keep code concise to improve its readability and maintainability, it's equally important to ensure that the code is clear and easy to understand. Writing overly concise code can lead to confusion and errors, and can make the code difficult to work with for other developers.
+当涉及到编写整洁的代码时，在简洁和清晰之间取得平衡很重要。虽然保持代码简洁以提高其可读性和可维护性很重要，但同样重要的是确保代码清晰且易于理解。编写过于简洁的代码可能会导致混乱和错误，并可能使其他开发人员难以使用代码。
 
-Here are two examples that demonstrate the importance of conciseness and clarity:
+以下是两个例子，证明了简洁和清晰的重要性：
 
 ```javascript
 // Example 1: Concise function
@@ -214,7 +217,7 @@ const countVowels = s => (s.match(/[aeiou]/gi) || []).length;
 console.log(countVowels("hello world"));
 ```
 
-This example uses a concise arrow function and regex to count the number of vowels in a given string. While the code is very short and easy to write, it may not be immediately clear to other developers how the regex pattern works, especially if they are not familiar with regex syntax.
+本示例使用简洁的箭头函数和正则表达式来计算给定字符串中的元音数量。虽然代码非常简短且易于编写，但其他开发人员可能无法立即清楚正则表达式模式的工作原理，特别是如果他们不熟悉正则表达式语法。
 
 ```javascript
 // Example 2: More verbose and clearer function
@@ -227,19 +230,20 @@ function countVowels(s) {
 console.log(countVowels("hello world"));
 ```
 
-This example uses a traditional function and regex to count the number of vowels in a given string, but does so in a way that is clear and easy to understand. The function name and variable names are descriptive, and the regex pattern is stored in a variable with a clear name. This makes it easy to see what the function is doing and how it works.
+此示例使用传统函数和正则表达式来计算给定字符串中的元音数量，但以清晰易懂的方式进行计算。函数名称和变量名是描述性的，正则表达式模式存储在具有清晰名称的变量中。这使得很容易看到该功能在做什么以及它是如何工作的。
 
-It's important to strike a balance between conciseness and clarity when writing code. While concise code can improve readability and maintainability, it's important to ensure that the code is still clear and easy to understand for other developers who may be working with the codebase in the future.
 
-By using descriptive function and variable names, and making use of clear and readable code formatting and comments, it's possible to write clean and concise code that is easy to understand and work with.
+在编写代码时，在简洁和清晰之间取得平衡很重要。虽然简洁的代码可以提高可读性和可维护性，但对于将来可能使用代码库的其他开发人员来说，确保代码仍然清晰且易于理解很重要。
 
-## Reusability
+通过使用描述性函数和变量名，以及使用清晰可读的代码格式和注释，可以编写易于理解和处理的干净简洁的代码。
 
-Code reusability is a fundamental concept in software engineering that refers to the ability of code to be used multiple times without modification.
+<h3 id="re-usability">复用性</h3>
 
-The importance of code reusability lies in the fact that it can greatly improve the efficiency and productivity of software development by reducing the amount of code that needs to be written and tested.
+代码可重用性是软件工程的一个基本概念，指的是代码无需修改即可多次使用的能力。
 
-By reusing existing code, developers can save time and effort, improve code quality and consistency, and minimize the risk of introducing bugs and errors. Reusable code also allows for more modular and scalable software architectures, making it easier to maintain and update codebases over time.
+代码可重用性的重要性在于，它可以通过减少需要编写和测试的代码量来大大提高软件开发的效率和生产力。
+
+通过重复使用现有代码，开发人员可以节省时间和精力，提高代码质量和一致性，并最大限度地降低引入错误和错误的风险。可重用代码还允许更多模块化和可扩展的软件架构，使其更容易随着时间的推移维护和更新代码库。
 
 ```javascript
 // Example 1: No re-usability
@@ -263,9 +267,9 @@ const triangleArea = calculateTriangleArea(3, 7);
 console.log(circleArea, rectangleArea, triangleArea);
 ```
 
-This example defines three functions that calculate the area of a circle, rectangle, and triangle, respectively. Each function performs a specific task, but none of them are reusable for other similar tasks.
+这个例子定义了三个函数，分别计算圆、矩形和三角形的面积。每个函数执行一个特定的任务，但它们都不能重复用于其他类似任务。
 
-Additionally, the use of a hard-coded PI value can lead to errors if the value needs to be changed in the future. The code is inefficient since it repeats the same logic multiple times.
+此外，如果将来需要更改值，使用直接赋值的PI值可能会导致错误。该代码效率低下，因为它多次重复相同的逻辑。
 
 ```javascript
 // Example 2: Implementing re-usability
@@ -292,17 +296,17 @@ const triangleArea = calculateArea('triangle', 3, 7);
 console.log(circleArea, rectangleArea, triangleArea);
 ```
 
-This example defines a single function `calculateArea` that takes a `shape` argument and a variable number of arguments. Based on the `shape` argument, the function performs the appropriate calculation and returns the result.
+此示例定义了单个函数 calculateArea，该函数采用形状参数和可变数量的参数。基于形状参数，函数执行适当的计算并返回结果。
 
-This approach is much more efficient since it eliminates the need to repeat code for similar tasks. It is also more flexible and extensible, as additional shapes can easily be added in the future.
+这种方法效率要高得多，因为它消除了为类似任务重复代码的需要。它也更加灵活和可扩展，因为将来可以很容易地添加额外的形状。
 
-## Clear Flow of Execution
+<h3 id="clear-flow-of-execution">清晰的执行流程</h3>
 
-Having a clear flow of execution is essential for writing clean code because it makes the code easier to read, understand, and maintain. Code that follows a clear and logical structure is less prone to errors, easier to modify and extend, and more efficient in terms of time and resources.
+清晰的执行流程对于编写干净的代码至关重要，因为它使代码更易于阅读、理解和维护。 遵循清晰和逻辑结构的代码不容易出错，更容易修改和扩展，并且在时间和资源方面更有效率。
 
-On the other hand, spaghetti code is a term used to describe code that is convoluted and difficult to follow, often characterized by long, tangled, and unorganized code blocks. Spaghetti code can be a result of poor design decisions, excessive coupling, or lack of proper documentation and commenting.
+另一方面，意大利面条代码是一个术语，用于描述复杂且难以理解的代码，通常以长、混乱和无组织的代码块为特征。 意大利面条代码可能是糟糕的设计决策、过度耦合或缺乏适当的文档和注释的结果。
 
-Here are two examples of JavaScript code that perform the same task, one with a clear flow of execution, and the other with spaghetti code:
+下面是执行相同任务的两个 JavaScript 代码示例，一个执行流程清晰，另一个代码很杂乱：
 
 ```javascript
 // Example 1: Clear flow of execution
@@ -334,15 +338,15 @@ if (discountedPrice) {
 }
 ```
 
-As we can see, example 1 follows a clear and logical structure, with a function that takes in the necessary parameters and returns the calculated result. On the other hand, example 2 is much more convoluted, with variables declared outside of any function and multiple if statements used to check if the code block has executed successfully.
+正如我们所见，示例 1 遵循清晰且合乎逻辑的结构，其中包含一个函数，该函数接受必要的参数并返回计算结果。 另一方面，示例 2 更加复杂，在任何函数之外声明了变量，并且使用多个 if 语句来检查代码块是否已成功执行。
 
-## Single Responsibility Principle
+<h3 id="single-responsibility-principle">单一制责原则</h3>
 
-The Single Responsibility Principle (SRP) is a principle in software development that states that each class or module should have only one reason to change, or in other words, each entity in our codebase should have a single responsibility.
+单一职责原则 (SRP) 是软件开发中的一项原则，它指出每个类或模块应该只有一个更改原因，或者换句话说，我们代码库中的每个实体都应该承担单一职责。
 
-This principle helps to create code that is easy to understand, maintain, and extend.
+此原则有助于创建易于理解、维护和扩展的代码。
 
-By applying SRP, we can create code that is easier to test, reuse, and refactor, since each module only handles a single responsibility. This makes it less likely to have side effects or dependencies that can make the code harder to work with.
+通过应用 SRP，我们可以创建更易于测试、重用和重构的代码，因为每个模块只处理单一职责。 这使得它不太可能有副作用或依赖性，这些副作用或依赖性会使代码更难使用。
 
 ```javascript
 // Example 1: Withouth SRP
@@ -371,7 +375,7 @@ function processOrder(order) {
 }
 ```
 
-In this example, the `processOrder` function handles several responsibilities: it validates the order, calculates the total, applies discounts, and saves the order to a database. This makes the function long and hard to understand, and any changes to one responsibility may affect the others, making it harder to maintain.
+在此示例中，`processOrder`函数处理多项职责：它验证订单、计算总额、应用折扣以及将订单保存到数据库中。 这使得该功能冗长且难以理解，并且对一项职责的任何更改都可能影响其他职责，从而使其更难维护。
 
 ```javascript
 // Example 2: With SRP
@@ -428,17 +432,17 @@ if (processor.validate()) {
 }
 ```
 
-In this example, the `processOrder` function has been split into two classes that follow the SRP: `OrderProcessor` and `OrderSaver`.
+在此示例中，`processOrder` 函数已拆分为遵循 SRP 的两个类：`OrderProcessor`和`OrderSaver`。
 
-The `OrderProcessor` class handles the responsibilities of validating the order, calculating the total, and applying discounts, while the `OrderSaver` class handles the responsibility of saving the order to the database.
+`OrderProcessor` 类负责验证订单、计算总额和应用折扣，而 `OrderSaver` 类负责将订单保存到数据库。
 
-This makes the code easier to understand, test, and maintain, since each class has a clear responsibility and can be modified or replaced without affecting the others.
+这使得代码更易于理解、测试和维护，因为每个类都有明确的职责，并且可以在不影响其他类的情况下进行修改或替换。
 
-## Having a "Single Source of Truth"
+<h3 id="having-a-single-source-of-truth">拥有“唯一事实来源”</h3>
 
-Having a "single source of truth" means that there is only one place where a particular piece of data or configuration is stored in the codebase, and any other references to it in the code refer back to that one source. This is important because it ensures that the data is consistent and avoids duplication and inconsistency.
+拥有“单一事实来源”意味着代码库中只有一个地方存储特定的数据或配置，代码中对它的任何其他引用都指向那个来源。 这很重要，因为它确保数据一致并避免重复和不一致。
 
-Here's an example to illustrate the concept. Let's say we have an application that needs to display the current weather conditions in a city. We could implement this feature in two different ways:
+这里有一个例子来说明这个概念。 假设我们有一个应用程序需要显示一个城市的当前天气状况。 我们可以通过两种不同的方式实现此功能：
 
 ```javascript
 // Option 1: No "single source of truth"
@@ -462,7 +466,7 @@ function displayCurrentWeather(city) {
 }
 ```
 
-In this option, the API key is duplicated in two different files, making it harder to maintain and update. If we ever need to change the API key, we have to remember to update it in both places.
+在此选项中，API 密钥在两个不同的文件中重复，使其更难维护和更新。 如果我们需要更改 API 密钥，我们必须记住在两个地方都更新它。
 
 ```javascript
 // Option 2: "Single source of truth"
@@ -489,17 +493,17 @@ function displayCurrentWeather(city) {
 }
 ```
 
-In this option, the API key is stored in one place (in the `weatherAPI.js` file) and exported for other modules to use. This ensures that there is only one source of truth for the API key and avoids duplication and inconsistency.
+在此选项中，API 密钥存储在一个位置（在 `weatherAPI.js` 文件中）并导出以供其他模块使用。 这可确保 API 密钥只有一个真实来源，并避免重复和不一致。
 
-If we ever need to update the API key, we can do it in one place and all other modules that use it will automatically get the updated value.
+如果我们需要更新 API 密钥，我们可以在一个地方进行，所有其他使用它的模块将自动获得更新后的值。
 
-## Only Expose and Consume Data You Need
+<h3 id="only-expose-and-consume-data-you-need">只暴露和使用你需要的数据</h3>
 
-One important principle of writing clean code is to only expose and consume the information that is necessary for a particular task. This helps to reduce complexity, increase efficiency, and avoid errors that can arise from using unnecessary data.
+编写整洁代码的一个重要原则是只公开和使用特定任务所需的信息。 这有助于降低复杂性、提高效率并避免因使用不必要的数据而导致的错误。
 
-When data that is not needed is exposed or consumed, it can lead to performance issues and make the code more difficult to understand and maintain.
+当不需要的数据被暴露或消耗时，可能会导致性能问题并使代码更难以理解和维护。
 
-Suppose you have an object with multiple properties, but you only need to use a few of them. One way to do this would be to reference the object and the specific properties every time you need them. But this can become verbose and error-prone, especially if the object is deeply nested. A cleaner and more efficient solution would be to use object destructuring to only expose and consume the information you need.
+假设您有一个具有多个属性的对象，但您只需要使用其中的几个。 一种方法是在每次需要时引用对象和特定属性。 但这可能会变得冗长且容易出错，尤其是当对象嵌套很深时。 一种更清洁、更高效的解决方案是使用对象解构来仅公开和使用您需要的信息。
 
 ```javascript
 // Original object
@@ -523,17 +527,17 @@ console.log(name); // 'Alice'
 console.log(email); // 'alice@example.com'
 ```
 
-## Modularization
+<h3 id="modularization">模块化</h3>
 
-Modularization is an essential concept in writing clean code. It refers to the practice of breaking down large, complex code into smaller, more manageable modules or functions. This makes the code easier to understand, test, and maintain.
+模块化是编写干净代码的基本概念。 它指的是将大型复杂代码分解为更小、更易于管理的模块或功能的做法。 这使代码更易于理解、测试和维护。
 
-Using modularization provides several benefits such as:
+使用模块化提供了几个好处，例如：
 
-1.  Re-usability: Modules can be reused in different parts of the application or in other applications, saving time and effort in development.
-2.  Encapsulation: Modules allow you to hide the internal details of a function or object, exposing only the essential interface to the outside world. This helps to reduce coupling between different parts of the code and improve overall code quality.
-3.  Scalability: By breaking down large code into smaller, modular pieces, you can easily add or remove functionality without affecting the entire codebase.
+1. 复用性：模块可以在应用程序的不同部分或其他应用程序中重复使用，节省开发时间和精力。
+2. 封装：模块允许您隐藏函数或对象的内部细节，只将基本接口暴露给外界。 这有助于减少代码不同部分之间的耦合并提高整体代码质量。
+3. 可扩展性：通过将大代码分解成更小的模块化片段，您可以轻松添加或删除功能，而不会影响整个代码库。
 
-Here is an example in JavaScript of a piece of code that performs a simple task, one not using modularization and the other implementing modularization.
+下面是一段 JavaScript 代码示例，它执行一个简单的任务，一个不使用模块化，另一个实现模块化。
 
 ```javascript
 // Without modularization
@@ -552,9 +556,9 @@ let total = calculatePrice(quantity, price, tax);
 console.log("Total: $" + total.toFixed(2));
 ```
 
-In the above example, the `calculatePrice` function is used to calculate the total price of an item given its quantity, price, and tax rate. However, this function is not modularized and is tightly coupled with the user input and output logic. This can make it difficult to test and maintain.
+在上面的示例中，`calculatePrice` 函数用于根据商品的数量、价格和税率计算商品的总价。 但是，此功能并未模块化，并且与用户输入和输出逻辑紧密耦合。 这会使测试和维护变得困难。
 
-Now, let's see an example of the same code using modularization:
+现在，让我们看一下使用模块化的相同代码的示例：
 
 ```javascript
 // With modularization
@@ -576,19 +580,19 @@ let total = calculateTotal(subtotal, tax);
 console.log("Total: $" + total.toFixed(2));
 ```
 
-In the above example, the `calculatePrice` function has been broken down into two smaller functions: `calculateSubtotal` and `calculateTotal`. These functions are now modularized and are responsible for calculating the subtotal and total, respectively. This makes the code easier to understand, test, and maintain, and also makes it more reusable in other parts of the application.
+在上面的示例中，`calculatePrice` 函数被分解为两个较小的函数：`calculateSubtotal` 和 `calculateTotal`。 这些函数现在已经模块化，分别负责计算小计和总计。 这使代码更易于理解、测试和维护，也使其在应用程序的其他部分更易于重用。
 
-Modularization can also refer to the practice of dividing single files of code into many smaller files that are later on compiled back on to a single (or fewer files). This practice has the same benefits we just talked about.
+模块化也可以指将单个代码文件分成许多较小的文件，这些文件之后会编译回单个（或更少的文件）的做法。 这种做法与我们刚才谈到的好处相同。
 
-If you'd like to know how to implement this in JavaScript using modules, [check out this other article of mine](https://www.freecodecamp.org/news/modules-in-javascript/).
+如果您想知道如何使用模块在 JavaScript 中实现这一点，[查看我的另一篇文章](https://www.freecodecamp.org/news/modules-in-javascript/)。
 
-## Folder Structures
+<h3 id="folder-structures">文件夹结构</h3>
 
-Choosing a good folder structure is an essential part of writing clean code. A well-organized project structure helps developers find and modify code easily, reduces code complexity, and improves project scalability and maintainability.
+选择一个好的文件夹结构是编写干净代码的重要部分。 组织良好的项目结构有助于开发人员轻松查找和修改代码，降低代码复杂度，并提高项目的可扩展性和可维护性。
 
-On the other hand, a poor folder structure can make it challenging to understand the project's architecture, navigate the codebase, and lead to confusion and errors.
+另一方面，糟糕的文件夹结构会使理解项目架构、浏览代码库变得困难，并导致混乱和错误。
 
-Here are examples of a good and a bad folder structure using a React project as an example:
+以下是使用 React 项目作为示例的好的和坏的文件夹结构示例：
 
 ```javascript
 // Bad folder structure
@@ -612,9 +616,9 @@ my-app/
     └── helpers.js
 ```
 
-In this example, the project structure is organized around file types, such as components, containers, and pages.
+在此示例中，项目结构是围绕文件类型组织的，例如组件、容器和页面。
 
-But this approach can lead to confusion and duplication, as it's not clear which files belong where. For example, the `Home` component is present in both the `containers` and `pages` folders. It can also make it challenging to find and modify code, as developers may need to navigate multiple folders to find the code they need.
+但是这种方法会导致混淆和重复，因为不清楚哪些文件属于哪里。 例如，`Home`组件存在于`containers`和`pages`文件夹中。 它还可能使查找和修改代码变得困难，因为开发人员可能需要导航多个文件夹才能找到他们需要的代码。
 
 ```javascript
 // Good folder structure
@@ -656,36 +660,36 @@ my-app/
     └── favicon.ico
 ```
 
-In this example, the project structure is organized around features, such as components, pages, and utils. Each feature has its own folder, which contains all the files related to that feature.
+在此示例中，项目结构是围绕组件、页面和实用程序等功能进行组织的。 每个功能都有自己的文件夹，其中包含与该功能相关的所有文件。
 
-This approach makes it easy to find and modify code, as all the files related to a feature are located in the same folder. It also reduces code duplication and complexity, as features are separated, and their related files are organized together.
+这种方法使得查找和修改代码变得容易，因为与功能相关的所有文件都位于同一个文件夹中。 它还减少了代码重复和复杂性，因为功能是分开的，并且它们的相关文件被组织在一起。
 
-Overall, a good folder structure should be organized around features, not file types, and should make it easy to find and modify code. A clear and logical structure can make a project easier to maintain, understand and scale, while a confusing and inconsistent structure can lead to errors and confusion.
+总的来说，一个好的文件夹结构应该围绕功能而不是文件类型来组织，并且应该便于查找和修改代码。 清晰且合乎逻辑的结构可以使项目更易于维护、理解和扩展，而混乱和不一致的结构会导致错误和混乱。
 
-If you're interested in learning more about this, [in this article I wrote about software architecture](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/#different-folder-structures-to-know) I expanded upon the topic of folder structures and well-known patterns you can follow.
+如果您有兴趣了解更多相关信息，[在本文中我写了关于软件架构的文章](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/#different-folder -structures-to-know)我扩展了文件夹结构和您可以遵循的众所周知的模式的主题。
 
-## Documentation
+<h3 id="documentation">文档化</h3>
 
-Documentation is an essential part of writing clean code. Proper documentation not only helps the developer who wrote the code understand it better in the future but also makes it easier for other developers to read and understand the codebase. When code is well-documented, it can save time and effort in debugging and maintaining the code.
+文档是编写干净代码的重要组成部分。 适当的文档不仅可以帮助编写代码的开发人员将来更好地理解代码，还可以让其他开发人员更容易阅读和理解代码库。 当代码有良好的文档记录时，可以节省调试和维护代码的时间和精力。
 
-Documenting is specially important in cases in which simple and easy to understand solutions can't be implemented, cases when the business logic is quite complex, and cases in which people who are not familiar with the codebase have to interact with it.
+在无法实施简单易懂的解决方案、业务逻辑相当复杂的情况以及必须与不熟悉代码库的人交互的情况下，文档化尤为重要。
 
-One way to document code is by using comments. Comments can provide context and explain what the code is doing. But it's important to use comments wisely, only commenting where necessary and avoiding redundant or unnecessary ones.
+记录代码的一种方法是使用注释。 注释可以提供上下文并解释代码的作用。 但重要的是要明智地使用注释，只在必要时评论并避免多余或不必要的注释。
 
-Another way to document code is by using inline documentation. Inline documentation is embedded in the code itself and can be used to explain what a specific function or piece of code does. Inline documentation is often used in combination with tools like [JSDoc](https://jsdoc.app/), which provides a standard for documenting code in JavaScript.
+另一种记录代码的方法是使用内联文档。 内联文档嵌入在代码本身中，可用于解释特定功能或代码片段的作用。 内联文档通常与 [JSDoc](https://jsdoc.app/) 等工具结合使用，它提供了在 JavaScript 中记录代码的标准。
 
-Tools like Typescript can also provide automatic documentation for our codebase, which is hugely helpful.
+像 Typescript 这样的工具还可以为我们的代码库提供自动文档，这非常有帮助。
 
-If you'd like to know more about Typescript, I wrote [a beginner friendly guide a while ago](https://www.freecodecamp.org/news/an-introduction-to-typescript/#otherfunctionalitiesoftypescript).
+如果您想了解更多关于 Typescript 的信息，我之前写了一篇 [初学者友好指南](https://www.freecodecamp.org/news/an-introduction-to-typescript/#otherfunctionalitiesoftypescript)。
 
-And Lastly, tools like Swagger and Postman can be used to document APIs, providing a way to easily understand how to interact with them
+最后，Swagger 和 Postman 等工具可用于记录 API，提供一种轻松理解如何与它们交互的方法
 
-If you're interested in knowing how to fully implement, test, consume and document APIs, I recently wrote two guides for [REST APIs](https://www.freecodecamp.org/news/build-consume-and-document-a-rest-api/) and [GraphQL APIs](https://www.freecodecamp.org/news/building-consuming-and-documenting-a-graphql-api/).
+如果您有兴趣了解如何完全实施、测试、使用和记录 API，我最近为 [REST API](https://www.freecodecamp.org/news/build-consume-and-document- a-rest-api/) 和 [GraphQL API](https://www.freecodecamp.org/news/building-consuming-and-documenting-a-graphql-api/)。
 
-# **************Wrap************ping ************Up**************
+<h2 id="wrapping-up">总结</h2>
 
-Well everyone, as always, I hope you enjoyed the article and learned something new.
+最后，还是像之前那样，我希望你喜欢这篇文章并学到新东西。
 
-If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman). See you in the next one!
+如果需要，你也可以在 [LinkedIn](https://www.linkedin.com/in/germancocca/) 或 [Twitter](https://twitter.com/CoccaGerman) 上关注我。 下期见！
 
-![giphy](https://www.freecodecamp.org/news/content/images/2023/05/giphy.gif)
+<figure class="kg-card kg0card0image kg-card-hascaption"><img src = "https://www.freecodecamp.org/news/content/images/2023/05/giphy.gif "  class="kg-image"></figure>

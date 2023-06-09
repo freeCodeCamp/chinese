@@ -1,7 +1,7 @@
-> -  原文地址：[How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/build-a-blog-website-with-ghost-api-and-nextjs/)
-> -  原文作者：[Rajdeep Singh](https://www.freecodecamp.org/news/author/officialrajdeepsingh/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/build-a-blog-website-with-ghost-api-and-nextjs/)
+> - 原文作者：[Rajdeep Singh](https://www.freecodecamp.org/news/author/officialrajdeepsingh/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Ghost-API-and-Nextjs--2-.png)
 
@@ -28,23 +28,23 @@ All the code is available on [GitHub](https://github.com/officialrajdeepsingh/ne
 7.  [What to know before following this tutorial](#what-to-know-before-following-this-tutorial-)
 8.  [Folder Structure](#folder-structure)
 9.  [How to Configure Ghost CMS and Next.js](#how-to-configure-ghost-cms-and-next-js)
-10.  [Understanding the Next.js 13 App Folder](#understanding-the-next-js-13-app-folder)
-11.  [Demo Data for the Project](#demo-data-for-the-project)
-12.  [How to Build the Blog](#how-to-build-the-blog)
-13.  [How to Build the Header](#how-to-build-the-header)
-14.  [How to Build the Footer](#how-to-build-the-footer)
-15.  [How to Build the Layout](#how-to-build-the-layout)
-16.  [How to Build the Homepage](#how-to-build-the-homepage)
-17.  [How to Build the Reading Page](#how-to-build-the-reading-page)
-18.  [How to Build the Tag Page](#how-to-build-the-tag-page)
-19.  [How to Build the Author Page](#how-to-build-the-author-page)
-20.  [How to Build Single Pages](#how-to-build-single-pages)
-21.  [How to Handle Pagination](#how-to-handle-pagination)
-22.  [Next.js SEO](#next-js-seo)
-23.  [How to Enable Search](#how-to-enable-search)
-24.  [Error Handling](#error-handling)
-25.  [How to Rebuild Your Static Site with Webhooks](#how-to-rebuild-your-static-site-with-webhooks)
-26.  [Conclusion](#conclusion)
+10. [Understanding the Next.js 13 App Folder](#understanding-the-next-js-13-app-folder)
+11. [Demo Data for the Project](#demo-data-for-the-project)
+12. [How to Build the Blog](#how-to-build-the-blog)
+13. [How to Build the Header](#how-to-build-the-header)
+14. [How to Build the Footer](#how-to-build-the-footer)
+15. [How to Build the Layout](#how-to-build-the-layout)
+16. [How to Build the Homepage](#how-to-build-the-homepage)
+17. [How to Build the Reading Page](#how-to-build-the-reading-page)
+18. [How to Build the Tag Page](#how-to-build-the-tag-page)
+19. [How to Build the Author Page](#how-to-build-the-author-page)
+20. [How to Build Single Pages](#how-to-build-single-pages)
+21. [How to Handle Pagination](#how-to-handle-pagination)
+22. [Next.js SEO](#next-js-seo)
+23. [How to Enable Search](#how-to-enable-search)
+24. [Error Handling](#error-handling)
+25. [How to Rebuild Your Static Site with Webhooks](#how-to-rebuild-your-static-site-with-webhooks)
+26. [Conclusion](#conclusion)
 
 In this article, we cover the basics of Next's experimental app directory. Then I'll teach you how to step up Next and Ghost CMS locally and how to integrate Ghost with Next. Lastly, I'll show you how to consume data from the backend (via theGhost CMS API ) and show it on the site with React.js.
 
@@ -67,16 +67,15 @@ Note that the current project is not ready for TypeScript, but I'm working on it
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: true
   },
-  
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  
-}
 
-module.exports = nextConfig
+  typescript: {
+    ignoreBuildErrors: false
+  }
+};
+
+module.exports = nextConfig;
 ```
 
 Ignore Build Errors during development
@@ -122,9 +121,9 @@ After the blog installation is finished, you can start your local development se
 
 There are a few additional commands that are helpful when using the Ghost CLI:
 
--   `ghost start`: start your server.
--   `ghost stop` : stop your running Ghost server.
--   `ghost help` : check the available list of commands.
+- `ghost start`: start your server.
+- `ghost stop` : stop your running Ghost server.
+- `ghost help` : check the available list of commands.
 
 **Note:**
 
@@ -175,7 +174,7 @@ These Node packages can help you speed up your development process. Make sure to
 1.  `pnpm add @tryghost/content-api`(required)
 2.  `pnpm add @types/tryghost__content-api` (required by TypeScript)
 3.  `pnpm add tailwindcss postcss autoprefixer`
-4.  `pnpm add  @tailwindcss/typography`
+4.  `pnpm add @tailwindcss/typography`
 5.  `pnpm add react-icons`
 6.  `pnpm add date-fns`
 7.  `pnpm add next-themes`
@@ -183,14 +182,14 @@ These Node packages can help you speed up your development process. Make sure to
 
 Here's what each of these packages does:
 
--   [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package is a Ghost JavaScript Client Library for fetching [content API](https://ghost.org/docs/content-api/) data.
--   [@types/tryghost\_\_content-api](https://www.npmjs.com/package/@types/tryghost__content-api) package contains type definitions for @tryghost/content-api.
--   TailwindCSS, autoprefixer, and PostCSS are packages required for [Tailwind CSS](https://beta.nextjs.org/docs/styling/tailwind-css).
--   [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) package for handling dynamic typography with Tailwind CSS.
--   The [next-themes](https://www.npmjs.com/package/next-themes) package enables themes like switching from dark to light mode on your site.
--   The [react-icons](https://www.npmjs.com/package/react-icons) package provides lots of SVG icons for the project. This way, you do not need to download them manually.
--   [@radix-ui/react-popover](https://www.radix-ui.com/docs/primitives/components/popover#installation) is part of the Radix UI ecosystem. I choose the Radix popover component for the design of the search component on the site.
--   [date-fns](https://www.npmjs.com/package/date-fns) package helps convert your `published_at` date into a different date format.
+- [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package is a Ghost JavaScript Client Library for fetching [content API](https://ghost.org/docs/content-api/) data.
+- [@types/tryghost\_\_content-api](https://www.npmjs.com/package/@types/tryghost__content-api) package contains type definitions for @tryghost/content-api.
+- TailwindCSS, autoprefixer, and PostCSS are packages required for [Tailwind CSS](https://beta.nextjs.org/docs/styling/tailwind-css).
+- [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) package for handling dynamic typography with Tailwind CSS.
+- The [next-themes](https://www.npmjs.com/package/next-themes) package enables themes like switching from dark to light mode on your site.
+- The [react-icons](https://www.npmjs.com/package/react-icons) package provides lots of SVG icons for the project. This way, you do not need to download them manually.
+- [@radix-ui/react-popover](https://www.radix-ui.com/docs/primitives/components/popover#installation) is part of the Radix UI ecosystem. I choose the Radix popover component for the design of the search component on the site.
+- [date-fns](https://www.npmjs.com/package/date-fns) package helps convert your `published_at` date into a different date format.
 
 ## What to Know Before Following This Tutorial
 
@@ -273,7 +272,7 @@ folder structure with nextjs and ghost cms
 
 ## How to Configure Ghost CMS and Next.js
 
-The next step is to set up data fetching for the Ghost Content API. This is why we installed the [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package above.  
+The next step is to set up data fetching for the Ghost Content API. This is why we installed the [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package above.
 
 Ghost CMS comes with two types of APIs: the first is the [Content API](https://ghost.org/docs/content-api/), and the second is the [Admin API](https://ghost.org/docs/admin-api/). For the blog, we'll use the **[Content API](https://ghost.org/docs/content-api/).**
 
@@ -284,13 +283,13 @@ To configure it, we create a new file inside the `src/app` folder with `ghost-cl
 ```typescript
 // ghost-client.ts
 
-import GhostContentAPI from "@tryghost/content-api";
+import GhostContentAPI from '@tryghost/content-api';
 
 // Create API instance with site credentials
 const api = new GhostContentAPI({
   url: process.env.GHOST_URL as string,
   key: process.env.GHOST_KEY as string,
-  version: "v5.0"
+  version: 'v5.0'
 });
 ```
 
@@ -331,20 +330,20 @@ To understand the Next experimental app folder, let's look at a real example:
 
 Now you can create five files inside every route. For example, if you create a `tag` or **`category`** route in your app folder, then you can create four files inside your app route folder.
 
--   `page.ts` (required): it is your main file.
--   `layout.ts` (optional): it helps design your layout
--   `loading.ts` (optional): it creates a loading indicator with React suspense.
--   `error.ts` (optional): it helps handle errors in your React app.
--   `components` (optional): you can also create another component in your routes.
+- `page.ts` (required): it is your main file.
+- `layout.ts` (optional): it helps design your layout
+- `loading.ts` (optional): it creates a loading indicator with React suspense.
+- `error.ts` (optional): it helps handle errors in your React app.
+- `components` (optional): you can also create another component in your routes.
 
 Let's understand how the new Next.js 13 app route works with a real-life example: your tag route folder looks like this.
 
 ```typescript
-app/tag/[slug]/page.ts
-app/tag/[slug]/loading.ts
-app/tag/[slug]/layout.ts
-app/tag/[slug]/error.ts
-app/tag/[slug]/my-card-component.ts
+app / tag / [slug] / page.ts;
+app / tag / [slug] / loading.ts;
+app / tag / [slug] / layout.ts;
+app / tag / [slug] / error.ts;
+app / tag / [slug] / my - card - component.ts;
 ```
 
 Tag folder structure
@@ -366,10 +365,10 @@ We'll go through and build each part of the blog in the following sections so yo
 7.  [How to build the author page](#how-to-build-the-author-page)
 8.  [How to build single pages](#how-to-build-single-pages)
 9.  [How to handle pagination](#how-to-handle-pagination)
-10.  [Next.js SEO](#next-js-seo)
-11.  [How to Enable Search](#how-to-enable-search)
-12.  [Error Handling](#error-handling)
-13.  [How to rebuild your static site with webhooks](#how-to-rebuild-your-static-site-with-webhooks)
+10. [Next.js SEO](#next-js-seo)
+11. [How to Enable Search](#how-to-enable-search)
+12. [Error Handling](#error-handling)
+13. [How to rebuild your static site with webhooks](#how-to-rebuild-your-static-site-with-webhooks)
 
 ### How to Build the Header
 
@@ -386,50 +385,53 @@ Here's the code to build the header component:
 ```typescript
 // Header.tsx
 
-import Link from "next/link";
-import SocialIcons from "./SocialIcons";
-import Image from "next/image";
-import type { Settings } from "@tryghost/content-api";
+import Link from 'next/link';
+import SocialIcons from './SocialIcons';
+import Image from 'next/image';
+import type { Settings } from '@tryghost/content-api';
 
 function Header({ setting }: { setting: Settings }) {
-
   return (
     <header className="px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full">
-
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         {/* Logo for blog */}
         <Link href="/" className="flex items-center">
-          {setting.logo !== null ?
+          {setting.logo !== null ? (
             <Image
-              alt={setting.title} width={200} height={100} src={setting.logo} className="self-center text-xl font-semibold whitespace-nowrap dark:text-white" />
-            : setting.title}
+              alt={setting.title}
+              width={200}
+              height={100}
+              src={setting.logo}
+              className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            />
+          ) : (
+            setting.title
+          )}
         </Link>
         <div className="flex md:order-2">
-
           <ul className="flex flex-wrap p-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-
             {
               /* Blog Navigation Edit in GHOST CMS  */
-              setting.navigation !== undefined ? setting?.navigation.map(item => <li key={item.label} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
-                aria-current="page">
-                <Link href={item.url}>
-                  {item.label}
-                </Link>
-              </li>) : " "
-
+              setting.navigation !== undefined
+                ? setting?.navigation.map((item) => (
+                    <li
+                      key={item.label}
+                      className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                      aria-current="page"
+                    >
+                      <Link href={item.url}>{item.label}</Link>
+                    </li>
+                  ))
+                : ' '
             }
-
           </ul>
-
         </div>
         <SocialIcons setting={setting} />
       </div>
-
-    </header >
-  )
-
+    </header>
+  );
 }
-export default Header
+export default Header;
 ```
 
 ### How to Build the Footer
@@ -445,54 +447,61 @@ I designed a basic footer with copyrighted text and added social icons for the s
 ```typescript
 // Footer.tsx
 
-import { FaTwitter, FaFacebook } from "react-icons/fa";
-import Link from "next/link";
-import type { Settings } from "@tryghost/content-api";
+import { FaTwitter, FaFacebook } from 'react-icons/fa';
+import Link from 'next/link';
+import type { Settings } from '@tryghost/content-api';
 
 function Footer({ setting }: { setting: Settings }) {
-
   return (
-
     <footer className="px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full">
-
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-
-        <Link href="https://github.com/frontendweb3" className="flex items-center">
-          <span className="self-center text-gray-800 text-sm font-semibold whitespace-nowrap dark:text-white">2023 copyright frontend web</span>
+        <Link
+          href="https://github.com/frontendweb3"
+          className="flex items-center"
+        >
+          <span className="self-center text-gray-800 text-sm font-semibold whitespace-nowrap dark:text-white">
+            2023 copyright frontend web
+          </span>
         </Link>
 
         <div className="flex md:order-2">
-
           <ul className="flex p-4 flex-row md:space-x-8 md:mt-0 md:text-sm font-medium">
-
-            {
-              setting.twitter !== null ? <li>
-                <Link target="_blank" href={`https://twitter.com/${setting.twitter}`} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white" aria-current="page">
+            {setting.twitter !== null ? (
+              <li>
+                <Link
+                  target="_blank"
+                  href={`https://twitter.com/${setting.twitter}`}
+                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                  aria-current="page"
+                >
                   <FaTwitter />
                 </Link>
-              </li> : " "
+              </li>
+            ) : (
+              ' '
+            )}
 
-            }
-
-            {
-              setting.facebook !== null ? <li>
-                <Link target="_blank" href={`https://www.facebook.com/${setting.facebook}`} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white ">
+            {setting.facebook !== null ? (
+              <li>
+                <Link
+                  target="_blank"
+                  href={`https://www.facebook.com/${setting.facebook}`}
+                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white "
+                >
                   <FaFacebook />
                 </Link>
-              </li> : " "
-
-            }
-
+              </li>
+            ) : (
+              ' '
+            )}
           </ul>
         </div>
-
       </div>
     </footer>
-
-  )
+  );
 }
 
-export default Footer
+export default Footer;
 ```
 
 ### How to Build the Layout
@@ -504,9 +513,8 @@ Before we create the layout design, we need to define a `getNavigation` function
 ```typescript
 // ghost-client.ts
 
-
 export async function getNavigation() {
-  return await api.settings.browse()
+  return await api.settings.browse();
 }
 ```
 
@@ -535,15 +543,15 @@ Fetch
   ],
   secondary_navigation: Array(1) [ { label: 'Login', url: '#/portal/' } ],
   meta_title: 'My demo post',
-  meta_description: 
+  meta_description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
   og_image: null,
   og_title: null,
-  og_description: 
+  og_description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
   twitter_image: null,
   twitter_title: null,
-  twitter_description: 
+  twitter_description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
   members_support_address: 'noreply',
   members_enabled: true,
@@ -571,46 +579,35 @@ Our Main `layout.tsx` file works server side. It helps fetch data on the server 
 ```typescript
 // Layout.tsx
 
-
-import "./globals.css";
-import BlogLayout from './BlogLayout'
-import { getNavigation, } from "./ghost-client"
-import { use } from "react"
-import type { Settings } from "@tryghost/content-api"
+import './globals.css';
+import BlogLayout from './BlogLayout';
+import { getNavigation } from './ghost-client';
+import { use } from 'react';
+import type { Settings } from '@tryghost/content-api';
 
 interface UpdateSettings extends Settings {
   accent_color?: string;
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-
-  const settings: UpdateSettings = use(getNavigation())
+  const settings: UpdateSettings = use(getNavigation());
 
   return (
-
-    <html className='light' lang="en">
-
+    <html className="light" lang="en">
       <body
         style={{
-          '--bg-color': settings?.accent_color ? settings.accent_color : "",
+          '--bg-color': settings?.accent_color ? settings.accent_color : ''
         }}
-        className={` bg-[--bg-color] dark:bg-gray-900`}>
-
-        <BlogLayout setting={settings}>
-
-          {children}
-
-        </BlogLayout>
-
+        className={` bg-[--bg-color] dark:bg-gray-900`}
+      >
+        <BlogLayout setting={settings}>{children}</BlogLayout>
       </body>
-
     </html>
-
-  )
+  );
 }
 ```
 
@@ -623,23 +620,30 @@ The purpose of the BlogLayout component is to contain the [ThemeProvider](https:
 ThemeProvider component helps to change the theme from light to dark mode.
 
 ```typescript
-"use client"
+'use client';
 
 // BlogLayout.tsx
 
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from './Footer';
+import Header from './Header';
 import { ThemeProvider } from 'next-themes';
-import type { Settings } from "@tryghost/content-api";
-function Layout({ setting, children }: { setting: Settings, children: React.ReactNode }) {
-  return <ThemeProvider attribute="class">
-    <Header setting={setting} />
-    {children}
-    <Footer setting={setting} />
-  </ThemeProvider>
-
+import type { Settings } from '@tryghost/content-api';
+function Layout({
+  setting,
+  children
+}: {
+  setting: Settings;
+  children: React.ReactNode;
+}) {
+  return (
+    <ThemeProvider attribute="class">
+      <Header setting={setting} />
+      {children}
+      <Footer setting={setting} />
+    </ThemeProvider>
+  );
 }
-export default Layout
+export default Layout;
 ```
 
 `BlogLayout.tsx` component
@@ -660,11 +664,11 @@ First, we fetch all posts data from Ghost CMS with the help of the `getPosts`  
 export async function getPosts() {
   return await api.posts
     .browse({
-      include: ["tags", "authors"],
+      include: ['tags', 'authors'],
       limit: 10
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
 }
 ```
@@ -697,15 +701,15 @@ eploy.png" width="1500" height="400" loading="lazy" alt srcset="http://localhost
 ntent/images/size/w1000/2023/03/Build-and-deploy-profile--1--1.png 1000w, http://localhost:2368/content/images/2023/03/Build-and-deploy-profile--1--1.png 1500w" siz
 es="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="http://localhost:2368/content/images/2023/03/Build--Test-and-Deploy-profile-1.png" width
 ="1500" height="400" loading="lazy" alt srcset="http://localhost:2368/content/images/size/w600/2023/03/Build--Test-and-Deploy-profile-1.png 600w, http://localhost:2
-368/content/images/size/w1000/2023/03/Build--Test-and-Deploy-profile-1.png 1000w, http://localhost:2368/content/images/2023/03/Build--Test-and-Deploy-profile-1.png 
+368/content/images/size/w1000/2023/03/Build--Test-and-Deploy-profile-1.png 1000w, http://localhost:2368/content/images/2023/03/Build--Test-and-Deploy-profile-1.png
 1500w" sizes="(min-width: 720px) 720px"></div></div></div><figcaption>Build and deploy</figcaption></figure><h2 id="why-do-we-use-it">Why do we use it?</h2><p>It is
  a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p><p>The point of using Lorem Ipsum is tha
-t it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p><p>Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their 
+t it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p><p>Many desktop
+publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
 infancy. </p><p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p><hr><h2 id="where-can-i
 -get-some">Where can I get some?</h2><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by i
 njected humour, or randomised words which don't look even slightly believable. </p><p>If you are going to use a passage of Lorem Ipsum, you need to be sure there is
-n't anything embarrassing hidden in the middle of text. </p><p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making 
+n't anything embarrassing hidden in the middle of text. </p><p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making
 this the first true generator on the Internet. </p><p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generat
 e Lorem Ipsum which looks reasonable. </p><p>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</
 p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">My note is here&nbsp;</div></div><p></
@@ -723,7 +727,7 @@ sive Web App and How to enable it in nextjs Application?</div><div class="kg-boo
 js and publish on Google play store, Microsoft store, Meta Quest, and…</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://cdn-static-
 1.medium.com/_/fp/icons/Medium-Avatar-500x500.svg" alt><span class="kg-bookmark-author">FrontEnd web</span><span class="kg-bookmark-publisher">Rajdeep singh</span><
 /div></div><div class="kg-bookmark-thumbnail"><img src="https://miro.medium.com/v2/resize:fit:1200/1*yAoHfq4Wm2Bp8DU1Dav29Q.png" alt></div></a><figcaption>Bookmark<
-/figcaption></figure><div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header" 
+/figcaption></figure><div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header"
 id="thank-you">Thank you</h2></div>',
     comment_id: '6422a742136f5d40f37294f5',
     feature_image: 'https://images.unsplash.com/photo-1543966888-7c1dc482a810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxqYXZhc2Nya
@@ -792,7 +796,7 @@ XB0fGVufDB8fHx8MTY3OTk5MjY1NA&ixlib=rb-4.0.3&q=80&w=2000',
     email_subject: null,
     frontmatter: null,
     feature_image_alt: 'Demo Posts with Nextjs and Ghost Editor',
-    feature_image_caption: 'Photo by <a href="https://unsplash.com/@pinjasaur?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Paul Esch-Laurent</a> / 
+    feature_image_caption: 'Photo by <a href="https://unsplash.com/@pinjasaur?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Paul Esch-Laurent</a> /
 <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>'
   },
 meta:{
@@ -808,31 +812,23 @@ Now we call the `getPosts` function on the server side. It returns all the post 
 We pass the data into `app/page.tsx` to the `card.tsx` components. We pass the article data as props into the card component.
 
 ```typescript
-
 // src/app/page.tsx
 
-import { getPosts } from "./ghost-client"
-import Card from './Card'
+import { getPosts } from './ghost-client';
+import Card from './Card';
 
 export default async function Home() {
-
-  const getPost = await getPosts()
+  const getPost = await getPosts();
 
   return (
     <>
       <main className="container my-12 mx-auto grid grid-cols-1 gap-2 md:gap-3 lg:gap-4 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
-
-        {
-          getPost?.map(
-            item => {
-              return <Card key={item.uuid} item={item} />
-            })
-        }
-
+        {getPost?.map((item) => {
+          return <Card key={item.uuid} item={item} />;
+        })}
       </main>
-
     </>
-  )
+  );
 }
 ```
 
@@ -851,30 +847,37 @@ I rendered every item of data coming from the home page as props and showed it o
 ```typescript
 // Card.tsx
 
-import Image from "next/image"
-import Link from "next/link"
-import type { PostOrPage } from "@tryghost/content-api";
-import { format } from 'date-fns'
+import Image from 'next/image';
+import Link from 'next/link';
+import type { PostOrPage } from '@tryghost/content-api';
+import { format } from 'date-fns';
 
 function Card({ item }: { item: PostOrPage }) {
-
   return (
-    <div className="max-w-full bg-white dark:bg-gray-800" >
-
-      {
-        item.featured !== null && item.feature_image !== undefined ? <Link href={`/read/${item.slug}`}>
-          <Image className="rounded-lg p-3" width={1000} height={324} src={item.feature_image} alt={item.feature_image_alt || item.title} />
-        </Link> : " "
-      }
+    <div className="max-w-full bg-white dark:bg-gray-800">
+      {item.featured !== null && item.feature_image !== undefined ? (
+        <Link href={`/read/${item.slug}`}>
+          <Image
+            className="rounded-lg p-3"
+            width={1000}
+            height={324}
+            src={item.feature_image}
+            alt={item.feature_image_alt || item.title}
+          />
+        </Link>
+      ) : (
+        ' '
+      )}
 
       <div className="p-3">
-
         <div className="flex mb-3">
-          {
-            item.published_at !== null && item.published_at !== undefined ? <p className="text-sm text-gray-500 dark:text-gray-400">
+          {item.published_at !== null && item.published_at !== undefined ? (
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               {format(new Date(item.published_at), 'dd MMMM, yyyy')}
-            </p> : ""
-          }
+            </p>
+          ) : (
+            ''
+          )}
           <p className="text-sm text-gray-500 dark:text-gray-400 mx-1"> , </p>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             {item.reading_time} min read
@@ -886,19 +889,12 @@ function Card({ item }: { item: PostOrPage }) {
             {item.title}
           </h5>
         </Link>
-
-
       </div>
-
     </div>
-
-  )
-
+  );
 }
 
-
-
-export default Card
+export default Card;
 ```
 
 \-
@@ -918,10 +914,13 @@ First, we get a single article from the Ghost CMS API based on its slug. We pass
 
 export async function getSinglePost(postSlug: string) {
   return await api.posts
-    .read({
-      slug: postSlug
-    }, { include: ["tags", "authors"] })
-    .catch(err => {
+    .read(
+      {
+        slug: postSlug
+      },
+      { include: ['tags', 'authors'] }
+    )
+    .catch((err) => {
       console.error(err);
     });
 }
@@ -934,112 +933,130 @@ The `getSinglePost(<you-slug>)` function returns data about a single article, an
 ```typescript
 // src/app/read/[slug]/page.tsx
 
-import Newsletter from "./Newsletter";
-import Link from "next/link";
-import { getSinglePost, getPosts } from "../../ghost-client"
-import Image from "next/image";
+import Newsletter from './Newsletter';
+import Link from 'next/link';
+import { getSinglePost, getPosts } from '../../ghost-client';
+import Image from 'next/image';
 // import icon
-import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleLeft } from 'react-icons/fa';
 
 // types for typescript
-import type { Metadata } from "next";
-import type { PostOrPage } from "@tryghost/content-api";
+import type { Metadata } from 'next';
+import type { PostOrPage } from '@tryghost/content-api';
 
 // format the date
-import { format } from 'date-fns'
+import { format } from 'date-fns';
 
 // css for card
-import "../../cards.min.css"
-
+import '../../cards.min.css';
 
 export async function generateStaticParams() {
-  const posts = await getPosts()
+  const posts = await getPosts();
   return posts.map((post) => ({
-    slug: post.slug,
+    slug: post.slug
   }));
 }
 
-
-async function Read({ params }: { params: { slug: string }; }) {
-
-  const getPost = await getSinglePost(params.slug)
+async function Read({ params }: { params: { slug: string } }) {
+  const getPost = await getSinglePost(params.slug);
 
   return (
     <>
       <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
-
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
-
           <article className="mx-auto w-full max-w-3xl prose prose-xl prose-p:text-gray-800  dark:prose-p:text-gray-100 sm:prose-base prose-a:no-underline prose-blue dark:prose-invert">
-
             <div className="flex mb-4 w-full justify-between">
-
               <Link className="inline-flex items-center" href={`/`}>
                 <FaAngleLeft /> Back
               </Link>
 
-              {
-                getPost.primary_tag ? <Link href={`/tags/${getPost?.primary_tag.slug}`}>
+              {getPost.primary_tag ? (
+                <Link href={`/tags/${getPost?.primary_tag.slug}`}>
                   # {getPost?.primary_tag.name}
-                </Link> : ""
-              }
-
+                </Link>
+              ) : (
+                ''
+              )}
             </div>
 
             <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
               {getPost.title}
             </h1>
 
-            <p className="lead">
-              {getPost.excerpt}
-            </p>
+            <p className="lead">{getPost.excerpt}</p>
 
             <header className="mb-4 lg:mb-6 not-format">
-
               <address className="flex items-center mb-6 not-italic">
-
                 <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                  <Image
+                    width={32}
+                    height={32}
+                    className="mr-4 w-10 h-10 rounded-full"
+                    src={getPost?.primary_author.profile_image}
+                    alt={getPost?.primary_author.name}
+                  />
+                  {getPost.primary_author ? (
+                    <Link
+                      href={`/authors/${getPost?.primary_author.slug}`}
+                      rel="author"
+                      className="text-xl font-bold text-gray-800 dark:text-white"
+                    >
+                      {getPost?.primary_author.name}
+                    </Link>
+                  ) : (
+                    ' '
+                  )}
 
-                  <Image width={32} height={32} className="mr-4 w-10 h-10 rounded-full" src={getPost?.primary_author.profile_image} alt={getPost?.primary_author.name} />
-                  {
-                    getPost.primary_author ? <Link href={`/authors/${getPost?.primary_author.slug}`} rel="author" className="text-xl font-bold text-gray-800 dark:text-white">{getPost?.primary_author.name}</Link> : " "
-                  }
-
-                  {
-                    getPost.published_at ? <time className="text-base font-light text-gray-800 dark:text-white mx-1" dateTime={getPost?.published_at} title={format(new Date(getPost?.published_at), 'yyyy-MM-dd')}>
+                  {getPost.published_at ? (
+                    <time
+                      className="text-base font-light text-gray-800 dark:text-white mx-1"
+                      dateTime={getPost?.published_at}
+                      title={format(
+                        new Date(getPost?.published_at),
+                        'yyyy-MM-dd'
+                      )}
+                    >
                       {format(new Date(getPost?.published_at), 'dd MMMM, yyyy')}
-                    </time> : ""
-                  }
+                    </time>
+                  ) : (
+                    ''
+                  )}
 
                   <div className="text-base w-1 h-1 rounded-full bg-black dark:bg-white mx-1"></div>
 
-                  <p className="text-base font-light text-gray-500 dark:text-gray-400"> {getPost.reading_time}  Min Read</p>
-
+                  <p className="text-base font-light text-gray-500 dark:text-gray-400">
+                    {' '}
+                    {getPost.reading_time} Min Read
+                  </p>
                 </div>
-
               </address>
-
             </header>
 
             <figure>
-              <Image className="mx-auto" width={1000} height={250} src={getPost.feature_image} alt={getPost.feature_image_alt} />
-              <figcaption className="text-center"
+              <Image
+                className="mx-auto"
+                width={1000}
+                height={250}
+                src={getPost.feature_image}
+                alt={getPost.feature_image_alt}
+              />
+              <figcaption
+                className="text-center"
                 dangerouslySetInnerHTML={{
                   __html: getPost?.feature_image_caption
-                }}></figcaption>
+                }}
+              ></figcaption>
             </figure>
 
             <div dangerouslySetInnerHTML={{ __html: getPost?.html }}></div>
-
           </article>
         </div>
       </main>
       <Newsletter />
     </>
-  )
-
+  );
 }
-export default Read
+export default Read;
 ```
 
 You render the post's HTML data with `dangerouslySetInnerHTML` . But you need to write lots of CSS to handle the dynamic content coming from the Ghost CMS API.
@@ -1051,25 +1068,23 @@ Generate the static site with the `generateStaticParams` function. Before, we us
 ```typescript
 // ghost-client.ts
 
-
 export async function generateStaticParams() {
-
   // fetch All posts
 
-  const posts = await getPosts()
-  
-  // return the slug 
-  
+  const posts = await getPosts();
+
+  // return the slug
+
   return posts.map((post) => ({
-    slug: post.slug,
+    slug: post.slug
   }));
-  
 }
 ```
 
 generate static site slug for article reading page
 
-###   
+###
+
 How to Build the Tag Page
 
 I designed a simple tag page for the blog. The tag page shows articles related to the tags that are used.
@@ -1085,25 +1100,24 @@ Similar to the reading page, we'll get articles based on tags from the Ghost CMS
 ```typescript
 // ghost-client.ts
 
-
 // return all posts realted to tag slug
 export async function getTagPosts(tagSlug: string) {
-
-  return await api.posts.browse({ filter: `tag:${tagSlug}`, include: 'count.posts' })
-    .catch(err => {
-      throw new Error(err)
+  return await api.posts
+    .browse({ filter: `tag:${tagSlug}`, include: 'count.posts' })
+    .catch((err) => {
+      throw new Error(err);
     });
-  ;
-
 }
 
 // return all the slugs to build static with generateStaticParams
 export async function getAllTags() {
-  return await api.tags.browse({
-    limit: "all"
-  }).catch(err => {
-    console.log(err)
-  })
+  return await api.tags
+    .browse({
+      limit: 'all'
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 ```
 
@@ -1114,72 +1128,61 @@ After receiving all posts with `getTagPosts()`, we render all posts with the hel
 ```typescript
 // src/app/tag/[slug]/page.tsx
 
-import React from 'react'
-import Card from "../../Card"
+import React from 'react';
+import Card from '../../Card';
 
-import { getTagPosts, getAllTags } from "../../ghost-client"
+import { getTagPosts, getAllTags } from '../../ghost-client';
 
 import { notFound } from 'next/navigation';
 
-import type { PostsOrPages } from "@tryghost/content-api";
-
+import type { PostsOrPages } from '@tryghost/content-api';
 
 export async function generateStaticParams() {
+  const allTags: Tags = await getAllTags();
 
-  const allTags: Tags = await getAllTags()
+  let allTagsItem: { slug: string }[] = [];
 
-  let allTagsItem: { slug: string }[] = []
-  
-// genrate the slug for static site
+  // genrate the slug for static site
 
-  allTags?.map(item => {
+  allTags?.map((item) => {
     allTagsItem.push({
-      slug: item.slug,
-    })
-  })
+      slug: item.slug
+    });
+  });
 
-  return allTagsItem
-
+  return allTagsItem;
 }
 
+async function Tag({ params }: { params: { slug: string } }) {
+  let tagPosts: PostsOrPages = await getTagPosts(params.slug);
 
-async function Tag({ params }: { params: { slug: string }; }) {
-
-  let tagPosts: PostsOrPages = await getTagPosts(params.slug)
-
-// Handling 404 error
+  // Handling 404 error
 
   if (tagPosts.length === 0) {
-    notFound()
+    notFound();
   }
 
   return (
-    <aside aria-label="Related articles" className="py-8 lg:py-24 dark:bg-gray-800">
-      
+    <aside
+      aria-label="Related articles"
+      className="py-8 lg:py-24 dark:bg-gray-800"
+    >
       <div className="px-4 mx-auto max-w-screen-xl">
-
         <h2 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
-          More articles from {params.slug.split("-").join(" ")}
+          More articles from {params.slug.split('-').join(' ')}
         </h2>
 
         <div className="container my-12 mx-auto grid grid-cols-1 gap-12 md:gap-12 lg:gap-12  lg:grid-cols-3  md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 ">
-        
-          {
-            tagPosts.map(
-              item => <Card key={item.uuid} item={item} />
-            )
-          }
-        
+          {tagPosts.map((item) => (
+            <Card key={item.uuid} item={item} />
+          ))}
         </div>
-
       </div>
-
     </aside>
-  )
-
+  );
 }
 
-export default Tag
+export default Tag;
 ```
 
 Generate the static site with the `generateStaticParams` function. It helps to generate slugs of the static build.
@@ -1188,11 +1191,13 @@ Generate the static site with the `generateStaticParams` function. It helps to g
 // ghost-client.ts
 
 export async function getAllTags() {
-  return await api.tags.browse({
-    limit: "all"
-  }).catch(err => {
-    console.log(err)
-  })
+  return await api.tags
+    .browse({
+      limit: 'all'
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 ```
 
@@ -1213,41 +1218,41 @@ We'll build this in a similar way as we built the tag page. First, we get the au
 ```typescript
 // ghost-client.ts
 
-
 // get author meta Data
 
 export async function getSingleAuthor(authorSlug: string) {
   return await api.authors
-    .read({
-      slug: authorSlug
-    }, { include: ["count.posts"] })
-    .catch(err => {
-      console.log(err)
+    .read(
+      {
+        slug: authorSlug
+      },
+      { include: ['count.posts'] }
+    )
+    .catch((err) => {
+      console.log(err);
     });
-
 }
 
 // get author related posts
 
 export async function getSingleAuthorPosts(authorSlug: string) {
-  return await api.posts.browse({ filter: `authors:${authorSlug}` })
-    .catch(err => {
-      console.log(err)
-    })
-};
+  return await api.posts
+    .browse({ filter: `authors:${authorSlug}` })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 
 // get All author from Ghost CMS for generateStaticParams
 
 export async function getAllAuthors() {
-
   return await api.authors
     .browse({
-      limit: "all"
+      limit: 'all'
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
-
 }
 ```
 
@@ -1259,127 +1264,142 @@ We render the posts data with the help of the `map()` method.
 // src/app/author/[slug]/page.tsx
 
 import React from 'react';
-import Link from "next/link";
-import { FaFacebook, FaTwitter, FaGlobe } from "react-icons/fa";
-import Card from "../../Card"
+import Link from 'next/link';
+import { FaFacebook, FaTwitter, FaGlobe } from 'react-icons/fa';
+import Card from '../../Card';
 
-import { getSingleAuthor, getSingleAuthorPost, getAllAuthors } from "../../ghost-client"
+import {
+  getSingleAuthor,
+  getSingleAuthorPost,
+  getAllAuthors
+} from '../../ghost-client';
 
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-import type { Author, PostsOrPages } from "@tryghost/content-api";
-
-
+import type { Author, PostsOrPages } from '@tryghost/content-api';
 
 export async function generateStaticParams() {
+  const allAuthor: Author[] = await getAllAuthors();
 
-  const allAuthor: Author[] = await getAllAuthors()
+  let allAuthorItem: { slug: string }[] = [];
 
-
-  let allAuthorItem: { slug: string }[] = []
-
-  allAuthor.map(item => {
+  allAuthor.map((item) => {
     allAuthorItem.push({
-      slug: item.slug,
-    })
-  })
-  return allAuthorItem
-
+      slug: item.slug
+    });
+  });
+  return allAuthorItem;
 }
 
+async function AuthorPage({ params }: { params: { slug: string } }) {
+  const getAuthor: Author = await getSingleAuthor(params.slug);
 
-async function AuthorPage({ params }: { params: { slug: string }; }) {
+  const allAuthor: PostsOrPages = await getSingleAuthorPost(params.slug);
 
-  const getAuthor: Author = await getSingleAuthor(params.slug)
-
-  const allAuthor: PostsOrPages = await getSingleAuthorPost(params.slug)
-
-// Handling 404 errors
+  // Handling 404 errors
   if (allAuthor?.length === 0) {
-    notFound()
+    notFound();
   }
 
   return (
     <>
       <section className="dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-
           <div className=" p-10 text-gray-500 sm:text-lg dark:text-gray-400">
+            {getAuthor?.profile_image !== undefined ? (
+              <Image
+                height={30}
+                width={30}
+                className="w-36 h-36 p-2 rounded-full mx-auto ring-2 ring-gray-300 dark:ring-gray-500"
+                src={getAuthor?.profile_image}
+                alt={getAuthor?.name}
+              />
+            ) : (
+              ''
+            )}
 
-            {
-              getAuthor?.profile_image !== undefined ? <Image height={30} width={30} className="w-36 h-36 p-2 rounded-full mx-auto ring-2 ring-gray-300 dark:ring-gray-500" src={getAuthor?.profile_image} alt={getAuthor?.name} /> : ""
-            }
-
-            {
-              getAuthor?.name ? <h2 className="mb-4 mt-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white">
-                {getAuthor?.name.split(" ")[0]}
+            {getAuthor?.name ? (
+              <h2 className="mb-4 mt-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white">
+                {getAuthor?.name.split(' ')[0]}
                 <span className="font-extrabold">
-                  {getAuthor?.name?.split(" ")[1]}
+                  {getAuthor?.name?.split(' ')[1]}
                 </span>
-              </h2> : ""
-            }
+              </h2>
+            ) : (
+              ''
+            )}
 
             <p className="mb-4 font-light text-center">{getAuthor?.bio} </p>
 
-
             <ul className="flex flex-wrap p-4 justify-center md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-
-              {
-                (getAuthor?.website !== null) ? (<li>
-                  <Link href={getAuthor?.website} className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
+              {getAuthor?.website !== null ? (
+                <li>
+                  <Link
+                    href={getAuthor?.website}
+                    className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white"
+                    aria-current="page"
+                  >
                     <FaGlobe />
-                  </Link> </li>) : " "
+                  </Link>{' '}
+                </li>
+              ) : (
+                ' '
+              )}
 
-
-              }
-
-              {
-                (getAuthor?.twitter !== null) ? (<li>
-                  <Link href={getAuthor?.twitter} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white" aria-current="page">
+              {getAuthor?.twitter !== null ? (
+                <li>
+                  <Link
+                    href={getAuthor?.twitter}
+                    className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                    aria-current="page"
+                  >
                     <FaTwitter />
                   </Link>
-                </li>) : " "
-              }
+                </li>
+              ) : (
+                ' '
+              )}
 
-              {
-                (getAuthor?.facebook !== null && getAuthor.facebook !== undefined) ? (<li>
-                  <Link href={getAuthor?.facebook}
-                    className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"> <FaFacebook />
+              {getAuthor?.facebook !== null &&
+              getAuthor.facebook !== undefined ? (
+                <li>
+                  <Link
+                    href={getAuthor?.facebook}
+                    className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                  >
+                    {' '}
+                    <FaFacebook />
                   </Link>
-                </li>) : " "
-
-              }
-
+                </li>
+              ) : (
+                ' '
+              )}
             </ul>
-
           </div>
         </div>
       </section>
 
-      <aside aria-label="Related articles" className="py-8 lg:py-24 dark:bg-gray-800">
+      <aside
+        aria-label="Related articles"
+        className="py-8 lg:py-24 dark:bg-gray-800"
+      >
         <div className="px-4 mx-auto max-w-screen-xl">
-
           <h2 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
             More articles from {getAuthor?.name}
           </h2>
 
           <div className="container my-12 mx-auto grid grid-cols-1 gap-12 md:gap-12 lg:gap-12  lg:grid-cols-3  md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 ">
-
-            {
-              allAuthor?.map(item => <Card key={item?.uuid} item={item} />)
-            }
-
+            {allAuthor?.map((item) => (
+              <Card key={item?.uuid} item={item} />
+            ))}
           </div>
         </div>
       </aside>
-
-
     </>
-  )
-
+  );
 }
-export default AuthorPage
+export default AuthorPage;
 ```
 
 To generate the author slug for the static site, we need to use the `generateStaticParams` function. We do not need anything else to build the static site.
@@ -1387,23 +1407,19 @@ To generate the author slug for the static site, we need to use the `generateSta
 ```typescript
 // ghost-client.ts
 
-
-// Build Static Site 
+// Build Static Site
 
 export async function generateStaticParams() {
+  const allAuthor: Author[] = await getAllAuthors();
 
-  const allAuthor: Author[] = await getAllAuthors()
+  let allAuthorItem: { slug: string }[] = [];
 
-
-  let allAuthorItem: { slug: string }[] = []
-
-  allAuthor.map(item => {
+  allAuthor.map((item) => {
     allAuthorItem.push({
-      slug: item.slug,
-    })
-  })
-  return allAuthorItem
-
+      slug: item.slug
+    });
+  });
+  return allAuthorItem;
 }
 ```
 
@@ -1429,19 +1445,22 @@ export async function getSinglePage(pageSlug: string) {
     .read({
       slug: pageSlug
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err);
     });
 }
 
-// single page data 
+// single page data
 
 export async function getSinglePage(pageSlug: string) {
   return await api.pages
-    .read({
-      slug: pageSlug
-    }, { include: ["tags"] })
-    .catch(err => {
+    .read(
+      {
+        slug: pageSlug
+      },
+      { include: ['tags'] }
+    )
+    .catch((err) => {
       console.error(err);
     });
 }
@@ -1452,53 +1471,47 @@ The `getSinglePage(page-slug)` function returns the single page data based on th
 ```typescript
 // src/app/pages/[slug]/page.tsx
 
-import { getSinglePage, getAllPages } from "../../ghost-client"
+import { getSinglePage, getAllPages } from '../../ghost-client';
 import { notFound } from 'next/navigation';
-import type { PostOrPage } from "@tryghost/content-api";
-import "../../cards.min.css"
+import type { PostOrPage } from '@tryghost/content-api';
+import '../../cards.min.css';
 
 // genrate Static slug or params for blog
 
 export async function generateStaticParams() {
-  const pages = await getAllPages()
+  const pages = await getAllPages();
 
   return pages.map((post) => ({
-    slug: post.slug,
+    slug: post.slug
   }));
 }
 
-async function Pages({ params }: { params: { slug: string }; }) {
-
-// fetch single page
-  const getPage = await getSinglePage(params.slug)
+async function Pages({ params }: { params: { slug: string } }) {
+  // fetch single page
+  const getPage = await getSinglePage(params.slug);
 
   // handle 404 error
   if (!getPage) {
-    notFound()
+    notFound();
   }
 
   return (
     <>
       <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
-
           <article className="mx-auto w-full max-w-3xl prose prose-xl prose-p:text-gray-800  dark:prose-p:text-gray-100 sm:prose-base prose-a:no-underline prose-blue dark:prose-invert">
-
-
             <h1 className="mb-14 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
               {getPage.title}
             </h1>
 
             <div dangerouslySetInnerHTML={{ __html: getPage?.html }}></div>
-
           </article>
         </div>
       </main>
     </>
-  )
-
+  );
 }
-export default Pages
+export default Pages;
 ```
 
 ### How to Handle Pagination
@@ -1518,56 +1531,63 @@ Firstly, we'll create a `Pagination.tsx` file as a React component.
 ```typescript
 // Pagination.tsx
 
-import Link from "next/link"
-import { Pagination } from "@tryghost/content-api"
+import Link from 'next/link';
+import { Pagination } from '@tryghost/content-api';
 
 function PaginationItem({ item }: { item: Pagination }) {
-
-  let paginationItems = []
+  let paginationItems = [];
 
   for (let index = 1; index <= item?.pages; index++) {
-    paginationItems.push(<li key={index * 2} ><Link href={index === 1 ? "/" : `/pagination/${index}`} className="px-3 py-2 leading-tight bg-blue-100 hover:bg-blue-200 border-transparent border rounded-lg text-black dark:bg-gray-800 dark:text-gray-400 mx-2 dark:hover:bg-gray-700 dark:hover:text-white">
-      {index}
-    </Link></li>)
+    paginationItems.push(
+      <li key={index * 2}>
+        <Link
+          href={index === 1 ? '/' : `/pagination/${index}`}
+          className="px-3 py-2 leading-tight bg-blue-100 hover:bg-blue-200 border-transparent border rounded-lg text-black dark:bg-gray-800 dark:text-gray-400 mx-2 dark:hover:bg-gray-700 dark:hover:text-white"
+        >
+          {index}
+        </Link>
+      </li>
+    );
   }
 
   return (
-
     <nav aria-label="pagination" className="mx-auto my-20 container">
-
       <ul className="mx-auto flex justify-center -space-x-px">
-
         <li>
-          {
-            item.prev ? <Link href={item.prev === 1 ? "/" : `/pagination/${item.prev}`} className="px-3 py-2 mr-2 border border-transparent rounded-md  leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
-              dark:hover:bg-gray-700 dark:hover:text-white">
+          {item.prev ? (
+            <Link
+              href={item.prev === 1 ? '/' : `/pagination/${item.prev}`}
+              className="px-3 py-2 mr-2 border border-transparent rounded-md  leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
+              dark:hover:bg-gray-700 dark:hover:text-white"
+            >
               Prev
-            </Link> : " "
-          }
+            </Link>
+          ) : (
+            ' '
+          )}
         </li>
 
         {paginationItems}
 
         <li>
-          {
-            item.next ? <Link href={`/pagination/${item.next}`} className="px-3 py-2 ml-2 border border-transparent rounded-md leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
-            dark:hover:bg-gray-700 dark:hover:text-white">
+          {item.next ? (
+            <Link
+              href={`/pagination/${item.next}`}
+              className="px-3 py-2 ml-2 border border-transparent rounded-md leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
+            dark:hover:bg-gray-700 dark:hover:text-white"
+            >
               Next
-            </Link> : " "
-          }
+            </Link>
+          ) : (
+            ' '
+          )}
         </li>
-
-
       </ul>
-
     </nav>
-
-  )
-
+  );
 }
 
-
-export default PaginationItem
+export default PaginationItem;
 ```
 
 When you call the `api.posts.browse({ limit: 10 })` request, the API endpoint returns ten posts and a `meta` object with `pagination`.
@@ -1592,21 +1612,20 @@ Now based on `meta`, we can create pagination and pass `meta.pagination` as prop
 ```typescript
 // src/app/page.tsx
 
-import { getPosts } from "./ghost-client"
-import Pagination from "./Pagination"
+import { getPosts } from './ghost-client';
+import Pagination from './Pagination';
 
 export default async function Home() {
+  const getPost = await getPosts();
 
-  const getPost = await getPosts()
-
-  const AllPostForSerach = await getSearchPosts()
+  const AllPostForSerach = await getSearchPosts();
 
   return (
     <>
-     {/* rest of code  */}
+      {/* rest of code  */}
       <Pagination item={getPost.meta.pagination} />
     </>
-  )
+  );
 }
 ```
 
@@ -1620,24 +1639,24 @@ To enable dynamic pagination, we'll create a `src/app/pagination/[item]/page.tsx
 export async function getPosts() {
   return await api.posts
     .browse({
-      include: ["tags", "authors"],
+      include: ['tags', 'authors'],
       limit: 10
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
 }
 
-// 
+//
 export async function getPaginationPosts(page: number) {
   return await api.posts
     .browse({
-      include: ["tags", "authors"],
+      include: ['tags', 'authors'],
       limit: 10,
       page: page
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
 }
 ```
@@ -1647,65 +1666,54 @@ The `getPosts` is used to render the `Pagination` component on the pagination pa
 ```typescript
 // src/app/pagination/[item]/page.tsx
 
-import { getPaginationPosts, getPosts } from "../../ghost-client"
-import Card from '../../Card'
-import PaginationItem from "../../Pagination"
-import type { Metadata } from "next";
-import type { PostsOrPages } from "@tryghost/content-api";
-
-
-
+import { getPaginationPosts, getPosts } from '../../ghost-client';
+import Card from '../../Card';
+import PaginationItem from '../../Pagination';
+import type { Metadata } from 'next';
+import type { PostsOrPages } from '@tryghost/content-api';
 
 export async function generateStaticParams() {
+  const posts: PostsOrPages = await getPosts();
 
-  const posts:PostsOrPages = await getPosts()
-
-  let paginationItem: { item: number }[] = []
+  let paginationItem: { item: number }[] = [];
 
   for (let index = 1; index <= posts?.meta.pagination.pages; index++) {
     paginationItem.push({
-      item: index,
-    })
-
+      item: index
+    });
   }
 
-  return paginationItem
-
+  return paginationItem;
 }
 
+export default async function Pagination({
+  params
+}: {
+  params: { item: string };
+}) {
+  let getParams: number = Number.parseInt(params.item);
 
-
-export default async function Pagination({ params }: { params: { item: string }; }) {
-
-  let getParams: number = Number.parseInt(params.item)
-
-  const getPost: PostsOrPages = await getPaginationPosts(getParams)
+  const getPost: PostsOrPages = await getPaginationPosts(getParams);
 
   return (
     <>
-
       <main className="container my-12 mx-auto grid grid-cols-1 gap-2 md:gap-3 lg:gap-4 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
-
-        {
-          getPost?.map(
-            item => {
-              return <Card key={item.uuid} item={item} />
-            })
-        }
+        {getPost?.map((item) => {
+          return <Card key={item.uuid} item={item} />;
+        })}
       </main>
 
       <PaginationItem item={getPost.meta.pagination} />
-
     </>
-  )
+  );
 }
 ```
 
-use 
+use
 
 ### Next.js SEO
 
-If you are a blogger, you know how important SEO is in helping people find your blog and your articles. For SEO, Next.js provides a `generateMetadata` function to generate dynamic SEO metadata for your site. This means that you don't need any additional packages for SEO.  
+If you are a blogger, you know how important SEO is in helping people find your blog and your articles. For SEO, Next.js provides a `generateMetadata` function to generate dynamic SEO metadata for your site. This means that you don't need any additional packages for SEO.
 
 For the purpose of this example, I'll explain how to enable SEO for the blog only on the Homepage and the Reading page. You can use the same logic to enable it on any of your other pages.
 
@@ -1714,25 +1722,24 @@ First, let's see how to enable SEO on the Homepage:
 ```typescript
 // ghost-client.ts
 
-
 // Get you settings meta data from Ghost CMS
 export async function getNavigation() {
-  return await api.settings.browse()
+  return await api.settings.browse();
 }
 ```
 
 ```typescript
 // src/app/page.tsx
 
-import { getNavigation } from "./ghost-client"
+import { getNavigation } from './ghost-client';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const Metadata = await getNavigation()
+  const Metadata = await getNavigation();
   return {
     title: Metadata.title,
     description: Metadata.description,
-    keywords: ['Next.js', 'React', 'JavaScript'],
-  }
+    keywords: ['Next.js', 'React', 'JavaScript']
+  };
 }
 ```
 
@@ -1741,13 +1748,15 @@ Now we'll see how to enable SEO on the Reading page:
 ```typescript
 // ghost-client.ts
 
-
 export async function getSinglePost(postSlug: string) {
   return await api.posts
-    .read({
-      slug: postSlug
-    }, { include: ["tags", "authors"] })
-    .catch(err => {
+    .read(
+      {
+        slug: postSlug
+      },
+      { include: ['tags', 'authors'] }
+    )
+    .catch((err) => {
       console.error(err);
     });
 }
@@ -1756,13 +1765,14 @@ export async function getSinglePost(postSlug: string) {
 The `generateMetadata` have params props, which help access the slug. Then, based on the slug, we get the data and return it.
 
 ```typescript
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const metaData: PostOrPage = await getSinglePost(params.slug);
 
-
-export async function generateMetadata({ params }: { params: { slug: string }; }): Promise<Metadata> {
-
-  const metaData: PostOrPage = await getSinglePost(params.slug)
-
-  let tags = metaData?.tags.map(item => item.name)
+  let tags = metaData?.tags.map((item) => item.name);
 
   return {
     title: metaData.title,
@@ -1775,13 +1785,13 @@ export async function generateMetadata({ params }: { params: { slug: string }; }
       keywords: tags,
       images: [
         {
-          url: metaData.feature_image,
-        },
+          url: metaData.feature_image
+        }
       ],
       locale: metaData.locale,
-      type: 'website',
-    },
-  }
+      type: 'website'
+    }
+  };
 }
 ```
 
@@ -1809,134 +1819,136 @@ After we convert it into a string with the help of `JSON.stringify()`, we then c
 ```typescript
 // src/app/page.tsx
 
-import {  getSearchPosts } from "./ghost-client"
+import { getSearchPosts } from './ghost-client';
 import * as fs from 'node:fs';
 
-
-
 export default async function Home() {
+  // get All posts for search
+  const AllPostForSerach = await getSearchPosts();
 
-  
-// get All posts for search 
-  const AllPostForSerach = await getSearchPosts()
-
-  // Enable getSearch  
+  // Enable getSearch
 
   try {
+    const jsonString = JSON.stringify(AllPostForSerach);
 
-    const jsonString = JSON.stringify(AllPostForSerach)
-
-    fs.writeFile('search.json', jsonString, 'utf8', err => {
+    fs.writeFile('search.json', jsonString, 'utf8', (err) => {
       if (err) {
-        console.log('Error writing file', err)
+        console.log('Error writing file', err);
       } else {
-        console.log('Successfully wrote file')
+        console.log('Successfully wrote file');
       }
-    })
-
+    });
   } catch (error) {
-    console.log('error : ', error)
+    console.log('error : ', error);
   }
-
 
   return (
     <>
       <main className="container my-12 mx-auto grid grid-cols-1 gap-2 md:gap-3 lg:gap-4 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
-      {/* rest code... */}
+        {/* rest code... */}
       </main>
     </>
-  )
+  );
 }
 ```
 
 When you enter the text in the search input, based on the text query, we compare the query or text in the `serach.json` file data. If it matches the article title with the query, then we store the `searchPost` variable, and finally we render the stored data in the `searchPost` variable page.
 
 ```typescript
-"use client"
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import * as Popover from '@radix-ui/react-popover';
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from 'react-icons/fa';
 import Link from 'next/link';
-import searchData from '../../search.json'
-import type { PostOrPage } from "@tryghost/content-api"
+import searchData from '../../search.json';
+import type { PostOrPage } from '@tryghost/content-api';
 
-
-let searchPost: PostOrPage[] = []
-
+let searchPost: PostOrPage[] = [];
 
 function Search() {
-
-  const [query, setQuery] = useState(null)
+  const [query, setQuery] = useState(null);
 
   useEffect(() => {
-
     searchPost.length = 0;
 
     searchData.map((item: PostOrPage) => {
-
-      if (item?.title.trim().toLowerCase().includes(query?.trim().toLowerCase())) {
-        searchPost.push(item)
+      if (
+        item?.title.trim().toLowerCase().includes(query?.trim().toLowerCase())
+      ) {
+        searchPost.push(item);
       }
-
-    })
-
-  }, [query])
-
+    });
+  }, [query]);
 
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button
-          className="cursor-pointer outline-none"
-          aria-label="Search"
-        >
+        <button className="cursor-pointer outline-none" aria-label="Search">
           <FaSearch />
         </button>
       </Popover.Trigger>
 
       <Popover.Portal>
-
         <Popover.Content
           className="rounded p-2 bg-white dark:bg-gray-800 w-[480px] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade"
           sideOffset={5}
         >
-
-          <div className='my-2'>
-            <label htmlFor="default-search" className="mb-2 mt-5 text-sm font-medium text-gray-900 sr-only dark:text-white">Search bar </label>
+          <div className="my-2">
+            <label
+              htmlFor="default-search"
+              className="mb-2 mt-5 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            >
+              Search bar{' '}
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <svg
+                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
               </div>
-              <input type="search" id="default-search" onChange={(event) => setQuery(event?.target.value)} className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Start searching here ..." required />
-
+              <input
+                type="search"
+                id="default-search"
+                onChange={(event) => setQuery(event?.target.value)}
+                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Start searching here ..."
+                required
+              />
             </div>
           </div>
 
-
-          {
-
-            serachPost.length > 0 ? serachPost.map(item => {
-
-              return (
-                <div key={item.uuid} className='my-3'>
-                  <div className="text-white my-2 py-2 bg-blue-400 dark:bg-gray-900 dark:hover:bg-blue-400 border-none rounded-md dark:text-white">
-                    <Link href={`read/${item.slug}`} className="relative inline-flex items-center rounded-lg w-full px-4 py-2 text-sm font-medium">
-                      {item.title}
-                    </Link>
+          {serachPost.length > 0
+            ? serachPost.map((item) => {
+                return (
+                  <div key={item.uuid} className="my-3">
+                    <div className="text-white my-2 py-2 bg-blue-400 dark:bg-gray-900 dark:hover:bg-blue-400 border-none rounded-md dark:text-white">
+                      <Link
+                        href={`read/${item.slug}`}
+                        className="relative inline-flex items-center rounded-lg w-full px-4 py-2 text-sm font-medium"
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              )
-            }) : " "
-
-          }
-
+                );
+              })
+            : ' '}
         </Popover.Content>
-
       </Popover.Portal>
-
-    </Popover.Root >
-  )
+    </Popover.Root>
+  );
 }
 
 export default Search;
@@ -1953,38 +1965,46 @@ Next provides a special type of `error.tsx` file to handle errors on your site. 
 import React from 'react';
 import { useEffect } from 'react';
 import Link from 'next/link';
-export default function Error({ error, reset }: { error: Error; reset: () => void; }) {
-
+export default function Error({
+  error,
+  reset
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   useEffect(() => {
     console.error(error);
   }, [error]);
 
   return (
     <section className="dark:bg-gray-900 my-16">
-
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-
         <div className="mx-auto max-w-screen-sm text-center">
+          <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">
+            Something wrong
+          </h1>
+          <p className="mb-4 text-lg p-2 font-light bg-red-500 text-white dark:bg-red-400 dark:text-white">
+            {error.message}
+          </p>
 
-          <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">Something wrong</h1>
-          <p className="mb-4 text-lg p-2 font-light bg-red-500 text-white dark:bg-red-400 dark:text-white">{error.message}</p>
+          <div className="flex justify-around mt-2">
+            <Link
+              href="#"
+              className="inline-flex bg-gray-600 text-white hover:bg-gray-700 focus:ring-4 font-medium rounded-lg text-sm p-2
+                text-center"
+            >
+              Back to Homepage
+            </Link>
 
-          <div className='flex justify-around mt-2'>
-
-            <Link href="#" className="inline-flex bg-gray-600 text-white hover:bg-gray-700 focus:ring-4 font-medium rounded-lg text-sm p-2
-                text-center">Back to Homepage</Link>
-
-            <button className='bg-gray-600 text-white rounded-lg p-2' onClick={() => reset()}>
+            <button
+              className="bg-gray-600 text-white rounded-lg p-2"
+              onClick={() => reset()}
+            >
               Try again
             </button>
-
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }
@@ -2003,28 +2023,37 @@ Our 404 file looks like this:
 Here's the code for that:
 
 ```typescript
-import Link from "next/link"
+import Link from 'next/link';
 
 function NotFound() {
-
   return (
     <section className="bg-white dark:bg-gray-900 my-16">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center">
-          <h1 className="mb-4 text-7xl tracking-tight lg:text-9xl text-primary-600 dark:text-primary-500">404</h1>
-          <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white"> Something wrong</p>
-          <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-            Sorry, we cant find that article. You will find lots to explore on the home page.
+          <h1 className="mb-4 text-7xl tracking-tight lg:text-9xl text-primary-600 dark:text-primary-500">
+            404
+          </h1>
+          <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
+            {' '}
+            Something wrong
           </p>
-          <Link href="/" className="inline-flex text-white bg-black dark:bg-white dark:text-black p-3 hover:bg-gray-800 my-4">Back to Homepage</Link>
+          <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
+            Sorry, we cant find that article. You will find lots to explore on
+            the home page.
+          </p>
+          <Link
+            href="/"
+            className="inline-flex text-white bg-black dark:bg-white dark:text-black p-3 hover:bg-gray-800 my-4"
+          >
+            Back to Homepage
+          </Link>
         </div>
       </div>
-    </section >
-  )
-
+    </section>
+  );
 }
 
-export default NotFound
+export default NotFound;
 ```
 
 The big issue with the `not-found.tsx` error file is that it doesn't show automatically in Next (v13.3.0). To show a 404 error, you need to show the error manually. Here's how you do that:
@@ -2032,23 +2061,20 @@ The big issue with the `not-found.tsx` error file is that it doesn't show automa
 ```typescript
 import { notFound } from 'next/navigation';
 
-async function Read({ params }: { params: { slug: string }; }) {
-
-  const getPost = await getSinglePost(params.slug)
+async function Read({ params }: { params: { slug: string } }) {
+  const getPost = await getSinglePost(params.slug);
 
   // if not found getPost, then show 404 error
 
   if (!getPost) {
-    notFound()
+    notFound();
   }
 
   return (
-      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
-      
-          rest of code ....
-      
-      </main>
-      )
+    <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
+      rest of code ....
+    </main>
+  );
 }
 ```
 
@@ -2082,7 +2108,7 @@ Click on the settings tab in your Vercel project.
 
 Click the Git tab
 
-Then click on the Git tab. After scrolling down, you can see the deploy hook selection.  
+Then click on the Git tab. After scrolling down, you can see the deploy hook selection.
 
 ![Go to Deploy hooks sections](https://www.freecodecamp.org/news/content/images/2023/04/select4.png)
 
@@ -2140,7 +2166,7 @@ Based on the event, Ghost will call the webhook, and your website will rebuild. 
 
 Everything should work well using Next.js and the Ghost CMS as we've worked through in this tutorial.
 
-But some of the Ghost editor components, like toggles, where you need JavaScript interaction, don't work. You can solve this by writing your own JavaScript or getting a JavaScript file for Ghost and adding it to the `read/[slug]/page.tsx` file.  
+But some of the Ghost editor components, like toggles, where you need JavaScript interaction, don't work. You can solve this by writing your own JavaScript or getting a JavaScript file for Ghost and adding it to the `read/[slug]/page.tsx` file.
 
 You can save a lot of money on hosting by combining Next.js and the Ghost CMS API, but you lose some features like inbuilt signup, login, accounts, subscriptions, search bar, and member access levels.
 
@@ -2166,7 +2192,7 @@ Ghost - The Professional Publishing Platform
 
 How To Build Your Blog on DigitalOcean with Ghost and Next.js | DigitalOcean
 
-You can use Next.js with Ghost to build a statically generated blog with better performance and SEO. You can also customize your design and add the functionalities you want. In this tutorial, you’ll use Ghost to manage articles and Next.js to build the frontend of your blog. DigitalOcean’s Ghost One…
+You can use Next.js with Ghost to build a statically generated blog with better performance and SEO. You can also customize your design and add the functionalities you want. In this tutorial, you’ll use Ghost to manage articles and Next.js to build the frontend of your blog. DigitalOcean’s Ghost One……
 
 ![android-chrome-512x512.5f2e6221](https://www.digitalocean.com/_next/static/media/android-chrome-512x512.5f2e6221.png)DigitalOcean
 

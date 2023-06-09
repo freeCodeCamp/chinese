@@ -1,6 +1,6 @@
 > -  原文地址：[How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/build-a-blog-website-with-ghost-api-and-nextjs/)
 > -  原文作者：[Rajdeep Singh](https://www.freecodecamp.org/news/author/officialrajdeepsingh/)
-> -  译者：
+> -  译者：[luojiyin](https://github.com/luojiyin1987)
 > -  校对者：
 
 ![How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Ghost-API-and-Nextjs--2-.png)
@@ -2166,7 +2166,7 @@ Ghost - The Professional Publishing Platform
 
 How To Build Your Blog on DigitalOcean with Ghost and Next.js | DigitalOcean
 
-You can use Next.js with Ghost to build a statically generated blog with better performance and SEO. You can also customize your design and add the functionalities you want. In this tutorial, you’ll use Ghost to manage articles and Next.js to build the frontend of your blog. DigitalOcean’s Ghost One…
+You can use Next.js with Ghost to build a statically generated blog with better performance and SEO. You can also customize your design and add the functionalities you want. In this tutorial, you’ll use Ghost to manage articles and Next.js to build the frontend of your blog. DigitalOcean’s Ghost One……
 
 ![android-chrome-512x512.5f2e6221](https://www.digitalocean.com/_next/static/media/android-chrome-512x512.5f2e6221.png)DigitalOcean
 

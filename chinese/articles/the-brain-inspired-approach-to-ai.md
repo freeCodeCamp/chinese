@@ -1,5 +1,5 @@
 > -  原文地址：[The Brain-Inspired Approach to AI – Explained for Developers](https://www.freecodecamp.org/news/the-brain-inspired-approach-to-ai/)
-> -  原文作者：[Edem Gold](https://www.freecodecamp.org/news/author/edemgold/)
+> -  原文作者：wangjia3
 > -  译者：
 > -  校对者：
 

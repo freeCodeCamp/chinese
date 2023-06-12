@@ -79,22 +79,22 @@ const nextConfig = {
 module.exports = nextConfig
 ```
 
-Ignore Build Errors during development
+在开发过程中忽略构建错误
 
 ## Project Requirements
 
-To follow along with this tutorial, you'll need basic knowledge of the following packages:
+要跟上这个教程，你需要具备以下软件包的基本知识:
 
-1. [PNPM](https://pnpm.io/) is a Node.js package manager similar to npm or yarn (you can use any of them that you prefer).
-2. [TypeScript](https://www.typescriptlang.org/) helps you write type-safe code in JavaScript, and can also help improve productivity. It is not required, though. You can use JavaScript in your project.
-3. [React.js](https://react.dev/) is a free and open-source front-end JavaScript library for building user interfaces with class and function components.
-4. [Next.js 13 (app)](https://beta.nextjs.org/docs/getting-started) is based on React and it provides additional functionality like routing, error handling, and layouts.
-5. [Ghost CMS API](https://ghost.org/docs/content-api/) is an open-source content management system (CMS) similar to WordPress. Ghost is specifically designed and built for blogging. In this project, we'll Ghost as the backend and Next as the frontend. For communication between the backend and frontend development, we'll use the Ghost CMS API.
-6. [Tailwind CSS](https://tailwindcss.com/) is an open source CSS-based framework similar to [Bootstrap](https://getbootstrap.com/). We'll use Tailwind CSS to design our blog website.
+1. [PNPM](https://pnpm.io/)是一个类似于 npm 或 yarn 的 Node.js 包管理器（你也可以使用你喜欢的任何一个）。
+2. [TypeScript](https://www.typescriptlang.org/)帮助你在 JavaScript 中编写类型安全的代码，也可以帮助提高生产力。不过，这不是必须的。你可以在你的项目中使用 JavaScript。
+3. [React.js](https://react.dev/)是一个免费和开源的前端 JavaScript 库，用于用类和函数组件构建用户界面。
+4. [Next.js 13 (app)](https://beta.nextjs.org/docs/getting-started)是基于 React 的，它提供了额外的功能，如路由、错误处理和布局。
+5. [Ghost CMS API](https://ghost.org/docs/content-api/)是一个开源的内容管理系统（CMS），类似于 WordPress。Ghost 是专门为博客设计和建造的。在这个项目中，我们将 Ghost 作为后端，Next 作为前端。对于后端和前端开发之间的通信，我们将使用 Ghost CMS API。
+6. [Tailwind CSS](https://tailwindcss.com/)是一个开源的 CSS 的框架，类似于 [Bootstrap](https://getbootstrap.com/)。我们将使用 Tailwind CSS 来设计我们的博客网站。
 
 ## How to Set Up Ghost CMS
 
-The next step is installing Ghost locally, which you can do with one command. First, you need to install `ghost-cli` globally with pnpm, yarn, or npm.
+下一步是在本地安装 Ghost，你可以用一条命令完成。首先，你需要用 pnpm、yarn 或 npm 全局安装`ghost-cli`。
 
 ```bash
 pnpm add -g ghost-cli@latest
@@ -110,25 +110,25 @@ npm install ghost-cli@latest -g
 
 global
 
-After installing the Ghost CLI, you can create a new Ghost blog project locally with the following command:
+安装 Ghost CLI 后，你可以用以下命令在本地创建一个新的 Ghost 博客项目:
 
 ```bash
 ghost install local
 ```
 
-After the blog installation is finished, you can start your local development server with the `ghost start` command and your local development serve on `http://localhost:2368/ghost`.
+博客安装完成后，你可以用 `ghost start` 命令启动你的本地开发服务器，你的本地开发服务可以通过`http://localhost:2368/ghost` 访问。
 
 ### Additional Ghost CLI Commands
 
-There are a few additional commands that are helpful when using the Ghost CLI:
+在使用 Ghost CLI 时，有几个命令是有帮助的:
 
-- `ghost start`: start your server.
-- `ghost stop` : stop your running Ghost server.
-- `ghost help` : check the available list of commands.
+- `ghost start`: 启动你的服务
+- `ghost stop` : 停止运行你的 Ghost 服务
+- `ghost help` : 查看可用的命令列表
 
-**Note:**
+**注意:**
 
-Make sure your current installation directory is empty before installation. Currently, you are installing Ghost in development mode. For production, you won't follow the same steps.
+在安装之前，请确保你当前的安装目录是空的。目前，你是在开发模式下安装 Ghost。对于生产来说，你不会遵循同样的步骤。
 
 ## How to Set Up Ghost CMS with the Cloud
 

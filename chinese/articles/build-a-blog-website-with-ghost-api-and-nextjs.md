@@ -1,7 +1,7 @@
-> -  原文地址：[How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/build-a-blog-website-with-ghost-api-and-nextjs/)
-> -  原文作者：[Rajdeep Singh](https://www.freecodecamp.org/news/author/officialrajdeepsingh/)
-> -  译者：[luojiyin](https://github.com/luojiyin1987)
-> -  校对者：
+> - 原文地址：[How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/build-a-blog-website-with-ghost-api-and-nextjs/)
+> - 原文作者：[Rajdeep Singh](https://www.freecodecamp.org/news/author/officialrajdeepsingh/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Ghost-API-and-Nextjs--2-.png)
 
@@ -19,32 +19,32 @@ Next.js 13 团队目前正在开发实验性的 app 文件夹。Next 使用基�
 
 ## 目录
 
-1.  [Why Use Next.js for the Front End and Not a Ghost CMS Theme?](#why-use-next-js-for-the-front-end-and-not-a-ghost-cms-theme)
-2.  [Project Requirements](#project-requirements)
-3.  [How to Set Up Ghost CMS](#how-to-set-up-ghost-cms)
-4.  [How to Set Up Ghost CMS with the Cloud](#how-to-set-up-ghost-cms-with-the-cloud)
-5.  [How to Get the Blog Template](#how-to-get-the-blog-template)
-6.  [How to Set Up Next.js](#how-to-set-up-next-js)
-7.  [What to know before following this tutorial](#what-to-know-before-following-this-tutorial-)
-8.  [Folder Structure](#folder-structure)
-9.  [How to Configure Ghost CMS and Next.js](#how-to-configure-ghost-cms-and-next-js)
-10.  [Understanding the Next.js 13 App Folder](#understanding-the-next-js-13-app-folder)
-11.  [Demo Data for the Project](#demo-data-for-the-project)
-12.  [How to Build the Blog](#how-to-build-the-blog)
-13.  [How to Build the Header](#how-to-build-the-header)
-14.  [How to Build the Footer](#how-to-build-the-footer)
-15.  [How to Build the Layout](#how-to-build-the-layout)
-16.  [How to Build the Homepage](#how-to-build-the-homepage)
-17.  [How to Build the Reading Page](#how-to-build-the-reading-page)
-18.  [How to Build the Tag Page](#how-to-build-the-tag-page)
-19.  [How to Build the Author Page](#how-to-build-the-author-page)
-20.  [How to Build Single Pages](#how-to-build-single-pages)
-21.  [How to Handle Pagination](#how-to-handle-pagination)
-22.  [Next.js SEO](#next-js-seo)
-23.  [How to Enable Search](#how-to-enable-search)
-24.  [Error Handling](#error-handling)
-25.  [How to Rebuild Your Static Site with Webhooks](#how-to-rebuild-your-static-site-with-webhooks)
-26.  [Conclusion](#conclusion)
+1. [Why Use Next.js for the Front End and Not a Ghost CMS Theme?](#why-use-next-js-for-the-front-end-and-not-a-ghost-cms-theme)
+2. [Project Requirements](#project-requirements)
+3. [How to Set Up Ghost CMS](#how-to-set-up-ghost-cms)
+4. [How to Set Up Ghost CMS with the Cloud](#how-to-set-up-ghost-cms-with-the-cloud)
+5. [How to Get the Blog Template](#how-to-get-the-blog-template)
+6. [How to Set Up Next.js](#how-to-set-up-next-js)
+7. [What to know before following this tutorial](#what-to-know-before-following-this-tutorial-)
+8. [Folder Structure](#folder-structure)
+9. [How to Configure Ghost CMS and Next.js](#how-to-configure-ghost-cms-and-next-js)
+10. [Understanding the Next.js 13 App Folder](#understanding-the-next-js-13-app-folder)
+11. [Demo Data for the Project](#demo-data-for-the-project)
+12. [How to Build the Blog](#how-to-build-the-blog)
+13. [How to Build the Header](#how-to-build-the-header)
+14. [How to Build the Footer](#how-to-build-the-footer)
+15. [How to Build the Layout](#how-to-build-the-layout)
+16. [How to Build the Homepage](#how-to-build-the-homepage)
+17. [How to Build the Reading Page](#how-to-build-the-reading-page)
+18. [How to Build the Tag Page](#how-to-build-the-tag-page)
+19. [How to Build the Author Page](#how-to-build-the-author-page)
+20. [How to Build Single Pages](#how-to-build-single-pages)
+21. [How to Handle Pagination](#how-to-handle-pagination)
+22. [Next.js SEO](#next-js-seo)
+23. [How to Enable Search](#how-to-enable-search)
+24. [Error Handling](#error-handling)
+25. [How to Rebuild Your Static Site with Webhooks](#how-to-rebuild-your-static-site-with-webhooks)
+26. [Conclusion](#conclusion)
 
 在这篇文章中，我们将介绍 Next 的带有实验性的 app 文件目录的基本情况。然后，我将教你如何在本地加强 Next 和 Ghost CMS，以及如何将 Ghost 与 Next 整合。最后，我会告诉你如何从后端（通过 Ghost CMS 的 API）获取数据，并用 React.js 在网站上显示。
 
@@ -52,10 +52,10 @@ Next.js 13 团队目前正在开发实验性的 app 文件夹。Next 使用基�
 
 有几个原因可以让你考虑使用 Next 作为你的博客的前端框架：
 
-1.  Ghost CMS 不生成静态构建，但 Next.js 可以。
-2.  使用 Next.js，你可以获得更高的网站速度和性能，而且它现在提供了内置的 SEO 支持和其他优化功能。Ghost 不具备其中的一些功能。
-3.  对于 React 开发者来说，用 Next 构建一个新的博客很容易（因为 Next 是基于 React 的），你不需要学习额外的工具。
-4.  你会发现有一些服务提供商可以为 Ghost 提供服务，一键部署 Ghost 博客。他们中的大多数都有一个付费计划，而有一两个提供免费计划（但这些往往有时间和功能限制）。对于 Next.js，市场上有许多玩家。
+1. Ghost CMS 不生成静态构建，但 Next.js 可以。
+2. 使用 Next.js，你可以获得更高的网站速度和性能，而且它现在提供了内置的 SEO 支持和其他优化功能。Ghost 不具备其中的一些功能。
+3. 对于 React 开发者来说，用 Next 构建一个新的博客很容易（因为 Next 是基于 React 的），你不需要学习额外的工具。
+4. 你会发现有一些服务提供商可以为 Ghost 提供服务，一键部署 Ghost 博客。他们中的大多数都有一个付费计划，而有一两个提供免费计划（但这些往往有时间和功能限制）。对于 Next.js，市场上有许多玩家。
 
 通常来说，当涉及到静态构建和网站性能时，Ghost 在这两种情况下的表现都不尽如人意。另一个选择是使用一个前端平台，如 Next、React、Angular 或 Vue。
 
@@ -85,12 +85,12 @@ Ignore Build Errors during development
 
 To follow along with this tutorial, you'll need basic knowledge of the following packages:
 
-1.  [PNPM](https://pnpm.io/) is a Node.js package manager similar to npm or yarn (you can use any of them that you prefer).
-2.  [TypeScript](https://www.typescriptlang.org/) helps you write type-safe code in JavaScript, and can also help improve productivity. It is not required, though. You can use JavaScript in your project.
-3.  [React.js](https://react.dev/) is a free and open-source front-end JavaScript library for building user interfaces with class and function components.
-4.  [Next.js 13 (app)](https://beta.nextjs.org/docs/getting-started) is based on React and it provides additional functionality like routing, error handling, and layouts.
-5.  [Ghost CMS API](https://ghost.org/docs/content-api/) is an open-source content management system (CMS) similar to WordPress. Ghost is specifically designed and built for blogging. In this project, we'll Ghost as the backend and Next as the frontend. For communication between the backend and frontend development, we'll use the Ghost CMS API.
-6.  [Tailwind CSS](https://tailwindcss.com/) is an open source CSS-based framework similar to [Bootstrap](https://getbootstrap.com/). We'll use Tailwind CSS to design our blog website.
+1. [PNPM](https://pnpm.io/) is a Node.js package manager similar to npm or yarn (you can use any of them that you prefer).
+2. [TypeScript](https://www.typescriptlang.org/) helps you write type-safe code in JavaScript, and can also help improve productivity. It is not required, though. You can use JavaScript in your project.
+3. [React.js](https://react.dev/) is a free and open-source front-end JavaScript library for building user interfaces with class and function components.
+4. [Next.js 13 (app)](https://beta.nextjs.org/docs/getting-started) is based on React and it provides additional functionality like routing, error handling, and layouts.
+5. [Ghost CMS API](https://ghost.org/docs/content-api/) is an open-source content management system (CMS) similar to WordPress. Ghost is specifically designed and built for blogging. In this project, we'll Ghost as the backend and Next as the frontend. For communication between the backend and frontend development, we'll use the Ghost CMS API.
+6. [Tailwind CSS](https://tailwindcss.com/) is an open source CSS-based framework similar to [Bootstrap](https://getbootstrap.com/). We'll use Tailwind CSS to design our blog website.
 
 ## How to Set Up Ghost CMS
 
@@ -122,9 +122,9 @@ After the blog installation is finished, you can start your local development se
 
 There are a few additional commands that are helpful when using the Ghost CLI:
 
--   `ghost start`: start your server.
--   `ghost stop` : stop your running Ghost server.
--   `ghost help` : check the available list of commands.
+- `ghost start`: start your server.
+- `ghost stop` : stop your running Ghost server.
+- `ghost help` : check the available list of commands.
 
 **Note:**
 
@@ -170,27 +170,27 @@ After completing the installation process, we must install some additional Node 
 
 These Node packages can help you speed up your development process. Make sure to install all the below packages to follow along with this guide:
 
-### Node packages to install:
+### Node packages to install
 
-1.  `pnpm add @tryghost/content-api`(required)
-2.  `pnpm add @types/tryghost__content-api` (required by TypeScript)
-3.  `pnpm add tailwindcss postcss autoprefixer`
-4.  `pnpm add  @tailwindcss/typography`
-5.  `pnpm add react-icons`
-6.  `pnpm add date-fns`
-7.  `pnpm add next-themes`
-8.  `pnpm add @radix-ui/react-popover`
+1. `pnpm add @tryghost/content-api`(required)
+2. `pnpm add @types/tryghost__content-api` (required by TypeScript)
+3. `pnpm add tailwindcss postcss autoprefixer`
+4. `pnpm add  @tailwindcss/typography`
+5. `pnpm add react-icons`
+6. `pnpm add date-fns`
+7. `pnpm add next-themes`
+8. `pnpm add @radix-ui/react-popover`
 
 Here's what each of these packages does:
 
--   [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package is a Ghost JavaScript Client Library for fetching [content API](https://ghost.org/docs/content-api/) data.
--   [@types/tryghost\_\_content-api](https://www.npmjs.com/package/@types/tryghost__content-api) package contains type definitions for @tryghost/content-api.
--   TailwindCSS, autoprefixer, and PostCSS are packages required for [Tailwind CSS](https://beta.nextjs.org/docs/styling/tailwind-css).
--   [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) package for handling dynamic typography with Tailwind CSS.
--   The [next-themes](https://www.npmjs.com/package/next-themes) package enables themes like switching from dark to light mode on your site.
--   The [react-icons](https://www.npmjs.com/package/react-icons) package provides lots of SVG icons for the project. This way, you do not need to download them manually.
--   [@radix-ui/react-popover](https://www.radix-ui.com/docs/primitives/components/popover#installation) is part of the Radix UI ecosystem. I choose the Radix popover component for the design of the search component on the site.
--   [date-fns](https://www.npmjs.com/package/date-fns) package helps convert your `published_at` date into a different date format.
+- [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package is a Ghost JavaScript Client Library for fetching [content API](https://ghost.org/docs/content-api/) data.
+- [@types/tryghost\_\_content-api](https://www.npmjs.com/package/@types/tryghost__content-api) package contains type definitions for @tryghost/content-api.
+- TailwindCSS, autoprefixer, and PostCSS are packages required for [Tailwind CSS](https://beta.nextjs.org/docs/styling/tailwind-css).
+- [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) package for handling dynamic typography with Tailwind CSS.
+- The [next-themes](https://www.npmjs.com/package/next-themes) package enables themes like switching from dark to light mode on your site.
+- The [react-icons](https://www.npmjs.com/package/react-icons) package provides lots of SVG icons for the project. This way, you do not need to download them manually.
+- [@radix-ui/react-popover](https://www.radix-ui.com/docs/primitives/components/popover#installation) is part of the Radix UI ecosystem. I choose the Radix popover component for the design of the search component on the site.
+- [date-fns](https://www.npmjs.com/package/date-fns) package helps convert your `published_at` date into a different date format.
 
 ## What to Know Before Following This Tutorial
 
@@ -314,28 +314,28 @@ Get your `GHOST_KEY` and `GHOST_URL`
 
 There have been lots of changes in the Next.js `pages` folder and `app` folder with the release of Next.js 13. We'll discuss some important stuff now and more when we're building the app:
 
-1.  There is no `_app` , `_document`, `getServerSideProps`, `getStaticProps`, `getStaticPaths` , `404` and `useRouter`.
-2.  Now it combines the `_app` and `_document` files with the `layout` file.
-3.  `useRouter` is import from `next/navigation`.
-4.  The `404` file is replaced by the `notFound()` function.
-5.  The `error.tsx` file provides functionality like reacting to error boundaries.
-6.  Now the `index.js` file is replaced by `page.js`.
-7.  Passing dynamic route segments `pages/blog/[slug].js` is changed, and the Next app directory looks like this: `app/blog/[slug]/page.js`.
+1. There is no `_app` , `_document`, `getServerSideProps`, `getStaticProps`, `getStaticPaths` , `404` and `useRouter`.
+2. Now it combines the `_app` and `_document` files with the `layout` file.
+3. `useRouter` is import from `next/navigation`.
+4. The `404` file is replaced by the `notFound()` function.
+5. The `error.tsx` file provides functionality like reacting to error boundaries.
+6. Now the `index.js` file is replaced by `page.js`.
+7. Passing dynamic route segments `pages/blog/[slug].js` is changed, and the Next app directory looks like this: `app/blog/[slug]/page.js`.
 
 ### Examples
 
 To understand the Next experimental app folder, let's look at a real example:
 
-1.  **tag page** => `app/tag/[slug]/page.ts`
-2.  **category** => `app/tag/[slug]/page.ts`
+1. **tag page** => `app/tag/[slug]/page.ts`
+2. **category** => `app/tag/[slug]/page.ts`
 
 Now you can create five files inside every route. For example, if you create a `tag` or **`category`** route in your app folder, then you can create four files inside your app route folder.
 
--   `page.ts` (required): it is your main file.
--   `layout.ts` (optional): it helps design your layout
--   `loading.ts` (optional): it creates a loading indicator with React suspense.
--   `error.ts` (optional): it helps handle errors in your React app.
--   `components` (optional): you can also create another component in your routes.
+- `page.ts` (required): it is your main file.
+- `layout.ts` (optional): it helps design your layout
+- `loading.ts` (optional): it creates a loading indicator with React suspense.
+- `error.ts` (optional): it helps handle errors in your React app.
+- `components` (optional): you can also create another component in your routes.
 
 Let's understand how the new Next.js 13 app route works with a real-life example: your tag route folder looks like this.
 
@@ -357,19 +357,19 @@ You don't have to worry about creating a demo or dummy blog post data. For your 
 
 We'll go through and build each part of the blog in the following sections so you can follow along at home.
 
-1.  [How to build the header](#how-to-build-the-header)
-2.  [How to build the footer](#how-to-build-the-footer)
-3.  [How to build the layout](#how-to-build-the-layout)
-4.  [How to build the homepage](#how-to-built-the-homepage)
-5.  [How to build the reading page](#how-to-build-the-reading-page)
-6.  [How to build the tag page](#how-to-build-the-tag-page)
-7.  [How to build the author page](#how-to-build-the-author-page)
-8.  [How to build single pages](#how-to-build-single-pages)
-9.  [How to handle pagination](#how-to-handle-pagination)
-10.  [Next.js SEO](#next-js-seo)
-11.  [How to Enable Search](#how-to-enable-search)
-12.  [Error Handling](#error-handling)
-13.  [How to rebuild your static site with webhooks](#how-to-rebuild-your-static-site-with-webhooks)
+1. [How to build the header](#how-to-build-the-header)
+2. [How to build the footer](#how-to-build-the-footer)
+3. [How to build the layout](#how-to-build-the-layout)
+4. [How to build the homepage](#how-to-built-the-homepage)
+5. [How to build the reading page](#how-to-build-the-reading-page)
+6. [How to build the tag page](#how-to-build-the-tag-page)
+7. [How to build the author page](#how-to-build-the-author-page)
+8. [How to build single pages](#how-to-build-single-pages)
+9. [How to handle pagination](#how-to-handle-pagination)
+10. [Next.js SEO](#next-js-seo)
+11. [How to Enable Search](#how-to-enable-search)
+12. [Error Handling](#error-handling)
+13. [How to rebuild your static site with webhooks](#how-to-rebuild-your-static-site-with-webhooks)
 
 ### How to Build the Header
 
@@ -512,7 +512,7 @@ export async function getNavigation() {
 
 Fetch
 
-#### The data look like this:
+#### The data look like this
 
 ```object
 {
@@ -673,7 +673,7 @@ Data receive by api.posts.browse()
 
 By default, the `api.post.browse()` returns only post data, but you can easily extend it. In every article or post data, we also include tags and authors with the help of `include`. Then we set the article limit to ten.
 
-#### The data look like this:
+#### The data look like this
 
 ```JSON
  [
@@ -1069,7 +1069,8 @@ export async function generateStaticParams() {
 
 generate static site slug for article reading page
 
-###   
+###
+
 How to Build the Tag Page
 
 I designed a simple tag page for the blog. The tag page shows articles related to the tags that are used.
@@ -1572,7 +1573,7 @@ export default PaginationItem
 
 When you call the `api.posts.browse({ limit: 10 })` request, the API endpoint returns ten posts and a `meta` object with `pagination`.
 
-#### The returned `api.posts.browse({ limit: 10 })` data look like this:
+#### The returned `api.posts.browse({ limit: 10 })` data look like this
 
 ```json
  [
@@ -1701,7 +1702,7 @@ export default async function Pagination({ params }: { params: { item: string };
 }
 ```
 
-use 
+use
 
 ### Next.js SEO
 
@@ -2160,7 +2161,7 @@ Ghost - The Professional Publishing Platform
 
 ![ghost-docs](https://ghost.org/images/meta/ghost-docs.png)
 
-](https://ghost.org/docs/jamstack/next/)
+](<https://ghost.org/docs/jamstack/next/>)
 
 [
 
@@ -2172,7 +2173,7 @@ You can use Next.js with Ghost to build a statically generated blog with better 
 
 ![intro-to-cloud.d49bc5f7](https://www.digitalocean.com/_next/static/media/intro-to-cloud.d49bc5f7.jpeg)
 
-](https://www.digitalocean.com/community/tutorials/how-to-build-your-blog-on-digitalocean-with-ghost-and-next-js)
+](<https://www.digitalocean.com/community/tutorials/how-to-build-your-blog-on-digitalocean-with-ghost-and-next-js>)
 
 [
 
@@ -2184,7 +2185,7 @@ Ghost - The Professional Publishing Platform
 
 ![ghost-docs](https://ghost.org/images/meta/ghost-docs.png)
 
-](https://ghost.org/docs/content-api/)
+](<https://ghost.org/docs/content-api/>)
 
 [
 
@@ -2196,6 +2197,6 @@ Get started with Next.js in the official documentation, and learn more about Nex
 
 ![docs](https://beta.nextjs.org/static/twitter-cards/docs.png)
 
-](https://beta.nextjs.org/docs/getting-started)
+](<https://beta.nextjs.org/docs/getting-started>)
 
 I write tons of articles on Next. If you are interested in Next and related stuff, you can follow me on [Medium](https://officialrajdeepsingh.medium.com/) and join the [frontend web publication](https://medium.com/frontendweb).

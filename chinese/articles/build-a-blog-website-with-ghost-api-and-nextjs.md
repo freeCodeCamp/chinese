@@ -5,19 +5,19 @@
 
 ![How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Ghost-API-and-Nextjs--2-.png)
 
-Ghost CMS is a popular content management system that many devs and companies use to host their blogs.
+Ghost CMS 是一个流行的内容管理系统，许多开发者和公司用它来托管他们的博客。
 
-It has many features and an editor that's highly optimized for writing. You can even build different themes using **[**handlebars**.js](https://handlebarsjs.com/).**
+它有许多功能和一个高度优化的编辑器，适合写作。你甚至可以使用 **[**handlebars**.js](https://handlebarsjs.com/) 构建不同的主题。**。
 
-But if you don't know Handlebars, learning it can be a long and difficult process. If you are already a Next.js developer and you don't know Handlebars, creating a new theme for your Ghost-based site can be tough.
+但如果你不了解 Handlebars，学习它可能是一个漫长而困难的过程。如果你已经是一个 Next.js 的开发者，而你不知道 Handlebars，为你基于 Ghost 的网站创建一个新的主题可能会很艰难。
 
-In the article, I will teach you how to use Ghost CMS as a backend and Next.js as a frontend. I will guide you through everything related to [Nextjs 13 app directory](https://beta.nextjs.org/docs/getting-started) and the Ghost CMS API.
+在这篇文章中，我将教你如何使用 Ghost CMS 作为后端和 Next.js 作为前端。我将指导你完成与 [Nextjs 13 应用目录](https://beta.nextjs.org/docs/getting-started) 和 Ghost CMS API 有关的一切。
 
-Next.js 13 team currently working on the experimental app folder. Next uses file-based routing with the `page` directory. The new `app` directory is based on file system routing and provides additional functionality like layouts, error handling, component loading, and server-side and client-side rending out of the box.
+Next.js 13 团队目前正在开发实验性的 app 文件夹。Next 使用基于文件的路由与`page`目录。新的 `app` 目录基于文件系统路由，并提供额外的功能，如布局、错误处理、组件加载、服务器端和客户端渲染等。
 
-All the code is available on [GitHub](https://github.com/officialrajdeepsingh/nextjsghostcms). You can also check out the live [demo website](https://nextjsghostcms.vercel.app/).
+所有的代码都可以在 [GitHub](https://github.com/officialrajdeepsingh/nextjsghostcms) 上找到。你也可以查看网上的 [演示网站](https://nextjsghostcms.vercel.app/)。
 
-## Table of Contents
+## 目录
 
 1.  [Why Use Next.js for the Front End and Not a Ghost CMS Theme?](#why-use-next-js-for-the-front-end-and-not-a-ghost-cms-theme)
 2.  [Project Requirements](#project-requirements)
@@ -46,22 +46,22 @@ All the code is available on [GitHub](https://github.com/officialrajdeepsingh/ne
 25.  [How to Rebuild Your Static Site with Webhooks](#how-to-rebuild-your-static-site-with-webhooks)
 26.  [Conclusion](#conclusion)
 
-In this article, we cover the basics of Next's experimental app directory. Then I'll teach you how to step up Next and Ghost CMS locally and how to integrate Ghost with Next. Lastly, I'll show you how to consume data from the backend (via theGhost CMS API ) and show it on the site with React.js.
+在这篇文章中，我们将介绍 Next 的带有实验性的 app 文件目录的基本情况。然后，我将教你如何在本地加强 Next 和 Ghost CMS，以及如何将 Ghost 与 Next 整合。最后，我会告诉你如何从后端（通过 Ghost CMS 的 API）获取数据，并用 React.js 在网站上显示。
 
 ## Why Use Next.js for the Front End and Not a Ghost CMS Theme?
 
-There are a few reasons why you might consider using Next as the frontend framework for your blog:
+有几个原因可以让你考虑使用 Next 作为你的博客的前端框架：
 
-1.  Ghost CMS doesn't generate static builds, but Next.js does.
-2.  You get increased website speed and performance with Next.js and it now provides built-in SEO support and other optimizations. Ghost doesn't have some of these features.
-3.  For React developers, it is easy to build a new blog with Next (since Next is React-based), and you do not need to learn additional tools.
-4.  You'll find a few service providers available for Ghost to deploy a Ghost blog with one click. Most of them come with a paid plan while one or two offer a free plan (but these tend to have time and feature limitations). For Next.js, many players are available in the market.
+1.  Ghost CMS 不生成静态构建，但 Next.js 可以。
+2.  使用 Next.js，你可以获得更高的网站速度和性能，而且它现在提供了内置的 SEO 支持和其他优化功能。Ghost 不具备其中的一些功能。
+3.  对于 React 开发者来说，用 Next 构建一个新的博客很容易（因为 Next 是基于 React 的），你不需要学习额外的工具。
+4.  你会发现有一些服务提供商可以为 Ghost 提供服务，一键部署 Ghost 博客。他们中的大多数都有一个付费计划，而有一两个提供免费计划（但这些往往有时间和功能限制）。对于 Next.js，市场上有许多玩家。
 
-Basically, when it comes to static builds and website performance, Ghost doesn't perform as well in either case. The alternative is to use a frontend platform like Next, React, Angular, or Vue.
+通常来说，当涉及到静态构建和网站性能时，Ghost 在这两种情况下的表现都不尽如人意。另一个选择是使用一个前端平台，如 Next、React、Angular 或 Vue。
 
-I chose Next because it's a highly in-demand and popular React framework, and plenty of tools and libraries are built around it.
+我选择 Next 是因为它是一个需求量很大、很受欢迎的 React 框架，而且大量的工具和库都是围绕它建立的。
 
-Note that the current project is not ready for TypeScript, but I'm working on it. Because of this [I disabled TypeScript during build time](https://medium.com/frontendweb/basic-explanation-about-the-next-config-js-file-eaa539e1fea3) like this:
+请注意，目前的项目还没有为 TypeScript 做好准备，但我正在努力。因为这个原因 [我在构建时禁用了 TypeScript](https://medium.com/frontendweb/basic-explanation-about-the-next-config-js-file-eaa539e1fea3)，像这样：
 
 ```typescript
 /** @type {import('next').NextConfig} */

@@ -132,21 +132,21 @@ ghost install local
 
 ## How to Set Up Ghost CMS with the Cloud
 
-If you run into any problems with Ghost local installation, or maybe it's too complicated and you do not have enough space on your drive, you can use a tool like [digital press](https://www.digitalpress.blog/) or any other cloud service like GCP or AWS, Digital Ocean, and so on.
+如果你在本地安装 Ghost 时遇到任何问题，或者可能太复杂，或者你的驱动器上没有足够的空间，你可以使用像 [digital press](https://www.digitalpress.blog/) 这样的工具或任何其他云服务，如 GCP 或 AWS，Digital Ocean，等等。
 
-I like digital press because it comes with a free plan. Other cloud services do not provide that, which is why I suggest it.
+我喜欢 digital press，因为它有一个免费计划。其他云服务不提供这一点，这就是为什么我建议它。
 
 ## How to Get the Blog Template
 
-Creating a new blog from scratch can be tough. In this tutorial, we'll use a pre-build template from [the frontend web](https://github.com/orgs/frontendweb3). All templates have an open-source MIT license, so you can use them, and you don't need to set up everything.
+从头开始创建一个新的博客可能很困难。在本教程中，我们将使用一个来自 [the frontend web](https://github.com/orgs/frontendweb3) 的预构建好的模板。所有的模板都有一个开源的 MIT 许可，所以你可以使用它们，而且你不需要设置一切。
 
-I picked the [Open-blog](https://github.com/frontendweb3/open-blog) template from the frontend web.
+我从里面挑选了 [Open-blog](https://github.com/frontendweb3/open-blog) 的模板。
 
 ## How to Set Up Next.js
 
-Setting up Next is one of the main parts of this tutorial, where you'll spend time and energy coding, debugging, and deploying the site.
+设置 Next 是本教程的主要部分之一，你将花时间和精力在编码、调试和部署网站上。
 
-Here are the commands to run depending on whether you're using npx, yarn, or pnpm:
+以下是要运行的命令，取决于你使用的是 npx、yarn，还是 pnpm：
 
 ```bash
 npx create-next-app@latest --experimental-app
@@ -160,15 +160,15 @@ yarn create next-app --experimental-app
 pnpm create next-app --experimental-app
 ```
 
-Install nextjs with the experimental app folder.
+安装 nextjs 的时候使用新的实验性功能.
 
 ![create a new nextjs app.](https://www.freecodecamp.org/news/content/images/2023/03/ghostandnextjs--1-.png)
 
-create a new nextjs app.
+创建一个新的 Nextjs 应用程序。
 
-After completing the installation process, we must install some additional Node packages for the blog.
+完成安装过程后，我们必须为博客安装一些额外的 Node 包。
 
-These Node packages can help you speed up your development process. Make sure to install all the below packages to follow along with this guide:
+这些 Node 包可以帮助你加快开发进程。请确保安装以下所有的包，以便跟上本指南：
 
 ### Node packages to install
 

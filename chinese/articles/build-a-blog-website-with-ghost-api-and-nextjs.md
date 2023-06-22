@@ -350,11 +350,11 @@ Tag 文件夹结构
 
 ## Demo Data for the Project
 
-You don't have to worry about creating a demo or dummy blog post data. For your testing, You can download it from this [GitHub repository](https://github.com/officialrajdeepsingh/nextjsghostcms/blob/main/.github/demo-post-for-ghost.json).
+你不必担心创建一个演示或假的博客文章数据。对于你的测试，你可以从这个[GitHub 仓库](https://github.com/officialrajdeepsingh/nextjsghostcms/blob/main/.github/demo-post-for-ghost.json)下载它。
 
 ## How to Build the Blog
 
-We'll go through and build each part of the blog in the following sections so you can follow along at home.
+我们将在下面的章节中对博客的每个部分进行梳理和构建，这样你就可以在家里一个人跟着做。
 
 1. [How to build the header](#how-to-build-the-header)
 2. [How to build the footer](#how-to-build-the-footer)
@@ -372,15 +372,15 @@ We'll go through and build each part of the blog in the following sections so yo
 
 ### How to Build the Header
 
-The first and main part of the site is the header. First, we'll create a simple header for our demo blog. Our header will end up looking like this:
+网站的第一个也是最主要的部分是页眉(header)。首先，我们将为我们的演示博客创建一个简单的页眉(header)。我们的页眉最终将看起来像这样：
 
 ![Header of site](https://www.freecodecamp.org/news/content/images/2023/04/header.png)
 
-Design of the header
+页眉的设计
 
-First is the logo, next comes the nav bar with various elements, and last is the icon section. All the data comes from the Ghost CMS API. You can change things inside Ghost CMS and it will reflect on the site.
+首先是 logo，接下来是带有各种元素的导航栏(nav)，最后是图标部分(icon)。所有的数据都来自 Ghost CMS 的 API。你可以在 Ghost CMS 里面改变东西，而且会反映在网站上。
 
-Here's the code to build the header component:
+下面是建立标题组件的代码：
 
 ```typescript
 // Header.tsx
@@ -436,13 +436,13 @@ export default Header;
 
 ### How to Build the Footer
 
-The footer is also an important section of a blog site. It shows your important information and various helpful links.
+页脚(footer)也是博客网站的一个重要部分。它显示你的重要信息和各种有用的链接。
 
 ![Design footer](https://www.freecodecamp.org/news/content/images/2023/04/footer.png)
 
-Design of the footer
+页脚的设计
 
-I designed a basic footer with copyrighted text and added social icons for the site. The social icons come from the Ghost CMS API.
+我设计了一个带有版权文本的基本页脚(footer)，并为网站添加了社交图标。这些社交图标来自 Ghost CMS 的 API。
 
 ```typescript
 // Footer.tsx
@@ -506,9 +506,9 @@ export default Footer;
 
 ### How to Build the Layout
 
-I designed a basic layout for the blog. For building layouts in Next.js, there's a special `layout.tsx` file.
+我为博客设计了一个基本的布局(layout)。为了在 Next.js 中构建布局，有一个特殊的`layout.tsx`文件。
 
-Before we create the layout design, we need to define a `getNavigation` function to **fetch** navigation and basic website-related data from Ghost.
+在创建布局(layout)设计之前，我们需要定义一个`getNavigation` 函数来从 Ghost 中获取导航和基本的网站相关数据。
 
 ```typescript
 // ghost-client.ts
@@ -570,11 +570,11 @@ Fetch
 }
 ```
 
-Data receive by api.settings.browse()
+api.settings.browse()接收的数据
 
-The `getNavigation` function returns the settings data, and then we pass the data as props into the header and footer components.
+`getNavigation`函数返回设置数据，然后我们把数据作为 props 传给页眉(header)和页脚(footer)组件。
 
-Our Main `layout.tsx` file works server side. It helps fetch data on the server side with the React `use` hook.
+我们的主文件`layout.tsx`在服务器端工作。它通过 React `use` hook 帮助在服务器端获取数据。
 
 ```typescript
 // Layout.tsx
@@ -613,11 +613,11 @@ export default function RootLayout({
 
 #### BlogLayout component
 
-The `BlogLayout` component works on the client side. In the Next.js app folder, you can easily convert your server-side component to the client side with the following `"use client"` syntax.
+`BlogLayout`组件在客户端工作。在 Next.js 应用程序文件夹中，你可以通过以下 `use client` 的语法轻松地将服务器端的组件转换到客户端。
 
-The purpose of the BlogLayout component is to contain the [ThemeProvider](https://www.npmjs.com/package/next-themes), header, and footer. ThemeProvider is a high-order component, and it provides additional functionality, like changing the theme from dark to light. We wrap the intra-site with ThemeProvider's higher component. In the old pages directory, we achieve similarly functionally with  nextjs `_app.ts` custom app.
+BlogLayout 组件的目的是包含[ThemeProvider](https://www.npmjs.com/package/next-themes)、页眉(header)和页脚(footer)。ThemeProvider 是一个高阶组件，它提供额外的功能，比如将主题从深色改为浅色。我们用 ThemeProvider 的高阶组件来包含网站内的内容。在旧页面目录中，我们用 nextjs 中的 `_app.ts`自定义应用程序实现类似的功能。
 
-ThemeProvider component helps to change the theme from light to dark mode.
+ThemeProvider 组件有助于将主题从浅色变为深色模式。
 
 ```typescript
 'use client';

@@ -650,13 +650,13 @@ export default Layout;
 
 ### How to Build the Homepage
 
-Next.js has a special `app/page.tsx` file for designing and building the home page. Our blog website's home page looks like what you see below. We import the header, card, pagination, and footer on the home page. The header and footer are part of `layout.tsx`.
+Next.js 有一个特殊的`app/page.tsx`文件，用于设计和建立主页(home page)。我们的博客网站的主页看起来就像你下面看到的那样。我们在主页(home page)上导入页眉(header)、卡片(card)、分页(pagination)和页脚(footer)。页眉(header)和页脚(footer)是`layout.tsx`的一部分。
 
 ![Home page](https://www.freecodecamp.org/news/content/images/2023/04/Home-page-1.png)
 
-Home page
+Home page(主页)
 
-First, we fetch all posts data from Ghost CMS with the help of the `getPosts`  function, which I defined in the `ghost-client.ts` file.
+首先，我们在`ghost-client.ts`文件中定义的`getPosts`函数的帮助下，从 Ghost CMS 获取所有帖子数据。
 
 ```typescript
 // ghost-client.ts
@@ -673,9 +673,9 @@ export async function getPosts() {
 }
 ```
 
-Data receive by api.posts.browse()
+api.post.browse()接收的数据
 
-By default, the `api.post.browse()` returns only post data, but you can easily extend it. In every article or post data, we also include tags and authors with the help of `include`. Then we set the article limit to ten.
+默认情况下，`api.post.browse()`只返回文章数据，但你可以轻松地扩展它。在每篇文章或帖子数据中，我们还用`include`的帮助包括标签和作者。然后，我们将文章限制设置为 10 条。
 
 #### The data look like this
 
@@ -805,11 +805,11 @@ meta:{
 ]
 ```
 
-Data receive by `api.post.browse()`
+由`api.post.browse()`接收的数据
 
-Now we call the `getPosts` function on the server side. It returns all the post data with the associated tags and authors. Now you can loop through the data with a `map()` function.
+现在我们在服务器端调用`getPosts`函数。它返回所有的帖子数据以及相关的标签和作者。现在你可以用`map()`函数循环浏览这些数据。
 
-We pass the data into `app/page.tsx` to the `card.tsx` components. We pass the article data as props into the card component.
+我们将数据传入`app/page.tsx`到`card.tsx`组件。我们把文章数据作为道具传给卡片组件。
 
 ```typescript
 // src/app/page.tsx
@@ -836,13 +836,13 @@ Design home `/app/page.tsx`
 
 #### Card component
 
-I designed a basic card for the blog. The card component looks like this:
+我为博客设计了一张基本的卡片。卡片组件看起来像这样：
 
-![Card component](https://www.freecodecamp.org/news/content/images/2023/04/card.png)
+![卡片组件](https://www.freecodecamp.org/news/content/images/2023/04/card.png)
 
-Card component
+卡片组件
 
-I rendered every item of data coming from the home page as props and showed it on the site with `Card.tsx` .
+我把来自主页的每项数据都渲染成道具，并用`Card.tsx`在网站上显示。
 
 ```typescript
 // Card.tsx
@@ -901,13 +901,13 @@ export default Card;
 
 ### How to Build the Reading Page
 
-The reading page is the second most important page for the blog site. If people can't figure out how to read what the author writes, this is a big problem for front-end developers.
+阅读页面(reading page)是博客网站的第二大重要页面。如果人们不能弄清楚如何阅读作者写的东西，这对前端开发者来说是个大问题。
 
 ![ghostandnext-reading](https://www.freecodecamp.org/news/content/images/2023/04/ghostandnext-reading.png)
 
 Reading page
 
-First, we get a single article from the Ghost CMS API based on its slug. We pass it to the `Card` component with the `Link` component.
+首先，我们从 Ghost CMS 的 API 中获得一篇基于其 slug(一种模板) 的文章。我们用 `链接(Link)` 组件把它传递给 `卡片(Card)`组件。
 
 ```typescript
 // ghost-client.ts
@@ -926,9 +926,9 @@ export async function getSinglePost(postSlug: string) {
 }
 ```
 
-Retrieve a single post based on a slug.
+检索基于 slug 的单个帖子。
 
-The `getSinglePost(<you-slug>)` function returns data about a single article, and you can render that data on the page.
+`getSinglePost(<you-slug>)`函数返回单篇文章的数据，你可以在页面上渲染这些数据。
 
 ```typescript
 // src/app/read/[slug]/page.tsx
@@ -1059,11 +1059,11 @@ async function Read({ params }: { params: { slug: string } }) {
 export default Read;
 ```
 
-You render the post's HTML data with `dangerouslySetInnerHTML` . But you need to write lots of CSS to handle the dynamic content coming from the Ghost CMS API.
+你用`dangerouslySetInnerHTML`渲染帖子的 HTML 数据。但是你需要写很多 CSS 来处理来自 Ghost CMS API 的动态内容。
 
-To solve that, I used the `@tailwindcss/typography` package. I also downloaded `cards.min.css` from Ghost. Now you don't need to write a single line of CSS in your Next app.
+为了解决这个问题，我使用了`@tailwindcss/typography`包。我还从 Ghost 下载了`cards.min.css`。现在你不需要在你的 Next 应用程序中写一行 CSS 了。
 
-Generate the static site with the `generateStaticParams` function. Before, we used to `getStaticProps` function.
+用`generateStaticParams`函数生成静态网站。之前，我们使用`getStaticProps`函数。
 
 ```typescript
 // ghost-client.ts
@@ -1081,21 +1081,21 @@ export async function generateStaticParams() {
 }
 ```
 
-generate static site slug for article reading page
+为文章阅读页面(reading page)生成静态网站 slug
 
 ###
 
-How to Build the Tag Page
+如何建立标签页(Tag Page)
 
-I designed a simple tag page for the blog. The tag page shows articles related to the tags that are used.
+我为博客设计了一个简单的标签页(Tag Page)。标签页显示与所使用的标签(tags)有关的文章。
 
-You can also create a category page. Tag pages and category pages use the same logic and functionalities.
+你也可以创建一个分类页(category)。标签页(Tag pages)和分类页(category pages)使用相同的逻辑和功能。
 
 ![Tag page](https://www.freecodecamp.org/news/content/images/2023/04/ghostandnextjs-tag.png)
 
 Tag page
 
-Similar to the reading page, we'll get articles based on tags from the Ghost CMS API.
+与阅读页(reading page)类似，我们将根据 Ghost CMS API 的标签来获取文章。
 
 ```typescript
 // ghost-client.ts
@@ -1121,9 +1121,9 @@ export async function getAllTags() {
 }
 ```
 
-The `getTagPosts(<tag-slug>)` function returns all the available posts related to a specific tag.
+`getTagPosts(<tag-slug>)`函数返回所有与特定标签相关的可用帖子。
 
-After receiving all posts with `getTagPosts()`, we render all posts with the help of the `map()` method.
+在用`getTagPosts()`接收所有帖子后，我们用`map()`方法渲染所有帖子。
 
 ```typescript
 // src/app/tag/[slug]/page.tsx
@@ -1185,7 +1185,7 @@ async function Tag({ params }: { params: { slug: string } }) {
 export default Tag;
 ```
 
-Generate the static site with the `generateStaticParams` function. It helps to generate slugs of the static build.
+用`generateStaticParams`函数生成静态网站。它有助于生成静态构建的 slug。
 
 ```typescript
 // ghost-client.ts
@@ -1201,19 +1201,19 @@ export async function getAllTags() {
 }
 ```
 
-generate static site slug for tag page
+为标签页生成静态网站 slug
 
 ### How to Build the Author Page
 
-The last and one of the most important pages for the blog site is the author page. This is where readers can learn more about the author.
+博客网站的最后一个也是最重要的一个页面是作者页。在这里，读者可以了解更多关于作者的信息。
 
-For the demo blog, I designed a basic page for the author.
+对于这个演示博客，我为作者设计了一个基本页面。
 
 ![nextandghostauthor](https://www.freecodecamp.org/news/content/images/2023/04/nextandghostauthor.png)
 
-Author page
+Author page(作者页)
 
-We'll build this in a similar way as we built the tag page. First, we get the author's metadata and author posts from the Ghost CMS API.
+我们将以类似于建立标签页的方式来建立这个页面。首先，我们从 Ghost CMS 的 API 中获取作者的元数据和作者的帖子。
 
 ```typescript
 // ghost-client.ts
@@ -1256,9 +1256,9 @@ export async function getAllAuthors() {
 }
 ```
 
-The `getSingleAuthor(<author-slug>)` returns data about a single author based on the author slug, and the  `getSingleAuthorPosts(<author-slug>)` function returns all posts related to the author.
+`getSingleAuthor(<author-slug>)`根据作者的名字返回单个作者的数据，`getSingleAuthorPosts(<author-slug>)`函数返回与作者有关的所有帖子。
 
-We render the posts data with the help of the `map()` method.
+我们在`map()`方法的帮助下渲染帖子数据。
 
 ```typescript
 // src/app/author/[slug]/page.tsx
@@ -1402,7 +1402,7 @@ async function AuthorPage({ params }: { params: { slug: string } }) {
 export default AuthorPage;
 ```
 
-To generate the author slug for the static site, we need to use the `generateStaticParams` function. We do not need anything else to build the static site.
+为了生成静态网站的作者 slug，我们需要使用`generateStaticParams`函数。我们不需要其他东西来建立静态网站。
 
 ```typescript
 // ghost-client.ts
@@ -1425,15 +1425,15 @@ export async function generateStaticParams() {
 
 ### How to Build Single Pages
 
-For single pages like About, Contact, Privacy Policy, and so on, you can also create them with the Ghost Content API.
+对于像 `关于(About)`、`联系(Contact)`、`隐私政策(Privacy Policy)` 等单页(single page)，你也可以用 Ghost Content API 创建它们。
 
-Our single-page design looks like this:
+我们的单页设计看起来像这样:
 
 ![single blog page](https://www.freecodecamp.org/news/content/images/2023/04/single-blog.png)
 
-single blog page
+博客页(single blog page)
 
-Firstly, you need to fetch all pages and the single pages data from the Ghost Content API.
+首先，你需要从 Ghost Content API 中获取所有页面和单页的数据。
 
 ```typescript
 // ghost-client.tsx
@@ -1466,7 +1466,7 @@ export async function getSinglePage(pageSlug: string) {
 }
 ```
 
-The `getSinglePage(page-slug)` function returns the single page data based on the page slug, and the `getAllPages()` function returns all the available published page data to generate the dynamic params with the `generateStaticParams()` function.
+`getSinglePage(page-slug)`函数返回基于 slug 页面的单一页面数据，`getAllPages()`函数返回所有可用的已发布页面数据，以便用`generateStaticParams()`函数生成动态参数。
 
 ```typescript
 // src/app/pages/[slug]/page.tsx
@@ -1516,7 +1516,7 @@ export default Pages;
 
 ### How to Handle Pagination
 
-Pagination helps speed up your site as well as divide your site into smaller parts, more digestible pages. You can link your posts with each other with `prev` and `next`.
+分页(Pagination )有助于加快你的网站访问速度，并将你的网站分成更小的部分，更容易消化的页面。你可以用 `prev`和 `next` 将你的文章相互连接起来。
 
 ```json
 meta:{
@@ -1524,9 +1524,9 @@ meta:{
  }
 ```
 
-next target the next page and prev target the previous page
+`next` 跳转到下一个页面，`prev` 跳转到上一个页面
 
-Firstly, we'll create a `Pagination.tsx` file as a React component.
+首先，我们将创建一个`Pagination.tsx`文件作为 React 组件。
 
 ```typescript
 // Pagination.tsx

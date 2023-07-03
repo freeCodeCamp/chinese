@@ -809,7 +809,7 @@ meta:{
 
 现在我们在服务器端调用`getPosts`函数。它返回所有的帖子数据以及相关的标签和作者。现在你可以用`map()`函数循环浏览这些数据。
 
-我们将数据传入`app/page.tsx`到`card.tsx`组件。我们把文章数据作为道具传给卡片组件。
+我们将数据传入`app/page.tsx`到`card.tsx`组件。我们把文章数据作为 prop 传给卡片组件。
 
 ```typescript
 // src/app/page.tsx
@@ -842,7 +842,7 @@ Design home `/app/page.tsx`
 
 卡片组件
 
-我把来自主页的每项数据都渲染成道具，并用`Card.tsx`在网站上显示。
+我把来自主页的每项数据都渲染成 prop，并用`Card.tsx`在网站上显示。
 
 ```typescript
 // Card.tsx
@@ -1590,7 +1590,7 @@ function PaginationItem({ item }: { item: Pagination }) {
 export default PaginationItem;
 ```
 
-When you call the `api.posts.browse({ limit: 10 })` request, the API endpoint returns ten posts and a `meta` object with `pagination`.
+当你调用`api.post.browse({ limit: 10 })`请求时，API 端点会返回十个帖子和一个带有`pagination`的`meta`对象。
 
 #### The returned `api.posts.browse({ limit: 10 })` data look like this
 
@@ -1607,7 +1607,7 @@ meta:{
 
 `api.posts.browse({ limit: 10 })`
 
-Now based on `meta`, we can create pagination and pass `meta.pagination` as props to the `Pagination` component.
+现在基于`meta`，我们可以创建分页，并将`meta.pagination`作为 prop 传递给`Pagination`组件。
 
 ```typescript
 // src/app/page.tsx
@@ -1629,7 +1629,7 @@ export default async function Home() {
 }
 ```
 
-To enable dynamic pagination, we'll create a `src/app/pagination/[item]/page.tsx` route in the blog. You can use whatever name you want for the pagination route.
+为了启用动态分页(dynamic pagination)，我们将在博客中创建一个`src/app/pagination/[item]/page.tsx`路由。你可以为分页路由(pagination route)使用任何你想要的名字。
 
 ```typescript
 // ghost-client.tsx
@@ -1661,7 +1661,7 @@ export async function getPaginationPosts(page: number) {
 }
 ```
 
-The `getPosts` is used to render the `Pagination` component on the pagination page. The important part is the `getPaginationPosts(<pagination-page-number>)` function, which returns posts based on the pagination page number.
+`getPosts`是用来渲染分页上的`Pagination`组件。重要的部分是`getPaginationPosts(<pagination-page-number>)`函数，它根据分页的页码返回帖子。
 
 ```typescript
 // src/app/pagination/[item]/page.tsx
@@ -1713,11 +1713,11 @@ use
 
 ### Next.js SEO
 
-If you are a blogger, you know how important SEO is in helping people find your blog and your articles. For SEO, Next.js provides a `generateMetadata` function to generate dynamic SEO metadata for your site. This means that you don't need any additional packages for SEO.
+如果你是一个博主，你知道 SEO 在帮助人们找到你的博客和你的文章方面是多么重要。对于 SEO，Next.js 提供了一个`generateMetadata`功能，为你的网站生成动态 SEO 元数据。这意味着你不需要任何额外的包来进行 SEO。
 
-For the purpose of this example, I'll explain how to enable SEO for the blog only on the Homepage and the Reading page. You can use the same logic to enable it on any of your other pages.
+在这个例子中，我将解释如何为博客只在主页和阅读页上启用 SEO。你可以使用同样的逻辑在你的任何其他页面上启用它。
 
-First, let's see how to enable SEO on the Homepage:
+首先，让我们看看如何在主页上启用 SEO:
 
 ```typescript
 // ghost-client.ts
@@ -1743,7 +1743,7 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 ```
 
-Now we'll see how to enable SEO on the Reading page:
+现在我们来看看如何在阅读页(reading page)上启用 SEO:
 
 ```typescript
 // ghost-client.ts
@@ -1762,7 +1762,7 @@ export async function getSinglePost(postSlug: string) {
 }
 ```
 
-The `generateMetadata` have params props, which help access the slug. Then, based on the slug, we get the data and return it.
+`generateMetadata`有 params prop，可以帮助访问 slug。然后，基于 slug，我们获得数据并返回。
 
 ```typescript
 export async function generateMetadata({
@@ -1797,13 +1797,14 @@ export async function generateMetadata({
 
 ### How to Enable Search
 
-Enabling search on a static blog is hard to do from scratch. Instead, you can use a third-party Node page like [Orama](https://github.com/oramasearch/orama) or [Flex search](https://github.com/nextapps-de/flexsearch).
+在静态博客上启用搜索是很难从头做起的。相反，你可以使用第三方的 Node 页面，如 [Orama](https://github.com/oramasearch/orama) 或 [Flex search](https://github.com/nextapps-de/flexsearch)。
+
 
 ![searchbarinnextjs](https://www.freecodecamp.org/news/content/images/2023/04/searchbarinnextjs.gif)
 
-For our demo, we created a very simple search bar functionality without installing any additional packages.
+对于我们的演示，我们创建了一个非常简单的搜索栏功能，无需安装任何额外的软件包。
 
-Firstly, we get all posts from the Ghost CMS API.
+首先，我们从 Ghost CMS 的 API 中获取所有帖子。
 
 ```typescript
 // ghost-client.ts
@@ -1814,7 +1815,7 @@ export async function getSearchPosts() {
   });
 ```
 
-After we convert it into a string with the help of `JSON.stringify()`, we then create a new `search.json` file. On every request, it updates or rewrites our `search.json` file.
+在我们用`JSON.stringify()`的帮助下将其转换为字符串后，我们再创建一个新的`search.json`文件。在每次请求时，它都会更新或重写我们的`search.json`文件。
 
 ```typescript
 // src/app/page.tsx
@@ -1852,7 +1853,7 @@ export default async function Home() {
 }
 ```
 
-When you enter the text in the search input, based on the text query, we compare the query or text in the `serach.json` file data. If it matches the article title with the query, then we store the `searchPost` variable, and finally we render the stored data in the `searchPost` variable page.
+当你在搜索输入中输入文本时，根据文本查询，我们比较查询或文本在`search.json`文件的数据。如果它与查询的文章标题相匹配，那么我们就存储`searchPost`变量，最后我们在`searchPost`变量页面呈现存储的数据。
 
 ```typescript
 'use client';
@@ -1956,9 +1957,9 @@ export default Search;
 
 ### Error Handling
 
-Next.js has two types of [error handling](https://beta.nextjs.org/docs/routing/error-handling#how-errorjs-works). the first is layout-based, and the second is [global error](https://beta.nextjs.org/docs/routing/error-handling#handling-errors-in-root-layouts) handling. For the demo here, we'll use layout-based error handling.
+Next.js 有两种类型的 [错误处理](https://beta.nextjs.org/docs/routing/error-handling#how-errorjs-works)。第一种是基于布局，第二种是 [全局错误](https://beta.nextjs.org/docs/routing/error-handling#handling-errors-in-root-layouts) 处理。对于这里的演示，我们将使用基于布局的错误处理。
 
-Next provides a special type of `error.tsx` file to handle errors on your site. It does not handle 404, 500, and so on – it handles only runtime errors.
+Next 提供一个特殊类型的`error.tsx`文件来处理你网站上的错误。它不处理 404，500 等，它只处理运行时错误。
 
 ```typescript
 'use client'; // Error components must be Client components
@@ -2012,15 +2013,15 @@ export default function Error({
 
 #### How to handle 404 errors
 
-To handle 404 errors in the Next.js app folder, you need to create a `not-found.tsx` file in your root level.
+为了处理 Next.js 应用程序文件夹中的 404 错误，你需要在你的文件夹最顶层创建一个`not-found.tsx`文件。
 
-Our 404 file looks like this:
+我们的 404 文件看起来像这样:
 
 ![404 error](https://www.freecodecamp.org/news/content/images/2023/04/nextjsandghosterror.png)
 
 404 error
 
-Here's the code for that:
+以下是相关代码:
 
 ```typescript
 import Link from 'next/link';
@@ -2056,7 +2057,7 @@ function NotFound() {
 export default NotFound;
 ```
 
-The big issue with the `not-found.tsx` error file is that it doesn't show automatically in Next (v13.3.0). To show a 404 error, you need to show the error manually. Here's how you do that:
+`not-found.tsx`错误文件的问题是它在 Next（v13.3.0）中不能自动显示。要显示 404 错误，你需要手动显示该错误。这里是你如何做的:
 
 ```typescript
 import { notFound } from 'next/navigation';
@@ -2080,148 +2081,116 @@ async function Read({ params }: { params: { slug: string } }) {
 
 ### How to Rebuild Your Static Site with Webhooks
 
-The biggest problem when you create a static site happens if somebody writes a new post or changes an existing post in Ghost. For a personal project, you can manually redeploy your site. But for a larger site, you won't be able to do that every time this happens.
+当你创建一个静态网站时，最大的问题发生在有人在 Ghost 中写了一个新的帖子或改变了一个现有的帖子。对于一个个人项目，你可以手动重新部署你的网站。但对于一个较大的网站来说，你不可能在每次发生这种情况时都这样做。
 
-The best solution is to use webhooks. Ghost provides webhook support. If you update an existing post or write a new one, it'll update in Ghost.
+最好的解决办法是使用 webhooks。Ghost 提供 webhook 支持。如果你更新一个现有的帖子或写一个新的帖子，它就会在 Ghost 中更新。
 
-In the demo project, we're using Vercel webhooks to deploy our blog. When we create a new blog or update something on the site, Ghost triggers the Vercel webhook. Then Vercel rebuilds the site as needed.
+在演示项目中，我们使用 Vercel webhooks 来部署我们的博客。当我们创建一个新的博客或更新网站上的东西时，Ghost 会触发 Vercel webhook。然后 Vercel 根据需要重建网站。
 
-You do not need to write the code for this – just follow along and copy-paste as you go.
+你不需要为这个写代码,只要跟着你的思路，边走边复制粘贴。
 
 #### How to get the webhook from Vercel
 
-Firstly, go to the Vercel dashboard.
+首先，进入 Vercel 仪表板。
 
 ![Vercel dashboard](https://www.freecodecamp.org/news/content/images/2023/04/select1.png)
 
-Vercel dashboard
+Vercel 仪表板
 
-Select your project, where you'll deploy your Ghost frontend.
+选择你的项目，你将在那里部署你的 Ghost 前台。
 
 ![Select the project in your vercel dashboard](https://www.freecodecamp.org/news/content/images/2023/04/select2.png)
 
-Select the project in your Vercel dashboard
+在你的 Vercel 仪表板上选择项目
 
-Click on the settings tab in your Vercel project.
+点击你的 Vercel 项目中的设置标签(settings)。
 
 ![Click the Git tab](https://www.freecodecamp.org/news/content/images/2023/04/select3.png)
 
-Click the Git tab
+点击 Git 标签
 
-Then click on the Git tab. After scrolling down, you can see the deploy hook selection.
+然后点击 Git 标签。向下滚动后，你可以看到部署钩(deploy hook )的选择。
 
 ![Go to Deploy hooks sections](https://www.freecodecamp.org/news/content/images/2023/04/select4.png)
 
-Go to Deploy hooks sections
+转到部署挂钩部分
 
-Enter your webhook name and branch name and click on the "create hook" button.
+输入你的 webhook 名称和分支名称，然后点击 `create hook` 按钮
 
 ![Copy your webhook url](https://www.freecodecamp.org/news/content/images/2023/04/select5.png)
 
-Copy your webhook url
+复制你的 webhook 网址
 
-Click on the copy button to copy your vercel webhook.
+点击 `copy` 按钮，复制你的 vercel webhook。
 
 #### How to integrate Vercel webhooks in the Ghost dashboard
 
-When something changes in Ghost, it triggers the Vercel webhook URL. Then Vercel redeploys the blog site.
+当 Ghost 中发生变化时，它就会触发 Vercel 的 webhook URL。然后，Vercel 会重新部署博客网站。
 
-To integrate the Vercel webhook with Ghost, just follow these steps:
+要将 Vercel webhook 与 Ghost 集成，只需遵循以下步骤：
 
-Open the Ghost CMS dashboard.
+打开 Ghost CMS 仪表板。
 
 ![ghost1](https://www.freecodecamp.org/news/content/images/2023/04/ghost1.png)
 
-Ghost dashboard
+Ghost 仪表板
 
-Click on the setting icon.
+点击设置(齿轮)图标。
 
 ![ghost3](https://www.freecodecamp.org/news/content/images/2023/04/ghost3.png)
 
-Ghost settings
+Ghost 设置
 
-Click on the New custom integration button.
+点击 `New custom integration` 按键。
 
 ![ghost4](https://www.freecodecamp.org/news/content/images/2023/04/ghost4.png)
 
-Add a new custom integration
+添加新的集成(a new custom integration)
 
-Enter the integration name.
+输入 `integration` 名字
 
 ![ghost5](https://www.freecodecamp.org/news/content/images/2023/04/ghost5.png)
 
-Add integration name
+添加 integration 的命名
 
-Click to add the webhook button.
+点击 `add  webhook` 按键。
 
 ![ghost7](https://www.freecodecamp.org/news/content/images/2023/04/ghost7.png)
 
-How to add the webhook
+怎么添加 webhook
 
-First, enter the name, then select Event and paste the URL which you copied from the Vercel dashboard.
+首先，输入名称，然后选择事件，并粘贴你从 Vercel 仪表板上复制的 URL。
 
-Based on the event, Ghost will call the webhook, and your website will rebuild. Redeploys take time based on how big your site is, and so on.
+基于该事件，Ghost 将调用 webhook，你的网站将重新构建。重新部署需要时间，这取决于你的网站有多大，以此类推。
 
 ## Conclusion
 
-Everything should work well using Next.js and the Ghost CMS as we've worked through in this tutorial.
+使用 Next.js 和 Ghost CMS，一切都应该正常工作，正如我们在本教程中所做的那样。
 
-But some of the Ghost editor components, like toggles, where you need JavaScript interaction, don't work. You can solve this by writing your own JavaScript or getting a JavaScript file for Ghost and adding it to the `read/[slug]/page.tsx` file.
+但是 Ghost 的一些编辑器组件，比如切换器，在需要 JavaScript 交互的地方，却不能工作。你可以通过编写你自己的 JavaScript 或者获得 Ghost 的 JavaScript 文件，并将其添加到`read/[slug]/page.tsx`文件中来解决这个问题。
 
-You can save a lot of money on hosting by combining Next.js and the Ghost CMS API, but you lose some features like inbuilt signup, login, accounts, subscriptions, search bar, and member access levels.
+通过结合 Next.js 和 Ghost CMS API，你可以节省大量的主机费用，但你会失去一些功能，如内置的注册(signup)、登录(login)、账户(accounts)、订阅(subscriptions)、搜索栏(search bar)和会员访问级别(member access levels)。
 
-You can share and follow me on [Twitter](https://twitter.com/Official_R_deep) and [Linkedin](https://www.linkedin.com/in/officalrajdeepsingh/). If you like my work, you can read more content on my blog, the [officialrajdeepsingh.dev](https://officialrajdeepsingh.dev/), [frontend web](https://medium.com/frontendweb), and Sign up for my [free newsletter](https://officialrajdeepsingh.medium.com/subscribe).
+你可以在[Twitter](https://twitter.com/Official_R_deep)和[Linkedin](https://www.linkedin.com/in/officalrajdeepsingh/)上分享和关注我。如果你喜欢我的工作，你可以在我的博客、[officialrajdeepsingh.dev](https://officialrajdeepsingh.dev/)、[frontend web](https://medium.com/frontendweb)上阅读更多内容，并注册我的 [免费通讯(free newsletter)](https://officialrajdeepsingh.medium.com/subscribe) 。
 
-You can also check out [awesome-next](https://github.com/officialrajdeepsingh/awesome-nextjs), a curated list of awesome Nextjs-based libraries that help build small and large-scale applications with Next.js.
+你还可以查看[awesome-next](https://github.com/officialrajdeepsingh/awesome-nextjs)，这是一个精心策划的基于 Nextjs 的很棒的库列表，有助于用 Next.js 构建小型和大型应用程序。
 
-Here are some additional resources you can use if you need more help or information while going through this tutorial:
+这里有一些补充内容:
 
-[
+用 Headless Ghost+Next.js 构建自定义 JavaScript 应用程序
 
-Build A Custom JavaScript App With Headless Ghost + Next.js
+用 Ghost 为你的服务器端应用提供动力，用 Next.js 的 React 框架构建一个完全自定义的前端
 
-Power your server-side application with Ghost and build a completely custom front-end with the Next.js React framework!
+[Ghost,一个专业发布内容的平台](https://ghost.org/images/meta/ghost-docs.png)
 
-Ghost - The Professional Publishing Platform
-
-![ghost-docs](https://ghost.org/images/meta/ghost-docs.png)
-
-](<https://ghost.org/docs/jamstack/next/>)
-
-[
-
-How To Build Your Blog on DigitalOcean with Ghost and Next.js | DigitalOcean
-
-You can use Next.js with Ghost to build a statically generated blog with better performance and SEO. You can also customize your design and add the functionalities you want. In this tutorial, you’ll use Ghost to manage articles and Next.js to build the frontend of your blog. DigitalOcean’s Ghost One……
-
-![android-chrome-512x512.5f2e6221](https://www.digitalocean.com/_next/static/media/android-chrome-512x512.5f2e6221.png)DigitalOcean
+[如何用 Ghost 和 Next.js 在 DigitalOcean 上建立你的博客 | DigitalOcean 你可以用 Next.js 和 Ghost 建立一个静态生成的博客，具有更好的性能和 SEO。你还可以定制你的设计并添加你想要的功能。在本教程中，你将使用 Ghost 来管理文章，使用 Next.js 来构建博客的前端。DigitalOcean 的 Ghost One](https://www.digitalocean.com/community/tutorials/how-to-build-your-blog-on-digitalocean-with-ghost-and-next-js)
 
 ![intro-to-cloud.d49bc5f7](https://www.digitalocean.com/_next/static/media/intro-to-cloud.d49bc5f7.jpeg)
 
-](<https://www.digitalocean.com/community/tutorials/how-to-build-your-blog-on-digitalocean-with-ghost-and-next-js>)
 
-[
 
-Ghost Content API Documentation
+[Ghost 内容 API 文档。Ghost 的 RESTful Content API 向世界提供已发布的内容，并可由任何客户端访问以呈现网站。阅读更多关于 Ghost Docs。 Ghost 专业发布内容的平台](<https://ghost.org/docs/content-api/>)
 
-Ghost’s RESTful Content API delivers published content to the world and can be accessed by any client to render a website. Read more on Ghost Docs.
+[入门｜Next.js 在官方文档中开始使用 Next.js，并了解更多关于 Next.js 的功能](https://beta.nextjs.org/docs/getting-started)
 
-Ghost - The Professional Publishing Platform
-
-![ghost-docs](https://ghost.org/images/meta/ghost-docs.png)
-
-](<https://ghost.org/docs/content-api/>)
-
-[
-
-Getting Started | Next.js
-
-Get started with Next.js in the official documentation, and learn more about Next.js features!
-
-![apple-touch-icon](https://beta.nextjs.org/static/favicon/apple-touch-icon.png)Next.jsNext.js LogoNext.js Logo
-
-![docs](https://beta.nextjs.org/static/twitter-cards/docs.png)
-
-](<https://beta.nextjs.org/docs/getting-started>)
-
-I write tons of articles on Next. If you are interested in Next and related stuff, you can follow me on [Medium](https://officialrajdeepsingh.medium.com/) and join the [frontend web publication](https://medium.com/frontendweb).
+我在 Next 上写了大量的文章。如果你对 Next 和相关的东西感兴趣，你可以在[Medium](https://officialrajdeepsingh.medium.com/)上关注我，并加入[frontend web publication](https://medium.com/frontendweb)。

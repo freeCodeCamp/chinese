@@ -1799,7 +1799,6 @@ export async function generateMetadata({
 
 在静态博客上启用搜索是很难从头做起的。相反，你可以使用第三方的 Node 页面，如 [Orama](https://github.com/oramasearch/orama) 或 [Flex search](https://github.com/nextapps-de/flexsearch)。
 
-
 ![searchbarinnextjs](https://www.freecodecamp.org/news/content/images/2023/04/searchbarinnextjs.gif)
 
 对于我们的演示，我们创建了一个非常简单的搜索栏功能，无需安装任何额外的软件包。
@@ -2153,7 +2152,7 @@ Ghost 设置
 
 添加 integration 的命名
 
-点击 `add  webhook` 按键。
+点击 `add webhook` 按键。
 
 ![ghost7](https://www.freecodecamp.org/news/content/images/2023/04/ghost7.png)
 
@@ -2187,10 +2186,8 @@ Ghost 设置
 
 ![intro-to-cloud.d49bc5f7](https://www.digitalocean.com/_next/static/media/intro-to-cloud.d49bc5f7.jpeg)
 
+[Ghost 内容 API 文档。Ghost 的 RESTful Content API 向世界提供已发布的内容，并可由任何客户端访问以呈现网站。阅读更多关于 Ghost Docs。 Ghost 专业发布内容的平台](https://ghost.org/docs/content-api/)
 
+[入门｜ Next.js 在官方文档中开始使用 Next.js，并了解更多关于 Next.js 的功能](https://beta.nextjs.org/docs/getting-started)
 
-[Ghost 内容 API 文档。Ghost 的 RESTful Content API 向世界提供已发布的内容，并可由任何客户端访问以呈现网站。阅读更多关于 Ghost Docs。 Ghost 专业发布内容的平台](<https://ghost.org/docs/content-api/>)
-
-[入门｜Next.js 在官方文档中开始使用 Next.js，并了解更多关于 Next.js 的功能](https://beta.nextjs.org/docs/getting-started)
-
-我在 Next 上写了大量的文章。如果你对 Next 和相关的东西感兴趣，你可以在[Medium](https://officialrajdeepsingh.medium.com/)上关注我，并加入[frontend web publication](https://medium.com/frontendweb)。
+我在 Next 上写了大量的文章。如果你对 Next 和相关的东西感兴趣，你可以在 [Medium](https://officialrajdeepsingh.medium.com/) 上关注我，并加入 [frontend web publication](https://medium.com/frontendweb)。

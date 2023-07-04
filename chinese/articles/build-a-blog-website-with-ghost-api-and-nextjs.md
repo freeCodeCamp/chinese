@@ -117,7 +117,7 @@ ghost install local
 
 博客安装完成后，你可以用 `ghost start` 命令启动你的本地开发服务器，你的本地开发服务可以通过`http://localhost:2368/ghost` 访问。
 
-### Additional Ghost CLI Commands
+### 其他 Ghost CLI 命令
 
 在使用 Ghost CLI 时，有几个命令是有帮助的:
 
@@ -169,7 +169,7 @@ pnpm create next-app --experimental-app
 
 这些 Node 包可以帮助你加快开发进程。请确保安装以下所有的包，以便跟上本指南：
 
-### Node packages to install
+### 要安装的 Node 包
 
 1. `pnpm add @tryghost/content-api`(required)
 2. `pnpm add @types/tryghost__content-api` (required by TypeScript)
@@ -321,7 +321,7 @@ const api = new GhostContentAPI({
 6. 现在`index.js`文件被`page.js`取代。
 7. 传递动态路由段`pages/blog/[slug].js`被改变，下一个应用程序目录看起来像这样： `app/blog/[slug]/page.js`。
 
-### Examples
+### 例子
 
 为了理解 Next 带有实验性的 app 文件夹，让我们看看一个真实的例子：
 
@@ -520,7 +520,7 @@ export async function getNavigation() {
 
 Fetch
 
-#### The data look like this
+#### 这些数据看起来像这样
 
 ```object
 {
@@ -611,7 +611,7 @@ export default function RootLayout({
 }
 ```
 
-#### BlogLayout component
+#### BlogLayout 组件
 
 `BlogLayout`组件在客户端工作。在 Next.js 应用程序文件夹中，你可以通过以下 `use client` 的语法轻松地将服务器端的组件转换到客户端。
 
@@ -648,7 +648,7 @@ export default Layout;
 
 `BlogLayout.tsx` component
 
-### How to Build the Homepage
+<h3 id="how-to-built-the-homepage">如何建立主页(homepage)</h3>
 
 Next.js 有一个特殊的`app/page.tsx`文件，用于设计和建立主页(home page)。我们的博客网站的主页看起来就像你下面看到的那样。我们在主页(home page)上导入页眉(header)、卡片(card)、分页(pagination)和页脚(footer)。页眉(header)和页脚(footer)是`layout.tsx`的一部分。
 
@@ -677,7 +677,7 @@ api.post.browse()接收的数据
 
 默认情况下，`api.post.browse()`只返回文章数据，但你可以轻松地扩展它。在每篇文章或帖子数据中，我们还用`include`的帮助包括标签和作者。然后，我们将文章限制设置为 10 条。
 
-#### The data look like this
+#### 数据看起来像这样
 
 ```JSON
  [
@@ -834,7 +834,7 @@ export default async function Home() {
 
 Design home `/app/page.tsx`
 
-#### Card component
+#### Card 组件
 
 我为博客设计了一张基本的卡片。卡片组件看起来像这样：
 
@@ -1590,7 +1590,7 @@ export default PaginationItem;
 
 当你调用`api.post.browse({ limit: 10 })`请求时，API 端点会返回十个帖子和一个带有`pagination`的`meta`对象。
 
-#### The returned `api.posts.browse({ limit: 10 })` data look like this
+#### `api.post.browse({ limit: 10 })`返回的数据看起来像这样
 
 ```json
  [
@@ -2008,7 +2008,7 @@ export default function Error({
 }
 ```
 
-#### How to handle 404 errors
+#### 如何处理 404 错误
 
 为了处理 Next.js 应用程序文件夹中的 404 错误，你需要在你的文件夹最顶层创建一个`not-found.tsx`文件。
 
@@ -2086,7 +2086,7 @@ async function Read({ params }: { params: { slug: string } }) {
 
 你不需要为这个写代码,只要跟着你的思路，边走边复制粘贴。
 
-#### How to get the webhook from Vercel
+#### 如何从 Vercel 获得 webhook
 
 首先，进入 Vercel 仪表板。
 
@@ -2120,7 +2120,7 @@ Vercel 仪表板
 
 点击 `copy` 按钮，复制你的 vercel webhook。
 
-#### How to integrate Vercel webhooks in the Ghost dashboard
+#### 如何在 Ghost 仪表板中集成 Vercel 的 web hook
 
 当 Ghost 中发生变化时，它就会触发 Vercel 的 webhook URL。然后，Vercel 会重新部署博客网站。
 

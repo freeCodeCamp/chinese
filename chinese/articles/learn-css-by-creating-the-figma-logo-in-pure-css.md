@@ -1,25 +1,25 @@
 > -  原文地址：[Learn CSS by Building the Figma Logo in Pure CSS](https://www.freecodecamp.org/news/learn-css-by-creating-the-figma-logo-in-pure-css/)
 > -  原文作者：[Jennifer Bland](https://www.freecodecamp.org/news/author/ratracegrad/)
-> -  译者：
+> -  译者：Humilitas
 > -  校对者：
 
 ![Learn CSS by Building the Figma Logo in Pure CSS](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/Learn-CSS-Create-The-Figma-Logo-3.png)
 
-One of the best ways to learn CSS is by creating something useful while you learn. I will show you how to use the following CSS concepts by creating the Figma logo:
+学习 css 最好的方式之一是边学边做。在构建 figma logo 的过程中，将会介绍以下相关的 css 概念及其用法：
 
 -   flex-wrap
--   multiple classes
+-   组合 class
 -   border-radius
 
-## What We Will Be Creating
+## 我们的目标
 
-We will create the Figma logo in pure CSS. It will look like this:
+我们将使用纯 css 构建一个 figma logo，效果如下：
 
 ![figma logo](https://res.cloudinary.com/ratracegrad/image/upload/v1672179613/Screenshot_2022-12-27_at_5.19.27_PM_h2ncza.png)
 
-## How to Create Our Starter Files
+## 创建文件
 
-Let's start by creating two files called `index.html` and `style.css`. In your `index.html` file add the following starter code:
+分别创建两个文件：`index.html` 和 `style.css`。在 `index.html` 文件中写入以下代码：
 
 ```html
 <!DOCTYPE html>
@@ -35,10 +35,10 @@ Let's start by creating two files called `index.html` and `style.css`. In your `
 
 </body>
 </html>
+
 ```
 
-In the `style.css` file add the following starter code:
-
+在 `style.css` 文件中写入以下代码：
 ```css
 body {
   padding: 0;
@@ -49,16 +49,16 @@ body {
   align-items: center;
   background-color: azure;
 }
+
 ```
 
-## How to Use the Flex-wrap Property
+## flex-wrap 属性的用法
 
-We will use Flexbox to create the image. Flexbox has a property called `flex-wrap`. By default, flex items will all try to fit onto one line. You can change that and let the items wrap as needed with this property.
+我们会用到弹性盒子（Flexbox）来创建 logo 图像，它有一个名为 `flex-wrap` 的属性。弹性元素默认会排列在一行之内（不换行），可以通过设置 `flex-wrap` 属性让它按需进行换行。
 
-We will want to have two design elements on both the first and second rows of the logo. There is a single design element on the 3rd row.
+logo 主体部分的第一和第二行各需要两个元素，第三行需要一个元素。
 
-Update the `index.html` file with the following code inside the `<body>` tags:
-
+更新 `index.html`，在 `<body>` 标签内部加入以下代码：
 ```javascript
 <div class="figma-logo">
   <div class="element left"></div>
@@ -67,83 +67,91 @@ Update the `index.html` file with the following code inside the `<body>` tags:
   <div class="element circle blue"></div>
   <div class="element left clip green"></div>
 </div>
+
 ```
 
-## What's Going On with the Multiple CSS Classes
+## 指定多个 class 有何作用
+查看上述代码，你会发现 logo 中每个元素（标签）都包含多个 class，这是为了保持设计的一致性。
 
-When you look at the above code you will notice that every element in the logo has more than one CSS class assigned to it. We do this to have consistency in our design.
+`element` 设置了每个元素的高度（`height`）和宽度（`width`）。
 
-The `element` class will set the height and width of each element in our design.
+`right`、`left` 和 `clip` 用于为每个元素设置适当的圆角（`border-radius`）。
 
-The `right`, `left` and `clip` classes are used to set the appropriate `border-radius` for the element.
+`orange`、`purple`、`blue` 和 `green` 用于为每个元素设置适当的颜色（`color`）。
 
-The `orange`, `purple`, `blue` and `green` classes are used to set the color for each element.
+## 加入样式
 
-## How to Add Our Styling
+将每个元素的宽高都设置为 100px，指定 `.figma-logo` 的宽度为 200px。这样设置之后，弹性盒子会在每行元素超过两个时进行换行。
 
-I will make each element the same height and width of 100px. The class `figma-logo` will have a width of 200px. By setting the width at this value, then Flexbox will wrap elements after two are presented.
-
-Add the following styles to your `style.css` file:
+在 `style.css` 文件中加入以下样式代码：
 
 ```css
 .figma-logo {
-	width: 200px;
+    width: 200px;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
 }
 
 .element {
-	width: 100px;
-	height: 100px;
-	background: red;
+    width: 100px;
+    height: 100px;
+    background: red;
 }
+
 ```
 
-When we view what we have now it looks like this:
+
+目前效果如下：
 
 ![partial logo](https://res.cloudinary.com/ratracegrad/image/upload/v1672180441/Screenshot_2022-12-27_at_5.33.51_PM_wmrldi.png)
 
-## How to Use the `border-radius` Property
 
-Our next step is to use the CSS `border-radius` property to define each of the elements. The `border-radius` CSS property rounds the corners of an element's outer border edge. Each CSS element has 4 corners. We will take advantage of this by styling each corner individually or using border-radius to style all 4 corners the same.
+## 如何使用 `border-radius` 属性
 
-All three elements on the left side of the logo have a circular border. The top item on the right has the same circular border. The second item on the right is a circle.
+下一步，使用 `border-radius` 属性为每个元素制作圆角。`border-radius` 将元素的外部边角磨圆，每个元素有四个角（每个角分别对应一个 css 属性），我们可以分别设置每个角或者使用 border-radius 属性一次性设置 4 个角。
 
-Let's add styling for these items. Add the following code to your `style.css` file:
+左边的三个元素左侧都有圆形的边框，右上角元素的右侧也是一样，右边第二个元素则是一个圆形。
+
+为这些元素增加样式，在 `style.css` 文件中加入以下代码：
 
 ```css
 .left {
-	border-top-left-radius: 50px;
+    border-top-left-radius: 50px;
     border-bottom-left-radius: 50px;
 }
 
 .right {
-	border-top-right-radius:50px;
-    border-bottom-right-radius:50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
 }
 
 .circle {
-	border-radius:50px;
+    border-radius: 50px;
 }
+
 ```
 
-Now when we look at our logo it looks like this:
+
+现在 logo 效果如下：
 
 ![updated logo](https://res.cloudinary.com/ratracegrad/image/upload/v1672180914/Screenshot_2022-12-27_at_5.41.33_PM_cudeyj.png)
 
-We are getting closer. The last element on the 3rd row has a border on the right side. In the HTML code, I have called this class `clip`. Add this CSS code to your `style.css` file:
+
+离成功又近一步。第三行的元素右侧边界也需要处理，在 HTML 代码中它对应的类（class）是 `clip`，在 `style.css` 文件中加入以下代码：
 
 ```css
 .clip {
-	border-bottom-right-radius:50px;
+    border-bottom-right-radius: 50px;
 }
+
 ```
 
-## How to Define Our Colors
 
-Now our logo looks like the actual Figma logo but without the correct colors. In the `index.html` file I added CSS classes for the colors `orange`, `purple`, `blue` and `green`. The last thing we need to do is to add the background color for these classes.
+## 定义颜色
 
-Add the following to your `style.css` file:
+现在我们的 logo 和真实的 Figma logo 很像了，除了颜色还没有对应上。在 `index.html` 中，我把这些颜色定义为 `orange`、`purple`、`blue` 和 `green`。我们要做的最后一步是为这些类加入正确的背景颜色（`background`）。
+
+在 `style.css` 文件中加入以下代码：
 
 ```css
 .orange {
@@ -161,16 +169,20 @@ Add the following to your `style.css` file:
 .green {
 	background: #00CE84;
 }
+
 ```
 
-## Final Logo
 
-If you view your `index.html` file in a browser you should see the completed Figma logo:
+## 最终效果
+
+
+在浏览器中打开 `index.html`，可以看到完整的 Figma logo：
 
 ![final logo](https://res.cloudinary.com/ratracegrad/image/upload/v1672179613/Screenshot_2022-12-27_at_5.19.27_PM_h2ncza.png)
 
-## Let's connect!
 
-Thanks for reading my article today. You can get the [source code here](https://github.com/ratracegrad/figma-logo-pure-css).
+## 总结
 
-If you like my content, please consider [buying me a coffee](https://www.buymeacoffee.com/JenniferBland) ☕.
+感谢阅读。可以在 [这里](https://github.com/ratracegrad/figma-logo-pure-css) 查看源码。
+
+如果喜欢我的文章，可以考虑[为我买一杯咖啡](https://www.buymeacoffee.com/JenniferBland) ☕。

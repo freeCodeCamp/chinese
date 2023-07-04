@@ -1,98 +1,92 @@
 > -  原文地址：[How to Become a Certified Kubernetes Application Developer](https://www.freecodecamp.org/news/how-to-become-a-certified-kubernetes-application-developer/)
 > -  原文作者：[Sergio Fuentes NavarroSergio Fuentes Navarro](https://www.freecodecamp.org/news/author/serfuenav/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Become a Certified Kubernetes Application Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/kubernetes-ckad-color-1024x1003.png)
+![如何成为K8S认证开发者](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/kubernetes-ckad-color-1024x1003.png)
 
-This guide is a summary of my study notes for the Certified Kubernetes Application Developer (CKAD) exam that I recently passed.
+本指南是我对最近通过的K8S认证开发者考试的学习笔记总结。
 
-Even if you're not interested in the certification, consider this as your **one-stop shop** for Kubernetes: you have all the main technical concepts explained along with a myriad of examples in one place.
+即使你对认证不感兴趣，你可以把K8S看作`一站式商店`：你了解的主要技术概念的解释，已经无数的例子在集合在一起。
 
-Furthermore, it has some **extras that come from my experience preparing for and taking the exam**.
 
-At the time of this writing, the CKAD curriculum (areas of study and weight of each area) is as follows:
+此外，它还有一些来自我准备和参加考试经验和附加内容。
 
--   13% – Core Concepts
--   18% – Configuration
--   10% – Multi-Container Pods
--   18% – Observability
--   20% – Pod Design
--   13% – Services & Networking
--   8% – State Persistence
 
-This guide covers the curriculum, just in a different order.
+在写本文时，CKAD的课程(研究领域和每个领域的比重)如下：
+-   13% – 核心概念
+-   18% – 配置
+-   10% – 多容器 Pods
+-   18% – 可观察性
+-   20% – Pod 设计
+-   13% – 服务 & 网络
+-   8% – 状态持久性
 
-I am going to assume you know already the very basics of Kubernetes (basically containers and pods) and are looking to take your skills to the next level. Passing this exam will make your CV stand out as it's a highly sought-after certification.
+本指南涵盖了这些课程，只是顺序不同。
 
-## Contents
+我假设你已经知道K8S的基础知识(基本的containers和pods)，并希望将你的技能提高一个新的水平。通过这个考试将你的简历脱颖而出，因为它是一个非常抢手的认证。
 
--   [Introduction to Kubernetes](#intro-to-kubernetes)
--   [How to Manage Clusters in Kubernetes](#how-to-manage-clusters-in-kubernetes)
--   [Beyond Pods and Deployments](#beyond-pods-and-deployments)
--   [How to Configure Pods and Containers](#how-to-configure-pods-and-containers)
--   [How to Schedule Pods in Kubernetes](#how-to-schedule-pods-in-kubernetes)
--   [Storage in Kubernetes](#storage-in-kubernetes)
--   [Network and Security in Kubernetes](#network-and-security-in-kubernetes)
--   [Observability and Debugging in Kubernetes](#observability-and-debugging-in-kubernetes)
--   [Tips and Tricks](#tips-and-tricks)
--   [Practice Time](#practice-time)
--   [Conclusions](#conclusions)
+## 内容
 
-## Intro to Kubernetes
+-   [Kubernetes简介](#Kubernetes简介)
+-   [如何管理Kubernetes的集群](#如何管理Kubernetes集群)
+-   [超越 Pods 和 Deployments](#超越Pods和部署)
+-   [如何配置Pods和Containers](#如何配置Pods和Containers)
+-   [如何在Kubernetes调度Pods](#怎样在Kubernetes中调度Pods)
+-   [Kubernetes的存储](#Kubernetes的存储)
+-   [Kubernetes的网络和安全](#Kubernetes中的网络和安全)
+-   [Kubernetes中的观察性和调试](#Kubernetes中的可观察性和调试)
+-   [技巧和窍门](#技巧和窍门)
+-   [练习时间](#练习时间)
+-   [结论](#结论)
 
-Kubernetes is a technology that allows for easy deployment and management of containerized applications across multiple nodes. Some of its most prominent features are:
+## Kubernetes简介
 
--   Container configuration and deployment
--   System monitoring
--   Persistent storage
--   Automated scheduling
--   Auto-scaling and auto-healing
+Kubernetes是一项技术，允许在多个节点上轻松部署和管理容器化程序。它的一些最突出的特点是:
 
-And much more.
+-   Container 配置和部署
+-   系统监控
+-   持久性存储
+-   自动调度
+-   自动扩展和自动修复
 
-Kubernetes works in a **declarative** fashion: you define the state you want in your cluster and Kubernetes works to make sure the cluster is always on that state.
+还有更多。
 
-To define or modify this state, you need to interact with the API server. This can be done via:
+Kubernetes的工作方式是声明式的：你在集群中定义你想要的状态，Kubernetes是确保集群始终处于这种状态。
 
--   REST calls
--   The command line tool `kubectl`. You can find instructions to install it on your machine [here](https://kubernetes.io/docs/tasks/tools/).
+-   REST 调用
+-   命令行工具`kubectl`。你可以通过这个教程，在你的机器上安装它[ 点击这里](https://kubernetes.io/docs/tasks/tools/).
 
-If you don't have access to a Kubernetes cluster, I suggest installing [minikube](https://minikube.sigs.k8s.io/docs/start/) on your local machine to follow along. Once installed and started, run the following command to create your first pod.
-
+如果你不能访问一个Kubernetes集群,我建议在你的本地机器上安装[minikube](https://minikube.sigs.k8s.io/docs/start/)。一旦完成安装并启动，允许以下命令来创建你的第一个Pod。
 ```yaml
 kubectl run --image=busybox --restart=Never --rm -it -- echo "Welcome to Kubernetes!!"
 ```
 
-This pod will be deleted automatically once it prints its welcome message.
+这个pod一旦打印出欢迎消息，它将被自动删除。
 
-## How to Manage Clusters in Kubernetes
+## 如何管理Kubernetes集群
 
-Cluster management is not part of the curriculum to become a CKAD. For the purposes of the exam, you don't need to know how to create a cluster, manage nodes, and so on.
-
-And unless you're planning to become a cluster administrator, chances you will just be a user of a managed version of Kubernetes in the cloud, like GKE on GCP or EKS on AWS.
-
-However, you must familiarize yourself with the concepts of namespace, labels, and annotations.
+管理集群不是成为CKAD的课程的一部分。就考试而言，你不需要知道如何如何创建一个集群，管理nodes等。
 
 ### Namespaces
 
-Namespaces allow you to create _virtual clusters_, this is, to segregate resources in different sections of the same physical cluster. For example:
+Namespaces 允许你创建虚拟集群，也就是说将资源隔离在同一物理集群的不同部分。比如说:
 
--   To separate different environments like development, stage, QA, and production
--   To break down a complex system into smaller subsystems. You can create a namespace for front-end components, another for back-end components, and so on.
--   To avoid name collision: the same resource can be created with the same name in different namespaces. This make it easy to create different environments (think stage and prod) that look identical.
+-   将以下不同的环境隔开 development, stage, QA, and production
+-   将一个复杂的系统分解成更小的子系统，你可以为前端组件创建一个Namespace,也可以为后端组件创建另一个Namespace，以此类推。
+-   避免了名称冲突: 同一资源可以在不同的Namespace中以相同的名称创建。这使得创建不同的环境 (think stage and prod)，看起来相同。
 
-You can create a namespace by running the following command:
+你可以通过运行以下命令创建一个Namespace:
 
 ```bash
 kubectl create ns my-namespace
 ```
 
-### Resource Quotas
+### 资源分配
 
-If you want to limit the amount of resources that developers can create in a namespace (both physical resources and Kubernetes objects like pods) you can use [Resource Quotas](https://kubernetes.io/docs/concepts/policy/resource-quotas/).
+如果你想限制开发者在Namespace中可以创建的资源数量(包括物理资源和Kubernetes对象，如pods) [资源分配](https://kubernetes.io/docs/concepts/policy/resource-quotas/).
 
-For instance, you can limit the number of Kubernetes _secrets_ that users can create on your cluster by defining the following `ResourceQuota`:
+例如，你可以通过`ResourceQuota`下的Kubernetes _secrets_ 的数量来限制用户在集群上创建:
 
 ```yaml
 apiVersion: v1
@@ -104,46 +98,45 @@ spec:
     secrets: "2"
 ```
 
-in a file – let's call it `my-quota.yaml` – and then running `kubectl apply -f my-quota.yaml` or simply running
+在一个文件中，我们称之为`my-qouta.yaml`，可以简单运行`kubectl apply -f my-quota.yaml`
 
 ```bash
 kubectl create quota my-quota --hard="secrets=2"
 ```
 
-More on _secrets_ later on in the guide.
+更多的 _秘密_ 在这个指南的后面。
 
 ### Labels
 
-Labels allow you to organize resources inside your Kubernetes cluster. A label is a key-value pair that you attach to a resource, either when you create it or by labeling an existing resource. You can then use labels to filter resources.
+Labels(标签)允许你在Kubernetes集群组织资源，label是一个键值对，你可以在创建资源时，添加到资源上，也可以添加到现有资源。你能使用labels过滤资源。
 
-For example:
+例如:
 
--   You want to display only your `backend` pods. You can attach the label `tier=backed` to the pods (both the key and the value are arbitrary, you can use whatever you want) and then run `kubectl get pods -l tier=backend` to retrieve the desired pods.
--   You want to define a deployment or a service associated with certain pods. The way to tell the deployment/service which pods it needs to keep an eye on is by using labels to select them.
+-   你想只显示 `backend` pods。你将label `tier=backed`添加到pods (键和值都是任意的，你可以使用任何你想的)，然后运行 `kubectl get pods -l tier=backend`去检索需要的pods.
+-   你想定义一个部署或服务的相关pods。告诉 deployment/service，它需要关注通过labels选择pods.
 
-Here are some common label-related actions:
+以下时一些常见的label-related的命令:
 
 ```bash
-# Labeling a pod, but similar syntax for nodes, etc
+# 给Pods 添加一个label, 等等
 kubectl label pods pod-name key=value
-# Removing a label by podname
+# 通过podname 删除pods上的label
 kubectl label pods pod-name label_key-
 
-# Removing a pod using the label as selector
+# 删除一个pod，通过label选择器
 kubectl label po -l app app-
 
-# Display labels
+# 显示 label
 kubectl get pods --show-labels
 
-# Select pods based on their labels (assume we've defined)
+# 通过lables选择pods
 kubect get pods -l 'tier in (frontend,backend)'
 kubect get pods -l tier=frontend,deployer=coolest-team
 ```
 
-Annotations are similar to labels in that they're key-value pairs, but they cannot be used to select resources. They have a different purpose.
+Annotations和labels相似，都是键值对，但Annotations不能用于选择资源，它们的目的是不同的。
 
-Annotations are normally added to be processed by other tools. For example, if you're running Prometheus to gather metrics, you could add this configuration to your descriptor:
-
+Annotations通常为其他工具添加。比如，如果你运行Prometheus来收集指标，你可以把这个配置添加到你的描述符中。
 ```yaml
 metadata:
 	labels:
@@ -153,77 +146,72 @@ metadata:
         prometheus.io/port: '9102'
 ```
 
-It tells Prometheus to override the default values for _scrape_ and _port_ with `true` and `9102` respectively.
+它让Prometheus将 _scrape_ 和 _port_ 的默认值分别改为 `true`和 `9102`。
 
-## Beyond Pods and Deployments
+## 超越 Pods和部署
 
-As you know by now, a **pod** is the basic unit in Kubernetes. In most cases, you can think of it as a container but a pod can consist of multiple containers. Since pods are ephemeral in nature, we need a mechanism to make sure new pods are created when our existing pods die.
+ Multi-container pods是Kubernetes的基本单元。在大多数情况下，你可以认为它是一个容器，但是一个pod可以由多个容器组成。由于pod是短暂的，我们需要一种机制确保当我们现有的pod死亡时，新的pod被创建。
 
-With deployments you can define a desired state, for example having 3 replicas of your application always running. Kubernetes will work towards achieving and keeping this state in the cluster at all times.
+ 通过部署，你的可以定义一个理想的状态，例如，有三个应用程序的副本一直在运行，Kubernetes将努力实现并在集群中保持这种状态。
 
-Deployments can also be used to easily manage the number of replicas running at any time, perform rolling updates, roll back to previous versions, and so on.
+也可以轻松管理任何时候运行的副本数量，执行滚动更新，回滚到以前的版本等等。
 
-However, there are many more workloads.
+还有很多工作负荷。
+### 多容器 pod
 
-### Multi-container pods
+一个pod可以运行一个以上的容器。容器间可以无缝通讯，因为它们在同一网络和而且它们可以使用 _volumes_ 共享数据。
 
-A pod can run more than one container. Containers can talk to each other seamlessly, because they are in the same network and they can use _volumes_ to share data.
+现在，让我们深入了解一些多容器pod设计模式，在本指南后面，我们将详细介绍volumes(卷),以及如何部署这些模式中的一些。
+#### Sidecar(边车)
 
-For now, let's dive into some common design patterns for multi-container pods. Later in this guide we'll see volumes in detail and how to deploy some of these patterns.
+在这个模式中，我们有一个运行主程序的容器，同时还有另一个容器，运行次要任务 ***以增强主容器的功能***。
 
-#### Sidecar
+一个经典的例子是，在运行Web服务(主容器)的同时，还有一个处理日志、监控、刷新pod volume(卷)的数据，终端TLS等任务的`side` 容器
+#### 适配器
 
-In this pattern we have a container that runs your main application along with another container that **runs secondary tasks to enhance your main container**.
+同样，你可以有你的主容器和一个次要容器， **转换主容器的输出**
 
-A classical example is running a web server (main container) along with a side container that handles tasks like logging, monitoring, refreshing data in the pod volume, terminating TLS, and so on.
-
-#### Adapter
-
-Similarly, you can have your main container and a secondary container that **transforms the output of the main one**.
-
-For example, imagine your main container runs a service that outputs a lot of complex logs. You can use an adapter container to simplify this output before it gets sent to your logging service, offloading the main container (and the developers of the service) from this task.
-
+例如，想象一些你的主容器运行一个输出大量复杂日志的服务。你可以使用一个适配容器来简化这个输出，然后再发送给你的日志服务器，把主容器(以及服务的开发者)从这个服务中解放出来。
 #### Ambassador
 
-Another common option is to use a secondary container **to act as a proxy** between your main container and the external world.
+另外一个常见选择是使用以辅助容器， **作为一个代理**，在你的主容器和外部之间充当代理。
 
-For instance, you probably have different databases for different environments, like testing and production. When your main container needs a connection to a database, it can offload to the ambassador container the task of figuring out the appropriate database depending on the environment.
+例如，你可能有不同的数据库用于不同的容器，比如测试和生产。当你的主容器需要连接到一个数据库时，它可以根据环境确定适合的数据库给 `ambassador`容器。
 
-### Services
+### 服务
 
-Pods can connect other pods using their IP addresses. However, pods are ephemeral by nature. When they die, assuming you have a replication controller, a new pod will be created with a new IP address. This makes it hard use IPs to connect to pods directly.
+Pods 可以通过其他的Pods的IP地址，连接其他的Pods。然而，pods是短暂的，当它们死亡时，假设你有个复控制器，一个新的pod将被创建，有一个新的IP地址。这使人们很难直接使用IP连接到pods。
 
-Kubernetes offers an abstraction called Service that creates **a resource with a fixed IP address** and send requests to the appropriate pods.
+Kubernetes提供了一个名为服务的抽象，**一个资源有固定的IP地址** ，并将请求发送到对应的pod。
 
-Instead of connecting to the pods directly, you can reach their service via its IP address or even better using its fully qualified name thanks to the DNS service. Furthermore, some types of services expose you application outside the cluster too.
+而不是直接连接到pods，你可以通过它的IP地址到达它们的服务。或者通过DNS服务使用完整限定名称查找，这样会更好。此外，一些服务类型也将你的应用程序暴露在集群外面。
+#### 服务类型
 
-#### Types of Services
+你可以创建的主要服务类型:
 
-The main type of services you can create are:
+-   **ClusterIP –** 在集群内暴露你的应用。如果你不指定类型，这就是Kubernetes创建的默认服务。
+-   **NodePort –**  它会在集群中的每一个node打开一个端口，将你的应用程序暴露给世界。
+-   **LoadBalancer –**  使用云服务提供商的负载均衡器向外部暴露服务。
 
--   **ClusterIP –** To expose your application inside the cluster. This is the default service that Kubernetes creates if you don't specify a type.
--   **NodePort –** It opens a port on every node in the cluster to expose your applications to the world.
--   **LoadBalancer –** Exposes a service externally using a cloud provider load balancer.
+#### 如何在集群内部暴露你的应用程序
 
-#### How to expose your application inside the cluster
-
-Let's say you want to expose your application `my-app` to other nodes in the cluster on port 80. You could you create a _deployment_ that deploys your application with this command:
+假设你想把你的应用程序`my-app`暴露给集群中的其他节点，端口为80。你可以创建一个命令部署你的应用程序。
 
 ```bash
 kubectl create deploy my-app --image=my-app --port=80
 ```
 
-This will create pods that can only be accessed from other resources inside the cluster by their IP, which will change if the pods restart.
+这将创建集群内部其他的Pod只能通过IP访问的pod，如果pod重新启动，其IP将改变。
 
-The next step is to create a ClusterIP service for these pods. The following command creates a service that can be reached at port 80 and will forward the requests to your application (also at port 80).
+下一步是为这些pod创建一个ClusterIP服务。下面的命令创建一个可以通过80端口的服务，并将请求转发到的你的应用程序(80端口)。
 
 ```bash
 kubectl expose deploy my-app --port=80
 ```
 
-#### How to expose your application outside the cluster
+#### 如何将你的应用程序暴露在集群之外
 
-If you wanted to expose you application to the world instead, you could use this configuration to create a NodePort service:
+如果你想把你的应用服务暴露给世界，你可以使用这个配置创建一个NodePort服务。
 
 ```yaml
 kind: Service
@@ -236,95 +224,96 @@ spec:
 	    app: nginx
     ports:
     - protocol: TCP
-    	port: 80 # The port where you can reach this service
-    	targetPort: 80 # The port that you opened in the pod
+    	port: 80 # 你可以到达该服务的端口
+    	targetPort: 80 # 你在pod打开的端口
 ```
 
 ### [Ingress](https://kubernetes.io/docs/concepts/services-networking/ingress/)
 
-Services are not the only way to expose your applications to the world. You can also use an **Ingress object** as an entry point for your cluster.
+服务并不是将你的应用程序给世界的唯一方法。你也可以用 **Ingress对象**作为你的集群的一个入口点。
 
-In addition to this, you need an **Ingress Controller**, like Nginx, to implement the rules defined in the Ingress object.
+除此之外，你还需要一个 **Ingress控制器**，比如Nginx,来实现对Ingress对象中定义的规则。
 
-Since ingresses are out of the scope of the CKAD, we will move onto other topics.
+由于Ingresses不在CKAD的范围内，我们将转到其他的主题。
 
 ### [Jobs](https://kubernetes.io/docs/concepts/workloads/controllers/job/)
 
-A Job will create one or several pods that will **not be restarted if they complete successfully**. You can use a them to perform batch jobs, that is, **one-off tasks** like carrying out a calculation, backing up some files, transforming and exporting some data, and so on.
+一个Job将创建一个或多个pods  **如果它们成功，将不会被重启启动**。你可以使用它们来执行批处理, **一次性任务** ，如并行计算，备份一些文件，转换和导出一些数据等等。
 
-Unless stated otherwise, the pod will run once. You can specify how many times a job needs to be run to be considered COMPLETED, using the parameter `completions`. By default, pods will run sequentially but you can set up the Job so that they run in parallel.
+除非另有说明, pod 将运行一次。你可以使用参数 `completions`来指定一项工作需要运行多少次才能被认为已经完成。默认情况下, pods将按照顺序运行，但你可以设置job，使它们并行运行。
 
-In case they don't complete successfully, you can configure them to either `Never` restart (try again) or to restart `OnFailure` up to `backoffLimit` times before Kubernetes considers that the job has failed.
+如果它们没有成功运行, 你将它们配置为 `Never` 重启 (重试)。或者重启失败最多的`backoffLimit` 次数，
+然后Kubernetes认为job已经失败。
 
-Here's how to create a simple job from the command line:
+下面是如何从命令行中创建一个简单的job:
 
 ```bash
  kubectl create job my-job --image=busybox -- echo "Hello World"
 ```
 
-If they job ran successfully, its state will be COMPLETED and its pod(s) won't be deleted so that you can access their logs. You can see them using:
+如果它们的job运行成功，其状态是`COMPLETED`,其pod(s)不会被删除，这样你就可以访问它们的日志。你可以通过以下方式看到它们。
 
 ```bash
 kubectll get pods --show-all
 ```
 
-since by default they won't be visible in they default list of pods after 2 minutes.
+在默认情况下，2分钟后它们在默认的pod列表中是不可见的。
 
 ### [Cronjobs](https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/)
 
-Kubernetes offers Conjobs to create jobs that need to run periodically or at a specific time in the future: periodical cleanup and backup tasks, renewal of TLS certificates, and so on.
+Kubernetes提供了`Conjobs`来创建需要定期或者在未来特定时间运行的`jobs`：定时清理和备份任务，更新TLS证书等等。
 
-Kubernetes will try its best to run only one Job to perform the task you specified in the Cronjob configuration. However, there are 3 common issues that you should be aware of:
+Kubernetes会尽力只运行另一个`job`来执行你在`Cronjob`配置中指定的任务。然而，有3个常见的问题你应该注意。
 
--   It is not guaranteed that the job will run **exactly at the desired time**. Imagine you need your job to run at 09:00:00. You can set the `startingDeadlineSeconds` property to X seconds so that, if the job has not started by 09:00:00 + X seconds, it will be marked as failed and not run.
--   **2 Jobs might be scheduled at the same time** to perform the task. In this case, you need to make sure that the tasks are _idempotent_, this is, the result of executing the task won't change if the task is carried out multiple times.
--   **No jobs might be scheduled**. To overcome this issue, make sure the Cronjob picks up any work undone by the previous run.
+-   不能保证job会 **准确地在所需的时间运行**。想象一下，你需要你的工作在 上午9点运行，你可以将`startingDeadlineSeconds`属性设置为x秒。这样，如果job没在上午9点x秒之后开始， 它将标记为失败，不会再运行。
+-  **2个job可能被安排在同一时间** 执行任务。在这种情况下，你需要确保任务是 _idempotent_ ，如果任务被多次执行，执行的任务的结果也不会改变。
+-  **没有job可以安排**。 为了克服这个问题，请确保Cronjob能运行前一次未完成的job。
 
-This is how you create a simple cronjob that prints "Hello World" every minute:
+这是创建一个简单的Cronjob，每分钟打印出"Hello World"
 
 ```bash
 kubectl create cronjob my-job --image=busybox --schedule="*/1 * * * *" -- echo "Hello World"
 ```
 
-I recommend this [website](https://crontab.guru/) to get your cron schedule expressions right.
+我推荐这个 [网站](https://crontab.guru/) 帮助你写出正确的cron定时任务。
 
-The next 3 resources are not part of the CKAD exam, but I think you should have a basic understanding of them at least.
+接下的3个资源不是CKAD考试的一部分，但我认为你至少应该对它们有一个基本的了解。
 
 ### [Daemon sets](https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/)
 
-Daemon sets ensure that a pod is scheduled in every **node** of your cluster. In addition to this, the pod is always up and running: if it dies or if someone deletes it, the pod will be recreated.
+Daemon sets(守护设置)确保在你的集群的每一个 **node** 都有一个pod 调度。除此以外，pod总是在运行:如果pod死了或者有人删除了它，pod将被重新创建。
 
-A common use case for Daemon sets is to collect logs and metrics that come from each node. But even if you don't create any, they are already some daemon sets running in your cluster: Kubernetes creates a daemon set to run a component called `kube-proxy` in every node!
+一个常见的使用场景是，Daemon sets(守护设置)用来收集每个node的日志和指标。但是，即使你不创建任何东西，它们已经在你的集群中运行了一些Daemo sets(守护设置): Kubernetese创建一个 Daemon set(守护设置)，在每个node上运行`kube-proxy` 组件。
 
-If you remove a node from the cluster, Kubernetes will not recreate its daemon in another node, because this node will already be running the daemon set. If you add a new node to the cluster, it will automatically run the daemon set.
+如果你从集群中移除一个node，Kubernetes不会在别的node上创建它的守护进程，因为这个这个node已经在运行Daemon set(守护设置)。如果你在集群中添加一个node，它会自动运行 Daemon set(守护设置)。
 
 ### [Stateful set](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)
 
-So far, we have seen tools to deploy stateless applications or pods that have their own persistent storage that will outlive them. To deploy stateful applications you can use stateful sets.
+到目前为止，我们应该看到部署无状态的应用或者pods的工具，它们有自己的持久性储存，不随工具停止运行而消失。为了部署有状态的应用，你可以是使用 Stateful set(状态设置)
 
-Since this is not part of the CKAD exam, we will not get into more details.
+由于这不是CKAD考试的一部分，我们就不多讲了。
 
-### [Static pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
+### [静态 pods](https://kubernetes.io/docs/tasks/configure-pod-container/static-pod/)
 
-Static pods are pods managed by `kubelet`, not by the Kubernetes API.
+静态pods是由`kubelet`管理的颇多，而不是由Kubernetes API管理的。
 
-To create them, you just need to create a regular pod configuration file and configure kubelet to scan that directory. After you restart `kubelet` , it will create the pod and restart it if it fails.
+要创建它们，你只需要创建一个普通的pod的配置文件和配置kubelet 扫描该目录。如何你重启`kubelet`后，它将创建pod，并在失败时重启pod。
 
-Kubernetes will create a mirror pod, this is, a copy of the pod in the Kubernetes API server. You can see that this pod appears when you run `kubectl get pods`, but if you try to delete it using `kubectl delete podName` it will show up in the pod list immediately, created by the `kubelet` that runs in the node where you created the static pod.
+Kubernetes将创建pod的镜像，这是Kubernetes API服务器中的一个副本。当你运行`kubectl get pods`，这个pod会出现，但是如果你试图用`kubectl delete podName`删除它，通过`kubelet`创建的静态pod 运行在这个node上，它将直接出现在pod列表中。
 
-## How to Configure Pods and Containers
+## 如何配置Pods和Containers
 
-We have just seen different workloads that you can deploy on your Kubernetes cluster. Let's spend some time now learning how to configure the pods and containers that run these workloads.
+我们刚刚看到在可以在Kubernetes集群上部署不同的工作负载。现在让我们花些时间学习如何配置工作负载中的pods和containers(容器)。
 
-### [Init Containers](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/)
+### [初始化容器](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-initialization/)
 
-You can use _init containers_ to set the initial state your pod: by writing some data to the pod's volume, downloading some files, and so on.
+你可以使用  _init containers_ 来设置你的pod初始状态: 向pod的卷写入一些数据，下载些文件等等。
 
-You can define one or more init containers for the same pod. They will be executed sequentially and the pod will only start running after all containers are done. Therefore, init containers can also be used to make the pod wait for a certain condition before it is executed.
+你可以定义一个或者多个init容器，它们将按顺序执行，只在所有的容器完成后，pod才会运行，因此，init容器也可以用来让pod在执行前等待某个条件。
 
-For instance, you can make a pod wait for another service to be up and running before it can start.
+例如，你可以让一个pod在启动前等待另一个服务的容器完成启动和运行。
 
-You can define an init container by add the something like this under the `spec` section of your pod description:
+你可以通过在pod的定义的 `spec`部分添加类似的这样的内容定义init容器。
 
 ```yaml
 spec:
@@ -337,27 +326,25 @@ spec:
 
 ### [ConfigMaps](https://kubernetes.io/docs/concepts/configuration/configmap/)
 
-Keeping you application configuration separate from the source code is a practice you should follow. ConfigMaps allow you to do this in Kubernetes.
+将你的应用程序与代码分开是你应该遵循的实践。ConfigMaps 允许你在Kubernetes这样做。
 
-ConfigMaps are used to **store key-value pairs of non-confidential data**. We will see how to store confidential data (for example, passwords) in _Secrets_ in the next section.
-
-You can create a ConfigMap from the command line:
+ConfigMaps 是使用 **存储非机密数据的键值对**， 我们将在下一节看到  _Secrects_ 存储机密数据(如密码)。
 
 ```bash
-# Passing the values as arguments
+# 通过参数传递数值
 kubectl create configmap my-map --from-literal=db_url=my-url --from-literal=username=username
 
-# Passing the values from a file
+# 通过文件获取数值
 kubectl create configmap another-map --from-file=my-file
 ```
 
-Once created, your application can use it in a pod that is in the same namespace in multiple ways:
+一旦创建，你的应用程序可以在同一个namespace的pod以多种方式使用ConfigMaps。
 
--   As command line arguments
--   As environment variables
--   From a file in a read-only volume
+-   作为命令行参数
+-   作为环境变量
+-   从只读卷中的一个文件
 
-Let's see a pod definition that reads values from a ConfigMap using these approaches:
+让我们看看一个pod的定义使用这些办法从ConfigMap中读取。
 
 ```yaml
 apiVersion: v1
@@ -396,18 +383,18 @@ spec:
 
 ### [Secrets](https://kubernetes.io/docs/concepts/configuration/secret/)
 
-Secrets are very similar to ConfigMaps, but you use them to store **confidential data**. Creating and managing secrets is a sensitive topic. Be sure to read the documentation. Here we'll see the basics.
+`Secrets`跟ConfigMaps很相似，但你用它们来存储 **机密数据**。创建和管理`Secrets`是一个敏感的话题。请务必阅读文档。在这里，我们将学习基础知识。
 
-The simplest way to create a secret is:
+创建`Secrets`的最简单方法是:
 
 ```bash
-#To create a secret from a literal
+#从一个字面量创建 secret
 kubectl create secret generic secret-name --from-literal=password=password
-#To create a secret from the content of a file
+#从文件内容来创建 secret
 kubectl create secret generic secret-name --from-file=path-to-file
 ```
 
-Then, you can mount your secrets into the pod as environment variables or files:
+然后，你可以将你的secrets导入pod，以环境变量或者文件的形式:
 
 ```yaml
 apiVersion: v1
@@ -446,38 +433,38 @@ spec:
 
 ### [Probes](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-startup-probes/)
 
-Probes allow you set rules to decide if a pod is healthy, if it is ready to serve traffic and if it is ready to start. At the end of this section I will present a sample descriptor with these some probes.
+Probes(探针)允许你设置判断pod是否健康的规则，是否为服务流量做好准备，是否准备好启动。在本节的最后，我将介绍一个带有这些Probes(探针)的样本。
 
-#### Liveness probes
+#### Liveness probes(活性探针)
 
-Kubernetes will automatically restart _crashed containers_. However, this will not account for situations like bugs (imagine an infinite loop in your application), deadlocks, and so on. You can define liveness probes to **detect whether your application is healthy**. Kubernetes uses this probe to decide if it needs to restart the container.
+Kubernetes 会自动重启 _crashed containers_ (崩溃的容器)。然而,这不会考虑到下面的bug (像你的应用程序的无限循环), 死锁等等。 你可以定义 `Liveness probes`(活性探针) **检测你的应用程序是否健康**。 Kubernetes 使用这探针来决定是否要重启容器。
 
-There are three types of liveness probes you can define:
+你可以定义三种Liveness probes(活性探针):
 
--   HTTP Get, where you define an endpoint in your application (for example /health) that Kubernetes can hit to determine if the application is healthy.
--   TCP socket probe, that tries to establish a TCP connection to a specific port. If the connection cannot be established, the applications is restarted.
--   Exec probe, that runs a command inside the container and restarts it if the exit status code is different from 0.
+-   HTTP Get, 在你的应用程序中定义一个HTTP路由(如/health)，Kubernetes可以通过HTTP请求获取应用程序是否健康
+-   TCP socket 探针，尝试建立一个TCP连接到一个特定的端口。如果连接不能建立，应用程序将重启。
+-   Exec 探针,  在容器内运行一个命令，如果退出状态码不是0，将重启容器。
 
-#### Readiness probes
+#### Readiness probes(准备就绪探针)
 
-Imagine a service that needs to load a large configuration file during startup. The container itself might be healthy (this can be checked using liveness probes described above) but not ready to start accepting requests.
+想象一下，一个服务在启动时需要加载一个大的配置文件。容器本身是健康的(这可以用上面的Liveness probes检查)，但是没有启动完，接收请求。
 
-Kubernetes uses readiness probes to determine if your application is ready to start serving traffic.
+Kubernetes使用Readiness probes(准备就绪探针)来确定你的应用程序是否准备好，处理请求。
 
-Many of the ideas discussed for liveness probes apply to readiness probes too:
+关于Liveness probes(活性探针)的东西也适用于Readiness probes(准备就绪探针):
 
--   They can be configured with an initial delay, timeout, threshold, period, and so on
--   They can be based on HTTP get calls, TCP socket connections, or Execution of commands inside the container
+-   它们可以被配置为初始延迟，超时，阈值，周期等等。
+-   它们可以基于HTTP get调用，TCP socket连接，或者在容器内执行命令。
 
-However, while liveness probes tell Kubernetes to restart the container if it is not healthy, readiness probes are used to remove the container from the pool of containers that can accept requests. Once the container is ready, it can start serving requests.
+然而，当Liveness probes(活性探针)告诉Kubernetes信息，Kubernetes让不健康的容器重启。Readiness probes(准备就绪探针)用来从可以接收请求的容器池移除没准备好的容器。一旦容器准备好了，它就可以为请求提供服务。
 
-#### Startup probes
+#### Startup probes(启动探针)
 
-Startup probes are used only during startup, for example for applications that are slow to start. If the startup probe succeeds, the liveness and readiness probes (if configured) will start running periodically.
+Startup probes(启动探针)只能在启动期间使用，例如应用程序启动缓慢。如果Startup probes(启动探针)返回成功，liveness and readiness 探针(如果已经配置)，将定期运行。
 
-### Example
+### 例如
 
-This pod is going to execute the following commands:
+这个pod 将执行以下命令:
 
 -   sleep 20
 -   touch /tmp/healthy
@@ -485,16 +472,15 @@ This pod is going to execute the following commands:
 -   rm -rf /tmp/healthy
 -   sleep 600
 
-The most basic parameters you should be aware of when configuring your probes are:
+在配置探针时，你应该注意的最基本参数是:
 
--   **initialDelaySeconds** before starting to probe
--   **periodSeconds** to define how often to probe
--   **timeoutSeconds** after which the probe times out
--   **failureThreshold** to determine the number of tries after which Kubernetes gives up
+-   **initialDelaySeconds** 开始探针延迟秒数
+-   **periodSeconds** 探针频率
+-   **timeoutSeconds**   探针的超时时间
+-   **failureThreshold** Kubernetes尝试次数，超过这个，将放弃尝试
+根据我们的配置, 这些探针将在pod创建后10秒后开始。在前20秒内, 文件 `/tmp/healthy`是不存在。因此, readiness probe(准备就绪探针)返回失败。 在接下30秒内readiness probe(准备就绪探针)返回成功，直到我们删除`/tmp/healthy`文件。
 
-With our configuration, the probes will start 10 seconds after the pod is created. During the first 20 seconds, the file `/tmp/healthy` does not exist. Therefore, the readiness probe will fail. We'll then create that file and for the next 30 seconds the readiness probe will succeed, until we remove the file again.
-
-The liveness probe is a simple `echo "I'm healthy"` command. If it can be run, the pod is healthy. Otherwise, it needs to be restarted.
+liveness probe(活性探针) 是简单的`echo "I'm healthy"`命令。如果它能运行，说明这个pod是健康的，否则，这个pod 要重启。
 
 ```yaml
 apiVersion: v1
@@ -528,41 +514,41 @@ spec:
 status: {}
 ```
 
-Execute this command to see the pod going through these states:
+执行这个命令可以看到pods的状态:
 
 ```bash
 kubectl get pods --watch
 ```
 
-See how the `Ready` column goes from `0/1`, to `1/1` and back to `0/.1`?
+看到`Ready` 列的值 从 `0/1`, 到 `1/1` 和回到 `0/.1`?
 
-Run this command to get a list of events and see how the probes were failing, as we expected.
+运行这个命令，以获得一个事件列表和探针如何失败的，正如我们期待的。
 
 ```bash
 kubectl describe pods my-pod
 ```
 
-### [Container Resources](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
+### [容器资源](https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/)
 
-When you create a pod, you can define:
+你可以通过定义创建一个pod:
 
--   The minimum amount of resources it needs to run, known as _requests_.
--   The maximum amount of resources the pod should use, known as _limits_.
+-   它运行所需的最小资源量，被称为 _requests_.
+-   pod可以使用的最大资源量，被称为 _limits_.
 
-Kubernetes will take into account the resources you requested when it tries to schedule the pod. It will not schedule the pod in a node that hasn't got enough capacity, regardless of the current resource consumption.
+Kubernetes在调度pod时，会考虑到你请求的资源。它不会在一个没有足够容量的节点上调度pod，不管当前资源的消耗情况如何。
 
-For instance, if pods A and B are running in node N, Kubernetes will calculate if the new pod C can fit in N by doing something like:
+例如， pod A和podB 在node N上运行，Kubernetes将通过下面的方法计算新的pod C 是否可以在node N上运行:
 
-`Total capacity of N - (resources requested by A + resources requested by B) <= resources requested by C`
+`Total capacity of N - (resources requested by A + resources requested by B) <= resources requested by C`( node N的总资源减去 A B需要的最小资源后，是否少于pod C需要的最小资源量)
 
-Even if pods A and B are not using all the resources they requested, Kubernetes **promised** they would have those resources available on that pod. That's why the current resource usage is not part of the previous formula.
+即使pod A和B没有使用它们请求的最小资源， Kubernetes **承诺** A和B会有它们所请求的最小资源可使用。这是为什么当前的资源使用情况不在前面的公式表达。
 
-If a pod goes over its resource limits, two things can happen:
+如果一个pod超过它的资源限制(它可以使用的最大资源量时)，会发生两种情况:
 
--   If it goes over its CPU limits, it will get throttled
--   If it goes over its memory limits, it will be restarted
+-   如果它超过CPU限制，它将被杀掉
+-   如果它超过内存限制，它将会被重新启动
 
-Let's now create a pod that requests some memory and CPU and limits the resources it is allowed to use:
+现在让我们创建一个pod，设置好它的最小内存和cpu和最大内存和cpu使用:
 
 ```yaml
 apiVersion: v1
@@ -587,80 +573,80 @@ spec:
           cpu: 0.5
 ```
 
-As an exercise, set some ridiculously high values for the requested memory (and or CPU) and _try_ to create the pod. You'll see that the pod never becomes ready. The output of
+作为一个练习，设置分配的内存和cpu高得离谱一些的值，去创建pod。你会看到pod从未准备好，将有输出
 
 ```bash
 kubectl describe pods resource-limited-pod
 ```
 
-will tell you why.
+会告诉你为什么.
 
-## [How to Schedule Pods in Kubernetes](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node)
+## [怎样在Kubernetes中调度Pods](https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node)
 
-This section is not part of the curriculum for the CKAD exam. But I believe you should have at least some basic understanding of the concepts I'll expose here because they're likely to come up as you work with Kubernetes.
+这一部分不是CKAD考试教程的一部分。但我相信，你应该对我在这样阐述的概念有一些基本的了解，因为你在使用Kubernetes的过程中，它们很可能会出现。
 
-Kubernetes allows you to specify in which nodes you want your pods to be scheduled via multiple mechanisms.
+Kubernetes允许你通过多种机制来指定你希望的pods，被安排到哪个nodes。
 
-The simplest one is to use the **nodeSelector** field to pick a node based on a label. However, other features have been introduced to allow for more complex setups.
+最简单的是使用 **nodeSelector** 字段，根据一个label选择一个node。其他功能的使用，允许更复杂的设置。
 
 ### [Taints and tolerations](https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/)
 
-You can **taint a node to prevent pods from being scheduled in it**, without modifying the pods themselves. When you taint a node, the only pods that Kubernetes will schedule in that node will be the pods that **tolerate** that taint.
+你可以 **taint(污损) 一个node 去防止在其中的pods被调度**, 不用去修改pods本身。 当你 taint(污损)一个node,  Kubernetes 会调度 这个node 中的 pods，**容忍** taint(污损)。
 
-You can see this in action if you run:
+你可以看到这个动作，如果你运行:
 
 ```bash
 kubectl describe node master.Kubernetes
 ```
 
-In the output of the previous command, you will see the line:
+在前一个命令的输出中，你会看到这样一行字:
 
 ```bash
 Taints: node-role.kubernetes.io/master:NoSchedule
 ```
 
-This taint prevents pods from being scheduled in the master node (unless the pods tolerate this taint).
+这种污损会阻止pods在master node中被调度 (除非pods能容忍这种taint).
 
-There are three types of taint:
+ 有三种类型的taint:
 
--   NoSchedule: Kubernetes will not schedule pods in a node if they cannot tolerate the taint.
--   PreferNoSchedule: pods that don't tolerate the taint won't be scheduled in a node unless they cannot be scheduled somewhere else.
--   NoExecute: if the pods _already running in the node_ cannot tolerate the taint, evict them from the node.
+-   NoSchedule: 如果node不能容忍taint，Kubernetes不会在node中调度pod。
+-   PreferNoSchedule: pods不能容忍taint，不会调度在一个node中，除非pods不能调度到其他地方。
+-   NoExecute: 如果已经在node中运行的pods不容忍taint，就把pods从node中移除出去。
 
-**Taints don't guarantee that pods will be scheduled in specific nodes**. To achieve that, you need the concept of _Node affinity_ that we will explore now.
+**Taints 并不保证 pods 会被调度到特定的nodes**。 为了实现这一点,你需要探索 _Node affinity_ (node亲和性) 概念.
 
-### Node affinity
+### Node亲和性
 
-Node affinity tells Kubernetes to **schedule pods to specific nodes**.
+Node 亲和性 告诉 Kubernetes 去 **调度pods到特定的nodes 上**.
 
-Imagine you have a service S that needs special hardware to run. You want to dedicate the hardware to this service and only want pods from S to run on it. How can you achieve this?
+想象一下，你有一个服务S，需要特定硬件去运行。你像把专用硬件用于这个服务，并希望S的pod在上面运行。你怎样才能实现？
 
-You can taint the nodes that have this type of equipment so that only pods from service S can be scheduled in these nodes. However, Kubernetes can still deploy these pods in other nodes that don't have the required hardware.
+你可以taint这种设备上的nodes，以便只有来自服务S的pod可以在这些node上被调度。但是，Kubernetes可以在其他不不具备的所需硬件上的nodes部署这些pods。
 
-We can see how the combination of taints and node affinity ensures that only pods from service S run in our specialized nodes:
+我们可以看到: 组合taints和node 亲和性来确保只有来自服务S的pod 在我们的专门的nodes运行。
 
--   Node affinity schedules pods from S into the specialized nodes (and nowhere else).
--   Taints ensure that no other pods will be scheduled in the specialized nodes, only pods from service S.
+-   Node 亲和性调度将S的pods安排到专门的nodes(而不是其他节点)。
+-   Taints 确保没有其他的pod会被安排在专门的nodes，只有来自服务S的pod。
 
-## Storage in Kubernetes
+## Kubernetes的存储
 
-By default, when the container inside a pod restarts, all the data inside the container is lost. This is by design.
+默认情况下，当一个pod内的容器重启，容器内的数据会丢失，设计上是这样的(无状态)。
 
-If you want the data to outlive the container, pod, and even node, you need to use **volumes**. Also, if a pod is composed of multiple containers, then the pod's volumes can be used by all of the containers.
+如果你想让数据比容器，pod，甚至是node都持久，你需要用 **卷**。另外，如果一个pod是由多个容器组成的，那么这个pod 的卷可以被所有的容器使用。
 
-### [Volumes](https://kubernetes.io/docs/concepts/storage/volumes/)
+### [卷](https://kubernetes.io/docs/concepts/storage/volumes/)
 
-After you define the volume, at the pod level, you need to mount it in each container that needs access to it.
+在你定义了卷后，在pod层，你需要在每个访问的容器装载它。
 
-There are many types of volumes to account for different use cases (usually, depending on what you want to happen when the _pod_ is destroyed). Some common types of volumes are:
+有很多类型的卷，以满足不同的使用情况(通常，取决于你想在 _pod_ 被销毁时发生什么)。一些常见的卷类型:
 
--   emptyDir: creates a directory that is initially empty. Easy way to share files between different containers in a pod.
--   hostPath: mounts a file or directory from the node's filesystem into the pod. After the pod is deleted, the files will remain in the host.
--   Volumes that live on AWS, GCP, or Azure clouds.
+-   emptyDir: 创建一个初始是空的目录。这是在pod不同容器之间共享文件的简单方法。
+-   hostPath: 将一个文件或者目录从node的文件系统挂载到pod，在pod被删除后，这些文件将保留在主机种。
+-   在AWS, GCP, 或者 Azure云上的卷.
 
-For more information about these and other type of volumes, refer to the documentation.
+关于这些和其他类型的卷的更多信息，请参考文档。
 
-To mount a volume in a container, your pod descriptor (let's call this file `with-mounted-volume.yaml`) should look something like this:
+在容器种挂载一个卷，你的pod的描述符(我们把这个文件称为 `with-mounted-volume.yaml`),应该是这样的。
 
 ```yaml
 apiVersion: v1
@@ -685,33 +671,32 @@ spec:
   restartPolicy: Never
 ```
 
-Since we have created a `hostPath` volume, its content will outlive the pod. Let's test this:
+由于我们已经创建了一个`hostPath`的卷，它的内容寿命将超过pod。让我们试一下。
 
 ```bash
-# Create a pod
+# 创建一个 pod
 kubectl apply -f with-mounted-volume.yaml
-# Create a file at the mounted location
+# 创建一个文件 并挂载到本地
 kubectl exec -it with-mounted-volume -- sh -c "echo 'Inside the pod' > /tmp/my-volume-path/newfile"
-# Try to read the file
+# 尝试去读取一个文件
 kubectl exec -it with-mounted-volume -- cat /tmp/my-volume-path/newfile
-# Delete the pod
+# 删除 pod
 kubectl delete pods with-mounted-volume
-# Create a new pod
+# 创建一个pod
 kubectl apply -f with-mounted-volume.yaml
-# Explore the content of `/tmp/my-volume-path`  to see if it persisted
+# 查看 `/tmp/my-volume-path` 下的内容，看它是否存在
 kubectl exec -it with-mounted-volume -- cat /tmp/my-volume-path/newfile
 ```
 
-#### Revisiting multi-container pods
+#### Revisiting 多容器的pods
 
-Now that we're familiar with volumes, let's create a multi-container pod that will use a mounted volume to share date between the containers.
+现在我们熟悉了卷，让我们创建一个多容器的pod，它将用在一个挂载了卷的容器间共享日期。
 
--   Our pod descriptor will be called `communicating-containers.yaml`
--   We'll have a pod with 2 `busybox` containers.
--   One of them will append `Hello World` to a file every second.
--   The other container has access to the content of this file (and anything that is placed in this shared volume). We'll tail the shared file and see how the other container appends `Hello World` to it.
-
-This is the definition of our pod:
+-   我们的 pod 描述定义 在文件`communicating-containers.yaml`
+-   我们将会一个带有2个 `busybox` 容器的pod。
+-   其中一个容器将"Hello World" 追加到一个文件中。
+-   另一个容器可以访问这个文件的内容(以及放在这个共享卷的任何东西)。我们将查看这个共享文件夹，看另一个容器是如何将`Hello World`追加到文件里的。
+这就是我们定义的pod:
 
 ```yaml
 apiVersion: v1
@@ -744,31 +729,31 @@ spec:
   restartPolicy: Never
 ```
 
-Let's create the pod:
+让我们创建pod:
 
 ```bash
 kubectl apply -f communicating-containers.yaml
 ```
 
-Once the pod is running, we can tail the file from `container-2`:
+ 一旦pod运行起来，我们就可以tail`container-2`文件，查看文件尾部内容:
 
 ```bash
 kubectl exec -it communicating-containers -c container-2 -- tail -f /etc/a-different-location/log
 ```
 
-Even though it is `container-1` that writes to `log`, since it is in a shared volume, `container-2` can see this file too.
+尽管`container-1`写东西到 `log`,但由于`log`在一个共享卷中，`container-2`可以看到这个文件。
 
-### [Persistent Volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
+### [Persistent Volumes(持久化卷)](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)
 
-Persistent Volumes (PVs) and Persistent Volume Claims (PVCs) decouple pods from storage technology. PVs are created by cluster administrators or dynamically based on [Storage Classes](https://kubernetes.io/docs/concepts/storage/storage-classes/).
+Persistent Volumes (PVs 持久化卷) 和 Persistent Volume Claims (PVCs  持久化卷声明) 通过存储技术跟pod解耦。 PVs是通过集群管理员创建 或者动态根据 [存储类型](https://kubernetes.io/docs/concepts/storage/storage-classes/).
 
-As opposed to the volumes we created earlier, defined at the pod level, PVs that have their own life cycle, independent from any pod.
+相对我们之前创建的卷，在pod层定义的，PV(持久化卷)有自己的生命周期，独立于任何pod。
 
-After creating PVs, _users_ can create Persistent Volume Claims to get the storage they need, _without needing to care about the actual infrastructure that is backing their storage_.
+在创建PVs 后, _用户_ 能创建 Persistent Volume Claims (持久化卷声明)来获得它们需要的存储, _而不需要关心其存储的实际基础设施_.
 
-#### Example
+#### 例如
 
-First, we define a Persistent Volume in pv.yaml:
+首先, 我们定义一个 Persistent Volume（持久化卷）在pv.yaml 文件:
 
 ```yaml
 apiVersion: v1
@@ -786,7 +771,7 @@ spec:
     path: /etc/foo
 ```
 
-For the Persistent Volume Claim, this is the descriptor (in pvc.yaml):
+对于 Persistent Volume Claim(持久化卷声明), 在文件pvc.yaml描述:
 
 ```yaml
 apiVersion: v1
@@ -802,82 +787,82 @@ spec:
       storage: 4Gi
 ```
 
-Now, let's create the resources in our cluster
+现在, 让我们在集群中创建资源。
 
 ```bash
-# First, the Persistent Volume
+# 首先, 创建Persistent Volume(持久化卷)
 kubectl apply -f pv.yaml
-# Then, the Persistent Volume Claim
+# 然后, 创建the Persistent Volume Claim(持久化卷声明)
 kubectl apply -f pvc.yaml
 ```
 
-We can take the pod definition from the previous example and with a little tweak start using this Persistent Volume instead of the hostPath we had defined. This is the only thing we need to change:
+我们可以从前面的例子获取pod的定义，稍作调整，开始使用这个持久化卷，代替我们定义的hostPath，这是我们唯一要改的地方。
 
 ```yaml
 volumes:
-  - name: mypd # To refer to this volume when we configure the pod
-    persistentVolumeClaim: # Instead of hostPath
-      claimName: mypvc # The name of the pvc we just created
+  - name: mypd # 当我们配置pod时，要参考这个卷
+    persistentVolumeClaim: # 替换掉hostPath
+      claimName: mypvc # 名称是我们刚才创建的pvc 
 ```
 
-## Network and Security in Kubernetes
+## Kubernetes中的网络和安全
 
-Regarding security, these concepts are the bare minimum that you should be familiar with to be able to clear the CKAD exam.
+关于安全问题, 这些概念是你应该熟悉的最低限度，以便通过CKAD考试。
 
-### [Network Policies](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
+### [Network Policies(网络策略)](https://kubernetes.io/docs/concepts/services-networking/network-policies/)
 
-By default, all ingress traffic (that is, traffic flowing into your application) and egress traffic (that is, traffic flowing from your application) is allowed. Any pod can connect to any other pod, even if they're in different namespaces.
+默认情况下，所有的ingress流量(即流入你的应用程序的流量)和egress流量(即你的应用程序流出的流量)都是允许的。如何pod都可以连接到其他的pod，即使它们在不同的namespaces。
 
-You can define network policies to control ingress and egress traffic based on different criteria.
+你可以定义网络策略，根据不同的标准控制ingress流量和egress流量
 
-To illustrate this, let's create a Network policy that allows traffic to our database only from pods with the label `access: allowed`:
+为了说明这一点,我们创建一个网络策略，只允许带有label `access: allowed`的pod访问的我们的数据库:
 
 ```yaml
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: access-db-policy # pick a name
+  name: access-db-policy # 起个名称
 spec:
   podSelector:
     matchLabels:
-      app: db # selector for the databse pods
-  ingress: # allow ingress traffic
+      app: db # 数据库pods选择
+  ingress: # 允许的 ingress 流量
   - from:
     - podSelector: 
         matchLabels: 
-          access: allowed # Only the pods with this label will be able to send traffic to the database
+          access: allowed # 只有具有该label的pod才能向数据库发送流量
 ```
 
-### [Security Context](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
+### [Security Context(安全背景)](https://kubernetes.io/docs/tasks/configure-pod-container/security-context/)
 
-When configuring a Security Context, you can enable security features like preventing the container from running as root, choosing as what user the pod is running, and so on. Here's an example:
+当配置一个Security Context(安全背景), 你可以启用一些安全功能，比如防止容器以root身份运行, 选择什么用户运行pod等等，下面是一个例子:
 
 ```bash
 spec:
   securityContext:
-    runAsUser: 1000 #This sets the user for every container in this pod, but can be overriden
+    runAsUser: 1000 #这将为这个pod层的每个容器设置用户，但可以被覆盖。
   containers:
   - name: my-container
      image: alpine
      securityContext:
-     	runAsUser: 1001 # This overrides the user set at the pod level     	
+     	runAsUser: 1001 #    这覆盖在pod层上的用户设置 	
   - name: another-container
 	....
 ```
 
-### [Services Accounts](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
+### [Services Accounts(服务账号)](https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/)
 
-Your applications can connect to the API server and interact with it. For example, to retrieve information about the pods in a namespace. Service accounts allow applications to _authenticate_ against the API server so that they can operate on it.
+你的应用程序可以连接到API 服务器进行数据交换。例如, 检索有关pod信息在一个namespace。Service accounts(服务账号) 允许应用服务对API服务器进行认证，以便它们进行数据交互。
 
-There is a _default service account_, but it is not a good practice to have all pods use it since not every application needs to be able to perform the same operations on the API server.
+这是一个 _default service account_ (默认的服务账号), 但是这不一个好的实践，因为不是每个应用程序都需要在API服务器上执行相同的操作。
 
-The simplest way to create a service account is via the command line:
+创建service account(服务账号)的最简单的方法是通过命令行:
 
 ```bash
 kubectl create serviceaccount my-sa
 ```
 
-Once created, you can assign it to a pod using the `serviceAccountName` field in the pod descriptor:
+一旦创建, 你一个分配 `serviceAccountName` 字段 (pod 描述符)分配给一个pod:
 
 ```bash
 spec:
@@ -887,110 +872,110 @@ spec:
   ...
 ```
 
-Once the application has been authenticated, the next step is to see if it has the appropriate permissions for the action it is trying to accomplish, that is, to see if the application is _authorized_.
+一旦应用程序被认证,下一步看它是否有适当的权限来完成它所要的操作,也就是说, 查看应用程序是否被授权。
 
-### [Role Based Access Control](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
+### [Role Based Access Control(基于角色的访问控制)](https://kubernetes.io/docs/reference/access-authn-authz/rbac/)
 
-A common method to manage authorization is **Role Based Access Control (RBAC)**. Service accounts are linked to one or more roles. Each role has permissions to perform a specific action on a certain resource.
+管理授权的一个常见办法是 **Role Based Access Control (RBAC)** (基于角色的访问控制)。 Service accounts(服务账号) 被链接到一个或者多个role(角色)。 每个role(角色)都有在某个资源上执行特定操作的权限。
 
-RBAC authorization is defined in two separate steps:
+RBAC 授权是通过两个独立的步骤来定义的:
 
--   Role creation, using Role and ClusterRole resources, to specify the actions can be performed on certain resources
--   The binding of the roles to the accounts, using RoleBinding and ClusterRoleBinding resources.
+-   Role 创建, 使用 Role和ClusterRole 资源, 以指定在某些资源上可以执行的操作。
+-   绑定 roles到账号上, 通过使用 RoleBinding 和 ClusterRoleBinding 。
 
-As you can imagine, the resources that contain the prefix Cluster are available cluster-wide, whereas the others are only defined in a particular namespace.
+正如你所想，包含前缀`Cluster`的资源在整个集群范围内可用，而其他的资源只在特定的namespace中定义。
 
-Since this is out of the scope of the CKAD exam, we will not get into the details of how to create and configure RBAC in your cluster.
+由于这不属于CKAD考试的范围，我们将不讨论如何在你的集群中创建和配置RBAC的细节。
 
-## Observability and Debugging in Kubernetes
+## Kubernetes中的可观察性和调试
 
-Once you have deployed your applications, how do you know what's going on in your cluster?
+一旦你部署你的应用程序, 你如何知道你的集群发生了什么?
 
-We've already introduced Probes as a mechanism to decide if pods need to be restarted and if pods are ready to serve traffic. Here we will see more mechanisms to get a better understanding of the state of our cluster and troubleshoot any issues.
+我们已经介绍了Probes作为一种机制决定是否重启pod，以及pod是否为网络流量做好了准备。在这里，我们将看到更多的机制来更好地了解我们的集群状态，并对任何问题故障排除。
 
-#### Getting Basic Pod information
+#### 获取Pod的基本信息
 
-To access the current state of the pods, there are two basic options. This is the first one:
+访问pods的当前状态，有两个基本选项。这是第一选项:
 
 ```bash
 kubect get pods
 ```
 
-This will show you the pods' `STATUS`, `AGE`, number of `RESTARTS` and how many containers inside the pods are `READY`.  You can pass flags to this command so that it displays the pods' IP address, labels, and more.
+这将显示你的pods `STATUS`, `AGE`,  `RESTARTS`的数量和多少pods内的容器处于 `READY`状态. 你可以用这个命令去显示pod的ip地址、labels等等。
 
-The second option provides more detailed information:
+第二个选项提供了更详细的信息:
 
 ```bash
 kubectl describe pods my-pod
 ```
 
-At the very bottom of the output of this command, you'll find a list of events that will give you hints in case something goes wrong:
+在这个命令的输出的最底部，你会发现一个事件列表，在出差的情况下会给你提示:
 
--   Liveness/readiness probes are failing
--   There was an error pulling an image
--   Insufficient memory to schedule a pod
+-   Liveness/readiness probes 失败
+-   拉取镜像出现错误
+-   没有足够的内存分配给pod
 
-And so on.
+等等。
 
-### How to Get a Container's Logs
+### 如何获取容器的日志
 
-If a pod is running, you can access its logs using the following command:
+如果一个pod正在运行，你可以使用以下命令访问它的日志。
 
 ```bash
 kubectl logs pod-name [-c container-name] [-n namespace]
 ```
 
-You only need to pass the container name if there's more than one container in your pod. Similarly, the namespace flag is only needed to retrieve logs from pods in a different namespace.
+如果你的pod有不止一个容器，你只需传递容器名称。同样，从不同的namespace中检索日志要用namespace 标志符(-n) 
 
-You can even tail the logs with the `-f` flag:
+你甚至tail日志 `-f` 标志符，看到日志尾部，获取最新的变化:
 
 ```
 kubectl logs -f pod-name [-c container-name] [-n namespace]
 ```
 
-This will be enough for the certification. However, manually checking logs is cumbersome and inefficient in a real production environment. You will want to user other technologies to manage your logs or services like StackDriver if you're on GCP. If you want to learn more about StackDriver and GCP in general, be sure to check out my [GCP guide](/news/google-cloud-platform-from-zero-to-hero/).
+这对认证来讲是足够了。然而, 在真实的生产环境中，手动检查日志是很麻烦和低效的。 如果你在用GCP(谷歌云)，你会希望用其他技术来管理你的日志和服务，像StackDriver技术。如果你想了解更多的有关StackDriver和GCP的信息，请务必查看我的[GCP指南](/news/google-cloud-platform-from-zero-to-hero/).
 
-### Troubleshooting Tips
+### 处理故障的小技巧
 
-While there are no one-size-fit-all solutions when it comes to troubleshooting, it is usually a good idea to start at the pod level to get an idea of what might be the root cause of the issue.
+虽然在排除故障时没有灵丹妙药, 但从pod层开始通常是一个好注意，可以从可以找到问题的根本原因。
 
-You basic tools should be the commands we've covered above. In addition to this, you can always open a terminal inside the pod:
+你的基本工具是我们上面提供的命令，除此之外，你可以随时在pod里打开一个终端。
 
 ```bash
-# Assuming you container image uses sh
+# 假设你的容器镜像使用 sh
 kubectl exec -it my-pod -c container -n namespace -- sh
 ```
 
-It is **not recommended** to solve problems inside the pod this way, since by design pods are ephemeral and after they are restarted, your changes will be lost and the problem will manifest itself again. However, it's a good idea to gain good insight into the problem.
+**不建议** 用这种方式去解决pod的内部问题, 因为根据设计，pods是短暂的，在pods重启后，你的修改会丢失, 问题会复现。 当然, 这是一个好的方法去很好地了解问题。
 
-To retrieve your pod or node metrics, you can run the following command:
+获取你的pod或者node的指标，你可以运行以下命令。
 
 ```bash
 kubectl top pod pod-name
 ```
 
-These tools should help you solve the most common problems in your daily operations. There are too many things that can go wrong to cover here. If you face something you can't fix, I recommend that you visit this entry to get help [debugging your applications.](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
+这些工具帮助你解决日常操作中最常见的问题。有太多的事件会出差，在这里不做解释了。如果你面对一些你无法解决的事情，我建议你访问这个，[调试你的应用程序](https://kubernetes.io/docs/tasks/debug-application-cluster/debug-application/)
 
-## Tips and Tricks
+## 技巧和窍门
 
-These are some "tricks" and I have found useful in my daily work with Kubernetes and especially to pass the CKAD exam. **The exam is about speed and efficiency**. With this in mind, let's see what we can do to perform better.
+这是我发现的一些技巧，在我日常的Kubernetes工作中，特别是在通过CKAD考试时很有用。 **提高考试速度和效率部分** 。考虑到这点，让我们来看看可以做些什么来表现得更好。
 
-### Set Aliases
+### 设置别名
 
-You will be typing the same commands over and over. As soon as you start the exam, create the following aliases:
+你将反复输入相同的命令。一旦开始考试，请创建以下别名。
 
 ```bash
-# Essential aliases. I strongly recommend setting them
+# 重要的别名，我强烈建议设置它们
 alias k='kubectl'
 alias kg='k get'
 alias kgpo='k get pods'
 alias kdpo='k describe pod'
 alias kd='k describe'
 
-# I also found this one very useful
+# 我还发现这个非常有用
 alias kap='k apply -f'
 
-# I have this for work only
+# 我设置这个，只为工作需要
 alias kgpoa='kgpo --all-namespaces'
 alias kgpol='kgpo --show-labels'
 alias kgpow='kgpo -o wide'
@@ -1000,106 +985,104 @@ alias kdd='kd deploy'
 alias kds='kd svc'
 ```
 
-### Search Your Command History Faster
+### 更快搜索你的命令历史
 
-I've seen a lot of engineers, many of them seniors, clumsily hitting the arrow up key 20 times to find something in their command history.
+我见过很多工程师，其中很多是高级工程师(seniors)，笨拙按了20次以上的箭头键，在他们的命令历史中找东西。
 
-Instead, make sure you're comfortable using `Ctrl + r`. Just press it and start typing some part of the command you are looking for. Then, keep pressing `Ctrl + r` until you find it. Now you can press `Enter` to run it or simply start typing to modify it.
+不同的是，确保你自如地使用`Ctrl + r`，只有按下它并开始输入你要输入的命令的某些部分。然后，继续按`Ctrl + r`，直到你找到它。现在你可以按`Enter`运行它，或者简单开始修改后再运行。
 
-It is a huge time saver that not everyone is aware of.
+这是一个节省大量时间的方法，并不是每个人都知道的。
+### 熟悉文档
 
-### Familiarize Yourself With the Documentation
+你可以在考试期间查阅文档，然而，这不是学习新东西的时候。访问文档获得yaml的模板，检查特定的参数等等。
 
-You can consult the documentation during the exam. However, it's not the time to learn new things. Visit the documentation to get templates for yaml, to check specific parameters, and so on.
+确保你对 **文档的结构** 很熟悉和知道去哪里找东西。 使用 **搜索功能** ，更快找到.
 
-Make sure you have a good idea of the **structure of the documentation** and where to find things. Use the **search functionality** to go even faster.
+这份 [Kubectl cheat sheet(简明手册)](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) 是金子和 **在考试期间可以为你你所用**.
 
-Finally, this [Kubectl cheat sheet](https://kubernetes.io/docs/reference/kubectl/cheatsheet/) is gold and **will be available for you during the exam**.
+### 你不需要记住所有的东西
 
-### You Don't Need to Memorize Everything
+除了文档, `kubectl` 有 `--help` 关于大多数命令的查看 (`-h` 是简写)。大多数时候，你会在那里找到问题的答案。
 
-In addition to the documentation, `kubectl` has a `--help` flag for most commands (`-h` is the short version). Most of the time you will find the answer to your question there.
+事实上，我建议你在查阅文档之前这样做，因为这要快得多。
 
-In fact, I recommend that you do this before going to the documentation, since it is much faster.
-
-Imagine that you want to create a resource quota object. You don't remember the yaml you need to write or the command to create it. However, you know the `kubectl command` and the `--help` flag. Then, you should try this before going to the docs:
+想象一下，你想创建一个资源配额对象。你不记得你需要写的yaml或者创建它的命令。你知道 `kubectl command` 和 `--help` 参数。那么在查阅文档之前，你应该先试一试这个:
 
 ```bash
-# From this, we can get what we need to create our resource quota object
+# 我们可以创建得到创建资源配额对象所需要的东西
 kubeclt create quota -h
-# For example
+# 例子
 kubeclt create quota my-quota --hard="secrets=2"
 ```
 
-You have plenty of sources of information and therefore you don't need to memorize many commands or any descriptors.
+你有大量的信息来源，因此你不需要记得住这么多的命令或者参数。
 
-However, given that time is very limited during the exam, I think it's worth knowing some of the following commands by heart and how to leverage them.
+然而，考试期间时间非常有限，我认为值得熟记一些命令和任何使用它们。
+### 快速生成一个基本的pod
 
-### Generate a basic pod specification quickly
-
-**This is extremely important**. Instead of copying and pasting from the documentation every time you need a pod, use the following command to get a descriptor that you can modify later to meet your requirements:
+**这一点尤为重要**。与其每一次需要一个pod时从文档中复制和粘贴，不如使用下面的命令获得一个描述符，你可以在以后修改它以满足你的需求。
 
 ```bash
-# Run pod nginx and write its spec into a file called pod.yaml
+# 运行一个pod nginx，并将其参数写入一个pod.yaml文件中
 kubectl run nginx --image=nginx --restart=Never --dry-run=client -o yaml > pod.yaml
-# Some of these flags can be useful, depending on the problem
+# 可以指定一些参数写入pod.yaml文件中
 kubectl run nginx --image=nginx --restart=Never  --port=80 --labels=key=val --dry-run=client -o yaml > pod.yaml
 ```
 
-Other useful parameters:
+别的有用的参数:
 
 ```bash
---rm # to remove the pod as soon as it's finished
--it # Enter the interactive terminal, to run commands directly inside the pod
+--rm # 在运行完成后立即删除pod
+-it # 进入交换式终端，直接在pod中有运行命令
 ```
 
-For example, you can use this to create a temporary pod and use it to verify your work:
+例如，你可以用它创建一个临时的pod，用它验证你的工作:
 
 ```bash
 kubectl run tmp --image=busybox --restart=Never --rm -it -- /bin/sh
 ```
 
-Now you could  `wget -O- svc:port` to see if your service is running, if network policies are working, and so on.
+现在你可以运行命令 `wget -O- svc:port` ，看看你的服务是否在运行，网络策略是否在工作等等。
 
-##### Note:
+##### 注意:
 
-The `--dry-run=client -o yaml` is not just for pods, but for many resources. If we come back to the previous section where we created a resource quota, we could get a descriptor like this:
+ `--dry-run=client -o yaml`不仅适用于pod,也适用于很多资源。如果我们回到上一节，我们创建一个资源配额，我们可以得到这样描述符:
 
 ```bash
 kubeclt create quota my-quota --hard="secrets=2" --dry-run=client -o yaml
 ```
 
-### Use grep
+### 使用 grep
 
-You don't need to know regular expressions in depth. Just pass keywords. For instance, to retrieve information fast from the lengthy `kubectl describe pods my-pod`:
+你不需要深入了解正则表达式。只要使用关键词。例如，从冗长的`kubectl describe pods my-pod` 快速检索信息:
 
 ```bash
-# -i makes the search case-insensitive. It's a bit slower but for very short texts it won't make a difference
-# -C 2 will display the matched line as well as the 2 lines before and after the match (the "context")
+# -i 参数使搜索不区分大小写。有点慢，但对于非常短的文本来讲，这不会有什么影响。 
+# -C 2 参数将显示匹配的最前2行和最后2行 (C 是 context的缩写)
 kubectl describe pods my-pod | grep -i -C 2 labels
 kubectl describe pods my-pod | grep -i -C 2 ip
 ...
 ```
 
-### Watch Pods as Their Status Changes
+### 观察pods 的状态变化
 
-Instead of manually running `kubeclt get pods` every few seconds to see changes, pass the `watch` flag to see how your pods are doing:
+与其每隔几秒手动运行`kubeclt get pods`来查看变化，不如通过`watch` 参数来查看你的pods是如何变化:
 
 ```bash
 kubectl get pods --watch
 ```
 
-### Delete Pods Fast
+### 快速删除Pods
 
-Making mistakes is part of the learning process. You'll make them also during the exam. Since the clock is ticking, we need to make sure we don't have to wait long when deleting resources. Add these flags to delete pods immediately:
+犯错是学习过程的一部分。在考试中你也会犯错。由于时间紧迫，我们需要确保在删除资源时不要等待很长时间，通过这些参数可以快速删除pods:
 
 ```bash
 k delete pods my-pod --force --grace-period=0
 ```
 
-### Run a Pod With a Particular Command
+### 用一个特定命令运行Pod
 
-I found it useful to learn how to pass commands to pods, jobs, cronjobs, and so on from the command line, like this example:
+我发现学习如何用命令行想pod、job、cronjobs等传递命令很有用，比如这个例子:
 
 ```bash
 kubectl run loop --image=busybox -o yaml --dry-run=client --restart=Never \
@@ -1107,7 +1090,7 @@ kubectl run loop --image=busybox -o yaml --dry-run=client --restart=Never \
 > pod.yaml
 ```
 
-This would generate the file pod.yaml:
+这会产生一个文件pod.yaml:
 
 ```bash
 apiVersion: v1
@@ -1131,46 +1114,46 @@ spec:
 status: {}
 ```
 
-You can run a single command or chain multiple commands, like a mini bash script:
+你可以运行一个命令，也可以运行多个命令链，就像一个小型的bash脚本一样:
 
 ```bash
-# Run a particular executable
+# 运行一个特定的可执行文件
 kubectl run busybox --image=busybox -it --restart=Never -- echo 'hello world'
-# Run commands inside a shell (useful to run multiple commands)
+# 在shell内运行(对运行多个命令很有用)
 kubectl run busybox --image=busybox -it --restart=Never -- /bin/sh -c 'echo hello world'
 ```
 
-It is not a huge difference but you don't need to remember how to write it in the pod descriptor or to waste time opening the documentation. **You just need to use what you already know.**
+这不是一个巨大的区别，但你不需要记住如何在pod的描述符中写，也不需要浪费时间去打开文档。 **你只需要使用你已经知道的东西**
 
-### Roll out
+### roll out(展开)
 
-Familiarize yourself with the `rollout` command to get information about the status of your deployments.
+熟悉`rollout`命令，以获得关于你的部署状态的信息。
 
-I always start with the `--help` flag to remember how to do what I wanted to do.
+我总是使用 `--help` 参数，来记住如何做我想做的事。
 
 ```bash
 kubectl rollout -h
 ```
 
-### Bonus
+### Bonus(奖励)
 
-These final tips are not for the certification, but for daily work:
+最后这些提示不是针对认证的，而是针对日常工作的:
 
--   This [kube-ps1 module](https://github.com/jonmosco/kube-ps1) makes it easy to always know in which cluster and namespace you're operating, to prevent mistakes like messing with prod resources when you're not supposed to.
--   Also, I recommend having a look at [Helm](https://helm.sh/). Helm is a package manager that can be used to deploy applications easily (think of it as `npm`). Helm also allows you to write templates that you can reuse to create objects based on different values (name, resource requests and limits, and so on).
+-   这个[kube-ps1 模块](https://github.com/jonmosco/kube-ps1) 让你很容易知道你是在那个集群和namespace中操作的, 以防止犯错误，比如你不应该乱用 prod(生产环境)资源。
+-  另外，我推荐你看一下[Helm](https://helm.sh/)。Helm 是一个软件包管理器，可以用来轻松部署应用程序 (像`npm`)。 Helm还允许你编写模板，你可以根据不同的值 (name, resource requests and limits, and so on)重复使用，创建对象。
 
-## Practice Time
+## 练习时间
 
-**You will always learn more by doing than by reading.** So I have left some problems here that I solved during my preparation for you to practice. Check out [this repo](https://github.com/dgkanatsios/CKAD-exercises) and [this article](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552).
+**做事永远比读书学得多**。所以我在这里留下一些我在准备考试已经解决的问题，供你练习。 查看[项目地址](https://github.com/dgkanatsios/CKAD-exercises) 和 [这篇文章](https://medium.com/bb-tutorials-and-thoughts/practice-enough-with-these-questions-for-the-ckad-exam-2f42d1228552).
 
-I recommend solving all of them on your own before you check the proposed solution. Also, verify your work: check logs, create a pod to connect to your services, and so on. This will also help build your muscle memory for the exam.
+我建议在你先解决自己的所有问题，再看我上面提到资料。同时验证你做的东西: 检查日志，创建一个pod来连接你的服务等等。这也将有助建立你在考试中肌肉记忆。
 
-Try to follow my tips and solve the exercises as if you really were in the exam: no distractions, only one tab open - with the official Kubernetes documentation.
+尝试根据我的提示来练习这些练习，就像你真的在考试中一样，不分心，在浏览器里只打开一个标签--Kubernetes 的官方文档。
 
-## Conclusions
+## 结论
 
-This guide contains all you need to take your skills to the next level, to ace the CKAD exam, and to become an effective Kubernetes developer. It's all in your hands. You just need to put in some work. Good luck!
+本指南包含了将提高你的技能到新的水平，通过CKAD考试以及成为一名真正的Kubernetes开发者所需要的一切。这一切在你手中，你只需要付出一些努力，祝你好运！
 
-You can visit my blog [www.yourdevopsguy.com](https://www.yourdevopsguy.com/) and [follow me on Twitter](https://twitter.com/CodingLanguages) for more high-quality technical content.
+你可以访问到我的博客[www.yourdevopsguy.com](https://www.yourdevopsguy.com/) 和 [在推特上关注我](https://twitter.com/CodingLanguages) 获得更多高质量的技术内容。
 
-If you liked this article, please share it because you could help someone pass their exam or get a job.
+如果你喜欢这篇文章，请分享它，因为你可以帮助别人通过考试或者找到工作。

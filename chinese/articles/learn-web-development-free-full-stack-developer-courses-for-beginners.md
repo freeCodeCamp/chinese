@@ -1,107 +1,103 @@
-> -  原文地址：[Learn Web Development – Free Full Stack Developer Courses for Beginners](https://www.freecodecamp.org/news/learn-web-development-free-full-stack-developer-courses-for-beginners/)
-> -  原文作者：[
-                    
-                        Jessica Wilkins
-                    
-                ](https://www.freecodecamp.org/news/author/jessica-wilkins/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Learn Web Development – Free Full Stack Developer Courses for Beginners](https://www.freecodecamp.org/news/learn-web-development-free-full-stack-developer-courses-for-beginners/)
+> - 原文作者：[Jessica Wilkins](https://www.freecodecamp.org/news/author/jessica-wilkins/)
+> - 译者：luojiyin
+> - 校对者：
 
 ![Learn Web Development – Free Full Stack Developer Courses for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/ferenc-almasi-L8KQIPCODV8-unsplash.jpg)
 
-The term [full stack](https://www.freecodecamp.org/news/what-is-a-full-stack-developer-back-end-front-end-full-stack-engineer/) developer refers to working with both the frontend and backend components of a web application.
+术语[全栈](https://www.freecodecamp.org/news/what-is-a-full-stack-developer-back-end-front-end-full-stack-engineer/)开发者指的是同时处理Web应用的前端和后端组件。
 
-The frontend is what the user interacts with, while the backend is the logic for the web application.
+前台是用户与之交互的东西，而后台是Web应用的逻辑。
 
-In this article, I will cover some resources that can help you become a full stack developer:
+在这篇文章中，我将介绍一些可以帮助你成为全栈开发者的资源:
 
--   [freeCodeCamp](https://www.freecodecamp.org/learn/)
--   [CS50's Web Programming with Python and JavaScript](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)
--   [The Odin Project](https://www.theodinproject.com/)
+- [freeCodeCamp](https://www.freecodecamp.org/learn/)
+- [CS50's Web Programming with Python and JavaScript](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)
+- [The Odin Project](https://www.theodinproject.com/)
 
-I will also provide additional links to YouTube courses where you can continue to practice your skills by building more projects.
+我还将提供更多的YouTube课程链接，你可以通过建立更多的项目继续练习你的技能。
 
--   [freeCodeCamp](#freecodecamp)
--   [The Odin Project](#the-odin-project)
--   [CS50's Web Programming with Python and JavaScript](#cs50-s-web-programming-with-python-and-javascript)
--   [Suggested YouTube full stack project tutorials](#suggested-youtube-full-stack-project-tutorials)
+- [freeCodeCamp](#freecodecamp)
+- [The Odin Project](#the-odin-project)
+- [CS50's Web Programming with Python and JavaScript](#cs50-s-web-programming-with-python-and-javascript)
+- [Suggested YouTube full stack project tutorials](#suggested-youtube-full-stack-project-tutorials)
 
 ## freeCodeCamp
 
 ![Screen-Shot-2022-01-31-at-1.02.41-AM](https://www.freecodecamp.org/news/content/images/2022/01/Screen-Shot-2022-01-31-at-1.02.41-AM.png)
 
-[freeCodeCamp](https://www.freecodecamp.org/learn/) is a free online interactive learning platform where you can learn web development and earn certifications along the way. Each course has a series of challenges where you will learn the material followed by completing 5 certification projects.
+[freeCodeCamp](https://www.freecodecamp.org/learn/)是一个免费的在线互动学习平台，你可以在这里学习网络开发，并顺便获得认证。每个课程都有一系列的挑战，你将学习材料，然后完成5个认证项目。
 
-The first four courses cover front end technologies including HTML, CSS, Vanilla JavaScript, React, and D3. The backend end development, relational database course, and quality assurance certifications cover Node, Express, SQL, testing with Chai, MongoDB and more.
+前四门课程涵盖前端技术，包括HTML、CSS、Vanilla JavaScript、React和D3。后端开发、关系数据库课程和质量保证认证涵盖Node、Express、SQL、用Chai测试、MongoDB等。
 
-Here is a list of some of the projects you will build.
+以下是你将建立的一些项目的列表。
 
--   Product landing page
--   Random quote machine
--   25 +5 clock
--   World cup database
--   Sudoku solver
+- 产品登陆页
+- 随机报价机
+- 25+5时钟
+- 世界杯数据库
+- 数独解题器
 
-After completing those certifications, you will know how to build full stack web applications. From there you can build your own projects for your portfolio and start applying for entry level jobs.
+完成这些认证后，你将知道如何构建全栈Web应用程序。从那里你可以为你的portfolio建立自己的项目，并开始申请初级工作。
 
-The remaining certifications cover Python and machine learning. These are more intermediate-advanced certifications and assume that you have completed the previous JavaScript certifications.
+其余的认证包括Python和机器学习。这些都是比较中高级的认证，并假定你已经完成了之前的JavaScript认证。
 
-If you need help with the curriculum, reach out to the [freeCodeCamp forum](https://forum.freecodecamp.org/), where developers around the world can assist you with your code.
+如果你在课程上需要帮助，请联系[freeCodeCamp论坛](https://forum.freecodecamp.org/)，世界各地的开发者可以在代码上帮助你。
 
 ## The Odin Project
 
 ![Screen-Shot-2022-01-31-at-1.22.36-AM](https://www.freecodecamp.org/news/content/images/2022/01/Screen-Shot-2022-01-31-at-1.22.36-AM.png)
 
-The Odin Project is a free online project-based platform where you can learn [Full Stack JavaScript](https://www.theodinproject.com/paths/full-stack-javascript?) or [Full Stack Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?).
+奥丁项目是一个免费的基于项目的在线平台，在这里你可以学习[全栈式JavaScript](https://www.theodinproject.com/paths/full-stack-javascript?)或[全栈式Ruby on Rails](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?)。
 
-You will first go through the [Foundations curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations) which teaches you HTML, CSS, JavaScript basics, Git, the command line, and how to use a text editor. These courses have suggested readings, assignments, and projects to complete along the way.
+你将首先通过[基础课程](https://www.theodinproject.com/paths/foundations/courses/foundations)，教你HTML、CSS、JavaScript基础知识、Git、命令行以及如何使用文本编辑器。这些课程有建议的读物、作业和项目，以便在学习过程中完成。
 
-Here is a list of some of the projects you will build in the [Foundations curriculum](https://www.theodinproject.com/paths/foundations/courses/foundations):
+以下是你将在[基础课程](https://www.theodinproject.com/paths/foundations/courses/foundations)中建立的一些项目的清单。
 
--   Rock Paper Scissors
--   Etch-a-Sketch
--   Landing page
+- Rock Paper Scissors
+- Etch-a-Sketch
+- Landing page
 
-From there you can choose between the JavaScript or Ruby on Rails curriculum.  If you need help deciding on which one to choose, please read [this guide from The Odin Project](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/choose-your-path-forward).
+从那里你可以选择JavaScript或Ruby on Rails课程。  如果你需要帮助决定选择哪一个，请阅读[The Odin Project的这一指南](https://www.theodinproject.com/paths/foundations/courses/foundations/lessons/choose-your-path-forward)。
 
-The [Ruby on Rails curriculum](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?) covers Ruby programming, intermediate to advanced HTML and CSS, the Ruby on Rails framework, and more.
+[Ruby on Rails课程](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?)包括Ruby编程、中高级HTML和CSS、Ruby on Rails框架等。
 
-Here are some of the projects that you will build in the [Ruby on Rails curriculum](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?).
+以下是你将在[Ruby on Rails课程](https://www.theodinproject.com/paths/full-stack-ruby-on-rails?)中建立的一些项目。
 
--   Tic Tac Toe
--   SQL Zoo
--   Personal Portfolio
+- Tic Tac Toe
+- SQL Zoo
+- Personal Portfolio
 
-The [JavaScript curriculum](https://www.theodinproject.com/paths/full-stack-javascript?) covers intermediate to advanced HTML and CSS, JavaScript, MongoDB, Node, Express and more. They have also included a helpful guide on [how to get hired](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/getting-hired) for your first job.
+[JavaScript课程](https://www.theodinproject.com/paths/full-stack-javascript?)涵盖了中高级HTML和CSS、JavaScript、MongoDB、Node、Express等内容。他们还包括一份关于[如何被雇用](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/getting-hired)的有用指南，以便找到你的第一份工作。
 
-Here are some of the projects that you will build in the [JavaScript curriculum](https://www.theodinproject.com/paths/full-stack-javascript?):
+以下是你将在[JavaScript课程](https://www.theodinproject.com/paths/full-stack-javascript?)中建立的一些项目:
 
--   restaurant page
--   weather app
--   blog API
+- restaurant page
+- weather app
+- blog API
 
-If you need help with the course, please reach out on [The Odin Project discord channel](https://discord.com/invite/fbFCkYabZB).
+如果你在课程上需要帮助，请联系[The Odin Project discord channel](https://discord.com/invite/fbFCkYabZB).
 
-## CS50's Web Programming with Python and JavaScript
+## CS50 Python和JavaScript Web编程
 
-This [CS50 Web programming course](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript) will teach you HTML, CSS, JavaScript, Git, Python, Django, SQL and more. You will first need to take [CS50's Introduction to Computer Science](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x).
+这个[CS50 Web编程课程](https://www.edx.org/course/cs50s-web-programming-with-python-and-javascript)将教你HTML、CSS、JavaScript、Git、Python、Django、SQL等。你首先需要学习[CS50的计算机科学入门](https://www.edx.org/course/introduction-computer-science-harvardx-cs50x)。
 
-The Introduction to Computer Science will teach you the basics of programming through a series of problem sets and a final project. Then you can move onto the Web programming course and further develop your skills.
+计算机科学导论将通过一系列问题集和一个最终项目教给你编程的基础知识。然后你可以进入Web编程课程，进一步发展你的技能。
 
-This course is taught by David Malan and Brian Yu who are top Harvard University instructors. After you finish these courses, you will have a strong starting foundation in full stack web development.
+该课程由David Malan和Brian Yu教授，他们是哈佛大学的顶级讲师。在你完成这些课程后，你将在全栈Web开发方面有一个坚实的起步基础。
 
-Both of these courses are available on [edX](https://www.edx.org/) and are free to audit.
+这两门课程都可以在[edX](https://www.edx.org/)上找到，可以免费审核。
 
-If you need help with either of the CS50 courses, please reach out on any of their [social media platforms](https://cs50.harvard.edu/x/2022/communities/).
+如果你在CS50课程中需要帮助，请通过他们的任何一个[社交媒体平台](https://cs50.harvard.edu/x/2022/communities/)联系。
 
-## Full stack project tutorials on YouTube
+## YouTube上的全栈项目教程
 
-After you have built up a basic foundation in full stack web development, you can look into these additional resources for building more projects to strengthen your skills.
+在你建立了全栈Web开发的基本基础后，你可以研究这些额外的资源，以建立更多的项目来加强你的技能。
 
--   [Flutter & Firebase Course - Build a Full Stack Instagram Clone](https://www.youtube.com/watch?v=mEPm9w5QlJM)
--   [Full Stack Web Development in the Cloud Course - Svelte, Postgres, Vercel, Gitpod](https://www.youtube.com/watch?v=OUzaUJ3gEug)
--   [Full Stack MERN Project - Build and Deploy an App | React + Redux, Node, Express, MongoDB \[Part 1/2\]](https://www.youtube.com/watch?v=ngc9gnGgUdA)
--   [Full Stack MERN Project - Build and Deploy an App | React + Redux, Node, Express, MongoDB \[Part 2/2\]](https://www.youtube.com/watch?v=aibtHnbeuio)
--   [E-commerce Website With Django and Vue Tutorial (Django Rest Framework)](https://www.youtube.com/watch?v=Yg5zkd9nm6w)
--   [Python Microservices Web App (with React, Django, Flask) - Full Course](https://www.youtube.com/watch?v=0iB5IPoTDts)
--   [PERN Stack Course - Build a Yelp clone (Postgres, Express, React, Node.js)](https://www.youtube.com/watch?v=J01rYl9T3BU)
+- [Flutter & Firebase课程--建立一个全栈式的仿Instagram](https://www.youtube.com/watch?v=mEPm9w5QlJM)
+- [云计算中的全栈网络开发课程 - Svelte, Postgres, Vercel, Gitpod](https://www.youtube.com/watch?v=OUzaUJ3gEug)
+- [全栈MERN项目 - 构建和部署一个应用程序 | React + Redux, Node, Express, MongoDB\[Part 1/2\]](https://www.youtube.com/watch?v=ngc9gnGgUdA)
+- [全栈MERN项目 - 构建和部署一个应用程序 | React + Redux, Node, Express, MongoDB\[Part 2/2\]](https://www.youtube.com/watch?v=aibtHnbeuio)
+- [使用Django和Vue的电子商务网站教程（Django Rest 框架）](https://www.youtube.com/watch?v=Yg5zkd9nm6w)
+- [Python微服务网络应用（使用React、Django、Flask）--完整课程](https://www.youtube.com/watch?v=0iB5IPoTDts)
+- [PERN Stack 课程 - 仿 Yelp(Postgres, Express, React, Node.js)](https://www.youtube.com/watch?v=J01rYl9T3BU)

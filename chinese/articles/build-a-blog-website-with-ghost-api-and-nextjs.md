@@ -32,8 +32,8 @@ Next.js 13 团队目前正在开发实验性的 app 文件夹。Next 使用基�
 11. [项目的演示数据](#demo-data-for-the-project)
 12. [如何建立博客](#how-to-build-the-blog)
 13. [如何建立页眉(header)](#how-to-build-the-header)
-14. [How to Build the Footer](#how-to-build-the-footer)
-15.[如何建立 layout](#how-to-build-the-layout)
+14. [如何建立页脚(Footer)](#how-to-build-the-footer)
+15. [如何建立 layout](#how-to-build-the-layout)
 16. [如何建立主页(homepage)](#how-to-built-the-homepage)
 17. [如何建立阅读页(reading page)](#how-to-build-the-reading-page)
 18. [如何建立标签页(tag page)](#how-to-build-the-tag-page)
@@ -43,11 +43,10 @@ Next.js 13 团队目前正在开发实验性的 app 文件夹。Next 使用基�
 22. [Next.js SEO](#next-js-seo)
 23. [如何开启搜索](#how-to-enable-search)
 24. [错误处理](#error-handling)
-25. [如何用 webhooks 重建你的静态网站](#how-to-rebuild-your-static-site-with-webhooks)
-26. [Conclusion](#conclusion)
+25. [如何用 webhooks 重新构建你的静态网站](#how-to-rebuild-your-static-site-with-webhooks)
+26. [总结](#conclusion)
 
 在这篇文章中，我们将介绍 Next 的带有实验性的 app 文件目录的基本情况。然后，我将教你如何在本地加强 Next 和 Ghost CMS，以及如何将 Ghost 与 Next 整合。最后，我会告诉你如何从后端（通过 Ghost CMS 的 API）获取数据，并用 React.js 在网站上显示。
-
 
 <h2 id="Why Use Next.js for the Front End and Not a Ghost CMS Theme">为什么在前端使用Next.js而不是Ghost CMS主题？</h2>
 
@@ -371,7 +370,7 @@ Tag 文件夹结构
 12. [错误处理](#error-handling)
 13. [如何用 webhooks 重建你的静态网站](#how-to-rebuild-your-static-site-with-webhooks)
 
-### How to Build the Header
+<h3 id="how-to-build-the-header">如何建立页眉(header)</h3>
 
 网站的第一个也是最主要的部分是页眉(header)。首先，我们将为我们的演示博客创建一个简单的页眉(header)。我们的页眉最终将看起来像这样：
 
@@ -435,7 +434,7 @@ function Header({ setting }: { setting: Settings }) {
 export default Header;
 ```
 
-### How to Build the Footer
+<h3 id="how-to-build-the-footer">如何建立页脚(Footer)</h3>
 
 页脚(footer)也是博客网站的一个重要部分。它显示你的重要信息和各种有用的链接。
 
@@ -505,7 +504,7 @@ function Footer({ setting }: { setting: Settings }) {
 export default Footer;
 ```
 
-### How to Build the Layout
+<h3 id="how-to-build-the-layout">如何建立 layout</h3>
 
 我为博客设计了一个基本的布局(layout)。为了在 Next.js 中构建布局，有一个特殊的`layout.tsx`文件。
 
@@ -900,7 +899,7 @@ export default Card;
 
 \-
 
-### How to Build the Reading Page
+<h3 id="how-to-build-the-reading-page">如何建立阅读页(reading page)</h3>
 
 阅读页面(reading page)是博客网站的第二大重要页面。如果人们不能弄清楚如何阅读作者写的东西，这对前端开发者来说是个大问题。
 
@@ -1084,9 +1083,7 @@ export async function generateStaticParams() {
 
 为文章阅读页面(reading page)生成静态网站 slug
 
-###
-
-如何建立标签页(Tag Page)
+<h3 id="how-to-build-the-reading-page">如何建立阅读页(reading page)</h3>
 
 我为博客设计了一个简单的标签页(Tag Page)。标签页显示与所使用的标签(tags)有关的文章。
 
@@ -1204,7 +1201,7 @@ export async function getAllTags() {
 
 为标签页生成静态网站 slug
 
-### How to Build the Author Page
+<h3 id="how-to-build-the-author-page">如何建立作者页(author page)</h3>
 
 博客网站的最后一个也是最重要的一个页面是作者页。在这里，读者可以了解更多关于作者的信息。
 
@@ -1424,7 +1421,7 @@ export async function generateStaticParams() {
 }
 ```
 
-### How to Build Single Pages
+<h3 id="how-to-build-the-author-page">如何建立作者页(author page)</h3>
 
 对于像 `关于(About)`、`联系(Contact)`、`隐私政策(Privacy Policy)` 等单页(single page)，你也可以用 Ghost Content API 创建它们。
 
@@ -1515,7 +1512,7 @@ async function Pages({ params }: { params: { slug: string } }) {
 export default Pages;
 ```
 
-### How to Handle Pagination
+<h3 id="how-to-handle-pagination">如何处理分页(pagination)</h3>
 
 分页(Pagination )有助于加快你的网站访问速度，并将你的网站分成更小的部分，更容易消化的页面。你可以用 `prev`和 `next` 将你的文章相互连接起来。
 
@@ -1712,7 +1709,7 @@ export default async function Pagination({
 
 use
 
-### Next.js SEO
+<h3 id="next-js-seo">Next.js SEO</h3>
 
 如果你是一个博主，你知道 SEO 在帮助人们找到你的博客和你的文章方面是多么重要。对于 SEO，Next.js 提供了一个`generateMetadata`功能，为你的网站生成动态 SEO 元数据。这意味着你不需要任何额外的包来进行 SEO。
 
@@ -1796,7 +1793,7 @@ export async function generateMetadata({
 }
 ```
 
-### How to Enable Search
+<h3 id="how-to-enable-search">如何开启搜索</h3>
 
 在静态博客上启用搜索是很难从头做起的。相反，你可以使用第三方的 Node 页面，如 [Orama](https://github.com/oramasearch/orama) 或 [Flex search](https://github.com/nextapps-de/flexsearch)。
 
@@ -1955,7 +1952,7 @@ function Search() {
 export default Search;
 ```
 
-### Error Handling
+<h3 id="how-to-enable-search">如何开启搜索</h>
 
 Next.js 有两种类型的 [错误处理](https://beta.nextjs.org/docs/routing/error-handling#how-errorjs-works)。第一种是基于布局，第二种是 [全局错误](https://beta.nextjs.org/docs/routing/error-handling#handling-errors-in-root-layouts) 处理。对于这里的演示，我们将使用基于布局的错误处理。
 
@@ -2079,7 +2076,7 @@ async function Read({ params }: { params: { slug: string } }) {
 }
 ```
 
-### How to Rebuild Your Static Site with Webhooks
+<h3 id="how-to-rebuild-your-static-site-with-webhooks">如何用 webhooks 重新构建你的静态网站</h3>
 
 当你创建一个静态网站时，最大的问题发生在有人在 Ghost 中写了一个新的帖子或改变了一个现有的帖子。对于一个个人项目，你可以手动重新部署你的网站。但对于一个较大的网站来说，你不可能在每次发生这种情况时都这样做。
 
@@ -2163,7 +2160,7 @@ Ghost 设置
 
 基于该事件，Ghost 将调用 webhook，你的网站将重新构建。重新部署需要时间，这取决于你的网站有多大，以此类推。
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
 使用 Next.js 和 Ghost CMS，一切都应该正常工作，正如我们在本教程中所做的那样。
 

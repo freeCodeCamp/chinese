@@ -19,36 +19,37 @@ Next.js 13 团队目前正在开发实验性的 app 文件夹。Next 使用基�
 
 ## 目录
 
-1. [Why Use Next.js for the Front End and Not a Ghost CMS Theme?](#why-use-next-js-for-the-front-end-and-not-a-ghost-cms-theme)
-2. [Project Requirements](#project-requirements)
-3. [How to Set Up Ghost CMS](#how-to-set-up-ghost-cms)
-4. [How to Set Up Ghost CMS with the Cloud](#how-to-set-up-ghost-cms-with-the-cloud)
-5. [How to Get the Blog Template](#how-to-get-the-blog-template)
-6. [How to Set Up Next.js](#how-to-set-up-next-js)
-7. [What to know before following this tutorial](#what-to-know-before-following-this-tutorial-)
-8. [Folder Structure](#folder-structure)
-9. [How to Configure Ghost CMS and Next.js](#how-to-configure-ghost-cms-and-next-js)
-10. [Understanding the Next.js 13 App Folder](#understanding-the-next-js-13-app-folder)
-11. [Demo Data for the Project](#demo-data-for-the-project)
-12. [How to Build the Blog](#how-to-build-the-blog)
-13. [How to Build the Header](#how-to-build-the-header)
+1. [为什么在前端使用 Next.js 而不是 Ghost CMS 主题？](#why-use-next-js-for-the-front-end-and-not-a-ghost-cms-theme)
+2. [做项目前需要做好的准备](#project-requirements)
+3. [如何设置 Ghost CMS](#how-to-set-up-ghost-cms)
+4. [如何利用云计算建立 Ghost CMS](#how-to-set-up-ghost-cms-with-the-cloud)
+5. [如何获得博客模板](#how-to-get-the-blog-template)
+6. [如何设置 Next.js](#how-to-set-up-next-js)
+7. [在学习本教程之前，需要知道什么](#what-to-know-before-following-this-tutorial)
+8. [文件夹结构](#folder-structure)
+9. [如何配置 Ghost CMS 和 Next.js](#how-to-configure-ghost-cms-and-next-js)
+10. [了解 Next.js 13 app 文件夹](#understanding-the-next-js-13-app-folder)
+11. [项目的演示数据](#demo-data-for-the-project)
+12. [如何建立博客](#how-to-build-the-blog)
+13. [如何建立页眉(header)](#how-to-build-the-header)
 14. [How to Build the Footer](#how-to-build-the-footer)
-15. [How to Build the Layout](#how-to-build-the-layout)
-16. [How to Build the Homepage](#how-to-build-the-homepage)
-17. [How to Build the Reading Page](#how-to-build-the-reading-page)
-18. [How to Build the Tag Page](#how-to-build-the-tag-page)
-19. [How to Build the Author Page](#how-to-build-the-author-page)
-20. [How to Build Single Pages](#how-to-build-single-pages)
-21. [How to Handle Pagination](#how-to-handle-pagination)
+15.[如何建立 layout](#how-to-build-the-layout)
+16. [如何建立主页(homepage)](#how-to-built-the-homepage)
+17. [如何建立阅读页(reading page)](#how-to-build-the-reading-page)
+18. [如何建立标签页(tag page)](#how-to-build-the-tag-page)
+19. [如何建立作者页(author page)](#how-to-build-the-author-page)
+20. [如何建立单页(single pages)](#how-to-build-single-pages)
+21. [如何处理分页(pagination)](#how-to-handle-pagination)
 22. [Next.js SEO](#next-js-seo)
-23. [How to Enable Search](#how-to-enable-search)
-24. [Error Handling](#error-handling)
-25. [How to Rebuild Your Static Site with Webhooks](#how-to-rebuild-your-static-site-with-webhooks)
+23. [如何开启搜索](#how-to-enable-search)
+24. [错误处理](#error-handling)
+25. [如何用 webhooks 重建你的静态网站](#how-to-rebuild-your-static-site-with-webhooks)
 26. [Conclusion](#conclusion)
 
 在这篇文章中，我们将介绍 Next 的带有实验性的 app 文件目录的基本情况。然后，我将教你如何在本地加强 Next 和 Ghost CMS，以及如何将 Ghost 与 Next 整合。最后，我会告诉你如何从后端（通过 Ghost CMS 的 API）获取数据，并用 React.js 在网站上显示。
 
-## Why Use Next.js for the Front End and Not a Ghost CMS Theme?
+
+<h2 id="Why Use Next.js for the Front End and Not a Ghost CMS Theme">为什么在前端使用Next.js而不是Ghost CMS主题？</h2>
 
 有几个原因可以让你考虑使用 Next 作为你的博客的前端框架：
 
@@ -80,7 +81,7 @@ module.exports = nextConfig;
 
 在开发过程中忽略构建错误
 
-## Project Requirements
+<h2 id="project-requirements">做项目前需要做好的准备</h2>
 
 要跟上这个教程，你需要具备以下软件包的基本知识:
 
@@ -91,7 +92,7 @@ module.exports = nextConfig;
 5. [Ghost CMS API](https://ghost.org/docs/content-api/)是一个开源的内容管理系统（CMS），类似于 WordPress。Ghost 是专门为博客设计和建造的。在这个项目中，我们将 Ghost 作为后端，Next 作为前端。对于后端和前端开发之间的通信，我们将使用 Ghost CMS API。
 6. [Tailwind CSS](https://tailwindcss.com/)是一个开源的 CSS 的框架，类似于 [Bootstrap](https://getbootstrap.com/)。我们将使用 Tailwind CSS 来设计我们的博客网站。
 
-## How to Set Up Ghost CMS
+<h2 id="how-to-set-up-ghost-cms">如何设置Ghost CMS</h2>
 
 下一步是在本地安装 Ghost，你可以用一条命令完成。首先，你需要用 pnpm、yarn 或 npm 全局安装`ghost-cli`。
 
@@ -129,19 +130,19 @@ ghost install local
 
 在安装之前，请确保你当前的安装目录是空的。目前，你是在开发模式下安装 Ghost。对于生产来说，你不会遵循同样的步骤。
 
-## How to Set Up Ghost CMS with the Cloud
+<h2 id="how-to-set-up-ghost-cms-with-the-cloud">如何利用云计算建立Ghost CMS</h2>
 
 如果你在本地安装 Ghost 时遇到任何问题，或者可能太复杂，或者你的驱动器上没有足够的空间，你可以使用像 [digital press](https://www.digitalpress.blog/) 这样的工具或任何其他云服务，如 GCP 或 AWS，Digital Ocean，等等。
 
 我喜欢 digital press，因为它有一个免费计划。其他云服务不提供这一点，这就是为什么我建议它。
 
-## How to Get the Blog Template
+<h2 id="how-to-get-the-blog-template">如何获得博客模板</h2>
 
 从头开始创建一个新的博客可能很困难。在本教程中，我们将使用一个来自 [the frontend web](https://github.com/orgs/frontendweb3) 的预构建好的模板。所有的模板都有一个开源的 MIT 许可，所以你可以使用它们，而且你不需要设置一切。
 
 我从里面挑选了 [Open-blog](https://github.com/frontendweb3/open-blog) 的模板。
 
-## How to Set Up Next.js
+<h2 id="how-to-set-up-next-js">如何设置Next.js</h2>
 
 设置 Next 是本教程的主要部分之一，你将花时间和精力在编码、调试和部署网站上。
 
@@ -191,7 +192,7 @@ pnpm create next-app --experimental-app
 - [@radix-ui/react-popover](https://www.radix-ui.com/docs/primitives/components/popover#installation)是 Radix UI 生态系统的一部分。我选择 Radix 的弹出式组件来设计网站上的搜索组件。
 - [date-fns](https://www.npmjs.com/package/date-fns) 有助于将你的`published_at`日期转换成不同的日期格式的包。
 
-## What to Know Before Following This Tutorial
+<h2 id="what-to-know-before-following-this-tutorial">在学习本教程之前，需要知道什么</h2>
 
 在构建这个项目之前，我强烈建议在 YouTube 上观看一些教程（尤其是如果你是 Next.js 的初学者）。这些将帮助你了解有关 Next.js app 文件夹的实验性功能一些基本知识。
 
@@ -215,7 +216,7 @@ Piyush Garg 编译了所有 Next 的新功能，并将其转换为一个小的�
 
 现在你已经准备好了，让我们开始建立我们的博客。
 
-## Folder Structure
+<h2 id="folder-structure">文件夹结构</h2>
 
 对于我们的演示应用程序，我们的文件夹结构看起来像这样：
 
@@ -270,7 +271,7 @@ Piyush Garg 编译了所有 Next 的新功能，并将其转换为一个小的�
 
 使用 Nextjs 和 Ghost cms 的文件夹结构
 
-## How to Configure Ghost CMS and Next.js
+<h2 id="how-to-configure-ghost-cms-and-next-js">如何配置Ghost CMS和Next.js</h2>
 
 下一步是为 Ghost Content API 设置数据获取。这就是为什么我们安装了上面的[@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api)包。
 
@@ -309,7 +310,7 @@ const api = new GhostContentAPI({
 
 获得你的 `GHOST_KEY` 和 `GHOST_URL`
 
-## Understanding the Next.js 13 App Folder
+<h2 id="understanding-the-next-js-13-app-folder">了解Next.js 13 app文件夹</h2>
 
 随着 Next.js 13 的发布，Next.js 的`pages`文件夹和`app`文件夹发生了很多变化。我们现在就来讨论一些重要的东西，在构建应用时再讨论更多：
 
@@ -348,27 +349,27 @@ app / tag / [slug] / my - card - component.ts;
 
 Tag 文件夹结构
 
-## Demo Data for the Project
+<h2 id="demo-data-for-the-project">项目的演示数据</h2>
 
 你不必担心创建一个演示或假的博客文章数据。对于你的测试，你可以从这个[GitHub 仓库](https://github.com/officialrajdeepsingh/nextjsghostcms/blob/main/.github/demo-post-for-ghost.json)下载它。
 
-## How to Build the Blog
+<h2 id="how-to-build-the-blog">如何建立博客</h2>
 
 我们将在下面的章节中对博客的每个部分进行梳理和构建，这样你就可以在家里一个人跟着做。
 
-1. [How to build the header](#how-to-build-the-header)
-2. [How to build the footer](#how-to-build-the-footer)
-3. [How to build the layout](#how-to-build-the-layout)
-4. [How to build the homepage](#how-to-built-the-homepage)
-5. [How to build the reading page](#how-to-build-the-reading-page)
-6. [How to build the tag page](#how-to-build-the-tag-page)
-7. [How to build the author page](#how-to-build-the-author-page)
-8. [How to build single pages](#how-to-build-single-pages)
-9. [How to handle pagination](#how-to-handle-pagination)
+1. [如何建立页眉(header)](#how-to-build-the-header)
+2. [如何建立页脚(footer)](#how-to-build-the-footer)
+3. [如何建立 layout](#how-to-build-the-layout)
+4. [如何建立主页(homepage)](#how-to-built-the-homepage)
+5. [如何建立阅读页(reading page)](#how-to-build-the-reading-page)
+6. [如何建立标签页(tag page)](#how-to-build-the-tag-page)
+7. [如何建立作者页(author page)](#how-to-build-the-author-page)
+8. [如何建立单页(single pages)](#how-to-build-single-pages)
+9. [如何处理分页(pagination)](#how-to-handle-pagination)
 10. [Next.js SEO](#next-js-seo)
-11. [How to Enable Search](#how-to-enable-search)
-12. [Error Handling](#error-handling)
-13. [How to rebuild your static site with webhooks](#how-to-rebuild-your-static-site-with-webhooks)
+11. [如何开启搜索](#how-to-enable-search)
+12. [错误处理](#error-handling)
+13. [如何用 webhooks 重建你的静态网站](#how-to-rebuild-your-static-site-with-webhooks)
 
 ### How to Build the Header
 

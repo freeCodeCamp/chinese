@@ -140,15 +140,15 @@ nav,
 
 尚未对齐的 Flex 布局
 
-### How to use the `align-items` attribute
+### 如何使用 `align-items` 属性
 
-This is a Flexbox attribute that controls the arrangement of flex items on the cross axis. The values it takes are flex-start, flex-end and center depending on the element's alignment needs. The image below shows how each of them works.
+这个 Flexbox 属性决定 flex 项目如何在交叉轴上排列。根据元素的对齐需求，它的值包括：flex-start, flex-end 和 center。下图展示了它们分别如何运作。
 
 ![align-items-1](https://www.freecodecamp.org/news/content/images/2022/10/align-items-1.png)
 
-Image credit: freeCodeCamp
+图片来源: freeCodeCamp
 
-From the image above, we can see that if we want to ensure that the flex items within our `<nav>` are aligned properly, on that element we must give the align-items attribute a value of center. So we have to add an attribute of _align-items_ and a value of _center_ to our flex container as shown in the CSS code below:
+从上图中我们可以发现，如果要让 <nav> 中的 flex 项目正确地对齐，我们需要将 align-items 的属性设置为 center。因此，我们需要将值为 center 的 align-items 属性添加到我们的 flex 容器中，CSS 代码如下：
 
 ```CSS
 nav,
@@ -159,17 +159,17 @@ nav,
 }
 ```
 
-Navbar align-items
+为导航栏设置 align-items 属性
 
-As you can see in the image below, the flex items are now aligned as they should be.
+正如你在下图中所注意到的，flex 项目都已按照恰当的方式对齐。
 
 ![aligncenter](https://www.freecodecamp.org/news/content/images/2022/10/aligncenter.png)
 
-Flex with center alignment
+垂直居中对齐的 Flex
 
-But once again there is something missing. We want to have our items spread out properly on the navbar: the logo on the extreme left, login and register at the extreme right, and the rest in the middle.
+但还有些什么不太对。我们希望导航栏的中项目可以正确地分布：logo 在最左侧，登陆和注册在最右侧，其余的内容置于中间。
 
-We can achieve this with the `justify-content` attribute. Let's learn about it next and then implement it.
+我们可以通过 `justify-content` 属性实现这一点。让我们马上学习并在随后使用它。
 
 ### How to use the `justify-content` attribute
 

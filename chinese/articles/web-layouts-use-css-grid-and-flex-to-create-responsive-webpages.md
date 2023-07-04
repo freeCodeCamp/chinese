@@ -5,7 +5,7 @@
 
 ![Web Layouts – How to Use CSS Grid and Flex to Create a Responsive Web Page](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/WebLayouts-1.png)
 
-网页布局之于网站，就像平面图之于建筑。没有他们，你只是在建造空中楼阁。
+页布局之于网站，就像平面图之于建筑。没有他们，你只是在建造空中楼阁。
 
 当你要建造一个网站或应用时，首先要决定的就是网页布局。这一步的重要之处在于，正是在布局中，你明确了各个元素之间如何排列组合，并按照预定的方式和层级评估它们。
 
@@ -55,15 +55,15 @@
 
 通常， HTML 元素按照他们默认的展示样式对齐。这意味着，在没有外部 CSS 样式的情况下，像 `p` 和 `div` 作为块级元素将会在新的一行中显示。而像 `input` 和 `span` 这样的行内元素，将在同一行中相邻排列。
 
-但是， Flexbox 让我们可以轻松地在水平维度或垂直维度上排列这些元素。为了实现这一点，我们需要至少两个元素： flex 容器 和 flex 项目，他们分别指代父元素和子元素。
+但是， Flexbox 让我们可以轻松地在水平维度或垂直维度上排列这些元素。为了实现这一点，我们需要至少两个元素： flex 容器 和 flex 元素，他们分别指代父元素和子元素。
 
 在自适应设计中，Flexbox 的目的在于允许容器及和它的子元素根据设备的尺寸填充或收缩。
 
 ## Flex-direction 和 Axes
 
-Flex-direction 是 CSS Flexbox 中的一个重要属性，因为它通过指定弹性容器的主轴的方向，决定弹性项目的排列方向。
+Flex-direction 是 CSS Flexbox 中的一个重要属性，因为它通过指定弹性容器的主轴的方向，决定弹性元素的排列方向。
 
-**主轴**和**交叉轴**是两个主要的轴。主轴是你在弹性项目中，为弹性项目定义的排列方向，而交叉轴总是垂直于主轴。
+**主轴**和**交叉轴**是两个主要的轴。主轴是你在弹性容器中，为弹性元素定义的排列方向，而交叉轴总是垂直于主轴。
 
 试图用数学中 x 轴和 y 轴的概念来理解这一点并不恰当。因为在 Flexbox 中，主轴既可以是竖直的，也可以是水平的，它的方向总是取决于 flex-direction 的值。
 
@@ -103,7 +103,7 @@ flex-direction: column
 </nav>
 ```
 
-下图即我们以上代码的输出效果。因为 `ul` 和 `li` 是块级元素，我们在其中指定的每一个项目都会在新行中显示。
+下图即我们以上代码的输出效果。因为 `ul` 和 `li` 是块级元素，我们在其中指定的每一个元素都会在新行中显示。
 
 ![preflexx-1](https://www.freecodecamp.org/news/content/images/2022/10/preflexx-1.png)
 
@@ -134,7 +134,7 @@ nav,
 
 下图是以上代码的输出效果。元素都以按照 flex 排列。虽然我们没有特别指定 flex-direction ，但它们自动在同一行中排列。
 
-然而，正如你可以在下图中借助标尺（红线）所能观察到的，弹性项目并没有按预期的方式对齐。让我们通过学习另一个重要的 flex 元素来解决这个问题。
+然而，正如你可以在下图中借助标尺（红线）所能观察到的，弹性元素并没有按预期的方式对齐。让我们通过学习另一个重要的 flex 元素来解决这个问题。元素
 
 ![displayflex](https://www.freecodecamp.org/news/content/images/2022/10/displayflex.png)
 
@@ -142,13 +142,13 @@ nav,
 
 ### 如何使用 `align-items` 属性
 
-这个 Flexbox 属性决定 flex 项目如何在交叉轴上排列。根据元素的对齐需求，它的值包括：flex-start, flex-end 和 center。下图展示了它们分别如何运作。
+这个 Flexbox 属性决定 flex 元素如何在交叉轴上排列。根据元素的对齐需求，它的值包括：flex-start, flex-end 和 center。下图展示了它们分别如何运作。
 
 ![align-items-1](https://www.freecodecamp.org/news/content/images/2022/10/align-items-1.png)
 
 图片来源: freeCodeCamp
 
-从上图中我们可以发现，如果要让 <nav> 中的 flex 项目正确地对齐，我们需要将 align-items 的属性设置为 center。因此，我们需要将值为 center 的 align-items 属性添加到我们的 flex 容器中，CSS 代码如下：
+从上图中我们可以发现，如果要让 <nav> 中的 flex 元素正确地对齐，我们需要将 align-items 的属性设置为 center。因此，我们需要将值为 center 的 align-items 属性添加到我们的 flex 容器中，CSS 代码如下：
 
 ```CSS
 nav,
@@ -161,29 +161,29 @@ nav,
 
 为导航栏设置 align-items 属性
 
-正如你在下图中所注意到的，flex 项目都已按照恰当的方式对齐。
+正如你在下图中所注意到的，flex 元素都已按照恰当的方式对齐。
 
 ![aligncenter](https://www.freecodecamp.org/news/content/images/2022/10/aligncenter.png)
 
 垂直居中对齐的 Flex
 
-但还有些什么不太对。我们希望导航栏的中项目可以正确地分布：logo 在最左侧，登陆和注册在最右侧，其余的内容置于中间。
+但还有些什么不太对。我们希望导航栏中的元素可以正确地分布：logo 在最左侧，登陆和注册在最右侧，其余的内容置于中间。
 
 我们可以通过 `justify-content` 属性实现这一点。让我们马上学习并在随后使用它。
 
-### How to use the `justify-content` attribute
+### 如何使用 `justify-content` 属性
 
-This is a Flexbox attribute that controls the arrangement of flex items on the main axis. It also defines how browsers distribute space between and around flex items within a flex container.
+此项 Flexbox 属性决定 flex 元素如何在主轴上排列。它同时还决定浏览器如何为 flex 容器内的 flex 元素分配其周围的空间。
 
-To achieve responsiveness, it helps with allocating any excess space that is leftover after flex-items have been arranged.
+为实现自适应，它帮助分配 flex 元素完成排列后的多余空间。
 
 ![justifycontentstyles](https://www.freecodecamp.org/news/content/images/2022/10/justifycontentstyles.png)
 
-justify-content styles
+justify-content 样式
 
-From the styles associated with the various values of the justify-content attribute, we can see that the bottom two are more similar to what we're trying to achieve.
+在多个 justify-content 属性值对应的样式中，我们发现最后两个更像我们希望实现的样式。
 
-We can either go for the space around or the space-between and provide some padding on the sides to push the items on the extreme ends from the edges. We also give the list-syle attribute a value of none to remove the dots in front of the list items.
+我们可以在 space-around 和 space-between 中任选其一，以在两侧增加一些边距并将元素推向靠近边缘的位置。我们同时将 list-syle 的值设置为 none，以去掉列表元素前的实心圆点。
 
 ```CSS
 li {
@@ -195,13 +195,13 @@ nav {
 }
 ```
 
-Navbar justify-content
+为导航栏设置 justify-content 属性
 
 ![justifycontent-2](https://www.freecodecamp.org/news/content/images/2022/10/justifycontent-2.png)
 
-justify-content navbar output
+设置 justify-content 属性后的导航栏
 
-Now that we have the items placed at their desired positions, we need to create slight spaces between them. In this case, we're going to give each list item a margin-right of 1rem. We also set other styles like size of fonts, color and a border for the register item.
+既然我们已经将元素放置在期望的位置上，我们还需要在它们中间增加一些空间。在这种情况下，我们将列表中的每个元素的 margin-right 设置为 1rem。我们还会设置例如字体大小、颜色，并为元素 register 设置边框。
 
 ```CSS
 nav {
@@ -227,13 +227,13 @@ nav {
 }
 ```
 
-Navbar complete design
+导航栏的完整设计
 
 ![justifyandstyles-1](https://www.freecodecamp.org/news/content/images/2022/10/justifyandstyles-1.png)
 
-Navbar with styles
+应用样式后的导航栏
 
-After implementing the above code, this is the final look of our navbar. And this marks the end of our Flexbox section. Next, we'll build the final part of our landing page with CSS Grid.
+在应用上述代码后，这是我们导航栏的最终样式。这也标志着我们 Flexbox 部分的结束。接下来，我们将利用 CSS Grid 打造登陆页面的最后部分。
 
 # How to Use CSS Grid
 

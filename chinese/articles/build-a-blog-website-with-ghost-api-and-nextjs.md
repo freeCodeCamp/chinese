@@ -1,100 +1,99 @@
-> -  原文地址：[How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/build-a-blog-website-with-ghost-api-and-nextjs/)
-> -  原文作者：[Rajdeep Singh](https://www.freecodecamp.org/news/author/officialrajdeepsingh/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/build-a-blog-website-with-ghost-api-and-nextjs/)
+> - 原文作者：[Rajdeep Singh](https://www.freecodecamp.org/news/author/officialrajdeepsingh/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Build a Blog with the Ghost API and Next.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/04/Ghost-API-and-Nextjs--2-.png)
 
-Ghost CMS is a popular content management system that many devs and companies use to host their blogs.
+Ghost CMS 是一个流行的内容管理系统，许多开发者和公司用它来托管他们的博客。
 
-It has many features and an editor that's highly optimized for writing. You can even build different themes using **[**handlebars**.js](https://handlebarsjs.com/).**
+它有许多功能和一个高度优化的编辑器，适合写作。你甚至可以使用 **[**handlebars**.js](https://handlebarsjs.com/) 构建不同的主题。**。
 
-But if you don't know Handlebars, learning it can be a long and difficult process. If you are already a Next.js developer and you don't know Handlebars, creating a new theme for your Ghost-based site can be tough.
+但如果你不了解 Handlebars，学习它可能是一个漫长而困难的过程。如果你已经是一个 Next.js 的开发者，而你不知道 Handlebars，为你基于 Ghost 的网站创建一个新的主题可能会很艰难。
 
-In the article, I will teach you how to use Ghost CMS as a backend and Next.js as a frontend. I will guide you through everything related to [Nextjs 13 app directory](https://beta.nextjs.org/docs/getting-started) and the Ghost CMS API.
+在这篇文章中，我将教你如何使用 Ghost CMS 作为后端和 Next.js 作为前端。我将指导你完成与 [Nextjs 13 应用目录](https://beta.nextjs.org/docs/getting-started) 和 Ghost CMS API 有关的一切。
 
-Next.js 13 team currently working on the experimental app folder. Next uses file-based routing with the `page` directory. The new `app` directory is based on file system routing and provides additional functionality like layouts, error handling, component loading, and server-side and client-side rending out of the box.
+Next.js 13 团队目前正在开发实验性的 app 文件夹。Next 使用基于文件的路由与`page`目录。新的 `app` 目录基于文件系统路由，并提供额外的功能，如布局、错误处理、组件加载、服务器端和客户端渲染等。
 
-All the code is available on [GitHub](https://github.com/officialrajdeepsingh/nextjsghostcms). You can also check out the live [demo website](https://nextjsghostcms.vercel.app/).
+所有的代码都可以在 [GitHub](https://github.com/officialrajdeepsingh/nextjsghostcms) 上找到。你也可以查看网上的 [演示网站](https://nextjsghostcms.vercel.app/)。
 
-## Table of Contents
+## 目录
 
-1.  [Why Use Next.js for the Front End and Not a Ghost CMS Theme?](#why-use-next-js-for-the-front-end-and-not-a-ghost-cms-theme)
-2.  [Project Requirements](#project-requirements)
-3.  [How to Set Up Ghost CMS](#how-to-set-up-ghost-cms)
-4.  [How to Set Up Ghost CMS with the Cloud](#how-to-set-up-ghost-cms-with-the-cloud)
-5.  [How to Get the Blog Template](#how-to-get-the-blog-template)
-6.  [How to Set Up Next.js](#how-to-set-up-next-js)
-7.  [What to know before following this tutorial](#what-to-know-before-following-this-tutorial-)
-8.  [Folder Structure](#folder-structure)
-9.  [How to Configure Ghost CMS and Next.js](#how-to-configure-ghost-cms-and-next-js)
-10.  [Understanding the Next.js 13 App Folder](#understanding-the-next-js-13-app-folder)
-11.  [Demo Data for the Project](#demo-data-for-the-project)
-12.  [How to Build the Blog](#how-to-build-the-blog)
-13.  [How to Build the Header](#how-to-build-the-header)
-14.  [How to Build the Footer](#how-to-build-the-footer)
-15.  [How to Build the Layout](#how-to-build-the-layout)
-16.  [How to Build the Homepage](#how-to-build-the-homepage)
-17.  [How to Build the Reading Page](#how-to-build-the-reading-page)
-18.  [How to Build the Tag Page](#how-to-build-the-tag-page)
-19.  [How to Build the Author Page](#how-to-build-the-author-page)
-20.  [How to Build Single Pages](#how-to-build-single-pages)
-21.  [How to Handle Pagination](#how-to-handle-pagination)
-22.  [Next.js SEO](#next-js-seo)
-23.  [How to Enable Search](#how-to-enable-search)
-24.  [Error Handling](#error-handling)
-25.  [How to Rebuild Your Static Site with Webhooks](#how-to-rebuild-your-static-site-with-webhooks)
-26.  [Conclusion](#conclusion)
+1. [为什么在前端使用 Next.js 而不是 Ghost CMS 主题？](#why-use-next-js-for-the-front-end-and-not-a-ghost-cms-theme)
+2. [做项目前需要做好的准备](#project-requirements)
+3. [如何设置 Ghost CMS](#how-to-set-up-ghost-cms)
+4. [如何利用云计算建立 Ghost CMS](#how-to-set-up-ghost-cms-with-the-cloud)
+5. [如何获得博客模板](#how-to-get-the-blog-template)
+6. [如何设置 Next.js](#how-to-set-up-next-js)
+7. [在学习本教程之前，需要知道什么](#what-to-know-before-following-this-tutorial)
+8. [文件夹结构](#folder-structure)
+9. [如何配置 Ghost CMS 和 Next.js](#how-to-configure-ghost-cms-and-next-js)
+10. [了解 Next.js 13 app 文件夹](#understanding-the-next-js-13-app-folder)
+11. [项目的演示数据](#demo-data-for-the-project)
+12. [如何建立博客](#how-to-build-the-blog)
+13. [如何建立页眉(header)](#how-to-build-the-header)
+14. [如何建立页脚(Footer)](#how-to-build-the-footer)
+15. [如何建立 layout](#how-to-build-the-layout)
+16. [如何建立主页(homepage)](#how-to-built-the-homepage)
+17. [如何建立阅读页(reading page)](#how-to-build-the-reading-page)
+18. [如何建立标签页(tag page)](#how-to-build-the-tag-page)
+19. [如何建立作者页(author page)](#how-to-build-the-author-page)
+20. [如何建立单页(single pages)](#how-to-build-single-pages)
+21. [如何处理分页(pagination)](#how-to-handle-pagination)
+22. [Next.js SEO](#next-js-seo)
+23. [如何开启搜索](#how-to-enable-search)
+24. [错误处理](#error-handling)
+25. [如何用 webhooks 重新构建你的静态网站](#how-to-rebuild-your-static-site-with-webhooks)
+26. [总结](#conclusion)
 
-In this article, we cover the basics of Next's experimental app directory. Then I'll teach you how to step up Next and Ghost CMS locally and how to integrate Ghost with Next. Lastly, I'll show you how to consume data from the backend (via theGhost CMS API ) and show it on the site with React.js.
+在这篇文章中，我们将介绍 Next 的带有实验性的 app 文件目录的基本情况。然后，我将教你如何在本地加强 Next 和 Ghost CMS，以及如何将 Ghost 与 Next 整合。最后，我会告诉你如何从后端（通过 Ghost CMS 的 API）获取数据，并用 React.js 在网站上显示。
 
-## Why Use Next.js for the Front End and Not a Ghost CMS Theme?
+<h2 id="Why Use Next.js for the Front End and Not a Ghost CMS Theme">为什么在前端使用Next.js而不是Ghost CMS主题？</h2>
 
-There are a few reasons why you might consider using Next as the frontend framework for your blog:
+有几个原因可以让你考虑使用 Next 作为你的博客的前端框架：
 
-1.  Ghost CMS doesn't generate static builds, but Next.js does.
-2.  You get increased website speed and performance with Next.js and it now provides built-in SEO support and other optimizations. Ghost doesn't have some of these features.
-3.  For React developers, it is easy to build a new blog with Next (since Next is React-based), and you do not need to learn additional tools.
-4.  You'll find a few service providers available for Ghost to deploy a Ghost blog with one click. Most of them come with a paid plan while one or two offer a free plan (but these tend to have time and feature limitations). For Next.js, many players are available in the market.
+1. Ghost CMS 不生成静态构建，但 Next.js 可以。
+2. 使用 Next.js，你可以获得更高的网站速度和性能，而且它现在提供了内置的 SEO 支持和其他优化功能。Ghost 不具备其中的一些功能。
+3. 对于 React 开发者来说，用 Next 构建一个新的博客很容易（因为 Next 是基于 React 的），你不需要学习额外的工具。
+4. 你会发现有一些服务提供商可以为 Ghost 提供服务，一键部署 Ghost 博客。他们中的大多数都有一个付费计划，而有一两个提供免费计划（但这些往往有时间和功能限制）。对于 Next.js，市场上有许多玩家。
 
-Basically, when it comes to static builds and website performance, Ghost doesn't perform as well in either case. The alternative is to use a frontend platform like Next, React, Angular, or Vue.
+通常来说，当涉及到静态构建和网站性能时，Ghost 在这两种情况下的表现都不尽如人意。另一个选择是使用一个前端平台，如 Next、React、Angular 或 Vue。
 
-I chose Next because it's a highly in-demand and popular React framework, and plenty of tools and libraries are built around it.
+我选择 Next 是因为它是一个需求量很大、很受欢迎的 React 框架，而且大量的工具和库都是围绕它建立的。
 
-Note that the current project is not ready for TypeScript, but I'm working on it. Because of this [I disabled TypeScript during build time](https://medium.com/frontendweb/basic-explanation-about-the-next-config-js-file-eaa539e1fea3) like this:
+请注意，目前的项目还没有为 TypeScript 做好准备，但我正在努力。因为这个原因 [我在构建时禁用了 TypeScript](https://medium.com/frontendweb/basic-explanation-about-the-next-config-js-file-eaa539e1fea3)，像这样：
 
 ```typescript
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    appDir: true,
+    appDir: true
   },
-  
-  typescript: {
-    ignoreBuildErrors: false,
-  },
-  
-}
 
-module.exports = nextConfig
+  typescript: {
+    ignoreBuildErrors: false
+  }
+};
+
+module.exports = nextConfig;
 ```
 
-Ignore Build Errors during development
+在开发过程中忽略构建错误
 
-## Project Requirements
+<h2 id="project-requirements">做项目前需要做好的准备</h2>
 
-To follow along with this tutorial, you'll need basic knowledge of the following packages:
+要跟上这个教程，你需要具备以下软件包的基本知识:
 
-1.  [PNPM](https://pnpm.io/) is a Node.js package manager similar to npm or yarn (you can use any of them that you prefer).
-2.  [TypeScript](https://www.typescriptlang.org/) helps you write type-safe code in JavaScript, and can also help improve productivity. It is not required, though. You can use JavaScript in your project.
-3.  [React.js](https://react.dev/) is a free and open-source front-end JavaScript library for building user interfaces with class and function components.
-4.  [Next.js 13 (app)](https://beta.nextjs.org/docs/getting-started) is based on React and it provides additional functionality like routing, error handling, and layouts.
-5.  [Ghost CMS API](https://ghost.org/docs/content-api/) is an open-source content management system (CMS) similar to WordPress. Ghost is specifically designed and built for blogging. In this project, we'll Ghost as the backend and Next as the frontend. For communication between the backend and frontend development, we'll use the Ghost CMS API.
-6.  [Tailwind CSS](https://tailwindcss.com/) is an open source CSS-based framework similar to [Bootstrap](https://getbootstrap.com/). We'll use Tailwind CSS to design our blog website.
+1. [PNPM](https://pnpm.io/)是一个类似于 npm 或 yarn 的 Node.js 包管理器（你也可以使用你喜欢的任何一个）。
+2. [TypeScript](https://www.typescriptlang.org/)帮助你在 JavaScript 中编写类型安全的代码，也可以帮助提高生产力。不过，这不是必须的。你可以在你的项目中使用 JavaScript。
+3. [React.js](https://react.dev/)是一个免费和开源的前端 JavaScript 库，用于用类和函数组件构建用户界面。
+4. [Next.js 13 (app)](https://beta.nextjs.org/docs/getting-started)是基于 React 的，它提供了额外的功能，如路由、错误处理和布局。
+5. [Ghost CMS API](https://ghost.org/docs/content-api/)是一个开源的内容管理系统（CMS），类似于 WordPress。Ghost 是专门为博客设计和建造的。在这个项目中，我们将 Ghost 作为后端，Next 作为前端。对于后端和前端开发之间的通信，我们将使用 Ghost CMS API。
+6. [Tailwind CSS](https://tailwindcss.com/)是一个开源的 CSS 的框架，类似于 [Bootstrap](https://getbootstrap.com/)。我们将使用 Tailwind CSS 来设计我们的博客网站。
 
-## How to Set Up Ghost CMS
+<h2 id="how-to-set-up-ghost-cms">如何设置Ghost CMS</h2>
 
-The next step is installing Ghost locally, which you can do with one command. First, you need to install `ghost-cli` globally with pnpm, yarn, or npm.
+下一步是在本地安装 Ghost，你可以用一条命令完成。首先，你需要用 pnpm、yarn 或 npm 全局安装`ghost-cli`。
 
 ```bash
 pnpm add -g ghost-cli@latest
@@ -110,43 +109,43 @@ npm install ghost-cli@latest -g
 
 global
 
-After installing the Ghost CLI, you can create a new Ghost blog project locally with the following command:
+安装 Ghost CLI 后，你可以用以下命令在本地创建一个新的 Ghost 博客项目:
 
 ```bash
 ghost install local
 ```
 
-After the blog installation is finished, you can start your local development server with the `ghost start` command and your local development serve on `http://localhost:2368/ghost`.
+博客安装完成后，你可以用 `ghost start` 命令启动你的本地开发服务器，你的本地开发服务可以通过`http://localhost:2368/ghost` 访问。
 
-### Additional Ghost CLI Commands
+### 其他 Ghost CLI 命令
 
-There are a few additional commands that are helpful when using the Ghost CLI:
+在使用 Ghost CLI 时，有几个命令是有帮助的:
 
--   `ghost start`: start your server.
--   `ghost stop` : stop your running Ghost server.
--   `ghost help` : check the available list of commands.
+- `ghost start`: 启动你的服务
+- `ghost stop` : 停止运行你的 Ghost 服务
+- `ghost help` : 查看可用的命令列表
 
-**Note:**
+**注意:**
 
-Make sure your current installation directory is empty before installation. Currently, you are installing Ghost in development mode. For production, you won't follow the same steps.
+在安装之前，请确保你当前的安装目录是空的。目前，你是在开发模式下安装 Ghost。对于生产来说，你不会遵循同样的步骤。
 
-## How to Set Up Ghost CMS with the Cloud
+<h2 id="how-to-set-up-ghost-cms-with-the-cloud">如何利用云计算建立Ghost CMS</h2>
 
-If you run into any problems with Ghost local installation, or maybe it's too complicated and you do not have enough space on your drive, you can use a tool like [digital press](https://www.digitalpress.blog/) or any other cloud service like GCP or AWS, Digital Ocean, and so on.
+如果你在本地安装 Ghost 时遇到任何问题，或者可能太复杂，或者你的驱动器上没有足够的空间，你可以使用像 [digital press](https://www.digitalpress.blog/) 这样的工具或任何其他云服务，如 GCP 或 AWS，Digital Ocean，等等。
 
-I like digital press because it comes with a free plan. Other cloud services do not provide that, which is why I suggest it.
+我喜欢 digital press，因为它有一个免费计划。其他云服务不提供这一点，这就是为什么我建议它。
 
-## How to Get the Blog Template
+<h2 id="how-to-get-the-blog-template">如何获得博客模板</h2>
 
-Creating a new blog from scratch can be tough. In this tutorial, we'll use a pre-build template from [the frontend web](https://github.com/orgs/frontendweb3). All templates have an open-source MIT license, so you can use them, and you don't need to set up everything.
+从头开始创建一个新的博客可能很困难。在本教程中，我们将使用一个来自 [the frontend web](https://github.com/orgs/frontendweb3) 的预构建好的模板。所有的模板都有一个开源的 MIT 许可，所以你可以使用它们，而且你不需要设置一切。
 
-I picked the [Open-blog](https://github.com/frontendweb3/open-blog) template from the frontend web.
+我从里面挑选了 [Open-blog](https://github.com/frontendweb3/open-blog) 的模板。
 
-## How to Set Up Next.js
+<h2 id="how-to-set-up-next-js">如何设置Next.js</h2>
 
-Setting up Next is one of the main parts of this tutorial, where you'll spend time and energy coding, debugging, and deploying the site.
+设置 Next 是本教程的主要部分之一，你将花时间和精力在编码、调试和部署网站上。
 
-Here are the commands to run depending on whether you're using npx, yarn, or pnpm:
+以下是要运行的命令，取决于你使用的是 npx、yarn，还是 pnpm：
 
 ```bash
 npx create-next-app@latest --experimental-app
@@ -160,65 +159,65 @@ yarn create next-app --experimental-app
 pnpm create next-app --experimental-app
 ```
 
-Install nextjs with the experimental app folder.
+安装 nextjs 的时候使用新的实验性功能.
 
 ![create a new nextjs app.](https://www.freecodecamp.org/news/content/images/2023/03/ghostandnextjs--1-.png)
 
-create a new nextjs app.
+创建一个新的 Nextjs 应用程序。
 
-After completing the installation process, we must install some additional Node packages for the blog.
+完成安装过程后，我们必须为博客安装一些额外的 Node 包。
 
-These Node packages can help you speed up your development process. Make sure to install all the below packages to follow along with this guide:
+这些 Node 包可以帮助你加快开发进程。请确保安装以下所有的包，以便跟上本指南：
 
-### Node packages to install:
+### 要安装的 Node 包
 
-1.  `pnpm add @tryghost/content-api`(required)
-2.  `pnpm add @types/tryghost__content-api` (required by TypeScript)
-3.  `pnpm add tailwindcss postcss autoprefixer`
-4.  `pnpm add  @tailwindcss/typography`
-5.  `pnpm add react-icons`
-6.  `pnpm add date-fns`
-7.  `pnpm add next-themes`
-8.  `pnpm add @radix-ui/react-popover`
+1. `pnpm add @tryghost/content-api`(required)
+2. `pnpm add @types/tryghost__content-api` (required by TypeScript)
+3. `pnpm add tailwindcss postcss autoprefixer`
+4. `pnpm add @tailwindcss/typography`
+5. `pnpm add react-icons`
+6. `pnpm add date-fns`
+7. `pnpm add next-themes`
+8. `pnpm add @radix-ui/react-popover`
 
-Here's what each of these packages does:
+以下是这些包的作用:
 
--   [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package is a Ghost JavaScript Client Library for fetching [content API](https://ghost.org/docs/content-api/) data.
--   [@types/tryghost\_\_content-api](https://www.npmjs.com/package/@types/tryghost__content-api) package contains type definitions for @tryghost/content-api.
--   TailwindCSS, autoprefixer, and PostCSS are packages required for [Tailwind CSS](https://beta.nextjs.org/docs/styling/tailwind-css).
--   [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) package for handling dynamic typography with Tailwind CSS.
--   The [next-themes](https://www.npmjs.com/package/next-themes) package enables themes like switching from dark to light mode on your site.
--   The [react-icons](https://www.npmjs.com/package/react-icons) package provides lots of SVG icons for the project. This way, you do not need to download them manually.
--   [@radix-ui/react-popover](https://www.radix-ui.com/docs/primitives/components/popover#installation) is part of the Radix UI ecosystem. I choose the Radix popover component for the design of the search component on the site.
--   [date-fns](https://www.npmjs.com/package/date-fns) package helps convert your `published_at` date into a different date format.
+- [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) 是一个 Ghost JavaScript 客户端库，用于获取[content API](https://ghost.org/docs/content-api/)数据。
+- [@types/tryghost\_\_content-api](https://www.npmjs.com/package/@types/tryghost__content-api) 包含@tryghost/content-api 的类型定义。
+- TailwindCSS、autoprefixer 和 PostCSS 都是在使用时需要的包。 [Tailwind CSS](https://beta.nextjs.org/docs/styling/tailwind-css).
+- [@tailwindcss/typography](https://tailwindcss.com/docs/typography-plugin) 用于用 Tailwind CSS 处理动态排版的包。
+- [next-themes](https://www.npmjs.com/package/next-themes) 主题包，如在你的网站上从黑暗模式切换到日间模式。
+- [react-icons](https://www.npmjs.com/package/react-icons)为项目提供了大量的 SVG 图标。这样一来，你就不需要手动下载它们了。
+- [@radix-ui/react-popover](https://www.radix-ui.com/docs/primitives/components/popover#installation)是 Radix UI 生态系统的一部分。我选择 Radix 的弹出式组件来设计网站上的搜索组件。
+- [date-fns](https://www.npmjs.com/package/date-fns) 有助于将你的`published_at`日期转换成不同的日期格式的包。
 
-## What to Know Before Following This Tutorial
+<h2 id="what-to-know-before-following-this-tutorial">在学习本教程之前，需要知道什么</h2>
 
-Before building this project, I highly recommend watching some tutorials on YouTube (especially if you're a beginner with Next.js). These will help you understand some basics about the Next.js experimental app folder.
+在构建这个项目之前，我强烈建议在 YouTube 上观看一些教程（尤其是如果你是 Next.js 的初学者）。这些将帮助你了解有关 Next.js app 文件夹的实验性功能一些基本知识。
 
-Every video explains the same kind of topic. If you watch each of the four videos, you have a basic idea of how the Next.js app folder works. That will make this advanced tutorial easier to follow.
+每个视频将解释同一类主题。如果你看了这四个视频中的每一个，你就对 Next.js 应用文件夹的工作原理有了基本的了解。这将使这个高级教程更容易理解。
 
 ### [Vercel](https://www.youtube.com/@VercelHQ)
 
-In this tutorial, Lee Robinson covers the basics of routing, dynamic route segments, data fetching, caching, and metadata.
+在本教程中，Lee Robinson 介绍了路由(route)、动态路由段(dynamic route segments)、数据获取(data fetching)、缓存(caching)和元数据(metadata)的基础知识。
 
 ### [Sakura Dev](https://www.youtube.com/@SakuraDev)
 
-Sakura Dev teaches you about the difference between Next.js pages and the app folder and routing with examples.
+Sakura Dev 用实例教你 Next.js 页面和 App 文件夹以及路由之间的区别。
 
 ### Tuomo Kankaanpaa
 
-Tuomo Kankaanpaa teaches you about Next app folder routing, layouts, and server components.
+Tuomo Kankaanpaa 教你了解 Next 应用程序的文件夹路由(folder routing)、布局(layouts)和服务器组件(server components)。
 
 ### [Piyush Garg](https://www.youtube.com/watch?v=CBfBZvDQLis)
 
-Piyush Garg compiles all the new Next features and converts them into a small crash course, and builds a demo project.
+Piyush Garg 编译了所有 Next 的新功能，并将其转换为一个小的速成课程，并建立了一个演示项目。
 
-Now that you're ready to go, let's get into building our blog.
+现在你已经准备好了，让我们开始建立我们的博客。
 
-## Folder Structure
+<h2 id="folder-structure">文件夹结构</h2>
 
-Our folder structure looks like this for our demo application:
+对于我们的演示应用程序，我们的文件夹结构看起来像这样：
 
 ```bash
 .
@@ -269,250 +268,259 @@ Our folder structure looks like this for our demo application:
 13 directories, 30 files
 ```
 
-folder structure with nextjs and ghost cms
+使用 Nextjs 和 Ghost cms 的文件夹结构
 
-## How to Configure Ghost CMS and Next.js
+<h2 id="how-to-configure-ghost-cms-and-next-js">如何配置Ghost CMS和Next.js</h2>
 
-The next step is to set up data fetching for the Ghost Content API. This is why we installed the [@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api) package above.  
+下一步是为 Ghost Content API 设置数据获取。这就是为什么我们安装了上面的[@tryghost/content-api](https://www.npmjs.com/package/@tryghost/content-api)包。
 
-Ghost CMS comes with two types of APIs: the first is the [Content API](https://ghost.org/docs/content-api/), and the second is the [Admin API](https://ghost.org/docs/admin-api/). For the blog, we'll use the **[Content API](https://ghost.org/docs/content-api/).**
+Ghost CMS 带有两种类型的 API：第一种是[内容 API](https://ghost.org/docs/content-api/)，第二种是[管理 API](https://ghost.org/docs/admin-api/)。对于博客，我们将使用**[内容 API](https://ghost.org/docs/content-api/)**。
 
-Content API is a RESTful API that fetches the published content for the Ghost database. It is a read-only API. You can not call POST requests with it.
+内容 API 是一个 RESTful API，为 Ghost 数据库获取已发布的内容。它是一个只读的 API。你不能用它来调用 POST 请求。
 
-To configure it, we create a new file inside the `src/app` folder with `ghost-client.ts`. Inside the file, we have a new Ghost API instance.
+为了配置它，我们在`src/app`文件夹下创建了一个新的文件`ghost-client.ts`。在该文件中，我们有一个新的 Ghost API 实例。
 
 ```typescript
 // ghost-client.ts
 
-import GhostContentAPI from "@tryghost/content-api";
+import GhostContentAPI from '@tryghost/content-api';
 
 // Create API instance with site credentials
 const api = new GhostContentAPI({
   url: process.env.GHOST_URL as string,
   key: process.env.GHOST_KEY as string,
-  version: "v5.0"
+  version: 'v5.0'
 });
 ```
 
-Create a new Ghost CMS instance.
+创建一个新的 Ghost CMS 实例。
 
-We need the blog URL, key, and version to config the Ghost content API in Next. You can find both the URLs and Key properties in the Ghost dashboard, as well as the version value which is your current version of Ghost CMS.
+我们需要博客的 URL、Key 和版本来在 Next 中配置 Ghost 的内容 API。你可以在 Ghost 仪表盘中找到 URLs 和 Key 属性，以及版本值，它是你当前 Ghost CMS 的版本。
 
-Go to the Ghost dashboard:
+进入 Ghost 仪表板：
 
 ![Get your KEY and URL](https://www.freecodecamp.org/news/content/images/2023/03/ghost-next.gif)
 
-Get your KEY and URL
+获取你的 KEY 和 URL
 
-Go to `dashboard` > `settings` > `integrations` > `Your-intergration-id` and get your `GHOST_URL` and `GHOST_KEY` . Now you can copy both and paste them inside your `.env.local` file.
+去到 `dashboard` > `settings` > `integrations` > `Your-intergration-id`， 获得你的 `GHOST_URL` 和 `GHOST_KEY`。 现在你可以复制这两份信息，并将其粘贴在你的 `.env.local` 文件.
 
 ![Get your Ghost_Key and Ghost_URL](https://www.freecodecamp.org/news/content/images/2023/03/next-and-ghost.png)
 
-Get your `GHOST_KEY` and `GHOST_URL`
+获得你的 `GHOST_KEY` 和 `GHOST_URL`
 
-## Understanding the Next.js 13 App Folder
+<h2 id="understanding-the-next-js-13-app-folder">了解Next.js 13 app文件夹</h2>
 
-There have been lots of changes in the Next.js `pages` folder and `app` folder with the release of Next.js 13. We'll discuss some important stuff now and more when we're building the app:
+随着 Next.js 13 的发布，Next.js 的`pages`文件夹和`app`文件夹发生了很多变化。我们现在就来讨论一些重要的东西，在构建应用时再讨论更多：
 
-1.  There is no `_app` , `_document`, `getServerSideProps`, `getStaticProps`, `getStaticPaths` , `404` and `useRouter`.
-2.  Now it combines the `_app` and `_document` files with the `layout` file.
-3.  `useRouter` is import from `next/navigation`.
-4.  The `404` file is replaced by the `notFound()` function.
-5.  The `error.tsx` file provides functionality like reacting to error boundaries.
-6.  Now the `index.js` file is replaced by `page.js`.
-7.  Passing dynamic route segments `pages/blog/[slug].js` is changed, and the Next app directory looks like this: `app/blog/[slug]/page.js`.
+1. 没有`_app`、`_document`、`getServerSideProps`、`getStaticProps`、`getStaticPaths`、`404`和`useRouter`
+2. 现在它将`_app`和`_document`文件与`layout`文件相结合。
+3. `useRouter`是从`next/navigation`中导入的。
+4. `404`文件被`notFound()`函数取代。
+5. `error.tsx`文件提供了对错误边界的反应等功能。
+6. 现在`index.js`文件被`page.js`取代。
+7. 传递动态路由段`pages/blog/[slug].js`被改变，下一个应用程序目录看起来像这样： `app/blog/[slug]/page.js`。
 
-### Examples
+### 例子
 
-To understand the Next experimental app folder, let's look at a real example:
+为了理解 Next 带有实验性的 app 文件夹，让我们看看一个真实的例子：
 
-1.  **tag page** => `app/tag/[slug]/page.ts`
-2.  **category** => `app/tag/[slug]/page.ts`
+1. **tag page** => `app/tag/[slug]/page.ts`。
+2. **category** => `app/tag/[slug]/page.ts`。
 
-Now you can create five files inside every route. For example, if you create a `tag` or **`category`** route in your app folder, then you can create four files inside your app route folder.
+现在你可以在每个路由里面创建五个文件。例如，如果你在你的 app 文件夹中创建一个`tag` 或 **`category`** 路由，那么你可以在你的 app 路由文件夹中创建四个文件。
 
--   `page.ts` (required): it is your main file.
--   `layout.ts` (optional): it helps design your layout
--   `loading.ts` (optional): it creates a loading indicator with React suspense.
--   `error.ts` (optional): it helps handle errors in your React app.
--   `components` (optional): you can also create another component in your routes.
+- `page.ts`（必填）：它是你的主文件。
+- `layout.ts`（可选）：它有助于设计你的布局。
+- `loading.ts` (可选): 它用 React suspense 创建一个加载指标。
+- `error.ts` (可选): 它帮助处理你的 React 应用程序中的错误。
+- `components`（可选）：你也可以在你的路由中创建另一个组件。
 
-Let's understand how the new Next.js 13 app route works with a real-life example: your tag route folder looks like this.
+让我们通过一个真实的例子来了解新的 Next.js 13 路由是如何工作的：你的标签路由文件夹看起来像这样。
 
 ```typescript
-app/tag/[slug]/page.ts
-app/tag/[slug]/loading.ts
-app/tag/[slug]/layout.ts
-app/tag/[slug]/error.ts
-app/tag/[slug]/my-card-component.ts
+app / tag / [slug] / page.ts;
+app / tag / [slug] / loading.ts;
+app / tag / [slug] / layout.ts;
+app / tag / [slug] / error.ts;
+app / tag / [slug] / my - card - component.ts;
 ```
 
-Tag folder structure
+Tag 文件夹结构
 
-## Demo Data for the Project
+<h2 id="demo-data-for-the-project">项目的演示数据</h2>
 
-You don't have to worry about creating a demo or dummy blog post data. For your testing, You can download it from this [GitHub repository](https://github.com/officialrajdeepsingh/nextjsghostcms/blob/main/.github/demo-post-for-ghost.json).
+你不必担心创建一个演示或假的博客文章数据。对于你的测试，你可以从这个[GitHub 仓库](https://github.com/officialrajdeepsingh/nextjsghostcms/blob/main/.github/demo-post-for-ghost.json)下载它。
 
-## How to Build the Blog
+<h2 id="how-to-build-the-blog">如何建立博客</h2>
 
-We'll go through and build each part of the blog in the following sections so you can follow along at home.
+我们将在下面的章节中对博客的每个部分进行梳理和构建，这样你就可以在家里一个人跟着做。
 
-1.  [How to build the header](#how-to-build-the-header)
-2.  [How to build the footer](#how-to-build-the-footer)
-3.  [How to build the layout](#how-to-build-the-layout)
-4.  [How to build the homepage](#how-to-built-the-homepage)
-5.  [How to build the reading page](#how-to-build-the-reading-page)
-6.  [How to build the tag page](#how-to-build-the-tag-page)
-7.  [How to build the author page](#how-to-build-the-author-page)
-8.  [How to build single pages](#how-to-build-single-pages)
-9.  [How to handle pagination](#how-to-handle-pagination)
-10.  [Next.js SEO](#next-js-seo)
-11.  [How to Enable Search](#how-to-enable-search)
-12.  [Error Handling](#error-handling)
-13.  [How to rebuild your static site with webhooks](#how-to-rebuild-your-static-site-with-webhooks)
+1. [如何建立页眉(header)](#how-to-build-the-header)
+2. [如何建立页脚(footer)](#how-to-build-the-footer)
+3. [如何建立 layout](#how-to-build-the-layout)
+4. [如何建立主页(homepage)](#how-to-built-the-homepage)
+5. [如何建立阅读页(reading page)](#how-to-build-the-reading-page)
+6. [如何建立标签页(tag page)](#how-to-build-the-tag-page)
+7. [如何建立作者页(author page)](#how-to-build-the-author-page)
+8. [如何建立单页(single pages)](#how-to-build-single-pages)
+9. [如何处理分页(pagination)](#how-to-handle-pagination)
+10. [Next.js SEO](#next-js-seo)
+11. [如何开启搜索](#how-to-enable-search)
+12. [错误处理](#error-handling)
+13. [如何用 webhooks 重建你的静态网站](#how-to-rebuild-your-static-site-with-webhooks)
 
-### How to Build the Header
+<h3 id="how-to-build-the-header">如何建立页眉(header)</h3>
 
-The first and main part of the site is the header. First, we'll create a simple header for our demo blog. Our header will end up looking like this:
+网站的第一个也是最主要的部分是页眉(header)。首先，我们将为我们的演示博客创建一个简单的页眉(header)。我们的页眉最终将看起来像这样：
 
 ![Header of site](https://www.freecodecamp.org/news/content/images/2023/04/header.png)
 
-Design of the header
+页眉的设计
 
-First is the logo, next comes the nav bar with various elements, and last is the icon section. All the data comes from the Ghost CMS API. You can change things inside Ghost CMS and it will reflect on the site.
+首先是 logo，接下来是带有各种元素的导航栏(nav)，最后是图标部分(icon)。所有的数据都来自 Ghost CMS 的 API。你可以在 Ghost CMS 里面改变东西，而且会反映在网站上。
 
-Here's the code to build the header component:
+下面是建立标题组件的代码：
 
 ```typescript
 // Header.tsx
 
-import Link from "next/link";
-import SocialIcons from "./SocialIcons";
-import Image from "next/image";
-import type { Settings } from "@tryghost/content-api";
+import Link from 'next/link';
+import SocialIcons from './SocialIcons';
+import Image from 'next/image';
+import type { Settings } from '@tryghost/content-api';
 
 function Header({ setting }: { setting: Settings }) {
-
   return (
     <header className="px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full">
-
       <div className="container flex flex-wrap items-center justify-between mx-auto">
         {/* Logo for blog */}
         <Link href="/" className="flex items-center">
-          {setting.logo !== null ?
+          {setting.logo !== null ? (
             <Image
-              alt={setting.title} width={200} height={100} src={setting.logo} className="self-center text-xl font-semibold whitespace-nowrap dark:text-white" />
-            : setting.title}
+              alt={setting.title}
+              width={200}
+              height={100}
+              src={setting.logo}
+              className="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            />
+          ) : (
+            setting.title
+          )}
         </Link>
         <div className="flex md:order-2">
-
           <ul className="flex flex-wrap p-4 md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-
             {
               /* Blog Navigation Edit in GHOST CMS  */
-              setting.navigation !== undefined ? setting?.navigation.map(item => <li key={item.label} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
-                aria-current="page">
-                <Link href={item.url}>
-                  {item.label}
-                </Link>
-              </li>) : " "
-
+              setting.navigation !== undefined
+                ? setting?.navigation.map((item) => (
+                    <li
+                      key={item.label}
+                      className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                      aria-current="page"
+                    >
+                      <Link href={item.url}>{item.label}</Link>
+                    </li>
+                  ))
+                : ' '
             }
-
           </ul>
-
         </div>
         <SocialIcons setting={setting} />
       </div>
-
-    </header >
-  )
-
+    </header>
+  );
 }
-export default Header
+export default Header;
 ```
 
-### How to Build the Footer
+<h3 id="how-to-build-the-footer">如何建立页脚(Footer)</h3>
 
-The footer is also an important section of a blog site. It shows your important information and various helpful links.
+页脚(footer)也是博客网站的一个重要部分。它显示你的重要信息和各种有用的链接。
 
 ![Design footer](https://www.freecodecamp.org/news/content/images/2023/04/footer.png)
 
-Design of the footer
+页脚的设计
 
-I designed a basic footer with copyrighted text and added social icons for the site. The social icons come from the Ghost CMS API.
+我设计了一个带有版权文本的基本页脚(footer)，并为网站添加了社交图标。这些社交图标来自 Ghost CMS 的 API。
 
 ```typescript
 // Footer.tsx
 
-import { FaTwitter, FaFacebook } from "react-icons/fa";
-import Link from "next/link";
-import type { Settings } from "@tryghost/content-api";
+import { FaTwitter, FaFacebook } from 'react-icons/fa';
+import Link from 'next/link';
+import type { Settings } from '@tryghost/content-api';
 
 function Footer({ setting }: { setting: Settings }) {
-
   return (
-
     <footer className="px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full">
-
       <div className="container flex flex-wrap items-center justify-between mx-auto">
-
-        <Link href="https://github.com/frontendweb3" className="flex items-center">
-          <span className="self-center text-gray-800 text-sm font-semibold whitespace-nowrap dark:text-white">2023 copyright frontend web</span>
+        <Link
+          href="https://github.com/frontendweb3"
+          className="flex items-center"
+        >
+          <span className="self-center text-gray-800 text-sm font-semibold whitespace-nowrap dark:text-white">
+            2023 copyright frontend web
+          </span>
         </Link>
 
         <div className="flex md:order-2">
-
           <ul className="flex p-4 flex-row md:space-x-8 md:mt-0 md:text-sm font-medium">
-
-            {
-              setting.twitter !== null ? <li>
-                <Link target="_blank" href={`https://twitter.com/${setting.twitter}`} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white" aria-current="page">
+            {setting.twitter !== null ? (
+              <li>
+                <Link
+                  target="_blank"
+                  href={`https://twitter.com/${setting.twitter}`}
+                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                  aria-current="page"
+                >
                   <FaTwitter />
                 </Link>
-              </li> : " "
+              </li>
+            ) : (
+              ' '
+            )}
 
-            }
-
-            {
-              setting.facebook !== null ? <li>
-                <Link target="_blank" href={`https://www.facebook.com/${setting.facebook}`} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white ">
+            {setting.facebook !== null ? (
+              <li>
+                <Link
+                  target="_blank"
+                  href={`https://www.facebook.com/${setting.facebook}`}
+                  className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white "
+                >
                   <FaFacebook />
                 </Link>
-              </li> : " "
-
-            }
-
+              </li>
+            ) : (
+              ' '
+            )}
           </ul>
         </div>
-
       </div>
     </footer>
-
-  )
+  );
 }
 
-export default Footer
+export default Footer;
 ```
 
-### How to Build the Layout
+<h3 id="how-to-build-the-layout">如何建立 layout</h3>
 
-I designed a basic layout for the blog. For building layouts in Next.js, there's a special `layout.tsx` file.
+我为博客设计了一个基本的布局(layout)。为了在 Next.js 中构建布局，有一个特殊的`layout.tsx`文件。
 
-Before we create the layout design, we need to define a `getNavigation` function to **fetch** navigation and basic website-related data from Ghost.
+在创建布局(layout)设计之前，我们需要定义一个`getNavigation` 函数来从 Ghost 中获取导航和基本的网站相关数据。
 
 ```typescript
 // ghost-client.ts
 
-
 export async function getNavigation() {
-  return await api.settings.browse()
+  return await api.settings.browse();
 }
 ```
 
 Fetch
 
-#### The data look like this:
+#### 这些数据看起来像这样
 
 ```object
 {
@@ -535,15 +543,15 @@ Fetch
   ],
   secondary_navigation: Array(1) [ { label: 'Login', url: '#/portal/' } ],
   meta_title: 'My demo post',
-  meta_description: 
+  meta_description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
   og_image: null,
   og_title: null,
-  og_description: 
+  og_description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
   twitter_image: null,
   twitter_title: null,
-  twitter_description: 
+  twitter_description:
     'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.',
   members_support_address: 'noreply',
   members_enabled: true,
@@ -562,97 +570,93 @@ Fetch
 }
 ```
 
-Data receive by api.settings.browse()
+api.settings.browse()接收的数据
 
-The `getNavigation` function returns the settings data, and then we pass the data as props into the header and footer components.
+`getNavigation`函数返回设置数据，然后我们把数据作为 props 传给页眉(header)和页脚(footer)组件。
 
-Our Main `layout.tsx` file works server side. It helps fetch data on the server side with the React `use` hook.
+我们的主文件`layout.tsx`在服务器端工作。它通过 React `use` hook 帮助在服务器端获取数据。
 
 ```typescript
 // Layout.tsx
 
-
-import "./globals.css";
-import BlogLayout from './BlogLayout'
-import { getNavigation, } from "./ghost-client"
-import { use } from "react"
-import type { Settings } from "@tryghost/content-api"
+import './globals.css';
+import BlogLayout from './BlogLayout';
+import { getNavigation } from './ghost-client';
+import { use } from 'react';
+import type { Settings } from '@tryghost/content-api';
 
 interface UpdateSettings extends Settings {
   accent_color?: string;
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
-
-  const settings: UpdateSettings = use(getNavigation())
+  const settings: UpdateSettings = use(getNavigation());
 
   return (
-
-    <html className='light' lang="en">
-
+    <html className="light" lang="en">
       <body
         style={{
-          '--bg-color': settings?.accent_color ? settings.accent_color : "",
+          '--bg-color': settings?.accent_color ? settings.accent_color : ''
         }}
-        className={` bg-[--bg-color] dark:bg-gray-900`}>
-
-        <BlogLayout setting={settings}>
-
-          {children}
-
-        </BlogLayout>
-
+        className={` bg-[--bg-color] dark:bg-gray-900`}
+      >
+        <BlogLayout setting={settings}>{children}</BlogLayout>
       </body>
-
     </html>
-
-  )
+  );
 }
 ```
 
-#### BlogLayout component
+#### BlogLayout 组件
 
-The `BlogLayout` component works on the client side. In the Next.js app folder, you can easily convert your server-side component to the client side with the following `"use client"` syntax.
+`BlogLayout`组件在客户端工作。在 Next.js 应用程序文件夹中，你可以通过以下 `use client` 的语法轻松地将服务器端的组件转换到客户端。
 
-The purpose of the BlogLayout component is to contain the [ThemeProvider](https://www.npmjs.com/package/next-themes), header, and footer. ThemeProvider is a high-order component, and it provides additional functionality, like changing the theme from dark to light. We wrap the intra-site with ThemeProvider's higher component. In the old pages directory, we achieve similarly functionally with  nextjs `_app.ts` custom app.
+BlogLayout 组件的目的是包含[ThemeProvider](https://www.npmjs.com/package/next-themes)、页眉(header)和页脚(footer)。ThemeProvider 是一个高阶组件，它提供额外的功能，比如将主题从深色改为浅色。我们用 ThemeProvider 的高阶组件来包含网站内的内容。在旧页面目录中，我们用 nextjs 中的 `_app.ts`自定义应用程序实现类似的功能。
 
-ThemeProvider component helps to change the theme from light to dark mode.
+ThemeProvider 组件有助于将主题从浅色变为深色模式。
 
 ```typescript
-"use client"
+'use client';
 
 // BlogLayout.tsx
 
-import Footer from "./Footer";
-import Header from "./Header";
+import Footer from './Footer';
+import Header from './Header';
 import { ThemeProvider } from 'next-themes';
-import type { Settings } from "@tryghost/content-api";
-function Layout({ setting, children }: { setting: Settings, children: React.ReactNode }) {
-  return <ThemeProvider attribute="class">
-    <Header setting={setting} />
-    {children}
-    <Footer setting={setting} />
-  </ThemeProvider>
-
+import type { Settings } from '@tryghost/content-api';
+function Layout({
+  setting,
+  children
+}: {
+  setting: Settings;
+  children: React.ReactNode;
+}) {
+  return (
+    <ThemeProvider attribute="class">
+      <Header setting={setting} />
+      {children}
+      <Footer setting={setting} />
+    </ThemeProvider>
+  );
 }
-export default Layout
+export default Layout;
 ```
 
 `BlogLayout.tsx` component
 
-### How to Build the Homepage
+<h3 id="how-to-built-the-homepage">如何建立主页(homepage)</h3>
 
-Next.js has a special `app/page.tsx` file for designing and building the home page. Our blog website's home page looks like what you see below. We import the header, card, pagination, and footer on the home page. The header and footer are part of `layout.tsx`.
+Next.js 有一个特殊的`app/page.tsx`文件，用于设计和建立主页(home page)。我们的博客网站的主页看起来就像你下面看到的那样。我们在主页(home page)上导入页眉(header)、卡片(card)、分页(pagination)和页脚(footer)。页眉(header)和页脚(footer)是`layout.tsx`的一部分。
 
 ![Home page](https://www.freecodecamp.org/news/content/images/2023/04/Home-page-1.png)
 
-Home page
+Home page(主页)
 
-First, we fetch all posts data from Ghost CMS with the help of the `getPosts`  function, which I defined in the `ghost-client.ts` file.
+首先，我们在`ghost-client.ts`文件中定义的`getPosts`函数的帮助下，从 Ghost CMS 获取所有帖子数据。
 
 ```typescript
 // ghost-client.ts
@@ -660,20 +664,20 @@ First, we fetch all posts data from Ghost CMS with the help of the `getPosts`  
 export async function getPosts() {
   return await api.posts
     .browse({
-      include: ["tags", "authors"],
+      include: ['tags', 'authors'],
       limit: 10
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
 }
 ```
 
-Data receive by api.posts.browse()
+api.post.browse()接收的数据
 
-By default, the `api.post.browse()` returns only post data, but you can easily extend it. In every article or post data, we also include tags and authors with the help of `include`. Then we set the article limit to ten.
+默认情况下，`api.post.browse()`只返回文章数据，但你可以轻松地扩展它。在每篇文章或帖子数据中，我们还用`include`的帮助包括标签和作者。然后，我们将文章限制设置为 10 条。
 
-#### The data look like this:
+#### 数据看起来像这样
 
 ```JSON
  [
@@ -697,15 +701,15 @@ eploy.png" width="1500" height="400" loading="lazy" alt srcset="http://localhost
 ntent/images/size/w1000/2023/03/Build-and-deploy-profile--1--1.png 1000w, http://localhost:2368/content/images/2023/03/Build-and-deploy-profile--1--1.png 1500w" siz
 es="(min-width: 720px) 720px"></div><div class="kg-gallery-image"><img src="http://localhost:2368/content/images/2023/03/Build--Test-and-Deploy-profile-1.png" width
 ="1500" height="400" loading="lazy" alt srcset="http://localhost:2368/content/images/size/w600/2023/03/Build--Test-and-Deploy-profile-1.png 600w, http://localhost:2
-368/content/images/size/w1000/2023/03/Build--Test-and-Deploy-profile-1.png 1000w, http://localhost:2368/content/images/2023/03/Build--Test-and-Deploy-profile-1.png 
+368/content/images/size/w1000/2023/03/Build--Test-and-Deploy-profile-1.png 1000w, http://localhost:2368/content/images/2023/03/Build--Test-and-Deploy-profile-1.png
 1500w" sizes="(min-width: 720px) 720px"></div></div></div><figcaption>Build and deploy</figcaption></figure><h2 id="why-do-we-use-it">Why do we use it?</h2><p>It is
  a long-established fact that a reader will be distracted by the readable content of a page when looking at its layout. </p><p>The point of using Lorem Ipsum is tha
-t it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p><p>Many desktop 
-publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their 
+t it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. </p><p>Many desktop
+publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their
 infancy. </p><p>Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p><hr><h2 id="where-can-i
 -get-some">Where can I get some?</h2><p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by i
 njected humour, or randomised words which don't look even slightly believable. </p><p>If you are going to use a passage of Lorem Ipsum, you need to be sure there is
-n't anything embarrassing hidden in the middle of text. </p><p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making 
+n't anything embarrassing hidden in the middle of text. </p><p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making
 this the first true generator on the Internet. </p><p>It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generat
 e Lorem Ipsum which looks reasonable. </p><p>The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.</
 p><div class="kg-card kg-callout-card kg-callout-card-red"><div class="kg-callout-emoji">💡</div><div class="kg-callout-text">My note is here&nbsp;</div></div><p></
@@ -723,7 +727,7 @@ sive Web App and How to enable it in nextjs Application?</div><div class="kg-boo
 js and publish on Google play store, Microsoft store, Meta Quest, and…</div><div class="kg-bookmark-metadata"><img class="kg-bookmark-icon" src="https://cdn-static-
 1.medium.com/_/fp/icons/Medium-Avatar-500x500.svg" alt><span class="kg-bookmark-author">FrontEnd web</span><span class="kg-bookmark-publisher">Rajdeep singh</span><
 /div></div><div class="kg-bookmark-thumbnail"><img src="https://miro.medium.com/v2/resize:fit:1200/1*yAoHfq4Wm2Bp8DU1Dav29Q.png" alt></div></a><figcaption>Bookmark<
-/figcaption></figure><div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header" 
+/figcaption></figure><div class="kg-card kg-header-card kg-width-full kg-size-small kg-style-dark" style data-kg-background-image><h2 class="kg-header-card-header"
 id="thank-you">Thank you</h2></div>',
     comment_id: '6422a742136f5d40f37294f5',
     feature_image: 'https://images.unsplash.com/photo-1543966888-7c1dc482a810?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDE2fHxqYXZhc2Nya
@@ -792,7 +796,7 @@ XB0fGVufDB8fHx8MTY3OTk5MjY1NA&ixlib=rb-4.0.3&q=80&w=2000',
     email_subject: null,
     frontmatter: null,
     feature_image_alt: 'Demo Posts with Nextjs and Ghost Editor',
-    feature_image_caption: 'Photo by <a href="https://unsplash.com/@pinjasaur?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Paul Esch-Laurent</a> / 
+    feature_image_caption: 'Photo by <a href="https://unsplash.com/@pinjasaur?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Paul Esch-Laurent</a> /
 <a href="https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit">Unsplash</a>'
   },
 meta:{
@@ -801,80 +805,79 @@ meta:{
 ]
 ```
 
-Data receive by `api.post.browse()`
+由`api.post.browse()`接收的数据
 
-Now we call the `getPosts` function on the server side. It returns all the post data with the associated tags and authors. Now you can loop through the data with a `map()` function.
+现在我们在服务器端调用`getPosts`函数。它返回所有的帖子数据以及相关的标签和作者。现在你可以用`map()`函数循环浏览这些数据。
 
-We pass the data into `app/page.tsx` to the `card.tsx` components. We pass the article data as props into the card component.
+我们将数据传入`app/page.tsx`到`card.tsx`组件。我们把文章数据作为 prop 传给卡片组件。
 
 ```typescript
-
 // src/app/page.tsx
 
-import { getPosts } from "./ghost-client"
-import Card from './Card'
+import { getPosts } from './ghost-client';
+import Card from './Card';
 
 export default async function Home() {
-
-  const getPost = await getPosts()
+  const getPost = await getPosts();
 
   return (
     <>
       <main className="container my-12 mx-auto grid grid-cols-1 gap-2 md:gap-3 lg:gap-4 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
-
-        {
-          getPost?.map(
-            item => {
-              return <Card key={item.uuid} item={item} />
-            })
-        }
-
+        {getPost?.map((item) => {
+          return <Card key={item.uuid} item={item} />;
+        })}
       </main>
-
     </>
-  )
+  );
 }
 ```
 
 Design home `/app/page.tsx`
 
-#### Card component
+#### Card 组件
 
-I designed a basic card for the blog. The card component looks like this:
+我为博客设计了一张基本的卡片。卡片组件看起来像这样：
 
-![Card component](https://www.freecodecamp.org/news/content/images/2023/04/card.png)
+![卡片组件](https://www.freecodecamp.org/news/content/images/2023/04/card.png)
 
-Card component
+卡片组件
 
-I rendered every item of data coming from the home page as props and showed it on the site with `Card.tsx` .
+我把来自主页的每项数据都渲染成 prop，并用`Card.tsx`在网站上显示。
 
 ```typescript
 // Card.tsx
 
-import Image from "next/image"
-import Link from "next/link"
-import type { PostOrPage } from "@tryghost/content-api";
-import { format } from 'date-fns'
+import Image from 'next/image';
+import Link from 'next/link';
+import type { PostOrPage } from '@tryghost/content-api';
+import { format } from 'date-fns';
 
 function Card({ item }: { item: PostOrPage }) {
-
   return (
-    <div className="max-w-full bg-white dark:bg-gray-800" >
-
-      {
-        item.featured !== null && item.feature_image !== undefined ? <Link href={`/read/${item.slug}`}>
-          <Image className="rounded-lg p-3" width={1000} height={324} src={item.feature_image} alt={item.feature_image_alt || item.title} />
-        </Link> : " "
-      }
+    <div className="max-w-full bg-white dark:bg-gray-800">
+      {item.featured !== null && item.feature_image !== undefined ? (
+        <Link href={`/read/${item.slug}`}>
+          <Image
+            className="rounded-lg p-3"
+            width={1000}
+            height={324}
+            src={item.feature_image}
+            alt={item.feature_image_alt || item.title}
+          />
+        </Link>
+      ) : (
+        ' '
+      )}
 
       <div className="p-3">
-
         <div className="flex mb-3">
-          {
-            item.published_at !== null && item.published_at !== undefined ? <p className="text-sm text-gray-500 dark:text-gray-400">
+          {item.published_at !== null && item.published_at !== undefined ? (
+            <p className="text-sm text-gray-500 dark:text-gray-400">
               {format(new Date(item.published_at), 'dd MMMM, yyyy')}
-            </p> : ""
-          }
+            </p>
+          ) : (
+            ''
+          )}
           <p className="text-sm text-gray-500 dark:text-gray-400 mx-1"> , </p>
           <p className="text-sm text-gray-500 dark:text-gray-400">
             {item.reading_time} min read
@@ -886,538 +889,549 @@ function Card({ item }: { item: PostOrPage }) {
             {item.title}
           </h5>
         </Link>
-
-
       </div>
-
     </div>
-
-  )
-
+  );
 }
 
-
-
-export default Card
+export default Card;
 ```
 
 \-
 
-### How to Build the Reading Page
+<h3 id="how-to-build-the-reading-page">如何建立阅读页(reading page)</h3>
 
-The reading page is the second most important page for the blog site. If people can't figure out how to read what the author writes, this is a big problem for front-end developers.
+阅读页面(reading page)是博客网站的第二大重要页面。如果人们不能弄清楚如何阅读作者写的东西，这对前端开发者来说是个大问题。
 
 ![ghostandnext-reading](https://www.freecodecamp.org/news/content/images/2023/04/ghostandnext-reading.png)
 
 Reading page
 
-First, we get a single article from the Ghost CMS API based on its slug. We pass it to the `Card` component with the `Link` component.
+首先，我们从 Ghost CMS 的 API 中获得一篇基于其 slug(一种模板) 的文章。我们用 `链接(Link)` 组件把它传递给 `卡片(Card)`组件。
 
 ```typescript
 // ghost-client.ts
 
 export async function getSinglePost(postSlug: string) {
   return await api.posts
-    .read({
-      slug: postSlug
-    }, { include: ["tags", "authors"] })
-    .catch(err => {
+    .read(
+      {
+        slug: postSlug
+      },
+      { include: ['tags', 'authors'] }
+    )
+    .catch((err) => {
       console.error(err);
     });
 }
 ```
 
-Retrieve a single post based on a slug.
+检索基于 slug 的单个帖子。
 
-The `getSinglePost(<you-slug>)` function returns data about a single article, and you can render that data on the page.
+`getSinglePost(<you-slug>)`函数返回单篇文章的数据，你可以在页面上渲染这些数据。
 
 ```typescript
 // src/app/read/[slug]/page.tsx
 
-import Newsletter from "./Newsletter";
-import Link from "next/link";
-import { getSinglePost, getPosts } from "../../ghost-client"
-import Image from "next/image";
+import Newsletter from './Newsletter';
+import Link from 'next/link';
+import { getSinglePost, getPosts } from '../../ghost-client';
+import Image from 'next/image';
 // import icon
-import { FaAngleLeft } from "react-icons/fa";
+import { FaAngleLeft } from 'react-icons/fa';
 
 // types for typescript
-import type { Metadata } from "next";
-import type { PostOrPage } from "@tryghost/content-api";
+import type { Metadata } from 'next';
+import type { PostOrPage } from '@tryghost/content-api';
 
 // format the date
-import { format } from 'date-fns'
+import { format } from 'date-fns';
 
 // css for card
-import "../../cards.min.css"
-
+import '../../cards.min.css';
 
 export async function generateStaticParams() {
-  const posts = await getPosts()
+  const posts = await getPosts();
   return posts.map((post) => ({
-    slug: post.slug,
+    slug: post.slug
   }));
 }
 
-
-async function Read({ params }: { params: { slug: string }; }) {
-
-  const getPost = await getSinglePost(params.slug)
+async function Read({ params }: { params: { slug: string } }) {
+  const getPost = await getSinglePost(params.slug);
 
   return (
     <>
       <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
-
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
-
           <article className="mx-auto w-full max-w-3xl prose prose-xl prose-p:text-gray-800  dark:prose-p:text-gray-100 sm:prose-base prose-a:no-underline prose-blue dark:prose-invert">
-
             <div className="flex mb-4 w-full justify-between">
-
               <Link className="inline-flex items-center" href={`/`}>
                 <FaAngleLeft /> Back
               </Link>
 
-              {
-                getPost.primary_tag ? <Link href={`/tags/${getPost?.primary_tag.slug}`}>
+              {getPost.primary_tag ? (
+                <Link href={`/tags/${getPost?.primary_tag.slug}`}>
                   # {getPost?.primary_tag.name}
-                </Link> : ""
-              }
-
+                </Link>
+              ) : (
+                ''
+              )}
             </div>
 
             <h1 className="mb-4 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
               {getPost.title}
             </h1>
 
-            <p className="lead">
-              {getPost.excerpt}
-            </p>
+            <p className="lead">{getPost.excerpt}</p>
 
             <header className="mb-4 lg:mb-6 not-format">
-
               <address className="flex items-center mb-6 not-italic">
-
                 <div className="inline-flex items-center mr-3 text-sm text-gray-900 dark:text-white">
+                  <Image
+                    width={32}
+                    height={32}
+                    className="mr-4 w-10 h-10 rounded-full"
+                    src={getPost?.primary_author.profile_image}
+                    alt={getPost?.primary_author.name}
+                  />
+                  {getPost.primary_author ? (
+                    <Link
+                      href={`/authors/${getPost?.primary_author.slug}`}
+                      rel="author"
+                      className="text-xl font-bold text-gray-800 dark:text-white"
+                    >
+                      {getPost?.primary_author.name}
+                    </Link>
+                  ) : (
+                    ' '
+                  )}
 
-                  <Image width={32} height={32} className="mr-4 w-10 h-10 rounded-full" src={getPost?.primary_author.profile_image} alt={getPost?.primary_author.name} />
-                  {
-                    getPost.primary_author ? <Link href={`/authors/${getPost?.primary_author.slug}`} rel="author" className="text-xl font-bold text-gray-800 dark:text-white">{getPost?.primary_author.name}</Link> : " "
-                  }
-
-                  {
-                    getPost.published_at ? <time className="text-base font-light text-gray-800 dark:text-white mx-1" dateTime={getPost?.published_at} title={format(new Date(getPost?.published_at), 'yyyy-MM-dd')}>
+                  {getPost.published_at ? (
+                    <time
+                      className="text-base font-light text-gray-800 dark:text-white mx-1"
+                      dateTime={getPost?.published_at}
+                      title={format(
+                        new Date(getPost?.published_at),
+                        'yyyy-MM-dd'
+                      )}
+                    >
                       {format(new Date(getPost?.published_at), 'dd MMMM, yyyy')}
-                    </time> : ""
-                  }
+                    </time>
+                  ) : (
+                    ''
+                  )}
 
                   <div className="text-base w-1 h-1 rounded-full bg-black dark:bg-white mx-1"></div>
 
-                  <p className="text-base font-light text-gray-500 dark:text-gray-400"> {getPost.reading_time}  Min Read</p>
-
+                  <p className="text-base font-light text-gray-500 dark:text-gray-400">
+                    {' '}
+                    {getPost.reading_time} Min Read
+                  </p>
                 </div>
-
               </address>
-
             </header>
 
             <figure>
-              <Image className="mx-auto" width={1000} height={250} src={getPost.feature_image} alt={getPost.feature_image_alt} />
-              <figcaption className="text-center"
+              <Image
+                className="mx-auto"
+                width={1000}
+                height={250}
+                src={getPost.feature_image}
+                alt={getPost.feature_image_alt}
+              />
+              <figcaption
+                className="text-center"
                 dangerouslySetInnerHTML={{
                   __html: getPost?.feature_image_caption
-                }}></figcaption>
+                }}
+              ></figcaption>
             </figure>
 
             <div dangerouslySetInnerHTML={{ __html: getPost?.html }}></div>
-
           </article>
         </div>
       </main>
       <Newsletter />
     </>
-  )
-
+  );
 }
-export default Read
+export default Read;
 ```
 
-You render the post's HTML data with `dangerouslySetInnerHTML` . But you need to write lots of CSS to handle the dynamic content coming from the Ghost CMS API.
+你用`dangerouslySetInnerHTML`渲染帖子的 HTML 数据。但是你需要写很多 CSS 来处理来自 Ghost CMS API 的动态内容。
 
-To solve that, I used the `@tailwindcss/typography` package. I also downloaded `cards.min.css` from Ghost. Now you don't need to write a single line of CSS in your Next app.
+为了解决这个问题，我使用了`@tailwindcss/typography`包。我还从 Ghost 下载了`cards.min.css`。现在你不需要在你的 Next 应用程序中写一行 CSS 了。
 
-Generate the static site with the `generateStaticParams` function. Before, we used to `getStaticProps` function.
+用`generateStaticParams`函数生成静态网站。之前，我们使用`getStaticProps`函数。
 
 ```typescript
 // ghost-client.ts
 
-
 export async function generateStaticParams() {
-
   // fetch All posts
 
-  const posts = await getPosts()
-  
-  // return the slug 
-  
+  const posts = await getPosts();
+
+  // return the slug
+
   return posts.map((post) => ({
-    slug: post.slug,
+    slug: post.slug
   }));
-  
 }
 ```
 
-generate static site slug for article reading page
+为文章阅读页面(reading page)生成静态网站 slug
 
-###   
-How to Build the Tag Page
+<h3 id="how-to-build-the-reading-page">如何建立阅读页(reading page)</h3>
 
-I designed a simple tag page for the blog. The tag page shows articles related to the tags that are used.
+我为博客设计了一个简单的标签页(Tag Page)。标签页显示与所使用的标签(tags)有关的文章。
 
-You can also create a category page. Tag pages and category pages use the same logic and functionalities.
+你也可以创建一个分类页(category)。标签页(Tag pages)和分类页(category pages)使用相同的逻辑和功能。
 
 ![Tag page](https://www.freecodecamp.org/news/content/images/2023/04/ghostandnextjs-tag.png)
 
 Tag page
 
-Similar to the reading page, we'll get articles based on tags from the Ghost CMS API.
+与阅读页(reading page)类似，我们将根据 Ghost CMS API 的标签来获取文章。
 
 ```typescript
 // ghost-client.ts
 
-
 // return all posts realted to tag slug
 export async function getTagPosts(tagSlug: string) {
-
-  return await api.posts.browse({ filter: `tag:${tagSlug}`, include: 'count.posts' })
-    .catch(err => {
-      throw new Error(err)
+  return await api.posts
+    .browse({ filter: `tag:${tagSlug}`, include: 'count.posts' })
+    .catch((err) => {
+      throw new Error(err);
     });
-  ;
-
 }
 
 // return all the slugs to build static with generateStaticParams
 export async function getAllTags() {
-  return await api.tags.browse({
-    limit: "all"
-  }).catch(err => {
-    console.log(err)
-  })
+  return await api.tags
+    .browse({
+      limit: 'all'
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 ```
 
-The `getTagPosts(<tag-slug>)` function returns all the available posts related to a specific tag.
+`getTagPosts(<tag-slug>)`函数返回所有与特定标签相关的可用帖子。
 
-After receiving all posts with `getTagPosts()`, we render all posts with the help of the `map()` method.
+在用`getTagPosts()`接收所有帖子后，我们用`map()`方法渲染所有帖子。
 
 ```typescript
 // src/app/tag/[slug]/page.tsx
 
-import React from 'react'
-import Card from "../../Card"
+import React from 'react';
+import Card from '../../Card';
 
-import { getTagPosts, getAllTags } from "../../ghost-client"
+import { getTagPosts, getAllTags } from '../../ghost-client';
 
 import { notFound } from 'next/navigation';
 
-import type { PostsOrPages } from "@tryghost/content-api";
-
+import type { PostsOrPages } from '@tryghost/content-api';
 
 export async function generateStaticParams() {
+  const allTags: Tags = await getAllTags();
 
-  const allTags: Tags = await getAllTags()
+  let allTagsItem: { slug: string }[] = [];
 
-  let allTagsItem: { slug: string }[] = []
-  
-// genrate the slug for static site
+  // genrate the slug for static site
 
-  allTags?.map(item => {
+  allTags?.map((item) => {
     allTagsItem.push({
-      slug: item.slug,
-    })
-  })
+      slug: item.slug
+    });
+  });
 
-  return allTagsItem
-
+  return allTagsItem;
 }
 
+async function Tag({ params }: { params: { slug: string } }) {
+  let tagPosts: PostsOrPages = await getTagPosts(params.slug);
 
-async function Tag({ params }: { params: { slug: string }; }) {
-
-  let tagPosts: PostsOrPages = await getTagPosts(params.slug)
-
-// Handling 404 error
+  // Handling 404 error
 
   if (tagPosts.length === 0) {
-    notFound()
+    notFound();
   }
 
   return (
-    <aside aria-label="Related articles" className="py-8 lg:py-24 dark:bg-gray-800">
-      
+    <aside
+      aria-label="Related articles"
+      className="py-8 lg:py-24 dark:bg-gray-800"
+    >
       <div className="px-4 mx-auto max-w-screen-xl">
-
         <h2 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
-          More articles from {params.slug.split("-").join(" ")}
+          More articles from {params.slug.split('-').join(' ')}
         </h2>
 
         <div className="container my-12 mx-auto grid grid-cols-1 gap-12 md:gap-12 lg:gap-12  lg:grid-cols-3  md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 ">
-        
-          {
-            tagPosts.map(
-              item => <Card key={item.uuid} item={item} />
-            )
-          }
-        
+          {tagPosts.map((item) => (
+            <Card key={item.uuid} item={item} />
+          ))}
         </div>
-
       </div>
-
     </aside>
-  )
-
+  );
 }
 
-export default Tag
+export default Tag;
 ```
 
-Generate the static site with the `generateStaticParams` function. It helps to generate slugs of the static build.
+用`generateStaticParams`函数生成静态网站。它有助于生成静态构建的 slug。
 
 ```typescript
 // ghost-client.ts
 
 export async function getAllTags() {
-  return await api.tags.browse({
-    limit: "all"
-  }).catch(err => {
-    console.log(err)
-  })
+  return await api.tags
+    .browse({
+      limit: 'all'
+    })
+    .catch((err) => {
+      console.log(err);
+    });
 }
 ```
 
-generate static site slug for tag page
+为标签页生成静态网站 slug
 
-### How to Build the Author Page
+<h3 id="how-to-build-the-author-page">如何建立作者页(author page)</h3>
 
-The last and one of the most important pages for the blog site is the author page. This is where readers can learn more about the author.
+博客网站的最后一个也是最重要的一个页面是作者页。在这里，读者可以了解更多关于作者的信息。
 
-For the demo blog, I designed a basic page for the author.
+对于这个演示博客，我为作者设计了一个基本页面。
 
 ![nextandghostauthor](https://www.freecodecamp.org/news/content/images/2023/04/nextandghostauthor.png)
 
-Author page
+Author page(作者页)
 
-We'll build this in a similar way as we built the tag page. First, we get the author's metadata and author posts from the Ghost CMS API.
+我们将以类似于建立标签页的方式来建立这个页面。首先，我们从 Ghost CMS 的 API 中获取作者的元数据和作者的帖子。
 
 ```typescript
 // ghost-client.ts
-
 
 // get author meta Data
 
 export async function getSingleAuthor(authorSlug: string) {
   return await api.authors
-    .read({
-      slug: authorSlug
-    }, { include: ["count.posts"] })
-    .catch(err => {
-      console.log(err)
+    .read(
+      {
+        slug: authorSlug
+      },
+      { include: ['count.posts'] }
+    )
+    .catch((err) => {
+      console.log(err);
     });
-
 }
 
 // get author related posts
 
 export async function getSingleAuthorPosts(authorSlug: string) {
-  return await api.posts.browse({ filter: `authors:${authorSlug}` })
-    .catch(err => {
-      console.log(err)
-    })
-};
+  return await api.posts
+    .browse({ filter: `authors:${authorSlug}` })
+    .catch((err) => {
+      console.log(err);
+    });
+}
 
 // get All author from Ghost CMS for generateStaticParams
 
 export async function getAllAuthors() {
-
   return await api.authors
     .browse({
-      limit: "all"
+      limit: 'all'
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
-
 }
 ```
 
-The `getSingleAuthor(<author-slug>)` returns data about a single author based on the author slug, and the  `getSingleAuthorPosts(<author-slug>)` function returns all posts related to the author.
+`getSingleAuthor(<author-slug>)`根据作者的名字返回单个作者的数据，`getSingleAuthorPosts(<author-slug>)`函数返回与作者有关的所有帖子。
 
-We render the posts data with the help of the `map()` method.
+我们在`map()`方法的帮助下渲染帖子数据。
 
 ```typescript
 // src/app/author/[slug]/page.tsx
 
 import React from 'react';
-import Link from "next/link";
-import { FaFacebook, FaTwitter, FaGlobe } from "react-icons/fa";
-import Card from "../../Card"
+import Link from 'next/link';
+import { FaFacebook, FaTwitter, FaGlobe } from 'react-icons/fa';
+import Card from '../../Card';
 
-import { getSingleAuthor, getSingleAuthorPost, getAllAuthors } from "../../ghost-client"
+import {
+  getSingleAuthor,
+  getSingleAuthorPost,
+  getAllAuthors
+} from '../../ghost-client';
 
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
-import type { Author, PostsOrPages } from "@tryghost/content-api";
-
-
+import type { Author, PostsOrPages } from '@tryghost/content-api';
 
 export async function generateStaticParams() {
+  const allAuthor: Author[] = await getAllAuthors();
 
-  const allAuthor: Author[] = await getAllAuthors()
+  let allAuthorItem: { slug: string }[] = [];
 
-
-  let allAuthorItem: { slug: string }[] = []
-
-  allAuthor.map(item => {
+  allAuthor.map((item) => {
     allAuthorItem.push({
-      slug: item.slug,
-    })
-  })
-  return allAuthorItem
-
+      slug: item.slug
+    });
+  });
+  return allAuthorItem;
 }
 
+async function AuthorPage({ params }: { params: { slug: string } }) {
+  const getAuthor: Author = await getSingleAuthor(params.slug);
 
-async function AuthorPage({ params }: { params: { slug: string }; }) {
+  const allAuthor: PostsOrPages = await getSingleAuthorPost(params.slug);
 
-  const getAuthor: Author = await getSingleAuthor(params.slug)
-
-  const allAuthor: PostsOrPages = await getSingleAuthorPost(params.slug)
-
-// Handling 404 errors
+  // Handling 404 errors
   if (allAuthor?.length === 0) {
-    notFound()
+    notFound();
   }
 
   return (
     <>
       <section className="dark:bg-gray-900">
         <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-
           <div className=" p-10 text-gray-500 sm:text-lg dark:text-gray-400">
+            {getAuthor?.profile_image !== undefined ? (
+              <Image
+                height={30}
+                width={30}
+                className="w-36 h-36 p-2 rounded-full mx-auto ring-2 ring-gray-300 dark:ring-gray-500"
+                src={getAuthor?.profile_image}
+                alt={getAuthor?.name}
+              />
+            ) : (
+              ''
+            )}
 
-            {
-              getAuthor?.profile_image !== undefined ? <Image height={30} width={30} className="w-36 h-36 p-2 rounded-full mx-auto ring-2 ring-gray-300 dark:ring-gray-500" src={getAuthor?.profile_image} alt={getAuthor?.name} /> : ""
-            }
-
-            {
-              getAuthor?.name ? <h2 className="mb-4 mt-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white">
-                {getAuthor?.name.split(" ")[0]}
+            {getAuthor?.name ? (
+              <h2 className="mb-4 mt-4 text-4xl tracking-tight font-bold text-center text-gray-900 dark:text-white">
+                {getAuthor?.name.split(' ')[0]}
                 <span className="font-extrabold">
-                  {getAuthor?.name?.split(" ")[1]}
+                  {getAuthor?.name?.split(' ')[1]}
                 </span>
-              </h2> : ""
-            }
+              </h2>
+            ) : (
+              ''
+            )}
 
             <p className="mb-4 font-light text-center">{getAuthor?.bio} </p>
 
-
             <ul className="flex flex-wrap p-4 justify-center md:space-x-8 md:mt-0 md:text-sm md:font-medium">
-
-              {
-                (getAuthor?.website !== null) ? (<li>
-                  <Link href={getAuthor?.website} className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white" aria-current="page">
+              {getAuthor?.website !== null ? (
+                <li>
+                  <Link
+                    href={getAuthor?.website}
+                    className="block py-2 pl-3 pr-4 text-gray-700 hover:text-blue-700 dark:hover:text-blue-700 rounded md:p-0 dark:text-white"
+                    aria-current="page"
+                  >
                     <FaGlobe />
-                  </Link> </li>) : " "
+                  </Link>{' '}
+                </li>
+              ) : (
+                ' '
+              )}
 
-
-              }
-
-              {
-                (getAuthor?.twitter !== null) ? (<li>
-                  <Link href={getAuthor?.twitter} className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white" aria-current="page">
+              {getAuthor?.twitter !== null ? (
+                <li>
+                  <Link
+                    href={getAuthor?.twitter}
+                    className="block py-2 pl-3 pr-4 text-gray-700 rounded hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                    aria-current="page"
+                  >
                     <FaTwitter />
                   </Link>
-                </li>) : " "
-              }
+                </li>
+              ) : (
+                ' '
+              )}
 
-              {
-                (getAuthor?.facebook !== null && getAuthor.facebook !== undefined) ? (<li>
-                  <Link href={getAuthor?.facebook}
-                    className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"> <FaFacebook />
+              {getAuthor?.facebook !== null &&
+              getAuthor.facebook !== undefined ? (
+                <li>
+                  <Link
+                    href={getAuthor?.facebook}
+                    className="block py-2 pl-3 pr-4 text-gray-700 rounded  hover:text-blue-700 dark:hover:text-blue-700 md:p-0 dark:text-white"
+                  >
+                    {' '}
+                    <FaFacebook />
                   </Link>
-                </li>) : " "
-
-              }
-
+                </li>
+              ) : (
+                ' '
+              )}
             </ul>
-
           </div>
         </div>
       </section>
 
-      <aside aria-label="Related articles" className="py-8 lg:py-24 dark:bg-gray-800">
+      <aside
+        aria-label="Related articles"
+        className="py-8 lg:py-24 dark:bg-gray-800"
+      >
         <div className="px-4 mx-auto max-w-screen-xl">
-
           <h2 className="mb-8 text-2xl font-bold text-gray-900 dark:text-white">
             More articles from {getAuthor?.name}
           </h2>
 
           <div className="container my-12 mx-auto grid grid-cols-1 gap-12 md:gap-12 lg:gap-12  lg:grid-cols-3  md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4 ">
-
-            {
-              allAuthor?.map(item => <Card key={item?.uuid} item={item} />)
-            }
-
+            {allAuthor?.map((item) => (
+              <Card key={item?.uuid} item={item} />
+            ))}
           </div>
         </div>
       </aside>
-
-
     </>
-  )
-
+  );
 }
-export default AuthorPage
+export default AuthorPage;
 ```
 
-To generate the author slug for the static site, we need to use the `generateStaticParams` function. We do not need anything else to build the static site.
+为了生成静态网站的作者 slug，我们需要使用`generateStaticParams`函数。我们不需要其他东西来建立静态网站。
 
 ```typescript
 // ghost-client.ts
 
-
-// Build Static Site 
+// Build Static Site
 
 export async function generateStaticParams() {
+  const allAuthor: Author[] = await getAllAuthors();
 
-  const allAuthor: Author[] = await getAllAuthors()
+  let allAuthorItem: { slug: string }[] = [];
 
-
-  let allAuthorItem: { slug: string }[] = []
-
-  allAuthor.map(item => {
+  allAuthor.map((item) => {
     allAuthorItem.push({
-      slug: item.slug,
-    })
-  })
-  return allAuthorItem
-
+      slug: item.slug
+    });
+  });
+  return allAuthorItem;
 }
 ```
 
-### How to Build Single Pages
+<h3 id="how-to-build-the-author-page">如何建立作者页(author page)</h3>
 
-For single pages like About, Contact, Privacy Policy, and so on, you can also create them with the Ghost Content API.
+对于像 `关于(About)`、`联系(Contact)`、`隐私政策(Privacy Policy)` 等单页(single page)，你也可以用 Ghost Content API 创建它们。
 
-Our single-page design looks like this:
+我们的单页设计看起来像这样:
 
 ![single blog page](https://www.freecodecamp.org/news/content/images/2023/04/single-blog.png)
 
-single blog page
+博客页(single blog page)
 
-Firstly, you need to fetch all pages and the single pages data from the Ghost Content API.
+首先，你需要从 Ghost Content API 中获取所有页面和单页的数据。
 
 ```typescript
 // ghost-client.tsx
@@ -1429,81 +1443,78 @@ export async function getSinglePage(pageSlug: string) {
     .read({
       slug: pageSlug
     })
-    .catch(err => {
+    .catch((err) => {
       console.error(err);
     });
 }
 
-// single page data 
+// single page data
 
 export async function getSinglePage(pageSlug: string) {
   return await api.pages
-    .read({
-      slug: pageSlug
-    }, { include: ["tags"] })
-    .catch(err => {
+    .read(
+      {
+        slug: pageSlug
+      },
+      { include: ['tags'] }
+    )
+    .catch((err) => {
       console.error(err);
     });
 }
 ```
 
-The `getSinglePage(page-slug)` function returns the single page data based on the page slug, and the `getAllPages()` function returns all the available published page data to generate the dynamic params with the `generateStaticParams()` function.
+`getSinglePage(page-slug)`函数返回基于 slug 页面的单一页面数据，`getAllPages()`函数返回所有可用的已发布页面数据，以便用`generateStaticParams()`函数生成动态参数。
 
 ```typescript
 // src/app/pages/[slug]/page.tsx
 
-import { getSinglePage, getAllPages } from "../../ghost-client"
+import { getSinglePage, getAllPages } from '../../ghost-client';
 import { notFound } from 'next/navigation';
-import type { PostOrPage } from "@tryghost/content-api";
-import "../../cards.min.css"
+import type { PostOrPage } from '@tryghost/content-api';
+import '../../cards.min.css';
 
 // genrate Static slug or params for blog
 
 export async function generateStaticParams() {
-  const pages = await getAllPages()
+  const pages = await getAllPages();
 
   return pages.map((post) => ({
-    slug: post.slug,
+    slug: post.slug
   }));
 }
 
-async function Pages({ params }: { params: { slug: string }; }) {
-
-// fetch single page
-  const getPage = await getSinglePage(params.slug)
+async function Pages({ params }: { params: { slug: string } }) {
+  // fetch single page
+  const getPage = await getSinglePage(params.slug);
 
   // handle 404 error
   if (!getPage) {
-    notFound()
+    notFound();
   }
 
   return (
     <>
       <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
         <div className="flex justify-between px-4 mx-auto max-w-screen-xl ">
-
           <article className="mx-auto w-full max-w-3xl prose prose-xl prose-p:text-gray-800  dark:prose-p:text-gray-100 sm:prose-base prose-a:no-underline prose-blue dark:prose-invert">
-
-
             <h1 className="mb-14 text-3xl font-extrabold leading-tight text-gray-900 lg:mb-6 lg:text-4xl dark:text-white">
               {getPage.title}
             </h1>
 
             <div dangerouslySetInnerHTML={{ __html: getPage?.html }}></div>
-
           </article>
         </div>
       </main>
     </>
-  )
-
+  );
 }
-export default Pages
+export default Pages;
 ```
 
-### How to Handle Pagination
+<h3 id="how-to-handle-pagination">如何处理分页(pagination)</h3>
 
-Pagination helps speed up your site as well as divide your site into smaller parts, more digestible pages. You can link your posts with each other with `prev` and `next`.
+分页(Pagination )有助于加快你的网站访问速度，并将你的网站分成更小的部分，更容易消化的页面。你可以用 `prev`和 `next` 将你的文章相互连接起来。
 
 ```json
 meta:{
@@ -1511,68 +1522,75 @@ meta:{
  }
 ```
 
-next target the next page and prev target the previous page
+`next` 跳转到下一个页面，`prev` 跳转到上一个页面
 
-Firstly, we'll create a `Pagination.tsx` file as a React component.
+首先，我们将创建一个`Pagination.tsx`文件作为 React 组件。
 
 ```typescript
 // Pagination.tsx
 
-import Link from "next/link"
-import { Pagination } from "@tryghost/content-api"
+import Link from 'next/link';
+import { Pagination } from '@tryghost/content-api';
 
 function PaginationItem({ item }: { item: Pagination }) {
-
-  let paginationItems = []
+  let paginationItems = [];
 
   for (let index = 1; index <= item?.pages; index++) {
-    paginationItems.push(<li key={index * 2} ><Link href={index === 1 ? "/" : `/pagination/${index}`} className="px-3 py-2 leading-tight bg-blue-100 hover:bg-blue-200 border-transparent border rounded-lg text-black dark:bg-gray-800 dark:text-gray-400 mx-2 dark:hover:bg-gray-700 dark:hover:text-white">
-      {index}
-    </Link></li>)
+    paginationItems.push(
+      <li key={index * 2}>
+        <Link
+          href={index === 1 ? '/' : `/pagination/${index}`}
+          className="px-3 py-2 leading-tight bg-blue-100 hover:bg-blue-200 border-transparent border rounded-lg text-black dark:bg-gray-800 dark:text-gray-400 mx-2 dark:hover:bg-gray-700 dark:hover:text-white"
+        >
+          {index}
+        </Link>
+      </li>
+    );
   }
 
   return (
-
     <nav aria-label="pagination" className="mx-auto my-20 container">
-
       <ul className="mx-auto flex justify-center -space-x-px">
-
         <li>
-          {
-            item.prev ? <Link href={item.prev === 1 ? "/" : `/pagination/${item.prev}`} className="px-3 py-2 mr-2 border border-transparent rounded-md  leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
-              dark:hover:bg-gray-700 dark:hover:text-white">
+          {item.prev ? (
+            <Link
+              href={item.prev === 1 ? '/' : `/pagination/${item.prev}`}
+              className="px-3 py-2 mr-2 border border-transparent rounded-md  leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
+              dark:hover:bg-gray-700 dark:hover:text-white"
+            >
               Prev
-            </Link> : " "
-          }
+            </Link>
+          ) : (
+            ' '
+          )}
         </li>
 
         {paginationItems}
 
         <li>
-          {
-            item.next ? <Link href={`/pagination/${item.next}`} className="px-3 py-2 ml-2 border border-transparent rounded-md leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
-            dark:hover:bg-gray-700 dark:hover:text-white">
+          {item.next ? (
+            <Link
+              href={`/pagination/${item.next}`}
+              className="px-3 py-2 ml-2 border border-transparent rounded-md leading-tight bg-white hover:text-blue-700 dark:bg-gray-800 dark:text-gray-400
+            dark:hover:bg-gray-700 dark:hover:text-white"
+            >
               Next
-            </Link> : " "
-          }
+            </Link>
+          ) : (
+            ' '
+          )}
         </li>
-
-
       </ul>
-
     </nav>
-
-  )
-
+  );
 }
 
-
-export default PaginationItem
+export default PaginationItem;
 ```
 
-When you call the `api.posts.browse({ limit: 10 })` request, the API endpoint returns ten posts and a `meta` object with `pagination`.
+当你调用`api.post.browse({ limit: 10 })`请求时，API 端点会返回十个帖子和一个带有`pagination`的`meta`对象。
 
-#### The returned `api.posts.browse({ limit: 10 })` data look like this:
+#### `api.post.browse({ limit: 10 })`返回的数据看起来像这样
 
 ```json
  [
@@ -1587,30 +1605,29 @@ meta:{
 
 `api.posts.browse({ limit: 10 })`
 
-Now based on `meta`, we can create pagination and pass `meta.pagination` as props to the `Pagination` component.
+现在基于`meta`，我们可以创建分页，并将`meta.pagination`作为 prop 传递给`Pagination`组件。
 
 ```typescript
 // src/app/page.tsx
 
-import { getPosts } from "./ghost-client"
-import Pagination from "./Pagination"
+import { getPosts } from './ghost-client';
+import Pagination from './Pagination';
 
 export default async function Home() {
+  const getPost = await getPosts();
 
-  const getPost = await getPosts()
-
-  const AllPostForSerach = await getSearchPosts()
+  const AllPostForSerach = await getSearchPosts();
 
   return (
     <>
-     {/* rest of code  */}
+      {/* rest of code  */}
       <Pagination item={getPost.meta.pagination} />
     </>
-  )
+  );
 }
 ```
 
-To enable dynamic pagination, we'll create a `src/app/pagination/[item]/page.tsx` route in the blog. You can use whatever name you want for the pagination route.
+为了启用动态分页(dynamic pagination)，我们将在博客中创建一个`src/app/pagination/[item]/page.tsx`路由。你可以为分页路由(pagination route)使用任何你想要的名字。
 
 ```typescript
 // ghost-client.tsx
@@ -1620,149 +1637,140 @@ To enable dynamic pagination, we'll create a `src/app/pagination/[item]/page.tsx
 export async function getPosts() {
   return await api.posts
     .browse({
-      include: ["tags", "authors"],
+      include: ['tags', 'authors'],
       limit: 10
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
 }
 
-// 
+//
 export async function getPaginationPosts(page: number) {
   return await api.posts
     .browse({
-      include: ["tags", "authors"],
+      include: ['tags', 'authors'],
       limit: 10,
       page: page
     })
-    .catch(err => {
-      throw new Error(err)
+    .catch((err) => {
+      throw new Error(err);
     });
 }
 ```
 
-The `getPosts` is used to render the `Pagination` component on the pagination page. The important part is the `getPaginationPosts(<pagination-page-number>)` function, which returns posts based on the pagination page number.
+`getPosts`是用来渲染分页上的`Pagination`组件。重要的部分是`getPaginationPosts(<pagination-page-number>)`函数，它根据分页的页码返回帖子。
 
 ```typescript
 // src/app/pagination/[item]/page.tsx
 
-import { getPaginationPosts, getPosts } from "../../ghost-client"
-import Card from '../../Card'
-import PaginationItem from "../../Pagination"
-import type { Metadata } from "next";
-import type { PostsOrPages } from "@tryghost/content-api";
-
-
-
+import { getPaginationPosts, getPosts } from '../../ghost-client';
+import Card from '../../Card';
+import PaginationItem from '../../Pagination';
+import type { Metadata } from 'next';
+import type { PostsOrPages } from '@tryghost/content-api';
 
 export async function generateStaticParams() {
+  const posts: PostsOrPages = await getPosts();
 
-  const posts:PostsOrPages = await getPosts()
-
-  let paginationItem: { item: number }[] = []
+  let paginationItem: { item: number }[] = [];
 
   for (let index = 1; index <= posts?.meta.pagination.pages; index++) {
     paginationItem.push({
-      item: index,
-    })
-
+      item: index
+    });
   }
 
-  return paginationItem
-
+  return paginationItem;
 }
 
+export default async function Pagination({
+  params
+}: {
+  params: { item: string };
+}) {
+  let getParams: number = Number.parseInt(params.item);
 
-
-export default async function Pagination({ params }: { params: { item: string }; }) {
-
-  let getParams: number = Number.parseInt(params.item)
-
-  const getPost: PostsOrPages = await getPaginationPosts(getParams)
+  const getPost: PostsOrPages = await getPaginationPosts(getParams);
 
   return (
     <>
-
       <main className="container my-12 mx-auto grid grid-cols-1 gap-2 md:gap-3 lg:gap-4 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
-
-        {
-          getPost?.map(
-            item => {
-              return <Card key={item.uuid} item={item} />
-            })
-        }
+        {getPost?.map((item) => {
+          return <Card key={item.uuid} item={item} />;
+        })}
       </main>
 
       <PaginationItem item={getPost.meta.pagination} />
-
     </>
-  )
+  );
 }
 ```
 
-use 
+use
 
-### Next.js SEO
+<h3 id="next-js-seo">Next.js SEO</h3>
 
-If you are a blogger, you know how important SEO is in helping people find your blog and your articles. For SEO, Next.js provides a `generateMetadata` function to generate dynamic SEO metadata for your site. This means that you don't need any additional packages for SEO.  
+如果你是一个博主，你知道 SEO 在帮助人们找到你的博客和你的文章方面是多么重要。对于 SEO，Next.js 提供了一个`generateMetadata`功能，为你的网站生成动态 SEO 元数据。这意味着你不需要任何额外的包来进行 SEO。
 
-For the purpose of this example, I'll explain how to enable SEO for the blog only on the Homepage and the Reading page. You can use the same logic to enable it on any of your other pages.
+在这个例子中，我将解释如何为博客只在主页和阅读页上启用 SEO。你可以使用同样的逻辑在你的任何其他页面上启用它。
 
-First, let's see how to enable SEO on the Homepage:
+首先，让我们看看如何在主页上启用 SEO:
 
 ```typescript
 // ghost-client.ts
 
-
 // Get you settings meta data from Ghost CMS
 export async function getNavigation() {
-  return await api.settings.browse()
+  return await api.settings.browse();
 }
 ```
 
 ```typescript
 // src/app/page.tsx
 
-import { getNavigation } from "./ghost-client"
+import { getNavigation } from './ghost-client';
 
 export async function generateMetadata(): Promise<Metadata> {
-  const Metadata = await getNavigation()
+  const Metadata = await getNavigation();
   return {
     title: Metadata.title,
     description: Metadata.description,
-    keywords: ['Next.js', 'React', 'JavaScript'],
-  }
+    keywords: ['Next.js', 'React', 'JavaScript']
+  };
 }
 ```
 
-Now we'll see how to enable SEO on the Reading page:
+现在我们来看看如何在阅读页(reading page)上启用 SEO:
 
 ```typescript
 // ghost-client.ts
 
-
 export async function getSinglePost(postSlug: string) {
   return await api.posts
-    .read({
-      slug: postSlug
-    }, { include: ["tags", "authors"] })
-    .catch(err => {
+    .read(
+      {
+        slug: postSlug
+      },
+      { include: ['tags', 'authors'] }
+    )
+    .catch((err) => {
       console.error(err);
     });
 }
 ```
 
-The `generateMetadata` have params props, which help access the slug. Then, based on the slug, we get the data and return it.
+`generateMetadata`有 params prop，可以帮助访问 slug。然后，基于 slug，我们获得数据并返回。
 
 ```typescript
+export async function generateMetadata({
+  params
+}: {
+  params: { slug: string };
+}): Promise<Metadata> {
+  const metaData: PostOrPage = await getSinglePost(params.slug);
 
-
-export async function generateMetadata({ params }: { params: { slug: string }; }): Promise<Metadata> {
-
-  const metaData: PostOrPage = await getSinglePost(params.slug)
-
-  let tags = metaData?.tags.map(item => item.name)
+  let tags = metaData?.tags.map((item) => item.name);
 
   return {
     title: metaData.title,
@@ -1775,25 +1783,25 @@ export async function generateMetadata({ params }: { params: { slug: string }; }
       keywords: tags,
       images: [
         {
-          url: metaData.feature_image,
-        },
+          url: metaData.feature_image
+        }
       ],
       locale: metaData.locale,
-      type: 'website',
-    },
-  }
+      type: 'website'
+    }
+  };
 }
 ```
 
-### How to Enable Search
+<h3 id="how-to-enable-search">如何开启搜索</h3>
 
-Enabling search on a static blog is hard to do from scratch. Instead, you can use a third-party Node page like [Orama](https://github.com/oramasearch/orama) or [Flex search](https://github.com/nextapps-de/flexsearch).
+在静态博客上启用搜索是很难从头做起的。相反，你可以使用第三方的 Node 页面，如 [Orama](https://github.com/oramasearch/orama) 或 [Flex search](https://github.com/nextapps-de/flexsearch)。
 
 ![searchbarinnextjs](https://www.freecodecamp.org/news/content/images/2023/04/searchbarinnextjs.gif)
 
-For our demo, we created a very simple search bar functionality without installing any additional packages.
+对于我们的演示，我们创建了一个非常简单的搜索栏功能，无需安装任何额外的软件包。
 
-Firstly, we get all posts from the Ghost CMS API.
+首先，我们从 Ghost CMS 的 API 中获取所有帖子。
 
 ```typescript
 // ghost-client.ts
@@ -1804,398 +1812,380 @@ export async function getSearchPosts() {
   });
 ```
 
-After we convert it into a string with the help of `JSON.stringify()`, we then create a new `search.json` file. On every request, it updates or rewrites our `search.json` file.
+在我们用`JSON.stringify()`的帮助下将其转换为字符串后，我们再创建一个新的`search.json`文件。在每次请求时，它都会更新或重写我们的`search.json`文件。
 
 ```typescript
 // src/app/page.tsx
 
-import {  getSearchPosts } from "./ghost-client"
+import { getSearchPosts } from './ghost-client';
 import * as fs from 'node:fs';
 
-
-
 export default async function Home() {
+  // get All posts for search
+  const AllPostForSerach = await getSearchPosts();
 
-  
-// get All posts for search 
-  const AllPostForSerach = await getSearchPosts()
-
-  // Enable getSearch  
+  // Enable getSearch
 
   try {
+    const jsonString = JSON.stringify(AllPostForSerach);
 
-    const jsonString = JSON.stringify(AllPostForSerach)
-
-    fs.writeFile('search.json', jsonString, 'utf8', err => {
+    fs.writeFile('search.json', jsonString, 'utf8', (err) => {
       if (err) {
-        console.log('Error writing file', err)
+        console.log('Error writing file', err);
       } else {
-        console.log('Successfully wrote file')
+        console.log('Successfully wrote file');
       }
-    })
-
+    });
   } catch (error) {
-    console.log('error : ', error)
+    console.log('error : ', error);
   }
-
 
   return (
     <>
       <main className="container my-12 mx-auto grid grid-cols-1 gap-2 md:gap-3 lg:gap-4 lg:grid-cols-3 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-4">
-      {/* rest code... */}
+        {/* rest code... */}
       </main>
     </>
-  )
+  );
 }
 ```
 
-When you enter the text in the search input, based on the text query, we compare the query or text in the `serach.json` file data. If it matches the article title with the query, then we store the `searchPost` variable, and finally we render the stored data in the `searchPost` variable page.
+当你在搜索输入中输入文本时，根据文本查询，我们比较查询或文本在`search.json`文件的数据。如果它与查询的文章标题相匹配，那么我们就存储`searchPost`变量，最后我们在`searchPost`变量页面呈现存储的数据。
 
 ```typescript
-"use client"
+'use client';
 
 import React, { useEffect, useState } from 'react';
 import * as Popover from '@radix-ui/react-popover';
-import { FaSearch } from "react-icons/fa";
+import { FaSearch } from 'react-icons/fa';
 import Link from 'next/link';
-import searchData from '../../search.json'
-import type { PostOrPage } from "@tryghost/content-api"
+import searchData from '../../search.json';
+import type { PostOrPage } from '@tryghost/content-api';
 
-
-let searchPost: PostOrPage[] = []
-
+let searchPost: PostOrPage[] = [];
 
 function Search() {
-
-  const [query, setQuery] = useState(null)
+  const [query, setQuery] = useState(null);
 
   useEffect(() => {
-
     searchPost.length = 0;
 
     searchData.map((item: PostOrPage) => {
-
-      if (item?.title.trim().toLowerCase().includes(query?.trim().toLowerCase())) {
-        searchPost.push(item)
+      if (
+        item?.title.trim().toLowerCase().includes(query?.trim().toLowerCase())
+      ) {
+        searchPost.push(item);
       }
-
-    })
-
-  }, [query])
-
+    });
+  }, [query]);
 
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
-        <button
-          className="cursor-pointer outline-none"
-          aria-label="Search"
-        >
+        <button className="cursor-pointer outline-none" aria-label="Search">
           <FaSearch />
         </button>
       </Popover.Trigger>
 
       <Popover.Portal>
-
         <Popover.Content
           className="rounded p-2 bg-white dark:bg-gray-800 w-[480px] will-change-[transform,opacity] data-[state=open]:data-[side=top]:animate-slideDownAndFade data-[state=open]:data-[side=right]:animate-slideLeftAndFade data-[state=open]:data-[side=bottom]:animate-slideUpAndFade data-[state=open]:data-[side=left]:animate-slideRightAndFade"
           sideOffset={5}
         >
-
-          <div className='my-2'>
-            <label htmlFor="default-search" className="mb-2 mt-5 text-sm font-medium text-gray-900 sr-only dark:text-white">Search bar </label>
+          <div className="my-2">
+            <label
+              htmlFor="default-search"
+              className="mb-2 mt-5 text-sm font-medium text-gray-900 sr-only dark:text-white"
+            >
+              Search bar{' '}
+            </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                <svg className="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                <svg
+                  className="w-5 h-5 text-gray-500 dark:text-gray-400"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                  ></path>
+                </svg>
               </div>
-              <input type="search" id="default-search" onChange={(event) => setQuery(event?.target.value)} className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Start searching here ..." required />
-
+              <input
+                type="search"
+                id="default-search"
+                onChange={(event) => setQuery(event?.target.value)}
+                className="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Start searching here ..."
+                required
+              />
             </div>
           </div>
 
-
-          {
-
-            serachPost.length > 0 ? serachPost.map(item => {
-
-              return (
-                <div key={item.uuid} className='my-3'>
-                  <div className="text-white my-2 py-2 bg-blue-400 dark:bg-gray-900 dark:hover:bg-blue-400 border-none rounded-md dark:text-white">
-                    <Link href={`read/${item.slug}`} className="relative inline-flex items-center rounded-lg w-full px-4 py-2 text-sm font-medium">
-                      {item.title}
-                    </Link>
+          {serachPost.length > 0
+            ? serachPost.map((item) => {
+                return (
+                  <div key={item.uuid} className="my-3">
+                    <div className="text-white my-2 py-2 bg-blue-400 dark:bg-gray-900 dark:hover:bg-blue-400 border-none rounded-md dark:text-white">
+                      <Link
+                        href={`read/${item.slug}`}
+                        className="relative inline-flex items-center rounded-lg w-full px-4 py-2 text-sm font-medium"
+                      >
+                        {item.title}
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              )
-            }) : " "
-
-          }
-
+                );
+              })
+            : ' '}
         </Popover.Content>
-
       </Popover.Portal>
-
-    </Popover.Root >
-  )
+    </Popover.Root>
+  );
 }
 
 export default Search;
 ```
 
-### Error Handling
+<h3 id="how-to-enable-search">如何开启搜索</h>
 
-Next.js has two types of [error handling](https://beta.nextjs.org/docs/routing/error-handling#how-errorjs-works). the first is layout-based, and the second is [global error](https://beta.nextjs.org/docs/routing/error-handling#handling-errors-in-root-layouts) handling. For the demo here, we'll use layout-based error handling.
+Next.js 有两种类型的 [错误处理](https://beta.nextjs.org/docs/routing/error-handling#how-errorjs-works)。第一种是基于布局，第二种是 [全局错误](https://beta.nextjs.org/docs/routing/error-handling#handling-errors-in-root-layouts) 处理。对于这里的演示，我们将使用基于布局的错误处理。
 
-Next provides a special type of `error.tsx` file to handle errors on your site. It does not handle 404, 500, and so on – it handles only runtime errors.
+Next 提供一个特殊类型的`error.tsx`文件来处理你网站上的错误。它不处理 404，500 等，它只处理运行时错误。
 
 ```typescript
 'use client'; // Error components must be Client components
 import React from 'react';
 import { useEffect } from 'react';
 import Link from 'next/link';
-export default function Error({ error, reset }: { error: Error; reset: () => void; }) {
-
+export default function Error({
+  error,
+  reset
+}: {
+  error: Error;
+  reset: () => void;
+}) {
   useEffect(() => {
     console.error(error);
   }, [error]);
 
   return (
     <section className="dark:bg-gray-900 my-16">
-
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-
         <div className="mx-auto max-w-screen-sm text-center">
+          <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">
+            Something wrong
+          </h1>
+          <p className="mb-4 text-lg p-2 font-light bg-red-500 text-white dark:bg-red-400 dark:text-white">
+            {error.message}
+          </p>
 
-          <h1 className="mb-4 text-7xl tracking-tight font-extrabold lg:text-9xl text-primary-600 dark:text-primary-500">Something wrong</h1>
-          <p className="mb-4 text-lg p-2 font-light bg-red-500 text-white dark:bg-red-400 dark:text-white">{error.message}</p>
+          <div className="flex justify-around mt-2">
+            <Link
+              href="#"
+              className="inline-flex bg-gray-600 text-white hover:bg-gray-700 focus:ring-4 font-medium rounded-lg text-sm p-2
+                text-center"
+            >
+              Back to Homepage
+            </Link>
 
-          <div className='flex justify-around mt-2'>
-
-            <Link href="#" className="inline-flex bg-gray-600 text-white hover:bg-gray-700 focus:ring-4 font-medium rounded-lg text-sm p-2
-                text-center">Back to Homepage</Link>
-
-            <button className='bg-gray-600 text-white rounded-lg p-2' onClick={() => reset()}>
+            <button
+              className="bg-gray-600 text-white rounded-lg p-2"
+              onClick={() => reset()}
+            >
               Try again
             </button>
-
-
           </div>
-
         </div>
-
       </div>
-
     </section>
   );
 }
 ```
 
-#### How to handle 404 errors
+#### 如何处理 404 错误
 
-To handle 404 errors in the Next.js app folder, you need to create a `not-found.tsx` file in your root level.
+为了处理 Next.js 应用程序文件夹中的 404 错误，你需要在你的文件夹最顶层创建一个`not-found.tsx`文件。
 
-Our 404 file looks like this:
+我们的 404 文件看起来像这样:
 
 ![404 error](https://www.freecodecamp.org/news/content/images/2023/04/nextjsandghosterror.png)
 
 404 error
 
-Here's the code for that:
+以下是相关代码:
 
 ```typescript
-import Link from "next/link"
+import Link from 'next/link';
 
 function NotFound() {
-
   return (
     <section className="bg-white dark:bg-gray-900 my-16">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
         <div className="mx-auto max-w-screen-sm text-center">
-          <h1 className="mb-4 text-7xl tracking-tight lg:text-9xl text-primary-600 dark:text-primary-500">404</h1>
-          <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white"> Something wrong</p>
-          <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
-            Sorry, we cant find that article. You will find lots to explore on the home page.
+          <h1 className="mb-4 text-7xl tracking-tight lg:text-9xl text-primary-600 dark:text-primary-500">
+            404
+          </h1>
+          <p className="mb-4 text-3xl tracking-tight font-bold text-gray-900 md:text-4xl dark:text-white">
+            {' '}
+            Something wrong
           </p>
-          <Link href="/" className="inline-flex text-white bg-black dark:bg-white dark:text-black p-3 hover:bg-gray-800 my-4">Back to Homepage</Link>
+          <p className="mb-4 text-lg font-light text-gray-500 dark:text-gray-400">
+            Sorry, we cant find that article. You will find lots to explore on
+            the home page.
+          </p>
+          <Link
+            href="/"
+            className="inline-flex text-white bg-black dark:bg-white dark:text-black p-3 hover:bg-gray-800 my-4"
+          >
+            Back to Homepage
+          </Link>
         </div>
       </div>
-    </section >
-  )
-
+    </section>
+  );
 }
 
-export default NotFound
+export default NotFound;
 ```
 
-The big issue with the `not-found.tsx` error file is that it doesn't show automatically in Next (v13.3.0). To show a 404 error, you need to show the error manually. Here's how you do that:
+`not-found.tsx`错误文件的问题是它在 Next（v13.3.0）中不能自动显示。要显示 404 错误，你需要手动显示该错误。这里是你如何做的:
 
 ```typescript
 import { notFound } from 'next/navigation';
 
-async function Read({ params }: { params: { slug: string }; }) {
-
-  const getPost = await getSinglePost(params.slug)
+async function Read({ params }: { params: { slug: string } }) {
+  const getPost = await getSinglePost(params.slug);
 
   // if not found getPost, then show 404 error
 
   if (!getPost) {
-    notFound()
+    notFound();
   }
 
   return (
-      <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
-      
-          rest of code ....
-      
-      </main>
-      )
+    <main className="pt-8 pb-16 lg:pt-16 lg:pb-24 dark:bg-gray-900">
+      rest of code ....
+    </main>
+  );
 }
 ```
 
-### How to Rebuild Your Static Site with Webhooks
+<h3 id="how-to-rebuild-your-static-site-with-webhooks">如何用 webhooks 重新构建你的静态网站</h3>
 
-The biggest problem when you create a static site happens if somebody writes a new post or changes an existing post in Ghost. For a personal project, you can manually redeploy your site. But for a larger site, you won't be able to do that every time this happens.
+当你创建一个静态网站时，最大的问题发生在有人在 Ghost 中写了一个新的帖子或改变了一个现有的帖子。对于一个个人项目，你可以手动重新部署你的网站。但对于一个较大的网站来说，你不可能在每次发生这种情况时都这样做。
 
-The best solution is to use webhooks. Ghost provides webhook support. If you update an existing post or write a new one, it'll update in Ghost.
+最好的解决办法是使用 webhooks。Ghost 提供 webhook 支持。如果你更新一个现有的帖子或写一个新的帖子，它就会在 Ghost 中更新。
 
-In the demo project, we're using Vercel webhooks to deploy our blog. When we create a new blog or update something on the site, Ghost triggers the Vercel webhook. Then Vercel rebuilds the site as needed.
+在演示项目中，我们使用 Vercel webhooks 来部署我们的博客。当我们创建一个新的博客或更新网站上的东西时，Ghost 会触发 Vercel webhook。然后 Vercel 根据需要重建网站。
 
-You do not need to write the code for this – just follow along and copy-paste as you go.
+你不需要为这个写代码,只要跟着你的思路，边走边复制粘贴。
 
-#### How to get the webhook from Vercel
+#### 如何从 Vercel 获得 webhook
 
-Firstly, go to the Vercel dashboard.
+首先，进入 Vercel 仪表板。
 
 ![Vercel dashboard](https://www.freecodecamp.org/news/content/images/2023/04/select1.png)
 
-Vercel dashboard
+Vercel 仪表板
 
-Select your project, where you'll deploy your Ghost frontend.
+选择你的项目，你将在那里部署你的 Ghost 前台。
 
 ![Select the project in your vercel dashboard](https://www.freecodecamp.org/news/content/images/2023/04/select2.png)
 
-Select the project in your Vercel dashboard
+在你的 Vercel 仪表板上选择项目
 
-Click on the settings tab in your Vercel project.
+点击你的 Vercel 项目中的设置标签(settings)。
 
 ![Click the Git tab](https://www.freecodecamp.org/news/content/images/2023/04/select3.png)
 
-Click the Git tab
+点击 Git 标签
 
-Then click on the Git tab. After scrolling down, you can see the deploy hook selection.  
+然后点击 Git 标签。向下滚动后，你可以看到部署钩(deploy hook )的选择。
 
 ![Go to Deploy hooks sections](https://www.freecodecamp.org/news/content/images/2023/04/select4.png)
 
-Go to Deploy hooks sections
+转到部署挂钩部分
 
-Enter your webhook name and branch name and click on the "create hook" button.
+输入你的 webhook 名称和分支名称，然后点击 `create hook` 按钮
 
 ![Copy your webhook url](https://www.freecodecamp.org/news/content/images/2023/04/select5.png)
 
-Copy your webhook url
+复制你的 webhook 网址
 
-Click on the copy button to copy your vercel webhook.
+点击 `copy` 按钮，复制你的 vercel webhook。
 
-#### How to integrate Vercel webhooks in the Ghost dashboard
+#### 如何在 Ghost 仪表板中集成 Vercel 的 web hook
 
-When something changes in Ghost, it triggers the Vercel webhook URL. Then Vercel redeploys the blog site.
+当 Ghost 中发生变化时，它就会触发 Vercel 的 webhook URL。然后，Vercel 会重新部署博客网站。
 
-To integrate the Vercel webhook with Ghost, just follow these steps:
+要将 Vercel webhook 与 Ghost 集成，只需遵循以下步骤：
 
-Open the Ghost CMS dashboard.
+打开 Ghost CMS 仪表板。
 
 ![ghost1](https://www.freecodecamp.org/news/content/images/2023/04/ghost1.png)
 
-Ghost dashboard
+Ghost 仪表板
 
-Click on the setting icon.
+点击设置(齿轮)图标。
 
 ![ghost3](https://www.freecodecamp.org/news/content/images/2023/04/ghost3.png)
 
-Ghost settings
+Ghost 设置
 
-Click on the New custom integration button.
+点击 `New custom integration` 按键。
 
 ![ghost4](https://www.freecodecamp.org/news/content/images/2023/04/ghost4.png)
 
-Add a new custom integration
+添加新的集成(a new custom integration)
 
-Enter the integration name.
+输入 `integration` 名字
 
 ![ghost5](https://www.freecodecamp.org/news/content/images/2023/04/ghost5.png)
 
-Add integration name
+添加 integration 的命名
 
-Click to add the webhook button.
+点击 `add webhook` 按键。
 
 ![ghost7](https://www.freecodecamp.org/news/content/images/2023/04/ghost7.png)
 
-How to add the webhook
+怎么添加 webhook
 
-First, enter the name, then select Event and paste the URL which you copied from the Vercel dashboard.
+首先，输入名称，然后选择事件，并粘贴你从 Vercel 仪表板上复制的 URL。
 
-Based on the event, Ghost will call the webhook, and your website will rebuild. Redeploys take time based on how big your site is, and so on.
+基于该事件，Ghost 将调用 webhook，你的网站将重新构建。重新部署需要时间，这取决于你的网站有多大，以此类推。
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
-Everything should work well using Next.js and the Ghost CMS as we've worked through in this tutorial.
+使用 Next.js 和 Ghost CMS，一切都应该正常工作，正如我们在本教程中所做的那样。
 
-But some of the Ghost editor components, like toggles, where you need JavaScript interaction, don't work. You can solve this by writing your own JavaScript or getting a JavaScript file for Ghost and adding it to the `read/[slug]/page.tsx` file.  
+但是 Ghost 的一些编辑器组件，比如切换器，在需要 JavaScript 交互的地方，却不能工作。你可以通过编写你自己的 JavaScript 或者获得 Ghost 的 JavaScript 文件，并将其添加到`read/[slug]/page.tsx`文件中来解决这个问题。
 
-You can save a lot of money on hosting by combining Next.js and the Ghost CMS API, but you lose some features like inbuilt signup, login, accounts, subscriptions, search bar, and member access levels.
+通过结合 Next.js 和 Ghost CMS API，你可以节省大量的主机费用，但你会失去一些功能，如内置的注册(signup)、登录(login)、账户(accounts)、订阅(subscriptions)、搜索栏(search bar)和会员访问级别(member access levels)。
 
-You can share and follow me on [Twitter](https://twitter.com/Official_R_deep) and [Linkedin](https://www.linkedin.com/in/officalrajdeepsingh/). If you like my work, you can read more content on my blog, the [officialrajdeepsingh.dev](https://officialrajdeepsingh.dev/), [frontend web](https://medium.com/frontendweb), and Sign up for my [free newsletter](https://officialrajdeepsingh.medium.com/subscribe).
+你可以在[Twitter](https://twitter.com/Official_R_deep)和[Linkedin](https://www.linkedin.com/in/officalrajdeepsingh/)上分享和关注我。如果你喜欢我的工作，你可以在我的博客、[officialrajdeepsingh.dev](https://officialrajdeepsingh.dev/)、[frontend web](https://medium.com/frontendweb)上阅读更多内容，并注册我的 [免费通讯(free newsletter)](https://officialrajdeepsingh.medium.com/subscribe) 。
 
-You can also check out [awesome-next](https://github.com/officialrajdeepsingh/awesome-nextjs), a curated list of awesome Nextjs-based libraries that help build small and large-scale applications with Next.js.
+你还可以查看[awesome-next](https://github.com/officialrajdeepsingh/awesome-nextjs)，这是一个精心策划的基于 Nextjs 的很棒的库列表，有助于用 Next.js 构建小型和大型应用程序。
 
-Here are some additional resources you can use if you need more help or information while going through this tutorial:
+这里有一些补充内容:
 
-[
+用 Headless Ghost+Next.js 构建自定义 JavaScript 应用程序
 
-Build A Custom JavaScript App With Headless Ghost + Next.js
+用 Ghost 为你的服务器端应用提供动力，用 Next.js 的 React 框架构建一个完全自定义的前端
 
-Power your server-side application with Ghost and build a completely custom front-end with the Next.js React framework!
+[Ghost,一个专业发布内容的平台](https://ghost.org/images/meta/ghost-docs.png)
 
-Ghost - The Professional Publishing Platform
-
-![ghost-docs](https://ghost.org/images/meta/ghost-docs.png)
-
-](https://ghost.org/docs/jamstack/next/)
-
-[
-
-How To Build Your Blog on DigitalOcean with Ghost and Next.js | DigitalOcean
-
-You can use Next.js with Ghost to build a statically generated blog with better performance and SEO. You can also customize your design and add the functionalities you want. In this tutorial, you’ll use Ghost to manage articles and Next.js to build the frontend of your blog. DigitalOcean’s Ghost One…
-
-![android-chrome-512x512.5f2e6221](https://www.digitalocean.com/_next/static/media/android-chrome-512x512.5f2e6221.png)DigitalOcean
+[如何用 Ghost 和 Next.js 在 DigitalOcean 上建立你的博客 | DigitalOcean 你可以用 Next.js 和 Ghost 建立一个静态生成的博客，具有更好的性能和 SEO。你还可以定制你的设计并添加你想要的功能。在本教程中，你将使用 Ghost 来管理文章，使用 Next.js 来构建博客的前端。DigitalOcean 的 Ghost One](https://www.digitalocean.com/community/tutorials/how-to-build-your-blog-on-digitalocean-with-ghost-and-next-js)
 
 ![intro-to-cloud.d49bc5f7](https://www.digitalocean.com/_next/static/media/intro-to-cloud.d49bc5f7.jpeg)
 
-](https://www.digitalocean.com/community/tutorials/how-to-build-your-blog-on-digitalocean-with-ghost-and-next-js)
+[Ghost 内容 API 文档。Ghost 的 RESTful Content API 向世界提供已发布的内容，并可由任何客户端访问以呈现网站。阅读更多关于 Ghost Docs。 Ghost 专业发布内容的平台](https://ghost.org/docs/content-api/)
 
-[
+[入门｜ Next.js 在官方文档中开始使用 Next.js，并了解更多关于 Next.js 的功能](https://beta.nextjs.org/docs/getting-started)
 
-Ghost Content API Documentation
-
-Ghost’s RESTful Content API delivers published content to the world and can be accessed by any client to render a website. Read more on Ghost Docs.
-
-Ghost - The Professional Publishing Platform
-
-![ghost-docs](https://ghost.org/images/meta/ghost-docs.png)
-
-](https://ghost.org/docs/content-api/)
-
-[
-
-Getting Started | Next.js
-
-Get started with Next.js in the official documentation, and learn more about Next.js features!
-
-![apple-touch-icon](https://beta.nextjs.org/static/favicon/apple-touch-icon.png)Next.jsNext.js LogoNext.js Logo
-
-![docs](https://beta.nextjs.org/static/twitter-cards/docs.png)
-
-](https://beta.nextjs.org/docs/getting-started)
-
-I write tons of articles on Next. If you are interested in Next and related stuff, you can follow me on [Medium](https://officialrajdeepsingh.medium.com/) and join the [frontend web publication](https://medium.com/frontendweb).
+我在 Next 上写了大量的文章。如果你对 Next 和相关的东西感兴趣，你可以在 [Medium](https://officialrajdeepsingh.medium.com/) 上关注我，并加入 [frontend web publication](https://medium.com/frontendweb)。

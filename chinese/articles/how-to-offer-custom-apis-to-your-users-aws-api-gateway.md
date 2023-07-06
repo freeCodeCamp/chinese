@@ -5,7 +5,7 @@
 
 ![How to Offer Custom APIs to Your Users with AWS API Gateway](https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/AWS-API-Gateway-Banner.png)
 
-在云计算领域和 serverless 架构中，AWS API 网关是一种有力的工具，能帮助您搭建强大、安全且可拓展的 API。
+在云计算领域和 serverless 架构中，AWS API Gateway 是一款强大的工具，能帮助您搭建强大、安全且可拓展的 API。
 
 在本教程中，首先我将介绍 API 网关是什么，并解释使用 API 网关的好处。接下来，我将展示如何创建、部署一个 Rest API, 并创建使用计划以提供 API 密钥。那么，我们现在就开始吧！
 
@@ -83,7 +83,7 @@ def lambda_handler(event, context):
 
 部署 Lambda Function
 
-恭喜! 您已成功创建 AWS Lambda 函数，接下来让我们来创建 Rest API.
+恭喜! 您已成功创建 AWS Lambda 函数，接下来让我们来创建 Rest API。
 
 ## 如何创建 Rest API 并将其与 AWS Lambda 集成
 
@@ -161,7 +161,7 @@ Well. That's a interesting question. First of all, you can configure the usage p
 
 Now let's create a Usage Plan, generate an API key, and make our Rest API accessible only by passing the API key in the Header.
 
-## How to Create an API Gateway Usage Plan
+## 如何创建 API Gateway 使用计划
 
 In the left side bar click on Usage Plans and click the Create button. Enter the Name of your plan – I chose "Basic". Enter the Throttling and Quota sections as per your requirements and click Next.
 

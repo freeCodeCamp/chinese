@@ -5,50 +5,50 @@
 
 ![How to Offer Custom APIs to Your Users with AWS API Gateway](https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/AWS-API-Gateway-Banner.png)
 
-In the world of cloud computing and serverless architecture, AWS API Gateway is a powerful tool that helps you build robust, secure, and scalable APIs.
+在云计算领域和 serverless 架构中，AWS API 网关是一种有力的工具，能帮助您搭建强大、安全且可拓展的 API。
 
-In this tutorial, I'll introduce you to API Gateway and explain the benefits of using this helpful tool. Then I'll show you how to create and deploy a Rest API, and create usage plans to offer API keys. Alright, let's get started.
+在本教程中，首先我将介绍 API 网关是什么，并解释使用 API 网关的好处。接下来，我将展示如何创建、部署一个 Rest API,并创建使用计划以提供 API 密钥。那么，我们现在就开始吧！
 
-## What is API Gateway?
+## 什么是 API 网关？
 
-AWS API Gateway is a fully managed service provided by Amazon Web Services (AWS) that simplifies the creation, deployment, and management of APIs at any scale.
+AWS API Gateway 是 Amazon Web Services (AWS) 提供的一项全托管服务，可帮助您轻松搭建、部署和管理任意规模的 API。
 
-It acts as a front door for applications, and allows you to create APIs that act as bridges between clients and back-end services. This enables secure and efficient communication.
+它充当应用程序的前门，允许您创建充当客户端和后端服务之间桥梁的 API，以便实现安全有效的通信。
 
-## Why Do You Need API Gateway?
+## 为什么需要 API 网关？
 
-AWS API Gateway offers many benefits for businesses and developers. Here are a few benefits of using API Gateway.
+AWS API Gateway 可为企业和开发者提供诸多好处，下方列出了一些使用 API 网关的好处。
 
-### Scalability and High Availability
+### 可拓展性和高可用性
 
-With AWS API Gateway, scaling your APIs becomes much easier. It seamlessly handles traffic spikes by automatically scaling the underlying infrastructure. This results in high availability and helps prevent service disruptions.
+借助 AWS API Gateway，您可更轻松地进行 API 拓展。通过底层基础设施自动伸缩， AWS API Gateway 可以无缝处理流量高峰，以确保高可用性并避免服务中断。
 
-### Security and Authentication
+### 安全与认证
 
-API Gateway offers robust security features, including built-in authentication and authorization mechanisms.
+API 网关提供强大的安全功能，包括内置的身份验证和授权机制。
 
-It supports User Authentication through IAM Roles for internal applications, Cognito for external applications (for example Mobile users), and it also supports custom authorizers.
+它支持通过 IAM 角色对内部应用程序进行用户身份验证，通过 Cognito 对外部应用程序进行身份验证，并且支持自定义授权者。
 
-### Integration with other AWS Services
+### 与其他 AWS 服务集成
 
-As part of the AWS ecosystem, API Gateway seamlessly integrates with a range of other AWS services. This enables you to leverage additional functionalities like AWS Lambda functions, AWS Cognito for user management, and AWS CloudWatch for monitoring and logging.
+作为 AWS 生态系统的一部分， API 网关与一系列其他 AWS 服务无缝集成，这意味着您能利用 AWS Lambda 函数、用于用户管理的 AWS Cognito，以及用于监管和日志记录的 AWS CloudWatch 等其他功能。
 
-### API Lifecycle Management
+### API 生命周期管理
 
-With API Gateway, you can easily version, deploy, and manage different stages of your APIs. This simplifies the process of rolling out updates, testing new features, and managing different environments such as development, staging, and production.
+利用 API 网关，您能轻松对不同阶段的 API 进行版本控制、部署及管理。这简化了发布更新、测试新功能以及管理不同环境（比如开发、预生产和生产）的过程。
 
-I hope by now you understood what API Gateway is and why it's valuable. Let's dive into creating our very own API Gateway.
+我希望现在您已经了解了 API 网关是什么以及它为何如此重要。接下来让我们一起来创建自己的 API 网关吧！
 
-## How to Create an AWS API Gateway
+## 如何创建 AWS API Gateway
 
-In this section, we will:
+在本节中，我们将:
 
 -   Create a Rest API with the GET method
 -   Integrate it with a simple hello world lambda function and deploy it
 
 Let's begin with creating a lambda function
 
-## How to Create an AWS Lambda Function
+## 如何创建 AWS Lambda 函数
 
 Log in to the AWS Management [Console](https://console.aws.amazon.com/) and search for "Lambda" in the AWS Management Console search bar. Click on Create Function.
 

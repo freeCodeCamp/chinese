@@ -7,7 +7,7 @@
 
 在云计算领域和 serverless 架构中，AWS API 网关是一种有力的工具，能帮助您搭建强大、安全且可拓展的 API。
 
-在本教程中，首先我将介绍 API 网关是什么，并解释使用 API 网关的好处。接下来，我将展示如何创建、部署一个 Rest API,并创建使用计划以提供 API 密钥。那么，我们现在就开始吧！
+在本教程中，首先我将介绍 API 网关是什么，并解释使用 API 网关的好处。接下来，我将展示如何创建、部署一个 Rest API, 并创建使用计划以提供 API 密钥。那么，我们现在就开始吧！
 
 ## 什么是 API 网关？
 
@@ -43,26 +43,26 @@ API 网关提供强大的安全功能，包括内置的身份验证和授权机�
 
 在本节中，我们将:
 
--   Create a Rest API with the GET method
--   Integrate it with a simple hello world lambda function and deploy it
+-   采用 GET 方法创建 Rest API 
+-   将其与简单的 hello world lambda 函数集成并进行部署
 
-Let's begin with creating a lambda function
+让我们从创建 lambda 函数开始吧
 
 ## 如何创建 AWS Lambda 函数
 
-Log in to the AWS Management [Console](https://console.aws.amazon.com/) and search for "Lambda" in the AWS Management Console search bar. Click on Create Function.
+登录 AWS Management [控制台](https://console.aws.amazon.com/) 并在控制台搜索栏中搜索 "Lambda"。单击 Create Function（创建函数）。
 
 ![image-145](https://www.freecodecamp.org/news/content/images/2023/06/image-145.png)
 
-Navigate to AWS Lambda Console
+导航至 AWS Lambda 控制台
 
-Select the "Author from scratch" option, enter a name for your lambda function, select the "Python" runtime, and click the Create Function button at the bottom right.
+选择"Author from scratch（从头开始创作）" 选项，输入 lambda function 名称，选择 "Python" 运行时，然后单击右下方的 Create Function 按钮。
 
 ![image-146](https://www.freecodecamp.org/news/content/images/2023/06/image-146.png)
 
-Create a AWS Lambda Function
+创建一个 AWS Lambda Function
 
-Once the function is created, update the following code and deploy the changes:
+函数创建成功后，请更新下方代码并部署更改：
 
 ```Python
 import json
@@ -81,17 +81,17 @@ def lambda_handler(event, context):
 
 ![image-147](https://www.freecodecamp.org/news/content/images/2023/06/image-147.png)
 
-Deploy a Lambda Function
+部署 Lambda Function
 
-Congratulations! You have successfully created an AWS Lambda function. Now let's create the Rest API.
+恭喜! 您已成功创建 AWS Lambda 函数，接下来让我们来创建 Rest API.
 
-## How to Create a Rest API and Integrate it with AWS Lambda
+## 如何创建 Rest API 并将其与 AWS Lambda 集成
 
-Search for API Gateway in the search bar. In the REST API section, click on the Build button.
+在搜索栏搜索 API Gateway，然后再 REST API 模块中单击 Build 按钮。
 
 ![image-183](https://www.freecodecamp.org/news/content/images/2023/06/image-183.png)
 
-Create a Rest API
+创建 Rest API
 
 Choose the Protocol as Rest and select New API in the Create new API section. In the settings section enter the API name of your choice and leave Endpoint Type as the default. Then click the Create API button.
 

@@ -50,7 +50,7 @@ API 网关提供强大的安全功能，包括内置的身份验证和授权机�
 
 ## 如何创建 AWS Lambda 函数
 
-登录 AWS Management [控制台](https://console.aws.amazon.com/) 并在控制台搜索栏中搜索 "Lambda"。单击 Create Function（创建函数）。
+登录 AWS Management [控制台](https://console.aws.amazon.com/) 并在控制台搜索栏中搜索 "Lambda"。然后，单击 Create Function 按钮。
 
 ![image-145](https://www.freecodecamp.org/news/content/images/2023/06/image-145.png)
 

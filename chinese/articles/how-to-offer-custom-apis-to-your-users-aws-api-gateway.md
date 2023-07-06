@@ -1,6 +1,6 @@
 > -  原文地址：[How to Offer Custom APIs to Your Users with AWS API Gateway](https://www.freecodecamp.org/news/how-to-offer-custom-apis-to-your-users-aws-api-gateway/)
 > -  原文作者：[Arunachalam B](https://www.freecodecamp.org/news/author/arunachalam/)
-> -  译者：
+> -  译者：Rhea-xiao
 > -  校对者：
 
 ![How to Offer Custom APIs to Your Users with AWS API Gateway](https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/AWS-API-Gateway-Banner.png)

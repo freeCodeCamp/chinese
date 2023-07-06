@@ -5,80 +5,80 @@
 
 ![Next.js SEO for Developers – How to Build Highly Performant Apps with Next](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/pexels-andrei-photo-2127783.jpg)
 
-Next.js is a popular React-based web framework that has gained popularity and a growing community in recent years. It's a powerful tool for building fast and SEO-friendly web applications with dynamic pages that work great on mobile devices.
+Next.js 是一个流行的基于 React 的网络框架，近年来获得了流行和不断增长的社区。它是一个强大的工具，用于构建快速和对 SEO 友好的网络应用，其动态页面在移动设备上运行良好。
 
-Due to the complex nature of isomorphic system design, Next.js SEO can be a tricky topic to get your head around. Especially if you're coming from traditional React apps and you're relying solely on documentation.
+由于同构系统设计的复杂性质，Next.js 的 SEO 可能是一个棘手的话题，让你头疼。特别是如果你来自传统的 React 应用程序，而且你只依赖文档。
 
-With its built-in support for server-side rendering, static site generation, and now React server components, Next.js provides a robust platform for achieving quality SEO web metrics in your web application. It also helps you deliver exceptional user experiences across multiple pages in Node and React apps while making them SEO friendly.
+凭借其对服务器端渲染、静态网站生成以及现在的 React 服务器组件的内置支持，Next.js 提供了一个强大的平台，可以在你的网络应用中实现高质量的 SEO 网络指标。它还可以帮助你在 Node 和 React 应用程序中的多个页面上提供卓越的用户体验，同时使它们对 SEO 友好。
 
 ## Why Should You Learn NextJS for Front End Development?
 
-In short, the newest version of NextJS is an open source platform that addresses a lot of rendering issues that React currently has. I wrote this article because a lot of front end developers get mad at me :-D.
+简而言之，最新版本的 NextJS 是一个开源平台，解决了 React 目前存在的很多渲染问题。我写这篇文章是因为很多前端开发者对我很生气:-D。
 
-They spend 6-9 months developing a React App, and then I have to ask them to refactor their code.
+他们花了 6-9 个月开发一个 React App，然后我不得不要求他们重构代码。
 
-Next.js avoids a lot of rending issues – it makes it very easy for search engines to understand what your website is all about.
+Next.js 避免了很多渲染问题。它让搜索引擎非常容易理解你的网站是怎么回事。
 
 ### Who Will get the most out of this article?
 
-This will be very helpful to you if you're a marketer or more advanced developer who's experiencing SEO issues.
+如果你是一个营销人员或遇到 SEO 问题的更高级的开发人员，这将对你很有帮助。
 
-However newer developers are welcome to review this info as well, as it will help you in the long term.
+然而，也欢迎新的开发者查看这些信息，因为它将对你有长期的帮助。
 
 ## How Should You Render Your Next JS Web Page Application?
 
-I've personally reviewed a ton of theses websites from my consultancy [OhMyCrawl](https://www.ohmycrawl.com/) and made a video overview to help understand the benefits of using frameworks such as Next.js for SEO:
+我个人从我的咨询公司[OhMyCrawl](https://www.ohmycrawl.com/)查看了大量的这些网站，并制作了一个视频概述，以帮助了解使用 Next.js 等框架对 SEO 的好处：
 
 ## How is Next SEO Different from Other Frameworks?
 
-Next SEO sets itself apart by streamlining so many features and free tools into a well-organized package that you can easily digest and apply in your single page applications. Next does a great job when it comes to tasks such as search engine optimization, image optimization, and minimizing cumulative layout shift.
+Next SEO 通过将如此多的功能和免费工具精简到一个组织良好的软件包中，使你可以轻松地消化和应用于你的单页应用，从而使自己与众不同。当涉及到搜索引擎优化、图像优化和最小化累积布局转移等任务时，Next 做得很好。
 
-The benefits of Next.js SEO don't stop there. We’ll be covering many of the goodies that Next.js brings to the table related to search engines, old and new.
+Next.js SEO 的好处还不止于此。我们将介绍 Next.js 带来的许多与搜索引擎有关的好东西，无论新旧。
 
 ## Search Engines, SSR, and SSG Concepts Are Evolving
 
-Most developers and SEO experts have become pretty comfortable with the existing page creation strategies and the whole SSR vs SSG paradigm. They've also developed a high level of trust in version 12 of Next.js, which provides a clear cut way to handle these two forms of page generation.
+大多数开发者和 SEO 专家已经对现有的页面创建策略和整个 SSR 与 SSG 范式感到相当满意。他们也对 Next.js 的第 12 版产生了高度的信任，该版本提供了一个清晰的方式来处理这两种形式的页面生成。
 
-As usual, though, yet another web app paradigm shift is underway, this time in the form of React Server Components (RSCs), which are included by default in Next.js version 13.
+不过，像往常一样，另一个网络应用模式的转变正在进行中，这次是以 React 服务器组件（RSCs）的形式出现的，Next.js 第 13 版中默认包含了这些组件。
 
 ### SEO Concepts Haven’t Changed – Just the Approach
 
-Next JS SEO won’t change much conceptually. If you’re looking for good search engine results and organic traffic, the game still revolves around the notion of fast page loads, quick paints, low cumulative layout shifts, and all the rest. Static pages still play a large role as well.
+Nextjs SEO 在概念上不会有太大变化。如果你想获得良好的搜索引擎结果和流量增长，关键仍然是快速载入页面、快速渲染、低累积布局变动等等。静态页面仍然扮演着重要角色。
 
-But Next.js gives us some pretty cool and novel features that help facilitate excellent search engine metrics, and it’s more than just React Server Components.
+但是，Next.js 提供了一些非常棒而独特的功能，可以帮助我们实现出色的搜索引擎指标，它不仅仅是 React Server Components。
 
-We'll explore some best practices along with a few different techniques and strategies for achieving great SEO optimization web metrics with Next.js. We'll also see how to take advantage of its unique features to improve your website's search engine visibility and user engagement.
+我们将探讨一些最佳实践，以及使用 Next.js 实现出色的 SEO 优化网络指标的不同技术和策略。我们还将看到如何利用它独特的功能来提高网站的搜索引擎可见性(网页里优先显示)和用户参与度。
 
 ## What’s New With Next.js 13 that Relates to SEO?
 
-Rather than give you a comprehensive guide to the technical changes found in version 13, we’re going to focus mainly on Next JS SEO related advantages. We'll also look at how you can leverage the best SEO practices to achieve the best possible results in search engines with much less sweat off your back than is typically needed.
+我们不会给你一个关于第 13 版技术变化的全面指南，而是主要关注 Next JS 的 SEO 相关优势。我们还将探讨如何利用最佳的 SEO 实践，在搜索引擎中取得尽可能好的结果，而且比通常所需的汗水少得多。
 
-The version 13 changes we’ll discuss here are as follows:
+我们将在这里讨论的 Nextjs 13 变化如下：
 
-- React server components
-- Streaming UI chunks
-- Updated Next Image component
-- Next Font component
+- React 服务器组件
+- UI 的 流动块 (Streaming UI chunks)
+- 升级的 Next 图片组件
+- Next 字体组件
 
-On top of the existing default SEO properties of Next, these particular upgrades are the cornerstone of Next.js SEO improvements in version 13. Each one is awesome for its own reasons, which we’ll be going over shortly.
+除了 Next.js 默认的 SEO 属性外，这些特定的升级是 Next.js 版本 13 中 SEO 改进的基石。每个升级都有其自身的优点，我们将很快逐个介绍。
 
 ### React Server Components
 
-RSCs allow for a more fine-grained approach to rendering on both the client and the server.
+RSCs 允许在客户端和服务器上采用更精细的渲染方式。
 
-Rather than being forced to decide whether to render an entire page on the client or server upon user requests, React allows developers to choose whether components should be rendered on the server or the client. This can give you a huge advantage in search engine results pages.
+React 允许开发者选择组件是在服务器上还是在客户端渲染，而不是在用户请求时被迫决定在客户端还是服务器上渲染整个页面。这可以让你在搜索引擎结果页面中获得巨大优势。
 
-A huge majority of page optimization these days revolves around sending less JavaScript to the client. After all, this is the primary benefit of using pre-rendering and Server Side Rendering to create web pages and HTML pages.
+如今，绝大多数的页面优化都是围绕着减少向客户端发送 JavaScript。毕竟，这是使用预渲染和服务器端渲染来创建网页和 HTML 页面的主要好处。
 
-RSCs are another tool to help achieve this end and gain as much SEO value from your web pages or single page applications as you can. This helps achieve better SEO by refreshing dynamic data in a React component while leaving the static parts of the page’s content intact.
+RSC 是帮助实现这一目的的另一个工具，并从你的网页或单页应用程序中获得尽可能多的 SEO 价值。这有助于通过刷新 React 组件中的动态数据，同时保持页面内容的静态部分不变，从而实现更好的 SEO。
 
 ### Streaming UI Chunks
 
-Next.js SEO made a huge leap adding RSC to the mix, and streaming UI chunks is the cherry on top. Streaming UI is a similar spin-off of a new and growing design pattern called “the island architecture,” which strives to send as little code to the client as possible at first load.
+Next.js SEO 在添加 RSC (React Server Components) 的同时，迈出了一大步，而流式 UI(Streaming UI) 代码块则是锦上添花。流式 UI 是一个类似的新兴设计模式，称为 `岛屿架构(the island architecture)`，旨在在首次加载时尽量向客户端发送最少的代码。
 
-Allowing fine-grained control is great, but why not send a JavaScript-free, fully rendered page to the client, and send the rest later? That’s exactly what streaming UI chunks accomplish.
+允许细粒度的控制非常好，但为什么不向客户端发送一个无需 JavaScript 的完全渲染的页面，然后再发送剩余的内容呢？这正是流式 UI 代码块所实现的目标。
 
-When Next.js renders a page on the server, the page typically comes with all the JavaScript bundled up and sent along with it. The ability to stream chunks of data eliminates this need, and allows an extremely tiny static page to be sent to the client, significantly improving web metrics such as first contentful paint and overall page speed.
+当 Next.js 在服务器端渲染页面时，通常会将页面的所有 JavaScript 捆绑并与之一起发送。而流式 UI 代码块的引入消除了这种需要，允许向客户端发送一个非常小的静态页面，显著改善了诸如首次内容呈现时间和整体页面速度等网络指标。
 
 ### Next.js 13 App Directory
 

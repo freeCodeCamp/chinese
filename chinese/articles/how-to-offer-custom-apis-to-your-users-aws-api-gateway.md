@@ -56,7 +56,7 @@ API 网关提供强大的安全功能，包括内置的身份验证和授权机�
 
 导航至 AWS Lambda 控制台
 
-选择"Author from scratch（从头开始创作）" 选项，输入 lambda function 名称，选择 "Python" 运行时，然后单击右下方的 Create Function 按钮。
+选择 "Author from scratch" 选项，输入 lambda function 名称，选择 "Python" 运行时，然后单击右下方的 Create Function 按钮。
 
 ![image-146](https://www.freecodecamp.org/news/content/images/2023/06/image-146.png)
 
@@ -93,29 +93,29 @@ def lambda_handler(event, context):
 
 创建 Rest API
 
-Choose the Protocol as Rest and select New API in the Create new API section. In the settings section enter the API name of your choice and leave Endpoint Type as the default. Then click the Create API button.
+选择协议为 Rest，并在 Create new API 选项中选择 New API。在设置中输入您选择的 API 名称，并保留 Endpoint Type 为默认项。然后，单击 Create API 按钮。
 
 ![image-148](https://www.freecodecamp.org/news/content/images/2023/06/image-148.png)
 
-Configure creating a Rest API
+配置创建 Rest API
 
-Click the Actions Button on the top left. Next, Click Method and select the method as GET and click the Tick icon.
+首先单击左上方的 Actions 按钮，然后单击 Method 并选中 GET 方法，再单击 Tick 图标。
 
 ![image-149](https://www.freecodecamp.org/news/content/images/2023/06/image-149.png)
 
-Create a Method
+创建 Method
 
 ![image-150](https://www.freecodecamp.org/news/content/images/2023/06/image-150.png)
 
-Choose "GET" method
+选择 "GET" 方法
 
-Select Lambda Function as the Integration type and enter the name of the Lambda function you created previously. Then save the function.
+选择 Lambda Function 作为 Integration 类型，并输入已创建的 Lambda 函数名称。然后，保存此函数。
 
 ![image-151](https://www.freecodecamp.org/news/content/images/2023/06/image-151.png)
 
-Select Method configuration
+选择 Method 配置
 
-Once you click save, "Add Permission to Lambda Function" will prompt for confirmation. This basically means that you're allowing the API Gateway to invoke a Lambda function. In this case, it is "DemoFunction" Lambda function. Accept the confirmation and proceed to the next step.
+单击保存后， 屏幕中将弹出 "Add Permission to Lambda Function"消息提示确认，这就意味着您允许 API Gateway 调用 Lambda 函数。在本例中，它就是 it is "DemoFunction" Lambda 函数。请同意确认，并继续下一步。
 
 ![image-152](https://www.freecodecamp.org/news/content/images/2023/06/image-152.png)
 

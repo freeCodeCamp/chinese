@@ -1,7 +1,7 @@
-> -  原文地址：[Next.js SEO for Developers – How to Build Highly Performant Apps with Next](https://www.freecodecamp.org/news/nextjs-seo/)
-> -  原文作者：[Scott Gary](https://www.freecodecamp.org/news/author/scott-gary/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Next.js SEO for Developers – How to Build Highly Performant Apps with Next](https://www.freecodecamp.org/news/nextjs-seo/)
+> - 原文作者：[Scott Gary](https://www.freecodecamp.org/news/author/scott-gary/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Next.js SEO for Developers – How to Build Highly Performant Apps with Next](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/pexels-andrei-photo-2127783.jpg)
 
@@ -55,10 +55,10 @@ Rather than give you a comprehensive guide to the technical changes found in ver
 
 The version 13 changes we’ll discuss here are as follows:
 
--   React server components
--   Streaming UI chunks
--   Updated Next Image component
--   Next Font component
+- React server components
+- Streaming UI chunks
+- Updated Next Image component
+- Next Font component
 
 On top of the existing default SEO properties of Next, these particular upgrades are the cornerstone of Next.js SEO improvements in version 13. Each one is awesome for its own reasons, which we’ll be going over shortly.
 
@@ -104,9 +104,9 @@ Browsers have had great support for native lazy loading for some time now, and i
 
 A few other great improvement for SEO are:
 
--   Required alt tag by default.
--   Better validation to pinpoint errors involving invalid properties.
--   More easily styled due to a more HTML-like interface.
+- Required alt tag by default.
+- Better validation to pinpoint errors involving invalid properties.
+- More easily styled due to a more HTML-like interface.
 
 Overall, the new Image component is simplified and slimmed down, and in the programming world simpler is almost always better.
 
@@ -139,37 +139,37 @@ Prior to version 13, we would import the **Next/Head** component, and set any ne
 A simple example of the Head component in version 12 looks like this:
 
 ```js
-import Head from 'next/head'
+import Head from 'next/head';
 const structData = {
-'@context': 'https://schema.org',
-'@type': 'BlogPosting',
-headline: 'Learning Next.js SEO',
-description: 'All about Next.js features and more',
-author: [
-{
-'@type': 'Person',
-name: 'Jane Doe',
-},
-],
-datePublished: '2023-02-16T09:00:00.000Z',
+  '@context': 'https://schema.org',
+  '@type': 'BlogPosting',
+  headline: 'Learning Next.js SEO',
+  description: 'All about Next.js features and more',
+  author: [
+    {
+      '@type': 'Person',
+      name: 'Jane Doe'
+    }
+  ],
+  datePublished: '2023-02-16T09:00:00.000Z'
 };
 function IndexPage() {
-return (
-<div>
-<Head>
-<meta name="viewport" content="initial-scale=1.0, width=device-width" />
-<title>My page title</title>
-<script
-key="structured-1"
-type="application/ld+json"
-dangerouslySetInnerHTML={{ __html: JSON.stringify(structData) }}
-/>
-</Head>
-<p>Hello world!</p>
-</div>
-)
+  return (
+    <div>
+      <Head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>My page title</title>
+        <script
+          key="structured-1"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structData) }}
+        />
+      </Head>
+      <p>Hello world!</p>
+    </div>
+  );
 }
-export default IndexPage
+export default IndexPage;
 ```
 
 Adding structured data such as title and description or any additional meta tags in a page’s metadata is a simple matter of including a script tag with the **dangerouslySetInnerHTML** attribute, as seen in the example.
@@ -184,11 +184,11 @@ Every folder in the app directory accounts for a new route, which is why you’l
 
 ```js
 export default function Head(params) {
-return (
-<>
-<title>head.js Example</title>
-</>
-);
+  return (
+    <>
+      <title>head.js Example</title>
+    </>
+  );
 }
 ```
 
@@ -253,17 +253,15 @@ Here’s an example page component that utilizes this method:
 ```js
 import type { Metadata } from 'next';
 async function getInfo(id) {
-const res = await fetch(`https://someapi/product/${id}`);
-return res.json();
+  const res = await fetch(`https://someapi/product/${id}`);
+  return res.json();
 }
 export async function generateMetadata({ params }): Promise<Metadata> {
-const product = await getInfo(params.id);
-return { title: product.title }
+  const product = await getInfo(params.id);
+  return { title: product.title };
 }
 export default async function Page() {
-return (
-<div>Example page…</div>
-)
+  return <div>Example page…</div>;
 }
 ```
 
@@ -285,21 +283,21 @@ Adding structured data to a component, whether the layout or page, looks somethi
 
 ```js
 export default async function Page({ params }) {
-const product = await getProduct(params.id);
-const jsonLd = {
-'@context': 'https://schema.org',
-'@type': 'Product',
-name: product.name,
-image: product.image,
-description: product.description
-};
-return (
-<section>
-{/* Add JSON-LD to your page */}
-<script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-{/* ... */}
-</section>
-);
+  const product = await getProduct(params.id);
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: product.name,
+    image: product.image,
+    description: product.description
+  };
+  return (
+    <section>
+      {/* Add JSON-LD to your page */}
+      <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
+      {/* ... */}
+    </section>
+  );
 }
 ```
 

@@ -82,43 +82,42 @@ Next.js SEO 在添加 RSC (React Server Components) 的同时，迈出了一大�
 
 ### Next.js 13 App Directory
 
-When you start a new Next.js 13 project, you’ll notice a new directory called **app**. Everything within the app directory is preconfigured to allow for RSCs and streaming UI chunks. You need only create a [loading.js](https://beta.nextjs.org/docs/routing/loading-ui) component, which will wrap the page component entirely and any children within a suspense boundary.
+当你启动一个新的 Next.js 13 项目时，你会注意到一个名为**app*的新目录。在 app 目录下的所有东西都是预先配置好的，以允许 RSCs 和流媒体 UI 块的出现。你只需要创建一个[loading.js](https://beta.nextjs.org/docs/routing/loading-ui)组件，它将完全包住页面组件和悬念边界内的任何子节点。
 
-You can achieve an _even more_ granular loading pattern by manually creating the suspense boundaries yourself, essentially allowing for unlimited control over what gets loaded upon the initial request.
+你可以通过自己手动创建悬念边界来实现更精细的加载模式，基本上可以无限地控制初始请求时加载的内容。
 
-The steps for streaming UI chunks go something like this:
+流式 UI 代码块的步骤大致如下：
 
-1.  User makes initial request.
-2.  Barebones HTML page is rendered and sent to the client.
-3.  JavaScript bundles are being prepared on the server.
-4.  A page section requiring JavaScript becomes visible in the client browser.
-5.  JavaScript bundle for only that component is sent to the client.
-
-This new tooling has important implications for technical SEO by allowing more interactive pages to compete with static pages in regards to page load speed and other web metrics that are used as ranking factors in search results by search engines.
+用户发起初始请求。
+渲染并发送基本的 HTML 页面给客户端。
+服务器准备 JavaScript 捆绑文件。
+在客户端浏览器中显示需要 JavaScript 的页面部分。
+仅将该组件所需的 JavaScript 捆绑文件发送给客户端。
+这种新的工具对于技术性 SEO 具有重要影响，它使得更具交互性的页面能够与静态页面竞争，提高页面载入速度和其他在搜索引擎中用作排名因素的网络指标。
 
 ### Updated Next Image Component
 
-Another important upgrade to the Next.js SEO sphere is the Image component. Although it’s been somewhat understated, the biggest improvement in my opinion is the utilization of native lazy loading.
+Next.js SEO 领域的另一个重要升级是图片组件(Image component)。虽然它被低估了，但在我看来，最大的改进是利用了原生的懒加载。
 
-Browsers have had great support for native lazy loading for some time now, and including extra JavaScript for this feature is simply a waste of bandwidth.
+浏览器对本地懒加载的支持已经有一段时间了，为这个功能添加额外的 JavaScript 只是浪费带宽而已。
 
-A few other great improvement for SEO are:
+其他一些对 SEO 有很大帮助的改进是：
 
-- Required alt tag by default.
-- Better validation to pinpoint errors involving invalid properties.
-- More easily styled due to a more HTML-like interface.
+- 默认需要 alt 标签。
+- 更好的验证，以确定涉及无效属性的错误。
+- 由于有了一个更像 HTML 的界面，更容易进行样式设计。
 
-Overall, the new Image component is simplified and slimmed down, and in the programming world simpler is almost always better.
+总的来说，新的图片组件被简化和精简了，而在编程领域，简单的东西几乎总是更好。
 
 ### The Next Font Component
 
-The font component is a huge win for Next.js SEO, and it will certainly help alleviate many headaches in the future. Any experienced developer knows how tedious it can be configuring fonts properly (proper is not relative in this case!).
+字体组件(font component)对 Next.js 的 SEO 来说是一个巨大的胜利，它肯定会帮助减轻未来的许多头痛问题。任何有经验的开发者都知道，正确配置字体是多么繁琐的事情（在这种情况下，正确不是相对的！）。
 
-Cumulative layout shifts due to slow loading is a common nuisance, and search engines like Google have [openly stated](https://developers.google.com/publisher-tag/guides/minimize-layout-shift) that CLS is an important web metric.
+由于加载缓慢而导致的累积布局转移是一个常见的困扰，像谷歌这样的搜索引擎已经[公开表示](https://developers.google.com/publisher-tag/guides/minimize-layout-shift)，CLS 是一个重要的网络指标。(CLS 是 Cumulative Layout Shift 的缩写，衡量在网页的整个生命周期内发生的所有意外布局偏移的得分总和。)
 
-Depending on the framework you’re working with (Gatsby comes to mind), it can be tricky getting your fonts to preload effectively. Making external requests to font repositories such as Google have been a necessary evil for some time, creating a hard to manage bottleneck in many SPA applications.
+根据你所使用的框架（我想到的是 Gatsby），让你的字体有效地预加载可能是很棘手的。一段时间以来，向谷歌等字体库发出外部请求是一个避免不了的丑陋行为，在许多 SPA 应用程序中造成了一个难以管理的瓶颈。
 
-The Next Font Component aims to solve this problem by fetching all external fonts at build time, and self-hosting them from your own domain. Fonts are also optimized automatically, and zero cumulative layout shift is accomplished by automatic utilization of the CSS **size-adjust** property.
+Next Font Component 旨在解决这个问题，它在构建时获取所有的外部字体，并从你自己的域中自我托管它们。字体也被自动优化，并且通过自动利用 CSS **size-adjust(大小调整)** 属性实现了零累积的布局转移。
 
 ## Common SEO-Related Tasks with Next.js
 

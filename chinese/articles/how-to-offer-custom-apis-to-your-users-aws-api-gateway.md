@@ -263,6 +263,6 @@ curl --location --request GET '[your invoke url]' \
 
 ## 总结
 
-In this tutorial, you learned what AWS API gateway is and how to create Usage Plans for the Rest API.
+在本教程中，您学习了 AWS API gateway 是什么，以及如何创建 Rest API 使用计划。
 
-If you wish to learn more about AWS Services, subscribe to my [email newsletter](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway) ([https://5minslearn.gogosoon.com/](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway)) and follow me on social media.
+如果您想学习更多关于 AWS Services 的知识，可以订阅我的 [email newsletter](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway) ([https://5minslearn.gogosoon.com/](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway)) 并在社交媒体上关注我。

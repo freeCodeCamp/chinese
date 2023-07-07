@@ -1,7 +1,7 @@
-> -  原文地址：[The Git Rebase Handbook – A Definitive Guide to Rebasing](https://www.freecodecamp.org/news/git-rebase-handbook/)
-> -  原文作者：[Omer Rosenbaum](https://www.freecodecamp.org/news/author/omer/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The Git Rebase Handbook – A Definitive Guide to Rebasing](https://www.freecodecamp.org/news/git-rebase-handbook/)
+> - 原文作者：[Omer Rosenbaum](https://www.freecodecamp.org/news/author/omer/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The Git Rebase Handbook – A Definitive Guide to Rebasing](https://www.freecodecamp.org/news/content/images/size/w2000/2023/07/The-Git-Rebase-Handbook-Book-Cover--1-.png)
 
@@ -213,7 +213,7 @@ git checkout main
 git merge paul_branch
 ```
 
-Hm.... What would happen if you ran this last command? 🤔 Consider the commit history again, after checking out `main`:
+Hm…… What would happen if you ran this last command? 🤔 Consider the commit history again, after checking out `main`:
 
 ![image-210](https://www.freecodecamp.org/news/content/images/2023/06/image-210.png)
 
@@ -233,7 +233,7 @@ Now that you understand the basics of rebase, it is time to consider more advanc
 
 In the previous example, when you only said `rebase` (without additional switches), Git replayed all the commits from the common ancestor to the tip of the current branch.
 
-But rebase is a super-power, it's an almighty command capable of…well, rewriting history. And it can come in handy if you want to modify history to make it your own.
+But rebase is a super-power, it's an almighty command capable of……well, rewriting history. And it can come in handy if you want to modify history to make it your own.
 
 Undo the last merge by making `main` point to "Commit 4" again:
 
@@ -479,7 +479,7 @@ Create a simple Python file called `1.py`:
 
 ![image-264](https://www.freecodecamp.org/news/content/images/2023/06/image-264.png)
 
-A new file, `1.py`, with `print('Hello world!')` (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+A new file, `1.py`, with `print('Hello world!')` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Stage and commit this file:
 
@@ -498,7 +498,7 @@ And create another file, `2.py`:
 
 ![image-265](https://www.freecodecamp.org/news/content/images/2023/06/image-265.png)
 
-Creating `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+Creating `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Stage and commit this file as well:
 
@@ -511,7 +511,7 @@ And introduce some more code to `2.py`:
 
 ![image-266](https://www.freecodecamp.org/news/content/images/2023/06/image-266.png)
 
-Modifying `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+Modifying `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Stage and commit these changes too:
 
@@ -524,7 +524,7 @@ So far you should have this history:
 
 ![image-267](https://www.freecodecamp.org/news/content/images/2023/06/image-267.png)
 
-The history after introducing "Commit 15" (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+The history after introducing "Commit 15" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Get back to `feature_branch_1` and edit `1.py`:
 
@@ -534,7 +534,7 @@ git checkout feature_branch_1
 
 ![image-268](https://www.freecodecamp.org/news/content/images/2023/06/image-268.png)
 
-Modifying `1.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+Modifying `1.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Now stage and commit:
 
@@ -547,7 +547,7 @@ Your history should look like this:
 
 ![image-270](https://www.freecodecamp.org/news/content/images/2023/06/image-270.png)
 
-The history after introducing "Commit 16" (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+The history after introducing "Commit 16" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Say now you realize, you've made a mistake. You actually wanted `feature_branch_2` to be born from the `main` branch, rather than from `feature_branch_1`.
 
@@ -559,7 +559,7 @@ Well, you want to "replace" the parent of your first commit on `feature_branch_2
 
 ![image-271](https://www.freecodecamp.org/news/content/images/2023/06/image-271.png)
 
-You want to move around "Commit 14" and "Commit 15" (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+You want to move around "Commit 14" and "Commit 15" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 How would you do that?
 
@@ -579,7 +579,7 @@ As a result, you have `feature_branch_2` based on `main` rather than `feature_br
 
 ![image-272](https://www.freecodecamp.org/news/content/images/2023/06/image-272.png)
 
-The commit history after performing rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s)) 
+The commit history after performing rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 The syntax is of the command is:
 
@@ -857,14 +857,14 @@ I hope I was able to convince you that `git rebase` is powerful – but also tha
 
 # Additional References
 
--   [Git Internals YouTube playlist — by Brief](https://www.youtube.com/playlist?list=PL9lx0DXCC4BNUby5H58y6s2TQVLadV8v7) (my YouTube channel).
--   [Omer's previous post about Git internals.](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/)
--   [Omer's tutorial about Git UNDO - rewriting history with Git](https://medium.com/@Omer_Rosenbaum/git-undo-how-to-rewrite-git-history-with-confidence-d4452e2969c2).
--   [Git docs on rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
--   [Branching and the power of rebase](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/7-branching-and-the-power-of-rebase.html)
--   [Interactive rebasing](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/8-interactive-rebasing.html)
--   [Git rebase --onto](https://womanonrails.com/git-rebase-onto)
+- [Git Internals YouTube playlist — by Brief](https://www.youtube.com/playlist?list=PL9lx0DXCC4BNUby5H58y6s2TQVLadV8v7) (my YouTube channel).
+- [Omer's previous post about Git internals.](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/)
+- [Omer's tutorial about Git UNDO - rewriting history with Git](https://medium.com/@Omer_Rosenbaum/git-undo-how-to-rewrite-git-history-with-confidence-d4452e2969c2).
+- [Git docs on rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+- [Branching and the power of rebase](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/7-branching-and-the-power-of-rebase.html)
+- [Interactive rebasing](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/8-interactive-rebasing.html)
+- [Git rebase --onto](https://womanonrails.com/git-rebase-onto)
 
-# ******About the Author******
+# **\*\***About the Author**\*\***
 
 [Omer Rosenbaum](https://www.linkedin.com/in/omer-rosenbaum-034a08b9/) is [Swimm](https://swimm.io/)’s Chief Technology Officer. He's the author of the [Brief YouTube Channel](https://youtube.com/@BriefVid). He's also a cyber training expert and founder of Checkpoint Security Academy. He's the author of [Computer Networks (in Hebrew)](https://data.cyber.org.il/networks/networks.pdf). You can find him on [Twitter](https://twitter.com/Omer_Ros).

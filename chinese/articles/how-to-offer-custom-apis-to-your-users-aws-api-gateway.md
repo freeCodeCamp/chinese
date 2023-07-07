@@ -21,7 +21,7 @@ AWS API Gateway 可为企业和开发者提供诸多好处，下方列出了一�
 
 ### 可拓展性和高可用性
 
-借助 AWS API Gateway，您可更轻松地进行 API 拓展。通过底层基础设施自动伸缩， AWS API Gateway 可以无缝处理流量高峰，以确保高可用性并避免服务中断。
+借助 AWS API Gateway，您可以更轻松地进行 API 拓展。通过底层基础设施自动拓展， AWS API Gateway 可以无缝处理流量高峰，以确保高可用性并避免服务中断。
 
 ### 安全与认证
 
@@ -87,13 +87,13 @@ def lambda_handler(event, context):
 
 ## 如何创建 Rest API 并将其与 AWS Lambda 集成
 
-在搜索栏搜索 API Gateway，然后再 REST API 模块中单击 Build 按钮。
+在搜索栏搜索 API Gateway，然后在 REST API 版块中单击 Build 按钮。
 
 ![image-183](https://www.freecodecamp.org/news/content/images/2023/06/image-183.png)
 
 创建 Rest API
 
-选择协议为 Rest，并在 Create new API 选项中选择 New API。在设置中输入您选择的 API 名称，并保留 Endpoint Type 为默认项。然后，单击 Create API 按钮。
+选择协议为 Rest，并在 Create new API 选项中选择 New API。在设置选项中输入您选择的 API 名称，并保留 Endpoint Type 的默认选项。然后，单击 Create API 按钮。
 
 ![image-148](https://www.freecodecamp.org/news/content/images/2023/06/image-148.png)
 
@@ -109,13 +109,13 @@ def lambda_handler(event, context):
 
 选择 "GET" 方法
 
-选择 Lambda Function 作为 Integration 类型，并输入已创建的 Lambda 函数名称。然后，保存此函数。
+选择 Lambda Function 作为 Integration type，并输入已创建的 Lambda 函数名称。然后，保存此函数。
 
 ![image-151](https://www.freecodecamp.org/news/content/images/2023/06/image-151.png)
 
 选择 Method 配置
 
-单击保存后， 屏幕中将弹出 "Add Permission to Lambda Function"消息提示确认，这就意味着您将允许 API Gateway 调用 Lambda 函数。在本例中，它就是 "DemoFunction" Lambda 函数。请同意确认，并继续下一步。
+单击保存后， 屏幕中将弹出 "Add Permission to Lambda Function"消息提示确认，这就意味着您将允许 API Gateway 调用 Lambda 函数（在本例中指的就是 "DemoFunction" Lambda 函数）。请同意确认，并继续下一步。
 
 ![image-152](https://www.freecodecamp.org/news/content/images/2023/06/image-152.png)
 
@@ -137,7 +137,7 @@ def lambda_handler(event, context):
 
 部署 API 网关
 
-此时屏幕上将弹出 Deploy API 对话框，请选择 New Stage 作为部署阶段，并对其进行命名。然后，单击 Deploy 按钮。
+此时屏幕上将弹出 Deploy API 对话框，请选择 New Stage 作为 Deployment stage，并对其进行命名。然后，单击 Deploy 按钮。
 
 ![image-155](https://www.freecodecamp.org/news/content/images/2023/06/image-155.png)
 
@@ -153,7 +153,7 @@ API 网关创建成功
 
 测试我们的 API
 
-真棒! 我们已经成功创建 Rest API，将其与 Lambda 函数集成，并且进行了部署。
+真棒! 我们已经成功创建了 Rest API，将其与 Lambda 函数集成并进行了部署。
 
 但是，您可以通过市场中提供的多种服务来实现这个目标，那为什么要选择 AWS API Gateway 呢？
 
@@ -169,15 +169,15 @@ API 网关创建成功
 
 创建 AWS API Gateway 使用计划
 
-单击 Add API Stage 按钮，并选择相应的 API 及其阶段。然后，单击右上角的勾选图标，并选择 Next。
+单击 Add API Stage 按钮，并选择相应的 API 及其 Stage。然后，单击右上角的勾选图标，并选择 Next。
 
 ![Screenshot-from-2023-06-19-10-46-19](https://www.freecodecamp.org/news/content/images/2023/06/Screenshot-from-2023-06-19-10-46-19.png)
 
-为我们的 API 创建一个阶段
+为我们的 API 创建一个 Stage
 
 ![image-164](https://www.freecodecamp.org/news/content/images/2023/06/image-164.png)
 
-为我们的 API 创建一个阶段
+为我们的 API 创建一个 Stage
 
 单击 "Create API Key and add to Usage Plan"，屏幕上将弹出一个对话框，请输入 API 密钥名称。而关于 API 密钥，我这里选择了 Auto Generate （自动生成），当然您也可以进行自定义。然后，单击 Save 按钮。
 
@@ -195,7 +195,7 @@ API 网关创建成功
 
 选择方法
 
-在设置选项中，将 API Key Required 字段更新为 "true" 并单击勾选图标。更新后，务必点击 Action 下拉菜单以部署更改。否则，变更将不会更新。
+在设置选项中，将 API Key Required 字段更新为 "true" 并单击勾选图标。更新后，务必点击 Actions 下拉菜单以部署更改。否则，变更将不会更新。
 
 ![image-187](https://www.freecodecamp.org/news/content/images/2023/06/image-187.png)
 
@@ -259,10 +259,10 @@ curl --location --request GET '[your invoke url]' \
 
 因为在标头中传递了 'x-api-key'，所以您能看到 Lambda 函数输出的结果。
 
-真棒! 您已经成功创建使用计划，生成了 API 密钥，并将其附加到 Rest API 方法中以及验证了集成。
+真棒! 您已经成功创建了使用计划，生成了 API 密钥，并将其附加到 Rest API 方法中以及验证了集成。
 
 ## 总结
 
-在本教程中，您学习了 AWS API gateway 是什么，以及如何创建 Rest API 使用计划。
+在本教程中，您学习了 AWS API gateway 是什么，以及如何为 Rest API 创建使用计划。
 
 如果您想学习更多关于 AWS Services 的知识，可以订阅我的 [email newsletter](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway) ([https://5minslearn.gogosoon.com/](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway)) 并在社交媒体上关注我。

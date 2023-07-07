@@ -56,7 +56,7 @@ API 网关提供强大的安全功能，包括内置的身份验证和授权机�
 
 导航至 AWS Lambda 控制台
 
-选择 "Author from scratch" 选项，输入 lambda function 名称，选择 "Python" 运行时，然后单击右下方的 Create Function 按钮。
+选择 "Author from scratch" 选项，输入 lambda 函数名称，选择 "Python" Runtime，然后单击右下方的 Create Function 按钮。
 
 ![image-146](https://www.freecodecamp.org/news/content/images/2023/06/image-146.png)
 

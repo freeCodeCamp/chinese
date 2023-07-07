@@ -137,7 +137,7 @@ def lambda_handler(event, context):
 
 部署 API 网关
 
-此时屏幕上将弹出 Deploy API 对话框，请选择 New Stage 作为 Deployment stage，并对其进行命名。然后，单击 Deploy 按钮。
+此时屏幕上将弹出 Deploy API 的对话框，请选择 New Stage 作为 Deployment stage，并对其进行命名。然后，单击 Deploy 按钮。
 
 ![image-155](https://www.freecodecamp.org/news/content/images/2023/06/image-155.png)
 

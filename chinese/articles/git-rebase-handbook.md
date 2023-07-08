@@ -5,87 +5,86 @@
 
 ![The Git Rebase Handbook – A Definitive Guide to Rebasing](https://www.freecodecamp.org/news/content/images/size/w2000/2023/07/The-Git-Rebase-Handbook-Book-Cover--1-.png)
 
-One of the most powerful tools a developer can have in their toolbox is `git rebase`. Yet it is notorious for being complex and misunderstood.
+开发人员的工具箱中最强大的工具之一是`git rebase'。但它因复杂和被误解而臭名昭著。
 
-The truth is, if you understand what it _actually_ does, `git rebase` is a very elegant, and straightforward tool to achieve so many different things in Git.
+事实上，如果你了解它的实际作用，`git rebase'是一个非常优雅和直接的工具，可以实现 Git 中许多不同的事情。
 
-In previous posts, you understood [what Git diffs are](https://www.freecodecamp.org/news/git-diff-and-patch/), [what a merge is](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/), and [how Git resolves merge conflicts](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/). In this post, you will understand what Git rebase is, why it's different from merge, and how to rebase with confidence 💪🏻
+在之前的文章中，你了解了 [什么是 Git diff](https://www.freecodecamp.org/news/git-diff-and-patch/)，[什么是 merge](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)，以及 [Git 如何解决合并冲突(merge conflicts)](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)。在这篇文章中，你将了解什么是 Git rebase，为什么它与 merge 不同，以及如何放心地进行 rebase 💪🏻
 
 ## Notes before we start
 
-1.  I also created a video covering the contents of this post. If you wish to watch alongside reading, you can find it [here](https://youtu.be/3VFsitGUB3s).
-2.  If you want to play around with the repository I used and try out the commands for yourself, you can get the repo [here](https://github.com/Omerr/rebase_playground).
-3.  I am working on a book about Git! Are you interested in reading the initial versions and providing feedback? Send me an email: [gitting.things@gmail.com](https://www.freecodecamp.org/news/p/2e1fc200-f447-4f55-b0a3-73ef790a2190/gitting.things@gmail.com)
+1. 我还制作了一个涵盖本帖内容的视频。如果你想在阅读的同时观看，你可以找到[它](https://youtu.be/3VFsitGUB3s)。
+2. 如果你想玩玩我用的软件库，自己试试这些命令，你可以得到软件库[这里](https://github.com/Omerr/rebase_playground)。
+3. 我正在写一本关于 Git 的书! 你有兴趣阅读初始版本并提供反馈吗？请给我发[邮件](gitting.things@gmail.com)
 
-OK, are you ready?
+好了，你准备好了吗？
 
 # Short Recap - What is Git Merge? 🤔
 
-Under the hood, `git rebase` and `git merge` are very, very different things. Then why do people compare them all the time?
+从底层来讲，`git rebase` 和 `git merge`是非常、非常不同的事情。那为什么人们一直在比较它们呢？
 
-The reason is their usage. When working with Git, we usually work in different branches and introduce changes to those branches.
+原因是它们的用法。使用 Git 时，我们通常在不同的分支工作，并对这些分支进行修改。
 
-In [a previous tutorial](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/#howgits3waymergealgorithmworks), I gave an example where John and Paul (of the Beatles) were co-authoring a new song. They started from the `main` branch, and then each diverged, modified the lyrics and committed their changes.
+在[以前的教程](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/#howgits3waymergealgorithmworks)中，我举了一个例子， John 和 paul（披头士乐队）正在共同创作一首新歌。他们从 "主 "分支开始，然后各自发散，修改歌词并提交他们的修改。
 
-Then, the two wanted to integrate their changes, which is something that happens very frequently when working with Git.
+然后，两人想整合他们的改动，这是使用 Git 工作时经常发生的事情。
 
 ![image-197](https://www.freecodecamp.org/news/content/images/2023/06/image-197.png)
 
-A diverging history - `paul_branch` and `john_branch` diverged from `main` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+分歧(diverged)的历史 - `paul_branch` 和 `john_branch` 与 `main`分歧 (来源： [简介](https://youtu.be/3VFsitGUB3s))
 
-There are two main ways to integrate changes introduced in different branches in Git, or in other words, different commits and commit histories. These are merge and rebase.
+在 Git 中，有两种主要的方式来整合不同分支的变化，或者说，不同的提交和提交历史。它们是 merge 和 rebase。
 
-[In a previous tutorial](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/), we got to know `git merge` pretty well. We saw that when performing a merge, we create a **merge commit** – where the contents of this commit are a combination of the two branches, and it also has two parents, one in each branch.
+[在之前的教程中](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)，我们对 `git merge` 有了相当的了解。我们看到，在执行合并时，我们会创建一个 **合并提交(merge commit)**,这个提交的内容是两个分支的组合，它也有两个父分支，每个分支一个。
 
-So, say you are on the branch `john_branch` (assuming the history depicted in the drawing above), and you run `git merge paul_branch`. You will get to this state – where on `john_branch`, there is a new commit with two parents. The first one will be the commit on `john_branch` branch where `HEAD` was pointing to before performing the merge, in this case - "Commit 6". The second will be the commit pointed to by `paul_branch`, "Commit 9".
+所以，假设你在分支`john_branch`上（假设是上图中描述的历史），你运行`git merge paul_branch`。你会得到这样的状态--在`john_branch`上，有一个新的提交，有两个父分支。第一个是合并前`HEAD`指向的`john_branch`分支上的提交，本例中是 `Commit 6`。第二个是 `paul_branch` 所指向的提交 `Commit 9`。
 
 ![image-196](https://www.freecodecamp.org/news/content/images/2023/06/image-196.png)
 
-The result of running `git merge paul_branch`: a new Merge Commit with two parents (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+运行`git merge paul_branch'的结果：一个新的合并提交(Merge Commit)，有两个父分支 (Source： [简介](https://youtu.be/3VFsitGUB3s))
+再看一下历史图：你创建了一个**分歧的(diverged)**历史。你实际上可以看到它在哪里分叉(branched)，在哪里又合并了(merged)。
 
-Look again at the history graph: you created a **diverged** history. You can actually see where it branched and where it merged again.
-
-So when using `git merge`, you do not rewrite history – but rather, you add a commit to the existing history. And specifically, a commit that creates a diverged history.
+所以当使用`git merge`时，你并没有重写历史--而是在现有的历史中增加一个提交。具体来说，是在现有的历史中增加一个提交，创造一个分歧(diverged)的历史。
 
 # How is `git rebase` Different than `git merge`? 🤔
 
-When using `git rebase`, something different happens. 🥁
+当使用`git rebase`时，会发生不同的情况。🥁
 
-Let's start with the big picture: if you are on `paul_branch`, and use `git rebase john_branch`, Git goes to the common ancestor of John's branch and Paul's branch. Then it takes the patches introduced in the commits on Paul's branch, and applies those changes to John's branch.
+让我们从大的方面开始：如果你在`paul_branch`上，并使用`git rebase john_branch`，Git 会去找 John 的分支和 Paul 的分支的共同祖先。然后把 Paul 分支的提交中引入的补丁，应用到 John 分支。
 
-So here, you use `rebase` to take the changes that were committed on one branch – Paul's branch – and replay them on a different branch, `john_branch`.
+所以在这里，你用`rebase`把在一个分支,Paul 的分支上提交的修改，在另一个分支`john_branch`上重演(replay)。
 
 ![image-198](https://www.freecodecamp.org/news/content/images/2023/06/image-198.png)
 
-The result of running `git rebase john_branch`: the commits on `paul_branch` were "replayed" on top of `john_branch` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+运行`git rebase john_branch`的结果：`paul_branch`上的提交被 `重演(replay)` 到 `john_branch`之上 (来源：Graphics： [简介](https://youtu.be/3VFsitGUB3s))
 
-Wait, what does that mean? 🤔
+等等，那是什么意思？🤔
 
-We will now take this bit by bit to make sure you fully understand what's happening under the hood 😎
+我们现在将一点一点地进行分析，以确保你完全理解在底层发生的事情 😎
 
 # `cherry-pick` as a Basis for Rebase
 
-It is useful to think of rebase as performing `git cherry-pick` – a command takes a commit, computes the _patch_ this commit introduces by computing the difference between the parent's commit and the commit itself, and then `cherry-pick` "replays" this difference.
+使用 git rebase 可以理解为执行 `git cherry-pick`，`git cherry-pick` 是一个命令，它接受一个提交，计算出该提交引入的补丁(patch)，即计算出父提交和该提交之间的差异，并且通过 `cherry-pick` 将这个差异`重演(replay)`出来。
 
-Let's do this manually.
+让我们手动来做这个。
 
-If we look at the difference introduced by "Commit 5" by performing `git diff main <SHA_OF_COMMIT_5>`:
+如果我们通过执行`git diff main <SHA_OF_COMMIT_5>`来看看 `Commit 5` 引入的差异:
 
 ![image-199](https://www.freecodecamp.org/news/content/images/2023/06/image-199.png)
 
-Running `git diff` to observe the patch introduced by "Commit 5" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+运行 `git diff` 来观察 `Commit 5` 引入的补丁 (Source： [简介](https://youtu.be/3VFsitGUB3s))
 
-(If you want to play around with the repository I used and try out the commands for yourself, you can get the repo [here](https://github.com/Omerr/rebase_playground)).
+如果你想玩玩我用的版本库，自己试试这些命令，你可以得到这个版本库[这里](https://github.com/Omerr/rebase_playground)。
 
-You can see that in this commit, John started working on a song called "Lucy in the Sky with Diamonds":
+你可以看到，在这个提交中，John  开始创作一首名为 `Lucy in the Sky with Diamonds` 的歌曲：
 
 ![image-200](https://www.freecodecamp.org/news/content/images/2023/06/image-200.png)
 
-The output of `git diff` - the patch introduced by "Commit 5" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`git diff`的输出结果,`Commit 5` 引入的补丁(patch) (来源: [Brief](https://youtu.be/3VFsitGUB3s))
 
-As a reminder, you can also use the command `git show` to get the same output:
+提醒一下，你也可以使用`git show`命令来获得同样的输出：
 
-```
+```shell
 git show <SHA_OF_COMMIT_5>
 ```
 

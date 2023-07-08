@@ -88,53 +88,52 @@
 git show <SHA_OF_COMMIT_5>
 ```
 
-Now, if you `cherry-pick` this commit, you will introduce this change specifically, on the active branch. Switch to `main` first:
+现在，如果你`cherry-pick`这个提交，你将在活动分支(active branch)上专门引入这个改动。先切换到 "main":
 
 `git checkout main` (or `git switch main`)
 
-And create another branch, just to be clear:
+并创建另一个分支，只是为了明确:
 
 `git checkout -b my_branch` (or `git switch -c my_branch`)
 
 ![image-201](https://www.freecodecamp.org/news/content/images/2023/06/image-201.png)
 
-Creating `my_branch` that branches from `main` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+从 `main` 分支创建出 `my_branch` 分支 (源自: [Brief](https://youtu.be/3VFsitGUB3s))
 
-And `cherry-pick` this commit:
+`cherry-pick`这个提交(commit):
 
-```
+```shell
 git cherry-pick <SHA_OF_COMMIT_5>
 ```
 
 ![image-202](https://www.freecodecamp.org/news/content/images/2023/06/image-202.png)
 
-Using `cherry-pick` to apply the changes introduced in "Commit 5" onto `main` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
-
-Consider the log (output of `git lol`):
+使用 `cherry-pick` 将 `Commit 5` 中引入的修改应用到 `main`上 (源自： [简介](https://youtu.be/3VFsitGUB3s))
+考虑一下日志 (`git lol`的输出):
 
 ![image-205](https://www.freecodecamp.org/news/content/images/2023/06/image-205.png)
 
-The output of `git lol` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`git lol`的输出 (源自： [简介](https://youtu.be/3VFsitGUB3s))
 
-(`git lol` is an alias I added to Git to visibly see the history in a graphical manner. You can find it [here](https://gist.github.com/Omerr/8134a61b56ca82dd90e546e7ef04eb77)).
+(`git lol`是我加在 Git 上的一个别名，用来以图形的方式直观地查看历史。你可以找到它[这里](https://gist.github.com/Omerr/8134a61b56ca82dd90e546e7ef04eb77))。
 
-It seems like you _copy-pasted_ "Commit 5". Remember that even though it has the same commit message, and introduces the same changes, and even points to the same tree object as the original "Commit 5" in this case – it is still a different commit object, as it was created with a different timestamp.
+你复制的  `Commit 5`。请记住，尽管它有相同的提交信息，并引入了相同的修改，甚至在这种情况下指向与原始 `Commit 5`相同的树对象,它仍然是一个不同的提交对象，因为它是以不同的时间戳创建的。
 
-Looking at the changes, using `git show HEAD`:
+看一下这些变化，使用`git show HEAD`:
 
 ![image-204](https://www.freecodecamp.org/news/content/images/2023/06/image-204.png)
 
-The output of `git show HEAD` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`git show HEAD`的输出结果 (Source： [简介](https://youtu.be/3VFsitGUB3s))
 
-They are the same as "Commit 5"'s.
+它们与 `Commit 5` 的相同。
 
-And of course, if you look at the file (say, by using `nano lucy_in_the_sky_with_diamonds.md`), it will be in the same state as it has been after the original "Commit 5".
+当然，如果你看一下这个文件（比如，用`nano lucy_in_the_sky_with_diamonds.md`），它的状态和最初的 `Commit 5` 之后的状态是一样的。
 
-Cool! 😎
+ 酷! 😎
 
-OK, you can now remove the new branch so it doesn't appear on your history every time:
+好了，现在你可以删除新的分支，这样它就不会每次都出现在你的历史记录上:
 
-```
+```shell
 git checkout main
 git branch -D my_branch
 ```

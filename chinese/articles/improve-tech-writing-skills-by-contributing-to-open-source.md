@@ -49,7 +49,7 @@
 
 ### Codecademy
 
-如果你精通某种特定的编程语言并想向其他人分享相关知识，我强烈建议你为 Codecademy's [文档](https://github.com/Codecademy/docs) 和 [文章](https://github.com/Codecademy/ugc) 仓库做贡献。他们基于不同需求提供模板，比如为特定章节提供新条目并更新/编辑现有条目。
+如果你精通某种特定的编程语言并想向其他人分享相关知识，我强烈建议你为 Codecademy 的 [文档](https://github.com/Codecademy/docs) 和 [文章](https://github.com/Codecademy/ugc) 仓库做贡献。他们基于不同需求提供模板，比如为特定章节提供新条目并更新/编辑现有条目。
 
 ### Astro
 
@@ -69,7 +69,7 @@ README 文件是开源项目的重要基础，其中会描述项目的目标和�
 
 如果你在阅读 README 文件时发现逗号缺失或者句子表述不清，你可以向项目维护者发起 issue 并进行编辑（当然，前提是他们通过你发起的 issue）。
 
-我在刚加入 EddieHub 社区的时候就是通过这种方式做贡献。这不仅仅是一种很好的自我介绍方式，也教会我根据特定受众来定制文档。当然，这不是基于文本的唯一贡献方式，让我们来看看另外一种方式！:)
+我在刚加入 EddieHub 社区的时候就是通过这种方式做贡献。这不仅仅是一种很好的自我介绍方式，也教会我根据特定受众来定制文档。当然，这不是为开源项目做文档贡献的唯一方式，让我们来看看另外一种方式！:)
 
 ### 创建内部文档风格指南
 
@@ -79,20 +79,20 @@ README 文件是开源项目的重要基础，其中会描述项目的目标和�
 
 [Google 开发者文档中的缩写形式](https://developers.google.com/style/contractions) 便是一个很好的例子。
 
-在观看了 Portia 的 [Document Write's YouTube channel](https://www.youtube.com/live/t-Tz6QzH8YA?feature=share) 中的一则视频后，我决定撰写 [一份针对 EddieHub's Linkfree project 的文档风格指南](https://linkfree.io/docs/docs-style-guide)。她在视频中谈论了开源贡献者，尤其想要将技术写作作为职业的贡献者，如何从这些风格指南中受益。
+在 [Document Write 的 YouTube 频道](https://www.youtube.com/live/t-Tz6QzH8YA?feature=share) 中看到 Portia 的一则视频后，我决定撰写 [一份针对 EddieHub 的 Linkfree 项目的文档风格指南](https://linkfree.io/docs/docs-style-guide)。她在视频中谈论了开源贡献者，尤其想要将技术写作作为职业的贡献者，如何从这些风格指南中受益。
 
 通过创建这份风格指南，我学习到以下知识：
 
-1.  **Writing in a new style or language:** Since Linkfree's main demographic is in the U.K., the maintainers wanted the guide to be written in British English. I've never used this version of English before, so it was interesting to learn how words are spelled, capitalized, and what punctuation marks are used.
-2.  **Using new tech tools or frameworks:** [MDX (Markdown X)](https://mdxjs.com/) is the technical language contributors use to maintain Linkfree's documentation. Simply put, it's Markdown that allows to you to put [JSX](https://facebook.github.io/jsx/) (syntax that let's you put HTML code in JavaScript). I've briefly worked with Markdown, so it was a bit easier to implement this language in creating the docs guide.
+1.  **以新的风格或语言编写:** 由于 Linkfree 的主要受众来自英国，项目维护者希望使用英式英语来撰写风格指南。我之前从来没有使用过英式英语，所以需要重新学习单词的拼写、大写以及标点符号的使用，这是一个非常有趣的过程。
+2.  **使用新的技术工具或框架:** [MDX (Markdown X)](https://mdxjs.com/) 是贡献者用于维护 Linkfree 文档的一种技术语言。简单来说， Simply put, it's Markdown that allows to you to put [JSX](https://facebook.github.io/jsx/) (syntax that let's you put HTML code in JavaScript). I've briefly worked with Markdown, so it was a bit easier to implement this language in creating the docs guide.
 
-Now, a style guide is only one of the many docs-based contributions you can do for an open source project. Let's look at another one! :)
+当然，撰写风格指南也只是为开源项目做文档贡献的其中一种方式，让我们再来看看另一种方式吧！:)
 
-### Add to a tutorial for a product
+### 创建产品教程
 
-If you're good at teaching or find yourself reading an open source software's tutorial that is missing key information, consider doing this as your contribution.
+如果你善于指导他人，或者你在阅读开源软件教程时发现关键信息缺失，你可以考虑通过创建或修改产品教程的方式来做贡献。
 
-A great example of this would be [the tutorial section](https://support.audacityteam.org/community/contributing/tutorials) on Audacity's website. It's a free open source audio recording and editing software.  
+Audacity 网站上的 [tutorial 章节](https://support.audacityteam.org/community/contributing/tutorials) 就是一个很好的例子，而 Audacity 是一个免费的录音及音频编辑的开源软件。
 
 As a person who's newer to the open source community, I noticed that most beginner-level content never really provided tips or advice on how contributors can implement their open source contribution experiences when looking for jobs or during interviews. So I was scrolling through OpenSauced's repository on GitHub and noticed that this kind of content would be helpful in their free "Intro to Open Source" course.
 

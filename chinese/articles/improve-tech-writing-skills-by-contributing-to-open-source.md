@@ -1,6 +1,6 @@
 > -  原文地址：[How to Improve Your Technical Writing Skills by Contributing to Open Source Projects](https://www.freecodecamp.org/news/improve-tech-writing-skills-by-contributing-to-open-source/)
 > -  原文作者：[CHRISTINE T. BELZIE](https://www.freecodecamp.org/news/author/christine/)
-> -  译者：
+> -  译者：Rhea-xiao
 > -  校对者：
 
 ![How to Improve Your Technical Writing Skills by Contributing to Open Source Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/Blog-post-cover-for-FCC---3.png)

@@ -35,53 +35,53 @@
 
 橙色箭头指向 Label 选项
 
-3\. Type "documentation" in the textbox and voilà!
+3. 在文本框中输入 "documentation",就可以啦！
 
 ![The word "documentation" appears in the textbox ](https://www.freecodecamp.org/news/content/images/2023/06/picking-an-issue--part-3-.png)
 
-"documentation" appearing in the textbox
+"documentation" 显示在文本框中
 
-Now if you are looking for something more specific, here is my list of open source projects with a focus on documentation:
+现在如果你想寻找一些更具体的项目，我在这里列出了一些重点关注文档的开源项目：
 
 ### The Good Docs Project
 
-If you’re looking to start gaining experience in working with documentation, I highly recommend joining [this group](https://thegooddocsproject.dev/). :) They have diverse working groups that focus on different types of writing whether it’s creating documentation templates that other developers can use in their own open source projects, improving the content on the organization's website, and doing QA (Quality Assurance) for the templates that community members have created.
+如果你正在寻找开源项目来积累文档写作的入门经验，我强烈建议你加入 [这个群组](https://thegooddocsproject.dev/). :) 他们有多个工作组，且关注不同类型的写作，包括创作文档模板供其他开发者在自己的开源项目中使用、优化组织网站内容以及为社群成员已创建的模板做 QA （质量验证）。
 
 ### Codecademy
 
-If you’re knowledgeable about a particular programming language and want to share that knowledge with the world, then I highly recommend contributing to Codecademy's [docs](https://github.com/Codecademy/docs) and [article](https://github.com/Codecademy/ugc) repositories. They provide templates based on different needs such as providing a new entry for a certain chapter and updating/editing an existing entry.
+如果你精通某种特定的编程语言并想向其他人分享相关知识，我强烈建议你为 Codecademy's [文档](https://github.com/Codecademy/docs) 和 [文章](https://github.com/Codecademy/ugc) 仓库做贡献。他们基于不同需求提供模板，比如为特定章节提供新条目并更新/编辑现有条目。
 
 ### Astro
 
-If you’re an avid user of Astro, then you can share your tips on using this software on their [docs repo](https://github.com/withastro/docs). Their documentation team is very open to working with members with different levels of experience.
+如果你是 Astro 的狂热用户, 那你可以在他们的 [docs repo](https://github.com/withastro/docs) 中分享使用该软件的建议。他们的文档组非常乐于与拥有不同经验水平的成员合作。
 
-Now picking a project is just one step. Let's look at some different ways you can contribute to open source projects as a technical writer.
+选择项目仅仅是其中一步，接下来让我们看看技术写作者为开源项目做贡献的不同方式。
 
-## Ways to Contribute to Open Source as a Technical Writer
+## 技术写作者为开源做贡献的不同方式
 
-Congrats! You've picked your project. Now, you just have to decide how you will use your tech writing skills to contribute.
+恭喜！你已经选择了自己的贡献项目。现在，你需要决定如何利用自己的技术写作技能做贡献。
 
-I know this part can be difficult but don’t fret – now we're going to discuss some different types of contributions you can make.
+我知道这一步很难，但不要担心。现在，我们将讨论你能做出哪些不同类型的贡献。
 
-### Revise typos and other grammar errors on the README file
+### 修改 README 文件中的拼写错误和其他语法错误
 
-This file is crucial to the foundation of an open source project. It's where they describe the project’s purpose and the steps to contribute to it, so it should be as clearly written as possible.
+README 文件是开源项目的重要基础，其中会描述项目的目标和贡献步骤，因此 README 文件应该尽可能表达清晰。
 
-If you're reading through the README file and you see a comma missing or an unclear sentence, raise an issue about it to maintainers and make those edits (if they approve, of course).
+如果你在阅读 README 文件时发现逗号缺失或者句子表述不清，你可以向项目维护者发起 issue 并进行编辑（当然，前提是他们通过你发起的 issue）。
 
-I made this contribution to EddieHub when I first joined their community. It was not only a great way to introduce myself, but it also taught me how to tailor documentation to a specific audience. Now this not the only text-based contribution, let's look at another one! :)
+我在刚加入 EddieHub 社区的时候就是通过这种方式做贡献。这不仅仅是一种很好的自我介绍方式，也教会我根据特定受众来定制文档。当然，这不是基于文本的唯一贡献方式，让我们来看看另外一种方式！:)
 
-### Create an internal docs style guide
+### 创建内部文档风格指南
 
-This entails creating a guide that defines the standards for writing and formatting the documentation for an open source project. It helps instruct contributors on how to effectively write for open source.
+这需要创建一个指南，其中将定义某个开源项目文档的写作和格式标准，从而指导贡献者有效地进行开源项目的文档写作。
 
-In this document, you'll see information such as how punctuation marks should and should not be written, specific ways to format code blocks, and the tone and voice that contributors should use when writing about the product.
+在该文档中，你将看见一些诸如标点符号的正确和错误书写方式、代码块格式化的特定方法以及产品文档的语气语调等信息。
 
-A great example of this would be [the Contractions section in Google's Developer Documentation style](https://developers.google.com/style/contractions).
+[Google 开发者文档中的缩写形式](https://developers.google.com/style/contractions) 便是一个很好的例子。
 
-Also, I decided to make [a doc style guide for EddieHub's Linkfree project](https://linkfree.io/docs/docs-style-guide) after watching a video by Portia from [Document Write's YouTube channel](https://www.youtube.com/live/t-Tz6QzH8YA?feature=share). She talked about how open source contributors, especially those who want to pursue tech writing as a career, can benefit from having these sorts of style guides.
+在观看了 Portia 的 [Document Write's YouTube channel](https://www.youtube.com/live/t-Tz6QzH8YA?feature=share) 中的一则视频后，我决定撰写 [一份针对 EddieHub's Linkfree project 的文档风格指南](https://linkfree.io/docs/docs-style-guide)。她在视频中谈论了开源贡献者，尤其想要将技术写作作为职业的贡献者，如何从这些风格指南中受益。
 
-Through creating this guide, I've learned the following:
+通过创建这份风格指南，我学习到以下知识：
 
 1.  **Writing in a new style or language:** Since Linkfree's main demographic is in the U.K., the maintainers wanted the guide to be written in British English. I've never used this version of English before, so it was interesting to learn how words are spelled, capitalized, and what punctuation marks are used.
 2.  **Using new tech tools or frameworks:** [MDX (Markdown X)](https://mdxjs.com/) is the technical language contributors use to maintain Linkfree's documentation. Simply put, it's Markdown that allows to you to put [JSX](https://facebook.github.io/jsx/) (syntax that let's you put HTML code in JavaScript). I've briefly worked with Markdown, so it was a bit easier to implement this language in creating the docs guide.

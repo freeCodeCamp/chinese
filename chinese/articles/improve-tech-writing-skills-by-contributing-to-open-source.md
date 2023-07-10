@@ -5,35 +5,35 @@
 
 ![How to Improve Your Technical Writing Skills by Contributing to Open Source Projects](https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/Blog-post-cover-for-FCC---3.png)
 
-Have you been writing your tech blog posts on [Hashnode](https://hashnode.com/about) or [Dev.to](http://dev.to/), but you're itching to try something new? If so, there is something that can quench your thirst: contributing to open source.
+你是否在 [Hashnode](https://hashnode.com/about) 或者 [Dev.to](http://dev.to/) 上写过技术帖子，又是否总想尝试新东西呢？如果是这样的话，有一件事情能帮你一解心头之痒：为开源项目做贡献。
 
-I know, I know, you’ve probably heard “Contribute to open source!” countless times in Discord groups and tech-related social media posts. But trust me, it really can be a great way to gain experience as a technical writer.
+我知道，我知道你肯定已经无数次在 Discord 群组里或在技术相关的社交媒体帖子中听到过“为开源做贡献！” 的呼吁声。但是相信我，身为一名技术写作者，这真的是一个你积累经验的好方式。
 
-For one, you get to work on projects that are often displayed publicly. This can be a great way to showcase your skills to your professional network.
+一方面，你能参与一些公开展示的项目，这能帮助你向技术写作专业人士展现你的能力。
 
-Also, contrary to popular belief, code is not the only way you can contribute to open source projects. You can use your writing skills to help maintainers improve their projects' documentation.
+另一方面，和大家的普遍认识不同，实际上编写代码并不是为开源项目做贡献的唯一方式，你也可以利用自己的写作技能帮助项目维护者进行项目文档的优化。
 
-And contributing to open source exposes you to new technical languages and software, which the Bureau of Labor Statistics describes as [one of the many important skills in tech writers](https://www.bls.gov/ooh/media-and-communication/technical-writers.htm#tab-4).
+除此之外，为开源项目做贡献能够帮助你学习新的技术语言和软件，而这被美国劳工统计局描述为 [技术写作者的重要技能之一](https://www.bls.gov/ooh/media-and-communication/technical-writers.htm#tab-4)。
 
-Still not convinced? No worries – in this guide, I will discuss how you can find open source projects that need tech writers. I'll also describe what tech writing-related contributions to these projects might look like, and suggest how to display them publicly.
+还是无法说服你？没关系，在此指南中，我会探讨如何寻找需要技术写作者的开源项目，也会介绍技术写作能为开源项目做什么贡献，并且就如何公开展示这些贡献提出建议。
 
-## How to Identify Open Source Projects That Need Technical Writing Contributions
+## 如何寻找需要技术写作贡献的开源项目
 
-Many open source projects need help with their documentation. Picking a project to make docs-based contributions to will be based heavily on your interests, the level of writing skills you have, and the opportunities available.  
+许多开源项目在文档方面都需要帮助，而你需要根据自己的兴趣、技术写作水平以及贡献机会才选择你将进行文档贡献的项目。
 
-When it comes to finding open source projects that need contributions, I highly recommend asking your colleagues about the projects they are involved in. Working with friends + open source? It's two for the price one! :) Once you've picked your project, my next tip is to do the following:
+在寻找需要贡献的开源项目时，我强烈建议你向同事询问他们参与的项目。与朋友合作+参与开源项目，这难道不是一举两得吗！:) 在选择了项目之后，我建议你做这些事情：
 
-1.  Go to the **Issues** tab on the project's repository.
+1. 前往项目仓库的 **Issues** 选项卡。
 
-![Yellow arrow pointing to a tab labelled "Issues"](https://www.freecodecamp.org/news/content/images/2023/06/picking-an-issue--part-1-.png)
+![黄色箭头指向 "issues" 选项卡](https://www.freecodecamp.org/news/content/images/2023/06/picking-an-issue--part-1-.png)
 
-Yellow Arrow pointing to Issues tab 
+黄色箭头指向 Issues 选项卡
 
-2\.  Click on the **Label** section
+2. 单击 **Label** 选项
 
 ![Orange arrow pointing to the Label section](https://www.freecodecamp.org/news/content/images/2023/06/Picking-a-issue--part-2--1.png)
 
-Orange arrow pointing at the Label section
+橙色箭头指向 Label 选项
 
 3\. Type "documentation" in the textbox and voilà!
 

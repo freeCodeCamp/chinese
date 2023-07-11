@@ -15,11 +15,11 @@
 
 除此之外，为开源项目做贡献能够帮助你学习新的技术语言和软件，而这被美国劳工统计局描述为 [技术写作者的重要技能之一](https://www.bls.gov/ooh/media-and-communication/technical-writers.htm#tab-4)。
 
-还是无法说服你？没关系，在此指南中，我会探讨如何寻找需要技术写作者的开源项目，也会介绍技术写作能为开源项目做什么贡献，并且就如何公开展示这些贡献提出建议。
+还是无法说服你？没关系，在此指南中，我会探讨如何寻找需要技术写作者的开源项目，也会介绍通过技术写作能为开源项目做什么贡献，并且就如何公开展示这些贡献提出建议。
 
 ## 如何寻找需要技术写作贡献的开源项目
 
-许多开源项目在文档方面都需要帮助，而你需要根据自己的兴趣、技术写作水平以及贡献机会才选择你将进行文档贡献的项目。
+许多开源项目在文档方面都需要帮助，而你需要根据自己的兴趣、技术写作水平以及贡献机会来选择你将参与贡献的项目。
 
 在寻找需要贡献的开源项目时，我强烈建议你向同事询问他们参与的项目。与朋友合作+参与开源项目，这难道不是一举两得吗！:) 在选择了项目之后，我建议你做这些事情：
 
@@ -79,9 +79,9 @@ README 文件是开源项目的重要基础，其中会描述项目的目标和�
 
 [Google 开发者文档中的缩写形式](https://developers.google.com/style/contractions) 便是一个很好的例子。
 
-在 [Document Write 的 YouTube 频道](https://www.youtube.com/live/t-Tz6QzH8YA?feature=share) 中看到 Portia 的一则视频后，我决定撰写 [一份针对 EddieHub 的 Linkfree 项目的文档风格指南](https://linkfree.io/docs/docs-style-guide)。她在视频中谈论了开源贡献者，尤其想要将技术写作作为职业的贡献者，如何从这些风格指南中受益。
+在看到 [Document Write 的 YouTube 频道](https://www.youtube.com/live/t-Tz6QzH8YA?feature=share) 中 Portia 的一则视频后，我决定撰写 [一份针对 EddieHub 的 Linkfree 项目的文档风格指南](https://linkfree.io/docs/docs-style-guide)。她在视频中谈论了开源贡献者，尤其想要将技术写作作为职业的贡献者，如何从这些风格指南中受益。
 
-通过创建这份风格指南，我学习到以下知识：
+通过创建这份风格指南，我学到以下知识：
 
 1.  **以新的风格或语言编写:** 由于 Linkfree 的主要受众来自英国，项目维护者希望使用英式英语来撰写风格指南。我之前从来没有使用过英式英语，所以需要重新学习单词的拼写、大写以及标点符号的使用，这是一个非常有趣的过程。
 2.  **使用新的技术工具或框架:** [MDX (Markdown X)](https://mdxjs.com/) 是贡献者用于维护 Linkfree 文档的一种技术语言。简单来说，你能在 Markdown 文档中使用 [JSX](https://facebook.github.io/jsx/) （让你将 HTML 代码嵌入 JavaScript 的语法）。我曾短暂地使用过 Markdown，所以我能更轻松地使用这种语言来创建文档指南。

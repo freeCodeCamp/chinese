@@ -7,11 +7,11 @@
 
 你是否在 [Hashnode](https://hashnode.com/about) 或者 [Dev.to](http://dev.to/) 上写过技术帖子，又是否总想尝试新东西呢？如果是这样的话，有一件事情能帮你一解心头之痒：为开源项目做贡献。
 
-我知道，我知道你肯定已经无数次在 Discord 群组里或在技术相关的社交媒体帖子中听到过“为开源做贡献！” 的呼吁声。但是相信我，身为一名技术写作者，这真的是一个你积累经验的好方式。
+我知道，我知道你肯定已经无数次在 Discord 群组里或在技术相关的社交媒体帖子中听到“为开源做贡献！” 的呼吁声。但是相信我，身为一名技术写作者，这真的是一个你积累经验的好方式。
 
 一方面，你能参与一些公开展示的项目，这能帮助你向技术写作专业人士展现你的能力。
 
-另一方面，和大家的普遍认识不同，实际上编写代码并不是为开源项目做贡献的唯一方式，你也可以利用自己的写作技能帮助项目维护者进行项目文档的优化。
+另一方面，和大家的普遍认识不同，实际上编写代码并不是为开源项目做贡献的唯一方式，你也可以利用自己的写作技能帮助项目维护者进行文档优化。
 
 除此之外，为开源项目做贡献能够帮助你学习新的技术语言和软件，而这被美国劳工统计局描述为 [技术写作者的重要技能之一](https://www.bls.gov/ooh/media-and-communication/technical-writers.htm#tab-4)。
 
@@ -35,7 +35,7 @@
 
 橙色箭头指向 Label 选项
 
-3. 在文本框中输入 "documentation",就可以啦！
+3. 在文本框中输入 "documentation"，就可以啦！
 
 ![The word "documentation" appears in the textbox ](https://www.freecodecamp.org/news/content/images/2023/06/picking-an-issue--part-3-.png)
 
@@ -84,7 +84,7 @@ README 文件是开源项目的重要基础，其中会描述项目的目标和�
 通过创建这份风格指南，我学习到以下知识：
 
 1.  **以新的风格或语言编写:** 由于 Linkfree 的主要受众来自英国，项目维护者希望使用英式英语来撰写风格指南。我之前从来没有使用过英式英语，所以需要重新学习单词的拼写、大写以及标点符号的使用，这是一个非常有趣的过程。
-2.  **使用新的技术工具或框架:** [MDX (Markdown X)](https://mdxjs.com/) 是贡献者用于维护 Linkfree 文档的一种技术语言。简单来说， Simply put, it's Markdown that allows to you to put [JSX](https://facebook.github.io/jsx/) (syntax that let's you put HTML code in JavaScript). I've briefly worked with Markdown, so it was a bit easier to implement this language in creating the docs guide.
+2.  **使用新的技术工具或框架:** [MDX (Markdown X)](https://mdxjs.com/) 是贡献者用于维护 Linkfree 文档的一种技术语言。简单来说，你能在 Markdown 文档中使用 [JSX](https://facebook.github.io/jsx/) （让你将 HTML 代码嵌入 JavaScript 的语法）。我曾短暂地使用过 Markdown，所以我能更轻松地使用这种语言来创建文档指南。
 
 当然，撰写风格指南也只是为开源项目做文档贡献的其中一种方式，让我们再来看看另一种方式吧！:)
 
@@ -94,9 +94,9 @@ README 文件是开源项目的重要基础，其中会描述项目的目标和�
 
 Audacity 网站上的 [tutorial 章节](https://support.audacityteam.org/community/contributing/tutorials) 就是一个很好的例子，而 Audacity 是一个免费的录音及音频编辑的开源软件。
 
-As a person who's newer to the open source community, I noticed that most beginner-level content never really provided tips or advice on how contributors can implement their open source contribution experiences when looking for jobs or during interviews. So I was scrolling through OpenSauced's repository on GitHub and noticed that this kind of content would be helpful in their free "Intro to Open Source" course.
+作为开源社区的新人，我发现大多数入门级的内容并没有提供关于贡献者如何在找工作或面试时利用开源贡献经验的建议。因此，我在 Github 上浏览  OpenSauced 的仓库时，发现这些内容对于他们的 Intro to Open Source 免费课程很有帮助。
 
-I presented my idea to [Bekah](https://twitter.com/BekahHW), the company's User Experience Lead, created a pull request, and violà, [it got merged](https://github.com/open-sauced/intro/pull/5)!  
+于是，我将这种想法传达给了公司的用户体验经理 [Bekah](https://twitter.com/BekahHW)，创建了一个拉取请求，并且最终 [它并合并啦](https://github.com/open-sauced/intro/pull/5)！
 
 I highly recommend making this kind of contribution because a great way to gain practice is by simplifying technical content for a global audience of all skill levels. It also develops your detail-oriented skills.
 

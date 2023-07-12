@@ -1,6 +1,6 @@
 > -  原文地址：[Logical Fallacies – Definition and Fallacy Examples](https://www.freecodecamp.org/news/logical-fallacies-definition-fallacy-examples/)
 > -  原文作者：[Abbey RennemeyerAbbey Rennemeyer](https://www.freecodecamp.org/news/author/abbey/)
-> -  译者：
+> -  译者：MariaMa-GitHub
 > -  校对者：
 
 ![Logical Fallacies – Definition and Fallacy Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/fallacies-cover-image.jpg)

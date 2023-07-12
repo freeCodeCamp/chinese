@@ -9,7 +9,7 @@ When you're debating someone, you want to use all the resources at your disposal
 
 But you should be careful that you don't end up using a logical fallacy to help you make your point.
 
-## What is a Logical Fallacy?
+## 什么是逻辑谬误?
 
 A logical fallacy is an error in reasoning that makes your argument less effective and convincing.
 

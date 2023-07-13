@@ -1,68 +1,68 @@
 > -  原文地址：[How to Offer Custom APIs to Your Users with AWS API Gateway](https://www.freecodecamp.org/news/how-to-offer-custom-apis-to-your-users-aws-api-gateway/)
 > -  原文作者：[Arunachalam B](https://www.freecodecamp.org/news/author/arunachalam/)
-> -  译者：
+> -  译者：Rhea-xiao
 > -  校对者：
 
 ![How to Offer Custom APIs to Your Users with AWS API Gateway](https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/AWS-API-Gateway-Banner.png)
 
-In the world of cloud computing and serverless architecture, AWS API Gateway is a powerful tool that helps you build robust, secure, and scalable APIs.
+在云计算领域和 serverless 架构中，AWS API Gateway 是一款强大的工具，能帮助您搭建强大、安全且可拓展的 API。
 
-In this tutorial, I'll introduce you to API Gateway and explain the benefits of using this helpful tool. Then I'll show you how to create and deploy a Rest API, and create usage plans to offer API keys. Alright, let's get started.
+在本教程中，首先我将介绍 API 网关是什么，并解释使用 API 网关的好处。接下来，我将展示如何创建、部署一个 Rest API, 并创建使用计划以提供 API 密钥。那么，我们现在就开始吧！
 
-## What is API Gateway?
+## 什么是 API 网关？
 
-AWS API Gateway is a fully managed service provided by Amazon Web Services (AWS) that simplifies the creation, deployment, and management of APIs at any scale.
+AWS API Gateway 是 Amazon Web Services (AWS) 提供的一项全托管服务，可帮助您轻松搭建、部署和管理任意规模的 API。
 
-It acts as a front door for applications, and allows you to create APIs that act as bridges between clients and back-end services. This enables secure and efficient communication.
+它充当应用程序的前门，允许您创建充当客户端和后端服务之间桥梁的 API，以便实现安全有效的通信。
 
-## Why Do You Need API Gateway?
+## 为什么需要 API 网关？
 
-AWS API Gateway offers many benefits for businesses and developers. Here are a few benefits of using API Gateway.
+AWS API Gateway 可为企业和开发者提供诸多好处，下方列出了一些使用 API 网关的好处。
 
-### Scalability and High Availability
+### 可拓展性和高可用性
 
-With AWS API Gateway, scaling your APIs becomes much easier. It seamlessly handles traffic spikes by automatically scaling the underlying infrastructure. This results in high availability and helps prevent service disruptions.
+借助 AWS API Gateway，您可以更轻松地进行 API 拓展。通过底层基础设施自动拓展， AWS API Gateway 可以无缝处理流量高峰，以确保高可用性并避免服务中断。
 
-### Security and Authentication
+### 安全与认证
 
-API Gateway offers robust security features, including built-in authentication and authorization mechanisms.
+API 网关提供强大的安全功能，包括内置的身份验证和授权机制。
 
-It supports User Authentication through IAM Roles for internal applications, Cognito for external applications (for example Mobile users), and it also supports custom authorizers.
+它支持通过 IAM 角色对内部应用程序进行用户身份验证，通过 Cognito 对外部应用程序进行身份验证，并且支持自定义授权者。
 
-### Integration with other AWS Services
+### 与其他 AWS 服务集成
 
-As part of the AWS ecosystem, API Gateway seamlessly integrates with a range of other AWS services. This enables you to leverage additional functionalities like AWS Lambda functions, AWS Cognito for user management, and AWS CloudWatch for monitoring and logging.
+作为 AWS 生态系统的一部分， API 网关与一系列其他 AWS 服务无缝集成，这意味着您能利用 AWS Lambda 函数、用于用户管理的 AWS Cognito，以及用于监管和日志记录的 AWS CloudWatch 等其他功能。
 
-### API Lifecycle Management
+### API 生命周期管理
 
-With API Gateway, you can easily version, deploy, and manage different stages of your APIs. This simplifies the process of rolling out updates, testing new features, and managing different environments such as development, staging, and production.
+利用 API 网关，您能轻松对不同阶段的 API 进行版本控制、部署及管理。这简化了发布更新、测试新功能以及管理不同环境（比如开发、预生产和生产）的过程。
 
-I hope by now you understood what API Gateway is and why it's valuable. Let's dive into creating our very own API Gateway.
+我希望现在您已经了解了 API 网关是什么以及它为何如此重要。接下来让我们一起来创建自己的 API 网关吧！
 
-## How to Create an AWS API Gateway
+## 如何创建 AWS API Gateway
 
-In this section, we will:
+在本节中，我们将:
 
--   Create a Rest API with the GET method
--   Integrate it with a simple hello world lambda function and deploy it
+-   采用 GET 方法创建 Rest API 
+-   将其与简单的 hello world lambda 函数集成并进行部署
 
-Let's begin with creating a lambda function
+让我们从创建 lambda 函数开始吧
 
-## How to Create an AWS Lambda Function
+## 如何创建 AWS Lambda 函数
 
-Log in to the AWS Management [Console](https://console.aws.amazon.com/) and search for "Lambda" in the AWS Management Console search bar. Click on Create Function.
+登录 AWS Management [控制台](https://console.aws.amazon.com/) 并在控制台搜索栏中搜索 "Lambda"。然后，单击 Create Function 按钮。
 
 ![image-145](https://www.freecodecamp.org/news/content/images/2023/06/image-145.png)
 
-Navigate to AWS Lambda Console
+导航至 AWS Lambda 控制台
 
-Select the "Author from scratch" option, enter a name for your lambda function, select the "Python" runtime, and click the Create Function button at the bottom right.
+选择 "Author from scratch" 选项，输入 lambda 函数名称，选择 "Python" Runtime，然后单击右下方的 Create Function 按钮。
 
 ![image-146](https://www.freecodecamp.org/news/content/images/2023/06/image-146.png)
 
-Create a AWS Lambda Function
+创建一个 AWS Lambda Function
 
-Once the function is created, update the following code and deploy the changes:
+函数创建成功后，请更新下方代码并部署更改：
 
 ```Python
 import json
@@ -81,159 +81,159 @@ def lambda_handler(event, context):
 
 ![image-147](https://www.freecodecamp.org/news/content/images/2023/06/image-147.png)
 
-Deploy a Lambda Function
+部署 Lambda Function
 
-Congratulations! You have successfully created an AWS Lambda function. Now let's create the Rest API.
+恭喜! 您已成功创建 AWS Lambda 函数，接下来让我们来创建 Rest API。
 
-## How to Create a Rest API and Integrate it with AWS Lambda
+## 如何创建 Rest API 并将其与 AWS Lambda 集成
 
-Search for API Gateway in the search bar. In the REST API section, click on the Build button.
+在搜索栏搜索 API Gateway，然后在 REST API 版块中单击 Build 按钮。
 
 ![image-183](https://www.freecodecamp.org/news/content/images/2023/06/image-183.png)
 
-Create a Rest API
+创建 Rest API
 
-Choose the Protocol as Rest and select New API in the Create new API section. In the settings section enter the API name of your choice and leave Endpoint Type as the default. Then click the Create API button.
+选择协议为 Rest，并在 Create new API 选项中选择 New API。在设置选项中输入您选择的 API 名称，并保留 Endpoint Type 的默认选项。然后，单击 Create API 按钮。
 
 ![image-148](https://www.freecodecamp.org/news/content/images/2023/06/image-148.png)
 
-Configure creating a Rest API
+配置创建 Rest API
 
-Click the Actions Button on the top left. Next, Click Method and select the method as GET and click the Tick icon.
+首先单击左上方的 Actions 按钮，然后单击 Method 并选择 GET 方法，再单击勾选图标。
 
 ![image-149](https://www.freecodecamp.org/news/content/images/2023/06/image-149.png)
 
-Create a Method
+创建 Method
 
 ![image-150](https://www.freecodecamp.org/news/content/images/2023/06/image-150.png)
 
-Choose "GET" method
+选择 "GET" 方法
 
-Select Lambda Function as the Integration type and enter the name of the Lambda function you created previously. Then save the function.
+选择 Lambda Function 作为 Integration type，并输入已创建的 Lambda 函数名称。然后，保存此函数。
 
 ![image-151](https://www.freecodecamp.org/news/content/images/2023/06/image-151.png)
 
-Select Method configuration
+选择 Method 配置
 
-Once you click save, "Add Permission to Lambda Function" will prompt for confirmation. This basically means that you're allowing the API Gateway to invoke a Lambda function. In this case, it is "DemoFunction" Lambda function. Accept the confirmation and proceed to the next step.
+单击保存后， 屏幕中将弹出 "Add Permission to Lambda Function"消息提示确认，这就意味着您将允许 API Gateway 调用 Lambda 函数（在本例中指的就是 "DemoFunction" Lambda 函数）。请同意确认，并继续下一步。
 
 ![image-152](https://www.freecodecamp.org/news/content/images/2023/06/image-152.png)
 
-Allow Permission to invoke Lambda Function from API Gateway
+同意授权通过 API 网关调用 Lambda Function
 
-Click on Test. It will take you to a new page. Click on the "Test" button. You'll be able to see the response from the Lambda function on the right side panel.
+单击 Test，您将来到一个新页面。单击 "Test" 按钮，此时您能在右侧面板上看到 Lambda 函数做出的响应。
 
 ![image-153](https://www.freecodecamp.org/news/content/images/2023/06/image-153.png)
 
-Our API Architecture
+我们的 API 架构
 
 ![image-184](https://www.freecodecamp.org/news/content/images/2023/06/image-184.png)
 
-Test our API Gateway
+测试我们的 API 网关
 
-As you have successfully tested your API, you're ready to deploy the API. To deploy the API, click on the Actions button once again and click on Deploy API.
+在成功测试 API 后，您就能部署 API 了。要部署 API，请再次单击 Actions 按钮，然后单击 Deploy API。
 
 ![image-185](https://www.freecodecamp.org/news/content/images/2023/06/image-185.png)
 
-Deploy the API Gateway
+部署 API 网关
 
-The Deploy API dialogue will popup. Select New Stage for Deployment stage and name it whatever you want. Click the Deploy button.
+此时屏幕上将弹出 Deploy API 的对话框，请选择 New Stage 作为 Deployment stage，并对其进行命名。然后，单击 Deploy 按钮。
 
 ![image-155](https://www.freecodecamp.org/news/content/images/2023/06/image-155.png)
 
-Configure API Gateway deployment
+配置 API 网关部署
 
-Click on Invoke URL shown at the top. You can see the response from the Lambda function.
+单击页面顶部的 Invoke URL，您将看到 Lambda 做出的响应。
 
 ![image-156](https://www.freecodecamp.org/news/content/images/2023/06/image-156.png)
 
-API Gateway Created
+API 网关创建成功
 
 ![image-186](https://www.freecodecamp.org/news/content/images/2023/06/image-186.png)
 
-Test our API
+测试我们的 API
 
-Great! We successfully created the Rest API, integrated it with the Lambda function, and deployed it.
+真棒! 我们已经成功创建了 Rest API，将其与 Lambda 函数集成并进行了部署。
 
-But you can do this with multiple services available on the market. Why would you choose AWS API Gateway?
+但是，您可以通过市场中提供的多种服务来实现这个目标，那为什么要选择 AWS API Gateway 呢？
 
-Well. That's a interesting question. First of all, you can configure the usage plan for your API. The best part is you don't have to write any code for it.
+嗯，这是一个有趣的问题。首先，您可以利用 AWS API Gateway 为自己的 API 配置使用计划，而其中最突出的一点就是您无需为此编写任何代码。
 
-Now let's create a Usage Plan, generate an API key, and make our Rest API accessible only by passing the API key in the Header.
+现在就让我们来创建一个使用计划，生成一个 API 密钥，并仅通过在标头中传递 API 密钥来访问 Rest API。
 
-## How to Create an API Gateway Usage Plan
+## 如何创建 API Gateway 使用计划
 
-In the left side bar click on Usage Plans and click the Create button. Enter the Name of your plan – I chose "Basic". Enter the Throttling and Quota sections as per your requirements and click Next.
+在左侧边栏中单击 Usage Plans，然后单击 Create 按钮。输入您的计划名称，这里我选择了 "Basic"。根据您的需求在 Throttling 和 Quota 选项中输入相应数值，然后单击 Next。
 
 ![image-159](https://www.freecodecamp.org/news/content/images/2023/06/image-159.png)
 
-Create AWS API Gateway usage plan
+创建 AWS API Gateway 使用计划
 
-Click on the Add API Stage button. Select the API and its stage. Click on the tick icon at right corner and select Next.
+单击 Add API Stage 按钮，并选择相应的 API 及其 Stage。然后，单击右上角的勾选图标，并选择 Next。
 
 ![Screenshot-from-2023-06-19-10-46-19](https://www.freecodecamp.org/news/content/images/2023/06/Screenshot-from-2023-06-19-10-46-19.png)
 
-Create a Stage for our API
+为我们的 API 创建一个 Stage
 
 ![image-164](https://www.freecodecamp.org/news/content/images/2023/06/image-164.png)
 
-Create a Stage for our API
+为我们的 API 创建一个 Stage
 
-Click on Create API Key and add to Usage Plan. A modal will pop up. Enter the Name for API Key. For the API key, I selected Auto Generate but if you want to give a custom key you can enter a custom key. Hit the Save button.
+单击 "Create API Key and add to Usage Plan"，屏幕上将弹出一个对话框，请输入 API 密钥名称。而关于 API 密钥，我这里选择了 Auto Generate （自动生成），当然您也可以进行自定义。然后，单击 Save 按钮。
 
 ![image-160](https://www.freecodecamp.org/news/content/images/2023/06/image-160.png)
 
-Create a API Key to access the service
+创建 API 密钥以访问服务
 
 ![image-161](https://www.freecodecamp.org/news/content/images/2023/06/image-161.png)
 
-Configure the API Key
+配置 API 密钥
 
-Select Resources from the Sidebar, click on the GET API you just created, and click the Method Request.
+从侧边栏选择 Resources，单击已创建的 GET API，然后单击 Method Request。
 
 ![image-162](https://www.freecodecamp.org/news/content/images/2023/06/image-162.png)
 
-Select the method
+选择方法
 
-In the Settings section, update the API Key Required field to true and click the Tick icon. Once updated, don't forget to deploy the changes by hitting the Action dropdown. Your changes will not be updated otherwise.
+在设置选项中，将 API Key Required 字段更新为 "true" 并单击勾选图标。更新后，务必点击 Actions 下拉菜单以部署更改。否则，变更将不会更新。
 
 ![image-187](https://www.freecodecamp.org/news/content/images/2023/06/image-187.png)
 
-Enable API Key Required field
+启用 API Key Required 字段
 
 ![image-165](https://www.freecodecamp.org/news/content/images/2023/06/image-165.png)
 
-Deploy the API
+部署 API
 
-Hit the same URL now and see the magic.
+现在点击相同的 URL，你会发现神奇的事发生了。
 
-Forbidden!
+Forbidden （禁止访问）！
 
-Because our API layer is protected now. You have to pass the API key in the header to access the data.
+因为现在我们的 API 层已受保护，您必须在标头中传递 API 密钥才能访问数据。
 
 ![image-163](https://www.freecodecamp.org/news/content/images/2023/06/image-163.png)
 
-Forbidden access if no API Key is provided
+若未提供 API 密钥，则禁止访问。
 
-Now Click on the Usage Plans from the Sidebar. Select your plan and navigate to the API Keys tab.
+现在单击侧边栏中的 Usage Plans，选择您的计划并导航至 API 密钥选项卡。
 
 ![image-166](https://www.freecodecamp.org/news/content/images/2023/06/image-166.png)
 
-Access your API Key
+访问您的 API 密钥
 
-Click on the API key you created in Step 3. Click Show. Copy the API key.
+单击您在步骤 3 中创建的 API 密钥，然后单击 Show， 并复制此 API 密钥。
 
 ![image-188](https://www.freecodecamp.org/news/content/images/2023/06/image-188.png)
 
-List of API Keys
+API 密钥列表
 
 ![image-167](https://www.freecodecamp.org/news/content/images/2023/06/image-167.png)
 
-Reveal your API Key
+显示您的 API 密钥
 
-You have to pass the API Key in the 'x-api-key' header. Let's switch to the terminal to test this out.
+您必须在 'x-api-key' 标头中传递密钥。现在，让我们切换至终端来测试一下。
 
-Verify your Rest API without passing the API key at first. Open the terminal, and enter the following curl command. You will once again see the forbidden message.
+首先，测试一下在不传递 API 密钥的情况下 Rest API 的响应。打开终端，然后输入下方的 curl 命令。此时，您将再次看到“禁止访问”的消息。
 
 ```bash
 curl --location --request GET '[enter your invoke url]'
@@ -242,9 +242,9 @@ curl --location --request GET '[enter your invoke url]'
 
 ![image-189](https://www.freecodecamp.org/news/content/images/2023/06/image-189.png)
 
-Forbidden access without API Key in Terminal
+终端中未提供 API 密钥的情况下禁止访问
 
-Now pass the API key this time. Run the following curl command:
+现在再进行一次测试，在标头中传递 API 密钥，并运行下方 curl 命令：
 
 ```bash
 curl --location --request GET '[your invoke url]' \
@@ -255,14 +255,14 @@ curl --location --request GET '[your invoke url]' \
 
 ![image-190](https://www.freecodecamp.org/news/content/images/2023/06/image-190.png)
 
-Data received on passing API Key in x-api-key Header
+在 x-api-key 标头中传递 API 密钥时获取的数据
 
-You can see the output of the Lambda function because you passed 'x-api-key' in the header.
+因为在标头中传递了 'x-api-key'，所以您能看到 Lambda 函数输出的结果。
 
-Awesome! You have successfully created the Usage plan, generated the API key, and attached it to the Rest API method and verified the integration.
+真棒! 您已经成功创建了使用计划，生成了 API 密钥，并将其附加到 Rest API 方法中以及验证了集成。
 
-## Conclusion
+## 总结
 
-In this tutorial, you learned what AWS API gateway is and how to create Usage Plans for the Rest API.
+在本教程中，您学习了 AWS API gateway 是什么，以及如何为 Rest API 创建使用计划。
 
-If you wish to learn more about AWS Services, subscribe to my [email newsletter](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway) ([https://5minslearn.gogosoon.com/](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway)) and follow me on social media.
+如果您想学习更多关于 AWS Services 的知识，可以订阅我的 [email newsletter](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway) ([https://5minslearn.gogosoon.com/](https://5minslearn.gogosoon.com/?ref=fcc_aws_api_gateway)) 并在社交媒体上关注我。

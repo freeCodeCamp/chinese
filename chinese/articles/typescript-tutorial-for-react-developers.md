@@ -1,6 +1,6 @@
 > -  原文地址：[TypeScript Handbook for React Developers – How to Build a Type-Safe Todo App](https://www.freecodecamp.org/news/typescript-tutorial-for-react-developers/)
 > -  原文作者：[Yazdun Fadali](https://www.freecodecamp.org/news/author/yazdun/)
-> -  译者：
+> -  译者：yiwei
 > -  校对者：
 
 ![TypeScript Handbook for React Developers – How to Build a Type-Safe Todo App](https://www.freecodecamp.org/news/content/images/size/w2000/2023/07/TypeScript-Handbook-for-React-Developers-Cover.png)

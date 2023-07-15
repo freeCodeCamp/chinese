@@ -76,7 +76,7 @@
 
 如果你想玩玩我用的版本库，自己试试这些命令，你可以得到这个版本库[这里](https://github.com/Omerr/rebase_playground)。
 
-你可以看到，在这个提交中，John  开始创作一首名为 `Lucy in the Sky with Diamonds` 的歌曲：
+你可以看到，在这个提交中，John 开始创作一首名为 `Lucy in the Sky with Diamonds` 的歌曲：
 
 ![image-200](https://www.freecodecamp.org/news/content/images/2023/06/image-200.png)
 
@@ -117,7 +117,7 @@ git cherry-pick <SHA_OF_COMMIT_5>
 
 (`git lol`是我加在 Git 上的一个别名，用来以图形的方式直观地查看历史。你可以找到它[这里](https://gist.github.com/Omerr/8134a61b56ca82dd90e546e7ef04eb77))。
 
-你复制的  `Commit 5`。请记住，尽管它有相同的提交信息，并引入了相同的修改，甚至在这种情况下指向与原始 `Commit 5`相同的树对象,它仍然是一个不同的提交对象，因为它是以不同的时间戳创建的。
+你复制的 `Commit 5`。请记住，尽管它有相同的提交信息，并引入了相同的修改，甚至在这种情况下指向与原始 `Commit 5`相同的树对象,它仍然是一个不同的提交对象，因为它是以不同的时间戳创建的。
 
 看一下这些变化，使用`git show HEAD`:
 
@@ -129,7 +129,7 @@ git cherry-pick <SHA_OF_COMMIT_5>
 
 当然，如果你看一下这个文件（比如，用`nano lucy_in_the_sky_with_diamonds.md`），它的状态和最初的 `Commit 5` 之后的状态是一样的。
 
- 酷! 😎
+酷! 😎
 
 好了，现在你可以删除新的分支，这样它就不会每次都出现在你的历史记录上:
 
@@ -140,90 +140,89 @@ git branch -D my_branch
 
 ## Beyond `cherry-pick` – How to Use `git rebase`
 
-You can look at `git rebase` as a way to perform multiple `cherry-pick`s one after the other – that is, to "replay" multiple commits. This is not the only thing you can do with `rebase`, but it's a good starting point for our explanation.
+你可以把 `git rebase` 看成是一个接一个地执行多个 `cherry-pick` 的方法，也就是 `重放(replay)`多个提交。这不是`rebase`唯一能做的事情，但它是我们解释的一个很好的起点。
+是时候玩玩`git rebase`了！ 👏🏻👏🏻
 
-It's time to play with `git rebase`! 👏🏻👏🏻
+之前，你把 `paul_branch` 合并到了 `john_branch`。如果把`paul_branch` _rebased_ `john_branch`，会发生什么呢？你会得到一个非常不同的历史(history)。
 
-Before, you merged `paul_branch` into `john_branch`. What would happen if you _rebased_ `paul_branch` on top of  `john_branch`? You would get a very different history.
+从本质上说，就好像我们把在`paul_branch`上的提交中引入的变更，在`john_branch`上重放(replay)一样。结果就是一个 **线性** 历史。[译者注：`git log --graph` 输出历史的是直线的，没有分叉]
 
-In essence, it would seem as if we took the changes introduced in the commits on `paul_branch`, and replayed them on `john_branch`. The result would be a **linear** history.
+为了理解这个过程，我将提供一个高层视图，然后深入到每一步。将一个分支重定向(rebasing)到另一个分支之上的过程如下:
 
-To understand the process, I will provide the high level view, and then dive deeper into each step. The process of rebasing one branch on top of another branch is as follows:
+1. 找到共同的祖先(ancestor)。
+2. 确定要 `重放(replayed)`的提交。
+3. 对于每个提交`X`，计算`diff(parent(X), X)`，并存储为`patch(X)`。
+4. 移动 `HEAD` 到新的基(base).
+5. 在目标分支上按顺序应用生成的补丁。每次都用新的状态创建一个新的提交对象。
 
-1.  Find the common ancestor.
-2.  Identify the commits to be "replayed".
-3.  For every commit `X`, compute `diff(parent(X), X)`, and store it as a `patch(X)`.
-4.  Move `HEAD` to the new base.
-5.  Apply the generated patches in order on the target branch. Each time, create a new commit object with the new state.
-
-The process of making new commits with the same changesets as existing ones is also called **"replaying"** those commits, a term we have already used.
+在新提交中使用与现有提交相同的变更集的过程也被称为 **重放(replaying)**，我们已经使用过这个术语。
 
 # **Time to Get Hands-On with Rebase🙌🏻**
 
-Start from Paul's branch:
+从 Paul 的分支开始:
 
-```
+```shell
 git checkout paul_branch
 ```
 
-This is the history:
+这是提交历史:
 
 ![image-206](https://www.freecodecamp.org/news/content/images/2023/06/image-206.png)
 
-Commit history before performing `git rebase` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+执行`git rebase`前的提交历史(Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-And now, to the exciting part:
+现在，进入激动人心的部分:
 
-```
+```shell
 git rebase john_branch
 ```
 
-And observe the history:
+查看历史:
 
 ![image-207](https://www.freecodecamp.org/news/content/images/2023/06/image-207.png)
 
-The history after rebasing (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+rebase 后的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-( `gg` is an alias for an external tool I introduced [in the video](https://youtu.be/3VFsitGUB3s)).
+( `gg` 是我的 [视频](https://youtu.be/3VFsitGUB3s) 中介绍的一个外部工具的别名). [译者注: [git-graph](https://github.com/mlange-42/git-graph)]
 
-So whereas with `git merge` you added to the history, with `git rebase` you **rewrite history**. You create **new** commit objects. In addition, the result is a linear history graph – rather than a diverging graph.
+因此，使用 `git merge` 你增加了历史(history)，而使用 `git rebase`, 你改写了历史。你创建了新的提交对象。此外，结果是一个线性的历史图,而不是一个发散图。
 
 ![image-209](https://www.freecodecamp.org/news/content/images/2023/06/image-209.png)
 
-The history after rebasing (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+rebase 后的历史 (来源： [简介](https://youtu.be/3VFsitGUB3s))
 
-In essence, we "copied" the commits that were on `paul_branch` and introduced after "Commit 4", and "pasted" them on top of `john_branch`.
+本质上，我们 `复制` 了 `paul_branch` 上 `Commit 4` 之后的提交，并将它们 `粘贴`到了 `john_branch` 上。
 
-The command is called "rebase", because it changes the base commit of the branch it's run from. That is, in your case, before running `git rebase`, the base of `paul_branch` was "Commit 4" – as this is where the branch was "born" (from `main`). With `rebase`, you asked Git to give it another base – that is, pretend as if it had been born from "Commit 6".
+这个命令被称为 `rebase`，因为它改变了运行它的分支的基点提交(base commit)。也就是说，在运行`git rebase`之前，`paul_branch`的基点提交是 `Commit 4`,因为这是分支 `诞生(born)` 的地方（从`main`开始）。使用 `rebase` 时，你要求 Git 给它另一个基点，也就是假装它是从 `Commit 6` 诞生的。
 
-To do that, Git took what used to be "Commit 7", and "replayed" the changes introduced in this commit onto "Commit 6", and then created a new commit object. This object differs from the original "Commit 7" in three aspects:
+为此，Git 将原来的 `Commit 7` 的改动 `重放(replayed)`到 `Commit 6` 上，然后创建了一个新的提交对象。这个对象与原来的 `Commit 7` 有三点不同:
 
-1.  It has a different timestamp.
-2.  It has a different parent commit – "Commit 6" rather than "Commit 4".
-3.  The [tree object](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/) it is pointing to is different - as the changes were introduced to the tree pointed to by "Commit 6", and not the tree pointed to by "Commit 4".
+1. 时间戳不同。
+2. 它有不同的父提交, `Commit 6` 而不是 `Commit 4`。
+3. 它指向的[tree object](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/) 是不同的,因为修改被引入到了 `Commit 6` 指向的树，而不是 `Commit 4` 指向的树。
 
-Notice the last commit here, "Commit 9'". The snapshot it represents (that is, the [tree](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/) that it points to) is exactly the same tree you would get by merging the two branches. The state of the files in your Git repository would be **the same** as if you used `git merge`. It's only the history that is different, and the commit objects of course.
+注意这里的最后一个提交，`Commit 9`。它所代表的快照 (也就是它所指向的 [tree](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/)) 与合并两个分支后得到的树完全相同。Git 仓库中文件的状态与使用 `git merge` 时一样。不同的只是历史，当然还有提交对象。
 
-Now, you can simply use:
+现在，您可以简单地使用:
 
-```
+```shell
 git checkout main
 git merge paul_branch
 ```
 
-Hm…… What would happen if you ran this last command? 🤔 Consider the commit history again, after checking out `main`:
+Hm…… 如果运行最后这条命令，会发生什么？🤔 在查看了 `main` 之后，再次查看提交历史:
 
 ![image-210](https://www.freecodecamp.org/news/content/images/2023/06/image-210.png)
 
-The history after rebasing and checking out `main` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+ rebase 后，再切换到 `main` 分支的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-What would it mean to merge `main` and `paul_branch`?
+合并 `paul_branch` 到 `main` 会发生什么?
 
-Indeed, Git can simply perform a fast-forward merge, as the history is completely linear (if you need a reminder about fast forward merges, check out [this post](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/#timetogethandson)). As a result, `main` and `paul_branch` now point to the same commit:
+事实上，Git 可以简单地执行快进合并(fast-forward merge)，因为历史是完全线性的（如果你需要关于快进合并的提醒，请查看 [this post](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/#timetogethandson) ）。因此，`main` 和 `paul_branch` 现在指向同一个提交:
 
 ![image-211](https://www.freecodecamp.org/news/content/images/2023/06/image-211.png)
 
-The result of a fast-forward merge (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+快进合并(fast-forward merge)的结果 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 # Advanced Rebasing in Git💪🏻
 

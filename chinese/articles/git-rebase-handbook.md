@@ -226,102 +226,102 @@ Hm…… 如果运行最后这条命令，会发生什么？🤔 在查看了 `m
 
 # Advanced Rebasing in Git💪🏻
 
-Now that you understand the basics of rebase, it is time to consider more advanced cases, where additional switches and arguments to the `rebase` command will come in handy.
+既然你已经了解了 rebase 的基础知识，现在就该考虑更高级的情况了，在这些情况下，`rebase` 命令的附加选项和参数就会派上用场。
 
-In the previous example, when you only said `rebase` (without additional switches), Git replayed all the commits from the common ancestor to the tip of the current branch.
+在前面的例子中，当你只说了 `rebase`（没有附加选项），Git 就会重放(replayed) 从共同祖先到当前分支顶端的所有提交。
 
-But rebase is a super-power, it's an almighty command capable of……well, rewriting history. And it can come in handy if you want to modify history to make it your own.
+但是，rebase 是一个超级强大的命令，它能够...，改写历史。如果你想修改历史，把它变成你自己的，它就会派上用场。
 
-Undo the last merge by making `main` point to "Commit 4" again:
+让 `main` 再次指向 `Commit 4`，撤销上次的合并:
 
-```
+```shell
 git reset -–hard <ORIGINAL_COMMIT 4>
 ```
 
 ![image-238](https://www.freecodecamp.org/news/content/images/2023/06/image-238.png)
 
-"Undoing" the last merge operation (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`撤销(undoing)` 上次合并操作 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-And undo the rebasing by using:
+通过 rebase 进行撤销:
 
-```
+```shell
 git checkout paul_branch
 git reset -–hard <ORIGINAL_COMMIT 9>
 ```
 
 ![image-239](https://www.freecodecamp.org/news/content/images/2023/06/image-239.png)
 
-"Undoing" the rebase operation (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`撤销` rebase 操作 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Notice that you got to exactly the same history you used to have:
+请注意，您的历史记录与以前完全相同:
 
 ![image-240](https://www.freecodecamp.org/news/content/images/2023/06/image-240.png)
 
-Visualizing the history after "undoing" the rebase operation (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+在 `撤销` rebase 操作后可视化历史记录 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Again, to be clear, "Commit 9" doesn't just disappear when it's not reachable from the current `HEAD`. Rather, it's still stored in the object database. And as you used `git reset` now to change `HEAD` to point to this commit, you were able to retrieve it, and also its parent commits since they are also stored in the database. Pretty cool, huh? 😎
+需要再次说明的是，`Commit 9` 并不是在当前 `HEAD` 无法访问时就消失了。相反，它仍然保存在对象数据库中。当你使用 `git reset` 将 `HEAD` 改为指向该提交(Commit 9)时，你就能检索到它以及它的父提交，因为它们也存储在数据库中。很酷吧？😎
 
-OK, quickly view the changes that Paul introduced:
+好了，快速查看 Paul 介绍的更改:
 
-```
+```shell
 git show HEAD
 ```
 
 ![image-241](https://www.freecodecamp.org/news/content/images/2023/06/image-241.png)
 
-`git show HEAD` shows the patch introduced by "Commit 9" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`git show HEAD` 显示了 `Commit 9` 引入的补丁 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Keep going backwards in the commit graph:
+在提交图(commit graph) 中继续向后退:
 
-```
+```shell
 git show HEAD~
 ```
 
 ![image-242](https://www.freecodecamp.org/news/content/images/2023/06/image-242.png)
 
-`git show HEAD~` (same as `git show HEAD~1`) shows the patch introduced by "Commit 8" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`git show HEAD~`（与 `git show HEAD~1`相同）显示 `Commit 8` 引入的补丁  (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-And one commit further:
+更进一步:
 
-```
+```shell
 git show HEAD~2
 ```
 
 ![image-243](https://www.freecodecamp.org/news/content/images/2023/06/image-243.png)
 
-`git show HEAD~2` shows the patch introduced by "Commit 7" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`git show HEAD~2` 显示 `Commit 7` 引入的补丁 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-So, these changes are nice, but perhaps Paul doesn't want this kind of history. Rather, he wants it to seem as if he introduced the changes in "Commit 7" and "Commit 8" as a single commit.
+所以，这些改动很好，但也许 Paul 并不想要这样的历史记录。相反，他想让 `Commit 7` 和 `Commit 8` 中的改动看起来像是一次提交。
 
-For that, you can use an **interactive** rebase. To do that, we add the `-i` (or `--interactive`) switch to the `rebase` command:
+为此，你可以使用 **interactive(交互式)** rebase。为此，我们在 `rebase` 命令中添加 `-i`（或 `--interactive`）选项:
 
-```
+```shell
 git rebase -i <SHA_OF_COMMIT_4>
 ```
 
-Or, since `main` is pointing to "Commit 4", we can simply run:
+或者，由于 `main` 指向 `Commit 4`，我们只需运行:
 
-```
+```shell
 git rebase -i main
 ```
 
-By running this command, you tell Git to use a new base, "Commit 4". So you are asking Git to go back to all commits that were introduced after "Commit 4" and that are reachable from the current `HEAD`, and replay those commits.
+通过运行这条命令，你会告诉 Git 使用一个新的基(base) `Commit 4`。这样，Git 就会回溯到所有在 `Commit 4`之后提交的、从当前的 `HEAD` 可以到达的提交，并重放(replay) 这些提交。
 
-For every commit that is replayed, Git asks us what we'd like to do with it:
+对于每一个被重放的提交，Git 都会询问我们想对它做什么:
 
 ![image-250](https://www.freecodecamp.org/news/content/images/2023/06/image-250.png)
 
-`git rebase -i main` prompts you to select what to do with each commit (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`git rebase -i main` 会提示您选择对每次提交的处理方式 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-In this context it's useful to think of a commit as a patch. That is, "Commit 7" as in "the patch that "Commit 7" introduced on top of its parent".
+在这种情况下，将提交视为补丁是很有用的。也就是说，`commit 7` 就是 `commit 7` 在其父版本之上引入的补丁"。
 
-One option is to use `pick`. This is the default behavior, which tells Git to replay the changes introduced in this commit. In this case, if you just leave it as is – and `pick` all commits – you will get the same history, and Git won't even create new commit objects.
+一种选项是使用 `pick`。这是默认行为，它告诉 Git 重放该提交中引入的改动。在这种情况下，如果保持原样, `pick` 所有提交,就会得到相同的历史记录，Git 甚至不会创建新的提交对象。
 
-Another option is `squash`. A _squashed_ commit will have its contents "folded" into the contents of the commit preceding it. So in our case, Paul would like to squash "Commit 8" into "Commit 7":
+另一个选项是 `squash`。一个 _squashed_ 提交的内容会被 `折叠(folded)` 到它之前的提交内容中。因此，在我们的例子中，Paul 想把 `Commit 8` 压缩成 `Commit 7`:
 
 ![image-251](https://www.freecodecamp.org/news/content/images/2023/06/image-251.png)
 
-Squashing "Commit 8" into "Commit 7" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`Commit 8` 压缩成 `Commit 7` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 As you can see, `git rebase -i` provides additional options, but we won't go into all of them in this post. If you allow the rebase to run, you will get prompted to select a commit message for the newly created commit (that is, the one that introduced the changes of both "Commit 7" and "Commit 8"):
 
@@ -349,20 +349,20 @@ Oh wow, isn't that cool? 😎
 
 Let's consider one more example. Get to `main` again:
 
-```
+```shell
 git checkout main
 ```
 
 And delete the pointers to `paul_branch` and `john_branch` so you don't see them in the commit graph anymore:
 
-```
+```shell
 git branch -D paul_branch
 git branch -D john_branch
 ```
 
 And now branch from `main` to a new branch:
 
-```
+```shell
 git checkout -b new_branch
 ```
 
@@ -376,7 +376,7 @@ A clean history with `new_branch` that diverges from `main` (Source: [Brief](htt
 
 Now, add a few changes here and commit them:
 
-```
+```shell
 nano code.py
 ```
 
@@ -384,14 +384,14 @@ nano code.py
 
 Adding the function `new_branch` to `code.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-```
+```shell
 git add code.py
 git commit -m "Commit 10"
 ```
 
 Get back to `main`:
 
-```
+```shell
 git checkout main
 ```
 
@@ -403,7 +403,7 @@ Added a docstring at the beginning of the file (Source: [Brief](https://youtu.be
 
 Time to stage and commit these changes:
 
-```
+```shell
 git add code.py
 git commit -m "Commit 11"
 ```
@@ -416,7 +416,7 @@ Added `@Author` to the docstring (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Commit this change as well:
 
-```
+```shell
 git add code.py
 git commit -m "Commit 12"
 ```
@@ -441,7 +441,7 @@ Well, as we understand, rebase allows us to basically _replay_ the changes intro
 
 To do that, you can use other arguments of `git rebase`. You'd tell Git that you want to take all the history introduced between the common ancestor of `main` and `new_branch`, which is "Commit 4", and have the new base for that history be "Commit 11". To do that, use:
 
-```
+```shell
 git rebase -–onto <SHA_OF_COMMIT_11> main new_branch
 ```
 
@@ -461,14 +461,14 @@ Say I started working on a branch, and by mistake I started working from `featur
 
 So to emulate this, create `feature_branch_1`:
 
-```
+```shell
 git checkout main
 git checkout -b feature_branch_1
 ```
 
 And erase `new_branch` so you don't see it in the graph anymore:
 
-```
+```shell
 git branch -D new_branch
 ```
 
@@ -480,14 +480,14 @@ A new file, `1.py`, with `print('Hello world!')` (Source: [Brief](https://youtu.
 
 Stage and commit this file:
 
-```
+```shell
 git add 1.py
 git commit -m  "Commit 13"
 ```
 
 Now branched out (by mistake) from `feature_branch_1`:
 
-```
+```shell
 git checkout -b feature_branch_2
 ```
 
@@ -499,7 +499,7 @@ Creating `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Stage and commit this file as well:
 
-```
+```shell
 git add 2.py
 git commit -m  "Commit 14"
 ```
@@ -512,7 +512,7 @@ Modifying `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Stage and commit these changes too:
 
-```
+```shell
 git add 2.py
 git commit -m  "Commit 15"
 ```
@@ -525,7 +525,7 @@ The history after introducing "Commit 15" (Source: [Brief](https://youtu.be/3VFs
 
 Get back to `feature_branch_1` and edit `1.py`:
 
-```
+```shell
 git checkout feature_branch_1
 ```
 
@@ -535,7 +535,7 @@ Modifying `1.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Now stage and commit:
 
-```
+```shell
 git add 1.py
 git commit -m  "Commit 16"
 ```
@@ -562,13 +562,13 @@ How would you do that?
 
 First, switch to `feature_branch_2`:
 
-```
+```shell
 git checkout feature_branch_2
 ```
 
 And now you can use:
 
-```
+```shell
 git rebase -–onto main <SHA_OF_COMMIT_13>
 ```
 
@@ -580,7 +580,7 @@ The commit history after performing rebase (Source: [Brief](https://youtu.be/3VF
 
 The syntax is of the command is:
 
-```
+```shell
 git rebase --onto <new_parent> <old_parent>
 ```
 
@@ -598,7 +598,7 @@ Changing `'` into `"` in `code.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s
 
 Then, I staged and committed:
 
-```
+```shell
 git add code.py
 git commit -m "Commit 17"
 ```
@@ -611,7 +611,7 @@ Adding the function `another_feature` (Source: [Brief](https://youtu.be/3VFsitGU
 
 Again, I staged and committed:
 
-```
+```shell
 git add code.py
 git commit -m "Commit 18"
 ```
@@ -624,7 +624,7 @@ Changing `'__main__'` into `"__main__"` (Source: [Brief](https://youtu.be/3VFsit
 
 Of course, I staged and committed this change:
 
-```
+```shell
 git add code.py
 git commit -m "Commit 19"
 ```
@@ -701,7 +701,7 @@ Another commit history (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Before playing around with it, store a tag to "Commit F" so you can get back to it later:
 
-```
+```shell
 git tag original_commit_f
 ```
 
@@ -735,13 +735,13 @@ I don't know about you, but these kinds of things make me really happy. 😊😇
 
 By the way, you could omit `HEAD` from the previous command as this is the default value for the third parameter. So just using:
 
-```
+```shell
 git rebase --onto <SHA_OF_COMMIT_B> <SHA_OF_COMMIT_D>
 ```
 
 Would have the same effect. The last parameter actually tells Git where the end of the current sequence of commits to rebase is. So the syntax of `git rebase --onto` with three arguments is:
 
-```
+```shell
 git rebase --onto <new_parent> <old_parent> <until>
 ```
 
@@ -749,7 +749,7 @@ git rebase --onto <new_parent> <old_parent> <until>
 
 So let's say we get to the same history as before:
 
-```
+```shell
 git checkout original_commit_f
 ```
 
@@ -769,7 +769,7 @@ Can you apply that logic to the syntax of `git rebase`?
 
 Here it is (this time I'm writing `<COMMIT_B>` instead of `<SHA_OF_COMMIT_B>`, for brevity):
 
-```
+```shell
 git rebase –-onto <COMMIT_B> <COMMIT_D> <COMMIT_E>
 ```
 
@@ -787,7 +787,7 @@ Note that when performing a rebase, you may run into conflicts just as when merg
 
 For example, consider the previous repository again, and specifically, consider the change introduced in "Commit 12", pointed to by `main`:
 
-```
+```shell
 git show main
 ```
 
@@ -798,7 +798,7 @@ The patch introduced in "Commit 12" (Source: [Brief](https://youtu.be/3VFsitGUB3
 I already covered the format of `git diff` in detail in [a previous post](https://www.freecodecamp.org/news/git-diff-and-patch/), but as a quick reminder, this commit instructs Git to add a line after the two lines of context:
 
 ````
-```
+```shell
 This is a sample file
 ````
 

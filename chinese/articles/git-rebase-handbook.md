@@ -323,44 +323,44 @@ git rebase -i main
 
 `Commit 8` 压缩成 `Commit 7` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-As you can see, `git rebase -i` provides additional options, but we won't go into all of them in this post. If you allow the rebase to run, you will get prompted to select a commit message for the newly created commit (that is, the one that introduced the changes of both "Commit 7" and "Commit 8"):
+如你所见，`git rebase -i` 提供了更多选项，但我们不会在这篇文章中一一介绍。如果允许 `rebase` 运行，系统会提示你为新创建的提交（即引入了 `Commit 7`和 `Commit 8`改动的提交）选择提交信息：
 
 ![image-252](https://www.freecodecamp.org/news/content/images/2023/06/image-252.png)
 
-Providing the commit message: `Commits 7+8` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+提供提交信息: `Commits 7+8` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-And look at the history:
+再看历史:
 
 ![image-253](https://www.freecodecamp.org/news/content/images/2023/06/image-253.png)
 
-The history after the interactive rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+运行 interactive rebase 后的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Exactly as we wanted! We have on `paul_branch` "Commit 9" (of course, it's a different object than the original "Commit 9"). This points to "Commits 7+8", which is a single commit introducing the changes of both the original "Commit 7" and the original "Commit 8". This commit's parent is "Commit 4", where `main` is pointing to. You have `john_branch`.
+正如我们想要的那样!我们在`paul_branch`分支上有 `Commit 9` (当然,它是一个不同的对象,与原来的 `Commit 9` 不同)。它指向 `Commit 7+8`,这是一个单独的提交,引入了原来 `Commit 7`和 `Commit 8` 的所有变更。这个提交的父提交是 `Commit 4`,也就是`main`分支当前所指向的提交。你现在在`john_branch`分支上。
 
 ![image-254](https://www.freecodecamp.org/news/content/images/2023/06/image-254.png)
 
-The history after the interactive rebase - visualized (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+interactive rebase  后可视化的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Oh wow, isn't that cool? 😎
+哇哦，是不是很酷？ 😎
 
-`git rebase` grants you unlimited control over the shape of any branch. You can use it to reorder commits, or to remove incorrect changes, or modify a change in retrospect. Alternatively, you could perhaps move the base of your branch onto another commit, any commit that you wish.
+`git rebase` 允许你无限制地控制任何分支的形态。你可以用它来重新排序提交，或删除错误的改动，或回溯修改改动。或者，你也可以把分支的基础移到另一个提交上，任何你想要的提交。
 
 ## How to Use the `--onto` Switch of `git rebase`
 
-Let's consider one more example. Get to `main` again:
+让我们再看一个例子。再次进入 `main`:
 
 ```shell
 git checkout main
 ```
 
-And delete the pointers to `paul_branch` and `john_branch` so you don't see them in the commit graph anymore:
+然后删除 `paul_branch` 和 `john_branch` 分支 ，这样在提交图中就看不到它们了:
 
 ```shell
 git branch -D paul_branch
 git branch -D john_branch
 ```
 
-And now branch from `main` to a new branch:
+现在从 `main` 分支基础上开一个新的分支:
 
 ```shell
 git checkout -b new_branch

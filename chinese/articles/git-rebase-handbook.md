@@ -368,13 +368,14 @@ git checkout -b new_branch
 
 ![image-255](https://www.freecodecamp.org/news/content/images/2023/06/image-255.png)
 
-Creating `new_branch` that diverges from `main` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+从 `main` 分支上创建一个新分支(new_branch) (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 ![image-256](https://www.freecodecamp.org/news/content/images/2023/06/image-256.png)
 
-A clean history with `new_branch` that diverges from `main` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Now, add a few changes here and commit them:
+一个干净的历史记录, 从 `main` 分支上创建的 `new_branch` 分支。 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+
+现在，在此处添加一些更改并提交:
 
 ```shell
 nano code.py
@@ -382,54 +383,54 @@ nano code.py
 
 ![image-257](https://www.freecodecamp.org/news/content/images/2023/06/image-257.png)
 
-Adding the function `new_branch` to `code.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`new_branch` 分支上添加 `code.py` 文件 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 ```shell
 git add code.py
 git commit -m "Commit 10"
 ```
 
-Get back to `main`:
+切回 `main` 分支:
 
 ```shell
 git checkout main
 ```
 
-And introduce another change:
+并引入另一个变化:
 
 ![image-258](https://www.freecodecamp.org/news/content/images/2023/06/image-258.png)
 
-Added a docstring at the beginning of the file (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+在文件开头添加了文档字符串 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Time to stage and commit these changes:
+是时候提交这些更改:
 
 ```shell
 git add code.py
 git commit -m "Commit 11"
 ```
 
-And yet another change:
+另一个变化:
 
 ![image-259](https://www.freecodecamp.org/news/content/images/2023/06/image-259.png)
 
-Added `@Author` to the docstring (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+添加 `@Author` 的描述 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Commit this change as well:
+提交变化:
 
 ```shell
 git add code.py
 git commit -m "Commit 12"
 ```
 
-Oh wait, now I realize that I wanted you to make the changes introduced in "Commit 11" as a part of the `new_branch`. Ugh. What can you do? 🤔
+哦，等等，现在我意识到，我是想让你把 `Commit 11` 中引入的更改作为 `new_branch` 的一部分。唉。你能怎么办呢？ 🤔
 
-Consider the history:
+回顾 git 提交历史:
 
 ![image-260](https://www.freecodecamp.org/news/content/images/2023/06/image-260.png)
 
-The history after introducing "Commit 12" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+`Commit 12` 后的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-What I want is, instead of having "Commit 10" reside only on the `main` branch, I want it to be on both the `main` branch as well as the `new_branch`. Visually, I would want to move it down the graph here:
+我希望 `Commit 10` 不只出现在 `main` 分支上，而是同时出现在 `main` 分支和 `new_branch` 上。从视觉上看，我希望把它移到图的下面:
 
 ![image-261](https://www.freecodecamp.org/news/content/images/2023/06/image-261.png)
 

@@ -30,36 +30,35 @@
 
 简单来说，客户端是请求某种信息或执行某种操作的应用程序，而服务器则是根据客户端的操作发送信息或执行操作的程序。
 
-Most applications nowadays use a client-server model. The most important concept to remember about it is that ****clients request resources or services**** that ****the server performs****. The way in which these two parts usually communicate is through an **API** (application programming interface).
+如今，大多数应用程序都使用客户端/服务器架构。它最重要的概念是：****客户端请求的资源或服务**** 由 ****服务器执行****。这两部分通常通过**API**（应用程序编程接口）进行通信。
 
-An API is nothing more than a **set of defined rules that establishes how one application can communicate with another**. It's like a contract between the two parts that says "If you send A, I'll always respond B. If you send C, I'll always respond D..." and so on.
+应用程序接口（API）是一套**定义的规则，它规定了一个应用程序如何与另一个进行通信**。它就像两方之间的一份合同，上面写着：“如果你发送 A，我总是会响应 B；如果你发送 C，我总是会响应 D……”等等。
 
 有了这组规则，客户端就确切地知道完成某项任务需要什么，服务器则确切地知道当必须执行某项操作时，客户端需要什么。
 
-在当前的软件开发中，应用程序接口（API）无处不在。几乎所有类型的应用程序都会使用 API 通信所支持的主从式架构模型。因此，作为开发人员，熟悉 API 会对你大有裨益。
+在当前的软件开发中，API 无处不在。几乎所有类型的应用程序都会使用 API 通信所支持的客户端/服务器架构。因此，作为开发人员，熟悉 API 会对你大有裨益。
 
 时下最流行的 API 实现方式是 REST 和 GraphQl。接下来我们还将了解一下 SOAP，它在几年前相当流行，现在仍在一些小众领域使用。
 
-如果你想要了解更多有关 API 的知识, [可以参阅这个视频了解](https://www.youtube.com/watch?v=yBZO5Rb4ibo)。
+如果你想要了解更多有关 API 的知识， [可以参阅这个视频了解](https://www.youtube.com/watch?v=yBZO5Rb4ibo)。
 
 有鉴于此，让我们来详细了解 SOAP、REST 和 GraphQL API 的工作原理。
 
 # SOAP APIs 如何运作
 
-Simple Object Access Protocol (SOAP) is a messaging protocol used for exchanging structured data between different systems over the internet. SOAP is an XML-based protocol and is considered one of the earliest web service protocols.
-简单对象访问协议 （SOAP） 是一种消息传递协议，用于通过互联网在不同系统之间交换结构化数据。SOAP 是一种基于 XML 的协议，是最早的 Web 服务协议之一。
+简单对象访问协议（SOAP）是一种消息传递协议，用于通过互联网在不同系统之间交换结构化数据。SOAP 是一种基于 XML 的协议，是最早的 Web 服务协议之一。
 
-SOAP was first introduced in 1998 by Microsoft as a successor to Common Object Request Broker Architecture (CORBA) and Distributed Component Object Model (DCOM).
+SOAP 由微软公司于 1998 年首次推出，是通用对象请求代理架构（CORBA）和分布式组件对象模型（DCOM）的后续产品。
 
-SOAP was designed to provide a platform-independent way to exchange data between different systems over the internet. SOAP was later standardized by the World Wide Web Consortium (W3C) in 2003.
+SOAP 的设计目的是提供一种独立于平台的方式，在互联网上的不同系统之间交换数据。后来，万维网联盟（W3C）于 2003 年将 SOAP 标准化。
 
 **主要特点：**
 
-1.  **Protocol-Independent:** SOAP is designed to work with any protocol that supports the transmission of messages over the internet, including HTTP, SMTP, and FTP.
-2.  **Platform-Independent:** SOAP is designed to work with any programming language or platform that supports XML and can send and receive HTTP messages.
-3.  **Messaging:** SOAP is a messaging protocol and defines a set of rules for exchanging structured data between different systems.
-4.  **Security:** SOAP supports several security standards, including encryption, digital signatures, and authentication.
-5.  **Extensibility:** SOAP allows for the creation of custom extensions to the protocol to support specific requirements.
+1.  **协议无关：** SOAP 可与任何支持在互联网上传输信息的协议（包括 HTTP、SMTP 和 FTP）配合使用。
+2.  **独立于平台：** SOAP 适用于任何支持 XML 并能发送和接收 HTTP 消息的编程语言或平台。
+3.  **消息传递：** SOAP 是一种消息传递协议，定义了一套在不同系统间交换结构化数据的规则。
+4.  **安全：** SOAP 支持多种安全标准，包括加密、数字签名和身份验证。
+5.  **可扩展性：** SOAP 允许创建协议的自定义扩展，以支持特定需求。
 
 **Pros:**
 

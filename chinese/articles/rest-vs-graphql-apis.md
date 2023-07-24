@@ -26,25 +26,23 @@
 
 在 [最近的一篇文章里](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/)，我简要介绍了两个在现代软件开发中非常重要的概念：客户端和 API。
 
-****Client-server**** is a model that structures the tasks or workloads of an application between a resource or service ****provider**** (server) and a service or resource requester (client).
+****客户端**** 是一种在资源或 ****服务商**** （服务器）和服务或资源请求者（客户端）之间构建应用程序任务或工作负载的模式。
 
-简单来说， the client is the application that requests some kind of information or performs actions, and the server is the program that sends information or performs actions according to what the client does.
+简单来说，客户端是请求某种信息或执行某种操作的应用程序，而服务器则是根据客户端的操作发送信息或执行操作的程序。
 
 Most applications nowadays use a client-server model. The most important concept to remember about it is that ****clients request resources or services**** that ****the server performs****. The way in which these two parts usually communicate is through an **API** (application programming interface).
 
 An API is nothing more than a **set of defined rules that establishes how one application can communicate with another**. It's like a contract between the two parts that says "If you send A, I'll always respond B. If you send C, I'll always respond D..." and so on.
 
-Having this set of rules, the client knows exactly what it has to require in order to complete a certain task, and the server knows exactly what the client will require when a certain action has to be performed.
-
 有了这组规则，客户端就确切地知道完成某项任务需要什么，服务器则确切地知道当必须执行某项操作时，客户端需要什么。
 
-APIs are absolutely everywhere in current software development. Almost any kind of application will use a client-server model enabled by API communication. That's why I think it's a very good idea for us as developers to get to know them well.
+在当前的软件开发中，应用程序接口（API）无处不在。几乎所有类型的应用程序都会使用 API 通信所支持的主从式架构模型。因此，作为开发人员，熟悉 API 会对你大有裨益。
 
-The most popular ways to implement APIs nowadays are REST and GraphQl. We'll also take a look at SOAP, which was quite popular some years ago and is still used in some niche sectors.
+时下最流行的 API 实现方式是 REST 和 GraphQl。接下来我们还将了解一下 SOAP，它在几年前相当流行，现在仍在一些小众领域使用。
 
-If you'd like a deeper intro to what APIs are, [here's an awesome video about it](https://www.youtube.com/watch?v=yBZO5Rb4ibo).
+如果你想要了解更多有关 API 的知识, [可以参阅这个视频了解](https://www.youtube.com/watch?v=yBZO5Rb4ibo)。
 
-With all this in mind, let's get into the details of how SOAP, REST and GraphQL APIs work.
+有鉴于此，让我们来详细了解 SOAP、REST 和 GraphQL API 的工作原理。
 
 # SOAP APIs 如何运作
 

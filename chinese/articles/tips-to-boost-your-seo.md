@@ -61,21 +61,16 @@ SEO(搜索引擎优化)对你的在线营销策略至关重要.这是优化网�
 
 ## 如何降低你的跳出率
 
-当每一个人进入你的网站, 你需要想办法留住他们,低的跳出率对于谷歌来说表示你的内容是有效的,同时你会在搜索结果中的排名会很高.
+当每一个人进入你的网站, 你需要想办法留住他们,低的跳出率对于谷歌来说表明你的内容是有效的,同时你会在搜索结果中的排名会高.
 
 记住,这对于你的网站不仅仅是关于带来更多的流量,而且保持流量来源于好的SEO策略.
 
 我知道你在想什么:怎么做可以减低我的跳出率.
 
 这里有一些方法:
-
--   减少与用户的摩擦. Make it easy for them to read your content by making it readable and entertaining enough to stay on the page. Improve your navigation, so readers don’t get lost or stuck trying to find what they came for. Remove annoying pop-ups that distract users from reading your content or even prevent them from accessing it altogether.
 -   减少与用户的摩擦.让你页面的内容容易阅读,让人愉快.改善你的导航栏,这样读者就不会迷路或是找不到他们想要的东西.去除烦人的弹窗,这会使用户在阅读你的内容时分心在进入环节.
--   Use visual elements such as images and videos where appropriate. They can make reading text easier and more enjoyable by breaking up chunks of text and making long articles seem shorter.
 -   在恰当的地方使用可视化的元素,如图片和视频.这可以使得文章阅读更加容易,更多的舒适感,让很长的文章看起来更短.
--   Use short paragraphs and bullet points so readers can skim through the page quickly without losing their place or interest in the material.
 -   使用更短的章节和重点符号标记,这可以使得读者可以跳过他们不感兴趣的部分,从而阅读的很快.
--   Use headings and subheadings throughout long articles so readers can get an idea of what each paragraph is about before reading it all word by word.
 -   在长文章中使用标题和副标题,使得读者在阅读整篇文章前获得关于每个章节的观点.
 
 ![GTmetrix report for limey.io showing A score and 552ms of load time](https://www.freecodecamp.org/news/content/images/2022/04/Screen-Shot-2022-04-21-at-3.41.52-PM.png)
@@ -86,31 +81,57 @@ GTmetrix 报告来自于 [Limey](https://limey.io/)
 
 As you might know, optimizing your page speed is no small task. It requires several steps and can be challenging. If this seems like too much to take on, consider hiring an SEO to help you identify page speed issues on your WordPress or Shopify website.
 
+或许你知道,优化你的页面加载速度不是一个小任务.它需要的几个步骤和可能有一点挑战性.如果这个看起来很难获取,包含SEO可以帮助你识别有问题的页面通过你的关键词或是商业网站.
+
 Some actionable steps you could take are:
 
 -   Reduce unused JavaScript.
 -   Eliminate render-blocking resources.
 -   Reduce initial server response time.
 
-## How to Start Guest Blogging
+一些你可以做的步骤:
+-   减少使用JavaScript.
+-   限制渲染块资源.
+-   减少服务器初始化时的响应时间.
+
+
+## 如何开始客座博客写作
 
 Guest blogging is a great tool to keep your site fresh and relevant. Having other bloggers accept articles you submitted can help bring new traffic to your website, and encourage back-links that increase your search engine ranking.
 
+客座博客是一种很好的手段，用于保持你的网站内容新鲜和相关。让其他博主接受你提交的文章可以帮助你的网站吸引新的流量，并鼓励产生回链，从而提高你在搜索引擎的排名。
+
 This could lead to more traffic, sign-ups, and sales for you.
+
+这可能会为你带来更多的流量、注册和销售。
 
 Guest posting also helps with branding and reaching new audiences.
 
+客座发表文章还有助于品牌推广和触及新受众。
+
 In the end, you will want to find blogs in your niche that accept contributions or have a "write for us" section where you can submit your content.
+
+最后，你需要找到在你的领域接受投稿的博客，或者有一个“为我们写作”板块，你可以在那里提交你的内容。
 
 It's not easy to get accepted, so make sure you write something great when pitching yourself as a guest blogger!
 
+获得接受并不容易，所以在作为客座博主推销自己时，一定要确保你写了一篇很棒的文章！
+
 Guest blogs aren't just for large businesses—if you're just starting out, there are a variety of ways you can use guest blogging to your advantage.
+
+座博客不仅适用于大型企业——如果你刚刚起步，有多种方法可以利用客座博客为你带来好处。,这是一种验证的方式,你可以用客座博客为你做广告.
 
 First, if you're just starting out and don't have a huge following yet, guest blogging is a great way to build up your audience. The big companies that have been guest blogging for years have thousands of new readers coming in each time they publish something new.
 
+首先，如果你刚刚起步并且尚未拥有大量关注者，客座博客是一种很好的方式来建立你的受众。那些已经进行客座博客多年的大公司每次发布新内容时都会吸引成千上万的新读者。
+
 If you've got some good ideas on your blog, and you have the drive to pitch yourself to other blogs and websites as well, then why not give it a shot?
 
+如果你的博客上有一些好的想法，并且你有动力向其他博客和网站推销自己，那么为什么不试一试呢？
+
 Also, if you've got any interesting story behind your company or products, this is another great way to show off what makes you unique. Who knows—your story could be the thing that makes your blog post stand out and draw people in.
+
+此外，如果你的公司或产品背后有任何有趣的故事，这是另一种展示你独特之处的好方法。谁知道呢——你的故事可能会使你的博客文章脱颖而出，吸引人们关注。
 
 ## How to Optimize On-Page SEO
 

@@ -123,17 +123,17 @@ GTmetrix 报告来自于 [Limey](https://limey.io/)
 
 Ahrefs关键词浏览器
 
-## How to Find the Right Keywords for Your Content Opportunities
+## 如何为你的内容寻找合适的关键词
 
-Keyword research is arguably the most important part of SEO. The right keywords can make the difference between a high-ranking article and one that doesn’t get noticed at all.
+关键词研究可以说是SEO中最重要的部分。正确的关键词可以使文章获得高排名，而错误的关键词可能导致文章完全被忽视。
 
-When you are starting, it’s important to understand your goals in terms of organic search traffic. From there, you can choose a keyword strategy that will help you reach those goals.
+在开始时，理解你在自然搜索流量方面的目标非常重要。从那里，你可以选择一个关键词策略来帮助您实现这些目标。
 
-There are several factors to consider when choosing keywords for your content opportunities:
+在为你的内容选择关键词时，请考虑以下几个因素：
 
--   Relevancy: What is the keyword relevant to? Choose a keyword that corresponds with your content or product offering.
--   Search Volume: If you want people to see your content, choose a keyword with high search volume (that is, many people have searched for it).
--   Unique: A unique keyword may be more difficult for your competition to target and rank for in organic search results than a more general, common phrase.
+-   相关性：关键词与什么相关？选择与您的内容或产品紧密相关的关键词。
+-   搜索量：如果你希望人们看到你的内容，请选择具有高搜索量的关键词（即很多人搜索的关键词）
+-   独特性：独特的关键词可能比更普遍、常见的短语更难以成为您的竞争对手在自然搜索结果中的目标和排名。
 
 ## How to Leverage Social Media for SEO, Traffic, and Sales
 

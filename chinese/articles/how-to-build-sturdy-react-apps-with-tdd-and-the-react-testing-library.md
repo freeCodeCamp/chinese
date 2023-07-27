@@ -1,21 +1,21 @@
 > -   原文地址：[How to build sturdy React apps with TDD and the React Testing Library](https://www.freecodecamp.org/news/how-to-build-sturdy-react-apps-with-tdd-and-the-react-testing-library-47ad3c5c8e47/)
 > -   原文作者：Ian Wilson
-> -   译者：
+> -   译者：herosql
 > -   校对者：
 
-One thing I struggled with when I started learning React was testing my web apps in a way that is both useful and intuitive. I used [Enzyme][1] with [Jest][2] to shallow render a component every time I wanted to test it.
+在我开始学习React时，我曾经挣扎于如何以一种既有用又直观的方式测试我的web应用。每次我想要测试一个组件时，我都会使用 [Enzyme][1] 和 [Jest][2] 进行浅层渲染。 
 
-Of course, I was absolutely abusing the snapshot testing feature.
+当然，我绝对是在滥用快照测试功能。
 
-Well, at least I wrote a test right?
+好吧，至少我写了一个测试，对吧？
 
-You might have heard somewhere that writing unit and integration tests will improve the quality of the software you write. Having bad tests, on the other hand, breeds false confidence.
+你可能在某个地方听说过，编写单元测试和集成测试将提高你编写的软件的质量。另一方面，拥有糟糕的测试会产生错误的信心。
 
-Recently, I attended a workshop through [workshop.me][3] with [Kent C. Dodds][4] where he taught us how to write better integration tests for React applications.
+最近，我参加了 [workshop.me][3] 上由 [Kent C. Dodds][4] 主持的一个研讨会，他教我们如何为React应用编写更好的集成测试。
 
-He also tricked us into using his [new testing library][5], in favor of its emphasis on testing the application in the same way that a user would encounter it.
+他还诱使我们使用他的[新的测试库][5]，以强调以用户可能遇到的相同方式测试应用程序。
 
-In this article, we will learn to exercise TDD in order to build solid React applications by creating a comment feed. Of course, this process applies to just about all software development, not just React or JavaScript apps.
+在本文中，我们将通过创建评论反馈来学习如何在构建稳定的React应用程序中运用TDD。当然，这个过程适用于几乎所有的软件开发，而不仅仅是React或JavaScript应用。
 
 ### **Getting Started**
 

@@ -3,7 +3,7 @@
 > -   译者：herosql
 > -   校对者：
 
-在我开始学习React时，我曾经挣扎于如何以一种既有用又直观的方式测试我的web应用。每次我想要测试一个组件时，我都会使用 [Enzyme][1] 和 [Jest][2] 进行浅层渲染。 
+在我开始学习React时，我曾经挣扎于如何以一种既有用又直观的方式测试我的web应用。每次我想要测试一个组件时，我都会使用 [Enzyme][1] 和 [Jest][2] 进行表层渲染。 
 
 当然，我绝对是在滥用快照测试功能。
 
@@ -17,9 +17,9 @@
 
 在本文中，我们将通过创建评论反馈来学习如何在构建稳定的React应用程序中运用TDD。当然，这个过程适用于几乎所有的软件开发，而不仅仅是React或JavaScript应用。
 
-### **Getting Started**
+### **开始**
 
-We’re going to start off by running `create-react-app` and installing the dependencies. My assumption is that if you’re reading an article about testing applications, you’re probably already a familiar with installing and starting up JavaScript projects. I’ll be using `yarn` rather than `npm` here.
+我们将首先运行 `create-react-app` 并安装依赖项。我的假设是，如果你正在阅读关于测试应用程序的文章，你可能已经熟悉安装和启动JavaScript项目。在这里，我将使用yarn而不是npm。
 
 ```plain
 create-react-app comment-feed
@@ -33,15 +33,15 @@ cd comment-feed
 yarn
 ```
 
-As it stands, we can remove all of the files in the `src` directory except for index.js. Then, right inside the `src` folder, create a new folder called `components` and another folder called `containers`.
+首先，我们将删除src目录中除index.js之外的所有文件。然后，在src文件夹内部，创建一个名为components的新文件夹和另一个名为containers的文件夹。
 
-For testing utilities, I am going to build this app using Kent’s [React Testing Library][6]. It is a lightweight test utility that encourages the developer to test their application in the same way that it’ll be used.
+在测试工具方面，我将使用Kent的 [React 测试库][6] 构建此应用程序。它是一款轻量级的测试工具，鼓励开发者以实际使用时相同的方式测试他们的应用程序。
 
-Like Enzyme, it exports a render function, but this render function always does a full mount of your component. It exports helper methods allowing you to locate elements by label or text or even test IDs. Enzyme does that as well with its `mount` API, but the abstraction it creates actually offers more options, many of which allow you to get away with testing implementation details.
+与Enzyme一样，它导出一个渲染函数，但这个渲染函数始终对你的组件进行完整挂载。它导出辅助方法，允许你通过标签、文本甚至测试ID来定位元素。Enzyme也通过其 `mount` API实现了这一点，但它创建的抽象实际上提供了更多选项，其中许多选项允许你摆脱测试实现细节。
 
-We don’t want to test implementation details anymore. We want to render a component and see if the right things happen when we click or change something on the UI. That’s it! No more directly checking props or state or class names.
+我们不想要测试所有的实现细节。我们想要渲染一个组件，看看当我们点击或更改UI上的某些内容时是否会发生正确的事情。就是这样！不再直接检查props、state或类名。
 
-Let’s install them and get to work.
+现在让我们安装它们并开始工作。
 
 ```plain
 yarn add react-testing-library

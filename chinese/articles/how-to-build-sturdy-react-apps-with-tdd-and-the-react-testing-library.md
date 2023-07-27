@@ -1,6 +1,6 @@
 > -   原文地址：[How to build sturdy React apps with TDD and the React Testing Library](https://www.freecodecamp.org/news/how-to-build-sturdy-react-apps-with-tdd-and-the-react-testing-library-47ad3c5c8e47/)
 > -   原文作者：Ian Wilson
-> -   译者：
+> -   译者：herosql
 > -   校对者：
 
 One thing I struggled with when I started learning React was testing my web apps in a way that is both useful and intuitive. I used [Enzyme][1] with [Jest][2] to shallow render a component every time I wanted to test it.

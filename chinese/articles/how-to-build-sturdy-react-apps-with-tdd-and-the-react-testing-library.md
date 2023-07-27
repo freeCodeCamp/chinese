@@ -47,31 +47,30 @@ yarn
 yarn add react-testing-library
 ```
 
-### **Building the Comment Feed with TDD**
+### **通过TDD构建评论反馈**
 
-Let’s do this first component TDD-style. Fire up your test runner.
+让我们以TDD风格进行第一个组件的开发。启动您的测试运行器。
 
 ```plain
 yarn test --watch
 ```
 
-Inside the `containers` folder, we are going to add a file called CommentFeed.js. Alongside it, add a file called CommentFeed.test.js. For the very first test, let’s verify that users can create comments. Too soon? Okay, since we don’t have any code yet, we’ll start with a smaller test. Let’s check that we can render the feed.
+在`containers`文件夹中，我们将添加一个名为CommentFeed.js的文件。与之相伴的，添加一个名为CommentFeed.test.js的文件。在第一个测试中，让我们验证用户是否可以创建评论。太早了？好吧，既然我们还没有任何代码，我们将从一个较小的测试开始。让我们检查一下我们是否可以渲染反馈。
 
-#### **Some notes on react-testing-library**
+### **关于react-testing-library的一些说明**
 
-First, let’s note the render function here. It is similar to the way `react-dom` renders a component onto the DOM, but it returns an object which we can destructure to get some neat test helpers. In this case, we get `queryByText`, which, given some text we expect to see on the DOM, will return that HTML element.
+首先，让我们注意这里的渲染函数。它类似于 `react-dom` 将组件渲染到DOM的方式，但它返回一个对象，我们可以解构该对象以获得一些实用的测试辅助工具。在这种情况下，我们得到 `queryByText`，它会返回我们期望在DOM上看到的HTML元素。
 
-The [React Testing Library docs][7] have a hierarchy that should help you decide which query or get method to use. Generally, the order goes like this:
+[React 测试库文档][7] 提供了一个层次结构，应该帮助您决定使用哪个查询或获取方法。通常，顺序如下：
+-   `getByLabelText` (表单输入)
+-   `getByPlaceholderText` (仅在您的输入没有标签时使用 — 很少使用！)
+-   `getByText` (按钮和标题)
+-   `getByAltText` (图片)
+-   `getByTestId` (用于动态文本或其他您想要测试的奇怪元素)
 
--   `getByLabelText` (form inputs)
--   `getByPlaceholderText` (only if your input doesn’t have a label — less accessible!)
--   `getByText` (buttons and headers)
--   `getByAltText` (images)
--   `getByTestId` (use this for things like dynamic text or otherwise odd elements you want to test)
+每个方法都有一个相关的 `queryByFoo` ，除了在找不到元素时不会使测试失败之外，它们的功能相同。如果您只是测试元素的**存在**，请使用这些方法。
 
-Each of these has an associated `queryByFoo` that does the same, except won’t fail your test when it doesn’t find an element. Use these if you’re just testing for the **existence** of an element.
-
-If none of these get you exactly what you’re looking for, the `render` method also returns the DOM element mapped to the `container` property, so you can use it like `container.querySelector(‘body #root’)`.
+如果这些方法都无法满足您的需求， `render` 方法还返回映射到`container` 属性的DOM元素，因此您可以像`container.querySelector(‘body #root’)`这样使用它。
 
 ### **The First Implementation Code**
 

@@ -112,41 +112,41 @@ yarn test --watch
 
 注意我们的测试套件是如何发展的吗？我们从在各自的测试用例中硬编码props转变为为它们创建一个工厂。
 
-#### **Arrange, Act, Assert**
+#### **准备， 执行， 断言**
 
-This following integration test can be broken into three parts: arrange, act, and assert.
+以下集成测试可以分为三个部分：准备，执行和断言。
 
--   **Arrange:** create props and other fixtures for the test case
--   **Act:** simulate changes to the elements such as text inputs or button clicks
--   **Assert:** assert that the desired functions were invoked the right number of times, and with the correct arguments
+-   **准备:** 为测试用例创建props和其他测试用例
+-   **执行:** 模拟对元素的更改，例如文本输入或按钮点击
+-   **断言:**  断言所需的函数被正确次数调用，并使用正确的参数
 
-There are some assumptions made about the code, like the naming of our labels or the fact that we will have a `createComment` prop.
+关于代码，我们做了一些假设，比如我们的标签命名或我们将拥有一个 `createComment` prop。
 
-When finding inputs, we want to try to find them by their labels. This prioritizes accessibility when we’re building our applications. The easiest way to grab the form is by using `container.querySelector`.
+在查找输入时，我们希望尝试通过它们的标签找到它们。这样在构建应用程序时，我们可以优先考虑可访问性。使用`container.querySelector`是获取表单的最简单方法。
 
-Next, we must assign new values to the inputs and simulate the change to update their state. This step may feel a little strange, since normally we type one character at a time, updating the component’s state for each new character.
+接下来，我们必须为输入分配新值，并模拟更改以更新它们的状态。这一步可能感觉有点奇怪，因为通常我们一次输入一个字符，为每个新字符更新组件的状态。
 
-This test behaves more like the behavior of copy/paste, going from empty string to ‘Socrates’. No breaking issues for now, but we may want to make note of that in case it comes up later.
+这个测试的行为更像是复制/粘贴的行为，从空字符串变为“Socrates”。目前没有中断问题，但我们可能需要注意一下，以防以后出现问题。
 
-After submitting the form, we can make assertions on things like which props were invoked and with what arguments. We could also use this moment to verify that the form inputs cleared.
+在提交表单后，我们可以对诸如调用了哪些props以及使用了哪些参数等事项进行断言。我们还可以利用这个时刻来验证表单输入是否已清除。
 
-Is it intimidating? No need to fear, my child, walk this way. Start by adding the form to your render function.
+这让人望而生畏吗？不需要害怕，孩子，继续走。首先将表单添加到渲染函数中。
 
-I could break this form into its own separate component, but I will refrain for now. Instead, I’ll add it to my “Refactor Wish List” I keep beside my desk.
+我可以将这个表单分解成一个单独的组件，但现在我会保持不变。相反，我会将其添加到我桌子旁边的“重构愿望清单”中。
 
-This is the way of TDD. When something seems like it can be refactored, make a note of it and move on. Refactor only when the presence of an abstraction benefits you and doesn’t feel unnecessary.
+这是TDD的方式。当某件事看起来可以重构时，做个记录然后继续。只有在抽象的存在对你有益且不感到多余时才进行重构。
 
-Remember when we refactored our test suite by creating the `createProps` factory? Just like that. We can refactor tests, too.
+还记得我们通过创建 `createProps` 工厂来重构测试套件的时候吗？就像那样。我们也可以重构测试。
 
-Now, let’s add in the `handleChange` and `handleSubmit` class methods. These get fired when we change an input or submit our form. I will also initialize our state.
+现在，让我们添加 `handleChange` 和 `handleSubmit` 类方法。当我们更改输入或提交表单时，这些方法会被触发。我还将初始化我们的状态。
 
-And that did it. Our tests are passing and we have something that sort of resembles a real application. How does our coverage look?
+这样做就可以了。我们的测试通过了，我们有一些类似于真实应用程序的东西。我们的覆盖率看起来如何？
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Q4coAIT2yaP120pDWGxoAQ.png)
 
-Not bad. If we ignore all of the setups that go inside index.js, we have a fully covered web application with respect to lines executed.
+还不错。如果我们忽略index.js中的所有设置，我们就有一个完全覆盖的Web应用程序，至少在执行的行数方面是这样。
 
-Of course, there are probably other cases we want to test in order to verify that the application is working as we intend. That coverage number is just something your boss can brag about when they’re talking to the other cohorts.
+当然，为了验证应用程序是否按照我们的意图工作，我们可能还需要测试其他用例。覆盖率的数字只是你的老板在谈论其他同事时可以炫耀的东西。
 
 ### **Liking Comments**
 

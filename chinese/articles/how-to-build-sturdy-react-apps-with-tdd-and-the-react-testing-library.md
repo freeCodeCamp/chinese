@@ -98,20 +98,19 @@ yarn test --watch
 
 以防你想启动应用程序，将index.js更新为以下内容：
 
-### **Add Comment Form**
+### **添加评论表单**
 
-This is where things start getting more fun. This is where we go from sleepily checking for the existence of DOM nodes to actually doing stuff with that and **validating behavior**. All that other stuff was a warmup.
+这是事情开始变得更有趣的地方。这是我们从困倦地检查DOM节点的存在到实际使用它并**验证行为**的地方。所有其他的东西都是热身。
 
-Let’s start by describing what I want from this form. It should:
+让我们从描述我想要的表单开始。它应该：
+-   包含一个作者的文本输入
+-   包含一个评论条目的文本输入
+-   有一个提交按钮
+-   最终调用API或处理创建和存储评论的其他服务。
 
--   contain a text input for the author
--   contain a text input for then comment itself
--   have a submit button
--   eventually call the API or whatever service handles creating and storing the comment.
+我们可以在一个集成测试中完成这个列表。对于之前的测试用例，我们进行得相当缓慢，但现在我们要加快速度，试图一举完成。
 
-We can take down this list in a single integration test. For the previous test cases we took it rather slowly, but now we’re going to pick up the pace and try to nail it in one fell swoop.
-
-Notice how our test suite is developing? We went from hard-coding props inside their own test cases to creating a factory for them.
+注意我们的测试套件是如何发展的吗？我们从在各自的测试用例中硬编码props转变为为它们创建一个工厂。
 
 #### **Arrange, Act, Assert**
 

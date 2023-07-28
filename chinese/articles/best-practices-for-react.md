@@ -1,168 +1,164 @@
 > -  原文地址：[React Best Practices – Tips for Writing Better React Code in 2022](https://www.freecodecamp.org/news/best-practices-for-react/)
-> -  原文作者：[
-                    
-                        Jean-Marc Möckel
-                    
-                ](https://www.freecodecamp.org/news/author/jeanmarcmoeckel/)
-> -  译者：
+> -  原文作者：[Jean-Marc Möckel](https://www.freecodecamp.org/news/author/jeanmarcmoeckel/)
+> -  译者：luojiyin
 > -  校对者：
 
 ![React Best Practices – Tips for Writing Better React Code in 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/React-Best-Practices-Thumbnail.png)
 
-Two years ago, I started to learn and use React. And today I'm still using it at my day job as a Software Developer and in my own side projects.
+两年前，我开始学习和使用React。今天，我仍然在我的日常工作中使用它，作为一个软件开发人员和我自己的业余项目。
 
-During that time I've come across a lot of "typical" issues. So I searched around and found some best practices that I've integrated into my workflow, and I've come up with things that have made my life or my team members' lives easier.
+在这段时间里，我遇到了很多典型的问题。所以我四处搜寻，找到了一些最佳实践，并将其整合到我的工作流程中，我想出了一些让我的生活或我的团队成员的生活更轻松的东西。
 
-I also faced challenges along the way that I didn't solve in the best way at the time, and I want to approach them in a better way in the future.
+一路走来，我也遇到了一些挑战，当时我没有以最好的方式来解决，我希望将来能以更好的方式来处理这些问题。
 
-That's the reason I wrote this guide. I think of it like a collection of tips I'd have given myself two years ago when I started out.
+这就是我写这个指南的原因。我认为它就像两年前我开始工作时给自己的技巧收集。
 
-## Table of contents:
+## 目录:
 
--   [Three Major Challenges React Developers Face](#three-major-challenges-react-developers-face)
--   [Learn The Building Blocks of React](#learn-the-building-blocks-of-react)
--   [Learn How to Build Clean, Performant and Maintainable React Components](#learn-how-to-build-clean-performant-and-maintainable-react-components)
--   [Tips to Help You Write Better React Code – The Cherries on Top](#tips-to-help-you-write-better-react-code-the-cherries-on-top)
--   [Final Words](#final-words)
+-   [React开发者面临的三大挑战](#three-major-challenges-react-developers-face)
+-   [学习React的构建模块](#learn-the-building-blocks-of-react)
+-   [学习如何构建简洁、性能良好、可维护的React组件](#learn-how-to-build-clean-performant-and-maintainable-react-components)
+-   [帮助你写出更好的React代码的技巧 – The Cherries on Top](#tips-to-help-you-write-better-react-code-the-cherries-on-top)
+-   [结束语](#final-words)
 
-First and foremost, you'll get to know the **three major challenges** every React developer has to face. This is important because when you are aware of potential challenges, you'll understand the reasons behind these best practices in a deeper way. Having this mindset from the beginning also helps you when designing your components or organizing your project.
+首先，你会了解到每个React开发者必须面对的 **三个主要挑战** ，这很重要，因为当你意识到潜在的挑战时，你会更深入地理解这些最佳实践背后的原因。从一开始就有这种心态，也有助于你在设计你的组件或组织你的项目。
 
-After that first important step, I'll introduce you to the **three best practices**. They're a mixture of theoretical and practical tips with code examples. I try to minimize _hello world problems_ and come up with code I've seen in the _real world_.
+在这第一个重要步骤之后，我将向你介绍**的三个最佳实践**。它们是理论和实践技巧的混合体，带有代码实例。我尽量减少 _hello world_ 的问题，并拿出我在 _真实世界_ 看到的代码。
 
 ## Three Major Challenges React Developers Face
 
 ![christian-erfurt-sxQz2VfoFBE-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/christian-erfurt-sxQz2VfoFBE-unsplash.jpg)
 
-During my two years of using React on a daily basis, I've recognized three major challenges that React developers face when building their apps. Ignoring these challenges might bring hard times that harm the growth of your app.
+在我日常使用React的两年时间里，我认识到React开发者在构建他们的应用时面临的三大挑战。忽视这些挑战可能会带来困难，损害你的应用程序的发展。
 
-So keep these challenges in mind when orchestrating your app, as it'll save you time and energy.
+因此，在协调你的应用程序时要记住这些挑战,这将节省你的时间和精力。
 
-### ⚙️ Maintainability
+### ⚙️ 可维护性
 
-This goes hand in hand with _reusability._ At the beginning when the application and the components are very lightweight, they're easy to maintain. But once the requirements start growing, components tend to become very complex and therefore less maintainable.
+这与 _可重用性_ 是相辅相成的。一开始，当应用程序和组件非常轻巧时，它们很容易维护。但是，一旦需求开始增长，组件就会变得非常复杂，因此可维护性就会降低。
 
-I've often seen a component that has many different cases, each representing a different outcome. The JSX is flooded with conditional renderings (ternary operators and simple `&&` operators), classnames are applied conditionally, or the component uses a huge `switch` statement. There are many possible prop and state values, each responsible for a different outcome.
+我经常看到一个组件有很多不同的情况，每个都代表不同的结果。JSX中充斥着条件渲染（三元运算符和简单的`&&`运算符），`classnames`被有条件地应用，或者组件使用巨大的`switch`语句。有许多可能的`props`和`state`值，每个都负责不同的结果。
 
-There's nothing wrong with those techniques in and of themselves, in my opinion. But I think everyone should develop a feeling for when a component starts to become less maintainable and when these techniques become overused. We'll learn how to control this better later on in the article.
+在我看来，这些技术本身并没有错。但我认为每个人都应该培养一种感觉，知道什么时候一个组件开始变得不那么可维护，什么时候这些技术被过度使用。我们将在文章的后面学习如何更好地控制这个问题。
 
-The problem (and I've been guilty of this as well) is that the more complexity and different outcomes a component has (polymorphism), the more difficult it becomes to maintain.
+问题是（我也曾犯过这样的错误），一个组件的复杂性和不同结果越多（polymorphism），它就越难维护。
 
-To be honest, the root cause is often laziness, not enough experience, or time pressure to refactor a component properly in order to make it more maintainable and cleaner.
+说实话，其根本原因往往是懒惰，没有足够的经验，或时间压力，无法正确地重构一个组件，以使其更可维护和更简洁。
 
-Another key factor I've seen is no or little testing. I know, testing is not a type of work many developers love, but it can really help you on the long run. Testing itself won't be a major topic in this post, so keep your eyes open for another blog post of mine about it.
+我看到的另一个关键因素是没有或很少进行测试。我知道，测试并不是很多开发人员喜欢的工作，但从长远来看，它确实可以帮助你。测试本身不会是这篇文章的一个主要话题，所以请留意我的另一篇关于测试的博文。
 
-### 🧠 Solid Understanding of React
+### 🧠 对React的深刻理解
 
-Another root cause for problems React devs have is a poor basic understanding of how React works under the hood. I've been there, too.
+React开发者出现问题的另一个根本原因是对React在工作底层原理缺乏基本了解。我也遇到过这种情况。
 
-I've seen many people jumping too fast into intermediate or advanced concepts without having a solid foundation. But this isn't only particular to React. It's a general problem in programming.
+我见过很多人在没有坚实基础的情况下过快地进入中级或高级概念。但这并不仅仅是React的问题。这也是编程中的一个普遍问题。
 
-Not having a solid understanding of React can also cause issues for you as a developer. I remember having headaches when I wanted to use different component lifecycles but didn't know how to actually use them. So I had to take a few steps back and go deeper into that topic.
+对React没有扎实的了解也会给你这个开发者带来问题。我记得当我想使用不同的组件生命周期，但不知道如何真正使用它们时，我很头疼。所以我不得不退回去，深入了解这个话题。
 
-Because I think it's one of the most important things, I've dedicated a whole chapter to it in this blog post below.
+因为我认为这是最重要的事情之一，所以我在下面这篇博文中专门用了一整章来介绍。
 
-### 📈 Scalability
+### 📈 可扩展性
 
-This challenge goes hand in hand with _maintainability_. It is not only specific to React, but applies generally in software.
+这个挑战与 _可维护性_ 并驾齐驱。它不仅是React所特有的，而且普遍适用于软件中。
 
-I've learned that crafting excellent software is not only about UX, clean code patterns, or clever architecture, for example. For me, the quality of a software also rises or falls with its ability to scale.
+我已经了解到，制作优秀的软件不仅仅是用户体验、干净的代码模式或聪明的架构，例如。对我来说，一个软件的质量也随着它的扩展能力而上升或下降。
 
-To me, many things come into play that increase the scalability of software. You'll learn my most important tips in this article.
+对我来说，很多东西都能提高软件的可扩展性。在这篇文章中，你会学到我最重要的技巧。
 
-I think when you keep _maintainability_ and _scalability_ in mind when orchestrating your components and organizing your project structure, you'll less likely end up with a mess of source code that needs major refactoring.
+我认为，当你在调整你的组件和组织你的项目结构时，把 _可维护性_ 和 _可扩展性_ 放在心上，你就不太可能以需要重大重构的混乱的源代码。
 
-# How to Learn React
+# 如何学习React
 
-Alright, now let's dive deeper into some best practices for learning React.
+好了，现在让我们深入了解学习React的一些最佳实践。
 
 ## Learn the Building Blocks of React
 
 ![brett-jordan-Lzfxzip-pNI-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/brett-jordan-Lzfxzip-pNI-unsplash.jpg)
 
-As we discussed briefly above, manifesting the building blocks is not only relevant to learning React, but to other technologies or programming languages as well. You can't build a skyscraper on a sandy foundation and expect it to be solid.
+正如我们在上面简单讨论的那样，building blocks不仅与学习React有关，而且与其他技术或编程语言也有关。你不能在浮沙上建造一座摩天大楼，并期望它是牢固的。
 
-This might seem obvious to many of you, but I've seen developers who jumped into the intermediate or advanced concepts of React without really understanding the basics.
+这对你们中的许多人来说可能是显而易见的，但我见过一些开发者在没有真正理解基础知识的情况下就跳进React的中级或高级概念。
 
-This also true for Javascript in general. I'm a huge believer that learning React doesn't make sense if you don't have a solid foundation in Vanilla Javascript.
+这对一般的Javascript来说也是如此。我非常相信，如果你没有坚实的Vanilla Javascript基础，学习React是没有意义的。
 
-So, if that sounds familiar to you and you're thinking about learning React but not feeling very comfortable with Vanilla Javascript already, spend some more time on strengthening Javascript first. It will save you a lot of headaches and time in the future.
+所以，如果这听起来很熟悉，而且你正在考虑学习React，但对Vanilla Javascript已经感觉不是很舒服，那就先多花些时间加强Javascript。这将为你在未来节省大量的头痛和时间。
 
-Here's a helpful guide to the [top JavaScript concepts you need to know before diving into React](https://www.freecodecamp.org/news/top-javascript-concepts-to-know-before-learning-react/) if you want to review.
+如果你想回顾一下，这里有一份关于[学习React之前你需要知道的核心JavaScript概念](https://www.freecodecamp.org/news/top-javascript-concepts-to-know-before-learning-react/) 
 
-But knowing the basics alone is not enough for me. It's kind of mandatory to know how React works under the hood. If you want to become a good React developer (which I assume you do, because you're reading this article), you have to know the tool you're using. This is beneficial for you as a developer and for your clients as well.
+但仅仅了解基础知识对我来说是不够的。知道React的底层是如何工作的，这有点强制性。如果你想成为一个优秀的React开发者（我想你是这样想的，因为你正在阅读这篇文章），你必须了解你所使用的工具。这对作为开发者的你和你的客户来说都是有益的。
 
-On the one hand it can save you a lot of time debugging your application. On the other hand it makes you more efficient because you don't have to take some steps back to re-learn the basics again and again. You basically know what you're talking about.
+一方面，它可以为你节省大量的时间来调试你的应用程序。另一方面，它使你更有效率，因为你不必一次又一次地来重新学习基本知识。你基本上知道你在说什么。
 
-Of course, you can't know it all and you shouldn't stress yourself out on that topic. You'll learn more and more as you go through practical problems and build more projects. But with a good solid knowledge you are equipped well from the beginning.
+当然，你不可能知道所有的东西，你不应该在这个话题上给自己压力。当你通过实际问题和建立更多项目时，你会学到越来越多的东西。但是，有了良好扎实的知识，你可以事半功倍。
 
-Okey, that makes sense. But you might be wondering what exactly you need to know in order to have a solid foundation in React?
+好的，这很有意义。但你可能想知道，为了在React方面有一个坚实的基础，你到底需要知道什么？
 
-As a bare minimum, you should understand all the topics inside the [**Main Concepts** Chapter](https://reactjs.org/docs/hello-world.html) inside the official React Docs.
+作为一个最低要求，你应该了解所有的主题。 在官方的React Docs里面的[**主要概念** 章节](https://reactjs.org/docs/hello-world.html)。
 
-Another [chapter you should be very familiar with is the one on **Hooks**](https://reactjs.org/docs/hooks-intro.html) because they've become a convention and are used everywhere, especially in third party React packages.
+另一个 [你应该非常熟悉的章节是关于 **Hooks**](https://reactjs.org/docs/hooks-intro.html)，因为它们已经成为一种惯例，并且到处都在使用，特别是在第三方React包中。
 
-Of course there are some you might use more often like `useState` and `useEffect`, but understanding the other ones like `useMemo`, `useCallback` or `useRef` is also essential.
+当然，有一些你可能更经常使用，如`useState`和`useEffect`，但了解其他的如`useMemo`、`useCallback`或`useRef`也是必不可少的。
 
-There's also [another chapter called **Advanced Guides**](https://reactjs.org/docs/accessibility.html) that I wouldn't consider to be mandatory at the beginning, but I'd highly recommend that you grasp those concepts during your React journey.
+还有[另一章叫做**高级指南**](https://reactjs.org/docs/accessibility.html)，我不认为这是开始时的必修课，但我强烈建议你在React旅程中掌握这些概念。
 
-As always, it's often easier to understand advanced topics when you already have some practical experience. But the more of those things you understand early on, the better.
+一如既往，当你已经有一些实践经验时，往往更容易理解高级主题。但你在早期了解的那些东西越多越好。
 
-Of course you shouldn't limit yourself to just only following the React docs. Working through an online course that covers those building blocks, watching tutorials or reading other blog posts is also part of building a solid foundation. So, test what works best for you.
+当然，你不应该把自己限制在只遵循React文档上。通过涵盖这些构件的在线课程，观看教程或阅读其他博客文章也是打下坚实基础的一部分。所以，测试一下什么对你最有效。
 
-If I had to choose the most important concepts to know at a bare minimum, I'd suggest these:
+如果我不得不选择最重要的概念来了解，我会建议这些:
 
--   what is "state"?
--   ups and downs of class and functional components
--   what are component re-renderings and how do they work?
--   how to trigger re-renderings
--   different component lifecycles and how to interact with them
--   Virtual DOM
--   Benefits of CSR (Client Side Rendering) and SSR (Server Side Rendering) in general and in React
--   Controlled vs. Uncontrolled Components
--   State Lifting
--   at least one global state management technology (Context API, Redux/Toolkit, Recoil)
--   Component Patterns (especially how to choose the right pattern)
+-   什么是 "state"?
+-   类(class)和功能部件(functional components)的起伏变化
+-   什么是组件重新渲染，它们是如何工作的?
+-   如何触发重新渲染
+-   不同组件的生命周期以及如何交互
+-   虚拟DOM
+-   CSR（客户端渲染）和SSR（服务器端渲染）在一般情况下和React中的好处
+-   受控组件 VS 非受控组件
+-   State 提升
+-   至少一种全局状态(state)管理技术（Context API, Redux/Toolkit, Recoil）。
+-   组件模式（特别是如何选择正确的模式）。
 
 ## Learn How to Build Clean, Performant and Maintainable React Components
 
 ![wesley-tingey-mvLyHPRGLCs-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/wesley-tingey-mvLyHPRGLCs-unsplash.jpg)
 
-I know – this is the dream of every programmer (or at least I hope it is). And for me, this ability separates a good programmer from a great programmer. The fun part is that it's never really completed because there's always something to learn and to improve.
+我知道--这是每个程序员的梦想（或者至少我希望是这样）。而对我来说，这种能力将一个好的程序员和一个伟大的程序员分开。有趣的是，它从未真正完成，因为总有一些东西需要学习和改进。
 
-Following these best practices won't only make it easier for you, but also for your teammates. I've seen development teams who created a _style guide_ where they defined important cornerstones about how they're writing code. Very smart idea if you'd ask me.
+遵循这些最佳实践不仅会让你更轻松，也会让你的队友更轻松。我见过一些开发团队创建了一个 _代码风格指南_，他们在其中定义了关于他们如何编写代码的重要基石。如果你问我，这是一个非常聪明的想法。
 
-Some of them were:
+他们中的一些人是:
 
--   use functional components (like arrow-functions)
--   don't use inline-styles
--   maintain a proper import structure (third-party imports first --> internal imports below)
--   format your code before committing
+-   使用功能组件（如箭头函数）
+-   不要使用内联风格(inline-styles)
+-   保持适当的导入结构(首先是第三方导入-->下面是内部导入)
+-   在提交之前格式化你的代码
 
-And so on.
+以此类推。
 
-Of course you can get very detailed about it. This depends on your team. I personally don't like very detailed style guides because I think you should have some type of freedom as a skilled developer and shouldn't be restricted too much.
+当然，你可以把它说得很详细。这取决于你的团队。我个人不喜欢非常详细的风格指南，因为我认为作为一个熟练的开发者，你应该有某种自由，不应该受到太多的限制。
 
-But a style guide in general is a good way to outline and keep up best practices and makes sure your team is on the same page regarding some important areas. I think this increases teamwork and output tremendously.
+但一般来说，代码风格指南是概述和保持最佳实践的好方法，并确保你的团队在一些重要领域有相同的看法。我认为这能极大地提高团队合作和产出。
 
-Let's take a look what those best practices actually are to create components that are clean, performant, and maintainable. Make yourself comfortable, grab something to take a notes with, and enjoy!
+让我们来看看这些最佳实践到底是什么，以创建干净、性能好、可维护的组件。让自己舒服一点，拿上东西做个笔记，然后享受吧
 
-### 📁 Create a good folder-structure
+### 📁 创建一个良好的文件夹结构
 
-Organizing your files and folders inside your React application is mandatory for maintainability and scalability.
+在你的React应用程序中组织你的文件和文件夹对于可维护性和可扩展性是必须的。
 
-A **good** folder structure depends on the size of your application and your team. So there's no general answer to that. Especially because this is a highly opinionated topic and depends also on personal preferences.
+一个**好的**文件夹结构取决于你的应用程序的大小和你的团队。所以，这没有一个普遍的答案。特别是因为这是一个非常有讨论性的话题，也取决于个人的喜好。
 
-But over the time, some best practices for different sizes of an application have evolved.
+但随着时间的推移，针对不同规模的应用程序的一些最佳实践已经发展起来。
 
-[This great blog post](https://www.robinwieruch.de/react-folder-structure/) goes through five different application sizes and introduces good ideas of how to organize your files and folders. Having this in mind when planning or starting your application can make a huge difference on the long run.
+[这篇很好的博文](https://www.robinwieruch.de/react-folder-structure/)介绍了五种不同的应用程序规模，并介绍了如何组织你的文件和文件夹的好想法。在计划或开始你的应用程序时，考虑到这一点，从长远来看会有很大的不同。
 
-Don't over-engineer it, but try your best maintain a proper structure that is best suited for your current application and your team size.
+不要过度设计，但要尽力保持一个适当的结构，最适合你目前的应用和你的团队规模。
 
-### 👇 Maintain a structured import order
+### 👇 保持结构化的导入顺序
 
-If you've already got some experience in React, you might have seen files that are bloated with a lot of import statements. They might also be mixed up with external imports from third-party packages and internal imports like other components, util functions, styles and many more.
+如果你已经有了一些React的经验，你可能已经看到了有很多导入语句的臃肿文件。它们可能还混杂着来自第三方包的外部导入和内部导入，如其他组件、util函数、styles等等。
 
-Real World Example (cut):
+真实世界的例子(截取部分):
 
 ```javascript
 import React, { useState, useEffect, useCallback } from "react";
@@ -184,11 +180,11 @@ import CustomButton from "../components/CustomButton";
 ...
 ```
 
-In reality the imports span over 55 lines.
+实际上，这些导入语句跨越了55行。
 
-You probably recognize the deal here. It's difficult to distinguish what are all the third-party and the local (internal) imports. They are not grouped and seem to be all over the place.
+你可能认识到这里的问题。很难区分什么是所有的第三方和本地（内部）导入。它们没有被分组，似乎到处都是。
 
-Better Version:
+更好的版本:
 
 ```javascript
 import React, { useState, useEffect, useCallback } from "react";
@@ -211,109 +207,109 @@ import Paragraph from "../components/Paragraph";
 ...
 ```
 
-The structure is clearer and it's very easy to distinguish where the external and internal imports are. Of course you can optimize it more if you are using more named imports (if that's possible! :) ). That allows you to import all the components that are coming from material-ui all on one line.
+结构更清晰了，而且非常容易区分外部和内部导入的位置。当然，如果你使用更多的命名导入，你可以对它进行更多的优化（如果有可能的话！:) ）。这样你就可以在一行中导入所有来自 material-ui 的组件。
 
-I've seen other developers who like to split the import structure up in three different parts:
+我见过其他开发者喜欢把导入结构分成三个不同的部分:
 
-Built-In (like 'react') --> External (third-party node modules) --> Internal.
+内置的（如'react'）-->外部（第三方node模块）-->内部。
 
-You can manage it every time by yourself or let a **linter** do the job. [Here's](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m) a great article about how to configure your linter for your React app to maintain a proper import structure.
+你可以每次都自己管理，或者让**linter**做这个工作。[这里是](https://dev.to/otamnitram/sorting-your-imports-correctly-in-react-213m)一篇关于如何为你的React应用配置linter以保持正确的导入结构的好文章。
 
-### 📔 Learn different component patterns
+### 📔 学习不同的组件模式
 
-To ensure you don't end up with unmaintainable and unscalable spaghetti code, learning different component patterns is essential as you become more experienced in React.
+为了确保你不会以不可维护和不可扩展的意大利面条代码而告终，随着你在React中的经验增加，学习不同的组件模式是必不可少的。
 
-But this is not all. Knowing the different patterns is a good foundation. But the most important aspect about it is that you know **when** to use which pattern for your problem.
+但这并不是全部。了解不同的模式是一个良好的基础。但关于它最重要的一点是，你知道**什么时候**使用哪种模式来解决你的问题。
 
-Every pattern serves a certain purpose. For example the **compound component pattern** avoids unnecessary _prop-drilling_ of many component levels. So, the next time you begin to do pass props through five component levels to finally reach the component that is interested in the props, you start to orchestrate the components differently.
+每个模式都有一定的作用。例如，**复合组件模式**避免了不必要的许多组件级别的 _prop-drilling_。所以，下一次你开始做通过五个组件层来传递道具，最后到达对道具感兴趣的组件时，你就开始以不同的方式来协调这些组件。
 
-One quick side note here about props-drilling, because I've had many discussions about it in the past. There're many opinions out there as to whether it's bad or not. As for me, I like to try to think about a different way / pattern if I start to pass props through more than two component levels.
+这里有一个关于`props-drilling`的简短的附带说明，因为我过去曾有过许多关于它的讨论。外面有很多关于它是否不好的意见。就我而言，如果我开始通过两个以上的组件级别来传递`props`，我喜欢尝试思考不同的方式/模式。
 
-This fact makes you more efficient as a developer and makes the components you write more maintainable or scalable. Having those patterns in your toolkit makes you also stand out from other React developers. I highly encourage you to do your own research, but [this](https://www.udemy.com/course/the-complete-guide-to-advanced-react-patterns/) Udemy course helped me very much.
+这个事实让你作为一个开发者更有效率，让你写的组件更可维护或可扩展。在你的工具包中拥有这些模式，也让你从其他React开发者中脱颖而出。我非常鼓励你做你自己的研究，但 [这](https://www.udemy.com/course/the-complete-guide-to-advanced-react-patterns/)Udemy课程对我帮助非常大。
 
-### 🔒Use a linter and follow its rules
+### 🔒用linter并遵守其规则
 
-A linter doesn't only help you in terms of maintaining a distinguishable import order of your dependencies. It helps you write better code in general.
+linter不仅可以帮助你保持你的依赖关系的可区分的导入顺序。它可以帮助你写出更好的代码。
 
-When you're using _create-react-app_, there's already ESLint configured, but you can also set it up completely on your own or extend the rules of a pre-configured ruleset.
+当你使用_create-react-app_时，已经配置了ESLint，但你也可以完全自己设置，或者扩展预先配置的规则集的规则。
 
-A linter basically observes the JavaScript code you're writing and reminds you of errors you'd more likely catch when executing the code. It took a while for me to really value the use of a linter, but today I can't imagine working without it.
+linter观察你正在编写的JavaScript代码，并提醒你在执行代码时更有可能发现的错误。我花了一段时间才真正重视linter的使用，但今天我无法想象没有它怎么工作。
 
-Having the linter is one thing, but following its rules is another. Of course you can disable it. Either for a specific line of code or for the whole file itself. There may be cases where this makes sense, but from my experience they're pretty rare.
+使用linter是一回事，但遵守其规则是另一回事。当然，你可以禁用它。无论是对某一行代码还是对整个文件本身。但根据我的经验，这是很罕见的。
 
-Another great benefit is that you can also adjust style checking. This is especially helpful for teams. Once you agreed upon certain conventions of how you write your code and how it should be formatted, you can easily combine ESLint with something like JSPrettify.
+另一个很大的好处是，你也可以调整样式检查。这对团队来说特别有帮助。一旦你接受了如何写你的代码以及它应该如何格式化的某些约定，你就可以很容易地将ESLint与JSPrettify这样的东西结合起来。
 
-### 🧪 Test your code
+### 🧪 测试你的代码
 
-I know, testing is likely not your favorite task as a developer. I used to be like that. At the beginning it seemed to be an unnecessary and disturbing task. This might be true for the short run. But in the long run – and when the application grows – it is vital.
+我知道，作为一个开发者，测试可能不是你最喜欢的任务。我曾经也是这样。开始时，它似乎是一项不必要的、令人不安的任务。这在短期内可能是真的。但从长远来看--以及当应用程序增长时--它是至关重要的。
 
-For me, testing has become a practice that ensures I'm doing my job more professionally and delivering higher quality software.
+对我来说，测试已经成为一种实践，确保我更专业地完成工作，并提供更高质量的软件。
 
-Basically there's nothing wrong with manual testing by a human and that shouldn't be avoided completely. But imagine you're integrating a new feature and want to make sure that nothing is broken. This can be a time consuming task and is prone to human error.
+基本上，由人进行手动测试没有错，不应该完全避免。但是，想象一下，你正在集成一个新的功能，并想确保没有任何问题。这可能是一个耗时的任务，而且容易出现人为错误。
 
-During the time you're writing tests you're already in the thinking process of how to organize your code in order to pass this test. For me this is always helpful because I recognize what pitfalls might arise and that I have to keep an eye on them.
+在你写测试的时候，你已经在思考如何组织你的代码，以便通过这个测试。对我来说，这总是很有帮助的，因为我认识到可能会出现哪些陷阱，而且我必须要注意这些陷阱。
 
-You're not directly jumping into writing your code either (which I wouldn't recommend at all), but you're thinking first about the goal.
+你也不是直接跳着写你的代码（我一点也不建议这样做），而是先思考目标。
 
-For example "What should that particular component do? What important edge cases might arise that I have to test? Can I make the component more pure that it only serves one purpose? ..."
+比如说 "那个特定的组件应该做什么？可能会出现哪些重要的边缘情况，我必须要测试？我可以让这个组件更加纯粹，只为一个目的服务吗？ ..."
 
-Having a vision for the code you're about to write also helps you to maintain a sharp focus on serving that vision.  
+对你要写的代码有一个愿景，也有助于你保持对服务于这个愿景的敏锐关注。 
 
-Tests can also serve as a kind of documentation, because for a new developer who is new to the codebase it can be very helpful to understand the different parts of the software and how they're expected to work.
+测试也可以作为一种文档，因为对于一个刚接触代码库的新开发者来说，了解软件的不同部分以及它们应该如何工作是非常有帮助的。
 
-So, don't avoid testing because it seems to be _extra work._ The reality is that it can save you extra work in the future when you set it up properly.
+所以，不要因为测试似乎是`额外的工作`而回避它。现实是，当你正确地设置它时，它可以在未来为你节省额外的工作。
 
-Take a look at the ["Testing" chapter inside the React Docs](https://reactjs.org/docs/testing.html), go through a few tutorials on testing in React, and just start writing your first small TDD application or implement tests into an app you're currently working on.
+看看[React文档中的 "测试 "章节](https://reactjs.org/docs/testing.html),通过一些关于React测试的教程，然后开始编写你的第一个小型TDD应用，或者在你目前正在开发的应用中实施测试。
 
-### 🧰 Integrate Typescript (or at least use default props and prop types)
+### 🧰 整合Typescript(或至少使用默认的props和prop类型)
 
-I remember my first React project as a software developer where our team received a project that was already basically written by another company. Then we had to build the client's project upon it, and Typescript had already been integrated.
+我记得我作为软件开发者的第一个React项目，我们的团队收到了一个基本上已经由其他公司写好的项目。然后我们不得不在此基础上建立客户的项目，而Typescript已经被集成了。
 
-Up to that point, my teammates and I hadn't had much experience in TypeScript since we all came from a vanilla JavaScript background.
+在那之前，我和我的队友们对TypeScript并没有什么经验，因为我们都是来自于普通的JavaScript背景。
 
-After a few weeks of working with that project, we felt that TypeScript wasn't a benefit, but more an obstacle that blocked us in our workflow. We also weren't really using the benefits of it because we defined everything with type _any_ to suppress the Typescript warnings.
+在与该项目合作的几周后，我们觉得TypeScript并不是一个好处，而是一个阻碍我们工作流程的障碍。我们也没有真正使用它的好处，因为我们用`any`类型定义了所有东西，以抑制Typescript的警告。
 
-That led us to the decision to remove TypeScript from the project and to work on our known terrain with vanilla JavaScript. This went well at first, but the more complex our project became, the more type errors emerged. So we doubted our decision a lot of getting completely rid of TypeScript. But those things can happen and gave us valuable experiences for the future.
+这导致我们决定将TypeScript从项目中移除，用vanilla JavaScript来处理我们已知的地形。起初这很顺利，但我们的项目变得越复杂，出现的类型错误就越多。所以我们很怀疑自己完全摆脱TypeScript的决定。但这些事情可能会发生，并为我们的未来提供了宝贵的经验。
 
-This circumstance led me to give TypeScript another chance, and I learned it in my spare time. After building some side projects with it, I can't imagine a life without it anymore.
+这种情况使我又给了TypeScript一个机会，我在业余时间学习了它。在用它构建了一些业余项目后，我再也无法想象没有它的生活了。
 
-Using TypeScript has many upsides like static type checking, better code completion in your IDE (intellisense), improved developer experience, and catching type errors while you write the code – just to name a few.
+使用TypeScript有很多好处，比如静态类型检查，在你的IDE中更好地完成代码（intellisense），改善开发者体验，以及在你写代码时捕捉类型错误--仅举几例。
 
-On the other hand it can have some challenges of course, because if you're not coming from a background with strongly typed languages (like Java or C#) it might be harder at the beginning to grasp it.
+另一方面，它当然也有一些挑战，因为如果你不是来自强类型语言（如Java或C#）的背景，在开始时可能更难掌握它。
 
-But I can say that it's really worth it to learn and to integrate it. [Here's](https://blog.bitsrc.io/5-strong-reasons-to-use-typescript-with-react-bc987da5d907) a nice article that can help you out of getting an overview of the ups and downs using Typescript in React applications. And [here's a tutorial](https://www.freecodecamp.org/news/how-to-code-your-react-app-with-typescript/) on how to code your React apps in TypeScript.
+但我可以说，它真的值得你去学习和整合。[这里有](https://blog.bitsrc.io/5-strong-reasons-to-use-typescript-with-react-bc987da5d907)一篇不错的文章，可以帮助你了解在React应用中使用Typescript的历程。还有[这里有一个教程](https://www.freecodecamp.org/news/how-to-code-your-react-app-with-typescript/)是关于如何在TypeScript中编写你的React应用。
 
-There may be reasons you don't want to use TypeScript inside your React application. That's fine. But at a bare minimum I'd recommend that you use **prop-types** and **default-props** for your components to ensure you don't mess up your props.
+你可能有理由不想在你的React应用程序中使用TypeScript。这很好。但至少我建议你为你的组件使用**prop-types**和**default-props**，以确保你不会弄乱你的props。
 
-### 💎 Use lazy-loading / code splitting
+### 💎 使用懒加载/代码拆分
 
-If you've spent some time in the JavaScript and React universe, you've most likely stumbled across **bundling**. For those of you who are hearing this term for the first time, let's see what the official React docs say:
+如果你在JavaScript和React领域花了一些时间，你很可能已经偶然发现了**bundling**。对于那些第一次听到这个术语的人，让我们看看React官方文档是怎么说的:
 
-> Most React apps will have their files “bundled” using tools like Webpack, Rollup or Browserify. Bundling is the process of following imported files and merging them into a single file: a “bundle”. This bundle can then be included on a webpage to load an entire app at once.
+大多数React应用会使用Webpack、Rollup或Browserify等工具对其文件进行 "bundling"。"bundling"是跟随导入的文件并将它们合并成一个文件的过程：一个 "bundling"。然后，这个捆绑文件可以包含在一个网页上，以便一次性加载整个应用程序。
 
-Basically this is a great technique, but with the growth of your app comes a challenge. Your bundle starts growing as well. Especially when you're using big third-party libraries like three.js.
+基本上这是个很好的技术，但随着你的应用程序的增长，就会出现一个挑战。你的"bundling"程序也开始增长。特别是当你使用像three.js这样的大型第三方库时。
 
-The pitfall is that this bundle needs to be always loaded completely, even when the user needs only a fraction of the code. This leads to performance issues because it can take an unnecessarily long time to load up your app.
+>隐患在于，即使用户只需要一小部分的代码，这个"bundling"也需要一直完全加载。这导致了性能问题，因为它可能需要不必要的时间来加载你的应用程序。
 
-To avoid this, there's a technique called **code splitting** where you split up your bundle into the pieces of the code your user needs. This is supported by the most common bundlers like Webpack, Rollup, and Browserify. The great benefit of it is that you can create multiple bundles and load them dynamically.
+为了避免这种情况，有一种叫做代码拆分(code splitting)的技术，你把你的捆绑程序分割成用户需要的代码片段。最常见的捆绑器如Webpack、Rollup和Browserify都支持这种做法。它的最大好处是，你可以创建多个捆绑包并动态加载它们。
 
-Splitting up your bundle helps you to **lazy load** only the things that are needed by the user.
+拆分你的"bundling"程序可以帮助你通过懒加载(lazy load)用户需要的东西。
 
-To illustrate this, imagine you're going into a grocery store and just want to grab some bananas, apples, and bread. In that case you aren't buying the whole range of the store and then grab your bananas, apples and bread out of it. You're just interested in a fraction of the range. So why would you buy everything? It would take way longer and is of course more expensive.
+为了说明这一点，想象一下你进入一家杂货店，只想拿一些香蕉、苹果和面包。在这种情况下，你并不是买下整个商店的范围，然后从里面抓出你的香蕉、苹果和面包。你只是对其中的一小部分感兴趣。那么，你为什么要买所有的东西呢？这将花费更长的时间，当然也更昂贵。
 
-I think it's important to be aware of the potential challenges that can arise as your app grows, and that there are certain techniques at hand to get rid of those issues. For further reading checkout the [React docs.](https://reactjs.org/docs/code-splitting.html)
+我认为重要的是要意识到在你的应用程序成长过程中可能出现的潜在挑战，而且有一些技术在手，可以摆脱这些问题。进一步阅读请查看[有关code splitting的React文档.](https://reactjs.org/docs/code-splitting.html)
 
-### 🗄️ Extract reusable logic into custom hooks
+### 🗄️ 将可重复使用的逻辑提取到自定义hooks
 
-According to the React docs,
+根据React的文档,
 
-> _Hooks allow us to reuse stateful logic without changing our component hierarchy._
+>_Hook允许我们在不改变组件层次结构的情况下重用有状态的逻辑。_
 
-Basically they're a better solution to the techniques that were used before in combination with class components. If you've been coding for a while, you might remember the use of **Higher Order Components** or **render props.**
+基本上，它们是以前与类组件结合使用的技术的一个更好的解决方案。如果你已经写了一段时间的代码，你可能还记得**高级组件(Higher Order Components)**或**render props**的使用。
 
-Whenever you find yourself in a situation where you have to reuse the same stateful logic that is already used in another functional component, that's a great time to create a custom hook. Inside it you encapsulate the logic and just have to call the hook as a function inside your components.
+每当你发现自己必须重复使用已经在另一个功能组件中使用的相同的有状态逻辑时，这就是创建一个自定义Hook的好时机。在它里面，你封装了逻辑，只需要在你的组件中作为一个函数调用这个Hook。
 
-Let's take a look at a quick example where we need to update our UI according to the screen size and want to keep track of the current window size when resizing the browser window manually.
+让我们来看一个简单的例子，我们需要根据屏幕的大小来更新我们的用户界面，并希望在手动调整浏览器窗口的大小时跟踪当前窗口的大小。
 
 ```jsx
 const ScreenDimensions = () => {
@@ -343,17 +339,17 @@ const ScreenDimensions = () => {
 }
 ```
 
-Thanks to: https://usehooks.com/useWindowSize/
+感谢这个例子: https://usehooks.com/useWindowSize/
 
-As you can see, the solution is pretty straightforward and there's nothing wrong with defining it like this.
+正如你所看到的，解决方案是非常直接的，这样定义也没有错。
 
-Now comes the tricky part. Imagine we'd like to use the exact logic in another component, where we'll render a different UI (one for smartphones and one for desktops) based on the current screen size.
+现在，棘手的部分来了。想象一下，我们想在另一个组件中使用确切的逻辑，在那里我们将根据当前的屏幕尺寸渲染一个不同的用户界面（一个用于智能手机，一个用于台式机）。
 
-Of course we could just copy the logic, paste it in and we're done. But this is not a good practice, as you might know from the DRY principle.
+当然，我们可以直接复制这个逻辑，把它粘贴进去就可以了。但这并不是一个好的做法，正如你可能从DRY原则中知道的那样。
 
-If we'd like to adjust our logic, we have to do it in both components. And when we paste our logic in even more components, it becomes less maintainable and more error prone.
+如果我们想调整我们的逻辑，我们必须在两个组件中进行调整。而当我们把我们的逻辑粘贴到更多的组件中时，它的可维护性就会降低，而且更容易出错。
 
-So, what would you normally do in a vanilla JavaScript project? You'd most likely define a function that encapsulates the logic and can be used in many different places. That's exactly what we'll achieve with hooks. They are nothing more than JavaScript functions but with some React specialities because they're using React hooks.
+那么，在一个普通的JavaScript项目中，你通常会怎么做？你很可能会定义一个封装了逻辑的函数，可以在许多不同的地方使用。这正是我们要用Hook实现的。它们只不过是JavaScript函数，但有一些React的特点，因为它们使用了React Hook。
 
 Let's see how our custom hook would look:
 
@@ -380,7 +376,7 @@ const useWindowSize = () => {
 }
 ```
 
-Now let's simply call it inside our **ScreenDimensions** component:
+现在让我们简单地在我们的**ScreenDimensions**组件中调用它:
 
 ```jsx
 const ScreenDimensions = () => {
@@ -395,7 +391,7 @@ const ScreenDimensions = () => {
 }
 ```
 
-This enables us to just call the custom hook in any other component and save the return value (which is the current window size) in a variable that we can use inside the component.
+这使我们能够在任何其他组件中调用自定义Hook，并将返回值（即当前窗口大小）保存在一个变量中，以便我们在组件中使用。
 
 ```jsx
 const ResponsiveView = () => {
@@ -413,23 +409,23 @@ const ResponsiveView = () => {
 }
 ```
 
-### 🖥️ Handle errors effectively
+### 🖥️ 有效地处理错误
 
-Handling errors effectively is often overlooked and underestimated by many developers. Like many other best practices this seems to be an afterthought at the beginning. You want to make the code work and don't want to "waste" time thinking much about errors.
+有效地处理错误往往被许多开发者所忽视和低估。像许多其他的最佳实践一样，这在开始时似乎是一个事后的想法。你想让代码工作，不想 "浪费 "时间去考虑错误。
 
-But once you've become more experienced and have been in nasty situations where better error handling could have saved you a lot of energy (and valuable time of course), you realize that it's mandatory in the long run to have a solid error handling inside your application. Especially when the application is deployed to production.
+但是，一旦你变得更有经验，并且在一些讨厌的情况下，更好的错误处理可以为你节省大量的精力（当然还有宝贵的时间），你就会意识到，从长远来看，在你的应用程序中拥有一个可靠的错误处理是必须的。特别是当应用程序被部署到生产中时。
 
-But what exactly does _error handling_ mean in the React world? There are some different parts that play a role. One is to **catch** errors, another one to **handle** the UI accordingly, and the last one to **log** them properly.
+但在React世界里，`错误处理`到底是什么意思？有一些不同的部分在起作用。一个是**捕获错误**，另一个是处理相应的UI，最后一个是正确地 **记录** 错误。
 
-#### React Error Boundary
+#### React 错误边界
 
-This is a custom class component that is used as a wrapper of your entire application. Of course you can wrap the ErrorBoundary component also around components that are deeper in the component tree to render a more specific UI, for example. Basically it's also a best practice to wrap the ErrorBoundary around a component that is error prone.
+这是一个自定义的类组件，被用作你整个应用程序的包装器。当然，你也可以将ErrorBoundary(错误边界)组件包裹在组件树中更深的组件里，以呈现一个更具体的用户界面，例如。基本上，将ErrorBoundary(错误边界)包在容易出错的组件里也是一种最佳做法。
 
-With the lifecycle method `componentDidCatch()` you're able to catch errors during the rendering phase or any other lifecycles of the child components. So when an error arises during that phase, it bubbles up and gets caught by the ErrorBoundary component.
+通过生命周期方法`componentDidCatch()`，你能够在渲染阶段或子组件的任何其他生命周期中捕获错误。因此，当该阶段出现错误时，它就会冒出来，被ErrorBoundary(错误边界)组件捕捉。
 
-If you're using a logging service (which I also highly recommend), this is a great place to connect to it.
+如果你正在使用一个日志服务（我也强烈推荐），这是一个连接它的好地方。
 
-The static function `getDerivedStateFromError()` is called during the render phase and is used to update the state of your ErrorBoundary Component. Based on your state, you can conditionally render an error UI.
+静态函数`getDerivedStateFromError()`在渲染阶段被调用，用于更新ErrorBoundary组件的状态。基于你的状态，你可以有条件地渲染一个错误的用户界面。
 
 ```jsx
 class ErrorBoundary extends React.Component {
@@ -456,11 +452,11 @@ class ErrorBoundary extends React.Component {
 }
 ```
 
-The big drawback of this approach is that it doesn't handle errors in asynchronous callbacks, on server-side-rendering, or in event-handlers because they're outside the boundary.
+这种方法的最大缺点是，它不能处理异步回调、服务器端渲染或事件处理程序中的错误，因为它们在边界之外。
 
-#### Use try-catch to handle errors beyond boundaries
+#### 使用try-catch来处理超出边界的错误
 
-This technique is effective to catch errors that might occur inside asynchronous callbacks. Let's imagine we're fetching a user's profile data from an API and want to display it inside a Profile Component.
+这种技术对于捕捉异步回调中可能出现的错误非常有效。让我们想象一下，我们正在从API中获取用户的个人资料数据，并希望在个人资料组件中显示它。
 
 ```jsx
 const UserProfile = ({ userId }) => {
@@ -509,11 +505,11 @@ const UserProfile = ({ userId }) => {
 }
 ```
 
-When the component gets mounted, it starts a GET request to our API to receive the user data for the corresponding userId that we'll get from the props.
+当组件被加载后，它开始向我们的API发出GET请求，以接收我们将从道具中获得的相应用户ID的用户数据。
 
-Using try-catch helps us catch any error that might occur during that API call. For example this could be a 404 or a 500 response from the API.
+使用 try-catch 可以帮助我们捕捉在 API 调用过程中可能发生的任何错误。例如，这可能是一个来自API的404或500响应。
 
-Once an error gets caught, we're inside the catch block and receive the error as a parameter. Now we're able to log it in our logging service and update the state accordingly to display a custom error UI.
+一旦错误被捕捉到，我们就会在catch块中接收错误作为一个参数。现在我们能够在我们的日志服务中记录它，并相应地更新状态以显示一个自定义的错误用户界面。
 
 #### Use the react-error-boundary library (personal recommendation)
 
@@ -549,37 +545,37 @@ const App = () => {
 }
 ```
 
-The library exports a component that is made up of the ErrorBoundary functionality we already know and adds some nuances to it. It allows you to pass a `FallbackComponent` as a prop that should be rendered once an error got caught.
+该库导出了一个由我们已经知道的ErrorBoundary功能组成的组件，并在其中添加了一些细微的差别。它允许你传递一个 "FallbackComponent "作为prop，一旦发现错误，就应该呈现出来。
 
-It also exposes a prop `onError` which provides a callback function when an error arises. It's great for using it to log the error to a logging service.
+它还公开了一个prop `onError`，在出现错误时提供一个回调函数。这对于使用它将错误记录到日志服务中是非常好的。
 
-There are some other props that are quite useful. If you'd like to know more, feel free to checkout [the docs.](https://www.npmjs.com/package/react-error-boundary?activeTab=readme)
+还有一些其他的prop是相当有用的。如果你想了解更多，请随时查看[这个文档。](https://www.npmjs.com/package/react-error-boundary?activeTab=readme)
 
-This library also provides a hook called `useErrorHandler()` that is meant to catch any errors that are outside the boundaries like event-handlers, in asynchronous code and in server-side-rendering.
+这个库还提供了一个名为`useErrorHandler()`的Hook，旨在捕捉任何在事件处理程序等边界之外的错误，在异步代码和服务器端的渲染中。
 
-#### Logging errors
+#### 记录错误
 
-Catching and handling errors effectively is one part, logging them properly is another. Once you've set up your error handling inside your application, you need to log them persistently.
+有效地捕捉和处理错误是一个部分，正确地记录它们是另一个部分。一旦你在你的应用程序中设置了错误处理，你需要持久地记录它们。
 
-The most frequently used way is the good old **console.log**. This might be good during development when you want a quick log, but once your application is deployed to production it becomes useless. This is because you only see the error inside the user's browser, which is not effective at all.
+最经常使用的方法是老式的**console.log**。在开发过程中，当你想要一个快速的日志时，这可能是好的，但一旦你的应用程序被部署到生产中，它就变得毫无用处了。这是因为你只能在用户的浏览器中看到错误，这一点都不有效。
 
-When logging errors in production, **you** as the developer want to see the errors in one dedicated place in order to fix them.
+当在生产中记录错误时，***你作为开发者希望在一个专门的地方看到错误，以便修复它们。
 
-For that reason we need a logging service created by our own or a third-party one.
+出于这个原因，我们需要一个由我们自己或第三方创建的日志服务。
 
-When using third-party logging services my personal recommendations is definitely **Sentry.** So I highly encourage you to check it out.
+当使用第三方日志服务时，我个人推荐的肯定是**Sentry**，所以我非常鼓励你去看看。
 
-### ☝️ Keep your key prop unique across your whole app
+### ☝️ 在你的整个应用程序中保持你的关键prop的唯一性
 
-When mapping over an Array to render its data, you always have to define a **key** property for each element. A common practice I've seen and used myself as well is to use simply the **index** of each element as the key prop.
+当对数组进行映射以渲染其数据时，你总是要为每个元素定义一个**key**属性。我见过的一个常见的做法，也是我自己使用的，就是简单地使用每个元素的**index**作为key道具。
 
-Using the key prop is important because it helps React to identify the exact element that has changed, is added or is removed. Imagine the state of your component changes and the UI needs to be re-rendered with the new state. React needs to figure out the differences between the previous UI and new UI in order to update it.
+使用key prop是很重要的，因为它可以帮助React识别已经改变的、被添加或被移除的确切元素。想象一下，你的组件的状态改变了，用户界面需要用新的状态重新渲染。React需要弄清楚以前的UI和新的UI之间的差异，以便更新它。
 
-"What elements are added/removed or have changed?"
+"哪些元素被添加/删除或发生了变化？"
 
-Therefore the key prop has to be unique. Using the index of the current element makes sure that it is only unique in this particular map function.
+因此，关键道具必须是唯一的。使用当前元素的索引可以确保它只在这个特定的地图函数中是唯一的。
 
-It could look like this, if we'd pretend to show a score history of a football team from the current season:
+如果我们假装要显示一个足球队在当前赛季的得分历史，它可以是这样的。
 
 ```jsx
 const SeasonScores = ({ seasonScoresData }) => {
@@ -598,9 +594,9 @@ const SeasonScores = ({ seasonScoresData }) => {
 }
 ```
 
-While this is only unique inside this map function here, this could lead to potential issues. It's pretty common to have more than one map function inside your React application or even in one component.
+虽然这只是在这里的地图函数中是唯一的，但这可能导致潜在的问题。在你的React应用程序中，甚至在一个组件中，有一个以上的map函数是很常见的。
 
-Let's assume we've got another map-function in our component to display the current roster:
+让我们假设我们的组件中有另一个map函数来显示当前的名册:
 
 ```jsx
 const SeasonScores = ({ seasonScoresData, currentRoster }) => {
@@ -629,13 +625,13 @@ const SeasonScores = ({ seasonScoresData, currentRoster }) => {
 }
 ```
 
-Now we end up in the situation where we used many keys twice inside our component. Let's assume we got **14** elements inside `seasonScoresData` and **30** in `currentRoaster`. We have used the numbers 0-13 two times as a key prop. Now we're not serving the purpose anymore to have unique key props.
+现在我们的情况是，我们在组件中使用了许多keys两次。让我们假设我们在 `seasonScoresData` 里有**14**个元素，在 `currentRoaster`里有**30**个。我们已经两次使用数字0-13作为key props。现在我们没有达到拥有唯一key props目的了。
 
-This could lead to potential problems because React might only re-render only one item and omit the other one. Or it can lead to inefficiencies with updating the UI tree. Check out the recommended blog post at the end of this tip to get a more in depth example.
+这可能导致潜在的问题，因为React可能只重新渲染一个item而省略另一个item。或者它可能导致更新UI树的效率低下。请看本提示末尾的推荐博文，以获得更深入的例子。
 
-To avoid this unwanted behavior, make sure to always use **unique keys across your whole application.** Ideally each item in the Array has got its own unique id that you can use. But this isn't always the case, so you can use an external library like **uuidv4** for generating unique id's.
+为了避免这种不必要的行为，请确保在你的整个应用程序中始终使用**唯一的key**,理想情况下，数组中的每个item都有自己的唯一id。但这并不总是如此，所以你可以使用一个外部库，如**uuidv4**来生成唯一的ID。
 
-With that in mind and with the assumption that every item in both Arrays has an id property, the component would look like this:
+考虑到这一点，并假设两个数组中的每个项目都有一个id属性，该组件将看起来像这样:
 
 ```jsx
 const SeasonScores = ({ seasonScoresData, currentRoster }) => {
@@ -664,21 +660,21 @@ const SeasonScores = ({ seasonScoresData, currentRoster }) => {
 }
 ```
 
-If you want to go into more depth, feel free to check out [this great post](https://medium.com/swlh/understanding-the-importance-of-the-key-prop-in-react-f2b92ce65f45) about that topic.
+如果你想更深入地了解，请随时查看[这个好帖子](https://medium.com/swlh/understanding-the-importance-of-the-key-prop-in-react-f2b92ce65f45)，获得关于该主题的内容.
 
-## Tips to Help You Write Better React Code – The Cherries on Top
+## Tips to Help You Write Better React Code, The Cherries on Top
 
 ![joanna-kosinska-_xN7UbcZ33I-unsplash](https://www.freecodecamp.org/news/content/images/2022/01/joanna-kosinska-_xN7UbcZ33I-unsplash.jpg)
 
-I'd like to compare this guide to the process of building a house. The first part, _Learn the Building Blocks of React_, is the solid foundation you build your application on. The second one, _How to Build Clean, Performant and Maintainable React Components_, is for building the walls.
+我想把这个指南比作建造房子的过程。第一部分，_学习React的构件_，是你建立应用程序的坚实基础。第二部分，_如何构建干净的、可执行的和可维护的React组件_，是用来建墙。
 
-This section is basically the roof that comes on top to complete the house. That's the reason I'd like to call it _Cherries on Top_. These tips here are more granular.
+这一节基本上是顶部的屋顶，用来完成房子。这就是我想把它称为 _Cherries on Top_ 的原因。这里的这些提示更加细化。
 
-Most of these practices are more optional than those before, but can make a difference if you use them properly.
+这些做法大多比之前的那些更可有可无，但如果你使用得当，也会有所作为。
 
-### 🪄 Implement the useReducer hook earlier
+###  提前实施useReducer Hook
 
-Probably one of the most frequently used hooks in React is **useState**. I've created and seen components over the time that have got a lot of different states. So it's natural that they become flooded with a lot of useState hooks.
+React中最常使用的Hook之一是**useState**。在过去的时间里，我创建和看到的组件都有很多不同的状态。所以很自然地，它们会被大量的useState Hook所淹没。
 
 ```jsx
 const CustomersMap = () => {
@@ -697,19 +693,19 @@ const CustomersMap = () => {
 }
 ```
 
-Having a lot of different useState hooks is always a great sign that the size and therefore the complexity of your component is growing.
+有很多不同的useState Hook总是一个很好的信号，说明你的组件的规模和复杂性正在增长。
 
-If you can create some smaller sub components where you can transfer some state and JSX in, then this is a great way to go. So you're cleaning up your useState hooks and your JSX in one step.
+如果你能创建一些较小的子组件，在那里你可以转换一些state和JSX，那么这是一个很好的方法。这样你就可以一步到位地清理你的useState Hook和你的JSX。
 
-In our example above, we could put the last two states into a separate component that handles all state and JSX that has to do with a form.
+在我们上面的例子中，我们可以把最后两个状态(states)放到一个单独的组件中，这个组件处理所有与表单有关的状态(state)和JSX。
 
-But there are scenarios where this doesn't make sense, and you have to keep those many different states inside one component. To increase the legibility of your component, there is the **useReducer** hook.
+但在有些情况下，这样做是没有意义的，你必须把这些不同的状态(states)放在一个组件里。为了提高你的组件的可读性，有一个**useReducer**钩。
 
-The official React docs say this about it:
+React的官方文档是这样说的:
 
-> `useReducer` is usually preferable to `useState` when you have complex state logic that involves multiple sub-values or when the next state depends on the previous one. useReducer also lets you optimize performance for components that trigger deep updates because you can pass dispatch down instead of callbacks.
+> `useReducer` 当你有复杂的状态逻辑(state logic)，涉及到多个子值，或者下一个状态(state)取决于上一个状态(state)时，通常比`useState`更可取。useReducer还可以让你优化触发深度更新的组件的性能，因为你可以把调度(dispatch)传递下去而不是回调(callbacks)。
 
-With that in mind, the component would like this when using `useReducer`:
+考虑到这一点，该组件在使用`useReducer`时就会变成这样:
 
 ```jsx
 // INITIAL STATE
@@ -756,47 +752,46 @@ const CustomersMap = () => {
 }
 ```
 
-The component itself looks cleaner and comes along with some great benefits as you can see inside the docs. If you're used to Redux, the concept of a reducer and how it is built isn't new to you.
+该组件本身看起来更干净，并伴随着一些巨大的好处，你可以在文档中看到。如果你已经习惯了Redux，减速器的概念和它的构建方式对你来说并不陌生。
 
-My personal rule is to implement the useReducer hook if my component exceeds four useState hooks, or if the state itself is more complex than just a boolean, for example. It might be an object for a form with some deeper levels inside.
+我个人的规则是，如果我的组件超过了四个useState Hook，或者状态(state)本身比布尔值更复杂，例如，就使用useReducer Hook。它可能是一个表单的对象，里面有一些更深的层次。
+### 🔌 使用布尔型props的速记
 
-### 🔌 Use shorthand for boolean props
-
-Often there are scenarios where you pass boolean props to a component. I've seen a lot of developers doing it like this:
+经常会有这样的情况，你把布尔props传递给一个组件。我见过很多开发者是这样做的。:
 
 ```jsx
 <RegistrationForm hasPadding={true} withError={true} />
 ```
 
-But you don't need to do it necessarily like this because the occasion of the prop itself is either truthy (if the prop is passed) or falsy (if the prop is missing).
+但你不需要一定要这样做，因为prop本身的场合要么是truthy的（如果prop被传递），要么是falsy的（如果prop丢失）。
 
-A cleaner approach would be:
+一个更简洁的方法是:
 
 ```jsx
 <RegistrationForm hasPadding withError />
 ```
 
-### 👎 Avoid curly braces for string props
+### 👎 避免用大括号来表示字符串props
 
-A similar use case like we've seen in the tip before is using string props:
+像我们之前在提示中看到的一个类似的用例是使用字符串props:
 
 ```jsx
 <Paragraph variant={"h5"} heading={"A new book"} />
 ```
 
-You don't need the curly braces in that case because you're allowed to directly use strings inside your props. When you want to attach a className to a JSX Element you're most likely using it also directly as a string.
+在这种情况下，你不需要大括号，因为你被允许在你的props中直接使用字符串。当你想把className附加到一个JSX元素时，你很可能也是直接使用字符串。
 
-When you'd like use a JavaScript expression different from a string, you need to use the curly braces. For example if you want to use a number or an object. This is also true for template strings (don't get caught up like I did many times, haha).
+当你想使用一个不同于字符串的JavaScript表达式时，你需要使用大括号。例如，如果你想使用一个数字或一个对象。这对于模板字符串也是如此（不要像我一样被抓到很多次，哈哈）。
 
-With plain strings, like in the example, it would look like this:
+对于普通的字符串，就像例子中的那样，它看起来是这样的:
 
 ```jsx
 <Paragraph variant="h5" heading="A new book" />
 ```
 
-### 🧹 Erase non-html attributes when spreading props
+### 🧹 在传递props时擦除非html属性
 
-Let's take a look at a quick example:
+让我们来看看一个简单的例子:
 
 ```jsx
 const MainTitle = ({ isBold, children, ...restProps }) => {
@@ -812,9 +807,9 @@ const MainTitle = ({ isBold, children, ...restProps }) => {
 }
 ```
 
-We've just created a component that will render a h1 tag, extracted some props, and spread out all other potential props on the h1 tag. So far, so good.
+我们刚刚创建了一个组件，它将渲染一个h1标签，提取一些props，并将所有其他潜在的props(potential props)传递到h1标签上。到目前为止，一切都很好。
 
-Now, we're able to use it in other components and can trigger manually if the h1 should be bold or not:
+现在，我们能够在其他组件中使用它，并且可以手动触发h1是否应该加粗:
 
 ```jsx
 // WITH BOLD TITLE
@@ -846,9 +841,9 @@ const AboutPage = () => {
 }
 ```
 
-Up to now, everything works perfectly without any errors or warnings. The interesting part starts now when we're using other props that are directly spread onto the h1 tag.
+到现在为止，一切工作都很完美，没有任何错误或警告。有趣的部分从现在开始，当我们使用其他的props直接传递到h1标签上的时候。
 
-When you're using valid HTML attributes like id or a class, everything works without any error (remember --> "className" will become "class"):
+当你使用有效的HTML属性如id或class时，一切都能正常工作，没有任何错误（记住-->"className "将变成 "class"）:
 
 ```jsx
 const IndexPage = () => {
@@ -864,9 +859,10 @@ const IndexPage = () => {
 }
 ```
 
-So all props above will be added as an attribute to the h1 because we're using **{...restProps}** on it. No matter what, props we are adding and NOT extracting will be added to the h1 tag.
+所以上面所有的props都会作为属性添加到h1中，因为我们在上面使用了**{...restProps}**。无论怎样，我们正在添加而不是提取的props都会被添加到h1标签中。
 
-This is great for many use cases but can be a problem at the same time:
+
+这对很多用例来说是很好的，但同时也是一个问题:
 
 ```jsx
 // Page Component
@@ -899,13 +895,13 @@ const MainTitle = ({ isBold, children, ...restProps }) => {
 }
 ```
 
-In the code above we were adding a new prop called `hasPadding` to the `MainTitle` component, that is optional. Inside the component we are not extracting it from the props and call it via `restProps.hasPadding`.
+在上面的代码中，我们为`MainTitle`组件添加了一个新的prop `hasPadding`，这是可选的。在组件内部，我们没有从prop中获取它，而是通过`restProps.hasPadding`调用它。
 
-The code works, but when you open your browser you'll receive a warning that `hasPadding` is a non-HTML attribute you're trying to apply on the h1 tag. This is because of `{...restProps}` on the h1 tag and not extracting `hasPadding` like `isBold` for example.
+这段代码是有效的，但是当你打开浏览器时，你会收到一个警告：`hasPadding`是一个非HTML属性，你试图在h1标签上应用。这是因为h1标签上的`{...restProps}`没有像`isBold`那样获取`hasPadding`。
 
-To avoid this, always extract all non-HTML attributes from the props first, to make sure that there are only valid HTML attributes in `restProps` that you're spreading onto a JSX element.
+为了避免这种情况，总是先从props中提取所有非HTML属性，以确保在`restProps`中只有有效的HTML属性被你传播到JSX元素中。
 
-In our example it would look like this:
+在我们的例子中，它看起来像这样:
 
 ```jsx
 // Page Component
@@ -938,15 +934,15 @@ const MainTitle = ({ isBold, children, hasPadding, ...restProps }) => {
 }
 ```
 
-Many of those warnings can unnecessary flood your browser's console, which can be very nasty. Especially when you're debugging.
+许多警告会不必要地充斥你的浏览器的控制台，这可能是非常讨厌的。特别是在你调试的时候。
 
-To get more information about this topic and some other ways to solve this, check out [this part of the React docs](https://reactjs.org/warnings/unknown-prop.html).
+要获得关于这个话题的更多信息和其他一些解决方法，请查看[React有关unknown-prop的文档](https://reactjs.org/warnings/unknown-prop.html).
 
-### 🔥 Use snippet extensions
+### 🔥 使用片段扩展
 
-In Visual Studio Code, for example, there are certain extensions available that increase your productivity a lot. One type of these extensions are **snippet extensions.**
+例如，在Visual Studio Code中，有一些可用的扩展，可以极大地提高你的工作效率。这些扩展的一种类型是**片段扩展**。
 
-The great benefit about them is that you don't have to write all that boilerplate code again. Imagine you're building many new components and have to type it all out again and again:
+它们的最大好处是，你不必再写那些模板代码了。想象一下，你在构建许多新的组件时，不得不再次输入所有的代码。:
 
 ```jsx
 import React from 'react'
@@ -958,13 +954,13 @@ const GoogleMap = () => {
 export default GoogleMap
 ```
 
-With these snippets you just have to type **`rafce`,** for example, hit tab and you have the same boilerplate code. It is a real time saver and makes development faster.
+有了这些片段，你只需输入 **`rafce`**，按下tab，你就能得到同样的模板代码。节省时间，使开发更快。
 
-**But use them with caution!** I wouldn't recommend using snippets to all developers. In my opinion, beginners shouldn't use any snippets and should type the boilerplate out by hand. When you're doing that, you'll get muscle memory which manifests the stuff you learn.
+**但要谨慎使用它们！**我不会向所有的开发者推荐使用片段。在我看来，初学者不应该使用任何代码段，应该用手打出模板。当你这样做的时候，你会得到肌肉记忆，表现出你所学的东西。
 
-If you have done it so often that you can type it out in your sleep and it becomes boring, that's the right time to use snippets.
+如果你经常这样做，以至于你可以在睡梦中把它打出来，而且变得很无聊，这就是使用代码段的正确时机。
 
-Here are my recommendations:
+这是我的推荐:
 
 ![Bildschirmfoto-2022-02-01-um-14.55.02](https://www.freecodecamp.org/news/content/images/2022/02/Bildschirmfoto-2022-02-01-um-14.55.02.png)
 
@@ -972,9 +968,9 @@ Here are my recommendations:
 
 ![Bildschirmfoto-2022-02-01-um-15.06.59](https://www.freecodecamp.org/news/content/images/2022/02/Bildschirmfoto-2022-02-01-um-15.06.59.png)
 
-### ❌ Write a fragment when a div is not needed
+### ❌ 在不需要div的情况下写一个片段
 
-A React component can only render one single HTML tag at its root. So if you'd like to render two adjacent elements, you'll get the famous error called **Adjacent JSX elements must be wrapped in an enclosing tag**.
+一个React组件在其根部只能渲染一个单一的HTML标签。因此，如果你想渲染两个相邻的元素，你会得到一个著名的错误，即**Adjacent JSX elements must be wrapped in an enclosing tag(相邻的JSX元素必须被包裹在一个封闭的标签中)**。
 
 ```jsx
 const InfoText = () => {
@@ -987,7 +983,7 @@ const InfoText = () => {
 }
 ```
 
-So, what can you do? You just wrap the rendered output into a fragment, which satisfies React and doesn't render an extra HTML element in the browser.
+那么，你能做什么呢？你只需将渲染后的输出包成一个片段，这样既满足了React的要求，又不会在浏览器中渲染一个额外的HTML元素。
 
 ```jsx
 const InfoText = () => {
@@ -1001,17 +997,17 @@ const InfoText = () => {
 }
 ```
 
-Of course you could have solved this with a div tag as well. But using div after div will create something I like to call **div hell** in the browser where you got many deep nested div tags without any sense.
+当然，你也可以用一个div标签来解决这个问题。但是，在浏览器中使用一个又一个的div会产生我称之为**div地狱**的东西，在那里你会得到许多没有任何意义的深度嵌套div标签。
 
-So whenever you have to use a wrapper tag in React but don't necessarily need an HTML tag, then simply use a fragment.
+所以只要你在React中必须使用包装标签，但不一定需要HTML标签，那么就简单地使用片段。
 
-### 👈 Integrate self closing tags when no children are needed
+### 👈 在不需要children(子级)的时候，整合自我关闭的标签
 
-From my experience, this tip right here is often overlooked, but could make your code so much cleaner with little effort.
+根据我的经验，这个小窍门经常被忽视，但可以让你的代码变得更干净，而且不费吹灰之力。
 
-In React you've got the opportunity to pass children elements to a component, which are then available to the component via its children property. Those components are often called **composite components.**
+在React中，你有机会将子元素传递给一个组件，然后通过其子属性提供给该组件。这些组件通常被称为**复合组件(composite components)**。
 
-In that case you have to use an opening tag and a closing tag of course:
+在这种情况下，你当然要使用一个开头标签和一个结尾标签:
 
 ```jsx
 <NavigationBar>
@@ -1022,27 +1018,27 @@ In that case you have to use an opening tag and a closing tag of course:
 </NavigationBar>
 ```
 
-But when there are no children needed, there isn't any sense in using an opening and closing tag, right?
+但是，当不需要有children(子级)的时候，使用开头和结尾标签就没有任何意义了，对吗？
 
 ```jsx
 <NavigationBar></NavigationBar>
 ```
 
-Instead of doing this, I recommend that you just use the component as a self closing element like the input tag in HTML, that doesn't take children as well.
+我建议你不要这样做，而是把这个组件作为一个自我封闭的元素，就像HTML中的输入标签一样，它也不接受children(子级)。
 
 ```jsx
 <NavigationBar />
 ```
 
-Looks much cleaner right away, doesn't it?
+看起来马上就整洁多了，不是吗？
 
-### ✅ Follow common naming conventions
+### ✅ 遵循通用的命名惯例
 
-The sense behind naming conventions is to more easily recognize what type of element you're dealing with and to have something in your code that is common in the community.
+命名约定背后的意义是为了更容易识别你所处理的元素类型，并在你的代码中拥有一些在社区中常见的东西。
 
-From my standpoint, there are two major naming conventions involved in React and JavaScript that you should follow:
+从我的角度来看，在React和JavaScript中，有两个主要的命名惯例是你应该遵循的:
 
-#### Use PascalCase in components, interfaces, or type aliases
+#### 在组件、接口或类型别名中使用PascalCase(帕斯卡拼写法,将描述变量作用所有单词的首字母大写，然后直接连接起来，单词之间没有连接符)
 
 ```jsx
 // React component
@@ -1066,7 +1062,7 @@ type TodoList = {
 
 ```
 
-#### Use camelCase for JavaScript data types like variables, arrays, objects, functions, and so on
+#### 对JavaScript数据类型如变量、数组、对象、函数等使用camelCase(驼峰写法,第一个单词首字母小写，后面的每个单词首字母大写)
 
 ```jsx
 const getLastDigit = () => { ... }
@@ -1075,17 +1071,17 @@ const userTypes = [ ... ]
 
 ```
 
-Naming React components in PascalCase is especially important. Because when you've got a linter configured for React, but you named the component in camelCase and you're using hooks inside it, you'll get a warning message all the time that hooks are only allowed in components. That's because the linter recognizes a React components if it's written in PascalCase or not.
+用PascalCase来命名React组件是特别重要的。因为当你为React配置了一个linter，但你用camelCase命名组件，并在里面使用Hook时，你会一直收到一个警告信息：Hook只允许在组件中使用。这是因为linter会识别React组件是否用PascalCase书写。
 
-This can be nasty, but is fixed quickly with sticking to the established naming conventions.
+这可能很讨厌，但只要坚持既定的命名惯例就能很快解决。
 
-### 🧨 Sanitize your code to prevent XSS Attacks
+### 🧨 整理您的代码以防止 XSS 攻击
 
-Maybe you've found yourself in a scenario where you have to use the property `dangerouslySetInnerHTML` on an element in React. Basically it's React's equivalent to `innerHTML` you might know from Javascript.
+也许你已经发现自己处于这样的情景中：你必须在React的一个元素上使用`dangerouslySetInnerHTML`属性。基本上，它相当于你在Javascript中可能知道的`innerHTML'的React属性。
 
-So using it, you can set HTML directly from React.
+所以使用它，你可以直接从React设置HTML。
 
-Let's consider the following example, where we'd like to render an HTML string inside a div. The string could come from a rich text editor where it's already formatted HTML.
+让我们考虑下面的例子，我们想在一个div里面渲染一个HTML字符串。这个字符串可能来自一个富文本编辑器，它已经被格式化为HTML。
 
 ```jsx
 const Markup = () => {
@@ -1097,16 +1093,16 @@ const Markup = () => {
 }
 ```
 
-The term **dangerously** is chosen with intention. Using this property can open you up to a cross-site-scripting (XSS) attack. So it's mandatory that the code that gets set is sanitized first.
+术语**dangerously**是有意选择的。使用这个属性会让你受到跨站脚本（XSS）攻击。因此，必须先对被设置的代码进行防御处理。
 
-A great library is **[dompurify](https://www.npmjs.com/package/dompurify)** that can help you out with this.
+一个很好的库是 **[dompurify](https://www.npmjs.com/package/dompurify)**，可以帮助你解决这个问题。
 
-## Final words
+## 结语
 
-Wow, that was fun right? I tried my best to let everything out that got piled up over the past in my head. My motivation behind this guide is to share my experience with you so you can avoid some harder times during your React learning and development.
+哇，这很有趣吧？我尽力把过去堆积在我脑子里的东西都整理出来。我做这个指南的动机是与你分享我的经验，这样你就可以在学习和开发React的过程中避免一些困难。
 
-Of course there might be best practices you consider more important that I've missed here. That's great. I'd love to hear what you'd like to add to this guide.
+当然，可能会有一些你认为更重要的最佳实践，而我在这里错过了。这很好。我很乐意听到你想在本指南中添加什么。
 
-Remember, it's always all about adapting what's useful for you. So, don't take it all for granted and think about what might be helpful in your situation. Then you can just add it to your own stack of best practices.
+记住，这总是关于调整对你有用的东西。因此，不要认为这一切是理所当然的，想想哪些东西可能对你的情况有帮助。然后你就可以把它添加到你自己的最佳实践堆中。
 
-You can also follow my developer journey and get many more useful insights about the life of a developer on my [Instagram Profile](https://www.instagram.com/jean_marc.dev/). I'm always there to help you and happy about every feedback I can get. So, feel free to reach out.
+你也可以在我的[Instagram简介](https://www.instagram.com/jean_marc.dev/)上关注我的开发者之旅，并获得更多关于开发者生活的有用见解。我总是在那里给你提供帮助，并对我能得到的每一个反馈感到高兴。所以，请随时联系我。

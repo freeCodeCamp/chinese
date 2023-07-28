@@ -1,463 +1,463 @@
 > -   原文地址：[9 Key Machine Learning Algorithms Explained in Plain English](https://www.freecodecamp.org/news/a-no-code-intro-to-the-9-most-important-machine-learning-algorithms-today/)
 > -   原文作者：Nick McCullum
-> -   译者：
+> -   译者：michaelhe545
 > -   校对者：
 
-![9 Key Machine Learning Algorithms Explained in Plain English](https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+![通俗讲解之9个核心机器学习算法](https://images.unsplash.com/photo-1504639725590-34d0984388bd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-[Machine learning][1]  is changing the world. Google uses machine learning to suggest search results to users. Netflix uses it to recommend movies for you to watch. Facebook uses machine learning to suggest people you may know.
+如今，[机器学习][1]  正改变着我们的世界。借助机器学习（ML），谷歌在为我们推荐搜索结果，奈飞在为我们推荐观看影片，脸书在为我们推荐可能认识的朋友。
 
-Machine learning has never been more important. At the same time, understanding machine learning is hard. The field is full of jargon. And the number of different ML algorithms grows each year.
+机器学习从未像在今天这样重要。但与此同时，机器学习这一领域也充斥着各种术语，晦涩难懂，各种机器学习的算法每年层出不穷。
 
-This article will introduce you to the fundamental concepts within the field of machine learning. More specifically, we will discuss the basic concepts behind the 9 most important machine learning algorithms today.
+本篇文章将向您介绍机器学习领域的基础概念。更确切地说，我们将讨论时下9大核心机器学习算法背后的基本概念。
 
-# Recommendation Systems
+# 推荐系统
 
-### What Are Recommendation Systems?
+### 什么是推荐系统？
 
-[Recommendation systems][2]  are used to find similar entries in a data set.
+[推荐系统][2]  的用途在于在一个数据集中寻找相似的条目。
 
-Perhaps the most common real-world example of a recommendation exists inside of Netflix. More specifically, its video streaming service will recommend suggested movies and TV shows based on content that you’ve already watched.
+推荐系统在现实世界最常见的应用莫过于奈飞的影视推荐。具体而言，奈飞在向你提供视频在线观看服务时，会根据你已经观看过的内容向你推荐其它影片或电视剧集。
 
-Another recommendation system is Facebook’s “People You May Know” feature, which suggests possible friends for you based on your existing friends list.
+另一个应用实例是脸书“你可能认识的人”这一功能，这一功能会根据你当前的好友列表来向你推荐你可能认识的朋友。
 
-Fully developed and deployed recommendation systems are extremely sophisticated. They are also very resource-intensive.
+这些开发完善、部署精密的推荐系统内部都十分复杂，且极具消耗数字资源。
 
-### Recommendation Systems and Linear Algebra
+### 推荐系统和线性代数
 
-Fully-fledged recommendation systems require a deep background in linear algebra to build from scratch.
+要想从零开始构建一个完善的推荐系统，就需要对线性代数有深刻掌握。
 
-Because of this, there might be concepts in this section that you do not understand if you’ve never studied linear algebra before.
+也正因如此，如果你此前并未学习过线性代数，本节可能会出现一些你尚不理解的概念。
 
-Don’t worry, though – the scikit-learn Python library makes it very easy to build recommendation systems. S0 you don't need much of a linear algebra background to build real-world recommendation systems.
+但别担心，scikit-learn Python图书馆已让构建推荐系统变得非常容易。换句话说，即便你没有很深厚的线性代数背景，你也可以在现实世界中构建出一个推荐系统。
 
-### How Do Recommendation Systems Work?
+### 推荐系统的工作原理是什么呢？
 
-There are two main types of recommendation systems:
+推荐系统主要分为两类：
 
--   Content-based recommendation systems
--   Collaborative filtering recommendation systems
+-   基于内容的推荐系统
+-   协同过滤推荐系统
 
-Content-based recommendation systems give you recommendations based on items’ similarity of items that you’ve already used. They behave exactly how you’d expect a recommendation system to behave.
+基于内容的推荐系统在做出推荐时根据的是某条目同已使用条目之间的相似性，这同大众关于推荐系统原理的普遍认知相一致。
 
-Collaborative filtering recommendation systems produce recommendations based on knowledge of the user’s interactions with items. Said differently, they use the wisdom of the crowds. (Hence the term “collaborative” in its name.)
+协同过滤推荐系统在做出推荐时根据的则是用户同条目互动的知识。从命名上就有所不同的这类系统利用的是一群人的智慧。（这也是其命名中“协同”一词的内涵。）
 
-In the real world, collaborative filtering recommendation systems are much more common than content-based systems. This is primarily because they typically give better results. Some practitioners also find collaborative filtering recommendation systems easier to understand.
+在现实生活中，协同过滤推荐系统要远比基于内容的推荐系统更加常见。原因主要在于协同过滤推荐系统的推荐结果更准确。此外，一些业内人士也表示协同过滤推荐系统要更易于理解。
 
-Collaborative filtering recommendation systems also have a unique feature that content-based systems are missing. Namely, they have the ability to learn features on their own.
+协同过滤推荐系统也有一项基于内容的推荐系统所不具备的功能。那就是，它们能够自主学习功能。
 
-This means that they can even start identifying similarities between items based on attributes that you haven’t even told them to consider.
+也就是说，它们甚至能够依据一些你事先并未设定的属性来展开条目间相似性的识别。
 
-There are two subcategories within collaborative filtering:
+协同过滤推荐系统下又细分两个子类别：
 
--   Memory-based collaborative filtering
--   Model-based collaborative filtering
+-   基于记忆的协同过滤推荐系统
+-   基于模型的协同过滤推荐系统
 
-You don’t need to know the differences between these two types of collaborative filtering recommendation systems to be successful in machine learning. It is enough to recognize that multiple types exist.
+要在机器学习领域有所成就，并不需要你弄懂这两类协同过滤推荐系统之间的差异，你只要知道协同过滤推荐系统存在不同种类就够了。
 
-### Section Wrap-up
+### 本节小结
 
-Here is a brief summary of what we discussed about recommendation systems in this tutorial:
+以下是有关我们在这份导学中就推荐系统谈到的一些要点总结：
 
--   Examples of recommendation systems in the real world
--   The different types of recommendation systems, and how collaborative filtering systems are more commonly used than content-based recommendation systems
--   The relationship between recommendation systems and linear algebra
+-   推荐系统在生活中的应用实例
+-   推荐系统的不同类别以及协同过滤推荐系统比基于内容的推荐系统应用更为普遍的原因
+-   推荐系统与线性代数之间的关系
 
-# Linear Regression
+# 线性回归
 
-[Linear regression][3]  is used to predict some  `y`  values based on the value of another set of  `x`  values.
+[线性回归][3]  的用途在于基于  `x`  值来预测  `y`  值。
 
-### The History of Linear Regression
+### 线性回归的历史
 
-Linear regression was created in the 1800s by  [Francis Galton][4].
+19世纪，线性回归由  [Francis Galton][4]提出。
 
-Galton was a scientist studying the relationship between parents and children. More specifically, Galton was investigating the relationship between the heights of fathers and the heights of their sons.
+Galton 是一名研究父母-子女关系的科学家。具体而言，他研究的是父亲身高同其儿子身高之间的关系。
 
-Galton’s first discovery was that sons tended to be roughly as tall as their fathers. This is not surprising.
+Galton的第一个发现是，儿子倾向于大致同父亲一样高，这并不足为奇。
 
-Later on, Galton discovered something much more interesting. The son’s height tended to be  __closer to the overall average height of all people__ than it was to his own father__.__
+但后来，获得一个更有趣的发现。那就是，一个儿子的身高  __倾向于更接近所有人身高的平均值，__ 比其同其父亲身高的接近度还要高__。__
 
-Galton gave this phenomenon a name:  ****regression****. Specifically, he said “A father’s son’s height tends to regress (or drift towards) the mean (average) height”.
+Galton 为这一现象命名为：  ****回归****。 用他的话说，“一位父亲的儿子的身高倾向于回归到所有人身高的平均值”。
 
-This led to an entire field in statistics and machine learning called regression.
+自此，统计学和机器学习迎来了一个崭新的领域，即回归。
 
-### The Mathematics of Linear Regression
+### 线性回归的数学原理
 
-When creating a regression model, all that we are trying to do is draw a line that is as close as possible to each point in a data set.
+创建回归模型时，我们要做的就是绘制一条尽可能接近数据集中每个点的线。
 
-The typical example of this is the “least squares method” of linear regression, which only calculates the closeness of a line in the up-and-down direction.
+一个典型的例子是线性回归的“最小二乘法”，该方法仅计算上下方向上的一条线的相似度。
 
-Here is an example to help illustrate this:
+下面这个示例可以帮助阐释这一点：
 
 ![An example of the math behind least squares regression](https://nickmccullum.com/images/python-machine-learning/introduction-linear-regression/least-squares-regression.gif)
 
-When you create a regression model, your end product is an equation that you can use to predict the y-value of an x-value, without actually knowing the y-value in advance.
+在创建回归模型时，你最终会产出一个方程式。利用它，你可以预测给定x值时的y值，而无需事先知道y值。
 
-# Logistic Regression
+# 逻辑回归
 
-[Logistic regression][5]  is similar to linear regression except that instead of calculating a numerical  `y`  value, it estimates which  _category_  a data point belongs to.
+[逻辑回归][5]  与线性回归类似。但不同的是，逻辑回归并不计算  `y`  的数值，而是估计一个数据点所属的  _类别_  。
 
-### What is Logistic Regression?
+### 什么是逻辑回归？
 
-Logistic regression is a machine learning model that is used to solve classification problems.
+逻辑回归是一种用于解决分类问题的机器学习模型。
 
-Here are a few examples of machine learning classification problems:
+下面是几种机器学习分类问题的举例：
 
--   Spam emails (spam or not spam?)
--   Car insurance claims (write-off or repair?)
--   Disease diagnosis
+-   垃圾邮件（垃圾还是非垃圾？）
+-   汽车保险索赔（销记还是维修？）
+-   疾病诊断
 
-Each of the classification problems have exactly two categories, which makes them examples of  **binary classification**  problems.
+以上每一个分类问题都有且仅有两类，被称为  **二进制分类**  问题。
 
-Logistic regression is well-suited for solving  **binary classification**  problems – we just assign the different categories a value of  `0`  and  `1`  respectively.
+逻辑回归非常适合用于解决  **二进制分类**  问题，我们只需要把不同类别的值分别设定为  `0`  和  `1`  就行了。
 
-Why do we need logistic regression? Because you can’t use a linear regression model to make binary classification predictions. It wouldn't lead to a good fit, since you’re trying to fit a straight line through a dataset with only two possible values.
+我们为什么需要逻辑回归？答案是，线性回归模型无法做出二进制分类推测，因为当用一个只包含两个可能值的数据集拟合一条直线时，拟合效果可想而知。
 
-This image may help you understand why linear regression models are poorly suited for binary classification problems:
+这张图片或能帮助你理解为什么线性回归模型不适用于解决二进制分类问题：
 
 ![Linear Regression Classification](https://nickmccullum.com/images/python-machine-learning/introduction-logistic-regression/linear-regression-classification.png)
 
-In this image, the  `y-axis`  represents the probability that a tumor is malignant. Conversely, the value  `1-y`  represents the probability that a tumor is not malignant. As you can see, the linear regression model does a poor job of predicting this probability for most of the observations in the data set.
+图中，  `y-axis`  代表一个肿瘤是恶性的可能性。相反，  `1-y`  代表其为良性的可能性。可以看到，就数据集中的大多数观测值而言，线性回归模型在预测这一可能性方面表现很差。
 
-This is why logistic regression models are useful. They have a bend to their line of best fit, which makes them much better-suited for predicting categorical data.
+这也解释了逻辑回归的有用性。它拟合出的最佳曲线有一个偏向，这使它更适合预测分类数据。
 
-Here is an example that compares a linear regression model to a logistic regression model using the same training data:
+下面是使用相同训练数据分别生成的线性回归模型与逻辑回归模型比较：
 
 ![Linear Regression vs Logistic Regression](https://nickmccullum.com/images/python-machine-learning/introduction-logistic-regression/linear-vs-logistic-regression.png)
 
-### The Sigmoid Function
+### S型函数
 
-The reason why the logistic regression model has a bend in its curve is because it is not calculated using a linear equation. Instead, logistic regression models are built using the Sigmoid Function (also called the Logistic Function because of its use in logistic regression).
+逻辑回归模型生成的曲线之所以有一个偏向是因为它不是用线性方程计算得的，而是由S型函数（因其在逻辑回归中的应用又名逻辑函数）构建。
 
-You will not have to memorize the  [Sigmoid Function][6]  to be successful in machine learning. With that said, having some understanding of its appearance is useful.
+要在机器学习领域有所成就，你并不需要记忆  [S型函数][6]  ，但是理解它的外形还是对你有帮助的。
 
-The equation is shown below:
+其方程如下：
 
 ![The Sigmoid Equation](https://nickmccullum.com/images/python-machine-learning/introduction-logistic-regression/sigmoid-equation.png)
 
-The main characteristic of the Sigmoid Function worth understanding is this: no matter what value you pass into it, it will always generate an output somewhere between 0 and 1.
+有关S型函数值得知道的一点是，它有这样一个主要特征：无论你输入的值有多大，该函数输出的值始终分布在0到1之间。
 
-### Using Logistic Regression Models to Make Predictions
+### 利用逻辑回归模型开展预测
 
-To use the linear regression model to make predictions, you generally need to specify a cutoff point. This cutoff point is typically  `0.5`.
+要利用线性回归模型进行预测，通常需要设定一个临界点，该临界点通常为  `0.5`。
 
-Let’s use our cancer diagnosis example from our earlier image to see this principle in practice. If the logistic regression model outputs a value below 0.5, then the data point is categorized as a non-malignant tumor. Similarly, if the Sigmoid Function outputs a value above 0.5, then the tumor would be classified as malignant.
+我们不妨使用先前图片中的癌症诊断示例来在实践中理解这一原理。如果逻辑回归模型输出的值低于0.5，该数据点将被归为良性肿瘤。反之，如果S型函数输出的值大于0.5，则将被归为恶性。
 
-### Using a Confusion Matrix to Measure Logistic Regression Performance
+### 使用混淆矩阵来衡量逻辑回归的性能
 
-A confusion matrix can be used as a tool to compare true positives, true negatives, false positives, and false negatives in machine learning.
+在机器学习领域，混淆矩阵可以用于比较真阳性，真阴性，假阳性和假阴性。
 
-Confusion matrices are particularly useful when used to measure the performance of logistic regression models. Here is an example of how we could use a confusion matrix:
+尤其是在衡量逻辑回归模型的性能时，混淆矩阵非常有用。下面是混淆矩阵的一个使用示例：
 
 ![An Example Confusion Matrix](https://nickmccullum.com/images/python-machine-learning/introduction-logistic-regression/confusion-matrix.png)
 
-In this diagram TN stands for "True Negative" and FN stands for "False Negative". FP stands for "False Positive" and TP stands for "True Positive".
+图中，TN代表“真阴性”，FN代表“假阴性”。FP代表“假阳性”，TP代表“真阳性”。
 
-A confusion matrix is useful for assessing whether your model is particularly weak in a specific quadrant of the confusion matrix. As an example, it might have an abnormally high number of false positives.
+混淆矩阵可用于评估模型在混淆矩阵的某一特定象限中是否性能很差。举例来说，图中模型的假阳性异常偏高。
 
-It can also be helpful in certain applications, to make sure that your model performs well in an especially dangerous zone of the confusion matrix.
+这种评估在某些应用场景中可以发挥很大的用处。它可以确保模型在混淆矩阵中极为危险的区域仍能表现良好。
 
-In this cancer example, for instance, you’d want to be very sure that you model does not have a very high rate of false negatives, as this would indicate that someone has a malignant tumor that you incorrectly classified as non-malignant.
+拿癌症的例子来说，你会非常想要确定你的模型没有很高的假阴性率。因为真是那样的话，就意味着一个人明明患有恶性肿瘤，但你却将其错误地归为了良性。
 
-### Section Wrap-up
+### 本节小节
 
-In this section, you had your first exposure to logistic regression machine learning models.
+本节，你初次了解了逻辑回归机器学习模型。
 
-Here is a brief summary of what you learned about logistic regression:
+以下是你就逻辑回归学到的知识总结：
 
--   The types of classification problems that are suitable to be solved using logistic regression models
--   That the logistic function (also called the Sigmoid Function) always outputs a value between 0 and 1
--   How to use cutoff points to make predictions using a logistic regression machine learning model
--   Why confusion matrices are useful to measure the performance of logistic regression models
+-   哪些类型的分类问题适合利用逻辑回归模型解决
+-   逻辑函数（也称为S型函数）的输出值永远在0到1之间
+-   如何借助临界点来利用逻辑回归机器学习模型进行预测
+-   为什么混淆矩阵可用于衡量逻辑回归模型的性能
 
-# K-Nearest Neighbors
+# K近邻算法
 
-The  [K-nearest neighbors][7]  algorithm can help you solve classification problems where there are more than two categories.
+[K近邻算法][7]  可以帮助解决类别多于两个的分类问题。
 
-### What is the K-Nearest Neighbors Algorithm?
+### 什么是K近邻算法？
 
-The K-nearest neighbors algorithm is a classification algorithm that is based on a simple principle. In fact, the principle is so simple that it is best understood through example.
+K近邻算法是一种分类算法。其基于的原理非常简单，通过一个示例我们便能对其进行很好的理解。
 
-Imagine that you had data on the height and weight of football players and basketball players. The K-nearest neighbors algorithm can be used to predict whether a new athlete is either a football player or a basketball player.
+假设你有一些足球运动员和篮球运动员的身高、体重数据，那么当数据中出现了一个新运动员时，K近邻算法便可帮你推测这名运动员是足球运动员还是篮球运动员。
 
-To do this, the K-nearest neighbors algorithm identifies the  `K`  data points that are closest to the new observation.
+为实现这一推测，K近邻算法会识别最接近新观测值的  `K`  个数据点。
 
-The following image visualizes this, with a K value of  `3`:
+下图是这一过程的展示，其中K值为  `3`：
 
 ![A visualization of k nearest neighbors](https://nickmccullum.com/images/python-machine-learning/introduction-k-nearest-neighbors/k-nearest-neighbors.jpg)
 
-In this image, the football players are labeled as blue data points and the basketball players are labeled as orange dots. The data point that we are attempting to classify is labeled as green.
+图中，我们将足球运动员数据点标记为了蓝色，篮球运动员标记为了橙色，待归类的数据点标记为了绿色。
 
-Since the majority (2 out of 3) of the closets data points to the new data points are blue football players, then the K-nearest neighbors algorithm will predict that the new data point is also a football player.
+由于新数据点最邻近的数据点中大多数（2/3）是蓝色（足球运动员），因此K近邻算法预测这一新数据点也应为蓝色（足球运动员）。
 
-### The Steps for Building a K-Nearest Neighbors Algorithm
+### 建立K近邻算法的步骤
 
-The general steps for building a K-nearest neighbors algorithm are:
+通常，建立一个K近邻算法有以下步骤：
 
-1.  Store all of the data
-2.  Calculate the  [Euclidean distance][8]  from the new data point  `x`  to all the other points in the data set
-3.  Sort the points in the data set in order of increasing distance from  `x`
-4.  Predict using the same category as the majority of the  `K`  closest data points to  `x`
+1.  存储所有数据
+2.  计算从新数据点  `x`  到数据集中其它所有数据点的  [欧式距离][8]
+3.  按照距新数据点  `x`  的距离递增的顺序对数据集中的各数据点进行排序
+4.  根据距新数据点  `x`  最近的  `K`  个数据点中绝大多数所属的类别推测新数据点的类别
 
-### The Importance of K in a K-Nearest Neighbors Algorithm
+### K近邻算法中K值的重要性
 
-Although it might not be obvious from the start, changing the value of  `K`  in a K-nearest neighbors algorithm will change which category a new point is assigned to.
+尽管在一开始可能并不明显，但在K近邻算法中更改  `K`  值的大小或将改变对新数据点所属类别的推测结果。
 
-More specifically, having a very low  `K`  value will cause your model to perfectly predict your training data and poorly predict your test data. Similarly, having too high of a  `K`  value will make your model unnecessarily complex.
+具体而言，如果  `K`  值很小，那么一个模型便能完美地预测训练数据，但在预测测试数据时会表现较差。同样，  `K`  值太大则会导致模型过于复杂。
 
-The following visualization does an excellent job of illustrating this:
+下图很好地说明了这一问题：
 
 ![K value and error rates](https://nickmccullum.com/images/python-machine-learning/introduction-k-nearest-neighbors/k-value-error-rates.png)
 
-### The Pros and Cons of the K-Nearest Neighbors Algorithm
+### K近邻算法的优缺点
 
-To conclude this introduction to the K-nearest neighbors algorithm, I wanted to briefly discuss some pros and cons of using this model.
+在K近邻算法介绍的最后，我想简要讨论一下使用该模型的利弊。
 
-Here are some main advantages to the K-nearest neighbors algorithm:
+这是使用K近邻算法的一些主要优点：
 
--   The algorithm is simple and easy to understand
--   It is trivial to train the model on new training data
--   It works with any number of categories in a classification problem
--   It is easy to add more data to the data set
--   The model accepts only two parameters:  `K`  and the distance metric you’d like to use (usually Euclidean distance)
+-   该算法简单易懂
+-   训练模型时没太大必要在新的训练数据上训练
+-   适用于分类问题中的任何数量的类别
+-   向数据集中添加更多数据时较为容易
+-   该模型仅包含两个参数：  `K`  值和使用的距离指标（通常是欧式距离）
 
-Similarly, here are a few of the algorithm’s main disadvantages:
+同时，以下是该算法的一些主要缺点：
 
--   There is a high computational cost to making predictions, since you need to sort the entire data set
--   It does not work well with categorical features
+-   由于需要对整个数据集进行排序，做出预测的计算成本高
+-   不适用于分类功能
 
-### Section Wrap-up
+### 本节小节
 
-Here is a brief summary of what you just learned about the k-nearest neighbors algorithm:
+以下是刚刚讲到的有关k近邻算法的知识总结：
 
--   An example of a classification problem (football players vs. basketball players) that the K-nearest neighbors algorithm could solve
--   How the K-nearest neighbors uses the Euclidean distance of the neighboring data points to predict which category a new data point belongs to
--   Why the value of  `K`  matters for making predictions
--   The pros and cons of using the K-nearest neighbors algorithm
+-   K近邻算法可以解决的分类问题示例（足球运动员与篮球运动员的例子）
+-   K近邻算法如何依据相邻数据点的欧几里得距离来预测新数据点属于哪个类别
+-   为什么  `K`  值的大小对预测结果很重要
+-   使用K近邻算法的优缺点
 
-# Decision Trees and Random Forests
+# 决策树和随机森林
 
-[Decision trees and randoms forests][9]  are both examples of tree methods.
+[决策树和随机森林][9]  都归属于树方法。
 
-More specifically, decision trees are machine learning models used to make predictions by cycling through every feature in a data set, one-by-one. Random forests are ensembles of decision trees that used random orders of the features in the data sets.
+具体来说，决策树也是一种机器学习模型，用于通过循环遍历数据集中的每个特征进行预测。随机森林则是按照数据集中的各个特征随机排布的决策树集合。
 
-### What Are Tree Methods?
+### 什么是树方法？
 
-Before we dig into the theoretical underpinnings of tree methods in machine learning, it is helpful to start with an example.
+树方法是机器学习的一种方法。在深入探讨其理论依据之前，我们不妨先看一个示例。
 
-Imagine that you play basketball every Monday. Moreover, you always invite the same friend to come play with you.
+假设你每个星期一都打篮球，而且你总是邀请同一个朋友和你一起打。
 
-Sometimes the friend actually comes. Sometimes they don't.
+而你的这位朋友有些时候来了，有些时候没来。
 
-The decision on whether or not to come depends on numerous factors, like weather, temperature, wind, and fatigue. You start to notice these features and begin tracking them alongside your friend's decision whether to play or not.
+他是否会来取决于多个因素，如天气好坏，气温高低，风的大小，身体疲惫程度。你渐渐注意到了这些因素，并开始记录你朋友是否会来的决定以及当天这些因素的具体情况。
 
-You can use this data to predict whether or not your friend will show up to play basketball. One technique you could use is a decision tree. Here’s what this decision tree would look like:
+如此一来，你便可以用这些数据来预测你的朋友在某个周一是否会来，而你预测时可选择的方法之一就是决策树。下图是本示例中的决策树：
 
 ![An example of a decision tree](https://nickmccullum.com/images/python-machine-learning/introduction-decision-tree/decision-tree.png)
 
-Every decision tree has two types of elements:
+每个决策树中都有两种构成元素：
 
--   `Nodes`: locations where the tree splits according to the value of some attribute
--   `Edges`: the outcome of a split to the next node
+-   `节点`：位于决策树根据某个属性的值分叉的位置
+-   `方案枝`：拆分到下一个节点的结果
 
-You can see in the image above that there are nodes for  `outlook`,  `humidity`  and  `windy`. There is an edge for each potential value of each of those attributes.
+上图中，可以看到的一些节点有  `outlook（推测）`,  `humidity（湿度）`  and  `windy（风）`。这些属性的每种潜在值旁边都有一条树枝状的线条。
 
-Here are two other pieces of decision tree terminology that you should understand before proceeding:
+在继续深入探讨之前，你还需要了解下面两个决策树术语：
 
--   `Root`: the node that performs the first split
--   `Leaves`: terminal nodes that predict the final outcome
+-   `根节点`：进行第一次拆分的节点
+-   `叶节点`：预测最终结果的终端节点
 
-You now have a basic understanding of what decision trees are. We will learn about how to build decision trees from scratch in the next section.
+现在，你对决策树已经有了一个基本的了解。在下一部分的讲解中，我们将学习如何从零开始构建决策树。
 
-### How to Build Decision Trees From Scratch
+### 如何从零开始构建决策树
 
-Building decision trees is harder than you might imagine. This is because deciding which features to split your data on (which is a topic that belongs to the fields of  [Entropy][10]  and  [Information Gain][11]) is a mathematically complex problem.
+构建一个决策树比你想象的要难，因为要确定分割数据的特征（一个属于  [熵][10]  和  [信息增益][11]) 范畴的话题）在数学上是一个非常复杂的问题。
 
-To address this, machine learning practitioners typically use many decision trees using a random sample of features chosen as the split.
+为了解决这个问题，机器学习从业人员通常会使用多个决策树，这些决策树分割特征的选取是从众多样本中随机挑选的。
 
-Said differently, a new random sample of features is chosen for every single tree at every single split. This technique is called  **random forests**.
+换句话说，每个决策树在每个分割处都会随机选择一个新的特征样本，该方法被称为  **随机森林**。
 
-In general, practitioners typically chose the size of the random sample of features (denoted  `m`) to be the square root of the number of total features in the data set (denoted  `p`). To be succinct,  `m`  is the square root of  `p`, and then a specific feature is randomly selected from  `m`.
+总体而言，从业人员通常会将数据集中的特征总数  `p`  的平方根作为随机特征样本中包含的样本数量  `m`。简而言之，  `m`  等于  `p`  的平方根，每一个分割特征将从  `m`  中随机选择。
 
-If this does not make complete sense right now, do not worry. It will be more clear when you eventually build your first random forest model.
+如果现在你无法完全理解也不必担心。当你最终构建第一个随机森林模型时，你便会对一切认识得更加清楚。
 
-### The Benefits of Using Random Forests
+### 使用随机森林的优点
 
-Imagine that you’re working with a data set that has one very strong feature. Said differently, the data set has one feature that is much more predictive of the final outcome than the other features in the data set.
+想象一下，假设你正在使用的数据集有一项非常显著的特征，这一特征比数据集中的其它任何特征都更能准确预测最终结果。
 
-If you’re building your decision trees manually, then it makes sense to use this feature as the top split of the decision tree. This means that you’ll have multiple trees whose predictions are highly correlated.
+如果你用手工去构建决策树，便会将此特征画在决策树的顶部分叉，这也就意味着你将拥有多棵预测相关性很高的决策树。
 
-We want to avoid this since taking the average of highly correlated variables does not significantly reduce variance. By randomly selecting features for each tree in a random forest, the trees become decorrelated and the variance of the resulting model is reduced. This decorrelation is the main advantage of using random forests over handmade decision trees
+然而，我们要避免这种情况的发生，因为取高度相关变量的平均值不能显著减小方差。相反，通过为随机森林中的每棵树随机选择特征，这些树之间便会失去相关性，从而减小结果模型的方差。这种去相关性是使用随机森林优于手工决策树的主要优势。
 
-### Section Wrap-up
+### 本节小节
 
-Here is a brief summary of what you learned about decision trees and random forests in this article:
+以下是刚刚讲到的有关决策树和随机森林的知识总结：
 
--   An example of a problem that you could predict using decision trees
--   The elements of a decision tree:  `nodes`,  `edges`,  `roots`, and  `leaves`
--   How taking random samples of decision tree features allows us to build a random forest
--   Why using random forests to decorrelate variables can be helpful for reducing the variance of your final model
+-   可以使用决策树来进行预测的问题示例
+-   决策树的构成元素：  `节点`，  `方案枝`，  `根节点`  和  `叶节点`
+-   随机抽取决策树特征样本建立随机森林的原理
+-   为什么使用随机森林对变量进行去相关有助于减小最终模型的方差
 
-# Support Vector Machines
+# 支持向量机
 
-[Support vector machines][12]  are classification algorithms (although, technically speaking, they could also be used to solve regression problems) that divide a data set into categories based by slicing through the widest gap between categories. This concept will be made more clear through visualizations in a moment.
+[支持向量机][12]  属于分类算法（尽管从技术上讲，它们也可以用于解决回归问题），它通过切分类别之间的最大差距，将数据集分为多个类别。稍后我们将以图示的方式对这一概念进行更加清晰的认识。
 
-### What Are Support Vector Machines?
+### 什么是支持向量机？
 
-[Support vector machines][13]  – or SVMs for short – are supervised machine learning models with associated learning algorithms that analyze data and recognize patterns.
+[支持向量机][13]  是一种监督机器学习模型，简称SVMs（Support vector machines），该类模型具有用于分析数据和识别模式的关联学习算法。
 
-Support vector machines can be used for both classification problems and regression problems. In this article, we will specifically be looking at the use of support vector machines for solving classification problems.
+支持向量机既可用于分类问题也可用于回归问题。本文将专门研究使用支持向量机解决分类问题。
 
-### How Do Support Vector Machines Work?
+### 支持向量机如何工作？
 
-Let’s dig in to how support vector machines really work.
+让我们一探究竟。
 
-Given a set of training examples – each of which is marked for belonging to one of two categories – a support vector machine training algorithm builds a model. This model assigns new examples into one of the two categories. This makes the support vector machine a non-probabilistic binary linear classifier.
+给定一组训练样本  – 标记每个样本属于两个类别中的一个  – 支持向量机训练算法建立模型。这样，输入新样本时，该模型便会将其归为两个类别之一。由此，支持向量机便成了一个非概率二进制线性分类器。
 
-The SVM uses geometry to make categorical predictions.
+SVM进行分类预测时所依据的是几何学。
 
-More specifically, an SVM model maps the data points as points in space and divides the separate categories so that they are divided by an open gap that is as wide as possible. New data points are predicted to belong to a category based on which side of the gap they belong to.
+具体而言，SVM模型会将数据点映射为空间中的点并将每个单独的类别分隔开来，从而使划分的开放间隙尽可能宽。根据新数据点属于间隙的哪一侧，SVM将预测它们属于哪个类别。
 
-Here is an example visualization that can help you understand the intuition behind support vector machines:
+下图是一个可视化示例，可以帮你更好理解支持向量机背后的机理：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/image-57.png)
 
-As you can see, if a new data point falls on the left side of the green line, it will be labeled with the red category. Similarly, if a new data point falls on the right side of the green line, it will get labelled as belonging to the blue category.
+如图所示，如果新数据点位于绿线的左侧，则SVM会将其标记为红色类别。反之，如果新数据点位于绿线的右侧，SVM则会将其标记为蓝色类别。
 
-This green line is called a  **hyperplane**, which is an important piece of vocabulary for support vector machine algorithms.
+而这条绿线被称为  **超平面**，这是支持向量机算法相关的一个重要术语。
 
-Let’s take a look at a different visual representation of a support vector machine:
+让我们看一下支持向量机的另一种视觉表示形式：
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/image-58.png)
 
-In this diagram, the hyperplane is labelled as the  **optimal hyperplane**. Support vector machine theory defines the  **optimal hyperplane**  as the one that maximizes the margin between the closest data points from each category.
+这幅图中的超平面被标记为了  **最佳超平面**。支持向量机理论将  **最佳超平面**  定义为能够最大化每个类别之间最接近的几个数据点之间间距的超平面。
 
-As you can see, the margin line actually touches three data points – two from the red category and one from the blue category. These data points which touch the margin lines are called  **support vectors**  and are where support vector machines get their name from.
+如图所示，示例中的边距线共接触到三个数据点，其中两个来自红色类别，一个来自蓝色类别。这些触及边距线的数据点被称为  **支持向量**  ，支持向量机也因其得名。
 
-### Section Wrap-up
+### 本节小节
 
-Here is a brief summary of what you just learned about support vector machines:
+以下是刚刚讲到的有关支持向量机的知识总结：
 
--   That support vector machines are an example of a supervised machine learning algorithm
--   That support vector machines can be used to solve both classification and regression problems
--   How support vector machines categorize data points using a  **hyperplane**  that maximizes the margin between categories in a data set
--   That the data points that touch margin lines in a support vector machine are called  **support vectors**. These data points are where support vector machines derive their name from.
+-   支持向量机是一种监督机器学习算法
+-   支持向量机可用于解决分类和回归问题
+-   支持向量机是如何利用（可最大化数据集中类别之间间距的）  **超平面**  对数据点进行分类的
+-   支持向量机中，接触边距线的数据点被称为  **支持向量**，支持向量机也因其得名。
 
-# K-Means Clustering
+# K均值聚类
 
-[K-means clustering][14]  is a machine learning algorithm that allows you to identify segments of similar data within a data set.
+[K均值聚类][14]  是一种可用于识别数据集内类似数据片段的机器学习算法。
 
-### What is K-Means Clustering?
+### 什么是K均值聚类？
 
-K-means clustering is an unsupervised machine learning algorithm.
+K均值聚类是一种无监督机器学习算法。
 
-This means that it takes in unlabelled data and will attempt to group similar clusters of observations together within your data.
+意思是说，接收未标记的数据后它会尝试将数据中类似的观测组归在一起。
 
-K-means clustering algorithms are highly useful for solving real-world problems. Here are a few use cases for this machine learning model:
+K均值聚类算法在解决现实问题时非常有用。下面是该机器学习模型的几个应用举例：
 
--   Customer segmentation for marketing teams
--   Document classification
--   Delivery route optimization for companies like Amazon, UPS, or FedEx
--   Identifying and reacting to crime centers within a city
--   Professional sport analytics
--   Predicting and preventing cybercrime
+-   帮助营销团队对客户进行细分
+-   文件分类
+-   帮助亚马逊、UPS、联邦快递等公司最优化快递运输路线
+-   识别、应对城市犯罪中心
+-   专业运动分析
+-   预防网络犯罪
 
-The primary goal of a K means clustering algorithm is to divide a data set into distinct groups such that the observations within each group are similar to each other.
+K均值聚类算法的主要功能是将数据集划分为不同的组，使每组内的观测结果彼此相似。
 
-Here is a visual representation of what this looks like in practice:
+下图是其实际运作的可视化呈现：
 
 ![A Visualization of a K Means Clustering Algorithm](https://nickmccullum.com/images/python-machine-learning/introduction-k-means-clustering/k-means-clustering.png)
 
-We will explore the mathematics behind a K-means clustering in the next section of this tutorial.
+我们将在下一节探索K均值聚类背后的数学原理。
 
-### How Do K-Means Clustering Algorithms Work?
+### K均值聚类算法如何运作？
 
-The first step in running a K-means clustering algorithm is to select the number of clusters you'd like to divide your data into. This number of clusters is the  `K`  value that is referenced in the algorithm’s name.
+运行K均值聚类算法的第一步是选择要将数据划分为多少个集群。这一集群数便是该算法名称中的  `K`  值。
 
-Choosing the  `K`  value within a K-means clustering algorithm is an important choice. We will talk more about how to chose a proper value of  `K`  later in this article.
+使用K均值聚类算法时，  `K`  值的选择非常关键。稍后我们会讨论如何选择合适的  `K`  值。
 
-Next, you must randomly assign each point in your data set to a random cluster. This gives our initial assignment which you then run the following iteration on until the clusters stop changing:
+下一步，必须随机将数据集中的每个数据点都分配到随机聚类中，这也是第一步任务的根源所在。然后运行以下迭代，直到集群停止更改：
 
--   Compute each cluster’s centroid by taking the mean vector of points within that cluster
--   Re-assign each data point to the cluster that has the closest centroid
+-   通过计算该集群内数据点的平均向量来计算每个集群的几何中心
+-   将每个数据点重新分配到同其先前所在集群几何中心最接近的集群
 
-Here is an animation of how this works in practice for a K-means clustering algorithm with a  `K`  value of  `3`. You can see the centroid of each of cluster represented by a black  `+`  character.
+下面的动画是这一实践过程的示例。其中，K均值聚类算法的  `K`  值为  `3`。可以看到，每个集群的几何中心均由黑色的  `+`  字符表示。
 
 ![A Visualization of a K Means Clustering Algorithm](https://nickmccullum.com/images/python-machine-learning/introduction-k-means-clustering/k-means-iteration.gif)
 
-As you can see, this iteration continues until the clusters stop changing – meaning data points are no longer being assigned to new clusters.
+如图所示，此迭代将一直持续到集群停止更改为止，这一停止更改意味着数据点将不会再被分配到新的集群。
 
-### Choosing A Proper K Value For K Means Clustering Algorithms
+### 为K均值聚类算法选择合适的K值
 
-Choosing a proper  `K`  value for a K-means clustering algorithm is actually quite difficult. There is no “right” answer for choosing the “best”  `K`  value.
+要为K均值聚类算法选择一个合适的  `K`  值实际上相当困难。该值的“最佳”选择没有“标准”答案。
 
-One method that machine learning practitioners often use is called  **the elbow method**.
+机器学习从业者经常使用的一种方法叫做  **肘部法**。
 
-To use the elbow method, the first thing you need to do is compute the sum of squared errors (SSE) for you K-means clustering algorithm for a group of  `K`  values. SSE in a K means clustering algorithm is defined as the sum of the squared distance between each data point in a cluster and that cluster’s centroid.
+使用肘部法时，第一步要先计算一组  `K`  值下K均值聚类算法的误差平方和（SSE，sum of squared errors）。SSE表示一个集群中的每个数据点与该集群几何中心之间的距离的平方之和。
 
-As an example of this step, you might compute the SSE for  `K`  values of  `2`,  `4`,  `6`,  `8`, and  `10`.
+举例来说，计算 SSE时，你可以选择  `K`  值为  `2`，  `4`，  `6`，  `8`，  `10`。
 
-Next, you will want to generate a plot of the SSE against these different  `K`  values. You will see that the error decreases as the  `K`  value increases.
+接着，将不同  `K`  值下的SSE绘制在图表中。可以看到，随着  `K`  值的增大，错误逐渐减少。
 
-This makes sense – the more categories you create within a data set, the more likely it is that each data point is close to the center of its specific cluster.
+这也是符合常理的——数据集中创建的类别越多，每个数据点接近其特定集群几何中心的可能性就越大。
 
-With that said, the idea behind the elbow method is to choose a value of  `K`  at which the SSE slows its rate of decline abruptly. This abrupt decrease produces an  `elbow`  in the graph.
+说了这么多，肘部法的用意就在于选择SSE下跌速度突然放缓处的  `K`  值，这种突然的放缓在图表中往往会生成了一个  `肘`  形。
 
-As an example, here is a graph of SSE against  `K`. In this case, the elbow method would suggest using a  `K`  value of approximately  `6`.
+下图是一个SSE和  `K`  的关系图表示例。图中，肘部法建议的  `K`  值大约为  `6`。
 
 ![A Visualization of a K Means Clustering Algorithm](https://nickmccullum.com/images/python-machine-learning/introduction-k-means-clustering/elbow-method.png)
 
-Importantly,  `6`  is just an estimate for a good value of  `K`  to use. There is never a “best”  `K`  value in a K-means clustering algorithm. As with many things in the field of machine learning, this is a highly situation-dependent decision.
+值得注意的是，  `6`  只是对最佳  `K`  值的一种估计。 K均值聚类算法中并没有标准的“最佳”  `K`  值。同机器学习领域的许多事物一样，这一最佳选择高度依赖具体情况。
 
-### Section Wrap-up
+### 本节小节
 
-Here is a brief summary of what you learned in this article:
+以下是本节内容的小结：
 
--   Examples of unsupervised machine learning problems that the K-means clustering algorithm is capable of solving
--   The basic principles of what a K-means clustering algorithm is
--   How the K-means clustering algorithm works
--   How to use the elbow method to select an appropriate value of  `K`  in a K-means clustering model
+-   K均值聚类算法能够解决的无监督机器学习问题示例
+-   K均值聚类算法的基础机理
+-   K均值聚类算法的工作原理
+-   如何利用肘方法为K均值聚类模型选择合适的  `K`  值
 
-# Principal Component Analysis
+# 主要组件分析
 
-[Principal component analysis][15]  is used to transform a many-featured data set into a transformed data set with fewer features where each new feature is a linear combination of the preexisting features. This transformed data set aims to explain most of the variance of the original data set with far more simplicity.
+[主要组件分析][15]  用于将多特征数据集转换为具有较少特征的转换数据集，转换数据集中的每个新特征是预先数据集存在特征的线性组合。此转换数据集旨在更简单地解释原始数据集中的绝大部分变量。
 
-### What is Principal Component Analysis?
+### 什么是主要组件分析
 
-Principal component analysis is a machine learning technique that is used to examine the interrelations between sets of variables.
+主要组件分析是一种用于检查变量集间相互关系的机器学习方法。
 
-Said differently, principal component analysis studies sets of variables in order to identify the underlying structure of those variables.
+不同的是，主要组件分析研究一组变量，以确定这些变量的根本结构。
 
-Principal component analysis is sometimes called  ****factor analysis****.
+主要组件分析有时也被称为  ****因子分析****。
 
-Based on this description, you might be think that principal component analysis is quite similar to linear regression.
+基于此描述，你可能会感觉主要组件分析与线性回归非常相似。
 
-That is not the case. In fact, these two techniques have some important differences.
+但事实并非如此。其实，二者存在一些显著区别。
 
-### The Differences Between Linear Regression and Principal Component Analysis
+### 线性回归与主要组件分析的区别
 
-Linear regression determines a line of best fit through a data set. Principal component analysis determines several orthogonal lines of best fit for the data set.
+线性回归通过数据集确定一条最佳拟合线，而主要组件分析会确定出几条最拟合数据集的正交线。
 
-If you’re unfamiliar with the term  **orthogonal**, it just means that the lines are at right angles (90 degrees) to each other – like North, East, South, and West are on a map.
+**正交**的意思可以理解为线与线之间呈直角（90度）相交——就像地图上指示北、东、南、西的方向坐标那样。
 
-Let’s consider an example to help you understand this better.
+我们不妨通过下面的示例来帮助你更好的理解。
 
 ![A principal component analysis](https://nickmccullum.com/images/python-machine-learning/introduction-principal-component-analysis/principal-component-analysis.png)
 
-Take a look at the axis labels in this image.
+仔细看图中的轴标。
 
-In this image, the x-axis principal component examples 73% of the variance in the data set. The y-axis principal component explains about 23% of the variance in the data set.
+图中，x轴的主要组件代表了该数据集中73%的变量，y轴的主要组件则解释了数据集中23%的变量。
 
-This means that 4% of the variance in the data set remains unexplained. You could reduce this number further by adding more principal components to your analysis.
+这就意味着数据集中仍有4%的变量未得到解释。通过在分析中添加更多主要组件，这一未解释变量的数量便能减至更少。
 
-### Section Wrap-up
+### 本节小节
 
-Here’s a brief summary of what you learned about principal component analysis in this tutorial:
+以下是刚刚讲到的有关主要组件分析的知识总结：
 
--   That principal component analysis attempts to find orthogonal factors that determine the variability in a data set
--   The differences between principal component analysis and linear regression
--   What the orthogonal principal components look like when visualized inside of a data set
--   That adding more principal components can help you to explain more of the variance in a data set
+-   主要组件分析致力于找到确定数据集变异性的正交因子
+-   主要组件分析与线性回归之间的区别
+-   正交主要组件在数据集内的可视化图示
+-   添加更多主要组件可以帮助解释数据集中的更多变量
 
   
 

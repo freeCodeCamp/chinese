@@ -1,31 +1,29 @@
 > -  原文地址：[How State Works in React – Explained with Code Examples](https://www.freecodecamp.org/news/what-is-state-in-react-explained-with-examples/)
 > -  原文作者：[Yogesh Chavan](https://www.freecodecamp.org/news/author/yogesh/)
-> -  译者：
+> -  译者：dake0913
 > -  校对者：
 
-![How State Works in React – Explained with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/state.jpg)
 
-State is the most complex thing in React, and it's something both beginners and experienced developers struggle to understand. So in this article, we'll explore all the basics of state in React.
 
-Before understanding state, let's first understand some fundamentals so it's easy to wrap your head around state later.
+状态state是React中最复杂的东西，初学者和有经验的开发人员都很难理解。因此，在本文中，我们将探索React中状态的所有基础知识。
 
-## How to Render Data in the UI in React
+在理解状态之前，让我们先了解一些基础知识，以便稍后更容易理解状态。
 
-To render anything on the screen, we use the `ReactDOM.render` method in React.
+## 如何用React在用户界面渲染数据
 
-It has the following syntax:
+在屏幕上渲染任何东西，我们要使用`ReactDOM.render` 方法。
 
-```js
+它的语法如下:
+
+```plain
 ReactDOM.render(element, container[, callback])
 ```
+* `element` 元素可以是任何HTML元素,JSX或返回JSX的组件
+* `container` 容器是UI上我们想要在其中呈现数据的元素
+* `callback` 回调是可选的函数，我们可以传递它，它在屏幕上渲染或重新渲染时被调用
+看看下面的代码：
 
--   `element` can be any HTML element, JSX or a component that returns JSX
--   `container` is the element on the UI inside which we want to render the data
--   `callback` is the optional function we can pass which gets called once something is rendered or re-rendered on the screen
-
-Take a look at the below code:
-
-```jsx
+```plain
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -33,14 +31,12 @@ const rootElement = document.getElementById("root");
 
 ReactDOM.render(<h1>Welcome to React!</h1>, rootElement);
 ```
+这是一个 [代码示例](https://codesandbox.io/s/focused-shockley-oh4tn?file=/src/index.js).
+在这里，我们只是向屏幕呈现一个h1元素。
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/focused-shockley-oh4tn?file=/src/index.js).
+要渲染多个元素，我们可以如下所示：
 
-Here, we're just rendering a single h1 element to the screen.
-
-To render multiple elements we can do it as shown below:
-
-```jsx
+```plain
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -54,12 +50,10 @@ ReactDOM.render(
   rootElement
 );
 ```
+这是一个[代码示例](https://codesandbox.io/s/white-hooks-dgru0?file=/src/index.js)。
+如果内容变多，我们可以将JSX取出，放在一个变量中，这是渲染内容的首选方式，就像这样：
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/white-hooks-dgru0?file=/src/index.js).
-
-We can also take out the JSX and put it in a variable which is the preferred way of rendering content if it gets larger, like this:
-
-```jsx
+```plain
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -74,16 +68,14 @@ const content = (
 
 ReactDOM.render(content, rootElement);
 ```
+这是一个 [代码示例](https://codesandbox.io/s/trusting-night-5g825?file=/src/index.js)。
+在这里，我们还添加了一对额外的圆括号，以正确对齐JSX并使其成为单个JSX表达式。
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/trusting-night-5g825?file=/src/index.js).
+如果您想详细了解JSX及其各种重要特性，请[在这里查看我的文章](https://www.freecodecamp.org/news/jsx-in-react-introduction/)。
 
-Here, we've also added an extra pair of round brackets to align the JSX properly and to make it a single JSX expression.
+现在，让我们在屏幕上显示一个按钮和一些文本：
 
-If you want to understand JSX in detail and its various important features, check out [my article here](https://www.freecodecamp.org/news/jsx-in-react-introduction/).
-
-Now, let's display a button and some text on the screen:
-
-```jsx
+```plain
 import React from "react";
 import ReactDOM from "react-dom";
 
@@ -105,14 +97,13 @@ const content = (
 
 ReactDOM.render(content, rootElement);
 ```
-
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/quizzical-cohen-x55p8?file=/src/index.js).
+这是一个[代码示例](https://codesandbox.io/s/quizzical-cohen-x55p8?file=/src/index.js)。
 
 ![counter_initial](https://www.freecodecamp.org/news/content/images/2021/04/counter_initial.gif)
 
-As you can see, when we click on the button, the `counter` value is incremented as you can see in the console. But on the UI it's not getting updated.
+正如你所看到的，当我们单击按钮时，计数器`counter` 的值会增加，就像您在控制台中看到的那样。但在UI上它没有更新。
 
-This is because we're rendering the `content` JSX only once using the `ReactDOM.render` method when the page is loaded. And we're not calling it again – so even though the value of `counter` is updating, it's not getting displayed on the UI. So let's fix this.
+这是因为我们在加载页面时，只使用 `ReactDOM.render`  方法一次，来渲染`counter` JSX的内容。我们不会再次调用它，所以即使`counter`的值在更新，它也不会显示在UI上。让我们来解决这个问题。
 
 ```jsx
 import React from "react";
@@ -142,44 +133,41 @@ const renderContent = () => {
 renderContent();
 ```
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/adoring-noether-8gsgu?file=/src/index.js).
+这是一个[代码示例](https://codesandbox.io/s/adoring-noether-8gsgu?file=/src/index.js)。
+现在，我们在`renderContent` 函数内封装`content` JSX 和 `ReactDOM.render`方法。一旦它被定义好了，我们就调用函数在加载渲染用户界面上的内容。
 
-Here, we've moved the `content` JSX and  `ReactDOM.render` method call inside a `renderContent` function. Then once it's defined, we're calling the function so it will render the content on the UI on page load.
-
-Note that we've also added the `renderContent` function call inside the `handleClick` function. So every time we click on the button, the `renderContent` function will be called and we'll see the updated counter on the UI.
+注意，我们也在`renderContent` 函数内调用封装了`handleClick` 函数，所以每次我们点击按钮，`renderContent` 函数将被调用，界面内容也会更新。
 
 ![counter_updated](https://www.freecodecamp.org/news/content/images/2021/04/counter_updated.gif)
 
-As can you see, it's working as expected and the `counter` value is correctly getting displayed on the UI.
+正如你所看到的，它正按照预期工作，计数器`counter` 的值正正确地显示在UI上。
 
-You might think that it's costly to re-render the entire DOM again on every button click – but it's not. This is because React uses a Virtual DOM algorithm where it checks what has been changed on the UI and only re-renders the elements which were changed. So the entire DOM is not re-rendered again.
+你可能认为在每次单击按钮时重新呈现整个DOM的成本很高——但事实并非如此。这是因为React使用了Virtual DOM算法来检查UI上发生了什么变化，并且只重新呈现发生了变化的元素。因此，整个DOM不会再次被重新渲染。
 
 ![counter_preview](https://www.freecodecamp.org/news/content/images/2021/04/counter_preview.gif)
 
-Here's a [Preview link](https://8gsgu.csb.app/) for the Code Sandbox to try it yourself.
+这是一个你可以自己尝试代码的[效果预览](https://8gsgu.csb.app/)。
 
-As you can see in the HTML structure, only the `counter` value is re-rendered as it's the only thing flashing in the HTML structure. This is the reason React is so fast and the virtual DOM makes React more useful.
+正如您在HTML结构中看到的，只有计数器 `counter`  的值被重新渲染，因为它是HTML结构中唯一显示的东西。这就是React如此之快的原因，虚拟DOM使React更加有用。
 
-But still, it's not feasible to call the `renderContent` function every time we want to update the UI. So React added the concept of State.
+但是，每次我们想要更新UI时调用`renderContent` 函数仍然是不可行的。所以React添加了“state”的概念。
 
-## Introduction to State in React
+## 介绍React中的State
 
-State allows us to manage changing data in an application. It's defined as an object where we define key-value pairs specifying various data we want to track in the application.
+状态允许我们管理应用程序中不断变化的数据。它被定义为一个对象，我们在其中定义键-值对，指定我们希望在应用程序中追踪的各种数据。
 
-In React, all the code we write is defined inside a component.
+在React里，所有的代码在一个component组件里被定义。 
 
-There are mainly two ways of creating a component in React:
+在React中创建组件的方法主要有两种：
 
--   class-based component
--   functional component
+* 类组件
+* 函数组件
+>现在我们将从类组件开始。在本文后面，我们将看到一种创建函数组件的方法。
+你应该知道如何使用类组件以及函数组件，包括钩子。
 
-> We'll start with class-based components now. Later in this article, we will see a functional component way of creating components.
+你不应该通过React钩子直接学习函数组件，而是应该首先理解类组件，这样才容易理解基础知识。
 
-You should know how to work with class-based components as well as functional components, including hooks.
-
-Instead of directly learning functional components with React hooks, you should first understand class-based components so it's easy to clear the basics.
-
-You can create a component by using an ES6 class keyword and by extending the `Component` class provided by React like this:
+你可以通过使用ES6类关键字和扩展React提供的`Component`类来创建一个组件，如下所示：
 
 ```jsx
 import React from "react";
@@ -218,53 +206,54 @@ const rootElement = document.getElementById("root");
 ReactDOM.render(<Counter />, rootElement);
 ```
 
-> Note that the name of the component starts with a capital letter (`Counter`).
+>注意组件的名称首字母要大写 (`Counter`) 。
+这是一个 [代码示例](https://codesandbox.io/s/nostalgic-burnell-57fhd?file=/src/index.js)。
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/nostalgic-burnell-57fhd?file=/src/index.js).
+看看这里我们在做什么。
 
-Let's explore what we're doing here.
-
--   Inside the constructor function, we're first calling `super` by passing `props` to it. Then we've defined the state as an object with `counter` as a property of the object.
--   We're also binding `this`'s context to the `handleClick` function so inside the `handleClick` function we get the correct context for `this`.
--   Then inside the `handleClick` function, we're updating the `counter` and logging it to the console.
--   And inside the `render` method, we're returning the JSX that we want to render on the UI.
+* 在构造函数内，首先通过传递props来调用 `super` 。
+* 然后我们将状态定义为对象，将`counter` 定义为对象的属性。
+* 我们还将`this`的环境绑定到`handleClick`函数因此在`handleClick`函数中我们得到了这个的正确上下文。
+* 然后在`handleClick`函数中，我们更新`countor`并将其记录到控制台。
+* 在`render`方法中，我们返回我们想要在UI上渲染的JSX。
 
 ![counter_mutate_state](https://www.freecodecamp.org/news/content/images/2021/04/counter_mutate_state.gif)
 
-The `counter` is correctly getting updated as you can see in the console – but it's not getting updated on the UI.
 
-This is because we're directly updating the state inside the `handleClick` function as:
+正如您在控制台中所看到的， `counter`正在正确地更新——但它没有在UI上更新。
+
+这是因为我们直接将 `handleClick`  函数中的状态更新为：
 
 ```js
 this.state.counter = this.state.counter + 1
 ```
 
-So React does not re-render the component (and **it's also a bad practice to directly update state**).
+因此React不会重新渲染组件(**直接更新状态也是一个不好的做法**)。
 
-> Never ever directly update/mutate state in React, as it's a bad practice and it will cause issues in your application. Also, your component will not be re-rendered on state change if you make a direct state change.
+>永远不要在React中直接更新/改变状态，因为这是一个糟糕的做法，它会导致应用程序出现问题。另外，如果你直接更改状态，那么在状态更改时不会重新渲染组件。
 
-## Syntax of setState
+## setState的语法
 
-To make the state change, React gives us a `setState` function that allows us to update the value of the state.
+为了改变状态，React为我们提供了一个setState函数，允许我们更新状态的值。
 
-The `setState` function has the following syntax:
+`setState`函数的语法如下：
 
 ```
 setState(updater, [callback])
 ```
 
--   `updater` can either be a function or an object
--   `callback` is an optional function that gets executed once the state is successfully updated
+* `updater` 被更新的可以是函数或对象。
+* `callback`回调函数是一个可选函数，在状态成功更新后执行。
 
-> Calling `setState` automatically re-renders the entire component and all its child components. We don't need to manually re-render as seen previously using the `renderContent` function.
+>调用 `setState` 会自动重新渲染整个组件及其所有子组件。我们不需要像前面使用`renderContent` 函数那样手动重新渲染。
 
-## How to Use a Function to Update State in React
+## 如何使用函数更新React中的状态
 
-Let's modify the [above Code Sandbox](https://codesandbox.io/s/nostalgic-burnell-57fhd?file=/src/index.js) to use the `setState` function for updating the state.
+让我们修改 [上面的代码示例](https://codesandbox.io/s/nostalgic-burnell-57fhd?file=/src/index.js) 来使用 `setState` 函数更新状态。
 
-Here's an updated [Code Sandbox Demo](https://codesandbox.io/s/withered-dust-p3emg?file=/src/index.js).
+这是更新的 [代码示例](https://codesandbox.io/s/withered-dust-p3emg?file=/src/index.js)。
 
-If you check the updated `handleClick` function, it looks like this:
+如果你检查更新后的 `handleClick` 函数，它看起来像这样：
 
 ```js
 handleClick() {
@@ -278,31 +267,31 @@ handleClick() {
 }
 ```
 
-Here, we're passing a function as a first argument to the `setState` function and we're returning a new state object with `counter` incremented by 1 based on the previous value of `counter`.
+在这里，我们将一个函数作为 `setState` 方法的第一个参数传递，并返回一个新的状态对象，其中`counter` 在 `counter`的上一个值的基础上增加1。
 
-We're using the arrow function in the above code, but using a normal function will also work.
+我们在上面的代码中使用箭头函数，但是使用普通函数也可以。
 
 ![counter_updated_async](https://www.freecodecamp.org/news/content/images/2021/04/counter_updated_async.gif)
 
-If you notice, we're correctly getting the updated value of the `counter` on the UI. But in the console, we're getting the previous `counter` value even though we've added console.log after the `this.setState` call.
+如果您注意到，我们正在正确地获得UI上 `counter` 的更新值。 但在控制台中,我们获取的是以前的 `counter` 值，尽管我们在调用 `this.setState` 之后添加了console.log。
 
-> This is because the `setState` function is asynchronous in nature.
+>这是因为 `setState` 方法本质上是异步的。
 
-This means that even though we called `setState` to increment the `counter` value by 1, it does not happen immediately. This is because when we call the `setState` function, the entire component gets re-rendered – so React needs to check what all needs to be changed using the Virtual DOM algorithm and then perform various checks for an efficient update of the UI.
+这意味着，尽管我们调用了`setState` 来一个个地增加 `counter` ，但它没有立刻生效。这是因为我们调用 `setState` 方法时，整个组件被重新渲染 – 因此React需要使用虚拟DOM算法检查需要更改的内容，然后执行各种检查以高效更新UI。
 
-This is the reason you may not get the updated value for `counter` immediately after the call to `setState`.
+这是你可能没办法在调用 `setState`后，马上获得 `counter` 更新的原因。
 
-> This is a very important thing to keep in mind in React, as you will encounter difficult to debug issues if you don't write your code keeping in mind that `setState` is asynchronous in React.
+>这在React中是非常重要的，因为你会在写代码时遇到调试困难的问题。请记住`setState` 在React里是异步的。
 
-If you want to get the updated value of the state immediately after the `setState` call, you can pass a function as the second argument to the `setState` call which will be executed once the state is updated.
+如果您想在使用`setState` 后立即获得更新后的状态值， 你可以传递一个函数作为第二个参数，状态一更新就调用 `setState` 。
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/jolly-dawn-65wis?file=/src/index.js) with that change.
+这是一个调整后的 [代码示例](https://codesandbox.io/s/jolly-dawn-65wis?file=/src/index.js)。
 
 ![counter_updated_sync](https://www.freecodecamp.org/news/content/images/2021/04/counter_updated_sync.gif)
 
-As you can see, we're getting the correct value of `counter` in the console as soon as it's updated on the UI.
+正如你所看到的，我们在控制台中和UI上同时获得了正确的 `counter`  值。
 
-In the above demo, the `handleClick` function looks like this:
+在上面的演示中， `handleClick`方法是这样的：
 
 ```js
 handleClick() {
@@ -317,11 +306,11 @@ handleClick() {
 }
 ```
 
-So here, for the `setState` function call, we're passing two arguments. The first is a function that returns a new state and the second is a callback function that will be called once the state is updated. We're just logging the updated counter value to the console in the callback function.
+这里对于 `setState`  函数调用，我们传递了两个参数。第一个是返回新状态的函数，第二个是在状态更新后调用的回调函数。我们只是将更新的计数器值记录到回调函数中的控制台。
 
-> Even though React provides a callback function to get the updated state value immediately, it's recommended that you use it only for quick testing or logging.
+>尽管React提供了一个回调函数来立即获取更新后的状态值，但建议您只在快速测试或记录日志时使用它。
 
-Instead, React recommends that you use the `componentDidUpdate` method, which is a React life cycle method that looks like this:
+相反，React建议你使用`componentDidUpdate` 方法，这是一个React生命周期方法，看起来像这样:
 
 ```js
 componentDidUpdate(prevProps, prevState) {
@@ -332,13 +321,13 @@ componentDidUpdate(prevProps, prevState) {
 }
 ```
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/youthful-pine-txb1o?file=/src/index.js).
+这是一个 [代码示例](https://codesandbox.io/s/youthful-pine-txb1o?file=/src/index.js)。
 
-You can find more information about why to use the `componentDidUpdate` instead of `setState` callback [here](https://stackoverflow.com/questions/56501409/what-is-the-advantage-of-using-componentdidupdate-over-the-setstate-callback#answer-56502614).
+你可以在[这里](https://stackoverflow.com/questions/56501409/what-is-the-advantage-of-using-componentdidupdate-over-the-setstate-callback#answer-56502614)找到更多关于为什么使用 `componentDidUpdate` 而不是回调 `setState` 。
 
-## How to Simplify State and Method Declaration
+## 如何简化状态和方法声明
 
-If you see the constructor code in the above Code Sandbox demos, you will see that it looks like this:
+如果你在上面的代码示例中看到构造函数代码，你会看到它看起来像这样：
 
 ```js
 constructor(props) {
@@ -352,21 +341,21 @@ constructor(props) {
 }
 ```
 
-To use the `this` keyword inside the `handleClick` event handler, we have to bind it in the constructor like this:
+要在 `handleClick` 事件处理程序中使用 `this` 关键字，我们必须像这样在构造函数中绑定它： `this:handleClick`
+
 
 ```js
 this.handleClick = this.handleClick.bind(this);
 ```
 
-Also, to declare the state, we have to create a constructor, add a `super` call inside it, and then we can declare the state.
+此外，要声明状态，我们必须创建一个构造函数，在其中添加一个 `super`  调用，然后才能声明状态。
+这不仅繁琐，而且使代码变得不必要地复杂。
 
-This is not just cumbersome but also makes the code unnecessarily complicated.
+随着事件处理程序数量的增加，`.bind` 调用的数量也会增加。我们可以使用类属性语法来避免这样做。
 
-As the number of event handlers increases, the number of `.bind` calls also increases. We can avoid doing this using the class properties syntax.
+这是一个更新的 [代码示例](https://codesandbox.io/s/sad-bassi-7fxnl?file=/src/index.js) ，包含类属性语法。
 
-Here's an updated [Code Sandbox Demo](https://codesandbox.io/s/sad-bassi-7fxnl?file=/src/index.js) with the class properties syntax.
-
-Here, we've moved the state directly inside the class like this:
+在这里，我们像这样将状态直接移动到类内部：
 
 ```js
 state = {
@@ -374,7 +363,7 @@ state = {
 };
 ```
 
-and the `handlerClick` event handler is changed to arrow function syntax like this:
+并且， `handlerClick` 事件处理器更改为箭头函数语法如下：
 
 ```js
 handleClick = () => {
@@ -386,20 +375,17 @@ handleClick = () => {
 };
 ```
 
-As arrow functions do not have their own `this` context, it will take the context as the class so there is no need to use the `.bind` method.
+由于箭头函数没有自己的 `this`  上下文，所以它将使用上下文作为类，因此不需要使用 `.bind`  方法。
+这使得代码更简单，更容易理解，因为我们不需要不停地绑定每个事件处理器。
 
-This makes the code a lot simpler and easier to understand as we don't need to keep binding every event handler.
+>[create-react-app](https://github.com/facebook/create-react-app) 已经内置了对它的支持，现在就可以开始使用这个语法了。
+从现在开始，我们将使用这种语法，因为它是编写React组件的更流行和首选的方法。
 
-> [create-react-app](https://github.com/facebook/create-react-app) already has in-built support for it and you can start using this syntax right now.
+如果您想了解更多关于类属性语法的知识，请查看 [我的文章](https://javascript.plainenglish.io/how-to-write-clean-and-easy-to-understand-react-code-using-class-properties-syntax-5b375b0618d3?source=friends_link&sk=c170992cab9025fddb7b34b8894ea993)。
 
-We'll be using this syntax from now onwards, as it is the more popular and preferred way to write React components.
+## 如何使用ES简化语法
 
-If you want to learn more about this class properties syntax, check out [my article here](https://javascript.plainenglish.io/how-to-write-clean-and-easy-to-understand-react-code-using-class-properties-syntax-5b375b0618d3?source=friends_link&sk=c170992cab9025fddb7b34b8894ea993).
-
-## How to Use ES6 Shorthand Syntax
-
-If you check the `setState` function call in the above code sandbox, it looks like this:
-
+如果你在上面的代码示例中查看 `setState` 方法的调用，它会像这样：
 ```js
 this.setState((prevState) => {
   return {
@@ -408,15 +394,16 @@ this.setState((prevState) => {
 });
 ```
 
-It's a lot of code. Just for returning an object from a function, we're using 5 lines of code.
+这么多代码，只是为了从一个函数中返回一个对象，我们用了5行代码。
 
-We can simplify it to a single line as below:
+我们能如下简化成一行：
 
 ```js
 this.setState((prevState) => ({ counter: prevState.counter + 1 }));
 ```
 
-Here, we've wrapped the object in round brackets to make it implicitly return. This works because if we have a single statement in an arrow function we can skip the return keyword and curly brackets like this:
+这里，我们将对象包装在圆括号中，使其隐式返回。这是可行的，因为如果我们在箭头函数中只有一条语句，我们可以跳过return关键字和花括号，像这样：
+
 
 ```js
 const add = (a, b) => { 
@@ -428,19 +415,19 @@ const add = (a, b) => {
 const add = (a, b) => a + b;
 ```
 
-But as the opening curly bracket is considered the start of the function body, we need to wrap the object inside round brackets to make it work properly.
+但是由于左花括号被认为是函数体的开始，我们需要将对象包装在圆括号内，以使其正常工作。
 
-Here's an updated [Code Sandbox Demo](https://codesandbox.io/s/zen-galois-pew17?file=/src/index.js) with this change.
+这是一个更新的 [代码示例](https://codesandbox.io/s/zen-galois-pew17?file=/src/index.js)。
 
-## How to Use an Object as a State Updater in React
+## 如何在React中使用对象作为状态更新器
 
-In the above code, we've used a function as the first argument for `setState` but we can also pass an object as an argument.
+在上面的代码中，我们使用一个函数作为`setState` 的第一个参数，但我们也可以传递一个对象作为参数。 
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/zealous-nobel-yvvmw?file=/src/index.js).
+这是一个[代码示例](https://codesandbox.io/s/zealous-nobel-yvvmw?file=/src/index.js)。
 
 ![updated_name](https://www.freecodecamp.org/news/content/images/2021/04/updated_name.gif)
 
-The component code looks like this:
+组件代码如下所示：
 
 ```js
 class User extends React.Component {
@@ -471,9 +458,9 @@ class User extends React.Component {
 }
 ```
 
-Here, we've added an input textbox where the user types their name and it's displayed below the textbox as the user types into the textbox.
+在这里，我们添加了一个输入文本框，用户在其中输入自己的名字，当用户在文本框中输入时，它会显示在文本框的下方。
 
-In the state, we've initialized the name property to `Mike` and we've added an `onChange` handler to the input textbox like this:
+在状态中，我们初始化了name属性为 `Mike`  ，并在输入文本框中添加了一个 `onChange`  处理程序，如下所示：
 
 ```js
 state = {
@@ -490,7 +477,7 @@ state = {
 />
 ```
 
-So when we type anything in the textbox, we're updating the state with the value typed by passing an object to the `setState` function.
+因此，当我们在文本框中键入任何内容时，我们通过向 `setState`  函数传递一个对象来更新输入值的状态。
 
 ```js
 handleChange = (event) => {
@@ -499,15 +486,15 @@ handleChange = (event) => {
 }
 ```
 
-> But which form of `setState` should we use – what's preferred? We have to decide whether to pass an object or a function as a first argument to the `setState` function.
+> 但是我们应该使用哪种形式的`setState`呢?我们必须决定是将一个对象还是一个函数作为第一个参数传递给`setState`函数。
 
-**The answer is:** pass an object if you don't need the `prevState` parameter to find the next state value. Otherwise pass the function as the first argument to `setState`.
+**答案是：**如果不需要 `prevState`  参数来查找下一个状态值，则传递一个对象。否则，将该函数作为第一个参数传递给 `setState`  。
 
-But you need to be aware of one issue with passing an object as an argument.
+但在传递对象作为参数时需要注意一个问题。
 
-Take a look at [this Code Sandbox Demo](https://codesandbox.io/s/eloquent-panini-u2ooe?file=/src/index.js).
+看看这个 [代码示例](https://codesandbox.io/s/eloquent-panini-u2ooe?file=/src/index.js).
 
-In the above demo, the `handleClick` method looks like this:
+在下面的代码中， `handleClick` 方法看起来像这样：
 
 ```js
 handleClick = () => {
@@ -518,13 +505,13 @@ handleClick = () => {
 }
 ```
 
-We're taking the current value of the `counter` and incrementing it by 1. It works fine, as you can see below:
+我们取 `counter`  的当前值然后加1。它运行良好，如下图所示：
 
 ![object_setstate_correct](https://www.freecodecamp.org/news/content/images/2021/04/object_setstate_correct.gif)
 
-Now, take a look at [this Code Sandbox Demo](https://codesandbox.io/s/busy-johnson-oqvfn?file=/src/index.js) which is a modified version of the previous Code Sandbox demo.
+现在看看这个修改版本的 [代码示例](https://codesandbox.io/s/busy-johnson-oqvfn?file=/src/index.js) 。
 
-Our `handleClick` method looks like this now:
+我们的 `handleClick` 方法现在看起来像这样：
 
 ```js
 handleClick = () => {
@@ -540,21 +527,21 @@ handleClick = () => {
 }
 ```
 
-Here, we're first setting the `counter` value to 5 and then incrementing it by 1. So the expected value of `counter` is 6. Let's see if that's the case.
+在这里，我们首先将 `counter`  值设置为5，然后将其增加1。所以 `counter`  的预期值是6。我们来看看是不是这样。
 
 ![object_setstate_wrong](https://www.freecodecamp.org/news/content/images/2021/04/object_setstate_wrong.gif)
 
-As you can see, when we click the button the first time, we expected the `counter` value to become 5 – but it becomes 1, and on every subsequent click it's incremented by 1.
+正如您所看到的，当我们第一次单击按钮时，我们期望 `counter`  值变成5，但它变成了1，并且在随后的每一次单击它都增加1。
 
-This is because, as we have seen previously, the `setState` function is asynchronous in nature. When we call `setState`, the value of the `counter` does not become 5 immediately, so on the next line we're getting the `counter` value of 0 to which we've initialized the state in the beginning.
+这是因为，正如我们前面所看到的， `setState`  方法本质上是异步的。当我们调用 `setState`  时， `counter`   的值不会立即变为5，因此在下一行我们得到的 `counter`   值为0，这是我们在开始时初始化的状态。
 
-So it becomes 1 when we call `setState` again to increment the `counter` by 1, and it keeps on incrementing by 1 only.
+所以当我们再次调用 `setState`  将 `counter`   加1时，它变成1，并且它只继续加1。
 
-To fix this issue, we need to use the updater syntax of `setState` where we pass a function as the first argument.
+要解决这个问题，我们需要使用 `setState`  的更新程序语法，其中传递一个函数作为第一个参数。
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/strange-silence-qhykz?file=/src/index.js).
+这是一个[代码示例](https://codesandbox.io/s/strange-silence-qhykz?file=/src/index.js)。
 
-In the above demo, the `handleClick` method looks like this now:
+在上面的示例中， `handleClick`  方法看起来是这样的：
 
 ```js
 handleClick = () => {
@@ -578,21 +565,21 @@ handleClick = () => {
 
 ![object_setstate_updater](https://www.freecodecamp.org/news/content/images/2021/04/object_setstate_updater.gif)
 
-As you can see, when we first click on the button, the value of `counter` becomes 7. This is as expected, because first we set it to 5 and then incremented it by 1 twice so it becomes 7. And it remains at 7 even if we click the button multiple times, because on every click we're re-setting it to 5 and incrementing twice.
+如您所见，当我们第一次单击按钮时， `counter`  的值变为7。这和预期的一样，因为首先我们把它设为5，然后把它加2次1，所以它就变成了7。即使我们多次点击按钮，它仍然保持在7，因为每次点击我们都将它重置为5并增加两次。
 
-This is because inside the `handleClick` we're calling `setState` to set the `counter` value to 5 by passing an object as the first argument to the `setState` function. After that, we've called two `setState` calls where we're using the function as the first argument.
+这是因为在 `handleClick`  内部，我们调用 `setState`  将计数器值设置为5，方法是将一个对象作为 `setState`  函数的第一个参数传递给该函数。在那之后，我们调用了两个 `setState`  调用，其中我们使用函数作为第一个参数。
 
-So how does this work correctly?
+那么这是如何正确工作的呢?
 
-When React sees a `setState` call, it schedules an update to make a change to the state because it's asynchronous. But before it completes the state change, React sees that there is another `setState` call.
+当React遇到 `setState`  调用时，它将调度更新以更改状态，因为它是异步的。但是在完成状态更改之前，React会看到有另一个 `setState` 调用。
 
-Because of this, React will not re-render immediately with a new `counter` value. Instead it merges all the `setState` calls and updates the `counter` based on the previous value of `counter` as we've used the `prevState.counter` to calculate the `counter` value.
+因此，React不会立即使用新的 `counter`  值重新呈现。相反，它合并所有的 `setState`  调用，并基于前面 `counter` 的值更新 `counter` ，因为我们已经使用了 `prevState``.counter` 去计算 `counter`。
 
-And once all the `setState` calls are completed successfully, only then does React re-render the component. So even if there are three `setState` calls, React will re-render the component only once, which you can confirm by adding a `console.log` statement inside the `render` method.
+一旦所有 `setState`  调用都成功完成，React才重新渲染组件。因此，即使有三个 `setState`  调用，React也只会重新渲染组件一次，这可以通过在 `render`  方法中添加console.log语句来确认。
 
-> So the point to remember is that you should be careful when using an object as the first argument to a `setState` call, as it might result in an unpredictable outcome. Use the function as the first argument to get the correct result based on the previous result.
+>因此，需要记住的一点是，在使用对象作为 `setState`  调用的第一个参数时应该小心，因为它可能会导致不可预知的结果。使用函数作为第一个参数，可以根据前面的结果获得正确的结果。
 
-You might not call `setState` again and again as we've done in the above demo, but you might call it inside another function as shown below:
+你可能不会像我们在上面的演示中所做的那样一遍又一遍地调用 `setState`，但你可以在另一个函数中调用它，如下所示：
 
 ```js
 state = {
@@ -615,19 +602,19 @@ handleClick = () => {
 }
 ```
 
-In the above code, we've defined an `isLoggedIn` state and we have two functions `handleClick` and `doSomethingElse`. Inside the `handleClick` function, we're updating the `isLoggedIn` state value to `true` and immediately we're calling the `doSomethingElse` function on the next line.
+在上面的代码中，我们已经定义了一个 `isLoggedIn`  状态，并且我们有两个函数 `handleClick`  和 `doSomethingElse` 。在 `handleClick`  函数中，我们将 `isLoggedIn`  状态值更新为`true`，并立即在下一行调用 `doSomethingElse`  函数。
 
-So inside `doSomethingElse` you might think that you're going to get the `isLoggedIn` state as `true` and the code inside the if condition will be executed. But it will not be executed because `setState` is asynchronous and the state might not be updated immediately.
+在 `doSomethingElse`  中你可能认为你会得到 `isLoggedIn`  状态为`true if`条件中的代码会被执行。但是它不会被执行，因为 `setState`  是异步的，状态可能不会立即更新。
 
-That's why React added lifecycle methods like `componendDidUpdate` to do something when state or props are updated.
+这就是为什么React添加了 `componendDidUpdate`  这样的生命周期方法，以便在状态或道具更新时做一些事情。
 
-> Keep an eye out to check if you're using the same `state` variable again in the next line or next function to do some operation to avoid these undesired results.
+>请注意检查您是否在下一行或下一个函数中再次使用相同的 `state`  变量，做些事来避免这些结果。
 
-## How to Merge setState Calls in React
+## 如何合并React中的setState调用
 
-Take a look at [this CodeSandbox Demo](https://codesandbox.io/s/bold-cache-zcj4u?file=/src/index.js).
+看看 [这个代码示例](https://codesandbox.io/s/bold-cache-zcj4u?file=/src/index.js)。
 
-Here, we have `username` and `counter` properties declared in the state like this:
+这里，我们在状态中声明了 `username` 和 `counter`  属性，如下所示:
 
 ```js
 state = {
@@ -636,7 +623,7 @@ state = {
 };
 ```
 
-and `handleOnClick` and `handleOnChange` event handlers declared like this:
+还如下声明了 `handleOnClick` 和 `handleOnChange` 事件处理器：
 
 ```js
 handleOnClick = () => {
@@ -652,9 +639,9 @@ handleOnChange = (event) => {
 };
 ```
 
-Check the `setState` calls in the above functions. You can see that inside the `handleOnClick` function, we're only setting the state for `counter`, and inside the `handleOnChange` function we're only setting the state for `username`.
+检查下面函数中 `setState` 的调用。 你能看到在 `handleOnClick` 方法里，我们只设置了`counter`  的状态，在 `handleOnChange` 方法里只设置了`username` 的状态。
 
-So we don't need to set the state for both of the state variables at the same time like this:
+所以我们不需要像这样同时设置两个状态变量的状态：
 
 ```js
 this.setState((prevState) => ({
@@ -663,27 +650,27 @@ this.setState((prevState) => ({
 }));
 ```
 
-We can update only the one which we want to update. React will manually merge the other state properties so we don't need to worry about manually merging them ourselves.
+我们只能更新我们想要更新的那个。React会自动合并其他状态属性，所以我们不需要自己手动合并它们。
 
 ![state_merged-1](https://www.freecodecamp.org/news/content/images/2021/04/state_merged-1.gif)
 
-As you can see, we're successfully changing the `counter` and `username` independently of each other.
+正如您所看到的，我们成功地分别独立地更改了 `counter` 和 `username`。
 
-## How to Use State in Functional Components in React
+## 如何在React的函数组件中使用状态
 
-Up until now, we've seen how to use state in class-based components. Let's now see how to use it in functional components.
+到目前为止，我们已经了解了如何在类组件中使用状态。现在让我们看看如何在函数组件中使用它。
 
-Functional components are similar to class components, except that they do not have state and lifecycle methods. This is why you may have heard them called stateless functional components.
+函数组件与类组件类似，只是它们没有状态和生命周期方法。这就是为什么您可能听说过它们被称为无状态函数组件。
 
-These components only accept props and return some JSX.
+这些组件只接受道具并返回一些JSX。
 
-Functional components make code shorter and easier to understand and test.
+函数组件使代码更短，更容易理解和测试。
 
-They're also a little faster to execute, as they don't have lifecycle methods. They also don't have the extra data brought by the `React.Component` class which we extend in class based components.
+它们的执行速度也快一些，因为它们没有生命周期方法。在类组件中扩展的 `React.Component`  类 也没有为React带来的额外数据。
 
-Take a look at [this Code Sandbox Demo](https://codesandbox.io/s/sleepy-pascal-8ugh3?file=/src/index.js).
+看看这个[代码示例](https://codesandbox.io/s/sleepy-pascal-8ugh3?file=/src/index.js)。
 
-Here, we're loading a list of 20 random users from the [random user generator API](https://randomuser.me/), when the component is loaded inside the `componentDidMount` method like this:
+在这里，我们从[random user generator API](https://randomuser.me/)中加载一个包含20个随机用户的列表，当组件在 `componentDidMount`  方法中加载时，如下所示：
 
 ```js
 componentDidMount() {
@@ -694,7 +681,8 @@ componentDidMount() {
 }
 ```
 
-And once we've gotten those users, we're setting it to the `users` state and displaying it on the UI.
+一旦我们获取了那些用户，我们会设置它为 `users`  状态，并在UI上显示它。
+
 
 ```jsx
 {users.map((user) => (
@@ -702,9 +690,9 @@ And once we've gotten those users, we're setting it to the `users` state and dis
 ))}
 ```
 
-Here, we're passing all the data that we need to display to the `User` component.
+在这里，我们将需要显示的所有数据传递给 `User`  组件。
 
-The `User` component looks like this:
+ `User`  组件像这样：
 
 ```jsx
 const User = (props) => {
@@ -723,47 +711,46 @@ const User = (props) => {
 };
 ```
 
-**This `User` component is a functional component.**
+**这个`User`  组件是一个函数组件。** 
 
-A functional component is a function that starts with a capital letter and returns JSX.
+函数组件是以大写字母开头并返回JSX的函数。
 
-Always remember to start your component name with a capital letter like `User` whether it's a class-based component or a functional component. That's how React differentiates it from normal HTML elements when we use them like `<User />`.
+无论组件是类组件还是函数组件，都要记住以像 `User`  这样的大写字母开头。这就是React在使用 `<User />`等普通HTML元素时将其与普通HTML元素区别开来的原因。
 
-If we use `<user />`, React will check for the HTML element with the name `user`. Since there is no such HTML element, you'll not get the desired output.
+如果我们使用 `<user />` ，React将检查名称为user的HTML元素。因为没有这样的HTML元素，所以您不会得到想要的输出。
 
-In the above `User` functional component, we get the props passed to the component inside the `props` parameter of the function.
+在上面的 `User`  函数组件中，我们将道具传递给函数的道具参数中的组件。
 
-So instead of using `this.props` as in class components, we're using just `props`.
+所以和在类组件中不用 `this.props` 一样，我们只使用 `props` 。
 
-We never use the `this` keyword in functional components, so it avoids the various issues associated with `this` binding.
+我们从不在函数组件中使用 `this`  关键字，因此避免了与此绑定相关的各种问题。
 
-Therefore, functional components are preferred over class components.
+因此，函数组件优先于类组件。
 
-Once we have `props`, we're using the object destructuring syntax to get the values out of it and display on the UI.
+一旦我们有了 `props` ，我们就会使用对象解构语法来获取其中的值并显示在UI上。
 
-## How to Use State in React Hooks
+## 如何在React Hooks中使用状态
 
-Starting with version 16.8.0, React introduced hooks. And they've completely changed the way we write code in React. Using React Hooks we can use state and lifecycle methods inside functional components.
+从版本16.8.0开始，React引入了钩子。它们完全改变了我们在React中编写代码的方式。使用React hook，我们可以在函数组件中使用状态和生命周期方法。
 
-> React hooks are functional components with added state and lifecycle methods.
+>React钩子是添加了状态和生命周期方法的函数组件。
+所以现在,类组件和函数组件之间没有什么区别。
 
-So now, there is very little to no difference between class-based components and functional components.
+它们都可以有状态和生命周期方法。
 
-Both of them can have state and life cycle methods.
+但是,反应钩子现在喜欢写反应组件,因为它们使代码更短,更容易理解。
 
-But React hooks are now preferred for writing React components because they make the code shorter and easier to understand.
+现在,您很少会发现使用类组件编写的反应组件。
 
-You will rarely find React components written using class components nowadays.
+要使用React hook声明状态，我们需要使用 `useState`  钩子。
 
-To declare state using React Hooks, we need to use the `useState` hook.
+ `useState`  钩子接受一个参数，该参数是状态的初始值。
 
-The `useState` hook accepts a parameter which is the initial value of the state.
+在类组件中，状态总是一个对象。但是在使用 `useState`   时，可以提供任何值作为初始值，如number, string, boolean, object, array, null等。
 
-In class-based components, state is always an object. But when using `useState`, you can provide any value as the initial value like a number, string, boolean, object, array, null, and so on.
+ `useState`  钩子返回一个数组，它的第一个值是当前状态的值。第二个值是我们将用于更新状态的函数，类似于 `setState`  方法。
 
-The `useState` hook returns an array whose first value is the current value of the state. The second value is the function which we will use to update the state similar to the `setState` method.
-
-Let’s take an example of a class based component which uses state. We will convert it into a functional component using hooks.
+让我们举一个使用状态的类组件的例子。我们将使用钩子将其转换为函数组件。
 
 ```jsx
 import React from 'react';
@@ -793,9 +780,9 @@ class App extends React.Component {
 ReactDOM.render(<App />, document.getElementById('root'));
 ```
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/delicate-thunder-xdpri?file=/src/index.js) which is written using class components.
+这是使用类组件写的 [代码示例](https://codesandbox.io/s/delicate-thunder-xdpri?file=/src/index.js) 。
 
-Let’s convert the above code to use hooks.
+让我们将上面的代码转换为使用钩子。
 
 ```jsx
 import React, { useState } from "react";
@@ -817,31 +804,29 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-Here's a [Code Sandbox Demo](https://codesandbox.io/s/elegant-heyrovsky-3qco5?file=/src/index.js) which is written using React hooks.
+这是使用React钩子写的[代码示例](https://codesandbox.io/s/elegant-heyrovsky-3qco5?file=/src/index.js)。
 
-As you can see, using React hooks makes the code a lot shorter and easier to understand.
+如您所见，使用React钩子使代码更简短，更容易理解。
 
-Let’s understand the above code.
+让我们理解一下上面的代码：
 
--   To use the `useState` hook, we need to import it as we have done it in the first line.
--   Inside the App component, we are calling `useState` by passing `0` as the initial value and using destructuring syntax. We stored the array values returned by `useState` into `counter` and `setCounter` variables.
--   It's a common convention to prefix the function name used to update the state with the `set` keyword as in `setCounter`.
--   When we click the increment button, we are defining an inline function and calling the `setCounter` function by passing the updated counter value.
--   Note that as we already have the counter value, we have used that to increment the counter using `setCounter(counter + 1)`
--   Since there is a single statement in the inline on click handler, there is no need to move the code into a separate function. Though you can do that if the code inside the handler becomes complex.
-
-If you want to learn more details about `useState` and other React hooks (along with examples), then check out my [Introduction to React Hooks](https://levelup.gitconnected.com/an-introduction-to-react-hooks-50281fd961fe?source=friends_link&sk=89baff89ec8bc637e7c13b7554904e54) article.
+* 为了使用 `useState` 钩子，我们需要像第一行那样导入它。
+* 在App组件内部，我们通过传递0作为初始值并使用解构语法来调用 `useState`  。我们将 `useState`  返回的数组值存储到 `counter`和 `setCounter`  变量中。
+* 常用的约定是在用于更新状态的函数名前加上 `setCounter` 中的 `set`  关键字。
+* 当单击递增按钮时，我们定义了一个内联函数，并通过传递更新的计数器值来调用 `setCounter`  函数。
+* 注意，因为我们已经有了计数器的值，所以我们使用 `setCounter(counter + 1)` 来增加计数器的值。
+* 由于内联on click处理程序中只有一条语句，所以不需要将代码移动到单独的函数中。不过，如果处理程序内部的代码变得复杂，您可以这样做。
+如果您想了解关于useState和其他React hook的更多细节(以及示例)，请查看我的React hook介绍文章。
 
 ### Thanks for reading!
 
-Want to learn all ES6+ features in detail including let and const, promises, various promise methods, array and object destructuring, arrow functions, async/await, import and export and a whole lot more from scratch?
+想要详细了解所有ES6+特性，包括let和const，承诺，各种承诺方法，数组和对象解构，箭头函数，异步/等待，导入和导出，以及从头开始的很多更多?
 
-**Check out my [Mastering Modern JavaScript](https://modernjavascript.yogeshchavan.dev/) book. This book covers all the pre-requisites for learning React and helps you to become better at JavaScript and React.**
+请查阅我的《掌握现代JavaScript（[Mastering Modern JavaScript](https://modernjavascript.yogeshchavan.dev/)）》一书。这本书涵盖了学习React的所有先决条件，并帮助您在JavaScript和React方面变得更好。
 
-> Check out free preview contents of the book [here](https://www.freecodecamp.org/news/learn-modern-javascript/).
+>在 [这里](https://www.freecodecamp.org/news/learn-modern-javascript/) 查看这本书的免费预览内容。
+此外，您可以查看我的**免费**[介绍React Router](https://yogeshchavan.podia.com/react-router-introduction)课程，从零学习React Router。
 
-Also, you can check out my **free** [Introduction to React Router](https://yogeshchavan.podia.com/react-router-introduction) course to learn React Router from scratch.
-
-Want to stay up to date with regular content regarding JavaScript, React, Node.js? [Follow me on LinkedIn](https://www.linkedin.com/in/yogesh-chavan97/).
+想订阅 JavaScript, React, Node.js相关内容的日常更新？[在领英关注我](https://www.linkedin.com/in/yogesh-chavan97/)。
 
 [![banner](https://gist.github.com/myogeshchavan97/98ae4f4ead57fde8d47fcf7641220b72/raw/c3e4265df4396d639a7938a83bffd570130483b1/banner.jpg)](https://bit.ly/3w0DGum)

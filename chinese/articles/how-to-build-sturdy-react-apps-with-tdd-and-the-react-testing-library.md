@@ -148,35 +148,35 @@ yarn test --watch
 
 当然，为了验证应用程序是否按照我们的意图工作，我们可能还需要测试其他用例。覆盖率的数字只是你的老板在谈论其他同事时可以炫耀的东西。
 
-### **Liking Comments**
+### **点赞评论**
 
-How about we check that we can like a comment? This may be a good time to establish some concept of authentication within our application. But we’ll not jump too far just yet. Let’s first update our props factory to add an `auth` field along with IDs for the comments we generate.
+我们如何检查我们可以点赞评论呢？这可能是在我们的应用程序中建立某种身份验证概念的好时机。但我们现在还不会跳得太远。首先，让我们更新我们的props工厂，为我们生成的评论添加一个 `auth` 字段和ID。
 
-The user who is “authenticated” will have their `auth` property passed down through the application. Any actions that are relevant to whether they are authenticated will be noted.
+“认证”用户将通过应用程序传递其 `auth` 属性。与他们是否经过身份验证相关的任何操作都将被记录。
 
-In many applications, this property may contain some sort of access token or cookie that is sent up when making requests to the server.
+在许多应用程序中，此属性可能包含在向服务器发出请求时发送的某种访问令牌或cookie中。
 
-On the client, the presence of this property lets the application know that they can let the user view their profile or other protected routes.
+在客户端，此属性的存在使应用程序知道它们可以让用户查看其个人资料或其他受保护的路由。
 
-In this testing example, however, we will not fiddle too hard with authentication. Imagine a scenario like this: When you enter a chatroom, you give your screen name. From that point on, you are in charge of every comment that uses this screen name, despite who else signed in with that name.
+然而，在这个测试示例中，我们不会过多地处理身份验证。想象这样一个场景：当你进入聊天室时，你提供网名。从那时起，你将负责使用此网名的每个评论，尽管其他人也使用该名称登录。
 
-While it is not a great solution, even in this contrived example, we are only concerned with testing that the CommentFeed component behaves as it should. We are not concerned with **how** our users are logged in.
+虽然这不是一个很好的解决方案，即使在这个人为的例子中，我们只关心CommentFeed组件的行为是否符合预期。我们不关心**如何**让我们的用户登录。
 
-In other words, we may have a totally different login component that handles the authentication of a particular user, thus sending them through hoops of fire and fury in order to derive the almighty `auth` property that lets them wreak havoc in our application.
+换句话说，我们可能有一个完全不同的登录组件来处理特定用户的身份验证，从而使他们在火圈和愤怒中穿越，以获得让他们在我们的应用程序中肆虐的全能 `auth` 属性。
 
-Let’s “like” a comment. Add this next test case and then update the props factory to include `likeComment`.
+让我们“喜欢”一条评论。添加下一个测试用例，然后更新props工厂以包含`likeComment`。
 
-And now for the implementation, we’ll start by updating the Comment component to have a like button as well as a `data-testid` attribute so we can locate it.
+现在，对于实现，我们将首先更新Comment组件，使其具有一个点赞按钮以及一个`data-testid`属性，以便我们可以找到它。
 
-I put the test ID directly on the button so that we can immediately simulate a click on it without having to nest query selectors. I also attached an `onClick` handler to the button so that it calls the `onLike` function passed down to it.
+我将测试ID直接放在按钮上，以便我们可以立即模拟对它的点击，而无需嵌套查询选择器。我还在按钮上附加了一个onClick处理程序，以便它传递给它的onLike函数。
 
-Now we just add this class method to our CommentFeed:
+现在我们只需将此类方法添加到我们的CommentFeed：
 
-You may wonder why we don’t simply pass the `likeComment` prop directly to the Comment component. Why do we make it a class property?
+您可能想知道为什么我们不直接将`likeComment`通过prop传递给Comment组件。为什么我们要将其作为类属性？
 
-In this case, because it is rather simple, we don’t have to build this abstraction. In the future, we may decide to add other `onClick` handlers that, for example, handle analytics events or initiate a subscription to that post’s future comments.
+在这种情况下，因为它相当简单，我们不必构建这个抽象。将来，我们可能会决定添加其他onClick处理程序，例如处理分析事件或启动对该帖子评论的订阅。
 
-Being able to bundle multiple different function calls in the `handleLike` method of this container component has its advantages. We could also use this method to update the state of the component after a successful “Like” if we so choose.
+在此容器组件的 `handleLike` 方法中捆绑多个不同的函数调用具有其优势。如果我们愿意，在成功“点赞”后，我们还可以使用此方法更新组件的状态。
 
 ### **Disliking Comments**
 

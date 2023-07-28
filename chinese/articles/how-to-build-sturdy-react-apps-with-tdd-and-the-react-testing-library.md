@@ -72,31 +72,31 @@ yarn test --watch
 
 如果这些方法都无法满足您的需求， `render` 方法还返回映射到`container` 属性的DOM元素，因此您可以像`container.querySelector(‘body #root’)`这样使用它。
 
-### **The First Implementation Code**
+### **首次实现代码**
 
-Now, the implementation will look fairly simple. We just need to make sure that “Comment Feed” is in the component.
+现在，实现看起来相当简单。我们只需要确保“评论反馈”是一个组件。
 
-It could be worse — I mean, I was about to write this whole article while styling components. Fortunately, tests don’t care too much for styles, so we can focus on our application logic.
+它可能会更糟糕 - 我的意思是，我在编写整篇文章的过程中，还要编写组件的样式。幸运的是，测试并不太关心样式，所以我们可以专注于我们的应用逻辑。
 
-This next test will verify that we can render comments. But we don’t even have any comments, so let’s add in that component too. After the test though.
+接下来的测试将验证我们是否可以渲染评论。但是我们甚至还没有任何评论，所以让我们也添加一个组件。在测试之后。
 
-I’m also going to create a props object to store the data we may reuse in these tests.
+我还将创建一个props对象来存储我们可能在这些测试中重用的数据。
 
-In this case, I am checking that the number of comments is equal to the number of items passed into the CommentFeed. It’s trivial, but the failure of the test gives us the opportunity to create the Comment.js file.
+在这种情况下，我正在检查评论的数量是否等于传入CommentFeed的项目数量。这是无关紧要的，但测试失败给了我们创建Comment.js文件的机会。
 
-This green lights our test suite so we can proceed without fear. All hail TDD, the savior of our kind. It works when we give it an empty array, of course. But what if we give it some real objects?
+这使我们的测试套件变绿，所以我们可以毫无畏惧地继续。向TDD致敬，我们这个种族的救世主。当我们给它一个空数组时，它当然会工作。但是，如果我们给它一些真实的对象，会发生什么呢？
 
-We must update our implementation to actually render stuff. Simple enough now that know where we’re going, right?
+我们必须更新我们的实现以实际渲染内容。现在我们知道我们要去哪里，这很简单，对吧？
 
-Ah look at that, our test is once again passing. Here’s a neat shot of its beauty.
+啊，看看这个，我们的测试再次通过了。这是一个美妙的截图。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vGkFKnUkA9ms5PbaOWoQ_A.png)
 
-Notice how I never once said we should fire up our program with `yarn start`? We’re going to keep it that way for a while. The point is, you must feel the code with your mind.
+注意我从未说过我们应该用`yarn start`启动我们的程序吗?我们继续保持这种方式一段时间。关键是，你必须用你的头脑感受代码。
 
-The styling is just what’s on the outside — it’s what is on the inside that counts.
+样式只是外部表现 - 重要的是内部的东西。
 
-Just in case you want to start the app though, update index.js to the following:
+以防你想启动应用程序，将index.js更新为以下内容：
 
 ### **Add Comment Form**
 

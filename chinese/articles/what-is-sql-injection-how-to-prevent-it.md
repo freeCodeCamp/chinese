@@ -1,23 +1,23 @@
 > -   原文地址：[SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://www.freecodecamp.org/news/what-is-sql-injection-how-to-prevent-it/)
 > -   原文作者：Megan Kaczanowski
-> -   译者：
+> -   译者：herosql
 > -   校对者：
 
-![SQL Injection Tutorial - What is SQL Injection and How to Prevent it](https://images.unsplash.com/photo-1614064641938-3bbee52942c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDU4fHxjeWJlcnxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
+![SQL 注入教程——什么是 SQL 注入以及如何防止它](https://images.unsplash.com/photo-1614064641938-3bbee52942c7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwxMTc3M3wwfDF8c2VhcmNofDU4fHxjeWJlcnxlbnwwfHx8&ixlib=rb-1.2.1&q=80&w=2000)
 
-SQL injection is when you insert or inject a SQL query via input data from the client to the application.
+SQL 注入是当你通过客户端向应用程序输入数据来插入或注入一个 SQL 查询。
 
-Successful attacks allow an attacker to access sensitive data from the database, modify database data, potentially shut the database down or issue other admin commands, recover the contents of files, and occasionally issue commands to the operating system.
+成功的攻击使攻击者能够访问数据库中的敏感数据，修改数据库数据，可能关闭数据库或发出其他管理员命令，恢复文件内容，以及偶尔向操作系统发出命令。
 
-This type of attack is relatively easy to detect and exploit, so it's particularly important that any vulnerable systems are quickly remediated.
+这种类型的攻击相对容易检测和利用，因此迅速修复任何易受攻击的系统尤为重要。
 
-## How Does SQL Injection Work?
+## SQL 注入如何工作?
 
-SQL injection occurs when data enters a program from an untrusted source and that data is used to dynamically construct a SQL query.
+SQL 注入发生在数据从不受信任的来源输入程序，并且该数据被用于动态构建 SQL 查询时。
 
-Because SQL doesn't distinguish between the control plane and the data plane, the attacker can place a meta character (a character not interpreted as data, such as an underscore \_ which, in SQL, will read as a wildcard for a single character) into data input, then follow by entering SQL commands in the control plane.
+因为 SQL 无法区分控制平面和数据平面，攻击者可以在数据输入中插入元字符（一种不被解释为数据的字符，例如下划线 \_，在 SQL 中，它会被解释为单个字符的通配符），然后在控制平面中输入 SQL 命令。
 
-For example, in the comic below, if the string `Robert'); DROP TABLE Students;–-` were entered into a query which requested the studentName, then the query would become the following:
+例如，在下面的漫画中，如果字符串 `Robert'); DROP TABLE Students;–-` 被输入到一个请求 studentName 的查询中，那么查询将变为以下内容：
 
 ```
 AND studentName = 'Robert';
@@ -25,87 +25,85 @@ DROP TABLE Students;
 --'
 ```
 
-The drop table command is used to delete a table and all the rows in that table, while the pair of hyphens tells most database servers that the remainder of the statement should be treated as a comment (allowing the server to ignore the trailing ' left by the modified query).
+DROP TABLE 命令用于删除一个表及其所有行数据，而一对连字符（hyphens）告诉大多数数据库服务器，该语句的剩余部分应被视为注释（这使得服务器可以忽略修改后的查询中留下的尾随 '）。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-30-at-6.23.14-PM.png)
 
 https://xkcd.com/327/
 
-Many database servers allow for multiple queries to be executed at once, as long as they're separated by semicolons. If they do, this type of attack allows the attacker to execute several commands against a database (several database servers, including Oracle, do not allow this type of execution).
+许多数据库服务器允许一次执行多个查询，只要它们用分号隔开。如果允许这样做，这种攻击类型就允许攻击者对数据库执行多个命令（有些数据库服务器，包括 Oracle，不允许这种执行方式）。
 
-Preventing SQL injection is actually fairly simple \- either don't allow dynamic queries or prevent user supplied input which contains malicious SQL from affecting the logic of the query.
+防止 SQL 注入实际上相当简单 - 要么不允许动态查询，要么阻止包含恶意 SQL 的用户输入影响查询逻辑。
 
-## Other Types of SQL Injection
+## 其他类型的 SQL 注入
 
-There are a few other types of SQL injection to watch out for:
+还有一些其他类型的 SQL 注入需要注意：
 
-### Error\-Based SQL Injection
+### 错误\-基础 SQL 注入
 
-The attacker relies on detailed error messages from the database to learn about the database structure. In order to prevent this, only generic error messages should be shown.
+攻击者依赖于数据库的详细错误信息来了解数据库结构。为了防止这种情况，只应显示通用错误信息。
 
-### Blind SQL Injection
+### 盲注 SQL 注入
 
-Occurs when the app is vulnerable to SQL injection, but only shows generic error messages (rather than detailed error messages or the results of the query).
+当应用程序容易受到 SQL 注入攻击时，但只显示通用错误信息（而不是详细的错误信息或查询结果）。
 
-One way to access information is to use true/false queries and extract information one question at a time. Another option is to send a command which asks the database to wait a specific amount of time before returning a response.
+一种访问信息的方法是使用 true/false 查询并一次提取一个问题的信息。另一种选择是发送一个命令，要求数据库在返回响应之前等待特定的时间。
 
-Depending on how long the database takes to respond with an error message, the attacker can infer whether or not the command returned true or false.
+根据数据库返回错误信息所需的时间长短，攻击者可以推断命令是返回 true 还是 false。
+### UNION SQL 注入
 
-### UNION SQL Injection
+利用 UNION 操作符从数据库中的多个表中检索数据。
 
-Leverages the UNION operator to retrieve data from multiple tables in the database.
+### 带外 SQL 注入
 
-### Out of Band SQL Injection
+相对罕见，但当攻击者无法在提交命令的同一通道中接收到响应时会发生。
 
-Relatively uncommon, but occurs when an attacker can't receive a response to their command in the same channel they submitted it.
+相反，它依赖于服务器使用另一种协议（如 HTTP 或 DNS）来向攻击者的查询传递响应的能力。
 
-Instead, it relies upon a server's ability to use another protocol (like HTTP or DNS) to deliver the responses to an attacker's query.
+## 如何防止 SQL 注入攻击
 
-## How to Prevent SQL Injection Attacks
+### 预处理语句（带参数化查询）
 
-### Prepared Statements (with Parameterized Queries)
+参数化查询要求开发者定义所有 SQL 代码并稍后将每个参数传递给查询。然后，数据库可以区分代码和数据，而不受用户输入的影响。
 
-Parameterized queries require developers to define all SQL code and pass each parameter to the query later. Then, the database can distinguish between code and data, regardless of user input.
+例如，如果攻击者输入名字  `Robert'); DROP TABLE Students;–-` ，参数化查询将不再容易受到攻击，而是寻找一个与整个字符串 `Robert'); DROP TABLE Students;–-` 完全匹配的名字。
 
-For example, if an attacker entered the name `Robert'); DROP TABLE Students;–-` the parameterized query would no longer be vulnerable and would instead look for a name which literally matched the entire string `Robert'); DROP TABLE Students;–-`.
+预处理语句的优点是 SQL 代码保留在应用程序内，使其（大部分）独立于数据库。
 
-The benefit of prepared statements is that SQL code stays within the application, making it (mostly) database independent.
+在极少数情况下，这可能会影响性能。如果确实如此，开发者需要验证所有数据，或者使用针对数据库的转义程序转义所有用户提供的输入。
 
-This can harm performance, in rare cases. If it does, the developer will need to strongly validate all data or escape all user supplied input using an escaping routine specific to the database.
+### 存储过程
 
-### Stored Procedures
+存储过程是带参数的预创建 SQL 语句，不包括任何动态 SQL 生成（可以做，但不应该做）。为了设置存储过程，开发者需要为所需的输入构建带参数的 SQL 语句。
 
-Stored procedures are pre\-created SQL statements with parameters which do not include any dynamic SQL generation (it can be done, but should not be). In order to set up stored procedures, developers need to build SQL statements with parameters for any needed inputs.
+存储过程和预处理语句之间的区别在于，存储过程是在数据库中定义和存储的，但是从应用程序中调用的。
 
-The difference between stored procedures and prepared statements is that stored procedures are defined and stored within the database, but called from the application.
+此外，由于存储过程在某些 DBMS 中需要执行权限（默认情况下不可用），因此创建一个具有最少权限的单独帐户而不是授予所有者访问权限非常重要。
 
-Also, as stored procedures require execute rights in some DBMS (which are not available by default), it's important to create a separate account with least privileges rather than giving owner access.
+### 白名单输入验证
 
-### Allowlist Input Validation
+白名单输入验证将外部输入与一组已知的、批准的输入进行比较，对于不匹配的输入将失败。这只应用于不允许绑定变量的情况（SQL 语句中实际值的占位符）。
 
-Allowlist input validation checks external input against a set of known, approved inputs, failing any inputs which don't match. This should only be used in cases where bind variables are not allowed (the placeholders for actual values in SQL statements).
+白名单输入验证还可以作为在将输入传递给查询之前检测输入的备选方案。
+### 转义所有用户提供的输入
 
-Allowlist input validation can also be a back up option to detect input before it is passed to the query.
+只有在前面的选项不可行时，才应使用此方法，因为它无法防止所有 SQL 注入。仅对无法重写以使用前面推荐方法的遗留代码使用它。遗憾的是，这是一个非常针对特定数据库的实现。
 
-### Escaping All User Supplied Input
+每个 DBMS 都支持字符转义方案。如果使用正确的方案转义所有用户输入，DBMS 将能够区分输入和开发者编写的 SQL 代码。
 
-You should only use this method if the previous options aren't possible, as it cannot prevent all SQL injection. Only use it for legacy code which cannot be re\-written to use one of the earlier recommendations. Unfortunately, this is a very database\-specific implementation.
+### 最小权限
 
-Each DBMS supports a character\-escaping scheme. If all user input is escaped using the correctly scheme, the DBMS will be able to differentiate between the input and the SQL code written by developers.
+最小权限不是防御 SQL 注入的手段，而是一种限制任何攻击可能造成的损害的方法。
 
-### Least Privilege
+确保应用程序帐户只拥有所需的权限，而不是更多，可能会令人沮丧（给予它们 DBA 或管理员权限肯定更容易，但会提供更多的攻击面）。
 
-Least privilege isn't a defense against SQL injection, but is a way to limit the damage any attack can do.
+与其剥夺帐户的访问权限，不如从头开始，只授予确切需要的访问权限。
 
-Ensuring that application accounts only have as many permissions as they need and no more can be frustrating (it's definitely easier to give them DBA or admin rights, but provides significantly more attack surface).
+例如，如果一个帐户只需要只读访问权限，请确保它只对所需的表（甚至是表的一部分）具有只读访问权限。如果可以的话，避免授予数据库帐户创建或删除访问权限。每个用户/应用程序应该有一个单独的帐户。
 
-Rather than taking away access from accounts, start from the ground up, only granting exactly what access is needed.
+此外，审查数据库管理系统（DBMS）运行所在的操作系统帐户的权限。默认情况下，许多帐户具有非常强大的权限 - 将其更改为更合适的权限。
 
-For example, if an account needs read only access, make sure it has read only access to just the tables it needs (or even portions of a table). If you can, avoid granting create or delete access to database accounts. Each user/application should have a separate account.
-
-Additionally, review the privileges of the operating system account under which the database management system (DBMS) runs. By default, many run under very powerful accounts \- change that to a more appropriate privilege.
-
-### Sources/Further Reading:
+### 来源/进一步阅读：
 
 *   [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
 *   [PortSwigger SQL Injection](https://portswigger.net/web-security/sql-injection)

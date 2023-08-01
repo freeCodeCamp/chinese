@@ -73,7 +73,7 @@ To use Linters locally by running these commands shown below:
 cd ~/Desktop
 git clone https://github.com/freeCodeCamp/chinese.git
 cd chinese
-npm install
+npm install && npm run prepare
 # Every time
 npm test
 ```

@@ -3209,7 +3209,7 @@ What’s the implication of this?
 
 It is like having just one Cashier in the entire bank hall. How scalable is that?
 
-Even if the Cashier can do all the work effectively, it may be more manageable—and perhaps a better customer experience — to have more than one Cashier in the bank hall.
+Even if the Cashier can do all the work effectively, it may be more manageable—and perhaps a better customer experience— to have more than one Cashier in the bank hall.
 
 Someone’s got to attend to everybody, and it’s a lot of work for just one person!
 

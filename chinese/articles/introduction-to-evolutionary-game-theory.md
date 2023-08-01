@@ -99,7 +99,7 @@
 
 -   如果成本 _C_ 大于价值 _V_，则策略将会在平衡里共存。
 
-代入 _V_\=  4和 _C_\=6，我们发现  当2/  3的种群使用鹰策略时，出现了平衡。
+代入 _V_\=   4和 _C_\=6，我们发现   当2/   3的种群使用鹰策略时，出现了平衡。
 
 您可以通过在 Python 里模拟模型来测试这一点。
 
@@ -250,7 +250,7 @@ if __name__ == "__main__":
     main()
 ```
 
-看，这是个 _V_\=4，_C_\=  6的例子：
+看，这是个 _V_\=4，_C_\=   6的例子：
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F44100a89-d377-435e-bf11-97b046db5f32_1438x1048.png)
 

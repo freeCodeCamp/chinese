@@ -105,7 +105,7 @@ An important part of deploying such pipelines is to choose the right combination
 
 You might want to practice building a few different kinds of pipelines (Batch vs Streaming) and try to deploy those pipelines on the cloud.
 
-### 4\. Model training and experimentat — data science
+### 4\. Model training and experimenta — data science
 
 As soon as your data is prepared, you move on to the next step of training your ML model.
 

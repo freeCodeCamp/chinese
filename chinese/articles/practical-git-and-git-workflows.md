@@ -7,7 +7,7 @@
 
 每个人都说你应该学习 Git——你确实应该——但是说实话：Git 有点难。
 
-甚至在我近10年的软件开发生涯后，我还在学习 Git 的基本原理和如何更有效地使用 Git。
+甚至在我近 10 年的软件开发生涯后，我还在学习 Git 的基本原理和如何更有效地使用 Git。
 
 就在不久前我意识到我对一个已经使用了无数次的关键命令[存在最基本的误解](https://twitter.com/johnmosesman/status/1306255666718310401)。
 
@@ -56,7 +56,7 @@ https://www.atlassian.com/git/tutorials/using-branches/git-checkout
 
 首先，在开始前我们需要处理一些无聊的事情。
 
-如果你已经安装了 Git，注册了 GitHub 账户（或者使用任何其他的服务商，像是 GitLab 或者 Bitbucket），并且已经设置了SSH密匙的话，可以跳过这个章节。
+如果你已经安装了 Git，注册了 GitHub 账户（或者使用任何其他的服务商，像是 GitLab 或者 Bitbucket），并且已经设置了 SSH 密匙的话，可以跳过这个章节。
 
 否则，你将首先需要 [安装 Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
 
@@ -850,7 +850,7 @@ To github.com:johnmosesman/practical-git-tutorial.git
 
 GitHub 甚至在上面的输出中为我们提供了要访问的 URL： `https://github.com/johnmosesman/practical-git-tutorial/pull/new/chapter-3`
 
-> **几个注意事项：** 接下来的部分展示了 GitHub 的用户界面和拉取请求的流程，但这个流程应该与其他服务非常相似（如 GitLab，Bitbucket等）。 
+> **几个注意事项：** 接下来的部分展示了 GitHub 的用户界面和拉取请求的流程，但这个流程应该与其他服务非常相似（如 GitLab，Bitbucket 等）。 
 >
 > 另外请记住，我使用的是我自己的仓库，所以你在这里看到的一些 URL 会与你的不同。
 
@@ -859,7 +859,7 @@ GitHub 甚至在上面的输出中为我们提供了要访问的 URL： `https:/
 我们可以看到几个东西：
 
 -   一个指定拉取请求名称的地方（一个主题句，以便于理解这个拉取请求是关于什么的）
--   一个描述框，以解释我们所做的修改和我们想提供的任何其他背景信息（你也可以在这里添加图片、gif或视频）。
+-   一个描述框，以解释我们所做的修改和我们想提供的任何其他背景信息（你也可以在这里添加图片、gif 或视频）。
 -   而在所有这些下面是我们修改的文件的列表和其中的变化（差异）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2021-03-24-at-10.22.13-AM.png)

@@ -122,7 +122,7 @@ Here is the complete list of free courses, arranged by topic. Once you find a co
 13.  [Data Visualization with D3, JavaScript, React - Full Course \[2021\]](#data-visualization-with-d3-javascript-react-full-course-2021-) (freeCodeCamp)
 14.  [Next.js for Beginners - Full Course](#next-js-for-beginners-full-course) (freeCodeCamp)
 
-## **************Python Courses (****2****2********)**************
+## **************Python Courses (****2****2********)******
 
 1.  [Programming for Everybody (Getting Started with Python)](#programming-for-everybody-getting-started-with-python-) (University of Michigan)
 2.  [Python Data Structures](#python-data-structures) (University of Michigan)

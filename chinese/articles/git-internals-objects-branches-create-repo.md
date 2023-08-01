@@ -108,7 +108,7 @@
 
 由于这次 **提交** 不是第一次 **提交**，所以它有一个父节点——**commit A1337**。
 
-#### 回顾一下，我们介绍了三种 git 对象：
+#### 回顾一下，我们介绍了三种 git 对象
 
 - **blob**——文件的内容。
 - **树对象**——一个（由 **blob** 和 **树对象** 组成的）目录列表。
@@ -559,11 +559,11 @@ _[Omer Rosenbaum][6] 是 [Swimm][7] 的首席技术官、网络培训专家、Ch
 
 `git` 相关的资源已经有的很多了，我发现下面这些参考特别有用：
 
--   [Git Internals YouTube playlist — by Brief][10]
--   [Tim Berglund’s lecture — “Git From the Bits Up”][11]
--   [Git from the Bottom Up — by John Wiegley][12]
+-   [Git Internals YouTube playlist—by Brief][10]
+-   [Tim Berglund’s lecture—“Git From the Bits Up”][11]
+-   [Git from the Bottom Up—by John Wiegley][12]
 -   [as promised, docs: git for the confused][13]
--   [Git Internals — Git Objects — from Pro Git book, by Scott Chacon and Ben Straub][14]
+-   [Git Internals—Git Objects — from Pro Git book, by Scott Chacon and Ben Straub][14]
 
   
 

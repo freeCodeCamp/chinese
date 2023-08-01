@@ -105,7 +105,7 @@ For example, if an account needs read only access, make sure it has read only ac
 
 Additionally, review the privileges of the operating system account under which the database management system (DBMS) runs. By default, many run under very powerful accounts \- change that to a more appropriate privilege.
 
-### Sources/Further Reading:
+### Sources/Further Reading
 
 *   [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
 *   [PortSwigger SQL Injection](https://portswigger.net/web-security/sql-injection)

@@ -415,7 +415,7 @@ After this, if you run our scraper again, after processing all instructions, you
 
 Quotes to Scrape second page loaded after clicking the "Next" button
 
-## It’s Your Time! Here’s What You Can Do Next:
+## It’s Your Time! Here’s What You Can Do Next
 
 Congrats on reaching the end of this introduction to scraping with Puppeteer! 👏
 

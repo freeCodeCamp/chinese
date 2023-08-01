@@ -7,9 +7,9 @@
 
 by Brendan Massey
 
-恺撒密码是早期加密的一个著名实践。它会根据字母表上设定的密钥对句子进行重组加密。举个例子，密钥为3，取一个句子“I like to wear hats.”。
+恺撒密码是早期加密的一个著名实践。它会根据字母表上设定的密钥对句子进行重组加密。举个例子，密钥为 3，取一个句子“I like to wear hats.”。
 
-当这个句子使用密钥3加密后，它变成了：
+当这个句子使用密钥 3 加密后，它变成了：
 
 L olnh wr zhdu kdwv.
 
@@ -18,15 +18,15 @@ L olnh wr zhdu kdwv.
 虽然这是一个非常简单的加密案例，但对于学习编码的人来说，它是一个完美的练习项目。
 #### 理解加密
 
-为了实现这个代码，至少在JAVA里，你需要思考实际要做些什么。所以，让我们看看必要的编码步骤。
+为了实现这个代码，至少在 JAVA 里，你需要思考实际要做些什么。所以，让我们看看必要的编码步骤。
 
 Step 1: 识别句子中的字符。
 
 Step 2: 找到字符在字母表中的位置。
 
-Step 3: 识别字符位置+密钥key后的位置。
+Step 3: 识别字符位置+密钥 key 后的位置。
 
-注意\* 如果字符位置 + key > 26, 那么要从字母表的第1个字符继续循环。
+注意\* 如果字符位置 + key > 26, 那么要从字母表的 第  1个字符继续循环。
 
 Step 4: 用新字符代替原来的字符，生成一个新句子。
 
@@ -52,7 +52,7 @@ Step 1: 识别句子中的字符。
 
 为此，我们需要建立一张字母表用来查找字符。
 
-创建一个包含26个字母的变量“alphabet”。
+创建一个包含 26 个字母的变量“alphabet”。
 
 ```
 String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -61,7 +61,7 @@ String alphabet2 = alphabet.toLowerCase();
 
 Step 2: 找到字符在字母表中的位置。
 
-创建一个for循环来遍历消息中的每个字符。创建一个StringBuilder可以更便于我们来做这件事。
+创建一个 for 循环来遍历消息中的每个字符。创建一个 StringBuilder 可以更便于我们来做这件事。
 
 ```
 StringBuilder encrypted = new StringBuilder(message);
@@ -79,13 +79,13 @@ if (index != -1) {
 }    
 ```
 
-Step 3: 识别字符位置+密钥key后的位置。
+Step 3: 识别字符位置+密钥 key 后的位置。
 
 如果识别出字符是一个字母，那么我们要在修改后的字母表中找到它的位置。因此，我们需要建立一个修改后的字母表。
 
 Step 4: 用新字符代替原来的字符，生成一个新句子。
 
-一旦我们在修改后的字母中找到了相应的值，我们应该将它设置到我们创建的StringBuilder中的相同位置。
+一旦我们在修改后的字母中找到了相应的值，我们应该将它设置到我们创建的 StringBuilder 中的相同位置。
 
 ```
 public String Encryption(String input, int key){
@@ -106,7 +106,7 @@ public String Encryption(String input, int key){
 
 Step 5: 重复直到达到句子原来的长度。(循环)
 
-现在，我们已经检查了字符是否为大写，但我们还需要检查字符是否为小写。为此，我们需要访问之前建立的alphabet2。
+现在，我们已经检查了字符是否为大写，但我们还需要检查字符是否为小写。为此，我们需要访问之前建立的 alphabet2。
 
 ```
 index = alphabet2.indexOf(currChar);
@@ -120,7 +120,7 @@ if (index != -1) {
 
 Step 6: 返回结果
 
-现在，我们已经完成了For循环。剩下的就是退出循环并返回String。
+现在，我们已经完成了 For 循环。剩下的就是退出循环并返回 String。
 
 ```
 public String Encryption(String input, int key){
@@ -148,7 +148,7 @@ public String Encryption(String input, int key){
 
 Step 7: 调试。
 
-但是等等!不工作!encrypted不是一个字符串，它是一个StringBuilder，这个函数特别要求返回一个字符串!
+但是等等!不工作!encrypted 不是一个字符串，它是一个 StringBuilder，这个函数特别要求返回一个字符串!
 
 幸运的是，有一个非常简单的函数可以纠正这种疏忽。
 

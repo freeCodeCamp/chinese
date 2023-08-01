@@ -77,7 +77,7 @@
 > "如果一个生理学问题的难度是数学性质的，那么十个不懂数学的生理学家与一个不懂数学的生理学家走得恰好一样远。"
 
 
-1934年，韦纳和其他几位学者每月聚会，讨论涉及边界区域科学的论文。
+1934 年，韦纳和其他几位学者每月聚会，讨论涉及边界区域科学的论文。
 
 
 ![https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0fc008a7-d0e0-4d6f-83ed-ab2a320263e0_2048x1251](https://substackcdn.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fsubstack-post-media.s3.amazonaws.com%2Fpublic%2Fimages%2F0fc008a7-d0e0-4d6f-83ed-ab2a320263e0_2048x1251.jpeg)
@@ -104,19 +104,19 @@ _Norman Weiner_
 其中一位科学家是一位名叫[Warren McCulloch]（https://en.wikipedia.org/wiki/Warren_Sturgis_McCulloch）的神经生理学家。他从哈弗福德大学退学，去耶鲁大学学习哲学和心理学。在纽约参加一个科学会议时，他发现了同事写的关于生物反馈机制的论文。
 
 
-第二年，麦考洛克与他18岁的天才门生沃尔特-皮茨(Walter Pitts)合作，提出了一个关于大脑如何工作的理论。这一理论将有助于培养一种广泛的观念，即计算机和大脑的运作方式基本相同。
+第二年，麦考洛克与他 18 岁的天才门生沃尔特-皮茨(Walter Pitts)合作，提出了一个关于大脑如何工作的理论。这一理论将有助于培养一种广泛的观念，即计算机和大脑的运作方式基本相同。
 
 
-他们的结论是基于麦库洛赫对神经元处理二进制数的可能性的研究（计算机通过二进制数进行通信）。这一理论成为第一个人工神经网络模型的基础，该模型被命名为McCulloch-Pitts神经元（MCP）。
+他们的结论是基于麦库洛赫对神经元处理二进制数的可能性的研究（计算机通过二进制数进行通信）。这一理论成为第一个人工神经网络模型的基础，该模型被命名为 McCulloch-Pitts 神经元（MCP）。
 
 
-MCP成为创建第一个神经网络的基础，被称为[感知器]（https://edemgold.substack.com/p/the-history-of-ai）。感知器是由心理学家[弗兰克-罗森布拉特]（https://en.wikipedia.org/wiki/Frank_Rosenblatt）创造的。受大脑中突触的启发，他决定，既然人脑可以通过突触（神经元之间的交流）来处理和分类信息，那么数字计算机或许也可以通过神经网络做同样的事情。
+MCP 成为创建第一个神经网络的基础，被称为[感知器]（https://edemgold.substack.com/p/the-history-of-ai）。感知器是由心理学家[弗兰克-罗森布拉特]（https://en.wikipedia.org/wiki/Frank_Rosenblatt）创造的。受大脑中突触的启发，他决定，既然人脑可以通过突触（神经元之间的交流）来处理和分类信息，那么数字计算机或许也可以通过神经网络做同样的事情。
 
 
-感知器本质上将MCP神经元从一个人工神经元扩展为一个神经元网络。但不幸的是，感知器有一些技术挑战，限制了它的实际应用。这些限制中最明显的是它不能进行复杂的操作（比如在一个以上的项目之间进行分类--例如，感知器不能在猫、狗和鸟之间进行分类）。
+感知器本质上将 MCP 神经元从一个人工神经元扩展为一个神经元网络。但不幸的是，感知器有一些技术挑战，限制了它的实际应用。这些限制中最明显的是它不能进行复杂的操作（比如在一个以上的项目之间进行分类--例如，感知器不能在猫、狗和鸟之间进行分类）。
 
 
-1969年，[Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky)和[Seymour Papert](https://en.wikipedia.org/wiki/Seymour_Papert)出版了一本名为_Perceptron_的书，详细阐述了Perceptron的缺陷。正因为如此，人工神经网络的研究停滞不前，直到[Paul Werbos](https://en.wikipedia.org/wiki/Paul_Werbos)提出了反向传播法。
+1969 年，[Marvin Minsky](https://en.wikipedia.org/wiki/Marvin_Minsky)和[Seymour Papert](https://en.wikipedia.org/wiki/Seymour_Papert)出版了一本名为_Perceptron_的书，详细阐述了 Perceptron 的缺陷。正因为如此，人工神经网络的研究停滞不前，直到[Paul Werbos](https://en.wikipedia.org/wiki/Paul_Werbos)提出了反向传播法。
 
 
 逆向传播希望能够解决当时阻碍神经网络工业应用的复杂数据分类问题。它的灵感来自于突触可塑性--大脑修改神经元之间连接强度的方式，从而提高性能。
@@ -125,7 +125,7 @@ MCP成为创建第一个神经网络的基础，被称为[感知器]（https://e
 反向传播的设计是为了模仿大脑中通过一个称为权重调整的过程加强神经元之间的连接。
 
 
-尽管Paul Werbos提出了早期的建议，但反向传播的概念只是在[David Rumelheart](https://en.wikipedia.org/wiki/David_Rumelhart)、[Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton)和[Ronald Williams](https://en.wikipedia.org/wiki/Ronald_J._Williams)等研究人员发表论文证明其对训练神经网络的有效性后才得到广泛的采纳。
+尽管 Paul Werbos 提出了早期的建议，但反向传播的概念只是在[David Rumelheart](https://en.wikipedia.org/wiki/David_Rumelhart)、[Geoffrey Hinton](https://en.wikipedia.org/wiki/Geoffrey_Hinton)和[Ronald Williams](https://en.wikipedia.org/wiki/Ronald_J._Williams)等研究人员发表论文证明其对训练神经网络的有效性后才得到广泛的采纳。
 
 
 反向传播的实施导致了深度学习的产生，它为世界上大多数的人工智能系统提供了动力。
@@ -149,7 +149,7 @@ MCP成为创建第一个神经网络的基础，被称为[感知器]（https://e
 ###大脑如何工作--简化描述
 
 
-人类的大脑基本上是通过使用神经元来处理思想。一个神经元由3个核心部分组成：树突、轴突和躯干。
+人类的大脑基本上是通过使用神经元来处理思想。一个神经元由 3 个核心部分组成：树突、轴突和躯干。
 
 
 树突负责接收来自其他神经元的信号。躯干负责处理从树突收到的信息，而轴突负责将处理过的信息传递给下一个树突。
@@ -177,7 +177,7 @@ MCP成为创建第一个神经网络的基础，被称为[感知器]（https://e
 
 - **大脑模拟：**人工智能系统已被用于[模拟](https://www.frontiersin.org/articles/10.3389/fncom.2020.00016/full)人脑，研究其与物理世界的互动。例如，研究人员利用机器学习技术来模拟参与视觉处理的生物神经元的活动。其结果使人们对大脑如何处理视觉信息有了深入了解。
 
-- 对大脑的见解：**研究人员已经开始使用机器学习算法来分析和获得对大脑数据和fMRI扫描的见解。这些洞察力有助于识别模式和关系，否则这些模式和关系将被隐藏起来。这些见解可以帮助我们了解内部认知功能、记忆和决策。它们还有助于治疗大脑原生疾病，如阿尔茨海默氏症。
+- 对大脑的见解：**研究人员已经开始使用机器学习算法来分析和获得对大脑数据和 fMRI 扫描的见解。这些洞察力有助于识别模式和关系，否则这些模式和关系将被隐藏起来。这些见解可以帮助我们了解内部认知功能、记忆和决策。它们还有助于治疗大脑原生疾病，如阿尔茨海默氏症。
 
 
 ## ＃＃＃大脑启发的人工智能方法背后的核心原则
@@ -266,7 +266,7 @@ MCP成为创建第一个神经网络的基础，被称为[感知器]（https://e
 ###复杂度
 
 
-这是一个相当艰巨的挑战。大脑启发式人工智能的方法是基于对大脑的建模，并根据该模型构建人工智能系统。但人脑是一个固有的复杂系统，有1000亿个神经元和大约600万亿个突触连接（每个神经元平均有10000个与其他神经元的突触连接）。这些突触不断地以动态和不可预知的方式进行互动。
+这是一个相当艰巨的挑战。大脑启发式人工智能的方法是基于对大脑的建模，并根据该模型构建人工智能系统。但人脑是一个固有的复杂系统，有 1000 亿个神经元和大约 600 万亿个突触连接（每个神经元平均有 10000 个与其他神经元的突触连接）。这些突触不断地以动态和不可预知的方式进行互动。
 
 
 建立旨在模仿甚至超越这种复杂性的人工智能系统本身就是一个挑战，需要同样复杂的统计模型。
@@ -274,16 +274,16 @@ MCP成为创建第一个神经网络的基础，被称为[感知器]（https://e
 ###训练大型模型的数据要求
 
 
-Open AI的GPT 4，目前是基于文本的AI模型的最前沿，需要47G字节的数据。相比之下，其前身GPT3是在17千兆字节的数据上训练的，大约低了3个数量级。想象一下，GPT5将在多少数据上进行训练。
+Open AI 的 GPT 4，目前是基于文本的 AI 模型的最前沿，需要 47G 字节的数据。相比之下，其前身 GPT3 是在 17 千兆字节的数据上训练的，大约低了 3 个数量级。想象一下，GPT5 将在多少数据上进行训练。
 
 
-为了获得可接受的结果，大脑启发的人工智能系统需要大量的任务数据，特别是听觉和视觉任务。这就对数据收集管道的建立给予了很大的重视。例如，特斯拉有7.8亿英里的驾驶数据，其数据收集管道每10小时就会增加一百万英里。
+为了获得可接受的结果，大脑启发的人工智能系统需要大量的任务数据，特别是听觉和视觉任务。这就对数据收集管道的建立给予了很大的重视。例如，特斯拉有 7.8 亿英里的驾驶数据，其数据收集管道每 10 小时就会增加一百万英里。
 
 
 ###能源效率
 
 
-建立模仿大脑能效的大脑启发式人工智能系统是一个巨大的挑战。人类的大脑大约消耗20瓦特的能量。相比之下，特斯拉的自动驾驶仪，在专门的芯片上，每秒消耗约2500瓦，[它需要大约](https://ts2.space/en/exploring-the-environmental-footprint-of-gpt-4-energy-consumption-and-sustainability/#:~:text=The%20paper%20found%20the,hours%20(MWh)%20%20energy。) 7.5兆瓦时（MWh）来训练一个ChatGPT大小的人工智能模型。
+建立模仿大脑能效的大脑启发式人工智能系统是一个巨大的挑战。人类的大脑大约消耗 20 瓦特的能量。相比之下，特斯拉的自动驾驶仪，在专门的芯片上，每秒消耗约 2500 瓦，[它需要大约](https://ts2.space/en/exploring-the-environmental-footprint-of-gpt-4-energy-consumption-and-sustainability/#:~:text=The%20paper%20found%20the,hours%20(MWh)%20%20energy。) 7.5 兆瓦时（MWh）来训练一个 ChatGPT 大小的人工智能模型。
 
 
 ###可解释性问题

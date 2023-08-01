@@ -438,7 +438,7 @@ You’ll learn to flex your Redux muscles from a “known” concept such as Rea
 
 The React app we’ll be working with has been bootstrapped with `create-react-app`. Thus, the structure of the app is one you’re already used to.
 
-You may grab the repo from [Github][13] if you want to follow along — which I recommend.
+You may grab the repo from [Github][13] if you want to follow along—which I recommend.
 
 There’s an `index.js` entry file that renders an `<App />` component to the `DOM`.
 
@@ -1813,7 +1813,7 @@ Having the rendering of the `<App/>` wrapped within a function means we can now 
 store.subscribe(render);
 ```
 
-Where `render` is the entire render logic for the `<App />` — the one we just refactored.
+Where `render` is the entire render logic for the `<App />`—the one we just refactored.
 
 You understand what’s happening here, right?
 
@@ -1959,7 +1959,7 @@ There are two things you need to do.
 
 (ii) Handle the increase and decrease actions to actually affect the displayed time on the counter.
 
-### Chapter 4: Building Skypey: A More Advanced Example.
+### Chapter 4: Building Skypey: A More Advanced Example
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*itX4GQXZ8hrq5Fr7t3zQyg.png)
 
@@ -2500,7 +2500,7 @@ However, if `users` were stored in the state as an object, when retrieved and pa
 
 So, how do we resolve this?
 
-#### **Solution #1a**:
+#### **Solution #1a**
 
 Use `Lodash` for iterating over objects.
 
@@ -2515,7 +2515,7 @@ import _ from 'lodash';
 
 You call the `map` method on the `Lodash` object, `_.map()`. You pass in the object to be iterated over, and then pass in a callback function like you would with the default JavaScript `map` function.
 
-#### **Solution #1b:**
+#### **Solution #1b**
 
 Consider the usual way you’d map over an array to create a rendered list of users:
 
@@ -2608,7 +2608,7 @@ You don’t want a message sent yesterday, showing like it was sent today. Order
 
 So, how would you solve this?
 
-#### **Solution #2**:
+#### **Solution #2**
 
 Keep a separate array of IDs to denote order.
 
@@ -3197,7 +3197,7 @@ This is essentially the same as `{contacts: contacts}`.
 
 Hence, the `return state` statement within the reducer will return this value, `{contacts: contacts}` as the initial state of the application.
 
-At this point, the app now works — just like before. The only difference here is that the initial state of the application is now managed by the Reducer.
+At this point, the app now works—just like before. The only difference here is that the initial state of the application is now managed by the Reducer.
 
 Let’s keep refactoring.
 
@@ -3209,7 +3209,7 @@ What’s the implication of this?
 
 It is like having just one Cashier in the entire bank hall. How scalable is that?
 
-Even if the Cashier can do all the work effectively, it may be more manageable — and perhaps a better customer experience — to have more than one Cashier in the bank hall.
+Even if the Cashier can do all the work effectively, it may be more manageable—and perhaps a better customer experience — to have more than one Cashier in the bank hall.
 
 Someone’s got to attend to everybody, and it’s a lot of work for just one person!
 
@@ -3237,7 +3237,7 @@ However, consider the state object of the more complex Skypey application:
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*FWFzkdKwxIVln7PQFsLKxQ.png)
 
-Having a single reducer manage the entire state object is doable — but not the best approach.
+Having a single reducer manage the entire state object is doable—but not the best approach.
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*aD_wEZMqWfAOBtZpcWmE3g.png)
 
@@ -4195,7 +4195,7 @@ Remember that the messages passed into `Chats` are specifically the messages for
 
 Whereas `state.messages` holds all the messages for every user contact, `state.messages[activeUserId]` will fetch the messages for the active user.
 
-This is why every conversation is mapped to the user id of the user — for easy retrieval as we have done.
+This is why every conversation is mapped to the user id of the user—for easy retrieval as we have done.
 
 Grab the active user’s messages and pass them as props in `Chats`.
 
@@ -5092,7 +5092,7 @@ The following section is an excerpt from, [Understanding Redux 2][32]_._
 >
 > _Setting up the Reducer, subscribing to the Store, listening and re-rendering upon state changes …… we can reduce some of the hassles._
 >
-> _Like Internet banking brings a breath of fresh air to the process of withdrawing money from your account, ‘bindings’ such as React-redux also make it slightly easier to use Redux with React — without performance concerns._
+> _Like Internet banking brings a breath of fresh air to the process of withdrawing money from your account, ‘bindings’ such as React-redux also make it slightly easier to use Redux with React—without performance concerns._
 
 How sweet.
 

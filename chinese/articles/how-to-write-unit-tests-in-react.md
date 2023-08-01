@@ -43,7 +43,7 @@ Any test in React, no matter how complicated, follows this structure:
 
 ## How to Set Up Our Project
 
-First, create the app with `create-react-app`. We’ll be using [Jest](https://jestjs.io/docs/getting-started) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). Both of them come pre - installed with `create-react-app`. You can see what it looks like here:
+First, create the app with `create-react-app`. We’ll be using [Jest](https://jestjs.io/docs/getting-started) and [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/). Both of them come pre-installed with `create-react-app`. You can see what it looks like here:
 
 ```javascript
 "dependencies": {

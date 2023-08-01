@@ -5,109 +5,109 @@
 
 ![The Python Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/book.png)
 
-这本Python编程手册遵循“80/20定律”：使用20%的时间学习80%的内容。
+这本 Python 编程手册遵循“80/20 定律”：使用 20%的时间学习 80%的内容。
 
-我认为这种方法可以为学习者提供一个对Python全面的了解。
+我认为这种方法可以为学习者提供一个对 Python 全面的了解。
 
-本手册并没有涵盖与Python相关的全部内容。它专注于这门编程语言的核心主题，并且试图简化那些复杂的内容。
+本手册并没有涵盖与 Python 相关的全部内容。它专注于这门编程语言的核心主题，并且试图简化那些复杂的内容。
 
-我希望这本手册可以帮助您实现：**学习Python的基础**
+我希望这本手册可以帮助您实现：**学习 Python 的基础**
 
-> Note: 您可以获取这本手册的[PDF、ePub或者Mobi版本](https://flaviocopes.com/page/python-handbook/)
+> Note: 您可以获取这本手册的[PDF、ePub 或者 Mobi 版本](https://flaviocopes.com/page/python-handbook/)
 
 Enjoy it!
 
 <h2 id="summary">目录</h2>
 
--   [Python介绍](#introduction-to-python)
--   [如何安装Python](#how-to-install-python)
--   [如何运行Python程序](#how-to-run-python-programs)
+-   [Python 介绍](#introduction-to-python)
+-   [如何安装 Python](#how-to-install-python)
+-   [如何运行 Python 程序](#how-to-run-python-programs)
 -   [Python 2 vs Python 3](#python2-vs-python3)
--   [Python基础](#python-basics)
--   [Python数据类型](#data-types-in-python)
--   [Python运算符](#operators)
--   [Python三元运算符](#the-ternary-operator-in-python)
--   [Python字符串](#strings-in-python)
--   [Python布尔值](#booleans-in-python)
--   [Python数字](#numbers-in-python)
--   [Python常量](#constants-in-python)
--   [Python枚举](#enums-in-python)
--   [Python用户输入](#user-input-in-python)
--   [Python控制语句](#control-statements-in-python)
--   [Python列表](#lists-in-python)
--   [Python元组](#tuples-in-python)
--   [Python字典](#dictionaries-in-python)
--   [Python集合](#sets-in-python)
--   [Python函数](#functions-in-python)
--   [Pytho对象](#objects-in-python)
--   [Python循环](#loops-in-python)
--   [Python类](#classes-in-python)
--   [Python模块](#modules-in-python)
--   [Python标准库](#the-python-standard-library)
--   [Python PEP8风格指导](#the-pep8-python-style-guide)
--   [Python代码调试](#debugging-in-python)
--   [Python变量作用域](#variable-scope-in-python)
--   [Python接收从命令行传入的参数](#how-to-accept-arguments-from-the-command-line-in-python)
--   [Python的Lambda函数](#lambda-functions-in-python)
--   [Python递归](#recursion-in-python)
--   [Python嵌套函数](#nested-functions-in-python)
--   [Python闭包](#closures-in-python)
--   [Python装饰器](#decorators-in-python)
--   [Python文档字符串](#docstrings-in-python)
--   [Python反射](#introspection-in-python)
--   [Python注解](#annotations-in-python)
--   [Python异常](#exceptions-in-python)
--   [Python中with语句](#the-with-statement-in-python)
--   [Python如何使用pip安装第三方包](#how-to-install-3rd-party-packages-in-python-using-pip)
--   [Python列表推导式](#list-comprehensions-in-python)
--   [Python多态](#polymorphism-in-python)
--   [Python运算符重载](#operator-overloading-in-python)
--   [Python虚拟环境](#virtual-environments-in-python)
+-   [Python 基础](#python-basics)
+-   [Python 数据类型](#data-types-in-python)
+-   [Python 运算符](#operators)
+-   [Python 三元运算符](#the-ternary-operator-in-python)
+-   [Python 字符串](#strings-in-python)
+-   [Python 布尔值](#booleans-in-python)
+-   [Python 数字](#numbers-in-python)
+-   [Python 常量](#constants-in-python)
+-   [Python 枚举](#enums-in-python)
+-   [Python 用户输入](#user-input-in-python)
+-   [Python 控制语句](#control-statements-in-python)
+-   [Python 列表](#lists-in-python)
+-   [Python 元组](#tuples-in-python)
+-   [Python 字典](#dictionaries-in-python)
+-   [Python 集合](#sets-in-python)
+-   [Python 函数](#functions-in-python)
+-   [Pytho 对象](#objects-in-python)
+-   [Python 循环](#loops-in-python)
+-   [Python 类](#classes-in-python)
+-   [Python 模块](#modules-in-python)
+-   [Python 标准库](#the-python-standard-library)
+-   [Python PEP8 风格指导](#the-pep8-python-style-guide)
+-   [Python 代码调试](#debugging-in-python)
+-   [Python 变量作用域](#variable-scope-in-python)
+-   [Python 接收从命令行传入的参数](#how-to-accept-arguments-from-the-command-line-in-python)
+-   [Python 的 Lambda 函数](#lambda-functions-in-python)
+-   [Python 递归](#recursion-in-python)
+-   [Python 嵌套函数](#nested-functions-in-python)
+-   [Python 闭包](#closures-in-python)
+-   [Python 装饰器](#decorators-in-python)
+-   [Python 文档字符串](#docstrings-in-python)
+-   [Python 反射](#introspection-in-python)
+-   [Python 注解](#annotations-in-python)
+-   [Python 异常](#exceptions-in-python)
+-   [Python 中 with 语句](#the-with-statement-in-python)
+-   [Python 如何使用 pip 安装第三方包](#how-to-install-3rd-party-packages-in-python-using-pip)
+-   [Python 列表推导式](#list-comprehensions-in-python)
+-   [Python 多态](#polymorphism-in-python)
+-   [Python 运算符重载](#operator-overloading-in-python)
+-   [Python 虚拟环境](#virtual-environments-in-python)
 -   [总结](#conclusion)
 
 <h2 id="introduction-to-python">Python介绍</h2>
 
-Python正在逐步“占领”编程世界。它的受欢迎度和使用度正在以计算机历史中前所未有的方式实现增长。
+Python 正在逐步“占领”编程世界。它的受欢迎度和使用度正在以计算机历史中前所未有的方式实现增长。
 
-Python在各种应用场景下都表现出色——**Shell 脚本**、**自动化的任务**和**Web 开发**只是其基本的应用。
+Python 在各种应用场景下都表现出色——**Shell 脚本**、**自动化的任务**和**Web 开发**只是其基本的应用。
 
-Python是做**数据分析**和**机器学习**的首选语言，但是它也可以用来做游戏或者在嵌入式设备上工作。
+Python 是做**数据分析**和**机器学习**的首选语言，但是它也可以用来做游戏或者在嵌入式设备上工作。
 
-最重要的是，Python是世界上多所大学介绍**计算机科学课程**时选择的编程语言。
+最重要的是，Python 是世界上多所大学介绍**计算机科学课程**时选择的编程语言。
 
-许多学生选择Python作为自己的第一门编程语言来学习。很多人正在学习Python，将来还会有更多人学习它。并且对于学习者中的大部分人来说，Python将是他们唯一需要的编程语言。
+许多学生选择 Python 作为自己的第一门编程语言来学习。很多人正在学习 Python，将来还会有更多人学习它。并且对于学习者中的大部分人来说，Python 将是他们唯一需要的编程语言。
 
-基于其独特的情况，Python在未来很有可能会更快地增长。
+基于其独特的情况，Python 在未来很有可能会更快地增长。
 
-Python这门编程语言的特点是简单易上手，表示丰富，非常直接，易于理解。
+Python 这门编程语言的特点是简单易上手，表示丰富，非常直接，易于理解。
 
-Python的生态系统非常庞大，可能需要一个图书馆才能容纳你所想象到的一切。
+Python 的生态系统非常庞大，可能需要一个图书馆才能容纳你所想象到的一切。
 
-因为其直观的语法、庞大的社区和充满活力的生态系统，Python是一门适合编程初学者的高级编程语言。
+因为其直观的语法、庞大的社区和充满活力的生态系统，Python 是一门适合编程初学者的高级编程语言。
 
-Python也受到不同领域的专家赞赏。
+Python 也受到不同领域的专家赞赏。
 
-从技术上讲，Python是一种解释型语言，它不像编译型语言（例如C或Java）那样具有中间编译阶段。
+从技术上讲，Python 是一种解释型语言，它不像编译型语言（例如 C 或 Java）那样具有中间编译阶段。
 
-和许多解释型语言一样，Python是动态类型的，这意味着您不必声明所使用的变量的类型，并且变量不必为特定类型。
+和许多解释型语言一样，Python 是动态类型的，这意味着您不必声明所使用的变量的类型，并且变量不必为特定类型。
 
 这有利有弊。特别是，您编写程序的速度会更快，但另一方面，您从工具中获得防止出现可能错误的帮助会较少。这意味着您只有在执行程序时才能发现某些问题。
 
-Python支持多种编程范式，包括面向过程编程、面向对象编程和函数式编程。它足够灵活，可以适应不同的需求。
+Python 支持多种编程范式，包括面向过程编程、面向对象编程和函数式编程。它足够灵活，可以适应不同的需求。
 
-自从Python由Guido van Rossum于1991年创建后，它便越来越受欢迎——尤其是在过去5年中，正如这张Google趋势信息图所示：
+自从 Python 由 Guido van Rossum 于 1991 年创建后，它便越来越受欢迎——尤其是在过去 5 年中，正如这张 Google 趋势信息图所示：
 
 ![Screen-Shot-2020-11-09-at-19.22.38](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-09-at-19.22.38.png)
 
-开始Python编程非常容易。您只需从[python.org](https://www.python.org/)选择适用于Windows、macOS或Linux的官方软件包安装，然后就可以开始使用Python了。
+开始 Python 编程非常容易。您只需从[python.org](https://www.python.org/)选择适用于 Windows、macOS 或 Linux 的官方软件包安装，然后就可以开始使用 Python 了。
 
-如果您是编程新手，我将会在接下来的内容中引导您从零开始成为一名Python程序员。
+如果您是编程新手，我将会在接下来的内容中引导您从零开始成为一名 Python 程序员。
 
-即使您目前是一名专门研究另一种编程语言的程序员，Python也值得您了解，因为我认为它只会继续发展壮大。
+即使您目前是一名专门研究另一种编程语言的程序员，Python 也值得您了解，因为我认为它只会继续发展壮大。
 
-像C++和Rust这样相对于Python来说更“低级”的语言，对于专业程序员来说可能很棒，但它们从一开始就令人生畏，而且需要很长时间才能掌握。
+像 C++和 Rust 这样相对于 Python 来说更“低级”的语言，对于专业程序员来说可能很棒，但它们从一开始就令人生畏，而且需要很长时间才能掌握。
 
-另一方面，Python是一种适用于任何人——学生、使用Excel完成日常工作的人、科学家等等——的编程语言。
+另一方面，Python 是一种适用于任何人——学生、使用 Excel 完成日常工作的人、科学家等等——的编程语言。
 
 **这是每个对编程感兴趣的人都应该首先学习的语言**。
 
@@ -117,13 +117,13 @@ Python支持多种编程范式，包括面向过程编程、面向对象编程�
 
 ![Screen-Shot-2020-11-09-at-13.57.36-1](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-09-at-13.57.36-1.png)
 
-请确保遵循关于您电脑所用的操作系统的特定说明。在macOS上，您可以在[https://flaviocopes.com/python-installation-macos/](https://flaviocopes.com/python-installation-macos/) 上找到详细指南。
+请确保遵循关于您电脑所用的操作系统的特定说明。在 macOS 上，您可以在[https://flaviocopes.com/python-installation-macos/](https://flaviocopes.com/python-installation-macos/) 上找到详细指南。
 
 <h2 id="how-to-run-python-programs">如何运行Python程序</h2>
 
-您可以使用几种不同的方式来运行Python程序。
+您可以使用几种不同的方式来运行 Python 程序。
 
-特别地，使用交互式环境（输入Python代码后，便立即执行它），和将Python程序保存到文件中，然后再执行它，这二者之间存在区别。
+特别地，使用交互式环境（输入 Python 代码后，便立即执行它），和将 Python 程序保存到文件中，然后再执行它，这二者之间存在区别。
 
 让我们从交互式环境开始。
 
@@ -131,9 +131,9 @@ Python支持多种编程范式，包括面向过程编程、面向对象编程�
 
 ![Screen-Shot-2020-11-10-at-13.44.07](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-13.44.07.png)
 
-这是Python REPL（交互式解释器，即读取-评估-打印-循环）。
+这是 Python REPL（交互式解释器，即读取-评估-打印-循环）。
 
-注意`>>>`符号和之后的光标。，您可以在此处输入任何Python代码，然后按 `enter` 键运行它。
+注意`>>>`符号和之后的光标。，您可以在此处输入任何 Python 代码，然后按 `enter` 键运行它。
 
 例如尝试定义一个新变量
 
@@ -149,19 +149,19 @@ print(name)
 
 ![Screen-Shot-2020-11-10-at-14.11.57](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.11.57.png)
 
-> 请注意：在REPL中，您也可以只输入`name`，然后按 `enter` 键，您会看到`name`的值。但是在写到文件中的程序里，如果这样做，您将看不到任何输出——您需要使用 `print()` 代替这种写法。
+> 请注意：在 REPL 中，您也可以只输入`name`，然后按 `enter` 键，您会看到`name`的值。但是在写到文件中的程序里，如果这样做，您将看不到任何输出——您需要使用 `print()` 代替这种写法。
 
-您在此处编写的任何Python代码行都将立即执行。
+您在此处编写的任何 Python 代码行都将立即执行。
 
-输入`quit()`可以退出这个Python REPL。
+输入`quit()`可以退出这个 Python REPL。
 
-您可以使用Python自动安装的IDLE应用程序使用相同的交互式环境：
+您可以使用 Python 自动安装的 IDLE 应用程序使用相同的交互式环境：
 
 ![Screen-Shot-2020-11-10-at-14.13.25](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.13.25.png)
 
 这对您来说可能更方便，因为与使用终端相比，使用鼠标可以更轻松地四处移动和复制/粘贴。
 
-以上是Python默认附带的基础内容。不过我建议您安装[IPython](https://ipython.org/)，它可能是您能找到的最好的Python命令行REPL应用程序。
+以上是 Python 默认附带的基础内容。不过我建议您安装[IPython](https://ipython.org/)，它可能是您能找到的最好的 Python 命令行 REPL 应用程序。
 
 使用下面的命令安装它
 
@@ -169,13 +169,13 @@ print(name)
 pip install ipython
 ```
 
-上面的命令需要确保pip可执行文件的路径在您的环境变量中，安装好之后运行`ipython`：
+上面的命令需要确保 pip 可执行文件的路径在您的环境变量中，安装好之后运行`ipython`：
 
 ![Screen-Shot-2020-11-11-at-09.36.29](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-11-at-09.36.29.png)
 
-`ipython`是另一个让您使用Python REPL的接口，并提供了一些不错的功能，如语法突出显示、代码完成以及等等。
+`ipython`是另一个让您使用 Python REPL 的接口，并提供了一些不错的功能，如语法突出显示、代码完成以及等等。
 
-运行Python程序的第二种方法是将Python程序代码写入文件，例如`program.py`：
+运行 Python 程序的第二种方法是将 Python 程序代码写入文件，例如`program.py`：
 
 ![Screen-Shot-2020-11-10-at-14.01.24](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.01.24.png)
 
@@ -183,15 +183,15 @@ pip install ipython
 
 ![Screen-Shot-2020-11-10-at-14.01.32](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.01.32.png)
 
-> 请注意，我们约定使用`.py`扩展名保存Python程序文件。
+> 请注意，我们约定使用`.py`扩展名保存 Python 程序文件。
 
 在这种情况下，程序作为一个整体被执行，而不是一次运行一行。而这就是我们运行程序的典型方式。
 
-我们使用REPL进行快速的代码原型设计和学习。
+我们使用 REPL 进行快速的代码原型设计和学习。
 
-在Linux和macOS上，也可以将Python程序文件转换为shell脚本，方法是在文件最前面加上一个特殊行，用来指示使用哪个可执行文件来运行它。
+在 Linux 和 macOS 上，也可以将 Python 程序文件转换为 shell 脚本，方法是在文件最前面加上一个特殊行，用来指示使用哪个可执行文件来运行它。
 
-在我的系统上，Python解释器的路径是`/usr/bin/python3`，所以我在第一行输入`#!/usr/bin/python3`：
+在我的系统上，Python 解释器的路径是`/usr/bin/python3`，所以我在第一行输入`#!/usr/bin/python3`：
 
 ![Screen-Shot-2020-11-10-at-14.17.26](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.17.26.png)
 
@@ -211,15 +211,15 @@ chmod u+x program.py
 
 这在您编写与终端交互的脚本时特别有用。
 
-我们还有许多其它方式可以运行Python程序。
+我们还有许多其它方式可以运行 Python 程序。
 
-一种方法是使用VS Code，尤其是Microsoft官方的Python扩展插件：
+一种方法是使用 VS Code，尤其是 Microsoft 官方的 Python 扩展插件：
 
 ![Screen-Shot-2020-11-10-at-14.23.32](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.23.32.png)
 
-安装好此扩展插件后，您将可以使用Python代码自动补全、语法错误检查、自动格式化和使用`pylint`进行代码检查，以及一些特殊命令，包括：
+安装好此扩展插件后，您将可以使用 Python 代码自动补全、语法错误检查、自动格式化和使用`pylint`进行代码检查，以及一些特殊命令，包括：
 
-**Python: Start REPL**  用于在VS Code的集成终端中运行REPL：
+**Python: Start REPL**  用于在 VS Code 的集成终端中运行 REPL：
 
 ![Screen-Shot-2020-11-10-at-14.31.36](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.31.36.png)
 
@@ -231,19 +231,19 @@ chmod u+x program.py
 
 ![Screen-Shot-2020-11-10-at-14.30.02-1](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.30.02-1.png)
 
-以及很多其它命令。只需打开命令面板（查看 -> 命令面板，或按下Cmd+Shift+P）并输入`python`，即可查看所有与Python相关的命令：
+以及很多其它命令。只需打开命令面板（查看 -> 命令面板，或按下 Cmd+Shift+P）并输入`python`，即可查看所有与 Python 相关的命令：
 
 ![Screen-Shot-2020-11-10-at-14.30.02](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.30.02.png)
 
-另一种轻松运行Python代码的方法是repl.it，这是一个非常不错的网站，它提供了一个编程环境，您可以使用任何语言创建并运行程序，包括Python：
+另一种轻松运行 Python 代码的方法是 repl.it，这是一个非常不错的网站，它提供了一个编程环境，您可以使用任何语言创建并运行程序，包括 Python：
 
 ![Screen-Shot-2020-11-10-at-14.33.58](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.33.58.png)
 
-使用这个网站要先注册（免费注册），然后在“create a repl”下单击Python：
+使用这个网站要先注册（免费注册），然后在“create a repl”下单击 Python：
 
 ![Screen-Shot-2020-11-10-at-14.46.34](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.46.34.png)
 
-然后您将看到一个带有`main.py`文件的编辑器，这样就已经准备好了编写Python代码：
+然后您将看到一个带有`main.py`文件的编辑器，这样就已经准备好了编写 Python 代码：
 
 ![Screen-Shot-2020-11-10-at-14.47.15](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.47.15.png)
 
@@ -251,7 +251,7 @@ chmod u+x program.py
 
 ![Screen-Shot-2020-11-10-at-14.48.09](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.48.09.png)
 
-我认为repl.it很方便，因为：
+我认为 repl.it 很方便，因为：
 
 - 您只需分享链接即可轻松分享代码
 - 它允许多人处理相同的代码
@@ -261,23 +261,23 @@ chmod u+x program.py
 
 <h2 id="python2-vs-python3">Python 2 vs Python 3</h2>
 
-我们一开始就应该讨论的一个关键主题是Python 2与Python 3。
+我们一开始就应该讨论的一个关键主题是 Python 2 与 Python 3。
 
-Python 3于2008年被推出，其后作为主要的Python版本一直在被持续开发，而Python 2则通过错误修复和安全补丁进行维护，直到2020年初。
+Python 3 于 2008 年被推出，其后作为主要的 Python 版本一直在被持续开发，而 Python 2 则通过错误修复和安全补丁进行维护，直到 2020 年初。
 
-在那一天，对Python 2的支持停止。
+在那一天，对 Python 2 的支持停止。
 
-许多程序仍然使用Python 2编写，并且组织仍在积极致力于这些程序，因为迁移到Python 3并非易事，升级这些程序需要大量工作。并且重要文件的大型迁移总是会引入新的bug。
+许多程序仍然使用 Python 2 编写，并且组织仍在积极致力于这些程序，因为迁移到 Python 3 并非易事，升级这些程序需要大量工作。并且重要文件的大型迁移总是会引入新的 bug。
 
-但是对应新的代码程序，除非您必须遵守组织设置的强制使用Python 2的规则，否则应使用Python 3进行编写。
+但是对应新的代码程序，除非您必须遵守组织设置的强制使用 Python 2 的规则，否则应使用 Python 3 进行编写。
 
 > 本书重点介绍 Python 3。
 
 <h2 id="python-basics">Python 基础</h2>
 
-### Python中的变量
+### Python 中的变量
 
-我们可以通过使用赋值运算符`=`为“标签”赋值，从而创建一个新的Python变量。
+我们可以通过使用赋值运算符`=`为“标签”赋值，从而创建一个新的 Python 变量。
 
 在下面这个示例中，我们将字符串`"Roger"`分配给变量`name`：
 
@@ -310,11 +310,11 @@ test!
 name%
 ```
 
-除此之外，任何输入都是有效的变量名，除非它是Python的**关键字**，如`for`、`if`、`while`、`import`等就是关键字。
+除此之外，任何输入都是有效的变量名，除非它是 Python 的**关键字**，如`for`、`if`、`while`、`import`等就是关键字。
 
-无需记住它们，因为如果您使用其中任何一个关键字作为变量名，Python都会提醒您，并且您会逐渐视它们为Python语法的一部分。
+无需记住它们，因为如果您使用其中任何一个关键字作为变量名，Python 都会提醒您，并且您会逐渐视它们为 Python 语法的一部分。
 
-### Python表达式和语句
+### Python 表达式和语句
 
 我们可以_构造_任意一个有返回值的表达式代码，例如
 
@@ -323,7 +323,7 @@ name%
 "Roger"
 ```
 
-另一方面，语句是对值的操作。例如，下面是2个语句：
+另一方面，语句是对值的操作。例如，下面是 2 个语句：
 
 ```python
 name = "Roger"
@@ -338,7 +338,7 @@ name = "Roger"; print(name)
 
 ### 注释
 
-在Python程序中，井号之后的所有内容都被忽略，并被视为注释：
+在 Python 程序中，井号之后的所有内容都被忽略，并被视为注释：
 
 ```python
 #this is a commented line
@@ -346,9 +346,9 @@ name = "Roger"; print(name)
 name = "Roger"  # this is an inline comment
 ```
 
-### Python中的缩进
+### Python 中的缩进
 
-Python中的缩进是有意义的。
+Python 中的缩进是有意义的。
 
 您不能像这样随意缩进：
 
@@ -357,7 +357,7 @@ name = "Flavio"
     print(name)
 ```
 
-对于其它一些语言，空格是没有意义的，但是在Python中，缩进很重要。
+对于其它一些语言，空格是没有意义的，但是在 Python 中，缩进很重要。
 
 在上面这种情况下，如果您尝试运行这个程序，您会得到一个`IndentationError: unexpected indent`错误，因为缩进有特殊的含义。
 
@@ -365,7 +365,7 @@ name = "Flavio"
 
 <h2 id="data-types-in-python">Python数据类型</h2>
 
-Python有几种内置类型。
+Python 有几种内置类型。
 
 如果您创建`name`变量并为其分配值"Roger"，则此变量现在自动表示**String**数据类型。
 
@@ -387,7 +387,7 @@ name = "Roger"
 isinstance(name, str)  # True
 ```
 
-> 请注意，要在REPL之外查看`True`值，您需要将此代码包装在`print()`中，但为了清楚起见，我避免使用它。
+> 请注意，要在 REPL 之外查看`True`值，您需要将此代码包装在`print()`中，但为了清楚起见，我避免使用它。
 
 我们在这里使用了`str`，但这种方法同样适用于其它数据类型。
 
@@ -410,7 +410,7 @@ name = "Flavio"
 age = 20
 ```
 
-Python自动从变量值检测数据类型。
+Python 自动从变量值检测数据类型。
 
 您还可以通过向类构造器传递字面值或变量名，来创建特定类型的变量：
 
@@ -419,7 +419,7 @@ name = str("Flavio")
 anotherName = str(name)
 ```
 
-您还可以使用类构造器，将一种类型转换为另一种类型。Python将尝试转换为正确的值，例如从字符串中提取数字：
+您还可以使用类构造器，将一种类型转换为另一种类型。Python 将尝试转换为正确的值，例如从字符串中提取数字：
 
 ```python
 age = int("20")
@@ -432,7 +432,7 @@ print(intFraction)  # 0
 
 这称为**casting**。当然，这种转换并不总是有效，具体取决于传递的值。如果您在上面的字符串中写了`test`而不是`20`，您会得到一个`ValueError: invalid literal for int() with base 10: 'test'`错误。
 
-这些只是基础的数据类型。Python中有更多其它数据类型：
+这些只是基础的数据类型。Python 中有更多其它数据类型：
 
 -   `complex` 复数
 -   `bool` 布尔值
@@ -448,7 +448,7 @@ print(intFraction)  # 0
 
 <h2 id="operators">Python运算符</h2>
 
-我们使用Python运算符来对值和变量进行运算操作。
+我们使用 Python 运算符来对值和变量进行运算操作。
 
 我们可以根据它们执行操作的类型来划分运算符：
 
@@ -460,7 +460,7 @@ print(intFraction)  # 0
 
 再加上一些其它有趣的运算符，比如`is`和`in`。
 
-### Python赋值运算符
+### Python 赋值运算符
 
 赋值运算符用于为变量赋值：
 
@@ -475,11 +475,11 @@ age = 8
 anotherVariable = age
 ```
 
-从Python 3.8开始，可以使用_海象运算符_`:=`为变量赋值，同时该运算可作为另一个操作的一部分。例如在`if`或循环的条件部分。这个稍后再谈。
+从 Python 3.8 开始，可以使用_海象运算符_`:=`为变量赋值，同时该运算可作为另一个操作的一部分。例如在`if`或循环的条件部分。这个稍后再谈。
 
-### Python算术运算符
+### Python 算术运算符
 
-Python有许多算术运算符：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和 `//`（向下取整除法） ：
+Python 有许多算术运算符：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和 `//`（向下取整除法） ：
 
 ```python
 1 + 1  # 2
@@ -523,9 +523,9 @@ age += 1
 # age is now 9
 ```
 
-### Python比较运算符
+### Python 比较运算符
 
-Python定义了一些比较运算符：
+Python 定义了一些比较运算符：
 
 -   `==`
 -   `!=`
@@ -546,9 +546,9 @@ a > b  # False
 a <= b  # True
 ```
 
-### Python布尔运算符
+### Python 布尔运算符
 
-Python为我们提供了以下布尔运算符：
+Python 为我们提供了以下布尔运算符：
 
 -   `not`
 -   `and`
@@ -577,7 +577,7 @@ print([] or False)  # 'False'
 print(False or [])  # '[]'
 ```
 
-Python文档将其（x or y）描述为`如果x为假，则为y，否则为x`。（译者：`or`碰到真值就停，没有真值就走到最后）
+Python 文档将其（x or y）描述为`如果x为假，则为y，否则为x`。（译者：`or`碰到真值就停，没有真值就走到最后）
 
 `and`运算操作仅在第一个操作数为真时，才计算第二个操作数。因此，如果第一个操作数是假值（假值：`False`、`0`、`''`、`[]`..），它会返回那个操作数。否则，它就会计算第二个操作数：
 
@@ -590,9 +590,9 @@ print([] and False )  # []
 print(False and [] )  # False
 ```
 
-Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`。（译者：`or`碰到假值就停，没有假值就走到最后）
+Python 文档将其（x and y）描述为`如果x为假，则为x，否则为y`。（译者：`or`碰到假值就停，没有假值就走到最后）
 
-### Python位运算符
+### Python 位运算符
 
 一些运算符用于处理位和二进制数：
 
@@ -605,17 +605,17 @@ Python文档将其（x and y）描述为`如果x为假，则为x，否则为y`�
 
 一般很少使用位运算符，仅在非常特定的情况下使用，但是值得一提。
 
-### Python中的`is`和`in`
+### Python 中的`is`和`in`
 
-`is`被称为**identity operator**（验证运算符），用于比较两个对象，如果两者是同一个对象，则返回true。稍后将详细介绍对象。
+`is`被称为**identity operator**（验证运算符），用于比较两个对象，如果两者是同一个对象，则返回 true。稍后将详细介绍对象。
 
 `in`被称为**membership operator**（成员运算符），用于判断一个值是否包含在一个列表或序列中。稍后将详细介绍列表和其他序列数据类型。
 
 <h2 id="the-ternary-operator-in-python">Python三元运算符</h2>
 
-使用Python三元运算符，您可以快速定义条件语句。
+使用 Python 三元运算符，您可以快速定义条件语句。
 
-假设您有一个函数，它将`age`变量与`18`进行比较，并根据结果返回True或False。
+假设您有一个函数，它将`age`变量与`18`进行比较，并根据结果返回 True 或 False。
 
 可以不这样写：
 
@@ -643,7 +643,7 @@ def is_adult(age):
 
 <h2 id="strings-in-python">Python字符串</h2>
 
-Python中的字符串是用单引号或双引号括起来的一串字符：
+Python 中的字符串是用单引号或双引号括起来的一串字符：
 
 ```python
 "Roger"
@@ -683,7 +683,7 @@ str(8)  # "8"
 print("Roger is " + str(8) + " years old")  # Roger is 8 years old
 ```
 
-当使用特殊语法定义时，字符串可以是多行的，将字符串括在一组3个引号中：
+当使用特殊语法定义时，字符串可以是多行的，将字符串括在一组 3 个引号中：
 
 ```python
 print("""Roger is
@@ -756,7 +756,7 @@ print("ger" in name)  # True
 name = "Roger"
 ```
 
-`"Ro"Ger"`将不起作用，因为Python会认为字符串以`"Ro"`结尾。
+`"Ro"Ger"`将不起作用，因为 Python 会认为字符串以`"Ro"`结尾。
 
 方法是使用`\`反斜杠字符转义字符串内的双引号：
 
@@ -766,7 +766,7 @@ name = "Ro\"ger"
 
 这也适用于单引号`\'`，以及其它特殊格式字符，如制表符`\t`、换行符`\n`和反斜杠`\\`。
 
-给定一个字符串，并给定一个索引（从0开始），您就可以使用方括号获取指定位置上的字符，从而获取特定内容：
+给定一个字符串，并给定一个索引（从 0 开始），您就可以使用方括号获取指定位置上的字符，从而获取特定内容：
 
 ```python
 name = "Roger"
@@ -793,7 +793,7 @@ name[2:]  # "ger"
 
 <h2 id="booleans-in-python">Python布尔值</h2>
 
-Python提供了`bool`类型，它可以有两个值：`True` 和 `False`（首字母大写）。
+Python 提供了`bool`类型，它可以有两个值：`True` 和 `False`（首字母大写）。
 
 ```python
 done = False
@@ -824,7 +824,7 @@ done = True
 type(done) == bool  # True
 ```
 
-或者使用`isinstance()`，需要传递2个参数：变量和`bool`类：
+或者使用`isinstance()`，需要传递 2 个参数：变量和`bool`类：
 
 ```python
 done = True
@@ -851,9 +851,9 @@ ready_to_serve = all([ingredients_purchased, meal_cooked])  # False
 
 <h2 id="numbers-in-python">Python数字</h2>
 
-Python中的数字有3种类型：`int`、`float`和`complex`。
+Python 中的数字有 3 种类型：`int`、`float`和`complex`。
 
-### Python整数
+### Python 整数
 
 整数使用`int`表示，您可以使用字面值定义整数：
 
@@ -873,7 +873,7 @@ age = int(8)
 type(age) == int  # True
 ```
 
-### Python浮点数
+### Python 浮点数
 
 浮点数（分数）的类型为`float`，您可以使用字面值定义浮点数：
 
@@ -893,7 +893,7 @@ fraction = float(0.1)
 type(fraction) == float  # True
 ```
 
-### Python复数
+### Python 复数
 
 复数属于`complex`类型。
 
@@ -922,7 +922,7 @@ complexNumber.imag  # 3.0
 type(complexNumber) == complex #True
 ```
 
-### Python中数字的算术运算
+### Python 中数字的算术运算
 
 您可以使用算术运算符对数字执行算术运算：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和`//`（向下取整除法）：
 
@@ -952,9 +952,9 @@ age = 8
 age += 1  # age: 9
 ```
 
-### Python内置函数
+### Python 内置函数
 
-有2个内置函数可以帮助处理数字：
+有 2 个内置函数可以帮助处理数字：
 
 `abs()`返回一个数字的绝对值。
 
@@ -970,7 +970,7 @@ round(0.12)  # 0
 round(0.12, 1)  # 0.1
 ```
 
-Python标准库提供了其它几个数学实用函数和常量：
+Python 标准库提供了其它几个数学实用函数和常量：
 
 -   `math`包提供通用的数学函数和常量
 -   `cmath`包提供了处理复数的方法
@@ -981,7 +981,7 @@ Python标准库提供了其它几个数学实用函数和常量：
 
 <h2 id="constants-in-python">Python常量</h2>
 
-Python中无法强制改变的值是常量。
+Python 中无法强制改变的值是常量。
 
 比较常用的是枚举：
 
@@ -1001,9 +1001,9 @@ class Constants(Enum):
 WIDTH = 1024
 ```
 
-没有人会阻止您覆盖这个值，Python也不会阻止。（译者：全大写的变量表示不应改变的常量，这只是一种约定）
+没有人会阻止您覆盖这个值，Python 也不会阻止。（译者：全大写的变量表示不应改变的常量，这只是一种约定）
 
-正如您将来会看到的，大多数Python代码都采用这种命名约定的写法。
+正如您将来会看到的，大多数 Python 代码都采用这种命名约定的写法。
 
 <h2 id="enums-in-python">Python枚举</h2>
 
@@ -1051,7 +1051,7 @@ len(State)  # 2
 
 <h2 id="user-input-in-python">Python用户输入</h2>
 
-在Python命令行程序中，您可以使用`print()`函数向用户显示信息：
+在 Python 命令行程序中，您可以使用`print()`函数向用户显示信息：
 
 ```python
 name = "Roger"
@@ -1076,7 +1076,7 @@ print('Your age is ' + age)
 
 当您处理布尔值和返回布尔值的表达式时，您可以根据它们的值为`True`或`False`来采取不同的方式。
 
-在Python中，我们使用`if`语句来做到这一点：
+在 Python 中，我们使用`if`语句来做到这一点：
 
 ```python
 condition = True
@@ -1085,9 +1085,9 @@ if condition == True:
     # do something
 ```
 
-当条件解析为`True`时，就像上面的情况一样，if下面的代码块被执行。
+当条件解析为`True`时，就像上面的情况一样，if 下面的代码块被执行。
 
-什么是代码块？代码块是向右侧缩进一级（通常为4个空格）的部分：
+什么是代码块？代码块是向右侧缩进一级（通常为 4 个空格）的部分：
 
 ```python
 condition = True
@@ -1172,7 +1172,7 @@ print(result)  # 3
 
 <h2 id="lists-in-python">Python列表</h2>
 
-列表是Python中一种基本的数据结构。
+列表是 Python 中一种基本的数据结构。
 
 使用列表，您可以将多个值组合在一起，并使用一个名称引用它们。
 
@@ -1240,7 +1240,7 @@ items[2:]  # ["Syd", True]
 len(items)  # 4
 ```
 
-您可以使用list的`append()`方法将新元素添加到列表中：
+您可以使用 list 的`append()`方法将新元素添加到列表中：
 
 ```python
 items.append("Test")
@@ -1260,7 +1260,7 @@ items += ["Test"]
 # items is ['Roger', 1, 'Syd', True, 'Test']
 ```
 
-> 注意：使用`extend()`或`+=`不要忘记方括号。不要执行`items += "Test"`或`items.extend("Test")`，否则Python会在列表中添加4个单独的字符，即`['Roger', 1, 'Syd', True, 'T'、'e'、's'、't']`
+> 注意：使用`extend()`或`+=`不要忘记方括号。不要执行`items += "Test"`或`items.extend("Test")`，否则 Python 会在列表中添加 4 个单独的字符，即`['Roger', 1, 'Syd', True, 'T'、'e'、's'、't']`
 
 使用`remove()`方法删除元素：
 
@@ -1308,7 +1308,7 @@ items.sort()
 items.sort(key=str.lower)
 ```
 
-（使用sort方法）排序会修改原始列表内容。为避免这种情况，您可以先复制列表
+（使用 sort 方法）排序会修改原始列表内容。为避免这种情况，您可以先复制列表
 
 ```python
 itemscopy = items[:]
@@ -1324,7 +1324,7 @@ print(sorted(items, key=str.lower))
 
 <h2 id="tuples-in-python">Python元组</h2>
 
-元组是Python中另一种基本的数据结构。
+元组是 Python 中另一种基本的数据结构。
 
 它允许您创建不可变的对象组。这意味着一旦创建了元组，就无法修改它。您不能添加或删除元组中的元素。
 
@@ -1374,7 +1374,7 @@ names[1:]  # ('Syd',)
 ```
 
 您可以使用全局函数`sorted()`创建元组排好序的版本：
-（译者：请注意，元组没有sort方法，因为元组是不可改变的）
+（译者：请注意，元组没有 sort 方法，因为元组是不可改变的）
 
 ```python
 sorted(names)
@@ -1388,7 +1388,7 @@ newTuple = names + ("Vanille", "Tina")
 
 <h2 id="dictionaries-in-python">Python字典</h2>
 
-字典是Python中非常重要的一种数据结构。
+字典是 Python 中非常重要的一种数据结构。
 
 列表允许您创建值的集合，而字典允许您创建**键/值对**的集合。
 
@@ -1478,7 +1478,7 @@ dog['favorite food'] = 'Meat'
 del dog['favorite food']
 ```
 
-要复制字典，请使用copy()方法：
+要复制字典，请使用 copy()方法：
 （译者：这种方式是浅拷贝）
 
 ```python
@@ -1487,7 +1487,7 @@ dogCopy = dog.copy()
 
 <h2 id="sets-in-python">Python集合</h2>
 
-集合是Python另一个重要的数据结构。
+集合是 Python 另一个重要的数据结构。
 
 可以说它像元组一样工作，但集合不是有序的，而且是**可变的**。
 
@@ -1564,7 +1564,7 @@ print("Roger" in names)  # True
 
 函数可以创建一组指令，我们在需要时运行这些指令。
 
-函数在Python和其它许多编程语言中是必不可少的。它帮助我们创建有意义的程序，因为我们可以使用函数将程序分解为可管理的部分，并且促进了代码的可读性和重用性。
+函数在 Python 和其它许多编程语言中是必不可少的。它帮助我们创建有意义的程序，因为我们可以使用函数将程序分解为可管理的部分，并且促进了代码的可读性和重用性。
 
 这是一个名为`hello`的函数示例，它打印"Hello!"：
 
@@ -1623,7 +1623,7 @@ def hello(name, age):
 hello('Roger', 8)
 ```
 
-形参通过引用传递。Python中的所有内容都是对象，但其中一些是不可变的，包括整数、布尔值、浮点数、字符串和元组。这意味着如果您将它们作为参数传递给函数，并在函数内部修改它们的值，则新值不会反映在函数外部：
+形参通过引用传递。Python 中的所有内容都是对象，但其中一些是不可变的，包括整数、布尔值、浮点数、字符串和元组。这意味着如果您将它们作为参数传递给函数，并在函数内部修改它们的值，则新值不会反映在函数外部：
 
 ```python
 def change(value):
@@ -1655,7 +1655,7 @@ def hello(name):
     return
 ```
 
-我们可以在条件中包含return语句，这是在不满足起始条件时结束函数的常用方法：
+我们可以在条件中包含 return 语句，这是在不满足起始条件时结束函数的常用方法：
 
 ```python
 def hello(name):
@@ -1678,7 +1678,7 @@ def hello(name):
 
 <h2 id="objects-in-python">Python对象</h2>
 
-Python中的一切都是对象。
+Python 中的一切都是对象。
 
 原始类型（整数、字符串、浮点数……）的值也是对象。 同时列表、元组、字典和一切也都是对象。
 
@@ -1713,13 +1713,13 @@ items.pop()
 
 这些（可使用的）方法取决于变量的数据类型。
 
-Python提供的全局函数`id()`可让您检查特定对象在内存中的位置。
+Python 提供的全局函数`id()`可让您检查特定对象在内存中的位置。
 
 ```python
 id(age)  # 140170065725376
 ```
 
-> 您（电脑上查看的age）的内存地址值会不一样——这里只是作为一个例子来展示。
+> 您（电脑上查看的 age）的内存地址值会不一样——这里只是作为一个例子来展示。
 
 如果给变量赋不同的值，它的地址会改变，因为变量已经指向存储在内存中另一个位置的另一个值：
 
@@ -1752,7 +1752,7 @@ print(id(items))  # 140093713593920
 
 如果对象提供改变其内容的方法，那么它是可变的。否则它是不可变的。
 
-Python定义的大多数类型都是不可变的， 例如`int` ，没有任何方法可以改变它的值。 如果您增加它的值
+Python 定义的大多数类型都是不可变的， 例如`int` ，没有任何方法可以改变它的值。 如果您增加它的值
 
 ```python
 age = 8
@@ -1763,15 +1763,15 @@ age = age + 1
 age += 1
 ```
 
-然后您使用`id(age)`检查，您会发现`age`前后指向不同的内存位置。 原来的值并没有发生变异，age只是指向另一个值。
+然后您使用`id(age)`检查，您会发现`age`前后指向不同的内存位置。 原来的值并没有发生变异，age 只是指向另一个值。
 
 <h2 id="loops-in-python">Python循环</h2>
 
 循环是编程的重要组成部分。
 
-在 Python 中，我们有2种循环：**while循环**和**for循环**。
+在 Python 中，我们有 2 种循环：**while 循环**和**for 循环**。
 
-###  Python中的`while`循环
+###  Python 中的`while`循环
 
 `while`循环是使用`while`关键字定义的，它重复执行自己的块，直到判断条件为`False`：
 
@@ -1807,9 +1807,9 @@ while count < 10:
 print("After the loop")
 ```
 
-### Python中的`for`循环
+### Python 中的`for`循环
 
-使用`for`循环，我们可以让Python执行一个预先确定循环次数的代码块，并且不需要单独的变量和条件来检查它的值。
+使用`for`循环，我们可以让 Python 执行一个预先确定循环次数的代码块，并且不需要单独的变量和条件来检查它的值。
 
 例如，我们可以迭代列表中的元素：
 
@@ -1826,7 +1826,7 @@ for item in range(04):
     print(item)
 ```
 
-`range(4)`创建一个从0开始并包含4个元素的序列：`[0, 1, 2, 3]`。
+`range(4)`创建一个从 0 开始并包含 4 个元素的序列：`[0, 1, 2, 3]`。
 
 如果要获取索引，您应该将序列包装到`enumerate()`函数中：
 
@@ -1836,11 +1836,11 @@ for index, item in enumerate(items):
     print(index, item)
 ```
 
-### Python中的`Break`和`continue` 
+### Python 中的`Break`和`continue` 
 
 `while`和 `for`循环都可以在代码块内被中断，这需要使用两个特殊关键字：`break`和`continue`。
 
-`continue`停止当前迭代并告诉Python执行下一个迭代。
+`continue`停止当前迭代并告诉 Python 执行下一个迭代。
 
 `break`完全停止循环，并继续执行循环外的下一条指令。
 
@@ -1864,7 +1864,7 @@ for item in items:
 
 <h2 id="classes-in-python">Python类</h2>
 
-除了使用Python提供的数据类型之外，我们还可以声明自定义的类，并使用类实例化对象。
+除了使用 Python 提供的数据类型之外，我们还可以声明自定义的类，并使用类实例化对象。
 
 对象是类的实例。类是对象的类型。
 
@@ -1875,7 +1875,7 @@ class <class_name>:
     # 自定义的类
 ```
 
-例如，让我们定义一个Dog类
+例如，让我们定义一个 Dog 类
 
 ```python
 class Dog:
@@ -1899,7 +1899,7 @@ class Dog:
 roger = Dog()
 ```
 
-现在`roger`是Dog类型的对象。
+现在`roger`是 Dog 类型的对象。
 
 如果运行
 
@@ -1934,7 +1934,7 @@ roger.bark()  # 'WOF!'
 
 类的一个重要特性是继承。
 
-我们创建一个可以使用`walk()`方法的Animal 类：
+我们创建一个可以使用`walk()`方法的 Animal 类：
 
 ```python
 class Animal:
@@ -1942,7 +1942,7 @@ class Animal:
         print('Walking..')
 ```
 
-然后Dog类继承Animal类：
+然后 Dog 类继承 Animal 类：
 
 ```python
 class Dog(Animal):
@@ -1960,11 +1960,11 @@ roger.bark()  # 'WOF!'
 
 <h2 id="modules-in-python">Python模块</h2>
 
-每个Python文件都是一个模块。
+每个 Python 文件都是一个模块。
 
 您可以从其它文件导入模块，这是任何具有一定复杂性的程序的基础，因为它促进了合理的组织结构和代码重用。
 
-在典型的Python程序中，一个文件作为入口点，那么其它文件是模块，并公开可以从模块中调用的函数。（译者：不只是可以公开函数，类、常量等等都行）
+在典型的 Python 程序中，一个文件作为入口点，那么其它文件是模块，并公开可以从模块中调用的函数。（译者：不只是可以公开函数，类、常量等等都行）
 
 文件`dog.py`包含以下代码：
 
@@ -1997,7 +1997,7 @@ bark()
 
 假设您将`dog.py`文件放在`lib`文件夹中。
 
-在该文件夹中，您需要创建一个名为`__init__.py`的空文件来告诉Python该文件夹包含模块。
+在该文件夹中，您需要创建一个名为`__init__.py`的空文件来告诉 Python 该文件夹包含模块。
 
 现在您可以选择从`lib`中导入`dog`：
 
@@ -2017,7 +2017,7 @@ bark()
 
 <h2 id="the-python-standard-library">Python标准库</h2>
 
-Python通过其**标准库**公开了许多内置功能。
+Python 通过其**标准库**公开了许多内置功能。
 
 标准库是各种应用程序的集合，包括数学应用，代码调试，以及图形用户界面创建等等。
 
@@ -2027,15 +2027,15 @@ Python通过其**标准库**公开了许多内置功能。
 
 -   `math` 数学计算相关应用程序
 -   `re` 正则表达式的使用
--   `json` 处理json数据
+-   `json` 处理 json 数据
 -   `datetime` 处理日期
--   `sqlite3` 使用SQLite
+-   `sqlite3` 使用 SQLite
 -   `os` 操作系统实用程序
 -   `random` 生成随机数
 -   `statistics` 数学统计相关应用程序
--   `requests` 执行HTTP网络请求
--   `http` 创建HTTP服务器
--   `urllib` 管理URL
+-   `requests` 执行 HTTP 网络请求
+-   `http` 创建 HTTP 服务器
+-   `urllib` 管理 URL
 
 接下来介绍如何_使用_标准库的一个模块。您已经知道如何使用自己创建的模块，即从程序文件夹中的其它文件导入。
 
@@ -2063,21 +2063,21 @@ sqrt(4)  # 2.0
 
 如果您从一开始就学习正确的命名和格式约定，那么将更容易阅读其他人编写的代码，同样其他人也会发现您的代码易于阅读。
 
-Python在PEP8样式指南中定义了其代码风格约定。PEP即_Python Enhancement Proposals_，它描述了Python语言所有增强和讨论的地方。
+Python 在 PEP8 样式指南中定义了其代码风格约定。PEP 即_Python Enhancement Proposals_，它描述了 Python 语言所有增强和讨论的地方。
 
-有很多PEP提案，都可以在[https://www.python.org/dev/peps/](https://www.python.org/dev/peps/) 上找到。
+有很多 PEP 提案，都可以在[https://www.python.org/dev/peps/](https://www.python.org/dev/peps/) 上找到。
 
-PEP8是最早和最重要的提案之一，它定义了格式和以"pythonic"方式编写Python代码的一些规则。
+PEP8 是最早和最重要的提案之一，它定义了格式和以"pythonic"方式编写 Python 代码的一些规则。
 
 您可以在此处阅读其完整内容：[https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/) ，下面是几点总结，您可以从这里快速开始：
 
 -   使用空格而不是制表符缩进
--   使用4个空格缩进
--   Python文件用UTF-8编码
--   一行代码最多80列
+-   使用 4 个空格缩进
+-   Python 文件用 UTF-8 编码
+-   一行代码最多 80 列
 -   每个语句写在自己所在的一行上
--   函数、变量名和文件名使用小写，单词之间用下划线分隔（例如snake\_case）
--   类名单词首字母大写（例如CamelCase）
+-   函数、变量名和文件名使用小写，单词之间用下划线分隔（例如 snake_case）
+-   类名单词首字母大写（例如 CamelCase）
 -   包名是小写的，单词之间没有下划线
 -   不应该改变的常量全用大写字母
 -   变量名应该有意义
@@ -2092,7 +2092,7 @@ PEP8是最早和最重要的提案之一，它定义了格式和以"pythonic"方
 
 调试代码是您应该学习的最佳技能之一，因为在许多困难的情况下，它将为您提供帮助。
 
-每种编程语言都有其调试器。Python使用`pdb`调试代码，可通过标准库获得。
+每种编程语言都有其调试器。Python 使用`pdb`调试代码，可通过标准库获得。
 
 您可以通过在代码中添加一个断点来进行调试：
 
@@ -2102,7 +2102,7 @@ breakpoint()
 
 > 如果需要，您可以添加更多断点。
 
-当Python解释器在您的代码中遇到断点时，它会停止执行代码，并会告诉您下一条将运行的指令是什么。
+当 Python 解释器在您的代码中遇到断点时，它会停止执行代码，并会告诉您下一条将运行的指令是什么。
 
 接下来您可以做一些事情。
 
@@ -2151,9 +2151,9 @@ print(age)
 
 <h2 id="how-to-accept-arguments-from-the-command-line-in-python">Python接收从命令行传入的参数</h2>
 
-当我们从命令行调用程序时，Python提供了几种方法来处理传递的参数。
+当我们从命令行调用程序时，Python 提供了几种方法来处理传递的参数。
 
-到目前为止，您已经使用过REPL来执行程序，或使用如下方法执行Python代码
+到目前为止，您已经使用过 REPL 来执行程序，或使用如下方法执行 Python 代码
 
 ```sh
 python <文件名>.py
@@ -2180,7 +2180,7 @@ print(sys.argv)
 
 这是一种简单的方法，但您必须自己做很多工作。您需要验证参数，确保它们的类型是正确的，如果用户没有正确使用程序，您需要向他们打印反馈信息。
 
-Python在标准库中提供了另一个包来帮助您：`argparse`。
+Python 在标准库中提供了另一个包来帮助您：`argparse`。
 
 您首先导入`argparse`并调用`argparse.ArgumentParser()`，传递程序的描述：
 
@@ -2241,9 +2241,9 @@ program.py: error: argument -c/--color: 无效的选择: 'blue' (该选项只能
 
 <h2 id="lambda-functions-in-python">Python的Lambda函数</h2>
 
-Lambda函数（也称为匿名函数）是没有名称且只有一个表达式作为其主体的小型函数。
+Lambda 函数（也称为匿名函数）是没有名称且只有一个表达式作为其主体的小型函数。
 
-在Python中，它们是使用`lambda`关键字定义的：
+在 Python 中，它们是使用`lambda`关键字定义的：
 
 ```python
 lambda <参数> : <表达式>
@@ -2253,19 +2253,19 @@ lambda <参数> : <表达式>
 
 > 这很重要：表达式返回值，语句不返回。
 
-最简单的lambda函数示例是将数字的值加倍：
+最简单的 lambda 函数示例是将数字的值加倍：
 
 ```python
 lambda num : num * 2
 ```
 
-Lambda函数可以接受更多参数：
+Lambda 函数可以接受更多参数：
 
 ```python
 lambda a, b : a * b
 ```
 
-无法直接调用Lambda函数，但您可以将它们分配给变量：
+无法直接调用 Lambda 函数，但您可以将它们分配给变量：
 
 ```python
 multiply = lambda a, b : a * b
@@ -2273,11 +2273,11 @@ multiply = lambda a, b : a * b
 print(multiply(2, 2))  # 4
 ```
 
-Lambda函数的实用性在于与其它Python功能结合使用，例如结合`map()`、`filter()`和`reduce()`。
+Lambda 函数的实用性在于与其它 Python 功能结合使用，例如结合`map()`、`filter()`和`reduce()`。
 
 <h2 id="recursion-in-python">Python递归</h2>
 
-Python中的函数可以调用自身，这就是递归。递归在许多情况下都非常有用。
+Python 中的函数可以调用自身，这就是递归。递归在许多情况下都非常有用。
 
 解释递归的常用方法是实现阶乘计算。
 
@@ -2301,13 +2301,13 @@ print(factorial(4))  # 24
 print(factorial(5))  # 120
 ```
 
-如果在 `factorial()` 函数中调用`factorial(n)`而不是`factorial(n-1)`，则会导致无限递归。 默认情况下，Python将在1000次调用时停止递归，此时您将收到`RecursionError`错误。
+如果在 `factorial()` 函数中调用`factorial(n)`而不是`factorial(n-1)`，则会导致无限递归。 默认情况下，Python 将在 1000 次调用时停止递归，此时您将收到`RecursionError`错误。
 
 递归在很多地方都有用，它可以帮助我们在没有其它更好方法的情况下简化代码，所以了解这种技术是件好事。
 
 <h2 id="nested-functions-in-python">Python嵌套函数</h2>
 
-Python中函数可以嵌套在其它函数中。
+Python 中函数可以嵌套在其它函数中。
 
 在函数内部定义的函数仅在该函数内可见。
 
@@ -2412,7 +2412,7 @@ def logtime(func):
 
 文档非常重要，不仅可以用于告知其他人（自己写的）函数/类/方法/模块的目标是什么，还可以帮助您（在较长时间后）理解自己的代码。
 
-当您在6或12个月后会看您的的代码时，可能不记得写代码时脑海中的所有想法。这个时候阅读您的代码并理解它在做什么将变得非常困难。
+当您在 6 或 12 个月后会看您的的代码时，可能不记得写代码时脑海中的所有想法。这个时候阅读您的代码并理解它在做什么将变得非常困难。
 
 注释是帮助自己（和他人）摆脱这种困境的一种方式：
 
@@ -2482,7 +2482,7 @@ def increment(n):
     return n + 1
 ```
 
-Python将处理这些（文档字符串），您可以使用全局函数`help()`来获取类/方法/函数/模块的文档。
+Python 将处理这些（文档字符串），您可以使用全局函数`help()`来获取类/方法/函数/模块的文档。
 
 例如调用`help(increment)`会给返回这个：
 
@@ -2509,7 +2509,7 @@ increment(n)
 
 首先，使用全局函数`help()`（如果以文档字符串的形式提供）我们可以获得文档。
 
-然后，您可以使用print()获取有关函数的信息：
+然后，您可以使用 print()获取有关函数的信息：
 
 ```python
 def increment(n):
@@ -2572,7 +2572,7 @@ print(id(1))  # 140227521172384
 
 <h2 id="annotations-in-python">Python注解</h2>
 
-Python是动态类型的，我们不必指定变量、函数参数或函数返回值的类型。
+Python 是动态类型的，我们不必指定变量、函数参数或函数返回值的类型。
 
 注解允许我们（可选地）这样做。
 
@@ -2596,7 +2596,7 @@ def increment(n: int) -> int:
 count: int = 0
 ```
 
-Python将忽略这些注解。 一个名为[`mypy`](http://mypy-lang.org/)的工具可以独立运行，也可以集成到VS Code或PyCharm等IDE中，以便在您编码时自动检查静态类型错误。它还将帮助您在运行代码之前捕获类型不匹配的错误。
+Python 将忽略这些注解。 一个名为[`mypy`](http://mypy-lang.org/)的工具可以独立运行，也可以集成到 VS Code 或 PyCharm 等 IDE 中，以便在您编码时自动检查静态类型错误。它还将帮助您在运行代码之前捕获类型不匹配的错误。
 
 这是一个很大的帮助，尤其是当您的软件规模变得很大并且需要重构代码时。
 
@@ -2604,7 +2604,7 @@ Python将忽略这些注解。 一个名为[`mypy`](http://mypy-lang.org/)的工
 
 <h2 id="exceptions-in-python">Python异常</h2>
 
-处理错误很重要，Python为我们提供了异常处理来做到这一点。
+处理错误很重要，Python 为我们提供了异常处理来做到这一点。
 
 如果将代码行包装到`try:`块中：
 
@@ -2613,7 +2613,7 @@ try:
     # 一些代码
 ```
 
-如果发生错误，Python会提醒您，您可以使用`except`块确认发生了哪种错误：
+如果发生错误，Python 会提醒您，您可以使用`except`块确认发生了哪种错误：
 
 ```python
 try:
@@ -2713,7 +2713,7 @@ except Exception as error:
     print(error)
 ```
 
-您还可以扩展Exception来定义自己的异常类：
+您还可以扩展 Exception 来定义自己的异常类：
 
 ```python
 class DogNotFoundException(Exception):
@@ -2760,21 +2760,21 @@ with open(filename, 'r') as file:
     print(content)
 ```
 
-换句话说，Python有内置的隐式异常处理，其会自动为我们调用`close()`。
+换句话说，Python 有内置的隐式异常处理，其会自动为我们调用`close()`。
 
 上面的例子只是为了介绍`with`的功能，而不是说它仅在处理文件方面对我们有帮助。
 
 <h2 id="how-to-install-3rd-party-packages-in-python-using-pip">Python如何使用pip安装第三方包</h2>
 
-Python标准库包含大量实用的程序，可以简化我们的开发需求，但是没有什么能满足_一切_。
+Python 标准库包含大量实用的程序，可以简化我们的开发需求，但是没有什么能满足_一切_。
 
 这就是个人和公司创建第三方包，并将它们作为开源软件提供给整个社区的原因。
 
-这些模块都收集在一个地方，可在[https://pypi.org](https://pypi.org) 获得**Python包索引**，并且可以使用`pip`将它们（第三方模块）安装在您的系统上。
+这些模块都收集在一个地方，可在[https://pypi.org](https://pypi.org) 获得**Python 包索引**，并且可以使用`pip`将它们（第三方模块）安装在您的系统上。
 
-在撰写本文时，有超过270,000个免费第三方包可供我们使用。
+在撰写本文时，有超过 270,000 个免费第三方包可供我们使用。
 
-> 如果您按照Python安装说明进行操作，您应该已经安装了 `pip`。
+> 如果您按照 Python 安装说明进行操作，您应该已经安装了 `pip`。
 
 使用命令`pip install`可以安装任何第三方包：
 
@@ -2794,11 +2794,11 @@ python -m pip install <package>
 pip install requests
 ```
 
-一旦这样做，它就可以用于您所有的Python脚本，因为包是全局安装的。
+一旦这样做，它就可以用于您所有的 Python 脚本，因为包是全局安装的。
 
 （第三方包安装的）具体位置取决于您的操作系统。
 
-在运行Python 3.9的macOS上，位置是`/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages`。
+在运行 Python 3.9 的 macOS 上，位置是`/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages`。
 
 使用以下命令将第三方包升级到最新版本：
 
@@ -2834,7 +2834,7 @@ pip show <package>
 numbers = [1, 2, 3, 4, 5]
 ```
 
-您可以使用列表推导式创建一个新列表，该列表由`numbers`列表元素的2次幂组成：
+您可以使用列表推导式创建一个新列表，该列表由`numbers`列表元素的 2 次幂组成：
 
 ```python
 numbers_power_2 = [n**2 for n in numbers]
@@ -2917,11 +2917,11 @@ In [9]: c.eat()
 cat eating ...
 ```
 
-译者：多态实际上是看运行时对象具体的类型，在Java中，是可以这样写的`Animal dog = new Dog()`，即创建一个`Animal`对象`dog`，这是**编译**时，但是在**运行**时`dog.eat()`打印`dog eating ...`
+译者：多态实际上是看运行时对象具体的类型，在 Java 中，是可以这样写的`Animal dog = new Dog()`，即创建一个`Animal`对象`dog`，这是**编译**时，但是在**运行**时`dog.eat()`打印`dog eating ...`
 
 <h2 id="operator-overloading-in-python">Python运算符重载</h2>
 
-运算符重载是一种先进的技术，我们可以用来使类具有可比性，并使它们与Python运算符一起工作。
+运算符重载是一种先进的技术，我们可以用来使类具有可比性，并使它们与 Python 运算符一起工作。
 
 让我们来创建一个类`Dog`：
 
@@ -2981,7 +2981,7 @@ class Dog:
 
 <h2 id="virtual-environments-in-python">Python虚拟环境</h2>
 
-在您的系统上运行多个Python应用程序是很常见的。
+在您的系统上运行多个 Python 应用程序是很常见的。
 
 当应用程序需要相同的模块时，有时您会遇到一个棘手的情况，即一个应用程序需要一个版本模块，而另一个应用程序需要该模块的不同版本。
 
@@ -2997,7 +2997,7 @@ python -m venv .venv
 
 （该命令）在您要开始的项目的文件夹或者现有项目的文件夹（的根目录下运行）。
 
-译者：项目的根目录即其本身，例如一个项目FCC在`/Users/abc/projects/FCC`，那么该项目的根目录就是`/Users/abc/projects/FCC/`
+译者：项目的根目录即其本身，例如一个项目 FCC 在`/Users/abc/projects/FCC`，那么该项目的根目录就是`/Users/abc/projects/FCC/`
 
 然后运行
 
@@ -3005,9 +3005,9 @@ python -m venv .venv
 source .venv/bin/activate
 ```
 
-> （如果是）在Fish shell上，使用 `source .venv/bin/activate.fish`
+> （如果是）在 Fish shell 上，使用 `source .venv/bin/activate.fish`
 
-执行这个命令将激活Python虚拟环境。根据您的配置，可能还会看到终端提示发生变化。
+执行这个命令将激活 Python 虚拟环境。根据您的配置，可能还会看到终端提示发生变化。
 
 我的从
 
@@ -3025,8 +3025,8 @@ source .venv/bin/activate
 
 我希望它能鼓励您更多去地了解 Python。
 
-有关Python和一般编程教程的更多信息，请查看我的博客 [flaviocopes.com](https://flaviocopes.com)。
+有关 Python 和一般编程教程的更多信息，请查看我的博客 [flaviocopes.com](https://flaviocopes.com)。
 
-在[mailto:flavio@flaviocopes.com](mailto:flavio@flaviocopes.com) 发送任何反馈、勘误或意见，您可以在Twitter[@flaviocopes](https://twitter.com/flaviocopes) 上与我联系 .
+在[mailto:flavio@flaviocopes.com](mailto:flavio@flaviocopes.com) 发送任何反馈、勘误或意见，您可以在 Twitter[@flaviocopes](https://twitter.com/flaviocopes) 上与我联系 .
 
-> 请注意：您可以[获取此Python手册的PDF、ePub和Mobi版本](https://flaviocopes.com/page/python-handbook/)
+> 请注意：您可以[获取此 Python 手册的 PDF、ePub 和 Mobi 版本](https://flaviocopes.com/page/python-handbook/)

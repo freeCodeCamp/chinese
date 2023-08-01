@@ -5,15 +5,15 @@
 
 ![Best Practices for Scaling Your Node.js REST APIs](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Node.js-Best-Practices-1.png)
 
-除了使用集群模式，还有各种各样扩展API的方式。在这篇教程中，我们将学习10种扩展Node.js API的方式。
+除了使用集群模式，还有各种各样扩展 API 的方式。在这篇教程中，我们将学习 10 种扩展 Node.js API 的方式。
 
 我们经常会在处理项目的时候获取一些零散的知识以提高技能，必须通过不断地复习，才能将习得的技能应用到下次项目中。
 
 这个方法一直奏效吗？我甚至不记得我昨天做了些什么。所以我写下了这篇教程，也是对自己知识的复盘。
 
-我尝试记录下这些不常被提起扩展Node.js的方法。
+我尝试记录下这些不常被提起扩展 Node.js 的方法。
 
-本文提及的方法不一定是你最后的救命稻草，你可以在Node.js项目的任何阶段应用这些方法。
+本文提及的方法不一定是你最后的救命稻草，你可以在 Node.js 项目的任何阶段应用这些方法。
 
 让我们来看看本文的内容：
 
@@ -21,16 +21,16 @@
 2.  🐢 优化数据库查询
 3.  ䷪ 使用断路器快速故障
 4.  🔍 记录检查点
-5.  🌠 使用Kafka而非HTTP请求
+5.  🌠 使用 Kafka 而非 HTTP 请求
 6.  🪝 小心内存泄露
 7.  🐇 使用缓存
 8.  🎏 使用连接池
 9.  🕋 无缝扩展
-10.  💎 OpenAPI兼容文档
+10.  💎 OpenAPI 兼容文档
 
 ## 使用节流
 
-节流可以限制对服务器的访问，以防止请求过量。使用节流的好处非常明显：可以保护应用免受大量用户爆发的困扰，也可以防止[拒绝服务攻击（Dos攻击）](https://en.wikipedia.org/wiki/Denial-of-service_attack)。
+节流可以限制对服务器的访问，以防止请求过量。使用节流的好处非常明显：可以保护应用免受大量用户爆发的困扰，也可以防止[拒绝服务攻击（Dos 攻击）](https://en.wikipedia.org/wiki/Denial-of-service_attack)。
 
 输入和输出的速率不匹配的时候，通常是应用节流机制的时候。特别是当入站流量远超过服务器可以（或者希望）处理的流量。
 
@@ -43,48 +43,48 @@
 在应用程序和新闻推送服务器之间的第一个节点应用了节流：
 
 1.  _新闻推送服务(NFS)_ 订阅了你的应用以发送通知。
-2.  每秒向你的应用发送1000个请求。
-3.  根据NFS的订阅计费计划，你的应用仅处理500个请求/秒。
-4.  为前500个请求发送通知。
+2.  每秒向你的应用发送 1000 个请求。
+3.  根据 NFS 的订阅计费计划，你的应用仅处理 500 个请求/秒。
+4.  为前 500 个请求发送通知。
 
-必须要注意的是，所有超过500个请求/秒以外的请求都会失败，需要NFS再次尝试发送请求。
+必须要注意的是，所有超过 500 个请求/秒以外的请求都会失败，需要 NFS 再次尝试发送请求。
 
 **当可以排队的时候，为什么要拒绝额外的请求?** 有以下理由：
 
-1.  接受所有请求会使应用开始累积请求，这可能导致所有订阅你的应用的客户端出现单点故障（通过RAM/磁盘耗尽），包括NFS。
-2.  你不应该接受超出客户订阅计划范围的请求(在我们的例子中是NFS)。
+1.  接受所有请求会使应用开始累积请求，这可能导致所有订阅你的应用的客户端出现单点故障（通过 RAM/磁盘耗尽），包括 NFS。
+2.  你不应该接受超出客户订阅计划范围的请求(在我们的例子中是 NFS)。
 
-对于应用程序级别的速率限制，你可以使用Express.js API的中间件——[express-rate-limit](https://www.npmjs.com/package/express-rate-limit)。对于网络级别的节流，你可以使用类似[WAF](https://aws.amazon.com/waf/)的解决方案。
+对于应用程序级别的速率限制，你可以使用 Express.js API 的中间件——[express-rate-limit](https://www.npmjs.com/package/express-rate-limit)。对于网络级别的节流，你可以使用类似[WAF](https://aws.amazon.com/waf/)的解决方案。
 
-如果你使用的是发布-订阅机制，也可以限制消费者和订阅者。例如，你可以通过设置[maxBytes选项](https://kafka.js.org/docs/consuming#a-name-options-a-options)来限制消费Kafka标签（topic）的字节数据。
+如果你使用的是发布-订阅机制，也可以限制消费者和订阅者。例如，你可以通过设置[maxBytes 选项](https://kafka.js.org/docs/consuming#a-name-options-a-options)来限制消费 Kafka 标签（topic）的字节数据。
 
 ## 优化数据库查询
 
 有时你可能没有缓存数据，或者数据已经过期，查询数据成了唯一的选择。
 
-发生这种情况时，请确保你的数据库做好了准备：第一步是拥有足够的RAM和磁盘IOPS（每秒输入输出量）。
+发生这种情况时，请确保你的数据库做好了准备：第一步是拥有足够的 RAM 和磁盘 IOPS（每秒输入输出量）。
 
 其次，尽可能优化您的查询。对于初学者来说，做对这几件事很关键：
 
 1.  查询时尽量使用索引字段，但不要过度索引。[索引也有开销](https://www.mongodb.com/blog/post/performance-best-practices-indexing#:~:text=Eliminate%20Unnecessary%20Indexes)。
 2.  对于删除，坚持软删除。如果需要永久删除，请推迟。 ([一个有趣的故事](https://httpie.io/blog/stardust))
-3.  在读取数据的时候，仅使用投影（projection）获取需要的字段。如果可以的话，去掉没有必要的元数据和方法。（例如，Mongoose提供[lean](https://mongoosejs.com/docs/tutorials/lean.html))。
-4.  尝试将数据库性能和用户体验分离。如果数据库上的CRUD可以在后台发生（即非阻塞），请执行此操作。不要让用户等待。
+3.  在读取数据的时候，仅使用投影（projection）获取需要的字段。如果可以的话，去掉没有必要的元数据和方法。（例如，Mongoose 提供[lean](https://mongoosejs.com/docs/tutorials/lean.html))。
+4.  尝试将数据库性能和用户体验分离。如果数据库上的 CRUD 可以在后台发生（即非阻塞），请执行此操作。不要让用户等待。
 5.  使用更新查询直接更新所需字段。不要获取文档，更新字段，然后将整个文档保存回数据库。这会造成网络和数据库开销。
 
 ## 使用断路器快速故障
 
-想象一下，你的Node.js应用程序出现突发流量，并且满足请求所需的外部服务器之一已关闭。你是否想在此后的每个请求中一直走死胡同？当然不！我们不想在注定要失败的请求上浪费时间和资源。
+想象一下，你的 Node.js 应用程序出现突发流量，并且满足请求所需的外部服务器之一已关闭。你是否想在此后的每个请求中一直走死胡同？当然不！我们不想在注定要失败的请求上浪费时间和资源。
 
 这就是使用断路器的核心思想： **尽早失败**、 **快速失败**。
 
-例如，如果100个请求中有50个失败，则在接下来的X秒内不允许对该外部服务器发出任何请求。它可以防止触发必然会失败的请求。
+例如，如果 100 个请求中有 50 个失败，则在接下来的 X 秒内不允许对该外部服务器发出任何请求。它可以防止触发必然会失败的请求。
 
 一旦线路复位，就允许请求通过。如果它们再次失败，则线路断开并重复循环。
 
 ![Node.js Opposum circuit breaker states](https://www.freecodecamp.org/news/content/images/2022/09/circuit-breaker-nodejs-best-practices-for-scale.drawio--1-.png)
 
-Node.js Opposum断路器状态
+Node.js Opposum 断路器状态
 
 可以查看[Opposum](https://github.com/nodeshift/opossum)以了解更多添加断路器的信息。你也可以在[这里](https://en.wikipedia.org/wiki/Circuit_breaker_design_pattern)阅读更多关断路器的信息。
 
@@ -94,43 +94,43 @@ Node.js Opposum断路器状态
 
 你可以使用[ELK stack](https://www.elastic.co/what-is/elk-stack)来设置良好的日志记录和警报管道。
 
-虽然日志记录是必不可少的工具，但很容易过度使用。如果记录所有内容，最终可能会耗尽磁盘IOPS，从而导致您的应用程序受到影响。
+虽然日志记录是必不可少的工具，但很容易过度使用。如果记录所有内容，最终可能会耗尽磁盘 IOPS，从而导致您的应用程序受到影响。
 
 **一个值的借鉴的经验是只记录检查点。**
 
 检查点可以是：
 
 1.  当进入应用程序中的主控制流时以及在它们经过验证和清理之后的请求
-2.  与外部服务/SDK/API交互时的请求和响应。
+2.  与外部服务/SDK/API 交互时的请求和响应。
 3.  对该请求的最终响应。
-4.  为catch处理程序提供有用的错误消息（错误消息具有合理的默认值）。
+4.  为 catch 处理程序提供有用的错误消息（错误消息具有合理的默认值）。
 
-**另外:** 如果一个请求在生命周期中经过多个服务器，您可以在日志中传递一个唯一ID，以跨服务器捕获特定请求。
+**另外:** 如果一个请求在生命周期中经过多个服务器，您可以在日志中传递一个唯一 ID，以跨服务器捕获特定请求。
 
-## 使用Kafka而非HTTP请求
+## 使用 Kafka 而非 HTTP 请求
 
-虽然存在HTTP请求的用例，但容易使用过度，请在不必要的时候避免使用HTTP请求。
+虽然存在 HTTP 请求的用例，但容易使用过度，请在不必要的时候避免使用 HTTP 请求。
 
 让我们通过这个例子来理解：
 
 ![Overview of Kafka pub-sub using topics](https://www.freecodecamp.org/news/content/images/2022/09/kafka-over-http-nodejs-best-practices-for-scale.drawio.png)
 
-Kafka主从结构使用标签（topic）模式
+Kafka 主从结构使用标签（topic）模式
 
-假设我们要创建一个如Amazon一样的产品，这个产品包含两大服务：
+假设我们要创建一个如 Amazon 一样的产品，这个产品包含两大服务：
 
 1.  供应商服务
 2.  库存服务
 
 每当你收到来自供应商服务的新库存，就推送一个库存详情到[Kafka](https://kafka.apache.org/intro)标签。库存服务监听到这个标签，并且更新数据库以确认有新的补货。
 
-请注意，你将库存数据推送到管道（pipeline）然后程序流，就可以继续其他的操作。程序会自动按照一定节奏消费库存服务。 **Kafka使服务解耦**。
+请注意，你将库存数据推送到管道（pipeline）然后程序流，就可以继续其他的操作。程序会自动按照一定节奏消费库存服务。 **Kafka 使服务解耦**。
 
-现在，如果你的库存服务出现了故障怎么办？如果是用HTTP请求就不容易处理。但如果使用Kafka，就可以重播预期的消息(例如使用[kcat](https://github.com/edenhill/kcat)). **使用Kafka的话，数据被消费后不会丢失**。
+现在，如果你的库存服务出现了故障怎么办？如果是用 HTTP 请求就不容易处理。但如果使用 Kafka，就可以重播预期的消息(例如使用[kcat](https://github.com/edenhill/kcat)). **使用 Kafka 的话，数据被消费后不会丢失**。
 
-当某个商品重新回到库存，你可能希望向愿望清单包含这个商品的顾客推送消息。要实现这个功能，可以让通知服务和库存服务监听同样的标签。通过这种方式, **就可以实现在不同的地方使用单个消息总线，并没有HTTP开销**。
+当某个商品重新回到库存，你可能希望向愿望清单包含这个商品的顾客推送消息。要实现这个功能，可以让通知服务和库存服务监听同样的标签。通过这种方式, **就可以实现在不同的地方使用单个消息总线，并没有 HTTP 开销**。
 
-KafkaJS的[开始页面](https://kafka.js.org/docs/getting-started) 分享了从Node.js应用的基础设置到上述功能的代码片段，我强烈推荐你查看，有很多内容值得研究。
+KafkaJS 的[开始页面](https://kafka.js.org/docs/getting-started) 分享了从 Node.js 应用的基础设置到上述功能的代码片段，我强烈推荐你查看，有很多内容值得研究。
 
 ## 小心内存泄露
 
@@ -140,14 +140,14 @@ KafkaJS的[开始页面](https://kafka.js.org/docs/getting-started) 分享了从
 
 ![setTimeout retaining 98% memory after execution is over](https://www.freecodecamp.org/news/content/images/2022/09/Image-Pasted-at-2022-9-6-14-58.png)
 
-执行结束后setTimeout还保留98%的内存
+执行结束后 setTimeout 还保留 98%的内存
 
 对于初学者，我建议：
 
 1.  使用`--inspect`标志来执行 Node.js API 
-2.  在Chrome浏览器打开`chrome://inspect/#devices` 
+2.  在 Chrome 浏览器打开`chrome://inspect/#devices` 
 3.  点击 inspect > `Memory` tab > `Allocation instrumentation on timeline`.
-4.  在执行一些应用功能。可以使用macOS的apache bench来同时发出多个请求，在终端执行 `curl cheat.sh/ab`查看怎么使用apache bench。
+4.  在执行一些应用功能。可以使用 macOS 的 apache bench 来同时发出多个请求，在终端执行 `curl cheat.sh/ab`查看怎么使用 apache bench。
 5.  停止记录并分析内存保持器。
 
 如果发现任何大块的保留内存，请尝试将其最小化。这个话题相关的资源很多，你可以从谷歌搜索“如何防止 Node.js 中的内存泄漏”开始探索。
@@ -164,26 +164,26 @@ KafkaJS的[开始页面](https://kafka.js.org/docs/getting-started) 分享了从
 
 而在**延迟加载**中，数据仅在第一次读取时才写入缓存。第一次请求提供来自数据库的数据，但随后的请求使用缓存。它具有较小的成本，但增加了第一次请求的响应时间。
 
-要决定缓存数据的TTL（或生存时间），请问自己：
+要决定缓存数据的 TTL（或生存时间），请问自己：
 
 1.  基础数据要多久更改一次？
 2.  将过期数据返回给最终用户的风险是什么？
 
-在允许的情况下， **更长的TTL意味着更好的应用表现**。
+在允许的情况下， **更长的 TTL 意味着更好的应用表现**。
 
-重要的是，为你的TTL **添加一点增量**。如果应用程序一时间收到大量流量，并且您的所有缓存数据立即过期，则可能导致数据库无法承受负载，从而影响用户体验。
+重要的是，为你的 TTL **添加一点增量**。如果应用程序一时间收到大量流量，并且您的所有缓存数据立即过期，则可能导致数据库无法承受负载，从而影响用户体验。
 
 ```
 最终TTL = TTL预估值 + 一点随机增量
 ```
 
-TTL的计算
+TTL 的计算
 
 有许多[缓存逐出](https://redis.io/docs/manual/eviction/)的策略，保留默认值是一种有效且可接受的方法。
 
 ## 使用连接池
 
-打开一个与数据库的独立连接开销很高。它涉及TCP握手、SSL、身份验证和授权检查等。
+打开一个与数据库的独立连接开销很高。它涉及 TCP 握手、SSL、身份验证和授权检查等。
 
 你可以利用连接池来取代独立连接
 
@@ -195,12 +195,12 @@ TTL的计算
 
 那么，为什么不最大化池中的连接数呢？因为它高度依赖于硬件资源。如果忽略这一点，可能会造成巨大的性能损失。
 
-连接越多，每个连接的RAM越少，利用RAM的查询越慢（例如排序）。同样的原则也适用于磁盘和CPU。每个新连接都将被分配到资源。
+连接越多，每个连接的 RAM 越少，利用 RAM 的查询越慢（例如排序）。同样的原则也适用于磁盘和 CPU。每个新连接都将被分配到资源。
 
 你可以根据自己的需求调节连接数，对于初学者来说你可以在[这里](https://www.cybertec-postgresql.com/en/tuning-max_connections-in-postgresql/)评估连接池的大小。
 
 你可以在[这里](https://www.mongodb.com/docs/manual/administration/connection-pool-overview/)阅
-连接池相关的内容。若你使用的是PostgreSQL，你可以使用`node-postgres`包。这是一个[连接池](https://node-postgres.com/features/pooling)的内置支持。
+连接池相关的内容。若你使用的是 PostgreSQL，你可以使用`node-postgres`包。这是一个[连接池](https://node-postgres.com/features/pooling)的内置支持。
 
 ## 无缝扩展
 
@@ -208,11 +208,11 @@ TTL的计算
 
 > 垂直扩展意味着增加节点 (CPU、内存等)资源，而水平扩展意味着增加更多的节点以平衡每个节点的负载。
 
-如果您使用的是AWS，则可以利用自动扩展组 (ASG)，它根据预定义的规则（例如，当CPU利用率超过50% 时水平扩展服务器数量。
+如果您使用的是 AWS，则可以利用自动扩展组 (ASG)，它根据预定义的规则（例如，当 CPU 利用率超过 50% 时水平扩展服务器数量。
 
  你可以通过[提前规划行为](https://docs.aws.amazon.com/autoscaling/application/userguide/examples-scheduled-actions.html)来提前规划扩展和缩小的计划，以此来应对可以遇见的流量模式（如在世界杯期间的流媒体服务）。
 
-准备好ASG后，在最前面添加负载均衡器将确保流量根据所选策略路由到所有实例(如[round robin](https://en.wikipedia.org/wiki/Round-robin_scheduling)。
+准备好 ASG 后，在最前面添加负载均衡器将确保流量根据所选策略路由到所有实例(如[round robin](https://en.wikipedia.org/wiki/Round-robin_scheduling)。
 
 ![Load balancing multiple targets based on predefined rules](https://www.freecodecamp.org/news/content/images/2022/09/alb-nodejs-best-practices-for-scale.drawio--2-.png)
 
@@ -220,25 +220,25 @@ TTL的计算
 
 **PS:** 预估单个服务器可以处理的请求（CPU、内存、磁盘等）并分配至少 30%以上的容量总不会错。
 
-## OpenAPI兼容文档
+## OpenAPI 兼容文档
 
-它可能不会直接影响扩展Node.js应用程序的能力，但我必须将其包含在列表中。如果你曾经做过API集成，你就知道为什么了。
+它可能不会直接影响扩展 Node.js 应用程序的能力，但我必须将其包含在列表中。如果你曾经做过 API 集成，你就知道为什么了。
 
 在向前迈出一步之前，了解有关 API 的所有信息至关重要。它使设计的集成、迭代和说理变得容易，更不用说对开发速度的帮助。
 
 确保**为你的 Node.js API 创建 OpenAPI 规范 (OAS)**。
 
-这使得你以行业标准的方式创建 API 文档。OAS充当单一的事实来源。如果定义得当，它会使与 API 的交互更加高效。
+这使得你以行业标准的方式创建 API 文档。OAS 充当单一的事实来源。如果定义得当，它会使与 API 的交互更加高效。
 
-我在[这里](https://app.swaggerhub.com/apis/Rishabh570/test-API/0.1)创建了一个API文档样本，你可以使用[swagger inspector](https://swagger.io/tools/swagger-inspector/)来监测任意API。
+我在[这里](https://app.swaggerhub.com/apis/Rishabh570/test-API/0.1)创建了一个 API 文档样本，你可以使用[swagger inspector](https://swagger.io/tools/swagger-inspector/)来监测任意 API。
 
-你可以在[Swagger Hub dashboard](https://app.swaggerhub.com/home)找到所有API文档，以及创建一个新的文档。
+你可以在[Swagger Hub dashboard](https://app.swaggerhub.com/home)找到所有 API 文档，以及创建一个新的文档。
 
 ## 行动起来吧，船长！
 
-我们研究了十个鲜为人知的扩展Node.js的最佳实践，以及如何开启每一个最佳时间。
+我们研究了十个鲜为人知的扩展 Node.js 的最佳实践，以及如何开启每一个最佳时间。
 
-现在轮到你对照这个清单并探索发现你的Node.js应用程序缺少了什么。
+现在轮到你对照这个清单并探索发现你的 Node.js 应用程序缺少了什么。
 
 获取你的检查清单 ✨
 

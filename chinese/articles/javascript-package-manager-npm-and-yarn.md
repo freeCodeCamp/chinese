@@ -7,7 +7,7 @@
 
 一个 **包管理器** 是开发人员用来自动寻找、下载、安装、配置、升级和删除系统包的工具。
 
-本文将向你展示所有你需要的东西，以开始使用NPM和Yarn等软件包管理器。
+本文将向你展示所有你需要的东西，以开始使用 NPM 和 Yarn 等软件包管理器。
 
 但是，究竟为什么我们在开发工作流程中需要一个软件包管理器呢？让我们来了解一下。
 
@@ -33,7 +33,7 @@
 
 一个 **包管理器** 是开发人员用来自动查找、下载、安装、配置、升级和卸载计算机包的工具。
 
-NPM（Node Package Manager）和Yarn（Yet Another Resource Negotiator）是两个常用的软件包管理器。
+NPM（Node Package Manager）和 Yarn（Yet Another Resource Negotiator）是两个常用的软件包管理器。
 
 一个 **package registry** 是一个数据库（存储），用于存储成千上万的包（库、插件、框架或工具）。
 
@@ -43,25 +43,25 @@ NPM（Node Package Manager）和Yarn（Yet Another Resource Negotiator）是两�
 
 所以，现在我们知道了什么是包管理器以及为什么需要它，我们可以讨论如何使用两个流行的包管理器 NPM 和 Yarn。
 
-请注意，外面有许多关于NPM和Yarn的争论--所以我们在这里会避免这些争论，因为最好的软件包管理器是最适合你的。
+请注意，外面有许多关于 NPM 和 Yarn 的争论--所以我们在这里会避免这些争论，因为最好的软件包管理器是最适合你的。
 
-因此，本文将向你展示NPM和Yarn是如何工作的，而不是告诉你哪个软件包管理器是最好的。然后由你来决定你喜欢哪一个。
+因此，本文将向你展示 NPM 和 Yarn 是如何工作的，而不是告诉你哪个软件包管理器是最好的。然后由你来决定你喜欢哪一个。
 
-另外，你可以选择在一个特定的项目中使用NPM，在另一个项目中使用Yarn,这取决于你认为哪个管理器最适合这项工作。
+另外，你可以选择在一个特定的项目中使用 NPM，在另一个项目中使用 Yarn,这取决于你认为哪个管理器最适合这项工作。
 
 因此，不再多说，让我们开始学习如何安装这两个管理器。
 
-## 如何安装Node Package Manager (NPM)
+## 如何安装 Node Package Manager (NPM)
 
-NPM会在安装Node时自动安装。
+NPM 会在安装 Node 时自动安装。
 
-因此，要在你的系统上安装NPM，请到 [NodeJS](https://nodejs.org/en/) 网站上获取Node的 [最新LTS或当前版本](https://tamalweb.com/which-nodejs-version)。
+因此，要在你的系统上安装 NPM，请到 [NodeJS](https://nodejs.org/en/) 网站上获取 Node 的 [最新 LTS 或当前版本](https://tamalweb.com/which-nodejs-version)。
 
-## 如何安装Yarn
+## 如何安装 Yarn
 
-最好是通过NPM来安装Yarn。因此，首先，从 [Node.js](https://nodejs.org/en/)网站上安装NPM。
+最好是通过 NPM 来安装 Yarn。因此，首先，从 [Node.js](https://nodejs.org/en/)网站上安装 NPM。
 
-一旦你安装了NPM，就像这样继续安装Yarn:
+一旦你安装了 NPM，就像这样继续安装 Yarn:
 
 ```bash
 npm install -g yarn
@@ -69,7 +69,7 @@ npm install -g yarn
 
 ## 如何检查已安装的 Node 版本
 
-要检查你系统上安装的Node.js版本，请运行:
+要检查你系统上安装的 Node.js 版本，请运行:
 
 ```bash
 node -v
@@ -77,51 +77,51 @@ node -v
 
 上面片段中的`-v`标志是 `--version` 的缩写.
 
-## 如何检查已安装的NPM版本
+## 如何检查已安装的 NPM 版本
 
-要检查你系统上安装的NPM版本，请运行:
+要检查你系统上安装的 NPM 版本，请运行:
 
 ```bash
 npm -v
 ```
 
-## 如何检查已安装的Yarn版本
+## 如何检查已安装的 Yarn 版本
 
-要检查你系统上安装的Yarn版本，请运行:
+要检查你系统上安装的 Yarn 版本，请运行:
 
 ```bash
 yarn -v
 ```
 
-## 如何升级Node Package Manager
+## 如何升级 Node Package Manager
 
-通过运行以下程序更新到最新的NPM版本:
+通过运行以下程序更新到最新的 NPM 版本:
 
 ```bash
 npm install npm@latest -g
 ```
 
-## 如何升级NodeJS
+## 如何升级 NodeJS
 
-假设你希望升级你的Node.js安装。在这种情况下，你有两个选择:
+假设你希望升级你的 Node.js 安装。在这种情况下，你有两个选择:
 
-### Option 1: 通过NodeJS网站升级
+### Option 1: 通过 NodeJS 网站升级
 
-升级你的NodeJS安装的一种方法是手动从 [Node.js 官网](https://nodejs.org/en/)下载并安装最新版本。
+升级你的 NodeJS 安装的一种方法是手动从 [Node.js 官网](https://nodejs.org/en/)下载并安装最新版本。
 
 ### Option 2: 通过版本管理工具进行升级
 
-另一种升级NodeJS安装的方法是使用 [版本管理器](https://nodejs.org/en/download/package-manager/)，如 [NVM](https://github.com/nvm-sh/nvm)、[n](https://github.com/tj/n)，或 [nvs](https://github.com/jasongin/nvs)。
+另一种升级 NodeJS 安装的方法是使用 [版本管理器](https://nodejs.org/en/download/package-manager/)，如 [NVM](https://github.com/nvm-sh/nvm)、[n](https://github.com/tj/n)，或 [nvs](https://github.com/jasongin/nvs)。
 
 ## 如何升级 Yarn
 
-通过运行以下程序更新到最新的Yarn版本:
+通过运行以下程序更新到最新的 Yarn 版本:
 
 ```bash
 yarn set version latest
 ```
 
-所以，现在我们的电脑上有了NPM（或Yarn），我们可以开始使用安装管理器来寻找、安装、配置和删除我们项目的包。
+所以，现在我们的电脑上有了 NPM（或 Yarn），我们可以开始使用安装管理器来寻找、安装、配置和删除我们项目的包。
 
 但究竟什么是包？让我们来了解一下。
 
@@ -145,7 +145,7 @@ yarn set version latest
 
 2. 使用下面的 NPM 或 Yarn 安装命令安装你的包（取决于你选择的项目使用的包管理器）。
 
-**注意：** 你的系统必须安装Node和NPM，下面的NPM（和Yarn）安装命令才能工作。你可以通过安装最新的LTS或Node.js网站的当前版本来获得这两者。
+**注意：** 你的系统必须安装 Node 和 NPM，下面的 NPM（和 Yarn）安装命令才能工作。你可以通过安装最新的 LTS 或 Node.js 网站的当前版本来获得这两者。
 
 #### NPM installation  命令
 
@@ -153,7 +153,7 @@ yarn set version latest
 npm install package-name --save
 ```
 
-注意，上面的`--save` 命令指示NPM将 `package.json` 文件中的 `package-name` 保存为项目所依赖的包之一。
+注意，上面的`--save` 命令指示 NPM 将 `package.json` 文件中的 `package-name` 保存为项目所依赖的包之一。
 
 假设你希望安装一个精确版本的软件包。在这种情况下，在软件包的名称后面添加 `@[版本号]`，像这样:
 
@@ -167,7 +167,7 @@ npm install package-name@4.14.1 --save
 npm install package-name --save-dev
 ```
 
-上面的命令将使NPM下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个 `package.json` 文件，和一个 `package-lock.json` 文件。我们将在本文后面详细讨论这些项目。
+上面的命令将使 NPM 下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个 `package.json` 文件，和一个 `package-lock.json` 文件。我们将在本文后面详细讨论这些项目。
 
 #### Yarn installation 命令
 
@@ -187,7 +187,7 @@ yarn add package-name@4.14.1
 yarn add package-name --dev
 ```
 
-上面的命令将使Yarn下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个`package.json` 文件，和一个 `yarn.lock` 文件。我们将在本文后面详细讨论这些项目。
+上面的命令将使 Yarn 下载三个项目到你的项目根目录：一个 `node_modules` 文件夹，一个`package.json` 文件，和一个 `yarn.lock` 文件。我们将在本文后面详细讨论这些项目。
 
 所以，现在我们知道了如何在本地安装一个包，我们可以讨论全局包的安装。
 
@@ -201,7 +201,7 @@ yarn add package-name --dev
 npm install package-name -g
 ```
 
-或者，你可以像这样使用Yarn:
+或者，你可以像这样使用 Yarn:
 
 ```bash
 yarn global add package-name
@@ -213,7 +213,7 @@ yarn global add package-name
 
 一般来说，最好是在本地安装一个软件包。下面是本地安装和全局安装之间的一些区别。
 
-#### 差别1：安装位置
+#### 差别 1：安装位置
 
 一个本地安装的包会被安装在你执行`npm install package-name`（或`yarn add package-name`）命令的目录下。
 
@@ -221,25 +221,25 @@ yarn global add package-name
 
 相比之下，全局安装的包会被安装在你系统中的一个位置。具体位置取决于你系统的配置。
 
-#### 差异2：软件包版本
+#### 差异 2：软件包版本
 
 假设你在本地安装了你的包。那么，你可以使用同一个包的不同版本来开发多个应用程序(译者注：你可以在不同的目录安装)。
 
 然而，当你在全球范围内安装时，你被迫为你的所有应用程序使用相同的软件包版本。
 
-#### 差别3：更新
+#### 差别 3：更新
 
 本地安装允许你选择你想升级到最新版本的项目包。这使你更容易管理那些破坏与其他软件包兼容性的升级。
 
 然而，升级一个全局安装的包会更新所有项目的包--如果升级破坏了与其他包的兼容性，这可能会导致维护的噩梦。
 
-#### 差异4：使用建议
+#### 差异 4：使用建议
 
 全局安装最适合你打算只在你的命令行上使用的软件包--特别是当它们提供了可在不同项目中重复使用的可执行命令。
 
 然而，本地安装最适合于你打算在程序中使用的软件包--通过`import`语句或`require()`函数。
 
-#### 差异5：例子
+#### 差异 5：例子
 
 [NPM](https://www.npmjs.com/), [React Native CLI](https://reactnative.dev/docs/environment-setup), [Gatsby CLI](https://www.gatsbyjs.com/docs/reference/gatsby-cli/), [Grunt CLI](https://gruntjs.com/getting-started), 和 [Vue CLI](https://cli.vuejs.org/) 是著名的需要全局软件包的例子。
 
@@ -248,18 +248,18 @@ yarn global add package-name
 **注意:**
 
 - 你可以对你打算在命令行和项目中使用的软件包[进行本地和全局安装](https://nodejs.org/en/blog/npm/npm-1-0-global-vs-local-installation/#when-you-can-t-choose)。这种包的典型例子是[ExpressJS](https://expressjs.com/)和[CoffeeScript](https://coffeescript.org/)。
-- 你的包管理器不会执行已安装的包。NPM（和Yarn）只将包安装到`node_modules`目录。而如果你指定了`--save`命令，你的管理器会把软件包的细节添加到`package.json`文件中。
+- 你的包管理器不会执行已安装的包。NPM（和 Yarn）只将包安装到`node_modules`目录。而如果你指定了`--save`命令，你的管理器会把软件包的细节添加到`package.json`文件中。
 - 要执行（运行）任何[可执行](https://helpdeskgeek.com/how-to/what-is-an-executable-file-how-to-create-one/)包，你必须自己明确地这样做。我们将在本文后面的章节中讨论如何做。
 
 但究竟什么是 `node_modules` 文件夹、`package.json` 文件、`package-lock.json` 文件和 `yarn.lock` 文件？让我们来了解一下。
 
 ## 什么是 "node_modules "文件夹？
 
-**node/modules**目录是NPM放置所有为你的项目下载的本地软件包的文件夹。
+**node/modules**目录是 NPM 放置所有为你的项目下载的本地软件包的文件夹。
 
 ## 什么是`package.json`文件？
 
-**package.json**文件是一个JSON文件，包管理器（如NPM和Yarn）使用它来存储特定项目的信息。
+**package.json**文件是一个 JSON 文件，包管理器（如 NPM 和 Yarn）使用它来存储特定项目的信息。
 
 换句话说，`package.json`文件是一个项目的元数据文件。
 
@@ -267,9 +267,9 @@ yarn global add package-name
 
  `package.json` 文件:
 
-- 使得将你的项目发布到NPM registry 成为可能
+- 使得将你的项目发布到 NPM registry 成为可能
 - 使得其他人能够轻松地管理和安装你的软件包
-- 帮助NPM轻松管理 [模块](https://www.codesweetly.com/javascript-modules-tutorial/) 的依赖关系
+- 帮助 NPM 轻松管理 [模块](https://www.codesweetly.com/javascript-modules-tutorial/) 的依赖关系
 - 使得你的软件包可以重现并与其他开发者共享
 
 ### 如何创建一个`package.json`文件
@@ -280,7 +280,7 @@ yarn global add package-name
 npm init
 ```
 
-或者，如果你的软件包管理器是Yarn，运行:
+或者，如果你的软件包管理器是 Yarn，运行:
 
 ```bash
 yarn init
@@ -298,7 +298,7 @@ yarn init
 npm init -y
 ```
 
-或者，如果你的软件包管理器是Yarn，运行:
+或者，如果你的软件包管理器是 Yarn，运行:
 
 ```bash
 yarn init -y
@@ -326,7 +326,7 @@ yarn init -y
 
 `package.json`的属性使你的项目可以被包管理器和终端用户使用。
 
-假设你想把你的包发布到NPM registry。在这种情况下，你的 `package.json` 文件必须有 `"name"` 和`"version"` 字段。
+假设你想把你的包发布到 NPM registry。在这种情况下，你的 `package.json` 文件必须有 `"name"` 和`"version"` 字段。
 
 然而，如果你不打算发布你的包，在这种情况下，所有字段--包括 `"name"` 和 `"version"` 属性--都是可选的。
 
@@ -340,7 +340,7 @@ yarn init -y
 
 - 一个单字
 - 小写字母
-- 并且小于或等于214个字符
+- 并且小于或等于 214 个字符
 
 请注意，你可以用连字符和下划线将单词连接起来。
 
@@ -370,7 +370,7 @@ yarn init -y
 
 `"description"` 字段是一个包含项目目的简要描述的属性。
 
-NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易找到。
+NPM 建议有一个`"description"`属性，使你的包在 NPM 网站上更容易找到。
 
 当人们运行`npm search`命令时，你的描述将被显示出来。
 
@@ -386,7 +386,7 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 
 `"main"` 字段表示一个项目的 [入口点](https://www.codesweetly.com/web-tech-glossary/#entry-point).
 
-换句话说，当有人运行 `require()` 函数时，Node将把调用解析为 `require(<package.json:main>)`。
+换句话说，当有人运行 `require()` 函数时，Node 将把调用解析为 `require(<package.json:main>)`。
 
 **这是一个例子:**
 
@@ -408,7 +408,7 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 }
 ```
 
-如果你把package.json的 `"private"` 属性设置为 `true`，包管理器将不会发布你的项目。
+如果你把 package.json 的 `"private"` 属性设置为 `true`，包管理器将不会发布你的项目。
 
 因此，设置该属性是防止意外发布你的包的一个好办法。
 
@@ -495,12 +495,12 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 }
 ```
 
-因此，每当用户从NPM registry 安装你的项目时，依赖项属性就会确保包管理器能够自动找到并安装列出的包。
+因此，每当用户从 NPM registry 安装你的项目时，依赖项属性就会确保包管理器能够自动找到并安装列出的包。
 
 请注意，你可以通过以下两种方式将一个包添加到 `"dependencies"`字段中:
 
 - 手动添加你的项目在生产中依赖的每个软件包的名称和 [语义版本](https://docs.npmjs.com/about-semantic-versioning)。
-- 在你的终端上运行 `npm install package-name --save-prod` 命令。如果Yarn是你的软件包管理器，则可以使用 `yarn add package-name`。
+- 在你的终端上运行 `npm install package-name --save-prod` 命令。如果 Yarn 是你的软件包管理器，则可以使用 `yarn add package-name`。
 
 #### devDependencies
 
@@ -524,11 +524,11 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 请记住，你可以通过以下两种方式将包添加到 `"devDependencies"` 字段中:
 
 - 手动添加你的项目在开发和测试中所依赖的每个软件包的名称和语义版本。
-- 在你的终端上运行`npm install package-name --save-dev`命令。如果Yarn是你的软件包管理器，则可以使用`yarn add package-name --dev`。
+- 在你的终端上运行`npm install package-name --save-dev`命令。如果 Yarn 是你的软件包管理器，则可以使用`yarn add package-name --dev`。
 
 #### homepage
 
-`"homepage"` 字段指定了你的项目主页的URL。
+`"homepage"` 字段指定了你的项目主页的 URL。
 
 **这是一个例子:**
 
@@ -544,27 +544,27 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 
 **package-lock.json** 文件是 NPM 用来记录你在本地安装到项目 `node_modules` 目录下的所有软件包的准确版本的 [文件](https://www.codesweetly.com/document-vs-data-vs-code/#h-what-is-a-document)。
 
-`package-lock.json` 文件使应用程序以您发布到 NPM registry 后以确切方式100% 复现。
+`package-lock.json` 文件使应用程序以您发布到 NPM registry 后以确切方式 100% 复现。
 
 因此，假设一个用户克隆了你的应用程序并运行了`npm install`命令。在这种情况下，`package-lock.json`确保用户下载的是你用来开发应用程序的确切版本的软件包。
 
 例如，假设一个用户克隆了你的应用程序，其中没有`package-lock.json`文件，而该应用程序中使用的一个依赖项有一个较新的版本。
 
-假设`package.json`文件中的依赖关系的版本号有一个圆点符号（例如，`^2.6.2`）。在这种情况下，NPM将安装该依赖的最新次要版本--这可能导致应用程序产生错误的结果。
+假设`package.json`文件中的依赖关系的版本号有一个圆点符号（例如，`^2.6.2`）。在这种情况下，NPM 将安装该依赖的最新次要版本--这可能导致应用程序产生错误的结果。
 
-然而，假设用户克隆了你的应用程序，其中包含一个`package-lock.json`文件。在这种情况下，NPM将安装`package-lock.json`文件中记录的依赖关系的确切版本--不管是否存在更新的版本。
+然而，假设用户克隆了你的应用程序，其中包含一个`package-lock.json`文件。在这种情况下，NPM 将安装`package-lock.json`文件中记录的依赖关系的确切版本--不管是否存在更新的版本。
 
-因此，用户将始终以你发布到NPM注册表的精确方式获得你的应用程序。
+因此，用户将始终以你发布到 NPM 注册表的精确方式获得你的应用程序。
 
-换句话说，NPM使用`package-lock.json`文件将你的软件包的依赖关系锁定在你用于项目开发的特定版本号上。
+换句话说，NPM 使用`package-lock.json`文件将你的软件包的依赖关系锁定在你用于项目开发的特定版本号上。
 
-**注意：** 只要你运行 `npm update` 命令，NPM就会更新 `package-lock.json` 文件中记录的软件包。
+**注意：** 只要你运行 `npm update` 命令，NPM 就会更新 `package-lock.json` 文件中记录的软件包。
 
 ## 什么是 `yarn.lock` 文件？
 
-`yarn.lock`文件是Yarn用来记录你在项目的`node_modules`目录下安装的所有软件包的确切版本。
+`yarn.lock`文件是 Yarn 用来记录你在项目的`node_modules`目录下安装的所有软件包的确切版本。
 
-`yarn.lock`文件与NPM的 [package-lock.json](#what-is-a-package-lock-json-file) 锁文件相当。
+`yarn.lock`文件与 NPM 的 [package-lock.json](#what-is-a-package-lock-json-file) 锁文件相当。
 
 我们之前提到，你的软件包管理器不会执行已安装的软件包--除非你自己明确地这样做。让我们来讨论一下如何做。
 
@@ -580,9 +580,9 @@ NPM建议有一个`"description"`属性，使你的包在NPM网站上更容易�
 ./node_modules/.bin/package-name
 ```
 
-### 在package.json的 `scripts` 字段中添加该软件包
+### 在 package.json 的 `scripts` 字段中添加该软件包
 
-另一种执行软件包的方法是，首先将其添加到你的项目package.json文件的`"scripts"`字段中，像这样:
+另一种执行软件包的方法是，首先将其添加到你的项目 package.json 文件的`"scripts"`字段中，像这样:
 
 ```json
 {
@@ -602,7 +602,7 @@ npm run desired-name
 
 注意，上面的命令是 `npm run-script desired-name` 的简写。
 
-另外，你也可以像这样用Yarn来执行这个包:
+另外，你也可以像这样用 Yarn 来执行这个包:
 
 ```bash
 yarn run desired-name
@@ -626,7 +626,7 @@ yarn run desired-name
 npm run build
 ```
 
-或者，如果你的软件包管理器是Yarn，你可以像这样运行webpack:
+或者，如果你的软件包管理器是 Yarn，你可以像这样运行 webpack:
 
 ```bash
 yarn run build
@@ -634,13 +634,13 @@ yarn run build
 
 ### 使用 NPX
 
-运行可执行包的一个更快的方法是像这样使用NPX:
+运行可执行包的一个更快的方法是像这样使用 NPX:
 
 ```bash
 npx package-name
 ```
 
-有了NPX，你不再需要把你的包添加到项目的`package.json`文件的`"scripts"`字段中。
+有了 NPX，你不再需要把你的包添加到项目的`package.json`文件的`"scripts"`字段中。
 
 NPX(Node Package Execute)是一个 [Node package runner](https://nodejs.dev/learn/the-npx-nodejs-package-runner)，可以自动找到并执行指定的包。
 
@@ -652,13 +652,13 @@ npx webpack
 
 上面的命令会自动找到并执行 [webpack](https://www.codesweetly.com/javascript-module-bundler/)。因此，我们不需要在 `package.json` 文件的 `"build": "webpack"` 属性添加到我们的 `package.json` 文件的 `"scripts"` 字段中。
 
-**注意：**当你安装Node 8.2/NPM 5.2.0或更高版本时，NPX自动被安装。
+**注意：**当你安装 Node 8.2/NPM 5.2.0 或更高版本时，NPX 自动被安装。
 
 你也可以使用你喜欢的 Node.js 版本运行一些代码。让我们来看看如何。
 
-## 如何使用你喜欢的Node.js版本来运行代码
+## 如何使用你喜欢的 Node.js 版本来运行代码
 
-你可以使用 `@` 字符和 [node npm package](https://www.npmjs.com/package/node) 来指定你希望用来执行代码的Node.js版本。
+你可以使用 `@` 字符和 [node npm package](https://www.npmjs.com/package/node) 来指定你希望用来执行代码的 Node.js 版本。
 
 **这是一个例子:**
 
@@ -666,19 +666,19 @@ npx webpack
 npx node@7 index.js
 ```
 
-上面的片段告诉NPX用最新的Node 7 major版本来运行`index.js`。
+上面的片段告诉 NPX 用最新的 Node 7 major 版本来运行`index.js`。
 
-使用`node@`命令是一个有用的方法，可以避免使用Node.js版本管理工具，如[nvm](https://github.com/nvm-sh/nvm)在Node版本之间切换。
+使用`node@`命令是一个有用的方法，可以避免使用 Node.js 版本管理工具，如[nvm](https://github.com/nvm-sh/nvm)在 Node 版本之间切换。
 
-假设你想确认NPX将使用哪个Node版本来运行你的代码。在这种情况下，运行:
+假设你想确认 NPX 将使用哪个 Node 版本来运行你的代码。在这种情况下，运行:
 
 ```bash
 npx node@7 -v
 ```
 
-上面的片段将显示NPX将用于运行你的代码的最新Node版本，即7大版本--例如，`v7.10.1`。
+上面的片段将显示 NPX 将用于运行你的代码的最新 Node 版本，即 7 大版本--例如，`v7.10.1`。
 
-## 如何检查是否有过时的本地Packages(软件包)
+## 如何检查是否有过时的本地 Packages(软件包)
 
 要确定你的项目的任何包是否已经过时，请运行:
 
@@ -690,7 +690,7 @@ npm outdated
 
 否则，请看这篇 [npm-outdated article](https://docs.npmjs.com/cli/v6/commands/npm-outdated)对该命令输出的详细解释。
 
-另外，你也可以像这样使用Yarn:
+另外，你也可以像这样使用 Yarn:
 
 ```bash
 yarn outdated
@@ -716,7 +716,7 @@ npm outdated -g --depth=0
 npm list
 ```
 
-或者像这样使用Yarn:
+或者像这样使用 Yarn:
 
 ```bash
 yarn list
@@ -750,7 +750,7 @@ npm list package-name
 npm list -g
 ```
 
-或者像这样使用Yarn:
+或者像这样使用 Yarn:
 
 ```bash
 yarn list -g
@@ -776,7 +776,7 @@ npm list -g package-name
 
 ## 如何更新软件包
 
-下面是如何用NPM和Yarn更新软件包:
+下面是如何用 NPM 和 Yarn 更新软件包:
 
 ### 如何将一个特定的软件包更新到其最新版本
 
@@ -784,7 +784,7 @@ npm list -g package-name
 npm update package-name
 ```
 
-或者，对于用Yarn管理的项目，运行:
+或者，对于用 Yarn 管理的项目，运行:
 
 ```bash
 yarn upgrade package-name
@@ -818,7 +818,7 @@ npm update -g
 
 ## 如何卸载软件包
 
-下面是如何用NPM和Yarn卸载软件包的方法:
+下面是如何用 NPM 和 Yarn 卸载软件包的方法:
 
 ### 如何从一个特定的项目中卸载一个软件包
 
@@ -833,7 +833,7 @@ npm uninstall package-name
 - `-S` (或 `--save`) 标志，将对项目`package.json`文件中`dependencies`字段中软件包的引用删除。
 - `-D` (或 `--save-dev`) 标志，将对项目`package.json`文件中`devDependencies`字段中对包的引用删除。
 
-对于用Yarn管理的项目，运行:
+对于用 Yarn 管理的项目，运行:
 
 ```bash
 yarn remove package-name
@@ -849,11 +849,11 @@ npm uninstall package-name -g
 
 注意，最好的做法是不要从`node_modules`文件夹中手动删除包，因为这种行为会影响到其他依赖它的 _modules_ 。
 
-但NodeJS中的 _modules_ 到底是什么？让我们在下面找出答案。
+但 NodeJS 中的 _modules_ 到底是什么？让我们在下面找出答案。
 
-## 到底什么是NodeJS的模块（module）？
+## 到底什么是 NodeJS 的模块（module）？
 
-NodeJS中的 **module** 是`node_modules`文件夹中的任何文件，计算机可以通过Node的 `require()` 函数加载。
+NodeJS 中的 **module** 是`node_modules`文件夹中的任何文件，计算机可以通过 Node 的 `require()` 函数加载。
 
 **这是一个例子:**
 
@@ -870,7 +870,7 @@ const myModule = require("./codesweetly.js");
 另外，请注意，如果一个模块可以被  `require()` 函数加载，该模块必须是下列之一:
 
 - 一个包，其`package.json`文件包含一个 `"main"` 字段。
-- 一个JavaScript文件。
+- 一个 JavaScript 文件。
 
 ## 如何将你的项目发布到 NPM Registry
 
@@ -888,7 +888,7 @@ NPM 对于 [公共包开发者](https://www.npmjs.com/products) 是一个免费�
 
 ### Step 2: 登录
 
-从命令行登录到你的NPM账户，像这样:
+从命令行登录到你的 NPM 账户，像这样:
 
 ```bash
 npm login
@@ -904,11 +904,11 @@ npm login
 npm publish
 ```
 
-确保你的包的名字目前在NPM上不存在。否则，你在发布时将得到一个错误。
+确保你的包的名字目前在 NPM 上不存在。否则，你在发布时将得到一个错误。
 
-你可以使用 `npm search` 命令（或 [NPM website](https://www.npmjs.com/)的搜索栏）来搜索你想使用的名字是否已经存在于NPM上。
+你可以使用 `npm search` 命令（或 [NPM website](https://www.npmjs.com/)的搜索栏）来搜索你想使用的名字是否已经存在于 NPM 上。
 
-假设所有适合你的包的名字都已经被占用了。在这种情况下，NPM允许你将你的项目作为一个范围发布。
+假设所有适合你的包的名字都已经被占用了。在这种情况下，NPM 允许你将你的项目作为一个范围发布。
 
 换句话说，你可以把你的包作为你的用户名的一个子部分发布。让我们看看下面的方法。
 
@@ -927,7 +927,7 @@ npm publish
 }
 ```
 
-NPM的默认设置是假定一个范围内的名称包是一个私人项目。因此，如果你使用 `npm publish` 命令来共享一个范围内的名称包，你会得到一个错误。
+NPM 的默认设置是假定一个范围内的名称包是一个私人项目。因此，如果你使用 `npm publish` 命令来共享一个范围内的名称包，你会得到一个错误。
 
 因此，要把你的包发布为你的用户名的范围，请在 `npm publish` 命令中添加 `--access=public` 标志:
 
@@ -939,19 +939,19 @@ npm publish --access=public
 
 ## 概述
 
-这篇文章讨论了什么是软件包管理器。我们还看了两个流行的包管理器（NPM和Yarn）是如何工作的。
+这篇文章讨论了什么是软件包管理器。我们还看了两个流行的包管理器（NPM 和 Yarn）是如何工作的。
 
 谢谢你的阅读!
 
-### **这里有一个有用的ReactJS资源:**
+### **这里有一个有用的 ReactJS 资源**
 
-我写了一本关于React!
+我写了一本关于 React!
 
 - 对初学者友好 ✔
 - 它有可用的代码片段 ✔
 - 它包含可扩展的项目 ✔
 - 它有大量易于掌握的例子 ✔
 
-[React Explained Clearly](https://amzn.to/30iVPIG) 这本书包含了你了解ReactJS所需要的一切。
+[React Explained Clearly](https://amzn.to/30iVPIG) 这本书包含了你了解 ReactJS 所需要的一切。
 
 [![React Explained Clearly Book Now Available at Amazon](https://www.freecodecamp.org/news/content/images/2022/01/Twitter-React_Explained_Clearly-CodeSweetly-Oluwatobi_Sofela.jpg)](https://amzn.to/30iVPIG)

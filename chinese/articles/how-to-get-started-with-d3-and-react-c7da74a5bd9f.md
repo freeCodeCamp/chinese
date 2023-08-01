@@ -276,7 +276,7 @@ Working with D3 can seem difficult in the beginning. Once you get the basics dow
 
 Finally, learning D3 is also a good way of getting fluent at traversing and manipulating the DOM. Understanding the DOM is often a quality interviewers look for in front end developers.
 
-#### Resources:
+#### Resources
 
 [D3 Tutorials](https://github.com/d3/d3/wiki/Tutorials) suggested by D3
 

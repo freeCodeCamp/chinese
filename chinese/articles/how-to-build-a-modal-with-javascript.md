@@ -11,23 +11,23 @@
 
 你可以使用模态框来做一些事情，比如存储你不想立即在网页上看到的信息，创建导航菜单，添加召唤行动元素，等等。
 
-一个很好的例子是，当你试图关闭推文编辑菜单时，Twitter上出现的弹框。
+一个很好的例子是，当你试图关闭推文编辑菜单时，Twitter 上出现的弹框。
 
 ![推特警告消息模态框](https://www.freecodecamp.org/news/content/images/2022/10/twitter_warning_message_modal.png)
 
 你还可以将模态框用于其他事情，如创建召唤行动元素、导航菜单、通讯部件等。
 
-作为一名web开发人员，知道如何构建一个模态框是个很方便的技能。在本教程中，我将带你走过如何使用HTML、CSS和JavaScript创建一个简单模态的过程。
+作为一名 web 开发人员，知道如何构建一个模态框是个很方便的技能。在本教程中，我将带你走过如何使用 HTML、CSS 和 JavaScript 创建一个简单模态的过程。
 
 以下是我们将制作的内容截图:
 
 ![一个用 html， css ，javascript创建的模态框](https://www.freecodecamp.org/news/content/images/2022/10/modal.png)
 
-这些步骤很容易遵循,这样你就可以定制或创建你自己的scratch——这完全取决于你。在本文的最后,我将提供codepen文件供你玩一玩。
+这些步骤很容易遵循,这样你就可以定制或创建你自己的 scratch——这完全取决于你。在本文的最后,我将提供 codepen 文件供你玩一玩。
 
 ## Step 1 – 添加标签
 
-让我们从html开始吧。
+让我们从 html 开始吧。
 
 首先，你要添加一个`section`元素，并赋予它两个类，`modal`和`hidden`。在这个元素下，你还会有一个`div`元素，它的类是`overlay`和`hidden`。最后，添加一个`<button>`按钮元素，类为`btn`和`btn-open`。
 
@@ -71,7 +71,7 @@
 <button class="btn btn-open">Open Modal</button>
 ```
 
-**注意** ⚠️ Take note of the hidden class added to the modal and the overlay element. This is very important because you'll target these classes to hide your modal and overlay using CSS.注意添加到模态框和覆盖元素的`hidden`类。这是非常重要的，因为你将使用CSS针对这些类来隐藏你的模态框和覆盖层。
+**注意** ⚠️ Take note of the hidden class added to the modal and the overlay element. This is very important because you'll target these classes to hide your modal and overlay using CSS.注意添加到模态框和覆盖元素的`hidden`类。这是非常重要的，因为你将使用 CSS 针对这些类来隐藏你的模态框和覆盖层。
 
 这里是输出的结果:
 
@@ -81,7 +81,7 @@
 
 让我们从取消页面所有元素的内外边距开始，之后把模态框和打开模态框的按钮都居中对齐。
 
-现在跳转到CSS页面添加这些样式：
+现在跳转到 CSS 页面添加这些样式：
 
 ```css
 * {
@@ -173,15 +173,15 @@ button {
 
 ![complete-modal-style](https://www.freecodecamp.org/news/content/images/2022/10/complete-modal-style.png)
 
-刚才你设置了模态框元素的样式，和绝对定位。定位起作用的原因是之前给body元素设置了相对定位。
+刚才你设置了模态框元素的样式，和绝对定位。定位起作用的原因是之前给 body 元素设置了相对定位。
 
 你也给模态框内部的元素设置了样式，但是我不会更深地解释细节，因为这部分不是我们的重要内容。
 
-## Step 3 – 添加覆盖层overlay
+## Step 3 – 添加覆盖层 overlay
 
 对于覆盖层，你想让它在整个页面上有一个微妙的黑色背景和模糊。
 
-由于你已经给body设置了相对定位，所以你可以用固定定位让overlay覆盖在body上。宽和高要设置为视窗的100%。
+由于你已经给 body 设置了相对定位，所以你可以用固定定位让 overlay 覆盖在 body 上。宽和高要设置为视窗的 100%。
 
 ```css
 .overlay {
@@ -202,7 +202,7 @@ button {
 
 ![overlay](https://www.freecodecamp.org/news/content/images/2022/10/overlay.png)
 
-如果你只想让overlay只覆盖body而不覆盖模态框，你需要让模态框modal处在更高的`z-index`。
+如果你只想让 overlay 只覆盖 body 而不覆盖模态框，你需要让模态框 modal 处在更高的`z-index`。
 
 ```css
 .modal {
@@ -210,7 +210,7 @@ button {
 }
 ```
 
-现在模态框将在overlay的上层而不被覆盖。
+现在模态框将在 overlay 的上层而不被覆盖。
 
 ![modal](https://www.freecodecamp.org/news/content/images/2022/10/modal-1.png)
 
@@ -224,13 +224,13 @@ button {
 }
 ```
 
-现在，页面中只有按钮显示。现在你可以在JavaScript中为模态框的功能做些事情了。
+现在，页面中只有按钮显示。现在你可以在 JavaScript 中为模态框的功能做些事情了。
 
 ## Step 4 – 模态框的功能
 
-在我们继续之前，我认为最好解释一下模态框是如何工作的。还记得你如何使用' hidden '类来隐藏模态框和覆盖层吗?要从元素中添加或删除这个类，需要使用DOM的classList元素。
+在我们继续之前，我认为最好解释一下模态框是如何工作的。还记得你如何使用' hidden '类来隐藏模态框和覆盖层吗?要从元素中添加或删除这个类，需要使用 DOM 的 classList 元素。
 
-但是，收敛，你需要使用DOM的`querySelector` 方法选中并把它们存在变量里，以便重复使用。
+但是，收敛，你需要使用 DOM 的`querySelector` 方法选中并把它们存在变量里，以便重复使用。
 
 ```js
 const modal = document.querySelector(".modal");
@@ -241,7 +241,7 @@ const closeModalBtn = document.querySelector(".btn-close");
 
 ## 如何打开模态框
 
-为了显示模态框，创建一个函数 `openModal`。在这个函数中，你将使用DOM `classList` 的属性，它采用了不同的方法比如'。remove() '和'。add() '从' modal '和' overlay '中移除' hidden '类。
+为了显示模态框，创建一个函数 `openModal`。在这个函数中，你将使用 DOM `classList` 的属性，它采用了不同的方法比如'。remove() '和'。add() '从' modal '和' overlay '中移除' hidden '类。
 
 ```js
 const openModal = function () {
@@ -299,15 +299,15 @@ overlay.addEventListener("click", closeModal);
 
 除了在单击关闭按钮或覆盖层时关闭模态框外，您还可以附加一个事件侦听器来监视键盘事件。
 
-在本例中，你可以希望在按下“Escape”键时关闭模态框，这与Twitter compose模态框示例非常相似。
+在本例中，你可以希望在按下“Escape”键时关闭模态框，这与 Twitter compose 模态框示例非常相似。
 
 ```js
 document.addEventListener("keydown");
 ```
 
-但是这次你想要的事件类型不是` " click " `事件——你想使用` " keydown " `事件来执行你的函数。
+但是这次你想要的事件类型不是`" click "`事件——你想使用`" keydown "`事件来执行你的函数。
 
-接下来，你将编写一个条件，检查当前按下的键是否为`Escape`键，模态框是否包含`hidden`类。现在它打开了，你想执行` closemmodal `函数(本质上就是关闭模态窗口)。
+接下来，你将编写一个条件，检查当前按下的键是否为`Escape`键，模态框是否包含`hidden`类。现在它打开了，你想执行`closemmodal`函数(本质上就是关闭模态窗口)。
 
 ```js
 document.addEventListener("keydown", function (e) {
@@ -319,9 +319,9 @@ document.addEventListener("keydown", function (e) {
 
 当模态框打开时，你点击<kbd>Esc</kbd>键，它会关闭模态框。
 
-有了这个，你已经成功地用HTML, CSS和JavaScript创建了一个模态组件，它就像预期的那样工作。🥳
+有了这个，你已经成功地用 HTML, CSS 和 JavaScript 创建了一个模态组件，它就像预期的那样工作。🥳
 
-下面是测试模态框效果的codepen文件:
+下面是测试模态框效果的 codepen 文件:
 
 See the Pen <a href="https://codepen.io/evavic44/pen/zYjjzoV"> Modal with overlay and blur</a> by Eke (<a href="https://codepen.io/evavic44">@evavic44</a>) on <a href="https://codepen.io">CodePen</a>.
 

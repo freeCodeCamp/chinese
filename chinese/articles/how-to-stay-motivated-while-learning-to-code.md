@@ -132,7 +132,7 @@ Pomodoro 学习技巧是那些挣扎于无法长时间集中注意力来学习�
 
 设置短期目标并保持专注于一次实现一个目标。
 
->成功不会在一夜之间发生。
+> 成功不会在一夜之间发生。
 
 尝试在同一时间实现太多的目标会让人不知所措。所以最好是分解你的目标成为几个小目标，然后集中精力一次实现一个小目标。
 
@@ -147,7 +147,7 @@ Pomodoro 学习技巧是那些挣扎于无法长时间集中注意力来学习�
 7.  用你到目前为止学到的 HTML、CSS 和 JavaScript 的基础知识[专注于建立项目](https://www.freecodecamp.org/news/javascript-projects-for-beginners/)。
 8.  开始学习高级的 JavaScript 概念，如[面向对象的编程](https://www.freecodecamp.org/news/how-javascript-implements-oop/)， 和[异步编程](https://www.freecodecamp.org/news/synchronous-vs-asynchronous-in-javascript/)。
 9.  通过建立项目来巩固你对高级概念的知识。
-10.  学习你选择的JavaScript框架。 [React](https://www.freecodecamp.org/news/learn-react-basics/)、 [Vue](https://www.freecodecamp.org/news/vue-js-full-course/)、 和 [Angular](https://www.freecodecamp.org/news/learn-angular-full-course/) 都是流行的选择。
+10.  学习你选择的 JavaScript 框架。 [React](https://www.freecodecamp.org/news/learn-react-basics/)、 [Vue](https://www.freecodecamp.org/news/vue-js-full-course/)、 和 [Angular](https://www.freecodecamp.org/news/learn-angular-full-course/) 都是流行的选择。
 11.  最后，你可以使用你所学的框架建立你喜欢的项目。
 
 您可能会认为，按照所述顺序完成上述步骤需要几个月的时间。也可能会花费更长时间，没事儿。

@@ -5,52 +5,52 @@
 
 ![How to Create a Telegram Bot using Python](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/Telegram-Bot.png)
 
-自动化的聊天机器人可以有效地促进互动，Slack、Discord和其他平台都支持创建机器人。
+自动化的聊天机器人可以有效地促进互动，Slack、Discord 和其他平台都支持创建机器人。
 
-在这篇文章里，笔者会教你做一个能告诉你星座运势的Telegram聊天机器人，话不多说，马上开始！
+在这篇文章里，笔者会教你做一个能告诉你星座运势的 Telegram 聊天机器人，话不多说，马上开始！
 
-## 如何获取你的机器人Token值
+## 如何获取你的机器人 Token 值
 
-在Telegram上创建一个机器人之前，你需要先跟 BotFather说一声，顾名思义，BotFather就是所有Bot的Father，但它并不是一个真实的人，也是一个机器人。
+在 Telegram 上创建一个机器人之前，你需要先跟 BotFather 说一声，顾名思义，BotFather 就是所有 Bot 的 Father，但它并不是一个真实的人，也是一个机器人。
 
-1\.  在Telegram上搜索 @botfather。
+1.  在 Telegram 上搜索 @botfather。
 
 ![Screenshot-2022-12-16-092357](https://www.freecodecamp.org/news/content/images/2022/12/Screenshot-2022-12-16-092357.png)
 
-BotFather机器人
+BotFather 机器人
 
-2\.  点击Start按钮与BotFather聊天.
+2.  点击 Start 按钮与 BotFather 聊天.
 
 ![Screenshot-2022-12-16-092531](https://www.freecodecamp.org/news/content/images/2022/12/Screenshot-2022-12-16-092531.png)
 
-点击Start按钮
+点击 Start 按钮
 
-3\.  输入 `/newbot`，然后输入你的机器人名字，再输入你的机器人ID，接着BotFather就会给你一个token值，后面我们会用这个token值来访问Telegram的API。
+3\.  输入 `/newbot`，然后输入你的机器人名字，再输入你的机器人 ID，接着 BotFather 就会给你一个 token 值，后面我们会用这个 token 值来访问 Telegram 的 API。
 
 ![Screenshot-2022-12-16-093337](https://www.freecodecamp.org/news/content/images/2022/12/Screenshot-2022-12-16-093337.png)
 
-获取访问token
+获取访问 token
 
-**注意：**一定要安全的存放上述申请到的token，因为这个token可以直接操控的你机器人。
+**注意：**一定要安全的存放上述申请到的 token，因为这个 token 可以直接操控的你机器人。
 
 
 ## 如何初始化你的代码环境
 
-现在需要准备一下本地的代码环境。在Python中，很多库可以创建Telegram机器人，这里我们用的是[pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/)。这是一个简单但是扩展性很强的库，并且有着很好的同步和异步处理能力。
+现在需要准备一下本地的代码环境。在 Python 中，很多库可以创建 Telegram 机器人，这里我们用的是[pyTelegramBotAPI](https://pypi.org/project/pyTelegramBotAPI/)。这是一个简单但是扩展性很强的库，并且有着很好的同步和异步处理能力。
 
-用pip命令安装pyTelegramBotAPI：
+用 pip 命令安装 pyTelegramBotAPI：
 
 ```bash
 pip install pyTelegramBotAPI
 ```
 
-然后用你常用的代码编辑器创建一个 `.env` 文件，并在其中写下这一行来存储你的token：
+然后用你常用的代码编辑器创建一个 `.env` 文件，并在其中写下这一行来存储你的 token：
 
 ```bash
 export BOT_TOKEN=your-bot-token-here
 ```
 
-然后，Linux/Mac系统下可以直接用终端在当前文件夹内使用 `source .env`命令，让BOT_TOKEN的值生效，而在Windows系统中，需要在终端中输入以下命令来设置环境变量：
+然后，Linux/Mac 系统下可以直接用终端在当前文件夹内使用 `source .env`命令，让 BOT_TOKEN 的值生效，而在 Windows 系统中，需要在终端中输入以下命令来设置环境变量：
 
 ```bash
 set BOT_TOKEN=your-bot-token-here
@@ -59,7 +59,7 @@ set BOT_TOKEN=your-bot-token-here
 
 ## 如何创建第一个机器人
 
-TeleBot类里面存储了所有的API接口，其中有很多方法可以用来监听收到的消息，同时也有像`send_message()`, `send_document()`这类方法来发送消息。
+TeleBot 类里面存储了所有的 API 接口，其中有很多方法可以用来监听收到的消息，同时也有像`send_message()`, `send_document()`这类方法来发送消息。
 
 新建一个 `bot.py` 文件，然后把下面的代码粘贴到文件中：
 
@@ -97,15 +97,15 @@ def echo_all(message):
     bot.reply_to(message, message.text)
 ```
 
-上面用到了一个` lambda` 函数，如果我们需要回应所有的消息，那我们就需要从`lambda`函数中返回一个 `True`。
+上面用到了一个`lambda` 函数，如果我们需要回应所有的消息，那我们就需要从`lambda`函数中返回一个 `True`。
 
-你现在有了一个简单的机器人，它可以对`/start` 和 `/hello `命令做出回应，并且可以返回其他发给它的消息。把下面这条代码放在`bot.py`的末尾，然后就可以启动机器人了。
+你现在有了一个简单的机器人，它可以对`/start` 和 `/hello`命令做出回应，并且可以返回其他发给它的消息。把下面这条代码放在`bot.py`的末尾，然后就可以启动机器人了。
 
 ```python
 bot.infinity_polling()
 ```
 
-好啦！这样我们就完成了一个Telegram机器人，运行这个Python文件，然后就可以通过Telegram与机器人进行交互了。
+好啦！这样我们就完成了一个 Telegram 机器人，运行这个 Python 文件，然后就可以通过 Telegram 与机器人进行交互了。
 
 如果你没保存机器人的联系方式，你可以通过之前设置的用户名来搜索。你可以尝试发送`/hello` 和 `/start` 以及其他消息感受一下。
 
@@ -115,15 +115,15 @@ bot.infinity_polling()
 
 注意：所有的消息处理器都按照它们在源文件中声明的顺序进行测试。
 
-获取更多如何使用pyTelegramBotAPI库的学习资料，你可以去他们的[官方文档](https://github.com/eternnoir/pyTelegramBotAPI)了解。
+获取更多如何使用 pyTelegramBotAPI 库的学习资料，你可以去他们的[官方文档](https://github.com/eternnoir/pyTelegramBotAPI)了解。
 
 ## 如何写一个星座运势机器人
 
 现在让我们把注意力放在星座运势机器人上。我们会在机器人中使用消息链。机器人会先问你是什么星座，然后会问你需要哪天的运势，接着就会返回那一天对应的星座运势。
 
-往程序内部分析，这个机器人主要是通过API来获取星座运势数据的。
+往程序内部分析，这个机器人主要是通过 API 来获取星座运势数据的。
 
-我们将会使用一个笔者在另一个教程中写的[星座运势API](https://horoscope-app-api.vercel.app/)来进行后续的工作。如果你想学一下如何做一个相同的API，你可以看一下这份[教程](https://ashutoshkrris.hashnode.dev/how-to-create-a-horoscope-api-with-beautiful-soup-and-flask)。请确保在开始之前你已经在[网站](https://horoscope-app-api.vercel.app/)上探索了API的用法。
+我们将会使用一个笔者在另一个教程中写的[星座运势 API](https://horoscope-app-api.vercel.app/)来进行后续的工作。如果你想学一下如何做一个相同的 API，你可以看一下这份[教程](https://ashutoshkrris.hashnode.dev/how-to-create-a-horoscope-api-with-beautiful-soup-and-flask)。请确保在开始之前你已经在[网站](https://horoscope-app-api.vercel.app/)上探索了 API 的用法。
 
 ## 如何抓取运势数据
 
@@ -147,7 +147,7 @@ def get_daily_horoscope(sign: str, day: str) -> dict:
     return response.json()
 ```
 
-在上面的Python代码中，我们创建了一个函数，它能接收`sign` 和`day`两个字符串参数，然后返回 JSON数据。我们需要向API链接发送一个GET请求，并且把`sign` 和`day` 作为参数加在请求里。
+在上面的 Python 代码中，我们创建了一个函数，它能接收`sign` 和`day`两个字符串参数，然后返回 JSON 数据。我们需要向 API 链接发送一个 GET 请求，并且把`sign` 和`day` 作为参数加在请求里。
 
 如果你测试一下上面的函数，你会得到一个跟下面类似的返回值：
 
@@ -162,7 +162,7 @@ def get_daily_horoscope(sign: str, day: str) -> dict:
 }
 ```
 
-注意：你可以通过这个[教程](https://ashutoshkrris.hashnode.dev/how-to-interact-with-web-services-using-python)来探索更多关于 `requests `库的内容
+注意：你可以通过这个[教程](https://ashutoshkrris.hashnode.dev/how-to-interact-with-web-services-using-python)来探索更多关于 `requests`库的内容
 
 ## 如何添加一个消息处理器
 
@@ -214,14 +214,14 @@ def fetch_horoscope(message, sign):
 
 ## 机器人示例
 
-如果你运行Python文件的话，你可以测试这些功能，这里是一个示例：
+如果你运行 Python 文件的话，你可以测试这些功能，这里是一个示例：
 
 
 ## 推荐下一步
 
-到目前为止，一旦我们停止Python应用程序，机器人就会停止工作。为了让它一直运行，你可以把机器人部署在Heroku、Render等平台上。
+到目前为止，一旦我们停止 Python 应用程序，机器人就会停止工作。为了让它一直运行，你可以把机器人部署在 Heroku、Render 等平台上。
 
-这是本文代码的[GitHub仓库链接](https://github.com/ashutoshkrris/Telegram-Horoscope-Bot) - 欢迎随时查看.
+这是本文代码的[GitHub 仓库链接](https://github.com/ashutoshkrris/Telegram-Horoscope-Bot) - 欢迎随时查看.
 
 在探索[Telegram APIs](https://core.telegram.org/)后，你可以向这个机器人添加更多的功能。
 

@@ -27,7 +27,7 @@ It has an enormous community to support, and it's always building new features a
 
 * * *
 
-## Table of Contents:
+## Table of Contents
 
 -   [Resources for the CKS Exam](#resourcesfortheexam)
 -   [Aliases](#aliases)
@@ -103,7 +103,7 @@ Since this exam requires you to write a lot of commands, I figured early on that
 
 I used the **vi** editor during the exam, so here I will share some useful tips for this editor.
 
-### vi defaults for ~/.vimrc:
+### vi defaults for ~/.vimrc
 
 ```
 vi ~/.vimrc
@@ -119,7 +119,7 @@ w: End of word
 GG: End of file
 ```
 
-### kubectl defaults for ~/.bashrc:
+### kubectl defaults for ~/.bashrc
 
 ```
 vi ~/.bashrc
@@ -836,7 +836,7 @@ Here's the reference doc for a [list of open ports](https://kubernetes.io/docs/s
 
 ### How to restrict network access
 
-#### How to identity a service running on port:
+#### How to identity a service running on port
 
 ```
 systemctl status ssh

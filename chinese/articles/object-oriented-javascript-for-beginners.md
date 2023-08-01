@@ -5,9 +5,9 @@
 
 ![Object-Oriented Programming in JavaScript for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/pexels-lukas-317377.jpg)
 
-大家好，这篇文章将使用JavaScript示例来讲解面向对象的编程（OOP）的主要特征。
+大家好，这篇文章将使用 JavaScript 示例来讲解面向对象的编程（OOP）的主要特征。
 
-我将讲解OOP的主要概念，OOP为什么有用以及在什么时候有用，全文展示大量JS示例。
+我将讲解 OOP 的主要概念，OOP 为什么有用以及在什么时候有用，全文展示大量 JS 示例。
 
 如果你尚不熟悉编程范式，在深入这篇文章之前，推荐你阅读[我之前写过的范式简介](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)。
 
@@ -20,7 +20,7 @@
 -   [面向对象的编程简介](#intro-to-object-oriented-programming)
 -   [如何创建对象——类](#how-to-create-objects-classes)
     -   [类相关注意事项](#some-things-to-keep-in-mind-about-classes-)
--   [OOP的四大原则](#the-four-principles-of-oop)
+-   [OOP 的四大原则](#the-four-principles-of-oop)
     -   [继承](#inheritance)
         -   [继承相关注意事项](#some-things-to-keep-in-mind-about-inheritance-)
     -   [封装](#encapsulation)
@@ -31,21 +31,21 @@
 
 <h1 id="intro-to-object-oriented-programming">面向对象的编程简介</h1>
 
-正如我之前关于编程范式的[文章](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)所述，OOP的核心是 **将关注点和责任**分离到不同**实体**。
+正如我之前关于编程范式的[文章](https://chinese.freecodecamp.org/news/an-introduction-to-programming-paradigms/)所述，OOP 的核心是 **将关注点和责任**分离到不同**实体**。
 
 实体被编码成 **对象**，每一个实体由一组信息 (**属性**) 和行为 (**方法**)组成，并且为实体所用。
 
-OOP在大规模项目中非常有用，因为它方便代码的模块化和组织。
+OOP 在大规模项目中非常有用，因为它方便代码的模块化和组织。
 
 把实体的抽象化后，我们就可以把程序看作现实世界，不同的演员出演不同的演出并且相互互动。
 
-为了更好的理解OOP的应用，我们来编写一个小游戏作为示例。我们将专注于游戏中角色的创建，以此来观察OOP在这个过程中是怎么起作用的。👽 👾 🤖
+为了更好的理解 OOP 的应用，我们来编写一个小游戏作为示例。我们将专注于游戏中角色的创建，以此来观察 OOP 在这个过程中是怎么起作用的。👽 👾 🤖
 
 <h1 id="how-to-create-objects-classes">如何创建对象——类</h1>
 
 所有电子游戏都有游戏角色，对不对？而所有的角色都具备特定的**特征** (属性) 如：肤色、身高、名字等，所有的角色还具备**能力** (方法)如：跳跃、跑步、出拳等。 对象便是一个绝佳的数据结构，来储存这些信息。👌
 
-假设我们有3种不同的角色“种类”，我们想要创造6个不同的角色，每一个种类两个角色。
+假设我们有 3 种不同的角色“种类”，我们想要创造 6 个不同的角色，每一个种类两个角色。
 
 一种创建角色的方式是手动创建对象，像这样[对象初始化](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer):
 
@@ -88,7 +88,7 @@ const Robot2 = {
 }
 ```
 
-所有的角色都拥有 `name`和`species`属性以及 `sayPhrase`方法。此外，每一个种类（species）都有一个专属的方法(如alien的`fly`方法)。
+所有的角色都拥有 `name`和`species`属性以及 `sayPhrase`方法。此外，每一个种类（species）都有一个专属的方法(如 alien 的`fly`方法)。
 
 可以观察到，一些数据被所有角色共享，另一些数据被同一种类共享，还有一些数据是每个角色专属的。
 
@@ -177,16 +177,16 @@ Robot2.transform() // 输出: "Optimus prime!"
 > _“程序中类被定义为一种自定义数据结构“类型”，包含了数据运行所需的数据和行为。类定义了数据结构如何运行，但是类本身不是具体的值。若要在程序中使用具体的值，必须一次或者多次实例化（使用"new"关键字）类。“_
 
 -   请记住类并不是具体的实体或者对象。类是我们用来创建具体对象的蓝图或者模具。
--   通常类的命名首字母大写并使用驼峰式，class关键字创建常量，所以之后不能更改命名。
--   类必须拥有一个constructor方法，之后被用来实例化类。JavaScript中的constructor只是一个普通的返回对象的函数。唯一特殊的地方在于，使用“new”关键字调用这个函数，会讲其原型分配为被返回的原型。
--   “this”关键字指向类本身，并在constructor方法内定义类的属性。
+-   通常类的命名首字母大写并使用驼峰式，class 关键字创建常量，所以之后不能更改命名。
+-   类必须拥有一个 constructor 方法，之后被用来实例化类。JavaScript 中的 constructor 只是一个普通的返回对象的函数。唯一特殊的地方在于，使用“new”关键字调用这个函数，会讲其原型分配为被返回的原型。
+-   “this”关键字指向类本身，并在 constructor 方法内定义类的属性。
 -   添加方法只需要定义函数名和函数内部需要执行的代码。
--   JavaScript是一门基于原型的语言，JavaScript中的类只是一种语法糖。虽然了解这个概念不会对你的使用造成巨大的影响，但是还是有必要知道这一点，相关话题你可以阅读[这篇文章](https://chinese.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/).  （ppy：换成了咱自己的链接）
+-   JavaScript 是一门基于原型的语言，JavaScript 中的类只是一种语法糖。虽然了解这个概念不会对你的使用造成巨大的影响，但是还是有必要知道这一点，相关话题你可以阅读[这篇文章](https://chinese.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/).  （ppy：换成了咱自己的链接）
     
 
 <h1 id="the-four-principles-of-oop">OOP的四大原则</h1>
 
-通常OOP有四个关键原则，这四个关键原则决定了OOP程序如何运作。他们是 **继承、封装、抽象和多态**。让我们分别看看这四个特征。
+通常 OOP 有四个关键原则，这四个关键原则决定了 OOP 程序如何运作。他们是 **继承、封装、抽象和多态**。让我们分别看看这四个特征。
 
 <h2 id="inheritance">继承</h2>
 
@@ -256,11 +256,11 @@ class Alien extends Enemy {
 ...
 ```
 
-在上面的例子中，enemy类和其他所有类一样，我们使用constructor方法来接受参数，并且将它们分配给属性，方法用普通函数声明。
+在上面的例子中，enemy 类和其他所有类一样，我们使用 constructor 方法来接受参数，并且将它们分配给属性，方法用普通函数声明。
 
-在子类中，我们使用 `extends` 关键字来声明我们需要继承父类。在constructor方法中，我们必须声明“power”参数并且使用`super`函数，来表示属性是在父元素中声明的。
+在子类中，我们使用 `extends` 关键字来声明我们需要继承父类。在 constructor 方法中，我们必须声明“power”参数并且使用`super`函数，来表示属性是在父元素中声明的。
 
-当我们实例化新的对象的时候，其实我们传入了声明在constructor函数里的参数。 _哒哒！_ 我们就可以在实例中访问在父类中声明的属性和方法了。😎
+当我们实例化新的对象的时候，其实我们传入了声明在 constructor 函数里的参数。 _哒哒！_ 我们就可以在实例中访问在父类中声明的属性和方法了。😎
 
 ```javascript
 const alien1 = new Alien("Ali", "I'm Ali the alien!", 10)
@@ -303,7 +303,7 @@ class Alien extends Enemy {
 }
 ```
 
-我们首先声明新的“Character”父类，然后让Enemy类继承它。最后我们在Alien类中使用 `constructor` 和 `super` 函数来传入新的"speed"参数。
+我们首先声明新的“Character”父类，然后让 Enemy 类继承它。最后我们在 Alien 类中使用 `constructor` 和 `super` 函数来传入新的"speed"参数。
 
 我们同样在实例化的同时传入参数， _哒哒！_ 我们又可以在实例中访问"祖父“类的属性和方法了。👴
 
@@ -403,7 +403,7 @@ class Alien extends Enemy {
 -   在继承的时候，所有父类的方法和属性都会被子类继承，我们并不能决定继承哪些，不继承哪些。（就像我们不能决定从我们的父母那里继承哪些美德和缺点一样。😅 在讲组合的时候我们会重新提到这个点)。
 -   子类可以覆盖掉父类的属性和方法。
 
-举一个例子，在之前的代码中，Alien类继承了Enemy类的`attack` 方法，并打印 `I'm attacking with a power of ${this.power}!`:
+举一个例子，在之前的代码中，Alien 类继承了 Enemy 类的`attack` 方法，并打印 `I'm attacking with a power of ${this.power}!`:
 
 ```javascript
 class Enemy extends Character {
@@ -430,7 +430,7 @@ const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
 alien1.attack() // 输出: I'm attacking with a power of 10!
 ```
 
-假设我们希望Alien的 `attack` 方法表现不同，我们可以覆盖这个方法：
+假设我们希望 Alien 的 `attack` 方法表现不同，我们可以覆盖这个方法：
 
 ```javascript
 class Enemy extends Character {
@@ -460,9 +460,9 @@ alien1.attack() // 输出: "Now I'm doing a different thing, HA!"
 
 <h2 id="encapsulation">封装</h2>
 
-封装是OOP另一个关键概念。封装代表对象有“决定”将什么信息暴露在“外部”的能力。封装通过**公共和私有属性/方法**来实现。
+封装是 OOP 另一个关键概念。封装代表对象有“决定”将什么信息暴露在“外部”的能力。封装通过**公共和私有属性/方法**来实现。
 
-在JavaScript中，所有对象的属性和方法默认为公共的。“公共”意味着我们可以在函数体外部获取对象的属性和方法。
+在 JavaScript 中，所有对象的属性和方法默认为公共的。“公共”意味着我们可以在函数体外部获取对象的属性和方法。
 
 ```javascript
 // 类
@@ -484,7 +484,7 @@ alien1.sayPhrase() // output: "I'm Ali the alien!"
 
 为了让你更清晰地理解，让我们来看看私有属性和方法是什么样的：
 
-假设我们希望我们的Alien类有一个`birthYear`属性， 这个属性可以执行`howOld`方法，但我们不希望这个属性被除了对象以外的任何地方访问到， 我们可以这样做：
+假设我们希望我们的 Alien 类有一个`birthYear`属性， 这个属性可以执行`howOld`方法，但我们不希望这个属性被除了对象以外的任何地方访问到， 我们可以这样做：
 
 ```javascript
 class Alien extends Enemy {
@@ -539,9 +539,9 @@ console.log(alien1)
 
 <h2 id="polymorphism">多态</h2>
 
-最后就是多态这个概念(听上去挺复杂的，不是吗？OOP的命名赛高！ 🙃)。 多态意味着“多种形态”，实际上这是一个简单的概念，表示的在不同的特定条件下使用一种方法返回不同的值。
+最后就是多态这个概念(听上去挺复杂的，不是吗？OOP 的命名赛高！ 🙃)。 多态意味着“多种形态”，实际上这是一个简单的概念，表示的在不同的特定条件下使用一种方法返回不同的值。
 
-举个例子，我们发现Enemy类拥有 `sayPhrase`方法。 那么所有继承Enemy类的子种类都拥有 `sayPhrase`方法。
+举个例子，我们发现 Enemy 类拥有 `sayPhrase`方法。 那么所有继承 Enemy 类的子种类都拥有 `sayPhrase`方法。
 
 但是我们在不同种类（species）调用这个方法的时候，得到不同的结果：
 
@@ -583,7 +583,7 @@ const alien1 = new Alien("Ali", "I'm Ali the alien!", 10, 50)
 alien1.attack() // 输出: "Now I'm doing a different thing, HA!"
 ```
 
-这里也是多态，是因为如果我们取消ALien类中的 `attack` 方法，我们仍可以在实例中调用这个方法：
+这里也是多态，是因为如果我们取消 ALien 类中的 `attack` 方法，我们仍可以在实例中调用这个方法：
 ```javascript
 alien1.attack() // 输出: "I'm attacking with a power of 10!"
 ```
@@ -598,7 +598,7 @@ alien1.attack() // 输出: "I'm attacking with a power of 10!"
 
 应用的方法很简单，只需使用接受对象作为参数的函数，并且分配其需要的属性/方法。请看下面的例子：
 
-假设我们想要给bug角色添加飞行的能力，在我们的代码中，只有外星人有 `fly` 方法。一种方式是让`Bug`类继承：
+假设我们想要给 bug 角色添加飞行的能力，在我们的代码中，只有外星人有 `fly` 方法。一种方式是让`Bug`类继承：
 
 ```javascript
 class Alien extends Enemy {
@@ -683,9 +683,9 @@ bug1.fly() // 输出: "Now Buggy can fly!"
 
 <h1 id="roundup">总结</h1>
 
-OOP是一个强大的编程范式，可以帮助我们通过创建实体抽象来执行庞大的项目。每一个实体负责特定的信息和行为，实体之间也可以相互作用，就像现实生活这样。
+OOP 是一个强大的编程范式，可以帮助我们通过创建实体抽象来执行庞大的项目。每一个实体负责特定的信息和行为，实体之间也可以相互作用，就像现实生活这样。
 
-在这篇文章中我们学习了类、继承、封装、抽象、多态和组合。这些都是OOP世界中的关键概念。我们同样浏览了各种通过JavaScript实现OOP的例子。
+在这篇文章中我们学习了类、继承、封装、抽象、多态和组合。这些都是 OOP 世界中的关键概念。我们同样浏览了各种通过 JavaScript 实现 OOP 的例子。
 
 希望你喜欢这篇文章，并从中受益。你可以在[LinkedIn](https://www.linkedin.com/in/germancocca/)或[Twitter](https://twitter.com/CoccaGerman)上关注我。
 

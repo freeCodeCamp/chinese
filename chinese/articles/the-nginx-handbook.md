@@ -13,7 +13,7 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/177962736_1410222585999736_5618677227291897851_n.jpg)
 
-相信我，搞懂它并不难......
+相信我，搞懂它并不难……
 
 我并不是说复制代码不好，但在千万不要在不理解的情况下复制代码。
 
@@ -29,7 +29,7 @@
 
 ## 先决条件
 
-- 熟悉Linux终端和常用Unix程序，如 `ls`、`cat`、`ps`、`grep`、`find`、`nproc`、`ulimit` 和 `nano`。
+- 熟悉 Linux 终端和常用 Unix 程序，如 `ls`、`cat`、`ps`、`grep`、`find`、`nproc`、`ulimit` 和 `nano`。
 - 一台可以以运行虚拟机的计算机或 5 美元的虚拟专用服务器。
 - 了解 Web 应用程序和编程语言，如 JavaScript 或 PHP。
 
@@ -1034,7 +1034,7 @@ curl -i http://nginx-handbook.test/about_page# HTTP/1.1 200 OK# Server: nginx/1.
 events {}http {    include /etc/nginx/mime.types;    server {        listen 80;        server_name nginx-handbook.test;        root /srv/nginx-handbook-projects/static-demo;        try_files /the-nginx-handbook.jpg /not_found;        location /not_found {                return 404 "sadly, you've hit a brick wall buddy!\n";        }    }}
 ```
 
-如你所见，添加了一个新的 `try_files` 指令。 通过编写`try_files /the-nginx-handbook.jpg /not_found;`，可以指示NGINX 在收到请求时在根目录中查找名为 the-nginx-handbook.jpg 的文件。如果它不存在，则转到 `/not_found` 位置。
+如你所见，添加了一个新的 `try_files` 指令。 通过编写`try_files /the-nginx-handbook.jpg /not_found;`，可以指示 NGINX 在收到请求时在根目录中查找名为 the-nginx-handbook.jpg 的文件。如果它不存在，则转到 `/not_found` 位置。
 
 所以现在如果你访问服务器，你会看到图像：
 
@@ -1294,7 +1294,7 @@ To use FastCGI instead of HTTP, update your configuration as follows:
 events {}http {      include /etc/nginx/mime.types;      server {          listen 80;          server_name nginx-handbook.test;          root /srv/nginx-handbook-projects/php-demo;          index index.php;          location / {              try_files $uri $uri/ =404;          }          location ~ \.php$ {              fastcgi_pass unix:/var/run/php/php7.4-fpm.sock;              fastcgi_param REQUEST_METHOD $request_method;              fastcgi_param SCRIPT_FILENAME $realpath_root$fastcgi_script_name;      }   }}
 ```
 
-让我们从新的 `index` 指令开始。 如你所知，NGINX 默认会查找 index.html 文件来提供服务。但在演示项目中，它是 index.php。 因此，编写 `index index.php`，指示NGINX 以 root 用户身份使用 index.php 文件。
+让我们从新的 `index` 指令开始。 如你所知，NGINX 默认会查找 index.html 文件来提供服务。但在演示项目中，它是 index.php。 因此，编写 `index index.php`，指示 NGINX 以 root 用户身份使用 index.php 文件。
 
 该指令可以接受多个参数。对于 `index index.php index.html`，NGINX 会首先寻找 index.php。如果它没有找到这个文件，它会寻找 index.html 文件。
 
@@ -1783,6 +1783,6 @@ sudo nginx -t# nginx: the configuration file /etc/nginx/nginx.conf syntax is ok#
 
 我衷心感谢您花时间阅读本文。 我希望你享受你的学习时间并学习了 NGINX 的所有基本知识。
 
-如果你喜欢我的作品，你可以在 [https://www.freecodecamp.org/news/author/farhanhasin/](/news/author/farhanhasin/) 上找到我的其他书籍，个人博客 [ https://www.farhan.info/](https://www.farhan.info/blogs/) 同步更新。
+如果你喜欢我的作品，你可以在 [https://www.freecodecamp.org/news/author/farhanhasin/](/news/author/farhanhasin/) 上找到我的其他书籍，个人博客 [https://www.farhan.info/](https://www.farhan.info/blogs/) 同步更新。
 
 你可以在 Twitter 上关注我 [@frhnhsin](https://twitter.com/frhnhsin) 或在 LinkedIn 上与我联系 [/in/farhanhasin](https://www.linkedin.com/in/farhanhasin/) 。

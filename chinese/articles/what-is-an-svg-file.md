@@ -5,7 +5,7 @@
 
 ![什么是 SVG 文件？](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/svg.png)
 
-SVG 意思是可缩放矢量图形。它是一种web友好的基于矢量的文件格式，用于在 Internet 上呈现二维图像。
+SVG 意思是可缩放矢量图形。它是一种 web 友好的基于矢量的文件格式，用于在 Internet 上呈现二维图像。
 
 你可以通过扩展名识别 SVG 文件 – `.svg`.
 
@@ -13,15 +13,15 @@ SVG 意思是可缩放矢量图形。它是一种web友好的基于矢量的文�
 
 这意味着无论 SVG 文件如何重新加工、缩放或调整大小，它们都不会像 PNG、JPG 和其他光栅图像那样变得模糊和像素化。
 
-本文将向你展示 SVG 图像文件的可能性，以及如何通过编码为自己制作一个SVG。
+本文将向你展示 SVG 图像文件的可能性，以及如何通过编码为自己制作一个 SVG。
 
 ## 文章目录
 
--   [如何制作SVG文件](#howtomakeansvgfile)
+-   [如何制作 SVG 文件](#howtomakeansvgfile)
     -   [如何使用图像编辑程序制作 SVG](#howtomakeansvgwithimageeditingprograms)
     -   [如何使用 XML 制作 SVG](#howtomakeansvgwithxml)
 -   [SVG 文件有什么用途？](#whatisansvgfileusedfor)
--   [如何打开SVG文件](#howtoopenansvgfile)
+-   [如何打开 SVG 文件](#howtoopenansvgfile)
 -   [如何将 SVG 文件转换为图像？](#howdoiconvertansvgfiletoanimage)
 -   [结论](#conclusion)
 

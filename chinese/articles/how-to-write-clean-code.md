@@ -16,10 +16,10 @@
 -   [写出“clean code”意味着什么以及我为什么要注意它？](##what-does-it-mean-to-write-clean-code-and-why-should-i-care)
 -   [我如何评估一个代码库是否整洁？](##how-can-i-assess-whether-a-codebase-is-clean-or-not)
 -   [写出整洁的代码的一些技巧和惯例](##tips-and-conventions-to-write-cleaner-code)
-    -   [有效、效率和简单 ](###effectiveness-efficiency-and-simplicity)
+    -   [有效、效率和简单](###effectiveness-efficiency-and-simplicity)
     -   [格式和语法](###format-and-syntax)
     -   [命名](###naming)
-    -   [简洁VS清晰](###conciseness-versus-clarity)
+    -   [简洁 VS 清晰](###conciseness-versus-clarity)
     -   [复用性](###re-usability)
     -   [清晰的执行流程](###clear-flow-of-execution)
     -   [单一制责原则](###single-responsibility-principle)
@@ -94,7 +94,7 @@ function sumArrayEfficient(array) {
 }
 ```
 
-在这里， `sumArrayEfficient` 函数使用`reduce` 方法去计算数组里的数字的总和。 `reduce` 方法将函数应用于数组的每个元素，并累加结果。在这种情况下，函数只需将每个元素添加到从0开始的累加器中。
+在这里， `sumArrayEfficient` 函数使用`reduce` 方法去计算数组里的数字的总和。 `reduce` 方法将函数应用于数组的每个元素，并累加结果。在这种情况下，函数只需将每个元素添加到从 0 开始的累加器中。
 
 这是一个更有效的解决方案，因为它只需要对数组进行一次迭代，并在进行时对每个元素执行求和操作。
 
@@ -173,9 +173,9 @@ const my_name = 'John'
 <h3 id="naming">命名</h3>
 
 
-清晰而有描述性地命名变量和函数，对于书写clean code也是十分钟重要的一个方面。它可以帮助提高代码的可读性和维护能力。当命名选择良好时，其他开发人员可以快速理解变量或函数在做什么，以及它与代码的其余部分有何关系。
+清晰而有描述性地命名变量和函数，对于书写 clean code 也是十分钟重要的一个方面。它可以帮助提高代码的可读性和维护能力。当命名选择良好时，其他开发人员可以快速理解变量或函数在做什么，以及它与代码的其余部分有何关系。
 
-下面是Javascript中的两个例子，用来展示清晰且有描述性地命名的重要性：
+下面是 Javascript 中的两个例子，用来展示清晰且有描述性地命名的重要性：
 
 ```javascript
 // Example 1: Poor Naming
@@ -188,7 +188,7 @@ function ab(a, b) {
 ab(5, 3);
 ```
 
-在本例中，我们有一个函数，它接受两个参数，将它们与常量值10相加，并将结果记录到控制台。函数名称和变量名选择不当，没有给出任何指示函数的作用或变量代表什么。
+在本例中，我们有一个函数，它接受两个参数，将它们与常量值 10 相加，并将结果记录到控制台。函数名称和变量名选择不当，没有给出任何指示函数的作用或变量代表什么。
 
 ```javascript
 // Example 1: Good Naming
@@ -269,7 +269,7 @@ console.log(circleArea, rectangleArea, triangleArea);
 
 这个例子定义了三个函数，分别计算圆、矩形和三角形的面积。每个函数执行一个特定的任务，但它们都不能重复用于其他类似任务。
 
-此外，如果将来需要更改值，使用直接赋值的PI值可能会导致错误。该代码效率低下，因为它多次重复相同的逻辑。
+此外，如果将来需要更改值，使用直接赋值的 PI 值可能会导致错误。该代码效率低下，因为它多次重复相同的逻辑。
 
 ```javascript
 // Example 2: Implementing re-usability

@@ -374,7 +374,7 @@ There are three distinct things I'd like to draw attention to in this code block
 2.  I'm also using Next Image component. This handles image optimization and lazy loading. It works like a normal image tag but you have to provide the dimensions of the final image.
 3.  I'm using a function called `getMetaImage`. This function constructs a Cloudinary link that overlays the title of the post on a base image I use for all my posts.
 
-## And we're there...
+## And we're there
 
 There is a lot of code in this post, well done for sticking with it to this point. You can see the final product of the FrontPanels on my homepage (https://kevincunningham.co.uk).
 

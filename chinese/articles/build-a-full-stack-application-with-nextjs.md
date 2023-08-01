@@ -11,7 +11,7 @@ In this tutorial, I will take you through the basics of Next.js and guide you in
 
 So let's jump right in and unlock the power of Next.js together.
 
-## Here's what we'll cover:
+## Here's what we'll cover
 
 -   [What Are We Going to Build?](#what-are-we-going-to-build)
 -   [Getting Started](#getting-started)

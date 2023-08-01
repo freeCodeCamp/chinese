@@ -563,7 +563,7 @@ _[Omer Rosenbaum][6] 是 [Swimm][7] 的首席技术官、网络培训专家、Ch
 -   [Tim Berglund’s lecture—“Git From the Bits Up”][11]
 -   [Git from the Bottom Up—by John Wiegley][12]
 -   [as promised, docs: git for the confused][13]
--   [Git Internals—Git Objects— from Pro Git book, by Scott Chacon and Ben Straub][14]
+-   [Git Internals—Git Objects—from Pro Git book, by Scott Chacon and Ben Straub][14]
 
   
 

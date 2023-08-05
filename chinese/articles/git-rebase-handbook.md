@@ -35,7 +35,7 @@
 
 在 Git 中，有两种主要的方式来整合不同分支的变化，或者说，不同的提交和提交历史。它们是 merge 和 rebase。
 
-[在之前的教程中](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)，我们对 `git merge` 有了相当的了解。我们看到，在执行合并时，我们会创建一个 **合并提交(merge commit)**,这个提交的内容是两个分支的组合，它也有两个父分支，每个分支一个。
+[在之前的教程中](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)，我们对 `git merge` 有了相当的了解。我们看到，在执行合并时，我们会创建一个 **合并提交(merge Commit)**,这个提交的内容是两个分支的组合，它也有两个父分支，每个分支一个。
 
 所以，假设你在分支`john_branch`上（假设是上图中描述的历史），你运行`git merge paul_branch`。你会得到这样的状态--在`john_branch`上，有一个新的提交，有两个父分支。第一个是合并前`HEAD`指向的`john_branch`分支上的提交，本例中是 `Commit 6`。第二个是 `paul_branch` 所指向的提交 `Commit 9`。
 
@@ -68,7 +68,7 @@
 
 让我们手动来做这个。
 
-如果我们通过执行`git diff main <SHA_OF_COMMIT_5>`来看看 `Commit 5` 引入的差异:
+如果我们通过执行`git diff main <SHA_OF_Commit_5>`来看看 `Commit 5` 引入的差异:
 
 ![image-199](https://www.freecodecamp.org/news/content/images/2023/06/image-199.png)
 
@@ -85,7 +85,7 @@
 提醒一下，你也可以使用`git show`命令来获得同样的输出：
 
 ```shell
-git show <SHA_OF_COMMIT_5>
+git show <SHA_OF_Commit_5>
 ```
 
 现在，如果你`cherry-pick`这个提交，你将在活动分支(active branch)上专门引入这个改动。先切换到 "main":
@@ -100,10 +100,10 @@ git show <SHA_OF_COMMIT_5>
 
 从 `main` 分支创建出 `my_branch` 分支 (源自: [Brief](https://youtu.be/3VFsitGUB3s))
 
-`cherry-pick`这个提交(commit):
+`cherry-pick`这个提交(Commit):
 
 ```shell
-git cherry-pick <SHA_OF_COMMIT_5>
+git cherry-pick <SHA_OF_Commit_5>
 ```
 
 ![image-202](https://www.freecodecamp.org/news/content/images/2023/06/image-202.png)
@@ -193,7 +193,7 @@ rebase 后的历史 (来源： [简介](https://youtu.be/3VFsitGUB3s))
 
 本质上，我们 `复制` 了 `paul_branch` 上 `Commit 4` 之后的提交，并将它们 `粘贴`到了 `john_branch` 上。
 
-这个命令被称为 `rebase`，因为它改变了运行它的分支的基点提交(base commit)。也就是说，在运行`git rebase`之前，`paul_branch`的基点提交是 `Commit 4`,因为这是分支 `诞生(born)` 的地方（从`main`开始）。使用 `rebase` 时，你要求 Git 给它另一个基点，也就是假装它是从 `Commit 6` 诞生的。
+这个命令被称为 `rebase`，因为它改变了运行它的分支的基点提交(base Commit)。也就是说，在运行`git rebase`之前，`paul_branch`的基点提交是 `Commit 4`,因为这是分支 `诞生(born)` 的地方（从`main`开始）。使用 `rebase` 时，你要求 Git 给它另一个基点，也就是假装它是从 `Commit 6` 诞生的。
 
 为此，Git 将原来的 `Commit 7` 的改动 `重放(replayed)`到 `Commit 6` 上，然后创建了一个新的提交对象。这个对象与原来的 `Commit 7` 有三点不同:
 
@@ -235,7 +235,7 @@ Hm…… 如果运行最后这条命令，会发生什么？🤔 在查看了 `m
 让 `main` 再次指向 `Commit 4`，撤销上次的合并:
 
 ```shell
-git reset -–hard <ORIGINAL_COMMIT 4>
+git reset -–hard <ORIGINAL_Commit 4>
 ```
 
 ![image-238](https://www.freecodecamp.org/news/content/images/2023/06/image-238.png)
@@ -246,7 +246,7 @@ git reset -–hard <ORIGINAL_COMMIT 4>
 
 ```shell
 git checkout paul_branch
-git reset -–hard <ORIGINAL_COMMIT 9>
+git reset -–hard <ORIGINAL_Commit 9>
 ```
 
 ![image-239](https://www.freecodecamp.org/news/content/images/2023/06/image-239.png)
@@ -271,7 +271,7 @@ git show HEAD
 
 `git show HEAD` 显示了 `Commit 9` 引入的补丁 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-在提交图(commit graph) 中继续向后退:
+在提交图(Commit graph) 中继续向后退:
 
 ```shell
 git show HEAD~
@@ -296,7 +296,7 @@ git show HEAD~2
 为此，你可以使用 **interactive(交互式)** rebase。为此，我们在 `rebase` 命令中添加 `-i`（或 `--interactive`）选项:
 
 ```shell
-git rebase -i <SHA_OF_COMMIT_4>
+git rebase -i <SHA_OF_Commit_4>
 ```
 
 或者，由于 `main` 指向 `Commit 4`，我们只需运行:
@@ -313,7 +313,7 @@ git rebase -i main
 
 `git rebase -i main` 会提示您选择对每次提交的处理方式 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-在这种情况下，将提交视为补丁是很有用的。也就是说，`commit 7` 就是 `commit 7` 在其父版本之上引入的补丁"。
+在这种情况下，将提交视为补丁是很有用的。也就是说，`Commit 7` 就是 `Commit 7` 在其父版本之上引入的补丁"。
 
 一种选项是使用 `pick`。这是默认行为，它告诉 Git 重放该提交中引入的改动。在这种情况下，如果保持原样, `pick` 所有提交,就会得到相同的历史记录，Git 甚至不会创建新的提交对象。
 
@@ -387,7 +387,7 @@ nano code.py
 
 ```shell
 git add code.py
-git commit -m "Commit 10"
+git Commit -m "Commit 10"
 ```
 
 切回 `main` 分支:
@@ -406,7 +406,7 @@ git checkout main
 
 ```shell
 git add code.py
-git commit -m "Commit 11"
+git Commit -m "Commit 11"
 ```
 
 另一个变化:
@@ -419,7 +419,7 @@ git commit -m "Commit 11"
 
 ```shell
 git add code.py
-git commit -m "Commit 12"
+git Commit -m "Commit 12"
 ```
 
 哦，等等，现在我意识到，我是想让你把 `Commit 11` 中引入的更改作为 `new_branch` 的一部分。唉。你能怎么办呢？ 🤔
@@ -434,97 +434,96 @@ git commit -m "Commit 12"
 
 ![image-261](https://www.freecodecamp.org/news/content/images/2023/06/image-261.png)
 
-Visually, I want you to "push" "Commit 10" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+如图所示, 我想让你 `push` "Commit 10" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Can you see where I am going? 😇
+你能看清楚我意图? 😇
 
-Well, as we understand, rebase allows us to basically _replay_ the changes introduced in `new_branch`, those introduced in "Commit 10", as if they had been originally conducted on "Commit 11", rather than "Commit 4".
+我们清楚, `rebase` 允许我们重新使用 `new_branch` 分支引入变更,也就是 `Commit 10` 引入的变更,就像这些变更最初是在 `Commit 11`上进行的,而不是在 `Commit 4` 上进行的。
 
-To do that, you can use other arguments of `git rebase`. You'd tell Git that you want to take all the history introduced between the common ancestor of `main` and `new_branch`, which is "Commit 4", and have the new base for that history be "Commit 11". To do that, use:
+要实现这个目标,你可以使用 `git rebase` 的其他参数。你可以告诉 Git,你想要取 `main` 分支和 `new_branch` 分支的共同祖先 `Commit 4` 之后引入的所有历史变更,并将这部分历史变更的新的基础设置为 `Commit 11`。要实现这个目的,可以使用:
 
 ```shell
-git rebase -–onto <SHA_OF_COMMIT_11> main new_branch
+git rebase -–onto <SHA_OF_Commit_11> main new_branch
 ```
 
 ![image-262](https://www.freecodecamp.org/news/content/images/2023/06/image-262.png)
 
-The history before and after the rebase, "Commit 10" has been "pushed" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+重置前后的历史记录, `Commit 10` 已经被推送(pushed) (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-And look at our beautiful history! 😍
+看看我们美丽的历史! 😍
 
 ![image-263](https://www.freecodecamp.org/news/content/images/2023/06/image-263.png)
 
-The history before and after the rebase, "Commit 10" has been "pushed" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+重置前后的历史记录, `Commit 10 已经被推送(pushed) (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Let's consider another case.
+让我们再看一个例子。
 
-Say I started working on a branch, and by mistake I started working from `feature_branch_1`, rather than from `main`.
-
-So to emulate this, create `feature_branch_1`:
+假设我开始在一个分支上工作，却犯了错误，从 `feature_branch_1` 而不是从 `main` 开始。
+因此，要模拟这种情况，请创建 `feature_branch_1`:
 
 ```shell
 git checkout main
 git checkout -b feature_branch_1
 ```
 
-And erase `new_branch` so you don't see it in the graph anymore:
+删除 `new_branch` 后，图表中就看不到它了:
 
 ```shell
 git branch -D new_branch
 ```
 
-Create a simple Python file called `1.py`:
+创建一个简单的 Python 文件 `1.py`:
 
 ![image-264](https://www.freecodecamp.org/news/content/images/2023/06/image-264.png)
 
-A new file, `1.py`, with `print('Hello world!')` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+新文件 `1.py`,里面有 `print('Hello world!')` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Stage and commit this file:
+提交此文件:
 
 ```shell
 git add 1.py
-git commit -m  "Commit 13"
+git Commit -m  "Commit 13"
 ```
 
-Now branched out (by mistake) from `feature_branch_1`:
+现在(错误地)从 `feature_branch_1`开出新分支:
 
 ```shell
 git checkout -b feature_branch_2
 ```
 
-And create another file, `2.py`:
+创建新文件 `2.py`:
 
 ![image-265](https://www.freecodecamp.org/news/content/images/2023/06/image-265.png)
 
-Creating `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+创建的 `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Stage and commit this file as well:
+提交该文件:
 
 ```shell
 git add 2.py
-git commit -m  "Commit 14"
+git Commit -m  "Commit 14"
 ```
 
-And introduce some more code to `2.py`:
+再添加一些代码到文件 `2.py`:
 
 ![image-266](https://www.freecodecamp.org/news/content/images/2023/06/image-266.png)
 
-Modifying `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+修改 `2.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Stage and commit these changes too:
+提交该变化:
 
 ```shell
 git add 2.py
-git commit -m  "Commit 15"
+git Commit -m  "Commit 15"
 ```
 
-So far you should have this history:
+到目前为止，您应该有这样的历史记录:
 
 ![image-267](https://www.freecodecamp.org/news/content/images/2023/06/image-267.png)
 
-The history after introducing "Commit 15" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+引入 `Commit 15` 的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Get back to `feature_branch_1` and edit `1.py`:
+切回 `feature_branch_1` 分支，编辑文件 `1.py`:
 
 ```shell
 git checkout feature_branch_1
@@ -532,20 +531,20 @@ git checkout feature_branch_1
 
 ![image-268](https://www.freecodecamp.org/news/content/images/2023/06/image-268.png)
 
-Modifying `1.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+修改 `1.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Now stage and commit:
+提交修改:
 
 ```shell
 git add 1.py
-git commit -m  "Commit 16"
+git Commit -m  "Commit 16"
 ```
 
-Your history should look like this:
+你的历史记录应该是这样的:
 
 ![image-270](https://www.freecodecamp.org/news/content/images/2023/06/image-270.png)
 
-The history after introducing "Commit 16" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+引入 `Commit 16` 后的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Say now you realize, you've made a mistake. You actually wanted `feature_branch_2` to be born from the `main` branch, rather than from `feature_branch_1`.
 
@@ -553,7 +552,7 @@ How can you achieve that? 🤔
 
 Try to think about it given the history graph and what you've learned about the `--onto` flag for the `rebase` command.
 
-Well, you want to "replace" the parent of your first commit on `feature_branch_2`, which is "Commit 14", to be on top of `main` branch, in this case, "Commit 12", rather than the beginning of `feature_branch_1`, in this case, "Commit 13". So again, you will be creating a _new base,_ this time for the first commit on `feature_branch_2`.
+Well, you want to "replace" the parent of your first Commit on `feature_branch_2`, which is "Commit 14", to be on top of `main` branch, in this case, "Commit 12", rather than the beginning of `feature_branch_1`, in this case, "Commit 13". So again, you will be creating a _new base,_ this time for the first Commit on `feature_branch_2`.
 
 ![image-271](https://www.freecodecamp.org/news/content/images/2023/06/image-271.png)
 
@@ -570,14 +569,14 @@ git checkout feature_branch_2
 And now you can use:
 
 ```shell
-git rebase -–onto main <SHA_OF_COMMIT_13>
+git rebase -–onto main <SHA_OF_Commit_13>
 ```
 
 As a result, you have `feature_branch_2` based on `main` rather than `feature_branch_1`:
 
 ![image-272](https://www.freecodecamp.org/news/content/images/2023/06/image-272.png)
 
-The commit history after performing rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+The Commit history after performing rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 The syntax is of the command is:
 
@@ -597,11 +596,11 @@ Say I worked from `feature_branch_2`, and specifically edited the file `code.py`
 
 Changing `'` into `"` in `code.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Then, I staged and committed:
+Then, I staged and Committed:
 
 ```shell
 git add code.py
-git commit -m "Commit 17"
+git Commit -m "Commit 17"
 ```
 
 I then decided to add a new function at the beginning of the file:
@@ -610,11 +609,11 @@ I then decided to add a new function at the beginning of the file:
 
 Adding the function `another_feature` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Again, I staged and committed:
+Again, I staged and Committed:
 
 ```shell
 git add code.py
-git commit -m "Commit 18"
+git Commit -m "Commit 18"
 ```
 
 And now I realized I actually forgot to change the single quotes to double quotes wrapping the `__main__` (as you might have noticed), so I did that too:
@@ -623,26 +622,26 @@ And now I realized I actually forgot to change the single quotes to double quote
 
 Changing `'__main__'` into `"__main__"` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Of course, I staged and committed this change:
+Of course, I staged and Committed this change:
 
 ```shell
 git add code.py
-git commit -m "Commit 19"
+git Commit -m "Commit 19"
 ```
 
 Now, consider the history:
 
 ![image-276](https://www.freecodecamp.org/news/content/images/2023/06/image-276.png)
 
-The commit history after introducing "Commit 19" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+The Commit history after introducing "Commit 19" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-It isn't really nice, is it? I mean, I have two commits that are related to one another, "Commit 17" and "Commit 19" (turning `'`s into `"`s), but they are split by the unrelated "Commit 18" (where I added a new function). What can we do? 🤔 Can you help me?
+It isn't really nice, is it? I mean, I have two Commits that are related to one another, "Commit 17" and "Commit 19" (turning `'`s into `"`s), but they are split by the unrelated "Commit 18" (where I added a new function). What can we do? 🤔 Can you help me?
 
 Intuitively, I want to edit the history here:
 
 ![image-277](https://www.freecodecamp.org/news/content/images/2023/06/image-277.png)
 
-These are the commits I want to edit (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+These are the Commits I want to edit (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 So, what would you do?
 
@@ -651,10 +650,10 @@ You are right! 👏🏻
 I can rebase the history from "Commit 17" to "Commit 19", on top of "Commit 15". To do that:
 
 ```
-git rebase --interactive --onto <SHA_OF_COMMIT_15> <SHA_OF_COMMIT_15>
+git rebase --interactive --onto <SHA_OF_Commit_15> <SHA_OF_Commit_15>
 ```
 
-Notice I specified "Commit 15" as the beginning of the range of commits, excluding this commit. And I didn't need to explicitly specify `HEAD` as the last parameter.
+Notice I specified "Commit 15" as the beginning of the range of Commits, excluding this Commit. And I didn't need to explicitly specify `HEAD` as the last parameter.
 
 ![image-279](https://www.freecodecamp.org/news/content/images/2023/06/image-279.png)
 
@@ -670,13 +669,13 @@ So what would I do? I want to put "Commit 19" _before_ "Commit 18", so it comes 
 
 ![image-281](https://www.freecodecamp.org/news/content/images/2023/06/image-281.png)
 
-Interactive rebase - changing the order of commit and squashing (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+Interactive rebase - changing the order of Commit and squashing (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Now when I get prompted for a commit message, I can provide the message "Commit 17+19":
+Now when I get prompted for a Commit message, I can provide the message "Commit 17+19":
 
 ![image-282](https://www.freecodecamp.org/news/content/images/2023/06/image-282.png)
 
-Providing a commit message (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+Providing a Commit message (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 And now, see our beautiful history:
 
@@ -698,15 +697,15 @@ Say you have this history on another repo:
 
 ![image-284](https://www.freecodecamp.org/news/content/images/2023/06/image-284.png)
 
-Another commit history (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+Another Commit history (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Before playing around with it, store a tag to "Commit F" so you can get back to it later:
 
 ```shell
-git tag original_commit_f
+git tag original_Commit_f
 ```
 
-Now, you actually don't want the changes in "Commit C" and "Commit D" to be included. You could use an interactive rebase like before and remove their changes. Or, could can use again `git rebase -–onto`. How would you use `--onto` in order to "remove" these two commits?
+Now, you actually don't want the changes in "Commit C" and "Commit D" to be included. You could use an interactive rebase like before and remove their changes. Or, could can use again `git rebase -–onto`. How would you use `--onto` in order to "remove" these two Commits?
 
 You can rebase `HEAD` on top of "Commit B", where the old parent was actually "Commit D", and now it should be "Commit B". Consider the history again:
 
@@ -717,10 +716,10 @@ The history again (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 Rebasing so that "Commit B" is the base of "Commit E", means "moving" both "Commit E" and "Commit F", and giving them another _base_ – "Commit B". Can you come up with the command yourself?
 
 ```
-git rebase --onto <SHA_OF_COMMIT_B> <SHA_OF_COMMIT_D> HEAD
+git rebase --onto <SHA_OF_Commit_B> <SHA_OF_Commit_D> HEAD
 ```
 
-Notice that using the syntax above would not move `main` to point to the new commit, so the result is a "detached" `HEAD`. If you use `gg` or another tool that displays the history reachable from branches it might confuse you:
+Notice that using the syntax above would not move `main` to point to the new Commit, so the result is a "detached" `HEAD`. If you use `gg` or another tool that displays the history reachable from branches it might confuse you:
 
 ![image-285](https://www.freecodecamp.org/news/content/images/2023/06/image-285.png)
 
@@ -737,21 +736,21 @@ I don't know about you, but these kinds of things make me really happy. 😊😇
 By the way, you could omit `HEAD` from the previous command as this is the default value for the third parameter. So just using:
 
 ```shell
-git rebase --onto <SHA_OF_COMMIT_B> <SHA_OF_COMMIT_D>
+git rebase --onto <SHA_OF_Commit_B> <SHA_OF_Commit_D>
 ```
 
-Would have the same effect. The last parameter actually tells Git where the end of the current sequence of commits to rebase is. So the syntax of `git rebase --onto` with three arguments is:
+Would have the same effect. The last parameter actually tells Git where the end of the current sequence of Commits to rebase is. So the syntax of `git rebase --onto` with three arguments is:
 
 ```shell
 git rebase --onto <new_parent> <old_parent> <until>
 ```
 
-## How to move commits across branches
+## How to move Commits across branches
 
 So let's say we get to the same history as before:
 
 ```shell
-git checkout original_commit_f
+git checkout original_Commit_f
 ```
 
 And now I want only "Commit E", to be on a branch based on "Commit B". That is, I want to have a new branch, branching from "Commit B", with only "Commit E".
@@ -760,18 +759,18 @@ And now I want only "Commit E", to be on a branch based on "Commit B". That is, 
 
 The current history, considering "Commit E" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-So, what does this mean in terms of rebase? Consider the image above. What commit (or commits) should I rebase, and which commit would be the new base?
+So, what does this mean in terms of rebase? Consider the image above. What Commit (or Commits) should I rebase, and which Commit would be the new base?
 
 I know I can count on you here 😉
 
-What I want is to take "Commit E", and this commit only, and change its base to be "Commit B". In other words, to _replay_ the changes introduced in "Commit E" onto "Commit B".
+What I want is to take "Commit E", and this Commit only, and change its base to be "Commit B". In other words, to _replay_ the changes introduced in "Commit E" onto "Commit B".
 
 Can you apply that logic to the syntax of `git rebase`?
 
-Here it is (this time I'm writing `<COMMIT_B>` instead of `<SHA_OF_COMMIT_B>`, for brevity):
+Here it is (this time I'm writing `<Commit_B>` instead of `<SHA_OF_Commit_B>`, for brevity):
 
 ```shell
-git rebase –-onto <COMMIT_B> <COMMIT_D> <COMMIT_E>
+git rebase –-onto <Commit_B> <Commit_D> <Commit_E>
 ```
 
 Now the history looks like so:
@@ -796,7 +795,7 @@ git show main
 
 The patch introduced in "Commit 12" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-I already covered the format of `git diff` in detail in [a previous post](https://www.freecodecamp.org/news/git-diff-and-patch/), but as a quick reminder, this commit instructs Git to add a line after the two lines of context:
+I already covered the format of `git diff` in detail in [a previous post](https://www.freecodecamp.org/news/git-diff-and-patch/), but as a quick reminder, this Commit instructs Git to add a line after the two lines of context:
 
 ````
 ```shell
@@ -811,7 +810,7 @@ def new_feature():
   print('new feature')
 ````
 
-Say you are trying to rebase "Commit 12" onto another commit. If, for some reason, these context lines don't exist as they do in the patch on the commit you are rebasing _onto_, then you will have a conflict. To learn more about conflicts and how to resolve them, see [this guide](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/).
+Say you are trying to rebase "Commit 12" onto another Commit. If, for some reason, these context lines don't exist as they do in the patch on the Commit you are rebasing _onto_, then you will have a conflict. To learn more about conflicts and how to resolve them, see [this guide](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/).
 
 # Zooming Out for the Big Picture
 
@@ -827,11 +826,11 @@ Now that you know what "Git rebase" is, and how to use interactive rebase or `re
 
 Git rebase changes the history.
 
-This means that you should **not** rebase commits that exist outside your local copy of the repository, and that other people may have based their commits on.
+This means that you should **not** rebase Commits that exist outside your local copy of the repository, and that other people may have based their Commits on.
 
-In other words, if the only commits in question are those you created locally – go ahead, use rebase, go wild.
+In other words, if the only Commits in question are those you created locally – go ahead, use rebase, go wild.
 
-But if the commits have been pushed, this can lead to a huge problem – as someone else may rely on these commits, that you later overwrite, and then you and they will have different versions of the repository.
+But if the Commits have been pushed, this can lead to a huge problem – as someone else may rely on these Commits, that you later overwrite, and then you and they will have different versions of the repository.
 
 This is unlike `merge` which, as we have seen, does not modify history.
 
@@ -843,7 +842,7 @@ The history after rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
 Now, assume that I have already pushed this branch to the remote. And after I had pushed the branch, another developer pulled it and branched out from "Commit C". The other developer didn't know that meanwhile, I was locally rebasing my branch, and would later push it again.
 
-This results in an inconsistency: the other developer works from a commit that is no longer available on my copy of the repository.
+This results in an inconsistency: the other developer works from a Commit that is no longer available on my copy of the repository.
 
 I will not elaborate on what exactly this causes in this guide, as my main message is that you should definitely avoid such cases. If you're interested in what would actually happen, I'll leave a link to a useful resource below. For now, let's summarize what we have covered.
 
@@ -851,7 +850,7 @@ I will not elaborate on what exactly this causes in this guide, as my main messa
 
 In this tutorial, you learned about `git rebase`, a super-powerful tool to rewrite history in Git. You considered a few use cases where `git rebase` can be helpful, and how to use it with one, two, or three parameters, with and without the `--onto` switch.
 
-I hope I was able to convince you that `git rebase` is powerful – but also that it is quite simple once you get the gist. It is a tool to "copy-paste" commits (or, more accurately, patches). And it's a useful tool to have under your belt.
+I hope I was able to convince you that `git rebase` is powerful – but also that it is quite simple once you get the gist. It is a tool to "copy-paste" Commits (or, more accurately, patches). And it's a useful tool to have under your belt.
 
 # Additional References
 

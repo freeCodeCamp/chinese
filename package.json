@@ -1,0 +1,38 @@
+{
+  "name": "news-translation",
+  "version": "1.0.0",
+  "license": "CC-BY-NC-SA-4.0",
+  "homepage": "https://github.com/freeCodeCamp/news-translation#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeCodeCamp/news-translation.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freeCodeCamp/news-translation/issues"
+  },
+  "devDependencies": {
+    "@lint-md/cli": "^2.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^3.0.0"
+  },
+  "prettier": {
+    "singleQuote": true,
+    "trailingComma": "none"
+  },
+  "lint-staged": {
+    "*.{json,yml,js}": "prettier --write",
+    "*.md": "lint-md --fix"
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "lint": "lint-md chinese/**/*.md",
+    "format": "lint-md chinese/**/*.md --fix",
+    "test": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm test"
+    }
+  }
+}

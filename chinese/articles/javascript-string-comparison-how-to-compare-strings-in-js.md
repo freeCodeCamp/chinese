@@ -45,7 +45,7 @@ const compareValue = string1.localeCompare(string2)
 // 1
 ```
 
-上面的比较给出了 `1`，因为在英语环境中，banana的 ba**n** 在 back 的 ba**c** 之后。
+上面的比较给出了 `1`，因为在英语环境中，banana 的 ba**n** 在 back 的 ba**c** 之后。
 
 再来一个例子：
 

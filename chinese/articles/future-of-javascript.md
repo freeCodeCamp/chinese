@@ -5,7 +5,7 @@
 
 ![Why JavaScript Is the Programming Language of the Future](https://www.freecodecamp.org/news/content/images/size/w2000/2020/04/jsposter.jpg)
 
-JavaScript是我学习的第一种编程语言。嗯，实际上我是从HTML和CSS开始的。就像许多其他的网页开发者一样，选择 JavaScript 是不费吹灰之力的。这只是因为它与 HTML 和 CSS 融合得很好，而且实际上也能提高你的 HTML/CSS 技能。我曾经用其他各种编程语言开发过应用程序和游戏，包括 Java、Swift、C++ 和 Dart。但是，JavaScript 所提供的灵活性是无可比拟的--尽管它对初学者来说可能被认为是不好的，因为它所提供的选项远远超过了完成一项简单任务的要求。
+JavaScript 是我学习的第一种编程语言。嗯，实际上我是从 HTML 和 CSS 开始的。就像许多其他的网页开发者一样，选择 JavaScript 是不费吹灰之力的。这只是因为它与 HTML 和 CSS 融合得很好，而且实际上也能提高你的 HTML/CSS 技能。我曾经用其他各种编程语言开发过应用程序和游戏，包括 Java、Swift、C++ 和 Dart。但是，JavaScript 所提供的灵活性是无可比拟的--尽管它对初学者来说可能被认为是不好的，因为它所提供的选项远远超过了完成一项简单任务的要求。
 
 今天，JavaScript 是地球上最强大的语言之一，因为它的性能和无处不在的存在。
 
@@ -13,7 +13,7 @@ JavaScript是我学习的第一种编程语言。嗯，实际上我是从HTML和
 
 然而，以前的 JavaScript 绝对不是这样的。早些时候，它是一种脆弱的、不具性能的语言，而且被人诟病。JavaScript 是为“losers”准备的。
 
-但现在不是了。让我们看看JavaScript在过去的10年里是如何扭转局面的，为什么它变得比以前更强大，以及为什么它将继续保持今天的地位。
+但现在不是了。让我们看看 JavaScript 在过去的 10 年里是如何扭转局面的，为什么它变得比以前更强大，以及为什么它将继续保持今天的地位。
 
 # V8: 为 JavaScript 提供动力的猛兽
 
@@ -31,7 +31,7 @@ V8 是谷歌的开源高性能 JavaScript 和 WebAssembly JIT 引擎，用 C++ �
 
 事实上，指针压缩是 V8 中一项非常新的技术，可以在不影响性能的情况下提升内存优化。如果你是一个极客，你可以在 V8 的官方博客上阅读更多关于它是如何实现的。
 
-从中得到的启示是，你可以写 JavaScript，并在晚上睡个安稳觉，因为你的JS代码可以非常好地运行。
+从中得到的启示是，你可以写 JavaScript，并在晚上睡个安稳觉，因为你的 JS 代码可以非常好地运行。
 
 # 成熟的生态系统和社区
 
@@ -55,11 +55,11 @@ JavaScript 存在于:
 
 1.  前端（浏览器）
 2.  后端（Node，Deno）
-3.  Android/iOS（React Native、NativeScript等）
+3.  Android/iOS（React Native、NativeScript 等）
 4.  桌面（Electron）
 5.  混合型（Ionic）
 
-是什么让这成为可能？像 V8 这样的 JS 引擎是用 C/C++ 编写的，甚至可以在嵌入式系统上进行编译 对于其他平台来说，因为浏览器总是存在的（比如Andorid/iOS），所以它们搭载了一个 JS 引擎，然后可以用来运行任何 JS 代码，甚至可以用 React Native 写原生应用。
+是什么让这成为可能？像 V8 这样的 JS 引擎是用 C/C++ 编写的，甚至可以在嵌入式系统上进行编译 对于其他平台来说，因为浏览器总是存在的（比如 Andorid/iOS），所以它们搭载了一个 JS 引擎，然后可以用来运行任何 JS 代码，甚至可以用 React Native 写原生应用。
 
 ## 前沿功能和进阶
 

@@ -668,7 +668,7 @@ As with strings and numbers, PHP provides lots of very useful functions for arra
 
 ### How to Use Associative Arrays in PHP
 
-So far we’ve used arrays with an incremental, numeric index: 0, 1, 2…
+So far we’ve used arrays with an incremental, numeric index: 0, 1, 2……
 
 You can also use arrays with named indexes (keys), and we call them associative arrays:
 
@@ -2410,7 +2410,7 @@ Here’s an example of a JSON representation of an object that contains a string
 PHP offers us two utility functions to work with JSON:
 
 -   `json_encode()` to encode a variable into JSON
--   `json_decode()` to decode a JSON string into a data type (object, array…)
+-   `json_decode()` to decode a JSON string into a data type (object, array……)
 
 Example:
 

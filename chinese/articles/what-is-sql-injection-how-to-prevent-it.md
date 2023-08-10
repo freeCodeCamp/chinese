@@ -103,7 +103,8 @@ https://xkcd.com/327/
 
 此外，审查数据库管理系统（DBMS）运行所在的操作系统帐户的权限。默认情况下，许多帐户具有非常强大的权限 - 将其更改为更合适的权限。
 
-### 来源/进一步阅读：
+
+### 来源/进一步阅读
 
 *   [OWASP SQL Injection](https://owasp.org/www-community/attacks/SQL_Injection)
 *   [PortSwigger SQL Injection](https://portswigger.net/web-security/sql-injection)

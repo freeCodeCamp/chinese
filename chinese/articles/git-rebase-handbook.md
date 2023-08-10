@@ -213,7 +213,7 @@ git checkout main
 git merge paul_branch
 ```
 
-Hm.... What would happen if you ran this last command? 🤔 Consider the commit history again, after checking out `main`:
+Hm…… What would happen if you ran this last command? 🤔 Consider the commit history again, after checking out `main`:
 
 ![image-210](https://www.freecodecamp.org/news/content/images/2023/06/image-210.png)
 
@@ -233,7 +233,7 @@ Now that you understand the basics of rebase, it is time to consider more advanc
 
 In the previous example, when you only said `rebase` (without additional switches), Git replayed all the commits from the common ancestor to the tip of the current branch.
 
-But rebase is a super-power, it's an almighty command capable of…well, rewriting history. And it can come in handy if you want to modify history to make it your own.
+But rebase is a super-power, it's an almighty command capable of……well, rewriting history. And it can come in handy if you want to modify history to make it your own.
 
 Undo the last merge by making `main` point to "Commit 4" again:
 
@@ -857,7 +857,7 @@ I hope I was able to convince you that `git rebase` is powerful – but also tha
 
 # Additional References
 
--   [Git Internals YouTube playlist — by Brief](https://www.youtube.com/playlist?list=PL9lx0DXCC4BNUby5H58y6s2TQVLadV8v7) (my YouTube channel).
+-   [Git Internals YouTube playlist—by Brief](https://www.youtube.com/playlist?list=PL9lx0DXCC4BNUby5H58y6s2TQVLadV8v7) (my YouTube channel).
 -   [Omer's previous post about Git internals.](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/)
 -   [Omer's tutorial about Git UNDO - rewriting history with Git](https://medium.com/@Omer_Rosenbaum/git-undo-how-to-rewrite-git-history-with-confidence-d4452e2969c2).
 -   [Git docs on rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)

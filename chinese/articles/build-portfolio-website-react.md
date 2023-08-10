@@ -7,9 +7,9 @@
 
 今天，你将为自己创建一个最重要的应用程序，你的作品集。
 
-每个React开发者或者Web开发者通常需要向潜在的客户或者雇主，展示他们能做什么。
+每个 React 开发者或者 Web 开发者通常需要向潜在的客户或者雇主，展示他们能做什么。
 
-这是我们现在要做的，在一些行业标准工具帮助下，包括React，Tailwind CSS，和Netlify。
+这是我们现在要做的，在一些行业标准工具帮助下，包括 React，Tailwind CSS，和 Netlify。
 
 开始吧!
 
@@ -23,9 +23,9 @@
 
 ## 我们将使用什么工具？
 
--   我们将用React来创建应用程序的用户界面。它将允许我们通过可重复使用的组件来组成登录页面的每一部分，和添加我们想要的功能，如果博客。
--   为了设计我们的应用程序， 我们将使用Tailwind CSS。为了给我们的应用程序一个专业的外观，Tailwind允许我们通过在React元素上组合类名(classnames)。
--   为了把我们的应用程序部署收到网络上，我们将使用免费的Netlify。通过CDN的帮助下，用户可以通过我们自己的的域名，快速访问到我们的项目。
+-   我们将用 React 来创建应用程序的用户界面。它将允许我们通过可重复使用的组件来组成登录页面的每一部分，和添加我们想要的功能，如果博客。
+-   为了设计我们的应用程序， 我们将使用 Tailwind CSS。为了给我们的应用程序一个专业的外观，Tailwind 允许我们通过在 React 元素上组合类名(classnames)。
+-   为了把我们的应用程序部署收到网络上，我们将使用免费的 Netlify。通过 CDN 的帮助下，用户可以通过我们自己的的域名，快速访问到我们的项目。
 
 ## 怎样开始
 
@@ -43,21 +43,21 @@ npm install
 
 创建我们的应用程序从开始到部署，需要以下的条件。
 
-1.  你的电脑安装Node.js。 你可以在nodejs.org下载安装程序。
-2.  在你的电脑安装Git，你可以在git-scm.com下载。
-3.  我建议使用VS Code作为你的代码编辑器。你可以在code.visualstudio.com下载它。
-4.  一个在Netlify.com上的免费的Netlify账户。
-5.  一个免费的 GitHub账号。
+1.  你的电脑安装 Node.js。 你可以在 nodejs.org 下载安装程序。
+2.  在你的电脑安装 Git，你可以在 git-scm.com 下载。
+3.  我建议使用 VS Code 作为你的代码编辑器。你可以在 code.visualstudio.com 下载它。
+4.  一个在 Netlify.com 上的免费的 Netlify 账户。
+5.  一个免费的 GitHub 账号。
 
 ## 如何建立作品集的结构
 
-使用React的好处是，我们可以将我们的应用程序扩展到任意多的页面，并添加大量的内容，这是非常容易的。
+使用 React 的好处是，我们可以将我们的应用程序扩展到任意多的页面，并添加大量的内容，这是非常容易的。
 
 在我们只是在处理一个页面，我们可以在我们的应用程序组件中非常迅速找到需要的不同组件。我们将在顶部有一个导航栏，上面有所有的链接，可以跳转到我们作品集的不同部分。
 
 在此之后，我们将包含一个部分，这是关于我们的项目，推荐书，最后是我们的联系表格。
 
-这种快速的规划使我们能够弄清楚我们的组件怎样命名，以什么顺序命名。下一步，把它们全部添加到我们的App.js文件中(在src文件夹):
+这种快速的规划使我们能够弄清楚我们的组件怎样命名，以什么顺序命名。下一步，把它们全部添加到我们的 App.js 文件中(在 src 文件夹):
 
 ```js
 // src/App.js
@@ -107,7 +107,7 @@ my-portfolio
         └── Testimonials.js
 ```
 
- 然后我们将创建每个React组件的基本结构，并从该文件导出,通过使用`export default`:
+ 然后我们将创建每个 React 组件的基本结构，并从该文件导出,通过使用`export default`:
 
 ```js
 // src/components/About.js
@@ -117,7 +117,7 @@ export default function About() {}
 // repeat the same basic structure for all 6 components (在所有的6个组件中重复相同的结构)
 ```
 
-最后在App.js中导入它:
+最后在 App.js 中导入它:
 
 ```js
 // src/App.js
@@ -144,13 +144,13 @@ export default function App() {
 }
 ```
 
-_请注意，总共应该有个6个组件_
+_请注意，总共应该有个 6 个组件_
 
-## Tailwind CSS介绍
+## Tailwind CSS 介绍
 
-做完上面的，我们可以开始使用Tailwind CSS，给我们的应用程序一个基本的外观。
+做完上面的，我们可以开始使用 Tailwind CSS，给我们的应用程序一个基本的外观。
 
-使用Tailwind CSS的好处，我们不必在CSS样式中手工编写任何样式。我们所做的就是组合多个类(class)来创建我们想要的外观。
+使用 Tailwind CSS 的好处，我们不必在 CSS 样式中手工编写任何样式。我们所做的就是组合多个类(class)来创建我们想要的外观。
 
 ```js
 // src/App.js
@@ -231,13 +231,13 @@ export default function About() {
 }
 ```
 
-对于本节右侧的图片，我使用的`public`文件夹中的一个svg文件(coding.svg)。
+对于本节右侧的图片，我使用的`public`文件夹中的一个 svg 文件(coding.svg)。
 
 这个图片只是作为一个临时的占位符，我强烈建议使用你自己的图片。
 
-## 如何构建`projects`组件。
+## 如何构建`projects`组件
 
-我们的项目部分是由一个`section`元素组成，id为`prpjects`。这将是包含所有项目的图片组成的画廊。
+我们的项目部分是由一个`section`元素组成，id 为`prpjects`。这将是包含所有项目的图片组成的画廊。
 
 ```js
 // src/components/Projects.js
@@ -292,7 +292,7 @@ export default function Projects() {
 }
 ```
 
-注意，我们还将使用库`@heroicons/react`，以便将SVG图片写成React组件。
+注意，我们还将使用库`@heroicons/react`，以便将 SVG 图片写成 React 组件。
 
 我们从同一个文件夹中的`data.js`文件导入一个项目数组。在那里，我们导出一个对象数组，每个对象包含项目的数据。
 
@@ -341,7 +341,7 @@ export const projects = [
 
 这将包含一个简单的清单，列出在我们的雇主或客户的项目中，使用的主要工具。
 
-再一次，我们将从`data`文件夹导入一个数组。但是这个数组是由字符串组成，是我们所知道的技能，如JavaScript，React和Node。
+再一次，我们将从`data`文件夹导入一个数组。但是这个数组是由字符串组成，是我们所知道的技能，如 JavaScript，React 和 Node。
 
 ```js
 // src/components/Skills.js
@@ -440,9 +440,9 @@ export default function Testimonials() {
 
 在登录页的尾部，我们将加入我们的联系表格，以便潜在的雇主能联系到我们。
 
-这个表格包含3个输入：姓名、电子邮件和输入信息。
+这个表格包含 3 个输入：姓名、电子邮件和输入信息。
 
-为了接收这些表格所提交的信息，我们将使用Netlify表格工具，非常容易保存处理这些信息。
+为了接收这些表格所提交的信息，我们将使用 Netlify 表格工具，非常容易保存处理这些信息。
 
 ```js
 // src/components/Contact.js
@@ -552,10 +552,10 @@ export default function Contact() {
 
 我们可以在一个在线工具(embed-map.com)的帮助下这样做。你所要做的事只是输入你的位置并点击`Generate HTML code`
 
-在给我们生成的代码中，不要复制所有的代码，只要复制ifame中的`src`属性，然后替换掉`src`的默认值。
+在给我们生成的代码中，不要复制所有的代码，只要复制 ifame 中的`src`属性，然后替换掉`src`的默认值。
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-2.png)
 
-向Netlify发送任何提交的表单数据，Netlify Forms需要将从静态HTML中识别表单。因为的我们的React应用是由Javascript控制的，而不是普通的HTML组成，所以我们需要在`public`文件夹下的index.html文件中添加一个隐藏的表单。
+向 Netlify 发送任何提交的表单数据，Netlify Forms 需要将从静态 HTML 中识别表单。因为的我们的 React 应用是由 Javascript 控制的，而不是普通的 HTML 组成，所以我们需要在`public`文件夹下的 index.html 文件中添加一个隐藏的表单。
 
 ```html
 <!-- public/index.html -->
@@ -579,11 +579,11 @@ export default function Contact() {
 </html>
 ```
 
-我们需要隐藏这个表单，因为它不需要被用户看到，它只需要被Netlify看到。
+我们需要隐藏这个表单，因为它不需要被用户看到，它只需要被 Netlify 看到。
 
 ## 如何从联系表单提交
 
-完成上面这些，我们将回到Contact.js。我们将使用Javascript提交这个表单。
+完成上面这些，我们将回到 Contact.js。我们将使用 Javascript 提交这个表单。
 
 ```js
 const [name, setName] = React.useState("");
@@ -770,11 +770,11 @@ export default function Navbar() {
 
 ## 如何部署的你作品集
 
-现在为了使我们的作品集上线，我们需要把我们的应用程序推送到Github。
+现在为了使我们的作品集上线，我们需要把我们的应用程序推送到 Github。
 
-一旦你熟悉了这个流程，我们可以首先创建一个新的Github仓库。之后，我们将运行`git add .`，`git commit -m "Deploy"`，创建我们的git 远程，然后`git push -u orgin master`。
+一旦你熟悉了这个流程，我们可以首先创建一个新的 Github 仓库。之后，我们将运行`git add .`，`git commit -m "Deploy"`，创建我们的 git 远程，然后`git push -u orgin master`。
 
-一旦我们的项目建立在Github上，我们就可以去Netlify，选择`Choose Site from Git`。然后选择Github作为我们的持续部署，并选择我们刚刚推送代码的Github仓库。
+一旦我们的项目建立在 Github 上，我们就可以去 Netlify，选择`Choose Site from Git`。然后选择 Github 作为我们的持续部署，并选择我们刚刚推送代码的 Github 仓库。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/portfolio-3-min.gif)
 
@@ -784,18 +784,18 @@ export default function Navbar() {
 
 祝贺你！你现在在网上由一个作品集的应用程序，向潜在雇主展示你的所有的项目和技能。
 
-下一步要做的事设置一个自己的域名，最好用你的名字(i.e. [reedbarger.com](https://reedbarger.com/)). 
-由于Netlify包含一个DNS，你可以很容易在他们那里设置一个自己的域名。
+下一步要做的事设置一个自己的域名，最好用你的名字(i.e. [reedbarger.com](https://reedbarger.com/)).
+由于 Netlify 包含一个 DNS，你可以很容易在他们那里设置一个自己的域名。
 
-可以考虑在你的React应用程序中，添加一个博客，向潜在的雇主展示你更多的开发知识。
+可以考虑在你的 React 应用程序中，添加一个博客，向潜在的雇主展示你更多的开发知识。
 
 个人作品集是作为一个开发者所热衷表达自己的方式，你会从中获得成就。
 
-## 想获得学习React的方法？
+## 想获得学习 React 的方法？
 
-**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** 本书有你应该学习React的所有知识，里面有视频、手册，还有特别的奖金。
+**[The React Bootcamp](http://bit.ly/join-react-bootcamp)** 本书有你应该学习 React 的所有知识，里面有视频、手册，还有特别的奖金。
 
- 获得内幕信息 **100s** ，开发人员通过已经掌握React，找到他们梦想的工作，并掌握他们的未来
+ 获得内幕信息 **100s** ，开发人员通过已经掌握 React，找到他们梦想的工作，并掌握他们的未来
 
 [![The React Bootcamp](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](http://bit.ly/join-react-bootcamp)  
 _点击这里，将得到通知，当它开放时_

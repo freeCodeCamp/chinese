@@ -94,7 +94,7 @@ jQuery 有以上这些方法用来给远端服务器发起请求或者传递数�
 
 Axios 是一个开源的创建 HTTP 请求的库，它提供了许多好用的特性，让我们来看一看它是如何用的吧。
 
-#### Usage:
+#### Usage
 
 首先，你需要引入 Axios。这里有两种方式将 Axios 引入你的项目。
 
@@ -116,17 +116,17 @@ import axios from 'axios'
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 ```
 
-#### 使用 axios 创建请求:
+#### 使用 axios 创建请求
 
 基于 Axios，你可以使用 `GET` 和 `POST` 来向服务端请求数据和发送数据。
 
-#### GET:
+#### GET
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*4wmqiPsSN5mdgjJiRaKVZg.png)
 
 `axios` 需要一个必填参数，当然你也可以提供第二个可选参数。这个示例调用一些数据作简单的查询。
 
-#### POST:
+#### POST
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ey6-vwsrm9RAhyoU15u6xQ.png)
 

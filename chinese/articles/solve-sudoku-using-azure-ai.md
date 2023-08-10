@@ -421,8 +421,8 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
 
 这个命令将创建一个名为 services 的文件夹，然后在里面创建以下两个文件：
 
-- form-recognizer.service.ts - 服务类文件
-- form-recognizer.service.spec.ts - 服务的单元测试文件
+- form-recognizer.service.ts- 服务类文件
+- form-recognizer.service.spec.ts -服务的单元测试文件
 
 将下面的代码放入 `form-recognizer.service.ts` 文件中。
 

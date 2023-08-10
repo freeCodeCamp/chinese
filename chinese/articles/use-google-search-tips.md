@@ -15,17 +15,17 @@
 
 ![Google search exact match example](https://www.freecodecamp.org/news/content/images/2021/07/google-exact.PNG)
 
-## 2\. 使用AND操作符
+## 2. 使用 AND 操作符
 
-AND运算符将只返回与两个术语相关的结果。在下面的例子中，你可以看到这个运算符的完美使用情况。
+AND 运算符将只返回与两个术语相关的结果。在下面的例子中，你可以看到这个运算符的完美使用情况。
 
 `html AND css`
 
 ![Google search with AND keyword](https://www.freecodecamp.org/news/content/images/2021/07/google-and.PNG)
 
-## 3\. 使用OR操作符
+## 3. 使用 OR 操作符
 
-你可以使用OR运算符来获得与你输入的一个搜索词相关的结果。
+你可以使用 OR 运算符来获得与你输入的一个搜索词相关的结果。
 
 `(javascript OR python) free course`
 
@@ -33,7 +33,7 @@ AND运算符将只返回与两个术语相关的结果。在下面的例子中�
 
 ## 4\.  使用-（减）运算符
 
-操作符 `-` 将排除包含某个术语或短语的结果。因此，在我们的案例中，我们希望得到与JavaScript相关的结果，但排除其中的任何CSS结果。
+操作符 `-` 将排除包含某个术语或短语的结果。因此，在我们的案例中，我们希望得到与 JavaScript 相关的结果，但排除其中的任何 CSS 结果。
 
 `javascript -css`
 
@@ -59,7 +59,7 @@ AND运算符将只返回与两个术语相关的结果。在下面的例子中�
 
 ## 7\. 如何找到一个特定的文件类型
 
-你也可以使用这个非常有用的功能来帮助你找到一个特定的文件类型。如果你在寻找一些材料，如PDF，它就很方便。如果你以前没有使用过它，从现在开始你会使用。
+你也可以使用这个非常有用的功能来帮助你找到一个特定的文件类型。如果你在寻找一些材料，如 PDF，它就很方便。如果你以前没有使用过它，从现在开始你会使用。
 
 `filetype:pdf learn css`
 

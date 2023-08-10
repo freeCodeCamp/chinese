@@ -374,7 +374,7 @@ console.log(user); // { name: "John Cena", age: 34 }
 
 可以看到的是，使用普通的 for 循环会使代码量更大并且更难理解。但是使用 `find` 方法，我们可以通过容易理解的方式写出同样的代码。
 
-### find 方法的优点：
+### find 方法的优点
 
 -   我们可以不用写大量代码就快速找到任意一个元素
 -   找到匹配元素后会立即停止循环，因此不用写额外的 break 语句
@@ -411,7 +411,7 @@ console.log(index); // 1
 
 这里是 [Code Pen 演示](https://codepen.io/myogeshchavan97/pen/JjbWebQ?editors=0012)。
 
-这里我们得到的输出 **1** 就是名为 `John` 的第一个对象的索引。注意索引是从0开始的。
+这里我们得到的输出 **1** 就是名为 `John` 的第一个对象的索引。注意索引是从 0 开始的。
 
 与上面代码相同的 for 循环代码如下：
 
@@ -482,7 +482,7 @@ console.log(employee); // [ { name: "John Cena", age: 34 }, { name: "John Carte"
 
 因此使用 `filter` ，在找到数组中符合条件的元素时也不会停止搜索其他满足条件的元素，之后会返回所有满足条件的元素。
 
->  `find` 与 `filter` 的主要区别在于 `find` 只返回数组中匹配的第一个元素，而 `filter` 返回数组中所有匹配元素。
+> `find` 与 `filter` 的主要区别在于 `find` 只返回数组中匹配的第一个元素，而 `filter` 返回数组中所有匹配元素。
 
 注意 `filter` 方法返回的是一个数组，如果没有元素通过检测条件，将会返回一个空数组。
 
@@ -509,7 +509,7 @@ console.log(filtered); // [ { name: "John Cena", age: 34 }, { name: "John Carte"
 
 这里是 [Code Pen 演示](https://codepen.io/myogeshchavan97/pen/qBqrwaq?editors=0011).
 
-### 使用 filter 方法的优点：
+### 使用 filter 方法的优点
 
 -   可以让我们快速找到数组中所有匹配的元素
 -   不管有没有匹配到，都会返回一个数组，因此可以避免写额外的 `if` 条件
@@ -578,11 +578,11 @@ window.onload = function () {
 在上面的代码中，如果 callback 函数中， `fields` 数组中的每一项都返回 `true` ，那 `every` 方法就返回 `true` 。
 
 如果 `fields` 数组中任意一个 callback 函数返回 `false` 值， `every` 方法就会返回 `false` 结果。
-### 使用 every 方法的优点：
+### 使用 every 方法的优点
 
 -   能让我们不用写大量代码就快速检测出是否所有元素都满足特定的标准
 
-### 浏览器支持：
+### 浏览器支持
 
 -   IE9 及以上和所有现代浏览器
 -   Edge 12 及以上
@@ -619,7 +619,7 @@ console.log(containsPositive); // false
 
 这里有一些使用 `some` 方法的有用场景：
 
-### `Some` 方法例 1:
+### `Some` 方法例 1
 
 假设有一个应聘者的列表，我们想检查某个特定的应聘者是否在这个数组中，如果有的话，同时要得到在数组总的索引位置。
 
@@ -647,7 +647,7 @@ console.log(employee, indexValue); // true 1
 
 这里是 [Code Pen 演示](https://codepen.io/myogeshchavan97/pen/ExNWOvz?editors=0011)。
 
-### `Some` 方法示例 2:
+### `Some` 方法示例 2
 
  `forEach`, `map`, 和 `filter` 方法会将数组中的所有元素从头到尾执行一次。没有终止循环的方法，除非找到特定的元素。
 
@@ -660,12 +660,12 @@ console.log(employee, indexValue); // true 1
 
 如上面例 1 中看到的，一旦找到特定的匹配值， `some` 方法就会停止循环。
 
-### 使用 some 方法的优点：
+### 使用 some 方法的优点
 
 -  能让我们不用写大量代码就快速检测是否有匹配一定标准的元素
 -  能快速终止循环，这是上面其他循环方法没有的
 
-### 浏览器支持：
+### 浏览器支持
 
 -  IE9 及以上和所有现代浏览器 
 -  Edge 12 及以上
@@ -769,7 +769,7 @@ console.log(sum); // 6
 
 这里是 [Code Pen 演示](https://codepen.io/myogeshchavan97/pen/OJbpaOg?editors=0012).
 
-### 使用 reduce 方法的优点：
+### 使用 reduce 方法的优点
 
 -   使用 `reduce` 可以基于数组生成任何简单或者复杂类型的数据
 -   它能记住循环中之前的返回值，因此可以避免创建一个保存历史值的全局变量

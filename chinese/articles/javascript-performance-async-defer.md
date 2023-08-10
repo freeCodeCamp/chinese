@@ -278,7 +278,7 @@ Async 属性的介绍
 - 对于不执行 DOM 操作的外部脚本，使用 `async`。`async` 不能保证脚本执行时页面渲染的中断。
 - 对所有执行 DOM 操作的脚本使用 `defer`。带有 `defer` 属性的脚本会在页面加载结束时依次执行。
 
-## 在我们结束之前...
+## 在我们结束之前
 
 现在就说到这里。我希望你能发现这篇文章的信息量和洞察力。本文使用的所有源代码都可以在 [这个 GitHub 仓库](https://github.com/atapas/youtube/tree/main/javascript/load-async-defer) 上找到。
 

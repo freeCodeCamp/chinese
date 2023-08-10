@@ -39,14 +39,14 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 - 微信公众号发布：翻译者如有自己的公众号，可在自己的公众号首发译文，可给 freeCodeCamp 公众号设置白名单转载权限。
 
-对于以上内容，如果你有疑问，请在 [freeCodeCamp Discord 频道](https://discord.gg/RzWXEche) 提问，我们随时在线和你交流:)
+对于以上内容，如果你有疑问，请在 [freeCodeCamp Discord 频道](https://discord.gg/PRyKn3Vbay) 提问，我们随时在线和你交流:)
 
 ## 译者交流
 
 ### 开放周会
 
 - 时间：每两周一次，周日上午 10:00 - 11:00（北京时间）
-- 地点：会议室链接（有两种方法可以获得会议室链接：1、请加入 [freeCodeCamp Discord 频道](https://discord.gg/RzWXEche)，搜索 #chinese 频道并留言，2、请添加小助手微信 fcczhongguo 并留言）
+- 地点：会议室链接（有两种方法可以获得会议室链接：1、请加入 [freeCodeCamp Discord 频道](https://discord.gg/PRyKn3Vbay)，搜索 #chinese 频道并留言，2、请添加小助手微信 fcczhongguo 并留言）
 
 参与者无需提前报名，在以上时间内直接进入会议室。请所有参与者务必遵守 [freeCodeCamp 社区行为规范](https://chinese.freecodecamp.org/news/code-of-conduct/)。
 
@@ -62,7 +62,7 @@ freeCodeCamp 英文专栏发布了大量[优质文章][6]，分享前端、后�
 
 #### Cloud
 
-This repository has [a GitHub action][15] to lint **Markdown & Native Language syntax** on **Pull Request commits**, translaters should follow the **Lint Report** to fix **Syntax Warnings & Errors** of the own article.
+This repository has [a GitHub action][15] to lint **Markdown & Native Language syntax** on **Pull Request commits**, translators should follow the **Lint Report** to fix **Syntax Warnings & Errors** of the own article.
 
 #### Local
 

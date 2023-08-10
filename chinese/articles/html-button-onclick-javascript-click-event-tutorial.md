@@ -7,11 +7,11 @@
 
 当你访问一个网站时，你可能点击一些东西，像链接或者按键。
 
-链接可能跳转到当前网页的某一部分，也可能该网站的另一个网页，更或者是另一个网站。按键由Javascrpt各种事件控制，触发某些函数
+链接可能跳转到当前网页的某一部分，也可能该网站的另一个网页，更或者是另一个网站。按键由 Javascrpt 各种事件控制，触发某些函数
 
-在本教程中，我们将探索在JavaScript中使用两种不同的方式触发点击事件。
+在本教程中，我们将探索在 JavaScript 中使用两种不同的方式触发点击事件。
 
-首先，我们将看传统的 `onclick` 风格 ，你可以在HTML里添加。然后我们将看到更现代的 "click" `eventListner` 是如何工作的, 它可以让HTML和JavaScript分离。
+首先，我们将看传统的 `onclick` 风格 ，你可以在 HTML 里添加。然后我们将看到更现代的 "click" `eventListner` 是如何工作的, 它可以让 HTML 和 JavaScript 分离。
 
 ## 如何使用`onclick`事件
 
@@ -33,11 +33,11 @@
 
 请注意 `onclick`属性值是你想执行的函数名，它会调用该函数。
 
-在JavaScript中，它会通过函数名调用函数，当你在函数名后加上括号。
+在 JavaScript 中，它会通过函数名调用函数，当你在函数名后加上括号。
 
 ## `onclick` 事件例子
 
-我已经准备好了一些基本的HTML和样式，我们练习怎样把 `onclick` 事件加入进去。
+我已经准备好了一些基本的 HTML 和样式，我们练习怎样把 `onclick` 事件加入进去。
 
 ```html
 <div>
@@ -46,7 +46,7 @@
 </div>
 ```
 
-让它好看些的CSS，以及所有其他的示例代码:
+让它好看些的 CSS，以及所有其他的示例代码:
 
 ```css
  body {
@@ -82,9 +82,9 @@ button.orange {
 这是我们看到的网页:  
 ![changeColor](https://www.freecodecamp.org/news/content/images/2021/08/changeColor.png)
 
-我们的目标是当我们点击这个按键时，文本的颜色变成蓝色。所以我们需要添加一个 `onclick`属性到按键上，然后白编写JavaScript函数来改变颜色。
+我们的目标是当我们点击这个按键时，文本的颜色变成蓝色。所以我们需要添加一个 `onclick`属性到按键上，然后白编写 JavaScript 函数来改变颜色。
 
-我们需要在HTML做一些小小的改变.
+我们需要在 HTML 做一些小小的改变.
 
 ```html
 <div>
@@ -93,15 +93,15 @@ button.orange {
 </div>
 ```
 
-我们要执行的函数是`changeColor()`,所以我们需要把它写到一个JavaScript文件里，或者写再HTML文件的`<script>`标签里。
+我们要执行的函数是`changeColor()`,所以我们需要把它写到一个 JavaScript 文件里，或者写再 HTML 文件的`<script>`标签里。
 
-如果你想把你的脚本写在一个JavaScript文件中，你需要在HTML里用下面的语法引用它。
+如果你想把你的脚本写在一个 JavaScript 文件中，你需要在 HTML 里用下面的语法引用它。
 
 ```html
 <script src="path-to-javascript-file"></script>
 ```
 
-如果你想在HTML里写脚本，把它放在script标签里。
+如果你想在 HTML 里写脚本，把它放在 script 标签里。
 
 ```html
 <script>
@@ -111,9 +111,9 @@ button.orange {
 
 现在让我们来写`changeColor()`函数
 
-首先，我们需要选择我们想操作的元素，也就是在`<p>`标签内的 `freeCodeCamp ` 文本
+首先，我们需要选择我们想操作的元素，也就是在`<p>`标签内的 `freeCodeCamp` 文本
 
-在JavaScript中，你可以用DOM的 getElementById()，getElementsByClassName()，或者querySelector()方法把DOM对象存储在变量中。
+在 JavaScript 中，你可以用 DOM 的 getElementById()，getElementsByClassName()，或者 querySelector()方法把 DOM 对象存储在变量中。
 
 在本教程中，我将使用`querySelector()` ，因为它更现代，而且运行更快。我还将使用 `const`来声明我们的变量，而不用`let`和`var`。因为使用`const`，事情将变得更安全，变量是只读的。
 
@@ -121,7 +121,7 @@ button.orange {
 const name = document.querySelector(".name");
 ```
 
-现在我们已经选定了文本，让我们来编写自己函数。在JavaScript中，函数的基本语法是这样的。
+现在我们已经选定了文本，让我们来编写自己函数。在 JavaScript 中，函数的基本语法是这样的。
 
 ```js
 function funcctionName () {
@@ -139,9 +139,9 @@ function changeColor() {
 
 发生了什么事情？
 
-HTML中的`changeColor()`是我们要执行的函数，如果的这个名字与HTML中的函数名不一样，它就不会起作用。所以我们的函数名写成  `changeColor`。
+HTML 中的`changeColor()`是我们要执行的函数，如果的这个名字与 HTML 中的函数名不一样，它就不会起作用。所以我们的函数名写成  `changeColor`。
 
-在DOM(文档对象模型，指所有的HTML)中，要改变任何有关`style`的东西，你需要写上`style`，然后加上一个`.`。后面是你想要改变的东西，这可以是颜色(color)，背景颜色(background)，字体大小(fontsize)等。
+在 DOM(文档对象模型，指所有的 HTML)中，要改变任何有关`style`的东西，你需要写上`style`，然后加上一个`.`。后面是你想要改变的东西，这可以是颜色(color)，背景颜色(background)，字体大小(fontsize)等。
 
 因此，在我们的函数中，我们声明了变量来获取`freeCodeCamp`文本，然后我们把颜色改为蓝色。
 
@@ -180,15 +180,15 @@ function changeColor(color) {
 }
 ```
 
- name变量获取了`name`的DOM对象(我们在这里存储了`freeCodeCamp`文本),然后颜色会根据我们传入`changeColor()`的颜色值变化。
+ name 变量获取了`name`的 DOM 对象(我们在这里存储了`freeCodeCamp`文本),然后颜色会根据我们传入`changeColor()`的颜色值变化。
 
 ![changeColors](https://www.freecodecamp.org/news/content/images/2021/08/changeColors.gif)
 
-## 如何使用 `eventListener`在JavaScript中  
+## 如何使用 `eventListener`在 JavaScript 中  
 
-在JacaScript中，有多种方法做同一件事。随着JavaScirpt本身发展，我们开始需要将HTML，CSS和JavaScript代码分开，以达到最佳实践。
+在 JacaScript 中，有多种方法做同一件事。随着 JavaScirpt 本身发展，我们开始需要将 HTML，CSS 和 JavaScript 代码分开，以达到最佳实践。
 
-事件监听器使JavaScript和HTML分离成为可能。你也可以用`onclick`做到这一点，但是在这里采取另一种方法。
+事件监听器使 JavaScript 和 HTML 分离成为可能。你也可以用`onclick`做到这一点，但是在这里采取另一种方法。
 
 ### 基本 `eventListener` 语法 
 
@@ -198,7 +198,7 @@ function changeColor(color) {
 
 现在让我们使用`ckick eventListner`将`freeCodeCamp`文本变成蓝色。
 
-这是我们新的HTML：
+这是我们新的 HTML：
 
 ```html
  <div>
@@ -211,7 +211,7 @@ function changeColor(color) {
 
 ![colorChange](https://www.freecodecamp.org/news/content/images/2021/08/colorChange.png)
 
-这次在我们的脚本中，我们也需要选择按键(而不仅是`freeCodeCamp`文本)。因为在我们的按键的标签里没有任何JavaScript，这很酷。
+这次在我们的脚本中，我们也需要选择按键(而不仅是`freeCodeCamp`文本)。因为在我们的按键的标签里没有任何 JavaScript，这很酷。
 
 这是我们的脚本的样子。
 
@@ -235,13 +235,13 @@ btn.addEventListener("click", changeColor);
 
 ![changeColorWithEvents](https://www.freecodecamp.org/news/content/images/2021/08/changeColorWithEvents.gif)
 
-## 如何通过JavaScript建立一个 `Show More` 和 `Show Less` 按键。
+## 如何通过 JavaScript 建立一个 `Show More` 和 `Show Less` 按键
 
 学习的最好办法之一是去动手创建一个项目，用到我们已经学到的`onclick` 和 `click eventLister`，去做一些事情。
 
 当你访问一个博客，你往往先看到文章的招录，然后你可以点击 `read more`按键，显示剩余内容。让我们尝试实现这个。
 
-这是我们要处理的HTML:
+这是我们要处理的 HTML:
 
 ```html
  <article id="content">
@@ -273,12 +273,12 @@ btn.addEventListener("click", changeColor);
 <button onclick="showMore()">Show more</button>
 ```
 
-这是简单的HTML，是有关freeCodeCamp的事情。有个按键，我们已经给它加上了`onClick`。我们要执行的函数是`showMore()`，等下我们会写上。
+这是简单的 HTML，是有关 freeCodeCamp 的事情。有个按键，我们已经给它加上了`onClick`。我们要执行的函数是`showMore()`，等下我们会写上。
 
-没有CSS，是下面的效果:  
+没有 CSS，是下面的效果:  
 ![articleunstyled](https://www.freecodecamp.org/news/content/images/2021/08/articleunstyled.png)
 
-它不是很难看，但是我们可以让它更美观，通过下面的CSS:
+它不是很难看，但是我们可以让它更美观，通过下面的 CSS:
 
 ```css
 <style>
@@ -332,7 +332,7 @@ btn.addEventListener("click", changeColor);
 </style>
 ```
 
-CSS做了什么？
+CSS 做了什么？
 
 通过选择器(`*`)，我们删除了分配给元素的默认 `margin`和`padding`，这样我们可以添加自己的`margin`和`padding`。
 
@@ -340,27 +340,27 @@ CSS做了什么？
 
 我们用`Flexbox`将文字内容全部居中，并给它一个浅灰色的背景。
 
-我们的`<article>`元素，是文本的容器，宽为400px，白色背景(#fff)，顶部有20px的padding，左右各20px的padding，底部为0px 的padding。
+我们的`<article>`元素，是文本的容器，宽为 400px，白色背景(#fff)，顶部有 20px 的 padding，左右各 20px 的 padding，底部为 0px 的 padding。
 
-段落里的字体的标签大小为18px(font-size: 18px)，然后我们给它们的最大高度为270px(max-height: 270px)。由于设置了最大高度，所有的文字不能包含进来，就会溢出，为了解决这个问题，我们将溢出设置为隐藏（overflow: hidden），这样一开始就不会显示这些文字。
+段落里的字体的标签大小为 18px(font-size: 18px)，然后我们给它们的最大高度为 270px(max-height: 270px)。由于设置了最大高度，所有的文字不能包含进来，就会溢出，为了解决这个问题，我们将溢出设置为隐藏（overflow: hidden），这样一开始就不会显示这些文字。
 
-过渡属性设置为每个变化在1秒后发生(transition: max-height 1s)，所有的文本都是两端对齐(text-align: justify)，并且有20px 的顶部边距(margin-top: 20px)
+过渡属性设置为每个变化在 1 秒后发生(transition: max-height 1s)，所有的文本都是两端对齐(text-align: justify)，并且有 20px 的顶部边距(margin-top: 20px)
 
-因为我们去掉默认的`margin`，我们的段落将会挤到一起。避免这个，我们设置了`p`元素16px的底边距(margin-bottom: 16px)，让段落彼此分开。
+因为我们去掉默认的`margin`，我们的段落将会挤到一起。避免这个，我们设置了`p`元素 16px 的底边距(margin-bottom: 16px)，让段落彼此分开。
 
-我们的选择器 `article.open` 有个属性`max-height` 设置为 1000px。这意味着任何一个`aritcle`元素有个`class` open，`maximum height` 将从270px 变为1000px，去显示文章的其余部分。这是用JavaScript实现的。
+我们的选择器 `article.open` 有个属性`max-height` 设置为 1000px。这意味着任何一个`aritcle`元素有个`class` open，`maximum height` 将从 270px 变为 1000px，去显示文章的其余部分。这是用 JavaScript 实现的。
 
-我们设置按键，使用深色背景(background: #0e0b22)，白色按键(color: #fff)，无边框(border: none)，半径为4px(border-radius: 4px)。
+我们设置按键，使用深色背景(background: #0e0b22)，白色按键(color: #fff)，无边框(border: none)，半径为 4px(border-radius: 4px)。
 
-最后，我们使用CSS中的伪类`hover`将按键的光标改为指针(pointer)，当用户将光标悬停在按键上时，背景颜色会发生轻微的变化。
+最后，我们使用 CSS 中的伪类`hover`将按键的光标改为指针(pointer)，当用户将光标悬停在按键上时，背景颜色会发生轻微的变化。
 
-这就是CSS。
+这就是 CSS。
 
 我们的页面更好看了:
 
 ![articlestyled](https://www.freecodecamp.org/news/content/images/2021/08/articlestyled.png)
 
-下一件我们需要要做的事，编写我们的JavaScript，这样我们可以看到被隐藏的文章部分了。
+下一件我们需要要做的事，编写我们的 JavaScript，这样我们可以看到被隐藏的文章部分了。
 
 
 我们有一个`onclick`属性在我们的按键内，去调用 `showMore()`函数， 让我们写这个函数。
@@ -389,7 +389,7 @@ function showMore() {
 
 函数做了什么？
 
-我们使用`if...else`语句，这是JavaScript的一个重要语句。它根据某个条件进行切换。
+我们使用`if...else`语句，这是 JavaScript 的一个重要语句。它根据某个条件进行切换。
 
 这是它的基本语法:
 
@@ -401,14 +401,14 @@ if (condition == "something") {
 }
 ```
 
-如果`article.className` 为`open`时(也就是说，我们想给它加上open的类，在CSS中被设置为最大高度为1000px),然后我们可以看到文件的其余部分。 如果不为`open`，文章回到初始状态，即它的一部分被隐藏。
+如果`article.className` 为`open`时(也就是说，我们想给它加上 open 的类，在 CSS 中被设置为最大高度为 1000px),然后我们可以看到文件的其余部分。 如果不为`open`，文章回到初始状态，即它的一部分被隐藏。
 
 我们在`else`语句中给它设置`open`的`class`，它显示文章其余部分。在`if` 语句中把 `open`的`class`去掉，这使它恢复初始状态。
 
 我们的代码能在`Show More` 和 `Show Less` 间进行切换:  
 ![article](https://www.freecodecamp.org/news/content/images/2021/08/article.gif)
 
-我们可以把HTML和JavaScript分离的前提下，接着使用`onclick` ，因为`onclick`是JavaScript。所以把它写到一个JavaScript文件里，而不是写在HTML。
+我们可以把 HTML 和 JavaScript 分离的前提下，接着使用`onclick` ，因为`onclick`是 JavaScript。所以把它写到一个 JavaScript 文件里，而不是写在 HTML。
 
 ```js
  button.onclick = function () {
@@ -480,6 +480,6 @@ function readMore() {
 
 ## 总结
 
-我希望本教程帮助你了解点击事件在JavaScript中是怎么工作的。我们探讨了两种不同的方法，所以你可以在编码中使用它们。
+我希望本教程帮助你了解点击事件在 JavaScript 中是怎么工作的。我们探讨了两种不同的方法，所以你可以在编码中使用它们。
 
 感谢你的阅读，跟随教程进行编程。

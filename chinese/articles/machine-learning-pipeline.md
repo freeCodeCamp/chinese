@@ -89,7 +89,7 @@ Our goal is to predict whether a candidate will change jobs based on their infor
 
 Note that I skipped categorical feature encoding for the simplicity of this article.
 
-### Here are the steps we'll follow:
+### Here are the steps we'll follow
 
 1.  Import data and encoding
 2.  Define sets of columns to be transformed in different ways
@@ -331,7 +331,7 @@ same_pipe = joblib.load("pipe.joblib")
 
 A pipeline does not only make your code tidier, it can also help you optimize hyperparameters and data preparation methods.
 
-### Here's what we'll cover in this section:
+### Here's what we'll cover in this section
 
 -   How to find the changeable pipeline parameters
 -   How to find the best hyperparameter sets: Add a pipeline to Grid Search
@@ -356,7 +356,7 @@ Below the first part you'll find what we are interested in: a list of parameters
 
 ![1*NCkmLiyit676K3M-HfEbnw](https://miro.medium.com/max/926/1*NCkmLiyit676K3M-HfEbnw.png)
 
-The format is ****step1\_step2\_…\_parameter****.
+The format is ****step1\_step2……_…\_parameter****.
 
 For example ****col\_trans****\_****cat\_pipeline****\_****one-hot****\_****sparse**** means parameter sparse of the one-hot step.
 
@@ -372,7 +372,7 @@ clf_pipeline.set_params(model_C = 10)
 
 Grid Search is a method you can use to perform hyperparameter tuning. It helps you find the optimum parameter sets that yield the highest model accuracy.
 
-#### Set the tuning parameters and their range.
+#### Set the tuning parameters and their range
 
 Create a dictionary of tuning parameters (hyperparameters)
 
@@ -540,7 +540,7 @@ There are 80 cases for this example. There's running time and accuracy of each c
 
 Searching for the best machine learning model can be a time-consuming task. The pipeline can make this task much more convenient so that you can shorten the model training and evaluation loop.
 
-### Here's what we'll cover in this part:
+### Here's what we'll cover in this part
 
 -   Add a custom transformation
 -   Find the best machine learning model
@@ -618,7 +618,7 @@ Ah ha – you can’t have two classification models in a pipeline!
 
 The solution to this problem is to create a custom transformation that receives a model as an input and performs grid search to find the best model.
 
-### Here are the steps we'll follow:
+### Here are the steps we'll follow
 
 1.  Create a class that receives a model as an input
 2.  Add the class in step 1 to a pipeline

@@ -275,7 +275,7 @@ Let's learn this with an example.
 
 Say you have to create an alias command called `gohome`. Running this command should take you to the home directory and display the "Navigated to home directory" message.
 
-### Method #1:
+### Method #1
 
 This way is the usual way of adding an `alias` command. You have to add the two commands separated by a semicolon (`;`).
 

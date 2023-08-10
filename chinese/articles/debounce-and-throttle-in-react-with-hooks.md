@@ -5,7 +5,7 @@
 
 ![How to Use Debounce and Throttle in React and Abstract them into Hooks](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/og-image.png)
 
-[钩子](https://reactjs.org/docs/hooks-intro.html)是对React绝妙的补充。在使用`class`组件时需要被分配到不同生命周期的逻辑，因为钩子而简化了不少。
+[钩子](https://reactjs.org/docs/hooks-intro.html)是对 React 绝妙的补充。在使用`class`组件时需要被分配到不同生命周期的逻辑，因为钩子而简化了不少。
 
 当然使用钩子需要具备 _不一样的_ 思考方式， [特别是对于初次使用者来说](https://overreacted.io/making-setinterval-declarative-with-react-hooks/)。
 
@@ -13,7 +13,7 @@
 
 ## 防抖和节流
 
-已经有许多介绍如何编写防抖和节流的博文，这里我就不赘述了。简单起见，你可以参考Lodash的[`debounce`](https://lodash.com/docs/4.17.15#debounce)和[`throttle`](https://lodash.com/docs/4.17.15#throttle)。
+已经有许多介绍如何编写防抖和节流的博文，这里我就不赘述了。简单起见，你可以参考 Lodash 的[`debounce`](https://lodash.com/docs/4.17.15#debounce)和[`throttle`](https://lodash.com/docs/4.17.15#throttle)。
 
 我们快速回顾一下，两种函数都接受一个（回调）函数， 一个以毫秒为单位的 _延迟_ (如 `x`)并且返回另一个具有特殊行为的函数：
 
@@ -22,7 +22,7 @@
 
 ## 用例
 
-有一个迷你博客编辑器项目(这里是该项目的[GitHub仓库](https://github.com/wtjs/react-debounce-throttle-hooks/)) ，在这个编辑器中，我们希望用户停止输出后1秒钟将博文添加到数据库中。
+有一个迷你博客编辑器项目(这里是该项目的[GitHub 仓库](https://github.com/wtjs/react-debounce-throttle-hooks/)) ，在这个编辑器中，我们希望用户停止输出后 1 秒钟将博文添加到数据库中。
 
 > 你可以通过查看[Codesandbox](https://codesandbox.io/s/github/wtjs/react-debounce-throttle-hooks)获取最终代码效果。
 
@@ -59,9 +59,9 @@ function App() {
 }
 ```
 
-在这段代码中`saveToDb`在真实场景应该用于向后端发起API调用。在这里我们做简化处理，将数据存入状态（state）然后作为 `dbValue`渲染。
+在这段代码中`saveToDb`在真实场景应该用于向后端发起 API 调用。在这里我们做简化处理，将数据存入状态（state）然后作为 `dbValue`渲染。
 
-因为我们仅想在用户停止输入后（1秒后），执行存储行为，所以我们使用的是 _防抖_。
+因为我们仅想在用户停止输入后（1 秒后），执行存储行为，所以我们使用的是 _防抖_。
 
 [这里](https://github.com/wtjs/react-debounce-throttle-hooks/tree/starter)是起始代码库和分支。
 
@@ -96,7 +96,7 @@ function App() {
 
 当给子组件传入调用时，[`useCallback`](https://reactjs.org/docs/hooks-reference.html#usecallback)可优化性能。我们可以借助他对回调函数的记忆化，来确保每次渲染`debouncedSave`都指向同一个防抖函数。
 
-> 我在freeCodeCamp也写过这篇[文章](https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/)，帮助你理解记忆化的基本知识。
+> 我在 freeCodeCamp 也写过这篇[文章](https://www.freecodecamp.org/news/understanding-memoize-in-javascript-51d07d19430e/)，帮助你理解记忆化的基本知识。
 
 这样代码就奏效了：
 

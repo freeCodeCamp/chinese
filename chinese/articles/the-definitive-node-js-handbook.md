@@ -5,7 +5,7 @@
 
 ![The definitive Node.js handbook](https://cdn-media-1.freecodecamp.org/images/1*7F50Qc-ysFgy6tCjUyruTA.jpeg)
 
-注意：你可以得到这本手册的 [PDF、ePub或Mobi][1] 版本，以方便参考，或在你的 Kindle 或平板电脑上阅读。
+注意：你可以得到这本手册的 [PDF、ePub 或 Mobi][1] 版本，以方便参考，或在你的 Kindle 或平板电脑上阅读。
 
 ### Node.js 简介
 
@@ -15,11 +15,11 @@
 
 Node.js 是一个 **服务器** 上的 **JavaScript 运行环境**。
 
-Node.js 是开源的、跨平台的，自从2009年推出以来，它大受欢迎，现在在 Web 开发领域发挥着重要作用。如果 GitHub 的星星是一个流行的指示因素，那么拥有58000多颗星星就意味着非常流行。
+Node.js 是开源的、跨平台的，自从 2009 年推出以来，它大受欢迎，现在在 Web 开发领域发挥着重要作用。如果 GitHub 的星星是一个流行的指示因素，那么拥有 58000 多颗星星就意味着非常流行。
 
 Node.js 在浏览器之外运行 V8 JavaScript 引擎，这是 Chrome 浏览器的核心。Node.js 能够利用那些使 Chrome 浏览器的 JavaScript 运行变得非常快的成果，这使得 Node.js 能够从 V8 执行的巨大性能改进和即时编译中受益。得益于此，在 Node.js 中运行的 JavaScript 代码可以变得非常有性能。
 
-一个 Node.js 应用程序是由一个单一的进程运行的（single process），不需要为每个请求创建一个新的线程（new thread）。Node在其标准库中提供了一套异步 I/O 原生语法，这将防止JavaScript 代码被阻塞，一般来说，Node.js 中的库是使用非阻塞范式编写的，使阻塞行为成为例外，而不是正常的。
+一个 Node.js 应用程序是由一个单一的进程运行的（single process），不需要为每个请求创建一个新的线程（new thread）。Node 在其标准库中提供了一套异步 I/O 原生语法，这将防止 JavaScript 代码被阻塞，一般来说，Node.js 中的库是使用非阻塞范式编写的，使阻塞行为成为例外，而不是正常的。
 
 当 Node.js 需要执行 I/O 操作时，比如从网络中读取数据、访问数据库或文件系统，而不是阻塞线程，Node.js 会在响应回来时恢复操作，而不是浪费 CPU 来等待。
 
@@ -27,13 +27,13 @@ Node.js 在浏览器之外运行 V8 JavaScript 引擎，这是 Chrome 浏览器�
 
 Node.js 有一个独特的优势，因为数百万为浏览器编写 JavaScript 的前端开发人员现在能够运行服务器端代码和前端代码，而不需要学习一种完全不同的语言。
 
-在 Node.js 中，新的 ECMAScript 标准可以顺利使用，因为你不必等待所有用户更新他们的浏览器--你通过改变Node.js的版本来决定使用哪个 ECMAScript 版本，你还可以通过运行带有标志（flags）的 Node 来启用特定的实验性功能。
+在 Node.js 中，新的 ECMAScript 标准可以顺利使用，因为你不必等待所有用户更新他们的浏览器--你通过改变 Node.js 的版本来决定使用哪个 ECMAScript 版本，你还可以通过运行带有标志（flags）的 Node 来启用特定的实验性功能。
 
 #### Node.js 有大量的库
 
-凭借其简单的结构，Node包管理器（[NPM][2]）帮助 Node.js 的生态系统激增。现在，[NPM registry][3] 托管了近50万个开源包，你可以自由使用。
+凭借其简单的结构，Node 包管理器（[NPM][2]）帮助 Node.js 的生态系统激增。现在，[NPM registry][3] 托管了近 50 万个开源包，你可以自由使用。
 
-### 一个Node.js应用程序的例子
+### 一个 Node.js 应用程序的例子
 
 Node.js 最常见的例子 Hello World 是一个网络服务器:
 
@@ -55,17 +55,17 @@ server.listen(port, hostname, () => {
 
 要运行这个片段，将其保存为 `server.js` 文件，并在终端运行 `node server.js`。
 
-这段代码首先包括 Node.js [http模块][4]。
+这段代码首先包括 Node.js [http 模块][4]。
 
-Node.js有一个惊艳的 [标准库][5]，包括对网络的一流支持。
+Node.js 有一个惊艳的 [标准库][5]，包括对网络的一流支持。
 
-`http` 的 `createServer()` 方法创建一个新的HTTP服务器并返回。
+`http` 的 `createServer()` 方法创建一个新的 HTTP 服务器并返回。
 
 该服务器被设置为在指定的端口和主机名上监听。当服务器准备好时，回调函数被调用，在这种情况下，通知我们服务器正在运行。
 
 每当收到一个新的请求，[request event][6] 被调用，提供两个对象：一个请求（一个 [http.IncomingMessage][7] 对象）和一个响应（一个 [http.ServerResponse][8] 对象）。
 
-这两个对象对于处理HTTP调用是必不可少的。
+这两个对象对于处理 HTTP 调用是必不可少的。
 
 第一个对象提供请求的细节。在这个简单的例子中，这个没有被使用，但是你可以访问请求头和请求数据。
 
@@ -93,20 +93,20 @@ res.end('Hello World\n')
 
 ### Node.js 框架和工具
 
-Node.js 是一个低代码（low-level）平台。为了让开发者更容易、更有趣，成千上万的库被建立在Node.js 之上。
+Node.js 是一个低代码（low-level）平台。为了让开发者更容易、更有趣，成千上万的库被建立在 Node.js 之上。
 
 其中许多人随着时间的推移成为了流行的选择。这里有一个不全面的列表，列出了我认为非常相关和值得学习的那些:
 
 - [**Express**][9]  
     创建一个网络服务器的最简单而强大的方法之一。它的极简方法和对服务器核心功能的无偏见关注是其成功的关键。
 - [**Meteor**][10]  
-    一个令人难以置信的强大的全栈框架，赋予你用JavaScript构建应用程序的同构方法，在客户端和服务器上共享代码。曾经是一个提供一切的现成工具，现在它与前端库如[React][11]、[Vue][12] 和 [Angular][13] 集成。Meteor也可以用来创建移动应用程序。
+    一个令人难以置信的强大的全栈框架，赋予你用 JavaScript 构建应用程序的同构方法，在客户端和服务器上共享代码。曾经是一个提供一切的现成工具，现在它与前端库如[React][11]、[Vue][12] 和 [Angular][13] 集成。Meteor 也可以用来创建移动应用程序。
 - [**Koa**][14]  
-    由Express背后的同一个团队建立，Koa旨在更简单和更小，建立在多年的知识之上。这个新项目的诞生是由于需要在不破坏现有社区的情况下，创造不兼容的变化。
+    由 Express 背后的同一个团队建立，Koa 旨在更简单和更小，建立在多年的知识之上。这个新项目的诞生是由于需要在不破坏现有社区的情况下，创造不兼容的变化。
 - [**Next.js**][15]  
     这是一个用于渲染服务器端的 [React][16] 应用程序的框架。
 - [**Micro**][17]  
-    这是一个非常轻量级的服务器，用于创建异步的HTTP微服务。
+    这是一个非常轻量级的服务器，用于创建异步的 HTTP 微服务。
 - [**Socket.io**][18]  
     这是一个实时通信引擎，用于构建网络应用。
 
@@ -116,11 +116,11 @@ Node.js 是一个低代码（low-level）平台。为了让开发者更容易、
 
 信不信由你，Node.js 只有 9 年的历史。
 
-相比之下，JavaScript 有 23 年的历史，而我们所知的网络（在引入Mosaic之后）有25年的历史。
+相比之下，JavaScript 有 23 年的历史，而我们所知的网络（在引入 Mosaic 之后）有 25 年的历史。
 
-对于一项技术来说，9年的时间实在是太短了，但Node.js似乎已经存在了很久。
+对于一项技术来说，9 年的时间实在是太短了，但 Node.js 似乎已经存在了很久。
 
-我有幸从 Node.js 的早期就开始工作，当时它只有2年的历史，尽管信息很少，但你已经可以感觉到它是一个巨大的东西。
+我有幸从 Node.js 的早期就开始工作，当时它只有 2 年的历史，尽管信息很少，但你已经可以感觉到它是一个巨大的东西。
 
 在这一节中，我想画出 Node.js 在历史上的大图景，把事情看清楚。
 
@@ -128,9 +128,9 @@ Node.js 是一个低代码（low-level）平台。为了让开发者更容易、
 
 JavaScript 是一种编程语言，是在网景公司创建的，作为一种脚本工具，在他们的浏览器 [Netscape Navigator][19] 中操作网页。
 
-网景公司的部分商业模式是销售网络服务器，其中包括一个名为 "Netscape LiveWire" 的环境，它可以使用服务器端的 JavaScript 创建动态页面。因此，服务器端JavaScript的想法并不是由 Node.js引入的，它就像 JavaScript 一样古老--但在当时它并不成功。
+网景公司的部分商业模式是销售网络服务器，其中包括一个名为 "Netscape LiveWire" 的环境，它可以使用服务器端的 JavaScript 创建动态页面。因此，服务器端 JavaScript 的想法并不是由 Node.js 引入的，它就像 JavaScript 一样古老--但在当时它并不成功。
 
-导致 Node.js 崛起的一个关键因素是时机。几年前，JavaScript 开始被认为是一种严肃的语言，这要归功于 "Web 2.0 "应用程序，它们向世界展示了网络上的现代体验是什么样的（想想谷歌地图或GMail）。
+导致 Node.js 崛起的一个关键因素是时机。几年前，JavaScript 开始被认为是一种严肃的语言，这要归功于 "Web 2.0 "应用程序，它们向世界展示了网络上的现代体验是什么样的（想想谷歌地图或 GMail）。
 
 由于浏览器的竞争，JavaScript 引擎的性能标准大大提高了，这种竞争仍在继续。每个主要浏览器背后的开发团队每天都在努力工作，为我们提供更好的性能，这对 JavaScript 这个平台来说是一个巨大的胜利。Chrome V8，即 Node.js 背后使用的引擎，就是其中之一，特别是它的 Chrome JavaScript 引擎。
 
@@ -138,7 +138,7 @@ JavaScript 是一种编程语言，是在网景公司创建的，作为一种脚
 
 #### 2009
 
-Node.js的诞生
+Node.js 的诞生
 
 第一种形式的 [npm][20] 的诞生
 
@@ -150,7 +150,7 @@ Node.js的诞生
 
 #### 2011
 
-npm达到1.0版本
+npm 达到 1.0 版本
 
 公司开始采用 Node。[LinkedIn][23], [Uber][24]
 
@@ -168,7 +168,7 @@ npm达到1.0版本
 
 #### 2014
 
-大事件: [IO.js][28] 是 Node.js 的一个重要分叉，目标是引入ES6支持，并快速推进。
+大事件: [IO.js][28] 是 Node.js 的一个重要分叉，目标是引入 ES6 支持，并快速推进。
 
 #### 2015
 
@@ -176,9 +176,9 @@ npm达到1.0版本
 
 IO.js 回归到 Node.js 中
 
-npm引入了私有模块
+npm 引入了私有模块
 
-[Node 4][30] 发布 (之前没有发布过1、2、3版本)
+[Node 4][30] 发布 (之前没有发布过 1、2、3 版本)
 
 #### 2016
 
@@ -194,7 +194,7 @@ npm 更专注于安全: Node 8 发布
 
 [V8][34] 在其测试套件中引入了 Node，正式将 Node 作为除 Chrome 之外的 JavaScript 引擎的目标。
 
-每周30亿次npm下载
+每周 30 亿次 npm 下载
 
 #### 2018
 
@@ -214,7 +214,7 @@ Node.js 可以通过不同的方式进行安装。这篇文章强调了最常见
 
 安装 Node.js 的一个非常方便的方法是通过包管理器。在这种情况下，每个操作系统都有自己的。
 
-在macOS上，[Homebrew][38] 是事实上的标准，而且一旦安装，就可以通过在 CLI 中运行这个命令，非常容易地安装 Node.js:
+在 macOS 上，[Homebrew][38] 是事实上的标准，而且一旦安装，就可以通过在 CLI 中运行这个命令，非常容易地安装 Node.js:
 
 ```shell
 brew install node
@@ -226,7 +226,7 @@ brew install node
 
 它对于用旧的 Node.js 版本测试你的代码也非常有用。
 
-我的建议是，如果你刚刚开始，而且你还没有使用 Homebrew，就使用官方安装程序。否则，Homebrew是我最喜欢的解决方案。
+我的建议是，如果你刚刚开始，而且你还没有使用 Homebrew，就使用官方安装程序。否则，Homebrew 是我最喜欢的解决方案。
 
 ### 使用 Node.js，你需要知道多少 JavaScript？
 
@@ -251,7 +251,7 @@ brew install node
 - Template Literals （模板文字）
 - Semicolons （分号）
 - Strict Mode （严格模式）
-- ECMAScript 6, 2016, 2017 （ES6 ES2016 ES2017标准）
+- ECMAScript 6, 2016, 2017 （ES6 ES2016 ES2017 标准）
 
 有了这些概念，你就可以在浏览器和 Node.js 中成为一名熟练的 JavaScript 开发者了。
 
@@ -264,7 +264,7 @@ brew install node
 - 闭包（Closures）
 - 事件循环（The Event Loop）
 
-幸运的是，我写了一本免费的电子书，解释了所有这些主题，它叫做 [JavaScript基础知识][41]。这是你能找到的学习所有这些的最紧凑的资源。
+幸运的是，我写了一本免费的电子书，解释了所有这些主题，它叫做 [JavaScript 基础知识][41]。这是你能找到的学习所有这些的最紧凑的资源。
 
 ### Node.js 和浏览器之间的差异
 
@@ -282,7 +282,7 @@ brew install node
 
 生态系统的变化。
 
-在浏览器中，大多数时候你所做的是与DOM或其他网络平台 API（如 Cookies ）进行交互。当然，这些并不存在于 Node.js 中。你没有 `document`、`window` 和所有其他由浏览器提供的对象。
+在浏览器中，大多数时候你所做的是与 DOM 或其他网络平台 API（如 Cookies ）进行交互。当然，这些并不存在于 Node.js 中。你没有 `document`、`window` 和所有其他由浏览器提供的对象。
 
 而且在浏览器中，我们没有 Node.js 通过其模块提供的所有好用的 API，如文件系统访问功能。
 
@@ -300,49 +300,49 @@ brew install node
 
 ### V8 JavaScript 引擎
 
-V8 是谷歌浏览器的 JavaScript 引擎的名字。在使用 Chrome 浏览器浏览时，它能接收我们的JavaScript 并执行它。
+V8 是谷歌浏览器的 JavaScript 引擎的名字。在使用 Chrome 浏览器浏览时，它能接收我们的 JavaScript 并执行它。
 
 V8 提供了运行时环境，在其中执行 JavaScript。DOM 和其他网络平台 API 是由浏览器提供的。
 
-最酷的是，JavaScript 引擎是独立于它所承载的浏览器的。这一关键特征使 Node.js 的崛起成为可能。V8 早在2009年就被 Node.js 选择为引擎，随着 Node.js 的普及，V8成为现在为大量用JavaScript 编写的服务器端代码提供动力的引擎。
+最酷的是，JavaScript 引擎是独立于它所承载的浏览器的。这一关键特征使 Node.js 的崛起成为可能。V8 早在 2009 年就被 Node.js 选择为引擎，随着 Node.js 的普及，V8 成为现在为大量用 JavaScript 编写的服务器端代码提供动力的引擎。
 
-Node.js 的生态系统是巨大的，由于它的存在，V8也为桌面应用程序提供了动力，比如 [Electron][43] 等项目。
+Node.js 的生态系统是巨大的，由于它的存在，V8 也为桌面应用程序提供了动力，比如 [Electron][43] 等项目。
 
 #### 其他 JS 引擎
 
 其他浏览器有自己的 JavaScript 引擎:
 
-- Firefox使用 [Spidermonkey][44]
-- Safari使用 [JavaScriptCore][45] (也叫Nitro)
-- Edge使用 [Chakra][46]（译者注： 现在Edge放弃自己的引擎，使用chrome一样的引擎，即V8）
+- Firefox 使用 [Spidermonkey][44]
+- Safari 使用 [JavaScriptCore][45] (也叫 Nitro)
+- Edge 使用 [Chakra][46]（译者注： 现在 Edge 放弃自己的引擎，使用 chrome 一样的引擎，即 V8）
 
-还有很多JavaScript引擎。
+还有很多 JavaScript 引擎。
 
-所有这些引擎都实现了ECMA ES-262标准，也叫ECMAScript，即JavaScript使用的标准。
+所有这些引擎都实现了 ECMA ES-262 标准，也叫 ECMAScript，即 JavaScript 使用的标准。
 
 #### 对性能的追求
 
 V8 是用 C++ 编写的，而且它在不断改进。它是可移植的，可以在 Mac、Windows、Linux 和其他一些系统上运行。
 
-在这个 V8 介绍中，我将忽略 V8 的实现细节。它们可以在更权威的网站上找到，包括 [V8官方网站][47]，而且它们随着时间的推移而变化，往往是很大的变化。
+在这个 V8 介绍中，我将忽略 V8 的实现细节。它们可以在更权威的网站上找到，包括 [V8 官方网站][47]，而且它们随着时间的推移而变化，往往是很大的变化。
 
-V8一直在发展，就像周围的其他JavaScript引擎一样，以加快网络和 Node.js 生态系统的发展。
+V8 一直在发展，就像周围的其他 JavaScript 引擎一样，以加快网络和 Node.js 生态系统的发展。
 
 在网络上，有一场多年来一直在进行的性能竞赛，我们（作为用户和开发者）从这场竞争中获益良多，因为我们年复一年地得到更快和更优化的机器。
 
 #### 编译（Compilation）
 
-一般来说，JavaScript 被认为是一种解释语言，但现代的 JavaScript 引擎不再只是解释JavaScript，而是对其进行编译。
+一般来说，JavaScript 被认为是一种解释语言，但现代的 JavaScript 引擎不再只是解释 JavaScript，而是对其进行编译。
 
 这发生在 2009 年，当时 SpiderMonkey JavaScript 编译器被添加到 Firefox 3.5 中，每个人都遵循这个想法。
 
-JavaScript 由V8内部编译，采用实时制（JIT）编译，以加快执行速度。
+JavaScript 由 V8 内部编译，采用实时制（JIT）编译，以加快执行速度。
 
-这可能看起来违反直觉，。但自从2004年谷歌地图问世以来，JavaScript 已经从一般执行几十行代码的语言发展到在浏览器中运行的几千到几十万行的完整应用程序。
+这可能看起来违反直觉，。但自从 2004 年谷歌地图问世以来，JavaScript 已经从一般执行几十行代码的语言发展到在浏览器中运行的几千到几十万行的完整应用程序。
 
 我们的应用程序现在可以在浏览器中运行数小时，而不仅仅是一些表单验证规则或简单的脚本。
 
-在这个**新世界**里，编译JavaScript是非常有意义的，因为虽然可能需要多花一点时间来让JavaScript**就绪**，但一旦完成，它的性能就会比纯粹的解释代码高得多。
+在这个**新世界**里，编译 JavaScript 是非常有意义的，因为虽然可能需要多花一点时间来让 JavaScript**就绪**，但一旦完成，它的性能就会比纯粹的解释代码高得多。
 
 ### 如何退出 Node.js 程序
 
@@ -352,7 +352,7 @@ JavaScript 由V8内部编译，采用实时制（JIT）编译，以加快执行�
 
 让我们从最激烈的一个开始，看看为什么你最好**不**使用它。
 
-`process` 核心模块提供了一个方便的方法，允许你以编程方式退出Node.js程序：`process.exit()`。
+`process` 核心模块提供了一个方便的方法，允许你以编程方式退出 Node.js 程序：`process.exit()`。
 
 当 Node.js 运行这一行时，进程会立即被强制终止。
 
@@ -420,11 +420,11 @@ process.on('SIGTERM', () => {
 process.kill(process.pid, 'SIGTERM')
 ```
 
-或者从另一个正在运行的Node.js程序，或者在你的系统中运行的任何其他应用程序，知道你想终止的进程的PID。
+或者从另一个正在运行的 Node.js 程序，或者在你的系统中运行的任何其他应用程序，知道你想终止的进程的 PID。
 
 ### 如何从 Node.js 读取环境变量
 
-Node的 `process` 核心模块提供了 `env` 属性，它承载了所有在进程启动时设置的环境变量。
+Node 的 `process` 核心模块提供了 `env` 属性，它承载了所有在进程启动时设置的环境变量。
 
 下面是一个访问 `NODE_ENV` 环境变量的例子，该变量默认设置为 `development`。
 
@@ -472,7 +472,7 @@ process.env.NODE_ENV // "development"
 
 #### Serverless
 
-无服务器（Serverless）是一种发布应用的方式，而且完全没有服务器需要管理。无服务器是一种范式，你把你的应用发布为**功能**，它们在网络端点上做出响应（也叫FAAS--功能即服务）。
+无服务器（Serverless）是一种发布应用的方式，而且完全没有服务器需要管理。无服务器是一种范式，你把你的应用发布为**功能**，它们在网络端点上做出响应（也叫 FAAS--功能即服务）。
 
 非常受欢迎的解决方案有:
 
@@ -497,19 +497,19 @@ PAAS 是 Platform As A Service 的缩写。这些平台解决了很多你在部�
 
 [Heroku][58] 是一个神奇的平台。
 
-这是一篇好文章，[在Heroku上开始使用Node.js][59].
+这是一篇好文章，[在 Heroku 上开始使用 Node.js][59].
 
 #### Microsoft Azure
 
 [Azure][60] 是微软的云产品。
 
-查看 [在Azure中创建一个Node.js Web应用][61].
+查看 [在 Azure 中创建一个 Node.js Web 应用][61].
 
 #### Google Cloud Platform
 
 [Google Cloud][62] 是你的应用程序的一个了不起的结构。
 
-他们有一个很好的[Node.js文档部分][63].
+他们有一个很好的[Node.js 文档部分][63].
 
 #### Virtual Private Server（虚拟私有服务器）
 
@@ -519,13 +519,13 @@ PAAS 是 Platform As A Service 的缩写。这些平台解决了很多你在部�
 - [Linode][65]
 - [Amazon Web Services][66], 我特别提到 Amazon Elastic Beanstalk，因为它抽象了一点 AWS 的复杂性。
 
-因为他们提供了一个空的Linux机器，你可以在上面工作，所以这些没有具体的教程。
+因为他们提供了一个空的 Linux 机器，你可以在上面工作，所以这些没有具体的教程。
 
-在VPS类别中还有很多选择，这些只是我使用的和我推荐的。
+在 VPS 类别中还有很多选择，这些只是我使用的和我推荐的。
 
 #### Bare metal（裸金属）
 
-另一个解决方案是获得一个 [裸机金属服务器][67]，安装一个Linux发行版，把它连接到互联网上（或者每月租一个，比如你可以使用 [虚拟裸金属][68]服务）。
+另一个解决方案是获得一个 [裸机金属服务器][67]，安装一个 Linux 发行版，把它连接到互联网上（或者每月租一个，比如你可以使用 [虚拟裸金属][68]服务）。
 
 ### 如何使用 Node.js REPL
 
@@ -552,7 +552,7 @@ node
 
 **提示**：如果你不确定如何打开你的终端，谷歌 “How to open terminal on <your operating system>”。
 
-REPL正在等待我们输入一些JavaScript代码。
+REPL 正在等待我们输入一些 JavaScript 代码。
 
 从简单的开始，然后按下 `enter` 键:
 
@@ -568,7 +568,7 @@ REPL正在等待我们输入一些JavaScript代码。
 
 #### 通过使用 tab 键完成自动补全
 
-REPL最酷的地方是它是互动的。
+REPL 最酷的地方是它是互动的。
 
 当你写代码时，如果你按下 `tab` 键，REPL 将尝试自动完成你写的内容，以匹配你已经定义的变量或预定义的变量。
 
@@ -576,13 +576,13 @@ REPL最酷的地方是它是互动的。
 
 试着输入一个 JavaScript 类的名称，如 `Number`，加一个点，然后按 `tab`。
 
-REPL将打印出你可以访问该类的所有属性和方法:
+REPL 将打印出你可以访问该类的所有属性和方法:
 
 ![](https://cdn-media-1.freecodecamp.org/images/MgYHCtgjD1rom1yKM43E-qBh7ansJuyglRWr)
 
 #### 探索全局对象（global objects）
 
-你可以通过输入 "global. "并按 "tab "来检查你可以访问的globals对象:
+你可以通过输入 "global. "并按 "tab "来检查你可以访问的 globals 对象:
 
 ![](https://cdn-media-1.freecodecamp.org/images/e2qWLuyjYC4DFZjEs2jYWK-NL9AXbpDiSdA7)
 
@@ -592,17 +592,17 @@ REPL将打印出你可以访问该类的所有属性和方法:
 
 #### 点命令（Dot commands）
 
-REPL有一些特殊的命令，都以点`.`开头。它们是
+REPL 有一些特殊的命令，都以点`.`开头。它们是
 
 - `.help`: 显示点命令的帮助。
-- `.editor`: 启用更多的编辑器，可以轻松地编写多行JavaScript代码。一旦你进入这个模式，输入ctrl-D就可以运行你写的代码。
-- `.break`: 当输入一个多行表达式时，输入.break命令将中止继续输入。与按下ctrl-C相同。
-- `.clear`: 将REPL上下文重置为空对象，并清除当前正在输入的任何多行表达式。
-- `.load`: 加载一个JavaScript文件，相对于当前工作目录。
-- `.save`: 将你在REPL会话中输入的所有内容保存到一个文件（指定文件名）
-- `.exit`: 退出repl（与按两次ctrl-C相同）
+- `.editor`: 启用更多的编辑器，可以轻松地编写多行 JavaScript 代码。一旦你进入这个模式，输入 ctrl-D 就可以运行你写的代码。
+- `.break`: 当输入一个多行表达式时，输入.break 命令将中止继续输入。与按下 ctrl-C 相同。
+- `.clear`: 将 REPL 上下文重置为空对象，并清除当前正在输入的任何多行表达式。
+- `.load`: 加载一个 JavaScript 文件，相对于当前工作目录。
+- `.save`: 将你在 REPL 会话中输入的所有内容保存到一个文件（指定文件名）
+- `.exit`: 退出 repl（与按两次 ctrl-C 相同）
 
-REPL知道你什么时候在输入一个多行语句，而不需要调用`.editor`。
+REPL 知道你什么时候在输入一个多行语句，而不需要调用`.editor`。
 
 例如，如果你开始键入一个迭代，像这样:
 
@@ -700,7 +700,7 @@ args['name'] //flavio
 
 #### 使用控制台模块的基本输出
 
-Node.js提供了一个 [console模块][70]，它提供了大量非常有用的方法来与命令行进行交互。
+Node.js 提供了一个 [console 模块][70]，它提供了大量非常有用的方法来与命令行进行交互。
 
 它基本上与你在浏览器中找到的 `console` 对象相同。
 
@@ -847,7 +847,7 @@ console.log(chalk.yellow('hi!'))
 
 [Progress][72] 是一个很棒的软件包，可以在控制台中创建一个进度条。使用 `npm install progress` 来安装它。
 
-这个片段创建了一个10步的进度条，每100毫秒完成一步。当进度条完成后，我们会清除间隔时间:
+这个片段创建了一个 10 步的进度条，每 100 毫秒完成一步。当进度条完成后，我们会清除间隔时间:
 
 ```js
 const ProgressBar = require('progress')
@@ -864,7 +864,7 @@ const timer = setInterval(() => {
 
 如何使 Node.js CLI 程序具有交互性？
 
-Node 从第7版开始就提供了 [readline模块][73] 来执行这个任务：从一个可读流中获取输入，比如 `process.stdin` 流，在 Node 程序的执行过程中，它就是终端输入，一次一个行。
+Node 从第 7 版开始就提供了 [readline 模块][73] 来执行这个任务：从一个可读流中获取输入，比如 `process.stdin` 流，在 Node 程序的执行过程中，它就是终端输入，一次一个行。
 
 ```js
 const readline = require('readline')
@@ -887,7 +887,7 @@ readline.question(`What's your name?\n`, (name) => {
 
 如果你需要要求一个密码，现在最好是回显它，而是显示一个`*`符号。
 
-最简单的方法是使用 [readline-sync][74]，它在API方面非常相似，可以开箱即用。
+最简单的方法是使用 [readline-sync][74]，它在 API 方面非常相似，可以开箱即用。
 
 一个更完整和抽象的解决方案是由 [Inquirer.js][75] 提供。
 
@@ -925,11 +925,11 @@ const library = require('./library')
 
 文件中定义的任何其他对象或变量默认为私有，不向外界公开。
 
-这就是 [module 系统][76]提供的 `module.exports` API所允许我们做的。
+这就是 [module 系统][76]提供的 `module.exports` API 所允许我们做的。
 
 当你把一个对象或一个函数指定为新的 `exports` 属性时，这就是被暴露的东西。因此，它可以被导入到你的应用程序的其他部分，或者其他应用程序中。
 
-你可以通过2种方式做到这一点。
+你可以通过 2 种方式做到这一点。
 
 首先是给 `module.exports` 指定一个对象，这是一个由模块系统提供的开箱即用的对象，这将使你的文件只导出**那个对象**:
 
@@ -976,9 +976,9 @@ const car = require('./items').car
 
 `npm` 是 **node 软件包管理器**。
 
-2017年1月，超过35万个软件包被报告列在 npm registry 中，使其成为地球上最大的单一语言代码库，你可以肯定有一个软件包用于（几乎！）一切。
+2017 年 1 月，超过 35 万个软件包被报告列在 npm registry 中，使其成为地球上最大的单一语言代码库，你可以肯定有一个软件包用于（几乎！）一切。
 
-它开始时是一种下载和管理Node.js包的依赖关系的方式，但后来它也成为了一个用于前端 JavaScript 的工具。
+它开始时是一种下载和管理 Node.js 包的依赖关系的方式，但后来它也成为了一个用于前端 JavaScript 的工具。
 
 `npm` 做了很多事情。
 
@@ -1033,7 +1033,7 @@ npm update <package-name>
 
 很多时候，你会发现一个库只与另一个库的主要版本兼容。
 
-或者一个库的最新版本中的一个bug，仍未被修复，导致了一个问题。
+或者一个库的最新版本中的一个 bug，仍未被修复，导致了一个问题。
 
 指定一个库的明确版本也有助于让每个人都处于同一个确切的软件包版本上，这样整个团队就会运行同一个版本，直到 `package.json` 文件被更新。
 
@@ -1058,7 +1058,7 @@ npm <task-name>
 }
 ```
 
-使用这个功能来运行Webpack是非常普遍的:
+使用这个功能来运行 Webpack 是非常普遍的:
 
 ```json
 {
@@ -1078,9 +1078,9 @@ npm dev
 npm prod
 ```
 
-### npm在哪里安装软件包？
+### npm 在哪里安装软件包？
 
-当你使用`npm`（或 [yarn][77]）安装一个软件包时，你可以执行2种类型的安装:
+当你使用`npm`（或 [yarn][77]）安装一个软件包时，你可以执行 2 种类型的安装:
 
 - a local install  （本地安装）
 - a global install （全局安装）
@@ -1107,7 +1107,7 @@ npm install -g lodash
 
 `npm root -g` 命令将告诉你该位置在你的机器上的确切位置。
 
-在MacOS或Linux上，这个位置可以是 `/usr/local/lib/node_modules`。 在 Windows 上应该是`C:\Users\YOU\AppData\Roaming\npm\node_modules`
+在 MacOS 或 Linux 上，这个位置可以是 `/usr/local/lib/node_modules`。 在 Windows 上应该是`C:\Users\YOU\AppData\Roaming\npm\node_modules`
 
 然而，如果你使用 `nvm` 来管理 Node.js 的版本，这个位置会有所不同。
 
@@ -1117,7 +1117,7 @@ npm install -g lodash
 
 #### 如何在你的代码中包含并使用安装在 node_modules 文件夹中的软件包
 
-当你使用 `npm` 安装一个包到你的 `node_modules` 文件夹，或者全局安装，你如何在你的Node代码中使用它？
+当你使用 `npm` 安装一个包到你的 `node_modules` 文件夹，或者全局安装，你如何在你的 Node 代码中使用它？
 
 假设你安装了 `lodash`，一个流行的 JavaScript 工具库，使用
 
@@ -1143,17 +1143,17 @@ cowsay 软件包提供了一个命令行程序，执行该程序可以让一头�
 
 当你使用 `npm install cowsay` 来安装这个包时，它将自己和一些依赖项安装在 node_modules 文件夹:
 
-有一个隐藏的.bin文件夹，它包含cowsay二进制文件的符号链接。
+有一个隐藏的.bin 文件夹，它包含 cowsay 二进制文件的符号链接。
 
 你如何执行这些？
 
-你当然可以输入 `./node_modules/.bin/cowsay` 来运行它，它也可以工作，但是 [npx][79]，包括在最近版本的 npm 中（从5.2开始），是一个更好的选择。你只需运行:
+你当然可以输入 `./node_modules/.bin/cowsay` 来运行它，它也可以工作，但是 [npx][79]，包括在最近版本的 npm 中（从 5.2 开始），是一个更好的选择。你只需运行:
 
 ```js
 npx cowsay
 ```
 
-而npx会找到软件包的位置。
+而 npx 会找到软件包的位置。
 
 ### package.json 指南
 
@@ -1271,7 +1271,7 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 - `description` 是对应用程序/包的简要描述
 - `main` 设置应用程序的入口点
 - `private` 如果设置为 `true` 可以防止应用程序/软件包被意外地发布到 `npm`
-- `scripts` 定义了一组你可以运行的node脚本
+- `scripts` 定义了一组你可以运行的 node 脚本
 - `dependencies` 设置一个作为依赖项安装的 `npm` 包的列表
 - `devDependencies` 设置一个作为开发依赖的 `npm` 包的列表
 - `engines` 设置该软件包/应用程序适用于哪些版本的 Node
@@ -1295,9 +1295,9 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 {"name": "test-project"}
 ```
 
-该名称必须少于214个字符，不能有空格，只能包含小写字母、连字符（`-`）或下划线（`_`）。
+该名称必须少于 214 个字符，不能有空格，只能包含小写字母、连字符（`-`）或下划线（`_`）。
 
-这是因为当一个软件包在 `npm` 上发布时，它会根据这个属性获得自己的URL。
+这是因为当一个软件包在 `npm` 上发布时，它会根据这个属性获得自己的 URL。
 
 #### `author`
 
@@ -1349,7 +1349,7 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 
 #### `bugs`
 
-链接到软件包的issues跟踪器，很可能是GitHub issues页面
+链接到软件包的 issues 跟踪器，很可能是 GitHub issues 页面
 
 比如:
 
@@ -1377,11 +1377,11 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 {"version": "1.0.0"}
 ```
 
-这个属性遵循版本的语义版本（semver）符号，这意味着版本总是用3个数字表示。`x.x.x`。
+这个属性遵循版本的语义版本（semver）符号，这意味着版本总是用 3 个数字表示。`x.x.x`。
 
 第一个数字是主要版本，第二个是次要版本，第三个是补丁版本。
 
-这些数字是有意义的：一个只修复bug的版本是补丁版本，一个引入了向后兼容的变化的版本是次要版本，一个主要版本可以有突破性的变化。
+这些数字是有意义的：一个只修复 bug 的版本是补丁版本，一个引入了向后兼容的变化的版本是次要版本，一个主要版本可以有突破性的变化。
 
 #### `license`
 
@@ -1403,7 +1403,7 @@ package.json 文件是很多基于 Node.js 生态系统的应用代码库中的�
 {"keywords": [  "email",  "machine learning",  "ai"]}
 ```
 
-这有助于人们在浏览类似的软件包或浏览npm官网时找到你的软件包。
+这有助于人们在浏览类似的软件包或浏览 npm 官网时找到你的软件包。
 
 #### `description`
 
@@ -1539,7 +1539,7 @@ yarn add --dev <PACKAGENAME>
 
 #### `engines`
 
-设置该软件包/应用程序适用于哪些版本的Node.js和其他命令。
+设置该软件包/应用程序适用于哪些版本的 Node.js 和其他命令。
 
 例如:
 
@@ -1549,7 +1549,7 @@ yarn add --dev <PACKAGENAME>
 
 #### `browserslist`
 
-是用来告诉你要支持哪些浏览器（以及它们的版本）。它被 Babel、Autoprefixer 和其他工具引用，只为你的目标浏览器添加所需的 polyfills（降级方案）和fallbacks（回退方案）。
+是用来告诉你要支持哪些浏览器（以及它们的版本）。它被 Babel、Autoprefixer 和其他工具引用，只为你的目标浏览器添加所需的 polyfills（降级方案）和 fallbacks（回退方案）。
 
 例如:
 
@@ -1557,7 +1557,7 @@ yarn add --dev <PACKAGENAME>
 {"browserslist": [  "> 1%",  "last 2 versions",  "not ie <= 8"]}
 ```
 
-这种配置意味着你要支持所有至少有1%使用量的浏览器的最后两个主要版本（来自 [CanIUse.com][83]统计），但IE8和更低版本除外（[见更多][84] 浏览器列表）。
+这种配置意味着你要支持所有至少有 1%使用量的浏览器的最后两个主要版本（来自 [CanIUse.com][83]统计），但 IE8 和更低版本除外（[见更多][84] 浏览器列表）。
 
 #### Command-specific properties
 
@@ -1571,7 +1571,7 @@ yarn add --dev <PACKAGENAME>
 
 该符号指定了你的软件包接受哪些更新，来自该依赖关系。
 
-鉴于使用semver（语义版本管理），所有的版本都有3位数字，第一位是主要版本，第二位是次要版本，第三位是补丁版本，你有这些规则:
+鉴于使用 semver（语义版本管理），所有的版本都有 3 位数字，第一位是主要版本，第二位是次要版本，第三位是补丁版本，你有这些规则:
 
 - `~`: 如果你写 `~0.13.0`, 你想只更新补丁版本。`0.13.1`可以，但`0.14.0`不可以。
 - `^`: 如果你写 `^0.13.0`, 你想更新补丁和次要版本。`0.13.1`, `0.14.0`等等。
@@ -1586,17 +1586,17 @@ yarn add --dev <PACKAGENAME>
 - `no symbol`：你只接受你指定的那个特定版本
 - `latest`：你想使用最新的可用版本
 
-你可以将上述大部分的范围结合起来，就像这样。`1.0.0 || >=1.1.0 < 1.2.0`，以使用1.0.0或1.1.0以上的一个版本，但低于1.2.0。
+你可以将上述大部分的范围结合起来，就像这样。`1.0.0 || >=1.1.0 < 1.2.0`，以使用 1.0.0 或 1.1.0 以上的一个版本，但低于 1.2.0。
 
 ### package-lock.json 文件
 
-package-lock.json 文件是在安装 Nodo包时自动生成的。
+package-lock.json 文件是在安装 Nodo 包时自动生成的。
 
-在版本5中，NPM 引入了 `package-lock.json` 文件。
+在版本 5 中，NPM 引入了 `package-lock.json` 文件。
 
 那是什么？你可能知道 `package.json` 文件，它更常见，存在的时间也更长。
 
-该文件的目的是跟踪每一个安装的软件包的确切版本，这样，即使软件包被维护者更新，产品也能以同样的方式100%重现。
+该文件的目的是跟踪每一个安装的软件包的确切版本，这样，即使软件包被维护者更新，产品也能以同样的方式 100%重现。
 
 这解决了 `package.json` 未解决的一个非常具体的问题。在 package.json 中，你可以使用 **semver** 注解来设置你想升级到哪个版本（补丁或小版本），例如:
 
@@ -1610,7 +1610,7 @@ package-lock.json 文件是在安装 Nodo包时自动生成的。
 
 可能是你，也可能是另一个人在世界的另一端试图通过运行 `npm install` 来初始化这个项目。
 
-所以你的原始项目和新初始化的项目实际上是不同的。即使一个补丁或小版本不应该引入破坏性的变化，我们都知道bug可以（所以，他们会）潜入。
+所以你的原始项目和新初始化的项目实际上是不同的。即使一个补丁或小版本不应该引入破坏性的变化，我们都知道 bug 可以（所以，他们会）潜入。
 
 `package-lock.json` 将你当前安装的每个软件包的版本**in stone**上，`npm` 在运行 `npm install` 时将使用这些确切的版本。
 
@@ -1653,7 +1653,7 @@ package-lock.json 文件是在安装 Nodo包时自动生成的。
 
 它们按字母顺序被添加到文件中，每一个都有一个 `version` 字段，一个指向软件包位置的 `resolved` 字段，以及一个 `integrity` 字符串，我们可以用来验证该软件包。
 
-### 查找一个npm包的安装版本
+### 查找一个 npm 包的安装版本
 
 查看所有安装的 npm 包的最新版本，包括它们的依赖关系:
 
@@ -1704,7 +1704,7 @@ npm list
       └── minimist@0.0.10
 ```
 
-如果你想查看npm仓库中软件包的最新可用版本，运行`npm view [package_name] version`:
+如果你想查看 npm 仓库中软件包的最新可用版本，运行`npm view [package_name] version`:
 
 ```shell
 ❯ npm view cowsay version
@@ -1718,7 +1718,7 @@ npm list
 
 安装一个旧版本的 npm 包可能对解决兼容性问题有帮助。
 
-你可以使用 `@` 语法来安装一个npm包的旧版本:
+你可以使用 `@` 语法来安装一个 npm 包的旧版本:
 
 ```shell
 npm install <package>@<;version>
@@ -1730,9 +1730,9 @@ npm install <package>@<;version>
 npm install cowsay
 ```
 
-安装1.3.1版本（在撰写本文时）。
+安装 1.3.1 版本（在撰写本文时）。
 
-安装1.2.0 版本:
+安装 1.2.0 版本:
 
 ```shell
 npm install cowsay@1.2.0
@@ -1758,9 +1758,9 @@ npm install -g webpack@4.16.4
 
 当你使用 `npm install <packagename>` 安装一个软件包时，该软件包的最新可用版本会被下载并放在 `node_modules文件夹` 中，并且在你当前文件夹中的`package.json` 和 `package-lock.json` 文件中添加相应条目。
 
-npm会计算依赖关系，并安装那些最新的可用版本。
+npm 会计算依赖关系，并安装那些最新的可用版本。
 
-假设你安装了 `[cowsay][85]`，一个很酷的命令行工具，可以让你让cow（牛）说**东西**。
+假设你安装了 `[cowsay][85]`，一个很酷的命令行工具，可以让你让 cow（牛）说**东西**。
 
 当你 `npm安装cowsay` 时，这个条目被添加到 `package.json` 文件中:
 
@@ -1790,7 +1790,7 @@ npm会计算依赖关系，并安装那些最新的可用版本。
 }
 ```
 
-现在这2个文件告诉我们，我们安装了cowsay的`1.3.1`版本，而我们的更新规则是 `^1.3.1`，对于npm的版本规则（后面会解释）意味着npm可以更新到补丁和小版本。`0.13.1`，`0.14.0`，以此类推。
+现在这 2 个文件告诉我们，我们安装了 cowsay 的`1.3.1`版本，而我们的更新规则是 `^1.3.1`，对于 npm 的版本规则（后面会解释）意味着 npm 可以更新到补丁和小版本。`0.13.1`，`0.14.0`，以此类推。
 
 如果有一个新的次要版本或补丁版本，我们输入 `npm update`，安装的版本就会被更新，`package-lock.json` 文件就会勤奋地填上新的版本。
 
@@ -1834,9 +1834,9 @@ npm install
 
 语义版本管理（Semantic Versioning）是一种用来为版本提供意义的惯例。
 
-如果说Node.js包中有什么了不起的东西，那就是所有的人都同意使用语义版本控制（Semantic Versioning）来进行版本编号。
+如果说 Node.js 包中有什么了不起的东西，那就是所有的人都同意使用语义版本控制（Semantic Versioning）来进行版本编号。
 
-语义版本控制的概念很简单：所有的版本都有3位数字。`x.y.z`。
+语义版本控制的概念很简单：所有的版本都有 3 位数字。`x.y.z`。
 
 - 第一个数字是主版本（major version）
 - 第二位数字是次要版本 （minor version）
@@ -1844,7 +1844,7 @@ npm install
 
 当你制作一个新的版本时，你不会随心所欲地提高一个数字，而是有规则的:
 
-- 当你对API进行不兼容的修改时，你要提高主版本的等级
+- 当你对 API 进行不兼容的修改时，你要提高主版本的等级
 - 当你以向后兼容的方式增加功能时，你要提高次要版本的数量
 - 当你进行向后兼容的 bug 修复时，你要提高补丁版本
 
@@ -1852,7 +1852,7 @@ npm install
 
 为什么这么重要？
 
-因为 `npm` 设置了一些规则，我们可以在 [package.json文件][87] 中使用，以便在运行 `npm update` 时，选择它可以将我们的软件包更新到哪些版本。
+因为 `npm` 设置了一些规则，我们可以在 [package.json 文件][87] 中使用，以便在运行 `npm update` 时，选择它可以将我们的软件包更新到哪些版本。
 
 规则使用这些符号:
 
@@ -1878,7 +1878,7 @@ npm install
 - `-`: 你接受一定范围的版本。例如: `2.1.0 - 2.6.2`
 - `||`: 你结合一组。例如: `< 2.1 ||  > 2.6`
 
-你可以结合这些符号，例如使用 `1.0.0 || >=1.1.0 <1.2.0` 来表示使用 1.0.0 或 1.1.0 以上的一个版本，但低于1.2.0。
+你可以结合这些符号，例如使用 `1.0.0 || >=1.1.0 <1.2.0` 来表示使用 1.0.0 或 1.1.0 以上的一个版本，但低于 1.2.0。
 
 也有其他规则:
 
@@ -1941,7 +1941,7 @@ require('package-name')
 
 所有的项目都有自己的本地包，即使这看起来是一种资源的浪费，但与可能产生的负面影响相比，它是微不足道的。
 
-当一个软件包提供了一个可执行的命令，你可以从shell（CLI）中运行，并且在不同的项目中重复使用时，它应该被全局地安装。
+当一个软件包提供了一个可执行的命令，你可以从 shell（CLI）中运行，并且在不同的项目中重复使用时，它应该被全局地安装。
 
 你也可以在本地安装可执行命令，并使用 [npx][90] 运行它们，但有些软件包最好是全局安装。
 
@@ -1981,11 +1981,11 @@ npm list -g --depth 0
 
 你需要设置 `--production` flag （`npm install --production`），以避免安装这些开发依赖项。
 
-### npx Node包运行器
+### npx Node 包运行器
 
 `npx` 是一种非常酷的运行 Node.js 代码的方式，并提供了许多有用的功能。
 
-在本节中，我想介绍一个非常强大的命令，从2017年7月发布的5.2版本开始，**npm** 中就有这个命令,**npx**。
+在本节中，我想介绍一个非常强大的命令，从 2017 年 7 月发布的 5.2 版本开始，**npm** 中就有这个命令,**npx**。
 
 如果你不想安装 npm，你可以将 npx 作为一个 [独立的包][91] 来安装。
 
@@ -2022,9 +2022,9 @@ Node.js 的开发者曾经将大多数可执行的命令作为全局包发布，
                 ||     ||
 ```
 
-现在，这需要你之前从npm全局安装了 `cowsay` 命令，否则当你试图运行该命令时，你会得到一个错误。
+现在，这需要你之前从 npm 全局安装了 `cowsay` 命令，否则当你试图运行该命令时，你会得到一个错误。
 
-`npx` 允许你在没有本地安装的情况下运行该npm命令:
+`npx` 允许你在没有本地安装的情况下运行该 npm 命令:
 
 ```shell
 npx cowsay "Hello"
@@ -2033,7 +2033,7 @@ npx cowsay "Hello"
 现在，这是一个有趣的无用命令。其他情况包括:
 
 - 运行 `vue CLI` 工具来创建新的应用程序并运行它们：`npx vue create my-vue-app`
-- 使用 `create-react-app` 创建一个新的React应用：`npx create-react-app my-react-app`
+- 使用 `create-react-app` 创建一个新的 React 应用：`npx create-react-app my-react-app`
 
 以及更多。
 
@@ -2052,7 +2052,7 @@ npx node@8 -v #v8.11.3
 
 #### 直接从 URL 中运行任意的代码片段
 
-`npx` 并不仅能运行在npm注册表上发布的软件包。
+`npx` 并不仅能运行在 npm 注册表上发布的软件包。
 
 你可以运行位于 [GitHub][92] gist 中的代码，例如:
 
@@ -2064,11 +2064,11 @@ npx https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32
 
 ### The Event Loop（事件循环）
 
-事件循环是了解JavaScript的最重要的方面之一。本节解释了JavaScript如何在单线程中工作的内部细节，以及它如何处理异步函数。
+事件循环是了解 JavaScript 的最重要的方面之一。本节解释了 JavaScript 如何在单线程中工作的内部细节，以及它如何处理异步函数。
 
-我已经用JavaScript编程多年了，但我从来没有 **完全** 理解过事情是如何在幕后运作的。不了解这个概念的细节是完全可以的。但是像往常一样，知道它是如何工作的是很有帮助的，而且在这一点上你可能只是有点好奇。
+我已经用 JavaScript 编程多年了，但我从来没有 **完全** 理解过事情是如何在幕后运作的。不了解这个概念的细节是完全可以的。但是像往常一样，知道它是如何工作的是很有帮助的，而且在这一点上你可能只是有点好奇。
 
-你的JavaScript代码是单线程（single threaded）运行的。每次只有一件事在发生。
+你的 JavaScript 代码是单线程（single threaded）运行的。每次只有一件事在发生。
 
 这是一个实际上非常有帮助的限制，因为它简化了很多你编程的方式，而不用担心并发问题。
 
@@ -2076,13 +2076,13 @@ npx https://gist.github.com/zkat/4bc19503fe9e9309e2bfaa2c58074d32
 
 一般来说，在大多数浏览器中，每个浏览器标签都有一个事件循环，以使每个进程都被隔离，避免一个有无限循环的网页或繁重的处理过程阻塞你整个浏览器。
 
-该环境管理着多个并发的事件循环，以处理例如API调用。[Web Workers][94] 也是在自己的事件循环中运行。
+该环境管理着多个并发的事件循环，以处理例如 API 调用。[Web Workers][94] 也是在自己的事件循环中运行。
 
 你主要需要关注的是，**你的代码**会在一个事件循环中运行，写代码时要考虑到这个事情，避免阻塞它。
 
 #### 阻塞事件循环
 
-任何 JavaScript 代码，如果需要花费太长的时间将控制权返回到事件循环中，就会阻断页面中任何 JavaScript 代码的执行，甚至阻断UI线程，用户就无法点击、滚动页面，等等。
+任何 JavaScript 代码，如果需要花费太长的时间将控制权返回到事件循环中，就会阻断页面中任何 JavaScript 代码的执行，甚至阻断 UI 线程，用户就无法点击、滚动页面，等等。
 
 JavaScript 中几乎所有的 I/O 原生语句都是无阻塞的。如网络请求、Node.js 文件系统操作，等等。阻塞是个例外，这就是为什么 JavaScript 如此基于回调，以及最近的 promises 和 async/await 的原因。
 
@@ -2140,7 +2140,7 @@ baz
 
 #### 排列函数执行
 
-上面的例子看起来很正常，没有什么特别的地方。JavaScript找到要执行的东西，按顺序运行它们。
+上面的例子看起来很正常，没有什么特别的地方。JavaScript 找到要执行的东西，按顺序运行它们。
 
 我们来看看如何推迟一个函数，直到堆栈清空。
 
@@ -2184,17 +2184,17 @@ bar
 
 #### 消息队列
 
-当 `setTimeout()` 被调用时，浏览器或Node.js开始计时。一旦定时器过期，在这种情况下，由于我们把 `0` 作为超时，回调函数就会被放到**消息队列**中。
+当 `setTimeout()` 被调用时，浏览器或 Node.js 开始计时。一旦定时器过期，在这种情况下，由于我们把 `0` 作为超时，回调函数就会被放到**消息队列**中。
 
 消息队列也是用户启动的事件（如点击和键盘事件或获取响应）在您的代码有机会对其做出反应之前排队的地方。 或者像 `onLoad` 这样的 DOM 事件。
 
 循环优先考虑调用栈。 它首先处理它在调用栈中找到的所有内容，一旦那里没有任何内容，它就会去获取消息队列中的内容。
 
-我们不必等待像 `setTimeout`、fetch或其他东西的函数来做它们自己的工作，因为它们是由浏览器提供的，而且它们生活在自己的线程上。例如，如果你把 `setTimeout` 的超时时间设为2秒，你就不必等待2秒，等待发生在其他地方。
+我们不必等待像 `setTimeout`、fetch 或其他东西的函数来做它们自己的工作，因为它们是由浏览器提供的，而且它们生活在自己的线程上。例如，如果你把 `setTimeout` 的超时时间设为 2 秒，你就不必等待 2 秒，等待发生在其他地方。
 
-#### ES6 Job Queue（ES6任务队列）
+#### ES6 Job Queue（ES6 任务队列）
 
-ECMAScript 2015引入了Job Queue的概念，Promises（也在ES6/ES2015中引入）也使用了这个概念。这是一种尽快执行异步函数结果的方法，而不是放在调用栈的最后。
+ECMAScript 2015 引入了 Job Queue 的概念，Promises（也在 ES6/ES2015 中引入）也使用了这个概念。这是一种尽快执行异步函数结果的方法，而不是放在调用栈的最后。
 
 在当前函数结束之前解析的 Promise 将在当前函数之后立即执行。
 
@@ -2227,15 +2227,15 @@ baz
 should be right after foo, before barbar
 ```
 
-这是Promises（以及建立在Promises 之上的 `async/await`）和通过 `setTimeout()` 或其他平台API的普通异步函数之间的巨大区别。
+这是 Promises（以及建立在 Promises 之上的 `async/await`）和通过 `setTimeout()` 或其他平台 API 的普通异步函数之间的巨大区别。
 
-### 理解process.nextTick()
+### 理解 process.nextTick()
 
-当你试图理解Node.js的事件循环时，它的一个重要部分是 `process.nextTick()`。它以一种特殊的方式与事件循环互动。
+当你试图理解 Node.js 的事件循环时，它的一个重要部分是 `process.nextTick()`。它以一种特殊的方式与事件循环互动。
 
-每当事件循环进行一次完整的旅行，我们称它为tick。
+每当事件循环进行一次完整的旅行，我们称它为 tick。
 
-当我们向 `process.nextTick()` 传递一个函数时，我们指示引擎在当前操作结束时，在下一个事件循环tick开始前调用这个函数:
+当我们向 `process.nextTick()` 传递一个函数时，我们指示引擎在当前操作结束时，在下一个事件循环 tick 开始前调用这个函数:
 
 ```js
 process.nextTick(() => {
@@ -2245,11 +2245,11 @@ process.nextTick(() => {
 
 事件循环正忙于处理当前的函数代码。
 
-当这个操作结束时，JavaScript引擎会运行该操作期间传递给 `nextTick` 调用的所有函数。
+当这个操作结束时，JavaScript 引擎会运行该操作期间传递给 `nextTick` 调用的所有函数。
 
-这是我们可以告诉JavaScript引擎异步处理一个函数的方法（在当前函数之后），但要尽快，不要排队。
+这是我们可以告诉 JavaScript 引擎异步处理一个函数的方法（在当前函数之后），但要尽快，不要排队。
 
-调用 `setTimeout(() => {}, 0)` 将在下一个tick中执行该函数，比使用 `nextTick()` 时晚得多。
+调用 `setTimeout(() => {}, 0)` 将在下一个 tick 中执行该函数，比使用 `nextTick()` 时晚得多。
 
 当你想确保在下一个事件循环迭代中，代码已经被执行时，使用 `nextTick()`。
 
@@ -2265,19 +2265,19 @@ setImmediate(() => {
 
 作为 `setImmediate()` 参数传递的函数都是一个回调，会在事件循环的下一次迭代中执行。
 
-`setImmediate()` 与 `setTimeout(() => {}, 0)`（传递0ms的超时）和 `from process.nextTick()` 有何不同？
+`setImmediate()` 与 `setTimeout(() => {}, 0)`（传递 0ms 的超时）和 `from process.nextTick()` 有何不同？
 
 传递给 `process.nextTick()` 的函数将在事件循环的当前迭代中执行，在当前操作结束后。这意味着它将总是在 `setTimeout()` 和 `setImmediate()` 之前执行。
 
-具有0ms延迟的 `setTimeout()` 回调与 `setImmediate()` 非常相似。执行顺序取决于各种因素，但它们都将在事件循环的下一次迭代中运行。
+具有 0ms 延迟的 `setTimeout()` 回调与 `setImmediate()` 非常相似。执行顺序取决于各种因素，但它们都将在事件循环的下一次迭代中运行。
 
 ### 定时器
 
-在编写JavaScript代码时，你可能想延迟一个函数的执行。学习如何使用 `setTimeout()` 和 `setInterval()` 来安排未来的函数。
+在编写 JavaScript 代码时，你可能想延迟一个函数的执行。学习如何使用 `setTimeout()` 和 `setInterval()` 来安排未来的函数。
 
 #### `setTimeout()`
 
-在编写JavaScript代码时，你可能想延迟一个函数的执行。这就是 `setTimeout` 的工作。
+在编写 JavaScript 代码时，你可能想延迟一个函数的执行。这就是 `setTimeout` 的工作。
 
 你可以指定一个稍后执行的回调函数，以及一个表达你希望它多长时间运行的值，单位是毫秒:
 
@@ -2302,7 +2302,7 @@ const myFunction = (firstParam, secondParam) => {
 setTimeout(myFunction, 2000, firstParam, secondParam)// runs after 2 seconds
 ```
 
-`setTimeout()` 返回定时器ID。这通常是不使用的，但你可以存储这个ID，如果你想删除这个预定函数的执行，可以清除它:
+`setTimeout()` 返回定时器 ID。这通常是不使用的，但你可以存储这个 ID，如果你想删除这个预定函数的执行，可以清除它:
 
 ```js
 const id = setTimeout(() => {
@@ -2325,7 +2325,7 @@ console.log(' before ')
 
 将打印出 `before after`.
 
-这对于避免在密集型任务上阻塞CPU，并在执行繁重的计算时让其他函数被执行，通过在调度器中排队的函数特别有用。
+这对于避免在密集型任务上阻塞 CPU，并在执行繁重的计算时让其他函数被执行，通过在调度器中排队的函数特别有用。
 
 一些浏览器（IE 和 Edge）实现了一个 `setImmediate()` 方法，可以实现这个完全相同的功能，但它不是标准的，[在其他浏览器上不可用][95]。但它是 Node.js 的一个标准函数。
 
@@ -2339,7 +2339,7 @@ setInterval(() => {
 }, 2000) 
 ```
 
-上面的函数每2秒运行一次，除非你用 `clearInterval` 告诉它停止，并把 `setInterval` 返回的定时器id传给它:
+上面的函数每 2 秒运行一次，除非你用 `clearInterval` 告诉它停止，并把 `setInterval` 返回的定时器 id 传给它:
 
 ```js
 const id = setInterval(() => {
@@ -2372,7 +2372,7 @@ const interval = setInterval(function() {
 
 ![](https://cdn-media-1.freecodecamp.org/images/I9kJc6l-BIT850OGlNDJre80RcsLp7N4amvy)
 
-为了避免这种情况，你可以安排一个递归的setTimeout，当回调函数完成时被调用:
+为了避免这种情况，你可以安排一个递归的 setTimeout，当回调函数完成时被调用:
 
 ```js
 const myFunction = () => {  // do something
@@ -2386,9 +2386,9 @@ setTimeout(myFunction()}, 1000)
 
 ![](https://cdn-media-1.freecodecamp.org/images/B2kod2dFuR5U1uwaaW9SGiC1zX5gIUEaiJ8A)
 
-`setTimeout` 和 `setInterval` 在 Node.js 中也可以使用，通过 [Timer模块][96]。
+`setTimeout` 和 `setInterval` 在 Node.js 中也可以使用，通过 [Timer 模块][96]。
 
-Node.js还提供了 `setImmediate()`，相当于使用 `setTimeout(() => {}, 0)`，主要用于与 Node.js 事件循环一起工作。
+Node.js 还提供了 `setImmediate()`，相当于使用 `setTimeout(() => {}, 0)`，主要用于与 Node.js 事件循环一起工作。
 
 ### 异步编程（Asynchronous Programming）和回调（Callbacks）
 
@@ -2445,7 +2445,7 @@ document.getElementById('button')
 
 这就是所谓的**回调**。
 
-回调是一个简单的函数，它作为一个值传递给另一个函数，只有当事件发生时才会被执行。我们可以这样做，因为JavaScript有的函数是一等公民，它可以被分配给变量并传递给其他函数（称为**高阶函数**）。
+回调是一个简单的函数，它作为一个值传递给另一个函数，只有当事件发生时才会被执行。我们可以这样做，因为 JavaScript 有的函数是一等公民，它可以被分配给变量并传递给其他函数（称为**高阶函数**）。
 
 常见的做法是将所有的客户端代码包裹在 "window "对象的 "load "事件监听器中，只有当页面准备好时才运行回调函数:
 
@@ -2453,7 +2453,7 @@ document.getElementById('button')
 window.addEventListener('load', () => {})//window loaded  //do what you want
 ```
 
-回调无处不在，不仅仅是在DOM事件中使用。
+回调无处不在，不仅仅是在 DOM 事件中使用。
 
 一个常见的例子是通过使用定时器:
 
@@ -2463,7 +2463,7 @@ setTimeout(() => {
 }, 2000)
 ```
 
-[XHR请求][97] 也接受回调，在这个例子中，通过给一个属性分配一个函数，当一个特定的事件发生时（在这个例子中，请求的状态改变），该函数将被调用:
+[XHR 请求][97] 也接受回调，在这个例子中，通过给一个属性分配一个函数，当一个特定的事件发生时（在这个例子中，请求的状态改变），该函数将被调用:
 
 ```js
 const xhr = new XMLHttpRequest()
@@ -2509,13 +2509,13 @@ window.addEventListener('load', () => {
 })
 ```
 
-这只是一个简单的4级代码，但我见过更多级别的嵌套，这很不好玩。
+这只是一个简单的 4 级代码，但我见过更多级别的嵌套，这很不好玩。
 
 我们如何解决这个问题呢？
 
 #### 回调的替代方案
 
-从ES6开始，JavaScript 引入了几个功能，帮助我们处理不涉及使用回调的异步代码:
+从 ES6 开始，JavaScript 引入了几个功能，帮助我们处理不涉及使用回调的异步代码:
 
 - Promises (ES6)
 - Async/Await (ES8)
@@ -2532,11 +2532,11 @@ Promises 是处理 JavaScript 中异步代码的一种方式，而不需要在�
 
 **异步函数（Async functions）**使用 Promise API 作为其构建模块，因此，即使在较新的代码中，你可能会使用异步函数而不是 Promise，理解它们也是基本的。
 
-#### Promises是如何工作的
+#### Promises 是如何工作的
 
 一旦一个 Promises 被调用，它将开始处于**待定状态**。这意味着调用者函数继续执行，同时等待 Promises 做它自己的处理，并给调用者函数一些反馈。
 
-在这一点上，调用者函数等待它在**解决的状态（resolved state）**下返回promises，或者在**拒绝的状态（rejected state）**下返回 Promises，但是你知道 JavaScript 是异步的，所以函数继续执行，而承诺在做它的工作。
+在这一点上，调用者函数等待它在**解决的状态（resolved state）**下返回 promises，或者在**拒绝的状态（rejected state）**下返回 Promises，但是你知道 JavaScript 是异步的，所以函数继续执行，而承诺在做它的工作。
 
 #### 哪些 JS API 使用 Promises?
 
@@ -2573,7 +2573,7 @@ const isItDoneYet = new Promise(  (resolve, reject) => {
 
 在上一节中，我们介绍了如何创建一个 Promise。
 
-现在让我们来看看promise如何被**消费**或使用。
+现在让我们来看看 promise 如何被**消费**或使用。
 
 ```js
 const isItDoneYet = new Promise()//...
@@ -2592,9 +2592,9 @@ const checkIfItsDone = () => {
 
 [Fetch API][100] 给出了一个很好的 Promise 链的例子，它是 `XMLHttpRequest` API 上面的一层，我们可以用它来获取一个资源，并在获取资源的时候排队执行一连串的 Promise。
 
-Fetch API是一个基于promise的机制，调用 `fetch()` 等同于使用 `new Promise()` 定义我们自己的 Promise。
+Fetch API 是一个基于 promise 的机制，调用 `fetch()` 等同于使用 `new Promise()` 定义我们自己的 Promise。
 
-#### Promises链的例子
+#### Promises 链的例子
 
 ```js
 const status = (response) => {  
@@ -2616,12 +2616,12 @@ fetch('/todos.json')
 
 运行 `fetch()` 返回一个 [response][101]，它有许多属性，在这些属性中我们引用了:
 
-- `status`, 一个代表HTTP状态代码的数字值
+- `status`, 一个代表 HTTP 状态代码的数字值
 - `statusText`, 一个状态信息，如果请求成功，就是 `OK`
 
 `response` 也有一个 `json()` 方法，它返回一个 Promise，该 Promise 将对 body 的内容进行处理并转化为 JSON。
 
-所以在这些前提下，会发生这样的事情：链中的第一个 Promise是我们定义的一个函数，叫做`status()`，它检查响应状态，如果不是一个成功的响应（在200和299之间），它拒绝这个 Promise（rejects the promise）。
+所以在这些前提下，会发生这样的事情：链中的第一个 Promise 是我们定义的一个函数，叫做`status()`，它检查响应状态，如果不是一个成功的响应（在 200 和 299 之间），它拒绝这个 Promise（rejects the promise）。
 
 这个操作将导致承诺链跳过所有列出的链式 Promise，直接跳到底部的 `catch()` 语句，记录 `Request failed` 文本和错误信息。
 
@@ -2684,7 +2684,7 @@ Promise.all([f1, f2])
        .catch((err) => {console.error(err)})
 ```
 
-[ES2015的析构赋值][102] 语法允许你也这样做:
+[ES2015 的析构赋值][102] 语法允许你也这样做:
 
 ```js
 Promise.all([f1, f2])
@@ -2723,7 +2723,7 @@ Promise.race([first, second]).then((result) => {
 
 探索 JavaScript 中异步函数的现代方法。
 
-JavaScript在很短的时间内从回调（callback）发展到了 Promise（ES2015），而从ES2017开始，异步 JavaScript 通过 async/await 语法变得更加简单。
+JavaScript 在很短的时间内从回调（callback）发展到了 Promise（ES2015），而从 ES2017 开始，异步 JavaScript 通过 async/await 语法变得更加简单。
 
 异步函数是 Promises 和生成器（generators）的结合，基本上，它们是 Promises 的更高层次的抽象。让我重复一遍：`async/await` 是建立在 Promises 之上的。
 
@@ -2793,7 +2793,7 @@ I did something //after 3s
 
 在任何函数前加上 `async` 关键字意味着该函数将返回一个 promise。
 
-即使它没有明确地这样做，也会在内部使其返回一个promise。
+即使它没有明确地这样做，也会在内部使其返回一个 promise。
 
 这就是为什么这段代码是有效的:
 
@@ -2819,7 +2819,7 @@ aFunction().then(alert) // This will alert 'test'
 
 而这只是一个非常简单的例子，主要的好处将出现在代码更复杂的时候。
 
-例如，这里是你如何获得一个JSON资源并解析它，使用 Promises:
+例如，这里是你如何获得一个 JSON 资源并解析它，使用 Promises:
 
 ```js
 const getFirstUserData = () => {  
@@ -2890,7 +2890,7 @@ I did something and I watched and I watched as well
 
 如果你在浏览器中使用 JavaScript，你就知道用户的大部分交互是通过事件处理的：鼠标点击、键盘按键、对鼠标移动的反应等等。
 
-在后端，Node.js为我们提供了使用 [events模块][103] 建立类似系统的选择。
+在后端，Node.js 为我们提供了使用 [events 模块][103] 建立类似系统的选择。
 
 这个模块特别提供了 `EventEmitter` 类，我们将用它来处理我们的事件。
 
@@ -2945,7 +2945,7 @@ EventEmitter 对象还公开了其他几个与事件互动的方法，比如:
 - `removeListener()` / `off()`: 从一个事件中删除一个事件监听器
 - `removeAllListeners()`: 删除一个事件的所有监听器。
 
-### HTTP请求如何工作
+### HTTP 请求如何工作
 
 当你在浏览器中输入一个 URL 时，从开始到结束会发生什么？
 
@@ -2961,19 +2961,19 @@ EventEmitter 对象还公开了其他几个与事件互动的方法，比如:
 
 这是很少变化的技术，它为人类有史以来最复杂、最广泛的生态系统之一提供动力。
 
-### HTTP协议
+### HTTP 协议
 
 我只分析 URL 请求。
 
-现代浏览器有能力知道你在地址栏中写的东西是一个实际的URL还是一个搜索词，如果它不是一个有效的URL，它们将使用默认的搜索引擎。
+现代浏览器有能力知道你在地址栏中写的东西是一个实际的 URL 还是一个搜索词，如果它不是一个有效的 URL，它们将使用默认的搜索引擎。
 
 我假设你输入了一个实际的 URL。
 
-当你输入URL并按下回车键时，浏览器首先建立完整的URL。
+当你输入 URL 并按下回车键时，浏览器首先建立完整的 URL。
 
 #### 与 MacOS/Linux 有关的事情
 
-仅供参考。Windows可能会对一些事情的处理方式略有不同。
+仅供参考。Windows 可能会对一些事情的处理方式略有不同。
 
 #### DNS 查询阶段
 
@@ -2983,19 +2983,19 @@ EventEmitter 对象还公开了其他几个与事件互动的方法，比如:
 
 首先，它检查 DNS 的本地缓存，看这个域名最近是否已经被解析。
 
-**_Chrome 有一个方便的DNS缓存可视化工具，你可以在这个网址上看到：chrome://net-internals/#dns（复制并粘贴到Chrome浏览器地址栏）_**
+**_Chrome 有一个方便的 DNS 缓存可视化工具，你可以在这个网址上看到：chrome://net-internals/#dns（复制并粘贴到 Chrome 浏览器地址栏）_**
 
-如果没有找到，浏览器就使用DNS解析器，使用 `gethostbyname` POSIX 系统调用来检索主机信息。
+如果没有找到，浏览器就使用 DNS 解析器，使用 `gethostbyname` POSIX 系统调用来检索主机信息。
 
 #### gethostbyname
 
 `gethostbyname`：浏览器首先查找本地主机文件，在 macOS 或 Linux 上，该文件位于 `/etc/hosts`，以查看系统是否在本地提供了该信息。
 
-如果这没有提供任何关于域名的信息，系统会向DNS服务器发出请求。
+如果这没有提供任何关于域名的信息，系统会向 DNS 服务器发出请求。
 
-DNS服务器的地址存储在系统偏好中。
+DNS 服务器的地址存储在系统偏好中。
 
-这些是2个流行的 DNS 服务器:
+这些是 2 个流行的 DNS 服务器:
 
 - `8.8.8.8`: 谷歌公共 DNS 服务器
 - `1.1.1.1`: CloudFlare DNS 服务器
@@ -3036,7 +3036,7 @@ TLD DNS 服务器将拥有我们正在寻找的域名的权威性域名服务器
 
 DNS 解析器从第一个开始，试图询问你要找的域名（也包括子域名）的 IP。
 
-这就是IP地址的最终真实来源。
+这就是 IP 地址的最终真实来源。
 
 现在我们有了 IP 地址，我们可以继续我们的旅程了。
 
@@ -3052,7 +3052,7 @@ TCP 连接在完全初始化之前需要进行一些握手，然后就可以开�
 
 请求是一个纯文本文件，以通信协议确定的精确方式结构化。
 
-它由3个部分组成:
+它由 3 个部分组成:
 
 - 请求行
 - 请求头
@@ -3156,7 +3156,7 @@ server.listen(port, () => {
 })s
 ```
 
-让我们简单地分析一下。我们包括 [http模块][104]。
+让我们简单地分析一下。我们包括 [http 模块][104]。
 
 我们使用该模块来创建一个 HTTP 服务器。
 
@@ -3366,7 +3366,7 @@ const countBreeds = async () => {
 countBreeds()
 ```
 
-#### 在GET请求中添加参数
+#### 在 GET 请求中添加参数
 
 一个 GET 响应可以在 URL 中包含参数，像这样 [https://site.com/?foo=bar][111]。
 
@@ -3408,7 +3408,7 @@ WebSockets 是网络应用中 HTTP 通信的替代方案。
 
 所有现代浏览器都支持 WebSockets。
 
-### WebSockets与HTTP有什么不同
+### WebSockets 与 HTTP 有什么不同
 
 HTTP 是一个非常不同的协议，并且有不同的通信方式。
 
@@ -3915,7 +3915,7 @@ const fs = require('fs')
 
 一旦你这样做，你就可以使用它的所有方法，其中包括:
 
-- `fs.access()`: 检查文件是否存在，并且Node可以用其权限访问它。
+- `fs.access()`: 检查文件是否存在，并且 Node 可以用其权限访问它。
 - `fs.appendFile()`: 将数据追加到文件中。如果文件不存在，就创建它
 - `fs.chmod()`: 改变一个由文件名指定的文件的权限。相关的: `fs.lchmod()`, `fs.fchmod()`
 - `fs.chown()`: 改变由文件名指定的文件的所有者和组。相关的: `fs.fchown()`, `fs.lchown()`
@@ -3953,7 +3953,7 @@ const fs = require('fs')
 
 这对你的应用流程有很大的影响。
 
-Node 10 包括对基于 Promise 的API的 [实验性支持][117]。
+Node 10 包括对基于 Promise 的 API 的 [实验性支持][117]。
 
 例如，让我们检查 `fs.rename()` 方法。异步 API 是用一个回调来实现的:
 
@@ -3989,7 +3989,7 @@ try {
 const path = require('path')
 ```
 
-这个模块提供了 `path.sep`，它提供了路径段的分隔符（在 Windows下为 `/`，在 Linux/MacOS下为 `/`），以及 `path.delimiter`，它提供了路径分隔符（在 Windows 下为`；`，在 Linux/MacOS下为`：`）。
+这个模块提供了 `path.sep`，它提供了路径段的分隔符（在 Windows 下为 `/`，在 Linux/MacOS 下为 `/`），以及 `path.delimiter`，它提供了路径分隔符（在 Windows 下为`；`，在 Linux/MacOS 下为`：`）。
 
 这些是 `路径` 方法。
 
@@ -4110,7 +4110,7 @@ const os = require('os')
 
 有几个有用的属性告诉我们一些与处理文件有关的关键事情:
 
-`os.EOL` 给出了行的定界符序列。在 Linux和MacOS 上是 `\n`，而在 Windows 上是 `\r\n`。
+`os.EOL` 给出了行的定界符序列。在 Linux 和 MacOS 上是 `\n`，而在 Windows 上是 `\r\n`。
 
 当我说 Linux 和 MacOS 时，我指的是 POSIX 平台。为了简单起见，我排除了其他不太流行的操作系统，Node 可以在上面运行。
 
@@ -4338,7 +4338,7 @@ const door = new EventEmitter()
 
 #### `emitter.eventNames()`
 
-返回一个字符串数组，代表在当前EventListener上注册的事件:
+返回一个字符串数组，代表在当前 EventListener 上注册的事件:
 
 ```js
 door.eventNames()
@@ -4448,7 +4448,7 @@ const http = require('http')
 
 #### `http.METHODS`
 
-此属性列出了所有支持的HTTP方法:
+此属性列出了所有支持的 HTTP 方法:
 
 ```js
 > require('http').METHODS
@@ -4457,7 +4457,7 @@ const http = require('http')
 
 #### `http.STATUS_CODES`
 
-此属性列出了所有的HTTP状态代码及其描述:
+此属性列出了所有的 HTTP 状态代码及其描述:
 
 ```js
 > require('http').STATUS_CODES
@@ -4492,7 +4492,7 @@ const server = http.createServer((req, res) => {})//handle every single request 
 
 #### Classes
 
-HTTP模块提供了5个类（classes）:
+HTTP 模块提供了 5 个类（classes）:
 
 - `http.Agent`
 - `http.ClientRequest`
@@ -4502,7 +4502,7 @@ HTTP模块提供了5个类（classes）:
 
 #### `http.Agent`
 
-Node创建了一个 `http.Agent` 类的全局实例来管理HTTP客户端的连接持久性和重复使用，这是 Node HTTP 网络的一个关键组成部分。
+Node 创建了一个 `http.Agent` 类的全局实例来管理 HTTP 客户端的连接持久性和重复使用，这是 Node HTTP 网络的一个关键组成部分。
 
 这个对象确保每一个向服务器发出的请求都是排队的，并且一个套接字被重复使用。
 
@@ -4526,7 +4526,7 @@ Node创建了一个 `http.Agent` 类的全局实例来管理HTTP客户端的连�
 一旦你有了一个服务器对象，你就可以访问它的方法:
 
 - `close()` 停止服务器接受新的连接
-- `listen()` 启动HTTP服务器并监听连接
+- `listen()` 启动 HTTP 服务器并监听连接
 
 #### `http.ServerResponse`
 
@@ -4579,7 +4579,7 @@ response.statusMessage = 'Internal Server Error'
 
 由于`http.IncomingMessage` 实现了可读流接口，所以数据可以使用流访问。
 
-### Node.js流（Streams）
+### Node.js 流（Streams）
 
 流是支持 Node.js 应用程序的基本概念之一。
 
@@ -4591,7 +4591,7 @@ response.statusMessage = 'Internal Server Error'
 
 使用流，你会一块一块地读取它，处理它的内容，而不把它全部保留在内存中。
 
-Node.js的 [stream模块][121] 提供了所有流媒体API的基础。
+Node.js 的 [stream 模块][121] 提供了所有流媒体 API 的基础。
 
 #### 为什么是流？
 
@@ -4604,7 +4604,7 @@ Node.js的 [stream模块][121] 提供了所有流媒体API的基础。
 
 一个典型的例子是从磁盘上读取文件的例子。
 
-使用Node.js `fs` 模块，你可以读取一个文件，并在与你的 `http` 服务器建立新的连接时通过 HTTP 提供服务:
+使用 Node.js `fs` 模块，你可以读取一个文件，并在与你的 `http` 服务器建立新的连接时通过 HTTP 提供服务:
 
 ```js
 const http = require('http')
@@ -4783,7 +4783,7 @@ Node.js 生态系统有几个不同的包，允许你与 MySQL 接口，存储�
 
 我们将使用 [mysqljs/mysql][122]，这个包在 GitHub 上有超过 12,000 颗星，已经存在多年。
 
-#### 安装Node.js MySql包
+#### 安装 Node.js MySql 包
 
 安装命令:
 
@@ -4837,11 +4837,11 @@ const options = {
 你还可以使用很多，包括:
 
 - `host`, 数据库主机名，默认为 `localhost`
-- `port`, MySQL服务器端口号，默认为 3306
+- `port`, MySQL 服务器端口号，默认为 3306
 - `socketPath`, 用于指定 Unix 套接字，而不是主机和端口
 - `debug`, 默认为禁用，可用于调试
 - `trace`, 默认为启用，当发生错误时打印堆栈跟踪
-- `ssl`, 用于设置与服务器的SSL连接（不在本教程范围内）
+- `ssl`, 用于设置与服务器的 SSL 连接（不在本教程范围内）
 
 #### 执行一个 SELECT 查询
 
@@ -4883,7 +4883,7 @@ connection.query('SELECT * FROM todos WHERE id = ? AND author = ?', [id, author]
 })
 ```
 
-#### 执行一个INSERT 语句
+#### 执行一个 INSERT 语句
 
 你可以传递一个对象:
 
@@ -4925,7 +4925,7 @@ connection.end()
 
 你可以为生产和开发环境进行不同的配置。
 
-Node.js假定它总是在开发环境中运行。你可以通过设置 `NODE_ENV=production` 环境变量向 Node.js 发出信号，表明你正在生产环境中运行。
+Node.js 假定它总是在开发环境中运行。你可以通过设置 `NODE_ENV=production` 环境变量向 Node.js 发出信号，表明你正在生产环境中运行。
 
 这通常是通过执行以下命令来完成的:
 
@@ -4948,9 +4948,9 @@ NODE_ENV=production node app.js
 - 日志记录保持在最小的、必要的水平上
 - 更多的缓存级别，以优化性能
 
-例如 [Pug][123]，Express使用的模板库，如果 `NODE_ENV` 没有设置为 `production`，则在开发（development）模式下进行编译。在开发模式下，Express 视图在每个请求中都被编译，而在生产（production）模式下，它们被缓存起来。还有很多例子。
+例如 [Pug][123]，Express 使用的模板库，如果 `NODE_ENV` 没有设置为 `production`，则在开发（development）模式下进行编译。在开发模式下，Express 视图在每个请求中都被编译，而在生产（production）模式下，它们被缓存起来。还有很多例子。
 
-Express提供了特定于环境的配置钩子，这些钩子根据`NODE_ENV`变量值自动调用:
+Express 提供了特定于环境的配置钩子，这些钩子根据`NODE_ENV`变量值自动调用:
 
 ```js
 app.configure('development', () => {})//...

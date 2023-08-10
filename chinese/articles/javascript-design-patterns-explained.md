@@ -31,15 +31,15 @@
 
 <h1 id="what-are-design-patterns">什么是设计模式？</h1>
 
-设计模式这个概念是由[一本名为《设计模式：可复用面向对象软件的基础》](https://en.wikipedia.org/wiki/Design_Patterns)推广而来， 这本书在1994年由四个C++工程师编写。
+设计模式这个概念是由[一本名为《设计模式：可复用面向对象软件的基础》](https://en.wikipedia.org/wiki/Design_Patterns)推广而来， 这本书在 1994 年由四个 C++工程师编写。
 
-这本书探讨了面向对象的编程的能力和陷阱，并介绍了23种可以用来解决编程问题的模式。
+这本书探讨了面向对象的编程的能力和陷阱，并介绍了 23 种可以用来解决编程问题的模式。
 
 这些模式**并不是算法或者具体的实现**。它们更像是**想法、观点和抽象**，辅助你去解决一些特定问题。
 
 根据要素的不同模式的实现也各不相同，重要的是模式背后的概念，它可以帮助我们更好地解决问题。
 
-话虽如此，但是请记住，这些模式建立在C++的OOP的基础之上，当使用更现代的编程语言如JavaScript时，模式可能不等效，甚至给代码添加了不必要的样本。
+话虽如此，但是请记住，这些模式建立在 C++的 OOP 的基础之上，当使用更现代的编程语言如 JavaScript 时，模式可能不等效，甚至给代码添加了不必要的样本。
 
 不过把这些模式当作一般的编程知识来了解没有坏处。
 
@@ -233,7 +233,7 @@ bug2.saySmthg() // 输出: "Martiniano Buggland walks the walk and talks the tal
 
 **原型**允许把一个对象作为蓝图创建另一个对象，新对象继承原对象的属性和方法。
 
-如果你已经使用过一段时间的JavaScript，你应该对[原型继承](https://www.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/)有一定了解。
+如果你已经使用过一段时间的 JavaScript，你应该对[原型继承](https://www.freecodecamp.org/news/prototypes-and-inheritance-in-javascript/)有一定了解。
 
 原型链继承的结果和使用类相似，只是更为灵活，因为属性和方法可以不通过同一个类在对象之间共享。
 
@@ -269,7 +269,7 @@ console.log(bug1.flyAway()) // Flyyyy like an eagle!
 
 **适配器**允许两个接口不兼容的对象相互交互。
 
-假设你的应用程序调用一个API并会返回一个[XML](https://www.freecodecamp.org/news/what-is-an-xml-file-how-to-open-xml-files-and-the-best-xml-viewers/)，然后将结果发送给另一个API来处理信息，但是处理信息的API期待的是[JSON](https://www.freecodecamp.org/news/what-is-json-a-json-file-example/)格式。因为格式不兼容，所以你不能直接发送信息，需要先 _适配_ 结果。 😉
+假设你的应用程序调用一个 API 并会返回一个[XML](https://www.freecodecamp.org/news/what-is-an-xml-file-how-to-open-xml-files-and-the-best-xml-viewers/)，然后将结果发送给另一个 API 来处理信息，但是处理信息的 API 期待的是[JSON](https://www.freecodecamp.org/news/what-is-json-a-json-file-example/)格式。因为格式不兼容，所以你不能直接发送信息，需要先 _适配_ 结果。 😉
 
 我们可以举一个更简单的例子来具象化这个概念。假设我们有一个以城市为元素的数组，以及一个可以返回拥有最多人口城市的函数。数组中的城市人口以百万为单位计数，但是有一个新城市的人口单位不是百万：
 
@@ -306,11 +306,11 @@ console.log(MostHabitantsInMillions()) // 8.9
 
 <h2 id="decorator-pattern">装饰</h2>
 
-**装饰**通过增加一个修饰对象来包裹原来的对象，从而给原来的对象添加新的行为。 如果你熟悉React或者高阶组件（HOC），你内心的小铃铛可能会叮当一下。
+**装饰**通过增加一个修饰对象来包裹原来的对象，从而给原来的对象添加新的行为。 如果你熟悉 React 或者高阶组件（HOC），你内心的小铃铛可能会叮当一下。
 
-从技术上讲，React中的组件是函数而不是对象。但如果你仔细思索React上下文（React Context）或者[Memo](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)是怎么运作的，你会发现我们将组件作为子组件传入HOC后，子组件而可以访问某些功能。
+从技术上讲，React 中的组件是函数而不是对象。但如果你仔细思索 React 上下文（React Context）或者[Memo](https://www.freecodecamp.org/news/memoization-in-javascript-and-react/)是怎么运作的，你会发现我们将组件作为子组件传入 HOC 后，子组件而可以访问某些功能。
 
-在下面的例子里中ContextProvider组件接受子组件作为prop：
+在下面的例子里中 ContextProvider 组件接受子组件作为 prop：
 
 ```javascript
 
@@ -377,7 +377,7 @@ export default function App() {
 }
 ```
 
-接着，我们使用`useContext`钩子，使得应用内所有组件都可以获得定义在Context的状态（state）：
+接着，我们使用`useContext`钩子，使得应用内所有组件都可以获得定义在 Context 的状态（state）：
 
 ```javascript
 
@@ -397,13 +397,13 @@ export default AboutPage
 
 **外观**模式给库、框架以及其他复杂的类集提供简化的接口。
 
-嗯……我们可以举的例子非常多，不是吗？React本身以及各种各样的软件开发相关的库就是基于这个模式。特别是当你思考[声明式编程](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/#declarative-programming)，会发现这个范式就是使用抽象的方法对开发者隐藏复杂性。
+嗯……我们可以举的例子非常多，不是吗？React 本身以及各种各样的软件开发相关的库就是基于这个模式。特别是当你思考[声明式编程](https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/#declarative-programming)，会发现这个范式就是使用抽象的方法对开发者隐藏复杂性。
 
-JavaScript中的 `map`、 `sort`、 `reduce` 和 `filter`函数都是很好的例子，这些函数的背后其实是我们的老朋友`for`循环。
+JavaScript 中的 `map`、 `sort`、 `reduce` 和 `filter`函数都是很好的例子，这些函数的背后其实是我们的老朋友`for`循环。
 
-另一个例子是一些UI库，如：[MUI](https://mui.com/)。正如以下示例所展现的这样，库提供了组件，组件带来了内置特性和功能，帮助我们更快、更轻松地构建代码。
+另一个例子是一些 UI 库，如：[MUI](https://mui.com/)。正如以下示例所展现的这样，库提供了组件，组件带来了内置特性和功能，帮助我们更快、更轻松地构建代码。
 
-这些代码最后都会编译成简单的HTML元素，这是浏览器唯一能理解的东西。组件只是采用了抽象的办法，使得我们的编码过程更容易。
+这些代码最后都会编译成简单的 HTML 元素，这是浏览器唯一能理解的东西。组件只是采用了抽象的办法，使得我们的编码过程更容易。
 
 ![thewolfofwallstreet-fairydust](https://www.freecodecamp.org/news/content/images/2022/06/thewolfofwallstreet-fairydust.gif)
 
@@ -476,7 +476,7 @@ export default function BasicTable() {
 
 **代理**模式为另一个对象提供替代或者占位符。这个想法是控制对原始对象的访问，当请求到达实际的原始对象之前或者之后再执行某种操作。
 
-如果你熟悉[ExpressJS](https://expressjs.com/)的话，这个概念就不陌生。Express是用于开发NodeJS API的框架，其中一个功能就是中间件的使用。中间件是我们可以在请求到达终点之前、之中和之后执行的一段代码。
+如果你熟悉[ExpressJS](https://expressjs.com/)的话，这个概念就不陌生。Express 是用于开发 NodeJS API 的框架，其中一个功能就是中间件的使用。中间件是我们可以在请求到达终点之前、之中和之后执行的一段代码。
 
 让我们看一个例子。是一个验证身份令牌的函数，不用太关注验证是如何实现的，但是要注意函数接受令牌作为参数，一旦验证完毕就会调用`next()`函数。
 
@@ -497,7 +497,7 @@ module.exports = function authenticateToken(req, res, next) {
 }
 ```
 
-这个函数就是一个中间件，我们可以API中的任意终点使用这个中间件。只需要将其添加在终点地址之后，终点的函数声明之前：
+这个函数就是一个中间件，我们可以 API 中的任意终点使用这个中间件。只需要将其添加在终点地址之后，终点的函数声明之前：
 
 ```javascript
 router.get('/:jobRecordId', authenticateToken, async (req, res) => {
@@ -525,16 +525,16 @@ router.get('/:jobRecordId', authenticateToken, async (req, res) => {
 
 **责任链**将请求通过处理链传递，链条上的每一个处理程序决定要么处理请求，要么将请求传递给链条上的下一个处理程序。
 
-我们可以使用之前示例来演示这个模式，因为Express的中间件就是一种处理程序，要么处理请求，要么将其传递给下一个处理程序。
+我们可以使用之前示例来演示这个模式，因为 Express 的中间件就是一种处理程序，要么处理请求，要么将其传递给下一个处理程序。
 
 如果你想要另一个示例，可以考虑任何需要通过步骤来一步一步实现信息处理的系统。在每个步骤中，不同的实体负责执行操作，并且只有在满足特定条件时，信息才会传递给另一个实体。
 
-需要使用API的前端应用程序就是很好的例子：
+需要使用 API 的前端应用程序就是很好的例子：
 
--   有一个负责渲染UI的函数
--   一旦渲染，另一个函数向API终点发出请求
+-   有一个负责渲染 UI 的函数
+-   一旦渲染，另一个函数向 API 终点发出请求
 -   如果终点响应符合预期，则将信息传递给另一个函数，该函数以给定方式对数据进行排序并存储在变量中
--   一旦变量存储了所需的信息，另一个函数负责在UI中呈现它。
+-   一旦变量存储了所需的信息，另一个函数负责在 UI 中呈现它。
 
 可以看到这里有许多不同的实体协作执行任务。每个都负责该任务的一个“步骤”，这有助于代码模块化和关注点分离。👌👌
 
@@ -542,7 +542,7 @@ router.get('/:jobRecordId', authenticateToken, async (req, res) => {
 
 **迭代器**用于遍历集合的元素。这在现代编程语言中显得微不足道，但并非如此。
 
-JavaScript内置函数(`for`、 `forEach`、`for...of`、 `for...in`、 `map`、`reduce`、 `filter`等)就是手边可以拿来遍历数据结构的方法。
+JavaScript 内置函数(`for`、 `forEach`、`for...of`、 `for...in`、 `map`、`reduce`、 `filter`等)就是手边可以拿来遍历数据结构的方法。
 
 [遍历算法](https://www.freecodecamp.org/news/introduction-to-algorithms-with-javascript-examples/#traversing-algorithms) 以及更为复杂的[树和图这样的数据结构](https://www.freecodecamp.org/news/data-structures-in-javascript-with-examples/)使用的代码也是迭代器的例子。
 
@@ -550,7 +550,7 @@ JavaScript内置函数(`for`、 `forEach`、`for...of`、 `for...in`、 `map`、
 
 **观察者**模式允许你定义一个订阅机制来通知多个对象他们正在观察的对象发生的任何事件。基本上，这就像在给定对象上有一个事件侦听器，当该对象执行我们正在侦听的操作时，我们会采取一些行动。
 
-React的useEffect钩子就是一个很好的例子。 useEffect在我们声明的那一刻执行给定的函数。
+React 的 useEffect 钩子就是一个很好的例子。 useEffect 在我们声明的那一刻执行给定的函数。
 
 钩子分为两个主要部分：可执行函数和依赖数组。如果数组为空，如下例所示，每次渲染组件时都会执行该函数。
 
@@ -564,7 +564,7 @@ React的useEffect钩子就是一个很好的例子。 useEffect在我们声明�
   useEffect(() => { console.log('var1 has changed') }, [var1])
 ```
 
-也可以将JavaScript的事件监听器视为观察者模式。另外，响应式编程和库如[RxJS](https://rxjs.dev/)，用来处理异步信息和事件的方法也是这个模式。
+也可以将 JavaScript 的事件监听器视为观察者模式。另外，响应式编程和库如[RxJS](https://rxjs.dev/)，用来处理异步信息和事件的方法也是这个模式。
 
 <h1 id="roundup">总结</h1>
 

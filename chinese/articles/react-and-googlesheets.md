@@ -202,7 +202,7 @@ axios.post('url', this.state)
 
 submitHandler 方法
 
-用上面的代码替换 SubmitHandler 函数。 在这里，我们使用 Axios 将数据发送到URL，并通过 **.then** 关键字在控制台中获取响应。
+用上面的代码替换 SubmitHandler 函数。 在这里，我们使用 Axios 将数据发送到 URL，并通过 **.then** 关键字在控制台中获取响应。
 
 把 axios.post('url') 中的 URL 替换成 **sheet.best** 中的 CONNECTION URL。
 
@@ -218,7 +218,7 @@ axios.post('https://sheet.best/api/sheets/a6e67deb-2f00-43c3-89d3-b331341d53ed',
 
 submitHandler 函数
 
-现在，打开Google表格，然后填写第一列，即姓name、age、salary 和 hobby。请仔细填写，否则将无法正常工作。 应该区分大小写。
+现在，打开 Google 表格，然后填写第一列，即姓 name、age、salary 和 hobby。请仔细填写，否则将无法正常工作。 应该区分大小写。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/Screenshot-2021-02-15-02-43-12.png)
 

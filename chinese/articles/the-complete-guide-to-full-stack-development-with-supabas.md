@@ -5,61 +5,61 @@
 
 ![使用 Next.js 和 Supabase 进行全栈开发](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/supanext.png)
 
-[Supabase](https://twitter.com/supabase_io) 是一个Firebase的开源替代品，让你在不到两分钟的时间内创建一个实时后台。
+[Supabase](https://twitter.com/supabase_io) 是一个 Firebase 的开源替代品，让你在不到两分钟的时间内创建一个实时后台。
 
-在过去的几个月里，Supabase继续通过我的网站获得开发人员的宣传和采用。和我交流过的很多人都喜欢它利用 SQL 风格的数据库这一事实，他们也喜欢它是开源的。
+在过去的几个月里，Supabase 继续通过我的网站获得开发人员的宣传和采用。和我交流过的很多人都喜欢它利用 SQL 风格的数据库这一事实，他们也喜欢它是开源的。
 
-当你创建一个项目时，Supabase会自动给你一个Postgres SQL数据库、用户认证和API。从那里你可以很容易地实现额外的功能，如实时订阅和文件存储。
+当你创建一个项目时，Supabase 会自动给你一个 Postgres SQL 数据库、用户认证和 API。从那里你可以很容易地实现额外的功能，如实时订阅和文件存储。
 
 在本指南中，你将学习如何构建一个全栈应用程序，实现大多数应用程序需要的核心功能--如路由、数据库、API、认证、授权、实时数据和细粒度访问控制。我们将使用一个现代堆栈，包括[React](https://reactjs.org/docs/getting-started.html), [Next.js](https://nextjs.org/), 和 [TailwindCSS](https://tailwindcss.com/).
 
-我试图把我自己在使用Supabase的过程中所学到的东西提炼成一个尽可能简短的指南，这样你也可以开始用这个框架构建全栈应用。
+我试图把我自己在使用 Supabase 的过程中所学到的东西提炼成一个尽可能简短的指南，这样你也可以开始用这个框架构建全栈应用。
 
-我们将建立的应用程序是一个多用户博客应用程序，其中包含了你在许多现代应用程序中看到的所有类型的功能。这将使我们超越基本的CRUD，实现文件存储以及授权和细粒度的访问控制等功能。
+我们将建立的应用程序是一个多用户博客应用程序，其中包含了你在许多现代应用程序中看到的所有类型的功能。这将使我们超越基本的 CRUD，实现文件存储以及授权和细粒度的访问控制等功能。
 
->  你可以找到我们将要建立的应用程序的代码，[在这里](https://github.com/dabit3/supabase-next.js)。
+> 你可以找到我们将要建立的应用程序的代码，[在这里](https://github.com/dabit3/supabase-next.js)。
 
 通过学习如何将所有这些功能结合在一起，你应该能够利用你在这里学到的东西，建立你自己的想法。了解基本结构本身，你就可以在将来带着这些知识，以你认为合适的方式使用它。
 
-## Supabase概述
+## Supabase 概述
 
 ### 如何构建全栈式应用程序
 
 我对全栈式无服务器框架非常着迷，因为它们为希望构建完整应用的开发者提供了大量的支持和敏捷性。
 
-Supabase将强大的后端服务与易于使用的客户端库和SDK结合起来，提供了一个端到端的解决方案。
+Supabase 将强大的后端服务与易于使用的客户端库和 SDK 结合起来，提供了一个端到端的解决方案。
 
 这种组合使你不仅可以在后端建立起必要的个别功能和服务，而且可以通过利用同一团队维护的客户端库，在前端轻松地将它们整合在一起。
 
-由于Supabase是开源的，你可以选择自我托管或将你的后端部署为托管服务。而且，正如你所看到的，这对我们来说将很容易在一个不需要信用卡的，免费的基础设施上开始做。
+由于 Supabase 是开源的，你可以选择自我托管或将你的后端部署为托管服务。而且，正如你所看到的，这对我们来说将很容易在一个不需要信用卡的，免费的基础设施上开始做。
 
-## 为什么使用Supabase?
+## 为什么使用 Supabase?
 
-我曾在AWS领导前端Web和移动开发者倡导团队，并写了一本关于构建这些类型的应用程序的书。所以我在这个领域有相当多的建设经验。
+我曾在 AWS 领导前端 Web 和移动开发者倡导团队，并写了一本关于构建这些类型的应用程序的书。所以我在这个领域有相当多的建设经验。
 
-我认为Supabase带来了一些非常强大的功能，当我开始使用它进行构建时，这些功能立即让我感到震惊。
+我认为 Supabase 带来了一些非常强大的功能，当我开始使用它进行构建时，这些功能立即让我感到震惊。
 
 ### 数据访问方式
 
-我过去使用的一些工具和框架的最大限制之一是缺乏查询功能。我非常喜欢Supabase，因为它是建立在Postgres之上的，它能够实现一套极其丰富的、开箱即用的高性能查询功能，而不需要编写任何额外的后端代码。
+我过去使用的一些工具和框架的最大限制之一是缺乏查询功能。我非常喜欢 Supabase，因为它是建立在 Postgres 之上的，它能够实现一套极其丰富的、开箱即用的高性能查询功能，而不需要编写任何额外的后端代码。
 
-客户端SDK提供了易于使用的[filters](https://supabase.io/docs/reference/javascript/using-filters) 和[modifiers](https://supabase.io/docs/reference/javascript/using-modifiers)，以实现几乎无限的数据访问模式的组合。
+客户端 SDK 提供了易于使用的[filters](https://supabase.io/docs/reference/javascript/using-filters) 和[modifiers](https://supabase.io/docs/reference/javascript/using-modifiers)，以实现几乎无限的数据访问模式的组合。
 
-因为数据库是SQL，关系型数据很容易配置和查询，而且客户端库把它作为第一等公民来考虑。
+因为数据库是 SQL，关系型数据很容易配置和查询，而且客户端库把它作为第一等公民来考虑。
 
 ### 权限
 
-当你写好 "hello world "时，许多类型的框架和服务很快就会被淘汰。这是因为大多数真实世界的需要远远超出了你经常看到的这些工具所提供的基本CRUD功能。
+当你写好 "hello world "时，许多类型的框架和服务很快就会被淘汰。这是因为大多数真实世界的需要远远超出了你经常看到的这些工具所提供的基本 CRUD 功能。
 
 一些框架和管理服务的问题是，它们创建的抽象没有足够的扩展性，无法轻松修改配置或定制业务逻辑。这些限制往往使其难以考虑到在现实世界中构建应用程序时出现的许多一次性的用例。
 
-除了实现广泛的数据访问模式外，Supabase还使配置授权和精细的访问控制变得容易。这是因为它是简单的Postgres，使你能够直接从内置的SQL编辑器中实现任何你想要的[row-level security policies(行级安全策略)](https://www.postgresql.org/docs/10/ddl-rowsecurity.html) 你可以直接从内置的SQL编辑器中获取你想要的信息(我们将在这里讨论这个问题)。
+除了实现广泛的数据访问模式外，Supabase 还使配置授权和精细的访问控制变得容易。这是因为它是简单的 Postgres，使你能够直接从内置的 SQL 编辑器中实现任何你想要的[row-level security policies(行级安全策略)](https://www.postgresql.org/docs/10/ddl-rowsecurity.html) 你可以直接从内置的 SQL 编辑器中获取你想要的信息(我们将在这里讨论这个问题)。
 
 ### UI 组件
 
-除了由构建其他Supabase工具的同一个团队维护的客户端库之外，他们还维护了一个[UI 组件库](https://ui.supabase.io/) (beta)使你能够使用各种UI元素来启动和运行。
+除了由构建其他 Supabase 工具的同一个团队维护的客户端库之外，他们还维护了一个[UI 组件库](https://ui.supabase.io/) (beta)使你能够使用各种 UI 元素来启动和运行。
 
-最强大的是[Auth](https://ui.supabase.io/components/auth)，它与你的Supabase项目集成，以快速启动一个用户认证流程(我将在本教程中使用它)。
+最强大的是[Auth](https://ui.supabase.io/components/auth)，它与你的 Supabase 项目集成，以快速启动一个用户认证流程(我将在本教程中使用它)。
 
 ### 多种认证方式
 
@@ -80,18 +80,18 @@ Supabase enables all of the following types of authentication mechanisms:
 
 它最大的优点之一是[完全开源](https://github.com/supabase) (是的，后端也是)。 这意味着，你可以选择无服务器托管的方式，也可以自己托管。
 
-这意味着，如果你愿意，你可以[用Docker运行Supabase，托管自己的应用程序](https://supabase.io/docs/guides/self-hosting) 在 AWS, GCP, or Azure上。这将消除你在使用Supabase时，避免云服务商锁定问题。
-## 如何开始使用Supabase
+这意味着，如果你愿意，你可以[用 Docker 运行 Supabase，托管自己的应用程序](https://supabase.io/docs/guides/self-hosting) 在 AWS, GCP, or Azure 上。这将消除你在使用 Supabase 时，避免云服务商锁定问题。
+## 如何开始使用 Supabase
 
 ### 项目设置
 
-为了开始，让我们首先创建Next.js应用程序。
+为了开始，让我们首先创建 Next.js 应用程序。
 
 ```sh
 npx create-next-app next-supabase
 ```
 
-接下来，进入目录并使用NPM或Yarn安装我们的应用程序所需的依赖。
+接下来，进入目录并使用 NPM 或 Yarn 安装我们的应用程序所需的依赖。
 
 
 ```sh
@@ -99,13 +99,13 @@ npm install @supabase/supabase-js @supabase/ui react-simplemde-editor easymde re
 npm install tailwindcss@latest @tailwindcss/typography postcss@latest autoprefixer@latest
 ```
 
-接下来，创建必要的Tailwind配置文件:
+接下来，创建必要的 Tailwind 配置文件:
 
 ```sh
 npx tailwindcss init -p
 ```
 
-现在更新**tailwind.config.js**，将Tailwind typography插件添加到插件数组中。我们将使用这个插件来为我们的博客设计标记。
+现在更新**tailwind.config.js**，将 Tailwind typography 插件添加到插件数组中。我们将使用这个插件来为我们的博客设计标记。
 ```
 plugins: [
   require('@tailwindcss/typography')
@@ -120,25 +120,25 @@ plugins: [
 @tailwind utilities;
 ```
 
-### Supabase项目初始化
+### Supabase 项目初始化
 
-现在项目已经在本地创建，让我们来创建Supabase项目。
+现在项目已经在本地创建，让我们来创建 Supabase 项目。
 
-为此，请前往[Supabase.io](https://supabase.io/)，点击**Start Your Project**。通过GitHub账号完成认证，然后在账户中提供给你的组织下创建一个新项目。
+为此，请前往[Supabase.io](https://supabase.io/)，点击**Start Your Project**。通过 GitHub 账号完成认证，然后在账户中提供给你的组织下创建一个新项目。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/myaccountsorg.jpg)
 
 给项目一个**Name**和**Password**，然后点击**Create new project**。
 
-你的项目将需要大约2分钟的时间来创建。
+你的项目将需要大约 2 分钟的时间来创建。
 
-### 如何在Supabase中创建一个数据库表
+### 如何在 Supabase 中创建一个数据库表
 
 当你创建了你的项目，让我们继续为我们的应用程序创建表，以及我们需要的所有权限。要做到这一点，请点击左边菜单中的**SQL**链接。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Screen-Shot-2021-06-06-at-6.07.00-PM.png)
 
-在这个视图中，点击**Query-1**下的 **Open queries**，粘贴以下SQL查询，并点击 **RUN**。
+在这个视图中，点击**Query-1**下的 **Open queries**，粘贴以下 SQL 查询，并点击 **RUN**。
 
 ```
 CREATE TABLE posts (
@@ -168,7 +168,7 @@ create policy "Posts are public." on posts for
 这将创建我们将在应用程序中使用的`posts`表。它还启用了一些行级(row)权限:
 
 -   所有用户都可以查询帖子
--   只有已登录的用户可以创建帖子，他们的用户ID必须与传入参数的用户ID一致
+-   只有已登录的用户可以创建帖子，他们的用户 ID 必须与传入参数的用户 ID 一致
 -   只有帖子的主人可以更新或删除它
 
 现在，如果我们点击**Table editor**链接，我们应该看到我们的新表以适当的模式创建。
@@ -179,9 +179,9 @@ create policy "Posts are public." on posts for
 
 ### Next.js Supabase 配置
 
-现在项目已经创建，我们需要一种方法让我们的Next.js应用程序知道我们刚刚为它创建的后端服务。
+现在项目已经创建，我们需要一种方法让我们的 Next.js 应用程序知道我们刚刚为它创建的后端服务。
 
-对我们来说，配置的最好方法是使用环境变量。Next.js允许通过在项目根部创建一个名为 **.env.local** 的文件来设置环境变量，并将它们存储在那里。
+对我们来说，配置的最好方法是使用环境变量。Next.js 允许通过在项目根部创建一个名为 **.env.local** 的文件来设置环境变量，并将它们存储在那里。
 
 为了向浏览器暴露一个变量，你必须在变量前加上 `NEXT_PUBLIC_`。
 
@@ -192,7 +192,7 @@ NEXT_PUBLIC_SUPABASE_URL=https://app-id.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-public-api-key
 ```
 
-你可以在Supabase仪表板的设置中找到你的API URL和API密钥的值:
+你可以在 Supabase 仪表板的设置中找到你的 API URL 和 API 密钥的值:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/appurls.jpg)
 
@@ -209,7 +209,7 @@ export const supabase = createClient(
 
 现在我们将能够导入`supabase`实例并在我们的应用程序中的任何地方使用它。
 
-下面是使用Supabase JavaScript客户端与API互动的概况。
+下面是使用 Supabase JavaScript 客户端与 API 互动的概况。
 
 **查询数据:**
 
@@ -256,7 +256,7 @@ const { user, session, error } = await supabase.auth.signIn({
 })
 ```
 
-在我们的案例中，我们不会手工编写主要的认证逻辑，我们将使[Supabase UI](https://ui.supabase.io/components/auth)中的Auth组件。
+在我们的案例中，我们不会手工编写主要的认证逻辑，我们将使[Supabase UI](https://ui.supabase.io/components/auth)中的 Auth 组件。
 
 ## 如何构建应用程序
 
@@ -420,21 +420,21 @@ function CreatePost() {
 export default CreatePost
 ```
 
-这个组件渲染了一个Markdown编辑器，允许用户创建新的帖子。
+这个组件渲染了一个 Markdown 编辑器，允许用户创建新的帖子。
 
 `createNewPost`函数将使用`supabase`实例，使用本地表单状态创建新的帖子。
 
-你可能注意到，我们没有传入任何消息头(headers)。这是因为如果用户已经登录，Supabase客户端库会自动将访问令牌包含在已登录用户的消息头(headers)中。
+你可能注意到，我们没有传入任何消息头(headers)。这是因为如果用户已经登录，Supabase 客户端库会自动将访问令牌包含在已登录用户的消息头(headers)中。
 
 ### 如何查看单个帖子
 
 我们需要配置一个页面来查看单个帖子。
 
-这个页面使用`getStaticPaths`来在构建时根据从API回来的帖子动态地创建页面。
+这个页面使用`getStaticPaths`来在构建时根据从 API 回来的帖子动态地创建页面。
 
-我们还使用`fallback`标志来启用动态SSG页面生成的返回路径。
+我们还使用`fallback`标志来启用动态 SSG 页面生成的返回路径。
 
-我们使用`getStaticProps`使帖子数据被获取，然后在构建时作为props传入页面。
+我们使用`getStaticProps`使帖子数据被获取，然后在构建时作为 props 传入页面。
 
 在**pages**目录下创建一个名为**posts**的新文件夹， 并在该文件夹中创建一个名为 **[id\].js**的文件。在**pages/posts/[id\].js**，添加以下代码。
 
@@ -614,7 +614,7 @@ export default function MyPosts() {
 
 接下来，在**pages**目录下创建一个名为**edit-post**的新文件夹。然后，在这个文件夹中创建一个名为 **[id\].js** 的文件。
 
-在这个文件中，我们将从一个路由参数中获取访问帖子的`id'。当组件加载时，我们将使用来自路由的帖子ID来获取帖子数据，并使其可用于编辑。
+在这个文件中，我们将从一个路由参数中获取访问帖子的`id'。当组件加载时，我们将使用来自路由的帖子 ID 来获取帖子数据，并使其可用于编辑。
 
 在这个文件中，添加以下代码:
 
@@ -700,9 +700,9 @@ export default EditPost
 
 现在，我们已经运行了应用程序，添加实时更新是很容易的。
 
-默认情况下，数据库中的Realtime是禁用的。让我们为**posts**表打开Realtime。
+默认情况下，数据库中的 Realtime 是禁用的。让我们为**posts**表打开 Realtime。
 
-要做到这一点，打开应用程序仪表板并点击 **Databases** -> **Replication** -> **0 Tables** (Source下面)。 打开 **posts** 表Realtime功能。 [这里](https://supabase.io/docs/guides/api#managing-realtime) 是一个关于如何做的视频演练，以使其清晰明了。
+要做到这一点，打开应用程序仪表板并点击 **Databases** -> **Replication** -> **0 Tables** (Source 下面)。 打开 **posts** 表 Realtime 功能。 [这里](https://supabase.io/docs/guides/api#managing-realtime) 是一个关于如何做的视频演练，以使其清晰明了。
 
 接下来，打开 **src/index.js**，用以下代码更新 `useEffect` hook:
 
@@ -723,9 +723,9 @@ export default EditPost
 
 ## 下一步
 
-现在你应该对如何用Supabase和Next.js构建全栈应用有了一定的了解。
+现在你应该对如何用 Supabase 和 Next.js 构建全栈应用有了一定的了解。
 
-如果你想了解更多关于用Supabase构建全栈应用的信息，我建议查看以下资源。
+如果你想了解更多关于用 Supabase 构建全栈应用的信息，我建议查看以下资源。
 
 -   [Supabase 文档](https://supabase.io/docs)
 -   [Supabase 示例项目](https://github.com/supabase/supabase/tree/master/examples)
@@ -734,4 +734,4 @@ export default EditPost
 -   [Build in Public 001 - 构建 Next.js + Supabase 教程](https://www.youtube.com/watch?v=p561ogKZ63o)
 -   [身份验证深入了解](https://supabase.io/docs/learn/auth-deep-dive/auth-deep-dive-jwts)
 -   [Supabase 和 Sveltekit](https://www.youtube.com/watch?v=j4AV2Liojk0)
--   [ 在Replit上使用Supabase和nodejs](https://www.youtube.com/watch?v=lQ5iIxaYduI)
+-   [在 Replit 上使用 Supabase 和 nodejs](https://www.youtube.com/watch?v=lQ5iIxaYduI)

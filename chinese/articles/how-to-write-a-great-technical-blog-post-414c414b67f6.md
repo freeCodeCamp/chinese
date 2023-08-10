@@ -7,11 +7,11 @@
 
 #### 五步法从构思到打磨出终稿
 
-我在开源社区工作了将近5年，建立并推广了包括 [Meteor](https://github.com/meteor/) 和 [Apollo](https://github.com/apollographql/) 在内的开发者工具。在这段时间里，我发现写博客是传播思想最有效的方式之一。
+我在开源社区工作了将近 5 年，建立并推广了包括 [Meteor](https://github.com/meteor/) 和 [Apollo](https://github.com/apollographql/) 在内的开发者工具。在这段时间里，我发现写博客是传播思想最有效的方式之一。
 
 一篇博客文章不需要像视频或会议演讲那样花很长时间来准备，它很容易上手，而且受众面很广。我个人也从写作中受益颇多：帮助我整理思路以及向他人传授我喜欢的技术的同时，也让我被更多人认识。
 
-自从2014年发布[我的第一篇博文](https://blog.meteor.com/collaborative-3d-scene-builder-in-50-lines-of-code-3c8ac717c658)以来，到目前为止，我已经在Medium上写了[68篇文章](https://medium.com/@stubailo/latest)。有些文章的浏览量超过5万，我的粉丝数也超过1000人。我也为我的朋友和同事编辑过许多文章。在这段时间里，我掌握了一些从提出概念到最终完稿的方法策略。
+自从 2014 年发布[我的第一篇博文](https://blog.meteor.com/collaborative-3d-scene-builder-in-50-lines-of-code-3c8ac717c658)以来，到目前为止，我已经在 Medium 上写了[68 篇文章](https://medium.com/@stubailo/latest)。有些文章的浏览量超过 5 万，我的粉丝数也超过 1000 人。我也为我的朋友和同事编辑过许多文章。在这段时间里，我掌握了一些从提出概念到最终完稿的方法策略。
 
 在本篇文章中，我将介绍我写文章时涉及的五个步骤：
 
@@ -32,11 +32,11 @@
 
 另一个办法是在一个你认为缺乏内容的领域写作。比如，现在关于如何申请技术会议的文章很少，那么写这方面内容就可以填补技术社区的空白。
 
-这里有一些具体的文章类型，你可以去看看。例子来自Apollo博客上GraphQL相关的文章：
+这里有一些具体的文章类型，你可以去看看。例子来自 Apollo 博客上 GraphQL 相关的文章：
 
-1.  实现特定目标的分步操作指南：[“在React Native中使用Flatlist创建可滚动列表”](https://blog.apollographql.com/loading-data-into-react-natives-flatlist-9646fa9a199b) 或者 [“通过Apollo和Recompose简化React组件”](https://blog.apollographql.com/simplify-your-react-components-with-apollo-and-recompose-8b9e302dea51)。这类文章很适合那些希望读懂就上手，然后迅速离开的读者。
-2.  关于特定主题的深入调查：[“在GraphQL中使用nullability”](https://blog.apollographql.com/using-nullability-in-graphql-2254f84c4ed7) 或者 [“GraphQL查询的剖析”](https://blog.apollographql.com/the-anatomy-of-a-graphql-query-6dffa9e9e747)。这类文章适合那些有时间慢慢深入学习的读者。
-3.  就一个常见主题列出多项实用因素：[“调用GraphQL API的4种简单方法”](https://blog.apollographql.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355) 或者[“静态GraphQL查询的5个好处”](https://blog.apollographql.com/5-benefits-of-static-graphql-queries-b7fa90b0b69a)。这类有趣又轻量的内容，适合碎片式阅读，读者无需阅读全部内容。
+1.  实现特定目标的分步操作指南：[“在 React Native 中使用 Flatlist 创建可滚动列表”](https://blog.apollographql.com/loading-data-into-react-natives-flatlist-9646fa9a199b) 或者 [“通过 Apollo 和 Recompose 简化 React 组件”](https://blog.apollographql.com/simplify-your-react-components-with-apollo-and-recompose-8b9e302dea51)。这类文章很适合那些希望读懂就上手，然后迅速离开的读者。
+2.  关于特定主题的深入调查：[“在 GraphQL 中使用 nullability”](https://blog.apollographql.com/using-nullability-in-graphql-2254f84c4ed7) 或者 [“GraphQL 查询的剖析”](https://blog.apollographql.com/the-anatomy-of-a-graphql-query-6dffa9e9e747)。这类文章适合那些有时间慢慢深入学习的读者。
+3.  就一个常见主题列出多项实用因素：[“调用 GraphQL API 的 4 种简单方法”](https://blog.apollographql.com/4-simple-ways-to-call-a-graphql-api-a6807bcdb355) 或者[“静态 GraphQL 查询的 5 个好处”](https://blog.apollographql.com/5-benefits-of-static-graphql-queries-b7fa90b0b69a)。这类有趣又轻量的内容，适合碎片式阅读，读者无需阅读全部内容。
 
 现在，我想消除一些你们常见的担忧。
 
@@ -47,7 +47,7 @@
 
 ![49vpFzkVXA9fHTQoMGGDKEnqVDBIY4-eZ8d7](https://cdn-media-1.freecodecamp.org/images/49vpFzkVXA9fHTQoMGGDKEnqVDBIY4-eZ8d7)
 
-灯泡-常用来象征思想 [James Pond来自Unsplash](https://unsplash.com/photos/1qkyck-UL3g)
+灯泡-常用来象征思想 [James Pond 来自 Unsplash](https://unsplash.com/photos/1qkyck-UL3g)
 
 ### 2\. 确定你的写作目标和读者对象
 
@@ -58,9 +58,9 @@
 -   **读者对象:** 想开始写博客的人，尤其是想写技术博客却还没写过的人。
 -   **写作目标:** 提供一套具体的写作步骤和指导方法，便于他们开始行动起来。
 
-有了这些以后，就要专注于文章的重点了，删掉没有意义的内容，不要增加看起来有关联但很多余的细节。我发现那种阅读时间在5至10分钟，相对简洁的文章是最好的。
+有了这些以后，就要专注于文章的重点了，删掉没有意义的内容，不要增加看起来有关联但很多余的细节。我发现那种阅读时间在 5 至 10 分钟，相对简洁的文章是最好的。
 
-了解读者背景可以帮助你基于读者现有知识水平去定制化写作。而且可以帮助你决定如何去发布和推广你的内容。比如，我就希望在freeCodeCamp上发表这篇文章，因为在我的目标读者中，可能已经有很多人读过此类文章了。
+了解读者背景可以帮助你基于读者现有知识水平去定制化写作。而且可以帮助你决定如何去发布和推广你的内容。比如，我就希望在 freeCodeCamp 上发表这篇文章，因为在我的目标读者中，可能已经有很多人读过此类文章了。
 
 
 ### 3\. 文章有开头、中间、结尾
@@ -83,7 +83,7 @@
 
 ![op8670wN9BlN6an-m9qZpZcFbitHwZnDFief](https://cdn-media-1.freecodecamp.org/images/op8670wN9BlN6an-m9qZpZcFbitHwZnDFief)
 
-就像道路标识一样，文章的结构可以引导读者阅读。[Bart Anestin来自Unsplash](https://unsplash.com/photos/bXMbMw560C8)
+就像道路标识一样，文章的结构可以引导读者阅读。[Bart Anestin 来自 Unsplash](https://unsplash.com/photos/bXMbMw560C8)
 
 
 ### 4\. 获取反馈并迭代文章
@@ -94,7 +94,7 @@
 
 你应该问你的文章审阅者一些什么问题呢？我的主要建议是尽可能地不设限。尽量不要提前解释你的目标。把草稿原封不动地交给审阅者，然后问他们从中得到了什么或者有什么修改建议。当读者在网上看到你的文章时，他们就因为已经被考虑进目标读者中而自然认可你的文章了。
 
-反馈主要是要验证一件事：这篇文章能否实现你在第2步中决定的目标？如果不能，那就一直迭代，直到你确信目标能实现为止。
+反馈主要是要验证一件事：这篇文章能否实现你在第 2 步中决定的目标？如果不能，那就一直迭代，直到你确信目标能实现为止。
 
 ### 5\. 添加点睛之笔：包装、发布和推广
 
@@ -103,30 +103,30 @@
 
 #### 包装
 
-想一个出色的标题和副标题，并确保文章至少有一张配图。文章分享到Twitter或Facebook时，读者会看到这些标题和图片的。这也是吸引读者阅读的机会。
+想一个出色的标题和副标题，并确保文章至少有一张配图。文章分享到 Twitter 或 Facebook 时，读者会看到这些标题和图片的。这也是吸引读者阅读的机会。
 
 同样重要的是，你的文章要让人觉得专业，这样你的内容才能真正出彩。文章中应该避免拼写错误、语法错误或者奇怪的格式。如果你有善于发现细节的朋友，可以请他们先阅读一遍文章，然后你再发布出去。
 
-[freeCodeCamp上关于文章的发布](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e) 也有一些文章，提到了写作风格和样式的技巧。既然你已经在文章中投入了这么多精力，那么额外多付出一些努力去打磨它，让它有更大的影响力也是值得的。
+[freeCodeCamp 上关于文章的发布](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e) 也有一些文章，提到了写作风格和样式的技巧。既然你已经在文章中投入了这么多精力，那么额外多付出一些努力去打磨它，让它有更大的影响力也是值得的。
 
 最后，请务必注明你引用了谁的作品或者谁帮助过审阅和编辑你的文章。
 
 #### 发布
 
-你就快大功告成了！选择最利于触达读者的平台来发布文章。通常，Medium是一个发表技术文章很好的平台，在这儿你的文章很容易被读者发现。
+你就快大功告成了！选择最利于触达读者的平台来发布文章。通常，Medium 是一个发表技术文章很好的平台，在这儿你的文章很容易被读者发现。
 
-为了效果更好，试试将你的文章发表在有助于分享你内容的平台上-基于这种考虑，我选择了freeCodeCamp。因为我认为这个建议是考虑了freeCodeCamp上的读者人群。如果你也想这样做，[这里有他们给出的提交文章的指南](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e)。你感兴趣的发布平台也可能正在寻找相应的文章，所以大胆去联系吧！
+为了效果更好，试试将你的文章发表在有助于分享你内容的平台上-基于这种考虑，我选择了 freeCodeCamp。因为我认为这个建议是考虑了 freeCodeCamp 上的读者人群。如果你也想这样做，[这里有他们给出的提交文章的指南](https://medium.freecodecamp.org/how-to-get-published-in-the-freecodecamp-medium-publication-9b342a22400e)。你感兴趣的发布平台也可能正在寻找相应的文章，所以大胆去联系吧！
 
 
 #### 推广
 
-即使你真正发布了文章，工作也还没有结束！如果你想要读者看到你写的东西，并从中受益，那就要把文章分享到读者经常阅读的地方。像包括Facebook群组、Reddit、Hacker News、LinkedIn或者其它任何平台。另外，也要在你自己的社交媒体账户分享你的创作，比如Twitter。你的朋友会很乐意阅读、分享和点赞你的文章。
+即使你真正发布了文章，工作也还没有结束！如果你想要读者看到你写的东西，并从中受益，那就要把文章分享到读者经常阅读的地方。像包括 Facebook 群组、Reddit、Hacker News、LinkedIn 或者其它任何平台。另外，也要在你自己的社交媒体账户分享你的创作，比如 Twitter。你的朋友会很乐意阅读、分享和点赞你的文章。
 
 现在，你已经大功告成了！去喝杯咖啡或者散散步吧-把一篇博客文章从头到尾写完可不是一件小事。阅读来自社区的所有反馈和回复。当你有了另一个想法时，又继续这样来一遍吧！
 
 ![lMYImUN-AHrgvCD74GhFaHyXGkIa6L0zP15z](https://cdn-media-1.freecodecamp.org/images/lMYImUN-AHrgvCD74GhFaHyXGkIa6L0zP15z)
 
-精美的包装对美味的甜甜圈来说是锦上添花。[Zach Miles来自Unsplash](https://unsplash.com/photos/BE9AifuJfD4)
+精美的包装对美味的甜甜圈来说是锦上添花。[Zach Miles 来自 Unsplash](https://unsplash.com/photos/BE9AifuJfD4)
 
 ### 除了实践，没有别的选择
 
@@ -136,4 +136,4 @@
 
 所以，即使你的第一篇、第二篇或者第三篇文章没有成功，也要继续尝试写新的东西。把你的想法写出来，并不断优化。世界想听听你要说点什么，去告诉他们吧！
 
-_非常感谢[Anvisha Pai](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)、[Angela Zhang](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)、[Katie Siegel](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)和freeCodeCamp的编辑人员，帮助审阅这篇文章。_
+_非常感谢[Anvisha Pai](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)、[Angela Zhang](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)、[Katie Siegel](https://www.freecodecamp.org/news/how-to-write-a-great-technical-blog-post-414c414b67f6/undefined)和 freeCodeCamp 的编辑人员，帮助审阅这篇文章。_

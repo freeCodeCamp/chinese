@@ -7,19 +7,19 @@
 
 大家好！本文将讨论记忆化（memoization），这是一种优化手段，旨在减轻繁重的计算过程。
 
-首先我会介绍什么是记忆化以及在什么情况下要使用记忆化，然后我会通过JavaScript和React的实际例子来进一步讲解。
+首先我会介绍什么是记忆化以及在什么情况下要使用记忆化，然后我会通过 JavaScript 和 React 的实际例子来进一步讲解。
 
 ## 文章目录
 
 -   [什么是记忆化](#what-is-memoization)
 -   [记忆化如何运行](#how-does-memoization-work)
--   [JavaScript记忆化例子](#javascript-memoization-example)
--   [React记忆化例子](#react-memoization-example)
+-   [JavaScript 记忆化例子](#javascript-memoization-example)
+-   [React 记忆化例子](#react-memoization-example)
     -   [纯组件](#pure-components)
     -   [纯类组件](#purecomponent-class)
-    -   [Memo高阶组件](#memo-higher-order-component)
-    -   [什么时候使用useCallback钩子](#when-to-use-the-usecallback-hook)
-    -   [什么时候使用useMemo钩子](#when-to-use-the-usememo-hook)
+    -   [Memo 高阶组件](#memo-higher-order-component)
+    -   [什么时候使用 useCallback 钩子](#when-to-use-the-usecallback-hook)
+    -   [什么时候使用 useMemo 钩子](#when-to-use-the-usememo-hook)
     -   [什么时候使用记忆化](#when-to-memoize)
 -   [总结](#round-up)
 
@@ -35,7 +35,7 @@
 
 <h2 id="how-does-memoization-work">记忆化如何运行</h2>
 
-JavaScript中的记忆化以两个概念为基础：
+JavaScript 中的记忆化以两个概念为基础：
 
 -   **闭包**: 结合了函数及其声明的词法作用域。 想要进一步了解可以阅读[这篇文章](https://www.freecodecamp.org/news/closures-in-javascript/)和[这篇文章](https://www.freecodecamp.org/news/scope-and-closures-in-javascript/)。
 -   **高阶函数**: 指在其他函数中运行的函数，要么是作为函数的参数，要么是被返回。想要进一步了解可以阅读[这篇文章](https://www.freecodecamp.org/news/higher-order-functions-in-javascript-examples/)。
@@ -44,7 +44,7 @@ JavaScript中的记忆化以两个概念为基础：
 
 我将使用经典的斐波那契数列来解释这个晦涩难懂的概念。
 
-**斐波那契数列** 是一组数列，以1或者0打头，紧接着是1，之后的数字都是前两个数字之后，这些数字也被称作斐波那契数。
+**斐波那契数列** 是一组数列，以 1 或者 0 打头，紧接着是 1，之后的数字都是前两个数字之后，这些数字也被称作斐波那契数。
 
 数列如下：
 
@@ -52,7 +52,7 @@ JavaScript中的记忆化以两个概念为基础：
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, …
 ```
 
-假设我们需要编写一个函数返回斐波那契数列的第n个数。由于任意斐波那契数是前两个数之和，所以可以使用递归：
+假设我们需要编写一个函数返回斐波那契数列的第 n 个数。由于任意斐波那契数是前两个数之和，所以可以使用递归：
 
 ```javascript
 const fib = n => {
@@ -90,13 +90,13 @@ const fib = (n, memo) => {
 memo = memo || {}
 ```
 
-接着检查memo对象的键是否包含了函数接收的参数，如果包含，直接返回对应的值。这就是魔法诞生的地方，当值被存储到memo中，我们就不需要多余的递归了。
+接着检查 memo 对象的键是否包含了函数接收的参数，如果包含，直接返回对应的值。这就是魔法诞生的地方，当值被存储到 memo 中，我们就不需要多余的递归了。
 
 ```javascript
 if (memo[n]) return memo[n]
 ```
 
-如果当前值并不在memo中，我们再次调用**fib**，但将**memo**也作为参数传入，我们调用的函数就共享之前函数调用中记忆的值。需要注意的是，在返回结果之前需要先在缓存中添加结果。 
+如果当前值并不在 memo 中，我们再次调用**fib**，但将**memo**也作为参数传入，我们调用的函数就共享之前函数调用中记忆的值。需要注意的是，在返回结果之前需要先在缓存中添加结果。 
 
 ```javascript
 return memo[n] = fib(n-1, memo) + fib(n-2, memo)
@@ -106,22 +106,22 @@ return memo[n] = fib(n-1, memo) + fib(n-2, memo)
 
 <h2 id="react-memoization-example">React记忆化例子</h2>
 
-在React中，使用记忆化可以避免没必要的重复渲染，从而优化应用。
+在 React 中，使用记忆化可以避免没必要的重复渲染，从而优化应用。
 
-如我在 [这篇关于管理React state的文章中](https://www.freecodecamp.org/news/how-to-manage-state-in-a-react-app/)介绍的这样，组件的再次渲染取决于两样东西：**state的改变**或者 **props的改变**。 这正是我们可以“缓存”的内容，从而避免不必要的重新渲染。
+如我在 [这篇关于管理 React state 的文章中](https://www.freecodecamp.org/news/how-to-manage-state-in-a-react-app/)介绍的这样，组件的再次渲染取决于两样东西：**state 的改变**或者 **props 的改变**。 这正是我们可以“缓存”的内容，从而避免不必要的重新渲染。
 
 在展示代码示例之前，我们先了解一些重要的概念。
 
 <h3 id="pure-components">纯组件</h3>
 
-React支持类组件和函数组件。函数组件是一个返回JSX的JavaScript简单函数，类组件是一个继承React.Component的JavaScript类，并使用render方法返回JSX。
+React 支持类组件和函数组件。函数组件是一个返回 JSX 的 JavaScript 简单函数，类组件是一个继承 React.Component 的 JavaScript 类，并使用 render 方法返回 JSX。
 
 那什么是纯组件呢？根据函数式编程范式的纯函数概念，纯函数指的是：
 
 -   返回值仅由输入值决定
 -   相同输入值的返回值相同
 
-同样，一个React纯组件即传入同样的state和props，渲染结果相同。
+同样，一个 React 纯组件即传入同样的 state 和 props，渲染结果相同。
 
 一个纯组件的例子如下：
 
@@ -134,9 +134,9 @@ export default function PureComponent({name, lastName}) {
 }
 ```
 
-我们传入了两个props，组件渲染了两个props。如果props不变，渲染结果也不变。
+我们传入了两个 props，组件渲染了两个 props。如果 props 不变，渲染结果也不变。
 
-但假设我们在渲染前给每个prop添加一个随机数字，这是即便props保持不变，输出也会发生变化，这就是一个非纯组件。
+但假设我们在渲染前给每个 prop 添加一个随机数字，这是即便 props 保持不变，输出也会发生变化，这就是一个非纯组件。
 
 ```javascript
 // Impure component
@@ -177,11 +177,11 @@ export default ImpurePureComponent
 
 <h3 id="purecomponent-class">纯类组件</h3>
 
-针对**类形式的纯组件**，React提供了`PureComponent`来应用记忆化。
+针对**类形式的纯组件**，React 提供了`PureComponent`来应用记忆化。
 
-继承`React.PureComponent`的组件进行性能和渲染优化。因为React使用`shouldComponentUpdate()` 方法来**浅比较props和state**。
+继承`React.PureComponent`的组件进行性能和渲染优化。因为 React 使用`shouldComponentUpdate()` 方法来**浅比较 props 和 state**。
 
-让我们来看一个例子。有一个类组件是一个计数器，在这个组件中有一个按钮控制计数器增加或者减少数字大小，还有一个子组件，传入了一个name prop，值为字符串。
+让我们来看一个例子。有一个类组件是一个计数器，在这个组件中有一个按钮控制计数器增加或者减少数字大小，还有一个子组件，传入了一个 name prop，值为字符串。
 
 ```javascript
 import React from "react"
@@ -223,7 +223,7 @@ class Counter extends React.Component {
   export default Counter
 ```
 
-子组件是一个 **纯组件** ，仅渲染接受到的prop。
+子组件是一个 **纯组件** ，仅渲染接受到的 prop。
 
 ```javascript
 import React from "react"
@@ -240,11 +240,11 @@ class Child extends React.Component {
 export default Child
 ```
 
-注意我们在两个组件都添加了console.log，以便每次渲染的时候我们可以在控制台看到信息。那么猜猜看每次我们点击增加和减少按钮的时候，控制台会出现什么消息呢？
+注意我们在两个组件都添加了 console.log，以便每次渲染的时候我们可以在控制台看到信息。那么猜猜看每次我们点击增加和减少按钮的时候，控制台会出现什么消息呢？
 
 ![2022-04-24_21-59](https://www.freecodecamp.org/news/content/images/2022/04/2022-04-24_21-59.png)
 
-即便接收到的是同样的prop，子组件也会重复渲染。
+即便接收到的是同样的 prop，子组件也会重复渲染。
 
 应用记忆化优化项目，我们需要子组件继承`React.PureComponent`，如下：
 ```javascript
@@ -268,7 +268,7 @@ export default Child
 
 只有初次渲染，没有不必要的重复渲染。小菜一碟！
 
-这样我们就讲解完毕类组件的记忆化，但是函数组件无法继承`React.PureComponent`类，所以React提供HOC和两个钩子来处理记忆化。
+这样我们就讲解完毕类组件的记忆化，但是函数组件无法继承`React.PureComponent`类，所以 React 提供 HOC 和两个钩子来处理记忆化。
 
 <h3 id="memo-higher-order-component">Memo高阶组件</h3>
 
@@ -323,13 +323,13 @@ console.log("Skinny Jack")
 })
 ```
 
-**高阶组件（HOC）** 类似于JavaScript中的高阶函数。高阶函数指将函数作为参数或者返回其他的函数的函数。React高阶组件将组件作为prop，并且在不改变组件的前提下对这个组件进行操作。你可以把HOC想象成一个打包组件。
+**高阶组件（HOC）** 类似于 JavaScript 中的高阶函数。高阶函数指将函数作为参数或者返回其他的函数的函数。React 高阶组件将组件作为 prop，并且在不改变组件的前提下对这个组件进行操作。你可以把 HOC 想象成一个打包组件。
 
 那么在这个例子中，`memo`执行了`PureComponent`同样的任务，避免了被打包的组件不必要的重复渲染。
 
 <h3 id="when-to-use-the-usecallback-hook">什么时候使用useCallback钩子</h3>
 
-值得注意的是当传入的prop是一个函数的时候，不可以使用`memo`，让我们对上面的例子稍做修改：
+值得注意的是当传入的 prop 是一个函数的时候，不可以使用`memo`，让我们对上面的例子稍做修改：
 
 ```javascript
 import { useState } from 'react'
@@ -370,13 +370,13 @@ console.log("Skinny Jack")
 })
 ```
 
-这样我们的prop就是一个始终打印同样字符串的函数，我们的控制台会再次变成这个样子：
+这样我们的 prop 就是一个始终打印同样字符串的函数，我们的控制台会再次变成这个样子：
 
 ![2022-04-24_22-04](https://www.freecodecamp.org/news/content/images/2022/04/2022-04-24_22-04.png)
 
-出现这种情况是因为实际上每次父组件重新渲染就会创建一个新的函数。创建一个新的函数就意味着传入了新的prop，子组件需要重新渲染。
+出现这种情况是因为实际上每次父组件重新渲染就会创建一个新的函数。创建一个新的函数就意味着传入了新的 prop，子组件需要重新渲染。
 
-为了解决这个问题，React提供了**useCallback**钩子，应用如下：
+为了解决这个问题，React 提供了**useCallback**钩子，应用如下：
 
 ```javascript
 import { useState, useCallback } from 'react'
@@ -405,9 +405,9 @@ export default function Counter() {
 
 这样就解决了子组件没有必要的重复渲染。
 
-useCallback在这里起到的作用是即便父组件重新渲染，函数的值不变。只要函数值不变，子组件的prop就保持不变。
+useCallback 在这里起到的作用是即便父组件重新渲染，函数的值不变。只要函数值不变，子组件的 prop 就保持不变。
 
-只需用useCallback钩子打包声明的函数。useCallback钩子包含一个依赖数组，可以在这个数组中声明触发函数值变化的变量（和useEffect的工作原理一样）。
+只需用 useCallback 钩子打包声明的函数。useCallback 钩子包含一个依赖数组，可以在这个数组中声明触发函数值变化的变量（和 useEffect 的工作原理一样）。
 
 ```javascript
 const testingTheTest = useCallback(() => { 
@@ -417,7 +417,7 @@ const testingTheTest = useCallback(() => {
 
 <h3 id="when-to-use-the-usememo-hook">什么时候使用useMemo钩子</h3>
 
-**useMemo**是类似于useCallback的一个钩子，useMemo不缓存函数，而是缓存**函数的返回值**。
+**useMemo**是类似于 useCallback 的一个钩子，useMemo 不缓存函数，而是缓存**函数的返回值**。
 
 在这个例子中`useMemo`缓存数字`2`。
 
@@ -432,13 +432,13 @@ const num = 1
 const answer = useMemo(() => num + 1, [num])
 ```
 
-你可以像使用memo高阶组件一样使用useMemo。两者的区别在于，useMemo是一个带有依赖数组的钩子，而memo是一个接收函数作为参数的高阶组件，并且根据prop有条件地更新组件。
+你可以像使用 memo 高阶组件一样使用 useMemo。两者的区别在于，useMemo 是一个带有依赖数组的钩子，而 memo 是一个接收函数作为参数的高阶组件，并且根据 prop 有条件地更新组件。
 
-除此之外，useMemo在两次渲染之间缓存返回值，而memo在两次渲染间缓存整个react组件。
+除此之外，useMemo 在两次渲染之间缓存返回值，而 memo 在两次渲染间缓存整个 react 组件。
 
 <h3 id="when-to-memoize">什么时候使用记忆化</h3>
 
-记忆化是React工具包里面非常好用的工具，但你并不需要时刻都使用它。这个工具仅在遇到需要进行大量运算的功能和任务时使用。
+记忆化是 React 工具包里面非常好用的工具，但你并不需要时刻都使用它。这个工具仅在遇到需要进行大量运算的功能和任务时使用。
 
 必须注意在上面的三个例子为了方便展示我们都监听了代码。但当任务的计算量并不繁重的时候，或许采用别的解决方面，或者放任不管是更好的选择。
 

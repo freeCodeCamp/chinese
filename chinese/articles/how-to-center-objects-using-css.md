@@ -26,9 +26,9 @@ Today I'm gonna show you how you can **center and align** your content with CSS.
 
 Methods
 
-## You can watch this tutorial on YouTube as well if you like:
+## You can watch this tutorial on YouTube as well if you like
 
-## But.... Wait A Minute!
+## But…… Wait A Minute!
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-35--3-.png)
 

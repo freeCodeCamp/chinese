@@ -5,23 +5,23 @@
 
 ![How to Get Started with Node.js – Beginner's Guide to Node](https://www.freecodecamp.org/news/content/images/size/w2000/2022/07/1200px-Node.js_logo.svg.png)
 
-Node.js是一个JavaScript运行时环境，将其能力扩展到服务器端。它是建立在Chrome的V8 JavaScript引擎上。
+Node.js 是一个 JavaScript 运行时环境，将其能力扩展到服务器端。它是建立在 Chrome 的 V8 JavaScript 引擎上。
 
-Node是一个事件驱动的非阻塞I/O模型。这意味着它是异步的，并且因为一个请求而阻塞（而是立即移动到下一个请求），这使得Node异常快速和高效。
+Node 是一个事件驱动的非阻塞 I/O 模型。这意味着它是异步的，并且因为一个请求而阻塞（而是立即移动到下一个请求），这使得 Node 异常快速和高效。
 
-所谓事件驱动，是指一旦Node启动，它就会启动所有的变量和函数，并等待事件的发生。
+所谓事件驱动，是指一旦 Node 启动，它就会启动所有的变量和函数，并等待事件的发生。
 
 ![image-195](https://www.freecodecamp.org/news/content/images/2022/06/image-195.png)
 
-NPM即Node包管理工具（Node Package Manager），辅助你管理Node包。 NPX即Node包执行（Node Package Execute），它可以执行任何npm包，甚至无需安装。
+NPM 即 Node 包管理工具（Node Package Manager），辅助你管理 Node 包。 NPX 即 Node 包执行（Node Package Execute），它可以执行任何 npm 包，甚至无需安装。
 
-可以前往[https://nodejs.org/en/download/](https://nodejs.org/en/download/)下载NPM。
+可以前往[https://nodejs.org/en/download/](https://nodejs.org/en/download/)下载 NPM。
 
-## 编写你的第一个Node.js项目(Hello World)
+## 编写你的第一个 Node.js 项目(Hello World)
 
-在你的项目文件中创建一个名为hello\_world.js的文件。
+在你的项目文件中创建一个名为 hello_world.js 的文件。
 
-然后在如VS Code这样的代码编辑器中打开文件。在编辑器中输入`console.log(“Hello World”);`。
+然后在如 VS Code 这样的代码编辑器中打开文件。在编辑器中输入`console.log(“Hello World”);`。
 
 打开终端，并且导航到文件所在的位置。
 
@@ -29,11 +29,11 @@ NPM即Node包管理工具（Node Package Manager），辅助你管理Node包。 
 
 ![image-196](https://www.freecodecamp.org/news/content/images/2022/06/image-196.png)
 
-## 如何导入Node核心模块
+## 如何导入 Node 核心模块
 
 让我们从基础包开始，即**fs (文件系统)**。我们使用它来创建、读取和修改文件。
 
-导入fs模块，输入命令：`const fs = require(“fs”);`。
+导入 fs 模块，输入命令：`const fs = require(“fs”);`。
 
 使用这个模块中的函数，可以参考[文档](https://nodejs.org/docs/latest-v17.x/api/fs.html#file-system)。
 
@@ -54,11 +54,11 @@ fs.appendFileSync(filename, content);.
 
 ![1*dOqUqcuJ5a5vl_BQ_E0dSg](https://miro.medium.com/max/842/1*dOqUqcuJ5a5vl_BQ_E0dSg.png)
 
-## 如何安装NPM包
+## 如何安装 NPM 包
 
-我们将使用一个名为**superheroes（超级英雄）**的基础NPM包 (包含了一个随机的超级英雄清单)来帮助你理解NPM是如何运作的。
+我们将使用一个名为**superheroes（超级英雄）**的基础 NPM 包 (包含了一个随机的超级英雄清单)来帮助你理解 NPM 是如何运作的。
 
-我们可以在cmd中使用这条命令来安装任意npm包：
+我们可以在 cmd 中使用这条命令来安装任意 npm 包：
 
 ```cmd
 npm install superheroes
@@ -74,9 +74,9 @@ console.log(sh.random());.
 
 ![1*WfHNl2GDgyXBEwfV6oV0GQ](https://miro.medium.com/max/1400/1*WfHNl2GDgyXBEwfV6oV0GQ.png)
 
-再来试一试另外一个包。让我们安装时下最流行的一个npm包——“chalk"，这个包可以改变终端字符串的样式。
+再来试一试另外一个包。让我们安装时下最流行的一个 npm 包——“chalk"，这个包可以改变终端字符串的样式。
 
-使用以下命令安装chalk(我们将安装版本2.4.2，在这个版本中可以使用**require**方法)
+使用以下命令安装 chalk(我们将安装版本 2.4.2，在这个版本中可以使用**require**方法)
 
 ```js
 npm install chalk@2.4.2
@@ -90,11 +90,11 @@ chalk.color(text)
 
 ![1*AQ5TX0vxzPn5N0lzrSBbJw](https://miro.medium.com/max/1400/1*AQ5TX0vxzPn5N0lzrSBbJw.png)
 
-更多信息参考[chalk包的文档](https://www.npmjs.com/package/chalk)。
+更多信息参考[chalk 包的文档](https://www.npmjs.com/package/chalk)。
 
-## 如何在程序中初始化NPM
+## 如何在程序中初始化 NPM
 
-我们可以使用以下命令来初始化NPM：
+我们可以使用以下命令来初始化 NPM：
 
 ```js
 npm init
@@ -112,15 +112,15 @@ npm init
 
 ![1*hYaMdTgcLdABQ1qqjQdpRQ](https://miro.medium.com/max/1400/1*hYaMdTgcLdABQ1qqjQdpRQ.png)
 
-### 所以，package.json是什么?
+### 所以，package.json 是什么?
 
-package.json是Nodejs项目的一部分。它包含了所有依赖项（NPM包）的记录和每一个项目的原数据。
+package.json 是 Nodejs 项目的一部分。它包含了所有依赖项（NPM 包）的记录和每一个项目的原数据。
 
 如果其他人下载了这个项目，他们可以通过这个文件来安装所有运行程序需要的依赖项。
 
-## 如何使用Moment.js — 一个NPM包
+## 如何使用 Moment.js — 一个 NPM 包
 
-这是使用最多的NPM包之一，可以使用这个包来解析和验证日期。
+这是使用最多的 NPM 包之一，可以使用这个包来解析和验证日期。
 
 使用以下命令安装包：
 
@@ -134,7 +134,7 @@ npm i moment
 const moment = require(“moment”);
 ```
 
-通过创建一个Date对象来获取当前日期和时间（JavaScript方法），运行以下代码：
+通过创建一个 Date 对象来获取当前日期和时间（JavaScript 方法），运行以下代码：
 
 ```js
 const time = new Date();
@@ -154,11 +154,11 @@ console.log(parsedTime);
 
 ![1*V3hJ24cmTASx9k6Rv83gXg](https://miro.medium.com/max/1400/1*V3hJ24cmTASx9k6Rv83gXg.png)
 
-该项目的package.json中包含的所有依赖项 — 这个例子中的依赖项就是**moment**。
+该项目的 package.json 中包含的所有依赖项 — 这个例子中的依赖项就是**moment**。
 
 ![1*kKFpiaEOtsRbxN67do4HDw](https://miro.medium.com/max/1400/1*kKFpiaEOtsRbxN67do4HDw.png)
 
-在项目文件夹中也有**node\_modules**文件夹。该文件夹包含了所有项目依赖的的依赖项，包含moment，以及moment依赖的依赖包。
+在项目文件夹中也有**node\_modules**文件夹。该文件夹包含了所有项目依赖的的依赖项，包含 moment，以及 moment 依赖的依赖包。
 
 ![1*-mxxdXnGzLxG98LE2ebMDQ](https://miro.medium.com/max/454/1*-mxxdXnGzLxG98LE2ebMDQ.png)
 
@@ -168,33 +168,33 @@ console.log(parsedTime);
 
 ![1*b1VMBTQ3HtQtnaHUWGY8iQ](https://miro.medium.com/max/1400/1*b1VMBTQ3HtQtnaHUWGY8iQ.png)
 
-# 如何使用Express JS — 一个NodeJS框架
+# 如何使用 Express JS — 一个 NodeJS 框架
 
-Express是Node.js的一个web应用框架，该框架提供了全面的功能来支持web和移动应用的开发。
+Express 是 Node.js 的一个 web 应用框架，该框架提供了全面的功能来支持 web 和移动应用的开发。
 
-### 如何安装Express
+### 如何安装 Express
 
-使用以下命令来创建Express：
+使用以下命令来创建 Express：
 
 ```js
 npm install express
 ```
 
-然后这样导入Express：
+然后这样导入 Express：
 
 ```js
 const express = require("express");
 ```
 
-### 如何创建一个Express应用
+### 如何创建一个 Express 应用
 
-使用以下命令来创建Express应用：
+使用以下命令来创建 Express 应用：
 
 ```js
 const app = express()
 ```
 
-### 如何在端口3000启动服务器
+### 如何在端口 3000 启动服务器
 
 ```js
 app.listen(3000, () => { 
@@ -212,9 +212,9 @@ app.listen(3000, () => {
 
 可以使用 `app.get()`函数定义 “/”路由。
 
-**app.get (route, callback function)**函数被用于处理所有GET请求。
+**app.get (route, callback function)**函数被用于处理所有 GET 请求。
 
-这个回调函数有两个参数，**req**和**res**，分别指代的是HTTP请求和期望的响应。参数名（req，res）并不是固定的，所有你可以重命名为其他值。
+这个回调函数有两个参数，**req**和**res**，分别指代的是 HTTP 请求和期望的响应。参数名（req，res）并不是固定的，所有你可以重命名为其他值。
 
 ```js
 app.get("/", (req,res) => { 
@@ -224,9 +224,9 @@ app.get("/", (req,res) => {
 }
 ```
 
-## 如何使用Express来创建Hello World程序
+## 如何使用 Express 来创建 Hello World 程序
 
-在这个部分中我们将使用Express创建基本的Hello World程序：
+在这个部分中我们将使用 Express 创建基本的 Hello World 程序：
 
 ```js
 const express = require("express");
@@ -243,15 +243,15 @@ app.listen(3000, () => {
 
 ![1*uRqmENgESv8cdq-0oSaX8A](https://miro.medium.com/max/1060/1*uRqmENgESv8cdq-0oSaX8A.png)
 
-## 如何在Express中渲染静态文件
+## 如何在 Express 中渲染静态文件
 
-这部分介绍如何使用Express来渲染静态文件的概念。
+这部分介绍如何使用 Express 来渲染静态文件的概念。
 
-首先，创建一个新的项目文件夹，并且使用 `npm init -y`来初始化npm。
+首先，创建一个新的项目文件夹，并且使用 `npm init -y`来初始化 npm。
 
-使用 `npm i express`来安装Express，并创建一个名为app.js的文件。
+使用 `npm i express`来安装 Express，并创建一个名为 app.js 的文件。
 
-创建一个app，并在端口3000监听：
+创建一个 app，并在端口 3000 监听：
 
 ```js
 const express = require("express);
@@ -261,9 +261,9 @@ app.listen(3000, () => {
 }
 ```
 
-在根目录创建一个名为public的文件夹，来渲染静态web页面，如：HTML、CSS和JS。
+在根目录创建一个名为 public 的文件夹，来渲染静态 web 页面，如：HTML、CSS 和 JS。
 
-由于本教程重点在后端，所有我们不会花时间在前端部分，在public文件夹中，我们仅创建HTML文件。
+由于本教程重点在后端，所有我们不会花时间在前端部分，在 public 文件夹中，我们仅创建 HTML 文件。
 
 ![1*-OiGmKZaz7GKc3NdNVjZdg](https://miro.medium.com/max/1142/1*-OiGmKZaz7GKc3NdNVjZdg.png)
 
@@ -295,21 +295,21 @@ app.listen(3000, () => {
 
 ![1*2U5Qi3XKOaNF0MjXSTo0tg](https://miro.medium.com/max/1034/1*2U5Qi3XKOaNF0MjXSTo0tg.png)
 
-## 如何在Express中渲染动态文件
+## 如何在 Express 中渲染动态文件
 
 在这个部分我们将学习如何使用一个输入对象的值来渲染动态文件。
 
-有一些，如：pug、handlebars、ejs等模板用于动态页面的渲染。这些模板使得我们可以在运行时注入动态数据、if条件和循环。
+有一些，如：pug、handlebars、ejs 等模板用于动态页面的渲染。这些模板使得我们可以在运行时注入动态数据、if 条件和循环。
 
-在这里我们将讨论handlebars。
+在这里我们将讨论 handlebars。
 
-安装包 (express和hbs):
+安装包 (express 和 hbs):
 
 ```js
 npm i hbs express
 ```
 
-创建文件名为app.js的文件，并且导入包：
+创建文件名为 app.js 的文件，并且导入包：
 
 ```js
 const express = require(“express”);
@@ -317,7 +317,7 @@ const hbs = require(“hbs”);
 const path = require(“path”);
 ```
 
-创建Express，并在端口3000监听：
+创建 Express，并在端口 3000 监听：
 
 ```js
 const app = express();
@@ -326,7 +326,7 @@ app.listen(3000, (req,res) => {
 }
 ```
 
-将视图引擎（view engine）设置为hbs，使得handlebars生效：
+将视图引擎（view engine）设置为 hbs，使得 handlebars 生效：
 
 ```js
 app.set(“view engine”, “hbs”);
@@ -340,7 +340,7 @@ app.set(“view engine”, “hbs”);
 app.set(“views”, path.join(__dirname,“/views”);
 ```
 
-然后在根目录中创建 **views** 文件夹。 并在文件夹中创建index.hbs文件(.hbs是handlebars的扩展名)并插入以下HTML代码：
+然后在根目录中创建 **views** 文件夹。 并在文件夹中创建 index.hbs 文件(.hbs 是 handlebars 的扩展名)并插入以下 HTML 代码：
 
 ### index.hbs
 
@@ -358,7 +358,7 @@ app.set(“views”, path.join(__dirname,“/views”);
 
 **`{{author}}`** — 是插入动态数据的语法
 
-我们再创建一个app.get函数来处理路由"/"上的GET请求，并且发送动态数据**author**。
+我们再创建一个 app.get 函数来处理路由"/"上的 GET 请求，并且发送动态数据**author**。
 
 ```js
 app.get("/", (req, res) => { 
@@ -370,7 +370,7 @@ app.get("/", (req, res) => {
 
 **`res.render`**是一个渲染视图的函数，在这里我们传入了两个参数。第一个是去掉扩展名的文件名，第二个是本地变量对象，比方说 **author**。
 
-### app.js文件
+### app.js 文件
 
 ```js
 const express = require("express");
@@ -397,31 +397,31 @@ app.listen(3000, (req, res) => {
 
 ![1*JQt1mgjLTU-LJJ0XS7UH3A](https://miro.medium.com/max/824/1*JQt1mgjLTU-LJJ0XS7UH3A.png)
 
-# 如何使用Handlebars创建高级模板
+# 如何使用 Handlebars 创建高级模板
 
-在这一部分我们将学习可复用组件。在前面的章节我们给每一个页面的header和footer创建了相同的组件。
+在这一部分我们将学习可复用组件。在前面的章节我们给每一个页面的 header 和 footer 创建了相同的组件。
 
 这里的重复性工作就可以通过高级模板来简化。也就是说我们创建一个组件，并在需要的地方反复使用。
 
-### Handlebars引入部分（Partials）的概念
+### Handlebars 引入部分（Partials）的概念
 
-Partials是可被其他模板调用的handlebar文件。 Partials是一个被广泛应用的模板类概念，所以不仅限于Handlebars。
+Partials 是可被其他模板调用的 handlebar 文件。 Partials 是一个被广泛应用的模板类概念，所以不仅限于 Handlebars。
 
-想要构建可以复用的模板，可以将它们单独放在同一个文件夹内（Partial），然后在不同的模板中使用。可以将Partial理解为模块化模板的一种简单技术。
+想要构建可以复用的模板，可以将它们单独放在同一个文件夹内（Partial），然后在不同的模板中使用。可以将 Partial 理解为模块化模板的一种简单技术。
 
-可以通过以下步骤创建partial：
+可以通过以下步骤创建 partial：
 
--   初始化npm → `npm init -y`
--   安装必要的包、Express以及hbs → `npm i express hbs`
+-   初始化 npm → `npm init -y`
+-   安装必要的包、Express 以及 hbs → `npm i express hbs`
 -   创建文件夹模板
--   在文件夹模板内部创建另外两个文件夹： **partials和views**
+-   在文件夹模板内部创建另外两个文件夹： **partials 和 views**
 -   创建文件 **app.js**
 
 ![1*98jLDll1IWq-vd8H0ieNCg](https://miro.medium.com/max/472/1*98jLDll1IWq-vd8H0ieNCg.png)
 
 文件结构类似
 
-让我们创建两个partial文件: header.hbs和footer.hbs。同时也创建两个视图：index.hbs和about.hbs。
+让我们创建两个 partial 文件: header.hbs 和 footer.hbs。同时也创建两个视图：index.hbs 和 about.hbs。
 
 ![1*E32yq-EHCLFfUFzbgIbJJg](https://miro.medium.com/max/422/1*E32yq-EHCLFfUFzbgIbJJg.png)
 
@@ -501,15 +501,15 @@ app.listen(3000, () => {
 });
 ```
 
-这里基本和在Express中渲染动态数据章节类似，除了使用partial的时候我们需要 **注册partials**。
+这里基本和在 Express 中渲染动态数据章节类似，除了使用 partial 的时候我们需要 **注册 partials**。
 
-### 如何注册partials
+### 如何注册 partials
 
 ```js
 hbs.registerPartials(path_to_partials)
 ```
 
-由于我们在模板文件夹中创建了partials目录，这里是 partials 的路径：
+由于我们在模板文件夹中创建了 partials 目录，这里是 partials 的路径：
 
 ```js
 hbs.registerPartials(path.join(__dirname, "/templates/partials"));
@@ -517,10 +517,10 @@ hbs.registerPartials(path.join(__dirname, "/templates/partials"));
 
 # 总结
 
-在这本文章中，我们从理论到实践讲解了Node.js。虽然我们不能从一篇简短的文章中习得Node.js所有内容，但是我已经尽我所能地在这篇文章中涵盖了重要的知识点，来辅助你开启Node.js之旅。
+在这本文章中，我们从理论到实践讲解了 Node.js。虽然我们不能从一篇简短的文章中习得 Node.js 所有内容，但是我已经尽我所能地在这篇文章中涵盖了重要的知识点，来辅助你开启 Node.js 之旅。
 
-简言之，我们讨论了什么是Node.js，即一个非阻塞、事件驱动的JavaScript运行时环境，它是异步的、可以使用单线程来执行操作。我们还讨论了使用最广泛的短小、灵活的Node.js的web应用框架——Express。
+简言之，我们讨论了什么是 Node.js，即一个非阻塞、事件驱动的 JavaScript 运行时环境，它是异步的、可以使用单线程来执行操作。我们还讨论了使用最广泛的短小、灵活的 Node.js 的 web 应用框架——Express。
 
-我们还讲解了Node.js的NPM、 NPX以及静态和动态渲染。
+我们还讲解了 Node.js 的 NPM、 NPX 以及静态和动态渲染。
 
-总而言之，Node.js是一项令人惊叹的技术，而且由于其庞大的社区，其可能性是无穷无尽的。
+总而言之，Node.js 是一项令人惊叹的技术，而且由于其庞大的社区，其可能性是无穷无尽的。

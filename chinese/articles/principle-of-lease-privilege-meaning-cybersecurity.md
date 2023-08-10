@@ -109,9 +109,9 @@ In most countries, CEOs are liable in the event of a security breach. In the unf
 
 ## Real-World Incidents
 
--   [The 2013 Target security breach](https://www.usatoday.com/story/money/2017/05/23/target-pay-185m-2013-data-breach-affected-consumers/102063932/) — Target had to pay $18.5 million in damages after a security breach. Hackers gained access to target systems via a third-party vendor who had access to Target’s network.
--   [Solarwinds breach](https://www.techtarget.com/whatis/feature/SolarWinds-hack-explained-Everything-you-need-to-know) — Attackers gained access to one of many global (and fully privileged) accounts of Solarwinds. This led to one of the biggest breaches of the 21st century affecting even the US government.
--   [NSA Snowden breach](https://www.venafi.com/blog/deciphering-how-edward-snowden-breached-the-nsa) — Arguably the most famous security breach of all time, Edward Snowden had admin-level access to resources that helped him copy 1.7 million NSA files. NSA eliminated a number of sysadmins to improve the PoLP posture.
+-   [The 2013 Target security breach](https://www.usatoday.com/story/money/2017/05/23/target-pay-185m-2013-data-breach-affected-consumers/102063932/)—Target had to pay $18.5 million in damages after a security breach. Hackers gained access to target systems via a third-party vendor who had access to Target’s network.
+-   [Solarwinds breach](https://www.techtarget.com/whatis/feature/SolarWinds-hack-explained-Everything-you-need-to-know)—Attackers gained access to one of many global (and fully privileged) accounts of Solarwinds. This led to one of the biggest breaches of the 21st century affecting even the US government.
+-   [NSA Snowden breach](https://www.venafi.com/blog/deciphering-how-edward-snowden-breached-the-nsa)—Arguably the most famous security breach of all time, Edward Snowden had admin-level access to resources that helped him copy 1.7 million NSA files. NSA eliminated a number of sysadmins to improve the PoLP posture.
 
 ## Summary
 

@@ -1,123 +1,121 @@
 > -   原文地址：[What is End-to-End Testing and When Should You Use It?](https://www.freecodecamp.org/news/end-to-end-testing-tutorial/)
 > -   原文作者：Stan Georgian
-> -   译者：
+> -   译者：herosql
 > -   校对者：
 
-![What is End-to-End Testing and When Should You Use It?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/iam_os-Gr7q7kqfnVU-unsplash.jpg)
+![什么是端到端测试，你应该在什么时候使用它？](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/iam_os-Gr7q7kqfnVU-unsplash.jpg)
 
-Any serious application should be accompanied by a few test suites to validate its stability and performance.
+每个重要的应用都应该配备一些测试套件，以验证其稳定性和性能。
 
-There are many types of tests, each with their own purpose that cover specific aspects of the application. And so when you're testing your app, you should make sure that you have a good balance of various tests.
+有许多类型的测试，每种测试都有自己的目的，涵盖应用的特定方面。因此，当你测试你的应用时，你应该确保你有各种测试的良好平衡。
 
 ![](http://media.giphy.com/media/UsmcxQeK7BRBK/giphy.gif)
 
-But one type of test is often favored by developers over all others, and therefore tends to be overused. This type of testing is [end\-to\-end testing](https://www.freecodecamp.org/news/end-to-end-tests-with-selenium-and-docker-the-ultimate-guide/) (E2E).
+但是有一种测试通常受到开发者的青睐，因此往往被过度使用。[端对端测试](https://www.freecodecamp.org/news/end-to-end-tests-with-selenium-and-docker-the-ultimate-guide/) (E2E)。
 
-## What Is End\-To\-End Testing?
+## 什么是端对端测试
 
-For those who are still exploring the world of Software Testing, E2E testing is when you validate your entire application from start to finish, along with any of its dependencies.
+对于那些仍在探索软件测试世界的人来说，E2E 测试是在完成应用程序及其所有依赖项时进行验证的过程。
 
-In E2E testing, you create an environment identical to the one that will be used by real users. Then you test all actions that your users might perform on your application.
+在 E2E 测试中，你创建一个与真实用户将使用的环境相同的环境。然后测试用户可能在你的应用程序上执行的所有操作。
 
-With End\-To\-End testing, you test entire flows – like logging onto a website or buying a product from an online store.
+通过端到端测试，您可以测试整个流程，比如登录网站或从在线商店购买产品。
 
 ![](https://paper-attachments.dropbox.com/s_EA4D61AC224EF8447071464ABC3123BDD99BABBB705D8D6423915F4DE15DDD1B_1603950228233_2_++1+.jpg)
 
-But if you overuse E2E testing, you're [Inverting the Testing Pyramid](https://automationpanda.com/2018/08/01/the-testing-pyramid/). I was in a situation like this. In one of my projects, I was planning to cover most cases with E2E tests – or even worse, use only the E2E test. Fortunately, I changed my mind. So now I want to share with you what I learned.
+但是，如果你过度使用 E2E 测试，你就是在颠倒测试金字塔。我曾经遇到过这样的情况。在我的一个项目中，我计划用 E2E 测试覆盖大部分情况，甚至更糟糕的是，只使用 E2E 测试。幸运的是，我改变了主意。所以现在我想和你分享我学到的东西。
 
-## Why You Should Respect the Test Pyramid
+## 为什么你应该遵循测试金字塔
 
-Chaotically written tests look and feel normal at first, but they will always be painful in the end.
+乱七八糟地编写的测试起初可能看起来和感觉很正常，但最终总是令人痛苦的。
 
-We write tests to gain more time, and we do that with test automation. Of course, we could open our applications ourselves and test them manually. If we only had to do this once, then there would be no problem. But that's rarely the case.
+我们编写测试是为了节省更多时间，我们通过自动化测试来实现这一点。当然，我们可以自己打开应用程序并手动测试它们。如果我们只需要做一次，那么就没有问题。但这种情况很少见。
 
-Software is always getting updated. So you need to perform continuous testing to stay on top of things. You can’t run all the tests manually each time the application gets updated. If you can write a test suite once and then run it every time you want to test an aspect of your application, you'll save a lot of time.
+软件总是在不断更新。因此，你需要进行持续测试以保持领先地位。每次应用程序更新时，你都无法手动运行所有测试。如果你能编写一次测试套件，然后每次想要测试应用程序的某个方面时都运行它，你将节省大量时间。
 
-Each test has its own purpose. If you go beyond the boundaries of each type of test, your tests will start to harm rather than help you. This is because you will end up spending more time writing tests and maintaining them than developing the application itself. In other words, you'll lose one of the biggest benefits of automated testing.
+每个测试都有其自己的目的。如果你超越了每种测试类型的界限，你的测试将开始对你造成伤害而不是帮助。这是因为你最终会花费更多的时间编写和维护测试，而不是开发应用程序本身。换句话说，你将失去自动化测试的最大优势之一。
 
-A good starting point is to follow the Testing Pyramid. It helps you figure out the right balance of tests. It represents an industry\-standard guideline, and it has endured since the mid\-2000s because it continues to be practical.
+一个好的起点是遵循测试金字塔。它可以帮助你找到测试的正确平衡。它代表了行业标准的指南，自2000年代中期以来一直持续，因为它仍然具有实用性。
 
-So does that mean developers always follow its guidelines? Not really. A few times the pyramid will look like an inverted one, where most of the tests are E2E. Or it will look like an hourglass, where there are a lot of unit tests and E2E tests, but not many integration tests.
+那么这是否意味着开发人员总是遵循其指南？并非如此。有时金字塔看起来像一个倒置的金字塔，其中大部分测试都是 E2E。或者它看起来像一个沙漏，有很多单元测试和 E2E 测试，但没有很多集成测试。
 
 ![](https://paper-attachments.dropbox.com/s_EA4D61AC224EF8447071464ABC3123BDD99BABBB705D8D6423915F4DE15DDD1B_1603950198553_02.jpg)
 
-##
-The Three Layers of the Testing Pyramid
+## 测试金字塔的三层
 
-A testing pyramid typically has three layers: Unit Tests, Integration Tests, and End\-to\-End Tests. Let's learn more about them now.
+测试金字塔通常有三层：单元测试、集成测试和E2E测试。现在让我们详细了解它们。
+### 1\. 单元测试
 
-### 1\. Unit Tests
+[单元测试](https://www.tutorialspoint.com/software_testing_dictionary/unit_testing.htm) 关注代码的最小单元，如函数或类。
 
-[Unit Tests](https://www.tutorialspoint.com/software_testing_dictionary/unit_testing.htm) focus on the smallest unit of code, like functions or classes.
+它们简短且没有任何外部依赖。如果它们有外部依赖，你可以使用模拟对象代替。
 
-They are short and don’t have any external dependencies. If they have an external dependency, you use mocks instead.
+如果一个单元测试失败，找到问题通常是一个简单的过程。它们的测试范围有限，使得编写、运行和维护变得简单、快速和容易。
 
-If a unit test fails, finding the issue is typically a simple process. They also have a reduced testing scope which makes them simple to write, fast to run, and easy to maintain.
+### 2\. 集成测试
 
-### 2\. Integration Tests
+[集成测试](https://www.tutorialspoint.com/software_testing_dictionary/integration_testing.htm) 关注两个独立实体之间的交互。它们通常运行速度较慢，因为需要设置更多内容。
 
-[Integration Tests](https://www.tutorialspoint.com/software_testing_dictionary/integration_testing.htm) focus on the interaction between two distinct entities. They are typically slower to run because more things need to be set up.
+如果集成测试失败，找到问题会更具挑战性，因为失败范围更大。
 
-If integration tests fail, finding the issue is a bit more challenging because the failure range is bigger.
+编写和维护集成测试也相对困难，主要是因为它们需要更高级的模拟和更广泛的测试范围。
 
-They are also harder to write and maintain, mostly because they need more advanced mocking and increased testing scope.
+### 3\. 端对端测试
 
-### 3\. End\-To\-End tests
+最后，E2E测试关注从最简单到最复杂的流程。它们可以被看成多步骤的集成测试。
 
-Lastly, E2E tests focus on flows, from the simplest up to the most complex. They can be viewed as a multi\-step integration test.
+这些测试运行速度最慢，因为它们涉及构建、部署、启动浏览器以及在应用程序中执行操作。
 
-These tests are the slowest to run because they involve building, deploying, firing up a browser, and performing actions around the application.
+如果E2E测试失败，找到问题通常很困难，因为现在失败范围扩展到整个应用程序。基本上，在路径中，任何东西都可能出问题。
 
-If E2E tests fail, finding the issue is often difficult because now the failure range is expanded to the entire application. Basically, along the path, anything could have broken.
+在这里考虑的三种测试类型中，它们无疑是最难编写和维护的，因为测试范围巨大，而且涉及整个应用程序。
 
-They are by far the hardest type of tests to write and maintain (from the three types considered here) because of the huge test scope and because they involve the entire application.
+希望你现在能明白为什么测试金字塔是这样设计的。从底层到顶层，每一层测试都代表着 **速度** 的降低以及 **范围、复杂性** 和 **维护性** 的增加。
 
-Hopefully you can now see why the testing pyramid has been designed in this way. From the bottom to the top, each layer of testing represents a decrease in **speed** and an increase in **scope, complexity** and **maintenance.**
+这就是为什么要记住的一件重要事情是，E2E测试不能取代其他方法——它是为了扩展它们。E2E测试的目的是定义明确的，测试不应超出这个范围。
 
-That’s why one important thing to remember is that E2E testing cannot replace other methods – it is meant to extend them. The purpose of E2E testing is well\-defined, and the tests should not extend beyond that boundary.
+理想情况下，测试应该尽可能地在金字塔的根部捕捉到错误。E2E测试的目的是验证按钮、表单、更改、链接、外部流程以及整个工作流程的功能是否正常运行。
 
-Ideally, tests should catch bugs as close to the root of the pyramid as possible. E2E is here to validate buttons, forms, changes, links, external processes, and generally and entire workflow's function without problems.
+## 用代码测试与无代码测试
 
-## Testing with Code vs Codeless Testing
+总的来说，有两种测试类型：手动测试和自动化测试。这意味着我们可以通过手动或使用脚本进行测试。
 
-In general, there are two types of testing: manual testing and automated testing. This means that we do the testing either by hand or by using scripts.
+第二种方法是最常用的。但是自动化测试可以进一步分为两部分：
+**用代码测试** 和 **无代码测试**。
 
-The second method is the most commonly used. But automated testing can be further separated into two parts: **testing with** **code** and **codeless testing.**
+### 用代码测试
 
-### Testing with Code
+当你使用代码进行测试时，你可以使用能够自动化浏览器的框架。最受欢迎的工具之一是 [Selenium](https://www.selenium.dev/)，但我更喜欢并经常在我的项目中使用 [Cypress](https://www.cypress.io/)（仅适用于 JavaScript）。然而，它们的工作方式大致相同。
 
-When you're testing with code, you use frameworks that can automate browsers. One of the most popular tools is [Selenium](https://www.selenium.dev/), but I prefer and often use [Cypress](https://www.cypress.io/) in my projects (only for JavaScript). Still, they mostly work in the same way.
+基本上，使用这样的工具，你可以模拟网络浏览器并指示它们在目标应用程序上执行不同的操作。之后，你可以测试应用程序是否对相应的操作做出了响应。
 
-Basically, with tools like this, you mock up web browsers and instruct them to perform different actions on your target application. After that, you test to see if your application has responded to the corresponding actions.
-
-This is a simple mock example taken from the Cypress documentation to help you better understand how this tool works:
+下面是一个简单的模拟示例，摘自 Cypress 文档，以帮助你更好地了解这个工具的工作原理：
 
 ![](https://paper-attachments.dropbox.com/s_EA8BC9D2CF83E24BF57AB3EC5A73F372F5ADA41ABD62DE1DA2D26BB58DE3CD82_1603530185695_carbon.png)
 
-[Raw code from doc](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Step-4-Make-an-assertion)
+[来自文档的原始代码](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Step-4-Make-an-assertion)
 
-Let's look at what's going on:
+让我们看看发生了什么：
+1. 假设用户访问 https://example.cypress.io
+2. 当他们点击标签为"type"的链接时，URL 应该包含 /commands/actions
+3. 如果他们在 .action-email 输入框中输入 “[fake@email.com](mailto:fake@email.com)“，那么 .action-email 输入框的值应为 “[fake@email.com](mailto:fake@email.com)“。
 
-1.  Given a user visits https://example.cypress.io
-2.  When they click the link labeled type, then the URL should include /commands/actions
-3.  If they type “[fake@email.com](mailto:fake@email.com)“ into the .action\-email input then the .action\-email input has “[fake@email.com](mailto:fake@email.com)“ as its value
+### 无代码测试
 
-### Codeless Testing
+在 **无代码** 测试情况下，你使用由人工智能驱动的框架来记录你的操作。根据一些额外的信息，它们测试目标应用程序是否按预期响应。
 
-In a **codeless** testing situation, you use frameworks powered by Artificial Intelligence that record your actions. Based on some additional information, they test if the target application responds as expected.
-
-These tools often look like low code platforms, where you drag and drop different panels. One of these tools is [TestCraft](https://www.testcraft.io/) which is a **codeless** solution built upon Selenium.
+这些工具通常看起来像低代码平台，你可以拖放不同的面板。其中一个工具是 [TestCraft](https://www.testcraft.io/)，它是基于 Selenium 的 **无代码** 解决方案。
 
 ![](https://paper-attachments.dropbox.com/s_EA8BC9D2CF83E24BF57AB3EC5A73F372F5ADA41ABD62DE1DA2D26BB58DE3CD82_1603531312592_ezgif-3-e3440d13da31.gif)
 
-Because of the features they offer (like creating, maintaining, and running tests with simple drag\-and\-drop options and no coding knowledge), this kind of tool usually comes at a higher price. But I wanted to mention [TestCraft](https://www.perfecto.io/blog) because they have a free plan which basically includes everything.
+由于它们提供的功能（如使用简单的拖放选项创建、维护和运行测试，无需编码知识），这类工具通常价格较高。但我想提一下 [TestCraft](https://www.perfecto.io/blog) ，因为它们有一个基本包含所有内容的免费计划。
 
-Now, of course, a codeless solution can be an advantage if you want speed and money, but these solutions are still new. Therefore, they can’t yet reach the complexity of test suites that you can develop by writing the code yourself.
+当然，如果你想要速度和省钱，无代码解决方案可能有优势，但这些解决方案很新。因此，它们还无法解决你自己通过代码才能解决的复杂测试。
 
-If the target application has some very complex flows that include multiple moving parts, then a classic testing situation is the way to go. But if you have simple flows, then a codeless solution is what you need.
+如果目标应用程序具有一些非常复杂的流程，包括多个移动部件，那么传统的测试方法是最佳选择。但是，如果你有简单的流程，那么无代码解决方案正是你所需要的。
 
-## Wrapping up
+## 总结
 
-Writing tests is a must for any application. If you follow solid principles and write your test suites according to their type, then your tests will only improve your application and will also be fairly easy to write and maintain.
+为任何应用编写测试是必不可少的。如果你遵循基本的原则并根据测试类型编写测试套件，那么你的测试将只会改善你的应用程序，并且编写和维护起来也相对容易。
 
-You should only use end\-to\-end tests, like any other test, in the ways their meant to be used. They're created to test the application's workflow from beginning to end by replicating real user scenarios. But in the end, remember that most bugs should be caught as close to the root as possible.
+你应该只在适当的场景下使用端到端测试，就像其他测试一样。它们的目的是通过模拟真实用户场景，从头到尾测试应用程序的工作流程。但最后，请记住，大多数错误应尽可能在根源处被捕获。

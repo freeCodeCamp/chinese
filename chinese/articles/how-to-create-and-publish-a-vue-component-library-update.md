@@ -1,9 +1,9 @@
-> -  原文地址：[How to Create and Publish a Vue Component Library – 2023 Update](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library-update/)
+> -  原文地址：[如何创建和发布一个 Vue 组件库 – 2023 更新](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library-update/)
 > -  原文作者：[Brian Barrow](https://www.freecodecamp.org/news/author/brian/)
-> -  译者：
+> -  译者：xgqfrms
 > -  校对者：
 
-![How to Create and Publish a Vue Component Library – 2023 Update](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-pixabay-159711.jpg)
+![如何创建和发布一个 Vue 组件库 – 2023 更新](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-pixabay-159711.jpg)
 
 Back in 2020, I [wrote a post](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library/) about building a Vue Component library. Since then the package I used has been deprecated, and the recommended way to build a library/package is to use Vite.
 

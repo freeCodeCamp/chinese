@@ -1,6 +1,6 @@
 > -  原文地址：[Front End JavaScript Development Handbook – React, Angular, and Vue Compared](https://www.freecodecamp.org/news/front-end-javascript-development-react-angular-vue-compared/)
 > -  原文作者：[Adekola Olawale](https://www.freecodecamp.org/news/author/adekola-olawale/)
-> -  译者：
+> -  译者：阿基米东
 > -  校对者：
 
 ![Front End JavaScript Development Handbook – React, Angular, and Vue Compared](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/frontend-framework-cover.jpg)

@@ -378,55 +378,55 @@ JSX 是一项强大的功能，利用它，开发者可以很方便地构建出�
 
 Angular Logo
 
-The Angular framework has revolutionized web development by providing a comprehensive set of tools and features for building robust and scalable applications. Developed and maintained by Google, Angular has its roots in the original framework, _AngularJS_.
+Angular 是一个彻底改变了 Web 开发的框架，它提供了一套全面的工具和功能来构建强大且可扩展的应用程序。Angular 由 Google 开发和维护，它的前身是 _AngularJS_ 框架。
 
-With a focus on modern web development practices, Angular has evolved into a versatile and widely adopted framework. In this section, we will explore Angular, its origins, and the key features that make it a popular choice among developers.
+Angular 专注于现代 Web 开发实践，现已发展成为一个功能全面、被广泛应用的框架。在本节中，我们将探讨 Angular 框架、它的起源，以及使其成为众多开发者的流行选择的关键功能。
 
-Whether you are new to Angular or seeking to deepen your understanding, this overview will serve as a solid foundation to navigate the world of Angular development.
+无论你是 Angular 新手还是想加深理解，这些内容都将为你在 Angular 开发世界中提供坚实的基础。
 
 ### Angular 框架及其起源
 
-The Angular framework, often referred to as _Angular_ or _Angular 2+_, is a powerful front-end development platform created and maintained by Google.
+Angular 框架，通常被称为 _Angular_ 或 _Angular 2+_，是由 Google 创建和维护的强大前端开发平台。
 
-It is the successor of AngularJS, which was the first version of Angular released in 2010. AngularJS introduced the concept of two-way data binding and gained popularity for its ability to build dynamic and interactive web applications.
+它是 AngularJS 的后继者，AngularJS 是 2010 年发布的第一个版本。AngularJS 引入了双向数据绑定的概念，并因其构建动态和交互式 Web 应用程序的能力而广受欢迎。
 
-However, AngularJS had limitations in terms of performance, scalability, and maintainability. This led the Angular team to re-envision the framework. Angular was introduced as a complete rewrite of AngularJS, incorporating modern web development practices and addressing the shortcomings of its predecessor.
+然而，AngularJS 在性能、可扩展性和可维护性方面存在局限性，这导致 Angular 团队重新构想了框架。Angular 是对 AngularJS 的完全重写，结合了现代 Web 开发实践并解决了 AngularJS 的缺点。
 
-Angular was built from the ground up to be more efficient, modular, and developer-friendly. It embraced a component-based architecture, where UI elements are divided into reusable components. This modular approach promotes code reusability, maintainability, and scalability, allowing developers to build complex applications with ease.
+Angular 是从头开始构建的，旨在提高效率、模块化且对开发人员友好。它采用基于组件的架构，其中 UI 元素被划分为可重用的组件。这种模块化方法提高了代码的可重用性、可维护性和可扩展性，使开发人员能够轻松构建复杂的应用程序。
 
-The release of Angular introduced significant changes and improvements, resulting in a more streamlined and performant framework. It incorporated features like a more efficient change detection mechanism, a powerful template syntax known as Angular Template Syntax (based on HTML with additional features), enhanced dependency injection, and a revamped command-line interface (CLI) for scaffolding and managing projects.
+Angular 的发布引入了重大变化和改进，从而诞生了更加精简和高性能的框架。它整合了诸如更高效的变更检测机制、称为 Angular 模板语法（基于 HTML 并具有附加功能）的强大模板语法、增强的依赖项注入以及用于搭建和管理项目的改进的命令行界面（CLI）等功能。
 
-Over time, Angular has evolved into a comprehensive platform with a wide range of capabilities, including advanced routing, form handling, internationalization, and powerful testing tools. It has gained popularity among developers for its robustness, scalability, and the extensive ecosystem of libraries and tools that support Angular development.
+随着时间的推移，Angular 已经发展成为一个具有广泛功能的综合平台，包括高级路由、表单处理、国际化和强大的测试工具。它因其稳健性、可扩展性以及支持 Angular 开发的广泛的库和工具生态系统而受到开发人员的欢迎。
 
-Understanding the origins of Angular helps developers appreciate the design principles, improvements, and rationale behind the framework. It sets the stage for exploring Angular's key features and best practices, and leveraging its full potential to build modern web applications.
+了解 Angular 的起源有助于开发者了解该框架背后的设计原则、改进和基本原理。为探索 Angular 的关键功能和最佳实践，以及充分利用其构建现代 Web 应用程序的潜力奠定了基础。
 
 ### 理解 Angular 的模块化结构
 
-One of the core strengths of Angular is its modular structure, which promotes code organization, reusability, and maintainability.
+Angular 的核心优势之一是它的模块化结构，这有助于代码组织、可重用性和可维护性。
 
-Angular applications are composed of modules, components, services, and other building blocks that work together to create a cohesive application.
+Angular 应用程序由模块、组件、服务和其他构建块组成，它们共同创建一个有凝聚力的应用程序。
 
 #### 模块
 
-In Angular, modules act as containers that group related components, services, directives, and other features. Each Angular application typically has a root module, known as the _AppModule_, which serves as the entry point of the application.
+在 Angular 中，模块是对相关组件、服务、指令和其他功能进行分组的容器。每个 Angular 应用程序通常都有一个根模块，称为 _AppModule_，它是整个应用程序的入口点。
 
-Modules help in organizing the application's functionality into manageable units, making it easier to maintain and understand the codebase. They also provide a way to encapsulate dependencies and provide a clean separation of concerns.
+模块有助于将应用程序的功能组织成可管理的单元，从而更容易维护和理解代码库。它们还提供了一种封装依赖关系并提供清晰的关注点分离的方法。
 
-Modules in Angular can be likened to different rooms in a house. Imagine you have a big house with multiple rooms, each serving a specific purpose. The living room is for relaxing, the kitchen is for cooking, and the bedroom is for sleeping. Each room has its own unique function and contains the necessary furniture and equipment.
+Angular 中的模块可以比作房子中的不同房间。想象一下，你有一座有多个房间的大房子，每个房间都有特定的用途。客厅是休息的地方，厨房是做饭的地方，卧室是睡觉的地方。每个房间都有其独特的功能，并包含必要的家具和设备。
 
-In Angular, modules are used to organize and encapsulate different parts of your application. If we continue with the house analogy, think of each module as a separate room in the house.
+在 Angular 中，模块用于组织和封装应用程序的不同部分。如果我们继续以房屋为类比，那么可以将每个模块视为房屋中的一个单独的房间。
 
-For example, you may have a living room module that handles all the components, services, and resources related to displaying and interacting with the living room features. Similarly, you can have a kitchen module that manages all the functionality related to cooking and food preparation.
+例如，你可能有一个起居室模块，用于处理与起居室功能显示和交互相关的所有组件、服务和资源。同样，你可以拥有一个厨房模块来管理与烹饪和食物准备相关的所有功能。
 
-Now, let's bring in the AppModule, which is the root module of an Angular application. In our house analogy, the AppModule can be compared to the main entrance or foyer of the house. Just as the main entrance connects all the rooms in a house, the AppModule serves as the entry point to your Angular application, connecting all the modules together.
+现在，让我们引入 AppModule，它是 Angular 应用程序的根模块。在我们的房屋比喻中，AppModule 可以比作房屋的主入口或门厅。正如房屋的主入口连通所有房间一样，AppModule 作为 Angular 应用程序的入口点，将所有模块连接在一起。
 
-The AppModule plays a crucial role in Angular applications. It imports and aggregates all the other modules, making them accessible to the application. It also bootstraps the application by specifying the root component that will be loaded initially.
+AppModule 在 Angular 应用程序中起着至关重要的作用。它导入并聚合所有其他模块，使应用程序可以访问它们。它还通过指定最初加载的根组件来启动应用程序。
 
-Essentially, the AppModule sets the foundation for your Angular application, ensuring that all the necessary modules and components are properly connected and initialized.
+本质上，AppModule 为 Angular 应用程序奠定了基础，确保所有必要的模块和组件都正确连接和初始化。
 
-By utilizing modules in Angular, including the AppModule, you can achieve better organization, separation of concerns, and maintainability in your application. Each module focuses on a specific area or functionality, making it easier to manage and extend your application as it grows.
+通过利用 Angular 中的模块（包括 AppModule），你可以在应用程序中实现更好的代码组织、关注点分离和可维护性。每个模块都专注于特定领域或功能，使管理和扩展应用程序变得更加容易。
 
-Here's a short code snippet in Angular to demonstrate the usage of modules:
+下面是一段简短代码片段，用于演示 Angular 模块的用法：
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -442,37 +442,37 @@ import { AppComponent } from './app.component';
 export class AppModule { }
 ```
 
-In this example, we have an `AppModule` class decorated with the `NgModule` decorator. Inside the decorator, we define the metadata for our module.
+在这个示例中，有一个用 `NgModule` 装饰器装饰的 `AppModule` 类。在装饰器内部，我们定义了模块的元数据。
 
-The `declarations` array lists all the components, directives, and pipes that belong to this module. Here, we have a single component `AppComponent` declared.
+`declarations` 数组列出了属于该模块的所有组件、指令和管道。在这里，我们声明了一个组件 `AppComponent`。
 
-The `imports` array specifies other modules that this module depends on. In this case, we're importing the `BrowserModule`, which provides essential features for running Angular applications in a web browser.
+`imports` 数组指定该模块依赖的其他模块。在本例中，我们导入 `BrowserModule`，它提供了在 Web 浏览器中运行 Angular 应用程序的基本功能。
 
-The `providers` array is used to provide any services or dependencies required by the components in this module.
+`providers` 数组用于提供此模块中的组件所需的任何服务或依赖项。
 
-The `bootstrap` array indicates the root component of the application, which will be instantiated when the application starts. Here, we have `AppComponent` specified as the bootstrap component.
+`bootstrap` 数组表示应用程序的根组件，该组件将在应用程序启动时实例化。在这里，我们将 `AppComponent` 指定为引导组件。
 
 #### 组件
 
-Components are the building blocks of Angular applications. They represent specific sections of the user interface and encapsulate their own styles, templates, and logic.
+组件是 Angular 应用程序的构建块。它们是用户界面的特定部分，并封装了自己的样式、模板和逻辑。
 
-Components can be composed together to create complex UI structures. By breaking the UI into smaller, reusable components, the application becomes more modular and easier to develop and maintain.
+组件可以组合在一起以创建复杂的 UI 结构。通过将 UI 分解为更小的、可重用的组件，应用程序变得更加模块化、更易于开发和维护。
 
-Components in Angular are like building blocks that make up the different parts of a house, just like the React components I talked about earlier.
+Angular 中的组件就像组成房屋不同部分的积木，就像我之前谈到的 React 组件一样。
 
-Imagine you are building a house using Lego bricks. Each Lego brick represents a component, and when you put them together, they form different parts of the house, such as walls, doors, and windows.
+想象一下你正在使用乐高积木建造一座房子。每块乐高积木代表一个组件，当你将它们组合在一起时，它们就形成了房子的不同部分，例如墙壁、门和窗户。
 
-Similarly, in Angular, components are the basic building blocks of an application's user interface. They encapsulate a specific functionality or part of the user interface, just like the Lego bricks forming specific parts of a house.
+同样，在 Angular 中，组件是应用程序用户界面的基本构建块。它们封装了特定的功能或用户界面的一部分，就像乐高积木形成房屋的特定部分一样。
 
-For example, you can have a component for displaying a navigation menu, another component for showing a list of products, and yet another component for handling user registration.
+例如，你可以设计一个用于显示导航菜单的组件，再设计一个用于显示产品列表的组件，以及另一个用于处理用户注册的组件。
 
-Components consist of three main parts: the template, the class, and the styles. The template defines the structure and layout of the component, similar to how the Lego bricks come together to form a specific shape. The class contains the logic and data that the component needs to function, like the instructions that guide you on how to assemble the Lego bricks. The styles define the appearance and design of the component, just like the colors and patterns you choose for your Lego house.
+Angular 的组件由三个主要部分组成：模板、类和样式。其中，模板定义了组件的结构和布局，类似于乐高积木如何组合在一起形成特定的形状；类包含组件运行所需的逻辑和数据，相当于指导你如何组装乐高积木的说明；样式则定义组件的外观和设计，就像你为乐高房子选择的颜色和图案一样。
 
-When you put all the components together, just like assembling Lego bricks, you create a complete and interactive user interface for your Angular application. Each component works independently, but they can also communicate and interact with each other, allowing you to build complex and dynamic applications.
+当你将所有组件放在一起时，就像组装乐高积木一样，你可以为 Angular 应用程序创建一个完整的交互式用户界面。每个组件独立工作，但它们也可以相互通信和交互，因此你可以利用它们构建出复杂且动态的应用程序。
 
-Components in Angular are the basic building blocks of an application's user interface, encapsulating specific functionalities. By combining and arranging components, you can create a complete and interactive user interface for your Angular application, just like assembling Lego bricks to build a house.
+Angular 中的组件是应用程序用户界面的基本构建块，封装了特定的功能。通过组合和排列组件，你可以为 Angular 应用程序创建完整的交互式用户界面，就像组装乐高积木来建造房屋一样。
 
-A short code snippet in Angular to demonstrate the usage of components:
+下面一段代码演示了 Angular 中组件的用法：
 
 ```typescript
 import { Component } from '@angular/core';
@@ -489,33 +489,33 @@ export class ExampleComponent {
 }
 ```
 
-In this example, we have an `ExampleComponent` class decorated with the `@Component` decorator. Inside the decorator, we define the metadata for our component.
+在这个示例中，有一个用 `@Component` 装饰器装饰的 `ExampleComponent` 类。在装饰器内部，我们定义组件的元数据。
 
-The `selector` property specifies the HTML selector used to render the component. In this case, the selector is `app-example`, which means the component will be rendered as `<app-example></app-example>` in the HTML.
+`selector` 属性指定用于呈现组件的 HTML 选择器。在本例中，选择器是 `app-example`，这意味着该组件将在 HTML 中呈现为 `<app-example></app-example>`。
 
-The `template` property defines the component's view or template. It contains the HTML markup that will be rendered when the component is used. In this example, we have a simple heading and paragraph.
+`template` 属性定义组件的视图或模板。它包含使用组件时将呈现的 HTML 标记。在该示例中，我们有一个简单的标题和段落。
 
-The `ExampleComponent` class represents the logic and behavior of the component. Here, you can define properties and methods, and handle events related to the component.
+`ExampleComponent` 类表示组件的逻辑和行为。在这里，你可以定义属性和方法，并处理与组件相关的事件。
 
-Components are the building blocks of Angular applications. They encapsulate HTML, CSS, and JavaScript functionality into reusable and self-contained units. This makes it easier to develop and maintain complex user interfaces.
+组件是 Angular 应用程序的构建块。它们将 HTML、CSS 和 JavaScript 功能封装到可重用且独立的单元中。这使得开发和维护复杂的用户界面变得更加容易。
 
 #### 服务
 
-Services are used for sharing data, logic, and functionality across multiple components. They encapsulate reusable business logic, data access, and communication with external APIs. Services can be injected into components or other services, enabling a clear separation of concerns and promoting code reusability.
+服务用于跨多个组件共享数据、逻辑和功能。它们封装了可重用的业务逻辑、数据访问以及与外部 API 的通信。服务可以注入到组件或其他服务中，从而实现明确的关注点分离并提高代码的可重用性。
 
-Services in Angular can be likened to the helpers or assistants that make a house function smoothly. Imagine you are living in a house and you have different people helping you with specific tasks. For example, you might have a cleaning service to keep your house tidy, a plumber to fix any water-related issues, and an electrician to take care of electrical matters.
+Angular 中的服务可以比作使房屋顺利运转的帮手或助手。想象一下，你住在一所房子里，有不同的人帮助你完成特定任务。例如，你可能需要清洁服务来保持房屋整洁，水管工来解决任何与水相关的问题，以及电工来处理电气问题。
 
-Same thing in Angular – services are like professionals that handle specific tasks and provide the functionality to different parts of your application. They are designed to perform common tasks or provide shared functionality that multiple components may need. Just like the helpers in a house, services can be called upon when needed and provide specialized assistance.
+在 Angular 中也是如此——服务就像处理特定任务并为应用程序的不同部分提供功能的专业人员。它们旨在执行常见任务或提供多个组件可能需要的共享功能。就像家里的帮手一样，可以在需要时调用服务，以获得专门的帮助。
 
-For example, you can have a data service that retrieves and stores data from an external source, such as a server or a database. This data service can be used by multiple components to fetch and update data, ensuring consistency across your application.
+例如，你可以拥有从外部源（例如服务器或数据库）检索和存储数据的数据服务。多个组件也可以使用这项数据服务来获取和更新数据，从而确保应用程序之间的一致性。
 
-Another example is an authentication service that manages user authentication and authorization. This allows different components to verify user credentials and control access to certain features.
+另一个例子是管理用户身份验证和授权的身份验证服务。它允许不同的组件验证用户凭据，并控制其对某些功能的访问。
 
-Services act as a central hub of functionality that can be shared and reused throughout your application. They help to organize your code and promote a modular structure, making it easier to maintain and update your application over time.
+服务充当功能的中心枢纽，可以在整个应用程序中共享和重用。它们有助于代码的组织，促进项目的模块化结构，使你的应用程序更加容易维护和更新。
 
-They act as centralized helpers, allowing different parts of your application to access and utilize their specialized capabilities. By using services, you can create a modular and efficient application structure, just like having dedicated helpers in a house to ensure everything runs smoothly.
+它们扮演了集中式助手的角色，允许应用程序的不同部分访问和利用它们的专业功能。通过使用服务，你可以创建模块化且高效的应用程序结构，就像在家里有专门的帮手一样，确保一切顺利进行。
 
-Here's a short code snippet in Angular to demonstrate the usage of services:
+下面一段代码演示了 Angular 中服务的用法：
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -528,29 +528,29 @@ export class DataService {
 }
 ```
 
-In this example, we have a `DataService` class decorated with the `@Injectable` decorator. This decorator marks the class as an injectable service, allowing it to be injected into other components or services.
+在这个示例中，有一个用 `@Injectable` 装饰器装饰的 `DataService` 类。该装饰器将类标记为可注入服务，允许将其注入到其他组件或服务中。
 
-Inside the `DataService` class, we define a `getData` method that returns a string. This method can be used to fetch data from an API, perform calculations, or any other logic related to data retrieval.
+在 `DataService` 类中，我们定义了一个返回字符串的 `getData` 方法。该方法可用于从 API 获取数据、执行计算或与数据检索相关的任何其他逻辑。
 
-Services in Angular are responsible for handling data, business logic, and other shared functionality across components. They promote code reusability, separation of concerns, and provide a way to centralize common operations and data access within your application.
+Angular 中的服务负责处理数据、业务逻辑和其他跨组件的共享功能。它们提升了代码可重用性、关注点分离，并提供一种在应用程序中将常见操作和数据访问集中起来的方法。
 
 #### 指令
 
-Directives are used to extend the behavior of HTML elements or create reusable custom elements. They allow developers to manipulate the DOM, add event listeners, apply dynamic styling, and perform other tasks to enhance the functionality and appearance of the application.
+指令用于扩展 HTML 元素的行为或创建可重用的自定义元素。它们允许开发者操作 DOM、添加事件侦听器、应用动态样式以及执行其他任务以增强应用程序的功能和外观。
 
-They can be compared to instructions or rules that you give to objects in your house. Imagine you have a set of toys or objects, and you want to assign certain behaviors or actions to them. You might use stickers or labels to indicate what each object should do.
+它们可以和你对家里的物品发出的指示或规则进行类比。想象一下，你有一组玩具或物体，你想为它们分配某些行为或动作。那么，你可以使用贴纸或标签来指示每个对象应该做什么。
 
-Likewise, in Angular, directives are used to give instructions or behaviors to elements in your application's user interface. They are like special stickers that you can attach to HTML elements to define how they should behave or appear. Directives can control the visibility, style, and behavior of elements, allowing you to customize their functionality.
+同样，在 Angular 中，指令的作用是向应用程序用户界面中的元素提供指令或行为。它们就像特殊的贴纸，你可以将其附加到 HTML 元素上以定义它们的行为或显示方式。指令可以控制元素的可见性、样式和行为，因此你可以它们来自定义元素的功能。
 
-For example, you can have a **highlight** directive that adds a special effect to a specific HTML element, making it stand out with a different color or animation. This directive can be used to highlight important information or interactive elements on a web page.
+例如，你可以使用 **highlight** 指令为特定的 HTML 元素添加特殊效果，使它拥有不同的颜色或动画，在界面上突显出来。该指令可用于突出显示网页上的重要信息或交互元素。
 
-Another example is the **if** directive, which conditionally shows or hides an element based on certain conditions. This can be used to dynamically display content based on user input or application state.
+另一个例子是 **if** 指令，它根据某些条件有条件地显示或隐藏元素。可用于根据用户输入或应用程序状态动态显示内容。
 
-Directives help you create interactive and dynamic user interfaces by providing instructions to HTML elements. They are like labels that tell the elements how to behave and what to look like. By using directives, you can customize and control the behavior of elements in your application, making it more engaging and user-friendly.
+指令通过向 HTML 元素提供指令来帮助你创建交互式动态用户界面。它们就像标签一样，告诉元素要如何动作、如何显示。通过使用指令，你可以自定义和控制应用程序中元素的行为，使其更具吸引力和用户友好性。
 
-In simple terms, directives in Angular are like special stickers that you can attach to objects in your house (HTML elements) to tell them how to behave or look. They allow you to add interactive features and customize the appearance of elements, making your application more engaging and enjoyable for users.
+简单来说，Angular 中的指令就像特殊的贴纸，你可以将其附加到房屋中的对象（HTML 元素）上，以告诉它们如何表现或有什么样的外观。因此你可以为其添加交互功能并自定义元素的外观，使你的应用程序对用户来说更具吸引力和乐趣。
 
-Here's a short code snippet in Angular to demonstrate the usage of a custom directive:
+下面一段代码演示了 Angular 中自定义指令的用法：
 
 ```typescript
 import { Directive, ElementRef, HostListener } from '@angular/core';
@@ -577,15 +577,15 @@ export class HighlightDirective {
 }
 ```
 
-In this example, we're creating a custom directive called `appHighlight`. This directive is applied to an HTML element using the selector `[appHighlight]`.
+在这个示例中，我们创建了一个名为 `appHighlight` 的自定义指令。该指令使用选择器 `[appHighlight]` 应用于 HTML 元素。
 
-When the user hovers over the element, the `onMouseEnter` event listener is triggered, and it calls the `highlight` method to set the background color of the element to yellow.
+当用户将鼠标悬停在元素上时，就会触发 `onMouseEnter` 事件侦听器，并调用 `highlight` 方法将元素的背景颜色设置为黄色。
 
-Similarly, when the user moves the mouse away from the element, the `onMouseLeave` event listener is triggered, and it removes the highlight effect by setting the background color back to the default.
+类似地，当用户将鼠标移离元素时，会触发 `onMouseLeave` 事件侦听器，并通过将背景颜色设置回默认值来消除突出显示效果。
 
-By attaching the `appHighlight` directive to an HTML element, we can dynamically control its appearance and behavior. This demonstrates the concept of directives in Angular, where you can define custom behaviors or instructions that can be applied to HTML elements to enhance their functionality and visual representation.
+通过将 `appHighlight` 指令附加到 HTML 元素，我们可以动态控制其外观和行为。这个示例展示了 Angular 中指令的概念，你可以在其中定义可应用于 HTML 元素的自定义行为或指令，来增强其功能和视觉表示。
 
-Here's an example of how you can apply the `appHighlight` directive to an HTML element in your template:
+以下示例展示了如何将 `appHighlight` 指令应用于模板中的 HTML 元素：
 
 ```html
 <div appHighlight>
@@ -593,169 +593,169 @@ Here's an example of how you can apply the `appHighlight` directive to an HTML e
 </div>
 ```
 
-In this case, we have a `<div>` element to which we apply the `appHighlight` directive using the directive selector `[appHighlight]`. When the user hovers over this `<div>` element, the directive's behavior is triggered, and the background color of the element will be set to yellow, as defined in the directive's code.
+这里有一个 `<div>` 元素，我们使用指令选择器 `[appHighlight]` 将 `appHighlight` 指令应用到该元素。当用户将鼠标悬停在该 `<div>` 元素上时，会触发指令的行为，并且该元素的背景颜色将设置为黄色，正如指令代码中所定义的。
 
-Understanding Angular's modular structure is crucial for building scalable and maintainable applications. By organizing functionality into modules, and leveraging reusable components, services, and directives, developers can create applications that are easier to develop, test, and extend.
+了解 Angular 的模块化结构，对于构建可扩展和可维护的应用程序至关重要。通过将功能组织到模块中，并利用可重用的组件、服务和指令，开发者可以创建更易于开发、测试和扩展的应用程序。
 
-This modular approach also facilitates collaboration among team members and enables better code organization. This leads to more efficient development workflows and better overall application architecture.
+这种模块化方法还促进了团队成员之间的协作并实现更好的代码组织，从而带来更高效的开发工作流程和更好的整体应用程序架构。
 
 ### Angular CLI 和 TypeScript 集成
 
-Angular CLI (Command Line Interface) is a powerful tool that simplifies the development process of Angular applications. It provides a command-line interface for creating, building, testing, and deploying Angular projects.
+Angular CLI（命令行界面）是一个强大的工具，可以简化 Angular 应用程序的开发过程。它提供了一个用于创建、构建、测试和部署 Angular 项目的命令行接口。
 
-Additionally, Angular CLI seamlessly integrates with TypeScript, a statically typed superset of JavaScript, to enhance the development experience and enable advanced features.
+此外，Angular CLI 可以和 JavaScript 的静态类型超集 TypeScript 无缝集成，以增强开发体验并启用高级功能。
 
 #### 创建项目
 
-With Angular CLI, creating a new Angular project is as simple as running a single command. The CLI generates a basic project structure, including configuration files, boilerplate code, and a development server. This saves time and eliminates the need for manual project setup, ensuring that developers can start coding right away.
+使用 Angular CLI，创建新的 Angular 项目就像运行单个命令一样简单。CLI 生成基本的项目结构，包括配置文件、样板代码和开发服务器。这不仅节省了大量时间，而且消除了手动项目设置的不便，确保开发人员可以立即开始编码。
 
-To create a new project in Angular, you can use the Angular CLI (Command Line Interface). Follow these steps:
+你可以使用 Angular CLI（命令行界面）创建一个 Angular 的新项目。参照下面步骤：
 
--   Open your terminal or command prompt.
--   Navigate to the directory where you want to create your Angular project.
--   Run the following command:
+- 打开终端或命令提示符。
+- 切换到要在其中创建 Angular 项目的目录。
+- 运行以下命令：
 
 ```bash
 ng new project-name
 ```
 
-Create an Angular project
+创建一个 Angular 项目
 
-Replace `project-name` with the desired name for your project (I choose frontend-frameworks). Make sure to avoid spaces or special characters.
+将 `project-name` 替换为你的项目名称（例如我这里的 frontend-frameworks）。注意，要确保避免空格或特殊字符。
 
 ![angular-creating-projects2-2](https://www.freecodecamp.org/news/content/images/2023/05/angular-creating-projects2-2.png)
 
-Selecting options for Angular project
+为 Angular 项目选择配置项
 
 ![angular-creating-projects2](https://www.freecodecamp.org/news/content/images/2023/05/angular-creating-projects2.png)
 
-Creating Project
+正在创建项目
 
-The Angular CLI will prompt you to choose additional options for your project, such as the stylesheet format (CSS, SCSS, Sass etc.) and whether you want to enable routing. Make your selections and press Enter.
+Angular CLI 将提示你为项目选择其他选项，例如样式表格式（CSS、SCSS、Sass 等）以及是否要启用路由。你需要做出选择并按 Enter 确认。
 
-Wait for the CLI to create the project. It will install the necessary dependencies and set up the basic structure.
+等待 CLI 完成项目创建。在此过程中，它将安装必要的依赖项并设置基本结构。
 
-Once the process is complete, navigate into the project directory:
+创建完成后，切换到项目目录：
 
 ```bash
 cd project-name
 ```
 
-Change directory
+切换目录
 
-You can now start working on your Angular project. Use the `ng serve` command to run the development server and view your application in the browser:
+现在，你可以开始处理 Angular 项目了。使用 `ng serve` 命令运行开发服务器，并在浏览器中查看你的应用程序：
 
 ![ng-serve](https://www.freecodecamp.org/news/content/images/2023/05/ng-serve.png)
 
-ng serve
+ng serve 命令
 
 ```bash
 ng serve
 ```
 
-Run development server
+运行开发服务器
 
-Your Angular project will be accessible at `http://localhost:4200`.
+你可以通过 `http://localhost:4200` 访问你的 Angular 项目。
 
-The `ng new` command is used to generate a new Angular project with the specified name. It sets up the initial project structure, installs the necessary dependencies, and configures the project files.
+`ng new` 命令用于生成具有指定名称的新 Angular 项目。它设置初始项目结构、安装必要的依赖项并配置项目文件。
 
-Using the Angular CLI simplifies the process of creating and managing Angular projects, allowing you to focus on development rather than boilerplate setup.
+使用 Angular CLI 简化了创建和管理 Angular 项目的过程，使你能够专注于开发而不是工程设置。
 
 #### 代码生成
 
-Angular CLI offers a variety of powerful code generation commands that help streamline the development process.
+Angular CLI 提供了各种强大的代码生成命令，有助于简化开发过程。
 
-Developers can easily generate components, services, modules, and other Angular elements using the CLI, reducing the amount of manual coding required. This accelerates development speed and ensures consistent code patterns throughout the project.
+开发人员可以使用 CLI 轻松生成组件、服务、模块和其他 Angular 元素，从而减少所需的手动编码量。这样可以加快开发速度并确保整个项目的代码模式保持一致。
 
-Here are the commands for generating different Angular elements using the Angular CLI:
+下面是使用 Angular CLI 生成不同 Angular 元素的命令：
 
 ![code-generation-component-1](https://www.freecodecamp.org/news/content/images/2023/05/code-generation-component-1.png)
 
-Generating a component
+生成一个组件
 
--   **Generating a Component:**
+-   **生成一个组件：**
 
 ```bash
 ng generate component component-name
 ```
 
-CLI Command to generate a component
+使用 CLI 命令生成一个组件
 
-This command creates a new component with the specified name. It generates the component files, including the HTML template, CSS styles, TypeScript code, and the necessary component tests.
+这个命令将创建一个指定名称的新组件。它会生成组件文件，包括 HTML 模板、CSS 样式、TypeScript 代码和必要的组件测试。
 
 ![code-generation-services](https://www.freecodecamp.org/news/content/images/2023/05/code-generation-services.png)
 
-Generating a service
+生成一个服务
 
--   **Generating a Service:**
+-   **生成一个服务：**
 
 ```bash
 ng generate service service-name
 ```
 
-CLI Command to generate a service
+使用 CLI 命令生成一个服务
 
-This command generates a new service with the specified name. Services are used for handling data, implementing business logic, and sharing functionality across components.
+这个命令生成指定名称的新服务。服务用于处理数据、实现业务逻辑以及跨组件共享功能。
 
 ![code-generation-module](https://www.freecodecamp.org/news/content/images/2023/05/code-generation-module.png)
 
-Generating a module
+创建一个模块
 
--   **Generating a Module:**
+-   **创建一个模块：**
 
 ```bash
 ng generate module module-name
 ```
 
-CLI Command to generate a module
+使用 CLI 命令创建一个模块
 
-Use this command to create a new module with the specified name. Modules help organize and structure your Angular application by grouping related components, services, and other Angular elements.
+使用该命令创建指定名称的新模块。模块通过对相关组件、服务和其他 Angular 元素进行分组，来帮助 Angular 应用程序的组织和构建。
 
 ![code-generation-directive](https://www.freecodecamp.org/news/content/images/2023/05/code-generation-directive.png)
 
-Generating a directive
+生成一个指令
 
--   **Generating a Directive:**
+-   **生成一个指令：**
 
 ```bash
 ng generate directive directive-name
 ```
 
-CLI Command to generate a directive
+使用 CLI 命令生成一个指令
 
-This command generates a new directive with the specified name. Directives allow you to modify the behavior or appearance of HTML elements in your Angular application.
+这个命令生成指定名称的新指令。指令允许你修改 Angular 应用程序中 HTML 元素的行为或外观。
 
 ![code-generation-pipe](https://www.freecodecamp.org/news/content/images/2023/05/code-generation-pipe.png)
 
-Generating a pipe
+生成一个管道
 
--   **Generating a Pipe:**
+-   **生成一个管道：**
 
 ```bash
 ng generate pipe pipe-name
 ```
 
-CLI Command to generate a pipe
+使用 CLI 命令生成一个管道
 
-Use this command to create a new pipe with the specified name. Pipes are used for transforming data in your Angular templates, such as formatting dates, applying custom filters, or truncating or shortening an input text to a specified length.
+使用这个命令创建指定名称的新管道。管道可用于转换 Angular 模板中的数据，例如格式化日期、应用自定义过滤器或将输入文本截断或缩短到指定长度。
 
-These commands are executed in the terminal or command prompt, and Angular CLI will automatically generate the corresponding files and folder structure based on the specified name. Make sure to replace `component-name`, `service-name`, `module-name`, `directive-name`, or `pipe-name` with your desired names when using these commands.
+上述所有命令都是在终端或命令提示符下执行的，Angular CLI 会根据指定的名称自动生成相应的文件和文件夹结构。使用这些命令时，请确保将 `component-name`、`service-name`、`module-name`、`directive-name` 和 `pipe-name` 替换为你所需的 “组件名称”、“服务名称”、“模块名称”、“指令名称” 以及 “管道名称”。
 
 #### 开发服务器
 
-Angular CLI includes a built-in development server that allows developers to run and test their applications locally.
+Angular CLI 包含一个内置的开发服务器，允许开发人员在本地运行和测试他们的应用程序。
 
-The server automatically reloads the application whenever changes are made, providing a smooth development experience. It also offers features like hot module replacement, allowing developers to see the immediate effect of their code changes without the need for a full application reload.
+每当发生更改时，服务器都会自动重新加载应用程序，从而提供流畅的开发体验。它还提供热模块替换等功能，这意味着，开发者能够立即看到代码更改的效果，而无需重新加载完整的应用程序。
 
 #### TypeScript 集成
 
-Angular is built using TypeScript, a [statically typed superset of JavaScript](https://www.freecodecamp.org/news/learn-typescript-with-this-crash-course/). TypeScript brings powerful features like static type checking, enhanced IDE support, better code navigation, and advanced refactoring tools.
+Angular 是使用 TypeScript 构建的，TypeScript 是 [JavaScript 的静态类型超集](https://www.freecodecamp.org/news/learn-typescript-with-this-crash-course/)。TypeScript 带来了强大的功能，例如静态类型检查、增强的 IDE 支持、更好的代码导航和高级重构工具。
 
-Angular CLI seamlessly integrates with TypeScript, providing out-of-the-box support for compiling TypeScript code into JavaScript and handling TypeScript-specific configuration options.
+Angular CLI 无缝集成 TypeScript，可以将 TypeScript 代码编译为 JavaScript 代码，并为处理特定于 TypeScript 的配置选项提供开箱即用的支持。
 
-By leveraging Angular CLI and TypeScript integration, developers can streamline their development workflow, enhance productivity, and benefit from the robustness and scalability of the Angular framework.
+利用 Angular CLI 和 TypeScript 集成，开发者可以简化开发工作流程、提高工作效率，并从 Angular 框架的稳健性和可扩展性中受益。
 
-Angular CLI simplifies common tasks, automates repetitive processes, and provides a seamless TypeScript development experience, allowing developers to focus on building high-quality applications.
+总的来说，Angular CLI 通过简化常见任务、自动执行重复流程，并提供无缝的 TypeScript 开发体验，使开发人员能够专注于构建高质量的应用程序。
 
 ## Vue.js 是什么？
 

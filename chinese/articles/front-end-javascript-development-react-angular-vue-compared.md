@@ -763,112 +763,112 @@ Angular CLI 无缝集成 TypeScript，可以将 TypeScript 代码编译为 JavaS
 
 Vue.js logo
 
-Vue.js is a progressive JavaScript framework for building user interfaces. It is designed to be approachable, versatile, and easy to integrate into existing projects. Whether you're a beginner or an experienced developer, Vue.js offers a smooth learning curve and a flexible architecture that makes it a popular choice for web application development.
+Vue.js 是一个用于构建用户界面的渐进式 JavaScript 框架。它被设计为平易近人、用途广泛且易于集成到现有项目中。无论你是初学者还是经验丰富的开发人员，Vue.js 都提供平滑的学习曲线和灵活的架构，使其成为 Web 应用程序开发的热门选择。
 
-In this section, I'll teach you the fundamentals of Vue.js and help you get started with building your own Vue.js applications. We'll explore the core concepts, syntax, and key features that make Vue.js a powerful and intuitive framework.
+在本节中，我将为你介绍 Vue.js 的基础知识，并帮助你开始构建自己的 Vue.js 应用程序。我们将探索那些让 Vue.js 成为一个强大且易用的框架的核心概念、语法和关键特性。
 
-If you're new to Vue.js, don't worry! I'll guide you step by step, starting from the basics and gradually diving into more advanced topics. By the end of this guide, you'll have a solid understanding of Vue.js and be well-equipped to start building your own dynamic and interactive web applications.
+如果你是 Vue.js 新手，请不要担心！我会逐步指导你，从基础知识开始，逐渐深入到更高级的主题。读完本指南后，你将对 Vue.js 有深入的了解，并做好开始构建自己的动态交互式 Web 应用程序的准备。
 
-So, let's embark on this Vue.js journey together and unlock the full potential of this powerful JavaScript framework. Whether you're building a small personal project or a large-scale application, Vue.js has the tools and capabilities to bring your ideas to life.
+现在，让我们一起踏上 Vue.js 之旅，释放这个强大的 JavaScript 框架的全部潜力。无论你是构建小型个人项目还是大型应用程序，Vue.js 都拥有将你的想法变为现实的工具和功能。
 
 ### Vue.js 及其哲学
 
-Vue.js is built upon a set of guiding principles that shape its design and philosophy. Understanding these principles is crucial for effectively utilizing the framework and developing high-quality Vue.js applications.
+Vue.js 建立在一组塑造其设计和理念的指导原则之上。理解这些原则对于有效利用框架和开发高质量的 Vue.js 应用程序至关重要。
 
-1.  **Approachability:** Vue.js prides itself on being an approachable framework, making it easy for beginners to get started. Its syntax is simple and intuitive, resembling plain HTML templates, which lowers the learning curve. Vue.js allows developers to gradually adopt its features, enabling them to integrate it into existing projects or start small and scale as needed.
-2.  **Versatility:** Vue.js is a versatile framework that you can use for a wide range of applications. It offers a flexible architecture, allowing developers to choose the tools and libraries they prefer. Whether you want to build a single-page application (SPA), a progressive web app (PWA), or integrate Vue.js into a larger project, the framework provides the necessary flexibility to meet your specific needs.
-3.  **Component-Based Development:** Vue.js promotes a component-based approach to development. Components are self-contained and reusable building blocks that encapsulate their own logic, styles, and templates. This modular structure facilitates code reuse, simplifies maintenance, and enables better collaboration among team members. Vue.js provides a clear and intuitive syntax for defining and using components, making it straightforward to create complex user interfaces.
-4.  **Reactivity:** Vue.js leverages a reactive data model, which means that changes to the underlying data automatically update the corresponding views. This reactivity makes it easier to build interactive and responsive applications without the need for manual DOM manipulation. Vue.js tracks dependencies between data and views, ensuring efficient updates and optimized rendering performance.
+1.  **平易近人：** Vue.js 自豪地声称其是一个平易近人的框架，可以让初学者轻松上手。它的语法简单直观，类似于纯 HTML 模板，降低了学习曲线。Vue.js 允许开发者逐步采用其功能，这意味着，你可以将它集成到现有项目中，或者从小规模开始并根据需要进行扩展。
+2.  **多功能性：** Vue.js 是一个多功能框架，可用于多种应用程序。它提供了灵活的架构，允许开发人员选择他们喜欢的工具和库。无论你是想构建单页应用程序（SPA）、渐进式 Web 应用程序（PWA），还是将 Vue.js 集成到更大的项目中，这个框架都提供了必要的灵活性来满足你的特定需求。
+3.  **基于组件的开发：** Vue.js 提倡基于组件的开发方法。组件是独立且可重用的构建块，封装了自己的逻辑、样式和模板。这种模块化结构有利于代码重用、简化维护并实现团队成员之间更好的协作。Vue.js 为定义和使用组件提供了清晰直观的语法，使创建复杂的用户界面变得简单。
+4.  **响应式：** Vue.js 采用响应式数据模型，这意味着底层数据的更改会自动更新相应的视图。这种特性使得构建交互式和响应式应用程序变得更加容易，而无需手动 DOM 操作。Vue.js 跟踪数据和视图之间的依赖关系，确保高效更新和优化渲染性能。
 
-By embracing these principles, Vue.js empowers developers to build elegant, maintainable, and scalable applications. The philosophy of approachability, versatility, component-based development, and reactivity sets the foundation for creating exceptional user interfaces with Vue.js.
+通过遵循这些原则，Vue.js 使开发者能够构建优雅、可维护和可扩展的应用程序。平易近人、多功能性、基于组件的开发和响应式的理念为使用 Vue.js 创建卓越的用户界面奠定了基础。
 
 ### Vue 响应系统和组件构成
 
-Vue.js employs a powerful reactivity system that enables efficient and automatic updates to the user interface based on changes in the underlying data. This reactivity is achieved through Vue's reactive data model and makes it easy to create dynamic and responsive applications.
+Vue.js 采用强大的响应系统，可以根据底层数据的变化高效、自动地更新用户界面。这种响应性是通过 Vue 的响应式数据模型实现的，可以轻松创建动态和响应式应用程序。
 
 #### 响应式数据模型
 
-Vue.js uses a reactive data model, where data properties are automatically tracked for changes. When the data changes, Vue.js automatically updates the associated views, ensuring a synchronized and reactive user interface. This reactivity simplifies the development process as developers do not need to manually manipulate the DOM to reflect data changes.
+Vue.js 使用响应式数据模型，自动跟踪数据属性的变化。当数据发生变化时，Vue.js 会自动更新关联的视图，确保用户界面同步且反应灵敏。这种响应性简化了开发过程，因为开发者不需要手动操作 DOM 来反映数据的变化。
 
-In Vue.js, the reactive data model is like a magical connection between your data and the user interface. Imagine you have a magic box where you can put your data. Whenever the data inside the box changes, the UI automatically updates to reflect those changes. It's like having a real-time mirror of your data!
+在 Vue.js 中，响应式数据模型就像数据和用户界面之间的神奇连接。想象一下，你有一个可以放置数据的魔盒。每当框中的数据发生变化时，UI 就会自动更新以反映这些变化。就像是一面可以实时反映数据的镜子！
 
-In this magical world of Vue.js, you define your data properties inside a Vue component, and Vue takes care of tracking those properties for you. Whenever a property changes, Vue automatically detects it and updates the corresponding parts of the UI. This means you don't have to manually update the UI elements every time the data changes. Vue does all the heavy lifting for you.
+在 Vue.js 这个神奇的世界中，你在 Vue 组件内定义数据属性，Vue 负责为你跟踪这些属性。每当属性发生变化时，Vue 都会自动检测到它并更新 UI 的相应部分。这意味着，你不必在每次数据更改时手动更新 UI 元素，Vue 会为你完成所有繁重的工作。
 
-So, let's say you have a counter in your app. When you click a button to increase the counter value, Vue will instantly update the value in the UI without you having to write any extra code. It's as simple as that! The reactive data model in Vue.js makes it easy to keep your UI in sync with your data, saving you time and effort.
+举个例子，假设你的应用程序中有一个计数器。当你单击按钮增加计数器值时，Vue 会立即更新 UI 中的值，而无需编写任何额外的代码。就这么简单！Vue.js 中的响应式数据模型可以轻松保持 UI 与数据同步，为你节省时间和精力。
 
-By embracing the reactive data model in Vue.js, you can build dynamic and interactive user interfaces with ease. It allows you to focus on manipulating the data, and Vue takes care of updating the UI accordingly. It's like having a superpower that simplifies your development process and brings your app to life.
+利用 Vue.js 中的响应式数据模型，你可以轻松构建动态和交互式用户界面。让你专注于操作数据上，而更新 UI 的任务则交给 Vue 负责。这就像拥有一种超能力，可以简化你的开发流程，同时保持应用程序的快速响应。
 
-So, remember, with Vue.js, you can harness the power of the reactive data model to create engaging and responsive user interfaces effortlessly.
+总之，请记住，使用 Vue.js，你可以利用响应式数据模型的力量，轻松创建引人入胜且响应迅速的用户界面。
 
 #### 计算属性和观察者
 
-Vue.js provides computed properties and watchers to handle more complex logic and reactivity requirements.
+Vue.js 提供计算属性和观察器来处理更复杂的逻辑和响应性要求。
 
-Computed properties allow developers to define properties that are computed based on other reactive data properties. These computed properties are cached and updated only when their dependencies change, optimizing performance.
+计算属性允许开发者定义基于其他响应数据属性计算的属性。仅当这些计算属性的依赖项发生变化时才会缓存和更新，从而优化性能。
 
-Watchers, on the other hand, allow developers to react to specific data changes and perform custom logic when those changes occur.
+另一方面，观察者允许开发者对特定数据更改做出响应，并在这些更改发生时执行自定义逻辑。
 
-Computed properties and watchers are like special helpers that assist you in handling data transformations and reacting to changes. Imagine you have a friend who always keeps an eye on things for you and gives you updates whenever something changes. That's exactly what computed properties and watchers do in Vue.
+计算属性和观察者就像是特殊的助手，可以帮助你处理数据转换并对更改做出响应。想象一下，你有一位朋友，他总是关注某些事物，并在这些事物发生变化时向你提供最新信息。这正是 Vue 中计算属性和观察者所做的事情。
 
-Computed properties are like smart calculators that automatically compute and update values based on other data properties. It's like having a helper who can perform complex calculations for you.
+计算属性就像智能计算器，可以根据其他数据属性自动计算和更新值。这就好比如你有一个帮手，可以为你执行复杂的计算。
 
-For example, let's say you have the length and width of a rectangle, and you want to calculate its area. With computed properties, you can define a property called `area` that dynamically computes the area value whenever the length or width changes. This way, you always have the correct area value without manually recalculating it.
+例如，假设你知道一个矩形的长度和宽度，然后想要计算它的面积。使用计算属性，你可以定义一个名为 `area` 的属性，只要长度或宽度发生变化，该属性就会动态计算面积值。这样，你始终可以获得正确的面积值，而无需手动重新计算。
 
-On the other hand, watchers are like attentive observers who keep an eye on specific data properties and perform actions when they change. It's like having a friend who notifies you whenever something important happens.
+此外，观察者还是一个细心的观察者，他们关注特定的数据属性并在它们发生变化时执行操作。这就像有一个朋友，每当有重要事情发生时，他都会通知你。
 
-For example, let's say you have a form input field, and you want to perform some validation or execute a function whenever the input value changes. With watchers, you can define a watcher that watches the input value and triggers a function whenever it changes. This allows you to take immediate action and respond to user inputs or data changes.
+例如，假设你有一个表单输入字段，你希望在输入值更改时执行一些验证或执行函数。使用观察程序，你可以定义一个观察程序来监视输入值并在输入值发生变化时触发函数。这样就可以立即响应用户输入或数据更改。
 
-By using computed properties and watchers in Vue.js, you can simplify complex data manipulations and react to changes effectively. They provide you with powerful tools to automate calculations, perform validations, and execute custom logic whenever necessary. It's like having reliable assistants who handle the heavy lifting for you, making your coding experience more efficient and enjoyable.
+通过在 Vue.js 中使用计算属性和观察器，可以简化复杂的数据操作，并有效地对更改做出响应。它们为你提供强大的工具来自动计算、执行验证并在必要时执行自定义逻辑。这就像拥有可靠的助手为你处理繁重的工作，让你的编码体验更加高效和愉快。
 
-With computed properties and watchers in Vue.js, you have the power to automatically compute values and respond to changes effortlessly. They are your trusted companions in managing data transformations and handling dynamic behaviors in your Vue components.
+借助 Vue.js 中的计算属性和观察程序，你可以自动计算值并轻松响应更改。它们是你在 Vue 组件中管理数据转换和处理动态行为时值得信赖的伙伴。
 
-#### 组件的构成
+#### 组件的组合
 
-Vue.js promotes component-based development and encourages the composition of smaller, reusable components to build larger and more complex user interfaces.
+Vue.js 提倡基于组件的开发，鼓励把一些更小的、可重用的组件组合起来，构建更大、更复杂的用户界面。
 
-Components can be easily created, registered, and used throughout the application. Vue's reactivity system allows data to flow seamlessly between parent and child components, enabling a hierarchical and reactive structure.
+组件可以在整个应用程序中轻松创建、注册和使用。Vue 的响应系统允许数据在父组件和子组件之间无缝流动，从而实现具有层次结构的响应系统。
 
-Component composition, in Vue.js, is like playing with building blocks to create something amazing. Let's say you have different LEGO bricks, and each brick represents a specific part of your website or web app. With component composition in Vue, you can easily combine these bricks to build something much bigger and more powerful.
+在 Vue.js 中，把组件组合起来就像玩积木来创造令人惊奇的东西一样。假设你有不同的乐高积木，每个积木代表你的网站或网络应用程序的特定部分。通过 Vue 中的组件组合，你可以轻松组合这些积木来构建更大、功能更强的东西。
 
-Think of each Vue component as a LEGO brick that has its own unique functionality and appearance. You can create components for a navigation bar, a button, an image gallery, or any other part of your web page. Now, when you want to build a complete web page, you can assemble these components together, just like stacking LEGO bricks on top of each other.
+将每个 Vue 组件视为具有自己独特的功能和外观的乐高积木。你可以为导航栏、按钮、图片库或网页的任何其他部分创建组件。现在，当你想要构建一个完整的网页时，你可以将这些组件组装在一起，就像将乐高积木堆叠在一起一样。
 
-Component composition allows you to reuse components and nest them within each other to create complex and interactive web pages. It's like building a LEGO spaceship by combining different bricks, adding wings, a cockpit, and other parts.
+组件组合允许你重用组件并将它们相互嵌套在一起，创建出复杂的交互式网页。就好比如通过组合不同的积木、添加机翼、驾驶舱和其他部件来建造乐高宇宙飞船。
 
-Similarly, in Vue, you can nest components inside one another, passing data and interacting with each other to create dynamic and interactive user interfaces.
+类似地，在 Vue 中，你可以将组件嵌套在另一个组件中，传递数据并相互交互，形成动态和交互式的用户界面。
 
-By using component composition in Vue.js, you can easily break down your web page into smaller, manageable parts, and then assemble them together to create a cohesive and functional whole. It's like having a box of LEGO bricks that you can use to build anything you imagine.
+通过在 Vue.js 中使用组件组合，你可以轻松地将网页分解为更小的、可管理的部分，然后将它们组装在一起，创建一个有凝聚力的功能整体。这就像有一盒乐高积木，你可以用它来建造任何你想象的东西。
 
-Component composition lets you create individual components for different parts of your web page and then combine them together to create a complete and interactive experience. It's a fun and creative way to build awesome websites and web apps.
+组件组合允许你为网页的不同部分创建单独的组件，然后将它们组合在一起创建完整的交互式体验。这是构建优秀网站和 Web 应用程序的一种有趣且富有创意的方式。
 
 #### Props 和 Events
 
-Vue.js facilitates communication between components through the use of props and events. Props allow data to be passed from parent components to child components, enabling a unidirectional flow of data. Events, on the other hand, allow child components to emit events and notify parent components about specific actions or changes.
+Vue.js 通过使用属性（Props）和事件（Events）来完成组件之间的通信。Props 允许数据从父组件传递到子组件，从而实现单向数据流；而 Events 允许子组件发出事件并通知父组件进行相关动作或更新数据。
 
-In Vue.js, props and events are like passing messages between components, just like friends talking to each other. Think of it as you having two friends who want to share information with each other. One friend can send a message (prop) to the other friend, and the other friend can respond with a message (event) back.
+在 Vue.js 中，Props 和 Events 在组件之间传递消息的过程就像朋友之间互相交谈一样。想象一下，你有两个想要互相分享信息的朋友，其中一个朋友可以向另一个朋友发送消息（prop），而另一个朋友则可以回复消息（event）。
 
-In Vue, components can communicate with each other using props and events. Think of a prop as a message that a parent component sends to its child component. It's like a note passed from one friend to another, containing important information. The child component can receive the prop and use that information to display or modify its behavior. It's a way for components to share data with each other.
+在 Vue 中，组件可以使用 Props 和 Events 相互通信。将 prop 视为父组件发送给其子组件的消息，这就像一个朋友传递给另一个朋友的一张便条，其中包含重要信息。子组件接收到 prop 便可以使用该信息来显示或修改其行为，这是组件之间共享数据的一种方式。
 
-Now, events are like the response from the child component back to the parent component. It's the other friend replying to the message they received. The child component can emit an event to let the parent component know that something happened or that it needs to take action. It's like raising your hand and saying, _"Hey, something important just happened!"_
+此时，Events 就相当于从子组件返回到父组件的响应，即另一个朋友回复他们收到的消息。子组件可以发出 event，让父组件知道发生了某些事情或者需要采取什么行动。这就像有人举起手说：“嘿，刚刚发生了一些重要的事情！”
 
-With props and events in Vue.js, components can talk to each other, share information, and work together as a team. This communication between components allows you to build dynamic and interactive web pages where different parts can exchange data and work together seamlessly.
+通过 Vue.js 中的 Props 和 Events，组件可以相互通信、共享信息并作为一个团队一起工作。利用组件之间的这种通信方式，你就可以构建出动态和交互式网页，在不同部分之间交换数据和协作。
 
-So, just like friends passing notes and responding with actions, props and events in Vue.js help components share information and work together as a team. It's a fun way to create interactive and collaborative web applications.
+因此，就像朋友间传递笔记并对其作出响应一样，Vue.js 中的 Props 和 Events 可以帮助组件共享信息，形成一个有凝聚力的整体。这是创建交互式和协作式 Web 应用程序的一种有趣方式。
 
-Vue's reactivity system and component composition provide a solid foundation for building flexible and modular applications. By leveraging the reactivity system, developers can create dynamic and responsive user interfaces, while component composition promotes code reuse, maintainability, and scalability.
+Vue 的响应系统和组件组合为构建灵活的模块化应用程序提供了坚实的基础。利用响应式系统，开发者可以创建动态和响应式的用户界面，而组件组合则可以促进代码重用、可维护性和可扩展性。
 
-With Vue.js, developers can easily manage complex application states and achieve a seamless and interactive user experience.
+借助 Vue.js，开发人员可以轻松管理复杂的应用程序状态并实现无缝的交互式用户体验。
 
 ### 单文件组件和 Vue CLI
 
-Vue.js offers a convenient way to structure and organize components using Single-File Components (SFCs). SFCs encapsulate the template, script, and styles of a component into a single file, promoting better separation of concerns and improving code readability.
+Vue.js 提供了一种使用单文件组件（SFCs）构建和组织组件的便捷方法。SFCs 将组件的模板、脚本和样式封装到单个文件中，从而更好地实现关注点分离并提高代码的可读性。
 
 #### 组织结构
 
-With Single-File Components, each component is contained within a single file, which makes it easier to understand and manage.
+使用单文件组件，每个组件都包含在单个文件中，这使得它更易于理解和管理。
 
-The template section holds the HTML markup, the script section contains the component's logic written in JavaScript, and the style section holds the component's styles using CSS or pre-processors like SASS or LESS. This modular structure allows developers to work on different aspects of a component without navigating through multiple files.
+模板部分保存 HTML 标记，脚本部分包含用 JavaScript 编写的组件逻辑，样式部分使用 CSS 或预处理器（如 SASS 或 LESS）保存组件的样式。这种模块化结构使得开发者在处理组件的不同方面时无需浏览多个文件。
 
-Here's a short code snippet that demonstrates the structure and organization of a Vue single-file component:
+下面代码片段演示了 Vue 单文件组件的结构和组织：
 
 ```vue
 <template>
@@ -903,23 +903,23 @@ export default {
 </style>
 ```
 
-In this code snippet, you can see the structure of a Vue single-file component. It consists of three main sections: `<template>`, `<script>`, and `<style>`.
+上述代码片段中，你可以看到 Vue 单文件组件的结构。它由三个主要部分组成：`<template>`、`<script>` 和 `<style>`。
 
-The `<template>` section contains the HTML template of the component. It defines the structure and layout of the component's content.
+`<template>` 部分包含组件的 HTML 模板。它定义了组件内容的结构和布局。
 
-The `<script>` section contains the JavaScript code for the component. It includes the component's definition, which includes the component's name, data, and methods.
+`<script>` 部分包含组件的 JavaScript 代码。它包括组件的定义，其中包括组件的名称、数据和方法。
 
-In this example, we have a `data` object that holds the component's state, including a `message` property and a `count` property. We also have a `methods` object that defines the `increment` method, which increments the `count` property when the button is clicked.
+在这个示例中，我们有一个保存组件状态的 `data` 对象，包括 `message` 属性和 `count` 属性。我们还有一个定义了 `increment` 方法的 `methods` 对象，该方法在单击按钮时增加 `count` 属性的值。
 
-The `<style>` section contains the component-specific styles. By using the `scoped` attribute, the styles are only applied to the component's elements, ensuring encapsulation and preventing conflicts with styles from other components.
+`<style>` 部分包含组件特定的样式。通过使用 `scoped` 属性，样式仅应用于组件的元素，这样可以保证封装性，防止与其他组件的样式产生冲突。
 
-This structure helps in organizing and managing the code for your Vue components. It keeps the HTML, JavaScript, and styles related to a component in a single file, making it easier to understand and maintain your codebase.
+这种结构有助于组织和管理 Vue 组件的代码。它将与组件相关的 HTML、JavaScript 和样式保留在单个文件中，从而更容易理解和维护代码库。
 
 #### Scoped 样式
 
-Single-File Components provide built-in support for scoped styles. By default, styles defined within a component only apply to that component's template, preventing style conflicts with other components. This encapsulation makes it easier to style components without worrying about global style pollution.
+单文件组件为作用域样式（scoped styles）提供内置支持。默认情况下，组件内定义的样式仅适用于该组件的模板，从而防止了与其他组件样式发生冲突。这种封装使得设计组件的样式变得更加容易，而不必担心全局样式污染。
 
-Take a look at this code snippet that demonstrates the use of scoped styles in a Vue single-file component:
+下面代码片段演示了 Vue 单文件组件中作用域样式的使用：
 
 ```vue
 <template>
@@ -943,25 +943,25 @@ export default {
 </style>
 ```
 
-In this code snippet, you can see the use of scoped styles in Vue single-file components. The `<style>` section includes the component-specific styles, and the `scoped` attribute is added to the `<style>` tag.
+上述代码片段中，你可以看到 Vue 单文件组件中作用域样式的使用。`<style>` 部分包含组件特定的样式，并且 `scoped` 属性被添加到 `<style>` 标记中。
 
-Scoped styles mean that the styles defined within the component's `<style>` section only apply to the elements within that component.
+作用域样式意味着组件的 `<style>` 部分中定义的样式仅适用于该组件内的元素。
 
-In the example, the `.my-component` class is used to style the component's `<div>` element. The background color is set to `#f1f1f1`, there's padding around the component, and the border radius is set to `5px`.
+在这个示例中，`.my-component` 类用于设置组件的 `<div>` 元素的样式。背景颜色设置为 `#f1f1f1`，组件周围有填充，边框半径设置为 `5px`。
 
-The scoped styles ensure that these styles only affect the specific component they are defined in. This helps prevent style conflicts and allows for better encapsulation of styles within the component. It allows you to write component-specific styles without worrying about affecting other components or elements on the page.
+作用域样式确保这些样式只影响定义它们的特定组件。这样做可以有效防止样式冲突，并且更好地封装组件内的样式。Vue 允许你编写特定于组件的样式，而不必担心影响页面上的其他组件或元素。
 
-Using scoped styles in Vue single-file components promotes code organization and separation of concerns, making it easier to manage and maintain your styles within your Vue project.
+在 Vue 单文件组件中使用作用域样式，有利于代码组织和关注点分离，从而更轻松地在 Vue 项目中管理和维护样式。
 
 #### Vue CLI
 
-Vue CLI (Command Line Interface) is a powerful tool that simplifies the development of Vue.js applications. It provides a command-line interface for creating, configuring, and managing Vue projects.
+Vue CLI（命令行界面）是一个强大的工具，可以简化 Vue.js 应用程序的开发。它提供了一个用于创建、配置和管理 Vue 项目的命令行界面。
 
-Vue CLI includes features like project scaffolding, code generation, and an integrated development server, making it easy to set up and start building Vue applications.
+Vue CLI 包括项目脚手架、代码生成和集成开发服务器等功能，可以轻松设置和开始构建 Vue 应用程序。
 
 ![install-vue-cli](https://www.freecodecamp.org/news/content/images/2023/05/install-vue-cli.png)
 
-Installing Vue CLI
+安装 Vue CLI
 
 ```bash
 # Install Vue CLI globally (if not already installed)
@@ -973,19 +973,19 @@ vue create my-project
 
 ![vue-create](https://www.freecodecamp.org/news/content/images/2023/05/vue-create.png)
 
-Create Vue Project
+创建 Vue 项目
 
-As you can see in code snippet above, we first install Vue CLI globally using the `npm install` command. This step is required only if you haven't installed Vue CLI before.
+正如上面所示，我们首先使用 `npm install` 命令全局安装 Vue CLI。注意：仅当你之前未安装 Vue CLI 时才需要执行此步骤。
 
-Once Vue CLI is installed, you can create a new Vue project using the `vue create` command. In the example, we're creating a project named "_my-project_". Vue CLI will prompt you to select a preset configuration for your project. You can choose from various options like default, manually select features, or use a saved preset.
+安装 Vue CLI 后，你就可以使用 `vue create` 命令创建一个新的 Vue 项目。在示例中，我们创建了一个名为 “_my-project_” 的项目。Vue CLI 会提示你为项目选择预设配置，你可以从各种选项中进行选择，例如默认值、手动选择功能或使用保存的预设。
 
-After selecting the preset, Vue CLI will set up the project structure, install the necessary dependencies, and generate the initial files for your Vue project.
+选择预设后，Vue CLI 将设置项目结构，安装必要的依赖项，并为 Vue 项目生成初始文件。
 
-Using Vue CLI simplifies the process of setting up a new Vue project by providing a command-line interface and project scaffolding. It automates many common tasks, such as project configuration, dependency installation, and build setup.
+通过 Vue CLI 提供的命令行界面和项目脚手架，大大简化了设置新 Vue 项目的过程。它可以自动执行许多常见任务，例如项目配置、依赖项安装和构建设置。
 
-Vue CLI also provides additional features like hot-reloading during development, ready-to-use templates, and easy project customization.
+此外，Vue CLI 还提供了额外的功能，例如开发期间的热重载、即用型模板，以及简单项目的定制。
 
-With Vue CLI, you can quickly start working on your Vue projects without worrying about the initial setup, allowing you to focus on writing code and building your application.
+使用 Vue CLI，你可以快速开始处理 Vue 项目，而无需担心初始设置，让你可以专注于编写代码和构建应用程序。
 
 ![npm-build-vue](https://www.freecodecamp.org/news/content/images/2023/06/npm-build-vue.png)
 
@@ -993,25 +993,25 @@ With Vue CLI, you can quickly start working on your Vue projects without worryin
 
 #### 构建和部署
 
-Vue CLI offers a streamlined build process that optimizes the application for production. It generates optimized bundles, minifies the code, and applies various optimizations to improve performance.
+Vue CLI 提供了一个简化的构建流程，可以优化应用程序的生产。包括生成优化的包、缩小代码体积，以及应用各种优化来提高性能。
 
-Additionally, Vue CLI supports easy deployment of Vue applications to various hosting platforms or content delivery networks (CDNs), simplifying the deployment process.
+此外，Vue CLI 支持将 Vue 应用程序轻松部署到各种托管平台或内容分发网络（CDN），从而简化了部署过程。
 
-When it comes to building and deploying your Vue.js application, Vue CLI provides a simple and efficient way to handle this process. After you've developed your application locally, you'll need to generate a production-ready build that can be deployed to a web server.
+在构建和部署 Vue.js 应用程序时，Vue CLI 提供了一种简单而有效的方法来处理此过程。在本地开发应用程序后，你需要生成可部署到 Web 服务器的生产就绪版本。
 
-Vue CLI offers a command called `npm run build` that compiles your Vue components, bundles your assets, and optimizes your code for production. It generates a `dist` directory containing all the necessary files for deployment. This process ensures that your application is optimized for performance and ready to be served to users.
+Vue CLI 提供了一个 `npm run build` 命令，可以用于编译 Vue 组件、打包资源文件，并优化生产代码。它会生成一个 `dist` 目录，其中包含部署所需的所有文件。这个过程可以对应用程序做性能优化，并为部署服务做好准备。
 
-Once you have your production build, you can deploy it to a web server or a hosting platform of your choice. You can simply upload the contents of the `dist` directory to your server, and your Vue.js application will be accessible to users over the internet.
+完成生产构建后，就可以将其部署到你选择的 Web 服务器或托管平台。只需将 `dist` 目录的内容上传到你的服务器，用户就可以通过互联网访问你的 Vue.js 应用程序。
 
-Deploying your Vue.js application typically involves configuring your server to serve the static files correctly, setting up any necessary server-side routing or configurations, and ensuring that your server has the required dependencies installed.
+部署 Vue.js 应用程序通常还需要配置服务器，包括正确提供静态文件、设置必要的服务器端路由，以及在服务器安装所需的依赖项。
 
-It's important to choose a reliable and secure hosting solution that fits your application's requirements. Popular hosting options for Vue.js applications include platforms like [Netlify](https://www.netlify.com), [Vercel](https://vercel.com/), and [GitHub Pages](https://pages.github.com/), which offer seamless deployment workflows and robust infrastructure.
+选择适合应用程序要求的可靠、安全的托管解决方案非常重要。Vue.js 应用程序的流行托管选项包括 [Netlify](https://www.netlify.com)、[Vercel](https://vercel.com/) 和 [GitHub Pages](https://pages.github.com/)，它们提供流畅的部署工作流程和可靠的基础设施。
 
-By leveraging the build and deployment features provided by Vue CLI, you can easily package and deploy your Vue.js application, making it accessible to users worldwide.
+借助 Vue CLI 提供的构建和部署功能，你可以轻松打包和部署 Vue.js 应用程序，使其可供全球用户访问。
 
-By utilizing Single-File Components (SFCs) and Vue CLI, developers can efficiently structure their Vue.js projects, enhance code organization, and leverage powerful development tools. This approach not only improves code maintainability but also allows for better collaboration among team members.
+通过单文件组件（SFCs）和 Vue CLI，开发者可以高效地构建他们的 Vue.js 项目、拥有良好的代码组织结构，以及一系列强大的开发工具。这种方法不仅提高了代码的可维护性，而且还有利于团队成员之间的良好协作。
 
-Vue's ecosystem provides a seamless development experience that empowers developers to build robust and scalable applications with ease.
+总的来说，Vue 的生态系统提供了无缝的开发体验，使开发者能够轻松构建强大且可扩展的应用程序。
 
 ## JavaScript 框架对比
 

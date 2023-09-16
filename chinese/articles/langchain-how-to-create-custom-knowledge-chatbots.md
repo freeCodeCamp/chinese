@@ -1,63 +1,64 @@
 > -  原文地址：[LangChain Tutorial – How to Build a Custom-Knowledge Chatbot](https://www.freecodecamp.org/news/langchain-how-to-create-custom-knowledge-chatbots/)
 > -  原文作者：[Shane Duggan](https://www.freecodecamp.org/news/author/shane/)
-> -  译者：
+> -  译者：[luojiyin](https://github.com/luojiyin1987)
 > -  校对者：
 
 ![LangChain Tutorial – How to Build a Custom-Knowledge Chatbot](https://www.freecodecamp.org/news/content/images/size/w2000/2023/06/ThumbnailArticle--1-.png)
 
-You may have read about the large number of AI apps that have been released over the last couple of months. You may have even started using some of them.
+你可能已经了解到过去几个月中发布的大量人工智能应用程序。您甚至可能已经开始使用其中的一些。
 
-AI tools such as [ChatPDF](https://www.chatpdf.com/) and [CustomGPT AI](https://customgpt.ai/use-cases/) have become very useful to people – and for good reason. Gone are the days where you need to scroll through a 50-page document just to find a simple answer. Instead, you can rely on AI to do the heavy lifting.
+[ChatPDF](https://www.chatpdf.com/) 和 [CustomGPT AI](https://customgpt.ai/use-cases/) 等人工智能工具对人们非常有用，这是有道理的。你需要翻阅长达 50 页的文档才能找到一个简单答案的时代已经一去不复返了。取而代之的是，你可以依靠人工智能来完成繁重的工作。
 
-But how exactly are all these developers creating and using these tools? Well, many of them are using an open source framework called LangChain.
+但是，这些开发人员究竟是如何创建和使用这些工具的呢？他们中的许多人都在使用一个名为 LangChain 的开源框架。
 
-In this article, I'm going to introduce you to LangChain and show you how it's being used in combination with OpenAI's API to create these game-changing tools. Hopefully, I'll inspire one of you to come up with one of your own. So let's jump in!
+在本文中，我将向您介绍 LangChain，并向您展示如何将其与 OpenAI 的 API 结合使用，以创建这些改变游戏规则的工具。希望我的介绍能激发你们的灵感，创造出属于自己的工具。那么，让我们开始吧！
 
 ## What Is LangChain?
 
 ![Screenshot-2023-05-29-at-5.40.38-PM](https://www.freecodecamp.org/news/content/images/2023/05/Screenshot-2023-05-29-at-5.40.38-PM.png)
 
-[LangChain](https://github.com/hwchase17/langchain/) is an open source framework that allows AI developers to combine Large Language Models (LLMs) like GPT-4 with external data. It's offered in Python or JavaScript (TypeScript) packages.
+[LangChain](https://github.com/hwchase17/langchain/)是一个开源框架，允许人工智能开发人员将 GPT-4 等大型语言模型（LLM）与外部数据相结合。它提供 Python 或 JavaScript（TypeScript）包。
 
-As you may know, GPT models have been trained on data up until 2021, which can be a significant limitation. And while these models' general knowledge is great, being able to connect them to custom data and computations opens up many doors. That's exactly what LangChain does.
+大家可能知道，GPT 模型是在 2021 年之前的数据上训练出来的，这可能是一个很大的局限。虽然这些模型的常识很不错，但如果能将它们与自定义数据和计算连接起来，就会打开很多大门。这正是 LangChain 所要做的。
 
-Essentially, it allows your LLM to reference entire databases when coming up with its answers. So you can now have your GPT models access up-to-date data in the form of reports, documents, and website info.
+从本质上讲，它可以让你的 LLM 在得出答案时参考整个数据库。因此，你现在可以让您的 GPT 模型访问报告、文档和网站信息等形式的最新数据。
 
-Recently, LangChain has experienced a significant surge in popularity, especially after the launch of GPT-4 in March. This was thanks to its versatility and the many possibilities it opens up when paired with a powerful LLM.
+最近，LangChain 的受欢迎程度大幅上升，尤其是在三月份推出 GPT-4 之后。这要归功于它的多功能性，以及与功能强大的 LLM 配合后所带来的多种可能性。
 
 ## How Does LangChain Work?
 
-While you may be thinking that LangChain sounds pretty complicated, it's actually quite approachable.
+可能会觉得 LangChain 听起来很复杂，但实际上它非常容易上手。
 
-In short, LangChain just composes large amounts of data that can easily be referenced by a LLM with as little computation power as possible. It works by taking a big source of data, take for example a 50-page PDF, and breaking it down into "chunks" which are then embedded into a Vector Store.
+简而言之，LangChain 就是将大量数据组成一个 LLM 可以轻松引用的数据链，而且计算能力越低越好。它的工作原理是将大量数据（例如 50 页的 PDF 文件）分解成 `块(chunks)`，然后将这些 `块(chunks)` 嵌入到 向量存储(Vector Store) 中。
 
 ![------LangChain](https://www.freecodecamp.org/news/content/images/2023/05/------LangChain.png)
 
-Simple Diagram of creating a Vector Store
+创建 向量存储(Vector Store) 的简单示意图
 
-Now that we have vectorized representations of the large document, we can use this in conjunction with the LLM to retrieve only the information we need to be referenced when creating a prompt-completion pair.
+现在，我们已经有了大型文档的向量化表示，可以将其与 LLM 结合使用，在创建 提示-完成对
+(prompt-completion pair) 时，只检索我们需要引用的信息。
 
-When we insert a prompt into our new chatbot, LangChain will query the Vector Store for relevant information. Think of it as a mini-Google for your document. Once the relevant information is retrieved, we use that in conjunction with the prompt to feed to the LLM to generate our answer.
+当我们在新聊天机器人中插入 提示(prompt) 时，LangChain 会查询 向量存储库(Vector Store) 以获取相关信息。把它想象成你文档的迷你谷歌。一旦检索到相关信息，我们就会将其与 提示(prompt ) 信息一起输入 LLM，生成我们的答案。
 
 ![ByteSizedThumbnail--1200---800-px---10-](https://www.freecodecamp.org/news/content/images/2023/05/ByteSizedThumbnail--1200---800-px---10-.png)
 
-How LangChain Works With OpenAI's LLMs
+LangChain 如何与 OpenAI 的 LLM 协同工作
 
-LangChain also allows you to create apps that can take actions – such as surf the web, send emails, and complete other API-related tasks. Check out [AgentGPT](https://agentgpt.reworkd.ai/), a great example of this.
+LangChain 还允许您创建可以执行操作的应用程序，例如上网、发送电子邮件和完成其他与 API 相关的任务。请查看 [AgentGPT](https://agentgpt.reworkd.ai/)，这就是一个很好的例子。
 
-There are many possible use-cases for this – here are just a few off the top of my head:
+这有很多可能的用例，以下是我想到的几个：
 
--   Personal AI Email Assistant
--   AI Study Buddy
--   AI Data Analytics
--   Custom Company Customer Service Chatbots
--   Social Media Content Creation Assistant
+-   个人 AI 电子邮件助理
+-   人工智能学习伙伴
+-   人工智能数据分析
+-   定制公司客户服务聊天机器人
+-   社交媒体内容创建助手
 
-And the list goes on. I will cover proper build tutorials in future articles, so stay tuned for that.
+还有更多。我将在今后的文章中介绍正确的构建教程，敬请期待。
 
 ## How to Get Started with LangChain
 
-A LangChain application consists of 5 main components:
+LangChain 应用程序由 5 个主要部分组成：
 
 1.  Models (LLM Wrappers)
 2.  Prompts
@@ -65,13 +66,13 @@ A LangChain application consists of 5 main components:
 4.  Embeddings and Vector Stores
 5.  Agents
 
-I am going to give you an overview of each, so that you can get a high-level understanding of how LangChain works. Moving forward, you should be able to apply the concepts to start to craft your own use-cases and create your own apps.
+我将为您逐一介绍，以便您对 LangChain 的工作原理有一个高层次的了解。接下来，您应该能够应用这些概念，开始制作自己的用例并创建自己的应用程序。
 
-I'll be explaining everything with short code snippets from Rabbitmetrics ([Github](https://github.com/rabbitmetrics/langchain-13-min/blob/main/notebooks/langchain-13-min.ipynb)). He provides great tutorials on this topic. These snippets should allow you to get all set up and ready to use LangChain.
+我将用 Rabbitmetrics 的简短代码片段（[Github](https://github.com/rabbitmetrics/langchain-13-min/blob/main/notebooks/langchain-13-min.ipynb)）来解释一切。他就这一主题提供了很好的教程。通过这些代码片段，您可以完成所有设置并准备使用 LangChain。
 
-First, let's get our environment set up. You can pip install 3 libraries that you'll need for this:
+首先，我们来设置环境。你可以用 pip 安装 3 个需要的库：
 
-```
+```shell
 pip install -r requirements.txt
 ```
 
@@ -81,7 +82,7 @@ langchain==0.0.137
 pinecone-client==2.2.1
 ```
 
-[Pinecone](https://www.pinecone.io/) is the Vector Store that we will be using in conjunction with LangChain. With these, make sure to store your API keys for OpenAI, Pinecone Environment, and Pinecone API into your environment file. You will be able to find this info at their respective websites. Then we just load that environment file with the following:
+[Pinecone](https://www.pinecone.io/)是我们将与 LangChain 结合使用的向量存储。使用这些工具时，请确保将 OpenAI、Pinecone Environment 和 Pinecone API 的 API 密钥存储到环境文件中。你可以在它们各自的网站上找到这些信息。然后，我们只需在环境文件中加载以下内容即可：
 
 ```Python
 # Load environment variables
@@ -90,13 +91,11 @@ from dotenv import load_dotenv,find_dotenv
 load_dotenv(find_dotenv())
 ```
 
-Now, we're ready to get started!
+现在，我们可以开始了！
 
 ### Models (LLM Wrappers)
 
-To interact with our LLMs, we are going to instantiate a wrapper for OpenAI's GPT models. In this case, we are going to use OpenAI's GPT-3.5-turbo, as it's the most cost-efficient. But if you have access, feel free to use the more powerful GPT4.
-
-To import these, we can use the following code:
+为了与我们的 LLM 进行交互，我们将为 OpenAI 的 GPT 模型实例化一个封装器。在本例中，我们将使用 OpenAI 的 GPT-3.5-turbo，因为它最具性价比。但如果你有授权，也可以使用功能更强大的 GPT4。
 
 ```Python
 # import schema for chat messages and ChatOpenAI in order to query chatmodels GPT-3.5-turbo or GPT-4

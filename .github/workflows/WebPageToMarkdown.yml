@@ -1,12 +1,14 @@
-name: Web Page To Markdown
+name: Web page to Markdown
 on:
   issues:
-    types: [opened]
+    types:
+      - opened
 jobs:
   WebPageToMarkdown:
     runs-on: ubuntu-latest
     steps:
       - name: Does the issue need to be converted to markdown
+        shell: bash
         run: |
           if [ "${{ github.event.issue.body }}" ]; then
             if [[ "${{ github.event.issue.title }}" =~ ^\[Auto\]* ]]; then
@@ -19,19 +21,16 @@ jobs:
             echo "The description of the issue is empty." 1>&2
             exit 1;
           fi;
-        shell: bash
-      - name: Checkout
-        uses: actions/checkout@v3
-        with:
-          ref: ${{ github.head_ref }}
+      - uses: actions/checkout@v3
       - name: Crawl pages and generate Markdown files
-        uses: freeCodeCamp-China/article-webpage-to-markdown-action@v0.1.8
+        uses: freeCodeCamp-China/article-webpage-to-markdown-action@v1
         with:
           newsLink: '${{ github.event.issue.Body }}'
+          ignoreSelector: '.ad-wrapper'
           markDownFilePath: './chinese/articles/'
           githubToken: ${{ github.token }}
       - name: Git Auto Commit
-        uses: stefanzweifel/git-auto-commit-action@v4.9.2
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: '${{ github.event.issue.title }}'
           file_pattern: chinese/articles/*.md

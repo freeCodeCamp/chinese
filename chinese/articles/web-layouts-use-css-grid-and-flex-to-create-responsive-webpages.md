@@ -6,87 +6,87 @@
 # 网页布局 - 如何利用 CSS 中的 Grid 和 Flex 创建响应式网页
 ![网页布局 - 如何利用 CSS 中的 Grid 和 Flex 创建响应式网页](https://www.freecodecamp.org/news/content/images/size/w2000/2022/10/WebLayouts-1.png)
 
-Your web layout is to your website what a floor plan is to a building. Without them, you’re just building castles in the air.
+你网页的布局对于你的网站就像建筑物的平面图一样重要。没有它们你只是在空中建造城堡。
 
-The first thing to do when you have a website or application to build or design is to decide on the layout. This is important because it is within this layout that you specify how elements are arranged so that you can assess them in their intended manner and hierarchy.
+当你有一个要建造或设计的网站或应用时，首先要做的是决定布局。这很重要，因为在这个布局中，你可以指定元素的排列方式，以便以预期的方式和层级对它们进行评估。
 
-Basically, the aim of every web layout is to reduce confusion, enhance usability and to ultimately give your users an enjoyable experience. Some of the main elements of a layout are navigation, menus and content.
+基本上，每个网页布局的目标是减少混乱，增强可用性，并最终为用户提供愉快的体验。布局的一些主要元素包括导航、菜单和内容。
 
-In web and front-end development, having a layout in mind ahead of building can help you decide on what CSS layout module to use: Flexbox or Grid.
+在网页和前端开发中，在开始构建之前先确定一个布局可以帮助你决定使用哪个CSS布局模块：`Flexbox`还是`Grid`。
 
-In this article, we’re going to learn what each of these tools are and the best way to use them by building a simple yet beautiful landing page.
+在本文中，我们将学习这些工具的具体含义，并通过构建一个简单而美观的落地页来了解它们的最佳使用方式。
 
-## What We're Going To Build
+## 我们将要构建的内容
 
 ![homepage-2](https://www.freecodecamp.org/news/content/images/2022/10/homepage-2.png)
 
-landing page design
+落地页设计
 
-Check it out on Codepen [here](https://codepen.io/ophyboamah/pen/KKRLoJr).
+请在Codepen上查看 [here](https://codepen.io/ophyboamah/pen/KKRLoJr).
 
-## Project Functionality
+## 项目的功能性
 
-1.  Web Layout: Create a beautiful landing page
-2.  Mobile Responsiveness
+1.  网页布局: 创建一个美观的落地页
+2.  移动设备响应式设计
 
-## Prerequisites
+## 前置准备
 
--   Basic knowledge of HTML and CSS.
--   An IDE (text editor) like VS Code
--   A web browser
+-   掌握基本的HTML和CSS的基本知识
+-   一个像VS Code这样的集成开发环境（文本编辑器）
+-   一个网络浏览器（Chrome、FireFox）
 
-## Setup
+## 步骤
 
-1.  Create a folder for your project and open in an IDE.
-2.  Within your project folder, create index.html and style.css files.
-3.  Create an asset folder to store images.
-4.  Within your index.html file, create your HTML boilerplate and link your CSS file and font URL within the `<head>` tag.
+1.  为您的项目创建一个文件夹，并在集成开发环境中打开它。
+2.  在您的项目文件夹中创建 index.html 和 style.css 文件。
+3.  创建一个用于存储图像的 assets 文件夹。
+4.  在 index.html 文件中，创建HTML的基本结构，并在 `<head>` 标签内链接您的 CSS 文件和字体 URL。
 
-## Resources
+## 资源
 
-1.  **Font:** [https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap](https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap)
-2.  **Desktop Image:** [https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png](https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png)
-3.  **Mobile Image:** [https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png](https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png)
-4.  **Client Logo (Databiz):** [https://i.postimg.cc/gJ9Y84m6/client-databiz.png](https://i.postimg.cc/gJ9Y84m6/client-databiz.png)
-5.  **Client Logo (Audiophile):** [https://i.postimg.cc/15DDqYSD/client-audiophile.png](https://i.postimg.cc/15DDqYSD/client-audiophile.png)
-6.  **Client Logo (Meet):** [https://i.postimg.cc/5ybQqfbv/client-meet.png](https://i.postimg.cc/5ybQqfbv/client-meet.png)
-7.  **Client Logo (Maker):** [https://i.postimg.cc/g2NsxByN/client-maker.png](https://i.postimg.cc/g2NsxByN/client-maker.png)
+1.  **字体:** [https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap](https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&family=Poppins:wght@400;500;700&display=swap)
+2.  **桌面图像:** [https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png](https://i.postimg.cc/0Nt97Bhf/image-hero-desktop.png)
+3.  **移动设备图像:** [https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png](https://i.postimg.cc/ZnYfhwwW/image-hero-mobile.png)
+4.  **客户 Logo (Databiz):** [https://i.postimg.cc/gJ9Y84m6/client-databiz.png](https://i.postimg.cc/gJ9Y84m6/client-databiz.png)
+5.  **客户 Logo (Audiophile):** [https://i.postimg.cc/15DDqYSD/client-audiophile.png](https://i.postimg.cc/15DDqYSD/client-audiophile.png)
+6.  **客户 Logo (Meet):** [https://i.postimg.cc/5ybQqfbv/client-meet.png](https://i.postimg.cc/5ybQqfbv/client-meet.png)
+7.  **客户 Logo (Maker):** [https://i.postimg.cc/g2NsxByN/client-maker.png](https://i.postimg.cc/g2NsxByN/client-maker.png)
 
-# How to Use Flexbox
+# 如何使用 Flexbox
 
-Generally, HTML elements align according to their default display style. This means, without external styling with CSS, block elements like `p` and `div` will start on a new line. Inline elements like `input` and `span`, on the other hand, are arranged next to each other on the same line.
+通常情况下，HTML 元素根据其默认的显示样式进行对齐。 这意味着，在没有使用 CSS 进行外部样式设置的情况下，块级元素如 `p` 和 `div` 会在新行上开始。而行内元素如 `input` 和 `span` 则会在同一行上并排显示。
 
-However, the concept of Flexbox allows you to easily place these elements either horizontally or vertically in what’s often referred to as one dimension. In order to achieve this, at least two elements are required: **flex container** and **flex item**. These refer to a parent and child element, respectively.
+然而，Flexbox 的概念允许您轻松地将这些元素在水平或垂直方向上放置，通常称为一维布局。为了实现这一点，至少需要两个元素：**弹性容器**（flex container）和**弹性子元素**（flex item）。分别代表父元素和子元素。
 
-In responsive design, the purpose of Flexbox is to allow containers and their child elements to fill defined spaces or shrink depending on a device’s dimensions.
+在响应式设计中，Flexbox 的目的是允许容器及其子元素填充定义的空间或根据设备的尺寸进行收缩。
 
-## Flex-direction and Axes
+## 弹性盒子的方向和轴线
 
-Flex-direction is an important property of CSS Flexbox, because it is what determines the direction that flex items are arranged in. It does this by pointing out the main axis of a flex container.
+flex-direction 是 CSS Flexbox 的一个重要属性，因为它决定了弹性子元素的排列方向。它通过指定弹性容器的主轴来实现这一点。
 
-There are two main axes, namely **main axis** and **cross axis**. The main axis is the defined direction of how your flex items are placed in the flex container, whilst the cross axis is always the axis at the opposite side of the main axis.
+有两个主要的轴线，叫`主轴`和`交叉轴`，主轴是指弹性子元素在弹性容器中排列的方向，而交叉轴始终是主轴的对立面轴线。
 
-It can be dangerous to try using the concept of x and y axis from math to understand this. This is mainly because in Flexbox the main axis can be vertical or horizontal, always depending on the value of the flex-direction.
+尝试使用数学中的 x 轴和 y 轴的概念来理解 Flexbox 可能会有一些问题。这主要是因为在 Flexbox 中，主轴可以是垂直或水平的，具体取决于 flex-direction 的值。
 
-The values accepted by the flex-direction property include row (which is default), row-reverse, column, and column-reverse. For the purposes of this project, we’re going to look at row and column.
+flex-direction 属性接受的值包括 row（默认值）、row-reverse、column 和 column-reverse。在本项目中，我们将关注 row 和 column。
 
 ![flexdirection](https://www.freecodecamp.org/news/content/images/2022/10/flexdirection.png)
 
 flex-direction: row
 
-When the flex-direction attribute has a value of row, the main axis is horizontal and the cross axis is vertical, as shown in the image above. This means flex items will be arranged horizontally.
+当 flex-direction 属性的值为 row 时，主轴是水平的，交叉轴是垂直的，如上图所示。这意味着弹性子元素将水平排列。
 
-Since the row is the default value, if you display a container as flex but don't specify the flex-direction, the flex items will automatically be in a row.
+由于 row 是默认值，如果将容器设置为 flex，但未指定 flex-direction，则弹性子元素将自动排列为一行。
 
 ![flexdirectioncolumn](https://www.freecodecamp.org/news/content/images/2022/10/flexdirectioncolumn.png)
 
 flex-direction: column
 
-When the flex-direction attribute has a value of column, the main axis is vertical and the cross axis is horizontal, as shown in the image above. This means flex items will be arranged vertically.
+当 flex-direction 属性的值为 column 时，主轴是垂直的，交叉轴是水平的，如上图所示。这意味着弹性项目将垂直排列。
 
-## How to Build the Navbar
+## 如何构建导航栏
 
-Now that we know how Flexbox works, let’s start building our navbar. We'll first provide the content within it, that is the menu items and logo. We’ll give them descriptive classes so that we can easily reference them within our CSS file.
+既然我们了解了 Flexbox 的工作原理，让我们开始构建我们的导航栏。首先，我们将提供其中的内容，即菜单项和Logo。我们将为它们提供描述性的类，以便在 CSS 文件中轻松引用它们。
 
 ```HTML
 <nav>
@@ -104,15 +104,15 @@ Now that we know how Flexbox works, let’s start building our navbar. We'll fir
 </nav>
 ```
 
-The image below is the output for the code above. Because both `<ul>` and `<li>`  are block elements, each of the items we specified within them will be displayed on a new line.
+下面的图片是上述代码的输出结果。因为 `<ul>` 和 `<li>` 都是块级元素，所以其中指定的每个项目都将显示在新的一行上。
 
 ![preflexx-1](https://www.freecodecamp.org/news/content/images/2022/10/preflexx-1.png)
 
-Navbar content output
+导航栏内容输出
 
-Flexbox layout display is declared on parent containers and affects child elements. This means that if you had a list of groceries in an unordered list, display flex can’t be applied on the `<li>`s which are child elements in this case. Instead, to display them as flex, you’d first have to create a parent container and apply it to that.
+Flexbox 布局的显示属性是在父容器上声明的，并影响子元素。这意味着如果你有一个无序列表中的杂货清单，无法直接在这种情况下将 display: flex 应用于 `<li>`，因为它们是子元素。相反，要将它们显示为 flex 布局，你需要首先创建一个父容器，并将其应用于该容器。
 
-In our CSS code below, we're defining the font style and size for our project as well as our navbar logo. We're also displaying our nav elements and some of the elements within those as flex.
+在下面的 CSS 代码中，我们定义了项目的字体样式和大小，以及导航栏Logo的样式。我们还将导航栏元素及其内部的一些元素设置为 flex 布局。
 
 ```CSS
 * {
@@ -131,25 +131,25 @@ nav,
 }
 ```
 
-Navbar initial styling
+导航栏初始化样式
 
-The image below is the output for the code above. The elements have been displayed as flex. Yet because we didn't specify the flex-direction, they're automatically arranged in a row.
+下面的图片是上述代码的输出结果。元素已经以 flex 方式显示。然而，由于我们没有指定 flex-direction，它们会自动排列成一行。
 
-But as you can see below using the ruler (red line), the flex items are not aligned as they should be. Let's fix that by learning another important flex element.
+但是，正如您在下面使用标尺（红线）看到的那样，flex 子元素的对齐并不如预期。让我们通过学习另一个重要的 flex 元素来修复这个问题。
 
 ![displayflex](https://www.freecodecamp.org/news/content/images/2022/10/displayflex.png)
 
-Flex without alignment
+没有对齐的 Flex 布局
 
-### How to use the `align-items` attribute
+### 如何使用 `align-items` 属性
 
-This is a Flexbox attribute that controls the arrangement of flex items on the cross axis. The values it takes are flex-start, flex-end and center depending on the element's alignment needs. The image below shows how each of them works.
+这是一个控制 flex 子元素在交叉轴上排列的 Flexbox 属性。它接受的值有 flex-start、flex-end 和 center，具体取决于元素的对齐需求。下面的图片展示了每个值的工作方式。
 
 ![align-items-1](https://www.freecodecamp.org/news/content/images/2022/10/align-items-1.png)
 
 Image credit: freeCodeCamp
 
-From the image above, we can see that if we want to ensure that the flex items within our `<nav>` are aligned properly, on that element we must give the align-items attribute a value of center. So we have to add an attribute of _align-items_ and a value of _center_ to our flex container as shown in the CSS code below:
+从上面的图片可以看出，如果我们希望确保 `<nav>` 内的 flex 子元素正确对齐，我们必须在该元素上添加 align-items 属性，并将其值设为 center。因此，我们需要在我们的 flex 容器上添加一个 _align-items_ 属性，并将其值设为 _center_，如下所示的 CSS 代码：
 
 ```CSS
 nav,
@@ -160,31 +160,31 @@ nav,
 }
 ```
 
-Navbar align-items
+导航栏的对齐方式
 
-As you can see in the image below, the flex items are now aligned as they should be.
+如您可以在下面的图片中看到，flex 子元素现在已经按照预期对齐了
 
 ![aligncenter](https://www.freecodecamp.org/news/content/images/2022/10/aligncenter.png)
 
-Flex with center alignment
+具有居中对齐的 Flex 布局
 
-But once again there is something missing. We want to have our items spread out properly on the navbar: the logo on the extreme left, login and register at the extreme right, and the rest in the middle.
+但是再次出现了一些问题。我们希望在导航栏上正确地将项目展开：将 Logo 放在极左边，登录和注册放在极右边，其余项目放在中间。
 
-We can achieve this with the `justify-content` attribute. Let's learn about it next and then implement it.
+我们可以使用 `justify-content` 属性来实现这一点。让我们接下来学习一下它，然后再进行实现。
 
-### How to use the `justify-content` attribute
+### 如何使用 `justify-content` 属性
 
-This is a Flexbox attribute that controls the arrangement of flex items on the main axis. It also defines how browsers distribute space between and around flex items within a flex container.
+这是一个控制 flex 子元素在主轴上排列的 Flexbox 属性。它还定义了浏览器如何在 flex 容器内在 flex 项目之间分配空间，以及在 flex 项目周围分配空间。
 
-To achieve responsiveness, it helps with allocating any excess space that is leftover after flex-items have been arranged.
+为了实现响应式布局，justify-content 属性有助于分配剩余的多余空间，即在 flex 子元素排列完成后剩下的空间。
 
 ![justifycontentstyles](https://www.freecodecamp.org/news/content/images/2022/10/justifycontentstyles.png)
 
-justify-content styles
+justify-content 样式
 
-From the styles associated with the various values of the justify-content attribute, we can see that the bottom two are more similar to what we're trying to achieve.
+从与 justify-content 属性的各个值相关联的样式中，我们可以看到底部两个值更接近我们想要实现的效果。
 
-We can either go for the space around or the space-between and provide some padding on the sides to push the items on the extreme ends from the edges. We also give the list-syle attribute a value of none to remove the dots in front of the list items.
+我们可以选择使用 space-around 或 space-between，并在两侧添加一些内边距来将子元素推离边缘。我们还可以将 list-style 属性的值设为 none，以去除列表项前面的点。
 
 ```CSS
 li {
@@ -196,13 +196,13 @@ nav {
 }
 ```
 
-Navbar justify-content
+导航栏的 justify-content
 
 ![justifycontent-2](https://www.freecodecamp.org/news/content/images/2022/10/justifycontent-2.png)
 
-justify-content navbar output
+justify-content 导航栏输出效果
 
-Now that we have the items placed at their desired positions, we need to create slight spaces between them. In this case, we're going to give each list item a margin-right of 1rem. We also set other styles like size of fonts, color and a border for the register item.
+现在我们已经将子元素放置在所需的位置上，我们需要在它们之间创建一些小的间距。在这种情况下，我们将给每个列表项设置 margin-right: 1rem。我们还设置其他样式，例如字体大小、颜色以及为注册项设置边框。
 
 ```CSS
 nav {
@@ -228,31 +228,31 @@ nav {
 }
 ```
 
-Navbar complete design
+完整的导航栏设计
 
 ![justifyandstyles-1](https://www.freecodecamp.org/news/content/images/2022/10/justifyandstyles-1.png)
 
-Navbar with styles
+带有样式的导航栏
 
-After implementing the above code, this is the final look of our navbar. And this marks the end of our Flexbox section. Next, we'll build the final part of our landing page with CSS Grid.
+在实现以上代码后，这是我们导航栏的最终外观。这也标志着我们 Flexbox 部分的结束。接下来，我们将使用 CSS Grid 构建我们网页的最后一部分。
 
-# How to Use CSS Grid
+# 如何使用 CSS Grid
 
-CSS Grid is a life-changing tool for creating web layouts. It helps you make both simple and complex layouts. The main difference is that while Flexbox helps with one dimensional arrangement of elements, CSS grid is able to do two dimensional arrangements.
+CSS Grid 是一个改变生活的工具，用于创建网页布局。它可以帮助您创建简单和复杂的布局。主要区别在于 Flexbox 用于一维元素的排列，而 CSS Grid 则能够进行二维排列。
 
-The concept of axes we learnt about under Flexbox still applies here. You can use CSS Grid to arrange elements on the main axis and cross axis at the same time.
+在 Flexbox 中学到的轴的概念在 CSS Grid 中仍然适用。您可以使用 CSS Grid 同时在主轴和交叉轴上排列元素。
 
-In summary, Flexbox, allows you to either arrange elements horizontally (in a row) or vertically (in a column). But with CSS Grid you can align elements both vertically and horizontally.
+总的来说，Flexbox 可以使您在水平方向（行）或垂直方向（列）上排列元素。而 CSS Grid 则可以同时在垂直和水平方向上对元素进行对齐。
 
-The CSS Grid layout is declared only on parent elements or containers. In effect, all its children become grid items. Once you have the target container, you give it an attribute of display and value of grid. The size of a grid’s row and column can be determined with `grid-template-rows` and `grid-template-columns`, respectively.
+CSS Grid 布局仅在父元素或容器上声明。实际上，它的所有子元素都成为网格项。一旦确定了目标容器，您可以为其添加 display: grid; 属性来声明它为网格容器。通过 `grid-template-rows` 和 `grid-template-columns` 属性，可以分别确定网格行和列的大小。
 
-## How to Build the Homepage
+## 如何构建主页
 
-Just like we did with the navbar, let's start by defining our content within a `<main>` section in our HTML file.
+就像我们在导航栏中所做的那样，让我们从在 HTML 文件中的 `<main>` 部分定义我们的内容开始。
 
-Looking at our target image, we have two main sections: the left section will have text and logos whilst the right section has a hero image. That’s for the web view of our project.
+根据我们的目标图像，我们有两个主要的部分：左侧部分将包含文本和标志，而右侧部分将有一个主要图片。这是我们项目的网页视图。
 
-Let's start by defining our content. The section with class text-side contains: heading, paragraph text, button and logo. The section with class img-side only contains an image.
+让我们先定义我们的内容。具有 class 为 "text-side" 的部分包含：标题、段落文本、按钮和标志。具有 class 为 "img-side" 的部分只包含一张图片。
 
 ```HTML
 <main>
@@ -276,11 +276,11 @@ Let's start by defining our content. The section with class text-side contains: 
     </main>
 ```
 
-Homepage content HTML code
+主页部分的HTML代码
 
-Within the main section, we created the two sections we needed and gave them descriptive id's: text-side and img-side.
+在主 main 部分中，我们创建了两个所需的部分，并为它们提供了描述性的 id：text-side 和 img-side。
 
-Within the text-side, we added a heading, paragraph text, button and a div to display clients' logos. The only thing we need for the img-side is the display image.
+在 text-side 内部，我们添加了一个标题、段落文本、按钮和一个用于显示客户标志的 div。而对于 img-side，我们只需要显示图像。
 
 ```CSS
 /* Client Logos */
@@ -328,39 +328,39 @@ main button {
 }
 ```
 
-Homepage content CSS code
+主页部分的CSS代码
 
-Within our CSS file, we need to style the client logos div as well as the child elements. We also set a font-size for the heading and paragraph. Next, we style our button and assign a width to our image.
+在我们的 CSS 文件中，我们需要为客户Logo的 div 和其子元素设置样式。我们还为标题和段落设置了字体大小。接下来，我们将为按钮设置样式，并为图像分配一个宽度。
 
 ![pregrid1-2](https://www.freecodecamp.org/news/content/images/2022/10/pregrid1-2.png)
 
-pre-grid homepage display
+预设网格主页显示
 
-The image above shows how our web page will look after defining the content and styling just the heading, button and logos – that is, we haven't declared our container as a grid yet. Because almost all the elements we have here are block elements, we see them align on top of one another.
+上面的图片展示了在定义内容并仅对标题、按钮和标志进行样式设置后，我们的网页将呈现的样子。也就是说，我们还没有将容器声明为网格。由于我们这里几乎所有的元素都是块级元素，所以我们看到它们垂直堆叠在一起。
 
-## Grid Template Rows and Columns
+## 网格模板行和列
 
-The `grid-template-columns` property specifies the number and widths of columns in a grid, defining a grid container's column by specifying the size of its tracks and line names.
+`grid-template-columns` 属性用于指定网格中列的数量和宽度，通过定义网格容器的列来指定轨道（track）的大小和线名（line names）。
 
-The `grid-template-rows` property is the direct opposite. It specifies the number and heights of rows in a grid, also defining a grid container's row by specifying the size of its tracks and line names.
+`grid-template-rows` 属性与之相反。它用于指定网格中行的数量和高度，通过定义网格容器的行来指定轨道（track）的大小和线名（line names）。
 
-As you can see in the image below, `grid-template-rows` arranges elements from the top to bottom of the device screen. `grid-template-columns` arranges elements from the left to right side of the device screen.
+正如您在下面的图片中所看到的，`grid-template-rows` 将元素从设备屏幕的顶部排列到底部。而 `grid-template-columns` 则将元素从设备屏幕的左侧排列到右侧。
 
 ![CSS-Grid](https://www.freecodecamp.org/news/content/images/2022/10/CSS-Grid.png)
 
-For our project, we're going to make use of `grid-template-columns` since we want to arrange our two sections side by side, letting each section occupy an equal part of the overall project width. We do this by assigning it as an attribute on the same container that we specified a display of grid on.
+对于我们的项目，我们将使用 `grid-template-columns`，因为我们希望将两个部分并排排列，让每个部分占据整体项目宽度的相等部分。我们通过将其作为属性分配给与之前指定为网格显示的容器相同的元素来实现这一点。
 
 ![displaygrid](https://www.freecodecamp.org/news/content/images/2022/10/displaygrid.png)
 
 display: grid
 
-Now that the two sections inside our `<main>` tag have been placed equally using the grid-template-columns, we have two last things to do.
+现在，我们已经通过使用 grid-template-columns 将 `<main>` 标签内的两个部分等分布局好了，接下来还有两件事情要做。
 
-We need to align them horizontally, by positioning both elements in the center of the page, with the extra space on the left of the image, evenly distributed on both sides. We also need to align them vertically by positioning both of them in the center of the page, with the extra space on the bottom, evenly distributed above and beneath.
+我们需要通过将两个元素定位在页面中央，使它们水平对齐，图像左侧有多余的空白空间，左右两侧均匀分布。我们还需要通过将它们定位在页面中央，使它们垂直对齐，底部有多余的空白空间，上下均匀分布。
 
-## Align and Justify in CSS Grid
+## 在CSS网格中对齐和调整
 
-Good news – we don't have to learn any new concepts to achieve our desired alignments in CSS Grid Layouts. Because fortunately, `align-items` and `justify-content`, as we learnt earlier, are not exclusive to Flebox. You can also use them to position items both horizontally and vertically.
+好消息是，为了在 CSS Grid 布局中实现我们期望的对齐方式，我们不需要学习任何新概念。因为幸运的是，正如我们之前学到的那样，`align-items` 和 `justify-content` 并不仅适用于 Flexbox。你也可以使用它们来在水平和垂直方向上定位元素。
 
 ```CSS
 main {
@@ -373,21 +373,21 @@ main {
 }
 ```
 
-align and center CSS code
+对齐和居中的CSS代码
 
-As you can see in the code above, we only had to give the value of center to both align-items and justify-content attributes on the parent tag (grid container).
+正如你在上面的代码中所看到的，我们只需要在父标签（网格容器）上将 align-items 和 justify-content 属性的值都设置为 center。
 
-To ensure that we see the effect of position in the perfect center, we also had to specify a height for the section. The image below is the final output of our project.
+为了确保我们能看到完美居中的效果，我们还需要为该部分指定一个高度。下面的图片是我们项目的最终输出结果。
 
 ![homepage-4](https://www.freecodecamp.org/news/content/images/2022/10/homepage-4.png)
 
-Landing page final look
+登陆页面最终样式
 
-## How to Make it Responsive
+## 如何使其具有响应性
 
-So far, everything we've built is for the web. But for the sake of users who want to access the landing page on mobile, we have to make our project accessible on smaller screens. In our case, we're looking at screens that are greater than 300px but less than 480px.
+到目前为止，我们所构建的都是针对网页的。但考虑到希望在移动设备上访问登陆页面的用户，我们必须确保我们的项目在较小的屏幕上可访问。在我们的情况下，我们关注的屏幕尺寸是大于300像素但小于480像素的范围。
 
-As you can see in the code below, we're hiding our nav items and displaying an emoji with class of mobile-nav. Beside that, we're hiding the desktop header image and showing the mobile header image.
+正如您在下面的代码中所看到的，我们正在隐藏我们的导航项，并显示一个具有 mobile-nav 类的表情符号。除此之外，我们隐藏了桌面版的页眉图像，并显示了移动版的页眉图像。
 
 ```CSS
 /* Responsive */
@@ -467,15 +467,15 @@ As you can see in the code below, we're hiding our nav items and displaying an e
 }
 ```
 
-Project Responsiveness Code
+项目响应式的代码
 
-## Full Project Code
+## 完整的项目代码
 
-This is the project we’ve built together in this article:
+这就是我们在这篇文章中一起构建的项目：
 
 ![homepage-3](https://www.freecodecamp.org/news/content/images/2022/10/homepage-3.png)
 
-Here's the full HTML code:
+这是完整的HTML代码：
 
 ```HTML
 <!DOCTYPE html>
@@ -581,9 +581,9 @@ Here's the full HTML code:
 </html>
 ```
 
-Project HTML code
+项目的HTML代码
 
-Here's the full CSS code:
+这是完整的CSS代码：
 
 ```CSS
 * {
@@ -789,12 +789,12 @@ main button {
 }
 ```
 
-Project CSS code
+项目的CSS代码：
 
-## Conclusion
+## 总结
 
-As a web developer, layouts should be the first thing you consider before writing code. Thankfully, CSS Grid and Flexbox have revolutionized the way we structure and build website and web app layouts.
+作为网页开发者，在编写代码之前，布局应该是你首先考虑的事情。幸运的是，CSS Grid 和 Flexbox 已经彻底改变了我们构建网站和 Web 应用布局的方式。
 
-This makes these concepts a must know so you can specify the arrangement of elements on the web. We've discussed the fundamentals, so that you can easily build up on the knowledge and create beautiful web pages and apps.
+这使得这些概念成为必须掌握的内容，这样你就可以在网页上指定元素的排列方式。我们已经讨论了基础知识，这样你就可以轻松地增加知识，并创建出漂亮的网页和应用程序。
 
-Thanks for reading 👋🏾. I hope you found this helpful.
+谢谢阅读👋🏾。希望你觉得这个有用。

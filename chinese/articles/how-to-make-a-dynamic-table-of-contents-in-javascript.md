@@ -3,7 +3,7 @@ title: How to Make an Interactive and Dynamic Table of Contents in JavaScript
 author: Bhavesh Rawat
 authorURL: https://www.freecodecamp.org/news/author/bhaveshrawat/
 originalURL: https://www.freecodecamp.org/news/how-to-make-a-dynamic-table-of-contents-in-javascript/
-translator: ""
+translator: "miyaliu"
 reviewer: ""
 ---
 
@@ -17,7 +17,7 @@ November 14, 2023 / [#JavaScript](/news/tag/javascript/)
 
   ![How to Make an Interactive and Dynamic Table of Contents in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2023/11/Frame-32-1.png)
 
-While reading some technical articles on various platforms, I kept noticing the Table of Contents section in the sidebar. Some were interactive and some were just links to those sections.
+在各种平台上阅读技术文章时，我经常注意侧边栏中的目录部分，有些是交互式的，有些只是指向各个部分的链接。
 
 A Table of Contents usually ends up being pretty helpful to readers. It lets you easily skim through what an article will cover and find the section you're interested in. It also lets you know if the article contains the information you’re looking for, and it's a big win for accessibility.
 

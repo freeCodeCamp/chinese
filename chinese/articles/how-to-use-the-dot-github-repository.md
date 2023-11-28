@@ -3,15 +3,16 @@
 > -  译者：ProjektMing
 > -  校对者：
 
-![How to Use the .github Repository](https://www.freecodecamp.org/news/content/images/size/w2000/2021/12/Thumbnail.png)
+![如何使用 .github 存储库](https://www.freecodecamp.org/news/content/images/size/w2000/2021/12/Thumbnail.png)
 
-GitHub has many special repositories. For instance, you can create a repository that matches your username, add a README file to it, and all the information in that file will be visible on your GitHub profile.
+GitHub 拥有许多特殊的储存库[^1]。比如，你可以创建一个与你用户名相匹配的库，添加 README 文件，其包含的所有信息都将在你的 GitHub 个人资料中可见。
 
-You might already be familiar with the `.github` directory you'll find in many repositories. The `.github` directory houses workflows, issue templates, pull request templates, funding information, and some other files specific to that project.
+你或许很早就对经常出现在各种库的 `.github` 目录熟视无睹了，而 `.github` 目录中安置了工作流（Workflow）、议题模板（Issue Template）、拉取请求模板（Pull Request Template）、资助信息（Funding Information）及其他文件，它们在项目中起特殊的作用。
 
-But another special repository you can create is the `.github` repository. It acts as a fallback for all of your repositories that don't have an actual `.github` directory with issue templates and other community health files.
+但另一个你能创建的特殊储存库却是 `.github` 储存库。它的作用是为你那些实质上没有 `.github` 目录的库提供默认的议题模板及其他社区健康文件[^2]
 
 For example, say I have a repository named `.github` with generic bug report and feature request issue templates. And say I create another repository called `new-project`, but I don't add a `.github` directory with issue templates to it.
+举个例子，假如说我有一个名为 `.github` 的储存库，其中包含
 
 Then if someone goes to the `new-project` repo and opens an issue, they'll be presented with an option to choose from the generic templates already in the `.github` directory.
 
@@ -338,3 +339,6 @@ Feel free to reach out to me on [Twitter](https://twitter.com/AnishDe12020) and 
 -   [Article on getting started with GitHub issue forms](https://blog.anishde.dev/creating-a-bug-report-form-in-github)
 
 I am currently working on a project called DevKit which is a PWA that will house developer tools in one single application and provide ways to get your work done quickly. Do check it out at [https://www.devkit.one/](https://www.devkit.one/).
+
+[^1]: 译注：Repository，也可称为“仓库”或“库”， GitHub 的官方文档中也经常混用，“储存库”的含义会更符合。然而为了行文方便，本文也会多次使用“库”来指代。
+[^2]: 翻译来源于[此](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)

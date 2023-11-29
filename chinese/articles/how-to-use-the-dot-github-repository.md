@@ -11,26 +11,26 @@ GitHub 拥有许多特殊的储存库[^1]。比如，你可以创建一个与你
 
 但另一个你能创建的特殊储存库却是 `.github` 储存库。它的作用是为你那些实质上没有 `.github` 目录的库提供默认的议题模板及其他社区健康文件[^2]。
 
-For example, say I have a repository named `.github` with generic bug report and feature request issue templates. And say I create another repository called `new-project`, but I don't add a `.github` directory with issue templates to it.
-举个例子，假如说我有一个名为 `.github` 的储存库，其中包含通用的故障报告（bug report）和功能请求的议题模板（feature request issue template）。然后再建
+举个例子，假如说我有一个名为 `.github` 的储存库，其中包含通用的故障报告（Bug Report）和功能请求的议题模板（Feature Request Issue Template）。然后再建另一个名为 `new-project` 的库，但没为 `.github` 目录添加议题模板。
 
-Then if someone goes to the `new-project` repo and opens an issue, they'll be presented with an option to choose from the generic templates already in the `.github` directory.
+那么当有人看到这个 `new-project` 库并打开一个议题时，它将看到一个选项用来选择 `.github` 储存库的同名目录中[^3]已有的通用模板。
 
-Similarly, if I add a code of conduct to my `.github` repository, it will be shown across all my repositories that don't explicitly have one.
+同样的，当我为我的 `.github` 库中添加行为准则(Code of Conduct)后，它将在我所有未明确规定过的库中展示出来。
 
-Just note that the files inside a repository's `.github` directory will be chosen over the ones in the `.github` directory. For example, if my `new-project` repo has a `.github` directory with a feature request issue template inside, that will be used instead of the generic feature request template from the `.github` repo.
+请注意，相对于 `.github` 储存库中的文件，当前储存库会优先选择自己 `.github` 目录中的那份文件。比如说，当我 `new-project` 库的 `.github` 目录中有功能请求的议题模板时， `.github` 库中的那份就不会被展示出来。
 
-Let's see how this special repository works in action.
+让我们看看这些特殊的储存库是如何运作的吧。
 
-## How to Use .github on Personal GitHub Accounts
+## 如何在私人 GitHub 账号中使用 .github
 
-Creating this special repository is as easy as creating any other repository on GitHub. So go ahead and open GitHub on your web browser and create the repository like this:
+在 GitHub 上，创建特殊的储存库同创建其他库一样简单。所以打开浏览器，登上 GitHub，像这样创建一个储存库：
 
 ![Xo__mfEdt](https://www.freecodecamp.org/news/content/images/2021/12/Xo__mfEdt.png)
 
-Creating a .github repository on my personal GitHub account
+正在我的 GitHub 账号里创建一个 .github 储存库。
 
 After you're done creating the repository, you can start adding files to it. The first file I will add is a bug report issue form. I am not going to go over the details of creating an issue form in this article, but you can have a look at a [previous article I wrote about GitHub Issue forms](https://blog.anishde.dev/creating-a-bug-report-form-in-github).
+完成后，你可以开始往里添加文件。我要加的第一个文件是故障报告表单（Bug Report Issue Form）发放表格。我并不准备详细地讲表格的详情，不过你可以浏览我[先前有关 GitHub 表单的文章](https://blog.anishde.dev/creating-a-bug-report-form-in-github)。
 
 `.github/ISSUE_TEMPLATE/bug_report.yml`
 
@@ -75,9 +75,9 @@ body:
         Provide any additional information such as logs, screenshots, likes, scenarios in which the bug occurs so that it facilitates resolving the issue.
 ```
 
-Bug Report Issue form code
+故障报告表单代码
 
-I am also going to create a feature request form.
+我还打算创建一份功能请求表单。
 
 `.github/ISSUE_TEMPLATE/feature_request.yml`
 
@@ -107,9 +107,9 @@ body:
       description: Give us some additional information on the feature request like proposed solutions, links, screenshots, etc.
 ```
 
-Feature Request Issue Form code
+功能请求表单代码
 
-I am also going to be adding a pull request template.
+我要再加一份拉取请求模板。
 
 `.github/pull_request_template.md`
 
@@ -142,9 +142,10 @@ Closes # <!-- Issue # here -->
 <!-- Any additional information like breaking changes, dependencies added, screenshots, comparisons between new and old behavior, etc. -->
 ```
 
-Pull Request Template code
+拉取请求模板代码
 
 The last file I am going to be adding is a code of conduct – but this is going to be on the root of the repository. Despite that, this will work as intended (code of conduct files are usually kept on the root of the repository). Note that I am using the [Contributor Convent](https://www.contributor-covenant.org/) convention.
+我要加的最后一个文件是行为准则————不过它要放在库的根目录下。尽管如此，它也能正常工作（行为准则通常都被保存在根目录下）。注意，我在使用的是 [Contributor Convent](https://www.contributor-covenant.org/) 公约。
 
 `CODE_OF_CONDUCT.md`
 
@@ -284,7 +285,7 @@ For answers to common questions about this code of conduct, see the FAQ at
 [translations]: https://www.contributor-covenant.org/translations
 ```
 
-Contributor Convent CODE OF CONDUCT v2.1 in markdown
+kdown3月 Contributor Convent 行为准则 v2.1
 
 We can add more files like funding information, contributing guides, and much more. For more information, you can look at the [GitHub docs regarding community health files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
 
@@ -342,3 +343,4 @@ I am currently working on a project called DevKit which is a PWA that will house
 
 [^1]: 译注：Repository，也可称为“仓库”或“库”， GitHub 的官方文档中也经常混用，“储存库”的含义会更符合。然而为了行文方便，本文也会多次使用“库”来指代。
 [^2]: 翻译来源于[此](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+[^3]: 原文为 already in the .github directory ，我认为直接放在文中不合理，故修改。请注意！后文同样预设你已知要将文件放在同名库的 `.github` 目录下！

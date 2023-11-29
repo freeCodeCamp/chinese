@@ -29,7 +29,6 @@ GitHub 拥有许多特殊的储存库[^1]。比如，你可以创建一个与你
 
 正在我的 GitHub 账号里创建一个 .github 储存库。
 
-After you're done creating the repository, you can start adding files to it. The first file I will add is a bug report issue form. I am not going to go over the details of creating an issue form in this article, but you can have a look at a [previous article I wrote about GitHub Issue forms](https://blog.anishde.dev/creating-a-bug-report-form-in-github).
 完成后，你可以开始往里添加文件。我要加的第一个文件是故障报告表单（Bug Report Issue Form）发放表格。我并不准备详细地讲表格的详情，不过你可以浏览我[先前有关 GitHub 表单的文章](https://blog.anishde.dev/creating-a-bug-report-form-in-github)。
 
 `.github/ISSUE_TEMPLATE/bug_report.yml`
@@ -144,7 +143,6 @@ Closes # <!-- Issue # here -->
 
 拉取请求模板代码
 
-The last file I am going to be adding is a code of conduct – but this is going to be on the root of the repository. Despite that, this will work as intended (code of conduct files are usually kept on the root of the repository). Note that I am using the [Contributor Convent](https://www.contributor-covenant.org/) convention.
 我要加的最后一个文件是行为准则————不过它要放在库的根目录下。尽管如此，它也能正常工作（行为准则通常都被保存在根目录下）。注意，我在使用的是 [Contributor Convent](https://www.contributor-covenant.org/) 公约。
 
 `CODE_OF_CONDUCT.md`

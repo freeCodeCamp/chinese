@@ -285,27 +285,27 @@ For answers to common questions about this code of conduct, see the FAQ at
 [translations]: https://www.contributor-covenant.org/translations
 ```
 
-kdown3月 Contributor Convent 行为准则 v2.1
+Markdown 格式下的 Contributor Convent 行为准则 v2.1
 
-We can add more files like funding information, contributing guides, and much more. For more information, you can look at the [GitHub docs regarding community health files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+我们还可以添加更多文件，像资助信息、贡献指南(Contributing Guide)等。你可以在 [GitHub 文档](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file) 中获取更多信息。
 
-### The `.github` repository in action
+### `.github` 库实践
 
-My [blogs repository](https://github.com/AnishDe12020/blog) doesn't have any issue templates, code of conduct, or any other file except for the markdown files of my blogs and a README. So it's the best repository to test upon if this feature is working or not.
+我的 [blog 库](https://github.com/AnishDe12020/blog)并没有任何议题模板、行为准则或其他文件，除了记录了我博客的 markdown 文件和一篇 README。所以这是用来测试这些特征(feature)是否起作用的绝佳储存库。
 
-I can already see the code of conduct appearing here:
+我已经可以看到行为准则在这里出现了：
 
 ![4Dk1gl1ZS](https://www.freecodecamp.org/news/content/images/2021/12/4Dk1gl1ZS.png)
 
-If I try to create an issue, I am presented with the templates as well:
+如果我尝试去创建议题，我也会收到模板：
 
 ![5fqH-4IYX](https://www.freecodecamp.org/news/content/images/2021/12/5fqH-4IYX.png)
 
-This will also work when creating a pull request.
+在拉取请求时也起作用了。
 
-## How to Use the .github Repository for an Organization/Public Account
+## 如何将 .github 储存库用于组织或公共账号
 
-The `.github` repository on an organization account works just like the `.github` repository on a personal GitHub account – except there is one difference.
+在组织账号中的 `.github` 储存库就像在它个人账号中那样————只有一处区别。
 
 Organizations can also have profile READMEs that show up on the organization page on GitHub. This README resides on the `profile` directory of the organization's `.github` repository. To demonstrate this, I will quickly create a demo organization.
 

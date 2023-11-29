@@ -9,10 +9,10 @@ GitHub 拥有许多特殊的储存库[^1]。比如，你可以创建一个与你
 
 你或许很早就对经常出现在各种库的 `.github` 目录熟视无睹了，而 `.github` 目录中安置了工作流（Workflow）、议题模板（Issue Template）、拉取请求模板（Pull Request Template）、资助信息（Funding Information）及其他文件，它们在项目中起特殊的作用。
 
-但另一个你能创建的特殊储存库却是 `.github` 储存库。它的作用是为你那些实质上没有 `.github` 目录的库提供默认的议题模板及其他社区健康文件[^2]
+但另一个你能创建的特殊储存库却是 `.github` 储存库。它的作用是为你那些实质上没有 `.github` 目录的库提供默认的议题模板及其他社区健康文件[^2]。
 
 For example, say I have a repository named `.github` with generic bug report and feature request issue templates. And say I create another repository called `new-project`, but I don't add a `.github` directory with issue templates to it.
-举个例子，假如说我有一个名为 `.github` 的储存库，其中包含
+举个例子，假如说我有一个名为 `.github` 的储存库，其中包含通用的故障报告（bug report）和功能请求的议题模板（feature request issue template）。然后再建
 
 Then if someone goes to the `new-project` repo and opens an issue, they'll be presented with an option to choose from the generic templates already in the `.github` directory.
 

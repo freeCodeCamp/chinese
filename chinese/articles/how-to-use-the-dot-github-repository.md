@@ -27,7 +27,7 @@ GitHub 拥有许多特殊的储存库[^1]。比如，你可以创建一个与你
 
 ![Xo__mfEdt](https://www.freecodecamp.org/news/content/images/2021/12/Xo__mfEdt.png)
 
-正在我的 GitHub 账号里创建一个 .github 储存库。
+在我的 GitHub 账号里创建 .github 储存库中。
 
 完成后，你可以开始往里添加文件。我要加的第一个文件是故障报告表单（Bug Report Issue Form）发放表格。我并不准备详细地讲表格的详情，不过你可以浏览我[先前有关 GitHub 表单的文章](https://blog.anishde.dev/creating-a-bug-report-form-in-github)。
 
@@ -295,7 +295,7 @@ Markdown 格式下的 Contributor Convent 行为准则 v2.1
 
 ![4Dk1gl1ZS](https://www.freecodecamp.org/news/content/images/2021/12/4Dk1gl1ZS.png)
 
-如果我尝试去创建议题，我也会收到模板：
+如果我尝试去创建议题，也会收到模板：
 
 ![5fqH-4IYX](https://www.freecodecamp.org/news/content/images/2021/12/5fqH-4IYX.png)
 
@@ -305,17 +305,18 @@ Markdown 格式下的 Contributor Convent 行为准则 v2.1
 
 在组织账号中的 `.github` 储存库就像在它个人账号中那样————只有一处区别。
 
-Organizations can also have profile READMEs that show up on the organization page on GitHub. This README resides on the `profile` directory of the organization's `.github` repository. To demonstrate this, I will quickly create a demo organization.
+组织也可以在 GitHub 上拥有 README 资料，他将展示在组织页面上。这个 README 位于组织 `.github` 储存库的 `profile` 目录下。为了展示，我将快速地建一个演示组织。
 
-When creating the `.github` repository for an organization, you should get this message:
+当为组织创建 `.github` 储存库时，你应该会得到如下消息：
 
 ![s2QEAhtHG-1](https://www.freecodecamp.org/news/content/images/2021/12/s2QEAhtHG-1.png)
 
-Also when adding the profile README to `profile/README.md`, you should be getting this message:
+同样的，当你给 `profile/README.md` 添加内容时，你也应该会受到这样的消息：
 
 ![vf0IEmbTH-1](https://www.freecodecamp.org/news/content/images/2021/12/vf0IEmbTH-1.png)
 
 Creating a GitHub organization README
+为
 
 Now, I am going to add some content to that README file and commit it. When I visit the organization's home page this is what we should see:
 
@@ -323,19 +324,19 @@ Now, I am going to add some content to that README file and commit it. When I vi
 
 Seeing GitHub organization profile README contents on the organization page
 
-## Conclusion
+## 总结
 
 I hope you now know what the `.github` repository does. You should also know how to set up default community health files for your repositories and a profile README for your organization.
 
 Feel free to reach out to me on [Twitter](https://twitter.com/AnishDe12020) and have a nice day 😃
 
-### Resources
+### 资源
 
--   [GitHub Documentation on Community Health Files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
--   [My `.github` repository](https://github.com/AnishDe12020/.github)
--   [My test organization's `.github` repository](https://github.com/AnishDe12020-test/.github)
+-   [GitHub 文档中关于社区健康文件的内容](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+-   [我的 `.github` 储存库](https://github.com/AnishDe12020/.github)
+-   [我测试组织的 `.github` 储存库](https://github.com/AnishDe12020-test/.github)
 -   [Contributor Convent](https://www.contributor-covenant.org/)
--   [Article on getting started with GitHub issue forms](https://blog.anishde.dev/creating-a-bug-report-form-in-github)
+-   [有关如何使用 GitHub 议题表单的文章](https://blog.anishde.dev/creating-a-bug-report-form-in-github)
 
 I am currently working on a project called DevKit which is a PWA that will house developer tools in one single application and provide ways to get your work done quickly. Do check it out at [https://www.devkit.one/](https://www.devkit.one/).
 

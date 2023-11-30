@@ -1,9 +1,10 @@
 > -  原文地址：[How to Implement a Blender Model in a React.js Application using Three.js](https://www.freecodecamp.org/news/blender-three-js-react-js/)
 > -  原文作者：[Matthes Bär](https://www.freecodecamp.org/news/author/matthes-bar/)
-> -  译者：huccct
+> -  译者：[huccct](https://github.com/huccct)
 > -  校对者：
 
-![How to Implement a Blender Model in a React.js Application using Three.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/08/pexels-chevanon-photography-1335971.jpg)
+![如何使用 Three.js 在 React.js 应用程序中实现一个 Blender 模型](https://www.freecodecamp.org/news/content/images/size/w2000/2023/08/pexels-chevanon-photography-1335971.jpg)
+# 如何使用 Three.js 在 React.js 应用程序中实现一个 Blender 模型 
 
 In this step-by-step guide, you'll learn how to build a basic Blender file with incorporated fundamental animations. After that, you'll learn how to integrate Three.js with your React apps using React Three Fiber.
 

@@ -315,20 +315,19 @@ Markdown 格式下的 Contributor Convent 行为准则 v2.1
 
 ![vf0IEmbTH-1](https://www.freecodecamp.org/news/content/images/2021/12/vf0IEmbTH-1.png)
 
-Creating a GitHub organization README
-为
+为 GitHub 组织创建 README 中
 
-Now, I am going to add some content to that README file and commit it. When I visit the organization's home page this is what we should see:
+现在，我准备向 README 里加一些内容并提交。当我访问组织首页时，我们应当看到下面内容：
 
 ![svqbJ3PfG](https://www.freecodecamp.org/news/content/images/2021/12/svqbJ3PfG.png)
 
-Seeing GitHub organization profile README contents on the organization page
+在查看为组织页面写的 GitHub 组织资料 README 中
 
 ## 总结
 
-I hope you now know what the `.github` repository does. You should also know how to set up default community health files for your repositories and a profile README for your organization.
+我希望你现在知道了 `.github` 储存库到底是什么。你也应该明白如何为你的库创建默认社区健康文件还有如何为你的组织添加 README 资料。
 
-Feel free to reach out to me on [Twitter](https://twitter.com/AnishDe12020) and have a nice day 😃
+请随意通过 [Twitter](https://twitter.com/AnishDe12020) 联系我。祝你有美好的一天😃
 
 ### 资源
 

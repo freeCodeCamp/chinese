@@ -336,8 +336,7 @@ Markdown 格式下的 Contributor Convent 行为准则 v2.1
 -   [Contributor Convent](https://www.contributor-covenant.org/)
 -   [有关如何使用 GitHub 议题表单的文章](https://blog.anishde.dev/creating-a-bug-report-form-in-github)
 
-I am currently working on a project called DevKit which is a PWA that will house developer tools in one single application and provide ways to get your work done quickly. Do check it out at [https://www.devkit.one/](https://www.devkit.one/).
-我最近在开发一个叫 DevKit 的项目，这是一个渐进式 Web 应用，它将开发者工具整合在一个应用中，且让你的工作更快地完成。一定要来 [https://www.devkit.one/](https://www.devkit.one/) 看看。
+我最近在开发一个叫 DevKit 的项目，这是一个渐进式 Web 应用，它将开发者工具整合在一个应用中，且让你的工作更快地完成。一定要来看看 [https://www.devkit.one/](https://www.devkit.one/) 。
 
 [^1]: 译注：Repository，也可称为“仓库”或“库”， GitHub 的官方文档中也经常混用，“储存库”的含义会更符合。然而为了行文方便，本文也会多次使用“库”来指代。
 [^2]: 翻译来源于[此](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)

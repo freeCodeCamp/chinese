@@ -114,31 +114,30 @@ body:
 
 ```md
 <!-- 
-Thanks for creating this pull request 🤗
+感谢你的拉取请求 🤗
 
-Please make sure that the pull request is limited to one type (docs, feature, etc.) and keep it as small as possible. You can open multiple prs instead of opening a huge one.
+请确保拉取请求被限定在一个类中（文档或功能之类的），而且让它尽可能地小。你可以开多个 pr(Pull Request, 拉取请求) 而不是单开一个很大的。
 -->
 
-<!-- If this pull request closes an issue, please mention the issue number below -->
-Closes # <!-- Issue # here -->
+<!-- 如果这个拉取请求关闭了议题，请在下面提及 -->
+Closes # <!-- 对应议题的序号 -->
 
-## 📑 Description
-<!-- Add a brief description of the pr -->
+## 📑 描述
+<!-- 为 pr 添加一个可信的描述-->
 
-<!-- You can also choose to add a list of changes and if they have been completed or not by using the markdown to-do list syntax
-- [ ] Not Completed
-- [x] Completed
+<!-- 你也可以选择用 markdown 的 to-do list 格式列出一系列变更来标记是否完成- [ ] 未完成
+- [x] 已完成
 -->
 
-## ✅ Checks
-<!-- Make sure your pr passes the CI checks and do check the following fields as needed - -->
-- [ ] My pull request adheres to the code style of this project
-- [ ] My code requires changes to the documentation
-- [ ] I have updated the documentation as required
-- [ ] All the tests have passed
+## ✅ 检查
+<!-- 确保你的 pr 通过了 CI(Continuous Integration, 持续集成) 检查,并且根据需要选择以下选项 - -->
+- [ ] 我的拉取请求符合本项目的代码风格
+- [ ] 我的代码需要修改文档
+- [ ] 我已按要求更新了文件
+- [ ] 所有测试均已通过
 
-## ℹ Additional Information
-<!-- Any additional information like breaking changes, dependencies added, screenshots, comparisons between new and old behavior, etc. -->
+## ℹ 补充信息
+<!-- 任何补充信息，像破坏性更新（Breaking Change）、依赖添加（Dependency Added）、截图（Screenshot）和新旧行为的对比等等 -->
 ```
 
 拉取请求模板代码
@@ -289,7 +288,7 @@ Markdown 格式下的 Contributor Convent 行为准则 v2.1
 
 ### `.github` 库实践
 
-我的 [blog 库](https://github.com/AnishDe12020/blog)并没有任何议题模板、行为准则或其他文件，除了记录了我博客的 markdown 文件和一篇 README。所以这是用来测试这些特征(feature)是否起作用的绝佳储存库。
+我的 [blog 库](https://github.com/AnishDe12020/blog)并没有任何议题模板、行为准则或其他文件，除了记录了我博客的 markdown 文件和一篇 README。所以这是用来测试这些功能(feature)是否起作用的绝佳储存库。
 
 我已经可以看到行为准则在这里出现了：
 

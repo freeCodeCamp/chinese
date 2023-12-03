@@ -24,15 +24,15 @@ November 24, 2023 / [#JavaScript](/news/tag/javascript/)
 
  但是他们如何决定搜索哪种语言呢？
 
-> “在硅谷总是喜欢开玩笑说 Java。我想我应该学那个。“
+> “在硅谷总是喜欢开玩笑说 Java。我想我应该学那个。”
 
 或者：
 
-> Haskell。现在非常热门。Haskell。
+> “Haskell。现在非常热门。Haskell。“
 
 或者：
 
-> “Go 语言的那只地鼠实在太可爱了。“
+> “Go 语言的那只地鼠实在太可爱了。”
 
 ![1*7kbd-tVk3co-9RiilFN1TA](https://cdn-media-1.freecodecamp.org/images/1*7kbd-tVk3co-9RiilFN1TA.png)
 
@@ -92,12 +92,6 @@ Python 已逐渐崛起成为最受欢迎的选择。
 当然，你现在可能已经听说过：
 
 > “计算机科学教育并不能使任何人成为专家级程序员，就像研究画笔和颜料不能使任何人成为专业画家一样。” —— 埃里克·S·雷蒙德
-
-Many universities still treat programming like it’s computer science, and computer science like it’s math.
-
-As a result, many introductory programming courses focus on low-level-of-abstraction languages like C, or mathematically-focused languages like MATLAB.
-
-And department chairs generally stay the course, pointing to annual programming language leaderboards like the [TIOBE Index](http://www.tiobe.com/tiobe-index/), or this one from the [IEEE](http://spectrum.ieee.org/computing/software/the-2016-top-programming-languages):
 
 许多大学仍然把编程当作计算机科学来对待，把计算机科学当作数学来对待。
 
@@ -276,7 +270,7 @@ exampleArray.length
 我仍然建议首先学习JavaScript。
 
 1.  JavaScript 提供了几个工具用于制作原生移动应用，比如 [Angular Cordova](https://cordova.apache.org/) 和 [React Native](https://facebook.github.io/react-native/)。
-2.  为了让你的移动应用实际上能做一些有趣的事情，它可能需要一个适当的后端，你会希望用一个适当的 Web 开发框架来构建，比如Node.js + Express.js。
+2.  为了让你的移动应用实际上能做一些有趣的事情，它可能需要一个适当的后端，你会希望用一个适当的 Web 开发框架来构建，比如 Node.js + Express.js。
 
 此外，值得指出的是，移动应用开发的最佳时期可能已经过去了。
 
@@ -296,7 +290,7 @@ exampleArray.length
 
 这就意味着 JavaScript。
 
-### 反对意见＃4：JavaScript不是在10天内编写的玩具语言吗？
+### 反对意见＃4：JavaScript 不是在 10 天内编写的玩具语言吗？
 
 JavaScript 有一个[古怪的历史](https://www.w3.org/community/webed/wiki/A_Short_History_of_JavaScript)。
 
@@ -304,8 +298,8 @@ JavaScript 有一个[古怪的历史](https://www.w3.org/community/webed/wiki/A_
 
 好吧，人们也喜欢恨 C++。和 JavaScript 一样，C++ 尽管受到这种恨，但仍然成功了，现在它几乎无处不在。
 
-所以，如果有人因为你学习 JavaScript 而不是 elite-language-of-the-week 而对你进行攻击，就记住创建C++的那个人的名言：
+所以，如果有人因为你学习 JavaScript 而不是 elite-language-of-the-week 而对你进行攻击，就记住创建 C++ 的那个人的名言：
 
 > “只有两种编程语言：人们总是抱怨的和没有人使用的。” - Bjarne Stroustrup
 
-我只写关于编程和技术的文章。如果你在Twitter上关注我，我不会浪费你的时间。?
+我只写关于编程和技术的文章。如果你在 Twitter 关注我，我不会浪费你的时间。?

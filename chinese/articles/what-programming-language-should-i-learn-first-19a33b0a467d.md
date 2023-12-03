@@ -3,9 +3,8 @@ title: What Programming Language Should I Learn First in 2024? [Solved]
 author: Quincy Larson
 authorURL: https://www.freecodecamp.org/news/author/quincylarson/
 originalURL: https://www.freecodecamp.org/news/what-programming-language-should-i-learn-first-19a33b0a467d/
-translator: ""
+translator: "ZhichengChen"
 reviewer: ""
-
 ---
 
 November 24, 2023 / [#JavaScript](/news/tag/javascript/)
@@ -28,7 +27,7 @@ November 24, 2023 / [#JavaScript](/news/tag/javascript/)
 
 或者：
 
-> “Haskell。现在非常热门。Haskell。“
+> “Haskell。现在非常热门。Haskell。”
 
 或者：
 

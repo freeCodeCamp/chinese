@@ -1,6 +1,6 @@
 > -  原文地址：[How to Use the .github Repository](https://www.freecodecamp.org/news/how-to-use-the-dot-github-repository/)
 > -  原文作者：[Anish De](https://www.freecodecamp.org/news/author/anishde12020/)
-> -  译者：
+> -  译者：miya
 > -  校对者：
 
 ![How to Use the .github Repository](https://www.freecodecamp.org/news/content/images/size/w2000/2021/12/Thumbnail.png)

@@ -1,35 +1,35 @@
 > -  原文地址：[How to Use the .github Repository](https://www.freecodecamp.org/news/how-to-use-the-dot-github-repository/)
 > -  原文作者：[Anish De](https://www.freecodecamp.org/news/author/anishde12020/)
-> -  译者：
+> -  译者：ProjektMing
 > -  校对者：
 
-![How to Use the .github Repository](https://www.freecodecamp.org/news/content/images/size/w2000/2021/12/Thumbnail.png)
+![如何使用 .github 存储库](https://www.freecodecamp.org/news/content/images/size/w2000/2021/12/Thumbnail.png)
 
-GitHub has many special repositories. For instance, you can create a repository that matches your username, add a README file to it, and all the information in that file will be visible on your GitHub profile.
+GitHub 拥有许多特殊的储存库[^1]。比如，你可以创建一个与你用户名相匹配的库，添加 README 文件，其包含的所有信息都将在你的 GitHub 个人资料中可见。
 
-You might already be familiar with the `.github` directory you'll find in many repositories. The `.github` directory houses workflows, issue templates, pull request templates, funding information, and some other files specific to that project.
+你或许很早就对经常出现在各种库的 `.github` 目录熟视无睹了，而 `.github` 目录中安置了工作流（Workflow）、议题模板（Issue Template）、拉取请求模板（Pull Request Template）、资助信息（Funding Information）及其他文件，它们在项目中起特殊的作用。
 
-But another special repository you can create is the `.github` repository. It acts as a fallback for all of your repositories that don't have an actual `.github` directory with issue templates and other community health files.
+但另一个你能创建的特殊储存库却是 `.github` 储存库。它的作用是为你那些实质上没有 `.github` 目录的库提供默认的议题模板及其他社区健康文件[^2]。
 
-For example, say I have a repository named `.github` with generic bug report and feature request issue templates. And say I create another repository called `new-project`, but I don't add a `.github` directory with issue templates to it.
+举个例子，假如说我有一个名为 `.github` 的储存库，其中包含通用的故障报告（Bug Report）和功能请求的议题模板（Feature Request Issue Template）。然后再建另一个名为 `new-project` 的库，但没为 `.github` 目录添加议题模板。
 
-Then if someone goes to the `new-project` repo and opens an issue, they'll be presented with an option to choose from the generic templates already in the `.github` directory.
+那么当有人看到这个 `new-project` 库并打开一个议题时，它将看到一个选项用来选择 `.github` 储存库的同名目录中[^3]已有的通用模板。
 
-Similarly, if I add a code of conduct to my `.github` repository, it will be shown across all my repositories that don't explicitly have one.
+同样的，当我为我的 `.github` 库中添加行为准则(Code of Conduct)后，它将在我所有未明确规定过的库中展示出来。
 
-Just note that the files inside a repository's `.github` directory will be chosen over the ones in the `.github` directory. For example, if my `new-project` repo has a `.github` directory with a feature request issue template inside, that will be used instead of the generic feature request template from the `.github` repo.
+请注意，相对于 `.github` 储存库中的文件，当前储存库会优先选择自己 `.github` 目录中的那份文件。比如说，当我 `new-project` 库的 `.github` 目录中有功能请求的议题模板时， `.github` 库中的那份就不会被展示出来。
 
-Let's see how this special repository works in action.
+让我们看看这些特殊的储存库是如何运作的吧。
 
-## How to Use .github on Personal GitHub Accounts
+## 如何在私人 GitHub 账号中使用 .github
 
-Creating this special repository is as easy as creating any other repository on GitHub. So go ahead and open GitHub on your web browser and create the repository like this:
+在 GitHub 上，创建特殊的储存库同创建其他库一样简单。所以打开浏览器，登上 GitHub，像这样创建一个储存库：
 
 ![Xo__mfEdt](https://www.freecodecamp.org/news/content/images/2021/12/Xo__mfEdt.png)
 
-Creating a .github repository on my personal GitHub account
+在我的 GitHub 账号里创建 .github 储存库中。
 
-After you're done creating the repository, you can start adding files to it. The first file I will add is a bug report issue form. I am not going to go over the details of creating an issue form in this article, but you can have a look at a [previous article I wrote about GitHub Issue forms](https://blog.anishde.dev/creating-a-bug-report-form-in-github).
+完成后，你可以开始往里添加文件。我要加的第一个文件是故障报告表单（Bug Report Issue Form）发放表格。我并不准备详细地讲表格的详情，不过你可以浏览我[先前有关 GitHub 表单的文章](https://blog.anishde.dev/creating-a-bug-report-form-in-github)。
 
 `.github/ISSUE_TEMPLATE/bug_report.yml`
 
@@ -74,9 +74,9 @@ body:
         Provide any additional information such as logs, screenshots, likes, scenarios in which the bug occurs so that it facilitates resolving the issue.
 ```
 
-Bug Report Issue form code
+故障报告表单代码
 
-I am also going to create a feature request form.
+我还打算创建一份功能请求表单。
 
 `.github/ISSUE_TEMPLATE/feature_request.yml`
 
@@ -106,44 +106,43 @@ body:
       description: Give us some additional information on the feature request like proposed solutions, links, screenshots, etc.
 ```
 
-Feature Request Issue Form code
+功能请求表单代码
 
-I am also going to be adding a pull request template.
+我要再加一份拉取请求模板。
 
 `.github/pull_request_template.md`
 
 ```md
 <!-- 
-Thanks for creating this pull request 🤗
+感谢你的拉取请求 🤗
 
-Please make sure that the pull request is limited to one type (docs, feature, etc.) and keep it as small as possible. You can open multiple prs instead of opening a huge one.
+请确保拉取请求被限定在一个类中（文档或功能之类的），而且让它尽可能地小。你可以开多个 pr(Pull Request, 拉取请求) 而不是单开一个很大的。
 -->
 
-<!-- If this pull request closes an issue, please mention the issue number below -->
-Closes # <!-- Issue # here -->
+<!-- 如果这个拉取请求关闭了议题，请在下面提及 -->
+Closes # <!-- 对应议题的序号 -->
 
-## 📑 Description
-<!-- Add a brief description of the pr -->
+## 📑 描述
+<!-- 为 pr 添加一个可信的描述-->
 
-<!-- You can also choose to add a list of changes and if they have been completed or not by using the markdown to-do list syntax
-- [ ] Not Completed
-- [x] Completed
+<!-- 你也可以选择用 markdown 的 to-do list 格式列出一系列变更来标记是否完成- [ ] 未完成
+- [x] 已完成
 -->
 
-## ✅ Checks
-<!-- Make sure your pr passes the CI checks and do check the following fields as needed - -->
-- [ ] My pull request adheres to the code style of this project
-- [ ] My code requires changes to the documentation
-- [ ] I have updated the documentation as required
-- [ ] All the tests have passed
+## ✅ 检查
+<!-- 确保你的 pr 通过了 CI(Continuous Integration, 持续集成) 检查,并且根据需要选择以下选项 - -->
+- [ ] 我的拉取请求符合本项目的代码风格
+- [ ] 我的代码需要修改文档
+- [ ] 我已按要求更新了文件
+- [ ] 所有测试均已通过
 
-## ℹ Additional Information
-<!-- Any additional information like breaking changes, dependencies added, screenshots, comparisons between new and old behavior, etc. -->
+## ℹ 补充信息
+<!-- 任何补充信息，像破坏性更新（Breaking Change）、依赖添加（Dependency Added）、截图（Screenshot）和新旧行为的对比等等 -->
 ```
 
-Pull Request Template code
+拉取请求模板代码
 
-The last file I am going to be adding is a code of conduct – but this is going to be on the root of the repository. Despite that, this will work as intended (code of conduct files are usually kept on the root of the repository). Note that I am using the [Contributor Convent](https://www.contributor-covenant.org/) convention.
+我要加的最后一个文件是行为准则————不过它要放在库的根目录下。尽管如此，它也能正常工作（行为准则通常都被保存在根目录下）。注意，我在使用的是 [Contributor Convent](https://www.contributor-covenant.org/) 公约。
 
 `CODE_OF_CONDUCT.md`
 
@@ -283,58 +282,62 @@ For answers to common questions about this code of conduct, see the FAQ at
 [translations]: https://www.contributor-covenant.org/translations
 ```
 
-Contributor Convent CODE OF CONDUCT v2.1 in markdown
+Markdown 格式下的 Contributor Convent 行为准则 v2.1
 
-We can add more files like funding information, contributing guides, and much more. For more information, you can look at the [GitHub docs regarding community health files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+我们还可以添加更多文件，像资助信息、贡献指南(Contributing Guide)等。你可以在 [GitHub 文档](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file) 中获取更多信息。
 
-### The `.github` repository in action
+### `.github` 库实践
 
-My [blogs repository](https://github.com/AnishDe12020/blog) doesn't have any issue templates, code of conduct, or any other file except for the markdown files of my blogs and a README. So it's the best repository to test upon if this feature is working or not.
+我的 [blog 库](https://github.com/AnishDe12020/blog)并没有任何议题模板、行为准则或其他文件，除了记录了我博客的 markdown 文件和一篇 README。所以这是用来测试这些功能(feature)是否起作用的绝佳储存库。
 
-I can already see the code of conduct appearing here:
+我已经可以看到行为准则在这里出现了：
 
 ![4Dk1gl1ZS](https://www.freecodecamp.org/news/content/images/2021/12/4Dk1gl1ZS.png)
 
-If I try to create an issue, I am presented with the templates as well:
+如果我尝试去创建议题，也会收到模板：
 
 ![5fqH-4IYX](https://www.freecodecamp.org/news/content/images/2021/12/5fqH-4IYX.png)
 
-This will also work when creating a pull request.
+在拉取请求时也起作用了。
 
-## How to Use the .github Repository for an Organization/Public Account
+## 如何将 .github 储存库用于组织或公共账号
 
-The `.github` repository on an organization account works just like the `.github` repository on a personal GitHub account – except there is one difference.
+在组织账号中的 `.github` 储存库就像在它个人账号中那样————只有一处区别。
 
-Organizations can also have profile READMEs that show up on the organization page on GitHub. This README resides on the `profile` directory of the organization's `.github` repository. To demonstrate this, I will quickly create a demo organization.
+组织也可以在 GitHub 上拥有 README 资料，他将展示在组织页面上。这个 README 位于组织 `.github` 储存库的 `profile` 目录下。为了展示，我将快速地建一个演示组织。
 
-When creating the `.github` repository for an organization, you should get this message:
+当为组织创建 `.github` 储存库时，你应该会得到如下消息：
 
 ![s2QEAhtHG-1](https://www.freecodecamp.org/news/content/images/2021/12/s2QEAhtHG-1.png)
 
-Also when adding the profile README to `profile/README.md`, you should be getting this message:
+同样的，当你给 `profile/README.md` 添加内容时，你也应该会受到这样的消息：
 
 ![vf0IEmbTH-1](https://www.freecodecamp.org/news/content/images/2021/12/vf0IEmbTH-1.png)
 
-Creating a GitHub organization README
+为 GitHub 组织创建 README 中
 
-Now, I am going to add some content to that README file and commit it. When I visit the organization's home page this is what we should see:
+现在，我准备向 README 里加一些内容并提交。当我访问组织首页时，我们应当看到下面内容：
 
 ![svqbJ3PfG](https://www.freecodecamp.org/news/content/images/2021/12/svqbJ3PfG.png)
 
-Seeing GitHub organization profile README contents on the organization page
+在查看为组织页面写的 GitHub 组织资料 README 中
 
-## Conclusion
+## 总结
 
-I hope you now know what the `.github` repository does. You should also know how to set up default community health files for your repositories and a profile README for your organization.
+我希望你现在知道了 `.github` 储存库到底是什么。你也应该明白如何为你的库创建默认社区健康文件还有如何为你的组织添加 README 资料。
 
-Feel free to reach out to me on [Twitter](https://twitter.com/AnishDe12020) and have a nice day 😃
+请随意通过 [Twitter](https://twitter.com/AnishDe12020) 联系我。祝你有美好的一天😃
 
-### Resources
+### 资源
 
--   [GitHub Documentation on Community Health Files](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
--   [My `.github` repository](https://github.com/AnishDe12020/.github)
--   [My test organization's `.github` repository](https://github.com/AnishDe12020-test/.github)
+-   [GitHub 文档中关于社区健康文件的内容](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+-   [我的 `.github` 储存库](https://github.com/AnishDe12020/.github)
+-   [我测试组织的 `.github` 储存库](https://github.com/AnishDe12020-test/.github)
 -   [Contributor Convent](https://www.contributor-covenant.org/)
--   [Article on getting started with GitHub issue forms](https://blog.anishde.dev/creating-a-bug-report-form-in-github)
+-   [有关如何使用 GitHub 议题表单的文章](https://blog.anishde.dev/creating-a-bug-report-form-in-github)
 
-I am currently working on a project called DevKit which is a PWA that will house developer tools in one single application and provide ways to get your work done quickly. Do check it out at [https://www.devkit.one/](https://www.devkit.one/).
+我最近在开发一个叫 DevKit 的项目，这是一个渐进式 Web 应用，它将开发者工具整合在一个应用中，且让你的工作更快地完成。一定要来看看 [https://www.devkit.one/](https://www.devkit.one/) 。
+
+[^1]: 译注：Repository，也可称为“仓库”或“库”， GitHub 的官方文档中也经常混用，“储存库”的含义会更符合。然而为了行文方便，本文也会多次使用“库”来指代。
+[^2]: 翻译来源于[此](https://docs.github.com/zh/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+[^3]: 原文为 already in the .github directory ，我认为直接放在文中不合理，故修改。请注意！后文同样预设你已知要将文件放在同名库的 `.github` 目录下！

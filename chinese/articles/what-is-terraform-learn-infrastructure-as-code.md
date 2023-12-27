@@ -1,35 +1,35 @@
 > -  原文地址：[What is Terraform? Learn Terraform and Infrastructure as Code](https://www.freecodecamp.org/news/what-is-terraform-learn-infrastructure-as-code/)
 > -  原文作者：[Sumeet NinaweSumeet Ninawe](https://www.freecodecamp.org/news/author/letsdotech/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![What is Terraform? Learn Terraform and Infrastructure as Code](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/terraform-article.jpeg)
+![什么是Terraform？学习Terraform和基础设施即代码](https://www.freecodecamp.org/news/content/images/size/w2000/2021/04/terraform-article.jpeg)
 
-Terraform is a tool that helps you manage various cloud infrastructure services in the form of code. You codify your infrastructure, and so it's also known as Infrastructure as Code (IaC).
+Terraform 使用一个帮助你以代码形式管理各种云基础设施服务的工具。你把你的基础设施代码化，所以它也被称为基础设施即代码(IaC)。
 
-The cloud has become important to more and more companies. It not only helps reduce time and costs but also lets customers focus on their core business.
+云对越来越多的公司来说已经非常重要。它不仅有助于减少花销和节省时间，还能让客户专注于他们的核心业务。
 
-## Why Infrastructure as Code?
+## 为什么要基础设施即代码?
 
-As the number of cloud providers increases and their services become more flexible, it's becoming more important to be able to manage your cloud infrastructure resources.
+随着云服务商数量的增加和他们的他们的服务更加灵活，能够管理你的云基础设施变的越来越重要。
 
-Terraform works on the concept of Infrastructure as Code (IaC). In simple terms, IaC is the ability to represent your infrastructure in the form code.
+Terraform 的出于基础设施即代码（IaC）的概念。简单来说，laC 是通过代码来管理你的基础设施。
 
-Let's take as an example any computing resource on a given cloud, like EC2 on AWS. Requesting an EC2 instance from AWS is a matter of signing up with AWS, providing a bunch of values, and clicking on the “Launch” button. The "resource" will be ready in a few minutes.
+让我们以某个云上的任何计算资源为例，比如 AWS 的 EC2。向 AWS 申请一个 EC2 实例，只需要在 AWS 注册，提供一堆数值，然后点击 `Launch`(启动)按键。该资源将会在几分钟内准备好。
 
-As long as we can provide those values to AWS, they'll live on that cloud provider. Of course, this is the traditional way to do this.
+只要我们向 AWS 提供这些值，它们就会在 AWS 上生成。当然，这样是传统的方式。
 
-Terraform provides a way to take these credentials and inputs in the form of _configurations_ and process them to create a resource in the target cloud.
+Terraform 提供了一种方法，使用这些`credentials`完成认证和以  _configurations_ 的输入信息，在目标云上创建一个资源。
 
-These configurations describe the resource in a language that Terraform understands. Configurations are how you can declare the desired state of your infrastructure – basically, "Declarative" syntax.
+这些配置以 Terraform 的语法进行资源的描述。 配置化是你声明你的基础设施的理想状态的方法--基本上是声明式的语法。
 
-Terraform uses cloud provider APIs to create the resource.
+Terraform 使用云服务商提供的 API 来创建资源。
 
-## Advantages of Terraform
+## Terraform 的好处
 
-Terraform is a product from [Hashicorp](https://www.hashicorp.com/), and uses [Hashicorp Configuration Language](https://github.com/hashicorp/hcl) (HCL) syntax to represent the configurations.
+Terraform 是[Hashicorp](https://www.hashicorp.com/)的一个产品, 使用 [Hashicorp 配置语法](https://github.com/hashicorp/hcl) (HCL)来表示配置 .
 
-In the example below, you can see the representation of the EC2 instance in its simplest form:
+在下面的例子中，你可以看到 EC2 实例的最简单的形式的描述:
 
 ```
 provider “aws” {
@@ -42,110 +42,110 @@ resource “aws_instance” “myec2” {
 }
 ```
 
-This simple example is enough for us to understand the capabilities of Terraform.
+这个简单的例子足以让我们了解 Terraform 的能力。
 
-The code contains two blocks – the `provider` and `resource`.  The `provider` block lets Terraform know that we want to use `aws` provider in the region “us-west-1”.
+这个代码包含两个部分`provider`和`resource`。`provider` 是 Terraform 告诉 AWS，我们想在`us-west-1`区使用 AWS 的服务。
 
-The `resource` block lets Terraform know that out of all the infrastructure resources offered by AWS, we want to create a resource of type “instance” (EC2).
+ `resource` 让 Terraform 告诉 AWS，在 AWS 提供的所有基础设施资源中，我们想创建一个实例(EC2)。
 
-The first parameter represents this to the resource block as “aws\_instance”. The second parameter is what we've named the resource – in this case, “myec2”.
+`resource`第一个参数为 `aws_instance`,第二个参数资源的命名,在本例中是`myec2`。
 
-The resource block has a couple of arguments that state the AWS machine image and the type of instance used to create this resource.
+`resource`有几个参数，说明 AWS 机器镜像和用于创建该资源的实例类型。
 
-Here, we have managed to express our infrastructure in the form of code. Let's go through some of the advantages of IaC.
+在这里，我们已经用代码的形式来表示我们的基础设施，让我们看 laC 的一些优势。
 
-1.  Since infrastructure creation is now condensed in config/code files, it is **easier to maintain** since we can now leverage version control systems like Git to collaborate and maintain it.
-2.  The time required for the planning phase of the infrastructure is reduced as we can write the configurations in a **short amount of time**. These configs are readily consumed by Terraform to create cloud resources in the matter for few minutes.
-3.  **Changes** to the infrastructure **are easier** and are comparable to application code changes.
-4.  The advantages for application management lifecycle in the case of software development are also applicable for infrastructure. This makes it **more efficient**.
+1.  由于基础设施的创建现在被浓缩在配置/代码文件中， 它 **更容易维护**， 因为我们现在可以利用 Git 等版本控制软件来进行协作和维护。
+2.  基础设施的规划阶段所需的时间减少了，因为可以在 **短时间内** 编写配置。这些配置很容易被 Terraform 使用，几分钟就可以创建云资源。
+3.  **改变** 基础设施 **是更容易了** 和 改代码一样了.
+4.  软件开发中的应用管理生命周期的优势也适用于基础设施。这让它 **更有效率**.
 
-## Features of Terraform
+## Terraform 的功能
 
-### Orchestration
+### 协调工作
 
-When deploying various end-to-end services, Terraform acts as the core of the orchestration process when it comes to creating cloud resources.
+当部署各种端到端服务事，涉及到创建云资源时，Terraform 作为协调过程的核心。
 
-### Cloud agnostic
+### 不与特定云服务商绑定
 
-Since Terraform supports most of the clouds including AWS, MS Azure, and GCP, you don't have to worry as much about vendor lock-in issues. The Terraform registry provides the documentation for all the supported cloud providers.
+由于 Terraform 支持大多数云，包括 AWS、MS Azure 和 GCP，所以你不必担心厂商的锁定问题。Terraform 的`registry provides` 提供了所支持的云服务商的文档。
 
-Syntax patterns used to code infrastructure on various clouds are the same, so the learning curve related to provider-specific APIs is on a back burner, but not forgotten.
+在各种云上的描述基础设施的语法是相同的，因此与云服务商的特定的 API 的学习曲线是一样的，但不会被遗忘。
 
-### Declarative syntax
+### 声明式语法
 
-Infrastructure expressed in Terraform files is declarative – so as developers, we don’t need to worry about making Terraform understand the steps required to create a resource. Rather, all we need to do is let Terraform know about the desired state and Terraform takes care of the steps internally.
+Terraform 文件中基础设施是声明性的--所以作为开发者，我们不需要担心让 Terraform 理解创建资源所需的步骤，相反，我们需要让 Terraform 知道所需的状态，Terraform 会在内部处理这些步骤。
 
-### Modules
+### 模块化
 
-Terraform provides modules which help us reuse our Terraform code. A complex infrastructure is broken into multiple modules and each module is reusable in different projects.
+Terraform 提供的模块可以帮助我们重复使用 Terraform 的代码。一个复杂的基础设施被分解成多个模块，每个模块都可以在不同的项目中重复使用。
 
-It is very easy to convert a given Terraform configuration into modules and Terraform has its eco-system for pre-built modules.
+将给定的 Terraform 配置转换为模块是非常容易的，Terraform 有它的预建模块的生态体系。
 
-### State management
+### 状态管理
 
-While Terraform is creating and planning the infrastructure, state is maintained. This can be shared with other team members for collaboration purposes.
+在 Terraform 创建和规划基础设施的同时，维护状态。这可以与其他团队成员分享，以达到协作的目的。
 
-Terraform lets you manage state remotely, which helps prevent confusion amongst team members in case they attempt to recreate the infrastructure.
+Terraform 让你可以远程管理状态，这有助于防止团队成员在尝试重新创建基础设施时出现混乱。
 
-### Provisioning
+###  提供者
 
-Terraform is not a full-blown provisioning tool, but it helps with day one provisioning activities. Terraform’s _local-exec_ and _remote-exec_ blocks let you run inline scripts. Inline scripts help install software components upon the successful creation of the resource.
+Terraform 不是一个完整的配置工具，但它有助于`provisioning`活动。Terraform 的 _local-exec_ 和 _remote-exec_ 模块让你运行内联脚本。内联脚本有助于在成功创建资源后安装软件组件。
 
-This is especially useful when helping configuration management tools like Chef, Ansible, and Salt Stack install their respective agents. They can just send an “UP” signal once they are installed successfully.
+这在 Chef、Ansible 和 Salt Stack 等配置管理工具安装它们各自的代理时特别有用。当它们安装成功，就直接发送一个`UP`信号。
 
-### Open Source
+### 开源
 
-Terraform is available for use as open-source software. It also has an Enterprise version.
+Terraform 是开源软件。 当然它也有一个企业版.
 
-## Terraform Workflow \[init - plan - apply - destroy\]
+## Terraform 的工作流程 \[初始化 - 执行计划 - 投入使用 - 销毁\]
 
-There are some simple steps you need to take to execute your Terraform code. These steps are closely related to the lifecycle of resources on cloud platforms.
+你需要采取一些简单的步骤来运行你的 Terraform 代码。这些步骤与云平台上的资源的生命周期密切相关。
 
-Again, these steps are cloud-agnostic, meaning the same steps/commands are valid to **create, update, and destroy** resources on any given cloud provider.
+同样，这些步骤跟云平台无关，这意味着同样的步骤/命令可以在任何给定的云平台上 **创建,更新，和销毁** 资源都是有效的。
 
-**Note:** This blog post doesn’t cover installation steps for Terraform, and I assume you already have the Terraform CLI installed on your system.
+**注意:**，本文不涉及 Terraform 的安装步骤，我假设你已经在系统中安装了 Terraform CLI。
 
-### Run the `init` command
+### 运行 `init` 命令
 
-Once we have the configuration files ready, the very first command we need to run is `terraform init`. The Terraform binary installation does not include support for all the cloud providers at once.
+当我们准备好了配置文件，我们需要运行的第一个命令是 `terraform init`。Terraform 的安装二进制并不包含对所有云服务商的支持。
 
-Instead, based on the provider, appropriate **plugins are downloaded** before Terraform executes the code. In our example, running `terraform init` would download the `aws` provider plugin. This command helps _initialize_ the backend for a given Terraform directory.
+相反，根据云供应商，在 Terraform 运行代码前，会下载适当的插件。在我们的例子中，运行`terraform init`将下载`AWS`提供插件。这个命令帮助 _initialize_ 这个给定的 Terraform 目录。
 
-### Generate an execution plan
+### 生成一个执行计划
 
-The `terraform plan` command helps **generate an execution plan**. Based on the configuration you provide, Terraform generates an execution plan. In this phase, Terraform performs **feasibility checks** in terms of syntax errors, API authentication, state verification, and more.
+`terraform plan`，命令 **生成一个执行计划**。根据你提供的配置，Terraform 会生成一个执行计划。在这个阶段，Terraform 会在语法错误、API 认证、状态验证等方面进行可行性检查。
 
-`plan` highlights any fixes in the Terraform script before actual execution. If it's successful, it outputs a **summary of potential changes** in the infrastructure. You should run this before _apply_, as it makes you aware of any risks before modifying the infrastructure.
+`plan` 在实际执行前高亮显示 Terraform 脚本中的任何修改。如果它成功了，它会输出基础设施中潜在变化的摘要。你应该在 _apply_ 命令之前运行它。因为它能让你在修改基础设施之前意识到风险。
 
-### `Apply` the changes
+### `Apply` 让改变生效
 
-`terraform apply` helps to **execute any changes to the infrastructure**. You should run the `plan` command before running `terraform apply`, as planning creates a plan file which is referred to during apply phase.
+`terraform apply`命令将 **执行对基础设施的任何改变**。你应该在运行`terraform apply`之前运行`plan`命令，会创建一个`plan`文件，在`apply`阶段提供参考消息。
 
-However, if in case `terraform apply` is executed directly, a new plan file will be created automatically.
+如果直接运行 `terraform apply` , 一个新的 `plan`文件会自动创建。
 
-### `Destroy` resources
+### 销毁资源
 
-Lastly, `terraform destroy` helps destroy any resources which are part of the current configuration/state.
+最后，`terraform destroy`命令销毁属于当前配置/状态的任何资源。
 
-## Terraform in Action
+## Terraform 实战
 
-Okay, enough theory for this post. Let's try to implement what we have learned so far by actually creating an instance of EC2 on AWS.
+这篇文件理论已经讲足够了。让我们试着通过在 AWS 上实际创建一个 EC2 实例，来实践我们目前学到的东西。
 
-First, install the Terraform CLI if you haven't already. Installation is pretty easy and you can find the steps [here](https://learn.hashicorp.com/tutorials/terraform/install-cli) for the OS of your choice.
+首先，如果你还没安装 Terraform CLI。其实安装非常简单，你可以找到你的操作系统的[安装步骤](https://learn.hashicorp.com/tutorials/terraform/install-cli)。
 
-Create a directory/folder on your system and create the first Terraform file. Name it `main.tf`. Ideally, we can name it anything as long as it has the extension `.tf`.
+在你的系统中创建一个目录/文件夹，并创建第一个 Terraform 文件类型，讲其命名为`main.tf`。默认情况下，只要它的扩展名为`.tf`，我们可以给它起任何名字。
 
-Terraform CLI recognizes all the files with a `.tf` extension saved in a particular directory for execution.
+Terraform CLI 会识别存在特定的目录下的所有扩展名为`.tf`的文件，然后执行。
 
-Paste the above code in this file and save it. **Please note** that you need to use the correct AMI based on your preferred region.
+将上述代码粘贴在该文件中并保存。**请注意**，你需要根据你的区域(region) 使用正确的 AMI。
 
-Since this will be the first time we are executing the Terraform code, we need to _initialize_ Terraform in this directory. Running `terraform init` will install the required `aws` plugin.
+由于这是第一次执行 Terraform 代码，我们需要在这个目录中 _初始化_ Terraform，运行`terraform init`，将安装`AWS`所需的插件。
 
-Fire up a terminal, navigate to the directory where our Terraform file resides, and run the below command.
+启动一个终端，进入到我们的 Terraform 所在的目录，并运行以下命令。
 
 `terraform init`
 
-This should generate the output as below. The output is very clear and we can see that the `aws` plugin was installed with version v3.22.0.
+这应该产生如下输出，非常清楚，我们可以看到安装的`AWS`插件的安装版本是 V3.22.0
 
 ```
 Initializing the backend...
@@ -162,11 +162,11 @@ rerun this command to reinitialize your working directory. If you forget, other
 commands will detect it and remind you to do so if necessary.
 ```
 
-Next, we will run the `terraform plan` command to see a tentative execution plan. This also validates against any syntactical or reference errors. The `plan` command checks the feasibility of the declared resources in the `main.tf` file. Run this in the same terminal.
+接下来，我们将运行`terraform plan`命令参看一个暂定的执行计划。这也会对任何语法或引用错误进行验证。`plan`命令检查`main.tf`文件中所声明的资源的可行性。在同一个终端上运行这个命令。
 
 `terraform plan`
 
-If everything worked well, the following output is generated.
+如果一切工作顺利，会产生以下输出。
 
 ```
 An execution plan has been generated and is shown below.
@@ -190,21 +190,21 @@ can't guarantee that exactly these actions will be performed if
 "terraform apply" is subsequently run.
 ```
 
-The `plan` command indicates which resources will be created. In our case, it plans to create a `myec2` instance with the given configuration. It shows the AMI ID being used to create the instance.
+`plan`命令指出哪些资源将被创建。在我们的例子中，它计划用给定的配置创建一个`myec2`实例。它显示了用于创建的 AMI ID
 
-Additionally, it also indicates that other attributes like `arn` and `associate_public_ip_address` are known after `apply`, that is when the instance will be created.
+此外，它还表明其他的属性，如`arn`和`associate_public_ip_addres`是已知的，当实例创建。
 
-The bottom line here indicates the final set of changes – to add 1 resource and nothing to change or destroy.
+上面的虚线上的表示最终的一组变化--增加 1 种资源，没有任何变化或者销毁。
 
-So, everything looks good as of now. Let's go ahead and apply the configuration. Run the below command in the terminal and observe the output.
+所以，到现在为止，一切看起来很好。让我们继续并配置应用。在终端运行下面的命令并观察输出。
 
 `terraform apply`
 
-Once confirmed, it takes a few seconds to complete the creation of the EC2 instance on AWS, and this is indicated by the output being generated by `terraform apply`.
+一旦确认，需要几秒时间来完成 AWS 上的 EC2 实例的创建，这可以从`terraform apply`产生的输出看到。
 
-As indicated by the output below, in my case it took 51 seconds to create an EC2 instance and the ID of the instance is made available as well.
+正如下面的输出所示，在我的情况下，创建 EC2 实例需要 51 秒，而且实例的 ID 也是可用的。
 
-Verify the same by logging into your AWS console and searching for an EC2 instance with the below ID. If everything has worked well, you should be able to find it.
+通过登录你的 AWS 控制台并搜索具有以下的 ID 的 EC2 实例，来验证这一点。如果这一切运作良好，你应该能找到它。
 
 ```
 Plan: 1 to add, 0 to change, 0 to destroy.
@@ -226,19 +226,19 @@ aws_instance.myec2: Creation complete after 51s [id=i-04ef3120a0006a153]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 ```
 
-Thus, we have successfully used IaC to define/declare and create our virtual machine configuration on AWS.
+因此，我们已经成功地使用 IaC 来定义/声明和创建我们在 AWS 上的虚拟机的配置。
 
-If we don't need this virtual machine anymore, we can use the same configuration to destroy it.
+如果我不需要这个虚拟机了，我们可以用相同的配置来销毁它。
 
-Please note that if we make any changes to the configuration without the intention of applying those changes – and then we try to destroy the same – we may run into errors.
+请注意，如果我们对配置做了任何修改，但不打算应用这些修改，然后我们试图销毁以前的配置，我们可能会遇到错误。
 
-This is because Terraform maintains the relationship between configuration and real-world resources in state files. Changing the configuration with its application will affect the alignment and Terraform will treat this as new resources to be created.
+这是因为 Terraform 在状态文件中维护了配置和现实世界资源之间的关系。改变配置会影响它的应用关系。Terraform 将把这视为要创建新的资源。
 
-Terraform states is a topic that deserves its own post, so we shall cover that later. For now, to destroy the EC2 instance, run the below command in the terminal.
+Terraform 状态是一个值得单独讨论的话题，所以我们将在后面介绍。现在，要销毁 EC2 实例，在终端运行以下命令。
 
 `terraform destroy`
 
-Before destroying the resource, Terraform asks for our confirmation by providing a plan output. It indicates that running the destroy command will delete 1 resource, which is exactly what we expect.
+在销毁资源之前，Terraform 通过输出一个计划，要求我们进行确认。它表明，运行`destroy`命令将销毁 1 个资源，这是我们所期望的。
 
 ```
 Terraform destroy
@@ -262,12 +262,12 @@ aws_instance.myec2: Destruction complete after 1m5s
 Destroy complete! Resources: 1 destroyed.
 ```
 
-Again, it takes a few seconds to destroy the resource. Terraform doesn't keep you hanging as it updates the status in a 10-second interval.
+同样，销毁资源也需要几秒钟，Terraform 不会让你一直悬着，因为它会每 10 秒更新状态。
 
-Once the resource is destroyed, it confirms that it's done. Feel free to log in to the AWS console and verify if the resource is terminated.
+一旦资源被销毁，它就会确认它已经完成。 请登录 AWS 控制台，验证资源是否被终止。
 
-### Thanks for reading!
+### 多谢你的阅读！
 
-I hope you understand how Terraform works from this basic introduction. I will write more posts covering deeper concepts like states, syntax, the CLI, the back end, and so on in future posts.
+我希望你能从这个基本介绍中理解 Terraform 的工作原理。我将在后面的文章中写更多的文章，涵盖更深的概念，如状态、语法、CLI，后端等等
 
-If you like this content, do consider subscribing, following, and sharing this blog post! [Let'sDoTech](https://letsdotech.dev/), [Instagram](https://www.instagram.com/letsdotech/), [Twitter](https://twitter.com/letsdotech_dev), [LinkedIn](https://www.linkedin.com/company/letsdotech).
+如果你喜欢这些内容，请考虑订阅，关注和分享这篇博文[Let'sDoTech](https://letsdotech.dev/), [Instagram](https://www.instagram.com/letsdotech/), [Twitter](https://twitter.com/letsdotech_dev), [LinkedIn](https://www.linkedin.com/company/letsdotech).

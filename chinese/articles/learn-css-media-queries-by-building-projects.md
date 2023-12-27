@@ -19,7 +19,7 @@ Topics to discuss at a glance:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7vrrjohwnmdvbtexg1r2.png)
 
-## You can watch this tutorial on YouTube as well if you like:
+## You can watch this tutorial on YouTube as well if you like
 
 # What are CSS Media Queries?
 
@@ -65,7 +65,7 @@ So, write this line inside the html file:
 
 ## What is SCSS?
 
-We'll Use SCSS, not CSS. But..... what is SCSS?
+We'll Use SCSS, not CSS. But…… what is SCSS?
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/q5a3hp7070ls26dovja2.png)
 
@@ -148,7 +148,7 @@ Responsive website also means **Responsive Images**. So we're also going to make
 
 ![Down Git Steps to follow](https://cloud.githubusercontent.com/assets/5456665/17822364/940bded8-6678-11e6-9603-b84d75bccec1.gif)
 
-And.... we're all set! Let's start coding. 😊
+And…… we're all set! Let's start coding. 😊
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u5qj78v41btdq7sewdzs.png)
 
@@ -175,7 +175,7 @@ Let's divide the syntax into four sections:
 3.  min-width & max-width Functions
 4.  The Code itself
 
-### To understand all 4 section of the syntax, let's start our **First Project**:
+### To understand all 4 section of the syntax, let's start our **First Project**
 
 ![Project-1 Video](https://media.giphy.com/media/t4QOOfmnupAqnHcI9H/giphy.gif)
 
@@ -317,7 +317,7 @@ To be honest, there's no such thing as a standard screen break-point guide becau
 
 Here's a list of every device screen resolution on [CSS-Tricks](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/).
 
-### The max-width function:
+### The max-width function
 
 Using this function, we are creating a boundary. This will work as long as we are **inside the boundary**. Here's a sample 👇
 
@@ -348,7 +348,7 @@ At the bottom, insert the media query like this 👇
 }
 ```
 
-### The min-width function:
+### The min-width function
 
 We are also creating a boundary here. But this will work if we go **outside the boundary**. Here's a sample: 👇
 
@@ -428,7 +428,7 @@ And our `.container` class should look like this:
 
 We're all 50% done! Now let's setup the four media queries.
 
-## But Wait...
+## But Wait
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/net2cuugxdaz9idwbwhl.png)
 
@@ -514,11 +514,11 @@ Congratulations on completing project 1! Now **take a break. You deserve it.**
 
 We'll build a small responsive Website for our second project.
 
-### Here's what the desktop view will look like:
+### Here's what the desktop view will look like
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ay01oqdseulalsw3gpdh.png)
 
-### And here's the mobile view:
+### And here's the mobile view
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/hob05vxov52hrm5quz0a.png)
 

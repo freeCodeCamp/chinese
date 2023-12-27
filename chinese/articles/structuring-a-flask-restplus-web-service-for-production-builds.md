@@ -87,7 +87,7 @@ mkproject name_of_your_project
 
 这里使用[功能性结构](http://exploreflask.com/zh-CN/latest/blueprints.html#functional-structure)通过文件的功能来组织项目文件。在功能结构里，模板、静态文件、视图在三个不同的目录中。
 
-在项目目录中，创建一个名为 `app` 的新包。 在 `app` 内部，创建两个包 ` main` 和 `test`。 目录结构如下。
+在项目目录中，创建一个名为 `app` 的新包。 在 `app` 内部，创建两个包 `main` 和 `test`。 目录结构如下。
 
 ```
 .
@@ -591,7 +591,7 @@ class User(Resource):
 
 > _具体资源应从此 class 扩展并暴露每个支持的 HTTP 方法。如果使用不支持的 HTTP 方法调用资源，则 API 将返回状态为 405 Method Not Allowe 的响应。否则，将调用适当的方法并在将资源添加到 API 实例时传递所有的 URL 参数_。
 
-上面 ` line 7`中的 `api` 命名空间为 controller 提供了多个装饰器，包括但不限于以下几种：
+上面 `line 7`中的 `api` 命名空间为 controller 提供了多个装饰器，包括但不限于以下几种：
 
 -   api.**route**: __route 资源的装饰器__
 -   api.**marshal\_with**: __一个用来指定需要序列化字段的装饰器 (就是用到的之前创建的 `__userDto__` )__
@@ -649,7 +649,7 @@ app.app_context().push()
 python manage.py run
 ```
 
-现在，在浏览器中打开URL [http://127.0.0.1:5000](http://127.0.0.1:5000/)。 应该可以看到 swagger 的文档。
+现在，在浏览器中打开 URL [http://127.0.0.1:5000](http://127.0.0.1:5000/)。 应该可以看到 swagger 的文档。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Us_S2WLR3AQAyfOvkzZ38Q.png)
 
@@ -663,7 +663,7 @@ python manage.py run
 
 #### 安全与认证
 
-创建一个 ` blacklistToken` model 来存储列入黑名单的 tokens。 在 `models` 包中，创建具有以下内容的 `blacklist.py`文件：
+创建一个 `blacklistToken` model 来存储列入黑名单的 tokens。 在 `models` 包中，创建具有以下内容的 `blacklist.py`文件：
 
 ```python
 from .. import db
@@ -1006,7 +1006,7 @@ api.add_namespace(auth_ns)
 
 使用 `python manage.py run` 运行应用程序，然后在浏览器中打开网址 [http://127.0.0.1:5000](http://127.0.0.1:5000/)。
 
-swagger 文档现在应该展示出新创建的带有 `login` 和 `logout` 接口的 `auth `命名空间。
+swagger 文档现在应该展示出新创建的带有 `login` 和 `logout` 接口的 `auth`命名空间。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*K4ZVMOwsOIIzBOV8bfqJew.png)
 

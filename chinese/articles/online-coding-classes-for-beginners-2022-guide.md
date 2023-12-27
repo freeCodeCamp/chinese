@@ -72,7 +72,6 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 15. [Bootstrap CSS框架--面向初学者的完整课程](./#bootstrap-css-framework-full-course-for-beginners) (freeCodeCamp)
 
 ## **************UI/UX (1****2****)**************
-
 1. [用户体验（UX）设计的基础](./#foundations-of-user-experience-ux-design) (Google)
 2. [用户体验设计过程: 感同身受、定义和构思](./#start-the-ux-design-process-empathize-define-and-ideate) (Google)
 3. [建立线框和低保真原型](./#build-wireframes-and-low-fidelity-prototypes) (Google)
@@ -196,6 +195,130 @@ freeCodeCamp课程是完全免费的，其中一些课程包括一个免费的�
 
 1. [Learn Ruby on Rails - 全部课程](./#learn-ruby-on-rails-full-course) (freeCodeCamp)
 2. [全栈 Ruby on Rails](./#full-stack-ruby-on-rails) (The Odin project)
+=======
+1.  [Foundations of User Experience (UX) Design](#foundations-of-user-experience-ux-design) (Google)
+2.  [Start the UX Design Process: Empathize, Define, and Ideate](#start-the-ux-design-process-empathize-define-and-ideate) (Google)
+3.  [Build Wireframes and Low-Fidelity Prototypes](#build-wireframes-and-low-fidelity-prototypes) (Google)
+4.  [Conduct UX Research and Test Early Concepts](#conduct-ux-research-and-test-early-concepts) (Google)
+5.  [Create High-Fidelity Designs and Prototypes in Figma](#create-high-fidelity-designs-and-prototypes-in-figma) (Google)
+6.  [Responsive Web Design in Adobe XD](#responsive-web-design-in-adobe-xd) (Google)
+7.  [Free Adobe XD Tutorial: User Experience Design Course with Adobe XD Course](#free-adobe-xd-tutorial-user-experience-design-course-with-adobe-xd-course) (Bring Your Own Laptop Youtube channel)
+8.  [The 2019 UI Design Crash Course for Beginners](#the-2019-ui-design-crash-course-for-beginners) (DesignCourse)
+9.  [Figma Tutorial - A Free UI Design/Prototyping Tool](#figma-tutorial-a-free-ui-design-prototyping-tool) (DesignCourse)
+10.  [UXpin: Free UX Ebooks](#uxpin-free-ux-ebooks) (uxpin.com)
+11.  [Figma Course - Web Design Tutorial for Beginners](#figma-course-web-design-tutorial-for-beginners) (freeCodeCamp)
+12.  [Figma Tutorial for UI Design - Course for Beginners](#figma-tutorial-for-ui-design-course-for-beginners) (freeCodeCamp)
+
+## **************JavaScript Courses (****13****)**************
+
+1.  [JavaScript Algorithms and Data Structures](#javascript-algorithms-and-data-structures) (freeCodeCamp)
+2.  [Learn JavaScript - Full Course for Beginners](#learn-javascript-full-course-for-beginners) (freeCodeCamp)
+3.  [Full Stack JavaScript](#full-stack-javascript) (The Odin Project)
+4.  [The Modern JavaScript Tutorial](#the-modern-javascript-tutorial) (javascript.info)
+5.  [JavaScript Tutorial](#javascript-tutorial) (javascripttutorial.net)
+6.  [LearnJS](#learnjs) (learn-js.org)
+7.  [JavaScript](#javascript) (SoloLearn)
+8.  [JavaScript Programming](#javascript-programming) (freeCodeCamp)
+9.  [JavaScript Tutorial for Beginners: Learn JavaScript in 1 Hour](#javascript-tutorial-for-beginners-learn-javascript-in-1-hour) (Programming with Mosh)
+10.  [TypeScript Course for Beginners 2021 - Learn TypeScript from Scratch!](#typescript-course-for-beginners-2021-learn-typescript-from-scratch-) (Academind)
+11.  [Backend Development and API's](#backend-development-and-api-s) (freeCodeCamp)
+12.  [Node.js and Express.js - Full Course](#node-js-and-express-js-full-course) (freeCodeCamp)
+13.  [Node.js Tutorial for Beginners: Learn Node in 1 Hour](#node-js-tutorial-for-beginners-learn-node-in-1-hour) (Programming with Mosh)
+
+## **************JavaScript Frameworks and Libraries (****14****)**************
+
+1.  [freeCodeCamp React Course](#freecodecamp-react-course) (freeCodeCamp)
+2.  [React Course - Beginner's Tutorial for React JavaScript Library \[2022\]](#react-course-beginner-s-tutorial-for-react-javascript-library-2022-) (freeCodeCamp)
+3.  [Scrimba React course](#scrimba-react-course) (Scrimba)
+4.  [React JS - React Tutorial for Beginners](#react-js-react-tutorial-for-beginners) (Programming with Mosh)
+5.  [React JS Crash Course 2021](#react-js-crash-course-2021) (Brad Traversy)
+6.  [freeCodeCamp Redux Course](#freecodecamp-redux-course) (freeCodeCamp)
+7.  [Redux For Beginners | React Redux Tutorial](#redux-for-beginners-react-redux-tutorial) (Dev Ed)
+8.  [Thinkster Angular Tutorial](#thinkster-angular-tutorial) (Thinkster)
+9.  [Angular Crash Course](#angular-crash-course) (Brad Traversy)
+10.  [Learn Angular - Full Tutorial Course](#learn-angular-full-tutorial-course) (freeCodeCamp)
+11.  [Vue.js Course for Beginners \[2021 Tutorial\]](#vue-js-course-for-beginners-2021-tutorial-) (freeCodeCamp)
+12.  [Vue JS Crash Course 2021](#vue-js-crash-course-2021) (Brad Traversy)
+13.  [Data Visualization with D3, JavaScript, React - Full Course \[2021\]](#data-visualization-with-d3-javascript-react-full-course-2021-) (freeCodeCamp)
+14.  [Next.js for Beginners - Full Course](#next-js-for-beginners-full-course) (freeCodeCamp)
+
+## **************Python Courses (****2****2********)******
+
+1.  [Programming for Everybody (Getting Started with Python)](#programming-for-everybody-getting-started-with-python-) (University of Michigan)
+2.  [Python Data Structures](#python-data-structures) (University of Michigan)
+3.  [Using Python to Access Web Data](#using-python-to-access-web-data) (University of Michigan)
+4.  [Using Databases with Python](#using-databases-with-python) (University of Michigan)
+5.  [An Introduction to Interactive Programming in Python (Part 1)](#an-introduction-to-interactive-programming-in-python-part-1-) (Rice University)
+6.  [An Introduction to Interactive Programming in Python (Part 2)](#an-introduction-to-interactive-programming-in-python-part-2-) (Rice University)
+7.  [Scientific Computing with Python](#scientific-computing-with-python) (freeCodeCamp)
+8.  [Python Django Web Framework - Full Course for Beginners](#python-django-web-framework-full-course-for-beginners) (freeCodeCamp)
+9.  [Learn Python - Full Course for Beginners](#learn-python-full-course-for-beginners)  (freeCodeCamp)
+10.  [The Python Handbook](#the-python-handbook) (Flavio Copes)
+11.  [Python Tutorials for Absolute Beginners](#python-tutorials-for-absolute-beginners-by-cs-dojo) (CS Dojo)
+12.  [Studytonight](#studytonight) (studytonight.com/python/)
+13.  [Python Core](#python-core) (SoloLearn)
+14.  [Python Basics with Sam](#python-basics-with-sam-freecodecamp-) (freeCodeCamp)
+15.  [Python Beginner Tutorials](#python-beginner-tutorials) (Pythonspot)
+16.  [Python Tutorial](#python-tutorial) (PythonForBeginners)
+17.  [Automate the Boring Stuff with Python](#automate-the-boring-stuff-with-python) (Al Sweigart)
+18.  [Python Crash Course For Beginners](#python-crash-course-for-beginners) (Traversy Media)
+19.  [Python Tutorial - Python for Beginners](#python-tutorial-python-for-beginners) (Programming with Mosh)
+20.  [PySpark Tutorial](#pyspark-tutorial) (freeCodeCamp)
+21.  [Python Backend Web Development Course (with Django)](#python-backend-web-development-course-with-django-) (freeCodeCamp)
+22.  [Flask Course - Python Web Application Development](#flask-course-python-web-application-development) (freeCodeCamp)
+
+## ******Mobile App Development Courses (****5****)******
+
+1.  [Android Development for Beginners - Full Course](#android-development-for-beginners-full-course) (freeCodeCamp)
+2.  [React Native Tutorial for Beginners - Build a React Native App \[2020\]](#react-native-tutorial-for-beginners-build-a-react-native-app-2020-) (Programming with Mosh)
+3.  [Kotlin Course - Tutorial for Beginners](#kotlin-course-tutorial-for-beginners) (freeCodeCamp)
+4.  [Swift Programming Tutorial for Beginners](#swift-programming-tutorial-for-beginners) (Code with Chris)
+5.  [Learn iOS Development by Building a Netflix Clone](#learn-ios-development-by-building-a-netflix-clone) (freeCodeCamp)
+
+## **************Game Development Courses (************5************)**************
+
+1.  [CS50's Introduction to Game Development](#cs50-s-introduction-to-game-development) (Harvard)
+2.  [Learn Unity - Beginner's Game Development Tutorial](#learn-unity-beginner-s-game-development-tutorial) (freeCodeCamp)
+3.  [Create A 2.5D Platformer Game With Unreal Engine](#create-a-2-5d-platformer-game-with-unreal-engine) (freeCodeCamp)
+4.  [Pygame Tutorial for Beginners - Python Game Development Course](#pygame-tutorial-for-beginners-python-game-development-course) (freeCodeCamp)
+5.  [Godot Game Engine Tutorial - Make a 2D Platformer Game](#godot-game-engine-tutorial-make-a-2d-platformer-game) (freeCodeCamp)
+
+## **************C, C++, C# Courses (************7************)**************
+
+1.  [C Programming Tutorial for Beginners](#c-programming-tutorial-for-beginners) (freeCodeCamp)
+2.  [C++ Tutorial for Beginners - Full Course](#c-tutorial-for-beginners-full-course) (freeCodeCamp)
+3.  [C# Tutorial - Full Course for Beginners](#c-tutorial-full-course-for-beginners) (freeCodeCamp)
+4.  [C Course](#c-course) (SoloLearn)
+5.  [C++ Course](#c-course-1) (SoloLearn)
+6.  [C# Course](#c-course-2) (SoloLearn)
+7.  [Learn C++ Programming for Beginners – Free 31-Hour Course](#learn-c-programming-for-beginners-free-31-hour-course) (freeCodeCamp)
+
+## **************Java Courses (****12****)**************
+
+1.  [Java Programming: Solving Problems with Software](#java-programming-solving-problems-with-software) (Coursera)
+2.  [Java Programming: Arrays, Lists, and Structured Data](#java-programming-arrays-lists-and-structured-datajava-programming-arrays-lists-and-structured-data) (Coursera)
+3.  [Java Programming: Principles of Software Design](#java-programming-principles-of-software-design) (Coursera)
+4.  [Java Programming Basics](#java-programming-basics) (Udacity)
+5.  [Java Programming](#java-programming) (Test Automation University)
+6.  [Intro to Java Programming Course for Absolute Beginners](#intro-to-java-programming-course-for-absolute-beginners) (freeCodeCamp)
+7.  [Learn Functional Programming in Java](#learn-functional-programming-in-java) (freeCodeCamp)
+8.  [Java Virtual Machine Architecture Explained for Beginners](#java-virtual-machine-architecture-explained-for-beginners) (freeCodeCamp)
+9.  [Java Tutorial for Beginners \[2020\]](#java-tutorial-for-beginners-2020-) (Programming with Mosh)
+10.  [Spring Boot Tutorial for Beginners](#spring-boot-tutorial-for-beginners-java-framework-)  (freeCodeCamp)
+11.  [Java Testing - JUnit 5 Crash Course](#java-testing-junit-5-crash-course) (freeCodeCamp)
+12.  [Java Course](#java-course) (SoloLearn)
+
+## **************PHP Courses (************4************)**************
+
+1.  [PHP Programming Language Tutorial - Full Course](#php-programming-language-tutorial-full-course) (freeCodeCamp)
+2.  [PHP For Absolute Beginners](#php-for-absolute-beginners) (Traversy Media)
+3.  [Use PHP to Create an MVC Framework - Full Course](#use-php-to-create-an-mvc-framework-full-course) (freeCodeCamp)
+4.  [PHP Tutorial for Beginners - Full Course](#php-tutorial-for-beginners-full-course) (Envato Tuts)
+
+## ******Ruby on Rails Courses (2)******
+
+1.  [Learn Ruby on Rails - Full Course](#learn-ruby-on-rails-full-course) (freeCodeCamp)
+2.  [Full Stack Ruby on Rails](#full-stack-ruby-on-rails) (The Odin project)
 
 ## ******Databases (13)******
 

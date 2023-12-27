@@ -1,215 +1,212 @@
 > -  原文地址：[Cipher Definition – What is a Block Cipher and How Does it Work to Protect Your Data?](https://www.freecodecamp.org/news/what-is-a-block-cipher/)
 > -  原文作者：[Megan KaczanowskiMegan Kaczanowski](https://www.freecodecamp.org/news/author/megansdoingfine/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![Cipher Definition – What is a Block Cipher and How Does it Work to Protect Your Data?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/block-and-stream-cipher.jpg)
+![密码的订阅-什么是区块密码，它是如果保护你的数据](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/block-and-stream-cipher.jpg)
 
-Cryptography is the science of using codes and ciphers to protect messages. And encryption involves encoding messages so that only the intended recipient can understand the meaning of the message. It's often used to protect data in transit.
+密码学是使用代码和密码来保护信息的学科。加密涉及对信息进行编码，以便预定的接收者能够知道信息的含义。它经常被用来保护传输的数据。
 
-Encryption is a two way function – that is, you need to be able to undo whatever scrambling you’ve done to the message.
+加密是一个双向的功能-也就是说，你能消除任何对信息进行扰乱。
 
-Today, there are two basic types of algorithms — symmetric and asymmetric.
+今天，有两种基本类型的基本算法-对此和非对称。
 
-Symmetric algorithms are also known as ‘secret key’ algorithms, and asymmetric algorithms are known as ‘public key’ algorithms.
+对此算法也被称为`secret key`(秘钥) 算法，而非对称算法则被称为`public key`(公钥)算法。
 
-The key difference between the two is that symmetric algorithms use the same key for encryption and decryption, while asymmetric algorithms use different keys for encryption and decryption.
+两者的关键区别在于，对称算法使用相同的密钥进行加密和解密，而非对称算法使用不同的密钥进行加密和解密。
 
-For a general overview of cryptography and the difference between symmetric and asymmetric ciphers, check out [this article](/news/how-to-send-secret-messages/).
+关于密码学的一般概述以及对称和非对称密码的区别，请查看[本文](/news/how-to-send-secret-messages/).
 
-## What Principles are Important When You're Developing a Cipher?
+## 当你开发一个密码时，哪些原则时重要的？
 
-Kerckhoff's principle states that a cryptographic system should be secure, even if all the details (other than the key) are known publicly. Claude Shannon later rewrote this message as 'The enemy knows the system.'
+克尔克霍夫原则指出，一个加密系统应该是安全的，即使所有的细节(key 除外)都是公开的。克劳德-香农后来将这一说成 `敌人知道系统`。
 
-Essentially, a very well designed system should be able to send secret messages even if an attacker can encrypt and decrypt their own messages using the same algorithm (with a different key). The security of the encrypted message should depend entirely on the key.
+从本质上讲，一个设计得非常好得系统应该能够发送加密信息，即使攻击者能使用相同得算法(用不同得密钥)加密和解密自己的消息。加密信息的安全性应该完全取决于密钥。
 
-Additionally, in order to hinder statistical analysis (attempts to break an encryption algorithm), a good cryptographic system should employ the principles of confusion and diffusion.
+此外，为了阻碍统计分析(试图破解加密算法)，一个好的密码系统应该采用混乱和扩散的原则。
 
-Confusion requires that the key does not relate to the ciphertext in a simple manner. Each character of the ciphertext should depend on multiple parts of the key. The goal is to make it very difficult for an attacker to determine the key from the ciphertext.
+混乱要求密钥不能以简单的方式与加密后产生的文本相关联性。加密后产生的文本的每个字符都应取决于密钥的多个部分。其目的是使攻击者很难从加密后产生的文本中确定密钥。
 
-Diffusion means that if a single character of the plaintext is changed, then several characters of the ciphertext should change. And if a single character of the ciphertext is changed, then several characters of the plaintext should change.
+扩散的意思是，如果明文中的一个字符被改变，那么加密后产生的文本中几个字符也应该改变。如果加密后产生的文本中一个字符改变，那么明文中的几个字符也应该改变。
 
-Ideally, the relationship between the ciphertext and the plaintext is hidden. No diffusion is perfect (all will have some patterns), but the best diffusion scatters patterns widely, even scrambling several patterns together.
+理想情况下，加密后产生的文本和明文之间的关系是隐藏的。没有任何扩散是完美的(都会有一些模式)，但最好的扩散是将模式广泛扩散，甚至是几个模式一起使用。
 
-Diffusion makes patterns hard for an attacker to spot, and requires the attacker to have more data in order to mount a successful attack.
+扩散使攻击者难以发现模式，并要求攻击者拥有更多的数据，以发起成功的攻击。
 
-If you want to read up on this a bit more, check out [A Mathematical Theory of Cryptography](https://www.iacr.org/museum/shannon/shannon45.pdf).
+如果你想多读一点这方面的内容，可以查看[密码学的数学理论](https://www.iacr.org/museum/shannon/shannon45.pdf).
 
-## What are Block and Stream Ciphers?
+## 什么是块和流加密(Stream Ciphers)？
 
-Both block and stream ciphers are symmetric key ciphers (like DES, RCx, Blowfish, and Rijndael AES). Block ciphers convert plaintext to ciphertext block by block, while stream ciphers convert one byte at a time.
+块和流加密都是对称密钥密码(如 DES、RCx、Blowfish 和 Rijndael AES)。块加密将明文逐块转换为密文，而流加密则每次转换为一个字节。
 
-Most modern symmetric algorithms are block ciphers, though the block sizes vary (such as DES (64 bits), AES (128, 192, and 256 bits), and so on).
+大多数现代对称算法都是`block ciphers`(块加密)，尽管块大小不同(如 EDS(64 位)，AES(128,192 和 256 位)，等等)。
 
-### What is the advantage of a stream cipher?
+### 流加密的优势是什么？
 
-Stream encryption is faster (linear in time) and constant in space. It is unlikely to propagate errors, as an error in one byte's translation won't impact the next byte.
+流加密的速度更快(时间上是线性的)，在空间上是恒定的。它不太可能发生传输错误，因为一个字节的转换错误不会影响下一个字节。
 
-However, there's little diffusion as one plaintext symbol is directly translated to one ciphertext symbol. Also, the ciphertext is susceptible to insertions or modifications. If an attacker is able to break the algorithm, they may be able to insert text which looks authentic.
+当明文的数量未知时(如音频或视频流)，或者极端的性能要求下(如非常高速的连接，或者需要非常有效的和紧凑的设备，如智能卡)，你通常会使用流加密。
 
-You typically use a stream cipher when the amount of plaintext is unknown (like audio or video streaming), or when extreme performance is important (like with very high speed connections, or for devices which need to be very efficient and compact, like smart cards).
+流加密的工作原理是由密钥生成一系列的伪随机字节(对于给定的密钥，加密和解密过程中的使用相同的伪随机字节)。不同的密钥会产生不同的字节串。
 
-A stream cipher works by generating a series of pseudorandom bytes which depend on the key (for any given key, the series of bytes is the same for encryption and decryption). Different keys will produce different strings of bytes.
+为了加密数据，明文字节与伪随机字节串进行 XOR(异或操作)。为了解密，将加密后产生的文本与相同的伪随机字节串进行 XOR(异或操作)，就可以看到明文。
 
-In order to encrypt data the plaintext bytes are XORed with the string of pseudorandom bytes. To decrypt, the ciphertext is XORed with the same string in order to see the plaintext.
+### 块加密的优势是什么？
 
-### What is the advantage of a block cipher?
+块加密有很高的扩散性(一个明文符合被扩散到几个密码文本符号中)。攻击者要插入符号而不被发现是很困难的，因为他们不可能轻易将符号插入到块的中间。
 
-A block cipher has high diffusion (information from one plaintext symbol is spread into several cipher-text symbols). It is also fairly difficult for an attacker to insert symbols without detection, because they can't easily insert them into the middle of a block.
+然而，它比流加密慢(加密/解密之前需要传输整个块)，如果发生错误，它可以传染到这个块，破坏整个块。
 
-However, it is slower than a stream cipher (an entire block needs to be transmitted before encryption/decryption can happen) and if an error does occur, it can propagate throughout the block, corrupting the entire section.
+当你知道传输数据规模时，块加密是一个更好的选择，例如在传输文件。
 
-Block ciphers are a better choice when you know the transmission size – such as in file transfer.
+## 块加密的常见模式是什么？
 
-## What are the common modes of Block Ciphers?
+为了对多块的数据进行加密，有几种`模式`已经被开发出来。这些模块将单块原则用于更长的消息。
 
-In order to encrypt data which is longer than a single block, there are several 'modes' which have been developed. These describe how to apply the single block principles to longer messages.
+块加密有 5 种保密模式。其中一些模式需要一个初始化向量(IV) 才能发挥作用。
 
-There are 5 confidentiality modes for block ciphers. Some of these modes require an initialization vector (IV) in order to function.
+###  什么是 Initialization Vector (IV  初始化变量)?
 
-### What is an Initialization Vector (IV)?
+IV 的本质只是用于创建密文的另一个输入(除了明文和密钥)。它是一个数据块，被几种模式的块加密用来随机化加密，这样即使相同的明文被重复加密，也会产生不同的密文。
 
-An IV is essentially just another input (in addition to the plaintext and the key) used to create ciphertext. It's a data block, used by several modes of block ciphers to randomize encryption so that different cipher text is created even if the same plain text is repeatedly encrypted.
+它通常不是秘密，尽管它不会被重复使用。在理想情况下，它应该是随机的，不可预测和一次性使用。
 
-It usually does not need to be secret, though it cannot be re-used. Ideally, it should be random, unpredictable, and single-use.
+两个相同的信息用相同的密钥加密，但不同的 IV，将导致不同的密文。 这使进行攻击更加困难。
 
-Two of the same messages encrypted with the same key, but different IVs, will result in different ciphertext. This makes an attacker's job more difficult.
+### Electronic Code Book Mode (ECB 电子代码本模式)
 
-### Electronic Code Book Mode (ECB)
+在明文的输入块和密文输出块有一个固定的映射(基本上就像一个实际的密码本，密文的字与明文直接相关)。
 
-There is a fixed mapping between input blocks of plaintext and output blocks of ciphertext (essentially like an actual code book where ciphertext words directly relate to plaintext words).
-
-ECB applies the cipher function independently to each block of plaintext to encrypt it (and the inverse function to each block of ciphertext to decrypt it). This means that CBC can encrypt and decrypt multiple blocks in parallel (since they don't depend on each other), speeding up the process.
+ECD 对每个明文块应用加密函数进行加密(对每个密文块应用逆向函数进行解密)。这意味着 CBC 可以并行地加密和解密多个块(因为它们相互不依赖)，加快了处理进程。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-31-at-8.22.20-PM.png)
 
 https://en.wikipedia.org/wiki/Block\_cipher\_mode\_of\_operation
 
-For this mode to work correctly, either the message length needs to be a multiple of the block size or you need to use padding for the length condition to be met.
+要使这种模式正常工作，要么信息长度是块大小的整数倍，要么你需要使用填充来满足长度条件。
 
-Padding is essentially extra data that's added in order to ensure that the block size is met. With this mode, given the same key, the same plaintext block will always result in the same ciphertext block. That makes it vulnerable to attack, so this mode is rarely used (and should be avoided).
+填充实质上为了满足块大小而添加的额外数据。在这种模式下，给定相同的密钥，相同的明文块将总是导致相同的密文块。这是它很容易受到攻击，所以这种模式很少使用(应该避免使用)。
+### Cipher Block Chaining Mode (CBC  加密块链模式)
 
-### Cipher Block Chaining Mode (CBC)
+这种加密模式将新的明文块与前一个加密区`关联(chains)`或者结合起来，这需要为第一个块提供一个 IV。IV 不需要加密，但它要不可预测。
 
-This mode 'chains' or combines new plaintext blocks with the previous ciphertext block when encrypting them which requires an IV for the first block. The IV doesn't need to be secret, but it needs to be unpredictable.
+CBC 将第一个明文块与 IV 密文块进行 XOR(异或)，以创建第一个密文块。使用 ECB 模式将 IV 作为一个短消息单独发送。
 
-CBC exclusive ors (XORs) the first block of plaintext with the IV ciphertext block to create the first ciphertext block. The IV is sent separately as a short message using ECB Mode.
+然后，CBD 对该块使用加密算法，产生第一个密文块。然后，CBC 将此密文块与第一个文明块进行 XOR(异或)，并应用加密算法产生第二个密文块，如果反复，直到消息的最后。
 
-Then, CBC applies the encryption algorithm to the block, creating the first block of ciphertext. CBC then XORs this block with the second plaintext block and the applies the encryption algorithm to produce the second ciphertext block, and so on until the end of the message.
+为了解密，CBC 做了想法的工作--第一个密文块使用反向的加密算法，然后将该块与 IV 进行 XOR(异或),得到第一个明文块。
 
-In order to decrypt the message, CBC does the reverse - applies the inverse of the encryption algorithm to the first ciphertext block and then XORs the block with the IV to obtain the first plaintext block.
-
-CBC then applies the inverse of the encryption algorithm to the second ciphertext block and XORs the block with the first ciphertext block to obtain the second plaintext block. This process continues until the message is decrypted.
+然后，CBC 将加密算法的逆运算应用于第二个密文块，并将该块与第一密文块进行 XOR，得到第二个明文块。这个过程将一直持续到消息被解密。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-31-at-8.22.37-PM.png)
 
 https://en.wikipedia.org/wiki/Block\_cipher\_mode\_of\_operation
 
-Because each input block (except the first) relies on the previous block being encrypted, CBC can't perform encryption in parallel. However, since the decryption requires XORing with the (immediately available) ciphertext blocks, it can be done in parallel. CBC is one of the most commonly used modes.
+因为每个输入块(除了第一个)都依赖于前一个块被加密，CBC 不能并行地进行加密。然而，由于解密需要(立即可用)密文块进行 XOR，所以它可以并行进行。CBC 是最常用的模式之一。
 
-Similarly to ECB, for this mode to work correctly, either the message length needs to be a multiple of the block size or you need to use padding for the length condition to be met.
+于 ECB 相似，要使用这种模式正常工作，消息的长度需要是块大小的两倍，不足要进行填充来满足长度。
 
-### Cipher Feedback Mode (CFB)
+### Cipher Feedback Mode (CFB 加密反馈模式)
 
-CFB is similar to CBC, but instead of using the entire previous ciphertext block to compute the next block, CFB uses a fraction of the previous block.
+CFB 与 CBC 相似，但 CFB 不是使用整个前一个密文块计算下一个块，而是前一个块的一部分。
 
-CFB starts with an IV of the same block size as expected by the block cipher, and encrypts it with the encryption algorithm.
+1 CFB 从一个与加密块预期大小相同的 IV 开始，使用加密算法对其进行加密。
 
-CFB retains s (significant) bytes from this output and XORs them with s bytes of plaintext to be transmitted.
+2 CFB 保留`s`(重要)字节，并将其与要传输的明文`s`字节进行 XOR(异或)。
 
-Then, CFB shifts the IV s bytes to the left, inserting the ciphertext bytes produced by step 2 as the righthand bytes (IV stays the same length).
+3 然后，CFB 将 IV 的`s`字节向左移动，将步骤 2 产生的密文字节插入右边的字节中(IV 保持相同的长度)。
 
-Then it repeats these steps.
+4 然后重复这些步骤。
 
-To decrypt a message, CFB uses the IV as the first block and forms each following block by performing step 3 above and applying the encryption algorithm to form blocks. CFB then XORs s bites with the corresponding ciphertext to reveal the plaintext.
+为了解密消息，CFB 使用 IV 作为第一个块，并通过执行上述步骤 3 和应用加密算法形成块形成每个后续块。然后，CFB 与 `s`字节相应的密文进行 XOR(异或)，以显示明文。
 
-Within CFB, the encryption system processes s < b plaintext bits at a time, even though the algorithm itself carries out b-bits to b-bits transformation. This means that s can be any number, including 1 byte and CFP can functionally operate as a stream cipher.
+在 CFB 内部，加密系统一次处理 `s < b`明文位，即使算法本身进行 `b-bits`到 `b-bits`的转换。这意味着 s 可以是任何数字，包含一个 1 个字节，CFP 可以在流加密中作为一个功能运行。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-31-at-8.24.31-PM.png)
 
 https://en.wikipedia.org/wiki/Block\_cipher\_mode\_of\_operation
 
-Unfortunately, this means that CFB can propagate errors downstream. If a byte is received with an error, when CFB uses it to decrypt the first byte, it will produce an erroneous decryption, causing downstream errors when fed back into the decryption.
+不幸的是，这意味着 CFB 可以向下游传播错误。如果收到一个错误的字节，当 CFB 用它来解密第一个字节时，它将产生一个错误的解密，导致后面的解密错误。
 
-Like CBC, when CFB encrypts, the input to each round relies on the result of the previous round, meaning that encryption cannot be done in parallel, though decryption can be performed in parallel if the input blocks are first created from the IV and ciphertext.
+像 CBC 一样，当 CFB 加密时，每轮的输入都依赖于前一轮的结果，这意味着加密不能并行进行，尽管如果输入块首先由 IV 和密文创建，则可以并行进行解密。
 
-### Output Feedback (OFB)
+### Output Feedback (OFB  输出反馈)
 
-OFB is similar to CFB, but instead of processing s < b bits into a b-bits to b-bits transformation, it processes s bits directly. Similarly to CFB, OFB can be functionally used as a stream cipher.
+OFB 与 CFB 类似，但它不是将 `s<b` 位处理转换成 `b-bits to b-bits`，而是直接`s`位处理。与 CFB 类似，OFB 可以在流加密中使用。
 
-OFB requires that the IV be a unique nonce (number used once) for each execution with a given key.
+OFB 要求 IV 是唯一的 nonce(一次性使用)，用于给定的密钥每次执行。
 
-First, OFB encrypts the IV with the encryption algorithm, to produce an output block. OFB then XORs this block with the first plaintext block, producing the first ciphertext block.
+首先，OFB 加密算法对 IV 进行加密，产生一个块。然后，OFB 将此块与一个明文块进行 XOR,产生第一密文块。
 
-OFB encrypts the first output block with the encryption algorithm to produce the second output block. It then XORs this block with the second plaintext block to produce the second ciphertext block. OFB repeats this process for the length of the message.
+OFB 用加密算法对第一个输出块进行加密，输出第二个输出块。然后，它将此块与第二个明文块进行 XOR(异或)，产生第二个密文块。OFB 在信息的长度上重复这一过程。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-31-at-8.22.54-PM.png)
 
 https://en.wikipedia.org/wiki/Block\_cipher\_mode\_of\_operation
 
-When decrypting, OFB encrypts the IV with the encryption algorithm, producing an output block. OFB then XORs this block with the first ciphertext block, recovering the first plaintext block.
+解密时，OFB 用加密算法对 IV 进行加密，产生一个输出块。然后 OFB 将此块与第一个密文块进行 XOR(异或),恢复第一个明文块。
 
-OFB encrypts the first output block with the encryption algorithm to produce the second output block. OFB then XORs it with the second ciphertext block to recover the second plaintext block. OFB repeats this process for the length of the message.
+OFB 用加密算法对第一个输出块进行加密，产生第二个输出块。然后 OFB 将其与第二个密文块进行 XOR，恢复第二个明文块。OFB 为信息的长度重复这一过程。
 
-Because the output blocks for decryption are locally generated, OFB is more resistant to transmission errors than CFB.
+由于用于解密的输出块是本地生成的，OFB 比 CFB 更能抵抗传输错误。
 
-### Counter (CTR)
+### Counter (CTR 计算器)
 
-CTR applies the encryption algorithm to a set of unique input blocks (counters) in order to produce outputs which are XORed with the plaintext to produce ciphertext.
+CTR 将加密算法应用于一组独特的输入块（计数器），以产生输出，这些输出与明文进行 XOR(异或)以产生密码文本。
 
-CTR encrypts the first counter with the encryption algorithm, then XORs the resulting output with the first plaintext block to produce the first ciphertext block. CTR repeats this for each block (with a new counter – counters must be unique across all messages encrypted using a single key).
+CTR 用加密算法对第一个计数器进行加密，然后将产生的输出与第一个明文块进行 XOR，产生第一个密文块。CTR 对每个区块重复这一过程（有一个新的计数器--计数器在使用单一密钥加密的所有信息中必须是唯一的）。
 
-If the final block is a partial block of s bytes, the most significant bits, s, of the output block are used for the XOR, while the b - s bytes of the output block are discarded.
+如果最终的块是一个`s`字节的部分块(输出块的最重要的位)，`s`被用于 XOR，而输出块的`b-s`字节被丢弃。
 
 ![](https://megankaczanowski.com/content/images/2020/12/Screen-Shot-2020-12-31-at-8.23.02-PM.png)
 
 https://en.wikipedia.org/wiki/Block\_cipher\_mode\_of\_operation
 
-The decryption follows the same pattern. CTR encrypts the counter with the encryption algorithm, then XORs the output with the corresponding ciphertext block to produce the plaintext block.
+解密也遵循同样的模式。CTR 用加密算法对计数器进行加密，然后将输出与相应的密文块进行 XOR，产生明文块。
 
-If the final block is a partial block of s bytes, the most significant bits, s, of the output block are used for the XOR, while the b - s bytes of the output block are discarded.
+如果最终的块是一个`s`字节的部分块(那么输出块的最重要的比特)。s，被用于 XOR，而输出块的`b-s`字节被丢弃。
 
-CTR has been shown to be at least as secure as the other four modes, while also being able to be executed in parallel (both encryption and decryption), meaning that it is very fast.
+CTR 已被证明至少与其他四种模式一样安全，同时还能够并行执行（包括加密和解密），这意味着它非常快。
 
-Each block can be recovered independently if its counter block can be determined and the encryption can be applied to the counters in advance of receiving the plaintext or ciphertext (if memory is no constraint).
+如果可以确定每个区块的计数器区块，并且可以在收到明文或密文之前对计数器进行加密（如果内存不受限制），那么每个区块都可以独立恢复。
 
-Further Reading: [NIST Recommendation for Block Cipher Modes of Operation](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf)
+更多请阅读: [NIST Recommendation for Block Cipher Modes of Operation](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf)
 
-## How do Attackers Attempt to Break Ciphers?
+## 攻击者如何试图破解加密?
 
-There are a number of techniques attackers use, but they broadly fall into the following categories of attack, based on information required to carry it out.
+攻击者使用的技术有很多，但根据实施攻击所需的信息，它们大致可分为以下几类。
 
-This isn't an exhaustive list (there are other attacks such side channel attacks), but many of the most common fall into one of these categories.
+这并不是一个详尽的清单（还有其他攻击，如侧信道攻击），但许多最常见的攻击都属于这些类别之一。
 
-### Known Ciphertext Attack
+### 已知密文攻击
 
-An attacker has some ciphertext, but does not know what plaintext was used to generate this ciphertext. The attacker does not get to choose which ciphertext they have and they cannot obtain/produce more.
+攻击者拥有一些密码文本，但不知道用什么明文来生成这个密码文本。攻击者不能选择他们所拥有的密码文本，他们也不能获得/产生更多的密码文本。
 
-This is the easiest type of attack to try, since it's easiest to eavesdrop on an encrypted conversation (since presumably the people having the conversation are using strong encryption and aren't as worried about eavesdroppers). But it's the hardest to be successful, as long as the people sending messages used appropriately strong encryption.
+这是最容易尝试的攻击类型，因为窃听加密对话是最容易的（因为假定进行对话的人使用强大的加密技术，并不担心窃听者）。但这是最难成功的，只要发送信息的人使用适当的强加密。
 
-_For example: David finds an encrypted message (ciphertext) in a [dead drop](https://en.wikipedia.org/wiki/Dead_drop#:~:text=A%20dead%20drop%20or%20dead,individuals%20can%20maintain%20operational%20security.), but has no idea what the message means._
+_例如: David 发现一个加密信息 (密文) 在[死角](https://en.wikipedia.org/wiki/Dead_drop#:~:text=A%20dead%20drop%20or%20dead,individuals%20can%20maintain%20operational%20security.)，但不知道这条消息是什么意思。_
 
-### Known Plaintext Attack
+### 已知明文攻击
 
-An attacker has some plaintext and ciphertext pairs which they didn't choose (so the attacker didn't choose the message that was encrypted, but was able to successfully steal a plaintext message and its associated ciphertext). The attacker cannot obtain/produce more pairs.
+攻击者拥有一些他们没有选择的明文和密文对（所以攻击者没有选择被加密的信息，但能够成功窃取明文信息和其相关的密文）。攻击者不能获得/产生更多的相关信息。
 
-_For example: David finds an enemy spy's hiding place and interrupts him while he is sending an encrypted message. The spy is silly enough to have fled, leaving both the plaintext message and its associated ciphertext written down._
+_例如，大卫发现了一个敌方间谍的藏身之处，并在间谍发送加密信息时打断了他。这个间谍傻乎乎地逃走了，留下了明文信息和其相关的密码文本的记录。_
 
-### Chosen Plaintext Attack
+### 选定明文攻击
 
-An attacker can choose any plaintext and obtain the ciphertext in return (but they can't see the key itself).
+攻击者可以选择任何明文并获得密文(但他们不能看到密钥本身)。
 
-This is further broken down into batch chosen plaintext (where the attacker can submit a set of plaintexts and receive the ciphertext, but cannot do so again) and adaptive chosen-plaintext (where the attacker can submit plaintext, receive the ciphertext and submit additional plaintext based on the previous ciphertext.)
+这进一步细分为批量选择的明文（攻击者可以提交一组明文并收到密文，但不能再次这样做）和调整选择的明文（攻击者可以提交明文，并根据以前的密码文本提交额外的明文，获得新的密文）。
 
-_For example: One nation-state is eavesdropping on another's encrypted communication and knows they use the same key for all of their encryption. They send a sensitive diplomatic communication to the other nation-state, knowing it will be transmitted via the encrypted channel, thus giving them a chosen plaintext - ciphertext pair._
+_例如：民族国家 A 正在窃听另一个民族国家 B 的加密通信，并且知道 A 和 B 所有的加密都使用同一个密钥。A 和 B 向另一个民族国家 C 发送了一份敏感的外交通讯，知道它将通过加密通道传输，从而给他们提供了一个选定的明文--密文对。_
 
-### Chosen Ciphertext Attack
+### 选定密文攻击
 
-This is the opposite of the last attack, where the attacker can choose any ciphertext and obtain the plaintext in return (but they can't see the key itself).
+这与上一种攻击相反，攻击者可以选择任何密码文本并获得明文作为回报（但他们不能看到密钥本身）。
 
-_For example:  David knows an enemy spy is going to send an encrypted message tomorrow, so he replaces the text with his own chosen ciphertext, then spies on the recipient, listening as they read out the plaintext of the message._
+_比如说：David 知道敌方间谍明天要发送一份加密信息，所以他用自己选择的密文替换原密文，然后监视收件人，听他们读出信息的明文。 _
 
-### Sources/Further Reading:
+### 资料来源/更深入阅读
 
 -   [NIST Recommendations for Block Cipher Modes of Operation](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf)
 -   [Diffusion and Confusion](https://www.nku.edu/~christensen/diffusionandconfusion)

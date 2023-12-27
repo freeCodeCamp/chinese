@@ -1,301 +1,298 @@
-> -  原文地址：[Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
-> -  原文作者：[
-                    
-                        Amarachi Emmanuela Azubuike
-                    
-                ](https://www.freecodecamp.org/news/author/amarachukwu/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/technical-writing-for-beginners/)
+> - 原文作者：[Amarachi Emmanuela Azubuike](https://www.freecodecamp.org/news/author/amarachukwu/)
+>
+> - 译者：luojiyin
+> - 校对者：
 
 ![Technical Writing for Beginners – An A-Z Guide to Tech Blogging Basics](https://www.freecodecamp.org/news/content/images/size/w2000/2020/11/etienne-boulanger-aafOjsh-9jU-unsplash.jpg)
 
-If you love writing and technology, technical writing could be a suitable career for you. It's also something else you can do if you love tech but don’t really fancy coding all day long.
+如果你喜欢写作和技术，技术写作可能是一个适合你的职业。如果你喜欢技术，但又不喜欢整天编码，你也可以做这个工作。
 
-Technical writing might also be for you if you love learning by teaching others, contributing to open source projects and teaching others how to do so, too, or basically enjoy explaining complex concepts in simple ways through your writing.
+如果你喜欢通过教别人学习，为开源项目做贡献并教别人如何做，或者基本上喜欢通过写作以简单的方式解释复杂的概念，技术写作也可能适合你。
 
-Let's dive into the fundamentals and learn about what you should know and consider when getting started with technical writing.
+让我们深入了解基本原理，了解在开始技术写作时你应该知道和考虑什么。
 
-## Table of Contents
+## 目录
 
-In this article, we’ll be looking at:
+在这篇文章中，我们将关注:
 
--   [What Technical writing is](#what-technical-writing-is)
--   [Benefits of Technical Writing](#benefits)
--   [Necessary skills to have as a Technical Writer](#some-necessary-skills)
--   [The Technical Writing Process](#the-technical-writing-process)
--   [Platforms for publishing your articles](#platforms-for-publishing-your-articles)
--   [Technical Writing Courses](#technical-writing-courses)
--   [Technical Writing forums and communities](#technical-writing-forums-and-communities)
--   [Some amazing technical writers to follow](#Some-amazing-technical-writers-to-follow)
--   [Final Words and references](#final-words)
+- [技术写作是什么](#what-is-technical-writing)
+- [技术写作的益处](#benefits-of-technical-writing)
+- [作为一个技术作家所必须具备的技能](#some-necessary-skills)
+- [技术写作流程](#the-technical-writing-process)
+- [发布文章的平台](#where-to-publish-your-articles)
+- [技术写作课](#technical-writing-courses)
+- [技术写作论坛和社区](#technical-writing-forums-and-communities)
+- [一些值得关注的技术作家](#some-amazing-technical-writers-to-follow)
+- [结束语和参考资料](#final-words)
 
 ## What is Technical Writing?
 
-Technical writing is the art of providing detail-oriented instruction to help users understand a specific skill or product.
+技术写作是一门提供以细节为导向的指导的艺术，以帮助用户了解特定的技能或产品。
 
-And a technical writer is someone who writes these instructions, otherwise known as technical documentation or tutorials. This could include user manuals, online support articles, or internal docs for coders/API developers.
+而技术作家就是写这些说明的人，也就是所谓的技术文档或教程。这可能包括用户手册、在线支持文章或编码员/API 开发人员的内部文档。
 
-A technical writer communicates in a way that presents technical information so that the reader can use that information for an intended purpose.
+技术作家的沟通方式是介绍技术信息，使读者能够理解这些信息。
 
 ## Benefits of Technical Writing
 
-Technical writers are lifelong learners. Since the job involves communicating complex concepts in simple and straightforward terms, you must be well-versed in the field you're writing about. Or be willing to learn about it.
+技术作家是终身学习者。由于这项工作涉及以简单明了的方式传达复杂的概念，你必须精通你所写的领域。或者愿意学习相关知识。
 
-This is great, because with each new technical document you research and write, you will become an expert on that subject.
+这很好，因为你每研究和编写一份新的技术文件，你就会成为该领域的专家。
 
-Technical writing also gives you a better sense of user empathy. It helps you pay more attention to what the readers or users of a product feel rather than what you think.
+技术写作也让你对用户有更好的共鸣感。它帮助你更多地关注产品的读者或用户的感受，而不是你的想法。
 
-You can also make money as a technical writer by contributing to organizations. Here are [some organizations that pay you to write for them](https://catalins.tech/websites-that-pay-you-to-write-technical-articles), like [Smashing Magazine](https://smashingmagazine.com), [AuthO](https://auth0.com/), [Twilio](https://twilio.com), and [Stack Overflow](https://stackoverflow.com).
+作为一名技术作家，你也可以通过向组织投稿来赚钱。这里有[一些付钱给你为他们写作的组织](https://catalins.tech/websites-that-pay-you-to-write-technical-articles), 像[Smashing Magazine](https://smashingmagazine.com), [AuthO](https://auth0.com/), [Twilio](https://twilio.com), 和 [Stack Overflow](https://stackoverflow.com).
 
-In addition to all this, you can contribute to Open Source communities and participate in paid open source programs like [Google Season of Docs](https://edidiongasikpo.com/how-to-crack-the-google-season-of-docs-application-process-for-2020) and [Outreachy](https://outreachy.org).
+除了这些，你还可以为开源社区做出贡献，并参与付费的开源项目， 像[Google Season of Docs](https://edidiongasikpo.com/how-to-crack-the-google-season-of-docs-application-process-for-2020) 和[Outreachy](https://outreachy.org).
 
-You can also take up technical writing as a full time profession – lots of companies need someone with those skills.
+你也可以把技术写作作为一个全职职业--很多公司都需要具备这些技能的人。
 
 ## Necessary Skills to Have as a Technical Writer
 
-### Understand the use of proper English
+### 理解英语的正确使用
 
-Before you consider writing, it is necessary to have a good grasp of English, its tenses, spellings and basic grammar. Your readers don't want to read an article riddled with incorrect grammar and poor word choices.
+在你考虑写作之前，有必要对英语、其时态、拼写和基本语法有良好的掌握。你的读者不希望读到一篇充斥着不正确的语法和糟糕的选词的文章。
 
-### Know how to explain things clearly and simply
+### 知道如何清楚和简单地解释事情
 
-Knowing how to implement a feature doesn't necessarily mean you can clearly communicate the process to others.
+知道如何实现一个功能，并不一定意味着你能清楚地把这个过程传达给别人。
 
-In order to be a good teacher, you have to be empathetic, with the ability to teach or describe terms in ways suitable for your intended audience.
+为了成为一名好老师，你必须有同情心，有能力以适合你的目标受众的方式教授或解释术语。
 
-> If you can't explain it to a six year old, you don't understand it yourself. Albert Einstein
+> 如果你不能向一个六岁的孩子解释，那么你自己也不了解它。--阿尔伯特-爱因斯坦
 
-### Possess some writing skills‌‌
+### 具备一定的写作能力
 
-I believe that writers are made, not born. And you can only learn how to write by actually writing.
+我相信作家是后天培养的，不是天生的。你只能通过实际写作来学习如何写作。
 
-You might never know you have it in you to write until you put pen to paper. And there's only one way to know if you have some writing skills, and that's by writing.
+在您将笔放在纸上之前，您可能永远不会知道自己是否有写作能力。只有一种方法可以知道你是否有一些写作技巧，那就是写作。
 
-So I encourage you to start writing today. You can choose to start with any of the platforms I listed in [this section](#Platforms-for-publishing-your-articles) to stretch your writing muscles.
+所以我鼓励你今天开始写作。你可以选择从我在[本节](#Platforms-for-publishing-your-articles)中列出的任何平台开始，以伸展你的写作能力。
 
-And of course, it is also a **huge benefit to have some experience in a technical field.**
+当然，有一些技术领域的经验也是一个**巨大的好处**。
 
 ## The Technical Writing Process
 
-### Analyze and Understand who your Readers are
+### 分析和了解谁是你的读者
 
-The biggest factor to consider when you're writing a technical article is your intended/expected audience. It should always be at the forefront of your mind.
+当你写一篇技术文章时，需要考虑的最大因素是你的目标/预期受众。它应该始终处于你头脑的最先考虑的。
 
-A good technical writer writes based on the reader’s context. **As an example**, let's say you're writing an article targeted at beginners. It is important not to assume that they already know certain concepts.
+一个好的技术作家是根据读者的情况来写作的。**作为一个例子**，假设你正在写一篇针对初学者的文章。重要的是，不要假设他们已经知道某些概念。
 
-You can start out your article by outlining any necessary prerequisites. This will make sure that your readers have (or can acquire) the knowledge they need before diving right into your article.
+你可以在文章的开头概述任何必要的先决条件。这将确保你的读者在直接进入你的文章之前拥有（或能够获得）他们需要的知识。
 
-You can also include links to useful resources so your readers can get the information they need with just a click.
+你还可以包括有用的资源链接，这样你的读者只需点击一下就能获得他们需要的信息。
 
-In order to know for whom you are writing, you have to gather as much information as possible about who will use the document.
+为了知道你是为谁写的，你必须尽可能多地收集关于谁将使用该文件的信息。
 
-It is important to know if your audience has expertise in the field, if the topic is totally new to them, or if they fall somewhere in between.
+重要的是要知道你的听众是否有该领域的专业知识，该主题对他们来说是否完全陌生，或者他们是否介于两者之间（有一些了解）。
 
-Your readers will also have their own expectations and needs. You must determine what the reader is looking for when they begin to read the document and what they'll get out of it.
+你的读者也会有他们自己的期望和需求。你必须确定当读者开始阅读文件时，他们在寻找什么，以及他们将从文件中得到什么。
 
-To understand your reader, ask yourself the following questions before you start writing:
+为了了解你的读者，在你开始写作之前，问自己以下问题:
 
--   Who are my readers?
--   What do they need?
--   Where will they be reading?
--   When will they be reading?
--   Why will they be reading?
--   How will they be reading?
+- 谁是我的读者？
+- 他们需要什么？
+- 他们将在哪里阅读？
+- 他们何时阅读？
+- 他们为什么要阅读？
+- 他们将如何阅读？
 
-These questions also help you think about your reader's experience while reading your writing, which we'll talk about more now.
+这些问题也有助于你思考读者在阅读你的文章时的体验，我们现在会更多地讨论这个问题。
 
-### Think About User Experience
+### 思考用户体验
 
-User experience is just as important in a technical document as it is anywhere on the web.
+用户体验在技术文档中与在网络上的任何地方一样重要。
 
-Now that you know your audience and their needs, keep in mind how the document itself services their needs. It’s so easy to ignore how the reader will actually use the document.
+现在你知道了你的听众和他们的需求，请牢记文件本身是如何满足他们的需求的。否则很容易写出忽略读者如何实际使用文档。
 
-As you write, continuously step back and view the document as if you're the reader. Ask yourself: Is it accessible? How will your readers be using it? When will they be using it? Is it easy to navigate?
+在你写作的时候，不断地退后一步，把你当作读者来看待这个文档。问问自己。它是无障碍的吗？你的读者将如何使用它？他们什么时候使用它？它容易浏览吗？
 
-The goal is to write a document that is both useful to and useable by your readers.
+我们的目标是写一份对你的读者有用和可使用的文件。
 
-### Plan Your Document
+### 规划你的文档
 
 Bearing in mind who your users are, you can then conceptualize and plan out your document.
 
 This process includes a number of steps, which we'll go over now.
 
-#### Conduct thorough research about the topic
+#### 对主题进行彻底研究
 
-While planning out your document, you have to research the topic you're writing about. There are tons of resources only a Google search away for you to consume and get deeper insights from.
+在规划你的文档时，你必须研究你要写的主题。只要在谷歌上搜索，就有大量的资源供你使用，并从中获得更深的见解。
 
-Don't be tempted to lift off other people's works or articles and pass it off as your own, as this is plagiarism. Rather, use these resources as references and ideas for your work.
+不要被诱惑去抄袭别人的作品或文章，并把它当作你自己的作品，因为这是剽窃行为。相反，将这些资源作为你工作的参考和想法。
 
-Google as much as possible, get facts and figures from research journals, books or news, and gather as much information as you can about your topic. Then you can start making an outline.
+尽可能多地使用谷歌，从研究期刊、书籍或新闻中获取事实和数据，并尽可能多地收集有关你的主题的信息。然后你就可以开始制定大纲了
 
-#### Make an outline
+#### 制定大纲
 
-Outlining the content of your document before expanding on it helps you write in a more focused way. It also lets you organize your thoughts and achieving your goals for your writing.
+在扩展你的文档内容之前，先列出大纲，有助于你以更集中的方式写作。它还可以让你组织你的思想，实现你的写作目标。
 
-An outline can also help you identify what you want your readers to get out of the document. And finally, it establishes a timeline for completing your writing.
+大纲还可以帮助你确定你希望读者从文件中得到什么。最后，它为完成你的写作确立了一个时间表。
 
-#### Get relevant graphics/images
+#### 获取相关的图形/图片
 
-Having an outline is very helpful in identifying the various virtual aids (infographics, gifs, videos, tweets) you'll need to embed in different sections of your document.
+有一个大纲非常有助于确定你需要在文档的不同部分嵌入的各种虚拟辅助工具（信息图表、gif、视频、推文）。
 
-And it'll make your writing process much easier if you keep these relevant graphics handy.
+而且，如果你把这些相关的图形放在手边，会使你的写作过程更加容易。
 
-### Write in the Correct Style
+### 用正确的风格写作
 
-Finally, you can start to write! If you've completed all these steps, writing should become a lot easier. But you still need to make sure your writing style is suitable for a technical document.
+最后，你可以开始写作了! 如果你已经完成了所有这些步骤，写作应该变得容易得多。但是你仍然需要确保你的写作风格适合技术文件。
 
-The writing needs to be accessible, direct, and professional. Flowery or emotional text is not welcome in a technical document. To help you maintain this style, here are some key characteristics you should cultivate.
+写作需要易懂、直接和专业。花哨或情绪化的文字在技术文件中是不受欢迎的。为了帮助你保持这种风格，这里有一些你应该培养的关键特征。
 
-#### Use Active Voice
+#### 使用主动语态
 
-It's a good idea to use active voices in your articles, as it is easier to read and understand than the passive voice.
+在你的文章中使用主动语态是个好主意，因为它比被动语态更容易阅读和理解。
 
-Active voice means that the **subject** of the sentence is the one actively performing the **action** of the verb. Passive voice means that a **subject** is the recipient of a verb's **action**.
+主动语态意味着句子的**主语**是主动执行动词的**动作**的人。被动语态是指，**主语**是动词**动作**的接受者。
 
-Here's an example of **passive voice**: The documentation should be read six times a year by every web developer.
+下面是一个**被动语态**的例子: 这文档应该被网络开发人员每年阅读六次。
 
-And here's an example of **active voice**: Every web developer should read this documentation 6 times a year.
+这里有一个**主动语态**的例子: 每个网络开发人员都应该每年读 6 次这个文档。
 
-#### Choose Your Words Carefully
+#### 谨慎地选词
 
-Word choice is important. Make sure you use the best word for the context. Avoid overusing pronouns such as ‘it’ and ‘this’ as the reader may have difficulty identifying which nouns they refer to.
+选词很重要。确保你使用最适合上下文的词。避免过度使用代词，如 "它 "和 "这个"，因为读者可能难以识别它们指的是哪个名词。
 
-Also avoid slang and vulgar language – remember you're writing for a wider audience whose disposition and cultural inclinations could differ from yours.
+还要避免俚语和粗俗的语言--记住你是在为更多的读者写作，他们的性情和文化风俗可能与你不同。
 
-#### Avoid Excessive Jargon
+#### 避免过多的专业术语
 
-If you’re an expert in your field, it can be easy to use jargon you're familiar with without realizing that it may be confusing to other readers.
+如果你是你所在领域的专家，很容易使用你熟悉的行话，而没有意识到它可能会让其他读者感到困惑。
 
-You should also avoid using acronyms you haven't previously explained.
+你也应该避免使用你以前没有解释过的缩略语。
 
-**Here's an Example**:
+**下面是一个例子**:
 
-Less clear: **PWAs** are truly considered the future of multi-platform development. Their availability on both Android and iOS makes them the app of the future.
+不清晰: **PWAs**确实被认为是多平台开发的未来。它们在安卓和 iOS 上的可用性使它们成为未来的应用程序。
 
-Improved: **Progressive Web Applications (PWAs)** are truly the future of multi-platform development. Their availability on both Android and iOS makes **PWAs** the app of the future.
+改进版: **Progressive Web Applications (PWAs)** 是真正的多平台开发的未来。它们在 Android 和 iOS 上的可用性使**PWAs**成为未来的应用程序。
 
-#### Use Plain Language
+#### 使用通俗易懂的说法
 
-Use fewer words and write in a way so that any reader can understand the text.‌‌ Avoid big lengthy words. Always try to explain concepts and terms in the clearest way possible.
+尽量简短说明，以任何读者都能理解的方式来写。 避免使用大量冗长的字。始终尝试以最清晰的方式解释概念和术语。
 
-#### Visual Formatting
+#### 视觉上的可视化
 
-A wall of text is difficult to read. Even the clearest instructions can be lost in a document that has poor visual representation.
+大量文字是很难阅读的。即使是最清晰的指示也会在视觉效果不佳的文件中消失。
 
-They say a picture is worth a thousand words. This rings true even in technical writing.
+他们说，一张图片胜过千言万语。这在技术写作中也是正确的。
 
-But not just any image is worthy of a technical document. Technical information can be difficult to convey in text alone. A well-placed image or diagram can clarify your explanation.
+但是，并不是任何图片都值得在技术文件中使用。技术信息可能很难仅仅通过文字来传达。放置得当的图片或图表可以阐明您的解释。。
 
-People also love visuals, so it helps to insert them at the right spots. Consider the images below:
+人们也喜欢视觉效果，因此将它们插入正确的位置很有帮助。考虑下面的图片:
 
-First, here's a blog snippet without visuals:
+首先，这里有一个没有视觉效果的博客片段:
 
 ![step2-1](https://www.freecodecamp.org/news/content/images/2020/11/step2-1.PNG)
 
-Here's a snippet of same blog, but with visuals:
+以下是同一博客的一个片段，但有视觉效果:
 
 ![step1-1](https://www.freecodecamp.org/news/content/images/2020/11/step1-1.PNG)
 
-Adding images to your articles makes the content more relatable and easier to understand. In addition to images, you can also use gifs, emoji, embeds (social media, code) and code snippets where necessary.
+在你的文章中添加图片，使内容更有亲和力，更容易理解。除了图片，你还可以在必要时使用 gif、emoji、embeds（社交媒体、代码）和代码片段。
 
-Thoughtful formatting, templates, and images or diagrams will also make your text more helpful to your readers. You can check out the references below for a technical writing template from @Bolajiayodeji.
+深思熟虑的格式、模板和图像或图表也会使你的文本对读者更有帮助。你可以查看下面的参考资料，了解@Bolajiayodeji 的技术写作模板。
 
-#### Do a Careful Review
+#### 仔细审查
 
-Good writing of any type must be free from spelling and grammatical errors. These errors might seem obvious, but it's not always easy to spot them (especially in lengthy documents).
+任何类型的好文章都必须没有拼写和语法错误。这些错误可能看起来很明显，但并不总是容易发现它们（尤其是在长篇文件中）。
 
-Always double-check your spelling (you know, dot your Is and cross your Ts) before hitting 'publish'.
+在点击 "发布 "之前，一定要仔细检查你的拼写（你知道，点你的 Is 和交叉你的 Ts，从英文的角度来讲，`I`与`T`，看起来挺近似的，注意拼写错误）。
 
-There are a number of free tools like [Grammarly](https://grammarly.com/) and the [Hemingway app](http://www.hemingwayapp.com/) that you can use to check for grammar and spelling errors. You can also share a draft of your article with someone to proofread before publishing.
+有许多免费的工具，如[Grammarly](https://grammarly.com/)和[Hemingway app](http://www.hemingwayapp.com/)，你可以用它们来检查语法和拼写错误。你也可以把你的文章草稿与别人分享，以便在发表前进行校对。
 
 ## Where to Publish Your Articles
 
-Now that you've decided to take up technical writing, here are some good platforms where you can start putting up technical content for free. They can also help you build an appealing portfolio for future employers to check out.
+既然你已经决定从事技术写作，这里有一些好的平台，你可以开始免费发布技术内容。它们还可以帮助你建立一个有吸引力的作品集，供未来的雇主查看。
 
-[**Dev.to**](https://dev.to) is a community of thousands of techies where both writers and readers get to meaningfully engage and share ideas and resources.
+[**Dev.to**](https://dev.to)是一个由成千上万的技术人员组成的社区，作者和读者都可以有意义地参与并分享想法和资源。
 
 ![devto](https://www.freecodecamp.org/news/content/images/2020/11/devto.PNG)
 
-[**Hashnode**](https://hashnode.com) is my go-to blogging platform with awesome perks such as custom domain mapping and an interactive community. Setting up a blog on this platform is also easy and fast.
+[**Hashnode**](https://hashnode.com)是我的首选博客平台，它有令人羡慕的福利，如自定义域名映射和互动社区。在这个平台上建立一个博客也很容易和快速。
 
 ![hashnode](https://www.freecodecamp.org/news/content/images/2020/11/hashnode.PNG)
 
-**[freeCodeCamp](https://freecodecamp.org)** has a very large community and audience reach and is a great place to publish your articles. However, you'll need to apply to write for their publication with some previous writing samples.
+**[freeCodeCamp](https://freecodecamp.org)** 有一个非常大的社区和受众范围，是一个发表文章的好地方。然而，你需要申请为他们的出版物写作，并提供一些以前的写作样本。
 
-Your application could either be accepted or rejected, but don't be discouraged. You can always reapply later as you get better, and who knows? You could get accepted.
+你的申请可能被接受或拒绝，但不要灰心。你总是可以在以后变得更好时重新申请，谁知道呢？你可能会被接受。
 
-If you do write for them, they'll review and edit your articles before publishing, to make sure you publish the most polished article possible. They'll also share your articles on their social media platforms to help more people read them.
+如果你真的为他们写作，他们会在发表前审查和编辑你的文章，以确保你发表最精炼的文章。他们还将在其社交媒体平台上分享你的文章，以帮助更多的人阅读它们。
 
 ![freecodecamp](https://www.freecodecamp.org/news/content/images/2020/11/freecodecamp.PNG)
 
-**[Hackernoon](https://hackernoon.com)** has over 7,000 writers and could be a great platform for you to start publishing your articles to the over 200,000 daily readers in the community.
+**[Hackernoon](https://hackernoon.com)** 有超过 7000 名作家，可能是一个伟大的平台，让你开始向社区中每天超过 20 万的读者发布你的文章。
 
-Hacker Noon supports writers by proofreading their articles before publishing them on the platform, helping them avoid common mistakes.
+Hacker Noon 为作家提供帮助，在他们的文章在平台上发布之前进行校对，帮助他们避免常见错误。
 
 ![hackernoon](https://www.freecodecamp.org/news/content/images/2020/11/hackernoon.PNG)
 
 ## Technical Writing Courses
 
-Just like in every other field, there are various processes, rules, best practices, and so on in Technical Writing.
+就像其他领域一样，技术写作也有各种流程、规则、最佳实践等等
 
-Taking a course on technical writing will help guide you through every thing you need to learn and can also give you a major confidence boost to kick start your writing journey.
+参加技术写作课程将有助于指导你完成你需要学习的每一件事，也可以给你一个重大的信心提升，以启动你的写作之旅。
 
-Here are some technical writing courses you can check out:
+以下是一些技术写作课程，你可以去看看:
 
--   [Google Technical Writing Course](https://developers.google.com/tech-writing) (Free)
--   [Udemy Technical Writing Course](https://www.udemy.com/topic/technical-writing/) (Paid)
--   [Hashnode Technical Writing Bootcamp](https://hashnode.com/bootcamp/batch-2) (Free)
+- [谷歌技术写作课程](https://developers.google.com/tech-writing) (Free)
+- [Udemy 技术写作课程](https://www.udemy.com/topic/technical-writing/) (Paid)
+- [Hashnode 技术写作训练营](https://hashnode.com/bootcamp/batch-2) (Free)
 
 ## Technical Writing Forums and Communities
 
-> Alone we can do so little, together, we can do so much ~ Helen Keller
+> 独自一人，我们能做的太少，一起努力，我们能做的太多。--海伦 凯勒
 
-Being part of a community or forum along with people who share same passion as you is beneficial. You can get feedback, corrections, tips and even learn some style tips from other writers in the community.
+成为社区或论坛的一部分，与那些与你有同样激情的人在一起是有益的。你可以从社区中的其他作家那里得到反馈、纠正、提示，甚至学习一些写作风格提示。
 
-Here are some communities and forums for you to join:
+这里有一些社区和论坛供你加入:
 
--   [Hashnode](https://hashnode.com)
--   [Dev.to](https://dev.to)
--   [Technical Writing World](http://technicalwritingworld.com/forum)
--   [Technical Writer Forum](https://www.linkedin.com/groups/112571/profile)
--   [Write the Docs Forum](http://forum.writethedocs.org/)
+- [Hashnode](https://hashnode.com)
+- [Dev.to](https://dev.to)
+- [Technical Writing World](http://technicalwritingworld.com/forum)
+- [Technical Writer Forum](https://www.linkedin.com/groups/112571/profile)
+- [Write the Docs Forum](http://forum.writethedocs.org/)
 
 ## Some Amazing Technical Writers to follow
 
-In my technical writing journey, I've come and followed some great technical writers whose writing journey, consistency, and style inspire me.
+在我的技术写作历程中，我来到了一些伟大的技术作家身边，他们的写作历程、一致性和风格给我带来了灵感。
 
-These are the writers whom I look up to and consider virtual mentors on technical writing. Sometimes, they drop technical writing tips that I find helpful and have learned a lot from.
+这些作家是我仰望的对象，被我视为技术写作的虚拟导师。有时，他们传授的技术写作技巧让我觉得很有帮助，并从中学到了很多。
 
-Here are some of those writers (hyperlinked with their twitter handles):
+以下是这些作家中的一些人(他们的 twitter 账号):
 
--   [Quincy Larson](https://twitter.com/ossia)
--   [Edidiong Asikpo](https://twitter.com/didicodes)
--   [Catalin Pit](https://twitter.com/catalinmpit)
--   [Victoria Lo](https://twitter.com/lo_victoria2666)
--   [Bolaji Ayodeji](https://twitter.com/iambolajiayo)
--   [Amruta Ranade](https://twitter.com/amrutaranade)
--   [Chris Bongers](https://twitter.com/dailydevtips1)
--   [Colby Fayock](https://twitter.com/colbyfayock)
+- [Quincy Larson](https://twitter.com/ossia)
+- [Edidiong Asikpo](https://twitter.com/didicodes)
+- [Catalin Pit](https://twitter.com/catalinmpit)
+- [Victoria Lo](https://twitter.com/lo_victoria2666)
+- [Bolaji Ayodeji](https://twitter.com/iambolajiayo)
+- [Amruta Ranade](https://twitter.com/amrutaranade)
+- [Chris Bongers](https://twitter.com/dailydevtips1)
+- [Colby Fayock](https://twitter.com/colbyfayock)
 
-## Final words
+## 结语
 
-You do not need a degree in technical writing to start putting out technical content. You can start writing on your personal blog and public GitHub repositories while building your portfolio and gaining practical experience.
+你不需要有技术写作的学位就可以开始发布技术内容。你可以开始在你的个人博客和公共 GitHub 项目上写作，同时建立你的作品集并获得实践经验。
 
-**Really – Just Start Writing.**
+**真的--只要开始写作。**
 
-Practice by creating new documents for existing programs or projects. There are a number of open source projects on GitHub that you can check out and add to their documentation.
+通过为现有的程序或项目创建新的文档来练习。在 GitHub 上有许多开源项目，你可以查看并添加到他们的文档中。
 
-Is there an app that you love to use, but its documentation is poorly written? Write your own and share it online for feedback. You can also quickly set up your blog on [hashnode](https://hashnode.com) and start writing.
+是否有一个你喜欢使用的应用，但其文档写得很差？写下你自己的，并在网上分享以获得反馈。你也可以在[hashnode](https://hashnode.com)上快速建立你的博客并开始写作。
 
-> _You learn to write by writing, and by reading and thinking about how writers have created their characters and invented their stories. If you are not a reader, don't even think about being a writer. - Jean M. Auel_
+> _你通过写作来学习写作，通过阅读和思考作家如何创造他们的人物和发明他们的故事。如果你不是一个读者，就别想成为一个作家。- Jean M. Auel_
 
-**Technical writers are always learning**. By diving into new subject areas and receiving external feedback, a good writer never stops honing their craft.
+**技术作家总是在学习**。通过潜心研究新的主题领域和接受外部反馈，一个好的作家永远不会停止磨练自己的技艺。
 
-Of course, good writers are also voracious readers. By reviewing highly-read or highly-used documents, your own writing will definitely improve.
+当然，好的作家也是贪婪的读者。通过回顾深入阅读或频繁使用的文档，你自己的写作肯定会提高。
 
-Can't wait to see your technical articles!
+迫不及待地想看到你的技术文章!
 
-### References
+### 参考文献
 
 [Introduction to Technical Writing](https://www.bittbox.com/advice/introduction-technical-writing)‌‌
 
@@ -305,4 +302,4 @@ Can't wait to see your technical articles!
 
 ‌‌[Technical Writing template](https://github.com/BolajiAyodeji/technical-writing-template)
 
-I hope this was helpful. If so, follow me on [Twitter](https://twitter.com/msamarachukwu) and let me know!
+我希望这是有帮助的。如果是这样，请在[Twitter](https://twitter.com/msamarachukwu)上关注我，并给我反馈!

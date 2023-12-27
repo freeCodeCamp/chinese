@@ -48,7 +48,7 @@
 
 💡 **小提示：** 创建一个私人 GitHub 仓库，以及一个 markdown 文件。当你遇到新事物时，在这个文件中添加注释（如果需要的话还可以加代码）。
 
-这个文件的内容将作为你今后文章的优秀资源。出于这个目的，我在维护一个名为 TIL\_2021.md 的文件（记录了我2021年学到的东西）。
+这个文件的内容将作为你今后文章的优秀资源。出于这个目的，我在维护一个名为 TIL\_2021.md 的文件（记录了我 2021 年学到的东西）。
 
 当决定写博客时，我打算通过分享知识来学习。如果你想深入学习一些东西，请开始教别人。写博客就是一个很棒的方式。
 
@@ -270,5 +270,5 @@ SERP 生成器
 -   [如何毫不费力地找到博客内容创意？](https://blog.greenroots.info/how-to-find-blog-content-ideas-effortlessly-ckghrjv5200o7rhs1ewn40102)
 -   [从哪里开始？给新手的一些实用技巧](https://blog.greenroots.info/where-to-begin-some-practical-tips-from-a-beginner-ckcu5llil00ncw8s11dr1fh2w)
 -   [作为开发者，你为什么需要做业余项目？](https://blog.greenroots.info/why-do-you-need-to-do-side-projects-as-a-developer-ckhn5m5km05teajs1fvjd7u5f)
--   [你可能觉得有用的16个业余项目的 GitHub 仓库](https://blog.greenroots.info/16-side-project-github-repositories-you-may-find-useful-ckk50hic406quhls1dui2d6sd)
+-   [你可能觉得有用的 16 个业余项目的 GitHub 仓库](https://blog.greenroots.info/16-side-project-github-repositories-you-may-find-useful-ckk50hic406quhls1dui2d6sd)
 -   [作为一个软件开发者，如何每天学点新东西](/news/learn-something-new-every-day-as-a-software-developer/)

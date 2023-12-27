@@ -15,9 +15,9 @@
 
 1991 年 8 月 6 日，第一个网站上线。 该站点由 Tim Berners \- Lee 创建，网站详细介绍了万维网（W3）项目。 它最初是在欧洲核研究组织 CERN 的 NeXT 计算机上运行的。
 
-尽管今天原始站点已经离线，但 CERN 于 2013 年 [启动了一个项目](https://first-website.web.cern.ch/first-website/)，以 “保留与 web 的诞生相关的一些数字资产” 。从最初的计算机名称、IP地址到第一个网站的 URL，所有内容均已恢复到可用状态。
+尽管今天原始站点已经离线，但 CERN 于 2013 年 [启动了一个项目](https://first-website.web.cern.ch/first-website/)，以 “保留与 web 的诞生相关的一些数字资产” 。从最初的计算机名称、IP 地址到第一个网站的 URL，所有内容均已恢复到可用状态。
 
-虽然该网站的原始 1991 年的版本丢失了，但是恢复了1992 年的版本。如果感兴趣，可以访问 [http://info.cern.ch/hypertext/WWW/TheProject.html](http://info.cern.ch/hypertext/WWW/TheProject.html)。
+虽然该网站的原始 1991 年的版本丢失了，但是恢复了 1992 年的版本。如果感兴趣，可以访问 [http://info.cern.ch/hypertext/WWW/TheProject.html](http://info.cern.ch/hypertext/WWW/TheProject.html)。
 
 ## 早期的 web 设计
 
@@ -87,7 +87,7 @@ Adams 的分辨率相关的布局例子 ([地址](https://www.themaninblue.com/e
 
 一种巧妙方法是创建一个仅适用于移动设备的网站版本，并使其在子域名中访问。
 
-移动子域名网站（有时称为 m\-dots 或 m子域名）就是 - 托管在网站子域名中的的移动特定版本，通常是 `m` 子域名。
+移动子域名网站（有时称为 m-dots 或 m 子域名）就是 - 托管在网站子域名中的的移动特定版本，通常是 `m` 子域名。
 
 例如，Facebook 的桌面版本是 `facebook.com`，或更具体地说，位于 `www` 子域名 `www.facebook.com` 下：
 
@@ -95,7 +95,7 @@ Adams 的分辨率相关的布局例子 ([地址](https://www.themaninblue.com/e
 
 Facebook 的桌面版本网站
 
-而Facebook 的移动版本位于 `m.facebook.com` 下：
+而 Facebook 的移动版本位于 `m.facebook.com` 下：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/02/image-118.png)
 
@@ -234,7 +234,7 @@ Flexible images 是指图像应随其所在的 fluid grid 一起增大或缩小�
 
 ### Media queries
 
-CSS 媒体查询 2010 年就已经可用，但直到 2012 年 [W3建议](https://www.w3.org/TR/2012/REC-css3-mediaqueries-20120619/ )正式发布后才被广泛采用。
+CSS 媒体查询 2010 年就已经可用，但直到 2012 年 [W3 建议](https://www.w3.org/TR/2012/REC-css3-mediaqueries-20120619/ )正式发布后才被广泛采用。
 
 媒体查询只是一个 CSS 规则，它是根据诸如媒体类型（`screen`、`print`等）和媒体功能（`width`、 `height`等）之类的选项触发：
 
@@ -316,8 +316,8 @@ CSS 媒体查询 2010 年就已经可用，但直到 2012 年 [W3建议](https:/
 
 现在，你对响应式 Web 设计的历史有了一点了解，以及开发人员在我们今天拥有的一切之前经历的点滴。
 
-如果您想深入研究响应式网页设计，Flexbox 和其他现代技术，请在我们的 YouTube 频道（Bilibili）上查看以下为时4小时的教程：
+如果您想深入研究响应式网页设计，Flexbox 和其他现代技术，请在我们的 YouTube 频道（Bilibili）上查看以下为时 4 小时的教程：
 
-如果您想了解CSS Grid（创建复杂，灵活的布局的新方法）的方法，请查看我们的[教程](https://www.freecodecamp.org/news/search/?query=css％20grid)。
+如果您想了解 CSS Grid（创建复杂，灵活的布局的新方法）的方法，请查看我们的[教程](https://www.freecodecamp.org/news/search/?query=css％20grid)。
 
 你的响应式网页设计的经历是怎么样的？ 如果哪里不准确，在 [Twitter](https://twitter.com/kriskoishigaw) 联系我。

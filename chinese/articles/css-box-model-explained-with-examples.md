@@ -23,7 +23,7 @@ We're also going to see some practical use cases for these properties. Let's get
 
 **Topics covered**
 
-### You can watch this tutorial on YouTube as well if you like:
+### You can watch this tutorial on YouTube as well if you like
 
 # Why learn CSS Box Model?
 
@@ -384,7 +384,7 @@ This property defines how our margin, padding, and borders will be calculated. T
 -   padding-box
 -   content box
 
-### Note:
+### Note
 
 We're not gonna discus **box-sizing: padding-box,** as only Firefox supports it and it isn't used very often.
 

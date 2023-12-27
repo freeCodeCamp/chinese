@@ -1,72 +1,69 @@
-> -  原文地址：[Git Pull Force – How to Overwrite Local Changes With Git](https://www.freecodecamp.org/news/git-pull-force-how-to-overwrite-local-changes-with-git/)
-> -  原文作者：[
-                    
-                        Piotr Gaczkowski
-                    
-                ](https://www.freecodecamp.org/news/author/doomhammer/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Git Pull Force – How to Overwrite Local Changes With Git](https://www.freecodecamp.org/news/git-pull-force-how-to-overwrite-local-changes-with-git/)
+> - 原文作者：[Piotr Gaczkowski](https://www.freecodecamp.org/news/author/doomhammer/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Git Pull Force – How to Overwrite Local Changes With Git](https://cdn-media-2.freecodecamp.org/w1280/5f9c99a5740569d1a4ca20f0.jpg)
 
-When you learn to code, sooner or later you'll also learn about Version Control Systems. And while there are many competing tools in this space, one of them is the de facto standard used by almost everyone in the industry. It's so popular that there are companies that use its name in their branding. We're talking about Git, of course.
+当你学会编码时，你迟早也会了解到版本控制系统。虽然在这个领域有许多相互竞争的工具，但其中一个是事实上的标准，几乎被业内所有人使用。它是如此受欢迎，以至于有些公司在其品牌宣传中使用了它的名字。当然，我们说的是 Git。
 
-While Git is a powerful tool, its power is well-hidden. There are some essential concepts that you need to understand to become really proficient with Git. The good news is that once you learn them, you'll hardly ever run into trouble you can't escape from.
+虽然 Git 是一个强大的工具，但它的威力却隐藏得很深。要想真正熟练掌握 Git，你需要了解一些基本概念。好消息是，一旦你学会了这些，你几乎不会再遇到无法摆脱的麻烦。
 
-# The Typical Workflow
+# 典型工作流程
 
-In a typical Git workflow you'll use a local repository, a remote repository, and one or more branches. Repositories store all the information about the project, including its entire history and all the branches. A branch is basically a collection of changes leading from an empty project to the current state.
+在一个典型的 Git 工作流程中，你会用到一个本地仓库（local repository）、一个远程仓库（remote repository）和一个或多个分支（branches）。仓库存储了项目的所有信息，包括它的全部历史和所有分支。一个分支基本上是一个变化的集合，从一个空的项目到当前的状态间任何一步的变化。
 
-After cloning a repository, you work on your local copy and introduce new changes. Until you push local changes to the remote repository, all your work is available only on your machine.
+克隆（cloning）一个版本库后，你在本地副本上工作并引入新的修改。在你推送（push）本地修改到远程版本库之前，你的所有工作都只能在你的机器上进行。
 
-When you finish a task, it's time to synchronize with the remote repository. You want to pull the remote changes to keep up with the project's progress, and you want to push the local changes to share your work with others.
+当你完成一个任务时，是时候与远程版本库同步了。你可以拉（pull）远程修改以保持项目的进展，你可以推送（push）本地修改以与他人分享你的工作。
 
-# Local Changes
+# 本地修改
 
-All is well when you and the rest of your team are working on totally separate files. Whatever happens, you won't be stepping on each other's feet.
+当你和你团队的其他成员在完全独立的文件上工作时，一切都很好。无论发生什么，你们都不会踩到对方的脚。
 
-However, there are times when you and your teammates simultaneously introduce changes in the same place. And that's usually where the problems begin.
+然而，有的时候，你和你的队友同时在同一个地方引入变化。而这通常是问题开始的地方。
 
-Have you ever executed `git pull` only to see the dreaded `error: Your local changes to the following files would be overwritten by merge:`? Sooner or later, everyone runs into that problem.
+你是否曾经执行过 `git pull`，却看到可怕的`error: Your local changes to the following files would be overwritten by merge:?`。迟早有一天，每个人都会遇到这个问题。
 
-What's more confusing here is that you don't want to merge anything, just pull, right? Actually, pull is a bit more complicated than you might have thought.
+这里更令人困惑的是，你并不想合并任何东西，只是想拉取代码（pull），对吗？实际上，pull 比你想象的要复杂一些。
 
-# How Exactly does Git Pull Work?
+# Git Pull 究竟是如何工作的？
 
-Pull is not a single operation. It consists of fetching data from the remote server and then merging the changes with the local repository. These two operations can be performed manually if you want:
+拉动不是一个单一的操作。它包括从远程服务器获取数据（fetch），然后将变化与本地版本库合并（merging）。如果你想的话，这两个操作可以手动执行:
 
 ```bash
 git fetch
 git merge origin/$CURRENT_BRANCH
 ```
 
-The `origin/$CURRENT_BRANCH` part means that:
+`origin/$CURRENT_BRANCH` 是指:
 
--   Git will merge the changes from the remote repository named `origin` (the one you cloned from)
--   that have been added to the `$CURRENT_BRANCH`
--   that are not already present in your local checked out branch
+- Git 将合并远程仓库中名为`origin`（你克隆的那个）的改动
+- 添加到`$CURRENT_BRANCH'中的变化
+- 这些将会在你的本地签出的分支中的改动
 
-Since Git only performs merges when there are no uncommitted changes, every time you run `git pull` with uncommitted changes could get you into trouble. Fortunately, there are ways to get out of trouble in one piece!
+由于 Git 只在没有未提交的修改时执行合并，所以每次运行`git pull`时，如果有未提交的修改，就会给你带来麻烦。幸运的是，有一些方法可以让你从麻烦中全身而退
 
 ![image-167](https://www.freecodecamp.org/news/content/images/2021/04/image-167.png)
 
 Photo by [Sneaky Elbow](https://unsplash.com/@sneakyelbow?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
-# Different Approaches
+# 不同的选择
 
-When you have uncommitted local changes and still want to pull a new version from the remote server, your use case typically falls into one of the following scenarios. Either:
+当你有未提交的本地修改，但仍想从远程服务器拉出一个新版本时，你的用例通常属于以下情况之一:
 
--   you don't care about the local changes and want to overwrite them,
--   you care about the changes very much and would like to apply them after the remote changes,
--   you want to download the remote modifications but not apply them yet
+- 你不关心本地的修改，想把它们覆盖掉,
+- 你非常关心这些修改，想在远程修改之后再应用它们,
+- 你想下载远程修改，但还没有应用它们
 
-Each of the approaches requires a different solution.
+每种选择都需要一个不同的解决方案。
 
-### You Don't Care About the Local Changes
+### 你不关心本地的修改
 
-In this case, you just want to drop all the uncommitted local changes. Perhaps you modified a file to experiment, but you no longer need the modification. All you care about is being up to date with the upstream.
+在这种情况下，你只是想放弃所有未提交的本地修改。也许你修改了一个文件来做实验，但你不再需要这个修改。你所关心的是与上游保持同步。
 
-This means that you add one more step between fetching the remote changes and merging them. This step will reset the branch to its unmodified state, thus allowing `git merge` to work.
+这意味着你在获取远程修改和合并它们之间又增加了一个步骤。这一步将重置分支到未修改的状态，从而使`git merge`发挥作用。
 
 ```bash
 git fetch
@@ -74,9 +71,9 @@ git reset --hard HEAD
 git merge origin/$CURRENT_BRANCH
 ```
 
-If you don't want to type the branch name every time you run this command, Git has a nice shortcut pointing to the upstream branch: `@{u}`. An upstream branch is the branch in the remote repository that you push to and fetch from.
+如果你不想每次运行这个命令时都输入分支名，Git 有一个很好的快捷方式，指向上游分支。`@{u}`。上游分支是指你推送和获取的远程仓库中的分支。
 
-This is how the above commands would look like with the shortcut:
+这就是上述命令的简写方式:
 
 ```bash
 git fetch
@@ -84,17 +81,17 @@ git reset --hard HEAD
 git merge '@{u}'
 ```
 
-We are quoting the shortcut in the example to prevent the shell from interpreting it.
+我们在例子中的`git merge` 中使用引号，是防止 shell 进行转义。
 
-### You Very Much Care About the Local Changes
+### 你非常关心这些修改
 
-When your uncommitted changes are significant to you, there are two options. You can commit them and then perform `git pull`, or you can stash them.
+当你的未提交的修改对你很重要时，有两个选择。你可以提交它们，然后执行`git pull`，或者你可以把它们暂存（stash）起来。
 
-Stashing means putting the changes away for a moment to bring them back later. To be more precise, `git stash` creates a commit that is not visible on your current branch, but is still accessible by Git.
+暂存（stash）是指把这些修改暂时放在一边，以后再拿回来。更准确地说，`git stash`会创建一个在当前分支上不可见的提交，但仍然可以被 Git 访问。
 
-To bring back the changes saved in the last stash, you use the `git stash pop` command. After successfully applying the stashed changes, this command also removes the stash commit as it is no longer needed.
+要把上次暂存的修改带回来，你可以使用`git stash pop`命令。在成功应用暂存的修改后，这个命令也会删除暂存的提交，因为它不再需要了。
 
-The workflow could then look like this:
+然后工作流程可以是这样的:
 
 ```bash
 git fetch
@@ -103,54 +100,54 @@ git merge '@{u}'
 git stash pop
 ```
 
-By default, the changes from the stash will become staged. If you want to unstage them, use the command `git restore --staged` (if using Git newer than 2.25.0).
+默认情况下，修改会成为暂存。。如果你想解除缓存，请使用`git restore --staged`命令（需要使用比 2.25.0 更新的 Git）。
 
-### You Just Want to Download the Remote Changes
+### 你只是想下载远程更改
 
-The last scenario is a little different from the previous ones. Let's say that you are in the middle of a very messy refactoring. Neither losing the changes nor stashing them is an option. Yet, you still want to have the remote changes available to run `git diff` against them.
+最后一种情况与之前的情况有些不同。比方说，你正处于一个非常混乱的重构过程中。丢失修改和暂存修改都不是一种选择。然而，你仍然想获得远程修改，以便对它们运行`git diff`。
 
-As you have probably figured out, downloading the remote changes does not require `git pull` at all! `git fetch` is just enough.
+你可能已经发现，下载远程修改根本不需要`git pull'！`git fetch'是一个很好的方法。`git fetch`就足够了。
 
-One thing to note is that by default, `git fetch` will only bring you changes from the current branch. To get all the changes from all the branches, use `git fetch --all`. And if you'd like to clean up some of the branches that no longer exist in the remote repository, `git fetch --all --prune` will do the cleaning up!
+有一点需要注意的是，默认情况下，`git fetch`只会给你带来当前分支的变化。要想获得所有分支的所有变化，请使用`git fetch --all`。如果你想清理一些不再存在于远程仓库中的分支，`git fetch --all --prune`将完成清理工作。
 
 ![image-166](https://www.freecodecamp.org/news/content/images/2021/04/image-166.png)
 
 Photo by [Lenin Estrada](https://unsplash.com/@lenin33?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit) / [Unsplash](https://unsplash.com/?utm_source=ghost&utm_medium=referral&utm_campaign=api-credit)
 
-# Some Automation
+# 提高自动化
 
-Have you heard of Git Config? It's a file where Git stores all of the user-configured settings. It resides in your home directory: either as `~/.gitconfig` or `~/.config/git/config`. You can edit it to add some custom aliases that will be understood as Git commands.
+你听说过 Git 配置吗？它是 Git 存储所有用户配置的文件。它驻留在你的主目录中：以`~/.gitconfig`或`~/.config/git/config`的形式。你可以编辑它来添加一些自定义别名，这些别名将被理解为 Git 命令。
 
-For example, to have a shortcut equivalent to `git diff --cached` (that shows the difference between the current branch and the staged files), you'd add the following section:
+例如，要有一个相当于`git diff --cached`的快捷方式（显示当前分支和暂存文件之间的差异），你要添加以下部分:
 
-```
+```bash
 [alias]
   dc = diff --cached
 ```
 
-After that, you can run `git dc` whenever you wish to review the changes. Going this way, we can set up a few aliases related to the previous use cases.
+之后，你可以在任何时候运行`git dc`来审查这些变化。这样一来，我们可以设置一些与之前用例相关的别名。
 
-```
+```bash
 [alias]
   pull_force = !"git fetch --all; git reset --hard HEAD; git merge @{u}"
   pf = pull_force
   pull_stash = !"git fetch --all; git stash; git merge @{u}; git stash pop"
 ```
 
-This way, running `git pull_force` will overwrite the local changes, while `git pull_stash` will preserve them.
+这样，运行`git pull_force`会覆盖本地修改，而`git pull_stash`会保留它们。
 
-# The Other Git Pull Force
+# git 强制拉取（Pull Force）
 
-Curious minds may have already discovered that there is such a thing as `git pull --force`. However, this is a very different beast to what's presented in this article.
+好奇的人可能已经发现有 "git pull --force "这样一个东西。然而，这与本文所介绍的是一个非常不同的野兽。
 
-It may sound like something that would help us overwrite local changes. Instead, it lets us fetch the changes from one remote branch to a different local branch. `git pull --force` only modifies the behavior of the fetching part. It is therefore equivalent to `git fetch --force`.
+它可能听起来像是帮助我们覆盖本地修改的东西。相反，它可以让我们从一个远程分支获取变化到另一个本地分支。`git pull --force`只修改了获取部分的行为。因此它等同于`git fetch --force`。
 
-Like `git push`, `git fetch` allows us to specify which local and remote branch do we want to operate on. `git fetch origin/feature-1:my-feature` will mean that the changes in the `feature-1` branch from the remote repository will end up visible on the local branch `my-feature`. When such an operation modifies the existing history, it is not permitted by Git without an explicit `--force` parameter.
+和`git push`一样，`git fetch`允许我们指定我们要操作的本地和远程分支。`git fetch origin/feature-1:my-feature`将意味着远程仓库的`feature-1`分支的修改最终将在本地分支`my-feature`上可见。当这样的操作修改现有历史时，如果没有明确的`--force`参数，Git 是不允许的。
 
-Just like `git push --force` allows overwriting remote branches, `git fetch --force` (or `git pull --force`) allows overwriting local branches. It is always used with source and destination branches mentioned as parameters. An alternative approach to overwriting local changes using `git --pull force` could be `git pull --force "@{u}:HEAD"`.
+就像`git push --force`允许覆盖远程分支一样，`git fetch --force`（或`git pull --force`）允许覆盖本地分支。它总是与作为参数提及的源和目标分支一起使用。使用`git --pull force`覆盖本地修改的另一种方法是`git pull --force "@{u}:HEAD"`。
 
-# Conclusion
+# 结语
 
-The world of Git is vast. This article covered only one of the facets of repository maintenance: incorporating remote changes into a local repository. Even this everyday scenario required us to look slightly more in-depth into this version control tool's internal mechanisms.
+Git 的世界是广阔的。本文只涵盖了仓库维护的其中一个方面：将远程修改纳入本地仓库。即使是这种日常场景，也需要我们对这个版本控制工具的内部机制进行更深入的研究。
 
-Learning actual use cases helps you better understand how Git works under the hood. This, in turn, will make you feel empowered whenever you get yourself into trouble. We all do that from time to time.
+学习实际的用例可以帮助你更好地理解 Git 在内部的工作原理。这反过来又会让你在遇到麻烦时，不断这样做，让你更有底气。

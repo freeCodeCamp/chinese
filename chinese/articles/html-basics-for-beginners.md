@@ -5,9 +5,9 @@
 
 ![十五分钟零基础HTML入门](https://www.freecodecamp.org/news/content/images/size/w2000/2021/01/Ep10_html.png)
 
-如果你想建立一个网站，你需要学的第一个编程语言就是HTML。
+如果你想建立一个网站，你需要学的第一个编程语言就是 HTML。
 
-这篇文章里，我们会介绍HTML语言的基础。看完文章后，我们会只使用HTML建立一个简单的网站。
+这篇文章里，我们会介绍 HTML 语言的基础。看完文章后，我们会只使用 HTML 建立一个简单的网站。
 
 如果你想了解更多，可以看这个视频：
 
@@ -15,7 +15,7 @@
 
 ## 什么是 HTML?
 
-作为超文本标记语言的代表，HTML是一个较为简单的语言。它包含了用来搭建一个网站页面的不同元素。
+作为超文本标记语言的代表，HTML 是一个较为简单的语言。它包含了用来搭建一个网站页面的不同元素。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-11-at-1.16.17-PM.png)
 
@@ -25,7 +25,7 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-11-at-1.16.34-PM.png)
 
-HTML元素
+HTML 元素
 
 元素的开头通常是一个包含元素名称的开始标签。它被尖括号包围。开始标签代表着元素开始的地方。
 
@@ -43,7 +43,7 @@ HTML元素
 
 在上面的例子中，`<img>` 元素只包含一个没有任何内容的标签。 此元素用于在文档中插入来自 [Unsplash](https://unsplash.com/) 的图像文件。
 
-## 如何嵌套HTML元素?
+## 如何嵌套 HTML 元素?
 
 ```html
 <div class="my-list">
@@ -66,7 +66,7 @@ HTML元素
 
 ![如何嵌套HTML元素](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-12-at-10.45.05-AM.png)
 
-## 什么是HTML属性？
+## 什么是 HTML 属性？
 
 元素也有属性，这些属性包含关于不会出现在内容中的元素的额外信息。
 
@@ -93,9 +93,9 @@ But not every attribute has the same pattern. Some can exist without values, and
 
 In this example, if we want to disable the button, all we have to do is pass a `disabled` attribute without any values. This means that the presence of the attribute represents the true value, otherwise, the absence represents the false value.在这个例子中，如果我们想禁用这个按钮（button），我们所要做的就是传递一个不带任何值的 `disabled` 属性。 也就是说，这个属性的存在代表真值，不存在则代表假值。
 
-### 常见HTML元素
+### 常见 HTML 元素
 
-HTML总共有超过100个元素。 但是在 90% 的情况下，最常用的大约只有20个。 我把它们分成5种：
+HTML 总共有超过 100 个元素。 但是在 90% 的情况下，最常用的大约只有 20 个。 我把它们分成 5 种：
 
 #### 节元素
 
@@ -143,7 +143,7 @@ HTML总共有超过100个元素。 但是在 90% 的情况下，最常用的大�
 
 [developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)上可以找到所有元素。 但是对于初学者来说，只需要知道最常见的就足够了。
 
-## 块\级 vs 内联HTML元素
+## 块\级 vs 内联 HTML 元素
 
 一个元素默认是块\级元素。
 
@@ -153,7 +153,7 @@ HTML总共有超过100个元素。 但是在 90% 的情况下，最常用的大�
 
 ![](https://www.freecodecamp.org/news/content/images/2021/01/Screen-Shot-2021-01-11-at-1.17.22-PM.png)
 
-块级 vs. 内联HTML元素
+块级 vs. 内联 HTML 元素
 
 `<div>` 和`<span>`分别代表块\级元素和内联元素。 在这个例子中，`<div>` 元素占用 3 行，而 `<span>` 元素只占用 1 行。
 
@@ -161,7 +161,7 @@ HTML总共有超过100个元素。 但是在 90% 的情况下，最常用的大�
 
 如果我们回顾最常见的 HTML 元素，内联元素有：`<span>、<input>、<button>、<label>、<textarea>、<img>、<a>、<br>`。
 
-## 如何在HTML中添加注释
+## 如何在 HTML 中添加注释
 
 ```html
 <p>这是一个段落.</p>
@@ -172,9 +172,9 @@ HTML总共有超过100个元素。 但是在 90% 的情况下，最常用的大�
 
 注释的目的是在代码中间解释逻辑或仅仅是组织代码。
 
-HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器中被忽略。
+HTML 注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器中被忽略。
 
-## 如何使用HTML实体
+## 如何使用 HTML 实体
 
 如果您想显示文本：`<p> 标签定义了一个段落。`，但浏览器将 `<p>` 解释为新元素的开始标签怎么办？ 在这种情况下，我们可以像下面的一样使用 HTML 实体：
 
@@ -185,9 +185,9 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 ```
 
-## 如何在HTML中使用表情符号
+## 如何在 HTML 中使用表情符号
 
-在现代网络中，我们可以很容易地在HTML中显示表情符号，像这样：👻
+在现代网络中，我们可以很容易地在 HTML 中显示表情符号，像这样：👻
 
 ```html
 <p>😀 咧嘴笑.</p>
@@ -196,7 +196,7 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 ```
 
-## HTML中初学者常见错误
+## HTML 中初学者常见错误
 
 ### 1\. 标签/元素名称
 
@@ -226,13 +226,13 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 ```
 
-单双引号不可以混用。你应该始终使用双引号。如果需要的话，使用HTML实体。
+单双引号不可以混用。你应该始终使用双引号。如果需要的话，使用 HTML 实体。
 
-## 如何用HTML搭建一个简单的网站
+## 如何用 HTML 搭建一个简单的网站
 
-单个HTML元素不足以创建一个网站。因此，让我们看看从头开始构建一个简单的网站还需要什么。
+单个 HTML 元素不足以创建一个网站。因此，让我们看看从头开始构建一个简单的网站还需要什么。
 
-### 如何创建一个HTML文件
+### 如何创建一个 HTML 文件
 
 首先，让我们打开 [Visual Studio Code](https://code.visualstudio.com/)（或你最喜欢的代码编辑器）。 在选择的文件夹中，创建一个新文件并将其命名为 index.html。
 
@@ -253,13 +253,13 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 ```
 
-这是HTML文档组成网站所需的最少代码。文件里有：
+这是 HTML 文档组成网站所需的最少代码。文件里有：
 
-1. `<!DOCTYPE html>`：首先我们有 Doctype。出于一些奇怪的历史原因，我们必须在HTML中包含文档类型。
+1. `<!DOCTYPE html>`：首先我们有 Doctype。出于一些奇怪的历史原因，我们必须在 HTML 中包含文档类型。
 2. `<html lang="en"></html>`：`<html>` 元素包装了页面上的所有内容，也称为根元素。我们应该始终包含 `lang` 属性来声明页面的语言。
 3. `<head></head>`：`<head>` 元素是用来包含所有内容的容器，但不是向用户显示的内容。
-4. `<meta charset="UTF-8" />`：第一个meta元素用于设置字符集为UTF\-8。UTF\-8包括大部分书面语言字符。
-5.`<meta name="viewport" content="width=device-width, initial-scale=1.0" />`：第二个meta元素指定浏览器视口。此设置适用于移动\优化站点。
+4. `<meta charset="UTF-8" />`：第一个 meta 元素用于设置字符集为 UTF-8。UTF-8 包括大部分书面语言字符。
+5.`<meta name="viewport" content="width=device-width, initial-scale=1.0" />`：第二个 meta 元素指定浏览器视口。此设置适用于移动\优化站点。
 6.  `<title>Document</title>`: 这是`<title>` 元素。它设置页面的标题。
 7.  `<body></body>`:`<body>` 元素包含页面上的所有内容。
 
@@ -269,7 +269,7 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 
 首先，让我们给出煎饼食谱的`<title>` 元素内容。 这会改变网页标签页上的文本。在 `<body>` 元素中，我们创建 3 个元素：`<header>`、`<main>` 和 `<footer>`，分别代表 3 个部分。
 
-#### 1\. Build the header section构建页头部分
+#### 1. Build the header section 构建页头部分
 
 在页头中，我们想要标志和导航。 因此，让我们为标志创建一个内容为`所有食谱`的`div`。
 
@@ -452,9 +452,9 @@ HTML注释被包裹在特殊标记`<!-- 和 -->`中，并且它们在浏览器�
 ```
 
 ## 总结
-仅仅使用HTML就可以构建一个简单的网站。但如果要构建一个美观实用的网站，我们需要学习CSS和JavaScript。
+仅仅使用 HTML 就可以构建一个简单的网站。但如果要构建一个美观实用的网站，我们需要学习 CSS 和 JavaScript。
 
-你可以在社交媒体或 Youtube 上关注我，并获取有关这些主题的未来更新。 同时，你可以查看 [freeCodeCamp Curriculum](https://www.freecodecamp.org/learn) 通过解决小题目来练习HTML。
+你可以在社交媒体或 Youtube 上关注我，并获取有关这些主题的未来更新。 同时，你可以查看 [freeCodeCamp Curriculum](https://www.freecodecamp.org/learn) 通过解决小题目来练习 HTML。
 
 除此之外，希望你可以继续享受编程，期待在未来的帖子中见到你👋.
 

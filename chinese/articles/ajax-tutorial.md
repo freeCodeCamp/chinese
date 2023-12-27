@@ -1,61 +1,62 @@
-> -   原文地址：[AJAX Tutorial: What AJAX Is and How to Use it 写给初学者的编程教程：ajax 是什么以及 ajax 如何使用](https://www.freecodecamp.org/news/ajax-tutorial/)
-> -   译者：
-> -   校对者：
+> - 原文地址：[AJAX Tutorial: What AJAX Is and How to Use it 写给初学者的编程教程：ajax 是什么以及 ajax 如何使用](https://www.freecodecamp.org/news/ajax-tutorial/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![AJAX Tutorial: What AJAX Is and How to Use it](https://images.unsplash.com/photo-1557234396-e1506d9a85b3?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=2000&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-## **What is AJAX**
+## **什么是 AJAX**
 
-\***\*AJAX\*\*** stands for \***\*Asynchronous JavaScript And XML\*\***. It is not a programming language. It is a technology for developing better, faster and interactive Web Applications using HTML, CSS, JavaScript and XML.
+**AJAX** 是 **Asynchronous JavaScript And XML** 的缩写。它不是一种编程语言。它是一种基于 HTML、CSS、JavaScript 和 XML，让开发更好、更快和更有互动的 Web 应用的技术。
 
-1.  HTML : Hypertext Markup Language (HTML) is used for defining the structure of a Web Application.
-2.  CSS : Cascading Style Sheet (CSS) is used to provide look and style to a Web Application.
-3.  JavaScript : JavaScript is used for making a Web Application interactive, interesting and user friendly.
-4.  XML : Extensible Markup Language (XML) is a format to store and transport data from the Web Server.
+1. HTML : 超文本标记语言（HTML）用于定义网络应用程序的结构。
+2. CSS : 层叠样式表（CSS）用于为 Web 应用程序提供外观和样式。
+3. JavaScript : JavaScript 用于使网络应用程序互动、提供趣味和提高用户友好性。
+4. XML : 可扩展标记语言（XML）是一种用于存储和传输网络服务器数据的格式。
 
-### What's the meaning of Asynchronous in AJAX
+### AJAX 中的异步是什么意思
 
-Asynchronous means that the the Web Application could send and receive data from the Web Server without refreshing the page. This background process of sending and receiving data from the server along with updating different sections of a web page defines Asynchronous property/feature of AJAX.
+异步意味着网络应用程序可以从网络服务器发送和接收数据，而无需刷新页面。这个向服务器发送数据和接收服务器数据以及更新网页不同部分的后台过程，就是 AJAX 的异步属性/功能。
 
-## How AJAX works
+## AJAX 是如何工作的
 
-AJAX makes use of a browser built-in \***\*XMLHttpRequest object\*\*** to request data from a Web Server and \***\*HTML DOM\*\*** to display or use the data.
+AJAX 利用浏览器内置的 **XMLHttpRequest 对象** 从网络服务器请求数据，并利用 **HTML DOM** 显示或使用数据。
 
-\***\*XMLHttpRequest Object\*\*** : It is an API in the form an object whose methods help in transfer of data between a web browser and a web server.
+**XMLHttpRequest 对象** : 它是一个对象形式的 API，其方法用于网络浏览器和网络服务器之间传输数据。
 
-\***\*HTML DOM\*\*** : When a web page is loaded, the browser creates a Document Object Model of the page.
+**HTML DOM** : 当一个网页被加载时，浏览器会创建一个页面的文档对象模型。
 
-\***\*Create a XMLHttpRequest Object :\*\***
+**创建一个 XMLHttpRequest 对象 :**
 
 ```javascript
 var xhttp = new XMLHttpRequest();
 ```
 
-\***\*Properties of XMLHttpRequest object :\*\***
+**XMLHttpRequest 对象的属性 :**
 
-`readystate` is a property of the XMLHttpRequest Object which holds the status of the XMLHttpRequest.
+`readystate` 是 XMLHttpRequest 对象的一个属性，它是 XMLHttpRequest 的一种状态值。
 
--   0: request not initialized
--   1: server connection established
--   2: request received
--   3: processing request
--   4: request finished and response is ready
+- 0: 请求未被初始化
+- 1: 服务器连接建立
+- 2: 收到请求
+- 3: 处理请求
+- 4: 请求完成，响应准备就绪
 
-\`\`\`onreadystatechange\`\`\` is a property of the XMLHttpRequest Object which defines a function to be called when the readyState property changes.  
-\`\`\`status\`\`\` is a property of the XMLHttpRequest Object which returns the status-number of a request
+`onreadystatechange`是 XMLHttpRequest 对象的一个属性，它定义了一个当 readyState 属性改变时要调用的函数。
 
--   200: "OK"
--   403: "Forbidden"
--   404: "Not Found"
+`status` 是 XMLHttpRequest 对象的一个属性，用于返回一个请求的状态值。
 
-\***\*XMLHttpRequest Object Methods :\*\*** To send a request to a Web Server, we use the open() and send() methods of the XMLHttpRequest object.
+- 200: "OK"
+- 403: "Forbidden"
+- 404: "Not Found"
+
+**XMLHttpRequest 对象方法：** 为了向 Web 服务器发送请求，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法。
 
 ```javascript
 xhttp.open('GET', 'content.txt', true);
 xhttp.send();
 ```
 
-\***\*Create a function changeContent() using JavaScript :\*\***
+**使用 JavaScript 创建一个函数 changeContent() :**
 
 ```javascript
 function changeContent() {
@@ -70,7 +71,7 @@ function changeContent() {
 }
 ```
 
-\***\*AJAX example to change content of a web page :\*\***
+**改变网页内容的 AJAX 实例 :**
 
 ```html
 <!DOCTYPE html>
@@ -100,4 +101,4 @@ function changeContent() {
 </html>
 ```
 
-The file `content.txt` should be present in the root directory of the Web Application.
+文件 `content.txt` 应该存在于 Web 应用程序的根目录中。

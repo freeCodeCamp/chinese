@@ -1,96 +1,96 @@
 > -  原文地址：[How to Use Git and Git Workflows – a Practical Guide](https://www.freecodecamp.org/news/practical-git-and-git-workflows/)
 > -  原文作者：[John MosesmanJohn Mosesman](https://www.freecodecamp.org/news/author/johnmosesman/)
-> -  译者：
+> -  译者：frankflx
 > -  校对者：
 
 ![How to Use Git and Git Workflows – a Practical Guide](https://images.unsplash.com/photo-1543674892-7d64d45df18b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDIxfHxwaXBlc3xlbnwwfHx8fDE2MTcyMjM0Mzc&ixlib=rb-1.2.1&q=80&w=2000)
 
-Everyone says you should learn Git—and you should—but let's be honest: Git is kind of hard.
+每个人都说你应该学习 Git——你确实应该——但是说实话：Git 有点难。
 
-Even almost ten years into my software development career, I am still learning about the underlying Git fundamentals and how to use Git more effectively.
+甚至在我近 10 年的软件开发生涯后，我还在学习 Git 的基本原理和如何更有效地使用 Git。
 
-It wasn't too long ago that I realized [I had a fundamental misunderstanding](https://twitter.com/johnmosesman/status/1306255666718310401) of a key command I'd used countless times.
+就在不久前我意识到我对一个已经使用了无数次的关键命令[存在最基本的误解](https://twitter.com/johnmosesman/status/1306255666718310401)。
 
-Like many other areas in programming, I believe the best way to learn is to just start _doing._
+就像编程的其他很多领域一样，我相信最好的学习方法就是 _实践。_
 
-Just start being productive with the tool—the fundamentals and edge cases will get sorted out over time.
+只要开始使用这个工具，就会有成效——随着时间的推移，基本原理和边缘案例最终会得到解决的。
 
-So in this tutorial that's exactly what we'll do. We'll work through a series of examples to build a from-the-ground-up understanding of how to use Git and ultimately collaborate with your teammates.
+在这个教程中，这正是我们要做的。我们会通过一些系列的实例来全面了解如何使用 Git 以及与队友协作。
 
-In doing so, we'll use simple commands and explain the underlying concepts as they're useful—but only to the extent that they aid understanding.
+在这个过程中，我们会使用简单的命令并且解释它们的基本概念，因为它们有用——但是只限于有助于理解的程度。
 
-There's definitely a lot more to Git than is presented here, but these are things you'll learn as you work with it over time.
+Git 的内容肯定比这里介绍的多得多，但这些都是你在长期使用过程中会学到东西。
 
-I also will not be using any tree diagrams (like the one below) because they only confuse me, and I've never had to think about Git in this way to be productive as a software developer.
+我也不会使用树状图（像下面这个）因为它们会把我搞糊涂，而且作为一名软件开发者，我从来不需要像这样来理解 Git。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/hero.svg)
 
 https://www.atlassian.com/git/tutorials/using-branches/git-checkout
 
-Here's what we'll cover. Don't let this list intimidate you, we'll go step by step.
+这些是我们要涉及到的内容。不要被这份清单吓到，我们会一步一步的进行。
 
--   [Installing git and setting up a GitHub account](#how-to-install-git-and-set-up-a-github-account)
--   [How to create a new repository in GitHub](#how-to-create-a-new-repository-in-github)
--   [Cloning the repository](#how-to-clone-a-git-repository)
--   [Git branches](#git-branches)
--   [How the check the status of a Git project](#how-to-check-the-status-of-a-git-project)
--   [How to make our first commit](#how-to-make-our-first-commit)
--   [How to push up our first commit to GitHub](#how-to-push-up-our-first-commit-to-github)
--   [How to add another commit in Git](#how-to-add-another-commit-in-git)
--   [How to stage changes in Git](#how-to-stage-changes-in-git)
--   [How to view the Git diff](#how-to-view-the-git-diff)
--   [How to collaborate with others in Git](#how-to-collaborate-with-others-in-git)
--   [Feature branches in Git](#feature-branches-in-git)
--   [Git workflows for collaboration](#git-workflows-for-collaboration)
--   [How to merge a branch in Git](#how-to-merge-a-branch-in-git)
--   [Pull request workflow](#pull-request-workflow)
--   [How to bring our local up to date](#how-to-bring-our-local-up-to-date)
--   [How to retrieve remote data](#how-to-retrieve-remote-data)
--   [How to fix merge conflicts in Git](#how-to-fix-merge-conflicts-in-git)
--   [Review: how to start a new feature workflow](#review-how-to-start-a-new-feature-workflow)
--   [Conclusion](#conclusion)
+-   [安装 git 并创建一个 GitHub 帐户](#如何安装 Git 并创建一个 GitHub 账号)
+-   [如何在 GitHub 上创建一个新的仓库 (repository)](#如何在 GitHub 里创建一个新的仓库 (repository))
+-   [克隆仓库](#如何克隆一个 Git 仓库)
+-   [Git 分支 (branch)](#Git 分支 (branch))
+-   [如何查看一个 Git 项目的状态](#如何查看一个 Git 项目的状态)
+-   [如何做出我们的第一个提交 (commit)](#如何做出我们的第一次提交 (commit))
+-   [如何将我们的第一个提交推送 (push) 到 GitHub](#如何将我们的第一个提交推送 (push) 到 GitHub)
+-   [如何在 Git 中添加另一个提交](#如何在 Git 中添加另一个提交)
+-   [如何在 Git 中缓存修改 (stage change)](# 如何在 Git 中缓存修改 (stage change))
+-   [如何查看 Git 差异 (diff)](#如何查看 Git 差异 (diff))
+-   [如何在 Git 中与他人协作](#如何在 Git 中与他人协作)
+-   [Git 中的功能分支 (feature branch)](#Git 中的功能分支 (feature branch))
+-   [用于协作的 Git 工作流程](#用于协作的 Git 工作流程)
+-   [如何在 Git 中合并 (merge) 分支](#如何在 Git 中合并 (merge) 一个分支)
+-   [拉取请求 (pull request) 工作流程](#拉取请求 (pull request) 工作流程)
+-   [如何使本地保持同步](#如何使我们的本地保持同步)
+-   [如何获取远端数据](#如何获取远端数据)
+-   [如何修复 Git 中的合并冲突 (merge conflict)](#如何修复 Git 中的合并冲突 (merge conflict))
+-   [回顾：如何启动一个新功能的工作流程](#回顾：如何启动一个新的功能工作流程)
+-   [总结](#总结)
 
-So with all of that said, I encourage you to follow along with the examples on your own machine—let's start!
+说了这么多，我鼓励你在自己的机器上跟着例子一起进行——让我们开始吧！
 
-## How to install Git and set up a GitHub account
+## 如何安装 Git 并创建一个 GitHub 账号
 
-First, some boring stuff we need to do to get up and running.
+首先，在开始前我们需要处理一些无聊的事情。
 
-If you already have Git installed, have made a GitHub account (or use any other provider like GitLab or Bitbucket), and you have setup an SSH key, you can skip this section.
+如果你已经安装了 Git，注册了 GitHub 账户（或者使用任何其他的服务商，像是 GitLab 或者 Bitbucket），并且已经设置了 SSH 密匙的话，可以跳过这个章节。
 
-If not, you'll first need to [install Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git).
+否则，你将首先需要 [安装 Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)。
 
-Secondly, we'll be using GitHub in this tutorial, so signup for a [GitHub account here.](https://github.com/join)
+其次，在本教程里我们会使用 GitHub，所以需要注册一个 [GitHub 帐户](https://github.com/join)。
 
-After you have a GitHub account, you'll need to create an SSH key to push your code from your local machine to GitHub (this key proves to GitHub when you push code that you are "you").
+GitHub 账户注册完成后，你将会需要创建一个 SSH 密匙以便将你的代码从本地推送到 GitHub （在推送代码时这个密匙可以向 GitHub 证明你是“你”）。
 
-It's not difficult—just [follow the steps here.](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
+这并不难——只要 [遵循这里的步骤就可以了](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)。
 
-## How to create a new repository in GitHub
+## 如何在 GitHub 里创建一个新的仓库 (repository)
 
-The next thing we'll do is create a new repository in Github.
+下一步我们会在 GitHub 里创建一个新的仓库。
 
-It's simple. Just click the "New" repository button on your home page:
+这很简单。只需要点击你的主页上的 "New" 仓库按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/Screen-Shot-2021-03-31-at-7.30.33-PM.png)
 
-Creating a new repository
+创建一个新仓库
 
-Next, choose a name for the repository and whether you want the repo to be public or private. You can optionally add a README file if you'd like, and then click "Create repository."
+接下来,为仓库选择一个名字，以及你希望仓库是公开的还是私有的。你还可以选择添加一个 README 文件，然后点击 "Create repository"。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/Screen-Shot-2021-03-31-at-7.29.07-PM.png)
 
-Configuring the new repo
+设置新仓库
 
-I've called my repository [practical-git-tutorial](https://github.com/johnmosesman/practical-git-tutorial). This repo has all of the finished steps of this tutorial already in it, so if you want to you can always use it as a reference.
+我把我的仓库命名为 [practical-git-tutorial](https://github.com/johnmosesman/practical-git-tutorial)。这个仓库里已经有了这个教程所有的完成步骤，你可以把它作为参考。
 
-## How to clone a Git repository
+## 如何克隆一个 Git 仓库
 
-To start, we'll "clone" the repo. Cloning a repo means downloading all of the project's code and metadata from the source—which in this case is GitHub.
+首先，我们将“克隆”这个仓库。克隆一个仓库意味着从源头(在这里就是指 GitHub)上下载所有项目的代码和元数据。
 
-To clone a repo, we use `git clone <URL>`.
+我们使用 `git clone <URL>` 来克隆仓库。
 
-I used the URL from the repo I just created, but you should use the URL of your own repository:
+我使用了我刚刚创建的仓库的 URL，但是你应该使用你自己仓库的 URL：
 
 ```
 $ git clone git@github.com:johnmosesman/practical-git-tutorial.git
@@ -102,50 +102,50 @@ remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
 Receiving objects: 100% (6/6), done.
 ```
 
-> **Note:** commands to be run in your terminal will be prefixed with a `$`.
+> **注意：** 在你终端运行的命令将以 `$` 作为前缀。
 
-We'll go into more detail about what `git clone` does soon, but for now just know that it downloads the project and places it in a folder in your current working directory.
+我们很快会详细介绍 `git clone` 的作用，但现在只需知道它会下载项目并将其放在你当前工作目录的一个文件夹中。
 
-Next let's change into the new directory using `cd`:
+接下来，让我们用 `cd` 切换到新的目录：
 
 ```
 $ cd practical-git-tutorial/
 /practical-git-tutorial (main)$
 ```
 
-We've changed into the folder (which is just like any other folder), and your terminal may show you something alongside the directory name: `(main)`.
+我们已经切换到了这个文件夹（和其他文件夹一样），你的终端可能会在目录名旁边显示一些东西： `(main)` 。
 
-## Git branches
+## Git 分支 (branch)
 
-This `(main)` means that we are currently on a **branch** called `main`. You can think of a Git branch as a copy of the project _at a specific point in time_ that can be changed independently of other branches.
+这个 `(main)` 意味着我们现在位于一个叫做 `main` 的 **分支** 上。你可以把一个 Git 分支看作是项目 _在某一特定时间点_ 的副本，可以独立于其他分支进行修改。
 
-For example, if we used Git to track writing a book, we might have branches that look like this:
+例如，如果我们用 Git 来跟踪一本书的写作，我们可能会有这样的分支：
 
--   `main` branch
--   `table-of-contents` branch
--   `chapter-1` branch
--   `chapter-2` branch
--   etc.
+-   `main` 分支
+-   `table-of-contents` 分支
+-   `chapter-1` 分支
+-   `chapter-2` 分支
+-   等等。
 
-The `main` branch is, well, the "main" branch—the place where we're going to combine all of the contents of the book into one finalized, finished book.
+`main` 分支是，嗯，“主”分支——我们将把书中的所有内容合并成一本最终完成的书的地方。
 
-We can create other branches to separate and track specific pieces of work.
+我们可以创建其他分支来分离和跟踪特定的工作。
 
-If I was working on Chapter 1 and you were working on Chapter 2, we could create two difference branches, `chapter-1` and `chapter-2`—effectively two different copies of the current status of the book.
+如果我在写第一章，而你在写第二章，我们可以创建两个不同的分支， `chapter-1` 和 `chapter-2` ——实际上就是这本书当前状态的两个不同副本。
 
-We could then both work on our respective chapters without stepping on each others' toes or changing the contents out from under each other—we both have our own working copy that are separate from each other.
+这样我们就可以在各自的章节上工作，而互不影响，也不会改动到对方的内容——我们都有自己的工作副本，彼此是分开的。
 
-When either of us are finished with our chapter, we can add the contents of our chapter branch back into the `main` branch. When we're both finished, the `main` branch will contain both Chapter 1 and Chapter 2.
+当我们中的任何一个人完成了自己的章节，我们就可以把我章节分支的内容加回到 `main` 分支中。当我们两个都完成后， `main` 分支就会同时包含第一章和第二章。
 
-However, there are times where you _will_ overwrite or change the same piece of content as someone else and we'll have to figure out how to settle those differences—and we'll see that soon.
+然而，有些时候，你 _会_ 覆盖或更改和别人的内容相同的内容，我们必须想办法解决这些分歧——很快就会看到。
 
-> **Note:** depending on the project [you may see a branch](https://github.com/github/renaming) named `master` instead of `main`. It doesn't have any functional difference, just type `master` vs `main` depending on what's in your project.
+> **注意：** 根据项目的不同 [你可能会看到一个分支](https://github.com/github/renaming) 被命名为 `master` 而不是 `main` 。它们没有任何功能上的区别，只需要根据你的项目中的内容输入 `master` 或 `main` 即可。
 
-## How to check the status of a Git project
+## 如何查看一个 Git 项目的状态
 
-One thing we'll do often is check the status of our project. What changes have been made and what do we want to do with them?
+我们经常会做的一件事是检查我们项目的状态。已经做了哪些改动，我们想用它们做什么？
 
-To view the status of our project we use `git status`:
+我们使用 `git status` 查看项目的状态：
 
 ```
 (main)$ git status
@@ -155,33 +155,33 @@ Your branch is up to date with 'origin/main'.
 nothing to commit, working tree clean
 ```
 
-There's a few things in the result of this command, so let's break those down.
+这个命令的结果中有一些东西，让我们把它们分解一下。
 
-The first thing `git status` tells us is we're on the `main` branch:
+`git status` 告诉我们的第一件事是我们在 `main` 分支上：
 
 ```
  On branch main
 ```
 
-The second sentence is a little more interesting:
+第二句话比较有意思：
 
 ```
 Your branch is up to date with 'origin/main'.
 ```
 
-Git is telling us that our branch is "up to date" with something called `origin/main`.
+Git 告诉我们，我们的分支是与 `origin/main` “同步”的。
 
-`origin` is a new concept known as a **remote**. A remote is a "remote source" different from your local machine.
+`origin` 是一个新的概念，被称为 **远端 (remote)**。远端是一个不同于你本地机器的“远程源”。
 
-In this project we have our local copy of the project, but we can also add remote sources that we can collaborate with. After all, that is one of the biggest benefits of Git: controlled collaboration with others.
+在这个项目中，我们有自己的本地副本，但我们也可以添加可以协作的远程源。毕竟，这是 Git 最大的好处之一：与他人的可控协作。
 
-Continuing with our book-writing example, if I write Chapter 1 on my machine and you write Chapter 2 on your machine, we could both add each other's computers as "remotes" and send and receive changes from each other.
+继续我们写书的例子，如果我在我的机器上写第一章，你在你的机器上写第二章，我们都可以把对方的电脑添加为“远端”并发送和接收对方的修改。
 
-In practice, the programming community at large has decided that it is best to have a **single source of truth** for code. One place that is always "correct" about what the current state of the codebase is. By convention, we call this place the **origin**.
+在实践中，编程社区广泛认同最好有一个代码的 **可信单一数据源（SSOT）**。一个代码库的当前状态总是“正确”的地方。按照惯例，我们称这个地方为 **源（origin）**。
 
-In this case, GitHub is our "origin."
+在这种情况下，GitHub 是我们的“源”。
 
-In fact, we can see this by running the command `git remote -v` (`-v` for "verbose"):
+事实上，我们可以通过运行 `git remote -v` (`-v` 代表 "verbose")命令看到这一点：
 
 ```
 (main)$ git remote -v
@@ -189,41 +189,41 @@ origin  git@github.com:johnmosesman/practical-git-tutorial.git (fetch)
 origin  git@github.com:johnmosesman/practical-git-tutorial.git (push)
 ```
 
-This command lists all of our remotes. From the result we can see that we have a remote named `origin`, and the Git URL of this remote points to our repo on Github.com. This remote was automatically setup for us when we ran `git clone`.
+这个命令列出我们所有的远端。从结果我们们可以看到我们有一个远端叫做 `origin` ，这个远端的 Git URL 指向我们在 Github.com 上的仓库。它是在我们运行 `git clone` 时自动设置的。
 
-So coming back to this statement in the result of `git status`:
+回到 `git status` 的结果中的这句话：
 
 `Your branch is up to date with 'origin/main'.`
 
-When we asked for the status of our project, Git told us that our local `main` branch is up to date with the `main` branch at our origin—which is GitHub.
+当我们查询项目状态时， Git 告诉我们，我们本地的 `main` 分支与源（即 GitHub ）的 `main` 分支是同步的。
 
-In fact, `git clone` automatically created a `main` branch for us locally because it saw that the origin we cloned from had a branch called `main` as its primary branch.
+事实上， `git clone` 自动为我们在本地创建了一个 `main` 分支，因为它看到我们克隆的源有一个叫 `main` 的分支作为主分支。
 
-Basically, there are no changes on our local machine different from GitHub or vice versa—our local `main` branch and the GitHub `main` branch are identical.
+基本上，我们本地机器上没有与 GitHub 不同的变化，反之亦然——我们的本地 `main` 分支和 GitHub 上的 `main` 分支是相同的。
 
-As we make changes we'll see this message change to reflect the differences in our local repository and the origin (GitHub) repository.
+随着我们进行修改，我们会看到这条信息的变化，来反映我们本地仓库和源 (GitHub) 仓库的差异。
 
-The final message from `git status` is about the state of the local project:
+`git status` 的最后一条信息是关于本地项目的状态：
 
 ```
 nothing to commit, working tree clean
 ```
 
-We'll go into more detail here as we make changes, but this message is basically saying we haven't done anything—so no changes to report.
+当我们进行修改时会在这里进行更详细的说明，但这个消息基本上是说我们没有做任何事——所以没有变化要报告。
 
-To summarize the result of `git status`:
+总结一下 `git status` 的结果：
 
--   We're on branch `main`
--   Our local `main` branch is identical to the `origin`'s (GitHub's) `main` branch
--   We haven't made any changes to the project yet
+-   我们在 `main` 分支上
+-   我们的本地 `main` 分支与 `origin` 的（ GitHub 的） `main` 分支相同
+-   我们还没有对该项目做出任何修改
 
-## How to make our first commit
+## 如何做出我们的第一次提交 (commit)
 
-Now that we understand the initial state of our project, let's make some changes and look at the result.
+现在我们了解了我们项目的初始状态，让我们做一些修改并看看结果。
 
-Continuing with our book analogy, let's make a new file called `chapter-1.txt` and insert a sentence into it.
+继续我们写书的比喻，让我们创建一个新的文件，命名为 `chapter-1.txt` 并在其中插入一个句子。
 
-(You can use the terminal commands below, or create and edit the file in any text editor you choose—it doesn't matter.)
+（你可以使用下面的终端命令 (terminal command)，或者在任何文本编辑器中创建和编辑该文件——这无关紧要。）
 
 ```
 (main)$ touch chapter-1.txt
@@ -232,11 +232,11 @@ Continuing with our book analogy, let's make a new file called `chapter-1.txt` a
 Chapter 1 - The Beginning
 ```
 
-The commands above make a new file called `chapter-1.txt` using `touch`, insert the sentence "Chapter 1 - The Beginning" using `echo` and the `>>` operator, and, to double-check our work, show the contents of the file using `cat`.
+上面的命令用 `touch` 创建了一个名为 `chapter-1.txt` 的新文件，用 `echo` 和 `>>` 操作符插入句子“第一章——开端”，并且为了检查我们的工作，用 `cat` 现实文件内容。
 
-The result is a simple text file with one sentence in it.
+结果是一个里面有一句话的简单文本文件。
 
-Let's run `git status` again and see the difference in its output:
+让我们再次运行 `git status` ，看看它的输出有什么不同：
 
 ```
 (main)$ git status
@@ -250,17 +250,17 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Here we see a different output than before. We see a section describing "Untracked files," and our new file `chapter-1.txt` is listed there.
+在这里我们看到一个与之前不同的输出结果。我们看到一个描述“未跟踪文件 (untracked file)”的部分，我们的新文件 `chapter-1.txt` 被列在那里。
 
-Before Git will start tracking changes to a file we first have to tell Git to track it—and as the bottom of the message states—we can use `git add` to do that:
+在 Git 开始跟踪 (track) 一个文件的变化之前，我们首先需要告诉 Git 去跟踪它——正如消息底部所显示的——我们可以用 `git add` 来实现：
 
 ```
 (main)$ git add chapter-1.txt
 ```
 
-(Instead of specifying the name of the file for `git add`, you can use a period (`.`) to add all of the changes in the directory.)
+（除了为 `git add` 制定文件名外，你可以使用（`.`）来添加目录中的所有修改）。
 
-Let's check the status again:
+让我们再检查一下状态：
 
 ```
 (main)$ git status
@@ -274,36 +274,36 @@ Changes to be committed:
 john:~/code/practical-git-tutorial (main)$
 ```
 
-The message has changed again. It nows says that we have some changes that are ready to be "committed."
+信息又变了。它现在说我们有一些修改，已经准备好“提交”。
 
-A **commit** in Git is a saved chunk of work, but it's a little different from the same save you would use to save a text file in a text editor.
+Git 中的 **commit** 是一个被保存的工作块，但它与你在文本编辑器中保存一个文本文件时的保存有点不同。
 
-You can think of a commit as a _completed idea or unit of work._
+你可以把提交想成是一个 _完成的想法或工作单元 (unit of work)。_
 
-For example, if we were continuing to write the contents of Chapter 1 in the book, it might look like this:
+例如，如果我们继续写书中第一章的内容，它可能看起来是这样的：
 
--   Write the title of the chapter. _\*click save in our editor\*_
--   Write the first paragraph of the chapter. _\*click save in our editor\*_
--   Write the second paragraph of the chapter. _\*click save again\*_
--   Write the final paragraph of the chapter. _\*click save again\*_
+-   写下这一章的标题。 _\*在我们的编辑器中点击保存\*_
+-   写下这一章的第一段。 _\*在我们的编辑器中点击保存\*_
+-   写下这一章的第二段。 _\*再次点击保存\*_
+-   写下这一章的最后一段。 _\*再次点击保存\*_
 
-Here, we've "saved" the document four times, but at the end of those four saves we now have the first draft of our chapter, and that draft is one "unit of work."
+在这里，这个文件我们已经“保存”了四次，但在这四次保存结束后，我们现在有了这一章的第一稿，这一稿就是一个“工作单元”。
 
-We want to save this file on our computer, but we also want to signify that this is a unit of completed work—even if it's just a draft. It's a chunk of work worth holding onto. We may want to return to it in the future, go back and edit it, or merge this draft into the current draft of the entire book.
+我们想把这个文件保存在我们的电脑上，但是我们也想表明这是一个已经完成的工作单元——即使它只是一个草稿。这是值得被保留的一大块工作。将来我们可能会想重温它、再次编辑它、或者把这个草稿合并到整本书的当前草稿中。
 
-To do this, we create a new commit to signify this milestone. Each commit gets its own unique identifier, and the order of the commits are preserved.
+为此，我们创建一个新的提交来表示这个里程碑。每个提交有自己独特的标识符，而且提交的顺序也被保留下来。
 
-To commit our changes, they must first be added to the **staging area** by using `git add`.
+要提交我们的修改，必须先用  `git add` 把它们添加到 **缓存区 (staging area)** 。
 
-(We'll talk more about the staging area soon.)
+（我们很快会讨论更多关于 **缓存区** 的问题。）
 
-Next, we need to finalize the commit by using `git commit`.
+接下来，我们需要 `git commit` 来最终完成提交。
 
-It's best practice to provide a detailed message of _what changes_ you made—and more importantly—_why_ you are committing these changes.
+最佳实践是提供一个详细的信息，说明你做了 _那些修改_ ——更重要的是——你 _为什么_ 要提交这些修改。
 
-Once the commit history becomes hundreds or thousands of commits long, it becomes near impossible to understand _why_ a change was made without a good commit message. Git will show us what files changed and what the changes were, but the _meaning of those changes_ is up to us to provide.
+一旦提交历史达到几百或几千条，如果没有一个好的提交信息 (commit message) 就几乎不可能理解 _为什么_ 会有这些修改。Git 会显示哪些文件有修改，以及这些修改是什么，但这些 _修改的意义_ 要靠我们自己提供。
 
-Let's commit the new file we made with a commit message by using the `-m` or "message" flag:
+让我们来提交我们制作的新文件并用 `-m` 或 "message" 标志来附上提交信息：
 
 ```
 (main)$ git commit -m "New chapter 1 file with chapter heading"
@@ -312,7 +312,7 @@ Let's commit the new file we made with a commit message by using the `-m` or "me
  create mode 100644 chapter-1.txt
 ```
 
-We've now committed that chunk of work, and we can see that by viewing the Git log via `git log`:
+我们现在已经提交了那块工作，可以通过 `git log` 查看 Git 日志：
 
 ```
 (main)$ git log
@@ -335,46 +335,46 @@ Date:   Wed Mar 17 08:48:10 2021 -0500
     Initial commit
 ```
 
-Looking at this log, we see that there are three commits in the project history.
+看一下这个日志，我们会发现在项目历史中有三个提交。
 
-The latest commit is the one we just made. We can see the same commit message we just used: _"New chapter 1 file..."._
+最新的提交是我们刚刚做的那个。我们可以看到刚才使用的提交信息： _"New chapter 1 file..."._
 
-There are also two previous commits: one when I initialized the project and another when I updated the `README.md` file on GitHub.
+还有两个之前的提交：一个是我初始化项目的时候，另一个是我更新 GitHub 上的 `README.md` 文件的时候。
 
-Notice that each commit has a long string of numbers and characters associated with it:
+注意每个提交都有一长串与之相关的数字和字符：
 
 ```
 commit a8f8b95f19105fe10ed144fead9cab84520181e3 (HEAD -> main)
 ```
 
-This string of characters and numbers is called the [SHA](https://en.wikipedia.org/wiki/SHA-1)—it's the unique ID generated by a hashing algorithm for this commit. Just take note of these for now—we'll come back to this soon.
+这一串数字和字符叫做 [安全散列函数（ SHA ）](https://en.wikipedia.org/wiki/SHA-1)——它是由散列算法（也叫哈希算法）为该提交生成的唯一 ID。现在只需要注意一下，我们很开就会再来讨论这个问题。
 
-We also see two other interesting things in the log after the commit SHAs:
+在提交 SHA 后面，我们还看到另外两个有趣的东西：
 
--   `(HEAD -> main)` next to our latest commit
--   And `(origin/main, origin/HEAD)` next to the commit before that one.
+-   在 `(HEAD -> main)` 旁边是我们最新的提交内容
+-   而 `(origin/main, origin/HEAD)` 则在该提交之前的提交旁边。
 
-This information tells us the _current status of our branches and remotes_ (as far as we know—but more on this later).
+这些信息告诉我们 _我们的分支和远程的当前状态_ （据我们所知——稍后我们再详细讨论）。
 
-For the latest commit, we see that the `HEAD` (aka "where we are now" in the project history) is pointing at our _local_ `main` branch—represented by `HEAD -> main`.
+关于最新的提交，我们看到 `HEAD` （也就是项目历史中的“我们现在的位置”）只想我们的 _本地_ `main` 分支——由 `HEAD -> main` 表示。
 
-This makes sense because we just made that commit, and we haven't done anything else—we're still at the point in time where we made that commit.
+这是有道理的，因为我们刚刚做了那个提交，并且我们还没有做其他事情——我还在做那个提交的时间点上。
 
-If we look at the previous commit starting with `25923`, we see `(origin/main, origin/HEAD)`. This tells us that, _on the origin (aka GitHub)_, GitHub's `HEAD` or "current place" is on our previous commit.
+如果我们看一下以 `25923` 开头的前一个提交，我们可以看到 `(origin/main, origin/HEAD)`。这告诉我们，  _在源点（即 GitHub）_ ， GitHub 的 `HEAD` 或 “当前位置”在我们之前的提交上。
 
-Basically, our local machine thinks the latest change for local `main` branch is the commit where we added Chapter 1, and our local machine also thinks that _on GitHub_ the latest change is the commit where I updated the README before I wrote this post.
+基本上，我们的本地机器认为本地 `main` 分支的最新改动是我们添加第一章的提交，而我们的本地机器认为 _GitHub 上_ 的最新改动是我们在写这篇文章之前更新 README 的提交。
 
-And this makes sense—we haven't told GitHub about the newest commit we made. GitHub still thinks that the repo is up to date with what it has seen.
+这也是合理的——我们还没有告诉 GitHub 我们最新的提交。GitHub 仍然认为这个仓库是它看到的最新的。
 
-Now let's push up our new commit to GitHub.
+现在让我们把我们的新提交推送 (push) 到 GitHub。
 
-## How to push up our first commit to GitHub
+## 如何将我们的第一个提交推送 (push) 到 GitHub
 
-We have a new commit on our local machine and we need to update our "source of truth"—the `origin` remote—aka GitHub.
+我们在本地机器上有一个新的提交，我们需要更新我们的“可信单一数据源”—— `origin` 远端——即 GitHub.
 
-We're currently on the `main` branch locally, so we need to tell GitHub to update its own `main` with the new commit that we made.
+我们目前在本地的 `main` 分支上，所以我们需要告诉 GitHub 用我们的新提交来更新它自己的 `main` 。
 
-To do that we use the `git push` command and we can specify _where we want to push_ and _what branch we want to push to_.
+我们使用 `git push` 命令做到这一点，我们可以指定 _我们要推送到哪里_ 以及 _我们要推送到哪个分支_。
 
 ```
 (main)$ git push origin main
@@ -388,18 +388,18 @@ To github.com:johnmosesman/practical-git-tutorial.git
    2592324..a8f8b95  main -> main
 ```
 
-Here we pushed to the `origin` remote (GitHub) and to the `main` branch.
+这里我们推送到 `origin` 远端（ GitHub ）的 `main` 分支。
 
-The output tells us about some file operations Git did to do that, and the last line of the output tells us which commits it pushed and to where:
+输出结果告诉我们 Git 为此所做的一些文件操作，最后一行告诉我们它推送了哪些提交，推送到了哪里。
 
 ```
 To github.com:johnmosesman/practical-git-tutorial.git
    2592324..a8f8b95  main -> main
 ```
 
-Here it shows us that we pushed our `main` branch to GitHub's `main` branch.
+这里显示我们把我们的 `main` 分支推送到了 GitHub 的 `main` 分支。
 
-If we look back at the `git log` output we'll notice that both our local and `origin` point to the same commit now:
+如果我们回头开一下 `git log` 的输出，会发现我们的本地和 `origin` 现在都指向同一个提交：
 
 ```
 (main)$ git log
@@ -410,15 +410,15 @@ Date:   Mon Mar 22 10:07:35 2021 -0500
     Added the intro line to chapter 1
 ```
 
-In short, on `origin` (GitHub) the `main` branch (also written as `origin/main`) has now placed our new commit as the latest commit in the history.
+简而言之，在 `origin` （GitHub）上 `main` 分支（也写成 `origin/main` ）现在已经将我们的新提交标记为了历史中的最新提交。
 
-If we were working with other collaborators, they could now pull down our newest change from GitHub and begin editing the Chapter 1 as well.
+如果我们和其他合作者一些工作，现在他们可以从 GitHub 上拉取 (pull) 我们的最新修改并开始编辑第一章。
 
-## How to add another commit in Git
+## 如何在 Git 中添加另一个提交
 
-Before we start collaborating with others, let's make another small change to see what happens when we edit an existing file.
+在我们和其他人合作之前，让我们再做一个小改动，看看当我们编辑一个现有文件时会发生什么。
 
-Let's add another line into our Chapter 1 file:
+让我们在第一章的文件里再添加一行：
 
 ```
 (main)$ echo "It was the best of times, it was the worst of times" >> chapter-1.txt
@@ -427,9 +427,9 @@ Chapter 1 - The Beginning
 It was the best of times, it was the worst of times
 ```
 
-Using `cat` we can see that our file now contains two lines.
+使用 `cat` 我们可以看到我们的文件现在包含两行。
 
-Let's look at the status of our Git repo again:
+让我们再看看我们的 Git 仓库的状态：
 
 ```
 (main)$ git status
@@ -444,11 +444,11 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Starting from the top, we'll notice the output says `Your branch is up to date with 'origin/main'.`
+从顶部开始，我们会注意到输出结果显示 `Your branch is up to date with 'origin/main'.`
 
-This might seem odd to you since we just changed a file, but Git is only comparing _the commits_ we've made against the commits in `origin/main`.
+这可能看起来比较奇怪，我们刚刚修改了一个文件，但是 Git 只是将我们做的 _提交_ 和 `origin/main` 中的提交进行比较。
 
-The next section of the output explains it a little more:
+输出的下一部分内容做了更多解释：
 
 ```
 Changes not staged for commit:
@@ -457,13 +457,13 @@ Changes not staged for commit:
         modified:   chapter-1.txt
 ```
 
-Here Git tells us that we have "changes not staged for commit."
+在这里 Git 告诉我们，我们有“修改未为提交缓存 (changes not staged for commit)”。
 
-Before we can commit a set of changes, we first have to **stage** them.
+在我们提交一组修改之前，我们首先需要把它们 **缓存 (stage)**。
 
-### How to stage changes in Git
+### 如何在 Git 中缓存修改 (stage change)
 
-To illustrate the usefulness of the staging area, let's first stage our changes by using `git add`:
+为了说明缓存区域 (staging area) 的作用，让我们先用  `git add` 来缓存我们的修改：
 
 ```
 (main)$ git add .
@@ -476,11 +476,11 @@ Changes to be committed:
         modified:   chapter-1.txt
 ```
 
-These changes are now ready to be committed, but before we commit them let's add another change into our `chapter-1.txt` file.
+这些修改现在可以提交了，但在提交之前，让我们在 `chapter-1.txt` 文件中再添加一个修改。
 
-I'm going to replace the contents of `chapter-1.txt` entirely with new text:
+我要把 `chapter-1.txt` 的内容完全替换成新的文本：
 
-> **Note:** I'm using `>` here instead of `>>` which will replace the contents of the file instead of appending to the file.
+> **注意：** 我在这里使用 `>` 而不是 `>>` ，这将替换文件的内容而不是追加到文件中。
 
 ```
 (main)$ echo "New file contents" > chapter-1.txt
@@ -502,25 +502,25 @@ Changes not staged for commit:
         modified:   chapter-1.txt
 ```
 
-From the output we can see that we now have _staged_ changes, and _not staged changes._
+从输出中我们可以看到我们现在有 _已缓存的修改 (staged changes)_ ，和 _未缓存的修改 (not staged changes)。_
 
-While the file itself can only contain one thing, Git keeps track of both changes for us—even though they're changes to the same lines!
+虽然文件本身只能包含一个东西，但 Git 为我们记录了这两个修改——尽管它们是对同一行的修改！
 
-However, from the output above we can't really tell what those changes were—we just know that they exist.
+然而，从上面的输出中我们无法真正知道这些修改是什么——我们只知道它们存在。
 
-To view these changes, we'll first look at the command line way (which I never use), and then a way that uses a GUI (which is 100% nicer).
+我们首先看一下使用命令行 (command line) 怎么查看这些修改（我从来不用），然后看一下使用图形用户界面 (GUI)（100%更好用）。
 
-### How to view the Git diff
+### 如何查看 Git 差异 (diff)
 
-To view the changes, we need to look at the Git **diff.**
+要查看这些修改，我们需要查看 Git **差异**。
 
-A _diff_ (short for difference) is the difference between two sets of changes. Those changes could be anything from staged changes to not-staged changes to commits.
+_差异_ 是两组修改之间的差异。这些修改可以是从已缓存的修改到未缓存的修改再到提交中的任何一个。
 
-The command line way to do this is by using `git diff`.
+使用命令行的方式查看需要用到 `git diff`。
 
-We'll look at this output in our simple case here just for completeness' sake. But, as I mentioned before, we're interested in effective Git workflows, and once you get to changes of any decent size across multiple files this command line output just becomes not effective.
+为了全面的展示，我们将在这里看一下这个简单案例的输出。但是，正如我之前提到的，我们对有效的 Git 工作流程感兴趣，一旦你要在多个文件中进行任何大规模的修改，这种命令行输出就变得无效了。
 
-But for completeness, here it is:
+但是为了全面，请看下面：
 
 ```
 (main)$ git diff
@@ -534,7 +534,7 @@ index 0450d87..4cbeaee 100644
 +New file contents
 ```
 
-My terminal attempts to colorize this output to help with readability, but the important parts to notice here is it tells us what file we're diffing, `chapter-1.txt`, and at the bottom it shows us the actual differences. Let's key in on those lines:
+我的终端试图对这个输出进行着色来帮助提高可读性，但是需要注意的地方是，它告诉我们这在比较的文件是 `chapter-1.txt` ，并且在底部显示了实际差异。让我们来看看这几行输出：
 
 ```
 -Chapter 1 - The Beginning
@@ -542,51 +542,51 @@ My terminal attempts to colorize this output to help with readability, but the i
 +New file contents
 ```
 
-The lines starting with a minus sign (`-`) are lines we deleted entirely or in part, and the lines starting with a `+` sign represent lines added entirely or in part.
+以减号（ `-` ）开始的几行是我们完全或部分删除的行，以加号（ `+` ）开头的行代表完全或部分添加的行。
 
-Now, with multiple files and many lines changed this output becomes unwieldy—fast. There is a better way, and even almost ten years into my programming career I still use a simple GUI program to help look at and manage diffs.
+随着多个文件和修改行的增加，这种输出会很快变得不方便。有一个更好的方法，在我近十年的编程生涯中，我一直使用一个简单的 GUI 程序来帮助查看和管理差异。
 
-The program I use is called [GitX](http://gitx.frim.nl/), and it's an old and outdated piece of software that's not even really being maintained anymore. However, I just use it to view and manage file diffs—so it works for me.
+我使用的程序叫做 [GitX](http://gitx.frim.nl/)，它是一个老旧过时的软件，甚至已经没有了真正的维护。然而，我只是用它来查看和管理文件差异，所以它对我有用。
 
-I wouldn't particularly recommend this one, but it is free. Although I've never used it, the [GitHub Desktop client](https://desktop.github.com/) is probably a good choice.
+我不会着重推荐这个软件，它是免费的。虽然我没有用过，但 [GitHub Desktop client](https://desktop.github.com/) 很可能是一个不错的选择。
 
-Now with that little aside out of the way, here's what the diff looks like in my tool.
+现在把这个小问题解决了，这是差异在我的工具中的样子。
 
-To start, the staged changes on the right-hand side show our original add of the second sentence:
+首先，右侧的已缓存修改显示了我们对第二句话的原始添加：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/staged_changes.png)
 
-Staged changes in GitX
+GitX 中的已缓存修改 (staged changes)
 
-In the unstaged changes on the left-hand side, we see the removal of those two lines entirely and the addition of a new line:
+在左侧的未缓存修改 (unstaged changes) 中，我们可以看到完全删除了这两行并添加了新的一行：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/unstaged_changes.png)
 
-Unstaged changes in GitX
+GitX 中的未缓存修改 (unstaged changes)
 
-This corresponds to the file replace command we ran.
+这与我们运行的文件替换命令相对应。
 
-It is so much easier to understand the diff in a GUI program. This program also allows me to quickly switch between staging and un-staging files by just dragging them around. I can even stage or un-stage individual lines in a file back and forth as well.
+在一个 GUI 程序中了解差异要容易的多。这个程序还允许我们通过拖动文件来快速缓存和取消缓存。我甚至可以缓存或取消缓存一个文件中的个别行。
 
-There's no bonus points for using the command line vs a GUI program. Use whatever gets the job done for you.
+使用命令行与 GUI 程序相比没有任何加分。使用任何能帮你完成工作的方法。
 
-Now that we've seen how the staging area and Git diffs work, let's discard our non-staged changes so we can get back to committing our first change.
+现在我们已经看到了缓存区域和 Git 差异是如何工作的，让我们放弃未缓存修改，这样我们就可以回去提交我们第一个修改。
 
-In my GUI program I can right-click the file and click "Discard changes", but I'll show the command line version here as well.
+在我的 GUI 程序中，我可以右键点击文件并点击“放弃修改”，但是我在这里也会演示命令行是怎么工作的。
 
-The output of our last `git status` actually showed us how to do this by using `git restore`. We can pass the file path or just a `.` for the whole directory:
+我们上个 `git status` 的输出实际上已经告诉我们如何通过使用 `git restore` 来做到这一点了。我们可以输入文件路径或者 `.` 来代表整个目录：
 
 ```
 (main)$ git restore .
 ```
 
-If we check the status again we're back to just our staged changes, and we can continue.
+如果我们再次查看状态，我们就回到了只有我们的已缓存修改，我们可以继续下一步。
 
-> **Note:** Git only commits changes that are staged, so we could have left those unstaged changes in our working directory and it wouldn't interfere with the committing process.  
->   
-> However, it would make our future changes more cumbersome to deal with—so it makes sense to discard those changes to keep our working directory in good shape.
+> **注意：** Git 只提交已缓存修改，所以我们可以把那些未缓存的修改留在我们的工作目录中，这样不会干扰提交过程。  
+>
+> 但是，这会使我们未来的修改处理起来更麻烦——所以放弃这些修改以保持我们的工作目录的良好状态是合理的。
 
-Now let's finally commit these changes with a message about what we did:
+现在，让我们提交这些修改，并附上关于我们所做的事情的信息：
 
 ```
 (main)$ git commit -m "Added the intro line to chapter 1"
@@ -594,7 +594,7 @@ Now let's finally commit these changes with a message about what we did:
  1 file changed, 1 insertion(+)
 ```
 
-Checking the status once again shows us that our branch is "ahead of 'origin/main' by 1 commit":
+再次检查状态，可以发现我们的分支“比 'origin/main' 领先一次提交 (Your branch is ahead of 'origin/main' by 1 commit)”：
 
 ```
 (main)$ git status
@@ -605,35 +605,35 @@ Your branch is ahead of 'origin/main' by 1 commit.
 nothing to commit, working tree clean
 ```
 
-Finally let's push up our change:
+最后让我们推送我们的修改：
 
 ```
 (main)$ git push origin main
 ```
 
-## How to collaborate with others in Git
+## 如何在 Git 中与他人协作
 
-So far we've been looking at the simplest use case: working by ourselves on one branch.
+到目前为止，我们一直在研究最简单的例子：自己单独在一个分支上工作。
 
-In reality, we'll usually be working with multiple people working on multiple different branches. This is the real power of Git after all: a system to collaborate and track changes over time amongst many collaborators.
+在现实中，我们通常会和多人在多个不同的分支上一起工作。这是 Git 的真正威力：一个可以在众多合作者之间进行协作并跟踪变化的系统。
 
-For now, let's continue working as if we're the only person on the project, but let's adjust our workflow a little bit to prepare for when that's not the case.
+现在让我们先像项目中只有一个人一样继续工作，但让我们稍微调整一下我们的工作流程，为情况发生变化时做准备。
 
-In general, it's best practice to _not_ work directly on the `main` branch.
+通常最佳实践是 _不_ 直接在 `main` 分支上工作。
 
-The `main` branch is supposed to be the "source of truth" for the project—changes to it should be carefully reviewed. Any change in `origin/main` becomes the new "source of truth" for anyone else working on the project, so we shouldn't just change it without some thought and review by others.
+`main` 分支应该是项目的“可信单一数据源”——对它的改动应该受到仔细审查。`origin/main` 中的任何改动都会成为其他在项目中工作的任何人的新的“可信数据源”，所以我们不应该在没有经过思考并通过他人审查的情况下随便改动它。
 
-Instead of working on `main` directly, let's _branch_ off of `main` into our own **feature branch**, and then **merge** those changes back into `main`.
+与其直接在 `main` 上直接工作，不如从 `main`  _分支_ 出我们自己的 **功能分支 (feature branch)**， 然后将这些修改 **合并 (merge)** 到 `main`。
 
-That's a lot of new terminology, so let's take it one step at a time.
+这里出现了很多新的术语，所以让我们一步步来。
 
-### Feature branches in Git
+### Git 中的功能分支 (feature branch)
 
-To begin, let's branch off of `main` and create our own feature branch to work on.
+首先，让我们从 `main` 分支出来，创建我们自己的功能分支。
 
-When you create a branch off of another branch, you create a copy of that branch _at that point in time._ You can now change this new branch independently of the original branch.
+当你从另一个分支上创建一个分支时，你就在 _那个时间点上_ 创建了一个该分支的副本。现在你可以独立于原始分支修改这个新分支。
 
-To try this out, let's make a new branch called `chapter-2`. To do this we use `git checkout` with the `-b` flag and the name we want the new branch to have:
+为了尝试这一点，让我们建立一个名为 `chapter-2` 的新分支。我们使用 `git checkout` 加上 `-b` 标志和我们想要的新分支的名称：
 
 ```
 (main)$ git checkout -b chapter-2
@@ -641,15 +641,15 @@ Switched to a new branch 'chapter-2'
 (chapter-2)$
 ```
 
-Notice that the terminal now shows us on the `chapter-2` branch. Changes on the `chapter-2` branch will not affect the `main` branch at all. We essentially have a new playground to make whatever changes we want to make without affecting `main`.
+现在终端显示我们在 `chapter-2` 分支上。在 `chapter-2` 分支上的修改完全不会影响 `main` 分支。我们有了一个新的游乐场，可以在不影响 `main` 的情况下做任何我们想做的修改。
 
-There are interesting things happening under the hood here, but for the purpose of this tutorial we just need to know that to "checkout" something in Git means to "change my local project to look exactly like the project looked _at some specific point in time._" You can think of a branch as a pointer to a specific timeline of the Git history.
+这里在后台有很多有趣的事情发生，但就本教程而言，我们只需要知道在 Git 中“检出 (checkout)”某个东西意味着“将我的本地项目改变成与该项目 _在某个特定时间点上的样子一模一样。_ ”你可以把一个分支看作是指向 Git 历史上某个特定时间线的指针。
 
-There's a lot more happening here, but that definition should be good enough for now.
+这里实际发生了很多事情，但现在这个定义应该是足够了。
 
-So we have a new branch, and for now that new branch is identical to `main` (we haven't made any changes yet).
+我们有了一个新的分支，现在这个新的分支和 `main` 是一样的（我们还没有做任何修改）。
 
-Next let's repeat what we've already done before and create a new file called `chapter-2.txt`, give it some content, and commit it:
+接下来，让我们重复之前已经做过的事情，创建一个名为 `chapter-2.txt` 的新文件，给它一些内容，然后提交：
 
 ```
 (chapter-2)$ touch chapter-2.txt
@@ -671,9 +671,9 @@ nothing added to commit but untracked files present (use "git add" to track)
  create mode 100644 chapter-2.txt
 ```
 
-Nothing new in there—just the same thing we did for Chapter 1.
+这里面没有什么新东西——与我们为第一章所做的事情一样。
 
-Now that we have a new commit on our `chapter-2` branch, let's look the Git log and compare this new branch to `main`:
+现在我们在 `chapter-2` 分支上有了新的提交，让我们看看 Git 日志，将这个新分支与 `main` 进行比较：
 
 ```
 (chapter-2)$ git log
@@ -697,48 +697,48 @@ Date:   Fri Mar 19 12:27:35 2021 -0500
 ...
 ```
 
-We'll notice in the log that our latest commit is shown at the top, and our `HEAD` is again different from our `origin`. This again makes sense—we've made changes locally that aren't in GitHub.
+我们会注意到在日志中，我们最新的提交显示在最上面，而且我们的 `HEAD` 又与 `origin` 不同。这也是合理的——我们是在本地做了一些修改，还不在 GitHub 上。
 
-Now we need to get our new changes into the `main` branch.
+现在我们需要把我们的新改动放到 `main` 分支中。
 
-## Git workflows for collaboration
+## 用于协作的 Git 工作流程
 
-There are a couple of ways to get our new Chapter 2 into the `main` branch and into GitHub, and the way we choose depends on the project and what workflow we're using to collaborate with others.
+有几种方法可以让我们新的第二章进入 `main` 分支和 GitHub，我们选择的方法取决于项目和我们与他人协作所使用的工作流程。
 
-First let's talk about a couple different workflows we could use.
+首先让我们来谈谈我们可以使用的几个不同的工作流程。
 
-The first one is the most straightforward:
+第一种是最直接的：
 
-1.  Merge changes from `chapter-2` into our local `main` branch
-2.  Push local `main` branch to `origin/main`
+1.  将 `chapter-2` 的修改合并到我们的本地 `main` 分支
+2.  将本地 `main` 分支推送到 `origin/main`
 
-The second way is a little more complicated:
+第二种方法更复杂一些：
 
--   Push our local `chapter-2` branch to origin (this creates a new branch on `origin` called `origin/chapter-2`)
--   Merge `origin/chapter-2` into `origin/main` on GitHub
--   Pull down the new changes from `origin/main` into our local `main`
+-   将我们的本地 `chapter-2` 分支推送到 `origin` （这会在 `origin` 上创建一个名为 `origin/chapter-2` 的新分支）
+-   将 `origin/chapter-2` 合并到 GitHub 上的 `origin/main`
+-   从 `origin/main` 拉取新的修改到我们本地的 `main`
 
-The first workflow is definitely easier, and it is something I would use if I was working on this project by myself without any other collaborators.
+第一个工作流程肯定更容易，如果我自己一个人做这个项目，没有任何其他合作者，我会用这个工作流程。
 
-However, if I had collaborators, I wouldn't want to push directly to the `main` branch from my local. By doing so I would be changing and taking control of the history of the project solely on my own changes—without any input or review from collaborators.
+然而，如果我有合作者，我不会想从我的本地直接推送到 `main` 分支。这样做的话，我就会仅凭自己的修改改变和控制了项目历史，而没有获得合作者的任何意见或审查。
 
-For this reason, if there were multiple people working on the same project, I would use the second workflow because it is a better collaboration process for the team.
+出于这个原因，如果多人在同一个项目上工作，我会使用第二种工作流程，因为这对团队来说是一个更好的协作流程。
 
-That being said, we'll go over both workflows, and let's start with the first one which is less complicated.
+既然如此，我们就来看看这两种工作流程，让我们从第一个工作流程开始，它不那么复杂。
 
-## How to merge a branch in Git
+## 如何在 Git 中合并 (merge) 一个分支
 
-When you want to combine the contents of two branches into one in Git, there are a few methods of doing so. The first and probably simplest way is to do a **merge**.
+当你在 Git 中想把两个分支的内容合并成一个时，有几种方法可以做到。第一种，也可能是最简单的方法，是做一个 **合并**
 
-A merge, like it sounds, tries to take the contents of one branch and apply (or "merge in") those changes into another branch.
+合并，就像它听起来那样，试图将一个分支的内容（修改）应用（或“合并”）到另一个分支。
 
-In our scenario, we want to take the contents of the `chapter-2` branch and _merge them into_ `main`. Said another way, we want to take the current state of `main` and add in our changes from the `chapter-2` branch.
+在我们的情境中，我们想要把 `chapter-2` 分支的内容 _合并到_ `main` 中。换句话说，我们先在 `main` 的当前状态中加入 `chapter-2` 分支的修改。
 
-We can do this by using `git merge`, and we'll look at the result of it afterwards.
+我们可以通过使用 `git merge` 来实现，之后我们会看一下它的结果。
 
-The first thing we need to do is be on the primary branch that we want to merge changes _into._ Since we want `main` to absorb the changes from `chapter-2`, we first need to be on the `main` branch.
+我需要做的第一件事是切换到我们想要把修改合并_进去_ 的主要分支上。因为我们想要 `main` 吸收 `chapter-2` 的修改，所以我们首先需要在 `main` 分支上。
 
-To switch back to the `main` branch, we can again use `git checkout` and specify the branch name of `main`. This time we don't use the `-b` flag because we want to switch to an existing branch and not create a new one:
+要切换回 `main` 分支，我们可以再次使用 `git checkout` 并指定 `main` 的分支名称。这一次我们不使用 `-b` 标志，因为我们想切换到一个现有分支，而不是创建一个新分支：
 
 ```
 (chapter-2)$ git checkout main
@@ -747,9 +747,9 @@ Your branch is up to date with 'origin/main'.
 (main)$
 ```
 
-We're now back on the `main` branch, and we get a quick status message saying we're up to date with `origin/main`.
+我们现在回到了 `main` 分支，我们得到了一个简短的信息，告诉我们已经与 `origin/main`进行了更新。
 
-Next, let's merge our `chapter-2` branch into `main`:
+接下来，让我们把 `chapter-2` 分支合并到 `main`：
 
 ```
 (main)$ git merge chapter-2
@@ -760,7 +760,7 @@ Fast-forward
  create mode 100644 chapter-2.txt
 ```
 
-Let's look at the Git log again to see the result:
+让我们再看一下 Git 日志：
 
 ```
 (main)$ git log
@@ -779,9 +779,9 @@ Date:   Mon Mar 22 10:07:35 2021 -0500
 ...
 ```
 
-We can see that our `main` branch now contains the new commit from `chapter-2`, and that our `origin` is still at the previous commit (as we haven't updated `origin` yet).
+我们可以看到我们的 `main` 分支现在包含了 `chapter-2` 的新提交，而我们的 `origin` 仍然在前一个提交（因为我们还没有更新 `origin` ）。
 
-Finally, let's push our changes up to `origin/main`:
+最后，让我们推送修改到 `origin/main`：
 
 ```
 (main)$ git push origin main
@@ -790,24 +790,24 @@ To github.com:johnmosesman/practical-git-tutorial.git
    f5b6e2f..741822a  main -> main
 ```
 
-We've successfully merge our `chapter-2` branch, and pushed that change up to GitHub!
+我们已经成功合并了 `chapter-2` 分支，并将修改推送到 GitHub 上了！
 
-As a final cleanup step, let's delete the `chapter-2` feature branch as it has already been merged into `main`:
+作为最后的清理步骤，让我们删除 `chapter-2` 功能分支，因为它已经被合并到 `main` 里了：
 
 ```
 (main)$ git branch -d chapter-2
 Deleted branch chapter-2 (was 741822a).
 ```
 
-> **Note:** the `git branch` command without a branch name argument will list all of the branches you have locally.  
->   
-> Adding the `-d` flag and a branch name deletes the branch passed in.
+> **注意：** `git branch` 命令如果没有分支名称参数，将列出你在本地的所有分支。 
+>
+> 加上 `-d` 标志和一个分支名称，就会删除传递进来的分支。
 
-## Pull request workflow
+## 拉取请求 (pull request) 工作流程
 
-To work through our collaboration workflow, let's repeat the same thing we've done with Chapter 1 & 2 on a new branch called `chapter-3`:
+为了完成我们的协作工作流程，让我们在一个名为 `chapter-3` 的新分支上重复我们对第一章和第二章所做的同样的事情：
 
-(Now would be a good time to try this on your own!)
+（现在是你自己尝试的好时机！）
 
 ```
 (main)$ git checkout -b chapter-3
@@ -817,17 +817,17 @@ To work through our collaboration workflow, let's repeat the same thing we've do
 (chapter-3)$ git commit -m "Adds Chapter 3"
 ```
 
-Now we have a new commit on a new branch called `chapter-3`.
+现在我们在一个叫做 `chapter-3` 的新分支上有一个新的提交。
 
-Let's review how we're going to get this new branch merged into `main` _without acting directly on `main` ourselves:_
+让我们回顾一下如何将这个新的分支合并到 `main` 中， _而不直接在 `main` 上操作：_
 
--   Push our local `chapter-3` branch to origin (this creates a new branch on `origin` called `origin/chapter-3`)
--   Merge `origin/chapter-3` into `origin/main` on GitHub
--   Pull down the new changes from `origin/main` into our local `main`
+-   将本地 `chapter-3` 分支推送到`origin` （这在 `origin` 上创建一个名为 `origin/chapter-3` 的新分支）
+-   将 `origin/chapter-3` 合并到 GitHub 上的 `origin/main`
+-   从 `origin/main` 拉取 (pull) 新的修改到我们本地的 `main`
 
-A couple more steps—but none that are too complicated.
+还有几个步骤，但都不太复杂。
 
-The first step is to push our new branch to GitHub. Since this branch doesn't exist yet on GitHub, GitHub will make a new branch for us that is a copy of what we pushed:
+第一步是把我们的新分支推送到 GitHub。由于这个分支在 GitHub 上还不存在，GitHub 将为我们创建一个新分支，它是我们推送内容的副本：
 
 ```
 (chapter-3)$ git push origin chapter-3
@@ -846,57 +846,57 @@ To github.com:johnmosesman/practical-git-tutorial.git
  * [new branch]      chapter-3 -> chapter-3
 ```
 
-Now that we have our branch on GitHub, we can create a **pull request** to be reviewed by our teammates.
+现在我们在 GitHub 上有了自己的分支，我们可以创建一个 **拉取请求**，让我们的队友审查。
 
-GitHub even provides us with the URL to visit in our output above: `https://github.com/johnmosesman/practical-git-tutorial/pull/new/chapter-3`
+GitHub 甚至在上面的输出中为我们提供了要访问的 URL： `https://github.com/johnmosesman/practical-git-tutorial/pull/new/chapter-3`
 
-> **A couple notes:** this next part shows GitHub's UI and process for pull requests, but this process should be very similar for other services (like GitLab, Bitbucket, etc.).  
->   
-> Also keep in mind I'm using my own repo, so some of the URLs you see here will be different from yours.
+> **几个注意事项：** 接下来的部分展示了 GitHub 的用户界面和拉取请求的流程，但这个流程应该与其他服务非常相似（如 GitLab，Bitbucket 等）。 
+>
+> 另外请记住，我使用的是我自己的仓库，所以你在这里看到的一些 URL 会与你的不同。
 
-Visiting the URL above, we arrive at a page to open a new pull request.
+访问上面的 URL， 我们到达了一个发起新拉取请求的页面。
 
-We see a few things:
+我们可以看到几个东西：
 
--   A place to specify the name of the pull request (a topic sentence to easily understand what this PR is about)
--   A box for a description to explain the changes we made and any other context we want to provide (you can also add images, gifs, or videos here as well)
--   And below all of that is the list of files we changed and the changes in them (the diff).
+-   一个指定拉取请求名称的地方（一个主题句，以便于理解这个拉取请求是关于什么的）
+-   一个描述框，以解释我们所做的修改和我们想提供的任何其他背景信息（你也可以在这里添加图片、gif 或视频）。
+-   而在所有这些下面是我们修改的文件的列表和其中的变化（差异）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2021-03-24-at-10.22.13-AM.png)
 
-Opening a new pull request
+发起一个新的拉取请求
 
-Notice that the UI shows `base: main <- compare: chapter-3`. This is GitHub telling us that we're setting the pull request to merge `chapter-3` _into_ `main`.
+可以注意到，用户界面显示 `base: main <- compare: chapter-3`。这是 GitHub 在告诉我们，我们正在设置拉取请求将 `chapter-3`合并 _到_ `main`。
 
-Below the pull request description is the diff of the changes we made:
+在拉取请求的描述下方是我们所做修改的差异：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2021-03-24-at-10.26.42-AM.png)
 
-The pull request diff
+拉取请求差异
 
-We'll notice that only the file `chapter-3.txt` is shown, and this is because it's the only file that we changed.
+我们会注意到只有文件 `chapter-3.txt` 被显示出来，这是因为它是我们修改的唯一文件。
 
-There are other files currently in our project (`chapter-1.txt`, `chapter-2.txt`), but those files didn't change so there's no need to show them.
+目前在我们的项目中还有其他文件（ `chapter-1.txt`，`chapter-2.txt` ），但这些文件没有修改，所有没有必要显示。
 
-We see the one line we inserted into `chapter-3.txt`—signified by a `+` sign at the start of the line and the green background which signifies an addition to the file.
+我们看到我们插入到 `chapter-3.txt` 中的一行——在该行的开头有一个 `+` 号，绿色的背景标志着对该文件的补充。
 
-After clicking "Create Pull Request" we're taken to the new PR we just made.
+点击“创建拉取请求 (Create Pull Request)”后，我们会被带到我们刚刚制作的新的拉取请求。
 
-At this point we could assign a reviewer to the PR and have a back-and-forth discussion around the code by leaving comments on specific lines in the diff. After the code has been reviewed and we make any changes that need to be made, we're ready to merge.
+在这一点上，我们可以个拉取请求指定一个审查员，通过在差异中的特定行上留言，围绕代码进行讨论。在代码被审查，我们进行了任何必要的修改后，我们就可以准备合并了。
 
-For this sake of this tutorial we'll skip the review process, and just click the big green merge button:
+在本教程中，我们将跳过审查过程，直接点击绿色的合并 (Merge) 按钮：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2021-03-24-at-10.39.55-AM.png)
 
-Merged pull request
+合并的拉取请求
 
-And with that, our pull request has been merged into `main`!
+就这样，我们的拉取请求被合并到了 `main`！
 
-## How to bring our local up to date
+## 如何使我们的本地保持同步
 
-We've now made a change to `origin/main` in a safe, controlled, and peer-reviewed way.
+我们现在以一种安全、可控、经过同行审查的方式对 `origin/main` 进行了修改。
 
-But, our local doesn't know anything about this change. Locally, Git still thinks we're on our `chapter-3` branch which isn't merged into `main`:
+但是，我们的本地对这个修改一无所知。在本地， Git 仍然认为我们的 `chapter-3` 分支没有合并到 `main`：
 
 ```
 (chapter-3)$ git log
@@ -915,15 +915,15 @@ Date:   Mon Mar 22 10:33:26 2021 -0500
 ...
 ```
 
-Our local shows `origin/main` on the previous commit starting with `741822`. We need to pull in the new information from our `origin` to update our local repository.
+我们的本地显示 `origin/main` 还在之前的以 `741822` 开始的提交。我们需要从 `origin` 拉取新的信息来更新我们的本地仓库。
 
-### How to retrieve remote data
+### 如何获取远端数据
 
-As with many other things with Git, there are many different methods to accomplish the same task.
+与 Git 的其他许多事情一样，完成同样的任务可以有许多不同的方法。
 
-For our purposes, we'll look at a straightforward way that will work in the majority of cases.
+以我们的目标出发，我们将研究一种在大多数情况下都能发挥作用的简单方法。
 
-To start, let's switch back to our `main` branch locally:
+首先，让我们切换到本地的 `main` 分支：
 
 ```
 (chapter-3)$ git checkout main
@@ -931,11 +931,11 @@ Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 ```
 
-Our local thinks we're up to date with `origin/main` because we haven't asked the remote repository (`origin`) for new information since we pulled the project at the beginning using `git clone`.
+我们的本地认为我们的与 `origin/main` 保持了更新，因为自从我们在一开始使用 `git clone` 拉取了项目后，我们没有向远端仓库 (`origin`) 索要新的信息。
 
-Git repositories are not live-updating—they're just a snapshot of the history at a point in time. To receive any new information about the repository we have to ask for it again.
+Git 仓库不是实时更新的——它们只是某个时间点上的历史快照。要收到关于仓库的任何新信息，我们必须再次发出请求。
 
-To retrieve any new information that has changed on the remote, we use `git fetch`:
+我们使用 `git fetch` 从远程获取任何新信息：
 
 ```
 (main)$ git fetch
@@ -943,19 +943,19 @@ From github.com:johnmosesman/practical-git-tutorial
    741822a..10630f2  main       -> origin/main
 ```
 
-The output shows us that `origin/main` is now pointing to a commit starting with `10630f2`. This commit prefix matches the SHA of the merge commit of our pull request.
+输出结果显示， `origin/main` 现在指向一个以 `10630f2` 开头的提交。这个提交前缀与我们拉取请求的 SHA 一致。 
 
-There are a few ways to merge two branches into one another, and one of those ways is by creating a **merge commit**. That's what happened here.
+有几种方法可以将两个分支合并到一起，其中一种方法是创建一个 **合并提交 (merge commit)**。这就是这里发生的事情。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/commit.png)
 
-The merge commit of our PR
+我们的拉取请求的合并提交
 
-Our local repository now knows about the presence of these new commits, but we haven't done anything with them yet.
+我们的本地仓库现在知道这些新提交的存在，但我们还没有对它做任何事情。
 
-Running `git fetch` doesn't actually change any of our files—it just downloads new information from the remote about the status of the repo.
+运行 `git fetch` 实际上并没有修改我们的任何文件——它只是从远程下载关于仓库状态的新信息。
 
-Now that our local repository is aware of the status of each branch (but hasn't _changed or updated_ any of the branches), let's check our status again:
+现在我们的本地仓库已经知道了每个分支的状态（ 但还没有 _修改或更新_ 任何分支），让我们再次检查一下状态：
 
 ```
 (main)$ git status
@@ -963,9 +963,9 @@ Your branch is behind 'origin/main' by 2 commits, and can be fast-forwarded.
   (use "git pull" to update your local branch)
 ```
 
-Our local now knows that our local `main` is behind `origin/main` by 2 commits (the commit from the `chapter-3` branch and the PR merge commit).
+我们的本地现在知道我们的本地 `main` 比 `origin/main` 晚了两个提交（来自 `chapter-3` 分支的提交和拉取请求的合并提交）。
 
-It also gives us the hint to use `git pull` to update our local branch:
+它还提示我们使用 `git pull` 来更新我们的本地分支：
 
 ```
 john:~/code/practical-git-tutorial (main)$ git pull origin main
@@ -978,29 +978,29 @@ Fast-forward
  create mode 100644 chapter-3.txt
 ```
 
-The `git pull` command is actually a shorthand for running two commands: `git fetch` followed by a `git merge`.
+`git pull` 命令实际上是运行两条命令的简写：运行 `git fetch` 后运行 `git merge`。
 
-Since `git fetch` doesn't apply any changes locally, it can be useful to use `git fetch` to see if our branches are up to date with the remote (maybe we don't want to merge in the changes yet), or to pull down new branches that exist on the remote and not on our local machine.
+由于 `git fetch` 不会在本地运行任何修改，所以用 `git fetch` 来查看我们的分支是否与远端同步（也许我们还不想合并修改），或者拉取存在与远端而不在本地上的新分支，都是很有用的。
 
-Fetching a _new_ branch from a remote will go ahead and download that branch as well to your local machine—since it's a new branch it won't conflict with anything in your local setup.
+从远端获取 (fetch) 一个新的分支就会把这个分支也下载到你的本地机器上——因为它是一个新的分支，所以不会与你本地设置中的任何东西冲突。
 
-We could have just done a `git pull` initially instead of first doing a `git fetch`, but I wanted to explain `git fetch` as it is useful in its own right.
+我们最初可以只做 `git pull` 而不是先做 `git fetch` ，但我想解释一下 `git fetch`，因为它本身非常有用。
 
-After running `git pull`, if we run `git status` once again we'll see that everything is up to date.
+运行了 `git pull` 之后，如果我们再运行一次 `git status` ，我们会看到所有东西都已经更新了。
 
-And with that, we've pulled in changes from our remote and got our local up to date!
+就这样，我们从远端拉取了修改，使我们的本地获得了更新！
 
-## How to fix merge conflicts in Git
+## 如何修复 Git 中的合并冲突 (merge conflict)
 
-The final topic we'll cover is how to deal with conflicts.
+我们要讨论的最后一个话题是如何处理冲突。
 
-So far, Git has just magically handled all of the file updating, and most of the time Git can just handle it. But, there are times when Git doesn't know how to combine changes together, and that creates a **conflict.**
+到目前为止， Git 神奇的处理了所有的文件更新，而且大多数时候 Git 都能直接处理。但是，有些时候 Git 不知道如何把修改合并起来，这就产生了 **冲突**。
 
-A conflict occurs when merging two changes that have changed the same line in a file. If two commits have changed the same line in a file, Git doesn't know which commit's changes to use, and it will require you to make the choice.
+当合并两个改动了文件中同一行的修改时，就会发生冲突。如果两个提交修改了文件中的同一行， Git 不知道该使用哪一个提交的修改，它就会要求你做出选择。
 
-To setup this scenario, I've created another branch on Github called `chapter-3-collaboration`. Let's imagine that a teammate has already started working on this branch and they've asked you to collaborate with them in finishing out Chapter 3.
+为了模拟这种情境，我在 Github 上创建了另一个名为 `chapter-3-collaboration` 的分支。让我们想象一下，一个队友已经开始在个分支上工作，他要求你和他合作完成第三章。
 
-Since this is a new branch that we don't have locally, we can use `git fetch` to retrieve the new branch information from the remote, and then switch to that branch using `git checkout`:
+由于这是一个我们本地没有的新分支，我可以用 `git fetch` 从远程获取新分支的信息，然后用 `git checkout` 切换到该分支：
 
 ```
 (main)$ git fetch
@@ -1013,7 +1013,7 @@ Switched to a new branch 'chapter-3-collaboration'
 (chapter-3-collaboration)$
 ```
 
-We've now pulled down the new branch to our local repository and switched to it. This is the contents of `chapter-3.txt` on this new branch currently:
+现在我们已经把新的分支拉取到本地仓库并切换到了它上。这是目前这个新分支上 `chapter-3.txt` 的内容：
 
 ```
 (chapter-3-collaboration)$ cat chapter-3.txt
@@ -1022,9 +1022,9 @@ Chapter 3 - The End?
 This is a sentence.
 ```
 
-It's a title and one sentence. Let's change the title to something new like _"Chapter 3 - The End Is Only The Beginning."_
+这是一个标题和一个句子。让我们把标题改成新的东西，比如 _"Chapter 3 - The End Is Only The Beginning."_
 
-The contents of `chapter-3.txt` now look like this:
+`chapter-3.txt` 的内容现在看起来像这样：
 
 ```
 (chapter-3-collaboration)$ cat chapter-3.txt
@@ -1033,7 +1033,7 @@ Chapter 3 - The End Is Only The Beginning
 This is a sentence.
 ```
 
-After committing that change, if we try to push it up we get this message:
+在提交修改后，如果我们试图推送它就会得到这个消息：
 
 ```
 (chapter-3-collaboration)$ git push origin chapter-3-collaboration
@@ -1046,13 +1046,13 @@ hint: 'git pull ...') before pushing again.
 hint: See the 'Note about fast-forwards' in 'git push --help' for details.
 ```
 
-Our teammate has already made some commits before we did, and pushed it to the remote branch. Our local branch is now out of date with the remote, and GitHub is denying our push until we merge in the changes from our teammate:
+我们的队友已经在我们之前做了一些提交，并推送到了远端分支。我们的本地分支现在与远端分支不一致， 直到我们合并队友的修改前 GitHub 会持续拒绝我们的推送。
 
 ```
 ... the tip of your current branch is behind its remote counterpart. Integrate the remote changes ... before pushing again.
 ```
 
-It also gives us a hint about how to do that: `git pull`.
+它也给了我们一个如果操作的提示： `git pull`。
 
 ```
 (chapter-3-collaboration)$ git pull origin chapter-3-collaboration
@@ -1063,11 +1063,11 @@ CONFLICT (content): Merge conflict in chapter-3.txt
 Automatic merge failed; fix conflicts and then commit the result.
 ```
 
-After pulling—and as we might have expected given the topic we're currently discussing—we have a merge conflict.
+在拉取后——正如我们可能已经预料到的那样，考虑到我们目前正在讨论的主题——我们有一个合并冲突。
 
-Git tried to automatically merge our teammate's changes into ours, but there was a place in the file that it couldn't automatically merge—we both changed the same line.
+Git 试图将我们队友的修改自动合并到我们的文件中，但文件中有一个地方它不能自动合并——我们都修改了同一行。
 
-Git stopped "mid-merge" and is telling us we need to fix the merge conflicts before it can finish the merge. Let's look at our `git status` currently:
+Git 在“合并中途”停止了工作，并告诉我们在完成合并之前需要修复合并冲突。让我们看看当前的 `git status` ：
 
 ```
 (chapter-3-collaboration)$ git status
@@ -1087,9 +1087,9 @@ Unmerged paths:
 no changes added to commit (use "git add" and/or "git commit -a")
 ```
 
-Git tells us our branch and the remote branch have 1 commit different from each other. It also tells us that we have some "unmerged paths"—that we're currently mid-merge and we need to fix the conflicts.
+Git 告诉我们，我们的分支和远端分支之间有一个不同的提交，它还告诉我们，我们有一些“未合并的路径 (unmerged paths)”——我们目前正在合并中途，需要修复冲突。
 
-It shows us `chapter-3.txt` is currently modified, so let's look at the contents of `chapter-3.txt`:
+它显示 `chapter-3.txt` 目前已被修改，那让我们来看看 `chapter-3.txt` 的内容：
 
 ```
 (chapter-3-collaboration)$ cat chapter-3.txt
@@ -1102,19 +1102,19 @@ Chapter 3 - The End But Not The Ending
 This is a sentence.
 ```
 
-Git has added some markers to the file to show us where the conflict happened. Both we and our teammate changed the title sentence, so it's surrounded by Git's markers of a conflict: `<<<` and `>>>` arrows separated by a line of `===`.
+Git 在文件中添加了一些标记以显示冲突发生的位置。我们和队友都修改了标题，所以它被 Git 的冲突标记包裹着： `<<<` 和 `>>>` 箭头，以一行 `===` 分隔。
 
-The top line, signified by `<<<<<<< HEAD` and followed by _"Chapter 3 - The End Is Only The Beginning"_, is the change that we just made. Git is telling us that this line is where our current `HEAD` is at—i.e., this is the change at our current commit.
+最上面的一行，以 `<<<<<<< HEAD` 为标志，后面是 _"Chapter 3 - The End Is Only The Beginning"_ ，是我们刚刚做的修改。 Git 告诉我们，这一行是我们当前 `HEAD` 所在的位置——也就是说，这是我们当前提交的修改。
 
-The line below it, _"Chapter 3 - The End But Not The Ending"_ followed by `>>>>>>> 2f6874f650a6a9d2b7ccefa7c9618deb1d45541e`, is the line and commit from our teammate.
+它下面的一行，  _"Chapter 3 - The End But Not The Ending"_ 后面跟着 `>>>>>>> 2f6874f650a6a9d2b7ccefa7c9618deb1d45541e` ，是我们队友的行和提交。
 
-Basically, Git is telling us, "Which one of these lines (or some combination of these lines) do you want to keep?"
+基本上， Git 是在告诉我们，“你想保留这些行（或这些行的组合）里的哪一条？”
 
-Notice that the line at the bottom file isn't wrapped up in the conflicts—it wasn't changed by both commits.
+你会注意到文件底部那一行没有被冲突标记包裹——他没有被两个提交同时修改。
 
-We need to resolve the conflict by deleting one of the lines or combining the two lines into one (and remember to remove all of the extra markers that Git put in there as well).
+我们需要通过删除一行或将两行合并为一行来解决冲突（ 记得也要删除 Git 放在那里的所有额外标记 ）。
 
-I'm going to take a combination of these lines, so the final file looks like this:
+我将组合这些行，所以最后的文件看起来像这样：
 
 ```
 (chapter-3-collaboration)$ cat chapter-3.txt
@@ -1123,7 +1123,7 @@ Chapter 3 - The End Is Not The Ending--But Only The Beginning
 This is a sentence.
 ```
 
-To finish the merge, we just need to commit our conflict resolution:
+我们只需要提交我们的冲突解决方案来完成合并：
 
 ```
 (chapter-3-collaboration)$ git add .
@@ -1138,9 +1138,9 @@ Your branch is ahead of 'origin/chapter-3-collaboration' by 2 commits.
 nothing to commit, working tree clean
 ```
 
-The result of `git status` tells us that our local branch is `is ahead of 'origin/chapter-3-collaboration' by 2 commits.`.
+`git status` 的结果告诉我们，我们的本地分支比 `origin/chapter-3-collaboration` 领先两个提交（ `is ahead of 'origin/chapter-3-collaboration' by 2 commits.`）。
 
-Looking at the `git log` confirms this:
+看一下 `git log` 就可以证明这一点：
 
 ```
 commit bd621aa0e491a291af409283f5fd1f68407b94e0 (HEAD -> chapter-3-collaboration)
@@ -1165,9 +1165,9 @@ Date:   Thu Mar 25 08:58:58 2021 -0500
 ...
 ```
 
-The resulting commit history has both of the commits on the branch and our merge commit at the top.
+由此产生的提交历史中，分支上的提交和我们的合并提交都在顶部。
 
-From here, we just need to push up our changes to the remote:
+从这里，我们只需要把我们的修改推送到远端：
 
 ```
 (chapter-3-collaboration)$ git pull origin chapter-3-collaboration
@@ -1182,56 +1182,56 @@ To github.com:johnmosesman/practical-git-tutorial.git
    2f6874f..bd621aa  chapter-3-collaboration -> chapter-3-collaboration
 ```
 
-Now that we've changed the remote branch, our teammate would need to do a `git pull` to merge in our new merged changes.
+现在我们已经改变了远端分支，我们的队友需要做一个 `git pull` 来合并我们新的合并修改。
 
-And, ideally we would tell our teammate that we pushed up a new change so they could pull it down before they continue editing—reducing the likelihood _they'll_ have to fix a merge conflict in the future, too.
+而且，最好是告诉我们的队友，我们推送了一个新的修改，这样他们就可以在继续编辑之前把它拉取下来——减少他们在未来也要修复合并冲突的可能性。
 
-### Branches off of branches
+### 在分支上进行分支
 
-We could have also created our own branch off of the `chapter-3-collaboration` branch. This would let us work without having to worry about merge conflicts until the very end.
+我们也可以在 `chapter-3-collaboration` 分支上创建自己的分支。这将使我们直到工作最后才需要解决合并冲突。
 
-Once we had finished our work in our own separate branch, we could then merge _our_ feature branch into our _teammate's_ feature branch—and then into `main`.
+当我们在自己的独立分支上完成了工作，我们就可以将 _我们_ 的功能分支合并到 _队友_ 的功能分支上，然后再合并到 `main`。
 
 > `chapter-3-collaboration-john` -> `chapter-3-collaboration` -> `main`
 
-As you can see the branch structure can get quite complicated as more and more branches branch off of each other and become ahead of and behind each other.
+正如你所看到的，随着越来越多的分支彼此分离，并成为彼此的前分支和后分支，分支结构会变得相当复杂。
 
-Because of this, it's generally a good idea to keep branches **small and isolated** and try to **merge them quickly and often.**
+因此，一般来说，保持分支的 **小而独立 (small and isolated) ** 并尝试 **快速和经常合并他们 (merge them quickly and often)** 是个好主意。
 
-This can help avoid a lot of painful merge conflicts.
+这可以帮助避免很多痛苦的合并冲突。
 
-## Review: how to start a new feature workflow
+## 回顾：如何启动一个新的功能工作流程
 
-I'll end with a quick review of how to approach starting a new task and the commands and flows to do it.
+最后，我将快速的回顾一下如何着手开始一个新的任务，以及做这个任务需要的命令和流程。
 
-Say you've been given your first ticket at a new job: a small bug to squash in your team's product.
+假设你在新工作中得到了第一个任务：处理你的团队产品中的一个小错误 (bug)。
 
-The first thing you'd need to do is pull down the repo using `git clone <URL>`.
+你需要做的第一件事时使用 `git clone <URL>` 拉取该仓库。
 
-Next, you'd want to make a feature branch off of `main` using `git checkout -b <BRANCH_NAME>`. After that, you'd fix the bug and commit the change(s) using `git add` and `git commit`.
+接下来，你要用 `git checkout -b <BRANCH_NAME>` 在 `main` 之外创建一个功能分支。之后，你将修复这个错误，并使用 `git add` 和 `git commit` 提交修改。
 
-Maybe solving this problem takes multiple commits—or maybe you make a few commits in an attempt to solve it before you finally arrive at the solution. That's ok too.
+也许解决这个问题需要进行多次提交，或者你在试图解决这个问题时做了多次提交，最后才找到了解决方案。这也是可以的。
 
-After committing, you push your new branch to the `origin` (`git push origin <BRANCH_NAME>`) and create a pull request. After a code review your branch is merged in (yay!).
+提交后，将新分支推送到 `origin` （ `git push origin <BRANCH_NAME>`）并创建一个拉取请求。经过代码审查，你的分支被合并了（耶！）。
 
-You've now completed your feature, and it's time to switch back to `main` (using `git checkout main`), use `git pull` to get your latest changes plus any other changes other people have made, and start off again with a new branch.
+现在你已经完成了你的功能，是时候切换回 `main` 了（使用 `git checkout main` ），使用 `git pull` 获取你的最新修改和其他人的修改，然后从新的分支开始。
 
-## Conclusion
+## 总结
 
-As mentioned in the beginning, there are many ways to approach working with Git and Git workflows.
+正如开头所提到的，使用 Git 和 Git 工作流程有很多种方法。
 
-There's also a lot of underlying Git "magic" (that is, code being run that you don't understand yet), but you will learn and pick up more of this with time.
+还有很多 Git 底层的“魔法”（也就是说，正在运行的代码你还不了解），但是随着时间的推移，你会学到并掌握更多东西。
 
-I spent the first many years of my career just using memorized commands and workflows. It worked. As I ran into problems or collaborated with teammates I learned more and eventually my skill with Git expanded.
+在我职业生涯的前几年，我只是通过记忆命令和工作流程来使用 Git。这很有效。当我遇到问题或与队友协作时，我学到了更多的东西，最终我的 Git 技能得到了扩展。
 
-In the beginning, don't make it any harder than it has to be! You will learn over time.
+刚开始的时候，不要把事情搞得太复杂！随着时间的推移，你会学会的。
 
-If you liked this article, I write about technical topics like this as well as non-technical topics [on my site.](https://johnmosesman.com/)
+如果你喜欢这篇文章，我 [在我的网站上](https://johnmosesman.com/) 写像这样的技术话题以及非技术话题。
 
-I also write similar things on Twitter: [@johnmosesman](https://twitter.com/johnmosesman).
+我也在推特 (Twitter)[@johnmosesman](https://twitter.com/johnmosesman) 上写相似的东西。
 
-Either way, feel free to send me a message.
+无论怎样，请随时给我发信息。
 
-Thanks for reading!
+谢谢阅读！
 
 John

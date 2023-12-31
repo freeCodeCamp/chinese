@@ -1,109 +1,111 @@
 > -  原文地址：[Introduction to Evolutionary Game Theory](https://www.freecodecamp.org/news/introduction-to-evolutionary-game-theory/)
 > -  原文作者：[Peter GleesonPeter Gleeson](https://www.freecodecamp.org/news/author/peter/)
-> -  译者：
+> -  译者：Shenghan0329
 > -  校对者：
 
 ![Introduction to Evolutionary Game Theory](https://images.unsplash.com/photo-1521427887716-b3e96ad066a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDM5fHxoYXdrfGVufDB8fHx8MTYxNjc2NjIwNQ&ixlib=rb-1.2.1&q=80&w=2000)
 
-For the longest time, the evolution of cooperative social behaviour has fascinated evolutionary biologists.
+长期以来，合作社会行为的演化一直吸引着演化生物学家。
 
-The mathematical field of game theory helps shed light on how it emerges. Game theory is “the study of mathematical models of strategic interaction among rational decision-makers” (according to [Wikipedia](https://en.wikipedia.org/wiki/Game_theory)).
+数学领域里的博弈论有助于阐明它是如何出现的。 博弈论是“之于理性决策者之间战略互动的数学模型的研究” (来自于[维基百科](https://en.wikipedia.org/wiki/Game_theory)).
 
-Game theory applies to “games” as varied as economics, politics, chess and tic-tac-toe. In each case, there are some rules, some “players” or “agents”, and a set of strategies available to them.
+博弈论适用于各种各样的“博弈”，比如说经济学、政治学、国际象棋和井字游戏。在每种博弈下，都会有一些规则，一些“参与者”或“代理者”，以及一套可供他们使用的策略。
 
-Each player has a concept of “utility” – a “currency” they seek to individually maximise through the strategies they play.
+每个玩家都有一个叫做“效用”的概念——一种“货币”，并且他们会试图通过各种策略来实现“货币”的最大化。
 
-The currency of evolution is the concept of [fitness](https://www.nature.com/scitable/blog/accumulating-glitches/the_meaning_of_fitness/).
+在演化中，这种货币是[适应度](https://www.nature.com/scitable/blog/accumulating-glitches/the_meaning_of_fitness/).
 
-That is, the chance of being represented in the next generation. Genes and traits which increase the odds of survival to reproductive age are more likely to be passed on to future generations. Therefore, they confer a greater fitness to the individual which "hosts” them.
+适应度是个体的基因能在后代中出现的机会。也就是说，能使个体更可能存活到成年的基因和性状更容易被遗传给下一代。所以说，携带了这些基因和性状的个体会有更高的适应度。
 
-Evolutionary game theory takes the concepts from game theory and applies them in an evolutionary context.
+演化博弈论采用了博弈论里的概念，并且将它们用于了演化背景中。
 
-For a given model, it lets you ask questions about which strategy prevails, and whether certain strategies can coexist. And if so – at what frequencies?
+一个演化博弈论的模型可以让你了解哪些策略能够占上风，以及哪些策略可以共存。如果多种策略能共存的话，它们共存的频率是多少呢？
 
-## Replicator dynamics
+## 复制器动力学
 
-Evolutionary game theory plays “games” over many generations.
+演化博弈论中的博弈能延续很多代。
 
-Each game will alter the utility (that is, fitness) of the players. The next generation is produced, with players being represented proportionally to their overall fitness.
+每轮博弈会改变参与者的效用（也就是适应度）。参与者总体的适应度越高，他们生产的下一代越多。
 
-This set up is called “replicator dynamics”. It is easy to simulate and explore different models of evolutionary games.
+这种设定被叫做“复制器动力学”。不难通过建模来模拟和探索各种不同的演化博弈论模型。
 
-The classic model of evolutionary game theory is the “Hawk-Dove” game, popularised by John Maynard Smith in the 1970s.
+演化博弈论的经典模型是约翰·梅纳德·史密斯在 20 世纪 70 年代推广的“鹰-鸽”博弈。
 
-In this game, there exists a population of animals which compete for a finite resource (for example, food). The more resources an individual wins, the greater its fitness.
+在这个博弈中，有一群动物争夺有限的资源（例如食物）。一个个体赢得的资源越多，他的适应度就越高。
 
-Each animal can play one of two strategies:
+每个动物可以使用以下两种策略中的一种：
 
--   **Hawks** are aggressive, and will fight for a resource at all costs.
--   **Doves** are passive, and will share instead of fight for a resource.
+-   **鹰派** 具有进攻性，他们会不惜一切代价来争抢某个资源。
+-   **鸽派** 比较和平, 他们会分享某个资源而不是争抢。
 
-The animals are all the same kind – “hawk” and “dove” refer to their behaviour.
+它们都是一种动物，也就是说“鹰派”和“鸽派”只是描述它们的行为。
 
-There are three pairwise competitions that can exist:
+有三种可能存在的竞争：
 
-**Hawk vs Hawk**
+**鹰派 vs 鹰派**
 
--   If two hawks compete, they will engage in a 50:50 battle to win the resource. This is a winner-takes-all scenario – the winner obtains the full value of the resource. The injured loser pays a price, and loses a certain amount of fitness.
+-   如果两个鹰派竞争，它们会进行五五开的战斗来赢取资源。这是一个赢者通吃的情况——赢家得到所有的资源。受伤的输家付出代价，并减少相当一部分的适应度。
 
-**Hawk vs Dove**
+**鹰派 vs 鸽派**
 
--   If a hawk meets a dove, the dove will back down immediately. The hawk wins the full value of the resource, and the dove walks (or, rather flies) away with nothing. But they do not pay any cost.
+-   如果一个鹰派遇到了一个鸽派，鸽派会很快退缩。鹰派会赢得所有的资源，而鸽派会空手而归。但是任何一方都不会付出代价。
 
-**Dove vs Dove**
+**鸽派 vs 鸽派**
 
--   When two doves meet, they agree to share the resource evenly. No one gets hurt.
+-   当两个鸽派相遇时，它们会同意平分资源。没人会受伤。
 
-This can be modelled mathematically. Doing so allows us to understand whether these strategies can coexist (or if one of them prevails).
+我们可以通过数学来模拟这种博弈。通过建模，我们可以更好地了解这些策略是否能共存（或者说某种策略占上风）。
 
-### The math of replicator dynamics
+### 复制器动力学背后的数学
 
-Let _V_ be the value of winning a contest, and _C_ be the cost of injury in a contest.
+设 _V_ 为赢得比赛的价值，_C_ 为比赛中受伤的代价。
 
-Represent the frequency of hawks in the population as _p_, and the frequency of doves as _1-p_.
+将鹰派在种群中的频率表示为 _p_，鸽派的频率则为 _1-p_。
 
-Now, define two functions F(H) and F(D) which define the expected fitness of playing the hawk and dove strategies, respectively.
+现在，定义两个函数 F（H）和 F（D），这两个函数分别定义了鹰派策略和鸽派策略的期望适合度。
 
-Playing as a hawk will mean engaging in a hawk-vs-hawk contest with frequency _p._ The expected utility of doing so is understood as the average outcome. Half the time the hawk wins _V_, half the time it loses _C_.
+鹰派策略意味着参加一场频率为 _p_ 的鹰派对鹰派竞赛。这样做的期望效用被理解为平均结果。一半的时间某个鹰派赢得 _V_，一半的时间它损失 _C_。
 
-The rest of a hawk’s contests will be against doves. This guarantees an easy win _V._
+在剩下的比赛中，这个鹰派将对阵鸽派。这保证了它能轻松赢得 _V_。
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F8b5ac2e8-fdfb-4ffc-8abe-15d0d014f580_544x112.png)
 
-Playing as a dove will win nothing against hawks. But a dove will encounter another dove with frequency _1-p_. Under this scenario, the expected utility is the shared resource, worth _V/2_.
+用鸽派策略对阵鹰派毫无益处。但是一只鸽派会以 _1-p_ 的频率遇到另一只鸽子。在这种情况下，它的预期效用是分到的资源，价值为 _V/2_。
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F6303e0b2-d6ab-434d-b7ec-cad18a82d154_508x110.png)
 
-Now, set _F(H)_ equal to _F(D)_ and solve for _p_.
+现在，设 _F（H）_ 等于 _F（D）_ ，并求解 _p_。
 
-This reveals the frequency _p_ at which the hawk strategy confers no more or less fitness than the dove strategy.
+解出的频率_p_会使得鹰派策略和鸽派策略拥有相同适应度。
 
-At this frequency, there is no advantage to either strategy, so this is the equilibrium at which both strategies may coexist.
+在这种频率下，任何一种策略都没有优势，因此这是两种策略可以共存的平衡。
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F77be89c1-0286-4673-867f-1c8e1a038cb7_516x104.png)
 
-Some algebraic rearrangement gives:
+通过代数运算，我们能得到以下结果：
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fca77237e-29a4-4826-af4a-2fbb390d3572_404x108.png)
 
-Which provides the ratio of hawks-to-doves that exists at equilibrium.
+这个结果揭示了在平衡中，鹰派和鸽派的比例。
 
-Just a little more rearranging gives the equilibrium in terms of _p_:
+通过一些代数排列，我们能得到在平衡中 _p_ 的值：
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2Fb812b56c-8387-4a47-902e-61aaa87cf317_342x98.png)
 
-Considering the properties of this expression reveals two things:
 
--   Whenever the cost _C_ of losing a contest is less than or equal to the value _V_ of winning, the hawk strategy will dominate. Neither strategy can coexist.
--   If the cost _C_ is greater than the value _V_, the strategies will coexist in equilibrium.
+通过这个表达式的性质，可以发现两件事：
 
-Plugging in the values _V_\=4 and _C_\=6 shows the equilibrium occurs when 2/3 of the population play the hawk strategy.
+-   每当输掉比赛的成本 _C_ 小于或等于获胜的价值 _V_ 时，鹰派策略就会占据主导地位。这两种策略无法共存。
 
-You can test this by simulating the model in Python.
+-   如果成本 _C_ 大于价值 _V_，则策略将会在平衡里共存。
 
-### The code
+代入 _V_\=4 和 _C_\=6，我们发现当 2/3 的种群使用鹰策略时，出现了平衡。
 
-In the file called bird.py:
+您可以通过在 Python 里模拟模型来测试这一点。
+
+### 代码
+
+在叫做 bird.py 的文件里:
 
 ```Python
 import random
@@ -163,12 +165,12 @@ class Bird:
             return Bird(self.strategy)
 ```
 
-The next file is called simulation.py.
+下一个文件叫做 simulation.py.
 
-1.  Initialise a population of all doves.
-2.  Define a timestep function to simulate randomised contests.
-3.  Draw the next generation weighted by their relative fitnesses.
-4.  Rinse and repeat a thousand times over, then save the output as a graph.
+1.  初始化鸽派的种群
+2.  定义一个时间步长函数来模拟随机竞赛。
+3.  根据它们相对适应度，同比例生成下一代。
+4.  打乱并重复一千次，然后将输出保存为图表。
 
 ```Python
 from bird import Bird
@@ -248,24 +250,24 @@ if __name__ == "__main__":
     main()
 ```
 
-And voilà - here’s an example of the output for _V_\=4 and _C_\=6:
+看，这是个 _V_=4 ， _C_=6 的例子：
 
 ![](https://cdn.substack.com/image/fetch/w_1456,c_limit,f_auto,q_auto:good,fl_progressive:steep/https%3A%2F%2Fbucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com%2Fpublic%2Fimages%2F44100a89-d377-435e-bf11-97b046db5f32_1438x1048.png)
 
-Exactly as the theory predicts.
+这和之前的理论预测得一样。
 
-## Outro
+## 结语
 
-The evolution of complex systems is a fascinating field of study. Understanding how natural forces and competitive pressures can shape individual-level traits to give rise to complex social behaviours has been one of the major areas of research in biological sciences in the last few decades.
+复杂系统的演化是一个令人着迷的研究领域。在过去几十年的生物科学研究里，一个主要的领域是了解自然力量和竞争压力如何塑造个体层面的特征。这些特征产生了复杂的社会行为。
 
-The ability of relatively simple mathematical models to accurately predict outcomes of dynamic systems is also a key point to take away.
+相对简单的数学模型准确预测动态系统结果的能力也是这些研究带给我们至关重要的一点。
 
-In this case, it is the existence of a feedback loop that results in the two strategies reaching an equilibrium. The advantage conferred by either strategy varies depending on how many others in the population are playing that strategy.
+在这种情况下，反馈循环的存在导致了两种策略能达到平衡。当种群中使用该策略个体的数量不同，这两种策略所赋予的优势也会有所不同。
 
-In other words, when more individuals play "dove", there is an advantage to playing "hawk". However, as more individuals play "hawk", the expected value of playing "dove" increases.
+换句话说，当更多个体是“鸽派”时，“鹰派”就有优势。然而，随着越来越多的个体是“鹰派”，“鸽派”的期望值也会有所增加。
 
-Finally, the availability of programming and software tools makes it possible to test theoretical predictions through simulation.
+最后，编程工具和软件让我们可以通过模拟来测试理论预测。
 
-If you found this article interesting, you may also find [How to Model an Epidemic With R](/news/how-to-model-an-epidemic-with-r/) worth checking out, too.
+如果你觉得这篇文章很有趣，你可能也会觉得[如何用 R 建模流行病](news/How-to-Model-an-Epidemic-With-R/)值得一看。
 
-You can follow more of my writing at [gleeson.substack.com](https://gleeson.substack.com/)
+你可以在[gleeson.substack.com](https://gleeson.substack.com/)里关注我的更多文章

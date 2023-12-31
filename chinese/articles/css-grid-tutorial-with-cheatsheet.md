@@ -7,7 +7,7 @@
 
 Today we're going to learn **CSS Grid** properties so that you can make your own responsive websites. I'll explain how each of Grid's properties work along with a CheatSheet that covers everything you can do with Grid. Let's go. 🎖️
 
-# Table of Contents:
+# Table of Contents
 
 -   [CSS Grid Architecture](#css-grid-architecture)
 -   [CSS Grid Chart](#css-grid-chart)
@@ -26,7 +26,7 @@ Today we're going to learn **CSS Grid** properties so that you can make your own
 -   [Shorthand for Grid](#shorthand-for-css-grid-properties)
 -   [Conclusion](#conclusion)
 
-## You can watch this tutorial on YouTube as well if you like:
+## You can watch this tutorial on YouTube as well if you like
 
 # First, What is CSS Grid?
 
@@ -159,7 +159,7 @@ Now, place some gaps between our boxes like this 👇
 }
 ```
 
-## But Wait....
+## But Wait
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cq8exwor5aiciu2j6jwu.png)
 

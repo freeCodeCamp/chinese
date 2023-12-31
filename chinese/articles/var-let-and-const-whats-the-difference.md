@@ -122,7 +122,7 @@ So a variable declared in a block with  `let`  is only available for use within 
 
 We see that using  `hello`  outside its block (the curly braces where it was defined) returns an error. This is because  `let`  variables are block scoped .
 
-### let can be updated but not re-declared.
+### let can be updated but not re-declared
 
 Just like  `var`, a variable declared with  `let`  can be updated within its scope. Unlike  `var`, a  `let`  variable cannot be re-declared within its scope. So while this will work:
 

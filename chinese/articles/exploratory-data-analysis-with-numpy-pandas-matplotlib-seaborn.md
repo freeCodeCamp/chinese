@@ -53,15 +53,30 @@ __数据分析__ 中的“数据”通常是指数值数据，如股票价格、
 
 基于一些历史数据的统计分析，我们大致可以为权重`w1`，`w2` 和 `w3` 提供合理的值。下面例举了一组值：
 
+
 给定一个地区的一些气候数据，我们就可以预测苹果的产量了。以下是一些示例数据：
+
+```py
+w1, w2, w3 = 0.3, 0.2, 0.5
+```
 
 ![](https://i.imgur.com/TXPBiqv.png)
 
 首先，我们定义一些变量来记录一个地区的气候数据。
 
+
 然后，我们就可以将这些变量代入线性方程来预测苹果的产量了。
 
+```py
+kanto_temp = 73
+kanto_rainfall = 67
+kanto_humidity = 43
+```
+
+
+
 为了能更容易地对多个区域执行上述的计算，我们可以将每个区域的气候数据表示为向量，即数字列表。
+
 
 每个向量中的三个数字分别代表温度、降雨量和湿度数据。
 
@@ -69,13 +84,26 @@ __数据分析__ 中的“数据”通常是指数值数据，如股票价格、
 
 现在我们就可以编写一个函数 `crop_yield`，通过给定的气候数据和相应权重，来计算苹果（或任何其他作物）的产量了。
 
+```py
+kanto = [73, 67, 43]
+johto = [91, 88, 64]
+hoenn = [87, 134, 58]
+sinnoh = [102, 43, 37]
+unova = [69, 96, 70]
+```
+
 ### 如何将 Python 列表转换为 Numpy 数组
 
 `crop_yield` 执行的计算（两个向量的元素相乘并对结果求和）也称为 __点积__。从 [这里](https://www.khanacademy.org/math/linear-algebra/vectors-and-spaces/dot-cross-products/v/vector-dot-product-and-vector-length ) 了解更多点积的信息。
 
 Numpy 库提供了一个内置函数来计算两个向量的点积。但是，我们必须先将列表转换为 Numpy 数组才行。
 
+
 我们使用 `pip` 包管理器安装 Numpy 库。
+
+```py
+!pip install numpy --upgrade --quiet
+```
 
 ### 如何操作 Numpy 数组
 
@@ -754,6 +782,7 @@ Seaborn 内置了对 Pandas 数据帧的支持。你可以提供列名并使用 
 
 我们能立马发现花萼的宽度在 2.0 - 4.5 范围内，大约有 35 个落在 2.9 - 3.1 之间，它们似乎是最多的组距。
 
+
 #### **如何控制组距的大小和数量**
 
 我们可以使用组距参数来控制组距的数量以及每个组距的大小。
@@ -806,6 +835,7 @@ Matplotlib 和 Seaborn 还支持在网格中绘制多个图表，通过使用 `p
 以下单个网格中显示了本教材涵盖的各种不同类型的图表。
 
 通过该网页查看支持函数的完整列表：[https://matplotlib.org/3.3.1/api/axes\_api.html#the-axes-class](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.3.1%2Fapi%2Faxes_api.html%23the-axes-class) 。
+
 
 #### ****用 Seaborn 来配对绘图****
 

@@ -546,246 +546,246 @@ git Commit -m  "Commit 16"
 
 引入 `Commit 16` 后的历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Say now you realize, you've made a mistake. You actually wanted `feature_branch_2` to be born from the `main` branch, rather than from `feature_branch_1`.
+说现在你意识到了，你犯了一个错误。你实际上想让 `feature_branch_2` 从 `main` 分支中分出，而不是从 `feature_branch_1` 中分出。
 
-How can you achieve that? 🤔
+怎样才能做到这一点呢？🤔
 
-Try to think about it given the history graph and what you've learned about the `--onto` flag for the `rebase` command.
+试着根据历史图和你所学到的关于 `rebase` 命令的 `--onto` 参数来思考一下。
 
-Well, you want to "replace" the parent of your first Commit on `feature_branch_2`, which is "Commit 14", to be on top of `main` branch, in this case, "Commit 12", rather than the beginning of `feature_branch_1`, in this case, "Commit 13". So again, you will be creating a _new base,_ this time for the first Commit on `feature_branch_2`.
+你想把 `feature_branch_2` 上第一个提交的父分支，也就是 `commit 14`，替换到 `main` 分支的顶部，这里是 `commit 12`，而不是 `feature_branch_1` 的起点，这里是 `commit 13`。因此，你将再次创建一个 _新的基点_，这次是在`feature_branch_2`上的第一个 Commit。
 
 ![image-271](https://www.freecodecamp.org/news/content/images/2023/06/image-271.png)
 
-You want to move around "Commit 14" and "Commit 15" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+你想要在 `Commit 14` 和 `Commit 15` 之间进行移动（来源：Brief）
 
-How would you do that?
+你打算怎么做呢？
 
-First, switch to `feature_branch_2`:
+第一，切到 `feature_branch_2` 分支:
 
 ```shell
 git checkout feature_branch_2
 ```
 
-And now you can use:
+然后你可以执行:
 
 ```shell
 git rebase -–onto main <SHA_OF_Commit_13>
 ```
 
-As a result, you have `feature_branch_2` based on `main` rather than `feature_branch_1`:
+因此，您的 `feature_branch_2` 是基于 `main` 分支而不是 `feature_branch_1` 分支：
 
 ![image-272](https://www.freecodecamp.org/news/content/images/2023/06/image-272.png)
 
-The Commit history after performing rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+执行变基(rebase)后的提交历史（来源：[Brief](https://youtu.be/3VFsitGUB3s)）
 
-The syntax is of the command is:
+该命令的语法是:
 
 ```shell
 git rebase --onto <new_parent> <old_parent>
 ```
 
-## How to rebase on a single branch
+## 如何在一个单独的分支上执行变基
 
-You can also use `git rebase` while looking at a history of a single branch.
+在查看单个分支的历史时，您也可以使用 git rebase。
 
-Let's see if you can help me here.
+让我们看看你是否能在这里帮助我。
 
-Say I worked from `feature_branch_2`, and specifically edited the file `code.py`. I started by changing all strings to be wrapped by double quotes rather than single quotes:
+假设我是从 `feature_branch_2` 开始工作的，具体来说是编辑了文件 `code.py`。我首先将所有字符串的引号从单引号改为双引号：
 
 ![image-273](https://www.freecodecamp.org/news/content/images/2023/06/image-273.png)
 
-Changing `'` into `"` in `code.py` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+在 `code.py` 中将 `'` 改为 `"`（来源：Brief）
 
-Then, I staged and Committed:
+然后，我将其进行了暂存（staged）并提交（Committed）：
 
 ```shell
 git add code.py
 git Commit -m "Commit 17"
 ```
 
-I then decided to add a new function at the beginning of the file:
+然后我决定在文件开头添加一个新函数:
 
 ![image-274](https://www.freecodecamp.org/news/content/images/2023/06/image-274.png)
 
-Adding the function `another_feature` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+添加函数 `another_feature` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Again, I staged and Committed:
+然后，我将其进行了暂存（staged）并提交（Committed）:
 
 ```shell
 git add code.py
 git Commit -m "Commit 18"
 ```
 
-And now I realized I actually forgot to change the single quotes to double quotes wrapping the `__main__` (as you might have noticed), so I did that too:
+现在我意识到我实际上忘记了将 `main` 用双引号包裹起来（你可能已经注意到了），所以我也做了这个改动:
 
 ![image-275](https://www.freecodecamp.org/news/content/images/2023/06/image-275.png)
 
-Changing `'__main__'` into `"__main__"` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+将 `'__main__'` 改成 `"__main__"`  (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Of course, I staged and Committed this change:
+当然, 我将其进行了暂存（staged）并提交（Committed）:
 
 ```shell
 git add code.py
 git Commit -m "Commit 19"
 ```
 
-Now, consider the history:
+现在，让我们来看看历史:
 
 ![image-276](https://www.freecodecamp.org/news/content/images/2023/06/image-276.png)
 
-The Commit history after introducing "Commit 19" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+引入 `Commit 19` 之后的提交记录 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-It isn't really nice, is it? I mean, I have two Commits that are related to one another, "Commit 17" and "Commit 19" (turning `'`s into `"`s), but they are split by the unrelated "Commit 18" (where I added a new function). What can we do? 🤔 Can you help me?
+这样看起来不太好，对吧？我的意思是，`Commit 17` 和 `Commit 19`（将`'`改为`"`）是相关的，但它们被无关的 `Commit 18`（我在那里添加了一个新函数）分隔开了。我们能做些什么？🤔 你能帮我吗？
 
-Intuitively, I want to edit the history here:
+直觉上，我想在这里修改历史:
 
 ![image-277](https://www.freecodecamp.org/news/content/images/2023/06/image-277.png)
 
-These are the Commits I want to edit (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+这些是我想要修改的提交 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-So, what would you do?
+那么，你会怎么做呢？
 
-You are right! 👏🏻
+你说得对！👏🏻
 
-I can rebase the history from "Commit 17" to "Commit 19", on top of "Commit 15". To do that:
+我可以在 `commit 15`的基础上，将历史记录从 `commit 17` 变基(rebase)为 `commit 19`。要做到这一点:
 
-```
+```shell
 git rebase --interactive --onto <SHA_OF_Commit_15> <SHA_OF_Commit_15>
 ```
 
-Notice I specified "Commit 15" as the beginning of the range of Commits, excluding this Commit. And I didn't need to explicitly specify `HEAD` as the last parameter.
+请注意，我指定了 `Commit 15` 作为提交范围的起点，不包括本次提交。而且我不需要明确指定 `HEAD` 作为最后一个参数。
 
 ![image-279](https://www.freecodecamp.org/news/content/images/2023/06/image-279.png)
 
-Using `rebase --onto` on a single branch (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+在单个分支上使用 `rebase --onto` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-After following your advice and running the `rebase` command (thanks! 😇) I get the following screen:
+按照您的建议运行 `rebase` 命令后（谢谢！😇），我看到了下面的显示：
 
 ![image-280](https://www.freecodecamp.org/news/content/images/2023/06/image-280.png)
 
-Interactive rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+交互式变基 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-So what would I do? I want to put "Commit 19" _before_ "Commit 18", so it comes right after "Commit 17". I can go further and squash them together, like so:
+那我该怎么办呢？我想把 `Commit 19` 放在 `Commit 18` 之前，这样它就紧跟在 `Commit 17`之后。我还可以进一步将它们合并在一起，就像这样：
 
 ![image-281](https://www.freecodecamp.org/news/content/images/2023/06/image-281.png)
 
-Interactive rebase - changing the order of Commit and squashing (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+交互式 rebase - 调整提交顺序并合并 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Now when I get prompted for a Commit message, I can provide the message "Commit 17+19":
+现在当我被提示输入提交信息时，我可以提供信息 `Commit 17+19`:
 
 ![image-282](https://www.freecodecamp.org/news/content/images/2023/06/image-282.png)
 
-Providing a Commit message (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+输入 Commit 信息 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-And now, see our beautiful history:
+现在，让我们来看看我们美丽的提交历史吧:
 
 ![image-283](https://www.freecodecamp.org/news/content/images/2023/06/image-283.png)
 
-The resulting history (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+由此产生的提交历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Thanks again! 🙌🏻
+再次感谢！ 🙌🏻
 
-# More Rebase Use Cases + More Practice
+# 更多变基用户案例 + 更多实践
 
-By now I hope you feel comfortable with the syntax of rebase. The best way to actually understand it is to consider various cases and figure out how to solve them yourself.
+现在，我希望你已经对 变基(rebase) 的语法感到得心应手了。要真正理解它，最好的办法是理解各种案例，并自己想办法解决它们。
 
-With the upcoming use cases, I strongly suggest you stop reading after I've introduced each use case, and then try to solve it on your own.
+对于接下来的用例，我强烈建议你在我介绍完每个用例后就停止阅读，然后尝试自己解决。
 
-## How to Exclude Commits
+## 如何排除 Commits
 
-Say you have this history on another repo:
+假设您在另一个软件仓库中有这样的历史记录:
 
 ![image-284](https://www.freecodecamp.org/news/content/images/2023/06/image-284.png)
 
-Another Commit history (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+别的 Commit 提交历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Before playing around with it, store a tag to "Commit F" so you can get back to it later:
+在使用之前，先将 `tag` 存储为 `original_Commit_f`，以便稍后再查看:
 
 ```shell
 git tag original_Commit_f
 ```
 
-Now, you actually don't want the changes in "Commit C" and "Commit D" to be included. You could use an interactive rebase like before and remove their changes. Or, could can use again `git rebase -–onto`. How would you use `--onto` in order to "remove" these two Commits?
+现在，你实际上并不希望包含 `Commit C`和 `Commit D` 中的更改。你可以像之前一样使用交互式 rebase，删除它们的改动。或者，也可以再次使用 `git rebase--onto`。如何使用 `--onto`来 `移除(remove)` 这两个提交(commit)呢？
 
-You can rebase `HEAD` on top of "Commit B", where the old parent was actually "Commit D", and now it should be "Commit B". Consider the history again:
+你可以在 `commit B`的基础上重建 `HEAD`，原来的父提交是 `commit D`，现在应该是 `commit B`,看提交历史记录：
 
 ![image-284](https://www.freecodecamp.org/news/content/images/2023/06/image-284.png)
 
-The history again (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+再次回顾提交历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Rebasing so that "Commit B" is the base of "Commit E", means "moving" both "Commit E" and "Commit F", and giving them another _base_ – "Commit B". Can you come up with the command yourself?
+ rebase 使 `Commit B` 成为 `Commit E` 的 _基(base)_，意味着 `移动(moving)` `Commit E`和 `Commit F`，并赋予它们另一个 _基(base)_ -- `Commit B`。你能自己想出这个命令吗？
 
-```
+```shell
 git rebase --onto <SHA_OF_Commit_B> <SHA_OF_Commit_D> HEAD
 ```
 
-Notice that using the syntax above would not move `main` to point to the new Commit, so the result is a "detached" `HEAD`. If you use `gg` or another tool that displays the history reachable from branches it might confuse you:
+请注意，使用上述语法不会移动 `main` 指向新的 Commit，因此结果是一个 `分离的(detached)` `HEAD`。如果你使用 `gg` 或其他显示分支历史的工具，这可能会让你感到困惑：
 
 ![image-285](https://www.freecodecamp.org/news/content/images/2023/06/image-285.png)
 
-Rebasing with `--onto` results in a detached `HEAD` (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+用 `--onto` 变基(rebase) 会导致一个分离(detached)的 `HEAD` （来源：[Brief](https://youtu.be/3VFsitGUB3s))
 
-But if you simply use `git log` (or my alias `git lol`), you will see the desired history:
+但如果使用 `git log`（或我的别名 `git lol`），就能看到想要的历史记录：
 
 ![image-286](https://www.freecodecamp.org/news/content/images/2023/06/image-286.png)
 
-The resulting history (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+由此形成的提交历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-I don't know about you, but these kinds of things make me really happy. 😊😇
+我不知道你怎么想，但这些事情让我非常开心。 😊😇
 
-By the way, you could omit `HEAD` from the previous command as this is the default value for the third parameter. So just using:
+顺便说一下，你可以省略前面命令中的 `HEAD`，因为这是第三个参数的默认值。因此，只需使用:
 
 ```shell
 git rebase --onto <SHA_OF_Commit_B> <SHA_OF_Commit_D>
 ```
 
-Would have the same effect. The last parameter actually tells Git where the end of the current sequence of Commits to rebase is. So the syntax of `git rebase --onto` with three arguments is:
+会有同样的效果。最后一个参数实际上是告诉 Git 当前提交序列的终点在哪里。所以有三个参数的 `git rebase --onto` 的语法是
 
 ```shell
 git rebase --onto <new_parent> <old_parent> <until>
 ```
 
-## How to move Commits across branches
+## 如何在不同分支间移动提交
 
-So let's say we get to the same history as before:
+因此，让我们回到之前的提交历史:
 
 ```shell
 git checkout original_Commit_f
 ```
 
-And now I want only "Commit E", to be on a branch based on "Commit B". That is, I want to have a new branch, branching from "Commit B", with only "Commit E".
+现在我只想让 `commit E`位于基于 `commit B` 的分支上。也就是说，我想建立一个新的分支，从 `commit B`分支出去，其中只有 `commit E`。
 
 ![image-287](https://www.freecodecamp.org/news/content/images/2023/06/image-287.png)
 
-The current history, considering "Commit E" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+考虑到 `commit E` 的当前历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-So, what does this mean in terms of rebase? Consider the image above. What Commit (or Commits) should I rebase, and which Commit would be the new base?
+那么，这意味着什么呢？请看上图。我应该变基(rebase)哪个提交（或哪些提交），哪个提交是新的基础(base)？
 
-I know I can count on you here 😉
+我知道在这里我可以让你来 😉
 
-What I want is to take "Commit E", and this Commit only, and change its base to be "Commit B". In other words, to _replay_ the changes introduced in "Commit E" onto "Commit B".
+我想要的是取出 `commit E`，只有这个提交，并将其基础更改为 `commit B`。换句话说，将`commit E`引入的更改 `重放(replay)` 到 `commit B`上。
 
-Can you apply that logic to the syntax of `git rebase`?
+你能将这个逻辑应用到 `git rebase` 的语法中吗？
 
-Here it is (this time I'm writing `<Commit_B>` instead of `<SHA_OF_Commit_B>`, for brevity):
+这里是语法（这次我用 `<Commit_B>` 代替 `<SHA_OF_Commit_B>`，为了简洁起见）：
 
 ```shell
 git rebase –-onto <Commit_B> <Commit_D> <Commit_E>
 ```
 
-Now the history looks like so:
+现在的提交历史是这样的:
 
 ![image-288](https://www.freecodecamp.org/news/content/images/2023/06/image-288.png)
 
-The history after rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+变基后的提交历史 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-Awesome!
+棒极了！
 
-# A Note About Conflicts
+# 关于冲突的说明
 
-Note that when performing a rebase, you may run into conflicts just as when merging. You may have conflicts because when rebasing, you are trying to apply patches on a different base, perhaps where the patches do not apply.
+请注意，进行变基时可能会遇到与合并时一样的冲突。可能会出现冲突，因为在变基时，您试图将补丁(patches)应用在不同的基础上，也许这些补丁(patches)并不适用。
 
-For example, consider the previous repository again, and specifically, consider the change introduced in "Commit 12", pointed to by `main`:
+例如，再次考虑之前的代码库，特别是考虑由 `main` 指向的 `commit 12` 引入的更改：
 
 ```shell
 git show main
@@ -793,16 +793,16 @@ git show main
 
 ![image-289](https://www.freecodecamp.org/news/content/images/2023/06/image-289.png)
 
-The patch introduced in "Commit 12" (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+在 `Commit 12` 中引入的补丁 (Source: [Brief](https://youtu.be/3VFsitGUB3s))
 
-I already covered the format of `git diff` in detail in [a previous post](https://www.freecodecamp.org/news/git-diff-and-patch/), but as a quick reminder, this Commit instructs Git to add a line after the two lines of context:
+我在[上一篇文章](https://www.freecodecamp.org/news/git-diff-and-patch/)中已经详细介绍了 `git diff` 的格式，但为了快速提醒大家，这个 Commit 会指示 Git 在两行上下文之后添加一行：
 
 ````
 ```shell
 This is a sample file
 ````
 
-And before these three lines of context:
+而在这三行上下文之前:
 
 ````
 ```
@@ -810,58 +810,59 @@ def new_feature():
   print('new feature')
 ````
 
-Say you are trying to rebase "Commit 12" onto another Commit. If, for some reason, these context lines don't exist as they do in the patch on the Commit you are rebasing _onto_, then you will have a conflict. To learn more about conflicts and how to resolve them, see [this guide](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/).
+假设您正试图将 `commit 12` 重定向到另一个提交上。如果由于某种原因，这些上下文行并不存在于您要重置的 Commit 上的补丁中，那么就会产生冲突。要进一步了解冲突以及如何解决冲突，请参阅 [本指南](https://www.freecodecamp.org/news/the-definitive-guide-to-git-merge/)。
 
-# Zooming Out for the Big Picture
+# 放眼全局
 
 ![image-290](https://www.freecodecamp.org/news/content/images/2023/06/image-290.png)
 
-Comparing rebase and merge (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+比较变基(rebase)和合并(merge)（来源：[Brief](https://youtu.be/3VFsitGUB3s)）
 
-In the beginning of this guide, I started by mentioning the similarity between `git merge` and `git rebase`: both are used to integrate changes introduced in different histories.
+在本指南的开始，我提到了 `git merge` 和 `git rebase` 之间的相似性：它们都用于整合不同历史中引入的更改。
 
-But, as you now know, they are very different in how they operate. While merging results in a diverged history, rebasing results in a linear history. Conflicts are possible in both cases. And there is one more column described in the table above that requires some close attention.
+但是，正如你现在所知，它们在操作方式上有很大的不同。合并导致了一个分叉的历史，而变基导致了一个线性的历史。在两种情况下都可能出现冲突。表格中还有一列需要特别关注。
 
-Now that you know what "Git rebase" is, and how to use interactive rebase or `rebase --onto`, as I hope you agree, `git rebase` is a super powerful tool. Yet, it has one huge drawback when compared with merging.
+现在你知道了什么是 `Git 变基(rebase)`，以及如何使用交互式变基或 `rebase --onto`，希望你理解，`git rebase` 是一个超级强大的工具。然而，与合并相比，它有一个巨大的缺点。
 
-Git rebase changes the history.
+Git 变基改变了提交历史。
 
-This means that you should **not** rebase Commits that exist outside your local copy of the repository, and that other people may have based their Commits on.
+这意味着你**不应该**对存在于你本地代码库之外的并且其他人可能以此为基础进行提交的提交进行变基。
 
-In other words, if the only Commits in question are those you created locally – go ahead, use rebase, go wild.
+换句话说，如果问题涉及的只有你在本地创建的提交，那就继续使用变基，尽情操作。
 
-But if the Commits have been pushed, this can lead to a huge problem – as someone else may rely on these Commits, that you later overwrite, and then you and they will have different versions of the repository.
+但是，如果这些提交已经被推送，这可能会导致一个巨大的问题，因为其他人可能依赖这些提交，而后来你覆盖了它们，然后你和他们将拥有存储库的不同版本。
 
-This is unlike `merge` which, as we have seen, does not modify history.
+这与我们所见的不修改历史的 `merge` 不同。
 
-For example, consider the last case where we rebased and resulted in this history:
+例如，考虑最后一个情况，我们进行了变基，导致了这样的提交历史:
 
 ![image-288](https://www.freecodecamp.org/news/content/images/2023/06/image-288.png)
 
-The history after rebase (Source: [Brief](https://youtu.be/3VFsitGUB3s))
+变基后的提交历史（来源：[Brief](https://youtu.be/3VFsitGUB3s)）
 
-Now, assume that I have already pushed this branch to the remote. And after I had pushed the branch, another developer pulled it and branched out from "Commit C". The other developer didn't know that meanwhile, I was locally rebasing my branch, and would later push it again.
+现在，假设我已经将这个分支推送到远程仓库。在我推送了这个分支之后，另一个开发人员拉取了它，并从 `commit C`创建了一个新分支。另一个开发人员不知道与此同时，我正在本地对我的分支进行变基，并且稍后会再次推送它。
 
-This results in an inconsistency: the other developer works from a Commit that is no longer available on my copy of the repository.
+这导致了一个不一致：另一个开发人员从一个在我的代码库副本上不再可用的提交中进行工作。
 
-I will not elaborate on what exactly this causes in this guide, as my main message is that you should definitely avoid such cases. If you're interested in what would actually happen, I'll leave a link to a useful resource below. For now, let's summarize what we have covered.
+我不会在本指南中详细阐述这到底会导致什么，因为我的主要观点是你绝对应该避免这种情况。如果你对实际会发生什么感兴趣，我会在下面留下一个有用资源的链接。现在，让我们总结一下我们所讨论的内容。
 
-# Recap
+# 回顾
 
-In this tutorial, you learned about `git rebase`, a super-powerful tool to rewrite history in Git. You considered a few use cases where `git rebase` can be helpful, and how to use it with one, two, or three parameters, with and without the `--onto` switch.
+在本教程中，你将学习到 `git rebase` 这个在 Git 中重写历史的超级强大工具。你考虑了一些`git rebase`可能有用的用例，以及如何使用一个、两个或三个参数，使用或不使用`--onto`开关。
 
-I hope I was able to convince you that `git rebase` is powerful – but also that it is quite simple once you get the gist. It is a tool to "copy-paste" Commits (or, more accurately, patches). And it's a useful tool to have under your belt.
+我希望我能让你相信，`git rebase` 不仅功能强大，而且一旦掌握了要领，使用起来也很简单。它是一个 `复制粘贴(copy-paste)` 提交（或者更准确地说，是补丁）的工具。它是一个非常有用的工具。
 
-# Additional References
 
-- [Git Internals YouTube playlist — by Brief](https://www.youtube.com/playlist?list=PL9lx0DXCC4BNUby5H58y6s2TQVLadV8v7) (my YouTube channel).
-- [Omer's previous post about Git internals.](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/)
-- [Omer's tutorial about Git UNDO - rewriting history with Git](https://medium.com/@Omer_Rosenbaum/git-undo-how-to-rewrite-git-history-with-confidence-d4452e2969c2).
-- [Git docs on rebasing](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
-- [Branching and the power of rebase](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/7-branching-and-the-power-of-rebase.html)
-- [Interactive rebasing](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/8-interactive-rebasing.html)
+# 其他参考资料
+
+- [Git Internals YouTube 播放列表 - 作者：Brief](https://www.youtube.com/playlist?list=PL9lx0DXCC4BNUby5H58y6s2TQVLadV8v7) (my YouTube channel).
+- [Omer 上一篇关于 Git 内部结构的文章。](https://www.freecodecamp.org/news/git-internals-objects-branches-create-repo/)
+- [Omer 的 Git UNDO 教程--用 Git 重写历史](https://medium.com/@Omer_Rosenbaum/git-undo-how-to-rewrite-git-history-with-confidence-d4452e2969c2).
+- [关于变基的 Git 文档](https://git-scm.com/book/en/v2/Git-Branching-Rebasing)
+- [分支和 rebase 的强大功能](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/7-branching-and-the-power-of-rebase.html)
+- [交互式变基](https://jwiegley.github.io/git-from-the-bottom-up/1-Repository/8-interactive-rebasing.html)
 - [Git rebase --onto](https://womanonrails.com/git-rebase-onto)
 
-# **\*\***About the Author**\*\***
+# **关于作者**
 
-[Omer Rosenbaum](https://www.linkedin.com/in/omer-rosenbaum-034a08b9/) is [Swimm](https://swimm.io/)’s Chief Technology Officer. He's the author of the [Brief YouTube Channel](https://youtube.com/@BriefVid). He's also a cyber training expert and founder of Checkpoint Security Academy. He's the author of [Computer Networks (in Hebrew)](https://data.cyber.org.il/networks/networks.pdf). You can find him on [Twitter](https://twitter.com/Omer_Ros).
+[Omer Rosenbaum](https://www.linkedin.com/in/omer-rosenbaum-034a08b9/) 是 [Swimm](https://swimm.io/) 的首席技术官。他是[Brief YouTube 频道](https://youtube.com/@BriefVid) 的作者。他也是一位网络安全培训专家，创立了 Checkpoint Security Academy。他是 [《计算机网络》（希伯来语版）](https://data.cyber.org.il/networks/networks.pdf) 的作者。你可以在 [Twitter](https://twitter.com/Omer_Ros) 上找到他.

@@ -798,7 +798,7 @@ For example, let's visualize the distribution of values of sepal width in the Ir
 
 We can immediately see that the sepal widths lie in the range 2.0 - 4.5, and around 35 values are in the range 2.9 - 3.1, which seems to be the most populous bin.
 
-#### **How to C**ontrol the** S**ize and** N**umber of** B**ins****
+#### **How to C**ontrol the** S**ize and** N**umber of** B**ins
 
 We can control the number of bins or the size of each one using the bins argument.
 
@@ -851,7 +851,7 @@ Here's a single grid showing the different types of charts we've covered in this
 
 See this page for a full list of supported functions: [https://matplotlib.org/3.3.1/api/axes\_api.html#the-axes-class](https://jovian.ai/outlink?url=https%3A%2F%2Fmatplotlib.org%2F3.3.1%2Fapi%2Faxes_api.html%23the-axes-class) .
 
-#### ****Pair** P**lots with Seaborn****
+#### ****Pair** P**lots with Seaborn
 
 Seaborn also provides a helper function `sns.pairplot` to automatically plot several different charts for pairs of features within a dataframe.
 

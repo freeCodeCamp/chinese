@@ -29,7 +29,7 @@ For the sake of simplicity, here’s an example of subscribing to a [media query
 
 Before async rendering is enabled, we don’t have any issues because we can make the following guarantees about the component:
 
-1.  The `constructor` will be synchronously followed by `componentWillMount`, if we opt to use it, and then `render`. **Importantly, we won’t be interrupted before render.** Because of this, we can further guarantee…
+1.  The `constructor` will be synchronously followed by `componentWillMount`, if we opt to use it, and then `render`. **Importantly, we won’t be interrupted before render.** Because of this, we can further guarantee……
 2.  If the component unmounts in the future, `componentWillUnmount`will clean up the event listener (subscription) beforehand. This means that the `window` won’t retain a reference to the component’s `handleMediaEvent` method via the media query list, therefore allowing the unmounted component to be garbage collected and hence avoid a memory leak. Failing to clean this up once wouldn’t be a big deal, but a component re-mounting and adding more listeners could cause issues over the lifetime of the app.
 
 > There is one caveat: error boundaries. I’ll touch on that in a bit.

@@ -149,7 +149,7 @@ constant 和 immutable 变量的值可以并且仅可以被赋予一次。在赋
 
 因此，如果我们将 `qtyCups` 状态变量设为 constant 或 immutable，我们将无法再对其调用 `increment()` 或 `decrement()` 函数（事实上，调用的话代码将无法编译！）。
 
-constant 的值必须在代码本身中硬编码（hardcode），而immutable 变量可以将它们的值设置一次，通常是通过构造函数中的赋值（我们很快就会讨论构造函数）。你可以在[此处的文档](https://docs.soliditylang.org/en/v0.8.16/contracts.html#constant-and-immutable-state-variables)中阅读更多内容。
+constant 的值必须在代码本身中硬编码（hardcode），而 immutable 变量可以将它们的值设置一次，通常是通过构造函数中的赋值（我们很快就会讨论构造函数）。你可以在[此处的文档](https://docs.soliditylang.org/en/v0.8.16/contracts.html#constant-and-immutable-state-variables)中阅读更多内容。
 
 ## 智能合约中的变量作用域
 智能合约中的变量有 3 个作用域：
@@ -516,7 +516,7 @@ Solidity 中值类型（Value Types）和引用类型（Reference Types）
 
 地址的默认值（如果你声明一个类型地址的变量但不分配任何值，则将具有的值）为`0x00000000000000000000000000000000000000000000000000`，这也是此表达式所代表的值：`address（0）`。
 
-布尔值表示真值还是假值。最后，我们有[固定大小的字节数组](https://docs.soliditylang.org/en/v0.8.17/types.html#fixed-size-byte-arrays)，如 `bytes1`、`bytes2` … `bytes32`。这些是包含字节的固定长度数组。所有这些类型的值在代码中传递时都会被复制。
+布尔值表示真值还是假值。最后，我们有[固定大小的字节数组](https://docs.soliditylang.org/en/v0.8.17/types.html#fixed-size-byte-arrays)，如 `bytes1`、`bytes2` …… `bytes32`。这些是包含字节的固定长度数组。所有这些类型的值在代码中传递时都会被复制。
 
 对于“引用类型”，我们有数组，它们可以在声明时指定固定大小，或者动态大小的数组。虽然它们声明时大小是固定的，但其大小可以“调整”，因为数组中元素的数量会增加。
 
@@ -710,7 +710,7 @@ Solidity 允许开发人员更改父合约中的函数在派生合约中的实�
 
 编译器会给出两个错误：
 
-1. 在合约A中，会提示你“trying to override non-virtual function（试图覆盖非虚函数）”，提示你是否忘记添加 `virtual` 关键字。
+1. 在合约 A 中，会提示你“trying to override non-virtual function（试图覆盖非虚函数）”，提示你是否忘记添加 `virtual` 关键字。
 2. 在合约 B 中，它会抱怨 `getName()` 函数缺少标识符 `override`。
 
 这意味着你在合约 B 中的新 `getName` 试图重写父合约中同名的函数，但父合约的函数未标记为 `virtual` - 这意味着它无法被重写。
@@ -805,7 +805,7 @@ Solidity 允许开发人员更改父合约中的函数在派生合约中的实�
 
 为什么整数 2022 会转换为 230？这显然不是我们预想的结果。明显是一个错误，对吧？
 
-原因是大小为 256 位的无符号整数将包含 256 个二进制数字（0 或 1）。所以 `a` 保存整数值 '2022' 并且该值（以位为单位）将有 256 位数字，其中大部分将为 0，除了最后 11 位数字将是......（通过将 2022 从十进制系统到二进制 [此处](https://decimaltobinary.com/256-in-binary)）。
+原因是大小为 256 位的无符号整数将包含 256 个二进制数字（0 或 1）。所以 `a` 保存整数值 '2022' 并且该值（以位为单位）将有 256 位数字，其中大部分将为 0，除了最后 11 位数字将是……（通过将 2022 从十进制系统到二进制 [此处](https://decimaltobinary.com/256-in-binary)）。
 
 另一方面，`b` 的值只有 8 位或数字，即 11100110。这个二进制数转换为十进制时（你可以使用相同的转换器 - 只需再另一个框中填写！）是 230。不是 2022 .
 
@@ -855,7 +855,7 @@ Solidity 不处理小数点。这在未来可能会改变，但目前你无法�
 
 在科学计数法中，10^18 也表示为 1e18，其中 1e 表示 10，后面的数字表示 1e 的指数。
   
-所以下面的代码会产生一个编译器错误：“_Return argument type rational\_const 3 / 2 is not implicitly convertible to expected type…int256_”：
+所以下面的代码会产生一个编译器错误：“_Return argument type rational\_const 3 / 2 is not implicitly convertible to expected type...int256_”：
 
 <table style="border:none;border-collapse:collapse;"><colgroup></colgroup><tbody><tr style="height:0pt"><td style="vertical-align:top;background-color:#002451;padding:5pt 5pt 5pt 5pt;overflow:hidden;overflow-wrap:break-word;"><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ebbbff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">function</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> </span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#bbdaff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">divideBy1e18</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">()</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#bbdaff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">public</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> </span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#bbdaff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">pure</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> </span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#bbdaff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">returns</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> (</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffc58f;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">int</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">) {</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"><br></span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">&nbsp; &nbsp; </span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ebbbff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">return</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> </span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffc58f;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">1500000000000000000</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">/(</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffc58f;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">1e18</span><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">);</span><span style="font-size:9pt;font-family:Consolas,sans-serif;color:#7285b7;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;"> // 1.5 → Solidity can’t handle this.</span></p><p dir="ltr" style="line-height:1.38;margin-top:0pt;margin-bottom:0pt;"><span style="font-size:11pt;font-family:Consolas,sans-serif;color:#ffffff;background-color:#002451;font-weight:400;font-style:normal;font-variant:normal;text-decoration:none;vertical-align:baseline;white-space:pre;white-space:pre-wrap;">}</span></p></td></tr></tbody></table>
 
@@ -1109,7 +1109,7 @@ Solidity 事件包含三类数据：
 
 1. 发出事件的合约地址。
 2. 主题（用于过滤日志查询的索引事件参数）。
-3. 非索引参数，简称“数据”，采用ABI编码，以十六进制表示。此数据需要按照 ABI 编码和解码部分中描述的方式进行 ABI 解码。
+3. 非索引参数，简称“数据”，采用 ABI 编码，以十六进制表示。此数据需要按照 ABI 编码和解码部分中描述的方式进行 ABI 解码。
 
 在 Remix 中工作时，你还可以在控制台中检查事件，如下所示：
 

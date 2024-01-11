@@ -4,32 +4,32 @@
 > * 校对者：
 
 ![Learning Python: From Zero to Hero](https://cdn-media-1.freecodecamp.org/images/1*ueWmI48uuShON-hX7LwI0w.png)
-Python学习：从小白到大神(https://cdn-media-1.freecodecamp.org/images/1*ueWmI48uuShON-hX7LwI0w.png)
+Python 学习：从小白到大神(https://cdn-media-1.freecodecamp.org/images/1*ueWmI48uuShON-hX7LwI0w.png)
 作者：TK
-第一个问题：Python是什么？创始人吉多*范苏罗姆认为，Python是一种
->“高级编程语言，其核心设计哲学强调代码的可读性和句法，因此几行代码就能够表达程序员的想法。”
-为什么我要学Python呢？一个原因在于，Python非常美妙，Python语言可以相当自然流畅地表达我的想法。
-另一个原因就是，Python编程在很多方面都大有可为，包括但不限于数据科学、网站开发、机器学习。Quora， Pinterest和Spotify的后端网站开发都在使用Python。因此，让我们一同来学习Python吧。
+第一个问题：Python 是什么？创始人吉多*范苏罗姆认为，Python 是一种
+> “高级编程语言，其核心设计哲学强调代码的可读性和句法，因此几行代码就能够表达程序员的想法。”
+为什么我要学 Python 呢？一个原因在于，Python 非常美妙，Python 语言可以相当自然流畅地表达我的想法。
+另一个原因就是，Python 编程在很多方面都大有可为，包括但不限于数据科学、网站开发、机器学习。Quora， Pinterest 和 Spotify 的后端网站开发都在使用 Python。因此，让我们一同来学习 Python 吧。
 ### 基础知识
 
 #### 1\. 变量
 
 很简单，你可以把变量理解成储存值的代码。
 
-在Python中，定义一个变量、给变量赋值十分简单。例如：给变量"one"赋值1，代码如下：
+在 Python 中，定义一个变量、给变量赋值十分简单。例如：给变量"one"赋值 1，代码如下：
 
 ```py
 one = 1
 ```
 
-这样就可以把1赋值给变量"one"了，很简单吧。
+这样就可以把 1 赋值给变量"one"了，很简单吧。
 
 ```py
 two = 2
 some_number = 10000
 ```
 
-你可以把任意数值赋值给你想要的任意变量。如上述代码，整数2赋值给了变量"two"，整数10000赋值给了变量"some\_number"。
+你可以把任意数值赋值给你想要的任意变量。如上述代码，整数 2 赋值给了变量"two"，整数 10000 赋值给了变量"some\_number"。
 
 除了整数，布尔值（True / False）、字符串、浮点数和其他数据类型也可以赋值给变量。
 
@@ -45,7 +45,7 @@ my_name = "Leandro Tk"
 
 #### 2\. 控制语句：条件判断
 
-"If"条件语句检验条件真假。如果条件为真，执行if后面的条件。举个例子：
+"If"条件语句检验条件真假。如果条件为真，执行 if 后面的条件。举个例子：
 
 ```py
 if True:
@@ -53,9 +53,9 @@ if True:
 
 ```
 
-2比1大，条件为真，所以执行print后面的程序。
+2 比 1 大，条件为真，所以执行 print 后面的程序。
 
-如果if后面的条件语句为假，则执行else后面的语句。
+如果 if 后面的条件语句为假，则执行 else 后面的语句。
 
 ```py
 if 1 > 2:
@@ -64,9 +64,9 @@ else:
   print("1 is not greater than 2")
 ```
 
-1小于2，条件为假，所以执行else后面的语句。
+1 小于 2，条件为假，所以执行 else 后面的语句。
 
-也可以使用elif语句：
+也可以使用 elif 语句：
 
 ```py
 if 1 > 2:
@@ -79,16 +79,16 @@ else:
 
 #### 3\. 循环/迭代
 
-Python有很多不同的循环/迭代模式。今天说两个：while循环和for循环。
+Python 有很多不同的循环/迭代模式。今天说两个：while 循环和 for 循环。
 
-while循环：当条件为真，while模块语句执行。我们可以用while循环来输出1-10这几个数字。
+while 循环：当条件为真，while 模块语句执行。我们可以用 while 循环来输出 1-10 这几个数字。
 
 ```py
 num = 1
 
 ```
 
-while循环需要循环条件。如果循环条件为真，循环继续。上述代码表明，num值为11时，循环条件为假，循环停止。
+while 循环需要循环条件。如果循环条件为真，循环继续。上述代码表明，num 值为 11 时，循环条件为假，循环停止。
 
 另外一种代码形式可以更好的理解循环条件：
 
@@ -99,18 +99,18 @@ loop_condition = True
 
 循环条件为真，循环继续，直到循环条件为假。
 
-for循环：模块语句运用"num"变量时，for循环迭代变量。for循环代码可以跟while循环一样输出数字1-10。
+for 循环：模块语句运用"num"变量时，for 循环迭代变量。for 循环代码可以跟 while 循环一样输出数字 1-10。
 
 ```py
 for i in range(1, 11):
   print(i)
 ```
 
-看见了吧，就是这么简单。整数数列range()循环从1开始，直到第十一个元素停止循环（输出元素截止到第十个）。
+看见了吧，就是这么简单。整数数列 range()循环从 1 开始，直到第十一个元素停止循环（输出元素截止到第十个）。
 
 ### 列表（List）：集合（Collection）|数组（Array）|数据结构（Data Structure）
 
-设想一下你需要把整数1储存在一个变量中。但现在可能你想储存2，甚至储存3,4,5……
+设想一下你需要把整数 1 储存在一个变量中。但现在可能你想储存 2，甚至储存 3,4,5……
 
 是否有一种方式可以避免将我所想要的所有的整数存在不计其数的变量当中？——确实有。
 
@@ -124,13 +124,13 @@ my_integers = [1, 2, 3, 4, 5]
 
 现在你可能要问了：怎样才可以从数组中取一个数值呢？
 
-问得好。列表中有个概念，叫index。列表中的第一个元素为index 0，第二个是index 1，依次类推。
+问得好。列表中有个概念，叫 index。列表中的第一个元素为 index 0，第二个是 index 1，依次类推。
 
-更简单来说，我们可以用index来指代数组中的每个元素。
+更简单来说，我们可以用 index 来指代数组中的每个元素。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ReMk6NgghLII20vPD6uNEA.jpeg)
 
-Python句法比较容易理解：
+Python 句法比较容易理解：
 
 ```py
 my_integers = [5, 7, 1, 3, 4]
@@ -156,7 +156,7 @@ relatives_names = [
 
 我们刚学习了列表中的各个元素如何工作。但我还需要告诉你们如何向列表中添加元素（向列表添加一个事项）。
 
-最常见的方法是运用append函数。我们一起来看看如何运用。
+最常见的方法是运用 append 函数。我们一起来看看如何运用。
 
 ```py
 bookshelf = []
@@ -166,7 +166,7 @@ print(bookshelf[0]) # The Effective Engineer
 print(bookshelf[1]) # The 4 Hour Work Week
 ```
 
-append函数特别简单，只需要将元素添加为append的参数（正如"The Effective Engineer"）。
+append 函数特别简单，只需要将元素添加为 append 的参数（正如"The Effective Engineer"）。
 
 有关列表的知识就说到这里。我们一起来看看另外一个数据结构。
 
@@ -184,7 +184,7 @@ dictionary_example = {
 }
 ```
 
-元素key指向value。那运用key，就可以得到字典中的value。让我们试一下：
+元素 key 指向 value。那运用 key，就可以得到字典中的 value。让我们试一下：
 
 ```py
 dictionary_tk = {
@@ -195,13 +195,13 @@ dictionary_tk = {
 
 ```
 
-我创建了一个关于我自己的一个字典，包括有我的名字、绰号和国籍。这些属性就是字典中的key。
+我创建了一个关于我自己的一个字典，包括有我的名字、绰号和国籍。这些属性就是字典中的 key。
 
-我们刚已经学过了如何运用索引得到列表中的值，那我们也可以运用索引（即字典中的key）来得到字典中value的存放位置。
+我们刚已经学过了如何运用索引得到列表中的值，那我们也可以运用索引（即字典中的 key）来得到字典中 value 的存放位置。
 
-例子当中，我用存储在字典中的value输出了一个关于我的短语。很简单吧~
+例子当中，我用存储在字典中的 value 输出了一个关于我的短语。很简单吧~
 
-字典还有一个很酷的属性，就是value的值可变。在我创建的字典中，我想要增加我的年龄"age"作为一个key，并且存入我年龄的整数值。
+字典还有一个很酷的属性，就是 value 的值可变。在我创建的字典中，我想要增加我的年龄"age"作为一个 key，并且存入我年龄的整数值。
 
 ```py
 dictionary_tk = {
@@ -213,9 +213,9 @@ dictionary_tk = {
 
 ```
 
-现在key-value当中，key是字符串，value是整数。
+现在 key-value 当中，key 是字符串，value 是整数。
 
-跟列表一样，现在我们要学习如何向字典中添加元素。key指向value是字典的一大组成。向字典中添加元素时也是如此。
+跟列表一样，现在我们要学习如何向字典中添加元素。key 指向 value 是字典的一大组成。向字典中添加元素时也是如此。
 
 ```py
 dictionary_tk = {
@@ -227,11 +227,11 @@ dictionary_tk['age'] = 24
 
 ```
 
-一点都不复杂：我们只需要在字典中设定一个value，并且对应一个key就可以了。
+一点都不复杂：我们只需要在字典中设定一个 value，并且对应一个 key 就可以了。
 
 ### 迭代：数据结构中的循环
 
-正如我们在Python基础[1]中学到的内容，列表迭代非常简单。我们这些用Python开发的程序员通常使用for循环。一起来做：
+正如我们在 Python 基础[1]中学到的内容，列表迭代非常简单。我们这些用 Python 开发的程序员通常使用 for 循环。一起来做：
 
 ```py
 bookshelf = [
@@ -244,9 +244,9 @@ bookshelf = [
 
 ```
 
-所以我们输出了书架上的每一本书（但我们能做的远不止于此）。这就是Python——简单且直观。
+所以我们输出了书架上的每一本书（但我们能做的远不止于此）。这就是 Python——简单且直观。
 
-对于哈希数据结构而言，我们也可以使用for循环，但同时我们应该用到key：
+对于哈希数据结构而言，我们也可以使用 for 循环，但同时我们应该用到 key：
 
 ```py
 dictionary = { "some_key": "some_value" }
@@ -255,9 +255,9 @@ for key in dictionary:
 
 ```
 
-这个例子就解释了如何在for循环中使用key。我们可以输出字典中的每个key以及其对应的value。
+这个例子就解释了如何在 for 循环中使用 key。我们可以输出字典中的每个 key 以及其对应的 value。
 
-还可以使用iteritems方法。
+还可以使用 iteritems 方法。
 
 ```py
 dictionary = { "some_key": "some_value" }
@@ -266,7 +266,7 @@ for key, value in dictionary.items():
 
 ```
 
-我们将这两个参数命名为key和value，但这不是必须。我们也可以有其他命名。比如说：
+我们将这两个参数命名为 key 和 value，但这不是必须。我们也可以有其他命名。比如说：
 
 ```py
 dictionary_tk = {
@@ -280,11 +280,11 @@ for attribute, value in dictionary_tk.items():
 
 ```
 
-可以看到，例子中我们用attribute替代了key，代码同样运行流畅。真棒！
+可以看到，例子中我们用 attribute 替代了 key，代码同样运行流畅。真棒！
 
 ### 类和对象
 
-#### 理论先导：
+#### 理论先导
 
 对象(object)代表了真实世界当中的实体，例如汽车、狗狗、自行车等。这些对象有两个主要特点：数据(data)和行为(behavior)。
 
@@ -296,7 +296,7 @@ for attribute, value in dictionary_tk.items():
 
 类从对象中抽象而来。真实世界当中，一种类型下有很多物体，比如汽车。所有汽车的制作过程基本一致，设计模型也相差无几，都有引擎、轮胎等等。每辆汽车都是同一批设计图纸的产物，有着相同的零部件。
 
-#### Python面向对象的程序设计模式：ON
+#### Python 面向对象的程序设计模式：ON
 
 面向对象的程序设计语言——Python，有类和对象这两个概念。
 
@@ -304,7 +304,7 @@ for attribute, value in dictionary_tk.items():
 
 所以，类就是一种模型，一种定义属性和行为的方式（正如理论部分所讲）。举个例子，车辆这种类就有它自己的属性，属性能够定义什么对象是车辆。轮胎数量、油箱类型、座位数量、最高时速等等，都是车辆的属性。
 
-有了这些前提，我们一起来看看Python中类的表达句法：
+有了这些前提，我们一起来看看 Python 中类的表达句法：
 
 ```py
 class Vehicle:
@@ -320,9 +320,9 @@ car = Vehicle()
 print(car) # <main.Vehicle instance at 0x7fb1de6c2638>
 ```
 
-这里的car就是Vehicle类中的一个对象。
+这里的 car 就是 Vehicle 类中的一个对象。
 
-记住，我们的Vehicle类中有四个属性：车轮数量、邮箱类型、座位数量和最高时速。创建一种车辆对象时我们便设置好这些属性。所以这里，一开始我们就定义类来接收数据。
+记住，我们的 Vehicle 类中有四个属性：车轮数量、邮箱类型、座位数量和最高时速。创建一种车辆对象时我们便设置好这些属性。所以这里，一开始我们就定义类来接收数据。
 
 ```py
 class Vehicle:
@@ -333,13 +333,13 @@ class Vehicle:
         self.maximum_velocity = maximum_velocity
 ```
 
-**我们运用了'init'这种构造方法。所以创建车辆对象时，我们可以便定义这些属性。设想，我们喜欢**Tesla Model S,**，自然而然我们便想创建这样一种对象。这个对象有四个车轮，由电力驱动，有四个车座，最高时速可达250km，合每小时155英里。那我们就来创建这个对象：
+**我们运用了'init'这种构造方法。所以创建车辆对象时，我们可以便定义这些属性。设想，我们喜欢**Tesla Model S,**，自然而然我们便想创建这样一种对象。这个对象有四个车轮，由电力驱动，有四个车座，最高时速可达 250km，合每小时 155 英里。那我们就来创建这个对象：
 
 ```py
 tesla_model_s = Vehicle(4, 'electric', 5, 250)
 ```
 
-属性包括四个车轮、用电驱动、五个车座、250km的最高时速。
+属性包括四个车轮、用电驱动、五个车座、250km 的最高时速。
 
 所有属性都已经设置完毕。但是我们怎么获得这些属性的值呢？这就需要“向对象发送一条信息询问”，我们把这一过程称为“方法”(method)，也就是“对象的行为”。我们来做一下：
 
@@ -370,7 +370,7 @@ class Vehicle:
     self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>__number_of_wheels <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> number</code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">And we can use these methods as attributes:</p><pre class=" language-py" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-py" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">tesla_model_s <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> Vehicle<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">4</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'electric'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">5</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">250</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-这个跟定义“方法”不太一样。这种情况下，“方法”作为参数运转。举个例子，设定车轮数量时，我们不是把“2”作为参数，而是把“2”赋值给“车轮数量”这一属性。而这也是写pythonic，getter和setter代码的一种方法。
+这个跟定义“方法”不太一样。这种情况下，“方法”作为参数运转。举个例子，设定车轮数量时，我们不是把“2”作为参数，而是把“2”赋值给“车轮数量”这一属性。而这也是写 pythonic，getter 和 setter 代码的一种方法。
 
 当然“方法”也有其他用途，以"**make\_noise**"方法为例：
 ```py
@@ -396,7 +396,7 @@ class Vehicle:
 
 #### 公共实例变量
 
-对于Python当中的类而言，我们在构造方法中预置一个公共实例变量，如下：
+对于 Python 当中的类而言，我们在构造方法中预置一个公共实例变量，如下：
 
 在构造方法内部：
 
@@ -413,7 +413,7 @@ tk = Person('TK')
 print(tk.first_name) # => TK
 ```
 
-在类当中，如果我们直接给first_name赋值：
+在类当中，如果我们直接给 first_name 赋值：
 
 ```py
 class Person:
@@ -441,11 +441,11 @@ print(tk.first_name) # => Kaio
 
 #### 非公共实例变量
 
-> We don’t use the term “private” here, since no attribute is really private in Python (without a generally unnecessary amount of work). —  [PEP 8][3]因为Python（没有一大堆不必要的工作时）当中没有一个变量完全私有不公开，所以我们这里使用了非公共(non-public)这个词，而没用使用私有(private)这个词。[PEP 8][3]
+> We don’t use the term “private” here, since no attribute is really private in Python (without a generally unnecessary amount of work). —  [PEP 8][3]因为 Python（没有一大堆不必要的工作时）当中没有一个变量完全私有不公开，所以我们这里使用了非公共(non-public)这个词，而没用使用私有(private)这个词。[PEP 8][3]
 
 跟公共实例变量无异，我们也可以在构造方法和类当中定义非公共实例变量。句法差异在于：对于非公共实例变量而言，需要在变量名字前使用"_".
 
-> 根据Python软体基金会[4]，“Python中不存在“私有”(private)实例变量，除了在对象内部，否则不能得到私有实例变量。然而，Python中大多数代码都遵循一条惯例：无论是函数、方法或者数据成员，只有其名字前有一条下划线（例如"_spam_"_），它就可以被视为API（应用编程接口）的非公共部分。”
+> 根据 Python 软体基金会[4]，“Python 中不存在“私有”(private)实例变量，除了在对象内部，否则不能得到私有实例变量。然而，Python 中大多数代码都遵循一条惯例：无论是函数、方法或者数据成员，只有其名字前有一条下划线（例如"_spam_"_），它就可以被视为 API（应用编程接口）的非公共部分。”
 
 
 例子如下：
@@ -460,7 +460,7 @@ _`class Person:
 _`tk = Person('TK', 'tk@mail.com')
 print(tk._email) # [tk@mail.com][5]_`_
 
->我们可以获得并且更新非公共变量。非公共变量只是一种约定俗成，不应被当做API的非公共部分。
+> 我们可以获得并且更新非公共变量。非公共变量只是一种约定俗成，不应被当做 API 的非公共部分。
 
 所以我们采用一种方法，可以让我们在类的定义中将非公共变量当做非公共部分。两个方法("email" & "update_email")可帮助理解：
 
@@ -487,7 +487,7 @@ print(tk.email()) # => [new_tk@mail.com][8]_`
 1.  我们引入了一个新对象，包括"first_name"和"email"[tk@mail.com][9]。
 2.  我们用一种方法得到了非公共变量，输出了"email"。
 3.  我们试图在类之外设置一个新的"email"。
-4.  我们需要将非公共变量视作API的非公共部分。
+4.  我们需要将非公共变量视作 API 的非公共部分。
 5.  运用实例方法更新了非公共变量。
 6.  大功告成！可运用助手方法(the helper method)在类中更新。
 
@@ -524,7 +524,7 @@ class Person:
     <span class="token keyword" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(0, 119, 170);">return</span> self<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">.</span>_age</code></pre><p style="box-sizing: inherit; margin: 0px 0px 1.5em; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; min-width: 100%;">And now, we’ll try to call this<span> </span><code style="box-sizing: inherit; margin: 0px; padding: 0px 5px 2px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: 1em; font-family: &quot;Roboto Mono&quot;, monospace; font-size: 0.8em; vertical-align: baseline; background: rgb(208, 208, 213); word-break: break-all;">non-public method</code><span> </span>with our object:</p><pre class=" language-py" style="box-sizing: inherit; margin: 1.5em 0px 3em; padding: 20px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: 1.5em; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: 1.4rem; vertical-align: baseline; color: rgb(27, 27, 50); background: rgb(238, 238, 240); text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none; overflow: auto; min-width: 100%; max-width: 100%;"><code class=" language-py" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: 400 !important; font-stretch: inherit; line-height: inherit; font-family: Consolas, Monaco, &quot;Andale Mono&quot;, &quot;Ubuntu Mono&quot;, monospace; font-size: inherit; vertical-align: baseline; color: rgb(0, 0, 0); background: transparent; text-shadow: rgb(255, 255, 255) 0px 1px; text-align: left; white-space: pre; word-spacing: normal; word-break: normal; overflow-wrap: normal; tab-size: 4; hyphens: none;">tk <span class="token operator" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(154, 110, 58);">=</span> Person<span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">(</span><span class="token string" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(102, 153, 0);">'TK'</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">,</span> <span class="token number" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 0, 85);">25</span><span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 15px; vertical-align: baseline; color: rgb(153, 153, 153);">)</span>
 ```
 
-> 我们可以得到并且更新非公共方法。这一方法是一个惯例，应该被视为API中的非公共部分。
+> 我们可以得到并且更新非公共方法。这一方法是一个惯例，应该被视为 API 中的非公共部分。
 
 下面的例子显示了非公共方法的使用过程：
 
@@ -560,7 +560,7 @@ print(tk.show_age()) # => 25`
 
 在面向对象的程序设计中，类可以从其他的类中继承共同的特点（即数据）和行为（即方法）。
 
-下面这个例子可以用在Python中。
+下面这个例子可以用在 Python 中。
 
 想象有一辆汽车。汽车的属性包括车轮数量、车座数量和最高时速。那“电动汽车”类就可以从常规“汽车”类继承一些共有属性。
 
@@ -579,7 +579,7 @@ print(my_car.maximum_velocity)`_
 
 开始后，我们就可以使用所有创建好的“实例变量”。
 
-Python中，我们将父类(parent class)作为参数应用到子类(child class)中，好比“电动汽车”类可以从“车类”继承行为和特点。
+Python 中，我们将父类(parent class)作为参数应用到子类(child class)中，好比“电动汽车”类可以从“车类”继承行为和特点。
 
 _`class ElectricCar(Car):
     def **init**(self, number_of_wheels, seating_capacity, maximum_velocity):
@@ -594,32 +594,32 @@ print(my_electric_car.maximum_velocity) # => 250`_
 
 一个字：爽！
 
-### 大概就这么多。
+### 大概就这么多
 
-总结一下我们学习的Python基础知识：
+总结一下我们学习的 Python 基础知识：
 
 -   变量如何工作
 -   条件语句
--   while循环 & for循环
+-   while 循环 & for 循环
 -   列表：集合|数组
 -   字典键-值集合
 -   数据结构如何迭代
 -   对象和类
 -   属性作为对象数据
 -   方法作为对象行为
--   如何运用Python中的getters setters和property decorator
+-   如何运用 Python 中的 getters setters 和 property decorator
 -   封装：隐藏信息
 -   继承：行为和特点
 
-祝贺你！你已经完成这一部分的Python学习！
+祝贺你！你已经完成这一部分的 Python 学习！
 
-如果你想学习完整的Python课程，学习更多的编程技巧，学习如何搭建项目，试着点击[**One Month Python Bootcamp_**]。期待看见你的身影☺~
+如果你想学习完整的 Python 课程，学习更多的编程技巧，学习如何搭建项目，试着点击[**One Month Python Bootcamp_**]。期待看见你的身影☺~
 
 想具体了解我的编程学习历程，可以关注我的网站[**The Renaissance Developer**][11]。
 
 希望你笑口常开，终身学习，坚持编程。
 
-_<a href="[https://twitter.com/LeandroTk][12]_" rel="noopener" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; background-color: transparent; color: rgb(10, 10, 35); text-decoration: underline; cursor: pointer; word-break: break-word;">[13]. ☺欢迎关注我的Twitter[https://twitter.com/LeandroTk]和GitHub[https://github.com/LeandroTk]。
+_<a href="[https://twitter.com/LeandroTk][12]_" rel="noopener" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: baseline; background-color: transparent; color: rgb(10, 10, 35); text-decoration: underline; cursor: pointer; word-break: break-word;">[13]. ☺欢迎关注我的 Twitter[https://twitter.com/LeandroTk]和 GitHub[https://github.com/LeandroTk]。
 
 [1]: https://medium.com/the-renaissance-developer/python-101-the-basics-441136fb7cc3
 [2]: https://en.wikipedia.org/wiki/Object_(computer_science)

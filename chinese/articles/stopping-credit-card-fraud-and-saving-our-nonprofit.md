@@ -133,7 +133,7 @@ I tried another refund. "Refund Pending."
 
 Oh geez.
 
-# They're not going to make this easy for me, are they.
+# They're not going to make this easy for me, are they
 
 I immediately tabbed back to Stripe's support page and requested another callback. They explained to me that I could no longer refund transactions because we didn't have any more money in our Stripe account.
 
@@ -269,7 +269,7 @@ If I hadn't continued to press for Stripe for a better solution than wiring them
 
 It pays to be polite but insistent.
 
-### Lesson #4: There are some real bastards out there.
+### Lesson #4: There are some real bastards out there
 
 > "Security in IT is like locking your house or car – it doesn't stop the bad guys,  but if it's good enough they may move on to an easier target." - Paul Herbka
 

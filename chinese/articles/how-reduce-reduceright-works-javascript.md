@@ -5,7 +5,7 @@
 
 ![How the JavaScript reduce and reduceRight Methods Work](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/reduce-cover-with-title-3.jpg)
 
-`reduce`和`reduceRight`是JavaScript内置的两个数组方法，这两个方法的学习曲线略微陡峭。
+`reduce`和`reduceRight`是 JavaScript 内置的两个数组方法，这两个方法的学习曲线略微陡峭。
 
 其实这两个方法的本质就像下面的算术题一样简单。
 
@@ -29,7 +29,7 @@
 
 不用把`reduce`和`reduceRight`看得太复杂，其实它们就相当于上面算术题的概括。在这篇文章我们会讲解这两个方法的重要信息。
 
-本文将列举易于理解的算法例子来演示JavaScript中的归约（reduction）。
+本文将列举易于理解的算法例子来演示 JavaScript 中的归约（reduction）。
 
 就这个话题我还制作了视频，如果你喜欢通过视频学习新知识的话，可以点击观看。
 
@@ -90,7 +90,7 @@ callbackfn(previousValue, currentElement, index, array)
 
  **`initialValue`（初始值）**: 这是 `previousValue` (累加器)的一个可选值。 如果存在，且 `myArray`中包含元素， 首次调用 `callbackfn`时会将它视为 `previousValue`传入。
 
-**注意**:`callbackfn`通常被称为 **reducer函数**(或简写为**reducer**)。
+**注意**:`callbackfn`通常被称为 **reducer 函数**(或简写为**reducer**)。
 
 ## 3 通过图表理解`reduce`/`reduceRight`[§](#understanding-reduce-reduceright-with-diagram)
 
@@ -100,7 +100,7 @@ callbackfn(previousValue, currentElement, index, array)
 
 ![reduce-diagram1-1](https://www.freecodecamp.org/news/content/images/2022/05/reduce-diagram1-1.png)
 
-展示reduce和reduceRight区别的图表
+展示 reduce 和 reduceRight 区别的图表
 
 注意：
 
@@ -112,7 +112,7 @@ callbackfn(previousValue, currentElement, index, array)
 
 ## 4 `reduce`/`reduceRight`的演算规则 [§](#the-algorithm-of-reduce-reduceright)
 
-下面的29行算法代码乍一看可能让人生畏。但你会发现理解他们比理解上述解释性的句子要容易得多。
+下面的 29 行算法代码乍一看可能让人生畏。但你会发现理解他们比理解上述解释性的句子要容易得多。
 
 所以放轻松，享受这些步骤，别忘了可以在控制台实践这些步骤：
 
@@ -216,7 +216,7 @@ console.log(arr.length);
 // 这个特征可以帮助我们更快添加新元素
 ```
 
-reduce和reduceRight仅对 `myArray`中真实存在的元素调用`callbackfn`。 例如，你的数组是 `[1,,3,,5]`回调函数不会考虑没有元素的索引`1`和`3`。猜一猜下面的代码会打印什么内容：
+reduce 和 reduceRight 仅对 `myArray`中真实存在的元素调用`callbackfn`。 例如，你的数组是 `[1,,3,,5]`回调函数不会考虑没有元素的索引`1`和`3`。猜一猜下面的代码会打印什么内容：
 
 ```js
 [,,,3,,,4].reduce((_, cv, i) => {
@@ -226,7 +226,7 @@ reduce和reduceRight仅对 `myArray`中真实存在的元素调用`callbackfn`�
 
 如果你的答案是`6`，你是对的！
 
-⚠️ **注意**: 不建议使用`callbackfn`来修改 `myArray`，因为这样会复杂化代码，容易产生bug。
+⚠️ **注意**: 不建议使用`callbackfn`来修改 `myArray`，因为这样会复杂化代码，容易产生 bug。
 
 如果你到目前为止都理解的话，那么恭喜你已经了解 `reduce`/`reduceRight`的运作了。
 

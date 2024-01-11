@@ -5,7 +5,7 @@
 
 ![What is Systems Engineering? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/tt.jpeg)
 
-我最近在读 J. Martin 的书《Systems Engineering Guidebook – A Process for Developing Systems and Products》（系统工程指南--开发系统和产品的过程）[1]。 从中我了解到，系统工程可以降低40%的制造成本——你知道吗？
+我最近在读 J. Martin 的书《Systems Engineering Guidebook – A Process for Developing Systems and Products》（系统工程指南--开发系统和产品的过程）[1]。 从中我了解到，系统工程可以降低 40%的制造成本——你知道吗？
 
 我以前也不知道。即使在上了一堂以系统工程为主题的课后，我也只有在了解其在现实生活中的应用时才明白其相关性。
 
@@ -17,7 +17,7 @@
 
 事实上，谷歌有自己的学科，叫做 [工程生产力](https://landing.google.com/engprod/).
 
-Facebook也有自己的，叫做 [生产工程](https://engineering.fb.com/category/production-engineering/).
+Facebook 也有自己的，叫做 [生产工程](https://engineering.fb.com/category/production-engineering/).
 
 另外，亚马逊雇佣了一个 [团队](https://www.amazon.jobs/en/teams/aws-system-development-engineer) 的工程师来帮助建立其云计算基础设施。
 
@@ -64,7 +64,7 @@ Facebook也有自己的，叫做 [生产工程](https://engineering.fb.com/categ
 
 图片显示了一个网站模板项目的目录（或文件夹）的结构。
 
-许多这些目录包含多个.html、.css和.js文件。
+许多这些目录包含多个.html、.css 和.js 文件。
 
 这些文件都有组件和特性，与项目内的其他文件相互作用。从本质上讲，你在这里有一个系统。
 

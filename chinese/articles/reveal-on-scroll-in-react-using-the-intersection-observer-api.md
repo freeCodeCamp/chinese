@@ -36,7 +36,7 @@ This section consists of three parts:
 2.  Adding boilerplates and styles
 3.  Implementing the review on scroll functionality
 
-### How to set up your React environment:
+### How to set up your React environment
 
 First, you'll need to set up a React environment by running `npx create-react-app [your project name]`, either on your native terminal or an IDE’s terminal.
 

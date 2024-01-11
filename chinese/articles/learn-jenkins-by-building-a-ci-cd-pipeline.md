@@ -38,7 +38,7 @@ DevOps 管道是一套流程和工具，可以用它们来实现软件应用程�
 - 安装插件
 - Blue Ocean
 - 创建一个管道
-- 安装Git
+- 安装 Git
 - Jenkinsfile
 - 更新管道
 - 配合 npm 使用 Jenkins

@@ -7,7 +7,7 @@
 
 by Ashay Mandwarya ?️??
 
-# Yield! Yield! How Generators work in JavaScript.
+# Yield! Yield! How Generators work in JavaScript
 
 ![js0jIJmWBpkS7FqofAi1h-JFSyq6FXE1cyC5](https://cdn-media-1.freecodecamp.org/images/js0jIJmWBpkS7FqofAi1h-JFSyq6FXE1cyC5)
 

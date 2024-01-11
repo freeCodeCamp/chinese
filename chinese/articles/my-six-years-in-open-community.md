@@ -518,7 +518,7 @@ I wrote in the moments at the time:
 The story is over.
 
 So, I don't think about the profound question of "what was I born for."
-I used to discuss with a good friend that life is meaningless, go to bed early, get up early, go to the sun when the weather is good, look at the flowers on the way to work, and spend every day vigorously......
+I used to discuss with a good friend that life is meaningless, go to bed early, get up early, go to the sun when the weather is good, look at the flowers on the way to work, and spend every day vigorously……
 Feel it, explore it. That is the meaning.
 Oh, yes, I saw a chubby puppy jumping up happily on the road two days ago, so cute. I met it again the next day, and I couldn't help but laugh.
 

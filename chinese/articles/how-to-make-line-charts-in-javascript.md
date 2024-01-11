@@ -7,37 +7,37 @@
 
 数据可视化这个话题包含了众多不同的[图表](https://datavizcatalogue.com/)供你学习和构建。
 
-但是有几个基本的、常青的图表，每个处理分析的数据设计师和Web开发人员都应该知道。
+但是有几个基本的、常青的图表，每个处理分析的数据设计师和 Web 开发人员都应该知道。
 
 其中之一是**折线图**，它主要用于表示随时间变化的数据。
 
-本教程将教会你如何使用JavaScript快速地创建漂亮的交互式折线（和阶梯线）图表。我们将看一些很酷的示例并逐步构建它们，过程既清晰又有趣。
+本教程将教会你如何使用 JavaScript 快速地创建漂亮的交互式折线（和阶梯线）图表。我们将看一些很酷的示例并逐步构建它们，过程既清晰又有趣。
 
 方便起见，你可以在我的[CodePen](https://codepen.io/collection/pgPwyr)上找到所有示例，你可以进一步调整这些折线图，熟悉技能。
 
 ### 我们的数据集
 
-在过去的20年里，网球世界的发展可谓精彩纷呈。 [三巨头](https://en.wikipedia.org/wiki/Big_Three_(tennis)) — 罗杰·费德勒、 拉斐尔·纳达尔以及诺瓦克·德约科维奇 — 赢得了惊人的63次 (过去一共78场)大满贯赛事。这些赛事是网球界最负盛名的锦标赛。
+在过去的 20 年里，网球世界的发展可谓精彩纷呈。 [三巨头](https://en.wikipedia.org/wiki/Big_Three_(tennis)) — 罗杰·费德勒、 拉斐尔·纳达尔以及诺瓦克·德约科维奇 — 赢得了惊人的 63 次 (过去一共 78 场)大满贯赛事。这些赛事是网球界最负盛名的锦标赛。
 
-我决定绘制他们出色的竞争关系。本教程中的JS折线图将直观地展现**三巨头的大满贯冠军争夺战**。而第一个发球已经来了！
+我决定绘制他们出色的竞争关系。本教程中的 JS 折线图将直观地展现**三巨头的大满贯冠军争夺战**。而第一个发球已经来了！
 
 
 # **四步构建折线图**
 
-在JavaScript中创建任何图表的过程都分为四个步骤，折线图也不例外：
+在 JavaScript 中创建任何图表的过程都分为四个步骤，折线图也不例外：
 
-1.  制作一个带容器（container）的HTML页面。
-2.  引用JavaScript文件。
+1.  制作一个带容器（container）的 HTML 页面。
+2.  引用 JavaScript 文件。
 3.  添加数据。
 4.  编写可视化代码。
 
 让我们逐步拆解这些步骤。
 
-### 1\. 制作一个带容器（container）的HTML页面
+### 1. 制作一个带容器（container）的 HTML 页面
 
 首先，设定一个你希望你的图表出现的地方。
 
-如果还没有确定，请创建一个基本网页。然后为折线图创建一个容器——添加一个HTML块级元素并为其提供唯一ID以供进一步引用。
+如果还没有确定，请创建一个基本网页。然后为折线图创建一个容器——添加一个 HTML 块级元素并为其提供唯一 ID 以供进一步引用。
 
 代码如下：
 
@@ -57,16 +57,16 @@
 </html>
 ```
 
-`width`和`height`参数设置为100%，因此折线图会渲染整个web页面。当然你可以根据自己的喜好来设定这些参数。
+`width`和`height`参数设置为 100%，因此折线图会渲染整个 web 页面。当然你可以根据自己的喜好来设定这些参数。
 
 
-### 2\. 引用JavaScript文件
+### 2. 引用 JavaScript 文件
 
-然后在`<head>`部分引用所有我们需要的JavaScript文件。 
+然后在`<head>`部分引用所有我们需要的 JavaScript 文件。 
 
-有非常多[JavaScript图表库](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_charting_libraries)辅助你通过简单的方式视觉化数据，其中大部分都支持折线图，你可以根据自己的项目需求做选择。
+有非常多[JavaScript 图表库](https://en.wikipedia.org/wiki/Comparison_of_JavaScript_charting_libraries)辅助你通过简单的方式视觉化数据，其中大部分都支持折线图，你可以根据自己的项目需求做选择。
 
-出于教学说明的目的，在本教程中我将使用[AnyChart JS Charts](https://www.anychart.com/)。它很方便灵活，附有[图表文档](https://docs.anychart.com)和[API参考](https://api.anychart.com)，除非商用，你可以免费使用。
+出于教学说明的目的，在本教程中我将使用[AnyChart JS Charts](https://www.anychart.com/)。它很方便灵活，附有[图表文档](https://docs.anychart.com)和[API 参考](https://api.anychart.com)，除非商用，你可以免费使用。
 
 我通过[CDN](https://www.anychart.com/download/cdn/)选择了“base”模块。 (当然，你可以下载并放入自己的网站文件夹中，或者使用你自己的链接)。
 
@@ -90,7 +90,7 @@
 </html>
 ```
 
-折线图的JavaScript代码将放在 `<script>`和`</script>`标签之间，该组标签位于 `<body>` 部分 (如果需要的话，你也可以放在`<head>`部分)。
+折线图的 JavaScript 代码将放在 `<script>`和`</script>`标签之间，该组标签位于 `<body>` 部分 (如果需要的话，你也可以放在`<head>`部分)。
 
 ### 3\. 添加数据
 
@@ -98,7 +98,7 @@
 
 我清点了[费德勒、纳达尔和德约科维奇获得大满贯头衔](https://en.wikipedia.org/wiki/Big_Three_(tennis)#Grand_Slam_tournaments)的次数，以年为统计单位。我将以数组的形式添加到折线图数据中。
 
-如果你更倾向使用其他的形式， 如JSON、XML、CSV或者其他，你可以参考[处理数据的不同形式](https://docs.anychart.com/Working_with_Data/Overview)。
+如果你更倾向使用其他的形式， 如 JSON、XML、CSV 或者其他，你可以参考[处理数据的不同形式](https://docs.anychart.com/Working_with_Data/Overview)。
 
 ```javascript
 var data = [
@@ -130,7 +130,7 @@ var data = [
 
 ### 4\. 编写可视化代码
 
-热身环节结束，球场已经就绪。让我们开始比赛并且快速编写一些JavaScript代码吧！
+热身环节结束，球场已经就绪。让我们开始比赛并且快速编写一些 JavaScript 代码吧！
 
 首先，添加 `anychart.onDocumentReady()`：
 
@@ -183,7 +183,7 @@ chart.legend().enabled(true);
 chart.title("Big Three's Grand Slam Title Race");
 ```
 
-最后，引用容器元素ID并且绘制折线图
+最后，引用容器元素 ID 并且绘制折线图
 
 ```javascript
 // 设置在哪里展现折线图
@@ -193,13 +193,13 @@ chart.container("container");
 chart.draw();
 ```
 
-就这么多！一个用JS绘制的图表就完成了，像是[直落两盘](https://sports.answers.com/Q/What_does_straight_sets_mean_in_a_game_of_tennis) 的胜利，不是吗？
+就这么多！一个用 JS 绘制的图表就完成了，像是[直落两盘](https://sports.answers.com/Q/What_does_straight_sets_mean_in_a_game_of_tennis) 的胜利，不是吗？
 
 ![A basic multi-line chart, JS.](https://www.freecodecamp.org/news/content/images/2022/09/line-chart-1.png)
 
-三巨头大满贯头衔比赛折线图 - 通过AnyChart创建
+三巨头大满贯头衔比赛折线图 - 通过 AnyChart 创建
 
-可以在[CodePen](https://codepen.io/shacheeswadia/pen/gOvjVaK)查看包含HTML/CSS/JS的基础版本折线图。为了避免意外，这里也是所有代码：
+可以在[CodePen](https://codepen.io/shacheeswadia/pen/gOvjVaK)查看包含 HTML/CSS/JS 的基础版本折线图。为了避免意外，这里也是所有代码：
 
 ```html
 <html>
@@ -287,7 +287,7 @@ chart.draw();
 
 ### 1\. 命名轴
 
-即使已经很明显，标明折线图的每个轴代表什么总不会错。请使用以下命令将标题添加到X轴和Y轴：
+即使已经很明显，标明折线图的每个轴代表什么总不会错。请使用以下命令将标题添加到 X 轴和 Y 轴：
 
 ```javascript
 chart.yAxis().title("Titles won");
@@ -308,7 +308,7 @@ thirdSeries.hovered().markers().type("circle").size(4);
 
 ### 3\. 启用十字准线
 
-十字准线是鼠标指针后的一对垂直线，可帮助您更好地了解当前悬停点的X和Y值。
+十字准线是鼠标指针后的一对垂直线，可帮助您更好地了解当前悬停点的 X 和 Y 值。
 
 在我们的例子中，仅使用一条这样的垂直线来突出显示年份就足够了：
 
@@ -327,7 +327,7 @@ chart.tooltip().positionMode("point");
 chart.tooltip().position("right").anchor("left-center").offsetX(5).offsetY(5);
 ```
 
-查看自定义之后的折线图 (完整的live版本请移步[CodePen](https://codepen.io/shacheeswadia/pen/vYdaoyR)。)
+查看自定义之后的折线图 (完整的 live 版本请移步[CodePen](https://codepen.io/shacheeswadia/pen/vYdaoyR)。)
 
 ![A custom line chart, JS.](https://www.freecodecamp.org/news/content/images/2022/09/line-chart-2.png)
 
@@ -348,7 +348,7 @@ thirdSeries.normal().stroke("#43a7dc", 2.5);
 
 本教程的最后一个更改（并使交互式折线图完整）是自定义标题和图例。
 
-可以添加副标题以提供更多相关信息，并且可以借助HTML进行一些文本样式的快速调整，使图表具吸引力：
+可以添加副标题以提供更多相关信息，并且可以借助 HTML 进行一些文本样式的快速调整，使图表具吸引力：
 
 ```javascript
 chart
@@ -361,13 +361,13 @@ chart
   );
 ```
 
-对于图表图例来说，修改字体大小和padding很容易：
+对于图表图例来说，修改字体大小和 padding 很容易：
 
 ```javascript
 chart.legend().enabled(true).fontSize(14).padding([10, 0, 10, 0]);
 ```
 
-看看结果如何！(可以在[CodePen](https://codepen.io/shacheeswadia/pen/wvyxVqZ)查看JS代码。)
+看看结果如何！(可以在[CodePen](https://codepen.io/shacheeswadia/pen/wvyxVqZ)查看 JS 代码。)
 
 ![Advanced line chart built with JavaScript](https://www.freecodecamp.org/news/content/images/2022/09/line-chart-3.png)
 
@@ -506,7 +506,7 @@ thirdSeries.name("Novak Djokovic");
 
 # **总结**
 
-从本教程可以看到，使用JavaScript创建交互折线图（阶梯线图）非常简单直白。如果你有任何的建议，欢迎告诉我。
+从本教程可以看到，使用 JavaScript 创建交互折线图（阶梯线图）非常简单直白。如果你有任何的建议，欢迎告诉我。
 
 敬仰这些职业运动员在自己领域的成就非常鼓舞人心。
 

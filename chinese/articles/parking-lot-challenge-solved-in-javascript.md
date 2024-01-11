@@ -231,7 +231,7 @@ The app provides very basic functionality for managing an imaginary parking lot.
 
 When a car is parked, via the PARK! button, the relevant spot will be visualised as busy and will show the registration number of the car being parked there. The operator can un-park cars by clicking on a busy slot, that is on the car they want to “remove” from the parking lot.
 
-## 💡The simple animation of the moving red car is just for visual effect and doesn’t have any real influence on the way the parking lot works.
+## 💡The simple animation of the moving red car is just for visual effect and doesn’t have any real influence on the way the parking lot works
 
 I used [CSS modules](https://github.com/css-modules/css-modules) for styling the app. I also tried to make the app a bit mobile friendly, in case you decide to try it on your mobile device.
 

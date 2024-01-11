@@ -5,17 +5,17 @@
 
 ![How to Use JavaScript's Map() Method to Solve Breadth-First and Depth-First Search Problems](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-porapak-apichodilok-346696.jpg)
 
-JavaScript的[`map()`方法](https://www.freecodecamp.org/news/array-map-tutorial/)是一个包含键值对的[对象](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。对象的键和值通过冒号 (:) 连接，而map是通过箭头符号 (=>)连接。
+JavaScript 的[`map()`方法](https://www.freecodecamp.org/news/array-map-tutorial/)是一个包含键值对的[对象](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。对象的键和值通过冒号 (:) 连接，而 map 是通过箭头符号 (=>)连接。
 
-以下是JavaScript中的对象：
+以下是 JavaScript 中的对象：
 
 ```javascript
 { a: [ 1, 2, 3 ], b: 2, c: 3 }
 ```
 
-一个JavaScript对象
+一个 JavaScript 对象
 
-以下是JavaScript中的map：
+以下是 JavaScript 中的 map：
 
 ```javascript
 { 'a' => [ 1, 2, 3 ], 'b' => 2, 'c' => 3 }
@@ -48,12 +48,12 @@ JavaScript的[`map()`方法](https://www.freecodecamp.org/news/array-map-tutoria
 
 ## 问题
 
-尼日利亚有 36 个州。游客可以通过公路、空中和水运（路线routes）从一个州移动到另一个州。我们要做的是以下编程：
+尼日利亚有 36 个州。游客可以通过公路、空中和水运（路线 routes）从一个州移动到另一个州。我们要做的是以下编程：
 
 1.  用图展示每个州和其他州之间的连接。
 2.  检查两个州之间是否有连接。
 
-我们从尼日利亚的36个州中挑选了11州来进行创建：
+我们从尼日利亚的 36 个州中挑选了 11 州来进行创建：
 
 ```js
 ENUGU, ABIA, SOKOTO, NIGER, LAGOS, OGUN, BAYELSA, AKWAIBOM, ANAMBRA, IMO, EBONYI
@@ -79,13 +79,13 @@ ENUGU, ABIA, SOKOTO, NIGER, LAGOS, OGUN, BAYELSA, AKWAIBOM, ANAMBRA, IMO, EBONYI
 
 上一章节我们讲解了问题，现在我们来解决问题，在这篇教程中我将使用[Replit](https://replit.com/)。
 
-Replit是一个配置完全的IDE，方便你可以快速地编写和检查程序。
+Replit 是一个配置完全的 IDE，方便你可以快速地编写和检查程序。
 
 ### 如何创建 Map
 
 我们首先要解决的问题是如何展现每一个州和其他州之间的连接。
 
-我们先定义这11个州和路线，输入以下代码：
+我们先定义这 11 个州和路线，输入以下代码：
 
 ```javascript
 
@@ -119,7 +119,7 @@ states.forEach((state) => {
 });
 ```
 
-这段代码迭代所有 **states**。每次迭代，都将当前state作为`connections`图中的键，并设置初始值为空数组 (`[]`)。
+这段代码迭代所有 **states**。每次迭代，都将当前 state 作为`connections`图中的键，并设置初始值为空数组 (`[]`)。
 
 如果你在控制台打印 `connections` ，会得到以下结果：
 
@@ -159,7 +159,7 @@ routes.forEach(route => {
 
 上述代码将州添加到空数组，作为前一步键对应的值。代码循环迭代路线（routes）数组，并提取出每一个路线。
 
-departure（出发）州为每一个路线数组的第一个值，而destination（目的地）州为每一个路线数组的第二个值。
+departure（出发）州为每一个路线数组的第一个值，而 destination（目的地）州为每一个路线数组的第二个值。
 
 然后将目的地州添加到出发州对应的值数组，最后将出发州添加到目的地州的值数组中。
 
@@ -271,15 +271,15 @@ console.log(connections)
 
 [BFS](https://www.freecodecamp.org/news/breadth-first-search-in-javascript-e655cd824fa4/) 是一种用于检查树或者图的算法，通过探索一个父（节点）的所有直系子（边）之后再探索孙节点，以这样的方式一直持续到树或者图的底部。
 
-例如，在我们的例子中，我们想检查ENUGU和ABIA之间有没有连接。
+例如，在我们的例子中，我们想检查 ENUGU 和 ABIA 之间有没有连接。
 
-BFS会从检查Enugu的直线路线(LAGOS和NIGER)开始。因为ABIA并非直接和ENUGU联系的，算法会接着检查和LAGOS相连的州。
+BFS 会从检查 Enugu 的直线路线(LAGOS 和 NIGER)开始。因为 ABIA 并非直接和 ENUGU 联系的，算法会接着检查和 LAGOS 相连的州。
 
-接着，算法会检查和NIGER相连的州，这个过程会一直持续到算法找到ABIA或者走到头。程序就会终止。
+接着，算法会检查和 NIGER 相连的州，这个过程会一直持续到算法找到 ABIA 或者走到头。程序就会终止。
 
-BFS使用[队列](https://www.freecodecamp.org/news/queue-data-structure-definition-and-java-example-code/)数据结构。也就是说，项目会在数组的一端被添加，然后在另一端被删除。在我们的例子中，队列会保存所有还未被访问的州，我们会在编程中看到详细行为：
+BFS 使用[队列](https://www.freecodecamp.org/news/queue-data-structure-definition-and-java-example-code/)数据结构。也就是说，项目会在数组的一端被添加，然后在另一端被删除。在我们的例子中，队列会保存所有还未被访问的州，我们会在编程中看到详细行为：
 
-我们从创建一个命名为 `bfs`函数开始编写BFS：
+我们从创建一个命名为 `bfs`函数开始编写 BFS：
 
 ```javascript
 function bfs(departureState, destinationState) {
@@ -295,7 +295,7 @@ function bfs(departureState, destinationState) {
   const queue = [departureState];
 ```
 
-我们将 `departureState`添加至`queue`数组，是因为它保存了所有尚未被访问的节点。（译者注：除了起始点以外，广度优先搜索的无向图中所有节点都是自己顶点-边关系的顶点以及其他顶点-边关系中的边，这里queue数组记录的是所有尚未作为顶点被访问的节点，而后文的visited集合记录的是所有作为边已被访问的节点）。
+我们将 `departureState`添加至`queue`数组，是因为它保存了所有尚未被访问的节点。（译者注：除了起始点以外，广度优先搜索的无向图中所有节点都是自己顶点-边关系的顶点以及其他顶点-边关系中的边，这里 queue 数组记录的是所有尚未作为顶点被访问的节点，而后文的 visited 集合记录的是所有作为边已被访问的节点）。
 
 接下来，定义一个空`[Set()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set/Set)`，并命名为`visited`:
 
@@ -382,7 +382,7 @@ function bfs(departureState, destinationState) {
 }
 ```
 
-检查两个州之间是否有连接，比方说ENUGU和SOKOTO，调用`bfs`函数：
+检查两个州之间是否有连接，比方说 ENUGU 和 SOKOTO，调用`bfs`函数：
 
 ```javascript
 bfs("ENUGU", "SOKOTO")
@@ -431,11 +431,11 @@ Found => SOKOTO
 
 [DFS](https://www.freecodecamp.org/news/dfs-for-your-next-tech-giant-interview/)算法一次只取一个节点的一个子节点。它继续向下搜索该节点的一个子节点，直到走到死胡同，然后再回溯并尝试另一个子节点。
 
-在我们的例子中，假设我们需要检查ENUGU和ABIA之间是否有连接。
+在我们的例子中，假设我们需要检查 ENUGU 和 ABIA 之间是否有连接。
 
-DFS会从Enugu开始，并检查第一个与之相连的州(LAGOS)。因为LAGOS不是ABIA，搜索会继续检查LAGOS紧密连接的下一个州。搜索会一直持续到找到ABIA或者走到死胡同。然后回溯并尝试另一个节点。
+DFS 会从 Enugu 开始，并检查第一个与之相连的州(LAGOS)。因为 LAGOS 不是 ABIA，搜索会继续检查 LAGOS 紧密连接的下一个州。搜索会一直持续到找到 ABIA 或者走到死胡同。然后回溯并尝试另一个节点。
 
-DFS使用栈来记录访问过的项目(在我们的例子中就是州)。当栈为空的时候，搜索终止。我们将使用递归来编写DFS算法，让我们开始吧！
+DFS 使用栈来记录访问过的项目(在我们的例子中就是州)。当栈为空的时候，搜索终止。我们将使用递归来编写 DFS 算法，让我们开始吧！
 
 首先创建一个名为`dfs`的函数， 该函数将接受三个参数(`departureState`, `destinationState`和 `visited`):
 
@@ -482,7 +482,7 @@ function dfs(departureState, destinationState, visited = new Set()) {
     }
 ```
 
-`destinationState`保持不变，`visited`（访问过的）`Set()` 不再为空数组。此时，位于循环中，但并不在visited集合中的destination将被存储到栈。
+`destinationState`保持不变，`visited`（访问过的）`Set()` 不再为空数组。此时，位于循环中，但并不在 visited 集合中的 destination 将被存储到栈。
 
 `dfs`函数如下：
 
@@ -506,7 +506,7 @@ function dfs(departureState, destinationState, visited = new Set()) {
 }
 ```
 
-检查两个州之间是否连接，如ENUGU和SOKOTO， 调用`dfs`函数：
+检查两个州之间是否连接，如 ENUGU 和 SOKOTO， 调用`dfs`函数：
 
 ```javascript
 dfs("ENUGU", "SOKOTO")
@@ -545,15 +545,15 @@ Found => SOKOTO
 Found => SOKOTO
 ```
 
-虽然上面的输出与我们运行bfs函数时得到的输出相同，但得出此结果的过程有所不同。尝试在不同的点分解代码以查看程序的流程。
+虽然上面的输出与我们运行 bfs 函数时得到的输出相同，但得出此结果的过程有所不同。尝试在不同的点分解代码以查看程序的流程。
 
 <iframe width="546" height="307" src="https://www.youtube.com/embed/yl8GjfOSNq0?list=PLOvIwkWvHysOUVGqOwb_4j5mq8ir0fZ1O" title="7  Depth First Search Algorithm on a graph" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 总结
 
-数据结构和算法逐渐成为软件工程师面试中重要的一环。 `map()` 是一个强大的JavaScript工具，能够帮助我们更容易地解决复杂问题。
+数据结构和算法逐渐成为软件工程师面试中重要的一环。 `map()` 是一个强大的 JavaScript 工具，能够帮助我们更容易地解决复杂问题。
 
-我们首先使用 `map()` 方法构建了一个图。 然后我们使用了BFS和DFS算法搜索了两个州之间是否有连接。
+我们首先使用 `map()` 方法构建了一个图。 然后我们使用了 BFS 和 DFS 算法搜索了两个州之间是否有连接。
 
 你可以在[这里](https://replit.com/@EBEREGIT/MappingWithStates#index.js)查看我的代码。
 

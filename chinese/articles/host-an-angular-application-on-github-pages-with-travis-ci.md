@@ -90,7 +90,7 @@
 
 ![travisci-step4](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step4.png)
 
-字段 NAME的值填写为 GITHUB\_TOKEN ，VALUE 的值填写为你在 GitHub 上生成的令牌的值，然后单击按钮 Add。
+字段 NAME 的值填写为 GITHUB_TOKEN ，VALUE 的值填写为你在 GitHub 上生成的令牌的值，然后单击按钮 Add。
 
 ![travisci-step5](https://www.freecodecamp.org/news/content/images/2022/04/travisci-step5.png)
 

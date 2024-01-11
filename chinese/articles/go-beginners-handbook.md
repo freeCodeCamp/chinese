@@ -74,7 +74,7 @@ Caddy，一个非常流行的 web 服务器是用 GO 编写的。
 -   查看 Go 的所有第三方库 [https://pkg.go.dev/](https://pkg.go.dev/)
 -   进入 Go 游乐园 [https://go.dev/play/](https://go.dev/play/)
 
-…等等.
+……等等.
 
 ## <div id="how-to-install-go">如何安装 Go</div>
 
@@ -119,13 +119,13 @@ source $HOME/.profile
 
 我推荐使用 [**Visual Studio Code**](https://code.visualstudio.com/) (也叫 VS Code) 作为你的编辑器。
 
-请阅读 [在 Visual Studio Code 的Go](https://code.visualstudio.com/docs/languages/go) 了解快速 “up and running” 设置。 安装[Go 的扩展](https://marketplace.visualstudio.com/items?itemName=golang.go)。
+请阅读 [在 Visual Studio Code 的 Go](https://code.visualstudio.com/docs/languages/go) 了解快速 “up and running” 设置。 安装[Go 的扩展](https://marketplace.visualstudio.com/items?itemName=golang.go)。
 
 ![Screen Shot 2022-07-28 at 10.54.06.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_10.54.06.png)
 
 VSCode 中的 Go 扩展
 
-这个扩展将让你的生活更加轻松。因为它提供智能感知（语法高亮显示、自动补全、悬停信息、错误高亮显示…）和其他功能，如自动格式化、安装软件包的菜单选项、测试等。
+这个扩展将让你的生活更加轻松。因为它提供智能感知（语法高亮显示、自动补全、悬停信息、错误高亮显示……）和其他功能，如自动格式化、安装软件包的菜单选项、测试等。
 
 ## <div id="how-to-write-hello-world-in-go">如何用 Go 编写 Hello，World!</div>
 
@@ -179,7 +179,7 @@ import "fmt"
 
 我们使用 `import` 关键字导入包。
 
-`fmt` 是Go提供的内置包,提供输入/输出的工具函数。
+`fmt` 是 Go 提供的内置包,提供输入/输出的工具函数。
 
 我们有一个[大的标准库](https://pkg.go.dev/std)，可以随时使用，从网络连接到数学、加密、图像处理、文件系统访问等等。
 
@@ -259,13 +259,13 @@ go build hello.go
 GOOS=windows GOARCH=amd64 go build hello.go
 ```
 
-这将会创建 `hello.exe` 文件，可以在64位的 Windows 机器上运行：
+这将会创建 `hello.exe` 文件，可以在 64 位的 Windows 机器上运行：
 
 ![Screen Shot 2022-07-28 at 15.36.55.png](https://www.freecodecamp.org/news/content/images/2022/10/Screen_Shot_2022-07-28_at_15.36.55.png)
 
 Hello.exe 执行
 
-设置64位的 Mac 的环境变量为 `GOOS=darwin GOARCH=amd64` ，Linux 的环境变量是`GOOS=linux GOARCH=amd64`。
+设置 64 位的 Mac 的环境变量为 `GOOS=darwin GOARCH=amd64` ，Linux 的环境变量是`GOOS=linux GOARCH=amd64`。
 
 这个 Go 最好的特性之一。
 
@@ -279,7 +279,7 @@ Go 默认的路径在 `$HOME/go` 下，所以你可以在你的家目录中看�
 
 它会在你安装包(待会我们看一下)进行创建。
 
-例如我在 VS Code 中加载 `hello.go` 文件那一刻 ， 它提示我安装`[ gopls ](https://pkg.go.dev/golang.org/x/tools/gopls)` 命令， 开发调试工具(` dlv `)， 和[`静态检查`行](https://staticcheck.io/)。
+例如我在 VS Code 中加载 `hello.go` 文件那一刻 ， 它提示我安装`[ gopls ](https://pkg.go.dev/golang.org/x/tools/gopls)` 命令， 开发调试工具(`dlv`)， 和[`静态检查`行](https://staticcheck.io/)。
 
 它们在 `$HOME/go` 下自动安装：
 
@@ -305,7 +305,7 @@ Go 默认的路径在 `$HOME/go` 下，所以你可以在你的家目录中看�
 
 Go 非常重视缩进和视觉顺序。
 
-在我们安装Go程序的时候自带了 `gofmt` 命令，我们可以用它对 Go 程序进行格式化。 VSCode 中在底层使用它对 Go 源码文件进行格式化。 
+在我们安装 Go 程序的时候自带了 `gofmt` 命令，我们可以用它对 Go 程序进行格式化。 VSCode 中在底层使用它对 Go 源码文件进行格式化。 
 
 这是非常有趣和创新的，因为格式和问题，如制表符与空格或“我应该把花括号放在循环定义的同一行还是下一行”，都是浪费时间。
 
@@ -473,13 +473,13 @@ var age = 10
 -   整型 (`int`， `int8`， `int16`， `int32`， `rune`， `int64`， `uint`， `uintptr`， `uint8`， `uint16`， `uint64`)
 -   浮点型 (`float32`， `float64`)， 用于表示带小数点的数
 -   复数类型 (`complex64`， `complex128`)，常用于科学计算中
--   字符型 (`byte`)， 表示一个ASCII字符
+-   字符型 (`byte`)， 表示一个 ASCII 字符
 -   字符串 (`string`)， 一个`byte`的集合
--   布尔型 (`bool`)表示true或false
+-   布尔型 (`bool`)表示 true 或 false
 
 我们有很多不同类型的整数类型，在大多数情况下你只会用到 `int`，并且您可能会选择一个更专业的方法进行优化(而不是在学习时需要考虑的事情)
 
-在你使用64位系统的时候 `int` 类型默认为64位， 使用32位系统的时候 `int` 类型默认为32位，其他的与此类似。
+在你使用 64 位系统的时候 `int` 类型默认为 64 位， 使用 32 位系统的时候 `int` 类型默认为 32 位，其他的与此类似。
 
 `uint` 类型是无符号的 `int` 类型，如果你知道这个数字不是负数，你可以用这个类型存储比现在大两倍的数字。
 
@@ -556,7 +556,7 @@ var second = "second"
 var word = first + " " + second  //"first second"
 ```
 
-Go提供了 `strings` 库来进行字符串的操作。
+Go 提供了 `strings` 库来进行字符串的操作。
 
 我们已经知道怎么在 “Hello， World!” 的案例中导入一个包。
 
@@ -820,15 +820,15 @@ for i := 0; i < 10; i++ {
 }
 ```
 
-我们首先初始化一个循环的变量， 我们设置一个 _条件_ 用于检查我们的循环是否应该结束。最后我们设置 _post语句_， 在每一次循环后执行， 这里例子中是增长 `i`。
+我们首先初始化一个循环的变量， 我们设置一个 _条件_ 用于检查我们的循环是否应该结束。最后我们设置 _post 语句_， 在每一次循环后执行， 这里例子中是增长 `i`。
 
 `i++` 增长 `i` 变量.
 
 `<` _运算符_ 用于比较 `i` 和 `10` 的值,会返回 `true` 或 `false`， 决定循环体是否执行。
 
-我们不需要用圆括号来包围代码块，与C和JavaScript不太一样。
+我们不需要用圆括号来包围代码块，与 C 和 JavaScript 不太一样。
 
-其他语言有各种不同的循环结构，当时Go中只有这一个，我们可以有像 `while` 一样的循环，如果你熟悉一门有它的语言，像这样：
+其他语言有各种不同的循环结构，当时 Go 中只有这一个，我们可以有像 `while` 一样的循环，如果你熟悉一门有它的语言，像这样：
 
 ```go
 i := 0
@@ -883,7 +883,7 @@ for _， num := range numbers {
 }
 ```
 
-我们可以使用 `_` 语法，它表示 “忽略 这个”，以避免Go编译器产生一个错误：“你没有使用 `i` 变量！”。
+我们可以使用 `_` 语法，它表示 “忽略 这个”，以避免 Go 编译器产生一个错误：“你没有使用 `i` 变量！”。
 
 ## <div id="conditionals-in-go">Go 中的条件语句</div>
 
@@ -932,7 +932,7 @@ default: fmt.Println(i + " years old")
 }
 ```
 
-与 C， JavaScript和其他语言相比，你不需要在每一个 `case` 中写 `break`。
+与 C， JavaScript 和其他语言相比，你不需要在每一个 `case` 中写 `break`。
 
 ## <div id="operators-in-go">Go 中的运算符</div>
 
@@ -1182,7 +1182,7 @@ ageptr = &age
 agevalue = *ageptr
 ```
 
-通常当你想要传递一个参数给你调用的函数时。 Go默认会在函数内部复制这个变量的值，所以这不会改变 `age` 的值：
+通常当你想要传递一个参数给你调用的函数时。 Go 默认会在函数内部复制这个变量的值，所以这不会改变 `age` 的值：
 
 ```go
 func increment(a int) {

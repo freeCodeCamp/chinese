@@ -8,7 +8,7 @@
 
 我们都知道我们应该写单元测试。但是，很难知道从哪里开始，也很难知道与实际的实现相比，应该在测试上投入多少时间。那么，该从哪里开始呢？而且，仅仅是测试代码，还是单元测试还有其他好处？
 
-在这篇文章中，我将解释不同类型的测试，以及单元测试给开发团队带来哪些好处。我将展示Jest - 一个JavaScript测试框架。
+在这篇文章中，我将解释不同类型的测试，以及单元测试给开发团队带来哪些好处。我将展示 Jest - 一个 JavaScript 测试框架。
 
 ## 不同类型的测试
 
@@ -62,15 +62,15 @@ export function getAboutUsLink(language){
 
 当你在一开始就开始考虑单元测试时，它将帮助你更好地架构你的代码，实现适当的关注点分离。你将不会被诱惑为单一的代码块分配多个功能，因为这些将是单元测试的恶梦。
 
-**在编码之前**，你写下函数方法的签名，并立即开始实现它。哦，但是如果一个参数是空的，应该怎么办？如果它的值超出了预期范围或者包含了太多的字符怎么办？你是抛出一个异常还是返回null？
+**在编码之前**，你写下函数方法的签名，并立即开始实现它。哦，但是如果一个参数是空的，应该怎么办？如果它的值超出了预期范围或者包含了太多的字符怎么办？你是抛出一个异常还是返回 null？
 
 单元测试将帮助你发现所有这些情况。再看一下这些问题，你会发现这正是定义你的单元测试案例的内容。
 
 我相信写单元测试还有很多好处。这些只是我从我的经验中回忆起来的。那些是我通过艰苦的方式学到的。
 
-## 如何编写你的第一个JavaScript单元测试
+## 如何编写你的第一个 JavaScript 单元测试
 
-但是，让我们回到JavaScript上来。我们将从[Jest](https://jestjs.io/) 开始，它是一个JavaScript测试框架。它是一个能够实现自动单元测试的工具，提供代码覆盖率，并让我们轻松地模拟对象。Jest也有一个Visual Studio Code的扩展 [可在此获得](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)。
+但是，让我们回到 JavaScript 上来。我们将从[Jest](https://jestjs.io/) 开始，它是一个 JavaScript 测试框架。它是一个能够实现自动单元测试的工具，提供代码覆盖率，并让我们轻松地模拟对象。Jest 也有一个 Visual Studio Code 的扩展 [可在此获得](https://marketplace.visualstudio.com/items?itemName=Orta.vscode-jest)。
 
 还有其他的框架，如果你感兴趣，你可以在 [本文](https://www.browserstack.com/guide/top-javascript-testing-frameworks) 中查看它们。
 
@@ -110,7 +110,7 @@ test("Returns about-us for english language", () => {
 
 在这个例子中，我们调用 `getAboutUsLink` 函数，语言参数为 `en-US`。我们期望的结果是 "/about-us"。
 
-现在我们可以全局安装Jest CLI并运行测试:
+现在我们可以全局安装 Jest CLI 并运行测试:
 
 ```js
 npm i jest-cli -g
@@ -132,17 +132,17 @@ Snapshots:   0 total
 Time:        2.389s
 ```
 
-伟大的工作! 这是第一个从头到尾的简单JavaScript单元测试。如果你安装了Visual Studio Code扩展，一旦你保存一个文件，它就会自动运行测试。让我们用这一行扩展测试来试试吧:
+伟大的工作! 这是第一个从头到尾的简单 JavaScript 单元测试。如果你安装了 Visual Studio Code 扩展，一旦你保存一个文件，它就会自动运行测试。让我们用这一行扩展测试来试试吧:
 
 ```js
 expect(getAboutUsLink("cs-CZ")).toBe("/o-nas");
 ```
 
-一旦你保存文件，Jest就会通知你测试失败。这有助于你在提交修改之前就发现潜在的问题。
+一旦你保存文件，Jest 就会通知你测试失败。这有助于你在提交修改之前就发现潜在的问题。
 
 ## 测试高级功能和 Mocking（模拟） 服务
 
-在现实生活中，getAboutUsLink方法的语言代码不会在同一个文件中成为常量。它们的值通常会在整个项目中使用，所以它们会被定义在自己的模块中，并被导入到所有使用它们的函数中。
+在现实生活中，getAboutUsLink 方法的语言代码不会在同一个文件中成为常量。它们的值通常会在整个项目中使用，所以它们会被定义在自己的模块中，并被导入到所有使用它们的函数中。
 
 ```js
 import { englishCode, spanishCode } from './LanguageCodes'
@@ -175,11 +175,11 @@ export { UserStore }
 
 为了正确的单元测试这个方法，我们需要 mock(模拟) `UserStore`。 mock 是原始对象的一个替代品。它允许我们将依赖关系和真实数据与测试方法的实现分开，就像假人帮助汽车的碰撞测试而不是真人一样。
 
-如果我们不使用mock，我们就会同时测试这个函数和商店。这将是一个集成测试，我们很可能需要对使用的数据库进行 mock（模拟）。
+如果我们不使用 mock，我们就会同时测试这个函数和商店。这将是一个集成测试，我们很可能需要对使用的数据库进行 mock（模拟）。
 
 ### Mocking（模拟） 一个服务
 
-为了 mock(模拟) 对象，你可以提供一个 mock 函数或一个手动 mock。我将专注于后者，因为我有一个简单的用例。但你可以自由地[查看Jest其他的提供者（provides）](https://jestjs.io/docs/en/mock-functions.html)。
+为了 mock(模拟) 对象，你可以提供一个 mock 函数或一个手动 mock。我将专注于后者，因为我有一个简单的用例。但你可以自由地[查看 Jest 其他的提供者（provides）](https://jestjs.io/docs/en/mock-functions.html)。
 
 ```js
 jest.mock('./UserStore', () => ({
@@ -205,11 +205,11 @@ test("Returns display name", () => {
 })
 ```
 
-当我保存文件时，Jest告诉我有两个通过的测试。如果你正在手动执行测试，现在就这样做，确保你看到同样的结果。
+当我保存文件时，Jest 告诉我有两个通过的测试。如果你正在手动执行测试，现在就这样做，确保你看到同样的结果。
 
 ### Code Coverage Report
 
-现在我们知道了如何测试JavaScript代码，用测试覆盖尽可能多的代码是很好的。而这是很难做到的。说到底，我们只是人。我们想完成我们的任务，而单元测试通常会产生一些无意义的工作量，我们往往会本能的忽略。代码覆盖率统计工具是一个帮助我们对抗这种情况。
+现在我们知道了如何测试 JavaScript 代码，用测试覆盖尽可能多的代码是很好的。而这是很难做到的。说到底，我们只是人。我们想完成我们的任务，而单元测试通常会产生一些无意义的工作量，我们往往会本能的忽略。代码覆盖率统计工具是一个帮助我们对抗这种情况。
 
 代码覆盖率会告诉你，你的代码有多大一部分被单元测试所覆盖。以我的第一个单元测试为例，检查`getAboutUsLink` 函数:
 
@@ -219,7 +219,7 @@ test("Returns about-us for english language", () => {
 });
 ```
 
-它检查了英文链接，但西班牙文版本仍未被测试。代码覆盖率为50%。另一个单元测试是彻底检查 `getDisplayName`函数，其代码覆盖率为100%。总之，总的代码覆盖率是67%。我们有3个用例需要测试，但我们的测试只覆盖了其中的两个。
+它检查了英文链接，但西班牙文版本仍未被测试。代码覆盖率为 50%。另一个单元测试是彻底检查 `getDisplayName`函数，其代码覆盖率为 100%。总之，总的代码覆盖率是 67%。我们有 3 个用例需要测试，但我们的测试只覆盖了其中的两个。
 
 要查看代码覆盖率报告，请在终端输入以下命令:
 
@@ -227,25 +227,25 @@ test("Returns about-us for english language", () => {
 jest --coverage
 ```
 
-或者，如果你使用的是带有Jest扩展的Visual Studio Code，你可以运行命令（CTRL+SHIFT+P 组合快捷键调出，然后输入）_Jest。 触发执行 Coverage Overlay_。它将在实现中直接显示哪些代码行没有被测试覆盖。
+或者，如果你使用的是带有 Jest 扩展的 Visual Studio Code，你可以运行命令（CTRL+SHIFT+P 组合快捷键调出，然后输入）_Jest。 触发执行 Coverage Overlay_。它将在实现中直接显示哪些代码行没有被测试覆盖。
 
 ![code-coverage-inline](https://www.freecodecamp.org/news/content/images/2020/03/code-coverage-inline.jpg)
 
-通过运行覆盖率检查，Jest还将创建一个HTML报告。在你的项目文件夹中的`coverage/lcov-report/index.html`下找到它。
+通过运行覆盖率检查，Jest 还将创建一个 HTML 报告。在你的项目文件夹中的`coverage/lcov-report/index.html`下找到它。
 
 ![code-coverage](https://www.freecodecamp.org/news/content/images/2020/03/code-coverage.jpg)
 
-现在，我不用再提了，你应该争取100%的代码覆盖率，对吗？ :-)
+现在，我不用再提了，你应该争取 100%的代码覆盖率，对吗？ :-)
 
 ## 总结
 
-在这篇文章中，我向你展示了如何在JavaScript中开始单元测试。虽然在报告中让你的代码覆盖率达到100%是件好事，但在现实中，并不总是能够（有意义地）达到这个目标。我们的目标是让单元测试帮助你维护你的代码，并确保它总是按照预期工作。它们使你能够:
+在这篇文章中，我向你展示了如何在 JavaScript 中开始单元测试。虽然在报告中让你的代码覆盖率达到 100%是件好事，但在现实中，并不总是能够（有意义地）达到这个目标。我们的目标是让单元测试帮助你维护你的代码，并确保它总是按照预期工作。它们使你能够:
 
 - 明确定义实现需求。
 - 更好地设计你的代码和分离关注点。
 - 发现你在较新的提交中尽早发现引入的问题。
 - 并让你相信你的代码是正常工作的。
 
-最好的开始是Jest文档中的 [Getting started（入门）](https://jestjs.io/docs/en/getting-started) 页面，这样你就可以自己尝试这些做法了。
+最好的开始是 Jest 文档中的 [Getting started（入门）](https://jestjs.io/docs/en/getting-started) 页面，这样你就可以自己尝试这些做法了。
 
 你对测试代码有自己的经验吗？我很想听听，请在 [Twitter](https://twitter.com/ondrabus) 上告诉我，或者加入我的 [Twitch streams 直播频道](https://twitch.tv/ondrabus)。

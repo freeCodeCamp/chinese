@@ -26,7 +26,7 @@
 
 除了`\d`，正则表达式中还有很多元字符，比如下面的：
 
--   `\w` 匹配所有单词字符（小写字母a到z、大写字母A到Z、数字0到9和下划线_）
+-   `\w` 匹配所有单词字符（小写字母 a 到 z、大写字母 A 到 Z、数字 0 到 9 和下划线_）
 -   `\D` 匹配所有非数字字符。它是 `\d` 的补集
 -   `\W` 匹配所有非单词字符
 -   `\s` 匹配所有空格字符，包括空格、制表符和回车符等。
@@ -35,7 +35,7 @@
 
 下面我们一起看看怎样用`\d`元字符匹配数字。
 
-第一个例子是匹配`7253289593`这个数字ID。
+第一个例子是匹配`7253289593`这个数字 ID。
 
 这是一个十位数，要想匹配它，你可以重复写十次`\d`元字符：
 
@@ -53,7 +53,7 @@
 
 <figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/03/Screenshot-2023-03-02-at-12.17.33.png" alt="Screenshot-2023-03-02-at-12.17.33" class="kg-image"><figcaption></figcaption></figure>
 
-`\d`元字符同样可以在Javascript中使用：
+`\d`元字符同样可以在 Javascript 中使用：
 
 ```js
 // 测试一个数字ID
@@ -83,7 +83,7 @@ console.log(regex3.test(naijaPhoneNum)); // true
 
 所以如果你在正则表达式中使用 `[0-9]` 代替 `\d`，你仍然能够进行字符的匹配。
 
-例如，我们可以使用 `[0-9]` 而不是 `\d` 来匹配前面例子中的数字ID：
+例如，我们可以使用 `[0-9]` 而不是 `\d` 来匹配前面例子中的数字 ID：
 
 <figure class="kg-card kg-card-image kg-card-hascaption"><img src="https://www.freecodecamp.org/news/content/images/2023/03/Screenshot-2023-03-02-at-12.28.17.png" alt="Screenshot-2023-03-02-at-12.28.17" class="kg-image"><figcaption></figcaption></figure>
 

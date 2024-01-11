@@ -4,7 +4,7 @@
 > -  校对者：
 
 ![Modules in JavaScript – CommonJS and ESmodules Explained](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/carson-arias-7Z03R1wOdmI-unsplash.jpg)
-大家好！这篇文章将讲解JavaScript模块。
+大家好！这篇文章将讲解 JavaScript 模块。
 
 当代软件设计和工程中大量使用模块技术。
 
@@ -17,7 +17,7 @@
 -   [什么是模块，模块为什么重要](#whataremodulesandwhyaretheyuseful)
 -   [模块的种类](#typesofmodules)
     -   [CommonJS](#commonjsmodules)
-    -   [ES模块](#esmodules)
+    -   [ES 模块](#esmodules)
 -   [使用模块](#usingmodules)
 -   [打包模块](#bundlingmodules)
 -   [总结](#roundup)
@@ -29,7 +29,7 @@
 在开发大型项目的时候，把代码分成不同的模块奏效的原因是：
 
 -  把顾虑和功能拆分到不同的文件可以帮助视觉化代码，理顺代码的框架。
--  组织后的代码更容易维护，更不易出现错误和bug。
+-  组织后的代码更容易维护，更不易出现错误和 bug。
 -  可以在不同的文件或者项目的不同部分复用模块，这样就避免了重复书写同样的代码。
 
 与其把程序的所有组件都放在一个文件中，我们不如把它分成不同的部分和模块，每一个部分和模块代表一个功能或者顾虑。
@@ -38,28 +38,28 @@
 
 # 模块的种类
 
-在JavaScript中有很多方法来实施模块。
+在 JavaScript 中有很多方法来实施模块。
 
-JavaScript被创造出来的时候只是用于处理网站的小型脚本语言，所以最开始JavaScript并不支持模块。
+JavaScript 被创造出来的时候只是用于处理网站的小型脚本语言，所以最开始 JavaScript 并不支持模块。
 
-但随着JavaScript这门语言以及相应生态圈的成长，开发者们开始需要模块功能，所以当时涌现出来了不同的方式和库来实现模块功能。
+但随着 JavaScript 这门语言以及相应生态圈的成长，开发者们开始需要模块功能，所以当时涌现出来了不同的方式和库来实现模块功能。
 
-我们将讨论最近并且是运用最广泛的两种模块——CommonJS和ES模块。
+我们将讨论最近并且是运用最广泛的两种模块——CommonJS 和 ES 模块。
 
-顺便提一句：你知道[Javascript是只花十天就创建出来的吗](https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/)？
+顺便提一句：你知道[Javascript 是只花十天就创建出来的吗](https://thenewstack.io/brendan-eich-on-creating-javascript-in-10-days-and-what-hed-do-differently-today/)？
 
-我认为在分析JavaScript的复杂性以及这门语言是如何演化的时候，必须记住这门语言诞生之初的设计并不是为了实现现在的功能的。是JavaScript生态圈推动了这门语言的改变。
+我认为在分析 JavaScript 的复杂性以及这门语言是如何演化的时候，必须记住这门语言诞生之初的设计并不是为了实现现在的功能的。是 JavaScript 生态圈推动了这门语言的改变。
 
-## CommonJS模块
+## CommonJS 模块
 
-[CommonJS](https://en.wikipedia.org/wiki/CommonJS)是在JavaScript中使用模块的一组标准，是在2009年由Mozilla的工程师Kevin Dangoor提出的。
-CommonJS主要被用做使用Node的服务端JS，浏览器不支持CommonJS。
+[CommonJS](https://en.wikipedia.org/wiki/CommonJS)是在 JavaScript 中使用模块的一组标准，是在 2009 年由 Mozilla 的工程师 Kevin Dangoor 提出的。
+CommonJS 主要被用做使用 Node 的服务端 JS，浏览器不支持 CommonJS。
 
-顺便提一句，Node之前支持用CommonJS来使用模块，但现在ES模块这个更新的手段也被采用。
+顺便提一句，Node 之前支持用 CommonJS 来使用模块，但现在 ES 模块这个更新的手段也被采用。
 
-让我们现在在实际代码中看看CommonJS。
+让我们现在在实际代码中看看 CommonJS。
 
-使用模块之前我们需要先在电脑上安装node，可以使用命令行 `npm init -y`.
+使用模块之前我们需要先在电脑上安装 node，可以使用命令行 `npm init -y`.
 
 首先，我们创建一个 `main.js` 文件，并在里面写入一个简单的函数。
 
@@ -120,13 +120,13 @@ testFunction()
 
 很容易，不是吗！虽然容易，但确实非常有用的工具。
 
-## ES模块
+## ES 模块
 
-现在回顾一下ES模块。ES模块是ES6（2015年）年引入的标准。创建的目的是为了标准化JS模块运作，和在浏览器中使用模块的方法（在此之前并不支持模块）。
+现在回顾一下 ES 模块。ES 模块是 ES6（2015 年）年引入的标准。创建的目的是为了标准化 JS 模块运作，和在浏览器中使用模块的方法（在此之前并不支持模块）。
 
-相较而言，ES模块更新，刚支持浏览器和采用Node的服务端模块。
+相较而言，ES 模块更新，刚支持浏览器和采用 Node 的服务端模块。
 
-我们来看下面的代码片段，同样我们必须先安装Node应用 `npm init -y`.
+我们来看下面的代码片段，同样我们必须先安装 Node 应用 `npm init -y`.
 
 然后点击`package.json` 并且加上 `"type": "module"` ，如下：
 
@@ -145,7 +145,7 @@ testFunction()
   "type": "module"
 }
 ```
-如果不按照上述步骤，并且想在Node中使用ES模块，我们会得到报错：
+如果不按照上述步骤，并且想在 Node 中使用 ES 模块，我们会得到报错：
 
 ```
 (node:29568) Warning: To load an ES module, set "type": "module" in the package.json or use the .mjs extension.
@@ -200,7 +200,7 @@ const mod1Function2 = () => console.log('Mod1 is rolling, baby!')
 export { mod1Function, mod1Function2 }
 ```
 
-在ES模块中另一个重要的功能是重命名，如下面的例子：
+在 ES 模块中另一个重要的功能是重命名，如下面的例子：
 
 ```
 // main.js
@@ -259,7 +259,7 @@ const testFunction = () => {
 testFunction()
 ```
 
-甚至可以省去 `as` 关键字实现重命名， 因为JavaScript“知道”当我们不解构的时候，我们指的是默认导入。
+甚至可以省去 `as` 关键字实现重命名， 因为 JavaScript“知道”当我们不解构的时候，我们指的是默认导入。
 
 ```
 // main.js
@@ -274,13 +274,13 @@ const testFunction = () => {
 testFunction()
 ```
 
-这差不多就是ES模块的所有内容，希望对你来说是简单明了的。 =)
+这差不多就是 ES 模块的所有内容，希望对你来说是简单明了的。 =)
 
 # 使用模块
 
-现在我们已经清楚了不同种类的模块以及他们是如何运行的，现在我们来看看如何在使用HTML和原生JavaScript的网站运用模块。
+现在我们已经清楚了不同种类的模块以及他们是如何运行的，现在我们来看看如何在使用 HTML 和原生 JavaScript 的网站运用模块。
 
-我们来创建一个简单的HTML文件，包含一个头部，两个按钮，和一个script标签链接到 `main.js`文件。
+我们来创建一个简单的 HTML 文件，包含一个头部，两个按钮，和一个 script 标签链接到 `main.js`文件。
 
 ```
 <!-- index.html -->
@@ -301,13 +301,13 @@ testFunction()
 </html>
 ```
 
-注意到我在script标签中声明了`type="module"`。要使用JS模块功能必须得这么做，不然会报错：
+注意到我在 script 标签中声明了`type="module"`。要使用 JS 模块功能必须得这么做，不然会报错：
 
 ```
 Uncaught SyntaxError: Cannot use import statement outside a module
 ```
 
-打开HTML文件，我们会看到以下界面 
+打开 HTML 文件，我们会看到以下界面
 ![screenshot-2](https://www.freecodecamp.org/news/content/images/2022/04/screenshot-2.png)
 
 `main.js`文件中的代码包括：
@@ -326,44 +326,44 @@ testFunction()
 
 我们分别在两个按钮上注册了时间监听器，这样来自 `mod1.js`中的函数才能被执行。
 
-现在可以预览和测试HTML文件了，我们必须得先配置好文件，不然直接在浏览器中打开HTML，会得到CORS（跨域）报错：
+现在可以预览和测试 HTML 文件了，我们必须得先配置好文件，不然直接在浏览器中打开 HTML，会得到 CORS（跨域）报错：
 
 ```
 Access to script at ... from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, chrome, chrome-extension, brave, chrome-untrusted, https.
 ```
 
-我们可以使用VS的拓展**Live server**，或者通过 `npm init -y`创建一个Node程序，并执行`npx serve`。
+我们可以使用 VS 的拓展**Live server**，或者通过 `npm init -y`创建一个 Node 程序，并执行`npx serve`。
 
 设置到服务后，控制台会显示如下： 
 ![screenshot_1-1](https://www.freecodecamp.org/news/content/images/2022/04/screenshot_1-1.png)
 
-另一件需要注意的是，如果我们点击浏览器开发者工具的网络栏，并且筛选出JS文件，会看到我们的网站在执行两个文件： `main.js` 和 `mod1.js`:  
+另一件需要注意的是，如果我们点击浏览器开发者工具的网络栏，并且筛选出 JS 文件，会看到我们的网站在执行两个文件： `main.js` 和 `mod1.js`:  
 ![screenshot_3](https://www.freecodecamp.org/news/content/images/2022/04/screenshot_3.png)
 
-当然如果要使用两个文件中的代码，我们必须加载两个文件，但这并不是最好的办法。因为如果这样做，浏览器需要执行两次请求来加载所有必须的JS。
+当然如果要使用两个文件中的代码，我们必须加载两个文件，但这并不是最好的办法。因为如果这样做，浏览器需要执行两次请求来加载所有必须的 JS。
 
 为了提高项目表现，我们应该尽最大可能减少请求。这个时候，模块打包就派上用场。
 
-稍微提一句，如果你喜欢使用视频来学，[Kent C Dodds的视频很棒](https://egghead.io/lessons/javascript-use-javascript-modules-in-the-browser)。我特别推荐你去关注他，他是最好的JS老师之一，[这里还推荐另一个视频](https://www.youtube.com/watch?v=qgRUr-YUk1Q) by Fireship. ;)
+稍微提一句，如果你喜欢使用视频来学，[Kent C Dodds 的视频很棒](https://egghead.io/lessons/javascript-use-javascript-modules-in-the-browser)。我特别推荐你去关注他，他是最好的 JS 老师之一，[这里还推荐另一个视频](https://www.youtube.com/watch?v=qgRUr-YUk1Q) by Fireship. ;)
 
 # 模块打包
 
 如上文所述，把代码拆分成模块更利于代码库的整洁和复用。
 
-但这些优点仅针对开发阶段，在生产阶段，模块并不是最佳操作，因为这使得浏览器为每一个JS文件添加请求，从而损害了网站表现。
+但这些优点仅针对开发阶段，在生产阶段，模块并不是最佳操作，因为这使得浏览器为每一个 JS 文件添加请求，从而损害了网站表现。
 
-模块打包可以很好地解决这个问题。简言之，模块打包是一个可以将JS模块组合成单个文件的程序（这只是核心功能，许多模块打包器有更多其他的功能）。
+模块打包可以很好地解决这个问题。简言之，模块打包是一个可以将 JS 模块组合成单个文件的程序（这只是核心功能，许多模块打包器有更多其他的功能）。
 
 模块打包器使得开发者们在开发阶段可以讲代码拆分，然后在生产阶段再把代码合并。
 
 将“开发代码”转化成“生产代码”的步骤通常被称作“build”。
 
-这样的构建工具有很多(如[Browserify](https://browserify.org/), [Parcel](https://parceljs.org/), [Rollup.js](https://rollupjs.org/guide/en/), [Snowpack](https://www.snowpack.dev/)...) 但使用最广泛的是[Webpack](https://webpack.js.org/)，然我们来看看一个Webpack的例子。
+这样的构建工具有很多(如[Browserify](https://browserify.org/), [Parcel](https://parceljs.org/), [Rollup.js](https://rollupjs.org/guide/en/), [Snowpack](https://www.snowpack.dev/)...) 但使用最广泛的是[Webpack](https://webpack.js.org/)，然我们来看看一个 Webpack 的例子。
 
--   注1: 如果你想更加深入地了解模块打包，[Fireship制作的视频](https://www.youtube.com/watch?v=5IG4UmULyoA&t=382s)或许是个不错的选择。
--   注 2:Webpack是一个非常健壮且复杂的工具，除了打包JS文件之外，它还可以做其他的工作，想要了解更多，可以查阅[官方文档](https://webpack.js.org/)。
+-   注 1: 如果你想更加深入地了解模块打包，[Fireship 制作的视频](https://www.youtube.com/watch?v=5IG4UmULyoA&t=382s)或许是个不错的选择。
+-   注 2:Webpack是一个非常健壮且复杂的工具，除了打包 JS 文件之外，它还可以做其他的工作，想要了解更多，可以查阅[官方文档](https://webpack.js.org/)。
 
-如果还没安装Node，我们可以先通过 `npm init -y`安装，然后执行 `npm i --save-dev webpack webpack-cli`来安装webpack和webpack-cli。
+如果还没安装 Node，我们可以先通过 `npm init -y`安装，然后执行 `npm i --save-dev webpack webpack-cli`来安装 webpack 和 webpack-cli。
 
 接着创建`webpack.config.js`文件并写入代码：
 
@@ -380,9 +380,9 @@ module.exports = {
 };
 ```
 
-这个文件将负责Webpack的设置，以及我们的应用如何工作。
+这个文件将负责 Webpack 的设置，以及我们的应用如何工作。
 
-在上面的代码中，我们设定了入门文件 (`entry: './main.js'`)。Webpack会从这个文件开始读取，然后分析所有依赖项(文件中所有模块）， 换句话说，入门文件——main JS引入了所有其他模块。
+在上面的代码中，我们设定了入门文件 (`entry: './main.js'`)。Webpack 会从这个文件开始读取，然后分析所有依赖项(文件中所有模块）， 换句话说，入门文件——main JS 引入了所有其他模块。
 
 然后我们声明输出 —— 首先声明存储的路径，然后声明打包文件的名字。
 
@@ -425,7 +425,7 @@ output: {
 
 这行代码正式我们之前分散在各个文件中的代码，但是被打包成单个文件，并且简化了。
 
-最后就是在 `index.html` 中更改script标签，这样我们就可以消费bundle JS了，如下：
+最后就是在 `index.html` 中更改 script 标签，这样我们就可以消费 bundle JS 了，如下：
 
 ```
 <!-- index.html -->
@@ -446,16 +446,16 @@ output: {
 </html>
 ```
 
-我们可以重新浏览测试代码了，JS完美运行。如果你打开网络栏，会看到只有一个文件被加载！ =D  
+我们可以重新浏览测试代码了，JS 完美运行。如果你打开网络栏，会看到只有一个文件被加载！ =D  
 ![screenshot_2-1](https://www.freecodecamp.org/news/content/images/2022/04/screenshot_2-1.png)
 
 希望这个简单的例子能够帮助你理解模块打包是如何将模块结构的良好的开发体验和网站表现结合的。
 
 # 总结
 
-今天的介绍就到告一段落了。在这篇文章中我们学习了什么是模块，为什么他们好用，在JavaScript中使用模块的不同方法，以及使用Webpack打包代码的一个实际例子。
+今天的介绍就到告一段落了。在这篇文章中我们学习了什么是模块，为什么他们好用，在 JavaScript 中使用模块的不同方法，以及使用 Webpack 打包代码的一个实际例子。
 
-JS模块的完整手册可以查阅[这篇文章](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
+JS 模块的完整手册可以查阅[这篇文章](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules).
 
 希望你喜欢这篇文章，并且从中收益，你可以在[linkedin](https://www.linkedin.com/in/germancocca/)或[twitter](https://twitter.com/CoccaGerman)上关注我。
 

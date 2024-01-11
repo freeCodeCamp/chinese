@@ -32,7 +32,7 @@ Docker 的超能力的核心是利用所谓的 [cgroups](https://en.wikipedia.or
 
 ## Database 容器
 
-使用Docker，你可以在几秒钟内启动许多类型的数据库。这很容易，而且不会因为你运行数据库所需的其他要求而污染你的本地系统。一切都与Docker容器打包在一起。
+使用 Docker，你可以在几秒钟内启动许多类型的数据库。这很容易，而且不会因为你运行数据库所需的其他要求而污染你的本地系统。一切都与 Docker 容器打包在一起。
 
 通过在 [hub.docker.com](https://hub.docker.com/) 搜索，你可以为许多数据库找到现成的容器。
 
@@ -42,19 +42,19 @@ Docker 的超能力的核心是利用所谓的 [cgroups](https://en.wikipedia.or
 docker run --rm -v "$PWD/data":/var/lib/mysql --name mysql -e MYSQL_ROOT_PASSWORD=admin-password -e MYSQL_DATABASE=my-database -p 3306:3306 mysql:8.0.28-debian
 ```
 
-该命令使用了运行Docker容器的高级功能:
+该命令使用了运行 Docker 容器的高级功能:
 
-- `-v "$PWD/data"` 映射了你的本地目录到容器的 `./data`目录 , 这使你能够启动Docker容器而不丢失你的数据，
+- `-v "$PWD/data"` 映射了你的本地目录到容器的 `./data`目录 , 这使你能够启动 Docker 容器而不丢失你的数据，
 - `-p 3306:3306` 映射容器的 `3306` 端口到我们的机器的 `3306` 端口上，以便其他应用程序可以使用它,
 - `-e MYSQL_DATABASE=my-database` 设置一个环境变量，自动创建一个名为`my-database`的新数据库,
 - `-e MYSQL_ROOT_PASSWORD=admin-password` 设置一个环境变量来设置管理密码,
 - `--rm` 停止时移除容器。
 
-这些环境变量和更多的环境变量都记录在 [Docker镜像的页面](https://hub.docker.com/_/mysql/?tab=description)。
+这些环境变量和更多的环境变量都记录在 [Docker 镜像的页面](https://hub.docker.com/_/mysql/?tab=description)。
 
 ### 如何使用数据库容器进行开发
 
-你将使用一个流行的技术栈来构建，一个基于[Java](https://www.w3schools.com/java/java_intro.asp) 和[Spring Boot](https://spring.io/projects/spring-boot) 的 Web 应用程序。为了专注于 Docker 部分，你可以从官方的 [用Rest指南访问JPA数据](https://spring.io/guides/gs/accessing-data-rest/) 克隆一个简单的演示应用程序。
+你将使用一个流行的技术栈来构建，一个基于[Java](https://www.w3schools.com/java/java_intro.asp) 和[Spring Boot](https://spring.io/projects/spring-boot) 的 Web 应用程序。为了专注于 Docker 部分，你可以从官方的 [用 Rest 指南访问 JPA 数据](https://spring.io/guides/gs/accessing-data-rest/) 克隆一个简单的演示应用程序。
 
 ```sh
 # Download the sample application
@@ -66,7 +66,7 @@ cd complete
 
 该应用程序自带一个内存数据库，这对生产来说没有价值，因为它不允许多个服务访问和修改（mutate）一个数据库。一个[MySQL](https://www.mysql.com/)数据库更适合于将你的应用程序扩展到更多的读和写。
 
-因此，将MySQL驱动添加到你的 `pom.xml` 文件:
+因此，将 MySQL 驱动添加到你的 `pom.xml` 文件:
 
 ```xml
        <!-- Disable in memory database -->
@@ -190,11 +190,11 @@ public class AccessingDataRestApplicationTests {
 
 使用简单的 Docker 工具对你的应用程序进行 Docker 化是可能的，但不推荐。
 
-你可以建立你的应用程序，使用一个包含Java的基础容器，然后复制并运行你的应用程序。但是有很多陷阱，每种语言和框架都是如此。所以一定要寻找能让你的生活更轻松的工具。
+你可以建立你的应用程序，使用一个包含 Java 的基础容器，然后复制并运行你的应用程序。但是有很多陷阱，每种语言和框架都是如此。所以一定要寻找能让你的生活更轻松的工具。
 
 在这个例子中，你将使用 [Jib](https://github.com/GoogleContainerTools/jib) 和 [distroless containers](https://github.com/GoogleContainerTools/distroless) 来轻松构建一个 Docker 容器。将两者结合使用，可以得到一个最小的、安全的、可复制的容器，它在本地和生产中的工作方式是一样的。
 
-要使用 Jib，你需要把它作为一个maven插件添加到你的 `pom.xml` 文件:
+要使用 Jib，你需要把它作为一个 maven 插件添加到你的 `pom.xml` 文件:
 
 ```xml
 <build>
@@ -253,11 +253,11 @@ docker run --net=host my-docker-image
 
 一切都在你独立的 Docker 环境中，并在本地工作，像持续集成系统和生产系统中，你可能启动数百个你的应用程序。
 
-你可以在 [我的GitHub Docker For Development应用实例库](https://github.com/sesigl/docker-for-development-example-application) 中找到可以使用的例子。
+你可以在 [我的 GitHub Docker For Development 应用实例库](https://github.com/sesigl/docker-for-development-example-application) 中找到可以使用的例子。
 
 我希望你喜欢这篇文章。
 
-如果你喜欢它，觉得有必要给我点赞，或者只是想联系我，[在Twitter上关注我](https://twitter.com/sesigl)。
+如果你喜欢它，觉得有必要给我点赞，或者只是想联系我，[在 Twitter 上关注我](https://twitter.com/sesigl)。
 
 我在 eBay Kleinanzeigen 工作，这是全球最大的电子商务公司之一。顺便说一下，[我们正在招聘](https://www.ebay-kleinanzeigen.de/careers)!
 

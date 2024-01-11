@@ -1,168 +1,168 @@
 > -  原文地址：[SEO Tips for Developers](https://www.freecodecamp.org/news/tips-to-boost-your-seo/)
 > -  原文作者：[Edan Ben-Atar](https://www.freecodecamp.org/news/author/edan/)
-> -  译者：
+> -  译者：herosql
 > -  校对者：
 
-![SEO Tips for Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/10-Tips-to-Boost-Your-SEO.jpg)
+![针对开发人员的 SEO 技巧](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/10-Tips-to-Boost-Your-SEO.jpg)
 
-SEO (Search Engine Optimization) is essential for your online marketing strategy. It's the process of optimizing your site and content to help you get as much traffic as you can from search engines.
+SEO (搜索引擎优化)对你的在线营销策略至关重要。它是优化网站和内容的过程，以帮助你从搜索引擎获得尽可能多的流量。
 
-Reaching top positions in the search engine results pages (SERPs) with your website is one of the fastest ways to drive traffic to your site and boost conversions.
+让你的网站在搜索引擎结果页面（SERPs）中获得顶级位置是将流量引导至你的网站并提高转化率的最快方法之一。
 
-This article will go over the top 10 tips to boost your SEO and grow your website.
+本文将介绍提升 SEO 并发展你的网站的前 10 个技巧。
 
-## How to Create a Content Marketing Strategy
+## 如何创建内容销售策略
 
-You’ll want to create a content [marketing strategy](https://en.wikipedia.org/wiki/Marketing_strategy) that will help you increase your rankings and reach your target audience.
+你想要创建内容[销售策略](https://en.wikipedia.org/wiki/Marketing_strategy)。这将帮助你提升排名和管理计划。
 
-But what’s a content marketing strategy? Content marketing will keep your business top of mind and help you establish yourself as an expert in your field, but it requires a lot of work.
+什么是内容销售策略?内容销售策略将把你的业务放在首位，并帮助你成为你所在领域的专家，但它需要大量的工作。
 
-For example, the company's content marketing manager would usually have to post a minimum of one article per week, taking into consideration keywords and the searcher’s intent.
+例如，考虑到关键词和搜索者的意图，公司的内容销售经理通常每周至少要发布一篇文章。
 
-It sounds like a lot, but it pays off. The content you're posting is relevant to the audience and shows that the company cares about them. It builds trust with consumers and helps them stay connected with the brand.
+这听起来好像很多，但它是有回报的。你发布的内容要与读者相关，并表明公司关心他们。它与消费者建立信任，帮助他们与品牌保持联系。
 
-The best way to do this is to create content specific to your business, targeted toward your prospects, optimized for SEO, and distributed through social media. But don’t forget – consistency is key.
+最好的方式是根据你的业务创建特殊的内容，针对你的潜在客户，优化 SEO ，并通过社交媒体分发，但不要忘记-一致性是最重要的。
 
-Create a plan for the kind of content you want to put out there and how often you wish to publish it. Track what works and what doesn’t so you can make adjustments as necessary.
+为你想要发布的内容类型和发布频率制定计划。跟踪哪些有效，哪些无效，以便于你可以根据需要进行调整。
 
-Here are a few initial steps to follow during your content strategy process:
+以下是内容策略过程中要遵循的几个初始步骤:
 
-1.  Understand your goals. Do you want to get more traffic or more conversions? Do you want to let your audience know about new features, or do you want to educate them?
-2.  Figure out which content channels are best for your business. Creating content is not just about publishing a few articles. It’s also about distributing them. Share your content on websites such as LinkedIn, Reddit, or Hacker News.
-3.  Research the keywords people search for when browsing for your solution. Address those keywords in your content and appeal to your audience’s pain points.
+1.  明确你的目标。你想要更多的流量还是更多的转换?你想让你的读者了解新功能，还是想教育他们?
+2.  找出哪些内容渠道最适合你的业务。创建内容不仅仅是发布一些文章。这也是关于分发它们的问题。在 LinkedIn、Reddit 或 Hacker News 等网站上共享你的内容。
+3.  研究人们在浏览你的解决方案时搜索的关键字，解决内容中的关键词，并迎合受众的痛点。
 
-## How to Make Your Website Mobile Friendly
+## 怎么让你的网站在移动端更加友好
 
-How can you know if your website is mobile-friendly?
+你怎么知道你的网站对于移动端是否友好？
 
-Mobile-friendliness isn’t the only thing that matters. It’s also essential to have a fast website, responsive design, mobile-friendly content, and navigation.
+移动端友好不是唯一重要的事情。拥有一个快速的网站、响应式的设计、移动端友好的内容和导航也是至关重要的。
 
-Google has tools that you can use to check if your site is mobile-friendly, as well as other tools for testing speed.
+谷歌有一些工具可以用来检查你的网站对于移动端是否友好，以及其他测试速度的工具。
 
-If your website isn’t optimized for mobile, you should start doing this:
+如果你的网站没有对移动端进行优化，你应该开始这样做:
 
-1.  Make sure your website is not overloaded with plugins. If you’re using WordPress, too many plugins can slow down your website.
-2.  Use appropriate sizes and formats for your pictures and media. Images that are too large will slow your pages down and will have an undesirable effect on customer experience.
-3.  Check your Core Web Vitals periodically. Make sure that your website loads under 2 seconds and your CWV metrics are within limits.
+1.  保证你的网站没有全负荷运行一些插件，如果你使用 WordPress ，很多插件会拖慢你网站的速度。
+2.  为图片和多媒体使用适当的大小和格式。图片太大将会让你的网站更慢，并会对用户的体验产生不良的影响。
+3.  定期检查你的 web 核心代码。确保你的网站能在两秒内加载，并且你的 CWV 指标在限制范围内。
 
-Your customers and Google will thank you, and it will pay dividends in both traffic and conversions.
+你的客户和 Google 将会感谢你，它将在流量和转化率方面带来红利。
 
-## How to Create Evergreen Content
+## 如何创造拥有持续影响力的内容
 
-Another tip to boost your SEO is creating evergreen content. Evergreen content is any type of information that has long-term relevance, meaning it's both timeless and timely (that is, not outdated). It's also search engine optimized, readable on mobile devices, and can be repurposed in multiple formats.
+另外一个促进你的 SEO 是创建拥有持续影响力的内容。具有持续影响力的内容是指任何类型的信息在长远的时间中都具有适应性，意思是具有永不过时和适时性(不会过时的)。它也是经过搜索引擎优化的，适应移动端设备，有多种格式进行使用。
 
-Evergreen content can be an excellent tool to help with SEO because it tends to rank well in search engines and can help your website gain traction when posted on other sites.
+具有持续影响力的内容能够极好的帮助 SEO ，因为它会在搜索引擎中得到一个好的等级，这可以帮助你的网站在其他网站之上赢得关注。
 
-When done correctly, evergreen content provides an opportunity for your business to market itself without having to rely on time-sensitive events or news items to draw traffic to your site. Evergreen posts are updated frequently but are always focused on something new or something old that has been updated.
+在合适的时候，具有持续影响力的内容给你的生意提供了更多的机会，推销自己，而不必时间敏感的事件或新闻项目来吸引流量到你的网站。具有持续影响力的帖子经常更新，但总是关注一些新的或已经更新的旧的东西。
 
-Examples of evergreen content include "How to Start a Business," "The Importance of Being Organized at Work", and "5 Things You Can Do With Leftover Pasta".
+具有持续影响的内容的例子包括"如何开始一门生意"，"组织工作的重要性"和"你可以用剩下的意大利面做的五件事"。
 
-Content like this won’t ever lose its value because it doesn’t rely on current events or trends to stay relevant. Because of this, you can build a library of evergreen content that will continue to drive traffic over time.
+像这样的内容永远不会失去价值，因为它不依赖于当前事件或趋势来保持相关性。正因为此，你可以构建有持续影响力的资料库，随着时间的推移，它将继续推动流量。
 
-## How to Reduce Your Bounce Rate
+## 如何降低你的跳出率
 
-Once you have people arriving on your site, you need to keep them there. A low bounce rate signals to Google that your content is valuable and will rank you higher in search results.
+当每一个人进入你的网站，你需要想办法留住他们，低的跳出率对于谷歌来说表明你的内容是有效的，同时你会在搜索结果中的排名会高。
 
-Remember, it’s not just about bringing more traffic to your site but keeping the traffic that comes from a good SEO strategy.
+记住，这对于你的网站不仅仅是关于带来更多的流量，而且保持流量来源于好的 SEO 策略。
 
-We know what you’re thinking: how do I reduce my bounce rate?
+我知道你在想什么:怎么做可以减低我的跳出率。
 
-Here are some ways:
+这里有一些方法:
+-   减少与用户的摩擦。让你页面的内容容易阅读，让人愉快。改善你的导航栏，这样读者就不会迷路或是找不到他们想要的东西。去除烦人的弹窗，这会使用户在阅读你的内容时分心在进入环节。
+-   在恰当的地方使用可视化的元素，如图片和视频。这可以使得文章阅读更加容易，更多的舒适感，让很长的文章看起来更短。
+-   使用更短的章节和重点符号标记，这可以使得读者可以跳过他们不感兴趣的部分，从而阅读的很快。
+-   在长文章中使用标题和副标题，使得读者在阅读整篇文章前获得关于每个章节的观点。
 
--   Reduce friction for users. Make it easy for them to read your content by making it readable and entertaining enough to stay on the page. Improve your navigation, so readers don’t get lost or stuck trying to find what they came for. Remove annoying pop-ups that distract users from reading your content or even prevent them from accessing it altogether.
--   Use visual elements such as images and videos where appropriate. They can make reading text easier and more enjoyable by breaking up chunks of text and making long articles seem shorter.
--   Use short paragraphs and bullet points so readers can skim through the page quickly without losing their place or interest in the material.
--   Use headings and subheadings throughout long articles so readers can get an idea of what each paragraph is about before reading it all word by word.
+![GTmetrix报告显示，limey.io的评分为A，加载时间为552毫秒](https://www.freecodecamp.org/news/content/images/2022/04/Screen-Shot-2022-04-21-at-3.41.52-PM.png)
 
-![GTmetrix report for limey.io showing A score and 552ms of load time](https://www.freecodecamp.org/news/content/images/2022/04/Screen-Shot-2022-04-21-at-3.41.52-PM.png)
+GTmetrix 报告来自于 [Limey](https://limey.io/)
 
-GTmetrix report for [Limey](https://limey.io/)
+## 如何优化页面的速度
 
-## How to Optimize Page Speed
+或许你知道，优化页面加载速度并非易事。它需要经过几个步骤，可能具有一定的挑战性。如果这看起来难以应对，可以考虑雇佣一名 SEO 专家来帮助你识别 WordPress 或 Shopify 网站上的页面速度问题。
 
-As you might know, optimizing your page speed is no small task. It requires several steps and can be challenging. If this seems like too much to take on, consider hiring an SEO to help you identify page speed issues on your WordPress or Shopify website.
+你可以采取的一些实际措施包括：
 
-Some actionable steps you could take are:
+一些你可以做的步骤:
+-   减少未使用的 JavaScript 。
+-   消除阻止渲染的资源。
+-   减少服务器初始响应时间。
 
--   Reduce unused JavaScript.
--   Eliminate render-blocking resources.
--   Reduce initial server response time.
 
-## How to Start Guest Blogging
+## 如何开始客座博客写作
 
-Guest blogging is a great tool to keep your site fresh and relevant. Having other bloggers accept articles you submitted can help bring new traffic to your website, and encourage back-links that increase your search engine ranking.
+客座博客是一种很好的手段，用于保持你的网站内容新鲜和相关。让其他博主接受你提交的文章可以帮助你的网站吸引新的流量，并鼓励产生回链，从而提高你在搜索引擎的排名。
 
-This could lead to more traffic, sign-ups, and sales for you.
+这可能会为你带来更多的流量、注册和销售。
 
-Guest posting also helps with branding and reaching new audiences.
+客座发表文章还有助于品牌推广和触及新受众。
 
-In the end, you will want to find blogs in your niche that accept contributions or have a "write for us" section where you can submit your content.
+最后，你需要找到在你的领域接受投稿的博客，或者有一个“为我们写作”板块，你可以在那里提交你的内容。
 
-It's not easy to get accepted, so make sure you write something great when pitching yourself as a guest blogger!
+获得接受并不容易，所以在作为客座博主推销自己时，一定要确保你写了一篇很棒的文章！
 
-Guest blogs aren't just for large businesses—if you're just starting out, there are a variety of ways you can use guest blogging to your advantage.
+客座博客不仅适用于大型企业——如果你刚刚起步，有多种方法可以利用客座博客为你带来好处。,这是一种验证的方式,你可以用客座博客为你做广告。
 
-First, if you're just starting out and don't have a huge following yet, guest blogging is a great way to build up your audience. The big companies that have been guest blogging for years have thousands of new readers coming in each time they publish something new.
+首先，如果你刚刚起步并且尚未拥有大量关注者，客座博客是一种很好的方式来建立你的受众。那些已经进行客座博客多年的大公司每次发布新内容时都会吸引成千上万的新读者。
 
-If you've got some good ideas on your blog, and you have the drive to pitch yourself to other blogs and websites as well, then why not give it a shot?
+如果你的博客上有一些好的想法，并且你有动力向其他博客和网站推销自己，那么为什么不试一试呢？
 
-Also, if you've got any interesting story behind your company or products, this is another great way to show off what makes you unique. Who knows—your story could be the thing that makes your blog post stand out and draw people in.
+此外，如果你的公司或产品背后有任何有趣的故事，这是另一种展示你独特之处的好方法。谁知道呢——你的故事可能会使你的博客文章脱颖而出，吸引人们关注。
 
-## How to Optimize On-Page SEO
+## 如何优化页面的 SEO
 
-Now that you have the basics down, let’s look at how to optimize on-page SEO.
+现在你已经掌握了一些基础知识，让我们来看看如何优化页面 SEO。
+-   内容相关性：确保你的内容相关且最新。页面 SEO 的一个关键元素是拥有一个涵盖相关查询和用户可能提出的其他相关问题的页面。
+-   标题标签：确保你的标题标签相关且准确。你的标题标签应该让用户在访问你的网站之前了解他们将要点击的内容，所以确保它准确地反映了页面的主题，并对搜索者有意义（它不需要与你搜索的内容完全相同）。
+-   Meta 描述：不要忘记 meta 描述！虽然它不会直接影响排名，但 meta 描述仍然很重要，因为它们会出现在搜索结果页面（ SERPs ），如果正确优化，可以吸引用户点击。
+-   标题：通过将内容分成具有清晰标题的部分来适当使用标题，尽可能包含关键词。
+-   链接：链接到其他相关网站，并确保在可能的情况下进行内部链接，以帮助用户浏览你的网站（并包含带有上下文关键词的锚文本）。这也可以帮助提高页面权威。
+-   图片和视频：有策略地使用图片和视频，使你的内容对不喜欢阅读长篇文字或更喜欢视觉效果的访问者更具吸引力。你还可以使用图片 alt 标签或视频字幕/文字记录（非自动化）来优化内容，因为谷歌也会抓取这些类型的媒体。
 
--   Content relevance: Ensure your content is relevant and up to date. A key element of on-page SEO is having a page that covers the query in question and any related queries a user may have.
--   Title Tag: Make sure your title tag is relevant and accurate. Your title tag should give users an idea of what they’re clicking on before they visit your site, so make sure it accurately reflects the topic of the page and makes sense for searchers (it doesn’t need to be precisely the same as what you searched for).
--   Meta description: Don’t forget about meta descriptions! While it won’t directly affect rankings, meta descriptions are still important because they show up in SERPs and can encourage clicks from users if optimized correctly.
--   Headings: Use headers appropriately by breaking up content into sections with clear titles, including keywords when possible.
--   Links: Link out to other relevant websites and make sure you link internally when possible to help users navigate your site (and include anchor text with contextual keywords). This can also help boost page authority.
--   Images & Videos: Use images and videos strategically to make your content more compelling for visitors who don't want to read through long blocks of text or who like visuals better than reading text. You can also use image alt tags or video subtitles/transcripts (not automated) to optimize content since Google crawls these types of media as well.
+![Ahrefs关键字浏览器显示搜索结果“WordPress提示”](https://www.freecodecamp.org/news/content/images/2022/04/ahrefs-wordpress-tips.png)
 
-![Ahrefs Keyword Explorer showing results for the search "WordPress tips"](https://www.freecodecamp.org/news/content/images/2022/04/ahrefs-wordpress-tips.png)
+Ahrefs 关键词浏览器
 
-Ahrefs Keyword Explorer
+## 如何为你的内容寻找合适的关键词
 
-## How to Find the Right Keywords for Your Content Opportunities
+关键词研究可以说是 SEO 中最重要的部分。正确的关键词可以使文章获得高排名，而错误的关键词可能导致文章完全被忽视。
 
-Keyword research is arguably the most important part of SEO. The right keywords can make the difference between a high-ranking article and one that doesn’t get noticed at all.
+在开始时，理解你在自然搜索流量方面的目标非常重要。从那里，你可以选择一个关键词策略来帮助你实现这些目标。
 
-When you are starting, it’s important to understand your goals in terms of organic search traffic. From there, you can choose a keyword strategy that will help you reach those goals.
+在为你的内容选择关键词时，请考虑以下几个因素：
 
-There are several factors to consider when choosing keywords for your content opportunities:
+-   相关性：关键词与什么相关？选择与你的内容或产品紧密相关的关键词。
+-   搜索量：如果你希望人们看到你的内容，请选择具有高搜索量的关键词（即很多人搜索的关键词）
+-   独特性：独特的关键词可能比更普遍、常见的短语更难以成为你的竞争对手在自然搜索结果中的目标和排名。
 
--   Relevancy: What is the keyword relevant to? Choose a keyword that corresponds with your content or product offering.
--   Search Volume: If you want people to see your content, choose a keyword with high search volume (that is, many people have searched for it).
--   Unique: A unique keyword may be more difficult for your competition to target and rank for in organic search results than a more general, common phrase.
+## 如何利用社交媒体提升 SEO 、流量和销售
 
-## How to Leverage Social Media for SEO, Traffic, and Sales
+在当今的 SEO 环境中，社交媒体在获取自然流量方面发挥着重要作用。原因很简单：社交媒体网站是访问量最大的网站之一。
 
-Social media plays an important role in gaining organic traffic in today's SEO landscape. The reason is simple: social media sites are some of the most visited websites.
+更重要的是，谷歌和其他搜索引擎使用社交信号来确定一个网站对于给定关键词的相关性。这就是为什么在 Facebook 、Pinterest 、Twitter 和其他社交媒体网站上分享你的内容可以帮助你在搜索结果中获得更高的排名。
 
-More importantly, Google and other search engines use social signals to determine a site's relevance for a given keyword. That’s why having your content shared on Facebook, Pinterest, Twitter, and other social media sites can help you rank higher in search results.
+值得注意的是，并非所有社交信号对 SEO 的影响都相同。有些信号比其他信号更能提升网站的权威，因此你需要明智地判断哪些信号对你的业务目标更有价值。
 
-It’s important to note that not all social signals have the same influence on SEO. Some signals give a site more authority than others, so it would be wise for you to determine which ones are worth pursuing for your business goals.
+## 如何鼓励高质量的回链指向你的网站
 
-## How to Encourage Quality Backlinks to Your Site.
+提高 SEO 的最有效方法之一是通过在社交网络上分享你的博客文章并鼓励影响者分享你的内容，从而鼓励高质量的回链指向你的网站。
 
-One of the most effective ways to boost your SEO is to encourage quality backlinks to your site by sharing your blog posts on social networks and encouraging influencers to share your content.
+但是什么是“回链”？
 
-But what is a “backlink”?
+回链就是从其他网站指向你网站的链接。
 
-A backlink is simply a link from another website that points back to yours.
+例如，如果这个页面有一个指向社交媒体 Examiner 主页的链接，那就被认为是一个回链。回链至关重要，因为它们向谷歌表明其他人或企业认为你的网站足够重要和有价值，值得在他们的页面中包含。
 
-For example, if this page had a link pointing to Social Media Examiner's homepage, that would be considered a backlink. Backlinks are vital because they show Google that other people or businesses see your site as important and valuable enough to include in their pages.
+你的网站获得的高质量（重要）链接越多，你在搜索引擎结果中的排名就越高。
 
-The more high-quality (important) links you have pointing toward your website, the higher you will rank on search engine results.
+获得高质量链接的一些好策略包括在行业网站上进行客座博客发表、与你所在行业的影响者进行访谈，以及询问客户/客户是否愿意在线发布你的服务评价。
 
-Some good strategies for obtaining high-quality links include guest blogging on industry websites, conducting interviews with influencers in your industry, and asking customers/clients if they would be willing to post reviews of your services online.
+一旦你获得了一些高质量的回链，就需要跟踪它们以确定它们在提高流量和排名方面的效果。你可以使用 Ahrefs 或 Semrush 等工具来实现这一目标。
 
-Once you have some high-quality links coming in, it's important to keep track of them to determine how effective they are at boosting traffic and ranking. You can use tools like Ahrefs or Semrush to do this.
+## 如果你希望你的网站可以被搜索到，这里有一些技巧可以帮助你
 
-## If you want your website to be searchable, these tips will help you
+实现更高可见性的最佳方法是确保你的网站出现在搜索结果的第一页（最好是前三个位置）。
 
-The best way to achieve higher visibility is to make sure your website appears on the first page of search results (better yet, the first three positions).
+如果你的网站没有出现在第一页，潜在客户可能永远看不到它。事实上，如果你的网站从第二页移到第一页，你可以显著增加网站的流量。要做到这一点，你需要一个强大的 SEO 策略。
 
-If your site doesn't show up on that first page, there's a good chance potential customers will never see it. In fact, you can increase traffic to your website significantly if you move from the second page to the first. To do this, you need a strong SEO strategy.
-
-SEO can seem like a daunting topic, but it doesn't have to be. Whether you're already familiar with SEO or not, there's likely something in the above guide you can start implementing right away to better optimize your website for search engines and improve the user experience for potential clients. All you have to do is get started, and the sooner, the better!
+SEO 可能看起来是一个令人生畏的话题，但不必害怕。无论你是否已经熟悉 SEO ，上面的指南中可能有一些你可以立即开始实施的方法，以便更好地优化你的网站以适应搜索引擎，并提高潜在客户的用户体验。你只需开始行动，越早越好！

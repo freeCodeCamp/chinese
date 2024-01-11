@@ -5,11 +5,11 @@
 
 ![How to Lazy Load Images in React](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/How-to-lazy-load-images-in-React-1.png)
 
-优化网站上的资源（如图片懒加载）是提高web性能最有效的办法之一。
+优化网站上的资源（如图片懒加载）是提高 web 性能最有效的办法之一。
 
 这样做可以确保网站高速运行、有良好的[SEO](https://en.wikipedia.org/wiki/Search_engine_optimization)以及用户体验。
 
-在这篇文章中，你将学习如何在React应用中实现懒加载。我将讲解这样做的好处，以及如何通过代码中实现。
+在这篇文章中，你将学习如何在 React 应用中实现懒加载。我将讲解这样做的好处，以及如何通过代码中实现。
 
 在开始之前，让我解释一下什么是懒加载，以及它是如何运作的。
 
@@ -23,7 +23,7 @@
 
 这背后的理念是推迟视口以外图片的加载，以此来减少带宽的使用，提高用户体验，并加快页面加载的速度。
 
-现在懒加载已经是一种`image/iframe`，所以仅需在img/iframe元素中添加 `loading=" lazy"`属性，如下：
+现在懒加载已经是一种`image/iframe`，所以仅需在 img/iframe 元素中添加 `loading=" lazy"`属性，如下：
 
 ```html
 <img src="image.jpg" alt="Image Alt" loading="lazy" />
@@ -32,19 +32,19 @@
 
 在不需要更多配置的情况下就可以生效。
 
-遗憾的是，根据[caniuse.com](https://caniuse.com/?search=lazyloadin)显示，不是所有的浏览器都支持这样的方式。 同时，在Firefox中，`loading= "lazy"` 属性并不能在`iframe`元素中使用。 在这些情况下，你需要搭配其他的库或者工具一起使用。
+遗憾的是，根据[caniuse.com](https://caniuse.com/?search=lazyloadin)显示，不是所有的浏览器都支持这样的方式。 同时，在 Firefox 中，`loading= "lazy"` 属性并不能在`iframe`元素中使用。 在这些情况下，你需要搭配其他的库或者工具一起使用。
 
 
 ## 开始实现懒加载
 
 本文将使用一个名为[React Lazy Load Image Component](https://www.npmjs.com/package/react-lazy-load-image-component)的库。  
-这个流行的库能够帮助你快速且轻松地在React应用中实现一些图片渲染的能力和效果。
+这个流行的库能够帮助你快速且轻松地在 React 应用中实现一些图片渲染的能力和效果。
 
-代码示例可以在[GitHub仓库](https://github.com/evavic44/react-lazyload)查看。
+代码示例可以在[GitHub 仓库](https://github.com/evavic44/react-lazyload)查看。
 
-### 步骤 1 – 安装React Lazy Load Image组件
+### 步骤 1 – 安装 React Lazy Load Image 组件
 
-我们首先通过NPM来安装React lazy load image组件：
+我们首先通过 NPM 来安装 React lazy load image 组件：
 
 ```js
 // Yarn
@@ -56,7 +56,7 @@ $ npm i --save react-lazy-load-image-component
 
 ### 步骤 2 – 引用组件
 
-这里我们将直接通过组件来引用，你也可以通过外部URL的方式来引用图片。在这个例子中，我将图片作为images目录下的组件引用：
+这里我们将直接通过组件来引用，你也可以通过外部 URL 的方式来引用图片。在这个例子中，我将图片作为 images 目录下的组件引用：
 
 ```js
 import Image from "../images/bird.jpg";
@@ -89,7 +89,7 @@ export default function App() {
 
 同时，需要明确定义图片的宽和高，以避免[累积布局偏移(CLS)](https://web.dev/cls/)问题。
 
-若要查看组件效果，可以打开浏览器的开发者工具，如果是Windows和Linux系统，使用组合键 Ctrl + Shift + E；如果是Mac使用 Cmd + Opt + E。然后将节流设置为较低的网络(3G)，禁用缓存，并刷新页面。
+若要查看组件效果，可以打开浏览器的开发者工具，如果是 Windows 和 Linux 系统，使用组合键 Ctrl + Shift + E；如果是 Mac 使用 Cmd + Opt + E。然后将节流设置为较低的网络(3G)，禁用缓存，并刷新页面。
 
   
 ![network-tab](https://www.freecodecamp.org/news/content/images/2022/08/network-tab.png)
@@ -102,7 +102,7 @@ export default function App() {
 
 Default（默认）时，因为图片并不在视口，图片没有加载。一旦你开始滚动，图片到达视图，懒加载就被禁用，我们就可以看到图片。
 
-[Live演示](https://react-lazyload.vercel.app/default)
+[Live 演示](https://react-lazyload.vercel.app/default)
 
 ### 步骤 4 – 添加图片占位符
 
@@ -144,11 +144,11 @@ import PlaceholderImage from "../images/placeholder.jpg";
 
 ### 步骤 5 – 添加模糊图
 
-LazyLoadImage提供一个插件，在加载前模糊图片，加载完成后去除掉模糊。
+LazyLoadImage 提供一个插件，在加载前模糊图片，加载完成后去除掉模糊。
 
 将其与占位符图片结合，可以提升整体效果。
 
-为了使用模糊效果，我们必须引用控制它的CSS文件：
+为了使用模糊效果，我们必须引用控制它的 CSS 文件：
 
 ```js
 import Image from "../images/bird.jpg";
@@ -167,13 +167,13 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 ![React-lazyload---Blur](https://www.freecodecamp.org/news/content/images/2022/08/React-lazyload---Blur.gif)
 
-[Live演示](https://react-lazyload.vercel.app/blur)
+[Live 演示](https://react-lazyload.vercel.app/blur)
 
 
 
 ## 为什么要对图片实现懒加载?
 
-你可能会好奇，为什么要在web应用中使用懒加载这么麻烦的技术。这样做值得吗，我为什么要关注文章中的观点？
+你可能会好奇，为什么要在 web 应用中使用懒加载这么麻烦的技术。这样做值得吗，我为什么要关注文章中的观点？
 
 以下是使用懒加载的理由：
 
@@ -181,22 +181,22 @@ import 'react-lazy-load-image-component/src/effects/blur.css';
 
 由于在视口外的图片不被及时加载，懒加载可以节省带宽的使用。这有利于提升特别是手机用户的使用性能。
 
-### 2\. 懒加载减少CDN花销
+### 2. 懒加载减少 CDN 花销
 
-如[Cloudinary](https://cloudinary.com)或 [Imagekit](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/imagekit.io)这样的媒体内容服务提供收费的媒体存储计划。懒加载可以确保仅从CDN请求的图片被加载，减少了服务器花销。
+如[Cloudinary](https://cloudinary.com)或 [Imagekit](https://www.freecodecamp.org/news/how-to-lazy-load-images-in-react/imagekit.io)这样的媒体内容服务提供收费的媒体存储计划。懒加载可以确保仅从 CDN 请求的图片被加载，减少了服务器花销。
 
 
-### 3\. 懒加载提升SEO
+### 3. 懒加载提升 SEO
 
-页面速度是影响SEO (搜索引擎也更有可能推荐你的页面)的关键要素。因为页面加载时间少，搜索引擎会乐于推荐你的页面。
+页面速度是影响 SEO (搜索引擎也更有可能推荐你的页面)的关键要素。因为页面加载时间少，搜索引擎会乐于推荐你的页面。
 
 ## 总结
 
-我认为优化页面是每一个web开发者应该修炼的技术。它给用户提供了更好的体验，特别是使用手机的用户。
+我认为优化页面是每一个 web 开发者应该修炼的技术。它给用户提供了更好的体验，特别是使用手机的用户。
 
-这里是[GitHub上关于这篇文章的代码](https://github.com/Evavic44/react-lazyload)。
+这里是[GitHub 上关于这篇文章的代码](https://github.com/Evavic44/react-lazyload)。
 
-这篇文章就到这里，如果你已经读到了这里，我确信你对我其他的文章也会感兴趣。欢迎通过查看我的[博客](https://eke.hashnode.dev)或者关注我的twitter[@victorekea](https://twitter.com/victorekea)来获取更多内容。
+这篇文章就到这里，如果你已经读到了这里，我确信你对我其他的文章也会感兴趣。欢迎通过查看我的[博客](https://eke.hashnode.dev)或者关注我的 twitter[@victorekea](https://twitter.com/victorekea)来获取更多内容。
 
 ## 其他资源
 

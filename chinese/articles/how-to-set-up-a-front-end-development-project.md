@@ -349,7 +349,7 @@ parcel build index.html —public-url '.'
 
 就这样吧! 谢谢您的阅读  :)
 
-### **订阅更多关于网站开发的教程:**
+### **订阅更多关于网站开发的教程**
 
 Hunor Márton Borbély
 

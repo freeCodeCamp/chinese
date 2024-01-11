@@ -5,13 +5,13 @@
 
 ![How to Generate a Random Number within Certain a Range in JavaScript](https://www.freecodecamp.org/news/content/images/size/w2000/2022/12/9.-random-number.png)
 
-如果想在 `10` 和 `15` 之间生成一个随机数，如何通过JavaScript实现呢？在这篇文章里，我将通过实例向您介绍。
+如果想在 `10` 和 `15` 之间生成一个随机数，如何通过 JavaScript 实现呢？在这篇文章里，我将通过实例向您介绍。
 
-JavaScript中，`Math` 对象的 `random` 方法可以实现返回随机数，然而它有着取值范围的局限性。接下来，让我们看看如何对这个方法进行延伸。
+JavaScript 中，`Math` 对象的 `random` 方法可以实现返回随机数，然而它有着取值范围的局限性。接下来，让我们看看如何对这个方法进行延伸。
 
 我为这个文章创建了一个[视频版本]((https://www.youtube.com/watch?v=oUZVKzXVJaE))，您可以作为补充资料进行学习。
 
-## 如何在JavaScript中使用`Math.random`
+## 如何在 JavaScript 中使用`Math.random`
 
 已知`random` 方法返回一个 `0` 和 `1` 之间的随机浮点数。
 
@@ -30,7 +30,7 @@ Math.random()
 
 可以注意到，运行结果返回了 `0` 和 `1` 之间的随机数。现在我们尝试将此方法延伸到其他取值范围。
 
-## 如何在JavaScript中获取给定范围中的随机数
+## 如何在 JavaScript 中获取给定范围中的随机数
 
 接下来我们为此构建一个函数：
 

@@ -38,7 +38,7 @@
 
 -   我避免用代码片段，因为我不喜欢依赖任何现成的工具。
 -   我从不使用代码片段，因为我宁愿将时间花在怎样避免重复上，而不是让重复变得更简单。
--   有些时候，离开了代码片段的帮助，我甚至不记得代码应该怎么写了。对于那些我已经熟透的内容，使用代码片段是OK的，但我不想在那些我还不熟悉的内容上使用代码片段。
+-   有些时候，离开了代码片段的帮助，我甚至不记得代码应该怎么写了。对于那些我已经熟透的内容，使用代码片段是 OK 的，但我不想在那些我还不熟悉的内容上使用代码片段。
 -   网上的代码片段都有这样或那样的错误。我一直无法找到不存在浮点数错误的数值算法。我想，在网上是找不到不存在错误的代码片段的。
 
 ## 什么时候你需要使用代码片段?
@@ -97,9 +97,9 @@
 
 ![insert-snippet-list](https://www.freecodecamp.org/news/content/images/2020/09/insert-snippet-list.png)
 
-[Emmet][1] 已集成到VS Code中，并且具有自己的CSS选择器启发式语法，可用于插入HTML和CSS代码段。
+[Emmet][1] 已集成到 VS Code 中，并且具有自己的 CSS 选择器启发式语法，可用于插入 HTML 和 CSS 代码段。
 
-Emmet是独立的功能，但是机制和代码片段是一样的。你可以从片文章 [Emmet in Visual Studio Code guide][2] 里了解相关信息。
+Emmet 是独立的功能，但是机制和代码片段是一样的。你可以从片文章 [Emmet in Visual Studio Code guide][2] 里了解相关信息。
 
 ### 用户相关设置
 
@@ -111,7 +111,7 @@ Emmet是独立的功能，但是机制和代码片段是一样的。你可以从
 
 可选值:
 
--   `on`: 打开tab-completion 功能。
+-   `on`: 打开 tab-completion 功能。
 -   `off`: 关闭 tab-completion 功能，这是 _默认值_。
 -   `onlySnippets`: 只对代码片段打开 tab-completion。
 
@@ -144,7 +144,7 @@ Yes!
 
 那么，怎么才能找出你使用的语言的的所有内置的代码片段呢？
 
-简单说，我对上面的情况表示不满，所以我写了一个 VS Code 插件 [**Snippets Ranger**][4]，提供了一个漂亮的UI界面来展示所有的内置代码片段。Think of it as a  _Marauder's Map_  for snippets!
+简单说，我对上面的情况表示不满，所以我写了一个 VS Code 插件 [**Snippets Ranger**][4]，提供了一个漂亮的 UI 界面来展示所有的内置代码片段。Think of it as a  _Marauder's Map_  for snippets!
 
 ![snippets-ranger](https://www.freecodecamp.org/news/content/images/2020/09/snippets-ranger.png)
 
@@ -168,7 +168,7 @@ Visual Studio 市场 有专门的 [snippets category][5] 分类，你可以在�
 
 ### 自己如何写代码片段?
 
-代码片段文件是 JSON 格式的。 如果你想，你还可以添加C语言风格的注释（技术上讲，它是微软的"JSONC"格式）。 
+代码片段文件是 JSON 格式的。 如果你想，你还可以添加 C 语言风格的注释（技术上讲，它是微软的"JSONC"格式）。 
 
 你可以创建针对不同作用域的代码片段：全局的，工作区的，以及针对特定语言类型的。
 
@@ -176,7 +176,7 @@ Visual Studio 市场 有专门的 [snippets category][5] 分类，你可以在�
 
 ![user snippets](https://www.freecodecamp.org/news/content/images/2020/09/user-snippets.png)
 
-如果你更喜欢使用GUI界面来编写代码片段，你可以尝试以这个 [snippet generator web app][6] 网站。
+如果你更喜欢使用 GUI 界面来编写代码片段，你可以尝试以这个 [snippet generator web app][6] 网站。
 
 ![snippet generator](https://www.freecodecamp.org/news/content/images/2020/09/snippet-generator.png)
 
@@ -207,7 +207,7 @@ Visual Studio 市场 有专门的 [snippets category][5] 分类，你可以在�
 4.  `description`属性提供了代码片段的更多描述。它是可选的。
 5.  `scope`属性允许你指定特定的语言类型，你可以使用逗号来分割多种语言。它也是可选的。当然，对于特定于语言的代码片段文件来说是多余的。
 
-该代码片段的内容具有2个 tab stop ，并使用了`$ {TM_SELECTED_TEXT}`变量。
+该代码片段的内容具有 2 个 tab stop ，并使用了`$ {TM_SELECTED_TEXT}`变量。
 
 接下来，让我们详细了解语法相关的细节。
 
@@ -219,7 +219,7 @@ VS Code 的代码片段语法和 [TextMate snippet syntax][7] 是相同的。然
 
 #### 1\. Tab Stops
 
-Tab stops由 **$** 和 **序号** 组成，像 `$1`。`$1`代表了第一个位置，`$2`代表了第二个位置，以此类推。`$0`代表退出代码片段，以及最后光标停留的位置，
+Tab stops 由 **$** 和 **序号** 组成，像 `$1`。`$1`代表了第一个位置，`$2`代表了第二个位置，以此类推。`$0`代表退出代码片段，以及最后光标停留的位置，
 
 看一个例子，我们希望写一个 _div_ 的代码片段。它的第一个 tab stop 在标签内，同时希望用户按下 tab 的时候能退出代码片段，并让光标停留在标签外。
 
@@ -239,7 +239,7 @@ Tab stops由 **$** 和 **序号** 组成，像 `$1`。`$1`代表了第一个位�
 
 有时候你想在插入的模板中的多个位置输入相同的值。这种时候你可以使用相同序号的 tab stops 来标识这几个位置，当你编辑其中一个的时候，就会自动同步输入的值到其它位置。
 
-一个典型的例子就是 _for_ 循环中的 _index_ 变量会被多次使用，下面是一个JavaScript中的 _for_ 循环代码片段。
+一个典型的例子就是 _for_ 循环中的 _index_ 变量会被多次使用，下面是一个 JavaScript 中的 _for_ 循环代码片段。
 
 ```json
 {
@@ -302,8 +302,8 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 -   `TM_SELECTED_TEXT`: 当前选中的文字或者空字符串,
 -   `TM_CURRENT_LINE`: 当前行的文字,
 -   `TM_CURRENT_WORD`: 光标下的单词或者空字符串,
--   `TM_LINE_INDEX`: 以0为第一行的当前行序号,
--   `TM_LINE_NUMBER`: 以1为第一行的当前行序号,
+-   `TM_LINE_INDEX`: 以 0 为第一行的当前行序号,
+-   `TM_LINE_NUMBER`: 以 1 为第一行的当前行序号,
 -   `TM_FILENAME`: 当前文档的文件名,
 -   `TM_FILENAME_BASE`: 当前文档的文件名，不带扩展名,
 -   `TM_DIRECTORY`: 当前文档所在的文件夹,
@@ -321,26 +321,26 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 -   `CURRENT_DATE`: 当前月份中的日期,
 -   `CURRENT_DAY_NAME`: 当前日期的名字 (例如 'Monday'),
 -   `CURRENT_DAY_NAME_SHORT`: 当前日期的名字缩写 (例如 'Mon'),
--   `CURRENT_HOUR`: 当前的时间（小时）以24小时制展示,
+-   `CURRENT_HOUR`: 当前的时间（小时）以 24 小时制展示,
 -   `CURRENT_MINUTE`: 当前分钟数,
 -   `CURRENT_SECOND`: 当前秒数,
--   `CURRENT_SECONDS_UNIX`: 从UNIX起的秒数（时间戳）.
+-   `CURRENT_SECONDS_UNIX`: 从 UNIX 起的秒数（时间戳）.
 
 下面是一些关于注释的变量，在不同的语言下会出现不同的注释字符串:
 
--   `BLOCK_COMMENT_START`: 例如,  `<!--`  在HTML中,
--   `BLOCK_COMMENT_END`: 例如 ,  `-->`  在HTML中,
--   `LINE_COMMENT`: 例如,  `//`  在JavaScript中.
+-   `BLOCK_COMMENT_START`: 例如,  `<!--`  在 HTML 中,
+-   `BLOCK_COMMENT_END`: 例如 ,  `-->`  在 HTML 中,
+-   `LINE_COMMENT`: 例如,  `//`  在 JavaScript 中.
 
 #### 6\. Transformations
 
 转换一般运用于 variable 或者 placeholder 。如果你熟悉正则表达式（regex），你会发现这很相似。
 
-转换的语法像下面这样：`${«variable or placeholder»/«regex»/«replacement string»/«flags»}`。它很像JavaScript中的 [String.protoype.replace()][8] 。其中参数的作用如下:
+转换的语法像下面这样：`${«variable or placeholder»/«regex»/«replacement string»/«flags»}`。它很像 JavaScript 中的 [String.protoype.replace()][8] 。其中参数的作用如下:
 
--   `«regex»`: 这是一个与变量或占位符的值匹配的正则表达式。支持JavaScript regex语法。
+-   `«regex»`: 这是一个与变量或占位符的值匹配的正则表达式。支持 JavaScript regex 语法。
 -   `«replacement string»`: 这是用来替换匹配到的内容的字符串。它可以引用`«regex»`中的捕获组，执行大小写的格式化（使用特殊的标记函数：`/upcase`, `/downcase`, 和 `/capitalize`），以及执行条件插入。查看 [TextMate Replacement String Syntax][9] 了解更多信息。
--   `«flags»`: Flags是传递给正则表达式使用的。可以使用 [JavaScript regex flags][10] 中的标志:
+-   `«flags»`: Flags 是传递给正则表达式使用的。可以使用 [JavaScript regex flags][10] 中的标志:
     -   `g`  : 全局搜索,
     -   `i`  : 大小写敏感,
     -   `m`  : 多行搜索,
@@ -380,7 +380,7 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 }
 
 ```
-有一个令人困惑的特性，当你在第一个tab stop上设置了placeholder，但却在它的镜像tab stop上运用了转换，转换会发生在第一个tab stop上么？不会！
+有一个令人困惑的特性，当你在第一个 tab stop 上设置了 placeholder，但却在它的镜像 tab stop 上运用了转换，转换会发生在第一个 tab stop 上么？不会！
 
 你会选择使用这个特性嘛？我最开始对这个特性感到十分困惑，所以我觉得你们也可能会。下面时具体的例子：
 
@@ -398,7 +398,7 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 
 你可以通过向 `keybindings.json` 加入你的快捷键。这个文件可以通过这个命令 **'Preferences: Open Keyboard Shortcuts File (JSON)'** 打开。
 
-比如，为 markdown的 代码片段 "Insert heading level 1" 绑定一个快捷键：
+比如，为 markdown 的 代码片段 "Insert heading level 1" 绑定一个快捷键：
 
 ```json
 {
@@ -413,9 +413,9 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 
 ```
 
-你可以定义你的快捷键组合，指定命令的ID，以及可选的 [when clause context][11] 来指定什么时候这个快捷键是可用的。
+你可以定义你的快捷键组合，指定命令的 ID，以及可选的 [when clause context][11] 来指定什么时候这个快捷键是可用的。
 
-通过 `args` 对象，你可以通过 `langId` 和 `name` 指定目标代码片段。其中 `langId` 参数是目标代码片段所属的语言ID [language ID][12] ，参数 `name` 是你编写代码片段时指定的名字。
+通过 `args` 对象，你可以通过 `langId` 和 `name` 指定目标代码片段。其中 `langId` 参数是目标代码片段所属的语言 ID [language ID][12] ，参数 `name` 是你编写代码片段时指定的名字。
 
 如果你想，你也可以使用 `snippet` 属性指定行内的代码片段。
 
@@ -435,7 +435,7 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 
 你也可以使用  _Keyboard Shortcuts UI_ 来编辑快捷键，但是它不具备添加新的快捷键的能力。  
 
-使用UI的另一个缺点是，他不会显示 `args` 对象，这会让你查找或者编辑自定义快捷键时更加费劲。
+使用 UI 的另一个缺点是，他不会显示 `args` 对象，这会让你查找或者编辑自定义快捷键时更加费劲。
 
 ![shortcuts-ui](https://www.freecodecamp.org/news/content/images/2020/09/shortcuts-ui.png)
 
@@ -463,7 +463,7 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 
 第二点， _fre_ 与内置的代码片段 _foreach_  **重复** 了。
 
-一些人可能把快速建议的功能关闭了，只使用tab键来触发代码片段。这种情况下你需要在没有提示的情况下输入前缀。这些人可能更喜欢使用缩写前缀来减少按键的次数。
+一些人可能把快速建议的功能关闭了，只使用 tab 键来触发代码片段。这种情况下你需要在没有提示的情况下输入前缀。这些人可能更喜欢使用缩写前缀来减少按键的次数。
 
 然而这种方式，同样使用了模糊搜索，所以你按下 tab 键的时候，代表你默认选择了第一个匹配项。
 
@@ -473,7 +473,7 @@ VS Code 提供了大量变量供你使用。你可以简单的在变量名前加
 
 因此，如果你想的话，你可以不输入完整的前缀！？但是想象一下，在某种语言下，拥有大量相似前缀的代码片段，你只输入前缀缩写是多么不切实际的。
 
-更实际的做法是，选择合适的前缀，在按下tab键之前，完整的把它们打出来。
+更实际的做法是，选择合适的前缀，在按下 tab 键之前，完整的把它们打出来。
 
 以上观点，可能根据你个人存在某些取舍。
 
@@ -499,7 +499,7 @@ Some snippet authors have rigid patterns to overcome this, but that's just somet
 -   插入日期,
 -   格式化选中的文字或者粘贴文字,
 -   为你的搜索引擎或者应用加入常见的搜索词组,
--   在邮件客户端中使用HTML的代码片段,
+-   在邮件客户端中使用 HTML 的代码片段,
 -   向文档添加不同的模板.
 
 大多数针对代码片段的应用都称自己为 “文本扩展器” ，但是还是有很多用于任务管理或者生产力的应用同样包含了代码片段的功能。
@@ -510,7 +510,7 @@ Some snippet authors have rigid patterns to overcome this, but that's just somet
 
 #### Autohotkey (Windows)
 
-[AutoHotkey][14]  是一个 **Windows下的免费，开源的脚本语言** ，用于执行所有类型任务.
+[AutoHotkey][14]  是一个 **Windows 下的免费，开源的脚本语言** ，用于执行所有类型任务.
 
 它拥有自己专属语法。你可以在 VS Code 中安装 [AutoHotKey extension][15] ，来获得更好的编辑体验。 
 
@@ -534,7 +534,7 @@ Some snippet authors have rigid patterns to overcome this, but that's just somet
 
 [PhraseExpress][17] 是一个文本扩展器应用，它管理常用文本模板，并可以插入任何程序。
 
-这是一个 **基于GUI的免费增值应用**。它比 _AutoHotKey_ 的受众更广泛。
+这是一个 **基于 GUI 的免费增值应用**。它比 _AutoHotKey_ 的受众更广泛。
 
 他十分简洁和易于使用。你可以设置它为启动时运行，他就会在后台被激活。
 
@@ -544,7 +544,7 @@ Some snippet authors have rigid patterns to overcome this, but that's just somet
 
 #### Espanso (Windows, Mac, Linux)
 
-这是一个 **用Rust写的开源，跨平台的文本扩展器应用**。
+这是一个 **用 Rust 写的开源，跨平台的文本扩展器应用**。
 
 它采用了 **基于文件配置的方法**，配置文件采用了 [YAML][18] 语法。
 

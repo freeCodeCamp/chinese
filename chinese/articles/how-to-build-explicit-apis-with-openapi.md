@@ -86,7 +86,7 @@
 
 很好，现在我们已经介绍了 API 定义的开放标准和背景，让我们来实现一个 Express 待办事项应用，演示怎么解决前面的挑战。
 
-我们将使用 Express 库 [**express-openapi**](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi) 的 OpenAPI。请注意，这个库提供的高级功能（响应验证、认证、中间件设置......）超出了本文的范围。
+我们将使用 Express 库 [**express-openapi**](https://github.com/kogosoftwarellc/open-api/tree/master/packages/express-openapi) 的 OpenAPI。请注意，这个库提供的高级功能（响应验证、认证、中间件设置……）超出了本文的范围。
 
 你可以在**[这个仓库](https://github.com/aperkaz/express-open-api)**中找到演示的完整代码。
 

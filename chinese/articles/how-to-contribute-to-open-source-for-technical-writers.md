@@ -17,7 +17,7 @@
 
 ## 什么是开源？
 
-开源是一种软件开发与发布的协作方式。世界各地的人们通过为软件添加功能、修复bug（错误）、回答问题、翻译文本或写作教程来做开源贡献。
+开源是一种软件开发与发布的协作方式。世界各地的人们通过为软件添加功能、修复 bug（错误）、回答问题、翻译文本或写作教程来做开源贡献。
 
 ## 为什么要贡献？
 
@@ -39,15 +39,15 @@
 
 ## 如何参与开源项目
 
-首先，在[GitHub](https://github.com/)上找到你想要参与贡献的一个项目。你可以[阅读这份教程](https://www.freecodecamp.org/news/github-search-tips/) 查看如何在GitHub上进行搜索并找到项目。
+首先，在[GitHub](https://github.com/)上找到你想要参与贡献的一个项目。你可以[阅读这份教程](https://www.freecodecamp.org/news/github-search-tips/) 查看如何在 GitHub 上进行搜索并找到项目。
 
-然后，打开README文件，确保你理解里面提到的说明。
+然后，打开 README 文件，确保你理解里面提到的说明。
 
-接着，点击屏幕右上角的Fork按钮，将这个repo（仓库）fork（复制）下来。
+接着，点击屏幕右上角的 Fork 按钮，将这个 repo（仓库）fork（复制）下来。
 
 ![x3IyU70meecZi1qYS4_CCZW0cOZqpcTdVfKjG3_TpM1TJj_tH15FhNaKmrAL2bl8fTU7fcUAditd6AzqJbJItmCavBxQObpD2bAJCRlYds-sX-Z3iyA4b_pajXsOnAJM1_8tbPdbyOGNrXyxCfu1Qk-x3AyDrtDrFxbbxlmIaSSwaj3kYX87ELMUSQ](https://lh5.googleusercontent.com/x3IyU70meecZi1qYS4_CCZW0cOZqpcTdVfKjG3_TpM1TJj_tH15FhNaKmrAL2bl8fTU7fcUAditd6AzqJbJItmCavBxQObpD2bAJCRlYds-sX-Z3iyA4b_pajXsOnAJM1_8tbPdbyOGNrXyxCfu1Qk-x3AyDrtDrFxbbxlmIaSSwaj3kYX87ELMUSQ)
 
-使用下列命令将fork（复制）的仓库复制到你的本地电脑：
+使用下列命令将 fork（复制）的仓库复制到你的本地电脑：
 
 ```bash
 git clone <链接到仓库>
@@ -55,9 +55,9 @@ git clone <链接到仓库>
 
 当你点击代码下拉菜单时，会看到仓库链接。
 
-复制好后，打开包含你的新fork的目录，开始添加你的贡献。
+复制好后，打开包含你的新 fork 的目录，开始添加你的贡献。
 
-完成后，使用下列说明将你的修改推送到GitHub：
+完成后，使用下列说明将你的修改推送到 GitHub：
 
 ```bash
 git status //显示哪些修改已经分阶段完成
@@ -67,31 +67,31 @@ git branch -M changes //创建一个新的分支
 git push -u origin changes //推送修改
 ```
 
-将修改推送到复制的仓库后，GitHub页面会弹出提示创建一个Pull Request（PR，拉取请求）。创建PR，等待项目维护者将你复制的仓库合并到主仓库。
+将修改推送到复制的仓库后，GitHub 页面会弹出提示创建一个 Pull Request（PR，拉取请求）。创建 PR，等待项目维护者将你复制的仓库合并到主仓库。
 
 如果你不久前叉入了该项目，**请确保将上游的修改纳入你的本地仓库** 。
 
-如果你遇到一个大文件，并且还没有安装`git-lfs`的话，就用这条命令`brew install git-lfs`去安装一个git-lsf。
+如果你遇到一个大文件，并且还没有安装`git-lfs`的话，就用这条命令`brew install git-lfs`去安装一个 git-lsf。
 
-Git LFS（Large File Storage大文件存储）是由Atlassian、GitHub以及其他开源贡献者开发的Git扩展。它通过缓慢下载大文件的相关版本来减少文件在仓库中的影响。
+Git LFS（Large File Storage 大文件存储）是由 Atlassian、GitHub 以及其他开源贡献者开发的 Git 扩展。它通过缓慢下载大文件的相关版本来减少文件在仓库中的影响。
 
 你也可以根据这个[文档](https://docs.github.com/en/repositories/working-with-files/managing-large-files/installing-git-large-file-storage) 安装`git-lfs`。
 
 ### 开源贡献的最佳实践
 
-1.  确定一个你可以提供帮助的领域，然后在GitHub上找到相关的项目。
+1.  确定一个你可以提供帮助的领域，然后在 GitHub 上找到相关的项目。
 2.  阅读任何可能与你感兴趣的项目或程序相似的文档。这样你就会更了解贡献会涉及什么以及其他人做了什么贡献。
-3.  搜索标注了good first issue（第一个好问题）的问题，并通读这些问题——这些问题通常是很容易解决的。
+3.  搜索标注了 good first issue（第一个好问题）的问题，并通读这些问题——这些问题通常是很容易解决的。
 4.  遵循项目的贡献指南，准备好你的代码。
-5.  写一个详细的PR，给出你的解决方案，并解释为什么你的方案可以解决当前问题。如果有必要，附上相关资源的链接。
-6.  提交你的PR以待审阅。项目团队会讨论是否将你的PR合入仓库，并将结果更新给你。
-7.  如果他们决定不接受你的PR，你就询问如何能解决他们的顾虑，这样他们之后就会重新考虑接受PR。
-8.  如果他们确实接受了你的PR请求，记得表示感谢！
+5.  写一个详细的 PR，给出你的解决方案，并解释为什么你的方案可以解决当前问题。如果有必要，附上相关资源的链接。
+6.  提交你的 PR 以待审阅。项目团队会讨论是否将你的 PR 合入仓库，并将结果更新给你。
+7.  如果他们决定不接受你的 PR，你就询问如何能解决他们的顾虑，这样他们之后就会重新考虑接受 PR。
+8.  如果他们确实接受了你的 PR 请求，记得表示感谢！
 9.  继续寻找要解决的新问题，并在此过程中分享你的进步！
 
 ## 我能做什么类型的贡献？
 
-你可以通过多种方式为项目做贡献，包括为bug修复或功能新增提PR、编写软件使用文档、改进已有文档、翻译文档和修改拼写错误。
+你可以通过多种方式为项目做贡献，包括为 bug 修复或功能新增提 PR、编写软件使用文档、改进已有文档、翻译文档和修改拼写错误。
 
 在深入参与贡献某个项目之前，你应该首先挑选一个你感兴趣的项目，并通读该项目的文档。
 
@@ -101,19 +101,19 @@ Git LFS（Large File Storage大文件存储）是由Atlassian、GitHub以及其�
 
 ## 去哪里找开源项目？
 
-有很多地方都能找到开源项目。GitHub是最受欢迎的地方，但在BitBucket、Gitlab和其它网站也有开源项目的仓库。
+有很多地方都能找到开源项目。GitHub 是最受欢迎的地方，但在 BitBucket、Gitlab 和其它网站也有开源项目的仓库。
 
-如果你有一个想法，但还没有对应的开源项目，可以先把你的想法和计划放在一个`README`文件中。如果你不确定如何开始为一个已有的项目做贡献，那么可以查看该项目的文档或通读一些PR，然后提交自己的PR。
+如果你有一个想法，但还没有对应的开源项目，可以先把你的想法和计划放在一个`README`文件中。如果你不确定如何开始为一个已有的项目做贡献，那么可以查看该项目的文档或通读一些 PR，然后提交自己的 PR。
 
 ## **示例项目**
 
--   [HTML5 Boilerplate项目](https://github.com/h5bp/html5-boilerplate) 是一个受Web网页开发者欢迎的开源项目。项目支持通过HTML、CSS和Javascript代码来创建网站或网页应用。
--   [Bootstrap框架](https://github.com/twbs) 也是一个开源项目，是一个帮助开发者快速创建响应式网站的工具集合。
--   [Jekyll](https://jekyllrb.com/docs/contributing/) 是一个用Ruby编写的静态网站生成器，为个人博客而设计。
--   [React.js文档](https://github.com/reactjs/reactjs.org) 上有官方的React.js使用文档。
--   [GitHub pages](https://github.com/github/docs) 包含所有你需要知道的GitHub信息。
--   [Galaxy项目（培训资料）](https://github.com/galaxyproject/training-material) 是Galaxy项目的一个培训资料集。该项目是一个基于网页的开放平台，用于数据密集型的计算研究，其范围超出了生物科学。
--   [CNCF（云原生计算基金会）](https://github.com/cncf) CNCF是开源的云原生计算，托管Kubernetes和Prometheus等项目，使云原生无处不在且可持续。
+-   [HTML5 Boilerplate 项目](https://github.com/h5bp/html5-boilerplate) 是一个受 Web 网页开发者欢迎的开源项目。项目支持通过 HTML、CSS 和 Javascript 代码来创建网站或网页应用。
+-   [Bootstrap 框架](https://github.com/twbs) 也是一个开源项目，是一个帮助开发者快速创建响应式网站的工具集合。
+-   [Jekyll](https://jekyllrb.com/docs/contributing/) 是一个用 Ruby 编写的静态网站生成器，为个人博客而设计。
+-   [React.js 文档](https://github.com/reactjs/reactjs.org) 上有官方的 React.js 使用文档。
+-   [GitHub pages](https://github.com/github/docs) 包含所有你需要知道的 GitHub 信息。
+-   [Galaxy 项目（培训资料）](https://github.com/galaxyproject/training-material) 是 Galaxy 项目的一个培训资料集。该项目是一个基于网页的开放平台，用于数据密集型的计算研究，其范围超出了生物科学。
+-   [CNCF（云原生计算基金会）](https://github.com/cncf) CNCF 是开源的云原生计算，托管 Kubernetes 和 Prometheus 等项目，使云原生无处不在且可持续。
 
 你还可以看看[谷歌文档之季](https://developers.google.com/season-of-docs)，它帮助开源项目优化文档，同时让技术熟练的技术文档作者获得开源方面的经验。
 

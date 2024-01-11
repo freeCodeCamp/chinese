@@ -108,7 +108,7 @@
 
 由于这次 **提交** 不是第一次 **提交**，所以它有一个父节点——**commit A1337**。
 
-#### 回顾一下，我们介绍了三种 git 对象：
+#### 回顾一下，我们介绍了三种 git 对象
 
 - **blob**——文件的内容。
 - **树对象**——一个（由 **blob** 和 **树对象** 组成的）目录列表。
@@ -324,7 +324,7 @@ UNIX：`$ echo "ref: refs/heads/master" > .git/HEAD`
 
 # Git 中的底层命令与上层命令
 
-这个时候，区分 **底层（plumbing）** 和 **上层（poreclain）** 两类 `git` 命令会对你很有帮助。这两个术语的应用奇怪地来自于马桶（没错，就是🚽）。马桶通常是用陶瓷（porcelain）做的，它的基本结构是管道（plumbing，上水道和下水道）。
+这个时候，区分 **底层（plumbing）** 和 **上层（porcelain）** 两类 `git` 命令会对你很有帮助。这两个术语的应用奇怪地来自于马桶（没错，就是🚽）。马桶通常是用陶瓷（porcelain）做的，它的基本结构是管道（plumbing，上水道和下水道）。
 
 我们可以说上层命令为底层命令提供了一个用户友好的接口。大多数人只会涉及到上层命令。然而，当事情变得（非常）糟糕时，有人可能就会想知道为什么，他们会卷起袖子去检查底层命令。（注意：这些术语并不是我发明的，它们在 `git` 中的使用非常广泛）。
 
@@ -559,11 +559,11 @@ _[Omer Rosenbaum][6] 是 [Swimm][7] 的首席技术官、网络培训专家、Ch
 
 `git` 相关的资源已经有的很多了，我发现下面这些参考特别有用：
 
--   [Git Internals YouTube playlist — by Brief][10]
--   [Tim Berglund’s lecture — “Git From the Bits Up”][11]
--   [Git from the Bottom Up — by John Wiegley][12]
+-   [Git Internals YouTube playlist—by Brief][10]
+-   [Tim Berglund’s lecture—“Git From the Bits Up”][11]
+-   [Git from the Bottom Up—by John Wiegley][12]
 -   [as promised, docs: git for the confused][13]
--   [Git Internals — Git Objects — from Pro Git book, by Scott Chacon and Ben Straub][14]
+-   [Git Internals—Git Objects—from Pro Git book, by Scott Chacon and Ben Straub][14]
 
   
 

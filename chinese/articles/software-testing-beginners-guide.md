@@ -14,7 +14,7 @@ In this article, I'll explain the major topics in software testing and how this 
 ### Table of Contents:
 
 -   [什么是软件测试?](#what-is-software-testing)
--   [Types of Software Testing](#types-of-software-testing)
+-   [软件测试分类](#types-of-software-testing)
 -   [Different Types of Functional Software Testing](#different-types-of-functional-software-testing)
 -   [Software Testing Principles](#software-testing-principles)
 -   [Why is Software Testing needed?](#why-is-software-testing-needed)
@@ -24,44 +24,44 @@ ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-## What is Software Testing?
+## 什么是软件测试？What is Software Testing?
 
 Software testing is the process of making sure your software/app works as it should. There are various methods you can use to test your code, and each testing method has different requirements.
-确保软件或者应用程序正常运行的步骤就是软件测试，测试方法种类繁多，。
+确保软件或者应用程序正常运行的步骤就是软件测试，测试方法种类繁多，不同方法需求也不同。
 For instance, unit testing involves writing test cases to ensure the code works as it should, and Beta testing consists of testing the preview version of the software or app to make sure users can use the product.
-例如，单元测试需要编写测试用例，并参照用例测试代码是否存在缺陷；β测试需要回测历史版本验证产品功能是否能正常使用。
+例如，单元测试需要编写测试用例验证代码是否存在缺陷；β测试需要回测历史版本确保既有功能的正常使用。
 Software testing is integral to the process of building good software that works as it should. It also helps improve productivity and performance. Testing is an important part of the _Software Development Life Cycle_ (SDLC).
-软件测试是软件开发生命周期的重要组成部分，有助于提升开发效率和产品性能，打造符合要求的优质产品。
+软件测试是软件开发生命周期的重要组成部分，协助提升开发效率和产品性能，打造符合要求的优质产品。
 Other benefits of testing your code include preventing bugs, reducing cost, and reducing time of development.
-另外，测试还能降低bug率，节省成本投入，减少开发时间。
-## Types of Software Testing
+此外，测试还能降低缺陷率，降低开发成本投入，缩短开发时间。
+## 软件测试分类Types of Software Testing
 
 There are two general types of software testing:
 软件测试主要有两类：
-### Functional Testing:
+### 功能测试Functional Testing:
 
 Functional Testing is a software testing method that validates the system against the customer's requirements or specifications.
 功能测试是验证系统是否按照客户需求或者规范运行。
 This type of testing aims to test each function of the software by providing the correct input and ensuring the output is right.
-这类测试旨在保证每个功能正确输入后会有对应的正确输出。
+这类测试旨在验证每个功能正确输入后会有对应的正确输出。
 For examples, let's say you write a test case to test creating a user. The test case provides the correct input (email, first name, last name and password) and ensures the output (success message) is accurate, as well.
-例如，编写一条用于测试创建用户的测试用例，用例中需要提供正确的输入（邮箱地址、姓名和密码），验证输出结果（创建成功的提示）是正确的。
+例如，编写一条测试创建用户的测试用例，用例中包含邮箱地址、姓名和密码等格式正确的输入内容，验证成功创建用户。
 Functional testing checks that everything is functioning properly by emulating business scenarios based on applicable requirements.
-
-### Non-functional Testing:
+功能测试就是根据功能需求，模拟业务场景，验证功能的正常使用。
+### 非功能测试Non-functional Testing:
 
 Non-functional testing is a software testing method that tests for end-user experiences, such as performance and reliability under load. This could either make or break a user experience.
-
+非功能测试是验证终端用户的使用体验，如压力测试下的性能表现与稳定性，这对用户体验至关重要。
 When your code fails at non-functional testing, it may not cause an issue that user would note but it can flag a problem in the system.
-
+用户可能无法直观感知到非功能测试发现的代码问题，但却是系统中的重点问题。
 Non-functional testing is just about testing the software to know how it responds to load on the system.
-
+非功能测试就是测试加压后软件会如何响应。
 In this guide, we will focus on Functional Software Testing.
-
-## Different Types of Functional Software Testing
+本文中，我们将聚焦阐述功能测试的内容。
+## 功能测试类型Different Types of Functional Software Testing
 
 There are different types of software testing, and each has a specific aim. We'll look at each one quickly now.
-
+功能测试有很多类型，每一个都对应具体的目标，下文会简要介绍所有的类型。
 ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});

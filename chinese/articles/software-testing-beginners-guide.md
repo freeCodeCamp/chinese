@@ -6,14 +6,14 @@
 ![What is Software Testing? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Tech-Blog-Cover--4-.png)
 
 Software testing is essential to development. It saves you time and money in production mode.
-软件测试是开发过程中非常重要的环节。这将降低生产环境出现缺陷的可能性，减少在生产模式下的精力与成本投入。
+软件测试在软件开发全流程中占据重要地位，协助生产过程降本增效。
 But software testing is a complex topic and can be a bit difficult to understand.
-但软件测试又是一个复杂且难懂的话题。
+同时软件测试又是一个复杂且难懂的话题。
 In this article, I'll explain the major topics in software testing and how this practice can help you.
-在本文中，我将介绍软件测试中的主要内容，并解释软件测试在实际开发中的益处。
+在本文中，我将介绍软件测试的主要环节，以及这些环节如何协助开发。
 ### Table of Contents:
 
--   [What is Software Testing?](#what-is-software-testing)
+-   [什么是软件测试?](#what-is-software-testing)
 -   [Types of Software Testing](#types-of-software-testing)
 -   [Different Types of Functional Software Testing](#different-types-of-functional-software-testing)
 -   [Software Testing Principles](#software-testing-principles)
@@ -27,7 +27,7 @@ if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 ## What is Software Testing?
 
 Software testing is the process of making sure your software/app works as it should. There are various methods you can use to test your code, and each testing method has different requirements.
-软件测试是确保开发的软件或者app可以正确稳定使用。现在有很多可供使用的方法测试代码，而不同方法都有特定要求。
+确保软件或者应用程序正常运行的步骤就是软件测试，测试方法种类繁多，。
 For instance, unit testing involves writing test cases to ensure the code works as it should, and Beta testing consists of testing the preview version of the software or app to make sure users can use the product.
 例如，单元测试需要编写测试用例，并参照用例测试代码是否存在缺陷；β测试需要回测历史版本验证产品功能是否能正常使用。
 Software testing is integral to the process of building good software that works as it should. It also helps improve productivity and performance. Testing is an important part of the _Software Development Life Cycle_ (SDLC).

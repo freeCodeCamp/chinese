@@ -120,10 +120,10 @@ Beta testing is also known as second phase of validation testing. But this type 
 
 The version of the code/software for this phase of testing is released to a limited number of users for testing in a real-time scenario. For instance, freeCodeCamp's math curriculum is available for beta testing [here](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).
 
-## 软件测试原则Software Testing Principles
+## 软件测试准测Software Testing Principles
 
 Everything in tech has principles. These are guidelines to help you build better software and avoid errors.
-
+技术相关
 Here are some software testing principles you should follow when writing tests for your code:
 
 ### Testing aims to show the presence of defects, not the absence:
@@ -191,9 +191,9 @@ As a product undergoes testing, the end-user can count on the fact that they wil
 ### 改善产品质量Software testing improves product quality:
 
 You want your software or product to be bug-free, low-risk, and effective at what it should do. And you can achieve this by including test cases and other testing methods when building out the code.
-在构建软件产品代码时就使用测试用例和其他无缺陷、低风险
+在构建软件产品代码阶段就引入测试用例和其他测试方法，找到潜在问题，打造无缺陷、低风险、长期稳定运行的软件或者产品。
 In addition, you won't know how good your product is until you test it. This helps you provide the best product version before it gets released (and discover any inconsistencies or pain points along the way – so you can improve them).
-此外
+而且在测试时才会知道产品质量如何，
 ### 提高客户满意度Software testing improves customer satisfaction:
 
 For instance, let's say you download a new app and try to use some of its functionality – but it shows an error. This will probably frustrate you, and you might not want to use the app again, right?

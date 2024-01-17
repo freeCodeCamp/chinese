@@ -16,7 +16,7 @@ In this article, I'll explain the major topics in software testing and how this 
 -   [什么是软件测试?](#what-is-software-testing)
 -   [软件测试分类](#types-of-software-testing)
 -   [功能测试类型](#different-types-of-functional-software-testing)
--   [Software Testing Principles](#software-testing-principles)
+-   [软件测试准则](#software-testing-principles)
 -   [Why is Software Testing needed?](#why-is-software-testing-needed)
 -   [Conclusion](#conclusion)
 
@@ -115,11 +115,11 @@ if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 ### α测试与β测试Alpha Testing and Beta Testing:
 
 Alpha testing is also known as initial validation testing. It is an aspect of acceptance testing done before the product is given to the consumers or users. QA (Quality Assurance) testers usually do this. Alpha testing is done internally by the QA team.
-α测试
+α测试是验收测试的一个环节，属于交付客户前的初次验证测试，通常由QA（质量保证）测试人员或者团队在公司内部完成。
 Beta testing is also known as second phase of validation testing. But this type of testing is done externally, which means the public does it.
-
+β测试是验证测试的第二环节，将会在外部公网完成测试。
 The version of the code/software for this phase of testing is released to a limited number of users for testing in a real-time scenario. For instance, freeCodeCamp's math curriculum is available for beta testing [here](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).
-
+这一阶段将会把β测试版本发到真实生产环境，仅限部分特定人员可以点击查看。例如，freeCodeCamp的数据课程点击[这里](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).可以获取
 ## 软件测试准测Software Testing Principles
 
 Everything in tech has principles. These are guidelines to help you build better software and avoid errors.

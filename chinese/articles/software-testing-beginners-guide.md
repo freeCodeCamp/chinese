@@ -16,7 +16,7 @@ In this article, I'll explain the major topics in software testing and how this 
 -   [什么是软件测试?](#what-is-software-testing)
 -   [软件测试分类](#types-of-software-testing)
 -   [功能测试类型](#different-types-of-functional-software-testing)
--   [软件测试准则](#software-testing-principles)
+-   [软件测试原则](#software-testing-principles)
 -   [Why is Software Testing needed?](#why-is-software-testing-needed)
 -   [Conclusion](#conclusion)
 
@@ -120,24 +120,24 @@ Beta testing is also known as second phase of validation testing. But this type 
 β测试是验证测试的第二环节，将会在外部公网完成测试。
 The version of the code/software for this phase of testing is released to a limited number of users for testing in a real-time scenario. For instance, freeCodeCamp's math curriculum is available for beta testing [here](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).
 这一阶段将会把β测试版本发到真实生产环境，仅限部分特定人员可以点击查看。例如，freeCodeCamp的数据课程点击[这里](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).可以获取
-## 软件测试准测Software Testing Principles
+## 软件测试原则Software Testing Principles
 
 Everything in tech has principles. These are guidelines to help you build better software and avoid errors.
-技术相关
+每个技术工作都有原则，这些条例将会有利于你打造更好的软件产品，减少缺陷的产生。
 Here are some software testing principles you should follow when writing tests for your code:
-
-### Testing aims to show the presence of defects, not the absence:
+下面列出的几个写测试用例时需要遵循的软件测试原则：
+### 测试是证明存在缺陷，而不是确保没有缺陷Testing aims to show the presence of defects, not the absence:
 
 Software testing aims to spot software failures. This reduces the presence of faults and errors.
-
+软件测试的目的是指出软件的缺陷，尽量减少缺陷存在的可能性。
 Software testing ensures defects are visible to the developer but doesn't guarantee defect-free software. Multiple types of testing can't even ensure error-free software. Testing can only decrease the number of errors.
-
-### Exhaustive testing is not possible:
+各种类型的测试都无法保证软件不再存在缺陷，只是协助开发人员知道并定位缺陷，减少缺陷的保有量。
+### 无法做到穷举测试Exhaustive testing is not possible:
 
 Exhaustive Testing is the process of testing software for all valid and invalid inputs and pre-conditions.
-
+穷尽测试是指列出所有可能的输入或者前提条件测试软件
 This method of testing is not realistic because test cases presume that the software is correct and it produces the correct output in every test case. If you truly try to test every aspect and test case in your software, it will take too much time and effort, and it's not practical.
-
+这个方法是不现实的，因为所有的测试用例都是以软件是正确的为基础，验证每一条测试用例的输入条件都会得到正确的输出结果。如果想要测试软件的所有内容，需要耗费大量的时间与精力，实用性并不高。
 ### Perform early testing:
 
 Testing your software at an early phase helps avoid minor bugs or errors. When you can spot errors at an early stage of the Software Development Life Cycle(SDLC), it's always less expensive. It is best to start software testing from the beginning of the project.

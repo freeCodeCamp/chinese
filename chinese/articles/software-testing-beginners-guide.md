@@ -138,10 +138,10 @@ Exhaustive Testing is the process of testing software for all valid and invalid 
 穷尽测试是指列出所有可能的输入或者前提条件测试软件
 This method of testing is not realistic because test cases presume that the software is correct and it produces the correct output in every test case. If you truly try to test every aspect and test case in your software, it will take too much time and effort, and it's not practical.
 这个方法是不现实的，因为所有的测试用例都是以软件是正确的为基础，验证每一条测试用例的输入条件都会得到正确的输出结果。如果想要测试软件的所有内容，需要耗费大量的时间与精力，实用性并不高。
-### Perform early testing:
+### 尽早介入测试Perform early testing:
 
 Testing your software at an early phase helps avoid minor bugs or errors. When you can spot errors at an early stage of the Software Development Life Cycle(SDLC), it's always less expensive. It is best to start software testing from the beginning of the project.
-
+尽早测试有利于避免小缺陷（bug），而且在软件开发生命周期的早期找到的缺陷，
 ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
@@ -168,7 +168,7 @@ For instance, when testing an eCommerce web app, you will focus on its functiona
 
 You wouldn't necessarily use the same test cases for both – that is what it means that testing is context-dependent.
 
-### The absence of errors is a fallacy:
+### 无错误谬论The absence of errors is a fallacy:
 
 If you build software that is 99% bug-free, but it doesn't follow user requirements, it is not usable for end-users.
 

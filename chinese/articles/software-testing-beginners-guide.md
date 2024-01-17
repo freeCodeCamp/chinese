@@ -15,7 +15,7 @@ In this article, I'll explain the major topics in software testing and how this 
 
 -   [什么是软件测试?](#what-is-software-testing)
 -   [软件测试分类](#types-of-software-testing)
--   [Different Types of Functional Software Testing](#different-types-of-functional-software-testing)
+-   [功能测试类型](#different-types-of-functional-software-testing)
 -   [Software Testing Principles](#software-testing-principles)
 -   [Why is Software Testing needed?](#why-is-software-testing-needed)
 -   [Conclusion](#conclusion)
@@ -66,61 +66,61 @@ ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-### Unit Testing:
+### 单元测试Unit Testing:
 
 Unit testing is a type of software testing that validates how each software unit performs and whether that specific piece of code does what it should. A unit is the smallest testable component of an application.
-最小可测试代码称为一个单元，单元测试是验证每一个独立代码块如何运行及运行的准确性。
+最小可测试代码称为一个单元，单元测试是验证每一个可独立运行的代码块如何运行及运行的准确性。
 The aim is to confirm that each unit of software code works as expected. You do unit testing during the coding (development) stage or phase. Developers write these tests as they go.
-目的是测试软件中的每一单元准确运行出所需要的结果。单元测试是在软件开发过程中由开发人员自行完成的测试。
+目的是测试软件中的每一单元准确运行出所需要的结果。单元测试由开发人员在软件开发过程中自主完成。
 Unit tests isolate possible bugs in your code and help you correct them. A unit could be a single function, method, procedure, module, or object.
 单元测试可以发现独立代码模块内可能存在的各种缺陷。独立的函数、方法、过程、模块及对象都可作为一个单元。
 ![image-404](https://www.freecodecamp.org/news/content/images/2022/09/image-404.png)
 
 Code Snippet of a unit test case in Python
-
+使用Python编写的单元测试的代码片段
 ![image-403](https://www.freecodecamp.org/news/content/images/2022/09/image-403.png)
 
 Code Snippet of a unit test case in Java
-
-### Integration Testing:
+使用Python编写的单元测试的代码片段
+### 集成测试Integration Testing:
 
 Integration Testing is software testing which helps ensure that software components or functions work together properly. This is the second phase of the software testing process that comes after unit testing.
-
+软件测试的第二阶段，即完成单元测试后，需要进行集成测试，验证软件中的各个组件或者功能可以准确地联动运行。
 In this type of testing, units or individual software components are tested in groups. This testing method mainly focuses on exposing defects in interactions between integrated components and units.
-
-### System Testing:
+测试独立单元或者组件组合成的完整功能，主要关注各单元或组件的交互中是否存在缺陷。
+### 系统测试System Testing:
 
 System testing involves the process of testing integrated software. The aim is to evaluate the system's compliance with specify requirements.
-系统测试需要测试集成软件，旨在评判软件是否按照具体需求运行。
+系统测试是测试整个完整的系统，旨在验证软件是否按照具体需求运行。
 In system testing, the quality assurance team evaluates how each component of the application or software work together in a full, integrated environment.
-系统测试过程中，QA团队需要在完整的集成环境中验证APP或软件的每个部分之间配套运行是否存在缺陷。
-### Acceptance Testing:
+系统测试时，质量保证（QA）团队在真实的集成环境中验证APP或软件的每个部分运行是否正常。
+### 验收测试Acceptance Testing:
 
 Acceptance testing is a software testing method where a system is tested or checked for acceptability. It evaluates the system's compatibility with the business requirements and assesses whether it is acceptable for delivery.
-验收测试是测试软件是否已达到可验收的标准，验证系统功能是否符合业务需求并且评估是否可交付。
+验收测试是测试软件是否已达到可验收的标准，验证已完成的功能是否符合业务需求并且评估是否可交付。
 It is also known as formal testing performed to fit user needs, requirements, and business processes. It determines if a system satisfies the standard business criteria and if users or customers will be able to accept it.
-在正式环境测试系统与用户的需求、要求和业务流程的匹配度，目的是判断系统是否已经满足标准的业务细则，用户或者客户是否愿意使用。
+在正式环境测试系统功能是否符合用户的需求、要求以及业务流程，目的是判断软件是否满足验收标准，用户或者客户是否愿意使用。
 Acceptance testing is the last stage of software testing done after system testing and before making the system available for public use.
 验收测试是在完成系统测试后，在产品发布之前的测试步骤，是软件测试的最后一项流程。
-### Regression Testing:
+### 回归测试Regression Testing:
 
 Regression testing ensures that a component continues working as it should, after including additional components in the program. You perform regression testing when something changes, such as adding a new module to the program.
-回归测试是
+回归测试是软件增加新功能后，验证现有功能按照既定需求运行。当相关代码产生变动，如在项目中新增一个模块后，需要回归测试。
 This type of testing represents the complete testing of executed test cases that are re-executed to ensure the current functionalities still work just fine.
-
+回归测试使用所有已执行的历史测试用例再次测试，验证现有功能依然能够准确运行。
 ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-### Alpha Testing and Beta Testing:
+### α测试与β测试Alpha Testing and Beta Testing:
 
 Alpha testing is also known as initial validation testing. It is an aspect of acceptance testing done before the product is given to the consumers or users. QA (Quality Assurance) testers usually do this. Alpha testing is done internally by the QA team.
-
+α测试
 Beta testing is also known as second phase of validation testing. But this type of testing is done externally, which means the public does it.
 
 The version of the code/software for this phase of testing is released to a limited number of users for testing in a real-time scenario. For instance, freeCodeCamp's math curriculum is available for beta testing [here](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).
 
-## Software Testing Principles
+## 软件测试原则Software Testing Principles
 
 Everything in tech has principles. These are guidelines to help you build better software and avoid errors.
 
@@ -174,27 +174,27 @@ If you build software that is 99% bug-free, but it doesn't follow user requireme
 
 Know that it is very much necessary that your 99% bug-free software still meets or fulfills your user requirements. It is important to write test cases to find errors in the code, but you also need to test your software for your end-users (with them and how they'll use it in mind). The best way to do this is to carry out beta testing.
 
-## Why is Software Testing Needed?
+## 为什么需要软件测Why is Software Testing Needed?
 
 Besides making sure your software is bug-free and meets user requirements, software testing has other advantages.
-
+软件测试既可以确保软件无缺陷以及达到用户需求，还有另外的优势。
 ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-### Software testing improves security:
+### 优化安全性能Software testing improves security:
 
 When building software, security is a crucial part of your planning. This is because vulnerable software could jeopardize you users and their information, as hackers can use stolen info for malicious purposes.
 
 As a product undergoes testing, the end-user can count on the fact that they will be getting a reliable product and their details will be secured and safe. So users are more likely to get a product that is free from vulnerabilities with the help of software testing.
 
-### Software testing improves product quality:
+### 改善产品质量Software testing improves product quality:
 
 You want your software or product to be bug-free, low-risk, and effective at what it should do. And you can achieve this by including test cases and other testing methods when building out the code.
-
+在构建软件产品代码时就使用测试用例和其他无缺陷、低风险
 In addition, you won't know how good your product is until you test it. This helps you provide the best product version before it gets released (and discover any inconsistencies or pain points along the way – so you can improve them).
-
-### Software testing improves customer satisfaction:
+此外
+### 提高客户满意度Software testing improves customer satisfaction:
 
 For instance, let's say you download a new app and try to use some of its functionality – but it shows an error. This will probably frustrate you, and you might not want to use the app again, right?
 
@@ -202,7 +202,7 @@ This is exactly why software testing is important. It can help you discover such
 
 By investing in software testing early in the development stage, you are letting the users know that you care about their experience. It could also help you create a solid long-term customer relationship.
 
-### Software testing saves money:
+### 节省成本Software testing saves money:
 
 Software testing can save you a lot of money – but how?
 

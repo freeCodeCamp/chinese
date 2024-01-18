@@ -141,7 +141,7 @@ This method of testing is not realistic because test cases presume that the soft
 ### 尽早介入测试Perform early testing:
 
 Testing your software at an early phase helps avoid minor bugs or errors. When you can spot errors at an early stage of the Software Development Life Cycle(SDLC), it's always less expensive. It is best to start software testing from the beginning of the project.
-尽早测试有利于避免小缺陷（bug），而且在软件开发生命周期的早期找到的缺陷，
+尽早测试有利于避免小缺陷（bug），而且在软件开发生命周期的早期找到的缺陷，往往修复缺陷的成本比较低，所以测试应该从软件项目伊始就介入。
 ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});

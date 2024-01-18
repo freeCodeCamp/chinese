@@ -146,16 +146,16 @@ ADVERTISEMENT
 
 if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-### Defect clustering:
+### 缺陷聚集效应Defect clustering:
 
 Defect clustering refers to when most of the problems you find occur in just a few parts of the application or software. If you can identify the modules or areas where these defects occur, you can focus most of your testing efforts on them.
-
+缺陷聚集效应是指大部分的缺陷集中在应用程序或者软件的几个功能中。如果找到了问题集中出现的功能模块，你可以重点测试该模块。
 Keep the Pareto Principle in mind when testing your code: 80% of software defects tend to come from 20% of the modules.
-
-### Beware of the Pesticide paradox:
+在测试时需要牢记二八法则：80%的缺陷往往集中于20%的功能模块。
+### 警惕杀虫剂悖论Beware of the Pesticide paradox:
 
 This principle is based on a theory – "the more you use pesticide on a crop, the more immune the crop will eventually grow, and the pesticide will not be effective."
-
+该原则的理论背景是
 When you repeat particular test cases over and over, you will see fewer and fewer new bugs. So to find new bugs, update your test cases and run them once you add new test cases.
 
 ### Testing is context-dependent:

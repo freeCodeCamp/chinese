@@ -5,216 +5,147 @@
 
 ![What is Software Testing? A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/09/Tech-Blog-Cover--4-.png)
 
-Software testing is essential to development. It saves you time and money in production mode.
 软件测试在软件开发全流程中占据重要地位，协助生产过程降本增效。
-But software testing is a complex topic and can be a bit difficult to understand.
 同时软件测试又是一个复杂且难懂的话题。
-In this article, I'll explain the major topics in software testing and how this practice can help you.
 在本文中，我将介绍软件测试的主要环节，以及这些环节如何协助开发。
-### Table of Contents:
+
+### 目录:
 
 -   [什么是软件测试?](#what-is-software-testing)
 -   [软件测试分类](#types-of-software-testing)
 -   [功能测试类型](#different-types-of-functional-software-testing)
 -   [软件测试原则](#software-testing-principles)
--   [Why is Software Testing needed?](#why-is-software-testing-needed)
--   [Conclusion](#conclusion)
+-   [为什么需要软件测试?](#why-is-software-testing-needed)
+-   [总结](#conclusion)
 
-ADVERTISEMENT
+## 什么是软件测试？
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
-
-## 什么是软件测试？What is Software Testing?
-
-Software testing is the process of making sure your software/app works as it should. There are various methods you can use to test your code, and each testing method has different requirements.
-确保软件或者应用程序正常运行的步骤就是软件测试，测试方法种类繁多，不同方法需求也不同。
-For instance, unit testing involves writing test cases to ensure the code works as it should, and Beta testing consists of testing the preview version of the software or app to make sure users can use the product.
+软件测试就是确保软件或者应用程序正常运行的过程，测试方法种类繁多，方法不同需求也不同。
 例如，单元测试需要编写测试用例验证代码是否存在缺陷；β测试需要回测历史版本确保既有功能的正常使用。
-Software testing is integral to the process of building good software that works as it should. It also helps improve productivity and performance. Testing is an important part of the _Software Development Life Cycle_ (SDLC).
 软件测试是软件开发生命周期的重要组成部分，协助提升开发效率和产品性能，打造符合要求的优质产品。
-Other benefits of testing your code include preventing bugs, reducing cost, and reducing time of development.
 此外，测试还能降低缺陷率，降低开发成本投入，缩短开发时间。
-## 软件测试分类Types of Software Testing
 
-There are two general types of software testing:
+## 软件测试分类
+
 软件测试主要有两类：
-### 功能测试Functional Testing:
 
-Functional Testing is a software testing method that validates the system against the customer's requirements or specifications.
+### 功能测试:
+
+
 功能测试是验证系统是否按照客户需求或者规范运行。
-This type of testing aims to test each function of the software by providing the correct input and ensuring the output is right.
 这类测试旨在验证每个功能正确输入后会有对应的正确输出。
-For examples, let's say you write a test case to test creating a user. The test case provides the correct input (email, first name, last name and password) and ensures the output (success message) is accurate, as well.
 例如，编写一条测试创建用户的测试用例，用例中包含邮箱地址、姓名和密码等格式正确的输入内容，验证成功创建用户。
-Functional testing checks that everything is functioning properly by emulating business scenarios based on applicable requirements.
 功能测试就是根据功能需求，模拟业务场景，验证功能的正常使用。
-### 非功能测试Non-functional Testing:
+### 非功能测试:
 
-Non-functional testing is a software testing method that tests for end-user experiences, such as performance and reliability under load. This could either make or break a user experience.
+
 非功能测试是验证终端用户的使用体验，如压力测试下的性能表现与稳定性，这对用户体验至关重要。
-When your code fails at non-functional testing, it may not cause an issue that user would note but it can flag a problem in the system.
-用户可能无法直观感知到非功能测试发现的代码问题，但却是系统中的重点问题。
-Non-functional testing is just about testing the software to know how it responds to load on the system.
+用户可能无法直观感知到非功能测试发现的代码问题，但也是系统中的重点问题。
 非功能测试就是测试加压后软件会如何响应。
-In this guide, we will focus on Functional Software Testing.
 本文中，我们将聚焦阐述功能测试的内容。
-## 功能测试类型Different Types of Functional Software Testing
+## 功能测试类型
 
-There are different types of software testing, and each has a specific aim. We'll look at each one quickly now.
+
 功能测试有很多类型，每一个都对应具体的目标，下文会简要介绍所有的类型。
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-### 单元测试Unit Testing:
+### 单元测试:
 
-Unit testing is a type of software testing that validates how each software unit performs and whether that specific piece of code does what it should. A unit is the smallest testable component of an application.
+
 最小可测试代码称为一个单元，单元测试是验证每一个可独立运行的代码块如何运行及运行的准确性。
-The aim is to confirm that each unit of software code works as expected. You do unit testing during the coding (development) stage or phase. Developers write these tests as they go.
 目的是测试软件中的每一单元准确运行出所需要的结果。单元测试由开发人员在软件开发过程中自主完成。
-Unit tests isolate possible bugs in your code and help you correct them. A unit could be a single function, method, procedure, module, or object.
 单元测试可以发现独立代码模块内可能存在的各种缺陷。独立的函数、方法、过程、模块及对象都可作为一个单元。
 ![image-404](https://www.freecodecamp.org/news/content/images/2022/09/image-404.png)
 
-Code Snippet of a unit test case in Python
+
 使用Python编写的单元测试的代码片段
 ![image-403](https://www.freecodecamp.org/news/content/images/2022/09/image-403.png)
 
-Code Snippet of a unit test case in Java
+
 使用Python编写的单元测试的代码片段
-### 集成测试Integration Testing:
+### 集成测试:
 
-Integration Testing is software testing which helps ensure that software components or functions work together properly. This is the second phase of the software testing process that comes after unit testing.
 软件测试的第二阶段，即完成单元测试后，需要进行集成测试，验证软件中的各个组件或者功能可以准确地联动运行。
-In this type of testing, units or individual software components are tested in groups. This testing method mainly focuses on exposing defects in interactions between integrated components and units.
 测试独立单元或者组件组合成的完整功能，主要关注各单元或组件的交互中是否存在缺陷。
-### 系统测试System Testing:
+### 系统测试:
 
-System testing involves the process of testing integrated software. The aim is to evaluate the system's compliance with specify requirements.
 系统测试是测试整个完整的系统，旨在验证软件是否按照具体需求运行。
-In system testing, the quality assurance team evaluates how each component of the application or software work together in a full, integrated environment.
 系统测试时，质量保证（QA）团队在真实的集成环境中验证APP或软件的每个部分运行是否正常。
-### 验收测试Acceptance Testing:
+### 验收测试:
 
-Acceptance testing is a software testing method where a system is tested or checked for acceptability. It evaluates the system's compatibility with the business requirements and assesses whether it is acceptable for delivery.
 验收测试是测试软件是否已达到可验收的标准，验证已完成的功能是否符合业务需求并且评估是否可交付。
-It is also known as formal testing performed to fit user needs, requirements, and business processes. It determines if a system satisfies the standard business criteria and if users or customers will be able to accept it.
 在正式环境测试系统功能是否符合用户的需求、要求以及业务流程，目的是判断软件是否满足验收标准，用户或者客户是否愿意使用。
-Acceptance testing is the last stage of software testing done after system testing and before making the system available for public use.
 验收测试是在完成系统测试后，在产品发布之前的测试步骤，是软件测试的最后一项流程。
-### 回归测试Regression Testing:
+### 回归测试:
 
-Regression testing ensures that a component continues working as it should, after including additional components in the program. You perform regression testing when something changes, such as adding a new module to the program.
 回归测试是软件增加新功能后，验证现有功能按照既定需求运行。当相关代码产生变动，如在项目中新增一个模块后，需要回归测试。
-This type of testing represents the complete testing of executed test cases that are re-executed to ensure the current functionalities still work just fine.
 回归测试使用所有已执行的历史测试用例再次测试，验证现有功能依然能够准确运行。
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-### α测试与β测试Alpha Testing and Beta Testing:
+### α测试与β测试:
 
-Alpha testing is also known as initial validation testing. It is an aspect of acceptance testing done before the product is given to the consumers or users. QA (Quality Assurance) testers usually do this. Alpha testing is done internally by the QA team.
 α测试是验收测试的一个环节，属于交付客户前的初次验证测试，通常由QA（质量保证）测试人员或者团队在公司内部完成。
-Beta testing is also known as second phase of validation testing. But this type of testing is done externally, which means the public does it.
 β测试是验证测试的第二环节，将会在外部公网完成测试。
-The version of the code/software for this phase of testing is released to a limited number of users for testing in a real-time scenario. For instance, freeCodeCamp's math curriculum is available for beta testing [here](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).
-这一阶段将会把β测试版本发到真实生产环境，仅限部分特定人员可以点击查看。例如，freeCodeCamp的数据课程点击[这里](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/).可以获取
-## 软件测试原则Software Testing Principles
+这一阶段将会把β测试版本发到真实生产环境，仅限部分特定人员可以点击查看。例如，freeCodeCamp的数据课程点击[这里](https://www.freecodecamp.org/news/freecodecamp-foundational-math-curriculum/)可以获取。
+## 软件测试原则
 
-Everything in tech has principles. These are guidelines to help you build better software and avoid errors.
 每个技术工作都有原则，这些条例将会有利于你打造更好的软件产品，减少缺陷的产生。
-Here are some software testing principles you should follow when writing tests for your code:
 下面列出的几个写测试用例时需要遵循的软件测试原则：
-### 测试是证明存在缺陷，而不是确保没有缺陷Testing aims to show the presence of defects, not the absence:
+### 测试是证明存在缺陷，而不是确保没有缺陷:
 
-Software testing aims to spot software failures. This reduces the presence of faults and errors.
 软件测试的目的是指出软件的缺陷，尽量减少缺陷存在的可能性。
-Software testing ensures defects are visible to the developer but doesn't guarantee defect-free software. Multiple types of testing can't even ensure error-free software. Testing can only decrease the number of errors.
 各种类型的测试都无法保证软件不再存在缺陷，只是协助开发人员知道并定位缺陷，减少缺陷的保有量。
-### 无法做到穷举测试Exhaustive testing is not possible:
+### 无法做到穷举测试:
 
-Exhaustive Testing is the process of testing software for all valid and invalid inputs and pre-conditions.
 穷尽测试是指列出所有可能的输入或者前提条件测试软件
-This method of testing is not realistic because test cases presume that the software is correct and it produces the correct output in every test case. If you truly try to test every aspect and test case in your software, it will take too much time and effort, and it's not practical.
 这个方法是不现实的，因为所有的测试用例都是以软件是正确的为基础，验证每一条测试用例的输入条件都会得到正确的输出结果。如果想要测试软件的所有内容，需要耗费大量的时间与精力，实用性并不高。
-### 尽早介入测试Perform early testing:
+### 尽早介入测试:
 
-Testing your software at an early phase helps avoid minor bugs or errors. When you can spot errors at an early stage of the Software Development Life Cycle(SDLC), it's always less expensive. It is best to start software testing from the beginning of the project.
 尽早测试有利于避免小缺陷（bug），而且在软件开发生命周期的早期找到的缺陷，往往修复缺陷的成本比较低，所以测试应该从软件项目伊始就介入。
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
+### 缺陷聚集效应:
 
-### 缺陷聚集效应Defect clustering:
-
-Defect clustering refers to when most of the problems you find occur in just a few parts of the application or software. If you can identify the modules or areas where these defects occur, you can focus most of your testing efforts on them.
 缺陷聚集效应是指大部分的缺陷集中在应用程序或者软件的几个功能中。如果找到了问题集中出现的功能模块，你可以重点测试该模块。
-Keep the Pareto Principle in mind when testing your code: 80% of software defects tend to come from 20% of the modules.
 在测试时需要牢记二八法则：80%的缺陷往往集中于20%的功能模块。
-### 警惕杀虫剂悖论Beware of the Pesticide paradox:
+### 警惕杀虫剂悖论:
 
-This principle is based on a theory – "the more you use pesticide on a crop, the more immune the crop will eventually grow, and the pesticide will not be effective."
 该原则的理论背景是在农作物上使用的杀虫剂越多时，农作物上的害虫抗药性就会越强，最终杀虫剂就会失效
-When you repeat particular test cases over and over, you will see fewer and fewer new bugs. So to find new bugs, update your test cases and run them once you add new test cases.
 同理，如果一直使用既有的测试用例，发现的新缺陷只会越来越少，所以需要不断地更新测试用例并使用最新的测试用例验证软件。
-### 测试与需求文档高度关联Testing is context-dependent:
+### 测试与需求文档高度关联:
 
-Testing is context-dependent, which means that you should test your software based on its needs, functionalities, and requirements.
 测试的基础是关联各类文档，根据功能需求文档验证测试软件的功能是否符合需求。
-Your test approach should depend on what your software does. Not every software needs the same type/method of testing because every application has its unique functionalities.
 测试时需要根据软件的功能目的选择测试方法，因为不同的应用程序会有不同的功能，所以并不是所有的软件共用同一套测试方法。
-For instance, when testing an eCommerce web app, you will focus on its functionality to display products, so you will test how it shows products to end-users. When dealing with an API, you will focus on the response the API returns when an endpoint is called.
 例如，当测试电商网站的APP时，功能侧重商品展示，所以需要重点测试终端用户的商品页展示；当测试接口时，测试的重点是服务端被请求时，接口的响应返回情况。
-You wouldn't necessarily use the same test cases for both – that is what it means that testing is context-dependent.
 这两种情况肯定不能使用相同的测试用例，这就是测试与需求文档高度关联。
-### 无错误谬论The absence of errors is a fallacy:
+### 无错误谬论:
 
-If you build software that is 99% bug-free, but it doesn't follow user requirements, it is not usable for end-users.
 一款基本完美无缺陷但不符合用户需求的软件，对终端用户来说，是不适用的。
-Know that it is very much necessary that your 99% bug-free software still meets or fulfills your user requirements. It is important to write test cases to find errors in the code, but you also need to test your software for your end-users (with them and how they'll use it in mind). The best way to do this is to carry out beta testing.
 所以，测试时要明确一点，基本完美无缺陷的软件需要匹配用户需求，测试用例不仅是测试代码的问题，而且应该是以用户使用习惯或者潜在使用可能为导向测试软件，这在测试环节中非常重要的原则，而满足这个原则的最佳方式就是进行β测试。
-## 为什么需要软件测试Why is Software Testing Needed?
+## 为什么需要软件测试?
 
-Besides making sure your software is bug-free and meets user requirements, software testing has other advantages.
 软件测试既可以确保软件无缺陷以及达到用户需求，还有另外的优势。
-ADVERTISEMENT
 
-if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 
-### 优化安全性能Software testing improves security:
+### 优化安全性能:
 
-When building software, security is a crucial part of your planning. This is because vulnerable software could jeopardize you users and their information, as hackers can use stolen info for malicious purposes.
 网络安全是在构建软件时是非常重要的环节，因为黑客可以恶意攻击存在安全漏洞的软件窃取相关信息，用户信息就可能泄露。
-As a product undergoes testing, the end-user can count on the fact that they will be getting a reliable product and their details will be secured and safe. So users are more likely to get a product that is free from vulnerabilities with the help of software testing.
 经历过测试的产品会让终端用户觉得这是一款安全可靠的产品，他们的信息不会被泄露。所以用户会更倾向于通过软件测试的无安全漏洞问题的软件。
-### 改善产品质量Software testing improves product quality:
+### 改善产品质量:
 
-You want your software or product to be bug-free, low-risk, and effective at what it should do. And you can achieve this by including test cases and other testing methods when building out the code.
 在构建软件产品代码阶段就引入测试用例和其他测试方法，找到潜在问题，打造无缺陷、低风险、长期稳定运行的软件或者产品。
-In addition, you won't know how good your product is until you test it. This helps you provide the best product version before it gets released (and discover any inconsistencies or pain points along the way – so you can improve them).
 而且在测试时才会知道产品质量如何，通过测试可以发现非稳定复现的缺陷或者痛点问题，然后修复这些缺陷，在发布正式环境前尽可能打造一个最佳的产品版本。
-### 提高客户满意度Software testing improves customer satisfaction:
+### 提高客户满意度:
 
-For instance, let's say you download a new app and try to use some of its functionality – but it shows an error. This will probably frustrate you, and you might not want to use the app again, right?
 这就像你下载一个新APP后，结果使用时出现了报错，没有办法继续使用，最终可能导致你不会再使用这个APP。
-This is exactly why software testing is important. It can help you discover such errors and detect them before you release the product to the user, and gives the developers a chance to prevent the error.
 这就是软件测试重要性的实际体现，软件发布正式环境交付用户使用前，通过测试可以发现类似的缺陷，同时也是给开发人员一次机会避免出现这样的问题。
-By investing in software testing early in the development stage, you are letting the users know that you care about their experience. It could also help you create a solid long-term customer relationship.
 早期开发阶段引入软件测试，也是给用户展示你重视用户体验的一种方式，有助于建立稳定长久的客户关系。
-### 节省成本Software testing saves money:
+### 节省成本:
 
-Software testing can save you a lot of money – but how?
 软件测试可以帮助你节省很多成本，
-Each stage of development involves many things, such as clear communication and coordination between multiple teams, and each step has a laundry list of things that could go awry.
 开发环节的每个阶段都包含了许多事情，比如多团队间的明确沟通与合作，每一步都会有非常长的代办清单，随时都有可能出现混乱。
-Catching those errors when the product is live is a horrible experience because you may have to handle PR, retasking fixes, and trying to sort the problem in real time.
 如果在产品周期内出现了这样的问题是非常棘手的，因为需要你同时处理人员关系，重新分配任务并且定位问题的本质。
-In addition, your users won't be able to access the app while you're fixing it, which defeats the app's purpose and provides a bad user experience in the meantime. Software testing helps resolve this stress, and once live, your user can enjoy your app/product to the fullest.
 同时，在修复问题时用户是没有办法使用APP的，不但违背了产品初衷而且还造成了不良的用户体验。软件测试可以解决这一系列的问题，并且持续测试的话，用户可以体验到最佳的产品。
-## 总结Conclusion
+## 总结
 
-In conclusion, software testing is a crucial part of development. It can help save your team a lot of trouble, and it feels great to create a usable, bug-free product that users enjoy and recommend.
 总的来说，软件测试是开发环节中非常重要的一环，不仅可以让团队避免很多问题，还可以让用户使用到体验感良好且没有缺陷的产品
-If software testing interests you, you can check freeCodeCamp's QA certificate course [here](https://www.freecodecamp.org/learn/quality-assurance/#quality-assurance-and-testing-with-chai) to learn more about QA testing. QA testers are techies that focus on testing softwares and apps for errors.
-如果你对软件测试感兴趣的话，可以点击[这里](https://www.freecodecamp.org/learn/quality-assurance/#quality-assurance-and-testing-with-chai)查看freeCodecamp的质量保证课程学习更多的质量保证（QA）内容。QA人员就是专注测试软件或者APP缺陷的科技人员。
+如果你对软件测试感兴趣的话，可以点击[这里](https://www.freecodecamp.org/learn/quality-assurance/#quality-assurance-and-testing-with-chai)查看freeCodecamp的质量保证课程学习更多的质量保证（QA）内容。QA人员就是专注测试软件或者APP缺陷的科技工作者。

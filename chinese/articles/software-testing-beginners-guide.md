@@ -205,15 +205,16 @@ By investing in software testing early in the development stage, you are letting
 ### 节省成本Software testing saves money:
 
 Software testing can save you a lot of money – but how?
-
+软件测试可以帮助你节省很多成本，
 Each stage of development involves many things, such as clear communication and coordination between multiple teams, and each step has a laundry list of things that could go awry.
-
+开发环节的每个阶段都包含了许多事情，比如多团队间的明确沟通与合作，每一步都会有非常长的代办清单，随时都有可能出现混乱。
 Catching those errors when the product is live is a horrible experience because you may have to handle PR, retasking fixes, and trying to sort the problem in real time.
-
+如果在产品周期内出现了这样的问题是非常棘手的，因为需要你同时处理人员关系，重新分配任务并且定位问题的本质。
 In addition, your users won't be able to access the app while you're fixing it, which defeats the app's purpose and provides a bad user experience in the meantime. Software testing helps resolve this stress, and once live, your user can enjoy your app/product to the fullest.
-
-## Conclusion
+同时，在修复问题时用户是没有办法使用APP的，不但违背了产品初衷而且还造成了不良的用户体验。软件测试可以解决这一系列的问题，并且持续测试的话，用户可以体验到最佳的产品。
+## 总结Conclusion
 
 In conclusion, software testing is a crucial part of development. It can help save your team a lot of trouble, and it feels great to create a usable, bug-free product that users enjoy and recommend.
-
+总的来说，软件测试是开发环节中非常重要的一环，不仅可以让团队避免很多问题，还可以让用户使用到体验感良好且没有缺陷的产品
 If software testing interests you, you can check freeCodeCamp's QA certificate course [here](https://www.freecodecamp.org/learn/quality-assurance/#quality-assurance-and-testing-with-chai) to learn more about QA testing. QA testers are techies that focus on testing softwares and apps for errors.
+如果你对软件测试感兴趣的话，可以点击[这里](https://www.freecodecamp.org/learn/quality-assurance/#quality-assurance-and-testing-with-chai)查看freeCodecamp的质量保证课程学习更多的质量保证（QA）内容。QA人员就是专注测试软件或者APP缺陷的科技人员。

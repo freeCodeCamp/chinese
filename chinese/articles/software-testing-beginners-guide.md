@@ -155,26 +155,26 @@ Keep the Pareto Principle in mind when testing your code: 80% of software defect
 ### 警惕杀虫剂悖论Beware of the Pesticide paradox:
 
 This principle is based on a theory – "the more you use pesticide on a crop, the more immune the crop will eventually grow, and the pesticide will not be effective."
-该原则的理论背景是
+该原则的理论背景是在农作物上使用的杀虫剂越多时，农作物上的害虫抗药性就会越强，最终杀虫剂就会失效
 When you repeat particular test cases over and over, you will see fewer and fewer new bugs. So to find new bugs, update your test cases and run them once you add new test cases.
-
-### Testing is context-dependent:
+同理，如果一直使用既有的测试用例，发现的新缺陷只会越来越少，所以需要不断地更新测试用例并使用最新的测试用例验证软件。
+### 测试与需求文档高度关联Testing is context-dependent:
 
 Testing is context-dependent, which means that you should test your software based on its needs, functionalities, and requirements.
-
+测试的基础是关联各类文档，根据功能需求文档验证测试软件的功能是否符合需求。
 Your test approach should depend on what your software does. Not every software needs the same type/method of testing because every application has its unique functionalities.
-
+测试时需要根据软件的功能目的选择测试方法，因为不同的应用程序会有不同的功能，所以并不是所有的软件共用同一套测试方法。
 For instance, when testing an eCommerce web app, you will focus on its functionality to display products, so you will test how it shows products to end-users. When dealing with an API, you will focus on the response the API returns when an endpoint is called.
-
+例如，当测试电商网站的APP时，功能侧重商品展示，所以需要重点测试终端用户的商品页展示；当测试接口时，测试的重点是服务端被请求时，接口的响应返回情况。
 You wouldn't necessarily use the same test cases for both – that is what it means that testing is context-dependent.
-
+这两种情况肯定不能使用相同的测试用例，这就是测试与需求文档高度关联。
 ### 无错误谬论The absence of errors is a fallacy:
 
 If you build software that is 99% bug-free, but it doesn't follow user requirements, it is not usable for end-users.
-
+一款基本完美无缺陷但不符合用户需求的软件，对终端用户来说，是不适用的。
 Know that it is very much necessary that your 99% bug-free software still meets or fulfills your user requirements. It is important to write test cases to find errors in the code, but you also need to test your software for your end-users (with them and how they'll use it in mind). The best way to do this is to carry out beta testing.
-
-## 为什么需要软件测Why is Software Testing Needed?
+所以，测试时要明确一点，基本完美无缺陷的软件需要匹配用户需求，测试用例不仅是测试代码的问题，而且应该是以用户使用习惯或者潜在使用可能为导向测试软件，这在测试环节中非常重要的原则，而满足这个原则的最佳方式就是进行β测试。
+## 为什么需要软件测试Why is Software Testing Needed?
 
 Besides making sure your software is bug-free and meets user requirements, software testing has other advantages.
 软件测试既可以确保软件无缺陷以及达到用户需求，还有另外的优势。
@@ -185,23 +185,23 @@ if (!isAuthenticated) (adsbygoogle = window.adsbygoogle || \[\]).push({});
 ### 优化安全性能Software testing improves security:
 
 When building software, security is a crucial part of your planning. This is because vulnerable software could jeopardize you users and their information, as hackers can use stolen info for malicious purposes.
-
+网络安全是在构建软件时是非常重要的环节，因为黑客可以恶意攻击存在安全漏洞的软件窃取相关信息，用户信息就可能泄露。
 As a product undergoes testing, the end-user can count on the fact that they will be getting a reliable product and their details will be secured and safe. So users are more likely to get a product that is free from vulnerabilities with the help of software testing.
-
+经历过测试的产品会让终端用户觉得这是一款安全可靠的产品，他们的信息不会被泄露。所以用户会更倾向于通过软件测试的无安全漏洞问题的软件。
 ### 改善产品质量Software testing improves product quality:
 
 You want your software or product to be bug-free, low-risk, and effective at what it should do. And you can achieve this by including test cases and other testing methods when building out the code.
 在构建软件产品代码阶段就引入测试用例和其他测试方法，找到潜在问题，打造无缺陷、低风险、长期稳定运行的软件或者产品。
 In addition, you won't know how good your product is until you test it. This helps you provide the best product version before it gets released (and discover any inconsistencies or pain points along the way – so you can improve them).
-而且在测试时才会知道产品质量如何，
+而且在测试时才会知道产品质量如何，通过测试可以发现非稳定复现的缺陷或者痛点问题，然后修复这些缺陷，在发布正式环境前尽可能打造一个最佳的产品版本。
 ### 提高客户满意度Software testing improves customer satisfaction:
 
 For instance, let's say you download a new app and try to use some of its functionality – but it shows an error. This will probably frustrate you, and you might not want to use the app again, right?
-
+这就像你下载一个新APP后，结果使用时出现了报错，没有办法继续使用，最终可能导致你不会再使用这个APP。
 This is exactly why software testing is important. It can help you discover such errors and detect them before you release the product to the user, and gives the developers a chance to prevent the error.
-
+这就是软件测试重要性的实际体现，软件发布正式环境交付用户使用前，通过测试可以发现类似的缺陷，同时也是给开发人员一次机会避免出现这样的问题。
 By investing in software testing early in the development stage, you are letting the users know that you care about their experience. It could also help you create a solid long-term customer relationship.
-
+早期开发阶段引入软件测试，也是给用户展示你重视用户体验的一种方式，有助于建立稳定长久的客户关系。
 ### 节省成本Software testing saves money:
 
 Software testing can save you a lot of money – but how?

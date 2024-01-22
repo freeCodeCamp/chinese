@@ -6,69 +6,69 @@
 ![How to Implement a Blender Model in a React.js Application using Three.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/08/pexels-chevanon-photography-1335971.jpg)
 
 在这个分步指南中，你将学习如何建立一个带有基本动画的 Blender 文件。之后，你还将学习如何使用 React Three Fiber 来将 Three.js 集成到 React 应用程序中。
-熟悉这些概念可以帮助你以后开发的 React.js 应用程序脱颖而出.
+熟悉这些概念可以帮助你以后开发的 React.js 应用程序脱颖而出。
 
-## ******🔐****** Here's What We'll Cover:
+## ******🔐****** 以下是我们将涵盖的内容：
 
--   Crafting a Blender model, encompassing animations, materials and the export process.
--   Building a React.js application integrated with Three.js via React Three Fiber.
--   Incorporating your personally created Blender model into the React.js application.
+-   制作一个包括动画、材质和导出过程的 Blender 模型。
+-   使用 React Three Fiber 构建与 Three.js 集成的 React.js 应用程序。
+-   将个人创建的 Blender 模型整合到 React.js 应用程序中。
 
-## **************📝************** Prerequisites:
+## **************📝************** 先决条件：
 
--   A fundamental grasp of the 3D software Blender is recommended.
--   Basic familiarity with React.js is required.
--   Prior experience with Three.js is not necessary.
+-   建议对 3D 软件 Blender 有基本了解。
+-   要求具备对 React.js 的基本熟悉。
+-   无需具备之前使用 Three.js 的经验。
 
-## Table of Contents
+## 目录
 
-1.  [💭 What are Three.js and Blender?](#-what-are-three-js-and-blender)
-2.  [🔧 How to Set Up React.js with Three.js](#-how-to-set-up-react-js-with-three-js)
-3.  [**🔨** How to Create a Blender Model](#-how-to-create-a-blender-model)
+1.  [💭 什么是 Three.js 和 Blender？](#-what-are-three-js-and-blender)
+2.  [🔧 如何使用 Three.js 设置 React.js](#-how-to-set-up-react-js-with-three-js)
+3.  [**🔨** 如何创建 Blender 模型](#-how-to-create-a-blender-model)
 4.  [**✏️** Texture Baking for Procedural Materials](#-texture-baking-for-procedural-materials)
-5.  [**✒️** How to Implement the Blender Model into the React.js Application](#-how-to-implement-the-blender-model-into-the-react-js-application)
-6.  [**📄** Additional information](#-additional-information)
-7.  [**📋** Wrap-up](#-wrap-up)
+5.  [**✒️** 如何在 React.js 应用程序中实现 Blender 模型](#-how-to-implement-the-blender-model-into-the-react-js-application)
+6.  [**📄** 其他信息](#-additional-information)
+7.  [**📋** 总结](#-wrap-up)
 
-## 💭 What are Three.js and Blender?
+## 💭 什么是 Three.js 和 Blender？
 
-Three.js is a JavaScript library that functionas as an API, allowing you to exhibit 3D models within web browsers.
+Three.js 是一个 JavaScript 的库，通过提供的API可以让你在 Web 浏览器中展示 3D 模型。 
 
-Leveraging Three.js helps you seamlessly integrate interactivity and distinctive functionalities into your website.
+利用 Three.js 可以帮助您将互动性和独特的功能无缝集成到您的网站中。
 
-Blender is a robust software tailored for crafting and refining 3D models. Its versatility offers boundless opportunities, catering to a wide spectrum of creative visions.
+Blender 是一款专为制作和完善 3D 模型而定制的强大软件。它的多功能性提供了无限的机会，满足广泛的创意愿景。
 
-Beyond its display capabilities, Blender provides you with an array of tools encompassing cameras, lighting, and even post-production enhancements.
+除了显示功能之外，Blender 还为您提供了一系列工具，包括相机、灯光，甚至后期制作增强功能。
 
-When used together, these tools facilitate boundless creativity, allowing you to seamlessly translate your artistic creations into your upcoming website project.
+当一起使用时，这些工具可以激发无限的创造力，使您能够将您的艺术创作无缝地转化为您即将推出的网站项目。
 
-## 🔧 How to Set Up React.js with Three.js
+## 🔧 如何使用 Three.js 设置 React.js
 
-To start the process, install the React.js application:
+首先，安装 React.js 应用程序:
 
 `npx create-react-app my-app`
 
-Next, we'll install Three.js and [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation). React Three Fiber serves as a React renderer for Three.js, harnessing the power of React components to streamline Three.js integration within a React.js environment:
+然后， 需要安装 Three.js 和 [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation). React Three Fiber 充当 Three.js 的 React 渲染器，利用 React 组件的强大功能来简化 React.js 环境中 Three.js 的集成：
 
 `npm install three @react-three/fiber`
 
-For an enriched Three.js experience, we'll also integrate [React Three Drei](https://www.npmjs.com/package/@react-three/drei), a package that introduces an assortment of helpers for diverse Three.js scenarios, including several camera controls, for example:
+为了丰富 Three.js 体验，我们还将集成 [React Three Drei](https://www.npmjs.com/package/@react-three/drei), 该包引入了各种适用于不同 Three 的帮助程序.js场景，包括几个摄像头控件，例如：
 
 `npm install @react-three/drei`
 
-### glTF Tools extension
+### glTF Tools 扩展
 
-I also recommend installing the **glTF Tools** extension. Although not strictly necessary, this extension can help you perform various tasks.
+我还建议安装  **glTF Tools** 扩展。尽管不是绝对必要的，但此扩展可以帮助您执行各种任务。
 
-If you're using Visual Studio Code as your Integrated Development Environment (IDE), you can conveniently add the extension through the extensions tab. Again, this extension is optional, but it can significantly simplify certain processes later on. I will use it throughout this tutorial:
+如果您使用 Visual Studio Code 作为集成开发环境 (IDE)，则可以通过扩展选项卡方便地添加扩展。同样，此扩展是可选的，但它可以显着简化以后的某些流程。我将在整个教程中使用它：
 
 ![React1.0](https://www.freecodecamp.org/news/content/images/2023/08/React1.0.PNG)
 
-**gltf Tools** extension in Visual Studio Code
+Visual Studio Code 中的 **gltf Tools** 扩展
 
-### Completed setup for Three.js in React.js
+### 在 React.js 中完成 Three.js 的设置
 
-The dependencies in the `package.json` file of our React.js application now appear as follows:
+React.js 应用程序的 `package.json` 文件中的依赖项现在如下所示：
 
 ```JavaScript
 "dependencies": {
@@ -85,23 +85,23 @@ The dependencies in the `package.json` file of our React.js application now appe
   },
 ```
 
-Dependencies in the package.json file, including React Three Fiber and React Three Drei
+package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Drei
 
-These dependencies are sufficient for accomplishing a variety of tasks with Three.js in a React.js environment. Of course, you can incorporate any additional libraries you may desire for purposes beyond Three.js integration.
+这些依赖项足以在 React.js 环境中使用 Three.js 完成各种任务。当然，你还可以根据需要集成其他依赖库，来实现其他功能。
 
-In addition to this, I have also made the code from this tutorial available on [GitHub](https://github.com/Matthes-Baer/blender-threejs-reactjs-article-app). This will allow you to quickly access the information without having to scroll through the entire article.
+除此之外，我还在 [GitHub](https://github.com/Matthes-Baer/blender-threejs-reactjs-article-app) 上提供了本教程中的代码。这将使您能够快速访问信息，而无需滚动浏览整篇文章。
 
-## 🔨 How to Create a Blender Model
+## 🔨 如何创建 Blender 模型
 
-To begin, our initial task involves creating a Blender model that will then be integrated into our React.js application. For this stage, let's consider a scene in the **Layout** tab where we've got three objects: two spheres and one plane. You can add such objects with the `Shift + A` shortcut in Blender.
+首先，我们的初始任务涉及创建一个 Blender 模型，然后将其集成到我们的 React.js 应用程序中。 在这一阶段，让我们考虑 **Layout** 选项卡中的一个场景，其中我们有三个对象：两个球体和一个平面。您可以在 Blender 中使用“Shift + A”快捷键添加此类对象。
 
 ![blenderFirstImage](https://www.freecodecamp.org/news/content/images/2023/08/blenderFirstImage.PNG)
 
-Blender scene with two spheres and one plane in the **Layout** tab
+**Layout** 选项卡中包含两个球体和一个平面的 Blender 场景
 
-This composition includes just a plane and two spheres, with no additional details. Of course, you can work on more elaborate scene and model designs according to your preferences.
+该构图仅包括一个平面和两个球体，没有其他细节。当然，您可以根据自己的喜好进行更精细的场景和模型设计。
 
-But for the purpose of illustrating the fundamental process of incorporating your custom Blender models into React.js, this basic example will serve us just fine.
+但是，为了说明将自定义 Blender 模型整合到 React.js 的基本过程，这个基本示例将对我们足够了。
 
 ### How to add animations to the model
 

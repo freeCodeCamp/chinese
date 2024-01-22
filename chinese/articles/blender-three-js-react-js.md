@@ -5,9 +5,8 @@
 
 ![How to Implement a Blender Model in a React.js Application using Three.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/08/pexels-chevanon-photography-1335971.jpg)
 
-In this step-by-step guide, you'll learn how to build a basic Blender file with incorporated fundamental animations. After that, you'll learn how to integrate Three.js with your React apps using React Three Fiber.
-
-Getting familiar with these concepts can help you make sure your upcoming React.js applications stand out.
+在这个分步指南中，你将学习如何建立一个带有基本动画的 Blender 文件。之后，你还将学习如何使用 React Three Fiber 来将 Three.js 集成到 React 应用程序中。
+熟悉这些概念可以帮助你以后开发的 React.js 应用程序脱颖而出.
 
 ## ******🔐****** Here's What We'll Cover:
 

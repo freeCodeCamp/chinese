@@ -137,14 +137,14 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 所有这些调整都适用于特定材料。因此，如果希望不同的对象具有相同的视觉效果，只需对它们应用相同的材​​质即可。
 
-The `Principled BSDF` and `Material Output` nodes are initially generated when we open the **Shading** tab to look up on of our object's material for the first time. Both nodes are pretty much the basic case.
+当我们第一次打开 **Shading** 选项卡来查找对象的材质时，最初会生成 “Principled BSDF” 和 “Material Output” 节点。这两个节点都是用来设置基本情况。
 
-The `Principled BSDF` has a lot of settings you can play around with. In our case we just want to change the `Base Color` property to a blue color.
+“Principled BSDF” 有很多可以使用的设置。在这个例子中，我们只将 “Base Color” 属性更改为蓝色。
 
 ![blender3.0](https://www.freecodecamp.org/news/content/images/2023/08/blender3.0.PNG)
 
 Material of one sphere where we just adjust the `Base Color` within the `Principled BSDF` node
-
+我们只需在 “Principled BSDF” 节点中调整 “Base Color” 的一个球体的材质
 For the larger sphere, a similar material application is used. But, in contrast to the `Principled BSDF` node, we'll use the `Glossy BSDF` node which is such a node from the `Shader` category. This will help us recognize a possible issue that you might come across when designing a Blender model for your React.js application – which you will see later on.
 
 ![blender3.2-1](https://www.freecodecamp.org/news/content/images/2023/08/blender3.2-1.PNG)

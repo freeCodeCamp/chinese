@@ -22,7 +22,7 @@
 
 ## 目录
 
-1.  [💭 什么是 Three.js 和 Blender？](#-what-are-three-js-and-blender)
+1.  [💭 Three.js 和 Blender 是什么？](#-what-are-three-js-and-blender)
 2.  [🔧 如何使用 Three.js 设置 React.js](#-how-to-set-up-react-js-with-three-js)
 3.  [**🔨** 如何创建 Blender 模型](#-how-to-create-a-blender-model)
 4.  [**✏️** Texture Baking for Procedural Materials](#-texture-baking-for-procedural-materials)
@@ -30,7 +30,7 @@
 6.  [**📄** 其他信息](#-additional-information)
 7.  [**📋** 总结](#-wrap-up)
 
-## 💭 什么是 Three.js 和 Blender？
+## 💭 Three.js 和 Blender 是什么？
 
 Three.js 是一个 JavaScript 的库，通过提供的API可以让你在 Web 浏览器中展示 3D 模型。 
 
@@ -103,39 +103,39 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 但是，为了说明将自定义 Blender 模型整合到 React.js 的基本过程，这个基本示例将对我们足够了。
 
-### How to add animations to the model
+### 如何给模型添加动画
 
-Now, our focus shifts to introducing basic animations to all three objects within this Blender scene. These animations can facilitate movement, rotation, or even adjustments in scale for the objects, enabling dynamic transformations.
+现在，将我们的重点转移到向该 Blender 场景中的三个对象引入基本动画。这些动画可以促进对象的移动、旋转甚至缩放，从而实现动态变换。
 
-In order to add animations in Blender for your objects, you can switch to the **Animation** tab, next to the **Shading** and **Rendering** tab.
+为了在 Blender 中为对象添加动画，您可以切换到 **Shading** 和 **渲染** 选项卡旁边的 **Rendering** 选项卡。
 
-In the Animation tab, you can add points to a certain frame. For instance, if you want to shift a sphere a bit to the left, begin by adding a starting keyframe (right-click on the object, choose "Insert Keyframe," then pick "Location").
+在 “Animation” 选项卡中，你可以向特定帧添加点。例如，如果要将球体向左移动一点，请首先添加起始关键帧（右键单击对象，选择 “Insert Keyframe” ，然后选择 “Location” ）。
 
-Afterward, move ahead a few frames on the object's animation timeline, adjust the object's position, and repeat the same process. This way, you'll have two keyframes: the initial one and the new position.
+然后，在对象的动画时间轴上向前移动几帧，调整对象的位置，然后重复相同的过程。这样，您将拥有两个关键帧：初始关键帧和处于新位置的关键帧。
 
-Remember, this motion is in one direction. If you want to repeat the animation, it will move to the new location and then return to its initial position with a jump.
+请记住，这一动作是朝一个方向的。如果想重复动画，它将移动到新位置，然后再跳转返回到其初始位置。
 
-To make the movement smoother, you can copy the initial keyframe and insert it at the end. This will make the object move back with a smooth motion after reaching the new location. This is also how I set up the keyframes in our Blender model.
+为了使运动更加平滑，可以复制初始关键帧并将其插入到末尾。这将使物体在到达新位置后再平滑的运动向后移动。这也是我在 Blender 模型中设置关键帧的方法。
 
-Of course, you can add more keyframes to make more complex animations. This is just a basic introduction to starting with Blender animations. Like many aspects of Blender, there's a lot more to explore and learn.
+当然，你可以添加更多关键帧来制作更复杂的动画。这只是开始使用 Blender 动画的基本介绍。与 Blender 其他方面一样，还有很多东西需要探索和学习。
 
 ![blenderSecondImage](https://www.freecodecamp.org/news/content/images/2023/08/blenderSecondImage.PNG)
 
-Adding animations to all three objects in the **Animation** tab
+在 **Animation** 选项卡中的三个对象添加动画
 
-In this context, it's not necessary to have a thorough understanding of the specifics of these animations we added here. So, you don't really need to know to which exact position the first sphere is being moved through the animation.
+在这种情况下，没有必要彻底了解我们在此处添加的这些动画的细节。因此，实际上不需要知道第一个球体在动画中移动到哪个确切位置。
 
-The key point is to acknowledge their presence, as they will be integrated into our React.js application at a later stage so we can activate them in the browser.
+关键点是承认它们的存在，因为它们将在稍后阶段集成到我们的 React.js 应用程序中，以便我们可以在浏览器中激活它们。
 
-### How to add colors
+### 如何添加颜色
 
-Moving forward, we'll add some simple colors for the small sphere and the underlying plane, which you can do within the **Shading** tab, for example.
+接下来，我们将为小球体和底层平面添加一些简单的颜色，例如，可以在 **Shading** 选项卡中执行此操作。
 
-For basic colors, you can also go to the **Material Properties** section of the object (right-click on the object, then choose the second-to-last category at the bottom). But I want to focus on a specific situation you might encounter with your models later on. Therefore, I'll exclusively use the **Shading** tab for setting object colors in this tutorial.
+对于基本颜色，可以转到对象的 **Material Properties** 部分（右键单击对象，然后选择底部的倒数第二个类别）。但我想重点讨论您稍后可能会在模型中遇到的特定情况。因此，在本教程中，我将专门使用 **Shading** 选项卡来设置对象颜色。
 
-In the **Shading** tab, you can add nodes at the bottom of the screen. These nodes can modify the color and texture of an object, among other things. You'll also find `Vector` and `Shader` nodes that, when combined, can create unique visuals for your objects.
+在 **Shading** 选项卡中，可以在屏幕底部添加节点。这些节点可以修改对象的颜色和纹理等。你还会发现 “Vector” 和 “Shader” 节点，将它们组合起来可以为您的对象创建独特的视觉效果。
 
-All these adjustments apply to a specific material. So, if you want the same visual for different objects, you can simply apply the same material to them.
+所有这些调整都适用于特定材料。因此，如果希望不同的对象具有相同的视觉效果，只需对它们应用相同的材​​质即可。
 
 The `Principled BSDF` and `Material Output` nodes are initially generated when we open the **Shading** tab to look up on of our object's material for the first time. Both nodes are pretty much the basic case.
 

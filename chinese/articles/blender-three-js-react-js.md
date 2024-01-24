@@ -143,59 +143,59 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 ![blender3.0](https://www.freecodecamp.org/news/content/images/2023/08/blender3.0.PNG)
 
-Material of one sphere where we just adjust the `Base Color` within the `Principled BSDF` node
-我们只需在 “Principled BSDF” 节点中调整 “Base Color” 的一个球体的材质
-For the larger sphere, a similar material application is used. But, in contrast to the `Principled BSDF` node, we'll use the `Glossy BSDF` node which is such a node from the `Shader` category. This will help us recognize a possible issue that you might come across when designing a Blender model for your React.js application – which you will see later on.
+我们只需在 “Principled BSDF” 节点中调整 “Base Color” 的球体的材质。
+
+对于较大的球体，使用类似的材料应用。但是，与 “Principled BSDF” 节点相比，我们将使用 “Glossy BSDF” 节点，它是 “Shader” 类别中的一个节点。这将帮助我们认识到您在为 React.js 应用程序设计 Blender 模型时可能会遇到的问题 - 您稍后会看到。
 
 ![blender3.2-1](https://www.freecodecamp.org/news/content/images/2023/08/blender3.2-1.PNG)
 
-Using the `Glossy BSDF` node to add a material to the large sphere
+使用 “Glossy BSDF” 节点向大的球体添加材质
 
-Once we've done this, we're ready to export our Blender model. Note that this version is considerably simplified. You can work on more detailed model designs tailored to your preferences. Still, the overall workflow remains similar.
+完成此操作后，我们就可以导出 Blender 模型了。请注意，此版本已大大简化。可以根据偏好进行更详细的模型设计。整体工作流程仍然相似。
 
-### How to export the model
+### 如何导出模型
 
-To export the model, we need to generate a `.glb/.gltf` file. This is crucial as Three.js expects particular file formats for compatibility, and in this instance, a `.glb` or `.gltf` file aligns with the library's requirements.
+要导出模型，我们需要生成 “.glb/.gltf” 文件。这一点至关重要，因为 Three.js 需要特定的文件格式来实现兼容性，在本例中，“.glb” 或 “.gltf” 文件符合库的要求。
 
-So, once you've finished creating your model with objects, animations, colors, and more, you can do the following:
+因此，使用对象、动画、颜色等创建完模型后，您可以执行以下操作：
 
-1.  Click on the **File** tab located at the top left corner.
-2.  Choose **Export** from the options that appear. Now, a variety of export formats will be shown.
-3.  If you plan to use your model with Three.js in your application, you need to pick the `glTF 2.0 (.glb/.gltf)` option, like I mentioned earlier.
+1.  单击左上角的 **File** 选项卡。
+2.  从列出的选项中选择 **Export**。现在，可以看到多种导出格式。
+3.  正如之前提到的那样，如果计划在应用程序中将模型与 Three.js 一起使用，则需要选择 `glTF 2.0 (.glb/.gltf)` 选项。
 
-After selecting this option, a new window will pop up. This window lets you pick the folder where you want to save your file.
+选择此选项后，将弹​​出一个新的对话框。通过此窗口，您可以选择要保存文件的路径。
 
-On the right side of this window, there are additional choices. You can decide which specific objects you want to export, for instance. In most situations, the default settings should work well. Just remember that you can adjust these settings to your liking if necessary.
+在此窗口的右侧，有其他选项。例如，您可以决定要导出哪些特定对象。在大多数情况下，默认设置应该可以正常工作。请记住，如有必要，可以根据自己的偏好调整这些设置。
 
 ![blender3.1-1](https://www.freecodecamp.org/news/content/images/2023/08/blender3.1-1.png)
 
-Remember to export with the `glTF 2.0 (.glb/.gltf)` format.
+请记住导出的格式是 “glTF 2.0 (.glb/.gltf)”。
 
-### How to visualize the exported model
+### 如何将导出的模型可视化
 
-Next, let's transition to Visual Studio Code and navigate to the folder where we've stored our exported file.
+接下来，我们切换到 Visual Studio Code 并导航到导出文件的文件夹。
 
-Within this directory, you'll find a `.glb` file. Referring back to the **glTF Tools** extension setup from earlier, you can simply right-click on the `.glb` file in order to find two additional options positioned at the bottom, called `glTF: Import from GLB` and `glTF: Validate a GLB or GLTF file`.
+在此目录中，可以找到一个“.glb”文件。参考之前的 **glTF Tools** 扩展设置，只需右键单击 “.glb” 文件即可找到位于底部的两个附加选项，分别叫做 “glTF：从 GLB 导入”和 “glTF：验证 GLB 或 GLTF 文件”。
 
-In this scenario, we'll opt for the `glTF: Import from GLB` option. This action will generate a `.gltf` file in the same folder, in our case `blenderFile.gltf`.
+在这种情况下，我们会选择 “glTF：从 GLB 导入”选项。此操作将在同一文件夹中生成一个 “.gltf” 文件，在我们的例子中为 “blenderFile.gltf” 。
 
 ![blender4.0](https://www.freecodecamp.org/news/content/images/2023/08/blender4.0.png)
 
-Generating a `.gltf` file from the original `.glb` file we exported in Blender with the **glTF Tools** extension
+在 Blender 中利用 **glTF Tools** 扩展应用将初始导出的 “.glb” 文件生成一个 “.gltf” 文件。
 
-We've chosen this approach to bring enhanced accessibility to the `.gltf` file, enabling direct viewing within Visual Studio Code through the **glTF Tools** extension. This can be quite helpful to check on your file prior to its actual implementation.
+我们选择这种方法是为了增强对“.gltf”文件的可访问性，可以通过在 Visual Studio Code 的 **glTF Tools** 扩展中直接查看。这对于在实际实施之前检查您的文件非常有帮助。
 
-If we access the newly created `.gltf` file, we can observe a bunch of information based on the Blender model. It's important to note that the specifics could differ in your case, as they're tailored to reflect the attributes of the objects and scenes within your Blender project.
+如果我们访问新创建的 “.gltf” 文件，我们可以观察到一些基于 Blender 模型的信息。请务必注意，具体内容可能根据每个工程的情况而有所不同，因为它们是为了反映 Blender 工程中对象和场景的属性而定制的。
 
-If we look at the upper-right corner, there is a symbol that looks like a cube with a cone next to it. By clicking on this symbol, you can seamlessly preview your Blender scene directly within your IDE. This functionality is exclusively accessible for the `.gltf` file and not applicable to the `.glb` file in this case.
+如果我们看一下右上角，有一个符号看起来像一个立方体，旁边有一个圆锥体。通过单击此符号，可以直接在 IDE 中预览 Blender 场景。此功能只能由 “.gltf” 文件访问，在本例中不适用于 “.glb” 文件。
 
 ![blender4.5](https://www.freecodecamp.org/news/content/images/2023/08/blender4.5.png)
 
-The newly created `.gltf` file with the option to view the model directly in Visual Studio Code (in the upper-right corner, circled in red)
+新创建的 “.gltf” 文件，可以选择直接在 Visual Studio Code 中查看模型（在右上角，用红色圈出）
 
-It's worth noting that you don't have to do this through the **glTF Tools** extension. Alternatively, various websites allow you to upload your file for visualization. But I've personally found this in-IDE approach to be especially convenient. It centralizes the process, enabling you to assess your file's integrity before actually implementing it.
+值得注意的是，不一定要通过 **glTF Tools** 扩展来完成这个过程。另外，一些网站允许上传文件进行可视化。但我个人发现这种在集成开发环境中的方法特别方便。它将整个过程集中起来，使你能够在实际实施之前评估文件的完整性。
 
-If you find any errors, this practice lets you preemptively find out whether the issue is based on a problematic file export or just an implementation oversight within your React.js application. Consequently, I wholeheartedly recommend evaluating your model file following its export from Blender.
+如果你发现任何错误，这个做法可以让你提前发现问题是基于导出的文件有问题还是 React.js 应用中存在实施的疏忽。因此，我非常推荐在从 Blender 导出后评估你的模型文件。
 
 ![blender5.0](https://www.freecodecamp.org/news/content/images/2023/08/blender5.0.PNG)
 

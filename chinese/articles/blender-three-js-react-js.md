@@ -199,7 +199,7 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 ![blender5.0](https://www.freecodecamp.org/news/content/images/2023/08/blender5.0.PNG)
 
-Viewing the Blender model with **glTF Tools** in Visual Studio Code
+在 Visual Studio Code 中使用 **glTF Tools** 查看 Blender 模型
 
 By using the **glTF Tools** extension to view our Blender model in Visual Studio Code, we can see that all three objects are correctly recognized. Both the small sphere and the plane are shown in their intended colors.
 

@@ -213,23 +213,23 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 ## ✏️ 程序材质的纹理烘焙
 
-In a nutshell, Blender provides the flexibility to employ procedural nodes for your materials. While these nodes function seamlessly within Blender, they are not directly compatible with other game engines or software frameworks such as Three.js.
+简而言之，Blender 提供了使用程序节点处理材质的灵活性。虽然这些节点在 Blender 中可以无缝运行，但它们与其他游戏引擎或软件框架（如 Three.js ）并不直接兼容。
 
-To learn more, consider watching the following video. In just 10 minutes, it demonstrates the process of texture baking, which effectively resolves the issue at hand.
+要了解更多信息，请考虑观看以下视频。 在短短10分钟内演示了纹理烘焙的过程，有效解决了当前的问题。
 
-Tutorial on Texture Baking of Procedural Materials
+程序材质纹理烘焙教程
 
-Personally, when confronted with this challenge and initially uncertain about its nature, I found this video to be a valuable resource for gaining deeper insights into the subject matter.
+就我个人而言，当面对这一挑战并且最初不确定其性质时，我发现了这个视频，它是帮助我们深入了解该主题的宝贵资源。
 
-In our specific scenario, while we might not encounter as complex a situation as seen in the video, we are still faced with the use of nodes that lack direct compatibility with various software tools.
+在实际的具体场景中，虽然我们可能不会遇到视频中看到的那么复杂的情况，但仍然有可能面临着使用与各种软件工具缺乏直接兼容性的节点。
 
-Next, we'll briefly walk through the steps mentioned in the video. However, if you're interested in delving deeper into this process, I highly recommend watching the video.
+接下来，我们将简要介绍视频中提到的步骤。 但是，如果你有兴趣深入研究此过程，我强烈建议观看该视频。
 
-### How to create an image texture node
+### 如何创建文件纹理节点
 
-To start, in the **Shading** tab for the material containing the `Glossy BSDF` node, we'll introduce an `Image Texture` node and connect it to a new image (by click on `New`).
+首先，在包含 “Glossy BSDFF” 节点的材质的 “Shading” 选项卡中，我们将引入一个 “Image Texture” 节点并将其连接到新图像（通过单击 “New” ）。
 
-We'll leave the settings at their default values, which means a width and height of `1024px`. Using larger values would considerably extend the processing time we're going to face. Still, it's important to note that a larger texture can offer more detail and an overall improved appearance.
+我们将保留设置的默认值，这意味着宽度和高度为 “1024px” 。 使用较大的值将大大延长我们将面临的处理时间。 不过，值得注意的是，较大的纹理可以提供更多细节并改善整体外观。
 
 In our current situation, we're aiming for a quick process. But for more significant projects, visual quality might be crucial. In such cases, opting for a higher resolution could be desirable.
 

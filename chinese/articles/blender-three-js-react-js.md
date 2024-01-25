@@ -25,7 +25,7 @@
 1.  [💭 Three.js 和 Blender 是什么？](#-what-are-three-js-and-blender)
 2.  [🔧 如何使用 Three.js 设置 React.js](#-how-to-set-up-react-js-with-three-js)
 3.  [**🔨** 如何创建 Blender 模型](#-how-to-create-a-blender-model)
-4.  [**✏️** Texture Baking for Procedural Materials](#-texture-baking-for-procedural-materials)
+4.  [**✏️** 程序材质的纹理烘焙](#-texture-baking-for-procedural-materials)
 5.  [**✒️** 如何在 React.js 应用程序中实现 Blender 模型](#-how-to-implement-the-blender-model-into-the-react-js-application)
 6.  [**📄** 其他信息](#-additional-information)
 7.  [**📋** 总结](#-wrap-up)
@@ -201,17 +201,17 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 在 Visual Studio Code 中使用 **glTF Tools** 查看 Blender 模型
 
-By using the **glTF Tools** extension to view our Blender model in Visual Studio Code, we can see that all three objects are correctly recognized. Both the small sphere and the plane are shown in their intended colors.
+在 Visual Studio Code 中通过使用 **glTF Tools** 扩展查看我们的 Blender 模型，我们可以看到所有三个对象都被正确识别。 小球体和平面都以其预期的颜色显示。
 
-But the large sphere doesn't have the expected color assigned and just appears with a default white color instead.
+但是由于大球体没有指定预期的颜色，只是以默认的白色显示。
 
-This discrepancy raises the question: what led to this anomaly? It's circumstances like this that demonstrate how useful it is to preview your model before integrating it into your React.js application.
+这种差异引发了一个问题：是什么导致了这种异常现象？ 像这样的情况证明了在将模型集成到 React.js 应用程序之前预览模型是多么有用。
 
-By scrutinizing your model at this stage, you can affirm that the issue originates from the Blender model itself rather than the implementation process, given that we haven't done any implementation yet.
+通过在此阶段检查您的模型，就可以确认问题源于 Blender 模型本身而不是实现过程，因为我们还没有进行任何实现。
 
-This pre-implementation assessment proves to be handy and enables you to diagnose and address potential complications before proceeding with the implementation process in React.js.
+事实证明，这种实施前评估非常方便，使你能够在 React.js 中的实施过程之前诊断和解决潜在的复杂情况。
 
-## ✏️ Texture Baking for Procedural Materials
+## ✏️ 程序材质的纹理烘焙
 
 In a nutshell, Blender provides the flexibility to employ procedural nodes for your materials. While these nodes function seamlessly within Blender, they are not directly compatible with other game engines or software frameworks such as Three.js.
 

@@ -231,75 +231,76 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 我们将保留设置的默认值，这意味着宽度和高度为 “1024px” 。 使用较大的值将大大延长我们将面临的处理时间。 不过，值得注意的是，较大的纹理可以提供更多细节并改善整体外观。
 
-In our current situation, we're aiming for a quick process. But for more significant projects, visual quality might be crucial. In such cases, opting for a higher resolution could be desirable.
+在目前的情况下，我们的目标是加快流程。 但对于更重要的项目，视觉质量可能至关重要。 在这种情况下，可能需要选择更高的分辨率。
 
 ![blender6.0-1](https://www.freecodecamp.org/news/content/images/2023/08/blender6.0-1.PNG)
 
-Creating an `Image Texture` node and assigning a new image to it with default settings
+创建一个 “Image Texture” 节点并使用默认设置为其分配一个新图像
 
-### How to apply the Smart UV Project process
+### 如何应用智能 UV 投射流程
 
-Next, we need to employ the `Smart UV Project` option located in the **UV Editing** tab. Essentially, this action unwraps the faces of the particular object onto a texture.
+接下来，我们需要使用 **UV Editing** 选项卡中的 “Smart UV Projec” 选项。 本质上，此操作将特定对象的面展开到纹理上。
 
-This process enables us to specify which parts of the texture should be colored and modified as soon as we are back in the **Shading** tab. To make this process effective, we must select all the faces of the large sphere.
+此过程使我们能够在返回 **Shading** 选项卡后立即指定应该对纹理的哪些部分进行着色和修改。 为了使这个过程有效，我们必须选择大球体的所有面。
 
 ![blender7.0](https://www.freecodecamp.org/news/content/images/2023/08/blender7.0.png)
 
-Selecting all faces of the object in the **UV Editing** tab and applying `Smart UV Project` on it
+在 **UV Editin** 选项卡中选择对象的所有面并在其上应用 “Smart UV Project”
 
-Once we've finished this step and utilized the default settings for the `Smart UV Project` procedure, the image on the left —previously featuring a grid— will now display the shapes of the sphere we applied this process to. In our situation, it seems like the texture captured various angles of our sphere.
+一旦我们完成此步骤并使用 “Smart UV Project” 过程的默认设置，左侧的图像（之前具有网格）现在将显示应用此过程的球体的形状。 在这种情况下，纹理似乎捕获了球体的各个角度。
 
 ![blender8.0](https://www.freecodecamp.org/news/content/images/2023/08/blender8.0.PNG)
 
-The texture after `Smart UV Project`
+“Smart UV Project” 后的纹理
 
-Depending on the specific object, you may need to fine-tune the settings presented after clicking the `Smart UV Project` button. If you encounter challenges with a particular object, the video I shared earlier can give you additional guidance on this aspect.
+根据具体对象，单击 “Smart UV Project” 按钮，然后可能需要微调显示的设置。 如果遇到特定对象的其他问题，我之前分享的视频可以为你提供这方面的额外指导。
 
-Generally, to mitigate issues, you should optimize your object layout during its creation phase. Avoiding the introduction of excessive edges in specific locations can prevent problems like clipping, for instance.
+一般来说，为了缓解问题，应该在创建阶段优化对象布局。 例如，避免在特定位置引入过多边缘可以防止剪裁等问题。
 
-### The Bake process
+### 烘焙过程
 
 Now, let's return to the **Shading** tab, where we'll access the `Render Properties` on the right side (represented by the small screen or TV symbol). If not already selected, pick `Cycles` as your `Render Engine`. Then navigate to the `Bake` category, which is located below the `Performance` category.
+现在，返回到 **Shading** 选项卡，我们将在其中访问右侧的 “Render Properties”（由小屏幕或电视符号表示）。 如果尚未选择，请选择 “Cycles” 作为 “Render Engine”。 然后导航到 “Bake” 类别，该类别在“ Performance” 类别下方。
 
 ![blender9.0-1](https://www.freecodecamp.org/news/content/images/2023/08/blender9.0-1.PNG)
 
-`Bake` option in the **Shading** tab within the `Render Properties`
+在 “Render Properties” 里面 **Shading** 选项卡中的 “Bake” 选项
 
-With the existing default settings, you can proceed by clicking the `Bake` button while ensuring that both the `Image Texture` node and the large sphere are selected.
+使用现有的默认设置，可以通过单击 “Bake” 按钮继续，并且确保选择 “Image Texture” 节点和大球体。
 
-Keep in mind that I integrated a `Sun` light into my scene, as this bake process takes the scene's lighting into account. Without sufficient lighting, the result might appear excessively dark.
+请记住，我将“太阳”光集成到了场景中，因为此烘焙过程考虑了场景的照明。 如果没有足够的照明，结果可能会显得过暗。
 
-After a period of processing (which might be more time-consuming if you've employed larger dimensions for the `Image Texture` node's image), the baking process will finish. This results in the texture being applied to the image from the `Image Texture`. Instead of obtaining the texture from the `Shader` node named `Glossy BSDF`, we now have access to it through a regular "normal" image texture.
+经过一段时间的处理（如果您为 “Image Texture” 节点的图像使用了更大的尺寸，可能会更耗时），烘焙过程将完成。 这会导致纹理从 “Image Texture” 应用到图像。 现在可以通过常规的“正常”图像纹理来访问它，而不是从 “Glossy BSDF” 的 “Shader” 节点获取纹理。
 
-Then we can establish a connection from the `Image Texture` node to the `Material Output` node, thereby successfully implementing our material. At this stage, there isn't a significant difference compared to the previous method where we had the `Principled BSDF` node connected to the `Surface` input of the `Material Output` node.
+然后可以建立从 “Image Texture” 节点到 “Material Output” 节点的连接，从而成功实现材质。 之前的方法是将 “Principled BSDF” 节点连接到 “Material Output” 节点的 “Surface” 输入。在此阶段，两个方法方法相比较，没有显着差异。
 
 ![blender10.0](https://www.freecodecamp.org/news/content/images/2023/08/blender10.0.PNG)
 
-`Image Texture` node with the "baked" texture is connected with the `Material Output` node instead of the `Glossy BSDF` node
+具有“烘焙”纹理的 “Image Texture” 节点与 “Material Output” 节点相连，而不是与 “Glossy BSDF” 节点连接
 
-### How to see the final result
+### 如何看到最终结果
 
-Now, we can export the file again, repeat the same process from before in our IDE with **glTF Tools** and view the `.gltf` file with the extension. Upon examining the outcome, you might notice that it's not an exact match to the version we had using the `Glossy BSDF` node in Blender. This difference can be primarily attributed to the lighting conditions in the Blender scene.
+现在，我们可以再次导出文件，使用 **glTF Tools** 扩展在 IDE 中重复之前的相同过程，并查看扩展名为 “.gltf” 的文件。 检查结果后，你可能会注意到它与我们在 Blender 中使用 “Glossy BSDF” 节点的版本不完全匹配。 这种差异主要归因于 Blender 场景中的照明条件。
 
-Bear in mind that the approach I've outlined isn't the typical usage for the baking process, since in this case you could also just have picked a similar base color with the `Principled BSDF` node and would achieve pretty much the same solution, for example.
+请记住，我说明的方法不是烘焙过程的典型用法，因为在这种情况下，也可以使用 “Principled BSDF” 节点选择类似的基色，并且会实现几乎相同的解决方案。
 
 ![blender11.0](https://www.freecodecamp.org/news/content/images/2023/08/blender11.0.PNG)
 
-Finalized view with **glTF Tools**, including the "baked" texture for the large sphere
+使用 **glTF Tools** 完成的视图，包括大球体的“烘焙”纹理
 
-I introduced the baking process based on personal experience. There were instances where I encountered a scenario where materials appeared differently in Blender compared to when implemented them in a React.js application with Three.js. This situation prompted me to explore the concept of baking, which turned out to be a helpful solution.
+根据个人经验介绍一下烘焙过程。 在某些情况下，我遇到了这样的场景：材质在 Blender 中的显示效果与在 React.js 应用程序中使用 Three.js 实现它们时的效果不同。 这种情况促使我探索烘焙的概念，结果证明这是一个有用的解决方案。
 
-To summarize, if you find yourself facing a scenario where your materials don't appear as expected in your React.js application with Three.js, considering the baking process and researching this topic can provide valuable insights. This can be particularly beneficial for people who are new to Blender.
+总而言之，如果你发现自己面临的情况是材料没有在 Three.js 的 React.js 的应用程序中按照预期显示，那么考虑烘焙过程并研究该主题可以提供有价值的见解。 这对于 Blender 新手来说尤其有益。
 
-## ✒️ How to Implement the Blender model in the React.js Application
+## ✒️ 如何在 React.js 应用程序中实现 Blender 模型
 
-To implement the Blender file, we can use a really useful shortcut (source: [https://github.com/pmndrs/gltfjsx](https://github.com/pmndrs/gltfjsx)):
+想要生成 Blender 文件，可以使用一个非常有用的命令 (来源： [https://github.com/pmndrs/gltfjsx](https://github.com/pmndrs/gltfjsx)):
 
 `npx gltfjsx public/blenderFileName.glb`
 
-It's important to note that you need to store your Blender file within the `public` folder of your React.js application for this step. It's also worth highlighting that you need React Three Drei to use this helper. So in our case, we can directly use this shortcut without the need for any additional preparations.
+需要注意的是，在此步骤中，需要将 Blender 文件存储在 React.js 应用程序的 “public” 文件夹中。 还值得强调的是，需要 React Three Drei 才能使用这个命令。 所以在我们的例子中，我们可以直接使用这个命令，而不需要任何额外的准备。
 
-Upon executing this shortcut, we are presented with the following file:
+执行这个命令后，可以看到以下文件：
 
 ```JavaScript
 /*
@@ -350,17 +351,17 @@ export function Model(props) {
 useGLTF.preload("./blenderStuff/blenderFile.glb");
 ```
 
-blenderFile.jsx, including the basic code to make it work
+blenderFile.jsx， 包括使其工作的基本代码
 
-At first glance, you can see that this process has added many elements, so we basically don't need to add much on our own.
+大概看一下，就可以看到这个过程添加了很多元素，所以基本上不需要自己添加太多。
 
-An important aspect to configure is the path within the `useGLTF` hook. In my instance, the accurate path to incorporate is `./blenderStuff/blenderFile.glb` (this applies to `useGLTF.preload()` as well). This is because I created a sub-folder named `blenderStuff` within my `public` directory.
+配置的一个重要方面是在 useGLTF 钩子中设置路径。在我的实例中，要使用的准确路径是 ./blenderStuff/blenderFile.glb（同样适用于 useGLTF.preload() ）。这是因为我在 public 目录下创建了一个名为 blenderStuff 的子文件夹。
 
-### How to add a Canvas wrapper and other components
+### 如何添加 Canvas 包装器和其他组件
 
-With this configuration in place, we're now ready to use the `Model` component. But to effectively integrate this `Model` component into our desired location, we need to make some adjustments in the parent component.
+完成此配置后，我们现在就可以使用 “Model” 组件了。 但为了有效地将这个 “Model” 组件集成到想要的位置，需要在父组件中进行一些调整。
 
-In my case, I've opted to implement it within the main `App.js` file. And I've assigned a height of `100vh` to the `App`'s CSS class to ensure the desired display.
+在这个例子中，我选择在主 App.js 文件中实现它。 我为 App 的 CSS 类分配了 100vh 的高度，以确保所需的显示。
 
 ```JavaScript
 import "./App.css";

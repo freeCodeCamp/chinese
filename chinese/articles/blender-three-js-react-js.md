@@ -1,75 +1,74 @@
 > -  原文地址：[How to Implement a Blender Model in a React.js Application using Three.js](https://www.freecodecamp.org/news/blender-three-js-react-js/)
 > -  原文作者：[Matthes Bär](https://www.freecodecamp.org/news/author/matthes-bar/)
-> -  译者：
+> -  译者：Echo Xu
 > -  校对者：
 
 ![How to Implement a Blender Model in a React.js Application using Three.js](https://www.freecodecamp.org/news/content/images/size/w2000/2023/08/pexels-chevanon-photography-1335971.jpg)
 
-In this step-by-step guide, you'll learn how to build a basic Blender file with incorporated fundamental animations. After that, you'll learn how to integrate Three.js with your React apps using React Three Fiber.
+在这个分步指南中，你将学习如何建立一个带有基本动画的 Blender 文件。之后，你还将学习如何使用 React Three Fiber 来将 Three.js 集成到 React 应用程序中。
+熟悉这些概念可以帮助你以后开发的 React.js 应用程序脱颖而出。
 
-Getting familiar with these concepts can help you make sure your upcoming React.js applications stand out.
+## ******🔐****** 以下是我们将涵盖的内容：
 
-## ******🔐****** Here's What We'll Cover:
+-   制作一个包括动画、材质和导出过程的 Blender 模型。
+-   使用 React Three Fiber 构建与 Three.js 集成的 React.js 应用程序。
+-   将个人创建的 Blender 模型整合到 React.js 应用程序中。
 
--   Crafting a Blender model, encompassing animations, materials and the export process.
--   Building a React.js application integrated with Three.js via React Three Fiber.
--   Incorporating your personally created Blender model into the React.js application.
+## **************📝************** 先决条件：
 
-## **************📝************** Prerequisites:
+-   建议对 3D 软件 Blender 有基本了解。
+-   要求具备对 React.js 的基本熟悉。
+-   无需具备之前使用 Three.js 的经验。
 
--   A fundamental grasp of the 3D software Blender is recommended.
--   Basic familiarity with React.js is required.
--   Prior experience with Three.js is not necessary.
+## 目录
 
-## Table of Contents
+1.  [💭 Three.js 和 Blender 是什么？](#-what-are-three-js-and-blender)
+2.  [🔧 如何使用 Three.js 设置 React.js](#-how-to-set-up-react-js-with-three-js)
+3.  [**🔨** 如何创建 Blender 模型](#-how-to-create-a-blender-model)
+4.  [**✏️** 程序材质的纹理烘焙](#-texture-baking-for-procedural-materials)
+5.  [**✒️** 如何在 React.js 应用程序中实现 Blender 模型](#-how-to-implement-the-blender-model-into-the-react-js-application)
+6.  [**📄** 其他信息](#-additional-information)
+7.  [**📋** 总结](#-wrap-up)
 
-1.  [💭 What are Three.js and Blender?](#-what-are-three-js-and-blender)
-2.  [🔧 How to Set Up React.js with Three.js](#-how-to-set-up-react-js-with-three-js)
-3.  [**🔨** How to Create a Blender Model](#-how-to-create-a-blender-model)
-4.  [**✏️** Texture Baking for Procedural Materials](#-texture-baking-for-procedural-materials)
-5.  [**✒️** How to Implement the Blender Model into the React.js Application](#-how-to-implement-the-blender-model-into-the-react-js-application)
-6.  [**📄** Additional information](#-additional-information)
-7.  [**📋** Wrap-up](#-wrap-up)
+## 💭 Three.js 和 Blender 是什么？
 
-## 💭 What are Three.js and Blender?
+Three.js 是一个 JavaScript 的库，通过提供的API可以让你在 Web 浏览器中展示 3D 模型。 
 
-Three.js is a JavaScript library that functionas as an API, allowing you to exhibit 3D models within web browsers.
+利用 Three.js 可以帮助您将互动性和独特的功能无缝集成到您的网站中。
 
-Leveraging Three.js helps you seamlessly integrate interactivity and distinctive functionalities into your website.
+Blender 是一款专为制作和完善 3D 模型而定制的强大软件。它的多功能性提供了无限的机会，满足广泛的创意愿景。
 
-Blender is a robust software tailored for crafting and refining 3D models. Its versatility offers boundless opportunities, catering to a wide spectrum of creative visions.
+除了显示功能之外，Blender 还为您提供了一系列工具，包括相机、灯光，甚至后期制作增强功能。
 
-Beyond its display capabilities, Blender provides you with an array of tools encompassing cameras, lighting, and even post-production enhancements.
+当一起使用时，这些工具可以激发无限的创造力，使您能够将您的艺术创作无缝地转化为您即将推出的网站项目。
 
-When used together, these tools facilitate boundless creativity, allowing you to seamlessly translate your artistic creations into your upcoming website project.
+## 🔧 如何使用 Three.js 设置 React.js
 
-## 🔧 How to Set Up React.js with Three.js
-
-To start the process, install the React.js application:
+首先，安装 React.js 应用程序:
 
 `npx create-react-app my-app`
 
-Next, we'll install Three.js and [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation). React Three Fiber serves as a React renderer for Three.js, harnessing the power of React components to streamline Three.js integration within a React.js environment:
+然后， 需要安装 Three.js 和 [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/installation). React Three Fiber 充当 Three.js 的 React 渲染器，利用 React 组件的强大功能来简化 React.js 环境中 Three.js 的集成：
 
 `npm install three @react-three/fiber`
 
-For an enriched Three.js experience, we'll also integrate [React Three Drei](https://www.npmjs.com/package/@react-three/drei), a package that introduces an assortment of helpers for diverse Three.js scenarios, including several camera controls, for example:
+为了丰富 Three.js 体验，我们还将集成 [React Three Drei](https://www.npmjs.com/package/@react-three/drei), 该包引入了各种适用于不同 Three 的帮助程序.js场景，包括几个摄像头控件，例如：
 
 `npm install @react-three/drei`
 
-### glTF Tools extension
+### glTF Tools 扩展
 
-I also recommend installing the **glTF Tools** extension. Although not strictly necessary, this extension can help you perform various tasks.
+我还建议安装  **glTF Tools** 扩展。尽管不是绝对必要的，但此扩展可以帮助您执行各种任务。
 
-If you're using Visual Studio Code as your Integrated Development Environment (IDE), you can conveniently add the extension through the extensions tab. Again, this extension is optional, but it can significantly simplify certain processes later on. I will use it throughout this tutorial:
+如果您使用 Visual Studio Code 作为集成开发环境 (IDE)，则可以通过扩展选项卡方便地添加扩展。同样，此扩展是可选的，但它可以显着简化以后的某些流程。我将在整个教程中使用它：
 
 ![React1.0](https://www.freecodecamp.org/news/content/images/2023/08/React1.0.PNG)
 
-**gltf Tools** extension in Visual Studio Code
+Visual Studio Code 中的 **gltf Tools** 扩展
 
-### Completed setup for Three.js in React.js
+### 在 React.js 中完成 Three.js 的设置
 
-The dependencies in the `package.json` file of our React.js application now appear as follows:
+React.js 应用程序的 `package.json` 文件中的依赖项现在如下所示：
 
 ```JavaScript
 "dependencies": {
@@ -86,221 +85,222 @@ The dependencies in the `package.json` file of our React.js application now appe
   },
 ```
 
-Dependencies in the package.json file, including React Three Fiber and React Three Drei
+package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Drei
 
-These dependencies are sufficient for accomplishing a variety of tasks with Three.js in a React.js environment. Of course, you can incorporate any additional libraries you may desire for purposes beyond Three.js integration.
+这些依赖项足以在 React.js 环境中使用 Three.js 完成各种任务。当然，你还可以根据需要集成其他依赖库，来实现其他功能。
 
-In addition to this, I have also made the code from this tutorial available on [GitHub](https://github.com/Matthes-Baer/blender-threejs-reactjs-article-app). This will allow you to quickly access the information without having to scroll through the entire article.
+除此之外，我还在 [GitHub](https://github.com/Matthes-Baer/blender-threejs-reactjs-article-app) 上提供了本教程中的代码。这将使您能够快速访问信息，而无需滚动浏览整篇文章。
 
-## 🔨 How to Create a Blender Model
+## 🔨 如何创建 Blender 模型
 
-To begin, our initial task involves creating a Blender model that will then be integrated into our React.js application. For this stage, let's consider a scene in the **Layout** tab where we've got three objects: two spheres and one plane. You can add such objects with the `Shift + A` shortcut in Blender.
+首先，我们的初始任务涉及创建一个 Blender 模型，然后将其集成到我们的 React.js 应用程序中。 在这一阶段，让我们考虑 **Layout** 选项卡中的一个场景，其中我们有三个对象：两个球体和一个平面。您可以在 Blender 中使用“Shift + A”快捷键添加此类对象。
 
 ![blenderFirstImage](https://www.freecodecamp.org/news/content/images/2023/08/blenderFirstImage.PNG)
 
-Blender scene with two spheres and one plane in the **Layout** tab
+**Layout** 选项卡中包含两个球体和一个平面的 Blender 场景
 
-This composition includes just a plane and two spheres, with no additional details. Of course, you can work on more elaborate scene and model designs according to your preferences.
+该构图仅包括一个平面和两个球体，没有其他细节。当然，您可以根据自己的喜好进行更精细的场景和模型设计。
 
-But for the purpose of illustrating the fundamental process of incorporating your custom Blender models into React.js, this basic example will serve us just fine.
+但是，为了说明将自定义 Blender 模型整合到 React.js 的基本过程，这个基本示例将对我们足够了。
 
-### How to add animations to the model
+### 如何给模型添加动画
 
-Now, our focus shifts to introducing basic animations to all three objects within this Blender scene. These animations can facilitate movement, rotation, or even adjustments in scale for the objects, enabling dynamic transformations.
+现在，将我们的重点转移到向该 Blender 场景中的三个对象引入基本动画。这些动画可以促进对象的移动、旋转甚至缩放，从而实现动态变换。
 
-In order to add animations in Blender for your objects, you can switch to the **Animation** tab, next to the **Shading** and **Rendering** tab.
+为了在 Blender 中为对象添加动画，您可以切换到 **Shading** 和 **渲染** 选项卡旁边的 **Rendering** 选项卡。
 
-In the Animation tab, you can add points to a certain frame. For instance, if you want to shift a sphere a bit to the left, begin by adding a starting keyframe (right-click on the object, choose "Insert Keyframe," then pick "Location").
+在 “Animation” 选项卡中，你可以向特定帧添加点。例如，如果要将球体向左移动一点，请首先添加起始关键帧（右键单击对象，选择 “Insert Keyframe” ，然后选择 “Location” ）。
 
-Afterward, move ahead a few frames on the object's animation timeline, adjust the object's position, and repeat the same process. This way, you'll have two keyframes: the initial one and the new position.
+然后，在对象的动画时间轴上向前移动几帧，调整对象的位置，然后重复相同的过程。这样，您将拥有两个关键帧：初始关键帧和处于新位置的关键帧。
 
-Remember, this motion is in one direction. If you want to repeat the animation, it will move to the new location and then return to its initial position with a jump.
+请记住，这一动作是朝一个方向的。如果想重复动画，它将移动到新位置，然后再跳转返回到其初始位置。
 
-To make the movement smoother, you can copy the initial keyframe and insert it at the end. This will make the object move back with a smooth motion after reaching the new location. This is also how I set up the keyframes in our Blender model.
+为了使运动更加平滑，可以复制初始关键帧并将其插入到末尾。这将使物体在到达新位置后再平滑的运动向后移动。这也是我在 Blender 模型中设置关键帧的方法。
 
-Of course, you can add more keyframes to make more complex animations. This is just a basic introduction to starting with Blender animations. Like many aspects of Blender, there's a lot more to explore and learn.
+当然，你可以添加更多关键帧来制作更复杂的动画。这只是开始使用 Blender 动画的基本介绍。与 Blender 其他方面一样，还有很多东西需要探索和学习。
 
 ![blenderSecondImage](https://www.freecodecamp.org/news/content/images/2023/08/blenderSecondImage.PNG)
 
-Adding animations to all three objects in the **Animation** tab
+在 **Animation** 选项卡中的三个对象添加动画
 
-In this context, it's not necessary to have a thorough understanding of the specifics of these animations we added here. So, you don't really need to know to which exact position the first sphere is being moved through the animation.
+在这种情况下，没有必要彻底了解我们在此处添加的这些动画的细节。因此，实际上不需要知道第一个球体在动画中移动到哪个确切位置。
 
-The key point is to acknowledge their presence, as they will be integrated into our React.js application at a later stage so we can activate them in the browser.
+关键点是承认它们的存在，因为它们将在稍后阶段集成到我们的 React.js 应用程序中，以便我们可以在浏览器中激活它们。
 
-### How to add colors
+### 如何添加颜色
 
-Moving forward, we'll add some simple colors for the small sphere and the underlying plane, which you can do within the **Shading** tab, for example.
+接下来，我们将为小球体和底层平面添加一些简单的颜色，例如，可以在 **Shading** 选项卡中执行此操作。
 
-For basic colors, you can also go to the **Material Properties** section of the object (right-click on the object, then choose the second-to-last category at the bottom). But I want to focus on a specific situation you might encounter with your models later on. Therefore, I'll exclusively use the **Shading** tab for setting object colors in this tutorial.
+对于基本颜色，可以转到对象的 **Material Properties** 部分（右键单击对象，然后选择底部的倒数第二个类别）。但我想重点讨论您稍后可能会在模型中遇到的特定情况。因此，在本教程中，我将专门使用 **Shading** 选项卡来设置对象颜色。
 
-In the **Shading** tab, you can add nodes at the bottom of the screen. These nodes can modify the color and texture of an object, among other things. You'll also find `Vector` and `Shader` nodes that, when combined, can create unique visuals for your objects.
+在 **Shading** 选项卡中，可以在屏幕底部添加节点。这些节点可以修改对象的颜色和纹理等。你还会发现 “Vector” 和 “Shader” 节点，将它们组合起来可以为您的对象创建独特的视觉效果。
 
-All these adjustments apply to a specific material. So, if you want the same visual for different objects, you can simply apply the same material to them.
+所有这些调整都适用于特定材料。因此，如果希望不同的对象具有相同的视觉效果，只需对它们应用相同的材​​质即可。
 
-The `Principled BSDF` and `Material Output` nodes are initially generated when we open the **Shading** tab to look up on of our object's material for the first time. Both nodes are pretty much the basic case.
+当我们第一次打开 **Shading** 选项卡来查找对象的材质时，最初会生成 “Principled BSDF” 和 “Material Output” 节点。这两个节点都是用来设置基本情况。
 
-The `Principled BSDF` has a lot of settings you can play around with. In our case we just want to change the `Base Color` property to a blue color.
+“Principled BSDF” 有很多可以使用的设置。在这个例子中，我们只将 “Base Color” 属性更改为蓝色。
 
 ![blender3.0](https://www.freecodecamp.org/news/content/images/2023/08/blender3.0.PNG)
 
-Material of one sphere where we just adjust the `Base Color` within the `Principled BSDF` node
+我们只需在 “Principled BSDF” 节点中调整 “Base Color” 的球体的材质。
 
-For the larger sphere, a similar material application is used. But, in contrast to the `Principled BSDF` node, we'll use the `Glossy BSDF` node which is such a node from the `Shader` category. This will help us recognize a possible issue that you might come across when designing a Blender model for your React.js application – which you will see later on.
+对于较大的球体，使用类似的材料应用。但是，与 “Principled BSDF” 节点相比，我们将使用 “Glossy BSDF” 节点，它是 “Shader” 类别中的一个节点。这将帮助我们认识到您在为 React.js 应用程序设计 Blender 模型时可能会遇到的问题 - 您稍后会看到。
 
 ![blender3.2-1](https://www.freecodecamp.org/news/content/images/2023/08/blender3.2-1.PNG)
 
-Using the `Glossy BSDF` node to add a material to the large sphere
+使用 “Glossy BSDF” 节点向大的球体添加材质
 
-Once we've done this, we're ready to export our Blender model. Note that this version is considerably simplified. You can work on more detailed model designs tailored to your preferences. Still, the overall workflow remains similar.
+完成此操作后，我们就可以导出 Blender 模型了。请注意，此版本已大大简化。可以根据偏好进行更详细的模型设计。整体工作流程仍然相似。
 
-### How to export the model
+### 如何导出模型
 
-To export the model, we need to generate a `.glb/.gltf` file. This is crucial as Three.js expects particular file formats for compatibility, and in this instance, a `.glb` or `.gltf` file aligns with the library's requirements.
+要导出模型，我们需要生成 “.glb/.gltf” 文件。这一点至关重要，因为 Three.js 需要特定的文件格式来实现兼容性，在本例中，“.glb” 或 “.gltf” 文件符合库的要求。
 
-So, once you've finished creating your model with objects, animations, colors, and more, you can do the following:
+因此，使用对象、动画、颜色等创建完模型后，您可以执行以下操作：
 
-1.  Click on the **File** tab located at the top left corner.
-2.  Choose **Export** from the options that appear. Now, a variety of export formats will be shown.
-3.  If you plan to use your model with Three.js in your application, you need to pick the `glTF 2.0 (.glb/.gltf)` option, like I mentioned earlier.
+1.  单击左上角的 **File** 选项卡。
+2.  从列出的选项中选择 **Export**。现在，可以看到多种导出格式。
+3.  正如之前提到的那样，如果计划在应用程序中将模型与 Three.js 一起使用，则需要选择 `glTF 2.0 (.glb/.gltf)` 选项。
 
-After selecting this option, a new window will pop up. This window lets you pick the folder where you want to save your file.
+选择此选项后，将弹​​出一个新的对话框。通过此窗口，您可以选择要保存文件的路径。
 
-On the right side of this window, there are additional choices. You can decide which specific objects you want to export, for instance. In most situations, the default settings should work well. Just remember that you can adjust these settings to your liking if necessary.
+在此窗口的右侧，有其他选项。例如，您可以决定要导出哪些特定对象。在大多数情况下，默认设置应该可以正常工作。请记住，如有必要，可以根据自己的偏好调整这些设置。
 
 ![blender3.1-1](https://www.freecodecamp.org/news/content/images/2023/08/blender3.1-1.png)
 
-Remember to export with the `glTF 2.0 (.glb/.gltf)` format.
+请记住导出的格式是 “glTF 2.0 (.glb/.gltf)”。
 
-### How to visualize the exported model
+### 如何将导出的模型可视化
 
-Next, let's transition to Visual Studio Code and navigate to the folder where we've stored our exported file.
+接下来，我们切换到 Visual Studio Code 并导航到导出文件的文件夹。
 
-Within this directory, you'll find a `.glb` file. Referring back to the **glTF Tools** extension setup from earlier, you can simply right-click on the `.glb` file in order to find two additional options positioned at the bottom, called `glTF: Import from GLB` and `glTF: Validate a GLB or GLTF file`.
+在此目录中，可以找到一个“.glb”文件。参考之前的 **glTF Tools** 扩展设置，只需右键单击 “.glb” 文件即可找到位于底部的两个附加选项，分别叫做 “glTF：从 GLB 导入”和 “glTF：验证 GLB 或 GLTF 文件”。
 
-In this scenario, we'll opt for the `glTF: Import from GLB` option. This action will generate a `.gltf` file in the same folder, in our case `blenderFile.gltf`.
+在这种情况下，我们会选择 “glTF：从 GLB 导入”选项。此操作将在同一文件夹中生成一个 “.gltf” 文件，在我们的例子中为 “blenderFile.gltf” 。
 
 ![blender4.0](https://www.freecodecamp.org/news/content/images/2023/08/blender4.0.png)
 
-Generating a `.gltf` file from the original `.glb` file we exported in Blender with the **glTF Tools** extension
+在 Blender 中利用 **glTF Tools** 扩展应用将初始导出的 “.glb” 文件生成一个 “.gltf” 文件。
 
-We've chosen this approach to bring enhanced accessibility to the `.gltf` file, enabling direct viewing within Visual Studio Code through the **glTF Tools** extension. This can be quite helpful to check on your file prior to its actual implementation.
+我们选择这种方法是为了增强对“.gltf”文件的可访问性，可以通过在 Visual Studio Code 的 **glTF Tools** 扩展中直接查看。这对于在实际实施之前检查您的文件非常有帮助。
 
-If we access the newly created `.gltf` file, we can observe a bunch of information based on the Blender model. It's important to note that the specifics could differ in your case, as they're tailored to reflect the attributes of the objects and scenes within your Blender project.
+如果我们访问新创建的 “.gltf” 文件，我们可以观察到一些基于 Blender 模型的信息。请务必注意，具体内容可能根据每个工程的情况而有所不同，因为它们是为了反映 Blender 工程中对象和场景的属性而定制的。
 
-If we look at the upper-right corner, there is a symbol that looks like a cube with a cone next to it. By clicking on this symbol, you can seamlessly preview your Blender scene directly within your IDE. This functionality is exclusively accessible for the `.gltf` file and not applicable to the `.glb` file in this case.
+如果我们看一下右上角，有一个符号看起来像一个立方体，旁边有一个圆锥体。通过单击此符号，可以直接在 IDE 中预览 Blender 场景。此功能只能由 “.gltf” 文件访问，在本例中不适用于 “.glb” 文件。
 
 ![blender4.5](https://www.freecodecamp.org/news/content/images/2023/08/blender4.5.png)
 
-The newly created `.gltf` file with the option to view the model directly in Visual Studio Code (in the upper-right corner, circled in red)
+新创建的 “.gltf” 文件，可以选择直接在 Visual Studio Code 中查看模型（在右上角，用红色圈出）
 
-It's worth noting that you don't have to do this through the **glTF Tools** extension. Alternatively, various websites allow you to upload your file for visualization. But I've personally found this in-IDE approach to be especially convenient. It centralizes the process, enabling you to assess your file's integrity before actually implementing it.
+值得注意的是，不一定要通过 **glTF Tools** 扩展来完成这个过程。另外，一些网站允许上传文件进行可视化。但我个人发现这种在集成开发环境中的方法特别方便。它将整个过程集中起来，使你能够在实际实施之前评估文件的完整性。
 
-If you find any errors, this practice lets you preemptively find out whether the issue is based on a problematic file export or just an implementation oversight within your React.js application. Consequently, I wholeheartedly recommend evaluating your model file following its export from Blender.
+如果你发现任何错误，这个做法可以让你提前发现问题是基于导出的文件有问题还是 React.js 应用中存在实施的疏忽。因此，我非常推荐在从 Blender 导出后评估你的模型文件。
 
 ![blender5.0](https://www.freecodecamp.org/news/content/images/2023/08/blender5.0.PNG)
 
-Viewing the Blender model with **glTF Tools** in Visual Studio Code
+在 Visual Studio Code 中使用 **glTF Tools** 查看 Blender 模型
 
-By using the **glTF Tools** extension to view our Blender model in Visual Studio Code, we can see that all three objects are correctly recognized. Both the small sphere and the plane are shown in their intended colors.
+在 Visual Studio Code 中通过使用 **glTF Tools** 扩展查看我们的 Blender 模型，我们可以看到所有三个对象都被正确识别。 小球体和平面都以其预期的颜色显示。
 
-But the large sphere doesn't have the expected color assigned and just appears with a default white color instead.
+但是由于大球体没有指定预期的颜色，只是以默认的白色显示。
 
-This discrepancy raises the question: what led to this anomaly? It's circumstances like this that demonstrate how useful it is to preview your model before integrating it into your React.js application.
+这种差异引发了一个问题：是什么导致了这种异常现象？ 像这样的情况证明了在将模型集成到 React.js 应用程序之前预览模型是多么有用。
 
-By scrutinizing your model at this stage, you can affirm that the issue originates from the Blender model itself rather than the implementation process, given that we haven't done any implementation yet.
+通过在此阶段检查您的模型，就可以确认问题源于 Blender 模型本身而不是实现过程，因为我们还没有进行任何实现。
 
-This pre-implementation assessment proves to be handy and enables you to diagnose and address potential complications before proceeding with the implementation process in React.js.
+事实证明，这种实施前评估非常方便，使你能够在 React.js 中的实施过程之前诊断和解决潜在的复杂情况。
 
-## ✏️ Texture Baking for Procedural Materials
+## ✏️ 程序材质的纹理烘焙
 
-In a nutshell, Blender provides the flexibility to employ procedural nodes for your materials. While these nodes function seamlessly within Blender, they are not directly compatible with other game engines or software frameworks such as Three.js.
+简而言之，Blender 提供了使用程序节点处理材质的灵活性。虽然这些节点在 Blender 中可以无缝运行，但它们与其他游戏引擎或软件框架（如 Three.js ）并不直接兼容。
 
-To learn more, consider watching the following video. In just 10 minutes, it demonstrates the process of texture baking, which effectively resolves the issue at hand.
+要了解更多信息，请考虑观看以下视频。 在短短10分钟内演示了纹理烘焙的过程，有效解决了当前的问题。
 
-Tutorial on Texture Baking of Procedural Materials
+程序材质纹理烘焙教程
 
-Personally, when confronted with this challenge and initially uncertain about its nature, I found this video to be a valuable resource for gaining deeper insights into the subject matter.
+就我个人而言，当面对这一挑战并且最初不确定其性质时，我发现了这个视频，它是帮助我们深入了解该主题的宝贵资源。
 
-In our specific scenario, while we might not encounter as complex a situation as seen in the video, we are still faced with the use of nodes that lack direct compatibility with various software tools.
+在实际的具体场景中，虽然我们可能不会遇到视频中看到的那么复杂的情况，但仍然有可能面临着使用与各种软件工具缺乏直接兼容性的节点。
 
-Next, we'll briefly walk through the steps mentioned in the video. However, if you're interested in delving deeper into this process, I highly recommend watching the video.
+接下来，我们将简要介绍视频中提到的步骤。 但是，如果你有兴趣深入研究此过程，我强烈建议观看该视频。
 
-### How to create an image texture node
+### 如何创建文件纹理节点
 
-To start, in the **Shading** tab for the material containing the `Glossy BSDF` node, we'll introduce an `Image Texture` node and connect it to a new image (by click on `New`).
+首先，在包含 “Glossy BSDFF” 节点的材质的 “Shading” 选项卡中，我们将引入一个 “Image Texture” 节点并将其连接到新图像（通过单击 “New” ）。
 
-We'll leave the settings at their default values, which means a width and height of `1024px`. Using larger values would considerably extend the processing time we're going to face. Still, it's important to note that a larger texture can offer more detail and an overall improved appearance.
+我们将保留设置的默认值，这意味着宽度和高度为 “1024px” 。 使用较大的值将大大延长我们将面临的处理时间。 不过，值得注意的是，较大的纹理可以提供更多细节并改善整体外观。
 
-In our current situation, we're aiming for a quick process. But for more significant projects, visual quality might be crucial. In such cases, opting for a higher resolution could be desirable.
+在目前的情况下，我们的目标是加快流程。 但对于更重要的项目，视觉质量可能至关重要。 在这种情况下，可能需要选择更高的分辨率。
 
 ![blender6.0-1](https://www.freecodecamp.org/news/content/images/2023/08/blender6.0-1.PNG)
 
-Creating an `Image Texture` node and assigning a new image to it with default settings
+创建一个 “Image Texture” 节点并使用默认设置为其分配一个新图像
 
-### How to apply the Smart UV Project process
+### 如何应用智能 UV 投射流程
 
-Next, we need to employ the `Smart UV Project` option located in the **UV Editing** tab. Essentially, this action unwraps the faces of the particular object onto a texture.
+接下来，我们需要使用 **UV Editing** 选项卡中的 “Smart UV Projec” 选项。 本质上，此操作将特定对象的面展开到纹理上。
 
-This process enables us to specify which parts of the texture should be colored and modified as soon as we are back in the **Shading** tab. To make this process effective, we must select all the faces of the large sphere.
+此过程使我们能够在返回 **Shading** 选项卡后立即指定应该对纹理的哪些部分进行着色和修改。 为了使这个过程有效，我们必须选择大球体的所有面。
 
 ![blender7.0](https://www.freecodecamp.org/news/content/images/2023/08/blender7.0.png)
 
-Selecting all faces of the object in the **UV Editing** tab and applying `Smart UV Project` on it
+在 **UV Editin** 选项卡中选择对象的所有面并在其上应用 “Smart UV Project”
 
-Once we've finished this step and utilized the default settings for the `Smart UV Project` procedure, the image on the left —previously featuring a grid— will now display the shapes of the sphere we applied this process to. In our situation, it seems like the texture captured various angles of our sphere.
+一旦我们完成此步骤并使用 “Smart UV Project” 过程的默认设置，左侧的图像（之前具有网格）现在将显示应用此过程的球体的形状。 在这种情况下，纹理似乎捕获了球体的各个角度。
 
 ![blender8.0](https://www.freecodecamp.org/news/content/images/2023/08/blender8.0.PNG)
 
-The texture after `Smart UV Project`
+“Smart UV Project” 后的纹理
 
-Depending on the specific object, you may need to fine-tune the settings presented after clicking the `Smart UV Project` button. If you encounter challenges with a particular object, the video I shared earlier can give you additional guidance on this aspect.
+根据具体对象，单击 “Smart UV Project” 按钮，然后可能需要微调显示的设置。 如果遇到特定对象的其他问题，我之前分享的视频可以为你提供这方面的额外指导。
 
-Generally, to mitigate issues, you should optimize your object layout during its creation phase. Avoiding the introduction of excessive edges in specific locations can prevent problems like clipping, for instance.
+一般来说，为了缓解问题，应该在创建阶段优化对象布局。 例如，避免在特定位置引入过多边缘可以防止剪裁等问题。
 
-### The Bake process
+### 烘焙过程
 
 Now, let's return to the **Shading** tab, where we'll access the `Render Properties` on the right side (represented by the small screen or TV symbol). If not already selected, pick `Cycles` as your `Render Engine`. Then navigate to the `Bake` category, which is located below the `Performance` category.
+现在，返回到 **Shading** 选项卡，我们将在其中访问右侧的 “Render Properties”（由小屏幕或电视符号表示）。 如果尚未选择，请选择 “Cycles” 作为 “Render Engine”。 然后导航到 “Bake” 类别，该类别在“ Performance” 类别下方。
 
 ![blender9.0-1](https://www.freecodecamp.org/news/content/images/2023/08/blender9.0-1.PNG)
 
-`Bake` option in the **Shading** tab within the `Render Properties`
+在 “Render Properties” 里面 **Shading** 选项卡中的 “Bake” 选项
 
-With the existing default settings, you can proceed by clicking the `Bake` button while ensuring that both the `Image Texture` node and the large sphere are selected.
+使用现有的默认设置，可以通过单击 “Bake” 按钮继续，并且确保选择 “Image Texture” 节点和大球体。
 
-Keep in mind that I integrated a `Sun` light into my scene, as this bake process takes the scene's lighting into account. Without sufficient lighting, the result might appear excessively dark.
+请记住，我将“太阳”光集成到了场景中，因为此烘焙过程考虑了场景的照明。 如果没有足够的照明，结果可能会显得过暗。
 
-After a period of processing (which might be more time-consuming if you've employed larger dimensions for the `Image Texture` node's image), the baking process will finish. This results in the texture being applied to the image from the `Image Texture`. Instead of obtaining the texture from the `Shader` node named `Glossy BSDF`, we now have access to it through a regular "normal" image texture.
+经过一段时间的处理（如果您为 “Image Texture” 节点的图像使用了更大的尺寸，可能会更耗时），烘焙过程将完成。 这会导致纹理从 “Image Texture” 应用到图像。 现在可以通过常规的“正常”图像纹理来访问它，而不是从 “Glossy BSDF” 的 “Shader” 节点获取纹理。
 
-Then we can establish a connection from the `Image Texture` node to the `Material Output` node, thereby successfully implementing our material. At this stage, there isn't a significant difference compared to the previous method where we had the `Principled BSDF` node connected to the `Surface` input of the `Material Output` node.
+然后可以建立从 “Image Texture” 节点到 “Material Output” 节点的连接，从而成功实现材质。 之前的方法是将 “Principled BSDF” 节点连接到 “Material Output” 节点的 “Surface” 输入。在此阶段，两个方法方法相比较，没有显着差异。
 
 ![blender10.0](https://www.freecodecamp.org/news/content/images/2023/08/blender10.0.PNG)
 
-`Image Texture` node with the "baked" texture is connected with the `Material Output` node instead of the `Glossy BSDF` node
+具有“烘焙”纹理的 “Image Texture” 节点与 “Material Output” 节点相连，而不是与 “Glossy BSDF” 节点连接
 
-### How to see the final result
+### 如何看到最终结果
 
-Now, we can export the file again, repeat the same process from before in our IDE with **glTF Tools** and view the `.gltf` file with the extension. Upon examining the outcome, you might notice that it's not an exact match to the version we had using the `Glossy BSDF` node in Blender. This difference can be primarily attributed to the lighting conditions in the Blender scene.
+现在，我们可以再次导出文件，使用 **glTF Tools** 扩展在 IDE 中重复之前的相同过程，并查看扩展名为 “.gltf” 的文件。 检查结果后，你可能会注意到它与我们在 Blender 中使用 “Glossy BSDF” 节点的版本不完全匹配。 这种差异主要归因于 Blender 场景中的照明条件。
 
-Bear in mind that the approach I've outlined isn't the typical usage for the baking process, since in this case you could also just have picked a similar base color with the `Principled BSDF` node and would achieve pretty much the same solution, for example.
+请记住，我说明的方法不是烘焙过程的典型用法，因为在这种情况下，也可以使用 “Principled BSDF” 节点选择类似的基色，并且会实现几乎相同的解决方案。
 
 ![blender11.0](https://www.freecodecamp.org/news/content/images/2023/08/blender11.0.PNG)
 
-Finalized view with **glTF Tools**, including the "baked" texture for the large sphere
+使用 **glTF Tools** 完成的视图，包括大球体的“烘焙”纹理
 
-I introduced the baking process based on personal experience. There were instances where I encountered a scenario where materials appeared differently in Blender compared to when implemented them in a React.js application with Three.js. This situation prompted me to explore the concept of baking, which turned out to be a helpful solution.
+根据个人经验介绍一下烘焙过程。 在某些情况下，我遇到了这样的场景：材质在 Blender 中的显示效果与在 React.js 应用程序中使用 Three.js 实现它们时的效果不同。 这种情况促使我探索烘焙的概念，结果证明这是一个有用的解决方案。
 
-To summarize, if you find yourself facing a scenario where your materials don't appear as expected in your React.js application with Three.js, considering the baking process and researching this topic can provide valuable insights. This can be particularly beneficial for people who are new to Blender.
+总而言之，如果你发现自己面临的情况是材料没有在 Three.js 的 React.js 的应用程序中按照预期显示，那么考虑烘焙过程并研究该主题可以提供有价值的见解。 这对于 Blender 新手来说尤其有益。
 
-## ✒️ How to Implement the Blender model in the React.js Application
+## ✒️ 如何在 React.js 应用程序中实现 Blender 模型
 
-To implement the Blender file, we can use a really useful shortcut (source: [https://github.com/pmndrs/gltfjsx](https://github.com/pmndrs/gltfjsx)):
+想要生成 Blender 文件，可以使用一个非常有用的命令 (来源： [https://github.com/pmndrs/gltfjsx](https://github.com/pmndrs/gltfjsx)):
 
 `npx gltfjsx public/blenderFileName.glb`
 
-It's important to note that you need to store your Blender file within the `public` folder of your React.js application for this step. It's also worth highlighting that you need React Three Drei to use this helper. So in our case, we can directly use this shortcut without the need for any additional preparations.
+需要注意的是，在此步骤中，需要将 Blender 文件存储在 React.js 应用程序的 “public” 文件夹中。 还值得强调的是，需要 React Three Drei 才能使用这个命令。 所以在我们的例子中，我们可以直接使用这个命令，而不需要任何额外的准备。
 
-Upon executing this shortcut, we are presented with the following file:
+执行这个命令后，可以看到以下文件：
 
 ```JavaScript
 /*
@@ -351,17 +351,17 @@ export function Model(props) {
 useGLTF.preload("./blenderStuff/blenderFile.glb");
 ```
 
-blenderFile.jsx, including the basic code to make it work
+blenderFile.jsx， 包括使其工作的基本代码
 
-At first glance, you can see that this process has added many elements, so we basically don't need to add much on our own.
+大概看一下，就可以看到这个过程添加了很多元素，所以基本上不需要自己添加太多。
 
-An important aspect to configure is the path within the `useGLTF` hook. In my instance, the accurate path to incorporate is `./blenderStuff/blenderFile.glb` (this applies to `useGLTF.preload()` as well). This is because I created a sub-folder named `blenderStuff` within my `public` directory.
+配置的一个重要方面是在 useGLTF 钩子中设置路径。在我的实例中，要使用的准确路径是 ./blenderStuff/blenderFile.glb（同样适用于 useGLTF.preload() ）。这是因为我在 public 目录下创建了一个名为 blenderStuff 的子文件夹。
 
-### How to add a Canvas wrapper and other components
+### 如何添加 Canvas 包装器和其他组件
 
-With this configuration in place, we're now ready to use the `Model` component. But to effectively integrate this `Model` component into our desired location, we need to make some adjustments in the parent component.
+完成此配置后，我们现在就可以使用 “Model” 组件了。 但为了有效地将这个 “Model” 组件集成到想要的位置，需要在父组件中进行一些调整。
 
-In my case, I've opted to implement it within the main `App.js` file. And I've assigned a height of `100vh` to the `App`'s CSS class to ensure the desired display.
+在这个例子中，我选择在主 App.js 文件中实现它。 我为 App 的 CSS 类分配了 100vh 的高度，以确保所需的显示。
 
 ```JavaScript
 import "./App.css";
@@ -384,25 +384,25 @@ function App() {
 export default App;
 ```
 
-App.js, including the `Canvas` wrapper, the `Model` and other components
+App.js，包括 “Canvas” 包装器、 “Model” 和其他组件
 
-Generally speaking, you'll need a component to encapsulate all the Three.js related elements. Within the `Canvas` component, there's an opportunity to configure various settings. In my specific instance, I'm adjusting the initial camera position.
+一般来说，你需要一个组件来封装所有 Three.js 相关元素。 在 “Canvas” 组件中，可以配置各种设置。 在本次的具体实例中，我正在调整初始相机位置。
 
-The light for the component plays a crucial role. In our case we made use of `ambientLight` which will add a light to the whole scene. Without adequate lighting, your scene might appear exceedingly dark or even entirely black despite the presence of object colors. You can also use additional light sources like the `spotLight` component.
+光线对于组件起着至关重要的作用。 在我们的例子中，我们使用了 “ambientLight” 来为整个场景添加灯光。 如果没有足够的照明，尽管存在对象颜色，您的场景可能会显得非常暗甚至全黑。 您还可以使用其他光源，比如 “spotLight” 组件。
 
-The `OrbitControls` component, accessible from the Drei helper library, enhances your interactivity by enabling scrolling and rotation within the model right within the browser. This single line of code substantially improves user interactivity options.
+“OrbitControls” 组件可从 Drei 库进行访问，通过在浏览器中启用模型内的滚动和旋转来增强交互性。 这行代码极大地改进了用户交互选项。
 
-Remember that your `Canvas` component can accommodate multiple models. You can also selectively apply components like `OrbitControls` to specific Blender models, thereby tailoring their behavior.
+请记住，“Canvas” 组件可以容纳多个模型。 还可以有选择地将 “OrbitControls” 等组件应用到特定的 Blender 模型，从而定制它们的行为。
 
-To do this, you'll need to build a parent component for each scene you want to make to be integrated within the `Canvas`. Within each new parent component, incorporate your Blender model component, along with any supplementary helper components you want to add.
+为此，需要为要集成到 “Canvas” 中的每个场景构建一个父组件。 在每个新的父组件中，合并 Blender 模型组件以及想要添加的任何补充帮助器组件。
 
-This approach proves particularly advantageous when distinct models require different lighting or unique camera positions, for example.
+例如，当不同的模型需要不同的照明或独特的相机位置时，这种方法特别有利。
 
-### How to implement the animations
+### 如何实现动画
 
-At this point, we've established a functional Three.js `Canvas` environment, featuring our Blender model. But it's important to remember that we've also introduced basic animations, which are not yet operational.
+到目前为止，我们已经建立了一个功能性的 Three.js Canvas 环境，展示了我们的 Blender 模型。但是重要的是要记住，我们还引入了尚未启用的基本动画。
 
-To tackle this, we can leverage the pre-implemented `useAnimations` hook.
+为了解决这个问题，我们可以利用预先实现的 “useAnimations” 钩子。
 
 ```JavaScript
   const { actions, names } = useAnimations(animations, group);
@@ -414,26 +414,26 @@ To tackle this, we can leverage the pre-implemented `useAnimations` hook.
   }, [actions, names]);
 ```
 
-Part in blenderFile.jsx on how to activate the model animations upon page rendering
+BlenderFile.jsx 中有关如何在页面渲染时激活模型动画的部分
 
-By incorporating this implementation, all animations associated with this Blender model will start playing upon the rendering of the page. This behavior also includes an indefinite loop for each animation.
+通过合并此实现，与此 Blender 模型关联的所有动画将在页面呈现时开始播放。 此行为还包括每个动画的无限循环。
 
-## 📄 Additional Information
+## 📄 其他信息
 
-While this tutorial primarily focused on integrating a Blender model into a React.js application using Three.js, there's a realm of untapped potential within Three.js that we didn't cover.
+虽然本教程主要关注使用 Three.js 将 Blender 模型集成到 React.js 应用程序中，但 Three.js 中还有一个我们没有涉及的未开发的领域。
 
-Although we didn't use it in this basic example, you can introduce Post Processing to your Three.js models within React.js. The [React Three Postprocessing](https://www.npmjs.com/package/@react-three/postprocessing) library serves as a valuable tool in this regard. It lets you elevate your Three.js scenes with sophisticated effects like Bloom or Noise effects, which can add a more advanced dimension to your visualizations.
+尽管我们在这个基本示例中没有使用它，但您可以将后处理引入到 React.js 中的 Three.js 模型中。[React Three Postprocessing](https://www.npmjs.com/package/@react-three/postprocessing) 库在这方面是一个非常有价值的工具。 它可以让您通过复杂的效果（如绽放或噪音效果）提升您的 Three.js 场景，这可以为您的可视化添加更高级的维度。
 
-Also, when working on future Three.js projects, consider exploring the [React Spring](https://docs.pmnd.rs/react-three-fiber/tutorials/using-with-react-spring) library which integrates well with React Three Fiber. React Spring provides the opportunity to incorporate custom animations within your Three.js scenes, on top of any animations directly integrated within Blender.
+此外，在开发未来 Three.js 项目时，请考虑探索 [React Spring](https://docs.pmnd.rs/react-three-fiber/tutorials/using-with-react-spring) 库，该库与 React Three Fiber 集成在一起。 React Spring 提供了在 Three.js 场景中整合自定义动画的机会，可以在 Blender 中直接集成的任何动画之上进行。
 
-For instance, you could make a specific object within your scene get larger or smaller upon clicking it. As with other aspects of Three.js, this aspect might enhance interactivity and might be worth your time to get into.
+例如，你可以通过单击使场景中的特定对象变大或变小。 与 Three.js 的其他方面一样，这个方面可能会增强交互性，并且可能值得花时间了解。
 
-By the way, if you find that your frames are running at a lower rate, consider toggling Hardware Acceleration within your browser settings to potentially improve performance.
+顺便说一句，如果发现框架的运行速度较低，请考虑在浏览器设置中切换硬件加速，以提高性能。
 
-## 📋 Wrap-up
+## 📋 总结
 
-At this point, we've successfully crafted a Blender model with animations and materials. Afterwards we integrated it into our React.js application using React Three Fiber.
+至此，我们已经成功制作了一个带有动画和材质的 Blender 模型。 然后我们使用 React Three Fiber 将它集成到我们的 React.js 应用程序中。
 
-Although the example we looked at here was quite basic, the integration approach remains the same for more complex Blender models. The fundamental functions of Three.js can be combined with supplementary helpers to enhance your scenes.
+尽管我们在这里看到的示例非常基础，但对于更复杂的 Blender 模型，集成方法仍然相同。 Three.js 的基本功能可以与补充帮助程序相结合来增强场景。
 
-In addition to Post Processing, additional animations or also specific Blender materials, aspects like cameras and lights often are the most important when aiming to enhance the visual impact of your Blender models within Three.js scenes.
+除了后期处理之外，为了提升 Blender 模型在 Three.js 场景中的视觉效果，额外的动画或特定的 Blender 材质，以及像相机和灯光这样的方面通常是最重要的。

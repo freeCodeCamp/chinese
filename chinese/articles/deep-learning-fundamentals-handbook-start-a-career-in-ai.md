@@ -4,7 +4,7 @@ title: Deep Learning Fundamentals Handbook – What You Need to Know to Start Yo
 author: Tatev Aslanyan
 authorURL: https://www.freecodecamp.org/news/author/tatevkaren/
 originalURL: https://www.freecodecamp.org/news/deep-learning-fundamentals-handbook-start-a-career-in-ai/
-translator: ""
+translator: ZhijieXiong
 reviewer: ""
 ---
 

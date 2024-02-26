@@ -1,91 +1,91 @@
 > -  原文地址：[TypeScript Handbook for React Developers – How to Build a Type-Safe Todo App](https://www.freecodecamp.org/news/typescript-tutorial-for-react-developers/)
 > -  原文作者：[Yazdun Fadali](https://www.freecodecamp.org/news/author/yazdun/)
-> -  译者：
+> -  译者：yiwei
 > -  校对者：
 
 ![TypeScript Handbook for React Developers – How to Build a Type-Safe Todo App](https://www.freecodecamp.org/news/content/images/size/w2000/2023/07/TypeScript-Handbook-for-React-Developers-Cover.png)
 
-In today's JavaScript landscape, TypeScript is gaining more and more popularity. And React developers are starting to use it more and more.
+在当今的JavaScript生态中，TypeScript越来越受欢迎。越来越多的React开发者开始使用它。
 
-If you're a React developer looking to explore TypeScript or enhance your skills with it, this handbook is just for you. I'll guide you through using TypeScript in a React application by building a classic todo app.
+如果你是一个想要探索TypeScript或提升你与它相关的技能的React开发者，这本手册正适合你。我将指导你通过构建一个经典的待办事项应用，来在React应用中使用TypeScript。
 
-I'm going to cover everything you need to know in order to get started with TypeScript as a React developer. You will learn how to handle state and props with strong typing, how to create React components with TypeScript, how to use TypeScript with React Hooks, and how to use TypeScript with the Context API.
+我将涵盖作为一个React开发者开始使用TypeScript所需知道的一切。你将学会如何使用强类型处理状态和属性，如何用TypeScript创建React组件，如何在React Hooks中使用TypeScript，以及如何与Context API一起使用TypeScript。
 
-By the end of this tutorial, you'll have a solid understanding of TypeScript and be ready to develop type-safe React applications with confidence. So, without further due let's get started!
+通过本教程的学习，你将对TypeScript有一个坚实的理解，并准备好自信地开发类型安全的React应用程序。所以，不用再等待，让我们开始吧！
 
-## Here is What We'll Cover
+## 我们将涵盖以下内容
 
--   [Prerequisites](#prerequisites)
--   [What Are We Going to Build?](#what-are-we-going-to-build)
--   [Getting Started](#getting-started)
--   [How to set up the Todo app component](#how-to-set-up-the-todo-app-component)
--   [How to create a simple form element in React](#how-to-create-a-simple-form-element-in-react)
--   [What is a type error in TypeScript and how to fix it?](#what-is-a-type-error-in-typescript-and-how-to-fix-it)
--   [What are the Generic types in TypeScript?](#what-are-the-generic-types-in-typescript)
--   [How to handle form submission with TypeScript in React](#how-to-handle-form-submission-with-typescript-in-react)
--   [How to automatically focus on an input field in React](#how-to-automatically-focus-on-an-input-field-in-react)
--   [What is `useRef` and how to to use it with TypeScript](#what-is-useref-and-how-to-to-use-it-with-typescript)
--   [How to create type-safe React components with TypeScript](#how-to-create-type-safe-react-components-with-typescript)
--   [What is `forwardRef` in React?](#what-is-forwardref-in-react)
--   [How to create a todo item on the form submission?](#how-to-create-a-todo-item-on-the-form-submission)
--   [What is React Context?](#what-is-react-context)
--   [How to use React Context with TypeScript?](#how-to-use-react-context-with-typescript)
--   [What are Interfaces in TypeScript?](#what-are-interfaces-in-typescript)
--   [How to use TypeScript interfaces with React Context](#how-to-use-typescript-interfaces-with-react-context)
--   [How to create a custom hook to consume React Context](#how-to-create-a-custom-hook-to-consume-react-context)
--   [How to define an interface for Todo items](#how-to-define-an-interface-for-todo-items)
--   [How to build a custom React component for displaying Todo items](#how-to-build-a-custom-react-component-for-displaying-todo-items)
--   [How to implement functionality: Edit, Delete, and Update Todo items](#how-to-implement-functionality-edit-delete-and-update-todo-items)
--   [Conclusion](#conclusion)
+-   [先决条件](#prerequisites)
+-   [我们将要构建什么？](#what-are-we-going-to-build)
+-   [如何开始](#getting-started)
+-   [如何设置待办事项应用的组件](#how-to-set-up-the-todo-app-component)
+-   [如何在React中创建一个简单的表单元素](#how-to-create-a-simple-form-element-in-react)
+-   [TypeScript中的类型错误是什么以及如何修复它？](#what-is-a-type-error-in-typescript-and-how-to-fix-it)
+-   [TypeScript中的泛型是什么？](#what-are-the-generic-types-in-typescript)
+-   [如何在React中用TypeScript处理表单提交](#how-to-handle-form-submission-with-typescript-in-react)
+-   [如何在React中自动聚焦一个输入字段](#how-to-automatically-focus-on-an-input-field-in-react)
+-   [什么是`useRef`以及如何在TypeScript中使用它](#what-is-useref-and-how-to-to-use-it-with-typescript)
+-   [如何用TypeScript创建类型安全的React组件](#how-to-create-type-safe-react-components-with-typescript)
+-   [React中的`forwardRef`是什么？](#what-is-forwardref-in-react)
+-   [如何在表单提交时创建一个待办事项](#how-to-create-a-todo-item-on-the-form-submission)
+-   [什么是React上下文？](#what-is-react-context)
+-   [如何在TypeScript中使用React上下文？](#how-to-use-react-context-with-typescript)
+-   [TypeScript中的接口是什么？](#what-are-interfaces-in-typescript)
+-   [如何将TypeScript接口与React上下文一起使用](#how-to-use-typescript-interfaces-with-react-context)
+-   [如何创建一个自定义钩子来使用React上下文](#how-to-create-a-custom-hook-to-consume-react-context)
+-   [如何为待办事项定义一个接口](#how-to-define-an-interface-for-todo-items)
+-   [如何构建一个自定义的React组件来展示待办事项](#how-to-build-a-custom-react-component-for-displaying-todo-items)
+-   [如何实现功能：编辑、删除和更新待办事项](#how-to-implement-functionality-edit-delete-and-update-todo-items)
+-   [结论](#conclusion)
 
-## Prerequisites
+## 先决条件
 
-No prior knowledge of TypeScript is necessary to begin this tutorial, making it completely beginner-friendly. However, having a background in React will greatly enhance your understanding and maximize your learning potential throughout this tutorial.
+开始本教程无需事先了解TypeScript，使其非常适合初学者。然而，拥有React的背景知识将极大地增强你的理解力，并在整个教程中最大限度地提升你的学习潜力。
 
-Throughout this tutorial, you'll be utilizing the following tools:
+在本教程中，你将使用以下工具：
 
-1.  **React 18.2.0:** React is a JavaScript library used for building user interfaces. It allows developers to create reusable UI components and efficiently update the UI based on data changes.
-2.  **TypeScript:** TypeScript is a statically typed superset of JavaScript that adds optional type annotations. It provides enhanced tooling and helps catch potential errors during development, making code more reliable and easier to maintain.
-3.  **Vite:** Vite is a fast development server and build tool for modern web applications. It offers instant server start, hot module replacement, and optimized build output, enabling quick and efficient development workflows.
-4.  **Framer Motion:** Framer Motion is a popular animation library for React. It provides an easy-to-use interface for creating smooth, interactive animations and transitions in web applications, enhancing the overall user experience.
+1.  **React 18.2.0：** React是一个用于构建用户界面的JavaScript库。它允许开发者创建可重用的UI组件，并根据数据变化高效地更新UI。
+2.  **TypeScript：** TypeScript是JavaScript的一种静态类型超集，增加了可选的类型注释。它提供了增强的工具，并帮助在开发过程中捕获潜在的错误，使代码更可靠，更易于维护。
+3.  **Vite：** Vite是一个用于现代Web应用的快速开发服务器和构建工具。它提供即时服务器启动、热模块替换和优化的构建输出，使开发流程快速而高效。
+4.  **Framer Motion：** Framer Motion是React的一种流行动画库。它提供了一个易于使用的界面，用于在Web应用中创建流畅的互动动画和过渡，增强了整体用户体验。
 
-In the upcoming section, you'll get a concise preview of the project you'll be building in this tutorial.
+在接下来的部分中，你将对你将在本教程中构建的项目有一个简洁的预览。
 
-## What Are We Going to Build?
+## 我们将要构建什么？
 
-We are going to build a classic todo application. It will have the following features:
+我们将要构建一个经典的待办事项应用程序。它将具有以下功能：
 
--   Add a todo item.
--   Edit a todo item.
--   Delete a todo item.
--   Mark a todo item as completed or not.
--   Storing todo items in the browser's local storage.
--   Displaying proper error messages when the user tries to add or edit a todo item with an empty title.
+-   添加一个待办事项。
+-   编辑一个待办事项。
+-   删除一个待办事项。
+-   标记一个待办事项是否完成。
+-   在浏览器的本地存储中存储待办事项。
+-   当用户尝试添加或编辑一个空标题的待办事项时，显示适当的错误消息。
 
 ![This is a todo app where users can add or delete an item, also they can edit an existing item or mark them as completed](https://www.freecodecamp.org/news/content/images/2023/06/ezgif-3-98866e5ad0.gif)
 
-Preview of the final app
+应用程序最终预览
 
-## Getting Started
+## 如何开始
 
-To get started with this tutorial, I've already prepared you a boilerplate project which contains all the required dependencies. This eliminates the need to set up your project from scratch.
+为了开始本教程，我已经为你准备了一个包含所有必需依赖项的样板项目。这消除了从头开始设置项目的需要。
 
-Simply clone the [starter boilerplate](https://github.com/Yazdun/react-ts-fcc-tutorial/tree/starter) from the GitHub repository and then follow along with the tutorial. This way, you can focus on learning and implementing the concepts without getting caught up in setup details.
+只需从GitHub仓库克隆[起始样板](https://github.com/Yazdun/react-ts-fcc-tutorial/tree/starter)，然后跟随教程。这样，你可以专注于学习和实现概念，而不会被设置细节所困扰。
 
--   Starter Boilerplate: [View on GitHub](https://github.com/Yazdun/react-ts-fcc-tutorial/tree/starter)
--   Final Version: [View on GitHub](https://github.com/Yazdun/react-ts-fcc-tutorial)
+-   起始样板：[在GitHub上查看](https://github.com/Yazdun/react-ts-fcc-tutorial/tree/starter)
+-   最终版本：[在GitHub上查看](https://github.com/Yazdun/react-ts-fcc-tutorial)
 
-Once you have set up the starter boilerplate and successfully run it on your local machine, you should be able to see the initial page. This page will serve as the starting point for our journey.
+一旦你设置好起始样板并成功地在你的本地机器上运行它，你应该能够看到初始页面。这个页面将作为我们旅程的起点。
 
-![Simple page which is displaying the text "Todo App". this page serves as the starting point of our tutorial](https://www.freecodecamp.org/news/content/images/2023/06/image-314.png)
+![简单的页面，显示着“待办事项应用”的文字。这个页面作为我们教程的起点](https://www.freecodecamp.org/news/content/images/2023/06/image-314.png)
 
-Starter Boilerplate
+起始样板
 
-Now, we'll start adding exciting features to our application. Let's jump in and get started right away!
+现在，我们将开始为我们的应用添加令人兴奋的功能。让我们立即跳入并开始吧！
 
-## How to Set Up the Todo App Component
+## 如何设置待办事项应用的组件
 
-In this section, you will set up the main component of your Todo App and gradually enhance it with additional functionality. Open up `./src/App.tsx` and add the following code:
+在这一部分，你将设置你的待办事项应用的主要组件，并逐渐增强它的附加功能。打开`./src/App.tsx`并添加以下代码：
 
 ```tsx
 //📂./src/App.tsx
@@ -106,25 +106,25 @@ function App() {
 export default App
 ```
 
-Let's break it down step by step:
+让我们一步步分解：
 
--   `<Toaster position="bottom-center" />`: This component is responsible for displaying toast notifications at the bottom center of the screen.
--   `<AddTodo />`: This component will represents an input field and button to add new todo items to the app.
--   `<TodoList />`: This component will render a list of existing todo items.
+-   `<Toaster position="bottom-center" />`：这个组件负责在屏幕底部中央显示toast通知。
+-   `<AddTodo />`：这个组件将表示一个输入字段和一个按钮，用于向应用添加新的待办事项。
+-   `<TodoList />`：这个组件将渲染现有待办事项的列表。
 
-Now, open up your local server on your browser and you will be able to see the following page:
+现在，在你的浏览器上打开你的本地服务器，你将能看到以下页面：
 
 ![Simple web page which is displaying two React components](https://www.freecodecamp.org/news/content/images/2023/06/image-315.png)
 
-Preview of the App.tsx
+App.tsx的预览
 
-These two components play a critical role in your application. In the upcoming section, you will be building the functionality to add a todo item using the `<AddTodo />` component. Specifically, you will learn how to handle form submissions with TypeScript in React.
+这两个组件在你的应用中起着至关重要的作用。在接下来的部分中，你将构建使用`<AddTodo />`组件添加待办事项的功能。具体来说，你将学习如何在React中使用TypeScript处理表单提交。
 
-## How to Create a Simple Form Element in React
+## 如何在React中创建一个简单的表单元素
 
-First of all, you need to create a form element for creating a todo item. To achieve this in your application, you need to create a form and handle the form submission effectively. In this section, you will be exploring how to handle form submission using TypeScript in a React application.
+首先，你需要为创建一个待办事项创建一个表单元素。为了在你的应用中实现这一点，你需要创建一个表单并有效地处理表单提交。在这一部分中，你将探索如何在React应用中使用TypeScript处理表单提交。
 
-I just want to give you a quick heads up since you're about to face your first type-error in TypeScript! Add the following code to the `components/AddTodo.tsx`:
+我只是想给你一个快速提示，因为你即将遇到你在TypeScript中的第一个类型错误！将以下代码添加到`components/AddTodo.tsx`：
 
 ```tsx
 //📂./src/components/AddTodo.tsx
@@ -160,37 +160,37 @@ export const AddTodo = () => {
 }
 ```
 
-You've created a useState hook that updates the state with the value of the input as it changes. However, TypeScript is not happy with this code. But why is TypeScript unhappy?
+你创建了一个useState钩子，它会随着输入值的改变而更新状态。然而，TypeScript对这段代码不满意。但为什么TypeScript会不满意呢？
 
-### What is a type error in TypeScript and how to fix it
+### TypeScript中的类型错误是什么以及如何修复它
 
-Types in TypeScript define the kind of data that variables can hold and enable the detection of errors and bugs during development.
+TypeScript中的类型定义了变量可以持有的数据种类，并在开发过程中启用了错误和漏洞的检测。
 
-A type error in TypeScript occurs when a value is used in a way that is incompatible with its expected type, leading to potential bugs or unexpected behavior in the code.
+当一个值以与其预期类型不兼容的方式使用时，就会在TypeScript中出现类型错误，导致代码中可能出现漏洞或意外行为。
 
-In our case, TypeScript is showing an error in this code because it cannot infer the type of the state variable `input` automatically. To fix this, you need to provide TypeScript with the type information explicitly. In this case, you want input to be of type string since it represents the value of the input field.
+在我们的案例中，TypeScript显示这段代码有错误，因为它无法自动推断状态变量`input`的类型。要解决这个问题，你需要明确地提供TypeScript类型信息。在这种情况下，你希望input是字符串类型，因为它代表输入字段的值。
 
-To fix this error, you have two options. The easy solution is adding a initial value to the `useState` hook and TypeScript will automatically infer the `input` type as a string:
+要修复这个错误，你有两个选择。简单的解决方案是向`useState`钩子添加一个初始值，TypeScript将自动推断`input`类型为字符串：
 
 ```tsx
  const [input, setInput] = useState('')
 ```
 
-By adding the above code, you may notice that the error disappears and TypeScript is satisfied. But not all errors can be resolved this easily in TypeScript.
+通过添加上述代码，你可能会注意到错误消失了，TypeScript也满意了。但并不是所有的错误都能在TypeScript中这么容易解决。
 
-Let's consider a situation where you are uncertain about the type of your state and cannot determine whether it should be initialized as a number or a string. This uncertainty leads us to the second option, which is using generic types.
+让我们考虑一个情况，你对你的状态的类型不确定，不能确定它应该初始化为数字还是字符串。这种不确定性引导我们使用第二个选项，即使用泛型。
 
-### What are the Generic types in TypeScript?
+### TypeScript中的泛型是什么？
 
-Generic types provide a way to handle situations when you are unsure about the specific type of a value. With generic types, you can define a placeholder that represents the actual type, allowing you to make your code more flexible and reusable:
+泛型提供了一种处理你不确定特定值类型的情况的方法。通过泛型，你可以定义一个占位符来代表实际的类型，使你的代码更加灵活和可重用：
 
 ```tsx
 const [state, setState] = useState<string | number>('')
 ```
 
-The above code is initializing a state variable named "state" with an initial value of an empty string, but it allows the state to hold either a string or a number as its value.
+上述代码初始化了一个名为“state”的状态变量，其初始值为空字符串，但它允许状态变量存储字符串或数字作为其值。
 
-Now, let's introduce a generic type into your app. You don't want your users to add a number as a todo – we want them to be able to only add a string:
+现在，让我们在你的应用中引入一个泛型。我们不希望你的用户添加数字作为待办事项 - 我们希望他们只能添加字符串：
 
 ```tsx
 //📂./src/components/AddTodo.tsx
@@ -226,11 +226,11 @@ export const AddTodo = () => {
 }
 ```
 
-By specifying `<string>` after the `useState` function, we ensure that the state variable `input` can only hold values of type string. This prevents users from entering numbers or any other incompatible data types as todos.
+通过在`useState`函数后指定`<string>`，我们确保状态变量`input`只能持有字符串类型的值。这样可以防止用户输入数字或任何其他不兼容的数据类型作为待办事项。
 
-### How to handle form submission with TypeScript in React
+### 如何在React中使用TypeScript处理表单提交
 
-Now that you have successfully stored the input value in the state, let's proceed with handling the form submission itself:
+既然你已经成功地将输入值存储在状态中，让我们继续处理表单提交本身：
 
 ```tsx
 //📂./src/components/AddTodo.tsx
@@ -271,27 +271,27 @@ export const AddTodo = () => {
 
 ```
 
-The `handleSubmission` function is called when the form is submitted. Let's break it down step by step:
+当表单被提交时，会调用`handleSubmission`函数。让我们逐步分解它：
 
-1.  `(e: React.FormEvent)` is the function's parameter declaration. It specifies that the function expects an event object of type `React.FormEvent` to be passed as an argument. The `React.FormEvent` is a type of event object that represents an event occurring on a form element, such as submitting the form or interacting with form fields.
-2.  `e.preventDefault()` is a method that belongs to the event object (`e`). It is called to prevent the default behavior of form submission, which is to refresh the page. By calling `preventDefault()`, we override the default behavior and prevent the page from refreshing.
-3.  `console.log('form has been submitted')` is a simple statement that logs a message to the browser's console. In this case, it logs the message "form has been submitted" when the form submission event occurs.
+1.  `(e: React.FormEvent)`是函数的参数声明。它指定函数期望传递一个类型为`React.FormEvent`的事件对象作为参数。`React.FormEvent`是表示在表单元素上发生的事件的事件对象类型，例如提交表单或与表单字段互动。
+2.  `e.preventDefault()`是属于事件对象（`e`）的方法。它被调用以阻止表单提交的默认行为，即刷新页面。通过调用`preventDefault()`，我们覆盖了默认行为并阻止了页面刷新。
+3.  `console.log('form has been submitted')`是一个简单的语句，将消息记录到浏览器的控制台。在这种情况下，它在表单提交事件发生时记录消息“form has been submitted”。
 
-Great! You've completed the necessary steps to handle the form submission. Now let's proceed to the next section where you enhance your form's functionality by making some modifications.
+太好了！你已经完成了处理表单提交所需的步骤。现在让我们继续到下一部分，在那里你将通过做一些修改来增强你的表单功能。
 
-### How to automatically focus on an input field in React
+### 如何在React中自动聚焦输入字段
 
-To enhance user experience, you can automatically set focus on the "add todo" input field when the app is initially loaded. This eliminates the need for users to manually click on the input upon opening the app.
+为了提升用户体验，你可以在应用最初加载时自动将焦点设置在“添加待办事项”的输入字段上。这消除了用户在打开应用时手动点击输入框的需要。
 
-To implement this functionality, you can utilize a specific React hook called `useRef`, which allows you to incorporate this feature into the input.
+为了实现这个功能，你可以使用一个特定的React钩子，称为`useRef`，它允许你将这个特性整合到输入框中。
 
-#### What is `useRef` and how to to use it with TypeScript
+#### 什么是`useRef`以及如何在TypeScript中使用它
 
-`useRef` is a special hook in React that creates a reference to an element or value in your component. This reference can be used to access and manipulate the referenced element directly, without causing re-renders.
+`useRef`是React中的一个特殊钩子，用于在组件中创建对一个元素或值的引用。这个引用可以用来直接访问和操作被引用的元素，而不会导致重新渲染。
 
-You'll commonly use it to access DOM elements, manage focus, or store mutable values across component renders.
+你通常会用它来访问DOM元素、管理焦点或在组件渲染中存储可变值。
 
-Open app `components/AddTodo.tsx` and add the following code:
+打开应用`components/AddTodo.tsx`并添加以下代码：
 
 ```tsx
 //📂./src/components/AddTodo.tsx
@@ -339,36 +339,36 @@ export const AddTodo = () => {
 }
 ```
 
-Here, the `useRef` hook from React is being used along with TypeScript.
+这里，React的`useRef`钩子与TypeScript一起使用。
 
--   The line `const inputRef = useRef<HTMLInputElement>(null)` declares a reference variable called `inputRef` using the useRef hook. The type parameter `<HTMLInputElement>` specifies that the ref is intended for an input element. The initial value of the ref is set to `null`.
--   In the useEffect hook, `inputRef.current` is checked to see if it exists. If it does, the `focus()` method is called on it, which means the input field will receive focus when the component is mounted.
+-   行`const inputRef = useRef<HTMLInputElement>(null)`使用useRef钩子声明了一个名为`inputRef`的引用变量。类型参数`<HTMLInputElement>`指定该ref用于输入元素。ref的初始值设置为`null`。
+-   在useEffect钩子中，检查`inputRef.current`是否存在。如果存在，则调用其上的`focus()`方法，这意味着当组件被装载时，输入字段将接收焦点。
 
-The `useRef` hook is type-parameterized with `<HTMLInputElement>` to ensure that the reference is compatible with input elements.
+`useRef`钩子使用`<HTMLInputElement>`进行类型参数化，以确保引用与输入元素兼容。
 
-By using useRef and TypeScript together, the code benefits from TypeScript's static type checking and the ability to interact with the input element's DOM reference using useRef.
+通过结合使用useRef和TypeScript，代码不仅受益于TypeScript的静态类型检查，还能使用useRef与输入元素的DOM引用进行交互。
 
-While this code functions correctly, it would be beneficial to reuse this input component in other parts of your application. Therefore, let's create a reusable input component and explore how to develop type-safe React components by implementing this input.
+虽然这段代码可以正确运行，但将此输入组件在应用的其他部分复用将是有益的。因此，让我们创建一个可复用的输入组件，并探索如何通过实现这个输入来开发类型安全的React组件。
 
-### How to create type-safe React components with TypeScript
+### 如何用TypeScript创建类型安全的React组件
 
-In this section, you will create a type-safe Input component for future use cases in your app.
+在这一部分中，你将为应用中未来的使用案例创建一个类型安全的Input组件。
 
-To create this custom Input component, you will need to pass the ref you created in the previous section as a prop to this component.
+为了创建这个自定义的Input组件，你需要将在上一节中创建的ref作为prop传递给这个组件。
 
-Refs are passed as normal props, and in order to pass refs to child components, you need to implement a special built-in React function called forwardRef.
+Refs作为普通的props传递，为了将refs传递给子组件，你需要实现一个名为forwardRef的特殊内置React函数。
 
-#### What is `forwardRef` in React?
+#### React中的`forwardRef`是什么？
 
-In React, the `forwardRef` function is a feature that allows you to pass a ref from a parent component to a child component. Refs are used to access and manipulate the underlying DOM elements directly.
+在React中，`forwardRef`函数是一个特性，它允许你从父组件向子组件传递ref。Refs用于直接访问和操作底层的DOM元素。
 
-By using `forwardRef`, you can create a custom component that can receive a ref and pass it down to a specific element within the component.
+通过使用`forwardRef`，你可以创建一个自定义组件，该组件可以接收一个ref，并将其传递到组件内的特定元素。
 
-This enables the parent component to interact with the child component's underlying element, such as focusing an input field or triggering certain actions.
+这使得父组件能够与子组件的底层元素进行交互，例如聚焦输入字段或触发某些动作。
 
-In simple terms, `forwardRef` helps you to connect a ref between components, allowing you to control or access the child component's inner element if needed.
+简而言之，`forwardRef`帮助你在组件之间连接ref，使你在需要时能够控制或访问子组件的内部元素。
 
-Now, let's create a re-usable Input component. Open up `components/Input.tsx` :
+现在，让我们创建一个可复用的Input组件。打开`components/Input.tsx`：
 
 ```tsx
 // 📂./src/components/Input.tsx
@@ -393,19 +393,19 @@ export const Input = forwardRef<
 })
 ```
 
-Let's break this component down step by step:
+让我们逐步分解这个组件：
 
-1.  The component utilizes the `forwardRef` function from React to forward the ref to the underlying `<input>` element. This allows the parent components to access and manipulate the input element directly.
-2.  `HTMLInputElement` specifies the type of the ref that will be forwarded to the underlying `<input>` element. This ensures that the ref is compatible with the input element's expected type.
-3.  `InputHTMLAttributes<HTMLInputElement>` specifies the type of the props object that the component accepts. This includes all the standard HTML input element attributes, such as `value`, `placeholder`, `onChange`, and so on.
-4.  The component destructures the `className` prop from the `rest` object and also receives the `ref` as a parameter.
-5.  Inside the component, a JSX expression is used to render an `<input>` element. The spread operator (`{...rest}`) is used to pass all the props (except `className` and `ref`) received by the component to the `<input>` element. This ensures that any additional attributes passed to the `<Input>` component will be applied to the underlying `<input>` element.
-6.  The `ref` is assigned to the underlying `<input>` element using the `ref` attribute, enabling the parent component to reference the input element.
-7.  The `className` is constructed using the `cn` function from the `classnames` module. This function combines multiple CSS class names based on the provided conditions. In this case, it combines the default input element class names with the `className` prop passed to the `<Input>` component.
+1.  该组件使用React中的`forwardRef`函数将ref传递到底层的`<input>`元素。这允许父组件直接访问和操作输入元素。
+2.  `HTMLInputElement`指定了将被传递到底层`<input>`元素的ref的类型。这确保了ref与输入元素期望的类型兼容。
+3.  `InputHTMLAttributes<HTMLInputElement>`指定了组件接受的props对象的类型。这包括所有标准的HTML输入元素属性，例如`value`、`placeholder`、`onChange`等。
+4.  该组件从`rest`对象中解构出`className`属性，并且接收`ref`作为参数。
+5.  在组件内部，使用JSX表达式来渲染一个`<input>`元素。扩展运算符（`{...rest}`）被用于将组件接收到的所有props（除了`className`和`ref`）传递给`<input>`元素。这确保传递给`<Input>`组件的任何额外属性都将应用于底层的`<input>`元素。
+6.  使用`ref`属性将`ref`分配给底层的`<input>`元素，使得父组件能够引用输入元素。
+7.  `className`是通过`classnames`模块中的`cn`函数构建的。这个函数基于提供的条件组合多个CSS类名。在这种情况下，它将默认输入元素的类名与传递给`<Input>`组件的`className`属性结合起来。
 
-The final rendered `<input>` element will have the combined class names and inherit all other props passed to the `<Input>` component.
+最终渲染的`<input>`元素将具有组合的类名，并继承传递给`<Input>`组件的所有其他属性。
 
-Now, let's update the `<AddTodo />` component to utilize the custom `<Input />` instead of the default HTML input element:
+现在，让我们更新`<AddTodo />`组件，以使用自定义的`<Input />`替代默认的HTML输入元素：
 
 ```tsx
 //📂./src/components/AddTodo.tsx
@@ -453,19 +453,19 @@ export const AddTodo = () => {
 }
 ```
 
-Now, you are able to use this custom `<Input />` component across your whole application. In the next section, you'll be creating the funcionality to add a todo item on the form submission.
+现在，你可以在整个应用程序中使用这个自定义的`<Input />`组件。在下一部分中，你将创建在表单提交时添加待办事项的功能。
 
-### How to create a todo item on the form submission
+### 如何在表单提交时创建一个待办事项
 
-To store each todo item, you can utilize an array that holds the user's input. Essentially, we require an array of strings to store each todo:
+为了存储每个待办事项，你可以使用一个数组来保存用户的输入。本质上，我们需要一个字符串数组来存储每个待办事项：
 
 ```tsx
 const [todos, setTodos] = useState<string[]>([])
 ```
 
-`string[]` specifies the type of data that will be stored in the `todos` state variable. In this case, it is an array of strings, meaning it will hold a list of todo items, where each item is represented as a string.
+`string[]`指定了将存储在`todos`状态变量中的数据类型。在这种情况下，它是一个字符串数组，意味着它将保存一个待办事项列表，其中每个项都表示为一个字符串。
 
-Now let's add an item to the `todos` on form submission:
+现在让我们在表单提交时向`todos`中添加一个项：
 
 ```tsx
 //📂./src/components/AddTodo.tsx
@@ -509,38 +509,38 @@ export const AddTodo = () => {
 }
 ```
 
-The `` `handleSubmission` `` checks if the `input` (the user's entered todo) is not an empty string after removing any leading or trailing whitespace using `input.trim() !== ''`.
+`handleSubmission`检查`input`（用户输入的待办事项）在使用`input.trim() !== ''`去除任何前导或尾随空格后是否不是空字符串。
 
-If it's not empty, it adds the `input` value to the existing `todos` array using `setTodos([...todos, input])`. This creates a new array with all the previous todos and the new todo added at the end. It resets the `input` value to an empty string using `setInput('')` so that the input field becomes empty and ready for the next todo entry.
+如果它不为空，则使用`setTodos([...todos, input])`将`input`值添加到现有的`todos`数组中。这将创建一个新数组，其中包含所有之前的待办事项和在末尾添加的新待办事项。它使用`setInput('')`将`input`值重置为空字符串，这样输入字段就变为空的，准备好输入下一个待办事项。
 
-Now, while you have successfully implemented the functionality to create a todo item, it cannot be displayed on the screen yet.
+现在，虽然你已经成功实现了创建待办事项的功能，但它还不能在屏幕上显示。
 
-This is because the `<AddTodo />` component is responsible for adding todo items, not displaying them.
+这是因为`<AddTodo />`组件负责添加待办事项，而不是显示它们。
 
-On the other hand, the `<TodoList />` component is responsible for displaying all the items. To bridge this gap and share todos between these components, you can leverage the power of React Context.
+另一方面，`<TodoList />`组件负责显示所有项目。为了弥合这一差距并在这些组件之间共享待办事项，你可以利用React Context的力量。
 
-## What is React Context?
+## 什么是React Context？
 
-React Context API is a feature in React that allows data to be shared and accessed by components without passing it explicitly through props. It provides a way to create a global state that can be accessed by any component in the application.
+React Context API是React中的一个特性，它允许数据在不通过props显式传递的情况下被组件共享和访问。它提供了一种创建全局状态的方法，该状态可以被应用中的任何组件访问。
 
-Imagine you have a tree-like structure of components, where certain data needs to be accessed by multiple components at different levels. Rather than passing the data through multiple layers of components, you can use React Context to create a central store for that data.
+假设你有一个类似树的组件结构，其中某些数据需要被不同层级的多个组件访问。与其通过多层组件传递数据，你可以使用React Context为该数据创建一个中心存储。
 
-Here's how it works:
+它是这样工作的：
 
-1.  **Create a Context:** First, you define a context using the `createContext()` function. This creates a context object that holds the shared data.
-2.  **Provide the Context:** You wrap the parent component or a specific part of your application with a `<Context.Provider>`. This provider component accepts a `value` prop where you can pass the data you want to share.
-3.  **Consume the Context:** To access the shared data within a component, you use the `useContext()` hook provided by React. By passing the created context as an argument to `useContext()`, you can access the shared data and use it within that component.
-4.  **Update the Context:** If you need to update the shared data, you can do so by modifying the value in the provider component. This change will automatically propagate to all the components that are consuming the context.
+1.  **创建Context：** 首先，你使用`createContext()`函数定义一个context。这将创建一个包含共享数据的context对象。
+2.  **提供Context：** 你用`<Context.Provider>`包裹父组件或应用的特定部分。这个提供者组件接受一个`value`属性，你可以在其中传递你想要共享的数据。
+3.  **使用Context：** 要在一个组件内访问共享数据，你使用React提供的`useContext()`钩子。通过将创建的context作为参数传递给`useContext()`，你可以访问共享数据，并在该组件内使用它。
+4.  **更新Context：** 如果你需要更新共享数据，可以通过修改提供者组件中的值来实现。这个更改将自动传播到所有使用context的组件。
 
-React Context API simplifies the process of sharing data across components, eliminating the need for manual prop drilling.
+React Context API简化了跨组件共享数据的过程，消除了手动传递prop的需要。
 
-In your situation, you need to create a Context to share todo items across multiple components. Let's create a Context to see how this mechanism works in practice.
+在你的情况下，你需要创建一个Context来在多个组件之间共享待办事项。让我们创建一个Context来看看这个机制在实践中是如何工作的。
 
-### How to use React Context with TypeScript
+### 如何在TypeScript中使用React Context
 
-In this section, you will learn how to create a React Context to isolate the application logic and improve the state management capabilities of your app.
+在这一部分中，你将学习如何创建一个React Context来隔离应用逻辑，并提高你的应用的状态管理能力。
 
-If you open up `context/TodoContext.tsx`, you'll see the following code:
+如果你打开`context/TodoContext.tsx`，你会看到以下代码：
 
 ```tsx
 // 📂./src/context/TodoContext.tsx
@@ -561,22 +561,22 @@ export const TodoProvider = (props: { children: React.ReactNode }) => {
 
 ```
 
-Let's break it down step by step:
+让我们逐步分解：
 
--   The `TodoContext` is created using the `createContext` function provided by React. It is initialized with an undefined value.
--   Additionally, a `TodoProvider` component is defined. It takes a `children` prop, which represents the child components that will be wrapped by this provider.
--   Inside the `TodoProvider` component, a `<TodoContext.Provider>` component is rendered. It wraps the `props.children`, which allows the child components to access the TodoContext.
--   The value provided to the `<TodoContext.Provider>` component is set to `undefined` for now.
+-   `TodoContext`是使用React提供的`createContext`函数创建的。它以未定义的值进行初始化。
+-   此外，定义了一个名为`TodoProvider`的组件。它接受一个`children`属性，代表将被这个提供者包裹的子组件。
+-   在`TodoProvider`组件内部，渲染了一个`<TodoContext.Provider>`组件。它包裹了`props.children`，允许子组件访问TodoContext。
+-   目前为止，提供给`<TodoContext.Provider>`组件的值被设置为`undefined`。
 
-In the upcoming section, you'll make a more complex Context by learning about something called an ****Interface**** in TypeScript.
+在接下来的部分中，你将通过学习TypeScript中所谓的**接口**来创建一个更复杂的Context。
 
-### What are Interfaces in TypeScript?
+### TypeScript中的接口是什么？
 
-In TypeScript, interfaces are a way to define the structure and shape of an object. They allow you to specify the properties and their types that an object should have. Think of an interface as a blueprint or a contract that describes what an object should look like.
+在TypeScript中，接口是一种定义对象结构和形状的方式。它们允许你指定一个对象应该具有的属性及其类型。可以将接口视为一个蓝图或契约，描述一个对象应该具备的外观。
 
-Imagine you are building a house. Before starting the construction, you would have a blueprint that outlines the design and layout of the house. Similarly, an interface in TypeScript is like a blueprint for an object.
+想象一下你正在建造一座房子。在开始施工之前，你会有一个蓝图，勾画出房子的设计和布局。类似地，TypeScript中的接口就像是一个对象的蓝图。
 
-Let's look at a simple example of an interface:
+让我们来看一个简单的接口示例：
 
 ```ts
 interface Person {
@@ -585,9 +585,9 @@ interface Person {
 }
 ```
 
-In this example, we define an interface called `Person` that describes the structure of a person object. It specifies that a person object should have two properties: `name`, which should be of type `string`, and `age`, which should be of type `number`.
+在这个示例中，我们定义了一个名为`Person`的接口，描述了一个人对象的结构。它指定一个人对象应该有两个属性：`name`，其类型应为`string`，和`age`，其类型应为`number`。
 
-Let's consider your Todo Context and the props you want to pass to its consumers. In this case, you will need an interface that defines the required props, including an array of strings that contains all the todo items, as well as a function that accepts a string and adds it to the todo list.
+让我们考虑你的Todo Context以及你想传递给其消费者的属性。在这种情况下，你需要一个定义所需属性的接口，包括包含所有待办事项的字符串数组，以及一个接受字符串并将其添加到待办事项列表中的函数。
 
 ```tsx
 interface TodoContextProps {
@@ -596,14 +596,14 @@ interface TodoContextProps {
 }
 ```
 
-The `TodoContextProps` interface specifies the structure of the properties expected in the TodoContext. It has two properties:
+`TodoContextProps`接口指定了TodoContext中期望的属性结构。它有两个属性：
 
-1.  `todos`: An array of strings that represents the todo items. This property holds all the existing todos.
-2.  `addTodo`: A function that accepts a parameter of type string (`text`) and has a return type of `void`. This function is responsible for adding a new todo item to the list. It takes the new todo item as input and performs the necessary action without returning any value.
+1.  `todos`：表示待办事项的字符串数组。这个属性包含了所有现有的待办事项。
+2.  `addTodo`：一个接受类型为字符串（`text`）的参数并返回`void`类型的函数。这个函数负责将新的待办事项添加到列表中。它接受新的待办事项作为输入，并执行必要的操作，但不返回任何值。
 
-### How to use TypeScript Interfaces with React Context
+### 如何在React Context中使用TypeScript接口
 
-Now that you have a grasp of the benefits of TypeScript interfaces, it's time to enhance your Context by incorporating this interface:
+现在你已经了解了TypeScript接口的好处，是时候通过整合这个接口来增强你的Context了：
 
 ```tsx
 // 📂./src/context/TodoContext.tsx
@@ -639,20 +639,20 @@ export const TodoProvider = (props: { children: React.ReactNode }) => {
 }
 ```
 
-In this updated code, there are significant changes compared to the previous version. These changes introduce TypeScript and modify the TodoContext and TodoProvider components:
+在这个更新的代码中，与之前的版本相比有显著的变化。这些变化引入了TypeScript，并修改了TodoContext和TodoProvider组件：
 
-1.  Here, `TodoContextProps` specifies that it should have two properties: `todos`, which is an array of strings representing todo items, and `addTodo`, a function that takes a string parameter and returns void (no return value).
-2.  The `TodoContext` is now created with `createContext` and initialized with a type of `TodoContextProps | undefined`. This means the context value can be of type `TodoContextProps` or undefined.
-3.  The `TodoProvider` component now initializes the `todos` state using the `useState` hook. It keeps track of the todo items using an array of strings.
-4.  A new function `addTodo` is introduced, which takes a string `text` as a parameter. It uses the `setTodos` function to update the `todos` state by appending the new todo item to the existing array.
-5.  Creating the value for the context: The `value` variable is assigned an object of type `TodoContextProps`, containing the `todos` array and the `addTodo` function.
-6.  Providing the context value: The `<TodoContext.Provider>` component wraps the `props.children`, and the value prop is set to `value`, which provides the `todos` and `addTodo` to the child components.
+1.  这里，`TodoContextProps`指定它应该有两个属性：`todos`，表示待办事项的字符串数组，以及`addTodo`，一个接受字符串参数并返回void（无返回值）的函数。
+2.  现在使用`createContext`创建了`TodoContext`，并用`TodoContextProps | undefined`类型进行初始化。这意味着context值可以是`TodoContextProps`类型或未定义。
+3.  `TodoProvider`组件现在使用`useState`钩子初始化`todos`状态。它使用一个字符串数组来跟踪待办事项。
+4.  引入了一个新函数`addTodo`，它接受一个字符串`text`作为参数。它使用`setTodos`函数通过将新的待办事项追加到现有数组来更新`todos`状态。
+5.  创建context的值：`value`变量被赋值为一个`TodoContextProps`类型的对象，包含`todos`数组和`addTodo`函数。
+6.  提供context值：`<TodoContext.Provider>`组件包裹`props.children`，并将value属性设置为`value`，它向子组件提供`todos`和`addTodo`。
 
-In summary, you are using TypeScript to define an interface for the TodoContextProps, adds a new todo using useState and a custom function, and provides the updated context value to the child components.
+总而言之，你正在使用TypeScript为TodoContextProps定义一个接口，使用useState和自定义函数添加新的待办事项，并向子组件提供更新后的context值。
 
-### How to create a custom hook to consume React Context
+### 如何创建一个自定义钩子来使用React Context
 
-To utilize the values provided by the context, you need to create a custom hook that consumes this context and provides its values to the child components. Open up `context/useTodo.ts` and add the following code:
+为了使用context提供的值，你需要创建一个自定义钩子来使用这个context，并将其值提供给子组件。打开`context/useTodo.ts`并添加以下代码：
 
 ```tsx
 // 📂./src/context/useTodo.ts
@@ -671,19 +671,19 @@ export const useTodo = () => {
 }
 ```
 
-Let's break it down step by step:
+让我们逐步分解：
 
-1.  You import the `useContext` hook from the 'react' module and the `TodoContext` from the `./TodoContext` file.
-2.  Inside the hook, the `useContext` hook is called with `TodoContext` as the argument. This hooks into the `TodoContext` and retrieves its current value.
-3.  If the `context` value is `undefined`, it means that the `useTodo` hook is being used outside the scope of the `TodoProvider`. In such cases, an error is thrown with the message 'useTodo must be used within a TodoProvider'.
+1.  你从'react'模块导入`useContext`钩子，并从`./TodoContext`文件导入`TodoContext`。
+2.  在钩子内部，调用`useContext`钩子并以`TodoContext`作为参数。这样连接到`TodoContext`并检索其当前值。
+3.  如果`context`值是`undefined`，这意味着`useTodo`钩子正在`TodoProvider`的范围之外使用。在这种情况下，会抛出一个错误消息，内容为'`useTodo`必须在`TodoProvider`内部使用'。
 
-Overall, this code allows you to create a custom hook named `useTodo` that can be used within your components.
+总体来说，这段代码允许你创建一个名为`useTodo`的自定义钩子，可以在你的组件中使用。
 
-By calling this hook, you can access the `TodoContext` and retrieve its value, which includes the todo-related data and functions defined in the `TodoProvider`.
+通过调用这个钩子，你可以访问`TodoContext`并检索其值，其中包括在`TodoProvider`中定义的与待办事项相关的数据和函数。
 
-It also ensures that the `useTodo` hook is used only within the scope of the `TodoProvider` to maintain the correct usage and prevent any errors.
+它还确保`useTodo`钩子只在`TodoProvider`的范围内使用，以维护正确的使用方式并防止任何错误。
 
-Next, you'll need to wrap your entire app with the TodoProvider component. This ensures that the context values are accessible to its children components by utilizing the `useTodo` hook:
+接下来，你需要用TodoProvider组件包裹整个应用程序。这确保了通过使用`useTodo`钩子，context值可以被其子组件访问：
 
 ```tsx
 // 📂 ./src/main.tsx
@@ -697,9 +697,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 )
 ```
 
-`<TodoProvider>` wraps the entire application and provides the necessary context for managing todo-related data.
+`<TodoProvider>`包裹了整个应用程序，并提供了管理待办事项相关数据所需的context。
 
-Now, let's integrate the useTodo hook within the `<AddTodo />` component to efficiently manage todo items through the context. Additionally, let's implement toast notifications to provide feedback based on user interactions:
+现在，让我们在`<AddTodo />`组件中集成`useTodo`钩子，以通过context高效管理待办事项。此外，让我们实现toast通知，以根据用户交互提供反馈：
 
 ```tsx
 //📂./src/components/AddTodo.tsx
@@ -753,15 +753,15 @@ export const AddTodo = () => {
 }
 ```
 
-1.  The line `const { addTodo } = useTodo()` uses the `useTodo` hook to retrieve the `addTodo` function from the todo context. This allows us to add new todo items.
-2.  The `toast.success('Todo added successfully!')` line displays a success toast notification indicating that the todo was added successfully.
-3.  The `toast.error('Todo field cannot be empty!')` line displays an error toast notification if the todo field is empty when attempting to submit.
-4.  If the `input` value (trimmed of whitespace) is not empty, the `addTodo` function is called with the input value, the `input` state is cleared, and a success toast notification is displayed.
-5.  If the `input` value is empty, an error toast notification is displayed indicating that the todo field cannot be empty.
+1.  行`const { addTodo } = useTodo()`使用`useTodo`钩子从待办事项context中检索`addTodo`函数。这使我们能够添加新的待办事项。
+2.  行`toast.success('Todo added successfully!')`显示一个成功的toast通知，指示待办事项已成功添加。
+3.  行`toast.error('Todo field cannot be empty!')`在尝试提交时如果待办事项字段为空，则显示一个错误的toast通知。
+4.  如果`input`值（去除空格）不为空，则调用`addTodo`函数并传入输入值，清除`input`状态，并显示成功的toast通知。
+5.  如果`input`值为空，则显示一个错误的toast通知，指出待办事项字段不能为空。
 
-This code integrates the `useTodo` hook to manage todo items through context. It captures user input, adds todos, and displays toast notifications to provide feedback on the success or failure of adding a todo item.
+这段代码集成了`useTodo`钩子，通过context管理待办事项。它捕获用户输入，添加待办事项，并显示toast通知，以提供关于添加待办事项成功或失败的反馈。
 
-Now, let's also modify `<TodoList />` component and display the todo items on the screen. Open up `components/TodoList.tsx` and add the following code:
+现在，让我们也修改`<TodoList />`组件，并在屏幕上显示待办事项。打开`components/TodoList.tsx`并添加以下代码：
 
 ```tsx
 //📂./src/components/TodoList.tsx
@@ -793,31 +793,31 @@ export const TodoList = () => {
 }
 ```
 
-1.  The import statement `import { useTodo } from '../context/useTodo'` imports the `useTodo` hook from the custom context, which allows us to access the `todos` array.
-2.  If the `todos` array is empty (`!todos.length`), meaning there are no todos, a message is displayed indicating that there is nothing to do.
-3.  If there are todos in the `todos` array, an unordered list (`<ul>`) is rendered.
-4.  Inside the `<ul>`, the `todos` array is iterated using the `map` function. For each todo item, a list item (`<li>`) is created with a unique `key` set to the value of the todo item.
-5.  The todo item itself is then displayed inside the list item.
+1.  导入语句`import { useTodo } from '../context/useTodo'`从自定义context中导入`useTodo`钩子，使我们能够访问`todos`数组。
+2.  如果`todos`数组为空（`!todos.length`），意味着没有待办事项，将显示一条消息表明没有要做的事情。
+3.  如果`todos`数组中有待办事项，则渲染一个无序列表（`<ul>`）。
+4.  在`<ul>`内部，使用`map`函数遍历`todos`数组。对于每个待办事项，创建一个带有唯一`key`的列表项（`<li>`），`key`设置为待办事项的值。
+5.  然后将待办事项本身显示在列表项中。
 
-This component retrieves the `todos` array from the context using the `useTodo` hook. If there are no todos, it displays a message. If there are todos, it renders an unordered list and populates it with list items for each todo item.
+这个组件使用`useTodo`钩子从context中检索`todos`数组。如果没有待办事项，它会显示一条消息。如果有待办事项，它会渲染一个无序列表，并为每个待办事项填充列表项。
 
-![Adding todo items and displaying toast notifications](https://www.freecodecamp.org/news/content/images/2023/07/ezgif-5-ff3ed7ffc5.gif)
+![添加待办事项和显示toast通知](https://www.freecodecamp.org/news/content/images/2023/07/ezgif-5-ff3ed7ffc5.gif)
 
-Adding todo items and displaying toast notifications
+添加待办事项和显示toast通知
 
-Great job so far! You now have a functioning basic todo app. It's time to take it up a notch and add some exciting features to enhance your app even further.
+到目前为止做得很好！你现在有了一个基本的待办事项应用程序。是时候增加一些令人兴奋的功能，进一步提升你的应用了。
 
-## How to Define an Interface for Todo Items
+## 如何为待办事项定义一个接口
 
-In this section, you will build upon the existing context from the previous section and enhance it to create a more complex todo item with additional features.
+在这一部分中，你将基于上一节中的现有context进行构建，并增强它，以创建具有额外功能的更复杂的待办事项。
 
-Each todo item consists of three attributes:
+每个待办事项由三个属性组成：
 
--   **id:** a unique string that serves as an identifier for the item
--   **text:** a simple string representing the content of the todo item
--   **status:** the status of the todo item, which can be either "undone" or "completed"
+-   **id：** 一个独特的字符串，作为该项的标识符
+-   **text：** 一个简单的字符串，代表待办事项的内容
+-   **status：** 待办事项的状态，可以是“未完成”或“已完成”
 
-Based on the above information, the proper todo interface would be as follows:
+基于上述信息，适当的待办事项接口如下所示：
 
 ```ts
 interface Todo {
@@ -827,7 +827,7 @@ interface Todo {
 }
 ```
 
-To implement the Todo interface into your context, we will make necessary updates and modifications to utilize this enhanced context effectively:
+为了将Todo接口集成到你的context中，我们将进行必要的更新和修改，以有效地利用这个增强的context：
 
 ```tsx
 //📂./src/context/TodoContext.tsx
@@ -876,29 +876,29 @@ export const TodoProvider = (props: { children: React.ReactNode }) => {
 }
 ```
 
-Here's an explanation of what's changed in the context:
+以下是context中变更的解释：
 
-**Todo interface:**
+**Todo接口：**
 
--   The Todo interface defines the structure of a todo item.
--   It consists of three properties: id (a string), text (a string representing the content of the todo item), and status (a string that can have the value 'undone' or 'completed').
--   This interface helps ensure that todo items have consistent properties and data types.
+-   Todo接口定义了待办事项的结构。
+-   它包括三个属性：id（一个字符串），text（一个代表待办事项内容的字符串），以及status（一个可以取值为'undone'或'completed'的字符串）。
+-   这个接口有助于确保待办事项具有一致的属性和数据类型。
 
-**useState<Todo\[\]>:**
+**useState<Todo[]>：**
 
--   The useState hook is used to manage state in a functional component.
--   In this case, `useState<Todo[]>` initializes a state variable called "todos" as an array of Todo items.
--   The "todos" state variable will be used to store and update the todo items.
+-   useState钩子用于在函数组件中管理状态。
+-   在这种情况下，`useState<Todo[]>`初始化了一个名为"todos"的状态变量作为Todo项目的数组。
+-   "todos"状态变量将用于存储和更新待办事项。
 
-**`addTodo` function and the `newTodo` variable:**
+**`addTodo`函数和`newTodo`变量：**
 
--   The addTodo function is a callback function that takes a text parameter (string).
--   Inside the addTodo function, a newTodo variable is declared as a Todo object.
--   The newTodo object is created with a unique id generated by the nanoid() function, the provided text, and an initial status of 'undone'.
--   The setTodos function from useState is called to update the todos state by adding the newTodo object to the existing array of todos.
--   This allows new todo items to be added to the list.
+-   addTodo函数是一个回调函数，它接受一个文本参数（字符串）。
+-   在addTodo函数内部，声明了一个名为newTodo的变量作为Todo对象。
+-   newTodo对象使用nanoid()函数生成的唯一id、提供的文本以及初始状态'undone'创建。
+-   调用useState中的setTodos函数来更新todos状态，通过将newTodo对象添加到现有的todos数组中。
+-   这允许向列表中添加新的待办事项。
 
-Now, you need to update the `<TodoList />` components to reflect the changes you made to the context:
+现在，你需要更新`<TodoList />`组件以反映你对context所做的更改：
 
 ```tsx
 //📂./src/components/TodoList.tsx
@@ -930,15 +930,15 @@ export const TodoList = () => {
 }
 ```
 
-With this updated code, the todo's id is now being used as the key prop for each rendered todo item, and the todo's text is being used to display the content of each todo item.
+通过这个更新的代码，现在每个渲染的待办事项的id被用作每个待办事项的key属性，待办事项的text被用来显示每个待办事项的内容。
 
-Now, let's create a custom React component to appropriately display each todo item and introduce additional functionalities like editing, deleting, and updating individual todo items in our app.
+现在，让我们创建一个自定义的React组件来适当地显示每个待办事项，并在我们的应用中引入诸如编辑、删除和更新单个待办事项等额外功能。
 
-## How to Build a Custom React Component for Displaying Todo Items
+## 如何构建一个自定义的React组件来显示待办事项
 
-In this section, you will be creating a custom React component that handles the display and management of each individual todo item.
+在这一部分中，你将创建一个自定义的React组件，用于处理每个单独待办事项的显示和管理。
 
-Open up `components/TodoItem.tsx` and add the following code:
+打开`components/TodoItem.tsx`并添加以下代码：
 
 ```tsx
 //📂./src/components/TodoItem.tsx
@@ -967,19 +967,19 @@ export const TodoItem = (props: { todo: Todo }) => {
 }
 ```
 
-`<TodoItem />` is responsible for rendering an individual todo item:
+`<TodoItem />`负责渲染单个待办事项：
 
--   The component takes a prop called `props`, which is an object containing a property called `todo`. The `todo` property is of type `Todo`, representing a single todo item.
--   Inside the component, the `todo` property is extracted from the `props` object using destructuring assignment.
--   The `motion.li` component is used from a Framer Motion to provide animations. It represents a list item (`<li>`) and supports layout animations.
--   The `className` attribute uses the `cn` utility function (from the `classnames` library) to conditionally apply CSS classes based on the `todo.status`. If the todo is completed, it adds classes for a semi-transparent background and text color.
--   Inside the list item, a `motion.span` component is used to wrap the todo text. It also supports layout animations.
--   The style of the span element is set based on the `todo.status`. If the todo is completed, a line-through text decoration is applied.
--   The `{todo.text}` expression renders the text content of the todo item.
+-   该组件接受一个名为`props`的属性，这是一个包含名为`todo`的属性的对象。`todo`属性是`Todo`类型，代表单个待办事项。
+-   在组件内部，使用解构赋值从`props`对象中提取`todo`属性。
+-   使用Framer Motion的`motion.li`组件提供动画效果。它代表一个列表项（`<li>`），并支持布局动画。
+-   `className`属性使用`cn`实用函数（来自`classnames`库）根据`todo.status`条件性地应用CSS类。如果待办事项已完成，它会添加半透明背景和文本颜色的类。
+-   在列表项内部，使用`motion.span`组件包裹待办事项文本。它同样支持布局动画。
+-   span元素的样式根据`todo.status`设置。如果待办事项已完成，会应用删除线文本装饰。
+-   `{todo.text}`表达式渲染待办事项的文本内容。
 
-TodoItem receives a todo item as a prop and renders it with optional animations, styling, and conditional CSS classes based on the todo's status.
+TodoItem接收一个待办事项作为属性，并根据待办事项的状态，使用可选动画、样式和条件CSS类进行渲染。
 
-Now let's modify `<TodoList />` component to use the `<TodoItem />` component:
+现在让我们修改`<TodoList />`组件，以使用`<TodoItem />`组件：
 
 ```tsx
 //📂./src/components/TodoList.tsx
@@ -1013,39 +1013,39 @@ export const TodoList = () => {
 }
 ```
 
-Here's an explanation of what's changed in the `<TodoList />`:  
-  
-**Importing additional dependencies:**
+以下是`<TodoList />`中所做更改的解释：
 
--   The code now imports the `motion` component from the `framer-motion` library. This allows for animations in the component.
+**导入额外的依赖：**
 
-**Rendering TodoItem component:**
+-   现在的代码从`framer-motion`库中导入了`motion`组件。这允许在组件中实现动画效果。
 
--   Previously, the todo items were rendered as simple list items (`<li>`) directly within the TodoList component.
--   In the updated version, the TodoItem component is imported (`import { TodoItem } from './TodoItem'`) and used to render each todo item.
--   The TodoItem component is passed the `todo` prop, which represents an individual todo item.
--   The `key` prop is also provided to each TodoItem component, ensuring a unique identifier for each rendered todo item.
+**渲染TodoItem组件：**
 
-**Wrapping the list with motion component:**
+-   之前，待办事项被作为简单的列表项（`<li>`）直接在TodoList组件中渲染。
+-   在更新的版本中，导入（`import { TodoItem } from './TodoItem'`）并使用TodoItem组件来渲染每个待办事项。
+-   TodoItem组件传递了一个代表单个待办事项的`todo`属性。
+-   同时为每个TodoItem组件提供了`key`属性，确保每个渲染的待办事项具有唯一标识符。
 
--   The `<ul>` element is now wrapped with the `<motion.ul>` component to enable animations using the `framer-motion` library.
--   This allows for dynamic and smooth transitions when adding, removing, or updating todo items.
+**使用motion组件包裹列表：**
 
-Overall, the updated TodoList component introduces animations using the `motion` component from `framer-motion` and replaces the direct rendering of todo items with the `<TodoItem />` component.
+-   `<ul>`元素现在被`<motion.ul>`组件包裹，以使用`framer-motion`库启用动画效果。
+-   这允许在添加、移除或更新待办事项时实现动态和平滑的过渡。
 
-Now that you have successfully created the `<TodoItem />` component, let's shift our focus towards implementing the necessary functionalities to enable editing, deleting, and updating of each todo item using the Todo Context and TodoItem component.
+总的来说，更新后的TodoList组件使用`framer-motion`的`motion`组件引入了动画，并用`<TodoItem />`组件替换了直接渲染待办事项的方式。
 
-## How to Implement Functionality: Edit, Delete, and Update Todo Items
+现在你已经成功创建了`<TodoItem />`组件，让我们将重点转向实现必要的功能，以启用使用Todo Context和TodoItem组件来编辑、删除和更新每个待办事项。
 
-In this section, you will enhance your Todo app by incorporating additional functionalities.
+## 如何实现功能：编辑、删除和更新待办事项
 
-Firstly, you will implement the necessary logic within the todo context to handle these functionalities. Then, you will add the corresponding JSX to the `<TodoItem />` component to introduce interactivity and enable users to interact with the app.
+在这一部分中，你将通过增加额外功能来增强你的待办事项应用。
 
-As you recall, you utilized context to handle adding todo items to the app, and you will follow a similar approach for the edit, delete, and update functionalities.
+首先，你将在待办事项context中实现处理这些功能所需的逻辑。然后，你将向`<TodoItem />`组件添加相应的JSX，以引入交互性，并使用户能够与应用互动。
 
-The logic for these actions will be encapsulated within the todo context, and the useTodo hook will be utilized to leverage this logic within the `<TodoItem />` component. You will also store the todo items in the browser's local storage to ensure that users do not lose their progress when they leave the app.
+正如你所记得的，你使用context处理了向应用添加待办事项，你将采用类似的方法来处理编辑、删除和更新功能。
 
-Open up `context/TodoContext.tsx` and add the following code:
+这些操作的逻辑将被封装在待办事项context中，将使用useTodo钩子在`<TodoItem />`组件中利用这些逻辑。你还将把待办事项存储在浏览器的本地存储中，以确保用户离开应用时不会丢失他们的进度。
+
+打开`context/TodoContext.tsx`并添加以下代码：
 
 ```tsx
 // 📂./src/context/TodoContext.tsx
@@ -1132,40 +1132,40 @@ export const TodoProvider = (props: { children: React.ReactNode }) => {
 }
 ```
 
-Here's an explanation of what's happening:
+以下是正在发生的事情的解释：
 
-**Defining TodoContextProps:**
+**定义TodoContextProps：**
 
--   TodoContextProps is an interface that specifies the structure of the TodoContext's value.
--   It includes properties such as todos (an array of Todo items) and functions for adding, deleting, editing, and updating the status of todo items.
+-   TodoContextProps是一个接口，指定了TodoContext的值的结构。
+-   它包括诸如todos（一个Todo项的数组）之类的属性，以及添加、删除、编辑和更新待办事项状态的函数。
 
-**Implementing `addTodo`:**
+**实现`addTodo`：**
 
--   The addTodo function takes a text parameter, generates a unique ID using nanoid, and creates a new todo object with the provided text and an initial status of 'undone'.
--   It uses the setTodos function, provided by useLocalStorage, to update the todos state by appending the newTodo to the existing array of todos.
+-   addTodo函数接受一个文本参数，使用nanoid生成一个唯一ID，并用提供的文本和初始状态'undone'创建一个新的待办事项对象。
+-   它使用useLocalStorage提供的setTodos函数，通过将newTodo追加到现有的todos数组来更新todos状态。
 
-**Implementing `deleteTodo`:**
+**实现`deleteTodo`：**
 
--   The deleteTodo function takes an id parameter and uses the setTodos function to filter out the todo item with the matching id from the todos state.
+-   deleteTodo函数接受一个id参数，并使用setTodos函数从todos状态中过滤掉具有匹配id的待办事项。
 
-**Implementing `editTodo`:**
+**实现`editTodo`：**
 
--   The editTodo function takes an id and text parameter.
--   It uses the setTodos function to map over the todos state and update the text of the todo item with the matching id.
+-   editTodo函数接受一个id和文本参数。
+-   它使用setTodos函数遍历todos状态，并更新具有匹配id的待办事项的文本。
 
-**Implementing `updateTodoStatus`:**
+**实现`updateTodoStatus`：**
 
--   The updateTodoStatus function takes an id parameter.
--   It uses the setTodos function to map over the todos state and toggle the status of the todo item with the matching id between 'undone' and 'completed'.
+-   updateTodoStatus函数接受一个id参数。
+-   它使用setTodos函数遍历todos状态，并在'undone'和'completed'之间切换具有匹配id的待办事项的状态。
 
-**Providing the value and rendering child components:**
+**提供值并渲染子组件：**
 
--   The value object is created with the todos array and the defined functions.
--   It is passed as the value prop to the TodoContext.Provider component to provide the defined values to its nested child components.
+-   使用todos数组和定义的函数创建了一个value对象。
+-   它作为value属性传递给TodoContext.Provider组件，以向其嵌套的子组件提供定义的值。
 
-In summary, the `TodoContext` and `TodoProvider` handle the state and logic related to managing todo items. They provide the necessary functions and data through the TodoContext to be used by child components, such as `<TodoItem />`, for performing operations like adding, deleting, editing, and updating todo items.
+总而言之，`TodoContext`和`TodoProvider`处理与管理待办事项相关的状态和逻辑。它们通过TodoContext提供必要的函数和数据供子组件使用，如`<TodoItem />`，以执行添加、删除、编辑和更新待办事项等操作。
 
-Now, let's incorporate the corresponding JSX to enable users to interact with the logic that you have just implemented. Open up `components/TodoItem.tsx` and add the following code:
+现在，让我们加入相应的JSX，使用户能够与你刚刚实现的逻辑进行交互。打开`components/TodoItem.tsx`并添加以下代码：
 
 ```tsx
 //📂./src/components/TodoItem.tsx
@@ -1301,54 +1301,54 @@ export const TodoItem = (props: { todo: Todo }) => {
 }
 ```
 
-Let's focus on the `handleEdit`, `handleUpdate`, `handleDelete`, and `handleStatusUpdate` functions and how they work:
+让我们关注`handleEdit`、`handleUpdate`、`handleDelete`和`handleStatusUpdate`函数及其工作方式：
 
-**`handleEdit` function:**
+**`handleEdit`函数：**
 
-This function is called when the user clicks the "Edit" button. It takes the `todoId` (unique identifier for the todo item) and `todoText` (current text of the todo item) as parameters.
+当用户点击“编辑”按钮时调用此函数。它接受`todoId`（待办事项的唯一标识符）和`todoText`（待办事项当前文本）作为参数。
 
-It sets the `editingTodoId` state to the `todoId` and the `editingTodoText` state to the `todoText`. Also, if the `editInputRef` (a reference to the input field) exists, it sets the focus on the input field using the `focus` method.
+它将`editingTodoId`状态设置为`todoId`，将`editingTodoText`状态设置为`todoText`。此外，如果`editInputRef`（输入字段的引用）存在，它将使用`focus`方法将焦点设置在输入字段上。
 
-**`handleUpdate` function:**
+**`handleUpdate`函数：**
 
-This function is called when the user clicks the "Update" button after editing a todo item. It takes the `todoId` as a parameter.
+当用户在编辑待办事项后点击“更新”按钮时调用此函数。它接受`todoId`作为参数。
 
-It first checks if the trimmed `editingTodoText` is not empty. If it's not empty, it calls the `editTodo` function from the `useTodo` hook, passing the `todoId` and `editingTodoText` as arguments. It then resets the `editingTodoId` and `editingTodoText` states to null and an empty string, respectively.
+它首先检查修剪后的`editingTodoText`是否不为空。如果不为空，它将调用`useTodo`钩子中的`editTodo`函数，传递`todoId`和`editingTodoText`作为参数。然后将`editingTodoId`和`editingTodoText`状态分别重置为null和空字符串。
 
-Finally, it displays a success toast message if the update was successful or an error toast message if the todo field was empty.
+最后，如果更新成功则显示成功的toast消息，如果待办事项字段为空则显示错误的toast消息。
 
-**`handleDelete` function:**
+**`handleDelete`函数：**
 
-This function is called when the user clicks the "Delete" button. It takes the `todoId` as a parameter. It calls the `deleteTodo` function from the `useTodo` hook, passing the `todoId` as an argument. It then displays a success toast message indicating that the todo item was deleted successfully.
+当用户点击“删除”按钮时调用此函数。它接受`todoId`作为参数。它将调用`useTodo`钩子中的`deleteTodo`函数，传递`todoId`作为参数。然后显示一条成功的toast消息，指示待办事项已成功删除。
 
-**`handleStatusUpdate` function:**
+**`handleStatusUpdate`函数：**
 
-This function is called when the user clicks the "Mark Completed" or "Mark Undone" button. It takes the `todoId` as a parameter.
+当用户点击“标记完成”或“标记未完成”按钮时调用此函数。它接受`todoId`作为参数。
 
-It calls the `updateTodoStatus` function from the `useTodo` hook, passing the `todoId` as an argument. It then displays a success toast message indicating that the todo item's status was updated successfully.
+它将调用`useTodo`钩子中的`updateTodoStatus`函数，传递`todoId`作为参数。然后显示一条成功的toast消息，指示待办事项的状态已成功更新。
 
-These functions handle the interactions and actions related to editing, updating, deleting, and updating the status of a todo item in the TodoItem component.
+这些函数处理与在TodoItem组件中编辑、更新、删除和更新待办事项状态相关的交互和操作。
 
-The JSX displays the todo's text with the option to edit, delete, and update its status. The appearance and behavior of the todo item are determined by the values of the `todo` object and the component's state variables.
+JSX显示待办事项的文本，并提供编辑、删除和更新其状态的选项。待办事项的外观和行为由`todo`对象的值和组件的状态变量决定。
 
-If the todo is being edited, an input field and an "Update" button are shown. Otherwise, the todo's text is displayed, and buttons for marking it as completed or undone, editing, and deleting are available.
+如果待办事项正在被编辑，则显示输入字段和“更新”按钮。否则，将显示待办事项的文本，并提供标记为完成或未完成、编辑和删除的按钮。
 
-The `handleEdit`, `handleUpdate`, `handleDelete`, and `handleStatusUpdate` functions are used as event handlers for these buttons, enabling the user to interact with and modify the todo item.
+`handleEdit`、`handleUpdate`、`handleDelete`和`handleStatusUpdate`函数用作这些按钮的事件处理程序，使用户能够与待办事项进行交互和修改。
 
 ![Final todo app, a user adds an item, then edit and delete the todo item in order to display the app's functionality](https://www.freecodecamp.org/news/content/images/2023/07/ezgif-1-f7b9438717.gif)
 
-Final result
+最终结果
 
-Congratulations! You have successfully created a beautiful Todo app with the essential features.
+恭喜！你已经成功创建了一个具有基本功能的漂亮的待办事项应用。
 
-With the knowledge gained from this article, you are now well-equipped to further enhance and customize the app based on your specific needs and preferences.
+通过本文所获得的知识，你现在已经准备好根据你的特定需求和偏好进一步增强和定制应用程序。
 
-## Conclusion
+## 结论
 
-Throughout this article, we've covered the fundamentals of React development with TypeScript and learned how to create a fully functional Todo app.
+在整篇文章中，我们介绍了使用TypeScript进行React开发的基础知识，并学习了如何创建一个功能齐全的待办事项应用。
 
-We explored concepts like state management, context, and hooks, enabling you to add, edit, delete, and update todo items.
+我们探索了状态管理、context和钩子等概念，使你能够添加、编辑、删除和更新待办事项。
 
-With this knowledge, you're now ready to apply these principles to your future projects and build type-safe applications with React. Keep exploring and experimenting with new features to take your app to the next level.
+有了这些知识，你现在已经准备好将这些原则应用到你的未来项目中，并使用React构建类型安全的应用程序。继续探索和实验新功能，将你的应用提升到一个新的水平。
 
-You can follow me on [Twitter](https://twitter.com/Yazdun) where I share more useful tips on web development. Happy coding!
+你可以在[Twitter](https://twitter.com/Yazdun)上关注我，我会在那里分享更多关于Web开发的有用提示。编码愉快！

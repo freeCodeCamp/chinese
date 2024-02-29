@@ -9,7 +9,7 @@
 
 数据结构是任何一个软件开发从业人员必须知道的内容，但当你刚开始学习的时候，可能觉得这个话题难以理解，甚至有些吓人，
 
-在这篇文章中，我会简单介绍什么是数据结构，它们在什么时候有用，以及如何用JavaScript来实现这鞋数据结构。
+在这篇文章中，我会简单介绍什么是数据结构，它们在什么时候有用，以及如何用 JavaScript 来实现这鞋数据结构。
 
 让我们开始吧！
 
@@ -56,26 +56,26 @@ arr.push(4)
 console.log(arr) // [1,2,3,4]
 ```
 
-JavaScript包含**原始（内置）**和**非原始（非内置）** 两种数据结构。
+JavaScript 包含**原始（内置）**和**非原始（非内置）** 两种数据结构。
 
 原始数据结构是编程语言默认的、可以拿来就用（如数组和对象）的；而非原始数据结构不是默认的、如果需要使用的话，你必须先编写出来。
 
 不同的数据结构对应不同的操作场景。你或许可以使用内置数据结构处理大部分编程任务，但当遇到特殊任务的时候，非原始数据机构可以派上用场。
 
-让我们一起来看一看最流行的数据结构，它们是怎么运作的，在哪些场合适用，以及如何使用JavaScript编写这些数据结构。
+让我们一起来看一看最流行的数据结构，它们是怎么运作的，在哪些场合适用，以及如何使用 JavaScript 编写这些数据结构。
 
 <h1 id="arrays">数组</h1>
 
 **数组**是存储在连续内存位置的项目合集。
 
-数组内的每一个元素都可以通过其**索引**（位置）访问。数组的索引通常从0开始，所以在一个包含4个元素的数组中，第三个元素的索引为2.
+数组内的每一个元素都可以通过其**索引**（位置）访问。数组的索引通常从 0 开始，所以在一个包含 4 个元素的数组中，第三个元素的索引为 2.
 
 ```javascript
 const arr = ['a', 'b', 'c', 'd']
 console.log(arr[2]) // c
 ```
 
-数组的**长度**属性定义了数组包含的元素数量。如果一个数组包含4个元素，我们就可以说这个数组的长度为4.
+数组的**长度**属性定义了数组包含的元素数量。如果一个数组包含 4 个元素，我们就可以说这个数组的长度为 4.
 
 ```javascript
 const arr = ['a', 'b', 'c', 'd']
@@ -84,13 +84,13 @@ console.log(arr.length) // 4
 
 在一些编程语言中，一个数组中只能存储同一种数据类型的元素，在数组被创建的时候就必须定义数组的长度，并且不可以修改。
 
-但JavaScript的数组并不是这样，在JavaScript中，同一数组可以存储**任何数据类型**的元素，数组**长度**是**动态**的（也就是说可以按需更改数组长度）。
+但 JavaScript 的数组并不是这样，在 JavaScript 中，同一数组可以存储**任何数据类型**的元素，数组**长度**是**动态**的（也就是说可以按需更改数组长度）。
 
 ```javascript
 const arr = ['store', 1, 'whatever', 2, 'you want', 3]
 ```
 
-JavaScript数组可以存储任何数据类型的值，也就意味着可以存储数组。一个包含其他数组的数组被称为**多维数组**。
+JavaScript 数组可以存储任何数据类型的值，也就意味着可以存储数组。一个包含其他数组的数组被称为**多维数组**。
 
 ```javascript
 const arr = [
@@ -100,7 +100,7 @@ const arr = [
 ]
 ```
 
-JavaScript数组有许多内置的属性和方法，可以针对不同目的来使用，如从数组添加或者删除元素、给数组排序、过滤数组，以及我们知道的数组长度等，数组的完全属性和方法列表可以在[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)找到。 😉
+JavaScript 数组有许多内置的属性和方法，可以针对不同目的来使用，如从数组添加或者删除元素、给数组排序、过滤数组，以及我们知道的数组长度等，数组的完全属性和方法列表可以在[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array)找到。 😉
 
 在数组中每一个元素都对应一个索引，索引跟元素位于数组位置相关。如果我们在数组末尾添加一个新的元素，则这个元素的索引为之前数组最后一位索引加一。
 
@@ -110,9 +110,9 @@ JavaScript数组有许多内置的属性和方法，可以针对不同目的来�
 
 <h1 id="objects-hash-tables-">对象（哈希表）</h1>
 
-在JavaScript中，**对象**是**键值对**的集合。在其他编程语言中，这种数据结构也被称作**映射**、**字典**和**哈希表**。
+在 JavaScript 中，**对象**是**键值对**的集合。在其他编程语言中，这种数据结构也被称作**映射**、**字典**和**哈希表**。
 
-一个典型的JS对象如下：
+一个典型的 JS 对象如下：
 
 ```javascript
 const obj = {
@@ -155,7 +155,7 @@ console.log(obj["prop5"]) // "The new prop on the block"
 obj.prop6() // "yet another example"
 ```
 
-和数组一样，JavaScript对象也有内置的方法供我们进行不同的操作，或者获取特定对象的信息，完整内容可以查看[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。
+和数组一样，JavaScript 对象也有内置的方法供我们进行不同的操作，或者获取特定对象的信息，完整内容可以查看[这里](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object)。
 
 对象是将有相同之处或者相互关联的数据放在一起的好办法，同时，因为对象的属性是独一无二的，当想要根据特定条件来区分数据的时候，对象可以派上用场。
 
@@ -171,21 +171,21 @@ const obj = {
 
 <h1 id="stacks">栈</h1>
 
-栈是一种以列表的方式来存储信息的数据结构，添加和删除栈的元素遵循**LIFO模式（后进先出）**。在栈中，不允许按照元素顺序来添加或删除元素，只能遵循LIFO模式。
+栈是一种以列表的方式来存储信息的数据结构，添加和删除栈的元素遵循**LIFO 模式（后进先出）**。在栈中，不允许按照元素顺序来添加或删除元素，只能遵循 LIFO 模式。
 
-你可以想象桌面有一叠纸，来思考栈是如何运作的。你只能在这叠纸上方添加更多纸张，也只能在最上方取出纸张。这就是LIFO，后进先出。 😉
+你可以想象桌面有一叠纸，来思考栈是如何运作的。你只能在这叠纸上方添加更多纸张，也只能在最上方取出纸张。这就是 LIFO，后进先出。 😉
 
 ![istockphoto-178580846-170667a](https://www.freecodecamp.org/news/content/images/2022/05/istockphoto-178580846-170667a.jpg)
 
 一叠纸
 
-只要确认元素遵循**LIFO模式**，那么栈结构就可以派上用场。下面是栈的使用场景：
+只要确认元素遵循**LIFO 模式**，那么栈结构就可以派上用场。下面是栈的使用场景：
 
--   JavaScript的调用栈
+-   JavaScript 的调用栈
 -   在各种编程语言中管理函数调用
 -   许多程序提供的撤销/重做功能
 
-有不止一种实现栈的方法，但是最简单的或许是**在数组中使用push和pop方法**。如果你仅通过pop和push的方法来添加和删除元素，你就遵循了LIFO模式，用栈的方法操作了数组。
+有不止一种实现栈的方法，但是最简单的或许是**在数组中使用 push 和 pop 方法**。如果你仅通过 pop 和 push 的方法来添加和删除元素，你就遵循了 LIFO 模式，用栈的方法操作了数组。
 
 另一个方法是列表，实现如下：
 
@@ -252,7 +252,7 @@ stck.push("value4")
 console.log(stck.pop()) // value4
 ```
 
-栈方法的大O为：
+栈方法的大 O 为：
 
 -   插入 - O(1)
 -   删除 - O(1)
@@ -261,7 +261,7 @@ console.log(stck.pop()) // value4
 
 <h1 id="queues">队列</h1>
 
-队列和栈的运作方式类似，但是元素遵循另一个添加和删除的模式。队列值遵循**FIFO先进先出模式**。在队列中，元素不按照顺序添加或删除，仅遵循FIFO模式。
+队列和栈的运作方式类似，但是元素遵循另一个添加和删除的模式。队列值遵循**FIFO 先进先出模式**。在队列中，元素不按照顺序添加或删除，仅遵循 FIFO 模式。
 
 下面这张排队购买食物的图可以帮助你思考这个概念。这里的逻辑是如果你先加入到队伍中，你就会先被服务。如果你是队伍的第一个，你就第一个离开队伍。FIFO。😉
 
@@ -274,9 +274,9 @@ console.log(stck.pop()) // value4
 -   后台任务
 -   打印/任务处理
 
-和栈一样，有不止一种实现队列的方式。但是最简单的是在数组中使用push和shift方法。
+和栈一样，有不止一种实现队列的方式。但是最简单的是在数组中使用 push 和 shift 方法。
 
-如果我们仅使用push和shift方法来添加和删除元素，我们就在数组中遵循了FIFO模式，将数组按照队列来操作。
+如果我们仅使用 push 和 shift 方法来添加和删除元素，我们就在数组中遵循了 FIFO 模式，将数组按照队列来操作。
 
 另一个实现办法是列表，如下：
 
@@ -343,7 +343,7 @@ quickQueue.enqueue("value4")
 console.log(quickQueue.dequeue()) // value1
 ```
 
-队列方法的大O：
+队列方法的大 O：
 
 -   插入 - O(1)
 -   删除 - O(1)
@@ -352,7 +352,7 @@ console.log(quickQueue.dequeue()) // value1
 
 <h1 id="linked-lists">链表</h1>
 
-**链表**是一种以**列表**存储值的数据结构，在列表中每一个值都被当作为一个**节点**，每一个节点都通过**指针**与列表的下一个值关联（若该节点是列表最后一个元素则下一个值为null）。
+**链表**是一种以**列表**存储值的数据结构，在列表中每一个值都被当作为一个**节点**，每一个节点都通过**指针**与列表的下一个值关联（若该节点是列表最后一个元素则下一个值为 null）。
 
 有两种链表：**单链表**和**双链表**。两种链表的运作方式类似，但是在单链表中每一个节点有**单指针**指向**下一个节点**，在双链表中，每一个节点有**双指针**，一个指向**下一个节点**，一个指向**上一个节点**。
 ![linked-list](https://www.freecodecamp.org/news/content/images/2022/05/linked-list.png)
@@ -371,7 +371,7 @@ console.log(quickQueue.dequeue()) // value1
 -   因为列表没有索引，所以我们**不能随机访问列表中的元素**。当我们想要访问一个值，必须通过从头到尾遍历整个列表的方法
 -   没有索引的好处是**添加或删除**列表中任意部分比在数组中更高效。我们只需要重新分配指针指向的“相邻”值，但是在数组中，我们需要重新分配余下所有值的索引
 
-和其他所有数据结构一样，可以采用不同的**方法**来操作以链表存储的数据。通常会使用：push（在尾部添加）、pop（在尾部删除）、unshift（在头部添加）、shift（在头部删除）、get（获取）、set（设置）、remove（删除）和reverse（反转）。
+和其他所有数据结构一样，可以采用不同的**方法**来操作以链表存储的数据。通常会使用：push（在尾部添加）、pop（在尾部删除）、unshift（在头部添加）、shift（在头部删除）、get（获取）、set（设置）、remove（删除）和 reverse（反转）。
 
 我们先来看看如何实现单链表，再来看看如何实现双链表。
 
@@ -654,7 +654,7 @@ class DoublyLinkedList {
 }
 ```
 
-双链表的大O为：
+双链表的大 O 为：
 
 -   插入 - O(1)
 -   删除 - O(1)
@@ -679,7 +679,7 @@ class DoublyLinkedList {
 
 程序中使用树的场景有：
 
--   DOM模型
+-   DOM 模型
 -   人工智能中的情景分析
 -   操作系统中的文件夹
 
@@ -695,9 +695,9 @@ class DoublyLinkedList {
 
 二叉树的一个重要使用场景是搜索。用于搜索的二叉树被称为**二叉查找树（BST）**。
 
-BST和普通二叉树类似，只是内部的数据结构被排列成易于搜索的结构。
+BST 和普通二叉树类似，只是内部的数据结构被排列成易于搜索的结构。
 
-在BST中的值是排过序的，所有节点的左子节点的值要小于父节点，所有节点的右子节点的值要大于父节点。
+在 BST 中的值是排过序的，所有节点的左子节点的值要小于父节点，所有节点的右子节点的值要大于父节点。
 
 ![download--1-](https://www.freecodecamp.org/news/content/images/2022/05/download--1-.png)
 
@@ -712,11 +712,11 @@ BST和普通二叉树类似，只是内部的数据结构被排列成易于搜�
 -   如果比根节点小，则检查左边是否有节点，并重复上面的步骤；如果左边没有节点，则将这个节点在当下位置添加或者删除
 -   如果比根节点大，则检查右边有没有节点，并重复上述步骤；如果有变没有节点，则将这个节点在当下位置添加或者删除
 
-在BST中查找与上述方法类似，但是没有添加或者删除值，取而代之的是与节点比较我们搜寻的值的大小。
+在 BST 中查找与上述方法类似，但是没有添加或者删除值，取而代之的是与节点比较我们搜寻的值的大小。
 
-树的**大O**复杂度呈**对数（log（n））**。但是需要注意的是，想要实现这样的时间复杂度，必须保证树结构的每一步都是左右对称的，这样我们才可以在搜索的过程中“丢弃”一半的数据。如果在任意一边存储的值更多，树结构的搜索效率就会打折扣。
+树的**大 O**复杂度呈**对数（log（n））**。但是需要注意的是，想要实现这样的时间复杂度，必须保证树结构的每一步都是左右对称的，这样我们才可以在搜索的过程中“丢弃”一半的数据。如果在任意一边存储的值更多，树结构的搜索效率就会打折扣。
 
-实现BST的方法如下：
+实现 BST 的方法如下：
 
 ```javascript
 // 我们创建树的节点
@@ -836,7 +836,7 @@ class BinarySearchTree {
 
 如果节点之间没有的关联没有定义方向，我们就称这个图为无向图。
 
-在下图中我们可以看到节点2和节点3之间的关联没有方向性，我们可以从节点2到节点3，也可以从节点3到节点2。无定向意味着节点间的连接是双向的。
+在下图中我们可以看到节点 2 和节点 3 之间的关联没有方向性，我们可以从节点 2 到节点 3，也可以从节点 3 到节点 2。无定向意味着节点间的连接是双向的。
 
 ![Undirected_graph.svg](https://www.freecodecamp.org/news/content/images/2022/05/Undirected_graph.svg.png)
 
@@ -844,7 +844,7 @@ class BinarySearchTree {
 
 你可能已经猜出来了，有向图就是完全相反的。让我们再次使用上面的图，这时节点之间的连接是有固定方向的。
 
-在这幅图中，你可以由节点A到节点B，但是不能从节点B到节点A。
+在这幅图中，你可以由节点 A 到节点 B，但是不能从节点 B 到节点 A。
 
 ![images-1](https://www.freecodecamp.org/news/content/images/2022/05/images-1.png)
 
@@ -854,7 +854,7 @@ class BinarySearchTree {
 
 如果节点之间的连接被分配了权重，我们就称其为加权图。权重仅分配给了节点之间的连接，仅和连接相关，不和节点相关。
 
-在下面的例子中我们可以看到，节点0和节点4之间连接的权重时7；而节点3和节点1之间的权重是4.
+在下面的例子中我们可以看到，节点 0 和节点 4 之间连接的权重时 7；而节点 3 和节点 1 之间的权重是 4.
 
 ![1_P68VQPcnFXBo9XlA4pDNrg](https://www.freecodecamp.org/news/content/images/2022/05/1_P68VQPcnFXBo9XlA4pDNrg.png)
 
@@ -885,7 +885,7 @@ class BinarySearchTree {
 
 <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout:fixed;font-size:10pt;font-family:Arial;width:0px;border-collapse:collapse;border:none"><colgroup><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"></colgroup><tbody><tr style="height:21px;"><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}">-</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr></tbody></table>
 
-矩阵可以用表格来表示，列和行来代表图里的节点，单元格内的值表示节点之间连接，如果单元格的值为1，则表示该位置的行和列是相关联的，如果是0，则表示没有联系。
+矩阵可以用表格来表示，列和行来代表图里的节点，单元格内的值表示节点之间连接，如果单元格的值为 1，则表示该位置的行和列是相关联的，如果是 0，则表示没有联系。
 
 这个表格可以用简单的二维数组来表示：
 
@@ -923,7 +923,7 @@ class BinarySearchTree {
 
 <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout:fixed;font-size:10pt;font-family:Arial;width:0px;border-collapse:collapse;border:none"><colgroup><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"></colgroup><tbody><tr style="height:21px;"><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}">-</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr></tbody></table>
 
-但是在列表中，我们只需要在B的连接数组中添加一个值，以及再添加一个代表E的键值对就够了：
+但是在列表中，我们只需要在 B 的连接数组中添加一个值，以及再添加一个代表 E 的键值对就够了：
 
 ```javascript
 {
@@ -935,11 +935,11 @@ class BinarySearchTree {
 }
 ```
 
-现在假设我们需要验证B和E之间是否存在连接，在矩阵中检查就非常简单，因为我们知道节点间关联的位置位于哪个单元格。
+现在假设我们需要验证 B 和 E 之间是否存在连接，在矩阵中检查就非常简单，因为我们知道节点间关联的位置位于哪个单元格。
 
 <table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" cellpadding="0" dir="ltr" border="1" style="table-layout:fixed;font-size:10pt;font-family:Arial;width:0px;border-collapse:collapse;border:none"><colgroup><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"><col width="52"></colgroup><tbody><tr style="height:21px;"><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;-&quot;}">-</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-top:1px solid #000000;border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;A&quot;}">A</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;B&quot;}">B</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#ffff00;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;C&quot;}">C</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;D&quot;}">D</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr><tr style="height:21px;"><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;border-left:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;background-color:#efefef;font-weight:bold;" data-sheets-value="{&quot;1&quot;:2,&quot;2&quot;:&quot;E&quot;}">E</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:1}">1</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td><td style="border-right:1px solid #000000;border-bottom:1px solid #000000;overflow:hidden;padding:2px 3px 2px 3px;vertical-align:bottom;text-align:right;" data-sheets-value="{&quot;1&quot;:3,&quot;3&quot;:0}">0</td></tr></tbody></table>
 
-但如果是在列表中，我们不能马上得出结论，必须先遍历所有和B的连接相关的数组，来查看是否有E。通过这个例子你就了解了两种形式的优劣了。
+但如果是在列表中，我们不能马上得出结论，必须先遍历所有和 B 的连接相关的数组，来查看是否有 E。通过这个例子你就了解了两种形式的优劣了。
 
 邻接列表的完全实现如下，我们把图限定在无向和无权重，来简化代码：
 

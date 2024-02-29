@@ -5,7 +5,7 @@
 
 ![How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/cover-2.png)
 
-### 如果你是一个工作繁忙的开发人员，那么本文将是你构建安全的应用程序体系架构的一个很好的起点。
+### 如果你是一个工作繁忙的开发人员，那么本文将是你构建安全的应用程序体系架构的一个很好的起点
 
 与过去相比，如今的开发人员可以更专注于构建软件，这是一件好事儿。
 
@@ -78,7 +78,7 @@ application/
 
 尽管花费时间进行定制化会影响生产率，但配置的设置还是你需要进行定制化的部分。
 
-[安全性配置错误][4]被列举在 OWASP Top 10中。大量的安全时间的发生都是由于服务器、防火墙或者管理员账号的相关信息以默认配置运行在生产环境中。在实际的工作中，你也要格外注意这些安全隐患。
+[安全性配置错误][4]被列举在 OWASP Top 10 中。大量的安全时间的发生都是由于服务器、防火墙或者管理员账号的相关信息以默认配置运行在生产环境中。在实际的工作中，你也要格外注意这些安全隐患。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/09/defaultkey.png)
 

@@ -3,7 +3,7 @@
 > -   译者：ZhichengChen
 > -   校对者：
 
-嘿，你好吗？ 我今年18岁，是一名后端开发人员，希望成为机器学习工程师。 在本文中，我会介绍如何使用 Python😁在手机上构建 Web 应用程序。 开始吧。
+嘿，你好吗？ 我今年 18 岁，是一名后端开发人员，希望成为机器学习工程师。 在本文中，我会介绍如何使用 Python😁在手机上构建 Web 应用程序。 开始吧。
 
 ![](https://lh3.googleusercontent.com/TW_PdXBpgeWY4mLcHjFisp8e7Lk7Zsn1aFarXBkmvhEMP0XR5xzTDxhKcCizsrJ25rkPeMeWp7ctlG0Wy7_WFUS0bzT-JVJfpe6X_3OqnuE_df2q5B3KIrhl3EG47w3Dik3nIZE "Placeholder image")
 
@@ -17,7 +17,7 @@
 
 如你所见，pydroid3 是一个可在手机上编写 Python 的移动应用程序，因此请继续安装它。
 
-接下来需要安装 Django。 如果你不熟悉Django，请查看[此处的 Django 文档](https://www.djangoproject.com/)。
+接下来需要安装 Django。 如果你不熟悉 Django，请查看[此处的 Django 文档](https://www.djangoproject.com/)。
 
 要安装 Django，在 pydroid3 中打开侧边栏，然后选择 Terminal：
 
@@ -125,7 +125,7 @@ def index(request):
 
 如你所见，我们创建了在 `urls.py` 中调用的索引函数，并将一个请求参数传递给了它。 然后我们返回一个 `HttpResponse`。
 
-但是之前，需要用 `django.http import HttpResponse` 导入它 - 就像ABC一样简单。让我们尝试一下：打开终端并进入 myapp，然后输入 `python manage.py runserver` 进行测试。
+但是之前，需要用 `django.http import HttpResponse` 导入它 - 就像 ABC 一样简单。让我们尝试一下：打开终端并进入 myapp，然后输入 `python manage.py runserver` 进行测试。
 
 ![](https://lh3.googleusercontent.com/Tqb7c-adOuVHbyi-7XBQsv0HHJvxjUhcAZ3N4d5nkOEVNVwfSXxkENlD0l0UI3Jd4qLhO3k8ELDW6yG8yRiP0MmjkO0Q4TvGTYunQIBNgSMNrXxfI7ygMHeN2FtjoJc37mVIVr0)
 
@@ -158,7 +158,7 @@ def index(request):
 
 ## 如何设置静态文件
 
-现在要设置静态文件，在 todo 目录中创建一个新文件夹并将其命名为 static。 在该文件夹内，创建一个文件夹并将其命名为todo。
+现在要设置静态文件，在 todo 目录中创建一个新文件夹并将其命名为 static。 在该文件夹内，创建一个文件夹并将其命名为 todo。
 
 所以应该是这样的：`/static/todo/`。
 
@@ -232,7 +232,7 @@ class Post(models.Model):
 
 我们创建一个具有参数 `models.Model` 的类，并定义了一个变量 `content`，该变量包含一个 `CharField()`，更像是一个文本字段。 最后，我们创建了一个神奇的 `str`，它返回模型的名称而不是对象。
 
-接下来需要运行 migration。 打开终端，进入myapp，然后输入`python manage.py makemigrations`。 应该会看到以下内容：
+接下来需要运行 migration。 打开终端，进入 myapp，然后输入`python manage.py makemigrations`。 应该会看到以下内容：
 
 ![](https://lh6.googleusercontent.com/UBbVNNg1d8jhPTusB-HRRoUsqFfxaZdJLzSIzNIt3P4kby8Tor4G8Bme1e-yq8mOLFgfrUh3nb6MC3BSaOUQDr68_tEmIRtQBS7N7Y66wTbXdMMg-0EJ0svM3tw3j9GLgquC_IU)
 

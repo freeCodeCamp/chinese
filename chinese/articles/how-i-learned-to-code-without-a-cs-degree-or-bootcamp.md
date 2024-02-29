@@ -14,7 +14,7 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2020/12/hiltc-1.JPG)
 
-## 编程曾经只是一个兴趣而已...
+## 编程曾经只是一个兴趣而已
 
 应该可以从高中说起，我在那时候发现网络世界，自学了基础的 HTML 和 CSS。当时的我只是觉得好玩。
 

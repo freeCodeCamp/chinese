@@ -59,7 +59,7 @@ function reverseString(str) {
 reverseString('hello');
 ```
 
-#### 三个方法组合形成链式调用:
+#### 三个方法组合形成链式调用
 
 ```js
 function reverseString(str) {
@@ -99,7 +99,7 @@ function reverseString(str) {
 reverseString('hello');
 ```
 
-#### 删除注释:
+#### 删除注释
 
 ```js
 function reverseString(str) {
@@ -155,7 +155,7 @@ function reverseString(str) {
 
 ```
 
-#### 删除注释:
+#### 删除注释
 
 ```js
 function reverseString(str) {
@@ -165,7 +165,7 @@ function reverseString(str) {
 reverseString('hello');
 ```
 
-#### 使用三元表达式:
+#### 使用三元表达式
 
 ```js
 function reverseString(str) {

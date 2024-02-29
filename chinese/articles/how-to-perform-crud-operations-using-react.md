@@ -1,77 +1,77 @@
 > -  原文地址：[How to Perform CRUD Operations using React, React Hooks, and Axios](https://www.freecodecamp.org/news/how-to-perform-crud-operations-using-react/)
 > -  原文作者：[Nishant Kumar](https://www.freecodecamp.org/news/author/nishant-kumar/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![How to Perform CRUD Operations using React, React Hooks, and Axios](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/React-CRUD-Operations-using-React-and-React-Hooks.png)
+![如何使用 React、React Hooks 和 Axios 执行 CRUD 操作](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/React-CRUD-Operations-using-React-and-React-Hooks.png)
 
-If you're working with React, it can be quite difficult to understand and implement API Requests.
+如果你正在使用 React，理解和实现 API 请求可能是相当困难的
 
-So in this article, we'll learn how it all works by implementing CRUD Operations using React, React Hooks, React Router, and Axios.
+所以在这篇文章中，我们将通过使用 React、React Hooks、React Router 和 Axios 实现 CRUD 操作来学习这一切。
 
-Let's dive in.
+让我们深入了解一下。
 
-## **How to Install Node and npm**
+## **如何安装 Node 和 npm**
 
-First of all, let's install Node in our system. We'll mainly use it to execute our JavaScript code.
+首先，让我们在系统中安装 Node。我们将主要用它来执行我们的 JavaScript 代码。
 
-To download Node, go to [https://nodejs.org/en/](https://nodejs.org/en/).
+去官方网站下载 Node,  [https://nodejs.org/en/](https://nodejs.org/en/).
 
-You'll also need **the node package manager**, or npm, which is built on Node. You can use it to install packages for your JavaScript apps. Fortunately it comes with Node, so you don't need to download it separately.
+你还需要**node 包管理器**，如 npm，它是内建在 Node 上的。你可以用它来为你的 JavaScript 应用程序安装包。幸运的是，Node 自带 npm，所以你不需要单独下载它。
 
-Once both of them are finished, open your terminal or command prompt and type `node -v`. This checks which version of Node you have.
+一旦它们都完成了，打开你的终端或命令提示符，输入`node -v`。这将检查你有哪个版本的 Node。
 
-## **How to Create your React Application**
+## **如何创建你的 React 应用**
 
-To create your React application, type ****`npx create-react-app <Your app name>`**** in your terminal, or **`**npx create-react-app**react-crud`** in this case.
+为了创建你的 React 应用，在终端输入 ****`npx create-react-app <你的应用程序名称>`****， 或者**`npx create-react-app**react-crud`**在本例中。
 
-You'll see that the packages are being installed.
+你会看到软件包正在被安装。
 
-Once the packages are done, go into the project folder and type ****`npm start`****.
+一旦软件包安装完毕，进入项目文件夹，输入`npm start`。
 
-You'll see the default React template, like this:
+你会看到默认的 React 模板，像这样。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-124754.png)
 
-The default React Boilerplate Template
+默认的 React Boilerplate 模板
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-124858.png)
 
-Our App.js file
+我们的 App.js 文件
 
-## **How to Install the Semantic UI Package for React**
+## **如何为 React 安装 Semantic UI 包(库)**
 
-Let's install the Semantic UI React package in our project. Semantic UI is an UI library made for React that has pre-built UI components like tables, buttons, and many features.
+让我们在我们的项目中安装 Semantic UI React 软件包。Semantic UI 是一个为 React 制作的 UI 库，它有预建的 UI 组件，比如表格、按钮和许多功能。
 
-You can install it using one of the commands below, depending on your package manager.
+你可以使用下面的一个命令来安装它，这取决于你的包管理器。
 
 ```bash
 yarn add semantic-ui-react semantic-ui-css
 ```
 
-For Yarn Package Manager
+对于使用 Yarn 包管理器
 
 ```bash
 npm install semantic-ui-react semantic-ui-css
 ```
 
-For NPM package Manager
+对于使用 NPM 包管理器
 
-Also, import the library in your app's main entry file, which is index.js.
 
+同时，在你的应用程序的主入口文件中导入该库，也就是 index.js。
 ```js
 import 'semantic-ui-css/semantic.min.css'
 ```
 
-Paste this in your index.js file
+在你的 index.js 文件中粘贴上面一行内容。
 
-## **How to Build your CRUD Application**
+## **如何构建你的 CRUD 应用**
 
-Now, let's start building our CRUD Application using React.
+现在，让我们开始使用 React 构建我们的 CRUD 应用。
 
-First, we'll add a heading to our application.
+首先，我们要给我们的应用程序添加一个标题。
 
-In our app.js file, add a heading like this:
+在我们的 app.js 文件中，添加一个标题，像这样。
 
 ```
 import './App.css';
@@ -87,11 +87,11 @@ function App() {
 export default App;
 ```
 
-Adding a heading to our application
+在我们的应用程序中添加一个标题
 
-Now, let's make sure it's in the center.
+现在，让我们确保它居中。
 
-Give the parent div a classname of main. And in the App.css file, we will use Flexbox to center the header.
+给父级 div 一个 classname，即 main。在 App.css 文件中，我们将使用 Flexbox 来使标题居中。
 
 ```
 import './App.css';
@@ -107,7 +107,7 @@ function App() {
 export default App;
 ```
 
-app.js with className of main in the parent div
+app.js 文件，在父 div 中的 className 为 main 的 css 定义。
 
 ```
 .main{
@@ -118,13 +118,13 @@ app.js with className of main in the parent div
 }
 ```
 
-Our app.css file
+我们的 app.css 文件
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-130340.png)
 
-Now our heading in perfectly centered.
+现在我们的标题已经完全居中了。
 
-So it looks a bit better, we need to make it bolder and add some cool fonts. To do this, we'll use heading tags around our header like this:
+为了让它看起来更好一些，我们需要使它更大胆，并添加一些很酷的字体。要做到这一点，我们将在我们的标题周围使用标题标签，像这样。
 
 ```
 import './App.css';
@@ -140,27 +140,26 @@ function App() {
 export default App;
 ```
 
-Let's import a font from Google Font. Bead over to [https://fonts.google.com/](https://fonts.google.com/) to pick one.
+让我们从 Google Font 导入一种字体. 从 [https://fonts.google.com/](https://fonts.google.com/)选择一种。
 
-Choose any font of your liking, but I will use the Montserrat font-family.
+选择任何你喜欢的字体，但我将使用 Montserrat 字体家族。
 
-Import the font of your choice in the App.css file, like this:
+在 App.css 文件中导入你选择的字体，像这样。
 
 ```
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 ```
 
-Now, let's change the font of the header.
+现在，让我们改变标题的字体。
 
 ```
 <div className="main">
       <h2 className="main-header">React Crud Operations</h2>
     </div>
 ```
+给 `h2`一个 `lassName` 为 `main-header`，就像上面。
 
-Give the heading tag a `lassName` of `main-header`, just like this.
-
-Then, in your App.css, add the font family:
+然后, 在你的 App.css 文件, 添加 font family:
 
 ```
 .main-header{
@@ -170,67 +169,67 @@ Then, in your App.css, add the font family:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-132749.png)
 
-Now you will see the changed heading.
+现在你会看到改变后的标题。
 
-## How to Create your CRUD Components
+## 如何创建你的 CRUD 组件
 
-Let's create four CRUD Components, which will be Create, Read, Update and Delete.
+让我们创建四个 CRUD 组件，它们将是创建、读取、更新和删除。
 
-In our src folder, create a folder called components. And inside this folder, create three files – create, read and update. For delete, we don't need any extra component.
+在我们的 src 文件夹中，创建一个名为组件的文件夹。在这个文件夹中，创建三个文件--创建、读取和更新。对于删除，我们不需要任何额外的组件。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133242.png)
 
-Now, let's implement the Create operation.
+现在，让我们来实现这些。
 
-But for that, we need to use Mock API's. These API's will send data to the fake server that we will create, just for learning purposes.
+但为此，我们需要使用 Mock API。这些 API 将向我们将要创建的假服务器发送数据，这只是为了学习的目的。
 
-So, head to [https://mockapi.io/](https://mockapi.io/) and create your account.
+所以, 请前往 [https://mockapi.io/](https://mockapi.io/)，创建账号。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133456.png)
 
 MockAPI
 
-Create a project by clicking the plus button.
+通过点击`(plus)加号`按钮创建一个项目。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133553.png)
 
-Click the plus button to create a new project
+点击`(plus)加号`按钮，创建一个新的项目。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133702.png)
 
-Add your project name, and click the Create button.
+添加你的项目名称，然后点击`(create)创建`按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133748.png)
 
-Now, create a new resource by clicking on the NEW RESOURCE button.
+现在，通过点击 `(NEW RESOURCE)新资源` 按钮创建一个新资源。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-133847.png)
 
-It will ask you for the Resource Name, so enter the name you'd like to use.
+它将要求你提供`(RESOURCE name)资源名称`，所以输入你想使用的名称。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134009.png)
 
-Remove the extra fields like name, avatar, or createdAt, because we won't be needing those. Then, click Create.
+删除额外的字段，`如姓名(name)、头像(avatar)或创建时间(createdAt）`，因为我们将不需要这些。然后，点击`创建(create)`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134140.png)
 
-Now, we have created our fake API, which I named fakeData.
+现在，我们已经创建了我们的 `fake API(假API)`，我把它命名为 fakeData。
 
-Click on fakeData, and you will see the API opening up in a new tab. The database is empty right now.
+点击 fakeData，你会看到 API 在一个新的标签中打开。现在的数据库是空的。
 
-## How to Create a Form for the Create Component
+## 如何为(create Component)创建组件创建一个表格
 
-Let's use a form from the Semantic UI library.
+让我们使用 Semantic UI 库中的一个表单。
 
-Head to Semantic React, and search for Form in the search bar on the left.
+前往 Semantic React，在左边的搜索栏中搜索 Form。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134532.png)
 
-You will see a form like this, so click on Try it at the top left to get the code.
+你会看到一个像这样的表格，点击左上方的 `试试(Try it)`，就可以得到代码。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-134654.png)
 
-Copy this code and paste it into your Create.js file like this:
+复制这段代码并将其粘贴到你的 Create.js 文件中，像这样。
 
 ```
 import React from 'react'
@@ -256,7 +255,7 @@ const Create = () => (
 export default Create;
 ```
 
-Import the Create Component in your app.js file.
+在你的 app.js 文件中导入创建组件(Create Component)。
 
 ```
 import './App.css';
@@ -276,13 +275,13 @@ function App() {
 export default App;
 ```
 
-Just like this:
+就像这样。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-135249.png)
 
-But there is a problem here – the items are not properly aligned and the text input label colors are black. So, let's change it.
+但这里有一个问题--项目没有正确对齐，文本输入标签颜色是黑色的。所以，让我们来改变它。
 
-In the create.js file, give **Form** a className of `create-form`.
+在 create.js 文件中，给**Form**一个`create-form`的 className。
 
 ```
 import React from 'react'
@@ -310,7 +309,7 @@ export default Create;
 
 app.js
 
-And add the following class in your App.css file:
+并在你的 App.css 文件中添加以下类。
 
 ```
 .create-form label{
@@ -322,9 +321,9 @@ And add the following class in your App.css file:
 
 App.css
 
-This class will target all the form field labels and apply the color whitesmoke. It will also change the font and increase the font-size.
+这个类将针对所有的表格字段标签并应用白烟的颜色。它还将改变字体并增加字体大小。
 
-Now, in our main `className`, add a flex-direction property. This property will set the direction to column, so each element in the main `className` will be horizontally aligned.
+现在，在我们的主`className`中，添加一个 flex-direction 属性。这个属性将设置方向为列，所以主`className`中的每个元素都将水平对齐。
 
 ```
 .main{
@@ -342,17 +341,17 @@ App.css
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-140141.png)
 
-You can see that our form looks much better now.
+你可以看到，我们的表单现在看起来好多了。
 
-Next, let's get data from the form fields into our console. For that, we will use the `useState` hook in React.
+接下来，让我们从表单字段中获取数据到我们的控制台(console)。为此，我们将使用 React 的`useState`钩子。
 
-In our create.js file, import `useState` from React.
+在我们的 create.js 文件中，从 React 中导入`useState`。
 
 ```
 import React, { useState } from 'react';
 ```
 
-Then, create states for first name, last name, and the checkbox. We are initializing the states as empty or false.
+然后，为名字(first name)、姓氏(last name)和复选框(checkbox)创建状态。我们将这些状态初始化为空或假。
 
 ```
 import React, { useState } from 'react';
@@ -383,9 +382,9 @@ export default function Create() {
 }
 ```
 
-You can see that this is now acting as a functional component. So, we need to change the component into a functional component. This is because we can only use hooks in functional components.
+你可以看到，这现在是作为一个功能组件。所以，我们需要把这个组件改成一个功能组件。这是因为我们只能在功能组件中使用钩子。
 
-Now, let's set up the first name, the last name, and the checkbox using the `setFirstName`, `setLastName`, and `setCheckbox` properties, respectively.
+现在，让我们分别使用`setFirstName`、`setLastName`和`setCheckbox`属性来设置名字、姓氏和复选框。
 
 ```
 <input placeholder='First Name' onChange={(e) => setFirstName(e.target.value)}/>
@@ -395,9 +394,9 @@ Now, let's set up the first name, the last name, and the checkbox using the `set
 <Checkbox label='I agree to the Terms and Conditions' onChange={(e) => setCheckbox(!checkbox)}/>
 ```
 
-We are capturing the states of first name, last name, and the checkbox.
+我们正在获得名字(first name)、姓氏(last name)和复选框(checkout)的状态。
 
-Create a function called `postData` that we'll use to send data to the API. Inside the function, write this code:
+创建一个名为`postData`的函数，我们将用它来向 API 发送数据。在该函数中，写下这段代码。
 
 ```
 const postData = () => {
@@ -407,15 +406,15 @@ const postData = () => {
 }
 ```
 
-We are logging the first name, last name, and the checkbox values in the console.
+我们在控制台中打印出名字(firstName)、姓氏(lastName)和复选框(checkbox)的值。
 
-On the Submit button, assign this function using an onClick event so that whenever we press the Submit Button, this function will be called.
+在(Submit button)提交按钮上，使用 onClick 事件调用这个函数，这样，每当我们按下提交按钮，这个函数就会被调用。
 
 ```
 <Button onClick={postData} type='submit'>Submit</Button>
 ```
 
-Here is the whole code for the _create_ file:
+这里是 _create_ 文件的全部代码。
 
 ```
 import React, { useState } from 'react';
@@ -451,31 +450,31 @@ export default function Create() {
 }
 ```
 
-Type some value in the first name and last name, and check the checkbox. Then, click the Submit button. You will see the data popping up in the console like this:
+在名字和姓氏中输入一些数值，并勾选复选框。然后，点击提交按钮。你会看到控制台中打印出的数据是这样的。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-142717.png)
 
-## How to Use Axios to Send API Requests to the Mock APIs
+## 如何使用 Axios 向 Mock APIs 发送请求
 
-Let's use Axios to send our form data to the mock server.
+让我们使用 Axios 来发送我们的表单数据到模拟服务器。
 
-But first, we need to install it.
+但首先，我们需要安装它。
 
-Just type `npm i axios` to install this package.
+只要输入`npm i axios`来安装这个包。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-174213.png)
 
-After the package has been installed, let's start the create operation.
+软件包安装完毕后，让我们开始(create)创建操作。
 
-Import Axios at the top of the file.
+在文件的顶部导入 Axios。
 
 ```
 import axios from 'axios';
 ```
 
-Importing Axios
+导入 Axios
 
-In the `postData` function, we will use Axios to send the POST request.
+在`postData`函数中，我们将使用 Axios 来发送 POST 请求。
 
 ```
 const postData = () => {
@@ -487,35 +486,35 @@ const postData = () => {
     }
 ```
 
-Sending Post Request
+发送 Post 请求
 
-As you can see, we are using axios.post. And inside axios.post, we have the API endpoint, which we created earlier. Then, we have the form fields wrapped in curly brackets.
+如你所见，我们正在使用 axios.post。在 axios.post 中, 我们有 API endpoint(接入点 请求地址), 这是我们之前创建的。然后，我们有被大括号包裹的表单字段。
 
-When we click Submit, this function will be called and it will post data to the API server.
+当我们点击提交时，这个函数将被调用，它将向 API 服务器发布数据。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-174834.png)
 
-Enter your first name, last name, and check the checkbox. Click submit.
+输入你的名字(first name)，姓氏(last name)，并勾选复选框。点击提交。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-174930.png)
 
-Then if you check the API, you will get your first name, last name, and the checkbox as true, wrapped in an object.
+然后，你检查这个 API 的返回值，你会得到你的名字、姓氏，复选框为真的值，被包裹在一个对象中。
 
-## How to Implement the Read and Update Operations
+## 如何实现读取和更新操作
 
-To start the read operation, we need to create a Read Page. We also need the React Router package to navigate to different pages.
+为了开始(read)读取操作，我们需要创建一个读取页面。我们还需要 React Router 包来导航到不同的页面。
 
-Go to [https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start) and install the package using `npm i react-router-dom`.
+前往[https://reactrouter.com/web/guides/quick-start](https://reactrouter.com/web/guides/quick-start)查看文档，同时运行 `npm i react-router-dom`进行安装。
 
-After it has been installed, import a few things from React Router:
+安装完毕后，从 React Router 导入一些东西:
 
 ```
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 ```
 
-Importing Router and Route from React Router
+从`React Router`中导入`Router`和`Route`。
 
-In our App.js, wrap the whole return into a Router. This basically means that whatever is inside this Router will be able to use routing in React.
+在我们的 App.js 中，把整个返回包成一个 Router。这基本上意味着，无论这个 Router 里面有什么，都能在 React 中使用。
 
 ```
 import './App.css';
@@ -538,9 +537,9 @@ function App() {
 export default App;
 ```
 
-Our App.js will look like the above now.
+我们的 App.js 现在看起来会像上面的样子。
 
-Replace the Create inside the return and add the following code:
+替换掉返回里面的 Create，并添加以下代码。
 
 ```
 import './App.css';
@@ -563,9 +562,9 @@ function App() {
 export default App;
 ```
 
-Here, we are using the Route component as Create. We have set the path of Create to '/create'. So, if we go [http://localhost:3000/create](http://localhost:3000/create), we will see the create page.
+在这里，我们使用 Route 组件作为 Create。我们已经将 Create 的路径设置为'/create'。因此，如果我们进入[http://localhost:3000/create](http://localhost:3000/create)，我们将看到创建页面。
 
-Similarly, we need routes for read and update.
+同样地，我们需要(read)读取和(update)更新的路由。
 
 ```
 import './App.css';
@@ -595,21 +594,21 @@ function App() {
 export default App;
 ```
 
-So create the read and update routes just like you see above.
+因此，(read)读取和(update)更新路由，类似你上面看到的。
 
-And if you go to [http://localhost:3000/read](http://localhost:3000/read), you will see the following:
+如果你前往 [http://localhost:3000/read](http://localhost:3000/read), 会看到下面的:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-180318.png)
 
 Read Route
 
-And on [http://localhost:3000/update](http://localhost:3000/update), we will see Update Component like this:
+在[http://localhost:3000/update](http://localhost:3000/update) 网址,我们可以看到 (更新组件)Update Component 像这样:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-180440.png)
 
-### The Read Operation
+### 读取操作
 
-For the Read operation, we will need a Table component. So, head over to React Semantic UI and use a table from the library.
+对于读取操作，我们将需要一个表组件。因此，前往 React Semantic UI，并使用库中的一个表。
 
 ```
 import React from 'react';
@@ -655,7 +654,7 @@ export default function Read() {
 
 Read.js
 
-Here, you can see we have a table with some dummy data. But we only need one Table Row. So, let's remove the rest.
+在这里，你可以看到我们有一个带有一些假数据(dummy data)的表。但我们只需要一个表行。所以，让我们删除其他的。
 
 ```
 import React from 'react';
@@ -691,13 +690,13 @@ Read.js
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-182905.png)
 
-This is the output of the Read page. We have a table with four columns, but we only need three.
+这是 "阅读 "页面的输出。我们有一个有四列的表，但我们只需要三列。
 
-Remove the extra field columns and rename the fields like this:
+删除多余的字段列，并像这样重新命名字段。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-183105.png)
 
-This is how our Read Page looks now:
+这就是我们的阅读页面现在的样子:
 
 ```
 import React from 'react';
@@ -729,9 +728,9 @@ export default function Read() {
 
 Read.js
 
-Now, let's send the GET Request to get the data from the API.
+现在，让我们发送 GET 请求，从 API 获得数据。
 
-We need the data when our application loads. So, we are going to use the `useEffect` Hook.
+当我们的应用程序加载时，我们需要这些数据。所以，我们要使用`useEffect`钩子(hook)。
 
 ```
 import React, { useEffect } from 'react';
@@ -741,9 +740,9 @@ import React, { useEffect } from 'react';
  }, [])
 ```
 
-The useEffect Hook
+useEffect 钩子(hook)
 
-Create one state that will contain the incoming data. This will be an array.
+创建一个包含传入数据的状态。这将是一个数组。
 
 ```
 import React, { useEffect, useState } from 'react';
@@ -754,9 +753,9 @@ useEffect(() => {
 }, [])
 ```
 
-APIData state to store API incoming data
+APIData state 来存储 API 传入的数据
 
-In the `useEffect` Hook, let's send the GET Request.
+在`useEffect`钩子(hook)中，让我们发送 GET 请求。
 
 ```
  useEffect(() => {
@@ -767,11 +766,11 @@ In the `useEffect` Hook, let's send the GET Request.
     }, [])
 ```
 
-So, we are using axios.get to send the GET request to the API. Then, if the request is fulfilled, we are setting the response data in our _APIData_ state.
+因此，我们使用 axios.get 来向 API 发送 GET 请求。然后，如果请求被满足，我们就在我们的_APIData_状态中设置响应数据。
 
-Now, let's map our Table rows according to the API Data.
+现在，让我们根据 API 数据来映射我们的表行。
 
-We are going to use the Map function to do this. It will iterate over the array and display the data in the output.
+我们将使用 Map 函数来做这件事。它将对数组进行迭代，并在输出中显示数据。
 
 ```
 <Table.Body>
@@ -786,15 +785,15 @@ We are going to use the Map function to do this. It will iterate over the array 
 </Table.Body>
 ```
 
-We are mapping our firstName, lastName, and checkbox according the data in the API. But our checkbox is a little bit different. I have used a Ternary Operator ('?') here. If the data.checkbox is true, the output will be Checked, or else it will be Unchecked.
+我们根据 API 中的数据来映射 firstName、lastName 和 checkbox。但我们的复选框有一点不同。我在这里使用了一个三元操作符（'?'）。如果 data.checkbox 为真，输出将是 Checked，否则将是 Unchecked。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-184955.png)
 
 Read.js Output
 
-### The Update Operation
+### 更新(Update)操作
 
-Create one more header for Update and one column in the table row for an update button. Use the button from Semantic UI React.
+再为更新创建一个标题，并在表行中为更新按钮创建一列。使用 Semantic UI React 的按钮。
 
 ```
 <Table.HeaderCell>Update</Table.HeaderCell>
@@ -804,11 +803,11 @@ Create one more header for Update and one column in the table row for an update 
 </Table.Cell>
 ```
 
-Creating Update Button
+创建(Update)更新按钮
 
-Now, when we click this button, we should be redirected to the update page. For that, we need Link from React Router.
+现在，当我们点击这个按钮，我们应该被重定向到更新页面。为此，我们需要 React Router 的链接。
 
-Import Link from React Router. And wrap the table cell for the update button into Link tags.
+从 React Router 导入 Link。并将更新按钮的表格单元格包装成 Link 标签。
 
 ```
 import { Link } from 'react-router-dom';
@@ -820,25 +819,25 @@ import { Link } from 'react-router-dom';
 </Link>
 ```
 
-Link for Update Button
+为更新按钮添加链接(Link)
 
-So, if we click update button, we will be redirected to the update page.
+因此，如果我们点击更新按钮，我们将被重定向到更新页面。
 
-In order to update the column data, we need their respective ID's, which comes from the APIs.
+为了更新列的数据，我们需要它们各自的 ID，这从 APIs 获得。
 
-Create a function called `setData`. Bind it to the Update button.
+创建一个名为 "setData "的函数。将其绑定到更新按钮上。
 
 ```
  <Button onClick={() => setData()}>Update</Button>
 ```
 
-Now, we need to pass the data as a parameter to the top function.
+现在，我们需要将数据作为参数传递给上面的函数。
 
 ```
  <Button onClick={() => setData(data)}>Update</Button>
 ```
 
-And in the function at the top, log this data in the console:
+并在上面的的函数中，在控制台中打印这些数据。
 
 ```
 const setData = (data) => {
@@ -850,9 +849,9 @@ const setData = (data) => {
 
 Data in the console
 
-Click the update button in the table, and check the console. You will get the data of the respective table field.
+点击表中的更新按钮，并查看控制台。你会得到相应表字段的数据。
 
-Let's set this data into the localStorage.
+让我们把这些数据设置到 localStorage 中。
 
 ```
 const setData = (data) => {
@@ -864,11 +863,11 @@ const setData = (data) => {
 }
 ```
 
-Setting data in the Local Storage
+在本地存储中(Local Storage)设置数据
 
-We are destructuring our data into id, firstName, lastName, and checkbox, and then we are setting this data into local storage. You can use local storage to store data locally in the browser.
+我们正在将我们的数据解构为 id、firstName、lastName 和 checkbox，然后我们将这些数据设置到本地存储(Local Storage)。你可以使用本地存储(Local Storage)来在浏览器中的存储数据。
 
-Now, in the Update component, we need one form for the update operation. Let's reuse the form from our Create component. Just change the name of the function from Create to Update.
+现在，在更新组件中，我们需要一个表单来进行更新操作。让我们复制(reate component)创建组件中的表单。只要把函数的名称从 Create 改为 Update。
 
 ```
 import React, { useState } from 'react';
@@ -903,7 +902,7 @@ export default function Update() {
 
 Our update Page
 
-Create a `useEffect` hook in the Update component. We will use it to get data we previously stored in Local Storage. Also, create one more state for the ID field.
+在 Update 组件中创建一个`useEffect'钩子(hook)。我们将用它来获取我们之前存储在本地存储的数据。同时，为 ID 字段再创建一个状态(state)。
 
 ```
 const [id, setID] = useState(null);
@@ -916,7 +915,7 @@ useEffect(() => {
 }, []);
 ```
 
-Set the respective data according to your keys from Local Storage. We need to set these values in form fields. It will automatically populate the fields when the Update page loads.
+根据你的 keys(字典，map 数据结构)从本地存储设置相应的数据。我们需要在表格字段中设置这些值。当更新页面加载时，它将自动填入这些字段。
 
 ```
 <Form className="create-form">
@@ -935,17 +934,17 @@ Set the respective data according to your keys from Local Storage. We need to se
             </Form>
 ```
 
-Setting the values in Form fields
+设置表格字段的值
 
-Now, if we click the Update button in Read Page, we will be redirected to the update page, where we will see all the auto populated form data.
+现在，如果我们点击阅读页面中的更新按钮，我们将被重定向到更新页面，在那里我们将看到所有根据数据自动填充的表单。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-193521.png)
 
 Update Page
 
-Now, let's create the Update request to update the data.
+现在，让我们创建更新请求来更新数据。
 
-Create a function called `updateAPIData`. Inside this function, we are going to use axios.put to send a PUT request that will update our data.
+创建一个名为`updateAPIData`的函数。在这个函数中，我们将使用 axios.put 来发送一个 PUT 请求，以更新我们的数据。
 
 ```
 const updateAPIData = () => {
@@ -957,27 +956,27 @@ const updateAPIData = () => {
 }
 ```
 
-Here, you can see we are appending the API endpoint with an id field.
+在这里，你可以看到我们在 API 端点上附加了一个 id 字段。
 
-When we click the field in the table, its ID is getting stored into Local Storage. And in the Update page, we are retrieving it. Then, we are storing that ID in the _`id`_ state.
+当我们点击表中的字段时，它的 ID 会被存储到本地存储器(Local Storage)中。而在更新页面，我们正在检索它。然后，我们将该 ID 存储在_`id`_状态中。
 
-After that, we pass the id to the endpoint. This allows us to update the field of which we are passing the ID.
+之后，我们将 ID 传递给端点。这使我们能够更新我们传递 ID 的字段。
 
-Bind the `updateAPIData` function to the Update button.
+将`updateAPIData`函数绑定到更新按钮上。
 
 ```
 <Button type='submit' onClick={updateAPIData}>Update</Button>
 ```
 
-Binding the updateAPIData to Update Button
+将 updateAPIData 绑定到更新按钮上
 
-Click the Update button in the table in Read page, change your last name, and then click the Update button in the Update page.
+点击读取页面中表格的更新按钮，改变你的姓氏（last name），然后点击更新页面中的更新按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-194627.png)
 
 Updating the fields
 
-Go back to the Read page, or check the API. You will see your last name has been changed.
+回到 "阅读 "页面，或查看 API。你会看到你的姓氏(last name)已被改变。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-194756.png)
 
@@ -987,9 +986,9 @@ The Mock API
 
 Our Read Table
 
-### The Delete Operation
+### 删除操作
 
-Add one more Button in the Read table, which we'll use for the Delete operation.
+在读取表(read table)中再添加一个 Button，我们将用它来进行删除操作。
 
 ```
 <Table.Cell>
@@ -997,9 +996,9 @@ Add one more Button in the Read table, which we'll use for the Delete operation.
 </Table.Cell>
 ```
 
-Delete Button in Read Table
+读取表中的删除按钮
 
-Create a function called `onDelete`, and bind this function to the Delete button. This function will receive an ID parameter on the Delete button click.
+创建一个名为 "onDelete "的函数，并将此函数绑定到删除按钮上。这个函数将在点击删除按钮时接收一个 ID 参数。
 
 ```
 const onDelete = (id) => {
@@ -1017,13 +1016,13 @@ const onDelete = (id) => {
 }
 ```
 
-Deleting fields from the API
+从 API 中删除字段
 
-Click the Delete button and check the API. You will see the data has been deleted.
+点击删除按钮并检查 API。你会看到数据已经被删除。
 
-We need to load the table data after it has been deleted.
+我们需要在表被删除后获得该表的数据。
 
-So, create a function to load the API data.
+因此，创建一个函数来获得 API 数据。
 
 ```
 const getData = () => {
@@ -1034,9 +1033,9 @@ const getData = () => {
 }
 ```
 
-Getting the API data
+获取 API 数据
 
-Now, in the `onDelete` function, we need to load the updated data after we delete a field.
+现在，在`onDelete`函数中，我们需要在删除一个字段后获得更新的数据。
 
 ```
 const onDelete = (id) => {
@@ -1047,37 +1046,37 @@ const onDelete = (id) => {
 }
 ```
 
-Loading Updated Data after Delete a field
+删除一个字段后获得更新数据
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-201047.png)
 
-Read table
+读取表格
 
-So, now if we click Delete on any field, it will delete that field and refresh the table automatically.
+因此，现在如果我们在任何字段上点击 Delete，它将删除该字段并自动刷新表格。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/07/Screenshot-2021-07-24-201423.png)
 
-Read table after deleting one field
+删除一个字段后读表
 
-## Let's Make Some Improvements to our CRUD App
+## 让我们对我们的 CRUD 应用程序做一些改进吧
 
-So, when we post our data in the Create page, we are just getting the data in the mock database. We need to redirect to the Read page when our data is created in the Create page.
+因此，当我们在 Create 页面发布我们的数据时，我们只是在模拟(mock)数据库中获得数据。当我们的数据在创建页面中被创建时，我们需要重定向到读取页面。
 
-Import `useHistory` from React Router.
+从 React Router 导入`useHistory'。
 
 ```
 import { useHistory } from 'react-router';
 ```
 
-Importing useHistory from React Router
+从 React Router 导入 useHistory
 
-Create a variable called `let`, and set the `useHistory` inside that `let`.
+创建变量`history`使用 `let`。
 
 ```
 let history = useHistory();
 ```
 
-Then, use the history.push function to push to the Read page just after the post API gets called.
+然后，使用 history.push 函数，在 post API 被调用后推送到阅读页面。
 
 ```
 const postData = () => {
@@ -1091,11 +1090,11 @@ const postData = () => {
     }
 ```
 
-Pushing to the Read page after Post API is successful
+在发布 API 成功后推送到阅读页面
 
-It will push to the Read page using the `useHistory` hook.
+它将使用`useHistory`钩子(hook)推送到阅读页面。
 
-Do the same for the Update page.
+对更新页面做同样的处理。
 
 ```
 import React, { useState, useEffect } from 'react';
@@ -1149,10 +1148,8 @@ export default function Update() {
 
 Update.js
 
-And now you know how to perform CRUD operations using React and React Hooks!
+现在你知道如何使用 React 和 React Hooks 进行 CRUD 操作了吧!
 
-Alternatively, you can watch my Youtube video on [React CRUD Operations](https://youtu.be/-ZMP8ZladIQ) if you want to supplement your learning.
+另外，如果你想补充学习，你可以观看我在 Youtube 上的[React CRUD 操作]视频（https://youtu.be/-ZMP8ZladIQ）。
 
-You can [find the code on GitHub](https://github.com/nishant-666/React-CRUD-Operation-V2) if you want to experiment further.
-
-> __Happy Learning.__
+> __学习愉快__

@@ -5,9 +5,9 @@
 
 ![How to Use the Call, Apply, and Bind Functions in JavaScript – with Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Screenshot-2022-06-14-at-8.53.33-PM-1.png)
 
-在本文中，我将通过简单的示例来解释如何在JavaScript中使用call、apply和bind。
+在本文中，我将通过简单的示例来解释如何在 JavaScript 中使用 call、apply 和 bind。
 
-我们还将使用apply函数创建自己的map函数。
+我们还将使用 apply 函数创建自己的 map 函数。
 
 话不多说，让我们开始吧！
 
@@ -15,10 +15,10 @@
 
 -   [前提](#prerequisites)
 -   [定义](#definitions)
--   [如何在JavaScript中使用call函数](#how-to-use-the-call-function-in-javascript)
--   [如何在JavaScript中使用apply函数](#how-to-use-the-apply-function-in-javascript)
--   [如何在JavaScript中使用bind函数](#how-to-use-the-bind-function-in-javascript)
--   [如何自定义map函数](#how-to-create-your-own-map-function)
+-   [如何在 JavaScript 中使用 call 函数](#how-to-use-the-call-function-in-javascript)
+-   [如何在 JavaScript 中使用 apply 函数](#how-to-use-the-apply-function-in-javascript)
+-   [如何在 JavaScript 中使用 bind 函数](#how-to-use-the-bind-function-in-javascript)
+-   [如何自定义 map 函数](#how-to-create-your-own-map-function)
 -   [总结](#summary)
 
 <h2 id="prerequisites">前提</h2>
@@ -27,7 +27,7 @@
 
 -   [函数](https://www.freecodecamp.org/news/what-is-a-function-javascript-function-examples/)
 -   [函数原型](https://www.freecodecamp.org/news/all-you-need-to-know-to-understand-javascripts-prototype-a2bff2d28f03/)
--   [this关键字](https://chinese.freecodecamp.org/news/what-is-this-in-javascript/)
+-   [this 关键字](https://chinese.freecodecamp.org/news/what-is-this-in-javascript/)
 
 <h2 id="definitions">定义</h2>
 
@@ -39,7 +39,7 @@
 
 **Bind** 函数创建一个稍后执行的函数，这个新函数的执行上下文由 `this` 提供。
 
-让我们先来看看call、apply和bind函数的例子，然后我们将来创建一个类似map的函数。
+让我们先来看看 call、apply 和 bind 函数的例子，然后我们将来创建一个类似 map 的函数。
 
 <h2 id="how-to-use-the-call-function-in-javascript">如何在JavaScript中使用call函数</h2>
 
@@ -57,13 +57,13 @@ func.call(thisObj, args1, args2, ...)
 
 -   **func** 是通过不同`this`对象调用的函数
 -   **thisObj** 是用来替换函数`func`内部 `this`关键字的对象或者值 
--   **args1, args2** args1, args2是参数，与改变后的`this`对象一起传递给调用的函数。
+-   **args1, args2** args1, args2 是参数，与改变后的`this`对象一起传递给调用的函数。
 
-注意如果在不传入`thisObj`参数的情况下调用函数，JavaScript默认this值为全局对象。
+注意如果在不传入`thisObj`参数的情况下调用函数，JavaScript 默认 this 值为全局对象。
 
 现在我们已经了解了`call`函数的背景，让我们通过一些示例来进一步了解它。
 
-### JS中如何在不同的上下文调用函数
+### JS 中如何在不同的上下文调用函数
 
 考虑下面的例子。这个例子中有三个类 – `Car`、`Brand1`和`Brand2`：
 
@@ -95,7 +95,7 @@ const newCarPrice = new definePrice(100000);
 
 在这两个函数中， 我们都在`this`对象内调用`Car`函数，`this`对象分别代表了这两个函数。 例如在`setBrand`函数中，我们在代表函数上下文的`this`对象调用了`Car`函数，`definePrice`一样。
 
-### 在JS中如何在不传入参数的情况下调用call函数
+### 在 JS 中如何在不传入参数的情况下调用 call 函数
 
 考虑下面的例子：
 
@@ -110,7 +110,7 @@ function mountEntity(){
 mountEntity.call(); //输出： Entity (obj) => console.log(obj) is mounted on [object Window]
 ```
 
-在这个例子中，调用`mountEntity`时，`thisObj`参数为空。 这时，JavaScript会指向全局对象。
+在这个例子中，调用`mountEntity`时，`thisObj`参数为空。 这时，JavaScript 会指向全局对象。
 
 <h2 id="how-to-use-the-apply-function-in-javascript">如何在JavaScript中使用apply函数</h2>
 
@@ -144,7 +144,7 @@ func.apply(thisObj, [args1, args2, ...]);
 func.apply(thisObj, new Array(args1, args2));
 ```
 
-第三种语法可以传入arguments关键字：
+第三种语法可以传入 arguments 关键字：
 
 ```Javascript
 func.apply(thisObj, arguments); 
@@ -212,7 +212,7 @@ func.bind(thisObj, arg1, arg2, ..., argN);
 
 -   **func** 是通过不同`this`对象调用的函数
 -   **thisObj** 是用来替换函数`func`内部`this`关键字的对象或者值 
--   **arg1, arg2…argN** – 和`call`函数类似，你可以传入一个或多个参数
+-   **arg1, arg2……argN** – 和`call`函数类似，你可以传入一个或多个参数
 
 `bind`函数返回一个一个新的函数，在这个函数中包含新的被调用函数内部`this`的值：
 
@@ -222,7 +222,7 @@ func(arg1, arg2);
 
 然后函数`func`根据参数被执行
 
-让我们一起来看一看如何在React类组件中使用`bind`函数：
+让我们一起来看一看如何在 React 类组件中使用`bind`函数：
 
 ```JSX
 class App extends React.Component {
@@ -241,10 +241,10 @@ class App extends React.Component {
 }
 ```
 
-考虑上述App组件，有以下几个组成部分：
+考虑上述 App 组件，有以下几个组成部分：
 
 -   `constructor` 调用类的函数，通过`new`关键字实例化
--   `render` 是执行或渲染JSX的函数
+-   `render` 是执行或渲染 JSX 的函数
 -   `handleCode` 是打印组件的类方法
 
 如果我们点击`Click Me`按钮，会得到报错`Cannot read properties of undefined (reading 'state')`。
@@ -257,7 +257,7 @@ class App extends React.Component {
 -   在类中`this`是一个普通的对象，并且有非静态类方法作为属性， 但是`handleCode`中的`this`指代另一个上下文
 -   在这里`this`的值取决于函数被调用的位置，`handleCode`是在`onClick`事件中被调用
 -   调用时`handleCode`函数内部的`this`被设置为`undefined` 
--   我们尝试调用undefined的`state`属性，就导致了上文的报错
+-   我们尝试调用 undefined 的`state`属性，就导致了上文的报错
 
 我们可以通过给`handleCode`方法的`this`指定上下文来解决这个问题，`bind`方法就派上用场了：
 
@@ -283,7 +283,7 @@ class App extends React.Component {
 
 <h2 id="how-to-create-your-own-map-function">如何自定义map函数</h2>
 
-在了解所有必要知识之后，让我们来自己创建一个map函数，我们先来看看自定义map函数需要了解什么：
+在了解所有必要知识之后，让我们来自己创建一个 map 函数，我们先来看看自定义 map 函数需要了解什么：
 
 `map`函数的语法如下：
 
@@ -293,7 +293,7 @@ arr.map(func)
 
 其中：
 
--   **arr**是map调用的数组
+-   **arr**是 map 调用的数组
 -   **func** 是数组上每一个元素需要执行的函数
 
 `map`函数的基本功能很简单：
@@ -344,13 +344,13 @@ console.log(newArr); //输出：[2, 3, 4]
 
 <h2 id="summary">总结</h2>
 
-本文通过示例展示了call、apply和bind的用法。
+本文通过示例展示了 call、apply 和 bind 的用法。
 
 简单概括一下：
 
--   Call、 apply和bind可以改变调用函数内部`this`关键字的上下文
+-   Call、 apply 和 bind 可以改变调用函数内部`this`关键字的上下文
 -   每个例子的调用方式不同 –  `apply`通过一组数组执行，`call`执行结果类似但是参数由逗号隔开
--   在react的类组件中，这些方法十分管用
+-   在 react 的类组件中，这些方法十分管用
 
 感谢阅读！
 

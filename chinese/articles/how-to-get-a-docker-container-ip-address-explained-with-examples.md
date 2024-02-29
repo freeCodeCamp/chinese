@@ -21,7 +21,7 @@ Docker 提供了在隔离环境（容器）中打包和运行应用的能力。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/docker-network.png)
 
-Docker 网络图摘自[了解Docker网络驱动程序及其用例][1]
+Docker 网络图摘自[了解 Docker 网络驱动程序及其用例][1]
 
  `bridge` 网络是主机内部的专用网络，容器可以通过它进行通信。也可暴漏端口在外部访问。
 
@@ -47,7 +47,7 @@ ad4e4c24568e        host                  host                local
 
 ## Docker 容器的 IP 地址
 
-默认情况下，会为连接到容器的每个 Docker 网络分配一个IP地址，并为每个网络分配一个默认的子网掩码，用作稍后分配 IP的地址池。
+默认情况下，会为连接到容器的每个 Docker 网络分配一个 IP 地址，并为每个网络分配一个默认的子网掩码，用作稍后分配 IP 的地址池。
 
 通常 Docker 默认使用 **172.17. 0.0/16** 作为容器网络的子网。
 
@@ -176,7 +176,7 @@ $ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' 7
 172.18.0.5
 ```
 
-之前不是说 Docker 使用容器网络默认的  **172.17. 0.0/16** 的子网吗？为什么和返回的 IP地址 **172.18.0.5** 并不在一个网段呢？
+之前不是说 Docker 使用容器网络默认的  **172.17. 0.0/16** 的子网吗？为什么和返回的 IP 地址 **172.18.0.5** 并不在一个网段呢？
 
 ![](https://www.freecodecamp.org/news/content/images/2020/06/Screen-Shot-2020-06-22-at-3.25.07-PM.png)
 
@@ -276,7 +276,7 @@ PING dockerhive_hive-server (172.18.0.4): 56 data bytes
 
 ## **拓展**
 
-所有的例子都是在 Linux 的VM 计算引擎下执行，如果你用的是 macOS 或者 Windows 例子里的命令可能会有些区别。 
+所有的例子都是在 Linux 的 VM 计算引擎下执行，如果你用的是 macOS 或者 Windows 例子里的命令可能会有些区别。 
 
 另外请记住，例子中所有的 IP 地址都是针对 `docker-hive_default` 网络内部的。如果需要在外部连接这些容器，则需要主机的外部 IP（假设容器正确暴漏了端口）。
   

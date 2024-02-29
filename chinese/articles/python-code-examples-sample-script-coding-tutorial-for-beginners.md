@@ -7,7 +7,7 @@
 
 Hi! 欢迎。您是否正在学习 Python，如果是的，那这篇文章就是为您而准备的，在文中你将会找到 Python 语法的详尽描述以及大量的 Python 代码示例，它将会指导你的 Python 编程之旅。
 
-### 涵盖的内容：
+### 涵盖的内容
 
 -   [Python 中的变量定义](#-variable-definitions-in-python)
 -   [Python 中的 Hello, World!](#-hello-world-program-in-python)
@@ -1263,7 +1263,7 @@ dict_values([1, 2, 25, 3, 4, 5])
 -14.0
 ```
 
-#### 乘法运算: \*
+#### 乘法运算 
 
 ```python
 >>> 5 * 6
@@ -1299,7 +1299,7 @@ dict_values([1, 2, 25, 3, 4, 5])
 
 **💡 提示：** 你可以用一个数字与一个字符串"相乘"，结果会让字符串重复与相乘的这个数字相同的次数。
 
-#### 指数运算: \*\*
+#### 指数运算 
 
 ```python
 >>> 6 ** 8
@@ -4274,7 +4274,7 @@ else:
 
 下面是各种形式的导入语句：
 
-### 第一种选择：
+### 第一种选择
 
 ```
 import <module_name>
@@ -4298,7 +4298,7 @@ import math
 
 我们在代码中明确的指明该元素所属的模块。
 
-### 第二中选择：
+### 第二中选择
 
 ```
 import <module> as <new_name>
@@ -4318,7 +4318,7 @@ import math as m
 5.0
 ```
 
-### 第三种选择：
+### 第三种选择
 
 ```
 from <module_name> import <element>
@@ -4338,7 +4338,7 @@ from math import sqrt
 5.0
 ```
 
-### 第四种选择：
+### 第四种选择
 
 ```
 from <module_name> import <element> as <new_name>
@@ -4358,7 +4358,7 @@ from math import sqrt as square_root
 5.0
 ```
 
-### 第五种选择：
+### 第五种选择
 
 ```
 from <module_name> import *

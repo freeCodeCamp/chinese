@@ -7,7 +7,7 @@
 
 In this article, I'll introduce you to Gonum, a package you can use to perform scientific computations in the Go programming language.
 
-### Here's what we'll cover in this intermediate tutorial:
+### Here's what we'll cover in this intermediate tutorial
 
 -   What is Gonum?
 -   Why use Gonum
@@ -16,7 +16,7 @@ In this article, I'll introduce you to Gonum, a package you can use to perform s
 -   How to perform matrix operations using Gonum
 -   Other scientific computations supported by Gonum.
 
-### Prerequisites:
+### Prerequisites
 
 -   Knowledge of functional programming in Golang.
 -   A Golang IDE with Go installed (I use Goland and Go 1.17.6, but you can use any other)
@@ -118,7 +118,7 @@ Gonum supports matrix operations in the [`mat` package](https://pkg.go.dev/gonum
 import “gonum.org/v1/gonum/mat”
 ```
 
-### How to Create a Matrix:
+### How to Create a Matrix
 
 `mat.NewDense` is the method for creating a matrix. It takes in the dimensions of the matrix and the data to be passed in, which could be nil (a matrix with all entities equal to zero).
 

@@ -11,9 +11,9 @@
 
 在开始之前，让我简单介绍一下我自己以及我对开源社区的兴趣。
 
-我每天都会使用开源项目、产品和服务，我也参与贡献开源项目提升自我。我维护着一些向初学者提供web编程教学的开源项目。
+我每天都会使用开源项目、产品和服务，我也参与贡献开源项目提升自我。我维护着一些向初学者提供 web 编程教学的开源项目。
 
-你可以在我的[GitHub资料](https://github.com/atapas)上查看我的开源项目。
+你可以在我的[GitHub 资料](https://github.com/atapas)上查看我的开源项目。
 
 如果你尚未开始贡献开源项目，我将通过这篇文章分享我自己的经验帮助你开启开源之旅。
 
@@ -29,19 +29,19 @@
 
 项目越大，贡献者越多。任何人都可以查看项目代码、修改代码、请求校对并将改变并入项目中。
 
-`源代码和文档库`: 维护者将项目源代码保存在一个中心化的源代码库 (例如GitHub)。这样所有贡献者就可以访问代码并且参与贡献。
+`源代码和文档库`: 维护者将项目源代码保存在一个中心化的源代码库 (例如 GitHub)。这样所有贡献者就可以访问代码并且参与贡献。
 
 `项目许可证`: 每一个开源项目都必须指定一个分发许可证，给用户和使用者提供清晰的信息。
 
 有各种个样的许可证，维护者可以根据项目做选择。比较广泛被采用的许可证包括：MIT、 Apache License 2.0、 GNU General Public License (GPL) 3.0 等。
 
-`贡献指南`: OSS项目的维护者创建贡献指南帮助贡献者理解合并请求（pull request)的流程、标准、范围等。
+`贡献指南`: OSS 项目的维护者创建贡献指南帮助贡献者理解合并请求（pull request)的流程、标准、范围等。
 
-`行为准则指南`: 行为准则指南讨论各种指导方针、对贡献者的协同和行为期望，以及如何提出和解决issue（问题）。
+`行为准则指南`: 行为准则指南讨论各种指导方针、对贡献者的协同和行为期望，以及如何提出和解决 issue（问题）。
 
 `项目文化`: 项目文化随着项目社区发展而变化。虽然维护者对其影响重大，但贡献者也有同样的责任来维护一个健康学习、分享和成长的文化。
 
-`社区`: 随着项目发展，围绕项目的社区也发展起来。组织社区交流的常用平台有GitHub Discussions和Discord。
+`社区`: 随着项目发展，围绕项目的社区也发展起来。组织社区交流的常用平台有 GitHub Discussions 和 Discord。
 
 `分发`: 开源项目应该接触到终端用户和消费者，所以应该有一个分发模型将代码转化为最终的产品，进行交付。
 
@@ -55,19 +55,19 @@
 
 开源项目运作模型的高层视角
 
-如果你不熟悉fork、 branch、 merge这些词，不用担心！我们马上就会讨论这些词，请继续阅读。
+如果你不熟悉 fork、 branch、 merge 这些词，不用担心！我们马上就会讨论这些词，请继续阅读。
 
 现在让我们讨论一下开源软件是如何交付给用户/客户的。
 
 下面的图片显示了一种可能性的高层视角。开源项目应具有构建-打包-部署机制，该机制使用持续集成和持续部署（CI/CD）流程。
 
-每当`main branch（主分支）`的代码发生改动，CI/CD工作流就开始自动工作：构建源代码、打包并部署，供终端用户和目标客户能够使用。
+每当`main branch（主分支）`的代码发生改动，CI/CD 工作流就开始自动工作：构建源代码、打包并部署，供终端用户和目标客户能够使用。
 
 ![deploy](https://www.freecodecamp.org/news/content/images/2022/07/deploy.png)
 
 从源代码到用户的高层视角
 
-请注意: CI/CD或者其他部署机制并不是开源软件开发的一部分，但了解它有助于理解OSS端到端的工作模型。
+请注意: CI/CD 或者其他部署机制并不是开源软件开发的一部分，但了解它有助于理解 OSS 端到端的工作模型。
 
 
 ## 开源项目贡献是什么意思?
@@ -93,7 +93,7 @@
 -   提高软件/应用的代码和文档水平
 -   接触想法相似的朋友、建立人脉和社区
 -   理解应用开发和维护的流程
--   从Pull Request反馈中学习
+-   从 Pull Request 反馈中学习
 -   学习如何管理自己的开源项目
 
 ## 开源迷思
@@ -122,7 +122,7 @@
 
 ❌ **迷思**: 开源软件总是免费的。
 
-✅ **事实:** 大多数开源项目是免费的，但不是所有的都是。这是由项目的许可证所决定的。有一些许可证要求必须让使用和分发免费。你需要格外注意项目许可证信息，了解OSS到底免费到什么程度。
+✅ **事实:** 大多数开源项目是免费的，但不是所有的都是。这是由项目的许可证所决定的。有一些许可证要求必须让使用和分发免费。你需要格外注意项目许可证信息，了解 OSS 到底免费到什么程度。
 
 ❌ **迷思**: 开源项目只适合初学者。
 
@@ -132,44 +132,44 @@
 
 开发者想要快速开始参与开源项目需要了解一些基本技能。这些是可选的，但是如果具备，你将更享受参与开源贡献。
 
-### 了解Git基础
+### 了解 Git 基础
 
-如果你已经了解Git的概念及其主要用途，那么你已经前进了一大步。Git在开源世界中无处不在，你不能忽视它。
+如果你已经了解 Git 的概念及其主要用途，那么你已经前进了一大步。Git 在开源世界中无处不在，你不能忽视它。
 
 你至少要了解以下话题：
 
--   什么是Git，它是怎么运作的？
+-   什么是 Git，它是怎么运作的？
 -   仓库是什么?
 -   如何复制(clone)一个仓库?
--   如何stage/un-stage（暂存/取消暂存）修改?
--   如何commit（提交）你的修改?
+-   如何 stage/un-stage（暂存/取消暂存）修改?
+-   如何 commit（提交）你的修改?
 -   如何编写更好的提交消息?
 -   如何解决合并冲突?
 -   如何将你的修改推送（push）到远程仓库?
 -   如何从远程仓库拉取（pull）修改?
 
-如果你尚不了解Git，我推荐你观看这个视频，了解Git的概念和上面提到的用例： [为初学者揭开Git的神秘面纱](https://www.youtube.com/watch?v=vWtu4mzUgQo).
+如果你尚不了解 Git，我推荐你观看这个视频，了解 Git 的概念和上面提到的用例： [为初学者揭开 Git 的神秘面纱](https://www.youtube.com/watch?v=vWtu4mzUgQo).
 
-### 熟悉GitHub
+### 熟悉 GitHub
 
-[GitHub](https://github.com/)上有超过1.28亿个公开仓库，其中很大一部分是开源项目。你想要参与贡献的开源项目可能在GitHub上，所以你应该学习如何使用GitHub。
+[GitHub](https://github.com/)上有超过 1.28 亿个公开仓库，其中很大一部分是开源项目。你想要参与贡献的开源项目可能在 GitHub 上，所以你应该学习如何使用 GitHub。
 
 作为开源项目的贡献者，你应该知道：
 
--   如何fork（分叉）一个仓库?
--   如何找到仓库的URL并clone（克隆）仓库?
--   如何创建一个Pull Request?
--   如何校对一个Pull Request?
+-   如何 fork（分叉）一个仓库?
+-   如何找到仓库的 URL 并 clone（克隆）仓库?
+-   如何创建一个 Pull Request?
+-   如何校对一个 Pull Request?
 
 作为一个项目维护者，你应该知道：
 
 -   如何创建一个仓库?
 -   如何为项目添加许可证信息?
 -   如何创建贡献指南和行为准则指南?
--   如何创建提交issue和pull requests的标准?
--   如何合并pull requests?
+-   如何创建提交 issue 和 pull requests 的标准?
+-   如何合并 pull requests?
 
-你可以关注下面的Twitter thread，它分步骤讲解了上面的所有信息：
+你可以关注下面的 Twitter thread，它分步骤讲解了上面的所有信息：
 
 > Do you have public GitHub repositories?  
 >   
@@ -188,19 +188,19 @@
 
 
 
-### 学习如何Fork（分叉）一个仓库
+### 学习如何 Fork（分叉）一个仓库
 
 Fork（分叉）是一个重要的概念。 大部分`开源` 项目不允许贡献者直接在仓库创建分支。取而代之的工作流如下：
 
 -   fork（分叉）仓库。
 -   clone（克隆）分叉后的仓库。
 -   编写修改。
--   从UPSTREAM（上游）提取修改。
--   创建从分叉仓库到基础仓库的pull request。
+-   从 UPSTREAM（上游）提取修改。
+-   创建从分叉仓库到基础仓库的 pull request。
 
-在我和众多贡献者的工作经验中，大部分人觉得理解Fork（分叉）的概念有点困难。
+在我和众多贡献者的工作经验中，大部分人觉得理解 Fork（分叉）的概念有点困难。
 
-你可以通过这个视频学习Fork的概念 [如何分叉一个Github仓库](https://www.youtube.com/watch?v=h8suY-Osn8Q)。同时你可以在这个[GitHub仓库](https://github.com/atapas/fork-me)练习分叉，这是为初学者设计来提升信心的仓库。
+你可以通过这个视频学习 Fork 的概念 [如何分叉一个 Github 仓库](https://www.youtube.com/watch?v=h8suY-Osn8Q)。同时你可以在这个[GitHub 仓库](https://github.com/atapas/fork-me)练习分叉，这是为初学者设计来提升信心的仓库。
 
 ### 学习解决合并冲突（Merge Conflicts）
 
@@ -208,7 +208,7 @@ Fork（分叉）是一个重要的概念。 大部分`开源` 项目不允许贡
 
 这里有一份[解决合并冲突实用指南](https://www.freecodecamp.org/news/resolve-merge-conflicts-in-git-a-practical-guide/)，欢迎查阅。
 
-### 学习Markdown语法
+### 学习 Markdown 语法
 
 文档是任何开源项目的基础。`Readme.md`文件介绍了项目，如何设置、运行、部署等。
 
@@ -216,9 +216,9 @@ Fork（分叉）是一个重要的概念。 大部分`开源` 项目不允许贡
 
 `CODE_OF_CONDUCT.md`文件介绍了对贡献者行为和参与的期望。当然，你可以基于自己的项目，编写任意 `.md`文件。
 
-`md`代表着markdown（标记语言），是一种在Github上用于写文档的语法。了解基础的语法有助于你流畅地编写文档。
+`md`代表着 markdown（标记语言），是一种在 Github 上用于写文档的语法。了解基础的语法有助于你流畅地编写文档。
 
-这里有一个开源项目提供了Markdown语法，可以复制和使用。欢迎查阅。
+这里有一个开源项目提供了 Markdown 语法，可以复制和使用。欢迎查阅。
 
 [
 
@@ -240,7 +240,7 @@ A single place for all the markdown syntaxes I have learned so far. - GitHub - a
 
 让我们来看看开发者需要具备的一些软技能：
 
--   **耐心**: `耐心`是所有开发者必备的技能。当你在学习新知识，排查复杂问题的bug，和其他人一起工作、谈判，给予和吸收意见的时候都需要耐心。事情常常不如预期的节奏推进，所以你需要保持耐心面对现状。
+-   **耐心**: `耐心`是所有开发者必备的技能。当你在学习新知识，排查复杂问题的 bug，和其他人一起工作、谈判，给予和吸收意见的时候都需要耐心。事情常常不如预期的节奏推进，所以你需要保持耐心面对现状。
 -   **好奇心**: `好奇`使人进步。参与开源贡献将拥有无限可能。你需要对解决问题充满好奇心。好奇心不仅适用于解决技术难题，也适用于和他人一起工作。
 -   **责任心**: 在开源生态中，你可能不会经常和人见面及交流。你必须对所有查询、任务、请求以及委任与你的事情`负责`。许多伟大的倡议往往因为人们缺乏责任心而不了了之。
 -   **谦逊之心**: `谦虚`是成功的关键。有学识但不谦逊的人往往不适合团队协作。
@@ -251,18 +251,18 @@ A single place for all the markdown syntaxes I have learned so far. - GitHub - a
 
 ### GitHub Explore
 
-GitHub Explore会向你展示你感兴趣的仓库，你可以给特定仓库设置提醒。
+GitHub Explore 会向你展示你感兴趣的仓库，你可以给特定仓库设置提醒。
 
-同时，你可以使用话题和趋势来寻找仓库。使用GitHub explore来寻找最合适你的技能、需求以及对你最有启发的项目。你可以通过这个地址查看： [https://github.com/explore/](https://github.com/explore/)
+同时，你可以使用话题和趋势来寻找仓库。使用 GitHub explore 来寻找最合适你的技能、需求以及对你最有启发的项目。你可以通过这个地址查看： [https://github.com/explore/](https://github.com/explore/)
 
 
-### 如何参与freeCodeCamp的开源项目
+### 如何参与 freeCodeCamp 的开源项目
 
-freeCodeCamp的这个仓库绝对是一个宝藏，它提供了许多资源和指示帮助你开启开源之旅。你可以通过这个地址查看：[https://github.com/freeCodeCamp/how-to-contribute-to-open-source](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
+freeCodeCamp 的这个仓库绝对是一个宝藏，它提供了许多资源和指示帮助你开启开源之旅。你可以通过这个地址查看：[https://github.com/freeCodeCamp/how-to-contribute-to-open-source](https://github.com/freeCodeCamp/how-to-contribute-to-open-source)
 
 ### Contributor Ninja
 
-这个网站供你选择一系列编程语言：JavaScript、 HTML、 Rust、 Go等。你可以通过卡片选择对应的仓库，简单方便，是一个不错的开始。你可以通过这个地址查看： [https://contributor.ninja/](https://contributor.ninja/)
+这个网站供你选择一系列编程语言：JavaScript、 HTML、 Rust、 Go 等。你可以通过卡片选择对应的仓库，简单方便，是一个不错的开始。你可以通过这个地址查看： [https://contributor.ninja/](https://contributor.ninja/)
 
 ### First Contributions
 
@@ -271,7 +271,7 @@ freeCodeCamp的这个仓库绝对是一个宝藏，它提供了许多资源和�
 
 ### CodeTriage
 
-CodeTriage是一个包含巨量开放issue项目的清单。它将issue和文档归类后分发给你。这个网站十分有用，你可以通过这个地址查看: [https://www.codetriage.com/](https://www.codetriage.com/)
+CodeTriage 是一个包含巨量开放 issue 项目的清单。它将 issue 和文档归类后分发给你。这个网站十分有用，你可以通过这个地址查看: [https://www.codetriage.com/](https://www.codetriage.com/)
 
 ### Up For Grabs
 
@@ -288,7 +288,7 @@ CodeTriage是一个包含巨量开放issue项目的清单。它将issue和文档
 
 你本周五或者下周五有什么打算？花点时间给你使用或者喜欢的软件做点贡献？推荐你查看这个网站并且注册。你可以通过这个地址查看:  [https://opensourcefriday.com/](https://opensourcefriday.com/)
 
-希望这些资源对你来说有帮助。另外，你还可以查看这个Twitter thread以及相关的回应，你或许会有所收获。
+希望这些资源对你来说有帮助。另外，你还可以查看这个 Twitter thread 以及相关的回应，你或许会有所收获。
 
 > Looking forward to contributing to OPENSOURCE? Here are 8 RESOURCES to get you started immediately.  
 >   
@@ -303,17 +303,17 @@ CodeTriage是一个包含巨量开放issue项目的清单。它将issue和文档
 作为项目维护者，你应该遵循一些标准使得其他人能够理解并且参与贡献你的项目仓库。
 
 -   提供项目明确的名字和介绍。你也可以添加项目相关的话题。
--   添加清晰的`Readme.md`文件介绍项目的目标、如何使用、设置等。如果说源码是项目的心脏，拿README文件就是项目的脸面。
+-   添加清晰的`Readme.md`文件介绍项目的目标、如何使用、设置等。如果说源码是项目的心脏，拿 README 文件就是项目的脸面。
 -   建立社区档案。开源仓库维护者可以通过它来检查工作、了解哪里需要帮助。
 -   建立编码行为准则。
 -   创建贡献指南。
--   决定issue的模板。
--   创建Pull Request (PR)模板。
--   激活GitHub赞助。
+-   决定 issue 的模板。
+-   创建 Pull Request (PR)模板。
+-   激活 GitHub 赞助。
 
 [你可以通过阅读这篇文章](https://www.freecodecamp.org/news/increase-engagement-on-your-public-github-repositories/) 了解更多细节。
 
-## 在结束之前...
+## 在结束之前
 
 就这么多！到这里，我们就到了本文的结尾。希望这篇文章对你有所启发，并且给了你足够的动力开始为开源做贡献。
 

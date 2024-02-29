@@ -6,63 +6,63 @@
 
 ![How to Build Your Own Heroku with Dokku](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/dokku.png)
 
-Heroku是一个被开发者广泛使用的知名PaaS。而作为一个有趣和有用的项目，你可以用Dokku轻松地制作你自己的类似Heroku的PaaS。
+Heroku 是一个被开发者广泛使用的知名 PaaS。而作为一个有趣和有用的项目，你可以用 Dokku 轻松地制作你自己的类似 Heroku 的 PaaS。
 
 ![dokku-logo-with-name5-1](https://www.freecodecamp.org/news/content/images/2022/02/dokku-logo-with-name5-1.png)
 
-## 什么是Heroku？
+## 什么是 Heroku？
 
-Heroku是一家成立于2007年的平台即服务（PaaS）公司。该平台在AWS上运行，其临时存储系统被称为 "Dyno"。
+Heroku 是一家成立于 2007 年的平台即服务（PaaS）公司。该平台在 AWS 上运行，其临时存储系统被称为 "Dyno"。
 
-Heroku是开发者使用最多的PaaS之一，这是有原因的--它很容易使用，有很好的文档，并支持多种编程语言。
+Heroku 是开发者使用最多的 PaaS 之一，这是有原因的--它很容易使用，有很好的文档，并支持多种编程语言。
 
-但是，如果你可以通过一个简单易用的应用程序来部署你自己的类似Heroku的平台，包括CI/CD管道、数据库连接、HTTPS连接等等，会怎么样呢？
+但是，如果你可以通过一个简单易用的应用程序来部署你自己的类似 Heroku 的平台，包括 CI/CD 管道、数据库连接、HTTPS 连接等等，会怎么样呢？
 
-嗯，这就是Dokku所提供的，甚至更多。让我们来看看。
+嗯，这就是 Dokku 所提供的，甚至更多。让我们来看看。
 
-## 什么是PaaS？
+## 什么是 PaaS？
 
 平台即服务（PaaS）是一种软件架构风格，为部署你的应用程序的代码和管理它提供一个易于使用的抽象层。
 
 这使你可以专注于编写业务逻辑，而不是担心平台本身。
 
-PaaS供应商通常提供他们自己的数据库服务以及其他相关服务，这可以大大简化常见的开发任务。
+PaaS 供应商通常提供他们自己的数据库服务以及其他相关服务，这可以大大简化常见的开发任务。
 
-PaaS的巨大优势在于，应用程序开发人员不需要执行任何系统管理工作。相反，你只需将你的代码和配置设置上传到一个中央服务器平台。
+PaaS 的巨大优势在于，应用程序开发人员不需要执行任何系统管理工作。相反，你只需将你的代码和配置设置上传到一个中央服务器平台。
 
 然后，该服务负责部署代码，根据需要进行扩展，备份数据，处理托管和正常运行时间问题，等等。
 
-## 什么是Dokku?
+## 什么是 Dokku?
 
-Dokku是一个托管的平台即服务，使开发者能够轻松地部署他们的应用程序。
+Dokku 是一个托管的平台即服务，使开发者能够轻松地部署他们的应用程序。
 
 来自他们的网站:
 
-> 你见过的最小的PaaS实现
+> 你见过的最小的 PaaS 实现
 
-Dokku基于Docker，使用Heroku的构建包来编译和打包你的应用程序。
+Dokku 基于 Docker，使用 Heroku 的构建包来编译和打包你的应用程序。
 
-Dokku最好的一点是，它非常轻量级，可以安装在一台服务器或虚拟机上。
+Dokku 最好的一点是，它非常轻量级，可以安装在一台服务器或虚拟机上。
 
-它包括使用Docker容器的可扩展主机，使用Git的持续部署，以及其他流行的DevOps工具。
+它包括使用 Docker 容器的可扩展主机，使用 Git 的持续部署，以及其他流行的 DevOps 工具。
 
-Dokku还提供各种功能，如支持多种语言、自定义域、自动部署等。
+Dokku 还提供各种功能，如支持多种语言、自定义域、自动部署等。
 
-你可以轻松地将Postgres数据库甚至是文件存储连接到你的应用程序。
+你可以轻松地将 Postgres 数据库甚至是文件存储连接到你的应用程序。
 
 你可以在 [https://dokku.com/](https://dokku.com/) 查看更多信息，或在文件中查看。[https://dokku.com/docs/getting-started/installation/](https://dokku.com/docs/getting-started/installation/)。
 
-你也可以对 [这里的GitHub开源项目](https://github.com/dokku/dokku) 点个赞。
+你也可以对 [这里的 GitHub 开源项目](https://github.com/dokku/dokku) 点个赞。
 
-## 如何安装Dokku
+## 如何安装 Dokku
 
-为了安装Dokku，你将需要一个Linux VPS和一个域名。
+为了安装 Dokku，你将需要一个 Linux VPS 和一个域名。
 
-你可以在没有域名的情况下安装和使用Dokku，但使用域名就简单多了。我推荐使用云VPS，因为它使访问和配置更容易。
+你可以在没有域名的情况下安装和使用 Dokku，但使用域名就简单多了。我推荐使用云 VPS，因为它使访问和配置更容易。
 
-连接域名时，可以将单个域名或通配符与服务器的IP联系起来。
+连接域名时，可以将单个域名或通配符与服务器的 IP 联系起来。
 
-我将使用托管在 [Hetzner](https://hetzner.cloud/) 的VPS，安装了Ubuntu 20.04。
+我将使用托管在 [Hetzner](https://hetzner.cloud/) 的 VPS，安装了 Ubuntu 20.04。
 
 我们首先要确保我们的系统是最新的，有这些命令:
 
@@ -72,7 +72,7 @@ $ sudo apt update
 $ sudo apt upgrade -y
 ```
 
-然后我们可以下载并运行Dokku的安装脚本:
+然后我们可以下载并运行 Dokku 的安装脚本:
 
 ```bash
 # Install Dokku with the install script
@@ -96,11 +96,11 @@ $ sudo DOKKU_TAG=v0.26.8 bash bootstrap.sh
      echo 'CONTENTS_OF_ID_RSA_PUB_FILE' | dokku ssh-keys:add admin
 ```
 
-安装脚本将安装Docker和所有必要的依赖项，同时也安装Dokku本身，如上面的代码所示。
+安装脚本将安装 Docker 和所有必要的依赖项，同时也安装 Dokku 本身，如上面的代码所示。
 
-安装完成后，我们需要分配SSH密钥来访问，同时配置我们的域名。
+安装完成后，我们需要分配 SSH 密钥来访问，同时配置我们的域名。
 
-如果你已经设置了用SSH访问你的VPS（你应该这样做），那么你已经有了必要的密钥--你只需要把它们添加到Dokku中:
+如果你已经设置了用 SSH 访问你的 VPS（你应该这样做），那么你已经有了必要的密钥--你只需要把它们添加到 Dokku 中:
 
 ```bash
 # Assign SSH key to Dokku
@@ -109,7 +109,7 @@ $ cat ~/.ssh/authorized_keys | dokku ssh-keys:add admin
 SHA256:6O1TLVOUkWV+zmTWXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-如果你在服务器中还没有SSH密钥，那么你需要生成一个密钥对:
+如果你在服务器中还没有 SSH 密钥，那么你需要生成一个密钥对:
 
 ```bash
 # Generate SSH key
@@ -131,7 +131,7 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 
-然后你可以把它添加到Dokku:
+然后你可以把它添加到 Dokku:
 
 ```bash
 # Add SSH key to Dokku
@@ -140,7 +140,7 @@ $ dokku ssh-keys:add admin /root/.ssh/id_rsa.pub
 SHA256:7T6BbRCVWjGtcSUXXXXXXXXXXXXXXXXXXXXXXXX
 ```
 
-下一步，也是最后一步，是为你的Dokku安装分配域名。我们用以下命令来做这件事:
+下一步，也是最后一步，是为你的 Dokku 安装分配域名。我们用以下命令来做这件事:
 
 ```bash
 # Set installation global domain
@@ -149,31 +149,31 @@ $ dokku domains:set-global domain.com
 -----> Set domain.com
 ```
 
-确保你用你自己的域名替换'domain.com'，并且你的域名DNS指向服务器的IP地址。
+确保你用你自己的域名替换'domain.com'，并且你的域名 DNS 指向服务器的 IP 地址。
 
-这就是你安装和设置Dokku所需要做的一切。真的就这么简单。
+这就是你安装和设置 Dokku 所需要做的一切。真的就这么简单。
 
 你现在可以开始添加你的应用程序了。
 
-让我们在下一节中通过添加一个标准的Django应用程序来看看这个例子。
+让我们在下一节中通过添加一个标准的 Django 应用程序来看看这个例子。
 
-## 如何在Dokku中创建你的应用程序
+## 如何在 Dokku 中创建你的应用程序
 
-为了创建和部署我们的第一个应用程序，我们需要在Dokku上做一些准备工作。
+为了创建和部署我们的第一个应用程序，我们需要在 Dokku 上做一些准备工作。
 
-要在Dokku上部署一个应用程序，请遵循以下步骤:
+要在 Dokku 上部署一个应用程序，请遵循以下步骤:
 
-- 在Dokku上创建应用程序，这意味着给它一个名字。
-- 创建关联数据库（或其他插件，如果需要）。这将创建并提供一个数据库，以便使用自动添加到应用程序的DATABASE\_URL，以方便部署。
-- 推送必要的代码到Dokku的应用程序内部GitHub端点。这也可以包括必要的发布步骤（比如说，运行Django迁移
+- 在 Dokku 上创建应用程序，这意味着给它一个名字。
+- 创建关联数据库（或其他插件，如果需要）。这将创建并提供一个数据库，以便使用自动添加到应用程序的 DATABASE_URL，以方便部署。
+- 推送必要的代码到 Dokku 的应用程序内部 GitHub 端点。这也可以包括必要的发布步骤（比如说，运行 Django 迁移
 
-代码推送后，Dokku将生成任何必要的Docker容器，并将运行我们的应用程序与任何相关的数据库（或其他插件）。
+代码推送后，Dokku 将生成任何必要的 Docker 容器，并将运行我们的应用程序与任何相关的数据库（或其他插件）。
 
 现在我们已经涵盖了必要的步骤，让我们在实践中进行。
 
-让我们从创建我们的应用程序开始。在本教程中，我将创建一个非常简单的Django网站，其中包含我们测试Dokku的所有必要逻辑。
+让我们从创建我们的应用程序开始。在本教程中，我将创建一个非常简单的 Django 网站，其中包含我们测试 Dokku 的所有必要逻辑。
 
-我们用这个命令在Dokku上创建一个应用程序（在我们安装Dokku的服务器上）:
+我们用这个命令在 Dokku 上创建一个应用程序（在我们安装 Dokku 的服务器上）:
 
 ```bash
 # Creating our application on Dokku
@@ -186,7 +186,7 @@ $ dokku apps:create djangotutorial
 
 数据存储由一系列的插件来处理。你可以 [在这里查看所有可用的插件](https://dokku.com/docs/community/plugins/#official-plugins-beta)。
 
-对于我们的应用程序，我们将创建一个Postgres数据存储。由于默认情况下没有安装插件，我们首先需要安装Postgres插件:
+对于我们的应用程序，我们将创建一个 Postgres 数据存储。由于默认情况下没有安装插件，我们首先需要安装 Postgres 插件:
 
 ```bash
 # install the postgres plugin
@@ -194,7 +194,7 @@ $ dokku apps:create djangotutorial
 sudo dokku plugin:install https://github.com/dokku/dokku-postgres.git
 ```
 
-然后我们可以创建我们的Postgres数据存储:
+然后我们可以创建我们的 Postgres 数据存储:
 
 ```bash
 # Create a Postgres datastore
@@ -218,7 +218,7 @@ $ dokku postgres:create djangotutorial_datastore
        Version:             postgres:14.1
 ```
 
-我们可以检查我们的数据存储的Docker容器是否已经启动并运行，方法是:
+我们可以检查我们的数据存储的 Docker 容器是否已经启动并运行，方法是:
 
 ```bash
 # Check running containers
@@ -240,7 +240,7 @@ $ dokku postgres:link djangotutorial_datastore djangotutorial
  !     App image (dokku/djangotutorial:latest) not found
 ```
 
-你可以看到，一个DATABASE\_URL被自动创建并与应用程序相关联。
+你可以看到，一个 DATABASE_URL 被自动创建并与应用程序相关联。
 
 上面的例子提到，我们的应用程序图像没有被发现，因为我们还没有向它推送任何代码。
 
@@ -254,29 +254,29 @@ $ dokku config:show djangotutorial
 DATABASE_URL:  postgres://postgres:ea706cc108c805d5124d134d934024c5@dokku-postgres-djangotutorial-datastore:5432/djangotutorial_datastore
 ```
 
-我们现在已经在Dokku方面完成了所有必要的配置，以支持我们应用程序的部署。
+我们现在已经在 Dokku 方面完成了所有必要的配置，以支持我们应用程序的部署。
 
-接下来，我们将为我们的应用程序创建代码，并将其部署到Dokku，以实现自动化的CI/CD管道。
+接下来，我们将为我们的应用程序创建代码，并将其部署到 Dokku，以实现自动化的 CI/CD 管道。
 
-## 如何在PyCharm上创建我们的应用代码
+## 如何在 PyCharm 上创建我们的应用代码
 
-在我们部署一个应用程序之前，我们需要有它的源代码来推送到Dokku。
+在我们部署一个应用程序之前，我们需要有它的源代码来推送到 Dokku。
 
-在本教程中，我们将创建一个非常简单的 Django 应用程序，同时展示Postgres数据库的使用。
+在本教程中，我们将创建一个非常简单的 Django 应用程序，同时展示 Postgres 数据库的使用。
 
 我们将使用 PyCharm 作为我们的 IDE 来创建和管理我们的项目。
 
-我们在PyCharm中创建一个新的项目--让我们称之为 `DjangoTutorial`:
+我们在 PyCharm 中创建一个新的项目--让我们称之为 `DjangoTutorial`:
 
 ![PyCharm-NewProject](https://www.freecodecamp.org/news/content/images/2022/02/PyCharm-NewProject.png)
 
-在PyCharm上创建一个新项目--作者截图
+在 PyCharm 上创建一个新项目--作者截图
 
 我个人更喜欢在已经有了虚拟环境的情况下创建新项目，这让生活变得更加简单。
 
-如果你创建的项目有一个默认的main.py文件（就像我一样，因为我一直忘了去掉复选标记），你现在可以安全地删除它。我们不打算使用它了。
+如果你创建的项目有一个默认的 main.py 文件（就像我一样，因为我一直忘了去掉复选标记），你现在可以安全地删除它。我们不打算使用它了。
 
-第一步当然是安装Django，以便我们能够构建我们的应用程序。我们使用pip进行安装:
+第一步当然是安装 Django，以便我们能够构建我们的应用程序。我们使用 pip 进行安装:
 
 ```bash
 $ pip install django
@@ -294,7 +294,7 @@ Installing collected packages: tzdata, sqlparse, asgiref, django
 Successfully installed asgiref-3.5.0 django-4.0.2 sqlparse-0.4.2 tzdata-2021.5
 ```
 
-然后，我们用以下命令创建我们的Django项目:
+然后，我们用以下命令创建我们的 Django 项目:
 
 ```bash
 django-admin startproject DjangoTutorial .
@@ -302,13 +302,13 @@ django-admin startproject DjangoTutorial .
 
 注意命令末尾的'.'。我喜欢用它，这样它就会在当前目录下创建项目，而不是创建一个额外的子目录。
 
-现在你在PyCharm中应该有一个这样的项目结构:
+现在你在 PyCharm 中应该有一个这样的项目结构:
 
 ![PyCharm-Project](https://www.freecodecamp.org/news/content/images/2022/02/PyCharm-Project.png)
 
-我们的Django应用程序的PyCharm文件夹结构--作者的屏幕截图
+我们的 Django 应用程序的 PyCharm 文件夹结构--作者的屏幕截图
 
-我们可以用标准的Django运行方式来运行我们的项目:
+我们可以用标准的 Django 运行方式来运行我们的项目:
 
 ```bash
 $ python manage.py runserver   
@@ -326,23 +326,23 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
 ```
 
-> 我们还没有应用我们的迁移，所以我们将在讨论了本地和Dokku访问的数据库配置之后再做这个。
+> 我们还没有应用我们的迁移，所以我们将在讨论了本地和 Dokku 访问的数据库配置之后再做这个。
 
 导航到链接 [http://127.0.0.1:8000/](http://127.0.0.1:8000/)，我们现在可以访问我们标准的 Django 欢迎页面。
 
 ![Django](https://www.freecodecamp.org/news/content/images/2022/02/Django.png)
 
-Django欢迎页--作者的屏幕截图
+Django 欢迎页--作者的屏幕截图
 
 我们已经完成了 Django 的安装并开始运行，所以现在我们可以开始构建项目的其他部分。
 
-像大多数项目一样，我们将需要在数据库（或使用Dokku命名的数据库）中存储数据。
+像大多数项目一样，我们将需要在数据库（或使用 Dokku 命名的数据库）中存储数据。
 
-我们还希望能够在开发机器上本地调试和运行我们的应用程序（使用本地数据库，在这里是SQLite），并使用 Dokku 的 Postgres 数据库在云上运行它。
+我们还希望能够在开发机器上本地调试和运行我们的应用程序（使用本地数据库，在这里是 SQLite），并使用 Dokku 的 Postgres 数据库在云上运行它。
 
 这意味着我们需要改变 settings.py 中的一些配置，以便能够支持两种使用情况，而不需要我们每次都改变任何标志或配置。
 
-我们首先安装dj-database-url软件包:
+我们首先安装 dj-database-url 软件包:
 
 ```bash
 # Install packages for the database url
@@ -354,9 +354,9 @@ $ pip install psycopg2
 $ pip install python-decouple
 ```
 
-这个包使我们能够拥有一个Django数据库连接字典，通过简单地指定一个数据库URL来填充所有的数据。
+这个包使我们能够拥有一个 Django 数据库连接字典，通过简单地指定一个数据库 URL 来填充所有的数据。
 
-安装好软件包后，让我们更新settings.py中的配置：
+安装好软件包后，让我们更新 settings.py 中的配置：
 
 ```Python
 # We need to add this import at the beginning to use environment variables
@@ -418,7 +418,7 @@ class Counter(models.Model):
 
 counter/models.py
 
-现在我们可以添加一个新的URL来加载我们的计数器页面。我们通过在'counter'文件夹中添加一个名为'urls.py'的新文件来做到这一点:
+现在我们可以添加一个新的 URL 来加载我们的计数器页面。我们通过在'counter'文件夹中添加一个名为'urls.py'的新文件来做到这一点:
 
 ```Python
 from django.urls import path
@@ -431,7 +431,7 @@ urlpatterns = [
 
 counter/urls.py
 
-我们现在有了模型和URL来加载我们的测试页面。现在我们需要的是视图和HTML模板来渲染页面。
+我们现在有了模型和 URL 来加载我们的测试页面。现在我们需要的是视图和 HTML 模板来渲染页面。
 
 让我们通过编辑'views.py'文件来创建该视图（view）:
 
@@ -456,7 +456,7 @@ def counter(request):
 
 counter/views.py
 
-现在我们可以创建我们的HTML模板，在页面上显示计数器的值。我们在一个新的 "templates "文件夹中创建一个名为 "counter.html "的新文件:
+现在我们可以创建我们的 HTML 模板，在页面上显示计数器的值。我们在一个新的 "templates "文件夹中创建一个名为 "counter.html "的新文件:
 
 ```HTML
 <!DOCTYPE html>
@@ -477,7 +477,7 @@ counter/views.py
 
 counter/templates/counter.html
 
-最后一步是将我们新创建的应用程序添加到'settings.py'文件中，以便Django能够识别它:
+最后一步是将我们新创建的应用程序添加到'settings.py'文件中，以便 Django 能够识别它:
 
 ```python
 .....
@@ -497,7 +497,7 @@ INSTALLED_APPS = [
 
 settings.py
 
-而我们的主URLs文件的URL:
+而我们的主 URLs 文件的 URL:
 
 ```Python
 from django.contrib import admin
@@ -511,7 +511,7 @@ urlpatterns = [
 
 urls.py
 
-有了所有必要的代码和HTML，我们现在可以创建并运行我们的迁移，在数据库中创建我们的新模型。我们首先在本地服务器上通过运行:
+有了所有必要的代码和 HTML，我们现在可以创建并运行我们的迁移，在数据库中创建我们的新模型。我们首先在本地服务器上通过运行:
 
 ```bash
 # Create and run migrations
@@ -533,27 +533,27 @@ Running migrations:
   Applying sessions.0001_initial... OK
 ```
 
-正如你所看到的，我们不仅为我们的新应用程序应用了迁移（migrations），而且还为其他Django应用程序运行了初始迁移，因为这是我们第一次运行迁移（migrations）。
+正如你所看到的，我们不仅为我们的新应用程序应用了迁移（migrations），而且还为其他 Django 应用程序运行了初始迁移，因为这是我们第一次运行迁移（migrations）。
 
-我们可以再次在本地运行我们的服务器，我们应该能够访问URL [http://127.0.0.1:8000/counter/](http://127.0.0.1:8000/counter/) 并增加计数器:
+我们可以再次在本地运行我们的服务器，我们应该能够访问 URL [http://127.0.0.1:8000/counter/](http://127.0.0.1:8000/counter/) 并增加计数器:
 
 ![CounterPage_Local](https://www.freecodecamp.org/news/content/images/2022/02/CounterPage_Local.gif)
 
-运行我们的计数器应用程序 - 作者的GIF图
+运行我们的计数器应用程序 - 作者的 GIF 图
 
 正如你所看到的，重新加载页面可以保持我们的计数器值，这意味着该值已经和我们的模型一起存储在数据库中。
 
-## 如何将我们的应用程序部署到Dokku上
+## 如何将我们的应用程序部署到 Dokku 上
 
 现在我们有一个非常简单的应用程序正在运行，并与数据库集成以存储我们的计数器值。
 
 我们准备把它部署到云端，这样我们就可以在那里进行测试，并确保我们的数据库也能在云端工作。
 
-在我们用Git推送将代码部署到Dokku之前，我们需要做一些准备。
+在我们用 Git 推送将代码部署到 Dokku 之前，我们需要做一些准备。
 
 - 安装我们的网络服务器（gunicorn）
 - 创建我们的需求文件（为我们的软件包）。
-- 创建我们的Procfile（用于我们的部署命令）
+- 创建我们的 Procfile（用于我们的部署命令）
 
 让我们从安装我们的网络服务器开始，以便在云中使用:
 
@@ -580,12 +580,12 @@ release: python manage.py migrate
 
 Procfile
 
-我们创建了两个命令供Dokku运行:
+我们创建了两个命令供 Dokku 运行:
 
-- release - 这个命令是在我们的应用程序在Dokku的部署上执行的。我们用它来迁移我们的数据库。
-- web - 这个命令允许Dokku知道运行哪个webserver以允许访问该应用程序。
+- release - 这个命令是在我们的应用程序在 Dokku 的部署上执行的。我们用它来迁移我们的数据库。
+- web - 这个命令允许 Dokku 知道运行哪个 webserver 以允许访问该应用程序。
 
-最后，为了确保我们的代码被部署到Dokku时能收集到任何静态文件，我们需要在根目录上创建一个名为'static'的新目录。在里面我们创建一个名为'.gitkeep'的空文件（这将使我们以后能够将该目录添加到Git仓库中）。
+最后，为了确保我们的代码被部署到 Dokku 时能收集到任何静态文件，我们需要在根目录上创建一个名为'static'的新目录。在里面我们创建一个名为'.gitkeep'的空文件（这将使我们以后能够将该目录添加到 Git 仓库中）。
 
 我们还需要在'settings.py'文件中为静态文件添加这个路径:
 
@@ -599,15 +599,15 @@ STATIC_ROOT = BASE_DIR / "static"
 
 settings.py
 
-现在所有的文件和逻辑都到位了，我们可以用标准的Git推送方式部署到Dokku。让我们检查一下我们当前的文件结构:
+现在所有的文件和逻辑都到位了，我们可以用标准的 Git 推送方式部署到 Dokku。让我们检查一下我们当前的文件结构:
 
 ![PyCharm-FolderStrcuture-1](https://www.freecodecamp.org/news/content/images/2022/02/PyCharm-FolderStrcuture-1.png)
 
-PyCharm文件夹结构--作者的截图
+PyCharm 文件夹结构--作者的截图
 
-为了能够将我们的代码推送到Dokku，我们需要将我们的项目添加到一个Git仓库。
+为了能够将我们的代码推送到 Dokku，我们需要将我们的项目添加到一个 Git 仓库。
 
-由于我们不想把文件夹结构中的所有文件都推送到Dokku的git仓库，所以我们创建一个".gitignore "来排除某些文件和目录。我使用这个优秀的Gist的内容来填充这个文件:
+由于我们不想把文件夹结构中的所有文件都推送到 Dokku 的 git 仓库，所以我们创建一个".gitignore "来排除某些文件和目录。我使用这个优秀的 Gist 的内容来填充这个文件:
 
 [python pycharm gitignore
 
@@ -638,7 +638,7 @@ $ git add . && git commit -m "initial commit"
  create mode 100644 requirements.txt
 ```
 
-在提交了我们的仓库后，我们现在可以把它推送到远程仓库，也就是我们应用程序的Dokku Git仓库:
+在提交了我们的仓库后，我们现在可以把它推送到远程仓库，也就是我们应用程序的 Dokku Git 仓库:
 
 ```bash
 # Adding our remote repository (replace domain.com with your domain name)
@@ -753,19 +753,19 @@ To domain.com:djangotutorial
  * [new branch]      main -> main
 ```
 
-我们刚刚将我们的应用程序部署到Dokku。
+我们刚刚将我们的应用程序部署到 Dokku。
 
-刚刚发生了什么？嗯，Dokku为我们做了很多工作:
+刚刚发生了什么？嗯，Dokku 为我们做了很多工作:
 
 - 安装 Python
-- 根据 requirements 文件安装Python的包
+- 根据 requirements 文件安装 Python 的包
 - 收集静态文件
-- 执行migrations
-- 最后启动gunicorn服务器来部署我们的应用程序
+- 执行 migrations
+- 最后启动 gunicorn 服务器来部署我们的应用程序
 
 如果你有一个权限错误，那么你的私钥应该在你的本地开发环境中注册。如果你在推送时得到一个 "拒绝许可 "的错误，你可以按以下方式注册你的私钥。`ssh-add -k ~/<your private key>`。
 
-你也可能在访问应用程序时看到关于 ALLOWED\_HOSTS 的错误。在这种情况下，你需要做的就是在Dokku服务器上运行以下命令，将环境变量设置为正确值:
+你也可能在访问应用程序时看到关于 ALLOWED_HOSTS 的错误。在这种情况下，你需要做的就是在 Dokku 服务器上运行以下命令，将环境变量设置为正确值:
 
 ```shell
 # Set ALLOWED_HOSTS environment variable (make sure to use your domain name)
@@ -776,15 +776,15 @@ $ dokku config:set djangotutorial ALLOWED_HOSTS=djangotutorial.domain.com
 
 ![PageCounter_Server](https://www.freecodecamp.org/news/content/images/2022/02/PageCounter_Server.gif)
 
-在Dokku上运行我们的计数器应用程序 - 作者的GIF
+在 Dokku 上运行我们的计数器应用程序 - 作者的 GIF
 
-恭喜你，你刚刚在Dokku上部署了你的应用程序。
+恭喜你，你刚刚在 Dokku 上部署了你的应用程序。
 
-## 如何使用Let's Encrypt 加上 SSL
+## 如何使用 Let's Encrypt 加上 SSL
 
-我们可以做的最后一项配置是通过安装Let's Encrypt SSL证书为我们的应用程序添加SSL安全。
+我们可以做的最后一项配置是通过安装 Let's Encrypt SSL 证书为我们的应用程序添加 SSL 安全。
 
-我们可以通过Let's Encrypt插件在Dokku上非常容易地做到这一点:
+我们可以通过 Let's Encrypt 插件在 Dokku 上非常容易地做到这一点:
 
 ```bash
 # Install the Let's Encrypt plugin
@@ -807,32 +807,32 @@ dokku letsencrypt:cron-job --add
 
 ## 结语
 
-使用PaaS使开发者在构建网络应用时更容易。
+使用 PaaS 使开发者在构建网络应用时更容易。
 
-你可以使用像Heroku这样的托管PaaS，还有很多其他的，所以选择是有的。
+你可以使用像 Heroku 这样的托管 PaaS，还有很多其他的，所以选择是有的。
 
 但也有一些主要的缺点:
 
 - 价格 - 托管解决方案可能在数据库存储或文件存储等方面有限制
-- 你不能控制部署PaaS的主机。最近AWS的例子表明，即使是最大的云服务商也不是没有问题的。
+- 你不能控制部署 PaaS 的主机。最近 AWS 的例子表明，即使是最大的云服务商也不是没有问题的。
 
-你可以通过自我托管你的PaaS来解决这些问题。
+你可以通过自我托管你的 PaaS 来解决这些问题。
 
-这允许在定价方面有更多的控制。你可以使用像 [Digital Ocean](https://www.digitalocean.com/)、[Hetzner](https://hetzner.cloud/) 和其他有相当便宜的VPS的主机供应商，它们可以完美地与 Dokku 一起工作。
+这允许在定价方面有更多的控制。你可以使用像 [Digital Ocean](https://www.digitalocean.com/)、[Hetzner](https://hetzner.cloud/) 和其他有相当便宜的 VPS 的主机供应商，它们可以完美地与 Dokku 一起工作。
 
-没有数据库限制。你可能有的唯一限制是内存和磁盘空间，但你可以随时升级你的VPS，价格比在Heroku获得一个新的数据库要低。
+没有数据库限制。你可能有的唯一限制是内存和磁盘空间，但你可以随时升级你的 VPS，价格比在 Heroku 获得一个新的数据库要低。
 
-Dokku很容易安装，就像我们看到的那样。创建和部署一个应用程序是一个3步过程:
+Dokku 很容易安装，就像我们看到的那样。创建和部署一个应用程序是一个 3 步过程:
 
-- 在Dokku上创建一个应用程序
-- 在Dokku上创建一个数据存储（如果需要，如Postgres）并链接到应用程序
-- 用Git将你的代码部署到Dokku上
+- 在 Dokku 上创建一个应用程序
+- 在 Dokku 上创建一个数据存储（如果需要，如 Postgres）并链接到应用程序
+- 用 Git 将你的代码部署到 Dokku 上
 
-此外，你可能需要配置一些环境变量和SSL证书，但这就是全部。
+此外，你可能需要配置一些环境变量和 SSL 证书，但这就是全部。
 
-Dokku确实是最小的PaaS实现。
+Dokku 确实是最小的 PaaS 实现。
 
-Django应用程序的完整源代码可在以下网站获得:
+Django 应用程序的完整源代码可在以下网站获得:
 
 [
 

@@ -15,7 +15,7 @@
 -   [CSS 中的 **固定定位**](#what-is-the-fixed-position-in-css)
 -   [CSS 中的 **粘性定位**](#what-is-the-sticky-position-in-css)
 
-## **你可以在 YouTube 上观看本教程：**
+## **你可以在 YouTube 上观看本教程**
 
 # CSS 中的 position 属性
 
@@ -27,7 +27,7 @@
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-35--2-.png)
 
-**Flexbox制作的网站**
+**Flexbox 制作的网站**
 
 通过 **position 属性**, 你可以制作一个 **非对称的网站**，像这样：
 
@@ -35,11 +35,11 @@
 
 ** Grid 和 position 属性 制作的网站**
 
-你不能使用Flexbox和Grid把你的内容放在所有你想要的地方。你会受限于 X 轴和 Y 轴。看看这幅图你就会明白我的意思了:👇
+你不能使用 Flexbox 和 Grid 把你的内容放在所有你想要的地方。你会受限于 X 轴和 Y 轴。看看这幅图你就会明白我的意思了:👇
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-1--6-.png)
 
-**对称的内容布局显示元素分别放置在x轴和y轴**
+**对称的内容布局显示元素分别放置在 x 轴和 y 轴**
 
 你的盒子会遵循这些衡量因素。👆
 
@@ -48,11 +48,11 @@ But, using the **position property**, you can place your content anywhere you wi
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-2--4-.png)
 
-**不对称的内容布局，不需要考虑x轴和y轴的位置。**
+**不对称的内容布局，不需要考虑 x 轴和 y 轴的位置。**
 
 你可以用这种布局把你的盒子放在任何你想要的地方。👆换句话说，你可以在屏幕上将元素 **自由移动**。
 
-下面是另一个使用position属性的例子:
+下面是另一个使用 position 属性的例子:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-3--8-.png)
 
@@ -64,7 +64,7 @@ But, using the **position property**, you can place your content anywhere you wi
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-4--7-.png)
 
-对于这个项目，你可以使用任何安装了 **emmet插件** 的代码编辑器。我将使用 [CodePen.io](https://codepen.io).
+对于这个项目，你可以使用任何安装了 **emmet 插件** 的代码编辑器。我将使用 [CodePen.io](https://codepen.io).
 
 ### HTML
 
@@ -97,7 +97,7 @@ body 标签内部，写如下代码：👇
 }
 ```
 
-position 属性有5个值：
+position 属性有 5 个值：
 
 1.  relative
 2.  absolute
@@ -128,7 +128,7 @@ position 属性有5个值：
 
 **相对定位和绝对定位**
 
-### 看如下2个例子 👇
+### 看如下 2 个例子 👇
 
 我们先尝试一下 **`relative`** 值。写如下代码：
 
@@ -235,7 +235,7 @@ body{
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-14.png)
 
-**结果是粉色盒子右移了100px**
+**结果是粉色盒子右移了 100px**
 
 注意 .box-2 相对于 .box-1 移动了 100px。
 
@@ -264,7 +264,7 @@ body{
 
 ![](https://www.freecodecamp.org/news/content/images/2021/06/Frame-15.png)
 
-**结果是粉色盒子相对于 body 移动了100px**
+**结果是粉色盒子相对于 body 移动了 100px**
 
 注意是 .box-2 相对于 **body** 标签移动了 **100px** 。
 
@@ -335,7 +335,7 @@ CSS 如下：
 
 ### 粘性定位示例
 
-无需改变你当前的HTML和CSS中的任何东西，只需改变这个值:
+无需改变你当前的 HTML 和 CSS 中的任何东西，只需改变这个值:
 
 ```CSS
 .box-1{

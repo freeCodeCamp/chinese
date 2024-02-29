@@ -5,17 +5,17 @@
 
 ![What is a Callback Function in JavaScript? JS Callbacks Example Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2022/08/pexels-pixabay-39656.jpg)
 
-JavaScript高阶函数可以接受另一个函数作为参数。这些使用其他函数作为参数的函数被称为回调函数。
+JavaScript 高阶函数可以接受另一个函数作为参数。这些使用其他函数作为参数的函数被称为回调函数。
 
-## 什么是JavaScript中的回调函数?
+## 什么是 JavaScript 中的回调函数?
 
 回调是将另一个函数作为参数传递的函数。
 
 这意味着父函数可以是任意类型的函数，但是回调函数仅在父函数限定的场景中使用（或者是几个有限的情况）。
 
-## 如何在JavaScript中创建回调函数?
+## 如何在 JavaScript 中创建回调函数?
 
-你可以像创建其他函数那样在JavaScript中创建回调函数:
+你可以像创建其他函数那样在 JavaScript 中创建回调函数:
 
 ```javascript
 function callbackFunction () {
@@ -43,7 +43,7 @@ anyFunction(callbackFunction);
 
 现在让我们一起来编写回调函数，你会在编程生涯中频繁碰到它，让我们开始吧！
 
-JavaScript已经内置了一个高阶函数——`every`方法。
+JavaScript 已经内置了一个高阶函数——`every`方法。
 
 `every`方法是一个数组方法，该方法使用回调函数来检查数组中的每一个元素是不是都通过指定的测试。
 
@@ -59,7 +59,7 @@ function callbackFunction(element, index, array) {
 
 回调函数可以很简单，也可以非常复杂。我们需要一些上下文来创建一个示例。
 
-### 如何在JavaScript中编写回调函数
+### 如何在 JavaScript 中编写回调函数
 
 假设我们要处理一个元素为字符串的数组。你需要检查这个数组是否有且仅有一个字符串，这个字符串的长度为三个字母；全部是大写字母，并且三个字母各不相同。
 
@@ -242,9 +242,9 @@ function callbackFunction(element, index, array) {
 
 另外，字符串必须全部为大写字母，并且都英文字母。
 
-我们使用`charCodeAt`来实现。这个方法返回字母的ASCII 编码，大写字母的ASCII编码是65到90，可以通过这个方法来检查是否仅为大写英文字母。
+我们使用`charCodeAt`来实现。这个方法返回字母的 ASCII 编码，大写字母的 ASCII 编码是 65 到 90，可以通过这个方法来检查是否仅为大写英文字母。
 
-有三个元素需要被检查： `element.charCodeAt(0)`、 `element.charCodeAt(1)`和 `element.charCodeAt(2)`，它们的值必须在65到90之间。虽然只有三个字母，但是我们可以使用循环。
+有三个元素需要被检查： `element.charCodeAt(0)`、 `element.charCodeAt(1)`和 `element.charCodeAt(2)`，它们的值必须在 65 到 90 之间。虽然只有三个字母，但是我们可以使用循环。
 
 如下代码：
 
@@ -302,9 +302,9 @@ anArray.every(callbackFunction);
 
 程序变得更复杂，就越有必要使用回调函数。
 
-## 为什么在JavaScript中使用回调函数?
+## 为什么在 JavaScript 中使用回调函数?
 
-回调函数是JavaScript的一个简洁特性。 这意味着我们可以使用一个普通函数处理一些事情(如`every`检查数组中的每一个元素是否通过某个测试， `filter`筛选掉一些不符合标准的元素 `replace`是一个字符串回调函数，可以在特定条件下替换掉字符串的一部分) 以及一个回调函数在特定情况下处理特定的行为。
+回调函数是 JavaScript 的一个简洁特性。 这意味着我们可以使用一个普通函数处理一些事情(如`every`检查数组中的每一个元素是否通过某个测试， `filter`筛选掉一些不符合标准的元素 `replace`是一个字符串回调函数，可以在特定条件下替换掉字符串的一部分) 以及一个回调函数在特定情况下处理特定的行为。
 
 -   `filter` 可以通过回调函数设定的条件筛掉一些元素
 -   `every` 可以通过回调函数设定的条件来检查数组上的每一个元素

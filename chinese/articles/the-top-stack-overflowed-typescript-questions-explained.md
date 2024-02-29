@@ -91,7 +91,7 @@ interface Human {
 
 以下是 type alias 和 interface 的主要区别:
 
-### 关键区别：接口(Interfaces)只能描述 object shapes。类型别名(Type aliases)可用于其他类型(other types)，如 primitives, unions 和 tuples。
+### 关键区别：接口(Interfaces)只能描述 object shapes。类型别名(Type aliases)可用于其他类型(other types)，如 primitives, unions 和 tuples
 
 type alias 可以表示的数据类型中是相当灵活的。从 basic primitives（基本的基元）到 复杂的 unions（联合）和 tuples（元组）, 如下所示:
 

@@ -34,9 +34,9 @@ console.log(sum);
 
  为了正确地实现这种异步行为，多年来开发人员使用了几种不同的解决方案。每个解决方案都在前一个解决方案的基础上进行改进，这使得代码更加优化，并且在代码变得复杂时更容易理解。
 
-为了进一步理解 JavaScript 的异步特性，我们将介绍回调函数、promise、async和await。
+为了进一步理解 JavaScript 的异步特性，我们将介绍回调函数、promise、async 和 await。
 
-# JavaScript中的回调函数是什么?
+# JavaScript 中的回调函数是什么?
 
 回调是在另一个函数内部传递的函数，然后在该函数中调用以执行任务。
 
@@ -72,7 +72,7 @@ fired third
 
 这种方法非常有效，但仅限于一点。有时候，开发人员必须对代码中的不同源代码进行多次调用。为了进行这些调用，回调将被嵌套，直到它们变得非常难以读取或维护。这被称为 **回调地狱**
 
-为了解决这个问题，引入了Promise。
+为了解决这个问题，引入了 Promise。
 
 # JavaScript 中的 Promise 是什么?
 
@@ -85,7 +85,7 @@ fired third
 
 Promise 的出现是为了解决回调函数的问题。Promise 接受两个函数作为参数。即`resolve`和`reject`。请记住，resolve 表示成功时，reject 表示错误发生时。
 
-让我们看一下Promise的作用:
+让我们看一下 Promise 的作用:
 
 ```JavaScript
 const getData = (dataEndpoint) => {
@@ -104,7 +104,7 @@ const getData = (dataEndpoint) => {
 };
 ```
 
-上面的代码是一个Promise，包含在对某个端点的请求中。就像我前面提到的，这个Promise包含了`resolve`和`reject`。
+上面的代码是一个 Promise，包含在对某个端点的请求中。就像我前面提到的，这个 Promise 包含了`resolve`和`reject`。
 
  例如，在调用端点之后，如果请求成功，我们将解决承诺并继续对响应执行任何我们想要的操作。但是如果出现错误，承诺就会被拒绝。
 
@@ -142,15 +142,15 @@ const asyncFunc = async () => {
 }
 ```
 
- `async` 关键字是我上面提到的用来定义 async 函数的。但是 `await`呢？好吧，它阻止 JavaScript 在解决promise之前将 `fetch` 赋值给response变量。一旦 promise 被解决，现在可以将 fetch 方法的结果分配给 response 变量。
+ `async` 关键字是我上面提到的用来定义 async 函数的。但是 `await`呢？好吧，它阻止 JavaScript 在解决 promise 之前将 `fetch` 赋值给 response 变量。一旦 promise 被解决，现在可以将 fetch 方法的结果分配给 response 变量。
 
 第 3 行代码也是相同的行为。 `.json` 方法返回一个 Promise 对象，我们可以使用 `await` 延迟分配直到 promise 被解决。
 
 # 阻塞还是非阻塞
 
-当我说“暂停”，你一定认为实现Async和Await以某种方式阻塞代码执行。因为我们的请求花费的时间太长了，对吧？
+当我说“暂停”，你一定认为实现 Async 和 Await 以某种方式阻塞代码执行。因为我们的请求花费的时间太长了，对吧？
 
-事实上并不是。async函数内部的代码会阻塞，但不会以任何方式影响程序的执行。代码的执行仍然是异步的。正如下面的代码：
+事实上并不是。async 函数内部的代码会阻塞，但不会以任何方式影响程序的执行。代码的执行仍然是异步的。正如下面的代码：
 
 ```javascript
 const asyncFunc = async () => {

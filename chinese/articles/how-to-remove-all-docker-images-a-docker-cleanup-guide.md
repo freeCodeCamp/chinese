@@ -10,11 +10,11 @@
 
 不幸的是，这可能会占用大量的磁盘空间，最终你将会有一个完整的磁盘。
 
-如果你在设备或服务器上使用Docker，这并不重要。本指南告诉你如何分析已使用的磁盘空间和清理不同的Docker资源。
+如果你在设备或服务器上使用 Docker，这并不重要。本指南告诉你如何分析已使用的磁盘空间和清理不同的 Docker 资源。
 
-你所需要的只是一个正在运行的Docker守护进程和一个终端。
+你所需要的只是一个正在运行的 Docker 守护进程和一个终端。
 
-## 如何分析Docker使用了多少空间
+## 如何分析 Docker 使用了多少空间
 
 你可以通过运行下面的命令来查看有多少空间被使用:
 
@@ -28,7 +28,7 @@ Local Volumes   3         2         539.1MB   50.04MB (9%)
 Build Cache     76        0         1.242GB   1.242GB
 ```
 
-你可以通过使用verbose选项 `-v` 获得更多信息:
+你可以通过使用 verbose 选项 `-v` 获得更多信息:
 
 ```sh
 $ docker system df -v
@@ -63,9 +63,9 @@ nysus21ej7pf   regular        0B        2 months ago   2 months ago
 - 本地卷的空间使用，以及
 - 构建缓存的使用情况。
 
-## 如何在Docker中清理一切
+## 如何在 Docker 中清理一切
 
-你可以清理一切，也可以清理Docker中的特定资源，如镜像、容器卷或构建缓存。
+你可以清理一切，也可以清理 Docker 中的特定资源，如镜像、容器卷或构建缓存。
 
 要尽可能地清理，不包括正在使用的组件，请运行这个命令:
 
@@ -75,7 +75,7 @@ docker system prune -a
 
 `-a` 包括未使用的和悬空的容器。不提供`-a'将只删除悬空的镜像，这些镜像是没有标记的镜像，与任何其他镜像没有关系。
 
-如果你想清理大部分Docker资源，但仍然保留有标签的镜像，你可以执行这个命令:
+如果你想清理大部分 Docker 资源，但仍然保留有标签的镜像，你可以执行这个命令:
 
 ```sh
 docker system prune
@@ -109,20 +109,20 @@ docker container prune
 docker volume prune
 ```
 
-## 如何持续有效地管理你已使用的Docker空间
+## 如何持续有效地管理你已使用的 Docker 空间
 
 你可以在日常或启动时运行一些东西。要跳过通常的提示，你需要在你想自动运行的命令中添加`-f`。
 
-请记住，这将导致你更频繁地下载镜像，因为你定期删除Docker资源。
+请记住，这将导致你更频繁地下载镜像，因为你定期删除 Docker 资源。
 
-如果你没有磁盘空间问题，那么不用担心。一旦Docker磁盘使用量过大引起你的注意，就立即清理。
+如果你没有磁盘空间问题，那么不用担心。一旦 Docker 磁盘使用量过大引起你的注意，就立即清理。
 
 ## 结语
 
-如今，有很多方法可以使用`docker`命令来清理Docker磁盘空间。如果你想定期清理Docker资源，你甚至可以自动执行这些命令。
+如今，有很多方法可以使用`docker`命令来清理 Docker 磁盘空间。如果你想定期清理 Docker 资源，你甚至可以自动执行这些命令。
 
 我希望你喜欢这篇文章。
 
-如果你喜欢它，觉得有必要给我点赞，或者只是想联系我，[在Twitter上关注我](https://twitter.com/sesigl)。
+如果你喜欢它，觉得有必要给我点赞，或者只是想联系我，[在 Twitter 上关注我](https://twitter.com/sesigl)。
 
-我在eBay Kleinanzeigen工作，这是全球最大的分类公司之一。顺便说一下，[我们正在招聘](https://jobs.ebayclassifiedsgroup.com/ebay-kleinanzeigen)!
+我在 eBay Kleinanzeigen 工作，这是全球最大的分类公司之一。顺便说一下，[我们正在招聘](https://jobs.ebayclassifiedsgroup.com/ebay-kleinanzeigen)!

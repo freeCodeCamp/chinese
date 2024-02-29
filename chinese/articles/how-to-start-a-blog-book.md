@@ -1,1391 +1,1409 @@
-> -  原文地址：[How to Start a Blog [Free 70-Page Book]](https://www.freecodecamp.org/news/how-to-start-a-blog-book/)
-> -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Start a Blog [Free 70-Page Book]](https://www.freecodecamp.org/news/how-to-start-a-blog-book/)
+> - 原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
+> - 译者：[Leon Feng](https://www.freecodecamp.org/chinese/news/author/leon/)
+> - 校对者：[Miya Liu](https://www.freecodecamp.org/chinese/news/author/miyaliu/)
 
-![How to Start a Blog [Free 70-Page Book]](https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/how-to-start-a-blog.png)
+![如何成为博客[免费70页书]](https://www.freecodecamp.org/news/content/images/size/w2000/2021/10/how-to-start-a-blog.png)
 
-What follows is a full-length book on how to create a successful blog.
+以下是一本关于如何创建成功网志的完整书籍。
 
-I am a software developer and I've written 1,500 posts on my blog over the past few years. Millions of people have read my writing. And my blog is now one of the top 20,000 websites on earth (according to Amazon's Alexa website ranking tool).
+我是一名软件开发人员，过去几年里我已经在我的网志上写了 1500 篇文章。数百万人阅读过我的作品。现在，根据亚马逊的 Alexa 网站排名，我的网志已成为全球排名前 20000 的网站之一。
 
-In this book, we will not focus on the "how to install WordPress" aspect of blogging. We will also not discuss how to build your own blogging software. (That's a fun exercise, but not as important as what I'd like to discuss.)
+在这本书中，我们不会重点讨论网志建设的“如何安装 WordPress”方面，我们也不会讨论如何构建自己的网志软件。（这是一项有趣的练习，但不如我想讨论的重要。）
 
-This book will instead focus on developing the right mindset. It will also show you how to get systems in place so that you can run your blog over a long period of time.
+相反，这本书将专注于培养正确的心态。它还会向你展示如何建立系统，使你可以长期运营你的网志。
 
-The hard part of blogging is doing it sustainably. How do you blog in such a way that you can publish consistently? How do you become a household name in your field? How do you hold your audience's attention over time?
+写网志的难点在于持久。你如何才能坚持不断地发表博文？你如何成为你的领域中家喻户晓的名字？你怎样长期吸引你的读者？
 
-A lot of bloggers struggle with these challenges. There are so many blogs out there with 1 or 2 posts. Or the last post is from 2018 saying "Sorry I haven't published for a long time." With planning and execution, you can prevent this from happening to your blog.
+很多博客在应对这些挑战时感到困难。有那么多网志上只有 1 或 2 篇文章，或者最后一篇文章是 2018 年写的，说：“对不起，我已经很长时间没有发表过了。”通过规划和执行，你可以防止这种情况发生在你的网志上。
 
-Also, you may be wondering how relevant blogging is in the 2020s. After all, YouTube, TikTok, and Instagram get a lot of headlines in the news. Well I'm here to tell you that blogs are still powerful when it comes to content marketing and getting organic traffic from Google.
+此外，你可能会想，在 2020 年代网志是否仍有价值。毕竟，YouTube、TikTok、和 Instagram 在新闻中占据了很多的头条。但我在这里告诉你，网志仍然是强大的内容营销工具，能让你从谷歌获取有机流量。
 
-The main goal of the book (and yes, you can read the book in its entirety here) is to help you get started with blogging in the right way. So grab a beverage and a comfortable chair. And bookmark this page so you can come back and review, in case you can't finish it in one sitting.
+本书的主要目标（是的，你可以在这里阅读整本书）是帮助你以正确的方式创建网志。所以请拿杯饮料和舒适的椅子，并将此页面加为书签，如果你一次读不完的话，可以回来接着读。
 
-And if you prefer, [you can download a PDF and ePub version of this **How to Start a Blog** book here](https://flaviocopes.com/page/book-blog/).
+如果你愿意，[你也可以在此处下载本书英文版的 PDF 和 ePub 文件](https://flaviocopes.com/page/book-blog/)。
 
-## Table of Contents
+## 目录
 
-1.  [Framing your blog for success](#framing-your-blog-for-success)
-2.  [The benefits of having a successful blog](#the-benefits-of-having-a-successful-blog)
-3.  [Pick a goal for your blog](#pick-a-goal-for-your-blog)
-4.  [Own your platform](#own-your-platform)
-5.  [Make the first step](#make-the-first-step)
-6.  [Solutions to common problems](#solutions-to-common-problems)
-7.  [Content is king](#content-is-king)
-8.  [Practical content suggestions](#practical-content-suggestions)
-9.  [Create a system](#create-a-system)
-10.  [How to get people to your blog](#how-to-get-people-to-your-blog)
-11.  [Expand your reach with an email list](#expand-your-reach-with-an-email-list)
-12.  [Ups and downs](#ups-and-downs)
-13.  [Making money with a blog](#making-money-with-a-blog)
-14.  [Final words](#final-words)
+0. [译注](#translators-notes)
+1. [为网志的成功进行策划](#framing-your-blog-for-success)
+2. [拥有成功网志的好处](#the-benefits-of-having-a-successful-blog)
+3. [为你的网志设定一个目标](#pick-a-goal-for-your-blog)
+4. [拥有自己的平台](#own-your-platform)
+5. [迈出第一步](#make-the-first-step)
+6. [常见问题的解决方案](#solutions-to-common-problems)
+7. [内容为王](#content-is-king)
+8. [实用的内容建议](#practical-content-suggestions)
+9. [创建一个系统](#create-a-system)
+10. [如何吸引人们访问你的网志](#how-to-get-people-to-your-blog)
+11. [通过邮件列表扩大你的影响力](#expand-your-reach-with-an-email-list)
+12. [高潮和低谷](#ups-and-downs)
+13. [通过网志赚钱](#making-money-with-a-blog)
+14. [结束语](#final-words)
 
-## Framing your blog for success
+<h2 id="translators-notes">译注</h2>
 
-People communicate and share information over the internet. We use it to look for help. Maybe we try to find the perfect recipe for dinner or the best book we should read this month.
+### 关于“blog”一词的中文翻译
 
-A blog is a tiny website, made by one or a handful of people, with the goal of creating information that will help people.
+英文中的“blog”音译为“博客”，这似乎已是既成事实。但是，这种译法在我看来很成问题。
 
-On this blog, you will write posts. A post is a single page of the website containing some information.
+汉字“客”有人的含义，“博客”若是作为“blogger”的翻译，可谓完美。可是，博客发表文章的网站也叫“博客”的话，就难免引起歧义。例如：“有些博客很成功，另一些则失败了。”这句话中的“博客”，究竟是指人还是网站？
 
-The concept of a blog I'll talk about in this book is different from a diary, where you write about everyday things as they happen. That is something you can definitely do, but it's not what I'll be talking about here.
+为了避免歧义，本书译文中一律采用以下的翻译：
 
-By blog, I mean a personal site, or a product/company site, where you regularly produce interesting content that can be beneficial to other people.
+- blog -> [网志](https://www.sunyansong.com/archives/5922#:~:text=%E2%80%9Cblog%E2%80%9D%E6%98%AF%E4%B8%8D%E6%98%AF%E5%8F%AF%E4%BB%A5%E7%9B%B8%E5%BA%94%E5%9C%B0%E7%BF%BB%E8%AF%91%E6%88%90%E2%80%9C%E7%BD%91%E5%BF%97%E2%80%9D%E5%91%A2%3F)
+- blogger -> 博客/博主
+- blog post -> 博文
+- blogging -> 写网志/写博文
 
-You want people to be able to find the solution to their problem on your blog.
+此外，我还建议将“podcast”翻译成“网播”，而将“podcaster”翻译成“播客”。
 
-I want to highlight this point because it's central. Your blog should be useful to other people. Without this fundamental concept, your blog has no reason to exist.
+如有异议，欢迎到 freeCodeCamp [贡献者论坛](https://forum.freecodecamp.org/c/chinese/contributors/568)发帖讨论，提醒我（@leonfeng）注意。
 
-### Why a blog does matter
+### 中文第三人称中性代词的缺乏
 
-Blogs are the fundamental building block of today's internet. Think about it: we have giant corporations that create walled gardens that people are constantly drawn to, like Facebook, YouTube, Instagram, and Twitter.
+本书译文不使用网上流行的“TA”作为第三人称泛指代词，而使用“她”，原因有三：
 
-Those are places that are engineered get you addicted so that you consume, debate, consume, debate, consume. And if you are in the lucky 1‰, you will be one of the stars of those walled gardens, and you will profit from other people consuming, debating, consuming, debating, consuming.
+1. “TA”不是汉字，而且在某些上下文中可能会让人误以为是英文“Teaching Assistant”的缩写。
 
-What are those people consuming? Well, aside from the content, they're consuming their time.
+2. 早在 2009 年，就有人提出[造一个新的汉字](https://wenku.baidu.com/view/336d63b1f121dd36a32d825d?fr=xueshu&_wkts_=1678404402284)，也有人主张[用“祂”字作为中性代词](https://baijiahao.baidu.com/s?id=1716411497556031793&wfr=spider&for=pc)。前者至今也未被采纳，后者则不在《新华字典》中。诚然，用“她”字进行泛指有着与用“他”字同样的缺点。但是，当今社会中，女性仍是弱势群体，大量使用“她”字并不会一夜之间颠覆男性的权力与地位。
 
-With notable exceptions, much of the content created and shared on the internet isn't useful.
+3. 另外，“其他”、“他人”都是高频词，在本书中出现得也很多。这样一来，“她”和“他”两个字可以说是交替用作泛指代词。在更好的解决方案出现之前，我只能如此妥协了。
 
-But a blog is one of those rare places on the Internet where you can create something of value without a giant corporation benefitting from your work. You are the owner of your little corner of the world.
+同样，如果你对这个问题有独到的见解，欢迎发帖讨论。
 
-I'll soon tell you more about the "own your platform" concept, but here's the gist: a blog matters because it's 100% yours.
+以下是正文。
 
-### Is blogging still relevant?
+<h2 id="framing-your-blog-for-success">为网志的成功进行策划</h2>
 
-This is a legit question. Is blogging still relevant in today's world, dominated by social media and big platforms?
+人们通过互联网进行交流和信息共享。我们使用它来寻求帮助，也许我们会试图寻找完美的晚餐菜谱，或本月应该阅读的最佳书籍。
 
-Can the underdog still find some space on the Internet? Don't we have too many sites already?
+网志是由一个或少数几个人制作的微型网站，旨在发布有助于人们的信息。
 
-First, we'll never have too many sites. There's less than 1 person creating content for every 100 people. This is a rule for all media consumption: there are ~100 TV or radio stations in a country with 100 million people. Same for newspapers.
+在你的网志上，你将撰写文章。一篇文章是网站上的单个页面，包含一些信息。
 
-The same goes for the Internet. If you start creating, and you do your job well, eventually your content will surface and you will have success. Whatever success means to you.
+我在本书中谈到的网志概念与日记不同，日记是你记录日常事物发生的地方。这是你绝对可以做的，但这不是我在这里要谈论的内容。
 
-This is possible with videos on YouTube, podcasts, and blogs, of course.
+我所说的网志是指个人网站或产品/公司网站，你定期在上面发布有趣的内容，这些内容对其他人有益。
 
-So why should you start a blog instead of making videos? It's a choice. We can't all be good at making videos, and we can't all have a voice made for podcasts. Similarly, we can't all be good at writing.
+你希望人们能够在你的网志上找到解决问题的方法。
 
-But if you happen to enjoy writing and you like the idea of having your own little corner on the Internet, then creating a blog might be what you are looking for.
+我想强调这一点，因为这是核心。你的网志应该对其他人有用。如果没有这个基本概念，你的网志就没有存在的理由。
 
-### Should I have a personal blog or a company/product blog?
+### 为什么网志很重要
 
-If you are a freelancer, working solo, or you are a solopreneur, a company of one, you might have a tough decision ahead: should you create a personal blog or a company blog?
+网志是当今互联网的基本构建模块。想一想：我们有巨型企业创建了不断吸引人们的封闭花园，比如 Facebook、YouTube、Instagram、和 Twitter。
 
-There's a big distinction in this. In my opinion, a personal blog is way better because companies and projects come and go. You might sell your company in 3 years.
+这些地方被设计成让你上瘾，使你不断地消耗、争论、消耗、争论、消耗。如果你是幸运的 1‰，你将成为那些封闭花园的明星之一，并从其他人的消耗、争论、消耗、争论、消耗中获利。
 
-Your personal brand, however, will stick with you wherever you go. The advantage I find in a personal brand is that you have the ability to experiment and pivot, if necessary.
+那些人在消耗什么？除了内容外，他们消耗的是时间。
 
-If you create a brand that's too tied to a product or area, you can't switch without changing the name and domain, so it can be very confusing to people and it's very hard to make it work nicely.
+除了一些特别的例外，在互联网上创造和分享的大部分内容都没有用处。
 
-And most likely you'll have a hard time finding a good idea, at first, so it’s always good to have more than one option. That way you don't have to start from zero.
+但网志是互联网上那些罕见的、可以在不让巨型企业受益的情况下创造价值的地方之一。在你所拥有的世界一角，你便是主人。
 
-### Why a blog and not videos or podcasts?
+我很快会告诉你更多关于“拥有自己的平台”的概念，但这是要点：网志很重要，因为它 100% 是你的。
 
-In the last few years, videos and podcasts have grown tremendously.
+### 网志仍然有价值吗？
 
-Videos, in particular, are very popular. Kids want to become YouTubers when they grow up.
+这是一个合理的问题。在社交媒体和大型平台主导的今天，网志是否仍然有意义？
 
-Both videos and podcasts are awesome. I watch YouTube every day and I am subscribed to several podcasts, too.
+草根还能在互联网上找到一些空间吗？难道网站还不够多吗？
 
-There's one thing I noticed about those platforms, however. Podcasts are very hard to discover. I only discover new podcasts if I see one mentioned somewhere. Or by word of mouth.
+首先，我们永远不会有过多的网站。每 100 个人中只有不到 1 个人在创作内容。这是所有媒体消费的规律：在一个拥有 1 亿人口的国家，大约有 100 个电视或广播电台，报纸也是如此。
 
-And in addition to having great content, as a podcast owner, a person's voice tone is a differentiating factor that makes me like a podcast or not. You are either born with a great podcasting voice, or you're not.
+互联网也是如此。如果你开始创作，并且干得不错，最终你的内容会浮出水面，你就会取得成功。无论成功对你来说意味着什么。
 
-With videos, it's the same thing. A creator's personality is a unique differentiating factor in a great YouTube channel.
+当然，这对 YouTube 上的视频、网播、和网志都是可能的。
 
-Plus, videos, if made well, require a huge effort in time, energy and equipment you need.
+那么，为什么你应该创建网志而不是制作视频呢？这是一个选择。我们不可能都擅长制作视频，也不可能都拥有适合网播的声音。同样，我们也不可能都擅长写作。
 
-A blog, on the other hand, is something you can make no matter who you are, as long as you can write. You don't need to have that uniqueness that makes you liked on YouTube, and you are not trapped on one platform (YouTube). You also have a great channel for organic discovery of your blog posts (Google). More on this later.
+但是，如果你恰好喜欢写作，喜欢拥有属于自己的网海一角，那么创建网志可能是你在寻找的东西。
 
-But you don't have to choose one over the other, of course.
+### 我该做个人网志还是公司/产品网志呢？
 
-Many times creators use a blog alongside a YouTube channel, or a podcast. This is helpful if you use it more than just to cross-post content from one channel to another, but as a complementary tool.
+如果你是自由职业者、独立工作者、或者是个人创业者，你可能需要做一个艰难的决定：是创建个人网志还是公司网志？
 
-When done well, it's a powerful combination.
+这之间有一个很大的区别。在我看来，个人网志要好得多，因为公司和项目会有起伏变化，你可能会在 3 年内卖掉你的公司。
 
-### Define who your blog's readers are
+然而，你的个人品牌将随着你走南闯北。我发现，个人品牌的优势是你可以根据需要进行实验和转变。
 
-A blog that's successful and useful to other people is a blog that has a readership in mind.
+如果你创建了一个与产品或领域过于紧密相关的品牌，你就不能轻易转换而不更改名称和域名，这可能会使读者感到困惑。
 
-I'm sure you've stumbled upon those blogs or sites that talk about a little bit of everything.
+而且，刚开始时可能会很难找到一个好的创意，所以最好有多个选择。这样你就不必从零开始。
 
-It all seems very random, and you don't find a reason for coming back to that site, so you forget about it.
+### 为什么要写网志而不是制作视频或网播？
 
-If you happen to visit a website that talks just about your favorite topic, you might save it for later in your bookmarks, or leave the tab open to go back to it later.
+在过去的几年中，视频和网播迅速发展。
 
-This happens because the owner of the site is not just writing about everything that comes to mind: they have a specific kind of person they are talking to.
+视频特别受欢迎，孩子们长大后都想成为网红。
 
-And this is what you should do, as well. Carefully define the kind of person you want to talk to with your blog.
+视频和网播都很棒。我每天都看 YouTube，并订阅了几个网播。
 
-You have to pick a niche.
+然而，我注意到这些平台的一点。网播很难被发现。我只有在看到某个新网播的宣传时，才会发现它，或者是通过口耳相传。
 
-### How to Pick a Blogging Niche
+一个网播，除了要有很棒的内容，主播的声音也是让我喜欢或讨厌它的决定性因素。你要么天生具有出色的网播声音，要么没有。
 
-Picking a niche is how you can define what your little corner of the internet will be all about.
+对于视频，情况也是一样的。一个创作者的个性是一个很棒的 YouTube 频道的独特因子。
 
-It can be all about you, your hobbies, passions, and stories. But then not many people will find it very useful. Maybe one post can solve their problems, but will they ever come back? Probably not.
+此外，视频如果要做得好，需要大量时间、精力、和设备。
 
-Because your blog's not about you, it's about your readers.
+另一方面，网志是任何会写作的人都可以写的东西。你不需要拥有让你在 YouTube 上受欢迎的独特性，也不会被困在一个平台（YouTube）上。你还有一个很好的渠道来有机地给你的网志文章引流（Google）。稍后会详细讨论。
 
-Pick a niche. A small subject.
+当然，你不必在网志和视频或网播之间做出选择。
 
-Say you're a programmer. You can write a blog about the C++ programming language, write 2 posts a week, and never run out of topics for 20 years. It's probably even a niche that's too broad, not much of a niche.
+很多时候，创作者既有 YouTube 频道或网播，又有网志。如果你让它们互补，而不仅仅是交叉发布内容，这会很有帮助。
 
-A better niche would be C++ programming for embedded devices. Or using C++ to build games.
+当做得好时，这是一种强大的组合。
 
-Then filter out this group of people a little bit more. Using C++ to build a 2D game engine.
+### 定义你的网志读者是谁
 
-You can write about that for years, too, but this time if a person is interested in this subject, they will bookmark the site and download everything they can because you are the expert (or at least more of an expert than they are) and they can get a lot of value from you.
+一个成功且有用于他人的网志是面向读者的网志。
 
-### Blogging is a a marathon, not a sprint
+我相信你也曾经看到过那些无所不谈的网志或网站。
 
-I want to give you another concept that will frame your blog for success: it’s not a sprint, it's a marathon.
+这种网站似乎很随意，你找不到回访的理由，于是就忘了它们。
 
-As with everything in life, creating a successful blog takes time.
+如果你偶然访问到一个关于你最喜欢的话题的网站，你可能会把它保存在书签中，或者把页面开着以后再回去看。
 
-Creating a blog, per se, is a matter of hours if not minutes. This is why everyone can start a blog.
+这是因为网站的主人不只是随意写下脑海中的所有内容：她们有一个特定的读者群体。
 
-But creating a successful blog, depending on what you consider "success", can take years, and not many people welcome this fact with joy.
+这也是你应该做的。仔细定义你想通过网志与之交流的人的类型。
 
-People like immediate, fast success. It almost never happens, unless you are very lucky.
+你必须选择一个具体的领域。
 
-Consider blogging to be your marathon.
+### 如何选择网志的领域
 
-## The benefits of having a successful blog
+给你的网志选一个细分领域。
 
-We all have limited time to dedicate to our hobbies, families, and friends. So why should you set aside a number of hours every week to work on your blog? And it's not just a few hours here and there. If you want the blog to be successful, you have to dedicate a lot of time.
+它可以是你的个人兴趣、爱好、和故事。但是这样可能没什么人会觉得它有用。也许一个帖子可以解决她们的问题，但她们会回来吗？可能不会。
 
-As with everything in life, you have to evaluate the pros and cons.
+因为你的网志不应该是关于你，而是关于你的读者。
 
-Let's analyze the benefits.
+选择一个细分领域，一个小主题。
 
-### Personal satisfaction and gratification
+比如你是程序员，你可以写一个关于 C++ 编程语言的网志，每周写两篇文章，20 年后也不会穷尽所有主题。这可能甚至是一个过于宽泛的领域，不够细分。
 
-First, blogging gives you personal satisfaction and gratification.
+更好的细分领域可能是针对嵌入式设备的 C++ 编程，或者是使用 C++ 构建游戏。
 
-Many people like to build puzzles or to do crosswords during their free time. Or they like to tinker with woodworking or electronic gadgets.
+然后再对这个人群进行筛选。比如，使用 C++ 构建一个 2D 游戏引擎。
 
-Writing on your blog can give you the same feeling.
+这个主题你也可以写好几年，但这一次，如果有人对这个主题感兴趣，他们会收藏网站并下载能找到的一切，因为你是专家（或者至少比他们更专业），他们可以从你这里获得很多价值。
 
-Plus, it gives you a sense of accomplishment.
+### 网志写作是马拉松，不是短跑
 
-Writing a blog post can be easy sometimes.
+我想给你们另一个概念，它将为你的网志成功铺平道路：这不是短跑，而是马拉松。
 
-Other times it's really hard, maybe because of the subject, or maybe because you can't find your way through your writing.
+就像生活中的所有事情一样，要创建一个成功的网志需要时间。
 
-But when you finally finish it, it's a really good feeling.
+创建一个网志，本质上只需要几个小时，甚至几分钟。这就是为什么每个人都可以开始写网志。
 
-### You can get your name out
+但是要创建一个成功的网志，取决于你对“成功”的定义，可能需要几年时间，而且并不是很多人会欣然接受这个事实。
 
-Another thing that a blog can give you is discoverability.
+人们喜欢即时的、快速的成功，但除非你非常幸运，否则这几乎从来不会发生。
 
-When people search your name on Google, if you write under your own name people will find your blog as the first result. This gives a great impression at a job interview, for example.
+把写网志当作你的马拉松。
 
-And even if you are currently employed, having a blog is like an extension of your personal brand that can help you be perceived as a more knowledgeable person.
+<h2 id="the-benefits-of-having-a-successful-blog">拥有成功网志的好处</h2>
 
-It's like writing a book. A book that no one reads is one thing – but writing a successful book that is read by many people is a completely different thing.
+我们能献给兴趣、家庭、和朋友的时间都有限。那么，为什么你要每周划出一定的时间来打理你的网志呢？而且这不仅仅是偶尔划出几个小时。如果你想让网志取得成功，你必须投入大量的时间。
 
-Blogs follow the same rule. Some blogs are not very popular, maybe due to the subject or other factors (we'll see more about this later). But some blogs are successful, and others are wildly successful.
+就像生活中的一切事情一样，你必须评估利弊。
 
-### You can get in touch with more people
+让我们分析一下好处。
 
-By writing on your blog, you can publish things that are read by people all around the world, and your work can possibly help them achieve what they want.
+### 个人满足感和成就感
 
-Not only this is great for personal satisfaction and fulfillment. It's also a great way to be perceived as an expert in your field.
+首先，网志让你获得个人满足感和成就感。
 
-And the more people you can reach and impact, the better it is for you (and them!).
+许多人喜欢在业余时间做拼图或填字游戏，或者做木工或电子小工具。
 
-### A blog is your platform
+写网志可以给你相同的感觉。
 
-Your platform, your launchpad. In today's world, there's just too much noise.
+此外，它也让你有成就感。
 
-We are bombarded with information from every medium, and it's really hard, as a creator, to stand out.
+有时博文写作很容易。
 
-A blog can be a great starting point for your next project, your next adventure, your next (or first) company. It's yours.
+其它时候则很难，可能是因为主题，也可能是因为你无法找到写作的方向。
 
-The goal of any product is to be used by people.
+但当你最终完成它时，会感觉真的很好。
 
-Lots of people, possibly. Not everything can "change the world" Silicon Valley-style, but your little project, product, or service can have a big impact on a tiny slice of the people it targets.
+### 你可以扩大曝光率
 
-But the first steps are always hard, including finding a good idea.
+另一件网志能够带给你的事情是被发现的机会。
 
-Your blog can be the way you find the initial users for something that you find worth creating.
+当人们在谷歌上搜索你的名字时，如果你使用自己的名字写作，人们会在搜索结果中找到你的网志，这会给面试官留下很好的印象。
 
-Put the idea out there. See how people react to it.
+即使你目前已经有工作，拥有一个网志就像是你个人品牌的延伸，可以使人们认为你更有知识。
 
-### You can become an active part of the community
+这就像写一本书，一本没有人读的书和一本被许多人阅读的成功书籍是完全不同的事情。
 
-In every community, there is a small number of people that lead, a slightly bigger number of people that contribute, and a larger number of people following.
+网志也遵循同样的规律。有些网志并不是非常受欢迎，可能是因为主题或其它因素（我们稍后会更多地讨论）。有些网志小有名气，而其它一些网志则非常火爆。
 
-Think about the community you are in. The 1%, or 0.1%, work on the "core". They organize an event,  build a software project, host a podcast, work on a product. Another 9% will participate and be an active part of the community around it. 90% of the people will just consume.
+### 你可以接触更多的人
 
-As a blogger, even if you're not in the 1% that lead, because you don't want that responsibility or power or you can't make the commitment, you can still contribute. You can add your input, and be heard in a world that is eager for people that want to stand out.
+通过写网志，你发布的内容可以被全世界的人阅读，你的作品有可能帮助她们实现梦想。
 
-Write about that thing you are so enthusiastic about. Create a helpful resource. People will be really grateful for that. Including the 1% or 0.1% that lead but that do not have time, resources, or will to create those resources.
+这不仅对个人满足感和成就感有益，还是在你所在领域被视为专家的好方法。
 
-A notable example is Jeffrey Way. He created Laracasts to build training screencasts for Laravel, a programming framework that was gaining traction.
+而且，你能够接触和影响的人越多，对你（和她们）来说就越好。
 
-He’s now an integral part of the framework ecosystem and a driving force for its popularity.
+### 网志是你的平台
 
-## Pick a goal for your blog
+你的平台，你的跳板。在今天的世界中，噪音太多了。
 
-You can start a blog for multiple reasons. No one has the same ambitions, the same drive, or the same starting point.
+我们从各种媒介中接收到大量信息，作为一个创作者，要脱颖而出真的很难。
 
-### You want to get a job
+网志可以是你下一个项目、下一个冒险、或下一个（或第一个）公司的绝佳起点。它是你的。
 
-One goal for a blog might be to help to get your first job.
+任何产品的目标都是被人们使用。
 
-Suppose you are getting ready for your first rounds of interviews as a Junior Frontend Developer. As you are learning the technology and experimenting, maybe following an online course, you document everything you are learning.
+让尽可能多的人使用。不是每个东西都能像硅谷那样“改变世界”，但是你的小项目、产品、或服务可以在目标受众的一小部分人中产生巨大的影响。
 
-I think this is great for 3 reasons:
+不过，开头的几步总是困难的，包括找到一个好主意。
 
-1.  you reinforce your learning
-2.  you build up an online presence
-3.  you get better at documenting and explaining technology
+你的网志可以是你找到值得创建的东西的最初用户的方式。
 
-As you approach the interview and send out applications, companies will see that you have a website. They'll find that you are great at explaining technology, you know how to communicate, and you definitely know your stuff.
+把你的想法放出来，看看人们的反应。
 
-And this is a great advantage over any other job applicant that does not have a website.
+### 你可以成为社区的积极一员
 
-### You want to get a raise or a better job
+在每个社区中，都有一小部分人领导，一些人贡献，以及更多人跟随。想一下你所在的社区，1% 或 0.1% 的人在“核心”方面工作。她们组织活动、构建软件项目、主持网播、研发产品。另外 9% 会参与并成为该社区中积极的一部分。90% 的人只是消费者。
 
-If you already have a job, you might want to step up your career and get better pay, or switch to another niche in the field you are interested in.
+作为博主，即使你不是领导者中的 1%，因为你不想承担责任或权力，或者你不能做出承诺，你仍然可以做出贡献。你可以提出自己的想法，在渴望脱颖而出的世界中被听到。
 
-Having a blog that positions you as an expert in the thing you want to work on is definitely a big plus.
+写一篇关于你热衷的事物的博文，创建一个有用的资源。人们会非常感激，包括领导者中的 1% 或 0.1%，她们没有时间、资源、或意愿创建这些资源。
 
-You can leverage your blog at your current company to reposition yourself as a senior developer.
+一个著名的例子是 Jeffrey Way。他创建了 Laracasts，为 Laravel 编程框架建立培训录屏。
 
-Your colleagues will look up to you and your writing and will perceive you as an authority in the field.
+现在，他是该框架生态系统的一个重要组成部分，推动了其受欢迎程度的增长。
 
-### You want to get better/more clients
+<h2 id="pick-a-goal-for-your-blog">为你的网志设定一个目标</h2>
 
-If you are not interested in getting a job and prefer being the independent freelancer with a queue of prospect clients lined up, blogging can be a game-changer for you.
+你可以出于多种原因开始写网志。每个人的抱负、动力、和起点都不同。
 
-I experienced this first-hand when I started my career in tech.
+### 你想找工作
 
-I started my career by finding work on freelancing sites. It was hard to compete with freelancers all around the world who were much more experienced than I was in many cases. And sometimes they were located in a lower cost of living area, which allowed them to provide the same service at a fraction of my rates.
+网志的目标可能是帮助你找到第一份工作。
 
-I started a blog about the subject I was specializing on, an open-source CMS, written in Italian, my own language, and people from Italy slowly started to perceive me as an expert. They were more than willing to pay a premium to work with a person that spoke their language, worked in their timezone, and was one of the few experts in the field in the country.
+假设你正在准备作为初级前端开发人员进行面试。当你学习技术并进行实验时，也许会跟随在线课程，并记录你学到的一切。
 
-My blog was key to this because people searched for topics they knew they needed help with – and they found me.
+我认为这有三个好处：
 
-At some point, I was even able to turn down client proposals because I had too many requests. I could choose the ones that I believed were better for my business and more interesting to me.
+1. 增强你的学习能力
+2. 建立网络影响力
+3. 更好地记录和解释技术
 
-### You want to demonstrate your expertise
+当你接近面试并发送申请时，公司会看到你有一个网站。她们会发现你擅长解释技术，懂得沟通，肯定知道自己在做什么。
 
-A common benefit to either getting a job or freelancing clients is this: a blog helps you demonstrate your expertise and expose what you know to other people.
+这是比其他没有网站的求职者更大的优势。
 
-Some people are more naturally inclined to show off their abilities.
+### 你想获得加薪或更好的工作
 
-Sometimes, depending on culture and perception, we can even think of them as more capable than what they really are.
+如果你已经有一份工作，可能想要提升自己的职业发展，得到更好的薪资，或者转向你感兴趣的领域中的另一个细分领域。
 
-Some other people are less inclined, perhaps because of introversion or shyness.
+拥有网志，可以让你在自己想要从事的领域中被视为专家，这绝对是一个重要的优势。
 
-Blogging is a great way to demonstrate your expertise even if you're not naturally inclined to raise your hand in public. This is because it's a medium that has very low friction compared to, for example, creating videos that show your face on YouTube.
+你可以在目前的公司中利用你的网志，重新定位自己为高级开发人员。
 
-### You want to document your learning
+你的同事会尊重你和你的写作，并认为你是该领域的权威人士。
 
-A great goal for your blog could be to document your learning. Perhaps being more competitive in the job market is not something you are interested in right now, or you just want to write about your hobby.
+### 你想要获得更好/更多的客户
 
-A blog is a great track record for everything you learn.
+如果你对获得工作不感兴趣，而更喜欢成为独立的自由职业者，有一大批潜在客户等待着你，那么写网志可能会改变你的生活。
 
-I have a terrible memory, for example, and sometimes I just create a blog post to remember how I made something work.
+当我开始我的技术职业生涯时，就亲身经历了这一点。
 
-I used to write notes on an app on my computer, but now I default to blog posts because I realized I can help other people by publishing my notes on the Internet.
+我通过自由职业网站找到了工作。与世界各地的自由职业者竞争很难，因为她们在许多情况下更有经验。有时她们位于生活成本更低的地区，这使她们能够以比我的价格低得多的价格提供相同的服务。
 
-### You want to structure your thoughts and learn more
+我开始在我的专业领域（一种开源 CMS）上写网志，用我的母语意大利语写作，慢慢地，意大利的人们开始认为我是专家。她们非常愿意支付高额费用，与会说她们的语言，能在她们的时区工作，并且是该领域中为数不多的专家之一的人合作。
 
-The way I used to learn best back in school was by creating very detailed notes about a subject.
+我的网志是这一切的关键，因为人们搜索需要帮助的主题，然后找到了我。
 
-However I only made them for subjects I was interested in, which in retrospect explains why I was good in some classes and bad in others.
+有时，我甚至能够拒绝客户的提案，因为我有太多的请求。我可以选择那些对我的业务更有利且更有趣的需求。
 
-You can use your blog as a way to learn better.
+### 你想证明自己的专业知识
 
-I am a huge proponent of learning through blogging because it works.
+一个普遍的好处是，无论是找工作还是寻找自由职业客户，网志都可以展示你的专业知识，并向其他人展示你所知道的东西。
 
-I use blogging as a way to learn a subject and at the same time help other people.
+有些人更自然地倾向于展示她们的能力。有时，根据文化和认知，我们甚至会认为她们比实际上更有能力。
 
-When I write a new blog post I am forced to create a mind map of the subject and I try to frame it, before writing about it.
+还有一些人不太倾向于展示自己，可能是因为内向或害羞。网志是展示你的专业知识的好方法，即使你不喜欢在公开场合引人注意。这是因为相对于例如在 YouTube 上展示你的面容的视频，网志是一种摩擦非常小的媒介。
 
-In this way I learn much more than I do when I read a book or watch a course without taking organized notes about it. And as a side benefit, I end up with a new blog post I can publish.
+### 你想记录你的学习过程
 
-### You want to become better at explaining things
+一个很好的网志目标可以是记录你的学习。也许在现阶段，你对在职场上更具竞争力不感兴趣，或者你只是想写写你的兴趣爱好。
 
-A great benefit of blogging is that over time you'll become better at explaining things.
+网志是记录你所学的很好的方式。
 
-You will take fewer things for granted, and you'll think more from the point of view of the person who is listening to you, rather than just writing a bunch of words to be perceived as an expert.
+比如，我的记忆力很差，有时我会创建一篇博文来记住我是如何做某件事的。
 
-This will help you tremendously in your career and as a person.
+我曾经在电脑上的一个应用程序上写笔记，但是现在我默认使用博文，因为我意识到通过在互联网上发布我的笔记，我可以帮助其他人。
 
-### You want to grow your audience
+### 你想要整理自己的思维并学到更多知识
 
-A great benefit of having your own blog is that over time you'll start to build an audience.
+我在学校时最有效的学习方式是制作非常详细的笔记。
 
-As with many things, the more time you dedicate to it, the more your audience will likely grow.
+然而，我只对我感兴趣的科目做了笔记，回想起来，这解释了为什么我在一些课程中表现好，而在另一些课程中表现不好。
 
-People might get to know you. Recognize your name. You will not become famous (except in rare cases), but this might not be what you want, either.
+你可以利用你的网志来更好地学习。
 
-That's not what an audience is for. And honestly, I see many developers raise an eyebrow when marketing subjects come into play.
+我非常支持通过网志学习，因为这很有效。
 
-An audience is a great place to test your ideas. An audience can help you figure out something. An audience is your group of people, the people that trust you and that can help you move to the next level.
+我用网志作为学习一门课程的方式，同时也能帮助其他人。
 
-### You want to express yourself
+当我写一篇新的博文时，我被迫创建该主题的思维导图并在写作之前进行构思。
 
-A blog does not need to be a means to an end.
+这样，我比读书或观看课程而不进行组织笔记时学到的更多。并且作为附加好处，我最终会得到一篇新的博文可以发布。
 
-My favorite blogs are the ones that are playgrounds for creativity and expression. Especially when applied to programming and computers in general.
+### 你想变得更擅长解释事情
 
-A blog is a great way to have a track record of all your past creative projects.
+写网志的一个巨大好处是，随着时间的推移，你会变得更善于解释事物。
 
-Your own centralized creative hub.
+你会少将很多事情视为理所当然，更多地从聆听者的角度思考，而不是只是写一堆话来被视为专家。
 
-## Own your platform
+这将在你的职业生涯和个人生活中给予你巨大的帮助。
 
-Your blog is the operational center for your future. Your platform, your headquarters. Everything else should bring you to your site.
+### 你想要扩大你的受众
 
-Your Facebook page, YouTube channel, Twitter, Medium, your guest posts on other blogs, and the content you stream – all are tools to connect people with the content of your site on the Internet.
+拥有自己的网志的一个重要好处就是随着时间的推移，你将开始建立自己的受众群体。
 
-The website can be made with any technology you want. It does not really matter, provided that it’s on a domain that you own, and that you can change as desired.
+与许多事情一样，你投入的时间越多，你的受众群体就越有可能增长。
 
-You should have complete freedom over it: you have to be able to contact your users whenever you want, you must be able to extract all the data from this platform. Also, whenever you want to, you should be able to move away to a different platform with all your content.
+人们可能会认识你，记住你的名字。你不会成为名人（除非是少数例外），但这也可能不是你想要的。
 
-Lastly, you do not have to be at the mercy of other people decisions.
+这不是受众的目的。说实话，当谈到营销话题时，我看到很多开发人员会皱起眉头。
 
-### The platforms of other people
+受众是测试你的想法的好地方。受众可以帮助你找出问题。受众是你的人群，信任你并可以帮助你进入下一个阶段的人们。
 
-There are many ways to sell online. For each type of product, there are a number of options, and while sometimes you can sell things in the way you want, sometimes you need to work with a platform managed by someone else.
+### 你想表达自己
 
-For example, if you sell digital books, you will, of course, sell them on Amazon Kindle, which probably represents 80% of the market.
+一个网志不需要只是为了达到某个目的。
 
-Do you sell physical products? In addition to your own e-commerce, you will want to sell them on Amazon too, as it’s a huge market opportunity.
+我最喜欢的网志是那些创意和表达的游乐场，特别是涉及编程和计算机等方面。
 
-Do you make mobile apps? You will need to sell them on the App Store if you target Apple users, or on Google Play for Android.
+网志是一个很好的方式，可以让你记录下你过去所有的创意项目。
 
-Here, in some of these examples, it is clear that sometimes you have choices and sometimes you have to take a mandatory road to actually sell something.
+你自己的创意中心。
 
-You can’t distribute iPhone apps through your site. If you build desktop applications for Mac, on the other hand, this is possible, but you might also want to join the Mac App Store, which in this case is optional. Apple sets the rules, but it gives you some visibility that you would not get without being in the App Store.
+<h2 id="own-your-platform">拥有自己的平台</h2>
 
-All these great distribution systems such as the App Store, Amazon, Kindle, and many others like Etsy or Alibaba, are platforms. Other people’s platforms.
+你的网志是你未来的运营中心，是你的平台和总部。其它所有的东西都应该将人们带到你的网站上来。
 
-### Benefits of using a platform managed by other people
+你的 Facebook 页面、YouTube 频道、Twitter、Medium、你在其它网志上的客座文章、以及你直播的内容，所有这些都是将人们与你网站上的内容连接起来的工具。
 
-There are, of course, benefits to using a platform managed by other people. It provides a virtually limitless user base, customers visiting the platform already have an account, and in many cases they just need to press the buy button.
+网站可以使用任何你想用的技术制作，这并不重要，只要它在你拥有的域名下，并且可以随意更改。
 
-In general, not managing your own platform saves you worry about having to manage a huge number of things.
+你应该完全自由掌控它：你必须能够随时与用户联系，必须能够从这个平台中提取所有数据。此外，你应该能够随时搬到另一个平台，并携带所有内容。
 
-### Disadvantages of using a platform managed by other people
+最后，你不必受其他人的决定所左右。
 
-But there are disadvantages of using a platform, as well. You have to comply with the rules the owners impose, and the customers are not yours – they are the platform's customers. So you might struggle to create a relationship with your customers.
+### 别人的平台
 
-You also have little room for your branding, as everything could change from one day to the next. In some cases you have little control over your prices, and you'll have to pay commission to the platform for each sale you make.
+在线销售的方式有很多。对于每种产品，都有许多选项，有时你可以按自己的方式销售产品，但有时你需要使用由别人管理的平台。
 
-### The platform sets the rules
+例如，如果你销售数字图书，你当然会在亚马逊 Kindle 上销售，因为它可能占据了市场的 80%。
 
-A platform is not just the place where people turn into customers, but it is also the place where you can find and interact with them. Facebook, Instagram, and Twitter are platforms, phenomenal platforms, but still platforms built by others.
+你销售实物产品吗？除了你自己的电子商务平台外，你也想在亚马逊上销售，因为这是一个巨大的市场机会。
 
-A few years ago, having a Facebook page with 10,000 fans and writing a message on the page was enough to show this message to a vast percentage of those people. Unfortunately, this has changed today because the Facebook platform has changed. Now we are lucky if we reach 10% of our audience.
+你开发手机应用程序吗？如果你的目标用户是苹果用户，你需要在 App Store 上销售，如果是 Android 用户，就需要在 Google Play 上销售。
 
-The only way to reach more people who like your page is to sponsor posts. So you have to pay Facebook to communicate with your own fans: this is an example of what it means to build on another property.
+在这些例子中，有些情况下你有选择，有些情况下你必须选择强制性的销售方式。
 
-This is not to say that you should not have a Facebook page, that you don’t have to invest in Facebook Ads, or that you do not have to interact with people on Twitter.
+你不能通过自己的网站分发 iPhone 应用程序。另一方面，如果你为 Mac 开发桌面应用程序，则有可能通过你的网站销售，但你也可能想加入 Mac App Store，这在这种情况下是可选的。苹果设置了规则，但如果你不在 App Store 中，就无法获得一些可见性。
 
-You should do these things if you're trying to build an audience. The market imposes them on you, because you find people in these places. But always try to use these large containers to find people and bring them to you.
+所有这些优秀的分发系统，如 App Store、亚马逊、Kindle，以及许多其它平台，如 Etsy 或 Alibaba，都是别人的平台。
 
-And it's important to always have a way out of a platform, and not to be completely dependent on it.
+### 使用别人管理的平台的好处
 
-To do this, you have to push users to come to you through all the channels you can take advantage of.
+使用由别人管理的平台当然有好处。它提供了一个几乎无限的用户群，访问该平台的客户已经拥有帐户，在许多情况下，她们只需要按下购买按钮。
 
-You have to create your own platform.
+总的来说，不管理自己的平台可以减少你需要管理的大量事情，这样可以省去许多烦恼。
 
-### Use your own domain name
+### 使用别人管理的平台的缺点
 
-Your domain name is very important. I use my own name for the domain: [flaviocopes.com](http://flaviocopes.com).
+但是使用平台也有缺点。你必须遵守平台所有者强加的规则，而客户不是你的客户 - 她们是平台的客户。因此，你可能难以与客户建立关系。
 
-Your domain is like your address.
+此外，你的品牌形象受限，因为一切都可能在一夜之间改变。在某些情况下，你对价格的控制力很小，并且你需要为每个销售支付平台佣金。
 
-Except that a real-world address changes when you move somewhere else.
+### 平台定下规则
 
-Your domain, on the other hand, is yours forever, regardless of your physical location. Like your email address.
+平台不仅是人们成为顾客的地方，也是你可以找到并与她们互动的地方。Facebook、Instagram、和 Twitter 都是平台，非常出色的平台，但它们仍是别人建造的平台。
 
-When you publish things on your own website, under your own domain name, you are building virtual real estate and generating value that can last for years if not decades.
+几年前，拥有一个有 1 万粉丝的 Facebook 页面并发布一条消息就足以向绝大部分粉丝展示该消息。不幸的是，如今情况已经发生了改变，因为 Facebook 平台已经改变了。现在，能够触达我们受众的 10% 已经是幸运的了。
 
-The way things work for search engines, now and for the foreseeable future, is that quality links pointing to your website make the domain more valuable.
+要触达更多喜欢你的页面的人，唯一的方法就是赞助帖子。因此，你必须向 Facebook 付费才能与自己的粉丝沟通：这就是在别人的平台上建立业务的例子。
 
-If you publish under a domain name that's not yours, you are effectively working for other people, in exchange for something that might appear convenient for you, like a nice way to create the first page.
+这并不是说你不应该拥有 Facebook 页面，不应该投资于 Facebook 广告，或者不应该在 Twitter 上与人互动。
 
-But if you take the time and put in some work beforehand to set up your own site and get your own domain, it can pay you a lot more in the future.
+如果你试图建立受众群体，你应该这样做。市场强制要求你这么做，因为你在这些地方找到了人。但是，总是试图使用这些大型容器找到人并将她们带到你这里。
 
-## Make the first step
+并且重要的是始终有一种逃脱平台的方式，不要完全依赖它。
 
-The first step is always the hardest. In anything you want to do. Running. Coding. Cooking. Blogging.
+为此，你必须通过所有可以利用的渠道推动用户来到你这里。
 
-In this chapter, I want to make sure you are well equipped for your first step when you’re ready to dive into blogging.
+你必须创建自己的平台。
 
-### Pick a domain name
+### 使用你自己的域名
 
-There is one very important thing you need to do before you can create your blog. You need to choose a domain name.
+你的域名非常重要。我使用自己的名字作为域名：[flaviocopes.com](http://flaviocopes.com)。
 
-You can notice 3 patterns for domain names. People have their own name/surname combination like I do with [flaviocopes.com](http://flaviocopes.com). Some people like to have a fantasy name or their nickname. Totally fine, too.
+你的域名就像你的地址。
 
-If it's cool and you can create a brand out of it, it's great. Like [codinghorror.com](http://codinghorror.com). Other people like to have a more general brand, like [css-tricks.com](http://css-tricks.com).
+只是现实中的地址会因为你搬到其它地方而改变。
 
-The good aspect of this is that people know the content of the blog just by looking at the domain. The downside is that you are kind of forced to stick to that topic forever.
+你的域名是永远属于你的，不受你身处何处的限制。就像你的电子邮件地址一样。
 
-For example, [css-tricks.com](http://css-tricks.com) has long stopped talking exclusively about CSS, and other topics like JavaScript, SVG and others are very often covered.
+当你在自己的网站上发布内容时，使用自己的域名，你正在建立虚拟房地产，创造可以持续数年甚至数十年的价值。
 
-This is kind of controversial, but I think your own name, or brand name with no direct attachment to anything specific, is the best and most future-proof way to create a domain name.
+对于搜索引擎的工作方式，在当下和可预见的未来，高质量的链接指向你的网站会使域名更有价值。
 
-With one caveat: if you use your own name, you'll never be able to sell the site to someone else, or transform it into something "more" than just yourself with some guest posts here and there. But there are notable exceptions as well, like [raywenderlich.com](http://raywenderlich.com).
+如果你在一个不属于你的域名下发布内容，实际上是在为别人工作，以换取一些看似方便的好处，比如一个漂亮的首页。
 
-If you create a specific domain name that reminds people of a technology or hobby in particular, on the plus side you'll be able to sell it when it's successful to a bigger brand.
+但是，如果你在之前花些时间和努力来建立自己的网站并获得自己的域名，那么在未来它可能会给你带来更多的回报。
 
-I started posting on my blog frequently by talking about the Go programming language. I later switched to a completely different programming language, JavaScript.
+<h2 id="make-the-first-step">迈出第一步</h2>
 
-But because I used my own name and domain, I did not have to change anything. If I had a domain name like _startprogrammingingo.com_ or something similar, there's no way I could've just switched to talking about JavaScript, or Arduino.
+第一步总是最难的，不论你想做什么事。跑步、编程、烹饪、写网志，都是如此。
 
-The whole project would have sunk because the day I stopped my work on Go, the site would just end its life with that very specific domain.
+在这一章中，我想确保你在开始写网志时，已经做好了充分的准备。
 
-Since I use my own name for the domain, whatever I want to write about 10 or 20 years from now will be perfectly fine.
+### 挑选一个域名
 
-If you already have a domain, maybe used in old projects, and you think it can work fine, that's even better.
+在你创建网志之前，有一件非常重要的事情需要做：你需要选择一个域名。
 
-### Domain Authority
+你可以发现域名有三种模式。有些人使用自己的姓名，就像我使用的 [flaviocopes.com](http://flaviocopes.com)。有些人选择虚构的网名或绰号，这也可以。
 
-There's something called domain authority that is really important. Because that's how Google determines your site's value, and it's fundamental in how Google ranks web pages in its results.
+如果名字很酷，而且有助于你打造个人品牌，那就很好。比如 [codinghorror.com](http://codinghorror.com)。其他人则喜欢使用更通用的品牌，比如 [css-tricks.com](http://css-tricks.com)。
 
-One factor in domain authority is the domain's age. Older is more stable and more trustworthy to Google.
+这样做的好处是人们可以通过域名来了解网志的内容。不足之处在于，你在某种程度上被迫永远坚持这个话题。
 
-And when you're creating your domain, try to get the longest expiration date you can. That's a factor, too. Google basically detects your seriousness with the project. If your domain expires in 3 years and a competitor's in 3 days, maybe your domain is better in the long term.
+比如 [css-tricks.com](http://css-tricks.com) 已经不再只关注 CSS，而且经常涵盖其他主题，比如 JavaScript、SVG 等。
 
-I mean, we can't really know how the Google algorithms work, but we can try and make sure we tick all the checkboxes.
+在这点上有争议，但我认为，使用自己的名字、或没有特殊关联的品牌名称，是创建域名的最佳方式，而且也更具有未来性。
 
-That can make the difference between a site that's never visited, and one that gets 10 visitors a day. Or one that gets a few hundred visits a day to one that gets tens of thousands.
+有一个例外：如果你使用自己的名字，可能永远无法将网站出售给其他人，或将其转变为比自己和客座作者更重要的东西。但也有一些值得注意的例外，比如 [raywenderlich.com](http://raywenderlich.com)。
 
-### Choose a blogging software (don't build it!)
+如果你创建了一个特定的域名，让人们想起某种技术或特定的兴趣爱好，好处在于当它成功时，你将能够将其出售给一个更大的品牌。
 
-I personally use Hugo to power my blog. It is built using Go, it is very fast, and has some limitations on the things you can do. This means I can avoid distractions and I can focus on the writing.
+我刚开始时频繁发布博文，谈论 Go 编程语言。后来切换到完全不同的编程语言 JavaScript。
 
-I see many people, especially developers, who start creating their own blogging software from scratch.
+但是因为我的域名是自己的名字，所以什么都没改变。如果我有一个像 _startprogrammingingo.com_ 或类似的域名，那么我就无法轻易地转换到谈论 JavaScript 或 Arduino 之类的话题。
 
-I think that this a bad idea.
+整个项目都将崩溃，因为在我停止关注 Go 的那一天，这个具有非常特定的域名的网站将结束它的生命。
 
-Why?
+由于我使用自己的名字作为域名，所以无论我在 10 年或 20 年后想写什么，都完全没有问题。
 
-Because the moment you start is the time that you have the most energy. There will not be another moment in the lifetime of your blog where you'll have the same enthusiasm and drive to work on it.
+如果你已经有一个域名，在以前的项目中使用过，而且你认为它可以很好地工作，那就更好了。
 
-And if you channel this energy towards something so futile, in this case, like building the software, then when it's time to actually write the content you'll have very little time, very little energy, and very little drive to craft great content.
+### 域名权威度
 
-Plus, you'll have to work on bugs, handle updates, and more, on your own. It's much easier to let others work on maintaining popular software used by thousands of people rather than reinventing the wheel.
+有一个非常重要的东西叫做域名权威度。这是谷歌确定你网站价值的方式，也是谷歌对网页排名的基本因素。
 
-### Choose a minimalistic stock design
+域名权威度的一个因素是域名的年龄。对于谷歌来说，更老的域名更加稳定和可信。
 
-The second mistake, I think, is to work on the design before working on the content.
+在创建域名时，尽量选择最长的到期日期。这也是一个因素。谷歌基本上可以通过你的域名到期日期来判断你对该项目的认真程度。如果你的域名在 3 年内到期，而竞争对手的域名在 3 天内到期，也许你的域名从长远来看更好。
 
-Just as developers like to build their own software, design-oriented people want to create their own design. It's logical, I get it. But in this scenario, at the beginning, it's just a distraction.
+我的意思是，我们无法真正知道谷歌算法的工作方式，但可以尝试确保我们符合所有规则。
 
-My suggestion is: pick a stock theme, the simplest you can find.
+这可能是一个从未被访问过的网站和每天获得 10 个访问者的网站之间的差别。或者是每天获得几百个访问的网站和每天获得成千上万的访问的网站之间的差别。
 
-The more minimal the theme is, the better.
+### 选择一个网志软件（不要自己搭建！）
 
-Remember to keep the focus on the content. Not on the blog engine, not on the theme, not on plugins...on the content.
+我个人使用 Hugo 来运作我的网志。它是使用 Go 构建的，非常快速，并且在你可以做的事情方面有一些限制。这意味着我可以避免分心，专注于写作。
 
-I have a couple blogs built using the default Ghost theme, which look very professional. In the niche they are built in no one knows what Ghost is – let alone do they know that it's the default theme.
+我看到很多人，特别是开发人员，从头开始创建自己的网志软件。
 
-Also, no one cares. Except you.
+我认为这是一个坏主意。
 
-You can work on the design later on. There's always time for that.
+为什么？
 
-### Create the first 3 posts
+因为开始的时候是你最有精力的时候。在你的网志生命周期中，不会有另一个时刻你会有同样的热情和动力来开展工作。
 
-Right after you have your blog idea, write the first 3 posts. You can write them in a normal plain text editor, and move them later to the blog platform you chose.
+如果你把这个能量引导到像构建软件这样的毫无意义的事情上，那么当真正写内容的时候，你会非常缺乏时间、精力、和动力来创作出色的内容。
 
-I like to use Bear ([https://bear.app](https://bear.app)) to create my drafts. It autosaves, it is beautiful and intuitive to use. But it does not really matter. The thing I want you to focus on is those 3 posts.
+此外，你还需要自己处理错误、处理更新等。让其他人维护被数千人使用的流行软件比重新发明轮子要容易得多。
 
-Why exactly 3 posts?
+### 选择一款极简的现成设计模板
 
-Because now that you are so pumped to create your blog, it's the easiest time to write 3 great posts. If you create only one, maybe the second will be deferred until tomorrow, then to the day after.. and you'll be left with a blog with a single post.
+我认为第二个错误是在制作内容之前就着手于设计。
 
-Two posts... kinda the same. 3 posts seem like a good number to me.
+就像开发人员喜欢构建自己的软件一样，注重设计的人们也想创建自己的设计。我理解这很合理。但在这种情况下，设计只会让你分散注意力。
 
-Once you have those 3 posts, it's time to publish them. My advice, in this case, is not to publish them all together at the same time. Instead, you should schedule them.
+我的建议是：选择一个现成的主题，尽可能简单。
 
-### Schedule the first 3 posts in advance
+主题越简单，越好。
 
-I've had several people ask me how can I be so consistent with my blogging. The best suggestion I have is to create a habit. Habits are a very hip and popular topic nowadays, with many books published on the subject.
+记住要把重点放在内容上。不是网志引擎，不是主题，不是插件，而是内容。
 
-I'm not an expert, but I noticed that once a habit is established, it's really hard to break it.
+我有几个使用默认 Ghost 主题构建的网志，看起来非常专业。在它们所涉及的领域，没有人知道 Ghost 是什么，更别提它是默认主题了。
 
-Use this little hack to force yourself to write blog posts. Once you decide your perfect schedule (twice a week, once a week, twice a month, once a month...) then schedule the 3 posts you wrote so that you make a little buffer.
+此外，没有人在意。除了你自己。
 
-Suppose you write once a week. Publish the first post immediately, the second next week, the third the following week.
+稍后你可以继续改进设计。时间总是有的。
 
-Now, you can relax and have a little party because you can launch the blog. Plus, you already have content written for the next 2 weeks and you can start planning other posts.
+### 创建前 3 篇文章
 
-All the other posts you will write will be queued after the posts you wrote in the beginning.
+在确定好网志主题后，写下头三篇文章。你可以在普通纯文本编辑器中撰写它们，然后将它们移动到你选择的网志平台上。
 
-Don't be tempted to add a new post in the middle of your planned schedule: there will be times when you can't write due to limited time, or you will have a low energy week. The buffer will be helpful to keep a consistent publishing schedule.
+我喜欢使用 Bear（[https://bear.app](https://bear.app)）来起草文章。它能自动保存，而且使用起来美观、直观。但其实使用什么工具并不重要，重要的是让你专注于这三篇文章。
 
-One thing that is key here is this: once the schedule gets full enough and you can look back at a long streak of posts, all very consistent in their publishing date, and you will start to feel a little pressure to not break the streak.
+为什么是三篇文章呢？
 
-Transform this little pressure into a positive push towards staying consistent. If you have a weekly publishing routine, at the end of the year you will have 52 blog posts written, which would be a major accomplishment.
+因为现在你对于创建网志充满激情，写出三篇优秀的文章是最容易的。如果你只写了一篇，第二篇可能会推迟到明天，然后又推迟到后天……最后你的网志上只有一篇文章。
 
-### Keep going this way
+两篇文章……差不多也一样。三篇文章对我来说是个不错的数字。
 
-If you do the things I mentioned in this chapter and you just keep going, you will have 99% more success with your blog than anyone else.
+一旦你写好了这三篇文章，就可以发布它们了。我的建议是，不要同时发布它们。相反，你应该安排好发布时间。
 
-## Solutions to common problems
+### 提前安排发布前三篇文章
 
-### Who am I to write about this?
+有几个人问我如何始终如一地写网志。我最好的建议是养成习惯。习惯是当今非常流行的话题，已经有很多关于这个主题的书籍出版了。
 
-Let's say you are a student. By writing about the subject you are studying, you can reinforce your learning. Writing things down forces you to learn it really well.
+我不是专家，但我发现一旦养成了习惯，就很难打破它。
 
-Put your ego in chains: people don't care about you. People care about solving their problems. At least on their first point of contact with you, opinions, politics and controversial statements are detrimental to the user experience.
+使用这个小技巧来强迫自己写网志。一旦你决定了完美的时间表（一周两次、一周一次、每月两次、每月一次……），然后安排你写的三篇文章，这样你就有了一个小缓冲区。
 
-### I don't know enough of the subject
+假设你每周写一篇文章。立即发布第一篇文章，下周发布第二篇文章，下下周发布第三篇文章。
 
-You don't need to be an expert.
+现在，你可以放松一下，庆祝一下，因为你可以发布网志了。另外，你已经写了未来两周的内容，可以开始计划其它文章。
 
-When I write a technical blog post, it does not really matter if I'm an expert at it. On the contrary, if I'm an expert in a field and I'm trying to write an introductory or beginner-friendly topic, I might not be able to explain that topic very well. This is because I cannot think like a beginner might when they don't know a topic, and so I might assume too many things and not explain that topic well.
+你写的所有其他文章都将排在最初写的文章后面。
 
-If you're not an expert, do your best to absorb a topic and explain it to people that don't know about it. If you're an expert, on the other hand, writing content for other experts might be a good approach. Then you can mostly leave the entry-level content to people that might be in a position to explain it better.
+不要被诱惑在计划的时间表中间添加新文章：有时你因为时间有限而无法写作，或者你会有一周低能量的情况。缓冲区将有助于保持一致的发布时间表。
 
-### Analysis paralysis
+关键在于，一旦时间表足够充实，你可以回顾一长串发布日期非常一致的文章，你会开始感受到一点不想打破连续性的压力。
 
-Just get it out there. Publishing a piece of content is much better than keeping it for months, revisiting it, thinking and thinking about it. Just do it.
+将这种小压力转化为保持一致的积极推动力。如果你每周发布一篇文章，到年底你就会有 52 篇博文，这将是一个重大成就。
 
-It's ok to plan, but make sure you don't get trapped by analysis paralysis. The longer you think about it, the longer it will take you to start. Focus that energy on finding 3 good articles to write. That's the start.
+### 持续这样做
 
-### Don't be afraid of failing
+如果你按照本章所提到的方法并且持续不断地进行下去，你的网志成功的概率会比其他任何人高出 99%。
 
-Resistance is telling yourself that you are not good enough, that you will fail. This happens because you're about to do some creative work, you are about to be exposed to the public, to the opinions of others, and others will think you are not good enough.
+<h2 id="solutions-to-common-problems">常见问题的解决方案</h2>
 
-Resistance is a powerful force. Especially if you write opinions or personal facts in your blog.
+### 我有什么资格写这个？
 
-I have two suggestions.
+假设你是一名学生。通过写作与你正在学习的学科有关的文字，你可以巩固学到的东西。把东西写下来迫使你真正学好它。
 
-The first is to talk about a topic that cannot be judged. Pick facts. No one can rant that a fact is not correct. Explain something you learned recently.
+把你的自尊心收起来：人们并不在乎你。人们关心的是解决她们的问题。至少在她们与你的第一次接触中，意见、政治、和有争议的陈述对用户体验是有害的。
 
-The second suggestion is to read _The War of Art_ by Steven Pressfield, which is a mandatory read, in my opinion, for everyone trying to do creative work. It really goes into the root causes of resistance, and why you feel it.
+### 我对这个主题了解不够多
 
-### I am not good at writing
+你不需要成为一个专家。
 
-Are you sure? Or is this just an excuse to bail out of the work that will open so many doors for you, and get back to your room?
+当我写一篇技术博文时，我是否是一个专家并不重要。相反，如果我是一个领域的专家，并试图编写一个介绍性或对初学者友好的主题，我可能无法很好地解释这个主题。这是因为我不能像一个初学者那样思考，当她们不知道一个主题时，我可能会假设太多事情，并且没有很好地解释这个主题。
 
-This might be resistance kicking in, giving you a nice excuse for not writing.
+如果你不是专家，尽力吸收一个主题并向不知道它的人解释。另一方面，如果你是一个专家，为其他专家编写内容可能是一个不错的选择。然后你可以将入门级的内容留给那些可能有能力更好地解释它的人。
 
-Are you good at making videos, or feel great at talking to a microphone? Then make videos or start a podcast instead, but don't try to avoid any work that makes you vulnerable to the other people, just because you fear it.
+### 决策瘫痪
 
-But if you are _really_ not good at writing, your writing will get better in just one way: by writing more.
+把文章发布出去。发布一篇内容远比将其保存数月，反复检查、思考要好得多。行动起来。
 
-### I don't know English very well
+计划是好的，但一定要确保不要被分析瘫痪所困扰。你考虑的时间越长，开始的时间就越晚。将这份精力集中在找三篇好文章来写。这就是开始。
 
-If you want to write for an international audience in the western world, then you should blog in English. I highly recommend doing so, but in some cases, it might make more sense to write in your native language.
+### 不要害怕失败
 
-For example, if the niche you chose is too crowded and there's no one talking about it in your native language, then it might be an interesting opportunity to position yourself as an expert
+抗拒心理会告诉你自己不够好，会失败。这是因为你即将从事一些创造性的工作，你将会被公众、他人的意见所曝光，而他人会认为你不够好。
 
-If you'd like to blog in English, don't take a lack of English knowledge as an excuse. First, if you are reading this book, then it means you can read English and if you can read it, you can write it.
+抗拒心理是一股强大的力量，尤其是当你在网志中表达观点或个人事实时。
 
-Also, unless you explicitly write for native English speakers, most of your readers might not be native English speakers, either.
+我有两个建议：
 
-If you are afraid your English is not good enough, and never start practicing, it will never become good.
+第一个建议是谈论一个不能被评判的话题。选择事实。没有人可以抨击一个事实是不正确的。解释一些你最近学到的知识。
 
-My suggestion is to just start, and have someone who's really good at English review your posts, so you can learn over time.
+第二个建议是阅读史蒂文·普雷斯菲尔德的《艺术之战》。在我看来，这是每一个试图从事创造性工作的人必读的。它真正深入探讨了抗拒心理的根源，以及为什么你会有这种感受。
 
-### Don't give up too early
+### 我不擅长写作
 
-Most blogs fail. This is a harsh truth. Blogs are abandoned, people forget to renew the domain name, people move on.
+你确定吗？还是这只是一个借口，让你退出可以为你打开许多门的工作，并回到你的房间？
 
-Blogs get into this situation because people gave up. They gave up on writing content consistently and frequently, because they did not see immediate gratification from doing so.
+这可能是阻力出现了，给你一个很好的借口来不写作。
 
-If you want your blog to have the chance to become successful, you have to give it the time it needs, and you need to be prepared right from the start.
+你是否擅长制作视频，或者觉得用麦克风说话很棒？那么，制作视频或创建网播，但不要因为害怕而试图避免任何让你对其他人感到脆弱的工作。
 
-### Don’t be overwhelmed
+如果你真的不擅长写作，那么只有一种进步的方式：写得更多。
 
-It's too easy to be overwhelmed by all the things you need to do. In addition to your day job and your family and friends, you need to find the time to blog.
+### 我不太懂英语
 
-But blogging is not just writing. You need to find the perfect image for that post, you need to share the post on social media, you need to reply to comments, think about future post topics, craft that perfect and eye-catching post title...the list never ends.
+如果你想要为西方世界的国际读者写作，那么你应该用英语写网志。我强烈建议这样做，但在某些情况下，用你的母语写作可能更有意义。
 
-It's easy to feel overwhelmed.
+例如，如果你选择的领域竞争过于激烈，而且没有人用你的母语谈论它，那么将自己定位为专家可能是一个有趣的机会。
 
-That's why I take a minimalistic approach to blogging, which involves no pictures at all unless they're needed in the content of the post, and no comments.
+如果你想用英语写网志，不要把英语水平不高作为借口。首先，如果你在阅读这本书，那么说明你能够阅读英语，如果你能阅读，你也能写。
 
-Not having to manage comments frees up a lot of time and mental energy. It also has a nice side effect: I don't have to worry about what people think of my articles. I just focus on the writing.
+此外，除非你明确写给以英语为母语的读者，否则大多数读者可能也不是以英语为母语。
 
-### One step at a time
+如果你担心自己的英语水平不够好，并且从未开始练习，那它永远不会变好。
 
-Don't think you have to rush and do everything at once: open the blog, write 100 posts, create a Twitter account, a Facebook page, an Instagram account, make YouTube videos… it's just too much.
+我的建议是开始写，让一个英语非常好的人校对你的文章，这样你就可以逐渐学习。
 
-Start with the simplest thing you can do, create a habit, make that habit stick in your day to day and expand from there.
+### 不要太早放弃
 
-## Content is king
+大多数网志都失败了。这是一个残酷的事实。网志被放弃了，人们忘记续订域名，人们离开了。
 
-Content matters. Content is the thing that matters the most, in the context of your blog.
+网志陷入这种情况是因为人们放弃了。他们放弃了定期和频繁地撰写内容，因为他们没有从中看到立即的满足感。
 
-Let's discuss some of the things I believe are fundamental pillars in a content-centered blog strategy.
+如果你希望你的网志有机会变得成功，你必须给它需要的时间，而且你需要从一开始就有所准备。
 
-### Write to your people
+### 不要被压垮
 
-Let's say you are great at cooking. Write about your craft: cooking tips, ingredients, recipes, talking to other people that love cooking. Do you love knitting? Write for other knitters about techniques and everything new that you learn about knitting. Love dogs? Create a blog for dog owners.
+我们很容易被需要做的所有事情压倒。除了你的日常工作、家人、和朋友，你还需要找时间写网志。
 
-Anything you do, the important thing is that you identify a group of people that are as passionate as you about a subject, and you write for them.
+但是写网志不仅仅是写作。你需要为那篇文章找到完美的图片，你需要在社交媒体上分享文章，回复评论，考虑未来的文章主题，设计那个完美的吸引眼球的标题……清单永远没有尽头。
 
-There's no value in what you write if it's not valuable to other people. Sure, you can write about something that's only appreciated by you, perhaps. But then there's no purpose in spending so much time and effort creating blog posts, is there?
+这让人很容易感到不知所措。
 
-### Focus on creating value
+这就是为什么我对网志写作采取极简主义的方法，除非图片在文章内容中必要，否则完全不需要图片，也没有评论。
 
-Once you identify the people you want to write to, it's key for you to focus on creating value.
+不需要管理评论释放出了大量的时间和精力。它还有一个好的副作用：我不必担心人们对我的文章有什么看法。我只专注于写作。
 
-Value can take many different forms, of course. It could be how-to posts. It could be sharing your specific experience with some technology. It could be teaching other people how your raw meat diet for your dog works.
+### 一步一个脚印
 
-It could be telling everyone about your recent trip and what you visited, in detail, so that when someone is searching for tips as they are organizing a vacation, they can find your useful information.
+不要认为你必须匆忙一次性做完所有事情：开设网志、写 100 篇文章、创建 Twitter 账户、Facebook 页面、Instagram 账户、制作 YouTube 视频……太多了。
 
-There is no fixed rule on what creates value.
+从你能做到的最简单的事情开始，养成习惯，让这个习惯贯穿你的日常生活，并逐步扩展。
 
-Here's what I do to create value for the readers of my blog: I create easy-to-follow tutorials, written with a beginner's mindset. I do not take the perspective of an expert while writing them.
+<h2 id="content-is-king">内容为王</h2>
 
-To do so, I learn a new thing, so I'm not an expert in it, and I create a practical guide.
+内容至关重要。对于你的网志来说，内容是最重要的方面。
 
-I know it's very difficult as an expert to write for beginners about the thing we're expert in. This is because we've forgotten what it means to be a beginner and we make too many assumptions, forgetting to mention essential things that are key to understanding a topic.
+让我们讨论一下以内容为中心的网志策略中的基本支柱。
 
-Other times I describe how I fixed a problem that I just solved while working on some coding project. My memory is very fresh and I can remember what it's like to have the problem, so I can describe it very clearly.
+### 写给你的读者
 
-Sometimes I create less practical posts where I talk about things that relate to my experience as a developer, or common struggles, or tips for productivity, for example. Those are the posts that are normally appreciated the most by my readers.
+假设你擅长烹饪。写一些与烹饪相关的内容：烹饪技巧、食材、食谱，与其他热爱烹饪的人交流。喜欢编织？为其他编织者写一些编织技巧以及你学到的新知识。喜欢宠物狗？为狗主人创建一个网志。
 
-### Focus on being useful and solving problems
+无论你写什么，重要的是要找到一群和你一样热情的人，为她们写作。
 
-Your posts must solve a problem: each post on your blog must have a very specific goal.
+如果你写的东西对别人没有价值，那么它就没有价值。当然，你可以写一些只有你自己欣赏的东西。但那么做就没有什么意义了，对吧？
 
-This is key, and the post title must perfectly address the problem and solution.
+### 专注于创造价值
 
-When people search for how to solve that problem, you want your post to be in the top results.
+一旦你确定了要为之写作的目标读者，关注创造价值就非常关键。
 
-And your content must be awesome.
+当然，价值可以采用许多不同的形式。它可以是教程文章，可以是分享你对某项技术的具体经验，可以是教授其他人怎样为宠物狗制作生肉食谱。
 
-Exactly what they are looking for.
+你可以详细介绍你最近的旅行和参观情况，以便当有人在组织度假搜索经验时，可以找到你有用的信息。
 
-Focus on creating the absolute best, most valuable content.
+没有固定规则可以定义什么是有价值的内容。
 
-### Write the blog post that would have helped past you
+以下是我为我的网志读者创造价值的方法：我创建易于理解的教程，以初学者的心态编写。在撰写这些文章时，我不采用专家的角度。
 
-One of my favorite things is writing a blog post that contains the solution to a problem I just solved.
+为了达到这个目的，我学习一项新技能，这样我就不是专家，然后创造一个实用的指南。
 
-Everyone else solves a problem and moves on.
+我知道作为专家，很难为初学者编写与我们专业相关的文章。这是因为我们忘记了什么是初学者，而且我们做出太多假设，忘记提及理解主题所必需的基本内容。
 
-If you dedicate 10 minutes to document how you solved the problem you had, you are helping other people that might have this problem next week, or next year, or 10 years from now.
+有时，我描述如何解决我在某个编程项目中刚刚解决的问题。我的记忆非常清晰，还记得遇到这个问题时的感觉，所以可以非常清楚地描述它。
 
-They will be thankful that you wrote something that helped them.
+有时，我会创建一些不太实用的文章，介绍我作为开发者的经验、常见的挑战、或工作效率技巧等。这些文章通常受到我的读者的欣赏。
 
-And perhaps you can even help yourself in the future.
+### 专注于提供有用的帮助和解决问题
 
-Sometimes I google for a problem and I find my own post, written many months ago. I completely forgot that I wrote it.
+你的文章必须解决一个问题：你网志上的每一篇文章都必须有一个非常具体的目标。
 
-### What not to write about
+这很关键，文章标题必须完美地解决这个问题和提供解决方案。
 
-One thing I recommend that you not write about is anything that doesn't help other people.
+当人们搜索如何解决这个问题时，你希望你的文章能排在前几个结果中。
 
-It's difficult to draw a line in the sand, but you should think about what you are writing.
+而且你的内容必须非常棒。
 
-Don't think of a blog like a diary. You _can_ use it like a diary, posting your rants or opinions or what you ate for dinner.
+正好是她们在寻找的东西。
 
-But is it really helping or creating any value for other people?
+专注于创造最好、最有价值的内容。
 
-I personally only try to write about things that I assume will help anyone. Even if a post helps just one person, then it's a good post for the blog.
+### 写能帮助过去的你的博文
 
-### Teach everything you know
+我最喜欢的事情之一就是写一篇博文，其中包含我刚刚解决问题的解决方案。
 
-I learned this mantra, or motto, from Nathan Barry. He's famous for his book _Authority_ and for being the founder of ConvertKit, a great tool for bloggers that have the need to build a newsletter.
+别人只要解决了问题就接着做其它事去了。
 
-He has this notion that building an audience is the secret hack to creating a successful business, and I really believe that. And to build an audience, the best way is to share, in one way or another, everything you know.
+如果你花费 10 分钟的时间记录下你解决问题的方法，你将帮助可能在下周、明年、或 10 年后遇到这个问题的其他人。
 
-He did that in the form of books, first with two books about design, as that was his specialty. Then he wrote everything he learned about selling those books in another book.
+她们会感谢你写了一些有用的东西来帮助她们。
 
-I make my living teaching everything I know, and since there's a finite amount of things I do know at any finite point in time, I had to transition to teaching everything I learn.
+而且也许你甚至可以在未来帮助自己。
 
-I found that many people like the way I talk about stuff, with a very simple approach, and this beginner-oriented point of view has been beneficial to me.
+有时候我会搜索一个问题，然后发现自己很久以前写过的文章。我完全忘记了我写过它。
 
-Your approach can be different, but the “teach everything you know” mantra is one that you need to seriously think about.
+### 不要写以下内容
 
-## Practical content suggestions
+我建议你不要写任何无助于他人的内容。
 
-After discussing why content matters, and why you should focus on creating great content, it's time to talk about some practical suggestions.
+虽然很难明确划定一个界限，但你应该考虑自己写的内容。
 
-### Content length, how much is enough?
+不要把网志看作日记。尽管你可以像写日记一样写网志，发表你的怨言、观点、或者晚餐吃了什么。
 
-It does not matter how long your articles are.
+但是这些内容真的有助于或者创造了价值给其他人吗？
 
-The Internet is full of marketing blogs that tell you the content must be 2000+ words long, 10000+ words long, and so on.
+我个人只尽可能写那些我认为对任何人都有帮助的东西。即使一篇文章只帮助了一个人，对网志来说也是一篇好文章。
 
-But it does not matter as long as your content solves a problem for a person.
+### 教授你所知道的一切
 
-I have posts that solve the problem in 50 words, and if this is the solution to someone's needs, that's great!
+我从内森·巴里那里学到了这个口号或座右铭。他因其书籍《权威》和创立了网志通讯工具 ConvertKit 而闻名。
 
-There is no need to dilute the content with useless words, and I'm sure you immediately notice when a blog post is trying to transform a 5-line answer into a 200-line one.
+他认为，建立一个听众群体是创建成功业务的秘密，我非常相信这一点。而要建立听众，最好的方法是以某种方式分享你所知道的一切。
 
-The same thing happens with videos, right? You are looking for something, but you need to watch 15 minutes of intro to get to the meat of the subject.
+他以书的形式分享他所知道的，首先是两本关于设计的书籍，因为那是他的专长。然后，他写下了他关于销售这些书籍所学到的一切。
 
-Do the opposite. Do what's great for your readers.
+我靠教授我所知道的一切谋生，但由于我在任何有限时间内所知道的事情是有限的，所以我必须转向教授我所学到的一切。
 
-Plus, Google does not care.
+我发现很多人喜欢我讲述的方式，这种简单的方法和以初学者为导向的观点对我很有益。
 
-### Keep posts focused
+<h2 id="practical-content-suggestions">实用的内容建议</h2>
 
-When I say that Google does not care about content length, it's because I've observed this first-hand.
+在讨论了内容的重要性和为什么要专注于创建优质内容之后，现在是时候讨论一些实用的建议了。
 
-Some of my most visited blog posts are very short, yet they take a problem and they solve it, quickly.
+### 内容长度，多长才够长？
 
-And Google notices it. The key is solving a problem. Google notices that you are helping it help its users, and that's what happens when you keep your posts focused on a specific topic.
+文章长度并不重要。
 
-Some topics will perform better than others, some might be less popular, but as long as it's focused on a little problem and it solves it, it's great.
+互联网上充斥着营销网志，告诉你内容必须是 2000 字以上，10000 字以上等等。
 
-### Don't try to appeal to everyone
+但只要你的内容为人们解决了问题，长度就不重要。
 
-You can't write great content for everyone. Pick your ideal person, or group of people, and write for them.
+我有一些文章只用了 50 个字就解决了问题，如果这是某些人需要的答案，那就太好了！
 
-Pick your crowd.
+没有必要用无用的词汇来稀释内容，我相信你会立即注意到一篇博文试图把 5 行答案变成 200 行的情况。
 
-Pick your tribe.
+视频也是一样的，对吧？你在寻找某些东西，但需要观看 15 分钟的介绍才能到达主题的重点。
 
-Ignore everything else.
+反其道而行之，为你的读者着想。
 
-### Don't aim for perfection
+而且，谷歌并不在意文章长度。
 
-Done is better than perfect.
+### 保持文章的焦点
 
-This is my mantra. As long as what I do is technically correct and does not have errors, it's all fine.
+当我说谷歌不在乎内容长度时，这是因为我亲眼目睹了这一点。
 
-You don't need to overthink it. Focus on being good enough. That's when the point of diminishing returns starts.
+我写的一些最受欢迎的博文非常简短，但它们解决了一个问题，而且很快就解决了。
 
-Most of the time, good enough is already better than 95% of what's out there.
+而且谷歌也注意到了。关键是解决问题。谷歌注意到你在帮助它的用户，而当你把文章集中在一个特定的主题上时，这就是发生的情况。
 
-Don't let chasing perfection limit your production volume.
+有些主题会表现得比其它主题更好，有些可能不太受欢迎，但只要它集中在一个小问题上并解决它，那就很好。
 
-### It does not matter if someone already wrote about it
+### 不要试图迎合所有人
 
-There are thousands of water brands. Thousands of brands of wine and beer. Thousands and thousands of hotels.
+你无法为所有人编写优秀的内容。选择你理想的个人或一群人，并为她们编写内容。
 
-The more people write about a subject, the more interest there is around it, and the more people read about that subject.
+选择你的受众。
 
-If no one wrote about something, it might not mean you are a pioneer or “first", it might just mean no one cares about that topic.
+选择你的群体。
 
-### You don't need to bring something new to the table
+忽略其它一切。
 
-If you worry that you don't have a unique spin on something, or a revolutionary idea, you might be limiting yourself.
+### 不要追求完美
 
-Often, a 1% or 5% improvement over something that's already out there is enough.
+完成好过完美。
 
-Google was not the first search engine. It just worked better.
+这是我的座右铭。只要我所做的技术上是正确的，没有错误，就可以了。
 
-Basecamp was not the first project management tool. It just worked better.
+你不需要过度思考。专注于达到足够好的水平。这时，收益递减点就开始了。
 
-Focus on being better, not new.
+大多数情况下，足够好已经比那些存在的 95% 要好。
 
-### You can blog about anything
+不要让追求完美限制你的生产量。
 
-I am a programmer and I blog about programming. If you’re a programmer too, you don’t just have to blog about programming.
+### 不要在意是否已经有人写过这个主题了
 
-There’s space for everything.
+世上有成千上万的瓶装水品牌、葡萄酒和啤酒品牌、以及无数酒店。
 
-The topic does not matter, as long as you are passionate about it. There's no way you can force yourself to write about one subject for a long time without burning out.
+有更多人写关于一个主题，说明这个主题更受关注，也会有更多人阅读相关内容。
 
-Anywhere there’s a problem, you can bring solutions.
+如果没有人写关于某个东西，这并不意味着你是开拓者或者“第一人”，可能只是因为没有人关心那个话题。
 
-For me the niche was programming, for you it might be something else. Also, programming is even a bad niche as most developers consider even a little bit of marketing to be spam and mostly hate receiving emails (as they're using email every day and probably already receive a lot of it).
+### 你不需要为话题带来新的内容
 
-I think blogging, properly done, can be even more successful in less technical topics. It can work, as long as people search for those topics on the internet and have a place where you can find them like a big subreddit, a big Facebook group, or a popular online forum.
+如果你担心自己没有对某个事物独特的看法或革命性的想法，你可能在限制自己。
 
-## Create a system
+通常情况下，对已有事物进行 1% 或 5% 的改进就足够了。
 
-I am an engineer and I believe in systems. Humans are weak. Systems are strong. Humans with a system are on a good track.
+谷歌并不是第一个搜索引擎，它只是工作得更好。
 
-If only we could have a system for our blog, everything would be simpler.
+Basecamp 也不是第一个项目管理工具，它只是工作得更好。
 
-Turns out that we can definitely have a system, and in this section, I'm going to explain the system I use.
+专注于变得更好，而不是新颖。
 
-It might not be the perfect system for you, and I won’t pretend it’s a system that works in 100% of the cases. But it's a starting point, and by tweaking it you can create your own perfect system.
+### 你可以写关于任何事情的网志
 
-A system makes you consistent.
+你可以写关于任何主题的网志。
 
-### Consistency is key
+我是一名程序员，我的网志主要是关于编程的。但如果你也是一名程序员，你不必只写关于编程的网志。
 
-Why is consistency so important?
+所有的主题都有空间。
 
-Because consistency is deeply entrenched in our lizard brains.
+主题并不重要，只要你对它充满激情。如果你长时间强迫自己写一个主题的内容，会很容易疲劳。
 
-You are the one that makes one blog post every Tuesday. You're not the one that \*tries\* to write a blog post consistently each week. You're the one that just \*does\*.
+只要存在问题，就有解决方案。
 
-It's not me, Flavio, saying so.
+对我来说，我的领域是编程，对你来说可能是其它领域。此外，编程甚至不是一个好的领域，因为大多数开发人员认为即使是一点点营销也是垃圾邮件，她们通常讨厌收到电子邮件（因为她们每天都在使用电子邮件，可能已经收到了很多邮件）。
 
-Let me share something from Robert Cialdini, author of the amazing book _Influence_:
+我认为，只要人们在互联网上搜索这些主题，并且有一个可以找到它们的地方，如大型的 subreddit、大型的 Facebook 群组、或热门的在线论坛，那么网志的成功甚至可以在非技术性主题上获得。
 
-> _Once we have made a choice \[...\] we will encounter personal and interpersonal pressures to behave consistently with that behavior_.
+<h2 id="create-a-system">创建一个系统</h2>
 
-Once you have a series of 5, 10, 20 weeks of posting, you automatically become the one that posts every week. Or twice a week, or whatever schedule you chose.
+我是一名工程师，我相信系统。人类是脆弱的，而系统是强大的。有了系统的人会走在正确的轨道上。
 
-That's the key to the system: consistency.
+如果我们能为网志建立一个系统，一切都会变得更简单。
 
-Have you ever heard of Rand Fishkin's Whiteboard Friday? That was a great video series about SEO that came out every Friday. Do you know about FunFunFunction? MPJ releases one video every Monday. Every one of his fans knows and waits for his "good Monday morning" every week.
+事实证明，我们绝对可以拥有一个系统，在这一部分，我将解释我使用的系统。
 
-I’m sure you know YouTubers that post on a pre-determined day. Like Saturday or Tuesday.
+这可能不是适合你的完美系统，我也不会假装这是一个在 100% 情况下都适用的系统。但这是一个起点，通过对其进行调整，你可以创建自己的完美系统。
 
-Everyone can find the time to create a blog post every week. But not everyone is willing to put in the work to create something every week. Will you?
+系统使你具有一贯性。
 
-### Schedule posts ahead of time
+### 始终如一最为关键
 
-As we just discussed, the single best thing you can do with your blog is stay consistent.
+为什么连贯性如此重要呢？
 
-But staying consistent is hard.
+因为连贯性深深植根于我们的爬行动物大脑中。
 
-One of the easiest ways to become inconsistent is to miss a day because you were sick, or because you went to a party, or because you took a vacation.
+你是那个每周二发布一篇博文的人。你不是那个*试图*每周一致性写网志的人。你是那个*做到了*的人。
 
-When you miss a day, and you forgive yourself for this, you will miss other days.
+这不是我，Flavio，说的。
 
-That's what I would do. If I let one day slip by without a post, well… nothing bad happens and I have a track record of missing one post.
+让我分享一些来自罗伯特·西奥迪尼的东西，他是这本了不起的书《影响力》的作者：
 
-Before I realize it, I am sure I will miss other posts, too. Just because I was too lazy one day, I ruined the consistency of my blog and now it's impossible to get that perfect streak of posts back.
+> 一旦我们做出选择[...]我们将遇到个人和人际压力，要求我们与该行为一致。
 
-How do you prevent that? By scheduling posts ahead of time.
+一旦你连续发布了 5、10、20 周的文章，你就自然而然地成为了每周发布文章的那个人。或者是每周两次，或者是你选择的任何计划。
 
-Before you start publishing your blog, before unveiling it to the world and announcing it everyone, write 3 posts as we discussed before, and start building up your queue.
+这就是系统的关键：连贯性。
 
-### Have a queue
+你听说过兰德·菲什金的白板星期五吗？那是一个关于 SEO 的很棒的视频系列，每个星期五都会发布。你知道 FunFunFunction 吗？MPJ 每周一发布一个视频。他的每个粉丝都知道并期待着他的“愉快的星期一早晨”。
 
-When I first started my blog, I discovered the notion of creating a queue by accident.
+我相信你知道一些在预定日发布视频的主播，比如周六或周二。
 
-I happened to work on another project of mine, one that didn't take off as I expected it to.
+每个人都能找到时间每周写一篇博文。但并不是每个人都愿意每周创作一些东西。你会吗？
 
-This project involved creating some long guides, about topics I cared about.
+### 提前安排发布时间
 
-So when I decided to shut down the project, I thought that it was a shame to abandon those long guides to their unknown fate.
+正如我们刚刚讨论的那样，你的网志最好保持一致性。
 
-So I cut each chapter into several blog posts, and I got about 15-20 of them.
+但保持一致性很难。
 
-I could have published them all on that day, but I randomly decided to queue them up. One today, one tomorrow, and so on.
+变得不一致的最简单方法之一是因为你生病了、参加了派对、或者去度假而错过了一天。
 
-A couple of days after that, I had an idea for a new post. I was a blogger now, right? And I queued it after all those posts.
+当你错过了一天，并原谅了自己，你就会错过其它的日子。
 
-The queue has never dried up since then, over 700 days ago. Some days I reached the end of the queue and I had to fill it up again from zero, but I never missed a day.
+这就是我会做的事情。如果我错过了一天没有发布文章，那么……什么坏事也没发生，我就会有一个错过一篇文章的记录。
 
-I just attribute this result to the system – the queue I've built up, and the shame that would result from having written all those posts in the past and then stopping.
+在我意识到之前，我肯定会错过其它的文章。只是因为某一天太懒了，我破坏了我的网志的一致性，现在要想再次达到完美的连续发文记录就不可能了。
 
-I could not stop.
+如何防止这种情况发生？提前安排好发布文章的时间。
 
-### Pick a schedule frequency you can sustain over the long run
+在你开始发布网志之前，在向世界展示和宣传之前，按照我们之前讨论的写三篇文章，并开始建立你的队列。
 
-One key part of this scheduling and queuing system is frequency.
+### 使用队列
 
-How frequently should you post?
+当我第一次开始写网志时，我是偶然发现了创建队列的概念。
 
-My recommendation is to post with a frequency you can maintain over time, consistently.
+我同时在做另一个项目，但它并没有像我预期的那样成功。
 
-Start with one day per week. Create a queue, as I suggested, and see if you can maintain this frequency over 2-3 months. Once you start having a queue that's too long, say a blog post you write today will be published 3 months from now, then you can start increasing the frequency.
+这个项目涉及编写一些关于我关心的话题的长指南。
 
-It's always best to scale up the frequency than to post less frequently because you can't sustain the frequency you initially set.
+当我决定关闭这个项目时，我觉得将这些长指南遗弃于未知的命运是一种遗憾。
 
-The reason I focus a lot on consistency and frequency is that people get used to it and they learn to expect a post from you, and they look for it.
+于是我把每章都分成了几篇博文，得到了大约 15-20 篇。
 
-If you start missing posts and not sharing information as frequently, then people don't know when to expect a new post from you, and they feel lost and disconnected.
+我本可以在同一天内发布它们，但我随意决定将它们排队等待发布。一天发布一篇，明天发布一篇，以此类推。
 
-This happens with everything. I notice it with videos.
+几天后，我又有了一个新的想法，我成为了一名博主，对吧？我把它也加入了发布队列中。
 
-If you watch YouTube videos frequently, what do you think when a YouTuber that posts every day, and you watch every day, suddenly stops posting for a week?
+从那时起，我从未停止过队列。这已经是 700 多天前的事了。有些时候，我的队列会用完，我必须从零开始填充它，但我从未错过一天。
 
-I subscribe to a YouTuber that posts every Saturday, and every Saturday, unless I am out doing something, I'm there, at noon, watching his video.
+我认为这个结果要归功于系统——我所建立的队列，以及写过所有那些帖子然后停下来会让我感到惭愧。
 
-### Ignore quantity
+我不能停下来。
 
-If you know beforehand that you have 3 hours a week to dedicate to blogging, don't force yourself to create too many posts.
+### 选择一个你可以长期坚持的发布频率
 
-Do one post a week, but do it well. Don't create many posts that are irrelevant or low quality, create one that you can be proud of.
+这个排期和排队系统的一个关键部分是频率。
 
-Quality is perceived, and people will associate your worth with the quality of your work.
+你应该以什么频率发布文章？
 
-Be known for creating high quality and helpful content.
+我的建议是选择你能够持续保持的频率。
 
-### Focus on the process, not the outcome
+先从每周一篇开始。像我之前建议的那样创建一个队列，看看你能否在 2-3 个月内保持这个频率。一旦你开始拥有一个太长的队列，比如你今天写的一篇博文将在三个月后发布，那么你就可以开始增加频率。
 
-One recommendation I have to be productive is to focus on the process.
+总是最好增加频率，而不是因为你无法维持最初设置的频率而发布更少的文章。
 
-I am focused on creating the blog post.
+我非常关注一致性和频率的原因是人们会习惯，并期望从你那里看到文章，她们会寻找它。
 
-I am focused on creating ebooks.
+如果你开始错过文章并且不频繁分享信息，那么人们不知道什么时候可以期待你的新文章，她们会感到迷失和脱离。
 
-I am not focused on how many people will read the blog post, or if they will like it.
+这种情况发生在任何事情上，我注意到这一点在视频上。
 
-That's not something I have control over. The best thing I can do is focus on my work and make sure it is the best work I can perform today.
+如果你经常看 YouTube 视频，当一个每天发布视频并且你每天都看的 YouTuber 突然停止发布一周，你会怎么想？
 
-### Keep the process lean
+我订阅了一个每周六发布一次的 YouTuber，每个周六，除非我在外面做些什么，否则我都会在中午的时候观看他的视频。
 
-When thinking about my process, I like to simplify it.
+### 忽略数量
 
-I want to remove all the friction I can remove.
+如果你事先知道你每周只有三个小时用于写网志，不要强迫自己创建太多的文章。
 
-It all needs to be simple, fast, streamlined.
+每周发一篇，但做得好。不要创作许多不相关或质量低下的文章，而是创作一篇让你感到自豪的文章。
 
-I don't want roadblocks.
+品质是可以被感知的，人们会将你的价值与你的作品质量联系起来。
 
-I try my best to remove all the resistance and all that powers resistance.
+以创作高质量和有用的内容而闻名。
 
-There should be nothing between me and writing a great blog post.
+### 专注于过程，而非结果
 
-### Keep a list of topics
+我对提高工作效率的建议是关注过程。
 
-I don't always have the time to write about something.
+我专注于创建博文。
 
-Sometimes I have an idea for a topic, and I write down the title of the article in my favorite writing application.
+我专注于创建电子书。
 
-When it's time to write a new blog post, and I don't have an idea ready, I go through the list of titles and find one that is appealing to me in that specific moment.
+我不专注于有多少人会阅读这篇博文，或者她们是否会喜欢它。
 
-### Capitalize high energy days
+这不是我能够控制的事情。我能做的最好的事情就是专注于我的工作，并确保它是我今天能够做到的最好的工作。
 
-Some days I have really high energy for writing blog posts. Some days I have very little, if any, energy.
+### 保持流程精简
 
-On those days when I have the fire, I can write a few blog posts in a row and code the rest of the day (as that's my job). I have fuel for everything.
+当我思考我的流程时，我喜欢将其简化。
 
-I capitalize on those days. I sit there and I might write 5 posts, and put them in the queue.
+我想要尽可能地去除所有摩擦。
 
-The days I have low energy I am thankful for those high energy days and I am thankful that I did everything I could to get the most out of them.
+所有步骤都需要简单、快速、流畅。
 
-## How to get people to your blog
+我不想要路障。
 
-Having a blog is great and all, but having a blog that people actually read is deeply satisfying.
+我尽力消除所有的阻力和造成阻力的因素。
 
-There’s a problem though: how do you get people to read your blog?
+在我和撰写一篇出色的博文之间，不应该有任何障碍。
 
-### How Blog Traffic Works
+### 保留一个主题列表
 
-In today's world, if you are not producing valuable and consistent content, you are invisible. There are just too many things pushed at us every day.
+有时我没有时间写某个主题。
 
-I dedicate from 30 minutes to 1 hour every day to the Internet. That means Social Media, mostly Twitter, RSS and content aggregators.
+有时我会有一个主题的想法，然后在我最喜欢的写作应用程序中写下文章的标题。
 
-I always see the same people. Those people that are highly successful keep pushing out great content.
+当需要写新的博文时，而我没有准备好的想法时，我会查看标题列表，并选择其中一个在特定时刻对我有吸引力的主题。
 
-It might be an inspiring tweet, a great blog post that's shared a lot, or something that's just worth reading.
+### 将高能量的日子利用起来
 
-Unless you perform at the same level, you are not appearing in my feed because I only give it limited time. And I assume the vast majority of people do the same. People don't just spend the whole day on social media waiting for you.
+有些日子我有很高的写网志的热情，有些日子则几乎没有，或者根本没有。
 
-### Share your work where the people are
+在那些我充满激情的日子里，我可以连续写几篇博文，然后花剩下的时间进行编码（因为这是我的工作）。我有能量做所有的事情。
 
-Sharing your content is a great motivator especially when your blog is young and you don't have an audience yet (more on this later).
+我会充分利用这些高能量的日子。我会坐在那里写 5 篇博文，然后把它们放进队列里。
 
-In this situation, you can't rely on organic traffic. To avoid losing motivation, it's key to get your first views by sharing your content.
+在我能量低的日子里，我感激那些高能量的日子，感激我为了充分利用它们而做的一切。
 
-You can do 2 things: share it with your own audience on social media, if you have an audience already, or use sites that provide an audience and try your luck.
+<h2 id="how-to-get-people-to-your-blog">如何吸引人们访问你的网志</h2>
 
-Those sites include Reddit, Hacker News, Medium, and forums that specialize in the topic you are talking about. Word of caution: you might have your feelings hurt in some of those venues, so just be prepared for criticism.
+拥有一个网志很棒，但拥有一个真正被人阅读的网志是非常令人满足的。
 
-### Organic growth is the only reliable solution for long term traffic
+但问题是：如何让人们阅读你的网志呢？
 
-You might have the proverbial lucky day, and your blog post goes viral in places like Reddit, Hacker News, or on Social Media.
+### 网志流量的工作原理
 
-But the key factor for your blog is organic traffic.
+在当今的世界中，如果你不制作有价值且一贯的内容，你就是不可见的。每天都有太多的事情被推到我们面前。
 
-Organic traffic means Google will receive a search from a user and will decide that it should show them your blog post.
+我每天花 30 分钟到 1 个小时的时间在互联网上，主要是社交媒体，特别是 Twitter、RSS、和内容聚合器。
 
-Organic traffic is a key factor to every website. Social media traffic is generally low quality, hard to get, and hard to maintain over time.
+我总是看到同样的人。那些非常成功的人不断推出优秀的内容。
 
-This is a long process. Google needs to trust you, and it can take some time.
+这可能是一个鼓舞人心的推文、一个被分享了很多次的博文，或者是一些值得阅读的东西。
 
-My best suggestion to give Google a reason to show your blog posts is to consistently solve people’s problems.
+除非你能够以同样的水平表现，否则你不会出现在我的信息流中，因为我只给它有限的时间。我认为绝大多数人也是这样。人们不会整天在社交媒体上等待你。
 
-### Solve people’s problems
+### 到人们常去的地方分享你的作品
 
-How do you get Google (and other search engines) to send loads of traffic to your website?
+分享你的内容是一个很好的动力来源，特别是当你的网志还年轻，还没有受众（稍后会谈到更多相关内容）。
 
-What matters to Google is that it satisfies its own users.
+在这种情况下，你不能依靠有机流量。为了避免失去动力，关键是通过分享你的内容来获得第一批浏览量。
 
-And those are people searching.
+你可以做两件事情：如果你已经有自己的受众，可以在社交媒体上分享；或者使用提供受众的网站，试试手气。
 
-People search in order to solve their own problems.
+这些网站包括 Reddit、Hacker News、Medium，以及专注于你所讲述主题的论坛。需要注意的是：你可能会在一些场所受到批评，所以要做好心理准备。
 
-I see SEO people who suggest that you write 3000+ posts to rank on Google.
+### 有机增长是长期流量唯一可靠的解决方案
 
-That’s a great tip if their goal is to discourage you from writing more. They call it long-form content.
+你可能会有幸遇到某个时刻，你的博文在 Reddit、Hacker News、或社交媒体等平台上爆红。
 
-Now, as a non-SEO person, but as a person that does things and observes what works and what doesn’t, I can say that if you solve a problem for a person with a 4-line blog post, Google will thank you by sending you more people who have that problem.
+但对于网志来说，有机流量才是可靠的长期解决方案。
 
-They know using their algorithms when a person found the answer they needed. This is Google’s job. Their job is to solve people’s problems by providing the perfect content they are looking for.
+有机流量是指谷歌收到用户的搜索请求，并决定展示你的博文。
 
-If you can provide that, Google will help you.
+对于每个网站来说，有机流量都是至关重要的因素。社交媒体的流量通常质量低，难以获得，且难以长期维持。
 
-Not every post on your blog can solve a problem, of course. But if you have posts that solve problems, you’ll start to notice, as those are the posts that will get the most visitors.
+这是一个漫长的过程。谷歌需要信任你，这可能需要一些时间。
 
-Not every post must be small of course, and if long-form content is best for you, do that.
+我最好的建议是始终解决人们的问题，这样可以给谷歌一个展示你博文的理由。
 
-### The importance of links
+### 解决别人的问题
 
-When we were talking before about choosing a good domain name, I mentioned domain authority. I said that an old domain name will likely have more domain authority.
+你如何让谷歌（以及其它搜索引擎）向你的网站发送大量流量？
 
-What is domain authority?
+对谷歌来说，最重要的是它能够满足自己的用户。而这些用户是在寻找答案的人。
 
-Domain authority is a sort of score that search engines use to set the importance of a website, and it's determined by many different factors. The specific algorithms and metrics used are not publicly available, but there's one thing which is key to domain authority: links.
+人们搜索是为了解决自己的问题。
 
-The more links to it that a website has, the more authority it has. But it's not that simple. The more authority the domain has that the link comes from, the more important the link is.
+有些 SEO 专家建议你写 3000 字以上的文章来在谷歌上排名。如果他们的目标是让你失去写作的热情，那么这是一个很好的建议。
 
-Links have very different weights. A link coming from Wikipedia has more power than a link from a random tweet. And search engines do take social metrics into consideration, too. We can't know for sure, but a link in a tweet from an influencer in your field has more weight than a tweet from a Twitter bot account.
+作为一个非 SEO 人员，我通过实践总结出：如果你用一个 4 行的网志解决了一个人的问题，谷歌会感谢你并向有同样问题的人发送更多的流量。谷歌的算法可以判断出用户是否找到了需要的答案，这是谷歌的职责，它的工作是通过提供完美的内容来解决人们的问题。
 
-Google (I say Google because it's the most important search engine, but others might do a similar thing) is also careful about the topic. If I link to a kitchen recipe site from my computer programming blog, that link is not going to have much value.
+如果你可以做到这一点，谷歌会帮助你。
 
-If a famous kitchen recipe blog links to a smaller kitchen recipe blog, then that's more relevant for Google, and it will give that link more meaning.
+当然，并不是你网志中的每篇文章都能解决问题。但如果你有解决问题的文章，你会注意到这些文章将会获得最多的访问量。
 
-When it comes to links, it's important to get links from relevant and on-topic websites.
+当然，并不是每篇文章都必须很短，如果长篇内容对你来说最好，那么就这样写吧。
 
-This is only something you can get by providing great and useful content.
+### 链接的重要性
 
-## Expand your reach with an email list
+之前我们在讨论如何选择一个好的域名时，我提到了域名权威度。我说一个老域名很可能会有更高的域名权威度。
 
-Let’s discuss how to augment the experience you create for your blog visitors by using an email list.
+什么是域名权威度？
 
-### What is an email list?
+域名权威度是搜索引擎用来确定网站重要性的一种得分，由许多不同的因素决定。具体的算法和指标并不公开，但有一件事对于域名权威度非常关键，那就是链接。
 
-Blogs are closely linked to newsletters and email lists. The two often go hand in hand.
+一个网站拥有的链接越多，它的权威性就越高。但这并不简单。链接的权重有很大的差别。从维基百科链接过来的链接比从一个随机的推文链接过来的链接更有力量。而且搜索引擎也会考虑社交指标。虽然我们无法确定，但从行业内的有影响力的人的推文链接过来的链接比来自 Twitter 机器人账户的推文更有价值。
 
-A newsletter is the most effective way you can get in touch with your blog readers over time.
+谷歌（我说谷歌是因为它是最重要的搜索引擎，但其他搜索引擎可能会有类似的做法）也会关注主题。如果我在我的计算机编程网志上链接到一个厨房食谱网站，那么这个链接就没有多少价值。
 
-If you are not already familiar with the email list concept, you may be wondering whether in the era of Facebook, Instagram, Snapchat, and Twitter if you still need to use an old-style system like email.
+如果一个著名的厨房食谱网志链接到一个较小的厨房食谱网志，那么对于谷歌来说，这就更相关，它会给予该链接更多的意义。
 
-In fact, email is a fundamental tool for any online business. Blogs are no exception.
+在链接方面，重要的是从相关和同主题的网站获取。这只能通过提供优质和有用的内容来获得。
 
-Sending emails to a list of customers is not a system by which people commonly spam, as you might be thinking.
+<h2 id="expand-your-reach-with-an-email-list">通过邮件列表扩大你的影响力</h2>
 
-Especially if you're a developer, you need to realize that email is useful, you are not evil for sending emails, and that people want to hear from you.
+让我们讨论如何通过使用电子邮件列表来增强你为网志访问者创造的体验。
 
-Email is a cool system where people interested in your content or products can have more information about them, or about new products that you could provide in the future.
+### 什么是电子邮件列表？
 
-Email marketing is one of the most effective systems with which people are converted over time from visitors to customers: people in your list have explicitly asked to receive more information from you in the future.
+网志与电子简讯和电子邮件列表密切相关，它们经常相辅相成。
 
-This does not mean sending an email after 8 months asking them to buy your new product. Instead, the right way to approach this is to ask yourself how you can help your customers, in a consistent way.
+电子简讯是你与网志读者长期保持联系的最有效方式。
 
-Through the list, over time you can build customer loyalty, you create a relationship, and you keep in touch.
+如果你还不熟悉电子邮件列表的概念，你可能会想知道在 Facebook、Instagram、Snapchat、和 Twitter 时代，是否仍需要使用像电子邮件这样的老式系统。
 
-Your task with the list is to train people on the subject you are talking about, and to foster anticipation about upcoming news. But try to keep the focus on the customer rather than on you. Remember that a person will not be on your list forever – just as long as you can keep interest high.
+实际上，电子邮件是任何在线业务的基本工具，网志也不例外。
 
-So how do you get a person to join your email list in the first place?
+向客户列表发送电子邮件不是人们通常所想象的垃圾邮件系统。
 
-With a small gift, called the lead magnet, which can be for example a report, a free ebook, exclusive access to premium content, an email course, or really any gift you can make.
+特别是如果你是一名开发人员，你需要意识到电子邮件是有用的，你发送电子邮件并不是不道德的，人们想听到你的消息。
 
-The concept is simple, but it is crucial that the gears that make up this mechanism are calibrated to perfection and oiled regularly. Don't leave anything to chance if you do not want to be amateurish in the eyes of your customers.
+电子邮件是一个很酷的系统，对于对你的内容或产品感兴趣的人可以了解更多信息，或了解你将来可能提供的新产品。
 
-It’s fundamental that you offer people what they want. The email list is considered by most online business owners as the most important asset of a business, and the only one that really is 100% yours.
+电子邮件营销是最有效的系统之一，可以在一段时间内将人们从访客转化为客户：你列表中的人明确要求在将来收到更多关于你的信息。
 
-### A typical use of an email list
+这并不意味着在 8 个月后发送一封电子邮件让她们购买你的新产品。相反，正确的方法是问自己如何在一贯的方式下帮助客户。
 
-Let's look at an example. This is the system that most successful blogs use:
+通过列表，随着时间的推移，你可以建立客户忠诚度，建立关系并保持联系。
 
-a person reaches your site coming from search engines or Facebook. Then a popup appears (more or less invasive) with the request that they enter their email to get a small gift. Then you’ll send them the gift via email, and the person enters this cycle where they will be offered a variety of products over time.
+你在列表上的任务是向人们介绍你谈论的主题，并培养她们对即将推出的新闻的期望。但请尝试将重点放在客户身上，而不是你本身。记住，一个人不会永远在你的列表上——除非你能保持读者的兴趣。
 
-Usually, when a person gets on your list, they enter a phase called the _funnel_. The funnel is an automated process of warming, that is, the person get "heated" and is brought from being a random visitor to becoming a possible customer via a series of emails.
+那么，你如何让人们首先加入你的电子邮件列表呢？
 
-As soon as the person signs up, they will receive an email. The next day they will receive another, after 3 days another one, all according to predetermined logic.
+通过一份小礼物，称为潜在客户磁铁，可以是报告、免费电子书、高级内容的独家访问、电子邮件课程，或任何你可以提供的礼物。
 
-Typically, these e-mail series terminate after 7-8 mails where a story is told and in the end, they will be offered a product to purchase. If the person doesn't buy right away, emails will continue to flow, and so on until the automated sequence ends.
+这个概念很简单，但是如果你不想在客户眼中显得业余，那么组成这个机制的齿轮必须完美校准并定期润滑。不要留下任何机会。
 
-There are many kinds of different sequence types and usually people do not invent anything new. Instead they use well-tested systems (which you can easily recognize once you are trained).
+关键是要为人们提供她们想要的东西。电子邮件列表被大多数在线业务所有者视为业务的最重要资产，并且是真正 100% 属于你的唯一资产。
 
-Once this sequence is over, the person's email is placed in another sequence, or in the general list, which is no longer automated. Then, the person managing the list (you, for example), will send an update email from time to time, say once a month, to make sure the person don’t forget about them.
+### 电子邮件列表的一个典型用例
 
-In short, the author of the list tries to sell a product but if the recipient does not buy it, they will still remain in the list until they cancel the subscription. Because you never know – in the future they could decide to buy and become a customer.
+让我们来看一个例子，这是大多数成功的网志所使用的系统：
 
-### How to use an email list
+一个人通过搜索引擎或 Facebook 进入你的网站。然后弹出一个窗口（尽量减少侵入性），请求输入访客的电子邮件地址以获取一个小礼物。然后你将通过电子邮件发送礼物，这个人进入一个循环，在这个循环中，她将会在一段时间内收到各种产品的推荐。
 
-Of course, there are several approaches to the list. Let's see some situations that you could apply in your case.
+通常，当一个人加入你的列表时，她会进入一个被称为漏斗的阶段。漏斗是一个自动化的加热过程，即，这个人被"加热"，通过一系列电子邮件从成为一个随机的访客变成一个可能的客户。
 
-If you sell an ebook: your users are therefore your readers. You could add a link to your site, and use as a lead magnet a free ebook on a topic that you know the user is interested in.
+当这个人注册后，她会收到一封电子邮件。第二天她会收到另一封邮件，3 天后又会收到一封邮件，所有这些都按照预定的逻辑进行。
 
-On the list, you could initially present an upsell of other ebooks you've already written. Then you could insert the person into your monthly email, where you'll publish interesting links to the topic, and from time to time promote your new ebooks.
+通常，这些邮件序列在 7-8 封邮件后结束，其中讲述了一个故事，最后将提供一个可以购买的产品。如果这个人不立即购买，电子邮件将继续流动，直到自动序列结束为止。
 
-If you sell a product: for an info-product, it's the same process as a typical example used on blogs. Maybe as a lead magnet you use one or more chapters, or you have a video or something else related to the subject.
+有许多不同类型的序列类型，通常人们不会发明任何新的。相反，她们使用经过充分测试的系统（一旦你接受过培训，你就可以轻松地识别出来）。
 
-If you have a software product: the list could be made up of all the people who bought your software if you sell to them directly, which gets you their emails. Or you may want them to sign up for your application.
+一旦这个序列结束，这个人的电子邮件将被放在另一个序列或一般列表中，这不再是自动化的。然后，管理列表的人（例如你）会不时地发送更新邮件，比如每个月一次，以确保这个人不会忘记你。
 
-You could use the list to share updates, inform about the latest releases, cross-promote with other developers, and raise awareness on new products you’ll build over time.
+简而言之，列表的作者试图销售一个产品，但如果收件人不购买，她仍然会保留在列表中，直到她取消订阅。因为你永远不知道，在将来她可能会决定购买并成为客户。
 
-### Where to host your email list
+### 如何使用电子邮件列表
 
-To manage an email list you need a specialized software.
+当然，有很多种方法来运用列表。让我们看看一些你可以在你的情况下应用的方法。
 
-There are many different kinds of email newsletter management tools.
+如果你销售电子书：你的用户也就是你的读者。你可以在你的网站上添加一个链接，将一本关于用户感兴趣的主题的免费电子书作为引导磁铁。
 
-Some are simple. Some are way too complex for your needs. You just need to find the perfect one for you.
+在列表中，你可以最初呈现其它已经写好的电子书的升级销售。然后，你可以将这个人加入你的每月电子邮件中，在那里你会发布与主题相关的有趣链接，并不时推广你的新电子书。
 
-The first separation I want to make is between self-hosted software and SAAS. Sendy ([https://sendy.co](https://sendy.co)) is an example of a self-hosted software. You don't pay a monthly fee to use it, but you have to manage your own server, and you use a service, typically AWS, to actually send the emails.
+如果你销售产品：对于信息产品，这与网志上的典型示例是相同的过程。也许你可以使用一些章节或视频或其它与主题相关的东西作为引导磁铁。
 
-ConvertKit is an example of a tool that is SAAS based. You pay them a monthly fee, and they take care of everything.
+如果你有软件产品：如果你直接向用户销售你的软件，你的列表可以由所有购买你的软件的人组成，这样你就能得到她们的电子邮件。或者你可能希望她们注册你的应用程序。
 
-That tool, in particular, is targeted at bloggers, and it's really well made. I have used it for almost 2 years, and it's really great.
+你可以使用列表分享更新，通知最新版本，与其他开发人员交叉推广，以及提高人们对你将来建立的新产品的认知。
 
-I have recently moved to Sendy, self-hosting my newsletter, because at some point the price, for me, was not sustainable.
+### 在哪里托管你的电子邮件列表
 
-To start with, I would definitely recommend ConvertKit. You don't need to overthink spending $29 or $49 a month if that's valuable to you.
+管理电子邮件列表需要专业软件。
 
-But my list became big enough and I was not comfortable spending a lot of money on my email list hosting software.
+有许多不同类型的电子通讯管理工具。
 
-And it's a business tool: I know several top-performing bloggers with great audiences that use it for lists in the hundreds of thousands, and I'm sure that the ROI (Return on Investment) is well worth not having to manage your own server.
+有些简单，有些则过于复杂，与你的需求不符。你需要找到适合你的完美工具。
 
-Especially if you are new to managing servers.
+首先，我想要做出区分的是自托管软件和 SAAS。Sendy（[https://sendy.co](https://sendy.co)）就是一个自托管软件的例子。你不需要支付每月费用来使用它，但你需要自己管理你的服务器，并使用一个服务（通常是 AWS）来发送电子邮件。
 
-ConvertKit is not the only service, of course. There's Mailchimp, Drip, and others.
+ConvertKit 是一个 SAAS 工具的例子。你需要支付月费，平台会负责一切。
 
-Some tools let you start free. I think of TinyLetter (https://tinyletter.com/). That's what I started with, in the beginning, until I reached a few hundred subscribers. Then I moved to a tool called ButtonDown and I went from there.
+那个工具特别针对博客，它真的很好用。我使用了将近两年，非常棒。
 
-### Keep it alive
+最近，我转移到了 Sendy，自托管我的通讯，因为发展到了某个阶段，ConvertKit 的价格对我来说不再可持续。
 
-As with blog posts frequency and consistency, the best advice I can give about mailing lists is to keep them consistent.
+开始的时候，我绝对推荐使用 ConvertKit。如果这对你有价值，你无需过度考虑每月支付 29 美元或 49 美元。
 
-Do you write every 2 weeks? Fine. Keep doing it.
+但是，我的列表变得足够大，而我不愿意在我的电子邮件列表托管软件上花费大量的钱。
 
-Do you write every month? Fine. Keep doing it.
+而且这是一项商业工具：我知道有几个表现出色的博客有着庞大的受众，她们将其用于数十万个列表，我相信投资回报值得不必自己管理服务器。
 
-The exact frequency is really personal. Some people write a new email for every post they make on their blog.
+特别是如果你是管理服务器的新手。
 
-Some people email once a month with the list of posts. If you write once a month, however, people might forget who you are. This happened to me: I might subscribe to a newsletter and forget about it if you don't email me quite frequently.
+当然，ConvertKit 不是唯一的服务。还有 Mailchimp、Drip 等。
 
-Since I write one post per day, I found my sweet spot at one email every week, on Tuesday, and I always respect this frequency.
+有些工具可以免费试用。我想到 TinyLetter（[https://tinyletter.com/](https://tinyletter.com/)）。那是我在开始时使用的工具，直到我有了几百个订阅者。然后我转移到了一个叫做 ButtonDown 的工具，从那里继续。
 
-People know that Tuesday is "email from me" day.
+### 保持它的生命力
 
-### The lead magnet
+与博文的频率和一致性一样，我可以给关于邮件列表的最佳建议是保持一贯性。
 
-We discussed how having a newsletter is essential. It's also essential to have people signed up for it.
+你每隔两周写一封邮件？好的，继续保持。
 
-How can you have people decide to give a thing so precious as their email address to you?
+你每个月写一次？好的，继续保持。
 
-The best way I know is to give them something in return. Don't expect people to sign up without a clear gain for them
+确切的频率真的很个人化。有些人为每篇博文编写一封新邮件。
 
-You need to give an incentive to people to sign up for your newsletter.
+有些人每个月发送一次包含文章列表的电子邮件。然而，如果你每个月只写一次邮件，人们可能会忘记你是谁。这种情况也发生在我身上：如果你不频繁给我发邮件，我可能会订阅一个通讯，然后忘记它。
 
-This is the lead magnet that we discussed briefly earlier.
+因为我每天写一篇文章，所以我发现在每周的星期二发送一封邮件是最合适的时间，我总是保持这个频率。
 
-It can be a 1-page PDF cheat sheet. A report. A short mini-course of 10 videos. An email-based course.
+人们知道星期二是“我发邮件”的日子。
 
-The sky is the limit when it comes to what the lead magnet should be.
+### 引导磁铁
 
-And there is no reason you should only have one lead magnet. You can have multiple.
+我们谈论了拥有电子通讯录的重要性。同样重要的是让人们注册它。
 
-In the ideal case, every blog post should have a specific lead magnet, but this is of course not always possible. I tend to create a lead magnet for each category of posts I'm writing.
+你如何让人们决定向你提供宝贵的电子邮件地址？
 
-### How I discovered lead magnets
+我知道的最好的方法是给她们一些回报。不要期望人们在没有明显的获益情况下注册。
 
-At the beginning of my blogging adventure (a little more than 2 years ago), my blog had zero traffic and Google ignored me.
+你需要给人们提供一个注册你的电子通讯录的激励。
 
-I shared my posts on Reddit, and some people came and saw the site. I shared my posts on Twitter, where I had like 500 followers, many of them probably bots or inactive followers that I had collected in the 10 years I had been on Twitter.
+这就是我们之前简要讨论过的引导磁铁。
 
-If I had 10 or 15 visits a day, that was a good day.
+它可以是一个一页的 PDF 小抄、一份报告、一个包含 10 个视频的短小迷你课程、或者一个基于电子邮件的课程。
 
-After a while, I decided to create a newsletter, with a simple promise: every 2 weeks I'd send you links to all the posts I published. Like everyone does. That was good to get an email subscriber every other day, but that was it.
+当涉及引导磁铁时，天空才是极限。
 
-After some months, traffic grew a little and I was getting 4-5 subscribers every day. This was better.
+你当然不应该只有一个引导磁铁。你可以有多个。
 
-Then I realized that people will not subscribe to a newsletter if they don't gain an advantage from that. This is a key point. I rarely subscribe to a newsletter just to “stay in touch”. Sometimes I do, and when this happens to you, that’s a quality email subscriber. Someone that really wants to hear from you.
+在理想情况下，每篇博文都应该有一个特定的引导磁铁，但这当然并不总是可能的。我倾向于为我写的每个帖子类别创建一个引导磁铁。
 
-But to get to this level requires people to have received a lot of value from you already, in one way or another. Maybe they already subscribe to your YouTube videos or your podcast. It’s hard for a complete stranger to subscribe.
+### 我如何发现了引导磁铁
 
-So I changed my strategy from asking to "Join my newsletter" to offering people something of value. This lets the conversation begin with me offering a valuable asset.
+在我开始写网志的冒险旅程初期（大约两年前），我的网志没有任何流量，谷歌也不理睬我。
 
-In my case, the valuable asset, in the beginning, was a little PDF with a collection of the best blog posts I had written on a subject, nicely organized as an ebook.
+我在 Reddit 上分享了我的帖子，一些人来看了我的网站。我在 Twitter 上分享了我的帖子，我的粉丝大约有 500 人，其中许多可能是机器人或我在 Twitter 上已经积累了 10 年的不活跃粉丝。
 
-Most people coming to my blog didn’t read more than one page, so I thought that creating a nice little ebook was a good way to show them what I had to offer. This increased signups a lot.
+如果我一天有 10 到 15 次访问，那就是不错的一天。
 
-## Ups and downs
+过了一段时间，我决定创建一个通讯，我的承诺很简单：每两周我会把我发布的所有文章的链接发送给你。像每个人一样。这很好，每隔一天就能得到一个电子邮件订阅者，但仅此而已。
 
-Having a blog is not all fun and games. There are many things that might give you a hard time on your journey.
+几个月后，流量有所增长，我每天会获得 4-5 个订阅者。这已经更好了。
 
-Realizing this is a first step in the right direction.
+然后我意识到，如果人们从中得不到好处，她们不会订阅通讯。这是一个关键点。我很少仅仅为了“保持联系”而订阅通讯。有时我会这样做，当这种情况发生在你身上时，那就是高质量的电子邮件订阅者。真正想听你说话的人。
 
-### Writer's block
+但要达到这个水平，人们需要从你那里以某种方式获得了很多价值。也许她们已经订阅了你的 YouTube 视频或网播。一个完全陌生的人很难订阅。
 
-Writer's block is a thing. I have no general advice on this, and whole books were written on the subject so there's a lot of better advice out there than what I could come up with.
+所以，我改变了策略，从“加入我的通讯”变成了向人们提供有价值的东西。这让我们的对话从我提供有价值的资产开始。
 
-My solution when it comes to not knowing what to write about is to pick a subject I want to learn, and start learning it in public. Right as I write this, I am learning a completely new thing (Arduino and electronics sensors) while re-discovering the old electronics topics I studied back in school.
+在我的情况下，最初的有价值资产是一个小的 PDF 文档，其中收集了我在一个主题上写的最佳博文，精心组织成一本电子书。
 
-I am shooting videos while I learn this thing, and writing blog posts on the topics that are better suited for blog posts (no, I'm not limiting myself to blogging, I also like doing videos).
+大多数来到我的网志的人都不会读超过一页，所以我认为创建一个漂亮的小电子书是展示我所提供的内容的好方法。这极大地增加了注册人数。
 
-If a topic is boring to me, I just don't write about it because if I'm bored writing, I will write a boring article. So I try to write about things I'm interested in and excited about.
+<h2 id="ups-and-downs">高潮和低谷</h2>
 
-### Imposter syndrome
+拥有一个网志并不是随便闹着玩的。在你的旅程中可能会遇到很多困难。
 
-Every person, sooner or later, is going to suffer from this thing which we label _imposter syndrome._ You might have this feeling now, but you don’t know that it has a name attached.
+认识到这一点是朝正确方向迈出的第一步。
 
-Let me describe some situations where you might find imposter syndrome in the wild.
+### 写作障碍
 
-You are a developer, have no Computer Science degree, and you feel people that have the CS degree know a lot more than you, and you should get one too in order to be called a developer.
+写作障碍是一种现象。我没有关于此的通用建议，有很多关于这个问题的书籍，所以有很多比我提供的更好的建议。
 
-You work on a project and you call it a little side project, not a real project, because – you know – it’s just a simple app.
+当我不知道写什么时，我的解决方案是选择我想要学习的主题，并公开学习。就在我写这篇文章的同时，我正在学习一个全新的东西（Arduino 和电子传感器），同时重新发现我在学校学过的旧电子主题。
 
-You constantly belittle yourself, and have low confidence in your abilities.
+我在学习这个东西的同时制作视频，并在适合的主题上写博文（不，我不限于网志，我也喜欢做视频）。
 
-You think other developers know a lot more than you do.
+如果一个主题对我来说很无聊，我就不写它，因为如果我在写作时感到无聊，那我写出来的文章也会很无聊。所以我尽量写我感兴趣并且充满热情的主题。
 
-You think someday someone will find out that you are not worth your job position, as you can’t solve the coding interview quiz #423 from a random book.
+### 冒名顶替综合症
 
-You think you don’t belong to the _coder’s club._
+每个人迟早都会遭受到所谓的“冒名顶替综合症”的困扰。你可能正在经历这种感觉，但你并不知道它有一个特定的名称。
 
-In the case of blogging, you’d like to start blogging but you fear other’s opinions and even think that you can’t add anything new to the table, so you don’t even start.
+让我描述一些你可能会在实际情况中发现冒名顶替综合症的情况。
 
-What's the solution to this problem?
+你是一名开发人员，没有计算机科学学位，你觉得那些有计算机科学学位的人比你知道得多，你也应该拿一个才能被称为开发人员。
 
-I don't know if it applies to you, but when I start to feel this way, I try to put myself in the learner's shoes. I am not teaching. I am learning in public. Most of the time.
+你在做一个项目，你称它为一个小的副业项目，不是一个真正的项目，因为——你知道——它只是一个简单的应用程序。
 
-If this is not enough, realize how far you have come from where you started. Look back. There was a day when you could not even figure out how to start the computer. What code even was. You didn’t know you could actually create programs and make the computer do what you want.
+你不断地贬低自己，对自己的能力缺乏信心。
 
-Look at you now. You are the best version of yourself and yet you can be perfectly sure that tomorrow you’ll be an even better version. You are improving. Just like your blog posts.
+你认为其他开发人员比你知道得多。
 
-### Working in public
+你认为有一天会有人发现你配不上你的工作位置，因为你无法解决来自一本随机书籍的第 423 题编程面试问题。
 
-Working in public can be nerve-wracking. Well, it _is_ for me. You don't really know who is watching your work, and what they really think of it.
+你认为自己不属于“程序员俱乐部”。
 
-You're one step away from an intolerant expert judging your work as not relevant.
+在网志的情况下，你想开始写网志，但你害怕别人的意见，甚至认为你不能为这个领域增添新东西，所以你甚至不开始。
 
-And maybe the creator of a library is looking at your tutorial on it, thinking you didn't get it right.
+解决这个问题的方法是什么呢？
 
-But looking at the opposite side of the spectrum, by learning in public you are forced to grow.
+我不知道这是否适用于你，但当我开始有这种感觉时，我尝试把自己放在学习者的位置。我不是在教别人，我是在公开学习。大多数时间都是这样。
 
-Step up the game.
+如果这还不够，意识到你已经从起点走了多远。回顾一下。有一天你甚至不知道如何启动电脑，甚至不知道什么是代码。你不知道你实际上可以创建程序，让计算机做你想要的事情。
 
-You need to put a lot of effort to make your work great in the eyes of a lot of people.
+看看你现在。你是最好的自己，但你可以完全肯定，明天你会变得更好。你在进步。就像你的博文一样。
 
-### Burnout
+### 公开工作
 
-It's easy to feel overwhelmed by all the things you are doing. Thinking about new content, writing the actual content, writing guest posts, trying to promote the content as much as you can – but without being spammy, and replying to comments and feedback.
+在公开场合工作可能会让人感到紧张。对我来说确实是这样。你真的不知道谁在观察你的工作，以及她们真正对它的看法。
 
-This is not unique to blogging, of course. I have seen this even more in the YouTube space. There, it's even worse to me. You are putting your face and voice in front of a lot of people, instead of just your words and pictures like in a blog post.
+你离一个不宽容的专家批评你的工作与主题不相关只有一步之遥。
 
-My best advice to avoid burnout is to choose a minimalistic approach and to pick a topic that deeply interests you.
+也许一个库的创建者正在查看你的教程，认为你写得不正确。
 
-If you write about things you are passionate about, you will never have a shortage of things to write about. Your list will be 3 miles long.
+但是看到光谱的另一侧，通过在公开场合学习，你被迫成长。
 
-Choosing a minimalistic approach means that you have to cut down anything that's not essential. I do not have comments on my blog. I need to care less about what people _think_, which has the drawback of creating less community, but also has the positive of causing me less stress.
+提高你的游戏水平。
 
-Also, I do not generally promote the content I write on social media or other outlets, except if it is a special article that I really want to be seen, and I do not usually write guest posts on other blogs.
+你需要付出很多努力，才能让很多人认为你的工作很棒。
 
-Such activities can be limited once the blog is up and running and you get a fair share of visits every day. So with the increase of views and stress given by many people looking at your work every day, you get the benefit of focus.
+### 倦怠
 
-### Lower your expectations
+被自己所做的所有事情淹没很容易。考虑新内容，写实际内容，写客座文章，尽可能推广内容——但又不想被视为垃圾邮件，并回复评论和反馈。
 
-If you keep your expectations low, you will never be deluded. Don't expect your blog to be an overnight success. It will not happen. Just like it does not happen with a YouTube channel or a podcast. It's hard. Except for some lucky ones, maybe.
+当然，这不仅仅是网志写作的问题。在 YouTube 领域中，我看到这种情况更加普遍。在那里，对我来说情况更糟。你要把自己的面孔和声音展现在众多人面前，而不仅仅是像博文中那样的文字和图片。
 
-This is why blogging about things you are passionate about is beneficial. If you write about things you always wanted to write about, and will even write if no one is reading, then you are on the right track.
+避免疲劳最好的建议是采取极简主义的方法，并选择一个你深刻感兴趣的主题。
 
-Then if success will ever come to you, you'll be more than ready for it.
+如果你写的是你热爱的事情，你就永远不会缺乏要写的东西。你的清单会有 3 英里长。
 
-### Trolls and negative feedback
+选择极简主义的方法意味着你必须删掉所有不必要的东西。我的网志上没有评论。我需要更少地关心人们的想法，这样做的缺点是创造出较少的社区，但也有积极的一面，就是会让我更少地感到压力。
 
-The Internet can be a wild place, and I am sure I don't have to explain this to you. When people write comments online, they can be mean. Sometimes. Most of the time they are not.
+此外，我通常不会在社交媒体或其它渠道上推广我写的内容，除非它是一篇我真正想让人们看到的特别文章，我也不会在其它网志上写客座文章。
 
-I do not have comments on my blog directly, but I do receive feedback via email and on Twitter. And on YouTube videos.
+一旦网志开始运行并且你每天获得了公平份额的访问量，这些活动就可以被限制。所以随着访问量的增加和很多人每天看你的作品所带来的压力，你可以获得更加集中注意力的好处。
 
-And the rare day I get one blog post featured on Reddit or Hacker News, two sites relevant for my content, I get very stressed about looking at comments.
+### 降低你的期望
 
-It must be me, and most of the times comments are wildly positive, which is great. But I heard somewhere that our brain is much more receptive to negative feedback, and I can certainly confirm that I remember bad feedback more than positive feedback. It can take 10 positive comments to make up for a single negative one.
+如果你降低期望值，你就不会感到失望。不要期望你的网志一夜之间就成功，这是不可能的。就像 YouTube 频道或网播一样，这很难。除非是一些幸运儿。
 
-I might be over-sensitive but removing comments altogether from my blog removed the handbrake. I do not have to worry if some content does not resonate with people.
+这就是为什么写自己热爱的事情对网志有益的原因。如果你写的是你一直想写的东西，即使没有人阅读，你也会坚持下去。
 
-I wrote it, it's like that, I did my best to make sure it's "correct" to my best judgment, and I am off to the next one.
+那么，如果成功真的到来，你就会更加准备好迎接它了。
 
-Your mileage might vary.
+### 恶意评论和负面反馈
 
-### Ignore vanity metrics
+互联网是一个很狂野的地方，我相信我不必向你解释这一点。当人们在线留下评论时，他们有时会变得很刻薄。有时候。但大多数情况下并非如此。
 
-I have the incredible experience of having enough visitors to be surprised every day of the number of people visiting the blog.
+我没有在我的网志上直接开放评论，但我通过电子邮件和 Twitter 收到反馈。还有 YouTube 视频上的反馈。
 
-I open Google Analytics at a random point in time during the day and I see the number of people. Then I get back to whatever I was doing. It's kind of addictive, but also useless.
+偶尔，我会在 Reddit 或 Hacker News 上有一篇博文被特别推荐，这两个网站与我的内容相关，这时我会非常紧张地看评论。
 
-Does that affect my day? No.
+可能是因为我的敏感性，大多数时候评论都非常积极，这很棒。但我在某个地方听说过，我们的大脑对负面反馈更加敏感，我可以肯定我记住负面反馈的时间比积极反馈长。需要 10 条积极的评论来抵消一条负面的评论。
 
-Does that change what I'm going to do next? No.
+我可能过于敏感了，但是从我的网志中完全移除评论就像是放开了手刹。我不必担心某些内容与人们不共鸣。
 
-Same for email subscribers. Does it really matter how many people are on the list? No.
+我写了这篇文章，它就是这样，我已经尽了最大努力，以确保它符合我的“正确判断”，然后我就去写下一篇了。
 
-What matters the most is that people resonate with your ideas and learn from your work.
+你的感受可能不同。
 
-Even if it is just a handful of people.
+### 忽略虚荣指标
 
-The rest is useless.
+我有令人难以置信的经历，每天都有足够的访客数量，这让我惊讶。
 
-### Blogging is lonely
+我随机打开谷歌分析，看看访问人数。然后我回到我正在做的事情。这有点上瘾，但也没什么用。
 
-Blogging is lonely, in the same way that writing a book is lonely. Also working in your secret laboratory is lonely. Being a YouTuber is lonely. Being a remote freelancer is lonely.
+这会影响我的一天吗？不会。
 
-There's not much of a solution for this.
+这会改变我接下来要做什么吗？不会。
 
-Other than accept it, and realize that some people might be more happy to be lonely. I am definitely an introvert and I thrive in a lonely environment, spending days in the silence.
+邮件订阅者也是如此。列表上有多少人真的很重要吗？不。
 
-That's probably why I like blogging.
+最重要的是人们与你的想法产生共鸣，并从你的工作中学到东西。
 
-### It takes time
+即使只有一小撮人。
 
-Let's say it out loud: it's going to take a lot of time. There is no way that your blog will be an overnight success. It will take many months and possibly years before you will see a rising tide of visitors to your blog. Maybe. If you did it alright.
+其它都没有用。
 
-This is a harsh truth, but it's one I think is necessary because I don't want you to believe that success is easy to achieve, and I want to set the right expectations. Time, persistence, showing up every day. This is what it takes, for any kind of success in any kind of activity.
+### 写网志是孤独的
 
-It's a long game, but one that will eventually give you a lot of satisfaction.
+写网志很孤独，就像写书一样孤独。还有在你的秘密实验室里工作很孤独。做 YouTuber 很孤独。成为远程自由职业者很孤独。
 
-## Making money with a blog
+对此没有太多解决办法。
 
-A blog can be a great launch point for various projects that can make you money.
+除了接受它，并意识到有些人可能更喜欢孤独。我肯定是内向的，喜欢在孤独的环境中茁壮成长，整天在寂静中度过。
 
-There’s absolutely no need for your blog to make money if you don’t want it to. But it’s good to know what your options are. In this last chapter, I’m going to explain at a high level the main options for “monetizing” a blog.
+这可能就是为什么我喜欢写网志的原因。
 
-### Get more clients for your business
+### 成功需要时间
 
-The first and easiest way, I'd say, is to offer your services.
+让我们大声说出来：这需要很长时间。你的网志不可能一夜成名。在你看到网志访问量不断攀升之前，可能需要数月甚至数年的时间。如果你做得足够好的话，可能会有所改观。
 
-This especially works with non-location specific services. For example, if you are a plumber it might be harder. Not impossible, especially in large cities, but other channels could work better.
+这是一个残酷的事实，但我认为这是必要的，因为我不想让你相信成功很容易实现，我想设置正确的期望。时间、坚持和每天出现的勤奋，这是任何活动取得成功所需要的。
 
-But if your business or activity is not linked to a specific location, a blog can be a great promotion for your business.
+这是一场漫长的游戏，但最终会带给你很多满足感。
 
-You can write articles that position you as an expert in the field you work in, and people will get in touch using the tools you give them: email, chat, or whatever you want.
+<h2 id="making-money-with-a-blog">通过网志赚钱</h2>
 
-I’ve seen this applied countless times, and it can lead to big opportunities in consulting. I have also experimented this first-hand when I started my career.
+一个网志可以成为启动多种赚钱项目的好起点。
 
-### Advertising, affiliates, and sponsors
+如果你不想让你的网志赚钱，完全没有必要。但是了解你的选择很重要。在这最后一章，我将概述一下主要的网志“变现”选项。
 
-When your blog starts to gain a consistent number of visitors, that’s when it can make you some money in what’s usually called “passive income”.
+### 为你的业务获得更多客户
 
-There are 3 ways, mostly: advertising, affiliates, and sponsors. This is the difference: advertising is banner or text ads that appear on your page. You typically add a code to the site and then forget about it.
+我觉得第一种也是最容易的方法就是提供你的服务。
 
-There is a broker, like Google Ads or Mediavine or BuySellAds that will take care of everything for you. They'll find companies that want to show their ads, and their ads will be displayed on your blog. You get paid by ad views and/or ad clicks. It’s the simplest method you can find, although it usually requires a high number of page views to work.
+这个方法特别适用于不需要特定地点的服务。比如说，如果你是个管道工人，可能会比较困难。但在大城市中，也不是完全不可能，只是其它渠道可能会更加有效。
 
-Affiliates work in a different way: you get paid when people purchase a product coming from a link put on your website.
+但如果你的业务或活动与特定地点无关，网志可以是你的业务宣传的好工具。
 
-A common affiliate system is Amazon affiliate links. I’m sure you’ve seen them everywhere, under YouTube videos, under Instagram posts, and so on.
+你可以写文章，在你的领域成为专家，并让人们使用你提供的工具（如电子邮件、聊天、或其它方式）联系你。
 
-When Amazon makes a sale, you get a percentage of that. Same works for other smaller affiliate programs.
+我看到这种方法应用了无数次，它可以带来咨询方面的大机会。在我刚开始职业生涯的时候，我也亲身尝试过这种方法。
 
-For affiliate links, you need to generate a specific link and depending on the frequency you have to do that, and the number of products or programs you promote, it will require more work on your part.
+### 广告、联盟和赞助商
 
-Sponsors work in a different way, and you typically need to get in touch with companies via email or phone. They will usually pay a flat fee for a month (or more) of sponsoring. You typically need to put a banner on the site or talk about their products in your posts.
+当你的网志开始获得稳定的访问量时，它通常会为你带来所谓的“被动收入”。
 
-### Selling your own products
+主要有三种方式：广告、联盟营销、和赞助商。这是区别：广告是在你的页面上出现的横幅或文本广告。通常，你需要在网站上添加代码，然后就可以忘记它了。
 
-The system I like the most is using the blog to promote your own products.
+代理商，例如 Google Ads、Mediavine 或 BuySellAds，会替你处理一切。它们会找到想要展示广告的公司，这些广告会显示在你的网志上。你将获得广告浏览量和/或广告点击次数的报酬。这是你可以找到的最简单的方法，尽管通常需要较高的页面浏览量才能起作用。
 
-It’s similar to promoting your services, but with products, it requires less work on your part and it can scale very easily.
+联盟营销的工作方式不同：当人们通过你网站上的链接购买产品时，你会获得报酬。
 
-Sure, you need a product beforehand. And you need a product that you know will be relevant and useful to people who read your posts.
+亚马逊联盟链接是一种常见的联盟系统。我相信你已经在各个地方看到过它们，例如 YouTube 视频下面、Instagram 帖子下面等等。
 
-But once you have it, you can promote it to your readers, without paying for ads, and without having to run an affiliate program yourself. Then, all your work – your blog and your products – are all aligned in the same direction: making useful things for the people you want to interact with.
+当亚马逊进行销售时，你就能获得一定比例的报酬。其它较小的联盟计划也是同样的方式。
 
-## Final words
+对于联盟链接，你需要生成特定的链接，根据你需要执行此操作的频率以及你宣传的产品或计划数量的不同，这可能需要更多的工作。
 
-I hope this book was useful to you, and I really hope it might be the inspiration you need to create your own blog.
+赞助商的工作方式不同，你通常需要通过电子邮件或电话与公司联系。它们通常会支付一个固定费用，用于赞助一个月或更长时间。你通常需要在网站上放置一个横幅或在你的文章中谈论它们的产品。
 
-[Download a PDF and ePub version of the **How to Start a Blog** book here](https://flaviocopes.com/page/book-blog/).
+### 销售自己的产品
+
+我最喜欢的系统是利用网志来推广自己的产品。
+
+它类似于推广自己的服务，但使用产品需要你的工作量更少，而且可以轻松扩展规模。
+
+当然，你需要事先拥有一个产品，而且是一个对你的读者有用的产品。
+
+一旦你拥有了产品，就可以向读者推广它，而不必支付广告费，并且不必自己运行联盟计划。然后，你的所有工作——你的网志和你的产品——都朝着同一个方向对齐：为你想要互动的人制作有用的东西。
+
+<h2 id="final-words">结束语</h2>
+
+我希望这本书对你有所帮助，也希望它能成为你创建自己网志的灵感源泉。
+
+[从这里下载《如何成为博客》英文电子书的 PDF 和 ePub 版本](https://flaviocopes.com/page/book-blog/).

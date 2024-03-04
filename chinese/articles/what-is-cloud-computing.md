@@ -1,11 +1,8 @@
----
-title: What is Cloud Computing? Introduction to the Cloud for Beginners
-author: Zubair Idris Aweda
-authorURL: https://www.freecodecamp.org/news/author/zubair-idris-aweda/
-originalURL: https://www.freecodecamp.org/news/what-is-cloud-computing/
-translator: ""
-reviewer: ""
----
+> -  原文地址：[What is Cloud Computing?Introduction to the Cloud for Beginners](https://www.freecodecamp.org/news/what-is-cloud-computing/)
+> -  原文作者: [Zubair Idris Aweda](https://www.freecodecamp.org/news/author/zubair-idris-aweda/)
+> -  译者: JunoWei
+> -  校对者: 
+
 
 January 3, 2024 / [#Cloud Computing][1]
 

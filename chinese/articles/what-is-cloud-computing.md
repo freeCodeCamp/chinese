@@ -24,17 +24,17 @@ In this article, I'll demystify the cloud for you, breaking down complex concept
 
 Here's what we'll cover in this article:
 
--   [The World Before Cloud Computing][3]
--   [What Is Cloud Computing?][4]
--   [Cloud Service Providers][5]
--   [Different Cloud Services][6]
--   [Challenges that Cloud Computing Helps Solve][7]
--   [How Can Cloud Computing Help You?][8]
+-   [云计算出现前的世界][#the-world-before-cloud-computing]
+-   [云计算是什么?][#what-is-cloud-computing]
+-   [云服务供应商][#cloud-service-providers]
+-   [云服务类型][#different-cloud-services]
+-   [云计算助力解决的难题][#challenges-that-cloud-computing-helps-solve]
+-   [云计算是如何帮助我们的?][#how-can-cloud-computing-help-you]
 -   [Cloud Deployment Models][9]
 
 So let's dive in and learn cloud computing basics so you can start your journey into this growing field.
 
-## The World Before Cloud Computing
+<h2 id="the-world-before-cloud-computing">云计算出现前的世界</h2> ## The World Before Cloud Computing
 
 To understand cloud computing, it is important to understand the problem cloud computing tries to solve. This will help you understand its history and appreciate the convenience it brings into the world of technology.
 

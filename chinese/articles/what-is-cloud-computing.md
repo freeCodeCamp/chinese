@@ -24,12 +24,12 @@ In this article, I'll demystify the cloud for you, breaking down complex concept
 
 Here's what we'll cover in this article:
 
--   [云计算出现前的世界][#the-world-before-cloud-computing]
--   [云计算是什么?][#what-is-cloud-computing]
--   [云服务供应商][#cloud-service-providers]
--   [云服务类型][#different-cloud-services]
--   [云计算助力解决的难题][#challenges-that-cloud-computing-helps-solve]
--   [云计算是如何帮助我们的?][#how-can-cloud-computing-help-you]
+-   [云计算出现前的世界](#the-world-before-cloud-computing)
+-   [云计算是什么?](#what-is-cloud-computing)
+-   [云服务供应商](#cloud-service-providers)
+-   [云服务类型](#different-cloud-services)
+-   [云计算助力解决的难题](#challenges-that-cloud-computing-helps-solve)
+-   [云计算是如何帮助我们的?](#how-can-cloud-computing-help-you)
 -   [Cloud Deployment Models][9]
 
 So let's dive in and learn cloud computing basics so you can start your journey into this growing field.

@@ -3,7 +3,7 @@ title: DOM Manipulation in JavaScript – A Comprehensive Guide for Beginners
 author: Joan Ayebola
 authorURL: https://www.freecodecamp.org/news/author/joan/
 originalURL: https://www.freecodecamp.org/news/dom-manipulation-in-javascript/
-translator: ""
+translator: "月落星河Tsukistar"
 reviewer: ""
 ---
 

@@ -9,7 +9,7 @@ reviewer: ""
 
 November 23, 2023 / [#JavaScript](/news/tag/javascript/)
 
-# DOM Manipulation in JavaScript – A Comprehensive Guide for Beginners
+# JavaScript中的DOM操作 — 一份面向初学者的全面指南
 
 ![Joan Ayebola](https://www.freecodecamp.org/news/content/images/size/w60/2023/09/Screenshot_20230924-145016.jpg)
 

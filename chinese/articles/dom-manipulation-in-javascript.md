@@ -9,7 +9,7 @@ reviewer: ""
 
 November 23, 2023 / [#JavaScript](/news/tag/javascript/)
 
-# JavaScript中的DOM操作 — 一份面向初学者的全面指南
+# JavaScript中的DOM操作 - 一份面向初学者的全面指南
 
 ![Joan Ayebola](https://www.freecodecamp.org/news/content/images/size/w60/2023/09/Screenshot_20230924-145016.jpg)
 
@@ -72,7 +72,6 @@ myButton.addEventListener('click', function() {
 ```
 
 在这个例子中，当ID为 `myButton` 的按钮被点击时，浏览器将弹出一个内容为 `Button Clicked!` 的提示框。事件监听器提供了一种根据用户交互执行自定义代码的方式。
-In this example, when the button with the ID `myButton` is clicked, an alert saying `Button Clicked!` will pop up. Event listeners provide a way to execute custom code based on user interactions.
 
 ## 如何修改样式
 
@@ -80,187 +79,187 @@ DOM 操作还包括修改元素的样式，使我们能够创建视觉上吸引�
 
 ### 如何动态地修改样式
 
-We can use the `style` property of an element to change its appearance. Let's take an example of changing the color of a paragraph when a button is clicked:
+我们可以使用元素的 `style` 属性来改变其外观。让我们以点击按钮时改变段落颜色的例子来说明：
 
 ```javascript
-// Accessing a paragraph element
+// 访问一个段落元素
 const myParagraph = document.getElementById('myParagraph');
 
-// Accessing a button element
+// 访问一个按钮元素
 const colorButton = document.getElementById('colorButton');
 
-// Adding a click event listener to the button
+// 为按钮添加一个点击事件
 colorButton.addEventListener('click', function() {
-    // Changing the color style of the paragraph
+    // 修改段落的颜色样式
     myParagraph.style.color = 'blue';
 });
 ```
 
-In this example, when the button with the ID `colorButton` is clicked, the text color of the paragraph with the ID `myParagraph` is changed to blue.
+在这个例子中，当ID为 `colorButton` 的按钮被点击时，ID为 `myParagraph` 的段落的文本颜色将被更改为蓝色。
 
-## How to Create and Modify Elements
+## 如何创建和修改元素
 
-In addition to modifying existing elements, JavaScript allows us to create new elements and add them to the DOM.
+除了修改现有元素之外，JavaScript 还允许我们创建新元素并将它们添加到 DOM 中。
 
-### How to create new elements
+### 如何创建新的元素
 
-The `createElement` method is used to create a new HTML element. Let's create a new paragraph element and append (add) it to the body of the document:
+使用 `createElement` 方法来创建一个新的 HTML 元素。让我们创建一个新的段落元素，并将其追加（添加）到文档的 body 中：
 
 ```javascript
-// Creating a new paragraph element
+// 新建一个段落元素
 const newParagraph = document.createElement('p');
 
-// Setting the text content of the new paragraph
+// 为新段落设置文本内容
 newParagraph.textContent = 'This is a new paragraph.';
 
-// Appending the new paragraph to the body of the document
+// 将新创建的段落追加到文档的 body 中
 document.body.appendChild(newParagraph);
 ```
 
-In this example, we create a new `p` (paragraph) element, set its text content, and then append it to the body of the document.
+在这个例子中，我们创建了一个新的 `p`（段落）元素，设置了它的文本内容，然后将其追加到文档的 body 中。
 
-### How to modify attributes
+### 如何修改属性
 
-We can also modify the attributes of existing elements. Let's consider changing the source of an image dynamically:
+我们还可以修改现有元素的属性。让我们思考如何动态更改图像的来源：
 
 ```javascript
-// Accessing an image element
+// 访问一个图像元素
 const myImage = document.getElementById('myImage');
 
-// Changing the source attribute of the image
+// 修改图像的来源属性
 myImage.src = 'new-image.jpg';
 ```
 
-Here, we access an image element with the ID `myImage` and change its `src` attribute to `new-image.jpg`, dynamically updating the displayed image.
+这个例子中, 我们访问了ID为 `myImage` 的图像元素，并将其 `src` 属性更改为 `new-image.jpg` ，动态更新显示的图像。
 
-### How to update form input values
+### 如何更新表单的输入值
 
-Let's consider a scenario where you want to update the value of a text input based on user interaction:
+让我们思考这样一个情景：你希望根据用户的交互来更新文本输入框的值：
 
 ```javascript
-// Accessing a text input element
+// 访问一个文本输入框元素
 const myInput = document.getElementById('myInput');
 
-// Adding an input event listener
+// 添加一个输入事件监听器
 myInput.addEventListener('input', function() {
-    // Updating a paragraph with the input value
+    // 使用输入值更新一个段落的内容
     document.getElementById('inputValue').textContent = myInput.value;
 });
 ```
 
-In this example, as the user types in the text input with the ID `myInput`, a paragraph with the ID `inputValue` is dynamically updated to reflect the input value.
+在这个例子中，当用户在ID为 `myInput` 的文本输入框中输入时，ID为 `inputValue` 的段落将根据输入值动态更新段落内容。
 
-### How to toggle visibility
+### 如何切换可见性
 
-You can toggle the visibility of an element by using the `display` style property. Let's create a button that toggles the visibility of a paragraph:
+你可以通过使用 `display` 样式属性来切换元素的可见性。让我们创建一个按钮用于切换段落的可见性：
 
 ```javascript
-// Accessing a button element
+// 访问一个按钮元素
 const toggleButton = document.getElementById('toggleButton');
 
-// Accessing a paragraph element
+// 访问一个段落元素
 const toggleParagraph = document.getElementById('toggleParagraph');
 
-// Adding a click event listener
+// 添加一个点击事件监听器
 toggleButton.addEventListener('click', function() {
-    // Toggling the visibility of the paragraph
+    // 切换段落的可见性
     toggleParagraph.style.display = toggleParagraph.style.display === 'none' ? 'block' : 'none';
 });
 ```
 
-Here, the paragraph with the ID `toggleParagraph` is initially visible. Clicking the button with the ID `toggleButton` toggles its visibility.
+在这里，ID为 `toggleParagraph` 的段落最初是可见的。单击ID为 `toggleButton` 的按钮会切换其可见性。
 
-## Common Pitfalls in DOM Manipulation
+## DOM 操作中的常见误区
 
-While DOM manipulation is a powerful tool for creating dynamic web pages, beginners often encounter common pitfalls that can lead to unexpected behavior or errors. Let's explore some of these pitfalls and provide tips on how to avoid them.
+虽然 DOM 操作是创建动态网页的强大工具，但初学者经常会遇到一些常见陷阱，这些陷阱可能导致意外行为或错误。让我们探讨一些这些陷阱，并提供如何避免它们的建议。
 
-### Manipulating the DOM before it's ready
+### 在DOM渲染完成前操作它们
 
-We may sometimes attempt to manipulate the DOM before it has fully loaded. This can lead to JavaScript trying to access elements that haven't been rendered yet. To avoid this, it's crucial to wait for the DOM to be fully loaded before executing any JavaScript code:
+有时我们可能会在DOM尚未完全加载之前尝试操作它，这可能导致JavaScript尝试访问尚未呈现的元素。为了避免这种情况，最重要的是在执行任何JavaScript代码之前需要等待DOM完全加载：
 
 ```javascript
 document.addEventListener('DOMContentLoaded', function() {
-    // DOM manipulation code goes here
+    // DOM操作代码放在这里
 });
 ```
 
-By wrapping your DOM manipulation code inside the `DOMContentLoaded` event listener, you ensure that it runs only when the DOM is ready.
+通过将执行DOM操作的代码包裹在 `DOMContentLoaded` 事件监听器内部，你就可以确保它仅在DOM准备就绪时运行。
 
-### Not checking if an element exists
+### 没有确认一个元素是否存在
 
-When attempting to access an element using methods like `getElementById`, we might assume the element exists and proceed with manipulation. However, if the element is not present on the page, it can lead to errors.
+在尝试使用诸如 `getElementById` 这样的方法访问元素时，我们可能会假设元素存在并继续进行操作。但是，如果元素不存在于页面上，则可能会导致错误。
 
-Always check if an element exists before manipulating it:
+在操作元素之前，始终应该检查该元素是否存在：
 
 ```javascript
 const myElement = document.getElementById('myElement');
 
 if (myElement) {
-    // Manipulate the element here
+    // 在这里对这个元素进行操作
 } else {
     console.error('Element not found!');
 }
 ```
 
-This simple check prevents errors when working with elements that may or may not be present.
+这个简单的检查可以防止在处理不确定是否存在的元素时出现的错误。
 
-### Forgetting to prevent default actions
+### 忘记阻止默认行为
 
-When handling events, forgetting to prevent the default action can result in unexpected page behavior. For instance, if a form is submitted without preventing the default action, the page might reload, causing loss of data:
+在处理事件时，忘记阻止默认行为可能会导致意外的页面行为。例如，如果在没有阻止默认行为的情况下提交表单，页面可能会重新加载，导致数据丢失：
 
 ```javascript
 const myForm = document.getElementById('myForm');
 
 myForm.addEventListener('submit', function(event) {
-    // Prevent the default form submission
+    // 阻止默认的表单提交
     event.preventDefault();
 
-    // Your form handling code goes here
+    // 你的表单处理代码放在这里
 });
 ```
 
-By calling `event.preventDefault()`, you stop the default behavior associated with the event, giving you full control over how the event is handled.
+通过调用`event.preventDefault()`，你可以阻止与表单提交事件关联的默认行为，从而完全控制事件的处理方式。
 
-### Performing inefficient DOM queries
+### 执行效率低下的 DOM 查询
 
-Performing inefficient DOM queries, especially within loops, can degrade performance. Each query involves traversing the DOM, and unnecessary queries can slow down your webpage.
+在循环中执行效率低下的 DOM 查询会降低性能。每次查询都涉及遍历 DOM，不必要的查询会减慢网页的加载速度。
 
-Instead of repeatedly querying the DOM, cache references to elements:
+与其重复查询 DOM，不如缓存元素的引用：
 
 ```javascript
-// Inefficient query within a loop
+// 在循环中执行的效率低下的查询
 for (let i = 0; i < 10; i++) {
     const myElement = document.getElementById('myElement');
-    // Manipulate myElement
+    // 操作 `myElement`
 }
 
-// Efficient query outside the loop
+// 循环之外的高效的查询
 const myElement = document.getElementById('myElement');
 for (let i = 0; i < 10; i++) {
-    // Manipulate myElement
+    // 操作 `myElement`
 }
 ```
 
-By querying the DOM once and reusing the reference, you optimize your code.
+通过一次查询 DOM 并重复使用引用，可以优化你的代码。
 
-### Not handling cross-browser compatibility
+### 无法处理跨浏览器的兼容性
 
-Different browsers may interpret JavaScript and DOM manipulation slightly differently. Failing to account for cross-browser compatibility can lead to inconsistent behavior.
+不同的浏览器可能会略有不同地解释 JavaScript 和 DOM 操作。如果没有考虑跨浏览器兼容性，可能会导致代码的行为不一致。
 
-Use feature detection and consider using libraries like jQuery or modern frameworks to handle cross-browser inconsistencies:
+使用特性检测，并考虑使用像 jQuery 或现代框架这样的库来处理跨浏览器的不一致性：
 
 ```javascript
-// Feature detection for addEventListener
+// 使用特性检测检查浏览器对 `addEventListener` 方法的支持：
 if (document.addEventListener) {
-    // Use addEventListener
+    // 使用 addEventListener
 } else {
-    // Fall back to alternative method
+    // 回退到另一种受支持的方法
 }
 ```
 
-By checking for features before using them, you ensure your code works across various browsers.
+通过在使用一些功能特性之前检查它们，您可以确保您的代码在各种浏览器上正常工作。
 
-## How to Use Frameworks for DOM Manipulation
+## 如何在框架中使用DOM操作
 
 虽然 JavaScript 允许直接操作 DOM，但现代 Web 开发通常涉及使用诸如 React 或 Vue.js 等框架。这些框架提供了一种更加结构化的方式来构建和管理用户界面。
 

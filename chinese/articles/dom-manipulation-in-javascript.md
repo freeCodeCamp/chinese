@@ -17,67 +17,68 @@ November 23, 2023 / [#JavaScript](/news/tag/javascript/)
 
   ![DOM Manipulation in JavaScript – A Comprehensive Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2023/11/Beige-Aesthetic-Neutral-Thesis-Defense-Presentation-1.png)
 
-JavaScript, the language of the web, empowers developers to create dynamic and interactive web pages. One of the key features that enables this interactivity is Document Object Model (DOM) manipulation.
+作为一种Web开发语言，JavaScript赋予了开发者创建动态和交互式网页的能力，其中一个实现这种交互性的JavaScript关键特性是文档对象模型（DOM）操作。
 
-DOM manipulation allows developers to interact with and modify the structure, style, and content of web pages. In this article, we'll explore the fundamentals of DOM manipulation in JavaScript, breaking down complex concepts into easy-to-understand snippets.
+DOM 操作允许开发者修改网页的结构、样式和内容。在本文中，我们将探讨 JavaScript 中 DOM 操作的基础知识，将复杂的概念分解成易于理解的代码片段。
 
-## What is the DOM?
+## 什么是DOM?
 
-The Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects, where each object corresponds to a part of the document, such as elements, attributes, and text. JavaScript can manipulate this tree structure, allowing developers to dynamically alter the content and appearance of a webpage.
+文档对象模型（DOM）是一种用于 web 文档的编程接口。它以对象树的形式表示文档的结构，其中每个对象对应于文档的一部分，例如元素、属性和文本。JavaScript 可以操作这个树状结构，允许开发者动态地改变网页的内容和外观。
 
-### How to access DOM elements
+### 如何访问 DOM 元素
 
-To manipulate the DOM, we need to access its elements. This is commonly done using the `document` object, which represents the entire HTML document. Let's look at a simple example:
+为了操作 DOM，我们需要访问它的元素，这一步通常使用代表整个 HTML 文档的 document 对象来实现。让我们看一个简单的例子：
 
 ```javascript
-// Accessing an element by its ID
+// 使用一个元素的ID访问这个元素
 const headerElement = document.getElementById('header');
 
-// Accessing elements by class name
+// 使用类名访问元素
 const paragraphs = document.getElementsByClassName('paragraph');
 
-// Accessing elements by tag name
+// 使用标签名访问元素
 const images = document.getElementsByTagName('img');
 ```
 
-In the code snippet above, we use `getElementById`, `getElementsByClassName`, and `getElementsByTagName` to retrieve specific elements. The returned values can then be stored in variables for further manipulation.
+在上面的代码片段中，我们使用 `getElementById` , `getElementsByClassName` , 和 `getElementsByTagName` 三个函数来检索特定的元素。这三个函数的返回值可以存储在变量中，以供开发者进一步操作。
 
-### How to modify element content
+### 如何修改元素内容
 
-Once we have access to an element, we can modify its content using the `innerHTML` property:
+一旦我们已经访问了一个元素，我们就可以使用`innerHTML`属性来修改它的内容：
 
 ```javascript
-// Modifying the content of an element
+// 修改一个元素的内容
 headerElement.innerHTML = 'New Header Text';
 ```
 
-In the example above, we changed the content of the `headerElement` to `New Header Text`. This is a simple yet powerful way to update the text within an element.
+在上面的例子中，我们将 `headerElement` 的内容更改为 `New Header Text` 。这是一种简单而行之有效的方法，可以更新元素中的文本内容。
 
-## Events and Event Handling
+## 事件和事件处理
 
-Events are actions or occurrences that happen in the browser, such as a user clicking a button or resizing the window. JavaScript allows us to handle these events and execute code in response. Event handling is a crucial aspect of creating interactive web pages.
+事件是在浏览器中发生的操作或事务，例如用户点击按钮或调整窗口大小。JavaScript 允许我们处理这些事件并执行相应的代码作为对事件的响应。事件处理是创建交互式网页的关键方面。
 
-### How to add event listeners
+### 如何添加事件监听器
 
-To respond to events, we can use event listeners. These are functions that "listen" for a specific event on a particular element. Let's consider a button click event as an example:
+为了响应事件，我们可以使用事件监听器。这些是用于“监听”特定元素上的特定事件的函数，让我们以一个按钮点击事件为例：
 
 ```javascript
-// Accessing a button element
+// 访问一个按钮元素
 const myButton = document.getElementById('myButton');
 
-// Adding a click event listener
+// 添加点击事件监听器
 myButton.addEventListener('click', function() {
     alert('Button Clicked!');
 });
 ```
 
+在这个例子中，当ID为 `myButton` 的按钮被点击时，浏览器将弹出一个内容为 `Button Clicked!` 的提示框。事件监听器提供了一种根据用户交互执行自定义代码的方式。
 In this example, when the button with the ID `myButton` is clicked, an alert saying `Button Clicked!` will pop up. Event listeners provide a way to execute custom code based on user interactions.
 
-## How to Manipulate Styles
+## 如何修改样式
 
-DOM manipulation also extends to modifying the styles of elements, allowing us to create visually appealing and dynamic web pages.
+DOM 操作还包括修改元素的样式，使我们能够创建视觉上吸引人的、动态的网页。
 
-### How to change styles dynamically
+### 如何动态地修改样式
 
 We can use the `style` property of an element to change its appearance. Let's take an example of changing the color of a paragraph when a button is clicked:
 
@@ -261,12 +262,12 @@ By checking for features before using them, you ensure your code works across va
 
 ## How to Use Frameworks for DOM Manipulation
 
-While JavaScript allows for direct DOM manipulation, modern web development often involves using frameworks like React or Vue.js. These frameworks provide a more structured way to build and manage user interfaces.
+虽然 JavaScript 允许直接操作 DOM，但现代 Web 开发通常涉及使用诸如 React 或 Vue.js 等框架。这些框架提供了一种更加结构化的方式来构建和管理用户界面。
 
-### React Example
+### React举例
 
 ```javascript
-// React component rendering a button and handling its click event
+// React组件渲染一个按钮并处理其点击事件
 class MyButton extends React.Component {
     handleClick() {
         alert('React Button Clicked!');
@@ -279,16 +280,16 @@ class MyButton extends React.Component {
     }
 }
 
-// Rendering the React component to the DOM
+// 将 React 组件渲染到 DOM 中
 ReactDOM.render(<MyButton />, document.getElementById('reactRoot'));
 ```
 
-In this React example, a component is created to handle a button click event, demonstrating a more declarative approach to UI development.
+这个 React 示例创建了一个组件来处理按钮点击事件，它演示了一种更加声明式的 UI 开发方法。
 
-### Vue.js Example
+### Vue.js举例
 
 ```javascript
-// Vue.js instance with a data property and a method
+// 具有一个数据属性和一个方法的Vue.js实例
 new Vue({
     el: '#vueRoot',
     data: {
@@ -302,13 +303,13 @@ new Vue({
 });
 ```
 
-Here, a Vue.js instance is created to manage data and methods, showcasing the reactivity and component-based structure of Vue.js.
+这个例子创建了一个Vue.js实例来管理数据和方法，展示了Vue.js的响应性和基于组件的结构。
 
-## Conclusion
+## 总结
 
-In this comprehensive guide, we've delved into the world of DOM manipulation in JavaScript. From accessing elements to handling events, and from modifying styles to creating new elements, we've covered the essential concepts in a straightforward manner.
+在这个全面的指南中，我们深入探讨了 JavaScript 中的 DOM 操作。从访问元素到处理事件，从修改样式到创建新元素，我们以简单直接的方式涵盖了DOM操作的基本概念。
 
-Remember, DOM manipulation is at the core of creating dynamic and interactive web pages. By mastering these fundamental techniques, you'll be well-equipped to build engaging and user-friendly web applications. As you continue your journey with JavaScript, practice and experimentation will deepen your understanding of these concepts, paving the way for your success as a web developer.
+请记住，DOM 操作是创建动态和交互式网页的核心。通过掌握这些基本技术，你将能够构建引人入胜且用户友好的 Web 应用程序。随着你继续进行你的JavaScript学习之旅，练习与实践将加深你对这些概念的理解，为你成为一名成功的 Web 开发者铺平道路。
 
 ---
 
@@ -316,10 +317,10 @@ Remember, DOM manipulation is at the core of creating dynamic and interactive we
 
 [Joan Ayebola](/news/author/joan/)
 
-frontend developer || technical writer
+前端开发者 || 技术类文章作家
 
 ---
 
-If you read this far, thank the author to show them you care. Say Thanks
+如果你读到了这里，请对这篇文章的作者说一声“谢谢”来表达你对他们的关心和感谢。
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started](https://www.freecodecamp.org/learn/)
+免费学习编程。freeCodeCamp 的开源课程已经帮助超过 40,000 人获得了开发人员的工作。[开始学习](https://www.freecodecamp.org/learn/)

@@ -3,7 +3,7 @@ title: Regular Expressions (RegEx) in JavaScript – A Handbook for Beginners
 author: Samyak Jain
 authorURL: https://www.freecodecamp.org/news/author/samyak/
 originalURL: https://www.freecodecamp.org/news/regex-in-javascript/
-translator: ""
+translator: "月落星河Tsukistar"
 reviewer: ""
 ---
 

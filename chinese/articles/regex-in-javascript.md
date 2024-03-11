@@ -9,6 +9,7 @@ reviewer: ""
 
 February 27, 2024 / [#Regex][1]
 
+<!-- 部分专有名词的中文翻译参考自https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp 与 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions -->
 <!-- more -->
 
 # JavaScript 中的正则表达式（RegEx）- 初学者手册
@@ -17,7 +18,7 @@ February 27, 2024 / [#Regex][1]
 
 [Samyak Jain][2]
 
-  ![Regular Expressions (RegEx) in JavaScript – A Handbook for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2024/02/Regular-Expressions-in-JavaScript-Cover-2.png)
+  ![JavaScript 中的正则表达式（RegEx）- 初学者手册](https://www.freecodecamp.org/news/content/images/size/w2000/2024/02/Regular-Expressions-in-JavaScript-Cover-2.png)
 
 正则表达式，也称为 regex，是用于模式匹配和文本处理的强大工具。无论是验证用户输入、从字符串中提取数据，还是进行高级的文本处理任务，理解正则表达式对开发人员来说都是必不可少的。
 
@@ -30,10 +31,10 @@ February 27, 2024 / [#Regex][1]
 ## 目录:
 
 1.  [什么是正则表达式][3]?  
-    – [如何编写正则表达式模式][4]
+    – [如何编写正则表达式模式][4] 
 2.  [如何在JavaScript中使用正则表达式][5]  
-    – RegEx Methods in JavaScript  
-    – [Advanced Searching with Flags][6]
+    – JavaScript中的RegEx模式 
+    – [Advanced Searching with Flags][6] 
 3.  [Anchors in Regex][7]  
     – [Multiline Mode(m) of Anchors][8]  
     – [Word Boundaries (`\b`)][9]
@@ -58,20 +59,20 @@ February 27, 2024 / [#Regex][1]
     – [Negative Lookahead (?!)][28]  
     – [Lookbehind (?<=)][29]  
     – [Negative Lookbehind (?<!)][30]
-9.  [Practical Examples and Use Cases of Regex][31]  
-    – [Password Strength Checking][32]  
-    – [Email Validation][33]  
-    – [Phone Number Formatting][34]
-10.  [RegEx Tips and Best Practices][35]
-11.  [Conclusion][36]
+9.  [Regex的实际例子和用例][31]  
+    – [密码强度检查][32]  
+    – [电子邮件地址校验][33]  
+    – [电话号码格式化函数][34]
+10.  [使用正则表达式的技巧和最佳实践方式][35]
+11.  [总结][36]
 
-## What Are Regex?
+## 什么是Regex?
 
-A regular expression, often abbreviated as "regex," is a sequence of characters that define a search pattern. This pattern is used to find matches within strings, helping you identify specific text or patterns of characters, providing a powerful way to search, replace, and manipulate text.
+正则表达式是一种定义搜索模式的字符序列，通常缩写为“regex”。这种模式提供了一种强大的方式来搜索、替换和操作文本，它被用于在字符串中查找匹配项，帮助你识别特定的文本或字符模型。
 
-In JavaScript, you can create regular expressions using either a literal notation or the `RegExp` constructor:
+在JavaScript中，你可以使用字面量或`RegExp`构造函数创建正则表达式：
 
--   **Using a Regular Expression Literal**: This involves enclosing the pattern between slashes ("/").
+-   **使用正则表达式字面量**: 模式由斜杠("/")包围。
 
 ```javascript
 const re = /pattern/;
@@ -80,7 +81,7 @@ const re = /pattern/;
 const re = /ab+c/;
 ```
 
--   **Using the Constructor Function: `RegExp`** constructor. This allows runtime compilation of the regular expression and is useful when the pattern may change.
+-   **使用构造函数: `RegExp`**构造函数。 这种方式允许对正则表达式进行运行时编译，并且在模式可能更改时非常有用。
 
 ```javascript
 const re = new RegExp("pattern");
@@ -89,16 +90,16 @@ const re = new RegExp("pattern");
 const re = new RegExp("ab+c");
 ```
 
-Both methods produce the same result – it's a matter of preference which one you choose.
+两种方法会产生相同的结果——选择哪一种取决于你的偏好。
 
-### How to Write Regular Expression Patterns
+### 如何编写一个正则表达式的模式
 
-A regular expression pattern can consist of simple characters or a combination of simple and special characters.
+一个正则表达式模式是由简单的字符或者是简单和特殊字符的组合所构成的。
 
-1.  **Simple Pattern**: They match exact character sequences. For example, the pattern `/abc/` matches the sequence "abc" in a string.
-2.  **Special Characters**: They enhance pattern matching with capabilities like repetition or matching specific types of characters, allowing for more flexible and powerful pattern matching. For example, `*` matches zero or more occurrences of the preceding item. `/ab*c/` matches "ac", "abc", "abbc", and so on.
+1.  **简单模式**: 它们匹配精确的字符序列。例如，模式 `/abc/` 匹配字符串中的序列"abc"。
+2.  **特殊字符**: 它们通过重复或匹配特定类型的字符等功能增强了模式匹配，从而实现了更灵活、更强大的模式匹配。例如, `*` 匹配前一项出现0次或多次。 `/ab*c/` 匹配 "ac", "abc", "abbc", 等等诸如这类形式的字符串。
 
-## How to Use Regular Expressions in JavaScript
+## 如何在JavaScript中使用正则表达式
 
 You can use regular expressions with various methods available for both the `RegExp` and `String` objects in JavaScript. Some methods like `test()`, `exec()`, and others have this syntax:
 
@@ -714,7 +715,7 @@ Output:
 
 Here, `resource` and `id` are the names assigned to the capturing groups. We can access them using `match.groups`.
 
-**Another Example**: Let's say we have a path like "posts/2022/02/18" and we want to capture the resource (like "posts"), year (like "2022"), month (like "02"), and day (like "18") using named capturing groups.
+**另一个例子**: Let's say we have a path like "posts/2022/02/18" and we want to capture the resource (like "posts"), year (like "2022"), month (like "02"), and day (like "18") using named capturing groups.
 
 The regex pattern for this would be:
 
@@ -794,7 +795,7 @@ A | B // This means you can match either pattern A or pattern B.
 
 Now, let's explore some practical applications of regex alternation:
 
-**Matching Time String in the hh:mm Format**: Suppose we want to match time strings in the format hh:mm, where hh represents hours and mm represents minutes. A basic regular expression to match this format would be `/\d{2}:\d{2}/`.
+**匹配格式为hh:mm的时间字符串**: Suppose we want to match time strings in the format hh:mm, where hh represents hours and mm represents minutes. A basic regular expression to match this format would be `/\d{2}:\d{2}/`.
 
 However, this basic pattern matches invalid times like "99:99". To ensure we match valid times (hours ranging from 00 to 23 and minutes ranging from 00 to 59), we need to refine our regex using alternation.
 
@@ -827,7 +828,7 @@ const matches = timeString.match(pattern);
 console.log(matches);
 ```
 
-**Expected Output**:
+**期望输出**:
 
 ```
 ['07:23', '21:17']
@@ -854,7 +855,7 @@ console.log(dist.match(regex)); // Output: ["5"]
 
 **Multiple Lookaheads**: It's possible to have multiple lookaheads in a regular expression using the syntax `X(?=Y)(?=Z)`. This allows us to impose multiple conditions for matching.
 
-**Example:** Let's say we want to match strings that contain both "foo" and "bar", but in any order:
+**例如:** Let's say we want to match strings that contain both "foo" and "bar", but in any order:
 
 ```javascript
 const regex = /(?=.*foo)(?=.*bar)/;
@@ -869,7 +870,7 @@ console.log(regex.test("bar"));    // false
 
 To negate a lookahead, use a negative lookahead with the syntax `(?!Y)`, where the regex engine matches X only if it is not followed by Y.
 
-**Example**: Suppose we want to match numbers but not if they are followed by "miles":
+**例如**： Suppose we want to match numbers but not if they are followed by "miles":
 
 ```javascript
 const text = "He ran 5 miles, but not 10 kilometers.";
@@ -885,7 +886,7 @@ console.log(text.match(regex)); // Output: ["10"]
 
 Lookbehinds provide a way to match patterns based on what precedes them, essentially matching an element if there is another specific element before it.
 
-**Example**: Suppose we have a string containing prices, and we want to match numbers preceded by the currency symbol "$" but not preceded by "€". We can use a lookbehind in a regex pattern
+**例如**： Suppose we have a string containing prices, and we want to match numbers preceded by the currency symbol "$" but not preceded by "€". We can use a lookbehind in a regex pattern
 
 ```javascript
 const priceString = "The price is $100, but €200.";
@@ -895,9 +896,9 @@ const regex = /(?<=\$)\d+/g;
 console.log(priceString.match(regex)); // Output: ["100"]
 ```
 
-**Explaination**: `(?<=\$)` matches an element if there is a literal string "$" before it. The backslash `\` is used to escape the special character "$", treating it as a literal character.
+**说明**： `(?<=\$)` matches an element if there is a literal string "$" before it. The backslash `\` is used to escape the special character "$", treating it as a literal character.
 
-### Negative Lookbehind:
+### 零宽负向后行断言（Negative lookbehind）:
 
 Negative lookbehinds allow you to match a pattern only if it is not preceded by a specific pattern. This is useful for excluding certain patterns from matches based on what precedes them.
 
@@ -911,15 +912,15 @@ const regex = /(?<!\$)\b\d+\b/g;
 console.log(priceString.match(regex)); // Output: ["100"]
 ```
 
-**Explanation:** `(?<!\$)` is the negative lookbehind syntax, which matches the following pattern only if it is not preceded by the literal string "$".
+**说明**： `(?<!\$)` is the negative lookbehind syntax, which matches the following pattern only if it is not preceded by the literal string "$".
 
-## Practical Examples and Use Cases of Regex
+## Regex的实际例子和用例
 
-Now, Let's explore some practical examples of using regular expressions in JavaScript applications to solve common problems and perform text manipulation tasks.
+现在，让我们探索一些在JavaScript应用程序中使用正则表达式来解决常见问题和执行文本操作任务的实际示例。
 
-### Password Strength Checking:
+### 密码强度检验函数:
 
-You can use regular expressions to enforce password strength requirements, such as minimum length and the presence of special characters.
+你可以使用正则表达式来强制执行密码强度要求，例如最小长度和特殊字符的存在。
 
 ```javascript
 function checkPasswordStrength(password) {
@@ -941,7 +942,7 @@ Here's what this pattern does:
 -   `(?=.*[!@#$%^&*])`: Requires at least one special character.
 -   `.{8,}`: Requires a minimum length of 8 characters.
 
-### Email Validation Function:
+### 电子邮箱地址校验函数:
 
 Email validation is crucial for ensuring data integrity and security in web applications. With regex methods, we can easily implement robust email validation mechanisms.
 
@@ -965,11 +966,11 @@ Here's what this pattern does:
 -   `[^\s@]+`: Matches one or more characters that are not whitespace or '@'.
 -   `$`: Asserts the end of the string.
 
-### Phone Number Formatting Function:
+### 电话号码格式化函数:
 
-Phone number formatting enhances user experience and readability in applications that involve phone number input and display.  
+在涉及电话号码输入和显示的应用程序中，电话号码格式化增强了用户体验和可读性。
 
-By defining a regex pattern that matches phone number components, we can easily format phone numbers into a desired pattern using the `replace()` method.
+通过定义一个匹配电话号码组件的regex模式，我们可以使用 `replace()` 方法轻松地将电话号码格式化为所需的模式。
 
 ```javascript
 function formatPhoneNumber(phoneNumber) {
@@ -981,43 +982,43 @@ const formattedNumber = formatPhoneNumber("9876543210");
 console.log(formattedNumber); // (987) 654-3210
 ```
 
-This function takes a phone number string as input and returns it formatted in the standard `(XXX) XXX-XXXX` format.
+这个函数接受一个电话号码字符串作为输入，并以标准的 `(XXX) XXX-XXXX` 格式返回。
 
-In the `replace()` method, `$1`, `$2`, and `$3` represent the captured groups in the RegEx pattern, corresponding to the three sets of digits in the phone number.
+在 `replace()` 方法中, `$1`, `$2`, 和 `$3` 表示以RegEx模式捕获的组，对应于电话号码中的三组数字。
 
-## Tips and Best Practices for Using Regular Expressions
+## 使用正则表达式的技巧和最佳实践方式
 
-#### 1\. Understand Regular Expression Syntax:
+#### 1\. 理解正则表达式语法:
 
-Understand the syntax and metacharacters of regular expressions for effective usage.
+了解正则表达式的语法和元字符，以便有效使用正则表达式。
 
-#### 2\. Test Regular Expressions:
+#### 2\. 测试正则表达式:
 
-Regular expressions can sometimes behave unexpectedly due to complex patterns or special characters. Always test your regular expressions with different input strings to ensure they behave as expected in various scenarios.
+由于复杂的模式或特殊字符，正则表达式有时会表现出意外的行为。经常使用不同的输入字符串测试你的正则表达式，以确保它们在不同的场景中表现得像预期的那样。
 
-#### 3\. Optimize Performance:
+#### 3\. 优化性能:
 
-Consider optimizing your regular expressions for performance by simplifying patterns or using more efficient alternatives where possible.
+考虑通过简化模式或尽可能使用更有效的替代方案来优化正则表达式的性能。
 
-#### 4\. Use Built-in Methods:
+#### 4\. 使用内置方法:
 
-JavaScript provides built-in methods like `String.prototype.match()`, `String.prototype.replace()`, and `String.prototype.split()` for common string manipulation tasks. Evaluate whether these methods can accomplish your task without the need for regular expressions.
+JavaScript提供了例如 `String.prototype.match()`, `String.prototype.replace()`, 和 `String.prototype.split()`等用于常见的字符串操作任务的内置方法。评估这些方法是否可以在不需要正则表达式的情况下完成任务。
 
-#### 5\. Comment Your Regular Expressions:
+#### 5\. 为你的正则表达式添加注释:
 
-Add comments within your regex using `(?#comment)` syntax to explain explain parts of complex patterns. Example:
+使用 `(?#comment)` 语法为你的正则表达式添加注释来解释部分复杂的模式。 例如:
 
 ```javascript
 const regex = /(\d{3})-(\d{3})-(\d{4})\s(?# Match a phone number in the format XXX-XXX-XXXX)/;
 ```
 
-#### 6\. Break Down Complex Patterns:
+#### 6\. 分解复杂模式:
 
-If your regular expression becomes too complex to understand or maintain, consider breaking it down into smaller, more manageable parts. Use variables to store individual components of the pattern and combine them as needed.
+如果你的正则表达式太过复杂而难以理解或维护，请考虑将其分解为更小、更易于管理的部分。使用变量来存储正则表达式模式的各个组件，并根据需要组合它们。
 
-#### 7\. Use Online Resources and Keep on Practicing:
+#### 7\. 利用在线资源并坚持练习:
 
-There are several online resources and tools available for testing and learning regular expressions. Websites like [Regex101][37] and [RegExr][38] provide interactive platforms to test and debug regular expressions. Also leverage online tutorials and documentation to learn regex concepts.
+有许多在线资源和工具可以用来测试和学习正则表达式。 Websites like [Regex101][37] and [RegExr][38] provide interactive platforms to test and debug regular expressions. Also leverage online tutorials and documentation to learn regex concepts.
 
 The MDN Web Docs have a helpful guide to [Regular Expressions here][39]. And here's a quick start guide to regular expressions in JavaScript: [RegExp Tutorial][40].
 
@@ -1033,7 +1034,7 @@ The MDN Web Docs have a helpful guide to [Regular Expressions here][39]. And her
 
 [Samyak Jain][41]
 
-An insatiable learner with a web developer's toolkit. 我不断钻研新技术，着迷于不断发展的科学和人工智能世界。
+带上web开发者的工具箱，我是一名学无止境的求知者。我不断钻研新技术，着迷于不断发展的科学和人工智能世界。
 
 ---
 

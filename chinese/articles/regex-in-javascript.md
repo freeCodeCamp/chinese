@@ -66,7 +66,7 @@ February 27, 2024 / [#Regex][1]
 10.  [使用正则表达式的技巧和最佳实践方式][35]
 11.  [总结][36]
 
-<h2 id="what-are-regex">什么是Regex?</h2>
+<h2 id="what-are-regex">什么是正则表达式?</h2>
 
 正则表达式是一种定义搜索模式的字符序列，通常缩写为“regex”。这种模式提供了一种强大的方式来搜索、替换和操作文本，它被用于在字符串中查找匹配项，帮助你识别特定的文本或字符模型。
 
@@ -274,7 +274,7 @@ console.log(result2); // Output: ["😊"]
 
 Without the `u` flag, the regex fails to match the emoji correctly because they are represented as surrogate pairs in UTF-16 encoding. However, with the `u` flag, it correctly matches the emoji `'😊'`.
 
-## Anchors in Regex
+<h2 id="anchors-in-regex">Regex中的锚点</h2>
 
 Anchors are special characters in regex that do not represent actual characters but instead indicate positions within a string. There are two main anchors: `^` and `$`.
 
@@ -282,14 +282,14 @@ Anchors are special characters in regex that do not represent actual characters 
 
 ```javascript
 let str = 'Mountain';
-console.log(/^S/.test(str)); // Output: false
+console.log(/^S/.test(str)); // 输出为：false
 ```
 
 **The `$` Anchor**: The `$` anchor matches the end of the text. It checks if a string ends with a specific character or pattern.
 
 ```javascript
 let str = 'Ocean';
-console.log(/n$/.test(str)); // Output: true
+console.log(/n$/.test(str)); // 输出为：true
 ```
 
 You may often use `^` and `$` together to check if a string fully matches a pattern.
@@ -465,7 +465,7 @@ To understand why the initial attempt failed, let's delve into how the regular e
 
 This behavior of greedily matching as many characters as possible is the default mode of quantifiers in regular expressions and doesn't always yield the desired results. You can see this in the example where it results in a single match instead of multiple separate matches for quoted strings.
 
-### Non Greedy Quantifiers (Lazy Mode):
+<h3 id="non-greedy-quantifiers">Non Greedy Quantifiers (Lazy Mode)</h3>:
 
 To address the limitations of greedy mode, regular expressions also support a lazy mode for quantifiers. In lazy mode, quantified characters are repeated the minimal number of times necessary to satisfy the pattern.
 
@@ -1053,7 +1053,7 @@ The MDN Web Docs have a helpful guide to [Regular Expressions here][39]. And her
 [9]: #word-boundaries-b-
 [10]: #quantifiers-in-regex
 [11]: #greedy-quantifiers-
-[12]: #Non Greedy Quantifiers (Lazy Mode)
+[12]: #non-greedy-quantifiers
 [13]: #sets-and-ranges-in-regex
 [14]: #sets-
 [15]: #ranges-

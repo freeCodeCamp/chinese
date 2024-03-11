@@ -20,36 +20,36 @@
 
 ## 响应式网页设计是什么? (RWD)
 
-Responsive web design is an approach that focuses on a website user’s environment. The user's environment will depend on which device they have connected to the internet.
+响应式 Web 设计是一种专注于一个网站用户环境的方法，而用户环境则取决于他们连接互联网的设备。
 
-There are many device characteristics that provide opportunities for user-centric focus. Some of these include:
+有很多设备特性为以用户为中心的焦点提供机会。其中一些包括：
 
--   network connection
--   screen size
--   type of interaction (touch screens, track pads)
--   graphic resolution.
+-   网络连接
+-   屏幕尺寸
+-   交互类型（触屏、触控板）
+-   图像分辨率
 
-Before responsive web design was popular, many companies managed an entirely separate website that received traffic forwarded based on the user-agent.
+在响应式 Web 设计流行前，很多公司管理着一个完全独立的网站，用于接收基于用户代理标识的流量导向。
 
-But in responsive web design the server always sends the same HTML code to all devices, and CSS is used to alter the rendering of the page on the device.
+但在响应式 Web 设计中，服务器总是给所有设备发送相同的 HTML 代码，而 CSS 则用于改变页面在设备上的渲染。
 
-Regardless of the two strategies above, the first step in creating a website for phone or tablet is to ensure the browser knows the intention. This is where the viewport meta tag comes into play.
+无论以上两条策略如何， 为手机或平板电脑建站的第一步是确保浏览器知道意图。这就是视口元数据标签发挥作用的地方。
 
-## The Viewport Meta Tag to Identify a Mobile Website
+## 识别一个移动端网站的视口元数据标签
 
-The meta viewport tag instructs the browser how to adjust the page to the width of each device.
+视口元数据标签指示浏览器如何调整页面以适应每种设备的宽度。
 
-When the meta viewport element is absent, mobile browsers will display web pages with default desktop settings. This results in a seemingly zoomed out, unresponsive experience.
+当视口元数据标签缺省，移动端浏览器将以默认桌面端设置来显示网页。 这导致了看似缩小的结果、非响应式的体验。
 
-Below is a standard implementation:
+以下是一种标准实现：
 
 ```html
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 ```
 
-Viewport meta tag example
+视口元数据标签示例
 
-Now that the browser knows what's going, we can utilize popular techniques to make our website responsive. 🙌
+现在浏览器知道发生了什么，我们可用利用流行的技术来让我们的网站具备响应式能力。🙌
 
 ## CSS Media Queries for Different Screen Sizes and Orientations
 
@@ -140,7 +140,7 @@ Responsive Web Design RWD Responsive menu Overflow scroll example This is a lot 
     overflow-y: scroll;
     white-space: nowrap;
   }
-
+</style>
 ```
 
 Example horizontal scroll menu

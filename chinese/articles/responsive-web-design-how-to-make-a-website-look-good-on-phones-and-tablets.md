@@ -1,6 +1,6 @@
 > -   原文地址：[Responsive Web Design – How to Make a Website Look Good on Phones and Tablets 响应式网页设计入门](https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/)
 > -   作者：Adam Henson
-> -   译者：
+> -   译者：TechQuery
 > -   校对者：
 
 ![响应式网页设计 – 怎样让一个网站在手机、平板上好看](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/curve-design-futuristic-lines-911738.jpg)
@@ -51,13 +51,13 @@
 
 现在浏览器知道发生了什么，我们可用利用流行的技术来让我们的网站具备响应式能力。🙌
 
-## CSS Media Queries for Different Screen Sizes and Orientations
+## 针对不同屏幕尺寸和方向的 CSS 媒体查询
 
-If you're new to responsive web design, media queries are the first, most important CSS feature to learn. Media queries allow you to style elements based on viewport width. One popular CSS strategy is to write mobile styles first and build on top of them with more complex, desktop specific styles.
+如果你初试响应式 Web 设计，媒体查询是要学的首要 CSS 特性。媒体查询让你能根据视口宽度设置元素样式。一种流行的 CSS 策略是优先编写移动端样式，再在它们之上构建更复杂的桌面专用样式。
 
-Media queries are an important part of responsive web design commonly used for grid layouts, font sizes, margins, and padding that differ between screen size and orientation.
+媒体查询是响应式 Web 设计的一个重要部分，通常用于处理网格布局、字体字号、外内边距在屏幕尺寸和方向下的差异。
 
-Below is an example of a common use case of mobile first styling in which a column is 100% width for smaller devices, but in larger viewports is 50%.
+下面是一个移动优先的样式常见用例示例，其中更小设备的一列是 100% 宽，但在更大视口是 50%。
 
 ```css
 .column {
@@ -65,22 +65,22 @@ Below is an example of a common use case of mobile first styling in which a colu
 }
 ```
 
-Mobile first CSS example
+移动优先 CSS 示例
 
-The code above is a simple example, but what it's actually doing is pretty interesting.
+以上代码是一个简单示例，但它实际在做的是非常有趣的。
 
-1.  In considering mobile first, the "column" element is set to have a width of 100%;
-2.  By using a `min-width` media query, we define rules specifically for viewports with a minimum width of `600px` (viewports wider than `600px`). So, for viewports wider than `600px`, our column element will have a width that is 50% of its parent.
+1.  在考虑移动优先时，`column` 元素被设置一个 100% 的宽度；
+2.  通过使用 `min-width` 媒体查询，我们专门为最小宽度 `600px` 的视口定义了规则（视口宽于 `600px`）。所以，宽于 `600px` 的视口，我们的 `column` 元素将有父级 50% 的宽度。
 
-Although media queries are essential for responsive web design, many other new CSS features are also becoming widely adopted and supported in browsers. Flexbox is one of these new, important CSS feature in terms of responsive web design.
+尽管媒体查询对于响应式 Web 设计至关重要，很多其它新的 CSS 特性也在浏览器中被广泛采用与支持。Flexbox 便是其中之一，在响应式 Web 设计中是重要的 CSS 特性。
 
-## What is Flexbox?
+## 什么是 Flexbox？
 
-You might be wondering - "what does Flexbox do"? The better question is - "what can't Flexbox do"? What's the easiest way to vertically center with CSS? Flexbox. How do you create a responsive grid layout? Flexbox. How can we achieve global peace? Flexbox.
+你可能好奇 —— “Flexbox 是干啥的？” 更好的问题是 —— “Flexbox 不能干啥？” 最简单的 CSS 垂直居中方法是啥？Flexbox。你怎样创建一个响应式网格布局？Flexbox。我们怎么实现世界和平？Flexbox。
 
-The Flexbox Layout (Flexible Box) module provides a more efficient way to lay out, align and distribute space among items in a container, even when their size is dynamic (hence the word “flex”).
+Flexbox 布局（弹性盒子）模块提供了一种更有效的方式去布局、对齐和在容器项目间分配空间，即使它们的尺寸是动态的（因此就有了“flex”这个词）。
 
-In the below example we combine media queries as explained above to create a responsive grid.
+在以下示例中，我们结合如上所述的媒体查询来创建一个响应式网格。
 
 ```html
 <style>
@@ -100,29 +100,31 @@ In the below example we combine media queries as explained above to create a res
     main {
       flex-wrap: nowrap;
     }
-div {
-  flex-basis: 33%;
-}
+    div {
+      flex-basis: 33%;
+    }
+  }
+</style>
 ```
 
-CSS flexbox example
+CSS flexbox 示例
 
-We accomplish the following with this code:
+我们用这段代码完成了以下事情:
 
-1.  Establish a flexbox layout with `display: flex` in our `main` container element.
-2.  Style for mobile first. We set the `main` element to `flex-wrap: wrap` which allows child elements to wrap within our flexbox layout as illustrated below in figure 1. We set `flex-basis: 100%` on our `div` elements to ensure they encompass 100% of the parent width in the flexbox layout (figure 1).
-3.  Style for larger devices like tablets and desktop. We utilize a media query similar to our example in the previous section to set our container `main` element to `flex-wrap: nowrap`. This makes sure that child elements do not wrap and that they maintain a column within a row type of layout. By setting `div` to `flex-basis: 33%` within the media query - we establish columns that are 33% the width of the parent.
-4.  In this example the magic would appear in larger devices with our combined media query and flexbox rules. Because we defined `display: flex`, and because we didn't override the rule within the media query, we have a flexbox layout for mobile, tablet, and desktop. The media query `flex-basis: 33%` and inherited `display: flex` rules will give us a recognizable flexbox layout as seen in figure 2. In the past, to achieve this column type of layout, we would need to do some serious heavy lifting and write tangles of CSS.
+1.  在我们的 `main` 容器元素中用 `display: flex` 建立一个 flexbox 布局。
+2.  先设置移动端样式。我们给 `main` 元素设置 `flex-wrap: wrap`，它允许子元素在我们的 flexbox 布局中换行，如下图 1 所示。我们在我们的 `div` 元素设置 `flex-basis: 100%` 来确保它们在 flexbox 布局中占满父级宽度的 100%（图 1）。
+3.  再设置更大设备（如平板、桌面电脑）的样式。我们利用一条与我们上节示例类似的媒体查询来设置我们的容器 `main` 元素为 `flex-wrap: nowrap`。这样确保子元素不换行，并且它们在行类型的布局中维持一列。通过在媒体查询中设置 `div` 为 `flex-basis: 33%` —— 我们创建了一些为父级宽度 33% 的列。
+4.  在这个例子中，魔法将在我们结合媒体查询和 flexbox 规则的更大设备中出现。因为我们定义了 `display: flex`，并且没在媒体查询中覆盖这条规则，我们就拥有了一个适配手机、平板电脑和桌面电脑的 flexbox 布局。媒体查询 `flex-basis: 33%` 和继承的 `display: flex` 规则将给我们一个可识别的 flexbox 布局（如图 2 所示）。在过去，为了实现这种列类型布局，我们需要做一些严肃的繁重工作并写一团乱糟糟的 CSS。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/grid-mobile-1.png)
 
-Figure 1: Mobile flexbox grid example
+图 1：移动端 flexbox 网格示例
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/grid-desktop.png)
 
-Figure 2: Desktop flexbox grid example
+图 2：桌面端 flexbox 网格示例
 
-Flexbox provides a great way of achieving varying, fluid layouts. In some cases we might not have such freedom in vertical space. We may need to fit an element within a fixed height. In this situation, we have another technique at our disposal - horizontal scroll.
+Flexbox 提供了一种很棒的方法去实现多变而流动的布局。在一些实例中，我们在纵向空间中可能没有太多的自由。我们可能需要给一个元素设一个固定高度。在这种情形下，我们有另一种可用的技术 —— 水平滚动。
 
 ## Horizontal Scrolling with Overflow Scroll
 

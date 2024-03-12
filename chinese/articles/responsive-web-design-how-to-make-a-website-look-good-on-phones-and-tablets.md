@@ -1,4 +1,4 @@
-> -   原文地址：[Responsive Web Design – How to Make a Website Look Good on Phones and Tablets 响应式网页设计入门](https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/)
+> -   原文地址：[Responsive Web Design – How to Make a Website Look Good on Phones and Tablets 响应式网页设计入门][1]
 > -   作者：Adam Henson
 > -   译者：TechQuery
 > -   校对者：
@@ -9,7 +9,7 @@
 
 不久前，“响应式网页设计”一词尚不存在. 但是今天，我们大多数人不得不在某种程度上采用它。
 
-[据统计][1], 截至 2019 年, 61% 的 Google 搜索访问来自移动设备. 在 2020 年 9 月，[Google 将改变其搜索算法][2]，让其优先展示移动端友好的网站。
+[据统计][2], 截至 2019 年, 61% 的 Google 搜索访问来自移动设备. 在 2020 年 9 月，[Google 将改变其搜索算法][3]，让其优先展示移动端友好的网站。
 
 **在这篇文章中，我将介绍以下内容:**
 
@@ -63,6 +63,12 @@
 .column {
     width: 100%;
 }
+
+@media (min-width: 600px) {
+  .column {
+    width: 50%;
+  }
+}
 ```
 
 移动优先 CSS 示例
@@ -105,6 +111,11 @@ Flexbox 布局（弹性盒子）模块提供了一种更有效的方式去布局
     }
   }
 </style>
+<main>
+  <div></div>
+  <div></div>
+  <div></div>
+</main>
 ```
 
 CSS flexbox 示例
@@ -126,13 +137,11 @@ CSS flexbox 示例
 
 Flexbox 提供了一种很棒的方法去实现多变而流动的布局。在一些实例中，我们在纵向空间中可能没有太多的自由。我们可能需要给一个元素设一个固定高度。在这种情形下，我们有另一种可用的技术 —— 水平滚动。
 
-## Horizontal Scrolling with Overflow Scroll
+## 基于 Overflow Scroll 的水平滚动
 
-There may come a time that you have content overflowing the viewport without a graceful way of handling it. Behold... overflow scroll to the rescue. 🦸
+也许有一天，你有一些溢出视口的内容，并且没有优雅的处理方法。 瞧这边…… overflow scroll 能救你。🦸
 
-Common uses for this technique include scrollable menus and tables. Below is an example of a scrollable menu.
-
-Responsive Web Design RWD Responsive menu Overflow scroll example This is a lot of content! Yes we have another item
+这种技术的常见用处包括可滚动菜单和表格。以下是一个可滚动菜单的示例。
 
 ```html
 <style>
@@ -142,61 +151,93 @@ Responsive Web Design RWD Responsive menu Overflow scroll example This is a lot 
     overflow-y: scroll;
     white-space: nowrap;
   }
+
+  span {
+    background: #767775;
+    color: #ffffff;
+    display: inline-block;
+    margin: 0.25rem;
+    padding: 0.5rem;
+  }
 </style>
+<menu>
+  <span>响应式 Web 设计</span>
+  <span>RWD</span>
+  <span>响应式菜单</span>
+  <span>Overflow scroll 示例</span>
+  <span>这是一大堆内容！</span>
+  <span>是的</span>
+  <span>我们</span>
+  <span>有</span>
+  <span>另一个</span>
+  <span>项目</span>
+</menu>
 ```
 
-Example horizontal scroll menu
+示例：水平滚动菜单
 
-How'd you do that!? Let's take a deeper dive.
+你是怎么做到的？让我们深入探讨一下。
 
--   `overflow-y: scroll` is the key ingredient of this recipe. By specifying it child elements will overflow the horizontal axis with scrolling behavior.
--   Not so fast! Although you may think `` `overflow-y` `` would be enough, we have to also tell the browser not to wrap the child elements with `white-space: nowrap` 🤷
+-   `overflow-y: scroll` 是这个食谱的关键成分。通过指定它的子元素将在水平坐标上以滚动行为溢出。
+-   没那么快！尽管你可能认为 `overflow-y` 就够了，我们也需要告诉浏览器用 `white-space: nowrap` 不让子元素换行。🤷
 
-Now that we have a few RWD layout techniques up our sleeve, let's take a look at elements that pose challenges specific to their visual nature - images and video.
+现在我们有了几种 RWD 布局技术让我们可以做甩手掌柜，让我们看一眼对它们视觉本质提出挑战的元素 —— 图片和视频。
 
-## Responsive Images
+## 响应式图片
 
-By using modern image tag attributes we can accommodate a range of devices and resolutions. Below is an example of a responsive image.
+通过使用现代图片标签属性，我们能视频各类设备和分辨率。以下是一个响应式图片的示例。
 
 ```html
 <style>
-    img {
-        max-width: 100%;
-    }
+  img {
+    max-width: 100%;
+  }
 </style>
+
+<picture>
+  <source type="image/webp" srcset="https://my-image.com/my-image-100.webp 1x, https://my-image.com/my-image-200.webp 2x">
+  <source type="image/png" srcset="https://my-image.com/my-image-100.png 1x, https://my-image.com/my-image-200.png 2x">
+  <img alt="my image" src="https://my-image.com/my-image-200.png" loading="lazy" width="100" height="100">
+</picture>
 ```
 
-This is doing a lot of things. Let's break it down:
+这在做很多事情。让我们来分解一下：
 
-1.  By setting `max-width: 100%` the image will scale up or down based on its container width.
-2.  By using a combination of `picture`, `source`, and `img` tags we are actually only rendering one image and are only loading the best fitting image based on the user's device.
-3.  **WebP** is a modern image format that provides superior compression for images on the web. By utilizing `source` we can reference a WebP image to use for browsers that support it, and another `source` tag to reference a PNG version of the images that don't support WebP.
-4.  `srcset` is used to tell the browser which image to use based on the device's resolution.
-5.  We establish [native lazy loading][8] by utilizing the `loading="lazy"` attribute / value pair.
+1.  通过设置 `max-width: 100%`，图片会根据其容器宽度来放大或缩小。
+2.  通过结合使用 `picture`、`source` 和 `img` 标签，我们实际上只渲染一张图片，而且是只加载那张最适合用户设备的图片。
+3.  **WebP** 是一种现代图片格式，为 Web 图片提供优越的压缩性。利用 `source`，我们能为支持它的浏览器采用一张 WebP 图片，而另一个 `source` 标签则为不支持 WebP 的引用一张 PNG 版图片。
+4.  `srcset` 是用来告诉浏览器根据分辨率应该用哪张图片。
+5.  我们利用 `loading="lazy"` 属性值对来启用[原生懒加载][4]。
 
-## Responsive Video
+## 响应式视频
 
 Responsive video is another subject that has inspired a large number of articles and documentation.
 
 One key strategy to establish responsive images, video, iframes and other elements involves the use of aspect-ratio. The aspect ratio box is not a new technique and quite a useful tool to have up your sleeve as a web developer.
 
-[This article provides a solid demonstration][9] about how to achieve "fluid" width videos. Let's take a look at the code and break it down.
+[This article provides a solid demonstration][5] about how to achieve "fluid" width videos. Let's take a look at the code and break it down.
 
 ```html
 <style>
-    .videoWrapper {
-        position: relative;
-        padding-bottom: 56.25%; /* 16:9 */
-        height: 0;
-    }
-    .videoWrapper iframe {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-    }
+  .videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+  }
+
+  .videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>
+
+<div class="videoWrapper">
+  <!-- Copy & Pasted from YouTube -->
+  <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
+</div>
 ```
 
 In this example we have a YouTube video embed as an iframe and a `div` container with `videoWrapper` class. This code is doing a lot... let's dig in.
@@ -226,7 +267,7 @@ Figure 3: Chrome DevTools mobile and tablet device emulation
 
 Lighthouse is an open-source tool that provides a way of analyzing website performance specific to a device.
 
-[Foo uses Lighthouse behind the scenes to monitor website performance and provides feedback for analysis][11]. You can setup monitoring for both desktop and mobile devices to get continuous feedback about how responsive your website is.
+[Foo uses Lighthouse behind the scenes to monitor website performance and provides feedback for analysis][6]. You can setup monitoring for both desktop and mobile devices to get continuous feedback about how responsive your website is.
 
 For example, a Lighthouse report will callout images that are improperly loaded based on device.
 
@@ -240,14 +281,9 @@ Responsive web design will continue to rapidly evolve, but if we stay on top of 
 
 Not only will our website users benefit from a versatile design but also search engines will rank our web pages higher.
 
-[1]: https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/
-[2]: https://webmasters.googleblog.com/2020/03/announcing-mobile-first-indexing-for.html
-[3]: https://my-image.com/my-image-100.webp
-[4]: https://my-image.com/my-image-200.webp
-[5]: https://my-image.com/my-image-100.png
-[6]: https://my-image.com/my-image-200.png
-[7]: https://my-image.com/my-image-200.png
-[8]: https://web.dev/native-lazy-loading/
-[9]: https://css-tricks.com/fluid-width-video/
-[10]: http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1
-[11]: https://www.foo.software/lighthouse/
+[1]: https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/
+[2]: https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/
+[3]: https://webmasters.googleblog.com/2020/03/announcing-mobile-first-indexing-for.html
+[4]: https://web.dev/native-lazy-loading/
+[5]: https://css-tricks.com/fluid-width-video/
+[6]: https://www.foo.software/lighthouse/

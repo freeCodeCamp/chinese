@@ -211,11 +211,11 @@ Flexbox 提供了一种很棒的方法去实现多变而流动的布局。在一
 
 ## 响应式视频
 
-Responsive video is another subject that has inspired a large number of articles and documentation.
+响应式视频另一个激发一大批文章和文档的主题。
 
-One key strategy to establish responsive images, video, iframes and other elements involves the use of aspect-ratio. The aspect ratio box is not a new technique and quite a useful tool to have up your sleeve as a web developer.
+一个建立响应式图片、视频、iframe 和其它元素的关键策略涉及使用 aspect-ratio。Aspect ratio 盒子不是一个新技术，而且对 Web 开发者来说是非常有用的工具。
 
-[This article provides a solid demonstration][5] about how to achieve "fluid" width videos. Let's take a look at the code and break it down.
+关于如何实现“流动”宽度视频，[这篇文章提供了一个扎实的范例][5]。让我们看一下代码，再分解一下。
 
 ```html
 <style>
@@ -235,51 +235,51 @@ One key strategy to establish responsive images, video, iframes and other elemen
 </style>
 
 <div class="videoWrapper">
-  <!-- Copy & Pasted from YouTube -->
+  <!-- 复制、粘贴自 YouTube -->
   <iframe width="560" height="349" src="http://www.youtube.com/embed/n_dZNLr2cME?rel=0&hd=1" frameborder="0" allowfullscreen></iframe>
 </div>
 ```
 
-In this example we have a YouTube video embed as an iframe and a `div` container with `videoWrapper` class. This code is doing a lot... let's dig in.
+在这个例子中，我们有一个嵌入为 iframe 的 YouTube 视频和一个带有 `videoWrapper` 类的 `div` 容器。这段代码做了很多…… 让我们来深挖。
 
--   `position: relative` on the container element allows child elements to utilize absolution positioning relative to it.
--   `height: 0` combined with `padding-bottom: 56.25%` is the key ingredient here which establishes a dynamic behavior, enforcing a `16:9` aspect ratio.
--   `position: absolute`, `top: 0` and `left: 0` set on the iframe creates a behavior in which the element positions itself absolutely relative to its parent... sticking it to the top left.
--   And finally width and height of 100% makes the child, iframe element 100% of its parent. The parent, `.videoWrapper` takes full control of establishing this aspect ratio layout.
+-   在容器元素上的 `position: relative` 允许子元素利用相对于它的绝对定位。
+-   `height: 0` 结合 `padding-bottom: 56.25%` 是这里的要点，它建立了一种动态行为，强制 `16:9` 的纵横比。
+-   设置在 iframe 上的 `position: absolute`、`top: 0` 和 `left: 0` 创建了一种行为，让元素相对父元素绝对定位自己…… 将其固定在左上。
+-   最后，长宽的 100% 让子元素 iframe 占它父元素的 100%。父元素 `.videoWrapper` 完全掌控这个 aspect ratio 布局的建立。
 
-I know... it's a lot. There's more we can do to make video and images look the best on phones and tablets. I'd encourage research on those topics independently in addition to this.
+我知道…… 这很多。为了让视频和图片在手机和平板电脑上看起来舒服，我们还有更多可以做的。除此之外，我也鼓励对这些主题的独立研究。
 
-Okay, now that we're masters of responsive web design, how can we test what we've done? Fortunately, we have a number of tools to simulate and monitor user experience on a variety of devices.
+好了，现在我们是响应式 Web 设计的大师了，我们如何测试我们做了什么？幸运的是，我们有很多工具去模拟和监控各种设备上的用户体验。
 
-## Tools to Simulate and Monitor Responsive Websites
+## 模拟和监控响应式网站的工具
 
-There are a variety of useful tools to help us create websites with responsive web design. Below are a couple that I find especially useful.
+有各种有用的工具去帮助我们创建响应式 Web 设计的网站。以下是我发现的两个特别有用的。
 
-### Chrome DevTools Mobile Emulation
+### Chrome DevTools 移动端仿真
 
-Chrome's DevTools provides mobile emulation of a range of tablet and mobile devices. It also provides a "responsive" option which allows you to define a custom viewport size.
+Chrome 的 DevTools 提供各类平板电脑和手机的移动端仿真。它也提供一个“responsive”选项，让你定义一个自定义视口尺寸。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/Screen-Shot-2020-07-12-at-6.19.18-PM.png)
 
-Figure 3: Chrome DevTools mobile and tablet device emulation
+图 3：Chrome DevTools 手机和平板电脑设备仿真
 
-### Monitoring Mobile Website Performance with Foo
+### 用 Foo 监控移动端网站性能
 
-Lighthouse is an open-source tool that provides a way of analyzing website performance specific to a device.
+Lighthouse 是一个开源工具，提供一种分析网站设备特定性能的方法。
 
-[Foo uses Lighthouse behind the scenes to monitor website performance and provides feedback for analysis][6]. You can setup monitoring for both desktop and mobile devices to get continuous feedback about how responsive your website is.
+[Foo 在幕后使用 Lighthouse 来监控网站性能，并提供分析反馈][6]。你可为桌面端和移动端设备同时设置监控，来获得关于你的网站如何响应式的进一步反馈。
 
-For example, a Lighthouse report will callout images that are improperly loaded based on device.
+比如，一份 Lighthouse 报告 将根据设备标注出未正确加载的图片。
 
 ![](https://www.freecodecamp.org/news/content/images/2020/07/Screen-Shot-2020-07-12-at-6.31.09-PM.png)
 
-Figure 4: Lighthouse report with mobile device emulation
+图 4：带有移动设备仿真的 Lighthouse 报告
 
-## Conclusion
+## 结论
 
-Responsive web design will continue to rapidly evolve, but if we stay on top of current trends we can provide the best experience for our users. I hope these tools and techniques are helpful!
+响应式 Web 设计将继续快速发展，但如果我们保持在当前趋势之上，我们能为我们的用户提供最佳体验。我希望这些工具和技术对您有所帮助！
 
-Not only will our website users benefit from a versatile design but also search engines will rank our web pages higher.
+不但我们网站的用户将受益于一个多功能的设计，同时搜索引擎也将提升我们网页的排名。
 
 [1]: https://www.freecodecamp.org/news/responsive-web-design-how-to-make-a-website-look-good-on-phones-and-tablets/
 [2]: https://www.statista.com/statistics/275814/mobile-share-of-organic-search-engine-visits/

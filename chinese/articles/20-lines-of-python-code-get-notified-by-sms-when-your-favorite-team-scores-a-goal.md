@@ -30,7 +30,7 @@
 
 我们将把整个项目分成 3 个部分。首先，我们看看如何通过程序知晓一个特定主播上线了，然后看看如何接收一条主播上线的通知短信，最后我们需要让这段代码每隔 X 分钟执行一次，这样我们就不会错过喜欢的主播的动态啦。
 
-# 主播是否正在直播？
+# 主播是否正在直播
 
 我们可以这样了解主播是否正在直播：访问主播的 URL，看看是否有‘Live’徽章
 
@@ -58,7 +58,7 @@
 
 在屏幕底端，你可以看到你的 client-id，将它保存好，稍后会使用。
 
-## 主播正在直播么？
+## 主播正在直播么
 
 我们手上有了 API key，我们现在就可以查询 Twitc h 的 API 获取我们想要的信息，让我们开始用代码实现它吧。下面的代码给 Twitch 的 API 传递了正确的参数并且打印响应信息。
 
@@ -124,7 +124,7 @@ at_least_one_stream_active = any(streams_active)
 
 让我们现在看看如何获得短信通知。
 
-# 给我现在发一条短信！
+# 给我现在发一条短信
 
 那么为了给我们自己发送一条短信，我们将使用 Twilio API。访问 [there][8] 并且创建一个账号。当需要你手机验证的时候，填入你想要在此项目中接受短信的手机号码。这样你就可以使用 Twilio 为新用户提供的 15 美元的免费信用额度。一条短信 1 美分，足以支撑你的机器运行一年了。
 
@@ -175,7 +175,7 @@ if at_least_one_stream_active:
 
 如下是我们要做的伪代码：
 
-```
+```plain
 if favorite_twitcher_live and last_sent_sms is not live_notification:
     send_live_notification()
 if not favorite_twitcher_live and last_sent_sms is live_notification:
@@ -233,7 +233,7 @@ else:
 
 现在你需要将你的 Python 脚本放到自己的文件夹内，记得加一个 `requirements.txt` 文件在里面。文件内容的开头如下：
 
-```
+```plain
 requests
 twilio
 ```
@@ -246,7 +246,7 @@ twilio
 
 我们现在需要去初始化一个 git 仓库并且 push 代码到 Heroku：
 
-```
+```plain
 git init
 heroku git:remote -a <app name>
 git add .
@@ -298,7 +298,7 @@ Happy Coding。
 
 Pierre
 
-## 不要错过我下一篇文章：
+## 不要错过我下一篇文章
 
 你可以订阅我的 [here][16] 栏目。
 

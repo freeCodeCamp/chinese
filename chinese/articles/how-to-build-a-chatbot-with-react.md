@@ -19,7 +19,7 @@
 
 ## 初始设置
 
-```
+```plain
 // 运行以下代码
 npx create-react-app chatbot
 cd chatbot
@@ -86,7 +86,7 @@ class MessageParser {
 
 比如，我们创建一个简单的响应。首先，将 `MessageParser` 改为：
 
-```
+```plain
 class MessageParser {
   constructor(actionProvider) {
     this.actionProvider = actionProvider;
@@ -104,7 +104,7 @@ if (lowerCaseMessage.includes("hello")) {
 
 不过现在还行不通，因为我们还没有执行 `greet` 方法。稍后再处理这个。先处理 `ActionProvider.js` 文件如下：
 
-```
+```plain
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc) {
     this.createChatBotMessage = createChatBotMessage;
@@ -134,7 +134,7 @@ class ActionProvider {
 
 首先，回到 `config.js` 文件，稍作修改：
 
-```
+```plain
 import { createChatBotMessage } from 'react-chatbot-kit';
 const config = {
   botName: "LearningBot",
@@ -228,7 +228,7 @@ import LearningOptions from './components/LearningOptions/LearningOptions';
 
 回头想想，我们给 `LearningOptions` 组件设置了一些选项：
 
-```
+```plain
   const options = [
     { text: "Javascript", handler: () => {}, id: 1 },
     { text: "Data visualization", handler: () => {}, id: 2 },

@@ -11,7 +11,7 @@ Using CSS position to layout elements on your website can be hard to figure out.
 
 To help, this tutorial will guide you through all the CSS position properties. And you’ll be able to get your website layouts pixel perfect!
 
-### What does CSS position do?
+### What does CSS position do
 
 Using CSS, you can layout all your elements on your webpage visually. For example, you can position an element at the very top of your page, or 50px below the element before it.
 
@@ -33,11 +33,11 @@ Elements that are statically positioned will appear on the page in what we call 
 
 Here’s a quick demo to illustrate static position. We are using the following HTML markup:
 
-```
+```plain
 <div class="parent purple"></div>
 ```
 
-```
+```plain
 <div class="another green"></div>
 ```
 
@@ -75,7 +75,7 @@ Think about it this way: you are setting the element to be positioned relative t
 
 Let’s see what this looks like, and adjust our CSS like this:
 
-```
+```plain
 .first {
    position: static;
 }
@@ -144,7 +144,7 @@ Let’s change that child to be positioned absolutely in the parent!
 
 Our CSS will now look like this:
 
-```
+```plain
 .parent {
    position: relative;
 }
@@ -169,9 +169,9 @@ But since the child is absolute, it’s essentially on a different layer than th
 
 But it will stay within the boundaries of the parent element– as long as the parent has its position set. Which leads us to our next point.
 
-There is one other tricky aspect to child elements with absolute positioning…
+There is one other tricky aspect to child elements with absolute positioning……
 
-### An absolutely positioned element needs to position itself in relation to a positioned ancestor.
+### An absolutely positioned element needs to position itself in relation to a positioned ancestor
 
 When you take an element out of the normal flow by using `position: absolute`, it will look for an ancestor element that has its own position set. This is so the child knows what element it should position itself in relation to.
 
@@ -227,7 +227,7 @@ Let’s see what this looks like in the code. Here’s our HTML:
 
 And in our CSS, we’ve set the second element to be `position: fixed`:
 
-```
+```plain
 .first {
    position: relative;
 }
@@ -272,7 +272,7 @@ In this code example, we have our green sticky element between two purple elemen
 
 And the CSS for our sticky element:
 
-```
+```plain
 .first {
    position: relative;
 }
@@ -305,7 +305,7 @@ _Other resources:_
 -   [Mozilla Developer Network: CSS Position][10]
 -   [CSS Tricks: position][11]
 
-#### **Want more?**
+#### **Want more**
 
 I'm creating a course in responsive design! [Sign up here][12] to get emailed when it's published.
 

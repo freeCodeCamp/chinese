@@ -5,7 +5,7 @@
 
 ![How to write a killer Software Engineering résumé](https://cdn-media-1.freecodecamp.org/images/1*0yse40ucjmpdlaBqlY0fTg.png)
 
-#### 分析一下我的得到 Google、FaceBook、Amazon、Microsoft、Apple 等公司面试的简历。
+#### 分析一下我的得到 Google、FaceBook、Amazon、Microsoft、Apple 等公司面试的简历
 
 ![](https://cdn-media-1.freecodecamp.org/images/s67vXcDq77yLluSAmsSmalkgWV3UJPSDWi6w)
 
@@ -73,7 +73,7 @@ Google 工作描述
 2.  直接拒绝 ？（回到首页）
 3.  没有回复 ？（至少给我一些礼貌性的答复）
 
-#### 重复直到成功 对吗?
+#### 重复直到成功 对吗
 
 令人难过的是，这是需要多寻找工作/实习时候经历的典型过程。
 

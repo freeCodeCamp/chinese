@@ -1,0 +1,1273 @@
+> - 原文地址：[Build a 100 Days of Code Discord Bot with TypeScript, MongoDB, and Discord.js 13](https://www.freecodecamp.org/news/build-a-100-days-of-code-discord-bot-with-typescript-mongodb-and-discord-js-13/)
+> - 原文作者：[Naomi Carrigan](https://www.freecodecamp.org/news/author/nhcarrigan/)
+>
+> - 译者： [luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
+
+![Build a 100 Days of Code Discord Bot with TypeScript, MongoDB, and Discord.js 13](https://www.freecodecamp.org/news/content/images/size/w2000/2022/01/pexels-kindel-media-8566473.jpg)
+
+[100 天代码挑战](https://www.freecodecamp.org/news/the-crazy-history-of-the-100daysofcode-challenge-and-why-you-should-try-it-for-2018-6c89a76e298d/) 在希望提高技能水平的新代码员和开发人员中非常流行。它是如此受欢迎，以至于我们的[Discord 服务器](https://www.freecodecamp.org/news/freecodecamp-discord-chat-room-server/)有一个完整的频道专门讨论它。
+
+应大众要求，我们建立了一个 Discord 机器人，帮助人们跟踪他们在挑战中的进展。
+
+今天我将向你展示如何建立你自己的 "100 天代码 "机器人。
+
+目录
+
+- [创建一个 Discord 机器人应用程序](#create-a-discord-bot-application)
+- [设置你的项目](#set-up-your-project)
+- [创建 Discord 机器人](#create-the-discord-bot)
+- [Discord 中的网关事件](#gateway-events-in-discord)
+- [连接到数据库](#connect-to-the-database)
+- [环境变量验证](#environment-variable-validation)
+- ["交互 "事件](#the-interaction-event)
+- [准备命令](#prepare-for-commands)
+- [数据库模型](#database-model)
+- [编写机器人命令](#write-bot-commands)
+
+## 创建一个 Discord 机器人应用程序
+
+你的第一步是设置一个 Discord 机器人应用程序。前往[Discord Developer Portal](https://discord.dev)，如果需要，请登录，并从侧边栏选择 "Applications"。
+
+![image-76](https://www.freecodecamp.org/news/content/images/2022/01/image-76.png)
+
+开发者门户网站的屏幕截图。如果这是你的第一个机器人，你将不会在这里截图里的任何应用程序。
+
+从侧边栏选择"Bot"，然后点击 "Add Bot"按钮。这将为你的应用程序创建一个 Discord Bot 账户。
+
+![image-77](https://www.freecodecamp.org/news/content/images/2022/01/image-77.png)
+
+这是机器人设置页面的屏幕截图。如果你没有设置头像，你会看到一个基于你的机器人名称的默认头像。
+
+这是你将获得机器人令牌（token）的截图。不要让别人知道这个令牌（token）是非常重要的，因为这个令牌（token）允许你的代码连接到你的机器人。保持它的安全，不要与任何人分享。
+
+现在你需要将机器人添加到一个服务器上，与它进行交互。点击侧边栏上的 "OAuth2 "选项，然后选择 "URL Generator"。
+
+在 "Scopes"下，选择`bot`和`application.command`。`bot`范围允许你的机器人账户加入服务器，而`application.command`范围允许你更新斜线命令（slash commands 后面会有更多介绍）。
+
+当你选择`bot`时，会出现一个新的 "Bot Permissions "部分。选择以下权限:
+
+- Send Messages
+- Embed Links
+- Read Messages/View Channels
+
+![image-78](https://www.freecodecamp.org/news/content/images/2022/01/image-78.png)
+
+带有所需设置的 OAuth 屏幕截图。
+
+复制生成的 URL，并将其粘贴到你的浏览器。这将使你通过 Discord 的程序，将你的新机器人添加到一个服务器。
+
+注意，你必须在你想添加机器人的服务器中拥有管理服务器的权限。如果你没有这个权限，你可以创建一个服务器来测试你的机器人。
+
+现在你已经准备好写一些代码了!
+
+## 设置你的项目
+
+你首先需要为你的项目建立基础设施和工具。
+
+确保你有 Node.js **版本 16**和`npm`安装。注意，你将使用的软件包不支持早期版本的 Node。
+
+### 准备`package.json`文件
+
+为你的项目创建一个目录，或文件夹。打开你的终端，指向这个新文件夹。运行命令`npm init`来设置你的`package.json`文件。在本教程中，默认值就足够了，但可以根据你的需要自由编辑。
+
+你最终应该得到一个类似于以下的`package.json`:
+
+```json
+{
+  "name": "100doc-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
+```
+
+现在你需要做一些改变，为 TypeScript 的实现做好准备。
+
+首先，将`index.js`的`main`值替换为`./prod/index.js`--你将设置你的 TypeScript 编译到`prod`目录。
+
+然后删除`test`脚本，添加以下两个脚本。
+
+```json
+"build": "tsc",
+"start": "node -r dotenv/config ./prod/index.js"
+```
+
+`build`脚本将把你的 TypeScript 编译成 JavaScript，以便 Node 可以运行它，`start`脚本将运行`index.js`入口文件。
+
+在这里添加`-r dotenv/config`将动态导入并运行`dotenv`包中的`config`方法，它从`.env`文件中加载你的环境变量。
+
+你的下一步是安装依赖性。使用`npm install`，安装这些依赖项。
+
+- `discord.js` – 这是一个处理连接到网关和管理 Discord API 调用的库。
+- `@discordjs/builders` –  用于构建应用程序命令的 discord.js 包。
+- `@discordjs/rest` –  用于与 Discord REST API 互动的自定义 API 客户端。
+- `discord-api-types` – Discord REST API 的类型定义和处理程序。
+- `dotenv` – 一个将`.env'值加载到 Node 进程的包。
+- `mongoose` – MongoDB 连接的驱动，提供了结构化数据的工具。
+
+最后，用`npm install --save-dev`安装开发依赖项。开发依赖是指在开发环境中处理你的项目所需要的包，但在生产中运行代码库时不需要。
+
+- `typescript` – 这是 TypeScript 语言的包，它包括用 TypeScript 编写代码并将其编译为 JavaScript 所需的一切。
+- `@types/node` – TypeScript 依靠类型定义来理解你写的代码。这个包定义了 Node.js 运行环境的类型，例如`process.env`对象。
+
+安装了这些软件包后，你现在应该有一个类似于以下的`package.json`:
+
+```json
+{
+  "name": "100doc-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./prod/index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node -r dotenv/config ./prod/index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/builders": "^0.11.0",
+    "@discordjs/rest": "^0.2.0-canary.0",
+    "discord.js": "^13.6.0",
+    "dotenv": "^14.2.0",
+    "mongoose": "^6.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.10",
+    "typescript": "^4.5.4"
+  }
+}
+```
+
+### 准备好 TypeScript
+
+TypeScript 的编译器提供了许多不同的设置，以最大限度地提高你对生成的 JavaScript 的控制。
+
+你通常可以通过项目根部的`tsconfig.json`文件修改编译器设置。你可以用`npx tsc --init`为这个文件生成默认的模板，如果你在其他项目中设置了一个模板，可以使用现有的模板，甚至可以从头开始写一个。
+
+因为编译器的设置可以显著改变 TypeScript 的行为，所以在学习本教程时最好使用相同的设置。以下是你应该使用的设置:
+
+```json
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "module": "CommonJS",
+    "rootDir": "./src",
+    "outDir": "./prod",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true
+  }
+}
+```
+
+这里最重要的设置是`rootDir`和`outDir`的设置。这些设置告诉编译器，你所有的代码都在`src`目录下，而生成的 JavaScript 应该在`prod`目录下。
+
+如果你想测试你的设置，创建一个`src`目录并在里面放置一个`index.ts`文件。编写一些代码（如`console.log`语句）并在终端运行`npm run build`。你应该看到一个`prod`目录被创建，其中的`index.js`包含了你的编译代码。
+
+### 其他设置说明
+
+如果你使用`git`作为版本控制，你要避免将秘密和不必要的代码推送到你的仓库。在你的项目根目录下创建一个`.gitignore`文件，并添加以下内容:
+
+```txt
+/node_modules/
+/prod/
+.env
+```
+
+`.gitignore`文件告诉`git`不要追踪符合你输入的模式的文件/文件夹。忽略 `node_modules`文件夹可以防止你的仓库变得臃肿（node_modules 实在太大了，有黑洞之称）。
+
+推送已编译的 JavaScript 也是不必要的，因为你的项目通常在运行前就已经在生产中编译了。`.env`文件包含秘密值，如 API 密钥和令牌，所以它们不应该被提交到版本库。
+
+## 创建 Discord 机器人
+
+你的下一步是准备初始的机器人连接。如果你之前没有这样做，创建一个`src`目录和一个`index.ts`文件。
+
+从一个匿名的立即执行的函数表达式（IIFE）开始，以允许顶层的`await`使用:
+
+```ts
+(async () => {
+
+})();
+```
+
+在这个函数中，你将实例化你的 Discord 机器人。在文件的顶部，用`import { Client } from "discord.js";`导入`Client`类。`Client`类代表你的 Discord 机器人的会话。
+
+在你的函数中，构建一个新的`Client`实例，并将其分配给`BOT`变量，`const BOT = new Client();`。现在，`BOT'变量将代表你的机器人。
+
+为了将你的机器人连接到 Discord 网关并开始接收事件，你需要在你的机器人实例上使用`.login()`方法。`.login()`方法需要一个参数，即你之前创建的机器人应用程序的令牌（token）。
+
+`discord.js`中的许多方法是异步的，所以你需要在这里使用`await`。在你的 IIFE 中加入`await BOT.login(process.env.BOT_TOKEN);`这一行。
+
+你的`index.ts`文件现在应该看起来像这样:
+
+```ts
+import { Client } from "discord.js";
+
+(async () => {
+  const BOT = new Client();
+
+  await BOT.login(process.env.BOT_TOKEN);
+})();
+```
+
+如果你尝试运行`npm run build`，你会看到一个错误：`An argument for 'options' was not provided.`。
+
+在 discord.js 13 中，当你实例化你的机器人时，你需要指定 Gateway Intents。Gateway Intents 告诉 Discord 你的机器人应该接收哪些事件。
+
+在你的`src`文件夹中，创建一个`config`文件夹 - 然后在`config`中，创建一个`IntentOptions.ts`文件。
+
+在这个新文件中，添加 "export const IntentOptions = ["GUILDS"]"一行。这将告诉 Discord 你的机器人应该接收公会事件（Guild events）。
+
+然后，在你的`index.ts`文件中，给你的`new Client()`调用添加一个参数: `new Client({intents: IntentOptions})`. 你需要在文件的顶部用 `import { IntentOptions } from "./config/IntentOptions;`，导入它。
+
+看来你仍然有一个错误: ``Type 'string' is not assignable to type 'number | `${bigint}` | IntentsString | Readonly<BitField<IntentsString, number>> | RecursiveReadonlyArray<number | `${bigint}` | IntentsString | Readonly<...>>'.``
+
+TypeScript 将你的`IntentOptions`数组推断为一个字符串，但`Client`构造函数期望的是更具体的类型。
+
+回到你的`config/IntentOptions.ts`文件，添加另一个导入。`import { IntentsString } from "discord.js"`. 然后用新的类型定义更新你的变量： `export const IntentOptions: IntentsString[] = ["GUILDS"];`。
+
+现在`npm run build`应该成功了。如果你已经把你的新机器人（bot）添加到一个 Discord 服务器，运行`npm start`将显示你的机器人在该服务器中上线。然而，机器人还不会对任何事情做出反应，因为你还没有开始监听事件。
+
+## Discord 中的网关事件（Gateway Events）
+
+网关事件是在 Discord 上发生动作时产生的，通常以 JSON payloads（有效载荷）的形式发送到客户端（包括你的机器人）。你可以用`.on()`方法监听这些事件，允许你为你的机器人编写逻辑，以便在特定事件发生时执行。
+
+第一个要监听的事件是 "ready "事件。当你的机器人连接到网关并准备处理事件时，这个事件就会发生。在你的`.login()`调用上面，添加`BOT.on("ready", () => console.log("Connected to Discord!");`。
+
+为了使你的修改生效，再次使用`npm run build`来编译新的代码。现在，如果你尝试`npm run start`，你应该看到 "Connected to Discord!" 打印在你的终端。
+
+## 连接到数据库
+
+你将使用`mongoose`包来连接到 MongoDB 实例。如果你愿意，你可以在本地运行 MongoDB，或者你可以使用 MongoDB Atlas 免费层来实现基于云的解决方案。
+
+如果你没有 MongoDB Atlas 账户，freeCodeCamp 有一个 [关于设置一个账户的好教程](https://www.freecodecamp.org/news/get-started-with-mongodb-atlas/)。
+
+获得你的数据库的连接字符串，并将其添加到你的`.env`文件中，作为`MONGO_URI=""`，连接字符串要在引号之间。对于数据库的名称，使用`oneHundredDays`。
+
+创建一个名为 "database "的目录来存放包含数据库逻辑的文件。在这个目录中，创建一个名为`connectDatabase.ts`的文件。你将在这里编写启动数据库连接的逻辑。
+
+从一个导出的函数声明开始:
+
+```ts
+export const connectDatabase = async () => {
+
+}
+```
+
+注意，你需要在这里使用 `async` 关键字，因为数据库连接方法是异步的。
+
+`mongoose` 提供了一个 `connect` 方法用于连接数据库。在你的文件顶部用 `import { connect } from "mongoose";` 导入它。
+
+然后用 `await connect(process.env.MONGO_URI);` 在你的函数中使用该方法。在这之后添加一个 `console.log` 语句，这样你就可以确定你的机器人已经连接到了数据库。
+
+你的 `connectDatabase.ts` 文件现在看起来应该是这样的:
+
+```ts
+import { connect } from "mongoose";
+
+export const connectDatabase = async () => {
+    await connect(process.env.MONGO_URI);
+    console.log("Database Connected!")
+}
+```
+
+现在，在你的 `index.ts` 文件中，用 `import { connectDatabase } from "./database/connectDatabase"` 导入这个函数，并在你的 IIFE 中添加 `await connectDatabase()`，就在 `.login()` 方法之前。继续并再次运行 `npm run build`。
+
+![image-157](https://www.freecodecamp.org/news/content/images/2021/06/image-157.png)
+
+一个编译器错误，表明。类型为字符串或未定义的参数不能分配给类型为字符串的参数。
+哦，不--一个错误!
+
+## 环境变量验证
+
+环境变量的问题是，它们都可能是 `undefined`。如果你在环境变量名称中打错了字，或者把名称和其他名称混在一起，就会经常发生这种情况（我在写这个教程时犯了一个错误，在一些地方用`TOKEN`而不是`BOT_TOKEN`）。
+
+TypeScript 警告你，`connect` 方法需要一个字符串，而 `undefined` 值会破坏事情。你可以解决这个问题，但首先你要写一个函数来处理验证你的环境变量。
+
+在你的 `src` 目录下，创建一个 `utils` 目录，包含你的实用函数。在那里添加一个 `validateEnv.ts` 文件。
+
+在该文件中创建一个名为 `validateEnv` 的函数。这个函数将是同步的，不需要 `async` 关键字。在这个函数中，添加条件来检查你的两个环境变量。如果缺少任何一个，返回 `false`。否则，返回 `true`。
+
+你的代码可能看起来像这样:
+
+```ts
+export const validateEnv = () => {
+  if (!process.env.BOT_TOKEN) {
+    console.warn("Missing Discord bot token.");
+    return false;
+  }
+
+  if (!process.env.MONGO_URI) {
+    console.warn("Missing MongoDB connection.");
+    return false;
+  }
+  return true;
+};
+
+```
+
+回到你的 `index.ts` 文件，用 `import { validateEnv } from "./utils/validateEnv"` 导入这个验证函数。然后在你的 IIFE 的开头，使用一个 if 语句，如果函数返回 false，就提前返回。你的 `index.ts` 应该看起来像:
+
+```ts
+import { Client } from "discord.js";
+import { connectDatabase } from "./database/connectDatabase";
+import { validateEnv } from "./utils/validateEnv";
+
+(async () => {
+  if (!validateEnv()) return;
+
+  const BOT = new Client();
+
+  BOT.on("ready", () => console.log("Connected to Discord!"));
+
+  await connectDatabase();
+
+  await BOT.login(process.env.BOT_TOKEN);
+})();
+```
+
+如果你再次尝试 `npm run build`，你会看到和之前一样的错误信息。这是因为虽然我们知道环境变量存在，但 TypeScript 仍然无法推断出它。验证函数被设置为在环境变量丢失时退出进程，所以我们要告诉 TypeScript 它肯定是一个字符串。
+
+回到你的 `connectDatabase.ts` 文件中，在 `connect` 函数中使用 `process.env.MONGO_URI as string`来强迫类型为 `string`。错误应该消失了，你现在可以运行 `npm run build` 和 `npm start`。
+
+你应该看到你为 Discord 和 MongoDB 连接写的信息在终端打印出来。
+
+## 交互事件
+
+虽然你的机器人取得了很大的进展，但它仍然 _没有_ 做任何事情。为了接收命令，你将需要创建另一个事件监听器。
+
+Discord 推出了 `slash` 命令，具有一个新的用户界面和一个新的网关事件。当有人用你的机器人使用 `slash`命令时，`interactionCreate` 事件被触发。这是你想要监听的事件。因为逻辑比 `ready`事件更复杂，你将需要创建一个单独的文件。
+
+在你的 `src` 目录下，创建一个 `events` 目录，并在其中创建 `onInteraction.ts` 文件。首先定义一个导出的函数 `onInteraction`。这应该是一个异步函数，有一个名为 `interaction` 的单一参数。
+
+```ts
+export const onInteraction = async (interaction) => {
+
+};
+```
+
+为了给你的参数提供一个类型定义，从`discord.js`导入`Interaction`类型。
+
+```ts
+import { Interaction } from "discord.js";
+
+export const onInteraction = async (interaction: Interaction) => {
+
+};
+```
+
+`interaction`事件实际上是在任何命令交互上触发的，这包括像按钮点击和选择菜单，以及我们想要的 `slash` 命令。
+
+因为你将只为这个机器人编写 `slash` 命令，你可以过滤掉任何其他的交互类型，帮助 TypeScript 理解你正在处理的数据。
+
+在你的新函数中，添加一个条件来检查`interaction.isCommand()`。稍后你将在这个块中编写逻辑。
+
+```ts
+import { Interaction } from "discord.js";
+
+export const onInteraction = async (interaction: Interaction) => {
+  if (interaction.isCommand()) {
+  }
+};
+```
+
+现在，在你的 `index.ts` 文件中，你可以加载另一个监听器。在你的 `.on("ready")` 监听器旁边，添加一个`BOT.on("interactionCreate")` 监听器。对于这个事件，回调需要一个 `interaction` 参数，你可以把它传递给你新的 `onInteraction` 函数。
+
+```ts
+  BOT.on(
+    "interactionCreate",
+    async (interaction) => await onInteraction(interaction)
+  );
+```
+
+记住，你将需要导入你的 `onInteraction` 函数。
+
+很好! 你可以运行 `npm run build` 来确认 TypeScript 没有抛出任何错误，但如果没有实际的命令来使用，你还不能完全测试这段代码。
+
+## 准备命令
+
+我维护了一些 Discord 机器人，我发现有一件事有助于保持代码的可维护性和可读性，那就是使组件模块化。
+
+### 定义一个接口
+
+你将首先需要为你的命令定义一个共同的结构。在`src`中创建一个`interfaces`文件夹。然后在`interfaces`中创建一个名为`Command.ts`的文件。
+
+现在你要创建一个接口。在 TypeScript 中，接口经常被用来定义对象的结构，也是众多用于声明变量类型的工具之一。
+
+在你的`Command.ts`文件中，创建一个名为`Command`的导出接口。:
+
+```ts
+export interface Command {
+
+}
+```
+
+你的接口将有两个属性 - `data`，它将保存要发送给 Discord 的命令数据，以及 `run`，它将保存回调函数和命令逻辑。
+
+对于 `data` 属性，从 `@discordjs/builders` 导入 `SlashCommandBuilder` 和`SlashCommandSubcommandsOnlyBuilder`。将 `data` 属性定义为这两种类型中的一种。
+
+对于 `run` 属性，从 `discord.js` 导入 `CommandInteraction` 类型。将 `run` 定义为一个函数，接收一个 `CommandInteraction` 类型的参数并返回一个 `void` Promise。
+
+```ts
+import {
+  SlashCommandBuilder,
+  SlashCommandSubcommandsOnlyBuilder,
+} from "@discordjs/builders";
+import { CommandInteraction } from "discord.js";
+
+export interface CommandInt {
+  data: SlashCommandBuilder | SlashCommandSubcommandsOnlyBuilder;
+  run: (interaction: CommandInteraction) => Promise<void>;
+}
+```
+
+### 创建一个命令列表
+
+接下来你需要一个地方来存储你所有的命令。在 `src` 目录下创建一个名为 `commands` 的文件夹，并添加一个名为 `_CommandList.ts` 的文件。这里的下划线将使这个文件保持在列表的顶部。
+
+`_CommandList.ts` 文件将需要两行。首先，导入你的 `Command` 接口，然后声明一个 `CommandList` 数组。这个数组现在是空的，但是要给它一个 `Command[]` 的类型，这样 TypeScript 就知道它最终会容纳你的命令对象。这个文件应该是这样的:
+
+```ts
+import { Command } from "../interfaces/Command";
+
+export const CommandList: Command[] = [];
+```
+
+这个文件的目的是创建一个你的机器人的命令数组，你将在交互事件监听器中进行迭代。[可以使之自动化](https://github.com/BeccaLyria/discord-bot/blob/main/src/utils/readDirectory.ts)，但对于较小的机器人来说，它们往往是不必要的复杂。
+
+### 检查命令的执行情况
+
+在你的 `onInteraction.ts` 文件中，你应该开始研究寻找和运行命令的逻辑。
+
+在你的 `interaction.isCommand()` 条件块中，通过 `CommandList` 数组（记得要导入它！）进行 `for...of` 循环。
+
+```ts
+for (const Command of CommandList) {
+
+}
+```
+
+从 Discord 收到的交互 payload （有效载荷）包括一个 `commandName` 属性，你可以用它来查找用户选择的命令。要检查这一点，将 `interaction.commandName` 与 `Command.data.name` 属性进行比较。
+
+```ts
+if (interaction.commandName === Command.data.name) {
+
+}
+```
+
+现在，如果你已经找到了用户选择的命令，你需要运行该命令的逻辑。这是通过 `Command.run(interaction)` 的调用来实现的--将交互的 payload（有效载荷）传递给命令。
+
+你的最终文件应该是这样的:
+
+```ts
+import { Interaction } from "discord.js";
+import { CommandList } from "../commands/_CommandList";
+
+export const onInteraction = async (interaction: Interaction) => {
+  if (interaction.isCommand()) {
+    for (const Command of CommandList) {
+      if (interaction.commandName === Command.data.name) {
+        await Command.run(interaction);
+        break;
+      }
+    }
+  }
+};
+```
+
+注意，在我们运行命令后，我们 `break` 循环，以避免不必要的搜索。
+
+## 数据库模型
+
+在你准备开始编写命令之前，还有一个步骤。这个机器人将跟踪你的社区成员的 100 天代码的进展。而你需要将该进度存储在数据库中。
+
+`mongoose` 可以帮助你结构化你的 MongoDB 记录，以防止你将畸形或不完整的数据传入数据库。
+
+首先，在你的 `database` 目录下创建一个 `models` 文件夹。在这个 `models` 文件夹中，创建一个 `CamperModel.ts` 文件。这将是你的用户对象的结构。
+
+你首先需要从 `mongoose` 库中导入必要的值。在文件的顶部添加 `import { Document, model, Schema } from "mongoose";`。
+
+因为你正在使用 TypeScript，你需要为你的数据库对象创建一个类型定义。创建另一个接口，就像你为你的命令所做的那样，名为`CamperInt`。
+
+```ts
+export interface CamperInt extends Document {
+
+}
+```
+
+`extends` 关键字告诉 TypeScript 我们要在 `Document` 类型的基础上添加属性。
+
+你的数据库模型将有四个属性。把这些添加到你的接口中:
+
+- `discordId: string;` - Discord 中的每个用户对象都有一个唯一的标识符，称为 Snowflake，用于区分他们与其他用户。与用户名或判别符（用户名后的四位数）不同，`id`值不能被改变。这使得它成为将你的存储数据与 Discord 用户联系起来的理想值。
+- `round: number;` - 这将代表用户在挑战中所处的 "回合"。当某人完成了 100 天的挑战，他们可以选择再次进行挑战。当他们这样做的时候，他们通常称其为 "第二轮"，例如。
+- `day: number;` - 这代表用户在挑战中的日期。
+- `timestamp: number;` - 你将使用这个值来跟踪用户最后一次提交 100 天代码帖子的时间。
+
+很好! 现在你需要为你的数据库条目定义模式。`mongoose` 使用一个 Schema 对象来定义进入数据库集合的文件的形状。`Schema` 导入有一个构造函数，你将把它分配给一个变量。
+
+```ts
+export const Camper = new Schema();
+```
+
+这个构造函数接受一个对象作为其参数，这个对象定义了数据库的键和类型。继续，传入一个与你的界面相似的对象。
+
+```ts
+export const Camper = new Schema({
+    discordId: String,
+    round: Number,
+    day: Number,
+    timestamp: Number,
+})
+```
+
+注意，我们使用的是`String`而不是`string`。`String`是指 JavaScript 的原始类型，而`string`是 TypeScript 的类型定义。
+
+接下来你需要创建`model`。在 `mongoose` 中，`model` 对象的作用是在 MongoDB 数据库中创建、读取和更新你的文档。在你文件的底部添加 `export default model();`。
+
+`model` 函数需要几个参数。第一个是一个字符串，是你数据库中的文档（documents）的名称。对于这个集合（collection），使用 `"camper"`。第二个参数是用于数据的模式（schema）--使用你的 `Camper` 模式（schema）。
+
+默认情况下，`mongoose` 将使用你的 `model` 名称的复数版本作为集合。在我们的例子中，这将是 "campers"。如果你想改变它，你可以传入第三个参数 `{集合: "name" }` 来设置集合为 `name`。
+
+如果你使用的是 JavaScript，这就足以让你的数据库模型设置好。然而，由于你使用的是 TypeScript，你应该利用类型安全的优势。`model()` 默认返回一个 `Document` 类型的 `any`。
+
+为了解决这个问题，你可以在 `model` 函数中传递一个泛型。从某种意义上说，泛型可以作为类型定义的变量。你需要为你的 `model` 设置泛型以使用你的接口。通过将 `model` 改为 `model<CamperInt>`，来添加泛型。
+
+这里只有一个步骤了。你的 `CamperInt` 接口只定义了你在 MongoDB 文档中设置的属性，但并不包括标准属性。
+
+将你的 `export interface CamperInt` 改为 `export interface CamperInt extends Document`。这告诉 TypeScript，你的类型定义是现有 `Document` 类型定义的扩展--你基本上是在向该结构添加属性。
+
+你的最终文件应该看起来像这样:
+
+```ts
+import { Document, model, Schema } from "mongoose";
+
+export interface CamperInt {
+  discordId: string;
+  round: number;
+  day: number;
+  timestamp: number;
+}
+
+export const Camper = new Schema({
+  discordId: String,
+  round: Number,
+  day: Number,
+  timestamp: Number,
+});
+
+export default model<CamperInt>("camper", Camper);
+```
+
+作为一个安全检查，再次使用`npm run build`。你不应该在终端看到任何错误。
+
+## 编写机器人命令
+
+你终于准备好开始编写一些命令了 由于这是一个 100 天代码机器人，你应该从创建 100 天代码更新的命令开始。
+
+### 100 Command
+
+在你的 `commands` 文件夹中，创建一个 `oneHundred.ts` 文件。这将保存你的 100 天代码命令。用 `import { Command } from ".../interfaces/Command;`导入你的命令接口。
+
+现在声明一个导出的变量`oneHundred`，并赋予它`Command`类型:
+
+```ts
+import { Command } from "../interfaces/Command";
+
+export const oneHundred: Command = {
+
+};
+```
+
+首先，创建 `data` 属性。你将使用 `@discordjs/builders` 包来建立一个 `slash` 命令。
+
+首先从 `@discordjs/builders` 包中导入 `SlashCommandBuilder()`。然后，用 `new SlashCommandBuilder()` 在`data` 属性中构建一个新实例。你将在这里使用一些方法来传递你想要的信息到构建器中。
+
+`.setName()` 方法允许你设置斜线命令的名称。设置名称为 `"100"`。`setDescription()` 选项允许你在 Discord 的用户界面中显示命令的描述。将描述设为 `"Check in for the 100 Days of Code challenge"`。
+
+Slash 命令也可以接受 `option` 值。这些是用来接受用户的参数的，有各种类型。对于这个命令，你需要一个字符串选项，使用 `addStringOption()` 方法。选项方法需要一个回调函数，有一个 `option` 参数。
+
+然后你可以在 `option` 参数上使用连锁方法来配置参数的信息。使用 `.setName()` 方法给选项取名为`"message"`，使用`.setDescription()`方法给它取名为`"The message to go in your 100 Days of Code update"`。最后，使用`.setRequired()`方法将该选项设置为必填。
+
+以下是你现在应该有的东西:
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { Command } from "../interfaces/Command";
+
+export const oneHundred: Command = {
+  data: new SlashCommandBuilder()
+    .setName("100")
+    .setDescription("Check in for the 100 Days of Code challenge.")
+    .addStringOption((option) =>
+      option
+        .setName("message")
+        .setDescription("The message to go in your 100 Days of Code update.")
+        .setRequired(true)
+    ),
+};
+```
+
+如果你在 IDE 中编码启用了智能提示，你可能已经注意到，这将在 `data` 属性上抛出一个类型错误（type error）。 这是因为 `SlashCommandBuilder` 实际上返回了一个 `Omit` 类型！ `Omit` 类型是用来告诉 TypeScript，该属性是由 TypeScript 中定义的。_almost_ 是另一个类型几乎相同,但删除了特定属性。
+
+前往你的 `interfaces/Command.ts` 文件，更新类型。用 `Omit<SlashCommandBuilder, "addSubcommandGroup" | "addSubcommand">` 替换 `SlashCommandBuilder` 类型。这将告诉 TypeScript，`data` 应该是一个`SlashCommandBuilder`，但没有那两个特定的属性。
+
+```ts
+import {
+  SlashCommandBuilder,
+  SlashCommandSubcommandsOnlyBuilder,
+} from "@discordjs/builders";
+import { CommandInteraction } from "discord.js";
+
+export interface Command {
+  data:
+    | Omit<SlashCommandBuilder, "addSubcommandGroup" | "addSubcommand">
+    | SlashCommandSubcommandsOnlyBuilder;
+  run: (interaction: CommandInteraction) => Promise<void>;
+}
+```
+
+很好! 现在你的类型错误已经解决了，回到你的 `oneHundred.ts` 命令文件--是时候编写命令逻辑了。
+
+你的机器人响应命令的所有逻辑将被放在 `run` 属性中。就像你在界面中做的那样，首先创建一个接受 `interaction` 参数的 async 函数。然后，让你的函数的第一行是 `await interaction.deferReply();`。
+
+Discord 期望机器人在三秒内对一个命令做出反应。因为这个命令可能需要更长的时间来处理，使用 `.deferReply()` 方法会发送一个确认响应，让你有整整 15 分钟的时间来发送实际响应。
+
+接下来，你需要从该命令中提取一些数据。首先，用 `const { user } = interaction;`将 `user` 对象从交互的有效载荷中解构出来。`user` 对象代表调用该命令的 Discord 用户。
+
+然后用 `const text = interaction.options.getString("message", true);` 获得你发送的 `message` 选项。通过这一行，你正在访问交互的 `options` 属性。`.getString()` 方法专门抓取一个字符串选项（记得你在 `data` 中创建了这个选项），`"message"`是这个选项的**name**。`true`参数表示这是一个必选项，所以 TypeScript 不会认为它是空的。
+
+你的文件应该看起来像这样:
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { Command } from "../interfaces/Command";
+
+export const oneHundred: Command = {
+  data: new SlashCommandBuilder()
+    .setName("100")
+    .setDescription("Check in for the 100 Days of Code challenge.")
+    .addStringOption((option) =>
+      option
+        .setName("message")
+        .setDescription("The message to go in your 100 Days of Code update.")
+        .setRequired(true)
+    ),
+  run: async (interaction) => {
+    await interaction.deferReply();
+    const { user } = interaction;
+    const text = interaction.options.getString("message", true);
+  },
+};
+```
+
+这个命令的下一步将是从你的数据库中获取数据。因为你的许多命令都需要这样做，你应该为它创建一个模块。
+
+### 处理数据库逻辑
+
+创建一个 `src/modules` 目录，并在其中添加一个 `getCamperData.ts` 文件。创建一个导出的异步函数`getCamperData`，并给它一个名为 `id` 的字符串参数。然后，在该函数中，你可以查询数据库。
+
+从 `database` 目录中导入你的 `CamperModel`，并使用 `findOne()` 方法来查询营员的 `id`：`const camperData = await CamperModel.findOne({ discordId: id });`。
+
+```ts
+import CamperModel from "../database/models/CamperModel";
+
+export const getCamperData = async (id: string) => {
+  const camperData = await CamperModel.findOne({ id });
+};
+```
+
+我们在这里还有一个步骤。如果 `camper` 以前没有使用过机器人，他们就不会有现有的数据库记录。`findOne()`在这种情况下会返回 `null`,所以你可以添加一个回退值。
+
+```ts
+import CamperModel from "../database/models/CamperModel";
+
+export const getCamperData = async (id: string) => {
+  const camperData =
+    (await CamperModel.findOne({ discordId: id })) ||
+    (await CamperModel.create({
+      discordId: id,
+      round: 1,
+      day: 0,
+      date: Date.now(),
+    }));
+};
+```
+
+在这里，我们在第一轮第 0 天开始一个新的 `camper`,如果他们使用 `100 command`，这允许我们更新他们的状态。
+
+最后，你需要 `返回（return）`你的数据。在函数的末尾添加 `return camperData`。为了额外的类型安全，将你的函数的返回类型定义为 `Promise<CamperData>`。
+
+```ts
+import CamperModel, { CamperInt } from "../database/models/CamperModel";
+
+export const getCamperData = async (id: string): Promise<CamperInt> => {
+  const camperData =
+    (await CamperModel.findOne({ discordId: id })) ||
+    (await CamperModel.create({
+      discordId: id,
+      round: 1,
+      day: 0,
+      date: Date.now(),
+    }));
+  return camperData;
+};
+```
+
+你现在有了从数据库中获取 `camper` 数据的方法，但你也需要一种方法来更新它。在你的`/src/modules`目录下创建另一个文件，叫做 `updateCamperData.ts`。这将处理增加 `camper` 的进度的逻辑。
+
+从一个导出的异步函数开始，称为 `updateCamperData`。它应该接受一个 `Camper` 参数，这将是你从 MongoDB 获取的数据。
+
+```ts
+import { CamperInt } from "../database/models/CamperModel";
+
+export const updateCamperData = async (Camper: CamperInt) => {
+    
+};
+```
+
+你唯一要更新数据的时候是在 `/100` 命令中--在那里你要增加营员的日计数，检查他们是否开始了新的一轮（round），并更新时间戳。
+
+首先，用 `Camper.day++;` 来增加日计数。根据 100 天代码挑战的工作方式，如果 `camper` 已经过了第 100 天，那么他们就开始了新的 "一轮（round）"。你需要一个条件来检查 `Camper.day > 100`，如果是的话，就把日子重置为 1，并增加一轮（round）。
+
+在这个条件之后，用 `Camper.timestamp = Date.now();` 更新时间戳，用 `await Camper.save();` 保存数据。最后，返回修改后的数据对象，这样你就可以在命令中使用它。
+
+你的最终文件应该是这样的:
+
+```ts
+import { CamperInt } from "../database/models/CamperModel";
+
+export const updateCamperData = async (Camper: CamperInt) => {
+  Camper.day++;
+  if (Camper.day > 100) {
+    Camper.day = 1;
+    Camper.round++;
+  }
+  Camper.timestamp = Date.now();
+  await Camper.save();
+  return Camper;
+};
+```
+
+### 100 Command Continued
+
+现在你的数据库逻辑已经准备好了，返回到你的`oneHundred.ts`文件。作为提醒，该文件应该看起来像这样:
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { Command } from "../interfaces/Command";
+
+export const oneHundred: Command = {
+  data: new SlashCommandBuilder()
+    .setName("100")
+    .setDescription("Check in for the 100 Days of Code challenge.")
+    .addStringOption((option) =>
+      option
+        .setName("message")
+        .setDescription("The message to go in your 100 Days of Code update.")
+        .setRequired(true)
+    ),
+  run: async (interaction) => {
+    await interaction.deferReply();
+    const { user } = interaction;
+    const text = interaction.options.getString("message", true);
+  },
+};
+```
+
+在文件的顶部导入你的两个新模块（modules）。然后，在你从交互对象中提取数值的逻辑之后，用`const targetCamper = await getCamperData(user.id);`从数据库中获取 `camper` 的数据。用 `const updatedCamper = await updateCamperData(targetCamper);` 来更新数据。
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { Command } from "../interfaces/Command";
+import { getCamperData } from "../modules/getCamperData";
+import { updateCamperData } from "../modules/updateCamperData";
+
+export const oneHundred: Command = {
+  data: new SlashCommandBuilder()
+    .setName("100")
+    .setDescription("Check in for the 100 Days of Code challenge.")
+    .addStringOption((option) =>
+      option
+        .setName("message")
+        .setDescription("The message to go in your 100 Days of Code update.")
+        .setRequired(true)
+    ),
+  run: async (interaction) => {
+    await interaction.deferReply();
+    const { user } = interaction;
+    const text = interaction.options.getString("message", true);
+
+    const targetCamper = await getCamperData(user.id);
+    const updatedCamper = await updateCamperData(targetCamper);
+  },
+};
+```
+
+现在你需要构建响应，以便在 `camper` 使用该命令时将其送回。
+
+为此，你将使用 Discord 的消息嵌入功能。首先从 discord.js 导入 `MessageEmbed` 构造函数，然后用 `const oneHundredEmbed = new MessageEmbed();` 创建一个新的嵌入。`MessageEmbed` 类有几个方法可以用来建立嵌入的内容。
+
+使用 `.setTitle()` 方法来设置嵌入的标题为`"100 Days of Code"`。
+
+使用`.setDescription()` 方法将嵌入的描述设置为 `camper` 在命令中提供的信息（记得你之前将其提取到`text`变量）。嵌入的作者可以被设置，并将显示在嵌入的顶部。
+
+使用 `.setAuthor()` 方法传递一个对象，其 `name` 属性设置为 `user.tag`（将显示 `camper` 的用户名和判别符，如`nhcarrigan#0001`），`iconURL`属性设置为`user.displayAvatarUrl()`（将 `camper` 的头像附加到嵌入文件上）。
+
+嵌入（Embeds）也接受字段，它是较小的文本块，有自己的标题和描述。`.addField()` 方法需要两个或三个参数，第一个是字段的标题，第二个是字段的描述，第三个是可选的布尔值，将字段设置为内联（inline）。
+
+使用`.addField()`方法来添加两个字段。第一个字段的标题应该设置为 "Round"，描述设置为 `updatedCamper.round.toString()`。第二个字段的标题应该设置为 `"Day"`，描述设置为 `updatedCamper.day.toString()`。这两个字段都应该是内联的（inline）。
+
+对于你嵌入的最后一部分，使用 `.setFooter()` 方法来添加小的页脚文本。传递一个对象，其 `text` 属性设置为`"Day completed:" + new Date(upedCamer.timestamp).toLocaleDateString()`以显示 `camper` 报告他们进展的时间。
+
+最后，你需要把这个新嵌入的内容发回给 `camper`。因为你已经用`interaction.deferReply()` 调用发送了一个响应，你不能再发送一个响应。相反，你需要编辑你发送的那个。
+
+使用`await interaction.editReply()`来编辑响应。`.editReply()`方法接收一个具有各种属性的对象,在这种情况下，你正在发送一个嵌入（embed）。传递一个对象，其 `embeds` 属性设置为`[oneHundredEmbed]`。
+
+注意，这是一个包含你的嵌入的数组。Discord 消息最多可以包含 10 个嵌入物（embeds），API 希望有一个嵌入对象（embed objects）的数组来匹配。
+
+你的最终命令文件应该是这样的:
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { MessageEmbed } from "discord.js";
+import { Command } from "../interfaces/Command";
+import { getCamperData } from "../modules/getCamperData";
+import { updateCamperData } from "../modules/updateCamperData";
+
+export const oneHundred: Command = {
+  data: new SlashCommandBuilder()
+    .setName("100")
+    .setDescription("Check in for the 100 Days of Code challenge.")
+    .addStringOption((option) =>
+      option
+        .setName("message")
+        .setDescription("The message to go in your 100 Days of Code update.")
+        .setRequired(true)
+    ),
+  run: async (interaction) => {
+    await interaction.deferReply();
+    const { user } = interaction;
+    const text = interaction.options.getString("message", true);
+
+    const targetCamper = await getCamperData(user.id);
+    const updatedCamper = await updateCamperData(targetCamper);
+
+    const oneHundredEmbed = new MessageEmbed();
+    oneHundredEmbed.setTitle("100 Days of Code");
+    oneHundredEmbed.setDescription(text);
+    oneHundredEmbed.setAuthor({
+      name: user.tag,
+      iconURL: user.displayAvatarURL(),
+    });
+    oneHundredEmbed.addField("Round", updatedCamper.round.toString(), true);
+    oneHundredEmbed.addField("Day", updatedCamper.day.toString(), true);
+    oneHundredEmbed.setFooter({
+      text:
+        "Day completed: " +
+        new Date(updatedCamper.timestamp).toLocaleDateString(),
+    });
+
+    await interaction.editReply({ embeds: [oneHundredEmbed] });
+  },
+};
+```
+
+### Registering Commands（注册命令）
+
+如果你运行`npm run build`和`npm start`，一切都会启动 - 但你没有办法实际使用你的新命令。这是因为 Discord 要求命令被注册，以便它们在应用程序的用户界面上可用。要做到这一点，我们需要采取几个步骤。
+
+首先，前往你的`_CommandList.ts`文件，导入你的`oneHundred`命令。把它添加到你的`CommandList`数组中，这样它就可以在其他地方使用。
+
+```ts
+import { Command } from "../interfaces/Command";
+import { oneHundred } from "./oneHundred";
+
+export const CommandList: Command[] = [oneHundred];
+```
+
+现在是时候添加逻辑来发送命令信息给 Discord 了。在你的`src/events`目录下，添加一个`onReady.ts`文件。我们将在`"ready"`事件中使用它。
+
+创建一个名为`onReady`的出口异步函数，并给它一个名为`BOT`的参数。从 discord.js 导入`Client`类型，并将`BOT`类型定义设为`Client`。
+
+```ts
+import { Client } from "discord.js";
+
+export const onReady = async (BOT: Client) => {};
+```
+
+现在从`@discordjs/rest`导入`REST`模块。这将允许你实例化一个 API 客户端，你将用它来发送命令。用`const rest = new REST();`构建一个新的实例。
+
+你需要对你的 REST 客户端进行一些配置。首先，向`REST()`构造函数传递一个对象，并将`version`属性设置为`"9"`。这告诉客户端使用 Discord 的 API 版本 9，这是目前最新的版本。
+
+然后，在构造函数上链接一个`.setToken()`调用，将 API token（口令）设置为`process.env.BOT_TOKEN`, 你必须将其强制为一个`字符串`。
+
+```ts
+import { REST } from "@discordjs/rest";
+import { Client } from "discord.js";
+
+export const onReady = async (BOT: Client) => {
+  const rest = new REST({ version: "9" }).setToken(
+    process.env.BOT_TOKEN as string
+  );
+};
+```
+
+API 希望命令数据以特定的 JSON 格式发送，但值得庆幸的是，我们使用的 slash 命令生成器有一个方法专门用于此。导入你的`CommandList`，然后创建一个新的数组并映射你的命令数据。
+
+```ts
+const commandData = CommandList.map((command) => command.data.toJSON());
+```
+
+在你向 Discord 发送命令之前，有必要注意有两种类型的命令。"全球命令（Global Commands）" 在你的机器人被使用的所有地方都可用，但需要一个小时左右的时间来更新。"公会命令（Guild Commands）"只在单个服务器中可用，但会立即更新。因为这个机器人被设计为在单个服务器中运行，所以我们要使用公会命令。
+
+你需要获得你使用该机器人的服务器的 ID。要做到这一点，确保你在你的 Discord 应用程序中启用了开发者模式，然后右击你的服务器图标并选择 "Copy ID"。在你的 `.env` 文件中，添加一个 `GUILD_ID` 变量，并将你复制的 ID 分配给它。它应该看起来像 `GUILD_ID="778130114772598785"`。
+
+回到你的 `onReady.ts` 文件中，用 `await rest.put()` 开始你的 API 调用。发送一个 `PUT` 请求将更新任何现有的命令，而 `POST` 将试图创建新的命令，如果命令共享一个名字就会出错。从`discord-api-types/v9`导入`Routes`，并在`rest.put()` 调用中传递 `Routes.applicationGuildCommands()` 调用。这将被用来构建 API 端点以发送命令。
+
+调用 `applicationGuildCommands()` 时，将接受两个参数。
+
+首先是应用程序的 ID，以便将这些命令与之联系起来。你可以从 `BOT.user.id` 的值中得到它, 但 `user` 有可能是未定义的，所以你需要选择性地把它连起来。使用 `BOT.user?.id || "missing id"` 来添加一个会出错的后备值--这将允许我们知道机器人的 ID 是否丢失。
+
+第二个参数是服务器 ID，你把它设置为`process.env.GUILD_ID`（记得要强制使用这个类型！）。
+
+`.put()`调用也需要第二个参数，这是你要发送的数据。以`{ body: commandData }`的形式传递，以符合预期格式。
+
+最后，在文件末尾添加一个`console.log("Discord ready!")`，以表明你的机器人已经上线。
+
+```ts
+import { REST } from "@discordjs/rest";
+import { Routes } from "discord-api-types/v9";
+import { Client } from "discord.js";
+import { CommandList } from "../commands/_CommandList";
+
+export const onReady = async (BOT: Client) => {
+  const rest = new REST({ version: "9" }).setToken(
+    process.env.BOT_TOKEN as string
+  );
+
+  const commandData = CommandList.map((command) => command.data.toJSON());
+
+  await rest.put(
+    Routes.applicationGuildCommands(
+      BOT.user?.id || "missing id",
+      process.env.GUILD_ID as string
+    ),
+    { body: commandData }
+  );
+
+  console.log("Discord ready!");
+};
+```
+
+切换到你的 `index.ts` 文件，找到你的 `"ready"` 事件监听器。用新的 `onReady` 函数替换 `console.log`调用--记得导入它，回调中异步调用。
+
+```ts
+import { Client } from "discord.js";
+import { IntentOptions } from "./config/IntentOptions";
+import { connectDatabase } from "./database/connectDatabase";
+import { onInteraction } from "./events/onInteraction";
+import { onReady } from "./events/onReady";
+import { validateEnv } from "./utils/validateEnv";
+
+(async () => {
+  if (!validateEnv()) return;
+  const BOT = new Client({ intents: IntentOptions });
+
+  BOT.on("ready", async () => await onReady(BOT));
+
+  BOT.on(
+    "interactionCreate",
+    async (interaction) => await onInteraction(interaction)
+  );
+
+  await connectDatabase();
+
+  await BOT.login(process.env.BOT_TOKEN);
+})();
+```
+
+现在运行`npm run build`和`npm start`，并在 Discord 中连接你的服务器。如果你输入`/`，你应该看到你的新`/100`命令显示出来。尝试使用该命令并检查响应。
+
+![image-122](https://www.freecodecamp.org/news/content/images/2022/01/image-122.png)
+
+如果你看到这个响应，那么你已经成功创建了你的第一个命令!
+
+祝贺你! 你有了你的第一个成功的命令。有了你所建立的所有基础结构，添加其他的命令就会顺利得多。让我们现在就去做吧。
+
+### Edit Command
+
+如果营员在他们的 `/100` 信息中出现了错误，会发生什么？因为机器人会发送回复，camper 无法编辑它（Discord 不允许你编辑你没有发送的信息）。你应该创建一个命令，允许 camper 这样做。
+
+在你的 `src/commands` 目录下创建一个 `edit.ts` 文件。就像你对 `/100` 命令所做的那样，导入你的`SlashCommandBuilder` 和 `Command` 接口，并导出一个 `edit` 对象，其类型为 `Command`。
+
+使用 `SlashCommandBuilder` 来准备 `data` 属性。给这个命令取名为 `edit`，描述为`Edit a previous 100 days of code post`，然后添加两个字符串选项。第一个字符串选项应该有一个名字 `embed-id` 和一个描述`"ID of the message to edit"`，第二个应该有一个名字`message`和一个描述 `"The message to go in your 100 Days of Code update"` 。这两个选项都应该是必需的。
+
+你的代码应该是这样的:
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { Command } from "../interfaces/Command";
+
+export const edit: Command = {
+    data: new SlashCommandBuilder()
+    .setName("edit")
+    .setDescription("Edit a previous 100 days of code post.")
+    .addStringOption((option) =>
+      option
+        .setName("embed-id")
+        .setDescription("ID of the message to edit.")
+        .setRequired(true)
+    )
+    .addStringOption((option) =>
+      option
+        .setName("message")
+        .setDescription("The message to go in your 100 Days of Code update.")
+        .setRequired(true)
+    ),
+}
+```
+
+用一个异步函数和一个 `interaction（交互）`参数创建你的`run`属性。从交互中获得 `channel` 和 `user`，并抓住 `embed-id`和 `message`选项。不要忘记延迟响应!
+
+```js
+    run: async (interaction) => {
+        await interaction.deferReply();
+        const { channel, user } = interaction;
+        const targetId = interaction.options.getString("embed-id", true);
+        const text = interaction.options.getString("message", true);
+    }
+```
+
+`channle`属性是 nullable（例如，在通过 DM 发送互动的情况下），所以你要检查它是否存在。如果它不存在，则回应一个命令缺少参数的消息。
+
+```ts
+    if (!channel) {
+      await interaction.editReply({
+        content: "Missing channel parameter.",
+      });
+      return;
+    }
+```
+
+现在你知道了这个 `channel` 的存在，你可以根据 `camper` 提供的 ID 来获取他们想要编辑的信息。使用`channel.messages.fetch()` 来做这件事，把 `targetId` 作为参数传入。
+
+因为目标 `message` 有可能不存在，你需要在你的代码中考虑到这一点。添加一个条件来检查这一点，如果没有找到消息，则回应一个解释。
+
+```ts
+    const targetMessage = await channel.messages.fetch(targetId);
+
+    if (!targetMessage) {
+      await interaction.editReply({
+        content:
+          "That does not appear to be a valid message ID. Be sure that you are using this command in the same channel as the message.",
+      });
+      return;
+    }
+```
+
+你需要检查的最后一件事是，`camper` 正在编辑的信息实际上属于他们。你可以用`.embeds`属性来访问嵌入(embed)，和你发送的方式一样，该属性以嵌入对象（embed objects）数组的形式返回。
+
+从数组中抓取第一个嵌入对象（embed objects），然后检查嵌入作者是否与用户的标签相符。如果不是，让他们知道他们不能编辑这个帖子。
+
+```ts
+    const targetEmbed = targetMessage.embeds[0];
+
+    if (targetEmbed.author?.name !== user.tag) {
+        await interaction.editReply({
+            content: "This does not appear to be your 100 Days of Code post. You cannot edit it."
+        })
+    }
+```
+
+现在你已经确认一切都正确了，你可以在嵌入（embed）上使用 `.setDescription()` 来更新文本。然后，用新的嵌入（embed）来编辑消息，并对互动作出确认。
+
+你的完整代码应该是这样的:
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { Command } from "../interfaces/Command";
+
+export const edit: Command = {
+  data: new SlashCommandBuilder()
+    .setName("edit")
+    .setDescription("Edit a previous 100 days of code post.")
+    .addStringOption((option) =>
+      option
+        .setName("embed-id")
+        .setDescription("ID of the message to edit.")
+        .setRequired(true)
+    )
+    .addStringOption((option) =>
+      option
+        .setName("message")
+        .setDescription("The message to go in your 100 Days of Code update.")
+        .setRequired(true)
+    ),
+  run: async (interaction) => {
+    await interaction.deferReply();
+    const { channel, user } = interaction;
+    const targetId = interaction.options.getString("embed-id", true);
+    const text = interaction.options.getString("message", true);
+
+    if (!channel) {
+      await interaction.editReply({
+        content: "Missing channel parameter.",
+      });
+      return;
+    }
+
+    const targetMessage = await channel.messages.fetch(targetId);
+
+    if (!targetMessage) {
+      await interaction.editReply({
+        content:
+          "That does not appear to be a valid message ID. Be sure that you are using this command in the same channel as the message.",
+      });
+      return;
+    }
+
+    const targetEmbed = targetMessage.embeds[0];
+
+    if (targetEmbed.author?.name !== user.tag) {
+      await interaction.editReply({
+        content:
+          "This does not appear to be your 100 Days of Code post. You cannot edit it.",
+      });
+    }
+
+    targetEmbed.setDescription(text);
+    await targetMessage.edit({ embeds: [targetEmbed] });
+    await interaction.editReply({ content: "Updated!" });
+  },
+};
+```
+
+将新的 `edit` 命令添加到你的 `CommandList` 数组中，然后建立并运行你的机器人，你应该看到新的命令。尝试编辑你之前发送的嵌入文件（embed）。
+
+![image-123](https://www.freecodecamp.org/news/content/images/2022/01/image-123.png)
+
+你应该看到你的嵌入更新，以及来自机器人的确认!
+
+### View Command
+
+`Campers` 应该有办法查看他们当前的进度，因此我们需要创建一个命令来执行此操作。 到目前为止，您应该对命令结构感到满意。我们鼓励您遵循这些说明，但尝试编写代码而不查看最终结果。
+
+在你的命令目录下创建一个`view.ts`文件，并设置好你的命令变量。在`data`属性中创建一个命令，其名称为`view`，描述为 `Shows your latest 100 days of code check in`。这个命令不需要任何选项。
+
+在 `run` 属性中设置你的异步函数，并推迟交互响应。从交互中提取 `user` 对象。使用你的 `getCamperData` 模块从数据库中获取 `camper` 的数据。然后，检查数据的 `day` 属性是否有一个非零值。如果没有，让 `camper` 知道他们还没有开始 100 天的代码挑战，可以用 `/100` 命令来做。
+
+创建一个嵌入，标题设置为 `My 100DoC Progress`。将描述设置为`Here is my 100 Days of Code progress. I last reported an update on:`, 并添加 `camper` 的时间戳。添加一个 `Round` 和 `Day` 字段，并设置嵌入的作者。然后在交互响应中发送嵌入的内容。
+
+记得把你的新命令添加到 `CommandList` 中，然后尝试建立和启动你的机器人。你应该看到这个命令是可用的，并且能够从它那里得到一个响应。
+
+![image-125](https://www.freecodecamp.org/news/content/images/2022/01/image-125.png)
+
+如果你没有得到回应，以下是你的代码应该是这样的。
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { MessageEmbed } from "discord.js";
+import { Command } from "../interfaces/Command";
+import { getCamperData } from "../modules/getCamperData";
+
+export const view: Command = {
+  data: new SlashCommandBuilder()
+    .setName("view")
+    .setDescription("Shows your latest 100 Days of Code check in."),
+  run: async (interaction) => {
+    await interaction.deferReply();
+    const { user } = interaction;
+    const targetCamper = await getCamperData(user.id);
+
+    if (!targetCamper.day) {
+      await interaction.editReply({
+        content:
+          "It looks like you have not started the 100 Days of Code challenge yet. Use `/100` and add your message to report your first day!",
+      });
+      return;
+    }
+
+    const camperEmbed = new MessageEmbed();
+    camperEmbed.setTitle("My 100DoC Progress");
+    camperEmbed.setDescription(
+      `Here is my 100 Days of Code progress. I last reported an update on ${new Date(
+        targetCamper.timestamp
+      ).toLocaleDateString()}.`
+    );
+    camperEmbed.addField("Round", targetCamper.round.toString(), true);
+    camperEmbed.addField("Day", targetCamper.day.toString(), true);
+    camperEmbed.setAuthor({
+      name: user.tag,
+      iconURL: user.displayAvatarURL(),
+    });
+
+    await interaction.editReply({ embeds: [camperEmbed] });
+  },
+};
+```
+
+### Help Command
+
+你需要建立的最后一件事是一个帮助命令，它将向`camper` 解释如何与机器人互动。
+
+在 `command` 目录下创建你的 `help.ts` 文件，并创建你的 `data` 属性。给该命令起名为 `help`，并说明`Provides information on using this bot（提供关于使用该机器人的信息）`。
+
+用 async 函数设置你的`run`属性，并记住推迟回复的时间。创建一个嵌入，并使用描述和字段来提供你想与 `camper` 分享的信息。在交互响应中发送嵌入的信息。
+
+将你的新帮助命令加载到 `CommandList` 中，并建立启动你的机器人来测试它。你应该看到一个带有你创建的嵌入的响应。
+
+![image-126](https://www.freecodecamp.org/news/content/images/2022/01/image-126.png)
+
+你的嵌入可能看起来不同，这取决于你选择分享什么信息。以下是我们用于上述嵌入的代码:
+
+```ts
+import { SlashCommandBuilder } from "@discordjs/builders";
+import { MessageEmbed } from "discord.js";
+import { Command } from "../interfaces/Command";
+
+export const help: Command = {
+  data: new SlashCommandBuilder()
+    .setName("help")
+    .setDescription("Provides information on using this bot."),
+  run: async (interaction) => {
+    await interaction.deferReply();
+    const helpEmbed = new MessageEmbed();
+    helpEmbed.setTitle("100 Days of Code Bot!");
+    helpEmbed.setDescription(
+      "This discord bot is designed to help you track and share your 100 Days of Code progress."
+    );
+    helpEmbed.addField(
+      "Create today's update",
+      "Use the `/100` command to create your update for today. The `message` will be displayed in your embed."
+    );
+    helpEmbed.addField(
+      "Edit today's update",
+      "Do you see a typo in your embed? Right click it and copy the ID (you may need developer mode on for this), and use the `/edit` command to update that embed with a new message."
+    );
+    helpEmbed.addField(
+      "Show your progress",
+      "To see your current progress in the challenge, and the day you last checked in, use `/view`."
+    );
+    helpEmbed.setFooter({ text: `Version ${process.env.npm_package_version}` });
+    await interaction.editReply({ embeds: [helpEmbed] });
+    return;
+  },
+};
+```
+
+注意：我们应该使用 `npm_package_version` 来显示机器人的当前版本。
+
+## 结语
+
+恭喜！ 您已成功为 100 天的代码挑战构建了一个 Discord 机器人。
+
+如果您有兴趣进一步探索，可以查看启发本教程的实时机器人的 [源代码](https://github.com/nhcarrigan/100-days-of-code-bot)，其中包括自定义错误 日志记录、外部错误报告和文档站点。

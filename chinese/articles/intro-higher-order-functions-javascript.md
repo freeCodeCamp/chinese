@@ -25,7 +25,7 @@ JavaScript 中，函数的应用场景很丰富：
 
 #### 数据：字符串（Strings）
 
-```
+```plain
 sayHi = (name) => `Hi, ${name}!`;
 result = sayHi('User');
 
@@ -34,7 +34,7 @@ console.log(result); // 'Hi, User!'
 
 #### 数据：数字（Numbers）
 
-```
+```plain
 double = (x) => x * 2;
 result = double(4);
 
@@ -43,7 +43,7 @@ console.log(result); // 8
 
 #### 数据：布尔值（Booleans）
 
-```
+```plain
 getClearance = (allowed) => allowed ?  'Access granted' :  'Access denied';
 
 result1 = getClearance(true);
@@ -55,7 +55,7 @@ console.log(result2); // 'Access denied'
 
 #### 数据：对象（Objects）
 
-```
+```plain
 getFirstName = (obj) => obj.firstName;
 result = getFirstName({
 	firstName: 'Yazeed'
@@ -66,7 +66,7 @@ console.log(result); // 'Yazeed'
 
 #### 数据：数组（Arrays）
 
-```
+```plain
 len = (array) => array.length;
 result = len([1, 2, 3]);
 
@@ -83,7 +83,7 @@ console.log(result); // 3
 
 #### 函数作为参数
 
-```
+```plain
 isEven = (num) => num % 2 === 0;
 result = [1, 2, 3, 4].filter(isEven);
 
@@ -96,7 +96,7 @@ console.log(result); // [2, 4]
 
 #### 函数作为返回值
 
-```
+```plain
 add = (x) => (y) => x + y;
 ```
 
@@ -106,7 +106,7 @@ add = (x) => (y) => x + y;
 
 当然，我们也可以使用“双重调用”的方式，一次性提供 `x` 和 `y` 两个参数：
 
-```
+```plain
 result = add(10)(20);
 
 console.log(result); // 30
@@ -114,7 +114,7 @@ console.log(result); // 30
 
 或者分两次调用，先传参数 `x`，再传参数 `y`：
 
-```
+```plain
 add10 = add(10);
 result = add10(20);
 
@@ -136,7 +136,7 @@ console.log(result); // 30
 
 假设我们有一组用户，如下所示，然后我们要对该数组进行操作。
 
-```
+```plain
 users = [
   {
     name: 'Yazeed',
@@ -158,7 +158,7 @@ users = [
 
 没有高阶函数的话，我们必须回到 `for` 循环的怀抱才能实现 `map` 函数的操作。
 
-```
+```plain
 getName = (user) => user.name;
 usernames = [];
 
@@ -175,7 +175,7 @@ console.log(usernames);
 
 用 `map` 函数就简单多啦！
 
-```
+```plain
 usernames = users.map(getName);
 
 console.log(usernames);
@@ -187,7 +187,7 @@ console.log(usernames);
 
 在没有高阶函数的情况下，必须要用 `for` 循环来实现 `filter` 函数的功能。
 
-```
+```plain
 startsWithB = (string) => string.toLowerCase().startsWith('b');
 
 namesStartingWithB = [];
@@ -205,7 +205,7 @@ console.log(namesStartingWithB);
 
 用 `filter` 函数就简单多啦！
 
-```
+```plain
 namesStartingWithB = users.filter((user) => startsWithB(user.name));
 
 console.log(namesStartingWithB);
@@ -217,7 +217,7 @@ console.log(namesStartingWithB);
 
 `reduce` 函数也是的……没有高阶函数的话，很多高端操作都是无法实现的！😁
 
-```
+```plain
 total = 0;
 
 for (let i = 0; i < users.length; i++) {
@@ -231,7 +231,7 @@ console.log(total);
 
 那这样是不是简单多啦？
 
-```
+```plain
 totalAge = users.reduce((total, user) => user.age + total, 0);
 
 console.log(totalAge);

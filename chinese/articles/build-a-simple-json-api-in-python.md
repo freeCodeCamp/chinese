@@ -58,7 +58,7 @@ $ cd flask-jsonapi-demo/
 
 为每个 Python 项目创建[创建虚拟环境][7]是一种很好的做法。你可以跳过此步骤，但是强烈建议你不跳过。
 
-```
+```plain
 $ python -m venv .venv
 $ source .venv/bin/activate
 
@@ -66,7 +66,7 @@ $ source .venv/bin/activate
 
 在创建并激活虚拟环境后，你就可以为该项目安装所需的依赖模块。
 
-```
+```plain
 $ pip install flask-rest-jsonapi flask-sqlalchemy
 ```
 
@@ -74,7 +74,7 @@ $ pip install flask-rest-jsonapi flask-sqlalchemy
 
 下一步是为项目创建 Python 入口文件和数据库文件。
 
-```
+```plain
 $ touch application.py artists.db
 ```
 
@@ -174,7 +174,7 @@ api.route(ArtistOne, 'artist_one', '/artists/<int:id>')
 
 运行 `application.py` 脚本来启动服务器：
 
-```
+```plain
 $ python application.py
 ```
 
@@ -184,7 +184,7 @@ $ python application.py
 
 在命令行中使用 [curl][12] ：
 
-```
+```plain
 curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artist", "attributes":{"name":"Salvador Dali", "birth_year":1904, "genre":"Surrealism"}}}' http://localhost:5000/artists
 ```
 
@@ -299,7 +299,7 @@ api.route(ArtistArtwork, 'artist_artworks',
 
 运行 `application.py` 并试着从命令行用 curl 发送一些数据：
 
-```
+```plain
 curl -i -X POST -H 'Content-Type: application/json' -d '{"data":{"type":"artwork", "attributes":{"title":"The Persistance of Memory", "artist_id":1}}}' http://localhost:5000/artworks
 ```
 

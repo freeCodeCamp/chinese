@@ -49,7 +49,7 @@ import React, { Component } from 'react';
 
 通过 Github Pages，你可以轻松的通过免费 GitHub 部署你的网页而无需担心配置问题。他们提供的模块使你无需担心很多事情。如果你坚持到最后，你会发现这项工作就像魔法一样神奇。
 
-## 在我们开始前你需要确定...
+## 在我们开始前你需要确定
 
 ### 你需要决定哪些内容被放到你的网站上
 
@@ -86,7 +86,7 @@ import React, { Component } from 'react';
 -   切换到控制台，通过 npm 执行 `npm install create-react-app` 安装这个模块(确保在次之前安装了 `npm` —— [此处查看更多信息][11])
 -   接着运行 `npm create-react-app ${project-name}` 构建代码，创建出来的文件目录结构会像以下展示的这样
 
-```
+```plain
 my-portfolio-app
 ├── README.md (Github的项目描述文件)
 ├── node_modules (存储项目所需的模块)

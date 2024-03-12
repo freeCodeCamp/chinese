@@ -197,7 +197,7 @@ On the bright side, if you read the documentation a little longer, you’ll find
 
 It reads:
 
-> It helps you write applications that behave consistently…
+> It helps you write applications that behave consistently……
 
 You see that?
 
@@ -438,7 +438,7 @@ You’ll learn to flex your Redux muscles from a “known” concept such as Rea
 
 The React app we’ll be working with has been bootstrapped with `create-react-app`. Thus, the structure of the app is one you’re already used to.
 
-You may grab the repo from [Github][13] if you want to follow along — which I recommend.
+You may grab the repo from [Github][13] if you want to follow along—which I recommend.
 
 There’s an `index.js` entry file that renders an `<App />` component to the `DOM`.
 
@@ -482,7 +482,7 @@ Have a good look at the `state` object.
 
 There’s just one field, `tech`, in the `state` object and it is passed down as `prop` into the `HelloWorld` component as shown below:
 
-```
+```plain
 <HelloWorld tech={this.state.tech}/>
 ```
 
@@ -988,7 +988,7 @@ Since Redux manages the app’s `state`, all you need to do is feed in `state` f
 
 Another big question you’re likely asking yourself is “Why did I have to go through all this stress just to have the state of my App managed by Redux?”
 
-Reducer, Store, createStore blah, blah, blah …
+Reducer, Store, createStore blah, blah, blah ……
 
 Yeah, I get it.
 
@@ -1068,7 +1068,7 @@ The GIF!
 
 Here’s how this is different from the previous example. In this scenario, the user is performing certain actions that influence the state of the application. In the former example, all we did was display the initial state of the app with no user actions taken into consideration.
 
-### What is a Redux Action?
+### What is a Redux Action
 
 When you walk into a bank, the Cashier receives your action, that is, your intent for coming into the bank. In our previous example, it was `WITHDRAWAL_MONEY` . The only way money leaves the bank Vault is if you make your action or intent known to the Cashier.
 
@@ -1553,7 +1553,7 @@ Also, the `tech` of the button is grabbed from the dataset of the button. You se
 
 Now we’re dispatching the right actions. Can we tell if this works as expected now?
 
-### Actions Dispatched. Does this Thing Work?
+### Actions Dispatched. Does this Thing Work
 
 Firstly, here’s a short quiz question. Upon clicking a `button` and consequently dispatching an action, what happens next within Redux? Which of the Redux actors come into play?
 
@@ -1655,7 +1655,7 @@ This is exactly what we’re doing with the Reducer.
 
 The `switch` statement checks the `type` of the action.
 
-What do you want to do? Withdraw, deposit, whatever…
+What do you want to do? Withdraw, deposit, whatever……
 
 After that, we then handle the known `cases` we expect. For now, there’s just one `case`which is `SET_TECHNOLOGY`.
 
@@ -1813,7 +1813,7 @@ Having the rendering of the `<App/>` wrapped within a function means we can now 
 store.subscribe(render);
 ```
 
-Where `render` is the entire render logic for the `<App />` — the one we just refactored.
+Where `render` is the entire render logic for the `<App />`—the one we just refactored.
 
 You understand what’s happening here, right?
 
@@ -1959,7 +1959,7 @@ There are two things you need to do.
 
 (ii) Handle the increase and decrease actions to actually affect the displayed time on the counter.
 
-### Chapter 4: Building Skypey: A More Advanced Example.
+### Chapter 4: Building Skypey: A More Advanced Example
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*itX4GQXZ8hrq5Fr7t3zQyg.png)
 
@@ -2184,7 +2184,7 @@ By association, you wouldn’t be wrong to have a picture like this in your mind
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*FPioi1H_8bq2mtnmnHzTbQ.png)
 
-Hmmm….A giant user box with nested contacts
+Hmmm…….A giant user box with nested contacts
 
 You may then go on to describe the state of the app like this.
 
@@ -2500,7 +2500,7 @@ However, if `users` were stored in the state as an object, when retrieved and pa
 
 So, how do we resolve this?
 
-#### **Solution #1a**:
+#### **Solution #1a**
 
 Use `Lodash` for iterating over objects.
 
@@ -2515,7 +2515,7 @@ import _ from 'lodash';
 
 You call the `map` method on the `Lodash` object, `_.map()`. You pass in the object to be iterated over, and then pass in a callback function like you would with the default JavaScript `map` function.
 
-#### **Solution #1b:**
+#### **Solution #1b**
 
 Consider the usual way you’d map over an array to create a rendered list of users:
 
@@ -2608,7 +2608,7 @@ You don’t want a message sent yesterday, showing like it was sent today. Order
 
 So, how would you solve this?
 
-#### **Solution #2**:
+#### **Solution #2**
 
 Keep a separate array of IDs to denote order.
 
@@ -2795,7 +2795,7 @@ Then involve the render function to have the App render correctly.
 render();
 ```
 
-Now, import the `store` you created earlier …
+Now, import the `store` you created earlier ……
 
 ```js
 import store from './store';
@@ -2837,11 +2837,11 @@ Hmmm. What have I done?
 
 `console.log(store.getState())` is the bit you’re familiar with. This will log the state retrieved from the store.
 
-The first line, `console.log("%c Rendered with ? ??", "background: purple; color: #fff");` will log the text, “Rendered with …”, plus some emoji, and some CSS style to make it distinguishable. The `%c` written before the “Rendered with …” text makes it possible to use the CSS styling.
+The first line, `console.log("%c Rendered with ? ??", "background: purple; color: #fff");` will log the text, “Rendered with ……”, plus some emoji, and some CSS style to make it distinguishable. The `%c` written before the “Rendered with ……” text makes it possible to use the CSS styling.
 
 Enough talking. Here’s the complete code:
 
-`` `**index.js**` ``
+`**index.js**`
 
 ```js
 import ReactDOM from 'react-dom';
@@ -3052,7 +3052,7 @@ _If you’re coding along, resize the browser to see the beautiful view on mobil
 
 _Hang In there!_
 
-### _Got questions?_
+### _Got questions_
 
 _It’s perfectly normal to have questions._
 
@@ -3197,7 +3197,7 @@ This is essentially the same as `{contacts: contacts}`.
 
 Hence, the `return state` statement within the reducer will return this value, `{contacts: contacts}` as the initial state of the application.
 
-At this point, the app now works — just like before. The only difference here is that the initial state of the application is now managed by the Reducer.
+At this point, the app now works—just like before. The only difference here is that the initial state of the application is now managed by the Reducer.
 
 Let’s keep refactoring.
 
@@ -3209,7 +3209,7 @@ What’s the implication of this?
 
 It is like having just one Cashier in the entire bank hall. How scalable is that?
 
-Even if the Cashier can do all the work effectively, it may be more manageable — and perhaps a better customer experience — to have more than one Cashier in the bank hall.
+Even if the Cashier can do all the work effectively, it may be more manageable—and perhaps a better customer experience—to have more than one Cashier in the bank hall.
 
 Someone’s got to attend to everybody, and it’s a lot of work for just one person!
 
@@ -3237,7 +3237,7 @@ However, consider the state object of the more complex Skypey application:
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*FWFzkdKwxIVln7PQFsLKxQ.png)
 
-Having a single reducer manage the entire state object is doable — but not the best approach.
+Having a single reducer manage the entire state object is doable—but not the best approach.
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*aD_wEZMqWfAOBtZpcWmE3g.png)
 
@@ -4043,7 +4043,7 @@ What’s changed?
 
 Remember that the `activeUserId` is passed as props into the `ChatWindow`component.
 
-Now, instead of rendering the text, _Conversation for user id: …_ , render the `Header`component.
+Now, instead of rendering the text, _Conversation for user id: ……_ , render the `Header`component.
 
 The Header component cannot be rendered properly without having knowledge of the clicked user. Why?
 
@@ -4195,7 +4195,7 @@ Remember that the messages passed into `Chats` are specifically the messages for
 
 Whereas `state.messages` holds all the messages for every user contact, `state.messages[activeUserId]` will fetch the messages for the active user.
 
-This is why every conversation is mapped to the user id of the user — for easy retrieval as we have done.
+This is why every conversation is mapped to the user id of the user—for easy retrieval as we have done.
 
 Grab the active user’s messages and pass them as props in `Chats`.
 
@@ -4600,7 +4600,7 @@ In `MessageInput.js`, add a `handleSubmit` event handler as shown below:
 ...
 ```
 
-Think about it for a minute. To update the list of messages in the conversation…we need to dispatch an action!
+Think about it for a minute. To update the list of messages in the conversation……we need to dispatch an action!
 
 This action needs to take the `value` in the input box, and add it to the messages of the active user.
 
@@ -4671,7 +4671,7 @@ Let’s fix that next.
 
 Here’s a list of all the reducers we’ve got at this point:
 
-```
+```plain
 activeUserId.js
 contacts.js
 messages.js
@@ -5068,7 +5068,7 @@ Include the delete message functionality shown here.
 
 Those should be fun to implement!
 
-### Chapter 5: What Next?
+### Chapter 5: What Next
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*6cQLUZREZeokTDCuYJxxPg.png)
 
@@ -5090,9 +5090,9 @@ The following section is an excerpt from, [Understanding Redux 2][32]_._
 >
 > _Back to Redux._
 >
-> _Setting up the Reducer, subscribing to the Store, listening and re-rendering upon state changes … we can reduce some of the hassles._
+> _Setting up the Reducer, subscribing to the Store, listening and re-rendering upon state changes …… we can reduce some of the hassles._
 >
-> _Like Internet banking brings a breath of fresh air to the process of withdrawing money from your account, ‘bindings’ such as React-redux also make it slightly easier to use Redux with React — without performance concerns._
+> _Like Internet banking brings a breath of fresh air to the process of withdrawing money from your account, ‘bindings’ such as React-redux also make it slightly easier to use Redux with React—without performance concerns._
 
 How sweet.
 

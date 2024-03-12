@@ -93,7 +93,7 @@ $ deno run --allow-net server.ts
 
 如果你有过使用 JavaScript 开发的经验，你可能会注意到我们导入模块的方式有些不一样。我们在这里是这样导入模块的：
 
-```
+```plain
 import { Application } from "https://deno.land/x/oak/mod.ts";
 ```
 
@@ -156,7 +156,7 @@ await app.listen({ port });
 
 其中关于 `Router` 的相关代码是：
 
-```
+```plain
 const router = new Router();
 router.get("/", ({ response }: { response: any }) => {
   response.body = {
@@ -187,7 +187,7 @@ router.get('/', ({ response }: { response: any }) => {
 
 接下来我所编写的就是使用 `response` 变量，并设置 `response.body.message = "hello world";`。
 
-```
+```plain
 response.body = {
   message: "hello world",
 };
@@ -195,7 +195,7 @@ response.body = {
 
 最后同样重要的是，我们编写了如下两行代码：
 
-```
+```plain
 app.use(router.routes());
 app.use(router.allowedMethods());
 ```
@@ -323,7 +323,7 @@ export default router;
 
 接下来我们导入我们的控制器：
 
-```
+```plain
 import todoController from "../controllers/todo.ts";
 ```
 
@@ -380,7 +380,7 @@ app.use(router.allowedMethods());
 
 -   将其替换为：
 
-```
+```plain
 app.use(todoRouter.routes());
 app.use(todoRouter.allowedMethods());
 ```
@@ -1070,7 +1070,7 @@ export default {
 
 我们这里只需简单地加一条过滤方法：
 
-```
+```plain
 const allTodos = todos.filter((t) => t.id !== params.id);
 ```
 

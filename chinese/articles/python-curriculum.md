@@ -11,7 +11,7 @@ Some of these improvements - including 4 new Python certifications - will go liv
 
 Note: if you're already going through the current version of the curriculum, keep going. As you'll see, there's no reason to stop.
 
-### The Version 7.0 curriculum...
+### The Version 7.0 curriculum
 
 Will take a person with very basic computer knowledge...
 
@@ -31,7 +31,7 @@ With Version 7.0, you'll still learn Front End Web Development skills and Back E
 
 And now you'll also learn Python and its powerful suite of Data Science and Machine Learning tools.
 
-## Improvement #1: We're adding 4 new data-focused certifications.
+## Improvement #1: We're adding 4 new data-focused certifications
 
 In addition to the 6 certifications we've had since 2017, we're adding 4 new certifications, all using Python:
 
@@ -42,7 +42,7 @@ In addition to the 6 certifications we've had since 2017, we're adding 4 new cer
 
 You'll use libraries like Numpy, Matplotlib, and TensorFlow to build a wide variety of projects.
 
-## Improvement #2: Instead of individual lessons, everything will be a project.
+## Improvement #2: Instead of individual lessons, everything will be a project
 
 Our current curriculum has blocks of individual lessons. These can feel disconnected from one another - and even a bit like "interactive documentation."
 
@@ -58,7 +58,7 @@ For example, instead of learning JavaScript through a series of 200 discreet les
 
 We will build in a lot more repetition to help you strengthen your "muscle memory" for coding.
 
-## Improvement #3: We're adding Crash Courses on Git, Linux, and SQL.
+## Improvement #3: We're adding Crash Courses on Git, Linux, and SQL
 
 Past versions of the freeCodeCamp curriculum taught Git, Linux, and SQL.
 
@@ -76,7 +76,7 @@ These will not be certifications. They will be stand-alone tutorials. And you'll
 
 Since we're teaching these in your browser, we can only approximate a full server environment. But we're confident we can still teach you a lot of the core concepts interactively.
 
-# Here's the full Version 7.0 curriculum. All 111 projects.
+# Here's the full Version 7.0 curriculum. All 111 projects
 
 By the end of 2020, freeCodeCamp's curriculum will look something like this:
 
@@ -271,13 +271,13 @@ By the end of 2020, freeCodeCamp's curriculum will look something like this:
 -   Linear Regression Fuel Economy Calculator
 -   Neural Network Text Analyzer
 
-### 🛤️ And our 3 Crash Courses:
+### 🛤️ And our 3 Crash Courses
 
 -   Relational Databases - Learn SQL by Building a University Database
 -   Linux - Learn Bash basics by Playing Capture the Flag
 -   Git - Learn Git by Creating an Open Source Project
 
-### 🏋️‍♀️ And, of course, our Coding Interview Prep section (already available) offers thousands of hours of extra practice:
+### 🏋️‍♀️ And, of course, our Coding Interview Prep section (already available) offers thousands of hours of extra practice
 
 -   Advanced Algorithms (9 algorithms)
 -   Advanced Data Structures (46 algorithms)
@@ -301,11 +301,11 @@ We're rolling out these changes in 4 stages. None of these are breaking changes.
 
 # Frequently Asked Questions
 
-## I'm in the middle of the current curriculum. Should I keep going?
+## I'm in the middle of the current curriculum. Should I keep going
 
 Yes. Keep going. None of this will affect anything you're learning today. The new curriculum is fully backward compatible.
 
-## I've already earned certifications with the current curriculum. What will happen to these?
+## I've already earned certifications with the current curriculum. What will happen to these
 
 Congrats on your certifications. Good news: our current 6 certifications aren't changing. They will still be in the curriculum, and each of them will keep the same 5 Certification Projects.
 
@@ -313,7 +313,7 @@ Remember: in order to earn a certification, all you need to do is build its 5 Ce
 
 So even though we're replacing these lessons with Practice Projects, you won't need to go back and do these. The Practice Projects - just like the lessons - will be completely optional.
 
-## What are the other changes I should know about?
+## What are the other changes I should know about
 
 We are changing the name of the "Quality Assurance and Information Security" certification to just be "Quality Assurance." We're doing this because we have a new certification focused just on Information Security.
 
@@ -321,7 +321,7 @@ The Quality Assurance certification will cover a lot more testing. Two of its ol
 
 If you've already earned the old Quality Assurance certification, you won't need to build these 2 new projects. But you can build them if you want for extra practice.
 
-## Do I need to do all 3,000 hours of coursework before I can start applying for jobs?
+## Do I need to do all 3,000 hours of coursework before I can start applying for jobs
 
 In practice, very few people complete the entire curriculum before going out and getting a job.
 
@@ -329,13 +329,13 @@ So don't think of this curriculum as "everything you should know before you star
 
 Instead, think of this as: "everything a modern developer should know early in their career." You can keep learning new skills through the curriculum even after you've gotten your first developer job.
 
-## Can I apply for data science jobs with this?
+## Can I apply for data science jobs with this
 
 Data Science is a multi-disciplinary field that combines programming, statistics, and domain knowledge. It is not an entry-level field, but rather a career you transition into once you get your Ph.D. or work a variety of jobs in industry.
 
 We teach a lot of data science tools because these are valuable for generalist developers as well. Note that we do not teach the math or industry-specific domain knowledge you'd need as a data scientist. So if your goal is to become a data scientist, you'll probably want to learn those in school or on the job.
 
-## What exactly will be added on January 1?
+## What exactly will be added on January 1
 
 On January 1, you will be able to earn each of the new 4 Python-focused certifications by building their 5 Certification Projects.
 

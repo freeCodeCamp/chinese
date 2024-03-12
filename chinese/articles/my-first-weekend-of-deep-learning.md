@@ -76,7 +76,7 @@ model.fit(OR, Y_truth, n_epoch=2000, snapshot_epoch=False)
 
 **输出**
 
-```
+```plain
 Training Step: 2000  | total loss: 0.00072 | time: 0.002s
 | SGD | epoch: 2000 | loss: 0.00072 -- iter: 4/4
 Testing OR operator

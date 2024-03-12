@@ -22,7 +22,7 @@ I’m running a small Internet company — Listen Notes, Inc. — with only one 
 
 I’ll share with you my experience about starting an internet company. Building an internet product is not like building an iPhone or a pyramid. Your product doesn’t need to be perfect at the beginning. If you are building something useful, other people will tell you what to do next. And you’ll figure out what’s next. Generally, you should be comfortable dealing with uncertainty, if you want to start your own company.
 
-The first version of Facebook was launched in early February 2004, which was an undergraduate student’s mere four weeks worth of work. It was a good enough product with good enough engineering. Every Computer Science college graduate nowadays should be able to build the first version of Facebook over a weekend, using a modern web programming framework (e.g., Rails, Django…).
+The first version of Facebook was launched in early February 2004, which was an undergraduate student’s mere four weeks worth of work. It was a good enough product with good enough engineering. Every Computer Science college graduate nowadays should be able to build the first version of Facebook over a weekend, using a modern web programming framework (e.g., Rails, Django……).
 
 Companies such as Google, Snapchat, Spotify, Amazon, Twitter, and others are all great internet companies in our generation.
 
@@ -38,9 +38,9 @@ Listen Notes is a podcast search engine website. You type in a keyword and you s
 
 [https://www.listennotes.com/][1]
 
-Let’s take a step back to talk about podcasts. A podcast is a type of media format. Some people call it “on-demand radio.” We consume tons of media content everyday. We watch YouTube videos, watch TVs, read books, listen to music, and listen to podcasts. We consume media content because we want to get information, gain knowledge, and be entertained. Nowadays you can literally learn any topics by listening to podcasts. You can listen to podcasts while your eyes & hands are busy (e.g., driving, working out, walking, doing housework…).
+Let’s take a step back to talk about podcasts. A podcast is a type of media format. Some people call it “on-demand radio.” We consume tons of media content everyday. We watch YouTube videos, watch TVs, read books, listen to music, and listen to podcasts. We consume media content because we want to get information, gain knowledge, and be entertained. Nowadays you can literally learn any topics by listening to podcasts. You can listen to podcasts while your eyes & hands are busy (e.g., driving, working out, walking, doing housework……).
 
-In early 2017, I found myself consuming more information from podcasts than from other media formats (e.g., TVs, books…). I needed a podcast search engine that I could use to search & find individual episodes to binge listen to. In hindsight, a podcast search engine should be a very straightforward thing to exist. But I couldn’t find a good one. So I spent less than one week building a prototype of Listen Notes, the podcast search engine birthed out of my own wishes and necessities.
+In early 2017, I found myself consuming more information from podcasts than from other media formats (e.g., TVs, books……). I needed a podcast search engine that I could use to search & find individual episodes to binge listen to. In hindsight, a podcast search engine should be a very straightforward thing to exist. But I couldn’t find a good one. So I spent less than one week building a prototype of Listen Notes, the podcast search engine birthed out of my own wishes and necessities.
 
 Very first version of Listen Notes. Credits: Lifehacker I launched the prototype and used it a lot myself. But I didn’t touch the code for about nine months, until I decided to work on it full-time after I left my first failed startup. That was September 2017. Cut to 1.5 years later, I’m still having fun working on Listen Notes :)
 
@@ -76,7 +76,7 @@ For VPS, I recommend using something simple at the beginning, e.g., DigitalOcean
 
 Such backend architecture is pretty common for running an online service.
 
-The client side (e.g., browsers) sends requests. The load balancer distributes requests evenly to web servers. We typically run a lot of web servers, where the server side code is running (e.g., Rails, Django…). We need a datastore to store our data. Web servers interact with the datastore to read and write data.
+The client side (e.g., browsers) sends requests. The load balancer distributes requests evenly to web servers. We typically run a lot of web servers, where the server side code is running (e.g., Rails, Django……). We need a datastore to store our data. Web servers interact with the datastore to read and write data.
 
 On the left hand side, it’s synchronous processing. Here comes a request, and the web server processes it and returns a response right away. It’s synchronous.
 
@@ -100,7 +100,7 @@ Learn tech stacks of real companies on stackshare.io Listen to Software Engineer
 
 As end users, we get tons of notifications from online services via email, SMS, and push notifications. When an Uber driver is approaching, we get push notifications. When we shop on Amazon, we get email notifications (typically with receipts). When our bank accounts experience problems, we get SMS notifications.
 
-Let’s turn the table. When we build online services, how do we send notifications to users? There’s a service or API for each notification channel, e.g., SendGrid or Amazon SES for email, Twilio for SMS…
+Let’s turn the table. When we build online services, how do we send notifications to users? There’s a service or API for each notification channel, e.g., SendGrid or Amazon SES for email, Twilio for SMS……
 
 Next, we need some kind of triggers to initiate notifications.
 
@@ -122,7 +122,7 @@ And we need a dev environment for development purposes, which is typically used 
 
 For Listen Notes, we use Vagrant & VirtualBox to set up a virtual machine. And we run everything inside this virtual machine.
 
-Since the backend code of Listen Notes is primarily written in Python/Django, I use PyCharm to write code. I know, it’s not VS Code or whatever cool text editors others use. But I’m 1000x more productive using PyCharm than using other text editors - though, I was a Vim user for 5 years and an Emacs user for another 6 years :) It’s like some people like spicy food, while others don’t. We can’t blame people who don’t like spicy food, right? Don’t get involved in the religious war of IDEs, languages, technologies… GETTING THINGS DONE™ is more important.
+Since the backend code of Listen Notes is primarily written in Python/Django, I use PyCharm to write code. I know, it’s not VS Code or whatever cool text editors others use. But I’m 1000x more productive using PyCharm than using other text editors - though, I was a Vim user for 5 years and an Emacs user for another 6 years :) It’s like some people like spicy food, while others don’t. We can’t blame people who don’t like spicy food, right? Don’t get involved in the religious war of IDEs, languages, technologies…… GETTING THINGS DONE™ is more important.
 
 In terms of front-end engineering, I have very little to share here. Listen Notes has only a website. We don’t have native apps (except for an experimental Just Listen app).
 
@@ -142,7 +142,7 @@ Nowadays, servers are elastic or even ephemeral, with on-demand configurations t
 
 Internet companies deploy code pretty frequently nowadays, at least once per week or even many times a day. Some companies do continuous deployment, shipping code whenever there’s a new git commit.
 
-For Listen Notes, I’ve got a quick script to deploy code, where I can specify the deployment environment, server type, and git commit SHA as parameters. So I can push a button and deploy a specific version of code (e.g., HEAD, or any git commit) to specific servers (e.g., web, API, worker…) in a specific environment (e.g., production, staging…).
+For Listen Notes, I’ve got a quick script to deploy code, where I can specify the deployment environment, server type, and git commit SHA as parameters. So I can push a button and deploy a specific version of code (e.g., HEAD, or any git commit) to specific servers (e.g., web, API, worker……) in a specific environment (e.g., production, staging……).
 
 We deploy new code, but we don’t necessarily release new features. Nowadays we do feature toggles in the code, which is basically some if-else statements. We can hide new code behind an if statement, and we use the feature toggle variable to control whether or not to execute the new code. We typically store the feature toggle variable in some kind of datastore, e.g., Redis. We can go very fancy here. We can turn on the new feature to 10% of users first, then 20%, then 50%, then 100%.
 
@@ -158,13 +158,13 @@ When it comes to internal tools, I see this iceberg image. Internal tools are a 
 
 If you have never operated a popular online service before, you won’t be aware that you need to build a lot of tools to use internally (by yourself, by your employees).
 
-Different companies build different internal tools for various purposes. So far, I’ve built some internal tools to help development (e.g., preview email notification without actually sending emails), to provide God’s view (e.g., see search queries, quickly pull info for a particular user…), and to fight bad actors (e.g., content moderation, detect spam…).
+Different companies build different internal tools for various purposes. So far, I’ve built some internal tools to help development (e.g., preview email notification without actually sending emails), to provide God’s view (e.g., see search queries, quickly pull info for a particular user……), and to fight bad actors (e.g., content moderation, detect spam……).
 
 So by this point, we know how to start a company with \$500 and we know how to build an online service with good enough engineering.
 
 Profit!
 
-Oh, wait….
+Oh, wait…….
 
 How do people find the thing you have built? How do you make money?
 
@@ -172,7 +172,7 @@ Pinterest CEO says key to success was marketing, not engineering. Well, this is 
 
 Engineering is deterministic. Marketing and business are non-deterministic.If you want to build an online service, you can build it. But we live in a noisy world now. Tons of things are competing for our attention. Marketing is super hard.
 
-I’m not an expert of marketing. I’m still figuring out how to do better marketing myself…
+I’m not an expert of marketing. I’m still figuring out how to do better marketing myself……
 
 There are multiple channels that you can use to get your messages out. Try them all. Find the most effective one. Double down on that one. A recommendation here: The 19 Channels You Can Use to Get Traction
 
@@ -222,7 +222,7 @@ I’m running a small Internet company — Listen Notes, Inc. — with only one 
 
 I’ll share with you my experience about starting an internet company. Building an internet product is not like building an iPhone or a pyramid. Your product doesn’t need to be perfect at the beginning. If you are building something useful, other people will tell you what to do next. And you’ll figure out what’s next. Generally, you should be comfortable dealing with uncertainty, if you want to start your own company.
 
-The first version of Facebook was launched in early February 2004, which was an undergraduate student’s mere four weeks worth of work. It was a good enough product with good enough engineering. Every Computer Science college graduate nowadays should be able to build the first version of Facebook over a weekend, using a modern web programming framework (e.g., Rails, Django…).
+The first version of Facebook was launched in early February 2004, which was an undergraduate student’s mere four weeks worth of work. It was a good enough product with good enough engineering. Every Computer Science college graduate nowadays should be able to build the first version of Facebook over a weekend, using a modern web programming framework (e.g., Rails, Django……).
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_eUI1qz9hToUB2j8J.jpeg)
 
@@ -244,9 +244,9 @@ Listen Notes is a podcast search engine website. You type in a keyword and you s
 
 [https://www.listennotes.com/][8]
 
-Let’s take a step back to talk about podcasts. A podcast is a type of media format. Some people call it “on-demand radio.” We consume tons of media content everyday. We watch YouTube videos, watch TVs, read books, listen to music, and listen to podcasts. We consume media content because we want to get information, gain knowledge, and be entertained. Nowadays you can literally learn any topics by listening to podcasts. You can listen to podcasts while your eyes & hands are busy (e.g., driving, working out, walking, doing housework…).
+Let’s take a step back to talk about podcasts. A podcast is a type of media format. Some people call it “on-demand radio.” We consume tons of media content everyday. We watch YouTube videos, watch TVs, read books, listen to music, and listen to podcasts. We consume media content because we want to get information, gain knowledge, and be entertained. Nowadays you can literally learn any topics by listening to podcasts. You can listen to podcasts while your eyes & hands are busy (e.g., driving, working out, walking, doing housework……).
 
-In early 2017, I found myself consuming more information from podcasts than from other media formats (e.g., TVs, books…). I needed a podcast search engine that I could use to search & find individual episodes to binge listen to. In hindsight, a podcast search engine should be a very straightforward thing to exist. But I couldn’t find a good one. So I spent less than one week building a prototype of Listen Notes, the podcast search engine birthed out of my own wishes and necessities.
+In early 2017, I found myself consuming more information from podcasts than from other media formats (e.g., TVs, books……). I needed a podcast search engine that I could use to search & find individual episodes to binge listen to. In hindsight, a podcast search engine should be a very straightforward thing to exist. But I couldn’t find a good one. So I spent less than one week building a prototype of Listen Notes, the podcast search engine birthed out of my own wishes and necessities.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_pXGHwh1sY_r0Hdk0.png)
 
@@ -302,7 +302,7 @@ For VPS, I recommend using something simple at the beginning, e.g., [DigitalOcea
 
 Such backend architecture is pretty common for running an online service.
 
-The client side (e.g., browsers) sends requests. The load balancer distributes requests evenly to web servers. We typically run a lot of web servers, where the server side code is running (e.g., Rails, Django…). We need a datastore to store our data. Web servers interact with the datastore to read and write data.
+The client side (e.g., browsers) sends requests. The load balancer distributes requests evenly to web servers. We typically run a lot of web servers, where the server side code is running (e.g., Rails, Django……). We need a datastore to store our data. Web servers interact with the datastore to read and write data.
 
 On the left hand side, it’s synchronous processing. Here comes a request, and the web server processes it and returns a response right away. It’s synchronous.
 
@@ -335,7 +335,7 @@ Two recommendations here:
 
 As end users, we get tons of notifications from online services via email, SMS, and push notifications. When an Uber driver is approaching, we get push notifications. When we shop on Amazon, we get email notifications (typically with receipts). When our bank accounts experience problems, we get SMS notifications.
 
-Let’s turn the table. When we build online services, how do we send notifications to users? There’s a service or API for each notification channel, e.g., [SendGrid][30] or [Amazon SES][31] for email, [Twilio][32] for SMS…
+Let’s turn the table. When we build online services, how do we send notifications to users? There’s a service or API for each notification channel, e.g., [SendGrid][30] or [Amazon SES][31] for email, [Twilio][32] for SMS……
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_SrGLHpymGagenKzF.jpeg)
 
@@ -363,7 +363,7 @@ And we need a dev environment for development purposes, which is typically used 
 
 For Listen Notes, we use [Vagrant][34] & [VirtualBox][35] to set up a virtual machine. And we run everything inside this virtual machine.
 
-Since the backend code of Listen Notes is primarily written in Python/Django, I use PyCharm to write code. I know, it’s not [VS Code][36] or whatever cool text editors others use. But I’m 1000x more productive using PyCharm than using other text editors - though, I was a Vim user for 5 years and an Emacs user for another 6 years :) It’s like some people like spicy food, while others don’t. We can’t blame people who don’t like spicy food, right? Don’t get involved in the religious war of IDEs, languages, technologies… GETTING THINGS DONE™ is more important.
+Since the backend code of Listen Notes is primarily written in Python/Django, I use PyCharm to write code. I know, it’s not [VS Code][36] or whatever cool text editors others use. But I’m 1000x more productive using PyCharm than using other text editors - though, I was a Vim user for 5 years and an Emacs user for another 6 years :) It’s like some people like spicy food, while others don’t. We can’t blame people who don’t like spicy food, right? Don’t get involved in the religious war of IDEs, languages, technologies…… GETTING THINGS DONE™ is more important.
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_En1rYW0gxYbkH0FA.jpeg)
 
@@ -391,7 +391,7 @@ Nowadays, servers are elastic or even ephemeral, with on-demand configurations t
 
 Internet companies deploy code pretty frequently nowadays, at least once per week or even many times a day. Some companies do continuous deployment, shipping code whenever there’s a new git commit.
 
-For Listen Notes, I’ve got a quick script to deploy code, where I can specify the deployment environment, server type, and git commit SHA as parameters. So I can push a button and deploy a specific version of code (e.g., HEAD, or any git commit) to specific servers (e.g., web, API, worker…) in a specific environment (e.g., production, staging…).
+For Listen Notes, I’ve got a quick script to deploy code, where I can specify the deployment environment, server type, and git commit SHA as parameters. So I can push a button and deploy a specific version of code (e.g., HEAD, or any git commit) to specific servers (e.g., web, API, worker……) in a specific environment (e.g., production, staging…).
 
 We deploy new code, but we don’t necessarily release new features. Nowadays we do [feature toggles][42] in the code, which is basically some if-else statements. We can hide new code behind an if statement, and we use the feature toggle variable to control whether or not to execute the new code. We typically store the feature toggle variable in some kind of datastore, e.g., Redis. We can go very fancy here. We can turn on the new feature to 10% of users first, then 20%, then 50%, then 100%.
 
@@ -413,7 +413,7 @@ When it comes to internal tools, I see this iceberg image. Internal tools are a 
 
 If you have never operated a popular online service before, you won’t be aware that you need to build a lot of tools to use internally (by yourself, by your employees).
 
-Different companies build different internal tools for various purposes. So far, I’ve built some internal tools to help development (e.g., preview email notification without actually sending emails), to provide God’s view (e.g., see search queries, quickly pull info for a particular user…), and to fight bad actors (e.g., content moderation, detect spam…).
+Different companies build different internal tools for various purposes. So far, I’ve built some internal tools to help development (e.g., preview email notification without actually sending emails), to provide God’s view (e.g., see search queries, quickly pull info for a particular user……), and to fight bad actors (e.g., content moderation, detect spam……).
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_1i-QbtebgVN1Lqxe.jpeg)
 
@@ -421,7 +421,7 @@ So by this point, we know how to start a company with \$500 and we know how to b
 
 Profit!
 
-Oh, wait….
+Oh, wait…….
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_ws52_8ACRqslINf7.jpeg)
 
@@ -433,7 +433,7 @@ Engineering is deterministic. Marketing and business are non-deterministic.If yo
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/0_bDYZs0OyffawGACf.jpeg)
 
-I’m not an expert of marketing. I’m still figuring out how to do better marketing myself…
+I’m not an expert of marketing. I’m still figuring out how to do better marketing myself……
 
 There are multiple channels that you can use to get your messages out. Try them all. Find the most effective one. Double down on that one. A recommendation here: [The 19 Channels You Can Use to Get Traction][46]
 

@@ -67,7 +67,7 @@ IAM 用户用什么名字都可以，在这里用的是 `serverless-admin`。确
 
 最后，使用 AWS 命令行添加 credentials 。可以根据这个[指引][4]来安装 aws cli。
 
-运行 `aws --version `来确保已经安装成功。如下：
+运行 `aws --version`来确保已经安装成功。如下：
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-04-at-2.02.27-PM.png)
 
@@ -101,7 +101,7 @@ IAM 用户用什么名字都可以，在这里用的是 `serverless-admin`。确
 
 首先，打开 `serverless.yml`。会看到有大量的注释的代码描述了可以再这个文件使用的不同的选项。可以了解一下，下面的文件它们都删除了，便于显示：
 
-```
+```plain
 service: exampleslackapp
 
 provider:
@@ -121,7 +121,7 @@ serverless.yml
 
 如果在终端运行 `serverless invoke -f hello`，会启动 app，输出如下：
 
-```
+```plain
 {
     "statusCode": 200,
     "body": "{\n  "message": "Go Serverless v1.0! Your function executed successfully!",\n  "input": {}\n}"
@@ -156,7 +156,7 @@ serverless.yml
 
 打开默认的函数改成如下：
 
-```
+```plain
 module.exports.hello = (event) => {
   getRon();
 };
@@ -166,7 +166,7 @@ module.exports.hello = (event) => {
 
 `getRon` 方法如下
 
-```
+```plain
 function getRon() {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -236,7 +236,7 @@ const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
 上面的两幅图片是我在 API 文档里面截的，参考文档发起对应请求，这里使用 `request` 方法传入了一个名为 `options` 的对象：
 
-```
+```plain
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
     headers: {
@@ -253,7 +253,7 @@ const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
 然后发起请求：
 
-```
+```plain
   request(options, function(err, resp, body) {
     console.log('error:', err)
     console.log('statusCode:', resp && resp.statusCode)
@@ -263,7 +263,7 @@ const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN`.
 
 最后封装成函数：
 
-```
+```plain
 function postRon(quote) {
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
@@ -282,7 +282,7 @@ function postRon(quote) {
 
 给这个函数命名为 `getRon`，如下：
 
-```
+```plain
 function getRon() {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -295,7 +295,7 @@ function getRon() {
 
 整个代码看起来如下：
 
-```
+```plain
 'use strict';
 let request = require('request');
 const SLACK_OAUTH_TOKEN = process.env.OAUTH_TOKEN
@@ -338,7 +338,7 @@ _注意我的是测试 workspace 所以 channel 名字是 `general`，如果在�
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screen-Shot-2019-08-07-at-10.48.38-PM.png)
 
-如果正常，使用命令 `serverless deploy` 部署。如果有问题，通过 `serverless invoke local -f hello ` 来 debug。
+如果正常，使用命令 `serverless deploy` 部署。如果有问题，通过 `serverless invoke local -f hello` 来 debug。
 
 ---
 
@@ -372,7 +372,7 @@ _注意我的是测试 workspace 所以 channel 名字是 `general`，如果在�
 
 最后，返回代码做最后的调整。如果尝试使用 slash command，会返回错误 - 这是因为 slack 预期收到一个 response，AWS 也预期 endpoint 触达时返回一个响应。修改代码返回 `callback`（[文档][22]）
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   getRon(callback);
 };
@@ -380,7 +380,7 @@ module.exports.hello = (event,context,callback) => {
 
 修改 `getRon` 返回 callback：
 
-```
+```plain
 function getRon(callback) {
   request('https://ron-swanson-quotes.herokuapp.com/v2/quotes', function (err, resp, body) {
     console.log('error:', err)
@@ -394,7 +394,7 @@ function getRon(callback) {
 
 在文件顶部添加 `SUCCESS_RESPONSE`:
 
-```
+```plain
 const SUCCESS_RESPONSE = {
   statusCode: 200,
   body: null
@@ -405,7 +405,7 @@ const SUCCESS_RESPONSE = {
 
 我的代码如下：
 
-```
+```plain
 'use strict';
 let request = require('request');
 const SLACK_OAUTH_TOKEN = OAUTH_TOKEN
@@ -445,11 +445,11 @@ function postRon(quote) {
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Screenshot_2019-08-07-Lambda-Management-Console-1-.png)
 
-代码现在可以运行，我们已经 hardcoded 了 channel name。但是实际上我们想在任何发送 `/ron ` 的 channel 返回名言。
+代码现在可以运行，我们已经 hardcoded 了 channel name。但是实际上我们想在任何发送 `/ron` 的 channel 返回名言。
 
 在函数里面使用 event。
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   console.log(event)
   getRon(callback);
@@ -474,7 +474,7 @@ Now, we can alter our code to save that string as a variable:
 
 `let channel = 'general'`（做为 fallback）
 
-```
+```plain
 module.exports.hello = (event,context,callback) => {
   console.log(event)
   channel = event.body.split("&")[3].split("=")[1]
@@ -485,7 +485,7 @@ module.exports.hello = (event,context,callback) => {
 
 以及 `postRon`:
 
-```
+```plain
   let options = {
     url: 'https://slack.com/api/chat.postMessage',
     headers: {

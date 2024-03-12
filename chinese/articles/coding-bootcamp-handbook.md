@@ -7,13 +7,13 @@
 
 Before you spend thousands of dollars and several months of your life on a coding bootcamp, spend 30 minutes reading this handbook.
 
-# Who is this handbook for?
+# Who is this handbook for
 
 -   Anyone considering attending a bootcamp
 -   Any developer considering founding a bootcamp or teaching at one
 -   Any journalist writing about bootcamps
 
-# For the people who think they're too busy to read this handbook...
+# For the people who think they're too busy to read this handbook
 
 My advice to you boils down to this: **Do your research**.
 
@@ -41,7 +41,7 @@ freeCodeCamp's mission is to help as many people learn to code as possible. Boot
 
 This said, freeCodeCamp has never received any compensation from bootcamps. Several of the big bootcamp chains have approached us about sponsorship. We have always refused.
 
-# Why did I write this handbook?
+# Why did I write this handbook
 
 When you Google "coding bootcamp" or "coding bootcamps in \[city name\]", you find a lot of bootcamp review websites. But there are fundamental problems with these review sites.
 
@@ -61,7 +61,7 @@ Instead of relying on websites full of dubious reviews, you should think for you
 
 This handbook will give you a framework you can use to understand how bootcamps work. It will help you research your options and plan the path to your first developer job.
 
-# What exactly is a bootcamp?
+# What exactly is a bootcamp
 
 ![Coding together](https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -79,7 +79,7 @@ The goal of a bootcamp is to take a classroom full of people who have never work
 
 That's a tall order. And there's a lot of money on the line. Which leads us to the next question.
 
-# Do bootcamps actually work?
+# Do bootcamps actually work
 
 In many cases, yes. Every year, thousands of bootcamp grads get their first developer jobs.
 
@@ -101,7 +101,7 @@ Some bootcamps want to self-regulate the industry before the government is force
 
 Bootcamps have only existed as a form of post-high school education for a few years. They aren't yet regulated like colleges and universities. That is, through accreditation.
 
-## Are bootcamps accredited?
+## Are bootcamps accredited
 
 The short answer is no, they aren't accredited.
 
@@ -152,7 +152,7 @@ Many prominent bootcamps are a part of this initiative. But some prominent bootc
 
 A bootcamp's membership in the CIRR isn't the same thing as getting accredited, but it's a good start.
 
-# What kind of salaries do bootcamp graduates get?
+# What kind of salaries do bootcamp graduates get
 
 Based on public data, bootcamp graduates earn the same starting salary as other entry-level developers. This includes computer science majors and other university graduates who learned to code on their own.
 
@@ -160,13 +160,13 @@ The biggest factor in how much money you get paid as an entry-level developer is
 
 If a bootcamp says their graduates get higher starting salaries than the graduates of other bootcamps, that means most of their graduates get jobs in more expensive cities like San Francisco.
 
-# How long does it take bootcamp graduates to get a job?
+# How long does it take bootcamp graduates to get a job
 
 This depends on the bootcamp. Some bootcamps have extensive career coaching. Others have close ties to local industry and can help you line up job interviews. Both of these can significantly shorten the number of months you spend applying for jobs afterward.
 
 The post-bootcamp job search takes about 6 months on average.
 
-# What is the completion rate for bootcamps?
+# What is the completion rate for bootcamps
 
 A majority of people who start bootcamps go on to finish them.
 
@@ -186,7 +186,7 @@ On the other hand, wage-garnishing bootcamps (remember those Income Sharing Agre
 
 Also, some bootcamp students decide to drop out for a variety of reasons. These may have nothing to do with the bootcamp itself, such as major life events.
 
-# How often do people graduate from bootcamps but fail to transition into tech?
+# How often do people graduate from bootcamps but fail to transition into tech
 
 Usually by the time people enroll in more selective bootcamps, they've already spent a lot of time coding, and are close to being able to get a developer job. So it's less common for these bootcamp graduates to fail to find a job.
 
@@ -200,7 +200,7 @@ It is not uncommon for graduates of even selective bootcamps to have to apply to
 
 So in many cases, when people fail to transition into tech, it's not really the bootcamp's fault. Some people just underestimate how arduous the job search process can be and give up before they find success.
 
-# What types of bootcamps are there?
+# What types of bootcamps are there
 
 ![An afternoon at a café coworking.](https://images.unsplash.com/photo-1519155031214-e8d583928bf2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -281,7 +281,7 @@ Voilà - a coding bootcamp for 1/10th the cost. And a lot of these online bootca
 
 So before you enroll in an online bootcamp, you should do extra diligence. See whether there is a comparable in-person option in your city.
 
-# What kind of people generally go to bootcamps?
+# What kind of people generally go to bootcamps
 
 All kinds of people attend bootcamps.
 
@@ -306,7 +306,7 @@ Most of them had learned to code on their own for more than 6 months before star
 
 Most bootcamp students already have a university degree - though not usually in computer science.
 
-# Is a bootcamp right for me?
+# Is a bootcamp right for me
 
 This comes down to several factors:
 
@@ -317,7 +317,7 @@ This comes down to several factors:
 
 Let's talk about all of these factors, starting with money.
 
-# Can I afford a bootcamp?
+# Can I afford a bootcamp
 
 ![](https://images.unsplash.com/photo-1553788085-7a4ef80b42d6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -325,7 +325,7 @@ Given infinite time and infinite money, my advice to 100% of people would be: ye
 
 But since time and money are scarce, we should discuss this in more detail.
 
-## How much is bootcamp tuition?
+## How much is bootcamp tuition
 
 As we discussed, some bootcamps are completely free, but these are not representative of the field.
 
@@ -333,27 +333,27 @@ Most bootcamps cost between US $10,000 and $20,000. The longer the program is, t
 
 Some bootcamps don't require you to pay tuition up-front. Instead, they garnish your future wages through something called an "Income Sharing Agreement."
 
-## What are Income Sharing Agreements (ISAs)?
+## What are Income Sharing Agreements (ISAs)
 
 Basically, you sign a contract with these bootcamps. These bootcamps then work closely with the US Internal Revenue Service. They figure out exactly how much money you make, then garnish a percentage of your pre-tax income (usually 17%) for a number of years (usually 2 years).
 
 If your first job out of a bootcamp pays \$50,000 per year, that means you would pay:
 
-```
+```plain
 ($50,000 * 17% = $8,500) * 2 years = $17,000 total
 
 ```
 
 If you made \$80,000 per year:
 
-```
+```plain
 ($80,000 * 17% = $13,600) * 2 years = $27,400 total
 
 ```
 
 If you made \$100,000 per year:
 
-```
+```plain
 ($100,000 * 17% = $17,000) * 2 years = $34,000 total
 
 ```
@@ -368,7 +368,7 @@ It's also unclear what happens if you take out an ISA, and then the bootcamp goe
 
 So again, **do your research**.
 
-## How much are living expenses during a bootcamp?
+## How much are living expenses during a bootcamp
 
 Your living expenses will depend on which city the bootcamp is in, and that city's cost of living.
 
@@ -376,7 +376,7 @@ Living at home with your parents in the midwest? Your costs will be much lower t
 
 You should save enough money to last you through the bootcamp, plus 6 months. This way, you have enough time to find the right job and to cash your first paycheck.
 
-## What is "opportunity cost"?
+## What is "opportunity cost"
 
 Opportunity Cost is a concept from economics that roughly means "foregone earnings."
 
@@ -386,7 +386,7 @@ To get the true cost of attending a coding bootcamp, you should factor in opport
 
 Here is your true cost, assuming an additional 6 months until you get a job and cash your first pay check:
 
-```
+```plain
 Bootcamp Tuition: $15,000
 
 Cost of Living: (9 months * $2,000) = $18,000
@@ -400,7 +400,7 @@ So a $20,000 bootcamp that helps you get a job in 4 months can be cheaper than a
 
 The lesson is simple: don't get too hung up on the cost of coding bootcamp tuition itself. It is only part of the true cost.
 
-# Are my coding skills good enough for a bootcamp?
+# Are my coding skills good enough for a bootcamp
 
 <img src="[https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ"][2] class="kg-image" alt="Check out our post on leadership + culture: [https://blog.hackcapital.com/our-three-ps-people-695a0b971851][3]
 
@@ -448,17 +448,17 @@ This is why I said the approach of "just apply and see if you can get in" is nai
 
 Here's what I recommend you do instead.
 
-## Step #1: Spend a few months learning to code on your own.
+## Step #1: Spend a few months learning to code on your own
 
 Try building freeCodeCamp's 5 Responsive Web Design certification projects. Then try building the 5 JavaScript Algorithms and Data Structures certification projects.
 
 These will ensure you understand the fundamentals. And a lot of coding bootcamps require these as part of their pre-coursework anyway.
 
-## Step #2: Apply for developer jobs.
+## Step #2: Apply for developer jobs
 
 How do you handle employers' resume screens and phone screens? Can you advance to their on-site coding interviews? If so, you may just want to keep applying for jobs. You may not need a coding bootcamp.
 
-## Step #3: Apply for coding bootcamps.
+## Step #3: Apply for coding bootcamps
 
 If you've made it to Step #3, you now know with confidence that you have some basic skills. And you know that you're not yet ready for a developer job.
 
@@ -466,13 +466,13 @@ You can now apply to coding bootcamps with confidence. You won't be too advanced
 
 If they don't accept you, you can just continue your self study and apply to the bootcamp again later.
 
-# How do I choose a bootcamp?
+# How do I choose a bootcamp
 
 The first consideration should be: are there any coding bootcamps in your city? If so, I encourage you to visit them and learn as much as you can about them.
 
 By staying in your current city, you can reduce your cost of living. You can also reduce your stress. You don't have to spend your time shopping for an apartment or learning a new neighborhood. You can spend that time coding.
 
-# Do I need to move to San Francisco for my bootcamp?
+# Do I need to move to San Francisco for my bootcamp
 
 You might think: "But shouldn't I move to San Francisco, where all the developers are?"
 
@@ -488,7 +488,7 @@ You can learn a lot from most experienced developers who have worked in tech for
 
 (And the most elite developers can earn millions of dollars a year. You probably won't find them teaching at bootcamps anyway.)
 
-# What tools should bootcamps be teaching?
+# What tools should bootcamps be teaching
 
 ![Para todo hay solucion](https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
@@ -515,7 +515,7 @@ So don't dismiss a bootcamp because "they teach Rails and I want to learn Node" 
 
 You'll learn the same basic things regardless of which tools the bootcamp teaches.
 
-# How important is a bootcamp's track record?
+# How important is a bootcamp's track record
 
 If a bootcamp that has been around for a few years, you should pay close attention to their track record.
 
@@ -543,7 +543,7 @@ But at the same time, new coding bootcamps have something to prove. Their teache
 
 In the face of sparse data, you need to decide for yourself. Do the people running this bootcamp seem like they know what they're doing? Are they passionate about this?
 
-# Should I visit the campus before I enroll?
+# Should I visit the campus before I enroll
 
 Yes. You are about to make a decision that - when you factor in cost of living and opportunity cost - is tens of thousands of dollars and months of your time.
 
@@ -551,7 +551,7 @@ By all means, book a flight. Even if you're only flying in for a day trip. Talk 
 
 This is an important decision. And in the grand scheme of things, this trip is a small investment of your time and money.
 
-# Should I reach out to past alumni?
+# Should I reach out to past alumni
 
 The answer is always yes. Don't skip this step.
 
@@ -569,7 +569,7 @@ But these people are where you will be a year from now. They are the best window
 
 If you end up going to the bootcamp, these people will be your fellow alumni. This is an opportunity to also make them your mentors.
 
-# Are there free bootcamp alternatives?
+# Are there free bootcamp alternatives
 
 There are a lot of ways you can learn to code without paying anything. Some of these have been around for decades, like the computer section of your local library.
 
@@ -581,7 +581,7 @@ Most developers consider themselves at least partially self-taught. They have us
 
 A chart from Stack Overflow's annual developer survey.
 
-## What are learn-to-code websites?
+## What are learn-to-code websites
 
 There are websites where you can learn to code right in your browser. Some of them - like freeCodeCamp - are completely free.
 
@@ -597,7 +597,7 @@ These learn-to-code websites have forums and may even have local study groups.
 
 Still, many people prefer the traditional classroom environment that bootcamps provide.
 
-## What are "Massive Open Online Courses"?
+## What are "Massive Open Online Courses"
 
 Massive Open Online Courses (MOOCs) are free courses usually taught by university professors. These tend to be lecture-based, and may have homework assignments or exams.
 
@@ -609,7 +609,7 @@ The important thing to note here is that you can learn almost any topic - straig
 
 Always keep this fact in mind when you're considering paid learning resources. They have a high bar to clear to justify their cost.
 
-## Are there free coding textbooks?
+## Are there free coding textbooks
 
 There are thousands of free programming and computer science textbooks. Many of these are Creative Commons licensed or even public domain.
 
@@ -617,11 +617,11 @@ Developers have also sold books that they've since decided to make freely availa
 
 Also, some developers release digital versions of their books for free, and sell physical copies of them.
 
-# What are some paid bootcamp alternatives?
+# What are some paid bootcamp alternatives
 
 Of course, if you have the money, you can put it to use. There are a wide range of career training options to consider.
 
-## Should I go back to university?
+## Should I go back to university
 
 If you already have a university degree, you probably shouldn't go back to university.
 
@@ -631,7 +631,7 @@ I don't recommend enrolling in an undergraduate computer science program to do a
 
 Coding bootcamps are a much faster way to get coding practice. They can help you establish the conceptual baseline you need to work as a developer.
 
-## Can night school courses help me learn to code?
+## Can night school courses help me learn to code
 
 You may be able to find a program in your community that helps adults learn computer skills at night.
 
@@ -641,7 +641,7 @@ Be aware that many of these programs focus on more rudimentary computer skills. 
 
 Before you enroll in any courses, ask them about past alumni who are now working as developers. If they can't provide any, the program may be too basic for you.
 
-## Can I hire a tutor to help me?
+## Can I hire a tutor to help me
 
 Some developers will tutor on the side. You can find them on online classified ad listings.
 
@@ -649,7 +649,7 @@ There are also websites that specialize in pairing students with online tutors.
 
 This can be quite expensive. But if you're able to learn to code on your own, this may be a good option for you. You get the benefit of weekly tutoring session for the fraction of the cost of a bootcamp.
 
-# What is the future for bootcamps?
+# What is the future for bootcamps
 
 The first coding bootcamps were founded less than a decade ago. This is still a young industry.
 
@@ -665,7 +665,7 @@ But there's less money in running bootcamps than there is in financing student d
 
 It's hard to predict what will happen with bootcamps. Here are a few possible directions - with some of them less positive for students than others.
 
-## Will going to a bootcamp become as common as going to a university?
+## Will going to a bootcamp become as common as going to a university
 
 In their current form, bootcamps are not a substitute for a university education. They are a supplement to it.
 
@@ -693,7 +693,7 @@ By the way, if you're in high school and reading this, here's my advice to you: 
 
 Before you take out student loans, look into community colleges. There are also accredited ultra-low-cost university programs. You can do many of these online while working. As always, don't trust their marketing and do your own research.
 
-## Will bootcamps eventually qualify for federal student loans?
+## Will bootcamps eventually qualify for federal student loans
 
 Bootcamps are expensive. There aren't many people who can afford to attend them.
 
@@ -713,7 +713,7 @@ Look who's running the US Department of Education right now. Anything is possibl
 
 There's an alternative to financial complexity. Bootcamps can find new ways to make it more affordable to people paying cash.
 
-## Will bootcamps conglomerate into a few big chains?
+## Will bootcamps conglomerate into a few big chains
 
 This has already happened to an extent.
 
@@ -725,7 +725,7 @@ There is a right size to any operation. It's unclear what the right size for a c
 
 Some of the best bootcamps only have one location. Others are able to keep quality high across multiple campuses. A lot of their success comes down to the quality of their leadership.
 
-## Will the bootcamp model spread into non-coding fields like law and accounting?
+## Will the bootcamp model spread into non-coding fields like law and accounting
 
 Software development is a unique profession. It is unencumbered by regulatory bodies.
 
@@ -737,7 +737,7 @@ Other fields have bureaucracies in place to shut people out. For example, in the
 
 Without major changes, bootcamps won't work for heavily regulated fields like these.
 
-## Will bootcamps merge with traditional university programs to create a new kind of school?
+## Will bootcamps merge with traditional university programs to create a new kind of school
 
 There are already programs that take inspiration from both universities and bootcamps.
 
@@ -753,7 +753,7 @@ Imagine a school with nonstop internships, where you work in your desired field.
 
 There are already programs like this in Europe. And over here in the US - well, we can dream, can't we?
 
-# What are your final words of advice?
+# What are your final words of advice
 
 Your developer job search will come down to 3 things:
 

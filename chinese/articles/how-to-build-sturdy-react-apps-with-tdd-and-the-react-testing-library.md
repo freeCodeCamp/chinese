@@ -1,226 +1,223 @@
 > -   原文地址：[How to build sturdy React apps with TDD and the React Testing Library](https://www.freecodecamp.org/news/how-to-build-sturdy-react-apps-with-tdd-and-the-react-testing-library-47ad3c5c8e47/)
 > -   原文作者：Ian Wilson
-> -   译者：
+> -   译者：herosql
 > -   校对者：
 
-One thing I struggled with when I started learning React was testing my web apps in a way that is both useful and intuitive. I used [Enzyme][1] with [Jest][2] to shallow render a component every time I wanted to test it.
+在我开始学习 React 时，我曾经挣扎于如何以一种既有用又直观的方式测试我的 web 应用。每次我想要测试一个组件时，我都会使用 [Enzyme][1] 和 [Jest][2] 进行表层渲染。 
 
-Of course, I was absolutely abusing the snapshot testing feature.
+当然，我绝对是在滥用快照测试功能。
 
-Well, at least I wrote a test right?
+好吧，至少我写了一个测试，对吧？
 
-You might have heard somewhere that writing unit and integration tests will improve the quality of the software you write. Having bad tests, on the other hand, breeds false confidence.
+你可能在某个地方听说过，编写单元测试和集成测试将提高你编写的软件的质量。另一方面，拥有糟糕的测试会产生错误的信心。
 
-Recently, I attended a workshop through [workshop.me][3] with [Kent C. Dodds][4] where he taught us how to write better integration tests for React applications.
+最近，我参加了 [workshop.me][3] 上由 [Kent C. Dodds][4] 主持的一个研讨会，他教我们如何为 React 应用编写更好的集成测试。
 
-He also tricked us into using his [new testing library][5], in favor of its emphasis on testing the application in the same way that a user would encounter it.
+他还诱使我们使用他的 [新的测试库][5] ，以强调以用户可能遇到的相同方式测试应用程序。
 
-In this article, we will learn to exercise TDD in order to build solid React applications by creating a comment feed. Of course, this process applies to just about all software development, not just React or JavaScript apps.
+在本文中，我们将通过创建评论反馈来学习如何在构建稳定的 React 应用程序中运用 TDD。当然，这个过程适用于几乎所有的软件开发，而不仅仅是 React 或 JavaScript 应用。
 
-### **Getting Started**
+### **开始**
 
-We’re going to start off by running `create-react-app` and installing the dependencies. My assumption is that if you’re reading an article about testing applications, you’re probably already a familiar with installing and starting up JavaScript projects. I’ll be using `yarn` rather than `npm` here.
+我们将首先运行 `create-react-app` 并安装依赖项。我的假设是，如果你正在阅读关于测试应用程序的文章，你可能已经熟悉安装和启动 JavaScript 项目。在这里，我将使用 yarn 而不是 npm 。
 
-```
+```plain
 create-react-app comment-feed
 ```
 
-```
+```plain
 cd comment-feed
 ```
 
-```
+```plain
 yarn
 ```
 
-As it stands, we can remove all of the files in the `src` directory except for index.js. Then, right inside the `src` folder, create a new folder called `components` and another folder called `containers`.
+首先，我们将删除 src 目录中除 index.js 之外的所有文件。然后，在 src 文件夹内部，创建一个名为 components 的新文件夹和另一个名为 containers 的文件夹。
 
-For testing utilities, I am going to build this app using Kent’s [React Testing Library][6]. It is a lightweight test utility that encourages the developer to test their application in the same way that it’ll be used.
+在测试工具方面，我将使用 Kent 的 [React 测试库][6] 构建此应用程序。它是一款轻量级的测试工具，鼓励开发者以实际使用时相同的方式测试他们的应用程序。
 
-Like Enzyme, it exports a render function, but this render function always does a full mount of your component. It exports helper methods allowing you to locate elements by label or text or even test IDs. Enzyme does that as well with its `mount` API, but the abstraction it creates actually offers more options, many of which allow you to get away with testing implementation details.
+与 Enzyme 一样，它导出一个渲染函数，但这个渲染函数始终对你的组件进行完整挂载。它导出辅助方法，允许你通过标签、文本甚至测试 ID 来定位元素。Enzyme 也通过其 `mount` API 实现了这一点，但它创建的抽象实际上提供了更多选项，其中许多选项允许你摆脱测试实现细节。
 
-We don’t want to test implementation details anymore. We want to render a component and see if the right things happen when we click or change something on the UI. That’s it! No more directly checking props or state or class names.
+我们不想要测试所有的实现细节。我们想要渲染一个组件，看看当我们点击或更改 UI 上的某些内容时是否会发生正确的事情。就是这样！不再直接检查 props 、state 或类名。
 
-Let’s install them and get to work.
+现在让我们安装它们并开始工作。
 
-```
+```plain
 yarn add react-testing-library
 ```
 
-### **Building the Comment Feed with TDD**
+### **通过 TDD 构建评论反馈**
 
-Let’s do this first component TDD-style. Fire up your test runner.
+让我们以TDD风格进行第一个组件的开发。启动你的测试运行器。
 
-```
+```plain
 yarn test --watch
 ```
 
-Inside the `containers` folder, we are going to add a file called CommentFeed.js. Alongside it, add a file called CommentFeed.test.js. For the very first test, let’s verify that users can create comments. Too soon? Okay, since we don’t have any code yet, we’ll start with a smaller test. Let’s check that we can render the feed.
+在 `containers` 文件夹中，我们将添加一个名为 CommentFeed.js 的文件。与之相伴的，添加一个名为 CommentFeed.test.js 的文件。在第一个测试中，让我们验证用户是否可以创建评论。太早了？好吧，既然我们还没有任何代码，我们将从一个较小的测试开始。让我们检查一下我们是否可以渲染反馈。
 
-#### **Some notes on react-testing-library**
+### **关于 react-testing-library 的一些说明**
 
-First, let’s note the render function here. It is similar to the way `react-dom` renders a component onto the DOM, but it returns an object which we can destructure to get some neat test helpers. In this case, we get `queryByText`, which, given some text we expect to see on the DOM, will return that HTML element.
+首先，让我们注意这里的渲染函数。它类似于 `react-dom` 将组件渲染到 DOM 的方式，但它返回一个对象，我们可以解构该对象以获得一些实用的测试辅助工具。在这种情况下，我们得到 `queryByText`，它会返回我们期望在 DOM 上看到的 HTML 元素。
 
-The [React Testing Library docs][7] have a hierarchy that should help you decide which query or get method to use. Generally, the order goes like this:
+[React 测试库文档][7] 提供了一个层次结构，帮助你决定使用哪个查询或获取方法。通常，顺序如下：
+-   `getByLabelText` (表单输入)
+-   `getByPlaceholderText` (仅在你的输入没有标签时使用 — 很少使用！)
+-   `getByText` (按钮和标题)
+-   `getByAltText` (图片)
+-   `getByTestId` (用于动态文本或其他你想要测试的奇怪元素)
 
--   `getByLabelText` (form inputs)
--   `getByPlaceholderText` (only if your input doesn’t have a label — less accessible!)
--   `getByText` (buttons and headers)
--   `getByAltText` (images)
--   `getByTestId` (use this for things like dynamic text or otherwise odd elements you want to test)
+每个方法都有一个相关的 `queryByFoo` ，除了在找不到元素时不会使测试失败之外，它们的功能相同。如果你只是测试元素的**存在**，请使用这些方法。
 
-Each of these has an associated `queryByFoo` that does the same, except won’t fail your test when it doesn’t find an element. Use these if you’re just testing for the **existence** of an element.
+如果这些方法都无法满足你的需求， `render` 方法还返回映射到 `container` 属性的 DOM 元素，因此你可以像 `container.querySelector(‘body #root’)` 这样使用它。
 
-If none of these get you exactly what you’re looking for, the `render` method also returns the DOM element mapped to the `container` property, so you can use it like `container.querySelector(‘body #root’)`.
+### **首次实现代码**
 
-### **The First Implementation Code**
+现在，实现看起来相当简单。我们只需要确保“评论反馈”是一个组件。
 
-Now, the implementation will look fairly simple. We just need to make sure that “Comment Feed” is in the component.
+它可能会更糟糕 - 我的意思是，我在编写整篇文章的过程中，还要编写组件的样式。幸运的是，测试并不太关心样式，所以我们可以专注于我们的应用逻辑。
 
-It could be worse — I mean, I was about to write this whole article while styling components. Fortunately, tests don’t care too much for styles, so we can focus on our application logic.
+接下来的测试将验证我们是否可以渲染评论。但是我们甚至还没有任何评论，所以让我们也添加一个组件。在测试之后。
 
-This next test will verify that we can render comments. But we don’t even have any comments, so let’s add in that component too. After the test though.
+我还将创建一个 props 对象来存储我们可能在这些测试中重用的数据。
 
-I’m also going to create a props object to store the data we may reuse in these tests.
+在这种情况下，我正在检查评论的数量是否等于传入 CommentFeed 的项目数量。这是无关紧要的，但测试失败给了我们创建 Comment.js 文件的机会。
 
-In this case, I am checking that the number of comments is equal to the number of items passed into the CommentFeed. It’s trivial, but the failure of the test gives us the opportunity to create the Comment.js file.
+这使我们的测试套件变绿，所以我们可以毫无畏惧地继续。向 TDD 致敬，我们这个种族的救世主。当我们给它一个空数组时，它当然会工作。但是，如果我们给它一些真实的对象，会发生什么呢？
 
-This green lights our test suite so we can proceed without fear. All hail TDD, the savior of our kind. It works when we give it an empty array, of course. But what if we give it some real objects?
+我们必须更新我们的实现以实际渲染内容。现在我们知道我们要去哪里，这很简单，对吧？
 
-We must update our implementation to actually render stuff. Simple enough now that know where we’re going, right?
-
-Ah look at that, our test is once again passing. Here’s a neat shot of its beauty.
+啊，看看这个，我们的测试再次通过了。这是一个美妙的截图。
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*vGkFKnUkA9ms5PbaOWoQ_A.png)
 
-Notice how I never once said we should fire up our program with `yarn start`? We’re going to keep it that way for a while. The point is, you must feel the code with your mind.
+注意我从未说过我们应该用 `yarn start` 启动我们的程序吗?我们继续保持这种方式一段时间。关键是，你必须用你的头脑感受代码。
 
-The styling is just what’s on the outside — it’s what is on the inside that counts.
+样式只是外部表现 - 重要的是内部的东西。
 
-Just in case you want to start the app though, update index.js to the following:
+以防你想启动应用程序，将 index.js 更新为以下内容：
 
-### **Add Comment Form**
+### **添加评论表单**
 
-This is where things start getting more fun. This is where we go from sleepily checking for the existence of DOM nodes to actually doing stuff with that and **validating behavior**. All that other stuff was a warmup.
+这是事情开始变得更有趣的地方。这是我们从困倦地检查DOM节点的存在到实际使用它并**验证行为**的地方。所有其他的东西都是热身。
 
-Let’s start by describing what I want from this form. It should:
+让我们从描述我想要的表单开始。它应该：
+-   包含一个作者的文本输入
+-   包含一个评论条目的文本输入
+-   有一个提交按钮
+-   最终调用 API 或处理创建和存储评论的其他服务。
 
--   contain a text input for the author
--   contain a text input for then comment itself
--   have a submit button
--   eventually call the API or whatever service handles creating and storing the comment.
+我们可以在一个集成测试中完成这个列表。对于之前的测试用例，我们进行得相当缓慢，但现在我们要加快速度，试图一举完成。
 
-We can take down this list in a single integration test. For the previous test cases we took it rather slowly, but now we’re going to pick up the pace and try to nail it in one fell swoop.
+注意我们的测试套件是如何发展的吗？我们从在各自的测试用例中硬编码 props 转变为为它们创建一个工厂。
 
-Notice how our test suite is developing? We went from hard-coding props inside their own test cases to creating a factory for them.
+#### **准备， 执行， 断言**
 
-#### **Arrange, Act, Assert**
+以下集成测试可以分为三个部分：准备，执行和断言。
 
-This following integration test can be broken into three parts: arrange, act, and assert.
+-   **准备:** 为测试用例创建props和其他测试用例
+-   **执行:** 模拟对元素的更改，例如文本输入或按钮点击
+-   **断言:**  断言所需的函数被正确次数调用，并使用正确的参数
 
--   **Arrange:** create props and other fixtures for the test case
--   **Act:** simulate changes to the elements such as text inputs or button clicks
--   **Assert:** assert that the desired functions were invoked the right number of times, and with the correct arguments
+关于代码，我们做了一些假设，比如我们的标签命名或我们将拥有一个 `createComment` prop。
 
-There are some assumptions made about the code, like the naming of our labels or the fact that we will have a `createComment` prop.
+在查找输入时，我们希望尝试通过它们的标签找到它们。这样在构建应用程序时，我们可以优先考虑可访问性。使用 `container.querySelector` 是获取表单的最简单方法。
 
-When finding inputs, we want to try to find them by their labels. This prioritizes accessibility when we’re building our applications. The easiest way to grab the form is by using `container.querySelector`.
+接下来，我们必须为输入分配新值，并模拟更改以更新它们的状态。这一步可能感觉有点奇怪，因为通常我们一次输入一个字符，为每个新字符更新组件的状态。
 
-Next, we must assign new values to the inputs and simulate the change to update their state. This step may feel a little strange, since normally we type one character at a time, updating the component’s state for each new character.
+这个测试的行为更像是复制/粘贴的行为，从空字符串变为 “Socrates” 。目前没有中断问题，但我们可能需要注意一下，以防以后出现问题。
 
-This test behaves more like the behavior of copy/paste, going from empty string to ‘Socrates’. No breaking issues for now, but we may want to make note of that in case it comes up later.
+在提交表单后，我们可以对诸如调用了哪些 props 以及使用了哪些参数等事项进行断言。我们还可以利用这个时刻来验证表单输入是否已清除。
 
-After submitting the form, we can make assertions on things like which props were invoked and with what arguments. We could also use this moment to verify that the form inputs cleared.
+这让人望而生畏吗？不要害怕，孩子，继续走。首先将表单添加到渲染函数中。
 
-Is it intimidating? No need to fear, my child, walk this way. Start by adding the form to your render function.
+我可以将这个表单分解成一个单独的组件，但现在我会保持不变。相反，我会将其添加到我桌子旁边的“重构愿望清单”中。
 
-I could break this form into its own separate component, but I will refrain for now. Instead, I’ll add it to my “Refactor Wish List” I keep beside my desk.
+这是 TDD 的方式。当某件事看起来可以重构时，做个记录然后继续。只有在抽象的存在对你有益且不感到多余时才进行重构。
 
-This is the way of TDD. When something seems like it can be refactored, make a note of it and move on. Refactor only when the presence of an abstraction benefits you and doesn’t feel unnecessary.
+还记得我们通过创建 `createProps` 工厂来重构测试套件的时候吗？就像那样。我们也可以重构测试。
 
-Remember when we refactored our test suite by creating the `createProps` factory? Just like that. We can refactor tests, too.
+现在，让我们添加 `handleChange` 和 `handleSubmit` 类方法。当我们更改输入或提交表单时，这些方法会被触发。我还将初始化我们的状态。
 
-Now, let’s add in the `handleChange` and `handleSubmit` class methods. These get fired when we change an input or submit our form. I will also initialize our state.
-
-And that did it. Our tests are passing and we have something that sort of resembles a real application. How does our coverage look?
+这样做就可以了。我们的测试通过了，我们有一些类似于真实应用程序的东西。我们的覆盖率看起来如何？
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*Q4coAIT2yaP120pDWGxoAQ.png)
 
-Not bad. If we ignore all of the setups that go inside index.js, we have a fully covered web application with respect to lines executed.
+还不错。如果我们忽略 index.js 中的所有设置，我们就有一个完全覆盖的 Web 应用程序，至少在执行的行数方面是这样。
 
-Of course, there are probably other cases we want to test in order to verify that the application is working as we intend. That coverage number is just something your boss can brag about when they’re talking to the other cohorts.
+当然，为了验证应用程序是否按照我们的意图工作，我们可能还需要测试其他用例。覆盖率的数字只是你的老板在谈论其他同事时可以炫耀的东西。
 
-### **Liking Comments**
+### **点赞评论**
 
-How about we check that we can like a comment? This may be a good time to establish some concept of authentication within our application. But we’ll not jump too far just yet. Let’s first update our props factory to add an `auth` field along with IDs for the comments we generate.
+我们如何检查我们可以点赞评论呢？这可能是在我们的应用程序中建立某种身份验证概念的好时机。但我们现在还不会跳得太远。首先，让我们更新我们的 props 工厂，为我们生成的评论添加一个 `auth` 字段和ID。
 
-The user who is “authenticated” will have their `auth` property passed down through the application. Any actions that are relevant to whether they are authenticated will be noted.
+“认证”用户将通过应用程序传递其 `auth` 属性。与他们是否经过身份验证相关的任何操作都将被记录。
 
-In many applications, this property may contain some sort of access token or cookie that is sent up when making requests to the server.
+在许多应用程序中，此属性可能包含在向服务器发出请求时发送的某种访问令牌或 cookie 中。
 
-On the client, the presence of this property lets the application know that they can let the user view their profile or other protected routes.
+在客户端，此属性的存在使应用程序知道它们可以让用户查看其个人资料或其他受保护的路由。
 
-In this testing example, however, we will not fiddle too hard with authentication. Imagine a scenario like this: When you enter a chatroom, you give your screen name. From that point on, you are in charge of every comment that uses this screen name, despite who else signed in with that name.
+然而，在这个测试示例中，我们不会过多地处理身份验证。想象这样一个场景：当你进入聊天室时，你提供网名。从那时起，你将负责使用此网名的每个评论，尽管其他人也使用该名称登录。
 
-While it is not a great solution, even in this contrived example, we are only concerned with testing that the CommentFeed component behaves as it should. We are not concerned with **how** our users are logged in.
+虽然这不是一个很好的解决方案，即使在这个人为的例子中，我们只关心 CommentFeed 组件的行为是否符合预期。我们不关心**如何**让我们的用户登录。
 
-In other words, we may have a totally different login component that handles the authentication of a particular user, thus sending them through hoops of fire and fury in order to derive the almighty `auth` property that lets them wreak havoc in our application.
+换句话说，我们可能有一个完全不同的登录组件来处理特定用户的身份验证，从而使他们在火圈和愤怒中穿越，以获得让他们在我们的应用程序中肆虐的全能 `auth` 属性。
 
-Let’s “like” a comment. Add this next test case and then update the props factory to include `likeComment`.
+让我们“喜欢”一条评论。添加下一个测试用例，然后更新 props 工厂以包含 `likeComment` 。
 
-And now for the implementation, we’ll start by updating the Comment component to have a like button as well as a `data-testid` attribute so we can locate it.
+现在，对于实现，我们将首先更新 Comment 组件，使其具有一个点赞按钮以及一个 `data-testid` 属性，以便我们可以找到它。
 
-I put the test ID directly on the button so that we can immediately simulate a click on it without having to nest query selectors. I also attached an `onClick` handler to the button so that it calls the `onLike` function passed down to it.
+我将测试 ID 直接放在按钮上，以便我们可以立即模拟对它的点击，而无需嵌套查询选择器。我还在按钮上附加了一个 onClick 处理程序，以便它传递给它的 onLike 函数。
 
-Now we just add this class method to our CommentFeed:
+现在我们只需将此类方法添加到我们的 CommentFeed：
 
-You may wonder why we don’t simply pass the `likeComment` prop directly to the Comment component. Why do we make it a class property?
+你可能想知道为什么我们不直接将 `likeComment` 通过 prop 传递给 Comment 组件。为什么我们要将其作为类属性？
 
-In this case, because it is rather simple, we don’t have to build this abstraction. In the future, we may decide to add other `onClick` handlers that, for example, handle analytics events or initiate a subscription to that post’s future comments.
+在这种情况下，因为它相当简单，我们不必构建这个抽象。将来，我们可能会决定添加其他 onClick 处理程序，例如处理分析事件或启动对该帖子评论的订阅。
 
-Being able to bundle multiple different function calls in the `handleLike` method of this container component has its advantages. We could also use this method to update the state of the component after a successful “Like” if we so choose.
+在此容器组件的 `handleLike` 方法中捆绑多个不同的函数调用具有其优势。如果我们愿意，在成功“点赞”后，我们还可以使用此方法更新组件的状态。
 
-### **Disliking Comments**
+### **不喜欢评论**
 
-At this point we have working tests for rendering, creating, and liking comments. Of course, we haven’t implemented the logic that actually does that — we’re not updating the store or writing to a database.
+到目前为止，我们已经有了渲染、创建和喜欢评论的工作测试。当然，我们还没有实现实际执行此操作的逻辑——我们没有更新存储或写入数据库。
 
-You might also notice that the logic we’re testing is fragile and not terribly applicable to a real-world comment feed. For example, what if we tried to like a comment we already liked? Will it increment the likes count indefinitely, or will it unlike it? Can I like my own comments?
+你可能还注意到，我们正在测试的逻辑很脆弱，不太适用于真实世界的评论反馈。例如，如果我们尝试喜欢我们已经喜欢的评论，会发生什么？它会无限地增加喜欢的计数，还是会取消喜欢？我可以喜欢我自己的评论吗？
 
-I’ll leave extending the functionality of the components to your imagination, but a good start would be to write a new test case. Here’s one that builds off the assumption that we would like to implement disliking a comment we already liked:
+我将把组件的功能扩展留给你的想象，但一个好的开始是编写一个新的测试用例。这里有一个基于我们想要实现不喜欢已经喜欢的评论的假设：
 
-Notice that this comment feed we’re building allows me to like my own comments. Who does that?
+请注意，我们正在构建的评论反馈允许我喜欢我自己的评论。谁会这样做？
 
-I have updated the Comment component with some logic to determine whether or not the current user has liked the comment.
+我已经更新了 Comment 组件，添加了一些逻辑来确定当前用户是否喜欢该评论。
 
-Well I cheated a little bit: where we were passing `author` to the `onLike` function before, I changed to `currentUser`, which is the `auth` prop passed down to the Comment component.
+好吧，我有点作弊：在我们之前将 `author` 传递给 `onLike` 函数的地方，我改为 `currentUser` ，这是传递给 Comment 组件的 `auth` 属性。
 
-After all, it wouldn’t make sense for the comment’s author to show up when someone else likes their comment.
+毕竟，当其他人喜欢他们的评论时，评论的作者出现在那里是没有意义的。
 
-I realized this because I was vigorously writing tests. Had I just been coding by coincidence this might’ve slipped past me until one of my coworkers berated me for my ignorance!
+我意识到这是因为我正在积极编写测试。如果我只是偶然编码，这可能会在我的同事因为我的无知而责备我之前溜走！
 
-But there is no ignorance here, just tests and the code that follows. Be sure to update the CommentFeed so that it expects to pass down the `auth` property. For the `onClick` handlers we can omit passing around the `auth` property, since we can derive that from the `auth` property in the parent’s `handleLike` and `handleDislike` methods.
+但是这里没有无知，只有测试和随之而来的代码。确保更新 CommentFeed，以便它期望传递 `auth` 属性。对于 `onClick` 处理程序，我们可以省略传递 `auth` 属性，因为我们可以从父级的 `handleLike` 和 `handleDislike` 方法中获取 `auth` 属性。
 
-### **Wrapping up**
+### **总结**
 
-Hopefully, your test suite is looking like an unlit Christmas tree.
+希望你的测试套件看起来像一棵未点亮的圣诞树。
 
-There are so many different routes we can take at this, it can get a little overwhelming. Every time you get an idea for something, just write it down, either on paper or in a new test block.
+我们可以采取很多不同的方法，这可能会让人有点不知所措。每当你想到某个想法时，只需将其写下来，无论是在纸上还是在新的测试块中。
 
-For example, say you actually want to implement `handleLike` and `handleDislike` in one single class method, but you have other priorities right now. You can do this by documenting in a test case like so:
+例如，假设你其他希望在一个单独的类方法中实现 `handleLike` 和 `handleDislike` ，但你现在有其他优先事项。你可以通过在测试用例中编写文档来实现这一点：
 
-This doesn’t mean you need to write an entirely new test. You could also update the previous two cases. But the point is, you can use your test runner as a more imperative “To Do” list for your application.
+这并不意味着你需要编写一个全新的测试。你也可以更新前两个案例。但关键是，你可以将测试运行器用作应用程序更加紧迫的“待办事项“列表。
 
-#### **Helpful Links**
+#### **有用的链接**
 
-There are a few great pieces of content out there that deal with testing at large. Here are some in particular that inspired this article as well as my own practices.
+有一些很棒的内容涉及到大规模的测试。以下是一些特别启发了本文以及我自己实践的内容。
+-   [Kent C. Dodds][9] 编写的 [介绍React测试库][8]。了解这个测试库背后的哲学是个好主意。
+-   Kostis Kapelonis写的 [软件测试反模式][10]。一篇非常深入的文章，讨论了单元和集成测试。还有如何避免错误的方法。
+-   Kent Beck写的 [测试驱动开发的示例][11]。这是一本讨论TDD模式的实体书。它不太长，写作风格通俗易懂，便于理解。
 
--   “[Introducing the React Testing Library][8]" by [Kent C. Dodds][9]. It’s a good idea to understand the philosophy behind this testing library.
--   “[Software Testing Anti-patterns][10]" by Kostis Kapelonis. An extremely in-depth article that discusses unit and integration testing. Also how not to do them.
--   “[Test Driven Development by Example][11]" by Kent Beck. This is a physical book that discusses TDD patterns. It is not too long and it is written conversationally, making it easy to digest.
+我希望这能帮你渡过一段时间。
 
-I hope that’ll tide you over for a while.
-
-Curious for more posts or witty remarks? If you enjoyed this article, give me some claps and follow me on [Medium][12], [Github][13], and [Twitter][14]!
+想了解更多文章或机智的评论吗？如果你喜欢这篇文章，请给我一些掌声，并在[Medium][12]，[Github][13]和 [Twitter][14]上关注我！
 
 [1]: http://airbnb.io/enzyme/docs/api/
 [2]: https://facebook.github.io/jest/
@@ -233,7 +230,6 @@ Curious for more posts or witty remarks? If you enjoyed this article, give me so
 [9]: https://www.freecodecamp.org/news/how-to-build-sturdy-react-apps-with-tdd-and-the-react-testing-library-47ad3c5c8e47/undefined
 [10]: http://blog.codepipes.com/testing/software-testing-antipatterns.html
 [11]: https://www.amazon.com/Test-Driven-Development-Kent-Beck/dp/0321146530
-
 [12]: http://medium]%28https//medium.com/@iwilsonq
 [13]: https://github.com/iwilsonq
 [14]: https://twitter.com/iwilsonq

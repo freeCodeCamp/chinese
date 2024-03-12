@@ -34,7 +34,7 @@
 
 此外，[你可以在此处获取此 Deno 手册的 PDF / ePub / Mobi 版本。](https://flaviocopes.com/page/deno-handbook/)
 
-## 什么是 Deno？
+## 什么是 Deno
 
 如果你熟悉流行的服务器端 JavaScript 运行时 Node.js，那么 Deno 就像 Node.js 一样，但却在很多方面都得到了深刻改善的全新 JavaScript / TypeScript 运行时。
 
@@ -59,7 +59,7 @@ Node.js 的确很棒，并在可见的未来将继续成为 JavaScript 世界中
 
 由于没有向后兼容性的历史原因，Deno 将可以承担起所有使用现代 Web 技术编写的工程建设。但目前的现实是，我们也无法保证十年之内 Deno 不会发生像 Node.js 同样的事情，并且不会出现一项新技术代替 Deno。
 
-## 为什么是 Deno？为什么是现在？
+## 为什么是 Deno？为什么是现在
 
 大约 2 年前，Node.js 的创建者 Ryan Dahl 在 JSConf EU 上首次介绍了 Deno。观看[当时的演讲视频](https://www.youtube.com/watch?v=M3BM9TB-8yA)会非常有趣。如果你平时在大量接触 Node.js 和 JavaScript，这个视频请不要错过。
 
@@ -73,7 +73,7 @@ Node.js 的确很棒，并在可见的未来将继续成为 JavaScript 世界中
 
 1.0 看起来仅仅是个数字，但在社区约定下，意味着直到 Deno 2.0 前 Deno 都不会有太多重大的破坏性改变——这很重要，因为你终于可以安心学习 Deno 当前的稳定版本了。
 
-## 你应该学习 Deno 吗？
+## 你应该学习 Deno 吗
 
 这并不那么容易回答。
 
@@ -83,7 +83,7 @@ Node.js 的确很棒，并在可见的未来将继续成为 JavaScript 世界中
 
 但如果你喜欢 TypeScript、也不想让项目中依赖无比庞大的 NPM 软件包、还想要随时随地使用 `await` 等语法，那么你可能真的需要 Deno。
 
-## Deno 将取代 Node.js 吗？
+## Deno 将取代 Node.js 吗
 
 不能。Node.js 的生态已经十分庞大和完善，获得了数以万计的优秀技术支持，将能再战数十年。
 
@@ -450,7 +450,7 @@ for await (const req of s) {
 
 该扩展将为 `VS Code` 提供几个实用工具和不错的东西来帮助你编写应用程序。
 
-现在在一个文件夹中创建一个` app.ts` 文件，然后粘贴上面的代码。
+现在在一个文件夹中创建一个`app.ts` 文件，然后粘贴上面的代码。
 
 ![app.ts](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-15.40.18.png)
 
@@ -608,7 +608,7 @@ deno run --allow-read=./ https://deno.land/std/examples/cat.ts app.ts
 
 ![allow-read](https://www.freecodecamp.org/news/content/images/2020/05/Screen-Shot-2020-05-09-at-17.07.54-6.png)
 
-## Deno 是否有 Express/Hapi/Koa/\*
+## Deno 是否有 Express/Hapi/Koa/
 
 当然有。可以看看下方这些库。
 

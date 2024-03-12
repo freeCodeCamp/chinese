@@ -184,7 +184,7 @@ Now this approach may seem really silly, but I promise you, _it works._ Each of 
 
 If you're thinking this approach will seem odd to a potential interviewer, here's the next tip, _and this one is very important:_
 
-## Tip #3: Talk. Out loud.
+## Tip #3: Talk. Out loud
 
 The entire time you're doing a coding challenge you should be talking—_out loud._
 
@@ -280,7 +280,7 @@ Speaking of being remote, if you are remote try to have the best setup you can. 
 
 These things shouldn't affect your interview result, but there's no need to annoy the interviewer or give yourself extra stress from internet or noise issues.
 
-### Trick #5: Be personable!
+### Trick #5: Be personable
 
 My last trick for you is to be _personable._
 
@@ -302,7 +302,7 @@ If you're interviewing for a full-stack role, be prepared to setup a new project
 
 Research the company, be ready with great questions about the company or the day-to-day work, etc., etc.
 
-## In the end: it's just an interview.
+## In the end: it's just an interview
 
 In the end, it is what it is.
 

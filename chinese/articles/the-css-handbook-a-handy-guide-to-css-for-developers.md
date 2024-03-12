@@ -235,7 +235,7 @@ Using this method we can avoid creating a separate CSS file. I find this is a go
 
 Inline styles are the third way to add CSS to a page. We can add a `style` attribute to any HTML tag, and add CSS into it.
 
-```
+```plain
 <div style="">...</div>
 ```
 
@@ -793,7 +793,7 @@ Some pseudo classes are just used for printing, like `:first`, `:left`, `:right`
 
 ### PSEUDO-ELEMENTS
 
-#### Pseudo-elements are used to style a specific part of an element.
+#### Pseudo-elements are used to style a specific part of an element
 
 They start with a double colon `::`.
 
@@ -2137,7 +2137,7 @@ You can set a different style for each edge using the properties
 
 or you can use `border-style` with multiple values to define them, using the usual Top-Right-Bottom-Left order:
 
-```
+```plain
 p {
   border-style: solid dotted solid dotted;
 }
@@ -3733,7 +3733,7 @@ Like `color` which inspects the number of bits per color component used by the d
 
 Example:
 
-```
+```plain
 @import url(myfile.css) screen and (aspect-ratio: 4/3);
 ```
 

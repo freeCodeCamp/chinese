@@ -26,7 +26,7 @@
 
 例如一个如下的简单标识文本：
 
-```
+```plain
 <main class="gallery">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg">  <img src="/sample.jpg"></main>
 ```
 
@@ -34,7 +34,7 @@
 
 假定 `main.gallery` 覆盖整个可见屏幕。
 
-```
+```plain
 .gallery {   min-height: 100vh}
 ```
 
@@ -52,7 +52,7 @@
 
 现在，看下 Flexbox 的效果:
 
-```
+```plain
 .gallery {    display: flex }
 ```
 
@@ -70,7 +70,7 @@
 
 这并不适用于图片库，因此我们可以这样改变：
 
-```
+```plain
 .gallery {    flex-wrap: wrap}
 ```
 
@@ -84,13 +84,13 @@
 
 `stretch` 显示是因为 `flex` 里默认的 `align-items` 值。
 
-```
+```plain
 align-items: stretch
 ```
 
 我们可以改成这样：
 
-```
+```plain
 .gallery {  ...  align-items: flex-start}
 ```
 
@@ -114,7 +114,7 @@ align-items: stretch
 
 如下所示，改变默认值，我们就可以立马改变图片库的布局。
 
-```
+```plain
 .gallery {   ...   justify-content:center;}
 ```
 
@@ -124,7 +124,7 @@ align-items: stretch
 
 如上所示，这会让图片水平居中。
 
-```
+```plain
 .gallery {   ...   justify-content:center;   align-items: center;}
 ```
 
@@ -156,23 +156,23 @@ align-items: stretch
 
 我们给每个卡片设定一个如下的标识：
 
-```
+```plain
 <section class="card">  <header>  </header>
 ```
 
-```
+```plain
   <ul>    <li></li>    <li></li>    <li></li>  </ul>  <button></button></section>
 ```
 
 这里有至少 3 个卡片，我们把这些卡片包在 `div.cards`里
 
-```
+```plain
 <div class="cards"></div>
 ```
 
 现在已经有了一个父元素。在这个例子中，父元素充满整个视图。
 
-```
+```plain
 .cards {   min-height: 100vh}
 ```
 
@@ -180,7 +180,7 @@ align-items: stretch
 
 下面的代码块新建了一个在 `.cards` 里面的 Flexbox 布局样式。
 
-```
+```plain
 .cards {  display: flex;  flex-wrap: wrap}
 ```
 
@@ -192,7 +192,7 @@ align-items: stretch
 
 使用 Flexbox 如下布局:
 
-```
+```plain
 .card {  flex: 0 0 250px}
 ```
 
@@ -238,7 +238,7 @@ align-items: center; justify-content: center
 
 在这个例子中，我们要探讨整体的 CSS 框架概念，这是很重要的一点。
 
-#### 什么是网格布局？
+#### 什么是网格布局
 
 网格是用来构建内容的一系列水平垂直相交引导线。
 
@@ -265,7 +265,7 @@ align-items: center; justify-content: center
 
 使用 Flexbox 很容易实现这个效果，看下面这个标识文本：
 
-```
+```plain
 <div class="row">  <div class="row_cell">1</div></div>
 ```
 
@@ -275,7 +275,7 @@ align-items: center; justify-content: center
 
 根据设计，无论有 3 个子元素
 
-```
+```plain
 <div class="row">  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div></div>
 ```
 
@@ -287,7 +287,7 @@ align-items: center; justify-content: center
 
 或是 12 个子元素，都是没影响的
 
-```
+```plain
 <div class="row">  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div>  <div class="row_cell">1/12</div></div>
 ```
 
@@ -297,21 +297,21 @@ align-items: center; justify-content: center
 
 1.  新建一个 Flexbox 布局文本：
 
-```
+```plain
 .row {   display: flex;}
 ```
 
 2\. 扩大每个 `flex-item` 元素，让它们以相同比例均匀的布满整行：
 
-```
+```plain
 .row_cell {   flex: 1}
 ```
 
 就是这样
 
-#### 方案解释。
+#### 方案解释
 
-```
+```plain
 flex: 1
 ```
 
@@ -321,7 +321,7 @@ flex: 1
 
 而 `flex-shrink` 和 `flex-basis` 则分别设置为 `1` 和 `0`。
 
-```
+```plain
 flex: 1  === flex: 1 1 0
 ```
 
@@ -339,13 +339,13 @@ flex: 1  === flex: 1 1 0
 
 对于这些有确定大小的网格元素，只需要加一个这样的修饰符类：
 
-```
+```plain
 .row_cell--2 {   flex: 2}
 ```
 
 加上这个类，可以看到第一个 `div` 子元素代码如下：
 
-```
+```plain
 <div class="row">  <div class="row_cell row_cell--2">2x</div>  <div class="row_cell">1/3</div>  <div class="row_cell">1/3</div></div>
 ```
 
@@ -363,7 +363,7 @@ flex: 1  === flex: 1 1 0
 
 通过下面的修饰符类，可以达到这样的效果：
 
-```
+```plain
 .row_cell--top {  align-self: flex-start}
 ```
 
@@ -375,13 +375,13 @@ flex: 1  === flex: 1 1 0
 
 你一定有在标识文本中给特定元素加上这个类。看文本中第一个 `div` 子元素：
 
-```
+```plain
 <div class="row">  <div class="row_cell row_cell--top"></div>  <div class="row_cell"></div>  <div class="row_cell"></div></div>
 ```
 
 下面是其他可选的对齐方式：
 
-```
+```plain
 .row_cell--bottom {  align-self: flex-end}
 ```
 
@@ -389,7 +389,7 @@ flex: 1  === flex: 1 1 0
 
 给特定的元素加上.row_cell — bottom 类会让它在 `row` 内靠底部对齐。
 
-```
+```plain
 .row_cell--center {  align-self: center}
 ```
 
@@ -413,13 +413,13 @@ flex: 1  === flex: 1 1 0
 
 需要注意的一个重点是，修饰符类 `.row--top` 一定要被加在 `row` 或是父元素 `flex-container` 上。
 
-```
+```plain
 <div class="row row--top">  <div class="row_cell"></div>  <div class="row_cell"></div>  <div class="row_cell"></div></div>
 ```
 
 其他的对齐选项见下：
 
-```
+```plain
 .row--center {   align-items: center}
 ```
 
@@ -427,7 +427,7 @@ flex: 1  === flex: 1 1 0
 
 整行的三个元素都居中对齐。
 
-```
+```plain
 .row--bottom {   align-items: flex-end}
 ```
 
@@ -479,7 +479,7 @@ flex: 1  === flex: 1 1 0
 
 看下下面这个基本的标识语言：
 
-```
+```plain
 <body>  <header>Header</header>  <main>    <article>Article</article>    <nav>Nav</nav>    <aside>Aside</aside>  </main>  <footer>Footer</footer></body>
 ```
 
@@ -493,25 +493,25 @@ flex: 1  === flex: 1 1 0
 
 #### 建立一个 Flexbox 格式文本
 
-```
+```plain
 body {   display: flex}
 ```
 
 因为子元素应该从顶部到底部布局，所以我们要改变 Flexbox 的默认方向。
 
-```
+```plain
 body { ... flex-direction: column}
 ```
 
 **1**. `header` 和 `footer` 要有固定的宽度
 
-```
+```plain
 header,footer {  width: 20vh /*可以使用像素单位，例如200px*/}
 ```
 
 **2.**`main` 要填满 `flex-container` 中剩下的部分。
 
-```
+```plain
 main {   flex: 1}
 ```
 
@@ -525,19 +525,19 @@ main {   flex: 1}
 
 把 `main` 设成一个 `flex-container` ：
 
-```
+```plain
 main {  display: flex}
 ```
 
 给 `nav` 和 `aside` 以固定的宽度：
 
-```
+```plain
 nav,aside {  width: 20vw}
 ```
 
 然后确保 `article` 填满剩下的可用空间：
 
-```
+```plain
 article {   flex: 1}
 ```
 
@@ -549,7 +549,7 @@ article {   flex: 1}
 
 把 `flex-items` 重新排序这样 `nav` 会展示在第一位：
 
-```
+```plain
 nav {  order: -1}
 ```
 
@@ -574,7 +574,7 @@ nav {  order: -1}
 
 `header` 和 `footer` 可以被当做块状元素。 在没有任何干预的情况下，它们会在从顶部到底部，填满父级元素。
 
-```
+```plain
 <body>  <header>Header</header>  <main>    <article>Article</article>    <nav>Nav</nav>    <aside>Aside</aside>  </main>  <footer>Footer</footer></body>
 ```
 
@@ -582,7 +582,7 @@ nav {  order: -1}
 
 使用这个方法有个缺点就是你要自己计算 `main` 的高度。 `main` 应该填满除 `header` 和 `footer.`外的空间。
 
-```
+```plain
 main {  height: calc(100vh - 40vh);}
 ```
 
@@ -604,19 +604,19 @@ main {  height: calc(100vh - 40vh);}
 
 看下以下标识文本：
 
-```
+```plain
 <body>  <aside>sidebar</aside>  <main>main</main></body>
 ```
 
 先建一个 Flexbox 格式文本：
 
-```
+```plain
 body {  display: flex;}
 ```
 
 给 `aside` 一个固定的宽度：
 
-```
+```plain
 aside {   width: 20vw}
 ```
 
@@ -638,13 +638,13 @@ Tweet 和 Facebook 上的发帖示例
 
 看下下面这个标识文本：
 
-```
+```plain
 <div class="media">  <img class="media-object" src="/pic.jpg">  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>  </div></div>
 ```
 
 你应该已经猜到了， `.media` 会使用 Flexbox 布局：
 
-```
+```plain
 .media {   display: flex}
 ```
 
@@ -652,7 +652,7 @@ Tweet 和 Facebook 上的发帖示例
 
 确保 `.media-body` 填满剩下的可用空间：
 
-```
+```plain
 .media-body {   flex: 1}
 ```
 
@@ -662,7 +662,7 @@ Tweet 和 Facebook 上的发帖示例
 
 我们来调整下拉伸的盒子模型。
 
-```
+```plain
 .media {  ...  align-items: flex-start}
 ```
 
@@ -682,7 +682,7 @@ Tweet 和 Facebook 上的发帖示例
 
 只需要让弹性项目像这样重新排序：
 
-```
+```plain
 .media-object {   order: 1}
 ```
 
@@ -692,7 +692,7 @@ Tweet 和 Facebook 上的发帖示例
 
 你甚至可以不改变已有的 CSS 样式来继续用嵌套布局媒体对象。
 
-```
+```plain
 <div class="media">  <img class="media-object" src="/pic.jpg">  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>        <!--nested-->    <div class="media">    <img class="media-object" src="/pic.jpg">    <div class="media-body">        <h3 class="media-heading"> Header </h3>        <p></p>    </div>    </div><!--end nested-->  </div> </div>
 ```
 
@@ -708,7 +708,7 @@ Tweet 和 Facebook 上的发帖示例
 
 在不改变已经写好的 CSS 样式情况下，你可以用字符码来代替图片。
 
-```
+```plain
 <div class="media">  <div class="media-object">?</div>  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>  </div></div>
 ```
 
@@ -724,7 +724,7 @@ Tweet 和 Facebook 上的发帖示例
 
 你也可以使用如下的 [html 实体][11] 。
 
-```
+```plain
 <div class="media">  <div class="media-object">☎</div>  <div class="media-body">    <h3 class="media-heading"> Header </h3>    <p></p>  </div></div>
 ```
 
@@ -746,7 +746,7 @@ html 实体, ☎
 
 看下面这段标识文本：
 
-```
+```plain
 <form class="form">  <input class="form__field">  <button class="form__item">…</button></form><form class="form">  <span class="form__item">…</span>  <input class="form__field"></form><form class="form">  <span class="form__item">…</span>  <input class="form__field">  <button class="form__item">…</button></form>
 ```
 
@@ -754,19 +754,19 @@ html 实体, ☎
 
 新建一个 Flexbox 格式文本：
 
-```
+```plain
 .form {  display: flex}
 ```
 
 确保输入框填满可用空间：
 
-```
+```plain
 .form__field {   flex: 1}
 ```
 
 最后，你可以按照你喜欢的方式在前后放入文字或者按钮。
 
-```
+```plain
 .form__item {  ... }
 ```
 
@@ -828,7 +828,7 @@ html 实体, ☎
 
 按照上面的六个步骤可以成功建立一个手机应用布局。
 
-### 想要更专业？
+### 想要更专业
 
 免费下载我的 CSS 网格布局参考手册，还可以免费获得两节优质的响应式 Flexbox 课程！
 

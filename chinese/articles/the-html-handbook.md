@@ -153,7 +153,7 @@ HTML 以不同的方式提供给浏览器。
 
 此 HTML 代码段使用 ul 标签（表示无序列表）和 litags（表示列表项）创建项目列表：
 
-```
+```plain
 <ul>
   <li>First item</li>
   <li>Second item</li>
@@ -185,7 +185,7 @@ Modern HTML uses this doctype:
 
 然后，我们有了 html 元素，它具有一个开始和结束标记：
 
-```
+```plain
 <！DOCTYPE html>
 <html>
 ...
@@ -204,7 +204,7 @@ html 结束标记是 HTML 文档中存在的最后一件事。
 
 在 html 元素内，我们有 2 个元素：head 和 body：
 
-```
+```plain
 <！DOCTYPE html>
 <html>
     <head>
@@ -301,7 +301,7 @@ HTML 不区分大小写。标签可以全部大写，也可以小写。在早期
 `<p> A paragraph of text</p>`
 与此相同：
 
-```
+```plain
 <p>A paragraph
 
 of
@@ -316,7 +316,7 @@ of
 
 要么
 
-```
+```plain
 <p>
     A paragraph of text
 </p>
@@ -324,7 +324,7 @@ of
 
 嵌套标签应缩进 2 或 4 个字符，具体取决于您的偏好：
 
-```
+```plain
 <body>
     <p>
         A paragraph of text
@@ -343,7 +343,7 @@ head 标签包含定义文档属性的特殊标签。
 
 它总是写在 body 标签之前，紧接在 html 标签之后：
 
-```
+```plain
 <!DOCTYPE html>
 <html>
     <head>
@@ -381,7 +381,7 @@ title 标签确定页面标题。标题显示在浏览器中，它尤其重要�
 
 您可以使用开始标记，JavaScript 代码和结束标记来内联包含它：
 
-```
+```plain
 <script>
 ..some JS
 </script>
@@ -433,7 +433,7 @@ title 标签确定页面标题。标题显示在浏览器中，它尤其重要�
 
 在此示例中，我使用 no-script-alert 类设置了一个元素，以显示是否禁用了脚本，因为它是显示的：默认情况下，没有显示：
 
-```
+```plain
 <!DOCTYPE html>
 <html>
     <head>
@@ -466,7 +466,7 @@ Usage:
 
 用法：
 
-```
+```plain
 <!DOCTYPE html>
 <html>
     <head>
@@ -480,7 +480,7 @@ Usage:
 
 media 属性允许根据设备功能加载不同的样式表：
 
-```
+```plain
 <link href="file.css" media="screen" rel="stylesheet">
 <link href="print.css" media="print" rel="stylesheet">
 ```
@@ -493,7 +493,7 @@ media 属性允许根据设备功能加载不同的样式表：
 
 或者我们可以使用以下方式关联收藏夹图标：
 
-```
+```plain
 <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
 
 <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
@@ -509,7 +509,7 @@ media 属性允许根据设备功能加载不同的样式表：
 
 用法：
 
-```
+```plain
 <style>
 .some-css {}
 </style>
@@ -517,7 +517,7 @@ media 属性允许根据设备功能加载不同的样式表：
 
 与 link 标签一样，您可以使用 media 属性仅在指定的介质上使用该 CSS：
 
-```
+```plain
 <style media="print">
 .some-css {}
 </style>
@@ -527,7 +527,7 @@ media 属性允许根据设备功能加载不同的样式表：
 
 此标记用于为页面中包含的所有相对 URL 设置基本 URL。
 
-```
+```plain
 <!DOCTYPE html>
 <html>
     <head>
@@ -607,7 +607,7 @@ You can set nofollow on individual links, too. This is how you can set nofollow 
 
 在 head 标签之后，我们在 HTML 文档中只能有一件东西：body 元素。
 
-```
+```plain
 <!DOCTYPE html>
 <html>
     <head>
@@ -733,7 +733,7 @@ code 标签对于显示代码特别有用，因为浏览器为它提供了等宽
 
 这通常是浏览器唯一要做的。这是 Chrome 应用的 CSS：
 
-```
+```plain
 code {
     font-family: monospace;
 }
@@ -743,7 +743,7 @@ code {
 
 Chrome 会预先提供此默认样式：
 
-```
+```plain
 pre {
     display: block;
     font-family: monospace;
@@ -766,7 +766,7 @@ pre {
 
 使用 ul 标签创建无序列表。列表中的每个项目都是使用 li 标签创建的：
 
-```
+```plain
 <ul>
     <li>First</li>
     <li>Second</li>
@@ -775,7 +775,7 @@ pre {
 
 有序列表是相似的，只是用 ol 标签制成：
 
-```
+```plain
 <ol>
     <li>First</li>
     <li>Second</li>
@@ -788,7 +788,7 @@ pre {
 
 定义列表有些不同。您有一个术语及其定义：
 
-```
+```plain
 <dl>
     <dt>Flavio</dt>
     <dd>The name</dd>
@@ -859,7 +859,7 @@ pre {
 
 链接标签可以在其中包含其他内容，而不仅仅是文本。例如，图像：
 
-```
+```plain
 <a href="https://flaviocopes.com">
     <img src="test.jpg">
 </a>
@@ -897,7 +897,7 @@ article 标签标识可以独立于页面中其他事物的事物。
 
 或链接列表。
 
-```
+```plain
 <div>
     <article>
         <h2>A blog post</h2>
@@ -912,7 +912,7 @@ article 标签标识可以独立于页面中其他事物的事物。
 
 我们不仅限于列表：文章可以是页面中的主要元素。
 
-```
+```plain
 <article>
     <h2>A blog post</h2>
     <p>Here is the content...</p>
@@ -927,7 +927,7 @@ article 标签标识可以独立于页面中其他事物的事物。
 
 例：
 
-```
+```plain
 <section>
     <h2>A section of the page</h2>
     <p>...</p>
@@ -943,7 +943,7 @@ article 标签标识可以独立于页面中其他事物的事物。
 
 div 是通用容器元素：
 
-```
+```plain
 <div>
     ...
 </div>
@@ -959,7 +959,7 @@ div 是通用容器元素：
 
 此标记用于创建定义页面导航的标记。为此，我们通常添加一个 ulor ol 列表：
 
-```
+```plain
 <nav>
     <ol>
         <li><a href="/">Home</a></li>
@@ -976,7 +976,7 @@ aside 标签用于添加与主要内容相关的内容。
 
 例：
 
-```
+```plain
 <div>
   <p>some text..</p>
   <aside>
@@ -992,7 +992,7 @@ aside 标签用于添加与主要内容相关的内容。
 
 标头标记代表页面的一部分，即简介。例如，它可以包含一个或多个标题标签（h1-h6），商品的标语，图像。
 
-```
+```plain
 <article>
   <header>
       <h1>Article title</h1>
@@ -1005,7 +1005,7 @@ aside 标签用于添加与主要内容相关的内容。
 
 main 标签代表页面的主要部分：
 
-```
+```plain
 <body>
   ....
   <main>
@@ -1018,7 +1018,7 @@ main 标签代表页面的主要部分：
 
 页脚标记用于确定文章的页脚或页面的页脚：
 
-```
+```plain
 <article>
  ....
   <footer>
@@ -1037,7 +1037,7 @@ main 标签代表页面的主要部分：
 
 使用 form 标记创建一个表单：
 
-```
+```plain
 <form>
     ...
 </form>
@@ -1047,7 +1047,7 @@ main 标签代表页面的主要部分：
 
 您可以使用 method 属性将表单设置为在提交时使用 POST：
 
-```
+```plain
 <form method="POST">
     ...
 </form>
@@ -1055,7 +1055,7 @@ main 标签代表页面的主要部分：
 
 使用 GET 或 POST 将表单提交到其驻留的相同 URL。
 
-因此，如果表单位于https://flaviocopes.com/contacts页面，则按“提交”按钮将向该URL发出请求。
+因此，如果表单位于https://flaviocopes.com/contacts 页面，则按“提交”按钮将向该 URL 发出请求。
 
 可能什么也不会发生。
 
@@ -1063,7 +1063,7 @@ main 标签代表页面的主要部分：
 
 您可以通过 action 参数指定 URL：
 
-```
+```plain
 <form action="/new-contact" method="POST">
     ...
 </form>
@@ -1071,7 +1071,7 @@ main 标签代表页面的主要部分：
 
 这将导致浏览器使用 POST 将表单数据提交到同一来源的/ new-contact URL。
 
-如果来源（协议+域+端口）为https://flaviocopes.com（默认端口80），则意味着表单数据将发送到https://flaviocopes.com/new-contact。
+如果来源（协议+域+端口）为https://flaviocopes.com（默认端口 80），则意味着表单数据将发送到 https://flaviocopes.com/new-contact。
 
 我谈到了数据。哪些数据？
 
@@ -1241,7 +1241,7 @@ type =“ button”输入字段可用于向表单添加不是提交按钮的其�
 
 您定义一组 type =“ radio”输入，所有输入都具有相同的 name 属性和不同的 value 属性：
 
-```
+```plain
 <input type="radio" name="color" value="yellow">
 
 <input type="radio" name="color" value="red">
@@ -1261,7 +1261,7 @@ type =“ button”输入字段可用于向表单添加不是提交按钮的其�
 
 您定义一组 type =“ checkbox”输入，所有输入都具有相同的 name 属性和不同的 value 属性：
 
-```
+```plain
 <input type="checkbox" name="color" value="yellow">
 
 <input type="checkbox" name="color" value="red">
@@ -1367,7 +1367,7 @@ textarea 元素允许用户输入多行文本。与输入相比，它需要一�
 
 每个选项都是使用 option 标记创建的。您为选择添加一个名称，并为每个选项添加一个值：
 
-```
+```plain
 <select name="color">
     <option value="red">Red</option>
     <option value="yellow">Yellow</option>
@@ -1376,7 +1376,7 @@ textarea 元素允许用户输入多行文本。与输入相比，它需要一�
 
 您可以将选项设置为禁用：
 
-```
+```plain
 <select name="color">
     <option value="red" disabled>Red</option>
     <option value="yellow">Yellow</option>
@@ -1385,7 +1385,7 @@ textarea 元素允许用户输入多行文本。与输入相比，它需要一�
 
 您可以有一个空选项：
 
-```
+```plain
 <select name="color">
     <option value="">None</option>
     <option value="red">Red</option>
@@ -1395,7 +1395,7 @@ textarea 元素允许用户输入多行文本。与输入相比，它需要一�
 
 可以使用 optgroup 标记对选项进行分组。每个选项组都有一个标签属性：
 
-```
+```plain
 <select name="color">
     <optgroup label="Primary">
         <option value="red">Red</option>
@@ -1419,7 +1419,7 @@ Web 表格的早期是建筑布局的重要组成部分。
 
 使用 table 标记定义一个表：
 
-```
+```plain
 <table>
 
 </table>
@@ -1431,7 +1431,7 @@ Web 表格的早期是建筑布局的重要组成部分。
 
 使用 tr 标记添加一行，这是我们唯一可以添加到表元素中的东西：
 
-```
+```plain
 <table>
   <tr></tr>
   <tr></tr>
@@ -1451,7 +1451,7 @@ Web 表格的早期是建筑布局的重要组成部分。
 
 # 此处有图
 
-```
+```plain
 <table>
   <tr>
     <th>Column 1</th>
@@ -1467,7 +1467,7 @@ Web 表格的早期是建筑布局的重要组成部分。
 
 该表的内容是在其他 tr 元素内部使用 td 标签定义的：
 
-```
+```plain
 <table>
   <tr>
     <th>Column 1</th>
@@ -1494,7 +1494,7 @@ Web 表格的早期是建筑布局的重要组成部分。
 
 添加此 CSS：
 
-```
+```plain
 th, td {
   padding: 10px;
   border: 1px solid #333;
@@ -1509,7 +1509,7 @@ th, td {
 
 使用 colspan 属性，行可以决定跨越 2 列或更多列：
 
-```
+```plain
 <table>
   <tr>
     <th>Column 1</th>
@@ -1530,7 +1530,7 @@ th, td {
 
 或者，可以使用 rowspan 属性跨越两行或更多行：
 
-```
+```plain
 <table>
   <tr>
     <th>Column 1</th>
@@ -1555,7 +1555,7 @@ th, td {
 
 您可以将 th 标记添加为 tr（不是表的第一个 tr）中的第一个元素，以具有行标题：
 
-```
+```plain
 <table>
   <tr>
     <th></th>
@@ -1591,7 +1591,7 @@ th, td {
 
 它们包装 tr 标记以清楚地定义表的不同部分。这是一个例子：
 
-```
+```plain
 <table>
   <thead>
     <tr>
@@ -1628,7 +1628,7 @@ th, td {
 
 一个表应具有描述其内容的标题标签。该标签应放在开头表格标签之后：
 
-```
+```plain
 <table>
   <caption>Dogs age</caption>
   <tr>
@@ -1880,7 +1880,7 @@ Figure 标记通常与 img 标记一起使用。
 
 图是要显示带标题的图像时经常使用的语义标记。您可以这样使用它：
 
-```
+```plain
 <figure>
     <img src="dog.png"
          alt="A nice dog">
@@ -1896,7 +1896,7 @@ srcset 属性使您可以根据自己的喜好，设置浏览器可以根据像�
 
 这是一个示例，其中我们针对 4 种不同的屏幕尺寸提供了 4 张其他图片：
 
-```
+```plain
 <img src="dog.png"
     alt="A picture of a dog"
     srcset="dog-500.png 500w,
@@ -1909,7 +1909,7 @@ srcset 属性使您可以根据自己的喜好，设置浏览器可以根据像�
 
 既然这样做，我们还需要使用 sizes 属性：
 
-```
+```plain
 <img src="dog.png"
     alt="A picture of a dog"
     sizes="(max-width: 500px) 100vw, (max-width: 900px) 50vw, 800px"
@@ -1939,7 +1939,7 @@ HTML 还为我们提供了图片标签，该标签与 srcset 的功能非常相�
 
 我发现的最佳用例是在提供 WebP 图像时，该图像仍未被广泛支持。在图片标签中，您指定了图像列表，并且将按顺序使用它们，因此在下一个示例中，支持 WebP 的浏览器将使用第一个图像，如果不使用，则回退为 JPG：
 
-```
+```plain
 <picture>
   <source type="image/webp" srcset="image.webp">
   <img src="image.jpg" alt="An image">
@@ -1952,7 +1952,7 @@ HTML 还为我们提供了图片标签，该标签与 srcset 的功能非常相�
 
 下面的示例类似于 srcset 的上述示例：
 
-```
+```plain
 <picture>
   <source media="(min-width: 500w)" srcset="dog-500.png" sizes="100vw">
   <source media="(min-width: 800w)" srcset="dog-800.png" sizes="100vw">
@@ -1990,7 +1990,7 @@ HTML 还为我们提供了图片标签，该标签与 srcset 的功能非常相�
 
 为标题标签使用正确的结构很重要。最重要的是 h1，对于次要的标题使用较高的数字，但是所有相同级别的标题都应具有相同的含义（像树形结构一样思考）
 
-```
+```plain
 h1
     h2
         h3
@@ -2006,7 +2006,7 @@ h1
 
 一个表应具有描述其内容的标题标签：
 
-```
+```plain
 <table>
   <caption>Dogs age</caption>
   <tr>
@@ -2038,7 +2038,7 @@ h1
 
 让我们以 nav 标签为例。您可以使用它来定义页面导航，如下所示：
 
-```
+```plain
 <nav>
   <ul>
     <li><a href="/">Home</a></li>
@@ -2049,7 +2049,7 @@ h1
 
 如果您被迫使用 div 标签而不是 nav，则可以使用导航角色：
 
-```
+```plain
 <div role="navigation">
   <ul>
     <li><a href="/">Home</a></li>
@@ -2066,7 +2066,7 @@ tabindex 属性允许您更改按 Tab 键选择“可选”元素的顺序。默
 
 添加 tabindex =“ 0”可以选择一个元素：
 
-```
+```plain
 <div tabindex="0">
 ...
 </div>
@@ -2098,7 +2098,7 @@ ARIA 是首字母缩写词，表示可访问的 Rich Internet Applications，并
 
 例：
 
-```
+```plain
 <h3 id="description">The description of the product</h3>
 
 <p aria-labelledby="description">
@@ -2112,7 +2112,7 @@ ARIA 是首字母缩写词，表示可访问的 Rich Internet Applications，并
 
 例：
 
-```
+```plain
 <button aria-describedby="payNowDescription" >Pay now</button>
 
 <div id="payNowDescription">Clicking the button will send you to our Stripe form!</div>

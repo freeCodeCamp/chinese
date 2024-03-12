@@ -11,7 +11,7 @@
 
 首先，我想说的是我写这篇文章是为了给尽可能多的读者看的，所以你不需要任何编程知识，但是熟悉一些命令行和 Git 操作会帮到你很多。
 
-## 所以怎么在 10 分钟内用 GitHub 创建一个静态网站？
+## 所以怎么在 10 分钟内用 GitHub 创建一个静态网站
 
 我们将用到两个特定工具：GitHub Pages，专门提供静态内容服务，另一个 Jekyll，用来生成静态内容。
 
@@ -129,7 +129,7 @@ git push
 
 在一分钟之后(也许刷新一下)，你就可以看到你的帖子了。
 
-希望你现在已经在使用 Jekyll 创建的 GitHub Pages 上有了一个可以工作的静态站点，如果你有任何疑问，请发推特 [@tfantina][6]，或者你可以给我发邮件contact@travisfantina.com.
+希望你现在已经在使用 Jekyll 创建的 GitHub Pages 上有了一个可以工作的静态站点，如果你有任何疑问，请发推特 [@tfantina][6]，或者你可以给我发邮件 contact@travisfantina.com.
 
 [1]: https://www.ruby-lang.org/en/documentation/installation/
 [2]: https://stackoverflow.com/users/6885157/alex-waibel

@@ -7,15 +7,15 @@
 
 Sometimes I wonder if I know much of anything at all.
 
-Just a few weeks ago I was talking to a friend who mentioned off-hand, “you would never run an application directly against Node in production”. I nodded vigorously to signal that I _also_ would never ever run against Node in production because…hahaha….everyone knows that. But I didn’t know that! Should I have known that?!?? AM I STILL ALLOWED TO PROGRAM?
+Just a few weeks ago I was talking to a friend who mentioned off-hand, “you would never run an application directly against Node in production”. I nodded vigorously to signal that I _also_ would never ever run against Node in production because……hahaha…….everyone knows that. But I didn’t know that! Should I have known that?!?? AM I STILL ALLOWED TO PROGRAM?
 
-If I was to draw a Venn Diagram of what I know vs what I feel like everyone else knows, it would look like this…
+If I was to draw a Venn Diagram of what I know vs what I feel like everyone else knows, it would look like this……
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*ThJbM2JMjrnTuHczo0tLqw.png)
 
 By the way, that tiny dot gets smaller the older I get.
 
-There is a better diagram created by [Alicia Liu][1] that kind of changed my life. She says that it’s more like this…
+There is a better diagram created by [Alicia Liu][1] that kind of changed my life. She says that it’s more like this……
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*N7vv39ri9yC0l6krsSFlQA.png)
 
@@ -31,7 +31,7 @@ First off, let’s address the statement “never run apps directly against Node
 
 Maybe. But maybe not. Let’s talk about the reasoning behind this statement. First, let’s look at why not.
 
-Say we have a simple Express server. The simplest Express server I can think of…
+Say we have a simple Express server. The simplest Express server I can think of……
 
 ```js
 const express = require('express');
@@ -46,7 +46,7 @@ app.get('/', function (req, res) {
 
 We would run this with a start script in the `package.json` file.
 
-```
+```plain
 "scripts": {
   "dev": "npx supervisor index.js",
   "start": "node index.js"
@@ -59,9 +59,9 @@ There are sort of two problems here. The first is a development problem and the 
 
 The development problem is that when we change the code, we have to stop and start the application to get our changes picked up.
 
-To solve that, we usually use some sort of Node process manager like `supervisor` or `nodemon`. These packages will watch our project and restart our server whenever we make changes. I usually do that like this…
+To solve that, we usually use some sort of Node process manager like `supervisor` or `nodemon`. These packages will watch our project and restart our server whenever we make changes. I usually do that like this……
 
-```
+```plain
 "scripts": {  "dev": "npx supervisor index.js",  "start": "node index.js"}
 ```
 
@@ -114,14 +114,14 @@ pm2 is a Node process manager that has lots of bells and whistles. Just like eve
 
 There are a lot of ways to run your app with pm2. The simplest way is to just call `pm2 start` on your entry point.
 
-```
+```plain
 "scripts": {
   "start": "pm2 start index.js",
   "dev": "npx supervisor index.js"
 },
 ```
 
-And you’ll see something like this in the terminal…
+And you’ll see something like this in the terminal……
 
 ![](https://cdn-media-1.freecodecamp.org/images/1*uvsnmQahRBHtnh0X7tt_xA.png)
 
@@ -133,7 +133,7 @@ There we go! You can see pm2 restart the application when it goes down because o
 
 We can also pull out our dev command and have pm2 watch files for us and restart on any changes.
 
-```
+```plain
 "scripts": {
   "start": "pm2 start index.js --watch",
   "dev": "npx supervisor index.js"
@@ -158,7 +158,7 @@ We can also use pm2 to run multiple processes of our application. pm2 will autom
 
 #### Multiple processes with pm2 fork mode
 
-pm2 has a ton of configuration options and those are contained in an “ecosystem” file. To create one, run `pm2 init`. You’ll get something like this…
+pm2 has a ton of configuration options and those are contained in an “ecosystem” file. To create one, run `pm2 init`. You’ll get something like this……
 
 ```js
 module.exports = {
@@ -214,7 +214,7 @@ Then we just run it with `pm2 start`.
 
 pm2 is now running in “cluster” mode. Each of these processes is running on a different CPU on my machine, depending on how many cores I have. If we wanted to run a process for each core without knowing how many cores we have, we can just pass the `max`parameter to the `instances` value.
 
-```
+```plain
 {
    ...
    instances: "max",
@@ -234,7 +234,7 @@ You can do a WHOLE lot more with pm2, including monitoring and otherwise wrangli
 
 One other item of note: if for some reason you want pm2 to run your `npm start` script, you can do that by running npm as the process and passing the `-- start`. The space before the “start” is super important here.
 
-```
+```plain
 pm2 start npm -- start
 ```
 
@@ -258,7 +258,7 @@ In this case, you **can** run directly against Node because you are monitoring a
 
 As it turns out, Azure is already doing this. If we don’t push a pm2 ecosystem file to Azure, it will start the application with our `package.json` file start script and we can run directly against Node.
 
-```
+```plain
 "scripts": {
   "start": "node index.js"
 }
@@ -273,23 +273,23 @@ But you still only have one instance here. It takes the container a second to co
 Ideally, you would want more than one container running. The solution to this would be to deploy multiple instances of your application to multiple Azure AppService sites and then use Azure Front Door to load balance the apps behind a single IP address. Front Door will know when a container is down and will route traffic to other healthy instances of your application.
 
 [**Azure Front Door Service | Microsoft Azure**][8]  
-[\_Deliver, protect and track the performance of your globally distributed microservice applications with Azure Front Door…\_azure.microsoft.com][9]
+[\_Deliver, protect and track the performance of your globally distributed microservice applications with Azure Front Door……\_azure.microsoft.com][9]
 
 #### systemd
 
-Another suggestion that Tierney had is to run Node with `systemd`. I don’t understand too much (or anything at all) about `systemd` and I’ve already messed this phrasing up once already, so I’ll let Tierney say it in his own words…
+Another suggestion that Tierney had is to run Node with `systemd`. I don’t understand too much (or anything at all) about `systemd` and I’ve already messed this phrasing up once already, so I’ll let Tierney say it in his own words……
 
 > This option is only possible if you have access to Linux in your deployment and you control the way that Node is started on a service level. If you’re running your Node.js process in a long-running Linux VM, like Azure VMs, you’re in a good place to run Node.js with systemd. If you are just deploying your files to a service like Azure AppService or Heroku or running inside of a containerized environment like Azure Container Instances, you should probably steer clear of this option.
 
 [**Running Your Node.js App With Systemd - Part 1**][10]  
-[\_You've written the next great application, in Node, and you are ready to unleash it upon the world. Which means you can…\_nodesource.com][11]
+[\_You've written the next great application, in Node, and you are ready to unleash it upon the world. Which means you can……\_nodesource.com][11]
 
 #### Node.js Worker Threads
 
 Tierney also wants you to know that Worker Threads are coming in Node. This will allow you to start your app on multiple “workers” (threads) thusly negating the need for something like pm2. Maybe. I don’t know. I didn’t really read the article.
 
 [**Node.js v11.14.0 Documentation**][12]  
-[\_The worker_threads module enables the use of threads that execute JavaScript in parallel. To access it: const worker =…\_nodejs.org][13]
+[\_The worker_threads module enables the use of threads that execute JavaScript in parallel. To access it: const worker =……\_nodejs.org][13]
 
 #### Be an Adult
 
@@ -299,7 +299,7 @@ Tierney’s last suggestion was to just handle the error and write some tests li
 
 Now you know most of what is in the tiny blue circle. The rest is just useless facts about emo bands and beer.
 
-For more information on pm2, Node and Azure, check out the following resources…
+For more information on pm2, Node and Azure, check out the following resources……
 
 -   [http://pm2.keymetrics.io/][14]
 -   [Node.js deployment on VS Code][15]

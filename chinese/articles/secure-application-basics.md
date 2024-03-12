@@ -1,53 +1,53 @@
 > -   原文地址：[How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/secure-application-basics/)
 > -   原文作者：Victoria Drake
-> -   译者：
+> -   译者：ZivLi
 > -   校对者：
 
 ![How to make your app's architecture secure right now: separation, configuration, and access](https://www.freecodecamp.org/news/content/images/size/w2000/2019/09/cover-2.png)
 
-### If you're a busy developer, this article will be a good starting point for building secure application architecture.
+### 如果你是一个工作繁忙的开发人员，那么本文将是你构建安全的应用程序体系架构的一个很好的起点
 
-Developers today get to focus more on building software than they were able to in the past, and that’s a great thing.
+与过去相比，如今的开发人员可以更专注于构建软件，这是一件好事儿。
 
-We’re benefitting from maker culture, an attitude of “always be shipping,” open source collaboration, and a lots of apps that help us prioritize and execute with maximum efficiency.
+我们受益于制造商文化中“保持待发货”的理念、开源的协作模式、以及许多可以帮助我们确定优先级，提高执行效率的应用软件。
 
-We’re in an environment of constant creation, where both teams and solo entrepreneurs can be maximally productive.
+我们正处于一个创新不断的大环境中，无论是团队还是独资企业家都可以最大限度的提供生产力。
 
-But sometimes this breakneck-speed productivity shows its downsides.
+但有时，这种惊人的生产力也会暴露出它的缺点。
 
-As I learn more about security best practices, I can’t help but see more and more applications that don’t have a clue. Their developers seem to have a a general lack of awareness of security. This leads to a lack of prioritization of tasks that don’t directly support bringing the product to launch.
+在我研究有关于安全性的最佳实践的过程中，我发现越来越多的应用程序在这方面做得毫无头绪。他们的开发人员似乎普遍缺乏安全意识，这也直接导致了很多缺乏优先级的任务不能有效的支持产品的发布。
 
-The market seems to have made it more important to launch a usable product than a secure one. The prevailing attitude is: “we can do the security stuff later.”
+市场的情况似乎使得发布一个可用的产品比一个安全的产品更为重要。他们普遍的态度是：“我们之后可以再补充一些安全性方面的内容”。
 
-Building a foundation based on expediency rather than longevity is a bad way to build applications. It's a great way to build security debt.
+在构建整个应用程序时，基于权宜之计，而非长久眼光来建立的基础架构，并不是一个明智的选择。除非你想留下很多的安全风险。
 
-Security debt, like technical debt, amasses when developers make (usually hasty) decisions that can make it more difficult to secure the application later on.
+所谓的安全风险（类似于技术风险）会在开发人员作出（通常是仓促的）决策时造成麻烦，从而导致之后的应用程序更加难以维护。
 
-If you’re familiar with the concept of “pushing left” (or if you read my [article about sensitive data exposure][1]), you’ll know that when it comes to security, sometimes there isn’t a version of “later” that isn’t _too_ late.
+如果你之前了解过关于“左推”的概念（或者有读过我的[《敏感数据公开》][1]），那么你就会知道，在安全性方面，“下个版本”就已经*太*晚了。
 
-It’s a shame, since following some basic security practices with high benefit yield early in the development process doesn’t take significantly more time than _not_ following them. Often, it comes down to having some basic but important knowledge that helps you to make the more secure decision.
+实际上，在开发工作的初期就遵循一些具有高收益的基本的安全实践，并不会比*不*这样做花费更多的时间。总之，拥有一些基础且重要的知识，会帮助你作出更安全的决策。
 
-While application architecture varies greatly, there are a few basic principles you can apply. This article will give you a high-level overview of these areas and point you in the right direction.
+尽管不同的应用程序架构差异很大，但你仍可以运用一些基本原则。本文将为你做一个总体的概览，从而引导你步入正确的方向。
 
-There must be a reason we call it application “architecture.” I like to think it’s because the architecture of software is similar in some basic ways to the architecture of a building. (Or at least, in my absolute zero building-creation expertise, how I imagine a pretty utilitarian building to be.)
+之所以我们能把应用程序体系称为“架构”，我想大概是因为它跟建筑学中的架构有相似之处。（至少，以我一个建筑领域的小白来说，是这样觉得的。）
 
-Here’s how I like to summarize three basic points of building secure application architecture:
+关于如何构建一个安全的应用程序架构，我总结为以下三个基本要点：
 
-1.  Separated storage
-2.  Customized configuration
-3.  Controlled access and user scope
+1.  隔离存储
+2.  定制化配置
+3.  受控访问及用户范围
 
-This is only a jumping-off point meant to get us started on the right foot. A complete picture of a fully-realized application’s security posture includes areas outside the scope of this post, including authentication, logging and monitoring, integration, and sometimes compliance.
+当然，上面的总结只是一个起点，旨在指引我们起步前往正确的方向。一个具有完整安全性的应用程序架构除了本文涉及到的部分之外，还会包括身份验证、日志记录、监控系统、集成性以及合规性方面的内容。
 
-## 1\. Separated storage
+## 1\. 隔离存储
 
-From a security standpoint, the concept of separation refers to storing files that serve different purposes in different places.
+从安全性的角度来看，“隔离”的概念是指在不同位置存储服务于不同目的的文件。
 
-When you’re constructing a building and deciding where all the rooms go, you create the lobby on the ground floor. Administrative offices go on higher floors, usually off the main path. While both a lobby and offices are rooms, you understand that they serve different purposes. They also have different functional needs, and very different security requirements.
+比如当你在设计一栋楼的房间分配的时候，你大概会把储物间放在偏角落的地方，会议室放在一些宽敞的，大一点的房间，而大佬的办公室可能会放在视野更宽阔的高层。虽然这些都是房间，但你也会知道它们会有不同的用途。而根据它们功能性的不同，需要考虑的安全性也会有非常大的区别。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/09/separation.png)
 
-When it comes to your files, the benefit is perhaps easiest to understand if you consider a simple file structure:
+类比于应用程序中的文件目录结构，可能对你来说也更容易理解一些：
 
 ```txt
 application/
@@ -62,59 +62,59 @@ application/
      └───master-keys.txt
 ```
 
-In this simplified example, let’s say that all your application’s images are stored in the `application/assets/images/` directory. When one of your users creates a profile and uploads their picture to it, this picture is also stored in this folder. Makes sense, right? It’s an image, and that’s where the images go. What’s the issue?
+在这个简化的例子中，假设你程序中所有的图片都保存在 `application/assets/images/` 这个路径下，那么当你的用户创建个人资料并上传某些图片时，该图片也会被保存在这个路径下。可能你会问，这本来就是一张图片，保存到图片都在的路径下，这有什么问题呢？
 
-If you’re familiar with navigating a file structure in a terminal, you may have seen this syntax before: `../../`. The two dots are a handy way of saying, “go up one directory.” If you execute the command `cd ../../` in the `images/` directory of the simple file structure above, you’d go up into `assets/`, then up again to the root directory, `application/`. This is a problem because of a wee little vulnerability dubbed [path traversal][2].
+如果你熟悉终端操作，那你很可能见过这种语法：`../../`。两个点表示返回上层路径。假如你在 `images/` 这个路径下执行命令 `cd ../../`，那么你会返回到 `assets/`，然后再返回一层，到这个程序的根目录 `appliaction/` 下。这里就会有一个由[路径遍历][2]而引发的问题。
 
-While the dot syntax saves some typing, it also introduces the interesting advantage of not actually needing to know what the parent directory is called in order to go to it.
+虽然看上去这种写法减少了一些键入，但实际上它并不明确的知道，它的父级目录的名字是啥。
 
-Consider an attack payload script, delivered into the `images/` folder of this insecure application, that went up one directory using `cd ../` and then sent everything it found to the attacker, on repeat. Eventually, it would reach the root application directory and access the `super-secret-configurations/` folder. Not good.
+试想下，如果一个攻击脚本进到了 `images/` 这个目录，该脚本循环地使用 `cd ../`，然后把所有遍历到的内容发送给攻击者。那么它将最终到程序的根目录，并且访问到 `super-secret-configurations/`，这就很糟糕了😰。
 
-While other measures should be in place to prevent path traversal and related user upload vulnerabilities, the simplest prevention by far is a separation of storage. Core application files and assets should not mix with other data, and especially not with [user input][3]. It’s best to keep user-uploaded files and activity logs (which may contain juicy data and can be vulnerable to injection attacks) separate from the main application.
+虽然我们本应该采取其他措施来防止这种路径遍历和由于用户上传导致的漏洞，但就目前而言，最简单的预防措施就是隔离存储。核心部分的程序文件不应该与其他数据文件混合在一起，尤其是[用户输入][3]的内容。最好是将用户上传的文件和用户行为的日志（可能包含其他容易造成注入攻击的数据）与程序主体分开。
 
-You can achieve separation by using a different server, different instance, separate IP range, or separate domain.
+你可以通过不同的服务器、不同的实例、独立的 IP 范围或者独立的域名来实现这种存储的隔离。
 
-## 2\. Customized configuration
+## 2\. 定制化化配置
 
-While wasting time on customization can hinder productivity, one area that you want to customize is configuration settings.
+尽管花费时间进行定制化会影响生产率，但配置的设置还是你需要进行定制化的部分。
 
-[Security misconfiguration][4] is listed in the OWASP Top 10. A significant number of security incidents occur because a server, firewall, or administrative account is running in production with default settings. Upon the opening of your new building, you’d hopefully be more careful to ensure you haven’t left any keys in the locks.
+[安全性配置错误][4]被列举在 OWASP Top 10 中。大量的安全时间的发生都是由于服务器、防火墙或者管理员账号的相关信息以默认配置运行在生产环境中。在实际的工作中，你也要格外注意这些安全隐患。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/09/defaultkey.png)
 
-Usually, the victims of attacks related to default settings aren’t specifically targeted. They are instead found by automated scanning tools that attackers run over many possible targets. These attackers are testing many different systems to see if any roll over and expose a useful exploit.
+通常，与默认设置有关的攻击的受害者并不是被专门针对的。相反地，它们大都是由自动扫描工具发现的，攻击者可以在许多可能的目标上运行这些工具。攻击者会测试许多不同的系统，以查看是否有任何发现并暴露出可利用的漏洞的机会。
 
-The automated nature of this attack means that it’s important to review settings for every piece of the architecture. Even if an individual piece doesn’t seem significant, it may provide a vulnerability that gives an attacker a gateway to the application.
+这种攻击的自动性意味着，你必须检查整个应用程序架构中的每个部分的设置。这一点很重要。因为即使单个的部分看起来并不重要，但在整体上它也可能会提供一个漏洞，使得攻击者可以侵入整个程序。
 
-In particular, examine architecture components for unattended areas such as:
+特别是要检查一些不太会被注意到的架构组件，例如：
 
--   Default accounts, especially with default passwords, left in service;
--   Example web pages, tutorial applications, or sample data left in the application;
--   Unnecessary ports left in service, or ports left open to the Internet;
--   Unrestricted permitted HTTP methods;
--   Sensitive information stored in automated logs;
--   Default configured permissions in managed services; and,
--   Directory listings, or sensitive file types, left accessible by default.
+-   默认账号，尤其是使用默认密码的账户信息；
+-   示例网页、应用程序开发的教程或者在程序中遗留的样例数据；
+-   不必要的服务端口或者开放到 Internet 的端口；
+-   不限权的 HTTP 方法；
+-   保存在自动化日志中的敏感信息；
+-   管理服务中的默认配置权限；
+-   默认可访问的目录或敏感的文件类型。
 
-This list isn’t exhaustive. Specific architecture components, such as cloud storage or web servers, will have other configurable features to review. In general, reduce the application’s attack surface by using minimal architecture components. If you use fewer components or don’t install modules you don’t need, you’ll have fewer possible attack entry points to configure and safeguard.
+上述的列表并不详尽。特定的架构组件（例如云存储或 Web 服务）还会有其他的可配置内容以供查看。通常，也可以通过使用最少的架构组件来尽量减少应用程序收到类似攻击的可能性。如果你使用较少的组件，或者避免安装不必要的模块内容，那么可能受到攻击的地方也将更少。
 
-## 3\. Controlled access and user scope
+## 3\. 受控访问及用户范围
 
-One of the more difficult security problems to test in an application is misconfigured access control. Automated testing tools have limited capability to find areas of an application that one user shouldn’t be able to access. This is often thus left to manual testing or source code review to discover.
+应用程序的测试工作中，最困难的一种安全性测试内容就是访问受控。自动化的测试工具在查找一个用户不该访问的应用模块的能力是非常有限的。因此，这部分工作通常会由人工测试或源代码审查来完成。
 
-Developers can reduce the risk that this becomes are hard problem to fix later. Consider this vulnerability early on in the software development lifecycle, when architectural decisions are being made. After all, you wouldn’t simply leave your master keys out of reach on a high ledge and hope no one comes along with a ladder.
+开发人员可以减少留有以后更难以解决的问题的风险。在制定整体架构，整个软件生命周期的初期就应当尽可能的考虑到这些风险问题。毕竟，你应该也不会把万能钥匙随便的丢在哪里，然后看着谁拿着它随意而行。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/09/access-1.png)
 
-[Broken access control][5] is in the OWASP Top 10, which goes into more detail on its various forms. As a simple example, consider an application with two levels of access: administrators, and users. Developers want to build a new feature - the ability to moderate or ban users - with the intention that only administrators would be allowed to use it.
+[被破坏的访问受控][5]也在 OWASP Top 10 中被提到。其中更详细的介绍了其各种形式。举个简单的例子，比如一个具有两种访问级别的应用程序，分为管理者和普通用户。开发人员希望实现一个功能：审核或禁止某些用户。但是只有管理员的访问级别才可以使用这个功能。
 
-If you’re aware of possible access control vulnerabilities, you may decide to build the moderation feature in a separate area from the user-accessible space. This may be on a different domain, or as part of a model that users don’t share. This reduces the risk that an access control misconfiguration or elevation of privilege vulnerability might allow a user to improperly access the moderation feature later on.
+如果你有意识到这可能存在的访问级别漏洞，则可以选择在与普通用户可访问空间外的不同区域中，去实现这个功能。这所谓的不同区域可能是在另一个域名下，或者是普通用户不共享到的一个模型。这样就降低了访问控制配置错误，或者由于特定的等级提升漏洞可能导致的普通用户也能使用到这个功能的风险。
 
-Of course, robust access control in your application needs more support to be effective. Consider factors such as sensitive tokens, or keys passed as URL parameters, or whether a control fails securely or insecurely. Even so, by considering authorization at the architectural stage, you will set yourself up to make further reinforcements easier.
+当然了，强大的访问控制需要更多的技术支持才得以生效。例如考虑到敏感令牌、密钥通过 URL 参数进行传递或者是控制本身的安全性。即便如此，在架构设计时考虑到授权认证的内容，也会使得将来在加强程序安全性方面的工作变得更容易些。
 
-## Security basics for maximum benefit
+## 基础的安全保障带来最大化的效益
 
-Developers avoid racking up technical debt by choosing a well-vetted framework. Similarly, developers avoid security debt by becoming aware of common vulnerabilities and the architectural decisions that can help mitigate them. For a much more detailed resource on how to bake security into applications from the start, the [OWASP Application Security Verification Standard][6] is a robust guide.
+选择适合的框架会帮助开发人员避免更多的技术负担。同样地，开发人员可以通过意识到常见的漏洞，有助于减少这些漏洞的架构决策来避免一些安全隐患。如果你想了解更多关于如何从一开始就将安全性考虑到应用程序设计中，那么 [OWASP 应用程序安全验证标准][6]则是一份不错的指南。
 
 [1]: https://victoria.dev/blog/hackers-are-googling-your-plain-text-passwords-preventing-sensitive-data-exposure/
 [2]: https://cwe.mitre.org/data/definitions/22.html

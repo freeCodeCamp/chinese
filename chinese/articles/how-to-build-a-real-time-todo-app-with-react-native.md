@@ -18,7 +18,7 @@
 
 你可以在 [snack][3]或者 [expo][4] 上了解这个待办事项应用程序.
 
-### 什么是 React Native？
+### 什么是 React Native
 
 以下是[文档][5]的描述：
 
@@ -60,13 +60,13 @@
 
 我在[这里][20]使用 GitHub 分支中的 [create-react-native-app][19] 设置了启动项目。 你可以通过运行以下命令来[下载 zip][21] 或克隆基础分支：
 
-```
+```plain
 git clone -b base https://github.com/appbaseio-apps/todos-native
 ```
 
 -   接下来安装依赖项并启动包：
 
-```
+```plain
 cd todos-native && yarn && yarn start
 ```
 
@@ -76,11 +76,11 @@ cd todos-native && yarn && yarn start
 
 <center>所有选项卡的基本设置，请从[这里][23]克隆。</center>
 
-### 嵌入代码？
+### 嵌入代码
 
 从[基础分支][24]克隆代码后，你应该看到如下目录结构：
 
-```
+```plain
 navigation
 ├── RootComponent.js         // Root component for our app
 ├── MainTabNavigator.js      // Tab navigation component
@@ -183,7 +183,7 @@ const TabNav = TabNavigator(
 
 对于我们的 app，我们只需要添加、创建或删除待办事项这三个方法。 但是，你可以在[文档][29]中找到有关 API 方法的详细说明。
 
-### 搭建组件和 UI ？
+### 搭建组件和 UI 
 
 让我们开始添加一些组件来完成应用程序的功能。
 
@@ -326,7 +326,7 @@ import { ReactiveList } from '@appbaseio/reactivesearch-native';
 
 要查看内容，我们需要从 `onAllData` 返回 JSX 或 React 组件。 为此，我们将使用由 [Text][41] 组件组成的 React Native 的 [FlatList][40] 。 在下一步中，我们将添加自定义的 `TodoItem` 组件。
 
-```
+```plain
 ...
 import { ScrollView, StyleSheet, StatusBar, FlatList, Text } from 'react-native';
 import CONSTANTS from '../constants';
@@ -379,7 +379,7 @@ export default class TodosContainer extends React.Component {
 
 接下来，我们将创建一个单独的组件 TodoItem，用于显示每个待办事项，其中包含 Todo 项目的所有必要标记，如 [CheckBox][42]、[Text][43] 和一个删除 [Icon][44]。 这包含在 `components / TodoItem.js` 中：
 
-```
+```plain
 class TodoItem extends Component {
   onTodoItemToggle = (todo, propAction) => {
     propAction({
@@ -454,7 +454,7 @@ class TodoItem extends Component {
 
 接下来，我们可以在 `components / TodosContainer.js` 中的 `onAllData` 中`导入`和使用 `TodoItem` 组件。 我们将把 `todo` 和 `更新`、`销毁的` API 方法作为属性传递给 `TodoItem` 组件。
 
-```
+```plain
 class TodosContainer extends Component {
   ...
   onAllData = (todos, streamData) => {
@@ -486,7 +486,7 @@ class TodosContainer extends Component {
 在上一节中，我们为 ReactiveListcomponent 添加了一个 `onAllData` 方法。
 我们将利用接收的第二个参数 `onAllData` 结构更新流来保持待办事项的更新。以下是更新的 `onAllData` 方法在 `components / TodosContainer.js` 中的大概的样子。
 
-```
+```plain
 import Utils from '../utils';
 ...
 
@@ -517,7 +517,7 @@ export default class TodosContainer extends React.Component {
 
 `mergeTodos` 方法存在于 `utils / index.js` 中。 以下是它的工作原理：
 
-```
+```plain
 class Utils {
   static mergeTodos(todos, streamData) {
     // generate an array of ids of streamData

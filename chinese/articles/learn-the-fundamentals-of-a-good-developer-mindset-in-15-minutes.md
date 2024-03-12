@@ -246,7 +246,7 @@
 
 返回去思考你开发软件的目的，想想区分优先级的那个等式。
 
-```
+```plain
 From: rsc@plan9.bell-labs.com (Russ Cox)Subject: Re: [9fans] design clairvoyance & the 9 way来自： rsc@plan9.bell-labs.com (洛斯 考克斯)回复主题：透视设计
 Date: Thu, 8 May 2003 04:05:31 GMT日期：2003年5月8日 星期四 04：05：31 格林威治时间
 > What does tomorrow's unix look like?明天Unix系统会是什么样子？

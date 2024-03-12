@@ -25,7 +25,7 @@ According to the official [JAMstack documentation][3],
 
 **JAMstack** is a major trend in web development coined by [Mathias Biilman][4], the CEO and co-founder of Netlify.
 
-### Okay, chill! What is JAMstack?
+### Okay, chill! What is JAMstack
 
 You might have come across specific terms like **MEAN stack** and **MERN stack.** These are just terms used to classify or group some certain technologies with the aim of achieving a particular goal.
 
@@ -52,7 +52,7 @@ I’ll be using these terms in this article frequently and I thought you should 
 -   A **Server** is a computer designed to process requests and deliver data to another computer over the internet or a local network.
 -   A **Database** is a collection of information that is organized so that it can be easily accessed, managed, and updated
 
-### Why JAMstack?
+### Why JAMstack
 
 ![](https://cdn-media-1.freecodecamp.org/images/uHGkEXe8lXJsmj6cZNQmIW3bpsEzn0mU9Eun)
 
@@ -81,7 +81,7 @@ JAMstack sites only contain just a few files with minimal sizes that can be serv
 -   Ensure your build process is automated to reduce stress.
 -   Make your deployment process automatic, you can use platforms like [Netlify][6] to do this
 
-### How do I Get Started?
+### How do I Get Started
 
 You can use some already built technologies to build JAMstack applications in a few minutes. Here are a few:
 

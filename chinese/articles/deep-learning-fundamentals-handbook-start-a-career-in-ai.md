@@ -12,7 +12,7 @@ February 16, 2024 / [#Deep Learning][1]
 
 <!-- more -->
 
-# Deep Learning Fundamentals Handbook – What You Need to Know to Start Your Career in AI
+# 深度学习基础手册 – 开启人工智能职业生涯所需了解的内容
 
 ![Tatev Aslanyan](https://www.freecodecamp.org/news/content/images/size/w60/2023/08/Airbrush-AIGC--11-.png)
 
@@ -20,40 +20,40 @@ February 16, 2024 / [#Deep Learning][1]
 
   ![Deep Learning Fundamentals Handbook – What You Need to Know to Start Your Career in AI](https://www.freecodecamp.org/news/content/images/size/w2000/2024/02/The-Deep-Learning-Fundamentals-Handbook-Cover-Version-3--1-.png)
 
-If you want to get into the field of Artificial Intelligence (AI), one of the most in-demand career paths these days, you've come to the right place.
+如果你想进入人工智能（AI，Artificial Intelligence）领域——当下最热门的职业道路之一——那么你来对地方了。
 
-Learning Deep Learning Fundamentals is your essential first step to learning about Computer Vision, Natural Language Processing (NLP), Large Language Models, the creative universe of Generative AI, and more.
+学习深度学习基础是你了解计算机视觉（CV，Computer Vision）、自然语言处理（NLP，Natural Language Processing）、大语言模型（LLM，Large Language Models）和生成式人工智能（AGI，Artificial General Intelligence）的创意宇宙等内容的第一步。
 
-If you are aspiring Data Scientist, AI Researcher, AI Engineer, or Machine Learning Researcher, this guide is made for you.
+如果你渴望成为数据科学家、AI研究员、AI工程师或机器学习研究员，这份指南就是为你准备的。
 
-AI Innovation is happening quickly. Whether you're beginner or you're already in Machine learning, you should continue to solidify your knowledge base and learn the fundamentals of Deep Learning.
+当下AI的各个领域都正以极快的速度进行迭代和创新。无论你是初学者，还是已经从事机器学习相关领域工作，都应该继续巩固和学习深度学习的基础知识。
 
-Think of this handbook as your personal roadmap to navigating the AI landscape. Whether you're a budding enthusiast curious about how AI is transforming our world, a student aiming to build a career in tech, or a professional seeking to pivot into this exciting field, it will be useful to you.
+请把这本手册当作你在AI领域探索的个人路线图。无论你是对AI如何改变我们的世界这件事满怀好奇的新手爱好者，还是希望在科技领域有所建树的学生，亦或是希望转入这个令人心潮澎湃的领域的专业人士，它都会对你有所帮助。
 
-This guide can help you to:
+本指南可以帮助你做如下事情：
 
--   Learn all Deep Learning Fundamentals in one place from scratch
--   Refresh your memory on all Deep Learning fundamentals
--   Prepare for your upcoming AI interviews.
+-   从零开始学习深度学习的所有基础知识
+-   刷新你对深度学习的所有基础知识的认知
+-   为即将到来的人工智能面试做好准备
 
-## Table of Contents
+## 内容目录
 
-1.  [Chapter 1: What is Deep Learning?][3]
-2.  [Chapter 2: Foundations of Neural Networks][4]  
-    – Architecture of Neural Networks  
-    – Activation Functions
+1.  [第1章: 什么是深度学习？](#第1章: 什么是深度学习？)
+2.  [第2章: 神经网络基础](#第2章: 神经网络基础) 
+    – 神经网络架构 
+    – 激活函数
 3.  [Chapter 3: How to Train Neural Networks][5]  
     – Forward Pass - math derivation  
     – Backward Pass - math derivation
 4.  [Chapter 4: Optimization Algorithms in AI][6]  
-    – Gradient Descent - with Python    
-    – SGD - with Python    
-    – SGD Momentum - with Python    
-    – RMSProp - with Python    
-    – Adam - with Python    
+    – Gradient Descent - with Python    
+    – SGD - with Python    
+    – SGD Momentum - with Python    
+    – RMSProp - with Python    
+    – Adam - with Python    
     – AdamW - with Python
 5.  [Chapter 5: Regularization and Generalization][7]  
-    – Dropout  
+    – Dropout  
     – Ridge Regularization (L2 Regularization)  
     – Lasso Regularization (L1 Regularization)  
     – Batch Normalization
@@ -74,230 +74,121 @@ This guide can help you to:
 
 ![DALL-E-2024-01-19-22.49.45---A-hyper-stylized-artistic-representation-of-artificial-intelligence-and-programming--featuring-a-striking-yellow-and-black-color-scheme.-The-scene-is-](https://www.freecodecamp.org/news/content/images/2024/01/DALL-E-2024-01-19-22.49.45---A-hyper-stylized-artistic-representation-of-artificial-intelligence-and-programming--featuring-a-striking-yellow-and-black-color-scheme.-The-scene-is-.png)
 
-Image Source: [LunarTech.ai][12]
+图片来源: [LunarTech.ai][12]
 
-## Prerequisites
+## 先修知识
 
-Deep Learning is an advanced study area within the fields of Artificial Intelligence and Machine Learning. To fully grasp the concepts discussed here, it's essential that you have a solid foundation in several key areas.
+深度学习是人工智能和机器学习的高级研究领域。 要完全掌握本手册所讨论的概念，必须在以下方面有一定基础。
 
-### 1\. Machine Learning Basics
+### 1. 机器学习基础
 
-Understanding the core principles of machine learning is crucial. If you're not yet familiar with these, I recommend checking out my [Fundamentals of Machine Learning Handbook][13], where I've laid out all the necessary groundwork. Also, my [Fundamentals of Machine Learning][14] course offers comprehensive teaching on these principles.
+理解机器学习的核心原理至关重要。 如果你还不熟悉这些，建议查阅我的[机器学习基础手册][13]，其中包含了所有必要的基础知识。 此外，我的[机器学习基础知识][14] 课程也提供了有关这些原理的全面教学。
 
-### 2\. Fundamentals of Statistics
+### 2. 统计学基础
 
-Statistics play a vital role in making sense of data patterns and inferences in machine learning. For those who need to brush up on this, my [Fundamentals of Statistics][15] course is a another resource where I cover all the essential statistical concepts you'll need.
+统计学在理解机器学习数据模式和推理方面发挥着至关重要的作用。 对于需要温习这一点的人，我的[统计学基础][15] 课程是另一个资源，其中涵盖了深度学习所需的统计学基本概念。
 
-### 3\. Linear Algebra and Differential Theory
+### 3. 线性代数和微分理论
 
-A [high level understanding of linear algebra][16] and [differential theory][17] is also important. We'll cover some aspects, such as differentiation rules, in this handbook. We'll go over matrix multiplication, matrix and vector operations, normalization concepts, and the basics of differentiation theory.
+[对线性代数的高级理解][16]和[微分理论][17]也很重要。 我将在本手册中介绍一些这方面的内容，例如微分法则。 我们会回顾矩阵乘法、矩阵和向量运算、归一化概念以及微分理论的基础知识。
 
-But I encourage you to strengthen your understanding in these areas. More on this content you can find on freeCodeCamp when searching for "Linear Algebra" like this course "[Full Linear Algebra Course][18]".
+但我鼓励你去加深对这些领域知识的理解。 有关此内容的更多信息，可以在 freeCodeCamp 上搜索“Linear Algebra”找到，例如该课程“[线性代数完整课程][18]”。
 
-Note that if you don't have the prerequisites such as Fundamentals of Statistics, Machine Learning, and Mathematics, following along with this handbook will be quite a challenge. We'll use concepts from all these areas including the mean, variance, chain rules, matrix multiplication, derivatives, and so on. So, please make sure you have these to make the most out of this content.
+请注意，如果你对统计学基础、机器学习和数学等内容并不了解，那么查阅本手册将是一个相当大的挑战。 我们将使用这些领域的概念，包括均值、方差、链式规则、矩阵乘法、导数等。 因此请确保您理解这些概念，以便充分利用本手册。
 
-### Referenced Example – Predicting House Price
+### 参考示例 – 预测房价
 
-Throughout this book, we will be using a practical example to illustrate and clarify the concepts you're learning. We will explore this idea of predicting a house's price based on its characteristics. This example will serve as a reference point to make the abstract or complex concepts more concrete and easier to understand.
+在本书中，我们将使用一个实际示例来说明和阐明正在学习的概念。 我们将探讨如何根据房屋特征来预测房屋价格。 这个例子将作为一个参考，使抽象或复杂的概念变得具体和容易理解。
 
-## Chapter 1: What is Deep Learning?
+## 第1章: 什么是深度学习？
 
-Deep Learning is a series of algorithms inspired by the structure and function of the brain. Deep Learning allows quantitative models composed of multiple processing layers to study the data representation with multiple levels of abstraction.
+深度学习是一系列受大脑结构和功能所启发的算法。深度学习可以用多个处理层组成的量化模型来研究具有多层抽象级别的数据表示。（译者：这句话不好理解，我是直译的，个人理解就是：“多个处理层”——模块化；“量化模型”——模型输出是数值；“数据表示”——用数值表示任何内容，如用向量表征文本或图像甚至视频；“多层抽象级别”——信息被压缩在数据中，如用向量表示文本，那么两个语义上相近的单词所对应的向量在空间上也比较接近，如这两个向量余弦相似度比较大，或者用向量表示图像，两幅相似图像对应的向量也是在空间上相近）
 
 ![0-Q3PICBlib-932hhH](https://www.freecodecamp.org/news/content/images/2024/01/0-Q3PICBlib-932hhH.png)
 
-Exploring the Layers of AI: From Artificial Intelligence to Deep Learning. (Image Source: [LunarTech.ai][19])
+探索人工智能的各个层面：从人工智能到深度学习。 （图片来源：[LunarTech.ai][19]）
 
-Deep Learning is a branch of Machine Learning, and it tries to mimic the way the human brain works and makes decisions based on neural network-based models.
+深度学习是机器学习的一个分支，它试图模仿人脑的工作方式，并根据一类基于神经网络的模型来做出决策。
 
-In simpler terms, Deep Learning is more advanced and more complex version of traditional Machine Learning. Deep Learning Models are based on [Neural Networks][20] and they try to mimic the way humans think and make decisions.
+简单来说，深度学习是传统机器学习更高级、复杂的版本。 深度学习模型基于[神经网络][20]，试图模仿人类思考和决策的方式。（译者：这应该只是深度学习研究的起源，后续发展中，模仿人类大脑运作的神经网络只是深度学习的部分内容，而不是全部）
 
-The problem with traditional Statistical or ML methods is that they are based on specific rules and instructions. So, whenever the set of model assumptions are not satisfied, the model can have very hard time to solve the problem and perform prediction. There are also types of problems such as image recognition, and other more advanced tasks, that can’t be solved with traditional Statistical or Machine Learning models.
+传统统计或机器学习方法的问题在于它们基于特定的规则和指令。 因此，只要不满足模型假设，模型就很难解决问题并执行预测。 此外还有一些类型的问题，例如图像识别和其它更高级的任务，使用传统的统计或机器学习模型没办法很好地解决。
 
-Here is basically where Deep Learning comes in.
+这个时候深度学习就可以发挥用武之地了。
 
 ![1-hx3DLumiQYwPGY1Ax_sGMA-copy](https://www.freecodecamp.org/news/content/images/2024/01/1-hx3DLumiQYwPGY1Ax_sGMA-copy.png)
 
-AI Hierarchy: Navigating from Broad AI Concepts to Specialized Language Models (Image Source: [Medium][21])
+人工智能的层次结构：从广泛的人工智能概念到专业的语言模型（图片来源：[Medium][21]）
 
-### Applications of Deep Learning
+（译者：我认为上面这幅图有一处不足之处，Generative AI中没有标出多模态大语言模型，即Multimodal Large Language Models，缩写是MLLM，模态指的就是文本、图像、语音，多模态指这些单模态能够跨模态理解，也就是对齐不同模态的语义）
 
-Here are some examples where Deep Learning is used across various industries and applications:
+### 深度学习的应用
 
-#### Healthcare
+以下是深度学习应用于各行各业的一些示例：
 
--   **Disease Diagnosis and Prognosis**: Deep learning algorithms help to analyze medical images like X-rays, MRIs, and CT scans to diagnose diseases such as cancer more accurately  with computer vision models. They do this much more quickly than traditional methods. They can also predict patient outcomes by analyzing patterns in patient data.
--   **Drug Discovery and Development**: Deep Learning models help in identifying potential drug candidates and speeding up the process of drug development, significantly reducing time and costs.
+#### 医疗
 
-#### Finance
+- **疾病诊断和预后**：深度学习算法有助于分析 X 射线、MRI 和 CT 扫描等医学图像，并结合计算机视觉模型，可以更精确地诊断癌症等疾病。 深度学习方法比传统方法响应要快。 还可以通过分析患者数据的模式来预测患者的结果。
 
--   **Algorithmic Trading**: Deep learning models are used to predict stock market trends and automate trading decisions, processing vast amounts of financial data at high speed.
--   **Fraud Detection**: Banks and financial institutions employ deep learning to detect unusual patterns indicative of fraudulent activities, thereby enhancing security and customer trust.
+- **药物发现和开发**：深度学习模型有助于识别潜在的候选药物并加快药物开发过程，从而显著减少耗时和成本。
 
-#### Automotive and Transportation
+#### 金融
 
--   **Autonomous Vehicles**: Self-driving cars also use deep learning heavily to interpret sensor data, allowing them to navigate safely in complex environments, using computer vision and other methods.
--   **Traffic Management**: AI models analyze traffic patterns to optimize traffic flow and reduce congestion in cities.
+- **算法交易**：深度学习模型可以快速处理大量金融数据，被用于预测股市趋势并自动化交易决策。
 
-#### Retail and E-Commerce
+- **欺诈检测**：银行和金融机构利用深度学习来检测那些指示欺诈活动的异常模式，从而增强安全性和客户信任。
 
--   **Personalized Shopping Experience**: Deep learning algorithms help in retail and E-Commerce to analyze customer data and provide personalized product recommendations. This enhances the user experience and boosts sales.
--   **Supply Chain Optimization**: AI models forecast demand, optimize inventory, and enhance logistics operations, improving efficiency in the supply chain.
+#### 汽车和交通
 
-#### Entertainment and Media
+- **自动驾驶汽车**：自动驾驶汽车也大量使用深度学习来解释传感器数据，这使它们能够通过计算机视觉以及其它方法在复杂的环境中安全行驶。
 
--   **Content Recommendation**: Platforms like Netflix and Spotify use deep learning to analyze user preferences and viewing history to recommend personalized content.
--   **Video Game Development**: AI is used to create more realistic and interactive gaming environments, enhancing player experience.
+- **交通管理**：人工智能模型通过分析交通模式来优化交通流量并减少城市拥堵。
 
-#### Technology and Communications
+#### 零售和电子商务
 
--   **Virtual Assistants**: Siri, Alexa, and other virtual assistants use deep learning for natural language processing and speech recognition, making them more responsive and user-friendly.
--   **Language Translation Services**: Services like Google Translate leverage deep learning for real-time, accurate language translation, breaking down language barriers.
+- **个性化购物体验**：深度学习算法有助于零售和电子商务分析客户数据并提供个性化产品推荐。 这不仅增强了用户体验，也促进了销售。
 
-#### Manufacturing and Production
+- **供应链优化**：使用人工智能模型预测需求，优化库存，增强物流运营，提高供应链效率。
 
--   **Predictive Maintenance**: Deep learning models predict when machines require maintenance, reducing downtime and saving costs.
--   **Quality Control**: AI algorithms inspect and detect defects in products at high speed with greater accuracy than human inspectors.
+#### 娱乐和媒体
 
-#### Agriculture
+- **内容推荐**：Netflix 和 Spotify 等平台使用深度学习来分析用户偏好和观看历史记录，以推荐个性化内容。
 
--   **Crop Monitoring and Analysis**: AI models analyze drone and satellite imagery to monitor crop health, optimize farming practices, and predict yields.
+- **视频游戏开发**：使用人工智能创建更加真实和互动性更强的游戏环境，增强玩家体验。
 
-#### Security and Surveillance
+#### 技术与通信
 
--   **Facial Recognition**: Used for enhancing security systems, deep learning models can accurately identify individuals even in crowded environments.
--   **Anomaly Detection**: AI algorithms monitor security footage to detect unusual activities or behaviors, aiding in crime prevention.
+- **虚拟助手**：Siri、Alexa 和其它虚拟助手使用深度学习实现自然语言处理和语音识别，响应更快且对用户更友好。
 
-#### Research and Academia
+- **语言翻译服务**：谷歌翻译等服务利用深度学习进行实时、准确的语言翻译，打破语言障碍。
 
--   **Scientific Discovery**: Deep learning assists researchers in analyzing complex data, leading to discoveries in fields like astronomy, physics, and biology.
--   **Educational Tools**: AI-driven tutoring systems provide personalized learning experiences, adapting to individual student needs.
+#### 制造和生产
 
-Deep Learning has drastically refined state-of-the-art speech recognition, object recognition, speech comprehension, automated translation, image recognition, and many other disciplines such as drug discovery and genomics.
+- **预测性维护**：深度学习模型可以预测机器何时需要维护，从而减少停机时间并节省成本。
+
+- **质量控制**：使用人工智能算法可以高速检查和检测产品缺陷，其准确性比人工检查更高。
+
+#### 农业
+
+- **作物监测和分析**：人工智能模型通过分析无人机和卫星图像，以监测作物健康状况、优化耕作方式并预测产量。
+
+#### 安全和监控
+
+- **面部识别**：深度学习模型可以增强安全系统，即使在拥挤的环境中也能准确识别个人。
+
+- **异常检测**：人工智能算法监控安全录像以检测异常活动或行为，有助于预防犯罪。
+
+#### 研究和学术
+
+- **科学发现**：深度学习可以帮助研究人员分析复杂数据，从而在天文学、物理学和生物学等领域取得发现。
+
+- **教育工具**：人工智能驱动的导学系统提供个性化的学习体验，能够适应不同学生的需求。
+
+深度学习极大地完善了语音识别、物体识别、语音理解、自动翻译、图像识别以及药物发现和基因组学等学科中最先进的方法。
 
 ![DALL-E-2024-01-19-23.02.30---A-hyper-stylized-artistic-representation-with-a-dominant-yellow-color-theme--blending-abstract-art-and-futuristic-concepts.-The-image-is-filled-with-e](https://www.freecodecamp.org/news/content/images/2024/01/DALL-E-2024-01-19-23.02.30---A-hyper-stylized-artistic-representation-with-a-dominant-yellow-color-theme--blending-abstract-art-and-futuristic-concepts.-The-image-is-filled-with-e.png)
 
-Image Source: [LunarTech.ai][22]
-
-## Chapter 2: Foundations of Neural Networks
-
-Now let's talk about some key characteristics and features of Neural Networks:
-
--   **Layered Structure:** Deep learning models, at their core, consist of multiple layers, each transforming the input data into more abstract and composite representations.
--   **Feature Hierarchy:** Simple features (like edges in image recognition) recombine from one layer to the next, to form more complex features (like objects or shapes).
--   **End-to-End Learning:** DL models perform tasks from raw data to final categories or decisions, often improving with the amount of data provided. So, large data plays ket role for Deep Learning.
-
-Here are the core components of Deep Learning models:
-
-### Neurons
-
-These are the basic building blocks of neural networks that receive inputs and pass on their output to the next layer after applying an activation function (more on this in the following chapters).
-
-### Weights and Biases
-
-Parameters of the neural network that are adjusted through the learning process to help the model make accurate predictions. These are the values that the optimization algorithm should continuously optimize ideally in short amount of time to reach the most optimal and accurate model (for example, commonly referenced by w\_ij and b\_ij ).
-
-**Bias Term**: In practice, a bias term ( b ) is often added to the input-weight product sum before applying the activation function. This is a term that enables the neuron to shift the activation function to the left or right, which can be crucial for learning complex patterns.
-
-**Learning Process**: Weights are adjusted during the network's training phase. Through a process often involving gradient descent, the network iteratively updates the weights to minimize the difference between its output and the target values.
-
-**Context of Use**: This neuron could be part of a larger network, consisting of multiple layers. Neural networks are employed to tackle a vast array of problems, from image and speech recognition to predicting stock market trends.
-
-**Mathematical Notation Correction**: The equation provided in the text uses the symbol ( \\phi ), which is unconventional in this context. Typically, a simple summation ( \\sum ) is used to denote the aggregation of the weighted inputs, followed by the activation function ( f ), as in
-
-$$ f\\left(\\sum\_{i=1}^{n} W\_ix\_i + b\\right) $$
-
-### Activation Functions
-
-Functions that introduce non-linear properties to the network, allowing it to learn complex data patterns. Thanks to activation functions, instead of acting as of all input signals or hidden units are equally important, activation functions help to transform the these values, which results instead of linear type of model to a non-linear much more flexible model.
-
-Each neuron in a hidden layer transforms inputs from the previous layer with a weighted sum followed by a non-linear activation function (this is what differentiates your non-linear flexible neural network from common linear regression). The outputs of these neutrons are then passed on to the next layer and the next one, and so on, until the final layer is achieved.
-
-We will discuss activation functions in detail in this handbook, along with the examples of 4 most popular activation functions to make this very clear as it's very important concept and is crucial part of learning process in neural networks.
-
-This process of inputs going through hidden layers using activation function(s) and resulting in an output is known as forward propagation.
-
-### Architecture of Neural Networks
-
-Neural network usually have three types of layers: input layers, hidden layers, and output layers. Let's learn a bit more about each of these now.
-
-We'll use our house price prediction example to learn more about these layers. Below you can see the figure visualizing a simple neural network architetcure which we will unpack layer by layer.
-
-![image-106](https://www.freecodecamp.org/news/content/images/2023/12/image-106.png)
-
-Simple Neural Network Architecture: Inputs, Weights, and Outputs Explained (Image Source: [LunarTech.ai][23])
-
-### Input layers
-
-Input layers are the initial layers where the data is. They contain the features that your model takes in as input to then train your model.
-
-This is where the neural network receives its input data. Each neuron in the input layer of your neural network represents a feature of the input data. If you have two features, you will have two input layers.
-
-Below is the visualization of architecture of simple Neural Network, with N input features (N input signals) which you can see in the input layer. You can also see the single hidden layer with 3 hidden units h1,h2, and h3 and the output layer.
-
-Let's start with Input Layer and understand what are those Z1, Z2, ... , Zn features.
-
-![Screenshot-2024-01-31-at-10.57.32-AM](https://www.freecodecamp.org/news/content/images/2024/01/Screenshot-2024-01-31-at-10.57.32-AM.png)
-
-Simple Neural Network Architecture Highlighting the Input Layers (Image Source: [LunarTech.ai][24])
-
-In our example of using neural networks for predicting a house's price, the input layer will take house features such as the number of bedrooms, age of the house, proximity to the ocean, or whether there's a swimming pool, in order to learn about the house. This is what will be given to the input layer of the neural network. Each of these features serves as an input neuron, providing the model with essential data.
-
-But then there's the question of how much each of these features should contribute to the learning process. Are they all equally important, or some are more important and should contribute more to the estimation of the price?
-
-The answer to this question lies in what we are calling "weights" that we defined earlier along with bias factors.
-
-In the figure above, each neuron gets weight w\_ij where i is the input neuron index and j is the index of the hidden unit they contribute in the Hidden Layer. So, for example w\_11, w\_12, w\_13 describe how much feature 1 is important for learning about the house for hidden unit h1, h2, and h3 respectively.
-
-Keep these weight parameter in mind as they are one of the most important parts of a neural network. They are the importance weights that the neural network will be updating during training process, in order to optimize the learning process.
-
-### Hidden layers
-
-Hidden layers are the middle part of your model where learning happens. They come right after Input Layers. You can have from one to many hidden layers.
-
-Let's simplify this concept by looking at our simple neural network along with our house price example.
-
-Below, I highlighted the Hidden Layer in our simply neural network whose architecture we saw earlier, which you can think of as a very important part in your neural network to extract patterns and relationships from the data that are not immediately apparent from the first view.
-
-![Screenshot-2024-01-31-at-11.01.01-AM](https://www.freecodecamp.org/news/content/images/2024/01/Screenshot-2024-01-31-at-11.01.01-AM.png)
-
-Simple Neural Network Architecture Highlighting the Hidden Layer (Image Source: [LunarTech.ai][25])
-
-In our example of estimating a house's price with a neural network, the hidden layers play a crucial role in processing and interpreting the information received from the input layer, like the house features we just mentioned above.
-
-These layers consist of neurons that apply weights and biases to the input features – like house age, number of bedrooms, proximity to the ocean, and the presence of a swimming pool – to extract patterns and relationships that are not immediately apparent.
-
-In this context, hidden layers might learn complex interdependencies between house features, such as how the combination of a prime location, house age and modern amenities significantly boosts the price of the house.
-
-They act as the neural network's computational engine, transforming raw data into insights that lead to an accurate estimation of a house's market value. Through training, the hidden layers adjust these weights and biases (parameters) to minimize models prediction errors, gradually improving the model's accuracy in estimating house prices.
-
-These layers perform the majority of the computation through their interconnected neurons. In this simple example, we've got only 1 hidden layer, and 3 hidden units (for example, another hyperparameter to optimize during your learning using techniques such as [Random Search CV][26] or others).
-
-But in real world problems, neural networks are much deeper and your number of hidden layers, with the weights and bias parameters, can exceed billions with many hidden layers.
-
-### Output layer
-
-Output layers are the final component of a neural network – the final layer which provides the output of the neural network after all the transformations into output for specific single task. This output can be single value (in regression case for example) or a vector (like in large language models were we produce vector of probabilities, or embeddings).
-
-An output layer can be a class label for a classification model, a continuous numeric value for regression model, or even a vector of numbers, depending on the task.
-
-Hidden layers in neural network are where the actual learning happens, where the deep learning network learns from the data by extracting and transforming the provided features.
-
-As the data goes deeper into the network, the features become more abstract and more composite, with each layer building on the previous layers output/values. The depth and the width (number of neurons) of hidden layers are key factors in the network’s capacity to learn complex patterns. Below is the digram we saw before showcasing the architecture of simple neural networks.
-
-![Screenshot-2024-01-31-at-11.27.39-AM](https://www.freecodecamp.org/news/content/images/2024/01/Screenshot-2024-01-31-at-11.27.39-AM.png)
-
-Simple Neural Network Architecture Highlighting the Output (Image Source: [LunarTech.ai][27])
-
-In our example of house price prediction, the culmination of the learning process is represented by the output layer, which represents our final goal: the predicted house price.
-
-Once the input features – like the number of bedrooms, the age of the house, distance to the ocean, and whether there's a swimming pool – are fed into the neural network, they travel through one or more hidden layers of neural network. It's within these hidden layers that neural network discovers complex patterns and interconnections within the data.
-
-Finally, this processed information reaches the output layer, where the model consolidates all its findings and produces the final results or predictions, in this case the house price.
-
-So, the output layer consolidates all the insights gained. These transformations are applied throughout the hidden layers to produce a single value: the predicted price of the house (often referred to by Y^, pronounced "Y hat").
-
-This prediction is the neural network's estimation of the house's market value, based on its learned understanding of how different features of the house affect the house price. It demonstrates the network's ability to synthesize complex data into actionable insights, in this case, producing an accurate price prediction, through its optimized model.
+图片来源: [LunarTech.ai][22]
 
 ### Activation functions
 

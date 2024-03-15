@@ -39,36 +39,39 @@ February 16, 2024 / [#Deep Learning][1]
 ## 内容目录
 
 1.  [第1章: 什么是深度学习？](#第1章: 什么是深度学习？)
-2.  [第2章: 神经网络基础](#第2章: 神经网络基础) 
-    – 神经网络架构 
+2.  [第2章: 神经网络基础](#第2章: 神经网络基础)
+   
+    – 神经网络架构
+    
     – 激活函数
-3.  [Chapter 3: How to Train Neural Networks][5]  
+    
+4.  [Chapter 3: How to Train Neural Networks][5]  
     – Forward Pass - math derivation  
     – Backward Pass - math derivation
-4.  [Chapter 4: Optimization Algorithms in AI][6]  
+5.  [Chapter 4: Optimization Algorithms in AI][6]  
     – Gradient Descent - with Python    
     – SGD - with Python    
     – SGD Momentum - with Python    
     – RMSProp - with Python    
     – Adam - with Python    
     – AdamW - with Python
-5.  [Chapter 5: Regularization and Generalization][7]  
+6.  [Chapter 5: Regularization and Generalization][7]  
     – Dropout  
     – Ridge Regularization (L2 Regularization)  
     – Lasso Regularization (L1 Regularization)  
     – Batch Normalization
-6.  [Chapter 6: Vanishing Gradient Problem][8]  
+7.  [Chapter 6: Vanishing Gradient Problem][8]  
     – Use appropriate activation functions  
     – Use Xavier or He Initialization  
     – Perform Batch Normalization  
     – Adding Residual Connections
-7.  [Chapter 7: Exploding Gradient Problem][9]
-8.  [Chapter 8: Sequence Modeling with RNNs & LSTMs][10]  
+8.  [Chapter 7: Exploding Gradient Problem][9]
+9.  [Chapter 8: Sequence Modeling with RNNs & LSTMs][10]  
     – Recurrent Neural Networks (RNN) Architecture  
     – Recurrent Neural Network Pseudocode  
     – Limitations of Recurrent Neural Network  
     – Long Short-Term Memory (LSTM) Architecture
-9.  [Chapter 9: Deep Learning Interview Preparation][11]  
+10.  [Chapter 9: Deep Learning Interview Preparation][11]  
     – Part 1: Deep Learning Interview Course \[50 Q&A\]  
     – Part 2: Deep Learning Interview Course \[100 Q&A\]
 
@@ -306,7 +309,7 @@ $$ f\\left(\\sum\_{i=1}^{n} W\_ix\_i + b\\right) $$
 
 最后，经过处理的信息到达输出层，模型在此整合所有数据（译者注：也就是前面隐藏层生成的抽象特征）并生成最终预测结果，本例中也就是房价的预测值。
 
-因此，输出层整合了获得的所有信息，即隐藏层所有的变换都是为了产生单个值：房屋的预测价格（通常用$\hat_{Y}$表示，发音为“Y hat”）。
+因此，输出层整合了获得的所有信息，即隐藏层所有的变换都是为了产生单个值：房屋的预测价格（通常用$\hat{Y}$表示，发音为“Y hat”）。
 
 该预测是神经网络基于（它从数据中学到的）不同房屋特征对房价的影响，对房屋市场价值的一个估计。 它展示了网络将复杂数据合成为可行见解的能力，在这种情况下，通过其优化的模型产生准确的价格预测。
 

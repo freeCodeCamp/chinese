@@ -3,7 +3,7 @@ title: Regular Expressions (RegEx) in JavaScript – A Handbook for Beginners
 author: Samyak Jain
 authorURL: https://www.freecodecamp.org/news/author/samyak/
 originalURL: https://www.freecodecamp.org/news/regex-in-javascript/
-translator: "月落星河Tsukistar"
+translator: "Tsukistar"
 reviewer: ""
 ---
 
@@ -34,7 +34,7 @@ February 27, 2024 / [#Regex][1]
     – [如何编写一个正则表达式的模式][4] 
 2.  [如何在JavaScript中使用正则表达式][5]  
     – JavaScript中的RegEx模式 
-    – [Advanced Searching with Flags][6] 
+    – [通过标志进行高级搜索][6] 
 3.  [Anchors in Regex][7]  
     – [Multiline Mode(m) of Anchors][8]  
     – [Word Boundaries (`\b`)][9]
@@ -53,7 +53,7 @@ February 27, 2024 / [#Regex][1]
     – [Capturing Groups][22]  
     – [Non-Capturing Groups][23]  
     – [Backreferences][24]  
-    – [Regex Alternation][25]
+    – [正则表达式选择符号][25]
 8.  [Lookahead and Lookbehind Assertions in Regex][26]  
     – [Lookahead (?=)][27]  
     – [Negative Lookahead (?!)][28]  
@@ -123,7 +123,7 @@ string.replace(regex, replacement)
 
 让我们来探讨一下这些方法在实践中是如何使用的。
 
-**The `test()` Method**: checks whether a particular string matches a specified pattern or regular expression. It returns `true` if the pattern is found in the string, otherwise, it returns `false`.
+**`test()` 方法**：检查特定字符串是否与指定模式或正则表达式匹配。如果字符串中找到了该模式，则返回 `true`；否则返回 `false`。
 
 ```javascript
 let pattern = /hello/;
@@ -133,7 +133,7 @@ let result = pattern.test(str);
 console.log(result); // 输出为：true
 ```
 
-**The `exec()` Method**: searches for a match of a pattern within a string. It returns an array containing details like the matched text, index of the match within the string, and the input string itself. 例如：
+**`exec()` 方法**: 根据正则表达式模式的内容搜索字符串中的匹配项。它返回一个数组，其中包含匹配文本、匹配项在字符串中的索引以及输入字符串本身的详细信息。例如：
 
 ```javascript
 let pattern = /world/;
@@ -143,7 +143,7 @@ let result = pattern.exec(str);
 console.log(result); // Output: ["world", index: 6, input: "hello world"]
 ```
 
-**The `match()` Method**: Searches for occurrences of a pattern within a string. It returns the first element matched. If has the global flag (`g`), it returns an array containing all matches found, or `null` if no matches are found.
+**`match()`方法**: 根据正则表达式模式的内容，在字符串中搜索它的出现次数。它返回匹配的第一个元素。如果具有全局标志（`g`），则返回一个包含所有找到的匹配项的数组，如果没有找到匹配项，则返回 `null`。
 
 ```javascript
 let str = "The quick brown fox jumps over the lazy dog.";
@@ -152,9 +152,9 @@ let matches = str.match(/the/gi);
 console.log(matches); // 输出为： ["The", "the"]
 ```
 
-`/the/gi` searches for all occurrences of the word "the" in the string, regardless of case. 
+`/the/gi` 在字符串中搜索所有出现的单词 "the"，不区分大小写。
 
-**The `matchAll()` Method**: Returns an iterator of all results matching a regular expression against a string. Each element of the iterator is an array containing details about the match, including captured groups.
+**`matchAll()`方法**: 返回一个用于匹配字符串中正则表达式的所有结果的迭代器。迭代器的每个元素都是一个数组，包含有关匹配的详细信息，包括捕获的分组。
 
 ```javascript
 let str = "Hello world! This is a test string.";
@@ -167,7 +167,7 @@ for (let match of matches) {
 }
 ```
 
-This method is useful when you need detailed information about all matches found in a string.
+当你需要获取字符串中所有匹配项的详细信息时，此方法非常有用。
 
 **The `search()` Method**: Searches for a specified pattern within a string. It returns the index of the first occurrence of the pattern within the string, or `-1` if the pattern is not found.
 
@@ -208,7 +208,7 @@ console.log(arr); // Output: ["apple", "banana", "grape"]
 
 These methods offer different functionalities based on your needs. For example, if you only need to know whether a pattern is found in a string, `test()` or `search()` methods are efficient. If you require more information about matches, the `exec()` or `match()` methods are suitable.
 
-<h2 id="advanced-searching-with-flags">使用标志进行高级搜索</h2>
+<h2 id="advanced-searching-with-flags">通过标志进行高级搜索</h2>
 
 In JavaScript, regular expressions support pattern flags, which are optional parameters that modify the behavior of the pattern matching.
 
@@ -228,9 +228,9 @@ console.log(result); // Output: true
 
 In this case, the regular expression `/hello/i` matches the string `"Hello"` despite differences in case because we used the ignore flag.
 
-### The Global Flag (`g`):
+### 全局标志(`g`)：
 
-The global flag (`g`) allows the regular expression to find all matches within a string, rather than stopping after the first match. For example:
+全局标志（`g`）允许正则表达式在字符串中找到所有匹配项，而不是在找到第一个匹配项后停止。例如：
 
 ```javascript
 let re = /hi/g;
@@ -646,7 +646,7 @@ Let's say you have a path like "posts/123" and you want to capture the `id` part
 
 To create a capturing group, you enclose the part of the regex pattern you want to capture in parentheses. For example, `(\d+)` captures one or more digits.
 
-Here's how it works:
+这是它的运行步骤：
 
 ```javascript
 const path = 'posts/123';
@@ -656,7 +656,7 @@ const match = path.match(pattern);
 console.log(match);
 ```
 
-Output:
+输出为：
 
 ```bash
 [ 'posts/123', '123', index: 0, input: 'posts/123', groups: undefined ]
@@ -674,7 +674,7 @@ const match = path.match(pattern);
 console.log(match);
 ```
 
-Output:
+输出为：
 
 ```bash
 ['posts/123', 'posts', '123', index: 0, input: 'posts/123', groups: undefined]
@@ -700,7 +700,7 @@ const match = path.match(pattern);
 console.log(match);
 ```
 
-Output:
+输出为：
 
 ```javascript
 [
@@ -717,7 +717,7 @@ Here, `resource` and `id` are the names assigned to the capturing groups. We can
 
 **另一个例子**: Let's say we have a path like "posts/2022/02/18" and we want to capture the resource (like "posts"), year (like "2022"), month (like "02"), and day (like "18") using named capturing groups.
 
-The regex pattern for this would be:
+该例子对应的正则表达式的模式为：
 
 ```javascript
 const path = 'posts/2024/02/22';
@@ -728,7 +728,7 @@ const match = path.match(pattern);
 console.log(match.groups);
 ```
 
-Output:
+输出为：
 
 ```bash
 {resource: 'posts', year: '2024', month: '02', day: '22'}
@@ -782,43 +782,45 @@ const s = 'Lion Lion is the King';
 ```javascript
 const pattern = /(\w+)\s+\1/;
 const result = s.replace(pattern, '$1');
-console.log(result); // Output: 'Lion is the King'
+console.log(result); // 输出为：'Lion is the King'
 ```
 
-### Regex Alternation:
+<h3 id="regex-alternation">正则表达式选择符号:</h3>
 
 Regex alternation is a feature that allows you to match different patterns within a single regular expression. It works similarly to the logical OR operator. In regex, you use the pipe symbol `|` to denote alternation, where you can match either A or B.
 
+正则表达式的选择符号是一种允许你在单个正则表达式中匹配不同的模式的功能。它的工作方式类似于逻辑运算符`OR`。正则表达式使用竖线符号 `|` 表示选择符号，你可以使用它来匹配 A 或 B。
+
 ```
-A | B // This means you can match either pattern A or pattern B.
+A | B // 这意味着你可以匹配模式A或模式B
 ```
 
-Now, let's explore some practical applications of regex alternation:
+现在，让我们探讨一些正则表达式选择符号的实际应用：
 
-**匹配格式为hh:mm的时间字符串**: Suppose we want to match time strings in the format hh:mm, where hh represents hours and mm represents minutes. A basic regular expression to match this format would be `/\d{2}:\d{2}/`.
+**匹配格式为hh:mm的时间字符串**：假设我们想要匹配格式为 hh:mm 的时间字符串，其中 hh 表示小时，mm 表示分钟。一个基本的正则表达式来匹配这种格式就是 `/\d{2}:\d{2}/`。
 
-However, this basic pattern matches invalid times like "99:99". To ensure we match valid times (hours ranging from 00 to 23 and minutes ranging from 00 to 59), we need to refine our regex using alternation.
+然而，这个基本模式匹配了无效的时间，比如 "99:99"。为了确保我们匹配有效的时间（小时范围从00到23，分钟范围从00到59），我们需要使用选择符号来完善我们的正则表达式。
 
-To match valid hours (00 to 23), we can use the following pattern:
+为了匹配有效的小时（00到23），我们可以使用以下模式：
 
--   `[01]\d` matches numbers from 00 to 19.
--   `2[0-3]` matches numbers from 20 to 23.
+- `[01]\d` 匹配00到19的数字。
+- `2[0-3]` 匹配20到23的数字。
 
-So, the pattern for hours becomes `[01]\d|2[0-3]`.
+因此，小时的模式变为 `[01]\d|2[0-3]`。
 
-To match valid minutes (00 to 59), we can use the pattern `[0-5]\d`.
+我们可以使用模式 `[0-5]\d` 来匹配有效的分钟数(00 to 59)。
 
-Now, we can combine the hour and minute patterns using alternation to get the final regex pattern:
+现在，我们可以使用选择符号将小时和分钟模式结合起来，得到最终的正则表达式模式：
 
 `/([01]\d|2[0-3]):[0-5]\d/g`
 
-In this pattern:
+在这个模式中:
 
--   `([01]\d|2[0-3])` matches valid hours.
--   `:` matches the colon.
--   `[0-5]\d` matches valid minutes.
+-   `([01]\d|2[0-3])` 匹配有效的小时数。
+-   `:` 匹配冒号。
+-   `[0-5]\d` 匹配有效的分钟数。
 
-This regex pattern ensures that we only match valid time strings in the `hh:mm` format. Example:
+该正则表达式模式确保我们只匹配 `hh:mm` 格式的有效时间字符串。例如：
 
 ```javascript
 const timeString = '07:23 33:71 21:17 25:81';
@@ -909,10 +911,10 @@ const priceString = "The price is $50, but not €100.";
 
 const regex = /(?<!\$)\b\d+\b/g;
 
-console.log(priceString.match(regex)); // Output: ["100"]
+console.log(priceString.match(regex)); // 输出为： ["100"]
 ```
 
-**说明**： `(?<!\$)` is the negative lookbehind syntax, which matches the following pattern only if it is not preceded by the literal string "$".
+**说明**： `(?<!\$)` 是负向后行环视语法，它只在当前位置之前不是字面字符串"$"时匹配后面的模式。
 
 ## Regex的实际例子和用例
 
@@ -928,23 +930,23 @@ function checkPasswordStrength(password) {
     return pattern.test(password);
 }
 
-console.log(checkPasswordStrength("Passw0rd!"));    // Output: true
-console.log(checkPasswordStrength("weakpassword")); // Output: false
+console.log(checkPasswordStrength("Passw0rd!"));    // 输出为：true
+console.log(checkPasswordStrength("weakpassword")); // 输出为：false
 ```
 
-Here, the regex ensures that the password contains at least 1 digit, 1 lowercase letter, 1 uppercase letter, 1 special character, and is at least 8 characters long.
+这里的正则表达式确保密码包含至少1个数字、1个小写字母、1个大写字母、1个特殊字符，并且密码长度至少为8个字符。
 
-Here's what this pattern does:
+这个模式进行了如下操作:
 
--   `(?=.*\d)`: Requires at least one digit.
--   `(?=.*[a-z])`: Requires at least one lowercase letter.
--   `(?=.*[A-Z])`: Requires at least one uppercase letter.
--   `(?=.*[!@#$%^&*])`: Requires at least one special character.
--   `.{8,}`: Requires a minimum length of 8 characters.
+-   `(?=.*\d)`: 要求至少一个数字。
+-   `(?=.*[a-z])`: 要求至少一个小写字母。
+-   `(?=.*[A-Z])`: 要求至少一个大写字母。
+-   `(?=.*[!@#$%^&*])`: 要求至少一个特殊符号。
+-   `.{8,}`: 要求密码长度至少为8个字符。
 
 ### 电子邮箱地址校验函数:
 
-Email validation is crucial for ensuring data integrity and security in web applications. With regex methods, we can easily implement robust email validation mechanisms.
+电子邮件验证对于确保网络应用程序中的数据完整性和安全性至关重要。通过使用正则表达式，我们可以轻松实现强大的电子邮件验证机制。
 
 ```javascript
 function validateEmail(email) {
@@ -956,15 +958,15 @@ console.log(validateEmail("example@email.com")); // true
 console.log(validateEmail("invalid-email"));      // false
 ```
 
-Here's what this pattern does:
+这个模式进行了如下操作:
 
--   `^`: Asserts the start of the string.
--   `[^\s@]+`: Matches one or more characters that are not whitespace or '@'.
--   `@`: Matches the '@' symbol.
--   `[^\s@]+`: Matches one or more characters that are not whitespace or '@'.
--   `\.`: Matches the '.' symbol (escaped because '.' has a special meaning in RegEx).
--   `[^\s@]+`: Matches one or more characters that are not whitespace or '@'.
--   `$`: Asserts the end of the string.
+-   `^`: 断言字符串的起始位置。
+-   `[^\s@]+`: 匹配一个或多个非空白字符或'@'字符。
+-   `@`: 匹配'@'符号。
+-   `[^\s@]+`: 匹配一个或多个非空白字符或'@'字符。
+-   `\.`: 匹配'.'符号 (因为'.'在正则表达式中具有特殊意义，所以需要转义。)。
+-   `[^\s@]+`: 匹配一个或多个非空白字符或'@'字符。
+-   `$`: 断言字符串的结束位置。
 
 ### 电话号码格式化函数:
 
@@ -1066,7 +1068,7 @@ The MDN Web Docs have a helpful guide to [Regular Expressions here][39]. And her
 [22]: #capturing-groups-
 [23]: #non-capturing-groups-
 [24]: #backreferences-
-[25]: #regex-alternation-
+[25]: #regex-alternation
 [26]: #lookahead-and-lookbehind-in-regex
 [27]: #lookahead-
 [28]: #negative-lookaheads-

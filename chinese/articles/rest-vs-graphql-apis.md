@@ -1,17 +1,17 @@
 > -  原文地址：[Different Types of APIs – SOAP vs REST vs GraphQL](https://www.freecodecamp.org/news/rest-vs-graphql-apis/)
 > -  原文作者：[Germán Cocca](https://www.freecodecamp.org/news/author/gercocca/)
-> -  译者：
+> -  译者：Jing Yan
 > -  校对者：
 
 ![Different Types of APIs – SOAP vs REST vs GraphQL](https://www.freecodecamp.org/news/content/images/size/w2000/2023/03/john-towner-p-rN-n6Miag-unsplash.jpg)
 
-Hi everyone! In this article we're going to take a good look at APIs, a core concept in modern software development.
+大家好！在这篇文章中，我们会详细介绍现代软件开发中的核心概念————APIs。
 
-We're going to talk about the main kinds of APIs used nowadays (SOAP, REST and GraphQL), their characteristics, pros and cons, and situations in which each of them might be more beneficial.
+我们将讨论当今使用的主要 API 类型（SOAP、REST 和 GraphQL）、它们的特性、优缺点以及让它们各自发挥最大效用的实践情况。
 
-Let's go! 🙃
+现在开始吧！🙃
 
-# Table of Contents
+# 目录
 
 -   [How SOAP APIs Work](#how-soap-apis-work)
     -   [About XML](#about-xml)
@@ -22,74 +22,74 @@ Let's go! 🙃
     -   [How to Consume a GraphQL API](#how-to-consume-a-graphql-api)
 -   [Wrapping Up](#wrapping-up)
 
-## Intro
+## 介绍
 
-In [a recent article](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/) I talked briefly about two very important concepts in modern software development: the client-server model and APIs.
+在 [最近的一篇文章里](https://www.freecodecamp.org/news/an-introduction-to-software-architecture-patterns/)，我简要介绍了两个在现代软件开发中非常重要的概念：客户端和 API。
 
-****Client-server**** is a model that structures the tasks or workloads of an application between a resource or service ****provider**** (server) and a service or resource requester (client).
+****客户端**** 是一种在资源或 ****服务商**** （服务器）和服务或资源请求者（客户端）之间构建应用程序任务或工作负载的模式。
 
-Put simply, the client is the application that requests some kind of information or performs actions, and the server is the program that sends information or performs actions according to what the client does.
+简单来说，客户端是请求某种信息或执行某种操作的应用程序，而服务器则是根据客户端的操作发送信息或执行操作的程序。
 
-Most applications nowadays use a client-server model. The most important concept to remember about it is that ****clients request resources or services**** that ****the server performs****. The way in which these two parts usually communicate is through an **API** (application programming interface).
+如今，大多数应用程序都使用客户端/服务器架构。它最重要的概念是：****客户端请求的资源或服务**** 由 ****服务器执行****。这两部分通常通过**API**（应用程序编程接口）进行通信。
 
-An API is nothing more than a **set of defined rules that establishes how one application can communicate with another**. It's like a contract between the two parts that says "If you send A, I'll always respond B. If you send C, I'll always respond D..." and so on.
+应用程序接口（API）是一套**定义的规则，它规定了一个应用程序如何与另一个应用程序进行通信**。它就像两方之间的一份合同，上面写着：“如果你发送 A，我总是会响应 B；如果你发送 C，我总是会响应 D……”等等。
 
-Having this set of rules, the client knows exactly what it has to require in order to complete a certain task, and the server knows exactly what the client will require when a certain action has to be performed.
+有了这组规则，客户端就确切地知道完成某项任务需要什么，服务器则确切地知道当必须执行某项操作时，客户端需要什么。
 
-APIs are absolutely everywhere in current software development. Almost any kind of application will use a client-server model enabled by API communication. That's why I think it's a very good idea for us as developers to get to know them well.
+在当前的软件开发中，API 无处不在。几乎所有类型的应用程序都会使用 API 通信所支持的客户端/服务器架构。因此，作为开发人员，熟悉 API 会对你大有裨益。
 
-The most popular ways to implement APIs nowadays are REST and GraphQl. We'll also take a look at SOAP, which was quite popular some years ago and is still used in some niche sectors.
+时下最流行的 API 实现方式是 REST 和 GraphQl。接下来我们还将了解一下 SOAP，它在几年前相当流行，现在仍在一些小众领域使用。
 
-If you'd like a deeper intro to what APIs are, [here's an awesome video about it](https://www.youtube.com/watch?v=yBZO5Rb4ibo).
+如果你想要了解更多有关 API 的知识， [可以参阅这个视频](https://www.youtube.com/watch?v=yBZO5Rb4ibo)。
 
-With all this in mind, let's get into the details of how SOAP, REST and GraphQL APIs work.
+有鉴于此，让我们来详细了解 SOAP、REST 和 GraphQL API 的工作原理。
 
-# How SOAP APIs Work
+# SOAP APIs 如何运作
 
-Simple Object Access Protocol (SOAP) is a messaging protocol used for exchanging structured data between different systems over the internet. SOAP is an XML-based protocol and is considered one of the earliest web service protocols.
+简单对象访问协议（SOAP）是一种消息传递协议，用于通过互联网在不同系统之间交换结构化数据。SOAP 是一种基于 XML 的协议，是最早的 Web 服务协议之一。
 
-SOAP was first introduced in 1998 by Microsoft as a successor to Common Object Request Broker Architecture (CORBA) and Distributed Component Object Model (DCOM).
+SOAP 由微软公司于 1998 年首次推出，是通用对象请求代理架构（CORBA）和分布式组件对象模型（DCOM）的后续产品。
 
-SOAP was designed to provide a platform-independent way to exchange data between different systems over the internet. SOAP was later standardized by the World Wide Web Consortium (W3C) in 2003.
+SOAP 的设计目的是提供一种独立于平台的方式，在互联网上的不同系统之间交换数据。后来，万维网联盟（W3C）于 2003 年将 SOAP 标准化。
 
-**Main Characteristics:**
+**主要特点：**
 
-1.  **Protocol-Independent:** SOAP is designed to work with any protocol that supports the transmission of messages over the internet, including HTTP, SMTP, and FTP.
-2.  **Platform-Independent:** SOAP is designed to work with any programming language or platform that supports XML and can send and receive HTTP messages.
-3.  **Messaging:** SOAP is a messaging protocol and defines a set of rules for exchanging structured data between different systems.
-4.  **Security:** SOAP supports several security standards, including encryption, digital signatures, and authentication.
-5.  **Extensibility:** SOAP allows for the creation of custom extensions to the protocol to support specific requirements.
+1.  **协议无关：** SOAP 可与任何支持在互联网上传输信息的协议（包括 HTTP、SMTP 和 FTP）配合使用。
+2.  **独立于平台：** SOAP 适用于任何支持 XML 并能发送和接收 HTTP 消息的编程语言或平台。
+3.  **消息传递：** SOAP 是一种消息传递协议，定义了一套在不同系统间交换结构化数据的规则。
+4.  **安全：** SOAP 支持多种安全标准，包括加密、数字签名和身份验证。
+5.  **可扩展：** SOAP 允许创建协议的自定义扩展，以支持特定需求。
 
-**Pros:**
+**优点：**
 
-1.  **Standardization:** SOAP is a well-established and standardized protocol, making it a reliable choice for exchanging data between different systems.
-2.  **Security:** SOAP provides built-in support for several security standards, making it a secure choice for transmitting sensitive data.
-3.  **Extensibility:** SOAP is highly extensible and allows for the creation of custom extensions to support specific requirements.
+1.  **标准化：** SOAP 是一种成熟的标准化协议，是不同系统间交换数据的可靠选择。
+2.  **安全性：** SOAP 内置支持多个安全标准，是传输敏感数据的安全选择。
+3.  **可扩展：** SOAP 具有可扩展性极高，允许创建自定义扩展，以支持特定需求。
 
-**Cons:**
+**缺点：**
 
-1.  **Complexity:** SOAP can be complex to implement and may require specialized expertise.
-2.  **Overhead:** SOAP messages can be large and can require significant processing resources, resulting in increased overhead.
-3.  **Performance:** SOAP can be slower compared to other API protocols due to its messaging nature.
+1.  **复杂度高：** SOAP 的实施可能比较复杂，需要专业知识。
+2.  **开销大：** SOAP 信息量可能很大，需要处理大量资源，而这会导致开销增加。
+3.  **性能低：** 由于其消息传递的性质，SOAP 与其他 API 协议相比速度较慢。
+   
+**最佳实践：**
 
-**Best for:**
+1.  **需要传输敏感数据时：** SOAP 支持多种安全标准，是传输敏感数据的安全选择。
+2.  **需要支持复杂的数据结构时：** SOAP 支持复杂的数据结构，是在不同系统间传输和交换数据的良好选择。
+3.  **需要可靠的标准化协议时：** SOAP 是一个完善的标准化协议，使其成为不同系统间交换数据的可靠选择。
 
-1.  **When you need to transmit sensitive data:** SOAP supports several security standards, making it a secure choice for transmitting sensitive data.
-2.  **When you need to support complex data structures:** SOAP supports complex data structures, making it a good choice for transmitting and exchanging data between different systems.
-3.  **When you need a reliable and standardized protocol:** SOAP is a well-established and standardized protocol, making it a reliable choice for exchanging data between different systems.
+尽管近年来 REST 和 GraphQL 越来越流行，但早年间网络服务广泛应用 SOAP APIs，如今它仍出现在多个行业和领域中。
 
-SOAP APIs were widely used in the early days of web services and are still used in several industries and sectors today, although REST and GraphQL have become more popular in recent years.
+以下是一些 SOAP 仍居主导地位的行业、领域和应用类型：
 
-Here are some industries, sectors, and types of applications in which SOAP is still the main option:
+1.  **医疗保健：** SOAP 仍广泛应用于医疗保健应用程序，尤其是电子病历 (EHR) 和医疗信息交换 (HIE)。这是因为在不同系统之间传输敏感的患者信息时，SOAP 更为安全可靠。
+2.  **金融：** SOAP 仍被用于金融应用，如支付网关和交易平台。这是因为它可以安全可靠地传输金融数据。
+3.  **企业应用：** SOAP 仍用于企业应用，如客户关系管理 (CRM) 和企业资源规划 (ERP) 系统。这是因为因为它为不同系统提供了一种可靠的标准化数据交换方式。
+4.  **传统系统：** 许多旧系统和应用程序仍在使用 SOAP 应用程序接口，这是因为将它们迁移到新技术可能既费钱又费时。
 
-1.  **Healthcare:** SOAP is still widely used in healthcare applications, especially in electronic health records (EHR) and health information exchanges (HIE). This is because SOAP provides a secure and reliable way to transmit sensitive patient information between different systems.
-2.  **Finance:** SOAP is still used in financial applications, such as payment gateways and trading platforms, because it provides a secure and reliable way to transmit financial data.
-3.  **Enterprise applications:** SOAP is still used in enterprise applications, such as customer relationship management (CRM) and enterprise resource planning (ERP) systems, because it provides a standardized and reliable way to exchange data between different systems.
-4.  **Legacy systems:** Many older systems and applications still use SOAP APIs, and it can be costly and time-consuming to migrate them to newer technologies.
+总之，SOAP APIs 历史悠久，目前仍有多个行业使用它在不同系统之间交换数据。
 
-In conclusion, SOAP APIs have been around for a long time and are still used in several industries to exchange data between different systems.
-
-SOAP might be the most beneficial option for developing an API when you need to transmit sensitive data, support complex data structures, or need a reliable and standardized protocol.
+当您需要传输敏感数据、支持复杂数据结构或需要可靠的标准化协议时，SOAP 可能是开发 API 的最佳选择。
 
 ## About XML
 
@@ -105,7 +105,7 @@ XML is widely used in various industries, including finance, healthcare, and gov
 
 Overall, XML provides a flexible and extensible way of describing and exchanging data that can be easily processed by computers. However, its use has declined in recent years with the rise of more modern formats such as JSON and YAML, which are more lightweight and easier to use for many applications.
 
-## How to Consume a SOAP API
+## 如何使用 SOAP API
 
 Here's an example of how you can make a simple request to a SOAP API from a JavaScript front-end application:
 
@@ -197,7 +197,7 @@ Here's what each line does:
 
 Overall, SOAP responses tend to be more verbose and complex than responses from REST or GraphQL APIs, due to their use of XML and the envelope format. But this format provides a standardized way of exchanging information that can be useful in certain industries and use cases.
 
-# How REST APIs Work
+# REST APIs 如何运作
 
 Representational State Transfer (REST) is a widely used architectural style for building web services and APIs.
 
@@ -205,7 +205,7 @@ REST was first introduced in 2000 by Roy Fielding in his doctoral dissertation, 
 
 RESTful APIs are designed to be simple, scalable, and flexible. They are often used in web and mobile applications, as well as in Internet of Things (IoT) and microservices architectures.
 
-**Main Characteristics:**
+**主要特点：**
 
 1.  **Stateless:** REST APIs are stateless, which means that each request contains all the necessary information to process it. This makes it easier to scale the API and improves performance by reducing the need to store and manage session data on the server.
 2.  **Resource-based:** REST APIs are resource-based, which means that each resource is identified by a unique URI (Uniform Resource Identifier) and can be accessed using standard HTTP methods such as GET, POST, PUT, and DELETE.
@@ -213,20 +213,20 @@ RESTful APIs are designed to be simple, scalable, and flexible. They are often u
 4.  **Cacheable:** REST APIs are cacheable, which means that responses can be cached to improve performance and reduce network traffic.
 5.  **Layered System:** REST APIs are designed to be layered, which means that intermediaries such as proxies and gateways can be added between the client and server without affecting the overall system.
 
-**Pros:**
+**优点：**
 
 -   **Easy to learn and use:** REST APIs are relatively simple and easy to learn compared to other APIs.
 -   **Scalability:** The stateless nature of REST APIs makes them highly scalable and efficient.
 -   **Flexibility:** REST APIs are flexible and can be used to build a wide range of applications and systems.
 -   **Wide support:** REST APIs are widely supported by development tools and frameworks, making it easy to integrate them into existing systems.
 
-**Cons:**
+**缺点：**
 
 -   **Lack of standards:** The lack of strict standards for REST APIs can lead to inconsistencies and interoperability issues.
 -   **Limited functionality:** REST APIs are designed to handle simple requests and responses and may not be suitable for more complex use cases.
 -   **Security concerns:** REST APIs can be vulnerable to security attacks such as cross-site scripting (XSS) and cross-site request forgery (CSRF) if not implemented properly.
 
-**Best for:**
+**最佳实践：**
 
 -   REST APIs are well-suited for building web and mobile applications, as well as microservices architectures and IoT systems.
 -   They are particularly useful in situations where scalability and flexibility are important, and where developers need to integrate with existing systems and technologies.
@@ -235,7 +235,7 @@ In summary, REST APIs are a popular and widely used architectural style for buil
 
 While there are some limitations and concerns with REST APIs, they remain a popular and effective option for building APIs in many different industries and sectors.
 
-## How to Consume a REST API
+## 如何使用 REST API
 
 Here's an example of how to make a simple GET request to a REST API from a JavaScript front-end application, and how to access the values within the response:
 
@@ -282,7 +282,7 @@ Additionally, REST APIs often use standard HTTP status codes to indicate the suc
 
 Overall, REST APIs are a popular and widely used approach to building web APIs due to their simplicity, flexibility, and ease of use.
 
-# How GraphQL APIs Work
+# GraphQL APIs 如何运作
 
 GraphQL is a query language and runtime for APIs that was developed by Facebook in 2012. It was released to the public in 2015 and has since gained popularity as an alternative to REST APIs.
 
@@ -290,7 +290,7 @@ GraphQL was originally developed by Facebook as a way to simplify data fetching 
 
 GraphQL was released as an open-source project in 2015 and has since gained popularity in the developer community. It is now supported by many development tools and frameworks, including Apollo, Prisma, and Hasura.
 
-**Main Characteristics:**
+**主要特点：**
 
 1.  **Strongly Typed:** GraphQL APIs are strongly typed, which means that each field has a specific data type. This makes it easier to validate and handle data on the client and server sides.
 2.  **Query Language:** GraphQL has its own query language that allows clients to specify exactly what data they need. This reduces over-fetching of data and improves performance.
@@ -298,20 +298,20 @@ GraphQL was released as an open-source project in 2015 and has since gained popu
 4.  **Declarative:** GraphQL APIs are declarative, which means that clients specify what they want, not how to get it. This allows for more efficient and flexible data fetching.
 5.  **Schema-Driven:** GraphQL APIs are schema-driven, which means that the schema defines the structure of the data and the available queries and mutations. This makes it easier for developers to understand and work with the API.
 
-**Pros:**
+**优点：**
 
 -   **Efficient Data Fetching:** GraphQL APIs allow clients to fetch only the data they need, reducing over-fetching and improving performance.
 -   **Strongly Typed:** GraphQL APIs are strongly typed, making it easier to validate and handle data.
 -   **Single Endpoint:** GraphQL APIs have a single endpoint, reducing the complexity of the API and making it easier to work with.
 -   **Schema-Driven:** GraphQL APIs are schema-driven, which makes it easier for developers to understand and work with the API.
 
-**Cons:**
+**缺点：**
 
 -   **Complexity:** GraphQL APIs can be more complex to set up and work with compared to REST APIs.
 -   **Caching:** Caching can be more challenging with GraphQL APIs due to the flexible nature of the API.
 -   **Learning Curve:** GraphQL requires a learning curve for both developers and clients, as it has its own query language and approach to data fetching.
 
-**Best for:**
+**最佳实践：**
 
 -   **Efficient and flexible needs:** GraphQL is well-suited for building applications that require efficient and flexible data fetching, such as mobile and web applications.
 -   **Complex data requirements:** It is particularly useful in situations where there are complex data requirements and where over-fetching data can cause performance issues.
@@ -320,7 +320,7 @@ In conclusion, GraphQL is a query language and runtime for APIs that provides ef
 
 While it can be more complex to set up and work with compared to REST APIs, it offers benefits such as strongly typed data, single endpoints, and schema-driven development. It is well-suited for building applications with complex data requirements and where efficient data fetching is important.
 
-## How to Consume a GraphQL API
+## 如何使用 GraphQL API
 
 Here's an example of how to make a simple request to retrieve information from a GraphQL API from a JavaScript front-end application, and how to access the values within the response:
 
@@ -384,16 +384,16 @@ console.log(data.data.user.name); // output: "John Doe"
 console.log(data['data']['user']['name']); // output: "John Doe"
 ```
 
-Here, `data` refers to the JavaScript object that contains the response data. The response data is wrapped in a `data` object, and the values can be accessed by traversing the object using dot notation or bracket notation.
+在这里, `data` 指的是 the JavaScript object that contains the response data. The response data is wrapped in a `data` object, and the values can be accessed by traversing the object using dot notation or bracket notation.
 
 GraphQL API responses are typically more focused and specific than REST API responses because the client can specify exactly what data they want to receive. This makes it easier to avoid overfetching or underfetching data, and can improve performance by reducing the amount of data transferred over the network.
 
 Additionally, GraphQL APIs can provide a more flexible schema that can be easily modified over time without breaking existing clients. Overall, GraphQL APIs are a popular choice for building modern web applications due to their flexibility, efficiency, and ease of use.
 
-# **Wrapping Up**
+# **总结**
 
-Well everyone, as always, I hope you enjoyed the article and learned something new.
+各位，我希望你们能一如往常地享受阅读本文的过程，并学到新知识。
 
-If you want, you can also follow me on [LinkedIn](https://www.linkedin.com/in/germancocca/) or [Twitter](https://twitter.com/CoccaGerman). See you in the next one!
+如有需要，你可以在 [领英](https://www.linkedin.com/in/germancocca/) 或 [推特](https://twitter.com/CoccaGerman) 上关注我。下次再见！
 
 ![giphy](https://www.freecodecamp.org/news/content/images/2023/03/giphy.gif)

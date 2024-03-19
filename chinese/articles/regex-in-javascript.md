@@ -33,10 +33,10 @@ February 27, 2024 / [#Regex][1]
 1.  [什么是正则表达式][3]?  
     – [如何编写一个正则表达式的模式][4] 
 2.  [如何在JavaScript中使用正则表达式][5]  
-    – JavaScript中的RegEx模式 
+    – JavaScript中的正则表达式模式 
     – [通过标志进行高级搜索][6] 
-3.  [Anchors in Regex][7]  
-    – [Multiline Mode(m) of Anchors][8]  
+3.  [正则表达式中的锚点][7]  
+    – [锚点的多行模式][8]  
     – [Word Boundaries (`\b`)][9]
 4.  [Quantifiers in Regex][10]  
     – [Greedy Quantifiers][11]  
@@ -59,7 +59,7 @@ February 27, 2024 / [#Regex][1]
     – [Negative Lookahead (?!)][28]  
     – [Lookbehind (?<=)][29]  
     – [Negative Lookbehind (?<!)][30]
-9.  [Regex的实际例子和用例][31]  
+9.  [正则表达式的实际应用示例][31]  
     – [密码强度检查][32]  
     – [电子邮件地址校验][33]  
     – [电话号码格式化函数][34]
@@ -169,7 +169,7 @@ for (let match of matches) {
 
 当你需要获取字符串中所有匹配项的详细信息时，此方法非常有用。
 
-**The `search()` Method**: Searches for a specified pattern within a string. It returns the index of the first occurrence of the pattern within the string, or `-1` if the pattern is not found.
+**`search()`方法**: Searches for a specified pattern within a string. It returns the index of the first occurrence of the pattern within the string, or `-1` if the pattern is not found.
 
 ```javascript
 let str = "The quick brown fox jumps over the lazy dog";
@@ -179,31 +179,31 @@ let result = str.search(pattern);
 console.log(result); // 输出为： 10
 ```
 
-**The `replace()` Method**: Replaces the first occurrence of a specified pattern in a string with another substring or value. To replace all occurrences, you can use the global flag (`g`) in the regular expression.
+**`replace()`方法**: Replaces the first occurrence of a specified pattern in a string with another substring or value. To replace all occurrences, you can use the global flag (`g`) in the regular expression.
 
 ```javascript
 let str = "Hello, World!";
 let newStr = str.replace(/o/g, "0");
 
-console.log(newStr); // Output: "Hell0, W0rld!"
+console.log(newStr); // 输出为： "Hell0, W0rld!"
 ```
 
-**The `replaceAll()` Method**: Replaces all occurrences of a specified substring or pattern with a replacement string. It differs from `replace()` in that it replaces all occurrences by default, without the need for a global flag (`g`).
+**`replaceAll()`方法**: Replaces all occurrences of a specified substring or pattern with a replacement string. It differs from `replace()` in that it replaces all occurrences by default, without the need for a global flag (`g`).
 
 ```javascript
 let str = "apple,banana,apple,grape";
 let newStr = str.replaceAll("apple", "orange");
-console.log(newStr); // Output: "orange,banana,orange,grape"
+console.log(newStr); // 输出为： "orange,banana,orange,grape"
 ```
 
 This method simplifies the process of replacing all occurrences of a substring within a string.
 
-**The `split()` Method**: Though not exclusively a RegEx method, `split()` can accept a RegEx pattern as its argument to split a string into an array of substrings based on the specified patterns or delimiters. For instance:
+**`split()`方法**: Though not exclusively a RegEx method, `split()` can accept a RegEx pattern as its argument to split a string into an array of substrings based on the specified patterns or delimiters. For instance:
 
 ```javascript
 let str = "apple,banana,grape";
 let arr = str.split(/,/);
-console.log(arr); // Output: ["apple", "banana", "grape"]
+console.log(arr); // 输出为：["apple", "banana", "grape"]
 ```
 
 These methods offer different functionalities based on your needs. For example, if you only need to know whether a pattern is found in a string, `test()` or `search()` methods are efficient. If you require more information about matches, the `exec()` or `match()` methods are suitable.
@@ -214,19 +214,19 @@ In JavaScript, regular expressions support pattern flags, which are optional par
 
 Let's delve into two common flags: the ignore flag (`i`) and the global flag (`g`).
 
-### The Ignore Flag (`i`):
+### 忽略标志(`i`):
 
-The ignore flag (`i`) instructs the regular expression to ignore case sensitivity when searching for matches. For example:
+忽略标志（`i`）可以使正则表达式在搜索匹配项时忽略大小写敏感性。例如：
 
 ```javascript
 let re = /hello/i;
 let testString = "Hello, World!";
 let result = re.test(testString);
 
-console.log(result); // Output: true
+console.log(result); // 输出为：true
 ```
 
-In this case, the regular expression `/hello/i` matches the string `"Hello"` despite differences in case because we used the ignore flag.
+在这种情况下，正则表达式 `/hello/i` 会匹配字符串 `"Hello"`（即使大小写不同），因为我们使用了忽略标志。
 
 ### 全局标志(`g`)：
 
@@ -237,55 +237,54 @@ let re = /hi/g;
 let testString = "hi there, hi again!";
 let result = testString.match(re);
 
-console.log(result); // Output: ["hi", "hi"]
+console.log(result); // 输出为：["hi", "hi"]
 ```
 
-In this example, the regular expression `/hi/g` finds both occurrences of `"hi"` in the string `"hi there, hi again!"`.
+在这个例子中，正则表达式 `/hi/g` 找到了字符串 `"hi there, hi again!"` 中的两个 `"hi"` 出现。
 
-### Combining Flags
+### 组合标志
 
-You can combine flags to achieve specific matching behavior. For instance, using both the ignore flag (`i`) and the global flag (`g`) together allows for case-insensitive matching while finding all occurrences of the pattern.
+您可以将标志进行组合以实现特定的匹配行为。例如，同时使用忽略标志（`i`）和全局标志（`g`）允许进行不区分大小写的匹配，直到找到模式的所有匹配项。
 
 ```javascript
 let re = /hi/gi;
 let testString = "Hi there, HI again!";
 let result = testString.match(re);
 
-console.log(result); // Output: ["Hi", "HI"]
+console.log(result); // 输出为：["Hi", "HI"]
 ```
 
-Here, the regular expression `/hi/gi` matches both `"Hi"` and `"HI"` in the string `"Hi there, HI again!"`.
+在这个例子中，正则表达式 `/hi/gi` 匹配字符串 `"Hi there, HI again!"` 中的 `"Hi"` 和 `"HI"`。
 
-### The `u` Flag:
+### `u`标志:
 
-Though not commonly used, the `u` flag handles Unicode characters, especially surrogate pairs, correctly. Surrogate pairs are used to represent characters outside the Basic Multilingual Plane (BMP) in UTF-16 encoding.
+虽然不常用，但 `u` 标志可以正确处理 Unicode 字符，特别是代理项对。代理项对用于表示 UTF-16 编码中基本多文种平面（BMP）之外的字符。
 
-**Example:** Let's consider a string containing emoji characters and try to match them using a regular expression without and with the `u` flag.
-
+**示例：** 让我们考虑一个包含表情符号字符的字符串，并尝试分别使用包含`u`标志和不包含`u`标志的正则表达式来匹配它们。
 ```javascript
-// Without the u flag
+// 不使用u标志
 let result1 = 'Smile Please 😊'.match(/[😒😊🙄]/);
-console.log(result1); // Output: ["�"]
+console.log(result1); // 输出为：["�"]
 
-// With the u flag
+// 使用u标志
 let result2 = 'Smile Please 😊'.match(/[😒😊🙄]/u);
-console.log(result2); // Output: ["😊"]
+console.log(result2); // 输出为：["😊"]
 ```
 
-Without the `u` flag, the regex fails to match the emoji correctly because they are represented as surrogate pairs in UTF-16 encoding. However, with the `u` flag, it correctly matches the emoji `'😊'`.
+没有使用 `u` 标志时，正则表达式无法正确匹配表情符号，因为它们在 UTF-16 编码中表示为代理项对。但是，使用 `u` 标志时，它可以正确匹配表情符号 `'😊'`。
 
-<h2 id="anchors-in-regex">Regex中的锚点</h2>
+<h2 id="anchors-in-regex">正则表达式中的锚点</h2>
 
-Anchors are special characters in regex that do not represent actual characters but instead indicate positions within a string. There are two main anchors: `^` and `$`.
+锚点是正则表达式中的特殊字符，它们不表示实际字符，而是用于检查字符在字符串中是否处于特定的位置。本文讲解两个主要的锚点：`^` 和 `$`。
 
-**The `^` Anchor**: The `^` anchor matches the beginning of the text. Basically, it checks if a string starts with a specific character or pattern.
+**锚点 `^`**: 锚点 `^` 匹配文本的开头。一般情况下，它检查字符串是否以特定字符或模式开头。
 
 ```javascript
 let str = 'Mountain';
 console.log(/^S/.test(str)); // 输出为：false
 ```
 
-**The `$` Anchor**: The `$` anchor matches the end of the text. It checks if a string ends with a specific character or pattern.
+**锚点 `$`**: 锚点 `$` 匹配文本的结尾。它检查字符串是否以特定字符或模式结尾。
 
 ```javascript
 let str = 'Ocean';
@@ -303,7 +302,7 @@ This example checks if the input string matches a time format like "10:01"
 
 -   In the code above, `^\d\d:\d\d$` ensures that the string contains exactly two digits, followed by a colon, and then exactly two more digits.
 
-### Multiline Mode of Anchors (`^` and `$`):
+<h3 id="multiline-mode-of-anchors-and-">锚点的多行模式（`^` 和 `$`）：</h3>
 
 By default, the `^` and `$` anchors in regular expressions operate in single-line mode, meaning they match the beginning and end of the entire string. But in some cases, you might want to match the beginning and end of individual lines within a multiline string. This is where the multiline mode, indicated by the `m` flag, comes into play.
 
@@ -632,9 +631,9 @@ Without \\, ^ will be interpreted as a literal caret symbol.
 
 Fun fact: the `/` we use to escape metacharacters is itself a metacharacter and can be escaped with another backslash as `//`.
 
-## Groupings in RegEx
+## 正则表达式中的分组
 
-### Capturing Groups:
+### 捕获组:
 
 In JavaScript regular expressions, capturing groups are used to extract specific parts of a matched string. Imagine you have a path like "resource/id", for instance, "posts/123". To match this path, you can use a regular expression like `/\w+\/\d+/`.
 
@@ -662,7 +661,7 @@ console.log(match);
 [ 'posts/123', '123', index: 0, input: 'posts/123', groups: undefined ]
 ```
 
-Here, `'123'` is captured by the capturing group `(\d+)`.
+在这里，`'123'` 被捕获组 `(\d+)` 捕获。
 
 **Using Multiple Capturing Groups**: You can have multiple capturing groups in a regex pattern. For example, to capture both the resource (like "posts") and the id (like "123") from the path "posts/123", you can use `/(\w+)\/(\d+)/`.
 
@@ -916,7 +915,7 @@ console.log(priceString.match(regex)); // 输出为： ["100"]
 
 **说明**： `(?<!\$)` 是负向后行环视语法，它只在当前位置之前不是字面字符串"$"时匹配后面的模式。
 
-## Regex的实际例子和用例
+## 正则表达式的实际应用示例
 
 现在，让我们探索一些在JavaScript应用程序中使用正则表达式来解决常见问题和执行文本操作任务的实际示例。
 

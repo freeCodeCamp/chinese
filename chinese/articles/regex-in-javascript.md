@@ -833,9 +833,9 @@ console.log(matches);
 ['07:23', '21:17']
 ```
 
-## 正则表达式中的前瞻断言和后顾断言
+<h2 id="lookahead-and-lookbehind-in-regex">正则表达式中的前瞻断言和后顾断言</h2>
 
-### 前瞻断言：
+<h3 id="lookahead-">前瞻断言：</h3>
 
 正则表达式中的前瞻允许仅当某个模式（X）后面紧跟着另一个特定模式（Y）时进行匹配。语法是 `X(?=Y)`，其中：
 
@@ -865,7 +865,7 @@ console.log(regex.test("foo"));    // false
 console.log(regex.test("bar"));    // false
 ```
 
-### 否定前瞻断言：
+<h3 id="negative-lookaheads-">否定前瞻断言：</h3>
 
 为了否定一个前瞻断言，可以使用否定前瞻断言，其语法为 `(?!Y)`。在这种情况下，正则表达式引擎只有在 X 后面不跟着 Y 的情况下才会匹配 X。
 
@@ -881,7 +881,7 @@ console.log(text.match(regex)); // 输出为：["10"]
 
 `(?!\s*miles)` 是一个否定前瞻断言，它确保数字后面不是零个或多个空格加上单词 "miles"。
 
-### 后顾断言：
+<h3 id="lookbehind-">后顾断言：</h3>
 
 后顾断言提供了一种根据其前面的内容来匹配模式的方式，如果某个特定元素在其前面，则匹配该元素。
 
@@ -897,7 +897,7 @@ console.log(priceString.match(regex)); // 输出为：["100"]
 
 **说明**：如果在当前位置之前有一个文字字符串 "$"，`(?<=\$)` 就会匹配该元素。反斜杠 `\` 用于转义特殊字符 "$"，将其视为字面字符。
 
-### 否定后顾断言：
+<h3 id="negative-lookbehind-">否定后顾断言：</h3
 
 否定后顾断言允许你仅在模式之前不是特定模式的情况下匹配该模式。这对于根据前面的内容排除某些模式的匹配非常有用。
 
@@ -913,11 +913,11 @@ console.log(priceString.match(regex)); // 输出为： ["100"]
 
 **说明**： `(?<!\$)` 是否定后顾断言语法，它只在当前位置之前不是字面字符串"$"时匹配后面的模式。
 
-## 正则表达式的实际应用示例
+<h2 id="practical-examples-and-use-cases-of-regexpractical-examples-and-use-cases-of-regex">正则表达式的实际应用示例</h2>
 
 现在，让我们探索一些在JavaScript应用程序中使用正则表达式来解决常见问题和执行文本操作任务的实际示例。
 
-### 密码强度检验函数:
+<h3 id="password-strength-checking-">密码强度检验函数:</h3>
 
 你可以使用正则表达式来强制执行密码强度要求，例如最小长度和特殊字符的存在。
 
@@ -941,7 +941,7 @@ console.log(checkPasswordStrength("weakpassword")); // 输出为：false
 -   `(?=.*[!@#$%^&*])`: 要求至少一个特殊符号。
 -   `.{8,}`: 要求密码长度至少为8个字符。
 
-### 电子邮箱地址校验函数:
+<h3 id="email-validation-function-">电子邮箱地址校验函数:</h3>
 
 电子邮件验证对于确保网络应用程序中的数据完整性和安全性至关重要。通过使用正则表达式，我们可以轻松实现强大的电子邮件验证机制。
 
@@ -965,7 +965,7 @@ console.log(validateEmail("invalid-email"));      // false
 -   `[^\s@]+`: 匹配一个或多个非空白字符或'@'字符。
 -   `$`: 断言字符串的结束位置。
 
-### 电话号码格式化函数:
+<h3 id="phone-number-formatting-function-">电话号码格式化函数:</h3>
 
 在涉及电话号码输入和显示的应用程序中，电话号码格式化增强了用户体验和可读性。
 

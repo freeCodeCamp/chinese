@@ -54,11 +54,11 @@ February 27, 2024 / [#Regex][1]
     – [Non-Capturing Groups][23]  
     – [Backreferences][24]  
     – [正则表达式选择符号][25]
-8.  [Lookahead and Lookbehind Assertions in Regex][26]  
-    – [Lookahead (?=)][27]  
-    – [Negative Lookahead (?!)][28]  
-    – [Lookbehind (?<=)][29]  
-    – [Negative Lookbehind (?<!)][30]
+8.  [正则表达式中的前瞻断言和后顾断言][26]  
+    – [前瞻断言 (?=)][27]  
+    – [否定前瞻断言 (?!)][28]  
+    – [后顾断言 (?<=)][29]  
+    – [否定后顾断言 (?<!)][30]
 9.  [正则表达式的实际应用示例][31]  
     – [密码强度检查][32]  
     – [电子邮件地址校验][33]  
@@ -244,7 +244,7 @@ console.log(result); // 输出为：["hi", "hi"]
 
 ### 组合标志
 
-您可以将标志进行组合以实现特定的匹配行为。例如，同时使用忽略标志（`i`）和全局标志（`g`）允许进行不区分大小写的匹配，直到找到模式的所有匹配项。
+你可以将标志进行组合以实现特定的匹配行为。例如，同时使用忽略标志（`i`）和全局标志（`g`）允许进行不区分大小写的匹配，直到找到模式的所有匹配项。
 
 ```javascript
 let re = /hi/gi;
@@ -761,22 +761,22 @@ console.log(matchWithoutCapture); // ["02/26/2024"]
 
 In summary, non-capturing groups `(?:pattern)` behave like regular capturing groups `()` in terms of matching patterns, but they don't store the matched text in memory for later retrieval. This makes them useful when you don't need to extract specific parts of the matched text.
 
-### Backreferences:
+### 后向引用:
 
-Backreferences enable you to refer to previously captured groups within a regular expression. Think of them as variables that store matched patterns.
+后向引用允许你在正则表达式中引用先前捕获的组，将它们视为存储匹配模式的变量。
 
-In JavaScript, the syntax for a backreference is `\N`, where `N` is an integer representing the capturing group number.
+在JavaScript中，后向引用的语法是 `\N`，其中 `N` 是表示捕获组编号的整数。
 
-For instance, consider a string with a duplicate word "Lion" and we want to remove the duplicate word to get `'Lion is the King'`:
+例如，考虑一个包含重复单词 "Lion" 的字符串，我们希望删除重复的单词以得到 `'Lion is the King'`：
 
 ```javascript
 const s = 'Lion Lion is the King';
 ```
 
--   First, we match a word using `\w+\s+`.
--   Then, we create a capturing group to capture the word using `(\w+)\s+`.
--   Next, we use a backreference (`\1`) to reference the first capturing group.
--   Finally, we replace the entire match with the first capturing group using `String.replace()`.
+- 首先，我们使用 `\w+\s+` 匹配一个单词。
+- 然后，我们创建一个捕获组来捕获这个单词，使用 `(\w+)\s+`。
+- 接下来，我们使用反向引用 (`\1`) 来引用第一个捕获组。
+- 最后，我们使用 `String.replace()` 将整个匹配替换为第一个捕获组。
 
 ```javascript
 const pattern = /(\w+)\s+\1/;
@@ -785,8 +785,6 @@ console.log(result); // 输出为：'Lion is the King'
 ```
 
 <h3 id="regex-alternation">正则表达式选择符号:</h3>
-
-Regex alternation is a feature that allows you to match different patterns within a single regular expression. It works similarly to the logical OR operator. In regex, you use the pipe symbol `|` to denote alternation, where you can match either A or B.
 
 正则表达式的选择符号是一种允许你在单个正则表达式中匹配不同的模式的功能。它的工作方式类似于逻辑运算符`OR`。正则表达式使用竖线符号 `|` 表示选择符号，你可以使用它来匹配 A 或 B。
 
@@ -835,28 +833,28 @@ console.log(matches);
 ['07:23', '21:17']
 ```
 
-## Lookahead and Lookbehind in Regex
+## 正则表达式中的前瞻断言和后顾断言
 
-### Lookahead:
+### 前瞻断言：
 
-Lookahead in regular expressions allows matching a pattern (X) only if it's followed by another specific pattern (Y). The syntax is `X(?=Y)`, where:
+正则表达式中的前瞻允许仅当某个模式（X）后面紧跟着另一个特定模式（Y）时进行匹配。语法是 `X(?=Y)`，其中：
 
--   **X** is the pattern you want to match.
--   **(?=Y)** is the lookahead assertion indicating that `X` should be followed by `Y`.
+- **X** 是你要匹配的模式。
+- **(?=Y)** 是前瞻断言，指示 `X` 应该紧跟着 `Y`。
 
-**Example**: Let's say we have a string describing various distances, and we want to identify numbers followed by the units "miles" but not "kilometers". We can use lookahead in a regex pattern:
+**例如：**: 假设我们有一个描述各种距离的字符串，我们想要识别字符串中包含的单位为 "miles" 而不是 "kilometers" 的数字。我们可以在正则表达式模式中使用前瞻断言：
 
 ```javascript
 const dist = "He ran 5 miles, but not 10 kilometers.";
 
 const regex = /\d+(?=\s*miles)/g;
 
-console.log(dist.match(regex)); // Output: ["5"]
+console.log(dist.match(regex)); // 输出为：["5"]
 ```
 
-**Multiple Lookaheads**: It's possible to have multiple lookaheads in a regular expression using the syntax `X(?=Y)(?=Z)`. This allows us to impose multiple conditions for matching.
+**多重前瞻断言**: 在正则表达式中可以使用语法 `X(?=Y)(?=Z)` 来使用多个前瞻断言，这能够让我们对匹配施加多个条件。
 
-**例如:** Let's say we want to match strings that contain both "foo" and "bar", but in any order:
+**例如:** 假设我们想要匹配同时包含 "foo" 和 "bar" 的字符串，但它们可以以任意的顺序排列：
 
 ```javascript
 const regex = /(?=.*foo)(?=.*bar)/;
@@ -867,43 +865,43 @@ console.log(regex.test("foo"));    // false
 console.log(regex.test("bar"));    // false
 ```
 
-### Negative Lookaheads:
+### 否定前瞻断言：
 
-To negate a lookahead, use a negative lookahead with the syntax `(?!Y)`, where the regex engine matches X only if it is not followed by Y.
+为了否定一个前瞻断言，可以使用否定前瞻断言，其语法为 `(?!Y)`。在这种情况下，正则表达式引擎只有在 X 后面不跟着 Y 的情况下才会匹配 X。
 
-**例如**： Suppose we want to match numbers but not if they are followed by "miles":
+**例如**： 假设我们想要匹配数字，但不希望它们后面跟着 "miles"：
 
 ```javascript
 const text = "He ran 5 miles, but not 10 kilometers.";
 
 const regex = /\d+(?!\s*miles)/g;
 
-console.log(text.match(regex)); // Output: ["10"]
+console.log(text.match(regex)); // 输出为：["10"]
 ```
 
-`(?!\s*miles)` is the negative lookahead that ensures the number is not followed by zero or more whitespaces and the word "miles"
+`(?!\s*miles)` 是一个否定前瞻断言，它确保数字后面不是零个或多个空格加上单词 "miles"。
 
-### Lookbehind:
+### 后顾断言：
 
-Lookbehinds provide a way to match patterns based on what precedes them, essentially matching an element if there is another specific element before it.
+后顾断言提供了一种根据其前面的内容来匹配模式的方式，如果某个特定元素在其前面，则匹配该元素。
 
-**例如**： Suppose we have a string containing prices, and we want to match numbers preceded by the currency symbol "$" but not preceded by "€". We can use a lookbehind in a regex pattern
+**例如**：假设我们有一个包含价格的字符串，并且我们想要匹配在货币符号 "$" 前面的数字，但不匹配在 "€" 前面的数字。我们可以在正则表达式模式中使用后顾断言。
 
 ```javascript
 const priceString = "The price is $100, but €200.";
 
 const regex = /(?<=\$)\d+/g;
 
-console.log(priceString.match(regex)); // Output: ["100"]
+console.log(priceString.match(regex)); // 输出为：["100"]
 ```
 
-**说明**： `(?<=\$)` matches an element if there is a literal string "$" before it. The backslash `\` is used to escape the special character "$", treating it as a literal character.
+**说明**：如果在当前位置之前有一个文字字符串 "$"，`(?<=\$)` 就会匹配该元素。反斜杠 `\` 用于转义特殊字符 "$"，将其视为字面字符。
 
-### 零宽负向后行断言（Negative lookbehind）:
+### 否定后顾断言：
 
-Negative lookbehinds allow you to match a pattern only if it is not preceded by a specific pattern. This is useful for excluding certain patterns from matches based on what precedes them.
+否定后顾断言允许你仅在模式之前不是特定模式的情况下匹配该模式。这对于根据前面的内容排除某些模式的匹配非常有用。
 
-Example: Suppose we have a string containing various prices in different currencies, and we want to match the numbers not preceded by the currency symbol "$". We can use a negative lookbehind in a regex pattern:
+示例：假设我们有一个包含不同货币的各种价格的字符串，并且我们想要匹配不是以货币符号 "$" 开头的数字。我们可以在正则表达式模式中使用否定后顾断言：
 
 ```javascript
 const priceString = "The price is $50, but not €100.";
@@ -913,7 +911,7 @@ const regex = /(?<!\$)\b\d+\b/g;
 console.log(priceString.match(regex)); // 输出为： ["100"]
 ```
 
-**说明**： `(?<!\$)` 是负向后行环视语法，它只在当前位置之前不是字面字符串"$"时匹配后面的模式。
+**说明**： `(?<!\$)` 是否定后顾断言语法，它只在当前位置之前不是字面字符串"$"时匹配后面的模式。
 
 ## 正则表达式的实际应用示例
 

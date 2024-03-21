@@ -37,18 +37,18 @@ So let's dive in and learn cloud computing basics so you can start your journey 
 <h2 id="the-world-before-cloud-computing">云计算出现前的世界</h2> ## The World Before Cloud Computing
 
 To understand cloud computing, it is important to understand the problem cloud computing tries to solve. This will help you understand its history and appreciate the convenience it brings into the world of technology.
-
+了解云计算尝试解决的问题，可以帮助你理解云计算的历史发展，并感激云计算给世界科技带来的便携，这样才能更好地全方位理解云计算。
 Before the cloud, deploying web services was a very expensive process. To deploy a web application, you had to purchase servers with the correct amount of storage and memory, keep them on-site, setup these servers, and use them to host your application.
-
+“云”出现以前，部署网络服务曾是一个昂贵的过程。为了部署一套网络应用程序，首先需要采购符合存储要求的服务器，然后找到合适的空间存放，搭建好服务器后才能使用服务器托管应用程序。
 This comes with many additional costs, other than the original server costs, like electricity and the data required to keep your server up and online every time. There are also security concerns, as you'll need to prevent your server from being damaged or stolen by bad actors.
-
+除了服务器的购置费，为了维持服务器不间断运行并持续在线，后续还会有很多额外支出，譬如电费和流量费用。同时还有安全问题，需要避免服务器遭到恶意破坏和盗取信息。
 Beyond all this, many developers are not exactly server specialists. So you would either have to train your developers to become system admins or hire system admins to setup and configure the servers to work with your applications. Then to deploy a new application, you'd have to repeat the whole process with new costs.
-
+除此之外，大多数的开发人员都不是精通服务器的专家，所以要么培养开发人员做系统管理者，要么招聘系统管理的专职人员，负责搭建配置服务器保证应用程序的稳定运行。而安装部署一套新的应用程序，重复整个过程并产生新的费用。
 Scaling applications wasn't easy before the cloud. If you tried to manage costs and not buy too many servers, or hire many system engineers, you might end up with insufficient compute power and you'd need to scale. Scaling means buying more servers (or replacing existing ones with better ones), configuring them to match existing configurations, and deploying your applications on them.
-
+扩展是指购买更多的服务器（或者是购买更好地服务器替换已有的服务器），配置符合现有配置的环境，然后将应用程序部署在新的服务器上。“云”时代之前，扩展应用程序并没有很方便，如果一开始控制成本，没有购入足够多的服务器或者是招聘足够多的系统工程师，最终可能导致算力不充足而需要扩展。
 These are some of the issues we faced before cloud computing. Now, you might wonder, "how does cloud computing solve these?". Let's find out.
-
-## What Is Cloud Computing?
+这些都是云计算出现以前我们面对的问题，或许你现在困惑“云计算是怎么解决这些问题”，请看下文。
+<h2 id="what-is-cloud-computing">云计算是什么？</h2>## What Is Cloud Computing?
 
 > **Cloud computing** is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.  
 >   

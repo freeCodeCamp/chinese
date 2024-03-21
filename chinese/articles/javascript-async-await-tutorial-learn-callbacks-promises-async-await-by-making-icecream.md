@@ -13,26 +13,26 @@
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/b1j935dg72g9u8zvh2oi.png)
 
-# 以下是我们将在本文中介绍的内容:
+# 以下是我们将在本文中介绍的内容
 
--   什么是异步JavaScript？
--   JavaScript中的同步与异步
--   Callbacks如何在JavaScript中运作
--   Promises如何在JavaScript中运作
--   Async / Await 如何在JavaScript中运作
+-   什么是异步 JavaScript？
+-   JavaScript 中的同步与异步
+-   Callbacks 如何在 JavaScript 中运作
+-   Promises 如何在 JavaScript 中运作
+-   Async / Await 如何在 JavaScript 中运作
 
 让我们开始吧!
 
-## 如果你喜欢，也可以在YouTube上观看本教程
+## 如果你喜欢，也可以在 YouTube 上观看本教程
 
 # What is Asynchronous JavaScript?
-# 什么是异步JavaScript？
+# 什么是异步 JavaScript？
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7yd96tgxvuowqmfgcx6b.png)
 
 如果您想高效地构建项目，那么这个概念很适合您。
 
-异步JavaScript理论可以帮助您将大型复杂的项目分解为较小的任务。
+异步 JavaScript 理论可以帮助您将大型复杂的项目分解为较小的任务。
 
 然后你可以使用这三种技巧 – **callbacks, promises or Async/await** – 中的任何一种来运行这些小任务来获得最好的结果。
 
@@ -46,7 +46,7 @@
 
 在同步系统中，任务一个接一个地完成。
 
-想象一下，如果你只有一只手去完成10项任务, 那么在同一个时间你只能做一个任务。
+想象一下，如果你只有一只手去完成 10 项任务, 那么在同一个时间你只能做一个任务。
 
 看看这个动图👇 – 这里会发生一件事:
 
@@ -54,7 +54,7 @@
 
 您将看到，直到第一个图像完全加载，第二个图像才开始加载。
 
-JavaScript默认是同步的  **\[单线程\]**。你可以这样想 ——— 单线意味着一次只能做一件事。
+JavaScript 默认是同步的  **\[单线程\]**。你可以这样想 ——— 单线意味着一次只能做一件事。
 
 ## 什么是异步系统?
 
@@ -68,11 +68,11 @@ JavaScript默认是同步的  **\[单线程\]**。你可以这样想 ——— �
 
 同样，所有的图像都以自己的速度加载。它们都不会等待其他任务的完成。
 
-## 总结一下同步JS和异步JS:
+## 总结一下同步 JS 和异步 JS
 
 想象三张图片在跑马拉松，在一个:
 
--   **同步** 系统，三张图片在同一条跑道上。一个不能超过另外一个。比赛得一个接一个地完成。如果2号图像停止，后续的图片也会停止。
+-   **同步** 系统，三张图片在同一条跑道上。一个不能超过另外一个。比赛得一个接一个地完成。如果 2 号图像停止，后续的图片也会停止。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/w1r9y4ghhq0t8wjb1u9h.png)
 
@@ -89,7 +89,7 @@ JavaScript默认是同步的  **\[单线程\]**。你可以这样想 ——— �
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/5m6p1qy522lj3auvl5ty.png)
 
-为了测试同步系统，用JavaScript写以下代码：
+为了测试同步系统，用 JavaScript 写以下代码：
 
 ```javascript
 console.log(" I ");
@@ -107,7 +107,7 @@ console.log(" Ice Cream ");
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/y5d0o8unbe8c67qeqz0w.png)
 
-我们假设吃冰淇淋需要两秒钟。现在，让我们测试一个异步系统。用JavaScript编写下面的代码。
+我们假设吃冰淇淋需要两秒钟。现在，让我们测试一个异步系统。用 JavaScript 编写下面的代码。
 
 **注意:** 不用担心,我们将在本文后面讨论 `setTimeout()` 函数。
 
@@ -133,11 +133,11 @@ console.log("Ice Cream")
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/2mzbtcnm67v2iys7cix7.png)
 
-对于这个项目，你只需要打开[Codepen.io](https://codepen.io/)直接开始编码。或者，你可以用VS code编辑器来做。
+对于这个项目，你只需要打开[Codepen.io](https://codepen.io/)直接开始编码。或者，你可以用 VS code 编辑器来做。
 
-打开JavaScript部分，然后打开开发人员控制台。我们将编写代码并在控制台中查看结果。
+打开 JavaScript 部分，然后打开开发人员控制台。我们将编写代码并在控制台中查看结果。
 
-# 什么是JavaScript中的回调函数？
+# 什么是 JavaScript 中的回调函数？
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/s5iloofqsv3lcdl4flsi.png)
 
@@ -169,7 +169,7 @@ console.log("Ice Cream")
 
 为了更详细地解释这一点，让我们开始做冰淇淋店的生意。
 
-## 等等...
+## 等等
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cq8exwor5aiciu2j6jwu.png)
 
@@ -198,7 +198,7 @@ let stocks = {
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/6dcwr770l0ubupv0r2gj.png)
 
-您可以像这样将这些其他成分存储在JavaScript对象中:👇
+您可以像这样将这些其他成分存储在 JavaScript 对象中:👇
  
 ```javascript
 let stocks = {
@@ -279,7 +279,7 @@ order(production);
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/tnr74waq6noc0djln3qx.png)
 
-## 清除console.log日志
+## 清除 console.log 日志
 
 保留这段代码并删除所有的东西 \[不要删除我们的 stocks 变量\]。在我们的第一个函数中，传递另一个参数，以便我们可以接收订单\[水果名\]:
 
@@ -307,7 +307,7 @@ order("", production);
 
 **图表包含制作冰淇淋的步骤**
 
-在这个图表中，您可以看到第一步是下订单，这需要2秒。第二步是切水果(2秒)，第三步是加水和冰(1秒)，步骤4启动机器(1秒)，第5步是选择容器(2秒)，第六步是选择配料(3秒)，以及第七步，也就是最后一步，端上冰淇淋，这需要2秒。
+在这个图表中，您可以看到第一步是下订单，这需要 2 秒。第二步是切水果(2 秒)，第三步是加水和冰(1 秒)，步骤 4 启动机器(1 秒)，第 5 步是选择容器(2 秒)，第六步是选择配料(3 秒)，以及第七步，也就是最后一步，端上冰淇淋，这需要 2 秒。
 
 要建立计时，函数 `setTimeout()` 非常好，因为它也使用一个回调函数作为参数。
 
@@ -342,11 +342,11 @@ order(0, production);
 
 下面是控制台中的结果:👇
 
-**注意**  2秒后才会显示结果。
+**注意**  2 秒后才会显示结果。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/edwji5vauypoezj3bxdk.png)
 
-如果您想知道我们是如何从stock变量中采摘草莓的，下面是代码 👇
+如果您想知道我们是如何从 stock 变量中采摘草莓的，下面是代码 👇
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ia38z3x6b96xpq3aid91.png)
 
@@ -440,11 +440,11 @@ let production = () =>{
 
 解决方案是什么?
 
-# 如何使用Promise来避免回调地狱
+# 如何使用 Promise 来避免回调地狱
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/x3neys1hxsrifgg5qm6x.png)
 
-Promises的发明是为了解决回调地狱的问题和更好地处理我们的任务的。
+Promises 的发明是为了解决回调地狱的问题和更好地处理我们的任务的。
 
 ## 休息一下
 
@@ -456,9 +456,9 @@ Promises的发明是为了解决回调地狱的问题和更好地处理我们的
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7qo1zheuin2825osozvc.png)
 
-**promised的格式说明**
+**promised 的格式说明**
 
-让我们一起来剖析promises。
+让我们一起来剖析 promises。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gozy5r1nfubzeq5t5t25.png)
 
@@ -466,7 +466,7 @@ Promises的发明是为了解决回调地狱的问题和更好地处理我们的
 
 **promise 周期的图解**
 
-如上图所示，一个promise有三种状态
+如上图所示，一个 promise 有三种状态
 
 -   **Pending:** 这是初始阶段。这里什么也没有发生。 你可以这样想，你的客户正在慢慢地给你下订单。但是他们还没有点任何东西。
 -   **Resolved:** 这意味着你的顾客已经收到了他们的食物并且很高兴。
@@ -495,7 +495,7 @@ Promises的发明是为了解决回调地狱的问题和更好地处理我们的
 
 **图表包含制作冰淇淋的步骤**
 
-为了实现这一点，让我们在JavaScript中创建一个变量: 👇
+为了实现这一点，让我们在 JavaScript 中创建一个变量: 👇
 
 ```javascript
 let is_shop_open = true;
@@ -519,7 +519,7 @@ let order = ( time, work ) =>{
   }
 ```
 
-我们的promise有2部分：
+我们的 promise 有 2 部分：
 
 -   Resolved \[ 用户拿到了冰激凌 \]
 -   Rejected \[ 用户没有拿到冰激凌 \]
@@ -547,7 +547,7 @@ let order = ( time, work ) => {
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/3wik2xel68yue93yapm6.png)
 
-让我们在 `if` 语句中使用 `setTimeout()` 函数在promise中添加时间和工作因素。跟我来👇
+让我们在 `if` 语句中使用 `setTimeout()` 函数在 promise 中添加时间和工作因素。跟我来👇
 
 **注意:** 在现实生活中，你也可以避免时间因素。 这完全取决于你的工作性质。
 
@@ -584,7 +584,7 @@ order( 2000, ()=>console.log(`${stocks.Fruits[0]} was selected`))
 //    pass a ☝️ function here to start working
 ```
 
-2秒后的结果是👇:
+2 秒后的结果是👇:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/erzjup8wt505j502e73n.png)
 
@@ -598,19 +598,19 @@ order( 2000, ()=>console.log(`${stocks.Fruits[0]} was selected`))
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l27ytifkoedl22kc97lh.png)
 
-**使用 .then 处理函数的promise 链说明**
+**使用 .then 处理函数的 promise 链说明**
 
-当我们的promise被resolve时, .then 处理函数返回一个promise。
+当我们的 promise 被 resolve 时, .then 处理函数返回一个 promise。
 
-#### 例子如下:
+#### 例子如下
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1qpeewo19qbhzj47goos.png)
 
 
-让我说得简单点: 这类似于给某人指示。你告诉别人“先做这个，然后做那个，然后做其他的事情，然后…”,然后……，然后……”等。
+让我说得简单点: 这类似于给某人指示。你告诉别人“先做这个，然后做那个，然后做其他的事情，然后……”,然后……，然后……”等。
 
--   他的首要任务是我们原始promise。
--   一旦完成了一小部分工作，剩下的任务就返回了新的promise
+-   他的首要任务是我们原始 promise。
+-   一旦完成了一小部分工作，剩下的任务就返回了新的 promise
 
 让我们在我们的项目中实现这一点。 在代码的底部编写以下代码行。👇
 
@@ -676,15 +676,15 @@ order(2000,()=>console.log(`${stocks.Fruits[0]} was selected`))
 
 ## 错误处理
 
-当出现错误时，我们需要一种处理错误的方法。但首先，我们需要了解promise周期:
+当出现错误时，我们需要一种处理错误的方法。但首先，我们需要了解 promise 周期:
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/jlm7zwonbxszeaccyohv.png)
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/z2ajcu52rxzwq64g81vp.png)
 
-**promise周期说明**
+**promise 周期说明**
 
-为了捕获错误，让我们将变量改为false。
+为了捕获错误，让我们将变量改为 false。
 
 ```javascript
 let is_shop_open = false;
@@ -692,7 +692,7 @@ let is_shop_open = false;
 
 也就是说我们的店关门了。我们不再卖冰淇淋给顾客了。
 
-为了处理这种情况我们使用 `.catch` 函数。类似 `.then`，它也返回一个promise，但只有当我们最初的promise被rejected时才会执行。
+为了处理这种情况我们使用 `.catch` 函数。类似 `.then`，它也返回一个 promise，但只有当我们最初的 promise 被 rejected 时才会执行。
 
 这里有一个小提示:
 
@@ -722,9 +722,9 @@ let is_shop_open = false;
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/gdq3i0agj4volq46ycue.png)
 
-有一个叫做"finally"的函数，不管我们的promise是被resolve了还是被rejecte了它都会被执行。
+有一个叫做"finally"的函数，不管我们的 promise 是被 resolve 了还是被 rejecte 了它都会被执行。
 
-**例如:**  不管我们是没有顾客还是有100个顾客，我们的店都会在一天结束的时候关门
+**例如:**  不管我们是没有顾客还是有 100 个顾客，我们的店都会在一天结束的时候关门
 
  如果您想对此进行测试，请在最下面编写以下代码: 👇
 
@@ -740,13 +740,13 @@ let is_shop_open = false;
 
 请大家欢迎 Async / Await~
 
-# Async / Await 如何在JavaScript中工作
+# Async / Await 如何在 JavaScript 中工作
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/ra7483f90b69pjl2cbae.png)
 
-这应该是编写promise的更好方式，它可以帮助我们保持代码的简单和干净。
+这应该是编写 promise 的更好方式，它可以帮助我们保持代码的简单和干净。
 
-你所要做的就是在任何常规函数之前写 `async` 关键字，它就变成了一个promise。
+你所要做的就是在任何常规函数之前写 `async` 关键字，它就变成了一个 promise。
 
 ## 先休息一下
 
@@ -758,7 +758,7 @@ let is_shop_open = false;
 
 ## JavaScript 中 Promises vs Async/Await
 
-在async/await之前，为了写一个promise，我们这样写:
+在 async/await 之前，为了写一个 promise，我们这样写:
 
 ```javascript
 function order(){
@@ -769,7 +769,7 @@ function order(){
 }
 ```
 
-现在使用async/await，我们可以这么写:
+现在使用 async/await，我们可以这么写:
 
 ```javascript
 //👇 神奇的关键字
@@ -778,24 +778,24 @@ function order(){
  }
 ```
 
-## 等等...
+## 等等
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/t1pjzw6zl0h21tyyh9u3.png)
 
 你必须理解->
 
 -   如何使用 `try` 和 `catch` 关键字
--   如何使用await 关键字
+-   如何使用 await 关键字
 
 ## 如何使用 Try 和 Catch 关键字
 
-我们使用 `try` 关键字来运行代码，同时使用 `catch` 来捕获错误。这和我们看promise时看到的概念是一样的。
+我们使用 `try` 关键字来运行代码，同时使用 `catch` 来捕获错误。这和我们看 promise 时看到的概念是一样的。
 
-让我们来比较一下。我们来看一个小demo，然后开始编码。
+让我们来比较一下。我们来看一个小 demo，然后开始编码。
 
-### JS中的Promise -> resolve 和 reject
+### JS 中的 Promise -> resolve 和 reject
 
-我们在resolve中这样使用resolve和reject:
+我们在 resolve 中这样使用 resolve 和 reject:
 
 ```javascript
 function kitchen(){
@@ -818,9 +818,9 @@ kitchen()  // run the code
 .finally() // end of the promise [optional]
 ```
 
-### JS中的 Async / Await -> try，catch
+### JS 中的 Async / Await -> try，catch
 
-当我们使用async/await时，我们可以这么写:
+当我们使用 async/await 时，我们可以这么写:
 
 ```javascript
 //👇 神奇的关键字
@@ -845,15 +845,15 @@ kitchen()  // 调用
 
 不要慌，我们接下来将讨论  `await`  关键字。
 
-现在希望你理解了promise和Async / Await之间的区别了。
+现在希望你理解了 promise 和 Async / Await 之间的区别了。
 
-## 如何使用JavaScript的Await关键字
+## 如何使用 JavaScript 的 Await 关键字
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/fry577xha7313ead96xy.png)
 
-关键字 `await` 使JavaScript等待，直到一个promise reslove 时才会返回它的结果。
+关键字 `await` 使 JavaScript 等待，直到一个 promise reslove 时才会返回它的结果。
 
-### 如何在JavaScrip中使用await关键字
+### 如何在 JavaScrip 中使用 await 关键字
 
 我们回冰淇淋店去吧。我们不知道顾客更喜欢哪种配料，巧克力还是花生。所以我们需要停止我们的机器，然后去问我们的顾客他们想在冰淇淋上加什么。
 
@@ -863,11 +863,11 @@ kitchen()  // 调用
 -   清洁桌子
 -   点单，等等。
 
-## 一个Await关键字代码示例
+## 一个 Await 关键字代码示例
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/8r5w5aapofalnq882wat.png)
 
-让我们创建一个小promise来询问要使用那种配料。这个过程需要3秒。
+让我们创建一个小 promise 来询问要使用那种配料。这个过程需要 3 秒。
 
 ```javascript
 function toppings_choice (){
@@ -881,7 +881,7 @@ function toppings_choice (){
 }
 ```
 
-现在，让我们首先使用async关键字来创建kitchen函数。
+现在，让我们首先使用 async 关键字来创建 kitchen 函数。
 
 ```javascript
 async function kitchen(){
@@ -920,7 +920,7 @@ console.log("taking orders")
 
 ### 注意
 
-当使用Async/ Await时，你也可以使用promise的核心部分 `.then`, `.catch`, 和 `.finally`函数。
+当使用 Async/ Await 时，你也可以使用 promise 的核心部分 `.then`, `.catch`, 和 `.finally`函数。
 
 ### 我们再开一家冰淇淋店吧
 
@@ -1065,7 +1065,7 @@ async function kitchen(){
 恭喜你读完了本文!在本文中，您可以了解到:
 
 -   同步和异步系统之间的区别
--   异步JavaScript使用3种机制(callbacks, promises, and Async/ Await)
+-   异步 JavaScript 使用 3 种机制(callbacks, promises, and Async/ Await)
 
 这是你阅读到最后的奖励。❤️
 

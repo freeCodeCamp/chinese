@@ -5,9 +5,9 @@
 
 ![Higher Order Functions in JavaScript – Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/06/Blog-8---Freecodecamp-Banner.png)
 
-在JavaScript中函数是一等公民。函数可以作为值赋值给另一个变量，或者作为参数传入另一个函数，甚至从另一个函数返回。
+在 JavaScript 中函数是一等公民。函数可以作为值赋值给另一个变量，或者作为参数传入另一个函数，甚至从另一个函数返回。
 
-这就赋予了JavaScript高阶函数的能力。
+这就赋予了 JavaScript 高阶函数的能力。
 
 基本上如果一个函数可以将另外一个函数作为参数，或者返回另一个函数，则被称为高阶函数。
 
@@ -126,7 +126,7 @@ filterFunction(arr, isEven)
 
 我们相当于将逻辑函数从主函数抽离出来，现在我们可以传入任意的过滤逻辑，并且不需要对 `filterFunction`做任何修改。
 
-例如，如果我们想要过滤出所有大于5的数字，我们可以这样编写逻辑函数：
+例如，如果我们想要过滤出所有大于 5 的数字，我们可以这样编写逻辑函数：
 
 ```javascript
 function isGreaterThanFive(x) {
@@ -154,7 +154,7 @@ filterFunction(arr, (x) => x > 5)
 
 ### 如何创建[Polyfill](https://developer.mozilla.org/zh-CN/docs/Glossary/Polyfill)
 
-我们知道JavaScript内置了一些高阶函数，如： `map()`、`filter()`、`reduce()`等， 我们可以自定义这些函数吗？让我们深入研究一下。
+我们知道 JavaScript 内置了一些高阶函数，如： `map()`、`filter()`、`reduce()`等， 我们可以自定义这些函数吗？让我们深入研究一下。
 
 在上一个部分，我们创建了过滤函数。让我们为 `filterFunction`函数创建一个数组原型，这样我们就可以在任意数组使用这个函数，这个原型如下：
 
@@ -177,7 +177,7 @@ arr.filterFunction(callbackFn)
 
 那么 `this`就指代数组 `arr`。
 
-现在我们就可以像使用JS内置的`filter()`函数一样使用`filterFunction`。 我们可以编写这样的代码：
+现在我们就可以像使用 JS 内置的`filter()`函数一样使用`filterFunction`。 我们可以编写这样的代码：
 
 ```javascript
 arr.filterFunction(isEven)
@@ -206,11 +206,11 @@ arr.filter((x) => x > 5)
 
 ```
 
-这样，我们就给内置`filter()`函数写了一个polyfill。
+这样，我们就给内置`filter()`函数写了一个 polyfill。
 
 ### 函数链
 
-我们也可以在`filter()`和我们自定义的原型方法中采取链式调用。让我们先筛选出所有大于5的数字，然后从结果中筛选出所有的偶数。代码如下：
+我们也可以在`filter()`和我们自定义的原型方法中采取链式调用。让我们先筛选出所有大于 5 的数字，然后从结果中筛选出所有的偶数。代码如下：
 
 ```javascript
 //使用我们自定义的filterFunction()
@@ -222,13 +222,13 @@ arr.filter((x) => x > 5).filter((x) => x % 2 === 0)
 // 两者都会打印出: [ 6, 8, 10 ]
 ```
 
-这就是我们如何在JS 中使用高阶函数来编写模式模块、以及编写更简洁、更易于维护的代码。
+这就是我们如何在 JS 中使用高阶函数来编写模式模块、以及编写更简洁、更易于维护的代码。
 
 接下来，让我们看看如何从函数返回另一个函数
 
 ![lets-move-on-proceed](https://www.freecodecamp.org/news/content/images/2022/06/lets-move-on-proceed.gif)
 
-## 如何在JavaScript中从函数返回另一个函数
+## 如何在 JavaScript 中从函数返回另一个函数
 
 我们可以从函数中返回函数，是因为函数被当作了值，请看以下例子
 
@@ -247,7 +247,7 @@ function calculate(operation) {
 }
 ```
 
-在上述代码中，当我们传入参数触发`calculate` 时， 函数通过switch条件评估参数，最终返回一个匿名函数。 所以如果我们调用 `calculate()`并将结果存储到一个变量，并在控制台打印变量，会得到以下结果：
+在上述代码中，当我们传入参数触发`calculate` 时， 函数通过 switch 条件评估参数，最终返回一个匿名函数。 所以如果我们调用 `calculate()`并将结果存储到一个变量，并在控制台打印变量，会得到以下结果：
 
 ```javascript
 const calculateAdd = calculate("ADD");
@@ -312,10 +312,10 @@ calculate("SUBTRACT")(2, 3);
 
 在这篇文章中，我们学习了：
 
--   在JS中为什么函数是一等公民
+-   在 JS 中为什么函数是一等公民
 -   什么是高阶函数
 -   如何将函数作为参数传入另一个函数
--   如何创建一个数组原型、函数链、以及为内置方法`filter()`编写自定义polyfill
+-   如何创建一个数组原型、函数链、以及为内置方法`filter()`编写自定义 polyfill
 -   如何在函数中返回函数，以及两种调用返回函数的方法
 
 ## 收尾

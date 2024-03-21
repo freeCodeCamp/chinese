@@ -5,7 +5,7 @@
 
 ![Closure in JavaScript – Explained with Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/safar-safarov-LKsHwgzyk7c-unsplash-2.jpg)
 
-这篇文章将讲解JavaScript中的闭包。我会说明闭包的定义，展现一个日常抓取使用闭包的例子以及闭包的优缺点。
+这篇文章将讲解 JavaScript 中的闭包。我会说明闭包的定义，展现一个日常抓取使用闭包的例子以及闭包的优缺点。
 
 ## 目录
 
@@ -22,7 +22,7 @@
 
 在学习这篇文章之前，你必须理解以下内容：
 
--   JavaScript的[执行上下文](https://www.freecodecamp.org/news/javascript-execution-context-and-hoisting/
+-   JavaScript 的[执行上下文](https://www.freecodecamp.org/news/javascript-execution-context-and-hoisting/
 -   [Fetch API](https://www.freecodecamp.org/news/javascript-fetch-api-tutorial-with-js-fetch-post-and-header-examples/)的定义和使用
 
 <h2 id='what-are-closures'> 什么是闭包？</h2>
@@ -53,7 +53,7 @@ let buttonProps = (borderRadius) => {
 
 那么问题来了，内部函数如何解析位于父作用域的变量呢？
 
-这得益于词法作用域。JS编译器可以根据词法作用域来解析当前作用域的变量，即解析嵌套函数中的变量。
+这得益于词法作用域。JS 编译器可以根据词法作用域来解析当前作用域的变量，即解析嵌套函数中的变量。
 
 所以根据上述例子，我们可以得出 `createVariantButtonProps` 可以获取外部函数`buttonProps`中的变量。
 
@@ -64,7 +64,7 @@ let buttonProps = (borderRadius) => {
 
 让我们来深入了解这两个特性。
 
-### 即便外部函数不再存在，闭包也可以获取父函数中的变量。
+### 即便外部函数不再存在，闭包也可以获取父函数中的变量
 
 这是闭包的基础功能，是闭包的生命信仰，也可以说是闭包运作的指导原则。
 
@@ -102,16 +102,16 @@ const primaryButtonProps = primaryButton("primary", "red");
 
 <h2 id='use-case-of-closure-creating-a-fetch-utility-with-closures'>如何使用闭包</h2>
 
-我们已经学习了什么是闭包，现在让我们创建一个可以被广泛使用的实用函数。这个函数将使用REST API来处理如GET和POST之类的方法。
+我们已经学习了什么是闭包，现在让我们创建一个可以被广泛使用的实用函数。这个函数将使用 REST API 来处理如 GET 和 POST 之类的方法。
 
 在这个例子中：
 
--   我们将利用[JSON placeholder APIs](https://jsonplaceholder.typicode.com/)的数据。我们可以使用REST API来处理一些虚构的数据。
--   我们将使用JavaScript的[fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) API。
+-   我们将利用[JSON placeholder APIs](https://jsonplaceholder.typicode.com/)的数据。我们可以使用 REST API 来处理一些虚构的数据。
+-   我们将使用 JavaScript 的[fetch](https://developer.mozilla.org/en-US/docs/Web/API/fetch) API。
 
 我们先来讨论一下为什么要设计这样的实用函数，有以下几个原因：
 
--   我们并不想在每一次fetch调用中都重新定义基础URL (或其他基础参数)。 所以我们可以创建一个机制将基础URL或者参数作为状态存储。
+-   我们并不想在每一次 fetch 调用中都重新定义基础 URL (或其他基础参数)。 所以我们可以创建一个机制将基础 URL 或者参数作为状态存储。
 -   删除多余的代码。
 -   模块化代码库。
 
@@ -132,10 +132,10 @@ const fetchUtility = (baseURL, headers) => {
 };
 ```
 
--   `fetchUtility`接受两个参数 `baseURL`和`headers`。这两个参数会在后面闭包用到，来创建基础URL和头部。
+-   `fetchUtility`接受两个参数 `baseURL`和`headers`。这两个参数会在后面闭包用到，来创建基础 URL 和头部。
 -   还有`createFetchInstance`函数，接受`route` `requestMethod` 和 `data`参数。
--   接着在函数内创建一个请求实例，通过代码 `${baseURL}${route}`来创建URL。同时我们也传入一个对象，包含请求方式、请求头和数据（如果获取得到数据）。
--   然后返回一个fetch API的实例和一个请求对象。
+-   接着在函数内创建一个请求实例，通过代码 `${baseURL}${route}`来创建 URL。同时我们也传入一个对象，包含请求方式、请求头和数据（如果获取得到数据）。
+-   然后返回一个 fetch API 的实例和一个请求对象。
 -   最后返回 `createFetchInstance`函数。
 
 接下来让我们实际操作看看，调用 `fetchUtility` 函数初始化 `baseURL`:
@@ -144,7 +144,7 @@ const fetchUtility = (baseURL, headers) => {
 const fetchInstance = fetchUtility("https://jsonplaceholder.typicode.com");
 ```
 
-初始化基础URL 
+初始化基础 URL 
 
 -  仔细观察会发现`fetchInstance`获取了`fetchUtility`函数闭包的变量。
 -  然后，我们向闭包`fetchInstance`传入路由和请求的方式:
@@ -155,9 +155,9 @@ const [getFunc, getReq] = fetchInstance("/todos/1", "GET");
 
 执行闭包
 
-如你所见，一个包含fetch API实例和我们配置的请求体的数组被返回。
+如你所见，一个包含 fetch API 实例和我们配置的请求体的数组被返回。
 
-最后，我们使用`getFunc`这个fetch API 调用 `getReq`请求，如下：
+最后，我们使用`getFunc`这个 fetch API 调用 `getReq`请求，如下：
 
 ```Javascript
 getFunc(getReq)
@@ -165,7 +165,7 @@ getFunc(getReq)
   .then((data) => console.log(data));
 ```
 
-我们可以一样的方法来创建一个POST请求。这样重新调用 `fetchInstance`：
+我们可以一样的方法来创建一个 POST 请求。这样重新调用 `fetchInstance`：
 
 ```Javascript
 const [postFunc, postReq] = fetchInstance(
@@ -179,7 +179,7 @@ const [postFunc, postReq] = fetchInstance(
 );
 ```
 
-在执行POST请求的时候也可以用GET请求一样的方法：
+在执行 POST 请求的时候也可以用 GET 请求一样的方法：
 
 ```Javascript
 postFunc(postReq)

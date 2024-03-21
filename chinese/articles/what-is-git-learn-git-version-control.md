@@ -119,7 +119,7 @@ GitHub 和 Git 之间的不同之处。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/1_r3tL0x5-6x60uycPkIQxbg.png)
 
 我们的文件在工作目录。
-### 步骤二：增加文件到暂存区。
+### 步骤二：增加文件到暂存区
 我们可以使用`git add`命令去增加或更新文件到暂存区。如果我们决定不想在下一次提交中包括一些改动了的文件，那么简单地确保不把这些特殊的文件加到暂存区就行了。
 ![](https://www.freecodecamp.org/news/content/images/2021/03/updated.png)
 

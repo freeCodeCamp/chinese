@@ -1,147 +1,147 @@
 > -  原文地址：[The Python Handbook](https://www.freecodecamp.org/news/the-python-handbook/)
 > -  原文作者：[Flavio Copes](https://www.freecodecamp.org/news/author/flavio/)
-> -  译者：
+> -  译者：ZhijieXiong
 > -  校对者：
 
 ![The Python Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2021/03/book.png)
 
-The Python Handbook follows the 80/20 rule: learn 80% of the topic in 20% of the time.
+这本 Python 编程手册遵循“80/20 定律”：使用 20%的时间学习 80%的内容。
 
-I find this approach gives a well-rounded overview.
+我认为这种方法可以为学习者提供一个对 Python 全面的了解。
 
-This book does not try to cover everything under the sun related to Python. It focuses on the core of the language, trying to simplify the more complex topics.
+本手册并没有涵盖与 Python 相关的全部内容。它专注于这门编程语言的核心主题，并且试图简化那些复杂的内容。
 
-I hope the contents of this book will help you achieve what you want: **learn the basics of Python**.
+我希望这本手册可以帮助您实现：**学习 Python 的基础**
 
-> Note: You can [get a PDF, ePub and Mobi version of this Python Handbook](https://flaviocopes.com/page/python-handbook/)
+> Note: 您可以获取这本手册的[PDF、ePub 或者 Mobi 版本](https://flaviocopes.com/page/python-handbook/)
 
-Enjoy!
+Enjoy it!
 
-## Summary
+<h2 id="summary">目录</h2>
 
--   [Introduction to Python](#introductiontopython)
--   [How to Install Python](#howtoinstallpython)
--   [How to Run Python Programs](#howtorunpythonprograms)
--   [Python 2 vs Python 3](#python2vspython3)
--   [Python Basics](#pythonbasics)
--   [Data Types in Python](#datatypesinpython)
--   [Operators in Python](#operators)
--   [The Ternary Operator in Python](#theternaryoperatorinpython)
--   [Strings in Python](#stringsinpython)
--   [Booleans in Python](#booleansinpython)
--   [Numbers in Python](#numbersinpython)
--   [Constants in Python](#constantsinpython)
--   [Enums in Python](#enumsinpython)
--   [User Input in Python](#userinputinpython)
--   [Control Statements in Python](#controlstatementsinpython)
--   [Lists in Python](#listsinpython)
--   [Tuples in Python](#tuplesinpython)
--   [Dictionaries in Python](#dictionariesinpython)
--   [Sets in Python](#setsinpython)
--   [Functions in Python](#functionsinpython)
--   [Objects in Python](#objectsinpython)
--   [Loops in Python](#loopsinpython)
--   [Classes in Python](#classesinpython)
--   [Modules in Python](#modulesinpython)
--   [The Python Standard Library](#thepythonstandardlibrary)
--   [The PEP8 Python Style Guide](#thepep8pythonstyleguide)
--   [Debugging in Python](#debugginginpython)
--   [Variable Scope in Python](#variablescopeinpython)
--   [How to Accept Arguments from the Command Line in Python](#howtoacceptargumentsfromthecommandlineinpython)
--   [Lambda Functions in Python](#lambdafunctionsinpython)
--   [Recursion in Python](#recursioninpython)
--   [Nested Functions in Python](#nestedfunctionsinpython)
--   [Closures in Python](#closuresinpython)
--   [Decorators in Python](#decoratorsinpython)
--   [Docstrings in Python](#docstringsinpython)
--   [Introspection in Python](#introspectioninpython)
--   [Annotations in Python](#annotationsinpython)
--   [Exceptions in Python](#exceptionsinpython)
--   [The with Statement in Python](#thewithstatementinpython)
--   [How to Install 3rd Party Packages in Python Using pip](#howtoinstall3rdpartypackagesinpythonusingpip)
--   [List Comprehensions in Python](#listcomprehensionsinpython)
--   [Polymorphism in Python](#polymorphisminpython)
--   [Operator Overloading in Python](#operatoroverloadinginpython)
--   [Virtual Environments in Python](#virtualenvironmentsinpython)
--   [Conclusion](#conclusion)
+-   [Python 介绍](#introduction-to-python)
+-   [如何安装 Python](#how-to-install-python)
+-   [如何运行 Python 程序](#how-to-run-python-programs)
+-   [Python 2 vs Python 3](#python2-vs-python3)
+-   [Python 基础](#python-basics)
+-   [Python 数据类型](#data-types-in-python)
+-   [Python 运算符](#operators)
+-   [Python 三元运算符](#the-ternary-operator-in-python)
+-   [Python 字符串](#strings-in-python)
+-   [Python 布尔值](#booleans-in-python)
+-   [Python 数字](#numbers-in-python)
+-   [Python 常量](#constants-in-python)
+-   [Python 枚举](#enums-in-python)
+-   [Python 用户输入](#user-input-in-python)
+-   [Python 控制语句](#control-statements-in-python)
+-   [Python 列表](#lists-in-python)
+-   [Python 元组](#tuples-in-python)
+-   [Python 字典](#dictionaries-in-python)
+-   [Python 集合](#sets-in-python)
+-   [Python 函数](#functions-in-python)
+-   [Pytho 对象](#objects-in-python)
+-   [Python 循环](#loops-in-python)
+-   [Python 类](#classes-in-python)
+-   [Python 模块](#modules-in-python)
+-   [Python 标准库](#the-python-standard-library)
+-   [Python PEP8 风格指导](#the-pep8-python-style-guide)
+-   [Python 代码调试](#debugging-in-python)
+-   [Python 变量作用域](#variable-scope-in-python)
+-   [Python 接收从命令行传入的参数](#how-to-accept-arguments-from-the-command-line-in-python)
+-   [Python 的 Lambda 函数](#lambda-functions-in-python)
+-   [Python 递归](#recursion-in-python)
+-   [Python 嵌套函数](#nested-functions-in-python)
+-   [Python 闭包](#closures-in-python)
+-   [Python 装饰器](#decorators-in-python)
+-   [Python 文档字符串](#docstrings-in-python)
+-   [Python 反射](#introspection-in-python)
+-   [Python 注解](#annotations-in-python)
+-   [Python 异常](#exceptions-in-python)
+-   [Python 中 with 语句](#the-with-statement-in-python)
+-   [Python 如何使用 pip 安装第三方包](#how-to-install-3rd-party-packages-in-python-using-pip)
+-   [Python 列表推导式](#list-comprehensions-in-python)
+-   [Python 多态](#polymorphism-in-python)
+-   [Python 运算符重载](#operator-overloading-in-python)
+-   [Python 虚拟环境](#virtual-environments-in-python)
+-   [总结](#conclusion)
 
-## Introduction to Python
+<h2 id="introduction-to-python">Python介绍</h2>
 
-Python is literally eating the programming world. It is growing in popularity and usage in ways that are pretty much unprecedented in the history of computers.
+Python 正在逐步“占领”编程世界。它的受欢迎度和使用度正在以计算机历史中前所未有的方式实现增长。
 
-Python excels in a wide variety of scenarios – **Shell scripting**, **task automation**, and **Web development** are just some basic examples.
+Python 在各种应用场景下都表现出色——**Shell 脚本**、**自动化的任务**和**Web 开发**只是其基本的应用。
 
-Python is the language of choice for **data analysis** and **machine learning**, but it can also adapt to create games and work with embedded devices.
+Python 是做**数据分析**和**机器学习**的首选语言，但是它也可以用来做游戏或者在嵌入式设备上工作。
 
-Most importantly, it's the language of choice for introductory **computer science courses** in universities all around the world.
+最重要的是，Python 是世界上多所大学介绍**计算机科学课程**时选择的编程语言。
 
-Many students learn Python as their first programming language. Many are learning it right now, and many more will learn it in the future. And for many of them, Python will be the only programming language they need.
+许多学生选择 Python 作为自己的第一门编程语言来学习。很多人正在学习 Python，将来还会有更多人学习它。并且对于学习者中的大部分人来说，Python 将是他们唯一需要的编程语言。
 
-Thanks to this unique position, Python is likely going to grow even more in the future.
+基于其独特的情况，Python 在未来很有可能会更快地增长。
 
-The language is simple, expressive, and it's quite straightforward.
+Python 这门编程语言的特点是简单易上手，表示丰富，非常直接，易于理解。
 
-The ecosystem is huge. There seems to be a library for everything you can imagine.
+Python 的生态系统非常庞大，可能需要一个图书馆才能容纳你所想象到的一切。
 
-Python is a high-level programming language suitable for beginners thanks to its intuitive syntax, its huge community, and its vibrant ecosystem.
+因为其直观的语法、庞大的社区和充满活力的生态系统，Python 是一门适合编程初学者的高级编程语言。
 
-It is also appreciated by professionals across many different fields.
+Python 也受到不同领域的专家赞赏。
 
-Technically speaking Python is an interpreted language that does not have an intermediate compilation phase like a compiled language, for example C or Java.
+从技术上讲，Python 是一种解释型语言，它不像编译型语言（例如 C 或 Java）那样具有中间编译阶段。
 
-And like many interpreted languages, it is dynamically typed. This means that you do not have to indicate the types of the variables you use, and variables are not tied to a specific type.
+和许多解释型语言一样，Python 是动态类型的，这意味着您不必声明所使用的变量的类型，并且变量不必为特定类型。
 
-This has pros and cons. In particular, you write programs faster, but on the other hand you have less help from the tools to prevent possible bugs. This means that you will find out about certain issues only by executing the program at runtime.
+这有利有弊。特别是，您编写程序的速度会更快，但另一方面，您从工具中获得防止出现可能错误的帮助会较少。这意味着您只有在执行程序时才能发现某些问题。
 
-Python supports a wide variety of different programming paradigms, including procedural programming, object oriented programming, and functional programming. It's flexible enough to adapt to a lot of different needs.
+Python 支持多种编程范式，包括面向过程编程、面向对象编程和函数式编程。它足够灵活，可以适应不同的需求。
 
-Created in 1991 by Guido van Rossum, it's been rising in popularity - especially in the past 5 years, as this Google Trends infographic shows:
+自从 Python 由 Guido van Rossum 于 1991 年创建后，它便越来越受欢迎——尤其是在过去 5 年中，正如这张 Google 趋势信息图所示：
 
 ![Screen-Shot-2020-11-09-at-19.22.38](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-09-at-19.22.38.png)
 
-Starting with Python is very easy. All you need is to install the official package from python.org, for Windows, macOS or Linux, and you're ready to go.
+开始 Python 编程非常容易。您只需从[python.org](https://www.python.org/)选择适用于 Windows、macOS 或 Linux 的官方软件包安装，然后就可以开始使用 Python 了。
 
-If you are new to programming, in the following posts I will guide you to go from zero to becoming a Python programmer.
+如果您是编程新手，我将会在接下来的内容中引导您从零开始成为一名 Python 程序员。
 
-And even if you are currently a programmer who specializes in another language, Python is a language worth knowing because I think it's only going to keep growing from here.
+即使您目前是一名专门研究另一种编程语言的程序员，Python 也值得您了解，因为我认为它只会继续发展壮大。
 
-Lower level languages like C++ and Rust might be great for expert programmers, but they're daunting to begin with, and they take a long time to master.
+像 C++和 Rust 这样相对于 Python 来说更“低级”的语言，对于专业程序员来说可能很棒，但它们从一开始就令人生畏，而且需要很长时间才能掌握。
 
-Python, on the other hand, is a programming language for everyone – students, people doing their day jobs with Excel, scientists, and more.
+另一方面，Python 是一种适用于任何人——学生、使用 Excel 完成日常工作的人、科学家等等——的编程语言。
 
-**It's the language everyone interested in coding should learn first**.
+**这是每个对编程感兴趣的人都应该首先学习的语言**。
 
-## How to Install Python
+<h2 id="how-to-install-python"> 如何安装Python </h2>
 
-Go to [https://www.python.org](https://www.python.org), choose the Downloads menu, choose your operating system, and a panel with a link to download the official package will appear:
+进入[https://www.python.org](https://www.python.org) ，选择下载菜单（Downloads），然后选择您的操作系统，将出现一个带有官方软件包下载链接的面板：
 
 ![Screen-Shot-2020-11-09-at-13.57.36-1](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-09-at-13.57.36-1.png)
 
-Make sure you follow the specific instructions for your operating system. On macOS you can find a detailed guide on [https://flaviocopes.com/python-installation-macos/](https://flaviocopes.com/python-installation-macos/).
+请确保遵循关于您电脑所用的操作系统的特定说明。在 macOS 上，您可以在[https://flaviocopes.com/python-installation-macos/](https://flaviocopes.com/python-installation-macos/) 上找到详细指南。
 
-## How to Run Python Programs
+<h2 id="how-to-run-python-programs">如何运行Python程序</h2>
 
-There are a few different ways to run Python programs.
+您可以使用几种不同的方式来运行 Python 程序。
 
-In particular, there's a distinction between using interactive prompts, where you type Python code and it's immediately executed, and saving a Python program into a file and executing that.
+特别地，使用交互式环境（输入 Python 代码后，便立即执行它），和将 Python 程序保存到文件中，然后再执行它，这二者之间存在区别。
 
-Let's start with interactive prompts.
+让我们从交互式环境开始。
 
-If you open your terminal and type `python`, you will see a screen like this:
+如果您打开终端并输入`python`，将在终端窗口上看到如下内容：
 
 ![Screen-Shot-2020-11-10-at-13.44.07](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-13.44.07.png)
 
-This is the Python REPL (Read-Evaluate-Print-Loop).
+这是 Python REPL（交互式解释器，即读取-评估-打印-循环）。
 
-Notice the `>>>` symbol, and the cursor after that. You can type any Python code here, and press the `enter` key to run it.
+注意`>>>`符号和之后的光标。，您可以在此处输入任何 Python 代码，然后按 `enter` 键运行它。
 
-For example try defining a new variable using
+例如尝试定义一个新变量
 
 ```python
 name = "Flavio"
 ```
 
-and then print its value, using `print()`:
+然后使用`print()`打印`name`的值：
 
 ```python
 print(name)
@@ -149,59 +149,59 @@ print(name)
 
 ![Screen-Shot-2020-11-10-at-14.11.57](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.11.57.png)
 
-> Note: in the REPL, you can also just type `name`, press the `enter` key and you'll get the value back. But in a program, you are not going to see any output if you do so - you need to use `print()` instead.
+> 请注意：在 REPL 中，您也可以只输入`name`，然后按 `enter` 键，您会看到`name`的值。但是在写到文件中的程序里，如果这样做，您将看不到任何输出——您需要使用 `print()` 代替这种写法。
 
-Any line of Python you write here is going to be executed immediately.
+您在此处编写的任何 Python 代码行都将立即执行。
 
-Type `quit()` to exit this Python REPL.
+输入`quit()`可以退出这个 Python REPL。
 
-You can access the same interactive prompt using the IDLE application that's installed by Python automatically:
+您可以使用 Python 自动安装的 IDLE 应用程序使用相同的交互式环境：
 
 ![Screen-Shot-2020-11-10-at-14.13.25](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.13.25.png)
 
-This might be more convenient for you because with the mouse you can move around and copy/paste more easily than with the terminal.
+这对您来说可能更方便，因为与使用终端相比，使用鼠标可以更轻松地四处移动和复制/粘贴。
 
-Those are the basics that come with Python by default. However I recommend that you install [IPython](https://ipython.org/), probably the best command line REPL application you can find.
+以上是 Python 默认附带的基础内容。不过我建议您安装[IPython](https://ipython.org/)，它可能是您能找到的最好的 Python 命令行 REPL 应用程序。
 
-Install it with
+使用下面的命令安装它
 
 ```sh
 pip install ipython
 ```
 
-Make sure the pip binaries are in your path, then run `ipython`:
+上面的命令需要确保 pip 可执行文件的路径在您的环境变量中，安装好之后运行`ipython`：
 
 ![Screen-Shot-2020-11-11-at-09.36.29](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-11-at-09.36.29.png)
 
-`ipython` is another interface that lets you work with a Python REPL, and provides some nice features like syntax highlighting, code completion, and much more.
+`ipython`是另一个让您使用 Python REPL 的接口，并提供了一些不错的功能，如语法突出显示、代码完成以及等等。
 
-The second way to run a Python program is to write your Python program code into a file, for example `program.py`:
+运行 Python 程序的第二种方法是将 Python 程序代码写入文件，例如`program.py`：
 
 ![Screen-Shot-2020-11-10-at-14.01.24](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.01.24.png)
 
-and then run it with `python program.py`:
+然后用`python program.py`运行它：
 
 ![Screen-Shot-2020-11-10-at-14.01.32](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.01.32.png)
 
-> Note that we save Python programs with the `.py` extension - that's a convention.
+> 请注意，我们约定使用`.py`扩展名保存 Python 程序文件。
 
-In this case the program is executed as a whole, not one line at a time. And that's typically how we run programs.
+在这种情况下，程序作为一个整体被执行，而不是一次运行一行。而这就是我们运行程序的典型方式。
 
-We use the REPL for quick prototyping and for learning.
+我们使用 REPL 进行快速的代码原型设计和学习。
 
-On Linux and macOS, a Python program can also be transformed into a shell script, by prepending all its content with a special line that indicates which executable to use to run it.
+在 Linux 和 macOS 上，也可以将 Python 程序文件转换为 shell 脚本，方法是在文件最前面加上一个特殊行，用来指示使用哪个可执行文件来运行它。
 
-On my system the Python executable is located in `/usr/bin/python3`, so I type `#!/usr/bin/python3` in the first line:
+在我的系统上，Python 解释器的路径是`/usr/bin/python3`，所以我在第一行输入`#!/usr/bin/python3`：
 
 ![Screen-Shot-2020-11-10-at-14.17.26](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.17.26.png)
 
-Then I can set execution permission on the file:
+然后我可以对文件设置执行权限：
 
 ```sh
 chmod u+x program.py
 ```
 
-and I can run the program with
+然后我可以使用下面的命令运行程序
 
 ```sh
 ./program.py
@@ -209,21 +209,21 @@ and I can run the program with
 
 ![Screen-Shot-2020-11-10-at-14.18.42](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.18.42.png)
 
-This is especially useful when you write scripts that interact with the terminal.
+这在您编写与终端交互的脚本时特别有用。
 
-We have many other ways to run Python programs.
+我们还有许多其它方式可以运行 Python 程序。
 
-One of them is using VS Code, and in particular the official Python extension from Microsoft:
+一种方法是使用 VS Code，尤其是 Microsoft 官方的 Python 扩展插件：
 
 ![Screen-Shot-2020-11-10-at-14.23.32](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.23.32.png)
 
-After installing this extension you will have Python code autocompletion and error checking, automatic formatting and code linting with `pylint`, and some special commands, including:
+安装好此扩展插件后，您将可以使用 Python 代码自动补全、语法错误检查、自动格式化和使用`pylint`进行代码检查，以及一些特殊命令，包括：
 
-**Python: Start REPL** to run the REPL in the integrated terminal:
+**Python: Start REPL**  用于在 VS Code 的集成终端中运行 REPL：
 
 ![Screen-Shot-2020-11-10-at-14.31.36](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.31.36.png)
 
-**Python: Run Python File in Terminal** to run the current file in the terminal:
+**Python: Run Python File in Terminal**  用于在终端中运行当前文件：
 
 ![Screen-Shot-2020-11-10-at-14.31.06](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.31.06.png)
 
@@ -231,67 +231,67 @@ After installing this extension you will have Python code autocompletion and err
 
 ![Screen-Shot-2020-11-10-at-14.30.02-1](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.30.02-1.png)
 
-and many more. Just open the command palette (View -> Command Palette, or Cmd-Shift-P) and type `python` to see all the Python-related commands:
+以及很多其它命令。只需打开命令面板（查看 -> 命令面板，或按下 Cmd+Shift+P）并输入`python`，即可查看所有与 Python 相关的命令：
 
 ![Screen-Shot-2020-11-10-at-14.30.02](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.30.02.png)
 
-Another way to easily run Python code is to use repl.it, a very nice website that provides a coding environment you can create and run your apps on, in any language, Python included:
+另一种轻松运行 Python 代码的方法是 repl.it，这是一个非常不错的网站，它提供了一个编程环境，您可以使用任何语言创建并运行程序，包括 Python：
 
 ![Screen-Shot-2020-11-10-at-14.33.58](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.33.58.png)
 
-Signup (it's free), then under "create a repl" click Python:
+使用这个网站要先注册（免费注册），然后在“create a repl”下单击 Python：
 
 ![Screen-Shot-2020-11-10-at-14.46.34](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.46.34.png)
 
-and you will be immediately shown an editor with a `main.py` file, ready to be filled with a lot of Python code:
+然后您将看到一个带有`main.py`文件的编辑器，这样就已经准备好了编写 Python 代码：
 
 ![Screen-Shot-2020-11-10-at-14.47.15](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.47.15.png)
 
-Once you have some code, click "Run" to run it on the right side of the window:
+一旦您写好一些代码后，单击“Run”就可以在窗口右侧运行它：
 
 ![Screen-Shot-2020-11-10-at-14.48.09](https://www.freecodecamp.org/news/content/images/2021/03/Screen-Shot-2020-11-10-at-14.48.09.png)
 
-I think repl.it is handy because:
+我认为 repl.it 很方便，因为：
 
--   you can easily share code just by sharing the link
--   multiple people can work on the same code
--   it can host long-running programs
--   you can install packages
--   it provides you a key-value database for more complex applications
+- 您只需分享链接即可轻松分享代码
+- 它允许多人处理相同的代码
+- 它可以托管长时间运行的程序
+- 您可以在上面安装第三方包
+- 它为您提供用于复杂应用程序的键值数据库
 
-## Python 2 vs Python 3
+<h2 id="python2-vs-python3">Python 2 vs Python 3</h2>
 
-One key topic we should address, right from the start, is the Python 2 vs Python 3 discussion.
+我们一开始就应该讨论的一个关键主题是 Python 2 与 Python 3。
 
-Python 3 was introduced in 2008, and it's been in development as the main Python version, while Python 2 continued being maintained with bug fixes and security patches until early 2020.
+Python 3 于 2008 年被推出，其后作为主要的 Python 版本一直在被持续开发，而 Python 2 则通过错误修复和安全补丁进行维护，直到 2020 年初。
 
-On that date, Python 2 support was discontinued.
+在那一天，对 Python 2 的支持停止。
 
-Many programs are still written using Python 2, and organizations still actively work on those, because the migration to Python 3 is not trivial and it would require a lot of work to upgrade those programs. And large and important migrations always introduce new bugs.
+许多程序仍然使用 Python 2 编写，并且组织仍在积极致力于这些程序，因为迁移到 Python 3 并非易事，升级这些程序需要大量工作。并且重要文件的大型迁移总是会引入新的 bug。
 
-But new code, unless you have to adhere to rules set by your organization that forces Python 2, should always be written in Python 3.
+但是对应新的代码程序，除非您必须遵守组织设置的强制使用 Python 2 的规则，否则应使用 Python 3 进行编写。
 
-> This book focuses on Python 3.
+> 本书重点介绍 Python 3。
 
-## Python Basics
+<h2 id="python-basics">Python 基础</h2>
 
-### Variables in Python
+### Python 中的变量
 
-We can create a new Python variable by assigning a value to a label, using the `=` assignment operator.
+我们可以通过使用赋值运算符`=`为“标签”赋值，从而创建一个新的 Python 变量。
 
-In this example we assign a string with the value "Roger" to the `name` label:
+在下面这个示例中，我们将字符串`"Roger"`分配给变量`name`：
 
 ```python
 name = "Roger"
 ```
 
-Here's an example with a number:
+下面是一个给变量`age`赋值为数字的示例：
 
 ```python
 age = 8
 ```
 
-A variable name can be composed of characters, numbers, and the `_` underscore character. It can't start with a number. These are all **valid** variable names:
+一个变量的名字可以由字符、数字和`_`下划线字符组成。变量名不能以数字开头。以下都是**有效的**变量名：
 
 ```python
 name1
@@ -302,7 +302,7 @@ my_name
 _name
 ```
 
-These are **invalid** variable names:
+以下都是**无效的**变量名：
 
 ```python
 123
@@ -310,212 +310,212 @@ test!
 name%
 ```
 
-Other than that, anything is valid unless it's a Python **keyword**. There are some keywords like `for`, `if`, `while`, `import` and more.
+除此之外，任何输入都是有效的变量名，除非它是 Python 的**关键字**，如`for`、`if`、`while`、`import`等就是关键字。
 
-There's no need to memorize them, as Python will alert you if you use one of those as a variable, and you will gradually recognize them as part of the Python programming language syntax.
+无需记住它们，因为如果您使用其中任何一个关键字作为变量名，Python 都会提醒您，并且您会逐渐视它们为 Python 语法的一部分。
 
-### Expressions and statements in Python
+### Python 表达式和语句
 
-We can _expression_ any sort of code that returns a value. For example
+我们可以_构造_任意一个有返回值的表达式代码，例如
 
 ```python
 1 + 1
 "Roger"
 ```
 
-A statement, on the other hand, is an operation on a value. For example these are 2 statements:
+另一方面，语句是对值的操作。例如，下面是 2 个语句：
 
 ```python
 name = "Roger"
 print(name)
 ```
 
-A program is formed by a series of statements. Each statement is put on its own line, but you can use a semicolon to have more than one statement on a single line:
+程序由一系列语句组成。每个语句占一行，但您可以使用分号在一行中包含多个语句：
 
 ```python
 name = "Roger"; print(name)
 ```
 
-### Comments
+### 注释
 
-In a Python program, everything after a hash mark is ignored, and considered a comment:
+在 Python 程序中，井号之后的所有内容都被忽略，并被视为注释：
 
 ```python
 #this is a commented line
 
-name = "Roger" # this is an inline comment
+name = "Roger"  # this is an inline comment
 ```
 
-### Indentation in Python
+### Python 中的缩进
 
-Indentation in Python is meaningful.
+Python 中的缩进是有意义的。
 
-You cannot indent randomly like this:
+您不能像这样随意缩进：
 
 ```python
 name = "Flavio"
     print(name)
 ```
 
-Some other languages do not have meaningful whitespace, but in Python, indentation matters.
+对于其它一些语言，空格是没有意义的，但是在 Python 中，缩进很重要。
 
-In this case, if you try to run this program you would get a `IndentationError: unexpected indent` error, because indenting has a special meaning.
+在上面这种情况下，如果您尝试运行这个程序，您会得到一个`IndentationError: unexpected indent`错误，因为缩进有特殊的含义。
 
-Everything indented belongs to a block, like a control statement or conditional block, or a function or class body. We'll see more about those later on.
+一个缩进中的所有内容属于一个块，如控制语句块或条件块，函数或类主体。 我们稍后会看到更多关于这些内容的解释。
 
-## Data Types in Python
+<h2 id="data-types-in-python">Python数据类型</h2>
 
-Python has several built-in types.
+Python 有几种内置类型。
 
-If you create the `name` variable assigning it the value "Roger", automatically this variable now represents a **String** data type.
+如果您创建`name`变量并为其分配值"Roger"，则此变量现在自动表示**String**数据类型。
 
 ```python
 name = "Roger"
 ```
 
-You can check the type of a variable by using the `type()` function, passing the variable as an argument, and then comparing the result to `str`:
+您可以使用`type()`函数检查变量的类型，即将变量作为参数，然后将函数返回结果与`str`进行比较：
 
 ```python
 name = "Roger"
-type(name) == str #True
+type(name) == str  # True
 ```
 
-Or using `isinstance()`:
+或者使用`isinstance()`：
 
 ```python
 name = "Roger"
-isinstance(name, str) #True
+isinstance(name, str)  # True
 ```
 
-> Notice that to see the `True` value in Python, outside of a REPL, you need to wrap this code inside `print()`, but for clarity I avoid using it.
+> 请注意，要在 REPL 之外查看`True`值，您需要将此代码包装在`print()`中，但为了清楚起见，我避免使用它。
 
-We used the `str` class here, but the same works for other data types.
+我们在这里使用了`str`，但这种方法同样适用于其它数据类型。
 
-First, we have numbers. Integer numbers are represented using the `int` class. Floating point numbers (fractions) are of type `float`:
+首先，我们有数字。整数使用`int`表示，浮点数（分数）的类型为`float`：
 
 ```python
 age = 1
-type(age) == int #True
+type(age) == int  # True
 ```
 
 ```python
 fraction = 0.1
-type(fraction) == float #True
+type(fraction) == float  # True
 ```
 
-You saw how to create a type from a value literal, like this:
+您已经了解了如何从字面值创建某一类型的变量，如下所示：
 
 ```python
 name = "Flavio"
 age = 20
 ```
 
-Python automatically detects the type from the value type.
+Python 自动从变量值检测数据类型。
 
-You can also create a variable of a specific type by using the class constructor, passing a value literal or a variable name:
+您还可以通过向类构造器传递字面值或变量名，来创建特定类型的变量：
 
 ```python
 name = str("Flavio")
 anotherName = str(name)
 ```
 
-You can also convert from one type to another by using the class constructor. Python will try to determine the correct value, for example extracting a number from a string:
+您还可以使用类构造器，将一种类型转换为另一种类型。Python 将尝试转换为正确的值，例如从字符串中提取数字：
 
 ```python
 age = int("20")
-print(age) #20
+print(age)  # 20
 
 fraction = 0.1
 intFraction = int(fraction)
-print(intFraction) #0
+print(intFraction)  # 0
 ```
 
-This is called **casting**. Of course this conversion might not always work depending on the value passed. If you write `test` instead of `20` in the above string, you'll get a `ValueError: invalid literal for int() with base 10: 'test'` error.
+这称为**casting**。当然，这种转换并不总是有效，具体取决于传递的值。如果您在上面的字符串中写了`test`而不是`20`，您会得到一个`ValueError: invalid literal for int() with base 10: 'test'`错误。
 
-Those are just the basics of types. We have a lot more types in Python:
+这些只是基础的数据类型。Python 中有更多其它数据类型：
 
--   `complex` for complex numbers
--   `bool` for booleans
--   `list` for lists
--   `tuple` for tuples
--   `range` for ranges
--   `dict` for dictionaries
--   `set` for sets
+-   `complex` 复数
+-   `bool` 布尔值
+-   `list` 列表
+-   `tuple` 元组
+-   `range` 范围
+-   `dict` 字典
+-   `set` 集合
 
-and more!
+以及更多！
 
-We'll explore them all soon.
+我们很快就会探索它们。
 
-## Operators in Python
+<h2 id="operators">Python运算符</h2>
 
-Python operators are symbols that we use to run operations upon values and variables.
+我们使用 Python 运算符来对值和变量进行运算操作。
 
-We can divide operators based on the kind of operation they perform:
+我们可以根据它们执行操作的类型来划分运算符：
 
--   assignment operator
--   arithmetic operators
--   comparison operators
--   logical operators
--   bitwise operators
+-   赋值运算符
+-   算术运算符
+-   比较运算符
+-   逻辑运算符
+-   位运算符
 
-plus some interesting ones like `is` and `in`.
+再加上一些其它有趣的运算符，比如`is`和`in`。
 
-### Assignment operator in Python
+### Python 赋值运算符
 
-The assignment operator is used to assign a value to a variable:
+赋值运算符用于为变量赋值：
 
 ```python
 age = 8
 ```
 
-Or to assign a variable value to another variable:
+或者将变量的值分配给另一个变量：
 
 ```python
 age = 8
 anotherVariable = age
 ```
 
-Since Python 3.8, the `:=` _walrus operator_ is used to assign a value to a variable as part of another operation. For example inside an `if` or in the conditional part of a loop. More on that later.
+从 Python 3.8 开始，可以使用_海象运算符_`:=`为变量赋值，同时该运算可作为另一个操作的一部分。例如在`if`或循环的条件部分。这个稍后再谈。
 
-### Arithmetic operators in Python
+### Python 算术运算符
 
-Python has a number of arithmetic operators: `+`, `-`, `*`, `/` (division), `%` (remainder), `**` (exponentiation) and `//` (floor division):
-
-```python
-1 + 1 #2
-2 - 1 #1
-2 * 2 #4
-4 / 2 #2
-4 % 3 #1
-4 ** 2 #16
-4 // 2 #2
-```
-
-> Note that you don't need a space between the operands, but it's good for readability.
-
-`-` also works as a unary minus operator:
+Python 有许多算术运算符：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和 `//`（向下取整除法） ：
 
 ```python
-print(-4) #-4
+1 + 1  # 2
+2 - 1  # 1
+2 * 2  # 4
+4 / 2  # 2
+4 % 3  # 1
+4 ** 2  # 16
+4 // 2  # 2
 ```
 
-`+` is also used to concatenate String values:
+> 请注意，操作数之间不需要空格，但加上空格有利于可读性。
+
+`-`也可用作一元运算符表示负号：
+
+```python
+print(-4)  # -4
+```
+
+`+`也可用于连接字符串：
 
 ```python
 "Roger" + " is a good dog"
-#Roger is a good dog
+# Roger is a good dog
 ```
 
-We can combine the assignment operator with arithmetic operators:
+我们可以将赋值运算符与算术运算符结合起来：
 
 -   `+=`
 -   `-=`
 -   `*=`
 -   `/=`
 -   `%=`
--   ..and so on
+-   以及等等
 
-Example:
+例子：
 
 ```python
 age = 8
@@ -523,9 +523,9 @@ age += 1
 # age is now 9
 ```
 
-### Comparison operators in Python
+### Python 比较运算符
 
-Python defines a few comparison operators:
+Python 定义了一些比较运算符：
 
 -   `==`
 -   `!=`
@@ -534,90 +534,90 @@ Python defines a few comparison operators:
 -   `>=`
 -   `<=`
 
-You can use those operators to get a boolean value (`True` or `False`) depending on the result:
+您可以使用这些运算符获取根据比较结果得到的布尔值（`True`或`False`）：
 
 ```python
 a = 1
 b = 2
 
-a == b #False
-a != b #True
-a > b #False
-a <= b #True
+a == b  # False
+a != b  # True
+a > b  # False
+a <= b  # True
 ```
 
-### Boolean operators in Python
+### Python 布尔运算符
 
-Python gives us the following boolean operators:
+Python 为我们提供了以下布尔运算符：
 
 -   `not`
 -   `and`
 -   `or`
 
-When working with `True` or `False` attributes, those work like logical AND, OR and NOT, and are often used in the `if` conditional expression evaluation:
+当使用`True`或`False`属性时，它们的作用类似于逻辑与、逻辑或和逻辑非，并且经常用于 `if` 条件表达式判断：
 
 ```python
 condition1 = True
 condition2 = False
 
-not condition1 #False
-condition1 and condition2 #False
-condition1 or condition2 #True
+not condition1  # False
+condition1 and condition2  # False
+condition1 or condition2  # True
 ```
 
-Otherwise, pay attention to a possible source of confusion:
+但是，请注意可能的混淆：
 
-`or` used in an expression returns the value of the first operand that is not a falsy value (`False`, `0`, `''`, `[]`..). Otherwise it returns the last operand.
+表达式中使用`or`，则表达式的结果是第一个为非假值（假值：`False`、`0`、`''`、`[]`..）的操作数，否则返回最后一个操作数作为表达式的值。
 
 ```python
-print(0 or 1) ## 1
-print(False or 'hey') ## 'hey'
-print('hi' or 'hey') ## 'hi'
-print([] or False) ## 'False'
-print(False or []) ## '[]'
+print(0 or 1)  # 1
+print(False or 'hey')  # 'hey'
+print('hi' or 'hey')  # 'hi'
+print([] or False)  # 'False'
+print(False or [])  # '[]'
 ```
 
-The Python docs describe it as `if x is false, then y, else x`.
+Python 文档将其（x or y）描述为`如果x为假，则为y，否则为x`。（译者：`or`碰到真值就停，没有真值就走到最后）
 
-`and` only evaluates the second argument if the first one is true. So if the first argument is falsy (`False`, `0`, `''`, `[]`..), it returns that argument. Otherwise it evaluates the second argument:
+`and`运算操作仅在第一个操作数为真时，才计算第二个操作数。因此，如果第一个操作数是假值（假值：`False`、`0`、`''`、`[]`..），它会返回那个操作数。否则，它就会计算第二个操作数：
 
 ```python
-print(0 and 1) ## 0
-print(1 and 0) ## 0
-print(False and 'hey') ## False
-print('hi' and 'hey') ## 'hey'
-print([] and False ) ## []
-print(False and [] ) ## False
+print(0 and 1)  # 0
+print(1 and 0)  # 0
+print(False and 'hey')  # False
+print('hi' and 'hey')  # 'hey'
+print([] and False )  # []
+print(False and [] )  # False
 ```
 
-The Python docs describe it as `if x is false, then x, else y`.
+Python 文档将其（x and y）描述为`如果x为假，则为x，否则为y`。（译者：`or`碰到假值就停，没有假值就走到最后）
 
-### Bitwise operators in Python
+### Python 位运算符
 
-Some operators are used to work on bits and binary numbers:
+一些运算符用于处理位和二进制数：
 
--   `&` performs binary AND
--   `|` performs binary OR
--   `^` performs a binary XOR operation
--   `~` performs a binary NOT operation
--   `<<` shift left operation
--   `>>` shift right operation
+-   `&` 执行二进制与操作
+-   `|` 执行二进制或操作
+-   `^` 执行二进制异或操作
+-   `~` 执行二进制非操作
+-   `<<` 二进制左移操作
+-   `>>` 二进制右移操作
 
-Bitwise operators are rarely used, only in very specific situations, but they are worth mentioning.
+一般很少使用位运算符，仅在非常特定的情况下使用，但是值得一提。
 
-### `is` and `in` in Python
+### Python 中的`is`和`in`
 
-`is` is called the **identity operator**. It is used to compare two objects and returns true if both are the same object. More on objects later.
+`is`被称为**identity operator**（验证运算符），用于比较两个对象，如果两者是同一个对象，则返回 true。稍后将详细介绍对象。
 
-`in` is called the **membership operator**. Is used to tell if a value is contained in a list, or another sequence. More on lists and other sequences later.
+`in`被称为**membership operator**（成员运算符），用于判断一个值是否包含在一个列表或序列中。稍后将详细介绍列表和其他序列数据类型。
 
-## The Ternary Operator in Python
+<h2 id="the-ternary-operator-in-python">Python三元运算符</h2>
 
-The ternary operator in Python allows you to quickly define a conditional.
+使用 Python 三元运算符，您可以快速定义条件语句。
 
-Let's say you have a function that compares an `age` variable to the `18` value, and returns True or False depending on the result.
+假设您有一个函数，它将`age`变量与`18`进行比较，并根据结果返回 True 或 False。
 
-Instead of writing:
+可以不这样写：
 
 ```python
 def is_adult(age):
@@ -627,62 +627,63 @@ def is_adult(age):
         return False
 ```
 
-You can implement it with the ternary operator in this way:
+您可以通过使用三元运算符这种方式来实现它：
+（译者：感觉这个例子不太好，因为这里写成`return age > 18`会更好，换成这个例子`return "age大于18" if age > 18 else "age小于等于18"`会更好理解一些）
 
 ```python
 def is_adult(age):
     return True if age > 18 else False
 ```
 
-First you define the result if the condition is True, then you evaluate the condition, then you define the result if the condition is false:
+首先定义条件为真的结果，然后判断条件，最后定义条件为假的结果：
 
 ```python
-<result_if_true> if <condition> else <result_if_false>
+<条件为真得到的结果> if <条件表达式> else <条件为假得到的结果>
 ```
 
-## Strings in Python
+<h2 id="strings-in-python">Python字符串</h2>
 
-A string in Python is a series of characters enclosed in quotes or double quotes:
+Python 中的字符串是用单引号或双引号括起来的一串字符：
 
 ```python
 "Roger"
 'Roger'
 ```
 
-You can assign a string value to a variable:
+您可以将字符串赋值给变量：
 
 ```python
 name = "Roger"
 ```
 
-You can concatenate two strings using the `+` operator:
+您可以使用`+`运算符连接两个字符串：
 
 ```python
 phrase = "Roger" + " is a good dog"
 ```
 
-You can append to a string using `+=`:
+您也可以使用`+=`将一个字符串添加到另一个字符串后面：
 
 ```python
 name = "Roger"
 name += " is a good dog"
 
-print(name) #Roger is a good dog
+print(name)  # Roger is a good dog
 ```
 
-You can convert a number to a string using the `str` class constructor:
+您可以使用`str`类构造函数将数字转换为字符串：
 
 ```python
-str(8) #"8"
+str(8)  # "8"
 ```
 
-This is essential to concatenate a number to a string:
+这对于连接数字和字符串来说很重要：
 
 ```python
-print("Roger is " + str(8) + " years old") #Roger is 8 years old
+print("Roger is " + str(8) + " years old")  # Roger is 8 years old
 ```
 
-A string can be multi-line when defined with a special syntax, enclosing the string in a set of 3 quotes:
+当使用特殊语法定义时，字符串可以是多行的，将字符串括在一组 3 个引号中：
 
 ```python
 print("""Roger is
@@ -692,7 +693,7 @@ print("""Roger is
 years old
 """)
 
-#double quotes, or single quotes
+# double quotes, or single quotes
 
 print('''
 Roger is
@@ -703,103 +704,103 @@ years old
 ''')
 ```
 
-A string has a set of built-in methods, like:
+字符串具有一组内置方法，例如：
 
--   `isalpha()` to check if a string contains only characters and is not empty
--   `isalnum()` to check if a string contains characters or digits and is not empty
--   `isdecimal()` to check if a string contains digits and is not empty
--   `lower()` to get a lowercase version of a string
--   `islower()` to check if a string is lowercase
--   `upper()` to get an uppercase version of a string
--   `isupper()` to check if a string is uppercase
--   `title()` to get a capitalized version of a string
--   `startsswith()` to check if the string starts with a specific substring
--   `endswith()` to check if the string ends with a specific substring
--   `replace()` to replace a part of a string
--   `split()` to split a string on a specific character separator
--   `strip()` to trim the whitespace from a string
--   `join()` to append new letters to a string
--   `find()` to find the position of a substring
+-   `isalpha()` 检查字符串是否只包含字母字符，并且不为空字符串
+-   `isalnum()` 检查字符串是否只包含字母字符或数字字符，并且不为空
+-   `isdecimal()` 检查字符串是否只包含十进制字符，并且不为空
+-   `lower()` 获取字符串的小写版本
+-   `islower()` 检查字符串是否全为小写
+-   `upper()` 获取字符串的大写版本
+-   `isupper()` 检查字符串是否全为大写
+-   `title()` 获取字符串的“标题化”版本（译者：所有单词首字母大写）
+-   `startsswith()` 检查字符串是否以特定子字符串开头
+-   `endswith()` 检查字符串是否以特定子字符串结尾
+-   `replace()` 替换字符串的一部分
+-   `split()` 按特定分隔符拆分字符串
+-   `strip()` 修剪字符串中的空格
+-   `join()` 将字符串添加到另一个字符串（译者：实际上是将字符串添加到另一个可迭代对象生成的字符串中）
+-   `find()` 查找特定子字符串在字符串中的位置
 
-and many more.
+以及其它等等。
 
-None of those methods alter the original string. They return a new, modified string instead. For example:
-
-```python
-name = "Roger"
-print(name.lower()) #"roger"
-print(name) #"Roger"
-```
-
-You can use some global functions to work with strings, too.
-
-In particular I think of `len()`, which gives you the length of a string:
+这些方法都不会改变原始字符串，它们将会返回一个新的、修改后的字符串。例如：
 
 ```python
 name = "Roger"
-print(len(name)) #5
+print(name.lower())  # "roger"
+print(name)  # "Roger"
 ```
 
-The `in` operator lets you check if a string contains a substring:
+您也可以使用一些全局函数来处理字符串。
+
+这里我特别想到了`len()`，它返回给您指定字符串的长度：
 
 ```python
 name = "Roger"
-print("ger" in name) #True
+print(len(name))  # 5
 ```
 
-Escaping is a way to add special characters into a string.
+`in`运算符可以让您检查字符串是否包含某个子字符串：
 
-For example, how do you add a double quote into a string that's wrapped into double quotes?
+```python
+name = "Roger"
+print("ger" in name)  # True
+```
+
+转义是一种将特殊字符添加到字符串中的方法。
+
+例如，如何将双引号添加到被双引号包裹的字符串中？
 
 ```python
 name = "Roger"
 ```
 
-`"Ro"Ger"` will not work, as Python will think the string ends at `"Ro"`.
+`"Ro"Ger"`将不起作用，因为 Python 会认为字符串以`"Ro"`结尾。
 
-The way to go is to escape the double quote inside the string, with the `\` backslash character:
+方法是使用`\`反斜杠字符转义字符串内的双引号：
 
 ```python
 name = "Ro\"ger"
 ```
 
-This applies to single quotes too `\'`, and for special formatting characters like `\t` for tab, `\n` for new line and `\\` for the backslash.
+这也适用于单引号`\'`，以及其它特殊格式字符，如制表符`\t`、换行符`\n`和反斜杠`\\`。
 
-Given a string, you can get its characters using square brackets to get a specific item, given its index, starting from 0:
-
-```python
-name = "Roger"
-name[0] #'R'
-name[1] #'o'
-name[2] #'g'
-```
-
-Using a negative number will start counting from the end:
+给定一个字符串，并给定一个索引（从 0 开始），您就可以使用方括号获取指定位置上的字符，从而获取特定内容：
 
 ```python
 name = "Roger"
-name[-1] #"r"
+name[0]  # 'R'
+name[1]  # 'o'
+name[2]  # 'g'
 ```
 
-You can also use a range, using what we call **slicing**:
+使用负数将从末尾开始计数：
 
 ```python
 name = "Roger"
-name[0:2] #"Ro"
-name[:2] #"Ro"
-name[2:] #"ger"
+name[-1]  # "r"
 ```
 
-## Booleans in Python
+您还可以使用范围，即使用我们所说的**切片**：
 
-Python provides the `bool` type, which can have two values: `True` and `False` (capitalized).
+```python
+name = "Roger"
+name[0:2]  # "Ro"
+name[:2]  # "Ro"
+name[2:]  # "ger"
+```
+
+<h2 id="booleans-in-python">Python布尔值</h2>
+
+Python 提供了`bool`类型，它可以有两个值：`True` 和 `False`（首字母大写）。
 
 ```python
 done = False
 done = True
 ```
 
-Booleans are especially useful with conditional control structures like `if` statements:
+布尔值对于条件控制结构特别有用，例如`if`语句：
 
 ```python
 done = True
@@ -810,179 +811,179 @@ else:
     # run some other code
 ```
 
-When evaluating a value for `True` or `False`, if the value is not a `bool` we have some rules depending on the type we're checking:
+在判断值为`True`或`False`时，如果该值不是`bool`布尔类型，我们有一些取决于我们所检查值类型的规则：
 
--   numbers are always `True` except for the number `0`
--   strings are `False` only when empty
--   lists, tuples, sets, and dictionaries are `False` only when empty
+-   数字除`0`以外，始终为`True`
+-   字符串仅在是空字符串时为`False`
+-   列表、元组、集合和字典仅在其为空时为`False`
 
-You can check if a value is a boolean in this way:
-
-```python
-done = True
-type(done) == bool #True
-```
-
-Or using `isinstance()`, passing 2 arguments: the variable, and the `bool` class:
+您可以通过以下方式检查值是否为布尔值：
 
 ```python
 done = True
-isinstance(done, bool) #True
+type(done) == bool  # True
 ```
 
-The global `any()` function is also very useful when working with booleans, as it returns `True` if any of the values of the iterable (list, for example) passed as argument are `True`:
+或者使用`isinstance()`，需要传递 2 个参数：变量和`bool`类：
+
+```python
+done = True
+isinstance(done, bool)  # True
+```
+
+全局函数`any()`在处理布尔值时也非常有用，当作为参数传递的可迭代对象（如列表）中的任意一个值是 `True`时，它就会返回 `True`（译者：类似`or`）：
 
 ```python
 book_1_read = True
 book_2_read = False
 
-read_any_book = any([book_1_read, book_2_read])
+read_any_book = any([book_1_read, book_2_read])  # True
 ```
 
-The global `all()` function is same, but returns `True` if all of the values passed to it are `True`:
+全局函数`all()`相类似，但是是当传递给它的所有值都是`True`时，才返回 `True`（译者：类似`and`）：
 
 ```python
 ingredients_purchased = True
 meal_cooked = False
 
-ready_to_serve = all([ingredients_purchased, meal_cooked])
+ready_to_serve = all([ingredients_purchased, meal_cooked])  # False
 ```
 
-## Numbers in Python
+<h2 id="numbers-in-python">Python数字</h2>
 
-Numbers in Python can be of 3 types: `int`, `float` and `complex`.
+Python 中的数字有 3 种类型：`int`、`float`和`complex`。
 
-### Integer numbers in Python
+### Python 整数
 
-Integer numbers are represented using the `int` class. You can define an integer using a value literal:
+整数使用`int`表示，您可以使用字面值定义整数：
 
 ```python
 age = 8
 ```
 
-You can also define an integer number using the `int()` constructor:
+您还可以使用`int()`构造函数定义一个整数：
 
 ```python
 age = int(8)
 ```
 
-To check if a variable is of type `int`, you can use the `type()` global function:
+您可以使用全局函数`type()`检查变量是否为`int`类型：
 
 ```python
-type(age) == int #True
+type(age) == int  # True
 ```
 
-### Floating point numbers in Python
+### Python 浮点数
 
-Floating point numbers (fractions) are of type `float`. You can define an integer using a value literal:
+浮点数（分数）的类型为`float`，您可以使用字面值定义浮点数：
 
 ```python
 fraction = 0.1
 ```
 
-Or using the `float()` constructor:
+或者使用`float()`构造函数：
 
 ```python
 fraction = float(0.1)
 ```
 
-To check if a variable is of type `float`, you can use the `type()` global function:
+您可以使用全局函数`type()`检查变量是否为`float`类型：
 
 ```python
-type(fraction) == float #True
+type(fraction) == float  # True
 ```
 
-### Complex numbers in Python
+### Python 复数
 
-Complex numbers are of type `complex`.
+复数属于`complex`类型。
 
-You can define them using a value literal:
+您可以使用字面值定义它们：
 
 ```python
 complexNumber = 2+3j
 ```
 
-or using the `complex()` constructor:
+或者使用`complex()`构造函数：
 
 ```python
 complexNumber = complex(2, 3)
 ```
 
-Once you have a complex number, you can get its real and imaginary part:
+一旦您定义了一个复数，您就可以得到它的实部和虚部：
 
 ```python
-complexNumber.real #2.0
-complexNumber.imag #3.0
+complexNumber.real  # 2.0
+complexNumber.imag  # 3.0
 ```
 
-Again, to check if a variable is of type `complex`, you can use the `type()` global function:
+同样，您可以使用全局函数`type()`检查变量是否为`complex`类型：
 
 ```python
 type(complexNumber) == complex #True
 ```
 
-### Arithmetic operations on numbers in Python
+### Python 中数字的算术运算
 
-You can perform arithmetic operations on numbers, using the arithmetic operators: `+`, `-`, `*`, `/` (division), `%` (remainder), `**` (exponentiation) and `//` (floor division):
+您可以使用算术运算符对数字执行算术运算：`+`、`-`、`*`、`/`（除法）、`%`（取余）、`**`（求幂）和`//`（向下取整除法）：
 
 ```python
-1 + 1 #2
-2 - 1 #1
-2 * 2 #4
-4 / 2 #2
-4 % 3 #1
-4 ** 2 #16
-4 // 2 #2
+1 + 1  # 2
+2 - 1  # 1
+2 * 2  # 4
+4 / 2  # 2
+4 % 3  # 1
+4 ** 2  # 16
+4 // 2  # 2
 ```
 
-and you can use the compound assignment operators
+您还可以使用复合赋值运算符
 
 -   `+=`
 -   `-=`
 -   `*=`
 -   `/=`
 -   `%=`
--   ..and so on
+-   其它等等
 
-to quickly perform operations on variables, too:
+这样可以快速对变量执行运算操作：
 
 ```python
 age = 8
-age += 1
+age += 1  # age: 9
 ```
 
-### Built-in Functions in Python
+### Python 内置函数
 
-There are 2 built-in functions that help with numbers:
+有 2 个内置函数可以帮助处理数字：
 
-`abs()` returns the absolute value of a number.
+`abs()`返回一个数字的绝对值。
 
-`round()` given a number, returns its value rounded to the nearest integer:
+给定一个数字，`round()`返回四舍五入到最接近整数的值：
 
 ```python
-round(0.12) #0
+round(0.12)  # 0
 ```
 
-You can specify a second parameter to set the decimal point's precision:
+您可以指定第二个参数来设置舍入到小数点的精度：
 
 ```python
-round(0.12, 1) #0.1
+round(0.12, 1)  # 0.1
 ```
 
-Several other math utility functions and constants are provided by the Python standard library:
+Python 标准库提供了其它几个数学实用函数和常量：
 
--   the `math` package provides general math functions and constants
--   the `cmath` package provides utilities to work with complex numbers.
--   the `decimal` package provides utilities to work with decimals and floating point numbers.
--   the `fractions` package provides utilities to work with rational numbers.
+-   `math`包提供通用的数学函数和常量
+-   `cmath`包提供了处理复数的方法
+-   `decimal`包提供了处理小数和浮点数的方法
+-   `fractions`包提供了处理有理数的方法
 
-We'll explore some of those separately later on.
+稍后我们将分别探讨其中的一些。
 
-## Constants in Python
+<h2 id="constants-in-python">Python常量</h2>
 
-Python has no way to enforce that a variable should be a constant.
+Python 中无法强制改变的值是常量。
 
-The nearest you can get is to use an enum:
+比较常用的是枚举：
 
 ```Python
 class Constants(Enum):
@@ -990,31 +991,31 @@ class Constants(Enum):
     HEIGHT = 256
 ```
 
-And get to each value using, for example, `Constants.WIDTH.value`.
+并使用`Constants.WIDTH.value`这样的表达获取每个值。
 
-No one can reassign that value.
+没有人可以重新分配该值。
 
-Otherwise if you want to rely on naming conventions, you can adhere to this one: declare variables that should never change uppercase:
+否则，如果您想依赖命名约定（来定义常量），您可以遵守这个规则——声明大写的永远不应该改变的变量：
 
 ```python
 WIDTH = 1024
 ```
 
-No one will prevent you from overwriting this value, and Python will not stop it.
+没有人会阻止您覆盖这个值，Python 也不会阻止。（译者：全大写的变量表示不应改变的常量，这只是一种约定）
 
-That's what most Python code does that you will see.
+正如您将来会看到的，大多数 Python 代码都采用这种命名约定的写法。
 
-## Enums in Python
+<h2 id="enums-in-python">Python枚举</h2>
 
-Enums are readable names that are bound to a constant value.
+枚举是绑定到常量值的可读名称。
 
-To use enums, import `Enum` from the `enum` standard library module:
+要使用枚举，请从`enum`标准库模块中导入`Enum`：
 
 ```python
 from enum import Enum
 ```
 
-Then you can initialize a new enum in this way:
+然后您可以用这种方式初始化一个新的枚举：
 
 ```python
 class State(Enum):
@@ -1022,42 +1023,42 @@ class State(Enum):
     ACTIVE = 1
 ```
 
-Once you do so, you can reference `State.INACTIVE` and `State.ACTIVE`, and they serve as constants.
+这样做后，您可以引用作为常量的`State.INACTIVE`和`State.ACTIVE`。
 
-Now if you try to print `State.ACTIVE` for example:
+现在，如果您尝试打印`State.ACTIVE`，例如：
 
 ```python
 print(State.ACTIVE)
 ```
 
-it will not return `1`, but `State.ACTIVE`.
+它不会返回`1`，而是返回`State.ACTIVE`。
 
-The same value can be reached by the number assigned in the enum: `print(State(1))` will return `State.ACTIVE`. Same for using the square brackets notation `State['ACTIVE']`.
+枚举中分配的数字可以达到相同的效果：`print(State(1))`将打印`State.ACTIVE`。使用方括号符号`State['ACTIVE']`也是如此。
 
-You can, however, get the value using `State.ACTIVE.value`.
+但是，您可以使用`State.ACTIVE.value`获取具体值。
 
-You can list all the possible values of an enum:
-
-```python
-list(State) # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
-```
-
-You can count them:
+您可以列出枚举的所有可能值：
 
 ```python
-len(State) # 2
+list(State)  # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
 ```
 
-## User Input in Python
+您可以获取总数：
 
-In a Python command line application you can display information to the user using the `print()` function:
+```python
+len(State)  # 2
+```
+
+<h2 id="user-input-in-python">Python用户输入</h2>
+
+在 Python 命令行程序中，您可以使用`print()`函数向用户显示信息：
 
 ```python
 name = "Roger"
 print(name)
 ```
 
-We can also accept input from the user, using `input()`:
+我们也可以使用`input()`接受来自用户的输入：
 
 ```python
 print('What is your age?')
@@ -1065,17 +1066,17 @@ age = input()
 print('Your age is ' + age)
 ```
 
-This approach gets input at runtime, meaning the program will stop execution and will wait until the user types something and presses the `enter` key.
+这种方法在运行时获取输入，这意味着程序（执行到`input()`时）将停止执行，等待用户输入内容并按下`enter`键。
 
-You can also do more complex input processing and accept input at program invocation time, and we'll see how to do that later on.
+您还可以在程序调用时接受输入并进行更复杂的输入处理，稍后我们将看到如何做到这一点。
 
-This works for command line applications. Other kinds of applications will need a different way of accepting input.
+这适用于命令行程序。其它类型的应用程序需要使用不同的方式来接受输入。
 
-## Control Statements in Python
+<h2 id="control-statements-in-python">Python控制语句</h2>
 
-When you're dealing with booleans, and expressions that return a boolean in particular, we can make decisions and take different roads depending on their `True` or `False` values.
+当您处理布尔值和返回布尔值的表达式时，您可以根据它们的值为`True`或`False`来采取不同的方式。
 
-In Python we do so using the `if` statement:
+在 Python 中，我们使用`if`语句来做到这一点：
 
 ```python
 condition = True
@@ -1084,9 +1085,9 @@ if condition == True:
     # do something
 ```
 
-When the condition test resolves to `True`, like in the above case, its block gets executed.
+当条件解析为`True`时，就像上面的情况一样，if 下面的代码块被执行。
 
-What is a block? A block is that part that is indented one level (4 spaces usually) on the right:
+什么是代码块？代码块是向右侧缩进一级（通常为 4 个空格）的部分：
 
 ```python
 condition = True
@@ -1096,7 +1097,7 @@ if condition == True:
     print("was true")
 ```
 
-The block can be formed by a single line, or multiple lines as well, and it ends when you move back to the previous indentation level:
+代码块可以由单行或多行组成，并在您移回到上一个缩进级别时结束：
 
 ```python
 condition = True
@@ -1108,7 +1109,7 @@ if condition == True:
 print("Outside of the if")
 ```
 
-In combination with `if` you can have an `else` block that's executed if the condition test of `if` results to `False`:
+如果`if`的条件测试结果为`False`，结合`if`则可以执行`else`块：
 
 ```python
 condition = True
@@ -1121,7 +1122,7 @@ else:
     print("was False")
 ```
 
-And you can have different linked `if` checks with `elif` that's executed if the previous check was `False`:
+如果前面的`if`检查是`False`，您可以使用`elif`执行另一个条件检查：
 
 ```python
 condition = True
@@ -1137,9 +1138,9 @@ else:
     print("was False")
 ```
 
-The second block in this case is executed if `condition` is `False`, and the `name` variable value is "Roger".
+如果`condition`为`False`并且`name`变量的值为"Roger"，则执行本例中的第二个代码块。
 
-In a `if` statement you can have just one `if` and `else` check, but multiple series of `elif` checks:
+在一个`if`语句中，您只可以进行一次`if`和 `else`检查，但可以进行多个`elif`检查：
 
 ```python
 condition = True
@@ -1159,99 +1160,99 @@ else:
     print("was False")
 ```
 
-`if` and `else` can also be used in an inline format, which lets us return one value or another based on a condition.
+`if`和 `else`也可以内联使用，这让我们可以根据条件返回一个值或另一个值。
 
-Example:
+例子：
 
 ```python
 a = 2
 result = 2 if a == 0 else 3
-print(result) # 3
+print(result)  # 3
 ```
 
-## Lists in Python
+<h2 id="lists-in-python">Python列表</h2>
 
-Lists are an essential Python data structure.
+列表是 Python 中一种基本的数据结构。
 
-The allow you to group together multiple values and reference them all with a common name.
+使用列表，您可以将多个值组合在一起，并使用一个名称引用它们。
 
-For example:
+例如：
 
 ```python
 dogs = ["Roger", "Syd"]
 ```
 
-A list can hold values of different types:
+一个列表中可以保存不同数据类型的值：
 
 ```python
 items = ["Roger", 1, "Syd", True]
 ```
 
-You can check if an item is contained in a list with the `in` operator:
+您可以使用`in`运算符检查某个元素是否在列表中：
 
 ```python
-print("Roger" in items) # True
+print("Roger" in items)  # True
 ```
 
-A list can also be defined as empty:
+当然也可以定义空的列表：
 
 ```python
 items = []
 ```
 
-You can reference the items in a list by their index, starting from zero:
+您可以通过从零开始的索引引用列表中的元素：
 
 ```python
-items[0] # "Roger"
-items[1] # 1
-items[3] # True
+items[0]  # "Roger"
+items[1]  # 1
+items[3]  # True
 ```
 
-Using the same notation you can change the value stored at a specific index:
+使用相同的表示法，您可以更改存储在特定索引处的值：
 
 ```python
 items[0] = "Roger"
 ```
 
-You can also use the `index()` method:
+您还可以使用`index()`：
 
 ```python
-items.index(0) # "Roger"
-items.index(1) # 1
+items.index(0)  # "Roger"
+items.index(1)  # 1
 ```
 
-As with strings, using a negative index will start searching from the end:
+就像字符串（索引）一样，使用负索引将从末尾开始数：
 
 ```python
-items[-1] # True
+items[-1]  # True
 ```
 
-You can also extract a part of a list, using slices:
+您还可以使用切片提取列表的一部分：
 
 ```python
-items[0:2] # ["Roger", 1]
-items[2:] # ["Syd", True]
+items[0:2]  # ["Roger", 1]
+items[2:]  # ["Syd", True]
 ```
 
-Get the number of items contained in a list using the `len()` global function, the same we used to get the length of a string:
+使用全局函数`len()`获取列表中包含的元素数目，这与我们用来获取字符串长度的方法相同：
 
 ```python
-len(items) #4
+len(items)  # 4
 ```
 
-You can add items to the list by using a list `append()` method:
+您可以使用 list 的`append()`方法将新元素添加到列表中：
 
 ```python
 items.append("Test")
 ```
 
-or the extend() method:
+或者使用`extend()`方法：
 
 ```python
 items.extend(["Test"])
 ```
 
-You can also use the `+=` operator:
+您还可以使用`+=`运算符：
 
 ```python
 items += ["Test"]
@@ -1259,202 +1260,197 @@ items += ["Test"]
 # items is ['Roger', 1, 'Syd', True, 'Test']
 ```
 
-> Tip: with `extend()` or `+=` don't forget the square brackets. Don't do `items += "Test"` or `items.extend("Test")` or Python will add 4 individual characters to the list, resulting in `['Roger', 1, 'Syd', True, 'T', 'e', 's', 't']`
+> 注意：使用`extend()`或`+=`不要忘记方括号。不要执行`items += "Test"`或`items.extend("Test")`，否则 Python 会在列表中添加 4 个单独的字符，即`['Roger', 1, 'Syd', True, 'T'、'e'、's'、't']`
 
-Remove an item using the `remove()` method:
+使用`remove()`方法删除元素：
 
 ```python
 items.remove("Test")
 ```
 
-You can add multiple elements using
+您可以添加多个元素：
 
 ```python
 items += ["Test1", "Test2"]
 
-#or
+# or
 
 items.extend(["Test1", "Test2"])
 ```
 
-These append the item to the end of the list.
+这些方法会将元素加到列表的末尾。
 
-To add an item in the middle of a list, at a specific index, use the `insert()` method:
+要在列表中间的特定索引处添加元素，请使用`insert()`方法：
 
 ```python
-items.insert("Test", 1) # add "Test" at index 1
+items.insert("Test", 1)  # add "Test" at index 1
 ```
 
-To add multiple items at a specific index, you need to use slices:
+要在特定索引处添加多个项目，您需要使用切片：
 
 ```python
 items[1:1] = ["Test1", "Test2"]
+# 译者：这里实际上是先删除再添加，就该例子来说，先删除[1:1]的元素（切片是左闭右开，所有[1:1]没有选中任何元素），再在删除的位置上添加
+#。    比如s = [1,2,3];  s[0:2] = ['a', 'b', 'c'];  --> 执行完前面两个语句，s就变为['a', 'b', 'c', 3]
 ```
 
-Sort a list using the `sort()` method:
+使用`sort()`方法对列表进行排序：
 
 ```python
 items.sort()
 ```
 
-> Tip: sort() will only work if the list holds values that can be compared. Strings and integers for example can't be compared, and you'll get an error like `TypeError: '<' not supported between instances of 'int' and 'str'` if you try.
+> 注意：sort()仅在列表包含可比较的值时才有效。例如，无法比较字符串和整数，如果您尝试（对元素之间不可比较的列表进行排序），您将看到到类似`TypeError: '<' not supported between 'int' and 'str'`的错误。
 
-The `sort()` methods orders uppercase letters first, then lowercase letters. To fix this, use:
+（针对字符串排序）`sort()`方法首先排序大写字母，然后是小写字母。要解决此问题，请使用：
 
 ```python
 items.sort(key=str.lower)
 ```
 
-instead.
-
-Sorting modifies the original list content. To avoid that, you can copy the list content using
+（使用 sort 方法）排序会修改原始列表内容。为避免这种情况，您可以先复制列表
 
 ```python
 itemscopy = items[:]
 ```
 
-or use the `sorted()` global function:
+或者使用全局函数`sorted()`：
 
 ```python
 print(sorted(items, key=str.lower))
 ```
 
-that will return a new list, sorted, instead of modifying the original list.
+这将返回一个排好序的新列表，而不是修改原始列表。
 
-## Tuples in Python
+<h2 id="tuples-in-python">Python元组</h2>
 
-Tuples are another fundamental Python data structure.
+元组是 Python 中另一种基本的数据结构。
 
-They allow you to create immutable groups of objects. This means that once a tuple is created, it can't be modified. You can't add or remove items.
+它允许您创建不可变的对象组。这意味着一旦创建了元组，就无法修改它。您不能添加或删除元组中的元素。
 
-They are created in a way similar to lists, but using parentheses instead of square brackets:
+元组的创建方式类似于列表，但是是使用括号而不是方括号：
 
 ```python
 names = ("Roger", "Syd")
 ```
 
-A tuple is ordered, like a list, so you can get its values by referencing an index value:
+元组是有序的，就像列表一样，所以您可以通过一个索引来获取具体位置的值：
 
 ```python
-names[0] # "Roger"
-names[1] # "Syd"
+names[0]  # "Roger"
+names[1]  # "Syd"
 ```
 
-You can also use the `index()` method:
+您也可以使用`index()`方法：
 
 ```python
-names.index('Roger') # 0
-names.index('Syd')   # 1
+names.index('Roger')  # 0
+names.index('Syd')  # 1
 ```
 
-As with strings and lists, using a negative index will start searching from the end:
+与字符串和列表一样，使用负索引将从末尾开始：
 
 ```python
-names[-1] # True
+names[-1]  # True
 ```
 
-You can count the items in a tuple with the `len()` function:
+您可以使用函数`len()`计算元组中的元素个数：
 
 ```python
-len(names) # 2
+len(names)  # 2
 ```
 
-You can check if an item is contained in a tuple with the `in` operator:
+您可以使用`in`运算符检查元素是否在元组中：
 
 ```python
-print("Roger" in names) # True
+print("Roger" in names)  # True
 ```
 
-You can also extract a part of a tuple, using slices:
+您还可以使用切片提取元组的一部分：
 
 ```python
-names[0:2] # ('Roger', 'Syd')
-names[1:] # ('Syd',)
+names[0:2]  # ('Roger', 'Syd')
+names[1:]  # ('Syd',)
 ```
 
-Get the number of items in a tuple using the `len()` global function, the same we used to get the length of a string:
-
-```python
-len(names) #2
-```
-
-You can create a sorted version of a tuple using the `sorted()` global function:
+您可以使用全局函数`sorted()`创建元组排好序的版本：
+（译者：请注意，元组没有 sort 方法，因为元组是不可改变的）
 
 ```python
 sorted(names)
 ```
 
-You can create a new tuple from existing tuples using the `+` operator:
+您可以使用`+`运算符从现有元组创建一个新元组：
 
 ```python
 newTuple = names + ("Vanille", "Tina")
 ```
 
-## Dictionaries in Python
+<h2 id="dictionaries-in-python">Python字典</h2>
 
-Dictionaries are a very important Python data structure.
+字典是 Python 中非常重要的一种数据结构。
 
-While lists allow you to create collections of values, dictionaries allow you to create collections of **key / value pairs**.
+列表允许您创建值的集合，而字典允许您创建**键/值对**的集合。
 
-Here is a dictionary example with one key/value pair:
+这是有一个键/值对的字典示例：
 
 ```python
 dog = { 'name': 'Roger' }
 ```
 
-The key can be any immutable value like a string, a number or a tuple. The value can be anything you want.
+键可以是任何不可变的值，例如字符串、数字或元组，该值可以是您想要的任何值。
 
-A dictionary can contain multiple key/value pairs:
+一个字典可以包含多个键/值对：
 
 ```python
 dog = { 'name': 'Roger', 'age': 8 }
 ```
 
-You can access individual key values using this notation:
+您可以使用此表示法访问单个键对应的值：
 
 ```python
-dog['name'] # 'Roger'
+dog['name']  # 'Roger'
 dog['age']  # 8
 ```
 
-Using the same notation you can change the value stored at a specific index:
+使用相同的表示法，您可以更改在特定索引（键）对应的值：
 
 ```python
 dog['name'] = 'Syd'
 ```
 
-And another way is using the `get()` method, which has an option to add a default value:
+另一种方法是使用`get()`方法，该方法可以添加默认值（译者：即字典中没有该键时返回的值）：
 
 ```python
-dog.get('name') # 'Roger'
-dog.get('test', 'default') # 'default'
+dog.get('name')  # 'Roger'
+dog.get('test', 'default')  # 'default'
 ```
 
-The `pop()` method retrieves the value of a key, and subsequently deletes the item from the dictionary:
+`pop()`方法检索键的值，然后从字典中删除该键/值对：
 
 ```python
-dog.pop('name') # 'Roger'
+dog.pop('name')  # 'Roger'
 ```
 
-The `popitem()` method retrieves and removes the last key/value pair inserted into the dictionary:
+`popitem()`方法检索并删除最后一个插入字典的键/值对：
 
 ```python
 dog.popitem()
 ```
 
-You can check if a key is contained into a dictionary with the `in` operator:
+您可以使用`in`运算符检查键是否包含在字典中：
 
 ```python
-'name' in dog # True
+'name' in dog  # True
 ```
 
-Get a list with the keys in a dictionary using the `keys()` method, passing its result to the `list()` constructor:
+使用`keys()`方法获取字典中的键，并将结果传递给`list()`构造函数：
 
 ```python
-list(dog.keys()) # ['name', 'age']
+list(dog.keys())  # ['name', 'age']
 ```
 
-Get the values using the `values()` method, and the key/value pairs tuples using the `items()` method:
+使用`values()`方法获取字典中的值，使用`items()`方法获取键/值对组成的元组：
 
 ```python
 print(list(dog.values()))
@@ -1464,169 +1460,170 @@ print(list(dog.items()))
 # [('name', 'Roger'), ('age', 8)]
 ```
 
-Get a dictionary length using the `len()` global function, the same we used to get the length of a string or the items in a list:
+使用全局函数`len()`获取字典长度，这与获取字符串或列表的长度相同：
 
 ```python
-len(dog) #2
+len(dog)  # 2
 ```
 
-You can add a new key/value pair to the dictionary in this way:
+您可以通过这种方式将新的键/值对添加到字典中：
 
 ```python
 dog['favorite food'] = 'Meat'
 ```
 
-You can remove a key/value pair from a dictionary using the `del` statement:
+您可以使用`del`语句从字典中删除键/值对：
 
 ```python
 del dog['favorite food']
 ```
 
-To copy a dictionary, use the copy() method:
+要复制字典，请使用 copy()方法：
+（译者：这种方式是浅拷贝）
 
 ```python
 dogCopy = dog.copy()
 ```
 
-## Sets in Python
+<h2 id="sets-in-python">Python集合</h2>
 
-Sets are another important Python data structure.
+集合是 Python 另一个重要的数据结构。
 
-We can say they work like tuples, but they are not ordered, and they are **mutable**.
+可以说它像元组一样工作，但集合不是有序的，而且是**可变的**。
 
-Or we can say they work like dictionaries, but they don't have keys.
+或者我们可以说它像字典一样工作，但它们没有键。
 
-They also have an immutable version, called `frozenset`.
+集合还有一个不可变的版本，称为`frozenset`。
 
-You can create a set using this syntax:
+您可以使用以下语法创建集合：
 
 ```python
 names = {"Roger", "Syd"}
 ```
 
-Sets work well when you think about them as mathematical sets.
+您将它们视为数学上的集合，会更好理解。
 
-You can intersect two sets:
+您可以求两个集合的交集：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Roger"}
 
-intersect = set1 & set2 #{'Roger'}
+intersect = set1 & set2  # {'Roger'}
 ```
 
-You can create a union of two sets:
+您可以创建两个集合的并集：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Luna"}
 
 union = set1 | set2
-#{'Syd', 'Luna', 'Roger'}
+# {'Syd', 'Luna', 'Roger'}
 ```
 
-You can get the difference between two sets:
+您可以得到两个集合的差集：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Roger"}
 
-difference = set1 - set2 #{'Syd'}
+difference = set1 - set2  # {'Syd'}
 ```
 
-You can check if a set is a superset of another (and of course if a set is a subset of another):
+您可以检查一个集合是否是另一个集合的超集（也即一个集合是另一个集合的子集）：
 
 ```python
 set1 = {"Roger", "Syd"}
 set2 = {"Roger"}
 
-isSuperset = set1 > set2 # True
+isSuperset = set1 > set2  # True
 ```
 
-You can count the items in a set with the `len()` global function:
+您可以使用全局函数`len()`计算集合中的元素个数：
 
 ```python
 names = {"Roger", "Syd"}
-len(names) # 2
+len(names)  # 2
 ```
 
-You can get a list from the items in a set by passing the set to the `list()` constructor:
+您可以通过将集合传递给`list()`构造函数来获取集合元素的列表：
 
 ```python
 names = {"Roger", "Syd"}
-list(names) #['Syd', 'Roger']
+list(names)  # ['Syd', 'Roger']
 ```
 
-You can check if an item is contained in a set with the `in` operator:
+您可以使用`in`运算符检查元素是否在集合中：
 
 ```python
-print("Roger" in names) # True
+print("Roger" in names)  # True
 ```
 
-## Functions in Python
+<h2 id="functions-in-python">Python函数</h2>
 
-A function lets us create a set of instructions that we can run when needed.
+函数可以创建一组指令，我们在需要时运行这些指令。
 
-Functions are essential in Python and in many other programming languages. They help us create meaningful programs, because they allow us to decompose a program into manageable parts, and they promote readability and code reuse.
+函数在 Python 和其它许多编程语言中是必不可少的。它帮助我们创建有意义的程序，因为我们可以使用函数将程序分解为可管理的部分，并且促进了代码的可读性和重用性。
 
-Here is an example function called `hello` that prints "Hello!":
+这是一个名为`hello`的函数示例，它打印"Hello!"：
 
 ```python
 def hello():
     print('Hello!')
 ```
 
-This is the function **definition**. Thereis a name (`hello`) and a body, the set of instructions, which is the part that follows the colon. It's indented one level on the right.
+函数**定义**：有一个名称（`hello`）和一个由一组指令组成的主体（即冒号后面的部分），主体在右侧缩进一级。
 
-To run this function, we must call it. This is the syntax to call the function:
+要运行这个函数，我们必须调用它。这是调用函数的语法：
 
 ```python
 hello()
 ```
 
-We can execute this function once, or multiple times.
+我们可以调用这个函数一次或多次。
 
-The name of the function, `hello`, is very important. It should be descriptive, so anyone calling it can imagine what the function does.
+函数名`hello`非常重要，它应该是描述性的，这样任何调用该函数的人都可以理解它的作用。
 
-A function can accept one or more parameters:
+一个函数可以接受一个或多个参数：
 
 ```python
 def hello(name):
     print('Hello ' + name + '!')
 ```
 
-In this case we call the function by passing the argument
+这种情况下，我们通过传递参数来调用函数
 
 ```python
 hello('Roger')
 ```
 
-> We call _parameters_ the values accepted by the function inside the function definition, and _arguments_ the values we pass to the function when we call it. It's common to get confused about this distinction.
+> 我们称_parameters_为函数定义中函数所接受的值（形参），称_arguments_为我们调用函数时所传递给函数的值（实参）。对这种区别感到困惑是很正常的。
 
-An argument can have a default value that's applied if the argument is not specified:
+如果（调用函数时）未指定参数，则参数可以具有默认值：
 
 ```python
 def hello(name='my friend'):
     print('Hello ' + name + '!')
 
 hello()
-#Hello my friend!
+# Hello my friend!
 ```
 
-Here's how we can accept multiple parameters:
+以下是如何接受多个参数：
 
 ```python
 def hello(name, age):
     print('Hello ' + name + ', you are ' + str(age) + ' years old!')
 ```
 
-In this case we call the function passing a set of arguments:
+在这种情况下，我们调用函数并传递一组参数：
 
 ```python
 hello('Roger', 8)
 ```
 
-Parameters are passed by reference. All types in Python are objects, but some of them are immutable, including integers, booleans, floats, strings, and tuples. This means that if you pass them as parameters and you modify their value inside the function, the new value is not reflected outside of the function:
+形参通过引用传递。Python 中的所有内容都是对象，但其中一些是不可变的，包括整数、布尔值、浮点数、字符串和元组。这意味着如果您将它们作为参数传递给函数，并在函数内部修改它们的值，则新值不会反映在函数外部：
 
 ```python
 def change(value):
@@ -1635,12 +1632,12 @@ def change(value):
 val = 1
 change(val)
 
-print(val) #1
+print(val)  # 1
 ```
 
-If you pass an object that's not immutable, and you change one of its properties, the change will be reflected outside.
+如果您传递一个可变的对象，并且（在函数内部）更改了它的一个属性，则该更改将反映在外部。
 
-A function can return a value, using the `return` statement. For example in this case we return the `name` parameter name:
+函数可以使用`return`语句返回一个值。例如我们返回 `name` 参数：
 
 ```python
 def hello(name):
@@ -1648,9 +1645,9 @@ def hello(name):
     return name
 ```
 
-When the function meets the `return` statement, the function ends.
+当函数执行到`return`语句时，该函数结束。
 
-We can omit the value:
+我们可以省略该返回值：
 
 ```python
 def hello(name):
@@ -1658,7 +1655,7 @@ def hello(name):
     return
 ```
 
-We can have the return statement inside a conditional, which is a common way to end a function if a starting condition is not met:
+我们可以在条件中包含 return 语句，这是在不满足起始条件时结束函数的常用方法：
 
 ```python
 def hello(name):
@@ -1667,9 +1664,9 @@ def hello(name):
     print('Hello ' + name + '!')
 ```
 
-If we call the function passing a value that evaluates to `False`, like an empty string, the function is terminated before reaching the `print()` statement.
+如果我们调用该函数并传递一个计算结果为`False`的表达式，比如一个空字符串，函数在到达`print()`语句之前终止。
 
-You can return multiple values by using comma separated values:
+您可以使用逗号分隔来返回多个值：
 
 ```python
 def hello(name):
@@ -1677,36 +1674,36 @@ def hello(name):
     return name, 'Roger', 8
 ```
 
-In this case calling `hello('Syd')` the return value is a tuple containing those 3 values: `('Syd', 'Roger', 8)`.
+在这种情况下，调用 `hello('Syd')` 返回值是一个包含这 3 个值的元组：`('Syd', 'Roger', 8)`。
 
-## Objects in Python
+<h2 id="objects-in-python">Python对象</h2>
 
-Everything in Python is an object.
+Python 中的一切都是对象。
 
-Even values of basic primitive types (integer, string, float..) are objects. Lists are objects, as are tuples, dictionaries, everything.
+原始类型（整数、字符串、浮点数……）的值也是对象。 同时列表、元组、字典和一切也都是对象。
 
-Objects have **attributes** and **methods** that can be accessed using the dot syntax.
+对象具有可以使用点语法访问的**属性**和**方法**。
 
-For example, try defining a new variable of type `int`:
+例如，尝试定义一个`int`类型的新变量：
 
 ```python
 age = 8
 ```
 
-`age` now has access to the properties and methods defined for all `int` objects.
+`age`现在可以访问为`int`对象定义的属性和方法。
 
-This includes, for example, access to the real and imaginary part of that number:
+这包括访问该数字的实部和虚部，例如：
 
 ```python
-print(age.real) # 8
-print(age.imag) # 0
+print(age.real)  # 8
+print(age.imag)  # 0
 
-print(age.bit_length()) #4
+print(age.bit_length())  # 4
 
-# the bit_length() method returns the number of bits necessary to represent this number in binary notation
+# bit_length()方法返回该数字的二进制表示法所需的位数
 ```
 
-A variable holding a list value has access to a different set of methods:
+列表类型的变量可以使用一组方法：
 
 ```python
 items = [1, 2]
@@ -1714,69 +1711,69 @@ items.append(3)
 items.pop()
 ```
 
-The methods depend on the type of value.
+这些（可使用的）方法取决于变量的数据类型。
 
-The `id()` global function provided by Python lets you inspect the location in memory for a particular object.
+Python 提供的全局函数`id()`可让您检查特定对象在内存中的位置。
 
 ```python
-id(age) # 140170065725376
+id(age)  # 140170065725376
 ```
 
-> Your memory value will change - I am only showing it as an example.
+> 您（电脑上查看的 age）的内存地址值会不一样——这里只是作为一个例子来展示。
 
-If you assign a different value to the variable, its address will change, because the content of the variable has been replaced with another value stored in another location in memory:
+如果给变量赋不同的值，它的地址会改变，因为变量已经指向存储在内存中另一个位置的另一个值：
 
 ```python
 age = 8
 
-print(id(age)) # 140535918671808
+print(id(age))  # 140535918671808
 
 age = 9
 
-print(id(age)) # 140535918671840
+print(id(age))  # 140535918671840
 ```
 
-But if you modify the object using its methods, the address stays the same:
+但是，如果您使用对象的方法修改该对象，其内存地址将保持不变：
 
 ```python
 items = [1, 2]
 
-print(id(items)) # 140093713593920
+print(id(items))  # 140093713593920
 
 items.append(3)
 
-print(items) # [1, 2, 3]
-print(id(items)) # 140093713593920
+print(items)  # [1, 2, 3]
+print(id(items))  # 140093713593920
 ```
 
-The address only changes if you reassign a variable to another value.
+仅当您将变量重新赋一个值时，地址才会更改。
 
-Some objects are _mutable_, while others are _immutable_. This depends on the object itself.
+一些类型的对象是_可变的_，而另一些是_不可变的_。这取决于对象本身。
 
-If the object provides methods to change its content, then it's mutable. Otherwise it's immutable.
+如果对象提供改变其内容的方法，那么它是可变的。否则它是不可变的。
 
-Most types defined by Python are immutable. For example an `int` is immutable. There are no methods to change its value. If you increment the value using
+Python 定义的大多数类型都是不可变的， 例如`int` ，没有任何方法可以改变它的值。 如果您增加它的值
 
 ```python
 age = 8
 age = age + 1
 
-#or
+# 或者
 
 age += 1
 ```
 
-and you check with `id(age)`, you will find that `age` points to a different memory location. The original value has not mutated, we just switched to another value.
+然后您使用`id(age)`检查，您会发现`age`前后指向不同的内存位置。 原来的值并没有发生变异，age 只是指向另一个值。
 
-## Loops in Python
+<h2 id="loops-in-python">Python循环</h2>
 
-Loops are one essential part of programming.
+循环是编程的重要组成部分。
 
-In Python we have 2 kinds of loops: **while loops** and **for loops**.
+在 Python 中，我们有 2 种循环：**while 循环**和**for 循环**。
 
-### `while` loops in Python
+###  Python 中的`while`循环
 
-`while` loops are defined using the `while` keyword, and they repeat their block until the condition is evaluated as `False`:
+`while`循环是使用`while`关键字定义的，它重复执行自己的块，直到判断条件为`False`：
 
 ```python
 condition = True
@@ -1784,9 +1781,9 @@ while condition == True:
     print("The condition is True")
 ```
 
-This is an **infinite loop**. It never ends.
+这是一个永远不会停下来的**无限循环**。
 
-Let's halt the loop right after the first iteration:
+让我们在第一次迭代后立即停止循环：
 
 ```python
 condition = True
@@ -1797,9 +1794,9 @@ while condition == True:
 print("After the loop")
 ```
 
-In this case, the first iteration is run, as the condition test is evaluated to `True`. At the second iteration, the condition test evaluates to `False`, so the control goes to the next instruction after the loop.
+在这种情况下，将执行第一次迭代，因为此时判断条件为`True`。在第二次迭代时，判断条件为`False`，因此执行循环外的下一条指令。
 
-It's common to have a counter to stop the iteration after some number of cycles:
+通常有一个计数器用于在一些周期后停止迭代：
 
 ```python
 count = 0
@@ -1810,11 +1807,11 @@ while count < 10:
 print("After the loop")
 ```
 
-### `for` loops in Python
+### Python 中的`for`循环
 
-Using `for` loops we can tell Python to execute a block for a pre-determined amount of times, up front, and without the need of a separate variable and conditional to check its value.
+使用`for`循环，我们可以让 Python 执行一个预先确定循环次数的代码块，并且不需要单独的变量和条件来检查它的值。
 
-For example we can iterate the items in a list:
+例如，我们可以迭代列表中的元素：
 
 ```python
 items = [1, 2, 3, 4]
@@ -1822,16 +1819,16 @@ for item in items:
     print(item)
 ```
 
-Or, you can iterate a specific amount of times using the `range()` function:
+或者，您可以使用`range()`函数迭代特定次数：
 
 ```python
 for item in range(04):
     print(item)
 ```
 
-`range(4)` creates a sequence that starts from 0 and contains 4 items: `[0, 1, 2, 3]`.
+`range(4)`创建一个从 0 开始并包含 4 个元素的序列：`[0, 1, 2, 3]`。
 
-To get the index, you should wrap the sequence into the `enumerate()` function:
+如果要获取索引，您应该将序列包装到`enumerate()`函数中：
 
 ```python
 items = [1, 2, 3, 4]
@@ -1839,15 +1836,15 @@ for index, item in enumerate(items):
     print(index, item)
 ```
 
-### Break and continue in Python
+### Python 中的`Break`和`continue` 
 
-Both `while` and `for` loops can be interrupted inside the block, using two special keywords: `break` and `continue`.
+`while`和 `for`循环都可以在代码块内被中断，这需要使用两个特殊关键字：`break`和`continue`。
 
-`continue` stops the current iteration and tells Python to execute the next one.
+`continue`停止当前迭代并告诉 Python 执行下一个迭代。
 
-`break` stops the loop altogether, and goes on with the next instruction after the loop ends.
+`break`完全停止循环，并继续执行循环外的下一条指令。
 
-The first example here prints `1, 3, 4`. The second example prints `1`:
+这里第一个示例打印 `1, 3, 4`。第二个示例打印 `1`：
 
 ```python
 items = [1, 2, 3, 4]
@@ -1865,54 +1862,54 @@ for item in items:
     print(item)
 ```
 
-## Classes in Python
+<h2 id="classes-in-python">Python类</h2>
 
-In addition to using the Python-provided types, we can declare our own classes, and from classes we can instantiate objects.
+除了使用 Python 提供的数据类型之外，我们还可以声明自定义的类，并使用类实例化对象。
 
-An object is an instance of a class. A class is the type of an object.
+对象是类的实例。类是对象的类型。
 
-We can define a class in this way:
+我们可以这样定义一个类：
 
 ```python
 class <class_name>:
-    # my class
+    # 自定义的类
 ```
 
-For example let's define a Dog class
+例如，让我们定义一个 Dog 类
 
 ```python
 class Dog:
-    # the Dog class
+    # Dog类
 ```
 
-A class can define methods:
+一个类里面可以定义方法：
 
 ```python
 class Dog:
-    # the Dog class
+    # Dog类
     def bark(self):
         print('WOF!')
 ```
 
-> `self` as the argument of the method points to the current object instance, and must be specified when defining a method.
+> `self`作为方法的参数，指向当前实例对象，定义类的方法时必须指定`self`。（译者：大多数情况下如此，有些特殊的方法不用指定）
 
-We create an instance of a class, an **object**, using this syntax:
+我们使用以下语法创建一个类的实例对象，即创建一个**object**：
 
 ```python
 roger = Dog()
 ```
 
-Now `roger` is a new object of type Dog.
+现在`roger`是 Dog 类型的对象。
 
-If you run
+如果运行
 
 ```python
 print(type(roger))
 ```
 
-You will get `<class '__main__.Dog'>`
+您会看到`<class '__main__.Dog'>`
 
-A special type of method, `__init__()` is called constructor, and we can use it to initialize one or more properties when we create a new object from that class:
+当我们从类中创建新对象时，我们使用一种被称为构造函数的特殊方法`__init__()`来初始化一个或多个属性：
 
 ```python
 class Dog:
@@ -1925,19 +1922,19 @@ class Dog:
         print('WOF!')
 ```
 
-We use it in this way:
+我们这样使用它：
 
 ```python
 roger = Dog('Roger', 8)
-print(roger.name) # 'Roger'
+print(roger.name)  # 'Roger'
 print(roger.age)  # 8
 
-roger.bark() # 'WOF!'
+roger.bark()  # 'WOF!'
 ```
 
-One important feature of classes is inheritance.
+类的一个重要特性是继承。
 
-We can create an Animal class with a method `walk()`:
+我们创建一个可以使用`walk()`方法的 Animal 类：
 
 ```python
 class Animal:
@@ -1945,7 +1942,7 @@ class Animal:
         print('Walking..')
 ```
 
-and the Dog class can inherit from Animal:
+然后 Dog 类继承 Animal 类：
 
 ```python
 class Dog(Animal):
@@ -1953,30 +1950,30 @@ class Dog(Animal):
         print('WOF!')
 ```
 
-Now creating a new object of class `Dog` will have the `walk()` method as that's inherited from `Animal`:
+现在创建`Dog`类的新对象，它将具有`walk()`方法，因为`Dog`类继承自`Animal`类：
 
 ```python
 roger = Dog()
-roger.walk() # 'Walking..'
-roger.bark() # 'WOF!'
+roger.walk()  # 'Walking..'
+roger.bark()  # 'WOF!'
 ```
 
-## Modules in Python
+<h2 id="modules-in-python">Python模块</h2>
 
-Every Python file is a module.
+每个 Python 文件都是一个模块。
 
-You can import a module from other files, and that's the base of any program of moderate complexity, as it promotes a sensible organization and code reuse.
+您可以从其它文件导入模块，这是任何具有一定复杂性的程序的基础，因为它促进了合理的组织结构和代码重用。
 
-In the typical Python program, one file acts as the entry point. The other files are modules and expose functions that we can call from other files.
+在典型的 Python 程序中，一个文件作为入口点，那么其它文件是模块，并公开可以从模块中调用的函数。（译者：不只是可以公开函数，类、常量等等都行）
 
-The file `dog.py` contains this code:
+文件`dog.py`包含以下代码：
 
 ```python
 def bark():
     print('WOF!')
 ```
 
-We can import this function from another file using `import`. And once we do, we can reference the function using the dot notation, `dog.bark()`:
+我们可以使用`import`从另一个文件中导入这个模块。一旦我们这样做了，我们就可以使用`dog.bark()`来引用该函数：
 
 ```python
 import dog
@@ -1984,7 +1981,7 @@ import dog
 dog.bark()
 ```
 
-Or, we can use the `from .. import` syntax and call the function directly:
+或者，我们可以使用`from .. import`语法直接导入函数：
 
 ```python
 from dog import bark
@@ -1992,17 +1989,17 @@ from dog import bark
 bark()
 ```
 
-The first strategy allows us to load everything defined in a file.
+第一个策略导入文件中定义的所有内容。
 
-The second strategy lets us pick the things we need.
+第二个策略只选择导入我们需要的东西。
 
-Those modules are specific to your program, and importing depends on the location of the file in the filesystem.
+这些模块（的形式）取决于您的程序，导入（方法）取决于所导入模块（即文件）在文件系统中的位置。
 
-Suppose you put `dog.py` in a `lib` subfolder.
+假设您将`dog.py`文件放在`lib`文件夹中。
 
-In that folder, you need to create an empty file named `__init__.py`. This tells Python the folder contains modules.
+在该文件夹中，您需要创建一个名为`__init__.py`的空文件来告诉 Python 该文件夹包含模块。
 
-Now you can choose - you can import `dog` from `lib`:
+现在您可以选择从`lib`中导入`dog`：
 
 ```py
 from lib import dog
@@ -2010,7 +2007,7 @@ from lib import dog
 dog.bark()
 ```
 
-or you can reference the `dog` module specific function importing from `lib.dog`:
+或者您可以从`lib.dog`导入特定`dog`模块函数：
 
 ```py
 from lib.dog import bark
@@ -2018,114 +2015,114 @@ from lib.dog import bark
 bark()
 ```
 
-## The Python Standard Library
+<h2 id="the-python-standard-library">Python标准库</h2>
 
-Python exposes a lot of built-in functionality through its **standard library**.
+Python 通过其**标准库**公开了许多内置功能。
 
-The standard library is a huge collection of all sort of utilities, ranging from math utilities to debugging to creating graphical user interfaces.
+标准库是各种应用程序的集合，包括数学应用，代码调试，以及图形用户界面创建等等。
 
-You can find the full list of standard library modules here: [https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html)
+您可以在此处找到标准库模块的完整列表：[https://docs.python.org/3/library/index.html](https://docs.python.org/3/library/index.html)
 
-Some of the important modules are:
+一些比较重要的模块是：
 
--   `math` for math utilities
--   `re` for regular expressions
--   `json` to work with JSON
--   `datetime` to work with dates
--   `sqlite3` to use SQLite
--   `os` for Operating System utilities
--   `random` for random number generation
--   `statistics` for statistics utilities
--   `requests` to perform HTTP network requests
--   `http` to create HTTP servers
--   `urllib` to manage URLs
+-   `math` 数学计算相关应用程序
+-   `re` 正则表达式的使用
+-   `json` 处理 json 数据
+-   `datetime` 处理日期
+-   `sqlite3` 使用 SQLite
+-   `os` 操作系统实用程序
+-   `random` 生成随机数
+-   `statistics` 数学统计相关应用程序
+-   `requests` 执行 HTTP 网络请求
+-   `http` 创建 HTTP 服务器
+-   `urllib` 管理 URL
 
-Let's introduce how to _use_ a module of the standard library. You already know how to use modules you create, importing from other files in the program folder.
+接下来介绍如何_使用_标准库的一个模块。您已经知道如何使用自己创建的模块，即从程序文件夹中的其它文件导入。
 
-Well that's the same with modules provided by the standard library:
+标准库提供的模块也是如此使用：
 
 ```python
 import math
 
-math.sqrt(4) # 2.0
+math.sqrt(4)  # 2.0
 ```
 
-or
+或者
 
 ```python
 from math import sqrt
 
-sqrt(4) # 2.0
+sqrt(4)  # 2.0
 ```
 
-We'll soon explore the most important modules individually to understand what we can do with them.
+我们很快将单独探索最重要的模块，以了解我们可以用其做什么。
 
-## The PEP8 Python Style Guide
+<h2 id="the-pep8-python-style-guide">Python PEP8风格指导</h2>
 
-When you write code, you should adhere to the conventions of the programming language you use.
+编写代码时，应遵守所使用的编程语言的一些约定。
 
-If you learn the right naming and formatting conventions right from the start, it will be easier to read code written by other people, and people will find your code easier to read.
+如果您从一开始就学习正确的命名和格式约定，那么将更容易阅读其他人编写的代码，同样其他人也会发现您的代码易于阅读。
 
-Python defines its conventions in the PEP8 style guide. PEP stands for _Python Enhancement Proposals_ and it's the place where all Python language enhancements and discussions happen.
+Python 在 PEP8 样式指南中定义了其代码风格约定。PEP 即_Python Enhancement Proposals_，它描述了 Python 语言所有增强和讨论的地方。
 
-There are a lot of PEP proposals, all available at [https://www.python.org/dev/peps/](https://www.python.org/dev/peps/).
+有很多 PEP 提案，都可以在[https://www.python.org/dev/peps/](https://www.python.org/dev/peps/) 上找到。
 
-PEP8 is one of the first ones, and one of the most important, too. It defines the formatting and also some rules on how to write Python in a "pythonic" way.
+PEP8 是最早和最重要的提案之一，它定义了格式和以"pythonic"方式编写 Python 代码的一些规则。
 
-You can read its full content here: [https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/) but here's a quick summary of the important points you can start with:
+您可以在此处阅读其完整内容：[https://www.python.org/dev/peps/pep-0008/](https://www.python.org/dev/peps/pep-0008/) ，下面是几点总结，您可以从这里快速开始：
 
--   Indent using spaces, not tabs
--   Indent using 4 spaces.
--   Python files are encoded in UTF-8
--   Use maximum 80 columns for your code
--   Write each statement on its own line
--   Functions, variable names and file names are lowercase, with underscores between words (snake\_case)
--   Class names are capitalized, separate words are written with the capital letter too, (CamelCase)
--   Package names are lowercase and do not have underscores between words
--   Variables that should not change (constants) are written in uppercase
--   Variable names should be meaningful
--   Add useful comments, but avoid obvious comments
--   Add spaces around operators
--   Do not use unnecessary whitespace
--   Add a blank line before a function
--   Add a blank line between methods in a class
--   Inside functions/methods, blank lines can be used to separate related blocks of code to help readability
+-   使用空格而不是制表符缩进
+-   使用 4 个空格缩进
+-   Python 文件用 UTF-8 编码
+-   一行代码最多 80 列
+-   每个语句写在自己所在的一行上
+-   函数、变量名和文件名使用小写，单词之间用下划线分隔（例如 snake_case）
+-   类名单词首字母大写（例如 CamelCase）
+-   包名是小写的，单词之间没有下划线
+-   不应该改变的常量全用大写字母
+-   变量名应该有意义
+-   添加有用的注释，但应该避免为非常易懂的代码添加注释
+-   在运算符两边添加空格
+-   不要使用不必要的空格
+-   在函数（的定义）前添加一个空行
+-   在类中的方法之间添加一个空行
+-   在函数/方法内部，可以使用空行分隔相关的代码块，以提高可读性
 
-## Debugging in Python
+<h2 id="debugging-in-python">Python代码调试</h2>
 
-Debugging is one of the best skills you can learn, as it will help you in many difficult situations.
+调试代码是您应该学习的最佳技能之一，因为在许多困难的情况下，它将为您提供帮助。
 
-Every language has its debugger. Python has `pdb`, available through the standard library.
+每种编程语言都有其调试器。Python 使用`pdb`调试代码，可通过标准库获得。
 
-You debug by adding one breakpoint into your code:
+您可以通过在代码中添加一个断点来进行调试：
 
 ```python
 breakpoint()
 ```
 
-> You can add more breakpoints if needed.
+> 如果需要，您可以添加更多断点。
 
-When the Python interpreter hits a breakpoint in your code, it will stop, and it will tell you what is the next instruction it will run.
+当 Python 解释器在您的代码中遇到断点时，它会停止执行代码，并会告诉您下一条将运行的指令是什么。
 
-Then and you can do a few things.
+接下来您可以做一些事情。
 
-You can type the name of any variable to inspect its value.
+您可以键入任何变量的名称来检查其值。
 
-You can press `n` to step to the next line in the current function. If the code calls functions, the debugger does not get into them, and considers them "black boxes".
+您可以按`n`跳到当前函数的下一行。如果下一行代码调用了函数，调试器不会进入它们，并将它们视为"黑匣子"。
 
-You can press `s` to step to the next line in the current function. If the next line is a function, the debugger goes into that, and you can then run one instruction of that function at a time.
+您可以按 `s`跳到当前函数的下一行。如果下一行是调用一个函数，则调试器会进入该函数，然后您可以一次运行该函数的一条指令。
 
-You can press `c` to continue the execution of the program normally, without the need to do it step-by-step.
+您可以按`c`继续正常执行剩下的程序，而无需逐步执行。
 
-You can press `q` to stop the execution of the program.
+您可以按`q`停止程序的执行。
 
-Debugging is useful to evaluate the result of an instruction, and it's especially good to know how to use it when you have complex iterations or algorithms that you want to fix.
+调试对于评估程序的结果很有用，当您有复杂的迭代或要修改的算法时，了解如何使用它尤其有用。
 
-## Variable Scope in Python
+<h2 id="variable-scope-in-python">Python变量作用域</h2>
 
-When you declare a variable, that variable is visible in parts of your program, depending on where you declare it.
+当您声明一个变量时，该变量在程序的某些部分中可见，这具体取决于您声明它的位置。
 
-If you declare it outside of any function, the variable is visible to any code running after the declaration, including functions:
+如果您在函数之外声明它，则该变量对声明之后的任何代码都是可见的，包括（这之后定义的）函数：
 
 ```python
 age = 8
@@ -2133,45 +2130,45 @@ age = 8
 def test():
     print(age)
 
-print(age) # 8
-test() # 8
+print(age)  # 8
+test()  # 8
 ```
 
-We call it a **global variable**.
+我们称这种变量为**全局变量**。
 
-If you define a variable inside a function, that variable is a **local variable**, and it is only visible inside that function. Outside the function, it is not reachable:
+如果您在函数内部定义变量，则该变量是**局部变量**，并且仅在该函数内部可见。在函数之外，它是不可访问的：
 
 ```python
 def test():
     age = 8
     print(age)
 
-test() # 8
+test()  # 8
 
 print(age)
-# NameError: name 'age' is not defined
+# 这些这个print会报错 NameError: name 'age' is not defined
 ```
 
-## How to Accept Arguments from the Command Line in Python
+<h2 id="how-to-accept-arguments-from-the-command-line-in-python">Python接收从命令行传入的参数</h2>
 
-Python offers several ways to handle arguments passed when we invoke the program from the command line.
+当我们从命令行调用程序时，Python 提供了几种方法来处理传递的参数。
 
-So far you've run programs either from a REPL, or using
+到目前为止，您已经使用过 REPL 来执行程序，或使用如下方法执行 Python 代码
 
 ```sh
-python <filename>.py
+python <文件名>.py
 ```
 
-You can pass additional arguments and options when you do so, like this:
+（像上面）这样做时，您可以传递附加的参数和选项，如下所示：
 
 ```sh
-python <filename>.py <argument1>
-python <filename>.py <argument1> <argument2>
+python <文件名>.py <参数1>
+python <文件名>.py <参数1> <参数2>
 ```
 
-A basic way to handle those arguments is to use the `sys` module from the standard library.
+处理这些参数的基本方法是使用标准库中的`sys`模块。
 
-You can get the arguments passed in the `sys.argv` list:
+您可以获取在`sys.argv`列表中传递的参数：
 
 ```python
 import sys
@@ -2179,13 +2176,13 @@ print(len(sys.argv))
 print(sys.argv)
 ```
 
-The `sys.argv` list contains as the first item the name of the file that was run, for example `['main.py']`.
+`sys.argv`列表的第一项包含所运行文件的名称，例如 `['main.py']`。
 
-This is a simple way, but you have to do a lot of work. You need to validate arguments, make sure their type is correct, and you need to print feedback to the user if they are not using the program correctly.
+这是一种简单的方法，但您必须自己做很多工作。您需要验证参数，确保它们的类型是正确的，如果用户没有正确使用程序，您需要向他们打印反馈信息。
 
-Python provides another package in the standard library to help you: `argparse`.
+Python 在标准库中提供了另一个包来帮助您：`argparse`。
 
-First you import `argparse` and you call `argparse.ArgumentParser()`, passing the description of your program:
+您首先导入`argparse`并调用`argparse.ArgumentParser()`，传递程序的描述：
 
 ```python
 import argparse
@@ -2195,8 +2192,8 @@ parser = argparse.ArgumentParser(
 )
 ```
 
-Then you proceed to add arguments you want to accept.  
-For example in this program we accept a `-c` option to pass a color, like this: `python program.py -c red`
+然后继续添加想要接受的参数。
+例如，在下面这个程序中，我们接受一个`-c`选项来传递颜色，就像这样（执行代码文件）：`python program.py -c red`
 
 ```python
 import argparse
@@ -2209,18 +2206,21 @@ parser.add_argument('-c', '--color', metavar='color', required=True, help='the c
 
 args = parser.parse_args()
 
-print(args.color) # 'red'
+print(args.color)  # 'red'
 ```
 
-If the argument is not specified, the program raises an error:
+如果未指定参数，程序将报错：
 
 ```
 ➜  python python program.py
 usage: program.py [-h] -c color
 program.py: error: the following arguments are required: -c
+
+program.py: error: 程序运行需要如下参数: -c
 ```
 
-You can set an option to have a specific set of values, using `choices`:
+
+您可以使用`choices`将选项设置为一组特定值：
 
 ```python
 parser.add_argument('-c', '--color', metavar='color', required=True, choices={'red','yellow'}, help='the color to search for')
@@ -2230,55 +2230,58 @@ parser.add_argument('-c', '--color', metavar='color', required=True, choices={'r
 ➜  python python program.py -c blue
 usage: program.py [-h] -c color
 program.py: error: argument -c/--color: invalid choice: 'blue' (choose from 'yellow', 'red')
+
+program.py: error: argument -c/--color: 无效的选择: 'blue' (该选项只能为'yellow'或'red')
 ```
 
-There are more options, but those are the basics.
+还有更多选择，但以上是基础。
 
-And there are community packages that provide this functionality, too, like [Click](https://click.palletsprojects.com/en/7.x/) and [Python Prompt Toolkit](https://python-prompt-toolkit.readthedocs.io/en/master/index.html).
+也有提供此功能的社区包，例如[Click](https://click.palletsprojects.com/en/7.x/)和[Python Prompt Toolkit](https://python-prompt-toolkit.readthedocs.io/en/master/index.html)。
 
-## Lambda Functions in Python
 
-Lambda functions (also called anonymous functions) are tiny functions that have no name and only have one expression as their body.
+<h2 id="lambda-functions-in-python">Python的Lambda函数</h2>
 
-In Python they are defined using the `lambda` keyword:
+Lambda 函数（也称为匿名函数）是没有名称且只有一个表达式作为其主体的小型函数。
+
+在 Python 中，它们是使用`lambda`关键字定义的：
 
 ```python
-lambda <arguments> : <expression>
+lambda <参数> : <表达式>
 ```
 
-The body must be a single expression - an expression, not a statement.
+主体必须是单个表达式，而不是语句。
 
-> This difference is important. An expression returns a value, a statement does not.
+> 这很重要：表达式返回值，语句不返回。
 
-The simplest example of a lambda function is a function that doubles the value of a number:
+最简单的 lambda 函数示例是将数字的值加倍：
 
 ```python
 lambda num : num * 2
 ```
 
-Lambda functions can accept more arguments:
+Lambda 函数可以接受更多参数：
 
 ```python
 lambda a, b : a * b
 ```
 
-Lambda functions cannot be invoked directly, but you can assign them to variables:
+无法直接调用 Lambda 函数，但您可以将它们分配给变量：
 
 ```python
 multiply = lambda a, b : a * b
 
-print(multiply(2, 2)) # 4
+print(multiply(2, 2))  # 4
 ```
 
-The utility of lambda functions comes when combined with other Python functionality, for example in combination with `map()`, `filter()` and `reduce()`.
+Lambda 函数的实用性在于与其它 Python 功能结合使用，例如结合`map()`、`filter()`和`reduce()`。
 
-## Recursion in Python
+<h2 id="recursion-in-python">Python递归</h2>
 
-A function in Python can call itself. That's what recursion is. And it can be pretty useful in many scenarios.
+Python 中的函数可以调用自身，这就是递归。递归在许多情况下都非常有用。
 
-The common way to explain recursion is by using the factorial calculation.
+解释递归的常用方法是实现阶乘计算。
 
-The factorial of a number is the number `n` mutiplied by `n-1`, multiplied by `n-2`... and so on, until reaching the number `1`:
+一个数字`n`的阶乘是数字`n`乘以`n-1`，再乘以`n-2`，以此类推，直到数字`1`：
 
 ```
 3! = 3 * 2 * 1 = 6
@@ -2286,37 +2289,37 @@ The factorial of a number is the number `n` mutiplied by `n-1`, multiplied by `n
 5! = 5 * 4 * 3 * 2 * 1 = 120
 ```
 
-Using recursion we can write a function that calculates the factorial of any number:
+使用递归，我们可以编写一个计算任意数阶乘的函数：
 
 ```python
 def factorial(n):
     if n == 1: return 1
     return n * factorial(n-1)
 
-print(factorial(3)) #   6
-print(factorial(4)) #  24
-print(factorial(5)) # 120
+print(factorial(3))  # 6
+print(factorial(4))  # 24
+print(factorial(5))  # 120
 ```
 
-If inside the `factorial()` function you call `factorial(n)` instead of `factorial(n-1)`, you are going to cause an infinite recursion. Python by default will halt recursions at 1000 calls, and when this limit is reached, you will get a `RecursionError` error.
+如果在 `factorial()` 函数中调用`factorial(n)`而不是`factorial(n-1)`，则会导致无限递归。 默认情况下，Python 将在 1000 次调用时停止递归，此时您将收到`RecursionError`错误。
 
-Recursion is helpful in many places, and it helps us simplify our code when there's no other optimal way to do it, so it's good to know this technique.
+递归在很多地方都有用，它可以帮助我们在没有其它更好方法的情况下简化代码，所以了解这种技术是件好事。
 
-## Nested Functions in Python
+<h2 id="nested-functions-in-python">Python嵌套函数</h2>
 
-Functions in Python can be nested inside other functions.
+Python 中函数可以嵌套在其它函数中。
 
-A function defined inside a function is visible only inside that function.
+在函数内部定义的函数仅在该函数内可见。
 
-This is useful to create utilities that are useful to a function, but not useful outside of it.
+这对于创建在函数内有用，但在函数外无用的程序很有用。
 
-You might ask: why should I be "hiding" this function, if it does no harm?
+您可能会问：如果它没有害处，我为什么要“隐藏”这个功能？
 
-One, because it's always best to hide functionality that's local to a function, and is not useful elsewhere.
+因为最好隐藏函数本地并且在其它地方没有用的功能。
 
-Also, because we can make use of closures (more on this later).
+另外，这样我们可以使用闭包（稍后会详细介绍）。
 
-Here is an example:
+这里是一个例子：
 
 ```python
 def talk(phrase):
@@ -2330,7 +2333,7 @@ def talk(phrase):
 talk('I am going to buy the milk')
 ```
 
-If you want to access a variable defined in the outer function from the inner function, you first need to declare it as `nonlocal`:
+如果要从内部函数访问外部函数中定义的变量，首先需要将其声明为`nonlocal`：
 
 ```python
 def count():
@@ -2346,13 +2349,14 @@ def count():
 count()
 ```
 
-This is useful especially with closures, as we'll see next.
+这对闭包特别有用，我们将在接下来的说明中看到。
 
-## Closures in Python
 
-If you return a nested function from a function, that nested function has access to the variables defined in that function, even if that function is not active any more.
+<h2 id="closures-in-python">Python闭包</h2>
 
-Here is a simple counter example.
+如果函数返回一个嵌套函数，则该嵌套函数可以访问在该函数中定义的变量，即使该函数不再处于运行状态。
+
+这是一个简单的计数器示例。
 
 ```python
 def counter():
@@ -2367,20 +2371,20 @@ def counter():
 
 increment = counter()
 
-print(increment()) # 1
-print(increment()) # 2
-print(increment()) # 3
+print(increment())  # 1
+print(increment())  # 2
+print(increment())  # 3
 ```
 
-We return the `increment()` inner function, and that still has access to the state of the `count` variable even though the `counter()` function has ended.
+我们返回`increment()`这个内部函数，即使`counter()`函数已经结束，`increment`仍然可以访问`count`变量的状态。
 
-## Decorators in Python
+<h2 id="decorators-in-python">Python装饰器</h2>
 
-Decorators are a way to change, enhance, or alter in any way how a function works.
+装饰器是一种可以以任何方式增强或改变函数工作方式的方法。
 
-Decorators are defined with the `@` symbol followed by the decorator name, just before the function definition.
+装饰器是用`@`符号定义的，`@`后面跟装饰器名称，（装饰器用在）在函数定义之前。
 
-Example:
+例子：
 
 ```python
 @logtime
@@ -2388,11 +2392,11 @@ def hello():
     print('hello!')
 ```
 
-This `hello` function has the `logtime` decorator assigned.
+这个`hello`函数分配了`logtime`装饰器。
 
-Whenever we call `hello()`, the decorator is going to be called.
+每当我们调用`hello()`时，装饰器也都会被调用。
 
-A decorator is a function that takes a function as a parameter, wraps the function in an inner function that performs the job it has to do, and returns that inner function. In other words:
+装饰器是一个以函数为参数的函数，它将（被装饰的）函数包装在内部函数中，该内部函数执行必须完成的工作，然后返回这个内部函数。 换句话说：
 
 ```python
 def logtime(func):
@@ -2404,25 +2408,25 @@ def logtime(func):
     return wrapper
 ```
 
-## Docstrings in Python
+<h2 id="docstrings-in-python">Python文档字符串</h2>
 
-Documentation is hugely important, not just to communicate to other people what the goal of a function/class/method/module is, but it also communicates it to yourself.
+文档非常重要，不仅可以用于告知其他人（自己写的）函数/类/方法/模块的目标是什么，还可以帮助您（在较长时间后）理解自己的代码。
 
-When you come back to your code 6 or 12 months from now, you might not remember all the knowledge you are holding in your head. At that point, reading your code and understanding what it is supposed to do will be much more difficult.
+当您在 6 或 12 个月后会看您的的代码时，可能不记得写代码时脑海中的所有想法。这个时候阅读您的代码并理解它在做什么将变得非常困难。
 
-Comments are one way to help yourself (and others) out:
+注释是帮助自己（和他人）摆脱这种困境的一种方式：
 
 ```python
 # this is a comment
 
-num = 1 #this is another comment
+num = 1  # this is another comment
 ```
 
-Another way is to use **docstrings**.
+另一种方法是使用**docstrings**。
 
-The utility of docstrings is that they follow conventions. As such they can be processed automatically.
+文档字符串的实用性在于它们遵循约定，因此它们可以被自动处理。
 
-This is how you define a docstring for a function:
+这是您为函数定义文档字符串的方式：
 
 ```python
 def increment(n):
@@ -2430,7 +2434,7 @@ def increment(n):
     return n + 1
 ```
 
-This is how you define a docstring for a class and a method:
+这是为类和方法定义文档字符串的方式：
 
 ```python
 class Dog:
@@ -2445,7 +2449,7 @@ class Dog:
         print('WOF!')
 ```
 
-Document a module by placing a docstring at the top of the file, for example supposing this is `dog.py`:
+通过在文件顶部放置一个文档字符串来解释记录一个模块，例如，假设这是`dog.py`：
 
 ```python
 """Dog module
@@ -2468,7 +2472,7 @@ class Dog:
         print('WOF!')
 ```
 
-Docstrings can span multiple lines:
+文档字符串可以跨越多行：
 
 ```python
 def increment(n):
@@ -2478,9 +2482,9 @@ def increment(n):
     return n + 1
 ```
 
-Python will process those and you can use the `help()` global function to get the documentation for a class/method/function/module.
+Python 将处理这些（文档字符串），您可以使用全局函数`help()`来获取类/方法/函数/模块的文档。
 
-For example calling `help(increment)` will give you this:
+例如调用`help(increment)`会给返回这个：
 
 ```
 Help on function increment in module
@@ -2491,19 +2495,21 @@ increment(n)
     a number
 ```
 
-There are many different standards to format docstrings, and you can choose to adhere to your favorite one.
+格式化文档字符串有许多不同的标准，您可以选择遵守自己喜欢的标准。
 
-I like Google's standard: [https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)
+我喜欢谷歌的标准： [https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings](https://github.com/google/styleguide/blob/gh-pages/pyguide.md#38-comments-and-docstrings)
 
-Standards allow to have tools to extract docstrings and automatically generate documentation for your code.
+（遵循）标准可以使用工具来提取文档字符串并自动为您的代码生成文档。
 
-## Introspection in Python
 
-Functions, variables, and objects can be analyzed using **introspection**.
 
-First, using the `help()` global function we can get the documentation if provided in form of docstrings.
+<h2 id="introspection-in-python">Python反射</h2>
 
-Then, you can use print() to get information about a function:
+可以使用**反射**来分析函数、变量和对象。
+
+首先，使用全局函数`help()`（如果以文档字符串的形式提供）我们可以获得文档。
+
+然后，您可以使用 print()获取有关函数的信息：
 
 ```python
 def increment(n):
@@ -2514,7 +2520,7 @@ print(increment)
 # <function increment at 0x7f420e2973a0>
 ```
 
-or an object:
+或者（获取）对象（的信息）：
 
 ```python
 class Dog():
@@ -2528,7 +2534,7 @@ print(roger)
 # <__main__.Dog object at 0x7f42099d3340>
 ```
 
-The `type()` function gives us the type of an object:
+我们可以使用`type()`函数获取对象的类型：
 
 ```python
 print(type(increment))
@@ -2544,7 +2550,7 @@ print(type('test'))
 # <class 'str'>
 ```
 
-The `dir()` global function lets us find out all the methods and attributes of an object:
+全局函数`dir()`可以找出对象的所有方法和属性：
 
 ```python
 print(dir(roger))
@@ -2552,120 +2558,123 @@ print(dir(roger))
 # ['__class__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', 'bark']
 ```
 
-The `id()` global function shows us the location in memory of any object:
+全局函数`id()`显示任意对象在内存中的位置：
 
 ```python
-print(id(roger)) # 140227518093024
-print(id(1))     # 140227521172384
+print(id(roger))  # 140227518093024
+print(id(1))  # 140227521172384
 ```
 
-It can be useful to check if two variables point to the same object.
+这对于检查两个变量是否指向同一个对象会很有用。
 
-The `inspect` standard library module gives us more tools to get information about objects, and you can check it out here: [https://docs.python.org/3/library/inspect.html](https://docs.python.org/3/library/inspect.html)
+`inspect`标准库模块为我们提供了更多获取对象信息的工具，您可以在[这里](https://docs.python.org/3/library/inspect.html)查看
 
-## Annotations in Python
 
-Python is dynamically typed. We do not have to specify the type of a variable or function parameter, or a function return value.
+<h2 id="annotations-in-python">Python注解</h2>
 
-Annotations allow us to (optionally) do that.
+Python 是动态类型的，我们不必指定变量、函数参数或函数返回值的类型。
 
-This is a function without annotations:
+注解允许我们（可选地）这样做。
+
+这是一个没有注解的函数：
 
 ```python
 def increment(n):
     return n + 1
 ```
 
-This is the same function with annotations:
+这是带有注解的相同函数：
 
 ```python
 def increment(n: int) -> int:
     return n + 1
 ```
 
-You can also annotate variables:
+您还可以注解变量：
 
 ```python
 count: int = 0
 ```
 
-Python will ignore those annotations. A separate tool called [`mypy`](http://mypy-lang.org/) can be run standalone, or integrated by IDE like VS Code or PyCharm to automatically check for type errors statically, while you are coding. It will also help you catch type mismatch bugs before even running the code.
+Python 将忽略这些注解。 一个名为[`mypy`](http://mypy-lang.org/)的工具可以独立运行，也可以集成到 VS Code 或 PyCharm 等 IDE 中，以便在您编码时自动检查静态类型错误。它还将帮助您在运行代码之前捕获类型不匹配的错误。
 
-A great help especially when your software becomes large and you need to refactor your code.
+这是一个很大的帮助，尤其是当您的软件规模变得很大并且需要重构代码时。
 
-## Exceptions in Python
 
-It's important to have a way to handle errors, and Python gives us exception handling to do so.
 
-If you wrap lines of code into a `try:` block:
+<h2 id="exceptions-in-python">Python异常</h2>
+
+处理错误很重要，Python 为我们提供了异常处理来做到这一点。
+
+如果将代码行包装到`try:`块中：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 ```
 
-If an error occurs, Python will alert you and you can determine which kind of error occurred using a `except` blocks:
+如果发生错误，Python 会提醒您，您可以使用`except`块确认发生了哪种错误：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except <ERROR2>:
-    # handler <ERROR2>
+    # 处理 <ERROR2>
 ```
 
-To catch all exceptions you can use `except` without any error type:
+要捕获所有异常，您可以使用不包含任何错误类型的`except`块：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except:
-    # catch all other exceptions
+    # 捕获其它所有错误
 ```
 
-The `else` block is run if no exceptions were found:
+如果没有发现异常，则将运行`else`块：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except <ERROR2>:
-    # handler <ERROR2>
+    # 处理 <ERROR2>
 else:
-    # no exceptions were raised, the code ran successfully
+    # 没有抛出异常，代码成功运行
 ```
 
-A `finally` block lets you perform some operation in any case, regardless of whether an error occurred or not:
+`finally`块允许您在任何情况下执行某些操作，无论是否发生错误：
 
 ```python
 try:
-    # some lines of code
+    # 一些代码
 except <ERROR1>:
-    # handler <ERROR1>
+    # 处理 <ERROR1>
 except <ERROR2>:
-    # handler <ERROR2>
+    # 处理 <ERROR2>
 else:
-    # no exceptions were raised, the code ran successfully
+    # 没有抛出异常，代码成功运行
 finally:
-    # do something in any case
+    # 任何情况下都将运行的代码
 ```
 
-The specific error that's going to occur depends on the operation you're performing.
+将发生的具体错误取决于您正在执行的操作。
 
-For example if you are reading a file, you might get an `EOFError`. If you divide a number by zero you will get a `ZeroDivisionError`. If you have a type conversion issue you might get a `TypeError`.
+例如，如果您正在读取一个文件，可能会得到一个`EOFError`。如果您将一个数除以零，将会得到一个`ZeroDivisionError`。如果发生类型转换问题，您可能会得到一个`TypeError`。
 
-Try this code:
+试试这个代码：
 
 ```python
 result = 2 / 0
 print(result)
 ```
 
-The program will terminate with an error:
+程序将因错误而终止：
 
 ```
 Traceback (most recent call last):
@@ -2674,9 +2683,9 @@ Traceback (most recent call last):
 ZeroDivisionError: division by zero
 ```
 
-and the lines of code after the error will not be executed.
+并且错误（代码行）之后的代码将不会被执行。
 
-Adding that operation in a `try:` block lets us recover gracefully and move on with the program:
+在`try:`块中添加该操作可以让我们优雅地恢复（错误）并继续执行程序：
 
 ```python
 try:
@@ -2686,16 +2695,16 @@ except ZeroDivisionError:
 finally:
     result = 1
 
-print(result) # 1
+print(result)  # 1
 ```
 
-You can raise exceptions in your own code, too, using the `raise` statement:
+您也可以在自己的代码中使用`raise`语句引发异常：
 
 ```python
 raise Exception('An error occurred!')
 ```
 
-This raises a general exception, and you can intercept it using:
+这会抛出一个异常，您可以使用以下方法拦截它：
 
 ```python
 try:
@@ -2704,14 +2713,14 @@ except Exception as error:
     print(error)
 ```
 
-You can also define your own exception class, extending from Exception:
+您还可以扩展 Exception 来定义自己的异常类：
 
 ```python
 class DogNotFoundException(Exception):
     pass
 ```
 
-> `pass` here means "nothing" and we must use it when we define a class without methods, or a function without code, too.
+> 这里`pass`的意思是“什么都没有”，当我们定义一个没有方法的类或没有代码的函数时，我们必须使用它。
 
 ```python
 try:
@@ -2720,15 +2729,15 @@ except DogNotFoundException:
     print('Dog not found!')
 ```
 
-## The `with` Statement in Python
+<h2 id="the-with-statement-in-python">Python中with语句</h2>
 
-The `with` statement is very helpful to simplify working with exception handling.
+`with`语句对于简化异常处理非常有帮助。
 
-For example when working with files, each time we open a file, we must remember to close it.
+例如，在处理文件时，每次打开文件都必须记得关闭它。
 
-`with` makes this process transparent.
+`with`使这个过程变得透明（即对程序员不可见）。
 
-Instead of writing:
+（使用`with`）可以不像下面这样写：
 
 ```python
 filename = '/Users/flavio/test.txt'
@@ -2741,7 +2750,7 @@ finally:
     file.close()
 ```
 
-You can write:
+您可以这样写：
 
 ```python
 filename = '/Users/flavio/test.txt'
@@ -2751,88 +2760,88 @@ with open(filename, 'r') as file:
     print(content)
 ```
 
-In other words we have built-in implicit exception handling, as `close()` will be called automatically for us.
+换句话说，Python 有内置的隐式异常处理，其会自动为我们调用`close()`。
 
-`with` is not just helpful to work with files. The above example is just meant to introduce its capabilities.
+上面的例子只是为了介绍`with`的功能，而不是说它仅在处理文件方面对我们有帮助。
 
-## How to Install 3rd Party Packages in Python Using `pip`
+<h2 id="how-to-install-3rd-party-packages-in-python-using-pip">Python如何使用pip安装第三方包</h2>
 
-The Python standard library contains a huge number of utilities that simplify our Python development needs, but nothing can satisfy _everything_.
+Python 标准库包含大量实用的程序，可以简化我们的开发需求，但是没有什么能满足_一切_。
 
-That's why individuals and companies create packages, and make them available as open source software for the entire community.
+这就是个人和公司创建第三方包，并将它们作为开源软件提供给整个社区的原因。
 
-Those modules are all collected in a single place, the **Python Package Index** available at [https://pypi.org](https://pypi.org), and they can be installed on your system using `pip`.
+这些模块都收集在一个地方，可在[https://pypi.org](https://pypi.org) 获得**Python 包索引**，并且可以使用`pip`将它们（第三方模块）安装在您的系统上。
 
-There are more than 270,000 packages freely available at the time of writing.
+在撰写本文时，有超过 270,000 个免费第三方包可供我们使用。
 
-> You should have `pip` already installed if you followed the Python installation instructions.
+> 如果您按照 Python 安装说明进行操作，您应该已经安装了 `pip`。
 
-Install any package using the command `pip install`:
+使用命令`pip install`可以安装任何第三方包：
 
 ```
 pip install <package>
 ```
 
-or, if you do have troubles, you can also run it through `python -m`:
+或者，如果您确实遇到了问题，也可以通过`python -m`运行它：
 
 ```
 python -m pip install <package>
 ```
 
-For example you can install the [`requests`](https://pypi.org/project/requests/) package, a popular HTTP library:
+例如，您可以安装 [`requests`](https://pypi.org/project/requests/) 包，这是一个流行的 HTTP 库：
 
 ```
 pip install requests
 ```
 
-and once you do, it will be available for all your Python scripts, because packages are installed globally.
+一旦这样做，它就可以用于您所有的 Python 脚本，因为包是全局安装的。
 
-The exact location depends on your operating system.
+（第三方包安装的）具体位置取决于您的操作系统。
 
-On macOS, running Python 3.9, the location is `/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages`.
+在运行 Python 3.9 的 macOS 上，位置是`/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages`。
 
-Upgrade a package to its latest version using:
+使用以下命令将第三方包升级到最新版本：
 
 ```
 pip install –U <package>
 ```
 
-Install a specific version of a package using:
+使用以下命令安装指定版本的第三方包：
 
 ```
 pip install <package>==<version>
 ```
 
-Uninstall a package using:
+使用以下命令卸载一个第三方包：
 
 ```
 pip uninstall <package>
 ```
 
-Show an installed package details, including version, documentation website and author information using:
+使用以下命令显示已安装第三方包的详细信息，包括版本、文档网站和作者信息：
 
 ```
 pip show <package>
 ```
 
-## List Comprehensions in Python
+<h2 id="list-comprehensions-in-python">Python列表推导式</h2>
 
-List comprehensions are a way to create lists in a very concise way.
+列表推导式以一种非常简洁的方式创建列表。
 
-Suppose you have a list:
+假设有一个列表：
 
 ```python
 numbers = [1, 2, 3, 4, 5]
 ```
 
-You can create a new list using a list comprehension, composed by the `numbers` list elements, power 2:
+您可以使用列表推导式创建一个新列表，该列表由`numbers`列表元素的 2 次幂组成：
 
 ```python
 numbers_power_2 = [n**2 for n in numbers]
 # [1, 4, 9, 16, 25]
 ```
 
-List comprehensions are a syntax that's sometimes preferred over loops, as it's more readable when the operation can be written on a single line:
+列表推导是一种有时比循环更受欢迎的语法，因为当（有些）操作写在一行时其更具可读性：
 
 ```python
 numbers_power_2 = []
@@ -2840,17 +2849,17 @@ for n in numbers:
     numbers_power_2.append(n**2)
 ```
 
-and over `map()`:
+同样有时也比`map()`更好：
 
 ```python
 numbers_power_2 = list(map(lambda n : n**2, numbers))
 ```
 
-## Polymorphism in Python
+<h2 id="polymorphism-in-python">Python多态</h2>
 
-Polymorphism generalizes a functionality so it can work on different types. It's an important concept in object-oriented programming.
+多态将一个功能泛化，因此它可以在不同的类型上工作。多态是面向对象编程中的一个重要概念。
 
-We can define the same method on different classes:
+我们可以在不同的类上定义相同的方法：
 
 ```python
 class Dog:
@@ -2862,7 +2871,7 @@ class Cat:
         print('Eating cat food')
 ```
 
-Then we can generate objects and we can call the `eat()` method regardless of the class the object belongs to, and we'll get different results:
+然后我们可以生成对象，无论对象属于哪个类，我们都可以调用`eat()`方法，但是会得到不同的结果：
 
 ```python
 animal1 = Dog()
@@ -2872,13 +2881,49 @@ animal1.eat()
 animal2.eat()
 ```
 
-We built a generalized interface and we now do not need to know that an animal is a Cat or a Dog.
+我们构建了一个通用接口，不需要知道动物是猫还是狗。
 
-## Operator Overloading in Python
+译者：这个例子不太好，不完整，看下面这个例子：
 
-Operator overloading is an advanced technique we can use to make classes comparable and to make them work with Python operators.
+```python
+In [1]: class Animal:
+   ...:     def eat(self):
+   ...:         print("animal eating ...")
+   ...: 
 
-Let's take a class Dog:
+In [2]: class Dog(Animal):
+   ...:     def eat(self):
+   ...:         print("dog eating ...")
+   ...: 
+
+In [3]: class Cat(Animal):
+   ...:     def eat(self):
+   ...:         print("cat eating ...")
+   ...: 
+
+In [4]: a = Animal()
+
+In [5]: d = Dog()
+
+In [6]: c = Cat()
+
+In [7]: a.eat()
+animal eating ...
+
+In [8]: d.eat()
+dog eating ...
+
+In [9]: c.eat()
+cat eating ...
+```
+
+译者：多态实际上是看运行时对象具体的类型，在 Java 中，是可以这样写的`Animal dog = new Dog()`，即创建一个`Animal`对象`dog`，这是**编译**时，但是在**运行**时`dog.eat()`打印`dog eating ...`
+
+<h2 id="operator-overloading-in-python">Python运算符重载</h2>
+
+运算符重载是一种先进的技术，我们可以用来使类具有可比性，并使它们与 Python 运算符一起工作。
+
+让我们来创建一个类`Dog`：
 
 ```python
 class Dog:
@@ -2888,14 +2933,14 @@ class Dog:
         self.age = age
 ```
 
-Let's create 2 Dog objects:
+创建两个`Dog`对象：
 
 ```python
 roger = Dog('Roger', 8)
 syd = Dog('Syd', 7)
 ```
 
-We can use operator overloading to add a way to compare those 2 objects, based on the `age` property:
+我们可以使用运算符重载添加一种基于`age`属性的方法来比较这两个对象：
 
 ```python
 class Dog:
@@ -2907,79 +2952,81 @@ class Dog:
         return True if self.age > other.age else False
 ```
 
-Now if you try running `print(roger > syd)` you will get the result `True`.
+现在如果您尝试运行`print(roger > syd)`，将得到结果`True`。
 
-In the same way we defined `__gt__()` (which means greater than), we can define the following methods:
+与我们定义`__gt__()`（大于）的方式相同，我们可以定义以下方法：
 
--   `__eq__()` to check for equality
--   `__lt__()` to check if an object should be considered lower than another with the `<` operator
--   `__le__()` for lower or equal (`<=`)
--   `__ge__()` for greater or equal (`>=`)
--   `__ne__()` for not equal (`!=`)
+-   `__eq__()` 检查是否相等
+-   `__lt__()` 使用`<`操作符检查一个对象是否被认为低于另一个对象
+-   `__le__()` 表示小于或等于 (`<=`)
+-   `__ge__()` 表示大于或等于 (`>=`)
+-   `__ne__()` 表示不相等 (`!=`)
 
-Then you have methods to interoperate with arithmetic operations:
+然后还有使用算术运算符操作的方法：
 
--   `__add__()` respond to the `+` operator
--   `__sub__()` respond to the `–` operator
--   `__mul__()` respond to the `*` operator
--   `__truediv__()` respond to the `/` operator
--   `__floordiv__()` respond to the `//` operator
--   `__mod__()` respond to the `%` operator
--   `__pow__()` respond to the `**` operator
--   `__rshift__()` respond to the `>>` operator
--   `__lshift__()` respond to the `<<` operator
--   `__and__()` respond to the `&` operator
--   `__or__()` respond to the `|` operator
--   `__xor__()` respond to the `^` operator
+-   `__add__()` 响应`+`运算符
+-   `__sub__()` 响应`-`运算符
+-   `__mul__()` 响应`*`运算符
+-   `__truediv__()` 响应`/`运算符
+-   `__floordiv__()` 响应`//`运算符
+-   `__mod__()` 响应`%`运算符
+-   `__pow__()` 响应`**`运算符
+-   `__rshift__()` 响应`>>`运算符
+-   `__lshift__()` 响应`<<`运算符
+-   `__and__()` 响应`&`运算符
+-   `__or__()` 响应`|`运算符
+-   `__xor__()` 响应`^`运算符
 
-There are a few more methods to work with other operators, but you get the idea.
+还有其它几种方法可以与运算符一起使用，但您应该明白了（这种思想）。
 
-## Virtual Environments in Python
+<h2 id="virtual-environments-in-python">Python虚拟环境</h2>
 
-It's common to have multiple Python applications running on your system.
+在您的系统上运行多个 Python 应用程序是很常见的。
 
-When applications require the same module, at some point you will reach a tricky situation where an app needs a version of a module, and another app a different version of that same module.
+当应用程序需要相同的模块时，有时您会遇到一个棘手的情况，即一个应用程序需要一个版本模块，而另一个应用程序需要该模块的不同版本。
 
-To solve this, you use **virtual environments**.
+您可以使用**虚拟环境**解决这个问题。
 
-We'll use `venv`. Other tools work similarly, like `pipenv`.
+我们将使用`venv`。其它工具的工作方式类似，例如`pipenv`。
 
-Create a virtual environment using
+如下创建虚拟环境
 
 ```sh
 python -m venv .venv
 ```
 
-in the folder where you want to start the project, or where you already have an existing project.
+（该命令）在您要开始的项目的文件夹或者现有项目的文件夹（的根目录下运行）。
 
-Then run
+译者：项目的根目录即其本身，例如一个项目 FCC 在`/Users/abc/projects/FCC`，那么该项目的根目录就是`/Users/abc/projects/FCC/`
+
+然后运行
 
 ```sh
 source .venv/bin/activate
 ```
 
-> Use `source .venv/bin/activate.fish` on the Fish shell
+> （如果是）在 Fish shell 上，使用 `source .venv/bin/activate.fish`
 
-Executing the program will activate the Python virtual environment. Depending on your configuration you might also see your terminal prompt change.
+执行这个命令将激活 Python 虚拟环境。根据您的配置，可能还会看到终端提示发生变化。
 
-Mine changed from
+我的从
 
 `➜ folder`
 
-to
+变成
 
 `(.venv) ➜ folder`
 
-Now running `pip` will use this virtual environment instead of the global environment.
+现在运行`pip`将使用这个虚拟环境而不是全局环境。
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
-Thanks a lot for reading this book.
+非常感谢您阅读本书。
 
-I hope it will inspire you to learn more about Python.
+我希望它能鼓励您更多去地了解 Python。
 
-For more on Python and programming tutorials in general, check out my blog [flaviocopes.com](https://flaviocopes.com).
+有关 Python 和一般编程教程的更多信息，请查看我的博客 [flaviocopes.com](https://flaviocopes.com)。
 
-Send any feedback, errata, or opinions at [mailto:flavio@flaviocopes.com](mailto:flavio@flaviocopes.com), and you can reach me on Twitter [@flaviocopes](https://twitter.com/flaviocopes).
+在[mailto:flavio@flaviocopes.com](mailto:flavio@flaviocopes.com) 发送任何反馈、勘误或意见，您可以在 Twitter[@flaviocopes](https://twitter.com/flaviocopes) 上与我联系 .
 
-> Note: You can [get a PDF, ePub and Mobi version of this Python Handbook](https://flaviocopes.com/page/python-handbook/)
+> 请注意：您可以[获取此 Python 手册的 PDF、ePub 和 Mobi 版本](https://flaviocopes.com/page/python-handbook/)

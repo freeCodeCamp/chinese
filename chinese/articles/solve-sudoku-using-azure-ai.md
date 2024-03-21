@@ -1,118 +1,117 @@
 > -  原文地址：[How to Solve a Sudoku Puzzle Using Azure AI](https://www.freecodecamp.org/news/solve-sudoku-using-azure-ai/)
 > -  原文作者：[Ankit SharmaAnkit Sharma](https://www.freecodecamp.org/news/author/ankitsharmablog/)
-> -  译者：
+> -  译者：HeZean
 > -  校对者：
 
-![How to Solve a Sudoku Puzzle Using Azure AI](https://images.unsplash.com/photo-1536518138303-2c25eb218e28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDczfHxudW1iZXJzfGVufDB8fHx8MTYxNzY1ODEzNw&ixlib=rb-1.2.1&q=80&w=2000)
+![用 Azure AI 解决数独问题](https://images.unsplash.com/photo-1536518138303-2c25eb218e28?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDczfHxudW1iZXJzfGVufDB8fHx8MTYxNzY1ODEzNw&ixlib=rb-1.2.1&q=80&w=2000)
 
-In this article, we are going to create a sudoku solver with the help of Azure Form Recognizer, an AI-powered document extraction service.
+这篇文章将带你使用 Azure 表单识别器创建一个数独解题器，Azure 表单识别器是一个由 AI 驱动的文档提取服务。
 
-The application will allow users to upload an image of the sudoku table. We will extract the data from the image, and then implement the sudoku solving algorithm on it.
+我们的程序将首先让用户上传一张数独表的图片，接下来我们将从图像中提取数据，然后基于此数据实现数独解题算法。
 
-We will use .NET for the backend, Angular for the front end, and Angular material for styling the application.
+我们将在后端使用 .NET，在前端使用 Angular，并用 Angular material 来设计程序的 UI 风格。
 
-You can see a working demo of the application below.
+下面是此软件的一个演示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/SudokuSolver.gif)
 
-## Prerequisites
+## 准备
 
--   Install the latest LTS version of Node.JS from [https://nodejs.org/en/download/](https://nodejs.org/en/download/)
--   Install the Angular CLI from [https://cli.angular.io/](https://cli.angular.io/)
--   An Azure subscription account. You can create a free Azure account at [https://azure.microsoft.com/en-in/free/](https://azure.microsoft.com/en-in/free/)
--   Install the .NET Core 5.0 SDK from [https://dotnet.microsoft.com/download/dotnet/5.0](https://dotnet.microsoft.com/download/dotnet/5.0)
--   Install the latest version of Visual Studio 2019 from [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/)
+-   从 [https://nodejs.org/zh-cn/download/](https://nodejs.org/zh-cn/download/) 下载并安装最新的 LTS 版本的 Node.js
+-   从 [https://cli.angular.io/](https://cli.angular.io/) 下载并安装 Angular CLI
+-   一个 Azure 订阅账号。你可以在 [https://azure.microsoft.com/zh-cn/free/](https://azure.microsoft.com/zh-cn/free/) 创建一个免费的 Azure 账号
+-   从 [https://dotnet.microsoft.com/zh-cn/download/dotnet/5.0](https://dotnet.microsoft.com/zh-cn/download/dotnet/5.0) 下载并安装 .NET Core 5.0 SDK
+-   从 [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/) 下载并安装最新版本的 Visual Studio 2019（译者注：已推出了更新版本的 Visual Studio 2022）
 
-## Source Code
+## 源代码
 
-You can get the source code from [GitHub](https://github.com/AnkitSharma-007/Azure-AI-Sudoku-solver).
+你可以在 [GitHub](https://github.com/AnkitSharma-007/Azure-AI-Sudoku-solver) 上获取源代码。
 
-## What is Azure Form Recognizer Cognitive Service?
+## 什么是 Azure 表单识别器认知服务？
 
-The [Azure Form Recognizer](https://azure.microsoft.com/en-in/services/cognitive-services/form-recognizer/) cognitive service allows us to build automated data processing software using machine learning technology. It lets us extract text, key/value pairs, selection marks, tables, and structure from our documents.
+得益于 [Azure 表单识别器](https://azure.microsoft.com/zh-cn/services/form-recognizer/)认知服务，我们可以使用机器学习技术构建自动数据处理软件。它能从文档中提取文本、键-值对、选择标记、表格和结构。
 
-We can easily invoke the Form Recognizer models with the help of a REST API or client library SDKs.
+在 REST API 或客户端库 SDK 的帮助下，我们可以轻松地调用表单识别器模型。
 
-The Form Recognizer cognitive service provides the following features:
+表单识别器认知服务提供了以下功能：
 
--   **Prebuilt models**: We can use the prebuilt models to extract data from the unique document type such as invoices, receipts, IDs, and business cards.
--   **Custom models**: we can extract text, key/value pairs, selection marks, and table data from forms using the custom models. However, we need to train the custom models using our data so that it suits our custom needs.
--   **Layout API**: It allows us to extract text, selection marks, and table structures from the documents.
+-   **预构建模型**：我们可以使用预先建立的模型，从独特的文件类型中提取数据，比如发票、收据、身份证和名片。
+-   **自定义模型**：我们可以使用自定义模型从表单中提取文本、键-值对、选择标记和表格数据。但我们需要使用自己的数据来训练自定义模型，使其适合我们的自定义需求。
+-   **布局 API**：它允许我们从文件中提取文本、选择标记和表格结构。
 
-In this article, we are going to use the layout API to extract content from the image of the sudoku table that the user uploads.
+在这篇文章中，我们将使用布局 API 从用户上传的数独表图片中提取内容。
 
-## How to Create the Azure Form Recognizer Cognitive Service Resource
+## 如何创建 Azure 表单识别器认知服务资源
 
-Login to the Azure portal and search for the cognitive services in the search bar and click on the result. On the next screen, click on the Create button. It will open the cognitive services marketplace page. Search for the Form Recognizer in the search bar and click on the “Form Recognizer” card from the search result.
+登录 Azure 门户，在搜索栏中搜索“认知服务”并点击结果。在下一个屏幕上，点击“创建”按钮。这将打开认知服务市场的页面。在搜索栏中搜索“表单识别器”，并点击搜索结果中的“表单识别器”选项。
 
-This will open the Form Recognizer API page. Click on the Create button to create a new Form Recognizer resource. Refer to the image shown below.
+这将打开表单识别器 API 页面。点击“创建”按钮来新建一个表单识别器资源。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateFR.png)
 
-On the Create Form Recognizer page, fill in the details as indicated below.
+在创建表格识别器的页面中，按照下面的指引填写详细信息。
 
--   **Subscription**: Select the subscription type from the dropdown.
--   **Resource group**: Select an existing resource group or create a new one.
--   **Region**: Choose the region which is right for you.
--   **Name**: Give a unique name to your resource.
--   **Pricing tier**: Select the pricing tier you want.
+-   **订阅 / Subscription**：从下拉菜单中选择订阅类型。
+-   **资源组 / Resource group**：选择一个现有的资源组或新建一个资源组。
+-   **地区 / Region**：选择你所在的地区。
+-   **名称 / Name**：为你的资源起一个独特的名字。
+-   **定价 / Pricing tier**：选择你想要的定价级别。
 
-Click on the “Review +Create” button. Refer to the image shown below.
+点击“检查并创建”按钮。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/ConfigureFR.png)
 
-On the next page, check the terms of use, verify the information which you have provided, and then click on the “Create” button.
+在下一个页面，勾选确认使用条款，检查核对你所提供的信息，然后点击“创建”按钮。
 
-After your resource is successfully deployed, click on the “Go to resource” button. Click on the “Keys and the endpoint” link on the menu on the left. Refer to the image shown below.
+在你的资源被成功部署后，点击“转到资源”按钮。点击左边菜单上的“密钥和端点”链接。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/FRKeys.png)
 
-Make a note of the endpoint and any one of the keys provided. We will be using these in the latter part of this article to invoke the Layout API of the Form recognizer service from the .NET code.
+记下端点和页面上提供的任意一个密钥。我们将在本文的后半部分使用这些来从 .NET 代码中调用表单识别器服务的布局 API。
 
-## How to Create the ASP.NET Core Application
+## 如何创建 ASP.NET Core 程序
 
-Open Visual Studio 2019 and click on “Create a new Project”. A “Create a new Project” dialog will open. Select “ASP.NET Core with Angular” and click on Next. Refer to the image shown below.
+打开 Visual Studio 2019（或更新版本），点击“创建一个新项目”，这将打开一个“创建新项目”对话框。选择“ASP.NET Core with Angular”并点击“下一步”。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj.png)
 
-Now you will be at the “Configure your new project” screen. Provide the name for your application as `ngSudokuSolver`, and click on Next. Refer to the image shown below.
+现在你将进入“配置新项目”界面。为该应用程序设置一个名称，比如 `ngSudokuSolver`，并点击“下一步”。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj_1.png)
 
-On the additional information page, select the target framework as .NET 5.0 and set the authentication type to none as shown in the image below.
+在附加信息页面，选择目标框架为 .NET 5.0，并将认证类型设置为“无”，如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/CreateProj_2.png)
 
-This will create our project. The folder structure of the application looks like this:
+现在，我们创建了一个工程。这个程序的文件夹结构应与下图类似：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/Sol_Exp.png)
 
-The `ClientApp` folder contains the Angular code for our application. The Controllers folders will contain our API controllers. The angular components are present inside the `ClientApp\src\app` folder.
+`ClientApp` 文件夹中包含我们程序的 Angular 代码。`Controllers` 文件夹将包含 API 控制器。Angular 组件则位于 `ClientApp/src/app` 文件夹中。
 
-The default template contains few Angular components. These components will not affect our application, but for the sake of simplicity, we will delete `fetchdata` and `counter` folders from `ClientApp/src/app` folder. Also, remove the reference for these two components from the `app.module.ts` file.
+默认模板包含了一些 Angular 组件。这些组件不会影响我们的应用程序，但为了简单起见，我们将从 `ClientApp/src/app` 文件夹中删除 `fetchdata` 和 `counter` 文件夹。同时，从 `app.module.ts` 文件中删除对这两个组件的引用。
 
-## How to Install the Required NuGet Packages
+## 如何安装所需的 NuGet 包
 
-To install the package, navigate to Tools >> NuGet Package Manager >> Package Manager Console. It will open the Package Manager Console inside Visual Studio.
+要安装 NuGet 包，请打开 工具 >> NuGet 包管理器 >> 包管理器控制台。这将在 Visual Studio 内打开包管理器控制台。
 
-Run the following command to install the [Polly library](https://www.nuget.org/packages/Polly). This library allows you to express resilience and transient fault handling policies such as Retry, Circuit Breaker, Timeout, Bulkhead Isolation, and Fallback in a fluent and thread-safe manner.
+运行以下命令来安装 [Polly](https://www.nuget.org/packages/Polly)。这个库能让你以流畅和线程安全的方式表达弹性和瞬时故障处理策略，如重试、断路、超时、隔板隔离和回退。
 
 `Install-Package Polly -Version 7.2.1`
 
-Run the following command to install the [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/) package.
+运行以下命令来安装 [Newtonsoft.Json](https://www.nuget.org/packages/Newtonsoft.Json/)。
 
 `Install-Package Newtonsoft.Json -Version 13.0.1`
 
-## How to Create the RetryMessage Handler
+## 如何创建 RetryMessage Handler
 
-Right-click on the `ngSudokuSolver` project and select Add >> New Folder. Name the folder Models.
+右键单击 `ngSudokuSolver` 项目，选择 添加 >> 新文件夹。将该文件夹命名为 Models。
 
-Again, right-click on the Models folder and select Add >> Class to add a new class file. Put the name of your class as `HttpRetryMessageHandler.cs` and click "Add".
+接下来，右键单击 Models 文件夹并选择 添加 >> 类 来添加一个新的类文件。把这个类的名字定为 `HttpRetryMessageHandler.cs`，然后点击“添加”。
 
-Put the following code inside this class.
+将下面的代码放入这个类里面。
 
 ```C#
-
 using Newtonsoft.Json;
 using Polly;
 using System;
@@ -150,24 +149,23 @@ namespace ngSudokuSolver.Models
                 .ExecuteAsync(() => base.SendAsync(request, cancellationToken));
     }
 }
-
 ```
 
-We will use the RetryMessageHandler to retry the `sendAsync` call. We will retry the HTTP call if the status of the HttpResponseMessage is “running”.
+我们将使用 RetryMessageHandler 来重试对 `sendAsync` 的调用。如果 HttpResponseMessage 的状态是“运行中”，我们将重试 HTTP 调用。
 
-The maximum retry attempts is set to 7. On each retry, we will increase the duration of wait time by a power of 2. If the maximum number of retries has been exhausted and the HttpResponseMessage is not successful yet, we will return false.
+我们把最大重试次数设置为 7 次。每次重试时，都会增加等待时间，将其翻倍。如果所有重试次数已经用完，而 HttpResponseMessage 还没有成功，我们将返回 false。
 
-## How to Add the FormRecognizer Controller
+## 如何加入 FormRecognizer 控制器
 
-Now we will add a new controller to our application.
+我们现在在程序里加入一个新的控制器。
 
-Right-click on the Controllers folder and select Add >> New Item. An “Add New Item” dialog box will open.
+右键单击 Controllers 文件夹，选择 添加 >> 新项目。这将打开一个“添加新项目”的对话框。
 
-Select “Visual C#” from the left panel, then select “API Controller-Empty” from the templates panel and put the name as `FormRecognizerController.cs`. Click on Add. Refer to the image below.
+从左侧栏选择“Visual C#”，然后在模版栏中选择“API Controller-Empty”，并将其命名为 `FormRecognizerController.cs`，点击“添加”。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/AddController.png)
 
-Put the following code inside this class.
+将以下代码放入该类。
 
 ```C#
 using Microsoft.AspNetCore.Mvc;
@@ -304,55 +302,55 @@ namespace ngSudokuSolver.Controllers
 }
 ```
 
-In the constructor of the class, we have initialized the key and the endpoint URL for the formrecognizer API.
+在 FormRecognizerController 类的构造函数中，我们初始化了表单识别器 API 的密钥和端点 URL。
 
-The Post method will receive the image data as a file collection in the request body and return a two-dimensional array. We will convert the image data to a byte array and invoke the `GetSudokuBoardLayout` method. If we get a successful response and the JSON result is not empty, we will invoke the `GetSudokuBoardItems` method.
+上面的 Post 方法将接收请求体中作为文件集合的图像数据，并返回一个二维数组。我们将把图像数据转换为字节数组并调用 `GetSudokuBoardLayout` 方法。如果我们得到一个成功的响应并且 JSON 结果非空，我们将调用 `GetSudokuBoardItems` 方法。
 
-Inside the `GetSudokuBoardLayout` method, we will instantiate a new HttpClient. We will pass the subscription key in the header of the request.
+在 `GetSudokuBoardLayout` 方法中，我们将实例化一个新的 HttpClient。我们会在请求头中传递订阅密钥。
 
-When we use the formrecognizer API, we will get a status code as 202. This indicates that the service has accepted the request and will start processing later.
+当我们调用表单识别器 API 时，Azure 服务将返回状态码 202。这表明该服务已经接受了请求，并将在稍后开始处理。
 
-The response includes an "Operation-Location" header. The "Operation-Location" field contains the URL that we should use to get the result of the formrecognizer operation. The URL mentioned in the header will expire in 48 hours.
+响应包括一个“Operation-Location”首部。“Operation-Location”字段里的数据就我们将用来获取表单识别结果的 URL，这个 URL 会在 48 小时后过期。
 
-For the result of the formrecognizer service to be available, it requires a certain amount of time that depends on the length of the text.
+在获取表单识别结果前需要等待一段时间，等待时间的长短与文本的长度相关。
 
-This is where our RetryMessageHandler will be utilized. We will fetch the URL from the header and invoke the `GetJSON` method to fetch the JSON result.
+这里就要用到了我们前面配置的 RetryMessageHandler。我们将从“Operation-Location”首部获取 URL，并调用 `GetJSON` 方法来获取 JSON 结果。
 
-Inside the `GetJSON` method, we create the HttpClient and initialize it with our custom `HttpRetryMessageHandler`. This method will return the JSON response as a string.
+在 `GetJSON` 方法中，我们创建了一个 HttpClient，并用自定义的 `HttpRetryMessageHandler` 来初始化它。这个方法将以字符串的形式返回 JSON 响应。
 
-The `GetSudokuBoardItems` method will accept the JSON string. It will then iterate over the tables property of the JSON string to prepare the two-dimensional `sudokuArray`.
+`GetSudokuBoardItems` 方法接受 JSON 字符串。然后它将遍历 JSON 字符串中的 table 属性，以准备二维的 `sudokuArray`。
 
-## Now Let's Work on the Client Side of the Application
+## 现在，让我们开始实现程序的客户端部分
 
-The code for the client-side is available in the ClientApp folder. We will use Angular CLI to work with the client code.
+客户端的代码位于 ClientApp 文件夹中。我们将使用 Angular CLI 来处理客户端的代码。
 
-> Using Angular CLI is not mandatory. I am using Angular CLI here as it is user-friendly and straightforward. If you do not want to use CLI then you can create the files for components and services manually.
+> Angular CLI 并非你的唯一选择。本文中使用 Angular CLI 是因为它对用户友好且直接。如果你不想使用 CLI，你可以手动创建组件和服务的文件。
 
-Navigate to the `ngSudokuSolver\ClientApp` folder in your machine and open a command window. We will execute all our Angular CLI commands in this window.
+进入 `ngSudokuSolver/ClientApp` 文件夹并在此打开一个命令窗口。我们将在这个窗口中执行我们所有的 Angular CLI 命令。
 
-## How to Install Angular Material
+## 如何安装 Angular Material
 
-Run the following command to add Angular Material to the project.
+运行以下命令以将 Angular Material 添加到项目中。
 
 `ng add @angular/material`
 
-This command will install Angular Material to your project and then ask the following questions to determine which features to include:
+该命令将为你的项目安装 Angular Material，它会询问以下问题，以确定要包括哪些功能：
 
--   Choose a prebuilt theme name, or "custom" for a custom theme: We will select the Indigo/Pink theme.
--   Set up global Angular Material typography styles? (Y/n): Y
--   Set up browser animations for Angular Material? (Y/n): Y
+-   Choose a prebuilt theme name, or "custom" for a custom theme: **请选择 Indigo/Pink 主题**
+-   Set up global Angular Material typography styles? (Y/n): **Y**
+-   Set up browser animations for Angular Material? (Y/n): **Y**
 
-Refer to the image shown below:
+如下图所示：
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/ngMaterial.png)
 
-## How to Add the Module for Angular Material
+## 如何为 Angular Material 添加模块
 
-Run the following command to create a new module.
+运行以下命令来创建一个新的模块。
 
 `ng g m ng-material`
 
-Open the `src\app\ng-material\ng-material.module.ts` file and put the following code inside it.
+将下面的代码放入 `src\app\ng-material\ng-material.module.ts` 文件中。
 
 ```typescript
 import { NgModule } from '@angular/core';
@@ -381,11 +379,11 @@ const materialModules = [
 export class NgMaterialModule {}
 ```
 
-We are importing all the required modules for Angular material components that we'll use in this application. A separate module for Angular material will make the application easy to maintain.
+我们正在导入我们将在这个应用程序中使用的 Angular material 组件的所有必要模块。独立的 Angular material 模块将使该应用易于维护。
 
-Import the `NgMaterialModule` in the `app.module.ts` file as shown below:
+在 `app.module.ts` 文件中导入 `NgMaterialModule`，如下所示：
 
-```
+```typescript
 import { NgMaterialModule } from './ng-material/ng-material.module';
 
 @NgModule({
@@ -397,9 +395,9 @@ import { NgMaterialModule } from './ng-material/ng-material.module';
 })
 ```
 
-## How to Configure the Nav-bar of the App
+## 如何配置程序的导航栏
 
-Open `nav-menu.component.html` and put the following code inside it.
+打开 `nav-menu.component.html`，在里面放入以下代码。
 
 ```html
 <mat-toolbar color="primary" class="mat-elevation-z2">
@@ -413,20 +411,20 @@ Open `nav-menu.component.html` and put the following code inside it.
 </mat-toolbar>
 ```
 
-We have added the material toolbar and a button that will link to the base route of the application.
+现在，我们成功地在程序中加入了 Angular material 工具栏，和一个链接到程序根路由的按钮。
 
-## How to Create the Form Recognizer Service
+## 如何创建表单识别器服务
 
-We will create an Angular service that will invoke the Web API endpoints and pass the response to our component. Run the following command.
+我们将创建一个 Angular 服务，它将调用 Web API 端点并将响应传递给我们的组件。请运行下面的命令。
 
 `ng g s services\form-recognizer`
 
-This command will create a folder name as services and then create the following two files inside it:
+这个命令将创建一个名为 services 的文件夹，然后在里面创建以下两个文件：
 
--   form-recognizer.service.ts — the service class file.
--   form-recognizer.service.spec.ts — the unit test file for service.
+- form-recognizer.service.ts- 服务类文件
+- form-recognizer.service.spec.ts -服务的单元测试文件
 
-Open the `form-recognizer.service.ts` file and put the following code inside it.
+将下面的代码放入 `form-recognizer.service.ts` 文件中。
 
 ```typescript
 import { Injectable } from '@angular/core';
@@ -448,17 +446,17 @@ export class FormRecognizerService {
 }
 ```
 
-We have defined a variable baseURL that will hold the endpoint URL of our API. We will initialize the baseURL in the constructor and set it to the endpoint of the `FormRecognizerController`.
+我们定义了一个存有 API 的端点 URL 的变量 baseURL。我们会在构造器中初始化 baseURL，并将其赋值为 `FormRecognizerController` 的端点。
 
-The `getSudokuTableFromImage` method will send a Post request to the `FormRecognizerController` and supply the parameter of type FormData. It will fetch a two-dimensional array that denotes the items in the sudoku table.
+`getSudokuTableFromImage` 方法将向 `FormRecognizerController` 发送一个 Post 请求并提供 FormData 类型的参数。它将获取一个表示数独表的二维数组。
 
-## How to Update the Home Component
+## 如何更新主页组件
 
-Open `home.component.html` and put the following code in it.
+把下面的代码放入 `home.component.html` 中。
 
 ```html
 <div class="container">
-  <h1 class="display-4">Solve Sudoku using Azure AI</h1>
+  <h1 class="display-4"> 用 Azure AI 解决数独问题 </h1>
   <mat-divider></mat-divider>
   <div class="row mt-3">
     <div class="col-md-6">
@@ -473,7 +471,7 @@ Open `home.component.html` and put the following code in it.
           </table>
         </mat-card-content>
         <mat-card-actions>
-          <button type="button" mat-raised-button color="primary" (click)="SolveSudoku()"> Solve Sudoku </button>
+          <button type="button" mat-raised-button color="primary" (click)="SolveSudoku()"> 解数独 </button>
         </mat-card-actions>
       </mat-card>
     </div>
@@ -484,18 +482,18 @@ Open `home.component.html` and put the following code in it.
       <input type="file" (change)="uploadImage($event)" />
       <hr />
       <button mat-raised-button color="accent" (click)="GetSudokuTable()">
-        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span>Extract Sudoku Table
+        <span *ngIf="loading" class="spinner-border spinner-border-sm mr-1"></span> 提取数独表
       </button>
     </div>
   </div>
 </div>
 ```
 
-We have created a 9x9 table that denotes a sudoku board. We have defined a file upload control that will allow us to upload an image. After uploading the image, the preview of the image will be displayed using an `<img>` element.
+我们创建了一个 9x9 的数独表格。我们定义了一个支持上传图片的文件上传控件。上传图片后，`<img>` 元素中将显示图片的预览。
 
-Clicking on the “Extract Sudoku Table” button will fetch the content of the sudoku from the image and partially fill the table. Clicking on “Solve Sudoku” will solve the sudoku and update the table with the result.
+点击“提取数独表”按钮将从图像中获取数独的内容，并将这些数字填入表格中。点击“解数独”将解决数独，并将结果更新到表格中。
 
-Open the `home.component.ts` file and put the following code inside it.
+把以下代码放入 `home.component.ts` 中。
 
 ```typescript
 import { Component, OnDestroy, OnInit } from '@angular/core';
@@ -522,7 +520,7 @@ export class HomeComponent implements OnDestroy {
   private unsubscribe$ = new Subject();
 
   constructor(private formRecognizerService: FormRecognizerService) {
-    this.DefaultStatus = 'Maximum size allowed for the image is 4 MB';
+    this.DefaultStatus = '允许上传的最大图像大小为 4 MB';
     this.status = this.DefaultStatus;
     this.maxFileSize = 4 * 1024 * 1024; // 4MB
 
@@ -534,10 +532,10 @@ export class HomeComponent implements OnDestroy {
   uploadImage(event) {
     this.imageFile = event.target.files[0];
     if (this.imageFile.size > this.maxFileSize) {
-      this.status = `The file size is ${this.imageFile.size} bytes, this is more than the allowed limit of ${this.maxFileSize} bytes.`;
+      this.status = `文件大小为 ${this.imageFile.size} 比特，超出所允许的大小上限 ${this.maxFileSize} 比特。`;
       this.isValidFile = false;
     } else if (this.imageFile.type.indexOf('image') == -1) {
-      this.status = 'Please upload a valid image file';
+      this.status = '请上传有效的图片文件';
       this.isValidFile = false;
     } else {
       const reader = new FileReader();
@@ -614,40 +612,40 @@ export class HomeComponent implements OnDestroy {
 }
 ```
 
-We will inject the formRecognizerService in the constructor of the `HomeComponent` and set a message and the value for the max image size allowed inside the constructor. We will also initialize the two-dimensional array to hold the value of the sudoku.
+我们在 `HomeComponent` 的构造器中注入 formRecognizerService，并设置提示信息和允许的图像的最大尺寸。我们还将初始化一个二维数组来保存数独的值。
 
-The `uploadImage` method will be invoked upon uploading an image. We will check if the uploaded file is a valid image and is within the allowed size limit. We will process the image data using a FileReader object. The readAsDataURL method will read the contents of the uploaded file.
+上传图片时将调用 `uploadImage` 方法。我们将检查上传的文件是否是一个有效的图像，并且在允许的大小限制之内。我们将使用一个 FileReader 对象来处理图像数据。readAsDataURL 方法将读取上传文件的内容。
 
-When the read operation completes successfully, the reader.onload event will be triggered. The value of imagePreview will be set to the result returned by the fileReader object, which is of type ArrayBuffer.
+当读取操作成功完成后，reader.onload 事件将会被触发。imagePreview 的值将被设置为 fileReader 对象的 ArrayBuffer 类型的返回值。
 
-Inside the `GetSudokuTable` method, we will append the image file to a variable for type FormData. We will invoke the `getSudokuTableFromImage` of the service and bind the result to the game array.
+在 `GetSudokuTable` 方法中，我们将把图像文件附加到一个 FormData 类型的变量中。我们将调用服务的 `getSudokuTableFromImage`，并将结果绑定到游戏数组中。
 
-The `sudokuSolver` method will accept the Sudoku board as a parameter. We will then solve the sudoku board with the help of the backtracking algorithm.
+`sudokuSolver` 方法将接受数独表作为入参。然后我们使用回溯算法来解出这道数独。
 
-## Execution Demo
+## 运行演示程序
 
-Press F5 to launch the application. Upload the image of a sudoku table. Click on the “Extract Sudoku Table” button. It will extract the content from the image and populate the table on the left side. Refer to the image shown below:
+按 F5 键来启动该程序。上传一张数独表的图片。点击“提取数独表”按钮，你会看到左边的表格中出现了从图像中提取出来的内容。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/ExecDemo1.png)
 
-Click on the “Solve Sudoku” button. You can see the final result of the sudoku on the UI. Refer to the image shown below:
+点击“解数独”按钮。你可以在界面上看到数独的答案。如下图所示。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/04/ExecDemo2.png)
 
-## **Summary**
+## **总结**
 
-We have created a sudoku solver application using Angular and Azure form recognizer service. The application can extract the data from the image of a sudoku board uploaded by the user. We then implement backtracking to solve the sudoku. We have used Angular material for styling the app.
+我们用 Angular 和 Azure 表单识别器服务创建了一个数独解题器。这个程序可以从用户上传的数独表的图片中提取数据。我们接着用回溯法解决数独问题。另外，我们使用了 Angular material 来设计程序的 UI 风格。
 
-Get the Source code from [GitHub](https://github.com/AnkitSharma-007/Azure-AI-Sudoku-solver) and play around to get a better understanding.
+你可以从 [GitHub](https://github.com/AnkitSharma-007/Azure-AI-Sudoku-solver) 上获取源代码，随便看看或把玩一下以加深你的理解。
 
-## See Also
+## 拓展阅读
 
--   [Optical Character Reader Using Angular And Azure Computer Vision](https://ankitsharmablogs.com/optical-character-reader-using-angular-and-azure-computer-vision/)
--   [Multi-Language Translator Using Blazor And Azure Cognitive Services](https://ankitsharmablogs.com/multi-language-translator-using-blazor-and-azure-cognitive-services/)
--   [Facebook Authentication And Authorization In Server-Side Blazor App](https://ankitsharmablogs.com/facebook-authentication-and-authorization-in-server-side-blazor-app/)
--   [Continuous Deployment For Angular App Using Heroku And GitHub](https://ankitsharmablogs.com/continuous-deployment-for-angular-app-using-heroku-and-github/)
--   [Going Serverless With Blazor](https://ankitsharmablogs.com/going-serverless-with-blazor/)
+-   [Optical Character Reader Using Angular And Azure Computer Vision（使用 Angular 和 Azure 计算机视觉的光学字符阅读器）](https://ankitsharmablogs.com/optical-character-reader-using-angular-and-azure-computer-vision/)
+-   [Multi-Language Translator Using Blazor And Azure Cognitive Services（使用 Blazor 和 Azure 认知服务的多语言翻译器）](https://ankitsharmablogs.com/multi-language-translator-using-blazor-and-azure-cognitive-services/)
+-   [Facebook Authentication And Authorization In Server-Side Blazor App（在服务器端 Blazor 应用中进行 Facebook 认证和授权）](https://ankitsharmablogs.com/facebook-authentication-and-authorization-in-server-side-blazor-app/)
+-   [Continuous Deployment For Angular App Using Heroku And GitHub（使用 Heroku 和 GitHub 为 Angular 应用程序进行持续部署）](https://ankitsharmablogs.com/continuous-deployment-for-angular-app-using-heroku-and-github/)
+-   [Going Serverless With Blazor（利用 Blazor 实现无服务器化）](https://ankitsharmablogs.com/going-serverless-with-blazor/)
 
-If you like the article, please share it with your friends. You can also connect with me on [Twitter](https://twitter.com/ankitsharma_007) and [LinkedIn](https://www.linkedin.com/in/ankitsharma-007/).
+如果你喜欢这篇文章，请把它分享给你的朋友。你也可以在[推特](https://twitter.com/ankitsharma_007)和[领英](https://www.linkedin.com/in/ankitsharma-007/)上与我联系。
 
-Originally published at [https://ankitsharmablogs.com/](https://ankitsharmablogs.com/)
+原文发表于 [https://ankitsharmablogs.com/](https://ankitsharmablogs.com/)。

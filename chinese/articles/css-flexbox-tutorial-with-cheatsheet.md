@@ -19,7 +19,7 @@ In this article, I'll teach you **CSS Flexbox** basics so you can make your own 
 -   Short Hands
 -   Conclusion
 
-### You can watch this tutorial on YouTube as well if you like:
+### You can watch this tutorial on YouTube as well if you like
 
 # First, What is Flexbox?
 
@@ -95,7 +95,7 @@ Target the `.container` class and all the boxes. Then style the boxes so that al
 }
 ```
 
-## But Wait....
+## But Wait
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/cq8exwor5aiciu2j6jwu.png)
 

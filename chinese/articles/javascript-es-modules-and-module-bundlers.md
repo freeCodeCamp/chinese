@@ -2581,7 +2581,7 @@ And there we have it. I hope you have found this article helpful.
 
 Thanks for reading!
 
-### **And here's a useful ReactJS resource:**
+### **And here's a useful ReactJS resource**
 
 I wrote a book about React!
 

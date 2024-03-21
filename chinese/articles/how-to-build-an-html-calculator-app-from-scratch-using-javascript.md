@@ -138,7 +138,7 @@ if (action === 'clear') {
 让我们思考一下，一个普通人拿到一个计算器之后，会做什么呢？**这个普通人会做什么的问题被称作 happy path**。
 
 这个普通人我们就称作 Mary 吧。
-当 Mary拿起计算器时，她可能会点击任何一个按键：
+当 Mary 拿起计算器时，她可能会点击任何一个按键：
 
 1.  一个数字键（0-9）
 2.  一个操作键 （+，-，×，÷）
@@ -167,7 +167,7 @@ const display = document.querySelector('.calculator__display')
 
 ```
 
-**如果计算器显示0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的`textContent`属性进行替换。
+**如果计算器显示 0，我们需要用点击按键的数字替换计算器显示屏的数字。** 我们可以通过显示屏的`textContent`属性进行替换。
 ```js
 if (!action) {
   if (displayedNum === '0') {
@@ -403,7 +403,7 @@ if (!displayedNum.includes('.')) {
 接下来，如果 Tim 在点击任何操作键之后点击了小数点键，那么应该显示为`0.`。
 ![](https://cdn-media-1.freecodecamp.org/images/fLLhOqkyFZqsOZIxgMPAkpezrUisGpDKFEsw)
 
-我们需要知道上一个按键是否是操作符键。 我们可以通过上节课设置的自定义属性 `data-previous-key-type `来判断。
+我们需要知道上一个按键是否是操作符键。 我们可以通过上节课设置的自定义属性 `data-previous-key-type`来判断。
 当然`data-previous-key-type`还没有完成，为了判断`previousKeyType`是否是操作符，我们还需要在每次点击按键时更新`previousKeyType`。
 ```js
 if (!action) {
@@ -469,10 +469,10 @@ if (
 
 ```
 
-尽管我们在第二次点击操作键的时候我们可以得到一个计算的值，但这里依然有一个bug存在————额外点击操作键会计算出一个不应该的值。
+尽管我们在第二次点击操作键的时候我们可以得到一个计算的值，但这里依然有一个 bug 存在————额外点击操作键会计算出一个不应该的值。
 ![](https://cdn-media-1.freecodecamp.org/images/8ktjtHeYaRTEn-lPbOM3fhEg3qrvDl5WfOVY)
 
-为了防止计算器在后续点击操作键时进行计算，我们需要检查 `previousKeyType `是否是一个操作键。如果是，我们不执行计算。
+为了防止计算器在后续点击操作键时进行计算，我们需要检查 `previousKeyType`是否是一个操作键。如果是，我们不执行计算。
 ```js
 if (
   firstValue &&
@@ -499,13 +499,13 @@ if (
 接着，我们让使用者点击一下减号键，在他点击减号键之后，我们设置`firstValue`为 99，同样的设置`operator`为`subtract`。
 ![](https://cdn-media-1.freecodecamp.org/images/0K-KPTzdCBgfVvVaDNcVDYSjXfUO8p5LRs2v)
 
-第三步，假设用户这次输入的数字是 1，此时，将显示的数字改成1，但是我们的 `firstValue`，`operator` 和 `secondValue`保持不变。
+第三步，假设用户这次输入的数字是 1，此时，将显示的数字改成 1，但是我们的 `firstValue`，`operator` 和 `secondValue`保持不变。
 ![](https://cdn-media-1.freecodecamp.org/images/0MacG-A5Tl7rZeB6NLeNvghVyBpmSqaZQkn9)
 
 第四步，用户再次点击减号键。就在他们点击减法后，在计算结果之前，我们设置`secondValue`作为显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/RgDMKK92og4djxxmaYO1HUYiVoetKDK9x0j7)
 
-第五步，我们用`firstValue` 99，`operator`减号以及`secondValue` 1进行计算，得到结果 98。
+第五步，我们用`firstValue` 99，`operator`减号以及`secondValue` 1 进行计算，得到结果 98。
  
 计算出结果后，我们将显示设置为结果。然后，我们设置`operator`为减法，`firstValue`为之前显示的数字。
 ![](https://cdn-media-1.freecodecamp.org/images/X3VFJ5ar--k84pP3pM5VDVODvYlX4fCwHcnS)
@@ -593,7 +593,7 @@ if (firstValue) {
 第二步，让用户点击减号键，再点击减号键之后，我们设置`firstValue`为 5，同时设置`operator`为减号。
 ![](https://cdn-media-1.freecodecamp.org/images/Fc-QupYbv3HInXqv1vHFCc1avhDe3iyEErhs)
 
-第三步，让用户输入第二个值，假设是数字 1。此时，显示的数字应该被更新为1，但是我们的`firstValue，`operator`和`secondValue`是保持不变的。
+第三步，让用户输入第二个值，假设是数字 1。此时，显示的数字应该被更新为 1，但是我们的`firstValue，`operator`和`secondValue`是保持不变的。
 ![](https://cdn-media-1.freecodecamp.org/images/lW3CtoXJ1gxpUS5SZM3zh3zmqSB-ksM6E0vr)
 
 第四步，用户点击等号键。紧接着用户点击了等号，但是在计算之前，我们设置`secondValue`为`displayedNum`。
@@ -685,7 +685,7 @@ if (action === 'decimal') {
 第五，如果 Tim 再点击等号之后又点击了操作键，计算器则不应该进行计算。
 ![](https://cdn-media-1.freecodecamp.org/images/uuifuJ41Oo86NXMsPj44RSQf7ExULROc2GaI)
 
-为此，我们在用操作键进行计算之前，先检查 `previousKeyType `是否为 `calculate`。
+为此，我们在用操作键进行计算之前，先检查 `previousKeyType`是否为 `calculate`。
 ```js
 if (
   action === 'add' ||
@@ -717,7 +717,7 @@ if (
 当计算器处于默认状态时，应该显示 "AC"。
 ![](https://cdn-media-1.freecodecamp.org/images/22fj2VLJJ1SPexybqdWIqPRkj9JkrlI3AAYl)
 
-首先，如果 Tim 点击了一个键（除了清ad除键之外的任何键），`AC`应该被改成`CE`。
+首先，如果 Tim 点击了一个键（除了清 ad 除键之外的任何键），`AC`应该被改成`CE`。
 ![](https://cdn-media-1.freecodecamp.org/images/Hs9tjp3JQIYOaAgh8KDnxj5QShScU0nMkDa7)
 
 我们通过检查`data-action`是不是`clear`来判断，如果不是`clear`，我们找到清除按钮，并改变`textContent`。
@@ -728,7 +728,7 @@ if (action !== 'clear') {
 }
 ```
 
-接下来，如果 Tim 点击`CE`，显示的数字应该为0。与此同时，`CE`应该改为`AC`。所以 Tim 可以将计算器重置到初始状态。
+接下来，如果 Tim 点击`CE`，显示的数字应该为 0。与此同时，`CE`应该改为`AC`。所以 Tim 可以将计算器重置到初始状态。
 ![](https://cdn-media-1.freecodecamp.org/images/Dv6SFw5LY8wB0WqTFQBe46-QoraBiq8TvpdY)
 
 ```js
@@ -888,7 +888,7 @@ _`keys.addEventListener('click', e => {
 这里`createResultString`是一个纯函数，我们需要把它的返回值显示在计算器上， `updateCalculatorState` 是一个不纯函数，可以改变计算器的自定义属性和外观。
 ### 实现 createResultString
 
-像之前所说的，`createResultString`的返回值需要显示在计算器上，你可以通过display.textContent = 'some value`.来得到这部分值。
+像之前所说的，`createResultString`的返回值需要显示在计算器上，你可以通过 display.textContent = 'some value`.来得到这部分值。
 ```js
 display.textContent = 'some value'
 ```
@@ -1088,7 +1088,7 @@ const createResultString = () => {
 <span class="token punctuation" style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 14px; vertical-align: baseline; color: rgb(153, 153, 153);">}</span>
 ```
 
-然后我们可以将 `if/else `语句重构为三元操作符。
+然后我们可以将 `if/else`语句重构为三元操作符。
 
 ```js
 const createResultString = () => {
@@ -1310,7 +1310,7 @@ const createResultString = (key, displayedNum, state) => {
 
 ```
 
-### if语句的一致性
+### if 语句的一致性
 
 在`createResultString`中，我们使用以下条件来测试被点击的键的类型：
 ```js
@@ -1364,7 +1364,7 @@ const createResultString = (key, displayedNum, state) => {
 
 我们完成了`createResultString`。让我们继续进行`updateCalculatorState`。
 
-### 实现updateCalculatorState
+### 实现 updateCalculatorState
 
 `updateCalculatorState`是一个改变计算器的外观和自定义属性的函数。
 
@@ -1594,9 +1594,9 @@ keys.addEventListener('click', e => {
 
 你可以通过[这个链接][12]来获取重构部分的源代码（往下滚动，在下面输入你的邮箱地址，我会直接把源代码发到你的邮箱里）。
 
-我希望你喜欢这篇文章。你可能也会喜欢[Learn JavaScript][13]————在这个课程中，我向你展示如何一步步构建20个组件，就像我们今天如何构建这个计算器一样。
+我希望你喜欢这篇文章。你可能也会喜欢[Learn JavaScript][13]————在这个课程中，我向你展示如何一步步构建 20 个组件，就像我们今天如何构建这个计算器一样。
 
-注意：我们可以通过添加键盘支持和像Live regions这样的可访问性功能来进一步改进计算器。想知道如何改进吗？去看看《学习JavaScript》吧:)
+注意：我们可以通过添加键盘支持和像 Live regions 这样的可访问性功能来进一步改进计算器。想知道如何改进吗？去看看《学习 JavaScript》吧:)
 
 [1]: https://zellwk.com/blog/js-if-else
 [2]: https://zellwk.com/blog/js-for-loops

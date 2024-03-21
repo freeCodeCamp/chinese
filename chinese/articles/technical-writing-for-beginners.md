@@ -30,7 +30,7 @@
 
 技术写作是一门提供以细节为导向的指导的艺术，以帮助用户了解特定的技能或产品。
 
-而技术作家就是写这些说明的人，也就是所谓的技术文档或教程。这可能包括用户手册、在线支持文章或编码员/API开发人员的内部文档。
+而技术作家就是写这些说明的人，也就是所谓的技术文档或教程。这可能包括用户手册、在线支持文章或编码员/API 开发人员的内部文档。
 
 技术作家的沟通方式是介绍技术信息，使读者能够理解这些信息。
 
@@ -151,7 +151,7 @@ This process includes a number of steps, which we'll go over now.
 
 下面是一个**被动语态**的例子: 这文档应该被网络开发人员每年阅读六次。
 
-这里有一个**主动语态**的例子: 每个网络开发人员都应该每年读6次这个文档。
+这里有一个**主动语态**的例子: 每个网络开发人员都应该每年读 6 次这个文档。
 
 #### 谨慎地选词
 
@@ -167,9 +167,9 @@ This process includes a number of steps, which we'll go over now.
 
 **下面是一个例子**:
 
-不清晰: **PWAs**确实被认为是多平台开发的未来。它们在安卓和iOS上的可用性使它们成为未来的应用程序。
+不清晰: **PWAs**确实被认为是多平台开发的未来。它们在安卓和 iOS 上的可用性使它们成为未来的应用程序。
 
-改进版: **Progressive Web Applications (PWAs)** 是真正的多平台开发的未来。它们在Android和iOS上的可用性使**PWAs**成为未来的应用程序。
+改进版: **Progressive Web Applications (PWAs)** 是真正的多平台开发的未来。它们在 Android 和 iOS 上的可用性使**PWAs**成为未来的应用程序。
 
 #### 使用通俗易懂的说法
 
@@ -193,7 +193,7 @@ This process includes a number of steps, which we'll go over now.
 
 ![step1-1](https://www.freecodecamp.org/news/content/images/2020/11/step1-1.PNG)
 
-在你的文章中添加图片，使内容更有亲和力，更容易理解。除了图片，你还可以在必要时使用gif、emoji、embeds（社交媒体、代码）和代码片段。
+在你的文章中添加图片，使内容更有亲和力，更容易理解。除了图片，你还可以在必要时使用 gif、emoji、embeds（社交媒体、代码）和代码片段。
 
 深思熟虑的格式、模板和图像或图表也会使你的文本对读者更有帮助。你可以查看下面的参考资料，了解@Bolajiayodeji 的技术写作模板。
 
@@ -201,7 +201,7 @@ This process includes a number of steps, which we'll go over now.
 
 任何类型的好文章都必须没有拼写和语法错误。这些错误可能看起来很明显，但并不总是容易发现它们（尤其是在长篇文件中）。
 
-在点击 "发布 "之前，一定要仔细检查你的拼写（你知道，点你的Is和交叉你的Ts，从英文的角度来讲，`I`与`T`，看起来挺近似的，注意拼写错误）。
+在点击 "发布 "之前，一定要仔细检查你的拼写（你知道，点你的 Is 和交叉你的 Ts，从英文的角度来讲，`I`与`T`，看起来挺近似的，注意拼写错误）。
 
 有许多免费的工具，如[Grammarly](https://grammarly.com/)和[Hemingway app](http://www.hemingwayapp.com/)，你可以用它们来检查语法和拼写错误。你也可以把你的文章草稿与别人分享，以便在发表前进行校对。
 
@@ -225,9 +225,9 @@ This process includes a number of steps, which we'll go over now.
 
 ![freecodecamp](https://www.freecodecamp.org/news/content/images/2020/11/freecodecamp.PNG)
 
-**[Hackernoon](https://hackernoon.com)** 有超过7000名作家，可能是一个伟大的平台，让你开始向社区中每天超过20万的读者发布你的文章。
+**[Hackernoon](https://hackernoon.com)** 有超过 7000 名作家，可能是一个伟大的平台，让你开始向社区中每天超过 20 万的读者发布你的文章。
 
-Hacker Noon为作家提供帮助，在他们的文章在平台上发布之前进行校对，帮助他们避免常见错误。
+Hacker Noon 为作家提供帮助，在他们的文章在平台上发布之前进行校对，帮助他们避免常见错误。
 
 ![hackernoon](https://www.freecodecamp.org/news/content/images/2020/11/hackernoon.PNG)
 
@@ -240,8 +240,8 @@ Hacker Noon为作家提供帮助，在他们的文章在平台上发布之前进
 以下是一些技术写作课程，你可以去看看:
 
 - [谷歌技术写作课程](https://developers.google.com/tech-writing) (Free)
-- [Udemy技术写作课程](https://www.udemy.com/topic/technical-writing/) (Paid)
-- [Hashnode技术写作训练营](https://hashnode.com/bootcamp/batch-2) (Free)
+- [Udemy 技术写作课程](https://www.udemy.com/topic/technical-writing/) (Paid)
+- [Hashnode 技术写作训练营](https://hashnode.com/bootcamp/batch-2) (Free)
 
 ## Technical Writing Forums and Communities
 
@@ -263,7 +263,7 @@ Hacker Noon为作家提供帮助，在他们的文章在平台上发布之前进
 
 这些作家是我仰望的对象，被我视为技术写作的虚拟导师。有时，他们传授的技术写作技巧让我觉得很有帮助，并从中学到了很多。
 
-以下是这些作家中的一些人(他们的twitter账号):
+以下是这些作家中的一些人(他们的 twitter 账号):
 
 - [Quincy Larson](https://twitter.com/ossia)
 - [Edidiong Asikpo](https://twitter.com/didicodes)
@@ -276,11 +276,11 @@ Hacker Noon为作家提供帮助，在他们的文章在平台上发布之前进
 
 ## 结语
 
-你不需要有技术写作的学位就可以开始发布技术内容。你可以开始在你的个人博客和公共GitHub项目上写作，同时建立你的作品集并获得实践经验。
+你不需要有技术写作的学位就可以开始发布技术内容。你可以开始在你的个人博客和公共 GitHub 项目上写作，同时建立你的作品集并获得实践经验。
 
 **真的--只要开始写作。**
 
-通过为现有的程序或项目创建新的文档来练习。在GitHub上有许多开源项目，你可以查看并添加到他们的文档中。
+通过为现有的程序或项目创建新的文档来练习。在 GitHub 上有许多开源项目，你可以查看并添加到他们的文档中。
 
 是否有一个你喜欢使用的应用，但其文档写得很差？写下你自己的，并在网上分享以获得反馈。你也可以在[hashnode](https://hashnode.com)上快速建立你的博客并开始写作。
 

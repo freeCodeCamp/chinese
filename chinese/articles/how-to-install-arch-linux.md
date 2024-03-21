@@ -11,7 +11,7 @@
 
 摘自 arch [wiki](https://wiki.archlinux.org/title/Arch_Linux),
 
-> Arch Linux 是通用 x86-64 [GNU](https://wiki.archlinux.org/title/GNU)/Linux 发行版。Arch采用滚动升级模式，尽全力提供最新的稳定版软件。
+> Arch Linux 是通用 x86-64 [GNU](https://wiki.archlinux.org/title/GNU)/Linux 发行版。Arch 采用滚动升级模式，尽全力提供最新的稳定版软件。
 >
 > 初始安装的 Arch 只是一个基本系统，随后用户可以根据自己的喜好安装需要的软件并配置成符合自己理想的系统.
 
@@ -87,13 +87,13 @@
 -   你的电脑使用的是 UEFI，而不是 BIOS
 -   你有一个足够大（4GB）的 U 盘，可以用它来启动 Linux
 -   有安装 Linux（Ubuntu/Fedora）的经验
--   有足够的空间在硬盘或 SSD上安装 linux
+-   有足够的空间在硬盘或 SSD 上安装 linux
 
 差不多就是这样。如果你具备以上所有条件，可以开始了。
 
 ## 如何创建可引导的 Arch Linux U 盘
 
-要下载 Arch Linux，请访问 [https://archlinux.org/download/](https://archlinux.org/download/) 并下载最新版本（本文撰写时为 2022.01.01）。ISO的大小应该在870兆字节左右。
+要下载 Arch Linux，请访问 [https://archlinux.org/download/](https://archlinux.org/download/) 并下载最新版本（本文撰写时为 2022.01.01）。ISO 的大小应该在 870 兆字节左右。
 
 下载后，需要将其写入 U 盘。可以使用 [Fedora Media Writer](https://getfedora.org/en/workstation/download/)。在系统上下载并安装应用程序。连接 U 盘打开应用程序：
 
@@ -113,7 +113,7 @@
 
 如何禁用此功能的详细说明因主板或笔记本电脑品牌而异。需要你自己在互联网中搜索来找到相应的方法。
 
-第二个操作仅在安装和 Windows 共存的 Arch Linux 双系统时才适用。Windows有一个名为“快速启动”的功能，它通过部分休眠来缩短计算机的启动时间。
+第二个操作仅在安装和 Windows 共存的 Arch Linux 双系统时才适用。Windows 有一个名为“快速启动”的功能，它通过部分休眠来缩短计算机的启动时间。
 
 通常这是一个很好的特性，它可以防止双引导配置中的任何其他操作系统在此过程中访问硬盘。
 
@@ -747,7 +747,7 @@ mkdir /boot/efi
 mount /dev/sda1 /boot/efi
 ```
 
-希望你还记得我们在分区阶段将`/dev/sda1`设备格式化为EFI系统分区。确保为你的设备使用正确的设备。
+希望你还记得我们在分区阶段将`/dev/sda1`设备格式化为 EFI 系统分区。确保为你的设备使用正确的设备。
 
 现在，我们将使用 `grub-install` 命令在新挂载的 EFI 系统分区中安装 GRUB：
 

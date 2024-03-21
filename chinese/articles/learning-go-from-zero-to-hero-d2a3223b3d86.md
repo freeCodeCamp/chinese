@@ -1,4 +1,4 @@
-> -  原文地址：[Learning Go — from zero to hero](https://www.freecodecamp.org/news/learning-go-from-zero-to-hero-d2a3223b3d86/)
+> -  原文地址：[Learning Go—from zero to hero](https://www.freecodecamp.org/news/learning-go-from-zero-to-hero-d2a3223b3d86/)
 > -  原文作者：[Milap Neupane](https://www.freecodecamp.org/news/author/milapneupane/)
 > -  译者：
 > -  校对者：
@@ -121,7 +121,7 @@ Like any other programming language, Go supports various different data structur
 #### **Number, String, and Boolean**
 
 Some of the supported number store types are int, int8, int16, int32, int64,  
-uint, uint8, uint16, uint32, uint64, uintptr…
+uint, uint8, uint16, uint32, uint64, uintptr……
 
 The string type stores a sequence of bytes. It is represented and declared with keyword `string`.
 
@@ -905,7 +905,7 @@ As we see in above no more than 2 messages are accepted by a channel.
 
 #### Why is Golang Successful?
 
-> Simplicity… — Rob-pike
+> Simplicity…… — Rob-pike
 
 ### Great!
 

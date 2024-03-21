@@ -7,11 +7,11 @@
 
 `git config` 是 Git 的一个强大命令。你可以使用 Git 配置文件来定制 Git 的工作方式。
 
-这个文件存在于初始化Git的项目目录（`/project/.git/config`）或用户根目录（`~/.gitconfig`）。如果没有指定配置，Git 会使用其默认设置。
+这个文件存在于初始化 Git 的项目目录（`/project/.git/config`）或用户根目录（`~/.gitconfig`）。如果没有指定配置，Git 会使用其默认设置。
 
 在这篇文章中，你会学到一些有用的 Git 配置，可以改善你的开发工作流程。这里分享的技巧是对我有用的东西。还有很多你可以在阅读后尝试。
 
-# Git配置技巧
+# Git 配置技巧
 
 下面是一些全局性的 Git 配置技巧。
 
@@ -34,7 +34,7 @@ or use this shell command:
 git config --global core.editor "code --wait"
 ```
 
-这个配置告诉Git，对于提交和标签等操作，我想使用我的 [VSCode编辑器](https://code.visualstudio.com/)。
+这个配置告诉 Git，对于提交和标签等操作，我想使用我的 [VSCode 编辑器](https://code.visualstudio.com/)。
 
 对于其他类型的编辑器，请参考 [Atlassian](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config) 的这个图片:
 
@@ -44,7 +44,7 @@ git config --global core.editor "code --wait"
 
 ## 2\. fetch 过程中的 Git 修剪（pruning ）
 
-你知道 `prune` 命令在 `fetch` 过程中的作用吗？如果不知道，你可能想先看看这篇文章，它涵盖了如何 [用prune git选项和分支删除命令删除过时的本地分支](https://dillionmegida.com/p/delete-outdated-branches/#git-fetch---prune)。
+你知道 `prune` 命令在 `fetch` 过程中的作用吗？如果不知道，你可能想先看看这篇文章，它涵盖了如何 [用 prune git 选项和分支删除命令删除过时的本地分支](https://dillionmegida.com/p/delete-outdated-branches/#git-fetch---prune)。
 
 TLDR: 在 `fetch` 过程中修剪是一种清理方法，当你进行 `git fetch --prune` 时，会删除你的 `.git` 目录中过时的远程引用。
 
@@ -93,15 +93,15 @@ git empty "Empty commit"
     delete-local-merged = "!git fetch && git branch --merged | egrep -v 'master' | xargs git branch -d"
 ```
 
-**！** 告诉Git把它作为一个 shell 命令运行，而不是 `git` 命令。
+**！** 告诉 Git 把它作为一个 shell 命令运行，而不是 `git` 命令。
 
-对于别名，我们做一个git fetch。然后我们得到合并后的分支，把它作为egrep命令的输入，过滤掉 `master` 分支，然后删除这些分支。
+对于别名，我们做一个 git fetch。然后我们得到合并后的分支，把它作为 egrep 命令的输入，过滤掉 `master` 分支，然后删除这些分支。
 
 ## 4\. 设置默认分支
 
 在初始化版本库时（`git init`），默认的分支是 `master`。今天，一些开发者希望是 `main` 或其他完全不同的东西。
 
-你不必创建一个名为 `main` 的新分支，删除 `master` 分支，并使用 `main` 作为默认分支。这是个漫长的过程。在Git配置文件中，你可以在Git初始化时设置一个默认分支。下面是方法:
+你不必创建一个名为 `main` 的新分支，删除 `master` 分支，并使用 `main` 作为默认分支。这是个漫长的过程。在 Git 配置文件中，你可以在 Git 初始化时设置一个默认分支。下面是方法:
 
 ```txt
 [init]

@@ -11,10 +11,10 @@
     "url": "https://github.com/freeCodeCamp/news-translation/issues"
   },
   "devDependencies": {
-    "husky": "^4.3.0",
-    "lint-md-cli": "^0.1.2",
-    "lint-staged": "^10.5.4",
-    "prettier": "^2.2.1"
+    "@lint-md/cli": "^2.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.3.0",
+    "prettier": "^3.0.3"
   },
   "prettier": {
     "singleQuote": true,
@@ -27,11 +27,7 @@
   "scripts": {
     "lint": "lint-md chinese/**/*.md",
     "format": "lint-md chinese/**/*.md --fix",
-    "test": "lint-staged"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
+    "test": "lint-staged",
+    "prepare": "husky install"
   }
 }

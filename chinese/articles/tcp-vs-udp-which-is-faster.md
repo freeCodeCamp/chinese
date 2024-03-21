@@ -1,158 +1,158 @@
 > -  原文地址：[TCP vs UDP – Which Protocol is Faster?](https://www.freecodecamp.org/news/tcp-vs-udp-which-is-faster/)
 > -  原文作者：[Prashanth](https://www.freecodecamp.org/news/author/prashanth/)
-> -  译者：
+> -  译者：seanbei
 > -  校对者：
 
 ![TCP vs UDP – Which Protocol is Faster?](https://www.freecodecamp.org/news/content/images/size/w2000/2021/06/TCP-VS-UDP.jpg)
 
-## What is TCP?
+## 什么是 TCP？
 
-**TCP** is an acronym for **Transmission Control Protocol**. It is a transport layer protocol that **allows packets** to be sent from one location to another.
+**TCP** 是 **Transmission Control Protocol** 的首字母缩写词，它是一种传输层协议，**允许数据包**从一个位置发送到另一个位置。
 
-TCP is a connection-oriented protocol, which means it establishes the connection before any communication between the network’s computer units. Because we use this protocol in conjunction with an IP protocol, we call it **TCP/ IP.**
+TCP 是面向连接的协议，也就是说它在网络计算机单元之间的任何通信之前建立连接。由于我们把这个协议与 IP 协议结合使用，我们称其为 **TCP/IP**。
 
-### How does TCP work?
+### TCP 是怎么工作的?
 
-TCP’s primary job is to collect data from the application layer. It then separates the data into multiple packets, assigns a number to each packet, and sends the packets to their destination.
+TCP 的主要任务是从应用层收集数据。它将数据拆分成多个数据包，为每个数据包分配一个编号，然后将这些数据包发送到它们的目的地。
 
-It also reassembles the packets before sending them to the application layer. Given that TCP is a connection-oriented protocol, the connection will be maintained until the sender and receiver have completed their exchange.
+同样，在将数据包发送到应用层之前，它会重新组合数据包。鉴于 TCP 是面向连接的协议，这个连接将一直保持，直到发送方和接收方完成数据交换。
 
-It is a reliable protocol. That is, the receiver always provides the sender either a positive or negative acknowledgment regarding the data packet, so the sender always knows if the data packet has arrived at its destination or if it needs to be resent.
+它是一种可靠的协议。因为，接收方总是会给发送方提供一条关于数据包的确认消息，要么肯定要么否定，因此，发送方总是能知道数据包是否到达它的目的地，还是说需要被重新发送。
 
-It guarantees that data arrives at its destination in the same sequence that it was sent. It has a built-in error-checking and recovery system. and is responsible for providing end-to-end communication. TCP also gives access to flow control and quality of service.
+它保证了数据能到达其目的地，而且到达的顺序与发送时相同。它有一套内置的错误检查和恢复体系，负责提供端到端通信。TCP 还提供对流量控制和服务质量的访问。
 
-TCP supports a **full-duplex server**, which means it can act as both a receiver and a sender. It operates in a point-to-point Client/ Server manner.
+TCP 支持**全双工服务器**，既可以当接收者，也可以当发送者。它以点对点的客户端/服务器方式运行。
 
-## What is UDP?
+## 什么是 UDP？
 
-**UDP** is an acronym for **User Datagram Protocol**. The User Datagram Protocol (UDP) is the most basic of the TCP/IP protocol suite’s Transport Layer communication protocols. It uses the bare minimum of communication mechanisms.
+**UDP** 是 **User Datagram Protocol** 的首字母缩写词。用户数据报协议（UDP）是 TCP/IP 协议套件的最基本的传输层通信协议。它使用最低限度的通信机制。
 
-### How does UDP work?
+### UDP 是怎么工作的？
 
-Although UDP is considered an unreliable transport protocol, it does its job by using IP services, which provide a best-effort delivery method.
+尽管 UDP 被认为是一种不可靠的传输协议，但它通过使用 IP 服务来完成其工作，提供了一种尽力而为的传递方法。
 
-In UDP, the receiver does not generate a packet acknowledgment, and the sender does not wait for a packet acknowledgment. Because of this vulnerability, the protocol is both unreliable and easier to process.
+在 UDP 中，接收方不生成数据包的确认，发送方也不等待数据包的确认。正是这个不足，使得该协议虽不可靠但是易于处理。
 
-We use UDP in cases where it's not as important to acknowledge the data being received. It works well for cases where data flows in one direction and it is most appropriate for query-based communication.
+如果确认是否接收到数据这点并不那么重要，这种情况下，我们使用 UDP。它很适用于单向数据流的场景，最适合基于查询的通信。
 
-UDP does not assure the ordered delivery of the data packets. It's stateless and it does not provide for any congestion control mechanism.
+UDP 不保证数据包的有序传递。它是无状态的，不提供任何拥塞控制机制。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-10.54.01-AM.png)
 
-TCP Vs UDP
+TCP 与 UDP
 
-## Differences Between TCP and UDP
+## TCP 与 UDP 的区别
 
-UDP is a connectionless protocol, whereas TCP is a connection-oriented protocol. TCP is slower than UDP, which is one of the main differences between the two protocols.
+UDP 是一种无连接协议，而 TCP 是一种面向连接的协议。TCP 比 UDP 要慢，这是两种协议的主要区别之一。
 
-Overall, UDP is a much faster, simpler, and more efficient protocol. But only TCP allows for the retransmission of lost data packets.
+总的来说，UDP 是一种更快、更简单、更高效的协议。但是只有 TCP 允许对丢失的数据包进行重新传输。
 
-Another difference between TCP and UDP is that TCP ensures the orderly transfer of data from the user to the server (and vice versa). UDP is not designed for end-to-end communication and does not check the receiver’s readiness so it requires less overhead and takes up less space.
+TCP 和 UDP 的另一个区别是 TCP 可以确保数据从用户到服务器的有序传输（反之亦然）。UDP 不是为端到端通信而设计的，并不会检查接收方的准备情况，因此它需要相对更少的开销并占用更少的空间。
 
-### Summary of TCP vs UDP
+### TCP 与 UDP 的总结
 
-#### Connection
+#### 连接
 
-TCP requires that you set up a well-established connection before the sender and the receiver start communicating. It is a connection-oriented protocol.
+TCP 要求在发送方和接收方开始通信之前建立一个良好的连接，它是一个面向连接的协议。
 
-UDP is a connectionless protocol.
+UDP 是一种无连接协议。
 
-#### Preservation of order of data transmitted
+#### 保持数据传输的顺序
 
-In TCP, since there is a well-established connection beforehand, the data packets are received by the receiver in an ordered fashion.
+在 TCP 中，由于事先建立了一个良好的连接，接收方以有序的方式接收数据包。
 
-Since there is no well-established connection between the sender and the receiver in UDP, the data packets may be received by the receiver in an unordered fashion.
+而在 UDP 中，发送方与接收方之间并没有建立良好的连接，接收方将以无序的方式接收数据包。
 
-#### Reliability
+#### 可靠性
 
-Whenever a packet is received via TCP, it sends an acknowledgment to the sender. In case of failure, it makes a request for retransmission.
+每当通过 TCP 接收到数据包时，接收方都会向发送方发送一条确认。万一失败，它会请求重新传输。
 
-With UDP, no acknowledgment is sent in this case and it relies on high-level protocols to ensure reliability.
+而使用 UDP，在这种情况下不会发送确认，它依赖于高层协议来确保可靠性。
 
-#### Error Checking
+#### 错误检查
 
-There are extensive error checking rules in TCP while only basic error checking techniques such as checksums exist in UDP
+TCP 中有广泛的错误检查规则，而 UDP 中只有基本的错误检查技术，例如校验和。
 
-#### Transfer method
+#### 传输方法
 
-In TCP, data is read in the form of a byte stream, and messages are sent to segment boundaries.
+在 TCP 中，数据以字节流的形式读取，消息被发送到段边界。
 
-Individual UDP packets with defined limits are sent and verified for integrity upon arrival.
+而在 UDP 中，已定义限制的单个 UDP 数据包被发送，在到达接收方时验证其完整性。
 
-#### Broadcasting
+#### 广播
 
-TCP does not support broadcasting. When you're using it, the server and receiver must first create a connection, which must then be terminated once the transfer is complete.
+TCP 不支持广播。当你使用它时，发送方和接收方必须先建立一条连接，在传输结束后又必须终止这条连接。
 
-UDP does support broadcasting.
+UDP 支持广播。
 
-### Use cases for TCP vs UDP
+### TCP 与 UDP 的用例
 
-TCP is used by HTTPS (HyperText Transfer Protocol Secure), HTTP (HyperText Transfer Protocol), SMTP (Simple Mail Transfer Protocol), FTP (File Transfer Protocol), and many others.
+TCP 被用于 HTTPS（安全超文本传输协议）、HTTP（超文本传输协议）、SMTP（简单邮件传输协议）、FTP（文件传输协议）等等。
 
-UDP is used in Video Streaming, Video Calling, Voice over IP services (Call over the internet), DNS (Domain Name System), and so on.
+UDP 用于视频流、视频电话、IP 语音服务（互联网呼叫）、DNS（域名系统）等。
 
-## TCP vs UDP – Which is faster?
+## TCP 对比 UDP - 哪个更快?
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-10.55.58-AM.png)
 
-In general, UDP is faster than TCP because of the following factors:
+通常来说，UDP 比 TCP 更快，原因如下：
 
-### Difference in Header Size TCP vs UDP
+### TCP 与 UDP 报头大小的差异
 
-Let's analyze the headers of both a TCP packet and a UDP packet.
+让我们来分析看看 TCP 数据包和 UDP 数据包各自的报头。
 
-TCP headers must be at least 20 bytes long and no more than 60 bytes long.
+TCP 报头的长度必须至少为 20 字节且不超过 60 字节。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-10.56.59-AM.png)
 
-#### Headers in TCP consist of:
+#### TCP 的报头包括
 
-1.  **Source Port** – indicates the source port on the sending device. 16 bits are reserved for it.
-2.  **Destination Port** – indicates the destination port on the receiving device. 16 bits are reserved for it.
-3.  **Sequence Number** – indicates the sequence number of the data segment in a session. 32 bits are reserved for it.
-4.  **Acknowledgment Number** – This number comprises the next sequence number of the data byte expected and serves as an acknowledgment of the previous data received when the ACK flag is set. 32 bits are reserved for this.
-5.  **Data Offset** – This field indicates the size of the TCP header (32-bit words) as well as the data offset in the current packet over the whole TCP segment. 4 bits are reserved for this.
-6.  **Reserved** –  bits kept for future use and are set to 0 by default. 3 bits are reserved for this.
-7.  **Flags** – There is 1 bit reserved for various flags which help TCP check for various activities such as acknowledgments.
-8.  **Checksum** – This field contains the checksum.
-9.  **Urgent Pointer** – This specifies the data byte if the URG flag is set to 1.
-10.  **Options** – This specifies additional options which are not present otherwise in a regular header.
+1.  **源端口** - 表示发送设备的源端口。占 16 位。
+2.  **目的端口** - 表示接收设备上的目的端口。占 16 位。
+3.  **序号** - 表示在一个会话中数据段的序号。占 32 位。
+4.  **确认号** - 该编号包括下一个预期的数据字节的序号，并在 ACK 标志被设置时，用作对先前接收到的数据的确认。占 32 位。
+5.  **数据偏移** - 该字段表示整个 TCP 报头的大小（32 位字）以及当前数据包在整个 TCP 段上的数据偏移量。占 4 位。
+6.  **保留** -  供将来使用的位，默认情况下设置为 0。占 3 位。
+7.  **标志** - 为各种标志保留了 1 位，这些标志有助于 TCP 检查各种活动，例如确认。
+8.  **校验和** - 该字段包含校验和。
+9.  **紧急指针** - 如果 URG 标志设置为 1，则指定数据字节。
+10.  **选项** - 指定了在常规报头中不存在的其他选项。
 
-Now let us analyze a UDP header.
+现在让我们来分析一个 UDP 报头。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/05/Screenshot-2021-05-31-at-10.57.27-AM.png)
 
-#### Headers in UDP consist of:
+#### UDP 的报头包括
 
-1.  **Source Port** – indicates the source port on the sending device. 16 bits are reserved for it.
-2.  **Destination Port** – indicates the destination port on the receiving device. 16 bits are reserved for it.
-3.  **Length** – specifies the UDP packet’s entire length. It’s a 16-bit field with an 8-byte minimum value, which equals the size of the UDP header itself.
-4.  **Checksum** – The checksum value created by the sender before sending is stored in this field. This field is optional in IPv4, therefore if it contains no value, it is set to 0, and all of its bits are set to zero.
+1.  **源端口** - 表示发送设备的源端口。占 16 位。
+2.  **目的端口** - 表示接收设备上的目的端口。占 16 位。
+3.  **长度** - 指定 UDP 数据包的整体长度。它是一个 16 位的字段，最小值为 8 字节，等于 UDP 报头本身的大小。
+4.  **校验和** - 发送方在发送之前创建的校验和存储在此字段中。该字段在 IPv4 中是可选的，因此如果它不包含任何值，则设置为 0，并且其所有位都设置为 0。
 
-We can clearly see the difference in the overhead of TCP’s header vs UDP’s header. Since a TCP header is much larger than a UDP header, it takes more time to process it which makes UDP faster than TCP.
+我们可以清楚地看到 TCP 报头与 UDP 报头的开销差异。由于 TCP 报头比 UDP 报头大很多, 它需要更多的时间来处理，这使得了 UDP 比 TCP 更快。
 
-### Acknowledgment in TCP vs UDP
+### TCP 与 UDP 中的确认
 
-In TCP, acknowledgment is sent to the sender on the data segment being received by the receiver. This ensures that the packet has been delivered to the receiver.
+在 TCP 中，接收方在接收到的数据段上向发送方发送确认。这确保了数据包已传送到接收方。
 
-If it receives no acknowledgment, it attempts a retransmission. This process makes TCP a lot slower compared to UDP. And remember that UDP doesn't send any acknowledgments.
+如果没有收到确认，发送方会尝试重新传输。这个处理过程使得 TCP 比 UDP 慢得多。别忘了，UDP 不发送任何确认。
 
-### Exceptions to the rule
+### 规则的例外
 
-There have been certain cases where TCP proves to be faster than UDP. For example in an experiment where 300 byte packets were sent over an ethernet connection with a Maximum Transmission Unit of 1500 bytes, TCP was about 50% faster than UDP.
+在某些情况下，TCP 被证实比 UDP 要快。例如，在一个实验中，在一个最大传输单元为 1500 字节的以太网连接上，发送 300 字节的数据包，TCP 比 UDP 大约快 50%。
 
-This is because TCP will attempt to buffer the data and fill a whole network segment, maximizing the available bandwidth. UDP, on the other hand, immediately sends the packet along the wire, clogging the network with many little packets.
+这是因为 TCP 会尝试缓存数据，填充到整个网段，从而最大化利用了带宽。而另一边，UDP 立即沿线路发送数据包，这些小数据包很多，堵塞了网络。
 
-## Conclusion
+## 结论
 
-Both TCP and UDP have their own uses. In cases where reliability and the order of data packets received are a major concern, you'd want to use TCP.
+TCP 和 UDP 都有各自的用途。如果主要关注数据接收的可靠性和顺序，你会更希望使用 TCP。
 
-On the other hand, in cases where the major concern is speed and it doesn't really matter if some data packets are compromised or lost, choose UDP.
+另一方面，如果主要关注的是速度，而且某些数据包的受损或丢失并不那么重要，请选择 UDP。
 
-So you see, you'll always have to compromise on either reliability or speed. If you increase one, the other gets reduced because of the constraints from the first.
+所以可以看到，你不得不在可靠性和速度这两个之间进行妥协。如果提升其中一个，由于前面的限制，另一个会下降。
 
-For example, in YouTube videos, you might have noticed that there are various options for setting the quality of the video.
+例如，在 YouTube 视频中，您可能已经注意到，有多种选项用于设置视频的质量。
 
-When you increase the quality, the video takes more bandwidth. This is because in lower quality, even if some data packets are lost we simply ignore them. But if we want high-quality videos, we cannot afford to lose on data packets.
+当提高质量时，视频会占用更多带宽。这是因为画质较低时，即使某些数据包丢失，我们也会忽略它们。但是如果想要高质量的视频，我们便不能丢失数据包。
 
-Thanks for reading! I hope you have a better understanding of TCP vs UDP.
+感谢阅读！希望你对 TCP 与 UDP 有了一个更好的了解。

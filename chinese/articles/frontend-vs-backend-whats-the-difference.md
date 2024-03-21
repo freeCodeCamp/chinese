@@ -1,350 +1,347 @@
-> -  原文地址：[Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/)
-> -  原文作者：[
-                    
-                        Dionysia Lemonaki
-                    
-                ](https://www.freecodecamp.org/news/author/dionysia/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/frontend-vs-backend-whats-the-difference/)
+> - 原文作者：[Dionysia Lemonaki](https://www.freecodecamp.org/news/author/dionysia/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-christina-morillo-1181677.jpg)
 
-At the start of your web development journey, you will often hear about the frontend and the backend parts of an application.
+在你的Web开发之旅的开始，你会经常听到关于应用程序的前端和后端部分。
 
-But what do these terms mean exactly?
+但这些术语到底是什么意思？
 
-In this article, you will learn about the differences between the two by examining the frontend and backend separately.
+在这篇文章中，你将通过分别学习前端和后端来了解两者之间的区别。
 
-Here is what we will cover:
+以下是我们将涵盖的内容:
 
-1.  [Defining frontend](#feintro)
-    1.  [What is condidered frontend?](#parts)
-    2.  [Why is frontend important?](#fewhy)
-    3.  [Common frontend tasks](#tasks)
-    4.  [Frontend tools and technologies](#tools)
-    5.  [Is frontend development right for you?](#feright)
-2.  [Defining backend](#beintro)
-    1.  [How the backend works](#beworks)
-    2.  [Examples of backend functionality](#beexamples)
-    3.  [Common backend tasks](#betasks)
-    4.  [Backend tools and technologies](#toolsbe)
-    5.  [Is backend development right for you?](#beright)
+1. [前端的定义](#feintro)
+    1. [什么被认为是前端？](./#What-is-condidered-frontend?)
+    2. [为什么前端很重要？](./#Why-is-frontend-important?)
+    3. [常见的前端任务](./#Common-frontend-tasks)
+    4. [前端工具和技术](./#Frontend-tools-and-technologies)
+    5. [前端开发适合你吗？](./#Is-frontend-development-right-for-you?)
+2. [后端的定义](#beintro)
+    1. [后端做什么](./#How-the-backend-works)
+    2. [后端功能示例](./#Examples-of-backend-functionality)
+    3. [常见的后端任务](./#Common-backend-tasks)
+    4. [后端工具和技术](./#Backend-tools-and-technologies)
+    5. [后端开发适合您吗？](./#Is-backend-development-right-for-you?)
 
-## What is Frontend?
+## 什么是前端?
 
-The frontend is everything a user sees and interacts with when they click on a link or type in a web address. The web address is also known as at URL, or Uniform Resource Locator, and it tells what webpage should load and appear in your browser.
+前端是用户在点击一个链接或输入一个网页地址时看到的和与之互动的一切。网页地址也被称为URL，即统一资源定位器，它告诉你什么网页应该加载并出现在你的浏览器中。
 
-It is the **client-side** part of a web application.
+它是网络应用的**客户端**部分。
 
-For example, take this article. There is an associated cover picture, and you are now reading through the text.
+例如，以这篇文章为例。有一个相关的封面图片，而你现在正在阅读这篇文章。
 
-At the top of the page, you can also see freeCodeCamp's logo. There is a navigation bar with a link to freeCodeCamp's forum and a button to donate.
+在页面的顶部，你也可以看到freeCodeCamp的标志。有一个导航栏，上面有一个链接到freeCodeCamp的论坛和一个捐赠的按钮。
 
-There is also a search box. You can enter a keyword to search for an article on a topic that interests you.
+还有一个搜索框。你可以输入一个关键词来搜索你感兴趣的主题的文章。
 
-There is a link to click, which will take you to lessons and certifications that will help you learn to code for free.
+有一个链接可以点击，这将带你到课程和认证，这将帮助你免费学习代码。
 
-All the above represent the frontend of the web page you're viewing.
+上述所有内容代表你正在浏览的网页的前端。
 
-### What Parts of a Web Application are Considered Frontend?
+<h2 id="What-is-condidered-frontend?">什么被认为是前端？</h2>
 
-The frontend is anything and everything visual that a user comes in contact with.
+前端是用户接触到的任何东西和所有的视觉。
 
-It's all the parts with which they directly interact.
+它是所有与他们直接互动的部分。
 
-It's all the content and styles.
+它是所有的内容（content）和样式（styles）。
 
-It's the buttons and the different hover effects before a user clicks on a link.
+它是按钮和用户点击链接前的不同悬停效果。
 
-It's the contact forms with various input fields, the search boxes and the dropdown menus.
+它是带有各种输入字段的联系表格、搜索框和下拉菜单。
 
-The layouts, text, and colors.
+布局、文本和颜色。
 
-It's the images and videos.
+是图片和视频。
 
-However, it is not _just_ the styles.
+然而，这不仅仅是样式（styles）问题。
 
-It is also how fast the website loads, how easy it is to navigate through it, and how accessible it is to people with disabilities.
+它还包括网站的加载速度，浏览网站的方便程度，以及对残疾人的无障碍程度。
 
-It's how usable and responsive it is on a variety of different devices and browsers.
+它在各种不同设备和浏览器上的可用性和响应性如何。
 
-Essentially, the frontend is all the parts of a web application that create the _look and feel_ of it.
+从本质上讲，前端是一个网络应用程序的所有部分，创造了它的 _外观和感觉（look and feel）_。
 
-### Why Frontend is Important
+<h2 id="Why-is-frontend-important?">为什么前端很重要</h2>
 
-The frontend represents someone's (or a team's) idea, vision, and a dream come to life, available for the world to see and witness.
+前端代表着某人（或一个团队）的想法、愿景和梦想的实现，可供世人观看和见证。
 
-The idea needs to be represented in the right way and be visually appealing. It will be the determining factor of how others will perceive it.
+这个想法需要以正确的方式表现出来，在视觉上具有吸引力。这将是其他人如何看待它的决定性因素。
 
-A company or organization with a site that is difficult to use and navigate through, which doesn't look good, and does not present its services nicely, will lose customers and clients.
+一个公司或组织的网站如果难以使用和浏览，看起来不好看，不能很好地展示其服务，就会失去客户和顾客。
 
-Users will become frustrated due to the lack of usability, the unpleasant user experience, and the lack of good design. They will end up searching elsewhere for what they were looking for and will most likely not return to that site again.
+用户会因为缺乏可用性、不愉快的用户体验和缺乏好的设计而感到沮丧。他们最终会在其他地方寻找他们要找的东西，并且很可能不会再回到那个网站。
 
-### What Are Some of a Frontend Developer's Tasks?
+<h2 id="Common-frontend-tasks">常见的前端任务</h2>
 
-The tasks a frontend developer completes and works on day-to-day will vary. They will heavily depend on the company they work for and the role.
+一个前端开发员每天完成的任务和工作内容会有所不同。它们将在很大程度上取决于他们工作的公司和角色。
 
-As a frontend dev, you may do a lot of design work.
+作为一个前端开发，你可能会做很多设计工作。
 
-That could be creating a style guide to create consistent styles and the brand's identity and overall look and image.
+这可能是创建一个风格指南（style guide），以创建一致的风格和品牌的身份和整体外观和形象。
 
-It includes the typography (fonts) used for all text, the color scheme, the company's logo, and layouts, to name a few.
+它包括所有文本的排版（字体），色彩方案，公司的标志和布局，仅举几例。
 
-You may work on building User Interfaces using design tools to make sure the website has all the necessary visual elements it needs, displayed and organized pleasantly.
+你可以使用设计工具建立用户界面，以确保网站有所有必要的视觉元素，并能愉快地显示和组织。
 
-On the other hand, frontend developers may not do any design work.
+另一方面，前端开发人员可能不做任何设计工作。
 
-Instead, you could collaborate with program managers, graphic designers, and UX/UI designers to solve problems.
+相反，你可以与项目经理、平面设计师和UX/UI设计师合作，解决问题。
 
-You could take the created visuals, graphics, and findings from the conducted user research.
+你可以根据的用户研究的结果创建视觉效果、图形。
 
-You would already know the target audience and demographic, common customer problems, and information on how usable the site is for users.
+你已经知道了目标受众和人口统计，常见的客户问题，以及关于网站对用户的可用性的信息。
 
-Then, your job as a frontend developer would be to translate the prototypes and static visual designs to something tangible, to a real-world, pixel-perfect, and functional website that users can easily interact with.
+然后，作为一个前端开发员，你的工作将是把原型和静态视觉设计转化为有形的东西，转化为一个真实世界的、像素完美的、功能齐全的网站，让用户可以轻松地与之互动。
 
-Using frontend technologies, you would implement the layouts already designed and build all the visual elements.
+使用前端技术，你将实现已经设计好的布局，并建立所有的视觉元素。
 
-A big part of a frontend developer's job is to create responsive websites.
+前端开发人员的工作的很大一部分是创建响应式网站。
 
-You need to make sure websites look good, are optimally displayed, and are usable on a variety of devices and screen widths.
+你需要确保网站看起来不错，显示效果最佳，并能在各种设备和屏幕宽度上使用。
 
-Nowadays, users don't use only desktop computers, but they instead view websites mostly from mobile and tablet devices.
+如今，用户并不只使用台式电脑，而是大多从移动和平板设备上查看网站。
 
-In addition, frontend developers design and develop with many of the most popular and most used browsers in mind.
+此外，前端开发人员在设计和开发时要考虑到许多最流行和最常用的浏览器。
 
-Websites need to look good and need to function optimally on all browsers.
+网站需要看起来不错，并且需要在所有的浏览器上实现最佳功能。
 
-Here is where knowing your target audience and demographic comes to play and is vital information.
+这就是了解你的目标受众和人口统计学的作用，是至关重要的信息。
 
-Depending on your service/product and your users/customers, you may need to develop with older or more modern browsers in mind.
+根据你的服务/产品和你的用户/客户，你可能需要在开发时考虑到旧的或更现代的浏览器。
 
-Another big part of a frontend developer's job is to make sure websites are accessible to all users. This entails creating web accessibility functions that would make browsing the web a pleasant experience for everyone.
+前端开发人员的另一个重要工作是确保网站对所有用户都是无障碍的。这需要创建网络无障碍功能，使浏览网络成为每个人的愉快体验。
 
-Important accessibility features a frontend developer can implement are:
+前端开发人员可以实现的重要的无障碍功能是:
 
--   text-to-speech
--   keyboard-only navigation
--   accessible color combinations with sufficient contrast
--   large buttons
+- 文字转语音
+- 只用键盘的导航
+- 有足够对比度的无障碍颜色组合
+- 大型按钮
 
-Frontend developers also work on improving the site's performance and load time.
+前端开发人员还致力于改善网站的性能和加载时间。
 
-The majority of users become impatient and click off if a website takes too long to load its content and images.
+如果一个网站加载其内容和图像的时间太长，大多数用户会变得不耐烦并点击关闭。
 
-Improving the time it takes to load the website, even by a few seconds, makes a big difference and will most likely retain users.
+改善网站的加载时间，哪怕是几秒钟，都会有很大的不同，而且很可能会留住用户。
 
-Another part of a frontend developer's role is to design and create usable web forms.
+改善网站的加载时间，哪怕是几秒钟，都会有很大的不同，而且很可能会留住用户。
 
-Web forms bridge the communication gap between the company/organization and users. They are an easy way for users to make inquiries, contact customer service, submit data, and create accounts.
+网络表格（web forms）是公司/组织与用户之间沟通的桥梁。它们是用户进行咨询、联系客户服务、提交数据和创建账户的一种简单方式。
 
-### An Overview of Frontend Tools and Technologies
+<h2 id="Frontend-tools-and-technologies"> 前端工具和技术概述</h2>
 
-As a frontend developer, you will constantly learn new technologies, depending on what is popular at the time. Technologies change fast.
+作为一名前端开发员，你将不断学习新的技术，这取决于当时的流行趋势。技术变化很快。
 
-However, the most fundamental frontend technologies are HTML, CSS, and JavaScript.
+然而，最基本的前端技术是HTML、CSS和JavaScript。
 
-They run in the user's browser and are the building block of all websites on the World-Wide Web.
+它们在用户的浏览器中运行，是万维网上所有网站的基础。
 
-Let's talk a bit more about these technologies:
+让我们再来谈谈这些技术吧:
 
--   **HTML** stands for HyperText Markup Language. You create all the content and structure of a webpage using semantic HTML.
--   **CSS** stands for Cascading Style Sheets. CSS styles the HTML elements. It adds colors, fonts, it determines the size of text and the layouts of web pages.
--   **Vanilla JavaScript** is how you add functionality and interactivity to elements. It's how you make web pages have dynamic behavior.
+- **HTML** 是指超文本标记语言。你用语义化的HTML创建网页的所有内容和结构。
+- **CSS**  层叠样式表（Cascading Style Sheets）。CSS是对HTML元素的样式。它添加颜色、字体，决定文本的大小和网页的布局。
+- **Vanilla JavaScript** 是你如何为元素添加功能和互动性的。它是你如何使网页具有动态行为的。
 
-Besides those three, there are many frontend libraries and frameworks.
+除了这三个，还有许多前端库和框架。
 
-These help ensure consistency across each webpage in a website and provide out of the box functionalities for repetitive tasks.
+这些有助于确保网站中每个网页的一致性，并为重复性任务提供开箱即用的功能。
 
-Some of the most popular ones are:
+一些最受欢迎的是:
 
--   React
--   Redux
--   Vue
--   Angular
+- React
+- Redux
+- Vue
+- Angular
 
-Depending on the role and job description, you may need design skills.
+根据不同的角色和工作描述，你可能需要设计技能。
 
-Some commonly used tools used for design work are:
+一些常用于设计工作的工具有:
 
--   Figma
--   Sketch
--   Adobe XD
--   and Photoshop for image processing
+- Figma
+- Sketch
+- Adobe XD
+- and Photoshop for image processing
 
-### Is Frontend Development Right for You?
+<h2 id="Is-frontend-development-right-for-you?">前端开发是否适合你？</h2>
 
-Frontend development is a creative and artistic endeavor.
+前端开发是一项创造性和艺术性的工作。
 
-There is a blend of both visual art and programming.
+视觉艺术和编程都有融合。
 
-A way to decide whether frontend development is for you is to consider whether you enjoy seeing the visual results of your hard work.
+决定前端开发是否适合你的一个方法是考虑你是否喜欢看到你努力工作的视觉结果。
 
-It is possible to see the results of your creation instantly on the screen of your computer.
+可以在电脑屏幕上即时看到你的创作成果。
 
-Another thing to consider is whether you care deeply about users having the best possible user experience when browsing the web.
+另一件要考虑的事情是，你是否非常关心用户在浏览网页时拥有最佳的用户体验。
 
-User experience and creating usable websites are a big part of the job.
+用户体验和创建可用的网站是工作的一个重要部分。
 
-The only way to find out if frontend development is right path for you is to give it a go.
+要想知道前端开发是否适合你，唯一的办法就是给它一个机会。
 
-A great place to start your learning is with freeCodeCamp's [Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/), where you will learn by building 20 projects and earn a certification at the end.
+一个开始学习的好地方是freeCodeCamp的 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/)，你将通过建立20个项目来学习，并在最后获得一个认证。
 
-You will learn HTML and modern CSS techniques alongside the best accessibility practices. You will also learn to create responsive web pages that accommodate each screen size.
+你将学习HTML和现代CSS技术，以及最佳的可访问性实践。你还将学习如何创建适应各种屏幕尺寸的响应式网页。
 
-Following the [Responsive Web Design Certification](https://www.freecodecamp.org/learn/2022/responsive-web-design/), learn the JavaScript programming language with the [JavaScript Algorithms and Data Structures Certification](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/), where you will learn how to make web pages interactive.
+在 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/) 之后，通过 [JavaScript算法和数据结构认证](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) 学习JavaScript编程语言，你将学习如何使网页互动。
 
-You will start from the basics, learning the syntax and necessary fundamental building blocks that will allow you to progress to more advanced topics such as Object-Oriented Programming.
+你将从基础开始，学习语法和必要的基本构件，这将使你能够进展到更高级的主题，如面向对象的编程。
 
-## What is Backend?
+<h2 id="How-the-backend-works"> 什么是后端？</h2>
 
-Backend development deals with the technologies responsible for storing and securely manipulating user data.
+后端开发涉及负责存储和安全操作用户数据的技术。
 
-It is the part associated with all the hidden logic that powers the applications users interact with.
+它是与所有隐藏逻辑相关的部分，为用户互动的应用程序提供支持。
 
-Backend is considered the server-side part of an application.
+后端被认为是一个应用程序的服务器端部分。
 
-Backend is all the hidden inner workings and the behind-the-scenes processes in a web application.
+后端是网络应用中所有隐藏的内部工作和幕后流程。
 
-It refers to everything going on underneath the hood and all the necessary components that make the front-end function properly and smoothly.
+它指的是在看不到的进行的一切，以及使前端正常和顺利运行的所有必要组件。
 
-It makes sure everything is working optimally.
+它确保一切都在最佳状态下工作。
 
-Essentially, the backend is what the users don't have direct access to or don't directly interact with and are most likely unaware of when using an application.
+从本质上讲，后端是用户没有直接访问或没有直接互动的东西，在使用一个应用程序时很可能没有意识到。
 
-### An Overview of How Backend Works for Beginners
+### 面向初学者的后台工作概述
 
-The back-end is responsible for receiving requests from a client.
+后端负责接收来自客户端的请求。
 
-It processes the incoming request and makes sure it fetches the appropriate data associated with the correct user.
+它处理传入的请求，并确保获取与正确用户相关的适当数据。
 
-Then, it sends a response back to the client. The necessary user data is presented nicely visually, with frontend code created by a frontend developer, to the right user that has access to it.
+然后，它向客户端发送一个响应。必要的用户数据通过前端开发人员创建的前端代码，以良好的视觉效果呈现给可以访问的正确用户。
 
-The backend consists of:
+后台由以下部分组成:
 
--   The **server**, which is a program that waits and listens for incoming requests from the client. It communicates with the database by submitting database queries. When the database responds with information, the server fetches the correct necessary data.
+- **服务**, 它是一个等待和监听来自客户端的请求的程序。它通过提交数据库查询与数据库进行通信。当数据库回复信息时，服务器会获取正确的必要数据。
 
-It achieves this with the help of an application running on the server that contains the necessary logic that gathers the requested information and resources for the right user. Backend server-side scripts, written in a backend scripting programming language, are responsible for processing the requests.
+它在服务器上运行的应用程序的帮助下实现这一目标，该应用程序包含必要的逻辑，为正确的用户收集所要求的信息和资源。用后台脚本编程语言编写的后台服务器端脚本，负责处理请求。
 
-Lastly, the server sends a response back to the client.
+最后，服务器向客户端发送响应。
 
--   The **database**, which is like the 'brain' of an application. Databases are programs used to organize and store all of an application's assets, content, and information in a way that can be easily accessed and retrieved, managed, and updated.
+- **数据库**,它就像一个应用程序的 "大脑"。数据库是用来组织和存储一个应用程序的所有资产、内容和信息的程序，其方式可以方便地访问和检索、管理和更新。
 
-### Examples of Backend Functionality
+<h2 id="Examples-of-backend-functionality">后端功能示例</h2>
 
-Let's take a real-world example to illustrate the different backend functionalities available on modern web applications.
+让我们举一个真实的例子来说明现代网络应用的不同后端功能。
 
-Say that you are a member of a paid workout subscription platform.
+假设你是一个付费锻炼订阅平台的成员。
 
-To login:
+登录:
 
--   You would need to enter your email address and password in a user input field.
--   There would be basic validation checks that would need to pass. Validations ensure that the required input fields are not empty and the email address has the correct format.
--   Then, there are checks to see if you exist as a user in the database by sumbmitting database queries, to see if your email address and password are correct.  
-    There would also be checks to see whether the email address and password you provided match the email and password combination stored in the database when you created your account.
--   If the email and password are incorrect, you would see an error message saying that the combination doesn't exist.
--   If everything is correct, you would be directed to your Home page, with a visual cue indicating your login. It could be a 'Welcome' message that includes your name or username.
+- 你需要在一个用户输入栏中输入你的电子邮件地址和密码。
+- 有一些基本的验证检查需要通过。验证确保所需的输入字段不是空的，电子邮件地址有正确的格式。
+- 然后，通过提交数据库查询，检查你是否作为一个用户存在于数据库中，以了解你的电子邮件地址和密码是否正确。
+     还会有检查，看你提供的电子邮件地址和密码是否与你创建账户时存储在数据库中的电子邮件和密码组合相符。
+- 如果电子邮件和密码不正确，你会看到一个错误信息，说这个组合不存在。
+- 如果一切都正确，你会被引导到你的主页，并有一个视觉提示表明你已经登录。这可能是一个 "欢迎 "信息，包括你的名字或用户名。
 
-To pick a workout:
+挑选一个锻炼项目:
 
--   The database stores all your raw data.  
-    Workouts already completed are stored in the database. The same goes with any saved in a playlist you created or marked as favorites that you would like to revisit.
--   You can also view all the available workouts and filter through them to only show a particular category.  
-    For example, you could type a keyword in the search box such as abs, arms, lower body, or upper body.  
-    Another way could be to pick from one of the available categories on the site, such as yoga, stretch, HIIT, or strength. The database will go through every workout stored there, but you will view only the filtered results of the particular category you specified in your search.
+- 数据库储存了你所有的原始数据。  
+    已经完成的锻炼会储存在数据库中。同样，任何保存在你创建的播放列表中或标记为你想重温的收藏夹中的内容也是如此。
+- 你还可以查看所有可用的锻炼，并对它们进行过滤，只显示某个特定类别。
+    例如，你可以在搜索框中输入一个关键词，如腹肌、手臂、下半身或上半身。  
+      另一种方法是在网站上选择一个可用的类别，如瑜伽、拉伸、HIIT或力量。数据库将翻阅储存在那里的每一个锻炼项目，但你将只查看你在搜索中指定的特定类别的过滤结果。
 
-To pay for the subscription:
+支付订阅费用:
 
--   The application would be able to accept credit card information or other payment options and store that information securely in the database.
--   It would also update the payment at the right time. Depending on the subscription, there would be a reoccurring monthly or yearly update, making sure each time it withdraws the right amount of money from your card.
+- 该应用程序将能够接受信用卡信息或其他付款方式，并将该信息安全地存储在数据库中。
+- 它还会在正确的时间更新付款。根据订阅情况，每月或每年都会有重复的更新，确保每次都能从你的卡中提取足够的金额。
 
-All this is handled by the back end of an application.
+所有这些都由一个应用程序的后端处理。
 
-### What Are Some of a Backend Developer's Tasks?
+<h2 id="Common-backend-tasks">常见的后端任务</h2>
 
-It's safe to say that the role of a backend developer varies from company to company and from job to job.
+可以说，后端开发人员的角色因公司不同而不同，因工作不同而不同。
 
-The main focus of a backend developer's work is to create and maintain services and programs that help the front end function.
+后端开发人员的主要工作重点是创建和维护帮助前端运作的服务和程序。
 
-In general, here are some things a backend developer would work on:
+一般来说，这里有一些后端开发人员会从事的工作:
 
--   Creating, managing, and maintaining the type of database the product/service uses.
--   Building, interacting with, and maintaining servers.
--   Building internal or external functionalities and server-side software using server-side technologies and web frameworks to provide solutions to problems.
--   Working with APIs (Application Programming Interface). Designing, developing, implementing, maintaining, and managing APIs that support CRUD (Create Read Update Delete) operations.
--   Performing data validation to ensure data has the correct format before being stored in the database.
--   Users need to interact safely with their accounts. Backend developers create systems that secure every user's data - especially when dealing with payment processing systems.
--   Dealing with third-party services such as authentication and external payment services, to name a few.
--   Organizing system logic.
--   Developing site architecture.
+- 创建、管理和维护产品/服务使用的数据库类型。
+- 建立、互动和维护服务器。
+- 使用服务器端技术和网络框架建立内部或外部功能和服务器端软件，以提供问题的解决方案。
+- 使用API（应用程序设计接口）工作。设计、开发、实施、维护和管理支持CRUD（创建读取更新删除）操作的API。
+- 执行数据验证，确保数据在存储到数据库之前具有正确的格式。
+- 用户需要与他们的账户安全互动。后台开发人员创建系统，确保每个用户的数据安全 - 特别是在处理支付处理系统时。
+- 处理第三方服务，如认证和外部支付服务，仅举几例。
+- 组织系统逻辑。
+- 开发网站架构。
 
-### An Overview of Backend Tools and Technologies
+<h2 id="Backend-tools-and-technologies">后端工具和技术</h2>
 
-There are different tools and technologies backend developers use on a day-to-day basis to implement logic into web applications.
+后端开发人员在日常工作中使用不同的工具和技术来实现网络应用的逻辑。
 
-A key component of backend programming is using a server-side scripting programming language.
+后端编程的一个关键组成部分是使用服务器端的脚本编程语言。
 
-Some of the most frequently used ones are:
+一些最经常使用的是:
 
--   **PHP**
--   **Ruby**
--   **Python**
--   **Java**
--   **JavaScript**. Yes, JavaScript is used widely in frontend development, but in recent years is used for backend development too. Node.js (a JavaScript runtime) makes that possible by providing backend functionality.
+- **PHP**
+- **Ruby**
+- **Python**
+- **Java**
+- **JavaScript**. 是的，JavaScript被广泛用于前端开发，但近年来也被用于后端开发。Node.js（一个JavaScript运行时间）通过提供后端功能使之成为可能。
 
-Besides backend programming languages, backend frameworks and libraries are used to provide extra functionality to create web applications.
+除了后端编程语言，后端框架和库被用来提供额外的功能来创建网络应用。
 
-Some of the most popular ones are:
+一些最受欢迎的是:
 
--   Ruby on Rails
--   Django
--   Flask
--   Express
+- Ruby on Rails
+- Django
+- Flask
+- Express
 
-When developers are part of a team, they use Git - a version control system that tracks changes across different project files.
+当开发者是一个团队的一部分时，他们使用Git--一个跟踪不同项目文件变化的版本控制系统。
 
-It's an open-source collaboration tool for programmers.
+它是一个针对程序员的开源协作工具。
 
-Interacting with databases is a big part of a backend developer's job, so knowledge of databases is paramount.
+与数据库互动是后端开发人员工作的一个重要部分，所以数据库知识是最重要的。
 
-Databases fall into two categories, relational and non-relational.
+数据库分为两类：关系型和非关系型。
 
-Some of the most oftenly used ones are:
+一些最经常使用的数据库是:
 
--   MySQL
--   PostgreSQL
--   MongoDB
--   Oracle
+- MySQL
+- PostgreSQL
+- MongoDB
+- Oracle
 
-When working with relational databases (such as MySQL, PostgreSQL, and Oracle), you will use SQL.
+在使用关系型数据库（如MySQL、PostgreSQL和Oracle）时，你将使用SQL。
 
-SQL stands for Structured Query Language. It is used for performing database queries. SQL communicates with relational databases to manipulate data.
+SQL是结构化查询语言的缩写。它用于执行数据库查询。SQL与关系型数据库进行通信以操作数据。
 
-You can learn more about SQL from [this helpful list of resources](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/).
+你可以从 [这个有用的资源清单](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) 了解更多关于SQL的信息。
 
-### Is Backend Development Right for You?
+<h2 id="Is-backend-development-right-for-you?">后台开发是否适合你？</h2>
 
-Backend developers are in charge of the logic behind web applications and making the frontend function optimally.
+后端开发人员负责网络应用程序背后的逻辑，并使前端的功能达到最佳。
 
-If you enjoy solving problems by breaking them down into smaller pieces, implementing algorithms, and finding an optimal and most effective solution, maybe backend development is for you.
+如果你喜欢通过将问题分解成小块来解决问题，实施算法，并找到一个最佳和最有效的解决方案，也许后端开发就适合你。
 
-If you consider yourself an analytical and methodical person, backend development involves working with, analyzing, and organizing large amounts of data. It requires performing manipulations and calculations with that data.
+如果你认为自己是一个善于分析和有条理的人，那么后台开发涉及到处理、分析和组织大量的数据。它需要对这些数据进行操作和计算。
 
-Lastly, if you don't consider yourself a particularly artistic person and are more concerned with the logic side of things and what goes on underneath the hood, maybe you are more suited to backend development.
+最后，如果你不认为自己是一个特别有艺术细胞的人，而更关心事情的逻辑方面和引擎盖下发生的事情，也许你更适合做后台开发。
 
-That said, folks may start with the frontend and then transition to the backend side of things. This way, they can figure out which they prefer working with the most.
+也就是说，人们可能会从前端开始，然后过渡到后端方面的事情。这样，他们就可以找出他们最喜欢的工作方式。
 
-If you want to start learning backend development, learn with freeCodeCamp's [Relational Database Course](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/).
+如果你想开始学习后台开发，可以通过freeCodeCamp的 [关系型数据库课程](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/) 进行学习。
 
-You will learn about relational databases using SQL and PostgreSQL, the Git version control system, to name a few. These will get you off to a great start in your backend journey.
+你将学习使用SQL和PostgreSQL的关系数据库，Git版本控制系统，等等。这些将使你在后端旅程中取得一个良好的开端。
 
-Then, you can progress to the [Back End Development and APIs Certification](https://www.freecodecamp.org/learn/back-end-development-and-apis/).
+然后，你可以进一步学习 [后端开发和API认证](https://www.freecodecamp.org/learn/back-end-development-and-apis/)。
 
-Here, you will learn Node.js and build web applications using the Express framework.
+在这里，你将学习Node.js并使用Express框架构建网络应用。
 
-## Conclusion
+## 结语
 
-Hopefully, now you have more insight into what frontend and backend development entails and can tell the differences between the two.
+希望你现在对前端和后端开发的内容有了更多的了解，并能区分两者之间的区别。
 
-To summarize, the frontend involves all the parts a user interacts with, whereas the backend is the logic that powers the frontend interactions.
+简而言之，前台涉及用户互动的所有部分，而后台是为前台互动提供支持的逻辑。
 
-Thanks for reading!
+谢谢你的阅读!

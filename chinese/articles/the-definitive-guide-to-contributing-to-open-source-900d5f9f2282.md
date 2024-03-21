@@ -210,7 +210,7 @@ A Buy me a Coffee button looks like this (you can click it if you feel I deserve
 
 [https://www.buymeacoffee.com/doomhammer](https://www.buymeacoffee.com/doomhammer)
 
-Besides general purpose buttons, there are methods dedicated to Open Source projects, like Gittip/[Liberapay](https://en.liberapay.com/explore/repositories) (this one likes to change names quite often). Funny enough, one of the popular repositories supported by Liberapay is… [awesome](https://github.com/sindresorhus/awesome).
+Besides general purpose buttons, there are methods dedicated to Open Source projects, like Gittip/[Liberapay](https://en.liberapay.com/explore/repositories) (this one likes to change names quite often). Funny enough, one of the popular repositories supported by Liberapay is…… [awesome](https://github.com/sindresorhus/awesome).
 
 The premise is similar to that of [Flattr](https://flattr.com/). You choose the monthly amount of money you want to spend on creations, and when you approve of some work, the author of the work gets a share of your budget. Say, you decided that you can afford to pay $5 each month towards Open Source projects. If you approve of four projects in a particular month (by starring them or clicking the Flattr button) each of the projects’ authors gets $1.25. Pretty simple.
 

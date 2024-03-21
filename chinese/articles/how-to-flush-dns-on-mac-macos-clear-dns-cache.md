@@ -10,10 +10,10 @@
 以下是我们将在本指南中讨论的内容:
 
 1. [什么是 DNS 缓存？](./#what-is-dns-cache?)
-    1. [为什么刷新DNS缓存很重要](./#why-flushing-dns-cache-is-important)
+    1. [为什么刷新 DNS 缓存很重要](./#why-flushing-dns-cache-is-important)
 2. [如何在 MacOS 上刷新 DNS 缓存](./#how-to-flush-dns-on-macos)
-    1. [如何在MacOS上访问终端应用程序](./#how-to-access-the-terminal-application-on-macos)
-    2. [如何根据你的MacOS版本清除DNS缓存](./#how-to-clear-dns-cache-for-your-macos-version)
+    1. [如何在 MacOS 上访问终端应用程序](./#how-to-access-the-terminal-application-on-macos)
+    2. [如何根据你的 MacOS 版本清除 DNS 缓存](./#how-to-clear-dns-cache-for-your-macos-version)
 
 <h2 id="what-is-dns-cache?">什么是 DNS 缓存？</h2>
 
@@ -23,17 +23,17 @@ DNS（域名系统的简称）将域名映射到其相关的 IP 地址。
 
 一个域名，如 `freecodecamp.org`，很容易被人类阅读、理解和回忆。
 
-IP地址（IP是互联网协议的简称）是一个机器可读的地址，由一系列独特的数字组成。这些数字可以识别连接到互联网的设备。
+IP 地址（IP 是互联网协议的简称）是一个机器可读的地址，由一系列独特的数字组成。这些数字可以识别连接到互联网的设备。
 
 它们的格式对人不太友好，因为每次你想访问一个网站时，都很难记住一个准确的数字序列。
 
-然后 DNS 将 `freecodecamp.org` 映射到其相关的IP地址 - `104.26.3.33`。
+然后 DNS 将 `freecodecamp.org` 映射到其相关的 IP 地址 - `104.26.3.33`。
 
-把DNS缓存看作是你Mac上的一个本地存储区。
+把 DNS 缓存看作是你 Mac 上的一个本地存储区。
 
 它暂时存储并跟踪你的计算机的活动记录，如最近的网站访问。
 
-每次你通过输入一个网站的URL（统一资源定位器的简称）访问该网站时，DNS缓存会保存与该网站相关的IP地址。
+每次你通过输入一个网站的 URL（统一资源定位器的简称）访问该网站时，DNS 缓存会保存与该网站相关的 IP 地址。
 
 当你第二次访问同一网站时，查询过程更有效，查询时间也更短。
 
@@ -57,7 +57,7 @@ IP地址（IP是互联网协议的简称）是一个机器可读的地址，由�
 
 2.**刷新 DNS 缓存可以防止网络安全威胁、恶意攻击和 DNS 缓存中毒的发生**.
 
-黑客可以访问并篡改你保存的DNS缓存记录。
+黑客可以访问并篡改你保存的 DNS 缓存记录。
 
 例如，他们可以操纵和改变与你已经访问过的网站的域名相关的 IP 地址，并将其映射到一个恶意的地址。
 
@@ -69,7 +69,7 @@ IP地址（IP是互联网协议的简称）是一个机器可读的地址，由�
 
 <h2 id="how-to-flush-dns-on-macos">如何在 MacOS 上刷新 DNS 缓存</h2>
 
-清除Mac上的DNS缓存是一个相对简单的过程，即使你没有很多技术知识。
+清除 Mac 上的 DNS 缓存是一个相对简单的过程，即使你没有很多技术知识。
 
 以下是你将需要的东西。
 
@@ -116,7 +116,7 @@ MacOS 有一个内置的 CLI（命令行界面），名为 `Terminal.app`，它�
 
 在下面的表格中，你将看到按时间倒序排列的 MacOS 版本--从最近的版本到最老的版本。
 
-导航到你的Mac版本并复制相应的命令。
+导航到你的 Mac 版本并复制相应的命令。
 
 | MacOS      版本     | 使用的命令 |
 | --- | --- |

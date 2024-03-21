@@ -239,7 +239,7 @@ const [state, dispatch] = useReducer(reducer, { count: 0 })
 <button onClick={() => dispatch({type: 'ADD'})}>Add 1</button>
 ```
 
-这比使用 useState 多了不少模板，但useReducer毕竟没有那么复杂。
+这比使用 useState 多了不少模板，但 useReducer 毕竟没有那么复杂。
 
 总结一下，我们只需要：
 
@@ -355,7 +355,7 @@ export const RESET = 'RESET'
 export const reset = () => ({ type: RESET })
 ```
 
-这比我们之前看到的还要更多的模板（这也是Redux被批评的主要原因），所以让我们把它分解成几块:
+这比我们之前看到的还要更多的模板（这也是 Redux 被批评的主要原因），所以让我们把它分解成几块:
 
 -   正如我提到的，Redux 是一个外部库，所以在进行任何操作之前，我们需要通过运行 `npm i redux react-redux` 来安装它。 `redux` 将带来管理状态所需的核心函数，而`react-redux` 将安装一些很酷的 hook，可以轻松地从我们的组件中读取和修改状态。
     
@@ -462,7 +462,7 @@ function App() {
 export default App
 ```
 
-Redux 是一个很好的工具，它同时解决了两个问题（prop drilling 和复杂的状态变化）。不过，它确实产生了很多模板，使状态管理成为一个更难理解的话题，特别是在处理不同的文件和实体，如 actions、reducers、store ......
+Redux 是一个很好的工具，它同时解决了两个问题（prop drilling 和复杂的状态变化）。不过，它确实产生了很多模板，使状态管理成为一个更难理解的话题，特别是在处理不同的文件和实体，如 actions、reducers、store ……
 
 这里要提到的重要一点是，这些管理状态的工具或方法并不是相互排斥的，它们可以而且可能应该同时使用，并各自解决它们所擅长的具体问题。
 
@@ -655,7 +655,7 @@ Redux toolkit 旨在成为处理 Redux 的一种更简单的方法，但在我�
 
 ![2CYCmD92D](https://www.freecodecamp.org/news/content/images/2022/03/2CYCmD92D.png)
 
-[Recoil](https://recoiljs.org/) 是一个开源状态管理库，专门用于由 Facebook（或 Meta，等等）构建的 React。根据他们的网站，Recoil是为 "最小化和响应式 "而建立的，在这个意义上，它看起来和感觉都像普通的React代码。
+[Recoil](https://recoiljs.org/) 是一个开源状态管理库，专门用于由 Facebook（或 Meta，等等）构建的 React。根据他们的网站，Recoil 是为 "最小化和响应式 "而建立的，在这个意义上，它看起来和感觉都像普通的 React 代码。
 
 Recoil 基于**原子 (atom)** 的概念。来自他们的文档，
 

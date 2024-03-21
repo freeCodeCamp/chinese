@@ -26,7 +26,7 @@ In JavaScript, an object can inherit properties of another object. The object fr
 
 You’re probably wondering: why the need for inheritance in the first place? Well, inheritance solves the problem of data and logic duplication. By inheriting, objects can share properties and methods without the need of manually setting those properties and methods on each object.
 
-## ****How to** A**ccess** a P**rototype’s** P**roperties and** M**ethods** in JavaScript**
+## ****How to** A**ccess** a P**rototype’s** P**roperties and** M**ethods** in JavaScript
 
 When we try to access a property of an object, the property is not only searched in the object itself. It's also searched in the prototype of the object, in the prototype of the prototype, and so on – until a property is found that matches the name or the end of the **prototype chain** is reached.
 
@@ -60,7 +60,7 @@ The output will consist of several built-in properties and methods:
 
 Keep in mind that prototypes can also be changed and modified through different methods.
 
-## ****The** P**rototype** C**hain****
+## ****The** P**rototype** C**hain
 
 At the end of the prototype chain is `Object.prototype`. All objects inherit the properties and methods of `Object`. Any attempt to search beyond the end of the chain results in `null`.
 

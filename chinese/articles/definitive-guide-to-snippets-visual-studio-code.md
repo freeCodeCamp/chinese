@@ -1,190 +1,190 @@
 > -   原文地址：[Visual Studio Code Snippets – the Definitive VS Code Snippet Guide for Beginners](https://www.freecodecamp.org/news/definitive-guide-to-snippets-visual-studio-code/)
 > -   原文作者：Rob O'Leary
-> -   译者：
+> -   译者：董凯
 > -   校对者：
 
 ![Visual Studio Code Snippets – the Definitive VS Code Snippet Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/harry-hd.png)
 
-Snippets can add a touch of magic to your editor. It's like an incantation. Utter a short phrase (type a prefix), wave your wand (press  `Enter`  or  `Tab`), and presto! A wonderful event unfolds in front of you. ✨
+代码片段(Snippets)可以给你的编辑器添加些许魔力。它如同咒语一搬。说出指令（输入前缀），挥动魔杖（按下 `Enter` 或者 `Tab` 键），然后神奇的事情就发生在你眼前了。 ✨
 
-Most code editors support snippets out of the box. The code editor I will use to showcase snippets is Visual Studio Code (VS Code), the most popular editor of the day.
+现在大多数代码编辑器都支持了代码片段的功能。本文中我将使用如今最流行的代码编辑器 Visual Studio Code (VS Code) 来演示代码片段。
 
-Also, there are some "text expander" apps that allow you to use snippets globally (across all apps). I will briefly cover how you can utilise these apps to get even more out of snippets.
+另外，有一些“文本扩展器”应用可以让你在所有应用中使用代码片段的功能。我会简要的介绍这一类应用是怎样给你带来更多的便利的。
 
-Let's dive into all things snippets. ?
+接下来，让我们深入了解与代码片段的相关所有细节。
 
-## Definition
+## 定义
 
-> A snippet is a template that can be inserted into a document. It is inserted by a command or through some trigger text.
+> 一段代码片段就是通过输入命令或者触发文本向文档中插入的模板内容。
 
-With snippets, you can create a boilerplate file, and insert commonly used blocks of text. The general idea is to save you typing out the same things completely again and again, and again. ?
+借助于代码片段，你可以创建常用的样板文件和常用的文本块。这样做的好处就是，你能够免于一次次重复的输入相同的内容。
 
-## Why should you use Snippets?
+## 为什么你需要使用代码片段?
 
-I'm not going to shock you with this statement: the internet is home to a lot conflicting opinions! Snippets do not escape this ignominy, but I don't think it is a topic that make people's blood pressure soar!
+希望下面这个事实不会给你带来困扰：互联网上有很多相互矛盾的观点！对于要不要使用代码片段，同样存在着完全相反的观点。但我认为那并不重要。
 
-For the sake of balance, I will present a cross-section of those opinions here.
+公平起见，我把两边的观点都展示在下方：
 
-You don't have to pick a camp and be all-for or all-against snippets. I suggest you adopt them to a degree that serves you best.
+你没必要选择那一边支持或反对，你可以只接受那些你认为合理的观点。
 
-### Yay Camp ?
+### 支持方
 
--   Snippets can boost your productivity, saving you keystrokes and reducing input errors.
--   Snippets leaves me with more mental CPU and enjoyment to spend on writing the code that I care about and want to focus on.
--   Snippets can help you to remember to include something important!
--   Integrating snippets into your workflow implicitly encourages you to use the mouse less often. Well-written snippets offer a logical path which you can tab through, stopping to edit along the way to complete the template exactly the way you want, and when you are done, you arrive on the other side ready to write your next line
+-   代码片段可以提高生产效率，减少输入错误，减少按键次数。
+-   代码片段让我们有了更多的空余时间去思考和设计自己关心的代码。
+-   代码片段可以帮助你记住重要的内容。
+-   把代码片段集成到现有工作流中，会明显减少使用鼠标的次数。成熟的代码片段拥有完整的逻辑链路，且使用 tab 键在逻辑点之间跳转，根据提示补充完所有需要的信息。或者随时中止，自己完成剩余信息的输入。不管哪种方式，一旦你完成，就意味着你准备好输入下一行的内容了。
+    
+### 反对方
 
-### Nay Camp ?
+-   我避免用代码片段，因为我不喜欢依赖任何现成的工具。
+-   我从不使用代码片段，因为我宁愿将时间花在怎样避免重复上，而不是让重复变得更简单。
+-   有些时候，离开了代码片段的帮助，我甚至不记得代码应该怎么写了。对于那些我已经熟透的内容，使用代码片段是 OK 的，但我不想在那些我还不熟悉的内容上使用代码片段。
+-   网上的代码片段都有这样或那样的错误。我一直无法找到不存在浮点数错误的数值算法。我想，在网上是找不到不存在错误的代码片段的。
 
--   I refrain from using them, mostly because I don't like being reliant on any given tool.
--   I never use snippets. I prefer to invest time in avoiding repetition rather than making it easier.
--   I found that at some point I forgot how to write the code without using the snippet. For trivial stuff that I understand, it is OK, but I don't want to forget some other stuff!
--   Most, if not all, snippets I've seen online, for code I'm looking for, have mistakes in them. I've not once been able to find a numerical algorithm that didn't have floating point errors in it. I can't imagine there being any resource of perfectly clean code snippets.
+## 什么时候你需要使用代码片段?
 
-## When should you use snippets?
+唐纳德·克努斯（Donald Knuth）是计算机科学界的佼佼者之一，他说过：“过早的优化（代码）是万恶之源”。
 
-Donald Knuth, one of the grand-wizards of computer science, said "premature optimization \[of code\] is the root of all evil".
+我认为这句话对于代码片段也适用。代码片段是编写代码的优化。如果你不了解某种语言或者框架，就为它编写大量代码片段，那是相当不明智的。
 
-I think this is relevant to snippets also. Snippets are an optimization of code production. If you don't know a language or framework very well, implementing a slew of snippets for that language or framework is likely to be a premature move.
+不过当你觉得代码片段能带来效率和便捷的时候，那就是时候使用它了。
 
-If you are comfortable, then try some out!
+## 使用代码片段的目的
 
-## What I use snippets for
+就我而言，我经常使用代码片段，而且是有选择的使用。我在我经常使用的 Markdown 和其它语言上，使用了大量的代码片段。
 
-Personally, I use snippets often but judiciously. I use a set of snippets for Markdown and most of the languages I work with.
+对于框架，我并没有使用很多代码片段。最近才开始在 Vue 上少量使用，大部分还是样板代码。不过随着我对 Vue 的掌握度的提升，我可能会使用更多的代码片段。
 
-I haven't used snippets much for frameworks. I started using some snippets for Vue recently, but I only use the boilerplate snippet. I will probably adopt more of them once my Vue IQ has risen.
+另外，在算法相关的代码上，我完全没有使用过代码片段。
 
-I haven't used snippets for algorithms.
+## 代码片段的类型
 
-## Types of Snippets
+可以根据代码片段和编辑器之间的交互范围进行分类。
 
-Snippets can be classified according to the scope of interactivity between the snippet and the editor.
+#### 静态代码片段
 
-#### Static Snippets
+即通过单个命令进行的简单的文本复制和粘贴。
 
-You can think of it as a copy-and-paste of some source text as a single command.
+#### 动态代码片段
 
-#### Dynamic Snippets
+动态代码片段意味着你可以定制一个逻辑链路，来帮助用户完成代码片段所需信息的填写。
 
-A dynamic snippet can be customised to provide a wizard-like experience for completion of a snippet.
+它包括:
 
-It can include:
+-   _Tab Stops_: 可以按顺序编号的 tab 键跳转的位置（tab stop）。
+-   _Mirrored Tab Stops_: 有时，你需要在模板的多个位置中插入同样的值。你可以使用相同的序号标记 tab stop, 然后你在任意一处输入都会立即同步输入到其它相同序号的 tab stop 中。
+-   _Placeholders_  : 拥有默认值的 tab stop 位置，当它获得焦点时你可以重写它的值。
+-   _Choices_  : 拥有下拉列表的 tab stop 位置，你可以通过下拉列表选择它的值。
+-   _Variables_: 来自环境变量中的值，比如: 选中的文字，系统日期，或者剪贴板中的内容。
 
--   _Tab Stops_: You can number stops that can be tabbed through in order,
--   _Mirrored Tab Stops_: There are times when you need to provide the same value in several places in the inserted text. You can mirror a tab stop to achieve this, and any edit will be reflected in the related tab stops instantly.
--   _Placeholders_  : It is a tab stop with a default value which can be overwritten on focus.
--   _Choices_  : At a tab stop you are presented with a dropdown list of values to choose from.
--   _Variables_: Input values from the environment such as: the selected text in the editor, system dates, or content from the clipboard.
-
-Here is an example of a markdown snippet which adds a task list with 2 tasks. It uses  _tab stops_,  _placeholders_, and  _choices_  for checking a task.
+下图是一个 markdown 中使用代码片段。它使用了 _tab stops_,  _placeholders_, 和 _choices_ 来帮助编辑已完成的任务。
 
 ![task](https://www.freecodecamp.org/news/content/images/2020/09/task.gif)
 
-#### Macro Snippets
+#### 宏代码片段
 
-The top level of sorcery is to have the capability to transform input. Transformations allow you to alter the value of a variable before they are inserted, or alter a placeholder after you have made an edit.
+高级魔法拥有转变输入的能力，转变在这里意味着你可以在插入变量前改变它的值，或者重写了占位符后改变它的值。
 
-For example, you may want to capitalise a class name once it is entered.
+比如，你可能想在输入类名过后，把它变成大写。
 
-Anything that you can think of doing with a regex is typically possible. Some editors offer more advanced scripting possibilities.
+你能想到的所有用正则表达式进行的操作，现在基本上都是可能的。一些编辑器还提供了更多高级的脚本特性。
 
-## Snippets in Visual Studio Code
+## VS Code 中的代码片段
 
-In VS Code, snippets appear in  **IntelliSense**  (`Ctrl+Space`  gives you a suggestion list), they are mixed in with other suggestions.
+在 VS Code 中，代码片段是 **智能** 出现的（`Ctrl+Space`  会显示一个建议列表），通常还和其它建议混在一起。
 
-You can also access them in a dedicated snippet picker by using the  **'Insert Snippet' command**. This combines all user, extension, and built-in snippets for that language into a single list.
+你可以通过命令 **'Insert Snippet' command** 来打开一个专门用于显示代码片段列表的选择器。它列出了当前文件语言的所有用户添加的，插件提供的，以及预设的代码片段。
 
 ![insert-snippet-list](https://www.freecodecamp.org/news/content/images/2020/09/insert-snippet-list.png)
 
-[Emmet][1]  is integrated into VS Code and has it's own CSS-selector inspired syntax for inserting HTML and CSS snippets.
+[Emmet][1] 已集成到 VS Code 中，并且具有自己的 CSS 选择器启发式语法，可用于插入 HTML 和 CSS 代码段。
 
-Emmet is it's own thing really, but the mechanics are the same. You can learn about Emmet with the  [Emmet in Visual Studio Code guide][2].
+Emmet 是独立的功能，但是机制和代码片段是一样的。你可以从片文章 [Emmet in Visual Studio Code guide][2] 里了解相关信息。
 
-### Related User Settings
+### 用户相关设置
 
-Snippets will appear as  **quick suggestions**  if the setting  `editor.quickSuggestions`  is set to true for the language you are working in. Quick suggestions are enabled by default for most languages except markdown.
+如果你在设置里将当前使用的语言的 `editor.quickSuggestions` 设置为 true ，代码片段将以 **快速建议** 的形式出现。该设置针对大多数语言都默认开启，除了 markdown。
 
 ![quick-suggestions-js](https://www.freecodecamp.org/news/content/images/2020/09/quick-suggestions-js.png)
 
-Snippets support  **tab-completion**. You can type a snippet prefix (the trigger text), and press  `Tab`  to insert a snippet. You can enable it with the setting  `editor.tabCompletion`.
+代码片段支持  **tab-completion** 。你可以输入一个代码片段的前缀（触发字符），再按下 `Tab` 就能输入完整的代码片段了。你可以在设置里设置 `editor.tabCompletion` 的值来打开该功能。
 
-The values are:
+可选值:
 
--   `on`: Tab completion is enabled for all sources.
--   `off`: Disable tab completions. This is the  _default value_.
--   `onlySnippets`: Tab completion only for snippets.
+-   `on`: 打开 tab-completion 功能。
+-   `off`: 关闭 tab-completion 功能，这是 _默认值_。
+-   `onlySnippets`: 只对代码片段打开 tab-completion。
 
 ```json
 "editor.tabCompletion": "onlySnippets",
 
 ```
 
-If you would like to control how  **snippets suggestions**  are shown, you can edit the setting  `editor.snippetSuggestions`.
+如果你想控制代码片段的建议是如何显示的，你可以改变设置中 `editor.snippetSuggestions` 的值。
 
-The values are:
+可选值:
 
--   `top`: Show snippet suggestions on top of other suggestions. I use this value.
--   `bottom`: Show snippet suggestions below other suggestions.
--   `inline`: Show snippets suggestions with other suggestions. This is the  _default value_.
--   `none`: Do not show snippet suggestions.
+-   `top`: 展示代码片段建议在其它建议之上，也是我正在使用的方式。
+-   `bottom`: 展示代码片段建议在其它建议之下。
+-   `inline`: 和其他建议一起显示，这是 _默认值_ 。
+-   `none`: 不显示代码片段的建议。
 
 ```json
 "editor.snippetSuggestions": "top",
 
 ```
 
-These are the most important settings for snippets, but there are a few more. You can check out this  [list of the default settings][3]  to explore more, or do a search in the Settings UI.
+以上是代码片段相关的重要设置，其他一些设置，你可以在[默认设置列表][3]里查看，或在打开“设置”界面进行查看。
 
-### Are there built-in snippets?
+### 有内置的代码片段么?
 
 Yes!
 
-They aren't documented in the VS Code docs, though. And inside VS Code, there is no central point to browse them. So, you may not know what they are.
+但是，VS Code 的文档中并没有提及。而且在 VS Code 中也没有专门的区域介绍它们。所以，你可能并不是很了解有哪些内置的代码片段。
 
-So, how can you find out what languages have built-in snippets?
+那么，怎么才能找出你使用的语言的的所有内置的代码片段呢？
 
-Long story short, I was frustrated by this scenario, so I wrote an extension called  [**Snippets Ranger**][4]  to give a nice UI to explore snippets easily. Think of it as a  _Marauder's Map_  for snippets!
+简单说，我对上面的情况表示不满，所以我写了一个 VS Code 插件 [**Snippets Ranger**][4]，提供了一个漂亮的 UI 界面来展示所有的内置代码片段。Think of it as a  _Marauder's Map_  for snippets!
 
 ![snippets-ranger](https://www.freecodecamp.org/news/content/images/2020/09/snippets-ranger.png)
 
-#### But I want to find the snippets for myself?
+#### 如果我想自己找到这些代码片段呢?
 
-You can, it just requires a bit more effort.
+当然可以，不过要多花费一些时间和精力。
 
-As I mentioned earlier, the  **'Insert Snippet' command**  will show you all snippets for the language of the active document.
+上面提到过， **'Insert Snippet' command** 会显示一个选择器，展示当前语言的所有代码片段。 
 
-Remember though, this is an  _aggregate_  of all of the user, extension, and built-in snippets. So, if you want to find out if a particular language has built-in snippets, you need to open a file for that language, and run the command to see that list.
+如果你想搞清楚某种语言是否有内置的代码片段，你应该打开一个该语言的文件，然后输入这个命令来查看。不过请记住，那是一个合集，包括用户的，插件的，内置的代码片段。
 
-If you have an snippets extension installed for that language that makes it too hard to identify which is which, you could disable it to ensure that only the built-in snippets are showing. ?
+如果你安装了相关语言的代码片段插件，可能很难分清楚谁是内置的，谁是插件提供的，不过你可以暂时关闭插件，剩下的就是内置的了。
 
-If you want to track down the source file yourself, the built-in snippets live inside each individual language extension directory. The file is located at  `«app root»\resources\app\extensions\«language»\snippets\«language».code-snippets`  on Windows. The location is similar for Mac and Linux.
+如果你想自己查看代码片段的源文件，Windows 下路径是 ：`«app root»\resources\app\extensions\«language»\snippets\«language».code-snippets`。Mac 和 Linux 下路径与此相似。
 
-### Snippets Extensions
+### 代码片段插件
 
-The Visual Studio Marketplace has a  [snippets category][5]  where you can find snippets for almost anything.
+Visual Studio 市场 有专门的 [snippets category][5] 分类，你可以在这查找你所需要的。
 
-A lot of Programming Language Pack extensions include snippets also (Python, C#, Go, Java, and C/C++ amongst others).
+此外还有许多程序语言包扩展，自带了代码片段（Python, C#, Go, Java, and C/C++ ...）。
 
-### How do I write my own?
+### 自己如何写代码片段?
 
-Snippets files are written in JSON. You can also add C-style comments if you wish (technically it is Microsoft's "JSONC" format).
+代码片段文件是 JSON 格式的。 如果你想，你还可以添加 C 语言风格的注释（技术上讲，它是微软的"JSONC"格式）。 
 
-You can create snippets for different scopes: global, workspace, and for a particular language.
+你可以创建针对不同作用域的代码片段：全局的，工作区的，以及针对特定语言类型的。
 
-To create the snippets file, run the  **'Preferences: Configure User Snippets' command**, which opens a quickpick dialog as below. Your selection will open a file for editing.
+执行 **'Preferences: Configure User Snippets' command** 来创建代码片段的文件，它会打开一个下图这样的对话框。选择任意一个都会打开一个新文件进行编辑。
 
 ![user snippets](https://www.freecodecamp.org/news/content/images/2020/09/user-snippets.png)
 
-If you would prefer to write a snippet in a GUI, you can use the  [snippet generator web app][6].
+如果你更喜欢使用 GUI 界面来编写代码片段，你可以尝试以这个 [snippet generator web app][6] 网站。
 
 ![snippet generator](https://www.freecodecamp.org/news/content/images/2020/09/snippet-generator.png)
 
-Let's look at an example to get familiar with the syntax.
+我们先看一个例子来熟悉下语法。
 
 #### Example
 
-Here is a markdown snippet that comes with VS Code.
+这是一个 VS Code 中 markdown 代码片段。
 
 ```json
 {
@@ -197,33 +197,33 @@ Here is a markdown snippet that comes with VS Code.
 
 ```
 
-This snippet inserts a level 1 heading which wraps the markdown around the current selection (if there is one).
+这个代码片段插入一个一级标题，内容是当前选中的文字（如果有选中的话）。
 
-A snippet has the following properties:
+一个代码片段拥有下列属性：
 
-1.  "Insert heading level 1" is the snippet name. This is the value that is displayed in the IntelliSense suggestion list if no  `description`  is provided.
-2.  The`prefix`  property defines the trigger phrase for the snippet. It can be a string or an array of strings (if you want multiple trigger phrases). Substring matching is performed on prefixes, so in this case, typing "h1" would match our example snippet.
-3.  The  `body`  property is the content that is inserted into the editor. It is an array of strings, which is one or more lines of content. The content is joined together before insertion.
-4.  The  `description`  property can provide more information about the snippet. It is optional.
-5.  The  `scope`  property allows you to target specific languages, and you can supply a comma-separated list in the string. It is optional. Of course, it is redundant for a language-specific snippet file.
+1.  "Insert heading level 1" 是代码片段的名字。如果没有 `description`，它就会出现在智能建议的列表里。
+2.  `prefix`属性定义了代码片段的触发文本。它可以是一个字符串或者一个字符串数组（如果你想有多个触发文本）。前缀的子字符串同样可以触发，在我们的例子里，输入"h1"一样能匹配到我们的代码片段。
+3.  `body`属性代表了要插入编辑器的内容。它是一个字符串数组，可能一行或者多行。在插入之前会被合并成一段。
+4.  `description`属性提供了代码片段的更多描述。它是可选的。
+5.  `scope`属性允许你指定特定的语言类型，你可以使用逗号来分割多种语言。它也是可选的。当然，对于特定于语言的代码片段文件来说是多余的。
 
-The body of this snippet has 2 tab stops and uses the variable  `${TM_SELECTED_TEXT}`.
+该代码片段的内容具有 2 个 tab stop ，并使用了`$ {TM_SELECTED_TEXT}`变量。
 
-Let's get into the syntax to understand this fully.
+接下来，让我们详细了解语法相关的细节。
 
-#### Snippet syntax
+#### 代码片段语法
 
-VS Code's snippet syntax is the same as the  [TextMate snippet syntax][7]. However, it does not support 'interpolated shell code' and the use of the  `\u`  transformation.
+VS Code 的代码片段语法和 [TextMate snippet syntax][7] 是相同的。然而，它不支持'interpolated shell code'和 `\u` 转换。
 
-The  `body`  of a snippet supports the following features:
+代码片段的`body`属性支持以下特性：
 
 #### 1\. Tab Stops
 
-Tab stops are specified by a dollar sign and an ordinal number e.g.  `$1`  .  `$1`  will be the first location,  `$2`  will the second location, and so on.  `$0`  is the final cursor position, which exits the snippet mode.
+Tab stops 由 **$** 和 **序号** 组成，像 `$1`。`$1`代表了第一个位置，`$2`代表了第二个位置，以此类推。`$0`代表退出代码片段，以及最后光标停留的位置，
 
-For example, let's say we want to make an HTML  _div_  snippet and we want the first tab stop to be between the opening and closing tags. We also want to allow the user to tab outside of the tags to finish the snippet.
+看一个例子，我们希望写一个 _div_ 的代码片段。它的第一个 tab stop 在标签内，同时希望用户按下 tab 的时候能退出代码片段，并让光标停留在标签外。
 
-Then we could make a snippet like this:
+看起来就像下面这样:
 
 ```json
 {
@@ -237,9 +237,9 @@ Then we could make a snippet like this:
 
 #### 2\. Mirrored Tab Stops
 
-There are times when you need to provide the same value in several places in the inserted text. In these situations you can re-use the same ordinal number for tab stops to signal that you want them mirrored. Then your edits are synced.
+有时候你想在插入的模板中的多个位置输入相同的值。这种时候你可以使用相同序号的 tab stops 来标识这几个位置，当你编辑其中一个的时候，就会自动同步输入的值到其它位置。
 
-A typical example is a  _for_  loop which uses an  _index_  variable multiple times. Below is a JavaScript example of a  _for_  loop.
+一个典型的例子就是 _for_ 循环中的 _index_ 变量会被多次使用，下面是一个 JavaScript 中的 _for_ 循环代码片段。
 
 ```json
 {
@@ -258,13 +258,13 @@ A typical example is a  _for_  loop which uses an  _index_  variable multiple ti
 
 #### 3\. Placeholders
 
-Placeholders are tab stops with default values. They are wrapped in curly braces, for example  `${1:default}`. The placeholder text is selected on focus such that it can be easily edited. Placeholders can be nested, like this:  `${1:first ${2:second}}`.
+Placeholders 是有默认值的 tab stop 。他们一般被大括号包裹着，就像 `${1:default}` 。占位符的内容是默认被选中的，所以你可以很容易的修改它。占位符支持嵌套，像这样 `${1:first ${2:second}}`。
 
 #### 4\. Choices
 
-Choices present the user with a list of values at a tab stop. They are written as a comma-separated list of values enclosed in pipe-characters e.g.  `${1|yes,no|}`.
+Choices 代表着这个 tab stop 会默认有一个列表展示给用户选择。Choices 的可选值的写法是用逗号分割的字符串，并且由两个竖线（|）包裹。就像 `${1|yes,no|}` 。
 
-This is the code for the markdown example shown earlier for inserting a task list. The choices are 'x' or a blank space.
+下面是前面显示的用于插入任务列表的 markdown 代码片段。choices 可选值是 'x' 或者 空格。
 
 ```json
 {
@@ -277,9 +277,9 @@ This is the code for the markdown example shown earlier for inserting a task lis
 
 #### 5\. Variables
 
-There is a good selection of variables you can use. You simply prefix the name with a dollar sign to use them, for example  `$TM_SELECTED_TEXT`.
+VS Code 提供了大量变量供你使用。你可以简单的在变量名前加上 $ ,就可以引用他们了。 像这样 `$TM_SELECTED_TEXT`。
 
-For example, this snippet will create a block comment for any language with today's date:
+比如，下面这个代码片段，会为任意语言创建一个带有今天日期的注释块。
 
 ```json
 {
@@ -293,88 +293,81 @@ For example, this snippet will create a block comment for any language with toda
 
 ```
 
-You can specify a default for a variable if you wish, like  `${TM_SELECTED_TEXT:default}`. If a variable does not have a value assigned, the default or an empty string is inserted.
+你可以为变量指定一个默认值，像这样 `${TM_SELECTED_TEXT:default}` 。当该变量没有被赋值时，就会被插入默认值或者空字符串。
 
-If you make a mistake and include a variable name that is not defined, the name of the variable is transformed into a placeholder.
+如果你不小心写错了变量名，写错的变量名会被当成 placeholder 使用。
 
-The following workspace variables can be used:
+下面是一些属于工作区的变量:
 
--   `TM_SELECTED_TEXT`: The currently selected text or the empty string,
--   `TM_CURRENT_LINE`: The contents of the current line,
--   `TM_CURRENT_WORD`: The contents of the word under cursor or the empty string,
--   `TM_LINE_INDEX`: The zero-index based line number,
--   `TM_LINE_NUMBER`: The one-index based line number,
--   `TM_FILENAME`: The filename of the current document,
--   `TM_FILENAME_BASE`: The filename of the current document without its extensions,
--   `TM_DIRECTORY`: The directory of the current document,
--   `TM_FILEPATH`: The full file path of the current document,
--   `CLIPBOARD`: The contents of your clipboard,
--   `WORKSPACE_NAME`: The name of the opened workspace or folder.
+-   `TM_SELECTED_TEXT`: 当前选中的文字或者空字符串,
+-   `TM_CURRENT_LINE`: 当前行的文字,
+-   `TM_CURRENT_WORD`: 光标下的单词或者空字符串,
+-   `TM_LINE_INDEX`: 以 0 为第一行的当前行序号,
+-   `TM_LINE_NUMBER`: 以 1 为第一行的当前行序号,
+-   `TM_FILENAME`: 当前文档的文件名,
+-   `TM_FILENAME_BASE`: 当前文档的文件名，不带扩展名,
+-   `TM_DIRECTORY`: 当前文档所在的文件夹,
+-   `TM_FILEPATH`: 当前文件的绝对路径,
+-   `CLIPBOARD`: 当前剪贴板的内容,
+-   `WORKSPACE_NAME`: 当前打开的工作区或者文件夹的名字.
 
-The following time-related variables can be used:
+下面是一些与时间相关的变量:
 
--   `CURRENT_YEAR`: The current year,
--   `CURRENT_YEAR_SHORT`: The current year's last two digits,
--   `CURRENT_MONTH`: The month as two digits (example '07'),
--   `CURRENT_MONTH_NAME`: The full name of the month (example 'July'),
--   `CURRENT_MONTH_NAME_SHORT`: The short name of the month (example 'Jul'),
--   `CURRENT_DATE`: The day of the month,
--   `CURRENT_DAY_NAME`: The name of day (example 'Monday'),
--   `CURRENT_DAY_NAME_SHORT`: The short name of the day (example 'Mon'),
--   `CURRENT_HOUR`: The current hour in 24-hour clock format,
--   `CURRENT_MINUTE`: The current minute,
--   `CURRENT_SECOND`: The current second,
--   `CURRENT_SECONDS_UNIX`: The number of seconds since the Unix epoch.
+-   `CURRENT_YEAR`: 当前年份,
+-   `CURRENT_YEAR_SHORT`: 当前年份的缩写，即最后两位数字,
+-   `CURRENT_MONTH`: 当前月份，两位数字表示(例如 '07'),
+-   `CURRENT_MONTH_NAME`: 当前月份名字(例如 'July'),
+-   `CURRENT_MONTH_NAME_SHORT`: 当前月份名字缩写(例如 'Jul'),
+-   `CURRENT_DATE`: 当前月份中的日期,
+-   `CURRENT_DAY_NAME`: 当前日期的名字 (例如 'Monday'),
+-   `CURRENT_DAY_NAME_SHORT`: 当前日期的名字缩写 (例如 'Mon'),
+-   `CURRENT_HOUR`: 当前的时间（小时）以 24 小时制展示,
+-   `CURRENT_MINUTE`: 当前分钟数,
+-   `CURRENT_SECOND`: 当前秒数,
+-   `CURRENT_SECONDS_UNIX`: 从 UNIX 起的秒数（时间戳）.
 
-The following comment variables can be used. They honour the syntax of the document's language:
+下面是一些关于注释的变量，在不同的语言下会出现不同的注释字符串:
 
--   `BLOCK_COMMENT_START`: For example,  `<!--`  in HTML,
--   `BLOCK_COMMENT_END`: For example ,  `-->`  in HTML,
--   `LINE_COMMENT`: For example,  `//`  in JavaScript.
+-   `BLOCK_COMMENT_START`: 例如,  `<!--`  在 HTML 中,
+-   `BLOCK_COMMENT_END`: 例如 ,  `-->`  在 HTML 中,
+-   `LINE_COMMENT`: 例如,  `//`  在 JavaScript 中.
 
 #### 6\. Transformations
 
-Transformations can be applied to a variable or a placeholder. If you are familiar with regular expressions (regex), most of this should be familiar.
+转换一般运用于 variable 或者 placeholder 。如果你熟悉正则表达式（regex），你会发现这很相似。
 
-The format of a transformation is:  `${«variable or placeholder»/«regex»/«replacement string»/«flags»}`. It is similar to  [String.protoype.replace()][8]  in JavaScript. The "parameters" do the following:
+转换的语法像下面这样：`${«variable or placeholder»/«regex»/«replacement string»/«flags»}`。它很像 JavaScript 中的 [String.protoype.replace()][8] 。其中参数的作用如下:
 
--   `«regex»`: This is a regular expression that is matched against the value of the variable or placeholder. The JavaScript regex syntax is supported.
--   `«replacement string»`: This is the string you want to replace the original text with. It can reference capture groups from the  `«regex»`, perform case formatting (using the special functions:  `/upcase`,  `/downcase`, and  `/capitalize`), and perform conditional insertions. See  [TextMate Replacement String Syntax][9]  for more in-depth information.
--   `«flags»`: Flags that are passed to the regular expression. The  [JavaScript regex flags][10]  can be used:
-    -   `g`  : Global search,
-    -   `i`  : Case-insensitive search,
-    -   `m`  : Multi-line search,
-    -   `s`  : Allows  `.`  to match newline characters,
+-   `«regex»`: 这是一个与变量或占位符的值匹配的正则表达式。支持 JavaScript regex 语法。
+-   `«replacement string»`: 这是用来替换匹配到的内容的字符串。它可以引用`«regex»`中的捕获组，执行大小写的格式化（使用特殊的标记函数：`/upcase`, `/downcase`, 和 `/capitalize`），以及执行条件插入。查看 [TextMate Replacement String Syntax][9] 了解更多信息。
+-   `«flags»`: Flags 是传递给正则表达式使用的。可以使用 [JavaScript regex flags][10] 中的标志:
+    -   `g`  : 全局搜索,
+    -   `i`  : 大小写敏感,
+    -   `m`  : 多行搜索,
+    -   `s`  : 允许 `.` 匹配新行的字符,
     -   `u`  : Unicode. Treat the pattern as a sequence of Unicode code points,
     -   `y`  : Perform a "sticky" search that matches starting at the current position in the target string.
 
-To reference a capture group, use  `$n`  where  `n`  is the capture group number. Using  `$0`  means the entire match.
+可以使用 `$n` 引用捕获组，其中 `n` 代表第几个捕获组的值。使用 `$0` 代表整个匹配内容。
 
-This can be a bit confusing since tab stops have the same syntax. Just remember that if it is contained within forward slashes, then it is referencing a capture group.
+因为它的语法和 tab stops 的语法相同，所以可能会造成混淆。不过你只需要记住，如果它是被包括在正斜杠（/）之中的，它就是指向捕获组的。
 
-The easiest way to understand the syntax fully is to check out a few examples.
+我们需要多看一些例子，来彻底搞清楚这个语法。
 
 | SNIPPET  _BODY_ | INPUT | OUTPUT | EXPLANATION |
 | --- | --- | --- | --- |
-| `["${TM_SELECTED_TEXT/^.+$/• $0/gm}"]` | line1  
-line2 | • line1  
-• line2 | Put a bullet point before each non-empty line of the selected text. |
-| `["${TM_SELECTED_TEXT/^(\\w+)/${1:/capitalize}/}"]` | the cat is on the mat. | The cat is on the mat. | Capitalize the first word of selected text. |
-| `["${TM_FILENAME/.*/${0:/upcase}/}"]` | example.js | EXAMPLE.JS | Insert the filename of the current file uppercased. |
-| `[`  
-`"[",`  
-`"${CLIPBOARD/^(.+)$/'$1',/gm}",`  
-`"]"`  
-`]` | line1  
-line2 | \['line1', 'line2',\] | Turn the contents of the clipboard into a string array. Each non-empty line is an element. |
+| `["${TM_SELECTED_TEXT/^.+$/• $0/gm}"]` | line1 <br/> line2 | • line1 <br/> • line2 | 在你选中的非空行前面添加一个无序序号（•）。 |
+| `["${TM_SELECTED_TEXT/^(\\w+)/${1:/capitalize}/}"]` | the cat is on the mat. | The cat is on the mat. | 把你选中的文字首个单词的首字母大写。 |
+| `["${TM_FILENAME/.*/${0:/upcase}/}"]` | example.js | EXAMPLE.JS | 以大写的方式插入当前文件的名字。 |
+| `[` <br/>`"[",` <br/>`"${CLIPBOARD/^(.+)$/'$1',/gm}",` <br/>`"]"` <br/>`]` | line1 <br/> line2 | \['line1','line2',\] | 将剪贴板的内容转换为一个字符串数组，每一个非空行都会转换为数组中的一个元素。 |
 
-As you can see from the second example above, metacharacter sequences must be escaped, for example insert  `\\w`  for a word character.
+如你所见，上方第二个例子，正则中的元字符必须被转义，比如例子中匹配一个单词你必须写成 `\\w`。
 
 #### Placeholder Transformations
 
-**Placeholder transforms do  not  allow a default value or choices**! Maybe it is more suitable to call them tab stop transformations.
+**Placeholder 转换不能使用默认值或者选项值**! 或许称它为 tab stop transformations 更为合适。
 
-The example below will uppercase the text of the first tab stop.
+下面的例子会把第一个 tab stop 输入的内容大写。
 
 ![placeholder transform](https://www.freecodecamp.org/news/content/images/2020/09/placeholder-transform.gif)
 
@@ -387,10 +380,9 @@ The example below will uppercase the text of the first tab stop.
 }
 
 ```
+有一个令人困惑的特性，当你在第一个 tab stop 上设置了 placeholder，但却在它的镜像 tab stop 上运用了转换，转换会发生在第一个 tab stop 上么？不会！
 
-You can have a placeholder and perform a transformation on a mirrored instance. The transformation will not be performed on the initial placeholder. ?
-
-Would you use this behaviour somewhere? I find it confusing initially, so it may have the same affect on others.
+你会选择使用这个特性嘛？我最开始对这个特性感到十分困惑，所以我觉得你们也可能会。下面时具体的例子：
 
 ```json
 {
@@ -402,11 +394,11 @@ Would you use this behaviour somewhere? I find it confusing initially, so it may
 
 ```
 
-### How do I assign Keyboard Shortcuts for snippets?
+### 如何为代码片段绑定快捷键?
 
-By adding your shortcuts to  `keybindings.json`  . You can open the file by running the  **'Preferences: Open Keyboard Shortcuts File (JSON)'**  command.
+你可以通过向 `keybindings.json` 加入你的快捷键。这个文件可以通过这个命令 **'Preferences: Open Keyboard Shortcuts File (JSON)'** 打开。
 
-For example, to add a shortcut for the built-in markdown snippet "Insert heading level 1":
+比如，为 markdown 的 代码片段 "Insert heading level 1" 绑定一个快捷键：
 
 ```json
 {
@@ -421,11 +413,11 @@ For example, to add a shortcut for the built-in markdown snippet "Insert heading
 
 ```
 
-You define a shortcut by specifying the key combination you want to use, the command ID, and an optional  [when clause context][11]  for the context when the keyboard shortcut is enabled.
+你可以定义你的快捷键组合，指定命令的 ID，以及可选的 [when clause context][11] 来指定什么时候这个快捷键是可用的。
 
-Through the  `args`  object, you can target an existing snippet by using the  `langId`  and  `name`  properties. The  `langId`  argument is the  [language ID][12]  of the language that the snippets were written for. The  `name`  is the snippet's name as it is defined in the snippet file.
+通过 `args` 对象，你可以通过 `langId` 和 `name` 指定目标代码片段。其中 `langId` 参数是目标代码片段所属的语言 ID [language ID][12] ，参数 `name` 是你编写代码片段时指定的名字。
 
-You can define an inline snippet if you wish using the  `snippet`  property.
+如果你想，你也可以使用 `snippet` 属性指定行内的代码片段。
 
 ```json
 [
@@ -441,120 +433,122 @@ You can define an inline snippet if you wish using the  `snippet`  property.
 
 ```
 
-You can use the  _Keyboard Shortcuts UI_  also, but it does not have the ability to add a new shortcut.
+你也可以使用  _Keyboard Shortcuts UI_ 来编辑快捷键，但是它不具备添加新的快捷键的能力。  
 
-Another downside of the UI is that it does not show the  `args`  object, which makes it more difficult to find and edit your custom shortcuts. ?
+使用 UI 的另一个缺点是，他不会显示 `args` 对象，这会让你查找或者编辑自定义快捷键时更加费劲。
 
 ![shortcuts-ui](https://www.freecodecamp.org/news/content/images/2020/09/shortcuts-ui.png)
 
-## A question of style
+## 风格问题
 
-Something that I found offputting initially with snippets was the propensity for people to create snippets with abbreviated prefixes. Do I have to learn a big list of gibberish acronyms to use someone else's snippets?
+编写代码片段的人总是喜欢用缩写前缀，这可能让刚开始接触代码片段的人感到反感。我必须要学习一大堆乱七八糟的缩写词，才能使用其他人的代码片段？
 
-What do I mean by abbreviated prefixes? The table below list a few of the snippets from the  [JavaScript (ES6) code snippets][13]  VS Code extension. You can see in the  _Trigger_  column, the prefixes listed are abbreviations, for example  _fre_  to represent a "for each" loop.
+缩写前缀是什么意思？下表列出了 [JavaScript（ES6）snippets] [13] VS Code 扩展中的一些代码段。其中 _Trigger_ 列中的就是前缀缩写，例如 _fre_ 代表 "for each" 循环。
 
 ![es6 snippets excerpt](https://www.freecodecamp.org/news/content/images/2020/09/es6-snippets-excerpt.png)
 
-This is unnecessary in two ways.
+这在两个方面都是不必要的。
 
-Firstly, the quick suggestions offered by VS Code are produced from a  **fuzzy substring search**. If I type "fe" and the prefix of a snippet is "foreach", this will match and be offered as a quick suggestion.
+第一点，VS Code 提供的快速建议功能包含了 **模糊字符串搜索** 功能。如果你输入 "fe" 且代码片段的前缀是 "foreach"，这就能够被快速建议匹配到。
 
-As you can see below, this is the second match.
+你可以从下图看到，"foreach" 是第二个匹配项。
 
 ![fe quick suggestion](https://www.freecodecamp.org/news/content/images/2020/09/fe-quick-suggestion.png)
 
-The first match is  _fre_, which is a snippet from the extension. Which suggestion is more descriptive? ?
+第一个匹配项是 _fre_ , 属于某个扩展的代码片段。你觉得哪一个更具描述性？？
 
-If you use the "Insert Snippet" command for snippets, it does not make much of a difference. The description field makes amends for this shortcoming. I don't use snippets in this way, so I would prefer a more descriptive prefix.
+如果你使用 "Insert Snippet" 命令来插入代码片段，描述性上就不会有太大的区别了。因为列表中的描述字段对这个缺点做了补充，你可以通过描述文字来了解代码片段的能力。我自己不使用这种方式插入代码片段，所以我更喜欢一个更具描述性的前缀。
 
 ![insert snippet foreach](https://www.freecodecamp.org/news/content/images/2020/09/insertsnippet-foreach.png)
 
-Secondly,  _fre_  is a  **duplicate**  of the built-in snippet  _foreach_.
+第二点， _fre_ 与内置的代码片段 _foreach_  **重复** 了。
 
-Some people turn off quick suggestions for snippets and use tab completion only. In this case, you need to type a prefix out without getting visual feedback. Some people may prefer to use an abbreviated prefix to save keystrokes here.
+一些人可能把快速建议的功能关闭了，只使用 tab 键来触发代码片段。这种情况下你需要在没有提示的情况下输入前缀。这些人可能更喜欢使用缩写前缀来减少按键的次数。
 
-The same fuzzy substring search is being performed in the background, so the first snippet match is inserted when you hit tab.
+然而这种方式，同样使用了模糊搜索，所以你按下 tab 键的时候，代表你默认选择了第一个匹配项。
 
 ![snippet-tab-completion](https://www.freecodecamp.org/news/content/images/2020/09/snippet-tab-completion.gif)
 
-Looking at the example above, you can see that typing "fr" and hitting  _tab_  inserts the  _fre_  snippet. Typing "fore" and hitting tab inserts the  _foreach_  snippet.
+观察上面这个例子，你可以看见输入 "fr" 时， 按下 _tab_ 键插入了 _fre_ 代码片段。输入 "fore" 时，插入了 _foreach_ 代码片段。
 
-So, you do not need to type out the entire prefix, if you really don't want to! ? If you have many similarly named snippet prefixes for a language, it would be impractical I imagine.
+因此，如果你想的话，你可以不输入完整的前缀！？但是想象一下，在某种语言下，拥有大量相似前缀的代码片段，你只输入前缀缩写是多么不切实际的。
 
-It is more practical to learn the prefixes properly, and type them out entirely before hitting tab.
+更实际的做法是，选择合适的前缀，在按下 tab 键之前，完整的把它们打出来。
 
-There are some trade-offs depending on your preferences for using snippets.
+以上观点，可能根据你个人存在某些取舍。
 
-Personally, I like to use quick suggestions as I like the visual feedback. I have snippets set to be the top suggestions, that way I can type abbreviated versions of the prefixes without needing to memorise them.
+就我而言，我更喜欢使用快速建议功能，因为它有视觉反馈。我通常把代码片段的建议设置在列表最上面，这样我就能看着列表输入缩写前缀，而不是去记住他们。
 
 Some snippet authors have rigid patterns to overcome this, but that's just something I can't get into easily.
 
-If you use a lot of snippets for a language, you may want to choose snippets that are written in a similar style.
+可能一些代码片段的作者有严格的模式去克服这个问题，但我并不能很容易的去接受它。
 
-If you use snippets for different frameworks and libraries in a language, they can add up and overlap. I haven't needed to do this, but you may need to do it eventually.
+如果你针对某种语言使用了大量的代码片段，你很可能会选择那些风格相似的代码片段使用（意味着很可能缩写前缀是十分相似的）。
 
-## Global Snippets
+如果你在同种语言的不同框架或者库中使用代码片段，它们的代码片段可能会出现交叉，重叠的情况。我不需要处理这种情况，但如果你使用缩写前缀，最终可能需要处理这些冲突。
 
-Outside of your code editor, you can benefit from snippets also. Having snippets available in every app offers more possibilities.
+## 全局的代码片段
 
-Common use cases are:
+在代码编辑器之外，你也能享受代码片段带来的好处。让每个应用提供代码片段的能力，带来了更多可能。
 
--   canned responses for messages,
--   autocorrecting common typos,
--   adding contact information or signatures to documents,
--   inserting dates,
--   formatting of selected text and pasted text,
--   inserting search phrases for your search engine or app,
--   HTML snippets available inside your email client,
--   adding different templates to documents.
+常用的场景如下：
 
-Most of the apps for snippets are touted as "text expanders", but quite a few task and productivity apps also include snippet-esque features.
+-   邮件的固定回复头信息,
+-   自动纠正常见的错误单词,
+-   在文档中添加联系信息或者签名,
+-   插入日期,
+-   格式化选中的文字或者粘贴文字,
+-   为你的搜索引擎或者应用加入常见的搜索词组,
+-   在邮件客户端中使用 HTML 的代码片段,
+-   向文档添加不同的模板.
 
-Global snippets are  **bit more limited that code editor snippets**, as you cannot use tab stops and placeholders. In most apps you can use some dynamic variables such as dates.
+大多数针对代码片段的应用都称自己为 “文本扩展器” ，但是还是有很多用于任务管理或者生产力的应用同样包含了代码片段的功能。
+
+全局代码片段相比代码编辑器的代码片段，**有更多的限制** ，你不能使用 tab stops 和 plaecholders。大多数应用能使用的是一些动态变量，比如有关日期的变量。
 
 ### App Review
 
 #### Autohotkey (Windows)
 
-[AutoHotkey][14]  is a  **free, open-source scripting language for Windows**  to do all kinds of tasks.
+[AutoHotkey][14]  是一个 **Windows 下的免费，开源的脚本语言** ，用于执行所有类型任务.
 
-It has it's own unique syntax. You can install the  [AutoHotKey extension][15]  to add language support to VS Code for a better editing experience.
+它拥有自己专属语法。你可以在 VS Code 中安装 [AutoHotKey extension][15] ，来获得更好的编辑体验。 
 
-For defining prefixes to trigger a snippet insertion, you use the following format:  `::<<prefix>>::<<text to insert>>`. The following script will insert Rob's email address when you type "robmail" and hit  _space_  or  _tab_  or  _enter_.
+你可以使用如下形式：`::<<prefix>>::<<text to insert>>` ，来定义触发代码片段插入的前缀。下面的脚本会插入 Rob's email 地址，当你输入了 "robmail" 后，并按下 _space_ 或者 _tab_ 或者 _enter_。
 
 ```
 ::robmail::rob@someservername.com
 
 ```
 
-The following script will insert the text "This is the snippet text" when you press  `Ctrl+D`.
+下面这个片段会插入 "This is the snippet text" 这段内容，当你按下 `Ctrl+D`。 
 
 ```
 ^d::  Send This is the snippet text
 
 ```
 
-You can read the  [docs][16]  to learn more.
+你可以阅读文档 [docs][16] 了解更多。
 
 #### PhraseExpress (Windows, Mac, iOS)
 
-[PhraseExpress][17]  is "a text expander software, that manages frequently used text templates for insertion into any program".
+[PhraseExpress][17] 是一个文本扩展器应用，它管理常用文本模板，并可以插入任何程序。
 
-It is a  **freemium, GUI-based app**. It is aimed at a wider audience than  _AutoHotKey_.
+这是一个 **基于 GUI 的免费增值应用**。它比 _AutoHotKey_ 的受众更广泛。
 
-It is quite polished and easy to use. You set it to run on start-up and it will be active in the background.
+他十分简洁和易于使用。你可以设置它为启动时运行，他就会在后台被激活。
 
-Your snippets can be organized into custom folders and synced using cloud services.
+你可以用文件夹组织和管理你的代码片段，也可以用云服务进行保存或者同步。
 
 ![phrase-express](https://www.freecodecamp.org/news/content/images/2020/09/phrase-express.png)
 
 #### Espanso (Windows, Mac, Linux)
 
-This is a  **open-source, cross-platform text expander written in Rust**.
+这是一个 **用 Rust 写的开源，跨平台的文本扩展器应用**。
 
-It uses a  **file-based configuration approach**. The config files are written in  [YAML][18].
+它采用了 **基于文件配置的方法**，配置文件采用了 [YAML][18] 语法。
 
-The  `default.yml`  file contains the main configuration. The config below will insert Rob's email address when you type "robmail" .
+默认配置文件  `default.yml` ，包括了主要的配置。 下面的配置会输入 Rob's email ，当你输入"robmail"时。
 
 ```yaml
 matches:
@@ -563,11 +557,11 @@ matches:
 
 ```
 
-You can  **specify the initial cursor position**, however you cannot define tab stops.
+你可以 **指定初始的光标位置**，然而你并不能定义 tab stops。
 
-You can  **add extensions**  to increase the capability of Espanso. There are extensions for running external scripts, including dates, generating random text, and including clipboard data.
+你可以 **添加扩展** 来增强 Espanso 的能力。有大量扩展提供了其它能力，包括日期，生成随机文本以及插入剪贴板数据。
 
-And that's about it! I hope you learned something about snippets today, and you can use them to make yourself more productive.
+这就是所有了！我希望你今天能有所收获，而且可以使用代码片段让你变得更具生产力。
 
 [1]: https://www.emmet.io/
 [2]: https://code.visualstudio.com/docs/editor/emmet

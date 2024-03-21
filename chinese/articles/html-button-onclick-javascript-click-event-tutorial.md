@@ -1,43 +1,43 @@
 > -  原文地址：[HTML Button onclick – JavaScript Click Event Tutorial](https://www.freecodecamp.org/news/html-button-onclick-javascript-click-event-tutorial/)
 > -  原文作者：[Kolade Chris](https://www.freecodecamp.org/news/author/kolade/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
 ![HTML Button onclick – JavaScript Click Event Tutorial](https://www.freecodecamp.org/news/content/images/size/w2000/2021/08/javascript-onclick.png)
 
-Whenever you visit a website, you'll probably click on something like a link or button.
+当你访问一个网站时，你可能点击一些东西，像链接或者按键。
 
-Links take you to a certain part of the page, another page of the website, or another website entirely. Buttons, on the other hand, are usually manipulated by JavaScript events so they can trigger certain functionality.
+链接可能跳转到当前网页的某一部分，也可能该网站的另一个网页，更或者是另一个网站。按键由 Javascrpt 各种事件控制，触发某些函数
 
-In this tutorial, we are going to explore the two different ways of executing click events in JavaScript using two different methods.
+在本教程中，我们将探索在 JavaScript 中使用两种不同的方式触发点击事件。
 
-First, we'll look at the traditional `onclick` style that you do right from the HTML page. Then we'll see how the more modern "click" `eventListner` works, which lets you separate the HTML from the JavaScript.
+首先，我们将看传统的 `onclick` 风格 ，你可以在 HTML 里添加。然后我们将看到更现代的 "click" `eventListner` 是如何工作的, 它可以让 HTML 和 JavaScript 分离。
 
-## How to Use the `onclick` event in JavaScript
+## 如何使用`onclick`事件
 
-The `onclick` event executes a certain functionality when a button is clicked. This could be when a user submits a form, when you change certain content on the web page, and other things like that.
+当一个按键被点击时，对应的`onclick`事件会执行里面的函数。这可能发生在用户提交一个表单，也可能在你修改网页里的内容，以及其他类似的事情。
 
-You place the JavaScript function you want to execute inside the opening tag of the button.
+你把想执行的函数名放到按键标签里。
 
-### Basic `onclick` syntax
+### 基础 `onclick` 语法
 
 ```html
 <element onclick="functionToExecute()">Click</element>
 ```
 
-For example
+例如
 
 ```html
 <button onclick="functionToExecute()">Click</button>
 ```
 
-Note that the `onclick` attribute is purely JavaScript. The value it takes, which is the function you want to execute, says it all, as it is invoked right within the opening tag.
+请注意 `onclick`属性值是你想执行的函数名，它会调用该函数。
 
-In JavaScript, you invoke a function by calling its name, then you put a parenthesis after the function identifier (the name).
+在 JavaScript 中，它会通过函数名调用函数，当你在函数名后加上括号。
 
-## `onclick` event example
+## `onclick` 事件例子
 
-I have prepared some basic HTML with a little bit of styling so we can put the `onclick` event into real-world practice.
+我已经准备好了一些基本的 HTML 和样式，我们练习怎样把 `onclick` 事件加入进去。
 
 ```html
 <div>
@@ -46,7 +46,7 @@ I have prepared some basic HTML with a little bit of styling so we can put the `
 </div>
 ```
 
-And here's the CSS to make it look good, along with all the rest of the example code:
+让它好看些的 CSS，以及所有其他的示例代码:
 
 ```css
  body {
@@ -79,12 +79,12 @@ button.orange {
 }
 ```
 
-So, on the web page, this is what we have:  
+这是我们看到的网页:  
 ![changeColor](https://www.freecodecamp.org/news/content/images/2021/08/changeColor.png)
 
-Our aim is to change the color of the text to blue when we click the button. So we need to add an `onclick` attribute to our button, then write the JavaScript function to change the color.
+我们的目标是当我们点击这个按键时，文本的颜色变成蓝色。所以我们需要添加一个 `onclick`属性到按键上，然后白编写 JavaScript 函数来改变颜色。
 
-So we need to make a slight change in our HTML:
+我们需要在 HTML 做一些小小的改变.
 
 ```html
 <div>
@@ -93,15 +93,15 @@ So we need to make a slight change in our HTML:
 </div>
 ```
 
-The function we want to execute is `changeColor()`. So we need to write it in a JavaScript file, or in the HTML file inside a `<script>` tag.
+我们要执行的函数是`changeColor()`,所以我们需要把它写到一个 JavaScript 文件里，或者写再 HTML 文件的`<script>`标签里。
 
-If you want to write your script in a JavaScript file, you need to link it in the HTML using the syntax below:
+如果你想把你的脚本写在一个 JavaScript 文件中，你需要在 HTML 里用下面的语法引用它。
 
 ```html
 <script src="path-to-javascript-file"></script>
 ```
 
-If you want to write the script in an HTML file, just put it inside the script tag:
+如果你想在 HTML 里写脚本，把它放在 script 标签里。
 
 ```html
 <script>
@@ -109,19 +109,19 @@ If you want to write the script in an HTML file, just put it inside the script t
 </script>
 ```
 
-Now, let’s write our `changeColor()` function.
+现在让我们来写`changeColor()`函数
 
-First of all, we need to select the element we want to manipulate, which is the freeCodeCamp text inside the `<p>` tag.
+首先，我们需要选择我们想操作的元素，也就是在`<p>`标签内的 `freeCodeCamp` 文本
 
-In JavaScript, you do that with the DOM’s `getElementById()`, `getElementsByClassName()`, or the `querySelector()` methods. Then you store the value in a variable.
+在 JavaScript 中，你可以用 DOM 的 getElementById()，getElementsByClassName()，或者 querySelector()方法把 DOM 对象存储在变量中。
 
-In this tutorial, I will be using `querySelector()` because it is more modern and it's faster. I will also be using `const` to declare our variables instead of `let` and `var`, because with `const`, things are safer as the variable becomes read-only.
+在本教程中，我将使用`querySelector()` ，因为它更现代，而且运行更快。我还将使用 `const`来声明我们的变量，而不用`let`和`var`。因为使用`const`，事情将变得更安全，变量是只读的。
 
 ```js
 const name = document.querySelector(".name");
 ```
 
-Now that we have the text selected, let's write our function. In JavaScript, the basic function syntax looks like this:
+现在我们已经选定了文本，让我们来编写自己函数。在 JavaScript 中，函数的基本语法是这样的。
 
 ```js
 function funcctionName () {
@@ -129,7 +129,7 @@ function funcctionName () {
 } 
 ```
 
-So let’s write our function:
+这就是我们的函数
 
 ```js
 function changeColor() {
@@ -137,21 +137,21 @@ function changeColor() {
 }
 ```
 
-What’s going on?
+发生了什么事情？
 
-Remember from the HTML that `changeColor()` is the function we are going to execute. That’s why our function identifier (name) is set to `changeColor`. If the name doesn’t correlate with what’s in the HTML, it won’t work.
+HTML 中的`changeColor()`是我们要执行的函数，如果的这个名字与 HTML 中的函数名不一样，它就不会起作用。所以我们的函数名写成  `changeColor`。
 
-In the DOM (Document Object Model, refers to all of the HTML), to change anything that relates to style, you need to write “style” then a dot (.). This is followed by what you want to change, which might be the color, background color, font size, and so on.
+在 DOM(文档对象模型，指所有的 HTML)中，要改变任何有关`style`的东西，你需要写上`style`，然后加上一个`.`。后面是你想要改变的东西，这可以是颜色(color)，背景颜色(background)，字体大小(fontsize)等。
 
-So, inside our function, we take the name variable we declared to get our freeCodeCamp text, then we change the color to blue.
+因此，在我们的函数中，我们声明了变量来获取`freeCodeCamp`文本，然后我们把颜色改为蓝色。
 
-The color of our the text turns blue any time the button is clicked:
+点击按键时，文本的颜色会变成蓝色。
 
 ![changeColor](https://www.freecodecamp.org/news/content/images/2021/08/changeColor.gif)
 
-Our code is working!
+我们的起作用了！！！
 
-We could take things a little bit further by changing our text to be more colors:
+我们可以把事情做得更进一步，把我们的文字有更多的颜色变化。
 
 ```html
 <div>
@@ -162,15 +162,15 @@ We could take things a little bit further by changing our text to be more colors
 </div>
 ```
 
-So, what we want to do is change the text to blue, green, and orange-red.
+我们要把文本颜色改成蓝色，橙色和橙红色。
 
-This time around, the `onclick` functions in our HTML take the values of the color we want to change the text to. These are called parameters in JavaScript. The function we'll write takes its own too, which we will call “color”.
 
-Our web page changed a little:
+
+我们的网页稍微变化一下：
 
 ![changeColors](https://www.freecodecamp.org/news/content/images/2021/08/changeColors.png)
 
-So, let's select our freeCodeCamp text and write the function to change its color to blue, green, and orange-red:
+让`freeCodeCamp`文本通过我们写的函数可以变成蓝色，绿色，和橙红。
 
 ```js
 const name = document.querySelector(".name");
@@ -180,24 +180,25 @@ function changeColor(color) {
 }
 ```
 
-The block of code in the function takes the name variable (where we stored our freeCodeCamp text), then set the color to whatever we passed into the `changeColor()` functions in the HTML buttons.  
+ name 变量获取了`name`的 DOM 对象(我们在这里存储了`freeCodeCamp`文本),然后颜色会根据我们传入`changeColor()`的颜色值变化。
+
 ![changeColors](https://www.freecodecamp.org/news/content/images/2021/08/changeColors.gif)
 
-## How to Use the click `eventListener` in JavaScript
+## 如何使用 `eventListener`在 JavaScript 中  
 
-In JavaScript, there are multiple ways of doing the same thing. As JavaScript itself evolved over time, we started needing to separate the HTML, CSS, and JavaScript code in order to comply with best practices.
+在 JacaScript 中，有多种方法做同一件事。随着 JavaScirpt 本身发展，我们开始需要将 HTML，CSS 和 JavaScript 代码分开，以达到最佳实践。
 
-Event listeners make this possible as they let you separate the JavaScript from the HTML. You can also do this with onclick, but lets take another approach here.
+事件监听器使 JavaScript 和 HTML 分离成为可能。你也可以用`onclick`做到这一点，但是在这里采取另一种方法。
 
-### Basic `eventListener` syntax
+### 基本 `eventListener` 语法 
 
 ```js
  element.addEventListener("type-of-event", functionToExecute)
 ```
 
-Now, let's change the freeCodeCampt text to blue by using the click eventListner
+现在让我们使用`ckick eventListner`将`freeCodeCamp`文本变成蓝色。
 
-This is our new HTML:
+这是我们新的 HTML：
 
 ```html
  <div>
@@ -206,13 +207,13 @@ This is our new HTML:
  </div>
 ```
 
-And this is what it looks like:
+这是网页效果。
 
 ![colorChange](https://www.freecodecamp.org/news/content/images/2021/08/colorChange.png)
 
-This time around in our script, we need to select the button too (not just the freeCodeCamp text). That’s because there’s nothing JavaScript in the opening tag of our button, which is cool.
+这次在我们的脚本中，我们也需要选择按键(而不仅是`freeCodeCamp`文本)。因为在我们的按键的标签里没有任何 JavaScript，这很酷。
 
-So, our script looks like this:
+这是我们的脚本的样子。
 
 ```js
 const name = document.querySelector(".name");
@@ -223,7 +224,7 @@ const btn = document.querySelector("button");
  });
 ```
 
-We can also separate our function totally from the `eventListener` and our functionality will still remain the same:
+我们也可以将我们的函数与`eventListener` 完全分开，我们的功能保持一样。
 
 ```js
 btn.addEventListener("click", changeColor);
@@ -234,13 +235,13 @@ btn.addEventListener("click", changeColor);
 
 ![changeColorWithEvents](https://www.freecodecamp.org/news/content/images/2021/08/changeColorWithEvents.gif)
 
-## How to Build a " Show More" and "Show Less" Button with JavaScrpit
+## 如何通过 JavaScript 建立一个 `Show More` 和 `Show Less` 按键
 
-One of the best ways to learn is by making projects, so let's take what we've learned about the `onclick` and "click" `eventListner` to do build something.
+学习的最好办法之一是去动手创建一个项目，用到我们已经学到的`onclick` 和 `click eventLister`，去做一些事情。
 
-When you visit a blog, you often see excerpts of articles first. Then you can click on a "read more" button to show the rest. Let's try to do that.
+当你访问一个博客，你往往先看到文章的招录，然后你可以点击 `read more`按键，显示剩余内容。让我们尝试实现这个。
 
-This is the HTML we are dealing with:
+这是我们要处理的 HTML:
 
 ```html
  <article id="content">
@@ -272,12 +273,12 @@ This is the HTML we are dealing with:
 <button onclick="showMore()">Show more</button>
 ```
 
-It’s simple HTML with some facts about freeCodeCamp. And there's a button we already attach an `onclick` to. The function we want to execute is `showMore()`, which we will write soon.
+这是简单的 HTML，是有关 freeCodeCamp 的事情。有个按键，我们已经给它加上了`onClick`。我们要执行的函数是`showMore()`，等下我们会写上。
 
-Without a CSS, this is what we have:  
+没有 CSS，是下面的效果:  
 ![articleunstyled](https://www.freecodecamp.org/news/content/images/2021/08/articleunstyled.png)
 
-It's not super ugly, but we can make it look better and act the way we want it to. So we have some CSS which I will explain below:
+它不是很难看，但是我们可以让它更美观，通过下面的 CSS:
 
 ```css
 <style>
@@ -331,45 +332,46 @@ It's not super ugly, but we can make it look better and act the way we want it t
 </style>
 ```
 
-What's the CSS doing?
+CSS 做了什么？
 
-With the universal selector (`*`), we are removing the default margin and padding assigned to elements so we can add our own margin and padding.
+通过选择器(`*`)，我们删除了分配给元素的默认 `margin`和`padding`，这样我们可以添加自己的`margin`和`padding`。
 
-We also have box sizing set to border-box so we can include the padding and border in our elements’ total width and height.
+我们还将`box sizing` 设置为`border-box`，这样我们就可以在元素的总宽度和总高度中包含`padding`和`border`。
 
-We centered everything in the body with Flexbox and gave it a light grey background.
+我们用`Flexbox`将文字内容全部居中，并给它一个浅灰色的背景。
 
-Our `<article>` element, which contains the text, has a width of `400px`, a white background (#fff), and has a padding of 20px at the top, 20 on the left and right, and 0 at the bottom.
+我们的`<article>`元素，是文本的容器，宽为 400px，白色背景(#fff)，顶部有 20px 的 padding，左右各 20px 的 padding，底部为 0px 的 padding。
 
-The paragraph tags inside of it have a font-size of 18px, and then we gave them a maximum height of `270px`. Due to the max height of the article element, all the text won't be contained and will overflow. To fix this, we set overflow to hidden in order not to show that text at first.
+段落里的字体的标签大小为 18px(font-size: 18px)，然后我们给它们的最大高度为 270px(max-height: 270px)。由于设置了最大高度，所有的文字不能包含进来，就会溢出，为了解决这个问题，我们将溢出设置为隐藏（overflow: hidden），这样一开始就不会显示这些文字。
 
-The transition property ensures that every change happens after 1 second. All text inside the `article` are justified and have a margin top of 20 pixels so it doesn’t stay too attached to the top of the page.
+过渡属性设置为每个变化在 1 秒后发生(transition: max-height 1s)，所有的文本都是两端对齐(text-align: justify)，并且有 20px 的顶部边距(margin-top: 20px)
 
-Because we removed the default margin, our paragraphs got all pushed together. So we set a bottom margin of 16 pixels in order to separate them from one another.
+因为我们去掉默认的`margin`，我们的段落将会挤到一起。避免这个，我们设置了`p`元素 16px 的底边距(margin-bottom: 16px)，让段落彼此分开。
 
-Our selector, `article.open`, has a property of `max-height` set to `1000px`. This means that any time the article element has a class of `open` attached to it, the maximum height will change from `270px` to `1000px` to show the rest of the article. This is possible with JavaScript – our game changer.
+我们的选择器 `article.open` 有个属性`max-height` 设置为 1000px。这意味着任何一个`aritcle`元素有个`class` open，`maximum height` 将从 270px 变为 1000px，去显示文章的其余部分。这是用 JavaScript 实现的。
 
-We styled our button with a darkish background and made it white. We set its border to none to remove HTML’s default border on buttons, and we gave it a border radius of `4px` so it has a slightly rounded border.
+我们设置按键，使用深色背景(background: #0e0b22)，白色按键(color: #fff)，无边框(border: none)，半径为 4px(border-radius: 4px)。
 
-Finally, we used the `hover` pseudo-class in CSS to change the button cursor to a pointer. The background color slightly changes when a user hovers their cursor over it.
+最后，我们使用 CSS 中的伪类`hover`将按键的光标改为指针(pointer)，当用户将光标悬停在按键上时，背景颜色会发生轻微的变化。
 
-There we go – that’s the CSS.
+这就是 CSS。
 
-Our page now looks better:
+我们的页面更好看了:
 
 ![articlestyled](https://www.freecodecamp.org/news/content/images/2021/08/articlestyled.png)
 
-The next thing we need to do is to write our JavaScript so we can see the rest of the article that is hidden.
+下一件我们需要要做的事，编写我们的 JavaScript，这样我们可以看到被隐藏的文章部分了。
 
-We have an `onclick` attribute inside our button opening tag ready to execute a `showMore()` function, so let's write the function.
 
-We need to select our article first, because we have to show the rest of it:
+我们有一个`onclick`属性在我们的按键内，去调用 `showMore()`函数， 让我们写这个函数。
+
+我们首先需要选择我们的`article`，因为我们要展示它的其余部分。
 
 ```js
 const article = document.querySelector("#content");
 ```
 
-The next thing we need to do is write the function `showMore()` so we can toggle between seeing the rest of the article and hiding it.
+接下来，我们要写函数`showMore()`，这样我们能在`Show More` 和 `Show Less` 间进行切换。
 
 ```js
 function showMore() {
@@ -385,11 +387,11 @@ function showMore() {
   }
 ```
 
-What is the function doing?
+函数做了什么？
 
-We use an `if…else` statement here. This is a crucial part of JavaScript that helps you make decisions in your code if a certain condition is met.
+我们使用`if...else`语句，这是 JavaScript 的一个重要语句。它根据某个条件进行切换。
 
-The basic syntax looks like this:
+这是它的基本语法:
 
 ```js
 if (condition == "something") {
@@ -399,14 +401,14 @@ if (condition == "something") {
 }
 ```
 
-Here, if the class name of the article equals open (that is, we want to add the class of open to it, which was set to a maximum height of 1000px in the CSS), then we want to see the rest of the article. Else, we want the article to return to the initial state where a part of it is hidden.
+如果`article.className` 为`open`时(也就是说，我们想给它加上 open 的类，在 CSS 中被设置为最大高度为 1000px),然后我们可以看到文件的其余部分。 如果不为`open`，文章回到初始状态，即它的一部分被隐藏。
 
-We do this by assigning it a class of open in the else block, which makes it show the rest of the article. Then we set the class to an empty string (none) in the if block, which makes it return to the initial state.
+我们在`else`语句中给它设置`open`的`class`，它显示文章其余部分。在`if` 语句中把 `open`的`class`去掉，这使它恢复初始状态。
 
-Our code is working fine with a smooth transition:  
+我们的代码能在`Show More` 和 `Show Less` 间进行切换:  
 ![article](https://www.freecodecamp.org/news/content/images/2021/08/article.gif)
 
-We can separate the HTML and JavaScript and still use `onclick`, because onclick is JavaScript. So it's possible to write this in a JavaScript file instead of starting from the HTML.
+我们可以把 HTML 和 JavaScript 分离的前提下，接着使用`onclick` ，因为`onclick`是 JavaScript。所以把它写到一个 JavaScript 文件里，而不是写在 HTML。
 
 ```js
  button.onclick = function () {
@@ -424,7 +426,7 @@ We can separate the HTML and JavaScript and still use `onclick`, because onclick
 
 ![articleonclick](https://www.freecodecamp.org/news/content/images/2021/08/articleonclick.gif)
 
-We can also do this using an eventListner:
+我们也可以用`eventListner`实现:
 
 ```html
 <article id="content">
@@ -474,10 +476,10 @@ function readMore() {
 }
 ```
 
-Our functionality remains the same!
+我们的功能是一样的!
 
-## Conclusion
+## 总结
 
-I hope this tutorial helps you understand how the click event works in JavaScript. We explored two different methods here, so now you can start using them in your coding projects.
+我希望本教程帮助你了解点击事件在 JavaScript 中是怎么工作的。我们探讨了两种不同的方法，所以你可以在编码中使用它们。
 
-Thank you for reading, and keep coding.
+感谢你的阅读，跟随教程进行编程。

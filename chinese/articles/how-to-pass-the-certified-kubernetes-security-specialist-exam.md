@@ -34,7 +34,7 @@ It has an enormous community to support, and it's always building new features a
 它有一个庞大的社区需要支持，它总是在构建新功能并解决问题。 Kubernetes 无疑正在以惊人的速度发展，要跟上其发展速度成为一项挑战。 这使其成为容器编排解决方案的最佳选择。
 * * *
 
-## Table of Contents:
+## Table of Contents
 
 -   [Resources for the CKS Exam](#resourcesfortheexam)
 -   [Aliases](#aliases)
@@ -118,7 +118,7 @@ Since this exam requires you to write a lot of commands, I figured early on that
 I used the **vi** editor during the exam, so here I will share some useful tips for this editor.
 我在考试时使用了**vi**编辑器，所以在这里我将分享一些对这个编辑器有用的提示。
 
-### vi defaults for ~/.vimrc:
+### vi defaults for ~/.vimrc
 
 ```
 vi ~/.vimrc
@@ -134,7 +134,7 @@ w: End of word
 GG: End of file
 ```
 
-### kubectl defaults for ~/.bashrc:
+### kubectl defaults for ~/.bashrc
 
 ```
 vi ~/.bashrc

@@ -17,13 +17,13 @@ January 3, 2024 / [#Cloud Computing][1]
   ![What is Cloud Computing? Introduction to the Cloud for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/cloud-sky.jpeg)
 
 As the digital landscape continues to evolve and technology marches forward, cloud computing has remained an important topic for developers to learn.
-
+随着数字化领域和科技的不断发展，云计算仍然是一个重要议题，值得开发人员学习。
 You've probably encountered cloud requirements in job listings, heard people talk about it in conversations, or seen ads by companies offering cloud services – and now you're interested in learning more about it.
-
+你可能会在岗位招聘中遇到关于“云”的相关需求，可能会在对话中听到关于“云”的相关讨论，可能会在云服务商发布的广告中看到关于“云”的相关宣传，现在你对“云”充满好奇，想要知道更多。
 In this article, I'll demystify the cloud for you, breaking down complex concepts into easy-to-understand bits.
-
+在这篇文章中，我会将复杂的概念分成简单易懂的小模块，让你更加容易理解“云”。
 Here's what we'll cover in this article:
-
+这是本文中涉及的主要内容：
 -   [云计算出现前的世界](#the-world-before-cloud-computing)
 -   [云计算是什么?](#what-is-cloud-computing)
 -   [云服务供应商](#cloud-service-providers)
@@ -33,7 +33,7 @@ Here's what we'll cover in this article:
 -   [Cloud Deployment Models][9]
 
 So let's dive in and learn cloud computing basics so you can start your journey into this growing field.
-
+让我们从学习云计算的基础内容开始，然后你可以在云计算这个持续发展的领域深入学习。
 <h2 id="the-world-before-cloud-computing">云计算出现前的世界</h2> ## The World Before Cloud Computing
 
 To understand cloud computing, it is important to understand the problem cloud computing tries to solve. This will help you understand its history and appreciate the convenience it brings into the world of technology.

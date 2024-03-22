@@ -3,11 +3,11 @@ title: Scope in JavaScript – Global vs Local vs Block Scope Explained
 author: Adekola Olawale
 authorURL: https://www.freecodecamp.org/news/author/adekola-olawale/
 originalURL: https://www.freecodecamp.org/news/scope-in-javascript-global-vs-local-vs-block-scope/#scope-chain
-translator: ""
+translator: "imesong"
 reviewer: ""
 ---
 
-November 13, 2023 / [#JavaScript][1]
+2023 年 11 月 13 日 / [#JavaScript][1]
 
 <!-- more -->
 

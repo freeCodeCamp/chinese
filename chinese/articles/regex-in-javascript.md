@@ -9,9 +9,6 @@ reviewer: ""
 
 February 27, 2024 / [#Regex][1]
 
-<!-- 部分专有名词的中文翻译参考自https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/RegExp 与 https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions -->
-<!-- more -->
-
 # JavaScript 中的正则表达式（RegEx）- 初学者手册
 
 ![Samyak Jain](https://www.freecodecamp.org/news/content/images/size/w60/2024/02/profilepic.png)
@@ -360,70 +357,72 @@ console.log(pattern2.test("This is wording")); // 输出为：True
 
 在正则表达式中，量词允许你指定你想要在字符串中匹配的字符或字符类的数量。它们是定义你要查找的字符或组的实例数量的符号或字符。
 
-### Exact Count `{n}`:
+### 精确数量量词 `{n}`：
 
-The simplest quantifier is `{n}`, which specifies an exact count of characters or character classes you want to match. Let's say we have a string "Year: 2022" and we want to extract the year from it:
+最简单的量词是 `{n}`，它指定了你想匹配的字符或字符类的精确的数量。（译者注：该量词的一般使用形式为`x{n}`，其中x为任意字符或字符类，n为正整数，该量词的含义为“与‘只重复出现n次的x’对应的部分匹配”。）假设我们有一个字符串 "Year: 2022"，我们想从中提取年份：
 
 ```javascript
 let str = 'Year: 2022';
-let re = /\d{4}/; // Matches a four-digit number ; basically concise & better way to write \d\d\d\d
+let re = /\d{4}/; // 匹配一个四位数字；基本上是等同于\d\d\d\d的更简洁、更好的写法。
 
 let result = str.match(re);
 
 console.log(result); // 输出为：["2022"]
 ```
+（译者注：在上述例子中，该量词对应的模式只会与四位数字匹配。对于小于四位数字的字符串，例如203，该模式不会匹配；对于大于四位数字的字符串，例如20356，该模式会匹配最前面四位数字“2035”。![参考文档链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers#%E7%B1%BB%E5%9E%8B)）
 
-### The Range `{n,m}`:
+### 范围量词 `{n,m}`:
 
-The range quantifier `{n,m}` matches a character or character class from n to m times, inclusively. Example:
+范围量词 `{n,m}` 匹配一个字符或字符类从 n 到 m 次，包括 n 和 m。例如：
 
 ```javascript
 let str = "The meeting is scheduled for 10:30 AM and ends at 2 PM";
-let re = /\d{2,4}/g; // Matches numbers with 2 to 4 digits
+let re = /\d{2,4}/g; // 匹配有2到4位数字的数
 
 let result = str.match(re);
 console.log(result); // 输出为：[ '10', '30' ]
 ```
 
-/\\d{2,4}/g matches numbers with 2 to 4 consecutive digits i.e '10', '30'
+/\\d{2,4}/g 匹配连续有2到4位数字的数，即 '10'、'30'。
+（译者注：范围量词中，n的取值为0或一个正整数，m>n且m为一个正整数。与精确数量量词`{n}`相似，例如对于形式为`a{2,4}`的量词，它不会匹配"candy"中的'a'，而对于"caaaaady"，它只会匹配其中的前四个'a'）
 
-### `{n,}` and Shorthands:
+### `{n,}` 和简写形式：
 
-The `{n,}` quantifier matches a character or character class at least n times. Additionally, there are shorthand notations for common quantifiers. Example:
+`{n,}` 量词匹配一个字符或字符类至少 n 次。此外，还有常见量词的简写表示法。例如：
 
 ```javascript
 let str = 'The price of the item is $2500';
-let re = /\d{2,}/g; // Matches numbers with 2 or more digits
+let re = /\d{2,}/g; // 匹配至少有2位数字的数。
 
 let result = str.match(re);
 console.log(result); // 输出为：["2500"]
 ```
 
-### Shorthands: `+`, `?`, `*`:
+### 简写形式：`+`, `?`, `*`：
 
-The quantifiers `+`, `?`, and `*` are shorthand notations for common use cases. Let's use the shorthand `+` to match one or more digits in a phone number:
+量词 `+`、`?` 和 `*` 是常见用例的简写表示法。让我们使用简写 `+` 来匹配电话号码中的一个或多个数字：
 
 ```javascript
 let phone = "+1-(103)-777-0101";
-let result = phone.match(/\d+/g); // Matches one or more digits
+let result = phone.match(/\d+/g); // 匹配一个或多个数字。
 
 console.log(result); // 输出为：["1", "103", "777", "0101"]
 ```
 
-/\\d+/g matches one or more consecutive digits in the phone number.
+/\\d+/g 匹配电话号码中一个或多个连续数字。
 
-### Quantifiers: Zero or One (`?`):
+### 量词：零或一次 (`?`)：
 
-The quantifier `?` in regular expressions means zero or one occurrence of the preceding character or group. It's equivalent to {0,1}. Example:
+正则表达式中的量词 `?` 表示前一个字符或组的零次或一次出现。它等同于 {0,1}。例如：
 
 ```javascript
 let str = 'The sky is blue in color, but the ocean is blue in colour';
-let result = str.match(/colou?r/g); // Matches "color" and "colour"
+let result = str.match(/colou?r/g); // 匹配"color"和"colour"
 
 console.log(result); // 输出为：["color", "colour"]
 ```
 
-In this example, the regular expression `/colou?r/g` matches both "color" and "colour" in the given string, allowing for zero or one occurrence of the letter "u".
+在这个例子中，正则表达式 `/colou?r/g` 匹配给定字符串中的 "color" 和 "colour"，允许字母 "u" 出现零次或一次。
 
 ### Quantifiers: Zero or More (`*`):
 
@@ -527,7 +526,7 @@ console.log(results); // 输出为：['e', 'l', 'l', 'o', 'o', 'r', 'l', 'd']
 
 Here, regex `[a-z]` matches all lowercase letters in the string.
 
-### Negating / Excluding Ranges:
+### 否定/排除范围：
 
 要从集合中排除某些字符，你可以在方括号内使用 `^` 符号。例如：
 
@@ -586,29 +585,29 @@ console.log(phone.replace(re,'')); // 输出为：11037770101
 
 <h2 id="special-characters-and-escaping-in-regex">正则表达式中的特殊字符与转义</h2>
 
-### Metacharacters:
+### 元字符：
 
-Metacharacters are characters that have special meanings in Regular Expressions and are used to construct patterns for matching text.
+元字符是在正则表达式中具有特殊含义的字符，用于构建用于匹配文本的模式。
 
-Anchors (`^` and `$`), Alternation(`|`), quantifiers (`+`, `?`, `{}`), and predefined character classes ( `\d`, `\w`, `\s`) are all considered metacharacters, each serving distinct purposes in pattern definition. We also have a few more, which we'll cover now.
+锚点 (`^` 和 `$`)、交替 (`|`)、量词 (`+`, `?`, `{}`) 和预定义的字符类 (`\d`, `\w`, `\s`) 都被认为是元字符，每个都在模式定义中有不同的用途。我们还有一些其他的元字符，现在我们来详细介绍它们。
 
-**Dot (`.`)** is a metacharacter with a special meaning. It's used to match any single character except newline characters (`\n`). It serves as a wildcard, allowing for flexible pattern matching when the exact character is unknown or irrelevant.
+**点号 (`.`)** 是一个具有特殊含义的元字符。它用于匹配除换行符 (`\n`) 外的任何单个字符。它起到通配符的作用，允许在确切字符未知或无关紧要时进行灵活的模式匹配。
 
-If you need the dot to match newline characters as well, you can use the `/s` flag in JavaScript, which enables the "single line" mode, making the dot match any character including newline characters. Example:
+如果你需要点号匹配换行符，你可以在 JavaScript 中使用 `/s` 标志，该标志启用了 "单行" 模式，使点号匹配任何字符，包括换行符。例如：
 
 ```javascript
 const regex = /a.b/; 
 
 console.log(regex.test('acb')); // true
 console.log(regex.test('aXb')); // true
-console.log(regex.test('a\nb')); // false (newline character not matched)
-console.log(regex.test('a\nb', 's')); // true (with 's' flag, newline character matched)
-console.log(regex.test('ab')); // false (missing character between 'a' and 'b')
+console.log(regex.test('a\nb')); // false（未匹配到换行符）
+console.log(regex.test('a\nb', 's')); // true（使用 's' 标志，匹配到换行符）
+console.log(regex.test('ab')); // false（'a' 和 'b' 之间缺少字符）
 ```
 
-`/a.b/` matches any string that starts with 'a', followed by any single character (except newline), and ends with 'b'
+`/a.b/` 匹配以 'a' 开始，后跟任何单个字符（除换行符外），并以 'b' 结束的任何字符串。
 
-The dot (`.`) can be combined with other regex elements to form more complex patterns. For example, `/.at/` matches any three-character sequence ending with 'at', such as 'cat', 'bat', or 'hat'.
+点号 (`.`) 可以与其他正则表达式元素结合，形成更复杂的模式。例如，`/.at/` 匹配任何以 'at' 结尾的三个字符序列，如 'cat'、'bat' 或 'hat'。
 
 <h3 id="escape-special-characters-">转义特殊字符:</h3>
 
@@ -660,7 +659,7 @@ console.log(match);
 
 在这里，`'123'` 被捕获组 `(\d+)` 捕获。
 
-**Using Multiple Capturing Groups**: You can have multiple capturing groups in a regex pattern. For example, to capture both the resource (like "posts") and the id (like "123") from the path "posts/123", you can use `/(\w+)\/(\d+)/`.
+**使用多个捕获组**：你可以在正则表达式模式中使用多个捕获组。例如，为了从路径 "posts/123" 中同时捕获资源（如 "posts"）和 id（如 "123"），你可以使用 `/(\w+)\/(\d+)/`。
 
 ```javascript
 const path = 'posts/123';
@@ -676,17 +675,17 @@ console.log(match);
 ['posts/123', 'posts', '123', index: 0, input: 'posts/123', groups: undefined]
 ```
 
-Here, `'posts'` and `'`123`'` are captured by the two capturing groups `(\w+)` and `(\d+)` respectively.
+在这里，`'posts'` 和 `'123'` 分别由两个捕获组 `(\w+)` 和 `(\d+)` 捕获。
 
-**Named Capturing Groups** allow you to assign names to capturing groups, which makes it easier to reference them later in your code.
+**命名捕获组** 允许你为捕获组指定名称，这样在后续的代码中引用它们会更容易。
 
-The syntax for named capturing groups is `(?<name>rule)`, where:
+命名捕获组的语法是 `(?<name>rule)`，其中：
 
--   `()` indicates a capturing group.
--   `?<name>` specifies the name of the capturing group.
--   `rule` is a rule in the pattern.
+- `()` 表示一个捕获组。
+- `?<name>` 指定捕获组的名称。
+- `rule` 是模式中的一个规则。
 
-For example, suppose we want to capture the resource (like "posts") and the id (like "123") from the path "posts/123" using named capturing groups.
+例如，假设我们想要使用命名捕获组从路径 "posts/123" 中捕获资源（如 "posts"）和 id（如 "123"）。
 
 ```javascript
 const path = 'posts/123';
@@ -709,9 +708,9 @@ console.log(match);
 ]
 ```
 
-Here, `resource` and `id` are the names assigned to the capturing groups. We can access them using `match.groups`.
+在这里，`resource` 和 `id` 是分配给捕获组的名称。我们可以使用 `match.groups` 来访问它们。
 
-**另一个例子**: Let's say we have a path like "posts/2022/02/18" and we want to capture the resource (like "posts"), year (like "2022"), month (like "02"), and day (like "18") using named capturing groups.
+**另一个例子**: 假设我们有一个类似于"posts/2022/02/18"的路径，我们想要使用命名捕获组来捕获资源（如 "posts"）、年份（如 "2022"）、月份（如 "02"）和日期（如 "18"）。
 
 该例子对应的正则表达式的模式为：
 
@@ -730,15 +729,15 @@ console.log(match.groups);
 {resource: 'posts', year: '2024', month: '02', day: '22'}
 ```
 
-Here, each part of the path is captured using named capturing groups, making it easy to access them by their respective names.
+在这里，路径的每个部分都使用命名捕获组进行捕获，这样就可以轻松地通过它们各自的名称访问它们。
 
-### Non-capturing groups:
+### 非捕获组：
 
-In regular expressions, non-capturing groups are used to group parts of a pattern together for applying quantifiers or alternation, without capturing the matched substring.
+在正则表达式中，非捕获组用于将模式的部分组合在一起，以便应用量词或交替，而不捕获匹配的子字符串。
 
-To create a non-capturing group, you add `?:` at the beginning of the parentheses. So, `/(?:\d)+/` is the non-capturing version of the previous example. The `?:` tells the regex engine not to capture the matched substring.
+要创建一个非捕获组，你需要在括号的开始处添加 `?:`。因此，`/(?:\d)+/` 是前一个示例的非捕获版本。`?:` 告诉正则表达式引擎不要捕获匹配的子字符串。
 
-Let's see the difference between capturing and non-capturing groups with an example:
+让我们通过一个例子来看捕获组和非捕获组之间的区别：
 
 ```javascript
 // capturing group
@@ -756,7 +755,7 @@ const matchWithoutCapture = regexWithoutCapture.exec('02/26/2024');
 console.log(matchWithoutCapture); // ["02/26/2024"]
 ```
 
-In summary, non-capturing groups `(?:pattern)` behave like regular capturing groups `()` in terms of matching patterns, but they don't store the matched text in memory for later retrieval. This makes them useful when you don't need to extract specific parts of the matched text.
+总结来说，非捕获组 `(?:pattern)` 在匹配模式方面的行为与常规捕获组 `()` 相同，但它们不会将匹配的文本存储在内存中以供以后检索。这使得它们在你不需要提取匹配文本的特定部分时非常有用。
 
 ### 后向引用:
 

@@ -47,30 +47,31 @@ Beyond all this, many developers are not exactly server specialists. So you woul
 Scaling applications wasn't easy before the cloud. If you tried to manage costs and not buy too many servers, or hire many system engineers, you might end up with insufficient compute power and you'd need to scale. Scaling means buying more servers (or replacing existing ones with better ones), configuring them to match existing configurations, and deploying your applications on them.
 扩展是指购买更多的服务器（或者是购买更好地服务器替换已有的服务器），配置符合现有配置的环境，然后将应用程序部署在新的服务器上。“云”时代之前，扩展应用程序并没有很方便，如果一开始控制成本，没有购入足够多的服务器或者是招聘足够多的系统工程师，最终可能导致算力不充足而需要扩展。
 These are some of the issues we faced before cloud computing. Now, you might wonder, "how does cloud computing solve these?". Let's find out.
-这些都是云计算出现以前我们面对的问题，或许你现在困惑“云计算是怎么解决这些问题”，请看下文。
+这些都是云计算出现以前我们面对的问题，或许你现在困惑“云计算是怎么解决这些问题”，请看下文讲解。
 <h2 id="what-is-cloud-computing">云计算是什么？</h2>## What Is Cloud Computing?
 
 > **Cloud computing** is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.  
->   
-> Cloud computing relies on sharing of resources to achieve coherence and typically uses a pay-as-you-go model, which can help in reducing capital expenses but may also lead to unexpected operating expenses for users. – [Wikipedia][10]
-
+> **云计算**是一种按需提供的计算系统资源，例如数据存储（云存储）、算力等，且不需要用户直接主动管理。
+> Cloud computing relies on sharing of resources to achieve coherence and typically uses a pay-as-you-go model, which can help in reducing capital expenses but may also lead to unexpected operating expenses for users. – [Wikipedia][[https://en.wikipedia.org/wiki/Cloud_computing]
+>云计算通过资源共享获取一致性，采用按使用量付费的模式，协助降低固定资产费用，同时可能需要用户支付超出预期的营业费用。
 Think of Cloud Computing like renting a computer from a cybercafe. In a cybercafe, they have the computers ready for use – you just come in, pay for your desired time, and use the computer for that period.
-
+想象一下，云计算与在网吧中使用电脑类似。网吧中准备好了电脑，当你走进网吧时，只需要支付期望使用时间对应的费用，然后在这个时间段内就可以随便使用电脑。
 In the case of cloud computing, you don't have to worry about buying the computer, or protecting it, or covering the running costs. The cloud provider covers all these worries. You rarely ever have to worry about software issues, or the absence of specific software on these computers. And the best part? You only pay for the computer you use, and only for the time you use it.
-
+而云计算呢，你不需要购入、运维服务器，也不用承担运行成本，你也不用担心软件问题或者这些服务器缺少特定的软件，因为这些都由云服务供应商负责。云计算体验感最佳的地方就在于，你只需要付费订购需要使用的服务器以及服务时间段。
 So in more relatable terms, say you have a web application to deploy. You go to a cloud service provider, select specific server requirements your application requires, select software dependencies, and deploy your application, with zero worries.
-
+进一步而言，当部署一套网络应用程序时，不用考虑很多事情，只用找到一个云服务供应商，选择符合程序要求的服务器，选择操作系统，然后就可以部署应用了。
 Cloud computing as explained to a five year old is _"letting someone else manage your computing needs"_. You have some website that you need to put online, or maybe a mobile app, or some other piece of technology, and instead of having to buy servers to deploy it, someone else buys and sets up the servers. You simply upload your files. Its almost the same as renting an apartment, but now you are renting compute space on another computer.
-
-## Cloud Service Providers
+用简单易懂的话解释，云计算就是让别人来管理你的计算需求。当需要上线网站、手机APP或其他类似应用时，不再需要购置实体的服务器进行部署，只要使用他人已经准备好的服务器，上传代码文件即可。这和租房子类似，而现在做的就是在另外一台电脑中租用了计算空间。
+<h2 id="cloud-service-providers">云服务供应商</h2>## Cloud Service Providers
 
 Companies that provide these cloud services are called cloud services providers. These companies already have many servers, and system engineers. They're concerned with all the stuff you don't have to worry about like server costs and running costs. They provide a web interface where you can access their servers and use them when you need.
-
+云服务供应商是指提供云服务的公司。这些公司通常有很多服务器和系统工程师，他们
 Currently, the most popular cloud service providers are Google (Google Cloud Platform), Amazon AWS (Amazon Web Services), and Microsoft (Azure). These companies offer similar services, but with various different price models, features, and so on.
 
 Here's a summary of what each of them offers:
 
 ### Google
+### 谷歌
 
 They offer IaaS (Compute Engine), Containers As A Service, CaaS, (Kubernetes Engine), and PaaS (App Engine) services. They also offer data storage services, with tools like Google Cloud Storage, Cloud SQL, and Cloud Bigtable.
 

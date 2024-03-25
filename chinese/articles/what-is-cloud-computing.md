@@ -126,73 +126,82 @@ Also, these applications are often underutilising these hardware resources. This
 <h2 id="how-can-cloud-computing-help-you">云计算有什么好处?</h2>## How Can Cloud Computing Help You?
 
 Cloud computing offers plenty benefits, some of which are highlighted here:
-
+云计算有很多好处，一些突出优势如下：
 -   It is cheaper to pay a subscription than to build a whole datacenter. You have plans that let you use only what you use.
+-   相比于建立一个完整的数据中心，付费订购更加划算，只需要计划好需要使用的配置。
 -   Scaling and management are responsibilities of the cloud service provider.
+-   云服务供应商负责扩展和运维服务器。
 -   Easy setup. Developers get to just focus on the code as all the actual server and hardware setup can be done using a user interface provided by the cloud service provider. This leads to faster development time, and applications are shipped faster.
+-   搭建方便，开发人员只需要专注于代码编写，所有的服务器搭建配置都能通过云服务供应商提供的用户界面操作完成，可以缩短开发时间，应用程序交付速度也更快。
 -   Accessibility. Cloud service providers tend to have multiple datacenters around the world, making sure your users always get access to your services as fast as possible.
+-   可访问性，云服务供应商一般在全球有多个数据中心，确保应用的使用者可以快速地连接到服务器。
 -   Data security. Because your data is not stored in your physical space anymore, it's more difficult for bad actors to come in and damage or steal your servers.
--   数据安全，
+-   数据安全，因为数据不再存储在物理服务器上，所以更不容易被恶意攻击或者盗取数据信息。
 
-## Cloud Deployment Models
+<h2 id="cloud-deployment-models">云计算部署模式</h2>## Cloud Deployment Models
 
 A cloud deployment model determines where your data (and applications) is stored and how your customers interact with it.
-
-### Public cloud
+云计算部署模式决定了数据（以及应用）存储位置和用户与服务器交互方式。
+### 公有云Public cloud
 
 Here, everything is handled by the cloud service provider. It's the most popular model. When using a public cloud, you're not concerned about the server maintenance, and you're sure of high reliability and the possibility of unlimited scalability. This usually means you share servers with other people.
-
+公有云的所有事项都由云服务供应商负责，这是最受欢迎的模式。选择使用公有云，就不需要关心服务器的运维，并且有高可靠性和无限扩展的可能性，但通常也意味着需要和他人共享服务器。
 It is the cheapest model, and companies usually use a pay-as-you-go model (so you never have to commit too much upfront financially).
-
+这也是最便宜的模式，公司一般会采用按使用量付费的方式（所以无需过早提前支付）。
 A potential issue with this is, having everything handled by the cloud service provider means you have little or no control over the services.
-
-### Private cloud
+但这个模式有一个潜在弊端，因为所有事项由云服务供应商负责，意味着用户几乎没有服务器的控制权。
+### 私有云Private cloud
 
 This is similar to the traditional ways of hosting applications. Here, you do have your own data centers. This means that only you get to use the servers and have unlimited control over them.
-
+私有云模式与传统托管应用程序的方式类似，需要有自己的数据中心，只有用户自己可以使用服务器，意味着用户拥有服务器的最高控制权限。
 Now, the difference is, you provide a self service interface to users of your servers, usually developers in your company. You still have to manage the physical servers, and you're responsible for their maintenance and scaling.
-
+不同的是，用户可以给服务器的使用者——通常是用户公司的开发人员，提供一个私有的服务界面。用户仍然需要管理这些物理服务器，需要自行负责运维和扩展。
 This method can be more secure than the public cloud, as you have control and can setup as much security as possible. It also comes in very handy if you have data that must not get out due to compliance requirements.
-
+这个模式让用户可以自行控制并且尽可能地搭建安全性环境，所以比公有云更安全。如果基于合规要求必须保证数据不会被泄露，这种模式就最符合要求。
 But this method is way more cost intensive, although with a more predictable or fixed pricing model. These servers and hardware are expensive. Having them means having someone to manage them, which means more expense. Scaling also means buying new devices every time.
-
-### Hybrid cloud
+不过这种模式是高额成本的模式，虽然现在有了固定价格模型，但服务器和硬件依然很昂贵，同时还需要额外费用招人运维，而且扩展也需要每次购置新的设备。
+### 混合云Hybrid cloud
 
 ![What-is-Hybrid-Cloud](https://www.freecodecamp.org/news/content/images/2022/05/What-is-Hybrid-Cloud.jpeg)
 
-Hybrid Cloud | [W3Codemasters][12]
+混合云 | [W3Codemasters](https://www.google.com/url?sa=i&url=https%3A%2F%2Fw3codemasters.in%2Fwhat-is-hybrid-cloud-benefits-of-a-unified-hybrid-cloud-platform%2F&psig=AOvVaw3ekfLv5gwNG2kjXGoFfWA4&ust=1652833178148000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCPj5qKKp5fcCFQAAAAAdAAAAABAI)
 
 This approach merges both the public and cloud methods. It basically allows you more flexibility. You get to use public services, and also setup your own when you need to. Here you're able to comply with regulations, through your servers, and also offer high accessibility, through a cloud service provider. This method is perfect for organizations trying to migrate from one model to another, keeping the business operation during the transition.
-
+混合云是将公有云和私有云混合起来的模式，更具有灵活性。在使用公有云的同时，也可以按需搭建私有云。服务器用于遵守监管规则，云服务供应商则可以使访问更方便。当机构需要模式转换时，这种模式是最佳的选择，在转移过渡期间依然能够被使用维持商业运行。
 An example application of this would be hosting an application on a public cloud and connecting it to a database on a secured private cloud.
-
+举个例子，应用程序托管在公有云上，再连接安装在安全的私有云上的数据库。
 This method is also more expensive than the public cloud as you do have to cater for some of the servers. It could also get complicated as data gets distributed between multiple servers and applications.
-
-### How to Choosed a Deployment Model
+这个模式因为需要一些自有服务器，所以定价比公有云更贵；而且因为数据和应用分散分布于多个服务器，比公有云也更为复杂。
+### 如何选择部署模式How to Choosed a Deployment Model
 
 The choice between public, private, or hybrid cloud deployment models depends on an organization's unique requirements.
-
+基于用户的特殊需求决定使用公有云、私有云还是混合云。
 -   Public clouds offer cost efficiency and global reach
+-   公有云定价合理获取便利
 -   Private clouds provide enhanced security and control
+-   私有云提供更可靠的安全性和更高的控制权
 -   Hybrid clouds offer flexibility and a strategic balance between the two.
+-   混合云更加灵活，是介于公有云与私有云之间的方式
 
 The decision ultimately hinges on factors such as security needs, compliance requirements, scalability, and the level of control desired over the IT infrastructure.
-
+一些重要因素，如安全需求、合规要求、可扩展性、IT架构中对控制权限的要求等，最终决定部署模式
 ## **Conclusion总结**
 
 Now you should have have enough information to kickstart your career in cloud computing.
-
+学习了基础知识后，你现在可以开始深入学习云计算了。
 If you have any questions or relevant advice, please get in touch with me to share them.
-
+如果你有任何问题或者相关建议，请联系并转述给我。
 To read more of my articles or follow my work, you can connect with me on [LinkedIn][13], [Twitter][14], and [Github][15]. It’s quick, it’s easy, and it’s free!
+想到阅读更多我的文章或者关注我的工作，你可以通过[LinkedIn](https://www.linkedin.com/in/idris-aweda-zubair-5433121a3/)、[Twitter](https://twitter.com/AwedaIdris)、[Github](https://github.com/Zubs)，快速方便并且是免费的！
 
 ---
 
 ![Zubair Idris Aweda](https://www.freecodecamp.org/news/content/images/size/w60/2023/02/IMG_6413-2.jpg)
 
-[Zubair Idris Aweda][16]
+[Zubair Idris Aweda](/news/author/zubair-idris-aweda/)
 
 Experienced Software Engineer with a demonstrated history of working in the computer software industry. Skilled in PHP, JavaScript, and other Web Development technologies.
+在计算机软件领域有多年软件工程经验，精通PHP、JavaScript和其他web开发工具。
 
 ---
 

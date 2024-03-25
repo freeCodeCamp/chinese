@@ -43,13 +43,13 @@ February 27, 2024 / [#Regex][1]
     – [Ranges][15]  
     – [Negating / Excluding Ranges][16]  
     – [预定义的字符类][17]
-6.  [Special Characters and Escaping in Regex][18]  
-    – [Metacharacters][19]  
-    – [Escaping Special Characters][20]
+6.  [正则表达式中的特殊字符与转义][18]  
+    – [元字符][19]  
+    – [转义特殊字符][20]
 7.  [正则表达式中的分组][21]  
     – [捕获组][22]  
-    – [Non-Capturing Groups][23]  
-    – [Backreferences][24]  
+    – [非捕获组][23]  
+    – [后向引用][24]  
     – [正则表达式选择符号][25]
 8.  [正则表达式中的前瞻断言和后顾断言][26]  
     – [前瞻断言 (?=)][27]  
@@ -369,7 +369,7 @@ let result = str.match(re);
 
 console.log(result); // 输出为：["2022"]
 ```
-（译者注：在上述例子中，该量词对应的模式只会与四位数字匹配。对于小于四位数字的字符串，例如203，该模式不会匹配；对于大于四位数字的字符串，例如20356，该模式会匹配最前面四位数字“2035”。![参考文档链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers#%E7%B1%BB%E5%9E%8B)）
+（译者注：在上述例子中，该量词对应的模式只会与四位数字匹配。对于小于四位数字的字符串，例如203，该模式不会匹配；对于大于四位数字的字符串，例如20356，该模式会匹配最前面四位数字“2035”。[参考文档链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers#%E7%B1%BB%E5%9E%8B)）
 
 ### 范围量词 `{n,m}`:
 
@@ -424,24 +424,24 @@ console.log(result); // 输出为：["color", "colour"]
 
 在这个例子中，正则表达式 `/colou?r/g` 匹配给定字符串中的 "color" 和 "colour"，允许字母 "u" 出现零次或一次。
 
-### Quantifiers: Zero or More (`*`):
+### 量词：零次或更多 (`*`):
 
-The quantifier `*` in regular expressions means zero or more occurrences of the preceding character or group. It's equivalent to {0,}. Example:
+在正则表达式中，量词 `*` 表示前一个字符或组的零次或更多次出现。它等同于 {0,}。例如：
 
 ```javascript
 let str = 'Computer science is fascinating, but computational engineering is equally interesting';
-let re = /comput\w*/g; // Matches "computer" and "computational"
+let re = /comput\w*/g; // 匹配"computer"和"computational"
 
 let results = str.match(re);
 
 console.log(results); // 输出为：["computer", "computational"]
 ```
 
-### Greedy Quantifiers:
+<h3 id="greedy-quantifiers-">贪婪量词</h3>
 
-In regular expressions, quantifiers determine how many times a particular element can occur in a match.
+在正则表达式中，量词决定了特定元素在匹配中可以出现的次数。
 
-By default, quantifiers operate in what's called a "greedy" mode. This means they try to match as much of the preceding element as possible. For instance:
+默认情况下，量词以所谓的 "贪婪" 模式运行。这意味着它们会尝试匹配尽可能多的前一个元素。例如：
 
 ```javascript
 let regexp = /".+"/g;
@@ -450,23 +450,24 @@ console.log( str.match(regexp) ); // "Boy" and his "Friends"
 ```
 
 Instead of finding two separate matches ("Boy" and "Friends"), it finds one match encompassing both ("Boy" and his "Friends").
+它找到一个包含两者（"Boy" and his "Friends"）的匹配，而不是找到两个单独的匹配（"Boy" 和 "Friends"）。
 
-#### Understanding Greedy Search
+#### 理解贪婪搜索
 
-To understand why the initial attempt failed, let's delve into how the regular expression engine conducts its search.
+为了理解为什么初始尝试失败，让我们深入了解正则表达式引擎是如何进行搜索的。
 
-1.  The engine starts from the beginning of the string and finds the opening quote.
-2.  It proceeds to match characters following the opening quote. Since the pattern is `".+"`, where `.` matches any character and `+` quantifies it to match one or more times, the engine continues matching characters until it reaches the end of the string.
-3.  The engine then backtracks to find the end quote `"` that would complete the match. It starts by assuming the maximum possible characters matched by `".+"` and gradually reduces the number of characters until it finds a valid match.
-4.  Eventually, the engine finds a match encompassing the entire substring "Boy" and his "Friends".
+1. 引擎从字符串的开始处开始，并找到开头的引号。
+2. 它继续匹配跟在开头引号后面的字符。由于模式是 `".+"`，其中 `.` 匹配任何字符，`+` 使其匹配一次或多次，引擎会继续匹配字符，直到达到字符串的末尾。
+3. 然后，引擎回溯以找到结束引号 `"` 以完成匹配。它首先假设由 `".+"` 匹配的最大可能字符数量，并逐渐减少字符数量，直到找到有效的匹配。
+4. 最终，引擎找到了一个包含整个子字符串 "Boy" 和他的 "Friends" 的匹配。
 
-This behavior of greedily matching as many characters as possible is the default mode of quantifiers in regular expressions and doesn't always yield the desired results. You can see this in the example where it results in a single match instead of multiple separate matches for quoted strings.
+这种贪婪地匹配尽可能多的字符的行为是正则表达式中量词的默认模式，不总是产生期望的结果。你可以在这个例子中看到这一点，它导致单一匹配，而不是对带引号的字符串进行多个独立的匹配。
 
-<h3 id="non-greedy-quantifiers">Non Greedy Quantifiers (Lazy Mode)</h3>:
+<h3 id="non-greedy-quantifiers">非贪婪量词（懒惰模式）</h3>:
 
-To address the limitations of greedy mode, regular expressions also support a lazy mode for quantifiers. In lazy mode, quantified characters are repeated the minimal number of times necessary to satisfy the pattern.
+为了解决贪婪模式的限制，正则表达式也支持量词的懒惰模式。在懒惰模式中，量词后的字符重复的次数是满足模式所必需的最小次数。
 
-We can enable the lazy mode by appending a question mark `?` after the quantifier. For example, `*?` or `+?` denotes lazy repetition.
+我们可以通过在量词后添加一个问号 ? 来启用懒惰模式。例如，*? 或 +? 表示懒惰重复。
 
 ```javascript
 let regexp = /".+?"/g;
@@ -474,23 +475,23 @@ let str = 'The "Boy" and his "Friends" were here';
 console.log( str.match(regexp) ); // "Boy" "Friends"
 ```
 
-In this example, the lazy quantifier `".+?"` ensures that each quoted string is matched separately by minimizing the number of characters matched between the opening and closing quotes.
+在这个例子中，懒惰量词 `".+?"` 确保每个带引号的字符串都被单独匹配，通过最小化开头和结束引号之间匹配的字符数量。
 
-Let's trace the search process step by step to understand how the lazy quantifier works:
+让我们逐步跟踪搜索过程，以理解懒惰量词是如何工作的：
 
--   The engine starts from the beginning of string and finds the opening quote.
--   Instead of greedily matching all characters until the end of the string, the lazy quantifier `".+?"` matches only the characters necessary to satisfy the pattern. It stops as soon as it encounters the closing quote `"`.
--   The engine repeats this process for each quoted string in the text, resulting in separate matches for "Boy" and "Friends".
+-   引擎从字符串的开始处开始，并找到开头的引号。
+-   与其贪婪地匹配直到字符串的末尾的所有字符，懒惰量词 `".+?"` 只匹配满足模式所需的字符。它一遇到结束引号 `"` 就停止。
+-   引擎为文本中的每个带引号的字符串重复此过程，导致 "Boy" 和 "Friends" 分别被单独匹配。
 
-## Sets and Ranges in Regex
+<h2 id="sets-and-ranges-in-regex">正则表达式的集合与范围</h2>
 
-In regular expressions, you use sets and ranges to match specific characters or a range of characters within a given pattern.
+在正则表达式中，你可以使用集合和范围来匹配特定的字符或在给定模式内的一系列字符。
 
-### Sets:
+<h3 id="sets-">集合:</h3>
 
-A set is defined using square brackets `[...]`. It allows you to match any character within the set. For example, `[aeiou]` matches any of the vowels 'a', 'e', 'i', 'o', or 'u'.
+一个集合使用方括号 `[...]` 来定义。它允许你匹配集合中的任何字符。例如，`[aeiou]` 匹配元音字母 'a', 'e', 'i', 'o', 或 'u' 中的任何一个。
 
-**示例：** Suppose we have a string `'The quick brown fox jumps over the lazy dog.'`. To match all vowels in this string, we can use the regular expression `/[aeiou]/g`.
+**示例：** 假设我们有一个字符串 `'The quick brown fox jumps over the lazy dog.'`。为了匹配这个字符串中的所有元音字母，我们可以使用正则表达式 `/[aeiou]/g`。
 
 ```javascript
 let str = 'The quick brown fox jumps over the lazy dog.';
@@ -500,7 +501,7 @@ let results = str.match(re);
 console.log(results); // 输出为：['e', 'u', 'i', 'o', 'o', 'u', 'o', 'e', 'e', 'a', 'o']
 ```
 
-This matches all occurrences of vowels in the string.
+这个正则表达式匹配字符串中所有元音字母的出现。
 
 ```javascript
 let str = 'The cat chased the rats in the backyard';;
@@ -510,11 +511,11 @@ let results = str.match(re);
 console.log(results); // 输出为：['cats', 'rats']
 ```
 
-Here, the RegEx `[cr]at` matches words that start with either 'c', or 'r' and are followed by 'at'.
+在这里，正则表达式 [cr]at 匹配以 'c' 或 'r' 开头，并跟着 'at' 的单词。
 
-### Ranges:
+<h3 id="ranges-">范围:</h3>
 
-Ranges allow you to specify a range of characters within a set. For example, `[a-z]` matches any lowercase letter from 'a' to 'z', and `[0-9]` matches any digit from '0' to '9'. Example:
+范围允许你在集合内指定一系列字符。例如，`[a-z]` 匹配从 'a' 到 'z' 的任何小写字母，而 `[0-9]` 匹配从 '0' 到 '9' 的任何数字。示例：
 
 ```javascript
 let str = 'Hello World!';
@@ -524,7 +525,7 @@ let results = str.match(re);
 console.log(results); // 输出为：['e', 'l', 'l', 'o', 'o', 'r', 'l', 'd']
 ```
 
-Here, regex `[a-z]` matches all lowercase letters in the string.
+在这里，正则表达式 `[a-z]` 匹配字符串中的所有小写字母。
 
 ### 否定/排除范围：
 

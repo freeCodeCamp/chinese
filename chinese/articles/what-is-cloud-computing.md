@@ -52,8 +52,9 @@ These are some of the issues we faced before cloud computing. Now, you might won
 
 > **Cloud computing** is the on-demand availability of computer system resources, especially data storage (cloud storage) and computing power, without direct active management by the user.  
 > **云计算**是一种按需提供的计算系统资源，例如数据存储（云存储）、算力等，且不需要用户直接主动管理。
-> Cloud computing relies on sharing of resources to achieve coherence and typically uses a pay-as-you-go model, which can help in reducing capital expenses but may also lead to unexpected operating expenses for users. – [Wikipedia][[https://en.wikipedia.org/wiki/Cloud_computing]
+> Cloud computing relies on sharing of resources to achieve coherence and typically uses a pay-as-you-go model, which can help in reducing capital expenses but may also lead to unexpected operating expenses for users. – [维基百科](https://en.wikipedia.org/wiki/Cloud_computing)
 >云计算通过资源共享获取一致性，采用按使用量付费的模式，协助降低固定资产费用，同时可能需要用户支付超出预期的营业费用。
+
 Think of Cloud Computing like renting a computer from a cybercafe. In a cybercafe, they have the computers ready for use – you just come in, pay for your desired time, and use the computer for that period.
 想象一下，云计算与在网吧中使用电脑类似。网吧中准备好了电脑，当你走进网吧时，只需要支付期望使用时间对应的费用，然后在这个时间段内就可以随便使用电脑。
 In the case of cloud computing, you don't have to worry about buying the computer, or protecting it, or covering the running costs. The cloud provider covers all these worries. You rarely ever have to worry about software issues, or the absence of specific software on these computers. And the best part? You only pay for the computer you use, and only for the time you use it.
@@ -65,63 +66,64 @@ Cloud computing as explained to a five year old is _"letting someone else manage
 <h2 id="cloud-service-providers">云服务供应商</h2>## Cloud Service Providers
 
 Companies that provide these cloud services are called cloud services providers. These companies already have many servers, and system engineers. They're concerned with all the stuff you don't have to worry about like server costs and running costs. They provide a web interface where you can access their servers and use them when you need.
-云服务供应商是指提供云服务的公司。这些公司通常有很多服务器和系统工程师，他们
+云服务供应商是指提供云服务的公司。这些公司通常有很多服务器和系统工程师，会提供全流程服务，用户无需担心类似服务器成本和运行费用等问题，他们会给用户提供一个用于连接服务器的用户界面，当用户需要时使用即可。
 Currently, the most popular cloud service providers are Google (Google Cloud Platform), Amazon AWS (Amazon Web Services), and Microsoft (Azure). These companies offer similar services, but with various different price models, features, and so on.
-
+目前最受欢迎的云服务供应商是谷歌云、亚马逊（AWS）和微软（Azure），这些公司提供的服务都比较类似，但是定价模式、特点等各有不同。
 Here's a summary of what each of them offers:
-
+以下是这些公司的提供内容的简介：
 ### Google
 ### 谷歌
 
 They offer IaaS (Compute Engine), Containers As A Service, CaaS, (Kubernetes Engine), and PaaS (App Engine) services. They also offer data storage services, with tools like Google Cloud Storage, Cloud SQL, and Cloud Bigtable.
-
+谷歌提供基础架构即服务IaaS（Compute Engine），容器即服务CaaS（Kubernetes Engine）以及平台即服务PaaS（App Engine）等服务，同时提供数据存储服务，如Cloud Storage, Cloud SQL以及Bigtable等产品。
 ### AWS
-
+### 亚马逊
 This is the first cloud services provider. They offer IaaS (Elastic Compute, EC2), CaaS (Elastic Kubernetes Service, EKS)  and PaaS (Elastic Beanstalk) services. They also offer data storage services, with tools like Amazon S3, and DynamoDb.
-
+亚马逊是第一家提供云服务的公司，提供基础架构即服务IaaS（Elastic Compute, EC2），容器即服务CaaS（Elastic Kubernetes Service, EKS）以及平台即服务PaaS（Elastic Beanstalk）等产品，同时提供数据存储服务，如Amazon S3、 DynamoDb等产品。
 ### Microsoft
-
+### 微软
 They offer IaaS (Virtual Machine), CaaS (Kubernetes Service, AKS), and PaaS (App Service) services. They also offer data storage services, with tools like Cosmos DB.
-
+微软提供基础架构即服务IaaS（Virtual Machine），容器即服务CaaS（Kubernetes Service, AKS）以及平台即服务PaaS（App Service）等产品，同时提供数据存储服务，如Cosmos DB等产品。
 To maximise resources, cloud service providers have their clients sharing servers. The clients don't have to know or worry about this allocation.
-
+云服务供应商通常为了资源利用最大化会让用户共享服务器，但用户无需知道这方面的内容，也不用担心。
 Now let's understand what some of the above acronyms/terms mean so you have a better idea of what these cloud services are.
-
-## Different Cloud Services
+接下来我们讲解一下以上提到的一些云服务类型，以便于更好理解这些云服务内容。
+<h2 id="different-cloud-services">云服务类型</h2>## Different Cloud Services
 
 Cloud service providers offer plenty of different computing services. Here are the most common services:
-
+云服务供应商可以提供很多云服务类型，以下是最常见的服务类型：
 ### SaaS (Software As A Service)
-
+### SaaS（软件即服务）
 ![saas-778x445](https://www.freecodecamp.org/news/content/images/2022/05/saas-778x445.jpeg)
 
-[Geek Super][11]
+[Geek Super](https://www.google.com/url?sa=i&url=https%3A%2F%2Fgeeksuper.com%2Fadvantages-of-saas-platforms-for-online-courses%2F&psig=AOvVaw0J54lC0WsxXAoS0L2czE27&ust=1652833369985000&source=images&cd=vfe&ved=0CA0QjhxqFwoTCIDvwOio5fcCFQAAAAAdAAAAABAO)
 
 This service involves you just using some software without any knowledge of its source code or host environment or development details. You just use it and trust that it's being managed and updated properly.
-
+这项服务是指用户直接使用一些软件应用，不用关心源代码、托管环境或者开发细节等事情。只是使用软件，并且相信软件会被持续管理与升级。
 ### PaaS (Platform As A Service)
-
+### 平台即服务（PaaS）
 Here, you focus only on your application development as everything has been handled (the hardware, computing environments, and required software).
-
+这项服务是指用户只需专注应用的开发，其他的事项都已经准备好了（如硬件、计算环境和需要的软件）
 ### IaaS (Infrastructure As A Service)
-
+### 基础架构即服务（IaaS）
 This is the most flexible of all cloud services. Here you have the most control over things. You can customise and change things as you see fit.
-
+这项服务是所有云服务中最复杂的类型，用户对订购的服务拥有最大的自主权，可以按照用户自己的想法适配和修改，
 But you don't own the servers. The cloud service provider only provides you with the infrastructure you need, and you are responsible for creating your own computing environments and installing required software for your application to work.
-
+但用户没有服务器的所属权。云服务供应商为用户提供所需的基础架构，用户负责搭建计算环境，安装运行应用程序所需的软件。
 The idea here is similar to buying hardware. The only difference is that now, you're renting it and it's virtual (to you).
+这个方式与购买硬件非常类似，唯一的区别是用户租用并且虚拟拥有（没有实物）。
 
-## Challenges that Cloud Computing Helps Solve
+<h2 id="challenges-that-cloud-computing-helps-solve">云计算助力解决的难题</h2>## Challenges that Cloud Computing Helps Solve
 
 Cloud computing removes the need to purchase and setup servers on-site every time a new application needed to be developed. This is a great advantage as it saves companies a lot of money – both on servers, as well as on the engineers who would setup and configure the servers to work for your applications.
-
+云计算可以避免每次开发新的应用时就需要购置并现场搭建物理服务器，最大的优势就是可以帮助公司降低成本，包括服务器费用和搭建配置服务器的人工费。
 Scaling isn't usually easy as it often involves a lot of setup and configuration. For example, to provide more storage for an application, you could get an external data store and connect to the current server. This definitely has its limits, though.
-
+扩展服务器因为需要有大量的搭建和配置工作，所以通常都不是简单的事情。譬如，一个应用程序需要更多的存储空间，一般情况下可以通过给现有服务器外置一个数据存储来解决，但这种方法往往有局限性。
 A point will likely come when you need a better server, or an additional server. Either way, every software that you installed to get it running on the former server would have to be installed again on the new server. Application files would have to be moved, and so on.
-
+这时就会想到购置一个配置更好的服务器或者再购置一个服务器，无论是哪种方法，旧服务器上安装的与应用运行相关的所有软件，都需要在新的服务器上再安装一遍，并且还有把应用的文件转移到新服务器等操作。
 Also, these applications are often underutilising these hardware resources. This, from the business perspective, is a loss. An initial fix to this was virtualisation. This basically meant creating virtual (contained) environments where the application has all of its required software and can function well on the servers. These led to better utilisation of resources. But it definitely wasn't the perfect solution.
-
-## How Can Cloud Computing Help You?
+通常情况下，这些服务器资源也不会被应用程序充分利用。从商业角度出发，这是一种损失。这个问题最初的解决方案是虚拟化，在服务器中安装虚拟环境，并在虚拟环境中安装应用运行需要的所有软件，应用就可以在虚拟环境中运行起来了。这个方案虽然实现了资源最大化利用，但并不完美。
+<h2 id="how-can-cloud-computing-help-you">云计算有什么好处?</h2>## How Can Cloud Computing Help You?
 
 Cloud computing offers plenty benefits, some of which are highlighted here:
 
@@ -130,6 +132,7 @@ Cloud computing offers plenty benefits, some of which are highlighted here:
 -   Easy setup. Developers get to just focus on the code as all the actual server and hardware setup can be done using a user interface provided by the cloud service provider. This leads to faster development time, and applications are shipped faster.
 -   Accessibility. Cloud service providers tend to have multiple datacenters around the world, making sure your users always get access to your services as fast as possible.
 -   Data security. Because your data is not stored in your physical space anymore, it's more difficult for bad actors to come in and damage or steal your servers.
+-   数据安全，
 
 ## Cloud Deployment Models
 
@@ -175,7 +178,7 @@ The choice between public, private, or hybrid cloud deployment models depends on
 
 The decision ultimately hinges on factors such as security needs, compliance requirements, scalability, and the level of control desired over the IT infrastructure.
 
-## **Conclusion**
+## **Conclusion总结**
 
 Now you should have have enough information to kickstart your career in cloud computing.
 

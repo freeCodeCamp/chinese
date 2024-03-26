@@ -3,157 +3,155 @@ title: Regular Expressions (RegEx) in JavaScript – A Handbook for Beginners
 author: Samyak Jain
 authorURL: https://www.freecodecamp.org/news/author/samyak/
 originalURL: https://www.freecodecamp.org/news/regex-in-javascript/
-translator: ""
+translator: "Tsukistar"
 reviewer: ""
 ---
 
 February 27, 2024 / [#Regex][1]
 
-<!-- more -->
-
-# Regular Expressions (RegEx) in JavaScript – A Handbook for Beginners
+# JavaScript 中的正则表达式（RegEx）- 初学者手册
 
 ![Samyak Jain](https://www.freecodecamp.org/news/content/images/size/w60/2024/02/profilepic.png)
 
 [Samyak Jain][2]
 
-  ![Regular Expressions (RegEx) in JavaScript – A Handbook for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2024/02/Regular-Expressions-in-JavaScript-Cover-2.png)
+  ![JavaScript 中的正则表达式（RegEx）- 初学者手册](https://www.freecodecamp.org/news/content/images/size/w2000/2024/02/Regular-Expressions-in-JavaScript-Cover-2.png)
 
-Regular expressions, also known as regex, are powerful tools for pattern matching and text manipulation. Whether you're validating user input, extracting data from strings, or performing advanced text processing tasks, understanding regex is essential for developers.
+正则表达式，也称为 regex，是用于模式匹配和文本处理的强大工具。无论是验证用户输入、从字符串中提取数据，还是进行高级的文本处理任务，理解正则表达式对开发人员来说都是必不可少的。
 
-This comprehensive guide will walk you through the fundamentals of regular expressions in JavaScript, including how to create and use them, their special characters, flags, and practical examples.
+这份全面的指南将带领你了解 JavaScript 中正则表达式的基础知识，包括如何创建和使用正则表达式、正则表达式中的特殊字符、标志以及一些实际的示例。
 
-### Prerequisites:
+### 预备知识:
 
-While this tutorial is designed to be beginner-friendly, having a basic understanding of JavaScript fundamentals will be beneficial. Familiarity with variables, data types, functions, and string manipulation in JavaScript will help you grasp the concepts covered.
+虽然本教程旨在适合初学者，但具备基本的 JavaScript 基础知识将会有所帮助。熟悉 JavaScript 中的变量、数据类型、函数和字符串处理将有助于理解本教程涵盖的概念。
 
-## Table of Contents:
+## 目录:
 
-1.  [What are Regex][3]?  
-    – [How to Write Regular Expression Patterns][4]
-2.  [How to Use Regular Expressions in JavaScript][5]  
-    – RegEx Methods in JavaScript  
-    – [Advanced Searching with Flags][6]
-3.  [Anchors in Regex][7]  
-    – [Multiline Mode(m) of Anchors][8]  
-    – [Word Boundaries (`\b`)][9]
-4.  [Quantifiers in Regex][10]  
-    – [Greedy Quantifiers][11]  
-    – [Non Greedy Quantifiers (Lazy Mode)][12]
-5.  [Sets and Ranges in Regex][13]  
-    – [Sets][14]  
-    – [Ranges][15]  
-    – [Negating / Excluding Ranges][16]  
-    – [Predefined Character Classes][17]
-6.  [Special Characters and Escaping in Regex][18]  
-    – [Metacharacters][19]  
-    – [Escaping Special Characters][20]
-7.  [Groupings in RegEx][21]  
-    – [Capturing Groups][22]  
-    – [Non-Capturing Groups][23]  
-    – [Backreferences][24]  
-    – [Regex Alternation][25]
-8.  [Lookahead and Lookbehind Assertions in Regex][26]  
-    – [Lookahead (?=)][27]  
-    – [Negative Lookahead (?!)][28]  
-    – [Lookbehind (?<=)][29]  
-    – [Negative Lookbehind (?<!)][30]
-9.  [Practical Examples and Use Cases of Regex][31]  
-    – [Password Strength Checking][32]  
-    – [Email Validation][33]  
-    – [Phone Number Formatting][34]
-10.  [RegEx Tips and Best Practices][35]
-11.  [Conclusion][36]
+1.  [什么是正则表达式][3]?  
+    – [如何编写一个正则表达式的模式][4] 
+2.  [如何在JavaScript中使用正则表达式][5]  
+    – JavaScript中的正则表达式模式 
+    – [通过标志进行高级搜索][6] 
+3.  [正则表达式中的锚点][7]  
+    – [锚点的多行模式][8]  
+    – [单词边界 (`\b`)][9]
+4.  [正则表达式中的量词][10]  
+    – [贪婪量词][11]  
+    – [非贪婪量词(懒惰模式)][12]
+5.  [正则表达式中的集合与区间][13]  
+    – [集合][14]  
+    – [区间][15]  
+    – [否定/排除区间][16]  
+    – [预定义的字符类][17]
+6.  [正则表达式中的特殊字符与转义][18]  
+    – [元字符][19]  
+    – [转义特殊字符][20]
+7.  [正则表达式中的分组][21]  
+    – [捕获组][22]  
+    – [非捕获组][23]  
+    – [后向引用][24]  
+    – [正则表达式选择符号][25]
+8.  [正则表达式中的前瞻断言和后顾断言][26]  
+    – [前瞻断言 (?=)][27]  
+    – [否定前瞻断言 (?!)][28]  
+    – [后顾断言 (?<=)][29]  
+    – [否定后顾断言 (?<!)][30]
+9.  [正则表达式的实际应用示例][31]  
+    – [密码强度检查][32]  
+    – [电子邮件地址校验][33]  
+    – [电话号码格式化函数][34]
+10.  [使用正则表达式的技巧和最佳实践方式][35]
+11.  [总结][36]
 
-## What Are Regex?
+<h2 id="what-are-regex">什么是正则表达式?</h2>
 
-A regular expression, often abbreviated as "regex," is a sequence of characters that define a search pattern. This pattern is used to find matches within strings, helping you identify specific text or patterns of characters, providing a powerful way to search, replace, and manipulate text.
+正则表达式是一种定义搜索模式的字符序列，通常缩写为“regex”。这种模式提供了一种强大的方式来搜索、替换和操作文本，它被用于在字符串中查找匹配项，帮助你识别特定的文本或字符模型。
 
-In JavaScript, you can create regular expressions using either a literal notation or the `RegExp` constructor:
+在JavaScript中，你可以使用字面量或`RegExp`构造函数创建正则表达式：
 
--   **Using a Regular Expression Literal**: This involves enclosing the pattern between slashes ("/").
+-   **使用正则表达式字面量**: 模式由斜杠("/")包围。
 
 ```javascript
 const re = /pattern/;
 
-// example
+// 示例
 const re = /ab+c/;
 ```
 
--   **Using the Constructor Function: `RegExp`** constructor. This allows runtime compilation of the regular expression and is useful when the pattern may change.
+-   **使用构造函数: `RegExp`**构造函数。 这种方式允许对正则表达式进行运行时编译，并且在模式可能更改时非常有用。
 
 ```javascript
 const re = new RegExp("pattern");
 
-// example
+// 示例
 const re = new RegExp("ab+c");
 ```
 
-Both methods produce the same result – it's a matter of preference which one you choose.
+两种方法会产生相同的结果——选择哪一种取决于你的偏好。
 
-### How to Write Regular Expression Patterns
+<h3 id="how-to-write-regular-expression-patterns">如何编写一个正则表达式的模式</h3>
 
-A regular expression pattern can consist of simple characters or a combination of simple and special characters.
+一个正则表达式模式是由简单的字符或者是简单和特殊字符的组合所构成的。
 
-1.  **Simple Pattern**: They match exact character sequences. For example, the pattern `/abc/` matches the sequence "abc" in a string.
-2.  **Special Characters**: They enhance pattern matching with capabilities like repetition or matching specific types of characters, allowing for more flexible and powerful pattern matching. For example, `*` matches zero or more occurrences of the preceding item. `/ab*c/` matches "ac", "abc", "abbc", and so on.
+1.  **简单模式**: 它们匹配精确的字符序列。例如，模式 `/abc/` 匹配字符串中的序列"abc"。
+2.  **特殊字符**: 它们通过重复或匹配特定类型的字符等功能增强了模式匹配，从而实现了更灵活、更强大的模式匹配。例如, `*` 匹配前一项出现0次或多次。 `/ab*c/` 匹配 "ac", "abc", "abbc", 等等诸如这类形式的字符串。
 
-## How to Use Regular Expressions in JavaScript
+<h2 id="how-to-use-regular-expressions-in-javascript">如何在JavaScript中使用正则表达式</h2>
 
-You can use regular expressions with various methods available for both the `RegExp` and `String` objects in JavaScript. Some methods like `test()`, `exec()`, and others have this syntax:
+你可以使用JavaScript中适用于 `RegExp` 和 `String` 对象的多种方法来使用正则表达式，例如`test()`和 `exec()`方法，以及具有如下语法的方法：
 
 ```javascript
 regex.methodname(string)
 
-// example
+// 示例
 string.test(string)
 ```
 
-While some methods like `match()`, `replace()`, and so on have this syntax:
+以及类似于 `match()` 和 `replace()` 方法,以及具有这种语法的方法：
 
 ```javascript
 string.methodname(regex)
 
-// example
+// 示例
 string.replace(regex, replacement)
 ```
 
-Here, `string` is the string and `regex` is a regular expression pattern.
+在这里， `string` 是字符串， `regex` 是一种正则表达式模式。
 
-Let's explore how these methods are used in practice.
+让我们来探讨一下这些方法在实践中是如何使用的。
 
-**The `test()` Method**: checks whether a particular string matches a specified pattern or regular expression. It returns `true` if the pattern is found in the string, otherwise, it returns `false`.
+**`test()` 方法**：检查特定字符串是否与指定模式或正则表达式匹配。如果字符串中找到了该模式，则返回 `true`；否则返回 `false`。
 
 ```javascript
 let pattern = /hello/;
 let str = "hello world";
 
 let result = pattern.test(str);
-console.log(result); // Output: true
+console.log(result); // 输出为：true
 ```
 
-**The `exec()` Method**: searches for a match of a pattern within a string. It returns an array containing details like the matched text, index of the match within the string, and the input string itself. Example:
+**`exec()` 方法**: 根据正则表达式模式的内容搜索字符串中的匹配项。它返回一个数组，其中包含匹配文本、匹配项在字符串中的索引以及输入字符串本身的详细信息。例如：
 
 ```javascript
 let pattern = /world/;
 let str = "hello world";
 
 let result = pattern.exec(str);
-console.log(result); // Output: ["world", index: 6, input: "hello world"]
+console.log(result); // 输出为：["world", index: 6, input: "hello world"]
 ```
 
-**The `match()` Method**: Searches for occurrences of a pattern within a string. It returns the first element matched. If has the global flag (`g`), it returns an array containing all matches found, or `null` if no matches are found.
+**`match()`方法**: 根据正则表达式模式的内容，在字符串中搜索它的出现次数。它返回匹配的第一个元素。如果具有全局标志（`g`），则返回一个包含所有找到的匹配项的数组，如果没有找到匹配项，则返回 `null`。
 
 ```javascript
 let str = "The quick brown fox jumps over the lazy dog.";
 let matches = str.match(/the/gi);
 
-console.log(matches); // Output: ["The", "the"]
+console.log(matches); // 输出为： ["The", "the"]
 ```
 
-`/the/gi` searches for all occurrences of the word "the" in the string, regardless of case. 
+`/the/gi` 在字符串中搜索所有出现的单词 "the"，不区分大小写。
 
-**The `matchAll()` Method**: Returns an iterator of all results matching a regular expression against a string. Each element of the iterator is an array containing details about the match, including captured groups.
+**`matchAll()`方法**: 返回一个用于匹配字符串中正则表达式的所有结果的迭代器。迭代器的每个元素都是一个数组，包含有关匹配的详细信息，包括捕获的分组。
 
 ```javascript
 let str = "Hello world! This is a test string.";
@@ -166,147 +164,145 @@ for (let match of matches) {
 }
 ```
 
-This method is useful when you need detailed information about all matches found in a string.
+当你需要获取字符串中所有匹配项的详细信息时，此方法非常有用。
 
-**The `search()` Method**: Searches for a specified pattern within a string. It returns the index of the first occurrence of the pattern within the string, or `-1` if the pattern is not found.
-
+**`search()`方法**: 在字符串中搜索指定的模式。它返回字符串中模式的第一个出现的索引，如果未找到模式，则返回 `-1`。
 ```javascript
 let str = "The quick brown fox jumps over the lazy dog";
 let pattern = /brown/;
 
 let result = str.search(pattern);
-console.log(result); // Output: 10
+console.log(result); // 输出为： 10
 ```
 
-**The `replace()` Method**: Replaces the first occurrence of a specified pattern in a string with another substring or value. To replace all occurrences, you can use the global flag (`g`) in the regular expression.
+**`replace()`方法**: 用另一个子字符串或值替换字符串中指定模式的第一个出现。要替换所有出现，可以在正则表达式中使用全局标志 (`g`)。
 
 ```javascript
 let str = "Hello, World!";
 let newStr = str.replace(/o/g, "0");
 
-console.log(newStr); // Output: "Hell0, W0rld!"
+console.log(newStr); // 输出为： "Hell0, W0rld!"
 ```
 
-**The `replaceAll()` Method**: Replaces all occurrences of a specified substring or pattern with a replacement string. It differs from `replace()` in that it replaces all occurrences by default, without the need for a global flag (`g`).
+**`replaceAll()`方法**: 替换所有指定子字符串或模式的出现为一个替换字符串。它与 `replace()` 不同之处在于，默认情况下替换所有出现，无需使用全局标志 (`g`)。
 
 ```javascript
 let str = "apple,banana,apple,grape";
 let newStr = str.replaceAll("apple", "orange");
-console.log(newStr); // Output: "orange,banana,orange,grape"
+console.log(newStr); // 输出为： "orange,banana,orange,grape"
 ```
 
-This method simplifies the process of replacing all occurrences of a substring within a string.
+这种方法简化了在字符串中替换所有子字符串出现的过程。
 
-**The `split()` Method**: Though not exclusively a RegEx method, `split()` can accept a RegEx pattern as its argument to split a string into an array of substrings based on the specified patterns or delimiters. For instance:
+**`split()`方法**: 虽然 `split()` 并不是专属于正则表达式的方法，但它可以接受一个正则表达式模式作为其参数，根据指定的模式或分隔符将字符串拆分为子字符串数组。例如：
 
 ```javascript
 let str = "apple,banana,grape";
 let arr = str.split(/,/);
-console.log(arr); // Output: ["apple", "banana", "grape"]
+console.log(arr); // 输出为：["apple", "banana", "grape"]
 ```
 
-These methods offer different functionalities based on your needs. For example, if you only need to know whether a pattern is found in a string, `test()` or `search()` methods are efficient. If you require more information about matches, the `exec()` or `match()` methods are suitable.
+这些方法根据你的需求提供不同的功能。例如，如果你只需要知道字符串中是否找到了模式，则 `test()` 或 `search()` 方法是有效的。如果你需要更多关于匹配的信息，则 `exec()` 或 `match()` 方法是合适的。
 
-## Advanced Searching with Flags
+<h2 id="advanced-searching-with-flags">通过标志进行高级搜索</h2>
 
-In JavaScript, regular expressions support pattern flags, which are optional parameters that modify the behavior of the pattern matching.
+在JavaScript中，正则表达式支持模式标志，这些是可选参数，修改了模式匹配的行为。
 
-Let's delve into two common flags: the ignore flag (`i`) and the global flag (`g`).
+让我们深入了解两个常见的标志：忽略标志（`i`）和全局标志（`g`）。
 
-### The Ignore Flag (`i`):
+### 忽略标志(`i`):
 
-The ignore flag (`i`) instructs the regular expression to ignore case sensitivity when searching for matches. For example:
+忽略标志（`i`）可以使正则表达式在搜索匹配项时忽略大小写敏感性。例如：
 
 ```javascript
 let re = /hello/i;
 let testString = "Hello, World!";
 let result = re.test(testString);
 
-console.log(result); // Output: true
+console.log(result); // 输出为：true
 ```
 
-In this case, the regular expression `/hello/i` matches the string `"Hello"` despite differences in case because we used the ignore flag.
+在这种情况下，正则表达式 `/hello/i` 会匹配字符串 `"Hello"`（即使大小写不同），因为我们使用了忽略标志。
 
-### The Global Flag (`g`):
+### 全局标志(`g`)：
 
-The global flag (`g`) allows the regular expression to find all matches within a string, rather than stopping after the first match. For example:
+全局标志（`g`）允许正则表达式在字符串中找到所有匹配项，而不是在找到第一个匹配项后停止。例如：
 
 ```javascript
 let re = /hi/g;
 let testString = "hi there, hi again!";
 let result = testString.match(re);
 
-console.log(result); // Output: ["hi", "hi"]
+console.log(result); // 输出为：["hi", "hi"]
 ```
 
-In this example, the regular expression `/hi/g` finds both occurrences of `"hi"` in the string `"hi there, hi again!"`.
+在这个例子中，正则表达式 `/hi/g` 找到了字符串 `"hi there, hi again!"` 中的两个 `"hi"` 出现。
 
-### Combining Flags
+### 组合标志
 
-You can combine flags to achieve specific matching behavior. For instance, using both the ignore flag (`i`) and the global flag (`g`) together allows for case-insensitive matching while finding all occurrences of the pattern.
+你可以将标志进行组合以实现特定的匹配行为。例如，同时使用忽略标志（`i`）和全局标志（`g`）允许进行不区分大小写的匹配，直到找到模式的所有匹配项。
 
 ```javascript
 let re = /hi/gi;
 let testString = "Hi there, HI again!";
 let result = testString.match(re);
 
-console.log(result); // Output: ["Hi", "HI"]
+console.log(result); // 输出为：["Hi", "HI"]
 ```
 
-Here, the regular expression `/hi/gi` matches both `"Hi"` and `"HI"` in the string `"Hi there, HI again!"`.
+在这个例子中，正则表达式 `/hi/gi` 匹配字符串 `"Hi there, HI again!"` 中的 `"Hi"` 和 `"HI"`。
 
-### The `u` Flag:
+### `u`标志:
 
-Though not commonly used, the `u` flag handles Unicode characters, especially surrogate pairs, correctly. Surrogate pairs are used to represent characters outside the Basic Multilingual Plane (BMP) in UTF-16 encoding.
+虽然不常用，但 `u` 标志可以正确处理 Unicode 字符，特别是代理项对。代理项对用于表示 UTF-16 编码中基本多文种平面（BMP）之外的字符。
 
-**Example:** Let's consider a string containing emoji characters and try to match them using a regular expression without and with the `u` flag.
-
+**示例：** 让我们考虑一个包含表情符号字符的字符串，并尝试分别使用包含`u`标志和不包含`u`标志的正则表达式来匹配它们。
 ```javascript
-// Without the u flag
+// 不使用u标志
 let result1 = 'Smile Please 😊'.match(/[😒😊🙄]/);
-console.log(result1); // Output: ["�"]
+console.log(result1); // 输出为：["�"]
 
-// With the u flag
+// 使用u标志
 let result2 = 'Smile Please 😊'.match(/[😒😊🙄]/u);
-console.log(result2); // Output: ["😊"]
+console.log(result2); // 输出为：["😊"]
 ```
 
-Without the `u` flag, the regex fails to match the emoji correctly because they are represented as surrogate pairs in UTF-16 encoding. However, with the `u` flag, it correctly matches the emoji `'😊'`.
+没有使用 `u` 标志时，正则表达式无法正确匹配表情符号，因为它们在 UTF-16 编码中表示为代理项对。但是，使用 `u` 标志时，它可以正确匹配表情符号 `'😊'`。
 
-## Anchors in Regex
+<h2 id="anchors-in-regex">正则表达式中的锚点</h2>
 
-Anchors are special characters in regex that do not represent actual characters but instead indicate positions within a string. There are two main anchors: `^` and `$`.
+锚点是正则表达式中的特殊字符，它们不表示实际字符，而是用于检查字符在字符串中是否处于特定的位置。本文讲解两个主要的锚点：`^` 和 `$`。
 
-**The `^` Anchor**: The `^` anchor matches the beginning of the text. Basically, it checks if a string starts with a specific character or pattern.
+**锚点 `^`**: 锚点 `^` 匹配文本的开头。一般情况下，它检查字符串是否以特定字符或模式开头。
 
 ```javascript
 let str = 'Mountain';
-console.log(/^S/.test(str)); // Output: false
+console.log(/^S/.test(str)); // 输出为：false
 ```
 
-**The `$` Anchor**: The `$` anchor matches the end of the text. It checks if a string ends with a specific character or pattern.
+**锚点 `$`**: 锚点 `$` 匹配文本的结尾。它检查字符串是否以特定字符或模式结尾。
 
 ```javascript
 let str = 'Ocean';
-console.log(/n$/.test(str)); // Output: true
+console.log(/n$/.test(str)); // 输出为：true
 ```
 
-You may often use `^` and `$` together to check if a string fully matches a pattern.
+你经常会一起使用 `^` 和 `$` 来检查字符串是否完全匹配某个模式。
 
 ```javascript
 let isValid = /^\d\d:\d\d$/.test('10:01');
-console.log(isValid); // Output: true
+console.log(isValid); // 输出为：true
 ```
 
-This example checks if the input string matches a time format like "10:01"
+这个示例检查输入字符串是否匹配时间格式，例如 "10:01"。
 
--   In the code above, `^\d\d:\d\d$` ensures that the string contains exactly two digits, followed by a colon, and then exactly two more digits.
+在上面的代码中，`^\d\d:\d\d$` 确保字符串包含两个数字，后跟一个冒号，然后是两个数字。
 
-### Multiline Mode of Anchors (`^` and `$`):
+<h3 id="multiline-mode-of-anchors-and-">锚点的多行模式（`^` 和 `$`）：</h3>
 
-By default, the `^` and `$` anchors in regular expressions operate in single-line mode, meaning they match the beginning and end of the entire string. But in some cases, you might want to match the beginning and end of individual lines within a multiline string. This is where the multiline mode, indicated by the `m` flag, comes into play.
+默认情况下，正则表达式中的 `^` 和 `$` 锚点以单行模式操作，意味着它们匹配整个字符串的开头和结尾。但在某些情况下，你可能希望匹配多行字符串中各行的开头和结尾，这就是多行模式的作用，可以通过 `m` 标志来指示。
 
-Since single-line mode is the default, it only matches the first digit "1" at the beginning of the string.
+由于单行模式是默认的，因此它只匹配字符串开头的第一个数字 "1"。
 
 ```javascript
 let str = `1st line
@@ -316,12 +312,12 @@ let str = `1st line
 let re = /^\d/g; // "^\d" matches the digit at the beginning of the string
 let matches = str.match(re);
 
-console.log(matches); // Output: ["1"]
+console.log(matches); // 输出为：["1"]
 ```
 
--   **multiline mode(m)**: `/^\d/gm` is the regex pattern with the `m` flag enabled. By utilizing the `m` flag, you can ensure that `^` and `$` match the beginning and end of individual lines within a multiline string, rather than just the entire string itself.
+- **多行模式（m）**：`/^\d/gm` 是启用了 `m` 标志的正则表达式模式。通过利用 `m` 标志，您可以确保 `^` 和 `$` 匹配多行字符串中各行的开头和结尾，而不仅仅是整个字符串本身。
 
-As a result, it matches "1" from the first line, "2" from the second line, and "3" from the third line:
+因此，它从第一行匹配到 "1"，从第二行匹配到 "2"，从第三行匹配到 "3"：
 
 ```javascript
 let str = `1st line
@@ -331,119 +327,121 @@ let str = `1st line
 let re = /^\d/gm;
 let matches = str.match(re);
 
-console.log(matches); // Output: ["1", "2", "3"]
+console.log(matches); // 输出为：["1", "2", "3"]
 ```
 
-This is particularly useful when working with text that contains multiple lines or line breaks.
+这在处理包含多行或换行符的文本时特别有用。
 
-### Word Boundaries (`\b`) :
+<h3 id="word-boundaries-b-">单词边界 (`\b`)： </h3>
 
-The `\b` is a special character in regular expressions called an anchor, just like `^` and `$`. It's used to match a position in the string where a word character (such as a letter, digit, or underscore) is not followed or preceded by another word character. For instance:
+`\b` 是正则表达式中的一个特殊字符，称为锚点，就像 `^` 和 `$` 一样。它用于匹配字符串中的位置，其中一个单词字符（如字母、数字或下划线）之前或之后不是另一个单词字符。例如：
 
--   `\bword\b` matches the word "word" in the string, but not substrings like "wording" or "swordfish".
+- `\bword\b` 匹配字符串中的单词 "word"，但不匹配子串如 "wording" 或 "swordfish"。
 
 ```javascript
 let pattern = /\bword\b/;
 let pattern2 = /word/;
-console.log(pattern.test("This is a word.")); // Output: true
-console.log(pattern.test("This is wording.")); // Output: false (doesn't match "wording")
-console.log(pattern2.test("This is wording")); // Output: True
+console.log(pattern.test("This is a word.")); // 输出为：true
+console.log(pattern.test("This is wording.")); // 输出为：false (没有匹配"wording")
+console.log(pattern2.test("This is wording")); // 输出为：True
 ```
 
-`/word/` matches the substring "word" anywhere within the string. It matches "word" in "This is wording." because it doesn't include any word boundary assertions.
+`/word/` 在字符串中的任何位置匹配子串 "word"。它在 "This is wording." 中匹配 "word"，因为它不包括任何单词边界断言。
 
-Other examples can be:
+其他示例包括：
 
--   `\b\d+\b` matches whole numbers in the string, but doesn't include non-numeric characters adjacent to the numbers.
--   `^\bword\b$` matches a string that consists solely of the word "word".
+- `\b\d+\b` 匹配字符串中的整数，但不包括数字字符相邻的非数字字符。
+- `^\bword\b$` 匹配字符串仅由单词 "word" 组成。
 
-## Quantifiers in Regex
+<h2 id="quantifiers-in-regex">正则表达式中的量词</h2>
 
-In regex, quantifiers enable you to specify the quantity of characters or character classes you want to match within a string. They are symbols or characters that define how many instances of a character or group you're looking for.
+在正则表达式中，量词允许你指定你想要在字符串中匹配的字符或字符类的数量。它们是定义你要查找的字符或组的实例数量的符号或字符。
 
-### Exact Count `{n}`:
+### 精确数量量词 `{n}`：
 
-The simplest quantifier is `{n}`, which specifies an exact count of characters or character classes you want to match. Let's say we have a string "Year: 2022" and we want to extract the year from it:
+最简单的量词是 `{n}`，它指定了你想匹配的字符或字符类的精确的数量。（译者注：该量词的一般使用形式为`x{n}`，其中x为任意字符或字符类，n为正整数，该量词的含义为“与‘只重复出现n次的x’对应的部分匹配”。）假设我们有一个字符串 "Year: 2022"，我们想从中提取年份：
 
 ```javascript
 let str = 'Year: 2022';
-let re = /\d{4}/; // Matches a four-digit number ; basically concise & better way to write \d\d\d\d
+let re = /\d{4}/; // 匹配一个四位数字；基本上是等同于\d\d\d\d的更简洁、更好的写法。
 
 let result = str.match(re);
 
-console.log(result); // Output: ["2022"]
+console.log(result); // 输出为：["2022"]
 ```
+（译者注：在上述例子中，该量词对应的模式只会与四位数字匹配。对于小于四位数字的字符串，例如203，该模式不会匹配；对于大于四位数字的字符串，例如20356，该模式会匹配最前面四位数字“2035”。[参考文档链接](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions/Quantifiers#%E7%B1%BB%E5%9E%8B)）
 
-### The Range `{n,m}`:
+### 区间量词 `{n,m}`:
 
-The range quantifier `{n,m}` matches a character or character class from n to m times, inclusively. Example:
+区间量词 `{n,m}` 匹配一个字符或字符类从 n 到 m 次，包括 n 和 m。例如：
 
 ```javascript
 let str = "The meeting is scheduled for 10:30 AM and ends at 2 PM";
-let re = /\d{2,4}/g; // Matches numbers with 2 to 4 digits
+let re = /\d{2,4}/g; // 匹配有2到4位数字的数
 
 let result = str.match(re);
-console.log(result); // Output: [ '10', '30' ]
+console.log(result); // 输出为：[ '10', '30' ]
 ```
 
-/\\d{2,4}/g matches numbers with 2 to 4 consecutive digits i.e '10', '30'
+/\\d{2,4}/g 匹配连续有2到4位数字的数，即 '10'、'30'。
+（译者注：区间量词中，n的取值为0或一个正整数，m>n且m为一个正整数。与精确数量量词`{n}`相似，例如对于形式为`a{2,4}`的量词，它不会匹配"candy"中的'a'，而对于"caaaaady"，它只会匹配其中的前四个'a'）
 
-### `{n,}` and Shorthands:
+### `{n,}` 和简写形式：
 
-The `{n,}` quantifier matches a character or character class at least n times. Additionally, there are shorthand notations for common quantifiers. Example:
+`{n,}` 量词匹配一个字符或字符类至少 n 次。此外，还有常见量词的简写表示法。例如：
 
 ```javascript
 let str = 'The price of the item is $2500';
-let re = /\d{2,}/g; // Matches numbers with 2 or more digits
+let re = /\d{2,}/g; // 匹配至少有2位数字的数。
 
 let result = str.match(re);
-console.log(result); // Output: ["2500"]
+console.log(result); // 输出为：["2500"]
 ```
 
-### Shorthands: `+`, `?`, `*`:
+### 简写形式：`+`, `?`, `*`：
 
-The quantifiers `+`, `?`, and `*` are shorthand notations for common use cases. Let's use the shorthand `+` to match one or more digits in a phone number:
+量词 `+`、`?` 和 `*` 是常见用例的简写表示法。让我们使用简写 `+` 来匹配电话号码中的一个或多个数字：
 
 ```javascript
 let phone = "+1-(103)-777-0101";
-let result = phone.match(/\d+/g); // Matches one or more digits
+let result = phone.match(/\d+/g); // 匹配一个或多个数字。
 
-console.log(result); // Output: ["1", "103", "777", "0101"]
+console.log(result); // 输出为：["1", "103", "777", "0101"]
 ```
 
-/\\d+/g matches one or more consecutive digits in the phone number.
+/\\d+/g 匹配电话号码中一个或多个连续数字。
 
-### Quantifiers: Zero or One (`?`):
+### 量词：零或一次 (`?`)：
 
-The quantifier `?` in regular expressions means zero or one occurrence of the preceding character or group. It's equivalent to {0,1}. Example:
+正则表达式中的量词 `?` 表示前一个字符或组的零次或一次出现。它等同于 {0,1}。例如：
 
 ```javascript
 let str = 'The sky is blue in color, but the ocean is blue in colour';
-let result = str.match(/colou?r/g); // Matches "color" and "colour"
+let result = str.match(/colou?r/g); // 匹配"color"和"colour"
 
-console.log(result); // Output: ["color", "colour"]
+console.log(result); // 输出为：["color", "colour"]
 ```
 
-In this example, the regular expression `/colou?r/g` matches both "color" and "colour" in the given string, allowing for zero or one occurrence of the letter "u".
+在这个例子中，正则表达式 `/colou?r/g` 匹配给定字符串中的 "color" 和 "colour"，允许字母 "u" 出现零次或一次。
 
-### Quantifiers: Zero or More (`*`):
+### 量词：零次或更多 (`*`):
 
-The quantifier `*` in regular expressions means zero or more occurrences of the preceding character or group. It's equivalent to {0,}. Example:
+在正则表达式中，量词 `*` 表示前一个字符或组的零次或更多次出现。它等同于 {0,}。例如：
 
 ```javascript
 let str = 'Computer science is fascinating, but computational engineering is equally interesting';
-let re = /comput\w*/g; // Matches "computer" and "computational"
+let re = /comput\w*/g; // 匹配"computer"和"computational"
 
 let results = str.match(re);
 
-console.log(results); // Output: ["computer", "computational"]
+console.log(results); // 输出为：["computer", "computational"]
 ```
 
-### Greedy Quantifiers:
+<h3 id="greedy-quantifiers-">贪婪量词</h3>
 
-In regular expressions, quantifiers determine how many times a particular element can occur in a match.
+在正则表达式中，量词决定了特定元素在匹配中可以出现的次数。
 
-By default, quantifiers operate in what's called a "greedy" mode. This means they try to match as much of the preceding element as possible. For instance:
+默认情况下，量词以所谓的 "贪婪" 模式运行。这意味着它们会尝试匹配尽可能多的前一个元素。例如：
 
 ```javascript
 let regexp = /".+"/g;
@@ -452,23 +450,24 @@ console.log( str.match(regexp) ); // "Boy" and his "Friends"
 ```
 
 Instead of finding two separate matches ("Boy" and "Friends"), it finds one match encompassing both ("Boy" and his "Friends").
+它找到一个包含两者（"Boy" and his "Friends"）的匹配，而不是找到两个单独的匹配（"Boy" 和 "Friends"）。
 
-#### Understanding Greedy Search
+#### 理解贪婪搜索
 
-To understand why the initial attempt failed, let's delve into how the regular expression engine conducts its search.
+为了理解为什么初始尝试失败，让我们深入了解正则表达式引擎是如何进行搜索的。
 
-1.  The engine starts from the beginning of the string and finds the opening quote.
-2.  It proceeds to match characters following the opening quote. Since the pattern is `".+"`, where `.` matches any character and `+` quantifies it to match one or more times, the engine continues matching characters until it reaches the end of the string.
-3.  The engine then backtracks to find the end quote `"` that would complete the match. It starts by assuming the maximum possible characters matched by `".+"` and gradually reduces the number of characters until it finds a valid match.
-4.  Eventually, the engine finds a match encompassing the entire substring "Boy" and his "Friends".
+1. 引擎从字符串的开始处开始，并找到开头的引号。
+2. 它继续匹配跟在开头引号后面的字符。由于模式是 `".+"`，其中 `.` 匹配任何字符，`+` 使其匹配一次或多次，引擎会继续匹配字符，直到达到字符串的末尾。
+3. 然后，引擎回溯以找到结束引号 `"` 以完成匹配。它首先假设由 `".+"` 匹配的最大可能字符数量，并逐渐减少字符数量，直到找到有效的匹配。
+4. 最终，引擎找到了一个包含整个子字符串 "Boy" 和他的 "Friends" 的匹配。
 
-This behavior of greedily matching as many characters as possible is the default mode of quantifiers in regular expressions and doesn't always yield the desired results. You can see this in the example where it results in a single match instead of multiple separate matches for quoted strings.
+这种贪婪地匹配尽可能多的字符的行为是正则表达式中量词的默认模式，不总是产生期望的结果。你可以在这个例子中看到这一点，它导致单一匹配，而不是对带引号的字符串进行多个独立的匹配。
 
-### Non Greedy Quantifiers (Lazy Mode):
+<h3 id="non-greedy-quantifiers">非贪婪量词（懒惰模式）</h3>:
 
-To address the limitations of greedy mode, regular expressions also support a lazy mode for quantifiers. In lazy mode, quantified characters are repeated the minimal number of times necessary to satisfy the pattern.
+为了解决贪婪模式的限制，正则表达式也支持量词的懒惰模式。在懒惰模式中，量词后的字符重复的次数是满足模式所必需的最小次数。
 
-We can enable the lazy mode by appending a question mark `?` after the quantifier. For example, `*?` or `+?` denotes lazy repetition.
+我们可以通过在量词后添加一个问号 ? 来启用懒惰模式。例如，*? 或 +? 表示懒惰重复。
 
 ```javascript
 let regexp = /".+?"/g;
@@ -476,176 +475,174 @@ let str = 'The "Boy" and his "Friends" were here';
 console.log( str.match(regexp) ); // "Boy" "Friends"
 ```
 
-In this example, the lazy quantifier `".+?"` ensures that each quoted string is matched separately by minimizing the number of characters matched between the opening and closing quotes.
+在这个例子中，懒惰量词 `".+?"` 确保每个带引号的字符串都被单独匹配，通过最小化开头和结束引号之间匹配的字符数量。
 
-Let's trace the search process step by step to understand how the lazy quantifier works:
+让我们逐步跟踪搜索过程，以理解懒惰量词是如何工作的：
 
--   The engine starts from the beginning of string and finds the opening quote.
--   Instead of greedily matching all characters until the end of the string, the lazy quantifier `".+?"` matches only the characters necessary to satisfy the pattern. It stops as soon as it encounters the closing quote `"`.
--   The engine repeats this process for each quoted string in the text, resulting in separate matches for "Boy" and "Friends".
+-   引擎从字符串的开始处开始，并找到开头的引号。
+-   与其贪婪地匹配直到字符串的末尾的所有字符，懒惰量词 `".+?"` 只匹配满足模式所需的字符。它一遇到结束引号 `"` 就停止。
+-   引擎为文本中的每个带引号的字符串重复此过程，导致 "Boy" 和 "Friends" 分别被单独匹配。
 
-## Sets and Ranges in Regex
+<h2 id="sets-and-ranges-in-regex">正则表达式的集合与区间</h2>
 
-In regular expressions, you use sets and ranges to match specific characters or a range of characters within a given pattern.
+在正则表达式中，你可以使用集合和区间来匹配特定的字符或在给定模式内的一系列字符。
 
-### Sets:
+<h3 id="sets-">集合:</h3>
 
-A set is defined using square brackets `[...]`. It allows you to match any character within the set. For example, `[aeiou]` matches any of the vowels 'a', 'e', 'i', 'o', or 'u'.
+一个集合使用方括号 `[...]` 来定义。它允许你匹配集合中的任何字符。例如，`[aeiou]` 匹配元音字母 'a', 'e', 'i', 'o', 或 'u' 中的任何一个。
 
-**Example:** Suppose we have a string `'The quick brown fox jumps over the lazy dog.'`. To match all vowels in this string, we can use the regular expression `/[aeiou]/g`.
+**示例：** 假设我们有一个字符串 `'The quick brown fox jumps over the lazy dog.'`。为了匹配这个字符串中的所有元音字母，我们可以使用正则表达式 `/[aeiou]/g`。
 
 ```javascript
 let str = 'The quick brown fox jumps over the lazy dog.';
 let re = /[aeiou]/g;
 let results = str.match(re);
 
-console.log(results); // Output: ['e', 'u', 'i', 'o', 'o', 'u', 'o', 'e', 'e', 'a', 'o']
+console.log(results); // 输出为：['e', 'u', 'i', 'o', 'o', 'u', 'o', 'e', 'e', 'a', 'o']
 ```
 
-This matches all occurrences of vowels in the string.
+这个正则表达式匹配字符串中所有元音字母的出现。
 
 ```javascript
 let str = 'The cat chased the rats in the backyard';;
 let re = /[cr]at/g;
 let results = str.match(re);
 
-console.log(results); // Output: ['cats', 'rats']
+console.log(results); // 输出为：['cats', 'rats']
 ```
 
-Here, the RegEx `[cr]at` matches words that start with either 'c', or 'r' and are followed by 'at'.
+在这里，正则表达式 [cr]at 匹配以 'c' 或 'r' 开头，并跟着 'at' 的单词。
 
-### Ranges:
+<h3 id="ranges-">区间:</h3>
 
-Ranges allow you to specify a range of characters within a set. For example, `[a-z]` matches any lowercase letter from 'a' to 'z', and `[0-9]` matches any digit from '0' to '9'. Example:
+区间允许你在集合内指定一系列字符。例如，`[a-z]` 匹配从 'a' 到 'z' 的任何小写字母，而 `[0-9]` 匹配从 '0' 到 '9' 的任何数字。示例：
 
 ```javascript
 let str = 'Hello World!';
 let re = /[a-z]/g;
 let results = str.match(re);
 
-console.log(results); // Output: ['e', 'l', 'l', 'o', 'o', 'r', 'l', 'd']
+console.log(results); // 输出为：['e', 'l', 'l', 'o', 'o', 'r', 'l', 'd']
 ```
 
-Here, regex `[a-z]` matches all lowercase letters in the string.
+在这里，正则表达式 `[a-z]` 匹配字符串中的所有小写字母。
 
-### Negating / Excluding Ranges:
+### 否定/排除区间：
 
-To exclude certain characters from a set, you can use the `^` symbol inside the square brackets. Example:
+要从集合中排除某些字符，你可以在方括号内使用 `^` 符号。例如：
 
 ```javascript
 let str = 'The price is $19.99';
 let re = /[^0-9]/g;
 let results = str.match(re);
 
-console.log(results); // Output: ['T', 'h', 'e', ' ', 'p', 'r', 'i', 'c', 'e', ' ', 'i', 's', ' ', '$', '.'] 
+console.log(results); // 输出为：['T', 'h', 'e', ' ', 'p', 'r', 'i', 'c', 'e', ' ', 'i', 's', ' ', '$', '.'] 
 ```
 
-Here, `[^0-9]` matches any character that is not a digit in the string
-
-Similarly `[^a-z]` will match any character that is not a lowercase letter:
+在这里，`[^0-9]` 匹配字符串中不是数字的任何字符。同样地，`[^a-z]` 将匹配任何不是小写字母的字符：
 
 ```javascript
 let str = 'The price is $19.99';
 let results2 = str.match(/[^a-z]/g);
 
-console.log(results2); // Output: ['T', ' ', ' ', ' ', '$', '1', '9', '.', '9', '9']
+console.log(results2); // 输出为：['T', ' ', ' ', ' ', '$', '1', '9', '.', '9', '9']
 ```
 
-### Predefined Character Classes:
+<h3 id="predefined-character-classes-">预定义的字符类：</h3>
 
-Some character classes have predefined shorthand notations for common ranges of characters.
+某些字符类具有预定义的简写符号，用于常见字符区间的匹配。
 
-**`\d` class**: It matches any digit character, equivalent to the range `[0-9]`. Example:
+**`\d`类**：`\d`匹配任何数字字符，等价于区间 `[0-9]`。例如：
 
 ```javascript
 let phone = '+1-(103)-777-0101';
 let re = /\d/g;
 let numbers = phone.match(re);
 let phoneNo = numbers.join('');
-console.log(phoneNo); // Output: 11037770101
+console.log(phoneNo); // 输出为：11037770101
 ```
 
-We used the `match()` and `join()` methods to format the phone number. This approach simplifies the process of formatting and cleaning up data, making it suitable for various text processing applications.
+我们使用 `match()` 和 `join()` 方法来格式化电话号码。这种方法简化了数据的处理和清理过程，使其适用于各种文本处理应用程序。
 
-Similarly, `**\s**` matches a single whitespace character, including spaces, tabs, and newline characters, and `**\w**` matches any word character (alphanumeric character or underscore), equivalent to the range `[a-zA-Z0-9_]`.
+类似地，`\s` 匹配单个空白字符，包括空格、制表符和换行符，而 `\w` 匹配任何单词字符（字母数字字符或下划线），等价于区间 `[a-zA-Z0-9_]`。
 
-Combining these classes allows for more flexible and precise pattern matching, enabling a wide range of text processing tasks. Example:
+结合这些类可以实现更灵活、更精确的模式匹配，从而实现各种文本处理任务。示例：
 
 ```javascript
 let str = 'O2 is oxygen';
 let re = /\w\d/g;
-console.log(str.match(re)); // Output: ["O2"]
+console.log(str.match(re)); // 输出为：["O2"]
 ```
 
-These predefined character classes provide convenient shortcuts for commonly used character ranges.
+这些预定义的字符类为常用的字符区间提供了便捷途径。
 
-**Inverse classes**, denoted by uppercase letters (for example, `\D`), match any character not included in the corresponding lowercase class. This provides a convenient way to match characters outside specific sets, such as non-digit characters, non-whitespace characters, or non-word characters. Example:
+**反向类**，用大写字母表示（例如，`\D`），匹配任何不包含在相应小写类中的字符。这提供了一种方便的方式来匹配特定集合之外的字符，例如非数字字符、非空白字符或非单词字符。示例：
 
 ```javascript
 let phone = '+1-(103)-777-0101';
 let re = /\D/g;
-console.log(phone.replace(re,'')); // Output: 11037770101
+console.log(phone.replace(re,'')); // 输出为：11037770101
 ```
 
-## Special Characters and Escaping in Regex
+<h2 id="special-characters-and-escaping-in-regex">正则表达式中的特殊字符与转义</h2>
 
-### Metacharacters:
+### 元字符：
 
-Metacharacters are characters that have special meanings in Regular Expressions and are used to construct patterns for matching text.
+元字符是在正则表达式中具有特殊含义的字符，用于构建用于匹配文本的模式。
 
-Anchors (`^` and `$`), Alternation(`|`), quantifiers (`+`, `?`, `{}`), and predefined character classes ( `\d`, `\w`, `\s`) are all considered metacharacters, each serving distinct purposes in pattern definition. We also have a few more, which we'll cover now.
+锚点 (`^` 和 `$`)、交替 (`|`)、量词 (`+`, `?`, `{}`) 和预定义的字符类 (`\d`, `\w`, `\s`) 都被认为是元字符，每个都在模式定义中有不同的用途。我们还有一些其他的元字符，现在我们来详细介绍它们。
 
-**Dot (`.`)** is a metacharacter with a special meaning. It's used to match any single character except newline characters (`\n`). It serves as a wildcard, allowing for flexible pattern matching when the exact character is unknown or irrelevant.
+**点号 (`.`)** 是一个具有特殊含义的元字符。它用于匹配除换行符 (`\n`) 外的任何单个字符。它起到通配符的作用，允许在确切字符未知或无关紧要时进行灵活的模式匹配。
 
-If you need the dot to match newline characters as well, you can use the `/s` flag in JavaScript, which enables the "single line" mode, making the dot match any character including newline characters. Example:
+如果你需要点号匹配换行符，你可以在 JavaScript 中使用 `/s` 标志，该标志启用了 "单行" 模式，使点号匹配任何字符，包括换行符。例如：
 
 ```javascript
 const regex = /a.b/; 
 
 console.log(regex.test('acb')); // true
 console.log(regex.test('aXb')); // true
-console.log(regex.test('a\nb')); // false (newline character not matched)
-console.log(regex.test('a\nb', 's')); // true (with 's' flag, newline character matched)
-console.log(regex.test('ab')); // false (missing character between 'a' and 'b')
+console.log(regex.test('a\nb')); // false（未匹配到换行符）
+console.log(regex.test('a\nb', 's')); // true（使用 's' 标志，匹配到换行符）
+console.log(regex.test('ab')); // false（'a' 和 'b' 之间缺少字符）
 ```
 
-`/a.b/` matches any string that starts with 'a', followed by any single character (except newline), and ends with 'b'
+`/a.b/` 匹配以 'a' 开始，后跟任何单个字符（除换行符外），并以 'b' 结束的任何字符串。
 
-The dot (`.`) can be combined with other regex elements to form more complex patterns. For example, `/.at/` matches any three-character sequence ending with 'at', such as 'cat', 'bat', or 'hat'.
+点号 (`.`) 可以与其他正则表达式元素结合，形成更复杂的模式。例如，`/.at/` 匹配任何以 'at' 结尾的三个字符序列，如 'cat'、'bat' 或 'hat'。
 
-### Escape Special Characters:
+<h3 id="escape-special-characters-">转义特殊字符:</h3>
 
-Escaping special characters is essential when you want to search for or match these characters in input strings without invoking their special regex meanings.
+在正则表达式模式中，当您想要搜索或匹配这些字符时，转义特殊字符是至关重要的，而不会触发它们的特殊正则表达式含义。
 
-To match a special character literally in a regex pattern, you need to escape it by preceding it with a backslash (). This tells the regex engine to treat the special character as a regular character. Example:
+要在正则表达式模式中字面匹配一个特殊字符，您需要通过在其前面加上反斜杠（\）来转义它。这告诉正则表达式引擎将特殊字符视为普通字符。例如：
 
 ```javascript
 let str = 'This ^ symbol is called Caret ';
 let re = /[\^]/g;
 let results = str.match(re);
 
-console.log(results); // Output: ['^']
+console.log(results); // 输出为：['^']
 ```
 
-Without \\, ^ will be interpreted as a literal caret symbol.
+如果没有`\`，`^` 将被解释为字面插入符号。
 
-Fun fact: the `/` we use to escape metacharacters is itself a metacharacter and can be escaped with another backslash as `//`.
+有趣的事实是，我们用来转义元字符的 `/` 本身也是一个元字符，可以用另一个反斜杠来转义成 `//`。
 
-## Groupings in RegEx
+<h2 id="groupings-in-regex">正则表达式中的分组</h2>
 
-### Capturing Groups:
+<h3 id="capturing-groups-">捕获组:</h3>
 
-In JavaScript regular expressions, capturing groups are used to extract specific parts of a matched string. Imagine you have a path like "resource/id", for instance, "posts/123". To match this path, you can use a regular expression like `/\w+\/\d+/`.
+在JavaScript正则表达式中，捕获组用于提取匹配字符串的特定部分。试想你有一个类似于"resource/id"的路径，例如 "posts/123"。为了匹配这个路径，你可以使用正则表达式 `/\w+\/\d+/`。
 
--   `\w+` matches one or more word characters.
--   `\/` matches the forward slash `/`.
--   `\d+` matches one or more digits.
+- `\w+` 匹配一个或多个单词字符。
+- `\/` 匹配斜杠 `/`。
+- `\d+` 匹配一个或多个数字。
 
-Let's say you have a path like "posts/123" and you want to capture the `id` part (123). We can use capturing groups for this.
+假设你有一个路径像 "posts/123"，你想捕获 `id` 部分（123）。我们可以使用捕获组来实现这一点。
 
-To create a capturing group, you enclose the part of the regex pattern you want to capture in parentheses. For example, `(\d+)` captures one or more digits.
+要创建一个捕获组，你将想要捕获的正则表达式模式的部分放在括号中。例如，`(\d+)` 捕获一个或多个数字。
 
-Here's how it works:
+这是它的运行步骤：
 
 ```javascript
 const path = 'posts/123';
@@ -655,15 +652,15 @@ const match = path.match(pattern);
 console.log(match);
 ```
 
-Output:
+输出为：
 
 ```bash
 [ 'posts/123', '123', index: 0, input: 'posts/123', groups: undefined ]
 ```
 
-Here, `'123'` is captured by the capturing group `(\d+)`.
+在这里，`'123'` 被捕获组 `(\d+)` 捕获。
 
-**Using Multiple Capturing Groups**: You can have multiple capturing groups in a regex pattern. For example, to capture both the resource (like "posts") and the id (like "123") from the path "posts/123", you can use `/(\w+)\/(\d+)/`.
+**使用多个捕获组**：你可以在正则表达式模式中使用多个捕获组。例如，为了从路径 "posts/123" 中同时捕获资源（如 "posts"）和 id（如 "123"），你可以使用 `/(\w+)\/(\d+)/`。
 
 ```javascript
 const path = 'posts/123';
@@ -673,23 +670,23 @@ const match = path.match(pattern);
 console.log(match);
 ```
 
-Output:
+输出为：
 
 ```bash
 ['posts/123', 'posts', '123', index: 0, input: 'posts/123', groups: undefined]
 ```
 
-Here, `'posts'` and `'`123`'` are captured by the two capturing groups `(\w+)` and `(\d+)` respectively.
+在这里，`'posts'` 和 `'123'` 分别由两个捕获组 `(\w+)` 和 `(\d+)` 捕获。
 
-**Named Capturing Groups** allow you to assign names to capturing groups, which makes it easier to reference them later in your code.
+**命名捕获组** 允许你为捕获组指定名称，这样在后续的代码中引用它们会更容易。
 
-The syntax for named capturing groups is `(?<name>rule)`, where:
+命名捕获组的语法是 `(?<name>rule)`，其中：
 
--   `()` indicates a capturing group.
--   `?<name>` specifies the name of the capturing group.
--   `rule` is a rule in the pattern.
+- `()` 表示一个捕获组。
+- `?<name>` 指定捕获组的名称。
+- `rule` 是模式中的一个规则。
 
-For example, suppose we want to capture the resource (like "posts") and the id (like "123") from the path "posts/123" using named capturing groups.
+例如，假设我们想要使用命名捕获组从路径 "posts/123" 中捕获资源（如 "posts"）和 id（如 "123"）。
 
 ```javascript
 const path = 'posts/123';
@@ -699,7 +696,7 @@ const match = path.match(pattern);
 console.log(match);
 ```
 
-Output:
+输出为：
 
 ```javascript
 [
@@ -712,11 +709,11 @@ Output:
 ]
 ```
 
-Here, `resource` and `id` are the names assigned to the capturing groups. We can access them using `match.groups`.
+在这里，`resource` 和 `id` 是分配给捕获组的名称。我们可以使用 `match.groups` 来访问它们。
 
-**Another Example**: Let's say we have a path like "posts/2022/02/18" and we want to capture the resource (like "posts"), year (like "2022"), month (like "02"), and day (like "18") using named capturing groups.
+**另一个例子**: 假设我们有一个类似于"posts/2022/02/18"的路径，我们想要使用命名捕获组来捕获资源（如 "posts"）、年份（如 "2022"）、月份（如 "02"）和日期（如 "18"）。
 
-The regex pattern for this would be:
+该例子对应的正则表达式的模式为：
 
 ```javascript
 const path = 'posts/2024/02/22';
@@ -727,21 +724,21 @@ const match = path.match(pattern);
 console.log(match.groups);
 ```
 
-Output:
+输出为：
 
 ```bash
 {resource: 'posts', year: '2024', month: '02', day: '22'}
 ```
 
-Here, each part of the path is captured using named capturing groups, making it easy to access them by their respective names.
+在这里，路径的每个部分都使用命名捕获组进行捕获，这样就可以轻松地通过它们各自的名称访问它们。
 
-### Non-capturing groups:
+### 非捕获组：
 
-In regular expressions, non-capturing groups are used to group parts of a pattern together for applying quantifiers or alternation, without capturing the matched substring.
+在正则表达式中，非捕获组用于将模式的部分组合在一起，以便应用量词或交替，而不捕获匹配的子字符串。
 
-To create a non-capturing group, you add `?:` at the beginning of the parentheses. So, `/(?:\d)+/` is the non-capturing version of the previous example. The `?:` tells the regex engine not to capture the matched substring.
+要创建一个非捕获组，你需要在括号的开始处添加 `?:`。因此，`/(?:\d)+/` 是前一个示例的非捕获版本。`?:` 告诉正则表达式引擎不要捕获匹配的子字符串。
 
-Let's see the difference between capturing and non-capturing groups with an example:
+让我们通过一个例子来看捕获组和非捕获组之间的区别：
 
 ```javascript
 // capturing group
@@ -759,65 +756,65 @@ const matchWithoutCapture = regexWithoutCapture.exec('02/26/2024');
 console.log(matchWithoutCapture); // ["02/26/2024"]
 ```
 
-In summary, non-capturing groups `(?:pattern)` behave like regular capturing groups `()` in terms of matching patterns, but they don't store the matched text in memory for later retrieval. This makes them useful when you don't need to extract specific parts of the matched text.
+总结来说，非捕获组 `(?:pattern)` 在匹配模式方面的行为与常规捕获组 `()` 相同，但它们不会将匹配的文本存储在内存中以供以后检索。这使得它们在你不需要提取匹配文本的特定部分时非常有用。
 
-### Backreferences:
+### 后向引用:
 
-Backreferences enable you to refer to previously captured groups within a regular expression. Think of them as variables that store matched patterns.
+后向引用允许你在正则表达式中引用先前捕获的组，将它们视为存储匹配模式的变量。
 
-In JavaScript, the syntax for a backreference is `\N`, where `N` is an integer representing the capturing group number.
+在JavaScript中，后向引用的语法是 `\N`，其中 `N` 是表示捕获组编号的整数。
 
-For instance, consider a string with a duplicate word "Lion" and we want to remove the duplicate word to get `'Lion is the King'`:
+例如，考虑一个包含重复单词 "Lion" 的字符串，我们希望删除重复的单词以得到 `'Lion is the King'`：
 
 ```javascript
 const s = 'Lion Lion is the King';
 ```
 
--   First, we match a word using `\w+\s+`.
--   Then, we create a capturing group to capture the word using `(\w+)\s+`.
--   Next, we use a backreference (`\1`) to reference the first capturing group.
--   Finally, we replace the entire match with the first capturing group using `String.replace()`.
+- 首先，我们使用 `\w+\s+` 匹配一个单词。
+- 然后，我们创建一个捕获组来捕获这个单词，使用 `(\w+)\s+`。
+- 接下来，我们使用反向引用 (`\1`) 来引用第一个捕获组。
+- 最后，我们使用 `String.replace()` 将整个匹配替换为第一个捕获组。
 
 ```javascript
 const pattern = /(\w+)\s+\1/;
 const result = s.replace(pattern, '$1');
-console.log(result); // Output: 'Lion is the King'
+console.log(result); // 输出为：'Lion is the King'
 ```
 
-### Regex Alternation:
+<h3 id="regex-alternation">正则表达式选择符号:</h3>
 
-Regex alternation is a feature that allows you to match different patterns within a single regular expression. It works similarly to the logical OR operator. In regex, you use the pipe symbol `|` to denote alternation, where you can match either A or B.
+正则表达式的选择符号是一种允许你在单个正则表达式中匹配不同的模式的功能。它的工作方式类似于逻辑运算符`OR`。正则表达式使用竖线符号 `|` 表示选择符号，你可以使用它来匹配 A 或 B。
 
 ```
-A | B // This means you can match either pattern A or pattern B.
+A | B // 这意味着你可以匹配模式A或模式B
 ```
 
-Now, let's explore some practical applications of regex alternation:
+现在，让我们探讨一些正则表达式选择符号的实际应用：
 
-**Matching Time String in the hh:mm Format**: Suppose we want to match time strings in the format hh:mm, where hh represents hours and mm represents minutes. A basic regular expression to match this format would be `/\d{2}:\d{2}/`.
+**匹配格式为hh:mm的时间字符串**：假设我们想要匹配格式为 hh:mm 的时间字符串，其中 hh 表示小时，mm 表示分钟。一个基本的正则表达式来匹配这种格式就是 `/\d{2}:\d{2}/`。
 
-However, this basic pattern matches invalid times like "99:99". To ensure we match valid times (hours ranging from 00 to 23 and minutes ranging from 00 to 59), we need to refine our regex using alternation.
+然而，这个基本模式匹配了无效的时间，比如 "99:99"。为了确保我们匹配有效的时间（小时区间从00到23，分钟区间从00到59），我们需要使用选择符号来完善我们的正则表达式。
 
-To match valid hours (00 to 23), we can use the following pattern:
+为了匹配有效的小时（00到23），我们可以使用以下模式：
 
--   `[01]\d` matches numbers from 00 to 19.
--   `2[0-3]` matches numbers from 20 to 23.
+- `[01]\d` 匹配00到19的数字。
+- `2[0-3]` 匹配20到23的数字。
 
-So, the pattern for hours becomes `[01]\d|2[0-3]`.
+因此，小时的模式变为 `[01]\d|2[0-3]`。
 
-To match valid minutes (00 to 59), we can use the pattern `[0-5]\d`.
+我们可以使用模式 `[0-5]\d` 来匹配有效的分钟数(00 to 59)。
 
-Now, we can combine the hour and minute patterns using alternation to get the final regex pattern:
+现在，我们可以使用选择符号将小时和分钟模式结合起来，得到最终的正则表达式模式：
 
 `/([01]\d|2[0-3]):[0-5]\d/g`
 
-In this pattern:
+在这个模式中:
 
--   `([01]\d|2[0-3])` matches valid hours.
--   `:` matches the colon.
--   `[0-5]\d` matches valid minutes.
+-   `([01]\d|2[0-3])` 匹配有效的小时数。
+-   `:` 匹配冒号。
+-   `[0-5]\d` 匹配有效的分钟数。
 
-This regex pattern ensures that we only match valid time strings in the `hh:mm` format. Example:
+该正则表达式模式确保我们只匹配 `hh:mm` 格式的有效时间字符串。例如：
 
 ```javascript
 const timeString = '07:23 33:71 21:17 25:81';
@@ -827,34 +824,34 @@ const matches = timeString.match(pattern);
 console.log(matches);
 ```
 
-**Expected Output**:
+**期望输出**:
 
 ```
 ['07:23', '21:17']
 ```
 
-## Lookahead and Lookbehind in Regex
+<h2 id="lookahead-and-lookbehind-in-regex">正则表达式中的前瞻断言和后顾断言</h2>
 
-### Lookahead:
+<h3 id="lookahead-">前瞻断言：</h3>
 
-Lookahead in regular expressions allows matching a pattern (X) only if it's followed by another specific pattern (Y). The syntax is `X(?=Y)`, where:
+正则表达式中的前瞻允许仅当某个模式（X）后面紧跟着另一个特定模式（Y）时进行匹配。语法是 `X(?=Y)`，其中：
 
--   **X** is the pattern you want to match.
--   **(?=Y)** is the lookahead assertion indicating that `X` should be followed by `Y`.
+- **X** 是你要匹配的模式。
+- **(?=Y)** 是前瞻断言，指示 `X` 应该紧跟着 `Y`。
 
-**Example**: Let's say we have a string describing various distances, and we want to identify numbers followed by the units "miles" but not "kilometers". We can use lookahead in a regex pattern:
+**例如：**: 假设我们有一个描述各种距离的字符串，我们想要识别字符串中包含的单位为 "miles" 而不是 "kilometers" 的数字。我们可以在正则表达式模式中使用前瞻断言：
 
 ```javascript
 const dist = "He ran 5 miles, but not 10 kilometers.";
 
 const regex = /\d+(?=\s*miles)/g;
 
-console.log(dist.match(regex)); // Output: ["5"]
+console.log(dist.match(regex)); // 输出为：["5"]
 ```
 
-**Multiple Lookaheads**: It's possible to have multiple lookaheads in a regular expression using the syntax `X(?=Y)(?=Z)`. This allows us to impose multiple conditions for matching.
+**多重前瞻断言**: 在正则表达式中可以使用语法 `X(?=Y)(?=Z)` 来使用多个前瞻断言，这能够让我们对匹配施加多个条件。
 
-**Example:** Let's say we want to match strings that contain both "foo" and "bar", but in any order:
+**例如:** 假设我们想要匹配同时包含 "foo" 和 "bar" 的字符串，但它们可以以任意的顺序排列：
 
 ```javascript
 const regex = /(?=.*foo)(?=.*bar)/;
@@ -865,61 +862,61 @@ console.log(regex.test("foo"));    // false
 console.log(regex.test("bar"));    // false
 ```
 
-### Negative Lookaheads:
+<h3 id="negative-lookaheads-">否定前瞻断言：</h3>
 
-To negate a lookahead, use a negative lookahead with the syntax `(?!Y)`, where the regex engine matches X only if it is not followed by Y.
+为了否定一个前瞻断言，可以使用否定前瞻断言，其语法为 `(?!Y)`。在这种情况下，正则表达式引擎只有在 X 后面不跟着 Y 的情况下才会匹配 X。
 
-**Example**: Suppose we want to match numbers but not if they are followed by "miles":
+**例如**： 假设我们想要匹配数字，但不希望它们后面跟着 "miles"：
 
 ```javascript
 const text = "He ran 5 miles, but not 10 kilometers.";
 
 const regex = /\d+(?!\s*miles)/g;
 
-console.log(text.match(regex)); // Output: ["10"]
+console.log(text.match(regex)); // 输出为：["10"]
 ```
 
-`(?!\s*miles)` is the negative lookahead that ensures the number is not followed by zero or more whitespaces and the word "miles"
+`(?!\s*miles)` 是一个否定前瞻断言，它确保数字后面不是零个或多个空格加上单词 "miles"。
 
-### Lookbehind:
+<h3 id="lookbehind-">后顾断言：</h3>
 
-Lookbehinds provide a way to match patterns based on what precedes them, essentially matching an element if there is another specific element before it.
+后顾断言提供了一种根据其前面的内容来匹配模式的方式，如果某个特定元素在其前面，则匹配该元素。
 
-**Example**: Suppose we have a string containing prices, and we want to match numbers preceded by the currency symbol "$" but not preceded by "€". We can use a lookbehind in a regex pattern
+**例如**：假设我们有一个包含价格的字符串，并且我们想要匹配在货币符号 "$" 前面的数字，但不匹配在 "€" 前面的数字。我们可以在正则表达式模式中使用后顾断言。
 
 ```javascript
 const priceString = "The price is $100, but €200.";
 
 const regex = /(?<=\$)\d+/g;
 
-console.log(priceString.match(regex)); // Output: ["100"]
+console.log(priceString.match(regex)); // 输出为：["100"]
 ```
 
-**Explaination**: `(?<=\$)` matches an element if there is a literal string "$" before it. The backslash `\` is used to escape the special character "$", treating it as a literal character.
+**说明**：如果在当前位置之前有一个文字字符串 "$"，`(?<=\$)` 就会匹配该元素。反斜杠 `\` 用于转义特殊字符 "$"，将其视为字面字符。
 
-### Negative Lookbehind:
+<h3 id="negative-lookbehind-">否定后顾断言：</h3
 
-Negative lookbehinds allow you to match a pattern only if it is not preceded by a specific pattern. This is useful for excluding certain patterns from matches based on what precedes them.
+否定后顾断言允许你仅在模式之前不是特定模式的情况下匹配该模式。这对于根据前面的内容排除某些模式的匹配非常有用。
 
-Example: Suppose we have a string containing various prices in different currencies, and we want to match the numbers not preceded by the currency symbol "$". We can use a negative lookbehind in a regex pattern:
+示例：假设我们有一个包含不同货币的各种价格的字符串，并且我们想要匹配不是以货币符号 "$" 开头的数字。我们可以在正则表达式模式中使用否定后顾断言：
 
 ```javascript
 const priceString = "The price is $50, but not €100.";
 
 const regex = /(?<!\$)\b\d+\b/g;
 
-console.log(priceString.match(regex)); // Output: ["100"]
+console.log(priceString.match(regex)); // 输出为： ["100"]
 ```
 
-**Explanation:** `(?<!\$)` is the negative lookbehind syntax, which matches the following pattern only if it is not preceded by the literal string "$".
+**说明**： `(?<!\$)` 是否定后顾断言语法，它只在当前位置之前不是字面字符串"$"时匹配后面的模式。
 
-## Practical Examples and Use Cases of Regex
+<h2 id="practical-examples-and-use-cases-of-regexpractical-examples-and-use-cases-of-regex">正则表达式的实际应用示例</h2>
 
-Now, Let's explore some practical examples of using regular expressions in JavaScript applications to solve common problems and perform text manipulation tasks.
+现在，让我们探索一些在JavaScript应用程序中使用正则表达式来解决常见问题和执行文本操作任务的实际示例。
 
-### Password Strength Checking:
+<h3 id="password-strength-checking-">密码强度检验函数:</h3>
 
-You can use regular expressions to enforce password strength requirements, such as minimum length and the presence of special characters.
+你可以使用正则表达式来强制执行密码强度要求，例如最小长度和特殊字符的存在。
 
 ```javascript
 function checkPasswordStrength(password) {
@@ -927,23 +924,23 @@ function checkPasswordStrength(password) {
     return pattern.test(password);
 }
 
-console.log(checkPasswordStrength("Passw0rd!"));    // Output: true
-console.log(checkPasswordStrength("weakpassword")); // Output: false
+console.log(checkPasswordStrength("Passw0rd!"));    // 输出为：true
+console.log(checkPasswordStrength("weakpassword")); // 输出为：false
 ```
 
-Here, the regex ensures that the password contains at least 1 digit, 1 lowercase letter, 1 uppercase letter, 1 special character, and is at least 8 characters long.
+这里的正则表达式确保密码包含至少1个数字、1个小写字母、1个大写字母、1个特殊字符，并且密码长度至少为8个字符。
 
-Here's what this pattern does:
+这个模式进行了如下操作:
 
--   `(?=.*\d)`: Requires at least one digit.
--   `(?=.*[a-z])`: Requires at least one lowercase letter.
--   `(?=.*[A-Z])`: Requires at least one uppercase letter.
--   `(?=.*[!@#$%^&*])`: Requires at least one special character.
--   `.{8,}`: Requires a minimum length of 8 characters.
+-   `(?=.*\d)`: 要求至少一个数字。
+-   `(?=.*[a-z])`: 要求至少一个小写字母。
+-   `(?=.*[A-Z])`: 要求至少一个大写字母。
+-   `(?=.*[!@#$%^&*])`: 要求至少一个特殊符号。
+-   `.{8,}`: 要求密码长度至少为8个字符。
 
-### Email Validation Function:
+<h3 id="email-validation-function-">电子邮箱地址校验函数:</h3>
 
-Email validation is crucial for ensuring data integrity and security in web applications. With regex methods, we can easily implement robust email validation mechanisms.
+电子邮件验证对于确保网络应用程序中的数据完整性和安全性至关重要。通过使用正则表达式，我们可以轻松实现强大的电子邮件验证机制。
 
 ```javascript
 function validateEmail(email) {
@@ -955,21 +952,21 @@ console.log(validateEmail("example@email.com")); // true
 console.log(validateEmail("invalid-email"));      // false
 ```
 
-Here's what this pattern does:
+这个模式进行了如下操作:
 
--   `^`: Asserts the start of the string.
--   `[^\s@]+`: Matches one or more characters that are not whitespace or '@'.
--   `@`: Matches the '@' symbol.
--   `[^\s@]+`: Matches one or more characters that are not whitespace or '@'.
--   `\.`: Matches the '.' symbol (escaped because '.' has a special meaning in RegEx).
--   `[^\s@]+`: Matches one or more characters that are not whitespace or '@'.
--   `$`: Asserts the end of the string.
+-   `^`: 断言字符串的起始位置。
+-   `[^\s@]+`: 匹配一个或多个非空白字符或'@'字符。
+-   `@`: 匹配'@'符号。
+-   `[^\s@]+`: 匹配一个或多个非空白字符或'@'字符。
+-   `\.`: 匹配'.'符号 (因为'.'在正则表达式中具有特殊意义，所以需要转义。)。
+-   `[^\s@]+`: 匹配一个或多个非空白字符或'@'字符。
+-   `$`: 断言字符串的结束位置。
 
-### Phone Number Formatting Function:
+<h3 id="phone-number-formatting-function-">电话号码格式化函数:</h3>
 
-Phone number formatting enhances user experience and readability in applications that involve phone number input and display.  
+在涉及电话号码输入和显示的应用程序中，电话号码格式化增强了用户体验和可读性。
 
-By defining a regex pattern that matches phone number components, we can easily format phone numbers into a desired pattern using the `replace()` method.
+通过定义一个匹配电话号码组件的regex模式，我们可以使用 `replace()` 方法轻松地将电话号码格式化为所需的模式。
 
 ```javascript
 function formatPhoneNumber(phoneNumber) {
@@ -981,51 +978,51 @@ const formattedNumber = formatPhoneNumber("9876543210");
 console.log(formattedNumber); // (987) 654-3210
 ```
 
-This function takes a phone number string as input and returns it formatted in the standard `(XXX) XXX-XXXX` format.
+这个函数接受一个电话号码字符串作为输入，并以标准的 `(XXX) XXX-XXXX` 格式返回。
 
-In the `replace()` method, `$1`, `$2`, and `$3` represent the captured groups in the RegEx pattern, corresponding to the three sets of digits in the phone number.
+在 `replace()` 方法中, `$1`, `$2`, 和 `$3` 表示以RegEx模式捕获的组，对应于电话号码中的三组数字。
 
-## Tips and Best Practices for Using Regular Expressions
+<h2 id="tips-and-best-practices-for-using-regular-expressions">使用正则表达式的技巧和最佳实践方式</h2>
 
-#### 1\. Understand Regular Expression Syntax:
+#### 1\. 理解正则表达式语法:
 
-Understand the syntax and metacharacters of regular expressions for effective usage.
+了解正则表达式的语法和元字符，以便有效使用正则表达式。
 
-#### 2\. Test Regular Expressions:
+#### 2\. 测试正则表达式:
 
-Regular expressions can sometimes behave unexpectedly due to complex patterns or special characters. Always test your regular expressions with different input strings to ensure they behave as expected in various scenarios.
+由于复杂的模式或特殊字符，正则表达式有时会表现出意外的行为。经常使用不同的输入字符串测试你的正则表达式，以确保它们在不同的场景中表现得像预期的那样。
 
-#### 3\. Optimize Performance:
+#### 3\. 优化性能:
 
-Consider optimizing your regular expressions for performance by simplifying patterns or using more efficient alternatives where possible.
+考虑通过简化模式或尽可能使用更有效的替代方案来优化正则表达式的性能。
 
-#### 4\. Use Built-in Methods:
+#### 4\. 使用内置方法:
 
-JavaScript provides built-in methods like `String.prototype.match()`, `String.prototype.replace()`, and `String.prototype.split()` for common string manipulation tasks. Evaluate whether these methods can accomplish your task without the need for regular expressions.
+JavaScript提供了例如 `String.prototype.match()`, `String.prototype.replace()`, 和 `String.prototype.split()`等用于常见的字符串操作任务的内置方法。评估这些方法是否可以在不需要正则表达式的情况下完成任务。
 
-#### 5\. Comment Your Regular Expressions:
+#### 5\. 为你的正则表达式添加注释:
 
-Add comments within your regex using `(?#comment)` syntax to explain explain parts of complex patterns. Example:
+使用 `(?#comment)` 语法为你的正则表达式添加注释来解释部分复杂的模式。 例如:
 
 ```javascript
 const regex = /(\d{3})-(\d{3})-(\d{4})\s(?# Match a phone number in the format XXX-XXX-XXXX)/;
 ```
 
-#### 6\. Break Down Complex Patterns:
+#### 6\. 分解复杂模式:
 
-If your regular expression becomes too complex to understand or maintain, consider breaking it down into smaller, more manageable parts. Use variables to store individual components of the pattern and combine them as needed.
+如果你的正则表达式太过复杂而难以理解或维护，请考虑将其分解为更小、更易于管理的部分。使用变量来存储正则表达式模式的各个组件，并根据需要组合它们。
 
-#### 7\. Use Online Resources and Keep on Practicing:
+#### 7\. 利用在线资源并坚持练习:
 
-There are several online resources and tools available for testing and learning regular expressions. Websites like [Regex101][37] and [RegExr][38] provide interactive platforms to test and debug regular expressions. Also leverage online tutorials and documentation to learn regex concepts.
+有许多在线资源和工具可以用来测试和学习正则表达式。 Websites like [Regex101][37] and [RegExr][38] provide interactive platforms to test and debug regular expressions. Also leverage online tutorials and documentation to learn regex concepts.
 
 The MDN Web Docs have a helpful guide to [Regular Expressions here][39]. And here's a quick start guide to regular expressions in JavaScript: [RegExp Tutorial][40].
 
-## Conclusion
+<h2 id="conclusion">总结</h2>
 
-Regular expressions are versatile tools for pattern matching and manipulation in JavaScript.
+正则表达式是JavaScript中用于模式匹配和操作的通用工具。
 
-By understanding their methods, advanced features, and usage with flags, leveraging online resources and debugging tools, you can effectively learn and apply them in various scenarios, from simple pattern matching to complex text processing tasks.
+通过理解正则表达式的方法、高级特性和对标志的使用，利用在线资源和调试工具，你可以有效地学习它们，并将它们应用于各种场景，从简单的模式匹配到复杂的文本处理任务。
 
 ---
 
@@ -1033,13 +1030,13 @@ By understanding their methods, advanced features, and usage with flags, leverag
 
 [Samyak Jain][41]
 
-An insatiable learner with a web developer's toolkit. I'm constantly diving into new technologies, fascinated by the ever-evolving world of science and AI.
+带上web开发者的工具箱，我是一名学无止境的求知者。我不断钻研新技术，着迷于不断发展的科学和人工智能世界。
 
 ---
 
-If you read this far, thank the author to show them you care. Say Thanks
+如果你读到这里，说声“谢谢”向作者表示你的关心和感谢。说声谢谢
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started][42]
+免费学习编程。freeCodeCamp的开源课程已经帮助超过4万人找到了开发人员的工作。 [开始学习][42]
 
 [1]: /news/tag/regex/
 [2]: /news/author/samyak/
@@ -1052,7 +1049,7 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [9]: #word-boundaries-b-
 [10]: #quantifiers-in-regex
 [11]: #greedy-quantifiers-
-[12]: #Non Greedy Quantifiers (Lazy Mode)
+[12]: #non-greedy-quantifiers
 [13]: #sets-and-ranges-in-regex
 [14]: #sets-
 [15]: #ranges-
@@ -1065,7 +1062,7 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [22]: #capturing-groups-
 [23]: #non-capturing-groups-
 [24]: #backreferences-
-[25]: #regex-alternation-
+[25]: #regex-alternation
 [26]: #lookahead-and-lookbehind-in-regex
 [27]: #lookahead-
 [28]: #negative-lookaheads-

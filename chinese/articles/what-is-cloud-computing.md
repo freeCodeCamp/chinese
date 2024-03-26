@@ -4,11 +4,7 @@
 > -  校对者: 
 
 
-January 3, 2024 / [#Cloud Computing][1]
-
-<!-- more -->
-
-# What is Cloud Computing? Introduction to the Cloud for Beginners
+# 云计算是什么？针对初学者的云概念介绍
 
 
   ![What is Cloud Computing? Introduction to the Cloud for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2022/05/cloud-sky.jpeg)

@@ -1,41 +1,31 @@
 > * 原文地址：[9 Habits I Wish I Had as a Junior Developer 帮助初级开发者提升自己的 9 个好习惯](https://www.freecodecamp.org/news/good-habits-for-junior-developers/)
 > * 原文作者：Tom Hombergs
-> * 译者：帮助初级开发者提升自己的 9 个好习惯
+> * 译者：Tsukistar
 > * 校对者：
 
 ![9 Habits I Wish I Had as a Junior Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/my-life-journal-WI30grRfBnE-unsplash.jpg)
 
-Have you ever sat down and taken an inventory of your habits? Habits are what make us who we are.
+你曾经有过坐下来一一列举过你的习惯的时候吗？习惯造就了我们。好的习惯帮助你变成你想要的样子，而不好的习惯会慢慢地将你变成你最不想成为的样子。
 
-Good habits help you to become who you want to be. Bad habits will slowly turn you into someone you don't want to be.
+在做了12年多的软件开发者之后，我养成了一些令我引以为傲的习惯，也养成了一些我宁愿改掉的习惯。大多数时候，我并没有意识到我的习惯，但回顾过去，我很清楚哪些习惯帮助我成长，哪些习惯阻碍了我。这促使我盘点并写下一些开发者的好习惯，希望能激励你也这么做。
 
-After more than 12 years as a software developer, I've grown some habits that I'm proud of and some that I'd rather get rid of.
+如果你是以一名开发者的身份开始你的职业生涯，看看下面列出的习惯，问问自己这些习惯是否能帮助你成为你想成为的人。意识到你的习惯并积极培养它们，然后成为一名伟大的软件开发者。
 
-Most of the time, I wasn't aware of my habits, but looking back, it's pretty clear to me which habits were helping me grow and which were hindering me.
+# 自主地去做以前没有做过的事情
 
-This drove me to take an inventory and write about good developer habits to maybe inspire you to do the same.
+在你职业生涯的开始，你知道的事情不多。当你加入一个新项目时，你会觉得自己像是一个“冒牌开发人员”，因为即使你连他们在每场会议上抛出的缩略词、技术和框架的一半都不理解，他们也在向你支付报酬。而另一半你只知道一点点，因为你在谷歌上搜索过。
 
-If you're starting as a developer, have a look at the habits outlined below and ask yourself if they would help you become who you want to be. Be conscious of your habits and actively nurture them to become a great software developer.
+把“在你职业生涯的开始”换成“在任何新项目的开始”，你就对软件开发职业生涯有了一个很好的总结。
 
-# Volunteer for Things You Don't Know
+每个新项目，我们都需要重新开始。每一次都有新的人要认识，新的需求要理解，新的框架要学习。这就是为什么学习新东西是很重要的事，如果你只是继续做你知道的事情，你永远不会有信心开始一个新项目，对未知的恐惧总是存在的。
 
-At the start of your career, you don't know a lot. You come into that new project and feel like an impostor because they're paying you money even though you don't understand half of the acronyms, technologies, and frameworks they're throwing around in each meeting.
+**如果你养成了自愿做你一无所知的任务的习惯，你就会不断地学到新东西。**
 
-And you only faintly know the other half because you googled them.
+如果一个构建需要修复，而你从未使用过对应的构建系统，那就开始吧!你将学习到构建管理相关的知识。
 
-Replace "At the start of your career" with "At the start of any new project", and you have a pretty good summary of a software development career.
+如果JavaScript前端中有一个bug，而你到目前为止只做过Java后端相关的工作，那就修复它吧!你将学习新的Javascript的语言特性。
 
-Every new project, we start over. There are new people to meet, new requirements to understand, and new frameworks to learn. Every single time.
-
-This is why it's important to learn new stuff. If you just keep doing the things you know, you'll never be confident about starting a new project. There will always be the fear of the unknown.
-
-**If you make it a habit to volunteer for tasks you don't know anything about, you will constantly learn new things.**
-
-If the build needs fixing and you've never worked with the build system, get on it! You'll learn about build management.
-
-If there's a bug in the JavaScript frontend and you've only worked on the Java backend so far, fix it! You'll learn new Javascript idioms.
-
-Doing stuff you're not confident about doing is a great way to grow. Be sure to manage other people's expectations towards you, though. Don't pretend you're an ace. Tell them you haven't done it before but you would like to learn.
+做一些你没有信心的事情是一个很好的成长方式。不过，一定要管理好别人对你的期望。不要假装你是处理这类事情的高手，告诉他们你以前没有做过，但你想学习。
 
 # Ask to Pair Up
 
@@ -206,13 +196,13 @@ Don't fall for silver bullets. They don't exist.
 
 Just imagine you have a developer on your team that has an opinion on everything and always wants to do things their way, "because it's the best way". You would get tired of that very quickly. Don't be that person.
 
-# Build Those Habits!
+# 养成这些习惯!
 
-Wow, this article got longer than I expected. I hope it provided some inspiration on what to think about when growing your software developer career. I certainly haven't mastered all of those habits, but I'm trying to get a bit better every day.
+哇，这篇文章比我想象的要长。我希望这篇文章能给你一些启发，让你知道在发展软件开发者的职业生涯时应该考虑些什么。当然，我还没有完全掌握这些习惯，但我每天都在努力做得更好。
 
-Pick the habit that resonates most with you and try to consciously apply it in your everyday work.
+选择一个最能让你产生共鸣的习惯，并有意识地把它应用到日常工作中。
 
-Let me know  [on Twitter][5]  how it works out! I'd be thrilled to get your feedback.
+让我通过[Twitter][5]知道这些习惯是如何行之有效的!我很高兴能收到你的反馈。
 
 [1]: https://reflectoring.io/
 [2]: https://reflectoring.io/

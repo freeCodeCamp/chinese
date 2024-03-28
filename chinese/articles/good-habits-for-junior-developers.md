@@ -11,7 +11,7 @@
 
 如果你是以一名开发者的身份开始你的职业生涯，看看下面列出的习惯，问问自己这些习惯是否能帮助你成为你想成为的人。意识到你的习惯并积极培养它们，然后成为一名伟大的软件开发者。
 
-# 自主地去做以前没有做过的事情
+# 自发做一些以前没有做过的事情
 
 在你职业生涯的开始，你知道的事情不多。当你加入一个新项目时，你会觉得自己像是一个“冒牌开发人员”，因为即使你连他们在每场会议上抛出的缩略词、技术和框架的一半都不理解，他们也在向你支付报酬。而另一半你只知道一点点，因为你在谷歌上搜索过。
 
@@ -21,9 +21,9 @@
 
 **如果你养成了自愿做你一无所知的任务的习惯，你就会不断地学到新东西。**
 
-如果一个构建需要修复，而你从未使用过对应的构建系统，那就开始吧!你将学习到构建管理相关的知识。
+如果一个构建需要修复，而你从未使用过对应的构建系统，那就开始吧！你将学习到构建管理相关的知识。
 
-如果JavaScript前端中有一个bug，而你到目前为止只做过Java后端相关的工作，那就修复它吧!你将学习新的Javascript的语言特性。
+如果JavaScript前端中有一个bug，而你到目前为止只做过Java后端相关的工作，那就修复它吧！你将学习新的Javascript的语言特性。
 
 做一些你没有信心的事情是一个很好的成长方式。不过，一定要管理好别人对你的期望。不要假装你是处理这类事情的高手，告诉他们你以前没有做过，但你想学习。
 
@@ -72,27 +72,23 @@ But even if you have a daily ritual like that, take a couple of minutes to think
 
 **Make it a habit to regularly update the people that have an interest in the results of your work.**
 
-# Write a Blog
+# 写博客
 
-I'm probably not the first person you've heard saying this, but I'll say it nevertheless: write a blog!
+对你来说我可能不是第一个这样说的人，但我还是要说:写博客！
 
-It doesn't even have to be public. It can be a couple of pages in a company wiki or a collection of GitHub repositories with example code and a couple of lines of explanatory text.
+它甚至不必是公开的。它可以是公司wiki中的几页，也可以是带有示例代码和几行解释性文本的GitHub存储库的集合。
 
-Why?
+为什么呢？
 
-**Because writing with the intention to teach others (even if it's just future you) is a great way of learning and growing.**
+**因为“带着教会他人的目的进行写作”是一个很棒的学习和成长的方式。**
 
-Write about how you solved a gnarly problem. Write about how to use that new and shiny framework you always wanted to try. Or write a journal of what you did each week (this will also help with the "talking about what you're doing" habit because you can look up what you've been doing).
+写下你是如何解决一个棘手的问题的。写下如何使用你一直想尝试的新框架。或者把你每周做的事情写在博文里(这也有助于养成“谈论你正在做的事情”的习惯，因为你可以查看你一直在做的事情)。
 
-I have started a blog a couple of times. It's hard to keep the motivation up in the beginning, because no one will read your blog posts. It feels strange to write into a void. So I stopped.
+我开过几次博客。一开始很难保持动力，因为没有人会读你的博客文章，在收不到任何反馈的情况下坚持写作会有一种非常奇怪的感觉，所以我停下来了。然后，我在三年前开始了[我现在的博客][1]，在没有读者的情况下写了半年。我才注意到我的“robots.txt”文件不允许搜索引擎索引我的博客！所以我修改了robots.txt文件，人们开始读我写的东西了。虽然不多，但它给了我继续下去的动力。所以，我坚持下来了，在这个过程中我不断调整我的写作技巧，我的博客业发展到每月浏览量超过20万。
 
-Then, I started  [my current blog][1]  3 years ago, writing without an audience for half a year. I noticed only then that my  `robots.txt`  file didn't allow search engines to index my blog!
+这一切都是因为我开始写_我_想学习的框架和_我_已经解决的问题，这样_我_就可以在_我_需要的时候再次查阅我的文章。做这件事的初衷不是因为我想吸引大批观众。
 
-So I changed my  `robots.txt`  file and people actually started to read my stuff. Not many, but it gave me the motivation to continue. So, I pulled through, tuned my writing skills along the way, and grew my blog to > 200,000 page views a month.
-
-All because I started writing about frameworks  _I_ wanted to learn and problems  _I_ had solved so that  _I_  could look my articles up again when  _I_  needed them. Not because I wanted to create a big audience.
-
-Blogging is a chore at first but can grow to be very rewarding if you stick to it. If you do it with the intention of learning and teaching, you will not only learn a lot, but other people will notice your blog eventually and it will open a whole world of opportunities.
+写博客一开始是一件苦差事，但如果你坚持下去，它会变得非常有益。如果你这样做的目的是为了学习和教学，你不仅会学到很多东西，而且其他人最终会注意到你的博客，它将打开一个充满机会的世界。
 
 # Have a Notebook and a System
 

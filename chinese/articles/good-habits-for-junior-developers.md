@@ -21,27 +21,27 @@
 
 **如果你养成了自愿做你一无所知的任务的习惯，你就会不断地学到新东西。**
 
-如果一个构建需要修复，而你从未使用过对应的构建系统，那就开始吧！你将学习到构建管理相关的知识。
+如果一个构建需要被修复，而你从未使用过对应的构建系统，那就开始吧！你将学习到构建管理相关的知识。
 
 如果JavaScript前端中有一个bug，而你到目前为止只做过Java后端相关的工作，那就修复它吧！你将学习新的Javascript的语言特性。
 
 做一些你没有信心的事情是一个很好的成长方式。不过，一定要管理好别人对你的期望。不要假装你是处理这类事情的高手，告诉他们你以前没有做过，但你想学习。
 
-# Ask to Pair Up
+# 请求结对编程
 
-If you're stuck and can't get started with a task because you're unfamiliar with the context, ask someone with experience in the topic to pair up with you.
+如果你因为对任务的上下文不熟悉而陷入困境，无法开始任务，那么请找一个在该主题上有经验的人与你结对编程。
 
-**A pairing session is a great way to kick off the work on a task.**  Discuss the requirements with your partner until you have an understanding of what is expected. Then, discuss the solution.
+**结对编程是开始任务工作的绝佳方式。** 与你的搭档讨论需求，直到你明白任务的期望产出是什么，然后一起讨论解决方案。
 
-What's the context? Which codebase(s) do you have to touch? What are the explicit and implicit conventions in the codebase?
+什么是上下文？你需要触及哪些代码库？代码库中有哪些显式和隐式的约定？
 
-But you can take pairing even further.  **Instead of just pairing up to kick off a task, schedule more time with your partner**. After kicking off the topic, start working on it together. You drive, your partner gives advice, then the other way around.
+但你还可以进一步地进行结对编程。**不仅仅是为了开始一个任务而结对，还要安排更多与你的搭档共同工作的时间**。在启动话题后，一起开始工作，你推进任务进度，你的搭档提供建议，然后反过来。
 
-This way, you even get to learn how your partner thinks and solves problems. You can only profit from it! Even if it's just a new IDE shortcut you learned.
+通过这种方式，你甚至可以了解你的搭档是如何思考和解决问题的。你只会从中受益！即使只是学到了一个新的IDE快捷键。
 
-**A note on working from home:** due to working from home, I struggled with things that would not have been a problem before. I hesitated to ask teammates to pair up with me. What was a simple tap on a teammate's shoulder in the office became a high barrier when working remotely and communicating with video conferencing software.
+**关于在家工作的说明：** 由于在家工作，我遇到了以前不会成为问题的事情。我曾经犹豫是否要求队友与我结对编程。曾经在办公室里简单地轻拍队友的肩膀进行高效率的沟通，变成了在远程工作和使用视频会议软件进行沟通时的一个很大的障碍。
 
-If that is a problem in your team, talk about it with your teammates (in a retro, for example) and it will be much easier afterward. Turns out it's just a habit to re-learn.
+如果这是你团队中的问题，与你的队友讨论一下（例如，在回顾会议中），之后的沟通会变得容易得多。原来不同场景下采用的沟通方式这只是一个需要重新学习的习惯。
 
 # Talk about What You're Doing (and What You're Not Doing)
 

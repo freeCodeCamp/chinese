@@ -43,34 +43,34 @@
 
 如果这是你团队中的问题，与你的队友讨论一下（例如，在回顾会议中），之后的沟通会变得容易得多。原来不同场景下采用的沟通方式这只是一个需要重新学习的习惯。
 
-# Talk about What You're Doing (and What You're Not Doing)
+# 谈谈你在做的事 (和你没有在做的事)
 
-I don't remember how often I have eagerly taken on a task, thinking I'd be done within a day, but I end up still working on it a week later.
+我不记得我有多少次欣然接受一项任务后以为自己一天就能完成，但一周后我仍然在执行这个任务。
 
-It gets better with experience, but I still find myself making too optimistic estimations. There are just too many reasons to make an optimistic estimation:
+这种情况随着经验的积累变好了许多，但我仍然发现自己在开始一项任务前，对这项任务做出了过于乐观的估计。有太多的理由让我们做出乐观的评估:
 
--   the pressure to deliver this new feature quickly because the deadline is looming,
--   the pressure to look good among peers,
--   things just not working as I expect them to (this is the one that's most commonly throwing me off, even with years of experience),
--   and a lot more ...
+-   因为截止日期迫在眉睫，需要快速交付这个新功能的压力
+-   在同龄人中表现良好的压力
+-   事情并不像我期望的那样工作(这是最常让我失望的一点，即使我有多年的经验，但我依然无法规避)
+-   其他的理由...
 
-Chances are that most of your estimations end up being too optimistic. What can you do about that?
+很有可能大多数情况下你对任务的评估最终都过于乐观了。面对这种情况，你能做些什么来改变这种现状呢?
 
-**You can manage expectations along the way.**
+**你可以在评估任务的过程中管理期望。**
 
-Continuously talk about what you're doing and what is holding you up. With "continuously" I don't mean that you should provide a status update to the whole team every 15 minutes. But make sure the relevant people know where you stand at the start or the end of the day, at least.
+不断地谈论你在做什么，是什么阻碍了你。我所说的“持续”并不是指你应该每隔15分钟向整个团队提供一次状态更新。但至少要确保相关人员在一天开始或结束时知道你的处境。
 
-So, if your manager / team / project manager / product manager / stakeholder expects results from you, give them a quick update every day: "This is what I've been doing. This is the next step. This is a problem I'm facing. These are the options."
+所以，如果你的经理/团队/项目经理/产品经理/利益相关者期待你的结果，每天给他们一个快速的更新:“这是我一直在做的事，这是我下一步要做的事，这是我面临的一个问题，这些都是我的选择。”
 
-This will let everyone know of your progress. No one will blame you if you're hitting a wall, as long as you kept them in the loop.
+这会让每个人都知道你的进步。如果你碰壁了，没人会责怪你，只要你让他们知道。
 
-This will make discussions of the type "Why did that take so long?" a thing of the past. As an added benefit, the status update will trigger discussions that can help solve problems.
+这将使“为什么花了这么长时间?”之类的讨论成为过去。作为一个额外的好处，状态更新将引发有助于解决问题的讨论。
 
-In the best case, this status update is ritualized in the team. It's commonly called "daily standup" where every team member quickly updates the rest of the team about their progress and problems.
+在最好的情况下，这种状态更新在团队中是仪式化的。它通常被称为“每日站立”，每个团队成员都会快速向团队其他成员更新他们的进度和问题。
 
-But even if you have a daily ritual like that, take a couple of minutes to think if anyone should be updated that is not part of the daily ritual. Should they be included? Or should they be updated through some other mechanism?
+但即使你有这样的日常习惯，也请花几分钟时间考虑一下是否应该向不参与“每日站立”的人更新信息。他们应该被包括在内吗？还是应该通过其他方式通知他们？
 
-**Make it a habit to regularly update the people that have an interest in the results of your work.**
+**养成定期向那些关注你的工作成果的人更新信息的习惯。**
 
 # 写博客
 

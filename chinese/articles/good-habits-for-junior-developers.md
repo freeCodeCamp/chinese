@@ -108,89 +108,89 @@ Create an index on the first couple of pages of the notebook to make the informa
 
 To process the notes I'm taking while reading a book, for instance, I review the notes whenever I'm done with the book and write a book review on my blog. Almost no one reads these reviews, but the process of writing the review makes the things I learned stick so much better.
 
-# Keep Notes about Your Wins
+# 持续记录你的成就
 
-Having a notebook can also help with the next habit: documenting your achievements.
+拥有一个笔记本也可以帮助你养成下一个习惯：记录你的成就。
 
-As I said, my memory is patchy at the best of times. I can usually remember what I had for lunch yesterday, but if I'm deep in focus and spending brain power on some gnarly problem, the halftime of my memory goes down considerably.
+如我所说，我的记忆力在最佳状态下也是断断续续的。我通常能记住昨天我吃了什么午餐，但如果我全神贯注地解决一个复杂的问题，我的记忆效率会大大降低。
 
-That's why I like to document my achievements at the end of the day. It's usually not big achievements, but small wins - like having beaten a bug, or having finished one of the many steps towards adding a new feature to the software I'm working on. I also document personal wins like having stuck to my morning workout routine.
+这就是为什么我喜欢在一天结束时记录我的成就。这通常不是大的成就，而是小小的胜利 - 比如解决了一个bug，或者完成了我正在开发的软件中新增功能的其中一个步骤。我也会记录个人的胜利，比如坚持早晨的锻炼计划。
 
-I just create a list of bullet points each evening in my notebook, but it'll also work with a digital medium like a spreadsheet or whatever you're most comfortable with - as long as you stick with it.
+我每天晚上在我的笔记本上创建一个项目列表，但如果你更喜欢比如电子表格或其他你最熟悉的工具等数字媒介，你也可以用它们进行记录 - 只要你能坚持下去。
 
-Over time, the achievements aggregate. You might want to mark the ones that are most important to you so you can easily find them later.
+随着时间的推移，这些成就会累积起来。你可能想标记那些对你来说最重要的成就，这样你以后就可以轻松找到它们。
 
-Then, on an occasion like a  **performance review,** you go through that list,  **find the achievements that are relevant to that occasion, and list them out to prepare.** Performance reviews always work out better when you're prepared.
+然后，在像**绩效评估**这样的场合，你可以查看那个列表， **找出与该场合相关的成就，并列出它们以作准备。** 有准备的绩效评估总是更有效。
 
-Having a list of your achievements also helps in every-day situations to talk about what you've been doing (see habit "Talk about what you're doing").
+拥有一个你的成就列表也有助于在日常情况下讲述你做了什么（参见习惯“谈论你正在做的事情”）。
 
-# Have a Time Slot for Important Tasks
+# 为重要任务预留时间
 
-At the end of the day, I often feel I haven't accomplished anything. While it helps to document your wins or even just the things you did, you still need to actually do those things.
+每天结束时，我经常觉得自己什么都没做。虽然记录你的成就或者你做的事有作用，但你仍然需要真正地去完成那些事情。
 
-It happens quickly that you go from meeting to meeting and suddenly the day is over. After a meeting, you want to continue the task you started before the meeting, but just when you've warmed up, the next meeting starts. And after that meeting, you have to start over, because you lost the context.
+你可能一直在开会，从一个会议到另一个会议，然后一天很快就结束了。会议结束后，你想继续在会议前开始的任务，但正当你进入状态时，下一个会议就开始了。会议结束后，你又得重新开始，因为你失去了上下文。
 
-**Context switching is killing productivity.**
+**频繁的上下文切换会降低生产力。**
 
-If there's one thing I learned to be productive, it's having a dedicated time slot for things you want to get done. If you don't have a pre-planned time slot for a task, chances are slim that you will get started on it. It will be eaten up by every-day work or other planned work.
+如果有一件事让我学会提高生产力，那就是为你想完成的事情预留专门的时间段。如果你没有为某个任务预先规划时间段，那么你开始这个任务的机会就会很小。它会被日常工作或其他计划中的工作所占据。
 
-There isn't a single way to implement a time management habit, and, to be honest, I'm hopping from one productivity method to the next every couple of months. But the core is always the same: block some time in your day for the things you want to get done most.
+实际上，没有一种单一的方法来实施时间管理习惯，说实话，我每隔几个月就会从一个生产力方法跳到另一个方法。但核心始终是相同的：在你的一天中为你最想完成的事情预留一些时间。
 
-I block an hour in the morning, before work, to write articles for  [my blog][2]  (or for other blogs, like this one). Most days, I also block an hour in the evening, when the kids are in bed, to work on any side project I might have.
+我在早上工作前预留一个小时的时间，为[我的博客][2]写文章（或者为其他博客，就像这篇文章一样）。大多数日子，我也会在晚上预留一个小时的时间，当孩子们上床睡觉时，我会用这个时间来做任何可能的副业项目。
 
-Currently, I have a Trello board with  [one column for every day of the week][3]  where I put the tasks I want to do in the morning and the evening. Once a week, I update that board with the things I want to do in the next week, so I don't have to waste my precious blocked time with thinking about what to do next.
+目前我有一个Trello板，[每周都有一个专栏][3]，我会在那里放置我想要在早上和晚上做的任务。我每周会更新一次那个板子，列出我下周想要做的事情，这样我就不必浪费我宝贵的预留时间去考虑下一步要做什么。
 
-I have a very similar Trello board for my software developer job. Every morning, I think of the things I want to do and put them into the column for the day.
+我为我的软件开发工作也准备了一个非常相似的Trello板。每天早上，我会考虑我想做的事情，并将它们放入当天的专栏。
 
-I also block at least 2 hours of focus time in my calendar every day, so that my co-workers don't try to schedule any meetings at that time. That's when I get through my list of tasks.
+我还会在我的日历中预留至少2小时的专注时间，这样我的同事就不会尝试在那个时候安排任何会议。那时我会完成我的任务清单。
 
-It doesn't really matter how you manage your time, **but it's important to do it and to make it a habit**.  Otherwise your days will be eaten up by things that are not important to you.
+如何管理你的时间实际上并不重要， **，但重要的是要这样做并将其养成习惯**。否则，你的日子会被那些对你不重要的事情所占据。
 
-# When Stuck, Take a Break
+# 当遇到困难时，休息一下
 
-As software developers, we tend to get stuck a lot. And boy, does it piss me off when I'm stuck and don't see a way out.
+作为软件开发者，我们经常会遇到困难。当我陷入困境找不到解决问题的方法时，我真的会很生气。
 
-It's such obvious advice to take a break when you're stuck, but it's so hard to do. "I'm so close to solving the problem, I can't take a break now!"
+当你遇到困难时，休息一下是一个显而易见的建议，但实施起来却很难。“我离解决这个问题非常近了，现在我不能休息！”
 
-Also, taking a break now would mean I would have to warm up to the topic again later. Why should I deliberately switch contexts when context switching is the number one source of wasted time?
+而且现在休息意味着稍后我需要重新回到思考这个问题的状态。上下文切换是浪费时间的首要原因，为什么我应该刻意地切换上下文呢？
 
-When you're stuck, you're not thinking straight. You're thinking about how stupid it is to be stuck with this problem, how easily your teammates would probably solve it, and why they always get the easy tasks. But you're not thinking about how to solve the problem.
+当你陷入困境时，你的思维并不清晰。你会想到“自己陷入到这个问题中”是多么的愚蠢，你的团队成员可能会很容易地解决它，以及为什么他们总是得到简单的任务。但你并没有思考如何解决这个问题。
 
-Take a break and work on something else for a time. Or even better, try again the next day. Getting some distance to the problem will allow you to see solutions you were blind to before.
+休息一下，转而做一些其他事情。或者更好的是，第二天再试。离开问题一段时间会让你发现之前想不到的解决方案。
 
-If you haven't tried this before, you won't believe how often a problem is "just solved" the next morning. Mostly because you see a path to a solution that you haven't seen before.
+如果你之前没有尝试过这种方法，你不会相信多少问题在第二天早上就“神奇地解决”了。而这主要是因为你发现了一个之前没有想到的解决方案。
 
-Now, it's easy to say to take a break, but how do you identify that you're currently in "stuck mode" and then persuade yourself to quit working on the problem for a time?
+“去休息”这件事说起来很容易，但是你如何判断自己当前处于“困境模式”，然后说服自己暂时放下问题不去工作呢？
 
-I'm honestly not very good at this myself, because I usually WANT THIS DUMB TASK OUT OF THE WAY so I can show that I've achieved something!
+说实话，我自己在这方面并不擅长，因为我通常希望尽快完成这个愚蠢的任务，这样我就可以证明我已经取得了一些成果！
 
-But what I found that helps me is to **divide my day into 30-minute slices and have a quick recap after each of those slices.**  This technique is called the Pomodoro technique based on those tomato-shaped kitchen timers.
+但我发现对我有帮助的是**将我的一天分成30分钟的时间段，并在每个时间段结束后进行简短的回顾。** 这种技巧被称为番茄工作法，源于那些番茄形状的厨房计时器。
 
-After each pomodoro unit, I'm asking myself if I'm still working in a "solution mode", or if I'm stuck and should work on something else for a while.
+每个番茄时钟结束后，我会问自己我是否仍然处于“解决模式”，或者我是否陷入困境，应该暂时做些其他事情。
 
-A nice benefit of the pomodoro technique is that you can use the end of a unit as a trigger for other habits.
+番茄工作法的一个好处是，你可以将一个单位时间的结束作为其他习惯的触发器。
 
-I use it as a trigger to stand up from my chair to stretch my muscles and drink some water, for example. This is sometimes called "habit stacking", because you're stacking one habit on top of another, and it's very effective.
+例如，我用它作为站起来伸展一下肌肉和喝点水的触发器。这有时被称为“习惯叠加”，因为你在一个习惯上叠加另一个习惯，这是非常有效的。
 
-If you want to read more on habits, I can warmly recommend the book "Atomic Habits" by James Clear.
+如果你想更多地了解习惯，我强烈推荐詹姆斯·克利尔（James Clear）的书《原子习惯》（Atomic Habits）。
 
-# Don't Chase Silver Bullets
+# 不要追求万金油
 
-I wrote a  [book][4]  on a specific architectural style and I regularly get emails saying "I love that architecture style and I want to apply it to all of my projects! How can I do that?".
+我写了一本关于特定架构风格的[书籍][4]，我经常收到这样的邮件：“我喜欢某种架构风格，我想在所有项目中都应用它！我该如何做呢？”
 
-Can you guess my answer to that question?
+你能猜到我的答案是什么吗？
 
-There is no single architectural style that applies to all problems out there.
+没有一种单一的架构风格适用于所有问题。
 
-You build a plain CRUD API when it's a small project. You build a more sophisticated Hexagonal Architecture if you have a complex domain model. And you apply any of a hundred different styles when you're building microservices in a specific context.
+当项目规模较小时，你可以构建一个简单的CRUD API。当你有一个复杂的领域模型时，你会构建一个更复杂的六边形架构。当你在特定的上下文中构建微服务时，你可以使用上百种不同风格的架构。
 
-Similarly, there is no single framework you should use for every single project. And there is no single best programming language or coding style.
+同样地，没有一种单一的框架适用于每一个项目。也没有一种单一的最佳编程语言或编码风格。
 
-Don't fall for silver bullets. They don't exist.
+不要追求万金油，它们并不存在。
 
-**Having an opinion is good if it's backed with good arguments.**  "This is the best architecture style" or "I've always done it like this" are not good arguments and people will see through them.
+**如果你的观点有充分的论据支持，那是好的。** “这是最好的架构风格”或“我一直都这样做”并不是好的论据，人们会拆穿它们。
 
-Just imagine you have a developer on your team that has an opinion on everything and always wants to do things their way, "because it's the best way". You would get tired of that very quickly. Don't be that person.
+想象一下，你的团队中有一个开发者，对所有事情都有自己的看法，总是想按照自己的方式去做，“因为这是最好的方式”。你会很快厌倦这样的人。不要成为那样的人。
 
 # 养成这些习惯!
 

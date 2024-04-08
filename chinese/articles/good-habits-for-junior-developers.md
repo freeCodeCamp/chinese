@@ -23,9 +23,9 @@
 
 如果一个构建需要被修复，而你从未使用过对应的构建系统，那就开始吧！你将学习到构建管理相关的知识。
 
-如果JavaScript前端中有一个bug，而你到目前为止只做过Java后端相关的工作，那就修复它吧！你将学习新的Javascript的语言特性。
+如果JavaScript前端中有一个bug，而你到目前为止只做过Java后端相关的工作，那就修复它吧！你将学习新的JavaScript的语言特性。
 
-做一些你没有信心的事情是一个很好的成长方式。不过，一定要管理好别人对你的期望。不要假装你是处理这类事情的高手，告诉他们你以前没有做过，但你想学习。
+做一些你没有信心的事情是一个很好的成长方式。不过，一定要管理好别人对你的期望。不要假装你是处理这类事情的高手，告诉他们你以前没有做过，但你想学着去做这件事。
 
 # 请求结对编程
 
@@ -33,15 +33,15 @@
 
 **结对编程是开始任务工作的绝佳方式。** 与你的搭档讨论需求，直到你明白任务的期望产出是什么，然后一起讨论解决方案。
 
-什么是上下文？你需要触及哪些代码库？代码库中有哪些显式和隐式的约定？
+上下文是什么？你需要触及哪些代码库？代码库中有哪些显式和隐式的约定？
 
-但你还可以进一步地进行结对编程。**不仅仅是为了开始一个任务而结对，还要安排更多与你的搭档共同工作的时间**。在启动话题后，一起开始工作，你推进任务进度，你的搭档提供建议，然后反过来。
+但你还可以进一步地进行结对编程。**不仅仅是为了开始一个任务而结对，还要安排更多与你的搭档共同工作的时间**。在启动任务后，你们需要一起开始工作，你推进任务进度，你的搭档提供建议，然后你和你的搭档进行角色对调。
 
 通过这种方式，你甚至可以了解你的搭档是如何思考和解决问题的。你只会从中受益！即使只是学到了一个新的IDE快捷键。
 
-**关于在家工作的说明：** 由于在家工作，我遇到了以前不会成为问题的事情。我曾经犹豫是否要求队友与我结对编程。曾经在办公室里简单地轻拍队友的肩膀进行高效率的沟通，变成了在远程工作和使用视频会议软件进行沟通时的一个很大的障碍。
+**关于在家工作的说明：** 在家工作的那段时间我遇到了以前不会成为问题的事情。我曾经犹豫是否要求队友与我结对编程。曾经在办公室里简单地轻拍队友的肩膀进行高效率的沟通，变成了在远程工作和使用视频会议软件进行沟通时的一个很大的障碍。
 
-如果这是你团队中的问题，与你的队友讨论一下（例如，在回顾会议中），之后的沟通会变得容易得多。原来不同场景下采用的沟通方式这只是一个需要重新学习的习惯。
+如果这是你团队中的问题，与你的队友讨论一下（例如，在回顾会议中），之后的沟通会变得容易得多。不同场景下采用的沟通方式只是一个需要重新学习的习惯。
 
 # 谈谈你在做的事 (和你没有在做的事)
 
@@ -90,23 +90,23 @@
 
 写博客一开始是一件苦差事，但如果你坚持下去，它会变得非常有益。如果你这样做的目的是为了学习和教学，你不仅会学到很多东西，而且其他人最终会注意到你的博客，它将打开一个充满机会的世界。
 
-# Have a Notebook and a System
+# 拥有一个记笔记的本子和一套体系
 
-I've only recently grown to be a big fan of notebooks. Not a computer notebook, but a real, paper notebook. I take it (and a pen!) wherever I go, so I can take notes about whatever strikes me as important at any time.
+我最近才成为笔记本的忠实粉丝。我说的不是电脑上的笔记本，而是真正的纸质笔记本。我随身携带它（和一支笔！），这样我可以随时记录我认为重要的事情。
 
-I take notes when I listen to a talk, or when I'm waiting for the bus, thinking about what I could make for dinner this week.
+当我听讲座时，或者等公交车的时候，甚至是考虑这周我可以做什么晚餐时，我都会做笔记。
 
-I also use the notebook to maintain lists: books I want to read, frameworks I want to try out, features I want to add to my side projects. Most importantly, I use it to take notes while reading books, because that conserves the learnings from the book.
+我还使用笔记本来维护列表：我想读的书、我想尝试的框架、我想为我的副业项目添加的功能。最重要的是，我用它在阅读书籍时做笔记，因为这样可以保留我从书中学到的知识。
 
-I'm writing down everything that weighs on my mind.  **If I don't write it down, it will keep my mind busy**, sometimes to the extent that I'm getting anxious and have trouble sleeping.
+我把所有让我感到烦恼的事情都记下来。**如果我不写下它，它会让我的大脑忙碌不休**, 有时甚至会让我感到焦虑，导致我难以入睡。
 
-The reason I'm getting anxious without my notebook is that I don't trust my memory. If you have a great memory and can recall everything that you have thought about a week ago, you probably don't need a notebook. If your memory is as patchy as mine, though, it will make a world of a difference to your peace of mind.
+我在没有笔记本的情况下感到焦虑的原因是我不信任我的记忆。如果你的记忆力很好，可以回忆起你一周前所思考的一切，那么你可能不需要笔记本。但如果你的记忆力像我一样断断续续，你总会担心自己的记忆是否会有偏差。
 
-**To build trust in your notebook, you need a system**. You need to convince your mind that whatever you put into the notebook will not be lost.
+**要建立对你笔记本的信任，你需要一套体系**. 你需要说服自己任何你写入笔记本的内容都不会丢失。
 
-Create an index on the first couple of pages of the notebook to make the information retrievable. Then, make it a habit to review your notes regularly and process them.
+在笔记本的前几页创建一个索引以便检索信息，然后养成定期复习和处理笔记的习惯。
 
-To process the notes I'm taking while reading a book, for instance, I review the notes whenever I'm done with the book and write a book review on my blog. Almost no one reads these reviews, but the process of writing the review makes the things I learned stick so much better.
+例如，为了处理我在阅读书籍时做的笔记，我会在读完书后复习这些笔记，并在我的博客上写一篇书评。几乎没有人读这些书评，但写书评的过程使我学到的东西更加牢固。
 
 # 持续记录你的成就
 

@@ -1,218 +1,204 @@
 > * 原文地址：[9 Habits I Wish I Had as a Junior Developer 帮助初级开发者提升自己的 9 个好习惯](https://www.freecodecamp.org/news/good-habits-for-junior-developers/)
 > * 原文作者：Tom Hombergs
-> * 译者：
+> * 译者：Tsukistar
 > * 校对者：
 
 ![9 Habits I Wish I Had as a Junior Developer](https://www.freecodecamp.org/news/content/images/size/w2000/2020/09/my-life-journal-WI30grRfBnE-unsplash.jpg)
 
-Have you ever sat down and taken an inventory of your habits? Habits are what make us who we are.
+你曾经有过坐下来一一列举你的习惯的时候吗？习惯造就了我们。好的习惯帮助你变成你想要的样子，而不好的习惯会慢慢地将你变成你最不想成为的样子。
 
-Good habits help you to become who you want to be. Bad habits will slowly turn you into someone you don't want to be.
+在做了12年多的软件开发者之后，我养成了一些令我引以为傲的习惯，也养成了一些我宁愿改掉的习惯。大多数时候，我并没有意识到我的习惯，但回顾过去，我很清楚哪些习惯帮助我成长，哪些习惯阻碍了我。这促使我盘点并写下一些开发者的好习惯，希望能激励你也这么做。
 
-After more than 12 years as a software developer, I've grown some habits that I'm proud of and some that I'd rather get rid of.
+如果你是以一名开发者的身份开始你的职业生涯，看看下面列出的习惯，问问自己这些习惯是否能帮助你成为你想成为的人。意识到你的习惯并积极培养它们，然后成为一名伟大的软件开发者。
 
-Most of the time, I wasn't aware of my habits, but looking back, it's pretty clear to me which habits were helping me grow and which were hindering me.
+# 自发做一些以前没有做过的事情
 
-This drove me to take an inventory and write about good developer habits to maybe inspire you to do the same.
+在你职业生涯的开始，你知道的事情不多。当你加入一个新项目时，你会觉得自己像是一个“冒牌开发人员”，因为即使你连他们在每场会议上抛出的缩略词、技术和框架的一半都不理解，他们也在向你支付报酬。而另一半你只知道一点点，因为你在谷歌上搜索过。
 
-If you're starting as a developer, have a look at the habits outlined below and ask yourself if they would help you become who you want to be. Be conscious of your habits and actively nurture them to become a great software developer.
+把“在你职业生涯的开始”换成“在任何新项目的开始”，你就对软件开发职业生涯有了一个很好的总结。
 
-# Volunteer for Things You Don't Know
+每个新项目，我们都需要重新开始。每一次都有新的人要认识，新的需求要理解，新的框架要学习。这就是为什么学习新东西是很重要的事，如果你只是继续做你知道的事情，你永远不会有信心开始一个新项目，对未知的恐惧总是存在的。
 
-At the start of your career, you don't know a lot. You come into that new project and feel like an impostor because they're paying you money even though you don't understand half of the acronyms, technologies, and frameworks they're throwing around in each meeting.
+**如果你养成了自愿做你一无所知的任务的习惯，你就会不断地学到新东西。**
 
-And you only faintly know the other half because you googled them.
+如果一个构建需要被修复，而你从未使用过对应的构建系统，那就开始吧！你将学习到构建管理相关的知识。
 
-Replace "At the start of your career" with "At the start of any new project", and you have a pretty good summary of a software development career.
+如果JavaScript前端中有一个bug，而你到目前为止只做过Java后端相关的工作，那就修复它吧！你将学习新的JavaScript的语言特性。
 
-Every new project, we start over. There are new people to meet, new requirements to understand, and new frameworks to learn. Every single time.
+做一些你没有信心的事情是一个很好的成长方式。不过，一定要管理好别人对你的期望。不要假装你是处理这类事情的高手，告诉他们你以前没有做过，但你想学着去做这件事。
 
-This is why it's important to learn new stuff. If you just keep doing the things you know, you'll never be confident about starting a new project. There will always be the fear of the unknown.
+# 请求结对编程
 
-**If you make it a habit to volunteer for tasks you don't know anything about, you will constantly learn new things.**
+如果你因为对任务的上下文不熟悉而陷入困境，无法开始任务，那么请找一个在该主题上有经验的人与你结对编程。
 
-If the build needs fixing and you've never worked with the build system, get on it! You'll learn about build management.
+**结对编程是开始任务工作的绝佳方式。** 与你的搭档讨论需求，直到你明白任务的期望产出是什么，然后一起讨论解决方案。
 
-If there's a bug in the JavaScript frontend and you've only worked on the Java backend so far, fix it! You'll learn new Javascript idioms.
+上下文是什么？你需要触及哪些代码库？代码库中有哪些显式和隐式的约定？
 
-Doing stuff you're not confident about doing is a great way to grow. Be sure to manage other people's expectations towards you, though. Don't pretend you're an ace. Tell them you haven't done it before but you would like to learn.
+但你还可以进一步地进行结对编程。**不仅仅是为了开始一个任务而结对，还要安排更多与你的搭档共同工作的时间**。在启动任务后，你们需要一起开始工作，你推进任务进度，你的搭档提供建议，然后你和你的搭档进行角色对调。
 
-# Ask to Pair Up
+通过这种方式，你甚至可以了解你的搭档是如何思考和解决问题的。你只会从中受益！即使只是学到了一个新的IDE快捷键。
 
-If you're stuck and can't get started with a task because you're unfamiliar with the context, ask someone with experience in the topic to pair up with you.
+**关于在家工作的说明：** 在家工作的那段时间我遇到了以前不会成为问题的事情。我曾经犹豫是否要求队友与我结对编程。曾经在办公室里简单地轻拍队友的肩膀进行高效率的沟通，变成了在远程工作和使用视频会议软件进行沟通时的一个很大的障碍。
 
-**A pairing session is a great way to kick off the work on a task.**  Discuss the requirements with your partner until you have an understanding of what is expected. Then, discuss the solution.
+如果这是你团队中的问题，与你的队友讨论一下（例如，在回顾会议中），之后的沟通会变得容易得多。不同场景下采用的沟通方式只是一个需要重新学习的习惯。
 
-What's the context? Which codebase(s) do you have to touch? What are the explicit and implicit conventions in the codebase?
+# 谈谈你在做的事 (和你没有在做的事)
 
-But you can take pairing even further.  **Instead of just pairing up to kick off a task, schedule more time with your partner**. After kicking off the topic, start working on it together. You drive, your partner gives advice, then the other way around.
+我不记得我有多少次欣然接受一项任务后以为自己一天就能完成，但一周后我仍然在执行这个任务。
 
-This way, you even get to learn how your partner thinks and solves problems. You can only profit from it! Even if it's just a new IDE shortcut you learned.
+这种情况随着经验的积累变好了许多，但我仍然发现自己在开始一项任务前，对这项任务做出了过于乐观的估计。有太多的理由让我们做出乐观的评估:
 
-**A note on working from home:** due to working from home, I struggled with things that would not have been a problem before. I hesitated to ask teammates to pair up with me. What was a simple tap on a teammate's shoulder in the office became a high barrier when working remotely and communicating with video conferencing software.
+-   因为截止日期迫在眉睫，需要快速交付这个新功能的压力
+-   在同龄人中表现良好的压力
+-   事情并不像我期望的那样工作(这是最常让我失望的一点，即使我有多年的经验，但我依然无法规避)
+-   其他的理由...
 
-If that is a problem in your team, talk about it with your teammates (in a retro, for example) and it will be much easier afterward. Turns out it's just a habit to re-learn.
+很有可能大多数情况下你对任务的评估最终都过于乐观了。面对这种情况，你能做些什么来改变这种现状呢?
 
-# Talk about What You're Doing (and What You're Not Doing)
+**你可以在评估任务的过程中管理期望。**
 
-I don't remember how often I have eagerly taken on a task, thinking I'd be done within a day, but I end up still working on it a week later.
+不断地谈论你在做什么，是什么阻碍了你。我所说的“持续”并不是指你应该每隔15分钟向整个团队提供一次状态更新。但至少要确保相关人员在一天开始或结束时知道你的处境。
 
-It gets better with experience, but I still find myself making too optimistic estimations. There are just too many reasons to make an optimistic estimation:
+所以，如果你的经理/团队/项目经理/产品经理/利益相关者期待你的结果，每天给他们一个快速的更新:“这是我一直在做的事，这是我下一步要做的事，这是我面临的一个问题，这些都是我的选择。”
 
--   the pressure to deliver this new feature quickly because the deadline is looming,
--   the pressure to look good among peers,
--   things just not working as I expect them to (this is the one that's most commonly throwing me off, even with years of experience),
--   and a lot more ...
+这会让每个人都知道你的进步。如果你碰壁了，没人会责怪你，只要你让他们知道。
 
-Chances are that most of your estimations end up being too optimistic. What can you do about that?
+这将使“为什么花了这么长时间?”之类的讨论成为过去。作为一个额外的好处，状态更新将引发有助于解决问题的讨论。
 
-**You can manage expectations along the way.**
+在最好的情况下，这种状态更新在团队中是仪式化的。它通常被称为“每日站立”，每个团队成员都会快速向团队其他成员更新他们的进度和问题。
 
-Continuously talk about what you're doing and what is holding you up. With "continuously" I don't mean that you should provide a status update to the whole team every 15 minutes. But make sure the relevant people know where you stand at the start or the end of the day, at least.
+但即使你有这样的日常习惯，也请花几分钟时间考虑一下是否应该向不参与“每日站立”的人更新信息。他们应该被包括在内吗？还是应该通过其他方式通知他们？
 
-So, if your manager / team / project manager / product manager / stakeholder expects results from you, give them a quick update every day: "This is what I've been doing. This is the next step. This is a problem I'm facing. These are the options."
+**养成定期向那些关注你的工作成果的人更新信息的习惯。**
 
-This will let everyone know of your progress. No one will blame you if you're hitting a wall, as long as you kept them in the loop.
+# 写博客
 
-This will make discussions of the type "Why did that take so long?" a thing of the past. As an added benefit, the status update will trigger discussions that can help solve problems.
+对你来说我可能不是第一个这样说的人，但我还是要说:写博客！
 
-In the best case, this status update is ritualized in the team. It's commonly called "daily standup" where every team member quickly updates the rest of the team about their progress and problems.
+它甚至不必是公开的。它可以是公司wiki中的几页，也可以是带有示例代码和几行解释性文本的GitHub存储库的集合。
 
-But even if you have a daily ritual like that, take a couple of minutes to think if anyone should be updated that is not part of the daily ritual. Should they be included? Or should they be updated through some other mechanism?
+为什么呢？
 
-**Make it a habit to regularly update the people that have an interest in the results of your work.**
+**因为“带着教会他人的目的进行写作”是一个很棒的学习和成长的方式。**
 
-# Write a Blog
+写下你是如何解决一个棘手的问题的。写下如何使用你一直想尝试的新框架。或者把你每周做的事情写在博文里(这也有助于养成“谈论你正在做的事情”的习惯，因为你可以查看你一直在做的事情)。
 
-I'm probably not the first person you've heard saying this, but I'll say it nevertheless: write a blog!
+我开过几次博客。一开始很难保持动力，因为没有人会读你的博客文章，在收不到任何反馈的情况下坚持写作会有一种非常奇怪的感觉，所以我停下来了。然后，我在三年前开始了[我现在的博客][1]，在没有读者的情况下写了半年。我才注意到我的“robots.txt”文件不允许搜索引擎索引我的博客！所以我修改了robots.txt文件，人们开始读我写的东西了。虽然不多，但它给了我继续下去的动力。所以，我坚持下来了，在这个过程中我不断调整我的写作技巧，我的博客业发展到每月浏览量超过20万。
 
-It doesn't even have to be public. It can be a couple of pages in a company wiki or a collection of GitHub repositories with example code and a couple of lines of explanatory text.
+这一切都是因为我开始写*我*想学习的框架和*我*已经解决的问题，这样*我*就可以在*我*需要的时候再次查阅我的文章。做这件事的初衷不是因为我想吸引大批观众。
 
-Why?
+写博客一开始是一件苦差事，但如果你坚持下去，它会变得非常有益。如果你这样做的目的是为了学习和教学，你不仅会学到很多东西，而且其他人最终会注意到你的博客，它将打开一个充满机会的世界。
 
-**Because writing with the intention to teach others (even if it's just future you) is a great way of learning and growing.**
+# 拥有一个记笔记的本子和一套体系
 
-Write about how you solved a gnarly problem. Write about how to use that new and shiny framework you always wanted to try. Or write a journal of what you did each week (this will also help with the "talking about what you're doing" habit because you can look up what you've been doing).
+我最近才成为笔记本的忠实粉丝。我说的不是电脑上的笔记本，而是真正的纸质笔记本。我随身携带它（和一支笔！），这样我可以随时记录我认为重要的事情。
 
-I have started a blog a couple of times. It's hard to keep the motivation up in the beginning, because no one will read your blog posts. It feels strange to write into a void. So I stopped.
+当我听讲座时，或者等公交车的时候，甚至是考虑这周我可以做什么晚餐时，我都会做笔记。
 
-Then, I started  [my current blog][1]  3 years ago, writing without an audience for half a year. I noticed only then that my  `robots.txt`  file didn't allow search engines to index my blog!
+我还使用笔记本来维护列表：我想读的书、我想尝试的框架、我想为我的副业项目添加的功能。最重要的是，我用它在阅读书籍时做笔记，因为这样可以保留我从书中学到的知识。
 
-So I changed my  `robots.txt`  file and people actually started to read my stuff. Not many, but it gave me the motivation to continue. So, I pulled through, tuned my writing skills along the way, and grew my blog to > 200,000 page views a month.
+我把所有让我感到烦恼的事情都记下来。**如果我不写下它，它会让我的大脑忙碌不休**, 有时甚至会让我感到焦虑，导致我难以入睡。
 
-All because I started writing about frameworks  _I_ wanted to learn and problems  _I_ had solved so that  _I_  could look my articles up again when  _I_  needed them. Not because I wanted to create a big audience.
+我在没有笔记本的情况下感到焦虑的原因是我不信任我的记忆。如果你的记忆力很好，可以回忆起你一周前所思考的一切，那么你可能不需要笔记本。但如果你的记忆力像我一样断断续续，你总会担心自己的记忆是否会有偏差。
 
-Blogging is a chore at first but can grow to be very rewarding if you stick to it. If you do it with the intention of learning and teaching, you will not only learn a lot, but other people will notice your blog eventually and it will open a whole world of opportunities.
+**要建立对你笔记本的信任，你需要一套体系**. 你需要说服自己任何你写入笔记本的内容都不会丢失。
 
-# Have a Notebook and a System
+在笔记本的前几页创建一个索引以便检索信息，然后养成定期复习和处理笔记的习惯。
 
-I've only recently grown to be a big fan of notebooks. Not a computer notebook, but a real, paper notebook. I take it (and a pen!) wherever I go, so I can take notes about whatever strikes me as important at any time.
+例如，为了处理我在阅读书籍时做的笔记，我会在读完书后复习这些笔记，并在我的博客上写一篇书评。几乎没有人读这些书评，但写书评的过程使我学到的东西更加牢固。
 
-I take notes when I listen to a talk, or when I'm waiting for the bus, thinking about what I could make for dinner this week.
+# 持续记录你的成就
 
-I also use the notebook to maintain lists: books I want to read, frameworks I want to try out, features I want to add to my side projects. Most importantly, I use it to take notes while reading books, because that conserves the learnings from the book.
+拥有一个笔记本也可以帮助你养成下一个习惯：记录你的成就。
 
-I'm writing down everything that weighs on my mind.  **If I don't write it down, it will keep my mind busy**, sometimes to the extent that I'm getting anxious and have trouble sleeping.
+如我所说，我的记忆力在最佳状态下也是断断续续的。我通常能记住昨天我吃了什么午餐，但如果我全神贯注地解决一个复杂的问题，我的记忆效率会大大降低。
 
-The reason I'm getting anxious without my notebook is that I don't trust my memory. If you have a great memory and can recall everything that you have thought about a week ago, you probably don't need a notebook. If your memory is as patchy as mine, though, it will make a world of a difference to your peace of mind.
+这就是为什么我喜欢在一天结束时记录我的成就。这通常不是大的成就，而是小小的胜利 - 比如解决了一个bug，或者完成了我正在开发的软件中新增功能的其中一个步骤。我也会记录个人的胜利，比如坚持早晨的锻炼计划。
 
-**To build trust in your notebook, you need a system**. You need to convince your mind that whatever you put into the notebook will not be lost.
+我每天晚上在我的笔记本上创建一个项目列表，但如果你更喜欢比如电子表格或其他你最熟悉的工具等数字媒介，你也可以用它们进行记录 - 只要你能坚持下去。
 
-Create an index on the first couple of pages of the notebook to make the information retrievable. Then, make it a habit to review your notes regularly and process them.
+随着时间的推移，这些成就会累积起来。你可能想标记那些对你来说最重要的成就，这样你以后就可以轻松找到它们。
 
-To process the notes I'm taking while reading a book, for instance, I review the notes whenever I'm done with the book and write a book review on my blog. Almost no one reads these reviews, but the process of writing the review makes the things I learned stick so much better.
+然后，在像**绩效评估**这样的场合，你可以查看那个列表， **找出与该场合相关的成就，并列出它们以作准备。** 有准备的绩效评估总是更有效。
 
-# Keep Notes about Your Wins
+拥有一个你的成就列表也有助于在日常情况下讲述你做了什么（参见习惯“谈论你正在做的事情”）。
 
-Having a notebook can also help with the next habit: documenting your achievements.
+# 为重要任务预留时间
 
-As I said, my memory is patchy at the best of times. I can usually remember what I had for lunch yesterday, but if I'm deep in focus and spending brain power on some gnarly problem, the halftime of my memory goes down considerably.
+每天结束时，我经常觉得自己什么都没做。虽然记录你的成就或者你做的事有作用，但你仍然需要真正地去完成那些事情。
 
-That's why I like to document my achievements at the end of the day. It's usually not big achievements, but small wins - like having beaten a bug, or having finished one of the many steps towards adding a new feature to the software I'm working on. I also document personal wins like having stuck to my morning workout routine.
+你可能一直在开会，从一个会议到另一个会议，然后一天很快就结束了。会议结束后，你想继续在会议前开始的任务，但正当你进入状态时，下一个会议就开始了。会议结束后，你又得重新开始，因为你失去了上下文。
 
-I just create a list of bullet points each evening in my notebook, but it'll also work with a digital medium like a spreadsheet or whatever you're most comfortable with - as long as you stick with it.
+**频繁的上下文切换会降低生产力。**
 
-Over time, the achievements aggregate. You might want to mark the ones that are most important to you so you can easily find them later.
+如果有一件事让我学会提高生产力，那就是为你想完成的事情预留专门的时间段。如果你没有为某个任务预先规划时间段，那么你开始这个任务的机会就会很小。它会被日常工作或其他计划中的工作所占据。
 
-Then, on an occasion like a  **performance review,** you go through that list,  **find the achievements that are relevant to that occasion, and list them out to prepare.** Performance reviews always work out better when you're prepared.
+实际上，没有一种单一的方法来实施时间管理习惯，说实话，我每隔几个月就会从一个生产力方法跳到另一个方法。但核心始终是相同的：在你的一天中为你最想完成的事情预留一些时间。
 
-Having a list of your achievements also helps in every-day situations to talk about what you've been doing (see habit "Talk about what you're doing").
+我在早上工作前预留一个小时的时间，为[我的博客][2]写文章（或者为其他博客，就像这篇文章一样）。大多数日子，我也会在晚上预留一个小时的时间，当孩子们上床睡觉时，我会用这个时间来做任何可能的副业项目。
 
-# Have a Time Slot for Important Tasks
+目前我有一个Trello板，[每周都有一个专栏][3]，我会在那里放置我想要在早上和晚上做的任务。我每周会更新一次那个板子，列出我下周想要做的事情，这样我就不必浪费我宝贵的预留时间去考虑下一步要做什么。
 
-At the end of the day, I often feel I haven't accomplished anything. While it helps to document your wins or even just the things you did, you still need to actually do those things.
+我为我的软件开发工作也准备了一个非常相似的Trello板。每天早上，我会考虑我想做的事情，并将它们放入当天的专栏。
 
-It happens quickly that you go from meeting to meeting and suddenly the day is over. After a meeting, you want to continue the task you started before the meeting, but just when you've warmed up, the next meeting starts. And after that meeting, you have to start over, because you lost the context.
+我还会在我的日历中预留至少2小时的专注时间，这样我的同事就不会尝试在那个时候安排任何会议。那时我会完成我的任务清单。
 
-**Context switching is killing productivity.**
+如何管理你的时间实际上并不重要， **，但重要的是要这样做并将其养成习惯**。否则，你的日子会被那些对你不重要的事情所占据。
 
-If there's one thing I learned to be productive, it's having a dedicated time slot for things you want to get done. If you don't have a pre-planned time slot for a task, chances are slim that you will get started on it. It will be eaten up by every-day work or other planned work.
+# 当遇到困难时，休息一下
 
-There isn't a single way to implement a time management habit, and, to be honest, I'm hopping from one productivity method to the next every couple of months. But the core is always the same: block some time in your day for the things you want to get done most.
+作为软件开发者，我们经常会遇到困难。当我陷入困境找不到解决问题的方法时，我真的会很生气。
 
-I block an hour in the morning, before work, to write articles for  [my blog][2]  (or for other blogs, like this one). Most days, I also block an hour in the evening, when the kids are in bed, to work on any side project I might have.
+当你遇到困难时，休息一下是一个显而易见的建议，但实施起来却很难。“我离解决这个问题非常近了，现在我不能休息！”
 
-Currently, I have a Trello board with  [one column for every day of the week][3]  where I put the tasks I want to do in the morning and the evening. Once a week, I update that board with the things I want to do in the next week, so I don't have to waste my precious blocked time with thinking about what to do next.
+而且现在休息意味着稍后我需要重新回到思考这个问题的状态。上下文切换是浪费时间的首要原因，为什么我应该刻意地切换上下文呢？
 
-I have a very similar Trello board for my software developer job. Every morning, I think of the things I want to do and put them into the column for the day.
+当你陷入困境时，你的思维并不清晰。你会想到“自己陷入到这个问题中”是多么的愚蠢，你的团队成员可能会很容易地解决它，以及为什么他们总是得到简单的任务。但你并没有思考如何解决这个问题。
 
-I also block at least 2 hours of focus time in my calendar every day, so that my co-workers don't try to schedule any meetings at that time. That's when I get through my list of tasks.
+休息一下，转而做一些其他事情。或者更好的是，第二天再试。离开问题一段时间会让你发现之前想不到的解决方案。
 
-It doesn't really matter how you manage your time, **but it's important to do it and to make it a habit**.  Otherwise your days will be eaten up by things that are not important to you.
+如果你之前没有尝试过这种方法，你不会相信多少问题在第二天早上就“神奇地解决”了。而这主要是因为你发现了一个之前没有想到的解决方案。
 
-# When Stuck, Take a Break
+“去休息”这件事说起来很容易，但是你如何判断自己当前处于“困境模式”，然后说服自己暂时放下问题不去工作呢？
 
-As software developers, we tend to get stuck a lot. And boy, does it piss me off when I'm stuck and don't see a way out.
+说实话，我自己在这方面并不擅长，因为我通常希望尽快完成这个愚蠢的任务，这样我就可以证明我已经取得了一些成果！
 
-It's such obvious advice to take a break when you're stuck, but it's so hard to do. "I'm so close to solving the problem, I can't take a break now!"
+但我发现对我有帮助的是**将我的一天分成30分钟的时间段，并在每个时间段结束后进行简短的回顾。** 这种技巧被称为番茄工作法，源于那些番茄形状的厨房计时器。
 
-Also, taking a break now would mean I would have to warm up to the topic again later. Why should I deliberately switch contexts when context switching is the number one source of wasted time?
+每个番茄时钟结束后，我会问自己我是否仍然处于“解决模式”，或者我是否陷入困境，应该暂时做些其他事情。
 
-When you're stuck, you're not thinking straight. You're thinking about how stupid it is to be stuck with this problem, how easily your teammates would probably solve it, and why they always get the easy tasks. But you're not thinking about how to solve the problem.
+番茄工作法的一个好处是，你可以将一个单位时间的结束作为其他习惯的触发器。
 
-Take a break and work on something else for a time. Or even better, try again the next day. Getting some distance to the problem will allow you to see solutions you were blind to before.
+例如，我用它作为站起来伸展一下肌肉和喝点水的触发器。这有时被称为“习惯叠加”，因为你在一个习惯上叠加另一个习惯，这是非常有效的。
 
-If you haven't tried this before, you won't believe how often a problem is "just solved" the next morning. Mostly because you see a path to a solution that you haven't seen before.
+如果你想更多地了解习惯，我强烈推荐詹姆斯·克利尔（James Clear）的书《原子习惯》（Atomic Habits）。
 
-Now, it's easy to say to take a break, but how do you identify that you're currently in "stuck mode" and then persuade yourself to quit working on the problem for a time?
+# 不要追求万金油
 
-I'm honestly not very good at this myself, because I usually WANT THIS DUMB TASK OUT OF THE WAY so I can show that I've achieved something!
+我写了一本关于特定架构风格的[书籍][4]，我经常收到这样的邮件：“我喜欢某种架构风格，我想在所有项目中都应用它！我该如何做呢？”
 
-But what I found that helps me is to **divide my day into 30-minute slices and have a quick recap after each of those slices.**  This technique is called the Pomodoro technique based on those tomato-shaped kitchen timers.
+你能猜到我的答案是什么吗？
 
-After each pomodoro unit, I'm asking myself if I'm still working in a "solution mode", or if I'm stuck and should work on something else for a while.
+没有一种单一的架构风格适用于所有问题。
 
-A nice benefit of the pomodoro technique is that you can use the end of a unit as a trigger for other habits.
+当项目规模较小时，你可以构建一个简单的CRUD API。当你有一个复杂的领域模型时，你会构建一个更复杂的六边形架构。当你在特定的上下文中构建微服务时，你可以使用上百种不同风格的架构。
 
-I use it as a trigger to stand up from my chair to stretch my muscles and drink some water, for example. This is sometimes called "habit stacking", because you're stacking one habit on top of another, and it's very effective.
+同样地，没有一种单一的框架适用于每一个项目。也没有一种单一的最佳编程语言或编码风格。
 
-If you want to read more on habits, I can warmly recommend the book "Atomic Habits" by James Clear.
+不要追求万金油，它们并不存在。
 
-# Don't Chase Silver Bullets
+**如果你的观点有充分的论据支持，那是好的。** “这是最好的架构风格”或“我一直都这样做”并不是好的论据，人们会拆穿它们。
 
-I wrote a  [book][4]  on a specific architectural style and I regularly get emails saying "I love that architecture style and I want to apply it to all of my projects! How can I do that?".
+想象一下，你的团队中有一个开发者，对所有事情都有自己的看法，总是想按照自己的方式去做，“因为这是最好的方式”。你会很快厌倦这样的人。不要成为那样的人。
 
-Can you guess my answer to that question?
+# 养成这些习惯!
 
-There is no single architectural style that applies to all problems out there.
+哇，这篇文章比我想象的要长。我希望这篇文章能给你一些启发，让你知道在发展软件开发者的职业生涯时应该考虑些什么。当然，我还没有完全掌握这些习惯，但我每天都在努力做得更好。
 
-You build a plain CRUD API when it's a small project. You build a more sophisticated Hexagonal Architecture if you have a complex domain model. And you apply any of a hundred different styles when you're building microservices in a specific context.
+选择一个最能让你产生共鸣的习惯，并有意识地把它应用到日常工作中。
 
-Similarly, there is no single framework you should use for every single project. And there is no single best programming language or coding style.
-
-Don't fall for silver bullets. They don't exist.
-
-**Having an opinion is good if it's backed with good arguments.**  "This is the best architecture style" or "I've always done it like this" are not good arguments and people will see through them.
-
-Just imagine you have a developer on your team that has an opinion on everything and always wants to do things their way, "because it's the best way". You would get tired of that very quickly. Don't be that person.
-
-# Build Those Habits!
-
-Wow, this article got longer than I expected. I hope it provided some inspiration on what to think about when growing your software developer career. I certainly haven't mastered all of those habits, but I'm trying to get a bit better every day.
-
-Pick the habit that resonates most with you and try to consciously apply it in your everyday work.
-
-Let me know  [on Twitter][5]  how it works out! I'd be thrilled to get your feedback.
+让我通过[Twitter][5]知道这些习惯是如何行之有效的!我很高兴能收到你的反馈。
 
 [1]: https://reflectoring.io/
 [2]: https://reflectoring.io/

@@ -1,37 +1,37 @@
 > -   原文地址：[A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/career-switchers-guide-to-your-dream-tech-job/)
 > -   原文作者：David Tian
-> -   译者：
+> -   译者：Tsukistar
 > -   校对者：
 
 ![A Career Switcher’s Guide to Landing Your Dream Tech Job](https://www.freecodecamp.org/news/content/images/size/w2000/2019/11/googleplex.jpg)
 
-In this article, I'll discuss some pro tips that'll help you ace your interviews at your dream companies and get the most out of your job offers.
+在这篇文章中，我将探讨一些能够帮助你在理想公司的面试中取得好成绩，并最大限度地获得工作机会的专业建议。
 
-# Introduction — From Wall Street to Googleplex
+# 自我介绍 — 从华尔街到谷歌总部
 
-On March 31, 2019, I was downsized by a startup hedge fund. Having been a quantitative software developer in the finance industry for the last 10+ years, I didn’t want another job doing more of the same. I set out to follow my passion and find my next job in Artificial Intelligence/Machine Learning/Deep Learning (AI/ML/DL).
+2019年3月31日，我我被一家初创对冲基金公司裁员了。在过去的10多年里，我一直是金融行业的一名定量软件开发人员，但我不想再做一份同样的工作。我开始追寻自己热切想去做的事，在人工智能/机器学习/深度学习(AI/ML/DL)领域寻找我的下一份工作。
 
-Over the next 6 months, I worked very hard towards that goal. By September 2019, I had multiple ML related on-site interviews and offers, including offers from both Google and Facebook.
+在接下来的六个月里，我我为了这个目标付出了非常大的努力。到2019年9月时，我已经有了多个与机器学习相关的现场面试和offer，包括来自谷歌和Facebook的offer。
 
-Here is how I did it. Hopefully it will encourage and help other potential career switchers to make this transition. Your reward for switching could be two fold, both intellectually and financially.
+这篇文章讲述了我是如何做到这件事的，希望它能鼓励和帮助其他潜在的想要换工作的人完成这种转变。通过这种转变，你可能会获得能力上和经济上的双重回报
 
 ![](https://miro.medium.com/max/3264/1*nhcfyWkKLu_q4mBTetSHyw.jpeg)
 
-Googleplex: Google’s Worldwide Headquarters
+Googleplex:谷歌的全球总部
 
-# Article Summary
+# 文章概览
 
-If you are short on time, here is the quick 5 step recipe that worked for me.
+如果你时间不够，这里有一个对我很有效的五大秘诀：
 
--   \***\*Curate\*\***: Work on a project that you are passionate about and showcase it online
--   \***\*Study\*\***: Practice Algorithms and Data Structures coding and System Design problems intensively
--   \***\*Apply\*\***: Leverage multiple channels to land interviews
--   \***\*Interview\*\***: Keep your cool during Phone and On-site Interviews
--   \***\*Negotiate\*\***: Know what you want as you negotiate offers and match with teams
+-   \***\*展示\*\***: 做一个你感兴趣的项目，并在网上展示出来
+-   \***\*学习\*\***: 集中练习算法与数据结构的程序设计问题和系统设计问题的解答方法
+-   \***\*应用\*\***: 利用多种渠道获得面试机会
+-   \***\*面试\*\***: 在电话面试和现场面试中保持冷静
+-   \***\*谈判\*\***: 在工作机会谈判与匹配团队时，知道自己想要什么
 
-As you can see, this is a very SIMPLE 5 steps recipe. However, completing each step takes a lot of HARD WORK. Read on for details.
+如你所见，这是一个非常常见的五步秘诀，然而完成每一步都需要付出很多努力。如果想了解更多细节的话，就继续读下去吧。
 
-# [About Me][1]
+# [关于我][1]
 
 Here is a little about me, because I think this guide would be most helpful for someone with a similar background as myself. Namely, I'm an experienced software engineer/developer in a non-tech industry who wished to switch to a top tech company on the west coast (Bay Area or Seattle). If you have no software engineering work experience, the recipe above should still work for you - you just have to work A LOT harder than someone with the coding experience.
 

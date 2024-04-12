@@ -9,7 +9,7 @@
 
 # 自我介绍 — 从华尔街到谷歌总部
 
-2019年3月31日，我我被一家初创对冲基金公司裁员了。在过去的10多年里，我一直是金融行业的一名定量软件开发人员，但我不想再做一份同样的工作。我开始追寻自己热切想去做的事，在人工智能/机器学习/深度学习(AI/ML/DL)领域寻找我的下一份工作。
+2019年3月31日，我我被一家初创对冲基金公司裁员了。在过去的10多年里，我一直是金融行业的一名量化软件开发人员，但我不想再做一份同样的工作。我开始追寻自己热切想去做的事，在人工智能/机器学习/深度学习(AI/ML/DL)领域寻找我的下一份工作。
 
 在接下来的六个月里，我我为了这个目标付出了非常大的努力。到2019年9月时，我已经有了多个与机器学习相关的现场面试和offer，包括来自谷歌和Facebook的offer。
 
@@ -33,21 +33,21 @@ Googleplex:谷歌的全球总部
 
 # [关于我][1]
 
-Here is a little about me, because I think this guide would be most helpful for someone with a similar background as myself. Namely, I'm an experienced software engineer/developer in a non-tech industry who wished to switch to a top tech company on the west coast (Bay Area or Seattle). If you have no software engineering work experience, the recipe above should still work for you - you just have to work A LOT harder than someone with the coding experience.
+这里有一些关于我的介绍，因为我认为这个指南对和我有相似背景的人最有帮助。也就是说，我是一名非科技行业经验丰富的软件工程师/开发人员，希望跳槽到西海岸(湾区或西雅图)的一家顶级科技公司。如果你没有软件工程的工作经验，上面的方法应该仍然适用于你，你只需要比那些有编程经验的人更加努力。
 
-I graduated from the University of Waterloo in Canada as a computer engineer. In my earlier career, I worked as a software engineer for Microsoft and Oracle. Then I switched into the Quantitative Finance industry after my MBA.
+我毕业于加拿大滑铁卢大学，是一名计算机工程师。在我早期的职业生涯中，我曾在微软和甲骨文担任软件工程师。MBA毕业后，我进入了量化金融行业。
 
-For the last 10+ years, I worked as a quantitative developer/analyst for Bank of America, UBS, Citadel, and a few smaller firms. But since 2016, when I first stumbled upon machine learning/deep learning, I fell in love with it. I knew I wanted a job in the AI/ML field eventually.
+在过去的10多年里，我曾在美国银行、瑞银集团、Citadel和一些较小的公司担任量化软件开发人员/量化分析师。但当我在2016年第一次偶然发现机器学习/深度学习时，我就爱上了它。我知道我最终想要在AI/ML领域找到一份工作。
 
-In April 2019, I started my full-time preparation for this career switch. And I will be moving to the Bay Area next week to join Google, one of the leaders in AI and ML.
+2019年4月，我开始为转行做全职准备。下周我将搬到旧金山湾区加入谷歌，它是人工智能和机器学习领域的领导者之一。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/11/image-4.png)
 
 [https://www.linkedin.com/in/dctian][2]
 
-# 5 Simple Steps to Success
+# 迈向成功的五个简单步骤
 
-## Step 1. Curate: Work on a Cool Project and Showcase it
+## 第一步，展示: 做一个你感兴趣的项目，并在网上展示出来
 
 In Feb 2019, my good friend, Igor, encouraged me to create a cool project and write about it. At the time, I didn’t have any good ideas, had never published anything online and didn’t know where to begin.
 
@@ -86,9 +86,9 @@ DeepPiCar’s Blog Series
 
 One thing to remember is that you HAVE TO enjoy what you are doing, instead of doing the project just to land a job. If you do have a passion for what you build, it will shine through when you talk to interviewers.
 
-## Step 2. Study Hard and Study Smart
+## 第二步：聪明和努力地学习
 
-### Algorithms and Data Structures
+### 算法与数据结构
 
 If there is one single skill you need to master for tech interviews, it is Algorithm and Data Structures (A&DS) coding skills. No matter which big or small tech firms you interview with, they will grill you on your coding skills, although most firms won’t care which programming language you use.
 
@@ -114,7 +114,7 @@ Note that most interviewers will give LC medium level questions, as it is pretty
 
 Also, I timed myself on each practice problem, as if I was in an interview. However, I used an IDE, with auto-completion and a debugger. You won’t get these in an actual interview, so I usually set a tighter time constraint when I practiced, at about 30 min/question, instead of 45 min. You may choose to mimic the real test environment by using a regular text editor only or even a whiteboard. It's up to your personal preference.
 
-### System Design
+### 系统设计
 
 The second most important skill you need to master is System Design. Usually, one on-site interview session will ask you to design a large scale distributed system, such as the Netflix video serving system, or WhatsApp instant-messaging system, or Instagram stories, and so on.
 
@@ -256,9 +256,9 @@ To help with this, I maintain a detailed interview log book. It's organized by i
 
 ![](https://miro.medium.com/max/528/1*LCR7hMBbjU3yzZGuze_sNw.png)
 
-# Step 4. Interviews
+# 第四步：面试
 
-## 4.1 Phone Interviews
+## 4.1 电话面试
 
 ### Initial HR Calls
 
@@ -327,7 +327,7 @@ Here are what I did to combat the above difficulties:
 
 Remember, at this point, you should NOT be focusing on Systems Design questions, as they are only asked during on-site interviews because it requires a whiteboard to draw diagrams.
 
-### Online Coding Tests
+### 在线编程能力测试
 
 ![](https://miro.medium.com/max/1386/0*ZQjHTN8X0xZw0A1J.jpg)
 
@@ -475,7 +475,7 @@ As I found out the hard way a few times, when I didn’t seek feedback, some int
 
 ![](https://miro.medium.com/max/400/0*VOO-nVdsgXIbDUr5.png)
 
-### Other On-site Interview Tips
+### 其他的在线面试技巧
 
 Some of these non-technical tips may be common sense, but I will list them as a reminder.
 
@@ -564,7 +564,7 @@ Even though you know your YoE, the company may interview you at a certain level 
 
 ![](https://miro.medium.com/max/1025/1*iSvZ60-cnf0qTPfwEGDHCw.png)
 
-### Know Your Market Value
+### 知道你自己在市场上的价值
 
 You can’t negotiate if you don’t know your prevailing market value. For years, companies have kept compensation information very secretive, so the candidates have suffered HUGE information disadvantage.
 
@@ -683,7 +683,7 @@ I have read, from many online posts, that this is a long and arduous process. As
 
 Had Google extended me a firm written offer first like Facebook, it would’ve been much less stressful, because I would've known for certain I was going to work for Google and all I had to do was to find a team. Luckily, things worked out for me as I was finally matched with a group of my choice, and the offer was approved by various committees shortly after that.
 
-### How to Select a Team
+### 如何选择一个团队
 
 ![](https://miro.medium.com/max/1540/0*QValU2nlepbet2yU)
 
@@ -711,7 +711,7 @@ I recommend bookmarking this article as you will need to refer back to it in the
 
 If you are going through interviews, please let me know which of my tips worked well or not so well by leaving a comment below, so that others will benefit as well. Please also suggest new tips in the comments as well. Thanks!
 
-## Resources
+## 一些使用到的资源
 
 Here is an appendix of resources (in alphabetical order) that I used in my job hunting process. Hope you will find them helpful as well.
 

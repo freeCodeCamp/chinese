@@ -11,7 +11,7 @@ January 10, 2024 / [#JavaScript][1]
 
 <!-- more -->
 
-# The JavaScript DOM Manipulation Handbook
+# JavaScript DOM 操作手册
 
 ![Benjamin Semah](https://www.freecodecamp.org/news/content/images/size/w60/2022/09/Benjamin-Semah.jpg)
 
@@ -19,21 +19,21 @@ January 10, 2024 / [#JavaScript][1]
 
   ![The JavaScript DOM Manipulation Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2024/01/The-JavaScript-DOM-Manipulation-Handbook-Cover.png)
 
-DOM Manipulation is one of the most exciting topics to learn about in JavaScript. This is because one of JavaScript's main uses is to make web pages interactive – and the Document Object Model (DOM) plays a major role in this.
+DOM 操作是在学习 Javascript 中最令人兴奋的主题之一。这是因为 Javascript 的主要用途之一就是使网页具有交互性，而 DOM 在这里起到了重要作用。
 
-The DOM is a powerful tool that allows you to interact with and manipulate the elements on a web page. And this handbook will help you understanding and become confident in working with it.
+DOM 是一个非常强大的工具，允许你与网页上的元素进行交互和操作。本手册将帮助你理解并自信地使用 DOM。
 
-You will begin by learning what the DOM is and what you can do with it. Then we'll dive into how to select, modyfy, and style DOM elements. You will also learn how to create new elements and add them to your web page.
+你将从 DOM 是什么以及 DOM 可以用来做什么开始学习，然后我们将深入学习如何选择、修改和为 DOM 元素设置样式，你也将学习如何创建一个新元素并添加到你的网页上。
 
-The handbook also cover topics like how to traverse the DOM what DOM events are, and includes some project ideas for practice.
+手册也包含了像是如何遍历 DOM、DOM 事件是什么，以及一些项目实践的想法等主题。
 
-Let's get started!
+让我们开始吧！
 
 ## Table of Contents
 
--   [What is the DOM?][3]
-    -   [What you can do with the DOM][4]
--   [How to Select DOM Elements][5]
+-   [DOM 是什么？][3]
+    -   [DOM 可以用来做什么][4]
+-   [如何选择 DOM 元素][5]
     -   [getElementById][6]
     -   [getElementsByClassName][7]
     -   [getElementsByTagName][8]
@@ -71,40 +71,40 @@ Let's get started!
 -   [JS DOM Manipulation Projects Ideas][40]
 -   [Conclusion][41]
 
-## What is the DOM?
+## DOM 是什么？
 
-DOM stands for Document Object Model. But what does that mean? Let's break it down.
+DOM 全称是 文档对象模型（Document Object Model），但是这是什么意思呢？我们分开来看看。
 
-The **Document** part refers to the webpage you see in the browser. Specifically, the HTML Document which handles the structure of the page's content. This includes the text, images, links, and other elements that make up the page.
+**文档**指的是你在浏览器上所看到的网页。具体来说，HTML 文档处理页面内容的结构，包括组成页面的文本、图片、链接和其他的元素。
 
-**Object** means the elements like images, headers, and paragraphs are treated like objects. Each object has its properties (like id, class, style) and methods. Using these properties and methods, you can manipulate the elements.
+**对象**指的是像 img, h1, p 这样的元素被视为对象。每一个对象都有属性（类似 id、 class、style）和方法，利用这些属性和方法你就可以操作这些元素。
 
-The **Model** in DOM means it's a representation or copy of the HTML document as a hierarchical tree. This tree includes all the elements. And it captures the parent-child relationships between them.
+**模型**指的是它是 HTML 文档的一种表示或副本，以分层树的形式呈现。这颗树包括了所有元素，并且有他们之间的父子关系。
 
-The DOM is always identical to the HTML document. Browsers ensure that they are in sync. So if something changes in the HTML, the DOM changes too, and vice versa.
+浏览器会确保 DOM 与 HTML 文档同步，使他们总是保持一致。因此，如果 HTML 中的某些内容发生变化，DOM 也会相应变化，反之亦然。
 
 ![JavaScript--2-](https://www.freecodecamp.org/news/content/images/2024/01/JavaScript--2-.png)
 
-A graphical representation of the HTML DOM tree
+HTML DOM 树
 
-At the top of the hierarchy is the Document object. It has only one child – the `html` element. The `html` element, also known as the root element, has two children, the `head` and `body` elements. And each of them also have their own children elements.
+在树的顶部是 Document 对象，它只有一个子元素 —— `html` 元素。`html` 元素也被称为根元素，它有 `head` 和 `body` 两个子元素，而每个子元素也都有它们自己的子元素。
 
-The parent-child relationship between the elements is what allows you to traverse or move between and select them. More on that later.
+元素之间的父子关系使你能够遍历、移动和选择它们。稍后会详细介绍。
 
-### What You Can Do With the DOM
+### DOM 可以用来做什么
 
-DOM manipulation allows developers to interact with the structure, style, and content of web pages. The following are some of the things you can do with the DOM:
+DOM 操作允许开发者与网页的结构、样式、内容交互。下面是一些你可以通过 DOM 用来做的事情：
 
--   Change and remove existing elements in the DOM.
--   Create and add new elements to the page.
--   Change the styles for elements.
--   Add event listeners to the elements to make them interactive.
+- 更改或移除 DOM 中存在的元素
+- 创建并添加新元素到网页
+- 更改一些元素的样式
+- 给元素添加事件监听器让它们可交互
 
-## How to Select DOM Elements
+## 如何选择 DOM 元素
 
-To do something with DOM elements, you first have to select or access the element in question. In this section, you will learn some common methods for selecting DOM elements.
+要对 DOM 元素执行操作，首先必须选择或访问相应的元素。在这一节，你将学到一些常见的方法去选择 DOM 元素。
 
-Let's use the following phonebook markup to show how the various DOM selector methods work.
+让我们使用下面通讯录片段来展示各种 DOM 选择器方法如何工作。
 
 ```HTML
   <h1 id="page-title">Phonebook</h1>
@@ -115,65 +115,66 @@ Let's use the following phonebook markup to show how the various DOM selector me
   <p class="work">Joan</p>
 ```
 
-Simple markup with a header element and four paragraphs
+一个标题元素和四个段落元素的简单代码片段
 
-The markup includes a header with an id of `page-title` and four paragraphs. The first two paragraphs both have a class of `family`, and the last two have a class of `work`.
+这段代码包括了一个 id 为 `page-title` 的 `h1` 标题和四个 `p` 段落，前两个段落都具有 `family` 类，而后两个具有 `work` 类。
+
 
 ### 1\. getElementById
 
-You use this method to select elements with an id attribute. Ids are unique identifiers. For example, if a header element has an id attribute with a value of "page-title", no other element on the page should also have an id with the same value.
+你可以使用这个方法去选择带有 id 属性的元素，id 是独一无二的标识符。例如，当一个 `h1` 元素有值为 `page-title` 的 id，页面上的其他元素不应该有相同值作为 id。
 
-This means anytime you use the `getElementById` method, you are going to select only one element from the DOM.
+这意味着每当你使用 `getElementById()` 方法，你将只会从 DOM 中选择一个元素。
 
-Let's look at an example:
+我们来看例子：
 
-The `h1` header has an id value of `page-title`. Here is how you can select it using the `getElementById` method:
+这个 `h1` 有值为 `page-title` 的 id，以下是使用 `getElementById()` 方法选择它的办法：
 
 ```javascript
 const titleElement = document.getElementById("page-title")
 console.log(titleElement)
 ```
 
-The example selects the header element and assigns it to the `titleElement` variable.
+这里例子选择了 `h1` 元素并赋值给了变量 `titleElement`。
 
 ![Screenshot-2023-12-02-at-9.01.01-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-9.01.01-AM.png)
 
-Result of accessing element with getElementById method.
+使用 `getElementById()` 方法访问元素的结果
 
-If there's no element in the DOM with the given id, the `getElementById()` method will return `null`.
+如果 DOM 中没有给定 id 的元素，则 `getElementById()` 将返回 `null`。
 
 ### 2\. getElementsByClassName
 
-You can use this method to select more than one object. This method takes in the value of a class attribute as an argument and selects all elements in the DOM that has the given class. Unlike ids, you can give the same class value for different HTML elements.
+你可以使用这个方法选择超过一个对象。这个方法获取 class 属性的值作为参数在 DOM 中选择给定 class 的所有元素。与 id 不一样，你可以在不同的 HTML 元素上给一个相同的 class。
 
-Here's an example:
+看这个例子：
 
 ```javascript
 const famContacts = document.getElementsByClassName("family")
 console.log(famContacts)
 ```
 
-This returns an HTML collection of all elements with the given class. The log statement will print the following in the console:
+这返回了给定 class 的所有元素的 HTML 集合，控制台上如下所示：
 
 ![Screenshot-2023-12-01-at-10.35.51-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-01-at-10.35.51-AM.png)
 
-The `getElementsByClassName()` method returns an HTML collection.
+`getElementsByClassName()` 方法返回一个 HTML 集合
 
-Note: The HTML collection looks like an array, but it is not. You can access the elements using bracket notation just as you would with an array – but you cannot apply array methods like `map`, `filter`, and `forEach` on it.
+注意：HTML 集合看起来像是数组，但实际上不是。你可以像数组一样用索引的方式访问元素，但是不能使用像是 `map`、`filter` 或是 `forEach` 等数组方法。
 
 ```javascript
 console.log(famContacts[0]) 
 ```
 
-This will get the first element in the HTML collection, which is the paragraph with the name Marie.
+这样会获得 HTML 集合中的第一个元素，也就是名字为 Marie 的段落。
 
 ![Screenshot-2023-12-02-at-9.03.35-AM-1](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-9.03.35-AM-1.png)
 
-Result of accessing HTMLCollection element with bracket notation.
+使用索引访问 HTML 集合中的元素
 
-But what if you wanted to loop through all the elements in the `famContacts` HTML collection? You'd first need to convert the HTML collection into an array. Then you could use any of the array methods.
+但是如果你想通过循环遍历 `famContacts` HTML 集合中的所有元素呢？你首先需要将 HTML 集合转换成数组，然后你就可以任意使用数组方法了。
 
-A simple way to create an array from the HTML collection is to use the spread operator, like this:
+一个简单的办法从 HTML 集合创建数组就是使用展开语法，像是这样：
 
 ```javascript
 let famContactsArray = [...famContacts]
@@ -183,21 +184,21 @@ famContactsArray.forEach(element => console.log(element))
 
 ![Screenshot-2023-12-02-at-9.06.48-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-9.06.48-AM.png)
 
-A result of logging all elements in the HTMLCollection.
+打印 HTML 集合中所有元素
 
-Using the `forEach` method, you can access each of the items in the `famContactsArray`. The browser will throw an error if you try to apply an array method like `map` to the HTML collection without first creating an array from it.
+使用 `forEach` 方法，你可以访问 `famContactsArray` 中每一个子项。如果你没有从 HTML 集合创建一个数组，而试着将数组方法直接用于它浏览器将会抛出一个错误。
 
 ![Screenshot-2023-12-01-at-11.57.27-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-01-at-11.57.27-AM.png)
 
-Error message when you use array methods on an HTMLCollection.
+当你将数组方法直接用于 HTML 集合的错误信息
 
 ### 3\. getElementsByTagName
 
-This method will select elements using their tag name. For example, `getElementByTagName('p')` will select all paragraphs on the page.
+这个方法将通过标签名来选择元素。例如：`getElementByTagName('p')` 将选择页面中所有 `p` 标签。
 
-Like `getElementsByClassName`, this method also returns an HTML collection of the selected elements.
+像是 `getElementsByClassName()`，这个方法也返回一个被选择元素的 HTML 集合。
 
-Here's an example:
+看这个例子:
 
 ```javascript
 const allContacts = document.getElementsByTagName('p')
@@ -206,9 +207,9 @@ console.log(allContacts)
 
 ![Screenshot-2023-12-02-at-8.39.36-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-8.39.36-AM.png)
 
-An HTMLCollection containing all paragraph elements.
+一个包含所有 `p` 标签的 HTML 集合
 
-You can create an array from the HTML collection and use any of the array methods on it.
+你可以从 HTML 集合创建一个数组，然后使用任意数组方法。
 
 ```javascript
 let allContactsArray = [...allContacts]
@@ -218,17 +219,20 @@ allContactsArray.map(element => console.log(element))
 
 ![Screenshot-2023-12-02-at-9.08.26-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-9.08.26-AM.png)
 
-Result of using the map method on `allContactsArray`.
+在 `allContactsArray` 使用 `map()` 方法
+
+
+> 译者注：由于 `map()` 创建一个新数组，在没有使用返回的数组的情况下调用它是不恰当的；应该使用 `forEach` 或 `for...of` 作为代替。详见 [`Array.prototype.map()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/map#%E6%8F%8F%E8%BF%B0)。
 
 ### 4\. querySelector
 
-You can use this method to select any HTML element in the DOM. It returns only one element: the first element that matches the given selector.
+你可以使用这个方法在 DOM 中选择任意的 HTML 元素，它仅返回一个元素：第一个匹配选择器的元素。
 
-The `querySelector` method works like how CSS selectors work.
+`querySelector()` 用法类似 CSS 选择器。
 
-For example, what do you do when you want to select an element with an id? You use the hash `#` symbol. How about when you want to select elements with a class? You put a dot `.` in front of the class name.
+举个例子，当你想要选择一个具有 id 的元素时，你会怎么做？用 `#id`。那当你想要选择具有 class 的元素呢？你会用 `.class`。
 
-Here's an example:
+看这个例子:
 
 ```javascript
 const firstWorkContact = document.querySelector('.work')
@@ -237,11 +241,11 @@ console.log(firstWorkContact)
 
 ![Screenshot-2023-12-02-at-11.38.12-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-11.38.12-AM.png)
 
-An example of using the `querySelector` method.
+使用 `querySelector()` 的例子
 
-The example above returns only the first element with a class of `work` and ignores the rest.
+上边这个例子只获取到了一个具有 `work` 类的元素，其他的被忽略了。
 
-Let's see another example to show how querySelector works like CSS selectors. The following is a `div` element with four buttons:
+让我们再看一个像是 CSS 选择器一样使用 `querySelector()` 的例子。下方 `div` 元素包含了 4 个 `button`。
 
 ```HTML
 <div>
@@ -252,7 +256,7 @@ Let's see another example to show how querySelector works like CSS selectors. Th
 </div>
 ```
 
-Assuming you wanted to select the third button, you could use `querySelector` like the one below. The code uses the CSS `nth-child` selector to get the third button inside the div.
+假设你想要选择第三个按钮，你可以像下面那样使用 `querySelector()`。代码中使用了 CSS `nth-child` 选择器去获取 `div` 中的第三个 `button`。
 
 ```javascript
 const thirdBtn = document.querySelector('div button:nth-child(3)')
@@ -261,15 +265,15 @@ console.log(thirdBtn)
 
 ![Screenshot-2023-12-02-at-2.42.48-PM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-2.42.48-PM.png)
 
-Result of selecting the third button with `querySelector` method.
+使用 `querySelector()` 获取第三个按钮的结果
 
-But what if you want to select all four button elements and not only the first one? Then you could use the `querySelectorAll` method instead.
+但如果你想选择所有四个按钮而不只是第一个呢？你应该使用 `querySelectorAll()` 代替。
 
 ### 5\. querySelectorAll
 
-Like the `querySelector` method, `querySelectorAll` also selects HTML elements using CSS selectors. The difference is that it returns all elements that match the selector instead of returning only the first one.
+类似 `querySelector()`，`querySelectorAll` 也是使用 CSS 选择器去选择 HTML 元素。不同的是它返回匹配选择器的所有元素，而不仅仅是第一个。
 
-Using the previous example, let's select all the buttons with `querySelectorAll`.
+让我们使用 `querySelectorAll()` 选择上一个示例中所有的按钮。
 
 ```javascript
 const allBtns = document.querySelectorAll('button')
@@ -278,9 +282,9 @@ console.log(allBtns)
 
 ![Screenshot-2023-12-02-at-3.04.18-PM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-3.04.18-PM.png)
 
-The `querySelectorAll` method returns a NodeList of selected elements.
+`querySelectorAll()` 返回一个被选择元素组成的 NodeList。
 
-Note: `querySelectorAll` returns a `NodeList`. A `NodeList` is slightly different from an HTML collection. You don't need to convert it to an array to apply a method like `forEach` on it.
+注意：`querySelectorAll()` 返回一个 `NodeList`。`NodeList` 与 HTML 集合有点不同，你不需要转换成数组就可以使用 `forEach()` 方法。
 
 ```javascript
 allBtns.forEach(btn => console.log(btn))
@@ -288,11 +292,11 @@ allBtns.forEach(btn => console.log(btn))
 
 ![Screenshot-2023-12-02-at-3.00.19-PM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-02-at-3.00.19-PM.png)
 
-Result of using `forEach` method on the NodeList.
+在 NodeList 使用 `forEach()` 方法
 
-But you still cannot apply array methods like `map`, `filter`, and others on a NodeList. You will need to first create an array from it.
+但是你仍然不能在 NodeList 使用 `map`、`filter` 等这类数组方法，如果你需要的话应该创建一个数组。
 
-You can read this [freeCodeCamp article on the difference between HTML collection and NodeList][42] to learn more.
+你可以阅读这篇[freeCodeCamp关于 HTML 集合和 NodeList 之间区别的文章][42]来了解更多。
 
 ## How to Change the Content of DOM Elements
 
@@ -1331,9 +1335,9 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 
 [1]: /news/tag/javascript/
 [2]: /news/author/benjamin-semah/
-[3]: #what-is-the-dom
-[4]: #what-you-can-do-with-the-dom
-[5]: #how-to-select-dom-elements
+[3]: #DOM-是什么
+[4]: #DOM-可以用来做什么
+[5]: #如何选择-DOM-元素
 [6]: #1-getelementbyid
 [7]: #2-getelementsbyclassname
 [8]: #3-getelementsbytagname

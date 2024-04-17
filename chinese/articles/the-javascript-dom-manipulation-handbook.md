@@ -3,7 +3,7 @@ title: The JavaScript DOM Manipulation Handbook
 author: Benjamin Semah
 authorURL: https://www.freecodecamp.org/news/author/benjamin-semah/
 originalURL: https://www.freecodecamp.org/news/the-javascript-dom-manipulation-handbook/
-translator: ""
+translator: "Luoming"
 reviewer: ""
 ---
 

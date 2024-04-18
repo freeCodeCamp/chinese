@@ -713,15 +713,15 @@ If you are going through interviews, please let me know which of my tips worked 
 
 ## 一些使用到的资源
 
-Here is an appendix of resources (in alphabetical order) that I used in my job hunting process. Hope you will find them helpful as well.
+以下是我在求职过程中使用过的资源的附录(按字母顺序排列)。希望你也会发现它们对你有帮助。
 
-[\***\*Blind\*\***][46]: This is an app that allows employees of varies companies (mostly tech) to post questions and answers anonymously. People generally discuss career decisions, company culture, interviews, and compensation, etc.
+[\***\*Blind\*\***][46]: 这是一个允许不同公司(主要是科技公司)的员工匿名发布问题和答案的应用程序。人们通常会讨论职业决策、公司文化、面试和薪酬等问题。
 
-I found this platform to be both good and bad. It is good because you get more candid answers/responses and sometimes inside information. It is bad because some people write offensive responses due to the anonymity, and the environment can be toxic at times. You have been warned.
+我发现这个平台有好有坏。好的地方是你会得到更坦诚的回答/回应，有时还会得到内幕消息。坏的地方是有些人会因为匿名而写下冒犯性的回复，这样的环境有时可能是有害的。我已经警告过你了。
 
 ![](https://miro.medium.com/max/730/0*r7S6egJR6P9O9WP7)
 
-[\***\*Coursera\*\***][47]: Learn about the subjects you are passionate about. It is free or for a very nominal fee. I took both ML and DL courses there.
+[\***\*Coursera\*\***][47]: 学习你感兴趣的科目。它是免费的，或者只收取象征性的费用。我在那里学了ML和DL课程。
 
 ![](https://miro.medium.com/max/512/0*EcegqF8UG1uE9qGO)
 
@@ -770,20 +770,20 @@ I found this platform to be both good and bad. It is good because you get more c
 
 [\***\*Medium**/**Blog Sites\*\***][58]:
 
--   Read tutorials and how-tos to help with your personal projects
--   Blog on Medium or elsewhere to showcase your own personal projects
+- 阅读教程和操作指南来帮助你的个人项目
+- 在媒体或其他地方写博客，展示你自己的个人项目
 
 ![](https://miro.medium.com/max/590/1*YNzUC78SPulsAznKTeUyNw.png)
 
-[\***\*TripleByte\*\***][59]: Skip the phone interviews and directly go to on-sites if you pass their tech screening. See detailed description above
+[\***\*TripleByte\*\***][59]: 如果你通过了他们的技术筛选，你就可以跳过电话面试，直接去现场面试。详情请参阅上面的详细说明。
 
 [\***\*YouTube\*\***][60]
 
 ![](https://miro.medium.com/max/491/1*lVrmEfw_VMiq51OoZNKVkw.png)
 
--   Watch tutorials and how-tos when you work on your personal projects
--   Watch System Design and algorithm videos
--   CAUTION: Do NOT get distracted and watch hours of videos for fun during your interview prep time!
+- 当你在做个人项目时，观看教程和操作指南
+- 观看系统设计和算法视频
+- 警告:不要在准备面试期间分心，看几个小时的视频摸鱼取乐!
 
 [1]: https://www.linkedin.com/in/dctian
 [2]: https://www.linkedin.com/in/dctian

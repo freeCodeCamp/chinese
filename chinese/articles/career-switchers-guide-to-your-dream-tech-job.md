@@ -13,7 +13,7 @@
 
 在接下来的六个月里，我我为了这个目标付出了非常大的努力。到2019年9月时，我已经有了多个与机器学习相关的现场面试和offer，包括来自谷歌和Facebook的offer。
 
-这篇文章讲述了我是如何做到这件事的，希望它能鼓励和帮助其他潜在的想要换工作的人完成这种转变。通过这种转变，你可能会获得能力上和经济上的双重回报
+这篇文章讲述了我是如何做到这件事的，希望它能鼓励和帮助其他潜在的想要换工作的人完成这种转变。通过这种转变，你可能会获得能力上和经济上的双重回报。
 
 ![](https://miro.medium.com/max/3264/1*nhcfyWkKLu_q4mBTetSHyw.jpeg)
 
@@ -49,17 +49,17 @@ Googleplex:谷歌的全球总部
 
 ## 第一步，展示: 做一个你感兴趣的项目，并在网上展示出来
 
-In Feb 2019, my good friend, Igor, encouraged me to create a cool project and write about it. At the time, I didn’t have any good ideas, had never published anything online and didn’t know where to begin.
+2019年2月，我最好的朋友Igor鼓励我创造一个很酷的项目并写些东西记录它。那时候我没有任何好的想法，同时我从未在网上发表过任何东西，也不知道怎么开始做这些事。
 
-But in early April, while I was vacationing with my family in Mexico, one night I suddenly had a revelation that I wanted to build a self-driving car. Given that I had no prior experience with robotics or electronics, I set out to build a [Deep Learning/Self-Driving Robotic Car, DeepPiCar][3], that could run in my living room.
+但是在四月初，当我在墨西哥和我的家庭一起度假时，某天晚上我突然有一个“我想造一辆自动驾驶汽车”的想法。考虑到我之前没有机器人技术或电子技术方面的经验，我决定先开始建造一辆可以在我的客厅里跑的[深度学习/自动驾驶机器人汽车，DeepPiCar][3]。
 
-One month later, after successfully built the self-driving car, I started to write a 6 part blog post on Towards Data Science to teach others how to build one. Within weeks, my blogs received over 10,000 views, and the reaction from readers worldwide was overwhelming. I felt my 2 months hard work — one month to build the car, and another month to write the blogs — was well worth it.
+一个月后，当我成功造出来了这辆自动驾驶汽车时，我开始在“[Towards Data Science](https://towardsdatascience.com/)”上写一篇一共六个部分的博文来教其他人如何造一辆这样的车。我的博文在几周的时间内获得了超过10000次的阅读量，世界各地的读者对这篇文章的回应非常热烈。我感觉我两周的努力（一周用来造车，一周用来写博文）都是值得的。
 
 ![](https://miro.medium.com/max/1776/0*PqGFISPKqUjwc_Ki.jpeg)
 
-DeepPiCar running in my living room
+在我的客厅里跑的DeepPiCar
 
-However, I did not realize its full impact on my professional career until my interviews and offer team-matching calls, when interviewers asked me “Why are you looking to switch from your current industry?” I was ready with talking points!
+然而，直到我参加面试和获得团队匹配的要求前，我一直没有意识到这件事对我的职业生涯产生了全面的影响。当面试官问我:“你为什么想从目前的行业转行?”时，我已经准备好了回答这个问题的话题!
 
 Not only was I able to tell them how passionate I feel about AI/ML, but when I pulled out my car (yes, the ACTUAL robotics car) from my backpack and put it in the hands of the interviewers, I could see the excitement from their eyes! Many of them even said they would love to build such a car with their kids. I then told them that I had published the full step-by-step instructions with source code online (with links in my resume) for them to follow. I was pretty sure they wouldn't file my resume in the recycle bins afterward. ;-)
 

@@ -19,7 +19,7 @@ January 10, 2024 / [#JavaScript][1]
 
   ![The JavaScript DOM Manipulation Handbook](https://www.freecodecamp.org/news/content/images/size/w2000/2024/01/The-JavaScript-DOM-Manipulation-Handbook-Cover.png)
 
-DOM 操作是在学习 Javascript 中最令人兴奋的主题之一。这是因为 Javascript 的主要用途之一就是使网页具有交互性，而 DOM 在这里起到了重要作用。
+DOM 操作是在学习 JavaScript 中最令人兴奋的主题之一。这是因为 JavaScript 的主要用途之一就是使网页具有交互性，而 DOM 在这里起到了重要作用。
 
 DOM 是一个非常强大的工具，允许你与网页上的元素进行交互和操作。本手册将帮助你理解并自信地使用 DOM。
 
@@ -39,18 +39,18 @@ DOM 是一个非常强大的工具，允许你与网页上的元素进行交互�
     -   [getElementsByTagName][8]
     -   [querySelector][9]
     -   [querySelectorAll][10]
--   [How to Change the Content of DOM Elements][11]
-    -   [The innerHTML Property][12]
-    -   [Security Risks with innerHTML][13]
-    -   [The innerText and textContent Properties][14]
--   [How to Work with Attributes of DOM Elements][15]
-    -   [The getAttribute Method][16]
-    -   [The setAttribute Method][17]
-    -   [The removeAttribute Method][18]
-    -   [The hasAttribute Method][19]
--   [How to Change the Styles on DOM Elements][20]
-    -   [Setting Styles with the .style Property][21]
-    -   [Setting Styles with Classes][22]
+-   [如何更改 DOM 元素的内容][11]
+    -   [`innerHTML` 属性][12]
+    -   [使用 `innerHTML` 的安全风险][13]
+    -   [`innerText` 和 `textContent` 属性][14]
+-   [如何处理 DOM 元素的属性][15]
+    -   [`getAttribute()` 方法][16]
+    -   [`setAttribute()` 方法][17]
+    -   [`removeAttribute()` 方法][18]
+    -   [`hasAttribute()` 方法][19]
+-   [如何更改 DOM 的样式][20]
+    -   [使用 `.style` 属性设置样式][21]
+    -   [使用 `class` 设置样式][22]
 -   [How to Traverse the DOM][23]
     -   [Difference Between a Node and an Element][24]
     -   [Selecting a Parent with parentNode vs parentElement][25]
@@ -73,7 +73,7 @@ DOM 是一个非常强大的工具，允许你与网页上的元素进行交互�
 
 ## DOM 是什么？
 
-DOM 全称是 文档对象模型（Document Object Model），但是这是什么意思呢？我们分开来看看。
+DOM 全称是文档对象模型（Document Object Model），但是这是什么意思呢？我们分开来看看。
 
 **文档**指的是你在浏览器上所看到的网页。具体来说，HTML 文档处理页面内容的结构，包括组成页面的文本、图片、链接和其他的元素。
 
@@ -298,19 +298,19 @@ allBtns.forEach(btn => console.log(btn))
 
 你可以阅读这篇[freeCodeCamp关于 HTML 集合和 NodeList 之间区别的文章][42]来了解更多。
 
-## How to Change the Content of DOM Elements
+## 如何更改 DOM 元素的内容
 
-So far you've learned about different ways to select DOM elements. But that is only the beginning. Now, let's see how you can manipulate the DOM to change the content of a webpage.
+目前为止，你已经学到了几种不同的方法去选择 DOM 元素，但这仅仅是开始。现在，让我们来看看如何操作 DOM 去更改网页的内容。
 
-The first thing you need to do is to select the element. You can do that using any of the methods you learned from the previous section.
+你需要做的第一件事就是选择元素，你可以用上一小节学到的任一方法。
 
-After selecting the element, there are several methods you can use to add or update the content.
+在选择元素后，你可以使用这几种方法去添加或更新内容。
 
-### The `innerHTML` Property
+### `innerHTML` 属性
 
-This is a method that allows you to read or update both the structure and content and structure of elements. Let's see an example of how you can use the `innerHTML` method.
+这是一种可以让你读取、更新元素的内容或结构的方法。让我们看看应该如何使用 `innerHTML` 方法。
 
-The following is some markup of three paragraphs, each with an id.
+下面是一个包含三个 `p` 标签的代码片段，每个 `p` 标签都有一个 id。
 
 ```HTML
   <p id="topic">JS array methods</p>
@@ -320,9 +320,9 @@ The following is some markup of three paragraphs, each with an id.
 
 ![Screenshot-2023-12-03-at-8.17.55-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-8.17.55-AM.png)
 
-Simple markup with three paragraph elements
+三个 `p` 标签的代码片段
 
-You can read or get the content of the any of the paragraphs using `innerHTML`. For example, let's get the content of the first paragraph.
+你可以使用 `innerHTML` 获取任一段落的内容。举个例子，我们来获取第一个段落的内容。
 
 ```javascript
 const topicElement = document.querySelector('#topic')
@@ -331,9 +331,9 @@ console.log(topicElement.innerHTML)
 
 ![Screenshot-2023-12-03-at-8.10.36-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-8.10.36-AM.png)
 
-Log statement of the `innerHTML` of the `topicElement`
+`topicElement` 的 `innerHTML` 的输出
 
-Now, let's say you want to update the topic from "JS array methods" to "JavaScript array methods". You can do that by assigning the new text to the `innerHTML` of the element.
+现在，假设你想将 topic 内容从“JS array methods”更改为“JavaScript array methods”。你可以通过将新文本赋值给元素的 innerHTML 来实现。
 
 ```javascript
 const topicElement = document.querySelector('#topic')
@@ -342,9 +342,9 @@ topicElement.innerHTML = "JavaScript array methods"
 
 ![Screenshot-2023-12-03-at-8.16.59-AM-1](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-8.16.59-AM-1.png)
 
-The topic is updated from "JS Array methods" to "JavaScript array methods"
+topic 内容从 “JS Array methods” 更新到 “JavaScript array methods”
 
-With `innerHTML`, you can change more than just the content. You can also change the HTML structure of the element. For example, if you want to make the word "JavaScript" bold, you could do this:
+使用 `innerHTML`，你可以更改的不只是内容，你也可以更改元素的 HTML 结构。例如，如果你想让 “JavaScript” 加粗，你可以这样做：
 
 ```javascript
 topicElement.innerHTML = "<b>JavaScript</b> array methods"
@@ -352,21 +352,21 @@ topicElement.innerHTML = "<b>JavaScript</b> array methods"
 
 ![Screenshot-2023-12-03-at-8.27.45-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-8.27.45-AM.png)
 
-The word "JavaScript" is made bold using innerHTML
+“JavaScript” 被使用 `innerHTML` 加粗了
 
-### Security Risks With `innerHTML`
+### 使用 `innerHTML` 的安全风险
 
-Using the `innerHTML` poses potential security risks. An example is [cross-site scripting (XSS) attacks][43].
+使用 `innerHTML` 会带来潜在的安全风险，例如：[XSS（Cross-site scripting，跨站脚本）攻击][43]。
 
-If the content you're inserting comes from user input or any untrusted source, be sure to validate and sanitize it before using `innerHTML` to prevent XSS attacks. You can use a library like [DOMPurify][44] to do this.
+如果插入的内容来自用户输入或任何不受信任的来源，请确保在使用 `innerHTML` 前做好校验或清洗，以防止 XSS 攻击。你可以使用类似 [DOMPurify][44] 的库来实现这一点。
 
-Also, if you are working with plain text content, consider using methods like `innerText` and `textContent`.
+此外，如果你处理纯文本内容，可以考虑使用 `innerText` 和 `textContent`。
 
-### The `innerText` and `textContent` Properties
+### `innerText` 和 `textContent` 属性
 
-Both `innerText` and `textContent` ignore HTML tags and treat them as part of a string. You can use both methods to read or update the text of DOM elements.
+`innerText` 和 `textContent` 忽略 HTML 标签，会把他们当作字符串的一部分。你可以使用这两种方法去读取或更新 DOM 元素的文本。
 
-A key difference between the two is in how they treat the text. Using `innerText` returns the text as it appears on the screen. And using `textContent` returns text as it appears in the markup. Let's see an example below.
+这两种方法的关键不同在于他们如何对待文本，使用 `innerText` 返回的文本会像是在屏幕一样，使用 `textContent` 返回的文本像是在标签里一样，来看下面的例子。
 
 ```HTML
 <p>Key =<span style="display: none;">     ABC123<span></p>
@@ -374,11 +374,11 @@ A key difference between the two is in how they treat the text. Using `innerText
 
 ![Screenshot-2023-12-03-at-10.03.41-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-10.03.41-AM.png)
 
-A paragraph element with the some text and a hidden span element inside
+一个 `p` 标签中有一些文本和一个隐藏的 `span` 标签
 
-The example includes a paragraph element. Inside the paragraph is a span that contains a key. The key does not appear on screen because its inline style is set to a display of none.
+这个例子中包括了一个 `p` 标签，`p` 标签中 `span` 标签包含了 Key 的值，因为 `span` 的内联样式，所以 Key 值不显示在屏幕上。
 
-Now, let's select the paragraph and print both the `innerText` value and `textContent` value to see the difference.
+现在，让我们选择这个 `p` 标签，然后打印 `innerText`、`textContent` 这两个值，看看有什么不同。
 
 ```javascript
 const paragraph = document.querySelector('p');
@@ -389,11 +389,11 @@ console.log("textContent: ", paragraph.textContent)
 
 ![Screenshot-2023-12-03-at-10.06.11-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-10.06.11-AM.png)
 
-Result of log statement for `innerText` and `textContent`.
+`innerText` 和 `textContent` 的打印结果
 
-Note how `innerText` returns the text as it appears on the screen (without the value of the key which is hidden with CSS). And note how `textContent` returns the text including hidden elements and whitespaces.
+请注意 `innerText` 返回的文本是在屏幕上显示的样子（不包含使用 CSS 隐藏的 Key 值），`textContent` 返回的文本包括了隐藏的元素和空格。
 
-Let's see another example for adding text to an element. The following code includes two paragraphs, each with bold text and an empty span, as well as a horizontal line between them.
+让我们再看另一个添加文本到元素的例子。下面的代码包括两个 `p` 标签，每个 `p` 标签都有一个 `b` 标签和一个空的 `span` 标签，以及它们之间有一个 `hr` 标签。
 
 ```HTML
   <p>
@@ -411,9 +411,9 @@ Let's see another example for adding text to an element. The following code incl
 
 ![Screenshot-2023-12-03-at-10.48.11-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-10.48.11-AM.png)
 
-Example to demo the `innerText` and `textContent` properties
+演示 `innerText` 和 `textContent` 属性的示例
 
-Now, let's select the two span elements and add the same text to them. This will help you better understand the difference between `innerText` and `textContent`.
+现在，让我们选择两个 `span` 元素，并在其中添加相同的文本。这将帮助你更好地理解 `innerText` 和 `textContent` 之间的区别。
 
 ```javascript
 const example1 = document.querySelector('#inner-text');
@@ -430,46 +430,46 @@ example1.innerText = address;
 example2.textContent = address;
 ```
 
-The code gives the same variable `address` to the two examples. The first uses `innerText` and the second uses `textContent`. See the results below:
+这段代码给两个示例提供了相同的变量 `address`，第一个使用了 `innerText`，第二个使用了 `textContent`。请看下面的结果：
 
 ![Screenshot-2023-12-03-at-10.46.46-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-03-at-10.46.46-AM.png)
 
-Result of updating content with `innerText` and `textContent`.
+使用 `innerText` 和 `textContent` 更新内容的结果
 
-Notice how `innerText` uses the line breaks but the `textContent` example doesn't.
+请注意 `innerText` 换行了，而 `textContent` 却没有。
 
-Another key difference between the two methods is how they behave when used inside loops. `innerText` can be slower than `textContent` when dealing with bulk operations or frequent updates in a loop.
+两个方法的另一个关键不同是它们在内部循环的行为，当在一个循环中处理批量操作或频繁更新时 `innerText` 比 `textContent` 会慢一些。
 
-[Read this freeCodeCamp article][45] to learn more about the difference between `innerHTML`, `innerText`, and `textContent`.
+看看[这篇 freeCodeCamp 文章][45]可以了解更多 `innerHTML`、`innerText` 和 `textContent` 之间的不同。
 
-## How to Work with Attributes of DOM Elements
+## 如何处理 DOM 元素的属性
 
-[HTML attributes][46] provide useful information about HTML elements. These attributes are always included in the opening tag of the element. An attribute is made up of a name and a value (though there are exceptions where only a name is present).
+[HTML 属性][46] 提供了有关 HTML 元素的有用信息。这些属性总是包含在元素的开始标签内，属性由一个 name 和 value 组成（但也有只出现 name 的例外情况）。
 
-As the browser generates the DOM based on the HTML structure, it translates these attributes into dynamic properties of the DOM objects.
+浏览器根据 HTML 结构生成 DOM 时，会将这些属性转化为 DOM 对象的动态属性。
 
-Here's an example:
+看这个例子：
 
-Assume there's a button in the HTML document with the following attributes:
+这个 HTML 中有一个按钮，按钮有一些属性：
 
 ```HTML
 <button id="myBtn" type="submit">Click Here</button>
 ```
 
-For this example, the browser will create an `HTMLButtonElement` object in the DOM. And the object will have properties matching the attributes.
+对于这个例子，浏览器会创建一个 `HTMLButtonElement` 对象到 DOM 中，并且这个对象的属性也互相匹配。
 
--   `HTMLButtonElement.id` with a value of `myBtn`.
--   `HTMLButtonElement.type` with a value of `submit`.
+- `HTMLButtonElement.id` 的值是 `myBtn`
+- `HTMLButtonElement.type` 的值是 `submit`
 
-To interact with and manipulate these attributes using JavaScript, you can use methods like `getAttribute` and `setAttribute` to directly access the properties.
+要使用 JavaScript 与这些属性进行交互和操作，可以使用诸如 `getAttribute()` 和 `setAttribute()` 之类的方法直接访问这些属性。
 
-### The `getAttribute` Method
+### `getAttribute()` 方法
 
-Like the name suggests, you can use this method to get the value of an existing attribute on an element.
+顾名思义，你可以使用这个方法去获取元素上已经存在的属性。
 
-It accepts an argument (the name of the attribute) and returns the value of the attribute. If the attribute you passed to it as an argument does not exist on the element, the method will return `null`.
+它接受一个参数（属性名）返回属性值，如果你给的属性值在这个元素中不存在，这个方法会返回 `null`。
 
-Here's an example:
+看这个例子：
 
 ```HTML
 <img src="image.jpg" alt="An example image">
@@ -482,15 +482,15 @@ console.log(imageElement.getAttribute('src'))
 
 ![Screenshot-2023-12-09-at-9.00.25-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-09-at-9.00.25-AM.png)
 
-The `getAttribute` method is used to get the value of the `src` attribute.
+`getAttribute()` 用来获取 `src` 属性值
 
-Using the `getAttribute` method is the above example, you can get the value of the `src` attribute for the image element.
+在上面的例子中，使用 `getAttribute()` 方法，你可以获取 `img` 标签的 `src` 属性值。
 
-### The `setAttribute` Method
+### `setAttribute()` 方法
 
-This is used to set or change the attribute of an element. The method takes in two arguments. The first argument is the name of attribute you want to change, and the second is the new value you want to give the attribute.
+这个方法用来设置、更改元素的属性。它接受两个参数，第一个参数是你想要更改的属性名，第二个参数是你想要设定的新值。
 
-Here's an example:
+看这个例子：
 
 ```HTML
 <img src="image.jpg" alt="An example image">
@@ -506,11 +506,11 @@ console.log("AFTER:", imageElement.getAttribute('src'))
 
 ![Screenshot-2023-12-09-at-9.27.14-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-09-at-9.27.14-AM.png)
 
-The `setAttribute` method is used to update the value of the `src` attribute.
+使用 `setAttribute()` 更新 `src` 属性值
 
-This code example logs the value of the `src` attribute before and after using `setAttribute` to change it from `image.jpg` to `new-image.jpg`.
+这个例子先打印了 `src` 属性值，然后使用 `setAttribute()` 从 `image.jpg` 到 `new-image.jpg` 更改了值。
 
-When you pass an argument to the `setAttribute` method and that attribute doesn't exit on the element, it will create a new attribute. For example, you can add a height property to the image element like so:
+当你给 `setAttribute()` 传递了一个在这个元素中不存在的属性作为参数时，它将创建一个新属性。例如，你可以添加一个 height 属性给 `img` 标签：
 
 ```javascript
 const imageElement = document.querySelector('img')
@@ -522,23 +522,23 @@ console.log("AFTER:", imageElement.getAttribute('height'))
 
 ![Screenshot-2023-12-09-at-9.32.53-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-09-at-9.32.53-AM.png)
 
-An example of adding a new height attribute to the image element.
+给 `img` 添加 height 属性的例子
 
-The first log statement returns `null` because the height attribute was non-existent. But after setting it with the `setAttribute` method, the second log statement returns the correct value of the height.
+第一个打印语句返回 `null` 是因为 height 属性不存在，但是在我们使用 `setAttribute()` 设置过后，第二个打印语句返回了 height 的正确值。
 
-### The `removeAttribute` Method
+### `removeAttribute()` 方法
 
-In the previous section, you learned how to add a new attribute using the `setAttribute` method. What if you wanted to remove an existing attribute?
+在前面的小节中，你学到了如何使用 `setAttribute()` 添加一个新属性。如果你想移除一个已存在的属性呢？
 
-You can use the `removeAttribute` method. You pass in the name of the attribute you want to remove from the element as arguments to the method.
+你可以使用 `removeAttribute()` 方法，传递一个你想要移除属性名作为参数。
 
-Here's an example:
+看这个例子：
 
 ```HTML
   <img src="image.jpg" alt="An example image" height="200">
 ```
 
-Let's use the `removeAttribute` method to remove the `height` attribute from the image element.
+让我们使用 `removeAttribute()` 方法移除 `height` 属性从 `img` 标签上。
 
 ```javascript
 const imageElement = document.querySelector('img')
@@ -550,23 +550,23 @@ console.log("AFTER:", imageElement.getAttribute('height'))
 
 ![Screenshot-2023-12-09-at-10.09.35-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-09-at-10.09.35-AM.png)
 
-An example of using the `removeAttribute` method.
+使用 `removeAttribute()` 的示例
 
-Before using `removeAttribute`, the first log statement prints the value of the height attribute, `200`. But after using the `removeAttribute` method, the second log statement prints `null`, confirming the removal of the height attribute from the image element.
+在调用 `removeAttribute()` 前，我们第一次打印了 height 的属性值，是 200，但在调用 `removeAttribute()` 之后，第二次打印结果是 `null`，可以确认我们从 `img` 中移除了 height 属性。
 
-### The `hasAttribute` Method
+### `hasAttribute()` 方法
 
-Another method for working with attributes in the DOM is the `hasAttribute` method. You can use this method to check whether or not an element has a specific attribute.
+处理 DOM 属性的的另一个方法是 `hasAttribute()`，你可以使用这个方法检查元素是否有指定的属性。
 
-The `hasAttribute` method returns `true` if the specified attribute exists and returns `false` if it doesn't.
+如果指定属性存在， 则 `hasAttribute()` 方法返回 `true`，否则返回 `false`。
 
-Here's an example:
+看这个例子：
 
 ```html
 <img src="image.jpg" alt="An example image" height="200">
 ```
 
-Let's use the `hasAttribute` to check for the presence of `height` and `width` values on the image element.
+让我们使用 `hasAttribute()` 去检查 `img` 上是否存在 `height` 和 `width` 属性。
 
 ```javascript
 const imageElement = document.querySelector('img')
@@ -577,19 +577,19 @@ console.log("WIDTH", imageElement.hasAttribute('width'))
 
 ![Screenshot-2023-12-09-at-10.20.53-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-09-at-10.20.53-AM.png)
 
-Example of using the `hasAttribute` method to check if an attribute exists.
+使用 `hasAttribute()` 检查属性是否存在的示例
 
-The check for height returns `true` because it's an existing attribute while the check for width returns `false` because it doesn't exist.
+因为它存在这个属性，所以 height 返回了 `true`，而检查 width 时返回了 `false`，因为它不存在。
 
-## How to Change the Styles on DOM Elements
+## 如何更改 DOM 的样式
 
-There are two main ways of styling elements when working with the DOM in JavaScript. You can use the `.style` property or you can use classes. Each has its benefits and situations it's best situated for.
+在 JavaScript 中，有两种主要方法处理 DOM 元素的样式，你可以使用 `.style` 属性或者使用 `class`。每种方法都有自己的优点以及最适合的情况。
 
-### Setting Styles With the `.style` Property
+### 使用 `.style` 属性设置样式
 
-You use the `.style` property when you want to make specific changes to a single element. The `.style` property allows you to set styles directly as [inline styles][47] for elements. This means it overrides the styles you have in your CSS stylesheet.
+如果你想对某个元素做指定更改的话，你可以使用 `.style` 属性。`.style` 属性允许你采用[内联][47]的形式直接为元素设置样式，这意味着他会覆盖你在 CSS 中的样式。
 
-Using the `.style` property, you get access to all the individual CSS properties. See the demo below:
+使用 `.style` 属性，你可以访问全部的 CSS 属性，看下面的演示：
 
 ```html
   <h1>Styling elements with JavaScript</h1>
@@ -602,11 +602,11 @@ console.log(header.style)
 
 ![ezgif.com-video-to-gif--8-](https://www.freecodecamp.org/news/content/images/2023/12/ezgif.com-video-to-gif--8-.gif)
 
-CSSStyleDeclarations for an `h1` element logged to the console.
+打印到控制台上的 `h1` 元素的样式声明
 
-The `console.log` prints the CSS style declarations with all the CSS properties for that element.
+`console.log()` 打印了该元素的 CSS 样式声明以及所有的 CSS 属性。
 
-Now, let's see an example of how to use the `.style` property.
+现在我们看一个如何使用 `.style` 属性的例子。
 
 ```html
   <h1>I love JavaScript</h1>
@@ -614,9 +614,9 @@ Now, let's see an example of how to use the `.style` property.
 
 ![Screenshot-2023-12-11-at-7.56.41-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-7.56.41-AM.png)
 
-An example `h1` header element
+一个 `h1` 标题
 
-Here is an `h1` header. Now, let's add style to it using the `.style` property.
+这里有一个 `h1` 标题，现在让我们使用 `.style` 属性给他增加一点样式。
 
 ```javascript
 const paragraph = document.querySelector('h1')
@@ -627,25 +627,25 @@ paragraph.style.backgroundColor = 'green'
 
 ![Screenshot-2023-12-11-at-7.59.15-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-7.59.15-AM.png)
 
-The style property is used to add a background colour to the `h1` element.
+使用 `.style` 属性给 `h1` 元素增加背景色
 
-NOTE: Because this is JavaScript, you cannot use the hyphen if the CSS property name includes two or more words. For example, in CSS you would write `background-color`. But in your JavaScript code, you need to use camel case. So `background-color` becomes `backgroundColor`.
+注意：在 JavaScript 中，如果 CSS 属性名包含两个或更多的单词，你不能使用“-”连字符。例如，在 CSS 中你可以写 `background-color`，但是在 JavaScript 代码中，你必须使用小驼峰命名，所以 `background-color` 变成了 `backgroundColor`。
 
-You can also delete a style on an element by setting the value of the property to an empty string.
+你也可以通过设定属性值为空字符串删除一个元素的样式。
 
 ```javascript
 element.style.propertyName = ""
 ```
 
-### Setting Styles with Classes
+### 使用 class 设置样式
 
-With classes, you can create styles once and apply it to different elements. This helps make your code become more maintainable.
+通过类，您可以一次创建样式，并将其应用于不同的元素。这有助于提高代码的可维护性。
 
-#### The `className` Property
+#### `className` 属性
 
-The `className` property represent the class attribute of a DOM element. And you can use it to get or set the value of the class attribute.
+`className` 属性展示了 DOM 元素的 class 属性。并且你可以使用它去获取或设置 class 的属性值。
 
-Here's an example:
+看这个例子：
 
 ```html
 <p class="food rice-dish">Jollof rice</p>
@@ -663,17 +663,18 @@ console.log(jollofParagraph.className)
 
 ![Screenshot-2023-12-11-at-9.13.37-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-9.13.37-AM.png)
 
-Example of changing the value of a class with the `className` property.
+使用 `className` 属性更改 class 值的例子
 
-The `className` also reads or replace the current class. In the example above, the first log statement prints the original value of the class. And after updating the `className`, the second log statement prints the new value for class.
+`className` 可以读取或替换最近的 class，在上面的例子中，第一次打印是 class 的初始值，在更新 `className` 属性后，第二次打印则是新值。
 
-But there is a more flexible property. For example, what if instead of replacing the old class with the new class, you wanted to add another class? That's where the `classList` property comes in.
+这里还有一个更灵活的属性，举个例子，如果你想添加一个其他 class 而不是使用新的 class 替换老的 class 呢？这就是 `classList` 属性的作用所在。
 
-#### The `classList` Property
+#### `classList` 属性
 
+使用 `classList` 属性，你可以添加或者移除 class。你可以切换 class、使用新值替换 class，甚至可以检查 class 中是否包含某个值。
 With the `classList` property, you can add and remove classes. You can also toggle classes, replace existing class values with new ones, and even check if the class contains a specific value.
 
-Here's an example:
+看这个例子：
 
 ```html
 <p class="food">Jollof rice</p>
@@ -686,9 +687,9 @@ console.log(jollofParagraph.classList)
 
 ![Screenshot-2023-12-11-at-9.43.30-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-9.43.30-AM.png)
 
-Shows the current classList with only one value
+`classList` 中只有一个值
 
-#### Adding Classes with `classList.add()`
+#### 使用 `classList.add()` 添加 class
 
 ```javascript
 jollofParagraph.classList.add('fav', 'tasty')
@@ -698,11 +699,11 @@ console.log(jollofParagraph.classList)
 
 ![Screenshot-2023-12-11-at-9.46.14-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-9.46.14-AM.png)
 
-Example of adding new classes with `classList.add`.
+使用 `classList.add()` 添加新 class 的例子
 
-The code adds two new classes `fav` and `tasty` to the class list.
+这段代码添加了 `fav` 和 `tasty` 两个新 class 到 class 列表。
 
-#### Removing Classes With `classList.remove()`
+#### 使用 `classList.remove()` 移除 class
 
 ```javascript
 jollofParagraph.classList.remove('tasty')
@@ -712,11 +713,11 @@ console.log(jollofParagraph.classList)
 
 ![Screenshot-2023-12-11-at-9.50.26-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-9.50.26-AM.png)
 
-Example of removing classes with `classList.remove`.
+使用 `classList.remove()` 移除 class 的例子
 
-The code removes the class `tasty` from the class list.
+这段代码从 class 列表中移除了 `tasty` class。
 
-#### Replacing Classes with `classList.replace()`
+#### 使用 `classList.replace()` 替换 class
 
 ```javascript
 jollofParagraph.classList.replace('fav', 'favorite')
@@ -724,13 +725,13 @@ jollofParagraph.classList.replace('fav', 'favorite')
 console.log(jollofParagraph.classList)
 ```
 
-The code replaces the class `fav` with `favorite`
+这段代码使用 `favorite` 替换了 `fav`
 
 ![Screenshot-2023-12-11-at-9.53.30-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-9.53.30-AM.png)
 
-Example of replacing classes with `classList.replace`.
+使用 `classList.replace()` 替换 class 的例子
 
-#### Check the Presence of a Class with `classList.contains()`
+#### 使用 `classList.contains()` 检查 class 是否存在
 
 ```javascript
 const isFavorite = jollofParagraph.classList.contains('favorite')
@@ -742,15 +743,15 @@ console.log("Contains soup: ", isSoup)
 
 ![Screenshot-2023-12-11-at-10.09.53-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-10.09.53-AM.png)
 
-Example checking if a class exists with `classList.contains`.
+使用 `classList.contains()` 检查 class 是否存在的例子
 
-The code checks if the class passed to it is contained in the class list.
+这段代码会检查传递给它的 class 是否包含在 class 列表中。
 
-It returns `true` if it is included in the class list (for example `favorite`) and `false` if it is not included in the class list (for example `soup`)
+如果包含在 class 列表中（例如 `favorite`），则返回 `true`；如果不包含在 class 列表中（例如 `soup`），则返回 `false`。
 
-#### Toggling a Class with the `classList.toggle()`
+#### 使用 `classList.toggle()` 切换 class
 
-When you use the `toggle` property, it first checks if the class exists. If it exists, it will remove it. And if it doesn't exist, it will add it.
+当你使用 `toggle()` 时，它会首先检查该 class 是否存在。如果存在，它将删除该 class 。如果不存在，则会添加。
 
 ```javascript
 jollofParagraph.classList.toggle('favorite')
@@ -765,15 +766,15 @@ console.log(jollofParagraph.classList)
 
 ![Screenshot-2023-12-11-at-10.19.18-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-11-at-10.19.18-AM.png)
 
-Example of toggling a class value with `classList.toggle`.
+使用 `classList.toggle()` 切换 class 的例子
 
-The first time the toggle runs, `favorite` exists in the class list. So, the toggle removes it.
+第一次切换，`favorite` 存在 class 列表中，所以移除。
 
-The second time the toggle runs, `favorite` doesn't exist so the toggle adds `favorite` to the class list.
+第二次切换，`favorite` 不存在 class 列表中，所以添加。
 
-The next time the toggle runs, `favorite` now exists again. So it removes it from the class list.
+第三次切换，现在 `favorite` 存在 class 列表中了，所以从 class 列表中移除。
 
-The toggle keeps adding or removing the value from the class list depending on whether it's present or absent.
+`toggle()` 会根据 class 的存在与否，不断从 class 列表中添加或删除该值。
 
 ## How to Traverse the DOM
 
@@ -1343,18 +1344,18 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [8]: #3-getelementsbytagname
 [9]: #4-queryselector
 [10]: #5-queryselectorall
-[11]: #how-to-change-the-content-of-dom-elements
-[12]: #the-innerhtml-property
-[13]: #security-risks-with-innerhtml
-[14]: #the-innertext-and-textcontent-properties
-[15]: #how-to-work-with-attributes-of-dom-elements
-[16]: #the-getattribute-method
-[17]: #the-setattribute-method
-[18]: #the-removeattribute-method
-[19]: #the-hasattribute-method
-[20]: #how-to-change-the-styles-on-dom-elements
-[21]: #setting-styles-with-the-style-property
-[22]: #setting-styles-with-classes
+[11]: #如何更改-DOM-元素的内容
+[12]: #`innerHTML`-属性
+[13]: #使用-`innerHTML`-的安全风险
+[14]: #`innerText`-和-`textContent`-属性
+[15]: #如何处理-DOM-元素的属性
+[16]: #`getAttribute()`-方法
+[17]: #`setAttribute()`-方法
+[18]: #`removeAttribute()`-方法
+[19]: #`hasAttribute()`-方法
+[20]: #如何更改-DOM-的样式
+[21]: #使用-`.style`-属性设置样式
+[22]: #使用-class-设置样式
 [23]: #how-to-traverse-the-dom
 [24]: #difference-between-a-node-and-an-element
 [25]: #selecting-a-parent-with-parentnode-vs-parentelement

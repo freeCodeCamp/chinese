@@ -51,25 +51,25 @@ DOM 是一个非常强大的工具，允许你与网页上的元素进行交互�
 -   [如何更改 DOM 的样式][20]
     -   [使用 `.style` 属性设置样式][21]
     -   [使用 `class` 设置样式][22]
--   [How to Traverse the DOM][23]
-    -   [Difference Between a Node and an Element][24]
-    -   [Selecting a Parent with parentNode vs parentElement][25]
-    -   [Selecting Elements with childNodes vs children][26]
-    -   [Selecting the First or Last Child/Element][27]
-    -   [Selecting a Sibling of Nodes in the DOM][28]
--   [DOM Events and Event Listeners][29]
-    -   [Difference Between Event Listener and Event Handler][30]
-    -   [Three Ways to Register Events in JavaScript][31]
-    -   [Practice Challenge][32]
-    -   [Solution to Practice Challenge][33]
-    -   [The Event Object][34]
-    -   [Types of Events][35]
--   [Event Flow in JavaScript][36]
-    -   [Event Bubbling][37]
-    -   [Event Capturing][38]
-    -   [The Event stopPropagation Method][39]
--   [JS DOM Manipulation Projects Ideas][40]
--   [Conclusion][41]
+-   [如何遍历 DOM][23]
+    -   [节点和元素之间的不同][24]
+    -   [使用 `parentNode` 还是 `parentElement` 选择父级][25]
+    -   [使用 `childNodes` 还是 `children` 选择子级][26]
+    -   [选择第一个或是最后一个元素/节点][27]
+    -   [在 DOM 中选择兄弟节点][28]
+-   [DOM 事件和事件监听器][29]
+    -   [事件监听器与事件处理函数][30]
+    -   [JavaScript 中三种注册事件的方法][31]
+    -   [实践挑战][32]
+    -   [实践挑战的解决方案][33]
+    -   [事件对象][34]
+    -   [事件类型][35]
+-   [JavaScript 的事件流][36]
+    -   [事件冒泡][37]
+    -   [事件捕获][38]
+    -   [`stopPropagation()` 停止传播事件][39]
+-   [JavaScript DOM 项目][40]
+-   [总结][41]
 
 ## DOM 是什么？
 
@@ -639,7 +639,7 @@ element.style.propertyName = ""
 
 ### 使用 class 设置样式
 
-通过类，您可以一次创建样式，并将其应用于不同的元素。这有助于提高代码的可维护性。
+通过 class，你可以一次创建样式，并将其应用于不同的元素。这有助于提高代码的可维护性。
 
 #### `className` 属性
 
@@ -776,27 +776,27 @@ console.log(jollofParagraph.classList)
 
 `toggle()` 会根据 class 的存在与否，不断从 class 列表中添加或删除该值。
 
-## How to Traverse the DOM
+## 如何遍历 DOM
 
-To traverse the DOM means to move between the different elements/nodes within the HTML document. This may includes selecting or accessing parent, child, or sibling elements (or nodes). You do this to get information or manipulate the document structure.
+遍历 DOM 意味着在 HTML 文档中的不同元素或节点间移动，包括选择和访问父级、子级或者是兄弟元素（或是节点）。你可以这样做去操作文档结构或是获取信息。
 
-But before we get into how to traverse the DOM, you need to understand the difference between nodes and elements.
+但在我们进入这一小节前，你需要理解节点和元素之间的不同。
 
-### Difference Between a Node and an Element
+### 节点和元素之间的不同
 
-Nodes are the building blocks of the DOM. They represents different components in the HTML structure.
+节点是 DOM 的构件，它们代表着 HTML 结构中的不同组件。
 
-Elements are a specific type of node, but not all nodes are elements. Other types of content like attributes of elements, text content, and comments within the code are nodes too. But they are not elements.
+元素是一种特定的节点，但并非所有节点都是元素。代码中一些像是元素属性、文本内容或者是注释都是节点，但它们不是元素。
 
-An element is a specific type of node that defines the structure of the document's content. Think of elements as the familiar HTML tags you use. Examples include `<div>`, `<p>`, and `<ul>`. Each element can consist of attributes, text content, and other nested elements.
+元素是一种特定类型的节点，它定义了文档内容的结构，可以把元素当作你在用的 HTML 标签，例如 `<div>`、`<p>` 和 `<ul>`。每个元素都可以由属性、文本内容和其他嵌套元素组成。
 
-### Selecting a Parent with `parentNode` vs `parentElement`
+### 使用 `parentNode` 还是 `parentElement` 选择父级
 
-When it comes to selecting the parent of a DOM element, you can use either the `parentNode` or `parentElement`. Both will get the parent of the element you pass to it.
+当要选择 DOM 元素的父级时，你可以使用 `parentNode` 或者 `parentElement`，它们都可以获取到你给的元素的父级。
 
-From a practical viewpoint, the parent of an element or a node will always be an element. So it doesn't matter which one you use, you will get the right parent of the selected element.
+从实用角度看，元素或节点的父级总是一个元素。所以，无论你使用哪一个，你总能获得选择元素的正确父级。
 
-Let's see an example of selecting the parent of an element.
+让我们看一个选择元素父级的例子：
 
 ```html
   <div class="container">
@@ -806,30 +806,30 @@ Let's see an example of selecting the parent of an element.
   </div>
 ```
 
-```
+```javascript
 const italicizedText = document.getElementById('italics')
 
 console.log(italicizedText.parentNode)
 console.log(italicizedText.parentNode.parentNode)
 ```
 
-First, you select the element. Then, you chain the `parentNode` method to it to get the parent. You can also chain another `parentNode` property to get the parent of a parent element like the second log statement.
+首先，选择一个元素，然后，调用 `parentNode` 这个属性去获取父级。你也可以像是第二个打印语句一样链式调用 `parentNode` 属性去获取父级的父级。
 
-The screenshot below shows the output of the two log statements.
+下面的截图展示了两个打印语句的输出。
 
 ![Screenshot-2023-12-12-at-9.44.45-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-12-at-9.44.45-AM.png)
 
-Example of selecting the parent of an element.
+选择元素父级的示例
 
-### Selecting Elements with `childNodes` vs `children`
+### 使用 `childNodes` 还是 `children` 选择子级
 
-You can select the contents of an element using both the `.childNodes` and `.children` properties. But they work differently.
+你可以使用 `.childNodes` 和 `.children` 属性去选择元素的内容，但它们有些不同。
 
-**`childNodes`:** returns a NodeList of all the child nodes within the selected elements. It will include elements and non-element nodes like text nodes, comment nodes, and so on.
+**`childNodes`：** 返回一个被选择元素的所有子节点的 NodeList。它包含元素和像是文本、注释或是其他非元素节点。
 
-**`.children`:** returns an HTML collection of only the child elements (element nodes) of the selected objects. It will not include any non-element nodes like texts or comments.
+**`.children`：** 返回一个被选择元素的只包含子元素的 HTML 集合。它不包含像是文本、注释这样的非元素节点。
 
-Let's see an example that shows the difference:
+让我们通过一个例子看看它们的不同：
 
 ```html
   <div id="container">
@@ -840,7 +840,7 @@ Let's see an example that shows the difference:
   </div>
 ```
 
-The code above has only 2 child elements (element nodes): the paragraph and the span. But there are other elements too – a text node and a comment:
+上面的代码只有两个元素，`p` 和 `span`，但是有其他节点 —— 文本节点、注释。
 
 ```javascript
 const container = document.getElementById('container');
@@ -854,28 +854,28 @@ console.log(containerChildren);
 
 ![Screenshot-2023-12-12-at-10.29.23-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-12-at-10.29.23-AM.png)
 
-An example of using the .childNodes property
+使用 `childNodes` 属性的示例
 
-The  `childNodes` will return all the child nodes (both elements and non-elements). It also includes the whitespaces between elements as text nodes.
+`childNodes` 将返回所有的子节点（包括元素和非元素），它还将元素之间的空格作为文本节点。
 
-This can be confusing to work with. So, unless you have a good reason not to, you should stick with the `.children` property.
+这用起来可能会感到困惑，因此，除非有充分的理由，否则应坚持使用 `.children` 属性。
 
-The `children` will only return the child elements (the paragraph and the span).
+`children` 将只会返回子元素（`p` 和 `span`）。
 
 ![Screenshot-2023-12-12-at-10.34.08-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-12-at-10.34.08-AM.png)
 
-An example of using the `.children` property
+使用 `children` 属性的示例
 
-### Selecting the First or Last Child/Element
+### 选择第一个或是最后一个元素/节点
 
-If you need to select only the first/last child or element, you can use these four properties.
+如果你只需要选择第一个或是最后一个元素，你可以使用这四个属性。
 
--   `firstChild`: Selects only the first child node of the parent element.
--   `lastChild`: Selects only the last child node of the parent element.
--   `firstElementChild`: Selects only the first child element of the parent.
--   `lastElementChild`: Selects only the last child element of the parent.
+-   `firstChild`: 只选择父元素的第一个子节点。
+-   `lastChild`: 只选择父元素的最后一个子节点。
+-   `firstElementChild`: 选择父元素的第一个子元素。
+-   `lastElementChild`: 选择父元素的最后一个子元素。
 
-Let's use the same example from the previous section to see how each works:
+让我们用上一小节中相同的例子，看看它们分别使如何工作的：
 
 ```html
   <div id="container">
@@ -897,24 +897,24 @@ console.log("LAST ELEMENT:", container.lastElementChild)
 
 ![Screenshot-2023-12-13-at-7.43.25-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-13-at-7.43.25-AM.png)
 
-Example demo selecting first child/element and last child/element
+选择第一个或是最后一个元素/节点的示例
 
-Note how `firstChild` returns the first text node but the `firstElementChild` returns the first paragraph instead. This means it ignored the text node which comes before the paragraph.
+注意 `firstChild` 返回的是第一个文本节点，但 `firstElementChild` 返回的是第一个元素 `p`。这意味着它忽略了 `p` 标签前的文本节点。
 
-And also note how the `lastChild` returns a text node – even though from the markup, it looks like there's nothing after the span. That is because the `lastChild` property considers the linebreak/whitespace between the closing tag of the span and the closing tag of the div elements as a node.
+另外，请注意 `lastChild` 返回一个文本节点，尽管从标签上来看 `span` 之后似乎什么都没有。这是因为 `lastChild` 属性将 `span` 的结束标签和 `div` 元素的结束标签之间的换行符/空格视为一个节点。
 
-That's why it's generally safer to stick to `firstElementChild` and `lastElementChild`.
+这就是为什么通常来说使用 `firstElementChild` 和 `lastElementChild`会更安全。
 
-### Selecting a Sibling of Nodes in the DOM
+### 在 DOM 中选择兄弟节点
 
-You've learned how to select a parent or a child of an element. You can also select a sibling of an element. You do that using the following properties:
+你已经学到了如何选择元素的父级或子级，你也可以使用以下属性选择元素的兄弟节点。
 
--   `nextSibling`: Selects the next node within the same parent element.
--   `nextElementSibling`: Selects the next element, and ignores any non-element nodes.
--   `previousSibling`: Selects the previous node within the same parent element.
--   `previousElementSibling`: Selects the previous element, and ignores any non-element nodes.
+-   `nextSibling`: 选择相同父元素的下一个节点。
+-   `nextElementSibling`: 选择下一个元素忽略任何非元素节点。
+-   `previousSibling`: 选择相同父元素的上一个节点。
+-   `previousElementSibling`: 选择上一个元素忽略任何非元素节点。
 
-Here's an example:
+看这个例子：
 
 ```html
   <div>
@@ -931,38 +931,38 @@ Here's an example:
 const paragraphTwo = document.getElementById('two')
 
 console.log("nextSibling: ", paragraphTwo.nextSibling)
-console.log("nextElementSibling: ", paragraphTwo.next)
+console.log("nextElementSibling: ", paragraphTwo.nextElementSibling)
 console.log("previousSibling: ", paragraphTwo.previous)
-console.log("previousElementSibling: ", paragraphTwo.previous)
+console.log("previousElementSibling: ", paragraphTwo.previousElementSibling)
 ```
 
 ![Screenshot-2023-12-13-at-7.57.18-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-13-at-7.57.18-AM.png)
 
-Examples of selecting siblings of a node.
+选择兄弟节点的示例
 
-`nextSibling` and `previousSibling` select the text nodes because they consider all nodes within the parent. While `nextElementSibling` and `previousElementSibling` select only the paragraph elements because they ignore non-element nodes like text.
+`nextSibling` 和 `previousSibling` 会选择文本节点，因为它们会考虑父节点内的所有节点。然而，`nextElementSibling` 和 `previousElementSibling` 可以只选择 `p` 标签，因为它们忽略文本这样的非元素节点。
 
-## DOM Events and Event Listeners
+## DOM 事件和事件监听器
 
-DOM events are actions that take place in the browser. These events are what allows you to make websites interactive.
+DOM 事件是浏览器中发生的动作。有了这些事件，你就可以使网站具有互动性。
 
-Some DOM events are user-initiated like clicking, moving the mouse, or typing on the keyboard. Others are browser-initiated like when a page finishes loading.
+一些 DOM 事件是用户发起的，像是点击、移动鼠标或是用键盘打字。另一些是浏览器发起的，像是页面加载完成。
 
-### Difference Between Event Listener and Event Handler
+### 事件监听器与事件处理函数
 
-An event listener is a method that lets you know when an event has taken place. It allows you to "listen" or keep an eye out for DOM events. That way, when an event happens, you can do something.
+事件监听器是一个让你知道事件什么时候发生的方法，它允许你监听注意 DOM 事件，这样当事件发生时，你可以做点什么。
 
-An event handler is a response to the event. It's a function that runs when an event occurs.
+事件处理函数是对这个事件的响应，当事件发生时这个函数将会运行。
 
-For example, you can attach an event listener to a button that lets you know when a user clicks that button. Then you can write an event handler (a function) that prints something on screen anytime a click event occurs.
+举个例子，你可以给按钮附加一个事件监听器，当用户点击的时候你就可以知道了。然后，你可以写一个事件处理函数，在点击事件发生时在屏幕上打印一些内容。
 
-In this case, the event listener is what informs your app when a click occurs and then trigger a response. And the response (the function that runs when the click occurs) is an example of an event handler.
+在这个案例中，当点击发生时事件监听器会通知你的应用，然后触发响应；这个响应（事件发生时调用的函数）就是事件处理函数。
 
-### Three Ways to Register Events in JavaScript
+### JavaScript 中三种注册事件的方法
 
-The following are three different ways you can listen to and respond to DOM events using JavaScript.
+你可以使用 JavaScript 通过下面三种不同方法监听并响应 DOM 事件。
 
--   **Using inline event handlers:** This is when you add the event listener as an attribute to HTML elements. In the early days of JavaScript, this was the only way to use events. See the example below:
+-   **使用内联的事件处理函数：** 就是你添加一个事件监听器作为 HTML 元素的属性。在 JavaScript 早期，这是使用事件唯一的方法。看下面这个例子：
 
 ```javascript
 // Example of using an inline event handler
@@ -970,7 +970,7 @@ The following are three different ways you can listen to and respond to DOM even
 <button onclick="alert('Hello')">Click me!</button>
 ```
 
--   **Using on-event handlers:** You use this when an element has only one event handler. When you add more than one event handler using this method, only the last event handler will run, as it will override others before it.
+-   **使用 onEvent 处理函数：** 当元素只有一个事件处理函数时你可以这样使用。当你使用这个方法添加超过一个事件处理函数时，只有最后一个函数会运行，因为它会覆盖之前其他的。
 
 ```html
 <!-- An example of using an on-event handler -->
@@ -992,15 +992,15 @@ The following are three different ways you can listen to and respond to DOM even
 
 ![Screenshot-2023-12-14-at-7.41.49-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-14-at-7.41.49-AM.png)
 
-Only the second event handler is executed.
+只有第二个事件处理函数被执行了
 
-As you can see from the result in the console, the browser runs the code for only the second event handler.
+正如在控制台所看到的结果，浏览器只运行了第二个事件处理函数的代码。
 
--   **Using the `addEventListener` method:** This method allows you to attach more than one event handlers to an element. And it will execute them in the order in which they were added.
+-   **使用 `addEventListener()` 方法：** 这个方法允许你附加超过一个事件处理函数到一个元素上。并且它将按照它们被添加的顺序执行。
 
-As a general rule, you should stick with the `addEventListener`, unless you have a compelling reason not to.
+一般来说，你应该坚持使用 `addEventListener()`，除非你有一个令人信服的理由。
 
-The `addEventListener` method takes two arguments. The first is the event you want to listen to, and the second is the event handler which is the function you want to run when the event occurs.
+`addEventListener()` 接受两个参数，第一个参数是你想监听的事件名称，第二个参数是当事件发生时你想要运行的事件处理函数。
 
 ```html
 <!-- An example of using the addEventListener method -->
@@ -1022,17 +1022,17 @@ The `addEventListener` method takes two arguments. The first is the event you wa
 
 ![Screenshot-2023-12-14-at-7.51.22-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-14-at-7.51.22-AM.png)
 
-The `addEventListener` method executes both event handlers.
+`addEventListener()` 执行了两个处理函数
 
-### Practice Challenge
+### 实践挑战
 
-Here is a challenge for you before you move on. Try solving it on your own before you take a look at the solution.
+再继续学习之前这里有一个挑战。在看解题方法之前，先试着自己解决它。
 
-Consider the HTML and CSS code below.
+请看下面的 HTML 和 CSS 代码。
 
-The challenge includes two elements. A `#gift-box` div and a `#click-btn` button. The gift box is hidden with the `.hide` class.
+这个挑战包括了两个元素，一个 `div#gift-box` 和一个 `button#click-btn`，礼物盒子有一个 `hide` class。
 
-Your task is write JavaScript code that listens to a click event on the button, and display the hidden box when the user clicks the button.
+你的任务是写 JavaScript 去监听按钮的点击事件，当用户点击按钮时显示隐藏的盒子。
 
 ```html
 <!DOCTYPE html>
@@ -1057,15 +1057,16 @@ Your task is write JavaScript code that listens to a click event on the button, 
 }
 ```
 
-[**Solve the challenge on StackBlitz**][48]  
+[**在 StackBlitz 解决这个挑战**][48]  
   
 
 ![ezgif.com-video-to-gif-converted](https://www.freecodecamp.org/news/content/images/2023/12/ezgif.com-video-to-gif-converted.gif)
 
-Demo gif for the final solution of the challenge
+挑战解决方案的动图演示
 
-### Solution to Practice Challenge
+### 实践挑战的解决方案
 
+如果你能解决这个难题，那恭喜你了。如果你没有解决也没什么问题，下面提供了解决方案和解释。
 Congratulations if you were able to solve the challenge. If you were not, that's okay. The solution and explanation is provided below:
 
 ```javascript
@@ -1077,71 +1078,71 @@ buttonElement.addEventListener('click', function() {
 })
 ```
 
-To solve this challenge, first you need to select both the `#gift-box` and `#click-btn` element.
+为了解决这个挑战，首先你需要选择 `#gift-box` 和 `#click-btn` 两个元素。
 
-Then, you add an event listener to the button. As mentioned earlier, the `addEventListener` method takes in two arguments.
+然后，你需要给按钮添加一个事件监听器，像是之前提到的，`addEventListener()` 接受两个参数。
 
-In this case, the first argument is the 'click' event, and the second argument is a function.
+在这个案例中，第一个参数是 `'click'`，第二个参数是一个事件。
 
-The goal is to display the box. The box has a class `hide` which sets `display` to `none` in the CSS. One way to display the box using JavaScript is to remove `hide` from the classList.
+目标是显示这个盒子，盒子使用 `hide` class 在 CSS 中设置了 `display` 为 `none`。显示盒子的一种方法是使用 JavaScript 从 classList 中移除 `hide`。 
 
-### The Event Object
+### 事件对象
 
-This is a JavaScript object the browser passes as an argument to the event handler function anytime an event occurs. The object includes some useful properties and methods like the following:
+这是一个当事件发生时浏览器传递给事件处理函数作为参数的 JavaScript 对象。对象包含了一些有用的属性和方法：
 
--   `type`: the type of event that occurred (like click, mouseover, keydown, and so on)
--   `target`: the element on which the event occurred
--   `clientX` and `clientY`: the horizontal and vertical coordinates of the mouse pointer at the time the event occurred.
--   `preventDefault()`: prevents default actions associated with the events like preventing a form submission on the submit event.
--   `stopPropagation()`: prevents the event from propagating through the DOM. More on that later.
+-   `type`：发生的事件类型（例如：点击、鼠标悬浮、按下按键等等）
+-   `target`：触发这个事件的元素
+-   `clientX` 和 `clientY`：事件发生时，鼠标指针的水平和垂直的坐标
+-   `preventDefault()`：阻止与事件相关的默认动作，例如阻止表单的默认提交事件
+-   `stopPropagation()`：阻止事件通过 DOM 传播，后面会详细说明
 
-You can see a full list of the properties and methods on [the MDN web docs][49].
+你可以查看所有的属性和方法在 [MDN 文档][49]。
 
-### Types of Events
+### 事件类型
 
-There are many different kinds of DOM events the browsers lets you listen to. The following are few of the common ones.
+浏览器允许你监听的 DOM 事件种类很多，下面列举一些常见的。
 
-**Mouse events:**
+**鼠标事件：**
 
--   `click`: when the element is clicked.
--   `dbclick`: when the element is double clicked.
--   `mouseover`: when the mouse pointer enters the element.
--   `mouseleave`: when the mouse pointer leaves the element.
--   `mousedown`: when the mouse is pressed down over an element.
--   `mouseup`: when the mouse is released over an element.
+-   `click`：当元素被点击
+-   `dbclick`：当元素被双击
+-   `mouseover`：当鼠标指针移入元素
+-   `mouseleave`：当鼠标指针离开元素
+-   `mousedown`：当鼠标在元素上按下
+-   `mouseup`：当鼠标在元素上松开
 
-**Keyboard events:**
+**键盘事件：**
 
--   `keydown`: when a key on the keyboard is pressed down.
--   `keyup`: when a key on the keyboard is released.
--   `keypress`: when a key is pressed and shows the actual key that was pressed. Note that this event is not fired for all keys, especially non-printable keys.
+-   `keydown`：当键盘按键被按下
+-   `keyup`：当键盘按键被松开
+-   `keypress`：当按键被按下并显示事件的按键时，注意这个事件不是所有按键都可以触发，尤其是不可打印字符按键
 
-**Form events:**
+**表单事件：**
 
--   `submit`: when a form is submitted.
--   `input`: when the value of an input field changes.
--   `change`: when the value of a form element changes and loses focus.
+-   `submit`：当表单被提交
+-   `input`：当输入框字段更改
+-   `change`：当表单元素值被更改并失焦
 
-**Window events:**
+**窗口事件：**
 
--   `load`: when the browser finishes loading the page.
--   `unload`: when the user leaves the page.
--   `resize`: when the browser window is resized.
--   `scroll`: when the user scrolls through the document.
+-   `load`：当浏览器完成页面加载
+-   `unload`：当用户离开页面
+-   `resize`：当浏览器窗口被调整大小
+-   `scroll`：当用户滚动浏览文档
 
-You can see [a comprehensive list of DOM events here][50].
+你可以在这查看[详细的 DOM 事件表][50]。
 
-## Event Flow in JavaScript
+## JavaScript 的事件流
 
-When a JavaScript event occurs, the event is propagated or travels either from the target where the event occurred to the outermost element in the DOM or vice versa.
+当 JavaScript 事件发生时，事件会在 DOM 中从发生事件的目标传播到最外层的元素，反之亦然。
 
-For example, let's say you click a button on a page. By clicking the button, you've also clicked its parent element and any element the button is inside within the DOM hierarchy.
+例如，假设你点击了页面上的一个按钮。在点击按钮的同时，你也点击了它的父元素以及按钮在 DOM 层次结构中的任何元素。
 
-### Event Bubbling
+### 事件冒泡
 
-This is when the event is first registered on the target (or specified element) on which the event happened, and then registered outwards to the parent and onwards to the outermost element.
+这是指事件首先在发生的目标（或是某个元素）被注册，然后向外注册到父元素，最后注册到最外层的元素。
 
-Here's an example:
+看这个例子：
 
 ```html
 <!DOCTYPE html>
@@ -1159,25 +1160,25 @@ Here's an example:
 </html>
 ```
 
-The example here contains a button `#btn`. With event bubbling, when an event occurs (say a click) on the button, the event goes through the following sequence.
+例子中包含了一个 `#btn` 按钮，随着事件冒泡，当按钮上发生事件（如点击）时，事件会按以下顺序发生。
 
 ![4](https://www.freecodecamp.org/news/content/images/2023/12/4.png)
 
-Event bubbling in DOM Manipulation: from button to div#inner to div#outer to body to HTML to document.
+DOM 中的事件冒泡：从 `button` 到 `div#inner` 到 `div#outer` 到 `body` 到 `html` 到 `document`。
 
-The event starts to bubble up from the target element back to the outermost ancestor.
+事件从目标元素开始向上冒泡，回到最外层的祖先元素。
 
-### Event Capturing
+### 事件捕获
 
-Event capturing is the opposite of event bubbling. The event starts from the outermost ancestor element and travels down the DOM tree to the target element.
+事件捕获与事件冒泡相反，事件从最外层祖先元素开始向下沿着 DOM 树到目标元素。
 
 ![JavaScript--2-](https://www.freecodecamp.org/news/content/images/2023/12/JavaScript--2-.png)
 
-Event capturing in DOM Manipulation
+DOM 中的事件捕获
 
-During the capturing phase, event listeners attached to elements are executed in the order of the hierarchy from the topmost ancestor to the target element.
+在事件捕获阶段，附加到元素上的事件侦听器是按照从最顶层的祖先到目标元素的层次结构顺序执行的。
 
-In case you're wondering why this matters, let's see a practical example using the same HTML markup example from above:
+如果你想知道为什么这很重要，让我们使用和上面相同的 HTML 片段，看一个实际的例子：
 
 ```html
 <!DOCTYPE html>
@@ -1195,7 +1196,7 @@ In case you're wondering why this matters, let's see a practical example using t
 </html>
 ```
 
-Let's add event listeners to the button, the `#inner` div, and the `#outer` div:
+让我们分别添加一个事件监听器到`button`、`#inner`、`#outer` 上：
 
 ```javascript
 const button = document.getElementById('btn')
@@ -1215,7 +1216,7 @@ outerDiv.addEventListener('click', function() {
 })
 ```
 
-By default, browsers use the event bubbling approach. So there is no need to add any argument to the event listener. This is the order in which the event handlers will run in response to a click on the button:
+默认情况下，浏览器使用事件冒泡的机制，因此，无需为事件监听器添加任何其他参数。这是事件处理函数响应按钮点击时的运行顺序：
 
 1.  `button`
 2.  `#innerDiv`
@@ -1223,9 +1224,9 @@ By default, browsers use the event bubbling approach. So there is no need to add
 
 ![Screenshot-2023-12-15-at-11.54.07-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-15-at-11.54.07-AM.png)
 
-Events are executed from the element to the outermost element in the bubbling phase.
+在冒泡阶段，事件从目标元素到最外层处理
 
-To use the event capturing model, you need to pass a third argument `true` to the event listener.
+使用事件捕获模型，你可以通过给事件监听器传递第三个参数为 `true`。
 
 ```javascript
 const button = document.getElementById('btn')
@@ -1245,7 +1246,7 @@ outerDiv.addEventListener('click', function() {
 }, true)
 ```
 
-The order for executing the event handlers will now run in the opposite direction, like this:
+现在运行，事件处理函数的执行顺序将会是相反的方向，象是这样：
 
 1.  `#outerDiv`
 2.  `#innerDiv`
@@ -1253,15 +1254,15 @@ The order for executing the event handlers will now run in the opposite directio
 
 ![Screenshot-2023-12-15-at-11.58.38-AM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-15-at-11.58.38-AM.png)
 
-Events are executed from the outermost element to the element in the capturing phase.
+在捕获阶段，事件从最外层到目标元素处理
 
-### The Event `stopPropagation()` Method
+### `stopPropagation()` 停止传播事件 
 
-You've learned about how the event bubbling registers an event on an element and continues registering the event all the way to the outermost ancestor element. You've also seen how event capturing does the opposite.
+你已经学习了事件冒泡如何在元素上注册事件，并一直注册到最外层的祖先元素，也看到了事件捕获是怎么反过来的。
 
-But what if you don't want the event to register on all the ancestors? That's where the `stopPropagation` method comes in. You can use this method to prevent the event from propagating through the whole DOM.
+但是如果你不想注册事件到所有祖先呢？这就是 `stopPropagation()` 的作用所在，你可以使用这个方法在整个 DOM 中阻止事件的传播。
 
-Let's use the `stopPropagation` method on the same example from before:
+让我们看看如何在之前的例子中使用 `stopPropagation()`：
 
 ```javascript
 button.addEventListener('click', function(event) {
@@ -1280,45 +1281,45 @@ outerDiv.addEventListener('click', function() {
 
 ![Screenshot-2023-12-15-at-2.48.37-PM](https://www.freecodecamp.org/news/content/images/2023/12/Screenshot-2023-12-15-at-2.48.37-PM.png)
 
-The `stopPropagation` method allows the execution of only the first event listener.
+`stopPropagation()` 只允许第一个事件监听器的执行
 
-Now, only the event handler on the button is fired. The ones on the `innerDiv` and `outerDiv` are not because of the `stopPropagation` method on the button.
+现在，只有一个事件处理函数被触发。因为 `stopPropagation()` 在按钮的事件处理函数中，所以在 `innerDiv` 和 `outerDiv` 的事件处理函数并没有被触发。
 
-Also, note that to get the event object, you need to pass it as an argument to the event handler function.
+此外，注意 event 对象，你需要在事件处理函数中作为参数传递它。
 
-## JS DOM Manipulation Project Ideas
+## JavaScript DOM 项目
 
-Building projects is an excellent way to improve your understanding of coding concepts. So roll up your sleeves and get ready to work!
+构建项目是提高对编码概念理解的绝佳方式，所以，卷起袖子，准备工作吧！
 
-Here are five JS DOM manipulation project ideas to help you practice and solidify your skills.
+这有五个项目想法去帮助你练习巩固你的技巧。
 
-### Toggle Switch
+### 切换开关
 
-Design a toggle switch that changes its state (on/off) when clicked. Update the DOM (for example with a background color) that reflects the current state of the toggle switch.
+设计一个开关，当它被点击时切换它的状态，更新 DOM （例如颜色）反映开关的当前状态。
 
-### Random Color Picker
+### 随机颜色选择器
 
-Create a simple app where users can click a button to generate a random color. Include a shape on the screen that gets filled with the chosen color. Also display the color code on screen.
+创建一个简单的应用，用户可以点击一个按钮生成一个随机颜色。在屏幕上包括一个填充被选择颜色的图形，同时显示颜色代码。
 
-### Countdown Timer
+### 倒计时
 
-Build a timer that starts from a specified time. The app updates in real time and shows the remaining time on the screen.
+构建一个从指定时间开始的计时器，在屏幕上实时更新显示剩余时间。
 
-### Word Counter
+### 单词计数器
 
-Develop an app that provides an input field or text area for the user to type. Display the number of words in real time on the screen as the user types.
+开发一个应用，它提供一个文本输入框和文本域给用户用来输入。当用户输入时，在屏幕上实时显示单词个数。
 
-### An Interactive To-Do List
+### 交互式的 Todo 列表
 
-Create an app that allows users to add, delete, or edit tasks. You can have fun with this one and add as many advanced features as you want. For example, adding features like marking tasks as completed, filtering tasks, or sorting them.
+创建一个应用，允许用户添加、删除、编辑任务。你可以随你开心添加一些想要的高级特性，例如标记任务完成、过滤任务或是排序等。
 
-## Conclusion
+## 总结
 
-If you've come this far, then you now have a good understanding of JavaScript DOM manipulation. With practice, you'll be confident enough to tackle advanced projects that require knowledge of these DOM manipulation concepts.
+如果你已经走到了这里，那你现在应该对操作 JavaScript DOM 有着不错的理解。随着实践，你将有足够的信心来处理需要了解这些 DOM 操作概念的高级项目。
 
-A good foundation of Vanilla JS DOM manipulation concepts will also come in handy when picking JavaScript libraries/frameworks like React, Angular, Vue, Svelte, and so on.
+一个良好的操作原版 JS DOM 的基础将在使用 React，Angular，Vue，Svelte 这些 JavaScript 库时派上用场。
 
-Thank you for reading, and happy coding! For more in-depth tutorials, feel free to [subscribe to my YouTube channel][51].
+感谢你的阅读，祝你打代码愉快！想获取更多有深度的教程，欢迎随时订阅[我的 YouTube 频道][51]。
 
 ---
 
@@ -1326,13 +1327,13 @@ Thank you for reading, and happy coding! For more in-depth tutorials, feel free 
 
 [Benjamin Semah][52]
 
-Software Developer | Technical Writer
+软件工程师 | 技术作家
 
 ---
 
-If you read this far, thank the author to show them you care. Say Thanks
+如果你一直阅读到这里，请感谢作者，以表达你的关心。说声谢谢。
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started][53]
+免费学习编程。 freeCodeCamp 的开源课程已帮助超过 40,000 开发人员找到工作。[开始学习][53]
 
 [1]: /news/tag/javascript/
 [2]: /news/author/benjamin-semah/
@@ -1345,36 +1346,36 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [9]: #4-queryselector
 [10]: #5-queryselectorall
 [11]: #如何更改-DOM-元素的内容
-[12]: #`innerHTML`-属性
-[13]: #使用-`innerHTML`-的安全风险
-[14]: #`innerText`-和-`textContent`-属性
+[12]: #innerHTML-属性
+[13]: #使用-innerHTML-的安全风险
+[14]: #innerText-和-textContent-属性
 [15]: #如何处理-DOM-元素的属性
-[16]: #`getAttribute()`-方法
-[17]: #`setAttribute()`-方法
-[18]: #`removeAttribute()`-方法
-[19]: #`hasAttribute()`-方法
+[16]: #getAttribute()-方法
+[17]: #setAttribute()-方法
+[18]: #removeAttribute()-方法
+[19]: #hasAttribute()-方法
 [20]: #如何更改-DOM-的样式
-[21]: #使用-`.style`-属性设置样式
+[21]: #使用-.style-属性设置样式
 [22]: #使用-class-设置样式
-[23]: #how-to-traverse-the-dom
-[24]: #difference-between-a-node-and-an-element
-[25]: #selecting-a-parent-with-parentnode-vs-parentelement
-[26]: #selecting-elements-with-childnodes-vs-children
-[27]: #selecting-the-first-or-last-child-element
-[28]: #selecting-a-sibling-of-nodes-in-the-dom
-[29]: #dom-events-and-event-listeners
-[30]: #difference-between-event-listener-and-event-handler
-[31]: #three-ways-to-register-events-in-javascript
-[32]: #practice-challenge
-[33]: #solution-to-practice-challenge
-[34]: #the-event-object
-[35]: #types-of-events
-[36]: #event-flow-in-javascript
-[37]: #event-bubbling
-[38]: #event-capturing
-[39]: #the-event-stoppropagation-method
-[40]: #js-dom-manipulation-project-ideas
-[41]: #conclusion
+[23]: #如何遍历-DOM
+[24]: #节点和元素之间的不同
+[25]: #使用-parentNode-还是-parentElement-选择父级
+[26]: #使用-childNodes-还是-children-选择子级
+[27]: #选择第一个或是最后一个元素/节点
+[28]: #在-DOM-中选择兄弟节点
+[29]: #DOM-事件和事件监听器
+[30]: #事件监听器与事件处理函数
+[31]: #JavaScript-中三种注册事件的方法
+[32]: #实践挑战
+[33]: #实践挑战的解决方案
+[34]: #事件对象
+[35]: #事件类型
+[36]: #JavaScript-的事件流
+[37]: #事件冒泡
+[38]: #事件捕获
+[39]: #stopPropagation()-停止传播事件
+[40]: #JavaScript-DOM-项目
+[41]: #总结
 [42]: https://www.freecodecamp.org/news/dom-manipulation-htmlcollection-vs-nodelist/
 [43]: https://www.freecodecamp.org/news/cross-site-scripting-what-is-xss/
 [44]: https://www.npmjs.com/package/dompurify

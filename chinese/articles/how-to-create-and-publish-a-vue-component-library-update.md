@@ -1,25 +1,25 @@
-> -  原文地址：[How to Create and Publish a Vue Component Library – 2023 Update](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library-update/)
+> -  原文地址：[如何创建和发布一个 Vue 组件库 – 2023 更新](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library-update/)
 > -  原文作者：[Brian Barrow](https://www.freecodecamp.org/news/author/brian/)
-> -  译者：
+> -  译者：xgqfrms
 > -  校对者：
 
-![How to Create and Publish a Vue Component Library – 2023 Update](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-pixabay-159711.jpg)
+![如何创建和发布一个 Vue 组件库 – 2023 更新](https://www.freecodecamp.org/news/content/images/size/w2000/2023/05/pexels-pixabay-159711.jpg)
 
-Back in 2020, I [wrote a post](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library/) about building a Vue Component library. Since then the package I used has been deprecated, and the recommended way to build a library/package is to use Vite.
+早在 2020 年，我就[写了一篇](https://www.freecodecamp.org/news/how-to-create-and-publish-a-vue-component-library/) 关于构建 Vue 组件库的文章。自从那以后，我使用的包已被弃用了，构建一个库/包的推荐方法是使用 Vite。
 
-## Getting Started
+## 入门
 
-I started off the project by running `npm create vite@latest` and naming my project `brian-component-lib` to stay consistent with my previous post. I also chose to use TypeScript and Vue when those options came up.
+我通过运行 `npm create vite@latest` 启动该项目，并将我的项目命名为 `brian-component-lib`，以便与我之前的文章保持一致。当这些选项出现时，我也选择了使用 TypeScript 和 Vue。
 
-## The Component
+## 组件
 
-The component I built is a clone of the buttons used on freeCodeCamp.org
+我构建的组件是 freeCodeCamp.org 上使用的按钮的一个克隆
 
 ![image-160](https://www.freecodecamp.org/news/content/images/2023/05/image-160.png)
 
-Button component we are building
+我们正在构建的按钮组件
 
-Here is the code for that component. Note that it is using TypeScript and the `script setup` format available in Vue 3.
+这是该组件的代码。请注意，它使用了 TypeScript 和 Vue 3 中可用的 `script setup` 格式。
 
 ```js
 <script setup lang="ts">
@@ -67,7 +67,7 @@ defineProps<{ text: string }>()
 
 src/components/FccButton.vue
 
-Then we need to expose this component in the library. We do that by exporting it from an `index.ts` file.
+然后我们需要在库中导出这个组件。我们通过从一个 `index.ts` 文件导出它来实现。
 
 ```js
 import FccButton from "./components/FccButton.vue";
@@ -77,11 +77,11 @@ export { FccButton };
 
 src/index.ts
 
-## Config
+## 配置
 
-With the component code ready to go, we need to make sure Vite and the `package.json` file are configured properly.
+组件代码准备好了后，我们需要确保 Vite 和 `package.json` 文件被正确配置了。
 
-Vite has a lot of options when building code. We are interested in the ["Library Mode"](https://vitejs.dev/guide/build.html#library-mode).
+Vite 在构建代码时有很多选择。 我们关注的是[“库模式”](https://vitejs.dev/guide/build.html#library-mode)。
 
 ```js
 import { defineConfig } from "vite";
@@ -93,19 +93,17 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      // src/indext.ts is where we have exported the component(s)
+      // src/indext.ts 是我们导出组件的地方
       entry: resolve(__dirname, "src/index.ts"),
       name: "BrianComponentLibrary",
-      // the name of the output files when the build is run
+      // 运行构建时输出文件的名称
       fileName: "brian-component-lib",
     },
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
+      // 确保外部依赖项不应捆绑到你的库中
       external: ["vue"],
       output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
+        // 提供全局变量以便在 UMD 构建中可以被外部依赖项使用
         globals: {
           vue: "Vue",
         },
@@ -117,7 +115,7 @@ export default defineConfig({
 
 vite.config.ts
 
-Here is the `package.json` file. We need to make sure we have the properties necessary for pointing to our built files. For more information on what each property does, you can hover over them in VS Code.
+这是 `package.json` 文件。 我们需要确保拥有指向构建文件必要的属性。 有关每个属性的作用的更多信息，在 VS Code 中你可以用鼠标悬停的它们上面。
 
 ```json
 {
@@ -156,34 +154,34 @@ Here is the `package.json` file. We need to make sure we have the properties nec
 
 package.json
 
-In order for the `vue-tsc --emitDeclarationOnly` to work when building, we need to add the following properties to the `compilerOptions` section of the tsconfig.json file:
+为了让 `vue-tsc --emitDeclarationOnly` 在构建时工作，我们需要将以下属性添加到 tsconfig.json 文件的 `compilerOptions` 部分:
 
 ```
 "outDir": "dist",
 "declaration": true,
 ```
 
-We will also need to remove the `noEmit: true` property.  This will make it so our types are available in the package, so a project using TypeScript with Vue doesn't yell at us for not having declared types.
+我们还需要删除 `noEmit: true` 属性。这将使我们的类型在包中可用，因此一个使用 TypeScript 和 Vue 的项目不会因为没有声明类型而报错。
 
-I also added this line to make sure my `App.vue` and `main.ts` file aren't included in the component library built files.
+我还添加了这一行，以确保我的 `App.vue` 和 `main.ts` 文件不会包含在组件库构建文件中。
 
 `"exclude": ["src/App.vue", "src/main.ts"],`
 
-## Test the Library
+## 测试该库
 
-We can now run `npm run build` and then test out our library. To do this, open up a Vue project (you can open a current Vue 3 project you have, or create a blank one).
+我们现在可以运行 `npm run build`，然后测试我们的库。为此，请打开一个 Vue 项目（你可以打开一个当前拥有的 Vue 3 项目，或创建一个空白项目）。
 
-Inside the package.json file for the project you just opened add the following to the dependencies:
+在刚刚打开的项目的 package.json 文件中，将以下内容添加到依赖项中:
 
 `"brian-component-lib": "file:../brian-component-library"`
 
-Make sure the file path you put in points to the correct folder where the component library lives.
+确保你输入的文件路径指向组件库所在的正确文件夹。
 
-Run `npm install` and you should now have the component library in your `node_modules`.
+运行 `npm install`，现在在你的 `node_modules` 中应该有了该组件库。
 
-Import the component into one of the pages to test that it is working.
+将组件导入其中一个页面以测试其是否正常工作。
 
-Note: You will need to also import the CSS because it gets built to its own file during the build process.
+注意: 你还需要导入 CSS，因为它在构建过程中构建到自己的文件中了。
 
 ```js
 <script setup lang="ts">
@@ -196,16 +194,16 @@ import "brian-component-lib/style.css"
 </template>
 ```
 
-You should now see the button when you run the project.
+现在，当你运行项目时，你应该会看到该按钮。
 
-## How to Publish to NPM
+## 如何发布到 NPM
 
-If you haven't signed into NPM inside your terminal you can do that by running the `npm adduser` command.
+如果你还没有在终端中登录 NPM，则可以通过运行 `npm adduser` 命令来登录。
 
-Then just run the `npm publish` command and the package should be pushed up and made available on NPM.
+然后只需运行 `npm publish` 命令，包就会被推送，并且在 NPM 上可用。
 
-## Conclusion
+## 结论
 
-Vite makes it pretty easy to get a component library published. Hopefully this helped. [Let me know on Twitter](https://twitter.com/the_brianb) if it did or if you'd like to see something else from me in the future.
+Vite 使发布一个组件库变得相当容易。希望这有帮助。[请在 Twitter 上告诉我](https://twitter.com/the_brianb) 如果确实如此，或者你将来希望看到我的其他内容。
 
-You can see the repository for this code here: [https://github.com/briancbarrow/vue-component-library-2023](https://github.com/briancbarrow/vue-component-library-2023)
+你可以在此处查看此代码的存储库：[https://github.com/briancbarrow/vue-component-library-2023](https://github.com/briancbarrow/vue-component-library-2023)

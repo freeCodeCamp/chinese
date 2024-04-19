@@ -1066,8 +1066,7 @@ DOM 事件是浏览器中发生的动作。有了这些事件，你就可以使�
 
 ### 实践挑战的解决方案
 
-如果你能解决这个难题，那恭喜你了。如果你没有解决也没什么问题，下面提供了解决方案和解释。
-Congratulations if you were able to solve the challenge. If you were not, that's okay. The solution and explanation is provided below:
+如果你能解决这个难题，那恭喜你。如果你没有解决也没事，下面提供了解决方案和解释。
 
 ```javascript
 const giftBoxElement = document.getElementById('gift-box')
@@ -1082,7 +1081,7 @@ buttonElement.addEventListener('click', function() {
 
 然后，你需要给按钮添加一个事件监听器，像是之前提到的，`addEventListener()` 接受两个参数。
 
-在这个案例中，第一个参数是 `'click'`，第二个参数是一个事件。
+在这个案例中，第一个参数是 `'click'`，第二个参数是一个函数。
 
 目标是显示这个盒子，盒子使用 `hide` class 在 CSS 中设置了 `display` 为 `none`。显示盒子的一种方法是使用 JavaScript 从 classList 中移除 `hide`。 
 

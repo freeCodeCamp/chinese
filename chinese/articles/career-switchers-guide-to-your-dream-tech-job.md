@@ -23,11 +23,11 @@ Googleplex:谷歌的全球总部
 
 如果你时间不够，这里有一个对我很有效的五大秘诀：
 
--   \***\*展示\*\***: 做一个你感兴趣的项目，并在网上展示出来
--   \***\*学习\*\***: 集中练习算法与数据结构的程序设计问题和系统设计问题的解答方法
--   \***\*应用\*\***: 利用多种渠道获得面试机会
--   \***\*面试\*\***: 在电话面试和现场面试中保持冷静
--   \***\*谈判\*\***: 在工作机会谈判与匹配团队时，知道自己想要什么
+-   **展示**: 做一个你感兴趣的项目，并在网上展示出来
+-   **学习**: 集中练习算法与数据结构的程序设计问题和系统设计问题的解答方法
+-   **应用**: 利用多种渠道获得面试机会
+-   **面试**: 在电话面试和现场面试中保持冷静
+-   **谈判**: 在工作机会谈判与匹配团队时，知道自己想要什么
 
 如你所见，这是一个非常常见的五步秘诀，然而完成每一步都需要付出很多努力。如果想了解更多细节的话，就继续读下去吧。
 
@@ -61,58 +61,58 @@ Googleplex:谷歌的全球总部
 
 然而，直到我参加面试和获得团队匹配的要求前，我一直没有意识到这件事对我的职业生涯产生了全面的影响。当面试官问我:“你为什么想从目前的行业转行?”时，我已经准备好了回答这个问题的话题!
 
-Not only was I able to tell them how passionate I feel about AI/ML, but when I pulled out my car (yes, the ACTUAL robotics car) from my backpack and put it in the hands of the interviewers, I could see the excitement from their eyes! Many of them even said they would love to build such a car with their kids. I then told them that I had published the full step-by-step instructions with source code online (with links in my resume) for them to follow. I was pretty sure they wouldn't file my resume in the recycle bins afterward. ;-)
+我不仅能够告诉他们我对AI/ML的热情，而且当我从背包里拿出我的车(是的，真正的机器人车)并把它放在面试官手中时，我可以从他们的眼睛里看到兴奋!他们中的许多人甚至说，他们很想和自己的孩子一起造一辆这样的车。然后我告诉他们，我已经在网上发布了完整的步骤说明和源代码(我的简历中有链接)，供他们参考。我很确定他们不会把我的简历扔进回收箱。: -)
 
-Some of my friends ask me to recommend good projects to work on. Here are some of my suggestions:
+我的一些朋友们想让我推荐一些可以开展的好的项目，这是我给出的一些建议：
 
--   If you want to transition into front-end development, create a cool website with a lot of interactivity with popular open-source frameworks, such as [React][4] and [Angular][5].
--   If you are interested in server-side development, try to create a web crawler or search engine using distributed server technology such as [Cassandra][6], [ZooKeeper][7], [Memcached][8], and [Elastic Search][9], etc
--   If you are into mobile devices, try to create and publish an Apple/Android app. Note that publishing an app on Apple’s App Store takes much longer than Google’s Play Store.
--   If you are interested in AI/ML, take one of the existing Computer Vision or Natural Language Processing deep learning models, and try to make a product out of it. For example, I took a pre-trained [object detection model, SSD][10], and adapted it to be a traffic sign detector for my DeepPiCar. If you are new to AI/ML, be sure to read [Part 1 of DeepPiCar][11], where I list several ML courses and resources to get you started.
--   If you are into robotics, try to build some cool robots using a Raspberry Pi or an Nvidia Jetson Nano. Be sure to use either the new [Raspberry Pi 4][12] or [Jetson Nano][13]. Raspberry is more widely used by makers and enjoys better support, while Jetson Nano has a GPU onboard, so it may be better for [Deep Learning projects][14].
--   If you don’t have any project ideas, do not despair. You can always contribute to one of the open-source projects mentioned above, as well as [TensorFlow][15] or [PyTorch][16] if you are into AI/ML. You may think you need to be an expert to contribute to these well-known open-source projects. You do NOT. Actually, in each open source project, there are quite a few small features and easy bug fixes designated for noobs to get their hands dirty first. This way, you can be familiar with the code base and submission process before tackling more complex issues.
+- 如果你想转职去做前端开发，那就用流行的开源框架（例如[React][4]、[Angular][5]或[Vue][61]等）搭建一个炫酷的网站。
+- 如果你对服务端开发感兴趣，尝试使用分布式服务技术创建网络爬虫或搜索引擎，如[Cassandra][6]， [ZooKeeper][7]， [Memcached][8]，和[Elastic search][9]等。
+- 如果你想做移动端开发，尝试创建并发布一个苹果/安卓应用。请注意，在苹果的App Store上发布应用比在谷歌的Play Store上发布应用要花费更长的时间。
+- 如果你对人工智能/机器学习感兴趣，尝试使用现有的计算机视觉或自然语言处理深度学习模型之一，并尝试从中制作产品。例如，我使用了一个预训练的[目标检测模型，SSD][10]，并将其改编为我的DeepPiCar的交通标志检测器。如果您是AI / ML新手，请务必阅读[DeepPiCar的第一部分][11]，在那里我列出了几个ML课程和资源，以帮助您开始学习。
+- 如果你对机器人技术感兴趣，试着用树莓派或英伟达Jetson Nano制造一些很酷的机器人。一定要使用新的[Raspberry Pi 4][12]或[Jetson Nano][13]。树莓派更被制造商广泛使用，因此具有更好的技术支持，而Jetson Nano自带GPU，因此可能更适合[深度学习项目][14]。
+- 如果你没有任何有关项目的想法，不要绝望。如果你对人工智能/机器学习感兴趣，你可以为上面提到的开源项目之一做出贡献，也可以为[TensorFlow][15]或[PyTorch][16]做出贡献。你可能认为您需要成为一名专家才能为这些知名的开源项目做出贡献，但实际上并不需要。每个开源项目中都有相当多的小特性和简单的错误修复是专门为新手准备的，他们可以优先发现这些，并做出相应的贡献。这样，你就可以在处理更复杂的问题之前熟悉代码库和提交流程。
 
 ![](https://miro.medium.com/max/1688/0*Ch5vkdlhxP1uRsbe.png)
 
-Top Open-Source Projects
+顶尖的开源项目
 
-Once you finish your project, be sure to let the world know about it! Is it enough that you just publish your finished code on GitHub and be done with it? No! Because most people prefer to read blogs about what your code does first.
+一旦你完成了你的项目，一定要让全世界都知道!你只是在GitHub上发布完成的代码并完成它就足够了吗？不！因为大多数人更喜欢先阅读博客来了解代码的功能。
 
-Nice, well-polished blogs are great marketing material for your project, and more importantly, for YOU! Yes, writing polished blogs with nice pictures and graphs takes a long time. It took me about all of May to write 6 articles. I estimate about 200 total hours or 30 hours/article. If you are working full time, maybe write one well-written blog, which serves as an overview of your project.
+优秀的、精心设计的博文对于你的项目，更进一步来讲对于你来说，是一份很好的营销材料。是的，用漂亮的图片和图表写精致的博客需要很长时间。我花了整整一个五月写了6篇文章。我估计我总共花费了200个小时或每篇文章花费了大约30个小时。如果你是全职工作，也许可以写一篇写得很好的博文，作为你项目的概述。
 
 ![](https://miro.medium.com/max/1080/1*blXkdzZ0Z2T9cezJmmX96g.png)
 
-DeepPiCar’s Blog Series
+DeepPiCar的博客系列
 
-One thing to remember is that you HAVE TO enjoy what you are doing, instead of doing the project just to land a job. If you do have a passion for what you build, it will shine through when you talk to interviewers.
+有一件事你需要牢记：你**必须**享受你正在做的事情，而不是仅仅为了找到一份工作而做这个项目。如果你真的对自己所做的事情充满激情，那么当你和面试官交谈时，这件事情就会成为一个亮点。
 
-## 第二步：聪明和努力地学习
+## 第二步：聪明并努力地学习
 
 ### 算法与数据结构
 
-If there is one single skill you need to master for tech interviews, it is Algorithm and Data Structures (A&DS) coding skills. No matter which big or small tech firms you interview with, they will grill you on your coding skills, although most firms won’t care which programming language you use.
+如果你需要掌握一项技术面试技能，那就是算法和数据结构（A&DS）编码技能。无论你面试的是大公司还是小公司，他们都会详细询问你的编程技能，尽管大多数公司并不关心你使用哪种编程语言。
 
-My favorite programming languages are C++ and Python, but for coding interviews, I recommend Python. It is so concise and you can do so much with so few lines compared to C++, which is very verbose. There are tons of resources that prepare you for A&DS. I used the following resources:
+我最喜欢的编程语言是C++和Python，但对于编码面试，我推荐Python。它是如此简洁，与C++相比，你可以用这么少的行做这么多的事情，C++是非常冗长的。有很多资源可以让你为算法和数据结构（A&DS）做准备。我使用了以下资源:
 
-[\***\*Cracking the Coding Interview Book** **(CtCI)\*\***][17]: this book is about 700 pages, and only costs \$30. If you need a refresher on A&DS concept, this is an excellent starting point. In addition to concepts, it gives a series of easy to medium level practice questions with full solutions. I spent about 2 to 3 weeks full time on it, spending 1–2 full days on each A&DS related chapter. I skipped chapters on math/brain teasers/OOD/C++/Java/SQL, as they are not related to A&DS.
+[**Cracking the Coding Interview Book** **(CtCI)**][17]: 这本书大约有700页，并且只卖30美元。如果你需要复习A&DS的概念，这是一个很好的起点。除了概念之外，它还提供了一系列简单到中等水平的练习题和完整的答案。我花了2 - 3周的时间，花了1-2天的时间在每个A&DS相关章节上。我跳过了关于数学/脑筋急转弯/OOD/C++/Java/SQL的章节，因为它们与A&DS无关。
 
 ![](https://miro.medium.com/max/350/0*AGWwwLapmQvGVQ6o.jpg)
 
-[\***\*LeetCode.com\*\***][18]: I also used LeetCode (LC) heavily, as I felt CtCI did not give me enough practice. Leetcode is probably the most comprehensive and organized online database of coding interview questions, with over 1000 easy, medium and hard questions. Each question has a unique number. (e.g. LC#1 is TwoSum) Many online posts simply refer to their interview questions as LC #xxx instead of typing out the whole question.
+[**LeetCode.com**][18]: 我也大量使用LeetCode (LC)，因为我觉得CtCI没有给我足够的练习。Leetcode可能是最全面和有组织的编程面试问题在线数据库，有1000多个简单，中等和困难的问题。每个问题都有一个唯一的数字(例如，LC#1是TwoSum)。许多网上帖子只是简单地把他们的面试问题称为LC# xxx，而不是把整个问题打出来。
 
-I highly recommend spending $30/month to sign up for LeetCode Premium, as it gives you access to ALL of the LC questions and solutions. I felt that it was so helpful, I signed up for the annual membership for $99, as I think of it as a “gym membership fee for my brain”.
+我强烈建议每月花30美元注册LeetCode高级版，因为它可以让你访问所有的LC问题和解决方案。我觉得这很有帮助，我以99美元的价格注册了年度会员，因为我认为这是“我大脑的健身房会员费”。
 
-I completed over 100 LeetCode questions (35 easy, 60 medium, 14 hard). About 90% of my actual interview questions, or their slight variants, could be found on LeetCode. In most cases, I didn’t know they were from Leetcode until after the fact. But since I practiced enough of the LC medium questions, I was able to solve questions around the same difficulty. In the end, I felt I could NEVER do enough LC medium questions, because to this day, I still struggle with some of the LC medium questions.
+我完成了100多个LeetCode问题(35个简单，60个中等，14个困难)。我实际面试中90%的问题，或者它们的细微变化，都可以在LeetCode上找到。在大多数情况下，我直到事后才知道它们来自Leetcode。但是由于我练习了足够多的LC中等难度的问题，所以我能够解决相同难度的问题。最后，我觉得我永远不能做足够的LC中等难度的问题，因为直到今天，我仍然与一些LC中等难度的问题斗争。
 
 ![](https://miro.medium.com/max/1360/0*nS7N-kMs_oFwiTcG.png)
 
-[\***\*Tushar Roy’s LeetCode Hard Solutions\*\***][19]: Tushar is actually an Engineering Manager at Apple. He made these videos when he was just a software engineer. I would say that watching his videos taught me not only these algorithms but also how to \***\*present\*\*** complex ideas/algorithms clearly. This helped me immensely when I was doing whiteboard coding during on-site interviews.
+[**Tushar Roy’s LeetCode Hard Solutions**][19]: Tushar实际上是苹果公司的工程师经理。他做这些视频的时候还是个软件工程师。我想说，看他的视频不仅教会了我这些算法，还教会了我如何清晰地呈现复杂的想法/算法。当我在现场面试时用白板写代码时，这给了我很大的帮助。
 
 ![](https://miro.medium.com/max/1280/0*sTf-RyIfjStnTdf1.jpg)
 
-Note that most interviewers will give LC medium level questions, as it is pretty fair to ask someone to solve a medium problem in 20–30 minutes. I would suggest doing at least 20 easy, and 30 medium LC questions before your first phone interviews. I did my first phone interview after I finished the CtCI book and before starting on LC, and was promptly slaughtered.
+请注意，大多数面试官会给LC中等水平的问题，因为要求某人在20-30分钟内解决中等水平的问题是相当公平的。我建议你在第一次电话面试前至少做20个简单的问题和30个中等的LC问题。我第一次电话面试是在我写完CtCI的书之后，在我开始写LC之前的时候，而我很快就被淘汰了。
 
-Also, I timed myself on each practice problem, as if I was in an interview. However, I used an IDE, with auto-completion and a debugger. You won’t get these in an actual interview, so I usually set a tighter time constraint when I practiced, at about 30 min/question, instead of 45 min. You may choose to mimic the real test environment by using a regular text editor only or even a whiteboard. It's up to your personal preference.
+同时，我在每个练习题上计时，就好像我在面试一样。但是，我使用的是带有自动完成和调试器的IDE。你不会在实际的面试中得到这些，所以我在练习时通常会把时间限制得更紧，每道题大约30分钟，而不是45分钟。你可以选择只使用常规的文本编辑器，甚至是白板来模拟真实的考试环境。这取决于你的个人喜好。
 
 ### 系统设计
 
@@ -715,69 +715,69 @@ If you are going through interviews, please let me know which of my tips worked 
 
 以下是我在求职过程中使用过的资源的附录(按字母顺序排列)。希望你也会发现它们对你有帮助。
 
-[\***\*Blind\*\***][46]: 这是一个允许不同公司(主要是科技公司)的员工匿名发布问题和答案的应用程序。人们通常会讨论职业决策、公司文化、面试和薪酬等问题。
+[**Blind**][46]: 这是一个允许不同公司(主要是科技公司)的员工匿名发布问题和答案的应用程序。人们通常会讨论职业决策、公司文化、面试和薪酬等问题。
 
 我发现这个平台有好有坏。好的地方是你会得到更坦诚的回答/回应，有时还会得到内幕消息。坏的地方是有些人会因为匿名而写下冒犯性的回复，这样的环境有时可能是有害的。我已经警告过你了。
 
 ![](https://miro.medium.com/max/730/0*r7S6egJR6P9O9WP7)
 
-[\***\*Coursera\*\***][47]: 学习你感兴趣的科目。它是免费的，或者只收取象征性的费用。我在那里学了ML和DL课程。
+[**Coursera**][47]: 学习你感兴趣的科目。它是免费的，或者只收取象征性的费用。我在那里学了ML和DL课程。
 
 ![](https://miro.medium.com/max/512/0*EcegqF8UG1uE9qGO)
 
-[\***\*DeepLearning.ai\*\***][48] \***\*and** [Workera**.ai**][49]\*\*
+[**DeepLearning.ai**][48] **and** [**Workera.ai**][49]
 
--   Take the 5 course Deep Learning series, if you are interested in Deep Learning techniques in computer vision (CV) or natural language processing (NLP)
--   Pass their screening test to be referred to hiring managers in ML groups in top tech companies
+- 如果你对计算机视觉(CV)或自然语言处理(NLP)中的深度学习技术感兴趣，参加5门课程的深度学习系列课程。
+- 通过筛选测试，被推荐给顶尖科技公司ML团队的招聘经理
 
-[\***\*Elements of Programming Interviews\*\***][50] \***\*Book:\*\*** This is another excellent interview preparation book, similar to the CtCI book. But it is more geared towards experienced engineers, while CtCI can be read by beginners who have little algorithms background.
+[**Elements of Programming Interviews**][50] **Book:** 这是另一本优秀的面试准备书，类似于CtCI书。但它更适合有经验的工程师，而CtCI可以被没有多少算法背景的初学者阅读。
 
 ![](https://miro.medium.com/max/350/0*5aU2C4jyITY0A8-D.jpg)
 
-[\***\*GeeksForGeeks\*\***][51]: Like LeetCode, this is another website with very comprehensive A&DS questions and solutions. This site is free, and sometimes contains interview questions not found in LeetCode.
+[**GeeksForGeeks**][51]: 这是另一个与LeetCode类似的有非常全面的A&DS问题和解决方案的网站。这个网站是免费的，有时会包含在LeetCode中找不到的面试问题。
 
 ![](https://miro.medium.com/max/667/0*ZTMjAXFNZJnxw5wM.png)
 
-[\***\*Glassdoor\*\***][52]
+[**Glassdoor**][52]
 
 ![](https://miro.medium.com/max/589/1*qVt2_-4lyAnBgBxpQ7JV5A.png)
 
--   Check a company’s employee reviews
--   Find previous interview questions
--   Set up job alerts to receive new job updates
+- 查看公司的员工评价
+- 找到之前的面试问题
+- 设置工作提醒以接收新的工作更新
 
-[\***\*Google Search\*\***][53]: The starting point for ANY question in life. Do I need to say more?
+[**Google Search**][53]: 生活中**任何**问题的起点。我还需要多说吗?
 
 ![](https://miro.medium.com/max/1280/0*foG6evRh08Khr-wZ.jpg)
 
-\***\*Internal Employees:\*\*** Always try to reach out to your friends, or friends of friends, that work in the companies you want to apply to. They will be your most effective informants as well as advocates. [Connect with me on LinkedIn][54], and if you are a good fit, I would be happy to refer you to Google myself, or one of my friends who work at other top tech firms.
+[**Internal Employees:**] 总是试着联系你的朋友或者朋友的朋友，如果他们在你想申请的公司工作。他们将是你最有效的线人和支持者。如果你适合这份工作，[在领英上联系我][54], 我很乐意把你推荐给谷歌，或者我在其他顶尖科技公司工作的朋友。
 
-[\***\*LeetCode\*\***][55]
+[**LeetCode**][55]
 
--   Practice A&DS questions
--   Use LeetCode Premium ($35/month or $99/year with coupon) to find past interview questions asked by a given company. I recommend paying for the annual membership. Just think of it as a gym membership for your coding brain.
+- 练习A&DS问题
+- 使用LeetCode高级版(35美元/月或99美元/年带优惠券)查找给定公司过去的面试问题。我建议你付年费。就把它想象成你的编程大脑的健身房会员吧。
 
-[\***\*Level.fyi\*\***][56]: This site lists crowdsourced salary information by company, by seniority levels, by location, and by job function, so you will know if you are getting a fair offer from the companies. Of course, this works well only for larger companies, as there are more data points.
+[**Level.fyi**][56]: 这个网站按公司、资历级别、地点和工作职能列出了众包工资信息，这样你就知道你是否从公司得到了一个公平的报价。当然，这只适用于大公司，因为大公司往往有更多的数据来源。
 
 ![](https://miro.medium.com/max/560/0*y6YcevhJEHIeMO0-.jpg)
 
-[\***\*LinkedIn\*\***][57]:
+[**LinkedIn**][57]:
 
--   Lookup people’s professional and educational background
--   Turn on “Open to new opportunities” setting so that recruiters can find you.
--   Use LinkedIn Premium to connect to people who interest you
--   Set up job alerts to receive new job updates
+- 查找人员的专业和教育背景
+- 打开“Open to new opportunities”设置，这样招聘人员就能找到你。
+- 使用领英高级连接到谁感兴趣的人你
+- 设置职位提醒以接收新的职位更新
 
-[\***\*Medium**/**Blog Sites\*\***][58]:
+[**Medium**/**Blog Sites**][58]:
 
 - 阅读教程和操作指南来帮助你的个人项目
 - 在媒体或其他地方写博客，展示你自己的个人项目
 
 ![](https://miro.medium.com/max/590/1*YNzUC78SPulsAznKTeUyNw.png)
 
-[\***\*TripleByte\*\***][59]: 如果你通过了他们的技术筛选，你就可以跳过电话面试，直接去现场面试。详情请参阅上面的详细说明。
+[**TripleByte**][59]: 如果你通过了他们的技术筛选，你就可以跳过电话面试，直接去现场面试。详情请参阅上面的详细说明。
 
-[\***\*YouTube\*\***][60]
+[**YouTube**][60]
 
 ![](https://miro.medium.com/max/491/1*lVrmEfw_VMiq51OoZNKVkw.png)
 
@@ -845,3 +845,4 @@ If you are going through interviews, please let me know which of my tips worked 
 [58]: https://medium.com/
 [59]: https://triplebyte.com/iv/Wzwz8pq/cp/header
 [60]: https://youtube.com/
+[61]: https://vuejs.org/

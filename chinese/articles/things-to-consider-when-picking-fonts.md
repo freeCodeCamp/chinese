@@ -41,7 +41,7 @@ Instead, I'd recommend you consider an expansive font selection, featuring typef
 
 In short, you may just need an arbitrary typeface to show arbitrary text on your website. That's fine. But it's worth sticking to the wide array of typefaces already installed on the client's operating system.
 
-In other words… only fetch an external font when it actually enhances the user experience!
+In other words…… only fetch an external font when it actually enhances the user experience!
 
 ## Why?
 
@@ -53,7 +53,7 @@ This is particularly relevant to corporate websites, blogs, forums, and web appl
 
 The user is there to consume content or get a task done. Unless you're looking to be creative, the average user doesn't know, and doesn't care, what typeface it has so long as it's legible.
 
-Meanwhile, they may care for other things impacted by your font choices…
+Meanwhile, they may care for other things impacted by your font choices……
 
 ### Performance
 

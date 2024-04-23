@@ -115,7 +115,7 @@ Although Python comes preinstalled with macOS as well, I'd suggest that you foll
 
 How to Install Python 3 on Mac and Update the Version with Pyenv – MacOS Homebrew Command Guide
 
-When using Python, you may install different version variations for differentprojects. But sometimes this can affect how your code executes, as it may notuse the correct version. In this article, we’ll learn how to install new Python versions (Python 3 in ourcase) and how to set this version as …
+When using Python, you may install different version variations for differentprojects. But sometimes this can affect how your code executes, as it may notuse the correct version. In this article, we’ll learn how to install new Python versions (Python 3 in ourcase) and how to set this version as ……
 
 ![favicon](https://cdn.freecodecamp.org/universal/favicons/favicon.ico)Dillion MegidafreeCodeCamp.org
 
@@ -129,7 +129,7 @@ Finally, for Windows, I'd suggest you follow an article by [Md. Fahim Bin Amin][
 
 How to Install Python on Windows
 
-Before trying to run any Python program in your Windows operating system, you’llneed to check if you have Python installed and added to the environment’s pathvariable correctly. In this article, I will show you how you can check whether you have Pythoninstalled successfully in your operating sys…
+Before trying to run any Python program in your Windows operating system, you’llneed to check if you have Python installed and added to the environment’s pathvariable correctly. In this article, I will show you how you can check whether you have Pythoninstalled successfully in your operating sys……
 
 ![favicon](https://cdn.freecodecamp.org/universal/favicons/favicon.ico)Md. Fahim Bin AminfreeCodeCamp.org
 
@@ -1041,7 +1041,7 @@ Feel free to check out the following article written by my colleague [Dionysia L
 
 Python .sort() – How to Sort a List in Python
 
-In this article, you will learn how to use Python’s sort() list method. You will also learn a different way of performing sorting in Python by using the sorted() function so you can see how it differs from sort(). By the end, you will know the basics of sorting a list in Python and know how tocu…
+In this article, you will learn how to use Python’s sort() list method. You will also learn a different way of performing sorting in Python by using the sorted() function so you can see how it differs from sort(). By the end, you will know the basics of sorting a list in Python and know how tocu……
 
 ![favicon](https://cdn.freecodecamp.org/universal/favicons/favicon.ico)Dionysia LemonakifreeCodeCamp.org
 
@@ -1178,7 +1178,7 @@ Or you can read the following article written by [Bala Priya C][71]:
 
 Python range() Function – Explained with Code Examples
 
-In Python, can use use the range() function to get a sequence of indices to loopthrough an iterable. You’ll often use range() in conjunction with a for loop. In this tutorial, you’ll learn about the different ways in which you can use the range() function – with explicit start and stop indices, …
+In Python, can use use the range() function to get a sequence of indices to loopthrough an iterable. You’ll often use range() in conjunction with a for loop. In this tutorial, you’ll learn about the different ways in which you can use the range() function – with explicit start and stop indices, ……
 
 ![favicon](https://cdn.freecodecamp.org/universal/favicons/favicon.ico)Bala Priya CfreeCodeCamp.org
 
@@ -2285,7 +2285,7 @@ Since we've been talking about conditional statements and some of the operators 
 
 Python Switch Statement – Switch Case Example
 
-Until version 3.10, Python never had a feature that implemented what the switchstatement does in other programming languages. So, if you wanted to execute multiple conditional statements, you would’ve hadto use the elif keyword like this: age = 120 if age > 90: print(“You are too old to par…
+Until version 3.10, Python never had a feature that implemented what the switchstatement does in other programming languages. So, if you wanted to execute multiple conditional statements, you would’ve hadto use the elif keyword like this: age = 120 if age > 90: print(“You are too old to par……
 
 ![favicon](https://cdn.freecodecamp.org/universal/favicons/favicon.ico)Kolade ChrisfreeCodeCamp.org
 
@@ -2466,7 +2466,7 @@ My colleague [Estefania Cassingena Navone][78] has written an excellent guide on
 
 Python Sets: A Detailed Visual Introduction
 
-WelcomeIn this article, you will learn the fundamentals of Sets in Python. This is avery powerful built-in data type that you can use in your Python projects. We will explore: \* What sets are and why they are relevant for your projects. \* How to create a set. \* How to check if an element is …
+WelcomeIn this article, you will learn the fundamentals of Sets in Python. This is avery powerful built-in data type that you can use in your Python projects. We will explore: \* What sets are and why they are relevant for your projects. \* How to create a set. \* How to check if an element ……s …
 
 ![favicon](https://cdn.freecodecamp.org/universal/favicons/favicon.ico)Estefania Cassingena NavonefreeCodeCamp.org
 
@@ -2901,7 +2901,7 @@ My colleague [Beau Carnes][81] has written a more in-depth article discussing ho
 
 How Recursion Works — Explained with Flowcharts and a Video
 
-Illustration (and all in this article) by Adit Bhargava> “In order to understandrecursion, one must first understand recursion.”Recursion can be tough to understand — especially for new programmers. In itssimplest form, a recursive function is one that calls itself. Let me try toexplain with an …
+Illustration (and all in this article) by Adit Bhargava> “In order to understandrecursion, one must first understand recursion.”Recursion can be tough to understand — especially for new programmers. In itssimplest form, a recursive function is one that calls itself. Let me try toexplain with an ……
 
 ![favicon](https://cdn.freecodecamp.org/universal/favicons/favicon.ico)Beau CarnesfreeCodeCamp.org
 

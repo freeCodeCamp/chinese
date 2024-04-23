@@ -526,7 +526,7 @@ We create two threads (`thread1` and `thread2`) that concurrently increment the 
 
 The Singleton pattern is a design pattern that ensures a class has only one instance and provides a global point of access to that instance. It is achieved by making the constructor of the class private, creating a static method to provide a single point of access to the instance, and lazily initializing the instance when needed.
 
-### Implementation without Singleton:
+### Implementation without Singleton
 
 Let's imagine a scenario where you want to establish a database connection. Without the Singleton pattern, every time you'd need a connection, you might end up creating a new one.
 
@@ -555,7 +555,7 @@ DatabaseConnectionWithoutSingleton connection2 = new DatabaseConnectionWithoutSi
 
 For the above code, "Establishing a new database connection..." would be printed twice, implying two separate connections were created. This is redundant and can be resource-intensive.
 
-### Implementation with Singleton:
+### Implementation with Singleton
 
 With the Singleton pattern, even if you attempt to get the connection multiple times, you'd be working with the same instance.
 
@@ -849,7 +849,7 @@ In Java, fail-fast and fail-safe are two strategies for handling concurrent modi
 
 Fail-fast iterators throw a `ConcurrentModificationException` if a collection is modified while being iterated. Fail-safe iterators, on the other hand, do not throw exceptions and allow safe iteration even if the collection is modified concurrently.
 
-### Fail-Fast Iterator Example:
+### Fail-Fast Iterator Example
 
 ```java
 import java.util.ArrayList;
@@ -882,7 +882,7 @@ public class FailFastExample {
 
 In this example, when we attempt to remove an element from the `list` while iterating, it leads to a `ConcurrentModificationException`, which is characteristic of fail-fast behavior. Fail-fast iterators immediately detect and throw an exception when they detect that the collection has been modified during iteration.
 
-### **Fail-Safe Iterator Example:**
+### **Fail-Safe Iterator Example**
 
 ```java
 import java.util.Iterator;
@@ -924,35 +924,35 @@ Type erasure is a process in Java where type parameters in generic classes or me
 
 ## 31\. Describe the Differences between `StringBuilder` and `StringBuffer`
 
-### Thread Safety:
+### Thread Safety
 
 `StringBuffer` is thread-safe. This means it is synchronized, so it ensures that only one thread can modify it at a time. This is crucial in a multithreaded environment where you have multiple threads modifying the same string buffer.
 
 `StringBuilder`, on the other hand, is not thread-safe. It does not guarantee synchronization, making it unsuitable for use in scenarios where a string is accessed and modified by multiple threads concurrently. But this lack of synchronization typically leads to better performance under single-threaded conditions.
 
-### Performance:
+### Performance
 
 Because `StringBuffer` operations are synchronized, they involve a certain overhead that can impact performance negatively when high-speed string manipulation is required.
 
 `StringBuilder` is faster than `StringBuffer` because it avoids the overhead of synchronization. It's an excellent choice for string manipulation in a single-threaded environment.
 
-### Use Case Scenarios:
+### Use Case Scenarios
 
 Use `StringBuffer` when you need to manipulate strings in a multithreaded environment. Its thread-safe nature makes it the appropriate choice in this scenario.
 
 Use `StringBuilder` in single-threaded situations, such as local method scope or within a block synchronized externally, where thread safety is not a concern. Its performance benefits shine in these cases.
 
-### API Similarity:
+### API Similarity
 
 Both `StringBuilder` and `StringBuffer` have almost identical APIs. They provide similar methods for manipulating strings, such as `append()`, `insert()`, `delete()`, `reverse()`, and so on.
 
 This similarity means that switching from one to the other in your code is generally straightforward.
 
-### Memory Efficiency:
+### Memory Efficiency
 
 Both classes are more memory efficient compared to using `String` for concatenation. Since `String` is immutable in Java, concatenation with `String` creates multiple objects, whereas `StringBuilder` and `StringBuffer` modify the string in place.
 
-### Introduced Versions:
+### Introduced Versions
 
 `StringBuffer` has been a part of Java since version 1.0, whereas `StringBuilder` was introduced later in Java 5. This introduction was primarily to offer a non-synchronized alternative to `StringBuffer` for improved performance in single-threaded applications.
 
@@ -983,11 +983,11 @@ Another misconception is that `volatile` variables are slow. But while they migh
 **Best Practices:** Use `volatile` sparingly and only when necessary. Overusing it can lead to memory visibility issues that are harder to detect and debug.  
 Always assess whether your use case requires atomicity, in which case other concurrent utilities or synchronization might be more appropriate.
 
-### `volatile` use case:
+### `volatile` use case
 
 We will create a simple program where one thread modifies a `volatile` boolean flag, and another thread reads this flag. This flag will be used to control the execution of the second thread.
 
-#### Code Example:
+#### Code Example
 
 ```
 public class VolatileExample {
@@ -1041,7 +1041,7 @@ public class VolatileExample {
 }
 ```
 
-### Key Points in the Comments:
+### Key Points in the Comments
 
 -   **Visibility of `volatile` variable:** The most crucial aspect of using `volatile` here is ensuring that the update to the `running` variable in one thread (main thread) is immediately visible to another thread (`thread1`). This is what allows `thread1` to stop gracefully when `running` is set to `false`.
 -   **Use in a Simple Flag Scenario:** The example demonstrates a common scenario for using `volatile`, that is as a simple flag to control the execution flow in a multithreaded environment.
@@ -1052,49 +1052,49 @@ public class VolatileExample {
 
 The JMM defines how Java threads interact through memory. Essentially, it describes the relationship between variables and the actions of threads (reads and writes), ensuring consistency and predictability in concurrent programming.
 
-### Happens-Before Relationship:
+### Happens-Before Relationship
 
 At the heart of the JMM is the 'happens-before' relationship. This principle ensures memory visibility, guaranteeing that if one action happens-before another, then the first is visible to and affects the second.
 
 For example, changes to a variable made by one thread are guaranteed to be visible to other threads only if a happens-before relationship is established.
 
-### Memory Visibility:
+### Memory Visibility
 
 Without the JMM, threads might cache variables, and changes made by one thread might not be visible to others. The JMM ensures that changes made to a shared variable by one thread will eventually be visible to other threads.
 
-### Synchronization:
+### Synchronization
 
 The JMM utilizes synchronization to establish happens-before relationships. When a variable is accessed within synchronized blocks, any write operation in one synchronized block is visible to any subsequent read operation in another synchronized block.
 
 Additionally, the JMM governs the behavior of volatile variables, ensuring visibility of updates to these variables across threads without synchronization.
 
-### Thread Interleaving and Atomicity:
+### Thread Interleaving and Atomicity
 
 The JMM defines how operations can interleave when executed by multiple threads. This can lead to complex states if not managed correctly.
 
 Atomicity refers to operations that are indivisible and uninterrupted. In Java, operations on most primitive types (except `long` and `double`) are atomic. However, compound operations (like incrementing a variable) are not automatically atomic.
 
-### Reordering:
+### Reordering
 
 The JMM allows compilers to reorder instructions for performance optimization as long as happens-before guarantees are maintained. However, this can lead to subtle bugs if not properly understood.
 
-### Use of Volatile Keyword:
+### Use of Volatile Keyword
 
 The `volatile` keyword plays a significant role in the JMM. It ensures that any write to a volatile variable establishes a happens-before relationship with subsequent reads of that variable, thus ensuring memory visibility without the overhead of synchronization.
 
-### Locking Mechanisms:
+### Locking Mechanisms
 
 Locks in Java (implicit via synchronized blocks/methods or explicit via `ReentrantLock` or others) also adhere to the JMM, ensuring that memory visibility is maintained across threads entering and exiting locks.
 
-### Safe Publication:
+### Safe Publication
 
 The JMM also addresses the concept of safe publication, ensuring that objects are fully constructed and visible to other threads after their creation.
 
-### High-Level Implications:
+### High-Level Implications
 
 Understanding the JMM is critical for writing correct and efficient multi-threaded Java applications. It helps developers reason about how shared memory is handled, especially in complex applications where multiple threads interact and modify shared data.
 
-### Best Practices:
+### Best Practices
 
 -   Always use the appropriate synchronization mechanism to ensure memory visibility and atomicity.
 -   Be cautious about memory visibility issues; even simple operations can lead to visibility problems in a multi-threaded context.
@@ -1104,13 +1104,13 @@ Understanding the JMM is critical for writing correct and efficient multi-thread
 
 The `default` keyword in Java interfaces, introduced in Java 8, marks a significant evolution in the Java language, especially in how interfaces are used and implemented. It serves several key purposes:
 
-### Adding Method Implementations in Interfaces:
+### Adding Method Implementations in Interfaces
 
 Prior to Java 8, interfaces in Java could only contain method signatures (abstract methods) without any implementation.
 
 The `default` keyword allows you to provide a default implementation for a method within an interface. This feature bridges a gap between full abstraction (interfaces) and concrete implementations (classes).
 
-### Enhancing Interface Evolution:
+### Enhancing Interface Evolution
 
 One of the primary motivations for introducing the `default` keyword was to enhance the evolution of interfaces.
 
@@ -1118,17 +1118,17 @@ Before Java 8, adding a new method to an interface meant breaking all its existi
 
 This is particularly useful for library designers, ensuring backward compatibility when interfaces need to be expanded.
 
-### Facilitating Functional Programming:
+### Facilitating Functional Programming
 
 \\The introduction of `default` methods played a crucial role in enabling functional programming features in Java, such as Lambda expressions. It allowed for richer interfaces (like `java.util.stream.Stream`) which are fundamental to functional-style operations in Java.
 
-### Multiple Inheritance of Behavior:
+### Multiple Inheritance of Behavior
 
 While Java does not allow multiple inheritance of state (that is, you cannot inherit from multiple classes), the `default` keyword enables multiple inheritance of behavior.
 
 A class can implement multiple interfaces, and each interface can provide a default implementation of methods, which the class inherits.
 
-### Reducing Boilerplate Code:
+### Reducing Boilerplate Code
 
 `default` methods can be used to reduce the amount of boilerplate code by providing a general implementation that can be shared across multiple implementing classes, while still allowing individual classes to override the default implementation if a more specific behavior is required.
 
@@ -1148,7 +1148,7 @@ public interface Vehicle {
 
 In this example, any class implementing the `Vehicle` interface must provide an implementation for `cleanVehicle`, but it's optional for `startEngine`. The default implementation of `startEngine` can be used as is, or overridden by the implementing class.
 
-### Best Practices and Considerations:
+### Best Practices and Considerations
 
 -   **Use Sparingly:** Default methods should be used judiciously. They are best suited for gradually evolving interfaces or for methods that have a common implementation across most implementing classes.
 -   **Design With Care:** When designing interfaces with `default` methods, consider how they might be used or overridden. It's important to document the expected behavior and interactions between default methods and other abstract methods in the interface.
@@ -1160,7 +1160,7 @@ The evolution of the switch statement from Java 7 to Java 8 - [lunartech.ai][61]
 
 ## 35\. How Does `switch` Differ in Java 7 and Java 8?
 
-### In Java 7:
+### In Java 7
 
 **Limited Case Types:** In Java 7, the `switch` statement supports limited types for the case labels, namely `byte`, `short`, `char`, `int`, and their corresponding Wrapper classes, along with `enum` types and, as of Java 7, `String`.
 
@@ -1168,7 +1168,7 @@ The evolution of the switch statement from Java 7 to Java 8 - [lunartech.ai][61]
 
 **No Lambda Expressions:** Java 7 does not support lambda expressions, and thus, they cannot be used within a `switch` statement or case labels.
 
-### In Java 8:
+### In Java 8
 
 **Lambda Expressions:** While the basic syntax and supported types for the `switch` statement itself did not change in Java 8, the introduction of lambda expressions in this version brought a new paradigm in handling conditional logic.
 
@@ -1178,7 +1178,7 @@ This doesn’t directly change how `switch` works, but it offers alternative pat
 
 **Enhanced Readability and Maintainability:** Although not a direct change to the `switch` statement, the use of lambda expressions and functional programming practices in Java 8 can lead to more readable and maintainable code structures that might otherwise use complex `switch` or nested `if-else` statements.
 
-### Practical Considerations:
+### Practical Considerations
 
 -   **When to Use `switch` in Java 8:** Despite the advancements in Java 8, the `switch` statement remains a viable and efficient method for controlling complex conditional logic. It is particularly useful when dealing with a known set of possible values, such as enum constants or strings.
 -   **Combining `switch` with Lambdas:** While you cannot use lambdas directly in a `switch` statement, Java 8 allows for more elegant ways to handle complex conditional logic that might traditionally have been a use case for `switch`. For example, using a `Map` with lambdas or method references can sometimes replace a complex `switch` statement.
@@ -1205,13 +1205,13 @@ list.add(number);
 // Here, 'number' is automatically converted to an Integer object
 ```
 
-### Behind the Scenes:
+### Behind the Scenes
 
 When autoboxing, the compiler essentially uses the valueOf method of the respective wrapper class to convert the primitive to its wrapper type.
 
 For example, `Integer.valueOf(int)` is used for converting `int` to `Integer`.
 
-### Performance Considerations:
+### Performance Considerations
 
 -   While convenient, autoboxing can introduce performance overhead, especially in scenarios with extensive boxing and unboxing in tight loops, due to the creation of additional objects.
 
@@ -1231,15 +1231,15 @@ int primitiveInt = wrappedInt;
 // Unboxing from Integer to int
 ```
 
-### Behind the Scenes:
+### Behind the Scenes
 
 During unboxing, the compiler uses the corresponding wrapper class's method to extract the primitive value. For instance, it uses `Integer.intValue()` to get the `int` from an `Integer`.
 
-### Null Pointer Exception:
+### Null Pointer Exception
 
 A crucial point to consider is that unboxing a `null` object reference will throw a `NullPointerException`. This is a common bug in code that relies heavily on autoboxing and unboxing.
 
-### Best Practices and Considerations:
+### Best Practices and Considerations
 
 -   **Be Aware of Implicit Conversions:** It's important to be aware that these conversions are happening, as they can sometimes lead to unexpected behavior, especially with regards to `NullPointerExceptions` during unboxing of `null` references.
 -   **Consider Performance:** In performance-sensitive applications, prefer using primitives to avoid the overhead of autoboxing and unboxing.
@@ -1260,14 +1260,14 @@ A functional interface in Java is an interface that contains exactly one abstrac
 
 The primary role of `@FunctionalInterface` is to signal the compiler to enforce the rule of a single abstract method. If the annotated interface does not adhere to this rule, the compiler throws an error, ensuring the interface's contract is not accidentally broken by adding additional abstract methods.
 
-### Usage and Implications:
+### Usage and Implications
 
 1.  **Lambda Expressions:** Functional interfaces provide target types for lambda expressions and method references.  
     For example, Java's standard `java.util.function` package contains several functional interfaces like `Function<T,R>`, `Predicate<T>`, `Consumer<T>`, which are widely used in stream operations and other functional programming scenarios.
 2.  **Optional but Recommended:** While the `@FunctionalInterface` annotation is not mandatory for an interface to be considered a functional interface by the Java compiler, using it is considered best practice. It makes the developer's intention clear and ensures the contract of the functional interface is not inadvertently broken.
 3.  **Existing Interfaces:** Many existing interfaces from earlier versions of Java naturally fit the definition of a functional interface. For example, `java.lang.Runnable` and `java.util.concurrent.Callable` are both functional interfaces as they have only one abstract method.
 
-### Example:
+### Example
 
 ```
 @FunctionalInterface
@@ -1278,7 +1278,7 @@ public interface SimpleFunction {
 
 In this example, `SimpleFunction` is a functional interface with one abstract method `execute()`. The `@FunctionalInterface` annotation ensures that no additional abstract methods are inadvertently added.
 
-### Best Practices and Considerations:
+### Best Practices and Considerations
 
 -   **Clarity and Documentation:** Use `@FunctionalInterface` to communicate your intention clearly both to the compiler and to other developers. It serves as a form of documentation.
 -   **Design with Care:** When designing a functional interface, consider its general utility and how it fits into the broader application architecture, especially if it's intended to be used across different parts of the application.
@@ -1291,7 +1291,7 @@ Achieving immutability in Java is a fundamental practice, particularly useful fo
 
 An immutable object is one whose state cannot be modified after it is created. Here's a detailed and precise explanation of how to achieve immutability in Java:
 
-### Core Principles of Immutability:
+### Core Principles of Immutability
 
 1.  **No Setters:** Immutable objects do not expose any methods to modify their state after construction. This typically means not providing any setter methods.
 2.  **Final Class:** The class should be declared as `final` to prevent subclassing. Subclasses could add mutable state, undermining the immutability of the parent class.
@@ -1303,7 +1303,7 @@ An immutable object is one whose state cannot be modified after it is created. H
 -   Do not provide methods that modify mutable objects.
 -   Do not share references to the mutable objects. Provide copies of mutable objects when needed.
 
-### How to Create an Immutable Class:
+### How to Create an Immutable Class
 
 ```
 public final class ImmutableClass {
@@ -1333,7 +1333,7 @@ public final class ImmutableClass {
 }
 ```
 
-### Best Practices and Considerations:
+### Best Practices and Considerations
 
 -   **Defensive Copies:** When dealing with mutable objects passed to the constructor or returned by methods, create defensive copies. This practice prevents external code from modifying the internal state of the immutable object.
 -   **Immutable Collections:** Utilize immutable collections (like those provided in Java 9 and later) to simplify the creation of classes with immutable collection fields.
@@ -1342,7 +1342,7 @@ public final class ImmutableClass {
 -   **String and Wrapper Types:** Leverage the immutability of String and wrapper types (Integer, Long, and so on) as part of your immutable objects.
 -   **Design Strategy:** Consider immutability as a design strategy, especially for objects representing values that are not expected to change, such as configuration data, constants, or natural data types.
 
-### Advantages of Immutability:
+### Advantages of Immutability
 
 1.  **Simplicity and Clarity:** Immutable objects are easier to understand and use. There's no need to track changes in state, reducing cognitive load.
 2.  **Thread Safety:** Immutability eliminates issues related to concurrency and synchronization, as immutable objects can be freely shared between threads without synchronization.
@@ -1363,14 +1363,14 @@ The pattern involves a set of decorator classes that are used to wrap concrete c
 
 It typically involves an abstract decorator class that implements or extends the same interface or superclass as the objects it will dynamically add functionality to. Concrete decorators then extend the abstract decorator.
 
-### Key Components:
+### Key Components
 
 -   **Component:** An interface or abstract class defining the operations that can be altered by decorators.
 -   **Concrete Component:** A class implementing or extending the Component, defining an object to which additional responsibilities can be attached.
 -   **Decorator:** An abstract class that extends or implements the Component interface and has a reference to a Component.
 -   **Concrete Decorator:** A class that extends the Decorator and adds functionalities to the Component it decorates.
 
-### Decorator example in Java:
+### Decorator example in Java
 
 ```
 // Component
@@ -1427,13 +1427,13 @@ public class MilkCoffeeDecorator extends CoffeeDecorator {
 }
 ```
 
-### Usage and Advantages:
+### Usage and Advantages
 
 -   **Flexibility:** The Decorator Pattern provides a more flexible way to add responsibilities to objects compared to subclassing. New functionalities can be added at runtime.
 -   **Avoid Class Explosion:** It helps in avoiding an extensive hierarchy of subclasses when you need multiple combinations of functionalities.
 -   **Single Responsibility Principle:** Decorators allow functionalities to be divided into simple classes with single responsibilities.
 
-### Considerations:
+### Considerations
 
 -   **Complexity:** Overuse of the decorator pattern can lead to complexity, making the code harder to understand and maintain.
 -   **Instantiation Management:** Managing the instantiation of decorated objects can be challenging, especially when dealing with multiple layers of decoration.
@@ -1450,40 +1450,40 @@ Java I/O (Input/Output) streams are a fundamental part of the Java I/O API, prov
 
 I/O streams in Java are used to read data from an input source and to write data to an output destination. The Java I/O API is rich and provides various classes to handle different types of data, like bytes, characters, objects, etc.
 
-### Stream Types:
+### Stream Types
 
 Java I/O streams are broadly categorized into two types:
 
 -   **Byte Streams:** Handle I/O of raw binary data.
 -   **Character Streams:** Handle I/O of character data, automatically handling character encoding and decoding.
 
-#### Byte Streams:
+#### Byte Streams
 
 -   **Classes:** `InputStream` and `OutputStream` are abstract classes at the hierarchy's root for byte streams.
 -   **Usage:** They are used for reading and writing binary data, such as image or video files.
 -   **Example Classes:** `FileInputStream`, `FileOutputStream`, `BufferedInputStream`, `BufferedOutputStream`, etc.
 
-#### Character Streams:
+#### Character Streams
 
 -   **Classes:** `Reader` and `Writer` are abstract classes for character streams.
 -   **Usage:** Suitable for handling textual data, ensuring correct interpretation of characters according to the default character encoding.
 -   **Example Classes:** `FileReader`, `FileWriter`, `BufferedReader`, `BufferedWriter`, etc.
 
-### Key Features of Java I/O Streams:
+### Key Features of Java I/O Streams
 
 1.  **Stream Hierarchy:** Java uses a hierarchy of classes to manage different types of I/O operations, allowing for flexibility and reusability of code.
 2.  **Decorators:** Java I/O uses decorators, where one stream wraps another and adds additional capabilities, like buffering, data conversion, and so on.
 3.  **Buffering:** Buffering is a common practice in I/O streams to enhance I/O efficiency, allowing for the temporary storage of data in memory before it's written to or read from the actual I/O source.
 4.  **Exception Handling:** I/O operations in Java are prone to errors like file not found, access denied, etc. Hence, most I/O operations throw `IOException`, which must be properly handled using try-catch blocks or thrown further.
 
-### Best Practices:
+### Best Practices
 
 -   **Use Buffered Streams:** Always use buffered streams (`BufferedInputStream`, `BufferedOutputStream`, `BufferedReader`, `BufferedWriter`) for efficient I/O operations, as they reduce the number of actual I/O operations by buffering chunks of data.
 -   **Close Streams:** Ensure streams are closed after their operation is complete to free up system resources. This is typically done in a finally block or using try-with-resources introduced in Java 7.
 -   **Error Handling:** Implement robust error handling. I/O operations are susceptible to many issues, so proper exception handling is crucial.
 -   **Character Encoding:** Be mindful of character encoding while using character streams. Incorrect handling of encoding can lead to data corruption.
 
-### Practical Example:
+### Practical Example
 
 ```
 try (BufferedReader reader = new BufferedReader(new FileReader("input.txt"));
@@ -1525,7 +1525,7 @@ Unlike languages where memory management is manual (like C/C++), Java provides a
 
 ### How the Garbage Collector Works
 
-#### Object Creation and Heap Storage:
+#### Object Creation and Heap Storage
 
 In Java, objects are created in a heap memory area. This heap is divided into several parts – Young Generation, Old Generation (or Tenured Generation), and Permanent Generation (replaced by Metaspace in Java 8).
 
@@ -1535,7 +1535,7 @@ In Java, objects are created in a heap memory area. This heap is divided into se
 3.  **Old Generation:** The Old Generation stores long-living objects. A more comprehensive form of GC, known as major GC, occurs here, which is generally more time-consuming.
 4.  **Metaspace (Java 8 and above):** Metaspace stores metadata of classes. Unlike the PermGen (Permanent Generation) space in earlier Java versions, Metaspace uses native memory, and its size is not fixed but can be configured.
 
-### Types of Garbage Collectors in Java:
+### Types of Garbage Collectors in Java
 
 -   **Serial GC:** Suitable for single-threaded environments. It freezes all application threads during garbage collection.
 -   **Parallel GC:** Also known as Throughput Collector, it uses multiple threads for young generation garbage collection but stops all application threads during major GC.
@@ -1550,7 +1550,7 @@ Unreachable objects (those not marked as reachable) are considered for **deletio
 
 To prevent fragmentation and optimize memory usage, some garbage collectors perform **compaction**, moving surviving objects closer together.
 
-### Best Practices and Considerations:
+### Best Practices and Considerations
 
 -   **Avoid Memory Leaks:** Despite automatic garbage collection, memory leaks can still occur (for example, through static references). It's crucial to be mindful of object references and their lifecycles.
 -   **GC Tuning:** For high-performance applications, GC tuning can be essential. Understanding different garbage collector types and their configuration parameters allows for optimal tuning according to application needs.
@@ -1734,7 +1734,7 @@ The Observer pattern provides a clean and straightforward way to implement a sub
 
 This pattern enhances modularity and separation of concerns, making the system easier to understand, maintain, and extend.
 
-## 44\. Explain the Purpose of the `this` Keyword.
+## 44\. Explain the Purpose of the `this` Keyword
 
 The `this` keyword in Java serves a very specific and useful purpose. It refers to the current instance of the class in which it is used. This is particularly valuable in scenarios where you need to distinguish between class fields (instance variables) and parameters or variables within a method that have the same name. Let's break it down:
 
@@ -1779,11 +1779,11 @@ public User setName(String name) {
 
 Java's try-with-resources feature - [lunartech.ai][63]
 
-## 45\. Explain Java's try-with-resources.
+## 45. Explain Java's try-with-resources
 
 Java's try-with-resources, introduced in Java 7, is a mechanism that ensures more efficient handling of resources, like files or sockets, in Java. Its primary purpose is to simplify the cleanup of resources which must be closed after their operations are completed.
 
-#### Key Characteristics:
+#### Key Characteristics
 
 **Automatic Resource Management:** In try-with-resources, resources declared within the try clause are automatically closed at the end of the statement, even if exceptions are thrown. This reduces boilerplate code significantly as compared to traditional try-catch-finally blocks.
 
@@ -1802,65 +1802,65 @@ try (BufferedReader br = new BufferedReader(new FileReader("path/to/file.txt")))
 3.  **Improved Readability and Reliability:** This structure enhances code readability and reliability. It reduces the risk of resource leaks, as the closing of resources is handled automatically.
 4.  **Use in Custom Resources:** Custom classes can also utilize this mechanism by implementing the `AutoCloseable` interface and overriding the `close` method.
 
-#### Practical Implications:
+#### Practical Implications
 
 In real-world applications, try-with-resources ensures that resources like file streams, database connections, or network sockets are closed properly, preventing resource leaks which could lead to performance issues and other bugs. It is especially valuable in large-scale applications where resource management is critical for efficiency and reliability.
 
-## 46\. Explain the Difference between C++ and Java.
+## 46. Explain the Difference between C++ and Java
 
 When distinguishing between C++ and Java, it's important to understand that both are powerful programming languages with their unique characteristics and use cases.
 
 They share some similarities, as both are object-oriented and have similar syntax (being influenced by C), but there are key differences that set them apart.
 
-### Language Nature and Design Philosophy:
+### Language Nature and Design Philosophy
 
 **C++** is a multi-paradigm language that supports both procedural and object-oriented programming. It's often chosen for system-level programming due to its efficiency and fine-grained control over memory management.
 
 **Java**, on the other hand, is primarily object-oriented and designed with a simpler approach to avoid common programming errors (like pointer errors in C++). Java's design principle "Write Once, Run Anywhere" (WORA) emphasizes portability, which is achieved through the Java Virtual Machine (JVM).
 
-### Memory Management:
+### Memory Management
 
 In **C++**, memory management is manual. Programmers have direct control over memory allocation and deallocation using operators like `new` and `delete`.
 
 **Java** abstracts away the complexity of direct memory management through its Automatic Garbage Collection, which periodically frees memory that's no longer in use, reducing the likelihood of memory leaks but at the cost of less control and potential overhead.
 
-### Platform Dependency and Portability:
+### Platform Dependency and Portability
 
 **C++** is platform-dependent. A C++ program needs to be compiled for each specific platform it's intended to run on, which can lead to more work when targeting multiple platforms.
 
 **Java** is platform-independent at the source level. Java programs are compiled into bytecode, which can run on any device equipped with a JVM, making it highly portable.
 
-### Runtime and Performance:
+### Runtime and Performance
 
 **C++** generally offers higher performance than Java. It compiles directly to machine code, which the CPU executes, resulting in faster execution suitable for performance-critical applications.
 
 **Java** may have slower performance due to the added abstraction layer of the JVM. But improvements in Just-In-Time (JIT) compilers within the JVM have significantly narrowed this performance gap.
 
-### Pointers and Memory Safety:
+### Pointers and Memory Safety
 
 **C++** supports both pointers and references, allowing for powerful, albeit potentially risky, memory manipulation.
 
 **Java** has references but does not support pointers (at least not in the traditional sense), reducing the risk of memory access errors, thereby increasing program safety.
 
-### Exception Handling:
+### Exception Handling
 
 **C++** supports exception handling but does not enforce error handling (uncaught exceptions can lead to undefined behavior).
 
 **Java** has a robust exception handling mechanism, requiring checked exceptions to be caught or declared in the method signature, promoting better error management practices.
 
-### Multi-Threading:
+### Multi-Threading
 
 **C++** has more complex approaches to multi-threading and requires careful management to ensure thread safety.
 
 **Java** provides built-in support for multi-threading with synchronized methods and blocks, making concurrent programming more manageable.
 
-### Standard Template Library (STL) vs. Java Standard Library:
+### Standard Template Library (STL) vs. Java Standard Library
 
 **C++**'s STL is a powerful library that offers containers, algorithms, iterators, and so on for efficient data manipulation.
 
 **Java**'s Standard Library provides a rich set of APIs, including collections, streams, networking, and so on with a focus on ease of use.
 
-### Legacy and Use Cases:
+### Legacy and Use Cases
 
 **C++** is often chosen for system/software development, game development, and applications where hardware access and performance are critical.
 
@@ -1872,7 +1872,7 @@ C++ is preferred for scenarios where performance and memory control are crucial,
 
 Understanding these differences is key in selecting the right language for a particular task or project, and adapting to the strengths of each can lead to more efficient and effective programming practices.
 
-## 47\. What is Polymorphism? Provide an Example.
+## 47. What is Polymorphism? Provide an Example
 
 Polymorphism, a fundamental concept in object-oriented programming, allows objects to be treated as instances of their parent class or interface. It’s a Greek word meaning “many shapes” and in programming, it refers to the ability of a single function or method to work in different ways based on the object it is acting upon.
 
@@ -1947,7 +1947,7 @@ Avoiding memory leaks in Java, despite its automated garbage collection mechanis
 
 Let’s delve into some advanced and specific strategies for preventing memory leaks in Java applications:
 
-### Understand Object Lifecycle and Scope:
+### Understand Object Lifecycle and Scope
 
 -   **Scope Management**: Ensure objects are scoped as narrowly as possible. For instance, use local variables within methods rather than class-level variables if the data does not need to persist beyond the method’s execution context.
 -   **Reference Management**: Be cautious with static references. Static fields can keep objects alive for the lifetime of the class, potentially leading to memory leaks.
@@ -1963,7 +1963,7 @@ public class ScopedObject {
 }
 ```
 
-### Efficient Use of Collections:
+### Efficient Use of Collections
 
 -   **WeakHashMap**: For cache implementations, consider using `WeakHashMap`. It uses weak references for keys, which allows keys (and their associated values) to be garbage-collected when no longer in use.
 -   **Data Structure Choice**: Be mindful of the choice of data structure. For example, use `ArrayList` over `LinkedList` for large lists of data where frequent access is required, as `LinkedList` can consume more memory due to the storage of additional node references.
@@ -1981,7 +1981,7 @@ public class CacheExample {
 }
 ```
 
-### Leveraging `WeakReferences` and `SoftReferences`:
+### Leveraging `WeakReferences` and `SoftReferences`
 
 -   **SoftReferences for Caches**: Use `SoftReference` for memory-sensitive caches. The garbage collector will only remove soft-referenced objects if it needs memory, making them more persistent than weak references.
 -   **WeakReferences for Listeners**: Utilize `WeakReference` for listener patterns where listeners might not be explicitly removed.
@@ -1998,7 +1998,7 @@ public class CacheWithSoftReference {
 }
 ```
 
-### Managing Resources and I/O:
+### Managing Resources and I/O
 
 -   **AutoCloseable and Try-with-Resources**: For resources like streams, files, and connections, use try-with-resources for automatic closure. Ensure that objects implementing `AutoCloseable` are closed properly to release resources.
 
@@ -2016,7 +2016,7 @@ public class AutoCloseExample {
 }
 ```
 
-### Inner Classes Handling:
+### Inner Classes Handling
 
 -   **Static Inner Classes**: Prefer static inner classes over non-static to avoid the implicit reference to the outer class instance, which can prevent the outer instance from being garbage-collected.
 
@@ -2028,7 +2028,7 @@ public class OuterClass {
 }
 ```
 
-### Profiling and Leak Detection:
+### Profiling and Leak Detection
 
 -   **Heap Dump Analysis**: Regularly analyze heap dumps in tools like Eclipse Memory Analyzer (MAT) to detect large objects and potential memory leaks.
 -   **Java Flight Recorder**: Use Java Flight Recorder for runtime analysis and monitoring, which can help identify memory leaks.
@@ -2038,7 +2038,7 @@ public class OuterClass {
 // demonstration than a code snippet.
 ```
 
-### `ThreadLocal` Variables Management:
+### `ThreadLocal` Variables Management
 
 -   **Explicit Removal**: Always remove `ThreadLocal` variables after use, particularly in thread-pooled environments like servlet containers or application servers.
 
@@ -2054,16 +2054,16 @@ public class ThreadLocalExample {
 }
 ```
 
-### `ClassLoader` Leaks:
+### `ClassLoader` Leaks
 
 -   **`ClassLoader` Lifecycle**: In environments with dynamic class loading/unloading (for example, web servers), ensure that class loaders are garbage collected when not needed. This involves ensuring that classes loaded by these class loaders are no longer referenced.
 
-### Garbage Collection Tuning:
+### Garbage Collection Tuning
 
 -   **GC Analysis**: Analyze GC logs to understand the garbage collection behavior and identify potential memory leaks.
 -   **GC Algorithm Choice**: Choose an appropriate garbage collection algorithm based on application needs, which can be tuned with JVM options for optimal performance.
 
-### String Interning:
+### String Interning
 
 -   **Selective Interning**: Be cautious with the `String.intern()` method. Unnecessary interning of strings can lead to a bloated String pool.
 
@@ -2075,11 +2075,11 @@ public class StringInterningExample {
 }
 ```
 
-### Static Analysis Tools:
+### Static Analysis Tools
 
 Utilize tools like SonarQube, FindBugs, or PMD to statically analyze code for patterns that could lead to memory leaks.
 
-### Developer Training and Code Reviews:
+### Developer Training and Code Reviews
 
 Regularly train developers on best practices in memory management and conduct thorough code reviews with a focus on potential memory leak patterns.
 
@@ -2093,7 +2093,7 @@ The purpose of Java's synchronized block is to ensure thread safety in concurren
 
 In a multithreaded environment, where multiple threads operate on the same object, there's a risk of data inconsistency if the threads simultaneously modify the object. A synchronized block in Java is used to lock an object for exclusive access by a single thread.
 
-### Thread Safety and Data Consistency:
+### Thread Safety and Data Consistency
 
 When different threads access and modify shared data, it can lead to unpredictable data states and inconsistencies. The synchronized block ensures that only one thread can execute a particular block of code at a time, thus maintaining data integrity.
 
@@ -2116,7 +2116,7 @@ public class Counter {
 }
 ```
 
-### Lock Mechanism:
+### Lock Mechanism
 
 In Java, each object has an intrinsic lock or monitor lock. When a thread enters a synchronized block, it acquires the lock on the specified object. Other threads attempting to enter the synchronized block on the same object are blocked until the thread inside the synchronized block exits, thereby releasing the lock.
 
@@ -2135,7 +2135,7 @@ public class SharedResource {
 }
 ```
 
-### Syntax and Usage:
+### Syntax and Usage
 
 The synchronized block is defined within a method, and you must specify the object that provides the lock:
 
@@ -2155,7 +2155,7 @@ public class SynchronizedBlockExample {
 
 The `lockObject` is a reference to the object whose lock the synchronized block acquires. It can be `this` to lock the current object, a class object for class-level locks, or any other object.
 
-### Advantages Over Synchronized Methods:
+### Advantages Over Synchronized Methods
 
 Compared to synchronized methods, synchronized blocks provide finer control over the scope and duration of the lock.
 
@@ -2180,7 +2180,7 @@ public class MethodVsBlockSynchronization {
 }
 ```
 
-### Avoiding Deadlocks:
+### Avoiding Deadlocks
 
 Take care to avoid deadlocks, a situation where two or more threads are blocked forever, each waiting for the other's lock. This usually occurs when multiple synchronized blocks are locking objects in an inconsistent order.
 
@@ -2213,7 +2213,7 @@ public class DeadlockAvoidanceExample {
 }
 ```
 
-### Memory Visibility:
+### Memory Visibility
 
 Synchronized blocks also solve memory visibility problems. Changes made by one thread in a synchronized block are visible to other threads entering subsequent synchronized blocks on the same object.
 
@@ -2262,7 +2262,7 @@ A module in Java is a self-contained unit of code and data, with well-defined in
 
 Modules enable better encapsulation by allowing a module to expose only those parts of its API which should be accessible to other modules, while keeping the rest of its codebase hidden. This reduces the risk of unintended usage of internal APIs.
 
-#### Key Components of modules:
+#### Key Components of modules
 
 **`module-info.java`:** Each module must have a `module-info.java` file at its root, which declares the module's name, its required dependencies, and the packages it exports.
 
@@ -2276,13 +2276,13 @@ module com.example.myapp {
 1.  Here, `com.example.myapp` is the module name, `java.sql` is a required module, and `com.example.myapp.api` is the exported package.
 2.  **Exports and Requires:** The `exports` keyword specifies which packages are accessible to other modules, while `requires` lists the modules on which the current module depends.
 
-#### Benefits:
+#### Benefits
 
 1.  **Improved Application Structure:** Modules encourage a cleaner, more organized code structure, helping in maintaining large codebases and improving code quality.
 2.  **Reduced Memory Footprint:** By only loading the required modules, applications can reduce their memory footprint and start-up time, enhancing performance.
 3.  **Enhanced Security and Maintenance:** Modules reduce the surface area for potential security vulnerabilities. They also simplify dependency management, making it easier to update and maintain libraries without affecting the entire system.
 
-#### Practical Example:
+#### Practical Example
 
 Consider a scenario where you are developing a large-scale application with various functionalities like user management, data processing, and reporting. By organizing these functionalities into separate modules (like `usermodule`, `dataprocessmodule`, `reportmodule`), you can maintain them independently, avoiding the complexities of a monolithic application structure.
 
@@ -2339,7 +2339,7 @@ Additionally, for more practice in data structures, you can explore these resour
 
 Visit LunarTech's website for these resources and more information on the [bootcamp][67].
 
-### ******Connect with Me:******
+### ******Connect with Me******
 
 -   [Follow me on LinkedIn for a ton of Free Resources in CS, ML and AI][68]
 -   [Visit my Personal Website][69]

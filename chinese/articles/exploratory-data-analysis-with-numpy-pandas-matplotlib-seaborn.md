@@ -237,7 +237,7 @@ Numpy 还提供了一些简便的函数来创建具有固定或随机形状的�
 尝试以下练习来熟悉 Numpy 数组，锻炼你的技能：
 
 -   Numpy 数组函数的赋值：[https://jovian.ml/aakashns/numpy-array-operations](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2Fnumpy-array-operations)
--   （选做）100个 Numpy 小练习：[https://jovian.ml/aakashns/100-numpy-exercises](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2F100-numpy-exercises)
+-   （选做）100 个 Numpy 小练习：[https://jovian.ml/aakashns/100-numpy-exercises](https://jovian.ai/outlink?url=https%3A%2F%2Fjovian.ml%2Faakashns%2F100-numpy-exercises)
 
 ### 总结和进一步阅读
 
@@ -314,12 +314,12 @@ Numpy 还提供了一些简便的函数来创建具有固定或随机形状的�
 50.  Numpy 数组支持哪些比较运算符？举例说明。
 51.  如何从 Numpy 数组访问特定的子数组或切片？
 52.  通过一些示例说明多维 Numpy 数组中的数组索引和切片。
-53.  如何创建一个全为0的给定形状的 Numpy 数组？
-54.  如何创建一个全为1的给定形状的 Numpy 数组？
+53.  如何创建一个全为 0 的给定形状的 Numpy 数组？
+54.  如何创建一个全为 1 的给定形状的 Numpy 数组？
 55.  如何创建给定形状的单位矩阵？
 56.  如何创建一个给定长度的随机向量？
-57.  如何创建给定形状且每个元素具有固定值的Numpy数组？
-58.  如何创建给定形状且每个元素具有随机初始值的Numpy数组？
+57.  如何创建给定形状且每个元素具有固定值的 Numpy 数组？
+58.  如何创建给定形状且每个元素具有随机初始值的 Numpy 数组？
 59.  `np.random.rand` 与 `np.random.randn` 的区别是什么？举例说明。
 60.  `np.arange` 与 `np.linspace` 的区别是什么？举例说明。
 
@@ -343,7 +343,7 @@ Numpy 还提供了一些简便的函数来创建具有固定或随机形状的�
 
 ### 如何用 Pandas 读取 CSV 文件
 
-[Pandas](https://jovian.ai/outlink?url=https%3A%2F%2Fpandas.pydata.org%2F) 是一个非常流行的 Python 库，用于处理表格数据（类似于存在电子表格中的数据）。 它提供了辅助函数，用以从各种文件格式（如CSV、Excel电子表格、HTML表格、JSON、SQL等）中读取数据。
+[Pandas](https://jovian.ai/outlink?url=https%3A%2F%2Fpandas.pydata.org%2F) 是一个非常流行的 Python 库，用于处理表格数据（类似于存在电子表格中的数据）。 它提供了辅助函数，用以从各种文件格式（如 CSV、Excel 电子表格、HTML 表格、JSON、SQL 等）中读取数据。
 
 我们下载一个文件 `italy-covid-daywise.txt`，里面包含了意大利每日的 Covid-19 数据，格式如下：
 
@@ -372,7 +372,7 @@ date,new_cases,new_deaths,new_tests
 
 -   该文件提供了意大利新冠肺炎的四项每日计数
 -   报告的指标是确诊病例、死亡人数和测试人数
--   提供了248天的数据：从2019年12月12日到2020年9月3日
+-   提供了 248 天的数据：从 2019 年 12 月 12 日到 2020 年 9 月 3 日
 
 请记住，这些是官方报告的数字。实际病例和死亡人数可能更高，因为并非所有病例都被诊断出来。
 
@@ -742,7 +742,7 @@ Matplotlib 提供许多不同的标记，如圆圈、叉号、方块和菱形等
 fmt = '[marker][line][color]'
 ```
 
-#### **H如何在 MatPlotLib 中更改图形的尺寸**
+#### **H 如何在 MatPlotLib 中更改图形的尺寸**
 
 你可以使用 `plt.figure` 函数来更改图形的尺寸。
 
@@ -813,7 +813,7 @@ Seaborn 内置了对 Pandas 数据帧的支持。你可以提供列名并使用 
 
 热图用于可视化二维数据，如使用颜色的矩阵或表格。理解它的最好方式就是具体看一个例子。
 
-我们将使用另一个 Seaborn 的样本数据集，叫做 `flights`，来可视化机场在过去12年中的乘客流量。
+我们将使用另一个 Seaborn 的样本数据集，叫做 `flights`，来可视化机场在过去 12 年中的乘客流量。
 
 `flights_df` 是一个矩阵，一行表示一月，一列为一年。值显示了在一年中具体某个月到访机场的乘客数量（以千为计）。我们可以使用 `sns.heatmap` 函数来可视化机场的客流。
 
@@ -864,8 +864,8 @@ Seaborn 还提供了一个助手函数 `sns.pairplot`，用于在一个数据帧
 尝试回答以下问题来测试你对本文所涵盖的主题的理解程度：
 
 1.  数据可视化是什么？
-2.  Matplotlib是什么？
-3.  Seaborn是什么？
+2.  Matplotlib 是什么？
+3.  Seaborn 是什么？
 4.  如何安装 Matplotlib 和 Seaborn？
 5.  如何导入 Matplotlib 和 Seaborn？导入这两个模块时常用的别名是什么？
 6.  神奇命令 `%matplotlib inline` 的作用是什么？
@@ -927,11 +927,11 @@ Seaborn 还提供了一个助手函数 `sns.pairplot`，用于在一个数据帧
 62.  `plt.subplots` 函数的作用是什么？
 63.  什么是 Seaborn 的配对绘图？举例说明。
 64.  如何用 Matplotlib 将图表导出到 PNG 图片？
-65.  在哪里可以学到能用 Matplotlib 和 Seaborn创建的不同类型的图表？
+65.  在哪里可以学到能用 Matplotlib 和 Seaborn 创建的不同类型的图表？
 
 祝贺您完成本教程的学习！现在，您可以应用这些技能来分析来自以下来源的真实世界数据集：[Kaggle](https://kaggle.com/datasets).
 
-如果你想从事数据科学和机器学习的工作，可以考虑加入 [从零开始数据科学训练营（约维安）](https://zerotodatascience.com)。这是一个为期20周的业余课程，你将完成7门课程、12个编码作业和4个真实的项目。你还将获得6个月的职业支持，以帮助你找到第一份数据科学工作。
+如果你想从事数据科学和机器学习的工作，可以考虑加入 [从零开始数据科学训练营（约维安）](https://zerotodatascience.com)。这是一个为期 20 周的业余课程，你将完成 7 门课程、12 个编码作业和 4 个真实的项目。你还将获得 6 个月的职业支持，以帮助你找到第一份数据科学工作。
 
 [
 

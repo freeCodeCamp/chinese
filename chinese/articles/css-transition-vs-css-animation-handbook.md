@@ -1170,7 +1170,7 @@ In this article, we discuss the differences between CSS transitions and animatio
 
 Thanks for reading.
 
-### And here's a useful React TypeScript resource:
+### And here's a useful React TypeScript resource
 
 I wrote a book about [Creating NPM Packages][72]!
 

@@ -5,31 +5,31 @@
 
 ![Learn React Hooks – A Beginner's Guide](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/The-Beginner-s-Guide-to-React-Hooks.png)
 
-函数组件（Functional components）并不总是React中声明组件的首选方法。
+函数组件（Functional components）并不总是 React 中声明组件的首选方法。
 
-在React 16.8版本推出之前，功能组件被视为二等公民。它们不能处理状态（state）、逻辑（logic）和许多其他的React特性，而且我们只用它们来向UI渲染非常简单的组件。
+在 React 16.8 版本推出之前，功能组件被视为二等公民。它们不能处理状态（state）、逻辑（logic）和许多其他的 React 特性，而且我们只用它们来向 UI 渲染非常简单的组件。
 
-React 16.8版通过引入React Hooks解决了这些问题，它让开发者在函数组件（Functional components）中使用这些反应特性。
+React 16.8 版通过引入 React Hooks 解决了这些问题，它让开发者在函数组件（Functional components）中使用这些反应特性。
 
 在这篇文章中，你将学习:
 
-- 什么是React Hooks
-- 四个常见的React Hooks，并举例说明如何在你的应用程序中编写它们
-- 最后，我们将看看如何编写你自己的自定义React Hooks
+- 什么是 React Hooks
+- 四个常见的 React Hooks，并举例说明如何在你的应用程序中编写它们
+- 最后，我们将看看如何编写你自己的自定义 React Hooks
 
 ## 什么是 React Hooks?
 
-Hooks 是 React 16.8 版本中引入的内置 React 函数。它们允许你在函数组件（Functional components）中使用React库的功能，如生命周期方法（lifecycle methods）、状态（state）和上下文（context ），而不必担心将其重写为一个类（class）。
+Hooks 是 React 16.8 版本中引入的内置 React 函数。它们允许你在函数组件（Functional components）中使用 React 库的功能，如生命周期方法（lifecycle methods）、状态（state）和上下文（context ），而不必担心将其重写为一个类（class）。
 
-每个React Hook名称的前缀是 `"use"` 一词。例如，`useState`或`useEffect`。选择这种格式是因为Hooks让开发者使用React库的特殊功能。所以你是在`use` React库的那个特殊功能。
+每个 React Hook 名称的前缀是 `"use"` 一词。例如，`useState`或`useEffect`。选择这种格式是因为 Hooks 让开发者使用 React 库的特殊功能。所以你是在`use` React 库的那个特殊功能。
 
-## 为什么使用React Hooks？
+## 为什么使用 React Hooks？
 
-许多开发者对学习React Hooks持怀疑态度。但你不应该这样。以下是你应该开始使用React Hooks的几个原因:
+许多开发者对学习 React Hooks 持怀疑态度。但你不应该这样。以下是你应该开始使用 React Hooks 的几个原因:
 
-### React中的类可能是相当混乱的
+### React 中的类可能是相当混乱的
 
-类是正确学习React的一个障碍。为了使用它们，你需要了解`this`关键字是如何工作的。你还需要不断记住绑定事件处理程序，以及在React中使用类时遇到的其他多余的方法。
+类是正确学习 React 的一个障碍。为了使用它们，你需要了解`this`关键字是如何工作的。你还需要不断记住绑定事件处理程序，以及在 React 中使用类时遇到的其他多余的方法。
 
 ### 类组件（Classes components）部分很复杂，可能难以理解
 
@@ -67,7 +67,7 @@ class Counter extends Component {
 }
 ```
 
-下面是使用函数组件（functional component）和React Hooks的等效代码:
+下面是使用函数组件（functional component）和 React Hooks 的等效代码:
 
 ```javascript
 function Counter  ()  {
@@ -84,22 +84,22 @@ function Counter  ()  {
 };
 ```
 
-请注意，类组件要复杂得多。你需要一个类来扩展React，一个构造函数来初始化状态，而且你需要到处引用`this` 关键字。
+请注意，类组件要复杂得多。你需要一个类来扩展 React，一个构造函数来初始化状态，而且你需要到处引用`this` 关键字。
 
 使用函数组件（functional components）可以消除很多这些，所以我们的代码变得更短，更容易阅读和维护。
 
-## 使用React Hooks的规则
+## 使用 React Hooks 的规则
 
-在使用React Hooks时，有几个规则需要遵守:
+在使用 React Hooks 时，有几个规则需要遵守:
 
-- **只在组件的顶层调用 Hooks**: 你不应该在循环、条件或嵌套函数中使用Hooks。相反，总是在你的 React 函数的顶层使用 Hooks，在任何 `return` 关键字之前。
-- **只从React函数中调用Hooks**: 不要从普通的JavaScript函数中调用Hooks。你可以:  
-    ✅ 从React 函数组件（functional components）中调用Hooks。  
-    ✅ 从自定义Hooks中调用Hooks。
+- **只在组件的顶层调用 Hooks**: 你不应该在循环、条件或嵌套函数中使用 Hooks。相反，总是在你的 React 函数的顶层使用 Hooks，在任何 `return` 关键字之前。
+- **只从 React 函数中调用 Hooks**: 不要从普通的 JavaScript 函数中调用 Hooks。你可以:  
+    ✅ 从 React 函数组件（functional components）中调用 Hooks。  
+    ✅ 从自定义 Hooks 中调用 Hooks。
 
 ## 最常见的 React Hooks
 
-到目前为止，React有10个内置 hooks。让我们看看四个最常见的 hooks:
+到目前为止，React 有 10 个内置 hooks。让我们看看四个最常见的 hooks:
 
 - `useState`
 - `useEffect`
@@ -108,9 +108,9 @@ function Counter  ()  {
 
 ### useState Hook
 
-useState Hook允许你在函数组件（functional components）内创建、更新和操作状态。
+useState Hook 允许你在函数组件（functional components）内创建、更新和操作状态。
 
-React有一个状态的概念，它是持有我们的组件所依赖的数据的变量，并可能随着时间的推移而改变。每当这些变量发生变化时，React就会用状态变量的当前值重新渲染DOM中的组件来更新UI。
+React 有一个状态的概念，它是持有我们的组件所依赖的数据的变量，并可能随着时间的推移而改变。每当这些变量发生变化时，React 就会用状态变量的当前值重新渲染 DOM 中的组件来更新 UI。
 
 这个钩子需要一个可选的参数：一个状态（state）的初始值。然后它返回一个包含两个值的数组:
 
@@ -125,7 +125,7 @@ React有一个状态的概念，它是持有我们的组件所依赖的数据的
 import { useState } from "react";
 ```
 
-然后，用一个值初始化Hook。由于它返回一个数组，你可以使用数组析构来访问数组中的各个项目，就像这样:
+然后，用一个值初始化 Hook。由于它返回一个数组，你可以使用数组析构来访问数组中的各个项目，就像这样:
 
 ```javascript
 const [count, setCount] = useState(0);
@@ -159,16 +159,16 @@ function Counter() {
 
 ### useEffect Hook
 
-如果你熟悉React类的生命周期方法（lifecycle methods），你可以把 `useEffect`Hook 看作是`componentDidMount`、`componentDidUpdate` 和 `componentWillUnmount` 生命周期方法在一个函数中的结合。它让你在函数组件（functional components）中复制React的生命周期方法。
+如果你熟悉 React 类的生命周期方法（lifecycle methods），你可以把 `useEffect`Hook 看作是`componentDidMount`、`componentDidUpdate` 和 `componentWillUnmount` 生命周期方法在一个函数中的结合。它让你在函数组件（functional components）中复制 React 的生命周期方法。
 
-`useEffect` Hook 让你在函数组件（functional components）中执行副作用（side effects）。副作用是可以与组件的主要操作一起运行的动作，如外部API交互、修改 state变量（state variables）和数据获取。
+`useEffect` Hook 让你在函数组件（functional components）中执行副作用（side effects）。副作用是可以与组件的主要操作一起运行的动作，如外部 API 交互、修改 state 变量（state variables）和数据获取。
 
 The `useEffect` hook 接收两个参数:
 
 - 一个包含要运行的代码的函数
-- 一个包含组件范围（props, context, and state variables）数值列表的数组，被称为依赖数组，它告诉Hook在每次更新其数值时都要运行。如果不提供，Hook将在每次渲染后运行。
+- 一个包含组件范围（props, context, and state variables）数值列表的数组，被称为依赖数组，它告诉 Hook 在每次更新其数值时都要运行。如果不提供，Hook 将在每次渲染后运行。
 
-下面是一个使用Hook的例子:
+下面是一个使用 Hook 的例子:
 
 ```javascript
 import { useState, useEffect } from "react";
@@ -201,7 +201,7 @@ function Counter() {
 
 #### 如何有条件地启动一个 Effect
 
-要想在某些值发生变化时才运行Hook，可以将变量作为依赖关系传入数组:
+要想在某些值发生变化时才运行 Hook，可以将变量作为依赖关系传入数组:
 
 ```javascript
 useEffect(() => {
@@ -209,13 +209,13 @@ useEffect(() => {
 }, [product]); // Only re-run the effect if the value of product changes
 ```
 
-有了这个变化，Hook将只在第一次渲染时运行，并且当产品的价格发生变化时。
+有了这个变化，Hook 将只在第一次渲染时运行，并且当产品的价格发生变化时。
 
 ![Effect-dependency-array](https://www.freecodecamp.org/news/content/images/2022/02/Effect-dependency-array.gif)
 
 #### 如何在第一次渲染时运行一次
 
-如果你想让一个 Effect 在第一次渲染时只运行一次，比如在组件第一次渲染时进行API调用，你可以像这样传递一个空数组作为其依赖。:
+如果你想让一个 Effect 在第一次渲染时只运行一次，比如在组件第一次渲染时进行 API 调用，你可以像这样传递一个空数组作为其依赖。:
 
 ```javascript
 useEffect(() => {
@@ -223,17 +223,17 @@ useEffect(() => {
 }, []);
 ```
 
-通过提供一个空数组，它告诉Hook听从零状态变化（zero state changes），所以它只运行一次。
+通过提供一个空数组，它告诉 Hook 听从零状态变化（zero state changes），所以它只运行一次。
 
 ### useContext Hook
 
-`useContext` Hook与 React Context API 一起工作。它为你提供了一种方法，使整个应用程序中的所有组件都能访问特定的数据，无论它们的嵌套有多深。
+`useContext` Hook 与 React Context API 一起工作。它为你提供了一种方法，使整个应用程序中的所有组件都能访问特定的数据，无论它们的嵌套有多深。
 
-React有一个单向的数据流，数据只能从父代传递到子代。要把数据（如state）从父组件传给子组件，你需要根据子组件的嵌套深度，把它作为一个 prop，通过不同的级别向下传递。
+React 有一个单向的数据流，数据只能从父代传递到子代。要把数据（如 state）从父组件传给子组件，你需要根据子组件的嵌套深度，把它作为一个 prop，通过不同的级别向下传递。
 
 对于诸如用户的首选语言、主题或认证用户的属性等数据，必须手动地在组件树上传递它们是很乏味的。
 
-React的Context API和 `useContext` Hook 使得在应用程序的所有组件中传递数据变得容易。
+React 的 Context API 和 `useContext` Hook 使得在应用程序的所有组件中传递数据变得容易。
 
 它接受一个用`React.createContext`创建的上下文对象，并像这样返回当前的上下文:
 
@@ -241,9 +241,9 @@ React的Context API和 `useContext` Hook 使得在应用程序的所有组件中
 const value = useContext(SomeContext);
 ```
 
-让我们来看看Hook是如何工作的一个例子:
+让我们来看看 Hook 是如何工作的一个例子:
 
-首先，创建一个使用Hook的上下文（context）。例如，这里有一个UserContext来获取当前用户的值:
+首先，创建一个使用 Hook 的上下文（context）。例如，这里有一个 UserContext 来获取当前用户的值:
 
 ```javascript
 import React from "react";
@@ -262,9 +262,9 @@ const users = [
 export const UserContext = React.createContext(users);
 ```
 
-每个上下文（context）都有一个包装器提供者（Provider wrapper），它允许其子组件订阅上下文（context）的变化，并通过一个 值prop 传递上下文的值。
+每个上下文（context）都有一个包装器提供者（Provider wrapper），它允许其子组件订阅上下文（context）的变化，并通过一个 值 prop 传递上下文的值。
 
-如果提供者的 值prop（value prop）被更新，其消费的子组件将以新的上下文值重新渲染。
+如果提供者的 值 prop（value prop）被更新，其消费的子组件将以新的上下文值重新渲染。
 
 ```javascript
 function Users() {
@@ -306,7 +306,7 @@ export function UserProfile() {
 
 与`useState'类似，`useReducer'允许你创建 类似状态（state-like）的变量，每当它们发生变化时，都会导致用户界面的更新。
 
-这个Hook接受2个参数：一个reducer函数和一个初始状态（initial state）。
+这个 Hook 接受 2 个参数：一个 reducer 函数和一个初始状态（initial state）。
 
 `useReducer(reducer, initialState);`
 
@@ -320,9 +320,9 @@ const [state, dispatch] = useReducer(reducer, initialState);
 
 - **state**: 这是传递给 Hook 的 initialState 的当前值。
 - **reducer**: reducer 是一个接受状态和动作的函数。基于这些参数，它决定了状态的值将如何变化。
-- **dispatch**: 调用函数是我们将动作传递给 reducer函数。它分配动作以用于更新状态。
+- **dispatch**: 调用函数是我们将动作传递给 reducer 函数。它分配动作以用于更新状态。
 
-通常情况下，我们通过switch语句遍历我们在应用程序中的动作类型，以确定状态值将如何变化。这就是Hook更新其状态值的方式。
+通常情况下，我们通过 switch 语句遍历我们在应用程序中的动作类型，以确定状态值将如何变化。这就是 Hook 更新其状态值的方式。
 
 ```javascript
 function reducer(state, action) {
@@ -347,13 +347,13 @@ dispatch function 通常以下列格式派发一个对象:
 dispatch({ type: "ACTION_TYPE", payload: optionalArguments });
 ```
 
-其中type是动作的描述，payload是你要传递给reducer的参数。
+其中 type 是动作的描述，payload 是你要传递给 reducer 的参数。
 
 ## 如何创建自定义钩子
 
-自定义 Hook 的概念是通过利用已有的React Hook，将常用的组件逻辑从UI中提取到JavaScript函数中。这可以帮助你防止代码重复，并让你在多个组件中使这些逻辑可以重复使用。
+自定义 Hook 的概念是通过利用已有的 React Hook，将常用的组件逻辑从 UI 中提取到 JavaScript 函数中。这可以帮助你防止代码重复，并让你在多个组件中使这些逻辑可以重复使用。
 
-让我们看看一个自定义 Hook 的例子，它将从我们传递给它的任何有效的API URL返回一个响应。
+让我们看看一个自定义 Hook 的例子，它将从我们传递给它的任何有效的 API URL 返回一个响应。
 
 ```javascript
 //useFetch.js
@@ -384,13 +384,13 @@ export function useFetch(url) {
 }
 ```
 
-现在，你可以在你的应用程序中的任何地方使用这种逻辑，只需导入该函数并将API路径作为参数传递，而不是从头开始编写。
+现在，你可以在你的应用程序中的任何地方使用这种逻辑，只需导入该函数并将 API 路径作为参数传递，而不是从头开始编写。
 
 ## 结语
 
-我希望你能看到React Hooks是多么有用。它们可以让你快速创建有效的组件，而不用担心类组件所带来的麻烦。
+我希望你能看到 React Hooks 是多么有用。它们可以让你快速创建有效的组件，而不用担心类组件所带来的麻烦。
 
-从让你专注于写你的主要代码到允许你创建你自己的自定义Hooks......React Hooks是如此的酷！我很高兴你能自己尝试它们。我很高兴你能亲自尝试它们。
+从让你专注于写你的主要代码到允许你创建你自己的自定义 Hooks……React Hooks 是如此的酷！我很高兴你能自己尝试它们。我很高兴你能亲自尝试它们。
 
 如果你觉得这篇文章有帮助，请与你的朋友和网络分享。另外，欢迎在 [Twitter](https://twitter.com/Victor_codejs) 和我的 [博客](https://vickyikechukwu.hashnode.dev/) 上与我联系，我在那里分享了大量的免费教育文章和资源。
 

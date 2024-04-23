@@ -57,7 +57,7 @@ If you know how to use a breadboard and a resistor, then that's all the knowledg
 
 In summary, this handbook is for everyone. You don't need an engineering degree to become an Arduino maker!
 
-## Table of Contents:
+## Table of Contents
 
 -   [Prerequisites][3]
 -   [Chapter 1: Getting Started with Arduino][4]

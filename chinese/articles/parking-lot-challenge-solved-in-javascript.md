@@ -9,7 +9,7 @@
 你听说过停车场挑战吗？ 如果没有，那让我来简单解释一下吧。
 
 ~~The Parking Lot is challenge where you are asked to write a class that manages an imaginary parking lot.~~
-停车场挑战要求编写一个管理停车场的class。
+停车场挑战要求编写一个管理停车场的 class。
 
 ~~In this tutorial we will do that in JavaScript. And to make it a bit more interesting, we will create a small React app that will visualize the workings of our class.~~
 在本教程中，我们选用 JavaScript 进行代码实现。为了让停车场更有趣一点，我们将创建一个小小的 React App，用以可视化我们的代码。
@@ -43,7 +43,7 @@
 停车场自身的逻辑很简单，所以可能对于你们大多数人来说没有任何难度————特别当你已具备一些 OOP 和基于类的编程经验时。
 
 ~~## **class ParkingLot**~~
-## **使用class实现停车场挑战**
+## **使用 class 实现停车场挑战**
 
 ~~I will give you the code first and then I'll follow up with a short explanation on the implementation.~~
 我将会先展示实现代码，再对于代码实现进行简短的解释。
@@ -112,7 +112,7 @@ export default ParkingLot;
 ```
 
 ~~Starting from the beginning – our class has one property, `slots`, which is going to be an array that stores info about the parking slots (whether they're free or occupied).~~
-让我们从头开始：首先，我们的停车场class有一个`slots`属性，这个属性是一个数组，用于存储有关停车位的信息（不考虑停车位被空闲状态还是已被占用）。
+让我们从头开始：首先，我们的停车场 class 有一个`slots`属性，这个属性是一个数组，用于存储有关停车位的信息（不考虑停车位被空闲状态还是已被占用）。
 
 ~~Then we have a `constructor` method that gets executed every time you create an instance of this class. Here is where we use an input number parameter, called `parkingSize`, to create an empty array with length equal to that number.~~
 在`slots`属性之后，我们创建了`constructor`方法，`constructor`将在每次创建停车场类的实例时都会执行。在`constructor`中，我们使用`parkingSize`的输入数值参数来创建一个长度等于该数字的空数组。
@@ -265,7 +265,7 @@ App 项目结构
 ## App 页面
 
 As mentioned earlier, the main pages (also called screens) in the app are called [Landing](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing) and [Main](https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main). These are React components themselves. They serve as skeletons for everything you see in the welcome page – where you land initially and where you can select how many parking slots you want to have in your parking lot.
-如前所述，app 的主页面（main pages，也称为 mian screens）称为[Landing页面]（https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing）和[Main页面]（ https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main）。 这些页面由 React 组件构成，它们是欢迎页面所有内容的骨架。在欢迎页中，你可以选择选择最初的登录位置，并且选择停车场的车位数量。
+如前所述，app 的主页面（main pages，也称为 mian screens）称为[Landing 页面]（https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Landing）和[Main 页面]（ https://github.com/mihailgaberov/parking-lot/tree/main/src/pages/Main）。 这些页面由 React 组件构成，它们是欢迎页面所有内容的骨架。在欢迎页中，你可以选择选择最初的登录位置，并且选择停车场的车位数量。
 
 ![image-95](https://www.freecodecamp.org/news/content/images/2022/06/image-95.png)
 
@@ -287,7 +287,7 @@ As mentioned earlier, the main pages (also called screens) in the app are called
 用户可以通过 PARK! 按钮停放车辆，对应车位将在车辆停泊后显示为繁忙状态并且展示对应车辆的登记号码。操作者可以通过点击繁忙状态的车位来取消车位的停放车辆，即移除停放车辆。
 
 ~~## 💡The simple animation of the moving red car is just for visual effect and doesn’t have any real influence on the way the parking lot works.~~
-## 💡红色汽车移动的简单动画只是为了视觉效果，对停车场的运作方式没有任何实际影响。
+## 💡红色汽车移动的简单动画只是为了视觉效果，对停车场的运作方式没有任何实际影响
 
 ~~I used [CSS modules](https://github.com/css-modules/css-modules) for styling the app. I also tried to make the app a bit mobile friendly, in case you decide to try it on your mobile device.~~
 我使用 [CSS modules](https://github.com/css-modules/css-modules) 为 app 设置样式。 为了让移动设备的体验更好，我还优化了移动端的样式。

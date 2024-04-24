@@ -3,7 +3,7 @@ title: CSS Transition vs Animation Handbook – How to Animate Elements in CSS
 author: Oluwatobi Sofela
 authorURL: https://www.freecodecamp.org/news/author/oluwatobiss/
 originalURL: https://www.freecodecamp.org/news/css-transition-vs-css-animation-handbook
-translator: ""
+translator: "Luoming"
 reviewer: ""
 ---
 
@@ -24,8 +24,8 @@ CSS transitions and animations provide smooth, gradual ways to change an element
 Here are the main distinctions between them:
 
 | CSS Transition | CSS Animation |
-| --- | --- |
-| 
+| -------------- | ------------- |
+|                |
 -   Creates smooth transitions from one CSS value to another.
 -   You need triggers to run CSS transitions. For instance, you can use the `:hover` [pseudo-class][3] to run transitions when a user's pointer hovers over an element.
 -   Transition has only two states: an initial and a final state. You cannot create intermediate steps.
@@ -1170,7 +1170,7 @@ In this article, we discuss the differences between CSS transitions and animatio
 
 Thanks for reading.
 
-### And here's a useful React TypeScript resource:
+### And here's a useful React TypeScript resource
 
 I wrote a book about [Creating NPM Packages][72]!
 

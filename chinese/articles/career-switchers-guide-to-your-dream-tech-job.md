@@ -116,29 +116,26 @@ DeepPiCar的博客系列
 
 ### 系统设计
 
-The second most important skill you need to master is System Design. Usually, one on-site interview session will ask you to design a large scale distributed system, such as the Netflix video serving system, or WhatsApp instant-messaging system, or Instagram stories, and so on.
+你需要掌握的第二最重要的技能是系统设计。通常来说，一个现场面试环节会让你设计一个大型分布式系统，比如Netflix视频服务系统，或者WhatsApp即时通讯系统，或者Instagram故事等等。
 
-This test is a mixture of both hard and soft skills. It is a hard skill test because you need to understand a lot of the commonly used distributed system components, such as a distributed database, distributed in-memory cache, distributed configuration manager, distributed file storage, and distributed search engine, etc., along with when is the right time to use each of them.
+这是一项同时测试你的硬实力与软实力的技能测试。对于硬实力的部分，你需要了解许多常用的分布式系统组件，例如分布式数据库、分布式内存缓存、分布式配置管理器、分布式文件存储和分布式搜索引擎等，以及何时使用它们是正确的。而对于软实力的部分，你需要能够画出清晰的图表来说明你的设计，并口头讨论和维护你的设计。有人告诉我，如果你通过了现场面试，系统设计面试会严重影响你获得的职级评定结果(也就是说，它可能决定你得到的是4级还是5级工程职位)。
 
-It is also a soft skill test because you need to be able to draw a clear diagram to illustrate your design and verbally discuss and defend your design. I was told that system design interviews heavily influence the level you are offered if you pass the on-site interview (that is, it may decide whether you are offered a Level 4 or Level 5 engineering position, for example).
+下面是我在准备这一部分的过程中使用的一些资料:
 
-Here are the resources that I used:
-
--   [\***\*Cracking the Coding Interview Book(CtCI)\*\***][20]: There is a chapter that discussed system design, but it is covered at a pretty basic level
--   [\***\*Gaurav Sen’s System Design YouTube Channel\*\***][21]: I felt unfulfilled after reading CtCI’s system design chapter. Then I stumbled upon Gaurav’s channel, which has 22 videos. I downloaded all his videos onto my laptop and watched them on a long plane ride. Man, this guy is so GOOD (and funny) and explains things so clearly! About 10 videos are in-depth descriptions of individual distributed system components, the rest are actual use case discussion on how to build NetFlix, or Tinder, or Facebook systems, etc.
+-   [**Cracking the Coding Interview Book(CtCI)**][20]: 书中有一章讨论了系统设计，但这只包括了系统设计中最基础的部分。
+-   [**Gaurav Sen 的系统设计 YouTube 频道**][21]: 在阅读了CtCI的系统设计章节后，我不满足于其中包含的知识。然后我偶然发现了 Gaurav Sen 的YouTube频道，里面有22个视频。我把他所有的视频都下载到我的笔记本电脑上，以便在长途飞机上观看。哦我的老天爷呐，这个兄弟的视频真的很棒，其中对于系统设计知识的讲解非常清楚！这些视频中大约有10个视频是对单个分布式系统组件的深入描述，其余的是关于如何构建NetFlix, Tinder或Facebook系统等的实际用例讨论。
 
 ![](https://miro.medium.com/max/1280/0*rIMPbQS57T_u5U-R.jpg)
 
--   [\***\*Tushar Roy’s System Design Videos\*\***][22]\***\*:\*\*** While Tushar is very good in LC Hard questions, he also has 5 great System Design videos. I recommend watching these videos after Gaurav’s, as Gaurav gives you a solid foundation in system design, and Tushar’s videos assume some of that knowledge.
+-   [**Tushar Roy 的系统设计视频**][22]**:** 虽然Tushar非常擅长LeetCode上的难题，但他也有5个很棒的系统设计视频。我建议在Gaurav的视频之后再看这些视频，因为Gaurav为你提供了系统设计的坚实基础，而Tushar的视频则提供了一些进阶知识。
 
-For me personally, since I had worked on quite a few distributed systems before, I was able to grasp the general idea pretty quickly even though I had not used some of the new technology mentioned in the videos above. After watching enough videos, I was able to generalize most distributed system into the following layers:
+就我个人而言，由于我之前从事过相当多的分布式系统，所以即使我没有使用上面视频中提到的一些新技术，我也能够很快地掌握总体思想。在看了足够多的视频后，我能够将大多数分布式系统概括为以下几层:
 
--   Clients (PC/Mobile apps, browser)
--   A distributed Load Balancer to handle client requests
--   Location-based Content Delivery Network (CDN) or In-memory Cache to quickly deliver large and relatively static content (videos and images) to clients that are geographically closer to the CDN/Cache.
--   A series of microservices to handle various business logic, such as authentication, serving/saving user content, deliver messages between users.
--   Communications between microservices are sent via a distributed messaging system.
--   A distributed database to save user content and messages. Optionally, add a distributed caching layer before the database to improve read/write throughput.
+- 客户端（PC端/移动端应用程序，浏览器）。
+- 一个用来处理客户端请求的分布式负载均衡器。
+- 基于位置的内容分发网络(CDN)或内存缓存，快速交付大型和相对静态的内容(视频和图像)到地理上更接近CDN/缓存的客户端。
+- 一系列微服务来处理各种业务逻辑，如认证、服务/保存用户内容、在用户之间传递消息。微服务之间的通信是通过分布式消息系统发送的。
+- 用于保存用户内容和消息的分布式数据库。你可以选择在数据库之前添加分布式缓存层，以提高读/写吞吐量。
 
 ### Behavior Questions
 
@@ -556,11 +553,12 @@ TC of our mid-level SWE
 
 Note that the relocation package is not considered part of TC calculation, as it is expected you will be spending most, if not all, of the relocation package.
 
-### Know Your Level
+### 知道你的技术水平所对应的等级
 
 Even though you know your YoE, the company may interview you at a certain level that is company-specific. For example, a 4 YoE engineer may interview at L3 or L4 at Google, E3 or E4 at Facebook, and Level 59–62 at Microsoft.
 
 \***\*Ask the recruiter what level are you interviewing\*\*** for. But this may not be the level you will be offered the job at. For example, you may interview at Facebook at E4, in the end, the hiring committee may decide that your performance is not stellar enough for an E4, but good enough to receive an offer for E3. So \***\*ask the recruiter again what level is your job offer for\*\***. With this level, you can find out the expected value and range of TC. (see below)
+
 
 ![](https://miro.medium.com/max/1025/1*iSvZ60-cnf0qTPfwEGDHCw.png)
 
@@ -699,17 +697,17 @@ Many times, not all of the above can be satisfied. Then you have to weigh the pr
 
 I ended up choosing to go to Google’s Pixel Phone’s camera group because it offers three things that I am very passionate about: Computer Vision, Machine Learning, and Hardware. These are exactly what my robotic self-driving car project was all about! Also from what I learned, Google is now deeply committed to its hardware and smart home strategies, where the Pixel Phone will be a central part of that ecosystem.
 
-## Final Thoughts
+## 结语
 
 ![](https://miro.medium.com/max/445/1*ehMi2Z73NL4MxN6alUr1yw.png)
 
-Thanks for reading this far. It was quite a journey for me these last 6 months. Through my personal projects and intensive interview preparation, I believe I am now a better engineer (or at least a better interviewee. ;-) What I presented are my own lessons and experiences.
+感谢你读到这里。在过去的6个月里，我经历了一段漫长的旅程。通过我的个人项目和密集的面试准备，我相信我现在是一个更好的工程师(或者至少是一个更好的面试者 ;-)。在这篇文章中，我讲述了自己的经验和教训。
 
-I have found that A&DS questions are the core of any tech interview, and there is no shortcut to getting better at them except through practicing more LC questions. Once you are decent at A&DS and System Design questions, the suggestions that I presented in this article should help you tip the scale in your favor.
+我发现数据结构和算法是任何科技面试的核心，除了练习更多的LeetCode上的问题外，没有捷径可以做得更好。一旦你对数据结构与算法和系统设计问题有了良好的了解，我在这篇文章中提出的建议应该会帮助你做些更有利于你的事情。
 
-I recommend bookmarking this article as you will need to refer back to it in the next 2–6 months as your job search progresses. Some of the tips in the later stages won’t make much sense until you actually get to that stage. For example, you may need to do a few phone interviews to appreciate the tips presented in Step 4, and you certainly shouldn’t be thinking about Step 5 offer negotiation before you get any offers.
+我建议你把这篇文章收藏起来，因为在接下来的2-6个月里，随着你找工作的进展，你会需要回顾这篇文章。在你真正进入某一阶段之前，那之后的阶段中所需要的一些技巧并没有多大意义。例如，你可能需要进行几次电话面试来理解第四步中提出的建议，在你得到任何offer之前，你当然不应该考虑第五步的offer谈判。
 
-If you are going through interviews, please let me know which of my tips worked well or not so well by leaving a comment below, so that others will benefit as well. Please also suggest new tips in the comments as well. Thanks!
+如果你正在参加面试，请在下面留言，让我知道我的建议哪些有效，哪些不太有效，这样其他人也会受益。也欢迎在评论中提出新的建议，谢谢!
 
 ## 一些使用到的资源
 

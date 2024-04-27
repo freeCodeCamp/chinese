@@ -8,13 +8,13 @@
 在这个分步指南中，你将学习如何建立一个带有基本动画的 Blender 文件。之后，你还将学习如何使用 React Three Fiber 来将 Three.js 集成到 React 应用程序中。
 熟悉这些概念可以帮助你以后开发的 React.js 应用程序脱颖而出。
 
-## ******🔐****** 以下是我们将涵盖的内容：
+## ******🔐****** 以下是我们将涵盖的内容
 
 -   制作一个包括动画、材质和导出过程的 Blender 模型。
 -   使用 React Three Fiber 构建与 Three.js 集成的 React.js 应用程序。
 -   将个人创建的 Blender 模型整合到 React.js 应用程序中。
 
-## **************📝************** 先决条件：
+## **************📝************** 先决条件
 
 -   建议对 3D 软件 Blender 有基本了解。
 -   要求具备对 React.js 的基本熟悉。
@@ -32,7 +32,7 @@
 
 ## 💭 Three.js 和 Blender 是什么？
 
-Three.js 是一个 JavaScript 的库，通过提供的API可以让你在 Web 浏览器中展示 3D 模型。 
+Three.js 是一个 JavaScript 的库，通过提供的 API 可以让你在 Web 浏览器中展示 3D 模型。 
 
 利用 Three.js 可以帮助您将互动性和独特的功能无缝集成到您的网站中。
 
@@ -52,7 +52,7 @@ Blender 是一款专为制作和完善 3D 模型而定制的强大软件。它�
 
 `npm install three @react-three/fiber`
 
-为了丰富 Three.js 体验，我们还将集成 [React Three Drei](https://www.npmjs.com/package/@react-three/drei), 该包引入了各种适用于不同 Three 的帮助程序.js场景，包括几个摄像头控件，例如：
+为了丰富 Three.js 体验，我们还将集成 [React Three Drei](https://www.npmjs.com/package/@react-three/drei), 该包引入了各种适用于不同 Three 的帮助程序.js 场景，包括几个摄像头控件，例如：
 
 `npm install @react-three/drei`
 
@@ -215,7 +215,7 @@ package.json 文件中的依赖项，包括 React Three Fiber 和 React Three Dr
 
 简而言之，Blender 提供了使用程序节点处理材质的灵活性。虽然这些节点在 Blender 中可以无缝运行，但它们与其他游戏引擎或软件框架（如 Three.js ）并不直接兼容。
 
-要了解更多信息，请考虑观看以下视频。 在短短10分钟内演示了纹理烘焙的过程，有效解决了当前的问题。
+要了解更多信息，请考虑观看以下视频。 在短短 10 分钟内演示了纹理烘焙的过程，有效解决了当前的问题。
 
 程序材质纹理烘焙教程
 

@@ -116,7 +116,7 @@ You'll get this error if you attempt to import a module that isn't installed or 
 
 To avoid this, install the required module using a package manager (pip) or check the module name for typos.
 
-## 8\. TypeError:
+## 8. TypeError
 
 This is a common exception in Python that occurs when an operation or function is applied to an object of an inappropriate type. Here are some common types of `TypeError`:
 
@@ -124,7 +124,7 @@ This is a common exception in Python that occurs when an operation or function i
 2.  `TypeError: function_name() takes X positional arguments but Y were given`**:** This error occurs when calling a function with an incorrect number of arguments. It indicates that the function expects a specific number of arguments, but a different number is provided.
 3.  `TypeError: 'int' object is not callable`:  This error occurs when you try to call an object as if it were a function, but it's not callable. For example, attempting to call an integer.
 
-## 9\. ValueError:
+## 9. ValueError
 
 This type of error occurs when a function receives an argument of the correct type but with an inappropriate value.
 
@@ -139,7 +139,7 @@ Understanding these common errors provides a foundation for effective debugging.
 
 Now that you understand some common error types, let's explore various techniques and tools that can help you debug your Python code efficiently.
 
-## Foundational Debugging Techniques:
+## Foundational Debugging Techniques
 
 ### Print Statements
 
@@ -167,7 +167,7 @@ Logging is like writing notes while your program runs. Instead of just printing 
 
 You can configure logging to control the level of detail in log messages and specify where the logs should go. This could be the console, a file, or other destinations.
 
-#### Logging Levels:
+#### Logging Levels
 
 -   **DEBUG:** Detailed information, useful for developers during debugging.
 -   **INFO:** General information about what's happening in the program.
@@ -278,13 +278,13 @@ except AssertionError as e:
 
 In this example, the `assert y != 0` checks whether the divisor (`y`) is not zero. If it is zero, the assertion fails, and the program raises an `AssertionError` with the specified error message.
 
-#### Considerations When Using Assertions:
+#### Considerations When Using Assertions
 
 -   Assertions are typically used during development and debugging. In a production environment, you may choose to disable assertions  for performance reasons. To disable it, use the `-O` (eg. `python -O script.py` ) command-line option or the `PYTHONOPTIMIZE` environment variable. The `-O`(optimize) flag turns off assert statements.
 -   Assertions are not meant for input validation from users or external systems. They are more for catching logical errors in your code.
 -   Assertions should be simple conditions that are easy to check and understand. Avoid complex expressions or side effects.
 
-## Advanced Debugging Techniques:
+## Advanced Debugging Techniques
 
 ### Unit Testing
 
@@ -380,7 +380,7 @@ def some_function():
 
 When the program reaches this line during execution, it will pause, and the debugger will be activated.
 
-#### Starting the Debugger:
+#### Starting the Debugger
 
 There are two ways to start the debugger:
 
@@ -409,7 +409,7 @@ Alternatively, you can run your Python script with the `-m pdb` option, which au
 python -m pdb your_script.py
 ```
 
-#### Entering Debugger Mode:
+#### Entering Debugger Mode
 
 When your code encounters the breakpoint (either set using `pdb.set_trace()` or `pdb.breakpoint()`), it enters the interactive debugger mode. This is indicated by the `(Pdb)` prompt.
 
@@ -417,7 +417,7 @@ When your code encounters the breakpoint (either set using `pdb.set_trace()` or 
 
 A snapshot of Interactive debugger mode in terminal
 
-#### Basic Commands:
+#### Basic Commands
 
 Now, you can interact with the debugger and use various commands to inspect variables, step through the code, and identify and fix issues.
 
@@ -668,7 +668,7 @@ Remote breakpoints, stepping through code, variable inspection, and other debugg
 
 Most Integrated Development Environments (IDEs) for Python, such as PyCharm, Visual Studio Code, and Jupyter Notebooks, come with powerful debugging features. These include visual breakpoints, variable inspection, and step-by-step execution. Utilize these features to streamline your debugging process.
 
-### Visual Breakpoints:
+### Visual Breakpoints
 
 Breakpoints are markers that pause the execution of your Python program at a specific line of code, allowing you to inspect variables, evaluate expressions, and understand the flow of your program at that point.
 
@@ -682,7 +682,7 @@ A snapshot of Breakpoint(red dot) in PyCharm
 
 Once a breakpoint is set, run your program in debug mode to stop execution at that specific point.
 
-### Stepping Through Code:
+### Stepping Through Code
 
 After hitting a breakpoint, you can step through your code line by line to understand its behavior. Three common options for this are:
 
@@ -698,13 +698,13 @@ Debuggers in IDEs allow you to execute your code step by step. This includes ste
 
 Jupyter Notebooks support this feature with the help of magic commands such as `%debug` which allows you to interactively debug a cell.
 
-### Call Stack Exploration:
+### Call Stack Exploration
 
 IDEs typically provide a call stack that shows the hierarchy of function calls leading to the current point in the code. This is valuable for understanding the flow of program execution and can be especially useful when dealing with complex applications.
 
 PyCharm, for instance, displays the call stack in the debugger tool window.
 
-### Variable Inspection:
+### Variable Inspection
 
 Inspecting variables is crucial for understanding how data changes during program execution. IDEs provide a Variables panel where you can view the current state of variables, making it easier to identify bugs. Simply hover over a variable or check the Variables tab to see its current value.
 
@@ -714,7 +714,7 @@ Inspecting variables is crucial for understanding how data changes during progra
 
 Inspecting variables is crucial for understanding how data changes during program execution.
 
-### Conditional Breakpoints:
+### Conditional Breakpoints
 
 In addition to standard breakpoints, some IDEs allow you to set breakpoints with conditions. This means the debugger will only pause if a specified condition is met. This can be helpful when you want to investigate a specific scenario or condition in your code.
 
@@ -726,7 +726,7 @@ In addition to standard breakpoints, some IDEs allow you to set breakpoints with
 
 A snapshot illustrating the process of setting Conditional breakpoint in Python code within PyCharm
 
-### Watch Expressions:
+### Watch Expressions
 
 Watch expressions allow you to monitor specific variables or expressions continuously as your program runs. This feature is beneficial when you want to keep an eye on certain values without manually inspecting them at each breakpoint.
 
@@ -741,7 +741,7 @@ There are more tools that IDE provides for debugging purposes like:
 -   "Python Profiler" in VSCode and the built-in profiler in PyCharm as **Profiling Tools.**
 -   "Code With Me" in PyCharm and Extensions like "Live Share" in VSCode for **Collaborative Debugging.**
 
-## Performance Debugging:
+## Performance Debugging
 
 ### Code Linters and Analyzers
 
@@ -749,7 +749,7 @@ Code linters and static analyzers are tools that help identify potential issues 
 
 Here, we'll talk about a couple of these tools – PyLint and mypy – so you can see how to install them and how they work.
 
-#### How to install PyLint:
+#### How to install PyLint
 
 ```
 pip install pylint
@@ -775,7 +775,7 @@ disable = missing-docstring
 
 In this example, we enable all checks except for the missing docstring check. You can tailor the configuration to match your coding style and project requirements.
 
-#### How to install mypy:
+#### How to install mypy
 
 ```
 pip install mypy
@@ -801,7 +801,7 @@ flake8 combines three main tools:
 2.  **pycodestyle:** Formerly known as pep8, this tool checks your code against the style guide outlined in PEP 8, providing feedback on coding style violations.
 3.  **McCabe:** This complexity checker identifies complex code blocks that may be harder to understand or maintain.
 
-#### How to install flake8:
+#### How to install flake8
 
 ```
 pip install flake8
@@ -856,7 +856,7 @@ Profiling involves analyzing the performance of your code to identify bottleneck
 
 Python comes with built-in modules for basic profiling. The two main modules are `cProfile` and `profile`.
 
-#### **1**. cProfile:****
+#### **1**. cProfile
 
 `cProfile` is a built-in module that provides a deterministic profiling of Python programs. It records the time each function takes to execute, making it easier to identify performance bottlenecks.
 
@@ -874,7 +874,7 @@ if __name__ == "__main__":
 
 This will output a detailed report of function calls, their execution time, and the percentage of total time spent in each function.
 
-#### **2**. profile:****
+#### **2**. profile
 
 The `profile` module is similar to `cProfile` but is implemented in pure Python. It provides a more detailed analysis of function calls and can be used when a more fine-grained profiling is needed.
 
@@ -890,17 +890,17 @@ if __name__ == "__main__":
 
 Both `cProfile` and `profile` produce similar outputs, but the former is generally preferred for its lower overhead.
 
-### How to Visualize Profiling Results:
+### How to Visualize Profiling Results
 
 While the built-in modules provide textual reports, visualizing the results can make it easier to understand and analyze. One popular tool for this is `snakeviz`.
 
-#### ****Installing snakeviz:****
+#### ****Installing snakeviz****
 
 ```
 pip install snakeviz
 ```
 
-#### ****Using snakeviz:****
+#### ****Using snakeviz****
 
 ```Python
 import cProfile
@@ -916,21 +916,21 @@ if __name__ == "__main__":
 
 This will open a browser window displaying an interactive visualization of the profiling results.
 
-### Advanced Profiling Techniques:
+### Advanced Profiling Techniques
 
 While the built-in profiling tools offer valuable insights, more advanced techniques and external libraries can provide additional information.
 
-#### ****Line Profiling:****
+#### ****Line Profiling****
 
 Line profiling allows you to see how much time is spent on each line of code within a function. The `line_profiler` module is commonly used for this purpose.
 
-#### Installing line\_profiler:
+#### Installing line_profiler
 
 ```
 pip install line_profiler
 ```
 
-#### Using line\_profiler:
+#### Using line_profiler
 
 ```Python
 from line_profiler import LineProfiler
@@ -950,17 +950,17 @@ if __name__ == "__main__":
 
 This will show a detailed report with the time spent on each line within the `example_function`.
 
-#### Memory Profiling:
+#### Memory Profiling
 
 Understanding memory usage is crucial for optimizing code. The `memory_profiler` module helps in profiling memory consumption.
 
-#### Installing memory\_profiler:
+#### Installing memory_profiler
 
 ```
 pip install memory-profiler
 ```
 
-#### Using memory\_profiler:
+#### Using memory_profiler
 
 ```Python
 from memory_profiler import profile
@@ -979,7 +979,7 @@ Understanding memory usage is crucial for optimizing code. The `memory_profiler`
 
 While these techniques cover a broad range of debugging scenarios, it's important to note that the most effective debugging often involves a combination of these methods. Additionally, understanding the specific context and the type of problem you're dealing with will guide you in choosing the most appropriate technique.
 
-# Some Additional Tips for Efficient Debugging:
+# Some Additional Tips for Efficient Debugging
 
 -   **Version Control and Git Bisect:** Leverage features provided by your version control system to track changes and revert to working versions if needed.. If the bug was introduced recently and you have version control (e.g., Git) in place, using git bisect can help you identify the exact commit that introduced the issue.
 -   **Documentation and Code Comments**: Writing  well-documented code and comments can help in understanding the purpose of specific functions or code blocks, making debugging more straightforward for both you and others who might work on the code.
@@ -989,14 +989,14 @@ While these techniques cover a broad range of debugging scenarios, it's importan
 
 # How to Search for Solutions to Bugs and Errors
 
-## 1\. Effective Search Strategies:
+## 1. Effective Search Strategies
 
 -   ****Understand the Error Message:**** Start by understanding the error message or bug description. Identify key terms and error codes that can be used in your search.
 -   **Include context details**:**** for example, operating system, version number of the software, libraries, or frameworks you are working with. Bugs and solutions can vary between different versions.
 -   ****Quotation Marks:**** Use quotation marks to search for an exact phrase. This is useful when searching for specific error messages or code snippets.
 -   ****Use Descriptive Keywords:**** Use specific and descriptive keywords related to the error. Include programming languages, frameworks, and relevant technologies in your search. Whenever possible, include code snippets or examples in your search query. This can narrow down results to those including practical implementations.
 
-## 2\. Leveraging Web Resources:
+## 2. Leveraging Web Resources
 
 -   ****GitHub Repositories:**** Search GitHub repositories for similar issues. Many projects have issue trackers where users discuss problems and solutions.
 -   ****Documentation and Manuals:**** Check official documentation and manuals for the technologies you are using. Sometimes, the answer might be found in the official documentation.

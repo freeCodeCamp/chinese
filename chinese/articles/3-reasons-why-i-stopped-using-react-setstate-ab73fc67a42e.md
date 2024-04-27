@@ -133,7 +133,7 @@ Furthermore, rookie mistakes like assigning values directly to the _state_ objec
 
 Pretty simple, follow the [10 minute interactive introduction](https://mobxjs.github.io/mobx/getting-started.html) or watch the aforementioned video. You can simply take a single component from your code base, slap _@observer_ on it and introduce some _@observable_ properties. You don’t even have to replace your existing _setState_ calls, they continue to work while using MobX. Although, within a few minutes you might find them so convoluted that you will replace them anyway :). (Oh, and if you don’t like decorators, no worries, it works with [good ol’ ES5 as well](https://github.com/mobxjs/mobx/blob/gh-pages/docs/best/syntax.md#react-components)).
 
-## TL;DR:
+## TL;DR
 
 I’ve stopped using React to manage local component state. I use MobX instead. Now React is truly “just the view” :). MobX now manages both local component state and state in stores. It is concise, synchronous, efficient and uniform. From experience, I’ve learned that MobX is even easier to explain to React beginners than React’s own _setState._ It keeps our components clean and simple.
 

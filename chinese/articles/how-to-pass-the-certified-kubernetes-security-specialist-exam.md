@@ -844,10 +844,10 @@ usermod faizanbashir -G admin
 ```
 
 ### SSH hardening
-### SSH加固
+### SSH 加固
 
 #### How to disable SSH
-####如何禁用SSH
+####如何禁用 SSH
 
 The configuration given in the `/etc/ssh/sshd_config` can be leveraged to secure SSH access to Linux nodes. Setting the `PermitRootLogin` to `no` disables the root login on a node.
 `/etc/ssh/sshd_config` 中给出的配置可用于保护对 Linux 节点的 SSH 访问。 将 `PermitRootLogin` 设置为 `no` 会禁用节点上的 root 登录。
@@ -866,7 +866,7 @@ systemctl restart sshd
 ```
 
 How to set no login for the root user:
-如何设置root用户不登录：
+如何设置 root 用户不登录：
 
 ```
 usermod -s /bin/nologin root
@@ -965,8 +965,8 @@ Here's the reference doc for a [list of open ports](https://kubernetes.io/docs/s
 ### How to restrict network access
 ### 如何限制网络访问
 
-#### How to identity a service running on port:
-#### 如何识别端口上运行的服务：
+#### How to identity a service running on port
+#### 如何识别端口上运行的服务
 
 ```
 systemctl status ssh
@@ -975,7 +975,7 @@ netstat -an | grep 22 | grep -w LISTEN
 ```
 
 #### UFW firewall
-#### UFW防火墙
+#### UFW 防火墙
 
 Uncomplicated Fire Wall (UFW) is a tool for managing firewall rules in Arch Linux, Debian, or Ubuntu. UFW lets you allow and block traffic on a given port and from a given source.
 Uncomplicated Fire Wall (UFW) 是一个在 Arch Linux、Debian 或 Ubuntu 中管理防火墙规则的工具。 UFW 允许您允许和阻止给定端口和来自给定来源的流量。
@@ -1065,7 +1065,7 @@ strace touch /tmp/error.log
 ```
 
 How to get the PID of a service:
-如何获取服务的PID：
+如何获取服务的 PID：
 
 ```
 pidof sshd
@@ -1168,7 +1168,7 @@ Seccomp 模式：
 -   Mode 1: Strict
 -   模式一：严格
 -   Mode 2: Filtered
--   模式2：过滤
+-   模式 2：过滤
 
 The following configuration is used to whitelist syscalls. The whitelist profile is secure but syscalls have to be selectively enabled as it blocks all syscalls by default.
 以下配置用于将系统调用列入白名单。 白名单配置文件是安全的，但必须有选择地启用系统调用，因为它默认阻止所有系统调用。

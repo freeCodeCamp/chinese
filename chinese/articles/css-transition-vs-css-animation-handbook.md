@@ -58,11 +58,11 @@ CSS 过渡（Transition）和动画（Animation）为更改元素的样式提供
     -   [可选 CSS 过渡属性的示例][13]
 3.  [CSS 过渡属性的缩写][14]
 4.  [什么是 CSS 动画？][15]
-    -   [Components of CSS Animations][16]
-    -   [What are CSS @keyframes?][17]
-5.  [What Are CSS Animation Properties?][18]
-    -   [What is the CSS `animation-name` Property?][19]
-    -   [What is the CSS `animation-duration` Property?][20]
+    -   [CSS 动画的组成][16]
+    -   [什么是 CSS `@keyframes`][17]
+5.  [什么是 CSS animation 属性？][18]
+    -   [什么是 CSS `animation-name` 属性？][19]
+    -   [什么是 CSS `animation-duration` 属性？][20]
     -   [What is the CSS `animation-timing-function` Property?][21]
     -   [What is the CSS `animation-delay` Property?][22]
     -   [What is the CSS `animation-iteration-count` Property?][23]
@@ -372,77 +372,80 @@ img:hover {
 
 <h2 id="what-is-css-animation">什么是 CSS 动画？</h2>
 
-**CSS animations** provide a smooth and gradual way to animate an element's style changes from one keyframe to another.
+**CSS 动画** 提供了一个平滑、渐进的方式从一个关键帧到另一个关键帧为元素的样式增加动画。
 
-### Components of CSS Animations
+<h3 id="components-of-css-animations">CSS 动画的组成</h3>
 
-CSS animations consist of two components:
+CSS 动画由两部分组成：
 
-1.  Keyframes
-2.  Animation properties
+1. 关键帧
+2. 动画属性
 
-### What are CSS @keyframes?
+<h3 id="what-are-css-keyframes">什么是 CSS <code>@keyframes</code>？</h3>
 
-**@keyframes** define the styles you want browsers to apply smoothly to an element at some specified key moments (frames).
+**@keyframes** 定义了你想要浏览器某关键时刻（帧）平滑地应用在元素上的样式。
 
-### Syntax of CSS @keyframes
+### CSS `@keyframes` 的语法
 
-A CSS @keyframes [at-rule][41] consists of the following:
+CSS [at 规则][41]中 @keyframes  由以下组成：
 
-1.  An `@keyframes` keyword
-2.  The `@keyframes`' name
-3.  A block of zero or more keyframes
-4.  The animation's key moment selector
-5.  The key moment's style declarations
+1. 一个 `@keyframes` 关键字
+2. 一个 `@keyframes` 名字 
+3. 一个零个及以上的关键帧
+4. 关键帧选择器
+5. 关键帧样式声明
 
-**Here's an illustration:**
+**看这个插图：**
 
-![Anatomy of CSS @keyframes at-rule](https://www.freecodecamp.org/news/content/images/2023/09/css-animation-keyframes-illustration-codesweetly.png)
+<figure class="kg-card kg-card-image kg-card-hascaption">
+    <img src="https://www.freecodecamp.org/news/content/images/2023/09/css-animation-keyframes-illustration-codesweetly.png" alt="剖析 CSS @keyframes" class="kg-image">
+    <figcaption>剖析 CSS @keyframes</figcaption>
+</figure>
 
-A CSS @keyframes at-rule consists of a keyword, a name, and a block of keyframes
+一个 CSS `@keyframes` 由一个关键字、一个名字、一个关键帧块组成。
 
-### Examples of CSS @keyframes
+### CSS @keyframes 的示例
 
-Below are examples of the CSS @keyframes.
+下面是 CSS @keyframes 的示例
 
-#### How to define `change-color`'s keyframes
+#### 如何定义 `change-color` 的关键帧
 
 ```css
 @keyframes change-color {
-  /* The first keyframe */
+  /* 最初的关键帧 */
   0% {background-color: purple;}
-  /* The last keyframe */
+  /* 最后的关键帧 */
   100% {background-color: yellow;}
 }
 ```
 
 在上面片段中我们做了什么：
 
-1.  We created the `@keyframes` at-rule named `change-color`.
-2.  We defined a keyframe for browsers to apply when an associated element's animation is at its zero percent (`0%`) duration.
-3.  We defined a keyframe for browsers to apply when an associated element's animation is at its one hundred percent (`100%`) duration.
+1. 我们创建了一个 `@keyframes` 命名为 `change-color`。
+2. 我们定义了一个关键帧，供浏览器在关联元素的动画处于 `0%` 持续时间时应用。
+3. 我们定义了一个关键帧，供浏览器在关联元素的动画处于 `100%` 持续时间时应用。
 
-**Note:**
+**注意：**
 
--   You can name your `@keyframes` anything you wish.
--   `0%` is equivalent to the keyword `from`. And `100%` is the same as the keyword `to`. In other words, the snippet above is equal to the following:
+- 你可以把你的 `@keyframes` 按照你希望的随意命名。
+- `0%` 等价于关键字 `from`，`100%` 等价于关键字 `to`。也就是说，上面的代码片段等价于下面的：
 
 ```css
 @keyframes change-color {
-  /* The first keyframe */
+  /* 最初的关键帧 */
   from {background-color: purple;} 
-  /* The last keyframe */
+  /* 最后的关键帧 */
   to {background-color: yellow;} 
 }
 ```
 
--   An animation's start and end states (`from` and `to`) are optional.
--   Suppose you omit an `@keyframes`' start (`0%`) or end (`100%`) state. In that case, browsers will default to the element's existing styles for either state.
--   The important rule (`!important`) does not work in keyframes. Browsers will ignore any keyframe declaration with an `!important` rule.
+- 一个动画的开始和结束状态（`from` 和 `to`）是可选的。
+- 假设你省略了 `@keyframes` 的开始或结束状态，这种情况下，浏览器将使用元素的现有样式作为起始/结束状态。
+- `!important` 在关键帧中无效，浏览器会忽略任何带有 `!important` 的关键帧声明。
 
-Let's see another example.
+让我们看另一个例子。
 
-#### How to define `shape-image`'s keyframes
+#### 如何定义 `shape-image` 的关键帧
 
 ```css
 @keyframes shape-image {
@@ -455,20 +458,20 @@ Let's see another example.
 
 在上面片段中我们做了什么：
 
-1.  We created the `@keyframes` [ruleset][42] named `shape-image`.
-2.  We defined four keyframes for browsers to apply when an associated element's animation is at the specified key moments.
+1. 我们创建了 `@keyframes` [规则集][42] 命名为 `shape-image`。
+2. 我们定义了 4 个关键帧，供浏览器在关联元素的动画处于指定关键时刻时应用。
 
-**Tip:** Use the [CSSKeyframesRule][43] interface in JavaScript to access the CSS `@keyframes` at-rules.
+**提示：** 在 JavaScript 中使用 [CSSKeyframesRule][43] 接口访问 CSS `@keyframes`。
 
-So, now that we know the CSS @keyframes ruleset, we can discuss the other component of CSS animations—_animation properties_.
+那么，现在我们知道了 CSS @keyframes 规则集，我们可以讨论另一个 CSS 动画的组成部分了—— *animation 属性*。
 
-## What Are CSS Animation Properties?
+<h2 id="what-are-css-animation-properties">什么是 CSS animation 属性？</h2>
 
-**CSS animation properties** inform browsers about the animation you wish to apply to a specific element.
+**CSS animation 属性** 告知浏览器你希望应用在指定元素上的动画。
 
-In other words, CSS animation properties describe the animation's attributes, such as its name, duration, direction, and iteration.
+换句话说，CSS `animation` 描述了动画的属性，例如它的名字、持续时间、方向、迭代次数。
 
-The nine (9) types of CSS animation properties are:
+下面是 CSS 动画的 9 种属性：
 
 -   `animation-name`
 -   `animation-duration`
@@ -480,13 +483,13 @@ The nine (9) types of CSS animation properties are:
 -   `animation-fill-mode`
 -   `animation`
 
-Let's discuss each one now.
+让我们逐个讨论一下。
 
-### What is the CSS `animation-name` property?
+<h3 id="what-is-the-css-animation-name-property">什么是 CSS <code>animation-name</code> 属性？</h3>
 
-The CSS `animation-name` property defines the name of the `@keyframes` at-rules containing the styles you wish to apply to a specific element.
+CSS `animation-name` 属性定义了你希望应用在指定元素上的 `@keyframes` 包含的样式的名字。
 
-**Here's an example:**
+**看这个例子：**
 
 ```css
 div {
@@ -503,26 +506,26 @@ div {
 
 在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  We created `change-color`'s `@keyframes` ruleset.
-3.  We defined two keyframes for browsers to use when the `div` element's animation is at its zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 指定了我们希望应用到 `div` 元素上的 `@keyframes`。
+2. 我们创建了一个名为 `change-color` 的 `@keyframes` 规则集。
+3. 我们定义了 `div` 元素的动画在 `0%` 和 `100%` 时两个关键帧给浏览器使用。
 
-**Tip:** You can use the keyword `none` to deactivate an animation.
+**提示：** 你可以使用关键字 `none` 不激活动画。
 
-### What is the CSS `animation-duration` property?
+<h3 id="what-is-the-css-animation-duration-property">什么是 CSS <code>animation-duration</code> 属性？</h3>
 
-The CSS `animation-duration` property defines the time to complete one animation cycle.
+CSS `animation-duration` 属性定义了完成一个动画循环的事件。
 
 **注意以下几点：**
 
--   The `animation-duration` property must be in milliseconds (ms) or seconds (s) units.
--   `animation-duration`'s value must be zero or positive. Otherwise, browsers will ignore the duration declaration.
--   Zero seconds (`0s`) is `animation-duration`'s default value.
--   Suppose `0s` is `animation-duration`'s value. In that case, browsers will still execute the animation by firing the [`animationStart`][44] and [`animationEnd`][45] events. But the [`animation-fill-mode`][46]'s value will determine whether the animation is visible. For instance, if you set the `animation-fill-mode` to `none`, the animation will be invisible.
+- `animation-duration` 属性只接受毫秒（ms）或秒（s）的时间形式。
+- `animation-duration` 值只接受 0 或是整数。否则，浏览器将忽略这条声明。
+- 0 秒（`0s`）是 `animation-duration` 的默认值。
+- 假设 `0s` 是 `animation-duration` 的值。在这种情况下，浏览器仍将通过触发 [`animationStart`][44] 和 [`animationEnd`][45] 事件来执行动画。但是由 [`animation-fill-mode`][46] 值决定动画是否可见。比如，你设置 `animation-fill-mode` 为 `none`，动画则是不可见的。
 
-Let's see some examples of the `animation-duration` property.
+让我们看一些 `animation-duration` 属性的例子。
 
-#### How to animate an element's color change within three seconds
+#### 如何在 3 秒内完成更改元素的颜色的动画
 
 ```css
 div {
@@ -542,12 +545,12 @@ div {
 
 在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to three seconds (`3s`).
-3.  We created `change-color`'s @keyframes [ruleset][48].
-4.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性指定了我们希望用在 `div` 元素上的 `@keyframes`。
+2. `animation-duration` 属性设置了动画一个循环的运行时间在 3 秒（`3s`）内。
+3. 我们创建了 `change-color` 关键帧[规则集][48]。
+4. 我们定义了 `div` 元素的动画在 `0%` 和 `100%` 时两个关键帧给浏览器使用。
 
-Therefore, browsers will create a smooth three-second animation from `change-color`'s first keyframe to its last.
+因此，浏览器将创建一个从第一帧到最后持续 3 秒的平滑的 `change-color` 动画。
 
 #### How to animate an image's border and width changes within seven seconds
 

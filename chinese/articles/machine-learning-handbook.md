@@ -1271,7 +1271,7 @@ Forward Step-Wise Selection can be summarized as follows:
 -   Consider all (p-k) models that contain the variables in M\_k with one additional feature or predictor.
 -   Choose the best model among these p-k models, and define it M\_(k+1) by using performance metrics such as [RSS][32]/[R-squared][33].
 
-****Step 3:**** Select the single model with the best performance among these M\_……….M\_p models (one with smallest [Cross Validation Error][34], [C\_p][35], [AIC][36] [(Akaike Information Criterion)][37], [BIC][38] (Bayesian Information Criteria)or [adjusted R-squared][39] is your best model M\*).
+****Step 3:**** Select the single model with the best performance among these M\…….M\_p models (one with smallest [Cross Validation Error][34], [C\_p][35], [AIC][36] [(Akaike Information Criterion)][37], [BIC][38] (Bayesian Information Criteria)or [adjusted R-squared][39] is your best model M\*).
 
 So, the idea behind this Selection is to start simple and increase the number of predictors in the model. Per number of predictors, consider all possible combination of variables and select a single best model: M\_k. Then compare all these models with different number of predictors (best M\_ks ) and the one best performing one can be selected.
 
@@ -1292,7 +1292,7 @@ Backward Step-Wise Feature Selection can be summarized as follows:
 -   Consider all k models that contain all variables except for one of the predictors in M\_k model, for k − 1 features.
 -   Choose the best model among these k models, and define it M\_(k-1) by using performance metrics such as [RSS][46]/[R-squared][47].
 
-****Step 3:**** Select the single model with the best performance among these M\_……….M\_p models (one with smallest [Cross Validation Error][48], [C\_p][49], [AIC][50][(Akaike Information Criterion)][51], [BIC][52] (Bayesian Information Criteria)or [adjusted R-squared][53] is your best model M\*).
+****Step 3:**** Select the single model with the best performance among these M\…….M\_p models (one with smallest [Cross Validation Error][48], [C\_p][49], [AIC][50][(Akaike Information Criterion)][51], [BIC][52] (Bayesian Information Criteria)or [adjusted R-squared][53] is your best model M\*).
 
 Like Forward Step-wise Selection, the Backward Step-Wise Feature Selection technique searches through only (p+1)/2 models, making it possible to apply in settings where p is too large to apply other selection techniques.
 

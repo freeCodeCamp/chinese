@@ -23,3 +23,5 @@ jobs:
         run: pnpm format
 
       - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: Auto Format

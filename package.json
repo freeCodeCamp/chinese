@@ -12,9 +12,9 @@
   },
   "devDependencies": {
     "@lint-md/cli": "^2.0.0",
-    "husky": "^8.0.3",
-    "lint-staged": "^13.3.0",
-    "prettier": "^3.0.3"
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
+    "prettier": "^3.2.5"
   },
   "prettier": {
     "singleQuote": true,
@@ -28,6 +28,6 @@
     "lint": "lint-md chinese/**/*.md",
     "format": "lint-md chinese/**/*.md --fix",
     "test": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky"
   }
 }

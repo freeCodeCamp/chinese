@@ -29,6 +29,7 @@ jobs:
           ignoreSelector: '.ad-wrapper'
           markDownFilePath: './chinese/articles/'
           githubToken: ${{ github.token }}
+
       - name: Git Auto Commit
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

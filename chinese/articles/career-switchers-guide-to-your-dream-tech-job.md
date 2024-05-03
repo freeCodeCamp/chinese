@@ -555,34 +555,33 @@ Note that the relocation package is not considered part of TC calculation, as it
 
 ### 知道你的技术水平所对应的等级
 
-Even though you know your YoE, the company may interview you at a certain level that is company-specific. For example, a 4 YoE engineer may interview at L3 or L4 at Google, E3 or E4 at Facebook, and Level 59–62 at Microsoft.
+即使你知道自己的求职目标，公司也可能会根据公司的具体情况对你进行面试。例如，一个4级工程师可能会选择谷歌的L3或L4级、Facebook的E3或E4级或者微软的59-62级的面试。
 
-\***\*Ask the recruiter what level are you interviewing\*\*** for. But this may not be the level you will be offered the job at. For example, you may interview at Facebook at E4, in the end, the hiring committee may decide that your performance is not stellar enough for an E4, but good enough to receive an offer for E3. So \***\*ask the recruiter again what level is your job offer for\*\***. With this level, you can find out the expected value and range of TC. (see below)
-
+**询问招聘人员你面试的是哪个级别的岗位**，但这可能不是你得到这份工作的水平。例如，你可能在Facebook的E4面试，最终，招聘委员会可能会认为你的表现不足以达到E4，但足以获得E3的offer。 所以**再次询问招聘人员**你的工作offer是什么级别。通过这一层，你可以找到TC的期望值和范围。(见下文)
 
 ![](https://miro.medium.com/max/1025/1*iSvZ60-cnf0qTPfwEGDHCw.png)
 
 ### 知道你自己在市场上的价值
 
-You can’t negotiate if you don’t know your prevailing market value. For years, companies have kept compensation information very secretive, so the candidates have suffered HUGE information disadvantage.
+如果你不知道你的市场价值，你就无法有效和目标公司进行谈判。多年来，公司一直对薪酬信息保密，因此候选人在信息方面处于巨大的劣势。
 
-Fortunately, in recent years, the compensation information has been democratized, with many websites crowdsourcing from many candidates and then presenting the anonymized compensation data by level, job function and location. One well-known site is [levels.fyi][40].
+幸运的是，近年来薪酬信息已经逐渐透明化，许多网站从许多候选人中收集到必要的信息，然后按级别、工作职能和地点呈现匿名的薪酬数据。一个著名的网站是[levels.fyi][40]。
 
 ![](https://miro.medium.com/max/917/1*LCu-2A8IXNYVfe-m9t5AFQ.png)
 
-Top Compensation for 3–5 YoE SWE. Source: levels.fyi
+3-5年SWE工作经验的最高薪酬。来源:levels.fyi
 
 ![](https://miro.medium.com/max/912/1*9pETieZ01nFFBNkjoz7MbA.png)
 
-Top Compensation for 5+ YoE SWE. Source: levels.fyi
+5年以上SWE工作经验的最高薪酬。来源:levels.fyi
 
-As you can see above, all the top-paying jobs are in the San Francisco Bay Area (Bay Area). SWEs with 3–5 YoE can earn as high as $290,000 TC, and SWEs with 5+ YoE can earn over $400,000.
+正如你在上面看到的，所有高薪工作都在旧金山湾区(Bay Area)。拥有3-5年工作经验的SWEs可以获得高达29万美元的TC，拥有5年以上工作经验的SWEs可以获得超过40万美元的TC。
 
-For any non-Bay Area engineers, total compensation of $300,000–$400,000 may be eye-popping. But remember that Bay area housing is THE most expensive metro area in the US. The median housing price of Palo Alto, CA is $2.8M (source: Zillow.com), and of San Francisco Metro Area (source:  [censusreporter.com][41]) is $1.1M. For preciously this reason — lots of people are paid at a much higher rate.
+对于任何非湾区的工程师来说，30万至40万美元的总薪酬可能令人瞠目结舌。但请记住，湾区是美国房价最高的区，因为很多人的工资要高得多。加州帕洛阿尔托的房价中位数为280万美元(资料来源:Zillow.com)，旧金山都会区(资料来源:[censusreporter.com][41])为110万美元。
 
-As a comparison, the median home prices of Manhattan, NY is $1.2M (source: Zillow.com), and that of New York/New Jersey Metro Area is only $440K. (source: [censusreporter.com][42])
+相比之下，纽约曼哈顿的房价中位数为120万美元(数据来源:Zillow.com)，而纽约/新泽西都会区的房价中位数仅为44万美元。(来源:[censusreporter.com] [42])
 
-Armed with levels.fyi, your level (obtained from the previous step) and the company name, you can clearly see the average reported TC as well as its range. For example, for the Google L4 SWE in the Bay Area, the average reported TC is about $260K, with a range from $200K to $320K. So if you received a Google L4 offer in the low $200K, then you know you have room to negotiate.
+结合在levels.fyi上筛选出你的水平(从上一步获得)和公司名称，你可以清楚地看到offer的平均TC及其范围。例如，对于旧金山湾区的谷歌L4 SWE，offer的平均TC约为26万美元，范围从20万美元到32万美元。所以，如果你收到了只有20万美元的谷歌L4的offer，那么你就知道你还有讨价还价的空间。
 
 ![](https://miro.medium.com/max/1055/1*de6XA2-BzEbzRDASwdWEXA.png)
 
@@ -685,17 +684,17 @@ Had Google extended me a firm written offer first like Facebook, it would’ve b
 
 ![](https://miro.medium.com/max/1540/0*QValU2nlepbet2yU)
 
-Here are the questions that I ask myself during the interview or offer stage. You don’t need to ask these exact questions to the interviewers, but you want to somehow extract the answers to these questions from your interviews/conversations with the companies/groups.
+这里有一些我在面试期间或录用阶段问自己的一些问题。你不需要问面试官这些问题，但你需要从你的面试中，或者从与公司和团体的对话中提取出这些问题的答案。
 
-1.  \***\*Which group will I be joining?\*\*** I wanted to join one of the “core” groups of a company – a group that the company had put a lot of commitment and resources behind. These are often its flagship product groups or high growth groups. Working in these groups offers stability and/or growth.
-2.  \***\*What types of work will I be doing for this company/group?\*\*** I looked for work experiences that were transferable in my later career. I would prefer to work with publicly available tools and technologies, and not so much with the company’s proprietary technologies. For example, if I was to work on an ad recommendation machine learning system, I am sure I could easily find another company that also wanted to improve its ad/product recommendation system. However, I would not be so interested to work on automating some internal processes with a company's proprietary scripting language.
-3.  \***\*What will I be learning by working for this company/group?\*\*** Work is a two-way street. I wanted to be able to contribute a lot to my company. At the same time, I wanted to learn a ton from my work, so that my skill sets could be in high demand whenever I look for my next job. I believe AI/ML, Computer Vision, Cloud computing, Self-driving car, and AR/VR skills will be in high demand in the future, so I wanted to learn some of these skills in my next job.
-4.  \***\*Do I have a passion for this job?\*\*** If you don’t have a passion for what you do, it doesn’t matter how much the job pays – you won’t be happy and won’t be putting in that 120%. I was passionate about quantitative finance because it was cool to see math and technology transforming a whole industry. But after 10+ years, my passion is now in AI/ML. It is really awesome and magical that you don’t have to tell a computer exactly how to do something. All you have to do is to feed it data and it will figure out how to do it better than someone would with code.
-5.  \***\*Do I like my manager and my peers? And do they like me?\*\*** You want a manager that appreciates you and will support you in your new job. You also want to enjoy being around your teammates, since you will be with them for 8+ hours every single day, even longer than when you are with your family!
+1.  **我将加入哪个组?** 我想加入公司的一个“核心”小组——公司为这个小组大量投入资源，这样的小组通常是它的旗舰产品集团或高增长集团。在这些团队中工作可以得到稳定性和成长。
+2.  **我将为公司或小组做什么类型的工作?** 我寻找的是能在我以后的职业生涯中应用的工作经验。我更喜欢使用公开可用的工具和技术，而不是使用公司的专有技术。举个例子，如果我在做一个广告推荐机器学习系统，我相信我很容易就能找到另一家想要改进其广告/产品推荐系统的公司。但是，我对使用公司专有的脚本语言自动化一些内部流程不太感兴趣。
+3.  **我能在这家公司/小组里学到什么?** 工作是双向选择，能为双方都带来价值的。我希望能够为我的公司做出很大贡献，与此同时，我想从工作中学到很多东西，这样当我找下一份工作的时候，我掌握的技能就能让我很受欢迎。我相信AI/ML、计算机视觉、云计算、自动驾驶汽车和AR/VR技能在未来会有很大的需求，所以我想在下一份工作中学习这些技能。 
+4.  **我对这份工作有热情和激情吗?** 如果你对自己的工作没有激情，那么不管这份工作给你多少薪水，你都不会快乐，也不会投入120%的精力。我对量化金融充满热情，因为看到数学和技术改变整个行业是很酷的。但在10多年后，我现在对AI/ML充满热情。你不需要告诉电脑该怎么做，这真是太棒了，太神奇了。你所要做的就是给它提供数据，它会找出比别人用代码做得更好的方法。
+5.  **我喜欢我的领导和同事吗?他们喜欢我吗?** 想要一个欣赏你并在新工作中支持你的领导。你也想享受和队友在一起的时光，因为你每天和他们在一起的时间超过8个小时，甚至比和家人在一起的时间还要长!
 
-Many times, not all of the above can be satisfied. Then you have to weigh the pros and cons of each. But if one of the above gives you a red flag, I would seriously consider passing on that position.
+很多时候并不是所有这些问题都能得到让你满意的答案，然后你必须权衡利弊。但如果以上任何一项给了你一个危险的信号，我会认真考虑放弃那个职位。
 
-I ended up choosing to go to Google’s Pixel Phone’s camera group because it offers three things that I am very passionate about: Computer Vision, Machine Learning, and Hardware. These are exactly what my robotic self-driving car project was all about! Also from what I learned, Google is now deeply committed to its hardware and smart home strategies, where the Pixel Phone will be a central part of that ecosystem.
+我最终选择了谷歌Pixel Phone的相机组，因为它提供了我非常感兴趣的三样东西:计算机视觉、机器学习和硬件，这正是我的机器人自动驾驶汽车项目的全部内容!此外据我所知，谷歌现在正致力于其硬件和智能家居战略，Pixel手机将成为该生态系统的核心部分。
 
 ## 结语
 

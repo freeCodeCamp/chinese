@@ -19,7 +19,7 @@ viewer: ""
 
   ![如何开始学习编程 – 初学者手册](https://www.freecodecamp.org/news/content/images/size/w2000/2023/12/How-to-Start-Learning-to-Code-cover--1-.png)
 
-在本手册中，我将解决您可能会问自己的一个问题：您是否应该学习编程？
+在这本手册中，我将解决您可能会问自己的一个问题：您是否应该学习编程？
 
 在向您解释为什么绝对应该之后，我将介绍成为软件开发人员的一些好处和挑战。我还将讨论一些学习编程的关键策略，以帮助您取得成功。
 
@@ -91,101 +91,101 @@ viewer: ""
 
 你还应该学习编程吗？（简短的答案：是的。）让我们深入探讨这个问题，特别是针对那些对未来编程技能需求持怀疑态度的人。
 
-## Should You Still Learn to Code? \[Answer: Yes\]
+## 你还应该学习编程吗？\[答案：是的\]
 
-We use software all the time – to chat with others, stay informed about the latest news, and even for our alarm clocks that help us wake up on time.
+我们一直在使用软件——与他人聊天，了解最新新闻，甚至用于帮助我们准时起床的闹钟。
 
-Even the browser or the PDF reader that you use to read documents are pieces of software. These words were even typed in a software program.
+甚至你用来阅读文档的浏览器或PDF阅读器也是软件。这些文字也是在一个软件程序中输入的。
 
-Programming is something that's ever-evolving, and many things that we're currently doing manually may get automated in the future.
+编程是一个不断发展的领域，我们目前手动完成的许多事情将来可能会自动化。
 
-But software is deeply embedded in our daily lives, powering tools and applications across various professions and personal activities.
+但软件已经深深嵌入到我们的日常生活中，为各种职业和个人活动提供工具和应用程序。
 
-The more we integrate into the digital world, the more central software becomes. It's reshaping our work, learning, and social interactions, with its importance only set to increase.
+我们越是融入数字世界，软件就变得越重要。它正在重塑我们的工作、学习和社交方式，其重要性只会越来越高。
 
-### The Future of Building Software
+### 软件开发的未来
 
-Imagine a world where building software was as simple as having a conversation with a highly advanced AI, like a future ChatGPT. You describe your needs, and the AI creates the entire software for you – no coding required.
+想象一个世界，构建软件就像与一个高度先进的AI（如未来的ChatGPT）对话一样简单。你描述你的需求，AI为你创建整个软件——无需编程。
 
-So you may wonder: why should I learn coding when ChatGPT can code an entire app for me in seconds? Well, here's something I want you to understand: AI is not here to replace us, but to **help us become more productive**.
+那么你可能会问：当ChatGPT可以在几秒钟内为我编写整个应用程序时，为什么我还要学习编程？好吧，我想让你明白一点：AI并不是来取代我们的，而是**帮助我们变得更高效**。
 
-Sure, AI can help you save time and energy by performing certain basic, repetitive tasks for you. But grasping the basics of software development remains crucial, especially for the more complex problems that require your creative, experience-based solutions.
+当然，AI可以通过为你执行某些基本的、重复的任务来帮助你节省时间和精力。但掌握软件开发的基础仍然很重要，特别是对于那些需要你的创造力和基于经验的复杂问题。
 
-You need to be able to harness AI's power while continuing to learn and adapt. This will help make sure that we're steering the course in our rapidly evolving digital landscape.
+你需要能够利用AI的力量，同时继续学习和适应。这将帮助确保我们在快速发展的数字世界中把握方向。
 
-As you can probably tell, I want to emphasize the irreplaceable role of software engineers and coders, even in an AI-dominated future. Here are a few reasons why:
+如你所见，我想强调软件工程师和程序员在即使是AI主导的未来中也是不可替代的。以下是几个原因：
 
-1.  **Understanding Over Automation**: Coding isn't just about executing tasks – it's about grasping complex logic and structures. Our human ability to analyze and solve intricate problems goes beyond AI's automation.
-2.  **Maintenance and Flexibility**: Deep coding knowledge provides insights vital for software maintenance and adaptation. This knowledge is invaluable when AI-generated programs encounter issues.
-3.  **Safety and Reliability**: Similar to understanding basic car mechanics for safety, knowing coding basics is essential for addressing software malfunctions.
-4.  **The Creative Element**: AI lacks human creativity and innovation, which is crucial for envisioning and realizing novel software solutions.
+1.  **理解胜过自动化**：编程不仅仅是执行任务——它是理解复杂的逻辑和结构。我们人类分析和解决复杂问题的能力超越了AI的自动化。
+2.  **维护性和灵活性**：深厚的编程知识提供了对软件维护和适应的洞察。当AI生成的程序遇到问题时，这种知识是必不可少的。
+3.  **安全性和可靠性**：就像了解基本的汽车机械原理对于安全一样，了解编程基础对于解决软件故障是必要的。
+4.  **创造性元素**：AI缺乏人类的创造力和创新，这对于设想和实现新颖的软件解决方案至关重要。
 
-The rise of AI in coding doesn't signal the end for human coders. Rather, I believe it just signals a collaborative future. AI's automation of mundane tasks gives human coders more space for creativity and innovation in software development.
+AI在编码中的崛起并不意味着人类编码员的终结。相反，我认为这只是预示着一个协作的未来。AI自动化日常任务为人类编码员在软件开发中提供了更多的创造和创新空间。
 
-Learning to code transcends mere programming. It's about understanding how various technologies work, honing problem-solving skills, and nurturing creativity. These skills remain invaluable, even as AI reshapes the landscape.
+学习编程超越了单纯的编程。这是关于理解各种技术的运作方式，培养解决问题的能力和激发创造力。即使在AI重塑的环境中，这些技能仍然是无价的。
 
-So I encourage you to embrace coding as it opens doors to a future where human intelligence and AI collaboratively push the boundaries of innovation.
+所以我鼓励你接受编程，因为它为人类智能和AI合作推动创新的未来打开了大门。
 
-## Why You Should Consider Coding as a Career
+## 为什么你应该考虑把编程作为职业
 
-Maybe when you were a kid (or now as an adult) you liked a computer game so much that you played it all the time.
+也许当你还是个孩子的时候（或者现在作为一个成年人），你非常喜欢一个电脑游戏，现在你还在玩它。
 
-And maybe you had the idea that someday you could develop a game like it.
+也许你曾经想过有一天你可以开发一个类似的游戏。
 
-I know people who started programming precisely for this reason: to be able to develop different computer games.
+我认识一些人正是因为这个原因而开始编程：为了开发不同的电脑游戏。
 
-So, because of the pleasure you may have experienced, you may have decided to become a programmer yourself.
+由于你可能体验到乐趣，你决定自己成为一名程序员。
 
-Over time, your reasons may change – and this certainly doesn't mean that everyone gets into coding only because of game development.
+随着时间的推移，你的理由可能会改变——这当然并不意味着每个人学习编程只是为了游戏开发。
 
-After all, there are many reasons why you might consider programming as an option for your career. Let's discuss some of these reasons now (and indeed there are many more).
+毕竟，有许多理由让你可以考虑编程作为你的职业选择。让我们现在讨论一些这些理由（实际上还有更多）。
 
-### You have the opportunity to develop something for fun
+### 你有机会开发一些有趣的东西
 
-I mentioned the case of game development, but you don't have to start programming by building games.
+我提到了游戏开发的案例，但你不必通过构建游戏来开始编程。
 
-Maybe you are an accountant, or you have a shop and want to register your goods through a program that you develop yourself...and so on.
+也许你是一名会计，或者你有一家商店并想通过自己开发的程序来登记你的商品...等等。
 
-Here are some practical projects that might inspire someone to learn to code:
+这里有一些可能激发人学习编程的实际项目：
 
--   A custom note-taking application tailored to your specific needs.
--   A personalized inventory management system for your shop.
--   An app for organizing and tracking your daily tasks and goals.
--   A scheduler for managing your college or university timetable.
--   A problem-solving assistant for tackling challenging tasks.
--   A daily weather update tool that sends forecasts to your email.
--   A health app that suggests potential illnesses based on symptoms.
--   A focus enhancer that limits access to social media during work hours.
+-   一个定制的笔记应用程序，满足你特定的需求
+-   一个个性化的库存管理系统，用于你的商店
+-   一个用于组织和跟踪你的日常任务和目标的应用程序
+-   一个用于管理你的大学或大学课程表的调度程序
+-   一个解决问题的助手，用于处理具有挑战性的任务
+-   一个每日天气更新工具，向你的电子邮件发送天气预报
+-   一个健康应用程序，基于症状建议可能的疾病
+-   一个专注力增强器，在工作时间限制访问社交媒体
 
-There are many other programs that you could develop. In short, you can start programming because you like to solve the problems you face in your daily life.
+还有许多其他程序你可以开发。简而言之，你可以因为喜欢解决日常生活中面临的问题而开始编程。
 
-And once you learn to code and can build these programs, then you can share them with your friends and family (and beyond).
+一旦你学会了编程并能够构建这些程序，你可以与朋友和家人（甚至更广泛的群体）分享它们。
 
-### You can solve problems for people all over the world
+### 你可以解决世界各地人们的问题
 
-Here's something that might make you happy: having the opportunity to help someone else (or a lot of people). I am sure that when you have been able to help a family member or a colleague, you've felt happy and satisfied.
+这里有件事情也许会让你开心：有机会帮助别人（或许多人）。我相信当你能够帮助家人或同事时，你会感到快乐和满足。
 
-Now, imagine how good you'd feel if you had the opportunity to solve a problem that people are facing all over the world.
+现在，想象一下如果你有机会解决世界各地人们面临的问题会有多好。
 
-For example, you may have an idea to start a Facebook group for residents of your neighborhood asking each other for household tools that you may need.
+例如，你可能有一个想法，在Facebook上为你所在社区的居民创建一个小组，以便彼此请求所需的家庭工具。
 
-Or maybe you want to propose that everyone pitch in on maintaining the common spaces in your neighborhood.
+或者你想建议大家共同维护社区的公共空间。
 
-You could also use this group to bring up problems as well as solutions that you aim to realize.
+你还可以在这个小组里提出问题以及你希望实现的解决方案。
 
-If you know how to code, you can create your own tool and share it with your neighbors. You can make your platform tailored to the specific needs of your neighborhood.
+如果你知道如何编程，你可以创建自己的工具并与邻居分享。你可以使你的平台满足你社区的特定需求。
 
-And if it works in your community, you can then share it with people from other neighborhoods.
+如果它在你的社区中有效，你可以然后与其他社区的人分享它。
 
-You can take things a step further and work on projects that help people working in different fields.
+你可以更进一步，开展帮助不同领域工作的人们的项目。
 
-So, for example, in addition to helping residents of your neighborhood, you can help farmers be better informed about the weather conditions by building a weather reporting app.
+例如，除了帮助你所在社区的居民，你还可以通过构建一个天气报告应用程序来帮助农民更好地了解天气状况。
 
-Or you can come up with a recommendation system that helps them determin how to work the land and what crops to plant when.
+或者你可以开发一个推荐系统，帮助他们确定如何耕作土地以及何时种植什么作物。
 
-Or maybe you want to help a barber who wants to visualize the hair styles of his clients before cutting their hair. Or you could even build programs to help a private medical clinic better manage their patients' records.
+或者你想帮助一个理发师在剪发前可视化客户的发型。或者你甚至可以构建程序来帮助私人医疗诊所更好地管理患者记录。
 
-As I hope you're beginning to see, the possibilities are pretty much endless.
+希望你开始看到，可能性几乎是无穷无尽的。
 
 ### You can work on interesting challenges
 

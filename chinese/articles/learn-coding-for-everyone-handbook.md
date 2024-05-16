@@ -11,7 +11,7 @@ viewer: ""
 
 <!-- 更多 -->
 
-# 如何开始学习编码 – 初学者手册
+# 如何开始学习编程 – 初学者手册
 
 ![Fatos Morina](https://www.freecodecamp.org/news/content/images/size/w60/2021/05/fatos-morina-gravatar.jpeg)
 

@@ -53,43 +53,43 @@ viewer: ""
 -   [拥抱终身学习][26]
 -   [获取本书的PDF版本][27]
 
-# Introduction to Programming
+# 编程介绍
 
-## What is Programming?
+## 什么是编程?
 
-Before we start with the advice, let's learn what computer programming is.
+在我们开始讲建议之前，让我们先了解一下什么是计算机编程。
 
-First of all, remember that a computer is not only a laptop or desktop. It's also your phone, tablet, and any other device that is capable of performing logical and arithmetic operations that we program into it.
+首先，请记住，计算机不仅仅是笔记本电脑或台式机。它还包括你的手机、平板电脑以及任何能够执行我们编程到其中的逻辑和算术操作的设备。
 
-This includes your car's navigation system, the ATM where you withdraw or deposit money, the systems that allow you to order food digitally, and so on.
+包括你汽车的导航系统、你取款或存款的ATM机、外卖订餐系统等等。
 
-Computer programming is the process of designing and building instructions (a "program") that the computer can execute.
+计算机编程是设计和构建计算机可以执行的指令（“程序”）的过程。
 
-As an example, we can take a calculator that performs arithmetic operations such as addition, subtraction, multiplication, and division.
+举一个例子，我们用计算器进行加减乘除的运算。
 
-Instead of doing all this with a pencil on paper – but instead, we have a calculator on our phones. And this calculator is a computer program that helps us find the result quickly.
+我们不需要铅笔在纸上做这些运算——因为，手机上有计算器。而这个计算器是一个计算程序，给我们提供结果。
 
-Other programs that you may use every day include Facebook, WhatsApp, Instagram, YouTube, TikTok, and many others.
+你每天使用的其他程序可能包括脸书/Facebook、WhatsApp、Instagram、油管/YouTube、抖音/TikTok之类的。
 
-Writing a program is sort of like cooking a meal. You may have an idea for a delicious meal, but you need to buy the necessary ingredients beforehand.
+编写程序有点像做顿饭。你可能有一个美味的菜谱（想法），但你需要先去买菜。
 
-Once you have what you need, you prepare that food, put it in the oven, and then wait while it cooks. After that, you serve the food at the table and eat it.
+一旦你得到了所需要的食材，你准备这些食物，把它放进烤箱，然后等它烤好。之后，你把食物端上桌，开始享用。
 
-Things work similarly with programming: first, you have an idea and the knowledge to turn that idea into a program (or maybe you learn while you're building the program – just like how you can watch someone cooking food on YouTube and learn how to make that recipe).
+编程也类似：首先，你有一个想法和将这个想法变成程序的知识（或者你在构建程序的过程中学习——就像你可以在YouTube上观看别人做饭并学习如何做那个菜谱一样）。
 
-Then, you start to put the ingredients of the program into place, piece by piece, until the entire program is ready to be served to users.
+然后，你开始逐步地把程序的成分放到位，直到整个程序准备好可以供用户使用。
 
-Unlike cooking, where dishes are consumed, programs remain intact and reusable even after being used.
+与烹饪不同的是，菜肴被食用后会消失，而程序在使用后仍然完好无损且可重复使用。
 
-This unique aspect means that a single program can serve multiple users simultaneously and over time.
+这一独特的方面意味着一个程序可以同时为多个用户服务并且可以长期使用。
 
-There are costs associated with creating and maintaining software, but once developed, a program like a website can be accessed by numerous people at the same time without diminishing in availability or quality.
+创建和维护软件是有成本的，但一旦开发出来，像网站这样的程序可以被许多人同时访问，而不会减少其可用性或质量。
 
-So to summarize, programming is the process of turning an idea into a computer program that other people can use. And this is something you can learn how to do yourself.
+总而言之，编程是将一个想法转变成其他人可以使用的计算机程序的过程。而这是一项你可以自己学习的技能。
 
-In the ever-evolving landscape of software engineering, many people are wondering about the impact AI will have.
+在不断发展的软件工程领域，许多人都在关注AI将带来的影响。
 
-Should you still learn how to code? (Short answer: yes.) Let's delve into this concern, especially for anyone who's skeptical about the future demand for coding skills.
+你还应该学习编程吗？（简短的答案：是的。）让我们深入探讨这个问题，特别是针对那些对未来编程技能需求持怀疑态度的人。
 
 ## Should You Still Learn to Code? \[Answer: Yes\]
 

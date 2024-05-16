@@ -1,57 +1,57 @@
 ---
-title: How to Start Learning to Code – Handbook for Beginners
-author: Fatos Morina
-authorURL: https://www.freecodecamp.org/news/author/fatosmorina/
-originalURL: https://www.freecodecamp.org/news/learn-coding-for-everyone-handbook/
-translator: "James-Z-Zhang00"
-reviewer: ""
+标题: 如何开始学习编程 – 初学者手册
+作者: 法托斯·莫里纳（Fatos Morina）
+作者页面: https://www.freecodecamp.org/news/author/fatosmorina/
+原始页面: https://www.freecodecamp.org/news/learn-coding-for-everyone-handbook/
+译者: "James-Z-Zhang00"
+viewer: ""
 ---
 
-December 8, 2023 / [#Learning To Code][1]
+2023年12月8日 / [#编程学习][1]
 
-<!-- more -->
+<!-- 更多 -->
 
-# How to Start Learning to Code – Handbook for Beginners
+# 如何开始学习编码 – 初学者手册
 
 ![Fatos Morina](https://www.freecodecamp.org/news/content/images/size/w60/2021/05/fatos-morina-gravatar.jpeg)
 
-[Fatos Morina][2]
+[法托斯·莫里纳（Fatos Morina）][2]
 
-  ![How to Start Learning to Code – Handbook for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2023/12/How-to-Start-Learning-to-Code-cover--1-.png)
+  ![如何开始学习编程 – 初学者手册](https://www.freecodecamp.org/news/content/images/size/w2000/2023/12/How-to-Start-Learning-to-Code-cover--1-.png)
 
-In this handbook, I'll address a question you may be asking yourself: should you learn how to code?
+在本手册中，我将解决您可能会问自己的一个问题：您是否应该学习编程？
 
-After explaining why you definitely should, I'll cover some of the benefits and challenges of being a software developer. I'll also discuss some key strategies for approaching learning to code to help you succeed.
+在向您解释为什么绝对应该之后，我将介绍成为软件开发人员的一些好处和挑战。我还将讨论一些学习编程的关键策略，以帮助您取得成功。
 
-By the end, you should have a more developed mental model of what it takes to learn programming and how you can start or continue your journey.
+最后，您将会对学习编程需要什么以及如何开始或继续您的旅程有一个全新的认知。
 
-# Table of Contents
+# 目录
 
--   [What is programming?][3]
--   [Should you still learn to code \[Yes\]?][4]
--   [Why you should consider coding as a career][5]
--   [Potential challenges of a programming job][6]
--   [Why do software engineers get paid so well][7]?
--   [How to prepare for your coding journey][8]
--   [Your ego is your enemy][9]
--   [Take responsibility for your learning][10]
--   [I am afraid to start programming. What should I do?][11]
--   [Strategies and tips for learning to code][12]
--   [Can you learn coding in a single night?][13]
--   [Avoid tutorial hell][14]
--   [How to understand complex topics by using the Feynman Technique][15]
--   [Don't memorize the syntax][16]
--   [Keep a To-Learn list][17]
--   [Practical aspects of coding][18]
--   [How to deal with overwhelming projects][19]
--   [How to choose projects to build?][20]
--   [Learn by building things from scratch][21]
--   [Build something that already exists][22]
--   [Beyond the basics][23]
--   [Develop a love of learning][24]
--   [Look at the bigger picture][25]
--   [Embrace lifelong learning][26]
--   [Get the PDF version of the book][27]
+-   [什么是编程？][3]
+-   [你还应该学习编程吗]\[是的\]?][4]
+-   [为什么你应该考虑把编程作为职业][5]
+-   [编程工作的潜在挑战][6]
+-   [为什么软件工程师薪水这么高][7]?
+-   [如何为你的编程之旅做准备][8]
+-   [你的自我意识是你的敌人][9]
+-   [对你的学习负责][10]
+-   [我害怕编程。我该怎么办？][11]
+-   [学习编程的策略和技巧][12]
+-   [你能在一个晚上学会编程吗？][13]
+-   [教程避坑][14]
+-   [如何通过费曼技巧理解复杂主题][15]
+-   [不要记忆语法][16]
+-   [保持一个待学习列表][17]
+-   [编程的实际方面][18]
+-   [如何处理压倒性的项目][19]
+-   [如何选择要构建的项目？][20]
+-   [通过从头开始构建来学习][21]
+-   [构建已经存在的东西][22]
+-   [超越基础][23]
+-   [培养学习的热爱][24]
+-   [看大局][25]
+-   [拥抱终身学习][26]
+-   [获取本书的PDF版本][27]
 
 # Introduction to Programming
 

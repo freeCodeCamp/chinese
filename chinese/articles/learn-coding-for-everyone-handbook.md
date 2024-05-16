@@ -3,7 +3,7 @@ title: How to Start Learning to Code – Handbook for Beginners
 author: Fatos Morina
 authorURL: https://www.freecodecamp.org/news/author/fatosmorina/
 originalURL: https://www.freecodecamp.org/news/learn-coding-for-everyone-handbook/
-translator: ""
+translator: "James-Z-Zhang00"
 reviewer: ""
 ---
 

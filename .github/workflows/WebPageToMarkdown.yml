@@ -3,26 +3,20 @@ on:
   issues:
     types:
       - opened
+env:
+  issue_body: ${{ github.event.issue.body }}
+  issue_title: ${{ github.event.issue.title }}
 jobs:
   WebPageToMarkdown:
     runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      contents: write
     steps:
-      - name: Does the issue need to be converted to markdown
-        shell: bash
-        run: |
-          if [ "${{ github.event.issue.body }}" ]; then
-            if [[ "${{ github.event.issue.title }}" =~ ^\[Auto\]* ]]; then
-              :
-            else
-              echo "This issue does not need to generate a markdown file." 1>&2
-              exit 1;
-            fi;
-          else
-            echo "The description of the issue is empty." 1>&2
-            exit 1;
-          fi;
       - uses: actions/checkout@v3
+        if: ${{ env.issue_body && startsWith(env.issue_title, '[Auto]') }}
       - name: Crawl pages and generate Markdown files
+        if: ${{ env.issue_body && startsWith(env.issue_title, '[Auto]') }}
         uses: freeCodeCamp-China/article-webpage-to-markdown-action@v1
         with:
           newsLink: '${{ github.event.issue.Body }}'
@@ -31,9 +25,19 @@ jobs:
           githubToken: ${{ github.token }}
 
       - name: Git Auto Commit
+        if: ${{ env.issue_body && startsWith(env.issue_title, '[Auto]') }}
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: '${{ github.event.issue.title }}'
           file_pattern: chinese/articles/*.md
           commit_user_name: PageToMarkdown Bot
           commit_user_email: PageToMarkdown-bot@freeCodeCamp.org
+
+      - name: Issue does not need to generate markdown
+        if: ${{ !startsWith(env.issue_title, '[Auto]') }}
+        shell: bash
+        run: echo "This issue does not need to generate a markdown file." 1>&2; exit 1;
+      - name: The description of the issue is empty
+        if: ${{ !env.issue_body }}
+        shell: bash
+        run: echo "The description of the issue is empty." 1>&2; exit 1;

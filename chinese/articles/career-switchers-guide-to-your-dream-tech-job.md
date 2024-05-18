@@ -137,63 +137,63 @@ DeepPiCar的博客系列
 - 一系列微服务来处理各种业务逻辑，如认证、服务/保存用户内容、在用户之间传递消息。微服务之间的通信是通过分布式消息系统发送的。
 - 用于保存用户内容和消息的分布式数据库。你可以选择在数据库之前添加分布式缓存层，以提高读/写吞吐量。
 
-### Behavior Questions
+### 行为型问题
 
-I think behavior questions are the easiest part of the interview. Unfortunately, they also carry the least amount of weight in an interview evaluation. Sure enough, tech companies know that it is easy to put on a “nice person” personality and say the right thing in a behavioral interview. But it is much harder to train yourself to be a good coder.
+我认为行为型问题是面试中最简单的部分。不幸的是，它们在面试评估中所占的比重也是最小的。科技公司当然知道，在行为面试中“表现得很好”和“说正确的话”是很容易的，但要训练自己成为一个优秀的程序员却要困难得多。
 
-For a career switcher, the most important question to prepare for is, of course, “Why are you looking to switch industries?” Hopefully, with the project you built in Step 1, you can probably knock this question out of the park by showcasing your project and your passion for the new industry and the company you are applying for.
+对于一个跨行找工作的人来说，最重要的问题当然是“你为什么想换行业？”希望你在步骤1中完成的项目可以帮助你通过展示你的项目和你对新行业以及你申请的公司的热情来完美回答这个问题。
 
 ![](https://miro.medium.com/max/1280/0*7R7K7tRug6GBHdfT.jpg)
 
-Here are some other behavioral questions to prepare for:
+以下是一些其他需要准备的行为型问题：
 
--   Why do you want to work for my company/my group?
--   Give an example of a goal you reached and tell me how you achieved it.
--   Give an example of a goal you didn’t meet and how you handled it.
--   Describe a stressful situation at work and how you handled it.
--   Have you been in a situation where you didn’t have enough work to do?
--   Have you ever made a mistake? How did you handle it?
--   Describe a situation when you had a disagreement with your coworker/boss/subordinate, and how did you handle it?
+- 你为什么想为我的公司/我的团队工作？
+- 举一个你达到目标的例子，并告诉我你是如何实现的。
+- 举一个你未能达到目标的例子，并告诉我你是如何处理的。
+- 描述一个你在工作中遇到的压力情况，以及你是如何处理的。
+- 你是否曾遇到过没有足够工作可做的情况？
+- 你是否曾犯过错误？你是如何处理的？
+- 描述一个你与同事/老板/下属有分歧的情况，以及你是如何处理的？
 
-The key to all behavioral questions is to end on a positive note. For example, even if you are asked about a disagreement with a co-worker or a failure in your career, truthfully describe what happened, but more importantly mention what you learned from it. Talk about how it helped you become a more effective team member/engineer when similar situations arose again.
+所有回答行为型问题的关键是以积极的态度结束。例如，即使你被问到与同事发生分歧或职业生涯中的失败，也要如实描述发生了什么，但更重要的是提到你从中学到了什么。谈谈当类似情况再次出现时，它如何帮助你成为一个更有效的团队成员/工程师。
 
-## Step 3. Apply via Multiple Channels
+## 第三步：通过多个渠道申请
 
-I started to monitor the ML Engineer job market in the Bay Area closely at the start of June, right after I published my blogs on DeepPiCar. At the same time, I started my one month of intensive full-time coding preparation (about 200 hours total).
+我在六月初（在我发布DeepPiCar博客之后的那段时间）开始密切关注湾区的机器学习工程师职位市场。同时，我开始了一个月的全职高强度编码准备（总计约200小时）。
 
-By the end of June, even though I didn’t feel quite ready, I started to apply to companies. The reason is that there is a 1–2 week lead time between when I sent in my resumes and the phone interviews. Via multiple channels, I made contact with over 20 companies and did over 30 phone interviews. Sometimes multiple phone interviews with the same company.
+到六月底，尽管我感觉自己还没完全准备好，但我开始向公司投递简历。原因是从我递交简历到电话面试之间需要有1-2周的准备时间。通过多个渠道，我联系了超过20家公司，并进行了超过30次电话面试。有时同一家公司会进行多次电话面试。
 
-### Resume — List the relevant stuff first
+### 简历 —— 把相关的内容放在前面
 
-I won’t discuss resume writing too much, as there are already many great articles on it. My focus is on how to do it from a career switcher’s point of view so that recruiters will be able to quickly identify you as a good fit for the new industry/job function.
+我不会详细讨论简历写作，因为已经有很多优秀的文章讨论过这个话题。我的重点是从跨行找工作的人的角度出发，这样招聘人员才能快速识别你是否适合新的行业/职位。
 
-Remember that I was changing from a quant developer in Finance to an ML Engineer in Tech - so it was doubly tricky, as it was both a role shift and industry shift. Again, my projects came to the rescue. I listed them at the top of my work experience, as “Personal Projects”. Yes, even though they are not exactly “Work”, they were my work, and were highly relevant to what I wanted to do as my next job.
+记住，我是从金融领域的量化开发人员转到科技领域的机器学习工程师——这是一个天大的困难，因为这个跨度既有角色的转变也有行业的转变。再次强调，我的项目帮了我大忙。我把它们作为“个人项目”列在我的工作经历的顶部。尽管它们不完全是“工作”，但它们是我的工作，并且与我想要的下一份工作高度相关。
 
-You should know that most recruiters don’t read past the first page of a resume. If they can’t spot the keywords they are looking for in 10–20 sec, your resume is tossed aside. I also listed the skill sets (and all the keywords) relevant to the new job at the top half of the first page of my resume. See below.
+你应该知道，大多数招聘人员不会阅读超过一页的简历。如果他们在10-20秒内找不到他们想要的关键词，你的简历就会被抛到一边。我还在简历的第一页上半部分列出了与新工作相关的技能（以及所有关键词）。见下图。
 
 ![](https://miro.medium.com/max/937/1*a-pon57rs0aflAfiOj86lw.png)
 
-LinkedIn — Let them come to You!
+### LinkedIn —— 让他们来找你！
 
-The best job applications are the ones you never have to send out. After I posted my DeepPiCar blog posts on LinkedIn, I was excited to receive so many messages/calls from recruiters, including from some huge self-driving companies, asking me if I would be interested in their ML Engineer roles.
+最好的工作申请是不需要你主动发出的。在我在LinkedIn上发布DeepPiCar博客文章后，我很高兴收到许多招聘人员的消息和电话，其中包括一些大型自动驾驶公司，问我是否对他们的机器学习工程师职位感兴趣。
 
-I was surprised by the power of Medium blogs and LinkedIn posts. But be sure to mark yourself as “open to opportunities” in the LinkedIn Privacy Settings, so that recruiters can easily find you. When recruiters contacted me, I almost always got a phone interview.
+我对Medium博客和LinkedIn帖子带来的影响力感到惊讶。但请确保在LinkedIn隐私设置中标记自己为“在找工作”，这样招聘人员可以轻松找到你。当招聘人员联系我时，我几乎总能得到电话面试。
 
 ![](https://miro.medium.com/max/1176/1*wZtT-iVYzKI26gNohTXAhw.png)
 
-Internal Referrals — Have a strong advocate
+### 内部推荐 —— 有一个强有力的推荐人
 
 ![](https://miro.medium.com/max/700/0*07v0u9hdLQjmnQ00.jpg)
 
-I would say the 2nd best job applications are the ones submitted by internal referrals. I had an internal referral at both Facebook and Google. I failed my first Facebook interview badly, but because my referral gave me a strong recommendation, Facebook offered to let me try again. Luckily, I passed the 2nd phone screen a month later.
+我认为第二好的工作申请是通过内部推荐提交的。我在Facebook和Google都有内部推荐。我第一次在Facebook的面试表现很差，但由于我的推荐人给了我强烈推荐，Facebook允许我再试一次。幸运的是，一个月后我通过了第二次电话面试。
 
-With Google, it was even more surprising. Partly because of my strong referral, and partly because I told them I had other on-sites coming, they skipped me directly to on-site interviews, even though I was a remote candidate (I live in Chicago, BTW).
+在Google的情况更加令人惊讶。尽管我是远程候选人（顺便说一下，我住在芝加哥），他们直接跳过了电话面试，安排了现场面试，其中一部分是因为我有很棒的推荐人，一部分是因为我告诉他们我有其他现场面试。
 
-So I recommend that you find any of your family member/friends/classmates that work in one of the tech companies that you want to join. If none of them work there, maybe they know someone who does. Please ask your friends to introduce you to them, and maybe have them submit your resume via internal referral. Your chances of getting a phone interview are much higher that way.
+所以我建议你找到在你想加入的科技公司工作的家庭成员/朋友/同学。如果他们没有在那工作，也许他们认识在那里工作的人。请你的朋友介绍你们认识，并让他们通过内部推荐提交你的简历。这样你获得电话面试的机会会高很多。
 
-Another way is to use your LinkedIn network wisely. You can search for people that work for a specific company, and ask one of your mutual friends to introduce you two. If not, send the person a LinkedIn Mail.
+另一种方法是明智地使用你的LinkedIn网络。你可以搜索在特定公司工作的人，并请你的共同朋友介绍你们认识。如果没有，给那个人发送LinkedIn Mail。
 
-Note that if you send a lot of LinkedIn Mail, you need LinkedIn Premium. I signed up for about 3 months of LinkedIn Premium (about \$30/month) and was able to connect with a lot more people directly. Some of the connections lead to interviews. As a side benefit, I received many more recruiter messages than before, because I believe that the LinkedIn algorithm ranked me ahead of non-paying users.
+注意，如果你发送很多LinkedIn Mail，你需要LinkedIn Premium。我订阅了大约3个月的LinkedIn Premium（大约每月30美元），并能直接与更多的人联系。有些联系导致了面试。附带的好处是，我收到的招聘人员信息比以前多得多，因为我相信LinkedIn的算法将我排在了非付费用户之前。
 
 ### 3rd Party Recruiting Agencies
 
@@ -585,24 +585,24 @@ Note that the relocation package is not considered part of TC calculation, as it
 
 ![](https://miro.medium.com/max/1055/1*de6XA2-BzEbzRDASwdWEXA.png)
 
-### Startups
+### 初创公司
 
 ![](https://miro.medium.com/max/285/0*m0izqd9brSBsnkdr)
 
-Levels.fyi is a great tool to compare offers between more mature companies (public or private), as the equity component of the comp can be evaluated in dollar terms with higher certainty.
+Levels.fyi 是一个很好的用来比较更成熟公司的offer（无论是上市公司还是私营公司）的工具，因为这些公司的薪酬中的股票部分可以更有把握地用美元来评估。
 
-But for early-stage startup companies, you can not find reliable data points on Levels.fyi. Very often you are given either
+但是对于早期的初创公司，你在 Levels.fyi 上通常找不到可靠的数据，这往往是因为以下两种情况：
 
-1. a percentage of the company stocks or
-2. given a certain number of stock options. The company recruiter or the CEO may tell you that even though the value of your equity component is worth very little right now, it may work 20x–50x more if the company goes IPO in 3–5 years.
+1. 一定比例的公司股票，或者
+2. 一定数量的股票期权。公司招聘人员或CEO可能会告诉你，虽然你现在的股权价值很低，但如果公司在3-5年内上市，它的价值可能会增长20-50倍。
 
-In reality, these equity components are hard to evaluate, are extremely non-liquid with no monetary value for years to come, and indeed go to zero value when [90% of all startups fail][43]. (source: Forbes).
+实际上，这些股权成分很难评估，极其缺乏流动性，多年来没有任何货币价值，实际上当[90%的初创公司失败时][43]（来源：福布斯），它们的价值确实会归零。
 
-I received a few offers from early-stage startup companies. The typical package is light on cash (i.e. low base salary and bonus) and heavy on equity (lots of options with a huge potential payout…… or nothing). This makes sense, as most early-stage startups do not make a profit, and any cash salary/bonus they pay out depletes their cash on hand or, in Venture Capital (VC) speak, burns up their runway.
+我收到了一些来自早期初创公司的offer，他们大多存在典型的薪酬包现金部分较少（即基本工资和奖金较低），而股权部分较重（很多期权，潜在回报巨大……或者一无所有）的特点。这很符合常理，因为大多数早期初创公司并不盈利，他们支付的任何现金工资/奖金都会消耗他们手头的现金，或者用风险投资（VC）的术语来说，烧光他们的资金。
 
-Even though the startups I received offers from do really exciting work and the prospects look very promising — one had Google Ventures as a backer — I ended up choosing Google because I need the certainty and stability of a large company. After all, I'll have a college-bound kid soon. I can’t afford to join a startup for a few years only to see it fail and have my equity component wiped out.
+虽然我收到的这些初创公司offer确实做着令人兴奋的工作，前景看起来非常有希望——其中一个公司还有谷歌风投的支持——但最终我选择了谷歌，因为我需要大公司的确定性和稳定性。毕竟，我的孩子即将上大学。我不能承担加入初创公司几年后看到它失败而我的股权部分被抹去的风险。
 
-However, if I were younger and had no kids, I would certainly work for a startup and try to hit a home run. If I failed, I wouldn't be under pressure to support the family and still have enough time to start over. If my wife made enough income to support the expenses of our entire family, then I could also work for startups for its potential upside. In finance speak, this is called [diversification][44] — by combining risky stocks with safer stocks or bonds, you can actually achieve higher [risk-adjusted returns][45].
+然而，如果我年轻且没有孩子，我肯定会去初创公司工作，尝试一鸣惊人。如果我失败了，我不会有养家的压力，还有足够的时间重新开始。如果我的妻子赚的钱足以支付我们全家的开销，那么我也可以去初创公司工作，追求其潜在的上升空间。在金融术语中，这称为[多元化][44]——通过将风险较高的股票与较安全的股票或债券结合起来，你实际上可以实现更高的[风险调整后收益][45]。
 
 ### Don’t Accept an Offer on the First Call
 
@@ -660,25 +660,25 @@ These above strategies work best for most companies. For some large tech compani
 
 Lastly, remember all recruiters want to see you get hired by the company. Being able to close on a candidate (i.e. convert a qualified candidate to an employee) is one of their performance metrics, which is tied to a recruiter’s performance bonus. So \***\*treat your recruiter as your advocate, not your adversary\*\***.
 
-## 5.2 Team Matching/Selection
+## 5.2 团队匹配/选择
 
-\***\*Don’t choose a job simply because it pays the most right now.\*\*** While compensation is an important factor in your offer decision process, what may be more important is how a job impacts your career. I will discuss how to select a company/team that will maximize your career potential in the long run.
+**不要仅仅因为一份工作现在支付最高工资就选择它。** 虽然在你决定是否接受offer的过程中薪酬是一个重要因素，但更重要的可能是这份工作对你职业生涯的影响。我将在下面讨论如何选择一家公司/团队，以最大化你职业生涯的潜力。
 
-### Team Matching Process
+### 团队匹配过程
 
 ![](https://miro.medium.com/max/922/0*tD7uB2HX3Adlzhsm.png)
 
-For many companies (including Apple/Microsoft/many other companies), you will be interviewing with a few specific teams. And when you are offered the job, it will be for one of those teams.
+对于许多公司（包括苹果、微软和许多其他公司），你将与几个特定的团队进行面试。当你获得这份工作时，你将只会参与其中一个团队的工作。
 
-However, for some companies such as Google and Facebook, they interview most candidates as general SWEs and only try to match a candidate to a team after that candidate is extended an offer. Since I have only experienced the team matching process with these two companies, I will discuss my experience below.
+然而，对于一些公司，如谷歌和Facebook，他们会将大多数候选人作为通用的软件工程师（SWE）进行面试，并且只有在决定向该候选人发放offer后才尝试将其匹配到一个团队。由于我只经历过这两家公司的团队匹配过程，下面我将谈一谈我的经验。
 
-Facebook extends a firm written offer first and then match you to a team. Team matching can also happen before you join, as you take calls from hiring managers, or after you join, during the first 4–6 weeks of orientation/boot camp stage. The pro of this process is that the candidate knows that their offer is firm. The con is that you run the risk of joining then not being able to find a team you like during boot camp. But I was told by my Facebook friends that this situation is highly unlikely.
+Facebook会先发出一个正式的书面offer，然后再将你匹配到一个团队。团队匹配可以在你加入之前进行，例如你与招聘经理通话时，或者在你加入后，在前4-6周的培训/入职阶段进行。这一过程的优点是候选人知道他们的offer是确定的。缺点是你可能会面临在入职培训期间找不到喜欢的团队的风险。不过我在Facebook的朋友告诉我，这种情况极不可能发生。
 
-Google, on the other hand, works very differently. They do not run a long orientation/boot camp like Facebook. They first extend you a verbal offer and then require you to be matched to a team \***\*before\*\*** extending a formal written offer. Even after you are matched with a team, this offer can be rejected/modified by the hiring committee. Even the final comp can be revised from the initial verbal offer by the compensation committee.
+谷歌的做法则非常不同。他们不像Facebook那样进行长时间的培训/入职流程。他们首先会给你一个口头offer，然后要求你在**发出正式的书面offer之前**匹配到一个团队。即使在你被匹配到一个团队之后，这个offer也可能会被招聘委员会拒绝或修改，甚至是最终的薪酬，也可能由薪酬委员会在最初的口头offer基础上进行调整。
 
-I have read, from many online posts, that this is a long and arduous process. As I found out personally, the team matching process was indeed long and frustrating and took 1.5 months. At one point, I seriously thought it would not work out and wanted to join another company instead.
+我从许多帖子中了解到，这个过程既漫长又艰难。就我个人经历来看，团队匹配过程花了我1.5个月，这确实漫长且令人沮丧。有时候我真的认为我无法完成团队匹配过程，并想加入另一家公司。
 
-Had Google extended me a firm written offer first like Facebook, it would’ve been much less stressful, because I would've known for certain I was going to work for Google and all I had to do was to find a team. Luckily, things worked out for me as I was finally matched with a group of my choice, and the offer was approved by various committees shortly after that.
+如果谷歌像Facebook那样先给我一个正式的书面offer，这会为我减少很多压力，因为我会明确知道自己将要为谷歌工作，只需找到一个团队即可。幸运的是，事情最终对我来说很顺利，我终于与一个自己选择的小组匹配，之后不久offer也被各个委员会批准了。
 
 ### 如何选择一个团队
 

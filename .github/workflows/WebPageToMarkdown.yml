@@ -3,9 +3,6 @@ on:
   issues:
     types:
       - opened
-env:
-  issue_body: ${{ github.event.issue.body }}
-  issue_title: ${{ github.event.issue.title }}
 jobs:
   WebPageToMarkdown:
     runs-on: ubuntu-latest
@@ -14,18 +11,16 @@ jobs:
       contents: write
     steps:
       - name: Issue does not need to generate markdown
-        if: ${{ !startsWith(env.issue_title, '[Auto]') }}
+        if: ${{ !startsWith(github.event.issue.title, '[Auto]') }}
         shell: bash
         run: echo "This issue does not need to generate a markdown file." 1>&2; exit 1;
       - name: The description of the issue is empty
-        if: ${{ !env.issue_body }}
+        if: ${{ !github.event.issue.body }}
         shell: bash
         run: echo "The description of the issue is empty." 1>&2; exit 1;
 
       - uses: actions/checkout@v3
-        if: ${{ env.issue_body && startsWith(env.issue_title, '[Auto]') }}
       - name: Crawl pages and generate Markdown files
-        if: ${{ env.issue_body && startsWith(env.issue_title, '[Auto]') }}
         uses: freeCodeCamp-China/article-webpage-to-markdown-action@v1
         with:
           newsLink: '${{ github.event.issue.Body }}'
@@ -34,7 +29,6 @@ jobs:
           githubToken: ${{ github.token }}
 
       - name: Git Auto Commit
-        if: ${{ env.issue_body && startsWith(env.issue_title, '[Auto]') }}
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: '${{ github.event.issue.title }}'

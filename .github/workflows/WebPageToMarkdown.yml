@@ -13,6 +13,15 @@ jobs:
       issues: write
       contents: write
     steps:
+      - name: Issue does not need to generate markdown
+        if: ${{ !startsWith(env.issue_title, '[Auto]') }}
+        shell: bash
+        run: echo "This issue does not need to generate a markdown file." 1>&2; exit 1;
+      - name: The description of the issue is empty
+        if: ${{ !env.issue_body }}
+        shell: bash
+        run: echo "The description of the issue is empty." 1>&2; exit 1;
+
       - uses: actions/checkout@v3
         if: ${{ env.issue_body && startsWith(env.issue_title, '[Auto]') }}
       - name: Crawl pages and generate Markdown files
@@ -32,12 +41,3 @@ jobs:
           file_pattern: chinese/articles/*.md
           commit_user_name: PageToMarkdown Bot
           commit_user_email: PageToMarkdown-bot@freeCodeCamp.org
-
-      - name: Issue does not need to generate markdown
-        if: ${{ !startsWith(env.issue_title, '[Auto]') }}
-        shell: bash
-        run: echo "This issue does not need to generate a markdown file." 1>&2; exit 1;
-      - name: The description of the issue is empty
-        if: ${{ !env.issue_body }}
-        shell: bash
-        run: echo "The description of the issue is empty." 1>&2; exit 1;

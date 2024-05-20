@@ -42,7 +42,7 @@ Redux and other state management tools are mostly focusing on restricting or con
 
 All the common state management techniques can be split into two big classes.
 
-The first class maintaining data dependencies graph to propagate changes through handlers — React Component State, MobX, RxJS. Maintaining these dependencies is a complex task. The underlying libraries are taking charge of part of this complexity by managing subscriptions, optimizing the order of handlers execution, batching them, but it is still confusing to use sometimes, often requires hard fine-tuning, e.g., with `shouldComponentUpdate`method.
+The first class maintaining data dependencies graph to propagate changes through handlers—React Component State, MobX, RxJS. Maintaining these dependencies is a complex task. The underlying libraries are taking charge of part of this complexity by managing subscriptions, optimizing the order of handlers execution, batching them, but it is still confusing to use sometimes, often requires hard fine-tuning, e.g., with `shouldComponentUpdate`method.
 
 Another approach limits mutation to only a single cell (storage) (e.g., Redux). This needs much smaller libraries, with less magic in them. It is more a pattern than a library. Unfortunately, the programs are more verbose, and this breaks data encapsulation. There are many patterns, wrappers to solve this though, but they make a single cell approach to be more similar to the graph based one.
 
@@ -54,7 +54,7 @@ Let’s first port [Redux VanillaJS counters][5] example to illustrate the idea.
 
 The original reducer is replaced with async generator function. The function calculates and stores its state in a local variable. It also yields the calculated value, the new value is stored in the singleton storage, and it is visible from event handlers. I’ll remove that singleton storage in the next steps.
 
-This version doesn’t look much different from Redux. The async generator there could be Redux storage middleware. This violates one of Redux [principles][6] though, namely storing all application state only in the storage. Even if the generator doesn’t have any local variables, it still has its execution state — the position in the code where the execution is suspended in `yield` or `await`.
+This version doesn’t look much different from Redux. The async generator there could be Redux storage middleware. This violates one of Redux [principles][6] though, namely storing all application state only in the storage. Even if the generator doesn’t have any local variables, it still has its execution state—the position in the code where the execution is suspended in `yield` or `await`.
 
 #### Turning components inside-out
 
@@ -90,7 +90,7 @@ Async generators overhead is much smaller than for state management libraries. B
 
 In the former example, there are useless calls to `ReactDom.render`. This is obviously a performance problem, and there is a simple solution. Solving it quickly by sending another message with type “FLUSH” after each dispatched event. React render runs only after it receives this message. The intermediate steps can yield whatever they need in between.
 
-Another awesome side of this approach is you may not worry about performance until it is a problem. Everything is structured in small autonomous stages. They are easy to refactor, or even without refactoring — many performance problems can be solved by adding another generic state in the pipe of steps, e.g., batching, prioritizing, saving intermediate data, etc.
+Another awesome side of this approach is you may not worry about performance until it is a problem. Everything is structured in small autonomous stages. They are easy to refactor, or even without refactoring—many performance problems can be solved by adding another generic state in the pipe of steps, e.g., batching, prioritizing, saving intermediate data, etc.
 
 For example, in the demo constructed React elements are saved in local variables and React can re-use them. Changes are propagated from the root towards leaves, so optimizations like overriding`shouldComponentUpdate` aren’t needed.
 
@@ -117,7 +117,7 @@ If you prefer unit-tests as documentation policy, there are many ways to make a 
 
 #### Persistent state
 
-There is another motivation for Redux described in [You Might Not Need Redux][8] article by Dan Abramov — namely providing access to the state and it can be serialized, cloned, diffed, patched, etc. This can be used for time travel, hot reloading, universal applications and more.
+There is another motivation for Redux described in [You Might Not Need Redux][8] article by Dan Abramov—namely providing access to the state and it can be serialized, cloned, diffed, patched, etc. This can be used for time travel, hot reloading, universal applications and more.
 
 For this to work, the whole application state should be kept in Redux storage. Many Redux applications(even Redux samples) have some part of state stored outside of their store. These are components state, closures, generators or async functions state. Redux based tools can not persist this state.
 
@@ -165,7 +165,7 @@ Some generator can also reorder messages to give animation a bigger priority tha
 
 Commonly used state management tools have FP background. The code from the article doesn’t look like FP in JavaScript because of imperative `for-of/switch/break`statements. It has a corresponding concept in FP too. It is so called Monads do-notation. For example one of their use in Haskell is to resolve problems like React components property drilling.
 
-To keep this story practical I don’t digress from the main subject here, there is another article — [Using Generators as syntax sugar for side effects][10].
+To keep this story practical I don’t digress from the main subject here, there is another article—[Using Generators as syntax sugar for side effects][10].
 
 #### Effectful.js
 

@@ -193,7 +193,7 @@ DeepPiCar的博客系列
 
 另一种方法是明智地使用你的LinkedIn网络。你可以搜索在特定公司工作的人，并请你的共同朋友介绍你们认识。如果没有，给那个人发送LinkedIn Mail。
 
-注意，如果你发送很多LinkedIn Mail，你需要LinkedIn Premium。我订阅了大约3个月的LinkedIn Premium（大约每月30美元），并能直接与更多的人联系。有些联系导致了面试。附带的好处是，我收到的招聘人员信息比以前多得多，因为我相信LinkedIn的算法将我排在了非付费用户之前。
+注意，如果你发送很多LinkedIn Mail，你需要LinkedIn Premium。我订阅了大约3个月的LinkedIn Premium（大约每月30美元），并能直接与更多的人联系。有些联系导致了面试。附带的好处是，我收到的招聘人员信息比以前多得多，因为我相信LinkedIn的推荐算法将我排在了非付费用户之前。
 
 ### 3rd Party Recruiting Agencies
 
@@ -604,61 +604,60 @@ Levels.fyi 是一个很好的用来比较更成熟公司的offer（无论是上�
 
 然而，如果我年轻且没有孩子，我肯定会去初创公司工作，尝试一鸣惊人。如果我失败了，我不会有养家的压力，还有足够的时间重新开始。如果我的妻子赚的钱足以支付我们全家的开销，那么我也可以去初创公司工作，追求其潜在的上升空间。在金融术语中，这称为[多元化][44]——通过将风险较高的股票与较安全的股票或债券结合起来，你实际上可以实现更高的[风险调整后收益][45]。
 
-### Don’t Accept an Offer on the First Call
+### 不要在第一次电话联系中接受Offer
 
 ![](https://miro.medium.com/max/740/0*dhK83JNgpbSsRcI-.jpg)
 
-When you are first offered a position, the recruiter always tells you the offer details (base salary, bonus, equity grants, etc) over the phone. This is called a “Verbal Offer”. What you want to do on the first call is to thank the recruiter, write down all the offer details, repeat it back to the recruiter to confirm, and ask them to send you this offer details in an email. Then hang up.
+当你第一次通过面试被发放Offer时，招聘人员通常会通过电话告诉你 Offer 的详细信息（基本工资、奖金、股权奖励等）。这被称为“口头 Offer”。你在第一次电话中需要做的是感谢招聘人员，记下这个 Offer 所有的详细信息，重复一遍以确认，并请他们通过电子邮件发送这些详细信息。然后挂断电话。
 
-Remember, DO NOT accept the job on the spot. (If this is your dream job, you can jump up and down AFTER you hang up the phone.) Sometimes, the recruiter will refuse to send you anything in writing or email. If this is the case, then email them with the offer details you just wrote down and ask them to confirm whether what you heard is correct. They'll usually respond affirmatively.
+记住，不要当场接受工作。（如果这是你的梦想工作，可以在挂断电话后跳起来庆祝。）有时候，招聘人员会拒绝以书面或电子邮件形式发送给你。如果是这样，那么请你将刚刚写下的 Offer 详细信息发送给他们，并询问你所听到的是否正确。他们通常会确认。
 
-This is important because after something is in writing, the recruiter can not easily back out of what they just told you over the phone.
+这很重要，因为一旦有书面记录，招聘人员就不容易收回他们在电话中告诉你的内容。
 
-Many times, recruiters will push you to verbally accept the offer right away over the phone or give you a 24-hour deadline to accept. DO NOT BITE! You should always try to negotiate for a better offer.
+很多时候，招聘人员会催促你立即在电话中口头接受 Offer，或者给你一个 24 小时的接受期限。不要上钩！你应该总是尝试争取更好的 Offer。
 
-### Offer Negotiation — Multiple Offers
+### Offer 谈判——当你有多个Offer的时候
 
 ![](https://miro.medium.com/max/293/1*I3BYbnGWZCkQOJKaxwGSdA.png)
 
-Offer negotiation is like playing high stakes poker — indeed, we are talking about tens of thousands of dollars here — and it is both exciting and stressful. For some people like myself, it can also be scary. However, armed with information from level.fyi, you can call a recruiter’s offer bluff, if that offer is too low.
+Offer 谈判就像玩高赌注的扑克——毕竟，我们谈的是成千上万的美元——这既令人兴奋又有压力。对于像我这样的人来说，这也可能很让人害怕。不过有了 levels.fyi 的信息后，如果那个 Offer 太低的话，你可以揭穿招聘人员的虚张声势。
 
-To have leverage in the offer negotiation process, it helps to have another strong offer, or in poker speak, a strong hand. Many recruiters are very willing to try to match competing offers. They can present the competing offer to the hiring/compensation committee as strong justifications for putting together a better offer for you.
+在 Offer 谈判过程中，有一个强有力的 Offer 或者说一副强有力的底牌是有帮助的。很多招聘人员很愿意尝试匹配竞争对手的 Offer。他们可以将竞争对手的 Offer 呈递给招聘/薪酬委员会，作为提出更好 Offer 的强有力理由。
 
-In this case, you can try to let these companies bid up your compensation. This is quite normal, as bidding happens every day around us when a commodity is in demand, such as in the stock markets, eBay, and Google Ads. The bidding process ensures the commodity is valued at a fair market price.
+在这种情况下，你可以尝试让这些公司竞标你的薪酬。竞标每天都在我们身边发生，比如在股票市场、eBay 和 Google Ads 中，当某种商品有需求时，这很正常。竞标过程确保商品以公平的市场价格展示它的价值。
 
-### Offer Negotiation — Just One Offer
+### Offer 谈判——当你只有一个Offer
 
-Even if you don’t have a strong hand — i.e. only one offer or only low offers — you can tell the recruiter that you are really excited about the company, but your salary expectation is actually $XYZ. The recruiter will probably ask you to justify this figure, and you can say it is based on figures from levels.fyi, or your friends/co-workers who have similar YoE and their TC is $XYZ.
+即使你没有底牌——即只有一个 Offer 或者仅有比这个 Offer 更低的 Offer——你也可以告诉招聘人员你对这家公司非常感兴趣，但你的薪资期望实际上是 $XYZ。招聘人员可能会要求你证明这个数字，你可以说这是基于 levels.fyi 的数据，或者是你朋友/同事的相似年资和他们的总薪资是 $XYZ。
 
-If you present yourself professionally, it is very likely the initial offer will be bumped up somewhat. It is highly unlikely that the company will retract its original offer simply because you try to negotiate. After all, the company invests a lot of effort to find a qualified candidate, so it doesn’t want to lose a good candidate over a small increase. So \***\*you have nothing to lose by asking for more comp, nicely\*\***.
+如果你表现得专业，很有可能最初的 Offer 会有所提高。公司很不可能因为你试图谈判就收回其原始 Offer。毕竟，公司投入了大量精力寻找合格的候选人，所以他们不想因为小幅增加而失去好候选人。所以你礼貌地要求更多薪酬是没有任何损失的。
 
-### Offer Negotiation — Money is Not the Only Thing on the Table
+### Offer 谈判——可以不只是谈钱
+记住，**不仅仅是薪酬可以谈判**。公司可以提供的任何东西都在谈判桌上。
 
-Remember \***\*money is not the only thing you can negotiate\*\***. Anything that the company can offer you is on the negotiation table.
+例如，你可以要求在不同的组工作（比如核心组而不是支持组）、不同的职称（比如高级软件工程师而不是软件工程师）、不同的工作职能（比如研究工程师而不是软件工程师）、更多的带薪休假天数、灵活的在家办公时间，或更好的搬迁打包。
 
-For example, you can ask to work for a different group (say a core group rather than support related group), a different title (say Senior Software Engineer instead of Software Engineer), a different job function (say a research engineer rather than a software engineer), more Paid Time Off days, flex time to work from home, or a better relocation package.
+当然，这在不同公司之间差异很大。大公司可能不那么灵活，但较小的公司可能无法匹配大公司的货币补偿，可能更愿意考虑这些替代要求。再次强调，如果你礼貌地提出要求，是没有坏处的。
 
-Of course, this varies heavily from company to company. Larger companies may be less flexible, but smaller companies that may not be able to match the monetary compensation of larger companies may be more willing to consider these alternative demands. Again, it doesn’t hurt to ask, if you do it nicely.
+### Offer 谈判——不要太贪心
 
-### Offer Negotiation — Don’t Be Too Greedy
+经过几轮与招聘人员的来回交谈后，如果你感觉没有太多空间可以谈判了，就停止要求更多。大公司中的招聘人员每天都会见到这种情况，可能不会太介意。但对于较小的公司，招聘人员可能直接与你的招聘经理甚至是老板/创始人合作。如果你讨价还价太激烈，可能会被认为太贪婪。因此，即使他们雇用你，他们可能会对你产生负面看法。**知道何时收手。**
 
-After a few rounds of back-and-forth with the recruiter, if you sense that there is not much more room to negotiate, stop asking for more. Recruiters at larger firms see this every day, and probably won't mind too much. For smaller firms, the recruiter may be working directly with your hiring manager or even the owner/founder. If you drive your bargain too hard, you may be perceived as too greedy. So even if they hire you, they may view you negatively. \***\*Know when to be content\*\***.
-
-### Offer Stalling Tactics
+### Offer 拖延策略
 
 ![](https://miro.medium.com/max/650/0*m5gcnqcx9RKhAzZj.png)
 
-If you are not quite happy with any of the offers after negotiation, you should try to delay the acceptance of the offers. This can happen if some offers’ job functions are very attractive, but comps are too low, while other offers’ comps are nice, but you don’t like the job functions.
+如果在谈判后你对任何 Offer 都不太满意，你应该尝试推迟接受这些 Offer。这可能发生在某些 Offer 的工作职能非常有吸引力，但薪酬太低，而其他 Offer 的薪酬很好，但你不喜欢工作职能的情况下。
 
-Delaying an offer allows you more time to interview and land that perfect offer. But it does have risks, as the open position may be filled anytime. But for large tech firms, that risk is minimal, as they are always hiring. If you need to delay an offer, here are some tactics to try. (Disclaimer: I have not tried all of them, some of them have been suggested to me.)
+推迟一个 Offer 可以让你有更多时间进行面试，获得那个完美的 Offer。但这确实有风险，因为职位可能随时被填满。但对于大科技公司，这种风险很小，因为他们总是在招聘。如果你需要推迟一个 Offer，以下是一些策略。（免责声明：我没有尝试过所有这些策略，有些是别人建议的。）
 
--   Meet with the team/peers: Request a call, coffee, or dinner to meet the rest of the team or learn more from peers. This is a great way to not only show interest but also get a strong signal on the company/team culture.
--   Request Product Demos: Requesting a product demo is another great way to show interest. It’s also a good way to assess the technical challenges, the product roadmap, and how product-oriented the company is. You can usually combine this with meeting the team for lunch.
--   Ask various Stock/Option related questions, such as the company’s current valuation, last funding round, company’s exit plans/strategies, and option exercise schedule, etc
+- 与团队/同事见面：请求一次通话、一起喝咖啡或共进晚餐，以了解团队其他成员或同事的更多信息。这不仅是展示兴趣的好方法，也是了解公司/团队文化的有力信号。
+- 请求产品演示：请求对方进行产品演示是展示兴趣的另一种好方法。这也是评估技术挑战、产品路线图以及公司产品导向程度的好方法。你通常可以将此与团队共进午餐结合起来。
+- 询问各种股票/期权相关问题，例如公司的当前估值、最近的融资轮次、公司的退出计划/策略以及期权行权计划等。
 
-These above strategies work best for most companies. For some large tech companies, once they decide to give you an offer, the offer is usually good for at least a few months, because you have met their technical bar, and they would be happy to hire a good SWE anytime. Your recruiter may not be willing to tell you this, as they want to close on you ASAP, but you can find out from other sources, i.e. Google Search and Blind App.
+这些策略对大多数公司都很有效。对于一些大科技公司，一旦他们决定给你 Offer，通常这个 Offer 至少会有效几个月，因为你达到了他们的技术门槛，他们会随时愿意雇佣一个优秀的软件工程师。你的招聘人员可能不愿意告诉你这一点，因为他们希望尽快敲定你，但你可以通过其他渠道了解，例如 Google 搜索和 Blind App。
 
-Lastly, remember all recruiters want to see you get hired by the company. Being able to close on a candidate (i.e. convert a qualified candidate to an employee) is one of their performance metrics, which is tied to a recruiter’s performance bonus. So \***\*treat your recruiter as your advocate, not your adversary\*\***.
+最后，记住所有招聘人员都希望你被公司录用。能够敲定一个候选人（即将合格的候选人转化为员工）是他们的绩效指标之一，与招聘人员的绩效奖金挂钩。所以**把你的招聘人员视为你的支持者，而不是对手**。
 
 ## 5.2 团队匹配/选择
 

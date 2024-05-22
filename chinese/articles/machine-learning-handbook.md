@@ -4,7 +4,7 @@ title: Machine Learning Fundamentals Handbook – Key Concepts, Algorithms, and
 author: Tatev Aslanyan
 authorURL: https://www.freecodecamp.org/news/author/tatevkaren/
 originalURL: https://www.freecodecamp.org/news/machine-learning-handbook/
-translator: ""
+translator: "ZhijieXiong"
 reviewer: ""
 ---
 

@@ -195,33 +195,33 @@ DeepPiCar的博客系列
 
 注意，如果你发送很多LinkedIn Mail，你需要LinkedIn Premium。我订阅了大约3个月的LinkedIn Premium（大约每月30美元），并能直接与更多的人联系。有些联系导致了面试。附带的好处是，我收到的招聘人员信息比以前多得多，因为我相信LinkedIn的推荐算法将我排在了非付费用户之前。
 
-### 3rd Party Recruiting Agencies
+### 第三方招聘机构
 
-Overall, I felt that most 3rd party agencies didn’t work well for my job search this time. As a reference, when I looked for finance jobs in the past, I exclusively used executive search firms, and the results were great. But most of the tech giants don’t use 3rd party recruiting agencies. The only agencies that worked well for me were [TripleByte][23] and [DeepLearning.ai][24], which I will discuss below.
+总体而言，我觉得大多数第三方招聘机构在这次求职过程中并没有起到很大作用。作为参考，以前我寻找金融工作时，主要依赖高管猎头公司，并且这样做的效果非常好。但大多数科技巨头并不使用第三方招聘机构。对我来说，唯一有效的机构是 [TripleByte][23] 和 [DeepLearning.ai][24]，我将在下面详细介绍。
 
-### [TripleByte][25] — Skip the phone interviews
+### [TripleByte][25] — 免去电话面试
 
 ![](https://miro.medium.com/max/1067/1*N8n2DoEP57Wpmtb0xmKF6w.png)
 
-TripleByte is a unique recruiting agency. Its appeal to the candidate is that once the candidate passes TripleByte’s comprehensive 2-hour live tech screening test, they can go directly on-site with many companies. It is also appealing to companies because TripleByte weeds out most of the weak candidates for them, saving their engineers hours of phone screening time.
+TripleByte 是一家独特的招聘机构。它对候选人的吸引力在于，一旦候选人通过了 TripleByte 综合的2小时现场技术筛选测试，就可以直接进入多家公司的现场面试。对公司来说，它的吸引力在于 TripleByte 为他们筛选掉了大多数不合格的候选人，节省了工程师大量的电话筛选时间。
 
-When I passed TripleByte’s test, I could choose from about 200 companies. They were mostly small startups, but with quite a few large companies, such as Apple, Adobe, American Express, etc. I ended up interviewing with the [Apple Siri group][26] (Huge), [Zoox][27] (Medium), and [Determined.ai][28] (small) on-site. All of them are doing amazing engineering work.
+当我通过 TripleByte 的测试后，可以选择约200家公司。这些公司主要是小型初创公司，但也有不少大公司，如 Apple、Adobe、American Express 等。我最终与 [Apple Siri 团队][26]（大公司）、[Zoox][27]（中型公司）和 [Determined.ai][28]（小公司）进行了现场面试。所有这些公司都在令人惊叹的工程中工作。
 
-I highly recommend going through the TripleByte process, as it identified my weak points and saved me from many hours of phone screening and related headaches. [Take TripleByte’s online test here][29].
+我强烈推荐通过 TripleByte 的流程，因为它识别到了我薄弱的地方，并为我节省了许多电话筛选和相关的麻烦。[点击这里参加 TripleByte 的在线测试][29]。
 
-### [DeepLearning.ai][30] and [Workera.ai][31] — The Gospel for Aspiring Data Scientists/ML Engineers
+### [DeepLearning.ai][30] 和 [Workera.ai][31] — 数据科学家/机器学习工程师的福音
 
 ![](https://miro.medium.com/max/1171/1*I5gI_cSrZLdT3fFf4N_cYQ.png)
 
-If you are an aspiring Data Scientist/ML Engineer, you must have heard or taken one of Andrew Ng’s Machine Learning/Deep Learning courses, offered by Coursera/Deep Learning.ai.
+如果你是一个有志成为数据科学家或机器学习工程师的人，你一定听说过或参加过 Andrew Ng 在 Coursera/Deep Learning.ai 上提供的机器学习/深度学习课程。
 
-Actually, DeepLeaning.ai has two parts: one part is education, which is very well known, and the other part ([Workera.ai][32]) is recruiting, which is lesser-known. That’s because Workera.ai is quite new, only started mid-2019. They don’t have nearly as many affiliated firms as TripleByte, but I believe they are quickly ramping up this effort. They also make you take a test.
+实际上，DeepLearning.ai 有两部分：一部分广为流传的是教育板块；另一部分相对较少人知道的是招聘板块，即 [Workera.ai][32]。这是因为 Workera.ai 在2019年中期创立，成立时间很短。他们没有像 TripleByte 那样多的合作公司，但我相信他们正在迅速扩展这方面的努力。他们也会让你参加一个测试。
 
-The differences between Workera.ai’s and TripleByte’s tests are two folds. First, it is a test designed for Data Scientists(DS)/ML Engineers, where TripleByte has tests for general software engineers as well as ML engineers — the ML engineer test is brand new.
+Workera.ai 的测试与 TripleByte 的测试有两点不同。首先，它是为数据科学家（DS）/机器学习工程师（ML）设计的测试，而 TripleByte 有为通用软件工程师以及 ML 工程师设计的测试——ML 工程师测试是全新的。
 
-Second, the Workera.ai test is non-binding, meaning passing its test does NOT skip you straight to on-site interviews. Instead, Workera.ai refers you to DS/ML groups in a few of their affiliated companies, and essentially brings you to the front of the queue. But you still have to go through the whole phone/on-site interview process.
+其次，Workera.ai 的测试是非约束性的，这意味着通过测试并不能让你直接进入现场面试。相反，Workera.ai 会将你推荐给其少数合作公司的 DS/ML 团队，并基本上让你排在前列。但你仍然需要经过完整的电话/现场面试过程。
 
-I feel it is still very valuable as Andrew Ng’s reputation and network in Deep Learning space in the Bay Area are quite wide-reaching. I ended up interviewing with [Pinterest][33] and [Scale.ai][34]’s ML groups. I don’t think I would’ve gotten interviews from either company had I just applied directly. [Click here to apply to Workera.ai’s AI Program for Experienced Engineers][35].
+我认为这仍然非常有价值，因为 Andrew Ng 在深度学习领域及其在湾区的网络非常广泛。我最终与 [Pinterest][33] 和 [Scale.ai][34] 的 ML 团队进行了面试。如果我只是直接申请，我不认为我会得到这两家公司的面试机会。[点击这里申请 Workera.ai 的高级工程师 AI 项目][35]。
 
 ### Online Job Boards — Don’t rely heavily on them
 

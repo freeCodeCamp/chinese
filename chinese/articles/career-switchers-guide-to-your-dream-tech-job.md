@@ -265,64 +265,64 @@ Workera.ai 的测试与 TripleByte 的测试有两点不同。首先，它是为
 
 ![](https://miro.medium.com/max/485/0*vN0RSfOWzKkGulG7.jpg)
 
-在技术电话面试前的一两天，务必在 [Glassdoor][36] 和 [Leetcode][37] 上查阅该公司以前的面试题目。对于谷歌和Facebook这样的大公司，这样做效果不佳，因为有成百上千的面试题目。
+在技术电话面试前的一两天，请务必在 [Glassdoor][36] 和 [Leetcode][37] 上查阅该公司以前的面试题目。对于谷歌和Facebook这样的大公司，这样做效果可能不会很好，因为有成百上千的面试题目。
 
 但对于较小的公司，这种方法还是比较有效的。我会浏览Glassdoor上的许多帖子，记录下具体的技术问题，然后尝试解决所有这些问题。在电话面试中，遇到与网上发布的题目完全相同的情况非常少见，但做这些公司的过去问题能更好地为该公司的电话面试做好准备。
 
 这类似于在参加同一教授的期末考试之前练习往年的期末题目——问题可能会有所不同，但问题的风格和类型会相似。
 
-### Technical Phone Interviews
+### 技术电话面试
 
 ![](https://miro.medium.com/max/1280/0*P4QVsG3vBNfY6UhY.jpg)
 
-Technical phone interviews are where the rubber meets the road. The stage is designed to separate the capable candidates from the less-capable candidates. I have read that only about 10–20% of the candidates can pass the technical phone screens of top tech companies.
+技术电话面试是展示实力的关键阶段。这个阶段的目的是区分有能力的候选人和能力较弱的候选人。据说只有大约10%至20%的候选人能够通过顶级科技公司的技术电话面试。
 
-The measuring stick is simply a coding test, NOT how well you talk, NOT how experienced you are at your current job, NOT how many programming languages you know, NOT even your personal projects. Most interviewers simply want you to complete a coding exercise in whatever programming language you are most comfortable in.
+评价的标准只有一个编码测试，而不是你的口才、当前工作的经验、掌握的编程语言数量，甚至不是你的个人项目。大多数面试官只想让你在你最熟悉的编程语言中完成一个编码练习。
 
-Personally, I don’t quite agree that this is the best way to find the best engineers. For example, I've worked with many very experienced software engineers. Some are expert GUI/app developers, some are C++ experts, others are low-level Linux gurus, but many of them tell me that they would fail miserably in a timed Algorithms and Data Structures (A&DS) coding test.
+个人而言，我并不认为这是发现最佳工程师的最佳方式。例如，我与许多非常有经验的软件工程师合作过。有些是GUI/应用开发专家，有些是C++专家，还有些是低级Linux专家，但他们中的许多人告诉我，他们会在限时的算法和数据结构（A&DS）编码测试中表现得很差。
 
-But since this is the only game in town, in order to break into the tech industry, \***\*you have to “Crack the Coding Interview”\*\***……
+但既然这是唯一的途径，想要进入科技行业，**你必须“破解编码面试”**……
 
 ![](https://miro.medium.com/max/940/0*ZPXWlO_1OlBQa5fw.jpg)
 
-The coding exercise is always done via a shared online notepad, such as CoderPad or Google Docs, where both you and the interviewer can type at the same time.
+编码练习通常通过共享在线记事本进行，例如CoderPad或Google Docs，面试官和你可以同时在共享文档中进行输入。
 
-While some companies, like Google and Facebook, only ask you to write down the correct algorithms and won’t ask you to run your code, many companies expect you to come up with fully working code within the 45–60 minutes time window.
+虽然一些公司（比如Google和Facebook）只要求你写出正确的算法，不要求你运行代码，但许多公司期望你在45-60分钟的时间内完成可以正确运行的代码。
 
-In addition to the shared notepad, most companies conduct voice-only calls, while some companies conduct phone interviews via Zoom/Skype video calls.
+除了共享记事本，大多数公司采用语音通话进行面试，而一些公司则通过Zoom/Skype视频通话进行。
 
-Personally, phone screens are the hardest part of the interview process for me. For reference, I passed about only 50% of my technical phone screens. They are difficult because:
+对我来说，电话面试是面试过程中最困难的部分。作为参考，我大约只有50%的技术电话面试通过率。它们困难的原因包括：
 
--   The 45–60 min time window is usually tight for me, as I am not fast at typing. (Believe it or not, I am faster at whiteboard coding for reasons I will discuss in the on-site interview section.)
--   You need to code while talking with the interviewer throughout the call. Most people, including myself, prefer to discuss a design/approach first, and then type the code and debug in silence. But if you don’t talk for 20–30 min during your implementation stage, it would be very awkward.
--   Online notepad is text-based and is not a whiteboard. So it is hard to draw a diagram or illustrate your code workflow graphically.
--   Online notepads are NOT IDEs. While most of the online notepads, such as CoderPad, can do decent syntax highlighting and indentation, they are not full-blown IDEs. For example, they can not do word auto-completion. They can not highlight obvious syntax errors while you type and they certainly don’t support line-by-line debugging. So a lot of times, I had to resort to the “old faithful” print statements for debugging, which is very slow and clumsy.
--   Voice calls are non-visual. As I tried to explain my approach over the phone, I couldn't draw a picture and couldn't look at the interviewer’s facial expression or body language to gauge if I was on the right track.
+- 45-60分钟的时间窗口通常对我来说很紧张，因为我打字速度不快。（无论你是否相信，我在白板编码时更快，原因将在现场面试部分讨论。）
+- 你需要在整个通话过程中与面试官保持交流的同时编写代码。大多数人更喜欢先讨论设计/方法，然后在安静中编写代码和调试，包括我自己。但如果在实现阶段你有20-30分钟不说话，会显得很尴尬。
+- 在线记事本是基于文本的，不是白板。因此很难画图或图解代码工作流程。
+- 在线记事本不是集成开发环境（IDE）。虽然大多数在线记事本，如CoderPad，可以做不错的语法高亮和缩进，但它们不是全功能的IDE。例如，它们不能做自动补全，也不能在你输入时高亮明显的语法错误，更不能支持逐行调试。所以很多时候，我不得不依靠“老实可靠”的print语句进行调试，这非常慢且笨拙。
+- 语音通话是非视觉的。当我试图在电话中解释我的方法时，我不能画图，也不能通过面试官的面部表情或肢体语言来判断我的表述是否正确。
 
-Here are what I did to combat the above difficulties:
+为了应对上述困难，我采取了以下措施：
 
--   \***\*Use a good phone headset.\*\*** This should be very obvious because you want to free both of your hands to code! So invest in a good Bluetooth headset and make sure it is fully charged before phone interviews.
--   \***\*Keep “Chit-chat” to a minimum\*\***. In my first couple of interviews, I would try to give the interviewer a good impression of myself. So I would spend about 5–7 min talking about my background, my experiences, and then my self-driving car. Sometimes, the interviewer would ask me a few questions, and it could drag on to the first 10 minutes! What I quickly discovered was that all this “chit-chat” time ate into the total 45 min allotted for my interview, which meant I had less time to work on the coding problem. In fact, most interviewers are there to gauge your coding skills ONLY, and your strong work experience is not relevant to them at this time. So I learned to shorten the “chit-chat” to about less than 2 min at the beginning, and leave my questions to the end of the interview. In fact, if I finished the coding problem successfully, the interviewers usually are more willing to talk with me a bit longer than the 45 min slot. On the other hand, if you “bombed” the coding interview, chatting won’t change the outcome of the interview, anyways. Note that this tip applies to on-site interviews as well.
+- **使用一个好的电话耳机**。这是显而易见的，因为你需要解放双手来编码！所以买一个好的蓝牙耳机，并确保在电话面试前充满电。
+- **把闲聊时间降到最低**。在我的前几次面试中，我会试图给面试官留下好印象。所以我会花大约5-7分钟谈论我的背景、经验，然后是我的自动驾驶汽车。有时面试官会问我一些问题，这可能会拖延到前10分钟！我很快发现所有这些闲聊时间都占用了面试分配的45分钟，这意味着我有更少的时间来处理编码问题。事实上，大多数面试官只想评估你的编码技能，你的强大工作经验此时对他们来说并不重要。所以我学会了在开始时将闲聊时间缩短到2分钟以内，并将我的问题留到面试结束。如果我成功完成了编码问题，面试官通常更愿意和我多聊一会儿。相反，如果你在编码面试中表现不佳，聊天也不会改变面试结果。同样的建议也适用于现场面试。
 
 ![](https://miro.medium.com/max/600/1*HOQJzGbrCYQrXMZoIPl3UQ.png)
 
--   \***\*Use two monitors.\*\*** One monitor would be for the shared notepad, and the other monitors would be for googling and IDE, etc. Most laptops nowadays have ports for external monitors. Be sure you connect your laptop to at least one external monitor when you code, so you won’t have to flip back and forth between windows.
--   \***\*Use an external mouse\*\***. If you use a laptop, be sure to invest in an external mouse. For me, using an external mouse significantly improves my ability to select, copy and paste code.
+- **使用两个显示器**。一个显示器用于共享记事本，另一个显示器用于搜索和IDE等。现在大多数笔记本电脑都有外接显示器的端口。确保在编写代码时将笔记本电脑连接到至少一个外接显示器，这样你就不必在窗口之间来回切换。
+- **使用外接鼠标**。如果你使用笔记本电脑，务必购买一个外接鼠标。对我来说，使用外接鼠标显著提高了选择、复制和粘贴代码的能力。
 
 ![](https://miro.medium.com/max/650/0*_KphaQpx9VCemE2C.jpg)
 
--   \***\*Use an IDE\*\***. Even though you are coding in the shared notepad, sometimes, to troubleshoot, it may be better to copy-paste the code into your IDE, fix syntax errors and bugs, and then copy the working code back into the shared notepad. Most interviewers won’t mind, as long as you can get the code working within the allocated time. They want to see you succeed as well! Before your phone interview, be sure to set up an empty project where you can quickly paste in code and run. You don’t want to spend precious interview time creating a project and setting up run parameters. Having an IDE open also means that you can directly paste in your code at the end of the interview so you can save a copy of the questions and your solution for further analysis.
+- **使用IDE**。尽管你在共享记事本中编写代码，有时为了排除故障，最好将代码复制粘贴到IDE中，修复语法错误和错误，然后将可以正常运行的代码复制回共享记事本。大多数面试官不会介意，只要你能在规定时间内完成代码。他们也希望看到你成功！在电话面试前，确保设置一个空项目，方便快速粘贴代码并运行。你不想在宝贵的面试时间内创建项目和设置运行参数。打开IDE还意味着你可以在面试结束时直接粘贴代码，这样你可以保存问题和解决方案以供进一步分析。
 
 ![](https://miro.medium.com/max/2000/0*4QQMQfLgKT0Y7XLV.png)
 
--   \***\*Use a programming language that saves you from typing\*\***. Most of the tips here are designed to help you save time TYPING, so you can spend more time THINKING about the solution. So try to \***\*choose a language that can do a lot with very little typing\*\***. My best languages are C++ and Python. I choose Python for all my interviews, unless an interviewer specifically requests C++, because it is so much more expressive compared with C++.
--   \***\*Make good use of Google.\*\*** This is one advantage of a phone interview over an on-site interview because you can google! If you are not too familiar with the API of a function, or certain syntax of a language, feel free to google it. It is understood you can google during a phone interview. Heck, if your interviewer is lazy and grabbed a problem verbatim from LC, then congratulations! ;-)
--   \***\*Talk through your approach\*\*** thoroughly with the interviewer BEFORE you start implementation. For my first few interviews, I would start coding after having a rough idea of what to do, thinking I could flesh out the details as I coded. This was NOT a good idea. \***\*Try to fl**e**sh out as much as detail during your initial discussion with the interviewer**. This **will actually save you lots of time later on\*\***. The interviewer is, of course, very familiar with all the good and bad approaches to the problem. If you present a suboptimal or incorrect approach, they may steer you towards a more optimal one and/or may point out bugs/corner cases you forgot to consider. This can save you tons of implementation time down the road. But be sure to cover as many corner cases as possible on your own, as you will get points deducted if the interviewer has to point out the missing corner cases.
--   \***\*Solving the problem is better than not solving the problem\*\***. This statement may not be that obvious when you are searching for the most optimal solution. Sometimes, if I couldn’t conjure up the most optimal solution, I would propose and finish implementing a suboptimal solution. In any case, the fact that I came up with some working solution (albeit suboptimal) gave the interviewer a decent data point to compare me to others. In some instances, the interviewers told me, after the fact, that the “optimal” solution that I thought was possible does not exist! As I learned from my own failed experiences, not coming up with a working solution would certainly be a FAILED interview.
+- **使用节省打字的编程语言**。这里的大多数技巧都是为了帮助你节省打字时间，以便你可以花更多时间思考解决方案。因此，尝试选择一种打字量少的语言。我的最佳语言是C++和Python。除非面试官特别要求C++，否则我在所有面试中都选择Python，因为与C++相比，它更加简洁。
+- **善用Google**。这是电话面试相对于现场面试的一个优势，因为你可以搜索。如果你不太熟悉某个函数的API或某种语言的语法，随时可以搜索。大家都理解你可以在电话面试中使用Google。如果你的面试官懒得从LeetCode上直接拿问题，那么恭喜你！;-)
+- **在开始实现前与面试官彻底讨论你的方法**。在我的前几次面试中，我会在大致了解该做什么后开始编码，想着可以在编码时细化细节。这不是一个好主意。尝试在与你的面试官的初步讨论中尽量细化细节。这实际上可以为你节省很多后续实施时间。面试官当然非常熟悉这个问题的所有优缺点。如果你提出一个次优或不正确的方法，他们可能会引导你走向更优的方向，并可能指出你忘记考虑的错误/角落案例。这可以为你节省大量的实现时间。但务必尽可能多地涵盖角落案例，因为如果面试官必须指出缺少的角落案例，你会被扣分。
+- **解决问题比不解决问题更好**。当你在寻找最优解决方案时，这一点可能不太明显。有时，如果我无法想到最优解决方案，我会提出并完成一个次优解决方案。无论如何，提出某个工作方案（尽管次优）能给面试官提供一个不错的比较数据点。在某些情况下，面试官在事后告诉我，我认为可能的“最优”解决方案实际上并不存在！根据我的失败经验，如果没有提出工作方案，面试肯定会失败。
 
 ![](https://miro.medium.com/max/516/0*zYwn2rtIyq9npuS_.png)
 
-Remember, at this point, you should NOT be focusing on Systems Design questions, as they are only asked during on-site interviews because it requires a whiteboard to draw diagrams.
+记住，在这个阶段，你不应该专注于系统设计问题，因为这些问题只会在现场面试中提问，因为它需要白板来画图。
 
 ### 在线编程能力测试
 

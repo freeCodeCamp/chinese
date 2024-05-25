@@ -223,33 +223,33 @@ Workera.ai 的测试与 TripleByte 的测试有两点不同。首先，它是为
 
 我认为这仍然非常有价值，因为 Andrew Ng 在深度学习领域及其在湾区的网络非常广泛。我最终与 [Pinterest][33] 和 [Scale.ai][34] 的 ML 团队进行了面试。如果我只是直接申请，我不认为我会得到这两家公司的面试机会。[点击这里申请 Workera.ai 的高级工程师 AI 项目][35]。
 
-### Online Job Boards — Don’t rely heavily on them
+### 在线招聘平台——不要过于依赖它们
 
 ![](https://miro.medium.com/max/870/0*13Twl2pnw3RyDtFu.jpg)
 
-To widen my search, I had also set up job search alerts at a few online job boards, such as LinkedIn, GlassDoor, Indeed and ZipRecruiter, so they would notify me of any new job postings matching my search criteria. Over time, I did receive a few phone interviews after applying.
+为了扩大我的求职范围，我在一些在线招聘平台上设置了职位搜索提醒，例如 LinkedIn、GlassDoor、Indeed 和 ZipRecruiter，这样它们会在有符合我搜索条件的新职位发布时通知我。随着时间的推移，我在申请后确实收到了一些电话面试。
 
-Overall, I have found the signal-to-noise ratio to be somewhat low, meaning I would get a lot of daily emails, but very few good job functions from top companies. But don’t ignore this channel altogether. You need to cast your net wide initially, and maybe you will catch some fish via this channel
+总体而言，我发现信噪比有点低，也就是说，我每天会收到很多邮件，但来自顶尖公司的好职位却很少。不过，不要完全忽视这个渠道。你需要在一开始就广撒网，或许你会通过这个渠道捕捉到一些机会。
 
-### Direct Apply — Doesn’t really work
+### 直接申请——效果并不好
 
-In the old days, people would send a nice cover letter with a resume to the companies, and they would expect to hear back from someone from the HR department. But this time around, this approach didn’t work for me at all!
+过去，人们会附上一封漂亮的求职信和简历寄给公司，期待着人力资源部门的回复。但这次，这种方法对我来说完全不起作用！
 
-I identified about 10 companies (mostly autonomous vehicle companies) that I wanted to work for, and directly applied on their company websites, under the career page. To my surprise, I didn’t hear back from ANY of them, not even a rejection email!
+我找了大约10家公司（主要是自动驾驶公司），并在它们的官网上的招聘页面直接申请了职位。让我惊讶的是，我没有收到任何一家的回复，连拒绝邮件都没有！
 
-Luckily, applying to each company online didn’t take that long. I would say, still apply to any companies that are interesting to you but do not hold your breath to hear back.
+幸运的是，在线申请每家公司并没有花费太多时间。我认为，还是要申请你感兴趣的公司，但不要指望一定会收到回复。
 
-### Apply for Jobs in Phases
+### 分阶段申请工作
 
-Try to apply to a few companies that you are not so excited about or that you think are easier to get into in your first phase. Then apply to your dream job/companies in a later phase. You can use your first phase to practice, improve, if you get offers, even leverage those for better offers from your dream companies.
+尝试在第一阶段申请一些你不太感兴趣或者你认为更容易进入的公司。然后在后续阶段申请你的梦想工作/公司。你可以利用第一阶段来练习和提高，如果得到Offer，还可以用这些Offer来争取更好的梦想公司的Offer。
 
-This may sound quite controversial and may seem like a very “materialistic” approach, but think about it: many people would work at a less prestigious company, with the plan to gain experience and then move into a more prestigious company a few years later. And who knows, if you don’t land your dream job, at least you have a few offers to choose from among your first phase companies.
+这似乎是种非常“功利”的方法，听起来可能有些争议，但想一想：许多人会先在一家不那么知名的公司工作，计划积累经验后再跳槽到更知名的公司。而且谁知道结果会怎么样呢，如果你没有得到梦想工作，至少你在第一阶段的公司中有一些选择。
 
-### Get Organized: Keep a log book
+### 将信息组织起来：持续更新一个日志本
 
-When you are applying via so many channels, it is hard to keep track of which companies you applied to, and which stages you are at with each company.
+通过这么多渠道申请工作后，你很难跟踪你申请了哪些公司，以及对于每个公司你目前位于哪个阶段。
 
-To help with this, I maintain a detailed interview log book. It's organized by interview stages (Applied, Interview, Offer, Rejected, etc) and then by companies. Each company is essentially a page, with background information and a list of events in chronological order, such as phone calls and interviews. This way, I can see which companies that I have applied and interviewed with so that I can do the proper follow up.
+为了帮助解决这个问题，我维护了一个详细的面试日志本。它按面试阶段（已申请、面试中、已录取、被拒绝等）和公司进行分类。每家公司本质上是一页包含背景信息和按时间顺序排列的事件列表（例如电话和面试）的日志。这样，我可以看到我申请和面试过的公司，以便进行适当的跟进。
 
 ![](https://miro.medium.com/max/528/1*LCR7hMBbjU3yzZGuze_sNw.png)
 
@@ -257,19 +257,19 @@ To help with this, I maintain a detailed interview log book. It's organized by i
 
 ## 4.1 电话面试
 
-### Initial HR Calls
+### 初步与HR电话交流
 
-Usually, the first contact with a company is a recruiter’s email. The recruiter asks you for a time for an initial phone call, which is usually a “fit” call, where you discuss your interests and background and why you would be a good fit for the role. Don’t stress too much over the detail. This will most likely be a short call, and the recruiter will want to move you to the next stage, which is the Technical Phone Interview.
+你与公司的第一次接触通常是通过与招聘人员的邮件往来。招聘人员会询问你的时间进而安排何时进行初步电话交流，这通常是一次“适配”电话，你们在电话中会讨论你的兴趣、背景以及为什么你适合这个职位。不必过于担心各种细节，这通电话通常很短，招聘人员会希望把你推进到下一个阶段，即技术电话面试。
 
-### Before the Technical Phone Interview
+### 技术电话面试前
 
 ![](https://miro.medium.com/max/485/0*vN0RSfOWzKkGulG7.jpg)
 
-One or two days before the technical phone interview, be sure to read up on [Glassdoor][36] and [Leetcode][37] for previously asked interview questions for this company. For big companies, such a Google and Facebook, this does NOT work well, as there are hundreds of previously asked questions.
+在技术电话面试前的一两天，务必在 [Glassdoor][36] 和 [Leetcode][37] 上查阅该公司以前的面试题目。对于谷歌和Facebook这样的大公司，这样做效果不佳，因为有成百上千的面试题目。
 
-But for smaller companies, this is somewhat effective. I would scroll through many posts on Glassdoor and copy down any specific technical questions. Then I would try to solve all of them. During the phone interviews, it is pretty rare to bump into the exact questions posted online, but doing this company’s past problems better prepares you for this company’s phone interview.
+但对于较小的公司，这种方法还是比较有效的。我会浏览Glassdoor上的许多帖子，记录下具体的技术问题，然后尝试解决所有这些问题。在电话面试中，遇到与网上发布的题目完全相同的情况非常少见，但做这些公司的过去问题能更好地为该公司的电话面试做好准备。
 
-This is analogous to practicing past years’ final questions before taking the final exam of the same professor — the questions may be different, but the style and type of questions would be similar.
+这类似于在参加同一教授的期末考试之前练习往年的期末题目——问题可能会有所不同，但问题的风格和类型会相似。
 
 ### Technical Phone Interviews
 
@@ -328,64 +328,64 @@ Remember, at this point, you should NOT be focusing on Systems Design questions,
 
 ![](https://miro.medium.com/max/1386/0*ZQjHTN8X0xZw0A1J.jpg)
 
-I have encountered very few tech companies that still give online coding tests, such as HackerRank or Codility, although quite a few finance companies still give those. The reason to give these tests is to save hiring companies’ manpower.
+我很少遇到还给在线编码测试（如 HackerRank 或 Codility）的科技公司，虽然很多金融公司仍然会给这些测试。这些测试的目的是节省招聘公司的人工成本。
 
-Usually, you would get a link to an online test from a company’s recruiter. There are usually 3–5 coding questions, which you need to complete within a 2–3 hours window. You need to complete it anytime within 7–10 days of the recruiter’s email. No human is overlooking you while you take the test, and you need to pass most test cases to pass this stage.
+通常，你会从公司的招聘人员那里收到一个在线测试的链接。在线测试通常有 3-5 道编码题，你需要在 2-3 小时内完成。在收到招聘人员的邮件后的 7-10 天内，你可以随时完成这个测试。在你进行测试时，没有人监视你，你需要通过大部分测试用例才能通过这一阶段。
 
-Here are some tips for online coding tests:
+以下是一些关于在线编码测试的建议：
 
--   \***\*Use an IDE\*\***: you can write and test your code entirely in your favorite IDE and then paste into the online test page to run the official test cases.
--   \***\*Read all the problems before you start\*\***. Some online tests are designed so that most people can’t complete all questions within the allotted time. So be sure to read all the questions before you start any problems and start on the easier questions first so that you can finish as many questions as possible.
--   \***\*Get it working first\*\***. For most of the online tests, time is a scarce resource. So the goal is generally to pass as many test cases as possible, not necessarily ALL the test cases. If you have a working solution, it should pass most of the test cases. If your solution is not the most time-optimized, you may time out on a few test cases, which is fine. Just move on to solve the next problem, come back if you have more time left. (Note: DO NOT do this when you are writing production-level code. For production-level code, DO spend the time to get your algorithms right and cleaned up, and add enough documentation so that you and others can maintain your code in the future.)
--   \***\*Save a copy of the questions and your solutions\*\*** for future analysis. This should be routine that you save ALL your interview questions regardless of whether they are phone/online/on-site questions.
+- **使用 IDE**: 你可以在你喜欢的 IDE 中完全编写和测试你的代码，然后将其粘贴到在线测试页面以运行正式的测试用例。
+- **在开始之前阅读所有问题**: 有些在线测试的设计是让大多数人在规定时间内无法完成所有问题。因此，在开始做题之前，一定要先阅读所有问题，先从简单的问题开始，这样你可以尽可能多地完成问题。
+- **首先让代码运行起来**: 对于大多数在线测试来说，时间是一种稀缺资源。所以目标是尽可能通过更多的测试用例，而不是所有的测试用例。如果你有一个可行的解决方案，它应该能通过大部分测试用例。如果你的解决方案不是时间优化最好的，你可能会在一些测试用例上超时，这没关系。继续解决下一个问题，如果有时间再回来。（注意：编写生产级别代码时不要这样做。对于生产级别代码，一定要花时间把算法搞对、整理干净，并添加足够的文档，以便你和其他人将来能维护你的代码。）
+- **保存问题和你的解决方案的副本** 以便日后分析。不管是电话面试、在线面试还是现场面试的题目，都应养成保存所有面试题目的习惯。
 
-### Take-Home Projects
+### 居家项目
 
-A few companies give take-home projects before, or in lieu of, a technical phone screen. I had two companies that gave me take-home projects, both of which were Machine Learning related. I have found these projects to be much more enjoyable and more relevant to the job that I was applying for. So I wish more companies would give take-home projects in lieu of technical phone screens.
+一些公司在技术电话面试之前或代替技术电话面试给求职者布置居家项目。我有两家公司给我布置了居家项目，这两个项目都是与机器学习相关的。我发现这些项目比技术电话面试更有趣，也更贴近我申请的职位。因此我希望更多公司能用居家项目代替技术电话面试。
 
-But I do understand that it may not be as effective or as fair because
+但我也理解这样做可能不是那么有效或公平，因为
 
-1. companies don’t know if you or your ML expert friend did the project, and
-2. even if you did it yourself, how long did it take you?
+1. 公司不知道是你还是你的机器学习专家朋友完成了这个项目， 
+2. 即使是你自己完成的，公司也不知道你花了多长时间。
 
 ![](https://miro.medium.com/max/750/0*2DB9c6E9xy1Hsu_e)
 
-For take-home projects, since you typically need to spend a lot of time on them, make sure you are using your time wisely.
+由于居家项目通常需要花费大量时间，请确保你在明智地使用你的时间。
 
-For a company that you are really excited about, yes, do spend the 8–10 hours do a nice job coding and documenting your approach and design decisions. For [Scale.ai][38]’s project, I spent at least 10 hours working on their project — even though the instruction told me to only spend about 2–3 hours. I did this because I thought it was fun and I learned a lot by exploring different ML approaches.
+对于你非常感兴趣的公司，居家项目确实需要花8-10小时好好编写代码并记录你的方法和设计决策。例如，我为 [Scale.ai][38] 的项目花了至少10小时，尽管说明中让我只花大约2-3小时。我这样做是因为我觉得很有趣，并且通过探索不同的机器学习方法学到了很多。
 
-For companies you are not so excited about, don’t spend that much time, and save the time for more LC problems, so you can be better prepared for coding interviews in general.
+对于你不太感兴趣的公司，不要花费太多时间，把时间留给更多的 LeetCode 问题，这样你可以更好地准备编码面试。
 
-### Interview Scheduling
+### 面试安排
 
 ![](https://miro.medium.com/max/400/0*XF9LDZeQZ6_GVE0J)
 
-Once you have done a few phone interviews, you should be getting some on-site interview invitations. In the beginning stages of your phone interviews, your success rate will be somewhat low. I literally failed all of my first 4–5 phone interviews. Then I realized that I needed to focus on practicing more dynamic programming and recursive algorithms.
+当你完成了几次电话面试后，你应该会收到一些现场面试的邀请。在电话面试的初期阶段，你的成功率可能会比较低。我在前4-5次电话面试中都失败了。后来我意识到需要更多地练习动态规划和递归算法。
 
-Your experience may be different, but don’t be discouraged when you get rejection emails in your interview process. Ask the recruiters for feedback and study more. There are a lot of companies out there for you to try.
+你的经历可能不同，但在面试过程中收到拒绝邮件时不要气馁。向招聘人员请求反馈并继续学习，还有很多公司等着你去尝试。
 
-Here are some interview scheduling tips:
+以下是一些面试安排的建议：
 
--   \***\*Keep a detailed interview log\*\***: This is the same log mentioned in Step 2. Now is the time to start to keep track of when and what was discussed in each interview.
--   \***\*Put all interviews in your calendar and set reminders/alerts\*\***. You don’t want to miss a single interview because you forgot about it. Also, make sure you confirm the interview time zone. For simplicity, I always communicate to recruiters in their time zone (usually this is Pacific Time).
--   \***\*Schedule back-to-back phone interviews with at least 30 mins in between\*\***. This is because some interviewers may call 5–10 min late, and some interviewers may allow the interview to go over the time limit by 5–10 min. So if you set two phone interviews back-to-back, you may have to cut one short or miss the other call. Plus you need a 5–10 min break to clear your head and write down the interview notes.
--   \***\*Ask for a Second Chance.\*\*** This may be a little known fact. If you fail the first phone interview, many companies will allow you to have a second chance. Most won’t offer it automatically, but would if you ask nicely. So always ask, but schedule it a few weeks after the first interview, so you have enough time to study. There usually won’t be a third chance unless you wait for 6 months.
--   \***\*Stagger your interviews.\*\*** I staggered my interviews in phases. I put the companies I believed were easier to pass in the earlier phase, and the harder-to-pass and more well-known ones in the later phases, which was about 2–3 weeks later. This way, if you discover you are weak in some topics, you have 2–3 weeks to study them.
--   \***\*Cluster your on-site interviews.\*\*** Because most of the companies that I interviewed with are in the Bay Area, I tried to schedule all of the on-site interviews within a 1–2 weeks span, so I could fly out once and get all these on-site interviews done. For example, my Bay Area on-site interviews lasted 2 full weeks, during which I interviewed with 6 companies — 3 interviews per week. Some companies would be more willing to bring you on-site if they know you would be in town for other interviews. Also, they don’t have to pay for your plane ticket. Various companies paid for some of the hotel nights, and I had to cover the other nights. This was fine for me, since it saved me a lot of time, and I was able to cluster all on-site interviews together, so I could hear back the decisions from all of them around the same time.
+- **保持详细的面试日志**: 这与第2步提到的日志相同。现在是时候开始记录每次面试的时间和讨论内容。
+- **将所有面试放入日历并设置提醒/警报**。你不想因为忘记面试而错过任何一个面试。此外，确保确认面试的时区，为简便起见，我总是按招聘人员所在的时区（通常是太平洋时间）与他们沟通。
+- **安排某一时段的多场电话面试时至少间隔30分钟**。这是因为有些面试官可能会晚打5-10分钟电话，有些面试官可能会允许面试超时5-10分钟。如果你把两个电话面试安排得太近，可能会不得不缩短一个或错过另一个。此外，你还需要5-10分钟的时间来清理思绪并记下面试笔记。
+- **请求第二次机会**。这可能是一个鲜为人知的事实。如果你第一次电话面试失败，很多公司会允许你有第二次机会。大多数公司不会自动提供第二次机会，但如果你礼貌地请求，它们通常会同意。因此你每次都要尝试请求它们再给一次机会，但将它安排在第一次面试后的几周，这样你有足够的时间学习。除非你等6个月，否则通常不会有第三次机会。
+- **错开你的面试**。我将面试分阶段进行。把认为较容易通过的公司安排在早期阶段，把较难通过且更知名的公司安排在2-3周后的后期阶段。这样，如果你发现自己在某些主题上较弱，还有2-3周的时间来学习。
+- **集中安排你的现场面试**。因为我面试的大多数公司都在湾区，我尝试在1-2周内安排所有的现场面试，这样我只需要飞一次就能完成所有的现场面试。例如，我的湾区现场面试持续了整整两周，其间我面试了6家公司，每周3次面试。如果公司知道你会在城里进行其他面试，他们更愿意安排你进行现场面试。此外，他们不需要支付你的机票。不同公司支付了一些酒店费用，剩下的酒店费用由我自己承担。这样对我来说没问题，因为它为我节省了很多时间，我能够集中安排所有的现场面试，这样可以在同一时间段内收到所有的面试结果。
 
-## 4.2 On-Site Interviews
+## 4.2 现场面试
 
 ![](https://miro.medium.com/max/696/0*C5eicXplRRZIxXk3.png)
 
-2–3 weeks before the on-site interview, start to focus on System Design questions. Many companies allow you to schedule on-site interviews up to 4–6 weeks after you pass the phone interview. This should give you ample time to prepare for both A&DS and System Design questions.
+在现场面试前的2-3周，你需要开始专注于系统设计问题。许多公司允许你在通过电话面试后安排4-6周内的现场面试，这应该能给你足够的时间准备算法与数据结构（A&DS）和系统设计问题。
 
-Normally, there are 4–5 45 min interview sessions for each company’s onsite interview — 2 in the morning, lunch, and 2–3 in the afternoon. There will be 1 System Design, 1 Behavior and 2–3 A&DS coding interviews. Very few companies will ask you about math or brain teasers, so I wouldn’t spend a lot of time preparing for them.
+通常每个公司的现场面试包含4-5个45分钟的面试环节——上午2个，午餐时间，然后下午2-3个。面试内容一般包括1个系统设计面试，1个行为面试和2-3个算法与数据结构（A&DS）编码面试。很少有公司会问到数学或脑筋急转弯问题，所以我不会花太多时间准备这些。
 
-### System Design Interviews
+### 系统设计面试
 
 ![](https://miro.medium.com/max/1280/0*Vnhf3KUToEKuUIGV.jpg)
 
-Gaurav Sen Designing WhatsApp
+Gaurav Sen 正在设计 WhatsApp
 
 This was covered in Step 2: Interview preparation. If you watched all the system design YouTube videos I recommended and can generalize it to a framework similar to what I outlined, you will be in pretty good shape.
 
@@ -517,41 +517,38 @@ For example, know when do use BFS or DFS in a tree/graph, when to use recursive 
 
 If any of you ask me for specific interview questions that I encountered, unfortunately, I can’t disclose them here. But I have tagged all relevant interview questions on LeetCode, as a way to give back to the online community anonymously. I hope you will do this as well after your interviews.
 
-# Step 5. Offer Negotiation and Team Matching
+# Step 5. Offer谈判和团队匹配
 
-## 5.1 Offer Negotiation
+## 5.1 Offer谈判
 
-If you are reading this, you probably have received at least one offer. Wow, congratulations! (If you have not received any offers yet, stop reading right now, and go back to do more LC and interviews! 😜 )
+如果你在阅读这部分，说明你可能已经收到至少一个 offer 了。哇，恭喜！(如果你还没有收到任何邀请，立即停止阅读，回去继续做更多的LeetCode练习和面试吧！😜)
 
 ![](https://miro.medium.com/max/480/0*cU5XEYWCmu9FJg8u)
 
-### Components of an Offer Package
+### Offer薪酬包的组成部分
 
 ![](https://miro.medium.com/max/624/0*mU6OkvJojAbaIaV5.png)
 
-Source: levels.fyi
+来源: levels.fyi
 
-These are the typical components of an offer package of a tech company. I will give a sample of a mid-level software engineer (SWE), typically 3–5 years of experience (YoE).
+以下是科技公司Offer薪酬包的典型组成部分。我将举一个通常有3-5年的工作经验（YoE）的中级软件工程师（SWE）的例子。
 
--   \***\*Sign-on Bonus\*\***: This is the money you get right after you start work, NOT when you sign the offer letter. For example, \$30,000 one time payment.
--   \***\*Base Salary\*\***: This is the money that goes into your bank account every month. For example, \$150,000/year.
--   \***\*Annual Bonus\*\***: This is a percentage of your base salary, usually 10–30%, given every year. For example, 20%, which is $30,000 for a base salary of $150,000.
--   \***\*Stock Options or Stock Grants\*\***: bigger companies tend to give Stocks (called Restricted Stock Units, RSUs) which are worth something at the time of the grant. Startup companies tend to give stock options, which are worth very little at the time of the grant but may have big potential. For example, $300,000 worth of Stock Grant vested over 4 years, so $75,000 is vested every year.
--   \***\*Relocation package\*\*** (If you need to relocate): This usually includes
-    1. a few weeks of corporate housing for your family
-    2. moving of all your belongings
-    3. help with selling and buying houses, and optionally
-    4. some cash to help with other relocation-related expenses. The relocation package is based on your family composition, location, and level. It is not usually negotiable.
+- 签约奖金: 这是你开始工作后立即得到的钱，而不是在你签署聘用合同时。例如，一次性支付$30,000。
+- 基本工资: 这是每个月进入你银行账户的钱。例如，每年$150,000。
+- 年度奖金: 这是你基本工资的一个百分比，通常为10-30%，每年发放一次。例如，20%，对于$150,000的基本工资来说就是$30,000。
+- 股票期权或股票奖励: 大公司倾向于给予股票（称为受限制股票单位，RSUs），在授予时有一定价值。初创公司倾向于给予股票期权，在授予时价值较低但有很大潜力。例如，价值$300,000的股票奖励，分四年归属，每年归属$75,000。
+- 搬迁补助（如果你需要搬迁）: 通常包括：
+    1. 几周的公司住房供你和你的家庭使用
+    2. 搬运你所有的物品
+    3. 帮助买卖房屋，并且可选地
+    4. 一些现金以帮助其他搬迁相关的费用。搬迁补助取决于你的家庭构成、位置和级别。通常是不可协商的。
+- 年度总薪酬（TC）: 这是使所有Offer薪酬包可以进行对比的一个数字。
 
-\***\*Annualized Total Compensation (TC)\*\*** This is the one number that makes all the offer packages comparable.
+TC = 基本工资 + 年度奖金 + 年度股票奖励 + 分摊的签约奖金（假设你将签约奖金在3年内分摊）
 
-TC = Base Salary + Annual Bonus + Annual Stock Grants+ amortized Sign-on bonus (Assume you amortize the sign-on bonus over 3 years)
+我们中级SWE的TC = $150k + $30K + $75K + $30K / 3 = $265,000
 
-TC of our mid-level SWE
-
-\= $150k + $30K + $75K + $30K / 3 = \$265,000
-
-Note that the relocation package is not considered part of TC calculation, as it is expected you will be spending most, if not all, of the relocation package.
+注意，搬迁补助不被视为TC计算的一部分，因为在预期情况下你大概会花掉大部分（如果不是全部）搬迁补助。
 
 ### 知道你的技术水平所对应的等级
 

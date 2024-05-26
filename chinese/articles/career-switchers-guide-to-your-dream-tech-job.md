@@ -387,64 +387,92 @@ Workera.ai 的测试与 TripleByte 的测试有两点不同。首先，它是为
 
 Gaurav Sen 正在设计 WhatsApp
 
-This was covered in Step 2: Interview preparation. If you watched all the system design YouTube videos I recommended and can generalize it to a framework similar to what I outlined, you will be in pretty good shape.
+这一阶段被包含在第二步（面试准备）中。如果你看了所有我推荐的所有系统设计YouTube视频，并能够将其概括为一个类似于我所概述的框架，说明你掌握得非常好。
 
-\***\*Clarify the spec.\*\*** One important technique of the System Design question is to clarify the features and functionality of the system early on. You want to define a set of features that is not too trivial and not too complex that you can’t finish within the 45 min time frame.
+### 明确需求规范
 
-For example, when asked to design an Instant Messaging App, be sure to mention essential features such as:
+在系统设计问题中，一个重要的技巧就是及早明确系统的功能和特点。你需要定义一组既不太简单也不太复杂的功能，以便在45分钟的时间内完成。
 
--   User authentication (this should be in most systems)
--   One-to-one messaging
--   Group messaging
--   User active status
--   Offline messages (if you have time)
+例如，在被要求设计一个即时通讯应用时，确保提及以下基本功能：
 
-For a 45 min session, I would not mention these non-essential features:
+- 用户认证（这是大多数系统中应有的）
+- 一对一消息
+- 群组消息
+- 用户在线状态
+- 离线消息（如果有时间）
 
--   voice calls
--   video calls
--   multi-person calls
--   personal timelines (i.e. Facebook Stories)
+对于一个45分钟的面试，我不会提及以下非基本功能：
 
-Of course, if you are asked to design Skype, you would have to design for voice and video calls, but I wouldn’t include sharing computer desktops just to limit the feature set to a manageable scope.
+- 语音通话
+- 视频通话
+- 多人通话
+- 个人时间线（如Facebook Stories）
 
-\***\*Watch for curveballs.\*\*** During the interview, watch out for odd questions and be able to respond intelligently.
+当然，如果你被要求设计Skype，你必须设计语音和视频通话，但我不会包括共享计算机桌面，以限制在可管理的功能范围内。
+
+### 注意曲线球
+
+在面试中，要注意奇怪的问题，并能做出聪明的回应。
 
 ![](https://miro.medium.com/max/1000/0*FuUaWBV2H26hOdIy.jpg)
 
-For example, when I was at the Facebook interview, I was asked how to design a simplified version of Google Search. I proceeded by drawing a pretty good high-level design on the whiteboard. Then the interviewer threw me a curveball:
+例如，在Facebook的面试中，我被要求设计一个简化版的Google搜索。我在白板上画了一个相当不错的高层设计。然后面试官抛出一个曲线球：
 
-Interviewer: “So how many servers do you think you need?”
+面试官：“你认为需要多少台服务器？”
 
-Me: “Well, this depends on how many people are using it and how beefy the servers are……”
+我：“嗯，这取决于有多少人在使用它以及服务器的性能如何……”
 
-Interviewer: “Why do you need to know how beefy the servers are?”
+面试官：“你为什么需要知道服务器的性能？”
 
-Me: “My thinking is that the actual usage is sort of like the numerator, the server hardware capability is like the denominator, and the number of servers depends on these two numbers.”
+我：“我的想法是，实际使用情况就像分子，服务器硬件的能力就像分母，所需的服务器数量取决于这两个数字。”
 
-Interviewer: “NOPE, the hardware spec of a server is irrelevant.”
+面试官：“不，服务器的硬件规格是无关紧要的。”
 
-Me: “Surely hardware spec matters. If I can host a service with 10 beefy servers, I would probably need 100 laptops to host the same service”
+我：“当然硬件规格很重要。如果我可以用10台高性能服务器托管一个服务，我可能需要100台笔记本电脑来托管相同的服务。”
 
-Interviewer: “Hardware spec is irrelevant.”
+面试官：“硬件规格无关紧要。”
 
-At this point, I was at a loss, because I thought he was being quite unreasonable. After a long and awkward pause, I almost gave up.
+此时，我感到困惑，因为我觉得他有点不讲理。在长时间的尴尬停顿后，我几乎要放弃了。
 
-Me: “So what do you mean by hardware specs don’t matter”
+我：“所以你的意思是硬件规格不重要？”
 
-Interviewer: “Pretend you don’t know the hardware spec of a server, how do you figure out how many servers you need?”
+面试官：“假装你不知道服务器的硬件规格，你怎么确定需要多少台服务器？”
 
-OH, THAT’S WHAT HE MEANT??!! He didn’t mean hardware spec is irrelevant, he just meant we don’t know the exact hardware spec.
+哦，他的意思是这样！！他不是说硬件规格无关紧要，而是说我们不知道确切的硬件规格。
 
-Me: “Oh, in that case, I would have to benchmark the throughput of the servers, and the number of servers required is roughly the maximum usage divided by the throughput of a single server. Am I on the right track here?”
+我：“哦，在这种情况下，我需要基准测试服务器的吞吐量，所需的服务器数量大致是最大使用量除以单台服务器的吞吐量。我这样说对吗？”
 
-I could see him slightly nodding his head.
+我看到他微微点头。
 
-This moral of the story is to illustrate how important it is to clarify what the interviewer is asking/telling you. You can do this by repeating the question/statement back to them in your own words. If you are really stuck, ask them what they meant by what they just said. Maybe they will rephrase the questions/statements in a different way, so you can understand and proceed.
+这个故事的寓意是，说明在面试中明确面试官的问题/陈述有多么重要。你可以通过用自己的话复述问题/陈述来做到这一点。如果你真的卡住了，问他们刚才说的是什么意思。也许他们会以不同的方式重述问题/陈述，以便你理解并继续。
 
-Remember many interviewers are not native English speakers, so \***\*what they say\*\*** and \***\*what they mean to say\*\*** may not exactly match. Similarly, many interviewees (yours truly included) are not native English speakers either, so \***\*what they hear\*\*** and \***\*what they think they hear\*\*** also may not exactly match.
+记住，许多面试官不是母语为英语的人，所以**他们说的**和**他们想说的**可能不完全一致。同样，许多面试者（包括我在内）也不是母语为英语的人，所以**他们听到的**和**他们以为听到的**也可能不完全一致。
 
-Having the interviewers say the same thing in different ways may greatly help interviewees understand what the interviewers truly mean.
+让面试官以不同的方式重复同样的话，可能会大大帮助面试者理解面试官的真正意思。
+
+### 白板算法和数据结构编码面试
+
+![](https://miro.medium.com/max/1280/0*zrHrbhiBz6Mfv79F.jpg)
+
+Tushar Roy 讲解Trie数据结构
+
+现场的算法和数据结构（A&DS）问题几乎都是在白板上完成的。许多人，包括我自己，最初都对白板编码感到害怕，因为在实际工作环境中，谁会在白板上写详细的代码呢？
+
+但在经历了所有这些现场面试之后，我发现白板编码在某种程度上比电话面试更容易。我将在下面介绍一些专门针对白板编码的技巧。
+
+**用图表/表格来说明你的算法**。有句老话说，“一张图胜过千行代码”，或者类似的说法。在写代码之前，尝试用图表/表格来说明你的代码如何工作。这会给面试官一个你代码可能是什么样子的路线图，并允许他们指出他们看到的任何潜在问题。
+
+一旦你写完代码，尝试逐行走查代码，并在旁边放上图表，这样你就可以向面试官展示你的实现与你的意图是一致的。一定要观看[Tushar Roy的LeetCode高难度解决方案](https://www.youtube.com/playlist?list=PLrmLmBdmIlpv0b07yUFtY8eN5odlw1Pse)的YouTube视频，学习如何在白板上展示想法。
+
+**将白板分成几个部分**。出于前一条提示提到的原因，我建议将白板至少分成2-3个垂直部分。一部分用于图表，其他部分用于代码。这样，你可以在编写代码之前/期间/之后随时参考图表。
+
+**不要纠结于语法细节**。如果允许你使用任何编程语言（这是常态），那么面试官不应该对你的代码语法太挑剔。例如，如果你漏掉了C++/Java中的分号，或Python中的冒号，只要你的缩进正确，就没关系。或者如果你拼错或缩短了内置函数的名称，只要面试官理解你的意图，也没关系。相反，在电话面试中你没有这样奢侈的宽容度。
+
+**使用简化的变量/函数名称**。因为用记号笔写长名称需要很长时间和很多空间，告诉面试官变量的全名和含义，然后在代码中使用简化的名称。这会节省你很多宝贵的时间和白板空间。
+
+**不断寻求反馈**。这是现场面试的一个重要好处，因为你可以很容易地判断面试官的反馈。当我展示我的设计或方法时，我会定期检查面试官的面部表情，并随口问，“我走在正确的轨道上吗？”或“看起来怎么样？”通常，面试官都很乐于提供一些反馈，或者至少点头或皱眉。如果你走得太远，他们肯定会告诉你，如果你问的话。
+
+正如我几次惨痛的经历告诉我的那样，当我不寻求反馈时，一些面试官会先让我完成整个实现，然后在最后指出一些重大缺陷。结果，我惨败了所有那些面试。所以尽量在编码前尽量细化你的设计并寻求反馈。
 
 ### Whiteboard A&DS Coding Interviews
 
@@ -467,8 +495,6 @@ Once you are done coding, try to walk through your code line-by-line with the di
 \***\*Use shortened variable/function names\*\***. Because writing out long names with a marker can take a long time and a lot of space, tell your interviewer the full name and meaning of a variable, and then use the shortened name in your code. This will save you a lot of precious time as well as precious whiteboard space.
 
 \***\*Constantly Seek Feedback\*\***. This is one of the many benefits of an on-site interview because you can quite easily gauge the feedback of an interviewer. When I present my design or approach, I regularly check the facial expressions of the interviewer and ask casually, “Am I on the right track?” or “How does it look?” Usually, the interviewers are pretty helpful and give you some feedback, or at least nod or frown. If you are way off, they surely let you know, if you ask.
-
-As I found out the hard way a few times, when I didn’t seek feedback, some interviewers would let me finish the whole implementation and then point out some major flaws in the end. As a result, I failed all those interviews miserably. So try to \***\*fl**e**sh out your design as much as possible before coding\*\*** and \***\*seek feedback\*\***.
 
 ![](https://miro.medium.com/max/400/0*VOO-nVdsgXIbDUr5.png)
 

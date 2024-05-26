@@ -3,7 +3,7 @@ title: How JavaScript Promises Work – Handbook for Beginners
 author: Joe Attardi
 authorURL: https://www.freecodecamp.org/news/author/joeattardi/
 originalURL: https://www.freecodecamp.org/news/the-javascript-promises-handbook/
-translator: ""
+translator: "James Z. Zhang"
 reviewer: ""
 ---
 

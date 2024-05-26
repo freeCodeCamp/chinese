@@ -1174,7 +1174,7 @@ Jon，Phunware 的安卓开发负责人，说他无法在不复制粘贴 Stack O
 
 ![Fatos Morina](https://www.freecodecamp.org/news/content/images/size/w60/2021/05/fatos-morina-gravatar.jpeg)
 
-[Fatos Morina][40]
+[法托斯·莫里纳（Fatos Morina）][40]
 
 经验丰富且充满激情的软件工程师，专注于机器学习
 

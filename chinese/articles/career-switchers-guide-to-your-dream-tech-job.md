@@ -478,30 +478,36 @@ Tushar Roy 讲解 Trie 数据结构
 
 ### 其他的在线面试技巧
 
-Some of these non-technical tips may be common sense, but I will list them as a reminder.
+其中一些非技术技巧可能是常识，但我将它们列出来作为提醒。
 
-\***\*Ask good questions at the end\*\***. You probably won’t have a lot of time to ask questions at the end of each interview session. So keep these questions short and impactful. The interview is a two-way process - companies are trying to extract information from you for their evaluation process, and you need to do the same to these companies, so you can make the most informed decisions when you get offers.
+**在结尾提出好的问题**。在每次面试结束时，你可能没有太多的时间来提问。所以这些问题要简短而有影响力。面试是一个双向的过程——公司在评估过程中试图从你身上提取信息，你也需要对这些公司做同样的事情，这样当你得到工作机会时，你就可以做出最明智的决定。
 
 ![](https://miro.medium.com/max/998/0*rvbji0M2GsMoD0CW.png)
 
-Here are the typical questions I like to ask:
+以下是我喜欢问的经典问题:
 
--   Can you tell me about your background and what you do in your current group?
--   Can you tell me about the technology stack and development process in your group/company? Once the interviewer mentions a few programming languages or tools, you can echo by saying you also have worked with these technologies.
--   What would be an ideal candidate for your group/company? Once the interviewer mentions a few characteristics of the ideal candidate, you can echo by saying you also have some of these characteristics and give a quick example to back it up.
--   Sell yourself a bit. This may not work for everyone. I also used the “questions” time at the end of the interview to show my self-driving robotic car and a couple of YouTube videos of the car to the interviewers. I think it worked out surprisingly well because I saw most interviewers were quite pleasantly surprised when they held the actual car in their hands.
+- 你能告诉我你的工作背景和你现在的工作吗?
+- 你能告诉我贵集团/公司的技术栈和开发方式吗?一旦面试官提到一些编程语言或工具，你可以回应说你也使用过这些技术。
+- 谁是贵集团/公司的理想人选?一旦面试官提到了理想候选人的一些特征，你可以回应说你也有这些特征，并给出一个快速的例子来支持它。
+- 推销一下自己。这可能并不适用于所有人。我还利用面试结束时的“提问”时间，向面试官展示了我的自动驾驶机器人汽车和几段关于这辆汽车的YouTube视频。我觉得效果出奇的好，因为我看到大多数面试官在拿着车的时候都非常惊喜。
 
-\***\*Stay hydrated\*\***. You will be talking a lot during the interview, and you will be sweating a lot (unconsciously), so you always want to be hydrated at all times. This means refilling your cup after every interview session, and taking a sip whenever you are not writing on the whiteboard. I find caffeine (coffee/tea/Coke) to be quite effective at keeping me at peak performance.
+**保持充足的水分**. 在面试过程中你会说很多话，你会(无意识地)出汗很多，所以你总是想要随时补充水分。这意味着每次面试结束后都要把杯子重新斟满，不在白板上写字的时候就喝一小口。我发现咖啡因(咖啡/茶/可乐)在让我保持最佳状态方面非常有效。
 
 ![](https://miro.medium.com/max/2000/0*VsgMcMV6BniWLJgN.jpg)
-
-\***\*Take washroom breaks\*\***. After each interview session, be sure to take a washroom break. Unfortunately, these 45–60 min interview sessions are usually back-to-back with no breaks in between. So be sure to ask for one before the next session starts. You want to be able to walk and stretch your legs a bit and more importantly, wash your hands and face, so you can go to the next interview refreshed. Don’t take too long a break though, because the break time eats into your next 45 minutes.
 
 \***\*Take notes\*\***. I always keep a detailed log of my interviews. Since most of your interview sessions are back-to-back, the only time you can take notes is during bathroom breaks. :) Bring your phone and quickly jot down a few notes of the questions and your approach so you can remind yourself after you are done for the day. This should take no more than 1 min.
 
 \***\*Eat a light lunch.\*\*** It is pretty hard not to overeat at lunch because many top tech companies have awesome free food! Facebook even has free ice cream! While it is tempting to try all the free food while you are there, you need to remember \***\*you are not there to eat just once\*\*** but to interview and \***\*get the job, so that you can eat there every single day\*\***!
 
 Two reasons to not overeat: first, you want to stay alert in the afternoon session and not feel drowsy. Second, you want to spend most of the time chatting with your lunch buddy. While for some companies (Google/Facebook), your lunch buddy’s feedback is not part of the offer decision, many times, they are senior folks in the firms so their opinions may matter and you want to leave a good impression.
+
+**上厕所**。每次面试结束后，一定要去一下洗手间。不幸的是，这些45-60分钟的面试通常是连续的，中间没有休息时间。所以你一定要在下次面试开始前去一趟卫生间。你想要能够走路和伸展一下你的腿，更重要的是，洗干净你的手和脸，这样你就可以神清气爽地去参加下一次面试。不要休息太久，因为休息时间会占用你接下来的45分钟。
+
+* * * \ \ \ \ * * * * *做笔记。我总是详细记录我的面试。因为大多数面试都是连续进行的，所以你唯一能做笔记的时间就是上厕所的时候。带上你的手机，快速记下一些问题和你的方法，这样你就可以在完成一天的工作后提醒自己。这应该不超过1分钟。
+
+吃一顿清淡的午餐。午餐时不吃得过饱是很难的，因为许多顶级科技公司都有很棒的免费食物!Facebook甚至还有免费的冰淇淋!虽然你很想在那里品尝所有的免费食物，但你需要记住，你不是去那里只吃一次，而是去面试，然后得到这份工作，这样你就可以每天都在那里吃饭了。
+
+不要暴饮暴食的两个原因:首先，你想在下午的会议上保持清醒，而不是感到昏昏欲睡。其次，你想花大部分时间和你的午餐伙伴聊天。虽然在一些公司(谷歌/Facebook)，你的午餐伙伴的反馈不是决定offer的一部分，但很多时候，他们是公司的高层，所以他们的意见可能很重要，而你想给他们留下好印象。
 
 ![](https://miro.medium.com/max/1024/0*TBXEsZ8Nnx8eWzk-.jpg)
 

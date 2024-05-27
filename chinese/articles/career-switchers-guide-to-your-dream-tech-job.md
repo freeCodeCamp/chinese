@@ -389,11 +389,11 @@ Gaurav Sen 正在设计 WhatsApp
 
 这一阶段被包含在第二步（面试准备）中。如果你看了所有我推荐的所有系统设计YouTube视频，并能够将其概括为一个类似于我所概述的框架，说明你掌握得非常好。
 
-### 明确需求规范
+#### 明确需求规范
 
 在系统设计问题中，一个重要的技巧就是及早明确系统的功能和特点。你需要定义一组既不太简单也不太复杂的功能，以便在45分钟的时间内完成。
 
-例如，在被要求设计一个即时通讯应用时，确保提及以下基本功能：
+例如，在被要求设计一个即时通讯应用时，请确保提及以下基本功能：
 
 - 用户认证（这是大多数系统中应有的）
 - 一对一消息
@@ -408,15 +408,15 @@ Gaurav Sen 正在设计 WhatsApp
 - 多人通话
 - 个人时间线（如Facebook Stories）
 
-当然，如果你被要求设计Skype，你必须设计语音和视频通话，但我不会包括共享计算机桌面，以限制在可管理的功能范围内。
+当然，如果你被要求设计Skype，你必须设计语音和视频通话，但我不会在设计的功能中包括共享计算机桌面，这样做是为了将已有功能限制在可管控的范围内。
 
-### 注意曲线球
+#### 注意意外事件
 
-在面试中，要注意奇怪的问题，并能做出聪明的回应。
+在面试中，你需要注意面试官提出的一些奇怪的问题，并能做出聪明的回应。
 
 ![](https://miro.medium.com/max/1000/0*FuUaWBV2H26hOdIy.jpg)
 
-例如，在Facebook的面试中，我被要求设计一个简化版的Google搜索。我在白板上画了一个相当不错的高层设计。然后面试官抛出一个曲线球：
+例如，在Facebook的面试中，我被要求设计一个简化版的Google搜索。我在白板上画了一个相当不错的高层设计。然后面试官抛出一个意外的问题：
 
 面试官：“你认为需要多少台服务器？”
 
@@ -444,57 +444,35 @@ Gaurav Sen 正在设计 WhatsApp
 
 我看到他微微点头。
 
-这个故事的寓意是，说明在面试中明确面试官的问题/陈述有多么重要。你可以通过用自己的话复述问题/陈述来做到这一点。如果你真的卡住了，问他们刚才说的是什么意思。也许他们会以不同的方式重述问题/陈述，以便你理解并继续。
+我讲这个故事的意思是，在面试中进行补充说明从而明确面试官的问题/陈述有多么重要。你可以通过用自己的话复述问题/陈述来做到这一点。如果你真的卡住了，问他们刚才说的是什么意思。也许他们会以不同的方式重述问题/陈述，以便你理解并继续。
 
 记住，许多面试官不是母语为英语的人，所以**他们说的**和**他们想说的**可能不完全一致。同样，许多面试者（包括我在内）也不是母语为英语的人，所以**他们听到的**和**他们以为听到的**也可能不完全一致。
 
 让面试官以不同的方式重复同样的话，可能会大大帮助面试者理解面试官的真正意思。
 
-### 白板算法和数据结构编码面试
+### 在白板上进行的算法和数据结构编码面试
 
 ![](https://miro.medium.com/max/1280/0*zrHrbhiBz6Mfv79F.jpg)
 
-Tushar Roy 讲解Trie数据结构
+Tushar Roy 讲解 Trie 数据结构
 
-现场的算法和数据结构（A&DS）问题几乎都是在白板上完成的。许多人，包括我自己，最初都对白板编码感到害怕，因为在实际工作环境中，谁会在白板上写详细的代码呢？
+现场面试中的算法和数据结构（A&DS）问题几乎都是在白板上完成的。包括我自己在内，许多人最初都对白板编码感到害怕，因为在实际工作环境中，谁会在白板上写详细的代码呢？
 
 但在经历了所有这些现场面试之后，我发现白板编码在某种程度上比电话面试更容易。我将在下面介绍一些专门针对白板编码的技巧。
 
 **用图表/表格来说明你的算法**。有句老话说，“一张图胜过千行代码”，或者类似的说法。在写代码之前，尝试用图表/表格来说明你的代码如何工作。这会给面试官一个你代码可能是什么样子的路线图，并允许他们指出他们看到的任何潜在问题。
 
-一旦你写完代码，尝试逐行走查代码，并在旁边放上图表，这样你就可以向面试官展示你的实现与你的意图是一致的。一定要观看[Tushar Roy的LeetCode高难度解决方案](https://www.youtube.com/playlist?list=PLrmLmBdmIlpv0b07yUFtY8eN5odlw1Pse)的YouTube视频，学习如何在白板上展示想法。
+一旦你写完代码，尝试逐行检查代码，并在旁边放上图表，这样你就可以向面试官展示你的实现与你的意图是一致的。一定要观看[Tushar Roy的LeetCode高难度解决方案](https://www.youtube.com/playlist?list=PLrmLmBdmIlpv0b07yUFtY8eN5odlw1Pse)的YouTube视频，学习如何在白板上展示想法。
 
-**将白板分成几个部分**。出于前一条提示提到的原因，我建议将白板至少分成2-3个垂直部分。一部分用于图表，其他部分用于代码。这样，你可以在编写代码之前/期间/之后随时参考图表。
+**将白板分成几个部分**。出于前一条提示提到的原因，我建议将白板至少分成2-3个垂直部分。一部分用于图表，其他部分用于代码。这样，你可以在编写代码的整个过程中随时参考图表。
 
 **不要纠结于语法细节**。如果允许你使用任何编程语言（这是常态），那么面试官不应该对你的代码语法太挑剔。例如，如果你漏掉了C++/Java中的分号，或Python中的冒号，只要你的缩进正确，就没关系。或者如果你拼错或缩短了内置函数的名称，只要面试官理解你的意图，也没关系。相反，在电话面试中你没有这样奢侈的宽容度。
 
 **使用简化的变量/函数名称**。因为用记号笔写长名称需要很长时间和很多空间，告诉面试官变量的全名和含义，然后在代码中使用简化的名称。这会节省你很多宝贵的时间和白板空间。
 
-**不断寻求反馈**。这是现场面试的一个重要好处，因为你可以很容易地判断面试官的反馈。当我展示我的设计或方法时，我会定期检查面试官的面部表情，并随口问，“我走在正确的轨道上吗？”或“看起来怎么样？”通常，面试官都很乐于提供一些反馈，或者至少点头或皱眉。如果你走得太远，他们肯定会告诉你，如果你问的话。
+**不断寻求反馈**。这是现场面试的一个重要好处，因为你可以很容易地判断面试官的反馈。当我展示我的设计或方法时，我会定期检查面试官的面部表情，并随口问，“我这样做是正确的吗？”或“看起来怎么样？”通常，面试官都很乐于提供一些反馈，或者至少点头或皱眉。在你偏离正确答案太远的时候，如果你问的话他们肯定会告诉你。
 
 正如我几次惨痛的经历告诉我的那样，当我不寻求反馈时，一些面试官会先让我完成整个实现，然后在最后指出一些重大缺陷。结果，我惨败了所有那些面试。所以尽量在编码前尽量细化你的设计并寻求反馈。
-
-### Whiteboard A&DS Coding Interviews
-
-![](https://miro.medium.com/max/1280/0*zrHrbhiBz6Mfv79F.jpg)
-
-Tushar Roy talking about Trie Data Structure
-
-On-site A&DS questions are almost exclusively done on whiteboards. Many people, including myself, are scared of whiteboard coding initially, because who in a real work setting writes detailed code on a whiteboard?!
-
-But as I went through all these onsite interviews, I have found that whiteboard coding is, in some sense, easier than phone interviews. I will cover some techniques specifically for whiteboard coding below.
-
-\***\*Illustrate your algorithm with diagrams/charts/tables.\*\*** There is an old saying, “A picture is worth a thousand lines of code”, or something like that. Before you write code, try to illustrate how your code would work with diagrams/charts/tables. This will give your interviewer a road map of what your code might look like, and will allow them to point out any potential issues that they see.
-
-Once you are done coding, try to walk through your code line-by-line with the diagrams on the side, so that you can show the interviewer that your implementation matches what you intended to do. Be sure to watch [\***\*Tushar Roy’s LeetCode Hard Solutions\*\***][39] YouTube videos to learn how to present ideas on a whiteboard.
-
-\***\*Split the whiteboard into sections\*\***. For reasons mentioned in the previous tip, I recommend splitting the whiteboard into at least 2–3 vertical sections. One section is reserved for diagrams, and other sections are for code. This way, you can always refer to the diagrams before/during/after you code.
-
-\***\*Don’t sweat the syntactic details\*\***. If you are allowed to code in any programming language (as this is the norm), then the interviewer should not be very picky on the syntax of your code. For example, if you miss a trailing semicolon in C++/Java, or trailing colon in Python, it is not a big deal, as long as your indentation is correct. Or if you misspell or shorten the name of a built-in function, it is also not a big deal, as long as the interviewer understands what your intentions are. On the contrary, you are not afforded the same luxury in phone interviews.
-
-\***\*Use shortened variable/function names\*\***. Because writing out long names with a marker can take a long time and a lot of space, tell your interviewer the full name and meaning of a variable, and then use the shortened name in your code. This will save you a lot of precious time as well as precious whiteboard space.
-
-\***\*Constantly Seek Feedback\*\***. This is one of the many benefits of an on-site interview because you can quite easily gauge the feedback of an interviewer. When I present my design or approach, I regularly check the facial expressions of the interviewer and ask casually, “Am I on the right track?” or “How does it look?” Usually, the interviewers are pretty helpful and give you some feedback, or at least nod or frown. If you are way off, they surely let you know, if you ask.
 
 ![](https://miro.medium.com/max/400/0*VOO-nVdsgXIbDUr5.png)
 

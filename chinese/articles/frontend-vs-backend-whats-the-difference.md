@@ -6,7 +6,7 @@
 
 ![Frontend VS Backend – What's the Difference?](https://www.freecodecamp.org/news/content/images/size/w2000/2022/03/pexels-christina-morillo-1181677.jpg)
 
-在你的Web开发之旅的开始，你会经常听到关于应用程序的前端和后端部分。
+在你的 Web 开发之旅的开始，你会经常听到关于应用程序的前端和后端部分。
 
 但这些术语到底是什么意思？
 
@@ -29,13 +29,13 @@
 
 ## 什么是前端?
 
-前端是用户在点击一个链接或输入一个网页地址时看到的和与之互动的一切。网页地址也被称为URL，即统一资源定位器，它告诉你什么网页应该加载并出现在你的浏览器中。
+前端是用户在点击一个链接或输入一个网页地址时看到的和与之互动的一切。网页地址也被称为 URL，即统一资源定位器，它告诉你什么网页应该加载并出现在你的浏览器中。
 
 它是网络应用的**客户端**部分。
 
 例如，以这篇文章为例。有一个相关的封面图片，而你现在正在阅读这篇文章。
 
-在页面的顶部，你也可以看到freeCodeCamp的标志。有一个导航栏，上面有一个链接到freeCodeCamp的论坛和一个捐赠的按钮。
+在页面的顶部，你也可以看到 freeCodeCamp 的标志。有一个导航栏，上面有一个链接到 freeCodeCamp 的论坛和一个捐赠的按钮。
 
 还有一个搜索框。你可以输入一个关键词来搜索你感兴趣的主题的文章。
 
@@ -91,7 +91,7 @@
 
 另一方面，前端开发人员可能不做任何设计工作。
 
-相反，你可以与项目经理、平面设计师和UX/UI设计师合作，解决问题。
+相反，你可以与项目经理、平面设计师和 UX/UI 设计师合作，解决问题。
 
 你可以根据的用户研究的结果创建视觉效果、图形。
 
@@ -138,14 +138,14 @@
 
 作为一名前端开发员，你将不断学习新的技术，这取决于当时的流行趋势。技术变化很快。
 
-然而，最基本的前端技术是HTML、CSS和JavaScript。
+然而，最基本的前端技术是 HTML、CSS 和 JavaScript。
 
 它们在用户的浏览器中运行，是万维网上所有网站的基础。
 
 让我们再来谈谈这些技术吧:
 
-- **HTML** 是指超文本标记语言。你用语义化的HTML创建网页的所有内容和结构。
-- **CSS**  层叠样式表（Cascading Style Sheets）。CSS是对HTML元素的样式。它添加颜色、字体，决定文本的大小和网页的布局。
+- **HTML** 是指超文本标记语言。你用语义化的 HTML 创建网页的所有内容和结构。
+- **CSS**  层叠样式表（Cascading Style Sheets）。CSS 是对 HTML 元素的样式。它添加颜色、字体，决定文本的大小和网页的布局。
 - **Vanilla JavaScript** 是你如何为元素添加功能和互动性的。它是你如何使网页具有动态行为的。
 
 除了这三个，还有许多前端库和框架。
@@ -184,11 +184,11 @@
 
 要想知道前端开发是否适合你，唯一的办法就是给它一个机会。
 
-一个开始学习的好地方是freeCodeCamp的 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/)，你将通过建立20个项目来学习，并在最后获得一个认证。
+一个开始学习的好地方是 freeCodeCamp 的 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/)，你将通过建立 20 个项目来学习，并在最后获得一个认证。
 
-你将学习HTML和现代CSS技术，以及最佳的可访问性实践。你还将学习如何创建适应各种屏幕尺寸的响应式网页。
+你将学习 HTML 和现代 CSS 技术，以及最佳的可访问性实践。你还将学习如何创建适应各种屏幕尺寸的响应式网页。
 
-在 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/) 之后，通过 [JavaScript算法和数据结构认证](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) 学习JavaScript编程语言，你将学习如何使网页互动。
+在 [响应式网页设计认证](https://www.freecodecamp.org/learn/2022/responsive-web-design/) 之后，通过 [JavaScript 算法和数据结构认证](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/) 学习 JavaScript 编程语言，你将学习如何使网页互动。
 
 你将从基础开始，学习语法和必要的基本构件，这将使你能够进展到更高级的主题，如面向对象的编程。
 
@@ -247,7 +247,7 @@
     已经完成的锻炼会储存在数据库中。同样，任何保存在你创建的播放列表中或标记为你想重温的收藏夹中的内容也是如此。
 - 你还可以查看所有可用的锻炼，并对它们进行过滤，只显示某个特定类别。
     例如，你可以在搜索框中输入一个关键词，如腹肌、手臂、下半身或上半身。  
-      另一种方法是在网站上选择一个可用的类别，如瑜伽、拉伸、HIIT或力量。数据库将翻阅储存在那里的每一个锻炼项目，但你将只查看你在搜索中指定的特定类别的过滤结果。
+      另一种方法是在网站上选择一个可用的类别，如瑜伽、拉伸、HIIT 或力量。数据库将翻阅储存在那里的每一个锻炼项目，但你将只查看你在搜索中指定的特定类别的过滤结果。
 
 支付订阅费用:
 
@@ -267,7 +267,7 @@
 - 创建、管理和维护产品/服务使用的数据库类型。
 - 建立、互动和维护服务器。
 - 使用服务器端技术和网络框架建立内部或外部功能和服务器端软件，以提供问题的解决方案。
-- 使用API（应用程序设计接口）工作。设计、开发、实施、维护和管理支持CRUD（创建读取更新删除）操作的API。
+- 使用 API（应用程序设计接口）工作。设计、开发、实施、维护和管理支持 CRUD（创建读取更新删除）操作的 API。
 - 执行数据验证，确保数据在存储到数据库之前具有正确的格式。
 - 用户需要与他们的账户安全互动。后台开发人员创建系统，确保每个用户的数据安全 - 特别是在处理支付处理系统时。
 - 处理第三方服务，如认证和外部支付服务，仅举几例。
@@ -286,7 +286,7 @@
 - **Ruby**
 - **Python**
 - **Java**
-- **JavaScript**. 是的，JavaScript被广泛用于前端开发，但近年来也被用于后端开发。Node.js（一个JavaScript运行时间）通过提供后端功能使之成为可能。
+- **JavaScript**. 是的，JavaScript 被广泛用于前端开发，但近年来也被用于后端开发。Node.js（一个 JavaScript 运行时间）通过提供后端功能使之成为可能。
 
 除了后端编程语言，后端框架和库被用来提供额外的功能来创建网络应用。
 
@@ -297,7 +297,7 @@
 - Flask
 - Express
 
-当开发者是一个团队的一部分时，他们使用Git--一个跟踪不同项目文件变化的版本控制系统。
+当开发者是一个团队的一部分时，他们使用 Git--一个跟踪不同项目文件变化的版本控制系统。
 
 它是一个针对程序员的开源协作工具。
 
@@ -312,11 +312,11 @@
 - MongoDB
 - Oracle
 
-在使用关系型数据库（如MySQL、PostgreSQL和Oracle）时，你将使用SQL。
+在使用关系型数据库（如 MySQL、PostgreSQL 和 Oracle）时，你将使用 SQL。
 
-SQL是结构化查询语言的缩写。它用于执行数据库查询。SQL与关系型数据库进行通信以操作数据。
+SQL 是结构化查询语言的缩写。它用于执行数据库查询。SQL 与关系型数据库进行通信以操作数据。
 
-你可以从 [这个有用的资源清单](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) 了解更多关于SQL的信息。
+你可以从 [这个有用的资源清单](https://www.freecodecamp.org/news/learn-sql-free-relational-database-courses-for-beginners/) 了解更多关于 SQL 的信息。
 
 <h2 id="Is-backend-development-right-for-you?">后台开发是否适合你？</h2>
 
@@ -330,13 +330,13 @@ SQL是结构化查询语言的缩写。它用于执行数据库查询。SQL与�
 
 也就是说，人们可能会从前端开始，然后过渡到后端方面的事情。这样，他们就可以找出他们最喜欢的工作方式。
 
-如果你想开始学习后台开发，可以通过freeCodeCamp的 [关系型数据库课程](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/) 进行学习。
+如果你想开始学习后台开发，可以通过 freeCodeCamp 的 [关系型数据库课程](https://www.freecodecamp.org/news/how-to-run-freecodecamps-relational-databases-curriculum-using-docker-vscode-and-coderoad/) 进行学习。
 
-你将学习使用SQL和PostgreSQL的关系数据库，Git版本控制系统，等等。这些将使你在后端旅程中取得一个良好的开端。
+你将学习使用 SQL 和 PostgreSQL 的关系数据库，Git 版本控制系统，等等。这些将使你在后端旅程中取得一个良好的开端。
 
-然后，你可以进一步学习 [后端开发和API认证](https://www.freecodecamp.org/learn/back-end-development-and-apis/)。
+然后，你可以进一步学习 [后端开发和 API 认证](https://www.freecodecamp.org/learn/back-end-development-and-apis/)。
 
-在这里，你将学习Node.js并使用Express框架构建网络应用。
+在这里，你将学习 Node.js 并使用 Express 框架构建网络应用。
 
 ## 结语
 

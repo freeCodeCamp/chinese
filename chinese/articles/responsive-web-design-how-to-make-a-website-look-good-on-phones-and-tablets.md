@@ -5,7 +5,7 @@
 
 ![响应式网页设计 – 怎样让一个网站在手机、平板上好看](https://www.freecodecamp.org/news/content/images/size/w2000/2020/07/curve-design-futuristic-lines-911738.jpg)
 
-在联网设备快速发展的格局中, 响应式网页设计在Web开发中仍然至关重要。
+在联网设备快速发展的格局中, 响应式网页设计在 Web 开发中仍然至关重要。
 
 不久前，“响应式网页设计”一词尚不存在. 但是今天，我们大多数人不得不在某种程度上采用它。
 

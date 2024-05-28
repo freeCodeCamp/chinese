@@ -25,7 +25,7 @@ It doesn't matter if you're just starting out or have been coding for years. Kno
 
 All major browsers have their own DevTools that let you examine the code of a webpage, evaluate its metrics, and run some tests alongside. This article will discuss Chrome's DevTools, as it's the industry standard.
 
-## Table of contents:
+## Table of contents
 
 -   [What is Chrome DevTools?][3]
 -   [How to Open Chrome DevTools][4]
@@ -177,11 +177,11 @@ Modal CSS classes Code
 
 In our modal's HTML code above, we've added the class name 'modal hidden' which has a corresponding styling with the CSS property of `display:none` that is set to hide the modal when the page is loaded initially and only display it when the button is clicked.
 
-### ✅ Step 1 - Initial inspection:
+### ✅ Step 1 - Initial inspection
 
 Attempt to trigger the modal by clicking on the 'Click me to learn a secret' button. Since we've set that up not to work, right-click on the area where the modal should appear and choose "Inspect" to open DevTools' Elements Panel.
 
-### ✅ Step 2 - Diagnose visibility issues:
+### ✅ Step 2 - Diagnose visibility issues
 
 In the Elements Panel, locate the modal in the DOM to see that the modal is present but not visible. This confirms that the bug is caused within our CSS code `display: hidden`.
 
@@ -193,13 +193,13 @@ Manually change the class name from `modal hidden` to `modal block` to trigger t
 
 A screenshot of debugging the modal's HTML, CSS in Elements panel
 
-### ✅ Step 3 - Center the modal:
+### ✅ Step 3 - Center the modal
 
 Now the modal is visible, but it's displayed at the top – which is different from where we'd like it to be (that is, in the center of the page).
 
 To change this, modify the `transform` property to `translate(-50%, -50%)` by adding the second `-50%` and ensure that `top: 50%`, and `left: 50%` are correctly set to center the modal on the screen.
 
-### ✅ Step 4 - Enhance the appearance:
+### ✅ Step 4 - Enhance the appearance
 
 You can go further to refine the modal's appearance by tweaking its `background-color`, `padding`, or other stylistic properties directly within the Styles to achieve the desired look and feel.
 
@@ -227,7 +227,7 @@ const openModal = function () {
 
 Modal bug JavaScript code
 
-### ✅ Step 1 - Set up breakpoints:
+### ✅ Step 1 - Set up breakpoints
 
 Open Chrome DevTools and navigate to the Sources Panel. Here, find the JavaScript file that includes the modal functionality (in our example its pen.js).
 
@@ -241,7 +241,7 @@ A screenshot of setting breakpoints the modal's JS in Sources panel
 
 Breakpoints pause code execution at critical points, allowing you to inspect the current state of variables and understand the flow of execution. This step is crucial for identifying where the code deviates from expected behaviour.
 
-### ✅ Step 2 - Examine the code execution flow:
+### ✅ Step 2 - Examine the code execution flow
 
 With our breakpoint in place, try to open the modal by clicking on its button. Execution of our JavaScript code now pauses at our breakpoint, which enables us to step through the code line by line.
 
@@ -270,11 +270,11 @@ const openModal = function () {
 
 API call JavaScript code
 
-### ✅ Step 1 - Initiate the API call:
+### ✅ Step 1 - Initiate the API call
 
 On the modal project UI, click on the 'Click me to learn a secret' button. Though the modal does not visibly activate, because of the fetch logic within the openModal function, an API call will be made.
 
-### ✅ Step 2 - Network Panel Inspection:
+### ✅ Step 2 - Network Panel Inspection
 
 Ideally, your Network Panel should be open before clicking the button, but you can also reverse the steps. Detailed insights on your API request such as the request's method, status code, response and the time it took to complete, will be available under headers, preview, response, initiator and timing tabs respectively.
 
@@ -282,7 +282,7 @@ Ideally, your Network Panel should be open before clicking the button, but you c
 
 A screenshot overview of API request in Network panel
 
-### ✅ Step 3 - Simulating Network Conditions:
+### ✅ Step 3 - Simulating Network Conditions
 
 Use the Network Panel's throttling feature to mimic various network speeds like offline or slow 3G to see how the API request behaves under constrained conditions.
 

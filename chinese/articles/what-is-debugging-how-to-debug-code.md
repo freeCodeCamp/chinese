@@ -20,15 +20,15 @@ In this article we'll talk about what debugging is, how to debug your code, and 
   - [缩小问题范围，了解错误产生的原因](./#narrowdownyourproblemandunderstandwheretheerrorisgenerated)
   - [休息一下，想想别的事情](./#takeabreakandthinkaboutsomethingelse)
   - [寻找帮助](./#lookforhelp)
-  - [确保bug已经解决](./#makesurethebugisdead)
+  - [确保 bug 已经解决](./#makesurethebugisdead)
   - [编写简洁的代码](./#writecleancode)
     - [写 DRY 代码](./#writedrycode)
     - [尽可能写出简单的代码](./#writesimplecodewhenpossible)
     - [使用 SOLID 原则](./#usethesolidprinciples)
 - [技术调试工具](./#technicaldebuggingtools)
-  - [TypeScript如何帮助编写简洁的代码](./#howtypescripthelpswritecleancode)
-  - [如何使用Console.log来调试代码](./#howtouseconsolelogtodebugcode)
-  - [如何使用Visual Studio调试器](./#howtousevisualstudiodebugger)
+  - [TypeScript 如何帮助编写简洁的代码](./#howtypescripthelpswritecleancode)
+  - [如何使用 Console.log 来调试代码](./#howtouseconsolelogtodebugcode)
+  - [如何使用 Visual Studio 调试器](./#howtousevisualstudiodebugger)
   - [Chrome 调试器](./#chromedebugger)
 - [结语](./#conclusion)
 
@@ -36,13 +36,13 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 软件中的"_bug_"和 "_debugging_" 这两个词被普遍认为是由 [Admiral Grace Hopper](https://es.wikipedia.org/wiki/Grace_Murray_Hopper) 提出的。一个真正的传奇人物，她写了有史以来的第一个编译器。
 
-20世纪40年代，当她在哈佛大学为美国海军开发的一台计算机工作时，她的同事发现一只飞蛾（一种真实的昆虫）卡在一个继电器中，使计算机崩溃。
+20 世纪 40 年代，当她在哈佛大学为美国海军开发的一台计算机工作时，她的同事发现一只飞蛾（一种真实的昆虫）卡在一个继电器中，使计算机崩溃。
 
 在解决这个问题时，她说，他们正在 `debugging` 系统。
 
 如果你是一个词源学爱好者，你可能会对这样一个事实感兴趣：在进入计算机世界之前，`debugging` 一词似乎已经作为一个术语在航空学中使用。
 
-而且显然有某种证据表明，甚至托马斯-爱迪生在1878年也在 `technical error` 的意义上使用过这个词。
+而且显然有某种证据表明，甚至托马斯-爱迪生在 1878 年也在 `technical error` 的意义上使用过这个词。
 
 但这并不是本文的重点。重点是，调试是软件开发的一个核心部分。它一直都是，而且可能永远都是。
 
@@ -56,13 +56,13 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 我们一直在与信息打交道，但不是直接与它打交道。信息并不 "实际 "存在于计算机中，至少不是以用户认为的格式存在。
 
-在计算机中只有电脉冲，然后被抽象为1和0，然后再次被抽象为我们正在处理的任何信息。
+在计算机中只有电脉冲，然后被抽象为 1 和 0，然后再次被抽象为我们正在处理的任何信息。
 
 为了与计算机交互和使用计算机，我们使用编程语言。这些提供了计算机正在执行的实际任务的抽象，以及我们正在管理的信息的表示。
 
 编程可以是一种非常抽象的活动，而且很容易很快就忽略了计算机正在执行的实际任务是什么，或者我们在某一行代码中根据什么信息行事。从那时起，我们就很容易给计算机发出错误的指令，从而错失我们所要寻找的目标。
 
-在软件开发领域的一个内部笑话是，开发人员通常会花5分钟来写代码，花5个小时来理解为什么事情不能像它们应该的那样工作。
+在软件开发领域的一个内部笑话是，开发人员通常会花 5 分钟来写代码，花 5 个小时来理解为什么事情不能像它们应该的那样工作。
 
 作为开发人员，无论我们做得多好，我们都要花无数个小时来调试我们的代码，所以我们应该努力在这方面做得更好、更快。
 
@@ -72,7 +72,7 @@ In this article we'll talk about what debugging is, how to debug your code, and 
 
 通常我们会从思考所有可能的原因开始，然后测试每个假设（从最有可能的假设开始），直到找到最终的根本原因。然后我们纠正它，确保它不会再发生。
 
-对于bug，没有神奇的解决方案。通常情况下，它需要结合搜索，记录我们的代码，并根据真正发生的情况检查我们的逻辑。
+对于 bug，没有神奇的解决方案。通常情况下，它需要结合搜索，记录我们的代码，并根据真正发生的情况检查我们的逻辑。
 
 虽然有许多工具可以帮助你进行调试，但使用这些工具并不一定是困难的部分。难的是真正理解你得到的错误，并真正理解什么是解决这些错误的最佳方案。
 
@@ -127,7 +127,7 @@ ReferenceError: Cannot access 'mickTheBug' before initialization
 
 官方文档的问题是，有时它们包含如此多的信息，而且解释得如此详细，以至于它更令人困惑而不是解释。
 
-正因为如此，我认为对于任何特定的主题，总是使用一个以上的来源，并 "听取不同的声音 "来解释同一件事是一个好主意。通常只有在阅读了文档、一些文章和观看了一些YouTube视频之后，我才觉得我对我正在使用的工具有了很好的理解。
+正因为如此，我认为对于任何特定的主题，总是使用一个以上的来源，并 "听取不同的声音 "来解释同一件事是一个好主意。通常只有在阅读了文档、一些文章和观看了一些 YouTube 视频之后，我才觉得我对我正在使用的工具有了很好的理解。
 
 <h3 id="Explain-Your-Logic-to-Another-Person-or-a-Duck">向另一个人或一只鸭子解释你的逻辑（小黄鸭调试法)</h3>
 
@@ -149,7 +149,7 @@ ReferenceError: Cannot access 'mickTheBug' before initialization
 
 随着你的代码库越来越大，你将很难分析每一行代码来寻找你的错误。因此，一个好主意是分而治之，从最有可能产生问题的地方开始搜索。
 
-让我们看看这个例子。我有一个函数，它接收一个数字并返回它乘以2的结果，还有一个函数，它打印一个名字（firstName），一个姓氏（lastName），以及乘法函数的结果。
+让我们看看这个例子。我有一个函数，它接收一个数字并返回它乘以 2 的结果，还有一个函数，它打印一个名字（firstName），一个姓氏（lastName），以及乘法函数的结果。
 
 
 ```js
@@ -184,11 +184,11 @@ mickTheBug('Mick', 10)
 
 ![Ly_kXFJop](https://www.freecodecamp.org/news/content/images/2022/03/Ly_kXFJop.gif)
 
-像我们到目前为止看到的例子那样的错误，解决起来小菜一碟。但许多其他的就不是这样了，在许多情况下，你不得不与bug斗争几个小时（或几天），直到你找到一个解决方案。
+像我们到目前为止看到的例子那样的错误，解决起来小菜一碟。但许多其他的就不是这样了，在许多情况下，你不得不与 bug 斗争几个小时（或几天），直到你找到一个解决方案。
 
 在这种情况下，我发现注意你的心理状态真的很重要。编程是一种非常消耗精力的活动。因此，你的大脑在某一时刻的工作方式或你的感觉将直接影响你的代码的外观和你以有效方式解决问题的能力。
 
-如果你花了几个小时阅读，大声重复同样的代码行，上网搜索，翻阅Stack Overflow的问题，但你的代码仍然失败，你迟早会感到沮丧，并开始给自己施加压力。
+如果你花了几个小时阅读，大声重复同样的代码行，上网搜索，翻阅 Stack Overflow 的问题，但你的代码仍然失败，你迟早会感到沮丧，并开始给自己施加压力。
 
 当你尝试不同的解决方案并一次次失败时，你对细节的关注很可能会淡化，你会开始有不同的想法，并同时尝试很多东西。
 
@@ -212,7 +212,7 @@ mickTheBug('Mick', 10)
 
 能够进入正确的社区，在那里你可以向对你所使用的工具有经验的人询问和交谈，这真的非常、非常、非常有帮助。
 
-这取决于你工作的领域和你使用的工具，但对我来说，像 [freecodecamp](https://www.freecodecamp.org/)、[stackoverflow](https://stackoverflow.com/) 和 [meetupjs](https://meetupjs.com.ar/) 这样的Sack或Dscord社区都起到了很大的作用。
+这取决于你工作的领域和你使用的工具，但对我来说，像 [freecodecamp](https://www.freecodecamp.org/)、[stackoverflow](https://stackoverflow.com/) 和 [meetupjs](https://meetupjs.com.ar/) 这样的 Sack 或 Dscord 社区都起到了很大的作用。
 
 在这些社区内提问时，我发现记住以下几点很重要:
 
@@ -244,21 +244,21 @@ mickTheBug('Mick', 10)
 
 ![xOmnh7_G7](https://www.freecodecamp.org/news/content/images/2022/03/xOmnh7_G7.gif)
 
-唯一比与一个棘手的bug作斗争更令人沮丧的事情是，在修复它之后，却发现这个bug仍然在那里。甚至更糟糕的是，由于这个 "解决方案"，更多的bug被引入到你的代码中。
+唯一比与一个棘手的 bug 作斗争更令人沮丧的事情是，在修复它之后，却发现这个 bug 仍然在那里。甚至更糟糕的是，由于这个 "解决方案"，更多的 bug 被引入到你的代码中。
 
 为了避免这种情况，关键是你要测试你的代码。如果你能用自动化单元测试来做，那就更好了。
 
 理想情况下，你的代码库的每个部分或组件都应该有自己的测试。这些测试应该在每次对代码库做任何修改时运行。这样一来，如果测试写得正确，我们就可以在新的错误出现时注意到它。这当然会使我们更容易找到它的原因并解决它。
 
-如果你没有自动化测试（如果你想创建高质量的软件，你真的应该这样做），至少要手动测试你的代码，重现用户可能与之发生的所有互动，并确保该bug被有效地杀死。
+如果你没有自动化测试（如果你想创建高质量的软件，你真的应该这样做），至少要手动测试你的代码，重现用户可能与之发生的所有互动，并确保该 bug 被有效地杀死。
 
 <h3 id="Write-Clean-Code">编写简洁的代码</h3>
 
 ![Y4PKO37NS](https://www.freecodecamp.org/news/content/images/2022/03/Y4PKO37NS.png)
 
-对抗bug的最好方法是首先避免插入bug。对任何程序员来说，写出有保证的无缺陷的代码是不可能的，但有几件事你可以做，以减少缺陷被插入的机会。
+对抗 bug 的最好方法是首先避免插入 bug。对任何程序员来说，写出有保证的无缺陷的代码是不可能的，但有几件事你可以做，以减少缺陷被插入的机会。
 
-一个好的开始是经典的DRY、KISS和SOLID原则。
+一个好的开始是经典的 DRY、KISS 和 SOLID 原则。
 
 关于这些主题有整整一本书，但长话短说，这些原则旨在使软件易于开发，易于理解和维护，并尽可能地接近于无缺陷。
 
@@ -294,48 +294,48 @@ mickTheBug('Mick', 10)
 
 - **S** 代表 **单一责任**，这意味着一个类应该有一个，而且只有一个工作。
 - **O** 代表 **开放封闭原则**，这意味着你应该能够扩展一个类的行为，而不用修改它。
-- **L** 代表 **Liskov替代原则**，这意味着派生类必须可以替代其基类。
+- **L** 代表 **Liskov 替代原则**，这意味着派生类必须可以替代其基类。
 - **I** 代表 **接口隔离**，这意味着不应该强迫客户实现它不使用的接口，也不应该强迫客户依赖他们不使用的方法。
 - **D** 代表 **依赖反转原则**，这意味着实体必须依赖抽象，而不是依赖具体事物。它指出，高层模块不能依赖低层模块，但它们应该依赖抽象物。
 
-如前所述，SOLID更适用于OOP而不是一般的编程。我们不打算在本文中深入探讨OOP，但了解这些原则并将其牢记在心仍然是很好的。
+如前所述，SOLID 更适用于 OOP 而不是一般的编程。我们不打算在本文中深入探讨 OOP，但了解这些原则并将其牢记在心仍然是很好的。
 
 现在让我们来了解一些你可以用来帮助你调试代码的工具。
 
 <h2 id="Technical-Debugging-Tools">技术调试工具</h2>
 
-有许多工具我们可以用来减少在我们的代码中插入bug的机会，或者更有效地打击现有的bug。
+有许多工具我们可以用来减少在我们的代码中插入 bug 的机会，或者更有效地打击现有的 bug。
 
 在这方面，我们将看看**TypeScript**，流行的（非常有用的）**console.log**，以及**VS Code**和**Chrome**中内置的**调试器**。
 
-这些工具和例子将以JavaScript为中心，但这些原则适用于任何编程语言。
+这些工具和例子将以 JavaScript 为中心，但这些原则适用于任何编程语言。
 
-你还应该知道，现在大多数代码编辑器和网络浏览器都有内置的调试器，但我们要审查的是VS代码和Chrome，因为它们是最流行的。
+你还应该知道，现在大多数代码编辑器和网络浏览器都有内置的调试器，但我们要审查的是 VS 代码和 Chrome，因为它们是最流行的。
 
 最后，你还应该知道有一些特定的调试工具，你可以用来调试特定类型的应用程序，比如 [React](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=es) 和[Redux](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=es) 开发工具，这是你可以安装的浏览器扩展，以帮助你更有效地调试你的代码。
 
-但我们将来会在另一篇关于如何调试React应用程序的文章中回顾这些。;)
+但我们将来会在另一篇关于如何调试 React 应用程序的文章中回顾这些。;)
 
 <h3 id="How-TypeScript-Helps-Write-Clean-Code">TypeScript如何帮助编写简洁的代码</h3>
 
-我提到TypeScript是第一个工具，因为它与前面关于编写干净代码的部分密切相关。
+我提到 TypeScript 是第一个工具，因为它与前面关于编写干净代码的部分密切相关。
 
-TypeScript不只是为你提供了一个强大的JavaScript类型系统。它还增加了一个编译器，可以帮助你在运行代码之前识别代码中的错误和误区。它提供了惊人的自动完成功能，并且可以被认为是一个自动文档工具。
+TypeScript 不只是为你提供了一个强大的 JavaScript 类型系统。它还增加了一个编译器，可以帮助你在运行代码之前识别代码中的错误和误区。它提供了惊人的自动完成功能，并且可以被认为是一个自动文档工具。
 
 为了了解它的好处，让我们重温一下前面的例子，在这个例子中，我们没有为我们的函数调用提供正确的参数。
 
 ![TYPESCRIPT1](https://www.freecodecamp.org/news/content/images/2022/03/TYPESCRIPT1.png)
 
-正如你在这里看到的，在运行程序之前，TypeScript立即检测到我们缺少一个参数，并给了我们以下错误:
+正如你在这里看到的，在运行程序之前，TypeScript 立即检测到我们缺少一个参数，并给了我们以下错误:
 
 ```js
 Expected 3 arguments, but got 2.ts(2554)
 index.ts(6, 64): An argument for 'age' was not provided.
 ```
 
-这些类型的通知是非常有用的，特别是当你在大项目中工作时，你必须与许多API或不同的代码部分互动。
+这些类型的通知是非常有用的，特别是当你在大项目中工作时，你必须与许多 API 或不同的代码部分互动。
 
-因此，如果你习惯于使用普通的JavaScript，TypeScript一开始可能会觉得是不必要的模板。但从长远来看，它肯定会节省你的时间，防止你在代码中插入愚蠢的错误。
+因此，如果你习惯于使用普通的 JavaScript，TypeScript 一开始可能会觉得是不必要的模板。但从长远来看，它肯定会节省你的时间，防止你在代码中插入愚蠢的错误。
 
 <h3 id="How-to-Use-Console.log-to-Debug-Code">如何使用Console.log来调试代码</h3>
 
@@ -465,11 +465,11 @@ console.error(new Error('Error detected'))
 
 为了帮助我们与错误作斗争，我们开发了调试器。它们只不过是能够读取其他程序并逐行查看的程序，沿途检查我们想要的任何信息（例如，变量的值）。
 
-我们要看到的第一个例子是 **Visual Studio调试器**。
+我们要看到的第一个例子是 **Visual Studio 调试器**。
 
-为了调试一个Node.js应用程序，我们不需要安装任何额外的东西（假设我们的电脑中已经安装了VS代码和Node），因为VS代码中内置了node调试器。
+为了调试一个 Node.js 应用程序，我们不需要安装任何额外的东西（假设我们的电脑中已经安装了 VS 代码和 Node），因为 VS 代码中内置了 node 调试器。
 
-如果你用其他语言调试，如Python或Java，你可能需要在运行调试器之前安装一个特定的VS扩展。
+如果你用其他语言调试，如 Python 或 Java，你可能需要在运行调试器之前安装一个特定的 VS 扩展。
 
 开始时，我们只需选择我们要调试的文件，然后按下 `bug` 图标。
 
@@ -481,7 +481,7 @@ console.error(new Error('Error detected'))
 
 我们将选择 `Run and debug`，这将只是为我们在编辑器中运行该程序。
 
-考虑到你也可以创建一个`launch.json`文件，这是一个VS代码用来 `知道` 如何运行你的程序的文件。对于这个简单的例子来说，这不是必要的，但要知道这种方法。
+考虑到你也可以创建一个`launch.json`文件，这是一个 VS 代码用来 `知道` 如何运行你的程序的文件。对于这个简单的例子来说，这不是必要的，但要知道这种方法。
 
 点击 `Run and debug` 按钮后，我们的程序将运行，我们将进入以下屏幕:
 
@@ -493,7 +493,7 @@ console.error(new Error('Error detected'))
 
 在下面，我们会有一个空间，可以声明我们想观察的特定表达式。表达式可以是任何东西，比如你想关注的特定变量或函数，以评估它们如何随着你的程序而变化。
 
-例如，我添加了我的变量 `arr`，VS代码向我显示了该变量的值:
+例如，我添加了我的变量 `arr`，VS 代码向我显示了该变量的值:
 
 ![vsc5](https://www.freecodecamp.org/news/content/images/2022/03/vsc5.png)
 
@@ -525,29 +525,29 @@ console.error(new Error('Error detected'))
 - **Step Out** 按钮，如果你已经踏入了一个函数，你可以跳过该函数的剩余执行部分，直接进入返回值。
 - **Restart** 从头开始重新运行调试器， **Stop** 退出调试器。、
 
-所以，你看，这就是一个内置于你的代码编辑器中的非常强大的调试器。正如你所看到的，有了这个工具，我们可以同时检查很多信息，只需在我们想要的地方设置断点，而且不需要任何console.logs。
+所以，你看，这就是一个内置于你的代码编辑器中的非常强大的调试器。正如你所看到的，有了这个工具，我们可以同时检查很多信息，只需在我们想要的地方设置断点，而且不需要任何 console.logs。
 
 <h3 id="Chrome-Debugger">Chrome 调试器</h3>
 
-要在Chrome中进行调试，我们首先要在浏览器中打开我们的应用程序。在我的例子中，我创建了一个简单的HTML文件，其中链接了我的JS文件（与前面的例子相同）。
+要在 Chrome 中进行调试，我们首先要在浏览器中打开我们的应用程序。在我的例子中，我创建了一个简单的 HTML 文件，其中链接了我的 JS 文件（与前面的例子相同）。
 
-然后我们打开**developer tools**（ctrl+shit+i或右键->inspect），进入 "**sources**"标签。
+然后我们打开**developer tools**（ctrl+shit+i 或右键->inspect），进入 "**sources**"标签。
 
 我们应该看到像这样的东西:
 
 ![chrome1](https://www.freecodecamp.org/news/content/images/2022/03/chrome1.png)
 
-在左边，我们可以看到我们的应用程序中可用的文件（在我的例子中，只有一个HTML文件和JS文件）。 在中间，我们可以看到我们选定的文件的代码，在右边，我们有一组信息，与我们在VS Code中的信息非常相似。
+在左边，我们可以看到我们的应用程序中可用的文件（在我的例子中，只有一个 HTML 文件和 JS 文件）。 在中间，我们可以看到我们选定的文件的代码，在右边，我们有一组信息，与我们在 VS Code 中的信息非常相似。
 
-要设置断点，我们必须点击我们想要停止的那一行的顶部。在Chrome浏览器中，断点被识别为行号上方的蓝色箭头。
+要设置断点，我们必须点击我们想要停止的那一行的顶部。在 Chrome 浏览器中，断点被识别为行号上方的蓝色箭头。
 
 ![chrome2](https://www.freecodecamp.org/news/content/images/2022/03/chrome2.png)
 
-然后，如果我们刷新我们的页面，脚本将在第一个断点处停止，我们将被允许使用控件来浏览它，这与VS代码中的工作方式完全相同。
+然后，如果我们刷新我们的页面，脚本将在第一个断点处停止，我们将被允许使用控件来浏览它，这与 VS 代码中的工作方式完全相同。
 
 ![chrome3](https://www.freecodecamp.org/news/content/images/2022/03/chrome3.png)
 
-正如我们所看到的，Chrome和VS代码调试器的工作原理非常相似，你决定使用哪一个只是一个偏好的问题。
+正如我们所看到的，Chrome 和 VS 代码调试器的工作原理非常相似，你决定使用哪一个只是一个偏好的问题。
 
 <h2 id="conclusion">结语</h2>
 

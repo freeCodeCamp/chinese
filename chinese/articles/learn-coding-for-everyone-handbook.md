@@ -840,7 +840,7 @@ By maintaining and updating this list, you ensure that your journey in software 
 
 So, embrace your "to-learn" list, and let it guide you to new heights in your career, keeping you curious, motivated, and ever-evolving in the dynamic world of technology.
 
-# ****Practical** A**spects of** C**oding****
+# ****Practical** A**spects of** C**oding
 
 ## How to Deal with Overwhelming Projects
 
@@ -1074,7 +1074,7 @@ Often, programmers get employed on the basis of their existing knowledge and sta
 
 In November 1915, after writing only two pages of what he referred to as “one of the most beautiful works of my life,” Einstein sent his 11-year-old son Hans Albert a letter.
 
-He praised his son for his learning efforts, saying, “That is the way to learn the most…When you are doing something with such enjoyment that you don’t notice the time passes.”
+He praised his son for his learning efforts, saying, “That is the way to learn the most……When you are doing something with such enjoyment that you don’t notice the time passes.”
 
 “Curiosity has its own reason for existing,” Einstein explains. “One cannot help but be in awe when one contemplates the mysteries of eternity, of life, of the marvelous structure of reality.”
 

@@ -586,13 +586,13 @@ Explore the fundamentals of Scalable Vector Graphics (SVG). Learn how to create 
 
 ][9]
 
-### **************Subscribe for more tutorials on Web Development:**************
+### **************Subscribe for more tutorials on Web Development**************
 
 [
 
 Hunor Márton Borbély
 
-Game development with JavaScript, creative coding tutorials, HTML canvas, SVG, Three.js, and some React and Vue https://twitter.com/HunorBorbelyhttps://codepen.io/HunorMarton…
+Game development with JavaScript, creative coding tutorials, HTML canvas, SVG, Three.js, and some React and Vue https://twitter.com/HunorBorbelyhttps://codepen.io/HunorMarton……
 
 ![favicon_144x144](https://www.youtube.com/s/desktop/2ebf064d/img/favicon_144x144.png)YouTube
 

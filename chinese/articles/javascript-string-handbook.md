@@ -339,7 +339,7 @@ console.log(jsString); // Output: JavaScript
 
 This method is less commonly used for straightforward string creation, but can be useful in situations where you have specific Unicode values to represent characters.
 
-### Use Cases:
+### Use Cases
 
 #### Generating Strings with Specific Characters
 
@@ -543,7 +543,7 @@ console.log(trimmedEndString); // Output: 'Hello, World!'
 
 In this example, `trimEnd()` eliminates the trailing whitespaces from `stringWithTrailingWhitespace`.
 
-### Use Cases:
+### Use Cases
 
 -   **User Input:** When processing user input, especially from forms or text inputs, trimming is common to remove accidental leading or trailing whitespaces.
 -   **Data Cleaning:** Whitespace trimming is beneficial when working with datasets or external data sources to ensure consistency in string values.
@@ -587,11 +587,11 @@ const isTextFile = filename.endsWith(".txt"); // true
 
 These methods are commonly used for file type validation and similar tasks.
 
-### Substring Extraction with slice() and substring():
+### Substring Extraction with slice() and substring()
 
 The `slice()` and `substring()` methods in JavaScript are commonly used for extracting substrings from strings, but they have some differences in syntax and functionality.
 
-### `slice()` Method:
+### `slice()` Method
 
 The `slice()` method is a versatile tool for extracting substrings based on specified indices. It allows for the extraction of substrings from any position within the string and supports negative indices. Here's the syntax:
 
@@ -602,7 +602,7 @@ string.slice(startIndex, endIndex);
 -   `startIndex`: The index at which the extraction begins.
 -   `endIndex`: The index before which the extraction ends (the character at this index is not included).
 
-#### Example with Positive and Negative Indices:
+#### Example with Positive and Negative Indices
 
 ```javascript
 let str = "Hello, World!";
@@ -612,7 +612,7 @@ let sliced2 = str.slice(-12, -1); // Extracts "ello, World"
 
 In the first example, `str.slice(7)` extracts the substring starting from index 7 to the end. In the second example, `str.slice(-12, -1)` extracts the substring starting from 12 positions from the end to 1 position from the end.
 
-### `substring()` Method:
+### `substring()` Method
 
 The `substring()` method is similar to `slice()` but has a different syntax. It extracts a specified portion of a string but does not support negative indices. Here's the syntax:
 
@@ -623,7 +623,7 @@ string.substring(startIndex, endIndex);
 -   `startIndex`: The index at which the extraction begins.
 -   `endIndex`: The index before which the extraction ends (the character at this index is not included).
 
-#### Example (No Negative Indices):
+#### Example (No Negative Indices)
 
 ```javascript
 let str = "Hello, World!";

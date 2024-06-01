@@ -12,41 +12,42 @@ September 5, 2023 / [#Sql][1]
 <!-- more -->
 
 # The SQL Handbook – A Free Course for Web Developers
+# SQL 手册 - 面向 Web 开发者的免费课程
 
 ![Lane Wagner](https://www.freecodecamp.org/news/content/images/size/w60/2023/02/IO68jWb2_400x400.jpeg)
 
 [Lane Wagner][2]
 
-  ![The SQL Handbook – A Free Course for Web Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/The-SQL-Handbook-Cover.png)
+  ![SQL 手册 - 面向 Web 开发者的免费课程](https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/The-SQL-Handbook-Cover.png)
 
-SQL is everywhere these days. Whether you're [learning backend development][3], data engineering, DevOps, or data science, SQL is a skill you'll want in your toolbelt.
+当前 SQL 已遍布各种地方。无论你在[学习后端开发][3]，数据工程， DevOps 或数据科学， SQL 将始终是你想放进工具皮带中的一项技能
 
-This a free and open text-based handbook. If you want to get started, just scroll down and start reading. That said, there are two other options for following along:
+这是一个开放免费的文字版手册。如果你想开始学习，就下拉开始阅读。不过眼下还有两个其他选择：
 
-1.  Try the interactive version of this [SQL course][4] on [Boot.dev][5], complete with coding challenges and projects
-2.  Watch the video walkthrough of this course on FreeCodeCamp's YouTube channel (embedded below):
+1.  试一试由 [Boot.dev][5] 提供的 [SQL 课程][4]交互版，完成编程挑战和项目
+2.  观看 FreeCodeCamp 在 YouTube 频道的视频流程
+## 目录
 
-## Table of Contents
-
--   [Chapter 1: Introduction][6]
--   [Chapter 2: SQL Tables][7]
--   [Chapter 3: Constraints][8]
--   [Chapter 4: CRUD Operations][9]
--   [Chapter 5: Basic SQL Queries][10]
--   [Chapter 6: How to Structure Return Data in SQL][11]
--   [Chapter 7: How to Perform Aggregations in SQL][12]
+-   [章节 1: 介绍][6]
+-   [章节 2: SQL 数据表][7]
+-   [章节 3: 约束][8]
+-   [章节 4: CRUD 操作][9]
+-   [章节 5: 基础 SQL 查询][10]
+-   [章节 6: 如何在 SQL 中构建返回数据][11]
+-   [章节 7: How to Perform Aggregations in SQL][12]
 -   [Chapter 8: SQL Subqueries][13]
 -   [Chapter 9: Database Normalization][14]
 -   [Chapter 10: How to Join Tables in SQL][15]
 -   [Chapter 11: Database Performance][16]
 
-## Chapter 1: Introduction
+## 介绍
 
 Structured Query Language, or [SQL][17], is the primary programming language used to manage and interact with [relational databases][18]. SQL can perform various operations such as creating, updating, reading, and deleting records within a database.
 
-### What is a SQL Select Statement?
+### 什么是 SQL SELECT 语句？
 
 Let's write our own SQL statement from scratch. A `SELECT` statement is the most common operation in SQL – often called a "query". `SELECT` retrieves data from one or more tables. Standard `SELECT` statements do _not_ alter the state of the database.
+让我们写一个自己的 SQL 语句
 
 ```SQL
 SELECT id from users;
@@ -1540,8 +1541,8 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [3]: https://www.boot.dev/
 [4]: https://boot.dev/learn/learn-gsql
 [5]: https://boot.dev/
-[6]: #chapter1introduction
-[7]: #chapter2sqltables
+[6]: #介绍
+[7]: #SQL数据表
 [8]: #chapter3constraints
 [9]: #chapter4crudoperationsinsql
 [10]: #chapter5basicsqlqueries

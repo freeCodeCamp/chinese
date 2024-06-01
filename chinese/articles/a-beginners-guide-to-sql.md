@@ -3,7 +3,7 @@ title: The SQL Handbook – A Free Course for Web Developers
 author: Lane Wagner
 authorURL: https://www.freecodecamp.org/news/author/wagslane/
 originalURL: https://www.freecodecamp.org/news/a-beginners-guide-to-sql/
-translator: ""
+translator: "ProjektMing"
 reviewer: ""
 ---
 

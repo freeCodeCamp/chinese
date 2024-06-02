@@ -20,7 +20,7 @@ September 5, 2023 / [#Sql][1]
 
   ![SQL 手册 - 面向 Web 开发者的免费课程](https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/The-SQL-Handbook-Cover.png)
 
-当前 SQL 已遍布各种地方。无论你在[学习后端开发][3]，数据工程， DevOps 或数据科学， SQL 将始终是你想放进工具皮带中的一项技能
+当前 SQL 已遍布各种地方。无论你在[学习后端开发][3]，数据工程，DevOps 或数据科学，SQL 将始终是你想放进工具皮带中的一项技能
 
 这是一个开放免费的文字版手册。如果你想开始学习，就下拉开始阅读。不过眼下还有两个其他选择：
 
@@ -34,62 +34,62 @@ September 5, 2023 / [#Sql][1]
 -   [章节 4: CRUD 操作][9]
 -   [章节 5: 基础 SQL 查询][10]
 -   [章节 6: 如何在 SQL 中构建返回数据][11]
--   [章节 7: How to Perform Aggregations in SQL][12]
--   [Chapter 8: SQL Subqueries][13]
--   [Chapter 9: Database Normalization][14]
--   [Chapter 10: How to Join Tables in SQL][15]
--   [Chapter 11: Database Performance][16]
+-   [章节 7: 如何在 SQL 中执行聚合操作][12]
+-   [章节 8: SQL 子查询][13]
+-   [章节 9: 数据库的规范化][14]
+-   [章节 10: 如何在 SQL 中连接复数个表][15]
+-   [章节 11: 数据库性能][16]
 
 ## 介绍
 
-Structured Query Language, or [SQL][17], is the primary programming language used to manage and interact with [relational databases][18]. SQL can perform various operations such as creating, updating, reading, and deleting records within a database.
+结构化查询语言，或者说 [SQL][17], 是用于管理和操作[关系数据库][18]的主要编程语言。SQL 可以执行各种操作，如创建、更新、读取和删除数据库中的记录。
+
 
 ### 什么是 SQL SELECT 语句？
 
-Let's write our own SQL statement from scratch. A `SELECT` statement is the most common operation in SQL – often called a "query". `SELECT` retrieves data from one or more tables. Standard `SELECT` statements do _not_ alter the state of the database.
-让我们写一个自己的 SQL 语句
+让我们从头开始写一个自己的 SQL 语句。`SELECT` 语句是 SQL中最常用的语句，经常被叫作“查询”。它用于从单张或多张表中检索数据。标准的 `SELECT` 语句**不会**改变数据库的状态。
 
 ```SQL
 SELECT id from users;
 ```
 
-#### How to select a single field
+**如何选取单个列**
 
-A `SELECT` statement begins with the keyword `SELECT` followed by the fields you want to retrieve.
+`SELECT` 语句以关键词 `SELECT` 开头，紧跟着你想检索的列。
 
 ```SQL
 SELECT id from users;
 ```
 
-#### How to select multiple fields
+**如何选取复数个列**
 
-If you want to select more than one field, you can specify multiple fields separated by commas like this:
+如果你想选取超过一个列，你可以像这样用逗号分隔各个列：
 
 ```SQL
 SELECT id, name from users;
 ```
 
-#### How to select all fields
+**如何选取所有列**
 
-If you want to select _every_ field in a record, you can use the shorthand `*` syntax.
+如果你想选取一条记录中的**每个**列，你可以使用简写的 `*` 语法。
 
 ```SQL
 SELECT * from users;
 ```
 
-After specifying fields, you need to indicate which table you want to pull the records from using the `from` statement followed by the name of the table.
+在指定列之后，你需要使用 `FROM` 语句指明你想从哪个表中获取记录，然后跟着是表的名称。
 
-We'll talk more about tables later, but for now, you can think about them like structs or objects. For example, the `users` table might have 3 fields:
+我们稍后会更详细地谈及表，但现在你可以将其想象成结构体或对象。例如，`users` 表可能有 3 个成员：
 
 -   `id`
 -   `name`
 -   `balance`
 
-And finally, _all_ statements end with a semi-colon `;`.
+最后，**所有**语句都以分号 `;` 结尾。
 
-### Which Databases Use SQL?
+### 哪些数据库使用 SQL？
 
-SQL is just a query language. You typically use it to interact with a specific database technology. For example:
+SQL 仅是查询语言。你通常需要借助特定的数据库技术来操作。例如：
 
 -   [SQLite][19]
 -   [PostgreSQL][20]
@@ -97,7 +97,7 @@ SQL is just a query language. You typically use it to interact with a specific d
 -   [CockroachDB][22]
 -   [Oracle][23]
 
-And others.
+等。
 
 Although many different databases use the SQL _language_, most of them will have their own _dialect_. It's critical to understand that not all databases are created equal. Just because one SQL-compatible database does things a certain way, doesn't mean every SQL-compatible database will follow those exact same patterns.
 

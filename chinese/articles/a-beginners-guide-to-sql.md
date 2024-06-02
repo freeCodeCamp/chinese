@@ -99,9 +99,9 @@ SQL 仅是查询语言。你通常需要借助特定的数据库技术来操作�
 
 等。
 
-Although many different databases use the SQL _language_, most of them will have their own _dialect_. It's critical to understand that not all databases are created equal. Just because one SQL-compatible database does things a certain way, doesn't mean every SQL-compatible database will follow those exact same patterns.
+虽然许多数据库使用 SQL **语言**，它们大多还有自己的**方言**。理解并非所有数据库都生而平等这点至关重要。因为一个 SQL 兼容的数据库以某种方式运作并不意味着每个 SQL 兼容的数据库都按照完全相同的模式运作。
 
-#### We're using SQLite
+#### 我们在使用 SQLite
 
 In this course, we'll be using [SQLite][24] specifically. SQLite is great for embedded projects, web browsers, and toy projects. It's lightweight, but has limited functionality compared to the likes of PostgreSQL or MySQL – two of the more common production SQL technologies.
 

@@ -495,37 +495,37 @@ Tushar Roy 讲解 Trie 数据结构
 
 ![](https://miro.medium.com/max/2000/0*VsgMcMV6BniWLJgN.jpg)
 
-\***\*Take notes\*\***. I always keep a detailed log of my interviews. Since most of your interview sessions are back-to-back, the only time you can take notes is during bathroom breaks. :) Bring your phone and quickly jot down a few notes of the questions and your approach so you can remind yourself after you are done for the day. This should take no more than 1 min.
+**记笔记**. 我总是详细记录我的面试。因为大多数面试都是连续进行的，所以你唯一能做笔记的时间就是上厕所的时候。带上你的手机，快速记下一些面试时收到的提问和你的解决方法，这样你就可以在完成一天的面试后让自己回想起来这些。这应该不超过1分钟。
 
-\***\*Eat a light lunch.\*\*** It is pretty hard not to overeat at lunch because many top tech companies have awesome free food! Facebook even has free ice cream! While it is tempting to try all the free food while you are there, you need to remember \***\*you are not there to eat just once\*\*** but to interview and \***\*get the job, so that you can eat there every single day\*\***!
+**吃一顿清淡的午餐.** 午餐时不吃得过多是很难的，因为许多顶级科技公司都有很棒的免费食物!Facebook甚至还有免费的冰淇淋!虽然你很想在那里品尝所有的免费食物，但你需要记住，**你去那里不是只为了吃一次很棒的免费午餐**，而是去面试，然后**得到这份工作，这样你就可以每天都在那里吃饭了**。
 
-Two reasons to not overeat: first, you want to stay alert in the afternoon session and not feel drowsy. Second, you want to spend most of the time chatting with your lunch buddy. While for some companies (Google/Facebook), your lunch buddy’s feedback is not part of the offer decision, many times, they are senior folks in the firms so their opinions may matter and you want to leave a good impression.
+不要暴饮暴食的两个原因:第一，你需要在下午的会议上保持清醒，而不是感到昏昏欲睡。第二，你需要花大部分时间和你的午餐伙伴聊天。虽然在一些公司(谷歌/Facebook)，你的午餐伙伴的反馈不是决定offer的一部分，但很多时候，他们是公司的高层，所以他们的意见可能很重要，而你需要给他们留下好印象。
 
 **上厕所**。每次面试结束后，一定要去一下洗手间。不幸的是，这些45-60分钟的面试通常是连续的，中间没有休息时间。所以你一定要在下次面试开始前去一趟卫生间。你想要能够走路和伸展一下你的腿，更重要的是，洗干净你的手和脸，这样你就可以神清气爽地去参加下一次面试。不要休息太久，因为休息时间会占用你接下来的45分钟。
 
-* * * \ \ \ \ * * * * *做笔记。我总是详细记录我的面试。因为大多数面试都是连续进行的，所以你唯一能做笔记的时间就是上厕所的时候。带上你的手机，快速记下一些问题和你的方法，这样你就可以在完成一天的工作后提醒自己。这应该不超过1分钟。
-
-吃一顿清淡的午餐。午餐时不吃得过饱是很难的，因为许多顶级科技公司都有很棒的免费食物!Facebook甚至还有免费的冰淇淋!虽然你很想在那里品尝所有的免费食物，但你需要记住，你不是去那里只吃一次，而是去面试，然后得到这份工作，这样你就可以每天都在那里吃饭了。
-
-不要暴饮暴食的两个原因:首先，你想在下午的会议上保持清醒，而不是感到昏昏欲睡。其次，你想花大部分时间和你的午餐伙伴聊天。虽然在一些公司(谷歌/Facebook)，你的午餐伙伴的反馈不是决定offer的一部分，但很多时候，他们是公司的高层，所以他们的意见可能很重要，而你想给他们留下好印象。
-
 ![](https://miro.medium.com/max/1024/0*TBXEsZ8Nnx8eWzk-.jpg)
 
-\***\*Pack some snacks\*\***. On the flip side to the last point, for some of my on-site interviews, either by design or due to time conflicts, the lunch is scheduled at 1:30–2 pm or skipped altogether! I would be so hungry by then and would be running on fumes. So I learned to always pack a granola bar and a few pieces of chocolate with me so that I could take a few quick bites in between interviews.
+### 带些零食
 
-\***\*Bring a few resumes\*\***: Yes, most interviewers would indeed bring a copy of your resume with them. However, occasionally I encountered interviewers who didn’t bring a copy of my resume with them, so I just gave them a copy. For tech interviews, it probably doesn’t matter that much, but it is a nice gesture.
+与上一点相反，在我参加的一些现场面试中，不管是有意安排还是因为时间冲突，午餐时间有时会被安排在下午1:30-2:00，有时甚至会被直接跳过！那时我会饿到几乎撑不住了，所以我学会了随身带一根麦片棒和几块巧克力，这样可以在面试间隙快速吃几口。
 
-\***\*Post mortem analysis\*\***. After you are done with the interviews for the day, don’t relax right away. While your memory is still fresh, go back to the hotel/home and immediately jot down as much detail about the interviews as you can, including interviewers’ names/background, all the questions asked, your approaches, interviewers’ answers to your questions, etc. Do this electronically (not on a paper notepad) so it is easier to search and archive later.
+### 带几份简历
 
-Also, at a later time, revisit all the interview questions, get optimized solutions, and think about how you can improve your performance next time. If you find the interview questions on LC, be sure to tag the questions with the company names, so others can benefit from your experience.
+虽然大多数面试官确实会带上一份你的简历，但偶尔我会遇到没带简历的面试官，所以我会递给他们一份。对于技术面试，这可能并不是特别重要，但这是一个贴心的举动。
+
+### 事后分析
+
+当天的面试结束后不要马上放松，你需要在回到酒店或家里后，趁着记忆还比较新，立刻尽可能详细地记录面试情况，包括面试官的姓名/背景、所有提问、你的应对方法、面试官对你提问的回答等。用电子方式记录（而不是纸质笔记），这样以后更容易搜索和存档。
+
+之后，你需要再次回顾所有的面试问题，找到优化的解决方案，并思考如何在下次面试中提升自己的表现。如果在LeetCode上找到相应的面试问题，务必将问题标注上公司名称，以便其他人从你的经验中受益。
 
 ![](https://miro.medium.com/max/2000/0*m4TbZx-yWlVl0HCy.jpg)
 
-The above are just tips and tricks that help you tip the scale in your favor a little. You still need to practice the A&DS problem intensively and learn to quickly identify an approach to each problem.
+以上只是一些小技巧，可以稍微增加你的胜算。你仍然需要大量练习算法和数据结构问题，学习快速识别每个问题的解决方法。
 
-For example, know when do use BFS or DFS in a tree/graph, when to use recursive vs iterative algorithms, when to sort or index data before processing, etc. And ALWAYS know the big O time and space complexity of your algorithms. I started interview preparation in late May, did my first phone interview in late June and finished my last onsite interviews in late-August — three of the most intensive months of my life.
+例如，了解在树/图中何时使用BFS或DFS，何时使用递归与迭代算法，何时在处理数据之前进行排序或建立索引等。并且一定要熟知你使用的算法的时间和空间复杂度。我从5月底开始准备面试，6月底进行了第一次电话面试，8月底完成了最后的现场面试——这是我生命中最紧张的三个月。
 
-If any of you ask me for specific interview questions that I encountered, unfortunately, I can’t disclose them here. But I have tagged all relevant interview questions on LeetCode, as a way to give back to the online community anonymously. I hope you will do this as well after your interviews.
+如果你们中有人问我遇到的具体面试问题，很遗憾，我不能在这里透露。但我已经在LeetCode上将所有相关的面试问题标注了公司名称，作为对在线社区的匿名回馈。我希望你们在面试后也能这样做。
 
 # Step 5. Offer谈判和团队匹配
 

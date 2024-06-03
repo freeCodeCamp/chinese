@@ -101,30 +101,30 @@ SQL 仅是查询语言。你通常需要借助特定的数据库技术来操作�
 
 虽然许多数据库使用 SQL **语言**，它们大多还有自己的**方言**。理解并非所有数据库都生而平等这点至关重要。因为一个 SQL 兼容的数据库以某种方式运作并不意味着每个 SQL 兼容的数据库都按照完全相同的模式运作。
 
-#### 我们在使用 SQLite
+**我们在使用 SQLite**
 
-In this course, we'll be using [SQLite][24] specifically. SQLite is great for embedded projects, web browsers, and toy projects. It's lightweight, but has limited functionality compared to the likes of PostgreSQL or MySQL – two of the more common production SQL technologies.
+这节课中，我们将特别使用 [SQLite][24]。SQLite SQLite 非常适合用于嵌入式项目、网页浏览器和小型项目。它很轻量，但与 PostgreSQL 或 MySQL 等常见的生产级 SQL 技术相比，功能有限。
 
-And I'll make sure to point out to you whenever some functionality we're working with is unique to SQLite.
+我会确保指出哪些在我们处理的功能是 SQLite 特有的。
 
 ## NoSQL vs SQL
 
-When talking about SQL databases, we also have to mention the elephant in the room: [NoSQL][25].
+在谈及 SQL 数据库时,我们也无法对 [NoSQL][25] 视而不见。
 
-To put it simply, a NoSQL database is a database that does not use SQL (Structured Query Language). Each NoSQL typically has its own way of writing and executing queries. For example, [MongoDB][26] uses MQL (MongoDB Query Language) and [ElasticSearch][27] simply has a JSON API.
+简单地说，NoSQL 数据库就是没有使用 SQL (结构化查询语言) 的数据库。每种 NoSQL 数据库通常都有自己独特的编写和查询方式。例如，[MongoDB][26] 使用 MQL（MongoDB 查询语言），而 [ElasticSearch][27] 则简单地提供 JSON API。
 
-While most relational databases are fairly similar, NoSQL databases tend to be fairly unique and are used for more niche purposes. Some of the main differences between a SQL and NoSQL database are:
+在关系数据库相当类似的同时，NoSQL 数据库往往具有独特的特性，并且通常用于更为特定的用途。SQL 数据库和 NoSQL 数据库之间的一些主要区别如下：
 
-1.  NoSQL databases are usually non-relational, SQL databases are usually [relational][28] (we'll talk more about what this means later).
-2.  SQL databases usually have a defined schema, NoSQL databases usually have dynamic schema.
-3.  SQL databases are table-based, NoSQL databases have a variety of different storage methods, such as document, key-value, graph, wide-column, and more.
+1.  NoSQL 数据库通常是非关系型的，而 SQL 数据库通常是[关系型][28]的（我们稍后会详细讨论这意味着什么）。
+2.  SQL 数据库通常有已定义的模式，而 NoSQL 数据库通常具有动态模式。
+3.  SQL 数据库是基于表的，而 NoSQL 数据库有多种不同的存储方法，如文档型、键值型、图型、宽列型等。
 
-### Types of NoSQL databases
+### NoSQL 数据库的种类
 
--   [Document Database][29]
--   [Key-Value Store][30]
--   [Wide-Column][31]
--   [Graph][32]
+-   [文档型数据库][29]
+-   [键值存储数据库][30]
+-   [宽列存储数据库][31]
+-   [图数据库][32]
 
 A few of the most popular NoSQL databases are:
 

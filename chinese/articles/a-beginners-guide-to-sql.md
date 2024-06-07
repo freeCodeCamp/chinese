@@ -11,18 +11,15 @@ September 5, 2023 / [#Sql][1]
 
 <!-- more -->
 
-# The SQL Handbook – A Free Course for Web Developers
 # SQL 手册 - 面向 Web 开发者的免费课程
 
-![Lane Wagner](https://www.freecodecamp.org/news/content/images/size/w60/2023/02/IO68jWb2_400x400.jpeg)
+[![Lane Wagner](https://www.freecodecamp.org/news/content/images/size/w60/2023/02/IO68jWb2_400x400.jpeg "Lane Wagner")][2]
 
-[Lane Wagner][2]
+![SQL 手册 - 面向 Web 开发者的免费课程](https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/The-SQL-Handbook-Cover.png)
 
-  ![SQL 手册 - 面向 Web 开发者的免费课程](https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/The-SQL-Handbook-Cover.png)
+当前 SQL 已遍布各地。无论你在[学习后端开发][3]，数据工程，DevOps 或数据科学，SQL 将始终是你会想放进工具皮带中的一项技能
 
-当前 SQL 已遍布各种地方。无论你在[学习后端开发][3]，数据工程，DevOps 或数据科学，SQL 将始终是你想放进工具皮带中的一项技能
-
-这是一个开放免费的文字版手册。如果你想开始学习，就下拉开始阅读。不过眼下还有两个其他选择：
+这是一个开放免费的文字版手册。如果你想学习，就下拉继续阅读。不过眼下还有两个其他选择：
 
 1.  试一试由 [Boot.dev][5] 提供的 [SQL 课程][4]交互版，完成编程挑战和项目
 2.  观看 FreeCodeCamp 在 YouTube 频道的视频流程
@@ -40,46 +37,46 @@ September 5, 2023 / [#Sql][1]
 -   [章节 10: 如何在 SQL 中连接复数个表][15]
 -   [章节 11: 数据库性能][16]
 
-## 介绍
+## 章节 1: 介绍
 
-结构化查询语言，或者说 [SQL][17], 是用于管理和操作[关系数据库][18]的主要编程语言。SQL 可以执行各种操作，如创建、更新、读取和删除数据库中的记录。
+结构化查询语言(Structured Query Language)，或者说 [SQL][17]，是用于管理和操作[关系数据库][18]的主要编程语言。SQL 可以执行各种操作，如创建、更新、读取和删除数据库中的记录。
 
 
-### 什么是 SQL SELECT 语句？
+### SQL 的 SELECT 语句是什么？
 
-让我们从头开始写一个自己的 SQL 语句。`SELECT` 语句是 SQL中最常用的语句，经常被叫作“查询”。它用于从单张或多张表中检索数据。标准的 `SELECT` 语句**不会**改变数据库的状态。
-
-```SQL
-SELECT id from users;
-```
-
-**如何选取单个列**
-
-`SELECT` 语句以关键词 `SELECT` 开头，紧跟着你想检索的列。
+让我们从头开始写一个 SQL 语句。`SELECT` 语句是 SQL 中最常见的语句，它经常被叫作“查询(query)”。它用于从一至多个表中检索数据。标准的 `SELECT` 语句**不会**改变数据库的状态。
 
 ```SQL
 SELECT id from users;
 ```
 
-**如何选取复数个列**
+#### 如何选取单个字段(field)
 
-如果你想选取超过一个列，你可以像这样用逗号分隔各个列：
+`SELECT` 语句以关键词 `SELECT` 开头，紧跟着是你想检索的字段。
+
+```SQL
+SELECT id from users;
+```
+
+#### 如何选取复数个字段
+
+如果你想选取超过一个字段，你可以用逗号分隔各个字段。
 
 ```SQL
 SELECT id, name from users;
 ```
 
-**如何选取所有列**
+#### 如何选取所有字段
 
-如果你想选取一条记录中的**每个**列，你可以使用简写的 `*` 语法。
+如果你想选取一条记录中的**每个**字段，你可以使用 `*` 简写语法。
 
 ```SQL
 SELECT * from users;
 ```
 
-在指定列之后，你需要使用 `FROM` 语句指明你想从哪个表中获取记录，然后跟着是表的名称。
+在指定字段之后，你需要使用 `FROM` 语句指明你想从哪个表中获取记录，然后是表的名称。
 
-我们稍后会更详细地谈及表，但现在你可以将其想象成结构体或对象。例如，`users` 表可能有 3 个成员：
+我们稍后会更详细地讲解表，但现在你可以将其想象成结构体或对象。例如，`users` 表可能有 3 个字段：
 
 -   `id`
 -   `name`
@@ -89,7 +86,7 @@ SELECT * from users;
 
 ### 哪些数据库使用 SQL？
 
-SQL 仅是查询语言。你通常需要借助特定的数据库技术来操作。例如：
+SQL 仅是查询语言。你通常需要借助特定的数据库技术来操作。例如
 
 -   [SQLite][19]
 -   [PostgreSQL][20]
@@ -99,34 +96,34 @@ SQL 仅是查询语言。你通常需要借助特定的数据库技术来操作�
 
 等。
 
-虽然许多数据库使用 SQL **语言**，它们大多还有自己的**方言**。理解并非所有数据库都生而平等这点至关重要。因为一个 SQL 兼容的数据库以某种方式运作并不意味着每个 SQL 兼容的数据库都按照完全相同的模式运作。
+虽然许多数据库使用 SQL **语言**，但它们大多还有自己的**方言**。理解数据库并非都“生而平等”这点至关重要，因为当一个 SQL 兼容的数据库以某种方式运作是，并不意味着每个 SQL 兼容的数据库都按照完全相同的模式运作。
 
-**我们在使用 SQLite**
+#### 我们在使用 SQLite
 
-这节课中，我们将特别使用 [SQLite][24]。SQLite SQLite 非常适合用于嵌入式项目、网页浏览器和小型项目。它很轻量，但与 PostgreSQL 或 MySQL 等常见的生产级 SQL 技术相比，功能有限。
+这节课中，我们将特别地使用 [SQLite][24]。SQLite 非常适合用于嵌入式项目、网页浏览器和小型项目。它很轻量，但与 PostgreSQL 或 MySQL 等常见的生产级 SQL 技术相比，功能有限。
 
-我会确保指出哪些在我们处理的功能是 SQLite 特有的。
+我将确保在下文指出哪些我们在使用的功能是 SQLite 特有的。
 
 ## NoSQL vs SQL
 
 在谈及 SQL 数据库时,我们也无法对 [NoSQL][25] 视而不见。
 
-简单地说，NoSQL 数据库就是没有使用 SQL (结构化查询语言) 的数据库。每种 NoSQL 数据库通常都有自己独特的编写和查询方式。例如，[MongoDB][26] 使用 MQL（MongoDB 查询语言），而 [ElasticSearch][27] 则简单地提供 JSON API。
+简单地说，NoSQL 数据库就是没有使用 SQL (结构化查询语言) 的数据库。每种 NoSQL 数据库通常都有自己独特的编写和查询方式。例如，[MongoDB][26] 使用 MQL（MongoDB 查询语言），而 [ElasticSearch][27] 则仅提供了 JSON API。
 
-在关系数据库相当类似的同时，NoSQL 数据库往往具有独特的特性，并且通常用于更为特定的用途。SQL 数据库和 NoSQL 数据库之间的一些主要区别如下：
+在关系数据库之间相当类似的同时，NoSQL 数据库往往具有独特的特性，并且通常用于更为特定的用途。SQL 数据库和 NoSQL 数据库之间的一些主要区别如下：
 
-1.  NoSQL 数据库通常是非关系型的，而 SQL 数据库通常是[关系型][28]的（我们稍后会详细讨论这意味着什么）。
+1.  NoSQL 数据库通常是非关系型的，而 SQL 数据库通常是[关系型][18]的（我们稍后会详细讨论这意味着什么）。
 2.  SQL 数据库通常有已定义的模式，而 NoSQL 数据库通常具有动态模式。
-3.  SQL 数据库是基于表的，而 NoSQL 数据库有多种不同的存储方法，如文档型、键值型、图型、宽列型等。
+3.  SQL 数据库是基于表的，而 NoSQL 数据库有多种不同的存储方法，如文档型、键值型、图型、宽表型等。
 
 ### NoSQL 数据库的种类
 
 -   [文档型数据库][29]
 -   [键值存储数据库][30]
--   [宽列存储数据库][31]
+-   [宽表存储数据库][31]
 -   [图数据库][32]
 
-A few of the most popular NoSQL databases are:
+一些最受欢迎的 NoSQL 数据库包括：
 
 -   [MongoDB][33]
 -   [Cassandra][34]
@@ -134,45 +131,45 @@ A few of the most popular NoSQL databases are:
 -   [DynamoDB][36]
 -   [ElasticSearch][37]
 
-### Comparing SQL Databases
+### 比较 SQL 数据库
 
-Let's dive deeper and talk about some of the popular SQL Databases and what makes them different from one another. Some of the most popular SQL Databases right now are:
+让我们深入探讨一些流行的 SQL 数据库，以及它们之间的区别。目前最流行的 SQL 数据库有：
 
 -   [PostgreSQL][38]
 -   [MySQL][39]
 -   [Microsoft SQL Server][40]
 -   [SQLite][41]
--   [And many others][42]
+-   [以及更多][42]
 
-Source: [db-engines.com][43]
+来源：[db-engines.com][43]（排序不具备功能性意义）
 
-While all of these Databases use SQL, each database defines specific rules, practices, and strategies that separate them from their competitors.
+虽然这里所有的数据库都使用 SQL，但每个数据库都定义了特有的规则、实践和策略，使它们有别于竞争对手。
 
 #### SQLite vs PostgreSQL
 
-Personally, SQLite and PostgreSQL are my favorites from the list above. Postgres is a very powerful, open-source, production-ready SQL database. SQLite is a lightweight, embeddable, open-source database. I usually choose one of these technologies if I'm doing SQL work.
+个人来讲，在上面列出的技术中，SQLite 和 PostgreSQL 是我的最爱。Postgres 是个非常强大、开源且可用于生产环境的 SQL 数据库。SQLite 是个轻量级、可嵌入的开源数据库。当我在做 SQL 时，我通常会选择这些技术之一。
 
-SQLite is a serverless database management system (DBMS) that has the ability to run within applications, whereas PostgreSQL uses a Client-Server model and requires a server to be installed and listening on a network, similar to an HTTP server.
+SQLite 是一个无服务器(serverless)的数据库管理系统(database management system, DBMS)，可以在应用程序内部运行，而 PostgreSQL 使用客户端-服务器(Client-Server)模型，类似于 HTTP 服务器，都需要服务器安装并在网络上监听。
 
-See a full [comparison here][44].
+请参阅[完整版][44]。
 
-Again, in this course we will be working with SQLite, a lightweight and simple database. For most [backend][45] web servers, PostgreSQL is a more production-ready option, but SQLite is great for learning and for small systems.
+重申一遍，在本课程中我们将使用 SQLite，这是一种轻量级且简单的数据库。对于大多数[后端][45] Web 服务器来说，PostgreSQL 是一个更适合生产环境的选择，但 SQLite 非常适合学习和小型系统。
 
-## Chapter 2: SQL Tables
+## SQL 数据表
 
-The `CREATE TABLE` statement is used to create a new table in a database.
+`CREATE TABLE` 语句用于在数据库中创建新表。
 
-### How to use the `CREATE TABLE` statement
+### 如何使用 `CREATE TABLE` 语句
 
-To create a table, use the `CREATE TABLE` statement followed by the name of the table and the fields you want in the table.
+使用 `CREATE TABLE` 语句以创建表，后面跟着你想要的表名和字段名。
 
 ```SQL
 CREATE TABLE employees (id INTEGER, name TEXT, age INTEGER, is_manager BOOLEAN, salary INTEGER);
 ```
 
-Each field name is followed by its datatype. We'll get to data types in a minute.
+每个字段名称后面跟着它的数据类型。我们马上就会讲到它。
 
-It's also acceptable and common to break up the `CREATE TABLE` statement with some whitespace like this:
+也可以如下文示例一样使用空白字符来分隔 `CREATE TABLE` 语句。
 
 ```SQL
 CREATE TABLE employees(
@@ -184,17 +181,17 @@ CREATE TABLE employees(
 );
 ```
 
-### How to Alter Tables
+### 如何修改表
 
-We often need to alter our database schema without deleting it and re-creating it. Imagine if Twitter deleted its database each time it needed to add a feature, that would be a disaster! Your account and all your tweets would be wiped out on a daily basis.
+我们经常需要在不删除它并重新创建下修改数据库架构(database schema)。想象一下，如果 Twitter 每次需要添加一个功能时就得删除它的数据库，那将是一场灾难！你的账户和所有推文将每天都会被清除。
 
-Instead, we can use use the `ALTER TABLE` statement to make changes in place without deleting any data.
+或者，我们可以使用 `ALTER TABLE` 语句在不删除任何数据的情况下进行更改。
 
-#### How to use `ALTER TABLE`
+#### 如何使用 `ALTER TABLE`
 
-With SQLite an `ALTER TABLE` statement allows you to:
+在 SQLite 中，`ALTER TABLE` 语句允许你
 
-1.  Rename a table or column, which you can do like this:
+1. 重命名表或列
 
 ```SQL
 ALTER TABLE employees
@@ -204,7 +201,7 @@ ALTER TABLE contractors
 RENAME COLUMN salary TO invoice;
 ```
 
-2.  ADD or DROP a column, which you can do like this:
+2. **添加**或**删除**列
 
 ```SQL
 ALTER TABLE contractors
@@ -214,25 +211,31 @@ ALTER TABLE contractors
 DROP COLUMN is_manager;
 ```
 
-### Intro to Migrations
+### 了解迁移
 
 A database [migration][46] is a set of changes to a relational database. In fact, the `ALTER TABLE` statements we did in the last exercise were examples of migrations.
+数据库[迁移][46]是对关系数据库的一组更改。实际上，我们在上一节练习中所做的 `ALTER TABLE` 语句就是迁移的例子。
 
 Migrations are helpful when transitioning from one state to another, fixing mistakes, or adapting a database to changes.
+当从一个状态过渡到另一个状态、纠正错误或使数据库适应变化时，迁移是很有帮助的。
 
 Good migrations are small, incremental and ideally reversible changes to a database. As you can imagine, when working with large databases, making changes can be scary. We have to be careful when writing database migrations so that we don't break any systems that depend on the old database schema.
+好的迁移是对数据库的小、增量和理想情况下是可逆的更改。你可以想象，当处理大型数据库时，进行更改可能会令人恐惧。我们在编写数据库迁移时必须小心，以免破坏依赖旧数据库架构的任何系统。
 
-#### Example of a bad migration
+#### Example of a bad migration 迁移的不良示例
 
 If a backend server periodically runs a query like `SELECT * FROM people`, and we execute a database migration that alters the table name from `people` to `users` _without updating the code_, the application will break. It will try to grab data from a table that no longer exists.
+如果后端服务器定期运行像 `SELECT * FROM people` 这样的查询，我们执行了一个更改表名从 `people` 到 `users` 的数据库迁移 _而没有更新代码_，应用程序将会崩溃。它将尝试从一个不再存在的表中获取数据。
 
 A simple solution to this problem would be to deploy new code that uses a new query:
+解决这个问题的一个简单方法是部署使用新查询的新代码：
 
 ```sql
 SELECT * FROM users;
 ```
 
 And we would deploy that code to production immediately following the migration.
+且我们将在迁移后立即将该代码部署到生产环境。
 
 ### SQL Data Types
 
@@ -880,8 +883,8 @@ FROM employees;
 Which returns:
 
 | SUM(SALARY) |
-| --- |
-| 2483 |
+| ----------- |
+| 2483        |
 
 ### The `MAX` function
 
@@ -1169,11 +1172,11 @@ To be compliant with [first normal form][70], a database table simply needs to f
 
 #### Example of NOT 1st normal form
 
-| name | age | email |
-| --- | --- | --- |
-| Lane | 27 | lane@boot.dev |
-| Lane | 27 | lane@boot.dev |
-| Allan | 27 | allan@boot.dev |
+| name  | age  | email          |
+| ----- | ---- | -------------- |
+| Lane  | 27   | lane@boot.dev  |
+| Lane  | 27   | lane@boot.dev  |
+| Allan | 27   | allan@boot.dev |
 
 This table does not adhere to 1NF. It has two identical rows, so there isn't a unique primary key for each row.
 
@@ -1181,11 +1184,11 @@ This table does not adhere to 1NF. It has two identical rows, so there isn't a u
 
 The simplest way (but not the only way) to get into first normal form is to add a unique `id` column.
 
-| id | name | age | email |
-| --- | --- | --- | --- |
-| 1 | Lane | 27 | lane@boot.dev |
-| 2 | Lane | 27 | lane@boot.dev |
-| 3 | Allan | 27 | allan@boot.dev |
+| id   | name  | age  | email          |
+| ---- | ----- | ---- | -------------- |
+| 1    | Lane  | 27   | lane@boot.dev  |
+| 2    | Lane  | 27   | lane@boot.dev  |
+| 3    | Allan | 27   | allan@boot.dev |
 
 It's worth noting that if you create a "primary key" by ensuring that two columns are always "unique together" that works too.
 
@@ -1204,10 +1207,10 @@ A table in [second normal form][71] follows all the rules of 1st normal form, an
 In this table, the primary key is a combination of `first_name` + `last_name`.
 
 | first\_name | last\_name | first\_initial |
-| --- | --- | --- |
-| Lane | Wagner | l |
-| Lane | Small | l |
-| Allan | Wagner | a |
+| ----------- | ---------- | -------------- |
+| Lane        | Wagner     | l              |
+| Lane        | Small      | l              |
+| Allan       | Wagner     | a              |
 
 This table does not adhere to 2NF. The `first_initial` column is entirely dependent on the `first_name` column, rendering it redundant.
 
@@ -1216,15 +1219,15 @@ This table does not adhere to 2NF. The `first_initial` column is entirely depend
 One way to convert the table above to 2NF is to add a new table that maps a `first_name` directly to its `first_initial`. This removes any duplicates:
 
 | first\_name | last\_name |
-| --- | --- |
-| Lane | Wagner |
-| Lane | Small |
-| Allan | Wagner |
+| ----------- | ---------- |
+| Lane        | Wagner     |
+| Lane        | Small      |
+| Allan       | Wagner     |
 
 | first\_name | first\_initial |
-| --- | --- |
-| Lane | l |
-| Allan | a |
+| ----------- | -------------- |
+| Lane        | l              |
+| Allan       | a              |
 
 #### 2NF is _usually_ a good idea
 
@@ -1246,11 +1249,11 @@ Notice that this is only slightly different from second normal form. In second n
 
 In this table, the primary key is simply the `id` column.
 
-| id | name | first\_initial | email |
-| --- | --- | --- | --- |
-| 1 | Lane | l | [lane.works@example.com][73] |
-| 2 | Breanna | b | [breanna@example.com][74] |
-| 3 | Lane | l | [lane.right@example.com][75] |
+| id   | name    | first\_initial | email                        |
+| ---- | ------- | -------------- | ---------------------------- |
+| 1    | Lane    | l              | [lane.works@example.com][73] |
+| 2    | Breanna | b              | [breanna@example.com][74]    |
+| 3    | Lane    | l              | [lane.right@example.com][75] |
 
 This table is in 2nd normal form because `first_initial` is not dependent on a part of the primary key. However, because it is dependent on the `name` column it doesn't adhere to 3rd normal form.
 
@@ -1258,16 +1261,16 @@ This table is in 2nd normal form because `first_initial` is not dependent on a p
 
 The way to convert the table above to 3NF is to add a new table that maps a `name` directly to its `first_initial`. Notice how similar this solution is to 2NF.
 
-| id | name | email |
-| --- | --- | --- |
-| 1 | Lane | [lane.works@example.com][76] |
-| 2 | Breanna | [breanna@example.com][77] |
-| 3 | Lane | [lane.right@example.com][78] |
+| id   | name    | email                        |
+| ---- | ------- | ---------------------------- |
+| 1    | Lane    | [lane.works@example.com][76] |
+| 2    | Breanna | [breanna@example.com][77]    |
+| 3    | Lane    | [lane.right@example.com][78] |
 
-| name | first\_initial |
-| --- | --- |
-| Lane | l |
-| Breanna | b |
+| name    | first\_initial |
+| ------- | -------------- |
+| Lane    | l              |
+| Breanna | b              |
 
 #### 3NF is _usually_ a good idea
 
@@ -1289,12 +1292,12 @@ Only in rare cases does a table in third normal form not meet the requirements o
 
 #### Example of 3rd NF, but not Boyce-Codd NF
 
-| release\_year | release\_date | sales | name |
-| --- | --- | --- | --- |
-| 2001 | 2001-01-02 | 100 | Kiss me tender |
-| 2001 | 2001-02-04 | 200 | Bloody Mary |
-| 2002 | 2002-04-14 | 100 | I wanna be them |
-| 2002 | 2002-06-24 | 200 | He got me |
+| release\_year | release\_date | sales | name            |
+| ------------- | ------------- | ----- | --------------- |
+| 2001          | 2001-01-02    | 100   | Kiss me tender  |
+| 2001          | 2001-02-04    | 200   | Bloody Mary     |
+| 2002          | 2002-04-14    | 100   | I wanna be them |
+| 2002          | 2002-06-24    | 200   | He got me       |
 
 The interesting thing here is that there are 3 possible primary keys:
 
@@ -1310,12 +1313,12 @@ This table is not in Boyce-Codd's normal form because `release_year` is entirely
 
 The easiest way to fix the table in our example is to simply remove the duplicate data from `release_date`. Let's make that column `release_day_and_month`.
 
-| release\_year | release\_day\_and\_month | sales | name |
-| --- | --- | --- | --- |
-| 2001 | 01-02 | 100 | Kiss me tender |
-| 2001 | 02-04 | 200 | Bloody Mary |
-| 2002 | 04-14 | 100 | I wanna be them |
-| 2002 | 06-24 | 200 | He got me |
+| release\_year | release\_day\_and\_month | sales | name            |
+| ------------- | ------------------------ | ----- | --------------- |
+| 2001          | 01-02                    | 100   | Kiss me tender  |
+| 2001          | 02-04                    | 200   | Bloody Mary     |
+| 2002          | 04-14                    | 100   | I wanna be them |
+| 2002          | 06-24                    | 200   | He got me       |
 
 #### BCNF is _usually_ a good idea
 
@@ -1541,11 +1544,11 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [3]: https://www.boot.dev/
 [4]: https://boot.dev/learn/learn-gsql
 [5]: https://boot.dev/
-[6]: #介绍
-[7]: #SQL数据表
-[8]: #chapter3constraints
-[9]: #chapter4crudoperationsinsql
-[10]: #chapter5basicsqlqueries
+[6]: #%E7%AB%A0%E8%8A%82%201%3A%20%E4%BB%8B%E7%BB%8D	"章节 1: 介绍"
+[7]: #%E7%AB%A0%E8%8A%82%202%3A%20SQL%20%E6%95%B0%E6%8D%AE%E8%A1%A8
+[8]: #%E7%AB%A0%E8%8A%82%203%3A%20%E7%BA%A6%E6%9D%9F
+[9]: #%E7%AB%A0%E8%8A%82%204%3A%20CRUD%20%E6%93%8D%E4%BD%9C
+[10]: #%E7%AB%A0%E8%8A%82%205%3A%20%E5%9F%BA%E7%A1%80%20SQL%20%E6%9F%A5%E8%AF%A2
 [11]: #chapter6howtostructurereturndatainsql
 [12]: #chapter7howtoperformaggregationsinsql
 [13]: #chapter8sqlsubqueries
@@ -1553,21 +1556,21 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [15]: #chapter10howtojointablesinsql
 [16]: #chapter11databaseperformance
 [17]: https://www.freecodecamp.org/news/what-is-sql-database-definition-for-beginners/
-[18]: https://cloud.google.com/learn/what-is-a-relational-database
+[18]: https://www.oracle.com/cn/database/what-is-a-relational-database/
 [19]: https://www.sqlite.org/index.html
 [20]: https://www.postgresql.org/
-[21]: https://www.mysql.com/
+[21]: https://www.mysql.com/cn/
 [22]: https://www.cockroachlabs.com/
-[23]: https://www.oracle.com/database/
-[24]: https://www.sqlite.org/index.html
-[25]: https://en.wikipedia.org/wiki/NoSQL
-[26]: https://www.mongodb.com/
-[27]: https://www.elastic.co/
-[28]: https://cloud.google.com/learn/what-is-a-relational-database
-[29]: https://en.wikipedia.org/wiki/Document-oriented_database
-[30]: https://en.wikipedia.org/wiki/Key%E2%80%93value_database
-[31]: https://en.wikipedia.org/wiki/Wide-column_store
-[32]: https://en.wikipedia.org/wiki/Graph_database
+[23]: https://www.oracle.com/cn/database/
+[24]: 19
+[25]: https://www.ibm.com/cn-zh/topics/nosql-databases
+[26]: https://www.mongodb.com/zh-cn
+[27]: https://www.elastic.co/cn/
+[28]: 18
+[29]: https://aws.amazon.com/cn/nosql/document/
+[30]: https://aws.amazon.com/cn/nosql/key-value/
+[31]: https://help.aliyun.com/zh/tablestore/overview-of-widecolumn
+[32]: https://help.aliyun.com/zh/gdb/product-overview/what-is-gdb
 [33]: https://en.wikipedia.org/wiki/MongoDB
 [34]: https://en.wikipedia.org/wiki/Apache_Cassandra
 [35]: https://en.wikipedia.org/wiki/Apache_CouchDB

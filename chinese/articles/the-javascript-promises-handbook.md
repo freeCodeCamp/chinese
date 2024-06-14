@@ -3,7 +3,7 @@
 作者: 乔·阿塔迪（Joe Attardi）
 作者页面: https://www.freecodecamp.org/news/author/joeattardi/
 原始页面: https://www.freecodecamp.org/news/the-javascript-promises-handbook/
-译者: "James Z. Zhang"
+译者: "James-Z-Zhang00"
 reviewer: ""
 ---
 

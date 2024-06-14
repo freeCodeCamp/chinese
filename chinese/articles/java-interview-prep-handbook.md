@@ -3,7 +3,7 @@ title: The Java Interview Prep Handbook – 50 Questions Solved + Code Examples
 author: Vahe Aslanyan
 authorURL: https://www.freecodecamp.org/news/author/vahe/
 originalURL: https://www.freecodecamp.org/news/java-interview-prep-handbook/
-translator: ""
+translator: "James-Z-Zhang00"
 reviewer: ""
 ---
 

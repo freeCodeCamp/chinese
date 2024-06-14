@@ -13,7 +13,7 @@ December 7, 2023 / [#Java][1]
 <!-- more -->
 
 # The Java Interview Prep Handbook – 50 Questions Solved + Code Examples
-# Java 面试准备手册 -- 50个问题解答 + 代码示例
+# Java 面试准备手册 -- 50 个问题解答 + 代码示例
 
 ![Vahe Aslanyan](https://www.freecodecamp.org/news/content/images/size/w60/2023/11/64f8cae0c5f6cb6d0b167833_1689535650919-transformed-p-500.jpeg)
 

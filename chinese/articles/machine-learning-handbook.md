@@ -80,7 +80,7 @@ Image Source: [LunarTech][9]
 
 To make the most out of this handbook, it'll be helpful if you're familiar with some core ML concepts:
 
-### Basic Terminology:
+### Basic Terminology
 
 -   Training Data & Test Data: Datasets used to train and evaluate models.
 -   Features: Variables aiding in predictions, we also call independent variables
@@ -94,7 +94,7 @@ Understanding Overfitting, how it's related to Bias-Variance Tradeoff, and how y
 
 Bias-Variance Trade-Off, Overfitting and Regularization in Machine Learning
 
-Overfitting is an important issue that forms the essential part of every Data Scientist’s and Machine Learning Engineer’s modeling checklist. So, if you are using a Statistical, Econometrical or…
+Overfitting is an important issue that forms the essential part of every Data Scientist’s and Machine Learning Engineer’s modeling checklist. So, if you are using a Statistical, Econometrical or……
 
 ![1*sHhtYhaCe2Uc3IU0IgKwIQ](https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png)Tatev Karen AslanyanTowards Data Science
 
@@ -132,7 +132,7 @@ Or consider email platforms that learn to flag spam through recognizing patterns
 
 On this journey, you'll unravel the fascinating world of ML, one where technology learns and grows from the information it encounters. But before doing so, let's look into some basics in Machine Learning you must know to understand any sorts of Machine Learning model.
 
-### Types of Learning in Machine Learning:
+### Types of Learning in Machine Learning
 
 There are three main ways models can learn:
 
@@ -140,7 +140,7 @@ There are three main ways models can learn:
 -   Unsupervised Learning: Models identify patterns autonomously, where you don't have labeled date (you only got features no response variable, only X)
 -   Reinforcement Learning: Algorithms learn via action feedback.
 
-### Model Evaluation Metrics:
+### Model Evaluation Metrics
 
 In Machine Learning, whenever you are training a model you always must evaluate it. And you'll want to use the most common type of evaluation metrics depending on the nature of your problem.
 
@@ -247,7 +247,7 @@ For detailed article on Linear Regression check out this post:
 
 Complete Guide to Linear Regression
 
-Complete guide to the most popular and simplest Machine Learning approach, Linear Regression., including its Python implementation. The first thing you can read in every statistics book is that correlation is not causation. However, it’s also the first thing many students forget once they see their …
+Complete guide to the most popular and simplest Machine Learning approach, Linear Regression., including its Python implementation. The first thing you can read in every statistics book is that correlation is not causation. However, it’s also the first thing many students forget once they see their ……
 
 ![1*sHhtYhaCe2Uc3IU0IgKwIQ](https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png)Tatev Karen AslanyanTowards AI
 
@@ -549,7 +549,7 @@ The idea behind this method is to calculate the probability of observation belon
 
 ![image-49](https://www.freecodecamp.org/news/content/images/2023/10/image-49.png)
 
-where Y stands for the class of observation, k is the k__th__ class and x1, …, xn stands for feature 1 till feature n, respectively. f\_k(x) = Pr(X = x|Y = k), represents the posterior probability, which like in case of LDA is the density function of **X** for an observation that comes from the k__th__ class (density function of the predictors).
+where Y stands for the class of observation, k is the k__th__ class and x1, ……, xn stands for feature 1 till feature n, respectively. f\_k(x) = Pr(X = x|Y = k), represents the posterior probability, which like in case of LDA is the density function of **X** for an observation that comes from the k__th__ class (density function of the predictors).
 
 If you compare the above expression with the one you saw for LDA, you will see some similarities.
 
@@ -631,7 +631,7 @@ Decision Trees are a supervised and non-parametric Machine Learning learning met
 
 Unlike Linear Regression, or Logistic Regression, Decision Trees are simple and useful model alternatives when the relationship between independent variables and dependent variable is suspected to be non-linear.
 
-Tree-based methods stratify or segment the predictor space into smaller regions. The idea behind building Decision Trees is to divide the predictor space into distinct and mutually exclusive regions X1,X2,….. ,Xp → R\_1,R\_2, …,R\_N where the regions are in the form of boxes or rectangles. These regions are found by recursive binary splitting since minimizing the RSS is not feasible. This approach is often referred to as a greedy approach.
+Tree-based methods stratify or segment the predictor space into smaller regions. The idea behind building Decision Trees is to divide the predictor space into distinct and mutually exclusive regions X1,X2,…….. ,Xp → R\_1,R\_2…… …,R\_N where the regions are in the form of boxes or rectangles. These regions are found by recursive binary splitting since minimizing the RSS is not feasible. This approach is often referred to as a greedy approach.
 
 Decision trees are built by top-down splitting. So, in the beginning, all observations belong to a single region. Then, the model successively splits the predictor space. Each split is indicated via two new branches further down on the tree.
 
@@ -792,7 +792,7 @@ Bagging is also based on the same ideas as the CLT which is one of the most impo
 
 But the idea that is also used in Bagging is that if you take the average of many samples, then the variance is significantly reduced compared to the variance of each of the individual sample based models.
 
-So, given a set of n independent observations Z1,…,Zn, each with variance σ2, the variance of the mean Z ̄ of the observations is given by****σ2/n****. So averaging a set of observations reduces variance.
+So, given a set of n independent observations Z1,……,Zn, each with variance σ2, the variance of the mean Z ̄ of the observations is given by****σ2/n****. So averaging a set of observations reduces variance.
 
 For more Statistical details, check out the following tutorial:
 
@@ -800,7 +800,7 @@ For more Statistical details, check out the following tutorial:
 
 Fundamentals Of Statistics For Data Scientists and Data Analysts
 
-As Karl Pearson, a British mathematician has once stated, Statistics is the grammar of science and this holds especially for Computer and Information Sciences, Physical Science, and Biological…
+As Karl Pearson, a British mathematician has once stated, Statistics is the grammar of science and this holds especially for Computer and Information Sciences, Physical Science, and Biological……
 
 ![1*sHhtYhaCe2Uc3IU0IgKwIQ](https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png)Tatev Karen AslanyanLunarTech
 
@@ -1266,12 +1266,12 @@ Forward Step-Wise Selection can be summarized as follows:
 
 ****Step 1:**** Let M\_0 be the null model, containing no features.
 
-****Step 2:**** For K = 0,…., p-1:
+****Step 2:**** For K = 0,……., p-1:
 
 -   Consider all (p-k) models that contain the variables in M\_k with one additional feature or predictor.
 -   Choose the best model among these p-k models, and define it M\_(k+1) by using performance metrics such as [RSS][32]/[R-squared][33].
 
-****Step 3:**** Select the single model with the best performance among these M\_0,….M\_p models (one with smallest [Cross Validation Error][34], [C\_p][35], [AIC][36] [(Akaike Information Criterion)][37], [BIC][38] (Bayesian Information Criteria)or [adjusted R-squared][39] is your best model M\*).
+****Step 3:**** Select the single model with the best performance among these M\…….M\_p models (one with smallest [Cross Validation Error][34], [C\_p][35], [AIC][36] [(Akaike Information Criterion)][37], [BIC][38] (Bayesian Information Criteria)or [adjusted R-squared][39] is your best model M\*).
 
 So, the idea behind this Selection is to start simple and increase the number of predictors in the model. Per number of predictors, consider all possible combination of variables and select a single best model: M\_k. Then compare all these models with different number of predictors (best M\_ks ) and the one best performing one can be selected.
 
@@ -1281,18 +1281,18 @@ When n < p, so when number of observations is larger than number of predictors i
 
 Consequently, the model removes one by one the variable with the largest p-value and again best model is selected.
 
-Each time, the model is fitted again to identify the least statistically significant variable until the stopping rule is reached. (For example, all p- values need to be smaller then 5%.) Then we compare all these models with different number of predictors (best M\_ks) and select the single model with the best performance among these M\_0,….M\_p models (one with smallest [Cross Validation Error][40], [C\_p][41], [AIC][42] [(Akaike Information Criterion)][43], [BIC][44] (Bayesian Information Criteria)or [adjusted R-squared][45] is your best model M\*).
+Each time, the model is fitted again to identify the least statistically significant variable until the stopping rule is reached. (For example, all p- values need to be smaller then 5%.) Then we compare all these models with different number of predictors (best M\_ks) and select the single model with the best performance among these M\_……,….M\_p models (one with smallest [Cross Validation Error][40], [C\_p][41], [AIC][42] [(Akaike Information Criterion)][43], [BIC][44] (Bayesian Information Criteria)or [adjusted R-squared][45] is your best model M\*).
 
 Backward Step-Wise Feature Selection can be summarized as follows:
 
 ****Step 1:**** Let M\_p be the full model, containing all features.
 
-****Step 2:**** For k= p, p-1 ….,1:
+****Step 2:**** For k= p, p-1 …….,1:
 
 -   Consider all k models that contain all variables except for one of the predictors in M\_k model, for k − 1 features.
 -   Choose the best model among these k models, and define it M\_(k-1) by using performance metrics such as [RSS][46]/[R-squared][47].
 
-****Step 3:**** Select the single model with the best performance among these M\_0,….M\_p models (one with smallest [Cross Validation Error][48], [C\_p][49], [AIC][50][(Akaike Information Criterion)][51], [BIC][52] (Bayesian Information Criteria)or [adjusted R-squared][53] is your best model M\*).
+****Step 3:**** Select the single model with the best performance among these M\…….M\_p models (one with smallest [Cross Validation Error][48], [C\_p][49], [AIC][50][(Akaike Information Criterion)][51], [BIC][52] (Bayesian Information Criteria)or [adjusted R-squared][53] is your best model M\*).
 
 Like Forward Step-wise Selection, the Backward Step-Wise Feature Selection technique searches through only (p+1)/2 models, making it possible to apply in settings where p is too large to apply other selection techniques.
 
@@ -1386,7 +1386,7 @@ If you want to learn regularization in detail, read this tutorial:
 
 Bias-Variance Trade-Off, Overfitting and Regularization in Machine Learning
 
-Overfitting is an important issue that forms the essential part of every Data Scientist’s and Machine Learning Engineer’s modeling checklist. So, if you are using a Statistical, Econometrical or…
+Overfitting is an important issue that forms the essential part of every Data Scientist’s and Machine Learning Engineer’s modeling checklist. So, if you are using a Statistical, Econometrical or……
 
 ![1*sHhtYhaCe2Uc3IU0IgKwIQ](https://miro.medium.com/v2/resize:fill:152:152/1*sHhtYhaCe2Uc3IU0IgKwIQ.png)Tatev Karen AslanyanTowards Data Science
 
@@ -1460,7 +1460,7 @@ Since the mean of highly correlated outcomes has higher variance than the one of
 -   K = N (LOOCV) , larger the K→ higher variance and lower bias
 -   K = 1, smaller the K → lower variance and higher bias
 
-Taking this information into account, we can calculate the performance of the model for various Ks lets say K = 3,5,6,7…,10 or the Type I, Type II, and total model classification error in case of classification model. Then the best performing model’s K can be the optimal K using the idea of [ROC curve][58] (classification case) or the Elbow method (regression case).
+Taking this information into account, we can calculate the performance of the model for various Ks lets say K = 3,5,6,7……,10 or the Type I, Type II, and total model classification error in case of classification model. Then the best performing model’s K can be the optimal K using the idea of [ROC curve][58] (classification case) or the Elbow method (regression case).
 
 ![image-69](https://www.freecodecamp.org/news/content/images/2023/10/image-69.png)
 
@@ -1651,7 +1651,7 @@ This course is also a part of [The Ultimate Data Science Bootcamp][67] which has
 
 Not Just For Tech Giants: Here’s How LunarTech Revolutionizes Data Science and AI Learning
 
-In the digital age, where the world is in constant flux, Tatev Aslanyan and Vahe Aslanyan have united to redefine AI education. In a vibrant digital classroom, a diverse cohort of students, many hailing from non-technical backgrounds, delve into the world of data science. They’re not merely absorbin…
+In the digital age, where the world is in constant flux, Tatev Aslanyan and Vahe Aslanyan have united to redefine AI education. In a vibrant digital classroom, a diverse cohort of students, many hailing from non-technical backgrounds, delve into the world of data science. They’re not merely absorbin……
 
 ![forbes-icon-hires-fau](https://www.forbes.com.au/wp-content/uploads/2022/09/forbes-icon-hires-fau.png?w=192)AJ Ignacio - Brand ContributorForbes Australia
 
@@ -1681,7 +1681,7 @@ Austin, Texas--(Newsfile Corp. - August 25, 2023) - LunarTech, an innovative onl
 
 ][75]
 
-## Connect with Me:
+## Connect with Me
 
 ![Screenshot-2023-10-23-at-6.59.27-PM](https://www.freecodecamp.org/news/content/images/2023/10/Screenshot-2023-10-23-at-6.59.27-PM.png)
 

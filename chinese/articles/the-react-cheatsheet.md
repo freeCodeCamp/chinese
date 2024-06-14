@@ -5,9 +5,9 @@
 
 ![The React Cheatsheet for 2022](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/mugshotbot.com_customize_theme-two_up-mode-light-color-pink-pattern-bubbles-image-9129875b-url-https___freecodecamp.org.png)
 
-你想尽快掌握React吗？
+你想尽快掌握 React 吗？
 
-我整理了一份超级有用的手册，让你在2022年对所有你需要知道的React概念有一个完整的概述。
+我整理了一份超级有用的手册，让你在 2022 年对所有你需要知道的 React 概念有一个完整的概述。
 
 让我们开始吧!
 
@@ -33,7 +33,7 @@
 
 ## React Elements
 
-React elements 的编写就像普通的HTML元素一样。你可以在React中编写任何有效的HTML elements。
+React elements 的编写就像普通的 HTML 元素一样。你可以在 React 中编写任何有效的 HTML elements。
 
 ```jsx
 <h1>My Header</h1>
@@ -41,11 +41,11 @@ React elements 的编写就像普通的HTML元素一样。你可以在React中�
 <button>My button</button>
 ```
 
-我们使用一种叫做 _JSX_ 的功能来编写React elements。
+我们使用一种叫做 _JSX_ 的功能来编写 React elements。
 
-然而，由于JSX实际上只是JavaScript函数（而不是HTML），其语法有点不同。
+然而，由于 JSX 实际上只是 JavaScript 函数（而不是 HTML），其语法有点不同。
 
-与HTML不同，单标签元素（如img元素），必须是自闭的。它们必须以正斜杠`/`结尾。
+与 HTML 不同，单标签元素（如 img 元素），必须是自闭的。它们必须以正斜杠`/`结尾。
 
 ```jsx
 <img src="my-image.png" />
@@ -55,9 +55,9 @@ React elements 的编写就像普通的HTML元素一样。你可以在React中�
 
 ## React Element Attributes
 
-此外，JSX要求其属性使用不同的语法。
+此外，JSX 要求其属性使用不同的语法。
 
-因为JSX实际上是JavaScript，而JavaScript使用骆峰的命名惯例（即 "camelCase"），属性的写法与HTML不同。
+因为 JSX 实际上是 JavaScript，而 JavaScript 使用骆峰的命名惯例（即 "camelCase"），属性的写法与 HTML 不同。
 
 最常见的例子是`class`属性，我们写成`className`。
 
@@ -77,11 +77,11 @@ React elements 的编写就像普通的HTML元素一样。你可以在React中�
 
 ## React Fragments
 
-RReact还为我们提供了一个叫做 _fragment_ 的元素。
+RReact 还为我们提供了一个叫做 _fragment_ 的元素。
 
-React要求所有返回的元素都要在一个 "父（parent）"组件中返回。
+React 要求所有返回的元素都要在一个 "父（parent）"组件中返回。
 
-例如，我们不能从一个组件中返回两个同级别的元素，比如一个h1和一个段落（paragraph）:
+例如，我们不能从一个组件中返回两个同级别的元素，比如一个 h1 和一个段落（paragraph）:
 
 ```ts
 // this syntax is invalid
@@ -93,7 +93,7 @@ function MyComponent() {
 } 
 ```
 
-如果我们不想把我们的元素包裹在像div这样的容器元素中，我们可以使用一个片段:
+如果我们不想把我们的元素包裹在像 div 这样的容器元素中，我们可以使用一个片段:
 
 ```ts
 // valid syntax
@@ -111,14 +111,14 @@ function MyComponent() {
 
 ## React Components
 
-我们可以将各组元素（elements）组织成React组件。
+我们可以将各组元素（elements）组织成 React 组件。
 
-一个基本的函数组件的写法与普通的JavaScript函数类似，但有一些区别。
+一个基本的函数组件的写法与普通的 JavaScript 函数类似，但有一些区别。
 
-1. 组件名称必须以大写字母开头（即MyComponent，而不是myComponent）。
-2. 组件，与JavaScript函数不同，必须返回JSX。
+1. 组件名称必须以大写字母开头（即 MyComponent，而不是 myComponent）。
+2. 组件，与 JavaScript 函数不同，必须返回 JSX。
 
-下面是一个React函数组件的基本语法:
+下面是一个 React 函数组件的基本语法:
 
 ```ts
 function App() {
@@ -130,11 +130,11 @@ function App() {
 
 ## React Props
 
-React组件可以接受传递给它们的数据，称为_props_。
+React 组件可以接受传递给它们的数据，称为_props_。
 
-Props从父组件传递给子组件。
+Props 从父组件传递给子组件。
 
-在这里，我们从App向User组件传递一个道具`name`。
+在这里，我们从 App 向 User 组件传递一个道具`name`。
 
 ```ts
 function App() {
@@ -146,11 +146,11 @@ function User(props) {
 }
 ```
 
-Props是一个对象，所以我们可以选择`User`中的`name` prop 来获得其值。
+Props 是一个对象，所以我们可以选择`User`中的`name` prop 来获得其值。
 
-> 要在JSX中嵌入任何动态值（即一个变量或表达式），你必须用大括号把它包起来。
+> 要在 JSX 中嵌入任何动态值（即一个变量或表达式），你必须用大括号把它包起来。
 
-由于我们只使用props对象上的`name`属性，我们可以通过对象重构使我们的代码更加简单:
+由于我们只使用 props 对象上的`name`属性，我们可以通过对象重构使我们的代码更加简单:
 
 ```ts
 function App() {
@@ -162,13 +162,13 @@ function User({ name }) {
 }
 ```
 
-任何JavaScript值都可以作为一个prop传递，包括其他元素和组件。
+任何 JavaScript 值都可以作为一个 prop 传递，包括其他元素和组件。
 
 ## React Children Props
 
-props也可以通过在组件的开端（opening）和结束（closing）标记之间放置数据来传递。
+props 也可以通过在组件的开端（opening）和结束（closing）标记之间放置数据来传递。
 
-props以这种方式传递被放置在 `子（children）`属性上。
+props 以这种方式传递被放置在 `子（children）`属性上。
 
 ```ts
 function App() {
@@ -186,9 +186,9 @@ function User({ children }) {
 
 ## React Conditionals
 
-React组件和元素可以有条件地（conditionally）显示。
+React 组件和元素可以有条件地（conditionally）显示。
 
-一种方法是用if语句创建一个单独的返回。
+一种方法是用 if 语句创建一个单独的返回。
 
 ```ts
 function App() {
@@ -223,11 +223,11 @@ function App() {
 
 ## React Lists
 
-React组件的列表可以使用`.map()`函数来输出。
+React 组件的列表可以使用`.map()`函数来输出。
 
-`.map()`允许我们在数据的数组上循环并输出JSX。
+`.map()`允许我们在数据的数组上循环并输出 JSX。
 
-这里我们使用SoccerPlayer组件输出一个足球运动员的列表。
+这里我们使用 SoccerPlayer 组件输出一个足球运动员的列表。
 
 ```ts
 function SoccerPlayers() {
@@ -245,17 +245,17 @@ function SoccerPlayers() {
 
 每当你在一个数据数组上循环时，你必须在你要循环的元素或组件上包含 _key_ prop。
 
-此外，这个键（key）prop必须被赋予一个唯一的值，而不仅仅是一个元素索引（element index）。
+此外，这个键（key）prop 必须被赋予一个唯一的值，而不仅仅是一个元素索引（element index）。
 
 在上面的例子中，我们使用了一个我们知道是唯一的值，也就是`playerName`。
 
 ## React Context
 
-React context 允许我们在不使用props的情况下向我们的组件树传递数据。
+React context 允许我们在不使用 props 的情况下向我们的组件树传递数据。
 
-使用props的问题是，有时我们会通过那些不需要接收props的组件来传递他们（中间层组件并不需要这些props，再下级组件需要这些props，只是做向下转发）。这个问题被称为 _props drilling_。
+使用 props 的问题是，有时我们会通过那些不需要接收 props 的组件来传递他们（中间层组件并不需要这些 props，再下级组件需要这些 props，只是做向下转发）。这个问题被称为 _props drilling_。
 
-下面是一个最简单的例子，通过一个不需要props的`Body`组件传递prop:
+下面是一个最简单的例子，通过一个不需要 props 的`Body`组件传递 prop:
 
 ```ts
 function App() {
@@ -275,13 +275,13 @@ function Greeting({ name }) {
 }
 ```
 
-> 在使用Context之前，最好先看看我们的组件是否可以更好地组织起来，以避免向不需要props的组件传递props。
+> 在使用 Context 之前，最好先看看我们的组件是否可以更好地组织起来，以避免向不需要 props 的组件传递 props。
 
-为了使用Context，我们使用React的`createContext`函数。
+为了使用 Context，我们使用 React 的`createContext`函数。
 
-我们可以用一个初始值来调用它，放在context上。
+我们可以用一个初始值来调用它，放在 context 上。
 
-创建的context包括一个`Provider`和一个`Consumer`属性,它们都是组件。
+创建的 context 包括一个`Provider`和一个`Consumer`属性,它们都是组件。
 
 我们将提供者（Provider）包裹在我们想要向下传值的组件树上。接下来，我们把消费者（Consumer）放在我们想要消费的组件中。
 
@@ -313,13 +313,13 @@ function Greeting() {
 
 ## React Hooks
 
-React Hooks是在React 16.8版本中引入的，作为一种向React功能组件轻松添加可重用的、有状态的逻辑的方式。
+React Hooks 是在 React 16.8 版本中引入的，作为一种向 React 功能组件轻松添加可重用的、有状态的逻辑的方式。
 
-Hook让我们使用所有以前只在类组件中可用的功能。
+Hook 让我们使用所有以前只在类组件中可用的功能。
 
-此外，我们还可以创建自己的自定义Hook，赋予我们的应用程序自定义功能。
+此外，我们还可以创建自己的自定义 Hook，赋予我们的应用程序自定义功能。
 
-许多React Hook也被添加到核心React库中。我们将介绍你绝对需要知道的6个基本钩子:
+许多 React Hook 也被添加到核心 React 库中。我们将介绍你绝对需要知道的 6 个基本钩子:
 
 - useState
 - useEffect
@@ -332,9 +332,9 @@ Hook让我们使用所有以前只在类组件中可用的功能。
 
 `useState`的作用正如它所说的--它允许我们在函数组件中使用有状态的值（stateful values）。
 
-useState被用来代替一个简单的变量，因为当状态被更新时，我们的组件会重新渲染，通常是为了显示更新的值。
+useState 被用来代替一个简单的变量，因为当状态被更新时，我们的组件会重新渲染，通常是为了显示更新的值。
 
-像所有的Hook一样，我们在组件的顶部调用`useState'，并可以传递一个初始值给它的状态变量（state variable）。
+像所有的 Hook 一样，我们在组件的顶部调用`useState'，并可以传递一个初始值给它的状态变量（state variable）。
 
 我们在`useState`返回的值上使用数组析构，以访问（1）存储的状态（stored state）和（2）更新该状态的函数。
 
@@ -366,11 +366,11 @@ function Counter() {
 
 ## React useEffect Hook
 
-如果我们想与 "外部世界 "互动，例如使用API，我们使用`useEffect Hook`。
+如果我们想与 "外部世界 "互动，例如使用 API，我们使用`useEffect Hook`。
 
-useEffect用于执行一个副作用（side effect），这意味着执行一个存在于我们的应用程序之外的操作，没有一个可预测的结果。
+useEffect 用于执行一个副作用（side effect），这意味着执行一个存在于我们的应用程序之外的操作，没有一个可预测的结果。
 
-useEffect的基本语法需要一个函数作为第一个参数，一个数组作为第二个参数。
+useEffect 的基本语法需要一个函数作为第一个参数，一个数组作为第二个参数。
 
 ```ts
 import { useEffect } from 'react';
@@ -400,11 +400,11 @@ function PostList() {
 }
 ```
 
-如果我们需要使用一个来自 effect function之外的值，它必须被包含在依赖关系数组中。
+如果我们需要使用一个来自 effect function 之外的值，它必须被包含在依赖关系数组中。
 
 如果该值发生变化，效果函数将被重新执行。
 
-例如，这里有一段代码，每当移动菜单被打开或关闭时，都会在body元素上添加或删除 "overflow-hidden "类。
+例如，这里有一段代码，每当移动菜单被打开或关闭时，都会在 body 元素上添加或删除 "overflow-hidden "类。
 
 ```ts
 function Mobile({ open }) {
@@ -424,11 +424,11 @@ function Mobile({ open }) {
 
 ## React useRef
 
-`useRef`允许我们直接访问一个JSX元素。
+`useRef`允许我们直接访问一个 JSX 元素。
 
-要使用`useRef`，调用它，得到返回的值，并把它放在给定React元素的`ref` prop上。
+要使用`useRef`，调用它，得到返回的值，并把它放在给定 React 元素的`ref` prop 上。
 
-> Refs在组件上没有内置道具，只有React元素。
+> Refs 在组件上没有内置道具，只有 React 元素。
 
 下面是`useRef`的基本语法:
 
@@ -442,9 +442,9 @@ function MyComponent() {
 }
 ```
 
-当ref被附加到一个给定的元素，我们可以使用存储在`ref.current`上的值来访问元素本身。
+当 ref 被附加到一个给定的元素，我们可以使用存储在`ref.current`上的值来访问元素本身。
 
-例如，如果我们想写一些代码，当用户使用组合键Control + K时，集中搜索输入。
+例如，如果我们想写一些代码，当用户使用组合键 Control + K 时，集中搜索输入。
 
 ```ts
 import { useWindowEvent } from "@mantine/hooks";
@@ -466,9 +466,9 @@ function Header() {
 
 ## React useContext
 
-`useContext`提供了一种比使用标准的Context.Consumer组件更简单的消费上下文（consuming context）的方法。
+`useContext`提供了一种比使用标准的 Context.Consumer 组件更简单的消费上下文（consuming context）的方法。
 
-其语法包括将我们想要消费的整个Context对象传入`useContext`。返回的值是传给Context的值。
+其语法包括将我们想要消费的整个 Context 对象传入`useContext`。返回的值是传给 Context 的值。
 
 ```ts
 import { useContext } from 'react';
@@ -510,11 +510,11 @@ function Greeting() {
 
 ## React useCallback
 
-`useCallback`是一个hook，我们用它来帮助我们的应用程序的性能。
+`useCallback`是一个 hook，我们用它来帮助我们的应用程序的性能。
 
 具体来说，它可以防止我们的组件重新渲染时都要重新创建函数，减少损害我们应用程序的性能的可能性。
 
-如果我们回到前面的`PlayerList`的例子，并增加向我们的数组添加球员的能力，当我们通过props传递一个函数来删除他们（`handleRemovePlayer`）时，这个函数将每次都被重新创建。
+如果我们回到前面的`PlayerList`的例子，并增加向我们的数组添加球员的能力，当我们通过 props 传递一个函数来删除他们（`handleRemovePlayer`）时，这个函数将每次都被重新创建。
 
 解决这个问题的方法是将我们的回调函数包裹在`useCallback`中，并将其一个参数`player`纳入依赖数组:
 
@@ -567,9 +567,9 @@ function PlayerList({ players, handleRemovePlayer }) {
 
 > 你必须用`return`关键字显式地返回数值，或者隐式地使用箭头函数速记（shorthand）（见下文）。
 
-`useMemo`的一个来自mdx-bundler文档的真实例子。`mdx-bundler`是一个将.mdx文件转换为React组件的库。
+`useMemo`的一个来自 mdx-bundler 文档的真实例子。`mdx-bundler`是一个将.mdx 文件转换为 React 组件的库。
 
-这里它使用`useMemo`将一个原始的代码字符串转换为React组件。
+这里它使用`useMemo`将一个原始的代码字符串转换为 React 组件。
 
 ```js
 import * as React from 'react'
@@ -598,12 +598,12 @@ function Post({code, frontmatter}) {
 
 ## 想更进一步？
 
-如果你喜欢这个手册，并且正在寻找学习React的终极资源，请查看 **[React Bootcamp](https://reactbootcamp.com)**。
+如果你喜欢这个手册，并且正在寻找学习 React 的终极资源，请查看 **[React Bootcamp](https://reactbootcamp.com)**。
 
 它将为你提供所有你需要的培训:
 
-- 每天只需30分钟，从纯新手变成React专家
-- 构建4个全栈的React项目，从零开始到部署
+- 每天只需 30 分钟，从纯新手变成 React 专家
+- 构建 4 个全栈的 React 项目，从零开始到部署
 - 学习强大的技术堆栈来构建你喜欢的任何应用程序
 
 [![点击加入React训练营](https://reedbarger.nyc3.digitaloceanspaces.com/react-bootcamp-banner.png)](https://reactbootcamp.com)  

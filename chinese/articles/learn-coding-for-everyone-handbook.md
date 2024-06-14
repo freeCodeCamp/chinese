@@ -1,1218 +1,1216 @@
 ---
-title: How to Start Learning to Code – Handbook for Beginners
-author: Fatos Morina
-authorURL: https://www.freecodecamp.org/news/author/fatosmorina/
-originalURL: https://www.freecodecamp.org/news/learn-coding-for-everyone-handbook/
-translator: ""
-reviewer: ""
+标题: 如何开始学习编程 – 初学者手册
+作者: 法托斯·莫里纳（Fatos Morina）
+作者页面: https://www.freecodecamp.org/news/author/fatosmorina/
+原始页面: https://www.freecodecamp.org/news/learn-coding-for-everyone-handbook/
+译者: "James-Z-Zhang00"
+viewer: ""
 ---
 
-December 8, 2023 / [#Learning To Code][1]
+2023 年 12 月 8 日 / [#学习编程][1]
 
-<!-- more -->
+<!-- 更多 -->
 
-# How to Start Learning to Code – Handbook for Beginners
+# 如何开始学习编程 – 初学者手册
 
 ![Fatos Morina](https://www.freecodecamp.org/news/content/images/size/w60/2021/05/fatos-morina-gravatar.jpeg)
 
-[Fatos Morina][2]
+[法托斯·莫里纳（Fatos Morina）][2]
 
-  ![How to Start Learning to Code – Handbook for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2023/12/How-to-Start-Learning-to-Code-cover--1-.png)
+  ![如何开始学习编程 – 初学者手册](https://www.freecodecamp.org/news/content/images/size/w2000/2023/12/How-to-Start-Learning-to-Code-cover--1-.png)
 
-In this handbook, I'll address a question you may be asking yourself: should you learn how to code?
+在这本手册中，我将解决您可能会问自己的一个问题：我是否应该学习编程？
 
-After explaining why you definitely should, I'll cover some of the benefits and challenges of being a software developer. I'll also discuss some key strategies for approaching learning to code to help you succeed.
+在向您解释为什么应该之后，我将介绍成为软件开发人员的一些好处和挑战。我还将讨论一些学习编程的关键策略，以帮助您取得成功。
 
-By the end, you should have a more developed mental model of what it takes to learn programming and how you can start or continue your journey.
+最后，您将会对学习编程需要什么以及如何开始或继续您的旅程有一个全新的认知。
 
-# Table of Contents
+# 目录
 
--   [What is programming?][3]
--   [Should you still learn to code \[Yes\]?][4]
--   [Why you should consider coding as a career][5]
--   [Potential challenges of a programming job][6]
--   [Why do software engineers get paid so well][7]?
--   [How to prepare for your coding journey][8]
--   [Your ego is your enemy][9]
--   [Take responsibility for your learning][10]
--   [I am afraid to start programming. What should I do?][11]
--   [Strategies and tips for learning to code][12]
--   [Can you learn coding in a single night?][13]
--   [Avoid tutorial hell][14]
--   [How to understand complex topics by using the Feynman Technique][15]
--   [Don't memorize the syntax][16]
--   [Keep a To-Learn list][17]
--   [Practical aspects of coding][18]
--   [How to deal with overwhelming projects][19]
--   [How to choose projects to build?][20]
--   [Learn by building things from scratch][21]
--   [Build something that already exists][22]
--   [Beyond the basics][23]
--   [Develop a love of learning][24]
--   [Look at the bigger picture][25]
--   [Embrace lifelong learning][26]
--   [Get the PDF version of the book][27]
+-   [什么是编程][3]
+-   [你还应该学习编程吗-是的][4]
+-   [为什么你应该考虑把编程作为职业][5]
+-   [编程工作的潜在挑战][6]
+-   [为什么软件工程师薪水这么高][7]
+-   [如何为你的编程之旅做准备][8]
+-   [你的自我意识是你的敌人][9]
+-   [对你的学习负责][10]
+-   [我害怕编程--我该怎么办][11]
+-   [学习编程的策略和技巧][12]
+-   [你能在一个晚上学会编程吗][13]
+-   [避免教程地狱][14]
+-   [如何通过费曼技巧理解复杂主题][15]
+-   [不要记忆语法][16]
+-   [保持一个待学习列表][17]
+-   [编程的实际方面][18]
+-   [如何处理压倒性的项目][19]
+-   [如何选择要构建的项目][20]
+-   [通过从头开始构建来学习][21]
+-   [构建已经存在的东西][22]
+-   [超越基础][23]
+-   [培养学习的热爱][24]
+-   [看大局][25]
+-   [拥抱终身学习][26]
+-   [获取本书的 PDF 版本][27]
 
-# Introduction to Programming
+# 编程介绍
 
-## What is Programming?
+## 什么是编程?
 
-Before we start with the advice, let's learn what computer programming is.
+在我们开始讲建议之前，让我们先了解一下什么是计算机编程。
 
-First of all, remember that a computer is not only a laptop or desktop. It's also your phone, tablet, and any other device that is capable of performing logical and arithmetic operations that we program into it.
+首先，请记住，计算机不仅仅是笔记本电脑或台式机。它还包括你的手机、平板电脑以及任何能够执行我们编程到其中的逻辑和算术操作的设备。
 
-This includes your car's navigation system, the ATM where you withdraw or deposit money, the systems that allow you to order food digitally, and so on.
+包括你汽车的导航系统、你取款或存款的 ATM 机、外卖订餐系统等等。
 
-Computer programming is the process of designing and building instructions (a "program") that the computer can execute.
+计算机编程是设计和构建计算机可以执行的指令（“程序”）的过程。
 
-As an example, we can take a calculator that performs arithmetic operations such as addition, subtraction, multiplication, and division.
+举一个例子，我们用计算器进行加减乘除的运算。
 
-Instead of doing all this with a pencil on paper – but instead, we have a calculator on our phones. And this calculator is a computer program that helps us find the result quickly.
+我们不需要铅笔在纸上做这些运算——因为，手机上有计算器。而这个计算器是一个计算程序，给我们提供结果。
 
-Other programs that you may use every day include Facebook, WhatsApp, Instagram, YouTube, TikTok, and many others.
+你每天使用的其他程序可能包括脸书/Facebook、WhatsApp、Instagram、油管/YouTube、抖音/TikTok 之类的。
 
-Writing a program is sort of like cooking a meal. You may have an idea for a delicious meal, but you need to buy the necessary ingredients beforehand.
+编写程序有点像做顿饭。你可能有一个美味的菜谱（想法），但你需要先去买菜。
 
-Once you have what you need, you prepare that food, put it in the oven, and then wait while it cooks. After that, you serve the food at the table and eat it.
+一旦你得到了所需要的食材，你准备这些食物，把它放进烤箱，然后等它烤好。之后，你把食物端上桌，开始享用。
 
-Things work similarly with programming: first, you have an idea and the knowledge to turn that idea into a program (or maybe you learn while you're building the program – just like how you can watch someone cooking food on YouTube and learn how to make that recipe).
+编程也类似：首先，你有一个想法和将这个想法变成程序的知识（或者你在构建程序的过程中学习——就像你可以在 YouTube 上观看别人做饭并学习如何做那个菜谱一样）。
 
-Then, you start to put the ingredients of the program into place, piece by piece, until the entire program is ready to be served to users.
+然后，你开始逐步地把程序的成分放到位，直到整个程序准备好可以供用户使用。
 
-Unlike cooking, where dishes are consumed, programs remain intact and reusable even after being used.
+与烹饪不同的是，菜肴被食用后会消失，而程序在使用后仍然完好无损且可重复使用。
 
-This unique aspect means that a single program can serve multiple users simultaneously and over time.
+这一独特的方面意味着一个程序可以同时为多个用户服务并且可以长期使用。
 
-There are costs associated with creating and maintaining software, but once developed, a program like a website can be accessed by numerous people at the same time without diminishing in availability or quality.
+创建和维护软件是有成本的，但一旦开发出来，像网站这样的程序可以被许多人同时访问，而不会减少其可用性或质量。
 
-So to summarize, programming is the process of turning an idea into a computer program that other people can use. And this is something you can learn how to do yourself.
+总而言之，编程是将一个想法转变成其他人可以使用的计算机程序的过程。而这是一项你可以自己学习的技能。
 
-In the ever-evolving landscape of software engineering, many people are wondering about the impact AI will have.
+在不断发展的软件工程领域，许多人都在关注 AI 将带来的影响。
 
-Should you still learn how to code? (Short answer: yes.) Let's delve into this concern, especially for anyone who's skeptical about the future demand for coding skills.
+你还应该学习编程吗？（简短的答案：是的。）让我们深入探讨这个问题，特别是针对那些对未来编程技能需求持怀疑态度的人。
 
-## Should You Still Learn to Code? \[Answer: Yes\]
+## 你还应该学习编程吗-是的
 
-We use software all the time – to chat with others, stay informed about the latest news, and even for our alarm clocks that help us wake up on time.
+我们一直在使用软件——与他人聊天，了解最新新闻，甚至用于帮助我们准时起床的闹钟。
 
-Even the browser or the PDF reader that you use to read documents are pieces of software. These words were even typed in a software program.
+甚至你用来阅读文档的浏览器或 PDF 阅读器也是软件。这些文字也是在一个软件程序中输入的。
 
-Programming is something that's ever-evolving, and many things that we're currently doing manually may get automated in the future.
+编程是一个不断发展的领域，我们目前手动完成的许多事情将来可能会自动化。
 
-But software is deeply embedded in our daily lives, powering tools and applications across various professions and personal activities.
+但软件已经深深嵌入到我们的日常生活中，为各种职业和个人活动提供工具和应用程序。
 
-The more we integrate into the digital world, the more central software becomes. It's reshaping our work, learning, and social interactions, with its importance only set to increase.
+我们越是融入数字世界，软件就变得越重要。它正在重塑我们的工作、学习和社交方式，其重要性只会越来越高。
 
-### The Future of Building Software
+### 软件开发的未来
 
-Imagine a world where building software was as simple as having a conversation with a highly advanced AI, like a future ChatGPT. You describe your needs, and the AI creates the entire software for you – no coding required.
+想象一个世界，构建软件就像与一个高度先进的 AI（如未来的 ChatGPT）对话一样简单。你描述你的需求，AI 为你创建整个软件——无需编程。
 
-So you may wonder: why should I learn coding when ChatGPT can code an entire app for me in seconds? Well, here's something I want you to understand: AI is not here to replace us, but to **help us become more productive**.
+那么你可能会问：当 ChatGPT 可以在几秒钟内为我编写整个应用程序时，为什么我还要学习编程？好吧，我想让你明白一点：AI 并不是来取代我们的，而是**帮助我们变得更高效**。
 
-Sure, AI can help you save time and energy by performing certain basic, repetitive tasks for you. But grasping the basics of software development remains crucial, especially for the more complex problems that require your creative, experience-based solutions.
+当然，AI 可以通过为你执行某些基本的、重复的任务来帮助你节省时间和精力。但掌握软件开发的基础仍然很重要，特别是对于那些需要你的创造力和基于经验的复杂问题。
 
-You need to be able to harness AI's power while continuing to learn and adapt. This will help make sure that we're steering the course in our rapidly evolving digital landscape.
+你需要能够利用 AI 的力量，同时继续学习和适应。这将帮助确保我们在快速发展的数字世界中把握方向。
 
-As you can probably tell, I want to emphasize the irreplaceable role of software engineers and coders, even in an AI-dominated future. Here are a few reasons why:
+如你所见，我想强调软件工程师和程序员在即使是 AI 主导的未来中也是不可替代的。以下是几个原因：
 
-1.  **Understanding Over Automation**: Coding isn't just about executing tasks – it's about grasping complex logic and structures. Our human ability to analyze and solve intricate problems goes beyond AI's automation.
-2.  **Maintenance and Flexibility**: Deep coding knowledge provides insights vital for software maintenance and adaptation. This knowledge is invaluable when AI-generated programs encounter issues.
-3.  **Safety and Reliability**: Similar to understanding basic car mechanics for safety, knowing coding basics is essential for addressing software malfunctions.
-4.  **The Creative Element**: AI lacks human creativity and innovation, which is crucial for envisioning and realizing novel software solutions.
+1.  **理解胜过自动化**：编程不仅仅是执行任务——它是理解复杂的逻辑和结构。我们人类分析和解决复杂问题的能力超越了 AI 的自动化。
+2.  **维护性和灵活性**：深厚的编程知识提供了对软件维护和适应的洞察。当 AI 生成的程序遇到问题时，这种知识是必不可少的。
+3.  **安全性和可靠性**：就像了解基本的汽车机械原理对于安全一样，了解编程基础对于解决软件故障是必要的。
+4.  **创造性元素**：AI 缺乏人类的创造力和创新，这对于设想和实现新颖的软件解决方案至关重要。
 
-The rise of AI in coding doesn't signal the end for human coders. Rather, I believe it just signals a collaborative future. AI's automation of mundane tasks gives human coders more space for creativity and innovation in software development.
+AI 在编码中的崛起并不意味着人类编码员的终结。相反，我认为这只是预示着一个协作的未来。AI 自动化日常任务为人类编码员在软件开发中提供了更多的创造和创新空间。
 
-Learning to code transcends mere programming. It's about understanding how various technologies work, honing problem-solving skills, and nurturing creativity. These skills remain invaluable, even as AI reshapes the landscape.
+学习编程超越了单纯的编程。这是关于理解各种技术的运作方式，培养解决问题的能力和激发创造力。即使在 AI 重塑的环境中，这些技能仍然是无价的。
 
-So I encourage you to embrace coding as it opens doors to a future where human intelligence and AI collaboratively push the boundaries of innovation.
+所以我鼓励你接受编程，因为它为人类智能和 AI 合作推动创新的未来打开了大门。
 
-## Why You Should Consider Coding as a Career
+## 为什么你应该考虑把编程作为职业
 
-Maybe when you were a kid (or now as an adult) you liked a computer game so much that you played it all the time.
+也许当你还是个孩子的时候（或者现在作为一个成年人），你非常喜欢一个电脑游戏，现在你还在玩它。
 
-And maybe you had the idea that someday you could develop a game like it.
+也许你曾经想过有一天你可以开发一个类似的游戏。
 
-I know people who started programming precisely for this reason: to be able to develop different computer games.
+我认识一些人正是因为这个原因而开始编程：为了开发不同的电脑游戏。
 
-So, because of the pleasure you may have experienced, you may have decided to become a programmer yourself.
+由于你可能体验到乐趣，你决定自己成为一名程序员。
 
-Over time, your reasons may change – and this certainly doesn't mean that everyone gets into coding only because of game development.
+随着时间的推移，你的理由可能会改变——这当然并不意味着每个人学习编程只是为了游戏开发。
 
-After all, there are many reasons why you might consider programming as an option for your career. Let's discuss some of these reasons now (and indeed there are many more).
+毕竟，有许多理由让你可以考虑编程作为你的职业选择。让我们现在讨论一些这些理由（实际上还有更多）。
 
-### You have the opportunity to develop something for fun
+### 你可以开发一些有趣的东西
 
-I mentioned the case of game development, but you don't have to start programming by building games.
+我提到了游戏开发的案例，但你不必通过构建游戏来开始编程。
 
-Maybe you are an accountant, or you have a shop and want to register your goods through a program that you develop yourself...and so on.
+也许你是一名会计，或者你有一家商店并想通过自己开发的程序来登记你的商品...等等。
 
-Here are some practical projects that might inspire someone to learn to code:
+这里有一些可能激发人学习编程的实际项目：
 
--   A custom note-taking application tailored to your specific needs.
--   A personalized inventory management system for your shop.
--   An app for organizing and tracking your daily tasks and goals.
--   A scheduler for managing your college or university timetable.
--   A problem-solving assistant for tackling challenging tasks.
--   A daily weather update tool that sends forecasts to your email.
--   A health app that suggests potential illnesses based on symptoms.
--   A focus enhancer that limits access to social media during work hours.
+-   一个定制的笔记应用程序，满足你特定的需求
+-   一个个性化的库存管理系统，用于你的商店
+-   一个用于组织和跟踪你的日常任务和目标的应用程序
+-   一个用于管理你的大学或大学课程表的调度程序
+-   一个解决问题的助手，用于处理具有挑战性的任务
+-   一个每日天气更新工具，向你的电子邮件发送天气预报
+-   一个健康应用程序，基于症状建议可能的疾病
+-   一个专注力增强器，在工作时间限制访问社交媒体
 
-There are many other programs that you could develop. In short, you can start programming because you like to solve the problems you face in your daily life.
+还有许多其他程序你可以开发。简而言之，你可以因为喜欢解决日常生活中面临的问题而开始编程。
 
-And once you learn to code and can build these programs, then you can share them with your friends and family (and beyond).
+一旦你学会了编程并能够构建这些程序，你可以与朋友和家人（甚至更广泛的群体）分享它们。
 
-### You can solve problems for people all over the world
+### 你能够为世界各地人们解决问题
 
-Here's something that might make you happy: having the opportunity to help someone else (or a lot of people). I am sure that when you have been able to help a family member or a colleague, you've felt happy and satisfied.
+这里有件事情也许会让你开心：有机会帮助别人（或许多人）。我相信当你能够帮助家人或同事时，你会感到快乐和满足。
 
-Now, imagine how good you'd feel if you had the opportunity to solve a problem that people are facing all over the world.
+现在，想象一下如果你有机会解决世界各地人们面临的问题会有多好。
 
-For example, you may have an idea to start a Facebook group for residents of your neighborhood asking each other for household tools that you may need.
+例如，你可能有一个想法，在 Facebook 上为你所在社区的居民创建一个小组，以便彼此请求所需的家庭工具。
 
-Or maybe you want to propose that everyone pitch in on maintaining the common spaces in your neighborhood.
+或者你想建议大家共同维护社区的公共空间。
 
-You could also use this group to bring up problems as well as solutions that you aim to realize.
+你还可以在这个小组里提出问题以及你希望实现的解决方案。
 
-If you know how to code, you can create your own tool and share it with your neighbors. You can make your platform tailored to the specific needs of your neighborhood.
+如果你知道如何编程，你可以创建自己的工具并与邻居分享。你可以使你的平台满足你社区的特定需求。
 
-And if it works in your community, you can then share it with people from other neighborhoods.
+如果它在你的社区中有效，你可以然后与其他社区的人分享它。
 
-You can take things a step further and work on projects that help people working in different fields.
+你可以更进一步，开展帮助不同领域工作的人们的项目。
 
-So, for example, in addition to helping residents of your neighborhood, you can help farmers be better informed about the weather conditions by building a weather reporting app.
+例如，除了帮助你所在社区的居民，你还可以通过构建一个天气报告应用程序来帮助农民更好地了解天气状况。
 
-Or you can come up with a recommendation system that helps them determin how to work the land and what crops to plant when.
+或者你可以开发一个推荐系统，帮助他们确定如何耕作土地以及何时种植什么作物。
 
-Or maybe you want to help a barber who wants to visualize the hair styles of his clients before cutting their hair. Or you could even build programs to help a private medical clinic better manage their patients' records.
+或者你想帮助一个理发师在剪发前可视化客户的发型。或者你甚至可以构建程序来帮助私人医疗诊所更好地管理患者记录。
 
-As I hope you're beginning to see, the possibilities are pretty much endless.
+希望你开始看到，可能性几乎是无穷无尽的。
 
-### You can work on interesting challenges
+### 你可以迎接有趣的挑战
 
-A major advantage of programming is that you can use the knowledge you acquired to solve all different kinds of problems.
+编程的一个主要优点是你可以利用所学的知识解决各种不同的问题。
 
-Often you may start to read a book, or watch a movie that you may not like, and you have the opportunity to leave that book or that movie unfinished and start another one.
+有时你可能会开始阅读一本书，或者看一部你不喜欢的电影，你可以选择放弃那本书或电影，开始另一部。
 
-The same thing applies to programming projects. You may not be very motivated to work on a side project, so usually you have the opportunity to switch and deal with another project.
+同样的情况也适用于编程项目。你可能对某个项目并不太感兴趣，你通常可以换一个项目。
 
-You can do that even at work from time to time where you ask can ask your manager to assign you to a different project.
+即使在工作中，你也可以时不时地请求经理分配你到不同的项目。
 
-### You can also learn during work hours
+### 你也可以在工作的时候学习
 
-Many companies offer programmers space and the opportunity to learn during work hours when there is no work that needs to be done at the moment.
+许多公司在没有工作任务时，为程序员提供在工作时间学习的空间和机会。
 
-In fact, some companies cover the expenses for training, books, and various courses that qualify and prepare workers.
+事实上，有些公司会承担培训、书籍和各种课程的费用，以使员工获得资质和为工作做好准备。
 
-And at some companies, when you complete a certification, you'll get a reward of some type, whether financial or otherwise.
+在一些公司，当你完成认证后，你会得到奖励，无论是金钱还是其他各种形式的。
 
-Skilled, prepared, and trained programmers are valuable resources for a company. In addition to being able to work on more complex projects, they also often have the opportunity to get better clients and offers. The company can also invest in these highly-skilled devs by promoting them.
+有技能、有准备并经过培训的程序员对公司来说是非常有价值的资源。除了能够处理更复杂的项目外，他们通常还有机会获得更好的客户和报价。公司也可以通过晋升这些高技能的开发人员来投资他们。
 
-### You can work from home
+### 你可以在家工作
 
-The good thing about programming is that you can work from home (or anywhere) and be employed remotely. This means you don't have to physically move somewhere to engage in more interesting work or get a better offer.
+编程的好处之一是你可以在家（或任何地方）工作，并且可以远程就业。这意味着你不必为了更有趣的工作或更好的报价而搬到其他地方。
 
-During the pandemic, many companies offered the opportunity to work from home, and many companies will continue to offer this opportunity even after the pandemic.
+在疫情期间，许多公司提供了在家工作的机会，许多公司在疫情后仍将继续提供这一机会。
 
-This is a great relief for many people, as it saves them from the need to travel every day to the office, pay additional rent, live away from family members, and so on.
+这对许多人来说是一个极大的安慰，因为它省去了每天去办公室的需要，减少了额外的租金，避免了与家人分离的生活。
 
-### You can have a flexible schedule
+### 你可以有灵活的日程安排
 
-Different people have different obligations outside of work, including family needs, medical appointments, or various commitments at certain times, which cannot be postponed for later.
+不同的人在工作之外有不同的责任，包括家庭需求、医疗预约或某些时间的各种承诺，这些承诺不能推迟。
 
-So for many, having a flexible schedule, or even getting to leave work at certain times, is necessary. And many developers are able to have this flexiblity in their work schedules.
+所以对许多人来说，有一个灵活的时间表，甚至在某些时间离开工作是必要的。许多开发人员在工作时间表上能够有这种灵活性。
 
-### You can collaborate with and learn from intelligent people
+### 你可以与聪明的人合作并向他们学习
 
-If you're on a team, there will likely be people who have studied many different fields/areas of tech than you have. They'll also likely have rich experiences with various previous projects. This will present to you many opportunities for learning and collaborating with these team members. So take advantage of those opportunities when you can.
+如果你在一个团队中，可能会有一些人研究过比你更多的技术领域。他们可能在各种之前的项目中积累了丰富的经验。这将为你提供许多学习和合作的机会。尽可能利用这些机会。
 
-You may have team members in Germany, Singapore, or Brazil, or anywhere else in the world. And by working on the same project, you have the opportunity to benefit from their knowledge, their approach to problems, and their creative solutions.
+你可能会有来自德国、新加坡或巴西的团队成员，或世界上任何地方。通过在同一个项目上工作，你有机会受益于他们的知识、他们对问题的处理方式以及他们的创造性解决方案。
 
-### The salary is often very good
+### 工资通常非常高
 
-Programmers often enjoy higher salaries compared to many other professions.
+程序员的薪水通常比许多其他职业要高。
 
-This isn't just a slight difference – in most countries, if not all, the average salary for programmers significantly exceeds the national average.
+这不仅是一个小差异——在大多数国家，甚至是全部国家，程序员的平均工资显著高于国家平均水平。
 
-This trend reflects the high demand and value placed on programming skills in the global job market.
+这一趋势反映了全球就业市场对编程技能的高需求和高价值。
 
-In addition to the opportunity for good compensation, there is also the opportunity to get raises or other financial incentives/benefits depending on your work.
+除了获得丰厚报酬的机会外，根据你的工作，还有加薪或其他财务激励/福利的机会。
 
-Also, many tech companies implement bonus schemes for their employees. These bonuses are given for achieving business goals, exceptional performance, or extremely dedicated work.
+此外，许多科技公司为员工实施了奖金计划。这些奖金是为了实现业务目标、卓越表现或极其敬业的工作而发放的。
 
-They can be awarded to individuals or teams, depending on the company's policies.
+根据公司的政策，奖金可以发放给个人或团队。
 
-Thus, based on individual or team achievements, securing big clients, or completing successful projects, employees may receive additional compensation in the form of bonuses.
+因此，根据个人或团队的成就、获取大客户或完成成功项目，员工可能会获得额外的奖金形式的报酬。
 
-This can be a significant motivational factor for many in the programming field.
+这对许多程序员来说是一个重要的激励因素。
 
-### You can often take paid leave
+### 你可以经常享受带薪休假
 
-As much as we may be motivated to work and enthusiastic about turning our ideas into code and thus reality, we are human and need rest and relaxation. So make sure to take the time to disconnect from daily work.
+尽管我们可能有动力工作，并热衷于将我们的想法变成代码从而变成现实，但我们是人类，需要休息和放松。所以请确保抽出时间与日常工作脱离。
 
-In other words, rest is beneficial for everyone, especially for programmers, who may be stressed and engaged all day with work and pressure.
+换句话说，休息对每个人都有好处，尤其是对可能整天都在工作和压力中的程序员来说。
 
-In general, developers get fairly generous paid leave, allowing them to take vacations throughout the year. There are also companies that offer the opportunity for long periods of leave, as long as it does not harm the project and the work of the entire team.
+一般来说，开发人员可以享受相当慷慨的带薪休假，使他们可以在一年内休假。还有些公司提供长时间休假的机会，只要这不影响项目和整个团队的工作。
 
-Taking vacations isn't always easy for people of other professions, who often have much less flexibility or less generous paid time off.
+对于其他职业的人来说，休假并不总是容易的，他们往往没有那么多的灵活性或慷慨的带薪休假。
 
-Those are just some of the reasons programming may be a good fit career-wise for you.
+这些只是编程可能在职业上对你合适的部分原因。
 
-But to be fair, let's also consider some of the downsides to see if any of them are dealbreakers for you.
+但公平起见，让我们也考虑一些缺点，看看它们是否会成为你选择编程的障碍。
 
-## Potential Challenges of a Programming Job
+## 编程工作的潜在挑战
 
-Perhaps you did not expect this issue to be addressed in this book which is aimed to inspire you to consider becoming a developer.
+也许你没有预料到这本书会讨论这个问题，这本书旨在激励你考虑成为一名开发人员。
 
-But I thought it was important to share potential downsides as well to help you make an informed decision.
+但我认为分享潜在的缺点同样重要，以帮助你做出明智的决定。
 
-Here, I'll discuss only some of the disadvantages that come from a career in programming. You might not experience all these specifically, and this may not reduce the chances of them happening to you. But if you're aware of them, perhaps you can avoid them more easily.
+这里，我只会讨论一些编程职业带来的缺点。你可能不会具体经历所有这些，也不能因此减少它们发生在你身上的可能性。但如果你知道它们，也许你可以更容易地避免它们。
 
-### Programming can be stressful
+### 编程可能会带来压力
 
-Perhaps you have had the chance to speak with other developers and they told you that coding is stressful. Well, this can be the result of many situations.
+也许你有机会与其他开发人员交谈，他们告诉你编程是有压力的。这可能是许多情况的结果。
 
-For example, if you're fixated on solving a particular problem at work, you may hesitate to get up from your chair and walk around, which helps relieve stress. But you don't want to stop until you solve the problem. This can contribute to your stress.
+例如，如果你专注于解决某个特定的问题，你可能会犹豫不愿意离开你的椅子走动一下，这有助于缓解压力。但你不想在解决问题之前停下来。这会增加你的压力。
 
-So what can you do to help relieve stress, or release the emotional burden of an issue? Well first of all, it's good to do physical movement, including getting up from your chair, taking a little walk around the office (or your house, or wherever you're working), going out in the fresh air, and changing your environment for a few moments.
+那么，你能做些什么来缓解压力或释放问题带来的情绪负担呢？首先，最好做一些身体运动，包括从椅子上站起来，在办公室（或你的家，或你工作的任何地方）四处走动，去户外呼吸新鲜空气，暂时改变环境。
 
-Remember: stress can be harmful both in keeping you from thinking clearly (which would help you more easily find a solution to the problem), and in consuming all your energy. All this can lead to a deterioration of your mental and emotional state.
+记住：压力既会影响你清晰思考（这会帮助你更容易找到问题的解决方案），又会消耗你的所有精力。这些都可能导致你的心理和情绪状态恶化。
 
-### You need to learn continuously
+### 你需要不断学习
 
-Learning is the only way to advancement. So if you always feel pressure to learn new things either directly or indirectly, this is a great opportunity you can use to advance your career.
+学习是进步的唯一途径。因此，如果你总是感到学习新事物的压力，这也是一个很好的机会，你可以利用它来提升你的职业生涯。
 
-New tech tools, programming languages, and platforms come out continuously. And you may be busy dealing with commitments outside of work that may also take your time and energy.
+新的技术工具、编程语言和平台不断涌现。你可能忙于处理工作之外的承诺，这也会占用你的时间和精力。
 
-It doesn't matter how much experience you have so far in programming. The only thing that remains unchanged is the need to learn continuously. Learning new things helps you keep up with the job market, know what's required by your clients, and develop your own products.
+无论你在编程方面有多少经验，唯一不变的是不断学习的需要。学习新事物有助于你跟上就业市场的步伐，了解客户的需求，并开发自己的产品。
 
-But perhaps you don't enjoy the pressure to learn new skills all the time.
+但也许你不喜欢总是学习新技能的压力。
 
-You might be someone who, as soon as you get into a job, want to feel comfortable and secure. This is ok, but it may result in having lower ambitions and fewer or less exciting goals.
+你可能是那种一旦进入一份工作，就希望感到舒适和安全的人。这是可以的，但可能会导致抱负较低，目标较少或不那么令人兴奋。
 
-So if you're someone who doesn't always want to be learning new skills, this could be a negative side of tech and an unsuitable burden. But I hope that you, instead of seeing this as a negative side or disadvantage of programming, will embrace it as a worthy challenge.
+所以，如果你不总是想学习新技能，这可能是技术领域的一个负面方面和不适合的负担。但我希望你能将其视为一个值得挑战的机会，而不是编程的缺点。
 
-### You have a lot of responsibility
+### 你有很大的责任
 
-Your work as a developer may be used by many people. It may have a positive impact on them and make their lives easier.
+你的开发工作可能会被很多人使用。它可能会对他们产生积极的影响，使他们的生活更轻松。
 
-But with this great power comes great responsibility. You may unintentionally cause negative consequences that may affect many people if you fail to catch an error in a program, for example.
+但这种巨大的力量伴随着巨大的责任。例如，如果你未能发现程序中的错误，可能会对许多人产生负面影响。
 
-It is not the same as making a mistake when designing a wristwatch, for example, that comes out with some problem like a scratched face or cracked leather band. If you release an application used by tens of thousands (or more!) of people – say, a medical device – that contains a mistake, it may risk people's lives.
+这与设计手表时出现的问题不同，例如手表有划痕或皮带破裂。如果你发布一个有数万（甚至更多）人使用的应用程序——比如一个医疗设备——它包含错误，可能会危及人们的生命。
 
-This may seem a bit exaggerated, but it is worth remembering that many programs on hospital computers used by doctors and medical staff may have errors or bugs in them. As a result, this mistake could cause a doctor to make an incorrect diagnosis diagnosis and the wrong therapy which can be very harmful, even fatal to the patient.
+这可能看起来有些夸张，但值得记住的是，许多医院计算机上医生和医务人员使用的程序可能存在错误或漏洞。结果，这个错误可能导致医生做出错误的诊断和错误的治疗，这对患者来说可能非常有害，甚至致命。
 
-So it's important to take your responsibilities as a developer seriously and complete your work carefully and thoughtfully.
+所以，作为开发人员，你需要认真对待自己的责任，认真细致地完成工作。
 
-### You may need to work after hours
+### 你可能需要加班
 
-This is not unique only to programmers, since people who work in other jobs often need to work after work hours. But this can be hard for devs, especially those with additional responsibilities in their lives.
+这不仅仅是程序员特有的情况，因为其他工作的人也经常需要加班。但这对有额外责任的开发人员来说可能特别困难。
 
-As a developer, you may need to stay late at work for many reasons, such as:
+作为开发人员，你可能需要因为许多原因加班，例如：
 
--   You have a short deadline for finishing a new task, new feature, or just for fully completing the project for your client.
--   Some service that you have programmed has failed which needs an immediate fix so the client's service or tool doesn't go down. And you may need to be at your computer to fix it even though it might be after work hours, during a weekend, or during an official holiday.
--   A security issue has arisen in a programming library that you use and you need to resolve it so that your clients and users are not affected by this problem. Mistakes are inevitable, especially in programming, but errors vary, and some can be very harmful, while some may not even be noticed.
+-   你有一个短期的截止日期，需要完成新任务、新功能或客户的整个项目。
+-   你编程的一些服务失败了，需要立即修复，以便客户的服务或工具不会中断。你可能需要在下班后、周末或官方假期在电脑前修复它。
+-   一个你使用的编程库中出现了安全问题，你需要解决它，以便你的客户和用户不受此问题的影响。错误是不可避免的，尤其是在编程中，但错误各不相同，有些可能非常有害，而有些可能甚至不会被注意到。
 
-Just make sure that you set boundaries and expectations with your team, your clients, and your manager so you don't end up working overtime all the time.
+只要确保你与团队、客户和经理设定边界和期望，以免总是加班。
 
-### You have to sit for long periods in front of the computer
+### 你必须长时间坐在电脑前
 
-Developers often sit for long periods in a chair and often don't do enough physical activity. This can cause you to start experiencing back or joint pain, numbness, weight gain, or other potentially harmful health issues.
+开发人员经常长时间坐在椅子上，往往没有足够的体力活动。这可能会导致你开始出现背部或关节疼痛、麻木、体重增加或其他潜在的有害健康问题。
 
-Or as you concentrate really hard on debugging a problem, you may have times when you even forget to close your eyes while working at your computer. This, of course, is not healthy, as it can damage your eyes.
+或者，当你集中精力调试问题时，你可能有时甚至忘记在电脑前闭上眼睛。这当然不健康，因为它会伤害你的眼睛。
 
-Also, sitting such a short physical distance from your computer, which is usually less than a meter away, you may fixate your eyes in the same position for a long time, which can be harmful to your eyes as well.
+此外，坐在离电脑很近的位置，通常不到一米，你可能会长时间固定眼睛在同一个位置，这对眼睛也有害。
 
-To avoid these things, you can workout at a gym, do light exercises at home by following instructions on YouTube, and by generally moving your body more often like by getting up from your chair, walking around the office, eating healthy foods, stretching, and so on.
+为了避免这些问题，你可以去健身房锻炼，按照 YouTube 上的指导在家做轻松的运动，并通过更频繁地活动身体，例如从椅子上站起来、在办公室走动、吃健康的食物、拉伸等来保持健康。
 
-### Your body mass may increase
+### 你的体重可能会增加
 
-Many programmers feel stress during work. As a result, they eat more than they need to reduce stress – and they may not even notice that they are overeating due to stress.
+许多程序员在工作中感到压力。因此，他们为了减轻压力而吃得比需要的更多——他们可能甚至没有注意到由于压力而暴饮暴食。
 
-And again, since you may be spending long periods sitting and eating more than you need, you may start gaining some weight and losing muscle.
+再加上你可能会长时间坐着并且吃得比需要的多，你可能会开始增加体重和失去肌肉。
 
-To avoid unwanted weight gain, try to be conscious of what you eat and how much. You can try to eat less unhealthy fat and reduce your sugar intake. You can also do some physical exercises, and make sure to eat little but often.
+为了避免不必要的体重增加，请注意你吃什么和吃多少。你可以尝试减少不健康的脂肪和糖分摄入。你还可以做一些身体锻炼，确保少量多次地进食。
 
-These are just some of the challenges programmers can face. But hopefully, now that you're aware of them, you can figure out how to avoid or deal with them.
+这些只是程序员可能面临的一些挑战。但希望现在你了解这些挑战后，可以找到避免或应对它们的方法。
 
-## Why Do Software Engineers Get Paid So Well?
+## 为什么软件工程师薪水这么高？
 
-One of the reasons we work is to make money to cover expenses and ensure that we can live a pleasant and dignified life.
+我们工作的原因之一是赚取金钱来支付开支并确保我们可以过上愉快和有尊严的生活。
 
-Since we were kids, we've had to learn, complete our education, and gain experience so that we can more easily get a good job and make good money.
+从小我们就必须学习，完成教育并获得经验，以便更容易找到好工作并赚到好钱。
 
-Since you are reading this, you have probably heard that software engineers are paid pretty well compared to many other professions.
+既然你在读这本书，你可能已经听说软件工程师的薪水相比于许多其他职业要高很多。
 
-The average salary of programmers – even those without formal education and relatively little work experience – is often much higher than that of people with jobs in other fields.
+即使是那些没有正式教育且工作经验相对较少的程序员的平均工资，通常也远高于其他领域的人的平均工资。
 
-There are many reasons for this, but here I'll discuss what I consider to be some of the main ones.
+有很多原因，但在这里我将讨论我认为的一些主要原因。
 
-### Increased need for software engineers
+### 对软件工程师的需求增加
 
-In our world today, almost every company needs software engineers. This is because technology is a big part of our daily lives.
+在当今世界，几乎每家公司都需要软件工程师。这是因为技术在我们的日常生活中占有重要地位。
 
-We use technology in our phones, cars, and at work. Companies in many areas like health, education, and fun activities need software engineers to make and look after their computer programs.
+我们在手机、汽车和工作中使用技术。健康、教育和娱乐等领域的公司需要软件工程师来开发和维护他们的计算机程序。
 
-Because so many companies need these skills, there are a lot of jobs for software engineers. This makes companies offer big salaries to get the best software engineers to work for them.
+因为这么多公司需要这些技能，所以有很多软件工程师的工作。这使得公司提供高薪来吸引最好的软件工程师为他们工作。
 
-Also, being a software engineer is not easy. It takes a lot of learning and practice.
+此外，成为一名软件工程师并不容易。这需要大量的学习和实践。
 
-Technology keeps changing, so software engineers have to keep learning new things. Not many people can do this well, so there are not too many software engineers.
+技术不断变化，所以软件工程师必须不断学习新事物。并不是每个人都能很好地做到这一点，所以软件工程师并不多。
 
-This means that because so many companies want software engineers and there are not enough of them, they get paid a lot.
+这意味着因为很多公司需要软件工程师，而能够胜任工作的软件工程师却不够多，所以他们的工资很高。
 
-In simple words, software engineers make a lot of money because they are needed a lot and there are not enough of them who can do the job well.
+简单来说，软件工程师赚钱很多，因为他们的需求量很大，而能够胜任工作的人却不多。
 
-### You help turn ideas into reality
+### 你帮助将想法变为现实
 
-When you want to build a house, first you seek the help of an architect who comes to your land, analyzes the environment, and then, after some time, comes up with a detailed plan for every part of the house.
+当你想建造一所房子时，你首先会寻求建筑师的帮助，他会到你的土地上，分析环境，然后经过一段时间，为房子的每一部分提出详细的计划。
 
-Then, this plan is taken by a building engineer who manages a team of workers and the entire construction process until the construction of the house is completed and the house is ready.
+然后，这个计划会由建筑工程师接手，他管理一组工人和整个施工过程，直到房子建成并准备好使用。
 
-This is highly skilled work that requires a lot of training and expertise. It's the same with being a developer. You get paid relatively a lot because it reflects the high level of skill you have and the amount of effort and work it takes to do your job.
+这是需要大量培训和专业知识的高技能工作。成为开发人员也是一样的。你得到相对较高的报酬，因为这反映了你所拥有的高水平技能以及完成工作所需的大量努力和工作。
 
-Software engineers are able to turn an idea that a client has into a computer program which then can bring benefits to people all over the world. This is a very valuable skill, and such it is rewarded accordingly.
+软件工程师能够将客户的想法变成计算机程序，这个程序可以为全世界的人们带来好处。这是一项非常有价值的技能，因此得到了相应的奖励。
 
-### Your solutions can connect people all over the world
+### 你的解决方案可以连接全世界的人
 
-When you think about a major highway, consider how it connects regions and transforms travel and commerce.
+当你想到一条主要公路时，考虑它如何连接不同的地区并改变旅行和商业。
 
-For instance, a major road might link two major cities, greatly increasing the flow of tourists and business travel between them.
+例如，一条主要公路可能连接两个主要城市，大大增加了游客和商务旅行之间的流量。
 
-Building such a highway requires a massive investment and a lot of effort, but once completed, it saves people significant time and opens up new opportunities.
+建造这样一条公路需要大量投资和努力，但一旦完成，它可以为人们节省大量时间，并开辟新的机会。
 
-This concept is similar to the creation of computer programs.
+这个概念类似于计算机程序的创建。
 
-When a program is developed, it has the potential to connect millions of people worldwide who aren't in the same country or even on the same continent.
+当一个程序被开发出来时，它有可能连接全世界数百万不在同一个国家甚至同一个大陆的人。
 
-Take social media apps, for example. They're computer programs designed for global use, helping people like you, your family, and friends communicate, meet new people, or stay updated with the latest news.
+以社交媒体应用为例。它们是为全球使用而设计的计算机程序，帮助你、你的家人和朋友进行交流，结识新朋友，或者了解最新的新闻。
 
-Or consider Google's search engine, which processes over 3.5 billion queries daily on a variety of topics. It can help people anywhere, as long as they have an internet connection, solve their problems and learn new things.
+或者考虑 Google 的搜索引擎，它每天处理超过 35 亿个查询，涉及各种主题。只要有互联网连接，它可以帮助世界各地的人们解决问题并学习新事物。
 
-These programs, much like a well-constructed highway, facilitate connections and interactions, making life more efficient and connected for countless individuals.
+这些程序就像一条建造良好的公路一样，促进了无数个人的连接和互动，使生活变得更高效、更连接。
 
-### Software Engineers work in many areas
+### 软件工程师在许多领域工作
 
-A special thing about software engineers is that they can work in many different areas. They are not just stuck in one kind of job.
+软件工程师的一个特别之处在于他们可以在许多不同的领域工作。他们不仅仅局限于一种工作。
 
-This is really important and one of the reasons they get paid a lot.
+这非常重要，也是他们获得高薪的原因之一。
 
-Imagine a software engineer making a program for a doctor's office to keep track of patients.
+想象一个软件工程师为医生办公室开发一个程序来跟踪患者。
 
-Then, maybe the next week, they might make a system for a hotel to book rooms, or help a school manage its information.
+然后，也许下周，他们可能为一家酒店制作一个预订系统，或者帮助一所学校管理其信息。
 
-Software engineers can help lots of different businesses by making computer programs that solve problems and make things easier.
+软件工程师可以通过开发计算机程序来帮助许多不同的企业解决问题，使事情变得更容易。
 
-Different companies, like those in health, hotels, or schools, might not know much about technology. But they know it helps them do better.
+不同的公司，比如健康、酒店或学校，可能对技术了解不多。但他们知道技术可以帮助他们做得更好。
 
-So, they pay software engineers well to make good technology for them.
+所以，他们愿意支付高薪给软件工程师，以便制作好的技术。
 
-This is because software engineers can do a lot to change and improve how different businesses work.
+这是因为软件工程师能够做很多改变和改善不同业务运作的事情。
 
-It's more than just writing code; it's about making tools that really help businesses in many ways.
+这不仅仅是编写代码；这是关于制作真正有助于业务的工具。
 
-### You are constantly improving your skills
+### 你不断提升自己的技能
 
-Many developers constantly work to develop new tools to facilitate their daily work and make it easier or less time-consuming.
+许多开发人员不断努力开发新工具，以便于他们的日常工作，使其更轻松或更省时。
 
-They write programs to do repetitive tasks for them, so they can then spend that saved time implementing logic and more complex solutions things for their projects.
+他们编写程序来为他们执行重复性任务，这样他们可以节省时间，用于为项目实施逻辑和更复杂的解决方案。
 
-So as a programmer, you'll always be improving your skills and getting faster at providing solutions to problems. You'll adopt the most powerful tools that help you perform your job faster and get more done.
+因此，作为程序员，你将始终提升自己的技能，并且在提供问题解决方案方面变得越来越快。你将采用最强大的工具，帮助你更快地完成工作并完成更多任务。
 
-A project that might have taken much longer, you can now finish in less time by using these new tools you have learned. This means that businesses who use your services as a programmer are able to go to market faster with useful products that serve customers better.
+一个可能需要更长时间完成的项目，现在你可以通过使用这些你已经学会的新工具在更短的时间内完成。这意味着使用你作为程序员的服务的企业能够更快地向市场推出有用的产品，更好地服务客户。
 
-In other words, software engineers are paid so well because they have such specialized and valuable skills that allow them to help many people around the world.
+换句话说，软件工程师薪水如此高，是因为他们拥有如此专业和有价值的技能，可以帮助世界各地的许多人。
 
-# How to Prepare for Your Coding Journey
+# 如何为你的编程之旅做准备
 
-## Your Ego is Your Enemy
+## 你的自我意识是你的敌人
 
-When you begin thinking about starting your journey into coding, it's easy to feel overwhelmed.
+当你开始考虑开始你的编程之旅时，很容易感到不知所措。
 
-You might envision complex systems and software like those at Google or Amazon and wonder how you could ever understand such complexities.
+你可能会想象 Google 或 Amazon 那样复杂的系统和软件，并怀疑自己是否能够理解这些复杂性。
 
-Often, when we set out to become proficient coders, we find that our biggest obstacle isn't the code itself, but our own egos.
+通常，当我们着手成为熟练的程序员时，我们发现最大的障碍不是代码本身，而是我们的自我意识。
 
-Here, by ego, I mean an unhealthy belief in our own importance: our arrogance and our self-centered ambition.
+这里所说的自我意识，是指对自己重要性的盲目信念：我们的傲慢和自我中心的野心。
 
-It's like a stubborn voice inside us that insists on being the best without considering the collaborative, challenging, and iterative nature of learning to code.
+这就像我们内心的一个顽固声音，坚持要成为最好的，而不考虑学习编程的协作性、挑战性和反复性。
 
-Ego can mislead us into thinking we're more knowledgeable than we are, hindering our ability to learn and collaborate effectively.
+自我意识会误导我们，让我们认为自己比实际知道的更多，阻碍我们有效学习和合作。
 
-It stands in the way of truly mastering coding, building productive relationships with fellow learners, and recognizing or creating opportunities for growth.
+它阻碍了我们真正掌握编程、建立与同伴学习者的建设性关系，以及识别或创造成长机会。
 
-Ego is a constant threat, not just in professional life but as we embark on learning something new like coding.
+自我意识在职业生涯中始终是一个威胁，尤其是在我们开始学习编程的新事物时。
 
-It can prevent us from building great software, advancing in our learning goals, and recovering from setbacks.
+它可能会阻止我们构建伟大的软件，推进我们的学习目标，并从挫折中恢复。
 
-To guard against ego, we need to be aware of its influence at every stage of our learning journey.
+为了防范自我意识，我们需要在学习旅程的每个阶段意识到它的影响。
 
-> “If you know the enemy and know yourself, you need not fear the result of a hundred battles. If you know yourself but not the enemy, for every victory gained you will also suffer a defeat. If you know neither the enemy nor yourself, you will succumb in every battle.” — Sun Tzu
+> “知己知彼，百战不殆。不知彼而知己，一胜一负。不知彼不知己，每战必殆。” ——孙子
 
-### How to Overcome Ego in the Early Stages of Learning to Code
+### 如何在学习编程的早期阶段克服自我意识
 
-You might be starting with high enthusiasm, perhaps influenced by the success stories of self-taught coders or the allure of becoming a tech prodigy.
+你可能以高昂的热情开始，也许受到了自学成才的程序员成功故事或成为技术奇才的吸引。
 
-In such cases, ego might convince you that success will come easily, that you'll quickly master programming languages or skip the usual learning curves.
+在这种情况下，自我意识可能会让你相信成功会轻而易举地到来，你会迅速掌握编程语言或跳过通常的学习曲线。
 
-Remember, the most impressive achievements in coding come from dedication and hard work. Consider the builders behind WordPress, Microsoft, and Google, for example.
+记住，编程中最令人印象深刻的成就是通过奉献和努力实现的。考虑一下 WordPress、Microsoft 和 Google 背后的建设者。
 
-Their success stories are marked by relentless effort, not just innate talent or luck.
+他们的成功故事充满了不懈的努力，而不仅仅是天赋或运气。
 
-When starting your coding journey, don't fall into the trap of overestimating your abilities. Commit to the process, dedicate time to practice, and embrace the grind of learning.
+在开始编程旅程时，不要陷入高估自己能力的陷阱。致力于这个过程，花时间练习，接受学习的磨砺。
 
-Collaboration is key, as many groundbreaking projects are the result of team efforts.
+合作是关键，因为许多突破性的项目都是团队努力的结果。
 
-Consider how major tech innovators worked together: Google’s founders met at Stanford’s computer science department, Microsoft began with Bill Gates and Paul Allen working together, and WhatsApp was a collaborative creation.
+考虑主要的科技创新者如何合作：Google 的创始人在斯坦福大学的计算机科学系相遇，Microsoft 的创始人比尔·盖茨和保罗·艾伦共同合作，WhatsApp 是通过合作创立的。
 
-Learning to code is similar – it's about joining a community, sharing knowledge, and growing together.
+学习编程也是如此——这是关于加入一个社区，分享知识，共同成长。
 
-### Ego and Ongoing Learning
+### 自我意识与持续学习
 
-Even after landing your first coding job or completing a few projects, don't let ego convince you that you've learned all there is to know.
+即使在找到第一份编程工作或完成几个项目之后，也不要让自我意识让你认为你已经学到了所有的知识。
 
-The tech field is ever-evolving, and continuous learning is vital.
+技术领域不断发展，持续学习至关重要。
 
-Remember, the journey in coding doesn't have an endpoint. It's a continual process of growth and adaptation.
+记住，编程的旅程没有终点。它是一个不断增长和适应的过程。
 
-Your ego might make you resist new challenges, shy away from learning new languages or frameworks, or avoid seeking help when stuck.
+你的自我意识可能会让你抵制新挑战，避免学习新语言或框架，或在遇到困难时避免寻求帮助。
 
-Yet, these are the very experiences that enrich your coding journey and lead to true mastery.
+然而，这些正是丰富你的编程旅程并最终掌握编程的经历。
 
-History is full of examples where initial failures or setbacks led to great success.
+历史上有许多例子表明，最初的失败或挫折导致了巨大的成功。
 
-Bill Gates and Paul Allen had a failed venture before Microsoft, and many successful apps and platforms were born out of earlier unsuccessful attempts.
+比尔·盖茨和保罗·艾伦在创立 Microsoft 之前有过失败的尝试，许多成功的应用程序和平台都是在之前不成功的尝试中诞生的。
 
-### Embracing Humility and Persistence
+### 拥抱谦逊和毅力
 
-To thrive in your coding journey, humility and persistence are your greatest allies. Accept that failures and challenges are part of the process. Use them as stepping stones, not roadblocks.
+要在你的编程旅程中茁壮成长，谦逊和毅力是你最好的盟友。接受失败和挑战是过程的一部分。将它们视为踏脚石，而不是障碍。
 
-Be open to continuous learning, seek feedback, and remember that collaboration enhances your growth.
+保持开放的心态，持续学习，寻求反馈，记住合作可以增强你的成长。
 
-As you progress, remember that ego is the enemy of learning. Stay grounded, focus on the process, and cherish the journey of becoming a skilled coder.
+随着你的进步，记住自我意识是学习的敌人。保持脚踏实地，专注于过程，珍惜成为熟练程序员的旅程。
 
-Your unique contribution to the world of coding lies not in being the best from the start but in being open to growth and learning from every experience along the way.
+你对编程世界的独特贡献不在于一开始就成为最好的，而在于开放成长，从每一次经历中学习。
 
-> “The first principle is that you must not fool yourself — and you are the easiest person to fool.”— Richard Feynman
+> “第一原则是你不能欺骗自己——而且你是最容易欺骗自己的人。”——理查德·费曼
 
-In learning to code, let your curiosity and passion for the craft be your guide, not your ego.
+在学习编程时，让你的好奇心和对这门技艺的热情成为你的指南，而不是你的自我意识。
 
-Keep your focus on the work, the learning process, and the joy of coding.
+专注于工作，专注于学习过程，享受编程的乐趣。
 
-Identify the whispers of ego early on and counter them with discipline, humility, and a commitment to lifelong learning.
+在早期识别自我意识的声音，并用纪律、谦逊和对终身学习的承诺来对抗它们。
 
-## Take Responsibility for Your Learning
+## 对你的学习负责
 
-Do not blame others for your lack of understanding or struggles when learning to code. Simply accept that you are the common denominator of all the problems and difficulties in your life.
+不要因为在学习编程时的理解不足或遇到困难而责怪他人。简单地接受你是你生活中所有问题和困难的共同因素。
 
-### Are you not understanding a particular lesson?
+### 你不理解某一课吗？
 
-Do not blame the course, the book, or the instructor. Learning is your responsibility.
+不要责怪课程、书籍或讲师。学习是你的责任。
 
-Every teacher tries their best, and we live in a time when you have plenty of options to choose and learn from.
+每个老师都尽力而为，而且我们生活在一个有许多选择可以选择和学习的时代。
 
-So there is no excuse. If you work hard, you'll get there.
+所以没有借口。如果你努力工作，你会到达那里。
 
-### Have you recently found that a piece of code you wrote isn't functioning as expected in your project?
+### 你最近是否发现你写的一段代码在项目中没有按预期工作？
 
-Even though this may be a rare occasion or something that you may not predict that could happen, you should still take responsibility.
+尽管这可能是罕见的情况或你可能无法预测会发生，但你仍然应该承担责任。
 
-First, admit that you made a mistake. Then, go and figure out how to fix the problem.
+首先，承认你犯了错误。然后，去弄清楚如何解决问题。
 
-Use this as an opportunity to learn and document what went wrong and what you could do better in the future.
+利用这个机会学习并记录出错的地方以及你可以在未来做得更好的地方。
 
-### Do you feel that you aren't able to keep up the pace with learning new things?
+### 你觉得是否自己无法跟上学习新事物的步伐？
 
-I believe you already know that you are responsible for that as well.
+我相信你已经知道这也是你的责任。
 
-It can be hard and very time consuming, especially if you have kids or other family to look after and also want to have a social life.
+这可能很难也非常耗时，尤其是如果你有孩子或其他家庭需要照顾，同时还想要有社交生活。
 
-Still, your growth is your responsibility.
+然而，你的成长是你的责任。
 
-**You have to own that.**
+**你必须承担这个责任。**
 
-You should try to carve out time a few times a week to improve your skills, whether that’s during your day job when there are no tasks to work on and you are free to learn, before leaving for work, in the evenings, or whenever is realistic for you.
+你应该尝试每周抽出几次时间来提高你的技能，无论是在你的日常工作中没有任务时你有空学习，还是在离开工作之前、在晚上或任何对你来说现实的时间。
 
-You could try to wake up one hour earlier before work and invest that period of time in learning new things, or you could also set aside a few hours on a Sunday morning to do that.
+你可以尝试每天早起一小时，在工作前投资那段时间来学习新事物，或者你也可以在周日早上抽出几个小时来做这件事。
 
-## I'm Afraid to Start Programming. What Should I Do?
+## 我害怕编程--我该怎么办
 
-Starting your journey in programming can be daunting, and it's natural to feel fear or self-doubt. But remember, even the most successful figures in tech and science have faced these challenges.
+开始编程旅程可能令人生畏，感到害怕或自我怀疑是很自然的。但请记住，即使是科技和科学领域中最成功的人物也面临过这些挑战。
 
-Consider Sergey Brin, the co-founder of Google. He achieved remarkable success but has spoken about feeling like an impostor, experiencing doubts about his contributions to the tech industry. His story shows that such feelings are normal, even at high levels of achievement.
+考虑一下 Google 联合创始人谢尔盖·布林。他取得了显著的成功，但他也谈到过感到像冒名顶替者，怀疑自己对科技行业的贡献。他的故事表明，即使在高水平的成就中，这种感觉也是正常的。
 
-Sheryl Sandberg, former COO of Facebook and a tech industry leader, also discussed her struggles with impostor syndrome. Despite her significant accomplishments, she's talked about moments of self-doubt and questioning her abilities. This highlights that everyone, regardless of their success, can experience these feelings.
+前 Facebook 首席运营官谢丽尔·桑德伯格也是科技行业的领袖，她也谈到了冒名顶替者综合症的困扰。尽管她取得了巨大成就，她也经历了自我怀疑和质疑自己能力的时刻。这强调了每个人，无论他们的成功如何，都可能会经历这些感觉。
 
-Astrophysicist Neil deGrasse Tyson has been candid about his own experiences with impostor syndrome, reflecting on moments of self-doubt in his science career. His openness helps demystify the fears associated with stepping into new, challenging fields.
+天体物理学家尼尔·德格拉斯·泰森也坦率地谈到了自己在科学职业生涯中经历的冒名顶替者综合症。他的坦诚有助于揭开进入新挑战领域所伴随的恐惧的神秘面纱。
 
-Dr. Maya Angelou, an esteemed author and poet, also expressed similar feelings. Despite her numerous accolades, she felt doubts about her worthiness and achievements. Her journey is an inspiring example of overcoming self-doubt to achieve greatness.
+著名作家和诗人玛雅·安杰卢博士也表达过类似的感受。尽管她获得了无数的荣誉，她也感到对自己价值和成就的怀疑。她的旅程是克服自我怀疑实现伟大的鼓舞人心的例子。
 
-Wayne Gretzky's famous quote, "You miss 100% of the shots you don’t take," resonates deeply here. If fear holds you back, you'll never discover your potential in programming.
+韦恩·格雷茨基的名言“你错过了所有你不尝试的机会”在这里深刻地共鸣。如果恐惧阻碍了你，你永远不会发现你在编程中的潜力。
 
-Starting in programming can be intimidating, and fears of failure are common. However, it's crucial to begin despite these fears. Remember, the tech experts and leaders you look up to started as beginners, just like you. They faced fears, made mistakes, and learned from them.
+开始编程之旅可能令人望而生畏，对失败的恐惧是常见的。然而，关键是尽管有这些恐惧，也要开始。记住，你所仰慕的科技专家和领袖们也是从初学者开始的，就像你一样。他们面对恐惧，犯错，并从中学习。
 
-So, if your goal is to excel in programming or software engineering, embrace the challenge. Start learning and don't let fear or self-doubt deter you.
+所以，如果你的目标是成为编程或软件工程领域的佼佼者，接受挑战。开始学习，不要让恐惧或自我怀疑阻碍你。
 
-Everyone's journey starts with a single step, and feeling uncertain is simply a part of the process towards becoming skilled and confident in your abilities.
+每个人的旅程都是从第一步开始的，感到不确定只是成为技能和信心的过程的一部分。
 
-# Strategies and Tips for Learning to Code
+# 学习编程的策略和技巧
 
-## Can you Learn Coding in a Single Night?
+## 你能在一个晚上学会编程吗？
 
-A software bug in a Therac-25 radiation therapy machine [caused the death][28] of five patients after receiving a massive dose of X-rays.
+一个 bug 使得 Therac-25 放射治疗机[导致死亡][28]五名患者在接受大量 X 射线后死亡。
 
-Knight Capital [lost half a billion dollars][29] in half an hour when a software bug allowed computers to sell and buy millions of shares with no human oversight.
+Knight Capital 在半小时内因为一个软件错误[损失了 5 亿美元][29]，该错误允许计算机在无人监督的情况下卖出和买入数百万股股票。
 
-These and many other stories tell how seemingly unimportant bugs can actually cause disasters.
+这些和许多其他故事告诉我们，看似不重要的错误实际上可以引发灾难。
 
-Software is becoming more and more important – which means that developers have more and more responsibility to be very careful and really good at what they do.
+软件变得越来越重要——这意味着开发人员需要非常小心，并且非常擅长他们的工作。
 
-### So is it possible to learn programming in just one night?
+### 那是否可以在一个晚上学会编程呢？
 
-As funny as it sounds, there was a similar question asked on Quora more than 5 years ago.
+虽然听起来很搞笑，但在超过五年前的 Quora 上有人问过类似的问题。
 
-Unfortunately, I cannot find that exact question anymore, but it stuck in my memory since then.
+不幸的是，我现在找不到那个确切的问题了，但自那时起它就印在我的记忆里。
 
-Maybe, the person who asked the question was trolling, or had an exam the next day and was hoping to get encouraging answers to pull an all-nighter and study before the exam.
+也许，提问者是在开玩笑，或者第二天有考试，希望能得到鼓励的答案以便通宵学习。
 
-I don’t remember the other answers, but I read one answer there which was really wise and quite funny.
+我不记得其他答案了，但我在那看到一个非常智慧且相当有趣的答案。
 
-The answer was something along these lines:
+这个答案大概是这样的：
 
-> _Take a laptop and go to the north pole. A night there lasts 6 months. That’s how you can increase your chances of learning programming in one night._
+> _带上一台笔记本电脑去北极。那里的一夜持续 6 个月。这就是你在一个晚上学会编程的机会。_
 
-We live in a time where we want everything in a matter of seconds.
+我们生活在一个希望一切都在几秒钟内完成的时代。
 
-We want fast food, fast cars, six-pack abs in 6 days, and so on.
+我们想要快餐，快车，六天内练出六块腹肌，等等。
 
-That’s the mindset that we have most of the time, and we expect the same thing in other areas as well.
+这就是我们大多数时候的心态，我们也期望在其他领域有同样的结果。
 
-But true mastery comes from a lot of work and dedication.
+但真正的掌握来自大量的工作和奉献。
 
-Take, for example, Peter Norvig, the director of research at Google, who [suggests][30] that you to learn to program over the course of 10 years because rushing isn’t going to be worth it:
+以 Google 的研究主管 Peter Norvig 为例，他[建议][30]你在十年内学习编程，因为仓促学习是不值得的：
 
-> _“In 24 hours you won’t have time to write several significant programs, and learn from your successes and failures with them. You won’t have time to work with an experienced programmer and understand what it is like to live in a C++ environment. In short, you won’t have time to learn much._  
+> _“在 24 小时内你没有时间编写几个重要的程序，并从中学习成功和失败的经验。你没有时间与一位有经验的程序员一起工作，并了解在 C++环境中生活是什么样的。简而言之，你没有时间学到很多东西。
+>
+> _所以这本书只能谈论表面的熟悉，而不是深刻的理解。正如亚历山大·蒲柏所说，浅尝辄止是危险的。”_  
+
+如果你告诉人们这一点，他们可能不喜欢，但这是实际情况。
+
+你不能仅仅从在控制台打印几个“Hello World”语句，到几天后构建下一个 Google。
+
+我并不否认你可以在几小时内实现一个非常好的应用程序——但具备做到这一点的能力不会来得那么快。
+
+当然，你可能听说过那个[一坐下就在 10 小时内实现了 10 个应用程序的开发者][31]。但这不是一夜学习的结果。他在那之前付出了很多努力并学到了很多。
+
+学习某件事情真正很好需要时间。
+
+你做的越多，你就越有可能变得更好。你练习的越多，你就越能够提高你的表现——这个循环会不断重复。
+
+现在你已经读完并希望内化了这些内容，不要因为漫长的旅程而感到太过压倒。
+
+威尔·史密斯很好地描述了这一点：
+
+> “你不会一开始就打算建造一堵墙。你不会说‘我要建造有史以来最大的、最棒的、最伟大的墙。’你不会从那里开始。你会说，‘我要把这块砖铺得像砖块能铺得那样完美。’你每天都这样做。很快你就有了一堵墙。”
+
+现在，与其问自己是否能在一个晚上学会编程，不如问一个更好的问题：
+
+**我今晚能学到的一个小但有价值的东西是什么？**
+
+## 避免教程地狱
+
+你是否曾经花费数小时观看教程视频，然后觉得自己像个专家，却发现自己实际上无法实现教程中展示的内容？
+
+这是一个常见的陷阱，被称为“教程地狱”。它指的是当你通过阅读大量教程而没有真正尝试构建某些东西时，可能会产生的虚假学习感。
+
+当你只看教程而不实践时，你可能会认为自己在学习，但实际上你并没有获得完整的体验。
+
+仅仅被动地观看某些东西并不等于真正理解并能够使用这些知识。
+
+### 通过编程来学习编程
+
+许多人尝试仅通过观看视频或阅读文章来学习编程。
+
+但如果你真的想学会编程，你必须亲自动手编写代码。
+
+仅仅坐着看别人做是不够的。**你需要自己编写代码。**
+
+这是将视频中的理论知识转化为实际技能的唯一方法。
+
+### 超越被动学习
+
+当深入学习一个特定的框架或技术时，很容易陷入被动观看或阅读的陷阱。
+
+相反，你可以采取积极的方式。
+
+想一个你感兴趣并想要创建的项目。这可以是一个简单的网站或一个小应用程序。关键是选择一些让你兴奋并激励你学习的东西。
+
+你选择的项目将成为你的测试场。你将在这里应用你从教程中学到的一切。
+
+这种实践是无价的。
+
+当你在项目上工作时，你会遇到实际问题和挑战。
+
+解决这些问题将加深你对编码概念和技术的理解。你会通过 Google 搜索、研究、尝试和失败以及再次尝试学到很多东西。
+
+正是在面对和克服这些挑战时，真正的学习发生了。
+
+记住，掌握任何技能的道路，尤其是编程，在于积极参与。
+
+观看教程是一个很好的开始，但实践使你熟练。通过实践学习。
+
+你的个人项目不仅仅是一个测试，而是通向深入理解和技能发展的旅程。
+
+所以，关闭视频播放器，打开你的代码编辑器，开始构建。
+
+你真正的学习之旅从你编写的第一行代码开始。
+
+## 如何通过费曼技巧理解复杂主题
+
+在软件工程领域，知道某件事的名称和真正理解其工作原理之间存在巨大差异。
+
+你可能知道某台机器或某个软件的名称，但你是否真的理解它是如何运作和完成任务的？
+
+在如此复杂且不断发展的领域中，这种区别至关重要。
+
+通过“教学反馈”技巧，可以有效地弥合表面知识和深刻理解之间的差距。
+
+这种方法通常与著名物理学家理查德·费曼相关，围绕着将你学到的东西教授给他人的想法。
+
+### 什么是“教学反馈”技巧？
+
+想象一下，你在向一个对软件工程不太熟悉的朋友或同事解释你学到的新概念或工具。这可以是一个编程概念，一种编码语言，或者是区块链或机器学习等高级主题。
+
+**首先，开始解释**：从将主题分解成简单的术语开始。你的目标是使其对几乎没有背景知识的人也能理解。这种练习迫使你澄清你的想法并巩固你的理解。
+
+**接下来，识别知识中的空白**：在解释过程中，注意你踌躇或不确定的时刻。这些是你的理解仍然浅显的领域。返回你的学习材料，无论是书籍、文章还是在线资源，深入研究这些主题。
+
+**记住，简洁是关键**：在你的解释中，避免使用术语和复杂的语言。能够在不失去其本质的情况下简化概念，是一种真正理解的标志。这种方法不仅对你的学习者有益，还能强化你对该主题的掌握。
+
+**分享可以巩固你的知识**：一旦你对自己的解释感到满意，考虑更广泛地分享你的新知识。写博客文章、制作笔记或甚至录制视频都可以进一步巩固你的理解，并对他人有益。
+
+**收获的好处**：这种教授他人的技巧不仅能加深你的知识，还能增强你作为软件工程师的效率。这是一种强大的学习工具，验证了“教就是学两次”的说法。
+
+记住，在软件工程中，真正理解的考验在于你能否用简单、易懂的语言传达复杂的想法。
+
+你解释得越有效，表明你对其理解得越透彻。
+
+即使你的学生是一个虚构的角色，拥抱教师的角色，你的理解和熟练度会随之增长。
+
+这种方法不仅仅是为了获得知识——而是为了掌握它。
+
+## 不要记忆语法
+
+假设你搬到一个新城市，不知道最近的杂货店在哪里。你不会责怪自己——这是意料之中的。你只需使用 Google 地图找到它。
+
+在你去过几次之后，很可能你不再需要使用 Google 地图了（除非你想查看交通情况或查看路线上是否有事故——诸如此类的事情）。
+
+因此，你自然会随着时间的推移学会东西的位置——但这并不是你故意尝试记住每条道路，每个到达某个目的地的可能路径。
+
+有时你可能只想去某个地方一次。
+
+这与编程语言中你可能需要使用的某些方法是一样的。新软件开发人员可能会因为没有记住足够的语法而感到难过——他们仍然需要参考文档。
+
+他们认为这是他们是糟糕开发人员的标志。
+
+以下是你在开始编程之旅时可能会有的一些常见问题：
+
+-   我如何能学会所有这些语法？
+-   我需要多长时间才能掌握它并在不参考文档的情况下编写代码？
+
+然后，当你能够记住一些常用的语法时，你可能会认为自己已经成为了优秀的程序员。
+
+你会觉得你能记住的语言或编程语言和框架的数量真正重要。
+
+为了让事情更清晰，让我们比较一下在不同编程语言中找到字符串长度的语法：
+
+-   `seq.length`，JavaScript 列表，Java 数组。
+-   `seq.size()`，Java 序列，jQuery 表达式（已弃用）。
+-   `len(seq)`，Python。
+-   `seq.count()`，Django 查询集。
+-   `SeqType'Length`，Ada 数组。
+-   `length seq`，Haskell。
+-   `(count seq)`，Clojure。
+-   `sizeof(seq)/sizeof(seq[0])`，C，静态分配。
+-   `strlen(seq)`，C，空终止。
+
+如你所见，每种语言或技术都有其自己的方式来找到字符串的长度。这应该向你表明，记住 12 种不同方式的同一个函数真的很困难。
+
+一个使用过多种编程语言的开发人员不太可能记住他们过去使用过的所有语法。他们甚至可能不会尝试在第一时间学习它。那么这是为什么呢？到底有人是如何编写代码的？
+
+### 语法重要到必须记住吗？
+
+为了回答这个问题，让我们看看一些高级开发人员怎么说。
+
+这里有一位 Google 高级开发人员的[评论][32]：
+
+"你好，我叫 Tim。我是 Google 的负责人，有超过 30 年的编码经验，但我需要查找如何获取 Python 字符串的长度。"
+
+这是另一位开发商业航空控制系统的开发人员的评论：
+
+"你好，我叫 JP。我把 Node.js 放进了一架商用飞机。我仍然不知道.substr()和.substring()的区别"
+
+JP 继续对之前的推文进一步评论道：
+
+"@tdierks 即使是这篇文章，我也不得不查找如何编写带有或不带驼峰命名法的子字符串"
+
+Jon，Phunware 的安卓开发负责人，说他无法在不复制粘贴 Stack Overflow 代码的情况下读取输入流：
+
+另一位 Tim 对原 Tim 的帖子评论道：
+
+"你好，我也叫 Tim。我从 1979 年开始编程，我仍然需要一直查找 java.lang.String 方法。"
+
+最后，我给你留下一位名叫 Umer 的评论：
+
+> 我写了 255 行代码，其中包括一个工作服务器和一个客户端。我查询了 23 次 Google，大多数落在 StackOverflow、Netty 4 网站、GitHub 和 JavaDocs 上。如果你做一下数学计算，平均每 10 行代码查询一次！我完全不知道。— [Umer Mansoor][33]
+
+这些见解应该给你勇气——你不必为记不住每个语法细节而感到羞愧。
+
+这是许多初级开发人员可能关心的事情。事实上，你真的不必在学习过程中记住一切。
+
+甚至技术招聘人员也不在乎这一点。Google 的一位工程总监对此的回答是：
+
+"我总是告诉候选人，我不在乎任何 IDE 可以帮助你完成的事情。"
+
+这里是 Hacker News 上的[评论][34]中的另一个引用：
+
+> 我不仅经常使用 Google，我还用它来搜索我自己过去写的东西。
 >   
-> _So the book can only be talking about a superficial familiarity, not a deep understanding. As Alexander Pope said, a little learning is a dangerous thing.”_
+> 我已经不记得多少次我为编程问题 Google 搜索，答案在我写的 Stack Overflow 页面上。如果是特别旧的答案，我完全忘记了，我甚至会想，“哇，这个天才听起来像我！”以及“这个白痴不知道他在说什么！”
 
-If you mention that to people, they may not like it, but that’s the actual reality.
+几年前，我在一个 Facebook 群组里读到一位高级开发人员提到，当招聘人员问他是否有某项技术的经验，而他没有时，他回答：“那只是另一个工具。”
 
-You cannot just jump from printing a few “Hello World” statements in the console to building the next Google a few days later.
+他的意思是他可能没有机会使用过它，但他有信心可以学习它。
 
-I am not denying the fact that you could implement a really nice application in a few hours – but the ability to do that doesn’t come that fast.
+你可能不需要花费数月时间才能开始使用新工具。你可能只需要几个小时阅读其文档，然后在需要时进一步学习，而不需要记住所有内容。
 
-Sure, you might have heard of the developer who [implemented 10 applications in 10 hours in one sitting][31]. But that’s not the result of one-night of learning. He worked hard and learned a lot before he managed to pull that off.
+你不期望在你开始旅程时所有红绿灯都亮着。你通过当前的绿灯，然后在红灯前停下来。等待绿灯亮起再继续前进。
 
-It takes time to learn something really well.
+如今，我们不断有新的语言和框架，或现有的重大变化，因此尝试记住语法既困难又不那么重要。正如一位博客文章的评论者巧妙地[说][35]：
 
-The more you do something, the more likely you are to get better at it. The more you practice, the more you'll be able to improve your performance – and the cycle repeats.
+> “优秀的工程师知道如何提出好的查询。然而，面试官期望行走的字典。”
 
-Now that you've read and hopefully internalized that, do not get too overwhelmed with the long journey ahead of you.
+所以，总结一下：[精通 Google 搜索][36]并随着学习的进展而学习 :)
 
-Will Smith describes it really well:
+## 保持一个待学习列表
 
-> “You don’t set out to build a wall. You don’t say ‘I’m going to build the biggest, baddest, greatest wall that’s ever been built.’ You don’t start there. You say, ‘I’m going to lay this brick as perfectly as a brick can be laid.’ You do that every single day. And soon you have a wall.”
+你可能听说过用待办事项列表来跟踪日常琐事或任务。
 
-Now, instead of asking yourself whether you can learn programming in 1 night, a better question would be:
+但作为一名软件工程师，学习与实际操作同样重要，"待学习"列表成为你成长和探索的路线图。
 
-**What is one small but valuable thing that I could learn tonight?**
+将待学习列表视为你在技术世界中的个人指南。
 
-## Avoid Tutorial Hell
+正如待办事项列表提醒你购买杂货或支付账单，待学习列表跟踪你想要探索的所有令人兴奋的技术事物。
 
-Have you ever spent hours watching tutorial videos and then felt like an expert, only to realize you couldn't actually do what the tutorial showed?
+这可能是一种风靡全球的新编程语言，一种可以改变你编程方式的革命性工具，或人工智能等领域的最新趋势。
 
-This is a common trap, and it's called "Tutorial Hell." It refers to the false sense of learning you may get when you read through a bunch of tutorials without actually trying to build something yourself.
+你的待学习列表不仅仅是一个很酷的东西的集合——它是一组目标。
 
-When you watch tutorials without practicing, you might think you're learning, but you're really not getting the full experience.
+就像你的职业发展中的一个愿望清单，充满了等待你去冒险的挑战。
 
-Just watching something passively is not the same as truly understanding and being able to use that knowledge.
+无论是掌握一种新的编程语言，阅读有见地的书籍，还是注册在线课程，这个列表都是你通向无尽学习世界的门票。
 
-### Learn to Code by Coding
+待学习列表保持你的好奇心。它就像一张藏宝图，X 标记了新知识的位置。
 
-Learning to code is something that many people try to do just by watching videos or reading articles.
+列表上的每个项目都是理解技术深层运作的踏脚石，而不仅仅是使用它。
 
-But if you really want to learn how to code, you have to get your hands dirty with the actual code.
+这个列表也是一个激励因素。想象你学到的每一个新技能都是在游戏中升级，使你在工作中更有能力和技能。
 
-It's not enough to sit back and watch someone else do it. **You need to write the code yourself.**
+它提醒你，作为软件工程师的旅程充满了等待实现的激动人心的里程碑。
 
-This is the only way to turn the theoretical knowledge from videos into practical skills.
+记住，总有更多的东西可以学习，这是一件好事。
 
-### Move Beyond Passive Learning
+它让你保持谦逊和开放的心态，认识到技术世界是广阔且不断发展的，没有人知道所有的东西。
 
-When diving into a specific framework or technology, it's easy to fall into the trap of passively watching or reading about it.
+这种观点对持续成长至关重要。
 
-Instead, take an active approach.
+当你完成待学习列表上的项目时，你会发现自己变成了一个解决问题的巫师。
 
-Think of a project that you find interesting and would like to create. This could be anything from a simple website to a small app. The key is to choose something that excites you and motivates you to learn.
+每一个新的技能或知识都增加了你解决复杂挑战的能力，使你成为团队中无价的资产。
 
-The project you choose will become your testing ground. It's where you'll apply everything you've learned from watching tutorials.
+你学得越多，作为软件工程师的价值就越高。这意味着能够更有效和创造性地处理任务，提高你的生产力，使你在你的领域成为明星表演者。
 
-This hands-on practice is invaluable.
+你的待学习列表是你作为软件工程师的旅程中的强大工具。
 
-As you work on your project, you'll encounter real problems and challenges.
+它是一个与您一起成长和变化的活文档，反映了你的愿望和好奇心。
 
-Solving these will deepen your understanding of the coding concepts and techniques you've learned about. You'll learn so much from googling, researching, trying and failing, and trying again.
+通过维护和更新这个列表，你确保你的软件工程之旅始终在前进，充满了持续的学习和个人成长。
 
-It's in facing and overcoming these challenges that true learning happens.
+所以，接受你的待学习列表，让它引导你在职业生涯中达到新的高度，让你在技术的动态世界中保持好奇、激励和不断发展。
 
-Remember, the path to mastering any skill, especially coding, lies in active participation.
+# 编程的实际方面
 
-Watching tutorials is a great start, but it's the practice that makes you proficient. Learning by doing.
+## 如何处理压倒性的项目
 
-Your personal project is not just a test, but a journey towards deep understanding and skill development.
+像 Google、Amazon 或 WhatsApp 这样的大型软件项目，通常看起来像是现代奇迹。
 
-So, close the video player, open your code editor, and start building.
+它们可以令人敬畏，反映出复杂的工程和创新的想法。
 
-Your journey of true learning begins with the first line of code you write.
+如果你考虑到这些巨头背后的团队，自然会感到敬畏和恐惧。这些项目的规模和影响可能会让人感到压倒。
 
-## How to Understand Complex Topics by Using the Feynman Technique
+记住，这些平台的建设者们在开始时可能也有类似的感觉。但他们没有让恐惧阻碍他们的进步。
 
-In the world of software engineering, there's a vast difference between simply knowing the name of something and truly understanding how it works.
+相反，他们将其转化为生产力，一砖一瓦地奠定了最终成为技术里程碑的基础。
 
-You might know what a certain machine or a piece of software is called, but do you really grasp how it operates and accomplishes tasks?
+作为一名软件工程师，你可能不会立即被要求构建下一个全球技术现象，但每个项目，无论其规模如何，在开始时都可能显得令人生畏。
 
-This distinction is crucial in a field as complex and ever-evolving as software engineering.
+以下是帮助你处理最具挑战性的软件工程项目的路线图。
 
-One effective way to bridge this gap between superficial knowledge and deep understanding is through the 'Teach-Back' Technique.
+### 视野：从一开始就看到终点
 
-This method, often associated with the famous physicist Richard Feynman, revolves around the idea of teaching what you learn to someone else.
+管理大型项目最关键的步骤之一是拥有清晰的愿景。这意味着要有一个明确的终极目标。这个愿景越清晰，导航越容易。
 
-### What is the 'Teach-Back' Technique?
+尝试用简单的术语来描述这个愿景，可能通过图表或简明的描述来实现。
 
-Imagine you're explaining a new concept or tool you've learned in software engineering to a friend or a colleague who isn't familiar with it. This could be a programming concept, a coding language, or an advanced topic like blockchain or machine learning.
+你的目标应该是使这个愿景变得如此易懂，以至于任何人，无论他们的技术背景如何，都能理解。
 
-**First, begin with an explanation**: start by breaking down the topic into simple terms. Your goal is to make it understandable to someone with little to no background in the subject. This exercise forces you to clarify your thoughts and solidify your understanding.
+例如，如果你正在开发一个复杂的 Web 应用程序，概述其核心功能。设想用户体验，界面以及定义你的应用程序的关键特性。
 
-**Next, identify any gaps in your knowledge**: as you explain, pay attention to moments where you stumble or feel uncertain. These are indicators of areas where your understanding is still shallow. Return to your study materials, whether they are books, articles, or online resources, and delve deeper into these topics.
+### 拆解它：逆向工程的艺术
 
-**Remember that simplicity is key**: in your explanation, avoid jargon and complex language. The ability to simplify a concept without losing its essence is a sign of true understanding. This approach not only benefits your learner but also reinforces your grasp of the subject.
+有了生动的终极目标，下一步是将这个愿景逆向工程成可操作的步骤。
 
-**Sharing helps you solidify your knowledge**: once you're comfortable with your explanation, consider sharing your newfound knowledge more broadly. Writing a blog post, creating notes, or even recording a video can further solidify your understanding and benefit others.
+这个过程包括将最终目标分解成较小的、可管理的任务。这些任务应该是量化的，使你能够有效地计划和安排它们。
 
-**Reaping the benefits**: this technique of teaching others not only deepens your knowledge but also enhances your effectiveness as a software engineer. It's a powerful tool for learning and a testament to the saying, "To teach is to learn twice."
+在规划过程中，设定清晰的里程碑。这些是标志着你向最终目标推进的重大检查点。
 
-Remember, the true test of understanding in software engineering is your ability to convey complex ideas in simple, accessible terms.
+以 Web 应用程序为例：从设计阶段开始，接着是前端开发，后端设置，功能集成，测试阶段和最终部署。然后你可以一个一个地处理这些阶段。
 
-The more effectively you can explain a concept, the better you understand it.
+### 起点：第一个小步骤
 
-Embrace the role of being a teacher, even if your student is just an imaginary one, and watch as your understanding and proficiency grow.
+每个宏大的项目都从一个单一的，通常是小的步骤开始。
 
-This approach is not just about gaining knowledge – it's about mastering it.
+不要陷入认为你可以一口气完成整个项目的陷阱。大型项目需要时间、努力和毅力。
 
-## Don't Memorize the Syntax
+从一个可管理的任务或项目的组件开始。完成这个初始任务将提供一种成就感和动力。
 
-Say you move to a new city and you don’t know where the nearest grocery store is. You don’t beat yourself up — this is expected. You just use Google Maps to find it.
+进展，无论多么渐进，都是强大的推动力。它推动你向前，激励你解决项目的后续阶段。
 
-After you’ve been there several times, it’s highly likely that you won’t need to use Google Maps anymore (unless you want to check traffic or see if there are any accidents on your route – things like that).
+如果你发现自己犹豫不决，可能是因为当前的任务看起来太令人生畏。在这种情况下，将任务进一步分解成更小、更可接近的部分。
 
-So you naturally, over time, learn where things are – but it’s not that you’re intentionally _trying_ to memorize every road, every possible path to a certain destination.
+### 反思性进展：复盘的重要性
 
-There may be cases when you're only interested in going to a certain place once.
+定期退后一步，审查你的进展。
 
-It’s the same with certain methods that you may need to use in a programming language. New software developers may feel bad that they’re not memorizing sufficient syntax — that they still need to refer to the documentation.
+这种做法对于确保你在正确的道路上朝着目标前进至关重要。
 
-They see this as a sign that they’re bad developers.
+很容易陷入细节中，失去对整体目标的视野。定期审查有助于你重新调整你的努力与初始愿景保持一致。
 
-Here are a couple of common questions you may have when you're starting your journey into programming:
+这种复盘过程不仅仅是一个检查点。它是对你的方向和方法的战略评估。它可能导致课程修正，策略调整，甚至是对目标的重新评估。
 
--   How will I be able to learn all this syntax?
--   How long will it take for me to master it and write code without referring to the documentation?
+### 前进的道路
 
-Then when you’re able to memorize some frequently used syntax, you may think that you’ve become good at programing.
+在软件工程中，遇到怀疑和陷入无所作为的循环是常见的。
 
-You get the impression that it’s the amount of a language or the number of programming languages and frameworks you are able to memorize that really matters.
+等待完美的时刻或挑战自己缓解是不切实际的方法。相反，征服大型项目的关键在于接受责任并积极参与手头的任务。
 
-To put things in perspective, let’s compare the syntax of finding the length of a string in different programming languages:
+无论项目的规模如何，通过仔细的计划、奉献精神和坚定的专注，总是可以完成的。
 
--   `seq.length`, JavaScript lists, Java arrays.
--   `seq.size()`, Java sequences, jQuery expressions (deprecated).
--   `len(seq)`, Python.
--   `seq.count()`, Django querysets.
--   `SeqType'Length`, Ada arrays.
--   `length seq`, Haskell.
--   `(count seq)`, Clojure.
--   `sizeof(seq)/sizeof(seq[0])`, C, statically allocated.
--   `strlen(seq)`, C, null-terminated.
+记住，在软件工程的领域，_唯一的出路就是前进的道路。_
 
-As you can see, each language or technology has its own version of finding the length of a string. This should show you that it’s really difficult to memorize the same function in 12 different ways.
+每一步，无论多么小，都是实现项目的进展。以承诺和决心接受每个阶段的旅程，观看你的雄心勃勃的项目如何变成已完成的现实。
 
-It’s very unlikely that a developer who’s used multiple programming languages can memorize all the syntax that they have used in the past. They may even not bother trying to learn it in the first place. So why is this? How does anyone actually write code?
+## 如何选择要构建的项目
 
-### Is Syntax So Important That I Have to Memorize It?
+当你开始学习并尝试应用你的技能时，你可能会有很多项目想法，迫不及待地想要开始构建。
 
-To answer this, let’s see what some senior developers say.​
+也许你已经在项目管理工具中列出了这些想法，或者在笔记本中记下了它们。你有各种各样的应用程序概念、软件解决方案或编码实验让你感到兴奋。但有一个常见的挑战：决定首先要处理哪个项目。
 
-Here's a [comment][32] from a senior dev at Google:
+这种犹豫不决可能导致拖延。你可能会发现自己选择更能立即满足的活动，避免对单个项目的承诺。
 
-"Hello, my name is Tim. I'm a lead at Google with over 30 years coding experience and I need to look up how to get length of a python string."
+“也许有更重要的事情我应该做？”你想。“我应该开始这个应用程序还是那个自动化脚本？也许我应该再头脑风暴一些想法，总会有一个灵感。”
 
-​​And here's one from a developer who works on commercial airline control systems:
+让我们暂时停下来，考虑一个可能会阐明这种困境的古老寓言。
 
-"Hello, my name is JP. I put Node.js in a commercial flight airplane. I still don't know the difference between `.substr()` and `.substring()`"
+### 从布里丹之驴（Buridan's ass）学到的教训
 
-​​And JP went on to further comment on that previous tweet:
+有一个关于驴子的故事，它正好站在一些干草和水的中间。它无法决定先吃还是先喝，所以什么都没做，结果非常饥饿和口渴。
 
-"@tdierks even for this post I had to google how to write substring with or without camelcase"
+驴子没有想到先选一个，然后再做另一个。
 
-​​Jon, a lead Android dev at Phunware, says he can't read an input stream without copying and pasting code from Stack Overflow:
+作为软件工程师，我们经常在项目中面临类似的困境。我们有无数的想法和概念，但如果没有行动，任何一个都不会实现。
 
-​​Another Tim commented on the original Tim's post:​​​
+必须认识到，我们不能同时处理每个项目。就像我们不能同时在两个地方一样，我们也不能同时编写不同的应用程序。这种物理限制不应该阻碍我们实现目标的进展。
 
-"Hi, mine is Tim too. I've been coding since 1979 and I still have to look up `java.lang.String` methods all the time. \[lovely chain\]"
+#### 只需从一个项目开始
 
-​Lastly, I'll leave you with Umer's comment:
+这是完美的选择吗？也许不是。但这不是现在最重要的事情。
 
-> I wrote 255 lines of code that included a working server and a client. I queried google 23 times mostly landing on StackOverflow, Netty 4 website, GitHub, and JavaDocs. If you do the math, that averages out to 1 query every 10 lines of code! I had no idea. — [Umer Mansoor][33]
+你选择的项目可能不是生死攸关的决定。选一个并开始。你总是可以稍后回到其他想法上。
 
-These insights should give you courage — you don’t have to be ashamed that you can’t remember every detail of the syntax.
+首先列出应用程序或软件的功能。编写第一个函数或界面。庆祝这个进展，无论多么小。然后，继续逐步开发。
 
-This is something that many junior developers may be concerned about. The truth is, you really do not have to memorize everything as you go.
+对其他项目重复这个过程。
 
-Not even tech recruiters care about that. Here’s the response that an engineering director at Google gave regarding this:​
+不要让大量的选择阻碍你的进展。过度分析会导致瘫痪，阻碍你完成项目的进展。
 
-"I always tell candidates that I don't care about anything that an IDE could help you with."
+停止过度思考。开始编程。
 
-​
+让世界受益于你的工作，一个个完成的项目。
 
-Here’s another quote from a [comment][34] on Hacker News:
+### 如何克服拖延症
 
-> I not only use Google frequently, I use it to search for things I myself have written in the past.  
+这是软件工程师常见的挑战：“我知道我需要开始编程，但我就是无法开始。”
+
+“空白的 IDE 屏幕很吓人。我无法让我的手指开始打字。”
+
+考虑一下著名作家厄内斯特·海明威是如何应对写作障碍的：
+
+> “有时当我开始一个新故事却无法进行时，我会坐在火炉前，挤压小橙子的皮到火焰边缘，观看它们产生的蓝色火花。
 >   
-> I can’t count the number of times I’ve Googled for a programming question where the answer is found on a Stack Overflow page I’ve written. If it’s a particularly old answer that I’ve completely forgotten, I’ve even thought to myself, “Wow this genius sounds just like me!” as well as “This idiot has no clue what he’s talking about!” .
-
-A couple of years ago, I read a post on a Facebook group from a senior developer mentioning that when recruiters ask him whether he has experience with a particular technology for which he hasn’t, he responds, “That’s just another tool.”
-
-He means that he may not have had the chance to work with it in the past but he has the confidence that he can learn it.
-
-You might not need to spend months before you're able to work with a new tool. You may only need a few hours to read its documentation and then learn more as needed along the journey without the need to memorize everything.
-
-You do not expect to have all green lights on when you start your journey to your destination. You pass through the current green light and stop at a red light. You wait until the green light is on before proceeding.
-
-Nowadays, we get new languages and frameworks, or considerable changes to existing ones, so that trying to memorize the syntax is both difficult and not that important. As one commentator on a blog post brilliantly [put][35] it:
-
-> “Great engineers know how to formulate good queries. Yet interviewers expect walking dictionaries.”
-
-So, to sum it all up: [get really good at googling][36] and learning as you go :)
-
-## Keep a To-Learn List
-
-You might have heard of to-do lists for keeping track of daily chores or tasks.
-
-But as a software engineer, where learning is as important as doing, a "to-learn" list becomes your roadmap to growth and discovery.
-
-Think of a "to-learn" list as your personal guide in the world of technology.
-
-Just as a to-do list reminds you to buy groceries or pay bills, a to-learn list keeps track of all the exciting things in technology you want to explore.
-
-This could be a new programming language that's taking the world by storm, a revolutionary tool that can change the way you code, or the latest trends in fields like artificial intelligence.
-
-Your to-learn list is more than just a collection of cool things – it's a set of goals.
-
-It's like having a bucket list for your professional development, full of adventures waiting to be embarked upon.
-
-Whether it's mastering a new coding language, diving into insightful books, or enrolling in online courses, this list is your ticket to a world of endless learning.
-
-A to-learn list keeps your curiosity alive. It's like having a treasure map where X marks the spot for new knowledge.
-
-Each item on the list is a stepping stone to understanding the deeper workings of technology, beyond just using it.
-
-This list also acts as a motivator. Imagine each new skill you learn as a level-up in a game, making you more capable and skilled in your job.
-
-It's a reminder that your journey in software engineering is filled with exciting milestones waiting to be achieved.
-
-Remember, there's always more to learn, and that's a good thing.
-
-It keeps you humble and open-minded, acknowledging that the tech world is vast and ever-evolving, and no one knows it all.
-
-This perspective is vital for continuous growth.
-
-As you check off items on your to-learn list, you'll find yourself becoming a problem-solving wizard.
-
-Each new skill or piece of knowledge adds to your ability to tackle complex challenges, making you an invaluable asset to your team.
-
-The more you learn, the more valuable you become as a software engineer. This means being able to handle tasks more efficiently and creatively, boosting your productivity and making you a star performer in your field.
-
-Your "to-learn" list is a powerful tool in your journey as a software engineer.
-
-It's a living document that grows and changes with you, reflecting your aspirations and curiosity.
-
-By maintaining and updating this list, you ensure that your journey in software engineering is always moving forward, filled with continuous learning and personal growth.
-
-So, embrace your "to-learn" list, and let it guide you to new heights in your career, keeping you curious, motivated, and ever-evolving in the dynamic world of technology.
-
-# ****Practical** A**spects of** C**oding****
-
-## How to Deal with Overwhelming Projects
-
-Big software projects, like those of Google, Amazon, or WhatsApp, often seem like modern marvels.
-
-They can be awe-inspiring, reflecting complex engineering and innovative ideas.
-
-If you ever consider the teams behind these giants, it's natural to feel a mix of awe and intimidation. The scale and impact of such projects can seem overwhelming.
-
-Remember, the builders of these platforms likely faced similar feelings at the outset. But they didn't allow apprehension to hinder their progress.
-
-Instead, they channeled it into productive action, laying brick by brick the foundation of what would become technological milestones.
-
-As a software engineer, you might not be tasked with building the next global tech phenomenon right away, but every project, no matter its size, can feel daunting at the start.
-
-Here's a roadmap to help you tackle even the most intimidating software engineering projects.
-
-### Vision: Seeing the End from the Start
-
-One of the most critical steps in managing a large project is to have a clear vision. This means having a well-defined picture of the end goal. The clearer this vision, the easier it will be to navigate towards it.
-
-Try to articulate this vision in simple terms, maybe through a diagram or a straightforward description.
-
-Your goal should be to make this vision so understandable that anyone, regardless of their technical background, can grasp it.
-
-For instance, if you're developing a complex web application, outline its core functionalities. Envision the user experience, the interface, and the key features that will define your application.
-
-### Breaking It Down: The Art of Reverse Engineering
-
-With your end goal vividly pictured, the next step is reverse engineering this vision into actionable steps.
-
-This process involves deconstructing your final goal into smaller, manageable tasks. These tasks should be quantifiable, allowing you to plan and schedule them effectively.
-
-In plotting your course, set clear milestones. These are significant checkpoints that signal progress towards your ultimate objective.
-
-Take a web application as an example: begin by charting out the various stages of development. This could include initial design, front-end development, back-end setup, integration of functionalities, testing phases, and final deployment. Then you can tackle each one, one at a time.
-
-### Starting Point: The First Small Step
-
-Every monumental project begins with a single, often small, step.
-
-Do not fall into the trap of believing you can conquer the entire project in one go. Large-scale projects demand time, effort, and persistence.
-
-Start with a manageable task or component of the project. Completing this initial task will provide a sense of accomplishment and momentum.
-
-Progress, however incremental, is a powerful motivator. It propels you forward, fueling your drive to tackle the subsequent phases of your project.
-
-If you find yourself hesitating to start, it might be because the task at hand seems too daunting. In such cases, break down the task further into smaller, more approachable segments.
-
-### Reflective Progress: The Importance of Review
-
-Regularly step back and review your progress.
-
-This practice is essential for ensuring that you're on the right path toward your goal.
-
-It’s easy to get caught up in the minutiae and lose sight of the broader objective. A periodic review helps you realign your efforts with your initial vision.
-
-This review process is not merely a check-in. It's a strategic evaluation of your direction and methods. It might lead to course corrections, refinements of strategies, or even a reassessment of your goals.
-
-### The Path Through
-
-It’s common in software engineering to encounter phases of doubt and to feel stuck in a cycle of inaction.
-
-Waiting for the perfect moment or for challenges to ease on their own is a futile approach. Instead, the key to conquering large projects lies in embracing responsibility and actively engaging with the tasks at hand.
-
-No matter the size of the project, its completion is always achievable through careful planning, dedication, and unwavering focus.
-
-Remember, in the realm of software engineering, _the only way out is the way through_.
-
-Each step, no matter how small, is a move towards the realization of your project. Embrace each phase of the journey with commitment and resolve, and watch as your ambitious projects turn into accomplished realities.
-
-## How to Choose Projects to Build
-
-As you start learning and trying to apply your skills, you'll likely have a lot of project ideas that you're eager to start building.
-
-Maybe you've listed them in a project management tool or jotted them down in your notebook. You have various app concepts, software solutions, or coding experiments you're excited about. But there's a common challenge: deciding which project to tackle first.
-
-This indecision can lead to procrastination. You might find yourself opting for activities that are more immediately gratifying, avoiding the commitment to a single project.
-
-"Perhaps there's something more crucial I should be working on?" you wonder. "Should I start this app or that automation script? Maybe I should brainstorm more ideas and something will click."
-
-Let's pause for a moment and consider an old fable that might shed some light on this predicament.
-
-### Learning from Buridan's Donkey
-
-There's a story about a donkey that was exactly in the middle of some hay and water. It couldn't decide whether to eat or drink first, so it didn't do either and got really hungry and thirsty.
-
-The donkey didn't think about just picking one thing first and then doing the other thing next.
-
-As software engineers, we often face a similar dilemma with our projects. We have numerous ideas and concepts, but none of them will come to fruition without action.
-
-It's essential to recognize that we can't work on every project simultaneously. Just as we can't be in two places at once, we can't simultaneously code different applications. And this physical limitation shouldn't hinder our progress towards our goals.
-
-#### Just start with one project
-
-Is it the perfect choice? Maybe, maybe not. But that's not what's critical at this moment.
-
-The project you choose to work on probably isn't a life-or-death decision. Pick one and begin. You can always return to your other ideas later.
-
-Start by outlining the features of the app or software. Code the first function or interface. Celebrate this progress, however small. Then, continue developing piece by piece.
-
-Repeat this process for your other projects.
-
-Don't let a plethora of choices impede your progress. Over-analysis leads to paralysis, stifling your movement towards completing your projects.
-
-Stop overthinking. Start coding.
-
-Let the world benefit from your work, one completed project at a time.
-
-### How to overcome procrastination
-
-This is a common challenge for software engineers: "I know I need to start coding, but I just can't seem to begin."
-
-"The blank IDE screen is intimidating. I can't get my fingers to start typing."
-
-Consider how Ernest Hemingway, a renowned writer, dealt with writer's block:
-
-> “Sometimes when I was starting a new story and could not get it going, I would sit in front of the fire and squeeze the peel of the little oranges into the edge of the flame and watch the sputter of blue that they made.  
+> 我会站着眺望巴黎的屋顶，思考‘别担心。你以前写过，现在也会写。你只需要写一句真实的句子。写下你知道的最真实的句子。’
 >   
-> I would stand and look out over the roofs of Paris and think, ‘Do not worry. You have always written before and you will write now. All you have to do is write one true sentence. Write the truest sentence that you know.’  
->   
-> So finally I would write one true sentence, and then go on from there.”
+> 最后，我会写一句真实的句子，然后继续写下去。”
 
-Adapt this approach to your coding. Start with a simple feature or function.
+将这种方法应用到你的编程中。开始一个简单的功能或函数。
 
-If that's all you accomplish for the day, so be it. Consistent small steps lead to significant progress.
+如果这是你今天完成的全部内容，那也没关系。持续的小步骤会带来显著的进展。
 
-Even a modest amount of coding each day maintains consistency. And often, once you start on a small task, you'll find yourself naturally progressing to more substantial parts of the project.
+每天进行适度的编程可以保持一致性。而且通常，一旦你开始一个小任务，你会自然地进行到项目的更大部分。
 
-### Inspiration from History
+### 历史上的灵感
 
-Consider Isaac Newton, who, during the bubonic plague lockdown in 1666, retreated to his family home from the University of Cambridge.
+考虑一下艾萨克·牛顿在 1666 年黑死病封锁期间，从剑桥大学撤退到他家里。
 
-Without modern tools or online classes, Newton used this time to delve into complex mathematical problems, eventually laying the groundwork for calculus.
+没有现代工具或在线课程，牛顿利用这段时间深入研究复杂的数学问题，最终奠定了微积分的基础。
 
-His focus and dedication led to groundbreaking discoveries.
+他的专注和奉献导致了突破性的发现。
 
-In software engineering, it's easy to get caught up in finding the perfect tool or environment.
+在软件工程中，很容易陷入寻找完美工具或环境的困境中。
 
-But remember, the real work comes from dedication and effort, not from having the latest technology or software.
+但请记住，真正的工作来自于奉献和努力，而不是拥有最新的技术或软件。
 
-> “Real professionals don’t hide behind their tools — real professionals use what’s around them. It’s the amateurs who try to nerd out about their tools — it’s all a distraction from really doing the work.” — Derek Sivers
+> “真正的专业人士不会躲在他们的工具后面——真正的专业人士使用他们周围的东西。业余爱好者才会试图在他们的工具上花时间——这都是为了逃避真正的工作。”——德里克·西弗斯
 
-Let's move beyond excuses. Let's get back to coding.
+让我们超越借口。让我们回到编程中。
 
-## Learn by Building Things from Scratch
+## 通过从头开始构建来学习
 
-Every time you start a new project, think of it as adding a brick to your knowledge fortress.
+每次你开始一个新项目，想象它是你知识堡垒的一块砖。
 
-You'll encounter the essential elements of software – like algorithms, data structures, and design patterns. These are the ABCs of software, and grasping them deeply turns you into a more skilled and versatile engineer.
+你会遇到软件的基本元素——如算法、数据结构和设计模式。这些是软件的 ABC，深入掌握它们会使你成为一个更熟练和多才多艺的工程师。
 
-When you build from scratch, you're the architect and the builder. You get to decide every detail, customizing your project to fit your interests and needs.
+当你从零开始构建时，你既是建筑师又是建造者。你可以决定每一个细节，将项目定制以适应你的兴趣和需求。
 
-It's like cooking a meal where you choose every ingredient to suit your taste, making the entire process deeply personal and satisfying.
+这就像烹饪一顿饭，你选择每一种食材来适合你的口味，使整个过程非常个人化和令人满意。
 
-Starting from zero means you'll walk through every stage of creating software – from the first sketch of your idea to making it work and showing it to the world.
+从零开始意味着你会经历创建软件的每一个阶段——从最初的想法草图到让它运行并向世界展示。
 
-This complete journey is like reading a book from cover to cover, giving you a full picture of how software comes to life.
+这种完整的旅程就像从头到尾阅读一本书，给你一个软件如何诞生的全貌。
 
-Building from the ground up often means exploring the depths of the technologies you're using. Imagine diving into the ocean to discover what's underneath – that's what you do with each technology, understanding its secrets and subtleties.
+从零开始构建通常意味着深入探索你正在使用的技术。想象一下潜入海洋中去发现下面的是什么——这就是你对每项技术的做法，理解其秘密和微妙之处。
 
-As you build, you'll face various puzzles and challenges. Each problem you solve sharpens your mind, not just in coding but in finding smart, elegant solutions to tricky situations.
+在构建过程中，你会面对各种难题和挑战。你解决的每个问题都会磨练你的思维，不仅在编码方面，还在找到聪明和优雅的解决方案方面。
 
-There's a special kind of pride and confidence that comes from seeing a project evolve from a simple idea to a working program.
+从一个简单的想法变成一个工作的程序，这种过程会带来一种特殊的自豪感和自信心。
 
-It's like climbing a mountain – with every step, you feel stronger and more capable.
+这就像爬山——每一步，你都会感到更强壮和更有能力。
 
-The hurdles you overcome while crafting software from scratch are similar to those you'll face in the professional world.
+你在从零开始构建软件时克服的障碍类似于你在职业生涯中将面临的障碍。
 
-Be it fixing an unexpected error, adding a complex feature, or managing your time – these experiences are like rehearsals for the real-world stage of software engineering.
+无论是修复意外错误、添加复杂功能，还是管理你的时间——这些经历就像是软件工程现实世界舞台的彩排。
 
-Embarking on a project from scratch is a cornerstone of your journey as a software engineer. It's an exercise in patience, persistence, and creativity.
+从零开始的项目是你作为软件工程师旅程的基石。这是耐心、毅力和创造力的练习。
 
-Remember, it's not just about the software you build. It's about the skills you hone, the knowledge you acquire, and the confidence you develop.
+记住，这不仅仅是你构建的软件。这是关于你磨练的技能，获得的知识和培养的自信。
 
-Each project is a step towards becoming not just a coder, but a true artisan in the realm of technology. So, begin with an empty file and a spark of an idea, and let the magic of creation unfold.
+每个项目都是从一个程序员到一个真正的技术艺术家的过程中的一步。所以，从一个空白文件和一个灵感的火花开始，让创造的魔力展现出来。
 
-## Build Something that Already Exists
+## 构建已经存在的东西
 
-In the thrilling journey of software development, starting a new project often feels like opening a treasure chest filled with endless possibilities.
+在软件开发的激动人心的旅程中，开始一个新项目通常感觉像打开一个充满无限可能的宝箱。
 
-While it's tempting to dive into creating something unique and complex, the path of learning often calls for a simpler, more familiar approach.
+虽然很诱人去创造一些独特而复杂的东西，但学习的路径往往需要一种更简单、更熟悉的方法。
 
-Now, we'll explore the idea that not every project must be groundbreaking. Sometimes, the best learning comes from simplicity and familiarity.
+现在，我们将探讨并非每个项目都必须是突破性的。有时，最好的学习来自于简单和熟悉。
 
-Imagine starting with a blank canvas. Instead of painting a complex masterpiece right away, you first practice with simple strokes and familiar patterns. This is the essence of learning in software development.
+想象一下从一个空白画布开始。你不立即绘制复杂的杰作，而是先练习简单的笔触和熟悉的图案。这是软件开发中学习的本质。
 
-By keeping projects simple and manageable, you avoid the trap of overwhelming complexity, allowing you to focus on the fundamentals of coding and problem-solving.
+通过保持项目简单和可管理，你避免了压倒性的复杂性，使你能够专注于编码和解决问题的基本原理。
 
-Think of existing open-source projects as a library filled with books you can learn from. These projects, created by others and shared on platforms like GitHub, are like guides offering valuable lessons.
+将现有的开源项目想象成一个图书馆，里面有你可以学习的书籍。这些项目由其他人创建并在 GitHub 等平台上共享，就像向你提供有价值的课程的指南。
 
-They're a starting point, showing you how things are built and encouraging you to explore further.
+它们是一个起点，向你展示事物是如何构建的，并鼓励你进一步探索。
 
-Picture yourself as an apprentice painter, learning by replicating the works of masters. Similarly, in software development, [cloning an existing project][37] is a [hands-on way to learn coding and problem-solving][38].
+把自己想象成一个学徒画家，通过复制大师的作品来学习。同样，在软件开发中，[克隆一个现有项目][37]是一种[实践学习编码和解决问题][38]的方式。
 
-After recreating the project, compare your work with the original. This comparison acts as a mirror, reflecting your strengths and areas for improvement.
+在重新创建项目后，将你的工作与原始项目进行比较。这种比较就像一面镜子，反映出你的优势和需要改进的地方。
 
-Think about an app or a website you use daily. What if you tried to build a version of it yourself? This approach makes learning fun and relevant.
+想想你每天使用的应用程序或网站。试着自己构建一个版本？这种方法使学习变得有趣和相关。
 
-Working on something you're familiar with keeps you engaged and helps you understand the project's intricacies more deeply.
+处理你熟悉的东西可以让你保持投入，并帮助你更深入地了解项目的复杂性。
 
-In your learning journey, focus on projects that challenge and enhance your skills, rather than trying to invent something entirely new. It's like practicing scales in music – they may not be glamorous, but they're essential for growth.
+在你的学习旅程中，专注于那些挑战和提高你技能的项目，而不是试图发明一些全新的东西。这就像在音乐中练习音阶——它们可能不华丽，但对成长至关重要。
 
-Prioritize learning and skill development over the pursuit of a groundbreaking idea. As you embark on new software projects, remember that your primary goal is to grow as a developer. It's not just about building something novel – it's about building your capabilities and confidence.
+优先考虑学习和技能发展，而不是追求突破性的想法。在你开始新的软件项目时，记住你的主要目标是作为开发人员成长。这不仅仅是构建一些新颖的东西——而是关于建立你的能力和信心。
 
-By replicating existing projects and focusing on the learning process, you turn each project into a valuable step in your journey.
+通过复制现有项目并专注于学习过程，你将每个项目变成你旅程中的一个宝贵步骤。
 
-This approach not only enriches your understanding but also lays a strong foundation for your future as a skilled software engineer.
+这种方法不仅丰富了你的理解，也为你未来成为一名熟练的软件工程师奠定了坚实的基础。
 
-So, grab your tools and start building – not just software, but a path to mastery in the art of development.
+所以，拿起你的工具，开始构建——不仅仅是软件，而是通向开发艺术的道路。
 
-# Beyond the Basics
+# 超越基础
 
-## Develop a Love Learning
+## 培养热爱学习的习惯
 
-Software development is one of the most in-demand professions of our time.
+软件开发是当今需求最大的职业之一。
 
-There are constantly new job openings, which attract both youngsters and already employed people from a wide range of professions.
+不断有新的职位空缺，吸引了年轻人和来自广泛职业领域的已经就业的人。
 
-They know that you can get a really good salary working as a software engineer, and so they start their careers with great ambitions.
+他们知道，作为软件工程师可以获得非常好的薪水，因此他们带着巨大的野心开始职业生涯。
 
-Even if you get a job in software development, if you really want to become great, it helps to love learning and programming.
+即使你在软件开发领域找到一份工作，如果你真的想变得优秀，热爱学习和编程是有帮助的。
 
-It is one of the few professions in which you constantly have to learn something new. It’s not just the existing concepts you need to know. You have to adapt to the constant influx of new technologies.
+这是少数几个你必须不断学习新事物的职业之一。你不仅需要了解现有的概念。你还必须适应不断涌入的新技术。
 
-You have to adapt to the changes in the market and learn whatever new things are currently considered as valuable. In short, you will have to consistently learn a lot.
+你必须适应市场的变化，学习当前被认为有价值的新事物。简而言之，你将不得不持续学习很多。
 
-In order to keep your brain constantly engaged in learning, you will have to be curious and stay humble.
+为了让你的大脑不断参与学习，你必须保持好奇心并保持谦逊。
 
-Often, programmers get employed on the basis of their existing knowledge and start to think they don’t need to learn new things anymore. But you will only be able to excel as a software engineer if you are curious and love learning, as the need to learn never ceases.
+经常有程序员基于他们的现有知识被雇佣，开始认为他们不再需要学习新东西。但如果你想成为优秀的软件工程师，保持好奇心并热爱学习是必要的，因为学习的需求永不停息。
 
-In November 1915, after writing only two pages of what he referred to as “one of the most beautiful works of my life,” Einstein sent his 11-year-old son Hans Albert a letter.
+1915 年 11 月，在写下他所称的“我生命中最美的作品之一”仅两页后，爱因斯坦给他 11 岁的儿子汉斯·阿尔伯特写了一封信。
 
-He praised his son for his learning efforts, saying, “That is the way to learn the most…When you are doing something with such enjoyment that you don’t notice the time passes.”
+他赞扬儿子的学习努力，说：“那是学习最多的方法……当你做某事时如此享受，以至于你没有注意到时间的流逝。”
 
-“Curiosity has its own reason for existing,” Einstein explains. “One cannot help but be in awe when one contemplates the mysteries of eternity, of life, of the marvelous structure of reality.”
+“好奇心有其存在的理由，”爱因斯坦解释道。“当人们思考永恒、生命和现实奇妙结构的奥秘时，无法不感到敬畏。”
 
-Become curious about how a framework works and is structured. When you learn something thoroughly, you gain a clear picture of its mechanisms and functionalities.
+对框架的工作原理和结构产生好奇心。当你彻底学习某件事时，你会对其机制和功能有一个清晰的认识。
 
-For example, don't simply accept that scikit-learn is a great framework for machine learning — learn how it works, behind the curtains. And consider the possibility of contributing to and improving it, as it is open source.
+例如，不要仅仅接受 scikit-learn 是一个很棒的机器学习框架——学习它是如何工作的，背后的机制。并考虑对其做出贡献和改进，因为它是开源的。
 
-Also, try not to be overly concerned with money. Of course, we all need money to pay our bills and buy food for ourselves and our family. These are basic needs, and we need to meet them – so money is critical. But try to cultivate a passion for learning and developing for the sake of it. This will make the financial compensation all the more rewarding.
+另外，尽量不要过分关注金钱。当然，我们都需要钱来支付账单和为自己和家人买食物。这些是基本需求，我们需要满足它们——所以钱很重要。但试着培养对学习和开发的热情。这样，经济回报会更加令人满意。
 
-Try to develop a love of programming and feel grateful that you have the opportunity to positively impact the lives of millions of people with the lines of code that you write.
+试着培养对编程的热爱，并感激你有机会通过你编写的代码积极影响数百万人的生活。
 
-Einstein believed that “love is a better teacher than a sense of duty.”
+爱因斯坦认为，“爱是比责任感更好的老师。”
 
-What we can learn from this as software engineers is the importance of not just working for a good salary but working because we love learning and our work in general. If we can develop an intrinsic curiosity and drive that keeps us engaged after work or during the weekends when our boss is not watching, all the better.
+我们作为软件工程师可以从中学到的是，不仅仅是为了高薪工作，而是因为我们热爱学习和我们的工作。如果我们能够培养一种内在的好奇心和动力，让我们在下班后或周末继续投入，那就更好了。
 
-## Look at the Bigger Picture
+## 看大局
 
-In the fast-paced and exciting world of software engineering, it's crucial to understand that being a software engineer is about much more than just writing code.
+在快节奏和令人兴奋的软件工程世界中，理解成为软件工程师不仅仅是写代码是至关重要的。
 
-Imagine you're not just a builder, but also an architect and a visionary. Your role is like being a key player in a big team, where your ideas and work help the team win.
+想象一下你不仅是一个建造者，也是一个建筑师和一个远见者。你的角色就像是一个大团队中的关键成员，你的想法和工作帮助团队获胜。
 
-### Understand your impact
+### 理解你的影响
 
-When you're a software engineer, you might spend a lot of time working on specific coding tasks – like solving a puzzle piece by piece.
+作为软件工程师，你可能花很多时间处理特定的编码任务——像是一块一块地解决难题。
 
-But, it's important to remember that you're actually helping to complete a much larger puzzle.
+但是，重要的是要记住，你实际上是在帮助完成一个更大的拼图。
 
-Let's say your company is like a big ship, and you're not just fixing parts of the ship – you're helping it reach its destination.
+假设你的公司像一艘大船，你不仅仅是在修理船的部件——你是在帮助它到达目的地。
 
-Imagine you're making an app for a local bakery. Instead of just focusing on making the buttons work, you should also think about how your app will help the bakery get more customers and make their life easier.
+想象一下你正在为一个当地面包店制作一个应用程序。除了关注按钮的工作，还要考虑你的应用程序如何帮助面包店吸引更多客户并让他们的生活更轻松。
 
-### Seeing the whole, not just the parts
+### 看整体，不仅仅是部分
 
-As you grow in your career, you'll start to see not just the lines of code you write, but the whole project, like looking at a whole forest instead of just one tree.
+随着你在职业生涯中的成长，你将不仅看到你写的代码行，还会看到整个项目，就像看整个森林而不是一棵树。
 
-This means you'll start to understand how your work affects everything else and can make decisions that help the entire business.
+这意味着你将开始理解你的工作如何影响其他一切，并能够做出有助于整个业务的决策。
 
-Think of a puzzle game on your phone. If you only focus on one small part, you might miss a better solution that solves more puzzles at once.
+想想你手机上的拼图游戏。如果你只专注于一个小部分，你可能会错过一个能解决更多拼图的更好解决方案。
 
-### From coding to contributing
+### 从编码到贡献
 
-When you start focusing on the most important tasks, you become more than just someone who writes code. You become someone who solves big problems.
+当你开始专注于最重要的任务时，你不仅仅是一个写代码的人。你变成了一个解决大问题的人。
 
-This is like moving from being a player in a game to being the one who helps plan the strategy of the game.
+这就像从游戏中的一个玩家转变为帮助计划游戏策略的人。
 
-Imagine your company is like a garden. At first, you might be planting individual flowers (writing code). But later, you start to plan where to plant trees and how to make the garden more beautiful (strategic thinking).
+想象你的公司像一个花园。一开始，你可能是在种植单个花朵（写代码）。但后来，你开始规划种植树木的位置以及如何使花园更美丽（战略性思考）。
 
-### More than a coder
+### 不仅是程序员
 
-By aligning your work with what the business really needs, you become a key player on your team. Your work starts to have a big impact, and you become someone everyone relies on.
+通过使你的工作与业务的实际需求保持一致，你成为团队中的关键成员。你的工作开始产生重大影响，你成为每个人依赖的人。
 
-It's like being a star player on a sports team who not only scores goals but also helps the team win championships.
+这就像在体育团队中不仅得分还帮助球队赢得冠军的明星球员。
 
-If you're working on a website, don't just make it look good. Think about how it functions, how it can attract more visitors, and how it can help the business grow.
+如果你在一个网站上工作，不仅仅是让它看起来好。想想它如何运作，如何吸引更多的访问者，以及如何帮助业务增长。
 
-Being a software engineer is an amazing journey. It's not just about writing code, but about using your skills to help the business and its customers.
+成为软件工程师是一段惊人的旅程。这不仅仅是写代码，而是利用你的技能帮助业务及其客户。
 
-When you start to see your role in this bigger way, you grow not just as a programmer, but as a key member of your team.
+当你开始以这种更大的方式看待你的角色时，你不仅作为程序员成长，而且作为团队的关键成员成长。
 
-This approach will help you develop both personally and professionally in the exciting world of software engineering.
+这种方法将帮助你在令人兴奋的软件工程世界中在个人和专业方面发展。
 
-Remember, you're not just building software – you're building success stories.
+记住，你不仅是在构建软件——你在构建成功故事。
 
-## Embrace Lifelong Learning in Software Engineering
+## 拥抱终身学习
 
-Think of the field of software engineering not as a one-time race but as an ongoing marathon with new and exciting paths to explore at every turn.
+将软件工程领域视为一场不断进行的马拉松，而不是一次性的比赛，在每个转弯处都有新的激动人心的路径等待探索。
 
-Your formal education, whether you got a college degree or participated in a bootcamp or taught yourself to code – it's just the starting line.
+你的正规教育，无论是获得大学学位，参加培训营还是自学编程——这只是起点。
 
-What lies ahead is a thrilling adventure of continuous learning and growth.
+前方是一段持续学习和成长的激动人心的冒险。
 
-Picture yourself as a detective in the world of technology. Each new challenge is a mystery waiting to be solved.
+将自己想象成技术世界中的侦探。每个新挑战都是等待解决的谜题。
 
-At first, these puzzles may seem daunting, but as you learn more, you'll find joy in piecing together the solutions. This journey enhances your confidence and turns complex problems into exciting quests.
+一开始，这些谜题可能看起来令人生畏，但随着你学到更多，你会在拼凑解决方案中找到乐趣。这段旅程增强了你的自信，并将复杂的问题变成令人兴奋的探索。
 
-In the fast-paced tech landscape, what's hot today might be forgotten tomorrow. So while it's important to stay up-to-date and aware of the latest trends, don't forget to work on the fundamentals and learn the mainstay technologies.
+在快速变化的技术领域，今天的热门可能明天就被遗忘。因此，虽然跟上最新趋势并了解最新动向很重要，但不要忘记学习基础知识并掌握主流技术。
 
-So while you'll want to learn new programming languages and frameworks, and get comfortable with the latest software, be practical about what you focus on.
+因此，虽然你会想学习新的编程语言和框架，并熟悉最新的软件，但要实际地选择你关注的内容。
 
-As you learn and grow, your value as a software engineer will skyrocket.
+随着你学习和成长，作为软件工程师的价值将飞速上升。
 
-This isn't just about earning a bigger paycheck – it's about getting your hands on more exciting and challenging projects.
+这不仅仅是为了赚取更高的薪水——还包括参与更激动人心和具有挑战性的项目。
 
-Just like a sought-after artist, your up-to-date skills and knowledge can help make you a hot commodity in the tech world.
+就像一位备受追捧的艺术家一样，你最新的技能和知识可以帮助你在技术世界中成为热门人物。
 
-Imagine each new skill you learn as a key. The more keys you have, the more doors you can open. This could lead to better job offers, working on groundbreaking projects, or even guiding a team.
+想象你学到的每个新技能都是一把钥匙。你拥有的钥匙越多，你能打开的门就越多。这可能导致更好的工作机会，参与开创性的项目，甚至领导团队。
 
-Your knowledge and experience are like a map, guiding you to a rewarding and dynamic career.
+你的知识和经验就像一张地图，引导你走向一个充实和充满活力的职业。
 
-## Good Luck!
+## 祝你好运！
 
-Thank you for reading this handbook! I hope you now feel better equipped to break into the world of tech, grow your skills, and work towards your first – or next – developer job.
+感谢你阅读这本手册！希望你现在感觉更有准备进入科技世界，提升你的技能，并朝着你的第一个——或下一个——开发者工作努力。
 
-### Get the PDF version of the book
+### 获取本书的 PDF 版本
 
-You can read this book as a PDF by downloading it [here][39].
+你可以通过[这里][39]下载 PDF 版本阅读这本书。
 
 ---
 
 ![Fatos Morina](https://www.freecodecamp.org/news/content/images/size/w60/2021/05/fatos-morina-gravatar.jpeg)
 
-[Fatos Morina][40]
+[法托斯·莫里纳（Fatos Morina）][40]
 
-Experienced and passionate Software Engineer, specializing in Machine Learning
+经验丰富且充满激情的软件工程师，专注于机器学习
 
 ---
 
-If you read this far, thank the author to show them you care. Say Thanks
+如果你读到了这里，感谢作者，向他们表达你的关心。说声谢谢
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started][41]
+免费学习编程。freeCodeCamp 的开源课程帮助超过 40,000 人找到了开发者的工作。[开始学习][41]
 
 [1]: /news/tag/learning-to-code/
 [2]: /news/author/fatosmorina/
-[3]: #what-is-programming
-[4]: #should-you-still-learn-to-code-answer-yes-
-[5]: #why-you-should-consider-coding-as-a-career
-[6]: #potential-challenges-of-a-programming-job
-[7]: #why-do-software-engineers-get-paid-so-well
-[8]: #how-to-prepare-for-your-coding-journey
-[9]: #your-ego-is-your-enemy
-[10]: #take-responsibility-for-your-learning
-[11]: #i-am-afraid-to-start-programming-what-should-i-do
-[12]: #strategies-and-tips-for-learning-to-code
-[13]: #can-you-learn-coding-in-a-single-night
-[14]: #avoid-tutorial-hell
-[15]: #how-to-understand-complex-topics-by-using-the-feynman-technique
-[16]: #don-t-memorize-the-syntax
-[17]: #keep-a-to-learn-list
-[18]: #practical-aspects-of-coding
-[19]: #how-to-deal-with-overwhelming-projects
-[20]: #how-to-choose-projects-to-build
-[21]: #learn-by-building-things-from-scratch
-[22]: #learn-by-building-things-from-scratch
-[23]: #beyond-the-basics
-[24]: #develop-a-love-of-learning
-[25]: #look-at-the-bigger-picture
-[26]: #embrace-lifelong-learning-in-software-engineering
-[27]: #get-the-pdf-version-of-the-book
+[3]: #什么是编程
+[4]: #你还应该学习编程吗-是的
+[5]: #为什么你应该考虑把编程作为职业
+[6]: #编程工作的潜在挑战
+[7]: #为什么软件工程师薪水这么高
+[8]: #如何为你的编程之旅做准备
+[9]: #你的自我意识是你的敌人
+[10]: #对你的学习负责
+[11]: #我害怕编程--我该怎么办
+[12]: #学习编程的策略和技巧
+[13]: #你能在一个晚上学会编程吗
+[14]: #避免教程地狱
+[15]: #如何通过费曼技巧理解复杂主题
+[16]: #不要记忆语法
+[17]: #保持一个待学习列表
+[18]: #编程的实际方面
+[19]: #如何处理压倒性的项目
+[20]: #如何选择要构建的项目
+[21]: #通过从头开始构建来学习
+[22]: #构建已经存在的东西
+[23]: #超越基础
+[24]: #培养学习的热爱
+[25]: #看大局
+[26]: #拥抱终身学习
+[27]: #获取本书的pdf版本
 [28]: https://www.newscientist.com/gallery/software-bugs/
 [29]: https://www.newscientist.com/gallery/software-bugs/
 [30]: https://norvig.com/21-days.html
@@ -1226,4 +1224,4 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [38]: https://www.freecodecamp.org/news/learn-how-to-create-an-instagram-clone-using-react/
 [39]: https://fatosmorina.gumroad.com/l/coding-for-everyone
 [40]: /news/author/fatosmorina/
-[41]: https://www.freecodecamp.org/learn/
+[41]: https://www.freecodecamp.org/chinese/learn/

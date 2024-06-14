@@ -551,7 +551,7 @@ Backpropogation is an efficient algorithm for computing the gradient of the cost
 
 So, to be clear, backpropagation is the actual process of calculating the gradients in the model, and then Gradient Descent is the algorithm that takes the gradients as input and updates the parameters.
 
-When we compute the gradients and use them to update the parameters in the model, this helps us update the parameters and direct them towards more correct direction towards finding the global optimum to minimize. This helps further minimize the loss function  and  improve prediction accuracy of the model.
+When we compute the gradients and use them to update the parameters in the model, this helps us update the parameters and direct them towards more correct direction towards finding the global optimum to minimize. This helps further minimize the loss function and improve prediction accuracy of the model.
 
 In each pass, after forward propagation is completed, the gradients should be obtained. Then we use them to obtain the model parameters, such as the weight and the bias parameters.
 
@@ -1296,7 +1296,7 @@ Figure above, visualizes the idea behind Batch Normalization, which shows that n
 
 This is achieved by adjusting and scaling the activations during training. Batch normalization allows each layer of a network to learn by itself a little more independently of other layers. Let's see how it works in more detail.
 
-#### Step 1: Mini-batch Mean & Variance:
+#### Step 1: Mini-batch Mean & Variance
 
 Compute the mean of the activations for a mini-batch using the following equation:
 
@@ -1573,7 +1573,7 @@ LSTM Architecture (Image Source: [LunarTech.ai][62])
 
 This diagram represents the architecture of an LSTM (Long Short-Term Memory) network, visualizing the flow of data through its components at different time steps, let's dive deeper into each of this sates and the process behind them:
 
-**Cell States:** At the top row, we have rectangles in yellow labeled C\_(_t−1)_, _C\_(t)​_, … _C\_(t+1)_​. These represent the cell states of LSTM at consecutive time steps.
+**Cell States:** At the top row, we have rectangles in yellow labeled C\_(_t−1)_, _C\_(t)​_, …… _C\_(t+1)_​. These represent the cell states of LSTM at consecutive time steps.
 
 These cell states are a key component of the LSTM as they carry relevant information throughout processing of the sequence. They hold the information of what information to use, what to forget and what to output.
 

@@ -9,7 +9,7 @@ reviewer: ""
 
 November 23, 2023 / [#JavaScript](/news/tag/javascript/)
 
-# JavaScript中的DOM操作 - 一份面向初学者的全面指南
+# JavaScript 中的 DOM 操作 - 一份面向初学者的全面指南
 
 ![Joan Ayebola](https://www.freecodecamp.org/news/content/images/size/w60/2023/09/Screenshot_20230924-145016.jpg)
 
@@ -17,11 +17,11 @@ November 23, 2023 / [#JavaScript](/news/tag/javascript/)
 
   ![DOM Manipulation in JavaScript – A Comprehensive Guide for Beginners](https://www.freecodecamp.org/news/content/images/size/w2000/2023/11/Beige-Aesthetic-Neutral-Thesis-Defense-Presentation-1.png)
 
-作为一种Web开发语言，JavaScript赋予了开发者创建动态和交互式网页的能力，其中一个实现这种交互性的JavaScript关键特性是文档对象模型（DOM）操作。
+作为一种 Web 开发语言，JavaScript 赋予了开发者创建动态和交互式网页的能力，其中一个实现这种交互性的 JavaScript 关键特性是文档对象模型（DOM）操作。
 
 DOM 操作允许开发者修改网页的结构、样式和内容。在本文中，我们将探讨 JavaScript 中 DOM 操作的基础知识，将复杂的概念分解成易于理解的代码片段。
 
-## 什么是DOM?
+## 什么是 DOM?
 
 文档对象模型（DOM）是一种用于 web 文档的编程接口。它以对象树的形式表示文档的结构，其中每个对象对应于文档的一部分，例如元素、属性和文本。JavaScript 可以操作这个树状结构，允许开发者动态地改变网页的内容和外观。
 
@@ -71,7 +71,7 @@ myButton.addEventListener('click', function() {
 });
 ```
 
-在这个例子中，当ID为 `myButton` 的按钮被点击时，浏览器将弹出一个内容为 `Button Clicked!` 的提示框。事件监听器提供了一种根据用户交互执行自定义代码的方式。
+在这个例子中，当 ID 为 `myButton` 的按钮被点击时，浏览器将弹出一个内容为 `Button Clicked!` 的提示框。事件监听器提供了一种根据用户交互执行自定义代码的方式。
 
 ## 如何修改样式
 
@@ -95,7 +95,7 @@ colorButton.addEventListener('click', function() {
 });
 ```
 
-在这个例子中，当ID为 `colorButton` 的按钮被点击时，ID为 `myParagraph` 的段落的文本颜色将被更改为蓝色。
+在这个例子中，当 ID 为 `colorButton` 的按钮被点击时，ID 为 `myParagraph` 的段落的文本颜色将被更改为蓝色。
 
 ## 如何创建和修改元素
 
@@ -130,7 +130,7 @@ const myImage = document.getElementById('myImage');
 myImage.src = 'new-image.jpg';
 ```
 
-这个例子中, 我们访问了ID为 `myImage` 的图像元素，并将其 `src` 属性更改为 `new-image.jpg` ，动态更新显示的图像。
+这个例子中, 我们访问了 ID 为 `myImage` 的图像元素，并将其 `src` 属性更改为 `new-image.jpg` ，动态更新显示的图像。
 
 ### 如何更新表单的输入值
 
@@ -147,7 +147,7 @@ myInput.addEventListener('input', function() {
 });
 ```
 
-在这个例子中，当用户在ID为 `myInput` 的文本输入框中输入内容时，ID为 `inputValue` 的段落将根据输入值动态更新段落内容。
+在这个例子中，当用户在 ID 为 `myInput` 的文本输入框中输入内容时，ID 为 `inputValue` 的段落将根据输入值动态更新段落内容。
 
 ### 如何切换可见性
 
@@ -167,15 +167,15 @@ toggleButton.addEventListener('click', function() {
 });
 ```
 
-在这里，ID为 `toggleParagraph` 的段落最初是可见的，单击ID为 `toggleButton` 的按钮会切换其可见性。
+在这里，ID 为 `toggleParagraph` 的段落最初是可见的，单击 ID 为 `toggleButton` 的按钮会切换其可见性。
 
 ## DOM 操作中的常见陷阱
 
 虽然 DOM 操作是创建动态网页的强大工具，但初学者经常会遇到一些常见陷阱，这些陷阱可能导致意外行为或错误。让我们探讨一些这样的陷阱，并提供如何避免它们的建议。
 
-### 在DOM渲染完成前操作它们
+### 在 DOM 渲染完成前操作它们
 
-有时我们可能会在DOM尚未完全加载之前尝试操作它，这可能导致JavaScript尝试访问尚未呈现的元素。为了避免这种情况，最重要的是在执行任何JavaScript代码之前都需要等待DOM完全加载：
+有时我们可能会在 DOM 尚未完全加载之前尝试操作它，这可能导致 JavaScript 尝试访问尚未呈现的元素。为了避免这种情况，最重要的是在执行任何 JavaScript 代码之前都需要等待 DOM 完全加载：
 
 ```javascript
 document.addEventListener('DOMContentLoaded', function() {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 ```
 
-通过将执行DOM操作的代码包裹在 `DOMContentLoaded` 事件监听器内部，你就可以确保它仅在DOM准备就绪时运行。
+通过将执行 DOM 操作的代码包裹在 `DOMContentLoaded` 事件监听器内部，你就可以确保它仅在 DOM 准备就绪时运行。
 
 ### 没有确认一个元素是否存在
 
@@ -240,7 +240,7 @@ for (let i = 0; i < 10; i++) {
 }
 ```
 
-通过一次查询 DOM 并重复使用该DOM的引用，可以优化你的代码。
+通过一次查询 DOM 并重复使用该 DOM 的引用，可以优化你的代码。
 
 ### 无法处理跨浏览器的兼容性
 
@@ -259,11 +259,11 @@ if (document.addEventListener) {
 
 通过在使用一些功能特性之前检查它们，你可以确保您的代码在各种浏览器上正常工作。
 
-## 如何在框架中使用DOM操作
+## 如何在框架中使用 DOM 操作
 
 虽然 JavaScript 允许直接操作 DOM，但现代 Web 开发通常涉及使用诸如 React 或 Vue.js 等框架。这些框架提供了一种更加结构化的方式来构建和管理用户界面。
 
-### React示例
+### React 示例
 
 ```javascript
 // React组件渲染一个按钮并处理其点击事件
@@ -285,7 +285,7 @@ ReactDOM.render(<MyButton />, document.getElementById('reactRoot'));
 
 这个 React 示例创建了一个组件来处理按钮点击事件，它演示了一种更加声明式的 UI 开发方法。
 
-### Vue.js示例
+### Vue.js 示例
 
 ```javascript
 // 具有一个数据属性和一个方法的Vue.js实例
@@ -302,13 +302,13 @@ new Vue({
 });
 ```
 
-这个例子创建了一个Vue.js实例来管理数据和方法，展示了Vue.js的响应性和基于组件的结构。
+这个例子创建了一个 Vue.js 实例来管理数据和方法，展示了 Vue.js 的响应性和基于组件的结构。
 
 ## 总结
 
-在这个全面的指南中，我们深入探讨了 JavaScript 中的 DOM 操作。从访问元素到处理事件，从修改样式到创建新元素，我们以简单直接的方式涵盖了DOM操作的基本概念。
+在这个全面的指南中，我们深入探讨了 JavaScript 中的 DOM 操作。从访问元素到处理事件，从修改样式到创建新元素，我们以简单直接的方式涵盖了 DOM 操作的基本概念。
 
-请记住，DOM 操作是创建动态和交互式网页的核心。通过掌握这些基本技术，你将能够构建引人入胜且用户友好的 Web 应用程序。随着你继续进行你的JavaScript学习之旅，更多的练习与实践将加深你对这些概念的理解，为你成为一名成功的 Web 开发者铺平道路。
+请记住，DOM 操作是创建动态和交互式网页的核心。通过掌握这些基本技术，你将能够构建引人入胜且用户友好的 Web 应用程序。随着你继续进行你的 JavaScript 学习之旅，更多的练习与实践将加深你对这些概念的理解，为你成为一名成功的 Web 开发者铺平道路。
 
 ---
 

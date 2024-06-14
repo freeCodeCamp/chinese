@@ -296,7 +296,7 @@ allBtns.forEach(btn => console.log(btn))
 
 但是你仍然不能在 NodeList 使用 `map`、`filter` 等这类数组方法，如果你需要的话应该创建一个数组。
 
-你可以阅读这篇[freeCodeCamp关于 HTML 集合和 NodeList 之间区别的文章][42]来了解更多。
+你可以阅读这篇[freeCodeCamp 关于 HTML 集合和 NodeList 之间区别的文章][42]来了解更多。
 
 ## 如何更改 DOM 元素的内容
 

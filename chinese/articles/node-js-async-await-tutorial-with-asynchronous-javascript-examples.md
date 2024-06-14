@@ -6,21 +6,21 @@
 
 ![Node.js Async Await Tutorial – With Asynchronous JavaScript Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/yoda.jpeg)
 
-当你第一次学习JavaScript时，最难理解的概念之一是该语言的异步处理（asynchronous processing）模式。对于我们大多数人来说，学习异步编程看起来差不多是这样的
+当你第一次学习 JavaScript 时，最难理解的概念之一是该语言的异步处理（asynchronous processing）模式。对于我们大多数人来说，学习异步编程看起来差不多是这样的
 
 ![async](https://www.freecodecamp.org/news/content/images/2021/05/async.png)
 
-如果你第一次使用async时不是这样，请认为自己是个天才。
+如果你第一次使用 async 时不是这样，请认为自己是个天才。
 
-尽管它很难学，但如果你想使用JavaScript和Node.js构建网络应用程序和服务器，异步编程是至关重要的，因为JS代码**默认是异步的**。
+尽管它很难学，但如果你想使用 JavaScript 和 Node.js 构建网络应用程序和服务器，异步编程是至关重要的，因为 JS 代码**默认是异步的**。
 
 ## 异步编程基础知识
 
-那么，究竟什么是异步处理模型，或 "非阻塞I/O "模型（如果你是Node.js用户，你可能已经听说过）？
+那么，究竟什么是异步处理模型，或 "非阻塞 I/O "模型（如果你是 Node.js 用户，你可能已经听说过）？
 
 这里有一个很长的，请不要看的描述：在异步处理模型中，当你的应用程序引擎与外部各方（如文件系统或网络）进行交互时，它不会等到从这些各方得到一个结果，才做下一步。相反，它继续进行后续的任务，只有在得到结果的信号后才回到之前的外部各方进行处理。
 
-为了理解Node.js的默认异步处理模型，我们来看看一个假设的圣诞老人工作室。在任何工作开始之前，圣诞老人将不得不阅读来自世界各地的孩子们的每一封可爱的信。
+为了理解 Node.js 的默认异步处理模型，我们来看看一个假设的圣诞老人工作室。在任何工作开始之前，圣诞老人将不得不阅读来自世界各地的孩子们的每一封可爱的信。
 
 ![Santa reading letter for workshop](https://www.freecodecamp.org/news/content/images/2021/05/santa-01.png)
 
@@ -28,7 +28,7 @@
 
 ![Santa passing instruction to Red](https://www.freecodecamp.org/news/content/images/2021/05/santa-02.png)
 
-今年，由于[COVID-19大流行](https://en.wikipedia.org/wiki/COVID-19_pandemic)，只有一半的圣诞老人的精灵可以到他的车间来帮忙。不过，因为他很聪明，圣诞老人决定不等每个精灵准备完礼物（也就是同步工作），而是继续翻译和传递他那堆信中的指示。
+今年，由于[COVID-19 大流行](https://en.wikipedia.org/wiki/COVID-19_pandemic)，只有一半的圣诞老人的精灵可以到他的车间来帮忙。不过，因为他很聪明，圣诞老人决定不等每个精灵准备完礼物（也就是同步工作），而是继续翻译和传递他那堆信中的指示。
 
 ![Santa passing instruction to Blue](https://www.freecodecamp.org/news/content/images/2021/05/santa-03.png)
 
@@ -52,15 +52,15 @@
 
 ![Santa's gotten all the presents](https://www.freecodecamp.org/news/content/images/2021/05/santa-08.png)
 
-这就是异步或非阻塞I/O处理模型的基本思想。现在让我们看看它在Node.js中是如何具体完成的。
+这就是异步或非阻塞 I/O 处理模型的基本思想。现在让我们看看它在 Node.js 中是如何具体完成的。
 
-## Node.js的事件循环
+## Node.js 的事件循环
 
-你可能听说过Node.js是单线程的。然而，确切地说，只有Node.js中的事件循环是单线程的，它与后台C++工作线程池交互。Node.js的处理模式有四个重要组成部分:
+你可能听说过 Node.js 是单线程的。然而，确切地说，只有 Node.js 中的事件循环是单线程的，它与后台 C++工作线程池交互。Node.js 的处理模式有四个重要组成部分:
 
 - 事件队列（Event Queue）: 在程序中声明的任务，或通过[回调 callbacks](https://nodejs.org/en/knowledge/getting-started/control-flow/what-are-callbacks/)从处理线程池中返回. (在我们的圣诞老人工作室里，相当于给圣诞老人的那堆信)
-- 事件循环（Event Loop）: Node.js的主线程，促进事件队列和工人线程池进行操作--包括异步和同步。(这里是圣诞老人 🎅)
-- （后台线程池）Background thread pool: 这些线程做任务的实际处理，这可能是I/O阻塞（例如调用和等待外部API的响应）。(这些是我们车间里勤奋的精灵 🧝🧝‍♀️🧝‍♂️。)
+- 事件循环（Event Loop）: Node.js 的主线程，促进事件队列和工人线程池进行操作--包括异步和同步。(这里是圣诞老人 🎅)
+- （后台线程池）Background thread pool: 这些线程做任务的实际处理，这可能是 I/O 阻塞（例如调用和等待外部 API 的响应）。(这些是我们车间里勤奋的精灵 🧝🧝‍♀️🧝‍♂️。)
 
 你可以将这种处理模式可视化，如下所示:
 
@@ -86,7 +86,7 @@ from the other side
 API returned status: 200
 ```
 
-那么Node.js引擎是如何执行上述代码片段的呢？它从调用栈中的三个函数开始:
+那么 Node.js 引擎是如何执行上述代码片段的呢？它从调用栈中的三个函数开始:
 
 ![Processing starts with 3 functions in the call stack](https://www.freecodecamp.org/news/content/images/2021/05/execution-01-1.png)
 
@@ -94,7 +94,7 @@ API returned status: 200
 
 ![Hello console log removed from stack](https://www.freecodecamp.org/news/content/images/2021/05/execution-02-1.png)
 
-然后，对`https.get`的函数调用（即对相应的URL进行获取请求）被执行，并被委托给工人线程池，并附加一个回调。
+然后，对`https.get`的函数调用（即对相应的 URL 进行获取请求）被执行，并被委托给工人线程池，并附加一个回调。
 
 ![https.get delegated to worker pool](https://www.freecodecamp.org/news/content/images/2021/05/execution-03.png)
 
@@ -110,19 +110,19 @@ API returned status: 200
 
 ![Callback put inside call stack](https://www.freecodecamp.org/news/content/images/2021/05/execution-06.png)
 
-然后我们会在控制台（console）看到 "API返回状态：200"，像这样:
+然后我们会在控制台（console）看到 "API 返回状态：200"，像这样:
 
 ![Status code printed out](https://www.freecodecamp.org/news/content/images/2021/05/execution-07.png)
 
-通过促进回调队列（callback queue）和调用栈（call stack），Node.js中的事件循环以异步方式有效地执行我们的JavaScript代码。
+通过促进回调队列（callback queue）和调用栈（call stack），Node.js 中的事件循环以异步方式有效地执行我们的 JavaScript 代码。
 
-## JavaScript和Node.js的同步编程的发展历史 async/await
+## JavaScript 和 Node.js 的同步编程的发展历史 async/await
 
-现在你对异步执行和Node.js事件循环的内部工作有了很好的理解，让我们深入了解JavaScript中的async/await。我们将看看它是如何工作的，从最初的回调驱动（callback-driven）的实现到最新闪目耀人的async/await关键字。
+现在你对异步执行和 Node.js 事件循环的内部工作有了很好的理解，让我们深入了解 JavaScript 中的 async/await。我们将看看它是如何工作的，从最初的回调驱动（callback-driven）的实现到最新闪目耀人的 async/await 关键字。
 
-### JavaScript中的回调（Callbacks）
+### JavaScript 中的回调（Callbacks）
 
-OG处理JavaScript引擎的异步性的方法是通过回调。回调基本上是在同步或I/O阻塞操作结束后执行的函数。
+OG 处理 JavaScript 引擎的异步性的方法是通过回调。回调基本上是在同步或 I/O 阻塞操作结束后执行的函数。
 
 这种模式的一个直接例子是内置的`setTimeout`函数，它将在执行回调之前等待一定数量的毫秒。
 
@@ -208,9 +208,9 @@ translateLetter("wooden truck", translateCb);
 - 只在高阶函数的末尾执行一次回调
 - 记录绝对需要的任何不合常规的东西，并始终以向后兼容为目标
 
-### JavaScript中的Promises
+### JavaScript 中的 Promises
 
-[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 是为了解决上述回调的问题而创建的。Promises确保了JavaScript用户:
+[Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) 是为了解决上述回调的问题而创建的。Promises 确保了 JavaScript 用户:
 
 - 坚持用他们的签名`resolve`和`reject`函数进行特定的约定。
 - 将回调函数链接到一个排列整齐的、自上而下的流程。
@@ -291,11 +291,11 @@ translateLetter("wooden truck")
 // This would produce the present: wrapped polished wooden truck with instruction: "kcurt nedoow"
 ```
 
-### JavaScript中的Async/Await
+### JavaScript 中的 Async/Await
 
-最后但绝对不是最不重要的，最靓的仔是async/await。它非常容易使用，但也有一些风险。
+最后但绝对不是最不重要的，最靓的仔是 async/await。它非常容易使用，但也有一些风险。
 
-Async/await解决了Promise的内存共享问题，把所有的东西都放在同一个范围内。我们之前的例子可以很容易地改写成这样:
+Async/await 解决了 Promise 的内存共享问题，把所有的东西都放在同一个范围内。我们之前的例子可以很容易地改写成这样:
 
 ```js
 (async function main() {
@@ -307,7 +307,7 @@ Async/await解决了Promise的内存共享问题，把所有的东西都放在�
 // This would produce the present: wrapped polished wooden truck with instruction: "kcurt nedoow"
 ```
 
-然而，尽管用async/await写异步代码很容易，但也很容易犯错误，造成性能漏洞。
+然而，尽管用 async/await 写异步代码很容易，但也很容易犯错误，造成性能漏洞。
 
 现在让我们把我们的例子圣诞老人工作室的场景本地化，以包装礼物并把它们装到雪橇上。
 
@@ -360,22 +360,22 @@ function loadPresents(presents) {
 })();
 ```
 
-以下是一些建议的步骤，以解决你的Node.js代码中的并发性能问题:
+以下是一些建议的步骤，以解决你的 Node.js 代码中的并发性能问题:
 
-- 在你的代码中找出有多个连续等待的hotspots
+- 在你的代码中找出有多个连续等待的 hotspots
 - 检查它们是否相互依赖（即一个函数使用另一个函数返回的数据）
 - 用`Promise.all`使独立的函数调用同时进行
 
 ## 收拾（文章，而不是圣诞礼物😂）
 
-祝贺你读到了本文的结尾，我已经尽力让这篇文章变得更短。这篇文章，但JavaScript中的异步话题实在是太广泛了。
+祝贺你读到了本文的结尾，我已经尽力让这篇文章变得更短。这篇文章，但 JavaScript 中的异步话题实在是太广泛了。
 
 下面是一些关键的收获:
 
-- 将你的JavaScript回调模块化以避免回调地狱
-- 坚持使用[JS回调的惯例](https://gist.github.com/sunnycmf/b2ad4f80a3b627f04ff2)
-- 在使用promises的时候，通过`Promise.all`来共享数据
-- 要注意async/await代码的性能影响
+- 将你的 JavaScript 回调模块化以避免回调地狱
+- 坚持使用[JS 回调的惯例](https://gist.github.com/sunnycmf/b2ad4f80a3b627f04ff2)
+- 在使用 promises 的时候，通过`Promise.all`来共享数据
+- 要注意 async/await 代码的性能影响
 
 We ❤️ JavaScript :)
 

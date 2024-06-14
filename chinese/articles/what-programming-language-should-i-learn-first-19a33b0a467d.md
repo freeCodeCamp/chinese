@@ -9,7 +9,7 @@ reviewer: ""
 
 November 24, 2023 / [#JavaScript](/news/tag/javascript/)
 
-# 2024年了，编程入门应该选什么语言？[已解决\]
+# 2024 年了，编程入门应该选什么语言？[已解决\]
 
 ![Quincy Larson](https://www.freecodecamp.org/news/content/images/size/w60/2021/03/Quincy-Larson-photo.jpg)
 
@@ -37,7 +37,7 @@ November 24, 2023 / [#JavaScript](/news/tag/javascript/)
 
 那其余的人呢。可能会搜索这样的内容：
 
->  我应该先学习哪门编程语言？
+> 我应该先学习哪门编程语言？
 
 很少有问题被如此频繁地问到，以至于有人总结了完整的信息图来解答。像下面这样：
 
@@ -104,11 +104,11 @@ Python 已逐渐崛起成为最受欢迎的选择。
 
 但变化确实发生了。即使是在学术界。
 
-在2014年，Python 在美国顶级计算机科学课程中[取代  Java](http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext) 成为最受欢迎的教学语言。
+在 2014 年，Python 在美国顶级计算机科学课程中[取代  Java](http://cacm.acm.org/blogs/blog-cacm/176450-python-is-now-the-most-popular-introductory-teaching-language-at-top-u-s-universities/fulltext) 成为最受欢迎的教学语言。
 
 ![1*728HWv2YP3PjY1_QmGQg1g](https://cdn-media-1.freecodecamp.org/images/1*728HWv2YP3PjY1_QmGQg1g.png)
 
-然而，另一种变化肯定会…最终…发生。
+然而，另一种变化肯定会……最终……发生。
 
 因为如果你看看实际上被生产力使用的语言，它描绘出的是一个非常不同的景象：
 
@@ -205,7 +205,7 @@ Python 也面临着同样的问题：
 
 [一款 roguelike 地牢爬行游戏](http://s.codepen.io/Megabyteceer/debug/qbXJMQ)
 
-### 学好一门语言。然后学习第二门语言。
+### 学好一门语言。然后学习第二门语言
 
 如果你不断地从一种语言跳到另一种语言，[你的进步将不会太大](https://medium.freecodecamp.com/a-cautionary-tale-of-learning-to-code-my-own-eddb24d9d5a7)。
 
@@ -224,7 +224,7 @@ Python 也面临着同样的问题：
 
 
 
-### 反对意见＃1：但是JavaScript不是很慢吗？
+### 反对意见＃1：但是 JavaScript 不是很慢吗？
 
 JavaScript - 对于大多数实际用途 - 与高性能语言一样快。
 
@@ -262,18 +262,18 @@ exampleArray.length
 
 如果你希望学习的第一门编程语言中绝对必须有静态类型，那么我仍然建议你先学习 JavaScript。然后你在快速地掌握 TypeScript。
 
-> “Typescript 有一段学习曲线，但如果你已经知道 JavaScript，那么这将是一条平滑的曲线。”—Alex Ewerlöf 对 TypeScript的看法
+> “Typescript 有一段学习曲线，但如果你已经知道 JavaScript，那么这将是一条平滑的曲线。”—Alex Ewerlöf 对 TypeScript 的看法
 
 ### 反对意见＃3：但是我真的想做一个移动应用
 
-我仍然建议首先学习JavaScript。
+我仍然建议首先学习 JavaScript。
 
 1.  JavaScript 提供了几个工具用于制作原生移动应用，比如 [Angular Cordova](https://cordova.apache.org/) 和 [React Native](https://facebook.github.io/react-native/)。
 2.  为了让你的移动应用实际上能做一些有趣的事情，它可能需要一个适当的后端，你会希望用一个适当的 Web 开发框架来构建，比如 Node.js + Express.js。
 
 此外，值得指出的是，移动应用开发的最佳时期可能已经过去了。
 
-首先，人们使用移动应用的程度虽然很高，但近一半的开发者工作都是 Web 开发。与此相比，只有8% 的工作涉及到移动应用开发。
+首先，人们使用移动应用的程度虽然很高，但近一半的开发者工作都是 Web 开发。与此相比，只有 8% 的工作涉及到移动应用开发。
 
 ![Stack_Overflow_Developer_Survey_2023](https://www.freecodecamp.org/news/content/images/2023/11/Stack_Overflow_Developer_Survey_2023.png)
 

@@ -1183,7 +1183,12 @@ div {
 
 这是一本对初学者友好的书，你可以像是专家一样从零开始去创建、测试、发布一个NPM包。
 
-[![可以在 Amazon 上找到这本如何创建 NPM 包](https://www.freecodecamp.org/news/content/images/2023/09/creating-npm-package-banner-codesweetly.png)][73]
+<a href="https://amzn.to/3Pa4bI4">
+  <figure class="kg-card kg-card-image kg-card-hascaption">
+      <img src="https://www.freecodecamp.org/news/content/images/2023/09/creating-npm-package-banner-codesweetly.png" alt="可以在 Amazon 上找到这本如何创建 NPM 包" class="kg-image">
+      <figcaption>可以在 Amazon 上找到这本如何创建 NPM 包</figcaption>
+  </figure>
+</a>
 
 ---
 

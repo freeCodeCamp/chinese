@@ -1181,7 +1181,7 @@ div {
 
 我写了一本有关[如何创建 NPM 包][72]的书！
 
-这是一本对初学者友好的书，你可以像是专家一样从零开始去创建、测试、发布一个NPM包。
+这是一本对初学者友好的书，你可以像是专家一样从零开始去创建、测试、发布一个 NPM 包。
 
 <a href="https://amzn.to/3Pa4bI4">
   <figure class="kg-card kg-card-image kg-card-hascaption">

@@ -3,7 +3,7 @@ title: CSS Transition vs Animation Handbook – How to Animate Elements in CSS
 author: Oluwatobi Sofela
 authorURL: https://www.freecodecamp.org/news/author/oluwatobiss/
 originalURL: https://www.freecodecamp.org/news/css-transition-vs-css-animation-handbook
-translator: ""
+translator: "Luoming"
 reviewer: ""
 ---
 
@@ -11,7 +11,7 @@ September 12, 2023 / [#CSS][1]
 
 <!-- more -->
 
-# CSS Transition vs Animation Handbook – How to Animate Elements in CSS
+# CSS 过渡与动画手册——如何用 CSS 为元素制作动画
 
 ![Oluwatobi Sofela](https://www.freecodecamp.org/news/content/images/size/w60/2023/09/oss.jpg)
 
@@ -19,76 +19,76 @@ September 12, 2023 / [#CSS][1]
 
   ![CSS Transition vs Animation Handbook – How to Animate Elements in CSS](https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/How-to-Animate-Elements-in-CSS-Cover.png)
 
-CSS transitions and animations provide smooth, gradual ways to change an element's style. But they work in different ways.
+CSS 过渡（Transition）和动画（Animation）为更改元素的样式提供了平滑、渐进的方式，但是它们的工作方式有些不同。
 
-Here are the main distinctions between them:
+这是它们之间的主要区别：
 
-| CSS Transition | CSS Animation |
-| --- | --- |
-| 
--   Creates smooth transitions from one CSS value to another.
--   You need triggers to run CSS transitions. For instance, you can use the `:hover` [pseudo-class][3] to run transitions when a user's pointer hovers over an element.
--   Transition has only two states: an initial and a final state. You cannot create intermediate steps.
--   Runs only once.
--   Best used for basic style changes.
+| CSS 过渡 | CSS 动画 |
+| -------- | -------- |
+|          |
+- 创建一个从一个 CSS 值到另一个值平滑的过渡。
+- 你需要触发器去运行 CSS 过渡。例如，您可以使用 `:hover` [伪类][3]在用户指针悬停在元素上时运行过渡。
+- 过渡只有两个状态：初始态和最终态。你不能创建中间步骤。
+- 只运行一次。
+- 最适合使用在基础样式的更改。
 
  | 
 
--   Animates the style change from one CSS keyframe to another.
--   CSS animations do not need triggers.
--   Animation allows you to create multiple states.
--   You can run multiple animation iterations—even to infinity.
--   Best used for dynamic style changes.
+- 从一个 CSS 关键帧到另一个关键帧的样式变更动画。
+- CSS 动画不需要触发器。
+- 动画允许你创建多种状态。
+- 你可以运行多次动画迭代——甚至是无数次。
+- 最适合使用在动态样式的更改。
 
  |
 
-This handbook uses examples to explain the two animating techniques so that you can understand their similarities and differences.
+本手册通过一些例子去解释两种动画技术，以便你理解它们之间的异同。
 
-## Table of Contents
+## 目录
 
-1.  [What Are CSS Transitions?][4]
-2.  [Categories of CSS Transition Properties][5]
-    -   [What Are the Required CSS Transition Properties?][6]
-    -   [What is the CSS `transition-property`?][7]
-    -   [What is the CSS `transition-duration` Property?][8]
-    -   [Examples of the Required CSS Transition Properties][9]
-    -   [What Are the Optional CSS Transition Properties?][10]
-    -   [What is the CSS `transition-timing-function` Property?][11]
-    -   [What is the CSS `transition-delay` Property?][12]
-    -   [Examples of the Optional CSS Transition Properties][13]
-3.  [Shorthand for Defining the CSS Transition Properties][14]
-4.  [What is CSS Animation?][15]
-    -   [Components of CSS Animations][16]
-    -   [What are CSS @keyframes?][17]
-5.  [What Are CSS Animation Properties?][18]
-    -   [What is the CSS `animation-name` Property?][19]
-    -   [What is the CSS `animation-duration` Property?][20]
-    -   [What is the CSS `animation-timing-function` Property?][21]
-    -   [What is the CSS `animation-delay` Property?][22]
-    -   [What is the CSS `animation-iteration-count` Property?][23]
-    -   [What is the CSS `animation-direction` Property?][24]
-    -   [What is the CSS `animation-play-state` Property?][25]
-    -   [What is the CSS `animation-fill-mode` Property?][26]
-6.  [What is the CSS `animation` Property?][27]
-7.  [Important Stuff to Know about CSS Transitions and Animations][28]
-8.  [Wrapping up][29]
+1.  [什么是 CSS 过渡？][4]
+2.  [CSS 过渡属性的种类][5]
+    -   [什么是必需 CSS 过渡属性？][6]
+    -   [什么是 `transition-property`？][7]
+    -   [什么是 `transition-duration`？][8]
+    -   [必需 CSS 过渡属性的示例][9]
+    -   [什么是可选 CSS 过渡属性？][10]
+    -   [什么是 `transition-timing-function`？][11]
+    -   [什么是 `transition-delay`？][12]
+    -   [可选 CSS 过渡属性的示例][13]
+3.  [CSS 过渡属性的缩写][14]
+4.  [什么是 CSS 动画？][15]
+    -   [CSS 动画的组成][16]
+    -   [什么是 CSS `@keyframes`][17]
+5.  [什么是 CSS animation 属性？][18]
+    -   [什么是 CSS `animation-name` 属性？][19]
+    -   [什么是 CSS `animation-duration` 属性？][20]
+    -   [什么是 CSS `animation-timing-function` 属性？][21]
+    -   [什么是 CSS `animation-delay` 属性？][22]
+    -   [什么是 CSS `animation-iteration-count` 属性？][23]
+    -   [什么是 CSS `animation-direction` 属性？][24]
+    -   [什么是 CSS `animation-play-state` 属性？][25]
+    -   [什么是 CSS `animation-fill-mode` 属性？][26]
+6.  [什么是 CSS `animation` 属性？][27]
+7.  [CSS 过渡和动画的重要知识要点][28]
+8.  [总结][29]
 
 Without further ado, let's discuss CSS transitions.
 
-## What Are CSS Transitions?
+<h2 id="what-are-css-transitions">什么是 CSS 过渡？</h2>
 
-**CSS transitions** provide a smooth and gradual way to change a specific CSS property's value.
+**CSS 过渡**提供了一种平滑、渐进的方式去更改指定的 CSS 属性值。
 
-So, instead of allowing browsers to change a property's value immediately, CSS transitions cause the change to happen smoothly over a specified period of time.
+这样，CSS 过渡会使变化在指定时间段内平滑地发生，而不是让浏览器去立即更改某个属性值。
 
-For instance, suppose you wish to change an element's size on hover. In that case, you have two options:
+例如，假设你希望当悬停时更改一个元素的尺寸。在这个例子中，你有两个选项：
 
-1.  Implement the change without CSS transitions.
-2.  Use CSS transitions to transition smoothly from the element's initial size to its new state.
+1. 不使用 CSS 过渡实现更改。
+2. 使用 CSS 过渡从元素的初始尺寸平滑地过渡到它的新状态。
 
-Let's see some examples of the two options.
+让我们看些这两个选项的例子。
 
-### How to change an image's size on mouse hover without using CSS transitions
+### 不使用 CSS 过渡如何在鼠标悬停时更改图片的尺寸
 
 ```css
 img {
@@ -100,13 +100,13 @@ img:hover {
 }
 ```
 
-[**Try Editing It**][30]
+[**试着编辑它**][30]
 
-The code above instantaneously changes the image's size from its initial width (`40%`) to its new dimension (`100%`) because we did not use CSS transitions.
+上面的代码从初始宽度（`40%`）到新的尺寸（`100%`）瞬间更改了图片的尺寸，因为我们没有使用 CSS 过渡。
 
-With CSS transitions, you will get a much more pleasing experience. Let's see an example below.
+使用 CSS 过渡，你可以获得更愉悦的体验。让我们看看下面的示例。
 
-### How to change an image's size on mouse hover with CSS transitions
+### 使用 CSS 过渡如何在鼠标悬停时更改图片的尺寸
 
 ```css
 img {
@@ -119,45 +119,45 @@ img:hover {
 }
 ```
 
-[**Try Editing It**][31]
+[**试着编辑它**][31]
 
-The `transition` property applied a smooth and gradual transition from `width: 40%` to `width: 100%` on the image.
+从 `width: 40%` 到 `width: 100%`，`transition` 属性在图片上应用了一个平滑、渐进的过渡。
 
-## Categories of CSS Transition Properties
+<h2 id="categories-of-css-transition-properties">CSS 过渡属性的种类</h2>
 
-We have two categories of CSS transition properties:
+我们有两种 CSS 过渡属性：
 
--   _Required_ transition properties
--   _Optional_ transition properties
+- *必需*过渡属性
+- *可选*过渡属性
 
-Let's discuss the two.
+让我们来讨论一下这两者。
 
-### What Are the Required CSS Transition Properties?
+<h3 id="what-are-the-required-css-transition-properties">什么是必需 CSS 过渡属性</h3>
 
-The two required properties you need to create CSS transitions are:
+创建 CSS 过渡的两个必需属性：
 
--   `transition-property`
--   `transition-duration`
+- `transition-property`
+- `transition-duration`
 
-#### What is the CSS transition-property?
+<h4 id="what-is-the-css-transition-property">什么是 <code>transition-property</code>？</h4>
 
-The CSS `transition-property` specifies the CSS property you wish to transition from its initial to its new state.
+CSS 的 `transition-property` 指定你希望从初始态过渡到新状态的 CSS 属性。
 
-#### What is the CSS transition-duration Property?
+<h4 id="what-is-the-css-transition-duration-property">什么是 <code>transition-duration</code> ？</h4>
 
-The CSS `transition-duration` property defines the length of time in which browsers should complete the selected element's transition. In other words, `transition-duration` sets the total start-to-finish time.
+CSS 的 `transition-duration` 属性定义了浏览器完成所选择元素过渡的时间长度。换句话说，`transition-duration` 设置从开始到结束所需的全部时间。
 
-**Note the following:**
+**注意以下几点：**
 
--   The `transition-duration` property only accepts time in milliseconds (ms) or seconds (s).
--   Zero seconds (`0s`) is the `transition-duration`'s default value. Therefore, no [transition event][32] will occur if you do not define a `transition-duration` property.
--   `transition-duration` accepts only a zero (`0`) or a positive numeric value. Browsers will ignore the duration declaration if you provide anything else.
+- `transition-duration` 属性只接受毫秒（ms）或秒（s）的时间形式。
+- 0 秒（`0s`）是 `transition-duration` 的默认值。因此，如果你不定义 `transition-duration` 属性，将不会有[过渡事件][32]发生。
+- `transition-duration` 只接受 0 或正数值。如果你提供其他任何值浏览器将忽略它。
 
-### Examples of the Required CSS Transition Properties
+<h3 id="examples-of-the-required-css-transition-properties">必需 CSS 过渡属性的示例</h3>
 
-Below are some examples of the two required CSS transition properties.
+下面是两个必需 CSS 过渡属性的一些示例。
 
-#### How to transition an element's width within three seconds
+#### 如何在 3 秒内完成元素宽度的过渡
 
 ```css
 img {
@@ -171,16 +171,16 @@ img:hover {
 }
 ```
 
-[**Try Editing It**][33]
+[**试着编辑它**][33]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `transition-property` tells browsers to transition the `img`'s `width` from its initial value (`40%`) to its new state (`100%`).
-2.  We used the `transition-duration` property to define three seconds (`3s`) duration from the start to the end of the transition.
+1. `transition-property` 告诉浏览器把 `img` 的 `width` 从它的初始值（`40%`）过渡到它的新状态（`100%`）。
+2. 使用 `transition-duration` 属性定义过渡从开始到结束持续 3 秒（`3s`）的时间。
 
-Therefore, instead of an instantaneous change from the image's initial width (`40%`) to its new size (`100%`), browsers will transition smoothly between the old and new state in three seconds (`3s`).
+因此，浏览器将在 3 秒（`3s`）内从老值到新值间平滑地过渡，而不是立即把图片从初始宽度（`40%`）更改到新尺寸（`100%`）。
 
-#### How to transition a font's size within five seconds
+#### 如何在 5 秒内完成字体尺寸的过渡
 
 ```css
 p {
@@ -194,55 +194,55 @@ p:hover {
 }
 ```
 
-[**Try Editing It**][34]
+[**试着编辑它**][34]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `transition-property` informs browsers to transition the `p` element's `font-size`.
-2.  We used the `transition-duration` property to define a five-second (`5s`) duration from the start to the end of the transition.
+1. `transition-property` 告知浏览器过渡 `p` 元素的 `font-size`。
+2. 使用 `transition-duration` 属性定义过渡从开始到结束持续 5 秒（`5s`）的时间。
 
-Therefore, instead of an immediate change from the paragraph's initial font size (`1rem`) to its new size (`7rem`), browsers will transition smoothly between the old and new state in five seconds (`5s`).
+因此，浏览器将在 5 秒（`5s`）内从老值到新值间平滑地过渡，而不是立即把 `p` 的初始字体尺寸（`1rem`）更改到新尺寸（`7rem`）。
 
-Let's now discuss the optional CSS transition properties.
+现在让我们讨论一下可选 CSS 过渡属性。
 
-### What Are the Optional CSS Transition Properties?
+<h3 id="what-are-the-optional-css-transition-properties">什么是可选 CSS 过渡属性</h3>
 
-The two optional CSS transition properties are:
+这是两个可选 CSS 过渡属性：
 
--   `transition-timing-function`
--   `transition-delay`
+- `transition-timing-function`
+- `transition-delay`
 
-#### What is the CSS transition-timing-function Property?
+<h4 id="what-is-the-css-transition-timing-function-property">什么是 <code>transition-timing-function</code>？</h4>
 
-The CSS `transition-timing-function` property defines the implementation timing (speed) of the selected element's transition.
+CSS 的 `transition-timing-function` 属性定义了所选元素实现过渡的时机（速度）。
 
-In other words, the `transition-timing-function` specifies the speed for implementing the transition at various intervals of its duration.
+换句话说，`transition-timing-function` 指定了在持续时间内的不同时间间隔实现过渡的速度。
 
-The values the `transition-timing-function` property accepts are:
+`transition-timing-function` 属性接受的值如下：
 
--   `ease`: Starts the transition slowly. Then, speeds it up and ends it slowly. `ease` is the `transition-timing-function` property's default value. It is equivalent to `cubic-bezier(0.25,0.1,0.25,1)`.
--   `ease-in`: Starts the transition slowly with a gradual increase in speed. It is equal to `cubic-bezier(0.42,0,1,1)`.
--   `ease-out`: Starts fast and ends the transition slowly. It is equivalent to `cubic-bezier(0,0,0.58,1)`.
--   `ease-in-out`: Starts and ends the transition slowly. It is equal to `cubic-bezier(0.42,0,0.58,1)`.
--   `linear`: Starts and ends the transition using a consistent speed throughout the transition's duration. It is equivalent to `cubic-bezier(0,0,1,1)`.
--   `cubic-bezier(p1, p2, p3, p4)`: Allows you to define the values of the [cubic-bezier curve][35].
+- `ease`：开始时过渡缓慢，然后加快速度，并缓慢结束。`ease` 是属性 `transition-timing-function` 的默认值。它等价于 `cubic-bezier(0.25,0.1,0.25,1)`。
+- `ease-in`：开始时过渡很慢，随后逐渐增加速度。它等价于 `cubic-bezier(0.42,0,1,1)`。
+- `ease-out`：开始很快，结束时很慢。它等价于 `cubic-bezier(0,0,0.58,1)`。
+- `ease-in-out`：开始和结束很慢。它等价于 `cubic-bezier(0.42,0,0.58,1)`。
+- `linear`：在整个过渡的持续时间内使用一致的速度开始和结束过渡。它等价于 `cubic-bezier(0,0,1,1)`。
+- `cubic-bezier(p1, p2, p3, p4)`：允许你定义[三次贝塞尔曲线][35]的值。
 
-### What is the CSS transition-delay Property?
+<h4 id="what-is-a-css-transition-delay-property">什么是 <code>transition-delay</code>？</h4>
 
-The CSS `transition-delay` property defines how long the browser should wait before it starts the transition.
+CSS 的 `transition-delay` 属性定义了浏览器在开始过渡前需要等待多长事件。
 
-**Note the following:**
+**注意以下几点：**
 
--   The `transition-delay` property must be in milliseconds (ms) or seconds (s).
--   `0s` is the `transition-delay`'s default value. It causes the transition to start immediately from the moment browsers apply it to an HTML element.
--   A negative value causes the transition to begin immediately from the specified time. For instance, suppose an element's `transition-delay` value is `-3s`. In that case, the transition will start immediately at 3 seconds.
--   A positive value causes the transition to begin after the specified delay time has elapsed. For instance, suppose an element's `transition-delay` value is `3s`. In that case, the transition will start after a 3-second delay.
+- `transition-delay` 必须使用毫秒（ms）或秒（s）的形式。
+- `0s` 是 `transition-delay` 的默认值，这会使过渡在浏览器将其应用到 HTML 元素时立即开始。
+- 一个负值会使过渡从指定时间立即开始。举例来说，假设一个元素的 `transition-delay` 值设为 `-3s`，这次过渡将从 3 秒前开始计算。
+- 一个正值会使过渡等待指定的延迟时间后开始。举例来说，假设一个元素的 `transition-delay` 值设为 `3s`，这次过渡将延迟 3 秒后开始。
 
-### Examples of the Optional CSS Transition Properties
+<h3 id="examples-of-the-optional-css-transition-properties">可选 CSS 过渡属性的示例</h3>
 
-Below are some examples of the two optional CSS transition properties.
+下面是两个可选 CSS 过渡属性的一些示例。
 
-#### How to transition an element's width with an ease-out speed
+#### 如何使用 ease-out 速度完成元素宽度的过渡
 
 ```css
 img {
@@ -257,15 +257,15 @@ img:hover {
 }
 ```
 
-[**Try Editing It**][36]
+[**试着编辑它**][36]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `transition-property` informs browsers to transition the `img` element's width.
-2.  We used the `transition-duration` property to define three seconds (`3s`) duration from the start to the end of the transition.
-3.  We used the `transition-timing-function` property to begin the transition quickly and end it slowly.
+1. `transition-property` 告知浏览器过渡 `img` 元素的宽度。
+2. 我们使用 `transition-duration` 属性定义过渡从开始到结束 3 秒（`3s`）的持续时间。
+3. 我们使用 `transition-timing-function` 属性快速地开始过渡然后缓慢地结束。
 
-#### How to transition an element's width with a linear speed
+#### 如何使用 linear 速度完成元素宽度的过渡
 
 ```css
 img {
@@ -280,15 +280,15 @@ img:hover {
 }
 ```
 
-[**Try Editing It**][37]
+[**试着编辑它**][37]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `transition-property` informs browsers to transition the `img` element's width.
-2.  We used the `transition-duration` property to define three seconds (`3s`) duration from the start to the end of the transition.
-3.  The `transition-timing-function` property tells browsers to transition from the element's initial width to its new size using a consistent transition speed throughout.
+1. `transition-property` 告知浏览器过渡 `img` 元素的宽度。
+2. 我们使用 `transition-duration` 属性定义过渡从开始到结束 3 秒（`3s`）的持续时间。
+3. `transition-timing-function` 属性告诉浏览器将这个元素从初始宽度过渡到新尺寸时，采用恒定的过渡速度。
 
-#### How to transition an element's width with a two-second delay
+#### 如何使用 2 秒的延迟完成元素宽度的过渡
 
 ```css
 img {
@@ -304,22 +304,22 @@ img:hover {
 }
 ```
 
-[**Try Editing It**][38]
+[**试着编辑它**][38]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `transition-property` informs browsers to transition the `img` element's `width` property.
-2.  We used the `transition-duration` property to define three seconds (`3s`) duration from the start to the end of the transition.
-3.  The `transition-timing-function` property transitions the `img` element's width using a consistent transition speed.
-4.  We used the `transition-delay` property to apply a two-second (`2s`) delay to the starting time of the transition.
+1. `transition-property` 告知浏览器过渡 `img` 元素的宽度。
+2. 我们使用 `transition-duration` 属性定义过渡从开始到结束 3 秒（`3s`）的持续时间。
+3. `transition-timing-function` 使用一个恒定的速度完成 `img` 元素宽度的过渡。
+4. 我们使用 `transition-delay` 属性在过渡的开始添加 2 秒（`2s`）的延迟。
 
-Now that we know the CSS transition properties, we can discuss defining them with a shorthand syntax.
+现在，我们了解了 CSS 过渡的属性，我们可以讨论一下它的缩写语法。
 
-## Shorthand for Defining the CSS Transition Properties
+<h2 id="shorthand-for-defining-the-css-transition-properties">CSS 过渡属性的缩写</h2>
 
-We use the `transition` property as shorthand for the `transition-property`, `transition-duration`, `transition-timing-function`, and `transition-delay` properties.
+我们使用 `transition` 属性作为 `transition-property`、`transition-duration`、`transition-timing-function` 和 `transition-delay` 属性的缩写。
 
-In other words, instead of writing:
+换句话说，我们不再这样写：
 
 ```css
 img {
@@ -330,7 +330,7 @@ img {
 }
 ```
 
-You can alternatively use the `transition` property to shorten your code like so:
+你可以使用 `transition` 属性替换让你的代码更短，像这样：
 
 ```css
 img {
@@ -338,17 +338,17 @@ img {
 }
 ```
 
-[**Try Editing It**][39]
+[**试着编辑它**][39]
 
-Here is the `transition` property's syntax:
+这是 `transition` 属性的语法：
 
 ```css
 transition: <property-name> <duration> <timing-function> <delay>;
 ```
 
-Note that you can use the `transition` property to transition the state of multiple CSS properties.
+注意你可以使用 `transition` 去定义多个 CSS 过渡属性的状态。
 
-**Here's an example:**
+**看这个例子：**
 
 ```css
 img {
@@ -364,85 +364,88 @@ img:hover {
 }
 ```
 
-[**Try Editing It**][40]
+[**试着编辑它**][40]
 
-The snippet above used commas (`,`) to separate each of the transitional properties we are applying to the `img` element.
+上面的片段使用逗号（`,`）去分隔我们应用在 `img` 元素上的每个过渡属性。
 
-So, now that we know what CSS transitions are and how they work, we can discuss CSS animations.
+那么，现在你了解了 CSS 过渡是什么、它如何工作，我们来探讨一些 CSS 动画。
 
-## What is CSS Animation?
+<h2 id="what-is-css-animation">什么是 CSS 动画？</h2>
 
-**CSS animations** provide a smooth and gradual way to animate an element's style changes from one keyframe to another.
+**CSS 动画** 提供了一个平滑、渐进的方式从一个关键帧到另一个关键帧为元素的样式增加动画。
 
-### Components of CSS Animations
+<h3 id="components-of-css-animations">CSS 动画的组成</h3>
 
-CSS animations consist of two components:
+CSS 动画由两部分组成：
 
-1.  Keyframes
-2.  Animation properties
+1. 关键帧
+2. 动画属性
 
-### What are CSS @keyframes?
+<h3 id="what-are-css-keyframes">什么是 CSS <code>@keyframes</code>？</h3>
 
-**@keyframes** define the styles you want browsers to apply smoothly to an element at some specified key moments (frames).
+**@keyframes** 定义了你想要浏览器某关键时刻（帧）平滑地应用在元素上的样式。
 
-### Syntax of CSS @keyframes
+### CSS `@keyframes` 的语法
 
-A CSS @keyframes [at-rule][41] consists of the following:
+CSS [at 规则][41]中 @keyframes  由以下组成：
 
-1.  An `@keyframes` keyword
-2.  The `@keyframes`' name
-3.  A block of zero or more keyframes
-4.  The animation's key moment selector
-5.  The key moment's style declarations
+1. 一个 `@keyframes` 关键字
+2. 一个 `@keyframes` 名字 
+3. 一个零个及以上的关键帧
+4. 关键帧选择器
+5. 关键帧样式声明
 
-**Here's an illustration:**
+**看这个插图：**
 
-![Anatomy of CSS @keyframes at-rule](https://www.freecodecamp.org/news/content/images/2023/09/css-animation-keyframes-illustration-codesweetly.png)
+<figure class="kg-card kg-card-image kg-card-hascaption">
+    <img src="https://www.freecodecamp.org/news/content/images/2023/09/css-animation-keyframes-illustration-codesweetly.png" alt="剖析 CSS @keyframes" class="kg-image">
+    <figcaption>剖析 CSS @keyframes</figcaption>
+</figure>
 
-A CSS @keyframes at-rule consists of a keyword, a name, and a block of keyframes
+一个 CSS `@keyframes` 由一个关键字、一个名字、一个关键帧块组成。
 
-### Examples of CSS @keyframes
+### CSS @keyframes 的示例
 
-Below are examples of the CSS @keyframes.
+下面是 CSS @keyframes 的示例
 
-#### How to define `change-color`'s keyframes
+#### 如何定义 `change-color` 的关键帧
 
 ```css
 @keyframes change-color {
-  /* The first keyframe */
+  /* 最初的关键帧 */
   0% {background-color: purple;}
-  /* The last keyframe */
+  /* 最后的关键帧 */
   100% {background-color: yellow;}
 }
 ```
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  We created the `@keyframes` at-rule named `change-color`.
-2.  We defined a keyframe for browsers to apply when an associated element's animation is at its zero percent (`0%`) duration.
-3.  We defined a keyframe for browsers to apply when an associated element's animation is at its one hundred percent (`100%`) duration.
+1. 我们创建了一个 `@keyframes` 命名为 `change-color`。
+2. 我们定义了一个关键帧，供浏览器在关联元素的动画处于 `0%` 持续时间时应用。
+3. 我们定义了一个关键帧，供浏览器在关联元素的动画处于 `100%` 持续时间时应用。
 
-**Note:**
+**注意：**
 
--   You can name your `@keyframes` anything you wish.
--   `0%` is equivalent to the keyword `from`. And `100%` is the same as the keyword `to`. In other words, the snippet above is equal to the following:
+- 你可以把你的 `@keyframes` 按照你希望的随意命名。
+- `0%` 等价于关键字 `from`，`100%` 等价于关键字 `to`。也就是说，上面的代码片段等价于下面的：
 
 ```css
 @keyframes change-color {
-  /* The first keyframe */
+  /* 最初的关键帧 */
   from {background-color: purple;} 
-  /* The last keyframe */
+  /* 最后的关键帧 */
   to {background-color: yellow;} 
 }
 ```
 
--   An animation's start and end states (`from` and `to`) are optional.
--   Suppose you omit an `@keyframes`' start (`0%`) or end (`100%`) state. In that case, browsers will default to the element's existing styles for either state.
--   The important rule (`!important`) does not work in keyframes. Browsers will ignore any keyframe declaration with an `!important` rule.
+- 一个动画的开始和结束状态（`from` 和 `to`）是可选的。
+- 假设你省略了 `@keyframes` 的开始或结束状态，这种情况下，浏览器将使用元素的现有样式作为起始/结束状态。
+- `!important` 在关键帧中无效，浏览器会忽略任何带有 `!important` 的关键帧声明。
 
-Let's see another example.
+让我们看另一个例子。
 
-#### How to define `shape-image`'s keyframes
+#### 如何定义 `shape-image` 的关键帧
 
 ```css
 @keyframes shape-image {
@@ -453,22 +456,22 @@ Let's see another example.
 }
 ```
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  We created the `@keyframes` [ruleset][42] named `shape-image`.
-2.  We defined four keyframes for browsers to apply when an associated element's animation is at the specified key moments.
+1. 我们创建了 `@keyframes` [规则集][42] 命名为 `shape-image`。
+2. 我们定义了 4 个关键帧，供浏览器在关联元素的动画处于指定关键时刻时应用。
 
-**Tip:** Use the [CSSKeyframesRule][43] interface in JavaScript to access the CSS `@keyframes` at-rules.
+**提示：** 在 JavaScript 中使用 [CSSKeyframesRule][43] 接口访问 CSS `@keyframes`。
 
-So, now that we know the CSS @keyframes ruleset, we can discuss the other component of CSS animations—_animation properties_.
+那么，现在我们知道了 CSS @keyframes 规则集，我们可以讨论另一个 CSS 动画的组成部分了—— *animation 属性*。
 
-## What Are CSS Animation Properties?
+<h2 id="what-are-css-animation-properties">什么是 CSS animation 属性？</h2>
 
-**CSS animation properties** inform browsers about the animation you wish to apply to a specific element.
+**CSS animation 属性** 告知浏览器你希望应用在指定元素上的动画。
 
-In other words, CSS animation properties describe the animation's attributes, such as its name, duration, direction, and iteration.
+换句话说，CSS `animation` 描述了动画的属性，例如它的名字、持续时间、方向、迭代次数。
 
-The nine (9) types of CSS animation properties are:
+下面是 CSS 动画的 9 种属性：
 
 -   `animation-name`
 -   `animation-duration`
@@ -480,13 +483,13 @@ The nine (9) types of CSS animation properties are:
 -   `animation-fill-mode`
 -   `animation`
 
-Let's discuss each one now.
+让我们逐个讨论一下。
 
-### What is the CSS `animation-name` property?
+<h3 id="what-is-the-css-animation-name-property">什么是 CSS <code>animation-name</code> 属性？</h3>
 
-The CSS `animation-name` property defines the name of the `@keyframes` at-rules containing the styles you wish to apply to a specific element.
+CSS `animation-name` 属性定义了你希望应用在指定元素上的 `@keyframes` 包含的样式的名字。
 
-**Here's an example:**
+**看这个例子：**
 
 ```css
 div {
@@ -501,28 +504,28 @@ div {
 }
 ```
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  We created `change-color`'s `@keyframes` ruleset.
-3.  We defined two keyframes for browsers to use when the `div` element's animation is at its zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 指定了我们希望应用到 `div` 元素上的 `@keyframes`。
+2. 我们创建了一个名为 `change-color` 的 `@keyframes` 规则集。
+3. 我们定义了 `div` 元素的动画在 `0%` 和 `100%` 时两个关键帧给浏览器使用。
 
-**Tip:** You can use the keyword `none` to deactivate an animation.
+**提示：** 你可以使用关键字 `none` 不激活动画。
 
-### What is the CSS `animation-duration` property?
+<h3 id="what-is-the-css-animation-duration-property">什么是 CSS <code>animation-duration</code> 属性？</h3>
 
-The CSS `animation-duration` property defines the time to complete one animation cycle.
+CSS `animation-duration` 属性定义了完成一个动画循环的事件。
 
-**Note the following:**
+**注意以下几点：**
 
--   The `animation-duration` property must be in milliseconds (ms) or seconds (s) units.
--   `animation-duration`'s value must be zero or positive. Otherwise, browsers will ignore the duration declaration.
--   Zero seconds (`0s`) is `animation-duration`'s default value.
--   Suppose `0s` is `animation-duration`'s value. In that case, browsers will still execute the animation by firing the [`animationStart`][44] and [`animationEnd`][45] events. But the [`animation-fill-mode`][46]'s value will determine whether the animation is visible. For instance, if you set the `animation-fill-mode` to `none`, the animation will be invisible.
+- `animation-duration` 属性只接受毫秒（ms）或秒（s）的时间形式。
+- `animation-duration` 值只接受 0 或是整数。否则，浏览器将忽略这条声明。
+- 0 秒（`0s`）是 `animation-duration` 的默认值。
+- 假设 `0s` 是 `animation-duration` 的值。在这种情况下，浏览器仍将通过触发 [`animationStart`][44] 和 [`animationEnd`][45] 事件来执行动画。但是由 [`animation-fill-mode`][46] 值决定动画是否可见。比如，你设置 `animation-fill-mode` 为 `none`，动画则是不可见的。
 
-Let's see some examples of the `animation-duration` property.
+让我们看一些 `animation-duration` 属性的例子。
 
-#### How to animate an element's color change within three seconds
+#### 如何在 3 秒内完成更改元素的颜色的动画
 
 ```css
 div {
@@ -538,18 +541,18 @@ div {
 }
 ```
 
-[**Try Editing It**][47]
+[**试着编辑它**][47]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to three seconds (`3s`).
-3.  We created `change-color`'s @keyframes [ruleset][48].
-4.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性指定了我们希望用在 `div` 元素上的 `@keyframes`。
+2. `animation-duration` 属性设置了动画一个循环的运行时间在 3 秒（`3s`）内。
+3. 我们创建了 `change-color` 关键帧[规则集][48]。
+4. 我们定义了 `div` 元素的动画在 `0%` 和 `100%` 时两个关键帧给浏览器使用。
 
-Therefore, browsers will create a smooth three-second animation from `change-color`'s first keyframe to its last.
+因此，浏览器将创建一个从第一帧到最后持续 3 秒的平滑的 `change-color` 动画。
 
-#### How to animate an image's border and width changes within seven seconds
+#### 如何在 7 秒内完成更改图片边框和宽度的动画
 
 ```css
 img {
@@ -565,35 +568,35 @@ img {
 }
 ```
 
-[**Try Editing It**][49]
+[**试着编辑它**][49]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `img` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to seven seconds (`7s`).
-3.  We created `shape-image`'s @keyframes ruleset.
-4.  We defined four keyframes for browsers to apply when the image's animation is at the specified key moments.
+1. `animation-name` 属性指定了我们希望应用到 `img` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 7 秒（`7s`）。
+3. 我们创建了 `shape-image` 的关键帧规则集。
+4. 我们定义了四个关键帧，以便浏览器在图像动画达到指定关键时刻时应用。
 
-Therefore, browsers will create a smooth seven-second animation from `shape-image`'s first keyframe to its last.
+因此，浏览器将从 `shape-image` 的第一帧到最后一帧创建一个流畅的 7 秒的动画。
 
-### What is the CSS `animation-timing-function` property?
+<h3 id="what-is-the-css-animation-timing-function-property">什么是 CSS <code>animation-timing-function</code> 属性？</h3>
 
-The CSS `animation-timing-function` property defines an animation's implementation timing (speed) throughout its duration.
+CSS 的 `animation-timing-function` 属性定义了动画在整个持续时间内的实现时机（速度）。
 
-In other words, the `animation-timing-function` property specifies the speed for implementing the animation at various intervals of its duration.
+换句话说，`animation-timing-function` 属性指定了动画在其持续时间内各个间隔的实现速度。
 
-The values the `animation-timing-function` property accepts are:
+`animation-timing-function` 属性接受的值如下：
 
--   `ease`: Starts the animation slowly. Then speeds it up and ends it slowly. `ease` is the `animation-timing-function` property's default value. It is equivalent to `cubic-bezier(0.25, 0.1, 0.25, 1)`.
--   `ease-in`: Starts the animation slowly with a gradual increase in speed. It is equivalent to `cubic-bezier(0.42, 0, 1, 1)`.
--   `ease-out`: Starts fast and ends the animation slowly. It is equivalent to `cubic-bezier(0, 0, 0.58, 1)`.
--   `ease-in-out`: Starts and ends the animation slowly. It is equivalent to `cubic-bezier(0.42, 0, 0.58, 1)`.
--   `linear`: Starts and ends the animation using a consistent speed throughout the animation's duration. It is equivalent to `cubic-bezier(0, 0, 1, 1)`.
--   `cubic-bezier(p1, p2, p3, p4)`: Allows you to define the values of the [cubic-Bezier curve][50].
+- `ease`：慢慢地开始动画，然后加速，并慢慢地结束动画。`ease` 是 `animation-timing-function` 属性的默认值。它等价于 `cubic-bezier(0.25, 0.1, 0.25, 1)`。
+- `ease-in`：用一个递增的速度慢慢地开始动画。它等价于 `cubic-bezier(0.42, 0, 1, 1)`。
+- `ease-out`：动画开始很快，然后慢慢的结束动画。它等价于 `cubic-bezier(0, 0, 0.58, 1)`。
+- `ease-in-out`：慢慢地开始并慢慢地结束动画。它等价于 `cubic-bezier(0.42, 0, 0.58, 1)`。
+- `linear`：在整个动画持续时间内使用一致的速度开始、结束动画。它等价于 `cubic-bezier(0, 0, 1, 1)`。
+- `cubic-bezier(p1, p2, p3, p4)`：允许你定义[三次贝塞尔曲线][50]的值。
 
-Let's see some examples of the `animation-timing-function` property.
+然我们看一些 `animation-timing-function` 属性的例子。
 
-#### How to animate an element's width change using a linear speed
+#### 如何使用线性速度完成更改元素宽度的动画
 
 ```css
 div {
@@ -611,21 +614,21 @@ div {
 }
 ```
 
-[**Try Editing It**][51]
+[**试着编辑它**][51]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to seven seconds (`7s`).
-3.  The `linear` timing function applied a consistent speed to the `div`'s animation.
-4.  We created `change-width`'s @keyframes ruleset.
-5.  We defined two keyframes for browsers to apply when the `div`'s animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 7 秒（`7s`）。
+3. `linear` 函数应用一个一致的速度到 `div` 元素的动画上。
+4. 我们创建一个名为 `change-width` 关键帧规则集。
+5. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Therefore, browsers will create a smooth seven-second animation from `change-width`'s first keyframe to its last.
+因此，浏览器将从 `change-width` 的第一帧到最后一帧创建一个流畅的 7 秒的动画。
 
-Let's see another example.
+让我们看另一个例子。
 
-#### How to animate an element's width change using an ease-in-out and a linear speed
+#### 如何使用 ease-in-out 和 线性速度完成更改元素宽度的动画
 
 ```css
 div {
@@ -652,35 +655,37 @@ div {
 }
 ```
 
-[**Try Editing It**][52]
+[**试着编辑它**][52]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to seven seconds (`7s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `first-div`'s animation.
-4.  The `linear` timing function applied a consistent speed to the `second-div`'s animation.
-5.  We created `change-width`'s @keyframes ruleset.
-6.  We defined two keyframes for browsers to apply when the `div` elements' animations are at their zero percent (`0%`) and one hundred percent (`100%`) durations.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 7 秒（`7s`）。
+3. 我们使用 `ease-in-out` 函数在 `first-div` 上应用一个慢慢开始并慢慢结束的动画。
+4.  `linear` 函数在 `second-div` 上用一个一致的速度的动画。
+5.  我们创建了名为 `change-width` 的关键帧规则集。
+5. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Therefore, browsers will create a smooth seven-second animation from `change-width`'s first keyframe to its last.
+因此，浏览器将从 `change-width` 的第一帧到最后一帧创建一个流畅的 7 秒的动画。
 
-### What is the CSS `animation-delay` property?
+<h3 id="what-is-the-css-animation-delay-property">什么是 CSS <code>animation-delay</code> 属性？</h3>
 
-The CSS `animation-delay` property defines how long browsers should wait before starting an animation.
+CSS 的 `animation-delay` 属性定义了浏览器在开始动画之前需要等待多长时间。
 
-In other words, use `animation-delay` to specify whether the animation should start immediately from the beginning, immediately from a specific time, or later (after some delay).
+换句话说，使用 `animation-delay` 去指定动画是应该立即开始、从指定时间开始、还是稍后（一段延迟之后）开始。
 
-**Note the following:**
+**注意以下几点：**
 
--   The `animation-delay` property must be in milliseconds (ms) or seconds (s) units.
--   `0s` is `animation-delay`'s default value. It causes the animation to start once browsers apply it to an HTML element.
--   A negative value causes the animation to start immediately from the specified time. For instance, suppose an element's `animation-delay` value is `-3s`. In that case, the animation will begin immediately at 3 seconds.
--   A positive value causes the animation to start after the specified delay time has elapsed. For instance, suppose an element's `animation-delay` value is `3s`. In that case, the animation will begin after a 3-second delay.
 
-Let's see some examples of the `animation-delay` property.
 
-#### How to animate an element's width change with a four-second delay
+- `animation-delay` 属性必须是毫秒（`ms`）或是秒（`s`）作为单位。
+- `0s` 是 `animation-delay` 的默认值，这会使动画在浏览器将其应用到 HTML 元素时立即开始。
+- 一个负值会使动画从指定时间立即开始。举例来说，假设一个元素的 `animation-delay` 值设为 `-3s`，这次动画将从 3 秒前开始计算。
+- 一个正值会使动画等待指定时间过后开始。举例来说，假设一个元素的 `animation-delay` 值设为 `3s`，这次动画将延迟 3 秒后开始。
+
+让我们看一些 `animation-delay` 属性的例子。
+
+#### 如何 4 秒延迟后完成更改元素宽度的动画
 
 ```css
 div {
@@ -708,23 +713,23 @@ div {
 }
 ```
 
-[**Try Editing It**][53]
+[**试着编辑它**][53]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` elements.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to seven seconds (`7s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `first-div`'s animation.
-4.  The `linear` timing function applied a consistent speed to the `second-div`'s animation.
-5.  The `animation-delay` property applied a four-second (`4s`) delay to the starting time of the `second-div`'s animation.
-6.  We created `change-width`'s @keyframes ruleset.
-7.  We defined two keyframes for browsers to apply when the `div` elements' animations are at their zero percent (`0%`) and one hundred percent (`100%`) durations.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 7 秒（`7s`）。
+3. 我们使用 `ease-in-out` 函数在 `first-div` 上应用一个慢慢开始并慢慢结束的动画。
+4.  `linear` 函数在 `second-div` 上用一个一致的速度的动画。
+5.  `animation-delay` 属性在开始 `second-div` 的动画时应用了一个 4 秒（`4s`）的延迟。
+6.  我们创建了名为 `change-width` 的关键帧规则集。
+7. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Therefore, browsers will delay the `second-div`'s animation for four seconds while starting the `first-div`'s animation immediately.
+因此，浏览器会延迟 `second-div` 的动画四秒，而立即开始 `first-div` 的动画。
 
-Below is another example of the `animation-delay` property.
+下面是 `animation-delay` 属性的另一个例子。
 
-#### How to animate an element's width change from the fourth-second mark of the animation sequence
+#### 如何从动画序列的第四秒开始完成更改元素宽度的动画
 
 ```css
 div {
@@ -752,34 +757,34 @@ div {
 }
 ```
 
-[**Try Editing It**][54]
+[**试着编辑它**][54]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` elements.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to seven seconds (`7s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `first-div`'s animation.
-4.  The `linear` timing function applied a consistent speed to the `second-div`'s animation.
-5.  The `animation-delay` property makes the `second-div`'s animation start from the fourth-second mark of the animation sequence.
-6.  We created `change-width`'s @keyframes ruleset.
-7.  We defined two keyframes for browsers to apply when the `div` elements' animations are at their zero percent (`0%`) and one hundred percent (`100%`) durations.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 7 秒（`7s`）。
+3. 我们使用 `ease-in-out` 函数在 `first-div` 上应用一个慢慢开始并慢慢结束的动画。
+4.  `linear` 函数在 `second-div` 上用一个一致的速度的动画。
+5.  `animation-delay` 属性使 `second-div` 的动画从动画序列的第四秒开始。
+6.  我们创建了名为 `change-width` 的关键帧规则集。
+7. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Therefore, browsers will start the `second-div`'s animation immediately at the fourth-second mark.
+因此，浏览器会在第四秒立即开始 `second-div` 的动画。
 
-### What is the CSS `animation-iteration-count` property?
+<h3 id="what-is-the-css-animation-iteration-count-property">什么是 CSS <code>animation-iteration-count</code> 属性？</h3>
 
-The CSS `animation-iteration-count` property defines the number of times browsers should repeat an animation.
+CSS 的 `animation-iteration-count` 属性定义了浏览器应重复动画的次数。
 
-**Note the following:**
+**注意以下几点：**
 
--   `1` is `animation-iteration-count`'s default value.
--   The `animation-iteration-count` property accepts non-integer values—for instance, `0.5` tells browsers to play half of a single animation cycle.
--   `animation-iteration-count` does _not_ accept negative values.
--   An `infinite` value means browsers should repeat the animation forever.
+- `1` 是 `animation-iteration-count` 的默认值。
+- `animation-iteration-count` 属性接受非整数值，`0.5` 告诉浏览器播放单个动画循环的一半。
+- `animation-iteration-count` *不接受*赋值。
+- `infinite` 意味着浏览器将一直重复这个动画。
 
-Below are some examples.
+下面是一些例子。
 
-#### How to animate an element's width change with a two-cycle iteration
+#### 如何完成两次更改元素宽度的动画
 
 ```css
 div {
@@ -798,22 +803,22 @@ div {
 }
 ```
 
-[**Try Editing It**][55]
+[**试着编辑它**][55]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-iteration-count` property tells browsers to run the animation twice.
-5.  We created `change-width`'s @keyframes ruleset.
-6.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-iteration-count` 属性告诉浏览器运行这个动画两次。
+5.  我们创建了名为 `change-width` 的关键帧规则集。
+6. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Therefore, browsers will run the `div`'s animation in two cycles.
+因此，浏览器将运行 `div` 的动画两次。
 
-Below is another example of the `animation-iteration-count` property.
+下面是另一个 `animation-iteration-count` 属性的例子。
 
-#### How to animate an element's width change with an infinite iteration
+#### 如何无限重复更改元素宽度的动画
 
 ```css
 div {
@@ -831,33 +836,33 @@ div {
 }
 ```
 
-[**Try Editing It**][56]
+[**试着编辑它**][56]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-iteration-count` property tells browsers to run the animation infinitely.
-5.  We created `change-width`'s @keyframes ruleset.
-6.  We defined two keyframes for browsers to apply when the `div` element's animation is at its zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-iteration-count` 属性告诉浏览器无限次地运行这个动画。
+5.  我们创建了名为 `change-width` 的关键帧规则集。
+6. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Therefore, browsers will run the `div`'s animation infinitely.
+因此，浏览器将无限次地运行 `div` 的动画。
 
-### What is the CSS `animation-direction` property?
+### 什么是 CSS `animation-direction` 属性？
 
-The CSS `animation-direction` property specifies whether the animation's first iteration should run forward or backward. It also defines whether browsers should alternate the direction of subsequent iterations.
+`animation-direction` 属性指定动画的第一次迭代是正向还是反向。它还定义了浏览器是否应交替改变后续迭代的方向。
 
-The values `animation-direction` accepts are:
+`animation-direction` 可接受的值：
 
--   `normal`: Play the animation in the normal direction (that is, forward). `normal` is `animation-direction`'s default value.
--   `reverse`: Play the animation in the reverse direction (backward).
--   `alternate`: Play the first animation cycle in the normal direction. Then, alternates the subsequent iterations between the backward and forward directions.
--   `alternate-reverse`: Play the first animation cycle in the reverse direction. Then, alternates the subsequent iterations between the forward and backward directions.
+- `normal`：正常的方向播放动画（也就是正向），`normal` 是 `animation-direction` 的默认值。
+- `reverse`：相反的方向播放动画（反向）。
+- `alternate`：第一次动画循环正向播放，后续迭代在方向与正向之间交替。
+- `alternate-reverse`：第一次动画循环反向播放，后续迭代在正向与反向之间交替。
 
-Below are some examples.
+下面是一些例子。
 
-#### How to animate an element's width change while starting each animation cycle backward
+#### 如何每次都以反向开始完成改变元素宽度的动画
 
 ```css
 div {
@@ -876,21 +881,21 @@ div {
 }
 ```
 
-[**Try Editing It**][57]
+[**试着编辑它**][57]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-iteration-count` property tells browsers to run the animation infinitely.
-5.  The `animation-direction` property starts each animation cycle in reverse (backward).
-6.  We created `change-width`'s @keyframes ruleset.
-7.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-iteration-count` 属性告诉浏览器无限次地运行这个动画。
+5. `animation-direction` 属性让每次动画反向开始。
+6. 我们创建了名为 `change-width` 的关键帧规则集。
+7. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Below is another example of the `animation-direction` property.
+下面是 `animation-direction` 属性的另一个例子。
 
-#### How to animate an element's width change while alternating the animation's direction
+#### 如何交替动画方向地完成更改元素宽度的动画
 
 ```css
 div {
@@ -909,28 +914,28 @@ div {
 }
 ```
 
-[**Try Editing It**][58]
+[**试着编辑它**][58]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-iteration-count` property tells browsers to run the animation infinitely.
-5.  The `animation-direction` property alternates the direction of each cycle's animation.
-6.  We created `change-width`'s @keyframes ruleset.
-7.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-iteration-count` 属性告诉浏览器无限次地运行这个动画。
+5. `animation-direction` 属性让每次动画都交替方向。
+6. 我们创建了名为 `change-width` 的关键帧规则集。
+7. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-### What is the CSS `animation-play-state` property?
+### 什么是 CSS `animation-play-state` 属性？
 
-The CSS `animation-play-state` property specifies whether the browser is running or has paused a specific animation.
+CSS 的 `animation-play-state` 属性定义了浏览器是在运行还是暂停特定动画。
 
-The values the `animation-play-state` property accepts are:
+`animation-play-state` 属性接受的值：
 
--   `running`: Specifies that the browser is running the animation. `running` is `animation-play-state`'s default value.
--   `paused`: Specifies that the browser has paused the animation.
+- `running`：指定浏览器运行动画。`running` 是 `animation-play-state` 的默认值。
+- `paused`：指定浏览器暂停动画。
 
-**Here's an example:**
+**看这个例子：**
 
 ```css
 div {
@@ -953,33 +958,33 @@ div:hover {
 }
 ```
 
-[**Try Editing It**][59]
+[**试着编辑它**][59]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-iteration-count` property tells browsers to run the animation infinitely.
-5.  The `animation-direction` property alternates the direction of each cycle's animation.
-6.  We used the `animation-play-state` on the `div`'s hover [pseudo-class][60] to pause the animation whenever users move their mouse over the `div` element.
-7.  We created `change-width`'s @keyframes ruleset.
-8.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-iteration-count` 属性告诉浏览器无限次地运行这个动画。
+5. `animation-direction` 属性让每次动画都交替方向。
+6. 我们在 `div` 的 hover [伪类][60]上使用了 `animation-play-state`，以便在用户将鼠标移到 `div` 元素上时暂停动画。
+7. 我们创建了名为 `change-width` 的关键帧规则集。
+8. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-### What is the CSS `animation-fill-mode` property?
+### 什么是 CSS `animation-fill-mode` 属性？
 
-The CSS `animation-fill-mode` property defines the styles browsers should apply to an element before (or after) its animation runs.
+CSS 的 `animation-fill-mode` 属性定义了浏览器在动画运行之前（或之后）应该应用于元素的样式。
 
-The values the `animation-fill-mode` property accepts are:
+`animation-fill-mode` 可接受的值：
 
--   `none`: Browsers will apply _no_ style to the element before or after the animation runs. `none` is `animation-fill-mode`'s default value.
--   `forwards`: The element will retain the last keyframe's style declarations when the animation ends. (Note: The `animation-direction` and `animation-iteration-count` properties determine the last keyframe.)
--   `backwards`: The element will retain the first keyframe's style declarations during the `animation-delay` period. (Note: The `animation-direction` property determines the first keyframe.)
--   `both`: Browsers will apply both the forwards and backwards rules. Therefore, the animation properties will extend in both directions.
+- `none`：浏览器将*不会*在动画运行之后或之前应用样式。`none` 是 `animation-fill-mode` 的默认值。
+- `forwards`：当动画结束，元素将保留最后动画帧的样式声明。（注意：`animation-direction` 和 `animation-iteration-count` 属性将决定最后一帧。）
+- `backwards`：在 `animation-delay` 期间，动画将保留最初动画帧的样式声明。（注意：`animation-direction` 属性决定第一帧。）
+- `both`：浏览器将同时应用 `forwards` 和 `backwards` 规则。因此，动画属性将在两个方向上扩展。
 
-Below are some examples.
+下面是一些例子：
 
-#### How to style an element after its animation ends
+#### 如何在动画结束为元素增加样式
 
 ```css
 div {
@@ -998,20 +1003,20 @@ div {
 }
 ```
 
-[**Try Editing It**][61]
+[**试着编辑它**][61]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-fill-mode` property tells browsers to retain the last keyframe's style declarations when the animation ends.
-5.  We created `change-width`'s @keyframes ruleset.
-6.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-fill-mode` 将告诉浏览器当动画结束时保留最后的关键帧样式声明。
+5. 我们创建了名为 `change-width` 的关键帧规则集。
+6. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Below is another example of the `animation-fill-mode` property.
+下面是 `animation-fill-mode` 属性的另一个例子。
 
-#### How to style an element during its animation delay period
+#### 如何在动画延迟这段时间增加样式
 
 ```css
 div {
@@ -1031,20 +1036,20 @@ div {
 }
 ```
 
-[**Try Editing It**][62]
+[**试着编辑它**][62]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-fill-mode` property tells browsers to retain the first keyframe's style declarations during the `animation-delay` period.
-5.  We created `change-width`'s @keyframes ruleset.
-6.  We defined two keyframes for browsers to apply when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-fill-mode` 将告诉浏览器在 `animation-delay` 期间保留最开始的关键帧样式声明。
+5. 我们创建了名为 `change-width` 的关键帧规则集。
+6. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-Let's see a third example of the `animation-fill-mode` property.
+让我们看 `animation-fill-mode` 属性的第三个例子。
 
-#### How to style an element during its animation delay and after the animation
+#### 如何在动画延迟时和完成动画后增加样式
 
 ```css
 div {
@@ -1064,20 +1069,21 @@ div {
 }
 ```
 
-[**Try Editing It**][63]
+[**试着编辑它**][63]
 
-Here's what we did in the snippet above:
+在上面片段中我们做了什么：
 
-1.  The `animation-name` property specifies the `@keyframes` we wish to apply to the `div` element.
-2.  The `animation-duration` property sets the animation's runtime for one cycle to five seconds (`5s`).
-3.  We used the `ease-in-out` timing function to apply a slow start and slow end speed to the `div`'s animation.
-4.  The `animation-fill-mode` property tells browsers to apply both the forwards and backwards rules.
-5.  We created `change-width`'s @keyframes ruleset.
-6.  We defined two keyframes for browsers to use when the `div` element's animation is at zero percent (`0%`) and one hundred percent (`100%`) duration.
+1. `animation-name` 属性制定了我们希望应用到 `div` 元素的 `@keyframes`。
+2. `animation-duration` 属性设置动画一个循环的运行时长为 5 秒（`5s`）。
+3. 我们使用 `ease-in-out` 函数在 `div` 上应用一个慢慢开始并慢慢结束的动画。
+4. `animation-fill-mode` 将告诉浏览器同时应用 `forwards` 和 `backwards` 两条规则。
+5. 我们创建了名为 `change-width` 的关键帧规则集。
+6. 我们为浏览器定义了两个关键帧，分别在 `div` 动画的持续时间为百分之零（`0%`）和百分之一百（`100%`）时应用。
 
-## What is the CSS `animation` Property?
+## 什么是 CSS `animation` 属性？
 
-We use the `animation` property as a shorthand for:
+
+我们使用 `animation` 属性作为它们的缩写：
 
 -   `animation-name`
 -   `animation-duration`
@@ -1088,7 +1094,7 @@ We use the `animation` property as a shorthand for:
 -   `animation-play-state`
 -   `animation-fill-mode`
 
-In other words, instead of writing:
+换句话说，不需要写这些：
 
 ```css
 div {
@@ -1103,7 +1109,7 @@ div {
 }
 ```
 
-You can alternatively use the `animation` property to shorten your code like so:
+另外，你也可以使用 `animation` 属性缩短你的代码，像是这样：
 
 ```css
 div {
@@ -1111,19 +1117,20 @@ div {
 }
 ```
 
-[**Try Editing It**][64]
+[**试着编辑它**][64]
 
-Here is the `animation` property's syntax:
+这是 `animation` 属性的语法：
 
 ```css
 animation: animation-duration animation-timing-function animation-delay animation-iteration-count animation-direction animation-fill-mode animation-play-state animation-name;
+/* 动画持续时间 动画函数 延迟 迭代次数 方向 填充模式 播放状态 动画名字 */
 ```
 
-**Note:**
+**注意：**
 
--   The way you arrange the time values is essential. Browsers read the first time-value as `animation-duration`. And they assign the second one to `animation-delay`.
--   It is best to list `animation-name` last. Otherwise, browsers may assign the `animation-name`'s value to other properties.
--   You can apply multiple `@keyframes` [rulesets][65] to an element using the `animation` property. Here's an example:
+- 时间值的排列方式很重要。浏览器将第一个时间值视为 `animation-duration`，而将第二个时间值分配给 `animation-delay`。
+- 最好将 `animation-name` 放在最后，不然，浏览器可能赋值 `animation-name` 到其他属性。
+- 你可以使用 `animation` 属性应用多个 `@keyframes` [规则集][65]到一个元素。看这个例子：
 
 ```css
 div {
@@ -1152,31 +1159,36 @@ div {
 }
 ```
 
-[**Try Editing It**][66]
+[**试着编辑它**][66]
 
-The snippet above applied three `@keyframes` rulesets to the `div` element using commas (`,`) to separate each `@keyframes`' configurations.
+上方的片段使用逗号分隔了三个 `@keyframes` 并应用到 `div` 元素上。
 
-**Note:** We used the [`hue-rotate()`][67] function to rotate the `div`'s colors.
+**注意：** 我们用了 [`hue-rotate()`][67] 函数去改变了色调。
 
-## Important Stuff to Know about CSS Transitions and Animations
+<h2 id="important-stuff-to-know-about-css-transitions-and-animations">CSS 过渡和动画的重要知识要点</h2>
 
-1.  You can't animate all CSS properties. Have a look at MDN's [Animatable CSS properties][68] article to see the ones you can animate.
-2.  CSS transitions and animations are [expensive operations][69] for most CSS properties—except `opacity` and `transform`. In other words, applying transitions (or animations) to any CSS box model property is inherently a [CPU-intensive][70] task. Therefore, animate only `opacity`, and `transform` properties if you are concerned about your page's performance.
-3.  Be mindful of the [layout repainting issues][71] that CSS transitions may cause through your elements' stacking order.
+1. 你不能为所有的 CSS 属性增加动画。可以去看看 MDN 的[可动画化的 CSS 属性][68]文章，以查看可以进行动画处理的属性列表。
+2. CSS 过渡和动画对于大多数 CSS 属性来说是[昂贵的操作][69]，除了 `opacity` 和 `transform`。
+3. 应该注意 CSS 过渡可能通过元素的堆叠顺序引起[布局的重绘问题][71]，
 
-## Wrapping up
+<h2 id="wrapping-up">总结</h2>
 
-In this article, we discuss the differences between CSS transitions and animations. We also used examples to discuss how to use them.
+在这这篇文章中，我们讨论了 CSS 过渡和动画之间的不同，也用了一些例子来讨论应该如何使用它。
 
-Thanks for reading.
+感谢阅读！
 
-### And here's a useful React TypeScript resource
+### 这还有些有用的 React Typescript 资源
 
-I wrote a book about [Creating NPM Packages][72]!
+我写了一本有关[如何创建 NPM 包][72]的书！
 
-It is a beginner-friendly book that takes you from zero to creating, testing, and publishing NPM packages like a pro.
+这是一本对初学者友好的书，你可以像是专家一样从零开始去创建、测试、发布一个NPM包。
 
-[![Creating NPM Package Book Now Available at Amazon](https://www.freecodecamp.org/news/content/images/2023/09/creating-npm-package-banner-codesweetly.png)][73]
+<a href="https://amzn.to/3Pa4bI4">
+  <figure class="kg-card kg-card-image kg-card-hascaption">
+      <img src="https://www.freecodecamp.org/news/content/images/2023/09/creating-npm-package-banner-codesweetly.png" alt="可以在 Amazon 上找到这本如何创建 NPM 包" class="kg-image">
+      <figcaption>可以在 Amazon 上找到这本如何创建 NPM 包</figcaption>
+  </figure>
+</a>
 
 ---
 
@@ -1188,12 +1200,12 @@ O-sweet-programming, my interest is to make you sweeter for all.
 
 ---
 
-If you read this far, thank the author to show them you care. Say Thanks
+如果你一直阅读到这里，请感谢作者，以表达你的关心。说声谢谢。
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started][75]
+免费学习编程。 freeCodeCamp 的开源课程已帮助超过 40,000 开发人员找到工作。[开始学习][75]
 
-[1]: /news/tag/css/
-[2]: /news/author/oluwatobiss/
+[1]: https://www.freecodecamp.org/news/tag/css/
+[2]: https://www.freecodecamp.org/news/author/oluwatobiss/
 [3]: https://codesweetly.com/css-pseudo-selectors
 [4]: #what-are-css-transitions
 [5]: #categories-of-css-transition-properties
@@ -1265,5 +1277,5 @@ Learn to code for free. freeCodeCamp's open source curriculum has helped more th
 [71]: https://dzhavat.github.io/2021/02/18/debugging-layout-repaint-issues-triggered-by-css-transition.html
 [72]: https://amzn.to/3Pa4bI4
 [73]: https://amzn.to/3Pa4bI4
-[74]: /news/author/oluwatobiss/
+[74]: https://www.freecodecamp.org/news/author/oluwatobiss
 [75]: https://www.freecodecamp.org/learn/

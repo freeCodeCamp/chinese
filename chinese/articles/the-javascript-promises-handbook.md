@@ -47,22 +47,22 @@ reviewer: ""
 在其生命周期中，Promise 可以处于以下三种状态之一：
 
 -   **待定（Pending）**: 当操作仍在进行中时，Promise 处于待定状态。它处于闲置状态，等待最终结果或错误。
--   **已实现（Fulfilled）**: 返回 Promise 的异步任务成功完成。Promise 被一个值实现，这个值是操作的结果。
+- **已兑现（Fulfilled）**：返回 Promise 的异步任务成功完成。Promise 已经被一个值兑现，该值是操作的结果。
 -   **已拒绝（Rejected）**: 如果异步操作失败，Promise 被认为是拒绝的。Promise 会有一个 _拒绝理由_。这通常是一个错误（Error）对象，也可以是任何错误值——可以是一个简单的数字或字符串！
 
-Promise 一开始处于待定（pending）状态，然后根据结果，会过渡到实现（fulfilled）或拒绝（rejected）状态。一旦 Promise 达到实现或拒绝状态，就被认为是 _已解决（settled）_。
+Promise 一开始处于待定（pending）状态，然后根据结果，会过渡到已兑现（fulfilled）或已拒绝（rejected）状态。一旦 Promise 达到已兑现或已拒绝状态，就被认为是 _已敲定（settled）_。
 
 不是所有的异步任务都会最终完成。一个 `Promise` 可能由于异步任务的代码中存在错误而永远保持在待定状态。
 
 ## Promise 与其他异步模式的比较
 
-Promise 不同于 JavaScript 的其他异步模式。我们来简要比较一下。
+Promise 的工作方式与 JavaScript 的其他异步模式有点不同。在深入学习 Promise 之前，我们来简要比较一下。
 
 ### 回调函数
 
-回调函数是你传递给另一个函数的函数。当你调用的函数完成其工作后，它将执行你的回调函数，并提供结果。
+回调函数是你传递给另一个函数的函数。当你调用的函数完成其工作后，它将用结果执行你的回调函数。
 
-一个名为 `getUsers` 的函数发起网络请求以获取用户数组。将一个回调函数传递给 `getUsers`，一旦网络请求完成，这个回调函数就会被调用，并传入用户数组：
+想象一下，一个名为 `getUsers` 的函数将发起网络请求以获取用户数组。你可以将一个回调函数传递给 `getUsers`，一旦网络请求完成，这个回调函数就会被调用，并传入用户数组：
 
 ```javascript
 console.log('Preparing to get users');
@@ -80,9 +80,9 @@ console.log('Users request sent');
 
 一些基于回调的 API，如许多 Node.js API，使用 _错误优先的回调（error-first callbacks）_。这些回调函数有两个参数。第一个参数是错误（error），第二个是结果（result）。
 
-取决于操作的结果，这两者中只有一个会有值。与 Promise 的已实现和已拒绝状态类似。
+通常来说，取决于操作的结果，这两者中只有一个会有值。这与 Promise 的已兑现和已拒绝状态类似。
 
-如果你需要按顺序进行多个异步调用，你需要嵌套调用和回调函数。
+回调 API 的问题在于嵌套。如果你需要按顺序进行多个异步调用，你最终需要不断嵌套函数和回调函数。
 
 例如，如果你想异步进行 3 个任务：读取一个文件，处理该文件中的一些数据，然后写一个新文件。
 
@@ -98,7 +98,7 @@ readFile('sourceData.json', data => {
 
 序列回调嵌套
 
-在错误处理方面，情况变得更加复杂。这些函数使用错误优先的回调：
+在错误处理方面，甚至会更加笨拙。假如这些函数使用错误优先的回调：
 
 ```javascript
 readFile('sourceData.json', (error, data) => {
@@ -125,7 +125,7 @@ readFile('sourceData.json', (error, data) => {
 });
 ```
 
-错误优先的序列回调嵌套
+嵌套的错误优先回调序列
 
 现代 API 中的异步机制通常不直接使用回调函数，但它们是其他类型异步工具（如 Promise）的基础。
 
@@ -133,7 +133,7 @@ readFile('sourceData.json', (error, data) => {
 
 事件是你可以监听并做出响应的东西。在 JavaScript 中，一些对象是事件的 _发射器（emitters）_，这意味着你可以在它们上注册事件监听器（event listener，用来监视软件的变化，比如用户点击了鼠标。）。
 
-在 DOM 中，许多元素运用里 `EventTarget` 接口，它提供了 `addEventListener` 和 `removeEventListener` 方法。
+在 DOM 中，许多元素实现了 `EventTarget` 接口，它提供了 `addEventListener` 和 `removeEventListener` 方法。
 
 一个给定类型的事件可以发生多次。例如，你可以监听按钮上的点击事件（click event）：
 
@@ -185,7 +185,7 @@ function wait(duration) {
 
 将 `setTimeout` 包装在 Promise 中
 
-`resolve` 函数作为第一个参数传递给 `setTimeout`。在由 `duration` 指定的时间过后，浏览器会调用 `resolve` 函数来实现 Promise。
+`resolve` 函数作为第一个参数传递给 `setTimeout`。在由 `duration` 指定的时间过后，浏览器会调用 `resolve` 函数来兑现 Promise。
 
 注意：在这个示例中，调用 `resolve` 函数之前的延迟可能比 duration 指定的时间要长。这是因为 `setTimeout` 并不能保证在指定时间内执行。
 
@@ -234,9 +234,9 @@ getUsers()
   });
 ```
 
-由于一个 Promise 只能被实现（fulfilled）或被拒绝（rejected），而不能同时是两者，所以只有其中一个回调函数会被执行。
+由于一个 Promise 只能被兑现（fulfilled）或被拒绝（rejected），而不能同时是两者，所以只有其中一个回调函数会被执行。
 
-如果你有一个 Promise 拒绝没有通过错误回调处理，你的控制台会出现一个未处理的拒绝异常，这会在运行时对用户造成问题。
+使用 Promise 时，务必处理错误，这一点很重要。如果你有一个 Promise 拒绝的情况没有通过错误回调处理，你的控制台会出现一个未处理拒绝的异常，这会在运行时对用户造成问题。
 
 ## Promise 链式调用
 
@@ -261,15 +261,15 @@ Promise 的嵌套
 
 这看起来并不理想，我们仍然面临着我们在回调方法中遇到的嵌套问题。幸运的是，有一个更好的方法。你可以将 promise 以平面序列方式链接起来。
 
-让我们更深入地看看 `then` 是如何工作的。关键思想是：用 `then` 方法返回 _另一个 promise_。你从 `then` 回调中返回的任何值都会成为这个新 promise 的实现值。
+让我们更深入地看看 `then` 是如何工作的。关键思想是：用 `then` 方法返回 _另一个 promise_。你从 `then` 回调中返回的任何值都会成为这个新 promise 的兑现值。
 
-一个返回 promise 的 `getUsers` 函数，该 promise 实现时带有用户对象数组。假设我们在这个 promise 上调用 `then`，并在回调中返回数组中的第一个用户（`users[0]`）：
+想一下，有一个 `getUsers` 函数，它返回一个 Promise，当该 Promise 被兑现时，会得到一个包含用户对象的数组。假设我们在这个 Promise 上调用 `then`，并在回调中返回数组中的第一个用户（`users[0]`）：
 
 ```javascript
 getUsers().then(users => users[0]);
 ```
 
-这个整个表达式会产生一个新的 Promise ，这个 Promise 将会被第一个用户对象实现！
+这个整个表达式会产生一个新的 Promise ，将会用第一个用户对象兑现 Promise！
 
 ```javascript
 getUsers()
@@ -292,7 +292,7 @@ readFile('sourceData.json')
 
 从 `then` 返回另一个 Promise
 
-`then` 处理程序调用 `processData`，返回结果 Promise。同样，这将返回一个新的 Promise。在这种情况下，当 `processData` 返回的 Promise 被实现时，新的 Promise 也将被实现，并且会给你相同的值。因此，上述示例中的代码将返回一个 Promise，该 Promise 将以处理后的数据来实现。
+`then` 处理程序调用 `processData`，并返回生成的 Promise。和之前一样，这会返回一个新的 Promise。在这种情况下，当 `processData` 返回的 Promise 被兑现时，新的 Promise 也会被兑现，并赋予相同的值。因此，上述示例中的代码将返回一个包含处理后的数据的 Promise。
 
 你可以一个接一个地链式调用多个 Promises，直到你得到所需的最终值：
 
@@ -305,7 +305,7 @@ readFile('sourceData.json')
 
 链式调用多个 Promises
 
-在上述示例中，整个表达式将返回一个 Promise，该 Promise 在处理后的数据写入文件后才会被实现。控制台打印“Done processing!（处理完成）”，然后最终的 Promise 才会被实现。
+在上述示例中，整个表达式将返回一个 Promise，该 Promise 在处理后的数据写入文件后才会被实现。控制台打印“Done processing!（处理完成）”，然后最终的 Promise 才会被兑现。
 
 ### 链式调用 Promise 的错误处理
 
@@ -338,7 +338,7 @@ openDatabase()
 
 Promise 链式调用可以让你按顺序运行多个任务，但如果你想同时运行多个任务，`Promise.all` 方法可以让你做到这一点。
 
-`Promise.all` 接受一个 Promise 数组，并返回一个新的 Promise。一旦所有其他 Promise 都实现，该 Promise 就会实现。实现值是一个数组，包含输入数组中每个 Promise 的实现值。
+`Promise.all` 接受一个 Promise 数组，并返回一个新的 Promise。当所有其他 Promise 都被兑现时，这个新的 Promise 也将被兑现。其兑现值是一个数组，包含了输入数组中每个 Promise 的兑现值。
 
 假设你有一个函数 `loadUserProfile` 用于加载用户的个人资料数据，另一个函数 `loadUserPosts` 用于加载用户的帖子。它们都以用户 ID 作为参数。还有第三个函数 `renderUserPage` 需要同时获取用户的个人资料和帖子列表。
 
@@ -357,15 +357,15 @@ Promise.all([profilePromise, postsPromise])
 
 使用 `Promise.all` 等待多个 Promise
 
-如果出现错误怎么办呢？如果传递给 `Promise.all` 的任何一个 Promise 因错误而被拒绝，结果 Promise 也将被该错误拒绝。如果其他任何 Promise 被实现，那些值将会丢失。
+如果出现错误怎么办呢？如果传递给 `Promise.all` 的任何一个 Promise 因错误而被拒绝，生成的 Promise 也将被该错误拒绝。其他任何被兑现的 Promise 的值都将会丢失。
 
 ### 如何使用 `Promise.allSettled`
 
 `Promise.allSettled` 方法的工作方式类似于 `Promise.all`。主要区别在于 `Promise.allSettled` 返回的 Promise 永远不会被拒绝。
 
-相反，它会以一个对象数组来实现，这些对象的顺序对应于输入数组中的 Promise 的顺序。每个对象都有一个 `status` 属性，该属性根据结果分别为 "fulfilled（实现）" 或 "rejected（拒绝）"。
+相反，它会以一个对象数组来兑现，这些对象的顺序对应于输入数组中的 Promise 的顺序。每个对象都有一个 `status` 属性，该属性根据结果分别为 "fulfilled（已兑现）" 或 "rejected（已拒绝）"。
 
-如果 `status` 是 "fulfilled（被实现）"，该对象还会有一个 `value` 属性，表示 Promise 的实现值。如果 `status` 是 "rejected（被拒绝）"，对象将有一个 `reason` 属性，用来表示 Promise 的错误值或其他对象的错误值。
+如果 `status` 是 "fulfilled（已兑现）"，该对象还会有一个 `value` 属性，表示 Promise 的兑现值。如果 `status` 是 "rejected"，对象将有一个 `reason` 属性，用来表示 Promise 被拒绝时的错误或其他对象。
 
 再看一个 `getUser` 函数，该函数接受一个用户 ID 并返回一个 Promise，该 Promise 将会被具有该 ID 的用户实现。你可以使用 `Promise.allSettled` 并行加载这些用户，确保获取所有成功加载的用户。
 
@@ -384,7 +384,7 @@ Promise.allSettled([
 
 尝试加载三个用户，并显示成功加载的用户
 
-你可以创建一个通用的 `loadUsers` 函数，该函数接收一个用户 ID 数组，并且并行加载用户。该函数返回一个 Promise，当用户数组成功加载时，该 Promise 会被实现。
+你可以创建一个通用的 `loadUsers` 函数，该函数接收一个用户 ID 数组，并且并行加载用户。该函数返回一个 Promise，当所有用户成功加载时，该 Promise 将被兑现，并包含一个用户数组。
 
 ```javascript
 function getUsers(userIds) {
@@ -408,11 +408,11 @@ getUsers([1, 2, 3])
 
 使用 `getUsers` 辅助函数
 
-## 如何创建立即实现或拒绝的 Promise
+## 如何创建立即兑现或拒绝的 Promise
 
-你希望将一个值包装在一个已实现的 Promise 中。例如，你有一个返回 Promise 的异步函数，并且你提前知道值，不需要进行任何异步工作。
+你希望将一个值包装在一个已兑现的 Promise 中。例如，你有一个返回 Promise 的异步函数，并且你提前知道值，不需要进行任何异步工作。
 
-可以调用 `Promise.resolve` 并且指定一个值，这会返回一个立即实现的 Promise，并带有你指定的值：
+可以调用 `Promise.resolve` 并且指定一个值，这会返回一个立即兑现的 Promise，并带有你指定的值：
 
 ```javascript
 Promise.resolve('hello')
@@ -433,7 +433,7 @@ new Promise(resolve => {
 });
 ```
 
-你可以创建一个立即实现的 Promise 并在这种情况下返回来使你的 API 更加一致。这样，调用你函数的代码就知道无论如何总是会得到一个 Promise。
+你可以创建一个立即兑现的 Promise 并在这种情况下返回来使你的 API 更加一致。这样，调用你函数的代码就知道无论如何总是会得到一个 Promise。
 
 例如，考虑之前定义的 `getUsers` 函数。如果用户 ID 数组为空，你可以简单地返回一个空数组，因为不会加载任何用户。
 
@@ -457,7 +457,7 @@ function getUsers(userIds) {
 
 `Promise.resolve` 的另一个用途是处理你可能获得一个值，该值可能是也可能不是一个 Promise，但你想总是将它视为一个 Promise。
 
-你可以安全地对任何值调用 `Promise.resolve`。如果它已经是一个 Promise，你将得到另一个具有相同实现或拒绝值的 Promise。如果它不是一个 Promise，它将被包装在一个立即实现的 Promise 中。
+你可以安全地对任何值调用 `Promise.resolve`。如果它已经是一个 Promise，你将得到另一个具有相同兑现值或拒绝值的 Promise。如果它不是一个 Promise，它将被包装在一个立即兑现的 Promise 中。
 
 这种方法的好处是你不必做这样的事情：
 
@@ -503,11 +503,11 @@ function getUsers(userIds) {
 
 就像 `Promise.all` 或 `Promise.allSettled` 一样，`Promise.race` 静态方法接收一个 Promise 数组，并返回一个新的 Promise。只是它的工作方式有些不同。
 
-`Promise.race` 返回的 Promise 会等待给定的 Promise 中第一个被实现或被拒绝的 Promise，然后该 Promise 也会以相同的值被实现或被拒绝。当这种情况发生时，其他 Promise 的实现或拒绝值将会丢失。
+`Promise.race` 返回的 Promise 会等待给定的 Promise 中第一个被兑现或被拒绝的 Promise，然后该 Promise 也会以相同的值被兑现或被拒绝。当这种情况发生时，其他 Promise 的兑现或拒绝值将会丢失。
 
 ### 如何使用 `Promise.any`
 
-`Promise.any` 的工作方式与 `Promise.race` 类似，但有一个关键区别 —— `Promise.race` 会在任何一个 Promise 被实现或被拒绝时完成，而 `Promise.any` 会等待第一个被 _实现的_ Promise。
+`Promise.any` 的工作方式与 `Promise.race` 类似，但有一个关键区别 —— `Promise.race` 会在任何一个 Promise 被兑现或被拒绝时完成，而 `Promise.any` 会等待第一个被 _兑现的_ Promise。
 
 ## 如何使用 `async` 和 `await`
 
@@ -565,7 +565,7 @@ async function processData(sourceFile, outputFile) {
 
 标记函数为 `async`
 
-添加 `async` 关键字还对函数产生了另一个重要影响。异步函数始终会隐匿地返回一个 Promise。如果你从异步函数中返回一个值，该函数实际上会返回一个以该值实现的 Promise。
+添加 `async` 关键字还对函数产生了另一个重要影响。异步函数始终会隐匿地返回一个 Promise。如果你从异步函数中返回一个值，该函数实际上会返回一个以该值兑现的 Promise。
 
 ```javascript
 async function add(a, b) {
@@ -626,7 +626,7 @@ function getUsers() {
 
 使用现有的 Fetch promise
 
-在这两种情况下 `getUsers` 的功能是一样的：
+在这两种情况下，调用 `getUsers` 的代码看起来都是一样的：
 
 ```javascript
 getUsers()
@@ -662,7 +662,7 @@ getUsers()
 
 调用 `getUsers`
 
-你可能期望这会打印出 "error（错误）"，但实际上它会打印出 "Got users: undefined"。这是因为 `catch` 调用"吞噬"了错误，并返回一个新的 Promise，该 Promise 是通过 `catch` 回调的返回值进行实现的，而这个返回值是 `undefined`（`console.error` 返回 `undefined`）。你仍然会看到来自 `getUsers` 的 "Error loading users" 日志消息，但返回的 Promise 将会被实现，而不是被拒绝。
+你可能期望这会打印出 "error（错误）"，但实际上它会打印出 "Got users: undefined"。这是因为 `catch` 调用"吞噬"了错误，并返回一个新的 Promise，该 Promise 用 `catch` 回调的返回值 `undefined`（`console.error` 返回 `undefined`）来兑现。你仍然会看到来自 `getUsers` 的 "Error loading users" 日志消息，但返回的 Promise 将会被兑现，而不是被拒绝。
 
 如果你想在 `getUsers` 函数内部捕获错误并且仍然拒绝返回的 Promise，`catch` 处理程序需要返回一个被拒绝的 Promise。你可以通过使用 `Promise.reject` 来实现这一点。
 
@@ -711,17 +711,17 @@ readFile(sourceFile)
 
 以下是使用 Promise 的关键要点：
 
--   Promise 可以是 pending（待定）、fulfilled（已实现）或 rejected（已拒绝）
+-   Promise 可以是 pending（待定）、fulfilled（已兑现）或 rejected（已拒绝）
 -   如果一个 Promise 被实现（fulfilled）或被拒绝（rejected），它就是被解决了(settled),
--   使用 `then` 来获取 Promise 的实现值（以及进行下一步的操作）
+-   使用 `then` 来获取 Promise 的兑现值（以及进行下一步的操作）
 -   使用 `catch` 来处理错误
 -   使用 `finally` 来执行在成功或错误情况下都需要的清理逻辑
 -   链接 Promise 以按顺序执行异步任务
--   使用 `Promise.all` 来获得一个 Promise，当所有给定的 Promise 都被实现时它就会被实现（fulfilled），或当其中一个 Promise 被拒绝时它被拒绝（rejected）
--   使用 `Promise.allSettled` 来获得一个 Promise，当所有给定的 Promise 都被实现（fulfilled）或被拒绝（rejected）时它被解决
--   使用 `Promise.race` 来获得一个 Promise，当给定的 Promise 中第一个被实现或被拒绝时它也被实现或被拒绝
--   使用 `Promise.any` 来获得一个 Promise，当给定的 Promise 中第一个被实现时它被实现
--   使用 `await` 关键字来等待一个 Promise 的实现值
+-   使用 `Promise.all` 来获得一个 Promise，当所有给定的 Promise 都被兑现时它就会被兑现（fulfilled），或当其中一个 Promise 被拒绝时它被拒绝（rejected）
+-   使用 `Promise.allSettled` 来获得一个 Promise，当所有给定的 Promise 都被兑现（fulfilled）或被拒绝（rejected）时它被解决
+-   使用 `Promise.race` 来获得一个 Promise，当给定的 Promise 中第一个被兑现或被拒绝时它也被兑现或被拒绝
+-   使用 `Promise.any` 来获得一个 Promise，当给定的 Promise 中第一个被兑现时它被兑现
+-   使用 `await` 关键字来等待一个 Promise 的兑现值
 -   使用 try-catch 模块来处理使用 `await` 关键字时产生的错误
 -   使用 `await` 的函数必须使用 `async` 关键字
 

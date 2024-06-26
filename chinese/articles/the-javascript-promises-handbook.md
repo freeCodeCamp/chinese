@@ -28,7 +28,7 @@ reviewer: ""
 3.  [如何创建一个 Promise][5]
 4.  [如何获取 Promise 的结果][6]
 5.  [如何使用`then`处理错误][7]
-6.  [Promise 链接][8]
+6.  [Promise 链][8]
 7.  [如何创建立即满足或拒绝的 Promises][9]
 8.  [如何使用`async`和`await`][10]
 9.  [反模式 Promise][11]
@@ -96,7 +96,7 @@ readFile('sourceData.json', data => {
 });
 ```
 
-序列回调嵌套
+嵌套回调序列
 
 在错误处理方面，甚至会更加笨拙。假如这些函数使用错误优先的回调：
 
@@ -131,7 +131,7 @@ readFile('sourceData.json', (error, data) => {
 
 ### 事件（Events）
 
-事件是你可以监听并做出响应的东西。在 JavaScript 中，一些对象是事件的 _发射器（emitters）_，这意味着你可以在它们上注册事件监听器（event listener，用来监视软件的变化，比如用户点击了鼠标。）。
+事件是你可以监听并做出响应的东西。在 JavaScript 中，一些对象是事件的 _发射器（emitters）_，这意味着你可以在这些对象上注册事件监听器（译者注：event listener，用来监视软件的变化，比如用户点击了鼠标）。
 
 在 DOM 中，许多元素实现了 `EventTarget` 接口，它提供了 `addEventListener` 和 `removeEventListener` 方法。
 
@@ -193,7 +193,7 @@ function wait(duration) {
 
 ## 如何获取 Promise 的结果
 
-我们已经看到了如何创建一个 Promise，但你如何实际获取异步操作的结果呢？为此，你需要在 Promise 对象本身上调用 `then`。`then` 接受一个回调函数作为其参数。当 Promise 实现时，会执行带有结果的回调函数。
+我们已经看到了如何创建一个 Promise，但你如何实际获取异步操作的结果呢？为此，你需要在 Promise 对象本身上调用 `then`。`then` 接受一个回调函数作为其参数。当 Promise 被兑现时，会执行回调函数，并传入结果。
 
 让我们看一个这样的例子。一个名为 `getUsers` 的函数，它异步加载用户对象列表并返回一个 Promise。你可以通过在 `getUsers` 返回的 Promise 上调用 `then` 来获取用户列表。
 
@@ -257,7 +257,7 @@ readFile('sourceData.json')
   });
 ```
 
-Promise 的嵌套
+嵌套的 Promise
 
 这看起来并不理想，我们仍然面临着我们在回调方法中遇到的嵌套问题。幸运的是，有一个更好的方法。你可以将 promise 以平面序列方式链接起来。
 

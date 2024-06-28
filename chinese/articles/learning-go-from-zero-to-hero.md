@@ -846,7 +846,7 @@ func sc(ch chan<- string) {
 
 在上面的例子中，`sc` 是一个只用于发送消息到通道但不能接受消息的 go 协程。
 
-### Organizing multiple channels for a Go routine using select (使用 select 为 Go 例程组织多个通道)
+### Organizing multiple channels for a Go routine using select (使用 select 为 Go 协程组织多个通道)
 
 一个函数可能有多个 channel 在等待。为此，我们可以使用一个选择（select）语句。让我们看一个例子，以了解更清楚的情况:
 
@@ -898,7 +898,7 @@ func main(){
   ch := make(chan string, 2)
   ch <- "hello"
   ch <- "world"
-  ch <- "!" # extra message in buffer
+  ch <- "!" // extra message in buffer
   fmt.Println(<-ch)
 }
 
@@ -916,7 +916,7 @@ func main(){
 我们学习了 Go 的一些主要组成部分和特点。
 
 1. 变量、数据类型
-2. 数组 切片 和 maps
+2. 数组 切片 和 映射
 3. 函数
 4. 循环和条件语句
 5. 指针

@@ -5,15 +5,15 @@
 
 ![Learning Go — from zero to hero](https://cdn-media-1.freecodecamp.org/images/1*30aoNxlSnaYrLhBT0O1lzw.png)
 
-让我们先对 Go（或称 Golang ）做一个小小的介绍。Go 是由谷歌工程师 Robert Griesemer、Rob Pike 和 Ken Thompson 设计的。它是一种静态类型的、编译的语言。第一个版本于2012年3月作为开源版本发布。
+让我们先对 Go（或称 Golang ）做一个小小的介绍。Go 是由谷歌工程师 Robert Griesemer、Rob Pike 和 Ken Thompson 设计的。它是一种静态类型的、编译的语言。第一个版本于 2012 年 3 月作为开源版本发布。
 
-> "Go是一种开源的编程语言，它使人们能够轻松地构建简单、可靠和高效的软件"。- GoLang
+> "Go 是一种开源的编程语言，它使人们能够轻松地构建简单、可靠和高效的软件"。- GoLang
 
 在许多编程语言中，有许多方法来解决一个特定的问题。程序员要花很多时间去思考解决它的最佳方法。
 
 Go 却相信用较少的功能--只有一种正确的方式来解决问题。
 
-这为开发人员节省了时间，并使大型代码库易于维护。 Go中没有像 `maps` 和 `filters` 这样的 "表达性 "功能。
+这为开发人员节省了时间，并使大型代码库易于维护。 Go 中没有像 `maps` 和 `filters` 这样的 "表达性 "功能。
 
 > "当你有增加表现力的功能时，通常会增加系统开销。"--Rob Pike
 
@@ -33,7 +33,7 @@ package main
 
 #### **Workspace**
 
-Go中的 workspace 是由环境变量 `GOPATH` 定义的。
+Go 中的 workspace 是由环境变量 `GOPATH` 定义的。
 
 你写的任何代码都要写在 workspace 里面。Go 将搜索 `GOPATH` 目录内的任何软件包，或者 `GOROOT` 目录，该目录在安装 Go 时默认设置。`GOROOT` 是安装 Go 的路径。
 
@@ -62,11 +62,11 @@ func main(){
 }
 ```
 
-在上面的例子中，`fmt`是Go中的一个内置包，它实现了用于格式化 I/O 输出的函数。
+在上面的例子中，`fmt`是 Go 中的一个内置包，它实现了用于格式化 I/O 输出的函数。
 
-我们通过使用 `import` 关键字在Go中导入一个包。`func main` 是代码被执行的主入口点。`Println` 是包 `fmt` 中的一个函数，它为我们打印出 "hello world"。
+我们通过使用 `import` 关键字在 Go 中导入一个包。`func main` 是代码被执行的主入口点。`Println` 是包 `fmt` 中的一个函数，它为我们打印出 "hello world"。
 
-让我们通过运行这个文件来看看。我们有两种方法可以运行Go命令。正如我们所知，Go 是一种编译语言，所以我们首先需要在执行之前编译它。
+让我们通过运行这个文件来看看。我们有两种方法可以运行 Go 命令。正如我们所知，Go 是一种编译语言，所以我们首先需要在执行之前编译它。
 
 ```shell
 > go build main.go
@@ -90,19 +90,19 @@ go run main.go
 
 ### Variables(变量)
 
-Go 中的变量是明确声明的。Go 是一种静态类型的语言。这意味着在声明变量的时候会检查变量的类型。一个变量可以被声明:
+Go 中的变量是明确声明的。Go 是一种静态类型的语言。这意味着在声明变量的时候会检查变量的类型。一个变量:
 
 ```go
 var a int
 ```
 
-在这种情况下，值将被设置为0。 使用下面的语法来声明和初始化一个具有不同值的变量:
+在这种情况下，值将被设置为 0。 使用下面的语法来声明和初始化一个具有不同值的变量:
 
 ```go
 var a = 1
 ```
 
-这里的变量被自动分配为int。 我们可以对变量的声明使用一个简短定义，即:
+这里的变量被自动分配为`int`。 我们可以对变量的声明使用一个简短定义，即:
 
 ```go
 message := "hello world"
@@ -116,7 +116,7 @@ var b, c int = 2, 3
 
 ### Data types（数据类型）
 
-像其他编程语言一样，Go支持各种不同的数据结构。让我们来探索其中:
+像其他编程语言一样，Go 支持各种不同的数据结构。让我们来探索其中:
 
 #### **Number, String, and Boolean (整型 字符串和布尔值)**
 
@@ -137,9 +137,9 @@ var d float32 = 1.222
 var x complex128 = cmplx.Sqrt(-5 + 12i)
 ```
 
-#### **Arrays, Slices, and Maps( 数组、切片和Maps)**
+#### **Arrays, Slices, and Maps( 数组、切片和映射)**
 
-数组是由相同数据类型的元素组成的一个序列。数组在声明时有一个固定的长度，所以它不能被扩大到超过这个长度。一个数组声明:
+数组是由相同数据类型的元素组成的一个序列。数组在声明时有一个固定的长度，所以它不能被扩大到超过这个长度。声明一个数组:
 
 ```go
 var a [5]int
@@ -151,7 +151,7 @@ var a [5]int
 var multiD [2][3]int
 ```
 
-数组会限制数组的值发生变化，当代码运行时。数组也没有提供获取子数组的能力。 为此，Go有一种数据类型，叫做切片（slices）。
+在运行时更改数组是受限的。数组也没有提供获取子数组的能力。 为此，Go 有一种数据类型，叫做切片（slices）。
 
 切片存储了一连串的元素，并且可以在任何时候扩展。切片声明与数组声明类似--但没有定义容量:
 
@@ -167,7 +167,7 @@ var b []int
 numbers := make([]int,5,10)
 ```
 
-这里，切片的初始长度为5，容量为10。
+这里，切片的初始长度为 5，容量为 10。
 
 分片是对数组的一种抽象。切片使用一个数组作为底层结构。一个片断包含三个部分：容量、长度和一个指向底层数组的指针，如下图所示:
 
@@ -205,7 +205,7 @@ slice3 := number2[1:4]
 fmt.Println(slice3) // -> [2 3 4]
 ```
 
-Maps 是 Go中的一种数据类型，它将键映射到值。我们可以使用以下命令来定义一个 map:
+Maps 是 Go 中的一种数据类型，它将键映射到值。我们可以使用以下命令来定义一个 map:
 
 ```go
 var m map[string]int
@@ -269,7 +269,7 @@ default:
 
 ### Looping （循环）
 
-Go 有一个循环的关键词 `for`。for循环命令用于实现不同种类的循环:
+Go 有一个循环的关键词 `for`。for 循环命令用于实现不同种类的循环:
 
 ```go
 i := 0
@@ -281,9 +281,9 @@ for i < 10 {
 fmt.Println(sum)
 ```
 
-上面的例子类似于C语言中的while循环。
+上面的例子类似于 C 语言中的 while 循环。
 
-Go 中的 for 语句也可以用于普通的for循环:
+Go 中的 for 语句也可以用于普通的 for 循环:
 
 ```go
 sum := 0
@@ -302,7 +302,7 @@ for {
 
 ### Pointers （指针）
 
-Go提供了指针。指针是用来保存一个值的地址的地方。指针是由 \* 定义的。指针是根据数据的类型来定义的。 例如:
+Go 提供了指针。指针是用来保存一个变量的地址的地方。指针是由 \* 定义的。指针是根据数据的类型来定义的。 例如:
 
 ```go
 var ap *int
@@ -341,7 +341,7 @@ func main() {
 //=> 11
 ```
 
-注意：当你在尝试博客中的示例代码时，不要忘记用 `package main` 包含它，并在需要时导入 fmt 或其他包，如上面第一个 main.go 例子中所示。
+注意：当你在尝试博客中的示例代码时，不要忘记包含 `package main`，并在需要时导入 `fmt` 或其他包，如上面第一个 main.go 例子中所示。
 
 ### Functions （函数）
 
@@ -373,7 +373,7 @@ func main() {
 //=> 3
 ```
 
-这里c被定义为返回变量。所以定义的变量c会自动返回，而不需要在最后的返回语句中定义。
+这里 c 被定义为返回变量。所以定义的变量 c 会自动返回，而不需要在最后的返回语句中定义。
 
 你也可以从一个函数中返回多个返回值，用逗号来分隔返回值。
 
@@ -391,7 +391,7 @@ func main() {
 
 ### Method, Structs, and Interfaces （方法，结构体，接口）
 
-Go并不是一种完全面向对象的语言，但通过结构体（Struct）、接口（Interface）和方法（Method），它有很多面向对象的支持和感觉。
+Go 并不是一种完全面向对象的语言，但通过结构体（Struct）、接口（Interface）和方法（Method），它有很多面向对象的支持和感觉。
 
 #### Struct （结构体）
 
@@ -473,9 +473,9 @@ func main() {
 }
 ```
 
-正如我们在上面的例子中看到的，现在可以使用点运算符来调用该方法，如 `pp.describe`。请注意，_receiver_ 是一个指针。使用指针，我们传递的是一个值的引用，所以如果我们在方法中做任何改变，都会反映在  _receiver_ pp中。它也不会创建一个新的对象的副本，这就节省了内存。
+正如我们在上面的例子中看到的，现在可以使用点运算符来调用该方法，如 `pp.describe`。请注意，_receiver_ 是一个指针。使用指针，我们传递的是一个值的引用，所以如果我们在方法中做任何改变，都会反映在  _receiver_ pp 中。它也不会创建一个新的对象的副本，这就节省了内存。
 
-请注意，在上面的例子中，年龄的值被改变了，而名字的值没有改变，因为setName方法是 _receiver_ 类型的  ，而 setAge 是指针类型的。
+请注意，在上面的例子中，年龄的值被改变了，而名字的值没有改变，因为 setName 方法是 _receiver_ 类型是值类型，而 setAge 是指针类型的。
 
 #### Interfaces (接口)
 
@@ -531,11 +531,11 @@ func main() {
 ```
 
 type cat struct {
-在主函数中，我们创建一个动物类型的变量 `a`。我们给动物分配一个 snake 和一个 cat 的类型，并使用 Println 来打印 a.description。由于我们在两种类型（cat 和snake）中都以不同的方式实现了 describe 方法，我们得到了打印的动物描述。
+在主函数中，我们创建一个动物类型的变量 `a`。我们给动物分配一个 snake 和一个 cat 的类型，并使用 Println 来打印 a.description。由于我们在两种类型（cat 和 snake）中都以不同的方式实现了 describe 方法，我们得到了打印的动物描述。
 
 ### Packages (包)
 
-我们把Go的所有代码都写在一个包里。**main** package 是程序执行的入口点。Go 中有很多内置包。我们一直在使用的最著名的是**fmt**包。
+我们把 Go 的所有代码都写在一个包里。**main** package 是程序执行的入口点。Go 中有很多内置包。我们一直在使用的最著名的是**fmt**包。
 
 > "Go 软件包是 Go 提供的大型编程的主要机制，它们使得将一个大型项目分割成小块成为可能。"
 > — Robert Griesemer
@@ -584,7 +584,7 @@ func secretName(name string) string {
 > go install
 ```
 
-现在让我们回到custom_package文件夹，创建一个 main.go 文件
+现在让我们回到 custom_package 文件夹，创建一个 main.go 文件
 
 ```go
 package main
@@ -603,7 +603,7 @@ func main(){
 
 #### **Packages Documentation (包文档）**
 
-Go内置了对包的文档支持。运行以下命令来生成文档:
+Go 内置了对包的文档支持。运行以下命令来生成文档:
 
 ```shell
 godoc person Description
@@ -615,9 +615,9 @@ godoc person Description
 godoc -http=":8080"
 ```
 
-现在去URL [http://localhost:8080/pkg/](http://localhost:6060/pkg/)，看看我们刚刚创建的包的文档。
+现在去 URL [http://localhost:8080/pkg/](http://localhost:6060/pkg/)，看看我们刚刚创建的包的文档。
 
-#### Some built-in packages in Go (Go内置包)
+#### Some built-in packages in Go (Go 内置包)
 
 **fmt**
 
@@ -625,7 +625,7 @@ godoc -http=":8080"
 
 **json**
 
-Go中另一个有用的包是json包。这有助于对JSON进行编码/解码。让我们举个例子，对一些 JSON 进行编码/解码:
+Go 中另一个有用的包是 json 包。这有助于对 JSON 进行编码/解码。让我们举个例子，对一些 JSON 进行编码/解码:
 
 编码
 
@@ -678,7 +678,7 @@ func main(){
 resp, err := http.Get("http://example.com/")
 ```
 
-在这里，对错误对象的 API 调用可能通过也可能失败。我们可以检查错误是否为零或存在，并相应地处理响应:
+在这里，API 调用可能通过也可能失败。我们可以检查错误是否为 `nil`或存在，并相应地处理响应:
 
 ```go
 package main
@@ -725,7 +725,7 @@ func main() {
 
 #### Panic
 
-Panic 是指在程序执行过程中突然遇到的未被处理的东西。在Go中，Panic 不是处理程序中异常的理想方式。建议使用一个错误对象来代替。当 Panic 发生时，程序的执行会被停止。Panic 发生后被执行的东西是 defer。
+Panic 是指在程序执行过程中突然遇到的未被处理的东西。在 Go 中，Panic 不是处理程序中异常的理想方式。建议使用一个错误对象来代替。当 Panic 发生时，程序的执行会被停止。Panic 发生后被执行的东西是 defer。
 
 ```go
 //Go
@@ -793,7 +793,7 @@ func c() {
 //=> I am concurrent
 ```
 
-正如你在上面的例子中所看到的，函数 c 是一个 Go 例程，与 Go 主线程并行执行。有些时候，我们希望在多个线程之间共享资源。Go 倾向于不将一个线程的变量与另一个线程共享，因为这样会增加死锁和资源等待的可能性。还有一种方法可以在 Go 协程之间共享资源：通过Go channels。
+正如你在上面的例子中所看到的，函数 c 是一个 Go 例程，与 Go 主线程并行执行。有些时候，我们希望在多个线程之间共享资源。Go 倾向于不将一个线程的变量与另一个线程共享，因为这样会增加死锁和资源等待的可能性。还有一种方法可以在 Go 协程之间共享资源：通过 Go channels。
 
 **Channels (通道)** 
 
@@ -844,7 +844,7 @@ func sc(ch chan<- string) {
 }
 ```
 
-In the above example, `sc` is a Go routine which can only send messages to the channel but cannot receive messages.
+在上面的例子中，`sc` 是一个只用于发送消息到通道但不能接受消息的 go 协程。
 
 ### Organizing multiple channels for a Go routine using select (使用 select 为 Go 例程组织多个通道)
 
@@ -883,11 +883,11 @@ func speed2(ch chan string) {
 }
 ```
 
-在上面的例子中，main正在等待两个 channel，c1和c2。通过 select case 语句，main函数打印出，信息从它先收到的 channel 中发送出来。
+在上面的例子中，main 正在等待两个 channel，c1 和 c2。通过 select case 语句，main 函数打印出，信息从它先收到的 channel 中发送出来。
 
 **Buffered channel(带缓冲的通道)**
 
-你可以在go中创建一个缓冲 channel。有了缓冲 channel，如果缓冲区满了，发送到该 channel 的消息就会被阻断。让我们看一下这个例子:
+你可以在 go 中创建一个缓冲 channel。有了缓冲 channel，如果缓冲区满了，发送到该 channel 的消息就会被阻断。让我们看一下这个例子:
 
 ```go
 package main
@@ -905,15 +905,15 @@ func main(){
 // => fatal error: all goroutines are asleep - deadlock!
 ```
 
-正如我们在上面看到的，一个 channel 接受的信息不超过2条。
+正如我们在上面看到的，一个 channel 接受的信息不超过 2 条。
 
-#### 为什么Golang会成功？
+#### 为什么 Golang 会成功？
 
-> 简洁性… — Rob-pike
+> 简洁性…… — Rob-pike
 
 ### Great
 
-我们学习了Go的一些主要组成部分和特点。
+我们学习了 Go 的一些主要组成部分和特点。
 
 1. 变量、数据类型
 2. 数组 切片 和 maps
@@ -927,11 +927,11 @@ func main(){
 
 恭喜你，你现在对 Go 有了相当的了解。
 
-> 我最有成效的一天是减少了1000行代码。
+> 我最有成效的一天是减少了 1000 行代码。
 > — Ken Thompson
 
 不要停在这里。继续向前推进。思考一个小的应用并开始创建。
 
 [LinkedIn](https://www.linkedin.com/in/milap-neupane-99a4b565/), [Github](http://github.com/milap-neupane), [Twitter](https://twitter.com/_milap)
 
-也发布在Milap Neupane博客: [学习Go，从0到1](https://milapneupane.com.np/2019/07/06/learning-golang-from-zero-to-hero/)
+也发布在 Milap Neupane 博客: [学习 Go，从 0 到 1](https://milapneupane.com.np/2019/07/06/learning-golang-from-zero-to-hero/)

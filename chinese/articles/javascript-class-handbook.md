@@ -1666,7 +1666,7 @@ In this article, we discussed what a JavaScript class object is. We also used ex
 
 Thanks for reading!
 
-### And here’s a useful React.JS resource:
+### And here’s a useful React.JS resource
 
 I wrote a book about [Creating NPM Packages][113]!
 

@@ -169,7 +169,7 @@ numbers := make([]int,5,10)
 
 这里，切片的初始长度为 5，容量为 10。
 
-分片是对数组的一种抽象。切片使用一个数组作为底层结构。一个片断包含三个部分：容量、长度和一个指向底层数组的指针，如下图所示:
+切片是对数组的一种抽象。切片使用一个数组作为底层结构。一个切片包含三个部分：容量、长度和一个指向底层数组的指针，如下图所示:  
 
 ![1*P0lNCO0sQwIYHLEX_mfSOQ](https://cdn-media-1.freecodecamp.org/images/1*P0lNCO0sQwIYHLEX_mfSOQ.png)
 
@@ -181,7 +181,7 @@ numbers := make([]int,5,10)
 numbers = append(numbers, 1, 2, 3, 4)
 ```
 
-另一种增加切片容量的方法是使用 copy 函数。简单地创建另一个容量更大的片断，并将原来的切片复制到新创建的切片上:
+另一种增加切片容量的方法是使用 copy 函数。简单地创建另一个容量更大的切片，并将原来的切片复制到新创建的切片上:
 
 ```go
 // create a new slice
@@ -205,7 +205,7 @@ slice3 := number2[1:4]
 fmt.Println(slice3) // -> [2 3 4]
 ```
 
-Maps 是 Go 中的一种数据类型，它将键映射到值。我们可以使用以下命令来定义一个 map:
+映射是 Go 中的一种数据类型，它将键映射到值。我们可以使用以下命令来定义一个 map:
 
 ```go
 var m map[string]int

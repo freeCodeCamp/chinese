@@ -1,4 +1,4 @@
-> - 原文地址：[Learning Go — from zero to hero](https://www.freecodecamp.org/news/learning-go-from-zero-to-hero-d2a3223b3d86/)
+> - 原文地址：[Learning Go—from zero to hero](https://www.freecodecamp.org/news/learning-go-from-zero-to-hero-d2a3223b3d86/)
 > - 原文作者：[Milap Neupane](https://www.freecodecamp.org/news/author/milapneupane/)
 > - 译者：[luojiyin](https://github.com/luojiyin1987)
 > - 校对者：

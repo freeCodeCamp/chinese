@@ -1,775 +1,780 @@
 > -   原文地址：[The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/coding-bootcamp-handbook/)
 > -   原文作者：[Quincy Larson](https://www.freecodecamp.org/news/author/quincylarson/)
-> -   译者：
+> -   译者：herosql
 > -   校对者：
 
-![The Coding Bootcamp Handbook: How Do Bootcamps Work and Are They Right for You?](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/If-you-dream-it--you-can-do-it--1-.png)
+![编码训练营手册：训练营是怎么运作的？怎么才是对的？](https://www.freecodecamp.org/news/content/images/size/w2000/2019/08/If-you-dream-it--you-can-do-it--1-.png)
 
-Before you spend thousands of dollars and several months of your life on a coding bootcamp, spend 30 minutes reading this handbook.
+在你花费数千美元和多个月时间在编码训练营之前，花 30 分钟读一读本手册。
 
-# Who is this handbook for
+# 这本手册为谁而写
 
--   Anyone considering attending a bootcamp
--   Any developer considering founding a bootcamp or teaching at one
--   Any journalist writing about bootcamps
+-   每个考虑参加训练营的人
+-   每个考虑建立训练营或在训练营任教的开发人员
+-   每个写关于训练营的媒体人
 
-# For the people who think they're too busy to read this handbook
+# 对于那些认为自己太忙而没有时间阅读本手册的人
 
-My advice to you boils down to this: **Do your research**.
+我都建议你：**自己研究**.
 
-**Apply for lots of developer jobs first.** Go through some job interviews. You may be able to get a developer job without needing to attend a bootcamp.
+**申请很多开发者工作的第一步** 去获取一些工作的面试机会。你或许可以获取一份开发者的工作而不需要参加训练营。
 
-**Don't blindly trust bootcamps' testimonials or employment statistics.** Use LinkedIn to reach out to their alumni directly.
+**不要盲目的相信训练营的推荐和就业统计数据** 使用领英直接联系他们的校友。
 
-**Prepare yourself.** Make sure you have enough money. If you're ready to enroll, make sure you have enough cash to pay tuition. And make sure you have enough cash to survive during the bootcamp, and for 6 months after while you apply for jobs.
+**自己做好准备** 确保你有足够的钱。如果你准备好参加，确保你有足够的现金来支付学费。并且确保你有足够的钱在训练营里生活，以及你在六个月后才能申请工作时维持生计。
 
-**Bootcamps aren't magic.** Bootcamps can only help prepare you. _You_ have to learn everything. _You_ have to go through the developer job interview process. _You_ have to put in the work.
+**训练营不是魔法** 训练营只能帮助你做好准备 _你_ 需要学习一切 _你_ 需要通过开发者工作的面试流程. _你_ 需要投入工作中.
 
-# A note on objectivity
+# 客观性的说明
 
-I've designed this handbook to be as objective as possible. To this end, **I do not mention any bootcamps or their founders by name.** I do not link to any of their websites.
+我设计这本手册尽量做到客观的。为此 **我没有提及任何的训练营或他们创始人的名字** 我没有链接到任何一个网站。
 
-I didn't write this handbook to help bootcamps. I wrote this handbook to help you.
+我写手册不是为了帮助训练营。我写这本手册是为了帮助你。
 
-As the teacher who founded freeCodeCamp, I am in a unique position to write about bootcamps for three reasons:
+作为老师和 freeCodeCamp 的创建者，我处于一个独特的位置来写训练营，有三个原因：
 
-1.  A lot of bootcamps use freeCodeCamp for their curriculum and course prepwork. I've helped coach a lot of bootcamp founders on how to prepare people for developer careers.
-2.  I learned to code in San Francisco in the early 2010's, when bootcamps first came onto the scene. I didn't attend a bootcamp, but I hung out with many bootcamp founders and attended student "demo days."
-3.  Over the past 3 years, I've conducted significant primary research. I've published [several datasets][1] containing responses from thousands of bootcamp alumni.
+1.  许多的训练营在他们的课程和课程前期工作中用到 freeCodeCamp。我帮助很多训练营创始人在怎么训练人们进入开发者职业生涯做好准备。
+2.  2010 年初，我在旧金山学习了编程，当时训练营首次出现。我没有参加训练营，但我和许多训练营创始人一起出去玩，并参加了学生“演示日”。
+3.  过去三年，我进行了重要的初步研究，我发布了 [几个数据集][1] 其中包括数千名训练营校友的回复。
 
-freeCodeCamp's mission is to help as many people learn to code as possible. Bootcamps help a lot of people accomplish this. So they are helping freeCodeCamp in our mission.
+freeCodeCamp 的使命是帮助尽可能多的人有学习编码。训练营帮助很多人实现这一目标。所以他们正在帮助 freeCodeCamp 完成我们的使命。
 
-This said, freeCodeCamp has never received any compensation from bootcamps. Several of the big bootcamp chains have approached us about sponsorship. We have always refused.
+可以这样说，freeCodeCamp 从未从训练营获得过任何报酬。几家大型训练营就赞助事宜与我们接洽。我们一直拒绝。
 
-# Why did I write this handbook
+# 为什么我要写这本手册
 
-When you Google "coding bootcamp" or "coding bootcamps in \[city name\]", you find a lot of bootcamp review websites. But there are fundamental problems with these review sites.
+当你在谷歌上搜索 "编码训练营" 或是 "在 \[城市名\] 的编码训练营"， 你会找到很多的训练营的评论网站。但这些评论网站存在根本性问题。
 
-First, these review sites are sponsored by the bootcamps themselves. Bootcamps pay for advertisements. They pay to rank higher in the search results. They pay for "paid placement" blog articles, op-eds, and other publicity.
+首先，这些评论网站都是训练营自己赞助的。训练营付钱给广告，他们买更高的搜索排名，他们支付给支持付费的博客文章，专栏文章和其他宣传。
 
-This is a conflict of interest.
+这是利益冲突。
 
-Second, many of the reviews on these sites were coerced. I've heard stories from graduates of several bootcamps who were pressured to leave positive reviews. In some cases, bootcamps made students write reviews as a mandatory in-class activity.
+其次，很多网站上的评论被胁迫的。我听过几个训练营毕业生的故事，他们被迫留下积极的评论。在一些案例中，训练营让学员写评论作为强制性的课堂活动。
 
-There are also a lot of fake reviews written by marketing departments.
+还有很多营销部门写的虚假评论。
 
-It's impossible to know which bootcamps are playing by the rules and which are cheating. So all that these review sites accomplish is to help cheaters drown out the more ethical bootcamps.
+不可能知道哪些训练营是按规则进行的，哪些是作弊的。因此，这些评论网站所做的一切就是帮助作弊者淹没更道德的训练营。
 
-Instead of relying on websites full of dubious reviews, you should think for yourself. There are no shortcuts to making a decision this important.
+你应该自己想想，而不是依赖充满可疑评论的网站。做出如此重要的决定没有捷径。
 
-> "The #1 marker of quality of a bootcamp is how hard it is to get in. Online reviews are completely and 100% gamed. Job placement statistics are also ruthlessly gamed. The only thing that's ungameable by a bootcamp is how hard it is to get in." - one of the former bootcamp managers I talked to while researching this handbook
+> "第 #1 很难得知市场上训练营的质量。 在线评价完全是 100% 的游戏. 职业统计也是残酷的游戏。 训练营唯一无法游戏的是进入训练营的难度。" - 我在研究本手册时采访过的一位前训练营经理。
 
-This handbook will give you a framework you can use to understand how bootcamps work. It will help you research your options and plan the path to your first developer job.
+本手册会给你一个框架，让你明白训练营是如何运作的。它将帮助你研究你的选择并规划你的第一份开发人员工作的路线。
 
-# What exactly is a bootcamp
+# 训练营到底是什么
 
-![Coding together](https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+![一起编码](https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Bootcamps are schools where you learn to code full-time - usually in person.
+训练营是学校，是你全天学习编码的地方 —— 通常是面对面学习。
 
-Most bootcamps are around 12 weeks long, though some are as long as a year.
+很多训练营为期 12 周，甚至有长达一年的。
 
-Most bootcamps cost between US $10,000 and $20,000.
+很多训练营费用在$10,000 美元 到 $20,000 美元之间。
 
-Some bootcamps offer loans - either directly or through a financing company.
+一些训练营发放贷款 —— 直接或间接通过金融公司。
 
-Some bootcamps offer "Income Share Agreements" where instead of paying up front, you pay a percentage of your pre-tax income (usually 17%) for several years (usually 2 years). This is not "free money" - and I'll explain it in detail below.
+一些训练营提供 “收入共享协议”，你无需预先付款，而是在几年（通常是两年）内支付税前收入的一定百分比（通常是 17%）。这不是“免费的钱”——我将在下面详细解释。
 
-The goal of a bootcamp is to take a classroom full of people who have never worked in tech before and help them get their first developer job.
+训练营的目的是让一满教室没有参加过技术工作的人，帮助他们获取第一份开发工作。
 
-That's a tall order. And there's a lot of money on the line. Which leads us to the next question.
+这时一项困难的任务。而且这是一大笔钱的赌注。从而引导我们进入下一个问题。
 
-# Do bootcamps actually work
+# 训练营真的有效吗
 
-In many cases, yes. Every year, thousands of bootcamp grads get their first developer jobs.
+在许多案例中，是的。每年，数以千计的训练营毕业生获得了他们的第一份开发工作。
 
-> "The best bootcamps take people with raw ability and turn them into (lightly) experienced programmers. Most of what they do in some ways is selection, and then put people into pressure cookers of learning." - a former bootcamp manager I talked to
+> “最好的训练营让人们能够变成有经验（轻度）的编程人员。他们在某些方面所做的就是选择，他们让人们在高压下学习”——一个训练营的经理和我说的
 
-But there are also bootcamp grads who fail to get a developer job and end up going back to their past careers.
+但是也有训练营毕业生，并没有获得开发工作，最后回到他们之前的岗位。
 
-Success comes down to a few factors:
+成功归结为以下几个因素
 
--   How selective the bootcamp is
--   How capable the teachers are
--   And whether the people running the bootcamp care about their employment statistics or are just in it for short term financial gains.
+-   训练营的选择性如何   
 
-Most bootcamps don't publicly share their numbers. And the bootcamps who do may use non-standard metrics. This makes it difficult for you to make apples-to-apples comparisons.
+-   老师们的能力如何
 
-But there's a growing transparency movement within bootcamps. They are pressuring one another to be more accountable.
+-   且运营的训练营的人真正关心他们的就业统计数据，或只关注短期收益。
 
-Some bootcamps want to self-regulate the industry before the government is forced to step in and regulate it for them.
+大多的训练营不公开分享他们的数据。训练营可能会使用非标准指标。这让你无法进行同类比较。
 
-Bootcamps have only existed as a form of post-high school education for a few years. They aren't yet regulated like colleges and universities. That is, through accreditation.
+但训练营的透明度运动正在不断发展。他们互相施压，要求对方承担更多责任。
 
-## Are bootcamps accredited
+一些训练营希望在政府被迫介入监管之前对该行业进行自我监管。
 
-The short answer is no, they aren't accredited.
+训练营作为高中后教育的一种形式仅存在了几年。他们没有像学院和大学一样被监管。这就是说，通过认证。
 
-But first, what does it meant to be accredited? And why's that so important for colleges and universities?
+## 训练营是否获得官方认证
 
-In the US, most universities are regionally accredited. And some academic programs are nationally accredited, such as English preparation schools.
+短期来说是没有，他们没有得到官方认证。
 
-There are two major reasons for this:
+但首先，认证意味着什么？为什么这对学院和大学很重要。
 
--   accredited schools can help students get a US visa
--   accredited schools can help students get federal grants or federal student loans
+在美国，很多大学是地方官方认证。一些学术机构是全国认证。像是英语预备学校。
 
-In order to get accredited, schools have to undergo an audit by independent educators. These auditors dig through files and make sure the school is following all the laws. They also make sure students are getting jobs after they graduate.
+造成这种情况的主要原因有两个：
 
-If graduates from the school aren't able to get jobs in their field of study, that's a red flag. The school may lose its accreditation.
+-   认证的学校能够让学生拿到美国签证
 
-You may have heard the term "diploma mill". These are colleges and universities that have lost their accreditation (or never got accredited in the first place). They sell worthless courses and worthless diplomas.
+-   认证的学校能帮助学生获得联邦助学金或联邦学生贷款
 
-In the US, public universities are run by the government. These are accredited. And most private universities are run by nonprofits - often by religious organizations. These are usually accredited, too.
+为了得到官方认证，学校必须接受独立教育工作者的审核。审查员研究很多文件，并确保学校符合所有的法律。他们也确保学生在毕业后能获得工作。
 
-But there's a third category of university: private for-profit universities. And this is where things get a little sketchy. Some of these universities are accredited, but some of them aren't.
+如果来自学校的毕业生不能找到专业领域内的工作，这是一个危险信号。学校或许会失去它们的官方认证。
 
-These private for-profit universities advertise heavily on late-night TV and buy lots of Facebook ads. They trick unsophisticated students into enrolling.
+你可能听过“文凭工厂”。这是很多学院和大学失去了他们的官方认证后（或是从来就没有认证过）。他们售卖没有价值的课程和没有价值的文凭。
 
-> "A foole and his money is soone parted." - Dr. John Bridges, way back in 1587
+在美国，公立大学是由政府运营的。这些大学都经过认证。大多数私立大学是由非盈利机构运营——通常是宗教组织。这些大学通常的也经过认证。
 
-In some cases, these schools qualify for federal student loans, the GI Bill, and other forms of government assistance.
+但是还有第三类大学：私立盈利性大学。这就是事情变得有点棘手的地方。一部分大学是被认证，但有些不是。
 
-Plainly put, most of these private for-profit universities are a scam. The US government is slowly shutting them down. But many people still fall for their marketing and end up thousands of dollars in debt with a worthless degree.
+私立盈利性大学会打很多广告在晚间电视上，还会买很多脸书上的广告。他们通过欺骗天真的学生入学。
 
-Even so, word of these scams spreads slowly. And even when a school sounds too good to be true, people still want to believe.
+> “蠢人难聚财”——Dr.John Bridges，1587
 
-This brings us back to coding bootcamps.
+在一些案例中，这些学校有资格获取联邦学生贷款，退伍军人权利法案，和其他形式的政府的援助。
 
-Without some form of accreditation, a few bootcamps who are focused on short term financial gains - rather than the long-term health of the bootcamp model - can ride a wave of bootcamp popularity. They can get rich while serving up sub-par results for students.
+简单来说，很多私立盈利性大学是骗局。美国政府是慢慢的关闭这些它们。但是很多人仍然坠入他们的营销陷阱中，最终背着数千美元的欠款和一个没有价值的证书。
 
-A bootcamp accreditation system could help prevent this.
+尽管如此，骗局的消息传播的很慢。在一个学校听起来好的难以置信的时候，人们仍然会相信。
 
-As I mentioned, most bootcamps don't have the resources to get accredited. Or they haven't existed long enough to qualify. This is where self-regulation comes into play.
+让我们回到编码训练营。
 
-The Council on Integrity in Results Reporting (CIRR) is a joint effort by bootcamps to publicly share the employment statistics of their graduates in a way everyone can understand.
+在没有某种形式的认证的情况下，一些训练营他们关注在短期收益上 —— 而不是训练营的健康长期收益 —— 乘上训练营流行的浪潮。他们在为学生提供低标准结果同时致富。
+
+训练营认证系统可以帮助防止这种情况发生。
+
+上述我提到的，很多训练营没有资源获取认证。或者它们没有存在很长时间，没有资格。这是自我监管发生作用的地方。
+
+结果报告诚信委员会(CIRR)是训练营共同发起的一个项目，旨在以人人都能理解的方式公开分享其毕业生的就业统计数据。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Launch_Academy_Boston__H1_2018__Audited.png)
 
-This is a standardized CIRR outcomes report for a bootcamp.
+这是一个标准的结果报告征信委员会给出的一家训练营的报告。
 
-Many prominent bootcamps are a part of this initiative. But some prominent bootcamps aren't participating or have stopped sharing their data.
+许多知名训练营都参与了这项计划。但有些知名训练营并未参与或已停止分享其数据。
 
-A bootcamp's membership in the CIRR isn't the same thing as getting accredited, but it's a good start.
+训练营的 CIRR 会员资格并不等同于获得认证，但这是一个好的开始。
 
-# What kind of salaries do bootcamp graduates get
+# 训练营的毕业生能拿到什么样的薪水
 
-Based on public data, bootcamp graduates earn the same starting salary as other entry-level developers. This includes computer science majors and other university graduates who learned to code on their own.
+基于公共数据，训练营毕业生赚到的薪水和初级开发者一样。这包括计算机科学专业和其他自学编程的大学毕业生。
 
-The biggest factor in how much money you get paid as an entry-level developer is the cost of living of the city. A junior developer in San Francisco can make twice as much as a junior developer in the middle of America.
+作为一名初级开发人员，你能挣多少钱的最大因素是城市的生活成本。旧金山的初级开发人员的工资是美国中部初级开发人员的两倍。。
 
-If a bootcamp says their graduates get higher starting salaries than the graduates of other bootcamps, that means most of their graduates get jobs in more expensive cities like San Francisco.
+如果一个训练营说他们的毕业生可以获得比其他训练营毕业生更高的起薪，那就意味着他们的大多数毕业生都在旧金山等生活成本更高的城市找到工作。
 
-# How long does it take bootcamp graduates to get a job
+# 训练营毕业生需要多长时间才能获得工作
 
-This depends on the bootcamp. Some bootcamps have extensive career coaching. Others have close ties to local industry and can help you line up job interviews. Both of these can significantly shorten the number of months you spend applying for jobs afterward.
+这取决于训练营。一些训练营有很广泛的职业指导。有些训练营与本地行业联系密切，可以帮你安排面试。这两种方法都可以大大缩短你之后申请工作的时间。
 
-The post-bootcamp job search takes about 6 months on average.
+训练营结束后，找工作平均需要六个月。
 
-# What is the completion rate for bootcamps
+# 训练营的完成率是多少
 
-A majority of people who start bootcamps go on to finish them.
+大多数参加训练营的人都会完成训练。
 
-Most good bootcamps are selective. If they don't think you'll be able to get a developer job after the program, they won't accept you.
+大多数好的训练营是有选择性的。如果他们不觉得你在课程之后能够获得开发者的工作，他们就不会允许你进入。
 
-Bootcamps have a short-term incentive to accept you so they can get your tuition dollars. But they also have a long-term incentive not to accept you if they think you could hurt their employment statistics.
+训练营出于短期收益而接受你，这样他们就能拿到你的学费。但是他们也有长期收益，如果他们觉得你破坏了他们的就业统计数据，就不会接受你。
 
-This said, not all bootcamps care about their employment statistics. Some may focus on short term cash, due to financial desperation. (A lot of high-profile bootcamps have shut down in recent years.)
+这就是说，不是所有的训练营都关心他们的就业统计数据。有些训练营可能因为财务困境而专注于短期收益。（近年来，许多知名训练营都关闭了。）
 
-In some cases, bootcamps may kick out students half way through their program.
+在一些案例中，训练营可能在课程进行到一半就驱逐学生。
 
-If the bootcamp is a "cash up front" bootcamp, they've already reaped the short-term benefit of enrolling you. Even if you're under-performing, it may make sense to try to salvage you rather than give you a refund.
+如果训练营是一个“预付现金”的训练营，他们就准备好了通过招生从你身上收割短期收益。如果你表现不佳，尝试挽救你比给你退款更有意义。
 
-These bootcamps do still want the long-term benefit of you boosting their employment statistics. But this benefit is more abstract than the cold hard cash you've handed them.
+这些训练营确实仍希望从你提高他们的就业率中获得长期利益。但是这样的收益就比你直接给他们钱更抽象。
 
-On the other hand, wage-garnishing bootcamps (remember those Income Sharing Agreements) have a bigger incentive to kick you out if you're under-performing. This is because they only benefit over the longer term (17% of your salary over the next 2 years).
+另一方面，如果你表现不佳，扣发工资的训练营（记住那些收入共享协议）有更大的动机将你踢出局。这是因为他们只会在长期内受益（未来 2 年内你工资的 17%）。
 
-Also, some bootcamp students decide to drop out for a variety of reasons. These may have nothing to do with the bootcamp itself, such as major life events.
+此外，一些训练营学员会因为各种原因而退学。这些原因可能与训练营本身无关，例如重大的生活事件。
 
-# How often do people graduate from bootcamps but fail to transition into tech
+# 来自训练营的毕业生转行技术失败有多常见
 
-Usually by the time people enroll in more selective bootcamps, they've already spent a lot of time coding, and are close to being able to get a developer job. So it's less common for these bootcamp graduates to fail to find a job.
+通常，当人们报名参加更有选择性的训练营时，他们已经花了很多时间编写代码，并且几乎能够找到一份开发人员的工作。因此，这些训练营毕业生找不到工作的情况并不常见。
 
-But regardless of your skills, finding a developer job is inherently difficult. Bootcamps can aid you in this process, and many of them have career counselors to help.
+但不管你的技术如何，找到一份开发者工作是本身是困难的。训练营可以在过程中辅助你，其中许多训练营都有职业顾问来帮助你。
 
-It is not uncommon for graduates of even selective bootcamps to have to apply to hundreds of developer jobs (and interview at dozens of companies) before getting a satisfactory job offer.
+即使是精英训练营的毕业生，也常常需要申请数百个开发职位（并在一打公司面试）才能获得满意的工作机会。
 
-> "Sometimes people put in all the work, and are talented, but just don’t get lucky for a long time. Other times, many people spam click job applications on angel list and other job boards. This rarely works.
->
-> The best thing (by far) to do is make industry connections and meet real people. And then ask other developers for help, on preparing, on seeking jobs, and on referrals. Internal referrals are generally the best bet." - another former bootcamp manager I talked to while researching this handbook
+> “有时人们付出所有努力，而且很有才华，但就是在很长时间内都不够幸运。其他时候，许多人会点击求职板发送垃圾邮件。这种方法很难奏效。
 
-So in many cases, when people fail to transition into tech, it's not really the bootcamp's fault. Some people just underestimate how arduous the job search process can be and give up before they find success.
+> 最好（目前为止）的做法是与行业建立联系和一些真正的人会面。向其他开发者寻求帮助，寻求岗位，和推荐。内部推荐通常更好。” —— 我在研究这本手册时和其他训练营经理谈论过。
 
-# What types of bootcamps are there
+在很多案例中，当一个人转行技术失败，这不是训练营的错。一些人低估了找工作过程的艰辛，在他们成功之前就放弃了。
 
-![An afternoon at a café coworking.](https://images.unsplash.com/photo-1519155031214-e8d583928bf2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+# 有哪些类型的训练营
 
-Some bootcamps focus on particular stacks, like Ruby on Rails, Python / Django, or Java / Android. Some even focus on specific technical careers, like User Experience Design.
+![下午在咖啡厅合伙办公](https://images.unsplash.com/photo-1519155031214-e8d583928bf2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-But it's more helpful to think of bootcamps in terms of their ownership structure. What are their incentives?
+一些训练营关注特定技术栈，例如 Ruby on Rails, Python / Django, or Java / Android。有些甚至专注于特定的技术职业，例如用户体验设计。
 
-## Privately-Owned Local Bootcamps
+但从所有权结构的角度来考虑训练营会更有帮助。他们的激励措施是什么？
 
-These are often founded by one or more local developers. The founders may teach some of the classes themselves. (This is usually a good thing.)
+## 私有的本地训练营
 
-Most bootcamps start out as locally-owned, single-campus schools like these.
+通常创始人是一个或多个本地的开发者。这些创立者或许教一些他们自己的课。（通常来说是好事）
 
-## Privately-Owned Bootcamp Chains
+很多训练营开始于当地，像是一个校区的学校。
 
-As locally-owned bootcamps grow, their founders may open additional campuses in other cities.
+## 私有连锁训练营
 
-By operating more than one campus, owners get the advantages of economies of scale and economies of scope. They can spread the burden of fixed costs (like marketing and curriculum) across several schools.
+像是本地训练营的成长，创始人或许会在其他城市开设更多的校区。
 
-This said, it's hard to offer consistent quality across multiple schools.
+通过经营多个校园，业主可以获得规模经济和范围经济的优势。他们可以将固定成本（如营销和课程）的负担分摊到几所学校。
 
-My advice to prospective students is to treat each city campus as its own school. Don't rely on the bootcamp chain's overall reputation. Instead, do your research. Seek out alumni from that specific campus and interview them.
+这就是说，很难保证多个学校一样的质量。
 
-## University-based bootcamps
+我给未来学生的建议是，把每个城市校园都当成一所独立的学校。不要依赖训练营连锁店的整体声誉。相反，要做好调查。寻找该特定校园的校友并与他们聊聊。
 
-Most university-based bootcamps aren't run by the university itself. They are run by for-profit education companies.
+## 大学训练营
 
-Universities contract with these private companies to run the bootcamps. These bootcamps pay the university a hefty fee to use their classroom space and - more importantly - their prestigious name. It's a controversial practice.
+很多大学训练营不是大学自己运营的，而是由营利性教育公司运营的。
 
-When you look at a university-based bootcamp, don't rely on the reputation of the university itself. Instead, do your own research.
+大学与这些私营公司签订合同来运营训练营。这些训练营付很多费用给大学来用他们的教室空间和 —— 更重要的 —— 他们富有名望的名字。这是一种有争议的做法。
 
-## Free Nonprofit Bootcamps
+当你考察一个大学的训练营时，不要依赖大学本身的声誉。相反，要自己研究。
 
-Nonprofit bootcamps are similar to their locally-run for-profit counterparts. The main difference is these have no profit incentive.
+## 免费非营利训练营
 
-With traditional 501(c)(3) nonprofits, there is no ownership. Nobody owns stock. Instead, they're owned by the public.
+非营利训练营与当地营利训练营类似。主要区别在于非营利训练营没有营利激励。
 
-This is how The Red Cross, Doctors Without Borders, and freeCodeCamp are all incorporated.
+与传统的 501(c)(3) 非盈利，并没有所有权。没有人有股份。相反，它们属于公众。
 
-And some bootcamps use this structure as well.
+红十字会，国际医师组织，和 freeCodeCamp 就是这样组成的。
 
-Some nonprofit bootcamps are completely free. They are donor-supported, or supported through grants from the government.
+一些训练营的结构也采用这样的结构。
 
-There are several of these programs aimed at retraining military veterans and refugees.
+有些非营利训练营是完全免费的。它们由捐赠者资助，或通过政府拨款资助。
 
-## Free For-Profit Bootcamps
+其中有多个项目旨在重新培训退伍军人和难民。
+
+## 免费的营利训练营
 
 Surprisingly, there are a few bootcamps that are for-profit but still free. And these programs don't use Income Sharing Agreements to garnish your wages, either.
 
-These programs are selective. They may require applicants to have a Ph.D. or other advanced degree.
+出人意料的，有一些训练营是盈利性的，但仍然是免费的。而且这些项目也不会使用收入共享协议来扣留你的工资。
 
-These programs make 100% of their money from employers. The program charges employers a recruitment fee when they place you at their company. These recruitment fees can be as high as 33% of your first year's salary.
+这些项目都是选择性的。他们可能要求申请人拥有博士学位或其他高级学位。
 
-But you as a student don't pay anything. Your future employer covers the expense of the bootcamp for you.
+他们规划让 100%的钱来自雇主。这计划招募费用是雇主出，你在他们的公司。招募费用高达你的第一年的薪水 33%。
 
-### Online bootcamps
+但是你不用像学生一样支付任何东西。你未来的雇主为你出了训练营的费用。
 
-I mention these last because they are new and experimental.
+### 在线训练营
 
-It's one thing to take a student who is new to coding and prepare them for their first job in a matter of months. It's another thing to do this completely online.
+我最后提是因为它们是新的实验产物。
 
-"Learn to code" style websites can teach you online because they are designed for long-term use. If you practice coding online several times each week for a year or two, your skills will steadily improve.
+让一名编程新手在几个月内为第一份工作做好准备是一回事，而完全在线上完成这项工作又是另一回事。
 
-But online bootcamps expect you to do all this intensively, over a much shorter period of time.
+“学习编码” 类型的网站可以在线教你因为它们是为长期使用而设计的。如果你准备准备在一年或两年内每周在线练习编码，你的技术会稳步前进。
 
-Much of the value of a bootcamp comes from sitting shoulder-to-shoulder with other learners. You help one another get past errors and failing tests. You build projects together. You form interpersonal relationships.
+但是在线训练营要求你在更短的时间内集中完成所有这些工作。
 
-All this is much harder to accomplish online, and in such a short period of time.
+训练营的价值很大程度上来自于与其他学习者并肩而坐。你们互相帮助，克服错误和考试失败。你们一起做项目。你们建立人际关系。
 
-The main reason companies offer online bootcamps is simple: they're dramatically more profitable.
+所有这些都很难在短期时间内在线完成。
 
--   The company doesn't need to rent office space to serve as a campus.
--   They don't have to worry about housing.
--   They can hire instructors from all around the world. This is much cheaper than hiring instructors in, say, San Francisco.
--   They can dump students into a big chat room together and let them figure things out with minimal supervision.
+公司提供在线训练营的主要原因很简单：它们可以带来更高的利润。
 
-Voilà - a coding bootcamp for 1/10th the cost. And a lot of these online bootcamps still charge as much as in-person bootcamps.
+-   公司不需要租借办公空间来建立分校。
+-   他们不用担心房子。
+-   他们不用在全世界雇佣导师。这比在旧金山聘请教练便宜得多。
+-   他们让学生们进入一个大的聊天室，让他们以最少的监督来解决问题。
 
-So before you enroll in an online bootcamp, you should do extra diligence. See whether there is a comparable in-person option in your city.
+也就是 - 一个编码训练营十分之一的成本。很多在线训练营收费相当于线下训练营。
 
-# What kind of people generally go to bootcamps
+所以在你在在线训练营登记之前，你应该留意。看看你的城市是否有类似的线下训练营。
 
-All kinds of people attend bootcamps.
+# 通常什么人会去训练营
 
-But the most common demographics are:
+各种各样的人都会参加训练营。
 
--   Recent university graduates who haven't entered the workforce yet and can afford to wait another 6 months to do so.
--   Wealthy working professionals who want to switch industries and can afford to not work for the next 6 months.
+但最常见的人口统计数据是：
 
-Less common, but still notable, are:
+-   尚未进入职场且可以再等待 6 个月的应届大学毕业生。
+-   想要转换行业且有能力在未来 6 个月内不工作的富裕职业人士。
 
--   Military veterans retraining for civilian careers
--   People who are unemployed and using loans to finance the bootcamp (or are signing "Income Share Agreements")
--   High school and college students learning to code over summer break (and not planning to enter the workforce immediately afterward)
+很少见，但是值得注意的是：
 
-The average age of a bootcamp student is 28, but it's common for people much older than that to enroll in bootcamps.
+-   退伍军人进行再培训以从事平民职业
+-   失业人员且和训练营贷款（或是签了“工资共享协议”）
+-   高中和大学生在暑假学习编码（且不计划在暑假后进入职场）
+
+训练营的学生平均在 28 岁，但年龄远高于这个数字的人参加训练营的情况也很常见。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/Bootcamp_Success_vs_Age___Kaggle.png)
 
-Most of them have at least 1 parent who graduated from university.
+他们中的大多数人至少有一位父母是大学毕业的。
 
-Most of them had learned to code on their own for more than 6 months before starting the bootcamp.
+他们大多数在训练营开始前六个月或更早自学过编码。
 
-Most bootcamp students already have a university degree - though not usually in computer science.
+很多训练营学生已经有了大学学历证书 —— 通常不是计算机科学专业。
 
-# Is a bootcamp right for me
+# 训练营适合你吗
 
-This comes down to several factors:
+这归结于几个因素：
 
-1.  How much time you have
-2.  How much money you have
-3.  Whether you are currently working
-4.  And how much experience you have with coding
+1.  你有多少时间
+2.  你有多少钱
+3.  你当前是否在工作
+4.  和你有多少编码经验
 
-Let's talk about all of these factors, starting with money.
+让我们来谈谈所有这些因素，从钱开始。
 
-# Can I afford a bootcamp
+# 我能负担的起训练营吗
 
 ![](https://images.unsplash.com/photo-1553788085-7a4ef80b42d6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Given infinite time and infinite money, my advice to 100% of people would be: yes - do a bootcamp.
+给无限的时间和无限的金钱，我 100%建议人们：是的 —— 去训练营吧。
 
-But since time and money are scarce, we should discuss this in more detail.
+但是时间和金钱是有限的，我们需要讨论更多的细节。
 
-## How much is bootcamp tuition
+## 训练营的学费是多少
 
-As we discussed, some bootcamps are completely free, but these are not representative of the field.
+我们讨论过，一些训练营是完全免费的，但这些并不代表这个领域。
 
-Most bootcamps cost between US $10,000 and $20,000. The longer the program is, the more it usually costs.
+大多数训练营收费在$10,000美元到$20,000 美元之间。课程时间越长，费用通常越高。
 
-Some bootcamps don't require you to pay tuition up-front. Instead, they garnish your future wages through something called an "Income Sharing Agreement."
+有些训练营并不要求你预付学费。反而，他们通过所谓的“薪资共享协议”来扣留你未来的工资。
 
-## What are Income Sharing Agreements (ISAs)
+## 什么是薪资共享协议（ISAs）
 
-Basically, you sign a contract with these bootcamps. These bootcamps then work closely with the US Internal Revenue Service. They figure out exactly how much money you make, then garnish a percentage of your pre-tax income (usually 17%) for a number of years (usually 2 years).
+基本上，你和训练营签订的协议。这些训练营和美国税务局密切合作。他们准确的知道你赚多少钱，在几年内（通常是两年）从你交税前的收入分走一部分（通常是 17%）。
 
-If your first job out of a bootcamp pays \$50,000 per year, that means you would pay:
+
+如果你在训练营毕业后的第一份工作年薪为 \$50,000 美元，这意味着你需要付：
+
 
 ```plain
 ($50,000 * 17% = $8,500) * 2 years = $17,000 total
 
 ```
 
-If you made \$80,000 per year:
+如果你每年赚 \$80,000 美元：
 
 ```plain
 ($80,000 * 17% = $13,600) * 2 years = $27,400 total
 
 ```
 
-If you made \$100,000 per year:
+如果你每年赚 \$100,000 美元：
 
 ```plain
 ($100,000 * 17% = $17,000) * 2 years = $34,000 total
 
 ```
 
-Most of these ISAs won't kick in until you make at least US $50,000 per year. And if you earn less than $50,000 per year for five years, these ISAs will go away and you won't owe anything anymore. And some ISAs have a "cap" - a maximum amount you have to pay back.
+在你每年赚到的钱少于$50,000时，很多薪资共享协议不会生效。而且如果你在五年内每年赚的钱都少于$50,000。薪资共享协议就会解除，你不需要再继续。一些薪资共享协议有“最高限额” —— 你需要偿还的最大金额。
 
-But the important thing to note with ISAs is they are a new form of debt. Unlike other forms of consumer debt - like student loans - ISAs exist in a legal gray area.
+但是一个很重要的事需要注意，薪资共享协议是一种新的贷款。不像其他的客户贷款 —— 像学生贷款 —— 薪资共享协议在法律的灰色地带中。
 
-ISAs are a new form of "financial engineering". They seem to be legal, but none of this has been tested in a court of law.
+薪资共享协议是一种新的“金融工程”。它们看起来合法，但是这些都没有经过法庭验证。
 
-It's also unclear what happens if you take out an ISA, and then the bootcamp goes bankrupt. (This happens often - even to big bootcamp chains). You would have no control over who gains ownership over your debt. It's unclear how aggressively they could pursue you to pay them back.
+这就意味着如果你进入了薪资共享协议，当训练营破产的时候，不清楚会发生什么。（经常发生——即使是连锁训练营）。你不能控制你贷款的所有权。不清楚他们会怎么让你偿还。
 
-So again, **do your research**.
+所以再次，**你研究研究**。
 
-## How much are living expenses during a bootcamp
+# 在训练营中的生活费用要多少
 
-Your living expenses will depend on which city the bootcamp is in, and that city's cost of living.
+你的生活费用取决于在哪个城市的训练营进行，以及这个城市的生活成本。
 
-Living at home with your parents in the midwest? Your costs will be much lower than if you are moving to San Francisco and renting an apartment.
+和你的父母一起生活在美国中西部？你的费用将会远远低于你在搬到旧金山且租了公寓。
 
-You should save enough money to last you through the bootcamp, plus 6 months. This way, you have enough time to find the right job and to cash your first paycheck.
+你应该存够训练营的钱，再加上 6 个月。这样，你就有足够的时间找到合适的工作并领取第一份薪水。
 
-## What is "opportunity cost"
+## 什么是“机会成本”
 
-Opportunity Cost is a concept from economics that roughly means "foregone earnings."
+机会成本是来自于经济学的理念，大概的意思是“放弃的收益”。
 
-To get the true cost of attending a coding bootcamp, you should factor in opportunity cost as well.
+要了解参加编码训练营的真实成本，你应该考虑机会成本。
 
-**Example**: You currently earn $3,000 per month. You're moving to San Francisco, where it can cost $2,000 per month just to rent a bedroom. You'll attend a 12-week bootcamp that costs \$15,000.
+**例子**：你现在每个月赚$3000美元。你搬到旧金山，在那$2,000 美元只能租到一个卧室。你参加 12 周的训练营费用是\$15,00          0美元。
 
-Here is your true cost, assuming an additional 6 months until you get a job and cash your first pay check:
+这是你的真实成本，假设加上你在 6 个月的时间内找到工作并领取第一份薪水：
 
 ```plain
-Bootcamp Tuition: $15,000
+训练营学费：$15,000
 
-Cost of Living: (9 months * $2,000) = $18,000
-Opportunity Cost of Foregone Wages: (9 months * $3,000) = $27,000
-
+生活成本：（9个月 * $2,000）= $18,000
+机会成本：（9个月 * $3,000）= $27,000
 ```
 
-As you can see, in this case, the coding bootcamp tuition was only 1/4th of the true cost.
+你可以看到，这种情况下，编码训练营的学费只占实际费用的 1/4。
 
-So a $20,000 bootcamp that helps you get a job in 4 months can be cheaper than a $15,000 bootcamp that helps you get a job in 6 months. That is, once you factor in cost of living and opportunity costs.
+所以$20,000美元的训练营帮你在4个月内找到工作比$15,000 美元的训练营帮助你在 6 个月找到工作便宜。这就是说，你再次考虑生活成本和机会成本。
 
-The lesson is simple: don't get too hung up on the cost of coding bootcamp tuition itself. It is only part of the true cost.
+这一课很简单：不要太关注编码训练营的学费本身。它只是真实成本的一部分。
 
-# Are my coding skills good enough for a bootcamp
+# 我的编程技能够参加训练营吗？
 
-<img src="[https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ"][2] class="kg-image" alt="Check out our post on leadership + culture: [https://blog.hackcapital.com/our-three-ps-people-695a0b971851][3]
+<img src="[https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ"][2] class="kg-image" alt="Check out our post on leadership + culture: [https://blog.hackcapital.com/our-three-ps-people-695a0b971851][3]We’re also hiring for many roles: [http://hc.ai/jobs"][4] style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; max-width: 1040px; display: block; height: auto;">
 
-We’re also hiring for many roles: [http://hc.ai/jobs"][4] style="box-sizing: inherit; margin: 0px; padding: 0px; border: 0px; font-style: inherit; font-variant: inherit; font-weight: inherit; font-stretch: inherit; line-height: inherit; font-family: inherit; font-size: 22px; vertical-align: middle; max-width: 1040px; display: block; height: auto;">
+一个天真的答案是：“只要申请，就可以看看你是否被录取”
 
-A naive answer would be "just apply and see if you can get in."
+但是，让我们从训练营的激励机制的角度来思考一下。
 
-But instead, let's think in terms of the bootcamp's incentives.
+有一个训练营的适宜区：不用太初级，不用太高级 —— 只是刚好。
 
-There's a Goldilocks Zone for coding bootcamps: not too beginner, not too advanced - just right.
+## 场景 #1：你的技术太高级，无法从训练营中学到很多东西
 
-## Scenario #1: Your skills are too advanced for you to learn much from a bootcamp
+如果你是一个很强的候选人，训练营确信你后面会找到工作。他们唯一合理的决定是接收你。即使他们不觉得你可以从他们项目中学到更多。
 
-If you're a strong candidate, the bootcamp is confident you will get a job afterward. Their only rational decision is to accept you. Even if they don't think you'd learn much from their program.
+为什么？
+-  训练营会收取你的学费
+-  他们不需要教你更多
+-  在你获得工作之后，你将会提高他们的就业统计数据。
 
-Why?
+在他们的角度上，他们应该录取你。
 
--   The bootcamp will get your tuition money.
--   They won't have to teach you much.
--   And then when you get a job afterward, you'll boost their employment statistics.
+## 场景 #2：你对编程陌生，无法从训练营中学到很多东西
 
-From their perspective, they should admit you.
+如果你是一个很弱的候选人，那么就得由训练营的决策者来决定了。他们关注的是长期利益还是短期利益？他们有多关注他们的就业统计数据？
 
-## Scenario #2: You are too new to coding to get much out of the bootcamp
+如果训练营是关注长期利益的，他们会拒绝你。或允许你学习预习课程，然后让你几个月后再来面试。
 
-If you're a weak candidate, then it comes down to the decision maker at the bootcamp. Are they focused on the long term or the short term? How much do they care about their employment statistics?
+但经济困难的训练营无暇担心他们的就业数据。他们可能不会长期存在。他们的理性决定可能是无论如何都会接受你 —— 不管你是否做好准备。
 
-If the bootcamp is focused on the long term, they should reject you. Or assign you additional pre-coursework, then ask you to come interview again in a few months.
+> “从长远来看我们都会死去” —— John Maynard Keynes 1923
 
-But bootcamps who are struggling financially don't have the luxury of worrying about their employment statistics. They may not be around for the long term. Their rational decision might be to just accept you anyway - regardless of your preparedness.
-
-> "In the long run we are all dead." - John Maynard Keynes in 1923
-
-Maybe you rise to the occasion and succeed against the odds. Maybe you don't. Either way, the bootcamp gets their tuition money and is able to stay solvent a few months longer.
+也许你能应付自如，克服重重困难取得成功。也许你不能。不管怎样，训练营都能拿到他们的学费，而且还能多维持几个月。
 
 ## Scenario #3: You are "just right"
 
-The bootcamp should accept you in this situation, and it will be a win for both parties.
+## 场景 #3：你是“刚刚好”
 
-But again, you don't know which scenario this is. Is this Scenario #3 where you're "just right"? Or is the bootcamp just saying it is? Are you actually in Scenario #1 or Scenario #2?
+这种情况训练营会接受你，这对于双方来说是共赢。
 
-So bootcamps have a strong incentive to accept you even when you're not good fit.
+再次声明，你不知道场景会是怎样。场景 #3 你会是“刚刚好” ? 或训练营只是这样说？ 事实上你在场景#1 或 场景#2 呢？
 
-This is why I said the approach of "just apply and see if you can get in" is naive.
+所以训练营有强烈的动机让你通过，甚至在你不够匹配的时候。
 
-Here's what I recommend you do instead.
+这就是为什么我说“只要申请，就可以看看你是否被录取”是天真的。
 
-## Step #1: Spend a few months learning to code on your own
+这里我推荐你采用的策略：
 
-Try building freeCodeCamp's 5 Responsive Web Design certification projects. Then try building the 5 JavaScript Algorithms and Data Structures certification projects.
+## 步骤 #1: 花几个月自学编码
 
-These will ensure you understand the fundamentals. And a lot of coding bootcamps require these as part of their pre-coursework anyway.
+尝试构建 freeCodeCamp 的 5 个响应式网页设计认证项目。尝试构建 5 个 JavaScript 算法和数据结构认证项目。
 
-## Step #2: Apply for developer jobs
+这会确保你懂得基础。而且很多编码训练营都要求将这些作为课前作业的一部分。
 
-How do you handle employers' resume screens and phone screens? Can you advance to their on-site coding interviews? If so, you may just want to keep applying for jobs. You may not need a coding bootcamp.
+## 步骤 #2：申请开发职位
 
-## Step #3: Apply for coding bootcamps
+你怎么处理雇主的简历筛选和电话筛选？你能通过他们的现场编码面试吗？如果可以，你可能只是想要继续申请工作。你或许不需要编码训练营。
 
-If you've made it to Step #3, you now know with confidence that you have some basic skills. And you know that you're not yet ready for a developer job.
+## 步骤 #3：申请编码训练营
 
-You can now apply to coding bootcamps with confidence. You won't be too advanced. If they accept you, you can be confident that you're not too beginner, either.
+如果你已经完成了步骤#3，你现在知道确认你有一些基础技能。而且你知道你还没有准备好开发者的工作。
 
-If they don't accept you, you can just continue your self study and apply to the bootcamp again later.
+你现在有信心申请编码训练营。你的水平不是很高。如果他们让你通过，你可以确信你不是太过初级。
 
-# How do I choose a bootcamp
+如果他们拒绝你，你可以继续自学，并在之后继续申请训练营。
 
-The first consideration should be: are there any coding bootcamps in your city? If so, I encourage you to visit them and learn as much as you can about them.
+# 我该怎么选择训练营？
 
-By staying in your current city, you can reduce your cost of living. You can also reduce your stress. You don't have to spend your time shopping for an apartment or learning a new neighborhood. You can spend that time coding.
+首先要确认的是：你的城市有哪些训练营？如果有，我鼓励你去看看它们，你可以更多了解它们。
 
-# Do I need to move to San Francisco for my bootcamp
+通过留在你当前所在城市，你可以减少你的生活成本。你可以减少你的压力。你不需要将你的时间花在找公寓和了解新社区。你可以花时间编码。
 
-You might think: "But shouldn't I move to San Francisco, where all the developers are?"
+# 我是否需要搬到旧金山参加训练营
 
-It's true that the San Francisco Bay Area - which includes Silicon Valley - is the tech mecca of the western hemisphere.
+你或许会想：“但我难道不应该搬到开发人员集中的旧金山吗？”
 
-San Francisco is home to several excellent bootcamps. It also has tons of employers. And a huge ecosystem of evening tech events, hackathons, startup communities, and recruiters.
+没错，旧金山湾区——包括硅谷——是西半球的科技圣地。
 
-But San Francisco is an expensive, stressful place to live. I worked there as a developer for 4 years, and I don't plan on moving back any time soon.
+旧金山是几个出色的训练营之家。当然也有很多雇主。此外，还有庞大的生态系统，包括夜间科技活动，黑客马拉松，创业社区和招聘人员。
 
-The important thing to remember is: **software is still software - regardless of where you are in the world.**
+但是旧金山生活成本很高，生活压力很大。我曾经在那做过 4 年开发，短期内我都不计划搬回去。
 
-You can learn a lot from most experienced developers who have worked in tech for 5 or 10 years. Almost as much as you could learn from an elite developer at a San Francisco tech company.
+需要记住的重要一点是：**软件仍然是软件——无论你在世界任何地方**
 
-(And the most elite developers can earn millions of dollars a year. You probably won't find them teaching at bootcamps anyway.)
+你可以从那些在科技行业工作了 5 年或 10 年的资深开发人员身上学到很多东西。这几乎和你从旧金山的技术公司的精英开发者那边学到的一样多。
 
-# What tools should bootcamps be teaching
+（很多精英开发者每年能赚数百万美元。你可能找不到他们在训练营教书。）
 
-![Para todo hay solucion](https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
+# 训练营应该教什么工具？
 
-This may sound counter-intuitive, but I'm going to come right out and say it. **The tools don't matter.**
+![伞兵备忘工具集](https://images.unsplash.com/photo-1534190239940-9ba8944ea261?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ)
 
-Some bootcamps teach Ruby and Rails or Sinatra. Despite their declining popularity, these are still good tools for new developers.
+这听起来是反直觉的，但是我还是要讲出来。**工具并不重要**
 
-Some bootcamps teach Full Stack JavaScript with Node.js. This is the most widely used toolchain for new projects. But it may be a bit harder to learn.
+一些训练营教 Ruby 和 Rails 或 Sinatra。尽管它们越来越不流行，它们对于新开发者来说仍然是好工具。
 
-Some bootcamps teach Python and Flask or Django. Some teach the .NET ecosystem. Some may go straight into mobile development with Android and Java or Kotlin. Some go close to the metal with C.
+一些训练营教全栈 JavaScript 和 Node.js。这个工具链在新项目中广泛使用。但是它们有点难学。
 
-Again, the tools don't matter. What matters is that you learn one set of tools really well.
+一些训练营教 Python 和 Flask 或 Django。一些教.NET 生态系统。或许一些直接教移动端开发和 Android 和 Java 或 Kotlin。有些会使用 C 语言进行深入开发。
 
-Learn one set of tools and understand how everything fits together at a conceptual level. They you can easily learn new sets of tools.
+再次声明，工具并不重要。重要的是你把一套工具学好。
 
-You can sum up most of what you'll learn in a coding bootcamp as:
+学习一套工具并在概念上理解所有东西怎么组合在一起。这样你会更容易学习一套新的工具。
 
--   Computer Science fundamentals
--   Programming itself (lots of practice coding)
--   Other skills you'll need as a developer. Like software development methodologies, debugging techniques, testing, reading documentation.
--   Understanding the job application process itself.
+你可以在编码训练营学到的大部分内容总结如下：
 
-So don't dismiss a bootcamp because "they teach Rails and I want to learn Node" or "I want to be a mobile developer" or "I don't want to learn front end development."
+-   计算机科学基础
+-   编程本身（更多编码练习）
+-   其他你需要的开发者的技能。像是软件开发方法论，调试技巧，测试，阅读文档。
+-   懂得工作申请流程本身
 
-You'll learn the same basic things regardless of which tools the bootcamp teaches.
+所以，不要因为训练营，“他们教 Rails 但我想学 Node”或“我想成为移动设备开发者”或“我不想学习前端开发。”而拒绝参加训练营。
 
-# How important is a bootcamp's track record
+无论训练营教授哪种工具，你都会学到相同的基本知识。
 
-If a bootcamp that has been around for a few years, you should pay close attention to their track record.
+# 训练营的业绩记录有多重要？
 
-## Older bootcamps
+如果一家训练营已经存在了几年，你应该密切关注它们的业绩记录。
 
-First, find out whether the bootcamp is part of the Council on Integrity in Results Reporting. If they aren't, ask them why not.
+## 老牌训练营
 
-You should ask for their employment statistics. If they're reluctant to show you these - or can't share numbers from the past year - that's a red flag.
+首先，不管这个训练营是不是结果报告诚信委员会的成员。如果他们不是，问他们为什么不参加。
 
-Either way, you should find their graduates on LinkedIn. Reach out to them to ask them about their experience there.
+你应该问他们就业统计数据。如果他们不情愿给你看——或是不愿意分享过去一年的数据——这是一个危险信号。
 
-## Newly-opened bootcamps
+不管怎样，你应该找到它们在领英上的毕业生。联系他们，问问他们的经历。
 
-If the coding bootcamp is new, there will be much less information available. You will have to rely much more on your intuition.
+## 新开的训练营
 
-Ask for the names of the bootcamp's teachers. Pull them up on LinkedIn.
+如果这个编码训练营是新开的，那么可用的信息会少得多。你就只有相信你的直觉了。
 
-Do they have any past cohorts? Find their graduates on LinkedIn and ask them about their experience there.
+询问训练营老师们的姓名。在领英上查他们。
 
-Being one of the first students at a coding bootcamp is an exercise in high risk / high reward.
+他们过去有学生吗？在领英上找到他们的毕业生，并且询问他们的经历。
 
-Like all kinds of small business, bootcamps may shut down quickly if they don't get traction. If this happens, you will find yourself explaining the school to future employers in the past tense. Awkward.
+作为编码训练营的第一批学生之一训练存在高风险/高收益。
 
-But at the same time, new coding bootcamps have something to prove. Their teachers and staff will work like crazy to ensure the school succeeds. They'll try their hardest to train you. They'll help you get a good job so they can get a win under their belt and onto their testimonials page.
+像是所有种类的小公司，如果得不到关注，训练营或许会很快关闭。如果发生，你向未来雇主介绍在学校的境遇时。很尴尬。
 
-In the face of sparse data, you need to decide for yourself. Do the people running this bootcamp seem like they know what they're doing? Are they passionate about this?
+但是与此同时，新的编码训练营需要证明一些东西。他们的老师和员工会像疯子一样工作来确保学校的成功。他们会对你进行高难度训练。他们会帮你获得好工作，这样他们就会获得成功，并把成功记录在他们的推荐页面上。
 
-# Should I visit the campus before I enroll
+面对稀疏的数据，你需要自己决定。管理这个训练营的人看起来是否知道自己在做什么？他们对此充满热情吗？
 
-Yes. You are about to make a decision that - when you factor in cost of living and opportunity cost - is tens of thousands of dollars and months of your time.
+# 我在入学之前应该参观校园吗
 
-By all means, book a flight. Even if you're only flying in for a day trip. Talk to the teachers and the staff. Scope out the school. Observe the students.
+应该。关于你做的这个决定——当你关注生活成本和机会成本时——数万美元和你几个月的时间。
 
-This is an important decision. And in the grand scheme of things, this trip is a small investment of your time and money.
+无论如何，定机票。就像你一个人的一日飞行旅行。与老师和工作人员聊聊。看一看学校。观察一下学生们。
 
-# Should I reach out to past alumni
+这是非常重要的决定。从长远来看，这趟旅行只是你的时间和金钱中一笔很小的投资。
 
-The answer is always yes. Don't skip this step.
+# 我应该联系过去的校友吗
 
-Find them on LinkedIn. If they don't respond to your LinkedIn message after a few days, find their email or message them on Twitter. See if you can get them on a phone call.
+答案永远都是是。不要跳过这一步。
 
-Ask them to be as candid as possible. Assure them that everything they share with you will be in confidence.
+在领英上找到他们。如果他们在领英上一些天内没有回复你的消息，找到他们的邮箱或是他们的推特给他们发消息。看看你是否可以通过电话联系到他们。
 
-Tell them your circumstances. Tell them how important this decision is for you.
+要求他们尽可能坦诚。向他们保证，他们与你分享的一切都是保密的。
 
-I recommend reaching out to several alumni like this.
+告诉他们你的情况。告诉他们这个决定对你来说有多么重要。
 
-This is the most difficult part of the bootcamp research process. You may be thinking "I'm an introvert." Or "I don't want to bother these busy people."
+我推荐像这样联系几位校友。
 
-But these people are where you will be a year from now. They are the best window into what you can expect from this bootcamp.
+这是对于训练营的调查步骤中很困难的一部分。你或许会想“我是一个内向的人”或“我不想打扰这些忙碌的人”。
 
-If you end up going to the bootcamp, these people will be your fellow alumni. This is an opportunity to also make them your mentors.
+但是这些人就是你一年后的处境。他们是了解你对这次训练营的期望的最佳窗口。
 
-# Are there free bootcamp alternatives
+如果你最终去了训练营，这些人就会成为你的校友。这是一个让他们成为你导师的机会。
 
-There are a lot of ways you can learn to code without paying anything. Some of these have been around for decades, like the computer section of your local library.
+# 有没有免费的训练营替代品？
 
-Others free resources can help a motivated novice ramp up their skills and get hired as a developer.
+有很多方法可以让你免费学习编程。其中一些方法已经存在了几十年，比如当地图书馆的计算机部分。
 
-Most developers consider themselves at least partially self-taught. They have used a variety of these learning resources.
+其他的免费资源可以帮助初学者提升他们的技能，并被聘为开发者。
+
+大多数开发人员都认为自己至少部分是自学成才的。他们使用过各种各样的学习资源。
 
 ![](https://www.freecodecamp.org/news/content/images/2019/08/1_BDcBo7UJ86Br5O5J1Va_6A.jpeg)
 
-A chart from Stack Overflow's annual developer survey.
+Stack Overflow 年度的开发者调查图表。
 
-## What are learn-to-code websites
+## 什么是编码学习网站
 
-There are websites where you can learn to code right in your browser. Some of them - like freeCodeCamp - are completely free.
+一些网站是可以在你的浏览器上学习编码。例如—— 像是 freeCodeCamp —— 完全免费的。
 
-Some of these learn-to-code websites cost money. But you may be able to use them for free through your local library.
+有些学习编码的网站需要收费。但你可以通过当地的图书馆免费使用它们。
 
-These websites cover many of the same concepts and tools as coding bootcamps.
+这些网站涵盖了许多与编码训练营相同的概念和工具。
 
-Bootcamps are focused on high-touch in-person instruction. They operate a campus with classrooms and instructors.
+训练营专注于面对面教学。他们运营一个设有教室和教师的校园。
 
-By contrast, learn-to-code websites use instructional design to teach people inexpensively at scale.
+相比之下，学习编码网站采用教学设计，以低成本大规模地教授人们。
 
-These learn-to-code websites have forums and may even have local study groups.
+这些编码学习网站有论坛，甚至会有本地学习小组。
 
-Still, many people prefer the traditional classroom environment that bootcamps provide.
+不过，许多人还是更喜欢训练营提供的传统课堂环境。
 
-## What are "Massive Open Online Courses"
+## 什么是“在线公开课”？
 
-Massive Open Online Courses (MOOCs) are free courses usually taught by university professors. These tend to be lecture-based, and may have homework assignments or exams.
+在线公开课 (MOOCs) 是免费课程，通常是大学教授来教。这些课程往往以讲座形式进行，可能会有家庭作业或考试。
 
-MOOCs gained popularity in 2012, and remain an excellent way to learn concepts. There are hundreds of MOOCs on programming and computer science - many of which are self-paced.
+在线公开课在 2012 年开始流行，并且一直是一种很好的学习概念的方式。编程和计算机科学有数百的在线公开课——很多是自定进度的。
 
-Some of these MOOCs also offer certifications, though you may have to pay for them.
+一些在线公开课也有提供认证，但你需要付费。
 
-The important thing to note here is that you can learn almost any topic - straight from world-class professors - at your convenience.
+在这里需要注意的事情是你可以学习很多主题——直接从全世界的教授——根据你的需要。
 
-Always keep this fact in mind when you're considering paid learning resources. They have a high bar to clear to justify their cost.
+当你考虑付费学习资源时，一定要记住这一点。它们需要满足很高的标准才能证明其成本是合理的。
 
-## Are there free coding textbooks
+## 有免费的编码教科书吗
 
-There are thousands of free programming and computer science textbooks. Many of these are Creative Commons licensed or even public domain.
+有数以千计的免费的编程和计算机科学的教科书。其中许多都是知识共享许可的，甚至是公共领域的。
 
-Developers have also sold books that they've since decided to make freely available.
+开发人员还出售了一些书籍，并决定免费提供。
 
-Also, some developers release digital versions of their books for free, and sell physical copies of them.
+当然，一些开发商免费发行数字版书籍，并且出售实体副本。
 
-# What are some paid bootcamp alternatives
+# 有哪些付费训练营的替代方案？
 
-Of course, if you have the money, you can put it to use. There are a wide range of career training options to consider.
+当前，如果你有钱，你可以好好利用它。有很多职业培训选择可以考虑。
 
-## Should I go back to university
+## 我应该回大学吗？
 
-If you already have a university degree, you probably shouldn't go back to university.
+如果你已经有了大学学位，你或许不应该回大学。
 
-Yes, there are Masters in Computer Science programs. But these are designed for already-working developers to further expand their skills.
+是的，有计算机科学硕士课程。但是这是设计给正在工作的开发者进一步的扩展他们的技能。
 
-I don't recommend enrolling in an undergraduate computer science program to do a second bachelor's degree. This would take years of extra study. And most undergraduate computer science programs focus more on math and conceptual knowledge than they do on hands-on coding.
+我不推荐报读本科的计算机科学课程来作为第二学位。这需要花一些年来额外学习。并且很多本科计算机科学课程更多专注的是数学和概念性的知识，而不是动手编码。
 
-Coding bootcamps are a much faster way to get coding practice. They can help you establish the conceptual baseline you need to work as a developer.
+编码训练营是进行编码练习的更快方式。它们可以帮助您建立作为开发人员所需的概念基础。
 
-## Can night school courses help me learn to code
+## 夜间课程能帮助我学习编码吗
 
-You may be able to find a program in your community that helps adults learn computer skills at night.
+你或许在你的社区能找到课程，帮助成年人在夜间学习计算机技能的项目。
 
-Check your local community colleges, libraries, and adult education programs. See whether they teach software development courses.
+查看你本地的社区学院，图书馆，和成人教育课程。看他们是否教授软件开发课程。
 
-Be aware that many of these programs focus on more rudimentary computer skills. You may not need a course on operating systems, spreadsheets, or touch typing.
+注意，很多课程关注的是很基础的计算机技能。你或许不需要操作系统，电子表格，或是打字课程。
 
-Before you enroll in any courses, ask them about past alumni who are now working as developers. If they can't provide any, the program may be too basic for you.
+在你报名参加任何课程之前，问他们有关的校友，哪些是现在在从事开发者的工作。如果他们不能提供，这课程对于你来说太基础了。
 
-## Can I hire a tutor to help me
+## 我能雇佣导师来帮助我吗
 
-Some developers will tutor on the side. You can find them on online classified ad listings.
+一些开发者会兼职当导师。你可以在在线分类广告中找到他们。
 
-There are also websites that specialize in pairing students with online tutors.
+也有一些网站专门为学生配对在线导师。
 
-This can be quite expensive. But if you're able to learn to code on your own, this may be a good option for you. You get the benefit of weekly tutoring session for the fraction of the cost of a bootcamp.
+这会很贵。但是如果你能自学编码，这或许对于你来说也是一个好的选择。你只需花费训练营费用的一小部分，就能享受每周辅导课程的好处。
 
-# What is the future for bootcamps
+# 训练营的未来会怎样？
 
-The first coding bootcamps were founded less than a decade ago. This is still a young industry.
+第一个编程训练营成立还不到十年。这仍然是一个年轻的行业。
 
-This said, the industry is consolidating. Several bootcamp chains have been acquired by traditional for-profit education companies. Textbook companies, for-profit university systems - and even a coworking space startup.
+尽管如此，该行业正在整合。一些训练营连锁店已被传统的营利性教育公司收购。教科书公司、营利性大学系统——甚至还有一家共享办公空间初创公司。
 
-And some coding bootcamp chains have gone out of business.
+一些连锁训练营已经倒闭。
 
-But it's not like these failures represent a fundamental flaw in the coding bootcamp model. There are hundreds of bootcamps out there still going strong. And developers are opening new bootcamps all the time.
+但这些失败并不代表编程训练营模式存在根本缺陷。目前仍有数百个训练营在蓬勃发展。而且开发人员一直在开设新的训练营。
 
-But there's less money in running bootcamps than there is in financing student debt. And that is where we're seeing the most innovation - in the area of "financial engineering."
+但用于开办训练营的资金比用于资助学生债务的资金要少。并且我们会看到很多新的事物——“金融工程”领域。
 
-> "The study of money, above all other fields in economics, is one in which complexity is used to disguise truth or to evade truth, not to reveal it." - John Kenneth Galbraith, Harvard professor, in 1975
+> “在经济学中，货币研究是利用复杂性来掩盖真相或逃避真相，而不是揭示真相的研究，这比经济学中所有其他领域都要重要。” —— John Kenneth Galbraith ，哈佛大学教授，1975
 
-It's hard to predict what will happen with bootcamps. Here are a few possible directions - with some of them less positive for students than others.
+很难预言训练营会发生些什么。这里有一些可能的方向—— 其中一些对学生来说不太有利。
 
-## Will going to a bootcamp become as common as going to a university
+## 去训练营将会变得和上大学一样普遍吗
 
-In their current form, bootcamps are not a substitute for a university education. They are a supplement to it.
+就目前而言，训练营不会替代大学教育。它们会是一种补充。
 
-Most bootcamp students have already graduated from university. They are mid-career and enrolling in a bootcamp to learn new skills.
+很多训练营的学生已经从大学毕业了。他们职业生涯中报名参加训练营学习新的技能。
 
-Universities cover a lot of things outside the scope of bootcamps. Everything from English composition to history to mathematics.
+大学涵盖了很多训练营之外的内容。从英语写作到历史再到数学，无所不包。
 
-Coding bootcamps cover - well - coding. They also touch on some computer science concepts and workplace soft skills.
+编码训练营包括——好的——编码。他们也会教一些计算机科学概念和办公室软技能。
 
-If you see a bootcamp marketing itself as an alternative for college, that's a huge red flag.
+如果你看到一个训练营营销它自己能替代大学。这是一个巨大的危险信号。
 
-We have centuries of data on universities. We know how effective they are at increasing your lifetime earnings. A bachelor's degree with the right major can double or triple your earning power.
+我们有数个世纪的大学的数据。我们知道大学在提高你的终生收入方面有多有效。一个学士学位和一个对的专业会让你的收入翻两倍或三倍。
 
-Coding bootcamps are new. There isn't much data. And there's even less data about bootcamp graduates who didn't finish university.
+编码训练营很新。没有太多数据。而关于没有完成大学学业的训练营毕业生的数据就更少了。
 
-Instead of looking at coding bootcamps as an alternative to university, look at them as an alternative to vocational college.
+不要将编码训练营视为大学的替代品，而应将其视为职业学院的替代品。
 
-If you weren't going to go to college anyway, a bootcamp is better than nothing. And the skills you'll learn may be more relevant than traditional trade schools.
+如果你不去学院。训练营比没有更好。而且你学到的技能可能比传统职业学校更有用。
 
-In the future, coding bootcamps may indeed become a place more people go to straight out of high school.
+在未来，或许编码训练营的确成为很多人会高中毕业后直接进入的地方。
 
-But we need a lot more efficacy data first. I wouldn't send my kids to a bootcamp instead of a university, and I urge similar caution to you.
+但是我们首先需要更多的有效地数据。我不想送我的孩子进入训练营来替代大学，我也敦促你们也采取类似的谨慎态度。
 
-By the way, if you're in high school and reading this, here's my advice to you: go to the best university you can afford without student loans.
+另一方面，如果你还在读高中，并且正在读这篇文章，在这里我的建议是：去一所你能负担得起的、没有学生贷款的最好的大学。
 
-Before you take out student loans, look into community colleges. There are also accredited ultra-low-cost university programs. You can do many of these online while working. As always, don't trust their marketing and do your own research.
+在你申请学生贷款之前，先了解一下社区大学。那里也有经认可的超低成本的大学课程。你可以边工作边在网上学习很多课程。总而言之，不要相信他们的营销，自己研究。
 
-## Will bootcamps eventually qualify for federal student loans
+## 训练营最终是否有资格获得联邦学生贷款？
 
-Bootcamps are expensive. There aren't many people who can afford to attend them.
+训练营很贵。没有多少人能负担的起。
 
-Bootcamps may try to remedy this is the same way universities did. By lobbying the federal government.
+训练营或许会尝试用一些大学的方式来补救。对联邦政府进行游说。
 
-Bootcamps may succeed in opening the government's coffers. This could be in the form of subsidized student loans. Bootcamps may also target the GI bill and other programs designed to help people graduate from college.
+训练营或许能成功打开政府的金库。这就能得到学生补助贷款。训练营也可能针对退伍军人法案和其他为了帮助人们从大学毕业的项目。
 
-Americans hold $1.5 trillion in student loan debt. That's a million million dollars. That's $16,000 for every man, woman, and child in America. Student loan debt is the main reason young Americans can't afford to buy houses anymore.
+美国持有$1.5万亿学生贷款债务。那是一百万亿美元。这意味着美国每个男人、女人和孩子都背负着 $16,000 美元。学生贷款债务是美国年轻人买不起房子的主要原因。
 
-Should we let bootcamps create even more of this student debt?
+我们应该让训练营产生更多的学生债务吗？
 
-It would be a disaster for consumers.
+这对于消费者来说是一场灾难。
 
-But that doesn't mean it couldn't happen.
+但是不意味着这不会发生。
 
-Look who's running the US Department of Education right now. Anything is possible, no matter how damaging it may be over the long term.
+看看现在谁在管理美国教育部。一切都有可能，不管从长远来看会造成多大的破坏。
 
-There's an alternative to financial complexity. Bootcamps can find new ways to make it more affordable to people paying cash.
+财务复杂性有其他解决方法。训练营可以找到新方法，让现金支付的人们更能负担得起。
 
-## Will bootcamps conglomerate into a few big chains
+## 训练营是否会合并为几家大的连锁机构
 
-This has already happened to an extent.
+在某些程度上已经发生。
 
-Bootcamps can save money by spreading their fixed costs across multiple campuses. They get economies of scale and economies of scope.
+训练营通过分担固定成本到多个校区来节省金钱。他们获得了规模经济和范围经济。
 
-But there are diminishing returns to these benefits. Some of these chains have gone out of business. Others - no longer able to operate on their own - got acquired by education conglomerates.
+但是这些好处的收益是递减的。一些连锁机构倒闭了。其他的——不再能够独立运营——被教育集团收购。
 
-There is a right size to any operation. It's unclear what the right size for a coding bootcamp chain is.
+任何操作都有合适的规模。目前尚不清楚编码训练营链的合适规模是多少。
 
-Some of the best bootcamps only have one location. Others are able to keep quality high across multiple campuses. A lot of their success comes down to the quality of their leadership.
+一些最好的训练营只有一个地点。其他的训练营能够在多个校区保持高质量。他们的成功很大程度上归功于他们的领导能力。
 
-## Will the bootcamp model spread into non-coding fields like law and accounting
+## 训练营模式会扩展到法律和会计等非编码领域吗
 
-Software development is a unique profession. It is unencumbered by regulatory bodies.
+软件开发是一个独特的职业。它不受监管机构的约束。
 
-Other fields have bureaucracies in place to shut people out. For example, in the US:
+其他领域有官僚机构的地方将人们拒之门外。例如在美国：
 
--   To become a lawyer, you have to go through 4 years of college, 3 years of a law school, then get certified by the American Bar Association through your state's bar exam.
--   To become an accountant, you have to go through 4 years of college, attend a bunch of graduate-level courses, get certified by the American Institute of Certified Public Accountants through a long series of exams, then work as a low-wage apprentice for a year.
--   To be a doctor, you have to go through 4 years of college, 4 years of medical school, then work as a low-wage "resident" for 3 to 7 years, then get certified by the American Medical Association by passing your state's board certification exam.
+-   要成为律师，你必须上 4 年大学，3 年的法学院，然后通过你所在州的律师资格考试获得美国律师协会的认证。
+-   要成为会计，你必须上 4 年大学，参加一堆研究生水平的课程，通过一系列考试获得美国注册会计师协会的认证，然后再做一年低薪学徒。
+-   要成为医生，你必须上 4 年大学，4 年的医药学院，然后作为低薪“住院医生”工作 3 至 7 年，然后通过你所在州的委员会认证考试获得美国医学协会的认证。
 
-Without major changes, bootcamps won't work for heavily regulated fields like these.
+如果不进行重大变革，训练营将不适用于这些受到严格监管的领域。
 
-## Will bootcamps merge with traditional university programs to create a new kind of school
+## 训练营是否会与传统大学课程合并来创造一种新种类的学院
 
-There are already programs that take inspiration from both universities and bootcamps.
+已经有一些项目从大学和训练营中汲取灵感。
 
-This said, most big-name universities are hundreds of years old. Shifting to a much shorter learning period will be difficult for them to do. Stranger things have happened, though.
+也就是说，很多知名大学已经存在了几百年。转向更短的学习周期对他们来说很难。不过，奇怪的事情也曾发生过。
 
-Here's a more likely scenario: bootcamps (and their for-profit education conglomerate parent companies) buy accredited colleges and rebrand them. This way they can skip the long process of becoming accredited themselves.
+更可能的情况是：训练营（及其营利性教育集团母公司）购买已获认证的大学并重新命名，通过这种方式他们可以跳过漫长的认证流程。
 
-For the record, I'm against the mixing of university programs with coding bootcamps. These are two different education modalities designed for two different sets of learners.
+需要说明的是，我反对将大学课程与编程训练营混为一谈。这是两种不同的教育模式，针对的是两类不同的学习者。
 
-Instead, we need new types of educational institutions. Preferably low cost with a stronger emphasis on life-long education and on-the-job training.
+相反，我们需要新类型的教育机构。最好是低成本的、更加注重终身教育和在职培训的教育机构。
 
-Imagine a school with nonstop internships, where you work in your desired field. You have enough money to live on without needing to go into debt.
+想象一下，一所学校有不间断的实习机会，在你期望工作的领域。你有足够的钱去生活，不需要背负债务。
 
-There are already programs like this in Europe. And over here in the US - well, we can dream, can't we?
+在欧洲已经有了这样的课程。在美国这个地方——最好，我们可以做梦，不是吗？
 
-# What are your final words of advice
+# 你最终的建议是什么
 
-Your developer job search will come down to 3 things:
+你搜索开发者工作最好符合以下 3 点：
 
-1.  Your skills
-2.  Your reputation
-3.  Your network
+1.  你的技能
+2.  你的知名度
+3.  你的人脉
 
-Don't make the mistake of focusing on only one or two of these. Think about ways you can build all three at the same time.
+不要错误的只关注于一点或者两点。想想如何同时构建三点。
 
-Going to a bootcamp can be the best decision you ever made. Or it can be an awkward financial setback.
+参加训练营可能是你做过的最好决定。但也可能带来尴尬的财务挫折。
 
-Do your research. Save up your money. Learn coding fundamentals first.
+你去研究。存钱。先学习编码基础知识。
 
-Bootcamps aren't magic. They aren't going to do the work for you.
+训练营不是魔法。他们不能替你去工作。
 
-In the end, the experience is what you make of it. So make the most of it.
+最终，经验取决于你如何利用它。所以要充分利用它。
 
 [1]: https://www.kaggle.com/freecodecamp/datasets
 [2]: https://images.unsplash.com/photo-1519241047957-be31d7379a5d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ%22

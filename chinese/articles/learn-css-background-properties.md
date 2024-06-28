@@ -21,7 +21,7 @@
 -   [简写](#short-hand)
 -   [总结](#conclusion)
 
-如果你喜欢这篇文章也可以在YouTube上观看本教程:
+如果你喜欢这篇文章也可以在 YouTube 上观看本教程:
 
 # 所有属性
 
@@ -29,11 +29,11 @@
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/l25y304vndphll4795hr.png)
 
-## 什么是CSS背景（background）属性?
+## 什么是 CSS 背景（background）属性?
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/iic3rs5ewx8c9xp6vryq.png)
 
-CSS背景（background）属性让我们可以控制图像的大小和属性，这样我们就可以为不同大小的屏幕制作 **响应性强的** 图像。它能帮助我们创建响应式网页。
+CSS 背景（background）属性让我们可以控制图像的大小和属性，这样我们就可以为不同大小的屏幕制作 **响应性强的** 图像。它能帮助我们创建响应式网页。
 
 例如，
 
@@ -46,18 +46,18 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/u72rvfe5181640ikqa32.png)
 
-在编码之前，你需要知道一点HTML, CSS的相关知识，以及如何使用 VS code。
+在编码之前，你需要知道一点 HTML, CSS 的相关知识，以及如何使用 VS code。
 
 要测试属性及其值，请遵循以下步骤 👇
 
-1.  创建一个名为 'BACKGROUND-PROJECT' 的文件夹并在VS code中打开。
+1.  创建一个名为 'BACKGROUND-PROJECT' 的文件夹并在 VS code 中打开。
 2.  创建 `index.html` 和 `style.css` 文件。
 3.  在 VS code 中安装 'live server'
 4.  开启 live server
 
 ## HTML
 
-在HTML文件的 **body标签** 中创建一个类名为 'container' 的div。
+在 HTML 文件的 **body 标签** 中创建一个类名为 'container' 的 div。
 
 ```html
    <div class="container"></div>
@@ -65,7 +65,7 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
 
 ## CSS
 
-在CSS中，你 **必须** 为容器提供一个高度，否则将不会看图像。 在我们的例子中，我们将它设置为100vh，像这样:
+在 CSS 中，你 **必须** 为容器提供一个高度，否则将不会看图像。 在我们的例子中，我们将它设置为 100vh，像这样:
 
 ```css
 .container{
@@ -73,7 +73,7 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
 }
 ```
 
-## 下载项目的图像。
+## 下载项目的图像
 
 图像在我的 **[GitHub repository](https://github.com/JoyShaheb/Project-image-repo/tree/main/Background-property-images)** 中。 以下是如何获得它们:
 
@@ -108,7 +108,7 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
 我们可以通过 **两种方式** 使用 background-image 属性
 
 -   通过图像的路径
--   通过具体的 **图像URL**
+-   通过具体的 **图像 URL**
 
 ### 如何通过图像路径使用 `background-image` 属性
 
@@ -123,7 +123,7 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/1jfuda4p0ki1hish775o.png)
 
-当你想在CSS中指定一个图像路径时，有三种情况:
+当你想在 CSS 中指定一个图像路径时，有三种情况:
 
 1.  当 `image` 和 `style.css` 在同一文件夹下
 2.  当 `image` 在下一级文件夹中
@@ -149,11 +149,11 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
  }
 ```
 
-当图像在 **下一级文件夹**，`style.css` 在上一级文件夹时。注意，下图中的`kitty.png` 在Assets文件夹中，而 `style.css` 在上一级文件夹中。
+当图像在 **下一级文件夹**，`style.css` 在上一级文件夹时。注意，下图中的`kitty.png` 在 Assets 文件夹中，而 `style.css` 在上一级文件夹中。
 
 ![Alt Text](https://www.freecodecamp.org/news/content/images/2021/04/Frame-26.png)
 
-要设置 `kitty.png` 的文件路径，我们需要在 `style.css` 中的引号后面写一个点和斜杠，就像这样(./)。然后我们写入文件夹的名称，然后斜杠(/)，最后我们写入image的名称，像这样: 👇
+要设置 `kitty.png` 的文件路径，我们需要在 `style.css` 中的引号后面写一个点和斜杠，就像这样(./)。然后我们写入文件夹的名称，然后斜杠(/)，最后我们写入 image 的名称，像这样: 👇
 
 ```css
  .container{
@@ -167,7 +167,7 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
 ```
 
 
-如果图像是在 **上一级文件夹** 中，我们需要返回。注意，在下图 👇 中，`style.css` 在 **src** 文件夹中，`kitty.png` 在**src文件夹外**。
+如果图像是在 **上一级文件夹** 中，我们需要返回。注意，在下图 👇 中，`style.css` 在 **src** 文件夹中，`kitty.png` 在**src 文件夹外**。
 
 
 ![Alt Text](https://www.freecodecamp.org/news/content/images/2021/04/Frame-27.png)
@@ -224,7 +224,7 @@ CSS背景（background）属性让我们可以控制图像的大小和属性，�
 }
 ```
 
-你可以通过 **3种方式** 使用 background-size 属性
+你可以通过 **3 种方式** 使用 background-size 属性
 
 -   使用 Cover / Contain 值
 -   设置图像宽度和高度
@@ -238,7 +238,7 @@ Bear 大小 : \[718px X 614px\]
 
 ### Cover 值
 
-为此，我们必须包含一个图像，为其设置高度，并禁止图像重复。我们在CSS中这样做: 👇
+为此，我们必须包含一个图像，为其设置高度，并禁止图像重复。我们在 CSS 中这样做: 👇
 
 ```css
 .container{
@@ -280,7 +280,7 @@ Bear 大小 : \[718px X 614px\]
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/36p9azoztkvawbvy6244.png)
 
-以下是CSS中的语法: 👇
+以下是 CSS 中的语法: 👇
 
 ```css
 .container{
@@ -316,7 +316,7 @@ Bear 大小 : \[718px X 614px\]
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/629rnxirqrdr8p5fapcd.png)
 
-我们在写完类名之后编写如下CSS语法 👇
+我们在写完类名之后编写如下 CSS 语法 👇
 
 ```CSS
 .container{
@@ -325,7 +325,7 @@ Bear 大小 : \[718px X 614px\]
 }
 ```
 
-这个属性有6个值：
+这个属性有 6 个值：
 
 -   repeat
 -   repeat-x
@@ -356,7 +356,7 @@ Bear 大小 : \[718px X 614px\]
 
 ### repeat 值
 
-通过使用这个值，我们可以沿着 **X轴和Y轴** 重复对应图像多次，直到容器被填充满。在这，kitty 的大小是 200px x 200px。
+通过使用这个值，我们可以沿着 **X 轴和 Y 轴** 重复对应图像多次，直到容器被填充满。在这，kitty 的大小是 200px x 200px。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/26zsa1dn161pawjqxuqp.png)
 
@@ -375,7 +375,7 @@ To duplicate this result, we write ->
 
 ### repeat-x 值
 
-顾名思义，我们可以使用这个值在容器X轴上重复对应图像，直到容器 X 轴被填充满。 Kitty的大小：  200px X 200px。
+顾名思义，我们可以使用这个值在容器 X 轴上重复对应图像，直到容器 X 轴被填充满。 Kitty 的大小：  200px X 200px。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pl4znzrwcevpr5w1a4i5.png)
 
@@ -393,7 +393,7 @@ To duplicate this result, we write ->
 
 ### repeat-y 值
 
-与 "repeat-x" 同理，但是是作用在 **Y轴上** 的。Kitty 的大小: 200px X 200px.
+与 "repeat-x" 同理，但是是作用在 **Y 轴上** 的。Kitty 的大小: 200px X 200px.
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7yo3i3bp8cw2r6zqhtvm.png)
 
@@ -429,7 +429,7 @@ To duplicate this result, we write ->
 
 ### space 值
 
-这个值在 X 轴和 Y 轴都会起作用。当我们调整窗口大小时，我们可以看到值 **space和round** 之间的主要区别。 注意，当我们调整窗口大小时，我们有 **空得空间**:
+这个值在 X 轴和 Y 轴都会起作用。当我们调整窗口大小时，我们可以看到值 **space 和 round** 之间的主要区别。 注意，当我们调整窗口大小时，我们有 **空得空间**:
 
 ![Space](https://media.giphy.com/media/cO0jNSpVi0I3FWD62G/giphy.gif)
 
@@ -564,7 +564,7 @@ We write the syntax after writing the selector name, like this  👇
 -   content-box
 -   inherit
 
-在标准 CSS 盒子模型中，最外侧是border。然后是padding，最后是在中间的内容(content)。
+在标准 CSS 盒子模型中，最外侧是 border。然后是 padding，最后是在中间的内容(content)。
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/p3mdn6hpd1u892akrkj5.png)
 
@@ -791,7 +791,7 @@ background-attachment: scroll;
 
 ![Alt Text](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/newvcc4rvegnbkblwzyb.png)
 
-对于这个案例，我们将图像 `kitty.png` 放在长和宽都为200px，蓝色背景的容器中。代码如下所示:
+对于这个案例，我们将图像 `kitty.png` 放在长和宽都为 200px，蓝色背景的容器中。代码如下所示:
 
 ```css
 .container{

@@ -1,122 +1,119 @@
-> -  原文地址：[How to Start a Freelance Dev Business](https://www.freecodecamp.org/news/how-to-start-a-freelance-dev-business/)
-> -  原文作者：[
-                    
-                        Andrej Kovacevic
-                    
-                ](https://www.freecodecamp.org/news/author/andrej/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[How to Start a Freelance Dev Business](https://www.freecodecamp.org/news/how-to-start-a-freelance-dev-business/)
+> - 原文作者：[Andrej Kovacevic](https://www.freecodecamp.org/news/author/andrej/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Start a Freelance Dev Business](https://www.freecodecamp.org/news/content/images/size/w2000/2022/02/freelance-dev-business-article-image.jpg)
 
-Many people who want to try freelancing believe that they need to have years of experience to succeed. But this is a common misconception that many freelancers have disproved.
+许多想尝试自由职业的人认为，他们需要有多年的经验才能成功。但这是一个常见的误解，许多自由职业者已经推翻了这个误解。
 
-Regardless of your industry, a helpful blueprint can be all you need to fast-track your freelancing success. This article underscores what you need to know to start a freelance web development business.
+无论你的行业如何，一个有用的蓝图可以成为你快速获得自由职业成功的全部条件。这篇文章强调了开始自由职业者网络开发业务所需要知道的东西。
 
-## Being a Freelance Developer and Its Advantages
+## 作为一名自由开发者，其优势
 
-Getting started as a freelance web designer can be a challenging feat. But if you succeed, you can be in a high-value position in your field.
+作为一名自由职业者的 Web 设计师，开始工作可能是一项具有挑战性的壮举。但如果你成功了，你可以在你的领域中处于高价值的地位。
 
-As a freelancer, you need to be capable of running your own business. This task requires self-discipline, which can be hard work. You need to implement strict and rigid rules for yourself to succeed.
+作为一个自由职业者，你需要有能力经营自己的业务。这项任务需要自律，这可能是一项艰苦的工作。你需要为自己实施严格的硬性规定，才能取得成功。
 
-To motivate you, here are several major advantages of becoming a freelance web developer.
+为了鼓励你，告诉你以下是成为自由网页开发者的几个主要优势。
 
-### 1\. High Demand for Web Design Services
+### 1\. 对网页设计服务的存在大量需求
 
-The most obvious benefit is the high demand for your services. Data from Indeed shows that there are over [60,000 web developer jobs](https://www.indeed.com/q-web-developer-l-usa-jobs.html?vjk=36fc4e40b6a03689) in the US as of this writing.
+最明显的好处是对你的服务需求很大。来自 Indeed 的数据显示，截至本文写作时，美国有超过[60,000 个 Web 开发工作](https://www.indeed.com/q-web-developer-l-usa-jobs.html?vjk=36fc4e40b6a03689)。
 
-The high demand for web design services ensures that you always have customers. There are a lot of people willing to pay you for your skills.
+对 Web 设计服务的高需求量确保你总是有客户。有很多人愿意为你的技能付费。
 
-### 2\. Shortage of Developers
+### 2\. 开发人员短缺
 
-Another advantage is that there is a massive [shortage of developers](https://www.daxx.com/blog/development-trends/software-developer-shortage-us) in the US and worldwide in general. The lack of web designers means that you do not have to compete with too many people in your industry to get paid as a freelancer.
+另一个优势是，在美国和全世界范围内都存在着大量的[开发人员短缺](https://www.daxx.com/blog/development-trends/software-developer-shortage-us)。Web 设计师的缺乏意味着你不必为了获得自由职业者的报酬而与同行业中太多的人竞争。
 
-### 3\. You Get to Be Your Own Boss
+### 3\. 你可以做你自己的老板
 
-Freelancing also means that you are your own boss. You have more freedom and more time on your hands than when you work for someone else.
+自由职业也意味着你是你自己的老板。与为别人工作时相比，你有更多的自由和更多的时间在手上。
 
-When you run your own business, you do not have to report to anyone. It will be your choice which new clients to accept, how many hours you work, and what your rate is.
+当你经营自己的生意时，你不需要向任何人报告。你可以选择接受哪些新客户，工作多少小时，以及你的费率是多少。
 
-### 4\. Attractive Earning Potential
+### 4\. 诱人的赚钱潜力
 
-Web designers get paid a decent amount for their services. According to the US Bureau of Labor Statistics, the average yearly pay for web developers was [$77,200](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm) in 2020.
+网页设计师的服务得到了体面的报酬。根据美国劳工统计局的数据，2020 年，Web 开发人员的平均年薪为[77,200 美元](https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm)。
 
-## Important Steps to Take to Become a Freelance Developer
+## 成为自由开发者需要采取的重要步骤
 
-This section highlights three crucial steps to help you get your freelance business up and running. After reading, you can start offering your web development services from home with ease.
+本节强调了三个关键步骤，以帮助你的自由职业者业务启动和运行。阅读后，你可以轻松地开始从家里提供你的 Web 发服务。
 
-### 1\. Choose a Niche
+### 1\. 选择一个细分市场
 
-It is impossible to be equally good in all areas of web design. Choosing a niche lets you focus your time and effort on narrower tasks.
+不可能在 Web 设计的所有领域都同样出色。选择一个利基，可以让你把时间和精力集中在较窄的任务上。
 
-Having a niche also allows you to become an expert who can address the needs of one group of clients. Doing so is much easier than learning a little bit of everything about different businesses or website styles.
+拥有一个利基市场还可以让你成为一个专家，可以解决一组客户的需求。这样做要比对不同的企业或网站风格都学一点要容易得多。
 
-When choosing a specialty, it is not enough to be interested in a particular niche. You must know if there is a demand in this niche for websites. Ask yourself if people are willing to pay for it.
+在选择方向时，仅仅对某一利基感兴趣是不够的。你必须知道这个利基市场对网站是否有需求。问问自己，人们是否愿意为其付费。
 
-This step is crucial for anyone starting a business regardless of your industry. You first need to know the marketability of your business idea.
+这一步对任何创业者来说都是至关重要的，无论你是什么行业。你首先需要知道你的商业理念的市场可行性。
 
-What can help you complete this step is researching the market and looking for opportunities.
+能帮助你完成这一步的是研究市场和寻找机会。
 
-For example, if you like collecting toys, you can work for online stores selling rare action figures. Your selling point could be knowing how toy collectors think and what they want in a toy figure online shop.
+例如，如果你喜欢收集玩具，你可以为销售稀有动作人物的网店工作。你的卖点可以是了解玩具收藏者的想法以及他们在玩具人物网店中的需求。
 
-If you were a grade-school teacher, you could help build websites for educators. A website can help them save time, market their teaching services better, and earn more.
+如果你是一名小学教师，你可以帮助为教育工作者建立网站。一个网站可以帮助他们节省时间，更好地推销他们的教学服务，并获得更多的收入。
 
-If you are an activist, reach out to organizations. Check and see if anyone needs a website to promote their advocacy.
+如果你是一个活动家，可以接触到一些组织。看看是否有人需要一个网站来宣传他们的主张。
 
-You can research online and visit communities on Facebook, Reddit, or Quora. These platforms are where people from different niche markets often hang out online.
+你可以在网上研究，访问 Facebook、Reddit 或 Quora 上的社区。这些平台是来自不同利基市场的人经常在网上活动的地方。
 
-Read their questions, look for their pain points, and determine the kind of product they need. After reading up, you can tailor your web development services to solve their problems.
+阅读他们的问题，寻找他们的痛点，并确定他们需要什么样的产品。在阅读之后，你可以定制你的网站开发服务来解决他们的问题。
 
-### 2\. Build a Portfolio
+### 2\. 建立一个作品集
 
-Getting that first project can be one of the most challenging things for many web designers. It can be tough to convince a prospect if you do not have a portfolio. Luckily, there are ways to secure your first gig without any experience.
+对于许多 Web 设计师来说，获得第一个项目可能是最具挑战性的事情之一。如果你没有作品集，要说服潜在客户是很困难的。幸运的是，有一些方法可以在没有任何经验的情况下确保你的第一个工作。
 
-You [need to have a web design portfolio that serves as your website](https://myaws.co.nz/website-design-could-be-the-difference-between-business-success-and-failure/). The site should tell clients what you do and how you can address their needs.
+你[需要有一个网页设计作品集，作为你的网站](https://myaws.co.nz/website-design-could-be-the-difference-between-business-success-and-failure/)。该网站应该告诉客户你做什么以及你如何满足他们的需求。
 
-You must include feedback from former clients and several of your past outstanding projects.
+你必须包括前客户的反馈和你过去的几个优秀项目。
 
-To get your first project, you may need to build a couple of websites for free.
+为了得到你的第一个项目，你可能需要免费建立几个网站。
 
-In your chosen niche, look for an organization that urgently needs a site and do it for free. In exchange, you ask them to submit a testimonial on how your services helped them.
+在你选择的利基市场，寻找一个急需网站的组织，并免费为其服务。作为交换，你要求他们提交一份关于你的服务如何帮助他们的推荐信。
 
-Looking for a client can be easy since you are offering free work. They will have nothing to lose if they choose to accept your offer.
+寻找客户可以很容易，因为你提供的是免费工作。如果他们选择接受你，他们将不会有任何损失。
 
-You can use web development platforms like WordPress to finish your work faster. You need to keep in mind the user experience, accessibility, and conversion rate optimization as you work.
+你可以使用像 WordPress 这样的网络开发平台来更快地完成你的工作。你需要在工作中牢记用户体验、可访问性和转换率优化。
 
-Aside from these three factors, you should also remember to keep your client's needs at the forefront. You should design the website in a way that addresses their specific needs.
+除了这三个因素之外，你还应该记得把客户的需求放在首位。你应该以解决他们具体需求的方式来设计网站。
 
-Some clients may worry more about conversion than user experience. Some may have other site concerns, like [search engine optimization](https://www.similarweb.com/corp/blog/marketing/seo/) (SEO). Regardless of what they need, you must ensure that your output delivers.
+有些客户可能更担心转换问题，而不是用户体验。有些人可能有其他的网站关注点，比如[搜索引擎优化](https://www.similarweb.com/corp/blog/marketing/seo/)（SEO）。不管他们需要什么，你必须确保你的产出能够实现。
 
-If you do not want to look for a client, you can buy domains and build websites yourself. This step can be a faster yet more expensive way to get your business up and running.
+如果你不想寻找客户，你可以购买域名并自己建立网站。这一步可能是让你的业务启动和运行的更快但更昂贵的方式。
 
-If all clients want to see is your skill, then this can be a good solution. Unfortunately, you will not receive any testimonials if you choose to buy domains.
+如果客户想看到的只是你的技术，那么这可能是一个很好的解决方案。不幸的是，如果你选择购买域名，你将不会收到任何推荐信。
 
-Once you finish two to three projects, you can begin looking for your first paying client.
+一旦你完成两到三个项目，你可以开始寻找你的第一个付费客户。
 
-### 3\. Search for Clients
+### 3\. 寻找客户
 
-Now that you have a portfolio that showcases your skills, you can begin searching for clients.
+现在你有一个展示你技能的作品集，你可以开始寻找客户了。
 
-Social media can be helpful when looking for clients who will pay for your services.
+在寻找愿意为你的服务付费的客户时，社交媒体可以起到帮助作用。
 
-For example, you can market your new business by using Facebook Groups. You can either make a new group or join an existing one.
+例如，你可以通过使用 Facebook Groups 来推销你的新业务。你可以建立一个新的 Group 或加入一个现有的 Group。
 
-Facebook groups are made up of people with common interests. Whatever niche your business is in, you can likely find a relevant group on Facebook.
+Facebook groups 是由具有共同兴趣的人组成的。无论你的业务是什么利基，你都可能在 Facebook 上找到一个相关的小组。
 
-Using social media to market your web design services does not only help you find clients. It also allows you to know your target customers better. It informs you what their problems are and what solutions they want.
+使用社交媒体来推销你的网页设计服务，不仅可以帮助你找到客户。它还可以让你更好地了解你的目标客户。它告诉你他们的问题是什么，他们想要什么解决方案。
 
-Another way to meet clients is by speaking at events. Attending events about web design can be a great way to establish credibility. It can also be an effective way to build a network of contacts.
+另一种认识客户的方式是在活动中发言。参加有关网页设计的活动可以是建立信誉的一个好方法。它也可以是一个建立联系网络的有效途径。
 
-The downside of this approach is it could be challenging to get invites to events, and it involves a high level of preparation.
+这种方法的缺点是，要获得活动邀请可能很有挑战性，而且需要做大量的准备。
 
-If you are not keen on socializing in person, you can look for clients through online job boards. Regularly visiting these sites can help you get more work. Try visiting Smashing Jobs, Mediabistro, Coroflot, or RemoteOK.
+如果你不热衷于当面应酬，你可以通过在线招聘网站寻找客户。定期访问这些网站可以帮助你获得更多工作。尝试访问 Smashing Jobs、Mediabistro、Coroflot 或 RemoteOK。
 
-You can also try freelance marketplaces. Make sure to create a detailed profile that informs your clients of your specialties and how you can help them.
+你也可以尝试自由职业者市场。确保创建一个详细的个人资料，告知你的客户你的专长以及你能如何帮助他们。
 
-When creating a profile for freelancing sites, do not forget to include your skills, experience, and portfolio.
+在为自由职业者网站创建简介时，不要忘记包括你的技能、经验和作品集。
 
-## Wrapping Up
+## 结语
 
-Becoming a freelance web designer requires a significant investment of your time and effort. But the result is a career that provides you with the freedom, flexibility, and income you want.
+成为一名自由职业者的 Web 设计师需要投入大量的时间和精力。但其结果是为你提供了你想要的自由、灵活和收入的职业。
 
-So push yourself to learn and increase your skill set to offer the most value to potential clients.
+因此，推动自己学习并提高自己的技能，为潜在客户提供最大的价值。

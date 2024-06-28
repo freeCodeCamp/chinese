@@ -1,96 +1,93 @@
-> -  原文地址：[The Ultimate Node.js Production Checklist](https://www.freecodecamp.org/news/node-js-production-checklist/)
-> -  原文作者：[
-                    
-                        Mehul Mohan
-                    
-                ](https://www.freecodecamp.org/news/author/mehulmpt/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[The Ultimate Node.js Production Checklist](https://www.freecodecamp.org/news/node-js-production-checklist/)
+> - 原文作者：[Mehul Mohan](https://www.freecodecamp.org/news/author/mehulmpt/)
+>
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![The Ultimate Node.js Production Checklist](https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/screely-1585049597841.png)
 
-Are you doing this Node thing right on production? Let's see some common mistakes people make running Node on production (coming straight from my own projects - like [codedamn](https://codedamn.com)) and how they can be mitigated.
+你在生产环境中做对了 Node 这件事吗？让我们看看人们在生产环境中运行 Node 的一些常见错误（直接来自我自己的项目--如[codedamn](https://codedamn.com)），以及如何减轻它们。
 
-You can use this as your checklist on production when you're deploying Node apps. Since this is a _production-ready-practices_ article, a lot of them won't apply when you're developing apps on your local system.
+当你部署 Node 应用程序时，你可以把它作为你在生产环境中的检查清单。由于这是一篇关于生产环境准备的文章，当你在本地系统上开发应用程序时，其中很多内容并不适用。
 
-## Run node in cluster mode/separate node processes
+## 以 cluster（集群）模式运行/separate node 进程
 
-Remember that Node is single threaded. It can delegate a lot of things (like HTTP requests and filesystem read/writes) to the OS which handles it in a multithreaded environment. But still, the code YOU write, the application logic, always runs in a single thread.
+记住，Node 是单线程（single threaded）的。它可以将很多事情（如 HTTP 请求和文件系统的读写）委托给操作系统，由它在多线程（multithreaded）环境下处理。但是，你写的代码，即业务逻辑，仍然是在单线程中运行。
 
-By running in a single thread, your Node process is always limited to only a single core on your machine. So if you have a server with multiple cores, you're wasting computation power running Node just once on your server.
+通过在单线程中运行，你的 Node 进程总是被限制在你的 CPU 上一个核心。因此，如果你的服务器有多个 CPU 核，那么你在服务器上只运行一个 Node 进程就是在浪费计算能力。
 
-What does "running Node just once" mean? You see, operating systems have a scheduler built into them which is responsible for how the execution of processes is distributed across the CPUs of the machine. When you run only 2 processes on a 2-core machine, the OS determines it is best to run both of the processes on separate cores to squeeze out maximum performance.
+`running Node just once`是什么意思？你看，操作系统有一个内置的调度器，它负责程序进程如何在机器的 CPU 上分配。当你在一台双核机器上只运行 2 个进程时，操作系统会决定最好在不同的 CPU 核上分别运行这两个进程，以挤出最大的性能。
 
-A similar thing needs to be done with Node. You have two options at this point:
+对 Node 也需要做类似的事情。在这一点上，你有两个选择:
 
-1.  **Run Node in cluster mode -** Cluster mode is an architecture which comes baked into Node itself. In simple words, Node forks more processes of its own and distributes load through a single master process.
-2.  **Run Node processes independently -** This option is slightly different from the above in the sense that you now do not have a master process controlling the child Node processes. This means that when you spawn different Node processes, they'll run completely independent of each other. No shared memory, no IPC, no communication, nada.
+1. **Run Node in cluster mode -** 集群（cluster）模式是一种架构，Node 本身已经支持。简单地说，Node 会分叉（forks）出更多自己的进程，并通过一个主进程（master process）分配负载。
+2. **Run Node processes independently -** 这个选项与上面的略有不同，因为你现在没有一个主进程来控制子 Node 进程。这意味着，当你产生不同的 Node 进程时，它们将完全独立运行。没有共享内存，没有 IPC，没有通信，什么都没有。
 
-According to a [stackoverflow answer](https://stackoverflow.com/a/47122606/2513722), the latter (point 2) performs far better than the former (point 1) but is a little tricker to setup.
+根据[stackoverflow answer](https://stackoverflow.com/a/47122606/2513722), 后者(选择 2) 的性能好得多，比(选择 1)，但设置起来有点麻烦。
 
-Why? Because in a Node app, not only is there application logic, but almost always when you're setting up servers in Node code you need to bind ports. And a single application codebase cannot bind the same port twice on the same OS.
+为什么呢？因为在 Node 应用中，不仅有应用逻辑，而且当你在 Node 代码中设置服务时，几乎总是需要绑定端口。而一个应用程序的代码库不能在同一个操作系统上绑定两次相同的端口。
 
-This problem is, however, easily fixable. Environment variables, Docker containers, NGiNX frontend proxy, and so on are some of the solutions for this.
+然而，这个问题是很容易解决的。环境变量、Docker 容器、NGiNX 前端代理（frontend proxy）等等都是这方面的一些解决方案。
 
-## Rate Limiting your endpoints
+## 限制你的接入点（endpoints）速率
 
-Let's face it. Not everybody in the world has best intentions for your architecture. Sure, attacks like DDoS are simply very complicated to mitigate, and even giants like GitHub go down when something like that happens.
+让我们面对现实吧。世界上不是每个人都对你的服务器抱有良好的意图。当然，像 DDoS 这样的攻击是非常复杂的，甚至像 GitHub 这样的巨头在发生这样的事情时也会瘫痪。
 
-But the least you can do is prevent a script-kiddie from taking down your server just because you have an expensive API endpoint exposed from your server without any rate-limiting in place.
+但是，你至少可以防止一个脚本小子对你的服务器上有一个系统开销昂贵的 API 端点（endpoints）进行攻击，因为没有任何速率限制，导致你的服务器瘫痪。
 
-If you use Express with Node, there are 2 beautiful packages which work seamlessly together to rate limit traffic on Layer 7:
+如果你使用 Express 和 Node，有 2 个好用的包（packages），它们可以无缝地一起工作，在第 7 层限制流量。:
 
-1.  Express Rate Limit - [https://www.npmjs.com/package/express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
-2.  Express Slow Down - [https://www.npmjs.com/package/express-slow-down](https://www.npmjs.com/package/express-slow-down)
+1. Express Rate Limit - [https://www.npmjs.com/package/express-rate-limit](https://www.npmjs.com/package/express-rate-limit)
+2. Express Slow Down - [https://www.npmjs.com/package/express-slow-down](https://www.npmjs.com/package/express-slow-down)
 
-Express Slow Down actually adds incremental delay to your requests instead of dropping them. This way legit users, if they DDoS by accident (super activity of clicking buttons here and there), are simply slowed down and are not rate limited.
+Express Slow Down 实际上是给你的请求慢慢增加的响应延迟，而不是丢弃它们。这样一来，如果合法用户不小心 DDoS 了（在这里和那里点击按钮的超级活动），他们只是被减慢了速度，而不会被限制速率。
 
-On the other hand, if there's a script-kiddie running scripts to take down the server, Express rate limiter monitors and rate limits that particular user, depending on the user IP, user account, or anything else you want.
+另一方面，如果有一个脚本小子在运行脚本来破坏服务器，Express 速率限制器会根据用户的 IP、用户账户或其他你想要的东西来监控和限制这个特定的用户。
 
-Rate limiting could (should!) be applied on Layer 4 as well (Layer 4 means blocking traffic before discovering the contents of it - HTTP) through IP address. If you want, you can setup an NGiNX rule which blocks traffic on layer 4 and rejects the flood of traffic coming from a single IP, thus saving your server processes from overwhelming.
+速率限制也可以（应该！）通过 IP 地址应用在第 4 层（第 4 层意味着在发现内容之前阻止流量 - HTTP）。如果你愿意，你可以设置一个 NGiNX 规则，在第 4 层拦截流量，拒绝来自一个 IP 的流量，从而使你的服务器进程不至于不堪重负。
 
-## Use a frontend server for SSL termination
+## 使用前端服务器（frontend server）使用 SSL
 
-Node provides out of the box support for SSL handshakes with the browser using the `https` server module combined with the required SSL certs.
+Node 提供了开箱即用的支持，使用`https`服务器模块和所需的 SSL 证书与浏览器进行 SSL 握手。
 
-But let's be honest here, your application should not be concerned with SSL in the first place anyway. This is not something the application logic should do. Your Node code should only be responsible for what happens with the request, not the pre-processing and post-processing of data coming in and out of your server.
+但是，让我们在这里说实话，无论如何，你的应用程序不应该首先关注 SSL。这不是应用逻辑应该做的事情。你的节点代码应该只负责处理请求，而不是对进出服务器的数据进行预处理和后处理。
 
-SSL termination refers to converting traffic from HTTPS to HTTP. And there are much better tools available than Node for that. I recommend NGiNX or HAProxy for it. Both have free versions available which get the job done and offload SSL termination from Node.
+SSL 终止（SSL termination）是指将流量从 HTTPS 转换为 HTTP。在这方面，有比 Node 更好的工具可用。我推荐 NGiNX 或 HAProxy。两者都有免费版本，可以完成工作，Node 不用处理 SSL 问题。
 
-## Use a frontend server for static file serving
+## 使用前端服务器（frontend server）来提供静态文件服务
 
-Again, instead of using built in methods like `express.static` to serve static files, use frontend reverse proxy servers like NGiNX to serve static files from disk.
+同样，与其使用内置的方法如`express.static`来提供静态文件，不如使用前端的反向代理服务器如 NGiNX 来来处理磁盘上的静态文件。
 
-First of all, NGiNX can do that faster than Node (because it is built from scratch down to do only that). But it also offloads file serving from a single-threaded Node process which could use its clock cycles on something better.
+首先，NGiNX 比 Node 做得更快（因为它是从头开始建立的，只做这个）。但它也从单线程的 Node 进程中接过文件服务，而 Node 可以把别的事做得更好。
 
-Not only this – frontend proxy servers like NGiNX can also help you deliver content faster using GZIP compression. You can also set expiry headers, cache data, and much more, which is not something we should expect Node to do (however, Node can still do it).
+不仅如此--像 NGiNX 这样的前端代理服务器还可以利用 GZIP 压缩技术帮助你更快地传送内容。你还可以设置过期标题、缓存数据等等，这不是我们应该期望 Node 做的事情（不过，Node 还是可以做到的）。
 
-## Configure error handling
+## 配置错误处理
 
-Proper error handling can save you from hours of debugging and trying to reproduce difficult bugs. On server, it is especially easy to setup architecture for error handling because you're the one running it. I recommend tools like [Sentry](https://sentry.io) with Node which records, reports, and emails you whenever the server crashes due to an error in the source code.
+正确的错误处理可以使你免于花费数小时的时间来调试和试图重现困难的错误。在服务器上，设置错误处理的架构特别容易，因为你是运行它的人。我推荐像[Sentry](https://sentry.io)与 Node 这样的工具，它可以记录、报告并在服务器因源代码中的错误而崩溃时向你发送电子邮件。
 
-Once that is in place, now it is time to restart the server when it crashes so the whole site doesn't just go down for hours until you manually take it up again.
+一旦到位，现在是时候在服务器崩溃时重新启动它了，这样整个网站就不会瘫痪几个小时，直到你手动将它重新启动。
 
-For this, you can use a process manager like [PM2](https://www.npmjs.com/package/pm2). Or even better, use a dockerized container environment with policies like `restart: always` with proper memory and disk limits setup.
+为此，你可以使用像[PM2](https://www.npmjs.com/package/pm2),这样的进程管理器。或者更好的是，使用一个 docker 化的容器环境，使用诸如`restart: always`的策略，并设置适当的内存和磁盘限制。
 
-Docker setup ensures that even if your container runs in OME, the process spins up again (which might not happen on a PM2 environment, as the OS might kill PM2 if there's a memory leak somewhere in a running process).
+Docker 设置确保即使你的容器在 OME 中运行，进程也会再次启动起来（这在 PM2 环境中可能不会发生，因为如果运行中的进程在某处有内存泄漏，操作系统可能会杀死 PM2）。
 
-## Configure logs properly
+## 正确配置日志
 
-All the answers lie in logs. Server hacks, server crashes, suspicious user behavior, etc. For that, you have to make sure that:
+所有的答案都在日志中。服务器黑客攻击、服务器崩溃、可疑的用户行为等。为此，你必须确保:
 
-1.  Each and every request attempt is logged with the IP address/method of request/path accessed, basically as much information as you can log (except for private information like passwords and credit card information, of course)
-2.  This can be achieved through the [morgan](https://www.npmjs.com/package/morgan) package
-3.  Setup **file stream logs** on production instead of console output. This is faster, easier to see and allows you to export logs to online log viewing services.
-4.  Not all log messages have equal weight. Some logs are just there for debugging, while if some are present, it might indicate a pants-on-fire situation (like a server hack or unauthorized access). Use winston-logger for logging different levels of logs.
-5.  Setup **log rotation** so that you don't get a log size in GBs after a month or so, when you see the server.
-6.  **GZIP** your log files after rotation. Text is cheap, and is highly compressible and easy to store. You should never face problem with text logs as long as they are compressed and you're running a server with a decent disk space (25GB+).
+1. 每一个请求尝试都会被记录下来，包括 IP 地址/请求方式/访问路径，基本上可以记录尽可能多的信息（当然，密码和信用卡信息等私人信息除外）
+2. 这可以通过[morgan](https://www.npmjs.com/package/morgan)软件包实现。
+3. 在生产中设置**文件流日志（file stream logs）**，而不是控制台输出。这更快，更容易看到，并允许你将日志导出到在线日志查看服务。
+4. 不是所有的日志信息都有同等的权重。有些日志只是用来调试的，而如果有些日志出现了，则可能预示着出现了裤衩的情况（比如服务器被黑或未经授权的访问）。使用 winston-logger 来记录不同级别的日志。
+5. 设置**日志轮换（log rotation）**，这样你就不会在一个月左右后看到服务器的日志大小为 GB。
+6. 在轮换（rotation）之后，**GZIP**你的日志文件。文本系统开销少（Text is cheap），而且可压缩性高，容易存储。只要文本日志被压缩了，而且你运行的服务器有相当大的磁盘空间（25GB 以上），你就不应该面临文本日志的问题。
 
-## Conclusion
+## 结语
 
-It is easy to take note of a few practices in production which could save you tears and hours of debugging later on. Make sure you follow these best practices and let me know what you think by saying Hi on my [twitter handle](https://twitter.com/mehulmpt).
+在生产中注意到一些做法是很容易的，这可以为你以后少流后悔得眼泪和节省调试的时间。请确保你遵循这些最佳做法，并让我知道你的想法，请在我的[推特](https://twitter.com/mehulmpt)反馈。
 
-If you liked this article, let's meet on social media. Here's my [Instagram](https://instagram.com/mehulmpt) and [Twitter](https://twitter.com/mehulmpt). I'm super active, and would love to have a chat! Let's connect.
+如果你喜欢这篇文章，让我们在社交媒体上交流。这是我的[Instagram](https://instagram.com/mehulmpt)和 [Twitter](https://twitter.com/mehulmpt)。我是超级活跃的人，很愿意和我聊天！让我们联系。
 
 Peace!  
 Mehul

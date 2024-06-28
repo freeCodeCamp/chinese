@@ -20,7 +20,7 @@ Here's a practical guide to help you learn CSS Flexbox in 2021 by building 5 res
 
 ### You can [**check out the Figma design here**](https://www.figma.com/file/d1bG4msAzxixv9jWP8e4nA/Master-CSS-Flexbox-Layout?node-id=0%3A1)
 
-### You can also watch this tutorial on my YouTube channel here:
+### You can also watch this tutorial on my YouTube channel here
 
 ## What is Flexbox?
 
@@ -42,7 +42,7 @@ This chart contains **every possible property and value** you can use when using
 
 ![Flex Box Chart](https://dev-to-uploads.s3.amazonaws.com/i/gv3jyh4xt4fbwtq1qejn.png)
 
-## Before We Get Started...
+## Before We Get Started
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Desktop---2--1-.png)
 

@@ -1,129 +1,129 @@
-> -  原文地址：[AWS IAM – Policy, Access Roles, Resources Explained, and Why They're Useful](https://www.freecodecamp.org/news/the-introduction-to-iam-i-wish-i-had/)
-> -  原文作者：[Periklis Gkolias](https://www.freecodecamp.org/news/author/periklis-gkolias/)
-> -  译者：
-> -  校对者：
+> - 原文地址：[AWS IAM – Policy, Access Roles, Resources Explained, and Why They're Useful](https://www.freecodecamp.org/news/the-introduction-to-iam-i-wish-i-had/)
+> - 原文作者：[Periklis Gkolias](https://www.freecodecamp.org/news/author/periklis-gkolias/)
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![AWS IAM – Policy, Access Roles, Resources Explained, and Why They're Useful](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/g7In5Xr-2.jpg)
 
-IAM, or Identity and Access Management, is one of the most common terms you'll hear in cloud-native environments.
+M，即身份和访问管理，是你在云原生环境中最常听到的术语之一。
 
-But what does it do? And if you're already familiar with IAM, how long did it take you to fully understand it?
+但它是做什么的？如果你已经熟悉了 IAM，你花了多长时间才完全理解它？
 
-I will explain the main concepts behind this massive family of software, with you, the busy engineer, in mind.
+我将解释这个庞大的软件家族背后的主要概念，并考虑到你是个忙碌的工程师。
 
-The fundamentals described here are vendor agnostic, though most of my experience is with AWS's implementation.
+这里描述的基本原理与供应商无关，尽管我的大部分经验是在 AWS 的使用。
 
-## What Is IAM?
+## 什么是 IAM?
 
-IAM is a complex system of entities (humans, applications, and so on) that request access to a system. It is also a hierarchical set of rules to grant or deny requested access.
+IAM 是一个由请求访问系统的实体（人类、应用程序等）组成的复杂系统。它也是一套分层的规则，用于授予或拒绝所请求的访问。
 
-Before we go any further, here are the main terms you'll encounter:
+在我们进一步讨论之前，这里是你会遇到的主要术语:
 
--   **Resource**: Anything worth protecting. A storage service, virtual machine, etc.
--   **Policy**: A set of rules that dictate who can and can't do something on a single resource or group of resources.
--   **Action**: Anything someone can do inside the cloud environment. For example, creating a virtual machine.
--   **User**: Well... A user :)
--   **Group**: A group of users with the same permissions applied.
--   **Principal**: A user or an application requesting access.
--   **Role**: A set of powers assigned to a principal, usually for a limited amount of time.
+- **Resource**: 任何值得保护的东西。一个存储服务、虚拟机等。
+- **Policy**: 一组规则，规定谁可以和谁不可以在单个资源或资源组上做什么。
+- **Action**: 人可以在云环境中可以做事情。例如，创建一个虚拟机。
+- **User**: 嗯。一个用户 :)。
+- **Group**: 一个具有相同权限的用户组。
+- **Principal**: 一个请求访问的用户或应用程序。
+- **Role**: 分配给一个委托人的一组权力，通常在有限的时间内。
 
-## Why IAM Is Useful
+## 为什么 IAM 是有用的
 
-IAM is mainly used for authentication, authorization, granular access, and governance.
+IAM 主要用于认证、授权、细化访问和治理。
 
-Let's see what those all mean:
+让我们看看这些都是什么意思:
 
--   **Authentication**: The act over verifying who you are.
--   **Authorization**: The act of identifiying if someone can perform the action they are requesting. This is usually combined with authentication, but not always.
--   **Granular access**: Permissions that control each action that can happen on a resource. For example, a user might have permission to see firewall rules, but doesn't have permission to change them. This is implemented with [Role-Based Access Control](https://en.wikipedia.org/wiki/Role-based_access_control).
--   **Governance**: The actions you take to know what is happening in your environment, mostly for reasons of budget, compliance, and proper access scope.
+- **Authentication**: 证实你是谁的行为。
+- **Authorization**: 识别某人是否可以执行他们所请求的行动。这通常与认证相结合，但不一定。
+- **Granular access**: 控制一个资源上可能发生的每个动作的权限。例如，一个用户可能有权限查看防火墙规则，但没有权限修改它们。这是用 [基于角色的访问控制](https://en.wikipedia.org/wiki/Role-based_access_control) 实现的。
+- **Governance**: 你为了解环境中发生的事情而采取的行动，主要是出于预算、合规性和适当的访问范围等原因。
 
-If you're a company of 1-3 people, then setting up a full-blown IAM solution is probably overkill. Buf if your team is larger than that, or you're planning to scale up, then you should start considering it.
+如果你是一个只有 1-3 人的公司，那么建立一个完整的 IAM 解决方案可能是多余的。但是，如果你的团队规模大于这个数字，或者你打算扩大规模，那么你应该开始考虑这个问题。
 
 ![IAM pillars](https://www.freecodecamp.org/news/content/images/2022/04/WxyvyO4.jpg)
 
-## Common Problems You Don't Use IAM
+## 你不使用 IAM 的常见问题
 
-I believe you can see the benefits of an IAM solution.
+我相信你可以看到 IAM 解决方案的好处。
 
-Now let's take a look at some common problems organizations face in the absence of it.
+现在让我们来看看企业在没有 IAM 的情况下面临的一些常见问题。
 
-### It's Hard to Audit and Administer Access
+### 很难对访问进行审计和管理
 
-Have you heard of cases where an employee had more access than they should? And additionally, no one knew?
+你是否听说过某个员工的权限超过了他们应该有的权限的情况？此外，没有人知道？
 
-This can be prevented with a properly set-up IAM solution.
+这可以通过正确设置的 IAM 解决方案来防止。
 
-### Setting Up Accounts for New Hires Is a Pain
+### 为新员工设置账户是件麻烦事
 
-With an IAM solution in place, this would just be a matter of a few clicks. Namely, set up the users and add them to the IAM groups their teams use. That's it.
+有了 IAM 解决方案，这将只是一个点击几下的问题。也就是说，设置用户并将他们添加到他们团队使用的 IAM 组。就这样了。
 
-But without an IAM solution? You would need to set all the permissions for each account manually.
+但如果没有 IAM 解决方案呢？你将需要手动设置每个账户的所有权限。
 
-You might have a reference user to copy from, but does each new account need all the permissions the reference user has? Do you have special handling for user accounts that are less than 6 months old? Does the reference user have superuser permissions that should not be accidentally assigned to a new hire's account?
+你可能有一个参考用户来复制，但每个新账户是否需要参考用户的所有权限？你对少于 6 个月的用户账户有特殊处理吗？参考用户是否有超级用户的权限，避免意外地分配给新雇员账户？
 
-### Offboarding People Is Time Consuming
+### 处理离职人员很费时间
 
-Here you'll have similar problems to the new hire case above. But when a collegue is leaving, you'll need to change the password to all the accounts they **potentially** used.
+在这里，您将遇到与上述新员工案例类似的问题。但是当同事离开时，您需要更改他们**可能**使用的所有帐户的密码。
 
-This can turn ugly very fast, not to mention the side effects this has on other team memebers.
+这会很快变得丑陋，更不用说这对其他团队成员产生的副作用了。
 
-And you would have to do this for every script, application, and other resource whenever there's an offboarding. What if you have a team change 2-3 times per month? You and your team would have a hard time being productive.
+每当有离职时，您都必须为每个脚本、应用程序和其他资源执行此操作。 如果你每个月有 2-3 次团队变动怎么办？ 您和您的团队将很难高效工作。
 
-### Simple Things Require Human Intervention
+### 简单的事情需要人去处理
 
-Without an IAM solution, tasks like resetting a password or re-enabling an account that was locked need to be done manually.
+如果没有 IAM 解决方案，重设密码或重新启用被锁定的账户等任务就需要手动完成。
 
-Top-tier IAM solutions have a way to resolve such issues fast without much hassle.
+顶级的 IAM 解决方案有办法快速解决此类问题，而不需要太多的麻烦。
 
-## Best Practices
+## 最佳实践
 
 ![Best practices](https://www.freecodecamp.org/news/content/images/2022/04/M7N8blv.jpg)
 
-If you've decided to set up IAM, here are some best practices. This is far from a full list, and is based on my personal experience. But I've seen these practices on more than one team, so they should work for you as well.
+如果你已经决定建立 IAM，这里有一些最佳实践。这远远不是一个完整的清单，而且是基于我的个人经验。但我在不止一个团队中看到过这些做法，所以它们应该也适用于你。
 
-### Never Grant Full Access... EVER
+### 永远不要授予完全访问权
 
-In a real-world scenario, you wouldn't want every user to have unlimited access to an account. Ideally, no one should full access to anything (apart from the account owner).
+在现实世界中，你不会希望每个用户都对一个账户有无限的访问权。理想情况下，没有人应该完全访问任何东西（除了账户所有者之外）。
 
-For example, if an employee's responsibility is to monitor logs, they should have read access only to that tool. They should not be able to restart a service, or view billing information.
+例如，如果一个员工的职责是监控日志，他们应该对该工具只有阅读权限。他们不应该能够重新启动一项服务，或查看账单信息。
 
-### Prefer Groups to Multiple Users
+### 首选组而不是多个用户
 
-It's better to use groups instead of multiple users when you have a choice. Groups make administration exponentially easier.
+当你有选择时，最好使用组而不是多个用户。组使管理成倍地容易。
 
-For example, if a new person joins your organization as a developer, they can be added to an IAM group for developers. That new person will then inherit all the powers of that IAM group.
+例如，如果一个新的人作为开发人员加入你的组织，他们可以被添加到一个开发人员的 IAM 组。然后，这个新人将继承该 IAM 组的所有权力。
 
-The alternative, creating a user for each group (reader\_susan, admin\_susan) is considered obsolete.
+另一种方法，即为每个组创建一个用户（reader_susan, admin_susan）被认为是过时的。
 
-### Prefer Roles on Existing Users to Creating a New User
+### 首选现有用户的角色而不是创建新用户
 
-When given the option, prefer assigning a role to an existing user rather than creating a new user.
+如果有选择的话，最好是给现有的用户分配一个角色，而不是创建一个新的用户。
 
-For example, don't create an admin user and share the password between 10 people. Create an admin role and assign it to whoever needs it for a limited amount of time.
+例如，不要创建一个管理员用户并在 10 个人之间分享密码。创建一个管理员角色，并在有限的时间内将其分配给需要它的人。
 
-### Audit Permissions Frequently
+### 经常审计权限
 
-It is easy to make mistakes or perform malicious actions. At the very least, a company should audit permissions regularly, and ensure that only the proper people have the minimum level of access necessary for their roles.
+这很容易犯错或进行恶意操作。至少，公司应该定期审计权限，并确保只有适当的人拥有其角色所需的最低级别的访问权限。
 
-You could also send an email to a certain team when a suspicious action happens. For example, assigning an admin role to a new hire.
+你也可以在可疑的行动发生时向某个团队发送电子邮件。例如，将管理员角色分配给一个新雇员。
 
-### Set Up Boundaries Beforehand
+### 预先设置边界
 
-If an IAM solution allows for it, add boundaries to your ecosystem.
+如果 IAM 解决方案允许，请将边界添加到你的生态系统中。
 
-According to Amazon's documentation:
+根据亚马逊的文档:
 
-> A permissions boundary is an advanced feature for using a managed policy to set the maximum permissions that an identity-based policy can grant to an IAM entity. An entity's permissions boundary allows it to perform only the actions that are allowed by both its identity-based policies and its permissions boundaries.
+> 权限边界（permissions boundary）是一种高级功能，用于使用管理策略来设置基于身份的策略可以授予 IAM 实体的最大权限。一个实体的权限边界允许它只执行其基于身份的策略和其权限边界所允许的行动。
 
-(I know, I know — I promised to be vendor-agnostic 🙂)
+(我知道，我知道——我答应过要与供应商无关的 🙂)
 
-In layman's terms, you can define the "maximum" permissions that can be assigned to anyone.
+用通俗的话说，你可以定义可以分配给任何人的 `最大` 权限。
 
-For example, a user will at most be able to view the logs from the relevant tool and restart a service. If someone attempts to get a role to create a new virtual machine they will be disallowed.
+例如，一个用户最多只能从相关工具中查看日志，并重新启动一项服务。如果有人试图让一个角色创建一个新的虚拟机，他们将被禁止。
 
-## Conclusion
+## 结论
 
-Thank you for reading this far. I hoped you enjoyed this introduction to IAM.
+谢谢你读到这里。我希望你喜欢这个关于 IAM 的介绍。
 
-If you have any questions, please reach out to me on Twitter.
+如果你有任何问题，请在 [Twitter](https://twitter.com/PeriGk_Tech) 上与我联系。

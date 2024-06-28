@@ -82,13 +82,13 @@ console.log(profile()) // 'Oluwatobi Sofela'
 
 **writeName() scope ---> sayName() scope ---> profile() scope ---> global scope**
 
-换言之，从`fullName`变量的执行作用域到它的词法作用域（此处指全局作用域）之间有4层作用域。
+换言之，从`fullName`变量的执行作用域到它的词法作用域（此处指全局作用域）之间有 4 层作用域。
 
 **注意：** 在[JavaScript](https://www.codesweetly.com/html-css-javascript/)作用域链中，全局作用域是整个作用域链的终点。
 
 ## 作用域链是如何工作的？
 
-Javascript的作用域链规定了编译器在查找 **被调用变量** 的词法作用域时所遵循的查找规则。
+Javascript 的作用域链规定了编译器在查找 **被调用变量** 的词法作用域时所遵循的查找规则。
 
 考虑如下示例代码：
 
@@ -167,17 +167,17 @@ console.log(profile())
 
 [**点击查看源代码**](https://stackblitz.com/edit/web-platform-9mpvfv?file=script.js)
 
-**特别强调3点：**
+**特别强调 3 点：**
 
 -   假如编译器没有在任何作用域中找到`fullName`，那么编译器将返回一个引用错误`Uncaught ReferenceError: fullName is not defined`。
--   全局作用域是Javascript作用域链的最后一个作用域，即全局作用域是查找的终点。
+-   全局作用域是 Javascript 作用域链的最后一个作用域，即全局作用域是查找的终点。
 -   一个内部作用域（子作用域）可以访问它的外部作用域（父作用域），但是外部作用域不能访问它的子作用域。
     举个例子，在上面代码中，`writeName()`可以访问它的任何父级作用域（比如`sayName()`的局部作用域，`profile()`的局部作用域，或者全局作用域）。
     但是，无论是`sayName()`和`profile()`的局部作用域，还是全局作用域都不能访问`writeName()`的作用域。
 
 ## 作用域小结
 
-Javascript中所有的作用域都是一个可被访问的区间。
+Javascript 中所有的作用域都是一个可被访问的区间。
 
 因此，如果你女（男）朋友打电话让你去他的私人作用域时，切记他们是在邀请你去他们的私人空间 😜!
 
@@ -249,7 +249,7 @@ console.log(getName())  // 'Oluwatobi'
 
 ## 词法作用域如何工作？
 
-Javascript表达式的词法作用域决定了哪些代码可以访问它。
+Javascript 表达式的词法作用域决定了哪些代码可以访问它。
 
 换言之，只有词法作用域内的代码才可以访问该作用域内部的代码。
 
@@ -311,9 +311,9 @@ console.log(displayFullName());
 
 **注意：**
 
--   上述2个示例中，`displayFullName()`不能访问`showLastName()`中`lastName`变量。
+-   上述 2 个示例中，`displayFullName()`不能访问`showLastName()`中`lastName`变量。
     但`displayFullName()`可以调用`showLastName()`，而`showLastName()`返回了`lastName`变量的值。
--   词法作用域的替换方案是[动态作用域](https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope_2)，但是除了在极少的开发语言（比如bash脚本）中使用外，很少使用它。
+-   词法作用域的替换方案是[动态作用域](https://en.wikipedia.org/wiki/Scope_(computer_science)#Lexical_scope_vs._dynamic_scope_2)，但是除了在极少的开发语言（比如 bash 脚本）中使用外，很少使用它。
 
 ## 总结
 
@@ -323,4 +323,4 @@ console.log(displayFullName());
 
 ## 写在最后
 
-这篇文章不仅讨论了在Javascript中什么是词法作用域，还探讨了为什么它是一个很重要的编程概念。 感谢你的阅读！
+这篇文章不仅讨论了在 Javascript 中什么是词法作用域，还探讨了为什么它是一个很重要的编程概念。 感谢你的阅读！

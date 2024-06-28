@@ -1,40 +1,40 @@
-> -   原文地址：[How to Receive Emails from Your Site's "Contact Us" form Using AWS SES, Lambda, & API Gateway](https://www.freecodecamp.org/news/how-to-receive-emails-via-your-sites-contact-us-form-with-aws-ses-lambda-api-gateway/)
-> -   原文作者：Adham El Banhawy
-> -   译者：
-> -   校对者：
+> - 原文地址：[How to Receive Emails from Your Site's "Contact Us" form Using AWS SES, Lambda, & API Gateway](https://www.freecodecamp.org/news/how-to-receive-emails-via-your-sites-contact-us-form-with-aws-ses-lambda-api-gateway/)
+> - 原文作者：Adham El Banhawy
+> - 译者：[luojiyin](https://github.com/luojiyin1987)
+> - 校对者：
 
 ![How to Receive Emails from Your Site's "Contact Us" form Using AWS SES, Lambda, & API Gateway](https://images.unsplash.com/photo-1596524430615-b46475ddff6e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMTc3M3wwfDF8c2VhcmNofDF8fGNvbnRhY3QlMjB1c3xlbnwwfHx8fDE2MTY1ODExNjc&ixlib=rb-1.2.1&q=80&w=2000)
 
-I was recently building a simple landing page website for a client who wanted to receive emails through their website without sharing their email.
+我最近在为一个客户建立一个简单的登陆页面网站，该客户希望通过他们的网站接收电子邮件，而不需要分享他们的电子邮件。
 
-Honestly, I had never tried to implement that functionality myself before. I was always used to having a simple "Contact Us" button with an anchor tag and a `mailto` in the *href* attribute like this:
+说实话，我以前从未尝试过自己实现这一功能。我总是习惯于有一个简单的 "Contact Us""按钮，有一个锚标签(anchor)，在 *href* 属性里有一个 `mailto`，像这样。
 
 ```html
 <button>
-	<a href="mailto:myemail@example.com">Contact Me</a>
+ <a href="mailto:myemail@example.com">Contact Me</a>
 </button>
 
 ```
 
-But this approach has two inconveniences:
+但这种方法有两个不便之处:
 
-1.  It forces both parties, the user who wants to send the message and the site owner who receives it, to share their emails with one another. While this is OK for some, it is not ideal for privacy\-minded individuals.
-2.  For the site visitor, clicking the link forces them to open their default mail program on their device, and that can be frustrating. What if they're using a public computer? What if they're not logged in? What if they simply don't want to use their mail program?
-    Yes, technically they can just grab the recipient's email address and send the message via their browser or wherever they're logged in. But those are all extra steps and hurdles that can discourage users from sending their messages and the business might lose potential feedback or opportunities.
+1. 它迫使双方，即想发送消息的用户和接收消息的网站所有者，彼此分享他们的电子邮件。虽然这对某些人来说是可以的，但对注重隐私的人来说，这并不理想。
+2. 对于网站访问者来说，点击链接迫使他们打开他们设备上的默认邮件程序，这可能是令人沮丧的。如果他们使用的是一台公共电脑呢？如果他们没有登录呢？如果他们根本不想使用他们的邮件程序呢？
+是的，从技术上讲，他们可以直接抓取收件人的电子邮件地址，并通过他们的浏览器或他们登录的地方发送消息。但这些都是额外的步骤和障碍，会使用户不愿意发送他们的信息，企业可能会失去潜在的反馈或机会。
 
-For this reason, we chose to go with an email form from which the user can simply write in their message and click submit, sending an email to the site's owner without ever leaving the website.
+出于这个原因，我们选择了一个电子邮件表格，用户可以简单地写下他们的信息并点击提交，在不离开网站的情况下向网站的主人发送电子邮件。
 
-A quick Google search shows that there are third party tools/widgets that you could embed in a website, but most of them are branded and require paid subscription for full customization.
+谷歌快速搜索显示，有一些第三方工具/小工具可以嵌入到网站中，但它们大多是品牌，需要付费订阅才能完全定制(译者注：免费版的，有功能上或者数量上的限制，或者有广告插入)。
 
-And unless you are using a CMS like WordPress that has a built\-in plugin that can do that, that's an inconvenient recurring cost.
+除非你使用的是像 WordPress 这样的 CMS，有一个内置的/插件可以做到这一点，否则这就是一个不方便的日常性费用。
 
-I instead chose to code that feature myself so I would have full control.
+我选择了自己编写该功能的代码，这样我就可以完全控制了。
 
-For the purposes of this guide I will recreate the steps I took to implement that functionality using HTML and AWS services.
+为了本指南的目的，我将重现我使用 HTML 和 AWS 服务实现该功能的步骤。
 
-## The HTML Form
+## HTML 表格
 
-I'll keep it super simple here and go with a basic HTML form with no CSS, just to test our desired functionality.
+我将在这里保持超级简单，使用一个没有 CSS 的基本 HTML 表单，只是为了测试我们想要的功能。
 
 ```html
 <h2>Contact Us</h2>
@@ -55,9 +55,9 @@ I'll keep it super simple here and go with a basic HTML form with no CSS, just t
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-61.png)
 
-Nothing fancy to see here...
+这里没有什么花哨的东西可看...
 
-Now we want to handle the submit functionality with JavaScript.
+现在我们要用 JavaScript 来处理提交功能。
 
 ```js
 const form = document.querySelector('form')
@@ -74,76 +74,75 @@ form.addEventListener('submit', event => {
 
 ```
 
-At this point, we have a form that gets input from the user and JavaScript code that just displays the results to the console.
+在这一点上，我们有一个从用户那里获得输入的表单，以及只是将结果显示在控制台(console) 的 JavaScript 代码。
 
-We can leave it at that for now and start working on the backend services that will receive the form data and send an email with that data.
+我们现在可以先不考虑这个问题，而是开始处理后端服务，这些后端服务将接收表单数据，并将这些数据发送电子邮件。
 
-## The Backend Overview
+## 后端简介
 
-Let's dive into AWS and what services we are going to use and how.
+让我们深入了解 AWS，以及我们将使用哪些服务和如何使用。
 
-As mentioned in the title, we will use **AWS Lambda** and **Simple Email Service** (SES). SES is a serverless messaging service that allows you to send email messages when invoked. AWS Lambda allows you to write server\-side code to execute in response to events.
+正如标题中提到的，我们将使用 **AWS Lambda** 和 **Simple Email Service**（SES）。SES 是一个无服务器 (serverless) 的消息传递服务，允许你在调用时发送电子邮件。AWS Lambda 允许你编写服务器/端代码，以响应事件的发生而执行。
 
-We will also use **API Gateway** which enables us to invoke Lambda functions via HTTP.
+我们还将使用 **API 网关**，使我们能够通过 HTTP 调用 Lambda 函数。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-62.png)
 
-In this case, when our form is submitted, the following workflow will happen:
+在这种情况下，当我们的表单被提交时，将发生以下工作流程:
 
-1.  Our browser (JavaScript) will make a post request, with the form data in the request body, to an endpoint URL specified by AWS API Gateway
-2.  The API Gateway will validate this request. Then it will trigger the Lambda function which accepts an event parameter. API Gateway will put the form data in the body property of the event parameter.
-3.  Our Lambda function will extract the data from the event body and we will then use this data to build the body of the email we want to send as well as its recipients. Our function will then use the AWS SDK to invoke SES with the email data.
-4.  Once SES gets the *sendMail* request, it turns the email data into an actual text email and sends it to the recipient via AWS's own mail servers.
+1. 我们的浏览器（JavaScript）将向 AWS API Gateway 指定的端点(endpoint) URL 发出一个 post 请求，请求体中包含表单数据
+2. API 网关将验证这个请求。然后它将触发 Lambda 函数，该函数接受一个事件参数。API Gateway 将把表单数据放在事件参数的 body 属性中。
+3. 我们的 Lambda 函数将从事件主体中提取数据，然后我们将使用这些数据来建立我们想要发送的电子邮件的主体以及它的收件人。然后，我们的函数将使用 AWS SDK 来调用 SES 的电子邮件数据。
+4. 当 SES 收到 *sendMail* 请求，它就会将电子邮件数据变成实际的文本电子邮件，并通过 AWS 自己的邮件服务器将其发送给收件人。
+一旦电子邮件被发送，我们的浏览器将收到一个状态代码为 200 的响应和一个成功信息。如果 AWS 云中的任何步骤失败，响应将有一个 500 状态代码。
 
-Once the email is sent, our browser will receive a response with status code 200 and a success message. If any step in the AWS cloud fails, the response will have a 500 status code.
+## 第 1 步：如何建立 SES
 
-## Step 1: How to Set Up SES
+实际上，我们将按照相反的顺序来设置每一个步骤，从 SES 开始，这将会更容易。
 
-We're actually going to set up each one of these steps in the reverse order, beginning with SES, which is going to be easier.
-
-First in your AWS console, go to the SES service —> then click on Email Addresses in the side menu —> then click on the "Verify a New Email Address" button.
+首先在你的 AWS 控制台，进入 `SES service` —> 然后点击侧面菜单中的 `Email Addresses` —> 然后点击 "Verify a New Email Address" 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-63.png)
 
-In the dialogue that opens up, enter the email address that you want the SES service to put as the *sender* when it sends the email.
+在打开的对话框中，输入你希望 SES 服务在发送电子邮件时的发件人地址。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-64.png)
 
-This will send an email to the email address you put with a link to click to verify. This is how AWS knows that the owner of the email consents to having their email address used as the sender address.
+这将向你输入的电子邮件地址发送一封电子邮件，其中有一个链接，可以点击验证。AWS 将知道电子邮件的所有者同意将他们的电子邮件地址作为发件人地址。
 
-Until you verify the email, the SES email dashboard will keep the verification status as pending.
+在你验证电子邮件之前，SES 电子邮件仪表板将保持验证状态为待定（pendin verification）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-65.png)
 
-Once the email owner opens the email they received from AWS and clicks the verification link in it, the verification status should change to verified (refresh the page to see the change).
+当电子邮件所有者打开他们从 AWS 收到的电子邮件，并点击其中的验证链接，验证状态应该变为已验证（verified ，刷新页面以看到变化）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-66.png)
 
-And that's all you have to do for SES. You can optionally test the service by selecting your verified email in the list and clicking the "Send a Test Email" button. This will let you put in a recipient's email address, a subject, and a message and send it.
+而这就是你为 SES 所要做的一切。你可以选择测试服务，在列表中选择你经过验证的电子邮件，然后点击 "Send a Test Email" 按钮。这将让你输入收件人的电子邮件地址、主题（subject）和信息(message)并发送。
 
-The email sent is going to be signed by AWS servers and your verified address should be the sender. It should look like this:
+发送的电子邮件将由 AWS 服务器签署，发件人应该是你输入的发件人地址。它应该看起来像这样。:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-67.png)
 
-## Step 2: How to Set Up Lambda
+## 第 2 步：如何设置 Lambda
 
-Now this is the most fun part. We are going to create a function that is going to receive the form data and call SES.
+现在这是最有趣的部分。我们将创建一个函数，用来接收表单数据并调用 SES。
 
-The beauty of Lambda functions is that you don't have to worry about running your backend code on a server 24/7 and maintaining that server. It's *serverless*.
+Lambda 函数的好处是，你不必担心在服务器上 24/7 运行你的后端代码，也不必担心维护服务器。它是 *无服务器的(serverless)*。
 
-But that doesn't mean there are no servers involved. AWS is going to take care of that under the hood so you can only focus on writing code, not maintaining servers. Additionally, you only get billed for the number of times your function gets called and the amount of time it takes to execute, and it's [incredibly cheap](https://aws.amazon.com/lambda/pricing/)!
+但这并不意味着不涉及服务器。AWS 将幕后处理这些问题，因此你可以只专注于编写代码，而不是维护服务器。此外，你只需按你的函数被调用的次数和执行的时间来收费，而且是 [难以置信的便宜](https://aws.amazon.com/lambda/pricing/)!
 
-### Create an IAM Role and Configure it
+### 创建一个 IAM 角色并进行配置
 
-Before we start writing our lambda function, we need to create an IAM *role* to attach it to the function and grant it permissions (referred to as policies in AWS) to invoke the SES service.
+在我们开始编写 lambda 函数之前，我们需要创建一个 IAM *role（角色）*，将其附加到函数上，并授予它调用 SES 服务的权限（在 AWS 中被称为策略）。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-68.png)
 
-From your AWS console, go to the IAM service —> click on Policies in the side menu —> then click on the "Create Policy" button.
+从你的 AWS 控制台，进入 IAM service->点击侧面菜单中的 `service` ->然后点击 `Create Policy` 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-69.png)
 
-In the policy creation page, go to the JSON tab and paste the following permissions, then click Next.
+在策略创建页面，进入 JSON 标签，粘贴以下权限，然后点击 `Next`。
 
 ```json
 {
@@ -163,43 +162,44 @@ In the policy creation page, go to the JSON tab and paste the following permissi
 
 ```
 
-In the third screen, name the policy and click the "Create Policy" button.
+在第三个屏幕中，为政策命名，并点击 `Create Policy` 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-70.png)
 
-Now we create an IAM *role* which will be attached to the lambda and link it to the permissions policy which we just created.
+现在我们创建一个 IAM *role(角色)*，它将被附加到 lambda 上，并将其与我们刚刚创建的权限策略联系起来。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-71.png)
 
-From the IAM side menu, click Roles then click the "Create role" button.
+从 IAM 侧面的菜单，点击角色，然后点击 `Create role` 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-72.png)
 
-In the role creation screen, make sure the type selected is "AWS service" and select the Lambda case then click on the "Next:Permissions" button.
+在角色创建界面，确保选择的类型是 "AWS service"，并选择 `Lambda case`，然后点击 "Next:Permissions"按钮。
+
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-73.png)
 
-On the next screen, search for the policy we created earlier by its name and select it, then click next.
+在下一个屏幕上，按名称搜索我们先前创建的 `policy` 并选择它，然后点击 `Next`。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-74.png)
 
-On the review screen, give the role a name you can remember then click on "Create role".
+查看屏幕，给这个角色起一个你能记住的名字，然后点击 "Create role"。
 
-Now we can create a new lambda function. Go to the Lambda service dashboard and click the "Create Function" button.
+现在我们可以创建一个新的 lambda 函数。转到 Lambda 服务仪表板，点击 "Create Function" 按钮。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-75.png)
 
-In the function creation screen, name your function, select the "Author from scratch" option, and choose Node.js as the runtime.
+在函数创建界面，命名你的函数，选择 "Author from scratch" 选项，并选择 Node.js 作为运行时间。
 
-Under "Change default execution role" choose the "Use an existing role" option then choose the name of the role you created in the previous step from the "Existing role" drop down.
+在 "Change default execution role（改变默认执行角色）"下，选择 "Use an existing role（使用现有角色）"选项，然后从 "Existing role（现有角色）"下拉菜单中选择你在前一步创建的角色名称。
 
-Finally, click the "Create function" button to create the function.
+最后，点击 "Create function"按钮来创建函数。
 
-### Write the Code and Test it
+### 编写代码并测试它
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-76.png)
 
-In the editor, open the index.js file (this is the file that will be executed when your lambda is called), and replace its content with the following code:
+在编辑器中，打开 index.js 文件（这是在你的 lambda 被调用时将被执行的文件），用以下代码替换它:
 
 ```js
 const aws = require("aws-sdk");
@@ -226,11 +226,11 @@ exports.handler = async function (event) {
 
 ```
 
-Notice that on line 2 we are using the AWS SDK and creating an SES instance. The reason I chose **us\-east\-1** as the region is because that's *where I registered & verified my email*. Be sure to replace the email and use the AWS region where you registered your email.
+请注意，在第 2 行，我们正在使用 AWS SDK 并创建一个 SES 实例。我之所以选择 **us-east\-1** 作为区域，是因为那是我注册和验证电子邮件的地方。请确保你的电子邮件使用你注册电子邮件的 AWS 地区。
 
-Now to test this function, click on the "Deploy" button. Then click on the Test button —> Configure test event which should open up a test configuration dialogue where you can create a new test event.
+现在要测试这个功能，点击 "Deploy" 按钮。然后点击 "Test" 按钮->配置测试事件，这将打开一个测试配置对话框，你可以创建一个新的测试事件。
 
-In the test event body editor, enter the following JSON which mimics what will eventually come from our browser request. Then click create.
+在测试事件主体编辑器中，输入以下 JSON，模仿最终将来自我们的浏览器请求的内容。然后点击创建。
 
 ```json
 {
@@ -243,32 +243,32 @@ In the test event body editor, enter the following JSON which mimics what will e
 
 ```
 
-Now clicking the test button will run the test we just created. It should open a new tab in the editor to show us the logs created from running the function, which should look like this:
+现在点击 `test` 按钮将运行我们刚刚创建的测试。它应该在编辑器中打开一个新的标签，向我们展示运行该函数所产生的日志，它应该是这样的:
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-77.png)
 
-Notice the event object we logged out shows here under Function logs with the body data we used in the test event.
+注意，我们登录的事件对象在这里显示在功能日志下，其中有我们在测试事件中使用的主体数据。
 
 This test should have sent an email to my inbox as well – let's see if that happened.
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-78.png)
 
-Yep, just as expected. And that happened almost immediately after running the test.
+是的，就像预期的那样。而这几乎是在运行测试后立即发生的。
 
-Now let's modify our function code to get a more meaningful message from the test data.
+现在让我们修改我们的函数代码，从测试数据中得到一个更有意义的信息。
 
 ```js
 const aws = require("aws-sdk");
 const ses = new aws.SES({ region: "us-east-1" });
 exports.handler = async function (event) {
   console.log('EVENT: ', event)
-	// Extract the properties from the event body
+ // Extract the properties from the event body
   const { senderEmail, senderName, message } = JSON.parse(event.body)
   const params = {
     Destination: {
       ToAddresses: ["the.benhawy@gmail.com"],
     },
-		// Interpolate the data in the strings to send
+  // Interpolate the data in the strings to send
     Message: {
       Body: {
         Text: {
@@ -286,33 +286,33 @@ exports.handler = async function (event) {
 
 ```
 
-It's important to note that when API Gateway calls our function it will pass a string to the event body. This is why I use `JSON.parse` on event.body, to turn it into JSON and extract our sender's email, name, and message. Then I use those variables in the email body text and subject using string interpolation.
+需要注意的是，当 API Gateway 调用我们的函数时，它将传递一个字符串给事件主体（event body）。这就是为什么我在 event.body 上使用`JSON.parse`，把它变成 JSON 并提取我们发件人的电子邮件、姓名和信息。然后我在邮件正文文本和主题中使用这些变量，使用字符串插值。
 
-If you try the test it, the code will return an error. This is because the test is passing a JSON object to event.body and we are using JSON.parse on JSON, which causes an error in JavaScript.
+如果你尝试测试它，代码将返回一个错误。这是因为测试将一个 JSON 对象传递给 event.body，而我们在 JSON 上使用 JSON.parse，这在 JavaScript 中会导致错误。
 
-Sadly, the test editor doesn't allow us to pass strings to the event, so we'll have to test that later from somewhere else.
+遗憾的是，测试编辑器不允许我们向事件传递字符串，所以我们必须在以后从别的地方测试。
 
-## Step 3: How to Set Up API Gateway
+## 第 3 步：如何设置 API 网关
 
-Next, the last AWS service we are going to use is API Gateway, which will enable our browser to send HTTP requests to the Lambda function we created.
+接下来，我们要使用的最后一项 AWS 服务是 API 网关，它将使我们的浏览器能够向我们创建的 Lambda 函数发送 HTTP 请求。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-79.png)
 
-Without leaving your lambda function page, expand the "Function overview" section and click on "Add trigger".
+不用离开你的 lambda 函数页面，展开 "Function overview" 部分并点击 "Add trigger（添加触发器）"。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-80.png)
 
-Next, choose API Gateway from the dropdown, HTTP API as the API type, "Open" as the security mechanism, and check the CORS checkbox option. Then click "Add".
+接下来，从下拉菜单中选择 `API Gateway` ，`HTTP API` 作为 API 类型，"Open(开放)" 作为安全策略，并选中 `CORS` 复选框选项。然后点击 "Add"。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-81.png)
 
-You should be redirected to the "Configuration" tab of your function, showing you the new API Gateway trigger you just created. From there, note the **API endpoint**. This is the URL we are going to be calling from our browser with the form data.
+你应该被重定向到你的函数的 "Configuration" 标签，显示你刚刚创建的新的 API 网关触发器。在那里，注意**API endpoint**。这就是接收从浏览器中表单发出数据的 URL。
 
-## Back to the HTML
+## 回到 HTML
 
-We can finally test the form to see if it sends emails or not.
+我们最后可以测试一下这个表单，看看它是否发送了邮件。
 
-Let's modify our JavaScript to handle sending the request when the form is submitted.
+让我们修改我们的 JavaScript 来处理表单提交时的发送请求。
 
 ```js
 const form = document.querySelector("form");
@@ -322,11 +322,11 @@ form.addEventListener("submit", (event) => {
 
   const { name, email, message } = event.target;
 
-	// Use your API endpoint URL you copied from the previous step
+ // Use your API endpoint URL you copied from the previous step
   const endpoint =
     "<https://5ntvcwwmec.execute-api.us-east-1.amazonaws.com/default/sendContactEmail>";
   // We use JSON.stringify here so the data can be sent as a string via HTTP
-	const body = JSON.stringify({
+ const body = JSON.stringify({
     senderName: name.value,
     senderEmail: email.value,
     message: message.value
@@ -353,26 +353,26 @@ form.addEventListener("submit", (event) => {
 
 ```
 
-Now, the moment of truth: fill in the form and click submit. If you see the success message, that means the email was sent.
+现在，是关键时刻：填写表格并点击提交。如果你看到成功信息，这意味着电子邮件已经发送。
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-82.png)
 
-Since I own the email the message was sent to, I take a quick look at my inbox to see that I received an email from myself with the details I used in the form!
+由于我向自己的邮箱发送电子邮件，因此我快速查看我的收件箱，以查看我收到了一封来自我自己的电子邮件，其中包含我在表单中使用的详细信息！
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/image-83.png)
 
-If you've followed along, you now have a functioning "Contact Us" form that you can plug into any website. And you'll only get billed for when it is actually used.
+跟着教程，你现在拥有一个功能正常的 "Contact Us" 的表单，你可以将其插入任何网站。 而且你只会在实际使用时才需要付费。
 
-I don't know about you, but I think this is pretty awesome and almost magical! And it's a nice, practical way to use cloud computing/services in your workflow.
+我不知道你怎么想的，但我认为这非常棒，几乎是神奇的！而且这是一个很好的、实用的方法。这是一种在你的工作流程中使用云计算/服务的好的、实用的方法。
 
-Of course you can customize this flow in terms of using a framework on the frontend like React or Vue or a different programming language for the Lambda like Python or Go.
+当然，你可以定制这个流程，在前端使用 React 或 Vue 等框架，或使用 Python 或 Go 等不同的编程语言来实现 Lambda。
 
-## Before you go...
+## 在你离开之前
 
-Thank you for reading this far! I write posts about JavaScript, cloud development, and my personal educational & professional experiences as a self\-taught developer. So feel free to follow me on twitter [@adham\_benhawy](https://twitter.com/adham_benhawy) where I tweet about them too!
+感谢你读到这里! 我写的文章是关于 JavaScript、云计算开发，以及我作为一个自学成才的开发者的个人教育和职业经历。你可以在 twitter 上关注我 [@adham\_benhawy](https://twitter.com/adham_benhawy)，我也会在 twitter 上发表相关的文章!
 
-### Resources
+### 资源
 
-*   [https://aws.amazon.com/premiumsupport/knowledge\-center/lambda\-send\-email\-ses/](https://aws.amazon.com/premiumsupport/knowledge-center/lambda-send-email-ses/)
-*   [https://docs.aws.amazon.com/lambda/latest/dg/lambda\-invocation.html](https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html)
-*   [https://docs.aws.amazon.com/lambda/latest/dg/services\-apigateway.html?icmpid=docs\_lambda\_console](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html?icmpid=docs_lambda_console)
+- [https://aws.amazon.com/premiumsupport/knowledge\-center/lambda\-send\-email\-ses/](https://aws.amazon.com/premiumsupport/knowledge-center/lambda-send-email-ses/)
+- [https://docs.aws.amazon.com/lambda/latest/dg/lambda\-invocation.html](https://docs.aws.amazon.com/lambda/latest/dg/lambda-invocation.html)
+- [https://docs.aws.amazon.com/lambda/latest/dg/services\-apigateway.html?icmpid=docs\_lambda\_console](https://docs.aws.amazon.com/lambda/latest/dg/services-apigateway.html?icmpid=docs_lambda_console)

@@ -1,39 +1,39 @@
 > -  原文地址：[The Beginner's Guide to Sass](https://www.freecodecamp.org/news/the-beginners-guide-to-sass/)
 > -  原文作者：[Israel Mitolu](https://www.freecodecamp.org/news/author/israelmitolu/)
-> -  译者：
+> -  译者：Papaya HUANG
 > -  校对者：
 
-![The Beginner's Guide to Sass](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/The-Beginner-s-Guide-to-SASS.png)
+![Sass初学者指南](https://www.freecodecamp.org/news/content/images/size/w2000/2022/04/The-Beginner-s-Guide-to-SASS.png)
 
-Have you ever wondered what SASS stands for? Or perhaps you already know what it is but haven't taken the time to study and use it.
+你是否好奇 SASS 到底是什么？或者你已经知道 SASS，但还没来得及去学习和使用。
 
-Whether you're learning about it for the first time, or want to brush up on your knowledge of the subject, this is the article for you.
+不论你是首次学习 Sass，还是更新这个主题的知识，这篇文章都很适合你。
 
-In this post, you'll learn the fundamentals of Sass, what it is, and how to use Sass's awesome features to speed up the process of writing styles.
+在这篇文章中，你将学习到 Sass 的基础，Sass 到底是什么，如果使用 Sass 超棒的功能来提速书写样式的过程。
 
-## Prerequisites
+## 前提条件
 
-This article assumes that you have:
+这本文章默认你：
 
--   Basic understanding of HTML & CSS
--   A code editor (VS Code recommended). If you don't have it installed, download it [here](http://code.visualstudio.com/).
--   And a browser (Chrome or Firefox recommended)
+-  基本了解 HTML 和 CSS
+-  安装了代码编辑器（推荐使用 VS Code。如果你尚未安装，可以在此处[下载](http://code.visualstudio.com/).
+-  安装了浏览器（推荐使用 Chrome 或者 Firefox）
 
-## What exactly is Sass?
+## 究竟什么是 Sass
 
-Sass (Syntactically Awesome Style Sheets) is a CSS preprocessor that gives your CSS superpowers.
+Sass（英文全称是 Syntactically Awesome Style Sheets）是一种 CSS 预处理器，使用它可以使你的 CSS 拥有超能力。
 
-Let's face it: writing CSS can be difficult at times, especially in today's world of increasingly complex user interfaces.
+你不得不承认：常常你会觉得用 CSS 写样式很困难，特别是现在用户交互界面（UI）变得越来越复杂。
 
-And many times, you'll find that you're repeating yourself often.
+你常常会觉得自己在重复自己。
 
-Sass comes to the rescue in this situation. It helps you stick to the DRY (Do Not Repeat Yourself) philosophy when writing CSS.
+Sass 就可以解决这个问题，在你写样式的时候，帮助你坚守 DRY（Do Not Repeat Yourself 不重复自己）准则。
 
-Sass provides a compiler that allows us to write stylesheets in two different syntaxes, indented and SCSS. Let's look at each now.
+Sass 的编译器可以让我们用两种语法来写样式表——缩进语法和 SCSS。下文会逐个讲解。
 
-### Indented syntax
+### 缩进语法
 
-This is the older syntax that is indented, and gets rid of the curly braces and semi-colons. It has a file extension of `.sass`.
+缩进语法是 Sass 的原始语法，采用缩进的格式，但是取消了花括号和分号。 其文件扩展名为 `.sass`.
 
 ```sass
 nav
@@ -50,11 +50,11 @@ nav
     text-decoration: none
 ```
 
-### SCSS syntax
+### SCSS 语法
 
-This is the newer and more popular syntax. It is essentially a subset of the CSS3 syntax. This means that you can write regular CSS with some additional functionalities.
+相比缩进语法，这个语法较新也更受欢迎。SCSS 语法实质是 CSS3 语法的子集。这意味这你可以直接用常规的 CSS 加上一些新增的函数来书写 SCSS。
 
-Due to its advanced features it is often termed as _Sassy CSS_. It has a file extension of `.scss`.
+由于是在 CSS 的基础上提供高级功能，所以 SCSS 语法又被称作 _Sassy CSS_。其文件扩展名为 `.scss`.
 
 ```scss
 nav {
@@ -74,34 +74,33 @@ nav {
 }
 ```
 
-> Quick Disclaimer: This article uses the SCSS syntax because it's more widely used.
+> 免责声明: 本文使用 SCSS 语法是因为 SCSS 语法被更多人使用。
 
-## How Does Sass Work?
+## Sass 的工作机制
 
-Sass works in such a way that when you write your styles in a `.scss` file, it gets compiled into a regular CSS file. The CSS code is then loaded into the browser.
+当你写了一个扩展名为 `.scss`的文件，该文件会被编译成正常的 CSS 文件。然后 CSS 代码在浏览器加载。
+这就是为什么我们成 Sass 为预处理器。
 
-That is why it's called a Preprocessor.
+## 为什么要使用 Sass?
 
-## Why should you use Sass?
+-   **易于学习**: 如果你已经熟悉 CSS，你会欣喜地发现 Sass 和 CSS 的语法很相似，所以看完这篇教程，你就可以开始使用 Sass 了;)
+-   **兼容性强**: Sass 兼容所有版本的 CSS，所以你可以使用所有 CSS 库。
+-   **提高效率**: Sass 强大的功能可以避免 CSS 的重复。
+-   **可复用的代码**: Sass 中可以使用变量和代码块（mixins），并且可以重复使用。这样就节约了时间，提高了编写代码的速度。
+-   **有条理的代码**: 在 Sass 中可以使用片段（partials）来整理代码。
+-   **跨浏览器兼容**: Sass 会被编译成 CSS，并且自动添加浏览器引擎前缀，这样你就不需要手动编写了。
 
--   **Easy to learn**: If you are familiar with CSS already, then you'll be glad to know that Sass actually has a similar syntax, and so you can start using it, even after this tutorial ;)
--   **Compatibility**: It is compatible with all versions of CSS. So, you can use any available CSS libraries.
--   **Saves time**: It helps reduce the repetition of CSS, because of its powerful features.
--   **Reusable code**: Sass allows for variables and chunks of code (mixins) that can be reused over and over again. This helps you save time and makes you able to code faster.
--   **Organized Code**: Sass helps keep your code organized by using partials.
--   **Cross Browser Compatibility**: Sass gets compiled into CSS and adds all the necessary vendor prefixes so you don't have to worry about manually writing them out.
+## Sass 的功能
 
-## Features of Sass
+以下功能使得 Sass 成为拥有超能力的 CSS：
 
-Here are some of the features that make Sass truly CSS with Superpowers:
+### Sass 中的变量
 
-### Variables in Sass
+在 Sass 中可以声明变量，这是 Sass 其中一个强大的功能，因为我们可以根据各种属性来定义变量，并且在任何文件中使用这些变量。
 
-You can declare variables in Sass. This is one of Sass's strengths since we can define variables for various properties and use them in any file.
+使用变量的好处是，一旦值发生了变化，你只要编写一行代码进行修改。
 
-The benefit here is that if that value changes, you simply need to update a single line of code.
-
-This is done by naming a variable with a dollar symbol `$` and then referencing it elsewhere in your code.
+具体操作办法是使用美元符号 `$`来命名变量， 然后在你代码的其他地方引用这个变量。
 
 ```scss
 $primary-color: #24a0ed;
@@ -115,11 +114,11 @@ button {
 }
 ```
 
-### Nesting in Sass
+### Sass 中的嵌套
 
-Most of the time, while writing CSS, classes are often duplicated. We can avoid this duplication by nesting styles inside the parent element.
+在写 CSS 的时候，大多数情况下需要重复类选择器，在 Sass 中我们可以在父元素中嵌套来避免这样的重复。
 
-In CSS,
+在 CSS 中：
 
 ```css
 nav {
@@ -147,7 +146,7 @@ nav li a:hover {
 }
 ```
 
-With Sass, the above code can be written like this:
+在 Sass，同样的代码可以写作：
 
 ```scss
 nav {
@@ -175,25 +174,25 @@ nav {
 }
 ```
 
-### Parent Selector
+### 父选择器
 
-In the Sass code above, you might notice the ampersand symbol `&` used with the hover pseudo-class. This is called a Parent Selector.
+在上面 Sass 的代码片段中你可能注意到了和号 `&` 搭配了一个悬停的伪类。这就是父选择器。
 
-> The parent selector, `&`, is a special selector invented by Sass that's used in nested selectors to refer to the outer selector. Source – [Sass Documentation](https://sass-lang.com/documentation/style-rules/parent-selector)
+> 父选择器——`&`是 Sass 中一个特殊的选择器，一般用于嵌套选择器中，指代外层的选择器。 资源出处 – [Sass 文档](https://sass-lang.com/documentation/style-rules/parent-selector)
 
-So, in the case of the code above, `&` will refer to the parent which is the anchor tag `a`.
+所以在上面的代码片段中， `&`指代的父元素是锚点标签`a`.
 
-> You can check out my [article](https://israelmitolu.hashnode.dev/writing-cleaner-css-using-bem-methodology) on how to implement Sass using BEM methodology.
+> 你可以查阅我的[文章](https://israelmitolu.hashnode.dev/writing-cleaner-css-using-bem-methodology)，该讲解了如何在 Sass 中应用 BEM。
 
-### Partials in Sass
+### Sass 中片段
 
-This is one of the many awesome features of Sass that gives you an advantage.
+这是 Sass 众多给你赋能的炫酷功能之一。
 
-As stylesheets grow large over time, it gets difficult to maintain them. Because of this, it just makes sense to break your stylesheets into smaller chunks. In other words, Partials help you organize and structure your code.
+随着样式表越来越大，维护变得越来越困难。因此，把样式表拆分成更小的单元块变得有意义。换句话说，片段帮助你更好去组织和构建你的代码。
 
-To declare a partial, we will start the file name with an underscore `_`, and add it in another Sass file using the `@import` directive.
+声明一个片段，我们首先要创建一个文件，以下划线`_`打头为文件名，然后使用`@import`指令在其他 Sass 文件中引用这个片段。
 
-For example, if we have a `_globals.scss`, `_variables.scss`, and `_buttons.scss`, we could import them into the main SCSS file `main.scss`.
+例如，我如果我们有`_globals.scss`、`_variables.scss`和`_buttons.scss`三个文件， 我们可以在 `main.scss`中引用这三个文件：
 
 ```scss
 @import "globals";
@@ -201,13 +200,13 @@ For example, if we have a `_globals.scss`, `_variables.scss`, and `_buttons.scss
 @import "buttons";
 ```
 
-You'll notice that the underscore and the `.scss` are not added. That is because Sass automatically assumes that you are referring to the `.sass` or `.scss` file.
+你可能注意到`.scss`后缀并没有被加入， 这是因为 Sass 会默认你添加的是`.sass`或`.scss`文件。
 
-### Mixins in Sass
+### Sass 中的 Mixins
 
-Another major issue with CSS is that you'll often use a similar group of styles. Mixins allow you to encapsulate a group of styles, and apply those styles anywhere in your code using the `@include` keyword.
+在 CSS 中另一个主要的问题是你会经常重复同一组样式，Mixin 使你能够封装一组样式，并使用`@include`关键字在你代码的任意地方应用这组样式。
 
-An example of when you'd use mixins is when using Flexbox.
+下面的代码片段是使用 Flexbox 的时候，使用 mixin 的例子：
 
 ```scss
 @mixin flex-container {
@@ -227,17 +226,17 @@ An example of when you'd use mixins is when using Flexbox.
 }
 ```
 
-### Sass Functions and Operators
+### Sass 中的函数和运算符
 
-Sass provides a suite of tools to help write more programmatic code.
+Sass 提供一套工具帮助你编写更程序话的代码。
 
-Sass offers built-in functions that enable us to do calculations and operations that return a specific value.
+Sass 提供内置函数，可以实现计算和运算，并返回特定的值。
 
-They range from color calculations to math operations like getting random numbers and calculation of sizes, and even conditionals.
+内置函数的功能包含从颜色计算到数学运算，包括获取随机数、计算尺寸甚至是条件式。
 
-It also provides support for mathematical operators like `+`, `-`, `\`, `*`, `/`, and `%`, which we can use with the `calc` function.
+Sass 还提供数学运算符号，包括 `+`、 `-`、 `\`、`*`、 `/` 和 `%`，可以搭配`calc`函数使用。
 
-Here is an example using a pixel to rem conversion function:
+以下代码片段是使用函数将像素转换成 rem 的例子：
 
 ```scss
 @function pxToRem($pxValue) {
@@ -250,9 +249,9 @@ div {
 }
 ```
 
-> However, it's important to note that the `/` operator for division is deprecated, and will be removed in Dart Sass 2.0.0. You can read about it in the [Docs](https://sass-lang.com/documentation/breaking-changes/slash-div).
+> 但一定要强调的是，不推荐使用除法运算符 `/`， 在 Dart Sass 2.0.0.中除法运算符会被去除。 更多内容可以阅读[文档](https://sass-lang.com/documentation/breaking-changes/slash-div).
 
-So, this is how it should be written:
+所以更推荐的写法是：
 
 ```scss
 @use "sass:math";
@@ -266,7 +265,7 @@ div {
 }
 ```
 
-Here is an example of conditional logic in a mixin:
+以下代码片段是在 mixin 里使用条件逻辑：
 
 ```scss
 @mixin body-theme($theme) {
@@ -278,9 +277,9 @@ Here is an example of conditional logic in a mixin:
 }
 ```
 
-Sass also provides the `lighten` and `darken` functions to adjust a color by a certain percentage.
+Sass 也提供`lighten`和`darken`函数实现按照百分比调整颜色
 
-For example:
+如：
 
 ```scss
 $red: #ff0000;
@@ -290,48 +289,48 @@ a:visited {
 }
 ```
 
-## How to Set Up Sass for Local Development
+## 如果在本地设置好 Sass
 
-Great! Now that we have learned about the "theoretical" aspects of Sass, let's get into the code to better understand how it works.
+真棒！我们已经学习了 Sass 的“理论”部分，接下来我们用代码来深入理解 Sass 是如何工作的。
 
-In this section, you will learn how to set up a local development environment, and also go through a simple landing page I have prepared.
+在这个部分，你将要学习到如何设置一个本地环境，并且一步一步练习我准备好的登陆页。
 
-Check out the demo on [Codesandbox](https://codesandbox.io/s/currying-river-44d7zr?file=/index.html) and code repository on [GitHub](https://github.com/israelmitolu/Getting-Started-with-SASS).
+实例在[Codesandbox](https://codesandbox.io/s/currying-river-44d7zr?file=/index.html) 代码库在[GitHub](https://github.com/israelmitolu/Getting-Started-with-SASS).
 
-### Ways to compile Sass
+### 编译 Sass 的方法
 
-There are different ways of compiling Sass files which are:
+编译 Sass 的方法如下：
 
--   VS Code Extension
--   Install using NPM globally
--   Install using open source apps such as Compass.app, Live Reload, and Koala.
--   Install using Homebrew (for MacOS)
+-   VS Code 拓展
+-   使用 NPM 全局安装
+-   使用开源 app 安装如：Compass.app、Live Reload、 and Koala
+-   使用 Homebrew 安装（MacOs 用户）
 
-In this tutorial, we will be using the VS code Extension option because it is the easiest to get started with.
+本教程将使用 VS Code 拓展，因为这是最容易的方法。
 
-### How to Set Up Sass for VS Code
+### 在 VS Code 中设置好 Sass
 
-#### Step 1: Install Live Sass Compiler
+#### 第一步：安装 Live Sass Compiler
 
-First, launch Visual Studio Code. Once it's loaded, go to the side panel on the left and select the extensions tab.
+首先启动 VS Code，启动完毕后，在左手边的侧栏找到拓展选择栏。
 
 ![1](https://www.freecodecamp.org/news/content/images/2022/04/1.PNG)
 
-Extensions tab in VS Code
+VS Code 中的拓展选择栏
 
-In the search bar, search for "Live Sass Compiler" and install it. This extension helps us to compile the Sass files — `.scss` (or `.sass`) – into `.css` files.
+在搜索框中查找 “Live Sass Compiler“并安装，这个拓展会帮助我们编译 Sass 文件 — `.scss` (或`.sass`)成`.css`文件。
 
-#### Step 2: Set the Save Location
+#### 第二步：设置保存地址
 
-Now change the file path so that Sass gets compiled into the `styles` folder.
+然后修改文件路径，这样 Sass 才能在`styles`文件夹内变异。
 
-To do this, you will make changes to the `settings.json` file.
+这一步需要在 `settings.json`文件中操作。
 
-In VS Code, go to File > Preferences > Settings. Now search for `live sass compile` to change the global settings.
+在 VS Code 中，选择 File > Preferences > Settings。然后查找`live sass compile`来改变全局设置。
 
-Click on `Edit settings.json`.
+点击`Edit settings.json`。
 
-Now, on the first few lines, where you see this code:
+然后在该文件内的头几行你会看到：
 
 ```json
 {
@@ -344,7 +343,7 @@ Now, on the first few lines, where you see this code:
   ],
 ```
 
-Change `"savePath": "/"` to `"savePath": "/styles"`, so it now looks like this:
+改变`"savePath": "/"`为`"savePath": "/styles"`，如下面的代码片段：
 
 ```json
 {
@@ -355,7 +354,7 @@ Change `"savePath": "/"` to `"savePath": "/styles"`, so it now looks like this:
       "savePath":"/styles",
     },
 
-    // You can also use this minified extension for production, as it reduces the file size
+    //你同样可以在生产中使用缩小拓展，这样可以减少文件大小
 
     {
       "format": "compressed",
@@ -365,43 +364,42 @@ Change `"savePath": "/"` to `"savePath": "/styles"`, so it now looks like this:
   ],
 ```
 
-#### Step 3: Compile Sass
+#### 第三步：编译 Sass
 
-Now, after saving the settings, go back to the Sass file, and click on the button that says "Watch Sass" at the very bottom of the window.
+保存好设置后，回到 Sass 文件，点击窗口的最低端"Watch Sass"按钮。
 
 ![2](https://www.freecodecamp.org/news/content/images/2022/04/2.PNG)
 
-Click on "Watch Sass"
+点击"Watch Sass"
 
-After you click the button, two files get created: `.css` and a `.css.map` in the `styles` folder.
+点击按钮后，会在`styles`文件夹中生成两个文件： `.css`和`.css.map`。
 
-You should not, however, change any of them. Because it already helps you compile the Sass into CSS every time you save new stylings.
+你不要随意更改这两个文件，因为他们帮助你在每次更新样式的时候把 Sass 编译成 CSS。
 
-#### Step 4: Link the CSS file
+#### 第四步：链接 CSS 文件
 
-Then, link the CSS file in your `index.html`. In our case:
+然后将 CSS 文件链接到`index.html`，在我们例子中就是：
 
 ```html
     <link rel="stylesheet" href="/styles/main.css" />
 ```
 
-Now run the file in your browser. This should be the resulting layout in CodeSandbox below:
+在你的浏览器中运行代码，得出的布局如下：
+## 代码详解
 
-## Walking through the code
+以下是对上一部分代码的详细解释：
 
-Here's an explanation of the code from the previous section:
-
--   We have a basic markup in the `index.html` file which contains a header and home/hero section.
+-   在 `index.html`基本标记文件中包含一个 header 和一个 home/hero 部分
     
-    -   It contains a link to the CSS file which the extension compiled for us.
-    -   And some JavaScript for the responsive menu toggle.
--   The `main.scss` gets compiled, and the resulting CSS file `main.css` is what is imported in the `index.html`:
+    -   包含了一个链接引入 CSS 文件，这个文件是 VS Code 拓展帮我们编译完成的
+    -   以及一些 JavaScript 来实现菜单的响应切换
+-   `main.scss`被编译， 编译结果为 CSS 文件 `main.css`并被引入到`index.html`：
     
     ```html
     <link rel="stylesheet" href="/styles/main.css" />
     ```
     
--   The Main Scss file `main.scss` imports all of the partials: `_base.scss`, `_components.scss`, `_home.scss`, `_layout.scss` `_responsive.scss`, `_variables.scss`.
+-  `main.scss`引用了所有片段 `_base.scss`、`_components.scss`、`_home.scss`、`_layout.scss`、 `_responsive.scss`、 `_variables.scss`。
     
     ```scss
     @import "variables";
@@ -412,15 +410,16 @@ Here's an explanation of the code from the previous section:
     @import "responsive";
     ```
     
--   The base partial contains the mixins of `flex` and `grid` which are included in the places where we need them.
+-  基础的片段包含了 `flex`和`grid`mixin，并在需要的时候重复引用。
     
 
-## Conclusion
+## 总结
 
-Congrats! If you made it to the end, that means you have learned about how Sass works, its cool features, and hopefully you start using it soon.
+恭喜你！如果你读到了这儿，说明你已经学习了 Sass 是如何工作的，Sass 一些炫酷的功能，希望你可以马上开始使用 Sass。
 
-If you want to learn more about Sass, I recommend checking out [freeCodeCamp's course](https://www.youtube.com/watch?v=aoQ6S1a32j8&t=3323s).
+如果你想要学习更多 Sass 的知识，我推荐你使用[freeCodeCamp's course](https://www.youtube.com/watch?v=aoQ6S1a32j8&t=3323s).
 
-If you found this article useful (which I'm sure you did 😉), do share it with your friends and network, and feel free to connect with me on [Twitter](https://twitter.com/israelmitolu) and my [blog](https://israelmitolu.hashnode.dev) where I share resources and articles to make you a better dev.
 
-Thanks for reading, and happy coding!
+如果你认为这篇文章帮助到了你(我确定帮助到了你😉), 请分享给你的朋友或者到社交网络上，欢迎在 [Twitter](https://twitter.com/israelmitolu) 或者[blog](https://israelmitolu.hashnode.dev) 上联系我，我会在这个上面分享文章和资源，帮助你成为更好的开发者。
+
+感谢阅读，编写代码愉快！

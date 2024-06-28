@@ -1,134 +1,134 @@
 > -  原文地址：[Schofield's Laws of Computing – What they Are and Why You Should Know Them](https://www.freecodecamp.org/news/schofields-laws-of-computing/)
 > -  原文作者：[Seth FalcoSeth Falco](https://www.freecodecamp.org/news/author/seth/)
-> -  译者：
+> -  译者：luojiyin
 > -  校对者：
 
-![Schofield's Laws of Computing – What they Are and Why You Should Know Them](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/schofield-cover-1.jpg)
+![斯科菲尔德的计算法则--它们是什么以及为什么你应该了解它们](https://www.freecodecamp.org/news/content/images/size/w2000/2021/05/schofield-cover-1.jpg)
 
-Schofield's Laws of Computing are principles that anyone who works with computers should know. They're focused on data portability, integrity, and security.
+斯科菲尔德的计算法则是任何与计算机打交道的人都应用知道的法则。它们的重点是数据的可移植性、完整性和安全性。
 
-[Jack Schofield](https://wikipedia.org/wiki/Jack_Schofield_(journalist)) was a prolific journalist who wrote for The Guardian and covered technology for nearly four decades. During that time, he wrote three particular articles called "Schofield's Laws of Computing".
+[杰克-斯科菲尔德](https://wikipedia.org/wiki/Jack_Schofield_(journalist)) 是一位多产的记者，为《卫报》撰稿，接近 40 年。在此期间, 他写了三篇特别的文章，被称为 "斯科菲尔德的计算法则".
 
-Jack didn't create these principles all at once, but they were rather an accumulation of "discoveries" that he had encountered throughout his career.
+杰克并不是一下子就创造了这些原则，而是在他整个职业生涯中遇到的`发现`的积累。
 
-Individually, the principles aren't special or revolutionary – in fact, they're pretty basic. However, they're valuable lessons that you should adhere to, especially in an organizational setting.
+单独来看，这些原则并不特别，也不是革命性的--事实上，它们是非常基本的。然而，它们是你应该坚持的宝贵经验，特别是在团体组织中。
 
-# Schofield's First Law of Computing
+# 斯科菲尔德第一法则
 
-> "Never put data into a program unless you can see exactly how to get it out." ― [Jack Schofield](https://www.theguardian.com/technology/2003/jul/24/onlinesupplement.columnists) (2003)
+> “除非你能清楚看到如何把数据弄出来，否则千万不要把数据放进程序。” ― [杰克-斯科菲尔德](https://www.theguardian.com/technology/2003/jul/24/onlinesupplement.columnists) (2003)
 
-Schofield's First Law states that when you depend on an organization, you should verify that it'll be easy to move your data to another organization.
+斯科菲尔德的第一法则指出，当你依赖一个组织时，你应该确认将你的数据转移到另一个组织会很容易。
 
-Common reasons you might want to change providers could be:
+你想要更换供应商常见原因可能是。
 
--   A change in the terms of service.
--   Another company with a different vision takes it over.
--   Price hikes or a shift to a less favorable business model.
--   The service shuts down, or software becomes abandonware.
+-   服务条款的改变。
+-   另一家具有不同愿景的公司接手。
+-   涨价或转变为一个不太有利的商业模式。
+-   服务关闭，或软件成为废弃软件。
 
-For example:
+例如:
 
--   LastPass limiting free users to one type of device. ([More Info](https://wikipedia.org/wiki/LastPass#Reception))
--   ArtStation getting acquired by Epic Games. ([More Info](https://wikipedia.org/wiki/Epic_Games#Acquisitions))
--   Adobe shifting to a software as a service business model. ([More Info](https://wikipedia.org/wiki/Adobe_Creative_Cloud#Criticism))
--   Megaupload shutdown and seized by governing bodies. ([More Info](https://wikipedia.org/wiki/Megaupload#2012_indictments_by_the_United_States))
+-   LastPass 将免费用户限制在一种类型的设备上。([更多信息](https://wikipedia.org/wiki/LastPass#Reception))
+-   ArtStation 被 Epic Games 收购。([更多信息](https://wikipedia.org/wiki/Epic_Games#Acquisitions))
+-   Adobe 转向软件即服务的商业模式(SaaS)。([更多信息](https://wikipedia.org/wiki/Adobe_Creative_Cloud#Criticism))
+-   Megaupload 被关闭并被管理机构查封。([更多信息](https://wikipedia.org/wiki/Megaupload#2012_indictments_by_the_United_States))
 
-Data portability is an essential feature for software and services. It's the primary solution when you need to avoid vendor lock-ins or must budget for costly migration processes.
+数据可移植性是软件和服务的一个基本特征。你的主要解决方案需要避免供应商的锁定或必须为迁移过程做昂贵的预算的。
 
-## What are Vendor Lock-ins?
+## 什么是供应商锁定？
 
-Vendor lock-ins are when companies tie users down to their software. They can put practices in place to add friction when migrating to competing software.
+供应商锁定是指公司将用户绑在他们的软件上。用户可以在迁移到公司竞争对手的软件时采取一些措施来增加摩擦(难度)。
 
-The aim is to compel users to stay, even if there are better options for them, by making steps to leave inconvenient, time-consuming, or tedious.
+其目的是迫使用户留下，即使他们有更好的选择，通过使离开的步骤不方便、费时或繁琐。
 
-When you're choosing software or services to use, you'll want to keep an eye out for such practices. This can come in a variety of forms:
+当你选择要使用的软件或服务时，你要注意这种做法。这可以有多种形式。
 
--   Not allowing you to export personal data or user-generated content.
--   Not allowing files to be exported to open or human-readable formats.
--   Making software incompatible with existing open-standards.
+-   不允许你导出个人数据或用户生成的内容。
+-   不允许将文件导出为开放或人可读的格式。
+-   使软件与现有的开放标准不兼容。
 
-## The Right to Data Portability
+## 数据可迁移的权利
 
-The [General Data Protection Regulation](https://wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR) has helped with this. It's led companies like Discord, Instagram, and Twitter to add automated tools for users to export their content.
+[通用数据保护条例](https://wikipedia.org/wiki/General_Data_Protection_Regulation) (GDPR)有助于提高数据可迁移的权利。它促使像 Discord、Instagram 和 Twitter 这样的公司为用户添加自动化工具来导出他们的内容。
 
-Article 20 of GDPR is the "right to data portability", which is the right to have the means to move your personal data from a data controller to a standard format that you can give to another data controller.
+GDPR 的第 20 条是 "数据可迁移性权利"，即有办法将你的个人数据从数据控制者那里转移到你可以给另一个数据控制者的标准格式的权利。
 
-Despite the fact that GDPR is specific to personal data, this has promoted data portability in general, including user-generated content. While it's debatable how easy it is to enforce GDPR outside the EU, these tools are usually accessible to members of other jurisdictions, too.
+尽管 GDPR 是专门针对个人数据的，但这已经促进了通用的数据可迁移性，包括用户生成的内容。虽然在欧盟之外执行 GDPR 的难度值得商榷，但这些工具通常也可以让其他司法管辖区(欧盟外)的成员使用。
 
-If you're representing an organization or a freelancer and you're in charge of picking software, keep this in mind!
+如果你代表一个组织或自由职业者，负责挑选软件，请记住这一点!
 
-# Schofield's Second Law of Computing
+# 斯科菲尔德第二法则
 
-> "Data doesn't really exist unless you have at least two copies of it."  
-> ― [Jack Schofield](https://www.theguardian.com/technology/2008/feb/14/email.yahoo) (2008)
+> "数据不真正存在，除非你至少有两个副本(起码有三份)。"  
+> ― [杰克-斯科菲尔德](https://www.theguardian.com/technology/2008/feb/14/email.yahoo) (2008)
 
-Backing up data is a chore that most individuals procrastinate until it's too late. But fortunately organizations have proven to be a bit more mature with this.
+备份数据是大多数人拖延的一个苦差事，直到它太晚(发生损毁)。但幸运的是，事实证明，`organizations`（组织）在这方面更成熟一些。
 
-Schofield's Second Law of Computing suggests that unless you have _at least_ 2 copies of your data, you should treat it like it doesn't exist.
+斯科菲尔德的第二法则表明，除非你至少有两份数据的副本，否则你应该把它当作不存在的东西。
 
-Ideally, you should keep both copies in different physical locations – and by that, I don't mean different drives, but ideally different countries or continents.
+理想情况下，你应该将这两份副本保存在不同的物理位置--我指的不是不同的驱动器，而是不同国家或大陆。
 
-For data in your possession, such as your desktop, laptop, or flash drives:
+对于你拥有的数据，如你的台式机、笔记本电脑或闪存驱动器。
 
--   Devices or your whole inventory could get lost or stolen.
--   If you have full-disk encryption, you could forget your password.
--   Your hardware may fail on you, resulting in data loss.
--   Disasters such as fires or floods may destroy everything on-premise.
+-   设备或你的整个库存可能丢失或被盗。
+-   如果你有全盘加密，你可能忘记你的密码。
+-   你的硬件可能在你身上发生故障，导致数据丢失。
+-   火灾或水灾等灾难可能会破坏一切。
 
-It could even be due to user-error. No matter how technical you are, you could "Overwrite" instead of "Save As", flash an operating system to the wrong drive, or a developer might forcefully push to the wrong branch after amending a commit.
+这甚至可能是由于用户的错误造成的。不管你的技术水平如何，你可能会用 "覆盖 "而不是 "另存为"，将操作系统刷入到错误的驱动器上，或者一个开发人员在修改提交后强行推送到错误的分支。
 
-You should always be prepared for the scenario that may lead to loss of data. While not everyone has disposable income lying around, physical goods are generally easy to replace with enough money, potentially years worth of accumulated data is irrecoverable.
+你应该时刻准备好应对可能导致数据丢失的情况。虽然不是每个人都有足够的可支配的收入，但设备一般很容易用足够的钱来购买，但可能多年积累的数据是无法从设备中恢复的。
 
-## Data in the Cloud
+## 云端的数据
 
-Schofield's Second Law doesn't only target data in your possession, but also data you keep in the cloud. For example, you should store your cloud storage, emails, and media content in a second location as well.
+斯科菲尔德第二法则 不仅针对你拥有的数据，还包括你保存在云端的数据。例如，你应该把你的云存储、电子邮件和媒体内容也存放在第二个地方。
 
-This is especially important when using services that don't take responsibility for backing up your data, or close your account after a period of inactivity. This is common with companies that provide truly free services, free of cost and free of tracking, like Nextcloud providers or Tutanota.
+当使用那些不需要备份你的数据，或在一段时间不活动后关闭你的账户的服务时，这一点尤其重要。这在那些提供真正免费服务的公司中很常见，它们不需要成本，也不需要跟踪，比如 Nextcloud 供应商或 Tutanota。
 
-Don't assume your data is safe just because it's in the cloud. A recent example of this is the fire that started in one of OVH's datacenters resulting in the loss of data. OVH Public Cloud provides unmanaged servers, which means the user is responsible for managing and backing up their servers. ([More Info](https://wikipedia.org/wiki/OVHcloud#Incidents))
+不要因为你的数据在云中就认为它是安全的。最近的一个例子是 OVH 的一个数据中心发生火灾，导致数据丢失。OVH 公共云提供非管理型服务器，这意味着用户负责管理和备份他们的服务器。([更多信息](https://wikipedia.org/wiki/OVHcloud#Incidents))
 
-There is also the risk of vulnerabilities that allow unauthorized access to your account.
+此外，还存在着漏洞的风险，允许未经授权的人访问你的账户。
 
-For example, last year hackers obtained access to Twitter's administrative tools which granted them access to many high-profile accounts. Using such tools, it would've been just as easy to delete previous posts and media. ([More Info](https://wikipedia.org/wiki/2020_Twitter_account_hijacking))
+例如，去年黑客获得了对 Twitter 管理工具的访问权，使他们能够访问许多知名的账户。使用这样的工具，要删除以前的帖子和媒体也是很容易的。([更多信息](https://wikipedia.org/wiki/2020_Twitter_account_hijacking))
 
-## Sync Your Data
+## 同步你的数据
 
-You can solve some of these problems by using solutions that sync your data between your computer and a server. This offers protection from any hardware related failures, or physical damage.
+你可以通过使用在你的电脑和服务器之间同步数据的解决方案来解决其中的一些问题。这提供了保护，防止任何与硬件有关的故障，或物理损坏。
 
-Data that would have detrimental consequences if lost should be encrypted and synced to cloud storage. Some software like Bitwarden or Thunderbird natively rely on syncing as well, so even if the server were to disappear, you'll still have a recent copy on your device.
+如果数据丢失会有不利的后果，应该加密并同步到云存储。一些软件，如 Bitwarden 或 Thunderbird，本身也依赖于同步，所以即使服务器消失了，你的设备上仍然有一个最新的副本。
 
-However, syncing doesn't solve all problems – it's ideal to have an isolated backup as well. Syncing will automatically send all changes, including user-errors, or even changes made by malware or ransomware. Having regular cold storage backups would be handy for cases like this.
+然而，同步并不能解决所有问题--最理想的是也有一个独立的备份。同步将自动发送所有的变化，包括用户错误，甚至是恶意软件或勒索软件所做的修改。有定期的冷存储备份对这样的情况会很方便。
 
-# Schofield's Third Law of Computing
+# 斯科菲尔德第三法则
 
-> "The easier it is for you to access your data, the easier it is for someone else to access your data." ― [Jack Schofield](https://www.theguardian.com/technology/2008/jul/10/it.security) (2008)
+> "你越容易访问你的数据，其他人就越容易访问你的数据。" ― [杰克-斯科菲尔德](https://www.theguardian.com/technology/2008/jul/10/it.security) (2008)
 
-Protecting data has always involved finding a balance between security and convenience. We want data to be easy to access for us, but hard to access for others.
+保护数据一直涉及到在安全性和便利性之间找到一个平衡点。我们希望数据对我们来说容易访问，但对其他人来说很难访问。
 
-This conflict has led to issues regarding data negligence.
+这种冲突导致了关于数据疏忽的问题。
 
-When you put data on the cloud, you automatically make it easier for others to access. Your cloud provider could have vulnerabilities, someone might guess your password, or an employee could go rouge and compromise or sell your data.
+当你把数据放在云端时，这会自动使它更容易被他人访问。你的云供应商可能有漏洞，有人可能会猜到你的密码，或者一个云供应商员工可能会违背公司原则，破坏或出售你的数据。
 
-You might be able to blame someone or get compensation for the incident, but your data and potentially your clients' data is still out there, and you'd be the one who ultimately allowed it to happen.
+你可能会责怪某人或获得赔偿，但你的数据和可能是你客户的数据仍然在那里，而你会是最终允许它发生的人。
 
-Increasing security tends to be inconvenient, but these are the inconveniences that others bet on when looking to compromise accounts:
+加强安全往往是不方便的，但这些是别人在寻找破坏账户时也不方便。
 
--   [Brute-force Attacks](https://wikipedia.org/wiki/Brute-force_attack) – Bet on short passwords, as it's quicker to type.
--   [Credential Stuffing](https://wikipedia.org/wiki/Credential_stuffing) – Bet on password reuse, as it's more convenient than managing multiple.
--   [Dictionary Attacks](https://wikipedia.org/wiki/Dictionary_attack) – Bet on logical passwords, as it's easier to recall.
+-   [暴力破解](https://wikipedia.org/wiki/Brute-force_attack) – 猜短密码，因为它破解得更快。
+-   [伪造凭证](https://wikipedia.org/wiki/Credential_stuffing) – 押注于密码的重复使用，因为这让密码使用者比管理多个密码更方便。
+-   [字典攻击](https://wikipedia.org/wiki/Dictionary_attack) – 猜常用密码，因为它对于密码使用者更容易回忆。
 
-Furthermore, these attacks rely on users not enabling 2FA, and that the data on the other side isn't obfuscated or encrypted.
+此外，这些攻击基于用户没有启用 2FA，以及另一方的数据没有被混淆或加密。
 
-You or your organization should be using a password manager, enforcing 2FA on all systems, and where possible encrypting data before it's sent to third-party servers.
+你或你的组织应该使用一个密码管理器，在所有系统上执行 2FA，并在可能的情况下，在数据被发送到第三方服务器之前进行加密。
 
-Even better, remove data that is no longer relevant. It's always better to erase data than to worry about protecting it.
+甚至更好，删除不再相关的数据(无用的数据)。删除数据总是比担心保护数据要好。
 
-This might include chat histories, emails, or files that contain confidential information, social media passwords, and client or employee data. Especially if they're months or years old and no longer relevant. If you don't need them, nobody else does either.
+这可能包括聊天记录、电子邮件或包含机密信息的文件、社交媒体密码，以及客户或员工数据。特别是如果它们是几个月或几年前的，不再有意义。如果你不需要它们，其他人也不需要。
 
-# Conclusion
+# 总结
 
-These principles were established over 10 years ago, and apply more today than ever before.
+这些法则是在 10 多年前确立的，今天比以往任何时候都更适用。
 
-Technology and open-standards have evolved, so they are easier to adhere to. But with the growth of cloud infrastructure, we're increasingly trusting third-parties with our data. In many cases, we may be too comfortable with where it's being left and who has access to it.
+技术和开放标准已经发生了演变，所以它们更容易被遵守。但随着云计算基础设施的发展，我们越来越信任第三方来处理我们的数据。在许多情况下，我们可能对它被留在哪里以及谁能接触到它感到太舒服(太信任)了。
 
-Unfortunately, Jack Schofield died in March 2020, but he supported many in the tech community. I hope through sharing his experiences, others may continue to learn from them.
+不幸的是，杰克-斯科菲尔德于 2020 年 3 月去世，但他支持了科技界的许多人。我希望通过分享他的经验，其他人可以继续从中学习。

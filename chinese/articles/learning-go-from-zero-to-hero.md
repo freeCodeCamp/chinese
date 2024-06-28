@@ -253,7 +253,7 @@ if num := 9; num < 0 {
 
 #### switch case
 
-Switch cases 有助于组织多个条件语句。下面的例子显示了一个简单的 siwtch 语句:
+Switch cases 有助于组织多个条件语句。下面的例子显示了一个简单的 switch 语句:
 
 ```go
 i := 2
@@ -441,14 +441,14 @@ pp.name
 package main
 import "fmt"
 
-// struct defination
+// struct definition
 type person struct {
   name   string
   age    int
   gender string
 }
 
-// method defination
+// method definition
 func (p *person) describe() {
   fmt.Printf("%v is %v years old.", p.name, p.age)
 }

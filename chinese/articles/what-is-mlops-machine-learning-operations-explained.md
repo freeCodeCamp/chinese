@@ -29,7 +29,7 @@ If you look MLOps up on Google trends, you'll see that it is a relatively new di
 
 ![](https://www.freecodecamp.org/news/content/images/2021/03/Screenshot-2021-03-23-at-4.39.30-AM.png)
 
-### Here’s how I’d define MLOps:
+### Here’s how I’d define MLOps
 
 MLOps is an engineering discipline that aims to unify ML systems development (dev) and ML systems deployment (ops) in order to standardize and streamline the continuous delivery of high-performing models in production.
 
@@ -43,10 +43,10 @@ In order to understand MLOps, we must first understand the ML systems lifecycle.
 
 From start to bottom, the following teams chip in:
 
--   **Business development or Product team** — defining business objective(s) with KPIs
--   **Data Engineering** — data acquisition and preparation.
--   **Data Science** — architecting ML solutions and developing models.
--   **IT or DevOps** — complete deployment setup, monitoring alongside scientists.
+-   **Business development or Product team**—defining business objective(s) with KPIs
+-   **Data Engineering** —data acquisition and preparation.
+-   **Data Science**—architecting ML solutions and developing models.
+-   **IT or DevOps**—complete deployment setup, monitoring alongside scientists.
 
 Here is a very simplified representation of the ML lifecycle.
 
@@ -65,7 +65,7 @@ Managing such systems at scale is not an easy task, and there are numerous bottl
 -   There is a **shortage of Data Scientists** who are good at developing and deploying scalable web applications. There is a new profile of ML Engineers on the market these days that aims to serve this need. It is a sweet spot at the intersection of Data Science and DevOps.
 -   **Changing business objectives in the model** —There are many dependencies with the data continuously changing, maintaining performance standards of the model, and ensuring AI governance. It’s hard to keep up with the continuous model training and evolving business objectives.
 -   **Communication gaps** between technical and business teams with a hard-to-find common language to collaborate. Most often, this gap becomes the reason that big projects fail.
--   **Risk assessment —** there is a lot of debate going on around the black-box nature of such ML/DL systems. Often models tend to drift away from what they were initially intended to do. Assessing the risk/cost of such failures is a very important and meticulous step.  
+-   **Risk assessment—** there is a lot of debate going on around the black-box nature of such ML/DL systems. Often models tend to drift away from what they were initially intended to do. Assessing the risk/cost of such failures is a very important and meticulous step.  
     For example, the cost of an inaccurate video recommendation on YouTube would be much lower compared to flagging an innocent person for fraud and blocking their account, and declining their loan applications.
 
 ## What Skills Do You Need for MLOps?
@@ -90,12 +90,12 @@ Searching for data is one of the most strenuous tasks. It is a process with seve
 -   Check the credibility of the data and its source.
 -   Is the data source compliant with regulations like GDPR?
 -   How to make the dataset accessible?
--   What is the type of source — static (files) or real-time streaming (sensors)?
+-   What is the type of source—static (files) or real-time streaming (sensors)?
 -   How many sources are to be used?
 -   How to build a data pipeline that can drive both training and optimization once the model is deployed in the production environment?
 -   What cloud services will you use?
 
-### 3\. Data preparation and processing — part of data engineering.
+### 3. Data preparation and processing—part of data engineering
 
 Data preparation includes tasks like feature engineering, cleaning (formatting, checking for outliers, imputations, rebalancing, and so on), and then selecting the set of features that contribute to the output of the underlying problem.
 
@@ -105,7 +105,7 @@ An important part of deploying such pipelines is to choose the right combination
 
 You might want to practice building a few different kinds of pipelines (Batch vs Streaming) and try to deploy those pipelines on the cloud.
 
-### 4\. Model training and experimentation — data science
+### 4\. Model training and experimentation—data science
 
 As soon as your data is prepared, you move on to the next step of training your ML model.
 
@@ -143,8 +143,8 @@ Other tasks include:
 
 You should build your ML pipelines keeping in mind the following tasks:
 
--   Identify system requirements — parameters, compute needs, triggers.
--   Choose an appropriate cloud architecture — hybrid or multi-cloud.
+-   Identify system requirements—parameters, compute needs, triggers.
+-   Choose an appropriate cloud architecture—hybrid or multi-cloud.
 -   Construct training and testing pipelines.
 -   Track and audit the pipeline runs.
 -   Perform data validation.
@@ -153,15 +153,15 @@ You should build your ML pipelines keeping in mind the following tasks:
 
 There are mainly two ways of deploying an ML model:
 
--   Static deployment or embedded model — where the model is packaged into installable application software and is then deployed. For example, an application that offers batch-scoring of requests.
--   Dynamic deployment — where the model is deployed using a web framework like FastAPI or Flask and is offered as an API endpoint that responds to user requests.
+-   Static deployment or embedded model—where the model is packaged into installable application software and is then deployed. For example, an application that offers batch-scoring of requests.
+-   Dynamic deployment—where the model is deployed using a web framework like FastAPI or Flask and is offered as an API endpoint that responds to user requests.
 
 Within dynamic deployment, you can use different methods:
 
 -   deploying on a server (a virtual machine)
 -   deploying in a container
 -   serverless deployment
--   model streaming — instead of REST APIs, all of the models and application code are registered on a stream processing engine like Apache Spark, Apache Storm, and Apache Flink.
+-   model streaming—instead of REST APIs, all of the models and application code are registered on a stream processing engine like Apache Spark, Apache Storm, and Apache Flink.
 
 Following are the considerations:
 
@@ -170,7 +170,7 @@ Following are the considerations:
 -   Performing explainability checks.
 -   Ensuring that all governance requirements have been met.
 -   Checking the quality of any data artifacts
--   Load testing — compute resource usage.
+-   Load testing—compute resource usage.
 
 ### 7\. Monitor, optimize and maintain models
 

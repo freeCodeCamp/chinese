@@ -835,7 +835,7 @@ junkFoodILove.at(10); // undefined
 
 在 `at()` 方法加入 JavaScript 语言之前，你可以使用这个 [polyfill](https://github.com/es-shims/Array.prototype.at) 来获得它的功能。查看这个 GitHub 仓库以获取 `at()` 方法的示例：[https://github.com/atapas/js-array-at-method](https://github.com/atapas/js-array-at-method)。
 
-# 结束之前...
+# 结束之前
 
 希望你觉得这篇文章有价值，也希望它能够帮助你更好地理解 JavaScript 数组。请多多练习文中的示例，以便更好地掌握它们。你可以在[我的 GitHub 仓库](https://github.com/atapas/js-handbook-examples#%EF%B8%8F-list-of-content)中找到所有代码示例。
 

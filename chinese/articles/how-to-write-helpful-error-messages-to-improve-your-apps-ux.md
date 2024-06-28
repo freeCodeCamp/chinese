@@ -140,7 +140,7 @@ _出离愤怒退出程序前的截图_
 -   前端应用所有与上下文相关的信息
 -   前端将这些信息显示给终端用户。
 
-你可以在 [CodeSandbox](https://codesandbox.io/s/amazing-platform-dxtjc?file=/src/App.js) 亲自上手体验一下。 CodeSandbox 向一个虚拟服务器发出请求，随机返回12个错误代码中的一个。
+你可以在 [CodeSandbox](https://codesandbox.io/s/amazing-platform-dxtjc?file=/src/App.js) 亲自上手体验一下。 CodeSandbox 向一个虚拟服务器发出请求，随机返回 12 个错误代码中的一个。
 
 客户端将使用错误代码，从报错信息库中检索一个合理的报错信息。接着，客户端向用户显示报错信息。如果代码中没有指定的信息，就会显示通用报错信息（它们通常都很糟糕）。
 
@@ -151,7 +151,7 @@ _出离愤怒退出程序前的截图_
 
 ## 如何设置你的报错信息
 
-注：你可以在这里找到 [repo](https://github.com/andrico1234/sane-error-messages#readme)。如果你在教程过程中遇到任何问题，可以在GitHub上提出。
+注：你可以在这里找到 [repo](https://github.com/andrico1234/sane-error-messages#readme)。如果你在教程过程中遇到任何问题，可以在 GitHub 上提出。
 
 开始时运行
 
@@ -243,7 +243,7 @@ function riskyFunction() {
 
 ### 为什么服务器端不能直接返回报错信息？
 
-服务器不应涉及任何面向客户端的逻辑。但如果你够走运，与每次请求失败时都给出有用错误代码的API协同工作，你将很快成功。
+服务器不应涉及任何面向客户端的逻辑。但如果你够走运，与每次请求失败时都给出有用错误代码的 API 协同工作，你将很快成功。
 
 ### 我是否需要为每个 API 消费者创建一个报错信息实例？
 
@@ -259,7 +259,7 @@ function riskyFunction() {
 
 ****《微副本：完整指南》****  
 在上文我已经提到过这本书。在讨论如何让面向用户的产品更加人性化方面，它是我最喜欢的书之一。
-这本书的作者 Kinneret Yifrah 慷慨地提供了一张9折的优惠券，你可以在[这里](https://www.microcopybook.com/)购买。
+这本书的作者 Kinneret Yifrah 慷慨地提供了一张 9 折的优惠券，你可以在[这里](https://www.microcopybook.com/)购买。
 
 电子书折扣码：andrico-ebook
 

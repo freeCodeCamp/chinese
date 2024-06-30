@@ -4,7 +4,7 @@ date: 2024-06-25T15:54:07.205Z
 author: Beau Carnes
 authorURL: https://www.freecodecamp.org/news/author/beaucarnes/
 originalURL: https://www.freecodecamp.org/news/whats-new-in-react-19/
-translator: ""
+translator: Devan Wang
 reviewer: ""
 ---
 

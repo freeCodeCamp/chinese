@@ -12,7 +12,7 @@ reviewer: ""
 
 <!-- more -->
 
-# What's New in React 19
+# React 19 的新特性
 
 ![Beau Carnes](https://cdn.hashnode.com/res/hashnode/image/upload/v1713211849730/O5mmKs5h0.jpg)
 
@@ -20,29 +20,29 @@ reviewer: ""
 
   ![What's New in React 19](https://cdn.hashnode.com/res/hashnode/image/upload/v1719330844344/800a24a8-98cd-4979-b062-9ff4cd1c35ad.jpeg)
 
-React 19 has just been released, bringing a wealth of new features and enhancements to this popular JavaScript library. For developers looking to stay ahead of the curve, understanding these updates is crucial. This course is designed to help you navigate the latest changes in React 19, from data mutation handling to the innovative new APIs aimed at improving user experience.
+React 19 刚刚发布，作为一个流行的 JavaScript 库，又带来了大量的新功能和增强的特性。对于希望位居前沿的开发人员来说，了解这些更新至关重要。本课程旨在帮助你了解 React 19 的最新变化，从数据变更处理到有助于改善用户体验的新 API。
 
-We just published a course on the [freeCodeCamp.org][3] YouTube channel that will teach you all about the exciting new features in React 19. This includes built-in ways to handle actions, optimistic updates, form statuses, the new `use()` API, and much more. React 19 is packed with improvements that streamline the development process and enhance application performance, making it an essential update for any React developer.
+我们刚刚在 [freeCodeCamp.org][3] YouTube 频道上发布了一门课程，该课程将向你介绍 React 19 中令人兴奋的新功能。其中包括处理 Actions、乐观更新、表单状态、新的 `use()` API 等的内置方法。React 19 中包含大量改进，可简化开发流程并提高应用程序性能，对于 React 开发人员来说是重大的更新。
 
-Bob Ziroll from Scrimba developed this course. He is one of the most popular React instructors in the world.
+来自 Scrimba 的 Bob Ziroll 开发了本课程。他是世界上最受欢迎的 React 讲师之一。
 
-React hadn’t had a major version update in over two years since React 18 was launched in 2022. With React 19, we see numerous features that simplify handling data mutations while providing APIs to enhance the user experience with optimistic updates. These updates aim to make applications faster and more responsive, even when performing complex data operations. Additionally, the React team has unveiled a new open-source compiler they've been developing for years, designed to manage many performance-related details behind the scenes, allowing developers to focus more on building features and less on optimization.
+自 2022 年 React 18 发布以来，React 已经两年多没有重大版本更新了。在 React 19 中，有许多特性可以简化对数据变更的处理，同时提供 API 通过乐观更新来增强用户体验。这些更新旨在使应用程序更快、反应更灵敏，即使在执行复杂的数据操作时也是如此。此外，React 团队还发布了新的开源编译器，他们已经开发了多年，旨在管理许多与性能相关的幕后细节，使开发人员能够更多地专注于构建功能，而不是优化。
 
-### Course Overview
+### 课程概览
 
-Join us in this comprehensive course where we delve into the latest and greatest features of React 19. The course is structured to provide both a refresher on important concepts from React 18 and in-depth coverage of the new features in React 19. Here's what you'll learn:
+参与这个综合课程，我们将深入研究 React 19 最新和最强大的功能。本课程包括对 React 18 中重要概念的复习，以及对 React 19 中新功能的深入介绍。以下是你将学到的内容：
 
-#### Transitions (Refresher from React 18)
+#### Transition（React 18 的复习）
 
-We begin with a quick refresher on transitions, a key feature introduced in React 18 that helps manage UI updates more smoothly.
+我们首先快速回顾一下 Transition，这是 React 18 中引入的一个关键特性，可以帮助更顺畅地管理 UI 更新。
 
-#### React Compiler
+#### React 编译器
 
-Learn about the new React Compiler, a powerful tool designed to handle performance optimizations automatically, allowing developers to write cleaner and more efficient code.
+了解新的 React 编译器，这是一个强大的工具，可自动处理性能优化，让开发人员编写出更简洁、更高效的代码。
 
-#### Form Actions
+#### 表单 Actions
 
-Explore the new form action features that simplify managing form states and handling user interactions more effectively.
+探索新的表单 Actions 特性，简化表单状态管理，更有效地处理用户交互。
 
 #### `useActionState()`
 

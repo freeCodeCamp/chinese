@@ -1,17 +1,19 @@
 ---
-title: The Java Interview Prep Handbook – 50 Questions Solved + Code Examples
-author: Vahe Aslanyan
-authorURL: https://www.freecodecamp.org/news/author/vahe/
-originalURL: https://www.freecodecamp.org/news/java-interview-prep-handbook/
-translator: ""
+标题: Java 面试准备手册 -- 50个问题解答 + 代码示例
+作者: 瓦赫·艾斯兰扬 (Vahe Aslanyan)
+作者URL: https://www.freecodecamp.org/news/author/vahe/
+原始URL: https://www.freecodecamp.org/news/java-interview-prep-handbook/
+译者: "James-Z-Zhang00"
 reviewer: ""
 ---
 
 December 7, 2023 / [#Java][1]
+2023 年 12 月 7 日 / [#Java][1]
 
 <!-- more -->
 
 # The Java Interview Prep Handbook – 50 Questions Solved + Code Examples
+# Java 面试准备手册 -- 50 个问题解答 + 代码示例
 
 ![Vahe Aslanyan](https://www.freecodecamp.org/news/content/images/size/w60/2023/11/64f8cae0c5f6cb6d0b167833_1689535650919-transformed-p-500.jpeg)
 

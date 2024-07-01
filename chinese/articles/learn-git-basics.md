@@ -28,11 +28,11 @@ In this tutorial, I'll take you through the fundamentals of Git, covering everyt
 
 By the end of this guide, you'll have a solid understanding of Git's core concepts and be confident and well equipped with the skills to effectively use it in your development workflow.
 
-## Prerequisites:
+## Prerequisites
 
 All you need to bring to the table is a curious and eager-to-learn mindset. This guide is crafted with beginners in mind, so no prior knowledge of version control systems or programming is required. Whether you're a complete novice or have some experience with coding, you'll find this tutorial accessible and easy to follow.
 
-## **Table of Contents:**
+## **Table of Contents**
 
 1.  [What is Git?][3]  
     – [Difference from other version control systems][4]  
@@ -67,21 +67,21 @@ Git is a distributed version control system that helps you and your team collabo
 
 ### What makes Git different from other Version Control Systems?
 
-#### Conceptual Difference:
+#### Conceptual Difference
 
 The big thing that sets Git apart from other tools is how it thinks about data. Instead of storing changes to files, Git thinks of its data as a series of snapshots of your project, means, every time you make a change and save it (commit), Git takes a snapshot of all your files at that moment. If a file hasn't changed, Git just keeps a link to the previous identical file.
 
-#### Local Operations:
+#### Local Operations
 
 With Git, most things you do don't need a connection to a server. Because you have the entire project history on your computer, operations are super fast. You can browse project history or see changes between versions without waiting for a server.
 
-#### Data Integrity:
+#### Data Integrity
 
 Git makes sure nothing gets lost or corrupted. Every file and directory is checksummed, and Git knows if anything changes.
 
 Git uses a SHA-1 hash, a unique code for each version of a file. If any changes are made to the content, even a single character, it will result in a different SHA-1 hash.
 
-#### Append-Only Model:
+#### Append-Only Model
 
 In Git, almost everything adds data to the project, making it hard to accidentally lose information. Once you commit changes, they are safely stored. Experimenting is less risky with Git.
 
@@ -122,7 +122,7 @@ To view all configuration settings and their sources/origins:
 $ git config --list --show-origin
 ```
 
-#### How to Configure your identity in Git:
+#### How to Configure your identity in Git
 
 Identity in Git is used for attributing commits properly. Let's set up your user name and email address.
 
@@ -153,7 +153,7 @@ Make sure you provide the correct path to the executable file of your text edito
 
 By the way, these – `"-multiInst -notabbar -nosession -noPlugin"` – are options used to customize the behavior of Notepad++ when it is launched by Git.
 
-#### How to Change default branch name in Git (optional):
+#### How to Change default branch name in Git (optional)
 
 By default, when you initialize a new repository with `git init`, Git creates a branch named `master`. But from Git version 2.28 onwards, you have the option to set a different name for the initial branch.
 
@@ -163,7 +163,7 @@ $ git config --global init.defaultBranch main
 
 changes the default branch name to 'main' globally
 
-#### How to Check Configuration/settings in Git:
+#### How to Check Configuration/settings in Git
 
 You can view your Git configuration using:
 
@@ -224,7 +224,7 @@ $ git commit -m 'Initial commit'
 
 `git add` adds files to the staging area indicating that you want to include them in the next commit, and then commit the changes. The `-m` flag allows you to add a descriptive message to the commit.
 
-### 2\. How to Clone an Existing Repository in Git:
+### 2. How to Clone an Existing Repository in Git
 
 The second way to obtain a Git repository is by cloning an existing one. This is useful when you want to work on a project that already exists elsewhere (for example, a project you'd like to contribute to).
 
@@ -256,7 +256,7 @@ Now that you have a Git repository set up, you'll often need to make changes and
 
 pic credit - https://git-scm.com/
 
-### 1\. How to Check the Status of Your Files in Git:
+### 1. How to Check the Status of Your Files in Git
 
 When working with a Git repository, it's crucial to understand the status of your files.
 
@@ -327,7 +327,7 @@ Here are some patterns you can use to work more effectively in Git.
 -   ****Target individual files or file extensions precisely:**** For example, `test.txt` ignores only that specific file, while `*.log` ignores all files ending with `.log`.
 -   ****Wildcards for broader matches:**** The asterisk (`*`) wildcard matches any number of characters. For example, `*.doc` ignores all files with the `.doc` extension, regardless of their name.
 
-### 5\. How to View Changes in Git:
+### 5. How to View Changes in Git
 
 If you want to see the exact changes you've made to your files before committing, you can use the `git diff` command.
 
@@ -345,7 +345,7 @@ $ git diff --cached README.md
 
 `git diff` provides a detailed view of the actual modifications. Use `git diff <filename>` to focus on changes within a particular file.
 
-### 6\. How to Commit Changes:
+### 6. How to Commit Changes
 
 When you are ready to commit your changes, use the `git commit` command. This opens your text editor for you to provide a commit message. Alternatively, you can use the `-m` flag to add a commit message directly:
 
@@ -355,7 +355,7 @@ Once you have staged the changes you want to include in the commit, you can comm
 $ git commit -m "Your commit message here"
 ```
 
-### 7\. How to Remove Files in Git:
+### 7. How to Remove Files in Git
 
 If you need to remove a file from Git's tracking, you can use `git rm`. It remove the file from both the repository and working directory. Suppose you want to remove a file named `temp.txt`:
 
@@ -369,7 +369,7 @@ If you only want to remove it from the repository but keep it in the working dir
 $ git rm --cached temp.txt
 ```
 
-### 8\. How to Move (or Rename) Files in Git:
+### 8. How to Move (or Rename) Files in Git
 
 Git doesn't explicitly track file movements. But you can use `git mv` to rename or move files within your repository. For example, to rename `old_file.txt` to `new_file.txt`:
 
@@ -390,7 +390,7 @@ After creating multiple commits or cloning a repository, the `git log` command a
 By default, it lists commits in reverse chronological order, displaying each commit with its SHA-1 checksum, author's name and email, date, and commit message.  
 Now let's see how can we enhance this output:
 
-### How to View Commit Differences in Git:
+### How to View Commit Differences in Git
 
 To view the difference introduced in each commit, you can use the `-p` or `--patch` option:
 
@@ -398,7 +398,7 @@ To view the difference introduced in each commit, you can use the `-p` or `--pat
 $ git log -p -2    # -2 is used to view the differences introduced in each of the last two commits
 ```
 
-### How to Display Statistics in Git:
+### How to Display Statistics in Git
 
 The `--stat` option provides summarized statistics for each commit, including the modified files, lines added/deleted, and a summary.
 
@@ -406,7 +406,7 @@ The `--stat` option provides summarized statistics for each commit, including th
 $ git log --stat
 ```
 
-### How to Customize Git Log Output Format:
+### How to Customize Git Log Output Format
 
 The `--pretty` option allows you to alter the log output format. Various options are available for different formats:
 
@@ -440,7 +440,7 @@ Using `--graph`, you can also visualize branch and merge history.
 $ git log --pretty=format:"%h %s" --graph
 ```
 
-### How to Limit Git Log Output:
+### How to Limit Git Log Output
 
 In addition to formatting options, `git log` offers various limiting options to refine the displayed commit history.
 
@@ -790,7 +790,7 @@ A branch is a lightweight, movable pointer to a commit. The default branch name 
 
 Creating and switching between branches allows you to work on different features simultaneously.
 
-### How to Create a New Branch in Git:
+### How to Create a New Branch in Git
 
 When you want to start working on a new feature or experiment with an idea, you can create a new branch in Git. This new branch serves as a separate line of development, allowing you to make changes without affecting the main branch.
 
@@ -816,7 +816,7 @@ This will display a list of branches with an asterisk (\*) indicating the curren
 $ git branch -v
 ```
 
-### How to Switch to Another Branch in Git:
+### How to Switch to Another Branch in Git
 
 To switch to an existing different branch, use `git checkout`.
 
@@ -837,7 +837,7 @@ In Git version 2.23 onwards, you can use `git switch` instead of `git checkout`.
 -   Switch to an existing branch: `git switch existing-branch`.
 -   Create and switch to new branch: `git switch -c new-branch`.
 
-### How to Visualize Branches in Git:
+### How to Visualize Branches in Git
 
 After creating and switching branches, you can visualize the branch structure using:
 
@@ -936,11 +936,11 @@ This is **different from `$ git config --global init.defaultBranch main`** that 
 
 Let's understand branches in more detail and look at a common branching workflow that is used in large projects.
 
-### Long-Running Branches:
+### Long-Running Branches
 
 In Git, long-running branches are branches that remain open over an extended period.
 
-### Topic Branches:
+### Topic Branches
 
 `Topic`/`Feature` branches are short-lived branches created for specific features or pieces of work. Unlike long-running branches, which persist over time, topic branches are created, used, and often deleted once the work is complete.
 
@@ -966,7 +966,7 @@ In Git, when you're working with branches, there are two primary ways to integra
 
 Unlike merging, which can create a cluttered history with multiple merge commits, rebasing produces a linear history, making it easier to understand the sequence of changes made over time.
 
-### Basic Rebase Example:
+### Basic Rebase Example
 
 Imagine you're working on a project with two branches: "feature" and "master". You've made some commits on the "feature" branch and now want to integrate these changes into the "master" branch using rebasing.
 
@@ -1006,12 +1006,12 @@ Now, your project history appears linear, reflecting the sequential integration 
 
 ### Rebasing vs Merging: Which is Better?
 
-#### Rebasing Use Cases:
+#### Rebasing Use Cases
 
 -   Suitable for feature branches that need a clean integration into the mainline branch.
 -   Preferred for open-source contributions where a clean commit history is valued.
 
-#### Merging Use Cases:
+#### Merging Use Cases
 
 -   Appropriate for collaborative environments where transparency in the project's development process is crucial.
 -   Useful for projects where maintaining an accurate historical record is a priority.

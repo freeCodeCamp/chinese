@@ -50,7 +50,7 @@ Despite these challenges, the transformative potential of GenAI in innovation ma
 
 By navigating this complex landscape thoughtfully and deliberately, we can unlock the full potential of GenAI to drive innovation, create value, and shape a better future for all.
 
-## Here's What We'll Cover:
+## Here's What We'll Cover
 
 1.  [GenAI and innovation types][8]
 2.  [GenAI, dominant designs, and technology evolution][9]

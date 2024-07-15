@@ -1,17 +1,15 @@
 ---
-title: How to Write Components that Work in Any Framework
+title: 如何写能用在任何框架的组件
 author: Andrico Karoulla
 authorURL: https://www.freecodecamp.org/news/author/andrico/
 originalURL: https://www.freecodecamp.org/news/write-components-that-work-in-any-framework/
-translator: ""
+translator: TechQuery
 reviewer: ""
 ---
 
 November 6, 2023 / [#Components][1]
 
 <!-- more -->
-
-# How to Write Components that Work in Any Framework
 
 ![Andrico Karoulla](https://www.freecodecamp.org/news/content/images/size/w60/2019/10/IMG_20181210_202517.jpg)
 

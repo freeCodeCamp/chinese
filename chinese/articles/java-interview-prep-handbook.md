@@ -22,14 +22,19 @@ December 7, 2023 / [#Java][1]
   ![The Java Interview Prep Handbook – 50 Questions Solved + Code Examples](https://www.freecodecamp.org/news/content/images/size/w2000/2023/12/The-Java-Interview-Prep-Handbook-Cover.png)
 
 If you're trying to get a job in big tech or you want to refine your skills in software development, a strong grasp of Java is indispensable.
+如果你想在大科技公司找到一份工作，或者想提高你的软件开发技能，那么掌握Java是必不可少的。
 
 Java is well-known for its robustness in Object-Oriented Programming (OOP), and it provides a comprehensive foundation essential for developers at every level.
+Java以其在面向对象编程（OOP）中的稳健性而闻名，它为各级开发人员提供了至关重要的综合基础。
 
 This handbook offers a detailed pathway to help you excel in Java interviews. It focuses on delivering insights and techniques relevant to roles in esteemed big tech companies, ensuring you're well-prepared for the challenges ahead.
+本手册提供了一条详细的路径，帮助你在Java面试中表现出色。它专注于传授与知名大科技公司职位相关的见解和技术，确保你为未来的挑战做好充分准备。
 
 This guide serves as a comprehensive Java review tutorial, bridging the gap between foundational Java knowledge and the sophisticated expertise sought by industry leaders like Google. And it'll help you deepen your understanding and practical application of Java, preparing you for professional success in the tech industry.
+本指南作为全面的Java复习教程，弥合了基础Java知识与像Google这样行业领导者所寻求的高级专业知识之间的差距。它将帮助你加深对Java的理解和实际应用，为你在科技行业的职业成功做好准备。
 
 ## Table of Contents
+## 目录
 
 1.  [What is Java?][3]
 2.  [What's the difference between the JDK, JRE, and JVM?][4]
@@ -83,31 +88,96 @@ This guide serves as a comprehensive Java review tutorial, bridging the gap betw
 50.  [Explain the concept of modules in Java][52]
 51.  [Conclusion][53]
 
+1. [什么是Java?][3]
+2. [JDK、JRE和JVM之间有什么区别？][4]
+3. [‘public static void main(String args)’ 方法是如何工作的？][5]
+4. [Java中的字节码是什么？][6]
+5. [重载和重写有什么区别？][7]
+6. [什么是Java ClassLoader？][8]
+7. [我们可以重写Java中的静态方法吗？][9]
+8. [‘finally’块与Java中的‘finalize’方法有何不同？][10]
+9. [抽象类和接口有什么区别？][11]
+10. [解释Java包的概念][12]
+11. [什么是Java注解？][13]
+12. [Java中的多线程是如何工作的？][14]
+13. [使用throw抛出异常][15]
+14. [使用throws声明异常][16]
+15. [transient关键字的意义是什么？][17]
+16. [如何确保Java中的线程安全？][18]
+17. [解释单例模式][19]
+18. [什么是Java流（Streams）？][20]
+19. [ArrayList和LinkedList的主要区别是什么？][21]
+20. [HashSet、LinkedHashSet和TreeSet有何不同？][22]
+21. [区分HashMap和ConcurrentHashMap][23]
+22. [描述hashCode()和equals()方法之间的契约][24]
+23. [什么是Java反射（reflection）？][25]
+24. [如何在Java中创建自定义异常？][26]
+25. [受检异常和非受检异常有什么区别？][27]
+26. [什么是泛型？为什么要使用泛型？][28]
+27. [解释Java Lambda表达式的概念][29]
+28. [继承中的菱形问题是什么？][30]
+29. [描述fail-fast和fail-safe迭代器的区别][31]
+30. [什么是Java泛型中的类型擦除？][32]
+31. [描述StringBuilder和StringBuffer之间的区别][33]
+32. [Java中的volatile关键字是什么？][34]
+33. [解释Java内存模型][35]
+34. [接口中的default关键字的用途是什么？][36]
+35. [Java 7和Java 8中的switch有何不同？][37]
+36. [解释自动装箱和拆箱的概念][38]
+37. [描述@FunctionalInterface注解][39]
+38. [如何在Java中实现不可变性？][40]
+39. [什么是装饰器模式？][41]
+40. [解释Java I/O流][42]
+41. [Java中的垃圾收集器如何工作？][43]
+42. [使用Java NIO的好处是什么？][44]
+43. [解释观察者模式][45]
+44. [Java的Optional的用途是什么？][46]
+45. [解释Java的try-with-resources][47]
+46. [解释C++和Java的区别][48]
+47. [什么是多态？举例说明][49]
+48. [如何避免Java中的内存泄漏？][50]
+49. [解释Java的同步块的用途][51]
+50. [解释Java中的模块概念][52]
+51. [结论][53]
+
 ![image-23](https://www.freecodecamp.org/news/content/images/2023/12/image-23.png)
 
 Butterfly representing the potential of Java - [lunartech.ai][54]
+蝴蝶代表Java的潜力 - [lunartech.ai][54]
 
 ## 1\. What is Java?
+## 1\. Java是什么？
 
 Java is a high-level, object-oriented programming language known for its platform independence. It allows developers to write code once and run it anywhere using the Java Virtual Machine (JVM).
+Java是一种高级的面向对象编程语言，以其平台独立性而闻名。它允许开发人员编写一次代码，并通过Java虚拟机（JVM）在任何地方运行。
 
-## 2\. What's the Difference between the JDK, JRE, and JVM?
+## 2\. JDK、JRE 和 JVM 之间有什么区别？
 
 -   **JDK (Java Development Kit):** This is a software package that provides developers with the tools and utilities necessary to develop, compile, and run Java applications.
 -   **JRE (Java Runtime Environment):** A subset of the JDK, the JRE contains the essential components, including the JVM, to run Java applications but not to develop them.
 -   **JVM (Java Virtual Machine):** An abstract computing machine, the JVM enables Java bytecode to be executed, providing the platform independence Java is known for.
 
+-   **JDK(Java Development Kit，Java开发工具包):** 这是一个软件包，为开发人员提供开发、编译和运行Java应用程序所需的工具和实用程序。
+-   **JRE(Java Runtime Environment，Java运行环境):** JRE是JDK的一个子集，包含运行Java应用程序的必要组件，包括JVM，但不包括开发工具。
+-   **JVM(Java Virtual Machine，Java虚拟机):** JVM是一种抽象的计算机，它使Java字节码得以执行，从而提供了Java所知的跨平台能力。
+
 ## 3\. How Does the `public static void main(String[] args)` Method Work?
+## 3\. `public static void main(String[] args)` 方法是如何工作的?
 
 This method is the entry point for Java applications. The `public` modifier means it's accessible from other classes, `static` denotes it's a class-level method, and `void` indicates it doesn't return any value. The argument `String[] args` allows command-line arguments to be passed to the application.
+这个方法是Java应用程序的入口点。`public` 修饰符意味着它可以从其他类访问，`static` 表示它是一个类级别的方法，`void` 表明它不返回任何值。参数 `String[] args` 允许将命令行参数传递给应用程序。
 
 ## 4\. What is bytecode in Java?
+## 4\. 什么是Java中的字节码?
 
 Bytecode is an intermediate, platform-independent code that Java source code is compiled into. It is executed by the JVM, enabling the "write once, run anywhere" capability.
+字节码是 Java 源代码编译成的一种中间, 平台无关的代码。它由 JVM 执行, 从而实现 "编写一次，到处运行" 的能力。
 
 ## 5\. Differentiate between overloading and overriding
+## 5\. 重载和重写的区别
 
 -   **Overloading:** This occurs when two or more methods in the same class share the same name but have different parameters. It's a compile-time concept.
+-   **重载(Overloading):** 当同一个类中有两个或多个方法共享相同的名称但具有不同的参数时，就发生了重载。这是一个编译时概念。
 
 ```
 class MathOperation {
@@ -144,6 +214,7 @@ public class Main {
 ```
 
 -   **Overriding:** In this case, a subclass provides a specific implementation for a method already defined in its superclass. It's a runtime concept.
+-   **重写(Overriding):** 在这种情况下，子类为其超类中已定义的方法提供特定的实现。这是一个运行时概念。
 
 ```
 class Animal {
@@ -180,22 +251,32 @@ public class Main {
 Swirling gears symbolize dynamic Java class loading. - [lunartech.ai][55]
 
 ## 6\. What is the Java ClassLoader?
+## 6\. 什么是Java ClassLoader?
 
 The Java ClassLoader is a part of the JRE that dynamically loads Java classes into the JVM during runtime. It plays a crucial role in Java's runtime environment by extending the core Java classes.
+Java ClassLoader 是 JRE 的一部分，在运行时动态加载 Java 类到 JVM 中。它通过扩展核心 Java 类，在 Java 的运行时环境中发挥了重要作用。
 
 ## 7\. Can We Override Static Methods in Java?
+## 7\. 我们可以重写Java中的静态方法吗?
 
 No, we cannot override static methods. While a subclass can declare a method with the same name as a static method in its superclass, this is considered method hiding, not overriding.
+不，我们不能重写静态方法。虽然子类可以声明一个与其超类中的静态方法同名的方法，但这被认为是方法隐藏，而不是重写。
 
 ## 8\. How Does the `finally` Block Differ from the `finalize` Method in Java?
+## 8\. `finally` 块与 Java 中的 `finalize` 方法有何不同？
 
 Understanding the distinction between the `finally` block and the `finalize` method in Java is crucial for effective resource management and exception handling in your programs.
+理解 `finally` 块和 `finalize` 方法之间的区别对于有效的资源管理和异常处理至关重要。
 
 **Finally Block:**
+**Finally块:**
 
 -   **Purpose and Usage:** The `finally` block is a key component of Java's exception handling mechanism. It is used in conjunction with `try-catch` blocks.
 -   **Execution Guarantee:** Regardless of whether an exception is thrown or caught within the `try` or `catch` blocks, the code within the `finally` block is always executed. This ensures that it runs even if there’s a return statement in the `try` or `catch` block.
 -   **Common Uses:** It is typically utilized for cleaning up resources, such as closing file streams, database connections, or releasing any system resources that were acquired in the `try` block. This helps in preventing resource leaks.
+-   **目的和用法：** `finally` 块是Java异常处理机制的关键组成部分。它与 `try-catch` 块一起使用。
+-   **执行保证：** 无论在 `try` 或 `catch` 块中是否抛出或捕获异常，`finally` 块中的代码总是会执行。这确保了即使在 `try` 或 `catch` 块中有return语句，`finally` 块中的代码也会运行。
+-   **常见用途：** 它通常用于清理资源，如关闭文件流、数据库连接或释放 `try` 块中获取的任何系统资源。这有助于防止资源泄漏。
 
 ```
 public class FinallyDemo {
@@ -212,11 +293,16 @@ public class FinallyDemo {
 ```
 
 **Finalize Method:**
+**Finalize方法：**
 
 -   **Definition:** The `finalize` method is a protected method of the `Object` class in Java. It acts as a final resort for objects garbage collection.
 -   **Garbage Collector Call:** It is called by the garbage collector on an object when the garbage collector determines that there are no more references to the object. However, its execution is not guaranteed, and it's generally unpredictable when, or even if, the `finalize` method will be invoked.
 -   **Resource Release:** The `finalize` method is designed to allow an object to clean up its resources before it is collected by the garbage collector. For example, it might be used to ensure that an open file owned by an object is closed.
 -   **Caution in Use:** It's important to note that relying on `finalize` for resource cleanup is generally not recommended due to its unpredictability and potential impact on performance.
+-   **定义：** `finalize` 方法是 Java 中 `Object` 类的一个受保护的方法。它作为对象垃圾收集的最后手段。
+-   **垃圾收集器调用：** 当垃圾收集器确定一个对象不再有引用时，它会在该对象上调用 `finalize` 方法。然而，它的执行并不保证，而且通常无法预测 `finalize` 方法何时会被调用，甚至是否会被调用。
+-   **资源释放：** `finalize` 方法旨在允许对象在被垃圾收集器回收之前清理其资源。例如，它可能用于确保对象拥有的打开文件被关闭。
+-   **使用注意：** 需要注意的是，由于其不可预测性和潜在的性能影响，依赖 `finalize` 进行资源清理通常是不推荐的。
 
 ```
 public class FinalizeDemo {
@@ -233,8 +319,10 @@ public class FinalizeDemo {
 ```
 
 **Access Modifiers in Java:**
+**Java中的访问修饰符：**
 
 -   **Private:** This modifier makes a member accessible only within its own class. Other classes cannot access private members of a different class.
+-   **Private（私有）：** 这种修饰符使成员只能在其所属的类内访问。其他类不能访问不同类的私有成员。
 
 ```
 class PrivateDemo {
@@ -247,6 +335,7 @@ class PrivateDemo {
 ```
 
 -   **Default (no modifier):** When no access modifier is specified, the member has package-level access. This means it is accessible to all classes within the same package.
+-   **Default（默认，无修饰符）：** 当未指定访问修饰符时，该成员具有包级访问权限。这意味着它可以被同一包中的所有类访问。
 
 ```
 class DefaultDemo {
@@ -259,6 +348,7 @@ class DefaultDemo {
 ```
 
 -   **Protected:** A protected member is accessible within its own package and also in subclasses. This is often used in inheritance.
+-   **Protected（受保护）：** 受保护的成员在其所在包内以及在子类中都是可访问的。这通常用于继承中。
 
 ```
 class ProtectedDemo {
@@ -271,6 +361,7 @@ class ProtectedDemo {
 ```
 
 -   **Public:** Public members are accessible from any class in the Java program. It provides the widest level of access.
+-   **Public（公共）：** 公共成员可以被Java程序中的任何类访问。它提供了最广泛的访问级别。
 
 ```
 public class PublicDemo {
@@ -283,14 +374,19 @@ public class PublicDemo {
 ```
 
 Understanding these distinctions and access levels is vital for effective Java programming, ensuring resource management, security, and encapsulation are handled appropriately in your software development endeavors.
+理解这些区别和访问级别对于有效的Java编程至关重要，可以确保在软件开发过程中适当地处理资源管理、安全性和封装。
 
 ## 9\. What is the Difference between an Abstract Class and an Interface?
+## 9\. 抽象类和接口之间有什么区别？
 
 An abstract class in Java is used as a base for other classes. It can contain both abstract methods (without an implementation) and concrete methods (with an implementation).
+在Java中，抽象类用作其他类的基类。它可以包含抽象方法（没有实现）和具体方法（有实现）。
 
 Abstract classes can have member variables that can be inherited by subclasses. A class can extend only one abstract class due to Java's single inheritance property.
+抽象类可以有成员变量，子类可以继承这些成员变量。由于Java的单继承特性，一个类只能继承一个抽象类。
 
 **Example of an Abstract Class:**
+**抽象类的示例：**
 
 ```
 abstract class Shape {
@@ -329,10 +425,13 @@ public class Main {
 ```
 
 An interface in Java, on the other hand, is a completely "abstract class" that is used to group related methods with empty bodies.
+在Java中，接口则是一个完全的“抽象类”，用于将相关的方法组织在一起，这些方法只有方法签名，没有方法体。
 
 From Java 8 onwards, interfaces can have default and static methods with a body. A class can implement any number of interfaces.
+从Java 8开始，接口可以包含具有方法体的默认方法和静态方法。一个类可以实现任意数量的接口。
 
 **Example of an Interface:**
+**接口的示例：**
 
 ```
 interface Drawable {
@@ -360,40 +459,56 @@ public class Main {
 ```
 
 Both abstract classes and interfaces are foundational concepts in Java, used for achieving abstraction and supporting design patterns like Strategy and Adapter. The use of these concepts depends on the specific requirements and design considerations of your software project.
+抽象类和接口是Java中的基础概念，用于实现抽象和支持设计模式，如策略模式（Strategy）和适配器模式（Adapter）。这两个概念的使用取决于软件项目的具体需求和设计考虑。
 
 ![image-25](https://www.freecodecamp.org/news/content/images/2023/12/image-25.png)
 
 Luminous labyrinth depicts Java packages and threading. - [lunartech.ai][56]
 
 ## 10\. Explain the Concept of Java Packages
+## 10\. 解释Java包的概念
 
 Java packages are a way of organizing and structuring classes and interfaces in Java applications. They provide a means to group related code together. Packages help prevent naming conflicts, enhance code readability, and facilitate code reusability.
+Java包是一种组织和结构化Java应用程序中的类和接口的方式。它们提供了将相关代码分组在一起的手段。包有助于防止命名冲突，提高代码可读性，并促进代码重用。
 
 For example, consider a banking application. You might have packages like `com.bank.accounts`, `com.bank.customers`, and `com.bank.transactions`. These packages contain classes and interfaces specific to their respective functionalities.
+例如，考虑一个银行应用程序。你可能会有像 `com.bank.accounts` 、`com.bank.customers` 和 `com.bank.transactions` 这样的包。这些包包含特定功能的类和接口。
 
 In essence, Java packages are like directories or folders in a file system, organizing code and making it more manageable.
+本质上，Java包就像文件系统中的目录或文件夹，组织代码并使其更易于管理。
 
 ## 11\. What are Java Annotations?
+## 11\. 什么是Java注解？
 
 Java annotations are metadata that can be added to Java source code. They provide information about the code to the compiler or runtime environment. Annotations do not directly affect the program's functionality – instead, they convey instructions to tools or frameworks.
+Java注解是可以添加到Java源代码中的元数据。它们为编译器或运行时环境提供有关代码的信息。注解不会直接影响程序的功能——它们提供指令给工具或框架。
 
 A common use of annotations is for marking classes or methods as belonging to a specific framework or for providing additional information to tools like code analyzers, build tools, or even custom code generators.
+注解的常见用途是标记类或方法属于特定框架，或为代码分析工具、构建工具甚至自定义代码生成器提供额外的信息。
 
 For example, the `@Override` annotation indicates that a method is intended to override a method from a superclass, helping catch coding errors during compilation. Another example is `@Deprecated`, which indicates that a method or class is no longer recommended for use.
+例如，`@Override` 注解表明一个方法旨在重写超类中的方法，帮助在编译期间捕获编码错误。另一个例子是 `@Deprecated`，它表明一个方法或类不再推荐使用。
 
 ## 12\. How Does Multi-threading Work in Java?
+## 12\. Java中的多线程是如何工作的？
 
 Multi-threading in Java allows a program to execute multiple threads concurrently. Threads are lightweight processes within a program that can run independently. Java provides a rich set of APIs and built-in support for multi-threading.
+Java中的多线程允许程序同时执行多个线程。线程是程序中的轻量级进程，可以独立运行。Java提供了丰富的API和内置支持来实现多线程。
 
 Threads in Java are typically created by either extending the `Thread` class or implementing the `Runnable` interface. Once created, threads can be started using the `start()` method, causing them to run concurrently.
+Java中的线程通常通过扩展 `Thread` 类或实现 `Runnable` 接口来创建。创建线程后，可以使用 `start()` 方法启动它们，使它们并发运行。
 
 Java's multi-threading model ensures that threads share resources like memory and CPU time efficiently while providing mechanisms like synchronization and locks to control access to shared data.
+Java的多线程模型确保线程有效地共享内存和CPU时间，同时提供了如同步和锁等机制来控制对共享数据的访问。
 
 Multi-threading is useful for tasks such as improving application responsiveness, utilizing multi-core processors, and handling concurrent operations, as often seen in server applications.
+多线程对于提高应用程序响应性、利用多核处理器以及处理并发操作（如服务器应用程序中常见的）非常有用。
 
 ## 13\. Use `throw` to Raise an Exception
+## 13\. 使用 `throw` 来抛出异常
 
 In Java programming, the `throw` keyword is crucial for handling exceptions deliberately and responsively. This approach to exception management allows developers to enforce specific conditions in their code and maintain control over the program flow.
+在Java编程中，`throw` 关键字对于有意和响应性地处理异常至关重要。这种异常管理方法允许开发人员在代码中强制特定条件，并控制程序流程。
 
 ```java
 public void verifyAge(int age) {

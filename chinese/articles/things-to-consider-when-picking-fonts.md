@@ -3,7 +3,7 @@ title: How to Pick a Font – An In-Depth Guide for Developers
 author: Seth Falco
 authorURL: https://www.freecodecamp.org/news/author/seth/
 originalURL: https://www.freecodecamp.org/news/things-to-consider-when-picking-fonts/
-translator: ""
+translator: Nin3
 reviewer: ""
 ---
 
@@ -19,11 +19,11 @@ September 13, 2023 / [#Fonts][1]
 
   ![How to Pick a Font – An In-Depth Guide for Developers](https://www.freecodecamp.org/news/content/images/size/w2000/2023/09/markus-spiske-f81ym3dE5N4-unsplash.jpg)
 
-Fonts are not always free. If you're fetching a font that is not already on your user's phone or computer, they will have to download it. And this will impact performance.
+字体总会带来开销。如果浏览器想要获取一款字体，而用户的手机或电脑又恰好没有的话，那么浏览器就不得不去下载它了。这势必会对性能带来影响。
 
-In documents and subtitles, embedding fonts can easily increase the file size tenfold. As for the web, here are some popular fonts and their potential network impact:
+在文档或字幕中，嵌入字体可以轻松地将文件大小增长十倍。而对于网页来说，这里有一份关于时下流行字体以及它们潜在的网络性能影响报告：
 
-| Font | Size | Wi-Fi | Regular 4G/LTE | Regular 3G |
+| 字体 | 文件大小 | Wi-Fi | 常规 4G/LTE | 常规 3G |
 | --- | --- | --- | --- | --- |
 | [Roboto][3] | 168.3 KB | 0.05 s | 0.36 s | 1.90 s |
 | [Montserrat][4] | 198.0 KB | 0.05 s | 0.42 s | 2.21 s |
@@ -31,67 +31,67 @@ In documents and subtitles, embedding fonts can easily increase the file size te
 | [Noto Sans][6] | 556.2 KB | 0.15 s | 1.13 s | 6.03 s |
 | [JetBrains Mono][7] | 187.9 KB | 0.05 s | 0.40 s | 2.10 s |
 
-The estimated network speeds and latency are taken from [Throttling - Firefox Source Docs][8].
+其中测算得出的网速和延迟来自于 [Firefox 源文档的 Throtting 章节][8]。
 
-On the modern web, we've normalized fetching fonts from client-side, or embedding fonts in resources that are served to users. While this may be tempting, it actually makes very little sense for most use-cases.
+在现代网页中，我们已经将从客户端获取字体或在提供给用户的资源中嵌入字体的做法规范化了。虽说这做法听起来很诱人，但是对于大多数用例实际来说，并没有什么太大的帮助。
 
-This isn't suggesting to never use external fonts. Just a reminder that fonts aren't free, and that it's a good idea to review if it's worth packaging or fetching external fonts when it's avoidable.
+这并不是建议说咱们就再也别用外部字体了。只是提个醒，字体往往伴随着对网络的开销，因此在可以避免的情况下，最好重新审视一下是否值得打包或引入外部字体。
 
-Instead, I'd recommend you consider an expansive font selection, featuring typefaces available across operating systems. There are times we should fetch external fonts, but it shouldn't be the default attitude in everything that we build.
+相反，我建议你挑选多种字体，那些具有跨操作系统可用特点的字体。有时我们确实应该选用外部字体，但这并不意味着应该将他视作构建内容时的默认态度。
 
-In short, you may just need an arbitrary typeface to show arbitrary text on your website. That's fine. But it's worth sticking to the wide array of typefaces already installed on the client's operating system.
+简而言之，你可能只需要选择任意一种字体，即可在你的网站上显示任意的文本。虽然这样也挺好，但使用客户端操作系统上已经安装的多种字体这事，仍然值得坚持。
 
-In other words…… only fetch an external font when it actually enhances the user experience!
+换句话说吧...只有真正能提升用户体验时才值得使用外部字体！
 
-## Why?
+## 为什么？
 
-Given the number of typefaces available on all operating systems, there are likely many suitable options for your use-case.
+考虑到所有操作系统上那些茫茫多的可用字体数量，可能有不少适合你用例的选项。
 
-There's no need to specifically fetch Roboto, Inter, or another font that's similar enough to the preinstalled options.
+没必要特意去下载 Roboto、Inter 或者是一些类似系统自带的字体。
 
-This is particularly relevant to corporate websites, blogs, forums, and web applications.
+这对企业官网，个人博客，论坛以及 web 应用程序都尤为相关。
 
-The user is there to consume content or get a task done. Unless you're looking to be creative, the average user doesn't know, and doesn't care, what typeface it has so long as it's legible.
+用户在这里仅仅是进行消费或是完成任务。除非你正想让你的创意大展身手，否则大部分普通用户不知道也不关心你选用的字体是什么，只要它清晰就行。
 
-Meanwhile, they may care for other things impacted by your font choices……
+相比之下，他们可能更关心受你的字体选择影响的其他事情......
 
-### Performance
+### 表现
 
-Whether we're talking about embedding fonts in offline documents, or fetching fonts on the web, it increases the overall size and load time of resources.
+无论我们正在探讨的是为离线文档嵌入字体，还是直接从网络上下载字体，它都会增加资源的整体大小和加载时间。
 
-Typefaces can be upwards of 160 KB per font face. The impact of this can be significant on slower networks or old mobile devices.
+每个字体最多可以占用 160 KB。这对于速度较慢的网络或者旧的移动设备来说可能影响很大。
 
-Particularly on the web, you'd derive more value building a lightening fast user experience, than fetching a typeface the user didn't ask for.
+尤其是从网络下载字体，和那些要求用户下载不必要字体的网页比起来，那些构建速度快如闪电的网页，一定会得到更棒的体验。
 
-Until the typeface has finished fetching, sites can choose to block rendering or swap, which neither is ideal.
+直到字体下载完成，站点都可以选择阻止页面上的字体进行渲染或是进行字体交换，然而这两者效果都不太理想。
 
-Font swapping is when the font changes shortly after visiting the site, leading to a flicker and an increase in [Cumulative Layout Shift][9].
+字体交换是指访问网站后字体在不久发生切换，这会导致闪烁和 [累计布局偏移量][9] 的增加。
 
 ![mdn-font-swap](https://www.freecodecamp.org/news/content/images/2023/09/mdn-font-swap.gif)
 
-A demo of blocking and font swapping on the MDN website. I refreshed with the cache disabled on a high-spec laptop connected to Wi-Fi with no throttling.
+模拟 MDN 网站阻塞并进行字体交换的演示。演示效果是在一台连接到 Wi-Fi 的高规格笔记本电脑上禁用缓存，并在没有任何节流的情况下进行刷新。
 
 ![out](https://www.freecodecamp.org/news/content/images/2023/09/out.gif)
 
-A demo of the MDN website using Nimbus Sans, based on Helvetica, instead of external fonts. I refreshed under the same conditions.
+MDN 网站的演示，使用基于 Helvetica 的 Nimbus Sans，而不是外部字体。在同样的条件下刷新的效果。
 
-Dropping external fonts is pretty simple, but can improve load time, reduce bandwidth usage, and avoid font swapping, which all improve your [Core Web Vitals][10] and SEO.
+放弃使用外部字体非常简单，但可以显著优化加载时间，减少带宽占用，并避免字体交换的产生，这些都能提升你的 [核心网页指标][10] 以及 SEO。
 
-### Privacy
+### 隐私
 
-When fetching fonts from a third-party server such as Google Fonts, client information is leaked to the third party. This includes the [IP Address][11], [User-Agent][12], and [Referer][13], among other headers.
+当从第三方服务器，例如 Google Fonts 获取字体时，客户端信息会不可避免的泄露给第三方。这些信息包括了 [IP 地址][11]、[用户代理][12] 以及 [Referer 请求头][13]，其中也包含其他请求头。
 
-Every website that loads a typeface from Google Fonts, has given Google the potential to track the visitor. The domain you visited, the time you accessed it, what browser and operating system you're on, etc. They can form a timeline of the websites you visit from the fonts alone.
+每个需要从 Google Fonts 加载字体的网站都给予了 Google 跟踪访问者的潜在可能。你访问的域名也好，你访问的时间也罢，甚至包括你的浏览器和操作系统等等都不在话下。他们仅仅通过字体这一条线索，就能构建一个你访问网站的时间线。
 
-Google states that they do not track or store this information. However, given the nature of the internet, they inevitably must receive it.
+Google 声明我们不会追踪或是储存这些信息。然而，鉴于互联网的性质，他们仍不可避免地必须接收它。
 
-Germany has actually ruled that websites that load Google Fonts are violating GDPR:
+德国实际上已经裁定加载 Google 字体的网站违反了 GDPR：
 
 [
 
-German Court Rules Websites Embedding Google Fonts Violates GDPR
+德国某法院裁定嵌入 Google Fonts 涉嫌违反通用欧盟数据保护条例
 
-A German court has ruled that websites that embed fonts from Google servers violate GDPR, and must pay €100 in damages.
+德国法院裁定，嵌入 Google 服务器字体的网站违反了 GDPR，必须支付 100 欧元的赔偿金。
 
 ![thn](https://thehackernews.com/images/-rVOVZW3ut4Q/XeZwEXpJ3UI/AAAAAAAA15Q/OPI7hX80GUwaRrTJ7KJtGSd_-rjDaHNVQCLcBGAsYHQ/s256-rj-e300/thn.png)Jan 31, 2022Ravie LakshmananThe Hacker News
 
@@ -99,38 +99,38 @@ A German court has ruled that websites that embed fonts from Google servers viol
 
 ][14]
 
-This problem can be avoided by self-serving fonts. If you're going to use an external font, please consider this.
+这个问题可以采用自托管字体的方法来回避。如果你正打算引入外部字体，请考虑使用这个方法。
 
-However, also know that some users [disable custom fonts][15] or [block third-party fonts][16], so you should still specify at least a generic family name regardless.
+然而，你还需要知道也许部分用户会采取 [禁用自定义字体][15] 或者 [阻止第三方字体][16] 的方案，所以无论如何，你仍然应该至少选定一个通用系列的字体族名。
 
-> "You should always include at least one generic family name in a `font-family` list, since there's no guarantee that any given font is available. This lets the browser select an acceptable fallback font when necessary.‌‌‌‌‌‌‌‌" (Source: [MDN Documentation for font-family][17])
+> “应当至少在使用的 `font-family` 列表中添加一个通用的字体族名，因为无法保证用户的计算机内已经安装了指定的字体，也不能保证使用 @font-face 提供的字体移动能够正确地下载。提供通用的字体族使得浏览器可以在无法得到最佳字体的情况下使用一个相对接近的备选字体。” (信息来源：[MDN 文档的 font-family 章节][17])
 
-### Familiarity
+### 熟悉度
 
-Users are familiar with the experience of their operating system.
+用户往往熟悉操作系统所带来的体验。
 
-Maybe not how it works under the hood, or even how to perform simple operations, but they do encounter the welcome screen, context menus, and their preinstalled applications regularly.
+也许他们不知道黑箱之下的理论，甚至也不懂得某些简单的操作，但他们确实会定期地遇到欢迎页，下拉菜单以及系统自带的应用程序这些家伙们。
 
-It's safer to stick with typefaces the user already has access to because these are the typefaces the user is already accustomed to reading from.
+选择用户已经使用过的字体会更安全，因为这些是用户已经习惯阅读的字体。
 
-This argument is in a similar vein to why it's a good idea to use the system date picker, color picker, or modal/dialog boxes instead of creating custom ones.
+这个论点就有点像，为什么使用系统日期选择器、颜色选择器或模态框/对话框，而不是选择创建一个自定义框这种好主意呢，这样的感觉。
 
-Users are familiar with their system!
+那是因为，用户熟悉他们自己的系统！
 
-From my experience, often one of the following occurs:
+从我的经验来看，字体挑选经常会伴随以下情况的发生：
 
--   The user couldn't tell that an external font was used, making it largely redundant. Most non-specialists experience this everyday, it's hard to even tell that websites are using different fonts from each other unless you're conscious of it.
--   The user was able to tell, and thus has a different reading experience than what they're used to. The potential for disruption depends on the needs of the user, but that risk is often unnecessary.
+-   用户没法分辨你是否使用了外部字体，这使得它在很大程度上是多余的。大部分非专业的人士每天都在经历这种情况，除非你特别关注它，否则真的很难分辨出网站也在使用不同的字体。
+-   用户能够分辨外部字体，从而获得与他们习惯不同的阅读体验。阅读被字体打断的可能性具体取决于用户的需求，但这种风险通常是不必要的。
 
-Unless you have a reason to change it, it's best to stick with what the user is familiar with.
+除非你有理由更改它，否则最好坚持选择用户熟悉的内容。
 
-## Who else does this?
+## 还有谁也这样做了？
 
-Wikipedia is the most notable example, and they even have a page elaborating on the topic: [Meta page on Wikipedia's use of typography][18].
+维基百科是最著名的例子，他们甚至有一个页面详细阐述了这个话题：[维基百科 typography 章节的页面][18]。
 
-Some of the most popular sites don't fetch a single font on their landing page, in favor of using system fonts only:
+一些受欢迎的网站在落地页往往不会只有单一字体，而是仅选用系统支持的一系列字体：
 
-| Site | Font Selector |
+| 网站 | 字体选择 |
 | --- | --- |
 | Facebook | `SFProDisplay-Regular, Helvetica, Arial, sans-serif` |
 | Instagram | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif` |
@@ -139,92 +139,92 @@ Some of the most popular sites don't fetch a single font on their landing page, 
 | Reddit | `-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif` |
 | Bing | `"Segoe UI", Segoe, Tahoma, Arial, Verdana, sans-serif` |
 
-You can verify for yourself by inspecting the site with your browser's development tools.
+你可以通过使用浏览器的开发工具检查站点来自行验证。
 
-There are no outgoing network requests for fonts, and the `font-family` properties are set to system fonts only.
+没有因字体而产生向外的网络请求，并且 `font-family` 属性也仅仅被设置为系统字体。
 
-## Exceptions
+## 例外情况
 
-There are times loading and embedding fonts does make sense, particularly if the look and feel you're after is significantly different from common system fonts:
+有时加载和嵌入字体确实有意义，特别是当你追求的外观和感觉与常见系统字体存在显著不同时：
 
--   You're targeting an environment that doesn't have typefaces available.
--   To fit with existing branding, like an in-house font.
--   A creative or unique design, especially relevant for gaming and artsy sites.
--   Icon fonts like [OpenMoji][19], but note that most clients come with emojis already.
--   A website that's literally for distributing, displaying, and testing fonts.
+-   你的目标环境没有可用字体。
+-   为了适应现有的品牌，比如选用品牌内部字体。
+-   尤其与游戏和艺术相关的，创意或设计独特的网站。
+-   图标字体如 [OpenMoji][19]，但请注意，大多数客户端已经内置了表情符号。
+-   一个明显是用于分发、显示和测试字体的网站。
 
-## Consequences
+## 结果
 
-If you apply a local font stack, your text content may not look pixel-for-pixel identical across clients. However, success should be measured by the user experience.
+如果你应用了本地字体集，你的文本内容在各个客户端上看起来可能达不到像素级别的一致。然而，字体显示效果的成功与否，应该是通过用户体验来衡量的。
 
-It is important for the site to feel familiar, but there are more significant changes between clients already, like the human-interface, resolutions, and DPI.
+让网站保持既视感很重要，但客户端之间已经发生了更大的变化，例如交互界面、分辨率和 DPI。
 
-Compared to this, it's fine if the arch of the `a` has a slightly different radius, or the tick on the `l` is a few pixels longer. In fact, this is unlikely to go noticed, so it is unlikely to impact the user experience at all.
+与之相比，如果是 `a` 的拱形半径略有不同，或者是 `l` 上的刻度长几个像素，看起来便完全没问题。事实上，这不太可能被注意到，因为这根本不可能影响到用户体验。
 
-Users would sooner have qualms with the difference in speed or a flicker, before the difference between similar typefaces.
+在觉察到相似字体之间的差异之前，用户很快就会对速度差异或闪烁而感到不安。
 
-Another argument is that allowing different typefaces may make the layout difficult to manage. Glyphs can have different widths, and therefore take up varying space.
+另外一个论断是，允许不同的字体可能会使布局变得难以管理。因为字形可以有不同的宽度，从而导致不同的字体会占用不同的空间。
 
-However, modern sites should be following [responsive design][20], so you should be taking the time to make the pages fluid anyway.
+然而，现代网站应该遵循 [响应式设计][20]，因此你更应该在页面流畅度上花时间。
 
-To minimize impact, you can use [web safe fonts][21].
+为了尽量减少影响，你可以使用 [网络安全字体][21]。
 
-If you dislike how limiting that is, pick a typeface included with your operating system, and find similar typefaces on other operating systems.
+如果你不喜欢这种限制，请选择操作系统附带的字体，并尝试在其他操作系统上找到类似的字体。
 
-Even better if you can pick [metrically compatible typefaces][22].
+如果你选择 [度量兼容][22] 的字体，那就更好了。
 
-### Comparison
+### 比较
 
-Let's visit a website and see what it's like to disable downloadable fonts.
+让我们访问一个网站，看看禁用可下载字体后会是什么样子。
 
-I'll also replace all font selectors, to use Helvetica.
+我还将替换所有字体选择器，以使用 Helvetica 做代替。
 
-Note, my computer does not actually have Helvetica installed, so my operating system automatically translates this to Nimbus Sans, which is based on Helvetica. Nimbus Sans is preinstalled on [Debian][23].
+请注意，我的计算机实际上并未安装 Helvetica，因此我的操作系统会自动将其转换为基于 Helvetica 的 Nimbus Sans。 Nimbus Sans 是预装在 [Debian][23] 系统上的。
 
-In the case of MDN, is the second version really so undesirable that we need to load a 325 KB font, given the penalties and demonstrations raised above? Ultimately, this one is down to user preference, so I'll let you decide.
+考虑到上面提出的种种限制和当前的演示情况，就 MDN 而言，第二个版本已经不堪到以至于我们需要加载一个 325 KB 的字体吗？这最终都由用户的偏好说了算，所以满意与否都将取决于你。
 
 ![1](https://www.freecodecamp.org/news/content/images/2023/09/1.png)
 
-MDN, with the Inter typeface fetched from client-side.
+MDN 网站，使用从客户端获取的 Inter 字体。
 
 ![1-1](https://www.freecodecamp.org/news/content/images/2023/09/1-1.png)
 
-MDN, with the font-family overridden to use Helvetica.
+还是 MDN 网站，但是使用 Helvetica 字体系列覆盖。
 
-On the flip side, that doesn't mean to never fetch fonts. There are examples where the aesthetic may be more valuable to the user experience than the performance penalty.
+另一方面来说，这并不意味着永远不从网络上获取字体。在一些例子中，美感对于用户体验来说可能比性能损失更有价值。
 
-Let's look at [Framasoft][24]. They went for a more creative look and feel, also featuring a lot of [David Revoy's][25] illustrations.
+让我们看看 [Framasoft][24]。他们追求更具创意的外观和感觉，还采用了许多 [David Revoy][25] 的插画。
 
-To use Tovari Sans was a design choice which enhances the user experience, and isn't easily replaceable with a local font stack.
+选用 Tovari Sans 是一种增强用户体验的设计选择，并且不易被本地字体集替换。
 
-If we were to take that font away, the page feels inconsistent and unpolished. Even if we cleaned up the CSS, we'd still be detracting from the theme of the website.
+如果我们拿掉这个字体，页面就会感觉丢失了连贯性且变得粗糙。即使我们同时也清理了 CSS 样式，我们仍然会偏离网站的主题。
 
 ![1-2](https://www.freecodecamp.org/news/content/images/2023/09/1-2.png)
 
-Framasoft, with the Tovari Sans typeface fetched from client-side.
+Framasoft 网站，使用从客户端获取的 Tovari Sans 字体。
 
 ![1-4](https://www.freecodecamp.org/news/content/images/2023/09/1-4.png)
 
-Framasoft, with the font-family overridden to use Helvetica.
+还是 Framasoft 网站，但是使用 Helvetica 字体系列覆盖。
 
-## Resources
+## 资源
 
-Whether you want to go local, or just need to specify some fallback fonts, here are some helpful resources for picking out your font stack:
+无论你想要本地化，还是只需要选定一些回退字体，这里都有一些有用的资源，可帮助你选择自己的字体集：
 
--   [List of typefaces included with Apple operating systems][26]
--   [List of typefaces included with Windows][27]
--   [Core typefaces included with ChromeOS][28]
--   [Documentation for web safe fonts][29]
+-   [Apple 操作系统包含的字体列表][26]
+-   [Windows 操作系统包含的字体列表][27]
+-   [ChromeOS 附带的核心字体][28]
+-   [Web 安全字体的文档][29]
 
-## Cross-Platform Font Stacks
+## 跨平台字体集
 
-The following is an opinionated list of what your local font stacks could look like. You'll find countless others on the internet if you search.
+以下是本地字体集的外观列表。如果你搜索的话，你会在互联网上找到无数其他的资源。
 
-Some font classifications don't explicitly include a font from each operating system, but remember that the generic font family at the end will have you covered.
+某些字体分类并未明确包含每个操作系统的字体，但请记住，最后的通用字体系列将涵盖所有内容。
 
-### Sans Serif
+### 无衬线字体
 
-| Typeface | Operating Systems |
+| 字体名称 | 操作系统 |
 | --- | --- |
 | Nimbus Sans | Debian, Ubuntu |
 | Helvetica | iOS, macOS, tvOS, watchOS |
@@ -235,9 +235,9 @@ Some font classifications don't explicitly include a font from each operating sy
 | [Arimo][33] | ChromeOS, Debian |
 | sans-serif |  |
 
-### Serif
+### 衬线字体
 
-| Typeface | Operating Systems |
+| 字体名称 | 操作系统 |
 | --- | --- |
 | [Tinos][34] | ChromeOS, Debian |
 | [Liberation Serif][35] | Debian, Ubuntu |
@@ -248,9 +248,9 @@ Some font classifications don't explicitly include a font from each operating sy
 | [DejaVu Serif][39] | Debian, postmarketOS, Ubuntu |
 | serif |  |
 
-### Monospace
+### 等宽字体
 
-| Typeface | Operating Systems |
+| 字体名称 | 操作系统 |
 | --- | --- |
 | [Liberation Mono][40] | Debian, Ubuntu |
 | Monaco | iOS, macOS |
@@ -258,9 +258,9 @@ Some font classifications don't explicitly include a font from each operating sy
 | Consolas | Windows |
 | monospace |  |
 
-### Handwriting
+### 手写体
 
-| Typeface | Operating Systems |
+| 字体名称 | 操作系统 |
 | --- | --- |
 | Brush Script MT Italic | iOS, macOS |
 | Ink Free | Windows |
@@ -269,21 +269,21 @@ Some font classifications don't explicitly include a font from each operating sy
 
 ### Emoji
 
-| Typeface | Operating Systems | Comments |
+| 字体名称 | 操作系统 | 注释 |
 | --- | --- | --- |
 | [Noto Color Emoji][42] | Android, Debian, Fedora, postmarketOS, Ubuntu |  |
 | Segoe UI Emoji | Windows |  |
 | Apple Color Emoji | iOS, macOS, tvOS, watchOS |  |
-| [Twemoji Mozilla][43] |  | Packaged in Firefox and Thunderbird. |
+| [Twemoji Mozilla][43] |  | 内置于 Firefox 和 Thunderbird 中。 |
 | emoji |  |  |
 
-## Conclusion
+## 结论
 
-In the end, the user experience is what matters most. Sometimes that means prioritizing visual design, other times that means prioritizing performance.
+最后，用户体验才是最重要的。有时这意味着优先考虑视觉设计，而有时这又意味着优先考虑性能。
 
-I hope this was worth your time, and that with the knowledge you can make an informed decision when choosing fonts for your next project.
+我希望这篇文章值得你花时间阅读，并希望你在为下一个项目选择字体时，能利用这些知识做出明智的决定。
 
-Feedback and questions welcome, you can hit me up on [GitHub][44], [Mastodon][45], or [LinkedIn][46]!
+欢迎提供反馈和问题，你可以在 [GitHub][44]、[Mastodon][45] 或 [LinkedIn][56] 上联系我！
 
 ---
 
@@ -295,9 +295,9 @@ Linux enthusiast, privacy advocate, and open-sourcerer. 🧙🏽‍♂️
 
 ---
 
-If this article was helpful, share it.
+如果这篇文章有所帮助，请分享。
 
-Learn to code for free. freeCodeCamp's open source curriculum has helped more than 40,000 people get jobs as developers. [Get started][48]
+在 freeCodeCamp 免费学习编程。 freeCodeCamp 的开源课程已帮助 40,000 多人获得开发者工作。[开始学习][48]
 
 [1]: /news/tag/fonts/
 [2]: /news/author/seth/

@@ -2,6 +2,8 @@ name: CI & CD
 
 on:
   push:
+    paths:
+      - 'chinese/articles/**'
 
 jobs:
   Lint-and-Format:

@@ -3,6 +3,7 @@ on:
   issues:
     types:
       - opened
+
 jobs:
   WebPageToMarkdown:
     runs-on: ubuntu-latest
@@ -19,13 +20,19 @@ jobs:
         shell: bash
         run: echo "The description of the issue is empty." 1>&2; exit 1;
 
-      - uses: actions/checkout@v3
-      - name: Crawl pages and generate Markdown files
-        uses: freeCodeCamp-China/article-webpage-to-markdown-action@v1
+      - uses: actions/checkout@v4
+
+      - id: issue-parser
+        uses: stefanbuck/github-issue-parser@v3
         with:
-          newsLink: '${{ github.event.issue.Body }}'
-          ignoreSelector: '.ad-wrapper'
-          markDownFilePath: './chinese/articles/'
+          template-path: ".github/ISSUE_TEMPLATE/AutoGenerateMarkdown.yml"
+
+      - name: Crawl pages and generate Markdown files
+        uses: freeCodeCamp-China/article-webpage-to-markdown-action@v2
+        with:
+          pageURL: "${{ steps.issue-parser.outputs.issueparser_page_link  }}"
+          excludedSelector: '.ad-wrapper'
+          markdownFolder: './chinese/articles/'
           githubToken: ${{ github.token }}
 
       - name: Git Auto Commit

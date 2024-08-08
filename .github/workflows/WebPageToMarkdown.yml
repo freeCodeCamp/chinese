@@ -1,8 +1,9 @@
 name: Web page to Markdown
 on:
-  issues:
-    types:
-      - opened
+  pull_request:
+    paths:
+      - 'chinese/articles/**'
+      
 jobs:
   WebPageToMarkdown:
     runs-on: ubuntu-latest

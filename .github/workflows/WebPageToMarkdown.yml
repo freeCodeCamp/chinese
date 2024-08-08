@@ -30,6 +30,7 @@ jobs:
         uses: freeCodeCamp-China/article-webpage-to-markdown-action@v2
         with:
           pageURL: "${{ steps.issue-parser.outputs.issueparser_page_link  }}"
+          excludedSelector: '.ad-wrapper'
           markdownFolder: './chinese/articles/'
           githubToken: ${{ github.token }}
 

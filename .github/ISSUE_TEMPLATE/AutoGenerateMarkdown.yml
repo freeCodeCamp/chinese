@@ -2,8 +2,7 @@ name: 翻译任务（自动爬取）
 description: '新增待翻译文章，使用自动 GitHub Actions 自动爬取。'
 title: '[Auto]（此处替换为翻译的中文标题）'
 labels:
-  - Article
-  - Translation
+  - Translation-needed
 body:
   - type: input
     id: page_link

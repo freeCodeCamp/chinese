@@ -1,9 +1,9 @@
 name: Web page to Markdown
 on:
-  pull_request:
+  push:
     paths:
       - 'chinese/articles/**'
-      
+
 jobs:
   WebPageToMarkdown:
     runs-on: ubuntu-latest

@@ -1,8 +1,8 @@
 name: Web page to Markdown
 on:
-  push:
-    paths:
-      - 'chinese/articles/**'
+  issues:
+    types:
+      - opened
 
 jobs:
   WebPageToMarkdown:

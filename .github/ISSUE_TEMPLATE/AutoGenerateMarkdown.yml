@@ -1,0 +1,23 @@
+name: 翻译任务（自动爬取）
+description: '新增待翻译文章，使用自动 GitHub Actions 自动爬取。'
+title: '[Auto]（此处替换为翻译的中文标题）'
+labels:
+  - Translation-needed
+body:
+  - type: input
+    id: page_link
+    attributes:
+      label: 文章网址
+      description: 一个 issue 只能填一个
+    validations:
+      required: true
+  - type: textarea
+    attributes:
+      label: 翻译须知
+      description: 如有其它需要注意的事项，请注明以帮助译者。
+      value: '@kaiyuanshe/team'
+  - type: markdown
+    attributes:
+      value: >-
+        This template was generated with [Issue Forms
+        Creator](https://issue-forms-creator.netlify.app)

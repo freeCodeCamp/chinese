@@ -1,6 +1,6 @@
 > -  原文地址：[Visual Basic Excel Tutorial – How to Automate Repetitive Tasks in a Spreadsheet](https://www.freecodecamp.org/news/automate-repetitive-tasks-in-excel-with-vba/)
 > -  原文作者：[Sander Vreeken](https://www.freecodecamp.org/news/author/sandervreeken/)
-> -  译者：
+> -  译者：JunoWei
 > -  校对者：
 
 ![Visual Basic Excel Tutorial – How to Automate Repetitive Tasks in a Spreadsheet](https://www.freecodecamp.org/news/content/images/size/w2000/2021/07/Thumbnail2.png)

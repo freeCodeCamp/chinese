@@ -3,6 +3,8 @@
 [![first-timers-only Friendly](https://img.shields.io/badge/first--timers--only-friendly-blue.svg)][2]
 [![CI & CD](https://github.com/freeCodeCamp/chinese/actions/workflows/main.yml/badge.svg)][3]
 
+## 最新动态：我们正在 [news-translation-tasks](https://github.com/freeCodeCamp/news-translation-tasks) 仓库翻译文章，本仓库已停用。
+
 ## freeCodeCamp 文章翻译计划
 
 freeCodeCamp 英文专栏发布了大量[优质文章][4]，分享前端、后端、产品、设计等领域的深度教程，以及学习编程的经历和求职经验。我们一起把这些文章翻译成中文，分享给更多读者。
